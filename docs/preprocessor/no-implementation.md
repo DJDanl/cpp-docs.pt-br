@@ -1,38 +1,37 @@
 ---
-title: no_implementation
-ms.date: 11/04/2016
+title: atributo de importação de no_implementation
+ms.date: 08/29/2019
 f1_keywords:
 - no_implementation
 helpviewer_keywords:
 - no_implementation attribute
 ms.assetid: bdc67785-e131-409c-87bc-f4d2f4abb07b
-ms.openlocfilehash: 26527ca69c66c73f5d41084dc42df5faa34481d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f0a7454fdbedc1959b665ccb2a23748d21c342d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409805"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220775"
 ---
-# <a name="noimplementation"></a>no_implementation
-**Específico do C++**
+# <a name="no_implementation-import-attribute"></a>atributo de importação de no_implementation
 
-Suprime geração do cabeçalho .tli, que contém as implementações das funções de membro do wrapper.
+**C++Determinados**
+
+Suprime a geração do `.tli` cabeçalho, que contém as implementações das funções de membro do wrapper.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-no_implementation
-```
+> **#import** *biblioteca de tipos* **no_implementation**
 
 ## <a name="remarks"></a>Comentários
 
-Se esse atributo for especificado, o cabeçalho .tlh, com as declarações para expor itens do tipo biblioteca, será gerado sem uma instrução `#include` para incluir o arquivo de cabeçalho .tli.
+Se esse atributo for especificado, o `.tlh` cabeçalho, com as declarações para expor itens de biblioteca de tipos, será gerado sem uma `#include` instrução para incluir o `.tli` arquivo de cabeçalho.
 
 Esse atributo é usado em conjunto com [implementation_only](../preprocessor/implementation-only.md).
 
-**FIM de específico de C++**
+**FINAL C++ específico**
 
 ## <a name="see-also"></a>Consulte também
 
-[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

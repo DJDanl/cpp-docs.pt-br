@@ -1,6 +1,6 @@
 ---
 title: __rdtscp
-ms.date: 07/11/2019
+ms.date: 09/02/2019
 f1_keywords:
 - __rdtscp
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - __rdtscp intrinsic
 - rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-ms.openlocfilehash: b8a31c6d19cd171cbe909c75a27c2389866bd578
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 4dcabd6ed0f7fb3f422927815cbdc91f2b4b9d43
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861097"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221313"
 ---
-# <a name="rdtscp"></a>__rdtscp
+# <a name="__rdtscp"></a>__rdtscp
 
 **Seção específica da Microsoft**
 
-Gera o `rdtscp` instrução, grava `TSC_AUX[31:0`] à memória e retorna o contador de carimbo de data / hora 64-bit (`TSC)` resultado.
+Gera a `rdtscp` instrução, grava `TSC_AUX[31:0`] na memória e retorna o contador de carimbo de data/hora de`TSC)` 64 bits (resultado.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 unsigned __int64 __rdtscp(
-   unsigned int * Aux
+   unsigned int * AUX
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Aux*<br/>
-[out] Ponteiro para um local que conterá o conteúdo do registro específicas do computador `TSC_AUX[31:0]`.
+*INDICAÇÃO*\
+fora Ponteiro para um local que conterá o conteúdo do registro `TSC_AUX[31:0]`específico do computador.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Uma contagem de tiques do inteiro sem sinal de 64 bits.
+Uma contagem de tiques de inteiros sem sinal de 64 bits.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -44,13 +44,13 @@ Uma contagem de tiques do inteiro sem sinal de 64 bits.
 |---------------|------------------|
 |`__rdtscp`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-Esse intrínseco gera o `rdtscp` instrução. Para determinar o suporte de hardware para essa instrução, chame o `__cpuid` intrínseco com `InfoType=0x80000001` e marque pouco 27 de `CPUInfo[3] (EDX)`. Esse bit é 1 se a instrução for compatível e 0, caso contrário.  Se você executar o código que usa esse intrínseco no hardware que não oferece suporte a `rdtscp` instrução, os resultados serão imprevisíveis.
+O `__rdtscp` intrínseco gera a `rdtscp` instrução. Para determinar o suporte de hardware para essa instrução, `__cpuid` chame o `InfoType=0x80000001` intrínseco e verifique o bit `CPUInfo[3] (EDX)`27 de. Esse bit será 1 se a instrução tiver suporte e 0 caso contrário.  Se você executar o código que usa o intrínseco em hardware que não oferece `rdtscp` suporte à instrução, os resultados serão imprevisíveis.
 
-Essa instrução aguarda até que todas as instruções anteriores foram executadas e todos os carregamentos anteriores são visíveis globalmente. No entanto, não é uma instrução de serialização. Consulte os manuais Intel e AMD, para obter mais informações.
+Essa instrução aguarda até que todas as instruções anteriores sejam executadas e todas as cargas anteriores sejam visíveis globalmente. No entanto, não é uma instrução de serialização. Para obter mais informações, consulte os manuais Intel e AMD.
 
 O significado do valor em `TSC_AUX[31:0]` depende do sistema operacional.
 
@@ -76,8 +76,7 @@ TSC_AUX was 0
 
 **Fim da seção específica da Microsoft**
 
-
 ## <a name="see-also"></a>Consulte também
 
-[__rdtsc](../intrinsics/rdtsc.md)<br/>
+[__rdtsc](../intrinsics/rdtsc.md)\
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

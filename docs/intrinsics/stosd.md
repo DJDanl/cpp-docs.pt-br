@@ -1,6 +1,6 @@
 ---
 title: __stosd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosd
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep stosd instruction
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-ms.openlocfilehash: 43a0efcfb94b7e53dacec16caccdacf86a96f5bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c46bb124390ff23d79361c66530493c48faf3f0a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390250"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219984"
 ---
-# <a name="stosd"></a>__stosd
+# <a name="__stosd"></a>__stosd
 
 **Seção específica da Microsoft**
 
-Gera uma instrução de cadeia de caracteres de repositório (`rep stosd`).
+Gera uma instrução de cadeia de`rep stosd`caracteres de repositório ().
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void __stosd(
-   unsigned long* Dest,
+   unsigned long* Destination,
    unsigned long Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Dest*<br/>
-[out] O destino da operação.
+*Destino*\
+fora O destino da operação.
 
-*Dados*<br/>
-[in] Os dados serem armazenados.
+*Dado*\
+no Os dados a serem armazenados.
 
-*Contagem*<br/>
-[in] O tamanho do bloco de palavras duplas para gravar.
+*Contar*\
+no O comprimento do bloco de doublewords a ser gravado.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,17 +48,17 @@ void __stosd(
 |---------------|------------------|
 |`__stosd`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-O resultado é que as palavras duplas `Data` é gravado em um bloco de `Count` palavras duplas no local da memória apontada por `Dest`.
+O resultado é que os *dados* de doubleword são gravados em um bloco de *contagem* doublewords no local da memória apontado por *destino*.
 
 Essa rotina só está disponível como função intrínseca.
 
 ## <a name="example"></a>Exemplo
 
-```
+```C
 // stosd.c
 // processor: x86, x64
 

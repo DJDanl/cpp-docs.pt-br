@@ -1,6 +1,6 @@
 ---
 title: __invlpg
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __invlpg
 - __invlpg_cpp
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - invlpg instruction
 - __invlpg intrinsic
 ms.assetid: 3fb3633f-d9b7-4ec0-9e7f-a7f2fa8ed794
-ms.openlocfilehash: b4f941baae9f03ed288a99d59e2b06262962e339
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba8bd81498f805992336b0dc4163fe18fa157a2c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348738"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221888"
 ---
-# <a name="invlpg"></a>__invlpg
+# <a name="__invlpg"></a>__invlpg
 
 **Seção específica da Microsoft**
 
-Gera o x86 `invlpg` instrução, o que invalida o buffer de conversão à parte (TLB) para a página associada com a memória apontada por `Address`.
+Gera a instrução `invlpg` x86, que invalida o TLB (buffer à parte de conversão) da página associada à memória apontada por *endereço*.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void __invlpg(
    void* Address
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Endereço*<br/>
-[in] Um endereço de 64 bits.
+*Corrigir*\
+no Um endereço de 64 bits.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -40,11 +40,11 @@ void __invlpg(
 |---------------|------------------|
 |`__invlpg`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-O intrínseco `__invlpg` emite uma instrução privilegiada e só está disponível no modo de kernel com um nível de privilégio (CPL) igual a 0.
+O intrínseco `__invlpg` emite uma instrução privilegiada e só está disponível no modo kernel com um nível de privilégio (CPL) de 0.
 
 Essa rotina só está disponível como função intrínseca.
 

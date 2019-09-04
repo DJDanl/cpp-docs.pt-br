@@ -1,6 +1,6 @@
 ---
 title: __movsb
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsb
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - rep movsb instruction
 - __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-ms.openlocfilehash: 42124743c27b297c723780c1bc19038fb54e638d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca06fc9114f6e824a690cc4e612c21d705a485cd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263809"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217272"
 ---
-# <a name="movsb"></a>__movsb
+# <a name="__movsb"></a>__movsb
 
 **Seção específica da Microsoft**
 
-Gera uma cadeia de caracteres mover (`rep movsb`) instrução.
+Gera uma instrução move String`rep movsb`().
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void __movsb(
    unsigned char* Destination,
    unsigned const char* Source,
@@ -31,16 +31,16 @@ void __movsb(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Destino*<br/>
-[out] Um ponteiro para o destino da cópia.
+*Destino*\
+fora Um ponteiro para o destino da cópia.
 
-*Source*<br/>
-[in] Um ponteiro para a origem da cópia.
+*Source*\
+no Um ponteiro para a origem da cópia.
 
-*Contagem*<br/>
-[in] O número de bytes a serem copiados.
+*Contar*\
+no O número de bytes a serem copiados.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,17 +48,17 @@ void __movsb(
 |---------------|------------------|
 |`__movsb`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-O resultado é que a primeira `Count` bytes apontados por `Source` são copiados para o `Destination` cadeia de caracteres.
+O resultado é que os primeiros `Count` bytes apontados por `Source` são copiados para `Destination` a cadeia de caracteres.
 
 Essa rotina só está disponível como função intrínseca.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // movsb.cpp
 // processor: x86, x64
 #include <stdio.h>

@@ -1,6 +1,6 @@
 ---
 title: Operador de caracterização (#@)
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - '#@'
 helpviewer_keywords:
@@ -8,35 +8,36 @@ helpviewer_keywords:
 - charizing operator
 - '#@ preprocessor operator'
 ms.assetid: dee03314-d27c-4063-965c-64756efbef22
-ms.openlocfilehash: c9acc9b9872e096cd441b950632c341e975fecb8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb2a4e07287edf5ed2d0850ec7d870c8ef307879
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403514"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218538"
 ---
 # <a name="charizing-operator-"></a>Operador de caracterização (#@)
+
 **Seção específica da Microsoft**
 
-O operador de charizing pode usado apenas com os argumentos das macros. Se `#@` preceder um parâmetro formal na definição da macro, o argumento real é colocado entre aspas simples e tratado como um caractere quando a macro é expandida. Por exemplo:
+O operador de charizing pode usado apenas com os argumentos das macros. Se `#@` precede um parâmetro formal na definição da macro, o argumento real será colocado entre aspas simples e tratado como um caractere quando a macro for expandida. Por exemplo:
 
-```
+```cpp
 #define makechar(x)  #@x
 ```
 
 faz com que a instrução
 
-```
+```cpp
 a = makechar(b);
 ```
 
 seja expandida para
 
-```
+```cpp
 a = 'b';
 ```
 
-O caractere de aspas simples não pode ser usado com o operador de charizing.
+O caractere de aspas simples (`'`) não pode ser usado com o operador de caractere.
 
 **Fim da seção específica da Microsoft**
 

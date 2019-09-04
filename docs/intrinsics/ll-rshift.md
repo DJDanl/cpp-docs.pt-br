@@ -1,6 +1,6 @@
 ---
 title: __ll_rshift
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ll_rshift_cpp
 - __ll_rshift
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: e39f8fe797467569077dd24baf49670607915107
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad17991d84acb7e531baf9435610ebd566197a22
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263354"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217491"
 ---
-# <a name="llrshift"></a>__ll_rshift
+# <a name="__ll_rshift"></a>__ll_rshift
 
 **Seção específica da Microsoft**
 
-Desloca um valor de 64 bits especificado pelo primeiro parâmetro para a direita em um número de bits especificado pelo segundo parâmetro.
+Desloca um valor de 64 bits especificado pelo primeiro parâmetro para a direita, por um número de bits especificado pelo segundo parâmetro.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 __int64 __ll_rshift(
    __int64 Mask,
    int nBit
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Máscara*<br/>
-[in] O valor de inteiro de 64 bits a deslocar para a direita.
+*Mascara*\
+no O valor inteiro de 64 bits a ser deslocado para a direita.
 
-*nBit*<br/>
-[in] O número de bits a deslocar, módulo 64 em x64 e de módulo 32 no x86.
+*nBit*\
+no O número de bits a serem deslocados, o módulo 64 em x64 e o módulo 32 no x86.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-A máscara deslocados em `nBit` bits.
+A máscara mudada por `nBit` bits.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,15 +48,15 @@ A máscara deslocados em `nBit` bits.
 |---------------|------------------|
 |`__ll_rshift`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-Se o segundo parâmetro é maior que 64 em x64 (em x86 de 32), esse número é tirado módulo 64 (32 em x86) para determinar o número de bits a deslocar. O `ll` prefixo indica que esta é uma operação no `long long`, em outro nome para `__int64`, o tipo integral com sinal de 64 bits.
+Se o segundo parâmetro for maior que 64 em x64 (32 no x86), esse número será tirado do módulo 64 (32 no x86) para determinar o número de bits a serem deslocados. O `ll` prefixo indica que é uma operação em `long long`, outro nome para `__int64`, o tipo integral assinado de 64 bits.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // ll_rshift.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -80,19 +80,20 @@ int main()
 
 ## <a name="output"></a>Saída
 
-```
+```Output
 ffffffffffffff00
 - 100
 fffffffffffffff0
 - 10
 ```
 
-**Observação** se `_ull_rshift` tiver sido usado, o MSB do valor deslocados para a direita teria sido zero, portanto, o resultado desejado seria não ter sido obtido no caso de um valor negativo.
+> [!NOTE]
+> Se `_ull_rshift` tiver sido usado, o MSB do valor com SHIFT direita teria sido zero, portanto, o resultado desejado não teria sido obtido no caso de um valor negativo.
 
 **Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
-[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
-[__ll_lshift](../intrinsics/ll-lshift.md)<br/>
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)\
+[__ll_lshift](../intrinsics/ll-lshift.md)\
 [__ull_rshift](../intrinsics/ull-rshift.md)

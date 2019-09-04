@@ -1,6 +1,6 @@
 ---
 title: __emul, __emulu
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __emulu_cpp
 - __emul
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - __emul intrinsic
 - __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
-ms.openlocfilehash: 8657c0fb034ac6bbcfbebb946e059ad08d9e7046
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16b2b38f6f44b99c9f5b9370ba586342a860684e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264043"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216747"
 ---
-# <a name="emul-emulu"></a>__emul, __emulu
+# <a name="__emul-__emulu"></a>__emul, __emulu
 
 **Seção específica da Microsoft**
 
-Executa multiplicações que estouram o que pode conter um inteiro de 32 bits.
+Executa multiplicações que estouram o que um inteiro de 32 bits pode conter.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 __int64 __emul(
    int a,
    int b
@@ -36,15 +36,15 @@ unsigned __int64 __emulu(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*a*<br/>
-[in] O primeiro operando de inteiro da multiplicação.
+*um*\
+no O primeiro operando inteiro da multiplicação.
 
-*b*<br/>
-[in] O segundo operando de inteiro da multiplicação.
+*b*\
+no O segundo operando de inteiro da multiplicação.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O resultado da multiplicação.
 
@@ -55,17 +55,17 @@ O resultado da multiplicação.
 |`__emul`|x86, x64|
 |`__emulu`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-`__emul` usa dois valores com sinal de 32 bits e retorna o resultado da multiplicação como um valor inteiro com sinal de 64 bits.
+`__emul`usa valores assinados de 2 32 bits e retorna o resultado da multiplicação como um valor inteiro com sinal de 64 bits.
 
-`__emulu` usa dois valores de inteiro sem sinal de 32 bits e retorna o resultado da multiplicação como um valor inteiro sem sinal de 64 bits.
+`__emulu`usa valores inteiros sem sinal de 2 32 bits e retorna o resultado da multiplicação como um valor inteiro sem sinal de 64 bits.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // emul.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -97,7 +97,7 @@ int main()
 
 ## <a name="output"></a>Saída
 
-```
+```Output
 -268435456 * 2 = -536870912
 4294967295 * 251658240 = 1080863910317260800
 ```

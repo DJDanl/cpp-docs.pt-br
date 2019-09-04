@@ -1,6 +1,6 @@
 ---
-title: fp_contract
-ms.date: 03/12/2018
+title: fp_contract pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.fp_contract
 - fp_contract_CPP
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - pragmas, fp_contract
 - fp_contract pragma
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-ms.openlocfilehash: 14c3ac60d4fc0f45fcf0ece6c3f73153e5de4271
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 833d8e7f4b8c9da18901610e52afed619468c5c3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409909"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218569"
 ---
-# <a name="fpcontract"></a>fp_contract
+# <a name="fp_contract-pragma"></a>fp_contract pragma
 
-Determina se contração do ponto flutuante ocorre. Uma contração de ponto flutuante é uma instrução como FMA (Fused-Multiply-Add) que combina dois separado operações de ponto flutuante em uma única instrução. O uso dessas instruções pode afetar a precisão de ponto flutuante, porque, em vez de arredondamento após cada operação, o processador pode arredondar apenas uma vez após as duas operações.
+Determina se ocorre a contratação de ponto flutuante. Uma contratação de ponto flutuante é uma instrução como o FMA (com fusível de multiplicação de adição) que combina duas operações de ponto flutuante separadas em uma única instrução. O uso dessas instruções pode afetar a precisão do ponto flutuante, porque, em vez de arredondar após cada operação, o processador pode ser arredondado apenas uma vez após ambas as operações.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,9 +25,9 @@ Determina se contração do ponto flutuante ocorre. Uma contração de ponto flu
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, **fp_contract** é **em**. Isso informa ao compilador para usar as instruções de ponto flutuante contração sempre que possível. Definir **fp_contract** à **off** para preservar as instruções de ponto flutuantes individuais.
+Por padrão, **fp_contract** está **on**. Isso informa o compilador para usar instruções de contratação de ponto flutuante sempre que possível. Defina **fp_contract** como **off** para preservar instruções de ponto flutuante individuais.
 
-Para obter mais informações sobre o comportamento de ponto flutuante, consulte [/fp (Especificar comportamento de ponto flutuante)](../build/reference/fp-specify-floating-point-behavior.md).
+Para obter mais informações sobre o comportamento de ponto flutuante, consulte [/FP (especificar comportamento de ponto flutuante)](../build/reference/fp-specify-floating-point-behavior.md).
 
 Outros pragmas de ponto flutuante incluem:
 
@@ -37,7 +37,7 @@ Outros pragmas de ponto flutuante incluem:
 
 ## <a name="example"></a>Exemplo
 
-O código gerado deste exemplo não usa uma instrução fused-multiply-add, mesmo quando ele está disponível no processador de destino. Se você comentar `#pragma fp_contract (off)`, o código gerado pode usar uma instrução fused-multiply-add, se ele estiver disponível.
+O código gerado neste exemplo não usa uma instrução com fusível de multiplicação, mesmo quando está disponível no processador de destino. Se você comentar `#pragma fp_contract (off)`, o código gerado poderá usar uma instrução com fusível de multiplicação, se estiver disponível.
 
 ```cpp
 // pragma_directive_fp_contract.cpp
@@ -77,4 +77,4 @@ out = 4.587525000000000e+03
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Diretivas pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

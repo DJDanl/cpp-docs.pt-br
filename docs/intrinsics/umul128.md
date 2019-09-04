@@ -1,19 +1,19 @@
 ---
 title: _umul128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __umul128
 helpviewer_keywords:
 - __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
-ms.openlocfilehash: afca1e62127ac2dbcfc407982dbe191d379b4acb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 205f0f7f9046ede624bb09e18d8ede32fadbc3de
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390094"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219697"
 ---
-# <a name="umul128"></a>_umul128
+# <a name="_umul128"></a>_umul128
 
 **Seção específica da Microsoft**
 
@@ -21,7 +21,7 @@ Multiplica dois inteiros sem sinal de 64 bits passados como os primeiros dois ar
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 unsigned __int64 _umul128(
    unsigned __int64 Multiplier,
    unsigned __int64 Multiplicand,
@@ -29,18 +29,18 @@ unsigned __int64 _umul128(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Multiplicador*<br/>
-[in] O primeiro inteiro de 64 bits para multiplicar.
+*Multiplicador*\
+no O primeiro inteiro de 64 bits a ser multiplicado.
 
-*Multiplicando*<br/>
-[in] O segundo inteiro de 64 bits para multiplicar.
+*Multiplicando*\
+no O segundo número inteiro de 64 bits a ser multiplicado.
 
-*HighProduct*<br/>
-[out] Os 64 bits altos do produto.
+*HighProduct*\
+fora Os 64 bits de alto nível do produto.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Os 64 bits baixos do produto.
 
@@ -52,7 +52,7 @@ Os 64 bits baixos do produto.
 
 ## <a name="example"></a>Exemplo
 
-```
+```C
 // umul128.c
 // processor: x64
 

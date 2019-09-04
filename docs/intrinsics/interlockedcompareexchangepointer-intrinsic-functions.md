@@ -1,6 +1,6 @@
 ---
 title: Funções intrínsecas _InterlockedCompareExchangePointer
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedCompareExchangePointer_HLERelease
 - _InterlockedCompareExchangePointer_rel
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: 7b8ba4fe6224292d0160f859aeb630fc17c2d992
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c0a0083c19df51d2d2eccb7a7bbf6521303c1f85
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509433"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222043"
 ---
 # <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>Funções intrínsecas _InterlockedCompareExchangePointer
 
@@ -39,7 +39,7 @@ Executa uma operação atômica que armazena o endereço do `Exchange` no endere
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void * _InterlockedCompareExchangePointer (
    void * volatile * Destination,
    void * Exchange,
@@ -77,18 +77,18 @@ long _InterlockedCompareExchangePointer_rel (
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Destino*<br/>
+*Destino*\
 [entrada, saída] Ponteiro para um ponteiro para o valor de destino. O sinal é ignorado.
 
-*Exchange*<br/>
+*Transferência*\
 no Ponteiro do Exchange. O sinal é ignorado.
 
-*Termo*<br/>
+*Termo*\
 no Ponteiro para comparar com o destino. O sinal é ignorado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O valor de retorno é o valor inicial do destino.
 
@@ -96,8 +96,8 @@ O valor de retorno é o valor inicial do destino.
 
 |Intrínseco|Arquitetura|Cabeçalho|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
+|`_InterlockedCompareExchangePointer`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM, ARM64|\<iiintrin.h>|
 |`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Comentários
@@ -108,7 +108,7 @@ O valor de retorno é o valor inicial do destino.
 
 Para obter um exemplo de como usar `_InterlockedCompareExchangePointer`o, consulte [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-Em plataformas ARM, use intrínsecos com os sufixos `_acq` e `_rel` para semântica de aquisição e liberação, como no início e no final de uma seção crítica. Os intrínsecos de ARM com um sufixo `_nf` ("no fence") não funcionam como uma barreira de memória.
+Em plataformas ARM, use intrínsecos com os sufixos `_acq` e `_rel` para semântica de aquisição e liberação, como no início e no final de uma seção crítica. O ARM intrínseco com um `_nf` sufixo ("sem limite") não atua como uma barreira de memória.
 
 Intrínsecos com um sufixo `_np` ("no prefetch") impedem que uma possível operação de pré-busca seja inserida pelo compilador.
 
@@ -120,5 +120,5 @@ Essas rotinas somente estão disponíveis como intrínsecos.
 
 ## <a name="see-also"></a>Consulte também
 
-[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)\
 [Palavras-chave](../cpp/keywords-cpp.md)

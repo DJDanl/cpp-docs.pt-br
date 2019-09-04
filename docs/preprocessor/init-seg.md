@@ -1,6 +1,6 @@
 ---
-title: init_seg
-ms.date: 11/04/2016
+title: Pragma init_seg
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.init_seg
 - init_seg_CPP
@@ -9,69 +9,69 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e57ea0eedfc1df6e196391c5edd3acfbad0a7c7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383705"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221009"
 ---
-# <a name="initseg"></a>init_seg
+# <a name="init_seg-pragma"></a>Pragma init_seg
 
-**Específico do C++**
+**C++Determinados**
 
 Especifica uma palavra-chave ou uma seção de código que afeta a ordem na qual o código de inicialização é executado.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-#pragma init_seg({ compiler | lib | user | "section-name" [, func-name]} )
-```
+> **#pragma init_seg (** {**usuário** de**biblioteca** | de **compilador** | | "*nome da seção*" [ **,** *Func-Name* ]} **)**
 
 ## <a name="remarks"></a>Comentários
 
-O significado dos termos *segmento* e *seção* são usados alternadamente neste tópico.
+Os termos *segmento* e *seção* têm o mesmo significado neste artigo.
 
-Como a inicialização de objetos globais estáticos pode envolver a execução do código, você deve especificar uma palavra-chave que define quando os objetos devem ser construídos. É particularmente importante usar o **init_seg** pragma em bibliotecas de vínculo dinâmico (DLLs) ou bibliotecas que exigem a inicialização.
+Como o código às vezes é necessário para inicializar objetos estáticos globais, você deve especificar quando construir os objetos. Em particular, é importante usar o pragma **init_seg** em bibliotecas de vínculo dinâmico (DLLs) ou em bibliotecas que exigem inicialização.
 
-As opções para o **init_seg** pragma são:
+As opções para o pragma **init_seg** são:
 
-*compiler*<br/>
+**Compiler**\
 Reservado para a inicialização da biblioteca em tempo de execução do Microsoft C. Os objetos nesse grupo são construídos primeiro.
 
-*lib*<br/>
-Disponível para as inicializações de fornecedores de bibliotecas de classes de terceiros. Os objetos nesse grupo são construídos após os marcados como *compilador* , mas antes de qualquer outro.
+**lib**\
+Disponível para as inicializações de fornecedores de bibliotecas de classes de terceiros. Os objetos nesse grupo são construídos após aqueles marcados como **compilador**, mas antes de qualquer outro.
 
-*user*<br/>
+**usuário**\
 Disponível para qualquer usuário. Os objetos nesse grupo são construídos por último.
 
-*nome da seção* permite a especificação explícita da seção de inicialização. Objetos em um usuário especificado *nome da seção* não são construídos implicitamente; no entanto, seus endereços são colocados na seção nomeada pelo *nome da seção*.
+*nome da seção*\
+Permite a especificação explícita da seção de inicialização. Os objetos em uma seção especificada *pelo usuário-nome* não são construídos implicitamente. No entanto, seus endereços são colocados na seção chamada por *nome de seção*.
 
-O nome da seção que você fornecer conterá ponteiros para funções auxiliares que construirão os objetos globais declarados nesse módulo depois do pragma.
+O *nome da seção* que você atribuir conterá ponteiros para funções auxiliares que construirão os objetos globais declarados após o pragma nesse módulo.
 
-Para obter uma lista de nomes que você não deve usar ao criar uma seção, consulte [/seção](../build/reference/section-specify-section-attributes.md).
+Para obter uma lista de nomes que você não deve usar ao criar uma seção, consulte [/Section](../build/reference/section-specify-section-attributes.md).
 
-*nome do Func* Especifica uma função a ser chamado no lugar de `atexit` quando o programa é encerrado. Essa função auxiliar também chamará [atexit](../c-runtime-library/reference/atexit.md) com um ponteiro para o destruidor do objeto global. Se você especificar um identificador de função no pragma do formulário,
+*Func-Name*\
+Especifique uma função a ser chamada no lugar de `atexit` quando o programa é encerrado. Essa função auxiliar também chama [atexit](../c-runtime-library/reference/atexit.md) com um ponteiro para o destruidor para o objeto global. Se você especificar um identificador de função no pragma do formulário,
 
 ```cpp
 int __cdecl myexit (void (__cdecl *pf)(void))
 ```
 
-a função será chamada em vez de `atexit` da biblioteca em tempo de execução C. Isso permite compilar uma lista dos destruidores que precisarão ser chamados quando você estiver pronto para destruir os objetos.
+a função será chamada em vez de `atexit` da biblioteca em tempo de execução C. Ele permite que você crie uma lista dos destruidores a serem chamados quando estiver pronto para destruir os objetos.
 
-Se você precisar adiar a inicialização (por exemplo, em uma DLL), opte por especificar explicitamente o nome da seção. Em seguida, você deve chamar os construtores para cada objeto estático.
+Se você precisar adiar a inicialização (por exemplo, em uma DLL), opte por especificar explicitamente o nome da seção. Seu código deve então chamar os construtores para cada objeto estático.
 
 Não há aspas em torno do identificador para a substituição de `atexit`.
 
-Os objetos ainda serão colocados nas seções definidas pelos outros pragmas XXX_seg.
+Seus objetos ainda serão colocados nas seções definidas por outros `XXX_seg` pragmas.
 
-Os objetos que são declarados no módulo não serão inicializados automaticamente pelo tempo de execução C. Você precisará fazer isso por conta própria.
+Os objetos declarados no módulo não são inicializados automaticamente pelo tempo de execução C. Seu código deve fazer a inicialização.
 
-Por padrão, as seções `init_seg` são somente leitura. Se o nome da seção for .CRT, o compilador modificará silenciosamente o atributo como somente leitura, mesmo se estiver marcado como leitura, gravação.
+Por padrão, as seções `init_seg` são somente leitura. Se o nome da seção `.CRT`for, o compilador alterará silenciosamente o atributo para somente leitura, mesmo que ele esteja marcado como leitura, gravação.
 
-Não é possível especificar **init_seg** mais de uma vez em uma unidade de tradução.
+Você não pode especificar **init_seg** mais de uma vez em uma unidade de tradução.
 
-Mesmo se o objeto não tiver um construtor definido pelo usuário, um construtor não definido explicitamente no código, o compilador poderá gerar um (por exemplo para associar ponteiros v-table). Portanto, seu código precisará chamar o construtor gerado pelo compilador.
+Mesmo que o objeto não tenha um construtor definido pelo usuário, um explicitamente definido no código, o compilador poderá gerar um para você. Por exemplo, ele pode criar um para associar ponteiros de tabela v. Quando necessário, seu código chama o Construtor gerado pelo compilador.
 
 ## <a name="example"></a>Exemplo
 
@@ -156,4 +156,4 @@ A()
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Diretivas pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

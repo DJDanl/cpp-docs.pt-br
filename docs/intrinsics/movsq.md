@@ -1,6 +1,6 @@
 ---
 title: __movsq
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsq
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep movsq instruction
 - movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-ms.openlocfilehash: 4e4908cd5ffc28840b5a48b735048cccb557e97c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66de1971c48f6697fd06579fac635cce31545e92
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263159"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217268"
 ---
-# <a name="movsq"></a>__movsq
+# <a name="__movsq"></a>__movsq
 
 **Seção específica da Microsoft**
 
-Gera uma cadeia de caracteres repetida mover (`rep movsq`) instrução.
+Gera uma instrução move String (`rep movsq`) repetida.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void __movsq(
-   unsigned char* Dest,
+   unsigned char* Destination,
    unsigned char* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Dest*<br/>
-[out] O destino da operação.
+*Destino*\
+fora O destino da operação.
 
-*Source*<br/>
-[in] A origem da operação.
+*Source*\
+no A origem da operação.
 
-*Contagem*<br/>
-[in] O número de palavras quádruplas para copiar.
+*Contar*\
+no O número de quadwords a serem copiados.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,17 +48,17 @@ void __movsq(
 |---------------|------------------|
 |`__movsq`|X64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-O resultado é que a primeira `Count` palavras quádruplas apontado por `Source` são copiados para o `Dest` cadeia de caracteres.
+O resultado é que a primeira *contagem* quadwords apontada por *origem* é copiada para a cadeia de caracteres de *destino* .
 
 Essa rotina só está disponível como função intrínseca.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // movsq.cpp
 // processor: x64
 #include <stdio.h>

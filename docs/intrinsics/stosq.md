@@ -1,6 +1,6 @@
 ---
 title: __stosq
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosq
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - stosq instruction
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-ms.openlocfilehash: eacb12f7c02b82607d980281f8d4a0bc1e1d7c14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b347d595da4cdbf1fefb6244940e262981671e9
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390341"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219956"
 ---
-# <a name="stosq"></a>__stosq
+# <a name="__stosq"></a>__stosq
 
 **Seção específica da Microsoft**
 
-Gera uma instrução de cadeia de caracteres de repositório (`rep stosq`).
+Gera uma instrução de cadeia de`rep stosq`caracteres de repositório ().
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void __stosb(
-   unsigned __int64* Dest,
+   unsigned __int64* Destination,
    unsigned __int64 Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Dest*<br/>
-[out] O destino da operação.
+*Destino*\
+fora O destino da operação.
 
-*Dados*<br/>
-[in] Os dados serem armazenados.
+*Dado*\
+no Os dados a serem armazenados.
 
-*Contagem*<br/>
-[in] O tamanho do bloco de palavras quádruplas escrever.
+*Contar*\
+no O comprimento do bloco de quadwords a ser gravado.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,17 +48,17 @@ void __stosb(
 |---------------|------------------|
 |`__stosq`|AMD64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-O resultado é que o quadword `Data` é gravado em um bloco de `Count` palavras quádruplas no `Dest` cadeia de caracteres.
+O resultado é que os *dados* de quadword são gravados em um bloco de *contagem* quadwords na cadeia de caracteres de *destino* .
 
 Essa rotina só está disponível como função intrínseca.
 
 ## <a name="example"></a>Exemplo
 
-```
+```C
 // stosq.c
 // processor: x64
 #include <stdio.h>
@@ -76,9 +76,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Saída
-
-```
+```Output
 0 ffffffffffff ffffffffffff 0
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: _mm_insert_si64, _mm_inserti_si64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_inserti_si64
 - _mm_insert_si64
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - _mm_insert_si64 intrinsic
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
-ms.openlocfilehash: f8c8f2f9b33588513e25b2290772aac464f46808
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08469ad8049df2a07f0e66d650c1ca3118f8b980
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396672"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221778"
 ---
-# <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
+# <a name="_mm_insert_si64-_mm_inserti_si64"></a>_mm_insert_si64, _mm_inserti_si64
 
 **Seção específica da Microsoft**
 
-Gera o `insertq` instruções para inserir os bits de seu segundo operando em seu primeiro operando.
+Gera a `insertq` instrução para inserir bits do seu segundo operando em seu primeiro operando.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 __m128i _mm_insert_si64(
    __m128i Source1,
    __m128i Source2
@@ -37,23 +37,23 @@ __m128i _mm_inserti_si64(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Source1*<br/>
-[in] Um campo de 128 bits com dados de entrada em seus 64 bits inferiores na qual um campo será inserido.
+*Origem1*\
+no Um campo de 128 bits que tem dados de entrada em seus bits inferiores de 64, nos quais um campo será inserido.
 
-*Source2*<br/>
-[in] Um campo de 128 bits com os dados a serem inseridos em seus bits baixos.  Para `_mm_insert_si64`, também contém um descritor de campo no seus bits altos.
+*Origem2*\
+no Um campo de 128 bits que tem os dados a serem inseridos em seus bits baixos.  Para `_mm_insert_si64`, também contém um descritor de campo em seus bits superiores.
 
-*Comprimento*<br/>
-[in] Uma constante de inteiro que especifica o comprimento do campo a ser inserido.
+*Muito*\
+no Uma constante inteira que especifica o comprimento do campo a ser inserido.
 
-*Índice*<br/>
-[in] Uma constante de inteiro que especifica o índice do bit menos significativo do campo na qual os dados serão inseridos.
+*Index*\
+no Uma constante de inteiro que especifica o índice do bit menos significativo do campo no qual os dados serão inseridos.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Um campo de 128 bits, 64 bits cujos inferiores contêm os originais 64 bits baixos do `Source1` com o campo de bits especificada substituída pelos bits baixos do `Source2`. 64 bits superiores do valor de retorno são indefinidos.
+Um campo de 128 bits, cujos menores bits 64 contêm os bits baixos de 64 originais de *origem1*, com o campo de bit especificado substituído pelos bits baixos de *origem2*. Os bits superiores de 64 do valor de retorno são indefinidos.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -62,21 +62,21 @@ Um campo de 128 bits, 64 bits cujos inferiores contêm os originais 64 bits baix
 |`_mm_insert_si64`|SSE4a|
 |`_mm_inserti_si64`|SSE4a|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-Esse intrínseco gera o `insertq` instruções para inserir os bits do `Source2` em `Source1`. Há duas versões desse intrínseco: `_mm_inserti_si64`, é a versão de imediata, e `_mm_insert_si64` é aquele não imediato.  Cada versão extrai um campo de bits de um determinado comprimento de Source2 e o insere na Source1.  Os bits extraídos são os bits menos significativos do Source2.  O Source1 de campo no qual esses bits serão inseridos é definido, o comprimento e o índice do bit menos significativo.  Os valores do comprimento e índice serão levados mod 64, portanto, -1 e 127 são interpretados como 63. Se a soma do índice de bit (reduzidos) e tamanho do campo (reduzidos) for maior que 64, os resultados são indefinidos. Um valor de zero para o tamanho do campo é interpretado como 64.  Se o índice de comprimento e o bit de campo é os dois 63:0 zero, bits de `Source2` são inseridos em `Source1`.  Se o tamanho do campo for zero, mas o índice de bit é diferente de zero, os resultados são indefinidos.
+Esses intrínsecos geram `insertq` a instrução para inserir bits de *origem2* em *origem1*. Há duas versões: `_mm_inserti_si64`, é a versão imediata e `_mm_insert_si64` é a que não é imediata. Cada versão extrai um campo de bits de um determinado comprimento de Origem2 e o insere em Origem1.  Os bits extraídos são os bits menos significativos de Origem2.  O campo Origem1 no qual esses bits serão inseridos é definido pelo comprimento e pelo índice de seu bit menos significativo.  Os valores do comprimento e do índice são obtidos em mod 64, portanto, ambos-1 e 127 são interpretados como 63. Se a soma do índice de bits (reduzido) e o comprimento do campo (reduzido) for maior que 64, os resultados serão indefinidos. Um valor de zero para o tamanho do campo é interpretado como 64. Se o comprimento do campo e o índice de bits forem zero, o bits 63:0 de *origem2* será inserido em *origem1*. Se o tamanho do campo for zero, mas o índice de bits for diferente de zero, os resultados serão indefinidos.
 
-Em uma chamada para _mm_insert_si64, o tamanho do campo está contido em bits 77:72 do Source2 e o índice no 69:64 bits.
+Em uma chamada para _mm_insert_si64, o tamanho do campo está contido em bits 77:72 de Origem2 e no índice em bits 69:64.
 
-Se você chamar `_mm_inserti_si64` com os argumentos que o compilador não pode determinar ser constantes de inteiro, o compilador gera código para empacotar esses valores em um registro de registros de MMX e para chamar `_mm_insert_si64`.
+Se você chamar `_mm_inserti_si64` com argumentos que o compilador não pode determinar para ser constantes de inteiro, o compilador gerará código para empacotar esses valores em um registro `_mm_insert_si64`de XMM e chamar.
 
-Para determinar o suporte de hardware para o `insertq` chamada de instrução de `__cpuid` intrínseco com `InfoType=0x80000001` e marque 6 bits de `CPUInfo[2] (ECX)`. Esse bit será 1 se a instrução for compatível e 0 caso contrário. Se você executar o código que usa esse intrínseco no hardware que não oferece suporte a `insertq` instrução, os resultados serão imprevisíveis.
+Para determinar o suporte de hardware `insertq` para a instrução, `__cpuid` chame o `InfoType=0x80000001` intrínseco e verifique o bit `CPUInfo[2] (ECX)`6 de. Esse bit será 1 se a instrução tiver suporte e 0 caso contrário. Se você executar o código que usa o intrínseco em hardware que não oferece `insertq` suporte à instrução, os resultados serão imprevisíveis.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // Compile this sample with: /EHsc
 #include <iostream>
 #include <intrin.h>
@@ -120,9 +120,9 @@ result3 = 0xfffffffff3210fff
 
 **Fim da seção específica da Microsoft**
 
-Copyright 2007 por dispositivos Micro avançada, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro dispositivos, Inc.
+Partes de Copyright 2007 da Advanced Micro Devices, Inc. Todos os direitos reservados. Reproduzida com a permissão da Advanced Micro Devices, Inc.
 
 ## <a name="see-also"></a>Consulte também
 
-[_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)<br/>
+[_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)\
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

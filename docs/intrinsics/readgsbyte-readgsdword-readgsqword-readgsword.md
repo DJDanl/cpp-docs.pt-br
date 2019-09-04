@@ -1,6 +1,6 @@
 ---
 title: __readgsbyte, __readgsdword, __readgsqword, __readgsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readgsbyte
 - __readgsdword
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - __readgsqword intrinsic
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-ms.openlocfilehash: a677b96975e0d2adcc7e548992a12bd597bea6a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 278f1de33a7e01c5893217ddd8aaa22e68cf0c94
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396464"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222353"
 ---
-# <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
+# <a name="__readgsbyte-__readgsdword-__readgsqword-__readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
 
 **Seção específica da Microsoft**
 
-Ler a memória de um local especificado por um deslocamento relativo ao início do segmento GS.
+Ler memória de um local especificado por um deslocamento relativo ao início do segmento GS.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 unsigned char __readgsbyte(
    unsigned long Offset
 );
@@ -42,14 +42,14 @@ unsigned __int64 __readgsqword(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Offset*<br/>
-[in] O deslocamento do início do `GS` leiam.
+*Desvio*\
+no O deslocamento do início de `GS` onde deve ser lido.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-O conteúdo da memória do byte, word, palavra dupla ou quadword (conforme indicado pelo nome da função chamada) no local `GS:[Offset]`.
+O conteúdo da memória do byte, Word, Double Word ou quadword (conforme indicado pelo nome da função chamada) no local `GS:[Offset]`.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -60,15 +60,15 @@ O conteúdo da memória do byte, word, palavra dupla ou quadword (conforme indic
 |`__readgsqword`|X64|
 |`__readgsword`|X64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-Essas rotinas somente estão disponíveis como um intrínseco.
+Essas rotinas só estão disponíveis como intrínsecas.
 
 **Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
-[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
+[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

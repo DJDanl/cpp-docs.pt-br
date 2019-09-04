@@ -1,6 +1,6 @@
 ---
 title: __readfsbyte, __readfsdword, __readfsqword, __readfsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readfsword
 - __readfsdword
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - readfsqword intrinsic
 - __readfsqword intrinsic
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
-ms.openlocfilehash: f291747d1f46ebdf3ea1f71cd9ab7e074058201d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30040b33fe8c686bc0cda585c525ae2926cdf314
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262723"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222370"
 ---
-# <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
+# <a name="__readfsbyte-__readfsdword-__readfsqword-__readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
 
 **Seção específica da Microsoft**
 
-Ler a memória de um local especificado por um deslocamento relativo ao início do segmento FS.
+Ler memória de um local especificado por um deslocamento relativo ao início do segmento FS.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 unsigned char __readfsbyte(
    unsigned long Offset
 );
@@ -46,14 +46,14 @@ unsigned __int64 __readfsqword(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Offset*<br/>
-[in] O deslocamento do início do `FS` leiam.
+*Desvio*\
+no O deslocamento do início de `FS` onde deve ser lido.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-O conteúdo da memória do byte, word, palavras duplas ou quadword (conforme indicado pelo nome da função chamada) no local `FS:[Offset]`.
+O conteúdo de memória do byte, Word, doubleword ou quadword (conforme indicado pelo nome da função chamada) no local `FS:[Offset]`.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -64,15 +64,15 @@ O conteúdo da memória do byte, word, palavras duplas ou quadword (conforme ind
 |`__readfsqword`|x86|
 |`__readfsword`|x86|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-Essas rotinas estão disponíveis apenas como intrínsecos.
+Essas rotinas estão disponíveis somente como intrínsecas.
 
 **Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
-[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
+[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

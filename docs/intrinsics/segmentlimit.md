@@ -1,41 +1,41 @@
 ---
 title: __segmentlimit
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __segmentlimit
 helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-ms.openlocfilehash: 650a847be3270782dc441d0e68c2c80d910e9d1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9239d8de8ce2065d09ee7975301a2cb41832ba89
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390380"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217987"
 ---
-# <a name="segmentlimit"></a>__segmentlimit
+# <a name="__segmentlimit"></a>__segmentlimit
 
 **Seção específica da Microsoft**
 
-Gera o `lsl` instrução (limite de segmento de carga).
+Gera a `lsl` instrução (limite de segmento de carga).
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 unsigned long __segmentlimit(
    unsigned long a
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*a*<br/>
-[in] Uma constante que especifica o seletor de segmento.
+*um*\
+no Uma constante que especifica o seletor de segmento.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-O limite de segmento do seletor de segmento especificado pelo `a`, desde que o seletor é válido e visíveis no nível de permissão atual.
+O limite de segmento do seletor de segmento especificado por *um*, se o seletor for válido e visível no nível de permissão atual.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -43,17 +43,17 @@ O limite de segmento do seletor de segmento especificado pelo `a`, desde que o s
 |---------------|------------------|
 |`__segmentlimit`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-Se o limite de segmento não pode ser recuperado, essa instrução falhará. Em caso de falha, essa instrução limpa o sinalizador ZF e o valor retornado será indefinido.
+Se o limite de segmento não puder ser recuperado, essa instrução falhará. Em caso de falha, essa instrução limpa o sinalizador ZF e o valor de retorno é indefinido.
 
 Essa rotina só está disponível como função intrínseca.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 #include <stdio.h>
 
 #ifdef _M_IX86

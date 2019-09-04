@@ -1,6 +1,6 @@
 ---
 title: __indwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __indwordstring
 - __indwordstring_cpp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __indwordstring intrinsic
 - rep insd instruction
 ms.assetid: 96a1cf33-f691-4916-99e4-fa849b61e3a9
-ms.openlocfilehash: 6f50aed8e6efe3b0b0a6e7eaebef5719475463ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0b160ba00b1c0b7aa6bffc913e4cb56d503c2ff
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263783"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217842"
 ---
-# <a name="indwordstring"></a>__indwordstring
+# <a name="__indwordstring"></a>__indwordstring
 
 **Seção específica da Microsoft**
 
-Lê dados da porta especificada usando o `rep insd` instrução.
+Lê dados da porta especificada usando a `rep insd` instrução.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void __indwordstring(
    unsigned short Port,
    unsigned long* Buffer,
@@ -31,16 +31,16 @@ void __indwordstring(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Porta*<br/>
-[in] A porta leiam.
+*Porto*\
+no A porta da qual ler.
 
-*buffer*<br/>
-[out] A leitura da porta de dados são gravados aqui.
+*Completo*\
+fora Os dados lidos da porta são gravados aqui.
 
-*Contagem*<br/>
-[in] O número de bytes de dados a serem lidos.
+*Contar*\
+no O número de bytes de dados a serem lidos.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,7 +48,7 @@ void __indwordstring(
 |---------------|------------------|
 |`__indwordstring`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 

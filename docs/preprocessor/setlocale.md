@@ -1,6 +1,6 @@
 ---
-title: setlocale
-ms.date: 11/04/2016
+title: Pragma setlocale
+ms.date: 08/29/2019
 f1_keywords:
 - setlocale_CPP
 - vc-pragma.setlocale
@@ -8,37 +8,35 @@ helpviewer_keywords:
 - pragmas, setlocale
 - setlocale pragma
 ms.assetid: e60b43d9-fbdf-4c4e-ac85-805523a13b86
-ms.openlocfilehash: b2f28a14b4d4585575a39dd9a936a56a84eeddc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 219354595e5c63b2f13211d43bfa517d97413251
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179614"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218170"
 ---
-# <a name="setlocale"></a>setlocale
+# <a name="setlocale-pragma"></a>Pragma setlocale
 
-Define a localidade (país/região e idioma) que será usada na tradução de literais de cadeia de caracteres e constantes de caracteres amplos.
+Define a *localidade*, o país, a região e o idioma a ser usado ao converter constantes de caractere largo e literais de cadeia de caracteres.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-#pragma setlocale( "[locale-string]" )
-```
+> **#pragma setlocalize ("** [ *locale-String* ] **")**
 
 ## <a name="remarks"></a>Comentários
 
-Como o algoritmo para converter caracteres multibyte para caracteres amplos pode variar de acordo com a localidade ou a compilação pode ocorrer em uma localidade diferente de onde um arquivo executável será executado, esse pragma fornece uma maneira de especificar a localidade de destino no momento da compilação. Isso garante que as cadeias de caracteres amplos sejam armazenadas no formato correto.
+Como o algoritmo para converter caracteres multibyte em caracteres largos pode variar por localidade, ou a compilação pode ocorrer em uma localidade diferente de onde um arquivo executável será executado, esse pragma fornece uma maneira de especificar a localidade de destino no momento da compilação. Ele garante que cadeias de caracteres largos sejam armazenadas no formato correto.
 
-O padrão *cadeia de caracteres de localidade* é "".
+A *cadeia de caracteres de localidade* padrão é "".
 
-A localidade "C" mapeia cada caractere na cadeia de caracteres para seu valor como um **wchar_t** (curto sem sinal). Outros valores válidos para `setlocale` são as entradas que se encontram em de [cadeias de caracteres de idioma](../c-runtime-library/language-strings.md) lista. Por exemplo, você pode emitir:
+A localidade "C" mapeia cada caractere na cadeia de caracteres para seu valor como um **wchar_t**. Outros valores válidos para `setlocale` o são as entradas encontradas na lista de cadeias de [caracteres de idioma](../c-runtime-library/language-strings.md) . Por exemplo, você pode especificar:
 
 ```cpp
 #pragma setlocale("dutch")
 ```
 
-A capacidade de emitir uma cadeia de caracteres de idioma depende da página de código e do suporte à ID de idioma no seu computador.
+A capacidade de especificar uma cadeia de caracteres de idioma depende da página de código e do suporte à ID de idioma no seu computador.
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Diretivas pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

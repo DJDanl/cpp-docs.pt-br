@@ -1,6 +1,6 @@
 ---
 title: __indword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __indword_cpp
 - __indword
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - in instruction
 - __indword intrinsic
 ms.assetid: 1068d686-586e-4e36-b962-d1d7c3315260
-ms.openlocfilehash: 063ebd92682f8011bc6b60eee14c3443bc04c333
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 790b65c8a565124df92b82b7ea17174788086a96
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348920"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222109"
 ---
-# <a name="indword"></a>__indword
+# <a name="__indword"></a>__indword
 
 **Seção específica da Microsoft**
 
-Lê uma palavra dupla de dados da porta especificada usando o `in` instrução.
+Lê uma palavra dupla de dados da porta especificada usando a `in` instrução.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 unsigned long __indword(
    unsigned short Port
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Porta*<br/>
-[in] A porta leiam.
+*Porto*\
+no A porta da qual ler.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-A palavra ler da porta.
+A palavra lida da porta.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -44,7 +44,7 @@ A palavra ler da porta.
 |---------------|------------------|
 |`__indword`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 

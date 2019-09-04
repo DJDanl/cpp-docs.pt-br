@@ -1,36 +1,35 @@
 ---
-title: no_smart_pointers
-ms.date: 11/04/2016
+title: atributo de importação de no_smart_pointers
+ms.date: 08/29/2019
 f1_keywords:
-- no_search_pointers
+- no_smart_pointers
 helpviewer_keywords:
 - no_smart_pointers attribute
 ms.assetid: d69dd71e-08a8-4446-a3d0-a062dc29cb17
-ms.openlocfilehash: ed4950b9e90ef968fcf0c42e4f0a9775c58ea7ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fca3eb486ff3cfc7403c38e91855b799a698782
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326502"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220694"
 ---
-# <a name="nosmartpointers"></a>no_smart_pointers
-**Específico do C++**
+# <a name="no_smart_pointers-import-attribute"></a>atributo de importação de no_smart_pointers
+
+**C++Determinados**
 
 Suprime a criação de ponteiros inteligentes para todas as interfaces na biblioteca de tipos.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-no_smart_pointers
-```
+> **#import** *biblioteca de tipos* **no_smart_pointers**
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, quando você usa `#import`, consegue uma declaração de ponteiro inteligente em todas as interfaces na biblioteca de tipos. Esses ponteiros inteligentes são do tipo [classe com_ptr_t](../cpp/com-ptr-t-class.md).
+Por padrão, quando você usa `#import`, consegue uma declaração de ponteiro inteligente em todas as interfaces na biblioteca de tipos. Esses ponteiros inteligentes são do tipo [_com_ptr_t](../cpp/com-ptr-t-class.md).
 
-**FIM de específico de C++**
+**FINAL C++ específico**
 
 ## <a name="see-also"></a>Consulte também
 
-[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

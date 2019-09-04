@@ -1,44 +1,42 @@
 ---
-title: rename_namespace
-ms.date: 10/18/2018
+title: atributo de importação de rename_namespace
+ms.date: 08/29/2019
 f1_keywords:
 - rename_namespace
 helpviewer_keywords:
 - rename_namespace attribute
 ms.assetid: 45006d2b-36cd-4bec-98b9-3b8ec45299e3
-ms.openlocfilehash: 7b3917a7114ca44d092f10a7831bb35bc64e9387
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d319d7390e7c7dce070a35be44aad37c7a34e1a0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179757"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216646"
 ---
-# <a name="renamenamespace"></a>rename_namespace
+# <a name="rename_namespace-import-attribute"></a>atributo de importação de rename_namespace
 
-**Específico do C++**
+**C++Determinados**
 
 Renomeia o namespace que contém o conteúdo da biblioteca de tipos.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-rename_namespace("NewName")
-```
+> **#import** *biblioteca de tipos* **rename_namespace (** "*NewName*" **)**
 
 ### <a name="parameters"></a>Parâmetros
 
-*NewName*<br/>
+*NewName*\
 O nome do novo namespace.
 
 ## <a name="remarks"></a>Comentários
 
-Ele usa um único argumento, *NewName*, que especifica o novo nome para o namespace.
+O atributo **rename_namespace** usa um único argumento, *NewName*, que especifica o novo nome para o namespace.
 
-Para remover o namespace, use o [no_namespace](../preprocessor/no-namespace.md) atributo em vez disso.
+Para remover o namespace, use o atributo [no_namespace](../preprocessor/no-namespace.md) em vez disso.
 
-**FIM de específico de C++**
+**FINAL C++ específico**
 
 ## <a name="see-also"></a>Consulte também
 
-[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

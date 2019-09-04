@@ -1,19 +1,19 @@
 ---
 title: __readcr8
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readcr8
 helpviewer_keywords:
 - __readcr8 intrinsic
 ms.assetid: fce16953-87ff-4fbe-8081-7962b97ae46c
-ms.openlocfilehash: d4c0b22d38d725566062d2da98839579c22d571c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 525775fde4cb96cecfcabef878780d5a2aa6743a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396451"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221239"
 ---
-# <a name="readcr8"></a>__readcr8
+# <a name="__readcr8"></a>__readcr8
 
 **Seção específica da Microsoft**
 
@@ -21,11 +21,11 @@ Lê o registro de CR8 e retorna seu valor.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 unsigned __int64 __readcr8(void);
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O valor no registro CR8.
 
@@ -35,11 +35,11 @@ O valor no registro CR8.
 |---------------|------------------|
 |`__readcr8`|X64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-Esse intrínseco só está disponível no modo kernel e a rotina só está disponível como um intrínseco.
+O intrínseco só está disponível no modo kernel, e a rotina só está disponível como intrínseca.
 
 **Fim da seção específica da Microsoft**
 

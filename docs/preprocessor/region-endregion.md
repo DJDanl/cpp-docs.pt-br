@@ -1,6 +1,6 @@
 ---
-title: region, endregion
-ms.date: 10/18/2018
+title: Pragmas region, endregion
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.endregion
 - endregion_CPP
@@ -12,37 +12,35 @@ helpviewer_keywords:
 - endregion pragma
 - region pragma
 ms.assetid: c697f807-622f-4796-851b-68a42bbecd84
-ms.openlocfilehash: c73a90aa2be83d643b74dde4645081e89da3ff73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a01e04582ac81d678aa0702945c62ee974a4428
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179744"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222381"
 ---
-# <a name="region-endregion"></a>region, endregion
+# <a name="region-endregion-pragmas"></a>Pragmas region, endregion
 
-`#pragma region` permite que você especifique um bloco de código que você pode expandir ou recolher ao usar o [recurso de estrutura de tópicos](/visualstudio/ide/outlining) do Editor de código do Visual Studio.
+`#pragma region`permite especificar um bloco de código que você pode expandir ou recolher ao usar o [recurso de estrutura de tópicos](/visualstudio/ide/outlining) do Editor de Visual Studio Code.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-#pragma region name
-#pragma endregion comment
-```
+> **região de #pragma** *nome* do\
+> **#pragma** fim da região *Comentário*
 
 ### <a name="parameters"></a>Parâmetros
 
-*comment*<br/>
-(Opcional) Um comentário que será exibido no editor de códigos.
+*mente*\
+Adicional Um comentário a ser exibido no editor de código.
 
-*name*<br/>
-(Opcional) O nome da região.  Esse nome será exibido no editor de códigos.
+*nomes*\
+Adicional O nome da região. Esse nome é exibido no editor de código.
 
 ## <a name="remarks"></a>Comentários
 
-`#pragma endregion` marca o fim de um `#pragma region` bloco.
+`#pragma endregion`marca o final de um `#pragma region` bloco.
 
-Um `#region` bloco deverá ser encerrado com `#pragma endregion`.
+Um `#region` bloco deve ser terminado por uma `#pragma endregion` diretiva.
 
 ## <a name="example"></a>Exemplo
 
@@ -59,4 +57,4 @@ int main() {}
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Diretivas pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

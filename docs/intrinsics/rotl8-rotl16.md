@@ -1,6 +1,6 @@
 ---
 title: _rotl8, _rotl16
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _rotl8
 - _rotl16
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - _rotl8 intrinsic
 - _rotl16 intrinsic
 ms.assetid: 8c519ab6-aef9-4f07-a387-daee8408368f
-ms.openlocfilehash: 8c87c7a5fa1c2bee475b0e4508b5c1571dc449de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5dffde2d3f830b6ec4ad43865648c27b1defb593
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390471"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218032"
 ---
-# <a name="rotl8-rotl16"></a>_rotl8, _rotl16
+# <a name="_rotl8-_rotl16"></a>_rotl8, _rotl16
 
 **Seção específica da Microsoft**
 
@@ -23,7 +23,7 @@ Gire os valores de entrada à esquerda para o bit mais significativo (MSB) por u
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 unsigned char _rotl8(
    unsigned char value,
    unsigned char shift
@@ -34,15 +34,15 @@ unsigned short _rotl16(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*value*<br/>
-[in] O valor a ser girado.
+*value*\
+no O valor a ser girado.
 
-*shift*<br/>
-[in] O número de bits a girar.
+*alternância*\
+no O número de bits para girar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O valor girado.
 
@@ -50,18 +50,18 @@ O valor girado.
 
 |Intrínseco|Arquitetura|
 |---------------|------------------|
-|`_rotl8`|x86, ARM, x64|
-|`_rotl16`|x86, ARM, x64|
+|`_rotl8`|x86, ARM, x64, ARM64|
+|`_rotl16`|x86, ARM, x64, ARM64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-Ao contrário de uma operação de deslocamento à esquerda, ao executar um giro à direita, os bits da extremidade alta são movidos para as posições de bits menos significativas.
+Ao contrário de uma operação de deslocamento à esquerda, ao executar uma rotação à esquerda, os bits de ordem superior que ficam fora do topo são movidos para as posições de bits menos significativas.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // rotl.cpp
 #include <stdio.h>
 #include <intrin.h>
@@ -102,5 +102,5 @@ Rotating unsigned short 0x12 left by 10 bits gives 0x4800
 
 ## <a name="see-also"></a>Consulte também
 
-[_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)<br/>
+[_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)\
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

@@ -1,42 +1,41 @@
 ---
 title: __svm_vmsave
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_vmsave
 helpviewer_keywords:
 - VMSAVE instruction
 - __svm_vmsave intrinsic
 ms.assetid: 617a60bd-8514-4ba1-8066-bcf4dd481030
-ms.openlocfilehash: d683a13f636db9683b4a7c8d075ad6c3c88c2aed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f91efa7116a8a8e9ebe27c7e5e4e64c4f1533e9d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390185"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219786"
 ---
-# <a name="svmvmsave"></a>__svm_vmsave
+# <a name="__svm_vmsave"></a>__svm_vmsave
 
 **Seção específica da Microsoft**
 
-Armazena um subconjunto de estado do processador no bloco de controle de máquina virtual especificada (VMCB).
+Armazena um subconjunto do estado do processador no bloco de controle de máquina virtual especificado (VMCB).
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 void __svm_vmsave(
    size_t VmcbPhysicalAddress
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|---------------|-----------------|
-|*VmcbPhysicalAddress*|[in] O endereço físico do VMCB.|
+*VmcbPhysicalAddress*\
+no O endereço físico do VMCB.
 
 ## <a name="remarks"></a>Comentários
 
-O `__svm_vmsave` função é equivalente ao `VMSAVE` instruções de máquina. Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento "Volume de Manual do programador da arquitetura AMD64 2: Sistema de programação,"o número 24593, revisão 3.11 ou posterior, no documento de [Corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.
+A `__svm_vmsave` função é equivalente à instrução `VMSAVE` da máquina. Essa função dá suporte à interação do monitor de máquina virtual de um host com um sistema operacional convidado e seus aplicativos. Para obter mais informações, pesquise o documento "o volume manual do programador de arquitetura AMD64 2: Programação do sistema, "número do documento 24593, revisão 3,11 ou posterior, no site da [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -44,12 +43,12 @@ O `__svm_vmsave` função é equivalente ao `VMSAVE` instruções de máquina. E
 |---------------|------------------|
 |`__svm_vmsave`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 **Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
-[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
-[__svm_vmrun](../intrinsics/svm-vmrun.md)<br/>
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)\
+[__svm_vmrun](../intrinsics/svm-vmrun.md)\
 [__svm_vmload](../intrinsics/svm-vmload.md)

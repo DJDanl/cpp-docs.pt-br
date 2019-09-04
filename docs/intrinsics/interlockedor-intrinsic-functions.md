@@ -1,6 +1,6 @@
 ---
 title: Funções intrínsecas _InterlockedOr
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedOr8_nf
 - _InterlockedOr_HLEAcquire
@@ -56,14 +56,14 @@ helpviewer_keywords:
 - _InterlockedOr16_rel intrinsic
 - _InterlockedOr_HLEAcquire intrinsic
 ms.assetid: 5f265240-7af8-44b7-b952-19f3a9c56186
-ms.openlocfilehash: 9748099e4224a8c55cd4455a57c8e849531f1c9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: baad724c85d2d8fb981ec7836d7a46152000fae3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396698"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217593"
 ---
-# <a name="interlockedor-intrinsic-functions"></a>Funções intrínsecas _InterlockedOr
+# <a name="_interlockedor-intrinsic-functions"></a>Funções intrínsecas _InterlockedOr
 
 **Seção específica da Microsoft**
 
@@ -71,7 +71,7 @@ Execute um bit a bit atômico ou operação em uma variável compartilhada por v
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 long _InterlockedOr(
    long volatile * Value,
    long Mask
@@ -170,15 +170,15 @@ __int64 _InterlockedOr64_rel(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*Valor*<br/>
-[no, out] Um ponteiro para o primeiro operando, a ser substituído pelo resultado.
+*Valor*\
+[entrada, saída] Um ponteiro para o primeiro operando, a ser substituído pelo resultado.
 
-*Máscara*<br/>
-[in] O segundo operando.
+*Mascara*\
+no O segundo operando.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O valor original apontado pelo primeiro parâmetro.
 
@@ -186,16 +186,18 @@ O valor original apontado pelo primeiro parâmetro.
 
 |Intrínseco|Arquitetura|Cabeçalho|
 |---------------|------------------|------------|
-|`_InterlockedOr`, `_InterlockedOr8`, `_InterlockedOr16`, `_InterlockedOr64`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedOr_acq`, `_InterlockedOr_nf`, `_InterlockedOr_rel`, `_InterlockedOr8_acq`, `_InterlockedOr8_nf`, `_InterlockedOr8_rel`, `_InterlockedOr16_acq`, `_InterlockedOr16_nf`, `_InterlockedOr16_rel`, `_InterlockedOr64_acq`, `_InterlockedOr64_nf`, `_InterlockedOr64_rel`|ARM|\<intrin.h>|
+|`_InterlockedOr`, `_InterlockedOr8`, `_InterlockedOr16`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedOr64`|ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedOr_acq`, `_InterlockedOr_nf`, `_InterlockedOr_rel`, `_InterlockedOr8_acq`, `_InterlockedOr8_nf`, `_InterlockedOr8_rel`, `_InterlockedOr16_acq`, `_InterlockedOr16_nf`, `_InterlockedOr16_rel`, `_InterlockedOr64_acq`, `_InterlockedOr64_nf`, `_InterlockedOr64_rel`|ARM, ARM64|\<intrin.h>|
 |`_InterlockedOr_np`, `_InterlockedOr8_np`, `_InterlockedOr16_np`, `_InterlockedOr64_np`|X64|\<intrin.h>|
-|`_InterlockedOr_HLEAcquire`, `_InterlockedOr_HLERelease`, `_InterlockedOr64_HLEAcquire`, `_InterlockedOr64_HLERelease`|x86, x64|\<immintrin.h>|
+|`_InterlockedOr_HLEAcquire`, `_InterlockedOr_HLERelease`|x86, x64|\<immintrin.h>|
+|`_InterlockedOr64_HLEAcquire`, `_InterlockedOr64_HLERelease`|X64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Comentários
 
 O número no nome de cada função especifica o tamanho de bit dos argumentos.
 
-Em plataformas ARM, use intrínsecos com os sufixos `_acq` e `_rel` para semântica de aquisição e liberação, como no início e no final de uma seção crítica. Os intrínsecos de ARM com um sufixo `_nf` ("no fence") não funcionam como uma barreira de memória.
+Em plataformas ARM, use intrínsecos com os sufixos `_acq` e `_rel` para semântica de aquisição e liberação, como no início e no final de uma seção crítica. O ARM intrínseco com um `_nf` sufixo ("sem limite") não atua como uma barreira de memória.
 
 Intrínsecos com um sufixo `_np` ("no prefetch") impedem que uma possível operação de pré-busca seja inserida pelo compilador.
 
@@ -203,7 +205,7 @@ Em plataformas Intel que suportam instruções HLE (Elisão de Bloqueio de Hardw
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // _InterlockedOr.cpp
 #include <stdio.h>
 #include <intrin.h>
@@ -228,5 +230,5 @@ int main()
 
 ## <a name="see-also"></a>Consulte também
 
-[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)\
 [conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

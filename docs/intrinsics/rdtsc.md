@@ -1,6 +1,6 @@
 ---
 title: __rdtsc
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __rdtsc
 helpviewer_keywords:
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - rdtsc instruction
 - Read Time Stamp Counter instruction
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
-ms.openlocfilehash: 6f30be3340ae1be237bb2f8a008a8cb60c7351f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 837b68ca6ac63587cd43a7e8828777221c677e3c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396568"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217143"
 ---
-# <a name="rdtsc"></a>__rdtsc
+# <a name="__rdtsc"></a>__rdtsc
 
 **Seção específica da Microsoft**
 
-Gera o `rdtsc` instrução, que retorna o carimbo de data / hora do processador. O carimbo de data / hora do processador registra o número de ciclos de relógio desde a última reinicialização.
+Gera a `rdtsc` instrução, que retorna o carimbo de data/hora do processador. O carimbo de data/hora do processador registra o número de ciclos de relógio desde a última redefinição.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 unsigned __int64 __rdtsc();
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Um inteiro sem sinal de 64 bits que representa uma contagem de tiques.
+Um inteiro sem sinal de 64 bits que representa uma contagem em escala.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -37,17 +37,17 @@ Um inteiro sem sinal de 64 bits que representa uma contagem de tiques.
 |---------------|------------------|
 |`__rdtsc`|x86, x64|
 
-**Arquivo de cabeçalho** \<intrin. h >
+**Arquivo de cabeçalho** \<> intrin. h
 
 ## <a name="remarks"></a>Comentários
 
-Essa rotina só está disponível como um intrínseco.
+Essa rotina está disponível somente como intrínseca.
 
-A interpretação do valor TSC nessa geração de hardware é diferente do que em versões anteriores do x64. Consulte os manuais de hardware para obter mais informações.
+A interpretação do valor de TSC em gerações posteriores de hardware é diferente daquela em versões anteriores do x64. Para obter mais informações, consulte os manuais de hardware.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // rdtsc.cpp
 // processor: x86, x64
 #include <stdio.h>
