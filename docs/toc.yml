@@ -536,6 +536,10 @@
                       href: build/reference/errorreport-report-internal-compiler-errors.md
                     - name: /execution-charset (definir conjunto de caracteres de execução)
                       href: build/reference/execution-charset-set-execution-character-set.md
+                    - name: '/experimental:module'
+                      href: build/reference/experimental-module.md
+                    - name: '/experimental:preprocessor'
+                      href: build/reference/experimental-preprocessor.md
                     - name: /F (definir tamanho da pilha)
                       href: build/reference/f-set-stack-size.md
                     - name: Opções do arquivo de saída (/F)
