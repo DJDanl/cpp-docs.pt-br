@@ -1,6 +1,6 @@
 ---
 title: Visão geral de marshaling no C++
-ms.date: 06/28/2018
+ms.date: 07/12/2019
 ms.topic: reference
 f1_keywords:
 - marshaling
@@ -10,69 +10,67 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-ms.openlocfilehash: 9e3b8f561ce6609eb2afedb527a16c4803f69c53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 937fbdf4b3ed09344e69a8f1eb731565c36794ae
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384732"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "70311704"
 ---
-# <a name="overview-of-marshaling-in-c"></a>Visão geral de marshaling no C++
+# <a name="overview-of-marshaling-in-ccli"></a>Visão geral do marshaling C++em/CLI
 
-No modo misto, você às vezes deve empacotar os dados entre tipos nativos e gerenciados. O Visual Studio 2008 introduziu o *biblioteca de marshaling* para ajudar a realizar marshaling e converter os dados de uma forma simples.  A biblioteca de marshaling consiste em um conjunto de funções e um `marshal_context` classe que realize o marshaling para tipos comuns. A biblioteca é definida nestes cabeçalhos na **incluem/msclr** diretório para sua edição do Visual Studio:
+No modo misto, às vezes você deve realizar marshaling dos dados entre tipos nativos e gerenciados. A *biblioteca de marshaling* ajuda você a realizar marshaling e converter dados de uma maneira simples.  A biblioteca de marshaling consiste em um conjunto de funções e `marshal_context` uma classe que executa o marshaling para tipos comuns. A biblioteca é definida nesses cabeçalhos no diretório **include/msclr** para sua edição do Visual Studio:
 
 |Cabeçalho|Descrição|
 |---------------|-----------------|
-|marshal.h|`marshal_context` classe e funções de marshaling sem contexto|
-|marshal_atl.h| Funções de marshaling de tipos do ATL|
-|marshal_cppstd.h|Funções de marshaling de tipos C++ padrão|
-|marshal_windows.h|Funções de marshaling de tipos do Windows|
+|marshal.h|`marshal_context`funções de empacotamento de classe e sem contexto|
+|marshal_atl.h| Funções para empacotamento de tipos ATL|
+|marshal_cppstd.h|Funções para empacotamento de C++ tipos padrão|
+|marshal_windows.h|Funções para empacotamento de tipos do Windows|
 
-O caminho padrão para **msclr** pasta é semelhante ao seguinte, dependendo de qual edição você tem e o número da compilação:
+O caminho padrão para a pasta **msclr** é algo assim, dependendo de qual edição você tem e o número de Build:
 
 ```cmd
 C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
 ```
 
-Você pode usar a biblioteca de marshaling com ou sem um [classe marshal_context](../dotnet/marshal-context-class.md). Algumas conversões exigem um contexto. Outras conversões podem ser implementados usando o [marshal_as](../dotnet/marshal-as.md) função. A tabela a seguir lista as conversões atuais com suporte, se ele requer um contexto e qual arquivo de marshaling, você precisa incluir:
+Você pode usar a biblioteca de marshaling com ou sem uma [classe marshal_context](../dotnet/marshal-context-class.md). Algumas conversões exigem um contexto. Outras conversões podem ser implementadas usando a função [marshal_as](../dotnet/marshal-as.md) . A tabela a seguir lista as conversões atuais com suporte, se elas exigem um contexto e qual arquivo de marshaling você precisa incluir:
 
-|De tipo|Para o tipo|Método de marshaling|Arquivo de inclusão|
+|Do tipo|Para o tipo|Método Marshal|Arquivo de inclusão|
 |---------------|-------------|--------------------|------------------|
-|System::String^|Const char \*|marshal_context|marshal.h|
-|Const char \*|System::String^|marshal_as|marshal.h|
-|char \*|System::String^|marshal_as|marshal.h|
-|System::String^|const wchar_t\*|marshal_context|marshal.h|
-|const wchar_t \*|System::String^|marshal_as|marshal.h|
-|wchar_t \*|System::String^|marshal_as|marshal.h|
-|System::IntPtr|IDENTIFICADOR|marshal_as|marshal_windows.h|
-|IDENTIFICADOR|System::IntPtr|marshal_as|marshal_windows.h|
-|System::String^|BSTR|marshal_context|marshal_windows.h|
-|BSTR|System::String^|marshal_as|marshal.h|
-|System::String^|bstr_t|marshal_as|marshal_windows.h|
-|bstr_t|System::String^|marshal_as|marshal_windows.h|
-|System::String^|std::string|marshal_as|marshal_cppstd.h|
-|std::string|System::String^|marshal_as|marshal_cppstd.h|
-|System::String^|std::wstring|marshal_as|marshal_cppstd.h|
-|std::wstring|System::String^|marshal_as|marshal_cppstd.h|
-|System::String^|CStringT\<char >|marshal_as|marshal_atl.h|
-|CStringT\<char >|System::String^|marshal_as|marshal_atl.h|
-|System::String^|CStringT<wchar_t>|marshal_as|marshal_atl.h|
-|CStringT<wchar_t>|System::String^|marshal_as|marshal_atl.h|
-|System::String^|CComBSTR|marshal_as|marshal_atl.h|
-|CComBSTR|System::String^|marshal_as|marshal_atl.h|
+|Sistema:: cadeia de caracteres ^|caractere const\*|marshal_context|marshal.h|
+|caractere const\*|Sistema:: cadeia de caracteres ^|marshal_as|marshal.h|
+|º\*|Sistema:: cadeia de caracteres ^|marshal_as|marshal.h|
+|Sistema:: cadeia de caracteres ^|const wchar_t\*|marshal_context|marshal.h|
+|wchar_t const\*|Sistema:: cadeia de caracteres ^|marshal_as|marshal.h|
+|wchar_t \*|Sistema:: cadeia de caracteres ^|marshal_as|marshal.h|
+|System::IntPtr|PROCESSAMENTO|marshal_as|marshal_windows.h|
+|PROCESSAMENTO|System::IntPtr|marshal_as|marshal_windows.h|
+|Sistema:: cadeia de caracteres ^|BSTR|marshal_context|marshal_windows.h|
+|BSTR|Sistema:: cadeia de caracteres ^|marshal_as|marshal.h|
+|Sistema:: cadeia de caracteres ^|bstr_t|marshal_as|marshal_windows.h|
+|bstr_t|Sistema:: cadeia de caracteres ^|marshal_as|marshal_windows.h|
+|Sistema:: cadeia de caracteres ^|std::string|marshal_as|marshal_cppstd.h|
+|std::string|Sistema:: cadeia de caracteres ^|marshal_as|marshal_cppstd.h|
+|Sistema:: cadeia de caracteres ^|std::wstring|marshal_as|marshal_cppstd.h|
+|std::wstring|Sistema:: cadeia de caracteres ^|marshal_as|marshal_cppstd.h|
+|Sistema:: cadeia de caracteres ^|>\<Char CStringT|marshal_as|marshal_atl.h|
+|>\<Char CStringT|Sistema:: cadeia de caracteres ^|marshal_as|marshal_atl.h|
+|Sistema:: cadeia de caracteres ^|CStringT<wchar_t>|marshal_as|marshal_atl.h|
+|CStringT<wchar_t>|Sistema:: cadeia de caracteres ^|marshal_as|marshal_atl.h|
+|Sistema:: cadeia de caracteres ^|CComBSTR|marshal_as|marshal_atl.h|
+|CComBSTR|Sistema:: cadeia de caracteres ^|marshal_as|marshal_atl.h|
 
-Marshaling requer um contexto de somente quando você realizar marshaling de dados gerenciados para nativo tipos e o tipo nativo que você está convertendo para não tem um destruidor para automático de limpeza. O contexto de marshaling destrói o tipo de dados nativo alocados em seu destruidor. Portanto, conversões que exigem um contexto será válidas até que o contexto é excluído. Para salvar todos os valores com marshaling, você deve copiar os valores para suas próprias variáveis.
+O marshaling requer um contexto somente quando você realiza marshaling de tipos de dados gerenciados para nativos e o tipo nativo para o qual você está convertendo não tem um destruidor para limpeza automática. O contexto de marshaling destrói o tipo de dados nativo alocado em seu destruidor. Portanto, as conversões que exigem um contexto serão válidas somente até que o contexto seja excluído. Para salvar os valores de marshaling, você deve copiar os valores para suas próprias variáveis.
 
 > [!NOTE]
->  Se você tiver inserido `NULL`s na sua cadeia de caracteres, o resultado de marshaling de cadeia de caracteres não é garantido. O embedded `NULL`s pode fazer com que a cadeia de caracteres a ser truncado ou eles podem ser preservados.
+>  Se você tiver inserido `NULL`s em sua cadeia de caracteres, o resultado do marshaling da cadeia de caracteres não será garantido. Os s `NULL`incorporados podem fazer com que a cadeia de caracteres seja truncada ou pode ser preservada.
 
-Este exemplo mostra como incluir o diretório msclr em uma declaração de cabeçalho de inclusão:
+Este exemplo mostra como incluir o diretório msclr em uma declaração de cabeçalho include:
 
 `#include "msclr\marshal_cppstd.h"`
 
-A biblioteca de marshaling é extensível para que você pode adicionar seus próprios tipos de marshaling. Para obter mais informações sobre como estender a biblioteca de marshaling, consulte [como: Estender a biblioteca de Marshaling](../dotnet/how-to-extend-the-marshaling-library.md).
-
-Em versões anteriores, você pode realizar marshaling de dados usando [de invocação de plataforma](/dotnet/framework/interop/consuming-unmanaged-dll-functions). Para obter mais informações sobre `PInvoke`, consulte [Calling Native Functions from Managed Code](../dotnet/calling-native-functions-from-managed-code.md).
+A biblioteca de marshaling é extensível para que você possa adicionar seus próprios tipos de marshaling. Para obter mais informações sobre como estender a biblioteca de marshaling, consulte [como: Estenda a biblioteca](../dotnet/how-to-extend-the-marshaling-library.md)de marshaling.
 
 ## <a name="see-also"></a>Consulte também
 

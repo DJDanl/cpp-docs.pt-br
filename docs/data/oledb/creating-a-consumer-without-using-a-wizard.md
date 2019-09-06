@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: 421723ed561e8ed986a64024c4c5d29c9fba6110
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 85e95afa92c8a968865d9a3031e1a309e68ae7d3
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525117"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "70311921"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Criando um consumidor sem usar um assistente
 
@@ -17,7 +17,7 @@ O exemplo a seguir pressupõe que você está adicionando suporte do consumidor 
 
 Adição de suporte do consumidor de OLE DB sem usar o **Assistente de Consumidor OLE DB do ATL**:
 
-- Em seu arquivo pch.h, acrescente as seguintes instruções `#include`:
+- No arquivo *PCH. h* , acrescente as seguintes `#include` instruções:
 
     ```cpp
     #include <atlbase.h>

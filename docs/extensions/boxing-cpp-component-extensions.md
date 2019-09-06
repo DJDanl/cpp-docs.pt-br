@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 0b41cacba8c279447e1e944cc3214ca1ba607665
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 6221087b60e76e3a2648366c4efebc4105f0ab58
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516151"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311738"
 ---
 # <a name="boxing--ccli-and-ccx"></a>Conversão boxing (C++/CLI e C++/CX)
 
@@ -72,7 +72,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 }
 ```
 
-Saiba mais em [Conversão boxing (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969554.aspx).
+Saiba mais em [Conversão boxing (C++/CX)](../cppcx/boxing-c-cx.md).
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
@@ -80,7 +80,7 @@ O compilador converte tipos de valor para <xref:System.Object>. Isso é possíve
 
 Operações de boxing e unboxing permitem que tipos de valor sejam tratados como objetos. Tipos de valor, incluindo tipos struct e tipos internos, como int, podem ser convertidos para e do tipo <xref:System.Object>.
 
-Para obter mais informações, confira:
+Para obter mais informações, consulte:
 
 - [Como: solicitar explicitamente uma conversão boxing](../dotnet/how-to-explicitly-request-boxing.md)
 

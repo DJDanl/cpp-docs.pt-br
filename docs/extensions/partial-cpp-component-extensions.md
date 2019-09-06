@@ -8,12 +8,12 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-ms.openlocfilehash: eb9b3907008147cb21f04aec5f42e4896fa35b3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 37406060c3569c417c14bcc98561f8f52a7c6201
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516471"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "70311827"
 ---
 # <a name="partial--ccli-and-ccx"></a>partial (C++/CLI and C++/CX)
 
@@ -67,7 +67,7 @@ Modelos: Uma classe parcial não pode ser um modelo.
 
 Genéricos: Uma classe parcial pode ser genérica, se a definição completa puder ser genérica. Mas toda classe parcial e completa deve ter exatamente os mesmos parâmetros genéricos, incluindo nomes de parâmetro formais.
 
-Saiba mais sobre como usar a palavra-chave **partial** em [Classes parciais (C++/CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023).
+Saiba mais sobre como usar a palavra-chave **partial** em [Classes parciais (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -79,4 +79,4 @@ Opção do compilador: `/ZW`
 
 ## <a name="see-also"></a>Consulte também
 
-[Classes parciais (C++/CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)
+[Classes parciais (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023)

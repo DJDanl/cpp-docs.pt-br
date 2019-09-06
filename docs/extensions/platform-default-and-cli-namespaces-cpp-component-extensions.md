@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: a7599e2987d27626e6f5c9d049d9a3bd4509c3ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: db6c73d6c52bf97aea5d0fbeeeebdeef87f692cc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516511"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311953"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Namespaces plataforma, padrão e cli (C++/CLI e C++/CX)
 
@@ -26,7 +26,7 @@ O Visual Studio fornece um namespace padrão para seu projeto quando o projeto �
 
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
 
-Saiba mais em [Namespaces e visibilidade do tipo (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969551.aspx).
+Saiba mais em [Namespaces e visibilidade do tipo (C++/CX)](../cppcx/namespaces-and-type-visibility-c-cx.md).
 
 ### <a name="requirements"></a>Requisitos
 

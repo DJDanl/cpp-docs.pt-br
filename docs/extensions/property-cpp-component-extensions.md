@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 8ec76db37cffb1b3d15447165300bedf1a8771c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 4a05f9cf8cbec9644254d14873a3259f12b33aed
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516501"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311857"
 ---
 # <a name="property--ccli-and-ccx"></a>property (C++/CLI e C++/CX)
 
@@ -86,7 +86,7 @@ O corpo do método da propriedade do acessador set ou get. *property_body* pode 
 
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
 
-Saiba mais em [Propriedades (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx).
+Saiba mais em [Propriedades (C++/CX)](../cppcx/properties-c-cx.md).
 
 ### <a name="requirements"></a>Requisitos
 

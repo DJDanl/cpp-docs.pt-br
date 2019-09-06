@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-ms.openlocfilehash: 9c59f28739ab94210c16bd800a48997f3f2282df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df193bae541aecf8416056c2b169f0079539d173
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222865"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "70311891"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Hospedando um controle de usuário dos Windows Forms como uma exibição MFC
 
-MFC usa a classe CWinFormsView para hospedar um controle de usuário do Windows Forms em uma exibição do MFC. Modos de exibição do MFC Windows Forms são controles ActiveX. O controle de usuário está hospedado como um filho do modo nativo e ocupa toda a área cliente do modo nativo.
+O MFC usa a classe CWinFormsView para hospedar um Windows Forms controle de usuário em uma exibição do MFC. Os modos de exibição do MFC Windows Forms são controles ActiveX. O controle de usuário é hospedado como um filho do modo de exibição nativo e ocupa toda a área do cliente da exibição nativa.
 
-O resultado final se parece com o modelo usado pelas [classe CFormView](../mfc/reference/cformview-class.md). Isso permite aproveitar o designer de formulários do Windows e o tempo de execução para criar modos de exibição avançados baseado em formulário.
+O resultado final é semelhante ao modelo usado pela [classe CFormView](../mfc/reference/cformview-class.md). Isso permite que você tire proveito do designer de Windows Forms e do tempo de execução para criar exibições baseadas em formulário sofisticadas.
 
-Como os modos de exibição do MFC Windows Forms são controles ActiveX, eles não têm o mesmo `hwnd` como modos de exibição do MFC. Também não pode ser passados como um ponteiro para um [CView](../mfc/reference/cview-class.md) exibição. Em geral, use métodos do .NET Framework para trabalhar com modos de exibição de formulários do Windows e confiar menos no Win32.
+Como as exibições do MFC Windows Forms são controles ActiveX, elas não têm `hwnd` o mesmo que as exibições do MFC. Além disso, eles não podem ser passados como um ponteiro para uma exibição [cvisualização](../mfc/reference/cview-class.md) . Em geral, use .NET Framework métodos para trabalhar com Windows Forms exibições e contar com menos no Win32.
 
-Para um aplicativo de exemplo que mostra os formulários do Windows usado com o MFC, consulte [MFC e integração de formulários do Windows](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Para um aplicativo de exemplo que mostra Windows Forms usado com MFC, consulte [integração do MFC e do Windows Forms](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
 
 ## <a name="in-this-section"></a>Nesta seção
 
@@ -34,4 +34,4 @@ Para um aplicativo de exemplo que mostra os formulários do Windows usado com o 
 ## <a name="see-also"></a>Consulte também
 
 [Usando um controle de usuário do Windows Form no MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
-[Como: Criar controles compostos](/dotnet/framework/winforms/controls/how-to-author-composite-controls)
+[Como: Controles de composição de autor](/dotnet/framework/winforms/controls/how-to-author-composite-controls)
