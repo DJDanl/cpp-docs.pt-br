@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 26bfc3bb9892486353f55a71cfd86a17f2de98b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8b34a4f146cc7961ee1176580def6319185693e9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516581"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311768"
 ---
 # <a name="event--ccli-and-ccx"></a>event (C++/CLI e C++/CX)
 
@@ -75,7 +75,7 @@ Use os operadores **+=** e **-=** para adicionar e remover um manipulador de eve
 
 ### <a name="remarks"></a>Comentários
 
-Saiba mais em [Eventos (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
+Saiba mais em [Eventos (C++/CX)](../cppcx/events-c-cx.md).
 
 Se você pretende adicionar e remover um manipulador de eventos, salve a estrutura EventRegistrationToken que é retornada pela operação add. Em seguida, na operação remove, você deve usar a estrutura EventRegistrationToken salva para identificar o manipulador de eventos a remover.
 

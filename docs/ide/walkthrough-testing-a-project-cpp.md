@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: c170deef8bf76bdd223bde01794f8996dc77922d
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.openlocfilehash: e0422b4f862b5438a313e25dac421d591bbbb9a5
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400934"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273705"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Passo a passo: Testando um projeto (C++)
 
@@ -31,7 +31,7 @@ Neste passo a passo, você observará o valor de uma variável durante a execuç
 
 1. Selecione esta linha de código:
 
-   `Cardgame.solitaire(1);`
+   `Cardgame solitaire(1);`
 
 1. Para definir um ponto de interrupção nessa linha, na barra de menus, escolha **Depurar** > **Ativar/Desativar ponto de interrupção** ou escolha a tecla **F9**. Um círculo vermelho é exibido à esquerda da linha; ele indica que um ponto de interrupção está definido. Para remover um ponto de interrupção, escolha o comando de menu ou a tecla **F9** novamente.
 

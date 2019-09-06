@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-ms.openlocfilehash: 199fda710a077998c6b10f101f6ebc15573e675e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 42e141caed720aa29cf918a2bdf69d9a2c4203dc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516631"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311954"
 ---
-# <a name="safecast-ccli-and-ccx"></a>safe_cast (C++/CLI e C++/CX)
+# <a name="safe_cast-ccli-and-ccx"></a>safe_cast (C++/CLI e C++/CX)
 
 A operação **safe_cast** retorna a expressão especificada como o tipo especificado, se bem-sucedida; caso contrário, lança `InvalidCastException`.
 
@@ -32,7 +32,7 @@ A operação **safe_cast** retorna a expressão especificada como o tipo especif
 
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
 
-**safe_cast** permite alterar o tipo de uma expressão especificada. Em situações em que você espera que uma variável ou parâmetro seja conversível em um determinado tipo, é possível usar **safe_cast** sem um bloco **try-catch** para detectar erros de programação durante o desenvolvimento. Saiba mais em [Conversão (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755802.aspx).
+**safe_cast** permite alterar o tipo de uma expressão especificada. Em situações em que você espera que uma variável ou parâmetro seja conversível em um determinado tipo, é possível usar **safe_cast** sem um bloco **try-catch** para detectar erros de programação durante o desenvolvimento. Saiba mais em [Conversão (C++/CX)](../cppcx/casting-c-cx.md).
 
 ### <a name="syntax"></a>Sintaxe
 

@@ -2,12 +2,13 @@
 title: Guia de atualização e portabilidade do Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: cd74168419006388b8469086560452a8a99e05e2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.topic: landing-page
+ms.openlocfilehash: eed1f3d6ba66aa77561d610530f820b09cf439df
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511492"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216374"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guia de atualização e portabilidade do Visual C++
 
@@ -73,7 +74,7 @@ Como alternativa, você pode ter novos requisitos ou prever a necessidade de dir
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|DESCRIÇÃO|
+|Título|Descrição|
 |-----------|-----------------|
 |[Atualizando projetos de versões anteriores do Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Discute como usar projetos criados em versões anteriores do Visual Studio.|
 |[Novidades do compilador C++ no Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Alterações no IDE e em ferramentas na versão atual do Visual Studio|

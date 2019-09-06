@@ -3,12 +3,12 @@ title: Criar e configurar um projeto CMake do Linux no Visual Studio
 description: Como criar, configurar, editar e compilar um projeto CMake do Linux no Visual Studio
 ms.date: 06/12/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: d70ffe593cc014bca40a447a9cdb1c1c96a40e3f
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
-ms.translationtype: HT
+ms.openlocfilehash: 5c3a2b212240217fe6d6053188dd466376010391
+ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042653"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383411"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Criar e configurar um projeto do Linux CMake
 
@@ -112,7 +112,18 @@ Para fornecer suporte ao IntelliSense para cabeçalhos em sistemas Linux remotos
 
 Para depurar o código no sistema de destino de depuração especificado, defina um ponto de interrupção, selecione o destino do CMake como o item de inicialização no menu da barra de ferramentas ao lado da configuração do projeto e escolha **&#x23f5; Iniciar** na barra de ferramentas ou pressione F5.
 
-Para personalizar os argumentos de linha de comando do programa, pressione o botão **Alternar Destinos** na parte superior do **Gerenciador de Soluções** e escolha **Exibição de Destinos**. Em seguida, clique com o botão direito do mouse no destino e selecione **Configurações de Depuração e de Inicialização**. Isso abre ou cria um arquivo de configuração launch.vs.json que contém as informações do seu programa. Para especificar argumentos adicionais, adicione-os na matriz JSON `args`. Para obter mais informações, confira [Projetos Open Folder para C++](../build/open-folder-projects-cpp.md) e [Configurar sessões de depuração do CMake](../build/configure-cmake-debugging-sessions.md).
+Para personalizar os argumentos de linha de comando do programa, pressione o botão **Alternar Destinos** na parte superior do **Gerenciador de Soluções** e escolha **Exibição de Destinos**. Em seguida, clique com o botão direito do mouse no destino e selecione **Configurações de Depuração e de Inicialização**. Isso abre ou cria um arquivo de configuração launch.vs.json que contém as informações do seu programa. Para especificar o local dos arquivos de origem, adicione uma propriedade **sourceFileMap** ao arquivo, conforme mostrado neste exemplo:
+
+```json
+"MIMode": "gdb",
+"externalConsole": true,
+"sourceFileMap": {
+"c/Users/USER/source/repos/CMAKEPROJECTNAME": "C:\\Users\\USER\\source\\repos\\CMAKEPROJECTNAME"
+},
+"remoteMachineName": "${debugInfo.remoteMachineName}",
+```
+
+Para especificar argumentos adicionais, adicione-os na matriz JSON `args`. Para obter mais informações, confira [Projetos Open Folder para C++](../build/open-folder-projects-cpp.md) e [Configurar sessões de depuração do CMake](../build/configure-cmake-debugging-sessions.md).
 
 ## <a name="configure_cmake_linux"></a> Definir as configurações do CMake para Linux
 

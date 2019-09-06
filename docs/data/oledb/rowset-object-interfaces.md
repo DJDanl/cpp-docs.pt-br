@@ -8,18 +8,18 @@ helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 - interfaces, list of
 ms.assetid: 0d7a5d48-2fe4-434f-a84b-157c1fdc3494
-ms.openlocfilehash: 1f3e6066af4b6870c5fa90f7bde373bb7be476ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d9c2c61714a98d9de09d8657352a14f296e35a58
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243972"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311795"
 ---
 # <a name="rowset-object-interfaces"></a>Interfaces de objeto do conjunto de linhas
 
 A tabela a seguir mostra as interfaces obrigatórias e opcionais definidas por OLE DB para um objeto de conjunto de linhas.
 
-|Interface|Necessário?|Implementado por modelos OLE DB?|
+|Interface|Necessário?|Implementado por modelos de OLE DB?|
 |---------------|---------------|--------------------------------------|
 |[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))|Obrigatório|Sim|
 |[IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))|Obrigatório|Sim|
@@ -29,7 +29,7 @@ A tabela a seguir mostra as interfaces obrigatórias e opcionais definidas por O
 |[IChapteredRowset](/previous-versions/windows/desktop/ms718180(v=vs.85))|Opcional|Não|
 |[IColumnsInfo2](/previous-versions/windows/desktop/ms712953(v=vs.85))|Opcional|Não|
 |[IColumnsRowset](/previous-versions/windows/desktop/ms722657(v=vs.85))|Opcional|Não|
-|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Opcional|Sim (por meio de ATL)|
+|[IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Opcional|Sim (por meio da ATL)|
 |[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832(v=vs.85))|Opcional|Não|
 |[IGetRow](/previous-versions/windows/desktop/ms718047(v=vs.85))|Opcional|Não|
 |[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))|Opcional|Sim|
@@ -46,7 +46,7 @@ A tabela a seguir mostra as interfaces obrigatórias e opcionais definidas por O
 |[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816(v=vs.85))|Opcional|Sim|
 |[IRowsetBookmark](/previous-versions/windows/desktop/ms714246(v=vs.85))|Opcional|Não|
 
-O objeto de conjunto de linhas gerado pelo assistente implementa `IAccessor`, `IRowset`, e `IRowsetInfo` por meio da herança. O `IAccessorImpl` associa as duas colunas de saída. O `IRowset` interface manipula dados e busca linhas. O `IRowsetInfo` interface manipula as propriedades do conjunto de linhas.
+O objeto de conjunto de linhas gerado `IAccessor`pelo `IRowset`assistente implementa `IRowsetInfo` , e por herança. O `IAccessorImpl` associa ambas as colunas de saída. Os `IRowset` identificadores de interface buscam linhas e dados. A `IRowsetInfo` interface manipula as propriedades do conjunto de linhas.
 
 ## <a name="see-also"></a>Consulte também
 
