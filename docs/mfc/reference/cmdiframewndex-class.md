@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7973cf89eaa2090a8f1548f38a728f1100d5cbec
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 42e630c1280eb366f9007511ac5d74ac19455a56
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505532"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741589"
 ---
 # <a name="cmdiframewndex-class"></a>Classe CMDIFrameWndEx
 
@@ -1218,7 +1218,7 @@ Para carregar ou salvar o estado de guias e grupos MDI e a lista de documentos a
 
 - Chame [CMDIFrameWndEx:: LoadMDIState](#loadmdistate) quando o quadro principal estiver sendo criado. O lugar recomendado para essa chamada é antes que o quadro principal seja exibido pela primeira vez. Adicione `CWinAppEx::EnableLoadWindowPlacement` antesde`pMainFrame->LoadFrame (IDR_MAINFRAME);.` adicionar apósa`(pMainFrame);` chamada para`LoadMDIState` para exibir o quadro principal na posição que foi armazenada no registro. `CBCGPWorkspace::ReloadWindowPlacement` `(FALSE);`
 
-- `GetDocumentName` Substituir`CMDIChildWndEx`na classe derivada se seu aplicativo exibir documentos que não são armazenados como arquivos. A cadeia de caracteres retornada será salva no registro como o identificador do documento. A implementação base de [CMDIChildWndEx::](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) GetDocumentName retorna um valor obtido de [CDocument::](../../mfc/reference/cdocument-class.md#getpathname)GetPathName.
+- `GetDocumentName` Substituir`CMDIChildWndEx`na classe derivada se seu aplicativo exibir documentos que não são armazenados como arquivos. A cadeia de caracteres retornada será salva no registro como o identificador do documento. A implementação base de [CMDIChildWndEx:: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) retorna um valor obtido de [CDocument:: GetPathName](../../mfc/reference/cdocument-class.md#getpathname).
 
 - Substitua [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) para criar documentos corretamente quando eles estiverem sendo carregados do registro. O primeiro parâmetro é a cadeia de `GetDocumentName` caracteres retornada.
 
@@ -1502,7 +1502,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 no O botão da barra de ferramentas.
 
 *pTI*<br/>
-fora Ponteiro para uma estrutura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) .
+fora Ponteiro para uma estrutura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) .
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1850,7 +1850,7 @@ Para carregar ou salvar o estado de guias e grupos MDI e a lista de documentos a
 
 - Chame `CWinAppEx::ReloadWindowPlacement(pMainFrame)` depois`LoadMDIState` para exibir o quadro principal na posição que foi armazenada no registro.
 
-- `GetDocumentName` Substituir`CMDIChildWndEx`na classe derivada se seu aplicativo exibir documentos que não são armazenados como arquivos. A cadeia de caracteres retornada será salva no registro como um identificador de documento. Para obter mais informações, consulte [CMDIChildWndEx::](../../mfc/reference/cmdichildwndex-class.md#getdocumentname)GetDocumentName.
+- `GetDocumentName` Substituir`CMDIChildWndEx`na classe derivada se seu aplicativo exibir documentos que não são armazenados como arquivos. A cadeia de caracteres retornada será salva no registro como um identificador de documento. Para obter mais informações, consulte [CMDIChildWndEx:: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname).
 
 - Substitua [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) para criar documentos corretamente quando eles forem carregados do registro. O parâmetro para `CreateDocumentWindow` é a cadeia de `GetDocumentName` caracteres que retornou anteriormente.
 

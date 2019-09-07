@@ -2,16 +2,16 @@
 title: Matriz e WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-ms.openlocfilehash: fd616487bd3c11544f12e84a7dc64f41e63d501a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ade7981d391288edd78f622b4753d546c5eaa04
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209410"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740687"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Matriz e WriteOnlyArray (C++/CX)
 
-Você pode usar livremente matrizes regulares de estilo C ou [std:: array](../standard-library/array-class-stl.md) no C + c++ /CLI programa CX (embora [std:: Vector](../standard-library/vector-class.md) costuma ser uma opção melhor), mas em qualquer API publicada nos metadados, você deve converter uma matriz C-style ou de vetor para uma [Platform:: array](../cppcx/platform-array-class.md) ou [Platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md) tipo, dependendo de como ele está sendo usado. O tipo [Platform::Array](../cppcx/platform-array-class.md) não é tão eficiente nem tão poderoso quanto [std::vector](../standard-library/vector-class.md), assim, como uma diretriz geral, você deve evitar seu uso no código interno que executa muitas operações nos elementos da matriz.
+Você pode usar livremente matrizes regulares de estilo C ou [std:: array](../standard-library/array-class-stl.md) em C++um programa/CX (embora [std:: vector](../standard-library/vector-class.md) geralmente é uma opção melhor), mas em qualquer API que é publicada em metadados, você deve converter uma matriz em estilo C ou vetor para uma [plataforma:: array ](../cppcx/platform-array-class.md)ou o tipo [Platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) dependendo de como ele está sendo usado. O tipo [Platform::Array](../cppcx/platform-array-class.md) não é tão eficiente nem tão poderoso quanto [std::vector](../standard-library/vector-class.md), assim, como uma diretriz geral, você deve evitar seu uso no código interno que executa muitas operações nos elementos da matriz.
 
 Os seguintes tipos de matriz podem ser passados pela ABI:
 
@@ -23,17 +23,17 @@ Os seguintes tipos de matriz podem ser passados pela ABI:
 
 1. valor de retorno de Platform::Array^
 
-Você pode usar esses tipos de matrizes para implementar os três tipos de padrões de matrizes que são definidos pelo tempo de execução do Windows.
+Você usa esses tipos de matriz para implementar os três tipos de padrões de matriz que são definidos pelo Windows Runtime.
 
-PassArray usado quando o chamador passa uma matriz para um método. O tipo de parâmetro de entrada C++ é `const` [Platform:: array](../cppcx/platform-array-class.md)\<T >.
+PassArray usado quando o chamador passa uma matriz para um método. O C++ tipo de parâmetro de `const`entrada é [Platform:: array](../cppcx/platform-array-class.md)\<T >.
 
-FillArray usado quando o chamador passa uma matriz para o método para preenchimento. O tipo de parâmetro de entrada C++ é [Platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)\<T >.
+FillArray usado quando o chamador passa uma matriz para o método preencher. O C++ tipo de parâmetro de entrada é [Platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md)\<T >.
 
 ReceiveArray usado quando o chamador recebe uma matriz que o método aloca. No C++/CX, é possível retornar a matriz no valor de retorno como um Array^ ou retorná-la o como um parâmetro de saída como o tipo Array^*.
 
 ## <a name="passarray-pattern"></a>Padrão de PassArray
 
-Quando o código do cliente passa uma matriz para um método do C++ e o método não a modifica, o método aceita a matriz como Array^ const. No nível da ABI (interface binária) do aplicativo de tempo de execução do Windows, isso é conhecido como PassArray. O exemplo a seguir mostra como passar uma matriz alocada em JavaScript a uma função C++ que lê dela.
+Quando o código do cliente passa uma matriz para um método do C++ e o método não a modifica, o método aceita a matriz como Array^ const. No nível da ABI (interface binária de aplicativo) Windows Runtime, isso é conhecido como um PassArray. O exemplo a seguir mostra como passar uma matriz alocada em JavaScript a uma função C++ que lê dela.
 
 [!code-javascript[cx_arrays#101](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_1.js)]
 
@@ -43,7 +43,7 @@ O snippet a seguir mostra o método do C++:
 
 ## <a name="receivearray-pattern"></a>Padrão ReceiveArray
 
-No padrão ReceiveArray, o código do cliente declara uma matriz e a passa a um método que aloca a memória para ela e a inicializa. O tipo de parâmetro de entrada C++ é um ponteiro para hat: `Array<T>^*`. O exemplo a seguir mostra como declarar um objeto de matriz em JavaScript e passá-lo a uma função C++ que aloca a memória, inicializa os elementos e o retorna ao JavaScript. O JavaScript trata a matriz alocada como um valor de retorno, mas a função C++ a trata como um parâmetro de saída.
+No padrão ReceiveArray, o código do cliente declara uma matriz e a passa a um método que aloca a memória para ela e a inicializa. O C++ tipo de parâmetro de entrada é um ponteiro para-chapéu `Array<T>^*`:. O exemplo a seguir mostra como declarar um objeto de matriz em JavaScript e passá-lo a uma função C++ que aloca a memória, inicializa os elementos e o retorna ao JavaScript. O JavaScript trata a matriz alocada como um valor de retorno, mas a função C++ a trata como um parâmetro de saída.
 
 [!code-javascript[cx_arrays#102](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_3.js)]
 
@@ -90,5 +90,5 @@ Em geral, você deve evitar expor um tipo `Platform::Array` como uma propriedade
 ## <a name="see-also"></a>Consulte também
 
 [Sistema de tipos](../cppcx/type-system-c-cx.md)<br/>
-[Referência de linguagem do Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Referência da linguagem C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referência de namespaces](../cppcx/namespaces-reference-c-cx.md)

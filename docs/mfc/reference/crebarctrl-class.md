@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 9a8c989988801bc7af993fbc69717ac7cff07dcf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 14befb819a30238abb5780b1bdcc6d74402e8976
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502735"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741183"
 ---
 # <a name="crebarctrl-class"></a>Classe CReBarCtrl
 
@@ -526,7 +526,7 @@ DWORD GetExtendedStyle() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Uma combinação de bits (ou) de sinalizadores que indica os estilos estendidos. Os possíveis sinalizadores são RBS_EX_SPLITTER e RBS_EX_TRANSPARENT. Para obter mais informações, consulte o parâmetro *dwMask* do método [CReBarCtrl::](#setextendedstyle) Extended.
+Uma combinação de bits (ou) de sinalizadores que indica os estilos estendidos. Os possíveis sinalizadores são RBS_EX_SPLITTER e RBS_EX_TRANSPARENT. Para obter mais informações, consulte o parâmetro *dwMask* do método [CReBarCtrl:: Extended](#setextendedstyle) .
 
 ### <a name="remarks"></a>Comentários
 
@@ -670,7 +670,7 @@ int HitTest(RBHITTESTINFO* prbht);
 ### <a name="parameters"></a>Parâmetros
 
 *prbht*<br/>
-Um ponteiro para uma estrutura [RBHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-_rb_hittestinfo) . Antes de enviar a mensagem, `pt` o membro dessa estrutura deve ser inicializado até o ponto que será testado, em coordenadas do cliente.
+Um ponteiro para uma estrutura [RBHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-rbhittestinfo) . Antes de enviar a mensagem, `pt` o membro dessa estrutura deve ser inicializado até o ponto que será testado, em coordenadas do cliente.
 
 ### <a name="return-value"></a>Valor de retorno
 

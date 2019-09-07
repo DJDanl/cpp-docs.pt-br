@@ -3,12 +3,12 @@ title: Aplicativos universais do Windows (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
 ms.topic: landing-page
-ms.openlocfilehash: 6c2bf7e44e3f1cb2c73ccaaed4363e34cbd7f0c9
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 68952e93e4f91ac3653a9991802ad42854d9d25a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218367"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741025"
 ---
 # <a name="universal-windows-apps-c"></a>Aplicativos universais do Windows (C++)
 
@@ -24,7 +24,7 @@ Você pode usar o conversor de aplicativo de ponte de área de trabalho para emp
 
 |||
 |-|-|
-|[Referência C++ de linguagem VisualC++(/CX)](visual-c-language-reference-c-cx.md)|Descreve o conjunto de extensões que simplificam C++ o consumo de Windows Runtime APIs e habilitam o tratamento de erros com base em exceções.|
+|[C++Referência de linguagem/CX](visual-c-language-reference-c-cx.md)|Descreve o conjunto de extensões que simplificam C++ o consumo de Windows Runtime APIs e habilitam o tratamento de erros com base em exceções.|
 |[Compilando aplicativos e bibliotecas (C++/CX)](building-apps-and-libraries-c-cx.md)|Descreve como criar DLLs e bibliotecas estáticas que podem ser acessadas C++de um aplicativo ou componente do/CX.|
 |[Tutorial: Criar um aplicativo UWP "Olá, mundo" em C++/CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Uma explicação que apresenta os conceitos básicos do desenvolvimento de aplicativos UWP C++no/CX. |
 |[Criando Windows Runtime componentes em C++/CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Descreve como criar DLLs que outros aplicativos e componentes UWP podem consumir.|

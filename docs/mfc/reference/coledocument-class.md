@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 666ca54f55c5bb0dd4070a4984500dc19dc9d372
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b92c796fdaa972966dcbfa85b1e34f267b6c629c
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504032"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741604"
 ---
 # <a name="coledocument-class"></a>Classe COleDocument
 
@@ -177,9 +177,9 @@ Diferente de zero se a função foi bem-sucedida; caso contrário, 0.
 
 Essa função atualiza o dispositivo de destino de impressão para todos os itens, mas não atualiza o cache de apresentação para esses itens. Para atualizar o cache de apresentação de um item, chame [COleClientItem:: UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink).
 
-Os argumentos para essa função contêm informações que o OLE usa para identificar o dispositivo de destino. A estrutura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) contém informações que o Windows usa para inicializar a caixa de diálogo Imprimir comum. Depois que o usuário fecha a caixa de diálogo, o Windows retorna informações sobre as seleções do usuário nesta estrutura. O `m_pd` membro de um objeto [CPrintDialog](../../mfc/reference/cprintdialog-class.md) é uma `PRINTDLG` estrutura.
+Os argumentos para essa função contêm informações que o OLE usa para identificar o dispositivo de destino. A estrutura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) contém informações que o Windows usa para inicializar a caixa de diálogo Imprimir comum. Depois que o usuário fecha a caixa de diálogo, o Windows retorna informações sobre as seleções do usuário nesta estrutura. O `m_pd` membro de um objeto [CPrintDialog](../../mfc/reference/cprintdialog-class.md) é uma `PRINTDLG` estrutura.
 
-Para obter mais informações, consulte a estrutura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) no SDK do Windows.
+Para obter mais informações, consulte a estrutura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) no SDK do Windows.
 
 Para obter mais informações, consulte a estrutura [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) no SDK do Windows.
 

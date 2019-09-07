@@ -2,16 +2,16 @@
 title: namespace padrão
 ms.date: 12/30/2016
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-ms.openlocfilehash: 60a47c9549ee40b419eb5f4aa84720f8dcd1c366
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b67aedc791ed41e93268d9e9f44492781940d55e
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389457"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740510"
 ---
 # <a name="default-namespace"></a>namespace padrão
 
-O `default` os tipos internos que são compatíveis com os escopos do namespace C++/CX.
+Os `default` escopos de namespace são os tipos internos com suporte do C++/CX.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -52,4 +52,4 @@ Todos os tipos internos herdam os membros a seguir.
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de linguagem do Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
+[Referência da linguagem C++/CX](../cppcx/visual-c-language-reference-c-cx.md)

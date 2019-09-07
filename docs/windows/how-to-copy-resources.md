@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 56cff04d64f2f0a64fc216fbd418954b4c11b0f2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514746"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740660"
 ---
 # <a name="how-to-manage-resources-c"></a>Como: Gerenciar recursos (C++)
 
@@ -76,7 +76,7 @@ Você não pode arrastar e soltar, copiar, recortar ou colar entre arquivos de r
 
 Ao copiar em um recurso, você pode alterar sua propriedade de linguagem ou propriedade de condição, ou ambos.
 
-- O idioma de um recurso especifica o idioma usado pelo [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew) para ajudar a identificar o recurso que você está procurando. Os recursos podem ter diferenças para cada idioma que não esteja relacionado ao texto, por exemplo, aceleradores que só podem funcionar em um teclado japonês ou em um bitmap que só seria apropriado para compilações localizadas em chinês.
+- O idioma de um recurso especifica o idioma usado pelo [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcea) para ajudar a identificar o recurso que você está procurando. Os recursos podem ter diferenças para cada idioma que não esteja relacionado ao texto, por exemplo, aceleradores que só podem funcionar em um teclado japonês ou em um bitmap que só seria apropriado para compilações localizadas em chinês.
 
 - A condição de um recurso é um símbolo definido que identifica uma condição sob a qual essa cópia específica do recurso deve ser usada.
 

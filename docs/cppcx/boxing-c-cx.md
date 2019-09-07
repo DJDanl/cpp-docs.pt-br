@@ -2,12 +2,12 @@
 title: Conversão boxing (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-ms.openlocfilehash: 3c281229b509ef72d37400b2088a6663be1afe42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90c5af31efc6523683227dbf54c85390bc98510a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257953"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740673"
 ---
 # <a name="boxing-ccx"></a>Conversão boxing (C++/CX)
 
@@ -19,9 +19,9 @@ Embora não seja preciso executar boxing explicitamente de uma variável para pa
 
 [!code-cpp[cx_boxing#01](../cppcx/codesnippet/CPP/cx_boxing/class1.cpp#01)]
 
-### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Usando Platform:: ibox\<T > para dar suporte a tipos de valor anulável
+### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Usando platform:: iBox\<T > para dar suporte a tipos de valor anulável
 
-C# e Visual Basic oferecem suporte ao conceito de tipos de valor anuláveis. Em C++/CX, você pode usar o `Platform::IBox<T>` tipo para expor os métodos públicos que oferecem suporte a parâmetros de tipo de valor anulável. A exemplo a seguir mostra uma C++/CX método público que retorna nulo quando um C# o chamador passa nulo para um dos argumentos.
+C# e Visual Basic oferecem suporte ao conceito de tipos de valor anuláveis. Em C++/CX, você pode usar o `Platform::IBox<T>` tipo para expor métodos públicos que dão suporte a parâmetros de tipo de valor anulável. O exemplo a seguir mostra C++um método público/CX que retorna NULL quando C# um chamador passa NULL para um dos argumentos.
 
 [!code-cpp[cx_boxing#02](../cppcx/codesnippet/CPP/cx_boxing/class1.h#02)]
 
@@ -40,5 +40,5 @@ Em um cliente XAML do C#, você pode consumi-lo deste modo:
 
 [Sistema de tipos (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Conversão (C++/CX)](../cppcx/casting-c-cx.md)<br/>
-[Referência de linguagem do Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Referência da linguagem C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referência de namespaces](../cppcx/namespaces-reference-c-cx.md)

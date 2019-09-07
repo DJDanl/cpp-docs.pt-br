@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 407ba2747ed4d6e56e56fe4ccb2ccb828240a732
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62915da703e1c938e65643ab389999b83c72d459
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506716"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741523"
 ---
 # <a name="cheaderctrl-class"></a>Classe CHeaderCtrl
 
@@ -502,7 +502,7 @@ BOOL GetItem(
 Especifica o índice de base zero do item a ser recuperado.
 
 *pHeaderItem*<br/>
-Ponteiro para uma estrutura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) que recebe o novo item. Essa estrutura é usada com as `InsertItem` funções `SetItem` de membro e. Todos os sinalizadores definidos no `mask` elemento garantem que os valores nos elementos correspondentes sejam preenchidos corretamente no retorno. Se o `mask` elemento for definido como zero, os valores nos outros elementos da estrutura não têm sentido.
+Ponteiro para uma estrutura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) que recebe o novo item. Essa estrutura é usada com as `InsertItem` funções `SetItem` de membro e. Todos os sinalizadores definidos no `mask` elemento garantem que os valores nos elementos correspondentes sejam preenchidos corretamente no retorno. Se o `mask` elemento for definido como zero, os valores nos outros elementos da estrutura não têm sentido.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -542,7 +542,7 @@ BOOL GetItemDropDownRect(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*iItem*|no Índice de base zero de um item de cabeçalho cujo estilo é HDF_SPLITBUTTON. Para obter mais informações, consulte `fmt` o membro da estrutura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) .|
+|*iItem*|no Índice de base zero de um item de cabeçalho cujo estilo é HDF_SPLITBUTTON. Para obter mais informações, consulte `fmt` o membro da estrutura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) .|
 |*lpRect*|fora Ponteiro para uma estrutura [Rect](/previous-versions/dd162897\(v=vs.85\)) para receber as informações de retângulo delimitador.|
 
 ### <a name="return-value"></a>Valor de retorno
@@ -669,7 +669,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*phdhti*|[entrada, saída] Ponteiro para uma estrutura [HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-_hd_hittestinfo) que especifica o ponto para testar e receber os resultados do teste.|
+|*phdhti*|[entrada, saída] Ponteiro para uma estrutura [HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo) que especifica o ponto para testar e receber os resultados do teste.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -707,7 +707,7 @@ int InsertItem(
 O índice de base zero do item a ser inserido. Se o valor for zero, o item será inserido no início do controle de cabeçalho. Se o valor for maior que o valor máximo, o item será inserido no final do controle de cabeçalho.
 
 *phdi*<br/>
-Ponteiro para uma estrutura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) que contém informações sobre o item a ser inserido.
+Ponteiro para uma estrutura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) que contém informações sobre o item a ser inserido.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -728,7 +728,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 ### <a name="parameters"></a>Parâmetros
 
 *pHeaderLayout*<br/>
-Ponteiro para uma estrutura [HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-_hd_layout) , que contém informações usadas para definir o tamanho e a posição de um controle de cabeçalho.
+Ponteiro para uma estrutura [HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-hdlayout) , que contém informações usadas para definir o tamanho e a posição de um controle de cabeçalho.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -899,7 +899,7 @@ Essa função de membro implementa o comportamento da mensagem [HDM_SETIMAGELIST
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CHeaderCtrl::](#getimagelist)GetImageList.
+  Consulte o exemplo de [CHeaderCtrl:: GetImageList](#getimagelist).
 
 ##  <a name="setitem"></a>  CHeaderCtrl::SetItem
 
@@ -917,7 +917,7 @@ BOOL SetItem(
 O índice de base zero do item a ser manipulado.
 
 *pHeaderItem*<br/>
-Ponteiro para uma estrutura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) que contém informações sobre o novo item.
+Ponteiro para uma estrutura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) que contém informações sobre o novo item.
 
 ### <a name="return-value"></a>Valor de retorno
 

@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 5e7a0b0d7f5c41c60fc10784518c4c075c13f778
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bbd1f60c3628d5fcd103e220362004ec34ab2c41
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502135"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740988"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -961,7 +961,7 @@ class CWnd : public CCmdTarget
 |[CWnd::GetParentOwner](#getparentowner)|Retorna um ponteiro para a janela pai de uma janela filho.|
 |[CWnd::GetProperty](#getproperty)|Recupera uma propriedade de controle ActiveX.|
 |[CWnd::GetRenderTarget](#getrendertarget)|Obtém um destino de renderização associado a esta janela.|
-|[CWnd::GetSafeHwnd](#getsafehwnd)|Retorna `m_hWnd`ou NULL se o ponteiro for nulo.|
+|[CWnd::GetSafeHwnd](#getsafehwnd)|Retorna `m_hWnd`ou NULL se **o ponteiro for** nulo.|
 |[CWnd::GetSafeOwner](#getsafeowner)|Recupera o proprietário seguro para a janela especificada.|
 |[CWnd::GetScrollBarCtrl](#getscrollbarctrl)|Retorna um controle de barra de rolagem irmã.|
 |[CWnd::GetScrollBarInfo](#getscrollbarinfo)|Recupera informações sobre a barra de rolagem especificada.|
@@ -1275,7 +1275,7 @@ class CWnd : public CCmdTarget
 
 Um `CWnd` objeto é diferente de uma janela do Windows, mas os dois estão rigidamente vinculados. Um `CWnd` objeto é criado ou destruído `CWnd` pelo construtor e destruidor. A janela do Windows, por outro lado, é uma estrutura de dados interna ao Windows que é criada por `Create` uma função membro e destruída `CWnd` pelo Destruidor virtual. A função [DestroyWindow](#destroywindow) destrói a janela do Windows sem destruir o objeto.
 
-A `CWnd` classe e o mecanismo de mapa de mensagens ocultam a `WndProc` função. As mensagens de notificação de entrada do Windows são automaticamente roteadas pelo mapade mensagens para as funções de membro da<em>mensagem</em> `CWnd` adequadas. Você substitui uma função **de membro on**<em>Message</em> para manipular a mensagem específica de um membro em suas classes derivadas.
+A `CWnd` classe e o mecanismo de mapa de mensagens ocultam a `WndProc` função. As mensagens de notificação de entrada do Windows são automaticamente roteadas pelo mapa de mensagens para as funções de **membro da**<em>mensagem</em> `CWnd` adequadas. Você substitui uma função **de membro on**<em>Message</em> para manipular a mensagem específica de um membro em suas classes derivadas.
 
 A `CWnd` classe também permite que você crie uma janela filho do Windows para seu aplicativo. Derive uma classe `CWnd`de e adicione variáveis de membro à classe derivada para armazenar dados específicos ao seu aplicativo. Implemente funções de membro do manipulador de mensagens e um mapa de mensagens na classe derivada para especificar o que acontece quando as mensagens são direcionadas para a janela.
 
@@ -1938,7 +1938,7 @@ TRUE se o método foi bem-sucedido; caso contrário, FALSE.
 ### <a name="remarks"></a>Comentários
 
 > [!WARNING]
-> `CWnd::PreCreateWindow`Agora atribui o membro HMENU de seu `CREATESTRUCT` parâmetro para o ponteiro se o menu for nulo e o estilo contiver WS_CHILD. Para a funcionalidade adequada, verifique se o seu controle de caixa de diálogo tem uma ID que não é nula.
+> `CWnd::PreCreateWindow`Agora atribui o membro HMENU de seu `CREATESTRUCT` parâmetro para o ponteiro se **o menu** for nulo e o estilo contiver WS_CHILD. Para a funcionalidade adequada, verifique se o seu controle de caixa de diálogo tem uma ID que não é nula.
 >
 > Essa alteração corrige uma falha em cenários de interoperabilidade gerenciados/nativos. Uma instrução trace em `CWnd::Create` alerta o desenvolvedor do problema.
 
@@ -2187,7 +2187,7 @@ TRUE se o método foi bem-sucedido; caso contrário, FALSE.
 ### <a name="remarks"></a>Comentários
 
 > [!WARNING]
-> `CWnd::PreCreateWindow`Agora atribui o membro HMENU de seu `CREATESTRUCT` parâmetro para o ponteiro se o menu for nulo e o estilo contiver WS_CHILD. Para a funcionalidade adequada, verifique se o seu controle de caixa de diálogo tem uma ID que não é nula.
+> `CWnd::PreCreateWindow`Agora atribui o membro HMENU de seu `CREATESTRUCT` parâmetro para o ponteiro se **o menu** for nulo e o estilo contiver WS_CHILD. Para a funcionalidade adequada, verifique se o seu controle de caixa de diálogo tem uma ID que não é nula.
 >
 > Essa alteração corrige uma falha em cenários de interoperabilidade gerenciados/nativos. Uma `TRACE` instrução em `CWnd::Create` alerta o desenvolvedor do problema.
 
@@ -2864,12 +2864,12 @@ TRUE se as dicas de ferramenta estiverem habilitadas; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Substitua [OnToolHitTest](#ontoolhittest) para fornecer a estrutura de [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) ou structs para a janela.
+Substitua [OnToolHitTest](#ontoolhittest) para fornecer a estrutura de [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) ou structs para a janela.
 
 > [!NOTE]
 > Algumas janelas, como [CToolBar](../../mfc/reference/ctoolbar-class.md), fornecem uma implementação interna do [OnToolHitTest](#ontoolhittest).
 
-Consulte [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) na SDK do Windows para obter mais informações sobre esta estrutura.
+Consulte [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) na SDK do Windows para obter mais informações sobre esta estrutura.
 
 Simplesmente chamar `EnableToolTips` não é suficiente para exibir dicas de ferramentas para seus controles filho, a menos que a janela `CFrameWnd`pai seja derivada de. Isso ocorre porque `CFrameWnd` o fornece um manipulador padrão para a notificação TTN_NEEDTEXT. Se a sua janela pai não for derivada `CFrameWnd`de, ou seja, se for uma caixa de diálogo ou um modo de exibição de formulário, as dicas de ferramenta para seus controles filho não serão exibidas corretamente, a menos que você forneça um manipulador para a notificação de dica de ferramenta TTN_NEEDTEXT. Consulte [dicas de ferramenta](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
 
@@ -3714,7 +3714,7 @@ As coordenadas do cliente especificam os cantos superior esquerdo e inferior dir
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo para [CWnd::](#isiconic)isicony.
+  Consulte o exemplo para [CWnd:: Isicony](#isiconic).
 
 ##  <a name="getclipboardowner"></a>  CWnd::GetClipboardOwner
 
@@ -4501,7 +4501,7 @@ Ponteiro para o destino de renderização ou nulo.
 
 ##  <a name="getsafehwnd"></a>  CWnd::GetSafeHwnd
 
-Retorna `m_hWnd`ou NULL se o ponteiro for nulo.
+Retorna `m_hWnd`ou NULL se **o ponteiro for** nulo.
 
 ```
 HWND GetSafeHwnd() const;
@@ -5562,7 +5562,7 @@ As mensagens [WM_TIMER](#ontimer) pendentes associadas ao timer não são removi
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CWnd::](#settimer)SetTimer.
+  Consulte o exemplo de [CWnd:: SetTimer](#settimer).
 
 ##  <a name="loaddynamiclayoutresource"></a>  CWnd::LoadDynamicLayoutResource
 
@@ -5850,7 +5850,7 @@ void NotifyWinEvent(
 Especifica o evento que ocorreu. Esse valor deve ser uma das [constantes de evento](/windows/win32/WinAuto/event-constants).
 
 *idObjectType*<br/>
-Identifica o tipo de objeto que gerou o evento. Esse valor é um dos identificadores de [objeto](/windows/win32/WinAuto/object-identifiers) predefinidos ou um valor de ID de objeto personalizado.
+Identifica o tipo de objeto que gerou o evento. Esse valor é um dos [identificadores de objeto](/windows/win32/WinAuto/object-identifiers) predefinidos ou um valor de ID de objeto personalizado.
 
 *idObject*<br/>
 Identifica se o evento foi gerado por um objeto ou um elemento filho do objeto. Se esse valor for CHILDID_SELF, o evento foi gerado pelo próprio objeto. Caso contrário, esse valor é a ID filho do elemento que gerou o evento.
@@ -9840,7 +9840,7 @@ A função [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessa
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo em [CWnd::](#settimer)SetTimer.
+  Consulte o exemplo em [CWnd:: SetTimer](#settimer).
 
 ##  <a name="ontoolhittest"></a>  CWnd::OnToolHitTest
 
@@ -9858,7 +9858,7 @@ virtual INT_PTR OnToolHitTest(
 Especifica a coordenada x e y do cursor. Essas coordenadas são sempre relativas ao canto superior esquerdo da janela
 
 *pTI*<br/>
-Um ponteiro para uma estrutura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) . Os seguintes valores de estrutura são definidos por padrão:
+Um ponteiro para uma estrutura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) . Os seguintes valores de estrutura são definidos por padrão:
 
 - *identificador HWND*  =  paraumajanela`m_hWnd`
 
@@ -9880,7 +9880,7 @@ Se a área com a qual a dica de ferramenta está associada não for `OnToolHitTe
 
 Substitua `OnToolHitTest` para fornecer informações diferentes do que o padrão fornece.
 
-Consulte [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow), na SDK do Windows, para obter mais informações sobre a estrutura.
+Consulte [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa), na SDK do Windows, para obter mais informações sobre a estrutura.
 
 ##  <a name="ontouchinput"></a>  CWnd::OnTouchInput
 
@@ -10530,7 +10530,7 @@ virtual void PostNcDestroy();
 
 ### <a name="remarks"></a>Comentários
 
-Classes derivadas podem usar essa função para limpeza personalizada, como a exclusão do ponteiro .
+Classes derivadas podem usar essa função para limpeza personalizada, **como a exclusão do ponteiro.**
 
 ##  <a name="precreatewindow"></a>  CWnd::PreCreateWindow
 
@@ -10552,7 +10552,7 @@ Diferente de zero se a criação da janela continuar; 0 para indicar falha na cr
 ### <a name="remarks"></a>Comentários
 
 > [!WARNING]
-> `CWnd::PreCreateWindow`Agora atribui o membro hMenu de *cs* ao ponteiro se o menu for NULL e o estilo contiver WS_CHILD. Para a funcionalidade adequada, verifique se o seu controle de caixa de diálogo tem uma ID que não é nula.
+> `CWnd::PreCreateWindow`Agora atribui o membro hMenu de *cs* **ao ponteiro se** o menu for NULL e o estilo contiver WS_CHILD. Para a funcionalidade adequada, verifique se o seu controle de caixa de diálogo tem uma ID que não é nula.
 >
 > Essa alteração corrige uma falha em cenários de interoperabilidade gerenciados/nativos. Uma instrução trace em `CWnd::Create` alerta o desenvolvedor do problema.
 
@@ -11988,7 +11988,7 @@ O cursor é um recurso compartilhado. A janela deve mostrar o cursor somente qua
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CWnd::](#createcaret)CreateCaret.
+  Consulte o exemplo de [CWnd:: CreateCaret](#createcaret).
 
 ##  <a name="showownedpopups"></a>  CWnd::ShowOwnedPopups
 

@@ -22,11 +22,11 @@ helpviewer_keywords:
 - btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
 ms.openlocfilehash: 399f56fe133a9f67ed457b435ae6c0496e1ecaa5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514667"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740010"
 ---
 # <a name="btowc"></a>btowc
 
@@ -47,7 +47,7 @@ Inteiro a ser testado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retornará a representação de caractere largo do caractere se o inteiro representar um caractere de byte único válido no estado inicial do deslocamento. Retornará WEOF se o inteiro for EOF ou não for um caractere de byte único válido no estado inicial do deslocamento. A saída dessa função é afetada pelas atual **LC_TYPE** localidade.
+Retornará a representação de caractere largo do caractere se o inteiro representar um caractere de byte único válido no estado inicial do deslocamento. Retornará WEOF se o inteiro for EOF ou não for um caractere de byte único válido no estado inicial do deslocamento. A saída dessa função é afetada pela localidade **LC_TYPE** atual.
 
 ## <a name="requirements"></a>Requisitos
 

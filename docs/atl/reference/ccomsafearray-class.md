@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 36750990dc62d5b24cf1107ac8a2724df787a47d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 79b1dc844f53f739dc48eb6177e57810ff0c8412
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496990"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739587"
 ---
 # <a name="ccomsafearray-class"></a>Classe CComSafeArray
 
@@ -100,7 +100,7 @@ O tipo de dados a serem armazenados na matriz.
 
 ## <a name="remarks"></a>Comentários
 
-`CComSafeArray`fornece um wrapper para a classe de [tipo de dados SafeArray](/windows/win32/api/oaidl/ns-oaidl-tagsafearray) , tornando simples a criação e o gerenciamento de matrizes únicas e multidimensionais de quase qualquer um dos tipos com suporte de variante.
+`CComSafeArray`fornece um wrapper para a classe de [tipo de dados SafeArray](/windows/win32/api/oaidl/ns-oaidl-safearray) , tornando simples a criação e o gerenciamento de matrizes únicas e multidimensionais de quase qualquer um dos tipos com suporte de variante.
 
 `CComSafeArray`simplifica a passagem de matrizes entre processos e, além disso, fornece segurança extra verificando valores de índice de matriz em relação aos limites superior e inferior.
 
@@ -662,7 +662,7 @@ O sinalizador *bcopy* é levado em conta quando elementos do tipo BSTR ou Varian
 
 ## <a name="see-also"></a>Consulte também
 
-[Tipo de dados SAFEARRAY](/windows/win32/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[Tipo de dados SAFEARRAY](/windows/win32/api/oaidl/ns-oaidl-safearray)<br/>
 [CComSafeArray::Create](#create)<br/>
 [CComSafeArray::Destroy](#destroy)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

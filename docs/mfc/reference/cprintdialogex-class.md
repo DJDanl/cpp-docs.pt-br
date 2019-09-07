@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: 2334fb0a420e14aa4fa8b8b570671fb9a611de32
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 76c3968b20a66e9653fd769339e23ede2a756bbd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502877"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741336"
 ---
 # <a name="cprintdialogex-class"></a>Classe CPrintDialogEx
 
@@ -94,7 +94,7 @@ Você pode contar com a estrutura para lidar com vários aspectos do processo de
 
 Se você quiser que seu aplicativo manipule a impressão sem o envolvimento da estrutura, você pode usar `CPrintDialogEx` a classe "no estado em que se encontra" com o construtor fornecido ou pode derivar sua `CPrintDialogEx` própria classe de caixa de diálogo de e escrever um construtor para atender às suas necessidades. Em ambos os casos, essas caixas de diálogo se comportarão como caixas de diálogo padrão do MFC `CCommonDialog`porque são derivadas da classe.
 
-Para usar um `CPrintDialogEx` objeto, primeiro crie o objeto usando o `CPrintDialogEx` Construtor. Depois que a caixa de diálogo tiver sido construída, você poderá definir ou modificar quaisquer valores na estrutura [m_pdex](#m_pdex) para inicializar os valores dos controles da caixa de diálogo. A `m_pdex` estrutura é do tipo [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw). Para obter mais informações sobre essa estrutura, consulte a SDK do Windows.
+Para usar um `CPrintDialogEx` objeto, primeiro crie o objeto usando o `CPrintDialogEx` Construtor. Depois que a caixa de diálogo tiver sido construída, você poderá definir ou modificar quaisquer valores na estrutura [m_pdex](#m_pdex) para inicializar os valores dos controles da caixa de diálogo. A `m_pdex` estrutura é do tipo [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-printdlgexw). Para obter mais informações sobre essa estrutura, consulte a SDK do Windows.
 
 Se você não `m_pdex` fornecer seus próprios identificadores para os `hDevMode` Membros e `hDevNames` , certifique-se de chamar a função `GlobalFree` do Windows para esses identificadores quando terminar a caixa de diálogo.
 
@@ -143,7 +143,7 @@ CPrintDialogEx(
 ### <a name="parameters"></a>Parâmetros
 
 *dwFlags*<br/>
-Um ou mais sinalizadores que você pode usar para personalizar as configurações da caixa de diálogo, combinadas usando o operador OR Por exemplo, o sinalizador PD_ALLPAGES define o intervalo de impressão padrão para todas as páginas do documento. Consulte a estrutura [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw) no SDK do Windows para obter mais informações sobre esses sinalizadores.
+Um ou mais sinalizadores que você pode usar para personalizar as configurações da caixa de diálogo, combinadas usando o operador OR Por exemplo, o sinalizador PD_ALLPAGES define o intervalo de impressão padrão para todas as páginas do documento. Consulte a estrutura [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) no SDK do Windows para obter mais informações sobre esses sinalizadores.
 
 *pParentWnd*<br/>
 Um ponteiro para a janela pai ou proprietário da caixa de diálogo.
@@ -304,7 +304,7 @@ PRINTDLGEX m_pdex;
 
 ### <a name="remarks"></a>Comentários
 
-Depois de construir um `CPrintDialogEx` objeto, você pode usar `m_pdex` para definir vários aspectos da caixa de diálogo antes de chamar a função de membro [DoModal](#domodal) . Para obter mais informações sobre `m_pdex` a estrutura, consulte [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw) no SDK do Windows.
+Depois de construir um `CPrintDialogEx` objeto, você pode usar `m_pdex` para definir vários aspectos da caixa de diálogo antes de chamar a função de membro [DoModal](#domodal) . Para obter mais informações sobre `m_pdex` a estrutura, consulte [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) no SDK do Windows.
 
 Se você modificar o `m_pdex` membro de dados diretamente, substituirá qualquer comportamento padrão.
 
@@ -358,7 +358,7 @@ TRUE se apenas um intervalo de páginas no documento for impresso; caso contrár
 
 ### <a name="remarks"></a>Comentários
 
-Os intervalos de páginas especificados podem ser determinados em [m_pdex](#m_pdex) ( `nPageRanges`consulte `nMaxPageRanges`, e `lpPageRanges` na estrutura [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw) no SDK do Windows).
+Os intervalos de páginas especificados podem ser determinados em [m_pdex](#m_pdex) ( `nPageRanges`consulte `nMaxPageRanges`, e `lpPageRanges` na estrutura [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) no SDK do Windows).
 
 ##  <a name="printselection"></a>  CPrintDialogEx::PrintSelection
 
