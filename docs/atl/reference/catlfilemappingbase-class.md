@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 3d9627c7a19cccc0cd3aec46d71b23c8a84711bf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a20a8f6c00f9404aa819b87a6a69ad2c08fb4561
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497778"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739555"
 ---
 # <a name="catlfilemappingbase-class"></a>Classe CAtlFileMappingBase
 
@@ -190,7 +190,7 @@ O tamanho do mapeamento. Se 0, o tamanho máximo do objeto de mapeamento de arqu
 O deslocamento do arquivo onde o mapeamento deve começar. O valor de deslocamento deve ser um múltiplo da granularidade de alocação de memória do sistema.
 
 *dwMappingProtection*<br/>
-A proteção desejada para a exibição de arquivo quando o arquivo é mapeado. Consulte *flProtect* em [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) na SDK do Windows.
+A proteção desejada para a exibição de arquivo quando o arquivo é mapeado. Consulte *flProtect* em [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) na SDK do Windows.
 
 *dwViewDesiredAccess*<br/>
 Especifica o tipo de acesso à exibição de arquivo e, portanto, a proteção das páginas mapeadas pelo arquivo. Consulte *dwDesiredAccess* em [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) na SDK do Windows.
@@ -201,7 +201,7 @@ Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Após a criação de um objeto de mapeamento de arquivo, o tamanho do arquivo não deve exceder o tamanho do objeto de mapeamento de arquivo; Se isso ocorrer, nem todo o conteúdo do arquivo estará disponível para compartilhamento. Para obter mais detalhes, consulte [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) e [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) no SDK do Windows.
+Após a criação de um objeto de mapeamento de arquivo, o tamanho do arquivo não deve exceder o tamanho do objeto de mapeamento de arquivo; Se isso ocorrer, nem todo o conteúdo do arquivo estará disponível para compartilhamento. Para obter mais detalhes, consulte [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) e [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -233,7 +233,7 @@ O nome do objeto de mapeamento.
 Aponta para um valor BOOL definido como TRUE se o objeto de mapeamento já existia.
 
 *lpsa*<br/>
-O ponteiro para uma `SECURITY_ATTRIBUTES` estrutura que determina se o identificador retornado pode ser herdado por processos filho. Consulte *lpAttributes* em [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) na SDK do Windows.
+O ponteiro para uma `SECURITY_ATTRIBUTES` estrutura que determina se o identificador retornado pode ser herdado por processos filho. Consulte *lpAttributes* em [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) na SDK do Windows.
 
 *dwMappingProtection*<br/>
 A proteção desejada para a exibição do arquivo, quando o arquivo é mapeado. Consulte *flProtect* no `CreateFileMapping` SDK do Windows.
@@ -247,7 +247,7 @@ Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-`MapShareMem`permite que um objeto de mapeamento de arquivo existente, criado por [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw), seja compartilhado entre processos.
+`MapShareMem`permite que um objeto de mapeamento de arquivo existente, criado por [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga), seja compartilhado entre processos.
 
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping
 

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 046c8a3f99e8b505ee6a6e8b534318263090e07d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bf32671eb3535de1bf072e24bc642145e87c84ee
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502262"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741411"
 ---
 # <a name="ctooltipctrl-class"></a>Classe CToolTipCtrl
 
@@ -377,7 +377,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="parameters"></a>Parâmetros
 
 *lpToolInfo*<br/>
-Um ponteiro para a estrutura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) da dica de ferramenta.
+Um ponteiro para a estrutura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) da dica de ferramenta.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -399,7 +399,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*lpToolInfo*|fora Ponteiro para uma estrutura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) que recebe informações sobre a janela de dica de ferramenta atual.|
+|*lpToolInfo*|fora Ponteiro para uma estrutura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) que recebe informações sobre a janela de dica de ferramenta atual.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -598,7 +598,7 @@ Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Os `hwnd` Membros `uId` e da estrutura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) referenciados por *CToolInfo* identificam a ferramenta. Se essa ferramenta tiver sido registrada com o controle de dica de ferramenta por meio `AddTool`de uma `TOOLINFO` chamada anterior para, a estrutura será preenchida com informações sobre a ferramenta.
+Os `hwnd` Membros `uId` e da estrutura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) referenciados por *CToolInfo* identificam a ferramenta. Se essa ferramenta tiver sido registrada com o controle de dica de ferramenta por meio `AddTool`de uma `TOOLINFO` chamada anterior para, a estrutura será preenchida com informações sobre a ferramenta.
 
 ##  <a name="hittest"></a>  CToolTipCtrl::HitTest
 
@@ -620,7 +620,7 @@ Ponteiro para a janela que contém a ferramenta.
 Ponteiro para um `CPoint` objeto que contém as coordenadas do ponto a ser testado.
 
 *lpToolInfo*<br/>
-Ponteiro para a estrutura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) que contém informações sobre a ferramenta.
+Ponteiro para a estrutura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) que contém informações sobre a ferramenta.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -727,7 +727,7 @@ void SetDelayTime(
 Especifica o novo tempo de atraso, em milissegundos.
 
 *dwDuration*<br/>
-Sinalizador que especifica qual valor de duração será recuperado. Consulte [CToolTipCtrl::](#getdelaytime) GetDelayTime para obter uma descrição dos valores válidos.
+Sinalizador que especifica qual valor de duração será recuperado. Consulte [CToolTipCtrl:: GetDelayTime](#getdelaytime) para obter uma descrição dos valores válidos.
 
 *iTime*<br/>
 O tempo de atraso especificado, em milissegundos.
@@ -845,7 +845,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 ### <a name="parameters"></a>Parâmetros
 
 *lpToolInfo*<br/>
-Um ponteiro para uma estrutura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) que especifica as informações a serem definidas.
+Um ponteiro para uma estrutura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) que especifica as informações a serem definidas.
 
 ##  <a name="settoolrect"></a>  CToolTipCtrl::SetToolRect
 

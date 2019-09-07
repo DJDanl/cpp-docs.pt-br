@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 18b17d0f40aaab6ba2a018a568950549eda23016
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b81e2a65d09bf5dadbc0860d692caee7a4bd386f
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503009"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739756"
 ---
 # <a name="cpagesetupdialog-class"></a>Classe CPageSetupDialog
 
@@ -305,7 +305,7 @@ Depois de construir um `CPageSetupDialog` objeto, você pode usar `m_psd` para d
 
 Se você modificar o `m_psd` membro de dados diretamente, substituirá qualquer comportamento padrão.
 
-Para obter mais informações sobre a estrutura [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw) , consulte a SDK do Windows.
+Para obter mais informações sobre a estrutura [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw) , consulte a SDK do Windows.
 
 Consulte o exemplo de [CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog).
 
@@ -393,7 +393,7 @@ Indica a orientação do papel ou envelope e se a impressora é um dispositivo d
 - Envelope 0x01f no modo retrato (matriz de pontos)
 
 *pPSD*<br/>
-Ponteiro para uma estrutura `PAGESETUPDLG`. Para obter mais informações sobre o [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw), consulte a SDK do Windows.
+Ponteiro para uma estrutura `PAGESETUPDLG`. Para obter mais informações sobre o [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw), consulte a SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 

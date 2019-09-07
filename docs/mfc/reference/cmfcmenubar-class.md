@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: 61a5f83e31b4793ca6467287c99f3b9708659402
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 278feca6b64915d0cf789e8f68af3c3fdf9b3129
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505239"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739471"
 ---
 # <a name="cmfcmenubar-class"></a>Classe CMFCMenuBar
 
@@ -348,7 +348,7 @@ Verdadeiro se for bem-sucedido; caso contrário, FALSE.
 
 Depois de construir um `CMFCMenuBar` objeto, você deve chamar `Create`. Esse método cria o `CMFCMenuBar` controle e o anexa `CMFCMenuBar` ao objeto.
 
-Para obter mais informações sobre estilos de barra de ferramentas, consulte [CBasePane::](../../mfc/reference/cbasepane-class.md#setpanestyle)SetPaneStyle.
+Para obter mais informações sobre estilos de barra de ferramentas, consulte [CBasePane:: SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle).
 
 ##  <a name="createex"></a>CMFCMenuBar::CreateEx
 
@@ -916,7 +916,7 @@ Diferente de zero se o método for bem-sucedido; caso contrário, 0.
 
 Esse método é chamado quando o usuário seleciona **Redefinir** no menu de personalização. Você também pode chamar manualmente esse método para redefinir programaticamente o estado da barra de menus. Esse método carrega o estado original do arquivo de recurso.
 
-Substitua esse método se você quiser fazer qualquer processamento quando o usuário selecionar a opção de redefinição.
+Substitua esse método se você quiser fazer qualquer processamento quando o usuário selecionar a opção de **redefinição** .
 
 ##  <a name="savestate"></a>CMFCMenuBar:: SaveState
 
@@ -1037,7 +1037,7 @@ static BOOL SetMenuFont(
 ### <a name="parameters"></a>Parâmetros
 
 *lpLogFont*<br/>
-no Um ponteiro para uma estrutura [LOGFONT](/windows/win32/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003) que define a fonte a ser definida.
+no Um ponteiro para uma estrutura [LOGFONT](/windows/win32/api/dimm/ns-dimm-logfonta) que define a fonte a ser definida.
 
 *bHorz*<br/>
 no TRUE se você quiser que o parâmetro *lpLogFont* seja usado para a fonte vertical, false se você quiser que ele seja usado para a fonte horizontal.

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: 0676f4896401ab777570666236c4639ad94c3a05
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 49cd4a8d3db436d5e3c4d29efbb4d80b4741a270
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503047"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739787"
 ---
 # <a name="colevariant-class"></a>Classe COleVariant
 
@@ -68,14 +68,14 @@ class COleVariant : public tagVARIANT
 
 ## <a name="remarks"></a>Comentários
 
-Esse tipo de dados é usado na automação OLE. Especificamente, a estrutura [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-tagdispparams) contém um ponteiro para uma matriz de estruturas Variant. Uma `DISPPARAMS` estrutura é usada para passar parâmetros para [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke).
+Esse tipo de dados é usado na automação OLE. Especificamente, a estrutura [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams) contém um ponteiro para uma matriz de estruturas Variant. Uma `DISPPARAMS` estrutura é usada para passar parâmetros para [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke).
 
 > [!NOTE]
 > Essa classe é derivada da `VARIANT` estrutura. Isso significa que você pode passar `COleVariant` um em um parâmetro que chama um `VARIANT` e que `VARIANT` os membros de dados da estrutura são membros de dados acessíveis `COleVariant`do.
 
 As duas classes do MFC relacionadas [COleCurrency](../../mfc/reference/colecurrency-class.md) e [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) encapsulam a moeda dos tipos de `VT_CY`dados Variant () `VT_DATE`e Date (). A `COleVariant` classe é usada extensivamente nas classes DAO; Veja essas classes para uso típico dessa classe, por exemplo, [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) e [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
 
-Para obter mais informações, consulte as entradas [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [Currency](/windows/win32/api/wtypes/ns-wtypes-cy), [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-tagdispparams)e [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) no SDK do Windows.
+Para obter mais informações, consulte as entradas [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [Currency](/windows/win32/api/wtypes/ns-wtypes-cy~r1), [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams)e [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) no SDK do Windows.
 
 Para obter mais informações sobre `COleVariant` a classe e seu uso na automação OLE, consulte "passando parâmetros na automação OLE" no artigo [automação](../../mfc/automation.md).
 
@@ -397,7 +397,7 @@ O VarType para o novo `COleVariant` objeto.
 
 O parâmetro *vtSrc* deve ser VT_BSTR (Unicode) ou VT_BSTRT (ANSI). `SetString`normalmente é usado para definir cadeias de caracteres para ANSI, pois o padrão para o construtor [COleVariant:: COleVariant](#colevariant) com um parâmetro de ponteiro de cadeia de caracteres ou cadeia de caracteres e nenhum VARTYPE é Unicode.
 
-Um conjunto de registros DAO em uma compilação não-UNICODE espera que as cadeias de caracteres sejam ANSI. Portanto, para funções do DAO que `COleVariant` usam objetos, se você não estiver criando um conjunto de registros Unicode, deverá usar a forma **COleVariant:: COleVariant (** *lpszSrc* **,** *vtSrc* **)** do construtor com *vtSrc* definido como VT _BSTRT (ANSI) ou use `SetString` com *vtSrc* definido como VT_BSTRT para criar cadeias de caracteres ANSI. Por exemplo, as `CDaoRecordset` funções [CDaoRecordset:: Seek](../../mfc/reference/cdaorecordset-class.md#seek) e [CDaoRecordset::](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) SetFieldValue usam `COleVariant` objetos como parâmetros. Esses objetos deverão ser ANSI se o conjunto de registros DAO não for UNICODE.
+Um conjunto de registros DAO em uma compilação não-UNICODE espera que as cadeias de caracteres sejam ANSI. Portanto, para funções do DAO que `COleVariant` usam objetos, se você não estiver criando um conjunto de registros Unicode, deverá usar a forma **COleVariant:: COleVariant (** *lpszSrc* **,** *vtSrc* **)** do construtor com *vtSrc* definido como VT _BSTRT (ANSI) ou use `SetString` com *vtSrc* definido como VT_BSTRT para criar cadeias de caracteres ANSI. Por exemplo, as `CDaoRecordset` funções [CDaoRecordset:: Seek](../../mfc/reference/cdaorecordset-class.md#seek) e [CDaoRecordset:: SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) usam `COleVariant` objetos como parâmetros. Esses objetos deverão ser ANSI se o conjunto de registros DAO não for UNICODE.
 
 ## <a name="see-also"></a>Consulte também
 

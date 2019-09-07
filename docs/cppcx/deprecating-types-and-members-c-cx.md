@@ -2,19 +2,19 @@
 title: Reprovando tipos e membros (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-ms.openlocfilehash: 7f488dfa522c0b48c75150d40584b0946baae806
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cd880af7e206b4c7338e53615594ec2c65c59fc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301494"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740494"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Reprovando tipos e membros (C++/CX)
 
-No C++/CX, substituição de membros e tipos de tempo de execução do Windows para produtores e consumidores usando o [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute) há suporte ao atributo. Se você consumir uma API para a qual esse atributo foi aplicado, você receberá uma mensagem de aviso de tempo de compilação indicando que a API foi substituída e recomendando também uma API alternativa para uso. Em seus próprios tipos e métodos públicos, você pode aplicar esse atributo e fornecer sua própria mensagem personalizada.
+Em C++/CX, é oferecido suporte para a substituição de tipos de Windows Runtime e membros para produtores e consumidores usando o atributo [preterido](/uwp/api/windows.foundation.metadata.deprecatedattribute) . Se você consumir uma API para a qual esse atributo foi aplicado, você receberá uma mensagem de aviso de tempo de compilação indicando que a API foi substituída e recomendando também uma API alternativa para uso. Em seus próprios tipos e métodos públicos, você pode aplicar esse atributo e fornecer sua própria mensagem personalizada.
 
 > [!CAUTION]
-> O [preterido](/uwp/api/windows.foundation.metadata.deprecatedattribute) atributo é usado apenas com tipos de tempo de execução do Windows. Para classes e membros C++ padrão, use [__declspec(deprecated)](../cpp/deprecated-cpp.md).
+> O atributo [preterido](/uwp/api/windows.foundation.metadata.deprecatedattribute) é para uso somente com Windows Runtime tipos. Para classes e membros C++ padrão, use [__declspec(deprecated)](../cpp/deprecated-cpp.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -57,5 +57,5 @@ A tabela a seguir lista as construções às quais o atributo Deprecated pode se
 ## <a name="see-also"></a>Consulte também
 
 [Sistema de tipos](../cppcx/type-system-c-cx.md)<br/>
-[Referência de linguagem do Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Referência da linguagem C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referência de namespaces](../cppcx/namespaces-reference-c-cx.md)

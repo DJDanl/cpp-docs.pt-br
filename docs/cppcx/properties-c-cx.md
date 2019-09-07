@@ -2,16 +2,16 @@
 title: Propriedades (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-ms.openlocfilehash: 8303952beefbbac13db14e148c6441c29a46b3d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdff2bf5abd3177eda962b7cc55ace1078522f32
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375217"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741102"
 ---
 # <a name="properties-ccx"></a>Propriedades (C++/CX)
 
-Tipos de tempo de execução do Windows expõem dados públicos como propriedades. O código de cliente acessa a propriedade como um datamember público. Internamente, a propriedade é implementada como um bloco que contém um método acessador get, um método acessador set ou ambos. Usando os métodos acessadores, você pode executar ações adicionais antes ou depois de recuperar o valor, por exemplo, você pode disparar um evento ou executar verificações de validação.
+Os tipos de Windows Runtime expõem dados públicos como propriedades. O código de cliente acessa a propriedade como um datamember público. Internamente, a propriedade é implementada como um bloco que contém um método acessador get, um método acessador set ou ambos. Usando os métodos acessadores, você pode executar ações adicionais antes ou depois de recuperar o valor, por exemplo, você pode disparar um evento ou executar verificações de validação.
 
 ### <a name="remarks"></a>Comentários
 
@@ -38,5 +38,5 @@ Observe que uma propriedade não pode ser inicializada em uma lista de membros. 
 ## <a name="see-also"></a>Consulte também
 
 [Sistema de tipos](../cppcx/type-system-c-cx.md)<br/>
-[Referência de linguagem do Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Referência da linguagem C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referência de namespaces](../cppcx/namespaces-reference-c-cx.md)

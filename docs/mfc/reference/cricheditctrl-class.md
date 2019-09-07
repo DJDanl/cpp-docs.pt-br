@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: fc2b4c08b5a999f0369199e0dd65a09a7cdf8dff
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b3c02c8c2754ce7edb40cff5e44efb74a16353fc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503160"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741536"
 ---
 # <a name="cricheditctrl-class"></a>Classe CRichEditCtrl
 
@@ -326,7 +326,7 @@ Diferente de zero se a fila de restauração contiver ações, caso contrário, 
 
 ### <a name="remarks"></a>Comentários
 
-Para descobrir o nome da operação na fila de restauração, chame [CRichEditCtrl::](#getredoname)GetRedoName. Para refazer a operação de desfazer mais recente, chame[refazer](#redo).
+Para descobrir o nome da operação na fila de restauração, chame [CRichEditCtrl:: GetRedoName](#getredoname). Para refazer a operação de desfazer mais recente, chame[refazer](#redo).
 
 Para obter mais informações, consulte [EM_CANREDO](/windows/win32/Controls/em-canredo) no SDK do Windows.
 
@@ -424,7 +424,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parâmetros
 
 *dwStyle*<br/>
-Especifica o estilo do controle de edição. Aplique uma combinação dos estilos de janela listados na seção **comentários** abaixo e edite os [estilos de controle](/windows/win32/Controls/edit-control-styles), descritos na SDK do Windows.
+Especifica o estilo do controle de edição. Aplique uma combinação dos estilos de janela listados na seção **comentários** abaixo e [edite os estilos de controle](/windows/win32/Controls/edit-control-styles), descritos na SDK do Windows.
 
 *rect*<br/>
 Especifica o tamanho e a posição do controle de edição. Pode ser um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou uma estrutura [Rect](/windows/win32/api/windef/ns-windef-rect) .
@@ -1051,7 +1051,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ### <a name="parameters"></a>Parâmetros
 
 *cf*<br/>
-Na primeira versão, um ponteiro para uma estrutura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat) para receber os atributos de formatação de caractere da seleção atual.
+Na primeira versão, um ponteiro para uma estrutura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) para receber os atributos de formatação de caractere da seleção atual.
 
 Na segunda versão, um ponteiro para uma estrutura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , que é uma extensão rich edit 2,0 para a `CHARFORMAT` estrutura para receber os atributos de formatação de caracteres da seleção atual.
 
@@ -1128,7 +1128,7 @@ Para obter mais informações, consulte [EM_GETSELTEXT](/windows/win32/Controls/
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CRichEditCtrl::](#getselectiontype)GetSelectionType.
+  Consulte o exemplo de [CRichEditCtrl:: GetSelectionType](#getselectiontype).
 
 ##  <a name="gettextlength"></a>  CRichEditCtrl::GetTextLength
 
@@ -1618,7 +1618,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parâmetros
 
 *cf*<br/>
-Na primeira versão, um ponteiro para uma estrutura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat) que contém os novos atributos de formatação de caractere padrão.
+Na primeira versão, um ponteiro para uma estrutura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) que contém os novos atributos de formatação de caractere padrão.
 
 Na segunda versão, um ponteiro para uma estrutura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , que é uma extensão rich edit 2,0 para a `CHARFORMAT` estrutura, que contém os atributos de formatação de caractere padrão.
 
@@ -1920,7 +1920,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parâmetros
 
 *cf*<br/>
-Na primeira versão, um ponteiro para uma estrutura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat) que contém os novos atributos de formatação de caractere para a seleção atual.
+Na primeira versão, um ponteiro para uma estrutura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) que contém os novos atributos de formatação de caractere para a seleção atual.
 
 Na segunda versão, um ponteiro para uma estrutura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , que é uma extensão rich edit 2,0 para a `CHARFORMAT` estrutura, que contém os novos atributos de formatação de caractere para a seleção atual.
 
@@ -2033,7 +2033,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parâmetros
 
 *cf*<br/>
-Na primeira versão, um ponteiro para uma estrutura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat) que contém os novos atributos de formatação de caractere para a palavra selecionada no momento.
+Na primeira versão, um ponteiro para uma estrutura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) que contém os novos atributos de formatação de caractere para a palavra selecionada no momento.
 
 Na segunda versão, um ponteiro para uma estrutura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , que é uma extensão rich edit 2,0 para a `CHARFORMAT` estrutura, que contém os novos atributos de formatação de caractere para a palavra selecionada no momento.
 

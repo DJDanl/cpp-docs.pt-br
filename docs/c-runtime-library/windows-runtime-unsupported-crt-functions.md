@@ -1,18 +1,18 @@
 ---
-title: 'Funções CRT não suportadas de Windows Runtime '
+title: Funções CRT não suportadas de Windows Runtime
 ms.date: 11/04/2016
 helpviewer_keywords:
 - unsupported CRT functions, Windows Runtime
 - Windows Runtime, unsupported CRT functions
 ms.assetid: bb8386d6-0ef8-460c-88d8-addff009b6f1
 ms.openlocfilehash: 8f5b900d968bd80f9095c564f0222364769d63c9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745547"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739534"
 ---
-# <a name="windows-runtime-unsupported-crt-functions"></a>Funções CRT não suportadas de Windows Runtime 
+# <a name="windows-runtime-unsupported-crt-functions"></a>Funções CRT não suportadas de Windows Runtime
 
 Há várias APIs do CRT (Tempo de execução do C) que não podem ser usadas em aplicativos UWP (Plataforma Universal do Windows) executados no Windows Runtime. Esses aplicativos são criados usando o sinalizador de compilador /ZW. Para obter uma lista de funções de CRT sem suporte, consulte [Funções de CRT sem suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 5b9b50ba7200439e9ce648c53d52ce37226f61d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3340c5e387dc58ddcb5348cdc041a58840463995
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384979"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740941"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classes e estruturas de valor (C++/CX)
 
-Um *valor&lt;1* ou *classe de valor* é um Windows compatível com o tempo de execução POD ("estrutura plain old data"). Ela tem um tamanho fixo e consiste somente em campos; diferentemente de uma classe ref, ela não tem propriedades.
+Uma *classe* de *valor ou struct* é um pod compatível com Windows Runtime ("estrutura de dados simples antiga"). Ela tem um tamanho fixo e consiste somente em campos; diferentemente de uma classe ref, ela não tem propriedades.
 
 Os exemplos a seguir mostram como declarar e inicializar estruturas de valor.
 
@@ -52,7 +52,7 @@ Quando uma variável de um tipo de valor é atribuída a outra variável, o valo
 
 Uma *classe de valor* é como uma `value struct` , exceto pelo fato de que seus campos devem receber acessibilidade pública explicitamente. É declarada com o uso da palavra-chave `value class` .
 
-Uma estrutura de valor ou classe de valor pode conter como campos somente tipos numéricos fundamentais, classes enum, `Platform::String^`, ou [Platform:: ibox \<T > ^](../cppcx/platform-ibox-interface.md) onde T é uma classe de tipo ou de enumeração numérico ou a classe ou struct. Um campo `IBox<T>^` pode ter o valor `nullptr`; é assim que o C++ implementa o conceito de *tipos que permitem valor nulo*.
+Uma classe de valor ou struct pode conter como campos apenas tipos numéricos fundamentais, classes `Platform::String^`de enumeração, ou [Platform:: \<iBox T > ^](../cppcx/platform-ibox-interface.md) , em que T é um tipo numérico ou classe de enumeração ou classe de valor ou struct. Um campo `IBox<T>^` pode ter o valor `nullptr`; é assim que o C++ implementa o conceito de *tipos que permitem valor nulo*.
 
 Uma classe ou uma estrutura de valor que contém um tipo `Platform::String^` ou `IBox<T>^` como membro não aceita `memcpy`.
 
@@ -90,7 +90,7 @@ Você também pode usar um símbolo de ponteiro (*) para transmitir um tipo de v
 
 ## <a name="nullable-value-types"></a>Tipos de valor anuláveis
 
-Como mencionado anteriormente, uma classe ou estrutura de valor pode ter um campo do tipo [Platform:: ibox\<T > ^](../cppcx/platform-ibox-interface.md)— por exemplo, `IBox<int>^`. Esse campo pode ter qualquer valor numérico que seja válido para o tipo `int` ou pode ter o valor `nullptr`. Você pode transmitir um campo anulável como argumento para um método cujo parâmetro seja declarado como opcional ou para qualquer lugar em que um tipo de valor não precise ter um valor.
+Como mencionado anteriormente, uma classe de valor ou struct de valor pode ter um campo do tipo [Platform:\<: iBox T > ^](../cppcx/platform-ibox-interface.md)— por `IBox<int>^`exemplo,. Esse campo pode ter qualquer valor numérico que seja válido para o tipo `int` ou pode ter o valor `nullptr`. Você pode transmitir um campo anulável como argumento para um método cujo parâmetro seja declarado como opcional ou para qualquer lugar em que um tipo de valor não precise ter um valor.
 
 O exemplo a seguir mostra como inicializar uma estrutura que tem um campo que permite valor nulo.
 
@@ -150,6 +150,6 @@ public:
 ## <a name="see-also"></a>Consulte também
 
 [Sistema de tipos (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[Referência de linguagem do Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Referência da linguagem C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referência de namespaces](../cppcx/namespaces-reference-c-cx.md)<br/>
 [Classes e estruturas ref (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

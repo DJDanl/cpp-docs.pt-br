@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C2093
 ms.assetid: 17529a70-9169-46b5-9fc6-57a5ce224e6a
 ms.openlocfilehash: d57b452e63f7bf76051ef6a23c5f8f6ba81aed1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511144"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741148"
 ---
 # <a name="compiler-error-c2093"></a>Erro do compilador C2093
 
-'variável1': não pode ser inicializado usando endereço da variável automática 'variable2'
+' variable1 ': não pode ser inicializado usando o endereço da variável automática ' intervalo2 '
 
-Ao compilar com [/Za](../../build/reference/za-ze-disable-language-extensions.md), o programa tentou usar o endereço de uma variável automática como um inicializador.
+Ao compilar com [/za](../../build/reference/za-ze-disable-language-extensions.md), o programa tentou usar o endereço de uma variável automática como um inicializador.
 
 O exemplo a seguir gera C2093:
 

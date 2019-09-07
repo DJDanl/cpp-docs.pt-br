@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: c8eba16779b837b33912006a2ff3b7cdfa73f1e6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b32578cc3c9ad4f7a89b8ee76449259c0fa0b43b
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502638"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741518"
 ---
 # <a name="cricheditview-class"></a>Classe CRichEditView
 
@@ -763,7 +763,7 @@ A lista desejada de efeitos de formatação de caracteres a serem alternados.
 
 Cada chamada para essa função alterna os efeitos de formatação especificados para a seleção atual.
 
-Para obter mais informações sobre os parâmetros *dwMask* e *dwEffect* e seus valores possíveis, consulte os membros de dados correspondentes de [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat) no SDK do Windows.
+Para obter mais informações sobre os parâmetros *dwMask* e *dwEffect* e seus valores possíveis, consulte os membros de dados correspondentes de [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -997,7 +997,7 @@ Indica o efeito de formatação de caractere.
 
 A máscara *dwMask* especifica quais atributos de formatação de caracteres verificar. Os sinalizadores *dwEffect* listam os atributos de formatação de caracteres a serem definidos/desmarcados.
 
-Para obter mais informações sobre os parâmetros *dwMask* e *dwEffect* e seus valores possíveis, consulte os membros de dados correspondentes de [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat) no SDK do Windows.
+Para obter mais informações sobre os parâmetros *dwMask* e *dwEffect* e seus valores possíveis, consulte os membros de dados correspondentes de [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -1071,7 +1071,7 @@ Normalmente, essa chamada é seguida por uma chamada para [CRichEditCtrl::D ispl
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo para [CRichEditView::](#getpapersize)getpapers.
+  Consulte o exemplo para [CRichEditView:: Getpapers](#getpapersize).
 
 ##  <a name="printpage"></a>  CRichEditView::PrintPage
 
@@ -1193,7 +1193,7 @@ Observe que as margens usadas pelo [PrintPage](#printpage) são relativas à pá
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo para [CRichEditView::](#getpapersize)getpapers.
+  Consulte o exemplo para [CRichEditView:: Getpapers](#getpapersize).
 
 ##  <a name="setpapersize"></a>  CRichEditView::SetPaperSize
 
