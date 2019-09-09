@@ -1,19 +1,19 @@
 ---
-title: controle (C++ COM atributo)
+title: controle (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.control
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 223acf774d1cc90d84aed2d0d0c8cb59fc778fa1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12cf98b49b43b7a67834ea5401994ecdc749aa3b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148270"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501771"
 ---
-# <a name="control"></a>Controle 
+# <a name="control"></a>Controle
 
 Especifica que o tipo definido pelo usuário é um controle.
 
@@ -25,7 +25,7 @@ Especifica que o tipo definido pelo usuário é um controle.
 
 ## <a name="remarks"></a>Comentários
 
-O **controle** atributo implica a [coclass](coclass.md) atributo. O **controle** atributo C++ tem a mesma funcionalidade que o [controle](/windows/desktop/Midl/control) atributo MIDL.
+O atributo **Control** implica o atributo [coclass](coclass.md) . O atributo **Control** C++ tem a mesma funcionalidade que o atributo MIDL de [controle](/windows/win32/Midl/control) .
 
 ## <a name="example"></a>Exemplo
 
@@ -46,13 +46,13 @@ class CTest : public ICustom {};
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|**class**, **struct**|
+|**Aplica-se a**|**classe**, **struct**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-ms.openlocfilehash: 6c518b6a9ad0fe857b0878bcecd3020ba97174e6
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: d5a0e4187107aaab7cedf4e7a0e2fc47b9f9f305
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504706"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502578"
 ---
 # <a name="csemaphore-class"></a>Classe CSemaphore
 
-Um objeto da classe `CSemaphore` representa um "semáforo" — um objeto de sincronização que permite que um número limitado de threads em um ou mais processos para acessar um manter uma contagem do número de threads que acessam atualmente um recurso especificado.
+Um objeto da classe `CSemaphore` representa um "semáforo" — um objeto de sincronização que permite que um número limitado de threads em um ou mais processos acessem um mantenha uma contagem do número de threads que atualmente acessam um recurso especificado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -35,17 +35,17 @@ class CSemaphore : public CSyncObject
 
 ## <a name="remarks"></a>Comentários
 
-Semáforos são úteis para controlar o acesso a um recurso compartilhado que suporta apenas um número limitado de usuários. A contagem atual do `CSemaphore` objeto é o número de usuários adicionais permitidos. Quando a contagem chega a zero, todas as tentativas de usar o recurso controlado pelo `CSemaphore` objeto será inserido em uma fila do sistema e aguarde até que eles esgotar o tempo limite ou a contagem subir acima de 0. O número máximo de usuários que podem acessar o recurso controlado ao mesmo tempo é especificado durante a construção do `CSemaphore` objeto.
+Os semáforos são úteis para controlar o acesso a um recurso compartilhado que só pode dar suporte a um número limitado de usuários. A contagem atual do `CSemaphore` objeto é o número de usuários adicionais permitidos. Quando a contagem chega a zero, todas as tentativas de usar o recurso controlado `CSemaphore` pelo objeto serão inseridas em uma fila do sistema e aguardarão até que elas atinjam o tempo limite ou a contagem seja acima de 0. O número máximo de usuários que podem acessar o recurso controlado ao mesmo tempo é especificado durante a `CSemaphore` construção do objeto.
 
-Para usar um `CSemaphore` do objeto, construa o `CSemaphore` objeto quando ele for necessário. Especifique o nome do sinal do qual você deseja esperar e que seu aplicativo deve possuí-lo inicialmente. Você pode acessar o semaphore quando o construtor retorna. Chame [CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock) quando você terminar o acesso ao recurso controlado.
+Para usar um `CSemaphore` objeto, construa o `CSemaphore` objeto quando necessário. Especifique o nome do semáforo que você deseja aguardar e que seu aplicativo inicialmente deve ser proprietário dele. Em seguida, você pode acessar o semáforo quando o construtor retorna. Chame [CSyncObject:: Unlock](../../mfc/reference/csyncobject-class.md#unlock) quando você terminar de acessar o recurso controlado.
 
-Um método alternativo para usar `CSemaphore` objetos é adicionar uma variável do tipo `CSemaphore` como um membro de dados para a classe que você deseja o controle. Durante a construção do objeto controlado, chame o construtor do `CSemaphore` membro de dados especificando inicial acessar contagem, contagem máxima de acesso, nome do sinal do (se ele será usado em limites de processo) e os atributos de segurança desejados.
+Um método alternativo para usar `CSemaphore` objetos é adicionar uma variável do tipo `CSemaphore` como um membro de dados à classe que você deseja controlar. Durante a construção do objeto controlado, chame o construtor do membro `CSemaphore` de dados especificando a contagem de acesso inicial, a contagem máxima de acesso, o nome do semáforo (se ele será usado em limites de processo) e os atributos de segurança desejados.
 
-Para acessar os recursos controlados por `CSemaphore` objetos dessa maneira, primeiro crie uma variável do tipo [CSingleLock](../../mfc/reference/csinglelock-class.md) ou digite [CMultiLock](../../mfc/reference/cmultilock-class.md) na função de membro de acesso do recurso. Em seguida, chamar o objeto de bloqueio `Lock` função de membro (por exemplo, [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). Neste ponto, seu thread será a obter acesso ao recurso, aguarde até que o recurso a ser lançado e obter acesso ou aguarde até que o recurso seja liberado e o tempo limite, não consegue obter acesso ao recurso. Em qualquer caso, o recurso tiver sido acessado de forma thread-safe. Para liberar o recurso, use o objeto de bloqueio `Unlock` função de membro (por exemplo, [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), ou permitir que o objeto de bloqueio sair do escopo.
+Para acessar recursos controlados `CSemaphore` por objetos dessa maneira, primeiro crie uma variável de um dos tipos [CSingleLock](../../mfc/reference/csinglelock-class.md) ou digite [CMultiLock](../../mfc/reference/cmultilock-class.md) na função de membro de acesso do recurso. Em seguida, chame a função `Lock` de membro do objeto de bloqueio (por exemplo, [CSingleLock:: Lock](../../mfc/reference/csinglelock-class.md#lock)). Neste ponto, seu thread terá acesso ao recurso, aguardará o lançamento do recurso e obterá acesso, ou aguardará que o recurso seja liberado e atingirá o tempo limite, falha ao obter acesso ao recurso. Em qualquer caso, o recurso foi acessado de forma segura para thread. Para liberar o recurso, use a função de membro `Unlock` do objeto de bloqueio (por exemplo, [CSingleLock:: Unlock](../../mfc/reference/csinglelock-class.md#unlock)) ou permita que o objeto de bloqueio se torne fora do escopo.
 
-Como alternativa, você pode criar um `CSemaphore` autônomo de objeto e acessá-lo explicitamente antes de tentar acessar o recurso controlado. Esse método, ao mesmo tempo mais evidente para alguém ler seu código-fonte, é mais propenso a erros.
+Como alternativa, você pode criar um `CSemaphore` objeto autônomo e acessá-lo explicitamente antes de tentar acessar o recurso controlado. Esse método, embora mais claro para alguém que leia seu código-fonte, é mais propenso a erros.
 
-Para obter mais informações sobre como usar `CSemaphore` objetos, consulte o artigo [Multithreading: Como usar as Classes de sincronização](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Para obter mais informações sobre como usar `CSemaphore` objetos, consulte o artigo [multithreading: Como usar as classes](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)de sincronização.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -57,11 +57,11 @@ Para obter mais informações sobre como usar `CSemaphore` objetos, consulte o a
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxmt.h
+**Cabeçalho:** afxmt. h
 
 ##  <a name="csemaphore"></a>  CSemaphore::CSemaphore
 
-Constrói um nomeado ou sem nome `CSemaphore` objeto.
+Constrói um `CSemaphore` objeto nomeado ou sem nome.
 
 ```
 CSemaphore(
@@ -74,23 +74,23 @@ CSemaphore(
 ### <a name="parameters"></a>Parâmetros
 
 *lInitialCount*<br/>
-A contagem de uso inicial para o semáforo. Deve ser maior que ou igual a 0 e menor ou igual a *lMaxCount*.
+A contagem de uso inicial para o semáforo. Deve ser maior ou igual a 0 e menor ou igual a *lMaxCount*.
 
 *lMaxCount*<br/>
-A contagem de uso máximo para o semáforo. Deve ser maior que 0.
+A contagem máxima de uso para o semáforo. Deve ser maior que 0.
 
 *pstrName*<br/>
-O nome do sinal. Deve ser fornecido se o semáforo será acessado pelos limites do processo. Se `NULL`, o objeto estará sem nome. Se o nome corresponder a um semáforo existente, o construtor cria um novo `CSemaphore` objeto que referencia o semáforo desse nome. Se o nome corresponder a um objeto de sincronização existente que não é um sinal, a construção falhará.
+O nome do semáforo. Deve ser fornecido se o semáforo for acessado entre limites de processo. Se `NULL`, o objeto não será nomeado. Se o nome corresponder a um semáforo existente, o Construtor criará `CSemaphore` um novo objeto que faz referência ao semáforo desse nome. Se o nome corresponder a um objeto de sincronização existente que não seja um semáforo, a construção falhará.
 
 *lpsaAttributes*<br/>
-Atributos de segurança para o objeto de semáforo. Para obter uma descrição completa dessa estrutura, consulte [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) no SDK do Windows.
+Atributos de segurança para o objeto Semaphore. Para obter uma descrição completa dessa estrutura, consulte [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
-Para acessar ou liberar um `CSemaphore` do objeto, crie um [CMultiLock](../../mfc/reference/cmultilock-class.md) ou [CSingleLock](../../mfc/reference/csinglelock-class.md) objeto e chame seu [bloqueio](../../mfc/reference/csinglelock-class.md#lock) e [Unlock](../../mfc/reference/csinglelock-class.md#unlock) funções de membro.
+Para acessar ou liberar um `CSemaphore` objeto, crie um objeto [CMultiLock](../../mfc/reference/cmultilock-class.md) ou [CSingleLock](../../mfc/reference/csinglelock-class.md) e chame suas funções de membro [Lock](../../mfc/reference/csinglelock-class.md#lock) e [Unlock](../../mfc/reference/csinglelock-class.md#unlock) .
 
 > [!IMPORTANT]
->  Depois de criar o `CSemaphore` do objeto, use [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) para garantir que o mutex ainda não existia. Se o mutex existia inesperadamente, isso poderá indicar um processo não autorizado é apropriação indevida e pode ser pretendendo usar o mutex de maneira mal-intencionada. Nesse caso, o procedimento recomendado de valorizam a segurança é fechar o identificador e continuará como se houve uma falha na criação do objeto.
+>  Depois de criar `CSemaphore` o objeto, use [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) para garantir que o mutex ainda não exista. Se o mutex existia inesperadamente, ele pode indicar que um processo não autorizado é de apropriação indevida e pode estar pretendendo usar o mutex de forma mal-intencionada. Nesse caso, o procedimento de consciência de segurança recomendado é fechar a alça e continuar como se houvesse uma falha na criação do objeto.
 
 ## <a name="see-also"></a>Consulte também
 

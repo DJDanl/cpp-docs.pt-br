@@ -10,21 +10,21 @@ helpviewer_keywords:
 - Visual C, Windows API calls
 - Windows API [MFC], and MFC
 ms.assetid: 334e8efc-f3cc-4018-bc2e-02908b2a39fe
-ms.openlocfilehash: fe83af2d05af8e3b9da8d0c62f6974b0a5410bfc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8601dd034dbd73ac035084ad57c51f62e333fd32
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308973"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511858"
 ---
 # <a name="relationship-to-the-c-language-api"></a>Relacionamento com a API da linguagem C
 
-A única característica que define a biblioteca Microsoft Foundation Class (MFC) além de outras bibliotecas de classes para Windows é o mapeamento muito próxima à API do Windows escrito na linguagem C. Além disso, você geralmente pode misturar chamadas para a biblioteca de classes livremente com chamadas diretas para a API do Windows. Esse acesso direto, no entanto, implica que as classes são uma substituição completa para que a API. Os desenvolvedores ainda, ocasionalmente, devem fazer chamadas diretas para algumas funções do Windows, como [SetCursor](/windows/desktop/api/winuser/nf-winuser-setcursor) e [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics), por exemplo. Uma função do Windows é encapsulada por uma função de membro de classe somente quando há uma vantagem clara para fazer isso.
+A característica única que define a biblioteca MFC (Microsoft Foundation Class) de outras bibliotecas de classes para o Windows é o mapeamento muito próximo para a API do Windows escrita na linguagem C. Além disso, geralmente é possível misturar chamadas para a biblioteca de classes livremente com chamadas diretas para a API do Windows. No entanto, esse acesso direto não implica que as classes sejam uma substituição completa para essa API. Os desenvolvedores ainda devem, ocasionalmente, fazer chamadas diretas para algumas funções do Windows, como [SetCursor](/windows/win32/api/winuser/nf-winuser-setcursor) e [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics), por exemplo. Uma função do Windows é encapsulada por uma função membro de classe somente quando há uma vantagem clara de fazer isso.
 
-Porque, às vezes, você precisa fazer chamadas de função nativas do Windows, você deve ter acesso à documentação da API do Windows de linguagem C. Esta documentação é incluída com o Microsoft Visual C++.
+Como às vezes você precisa fazer chamadas de função nativas do Windows, deve ter acesso à documentação da API do Windows em linguagem C. Esta documentação está incluída no Microsoft Visual C++.
 
 > [!NOTE]
->  Para uma visão geral de como funciona a estrutura da biblioteca MFC, consulte [usando as Classes para escrever aplicativos para Windows](../mfc/using-the-classes-to-write-applications-for-windows.md).
+>  Para obter uma visão geral de como funciona a estrutura de biblioteca do MFC, consulte [usando as classes para escrever aplicativos para o Windows](../mfc/using-the-classes-to-write-applications-for-windows.md).
 
 ## <a name="see-also"></a>Consulte também
 

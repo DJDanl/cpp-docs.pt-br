@@ -1,6 +1,6 @@
 ---
 title: Funções intrínsecas _InterlockedIncrement
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedIncrement_acq
 - _InterlockedIncrement16_rel_cpp
@@ -44,22 +44,22 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: b41ce5c744bde7cd89cabed6c829cfb06da75129
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4dd9ae9ba5454b0afefa332689d94fa3619a07a6
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350082"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221988"
 ---
-# <a name="interlockedincrement-intrinsic-functions"></a>Funções intrínsecas _InterlockedIncrement
+# <a name="_interlockedincrement-intrinsic-functions"></a>Funções intrínsecas _InterlockedIncrement
 
 **Seção específica da Microsoft**
 
-Fornece suporte intrínseco ao compilador para o SDK do Windows Win32 [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement) função.
+Forneça suporte intrínseco ao compilador para a função [InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement) do Win32 SDK do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```C
 long _InterlockedIncrement(
    long * lpAddend
 );
@@ -98,12 +98,12 @@ __int64 _InterlockedIncrement64_nf(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*lpAddend*<br/>
-[no, out] Ponteiro para a variável a ser incrementado.
+*lpAddend*\
+[entrada, saída] Ponteiro para a variável a ser incrementada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O valor retornado é o valor incrementado resultante.
 
@@ -111,8 +111,9 @@ O valor retornado é o valor incrementado resultante.
 
 |Intrínseco|Arquitetura|Cabeçalho|
 |---------------|------------------|------------|
-|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|
+|`_InterlockedIncrement`, `_InterlockedIncrement16`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedIncrement64`|ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM, ARM64|\<intrin.h>|
 
 ## <a name="remarks"></a>Comentários
 
@@ -120,7 +121,7 @@ Há diversas variações em `_InterlockedIncrement` que têm base no tipo de dad
 
 Enquanto a função `_InterlockedIncrement` opera nos valores inteiros de 32 bits, `_InterlockedIncrement16` opera em valores inteiros de 16 bits `_InterlockedIncrement64` opera em valores inteiros de 64 bits.
 
-Em plataformas ARM, use intrínsecos com os sufixos `_acq` e `_rel` para semântica de aquisição e liberação, como no início e no final de uma seção crítica. O intrínseco com um sufixo `_nf` ("no fence") não funciona como uma barreira de memória.
+Em plataformas ARM, use intrínsecos com os sufixos `_acq` e `_rel` para semântica de aquisição e liberação, como no início e no final de uma seção crítica. O intrínseco com um `_nf` sufixo ("sem limite") não funciona como uma barreira de memória.
 
 A variável apontada para o parâmetro `lpAddend` deve estar alinhada em um limite de 32 bits; caso contrário, essa função falhará em sistemas de multiprocessor x86 e em qualquer sistema não x86. Para obter mais informações, consulte [alinhar](../cpp/align-cpp.md).
 
@@ -130,12 +131,12 @@ Essas rotinas somente estão disponíveis como intrínsecos.
 
 ## <a name="example"></a>Exemplo
 
-Para obter um exemplo de como usar `_InterlockedIncrement`, consulte [interlockeddecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Para obter uma amostra de como usar `_InterlockedIncrement`o, consulte [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
 **Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
-[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
-[Palavras-chave](../cpp/keywords-cpp.md)<br/>
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)\
+[Palavras-chave](../cpp/keywords-cpp.md)\
 [conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

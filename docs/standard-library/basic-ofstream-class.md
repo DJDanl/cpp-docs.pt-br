@@ -23,7 +23,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68452513"
 ---
-# <a name="basicofstream-class"></a>Classe basic_ofstream
+# <a name="basic_ofstream-class"></a>Classe basic_ofstream
 
 Descreve um objeto que controla a inserção de elementos e objetos codificados em um buffer de fluxo da classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, com elementos do tipo `Elem` cujas características dos caracteres são determinadas pela classe `Tr`.
 
@@ -44,7 +44,7 @@ As características do elemento básico no buffer de arquivo (geralmente `char_t
 
 ## <a name="remarks"></a>Comentários
 
-Quando a  especialização wchar_t `basic_ofstream` de gravações no arquivo, se o arquivo for aberto no modo de texto, ele gravará uma sequência MBCS. A representação interna usará um buffer de `wchar_t` caracteres.
+Quando a especialização wchar_t `basic_ofstream` de gravações no arquivo, se o arquivo for aberto no modo de texto, ele gravará uma sequência MBCS. A representação interna usará um buffer de `wchar_t` caracteres.
 
 O objeto armazena um objeto da classe `basic_filebuf` <  `Elem`, `Tr`>.
 
@@ -88,7 +88,7 @@ int main(int argc, char **argv)
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|Operator|Descrição|
 |-|-|
 |[operator=](#op_eq)|Atribui o conteúdo desse objeto de fluxo. Essa é uma atribuição de movimentação que envolve um `rvalue reference` que não deixa uma cópia.|
 
@@ -137,7 +137,7 @@ A referência rvalue para o objeto `basic_ofstream` que está sendo usado para i
 
 O primeiro construtor inicializa a classe base chamando [basic_ostream](../standard-library/basic-ostream-class.md)(`sb`), em que `sb` é o objeto armazenado da classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>. Também inicializa `sb` chamando `basic_filebuf`< `Elem`, `Tr`>.
 
-O segundo e o terceiro construtores inicializam a classe base chamando `basic_ostream`( **sb**). Ele também inicializa `sb` chamando `basic_filebuf` <  ,`Tr`>e, em seguida`sb`. `Elem` [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`). Se a última função retornar um ponteiro NULL, o Construtor chamará SetState ( [](../standard-library/basic-ios-class.md#setstate)`failbit`).
+O segundo e o terceiro construtores inicializam a classe base chamando `basic_ostream`( **sb**). Ele também inicializa `sb` chamando `basic_filebuf` <  ,`Tr`>e, em seguida`sb`. `Elem` [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`). Se a última função retornar um ponteiro NULL, o Construtor chamará [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
 O quarto construtor é uma função de cópia. Ele inicializa o objeto com o conteúdo de *Right*, tratado como uma referência rvalue.
 
@@ -254,7 +254,7 @@ A proteção de abertura de arquivo padrão, equivalente ao parâmetro `shflag` 
 
 ### <a name="remarks"></a>Comentários
 
-A função membro chama [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; `ios_base::out`). Se essa função retornar um ponteiro NULL, a função chamará SetState ( [](../standard-library/basic-ios-class.md#setstate)`failbit`).
+A função membro chama [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; `ios_base::out`). Se essa função retornar um ponteiro NULL, a função chamará [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
 ### <a name="example"></a>Exemplo
 

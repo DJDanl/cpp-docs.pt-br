@@ -1,21 +1,21 @@
 ---
-title: (C++ COM atributo nonextensible)
+title: Não extensívelC++ (atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonextensible
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: ed396b3d55e16cf195949c713ab574812b796a1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2947e223d068ea6cc92a41abe19cb7f920112b2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407569"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514403"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-Especifica que o `IDispatch` implementação inclui apenas as propriedades e os métodos listados na descrição da interface e não podem ser estendidos com membros adicionais em tempo de execução.
+Especifica que a `IDispatch` implementação inclui apenas as propriedades e os métodos listados na descrição da interface e não pode ser estendido com membros adicionais em tempo de execução.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,13 +25,13 @@ Especifica que o `IDispatch` implementação inclui apenas as propriedades e os 
 
 ## <a name="remarks"></a>Comentários
 
-O **nonextensible** atributo C++ tem a mesma funcionalidade que o [nonextensible](/windows/desktop/Midl/nonextensible) atributo MIDL.
+O atributo **extensível** C++ tem a mesma funcionalidade que o atributo MIDL não [extensível](/windows/win32/Midl/nonextensible) .
 
-Uso de **nonextensible** também requer o [oleautomation](oleautomation.md) atributo.
+O uso de **extensível** também requer o atributo [oleautomation](oleautomation.md) .
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra um uso de **nonextensible** atributo:
+O código a seguir mostra um uso do atributo não **extensível** :
 
 ```cpp
 // cpp_attr_ref_nonextensible.cpp
@@ -50,13 +50,13 @@ __interface IFireTabCtrl
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|**interface**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|`dual` e `oleautomation`, ou `dispinterface`|
+|**Atributos necessários**|`dual`e `oleautomation`, ou`dispinterface`|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).

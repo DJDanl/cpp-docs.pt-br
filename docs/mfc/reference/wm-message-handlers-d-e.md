@@ -38,7 +38,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68449971"
 ---
-# <a name="wm-message-handlers-d---e"></a>Manipuladores de mensagens WM_: D - E
+# <a name="wm_-message-handlers-d---e"></a>Manipuladores de mensagens WM_: D - E
 
 As entradas de mapa a seguir à esquerda correspondem aos protótipos de função à direita:
 
@@ -54,7 +54,7 @@ As entradas de mapa a seguir à esquerda correspondem aos protótipos de funçã
 |ON_WM_DRAWITEM()|afx_msg void [OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem)(LPDRAWITEMSTRUCT);|
 |ON_WM_DROPFILES()|afx_msg void [OnDropFiles](../../mfc/reference/cwnd-class.md#ondropfiles)(HDROP);|
 |ON_WM_DWMCOLORIZATIONCOLORCHANGED()|afx_msg void [OnColorizationColorChanged](../../mfc/reference/cwnd-class.md#oncolorizationcolorchanged)(DWORD, bool);|
-|ON_WM_DWMCOMPOSITIONCHANGED()|afx_msg void [](../../mfc/reference/cwnd-class.md#oncompositionchanged)oncomposiçãochanged ();|
+|ON_WM_DWMCOMPOSITIONCHANGED()|afx_msg void [Oncomposiçãochanged](../../mfc/reference/cwnd-class.md#oncompositionchanged)();|
 |ON_WM_DWMNCRENDERINGCHANGED()|afx_msg void [OnNcRenderingChanged](../../mfc/reference/cwnd-class.md#onncrenderingchanged)(bool);|
 |ON_WM_DWMWINDOWMAXIMIZEDCHANGE()|afx_msg void [OnWindowMaximizedChanged](../../mfc/reference/cwnd-class.md#onwindowmaximizedchanged)(bool);|
 |ON_WM_ENABLE()|afx_msg void [OnEnable](../../mfc/reference/cwnd-class.md#onenable)(bool);|

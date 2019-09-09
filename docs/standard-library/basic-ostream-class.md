@@ -27,7 +27,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457863"
 ---
-# <a name="basicostream-class"></a>Classe basic_ostream
+# <a name="basic_ostream-class"></a>Classe basic_ostream
 
 Essa classe de modelo descreve um objeto que controla a inserção de elementos e objetos codificados em um buffer de fluxo `Elem`com elementos do tipo, também conhecidos como [char_type](../standard-library/basic-ios-class.md#char_type), cujas características de caractere são `Tr`determinadas pela classe, também conhecido como [traits_type](../standard-library/basic-ios-class.md#traits_type).
 
@@ -100,7 +100,7 @@ setstate(state);
 return (*this);
 ```
 
-Os dois grupos de funções [](../standard-library/basic-ios-class.md#setstate)chamam SetState (**badbit**) se eles encontrarem uma falha ao inserir elementos.
+Os dois grupos de funções chamam [SetState](../standard-library/basic-ios-class.md#setstate)(**badbit**) se eles encontrarem uma falha ao inserir elementos.
 
 Um objeto da classe basic_istream\< **Elem**, **Tr**> armazena somente um objeto base virtual público da classe [basic_ios](../standard-library/basic-ios-class.md) **\<Elem**, **Tr >** .
 
@@ -128,7 +128,7 @@ Consulte o exemplo de [Classe basic_ifstream](../standard-library/basic-ofstream
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|Operator|Descrição|
 |-|-|
 |[operator=](#op_eq)|Atribui o valor do objeto parâmetro `basic_ostream` fornecido para esse objeto.|
 |[operator<<](#basic_ostream_operator_lt_lt)|Grava no fluxo.|

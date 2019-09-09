@@ -1,17 +1,17 @@
 ---
-title: (C++ COM atributo agregável)
+title: agregável (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregatable
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 8d5ceb46a124db8c0082495d48e6ee0e21655422
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa70c2417b3262e98118b5e717ce39d0147024de
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390991"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491011"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -26,23 +26,23 @@ Indica que a classe oferece suporte à agregação.
 ### <a name="parameters"></a>Parâmetros
 
 *value*<br/>
-(Opcional) Um parâmetro para indicar quando o objeto COM pode ser agregado:
+Adicional Um parâmetro para indicar quando o objeto COM pode ser agregado:
 
-- `never` O objeto COM não pode ser agregado.
+- `never`O objeto COM não pode ser agregado.
 
-- `allowed` O objeto COM pode ser criado diretamente ou eles podem ser agregados. Esse é o padrão.
+- `allowed`O objeto COM pode ser criado diretamente ou pode ser agregado. Esse é o padrão.
 
-- `always` O objeto COM não pode ser criado diretamente e só pode ser agregado. Quando você chama `CoCreateInstance` para esse objeto, você deve especificar o objeto de agregação `IUnknown` interface (o controlando `IUnknown`).
+- `always`O objeto COM não pode ser criado diretamente e só pode ser agregado. Ao chamar `CoCreateInstance` esse objeto, você deve especificar a interface do `IUnknown` objeto de agregação (o controle `IUnknown`).
 
 ## <a name="remarks"></a>Comentários
 
-O **agregável** atributo C++ tem a mesma funcionalidade que o [agregável](/windows/desktop/Midl/aggregatable) atributo MIDL. Isso significa que o compilador passará a **agregável** por meio do atributo para o arquivo. idl gerado.
+O C++ atributo agregável tem a mesma funcionalidade que o atributo MIDL [agregável](/windows/win32/Midl/aggregatable) . Isso significa que o compilador passará o atributo **agregável** para o arquivo. idl gerado.
 
-Este atributo exige que o [coclass](coclass.md), [progid](progid.md), ou [vi_progid](vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicadas ao mesmo elemento. Se qualquer atributo único for usado, os outros dois são aplicados automaticamente. Por exemplo, se `progid` for aplicada, `vi_progid` e `coclass` também são aplicadas.
+Esse atributo requer que o atributo [coclass](coclass.md), [ProgID](progid.md)ou [vi_progid](vi-progid.md) (ou outro atributo que implica um deles) também seja aplicado ao mesmo elemento. Se qualquer atributo único for usado, os outros dois serão aplicados automaticamente. Por exemplo, se `progid` é `vi_progid` aplicado e `coclass` também é aplicado.
 
-### <a name="atl-projects"></a>Projetos ATL
+### <a name="atl-projects"></a>Projetos da ATL
 
-Se esse atributo for usado em um projeto que usa ATL, altera o comportamento do atributo. Além do comportamento descrito anteriormente, o atributo também adiciona uma das macros de seguir para a classe de destino:
+Se esse atributo for usado em um projeto que usa ATL, o comportamento do atributo será alterado. Além do comportamento descrito anteriormente, o atributo também adiciona uma das seguintes macros à classe de destino:
 
 |Valor do parâmetro|Macro inserida|
 |---------------------|--------------------|
@@ -68,13 +68,13 @@ class CMyClass {};
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|**class**, **struct**|
+|**Aplica-se a**|**classe**, **struct**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Um ou mais das seguintes opções: `coclass`, `progid`, ou `vi_progid`.|
+|**Atributos necessários**|Um ou mais dos seguintes: `coclass`, `progid`ou `vi_progid`.|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
@@ -84,4 +84,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Agregação](/windows/desktop/com/aggregation)
+[Agregação](/windows/win32/com/aggregation)

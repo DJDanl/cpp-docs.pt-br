@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CrtDbgReportW function
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
-ms.openlocfilehash: f12dafc62e302d90e5cffa04ee93e662b78295be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5579a8996950c5f3e923f67ed2a5e667bb566fa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339475"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500008"
 ---
-# <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
+# <a name="_crtdbgreport-_crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
 Gera um relatório com uma mensagem de depuração e envia o relatório para três destinos possíveis (somente versões de depuração).
 
@@ -63,13 +63,13 @@ int _CrtDbgReportW(
 ### <a name="parameters"></a>Parâmetros
 
 *reportType*<br/>
-Tipo de relatório: **_CRT_WARN**, **crt_error**, e **_CRT_ASSERT**.
+Tipo de relatório: **_CRT_WARN**, **_CRT_ERROR**e **_CRT_ASSERT**.
 
 *filename*<br/>
-Ponteiro para o nome do arquivo de origem em que a asserção/relatório ocorreu ou **nulo**.
+Ponteiro para o nome do arquivo de origem em que a declaração/relatório ocorreu ou é **nulo**.
 
 *linenumber*<br/>
-Número de linha no arquivo de origem em que a asserção/relatório ocorreu ou **nulo**.
+Número de linha no arquivo de origem em que a declaração/relatório ocorreu ou **nulo**.
 
 *moduleName*<br/>
 Ponteiro para o nome do módulo (.exe ou .dll) em que a asserção/relatório ocorreu.
@@ -82,31 +82,31 @@ Argumentos de substituição opcionais usados pelo *formato*.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Para todos os destinos de relatório **crtdbgreport** e **CrtDbgReportW** retornar -1 se ocorrer um erro e 0 se nenhum erro for encontrado. No entanto, quando o destino do relatório é uma janela de mensagem de depuração e o usuário clica no botão **Tentar novamente**, essas funções retornam 1. Se o usuário clicar no botão **Anular** na janela Mensagem de Depuração, essas funções serão anuladas imediatamente e não retornarão um valor.
+Para todos os destinos de relatório, **_CrtDbgReport** e _ **CrtDbgReportW** retornam-1 se ocorrer um erro e 0 se não forem encontrados erros. No entanto, quando o destino do relatório é uma janela de mensagem de depuração e o usuário clica no botão **Tentar novamente**, essas funções retornam 1. Se o usuário clicar no botão **Anular** na janela Mensagem de Depuração, essas funções serão anuladas imediatamente e não retornarão um valor.
 
-O [macros rpt, rptf](rpt-rptf-rptw-rptfw-macros.md) chamada de macros de depuração **crtdbgreport** para de depuração de gerar relatórios. As versões de caractere largo dessas macros, bem como [macros Assert, asserte](assert-asserte-assert-expr-macros.md), [rptw](rpt-rptf-rptw-rptfw-macros.md) e [rptfw](rpt-rptf-rptw-rptfw-macros.md), use **CrtDbgReportW** para Gere seus relatórios de depuração. Quando **crtdbgreport** ou **CrtDbgReportW** retornar 1, essas macros iniciam o depurador, desde que a depuração just-in-time (JIT) está habilitada.
+As macros de depuração [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) chamam **_CrtDbgReport** para gerar seus relatórios de depuração. As versões de caractere largo dessas macros, bem como [_ASSERT, _ASSERTE](assert-asserte-assert-expr-macros.md), [_RPTW](rpt-rptf-rptw-rptfw-macros.md) e [_RPTFW](rpt-rptf-rptw-rptfw-macros.md), usam _ **CrtDbgReportW** para gerar seus relatórios de depuração. Quando **_CrtDbgReport** ou _ _ **CrtDbgReportW** retorna 1, essas macros iniciam o depurador, desde que a depuração JIT (just-in-time) esteja habilitada.
 
 ## <a name="remarks"></a>Comentários
 
-**Crtdbgreport** e **CrtDbgReportW** pode enviar o relatório de depuração para três destinos diferentes: um arquivo de relatório de depuração, um monitor de depuração (o depurador do Visual Studio) ou uma janela de mensagem de depuração. Duas funções de configuração, [_CrtSetReportMode](crtsetreportmode.md) e [_CrtSetReportFile](crtsetreportfile.md), são usadas para especificar os destinos de cada tipo de relatório. Essas funções permitem o controle independente do destino de cada tipo de relatório. Por exemplo, é possível especificar que um *reportType* dos **_CRT_WARN** só ser enviada para o monitor de depuração, enquanto um *reportType* de **_CRT_ASSERT** enviado para uma janela de mensagem de depuração e um arquivo de relatório definida pelo usuário.
+**_CrtDbgReport** e _ _ **CrtDbgReportW** podem enviar o relatório de depuração para três destinos diferentes: um arquivo de relatório de depuração, um monitor de depuração (o depurador do Visual Studio) ou uma janela de mensagem de depuração. Duas funções de configuração, [_CrtSetReportMode](crtsetreportmode.md) e [_CrtSetReportFile](crtsetreportfile.md), são usadas para especificar os destinos de cada tipo de relatório. Essas funções permitem o controle independente do destino de cada tipo de relatório. Por exemplo, é possível especificar que um *reportType* de **_CRT_WARN** seja enviado somente para o monitor de depuração, enquanto um *reportType* de **_CRT_ASSERT** ser enviado a uma janela de mensagem de depuração e um arquivo de relatório definido pelo usuário.
 
-**CrtDbgReportW** é a versão de caractere largo de **crtdbgreport**. Todos os parâmetros de saída e cadeia de caracteres estão em cadeias de caracteres largos. Caso contrário, não há diferença da versão de caractere de byte único.
+_ **CrtDbgReportW** é a versão de caractere largo do **_CrtDbgReport**. Todos os parâmetros de saída e cadeia de caracteres estão em cadeias de caracteres largos. Caso contrário, não há diferença da versão de caractere de byte único.
 
-**Crtdbgreport** e **CrtDbgReportW** criar a mensagem do usuário para o relatório de depuração, substituindo o *argumento*[**n**] argumentos para o *formato* de cadeia de caracteres, usando as mesmas regras definidas pela **printf** ou **wprintf** funções. Essas funções, em seguida, geram o relatório de depuração e determinam o destino ou destinos, com base nos modos de relatório atual e o arquivo definido para *reportType*. Quando o relatório é enviado para uma janela de mensagem de depuração, o *filename*, **lineNumber**, e *moduleName* estão incluídos nas informações exibidas na janela.
+**_CrtDbgReport** e _ _ **CrtDbgReportW** criam a mensagem de usuário para o relatório de depuração, substituindo os argumentos *Argument*[**n**] na cadeia de caracteres de *formato* , usando as mesmas regras definidas pela **printf** ou  **funções wprintf** . Essas funções geram o relatório de depuração e determinam o destino ou destinos, com base nos modos de relatório atuais e no arquivo definido para *reportType*. Quando o relatório é enviado a uma janela de mensagem de depuração, o *nome de arquivo*, **LineNumber**e *ModuleName* são incluídos nas informações exibidas na janela.
 
-A tabela a seguir lista as opções disponíveis para o modo de relatório ou modos de arquivo e o comportamento resultante de **crtdbgreport** e **CrtDbgReportW**. Essas opções são definidas como sinalizadores de bit em \<crtdbg.h>.
+A tabela a seguir lista as opções disponíveis para o modo de relatório ou os modos e o arquivo e o comportamento resultante de **_CrtDbgReport** e _ **CrtDbgReportW**. Essas opções são definidas como sinalizadores de bit em \<crtdbg.h>.
 
-|Modo do relatório|Arquivo do relatório|**_CrtDbgReport**, **_CrtDbgReportW** behavior|
+|Modo do relatório|Arquivo do relatório|**_CrtDbgReport**, comportamento _ _ **CrtDbgReportW**|
 |-----------------|-----------------|------------------------------------------------|
-|**_CRTDBG_MODE_DEBUG**|Não aplicável|Grava mensagens usando a API [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) do Windows.|
-|**_CRTDBG_MODE_WNDW**|Não aplicável|Chama a API [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) do Windows para criar uma caixa de mensagem e exibir a mensagem junto com os botões **Anular**, **Tentar novamente** e **Ignorar**. Se um usuário clica **anular**, **crtdbgreport** ou **crtdbgreport** será anulado imediatamente. Se um usuário clicar em **Tentar novamente**, ele retornará 1. Se um usuário clica **Ignore**, a execução continua e **crtdbgreport** e **CrtDbgReportW** retornam 0. Observe que clicar em **Ignorar** quando há uma condição de erro geralmente resulta em “comportamento inesperado”.|
-|**_CRTDBG_MODE_FILE**|**__HFILE**|Grava a mensagem fornecida pelo usuário **MANIPULAR**, usando o Windows [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) API e não verifica a validade do identificador de arquivo; o aplicativo é responsável por abrir o arquivo de relatório e passar um arquivo válido identificador.|
-|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Grava a mensagem **stderr**.|
-|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Grava a mensagem **stdout**.|
+|**_CRTDBG_MODE_DEBUG**|Não aplicável|Grava mensagens usando a API [OutputDebugString](/windows/win32/api/debugapi/nf-debugapi-outputdebugstringw) do Windows.|
+|**_CRTDBG_MODE_WNDW**|Não aplicável|Chama a API [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) do Windows para criar uma caixa de mensagem e exibir a mensagem junto com os botões **Anular**, **Tentar novamente** e **Ignorar**. Se um usuário clicar em **abortar**, **_CrtDbgReport** ou **_CrtDbgReport** imediatamente abortará. Se um usuário clicar em **Tentar novamente**, ele retornará 1. Se um usuário clicar em **ignorar**, a execução continuará e **_CrtDbgReport** e _ **CrtDbgReportW** retornará 0. Observe que clicar em **Ignorar** quando há uma condição de erro geralmente resulta em “comportamento inesperado”.|
+|**_CRTDBG_MODE_FILE**|**__HFILE**|Grava a mensagem no **identificador**fornecido pelo usuário, usando a API [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile) do Windows e não verifica a validade do identificador de arquivo; o aplicativo é responsável por abrir o arquivo de relatório e passar um identificador de arquivo válido.|
+|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Grava a mensagem em **stderr**.|
+|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Grava a mensagem em **stdout**.|
 
 O relatório pode ser enviado para um, dois ou três destinos ou nenhum destino. Para obter mais informações sobre como especificar os modos de relatório e o arquivo de relatório, consulte as funções [_CrtSetReportMode](crtsetreportmode.md) e [_CrtSetReportFile](crtsetreportfile.md). Para obter mais informações sobre como usar as macros de depuração e as funções de relatório, consulte [Macros para relatórios](/visualstudio/debugger/macros-for-reporting).
 
-Se seu aplicativo precisa de mais flexibilidade do que o fornecido pelo **crtdbgreport** e **CrtDbgReportW**, você pode escrever seu próprios relatórios função e conectá-la nos relatórios da biblioteca de tempo de execução de C o mecanismo usando o [crtsetreporthook](crtsetreporthook.md) função.
+Se seu aplicativo precisar de mais flexibilidade do que o fornecido pelo **_CrtDbgReport** e _ _ **CrtDbgReportW**, você poderá escrever sua própria função de relatório e conectá-la ao mecanismo de relatório da biblioteca de tempo de execução do C usando o [_CrtSetReportHook](crtsetreporthook.md) funcionamento.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -115,7 +115,7 @@ Se seu aplicativo precisa de mais flexibilidade do que o fornecido pelo **crtdbg
 |**_CrtDbgReport**|\<crtdbg.h>|
 |**_CrtDbgReportW**|\<crtdbg.h>|
 
-**Crtdbgreport** e **CrtDbgReportW** são extensões da Microsoft. Para obter mais informações, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+**_CrtDbgReport** e _ **CrtDbgReportW** são extensões da Microsoft. Para obter mais informações, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Libraries
 

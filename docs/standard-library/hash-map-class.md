@@ -95,7 +95,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448792"
 ---
-# <a name="hashmap-class"></a>Classe hash_map
+# <a name="hash_map-class"></a>Classe hash_map
 
 > [!NOTE]
 > Esta API está obsoleta. A alternativa é a [Classe unordered_map](../standard-library/unordered-map-class.md).
@@ -215,7 +215,7 @@ O iterador fornecido pela classe hash_map é um iterador bidirecional, mas as fu
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|Operator|Descrição|
 |-|-|
 |[operator&#91;&#93;](#op_at)|Insere um elemento em um `hash_map` com um valor de chave especificado.|
 |[hash_map::operator=](#op_eq)|Substitui os elementos de um `hash_map` por uma cópia de outro `hash_map`.|
@@ -1351,7 +1351,7 @@ Um iterador que trata do local de um elemento com uma chave especificada ou do l
 
 `find`Retorna um iterador que aborda um elemento no hash_map cuja chave de classificação é equivalente à chave de argumento em um predicado binário que induzi uma ordenação com base em uma relação menor que comparação.
 
-Se o valor de retorno `find` de for atribuído a um [const_iterator](#const_iterator), o objeto hash_map não poderá ser modificado. Se o valor de retorno `find` de for atribuído a [](#iterator)um iterador, o objeto hash_map poderá ser modificado
+Se o valor de retorno `find` de for atribuído a um [const_iterator](#const_iterator), o objeto hash_map não poderá ser modificado. Se o valor de retorno `find` de for atribuído a um [iterador](#iterator), o objeto hash_map poderá ser modificado
 
 ### <a name="example"></a>Exemplo
 
@@ -1739,7 +1739,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 O `iterator` definido por hash_map aponta para elementos que são objetos de [value_type](#value_type), que é do tipo **par\<chave const, tipo >,** cujo primeiro membro é a chave para o elemento e cujo segundo membro é a referência mapeada mantida pelo elementos.
 
-Para desreferenciar  `Iter` um iterador que aponta para um elemento em um Multimap `->` , use o operador.
+Para desreferenciar um **iterador** `Iter` que aponta para um elemento em um Multimap `->` , use o operador.
 
 Para acessar o valor de chave do elemento, use `Iter` -> **first**, que é equivalente a (\* `Iter`). **first**. Para acessar o valor dos dados mapeados do elemento, use `Iter` -> **second**, que é equivalente a (\* `Iter`). **second**.
 

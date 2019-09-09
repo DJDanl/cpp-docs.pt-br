@@ -20,16 +20,16 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-ms.openlocfilehash: 2bc943c74f456302b13db77bf28b6e4b21a5524b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96e8fee71f02ea750fd8b33f41fd2fd517e9081e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373508"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503683"
 ---
 # <a name="colestreamfile-class"></a>Classe COleStreamFile
 
-Representa um fluxo de dados (`IStream`) em um arquivo composto como parte de armazenamento estruturado OLE.
+Representa um fluxo de dados (`IStream`) em um arquivo composto como parte do armazenamento estruturado OLE.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -49,22 +49,22 @@ class COleStreamFile : public CFile
 
 |Nome|Descrição|
 |----------|-----------------|
-|[COleStreamFile::Attach](#attach)|Associa um fluxo com o objeto.|
-|[COleStreamFile::CreateMemoryStream](#creatememorystream)|Cria um fluxo de memória global e a associa com o objeto.|
-|[COleStreamFile::CreateStream](#createstream)|Cria um fluxo e a associa com o objeto.|
+|[COleStreamFile::Attach](#attach)|Associa um fluxo ao objeto.|
+|[COleStreamFile::CreateMemoryStream](#creatememorystream)|Cria um fluxo da memória global e o associa ao objeto.|
+|[COleStreamFile::CreateStream](#createstream)|Cria um fluxo e o associa ao objeto.|
 |[COleStreamFile::Detach](#detach)|Desassocia o fluxo do objeto.|
 |[COleStreamFile::GetStream](#getstream)|Retorna o fluxo atual.|
-|[COleStreamFile::OpenStream](#openstream)|Abre um fluxo e associa o objeto com segurança.|
+|[COleStreamFile::OpenStream](#openstream)|Abre um fluxo com segurança e o associa ao objeto.|
 
 ## <a name="remarks"></a>Comentários
 
-Um `IStorage` objeto deve existir antes do fluxo pode ser aberto ou criado, a menos que ele é um fluxo de memória.
+Um `IStorage` objeto deve existir antes que o fluxo possa ser aberto ou criado, a menos que seja um fluxo de memória.
 
-`COleStreamFile` os objetos são manipulados exatamente como [CFile](../../mfc/reference/cfile-class.md) objetos.
+`COleStreamFile`os objetos são manipulados exatamente como objetos de [testcfile](../../mfc/reference/cfile-class.md) .
 
-Para obter mais informações sobre a manipulação de fluxos e armazenamentos, consulte o artigo [contêineres: Composta arquivos](../../mfc/containers-compound-files.md)...
+Para obter mais informações sobre como manipular fluxos e armazenamentos, consulte o [artigo Contêineres: Arquivos](../../mfc/containers-compound-files.md)compostos..
 
-Para obter mais informações, consulte [IStream](/windows/desktop/api/objidl/nn-objidl-istream) e [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) no SDK do Windows.
+Para obter mais informações, consulte [IStream](/windows/win32/api/objidl/nn-objidl-istream) e [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) no SDK do Windows.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -76,11 +76,11 @@ Para obter mais informações, consulte [IStream](/windows/desktop/api/objidl/nn
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxole.h
+**Cabeçalho:** Afxole. h
 
 ##  <a name="attach"></a>  COleStreamFile::Attach
 
-Associa o fluxo OLE fornecido com o `COleStreamFile` objeto.
+Associa o fluxo `COleStreamFile` OLE fornecido ao objeto.
 
 ```
 void Attach(LPSTREAM lpStream);
@@ -89,13 +89,13 @@ void Attach(LPSTREAM lpStream);
 ### <a name="parameters"></a>Parâmetros
 
 *lpStream*<br/>
-Aponta para o fluxo OLE (`IStream`) a ser associado com o objeto. Não pode ser NULL.
+Aponta para o fluxo OLE (`IStream`) a ser associado ao objeto. Não pode ser NULL.
 
 ### <a name="remarks"></a>Comentários
 
-O objeto não já deve estar associado um fluxo de OLE.
+O objeto ainda não deve estar associado a um fluxo OLE.
 
-Para obter mais informações, consulte [IStream](/windows/desktop/api/objidl/nn-objidl-istream) no SDK do Windows.
+Para obter mais informações, consulte [IStream](/windows/win32/api/objidl/nn-objidl-istream) no SDK do Windows.
 
 ##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile
 
@@ -108,17 +108,17 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ### <a name="parameters"></a>Parâmetros
 
 *lpStream*<br/>
-Ponteiro para o fluxo OLE a ser associado com o objeto.
+Ponteiro para o fluxo OLE a ser associado ao objeto.
 
 ### <a name="remarks"></a>Comentários
 
-Se *lpStream* for NULL, o objeto não está associado um fluxo de OLE, caso contrário, o objeto está associado com o fluxo fornecido do OLE.
+Se *lpStream* for NULL, o objeto não será associado a um fluxo OLE, caso contrário, o objeto será associado ao fluxo OLE fornecido.
 
-Para obter mais informações, consulte [IStream](/windows/desktop/api/objidl/nn-objidl-istream) no SDK do Windows.
+Para obter mais informações, consulte [IStream](/windows/win32/api/objidl/nn-objidl-istream) no SDK do Windows.
 
 ##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream
 
-Com segurança cria um novo fluxo fora da memória global e compartilhada em que uma falha é uma condição normal, esperada.
+Cria com segurança um novo fluxo de memória global e compartilhada em que uma falha é uma condição normal e esperada.
 
 ```
 BOOL CreateMemoryStream(CFileException* pError = NULL);
@@ -127,21 +127,21 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ### <a name="parameters"></a>Parâmetros
 
 *pError*<br/>
-Aponta para um [CFileException](../../mfc/reference/cfileexception-class.md) objeto ou nulo que indica o status de conclusão da operação criar. Forneça esse parâmetro se você quiser monitorar possíveis exceções geradas pela tentativa de criar o fluxo.
+Aponta para um objeto [CFileException](../../mfc/reference/cfileexception-class.md) ou nulo que indica o status de conclusão da operação de criação. Forneça esse parâmetro se você quiser monitorar possíveis exceções geradas ao tentar criar o fluxo.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se o fluxo é criado com êxito; Caso contrário, 0.
+Diferente de zero se o fluxo for criado com êxito; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-A memória é alocada pelo subsistema de OLE.
+A memória é alocada pelo subsistema OLE.
 
-Para obter mais informações, consulte [CreateStreamOnHGlobal](/windows/desktop/api/combaseapi/nf-combaseapi-createstreamonhglobal) no SDK do Windows.
+Para obter mais informações, consulte [CreateStreamOnHGlobal](/windows/win32/api/combaseapi/nf-combaseapi-createstreamonhglobal) no SDK do Windows.
 
 ##  <a name="createstream"></a>  COleStreamFile::CreateStream
 
-Com segurança, cria um novo fluxo no objeto de armazenamento fornecida em que uma falha é uma condição normal, esperada.
+Cria com segurança um novo fluxo no objeto de armazenamento fornecido em que uma falha é uma condição normal e esperada.
 
 ```
 BOOL CreateStream(
@@ -160,24 +160,24 @@ Aponta para o objeto de armazenamento OLE que contém o fluxo a ser criado. Não
 Nome do fluxo a ser criado. Não pode ser NULL.
 
 *nOpenFlags*<br/>
-Modo de acesso a ser usado ao abrir o fluxo. Leitura/gravação exclusivo e criar modos são usados por padrão. Para obter uma lista completa dos modos disponíveis, consulte [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).
+Modo de acesso a ser usado ao abrir o fluxo. Os modos exclusivo, de leitura/gravação e de criação são usados por padrão. Para obter uma lista completa dos modos disponíveis, consulte [testcfile:: RecFile](../../mfc/reference/cfile-class.md#cfile).
 
 *pError*<br/>
-Aponta para um [CFileException](../../mfc/reference/cfileexception-class.md) objeto ou nulo. Forneça esse parâmetro se você quiser monitorar possíveis exceções geradas pela tentativa de criar o fluxo.
+Aponta para um objeto [CFileException](../../mfc/reference/cfileexception-class.md) ou nulo. Forneça esse parâmetro se você quiser monitorar possíveis exceções geradas ao tentar criar o fluxo.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se o fluxo é criado com êxito; Caso contrário, 0.
+Diferente de zero se o fluxo for criado com êxito; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Uma exceção de arquivo será gerada se abrir falhar e *pError* não é nulo.
+Uma exceção de arquivo será gerada se a abertura falhar e *perror* não for nula.
 
-Para obter mais informações, consulte [IStorage::CreateStream](/windows/desktop/api/objidl/nf-objidl-istorage-createstream) no SDK do Windows.
+Para obter mais informações, consulte [IStorage:: CreateStream](/windows/win32/api/objidl/nf-objidl-istorage-createstream) no SDK do Windows.
 
 ##  <a name="detach"></a>  COleStreamFile::Detach
 
-Desassocia o fluxo do objeto sem fechar fluxos.
+Desassocia o fluxo do objeto sem fechar o fluxo.
 
 ```
 LPSTREAM Detach();
@@ -189,9 +189,9 @@ Um ponteiro para o fluxo (`IStream`) que foi associado ao objeto.
 
 ### <a name="remarks"></a>Comentários
 
-O fluxo deve ser fechado de alguma outra forma, antes que o programa seja encerrado.
+O fluxo deve ser fechado de outra maneira antes que o programa seja encerrado.
 
-Para obter mais informações, consulte [IStream](/windows/desktop/api/objidl/nn-objidl-istream) no SDK do Windows.
+Para obter mais informações, consulte [IStream](/windows/win32/api/objidl/nn-objidl-istream) no SDK do Windows.
 
 ##  <a name="getstream"></a>  COleStreamFile::GetStream
 
@@ -203,7 +203,7 @@ IStream* GetStream() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um ponteiro para a interface do fluxo atual ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)).
+Um ponteiro para a interface de fluxo atual ( [IStream](/windows/win32/api/objidl/nn-objidl-istream)).
 
 ##  <a name="openstream"></a>  COleStreamFile::OpenStream
 
@@ -226,20 +226,20 @@ Aponta para o objeto de armazenamento OLE que contém o fluxo a ser aberto. Não
 Nome do fluxo a ser aberto. Não pode ser NULL.
 
 *nOpenFlags*<br/>
-Modo de acesso a ser usado ao abrir o fluxo. Exclusivo e leitura/gravação são utilizados por padrão. Para obter uma lista dos modos disponíveis, consulte [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).
+Modo de acesso a ser usado ao abrir o fluxo. Os modos exclusivo e de leitura/gravação são usados por padrão. Para obter a lista completa dos modos disponíveis, consulte [testcfile:: RecFile](../../mfc/reference/cfile-class.md#cfile).
 
 *pError*<br/>
-Aponta para um [CFileException](../../mfc/reference/cfileexception-class.md) objeto ou nulo. Forneça esse parâmetro se você quiser monitorar possíveis exceções geradas pela tentativa de abrir o fluxo.
+Aponta para um objeto [CFileException](../../mfc/reference/cfileexception-class.md) ou nulo. Forneça esse parâmetro se você quiser monitorar possíveis exceções geradas ao tentar abrir o fluxo.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se o fluxo for aberto com êxito; Caso contrário, 0.
+Diferente de zero se o fluxo for aberto com êxito; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Uma exceção de arquivo será gerada se abrir falhar e *pError* não é nulo.
+Uma exceção de arquivo será gerada se a abertura falhar e *perror* não for nula.
 
-Para obter mais informações, consulte [IStorage::OpenStream](/windows/desktop/api/objidl/nf-objidl-istorage-openstream) no SDK do Windows.
+Para obter mais informações, consulte [IStorage:: OpenStream](/windows/win32/api/objidl/nf-objidl-istorage-openstream) na SDK do Windows.
 
 ## <a name="see-also"></a>Consulte também
 
