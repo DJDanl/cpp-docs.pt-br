@@ -1,21 +1,21 @@
 ---
-title: switch_type (C++ COM atributo)
+title: switch_type (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_type
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: b461769d3d988efae0be7380e1e0112e3f3cf801
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3a4187c629238fa464a607c0b653f857fa44b6a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407114"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513954"
 ---
-# <a name="switchtype"></a>switch_type
+# <a name="switch_type"></a>switch_type
 
-Identifica o tipo da variável usada como o discriminador de união.
+Identifica o tipo da variável usada como discriminante de União.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,13 +28,13 @@ type
 ### <a name="parameters"></a>Parâmetros
 
 *type*<br/>
-O tipo de comutador, pode ser um tipo de caractere, inteiro, booliano ou enumeração.
+O tipo de comutador, pode ser um número inteiro, caractere, booliano ou tipo de enumeração.
 
 ## <a name="remarks"></a>Comentários
 
-O **switch_type** C++ atributo tem a mesma funcionalidade que o [switch_type](/windows/desktop/Midl/switch-type) atributo MIDL.
+O atributo **switch_type** C++ tem a mesma funcionalidade que o atributo MIDL [switch_type](/windows/win32/Midl/switch-type) .
 
-Atributos de C++ não oferecem suporte a [encapsulada uniões](/windows/desktop/Midl/encapsulated-unions). [Uniões nonencapsulated](/windows/desktop/Midl/nonencapsulated-unions) têm suporte apenas no seguinte formato:
+C++os atributos não dão suporte a [uniões encapsuladas](/windows/win32/Midl/encapsulated-unions). [Uniões não encapsuladas](/windows/win32/Midl/nonencapsulated-unions) têm suporte apenas no seguinte formato:
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
@@ -55,17 +55,17 @@ struct SizedValue2 {
 
 ## <a name="example"></a>Exemplo
 
-Consulte a [caso](case-cpp.md) exemplo para uso do exemplo **switch_type**.
+Consulte o exemplo de [caso](case-cpp.md) para obter um exemplo de uso de **switch_type**.
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|**typedef**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
