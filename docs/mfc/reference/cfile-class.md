@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: a258773633f503dc0638d76509953b3410dafbd8
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: a9161764f6c8646766a73add01c25cce5619ad19
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375765"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506582"
 ---
 # <a name="cfile-class"></a>Classe de testcfile
 
@@ -258,7 +258,7 @@ Escolha a opção de segurança a seguir para impedir que o handle do arquivo se
 |-----------|-----------------|
 |`CFile::modeNoInherit`|Impede qualquer processo filho de usar o handle do arquivo.|
 
-O construtor padrão Inicializa membros, mas não anexa um arquivo ao `CFile` objeto. Depois de usar esse construtor, use o método testcfile [:: Open](#open) para abrir um arquivo e anexá- `CFile` lo ao objeto.
+O construtor padrão Inicializa membros, mas não anexa um arquivo ao `CFile` objeto. Depois de usar esse construtor, use o método [testcfile:: Open](#open) para abrir um arquivo e anexá- `CFile` lo ao objeto.
 
 O construtor com um parâmetro inicializa membros e anexa um arquivo existente ao objeto `CFile`.
 
@@ -382,7 +382,7 @@ O título do arquivo subjacente.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método chama [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) para recuperar o título do arquivo. Se for bem-sucedido, o método retornará a cadeia de caracteres que o sistema usará para exibir o nome do arquivo para o usuário. Caso contrário, o método chama [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) para recuperar o nome do arquivo (incluindo a extensão de arquivo) do arquivo subjacente. Isso significa que a extensão de arquivo nem sempre é incluída na cadeia de título do arquivo retornado. Para obter mais informações, consulte [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) e [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) no SDK do Windows.
+Esse método chama [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) para recuperar o título do arquivo. Se for bem-sucedido, o método retornará a cadeia de caracteres que o sistema usará para exibir o nome do arquivo para o usuário. Caso contrário, o método chama [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) para recuperar o nome do arquivo (incluindo a extensão de arquivo) do arquivo subjacente. Isso significa que a extensão de arquivo nem sempre é incluída na cadeia de título do arquivo retornado. Para obter mais informações, consulte [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) e [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) no SDK do Windows.
 
 Para retornar o caminho inteiro do arquivo, incluindo o nome, chame [GetFilePath](#getfilepath). Para retornar apenas o nome do arquivo, chame [GetFileName](#getfilename).
 
@@ -578,7 +578,7 @@ virtual BOOL Open(
 Uma cadeia de caracteres que contém o caminho para o arquivo desejado. O caminho pode ser relativo, absoluto ou um nome de rede (UNC).
 
 *nOpenFlags*<br/>
-Um UINT que define o modo de compartilhamento e acesso do arquivo. Especifica a ação a ser tomada ao abrir o arquivo. Você pode combinar as opções usando o operador bit-a **&#124;** -or (). Uma permissão de acesso e uma opção de compartilhamento são necessárias; os `modeCreate` modos `modeNoInherit` e são opcionais. Consulte o [](#cfile) Construtor de testcfile para obter uma lista de opções de modo.
+Um UINT que define o modo de compartilhamento e acesso do arquivo. Especifica a ação a ser tomada ao abrir o arquivo. Você pode combinar as opções usando o operador bit-a **&#124;** -or (). Uma permissão de acesso e uma opção de compartilhamento são necessárias; os `modeCreate` modos `modeNoInherit` e são opcionais. Consulte o construtor de [testcfile](#cfile) para obter uma lista de opções de modo.
 
 *pError*<br/>
 Um ponteiro para um objeto de exceção de arquivo existente que receberá o status de uma operação com falha.
@@ -613,7 +613,7 @@ A tabela a seguir descreve os possíveis resultados `Open`de.
 
 ##  <a name="operator_handle"></a>MANIPULADOR de testcfile:: Operator
 
-Use esse operador para passar um identificador para um `CFile` objeto para funções como [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) e GetFileTime que esperam um. [](/windows/desktop/api/fileapi/nf-fileapi-getfiletime) `HANDLE`
+Use esse operador para passar um identificador para um `CFile` objeto para funções como [ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex) e [GetFileTime](/windows/win32/api/fileapi/nf-fileapi-getfiletime) que esperam um `HANDLE`.
 
 ```
 operator HANDLE() const;
@@ -785,7 +785,7 @@ O comprimento do arquivo em bytes.
 
 ##  <a name="setfilepath"></a>  CFile::SetFilePath
 
-Chame essa função para especificar o caminho do arquivo. Por exemplo, se o caminho de um arquivo não estiver disponível quando [](../../mfc/reference/cfile-class.md) um objeto testcfile for construído `SetFilePath` , chame para fornecê-lo.
+Chame essa função para especificar o caminho do arquivo. Por exemplo, se o caminho de um arquivo não estiver disponível quando um objeto [testcfile](../../mfc/reference/cfile-class.md) for construído `SetFilePath` , chame para fornecê-lo.
 
 ```
 virtual void SetFilePath(LPCTSTR lpszNewName);
@@ -844,7 +844,7 @@ static void PASCAL SetStatus(
 Uma cadeia de caracteres que é o caminho para o arquivo desejado. O caminho pode ser relativo ou absoluto e pode conter um nome de rede.
 
 *status*<br/>
-O buffer que contém as novas informações de status. Chame a `GetStatus` função de membro para preencher previamente `CFileStatus` a estrutura com valores atuais e, em seguida, faça as alterações necessárias. Se um valor for 0, o item de status correspondente não será atualizado. Consulte a [](#getstatus) função de membro GetStatus para obter uma descrição `CFileStatus` da estrutura.
+O buffer que contém as novas informações de status. Chame a `GetStatus` função de membro para preencher previamente `CFileStatus` a estrutura com valores atuais e, em seguida, faça as alterações necessárias. Se um valor for 0, o item de status correspondente não será atualizado. Consulte a função de membro [GetStatus](#getstatus) para obter uma descrição `CFileStatus` da estrutura.
 
 *pTM*<br/>
 Ponteiro para objeto CAtlTransactionManager
@@ -914,7 +914,7 @@ O número de bytes a serem transferidos do buffer. Para arquivos de modo de text
 
 [!code-cpp[NVC_MFCFiles#16](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_19.cpp)]
 
-Consulte também os exemplos de [testcfile:: RecFile](#cfile) e testcfile [:: Open](#open).
+Consulte também os exemplos de [testcfile:: RecFile](#cfile) e [testcfile:: Open](#open).
 
 ## <a name="see-also"></a>Consulte também
 

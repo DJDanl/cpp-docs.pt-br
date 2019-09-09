@@ -1,5 +1,5 @@
 ---
-title: agregações (C++ COM atributo)
+title: agregações (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregates
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: 12e6af31c2714095cf2ecf51e4f067081789a9e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9e3f84fbc781bd5187ae0c3461a6c8d68a29aa0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262171"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501877"
 ---
 # <a name="aggregates"></a>aggregates
 
@@ -32,23 +32,23 @@ Indica que o objeto agrega o objeto especificado pelo CLSID.
 Especifica o CLSID do objeto agregável.
 
 *variable_name*<br/>
-O nome da variável que deve ser inserido. Essa variável contém o `IUnknown` do objeto que está sendo agregado.
+O nome da variável a ser inserida. Essa variável contém o `IUnknown` do objeto que está sendo agregado.
 
 ## <a name="remarks"></a>Comentários
 
-Quando aplicado a um objeto, o **agregações** atributo C++ implementa um wrapper externo para o objeto que está sendo agregado (especificado por `clsid`).
+Quando aplicado a um objeto, o C++ atributo de **agregações** implementa um wrapper externo para o objeto que está sendo agregado `clsid`(especificado por).
 
-Este atributo exige que o [coclass](coclass.md), [progid](progid.md), ou [vi_progid](vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicadas ao mesmo elemento. Se qualquer atributo único for usado, os outros dois são aplicados automaticamente. Por exemplo, se `progid` for aplicada, `vi_progid` e `coclass` também são aplicadas.
+Esse atributo requer que o atributo [coclass](coclass.md), [ProgID](progid.md)ou [vi_progid](vi-progid.md) (ou outro atributo que implica um deles) também seja aplicado ao mesmo elemento. Se qualquer atributo único for usado, os outros dois serão aplicados automaticamente. Por exemplo, se `progid` é `vi_progid` aplicado e `coclass` também é aplicado.
 
-### <a name="atl-projects"></a>Projetos ATL
+### <a name="atl-projects"></a>Projetos da ATL
 
-Se esse atributo for usado em um projeto que usa ATL, altera o comportamento do atributo. Em primeiro lugar, a seguinte entrada é adicionada ao mapa de COM do objeto de destino:
+Se esse atributo for usado em um projeto que usa ATL, o comportamento do atributo será alterado. Primeiro, a seguinte entrada é adicionada ao mapa COM do objeto de destino:
 
 ```
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)
 ```
 
-Segundo, o [DECLARE_GET_CONTROLLING_UNKNOWN](../../atl/reference/aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) macro também é adicionada.
+Em segundo lugar, a macro [DECLARE_GET_CONTROLLING_UNKNOWN](../../atl/reference/aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) também é adicionada.
 
 ## <a name="example"></a>Exemplo
 
@@ -79,13 +79,13 @@ struct CObject : IObject
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|**class**, **struct**|
+|**Aplica-se a**|**classe**, **struct**|
 |**Repetível**|Sim|
-|**Atributos obrigatórios**|Um ou mais das seguintes opções: `coclass`, `progid`, ou `vi_progid`.|
+|**Atributos necessários**|Um ou mais dos seguintes: `coclass`, `progid`ou `vi_progid`.|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
@@ -95,6 +95,6 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 [Atributos de COM](com-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Agregação](/windows/desktop/com/aggregation)<br/>
-[Agregável](/windows/desktop/Midl/aggregatable)<br/>
+[Agregação](/windows/win32/com/aggregation)<br/>
+[Agregável](/windows/win32/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)
