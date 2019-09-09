@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: 3360a28d50f64546837cc5ef35dcfc761b4fb0f5
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e4f8f678e76113b5d012242f474ff0ab8b0628dd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341500"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505774"
 ---
 # <a name="ckeyboardmanager-class"></a>Classe CKeyboardManager
 
-Gerencia tabelas de chave de atalho para a janela do quadro principal e janelas filho.
+Gerencia tabelas de teclas de atalho para a janela de quadro principal e janelas de quadro filho.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -61,27 +61,27 @@ class CKeyboardManager : public CObject
 |||
 |-|-|
 |Nome|Descrição|
-|[CKeyboardManager::CleanUp](#cleanup)|Limpa as tabelas de teclas de atalho.|
-|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Recupera a tecla de atalho padrão para o comando especificado e a janela.|
-|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Determina se uma chave é tratada pela tabela de acelerador.|
-|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Indica se um caractere imprimível.|
-|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|Indica se menus mostram todas as teclas de atalho para um comando ou a tecla de atalho padrão.|
+|[CKeyboardManager:: CleanUp](#cleanup)|Limpa as tabelas de teclas de atalho.|
+|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Recupera a tecla de atalho padrão para o comando e a janela especificados.|
+|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Determina se uma chave é manipulada pela tabela do acelerador.|
+|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Indica se um caractere é imprimível.|
+|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|Indica se os menus mostram todas as teclas de atalho para um comando ou apenas a tecla de atalho padrão.|
 |[CKeyboardManager::LoadState](#loadstate)|Carrega as tabelas de teclas de atalho do registro do Windows.|
-|[CKeyboardManager::ResetAll](#resetall)|Recarrega as tabelas de chave de atalho do recurso do aplicativo.|
-|[CKeyboardManager::SaveState](#savestate)|Salva o atalho de tabelas de chave no registro do Windows.|
-|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Especifica se o framework exibe todas as teclas de atalho para todos os comandos ou uma única tecla de atalho para cada comando. Esse método não afeta os comandos que têm apenas uma tecla de atalho associada.|
+|[CKeyboardManager::ResetAll](#resetall)|Recarrega as tabelas de teclas de atalho do recurso de aplicativo.|
+|[CKeyboardManager::SaveState](#savestate)|Salva as tabelas de teclas de atalho no registro do Windows.|
+|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Especifica se a estrutura exibe todas as teclas de atalho para todos os comandos ou uma única tecla de atalho para cada comando. Esse método não afeta os comandos que têm apenas uma tecla de atalho associada.|
 |[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Converte um caractere em seu registro superior.|
-|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Atualiza uma tabela de chave de atalho com uma nova tabela de teclas de atalho.|
+|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Atualiza uma tabela de teclas de atalho com uma nova tabela de teclas de atalho.|
 
 ## <a name="remarks"></a>Comentários
 
-Os membros dessa classe permitem que você salvar e carregar tabelas de chave de atalho para o registro do Windows, use um modelo para atualizar as tabelas de teclas de atalho e localizar a tecla de atalho padrão para um comando em uma janela de quadro. Além disso, o `CKeyboardManager` objeto permite que você controle como as teclas de atalho são exibidas ao usuário.
+Os membros dessa classe permitem salvar e carregar tabelas de teclas de atalho no registro do Windows, usar um modelo para atualizar as tabelas de chave de corte curto e localizar a tecla de atalho padrão para um comando em uma janela do quadro. Além disso, o `CKeyboardManager` objeto permite que você controle como as teclas de atalho são exibidas para o usuário.
 
-Você não deve criar um `CKeyboardManager` objeto manualmente. Ele será criado automaticamente pela estrutura do seu aplicativo. No entanto, você deve chamar [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) durante o processo de inicialização do seu aplicativo. Para obter um ponteiro para o Gerenciador de teclado para o seu aplicativo, chame [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager).
+Você não deve criar um `CKeyboardManager` objeto manualmente. Ele será criado automaticamente pela estrutura do seu aplicativo. No entanto, você deve chamar [CWinAppEx:: InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) durante o processo de inicialização do seu aplicativo. Para obter um ponteiro para o Gerenciador de teclado para seu aplicativo, chame [CWinAppEx:: GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como recuperar um ponteiro para um `CKeyboardManager` do objeto de um `CWinAppEx` classe e como mostrar todas as teclas de atalho associadas aos comandos de menu. Este trecho de código é parte do [exemplo de páginas personalizadas](../../overview/visual-cpp-samples.md).
+O exemplo a seguir demonstra como recuperar um ponteiro para um `CKeyboardManager` objeto de uma `CWinAppEx` classe e como mostrar todas as teclas de atalho associadas a comandos de menu. Este trecho de código faz parte do [exemplo de páginas personalizadas](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]
 
@@ -93,9 +93,9 @@ O exemplo a seguir demonstra como recuperar um ponteiro para um `CKeyboardManage
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxkeyboardmanager.h
+**Cabeçalho:** afxkeyboardmanager. h
 
-##  <a name="ckeyboardmanager"></a>  CKeyboardManager::CKeyboardManager
+##  <a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager
 
 Constrói um objeto `CKeyboardManager`.
 
@@ -105,11 +105,11 @@ CKeyboardManager();
 
 ### <a name="remarks"></a>Comentários
 
-Na maioria dos casos, você não precisa criar um `CKeyboardManager` diretamente. Por padrão, a estrutura criará um para você. Para obter um ponteiro para o `CKeyboardManager`, chame [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). Se você criar um manualmente, você deve inicializá-lo com o método [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).
+Na maioria dos casos, você não precisa criar um `CKeyboardManager` diretamente. Por padrão, a estrutura cria uma para você. Para obter um ponteiro para `CKeyboardManager`, chame [CWinAppEx:: GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). Se você criar uma manualmente, deverá inicializá-la com o método [CWinAppEx:: InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).
 
-##  <a name="cleanup"></a>  CKeyboardManager::CleanUp
+##  <a name="cleanup"></a>CKeyboardManager:: CleanUp
 
-Libera o `CKeyboardManager` recursos e limpa todos os mapeamentos de teclas de atalho.
+Libera os recursos `CKeyboardManager` e limpa todos os mapeamentos de tecla de atalho.
 
 ```
 static void CleanUp();
@@ -117,13 +117,13 @@ static void CleanUp();
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre teclas de atalho, consulte [personalização de teclado e Mouse](../../mfc/keyboard-and-mouse-customization.md).
+Para obter mais informações sobre teclas de atalho, consulte [personalização de teclado e mouse](../../mfc/keyboard-and-mouse-customization.md).
 
-Você não precisa chamar essa função quando seu aplicativo for encerrado porque o framework chama automaticamente durante a saída do aplicativo.
+Você não precisa chamar essa função quando o aplicativo é encerrado porque a estrutura a chama automaticamente durante a saída do aplicativo.
 
 ##  <a name="finddefaultaccelerator"></a>  CKeyboardManager::FindDefaultAccelerator
 
-Recupera a tecla de atalho padrão para o comando especificado e a janela.
+Recupera a tecla de atalho padrão para o comando e a janela especificados.
 
 ```
 static BOOL FindDefaultAccelerator(
@@ -136,28 +136,28 @@ static BOOL FindDefaultAccelerator(
 ### <a name="parameters"></a>Parâmetros
 
 *uiCmd*<br/>
-[in] A ID de comando.
+no A ID do comando.
 
 *str*<br/>
-[out] Uma referência a um `CString` objeto.
+fora Uma referência a um `CString` objeto.
 
 *pWndFrame*<br/>
-[in] Um ponteiro para uma janela do quadro.
+no Um ponteiro para uma janela de quadro.
 
 *bIsDefaultFrame*<br/>
-[in] Especifica se a janela do quadro é a janela do quadro padrão.
+no Especifica se a janela do quadro é a janela de quadro padrão.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se o atalho for encontrado; Caso contrário, 0.
+Diferente de zero se o atalho for encontrado; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Este método pesquisa o comando especificado por *uiCmd* e recupera a tecla de atalho padrão. Em seguida, o método usa a cadeia de caracteres associada a essa tecla de atalho e grava o valor para o *str* parâmetro.
+Esse método pesquisa o comando especificado por *uiCmd* e recupera a tecla de atalho padrão. Em seguida, o método usa a cadeia de caracteres associada a essa tecla de atalho e grava o valor no parâmetro *Str* .
 
 ##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled
 
-Determina se a chave especificada é tratada pelos [classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md).
+Determina se a chave especificada é manipulada pela [Classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md).
 
 ```
 static BOOL __stdcall IsKeyHandled(
@@ -172,22 +172,22 @@ static BOOL __stdcall IsKeyHandled(
 |||
 |-|-|
 |Parâmetro|Descrição|
-|*nKey*|[in] A chave para verificar.|
-|*fVirt*|[in] Especifica o comportamento da tecla de atalho. Para obter uma lista de valores possíveis, consulte [estrutura de ACELERAÇÃO](/windows/desktop/api/winuser/ns-winuser-tagaccel).|
-|*pWndFrame*|[in] Uma janela do quadro. Este método determina se uma tecla de atalho é tratada neste quadro.|
-|*bIsDefaultFrame*|[in] Um parâmetro booliano que indica se *pWndFrame* é a janela de quadro do padrão.|
+|*nKey*|no A chave a ser verificada.|
+|*fVirt*|no Especifica o comportamento da tecla de atalho. Para obter uma lista de valores possíveis, consulte [estrutura da aceleração extra](/windows/win32/api/winuser/ns-winuser-accel).|
+|*pWndFrame*|no Uma janela do quadro. Esse método determina se uma tecla de atalho é manipulada neste quadro.|
+|*bIsDefaultFrame*|no Um parâmetro booliano que indica se *pWndFrame* é a janela de quadro padrão.|
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se a tecla de atalho é manipulada. FALSE se a chave não for tratada ou se *pWndFrame* é NULL.
+TRUE se a tecla de atalho for manipulada. FALSE se a chave não for manipulada ou se *pWndFrame* for nulo.
 
 ### <a name="remarks"></a>Comentários
 
-Os parâmetros de entrada devem corresponder à entrada na tabela de aceleradores ambas as para *nKey* e *fVirt* para determinar se uma tecla de atalho é tratada no *pWndFrame*.
+Os parâmetros de entrada devem corresponder à entrada na tabela do acelerador para *nKey* e *fVirt* para determinar se uma tecla de atalho é manipulada em *pWndFrame*.
 
-##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable
+##  <a name="iskeyprintable"></a>CKeyboardManager::IsKeyPrintable
 
-Indica se um caractere imprimível.
+Indica se um caractere é imprimível.
 
 ```
 static BOOL __stdcall IsKeyPrintable(const UINT nChar);
@@ -198,7 +198,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||
 |-|-|
 |Parâmetro|Descrição|
-|*nChar*|[in] O caractere que esse método verifica.|
+|*nChar*|no O caractere que esse método verifica.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -206,11 +206,11 @@ Diferente de zero se o caractere for imprimível, zero se não for.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método falhar se uma chamada para [GetKeyboardState](/windows/desktop/api/winuser/nf-winuser-getkeyboardstate) falhar.
+Esse método falhará se uma chamada para [GetKeyboardState](/windows/win32/api/winuser/nf-winuser-getkeyboardstate) falhar.
 
 ##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators
 
-Indica se menus mostram todas as teclas de atalho associadas aos comandos de menu ou as teclas de atalho padrão.
+Indica se os menus mostram todas as teclas de atalho associadas a comandos de menu ou apenas as teclas de atalho padrão.
 
 ```
 static BOOL IsShowAllAccelerators();
@@ -218,13 +218,13 @@ static BOOL IsShowAllAccelerators();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se o aplicativo lista todas as teclas de atalho para comandos de menu. 0 se o aplicativo exibe somente as teclas de atalho padrão.
+Diferente de zero se o aplicativo listar todas as teclas de atalho para comandos de menu; 0 se o aplicativo exibir apenas as teclas de atalho padrão.
 
 ### <a name="remarks"></a>Comentários
 
-O aplicativo lista as teclas de atalho para comandos de menu na barra de menus. Use a função [Ckeyboardmanager](#showallaccelerators) para controlar se o aplicativo lista todas as teclas de atalho ou apenas as teclas de atalho padrão.
+O aplicativo lista as teclas de atalho para comandos de menu na barra de menus. Use a função [CKeyboardManager:: ShowAllAccelerators](#showallaccelerators) para controlar se o aplicativo listará todas as teclas de atalho ou apenas as teclas de atalho padrão.
 
-##  <a name="loadstate"></a>  CKeyboardManager::LoadState
+##  <a name="loadstate"></a>CKeyboardManager:: LoadState
 
 Carrega as tabelas de teclas de atalho do registro do Windows.
 
@@ -237,24 +237,24 @@ BOOL LoadState(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszProfileName*<br/>
-[in] O caminho do registro onde `CKeyboardManager` os dados são salvos.
+no O caminho do registro `CKeyboardManager` em que os dados são salvos.
 
 *pDefaultFrame*<br/>
-[in] Um ponteiro para uma janela do quadro a ser usado como a janela padrão.
+no Um ponteiro para uma janela de quadro a ser usado como a janela padrão.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se o estado foi carregado com êxito ou 0, caso contrário.
+Diferente de zero se o estado foi carregado com êxito ou 0 caso contrário.
 
 ### <a name="remarks"></a>Comentários
 
-Se o *lpszProfileName* parâmetro for NULL, esse método verifica o local de registro padrão para `CKeyboardManager` dados. O local do registro padrão for especificado o [classe CWinAppEx](../../mfc/reference/cwinappex-class.md). Os dados devem ser gravados anteriormente com o método [CKeyboardManager::SaveState](#savestate).
+Se o parâmetro *lpszProfileName* for NULL, esse método verificará o local do registro `CKeyboardManager` padrão em busca de dados. O local do registro padrão é especificado pela [classe CWinAppEx](../../mfc/reference/cwinappex-class.md). Os dados devem ser gravados anteriormente com o método [CKeyboardManager:: SaveState](#savestate).
 
-Se você não especificar uma janela padrão, a janela do quadro principal de seu aplicativo será usada.
+Se você não especificar uma janela padrão, a janela do quadro principal do seu aplicativo será usada.
 
 ##  <a name="resetall"></a>  CKeyboardManager::ResetAll
 
-Recarrega as tabelas de chave de atalho do recurso do aplicativo.
+Recarrega as tabelas de teclas de atalho do recurso de aplicativo.
 
 ```
 void ResetAll();
@@ -262,11 +262,11 @@ void ResetAll();
 
 ### <a name="remarks"></a>Comentários
 
-Essa função limpa os atalhos armazenados em do `CKeyboardManager` instância. Ele será, em seguida, recarregue o estado do Gerenciador de teclado do recurso do aplicativo.
+Essa função limpa os atalhos armazenados na `CKeyboardManager` instância. Em seguida, ele recarregará o estado do Gerenciador de teclado do recurso de aplicativo.
 
-##  <a name="savestate"></a>  CKeyboardManager::SaveState
+##  <a name="savestate"></a>CKeyboardManager:: SaveState
 
-Salva o atalho de tabelas de chave no registro do Windows.
+Salva as tabelas de teclas de atalho no registro do Windows.
 
 ```
 BOOL SaveState(
@@ -277,24 +277,24 @@ BOOL SaveState(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszProfileName*<br/>
-[in] O caminho do registro para salvar o `CKeyboardManager` estado.
+no O caminho do registro para salvar `CKeyboardManager` o estado.
 
 *pDefaultFrame*<br/>
-[in] Um ponteiro para uma janela do quadro que se torna a janela padrão.
+no Um ponteiro para uma janela de quadro que se torna a janela padrão.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se o estado do Gerenciador de teclado foi salva com êxito, ou caso contrário, 0.
+Diferente de zero se o estado do Gerenciador de teclado foi salvo com êxito ou 0 caso contrário.
 
 ### <a name="remarks"></a>Comentários
 
-Se o *lpszProfileName* parâmetro for NULL, esse método gravará os `CKeyboardManager` estado para o local padrão especificado pelo [classe CWinAppEx](../../mfc/reference/cwinappex-class.md). Se você especificar um local, você pode carregar os dados posteriormente usando o método [CKeyboardManager::LoadState](#loadstate).
+Se o parâmetro *lpszProfileName* for NULL, esse método gravará o `CKeyboardManager` estado no local padrão especificado pela [classe CWinAppEx](../../mfc/reference/cwinappex-class.md). Se você especificar um local, poderá carregar os dados mais tarde usando o método [CKeyboardManager:: LoadState](#loadstate).
 
 Se você não especificar uma janela padrão, a janela do quadro principal será usada como a janela padrão.
 
 ##  <a name="showallaccelerators"></a>  CKeyboardManager::ShowAllAccelerators
 
-Mostra todas as teclas de atalho associadas aos comandos de menu.
+Mostra todas as teclas de atalho associadas a comandos de menu.
 
 ```
 static void ShowAllAccelerators(
@@ -305,16 +305,16 @@ static void ShowAllAccelerators(
 ### <a name="parameters"></a>Parâmetros
 
 *bShowAll*<br/>
-[in] Se for TRUE, todas as teclas de atalho serão exibidas. Se for FALSE, apenas a primeira chave de atalho será exibida.
+no Se for TRUE, todas as teclas de atalho serão exibidas. Se for FALSE, somente a primeira tecla de atalho será exibida.
 
 *lpszDelimiter*<br/>
-[in] Uma cadeia de caracteres a ser inserido entre as teclas de atalho. Este delimitador não tem nenhum efeito se apenas uma tecla de atalho é exibida.
+no Uma cadeia de caracteres a ser inserida entre as teclas de atalho. Esse delimitador não terá efeito se apenas uma tecla de atalho for exibida.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, se um comando tiver mais de uma tecla de atalho associada a ele, apenas a primeira chave de atalho será mostrada. Essa função permite que você lista as teclas de atalho associadas a todos os comandos.
+Por padrão, se um comando tiver mais de uma tecla de atalho associada a ela, somente a primeira tecla de atalho será mostrada. Essa função permite listar todas as teclas de atalho associadas a todos os comandos.
 
-As teclas de atalho serão listadas ao lado de comando na barra de menus. Se todas as teclas de atalho são exibidas, a cadeia de caracteres fornecido pelo *lpszDelimiter* vai separar as teclas de atalho individuais.
+As teclas de atalho serão listadas ao lado do comando na barra de menus. Se todas as teclas de atalho forem exibidas, a cadeia de caracteres fornecida pelo *lpszDelimiter* irá separar as teclas de atalho individuais.
 
 ##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper
 
@@ -327,15 +327,15 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ### <a name="parameters"></a>Parâmetros
 
 *nChar*<br/>
-[in] O caractere a ser convertido.
+no O caractere a ser convertido.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O caractere que é o registro superior dos parâmetros de entrada.
+O caractere que é o registro superior do parâmetro de entrada.
 
-##  <a name="updateacceltable"></a>  CKeyboardManager::UpdateAccelTable
+##  <a name="updateacceltable"></a>CKeyboardManager::UpdateAccelTable
 
-Atualiza uma tabela de chave de atalho com uma nova tabela de teclas de atalho.
+Atualiza uma tabela de teclas de atalho com uma nova tabela de teclas de atalho.
 
 ```
 BOOL UpdateAccelTable(
@@ -353,27 +353,27 @@ BOOL UpdateAccelTable(
 ### <a name="parameters"></a>Parâmetros
 
 *pTemplate*<br/>
-[in] Um ponteiro para um modelo de documento.
+no Um ponteiro para um modelo de documento.
 
 *lpAccel*<br/>
-[in] Um ponteiro para a nova chave de atalho.
+no Um ponteiro para a nova tecla de atalho.
 
 *nSize*<br/>
-[in] O tamanho da nova tabela de atalho.
+no O tamanho da nova tabela de atalho.
 
 *pDefaultFrame*<br/>
-[in] Um ponteiro para a janela do quadro padrão.
+no Um ponteiro para a janela do quadro padrão.
 
 *hAccelNew*<br/>
-[in] Um identificador para a nova tabela de atalho.
+no Um identificador para a nova tabela de atalho.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se o método for bem-sucedido; Caso contrário, 0.
+Diferente de zero se o método for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Use essa função para substituir a tabela de atalho existente com novas teclas de atalho para vários objetos de janela de quadro. A função recebe um modelo de documento como um parâmetro para obter acesso a todos os objetos de janela de quadro conectado ao modelo de documento determinado.
+Use essa função para substituir a tabela de atalho existente por novas teclas de atalho para vários objetos de janela de quadro. A função recebe um modelo de documento como um parâmetro para obter acesso a todos os objetos de janela de quadro conectados ao modelo de documento específico.
 
 ## <a name="see-also"></a>Consulte também
 

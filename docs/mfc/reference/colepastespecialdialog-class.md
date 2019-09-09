@@ -28,16 +28,16 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 9c31ed6f82f4280206bf233999fac74981636db3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4174369620f14f2d1ac410aa5d756c75097ad0f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224292"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503761"
 ---
 # <a name="colepastespecialdialog-class"></a>Classe COlePasteSpecialDialog
 
-Usado para a caixa de diálogo Colar especial do OLE.
+Usado para a caixa de diálogo de colar especial do OLE.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -57,14 +57,14 @@ class COlePasteSpecialDialog : public COleDialog
 
 |Nome|Descrição|
 |----------|-----------------|
-|[COlePasteSpecialDialog::AddFormat](#addformat)|Adiciona os formatos personalizados à lista de formatos de que seu aplicativo pode ser colada.|
-|[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Adiciona uma nova entrada à lista de formatos com suporte de área de transferência.|
-|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Adiciona CF_METAFILEPICT CF_BITMAP, CF_DIB, e, opcionalmente, CF_LINKSOURCE à lista de formatos de seu aplicativo pode ser colada.|
-|[COlePasteSpecialDialog::CreateItem](#createitem)|Cria o item no documento contêiner usando o formato especificado.|
-|[COlePasteSpecialDialog::DoModal](#domodal)|Exibe a caixa de diálogo Colar especial do OLE.|
-|[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|Informa se desenhar o item como um ícone ou não.|
+|[COlePasteSpecialDialog::AddFormat](#addformat)|Adiciona formatos personalizados à lista de formatos que seu aplicativo pode colar.|
+|[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Adiciona uma nova entrada à lista de formatos de área de transferência com suporte.|
+|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Adiciona CF_BITMAP, CF_DIB, CF_METAFILEPICT e, opcionalmente, CF_LINKSOURCE à lista de formatos que seu aplicativo pode colar.|
+|[COlePasteSpecialDialog:: CreateItem](#createitem)|Cria o item no documento de contêiner usando o formato especificado.|
+|[COlePasteSpecialDialog::DoModal](#domodal)|Exibe a caixa de diálogo de colar especial do OLE.|
+|[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|Informa se o item deve ser desenhado como um ícone ou não.|
 |[COlePasteSpecialDialog::GetIconicMetafile](#geticonicmetafile)|Obtém um identificador para o metarquivo associado ao formulário icônico deste item.|
-|[COlePasteSpecialDialog::GetPasteIndex](#getpasteindex)|Obtém o índice de opções de colagem disponíveis que foi escolhido pelo usuário.|
+|[COlePasteSpecialDialog::GetPasteIndex](#getpasteindex)|Obtém o índice das opções de colagem disponíveis que foram escolhidas pelo usuário.|
 |[COlePasteSpecialDialog::GetSelectionType](#getselectiontype)|Obtém o tipo de seleção escolhida.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
@@ -75,11 +75,11 @@ class COlePasteSpecialDialog : public COleDialog
 
 ## <a name="remarks"></a>Comentários
 
-Criar um objeto da classe `COlePasteSpecialDialog` quando você deseja chamar essa caixa de diálogo. Depois de um `COlePasteSpecialDialog` objeto foi construído, você pode usar o [AddFormat](#addformat) e [AddStandardFormats](#addstandardformats) funções de membro para adicionar os formatos de área de transferência para a caixa de diálogo. Você também pode usar o [m_ps](#m_ps) estrutura para inicializar os valores ou os estados dos controles na caixa de diálogo. O `m_ps` estrutura é do tipo OLEUIPASTESPECIAL.
+Crie um objeto da classe `COlePasteSpecialDialog` quando desejar chamar essa caixa de diálogo. Depois que `COlePasteSpecialDialog` um objeto tiver sido construído, você poderá usar as funções de membro [AddFormat](#addformat) e [AddStandardFormats](#addstandardformats) para adicionar formatos de área de transferência à caixa de diálogo. Você também pode usar a estrutura [m_ps](#m_ps) para inicializar os valores ou os Estados dos controles na caixa de diálogo. A `m_ps` estrutura é do tipo OLEUIPASTESPECIAL.
 
-Para obter mais informações, consulte o [OLEUIPASTESPECIAL](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala) estrutura no SDK do Windows.
+Para obter mais informações, consulte a estrutura [OLEUIPASTESPECIAL](/windows/win32/api/oledlg/ns-oledlg-oleuipastespecialw) no SDK do Windows.
 
-Para obter mais informações sobre caixas de diálogo OLE específico, consulte o artigo [caixas de diálogo em OLE](../../mfc/dialog-boxes-in-ole.md).
+Para obter mais informações sobre caixas de diálogo específicas de OLE, consulte as caixas de diálogo do artigo [em OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -99,11 +99,11 @@ Para obter mais informações sobre caixas de diálogo OLE específico, consulte
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxodlgs.h
+**Cabeçalho:** afxodlgs. h
 
 ##  <a name="addformat"></a>  COlePasteSpecialDialog::AddFormat
 
-Chame essa função para adicionar novos formatos à lista de formatos de que seu aplicativo pode dar suporte em uma operação de colar especial.
+Chame essa função para adicionar novos formatos à lista de formatos aos quais seu aplicativo pode dar suporte em uma operação colar especial.
 
 ```
 void AddFormat(
@@ -123,7 +123,7 @@ void AddFormat(
 ### <a name="parameters"></a>Parâmetros
 
 *fmt*<br/>
-Referência para o tipo de dados a ser adicionado.
+Referência ao tipo de dados a ser adicionado.
 
 *lpszFormat*<br/>
 Cadeia de caracteres que descreve o formato para o usuário.
@@ -132,34 +132,34 @@ Cadeia de caracteres que descreve o formato para o usuário.
 Cadeia de caracteres que descreve o resultado se esse formato for escolhido na caixa de diálogo.
 
 *flags*<br/>
-Os diferentes vinculando e inserindo as opções disponíveis para esse formato. Esse sinalizador é uma combinação bit a bit de um ou mais dos valores diferentes no OLEUIPASTEFLAG tipo enumerado.
+As diferentes opções de vinculação e inserção disponíveis para esse formato. Esse sinalizador é uma combinação de bits de um ou mais valores diferentes no tipo enumerado OLEUIPASTEFLAG.
 
 *cf*<br/>
-O formato da área de transferência para adicionar.
+O formato da área de transferência a ser adicionado.
 
 *tymed*<br/>
-Os tipos de mídia disponível nesse formato. Isso é uma combinação bit a bit de um ou mais dos valores a TYMED tipo enumerado.
+Os tipos de mídia disponíveis neste formato. Trata-se de uma combinação de bits de um ou mais valores no tipo enumerado TYMED.
 
 *nFormatID*<br/>
-A ID da cadeia de caracteres que identifica esse formato. O formato dessa cadeia de caracteres é duas cadeias de caracteres separadas separadas por um caractere '\n'. A primeira cadeia de caracteres é o mesmo que seria passado a *lpstrFormat* parâmetro e o segundo é o mesmo que o *lpstrResult* parâmetro.
+A ID da cadeia de caracteres que identifica esse formato. O formato dessa cadeia de caracteres é duas cadeias de caracteres separadas separadas por um caractere ' \n '. A primeira cadeia de caracteres é a mesma que seria passada no parâmetro *lpstrFormat* e a segunda é a mesma do parâmetro *lpstrResult* .
 
 *bEnableIcon*<br/>
-Sinalizador que determina se a caixa de seleção Exibir como ícone está habilitada quando esse formato for escolhido na caixa de listagem.
+Sinalizador que determina se a caixa de seleção Exibir como ícone é habilitada quando esse formato é escolhido na caixa de listagem.
 
 *bLink*<br/>
-Sinalizador que determina se o botão de opção de colar Link está habilitado quando esse formato for escolhido na caixa de listagem.
+Sinalizador que determina se o botão de opção Colar vínculo está habilitado quando esse formato é escolhido na caixa de listagem.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função pode ser chamada para adicionar os formatos padrão como CF_TEXT ou CF_TIFF ou formatos personalizados que seu aplicativo foi registrado com o sistema. Para obter mais informações sobre a colagem de objetos de dados em seu aplicativo, consulte o artigo [objetos de dados e fontes de dados: Manipulação](../../mfc/data-objects-and-data-sources-manipulation.md).
+Essa função pode ser chamada para adicionar formatos padrão, como CF_TEXT ou CF_TIFF, ou formatos personalizados que seu aplicativo registrou com o sistema. Para obter mais informações sobre como colar objetos de dados em seu aplicativo, consulte [o artigo objetos de dados e fontes de dados: Manipulação](../../mfc/data-objects-and-data-sources-manipulation.md).
 
-Para obter mais informações, consulte o [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) tipo de enumeração e a [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) estrutura no SDK do Windows.
+Para obter mais informações, consulte o tipo de enumeração [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) e a estrutura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) no SDK do Windows.
 
-Para obter mais informações, consulte o [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) enumerados tipo no SDK do Windows.
+Para obter mais informações, consulte o tipo enumerado [OLEUIPASTEFLAG](/windows/win32/api/oledlg/ne-oledlg-oleuipasteflag) no SDK do Windows.
 
 ##  <a name="addlinkentry"></a>  COlePasteSpecialDialog::AddLinkEntry
 
-Adiciona uma nova entrada à lista de formatos com suporte de área de transferência.
+Adiciona uma nova entrada à lista de formatos de área de transferência com suporte.
 
 ```
 OLEUIPASTEFLAG AddLinkEntry(UINT cf);
@@ -168,15 +168,15 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ### <a name="parameters"></a>Parâmetros
 
 *cf*<br/>
-O formato da área de transferência para adicionar.
+O formato da área de transferência a ser adicionado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Uma [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) estrutura que contém as informações para a nova entrada de link.
+Uma estrutura [OLEUIPASTEFLAG](/windows/win32/api/oledlg/ne-oledlg-oleuipasteflag) que contém as informações para a nova entrada de link.
 
-##  <a name="addstandardformats"></a>  COlePasteSpecialDialog::AddStandardFormats
+##  <a name="addstandardformats"></a>COlePasteSpecialDialog::AddStandardFormats
 
-Chame essa função para adicionar os seguintes formatos de área de transferência para a lista de formatos que pode dar suporte a seu aplicativo em uma operação de colar especial:
+Chame essa função para adicionar os seguintes formatos de área de transferência à lista de formatos que seu aplicativo pode dar suporte em uma operação colar especial:
 
 ```
 void AddStandardFormats(BOOL bEnableLink = TRUE);
@@ -185,7 +185,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
 ### <a name="parameters"></a>Parâmetros
 
 *bEnableLink*<br/>
-Sinalizador que determina se deve adicionar CF_LINKSOURCE à lista de formatos de seu aplicativo pode colar.
+Sinalizador que determina se o CF_LINKSOURCE deve ser adicionado à lista de formatos que seu aplicativo pode colar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -197,9 +197,9 @@ Sinalizador que determina se deve adicionar CF_LINKSOURCE à lista de formatos d
 
 - **"Objeto incorporado"**
 
-- (opcionalmente) **"Vincular o código-fonte"**
+- Opcionalmente **"Origem do link"**
 
-Esses formatos são usados para dar suporte à incorporação e vinculação.
+Esses formatos são usados para dar suporte à inserção e vinculação.
 
 ##  <a name="colepastespecialdialog"></a>  COlePasteSpecialDialog::COlePasteSpecialDialog
 
@@ -215,31 +215,31 @@ COlePasteSpecialDialog(
 ### <a name="parameters"></a>Parâmetros
 
 *dwFlags*<br/>
-Sinalizador de criação, contém qualquer número de combinados usando o operador OR bit a bit de sinalizadores a seguir:
+Sinalizador de criação, contém qualquer número dos seguintes sinalizadores combinados usando o operador OR bit-a-OR:
 
-- PSF_SELECTPASTE Especifica que o botão de opção de colar será marcada inicialmente quando a caixa de diálogo é chamada. Não pode ser usado em combinação com PSF_SELECTPASTELINK. Esse é o padrão.
+- PSF_SELECTPASTE especifica que o botão de opção colar será verificado inicialmente quando a caixa de diálogo for chamada. Não pode ser usado em combinação com PSF_SELECTPASTELINK. Esse é o padrão.
 
-- PSF_SELECTPASTELINK Especifica que o botão de opção de colar vínculo será marcada inicialmente quando a caixa de diálogo é chamada. Não pode ser usado em combinação com PSF_SELECTPASTE.
+- PSF_SELECTPASTELINK especifica que o botão de opção Colar vínculo será verificado inicialmente quando a caixa de diálogo for chamada. Não pode ser usado em combinação com PSF_SELECTPASTE.
 
-- PSF_CHECKDISPLAYASICON Especifica que a caixa de seleção Exibir como ícone será marcada inicialmente quando a caixa de diálogo é chamada.
+- PSF_CHECKDISPLAYASICON Especifica que a caixa de seleção Exibir como ícone será marcada inicialmente quando a caixa de diálogo for chamada.
 
-- PSF_SHOWHELP Especifica que o botão de Ajuda será exibido quando a caixa de diálogo é chamada.
+- PSF_SHOWHELP especifica que o botão ajuda será exibido quando a caixa de diálogo for chamada.
 
 *pDataObject*<br/>
-Aponta para o [COleDataObject](../../mfc/reference/coledataobject-class.md) para colá-lo. Se esse valor for NULL, ele obtém o `COleDataObject` da área de transferência.
+Aponta para o [COleDataObject](../../mfc/reference/coledataobject-class.md) para colar. Se esse valor for nulo, ele obterá `COleDataObject` o da área de transferência.
 
 *pParentWnd*<br/>
-Aponta para o objeto de janela pai ou proprietária (do tipo `CWnd`) ao qual pertence o objeto de caixa de diálogo. Se for NULL, a janela pai da caixa de diálogo é definida para a janela principal do aplicativo.
+Aponta para o objeto de janela pai ou proprietário (do `CWnd`tipo) ao qual o objeto de caixa de diálogo pertence. Se for NULL, a janela pai da caixa de diálogo será definida como a janela principal do aplicativo.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função só constrói um `COlePasteSpecialDialog` objeto. Para exibir a caixa de diálogo, chame o [DoModal](#domodal) função.
+Essa função constrói apenas um `COlePasteSpecialDialog` objeto. Para exibir a caixa de diálogo, chame a função [DoModal](#domodal) .
 
-Para obter mais informações, consulte o [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) enumerados tipo no SDK do Windows.
+Para obter mais informações, consulte o tipo enumerado [OLEUIPASTEFLAG](/windows/win32/api/oledlg/ne-oledlg-oleuipasteflag) no SDK do Windows.
 
-##  <a name="createitem"></a>  COlePasteSpecialDialog::CreateItem
+##  <a name="createitem"></a>COlePasteSpecialDialog:: CreateItem
 
-Cria o novo item que foi selecionado na caixa de diálogo Colar especial.
+Cria o novo item que foi escolhido na caixa de diálogo colar especial.
 
 ```
 BOOL CreateItem(COleClientItem* pNewItem);
@@ -248,19 +248,19 @@ BOOL CreateItem(COleClientItem* pNewItem);
 ### <a name="parameters"></a>Parâmetros
 
 *pNewItem*<br/>
-Aponta para um `COleClientItem` instância. Não pode ser NULL.
+Aponta para uma `COleClientItem` instância. Não pode ser NULL.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se o item foi criado com êxito; Caso contrário, 0.
+Diferente de zero se o item foi criado com êxito; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função deve ser chamada apenas depois [DoModal](#domodal) retorna IDOK.
+Essa função só deve ser chamada depois que [DoModal](#domodal) retornar IDOK.
 
 ##  <a name="domodal"></a>  COlePasteSpecialDialog::DoModal
 
-Exibe a caixa de diálogo Colar especial do OLE.
+Exibe a caixa de diálogo de colar especial do OLE.
 
 ```
 virtual INT_PTR DoModal();
@@ -268,23 +268,23 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Status de conclusão para a caixa de diálogo. Um dos seguintes valores:
+Status de conclusão da caixa de diálogo. Um dos seguintes valores:
 
 - IDOK se a caixa de diálogo foi exibida com êxito.
 
 - IDCANCEL se o usuário cancelou a caixa de diálogo.
 
-- IDABORT se ocorreu um erro. Se IDABORT for retornado, chame o `COleDialog::GetLastError` a função de membro para obter mais informações sobre o tipo de erro que ocorreu. Para obter uma lista de possíveis erros, consulte o [OleUIPasteSpecial](/windows/desktop/api/oledlg/nf-oledlg-oleuipastespeciala) função no SDK do Windows.
+- IDABORT se ocorreu um erro. Se IDABORT for retornado, chame a `COleDialog::GetLastError` função de membro para obter mais informações sobre o tipo de erro ocorrido. Para obter uma lista de possíveis erros, consulte a função [OLEUIPASTESPECIAL](/windows/win32/api/oledlg/nf-oledlg-oleuipastespecialw) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
-Se você quiser inicializar os vários controles de caixa de diálogo definindo membros do [m_ps](#m_ps) estrutura, você deve fazer isso antes de chamar `DoModal`, mas depois que o objeto de caixa de diálogo é construído.
+Se você quiser inicializar os vários controles da caixa de diálogo definindo membros da estrutura [m_ps](#m_ps) , faça isso antes de chamar `DoModal`, mas depois que o objeto da caixa de diálogo for construído.
 
-Se `DoModal` retorna IDOK, você pode chamar outro membro funções para recuperar as configurações ou a entrada de informações do usuário na caixa de diálogo.
+Se `DoModal` retornar IDOK, você poderá chamar outras funções de membro para recuperar as configurações ou as informações inseridas pelo usuário na caixa de diálogo.
 
 ##  <a name="getdrawaspect"></a>  COlePasteSpecialDialog::GetDrawAspect
 
-Determina se o usuário optar por exibir o item selecionado como um ícone.
+Determina se o usuário optou por exibir o item selecionado como um ícone.
 
 ```
 DVASPECT GetDrawAspect() const;
@@ -294,15 +294,15 @@ DVASPECT GetDrawAspect() const;
 
 O método necessário para processar o objeto.
 
-- DVASPECT_CONTENT retornado se a caixa de seleção Exibir como ícone não foi verificada quando a caixa de diálogo foi ignorada.
+- DVASPECT_CONTENT retornado se a caixa de seleção Exibir como ícone não foi marcada quando a caixa de diálogo foi ignorada.
 
-- DVASPECT_ICON retornado se a caixa de seleção Exibir como ícone foi verificada quando a caixa de diálogo foi fechada.
+- DVASPECT_ICON retornado se a caixa de seleção Exibir como ícone foi marcada quando a caixa de diálogo foi ignorada.
 
 ### <a name="remarks"></a>Comentários
 
-Apenas chame essa função após [DoModal](#domodal) retorna IDOK.
+Só chame essa função depois de [DoModal](#domodal) retornar IDOK.
 
-Para obter mais informações sobre o aspecto de desenho, consulte o [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) estrutura no SDK do Windows.
+Para obter mais informações sobre o aspecto do desenho, consulte a estrutura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) no SDK do Windows.
 
 ##  <a name="geticonicmetafile"></a>  COlePasteSpecialDialog::GetIconicMetafile
 
@@ -314,11 +314,11 @@ HGLOBAL GetIconicMetafile() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O identificador para o metarquivo que contém o aspecto icônico do item selecionado, se a caixa de seleção Exibir como ícone foi selecionada quando a caixa de diálogo foi ignorada, escolhendo **Okey**; caso contrário, NULL.
+O identificador para o metarquivo que contém o aspecto de icônico do item selecionado, se a caixa de seleção Exibir como ícone foi selecionada quando a caixa de diálogo foi descartada, escolhendo **OK**; caso contrário, NULL.
 
 ##  <a name="getpasteindex"></a>  COlePasteSpecialDialog::GetPasteIndex
 
-Obtém o valor de índice associado a entrada do usuário selecionado.
+Obtém o valor de índice associado à entrada selecionada pelo usuário.
 
 ```
 int GetPasteIndex() const;
@@ -326,15 +326,15 @@ int GetPasteIndex() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice na matriz de `OLEUIPASTEENTRY` estruturas que foi selecionado pelo usuário. O formato que corresponde ao índice selecionado deve ser usado ao executar a operação de colagem.
+O índice na matriz de `OLEUIPASTEENTRY` estruturas que foi selecionada pelo usuário. O formato que corresponde ao índice selecionado deve ser usado ao executar a operação de colagem.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte o [OLEUIPASTEENTRY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipasteentrya) estrutura no SDK do Windows.
+Para obter mais informações, consulte a estrutura [OLEUIPASTEENTRY](/windows/win32/api/oledlg/ns-oledlg-oleuipasteentryw) no SDK do Windows.
 
 ##  <a name="getselectiontype"></a>  COlePasteSpecialDialog::GetSelectionType
 
-Determina o tipo de seleção feito de usuário.
+Determina o tipo de seleção que o usuário fez.
 
 ```
 UINT GetSelectionType() const;
@@ -346,7 +346,7 @@ Retorna o tipo de seleção feita.
 
 ### <a name="remarks"></a>Comentários
 
-Os valores de tipo de retorno são especificados pela `Selection` tipo de enumeração declarado no `COlePasteSpecialDialog` classe.
+Os valores de tipo de retorno são especificados `Selection` pelo tipo de enumeração declarado `COlePasteSpecialDialog` na classe.
 
 ```
 enum Selection {
@@ -357,19 +357,19 @@ enum Selection {
     };
 ```
 
-Execute desccriptions breves destes valores:
+A desccriptions resumida desses valores é a seguinte:
 
-- `COlePasteSpecialDialog::pasteLink` O botão de opção de colar vínculo foi verificado e o formato selecionado foi um formato OLE padrão.
+- `COlePasteSpecialDialog::pasteLink`O botão de opção Colar vínculo foi marcado e o formato escolhido era um formato OLE padrão.
 
-- `COlePasteSpecialDialog::pasteNormal` O botão de opção de colar foi verificado e o formato selecionado foi um formato OLE padrão.
+- `COlePasteSpecialDialog::pasteNormal`O botão de opção colar foi marcado e o formato escolhido era um formato OLE padrão.
 
-- `COlePasteSpecialDialog::pasteOther` O formato selecionado não é um formato OLE padrão.
+- `COlePasteSpecialDialog::pasteOther`O formato selecionado não é um formato OLE padrão.
 
-- `COlePasteSpecialDialog::pasteStatic` O formato escolhido era um metarquivo.
+- `COlePasteSpecialDialog::pasteStatic`O formato escolhido era um metarquivo.
 
 ##  <a name="m_ps"></a>  COlePasteSpecialDialog::m_ps
 
-Estrutura do tipo OLEUIPASTESPECIAL usado para controlar o comportamento da caixa de diálogo Colar especial.
+Estrutura do tipo OLEUIPASTESPECIAL usada para controlar o comportamento da caixa de diálogo colar especial.
 
 ```
 OLEUIPASTESPECIAL m_ps;
@@ -379,11 +379,11 @@ OLEUIPASTESPECIAL m_ps;
 
 Os membros dessa estrutura podem ser modificados diretamente ou por meio de funções de membro.
 
-Para obter mais informações, consulte o [OLEUIPASTESPECIAL](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala) estrutura no SDK do Windows.
+Para obter mais informações, consulte a estrutura [OLEUIPASTESPECIAL](/windows/win32/api/oledlg/ns-oledlg-oleuipastespecialw) no SDK do Windows.
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo de OCLIENT do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe COleDialog](../../mfc/reference/coledialog-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleDialog](../../mfc/reference/coledialog-class.md)

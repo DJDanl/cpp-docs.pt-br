@@ -7,18 +7,18 @@ helpviewer_keywords:
 - threading [MFC], hot keys in CHotKeyCtrl
 - access keys [MFC], hot keys
 ms.assetid: b6021274-1498-483f-bcbf-ba5723547cc8
-ms.openlocfilehash: a54aa878b0160132157879127f8335c951e91785
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49bac6ac357924c26f131bbd8e1092cd74514167
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306360"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511143"
 ---
 # <a name="thread-specific-hot-keys"></a>Teclas de acesso específicas de thread
 
-Um aplicativo define uma tecla de acesso específicas de thread ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) usando o Windows `RegisterHotKey` função. Quando o usuário pressiona uma tecla de acesso específicas de thread, o Windows lança um [WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey) mensagem para o início da fila de mensagens do thread específico. A mensagem WM_HOTKEY contém o código de tecla virtual, o estado de deslocamento e a ID definida pelo usuário de que a tecla de acesso específica que foi pressionada. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h. Para obter mais informações sobre esse método, consulte [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey).
+Um aplicativo define uma tecla de acesso específica ao thread ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) usando a função `RegisterHotKey` do Windows. Quando o usuário pressiona uma tecla de acesso específica a um thread, o Windows posta uma mensagem [WM_HOTKEY](/windows/win32/inputdev/wm-hotkey) no início de uma fila de mensagens de um thread específico. A mensagem WM_HOTKEY contém o código de chave virtual, o estado de deslocamento e a ID definida pelo usuário da tecla de acesso específica que foi pressionada. Para obter uma lista de códigos de chave virtual padrão, consulte WinUser. h. Para obter mais informações sobre esse método, consulte [RegisterHotKey](/windows/win32/api/winuser/nf-winuser-registerhotkey).
 
-Observe que o estado de deslocamento sinalizadores usado na chamada para `RegisterHotKey` não são iguais aos retornados pela [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) a função de membro; você terá que converter esses sinalizadores antes de chamar `RegisterHotKey`.
+Observe que os sinalizadores de estado de mudança usados na chamada `RegisterHotKey` para não são iguais aos retornados pela função de [membro](../mfc/reference/chotkeyctrl-class.md#gethotkey) ; você precisará converter esses sinalizadores antes de `RegisterHotKey`chamar.
 
 ## <a name="see-also"></a>Consulte também
 

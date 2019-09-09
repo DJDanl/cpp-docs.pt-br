@@ -63,7 +63,7 @@ Todos os C++ contêineres de biblioteca padrão têm um parâmetro de modelo que
 
 Por exemplo, um objeto alocador pode alocar armazenamento em um heap privado ou na memória compartilhada ou pode otimizar para tamanhos de objeto grandes ou pequenos. Ele também pode especificar, por meio das definições de tipo que fornece, que os elementos sejam acessados por meio de objetos acessadores especiais que gerenciam a memória compartilhada ou executam coleta de lixo automática. Portanto, uma classe que aloca armazenamento usando um objeto alocador deve usar esses tipos para declarar um ponteiro e referenciar objetos, como os contêineres na Biblioteca Padrão do C++.
 
-<strong>(Somente C++ 98/03)</strong> Ao derivar da classe de alocador, você precisa fornecer [](#rebind) um reassociar struct, `_Other` cujo typedef faz referência à sua classe derivada recentemente.
+<strong>(Somente C++ 98/03)</strong> Ao derivar da classe de alocador, você precisa fornecer um [reassociar](#rebind) struct, `_Other` cujo typedef faz referência à sua classe derivada recentemente.
 
 Portanto, um alocador define os seguintes tipos:
 

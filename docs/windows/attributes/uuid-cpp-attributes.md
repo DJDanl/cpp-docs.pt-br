@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: eae79f9a4d0af6375834c0792c4004f52a16e07e
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: d644f59ac92bf4e39f191c291dd4fef626411c3d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448932"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514942"
 ---
 # <a name="uuid-c-attributes"></a>uuid (atributos C++)
 
@@ -28,31 +28,31 @@ Especifica a ID exclusiva para uma classe ou interface.
 ### <a name="parameters"></a>Parâmetros
 
 *uuid*<br/>
-Um identificador exclusivo, de 128 bits.
+Um identificador exclusivo de 128 bits.
 
 ## <a name="remarks"></a>Comentários
 
-Se a definição de uma interface ou classe não especifica o **uuid** C++ atributo e, em seguida, a Microsoft C++ compilador fornecerá um. Quando você especifica um **uuid**, você deve incluir as aspas.
+Se a definição de uma interface ou classe não especificar o atributo **UUID** C++ , o compilador da Microsoft C++ fornecerá um. Ao especificar um **UUID**, você deve incluir as aspas.
 
-Se você não especificar **uuid**, em seguida, o compilador gerará o mesmo GUID para interfaces ou classes com o mesmo nome em projetos de atributo diferente em um computador.
+Se você não especificar o **UUID**, o compilador irá gerar o mesmo GUID para interfaces ou classes com o mesmo nome em projetos de atributos diferentes em um computador.
 
-Você pode usar Uuidgen.exe ou Guidgen.exe para gerar seus próprio IDs exclusivas. (Para executar qualquer uma dessas ferramentas, clique em **inicie** e clique em **executar** no menu. Em seguida, insira o nome da ferramenta necessária.)
+Você pode usar Uuidgen. exe ou Guidgen. exe para gerar suas próprias IDs exclusivas. (Para executar uma dessas ferramentas, clique em **Iniciar** e em **executar** no menu. Em seguida, digite o nome da ferramenta necessária.)
 
-Quando usado em um projeto que não usa ATL também, especificando o **uuid** atributo é o mesmo que especificar o [uuid](../../cpp/uuid-cpp.md) **declspec** modificador. Para recuperar o **uuid** de uma classe, você pode usar [uuidof](../../cpp/uuidof-operator.md)
+Quando usado em um projeto que não usa a ATL também, especificar o atributo **UUID** é o mesmo que especificar o modificador **_ overdeclspec** do [UUID](../../cpp/uuid-cpp.md) . Para recuperar o **UUID** de uma classe, você pode usar [__uuidof](../../cpp/uuidof-operator.md)
 
 ## <a name="example"></a>Exemplo
 
-Consulte a [associável](bindable.md) exemplo para uso do exemplo **uuid**.
+Consulte o exemplo [ligável](bindable.md) para obter um exemplo de uso de **UUID**.
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|**class**, **struct**, **interface**, **union**, **enum**|
+|**Aplica-se a**|**Class**, **struct**, **interface**, **Union**, **enum**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
@@ -63,4 +63,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 [Atributos de interface](interface-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[uuid](/windows/desktop/Midl/uuid)
+[uuid](/windows/win32/Midl/uuid)

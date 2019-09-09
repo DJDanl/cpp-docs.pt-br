@@ -1,5 +1,5 @@
 ---
-title: Editor de informações de versão (C++)
+title: Editor de informações deC++versão ()
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.version.F1
@@ -23,24 +23,24 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: a17539d0a9fb94c440d65275e9d032182088ae6e
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: e68e1480d2cd9a8d8a4d862252e6eb4384a5cd68
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504482"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513649"
 ---
-# <a name="version-information-editor-c"></a>Editor de informações de versão (C++)
+# <a name="version-information-editor-c"></a>Editor de informações deC++versão ()
 
-Informações de versão consistem da empresa e identificação de produto, um número de versão do produto e a notificação de direitos autorais e marcas. Com o **Editor de informações de versão**, criar e manter esses dados, que são armazenados no recurso de informações da versão. O recurso de informações de versão não é necessário por um aplicativo, mas é um local útil para coletar informações que identificam o aplicativo. Informações de versão também são usadas por APIs de configuração.
-
-> [!NOTE]
-> O padrão do Windows é ter apenas uma versão recurso, chamado VS_VERSION_INFO.
-
-Um recurso de informações de versão tem um bloco superior e um ou mais blocos inferiores: um único bloco de informações fixa na parte superior e um ou mais blocos de informações de versão na parte inferior (para outros idiomas e/ou conjuntos de caracteres). O bloco superior tem caixas numéricas editáveis e selecionável nas listas suspensas. Os blocos menores têm apenas as caixas de texto editável.
+As informações de versão consistem em identificação da empresa e do produto, um número de versão do produto e uma notificação de copyright e marca registrada. Com o **Editor de informações de versão**, você cria e mantém esses dados, que são armazenados no recurso de informações de versão. O recurso de informações de versão não é exigido por um aplicativo, mas é um local útil para coletar informações que identificam o aplicativo. As informações de versão também são usadas pelas APIs de instalação.
 
 > [!NOTE]
-> Ao usar o **Editor de informações de versão**, em muitos casos você pode clique com botão direito para exibir um menu de atalho de comandos específicos ao recurso. Por exemplo, se você selecionar ao mesmo tempo, que aponta para uma entrada de cabeçalho do bloco, o menu de atalho mostra a **novas informações de versão de bloco** e **excluir informações de versão de bloco** comandos.
+> O padrão Windows é ter apenas um recurso de versão, chamado VS_VERSION_INFO.
+
+Um recurso de informações de versão tem um bloco superior e um ou mais blocos inferiores: um único bloco de informações fixas na parte superior e um ou mais blocos de informações de versão na parte inferior (para outros idiomas e/ou conjuntos de caracteres). O bloco Top tem caixas numéricas editáveis e listas suspensas selecionáveis. Os blocos inferiores têm apenas caixas de texto editáveis.
+
+> [!NOTE]
+> Ao usar o **Editor de informações de versão**, em muitas instâncias, você pode clicar com o botão direito do mouse para exibir um menu de atalho de comandos específicos do recurso. Por exemplo, se você selecionar enquanto aponta para uma entrada de cabeçalho de bloco, o menu de atalho mostrará as **novas informações de bloco de versão** e **excluirá** os comandos de informações de bloco de versão.
 
 ## <a name="how-to"></a>Como
 
@@ -48,37 +48,37 @@ O **Editor de informações de versão** permite que você:
 
 ### <a name="to-edit-a-string-in-a-version-information-resource"></a>Para editar uma cadeia de caracteres em um recurso de informações de versão
 
-Selecione o item de uma vez para escolha, em seguida, novamente para começar a editá-lo. Fazer alterações diretamente na **informações de versão** tabela ou o [janela propriedades](/visualstudio/ide/reference/properties-window). As alterações feitas serão refletidas em ambos os locais.
+Selecione o item uma vez para selecioná-lo e, novamente, para começar a editá-lo. Faça alterações diretamente na tabela de **informações de versão** ou no [janela Propriedades](/visualstudio/ide/reference/properties-window). As alterações feitas serão refletidas em ambos os locais.
 
-Ao editar o `FILEFLAGS` principais na **Editor de informações de versão**, observe que não é possível definir a **depurar**, **compilação particular**, ou **compilação especial**  propriedades de **propriedades** janela para arquivos. RC:
+Ao editar a `FILEFLAGS` chave no **Editor de informações de versão**, observe que você não pode definir as propriedades de **depuração**, **compilação particular**ou **compilação especial** na janela **Propriedades** para arquivos. rc:
 
-   - O **Editor de informações de versão** define o **depurar** propriedade com um `#ifdef` script de recurso, com base no `_DEBUG` sinalizador de compilação.
+   - O **Editor de informações de versão** define a propriedade de `#ifdef` **depuração** com um no script de recurso, `_DEBUG` com base no sinalizador de compilação.
 
-  - Se o `Private Build` chave tem um **valor** definida **informações de versão** tabela correspondente **compilação particular** propriedade no **propriedades**  janela para o `FILEFLAGS` chave será **verdadeiro**. Se **valor** estiver vazio, a propriedade será **falso**. Da mesma forma, o **compilação especial** chave na **informações de versão** tabela está vinculada ao **Build especial** propriedade para o `FILEFLAGS` chave.
+  - Se a `Private Build` chave tiver um **valor** definido na tabela de **informações de versão** , a propriedade de **compilação particular** correspondente na janela **Propriedades** da `FILEFLAGS` chave será **true**. Se o **valor** estiver vazio, a propriedade será **false**. Da mesma forma, a chave de **compilação especial** na tabela de **informações de versão** está vinculada à propriedade `FILEFLAGS` de **compilação especial** para a chave.
 
-Você pode classificar a sequência de informações do bloco de cadeia de caracteres, selecionando o **chave** ou o **valor** títulos de coluna. Esses títulos de reorganizar automaticamente as informações na sequência selecionada.
+Você pode classificar a sequência de informações do bloco de cadeia de caracteres selecionando a **chave** ou os títulos de coluna de **valor** . Esses cabeçalhos reorganizam automaticamente as informações na sequência selecionada.
 
 ### <a name="to-add-version-information-for-another-language-new-version-info-block"></a>Para adicionar informações de versão para outro idioma (novo bloco de informações de versão)
 
-1. Abrir um recurso de informações de versão clicando duas vezes no [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources).
+1. Abra um recurso de informações de versão clicando duas vezes nele no [modo de exibição de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Clique dentro da tabela de informações de versão e escolha **novo bloco de informações de versão**.
+1. Clique com o botão direito do mouse na tabela informações de versão e escolha **novo bloco de informações de versão**.
 
-   Este comando adiciona um bloco de informações adicionais para o recurso de informações de versão atual e abre suas propriedades correspondentes na [janela de propriedades](/visualstudio/ide/reference/properties-window).
+   Esse comando adiciona um bloco de informações adicional ao recurso de informações de versão atual e abre suas propriedades correspondentes no [janela Propriedades](/visualstudio/ide/reference/properties-window).
 
-1. No **propriedades** janela, escolha o idioma apropriado e do conjunto para o novo bloco de caracteres.
+1. Na janela **Propriedades** , escolha o idioma e o conjunto de caracteres apropriados para o novo bloco.
 
 ### <a name="to-delete-a-version-information-block"></a>Para excluir um bloco de informações de versão
 
-1. Abra o recurso de informações de versão clicando duas vezes em seu ícone no [exibição de recurso](how-to-create-a-resource-script-file.md#create-resources).
+1. Abra o recurso de informações de versão clicando duas vezes em seu ícone no [modo de exibição de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Clique com botão direito do cabeçalho de bloco que deseja excluir e escolha **Excluir Bloco de informações de versão**.
+1. Clique com o botão direito do mouse no cabeçalho de bloco que você deseja excluir e escolha **excluir bloco de informações de versão**.
 
-   Esse comando exclui o cabeçalho selecionado e deixa o restante das informações de versão intacta. Você não pode desfazer a ação.
+   Esse comando exclui o cabeçalho selecionado e deixa o restante das informações de versão intactas. Não é possível desfazer a ação.
 
-### <a name="to-access-version-information-from-within-your-program"></a>Para acessar informações de versão do seu programa
+### <a name="to-access-version-information-from-within-your-program"></a>Para acessar informações de versão de dentro de seu programa
 
-Se você quiser acessar as informações de versão do seu programa, use o [GetFileVersionInfo](/windows/desktop/api/winver/nf-winver-getfileversioninfoa) função e o [VerQueryValue](/windows/desktop/api/winver/nf-winver-verqueryvaluea) função.
+Se você quiser acessar as informações de versão de dentro de seu programa, use a função [GetFileVersionInfo](/windows/win32/api/winver/nf-winver-getfileversioninfow) e a função [VerQueryValue](/windows/win32/api/winver/nf-winver-verqueryvaluew) .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -87,5 +87,5 @@ Win32
 ## <a name="see-also"></a>Consulte também
 
 [Editores de recursos](../windows/resource-editors.md)<br/>
-[Menus e outros recursos](/windows/desktop/menurc/resources)<br/>
-[Informações de versão (Windows)](/windows/desktop/menurc/version-information)
+[Menus e outros recursos](/windows/win32/menurc/resources)<br/>
+[Informações de versão (Windows)](/windows/win32/menurc/version-information)

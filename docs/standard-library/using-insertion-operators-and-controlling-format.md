@@ -207,7 +207,7 @@ Os delimitadores estão presentes apenas no objeto de fluxo; Eles não estão pr
 
 O comportamento de espaço em branco das operações de inserção e extração é independe de como uma cadeia de caracteres é representada no código, assim, o operador entre aspas será útil mesmo se a cadeia de caracteres de entrada for uma cadeia de caracteres bruta, literal ou regular. A cadeia de caracteres de entrada, seja qual for seu formato, pode ter aspas incorporadas, quebras de linha, guias e assim por diante e todos esses serão preservados pelo manipulador quoted().
 
-Para obter mais informações e exemplos de código completo [](../standard-library/iomanip-functions.md#quoted), consulte quoted.
+Para obter mais informações e exemplos de código completo, consulte [quoted](../standard-library/iomanip-functions.md#quoted).
 
 ## <a name="see-also"></a>Consulte também
 

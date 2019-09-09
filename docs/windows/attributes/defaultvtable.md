@@ -1,21 +1,21 @@
 ---
-title: defaultvtable (atributo de COM do C++)
+title: defaultvtable (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvtable
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 813fb9dd4edf2f6e522e7310ba1e8bfcd55ed2b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ab37af4deab516dc01f55f986811668737cf18c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62147945"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501641"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
-Define uma interface como a interface de vtable padrão para um objeto COM.
+Define uma interface como a interface vtable padrão para um objeto COM.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,15 +26,15 @@ Define uma interface como a interface de vtable padrão para um objeto COM.
 ### <a name="parameters"></a>Parâmetros
 
 *interface*<br/>
-A interface designada que você deseja ter vtable padrão para o objeto COM.
+A interface designada que você deseja ter a vtable padrão para o objeto COM.
 
 ## <a name="remarks"></a>Comentários
 
-O **defaultvtable** atributo C++ tem a mesma funcionalidade que o [defaultvtable](/windows/desktop/Midl/defaultvtable) atributo MIDL.
+O atributo **defaultvtable** C++ tem a mesma funcionalidade que o atributo MIDL de [defaultvtable](/windows/win32/Midl/defaultvtable) .
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra os atributos em uma classe que usam **defaultvtable** para especificar uma interface padrão:
+O código a seguir mostra atributos em uma classe que usa **defaultvtable** para especificar uma interface padrão:
 
 ```cpp
 // cpp_attr_ref_defaultvtable.cpp
@@ -64,13 +64,13 @@ class CMyC3 : public IMyI3 {};
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|**class**, **struct**|
+|**Aplica-se a**|**classe**, **struct**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|**coclass**|
+|**Atributos necessários**|**coclass**|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).

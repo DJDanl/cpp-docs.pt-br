@@ -21,7 +21,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457649"
 ---
-# <a name="numget-class"></a>Classe num_get
+# <a name="num_get-class"></a>Classe num_get
 
 Uma classe de modelo que descreve um objeto que pode servir como uma faceta de localidade para controlar conversões de sequências do tipo `CharType` em valores numéricos.
 
@@ -199,7 +199,7 @@ virtual iter_type do_get(
     long& val) const;
 ```
 
-faz a correspondência de elementos  sequenciais começando no `[first, last)` primeiro na sequência até que ele reconheceu um campo de entrada de inteiro completo e não vazio. Se for bem-sucedido, ele converterá esse campo em seu valor equivalente como de tipo **Long**e armazenará o resultado em *Val*. Ele retorna um iterador que designa o primeiro elemento além do campo de entrada numérico. Caso contrário, a função não armazena  nada em Val `ios_base::failbit` e `state`define em. Ele retorna um iterador que designa o primeiro elemento além de qualquer prefixo de um campo de entrada de inteiro válido. Em ambos os casos, se o valor retornado for igual a `last`, a função definirá `ios_base::eofbit` em `state`.
+faz a correspondência de elementos sequenciais começando no `[first, last)` primeiro na sequência até que ele reconheceu um campo de entrada de inteiro completo e não vazio. Se for bem-sucedido, ele converterá esse campo em seu valor equivalente como de tipo **Long**e armazenará o resultado em *Val*. Ele retorna um iterador que designa o primeiro elemento além do campo de entrada numérico. Caso contrário, a função não armazena nada em Val `ios_base::failbit` e `state`define em. Ele retorna um iterador que designa o primeiro elemento além de qualquer prefixo de um campo de entrada de inteiro válido. Em ambos os casos, se o valor retornado for igual a `last`, a função definirá `ios_base::eofbit` em `state`.
 
 O campo de entrada de inteiro é convertido pelas mesmas regras usadas pelas funções de verificação para corresponder e converter uma série de elementos **Char** de um arquivo. (Cada elemento **Char** é presumido para mapear para um elemento equivalente `Elem` do tipo por um mapeamento simples, um-para-um.) A especificação de conversão de verificação equivalente é determinada da seguinte forma:
 
@@ -437,13 +437,13 @@ O iterador depois que o valor foi lido.
 
 Todas as funções membro retornam [do_get](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`).
 
-A primeira função membro virtual protegida virtual tenta corresponder elementos sequenciais, começando pelo primeiro na sequência [ `first`, `last`) até ter reconhecido um campo de entrada inteiro completo e não vazio. Se for bem-sucedido, ele converterá esse campo em seu valor equivalente, conforme o tipo **Long** , e armazenará o resultado em *Val*. Ele retorna um iterador que designa o primeiro elemento além do campo de entrada numérico. Caso contrário, a função não armazena  nada em Val `ios_base::failbit` e conjuntos no *estado*_. Ele retorna um iterador que designa o primeiro elemento além de qualquer prefixo de um campo de entrada de inteiro válido. Em ambos os casos, se o valor de retorno for igual a Last `ios_base::eofbit` , a função será definida em *_State*.
+A primeira função membro virtual protegida virtual tenta corresponder elementos sequenciais, começando pelo primeiro na sequência [ `first`, `last`) até ter reconhecido um campo de entrada inteiro completo e não vazio. Se for bem-sucedido, ele converterá esse campo em seu valor equivalente, conforme o tipo **Long** , e armazenará o resultado em *Val*. Ele retorna um iterador que designa o primeiro elemento além do campo de entrada numérico. Caso contrário, a função não armazena nada em Val `ios_base::failbit` e conjuntos no *estado*_. Ele retorna um iterador que designa o primeiro elemento além de qualquer prefixo de um campo de entrada de inteiro válido. Em ambos os casos, se o valor deretorno for igual a Last `ios_base::eofbit` , a função será definida em *_State*.
 
 O campo de entrada de inteiro é convertido pelas mesmas regras usadas pelas funções de verificação para corresponder e converter uma série de elementos **Char** de um arquivo. Cada elemento **Char** é presumido para mapear para um elemento equivalente `CharType` do tipo por um mapeamento simples e um para um. A especificação de conversão de verificação equivalente é determinada da seguinte forma:
 
 - Se `iosbase`. [flags](../standard-library/ios-base-class.md#flags) & [Oct](../standard-library/ios-functions.md#oct), a especificação de conversão é`lo`.`ios_base::basefield` == `ios_base::`
 
-- Se **iosbase. Flags** & **ios_base:: BaseField**[](../standard-library/ios-functions.md#hex) `lx` == Hex,a especificação de conversão será.`ios_base::`
+- Se **iosbase. Flags** & **ios_base:: BaseField** `lx`[Hex,](../standard-library/ios-functions.md#hex)a especificação de conversão será. == `ios_base::`
 
 - Se **iosbase.flags** & **ios_base::basefield** == 0, a especificação de conversão é `li`.
 

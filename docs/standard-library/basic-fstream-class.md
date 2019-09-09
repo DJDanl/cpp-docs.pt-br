@@ -23,7 +23,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68459594"
 ---
-# <a name="basicfstream-class"></a>Classe basic_fstream
+# <a name="basic_fstream-class"></a>Classe basic_fstream
 
 Descreve um objeto que controla a inserção e a extração de elementos e objetos codificados usando um buffer de fluxo da classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, com elementos do tipo `Elem` cujas características dos caracteres são determinadas pela classe `Tr`.
 
@@ -140,7 +140,7 @@ O arquivo padrão que abre a proteção, equivalente ao parâmetro *shflag* em [
 
 O primeiro construtor inicializa a classe base chamando [basic_iostream](../standard-library/basic-iostream-class.md)(`sb`), em que `sb` é o objeto armazenado da classe [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **elem**, **TR**>. Ele também é `sb` inicializado `basic_filebuf` chamando \< **elem**, **TR**>.
 
-O segundo e o terceiro construtores inicializam a classe base chamando `basic_iostream`( **sb**). Ele também é `sb` inicializado `basic_filebuf` \< chamando **elem**, **TR**> e, em seguida, **SB.** [Open](../standard-library/basic-filebuf-class.md#open)( `_Mode`_ *filename*,). Se a última função retornar um ponteiro NULL, o Construtor chamará SetState ( [](../standard-library/basic-ios-class.md#setstate)`failbit`).
+O segundo e o terceiro construtores inicializam a classe base chamando `basic_iostream`( **sb**). Ele também é `sb` inicializado `basic_filebuf` \< chamando **elem**, **TR**> e, em seguida, **SB.** [Open](../standard-library/basic-filebuf-class.md#open)( `_Mode`_ *filename*,). Se a última função retornar um ponteiro NULL, o Construtor chamará [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
 O quarto construtor inicializa o objeto com o conteúdo de `right`, tratados como uma referência rvalue.
 
@@ -221,7 +221,7 @@ O arquivo padrão que abre a proteção, equivalente ao parâmetro *shflag* em [
 
 ### <a name="remarks"></a>Comentários
 
-A função membro chama [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`). Se essa função retornar um ponteiro NULL, a função chamará SetState ( [](../standard-library/basic-ios-class.md#setstate) `failbit`).
+A função membro chama [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`). Se essa função retornar um ponteiro NULL, a função chamará [SetState](../standard-library/basic-ios-class.md#setstate)( `failbit`).
 
 ### <a name="example"></a>Exemplo
 

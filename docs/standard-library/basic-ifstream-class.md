@@ -23,7 +23,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68455510"
 ---
-# <a name="basicifstream-class"></a>Classe basic_ifstream
+# <a name="basic_ifstream-class"></a>Classe basic_ifstream
 
 Descreve um objeto que controla a extração de elementos e objetos codificados de um buffer de fluxo da classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, com elementos do tipo `Elem` cujas características dos caracteres são determinadas pela classe `Tr`.
 
@@ -71,7 +71,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="input-basicifstreamclasstxt"></a>Entrada: basic_ifstream_class.txt
+## <a name="input-basic_ifstream_classtxt"></a>Entrada: basic_ifstream_class.txt
 
 ```cpp
 This is the contents of basic_ifstream_class.txt.
@@ -101,7 +101,7 @@ This is the contents of basic_ifstream_class.txt.
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|Operator|Descrição|
 |-|-|
 |[operator=](#op_eq)|Atribui o conteúdo desse objeto de fluxo. Essa é uma atribuição de movimentação que envolve um `rvalue` que não deixa uma cópia.|
 
@@ -248,7 +248,7 @@ A proteção de abertura de arquivo padrão, equivalente ao parâmetro `shflag` 
 
 ### <a name="remarks"></a>Comentários
 
-A função membro chama [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**). Se abrir falhar, a função chamará SetState ( [](../standard-library/basic-ios-class.md#setstate)`failbit`), que pode gerar uma exceção ios_base:: Failure.
+A função membro chama [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**). Se abrir falhar, a função chamará [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`), que pode gerar uma exceção ios_base:: Failure.
 
 ### <a name="example"></a>Exemplo
 
