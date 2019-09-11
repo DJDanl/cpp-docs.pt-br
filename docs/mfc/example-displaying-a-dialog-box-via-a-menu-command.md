@@ -1,6 +1,6 @@
 ---
-title: 'Exemplo: Exibindo uma caixa de diálogo por meio de um comando de Menu'
-ms.date: 11/04/2016
+title: 'Exemplo: Exibindo uma caixa de diálogo por meio de um comando de menu'
+ms.date: 09/07/2019
 helpviewer_keywords:
 - MFC dialog boxes [MFC], examples
 - MFC dialog boxes [MFC], displaying
@@ -10,45 +10,45 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 1e730125e47609f0bf87814b32962336cb752b04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b76d481bff6e98b915d71634dbf04a83a432736
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173270"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907738"
 ---
-# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Exemplo: Exibindo uma caixa de diálogo por meio de um comando de Menu
+# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Exemplo: Exibindo uma caixa de diálogo por meio de um comando de menu
 
 Este tópico contém procedimentos para:
 
 - Exiba uma caixa de diálogo modal por meio de um comando de menu.
 
-- Exiba uma caixa de diálogo sem janela restrita por meio de um comando de menu.
+- Exibir uma caixa de diálogo sem janela restrita por meio de um comando de menu.
 
-Ambos os procedimentos de exemplo são para aplicativos MFC e funcionará em um aplicativo que você criar com o [Assistente de aplicativo MFC](../mfc/reference/mfc-application-wizard.md).
+Ambos os procedimentos de exemplo são para aplicativos MFC e funcionarão em um aplicativo criado com o [Assistente de aplicativo do MFC](../mfc/reference/mfc-application-wizard.md).
 
-Os procedimentos usam os nomes e valores a seguir:
+Os procedimentos usam os seguintes nomes e valores:
 
 |Item|Nome ou valor|
 |----------|-------------------|
 |Aplicativo|DisplayDialog|
-|Comando de menu|Testar o comando de menu do modo de exibição; ID do comando = ID_VIEW_TEST|
-|Caixa de diálogo|Caixa de diálogo de teste; Classe = CTestDialog; Arquivo de cabeçalho = TestDialog.h; Variável = testdlg, ptestdlg|
+|Comando de menu|Comando de teste no menu Exibir; ID do comando = ID_VIEW_TEST|
+|Caixa de diálogo|Caixa de diálogo testar; Classe = CTestDialog; Arquivo de Cabeçalho = TestDialog. h; Variável = testdlg, ptestdlg|
 |Manipulador de comandos|OnViewTest|
 
 ### <a name="to-display-a-modal-dialog-box"></a>Para exibir uma caixa de diálogo modal
 
-1. Criar o comando de menu. ver [criando Menus ou itens de Menu](../windows/creating-a-menu.md).
+1. Criar o comando de menu; consulte [criando menus ou itens de menu](../windows/creating-a-menu.md).
 
-1. Criar a caixa de diálogo; ver [iniciar o Editor de caixa de diálogo](../windows/creating-a-new-dialog-box.md).
+1. Criar a caixa de diálogo; consulte [iniciando o editor de caixa de diálogo](../windows/creating-a-new-dialog-box.md).
 
-1. Adicione uma classe para sua caixa de diálogo. Ver [adicionando uma classe](../ide/adding-a-class-visual-cpp.md) para obter mais informações.
+1. Adicione uma classe à caixa de diálogo. Consulte [adicionando uma classe](../ide/adding-a-class-visual-cpp.md) para obter mais informações.
 
-1. Na **modo de exibição de classe**, selecione a classe de documento (CDisplayDialogDoc). Na janela **Propriedades**, clique no botão **Eventos**. Clique duas vezes a ID do comando menu (ID_VIEW_TEST) no painel esquerdo do **propriedades** janela e selecione **comando**. No painel direito, clique na seta para baixo e selecione  **\<Adicionar > OnViewTest**.
+1. Em **modo de exibição de classe**, selecione a classe de documento (CDisplayDialogDoc). Na janela **Propriedades**, clique no botão **Eventos**. Clique duas vezes na ID do comando de menu (ID_VIEW_TEST). Em seguida, clique na seta para baixo e selecione  **\<Adicionar > OnViewTest**.
 
-   Se você tiver adicionado o comando de menu ao mainframe de um aplicativo MDI, selecione a classe de aplicativo (CDisplayDialogApp) em vez disso.
+   Se você adicionou o comando de menu ao mainframe de um aplicativo MDI, selecione a classe Application (CDisplayDialogApp) em seu lugar.
 
-1. Adicione a seguinte instrução CDisplayDialogDoc.cpp (ou CDisplayDialogApp.cpp) de inclusão depois existente inclui instruções:
+1. Adicione a seguinte instrução include a CDisplayDialogDoc. cpp (ou CDisplayDialogApp. cpp) após as instruções include existentes:
 
    ```cpp
    #include "TestDialog.h"
@@ -63,25 +63,25 @@ Os procedimentos usam os nomes e valores a seguir:
 
 ### <a name="to-display-a-modeless-dialog-box"></a>Para exibir uma caixa de diálogo sem janela restrita
 
-1. Fazer as quatro primeiras etapas para exibir uma caixa de diálogo modal, porém selecione a classe de exibição (CDisplayDialogView) na etapa 4.
+1. Execute as quatro primeiras etapas para exibir uma caixa de diálogo modal, exceto selecione a classe View (CDisplayDialogView) na etapa 4.
 
-1. Edite DisplayDialogView.h:
+1. Edite DisplayDialogView. h:
 
-   - Declare a classe de caixa de diálogo anterior a declaração de primeira classe:
+   - Declare a classe da caixa de diálogo anterior à primeira declaração de classe:
 
    ```cpp
    class CTestDialog;
    ```
 
-   - Declare um ponteiro para a caixa de diálogo após a seção pública de atributos:
+   - Declare um ponteiro para a caixa de diálogo após a seção atributos públicos:
 
    ```cpp
    CTestDialog* m_pTestDlg;
    ```
 
-1. Edite DisplayDialogView.cpp:
+1. Edite DisplayDialogView. cpp:
 
-   - Adicione que o seguinte incluir uma instrução depois que o existente inclui instruções:
+   - Adicione a seguinte instrução include após as instruções include existentes:
 
    ```cpp
    #include "TestDialog.h"
@@ -93,7 +93,7 @@ Os procedimentos usam os nomes e valores a seguir:
    m_pTestDlg = NULL;
    ```
 
-   - Adicione o seguinte código para o destruidor:
+   - Adicione o seguinte código ao destruidor:
 
    ```cpp
    delete m_pTestDlg;

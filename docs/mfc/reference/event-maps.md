@@ -1,15 +1,15 @@
 ---
 title: Mapas de evento
-ms.date: 06/20/2018
+ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: ef730574b26a4c3619df886b72770ce7e035a40e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 34741dc05efe77c0932343739540370f54db6008
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916459"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907901"
 ---
 # <a name="event-maps"></a>Mapas de evento
 
@@ -21,7 +21,7 @@ O biblioteca MFC oferece um modelo de programação otimizado para eventos de ac
 
 A `EVENT_STOCK_CLICK` macro indica que o controle acionará um evento de clique no estoque sempre que detectar um clique do mouse. Para obter uma listagem mais detalhada de outros eventos de estoque, consulte [o artigo controles ActiveX: Eventos](../../mfc/mfc-activex-controls-events.md). As macros também estão disponíveis para indicar eventos personalizados.
 
-Embora as macros de mapa de eventos sejam importantes, você geralmente não as insere diretamente. Isso ocorre porque o janela Propriedades cria automaticamente entradas de mapa de eventos em seus arquivos de origem ao usá-lo para associar funções de acionamento de eventos a eventos. Sempre que desejar editar ou adicionar uma entrada de mapa de eventos, você poderá usar o janela Propriedades.
+Embora as macros de mapa de eventos sejam importantes, você geralmente não as insere diretamente. Isso ocorre porque a janela **Propriedades** (em **modo de exibição de classe**) cria automaticamente entradas de mapa de eventos em seus arquivos de origem quando você a usa para associar funções de acionamento de eventos a eventos. Sempre que desejar editar ou adicionar uma entrada de mapa de eventos, você poderá usar a janela **Propriedades** .
 
 Para dar suporte a mapas de eventos, o MFC fornece as seguintes macros:
 

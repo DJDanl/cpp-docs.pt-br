@@ -1,6 +1,6 @@
 ---
 title: Criando a classe da caixa de diálogo
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], creating
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-ms.openlocfilehash: bacedc49fcdabdd5dc7fb0f392a66afd3baadd06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 424d18196063456245e2a4841b42e6e447bded17
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241751"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907323"
 ---
 # <a name="creating-your-dialog-class"></a>Criando a classe da caixa de diálogo
 
 Para cada caixa de diálogo em seu programa, crie uma nova classe de caixa de diálogo para trabalhar com o recurso de caixa de diálogo.
 
-[Adicionando uma classe](../ide/adding-a-class-visual-cpp.md) explica como criar uma nova classe de caixa de diálogo. Quando você cria uma classe de caixa de diálogo com o Assistente para Adicionar classe, ele grava os seguintes itens na. H e. Arquivos CPP que você especificar:
+[A adição de uma classe](../ide/adding-a-class-visual-cpp.md) explica como criar uma nova classe de caixa de diálogo. Quando você cria uma classe de diálogo com o [Assistente de classe](reference/mfc-class-wizard.md), ela grava os seguintes itens nos arquivos. h e. cpp que você especificar:
 
-Na. Arquivo do H:
+No arquivo. h:
 
-- Uma declaração de classe para a classe de caixa de diálogo. A classe é derivada de [CDialog](../mfc/reference/cdialog-class.md).
+- Uma declaração de classe para a classe da caixa de diálogo. A classe é derivada de [CDialog](../mfc/reference/cdialog-class.md).
 
-Na. Arquivo CPP:
+No arquivo. cpp:
 
-- Um mapa de mensagem para a classe.
+- Um mapa de mensagens para a classe.
 
 - Um construtor padrão para a caixa de diálogo.
 
-- Uma substituição do [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) função de membro. Edite essa função. Ele é usado para recursos de troca e validação de dados de caixa de diálogo, conforme descrito posteriormente no [troca de dados de caixa de diálogo e validação](../mfc/dialog-data-exchange-and-validation.md).
+- Uma substituição da função de membro [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) . Edite esta função. Ele é usado para recursos de validação e troca de dados, conforme descrito posteriormente em [troca e validação de dados de caixa de diálogo](../mfc/dialog-data-exchange-and-validation.md).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,58 +1,58 @@
 ---
-title: 'Como: Personalizar o botão do aplicativo'
-ms.date: 11/19/2018
+title: 'Como: Personalizar o botão aplicativo'
+ms.date: 09/07/2019
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: d45ceaf1cce21f77871e966e0e8f525f95cb4c37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a1d1625e80e6c6f4440864629a5123bed5744c7
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160349"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907798"
 ---
-# <a name="how-to-customize-the-application-button"></a>Como: Personalizar o botão do aplicativo
+# <a name="how-to-customize-the-application-button"></a>Como: Personalizar o botão aplicativo
 
-Quando você clica no botão de aplicativo, é exibido um menu de comandos. Normalmente, o menu contém comandos relacionados ao arquivo, como **aberto**, **salve**, **impressão**, e **Exit**.
+Quando você clica no botão aplicativo, um menu de comandos é exibido. Normalmente, o menu contém comandos relacionados a arquivos, como **abrir**, **salvar**, **Imprimir**e **sair**.
 
-![Botão de aplicativo de faixa de opções do MFC](../mfc/media/application_button.png "botão de aplicativo de faixa de opções do MFC")
+![Botão do aplicativo da faixa de da MFC](../mfc/media/application_button.png "Botão do aplicativo da faixa de da MFC")
 
-Para personalizar o botão do aplicativo, abri-lo na **propriedades** , modifique suas propriedades e, em seguida, o controle de faixa de opções de visualização.
+Para personalizar o botão aplicativo, abra-o na janela **Propriedades** (em **modo de exibição de recursos**), modifique suas propriedades e, em seguida, visualize o controle faixa de faixas.
 
-### <a name="to-open-the-application-button-in-the-properties-window"></a>Para abrir o botão do aplicativo na janela Propriedades
+### <a name="to-open-the-application-button-in-the-properties-window"></a>Para abrir o botão aplicativo no janela Propriedades
 
-1. No Visual Studio, sobre o **modo de exibição** menu, clique em **exibição de recurso**.
+1. No Visual Studio, no menu **Exibir** , clique em **modo de exibição de recursos**.
 
-1. Na **exibição de recurso**, clique duas vezes no recurso de faixa de opções para exibi-lo na superfície de design.
+1. Em **modo de exibição de recursos**, clique duas vezes no recurso da faixa de bits para exibi-lo na superfície de design.
 
-1. Na superfície de design, clique com botão direito do menu de botão do aplicativo e, em seguida, clique em **propriedades**.
+1. Na superfície de design, clique com o botão direito do mouse no menu do botão do aplicativo e clique em **Propriedades**.
 
-## <a name="application-button-properties"></a>Propriedades do botão de aplicativo
+## <a name="application-button-properties"></a>Propriedades do botão do aplicativo
 
-A tabela a seguir define as propriedades do botão de aplicativo.
+A tabela a seguir define as propriedades do botão do aplicativo.
 
 |Propriedade|Definição|
 |--------------|----------------|
 |**Botões**|Contém a coleção de até três botões que aparecem no canto inferior direito do menu do aplicativo.|
-|**Caption**|Especifica o texto do controle. Diferentemente de outros elementos de faixa de opções, o botão do aplicativo não exibe o texto da legenda. Em vez disso, o texto é usado para acessibilidade.|
-|**Imagem HDPI**|Especifica o identificador da alta pontos por polegada ícone do botão de aplicativo (HDPI). Quando o aplicativo é executado em um monitor DPI alta, **imagem HDPI** é usado em vez de **imagem**.|
-|**Imagens grandes HDPI**|Especifica o identificador das imagens grandes de DPI alta. Quando o aplicativo é executado em um monitor DPI alta, **imagens grandes HDPI** é usado em vez de **imagens grandes**.|
-|**Imagens pequenas HDPI**|Especifica o identificador das imagens pequenas de DPI alta. Quando o aplicativo é executado em um monitor DPI alta, **imagens pequenas HDPI** é usado em vez de **imagens pequenas**.|
+|**Caption**|Especifica o texto do controle. Ao contrário de outros elementos da faixa de tipos, o botão do aplicativo não exibe o texto da legenda. Em vez disso, o texto é usado para acessibilidade.|
+|**Imagem HDPI**|Especifica o identificador do ícone do botão de aplicativo de pontos altos por polegada (HDPI). Quando o aplicativo é executado em um monitor de DPI alto, a **imagem HDPI** é usada em vez de **imagem**.|
+|**HDPI imagens grandes**|Especifica o identificador das altas imagens grandes de DPI. Quando o aplicativo é executado em um monitor de DPI alto, **HDPI imagens grandes** são usadas em vez de **imagens grandes**.|
+|**HDPI imagens pequenas**|Especifica o identificador das imagens pequenas de DPI alta. Quando o aplicativo é executado em um monitor de DPI alto, **HDPI imagens pequenas** são usadas em vez de **imagens pequenas**.|
 |**ID**|Especifica o identificador do controle.|
-|**Image**|Especifica o identificador do ícone do botão do aplicativo. O ícone é um bitmap de 26, 26 de 32 bits com transparência alfa. As partes transparentes do ícone são realçadas quando o botão do aplicativo é clicado ou colocado em cima.|
-|**Chaves**|Especifica a cadeia de caracteres que é exibida quando a navegação de dica de tecla está habilitada. Navegação de dica de tecla é habilitada quando você pressiona ALT.|
-|**Imagens grandes**|Especifica o identificador da imagem que contém uma série de ícones de 32 x 32. Os ícones são usados por botões na coleção de itens de Main.|
+|**Image**|Especifica o identificador do ícone do botão do aplicativo. O ícone é um bitmap 26x26 de 32 bits que tem transparência alfa. As partes transparentes do ícone são realçadas quando o botão do aplicativo é clicado ou focalizado.|
+|**Novas**|Especifica a cadeia de caracteres que é exibida quando a navegação de dica de chave está habilitada. A navegação por dicas de tecla é habilitada quando você pressiona ALT.|
+|**Imagens grandes**|Especifica o identificador da imagem que contém uma série de ícones de 32x32. Os ícones são usados pelos botões na coleção itens principais.|
 |**Itens principais**|Contém uma coleção de itens de menu que aparecem no menu do aplicativo.|
 |**Legenda MRU**|Especifica o texto exibido no painel de lista recente.|
-|**Imagens pequenas**|Especifica o identificador da imagem que contém uma série de ícones de 16 x 16. Os ícones são usados pelos botões na coleção de botões.|
-|**Use**|Habilita ou desabilita o painel de lista recente. O painel de lista recente aparece no menu do aplicativo.|
-|**Largura**|Especifica a largura em pixels, do painel lista recente.|
+|**Imagens pequenas**|Especifica o identificador da imagem que contém uma série de ícones de 16x16. Os ícones são usados pelos botões na coleção de botões.|
+|**Utilizá**|Habilita ou desabilita o painel de lista recente. O painel Lista recente é exibido no menu do aplicativo.|
+|**Largura**|Especifica a largura em pixels do painel de lista recente.|
 
-O menu de aplicativo não for exibido na superfície de design. Para exibi-lo, você deve visualizar a faixa de opções ou executar o aplicativo.
+O menu do aplicativo não aparece na superfície de design. Para exibi-lo, você deve Visualizar a faixa de opções ou executar o aplicativo.
 
-#### <a name="to-preview-the-ribbon-control"></a>Para visualizar o controle de faixa de opções
+#### <a name="to-preview-the-ribbon-control"></a>Para visualizar o controle da faixa de faixas
 
-- Sobre o **barra de ferramentas do Editor de faixa de opções**, clique em **faixa de opções de teste**.
+- Na **barra de ferramentas do editor da faixa de faixas**, clique em **testar faixa**de medida.
 
 ## <a name="see-also"></a>Consulte também
 

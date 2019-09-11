@@ -1,39 +1,39 @@
 ---
 title: Estilos de botão Girar
-ms.date: 11/04/2016
+ms.date: 09/09/2019
 helpviewer_keywords:
 - styles [MFC], CSpinButtonCtrl
 - CSpinButtonCtrl class [MFC], styles
 - styles [MFC], spin button control
 - spin button control, styles
 ms.assetid: fb4a7f6f-9182-47be-bccf-0728fdc5332f
-ms.openlocfilehash: d955ba1d76ee4d5648613ddaf6c5f6a652f3d3af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1aae4b7e4c63929ebe03c97d50f05754bc13ec26
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307166"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907854"
 ---
 # <a name="spin-button-styles"></a>Estilos de botão Girar
 
-Muitas das configurações para um botão de rotação ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) são controladas por estilos. Você pode definir os seguintes estilos usando o **propriedades** janela no editor de caixa de diálogo.
+Muitas das configurações de um botão de rotação ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) são controladas por estilos. Você pode definir os seguintes estilos usando o [Assistente de classe](reference/mfc-class-wizard.md).
 
-- **Orientação** Vertical ou Horizontal. Controla a orientação dos botões de seta. Associado com o estilo UDS_HORZ.
+- **Orientação** do Vertical ou horizontal. Controla a orientação dos botões de seta. Associado ao estilo UDS_HORZ.
 
-- **Alinhamento** desconectados, à esquerda ou direita. Controla o local do botão de rotação. Left e Right posicionar o botão de rotação ao lado da janela buddy. A largura da janela buddy é reduzida para acomodar o botão de rotação. Associado com os estilos UDS_ALIGNLEFT e UDS_ALIGNRIGHT.
+- **Alinhamento** Um dos não anexados, esquerdo ou direito. Controla o local do botão de rotação. Posição esquerda e direita do botão de rotação ao lado da janela do Buddy. A largura da janela Buddy é diminuída para acomodar o botão de rotação. Associados aos estilos UDS_ALIGNLEFT e UDS_ALIGNRIGHT.
 
-- **Auto Buddy** seleciona automaticamente a janela anterior na ordem Z como a janela buddy para o botão de rotação. Em um modelo de caixa de diálogo, esse é o controle que precede o botão de rotação na ordem de tabulação. Associado com o estilo UDS_AUTOBUDDY.
+- **Amigo automático** Seleciona automaticamente a janela anterior na ordem Z como uma janela de amigo para o botão de rotação. Em um modelo de caixa de diálogo, esse é o controle que precede o botão de rotação na ordem de tabulação. Associado ao estilo UDS_AUTOBUDDY.
 
-- **Definir inteiro Buddy** faz com que o controle de rotação incrementar e diminuir a legenda da janela buddy como as alterações na posição atual. Associado com o estilo UDS_SETBUDDYINT.
+- **Definir o inteiro Buddy** Faz com que o controle de rotação aumente e reduza a legenda da janela Buddy à medida que a posição atual é alterada. Associado ao estilo UDS_SETBUDDYINT.
 
-- **Sem milhares** não inserir os milhares separador no valor na legenda da janela buddy. Associado com o estilo UDS_NOTHOUSANDS.
+- **Sem milhares** Não insere o separador de milhar no valor da legenda da janela Buddy. Associado ao estilo UDS_NOTHOUSANDS.
 
     > [!NOTE]
-    >  Defina esse estilo se você quiser usar a troca de dados de caixa de diálogo (DDX) para obter o valor inteiro do controle buddy. `DDX_Text` não aceita os separadores de milhar incorporados.
+    >  Defina este estilo se quiser usar a troca de dados de caixa de diálogo (campo DDX) para obter o valor inteiro do controle Buddy. `DDX_Text`Não aceita separadores de milhar incorporados.
 
-- **Encapsular** faz com que a posição "encapsular" como o valor é incrementado ou diminuído além do intervalo do controle. Associado com o estilo UDS_WRAP.
+- **Encapsular** Faz com que a posição seja "encapsulada" à medida que o valor é incrementado ou diminuído além do intervalo do controle. Associado ao estilo UDS_WRAP.
 
-- **Teclas de direção** faz com que o botão de rotação incrementar ou decrementar a posição quando as teclas de seta para cima e seta para baixo são pressionadas. Associado com o estilo UDS_ARROWKEYS.
+- **Teclas de direção** Faz com que o botão de rotação aumente ou diminua a posição quando as teclas seta para cima e seta para baixo são pressionadas. Associado ao estilo UDS_ARROWKEYS.
 
 ## <a name="see-also"></a>Consulte também
 

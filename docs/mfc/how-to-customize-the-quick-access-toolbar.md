@@ -1,31 +1,31 @@
 ---
 title: 'Como: Personalizar a barra de ferramentas de acesso rápido'
-ms.date: 11/19/2018
+ms.date: 09/07/2019
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: c53e405eafe310c0bfc03a916ab85181ae67a34b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b2eb6f7c80c77f69e2bbb65b7bb31a385014c8c
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396413"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907775"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>Como: Personalizar a barra de ferramentas de acesso rápido
 
-A barra de ferramentas de acesso rápido (QAT) é uma barra de ferramentas personalizável que contém um conjunto de comandos que são que uma exibida ao lado do botão de aplicativo ou sob as guias de categoria. A ilustração a seguir mostra um típico de ferramentas de acesso rápido.
+A barra de ferramentas de acesso rápido (QAT) é uma barra de ferramentas personalizável que contém um conjunto de comandos que são exibidos ao lado do botão aplicativo ou sob as guias categoria. A ilustração a seguir mostra uma barra de ferramentas de acesso rápido típica.
 
-![Ferramentas de acesso rápido de faixa de opções do MFC](../mfc/media/quick_access_toolbar.png "ferramentas de acesso rápido de faixa de opções do MFC")
+![Barra de ferramentas de acesso rápido do MFC Ribbon](../mfc/media/quick_access_toolbar.png "Barra de ferramentas de acesso rápido do MFC Ribbon")
 
-Para personalizar a barra de ferramentas de acesso rápido, abri-lo na **propriedades** janela, modifique seus comandos e, em seguida, o controle de faixa de opções de visualização.
+Para personalizar a barra de ferramentas de acesso rápido, abra-a na janela **Propriedades** , modifique seus comandos e, em seguida, visualize o controle faixa de faixas.
 
-### <a name="to-open-the-quick-access-toolbar-in-the-properties-window"></a>Para abrir a barra de ferramentas de acesso rápido na janela Propriedades
+### <a name="to-open-the-quick-access-toolbar-in-the-properties-window"></a>Para abrir a barra de ferramentas de acesso rápido no janela Propriedades
 
-1. No Visual Studio, sobre o **modo de exibição** menu, clique em **exibição de recurso**.
+1. No Visual Studio, no menu **Exibir** , clique em **modo de exibição de recursos**.
 
-1. Na **exibição de recurso**, clique duas vezes no recurso de faixa de opções para exibi-lo na superfície de design.
+1. Em **modo de exibição de recursos**, clique duas vezes no recurso da faixa de bits para exibi-lo na superfície de design.
 
-1. Na superfície de design, clique com botão direito no menu de ferramentas de acesso rápido e, em seguida, clique em **propriedades**.
+1. Na superfície de design, clique com o botão direito do mouse no menu da barra de ferramentas acesso rápido e clique em **Propriedades**.
 
 ## <a name="quick-access-toolbar-properties"></a>Propriedades da barra de ferramentas de acesso rápido
 
@@ -33,24 +33,24 @@ A tabela a seguir define as propriedades da barra de ferramentas de acesso rápi
 
 |Propriedade|Definição|
 |--------------|----------------|
-|Posição QAT|Especifica a posição da barra de ferramentas de acesso rápido quando o aplicativo é iniciado. A posição pode ser **acima** ou **abaixo** o controle de faixa de opções.|
-|Itens QAT|Especifica os comandos que estão disponíveis para a barra de ferramentas de acesso rápido.|
+|Posição QAT|Especifica a posição da barra de ferramentas de acesso rápido quando o aplicativo é iniciado. A posição pode estar **acima** ou **abaixo** do controle da faixa de opções.|
+|QAT itens|Especifica os comandos que estão disponíveis para a barra de ferramentas de acesso rápido.|
 
 #### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>Para adicionar ou remover comandos na barra de ferramentas de acesso rápido
 
-1. No **propriedades** janela, clique em **itens QAT**e, em seguida, clique no botão de reticências **(...)** .
+1. Na janela **Propriedades** , clique em **qat itens**e, em seguida, clique no botão de reticências **(...)** .
 
-1. No **Editor de itens QAT** caixa de diálogo, use o **Add** e **remover** botões para modificar a lista de comandos na barra de ferramentas de acesso rápido.
+1. Na caixa de diálogo **Editor de itens qat** , use os botões **Adicionar** e **remover** para modificar a lista de comandos na barra de ferramentas de acesso rápido.
 
-1. Se você quiser um comando apareça na barra de ferramentas de acesso rápido e o menu de ferramentas de acesso rápido, marque a caixa ao lado de comando. Se você quiser que o comando apareça somente no menu, desmarque a caixa.
+1. Se você quiser que um comando apareça na barra de ferramentas de acesso rápido e no menu de barra de ferramentas de acesso rápido, selecione a caixa ao lado do comando. Se você quiser que o comando apareça somente no menu, desmarque a caixa.
 
-## <a name="previewing-the-ribbon"></a>Visualizar a faixa de opções
+## <a name="previewing-the-ribbon"></a>Visualizando a faixa de visão
 
-Comandos de barra de ferramentas de acesso rápidos não aparecem na superfície de design. Para exibi-los, você deve visualizar a faixa de opções ou executar o aplicativo.
+Os comandos da barra de ferramentas de acesso rápido não aparecem na superfície de design. Para exibi-los, você deve Visualizar a faixa de opções ou executar o aplicativo.
 
-#### <a name="to-preview-the-ribbon-control"></a>Para visualizar o controle de faixa de opções
+#### <a name="to-preview-the-ribbon-control"></a>Para visualizar o controle da faixa de faixas
 
-- Sobre o **barra de ferramentas do Editor de faixa de opções**, clique em **faixa de opções de teste**.
+- Na **barra de ferramentas do editor da faixa de faixas**, clique em **testar faixa**de medida.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,29 +1,29 @@
 ---
 title: Layout dinâmico
-ms.date: 11/19/2018
+ms.date: 09/09/2019
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
-ms.openlocfilehash: 396aad5b33a00021ddb5c1143c1d15c130e97eaa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b0d035d3c551fd309d515ccb8b22159218c1b0a
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175252"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907555"
 ---
 # <a name="dynamic-layout"></a>Layout dinâmico
 
-Com o MFC no Visual Studio 2015, você pode criar caixas de diálogo que o usuário pode redimensionar, e você pode controlar a maneira que o layout será ajustado para a alteração no tamanho. Por exemplo, você pode anexar botões na parte inferior de uma caixa de diálogo para a borda inferior para que eles fiquem sempre na parte inferior. Você também pode definir alguns controles como caixas de listagem, editboxes e campos de texto para expandir conforme o usuário expande a caixa de diálogo.
+Com o MFC no Visual Studio 2015, você pode criar caixas de diálogo que o usuário pode redimensionar e controlar a maneira como o layout é ajustado para a alteração no tamanho. Por exemplo, você pode anexar botões na parte inferior de uma caixa de diálogo à borda inferior para que fiquem sempre na parte inferior. Você também pode configurar determinados controles, como ListBoxes, EditBoxes e campos de texto para expandir à medida que o usuário expande a caixa de diálogo.
 
-## <a name="specifying-dynamic-layout-settings-for-an-mfc-dialog-box"></a>Especificando configurações de layout dinâmico para uma caixa de diálogo do MFC
+## <a name="specifying-dynamic-layout-settings-for-an-mfc-dialog-box"></a>Especificando configurações de layout dinâmico para uma caixa de diálogo MFC
 
-Quando o usuário redimensiona uma caixa de diálogo, os controles na caixa de diálogo podem redimensionar ou mover nas direções X e Y. A alteração no tamanho ou posição de um controle quando o usuário redimensiona uma caixa de diálogo é chamada de layout dinâmico. Por exemplo, o seguinte é uma caixa de diálogo antes que está sendo redimensionada:
+Quando o usuário redimensiona uma caixa de diálogo, os controles na caixa de diálogo podem redimensionar ou mover nas direções X e Y. A alteração no tamanho ou na posição de um controle quando o usuário redimensiona uma caixa de diálogo é chamada layout dinâmico. Por exemplo, a seguir está uma caixa de diálogo antes de ser redimensionada:
 
-![Caixa de diálogo antes que está sendo redimensionada. ](../mfc/media/mfcdynamiclayout4.png "Caixa de diálogo antes que está sendo redimensionada.")
+![Caixa de diálogo antes de ser redimensionada.](../mfc/media/mfcdynamiclayout4.png "Caixa de diálogo antes de ser redimensionada.")
 
-Depois que está sendo redimensionada, a área da caixa de listagem é aumentada para mostrar mais itens, e os botões são movidos juntamente com o canto inferior direito:
+Após ser redimensionado, a área da caixa de listagem é aumentada para mostrar mais itens e os botões são movidos junto com o canto inferior direito:
 
-![Caixa de diálogo depois que está sendo redimensionada. ](../mfc/media/mfcdynamiclayout5.png "Caixa de diálogo depois que está sendo redimensionada.")
+![Depois de ser redimensionado.](../mfc/media/mfcdynamiclayout5.png "Depois de ser redimensionado.")
 
-Você pode controlar o layout dinâmico, especificando os detalhes de cada controle no Editor de recursos no IDE ou você pode fazer então programaticamente acessando o `CMFCDynamicLayout` do objeto para um determinado controle e definir as propriedades.
+Você pode controlar o layout dinâmico especificando os detalhes de cada controle no editor de recursos no IDE ou pode fazer isso programaticamente acessando o `CMFCDynamicLayout` objeto para um controle específico e definindo as propriedades.
 
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>Definindo propriedades de layout dinâmico no editor de recursos
 
@@ -31,51 +31,51 @@ Você pode definir o comportamento de layout dinâmico para uma caixa de diálog
 
 #### <a name="to-set-dynamic-layout-properties-in-the-resource-editor"></a>Para definir propriedades de layout dinâmico no editor de recursos
 
-1. Com um projeto MFC aberto, abra a caixa de diálogo que você deseja trabalhar no editor de caixa de diálogo.
+1. Com um projeto do MFC aberto, abra a caixa de diálogo com a qual você deseja trabalhar no editor de caixa de diálogo.
 
-   ![Abra a caixa de diálogo no editor de recursos. ](../mfc/media/mfcdynamiclayout3.png "Abrir a caixa de diálogo no editor de recursos.")
+   ![Abra a caixa de diálogo no editor de recursos.](../mfc/media/mfcdynamiclayout3.png "Abra a caixa de diálogo no editor de recursos.")
 
-1. Selecione um controle e na janela Propriedades, defina as propriedades de layout dinâmico. O **Layout dinâmico** seção na janela de propriedades contém as propriedades **tipo de movimentação**, **tipo de dimensionamento**e, dependendo dos valores selecionados para essas propriedades, propriedades específicas que definem quanto controles mover ou alterar o tamanho. **Mover tipo** determina como um controle é movido conforme o tamanho da caixa de diálogo é alterado; **Tipo de dimensionamento** determina como um controle é redimensionado conforme o tamanho da caixa de diálogo é alterado. **Tipo móvel** e **tipo de dimensionamento** pode ser **Horizontal**, **Vertical**, **ambos**, ou **None**dependendo das dimensões que você deseja alterar dinamicamente. O dimensionamento horizontal é dimensão X. Vertical é a direção de Y.
+1. Selecione um controle e, na janela **Propriedades** (em **modo de exibição de classe**), defina suas propriedades de layout dinâmico. A seção **layout dinâmico** na janela **Propriedades** contém as propriedades **tipo de movimentação**, **tipo de dimensionamento**e, dependendo dos valores selecionados para essas propriedades, propriedades específicas que definem a quantidade de controles a serem movidos ou alterar o tamanho. O **tipo de movimentação** determina como um controle é movido conforme o tamanho da caixa de diálogo é alterado; **Tipo de dimensionamento** determina como um controle é redimensionado conforme o tamanho da caixa de diálogo é alterado. **A movimentação do tipo** e do tipo de **dimensionamento** pode ser **horizontal**, **vertical**, **ambos**ou **nenhum** , dependendo das dimensões que você deseja alterar dinamicamente. Horizontal é a dimensão X; Vertical é a direção Y.
 
-1. Se você quiser um controle como um botão para estar em um tamanho fixo e permanecer em vigor na parte inferior direita, como é comum para o **Okey** ou **Cancelar** conjunto de botões, o **tipo de dimensionamento** para  **None**e defina o **tipo de movimentação** para **ambos**. Para o **X movendo** e **movendo Y** valores sob **mover tipo**, conjunto de 100% para fazer com que o controle para se manter uma distância fixa da parte inferior direito canto.
+1. Se você quiser que um controle como um botão esteja em um tamanho fixo e permaneça em vigor no canto inferior direito, como é comum para os botões **OK** ou **Cancelar** , defina o **tipo de dimensionamento** como **nenhum**e defina o **tipo de movimentação** como **ambos**. Para **mover X** e **mover valores Y** em **tipo de movimentação**, defina 100% para fazer com que o controle permaneça uma distância fixa do canto inferior direito.
 
    ![Layout dinâmico](../mfc/media/mfcdynamiclayout1.png "Layout dinâmico")
 
-1. Suponha que você também tem um controle que você deseja expandir à medida que expande a caixa de diálogo. Normalmente, um usuário pode expandir uma caixa de diálogo para expandir uma caixa de edição de várias linhas para aumentar o tamanho da área de texto, ou elas podem expandir um controle de lista para ver mais dados. Nesse caso, defina a **tipo de dimensionamento** como "ambas" e defina o **mover tipo** como none. Em seguida, defina as **X dimensionamento** e **dimensionamento Y** valores como 100.
+1. Suponha que você também tenha um controle que deseja expandir à medida que a caixa de diálogo se expandir. Normalmente, um usuário pode expandir um diálogo para expandir uma caixa de edição de várias linhas para aumentar o tamanho da área de texto ou pode expandir um controle de lista para ver mais dados. Para esse caso, defina o **tipo de dimensionamento** como ambos e defina o **tipo de movimentação** como nenhum. Em seguida, defina o **dimensionamento X** e o **dimensionamento** dos valores Y como 100.
 
-   ![Configurações de Layout dinâmico](../mfc/media/mfcdynamiclayout2.png "configurações de Layout dinâmico")
+   ![Configurações de layout dinâmico](../mfc/media/mfcdynamiclayout2.png "Configurações de layout dinâmico")
 
-1. Experimente com outros valores que talvez faça sentido para seus controles. Uma caixa de diálogo com uma caixa de texto uma linha pode ter o **tipo de dimensionamento** definido como **Horizontal** apenas, por exemplo.
+1. Experimente outros valores que possam fazer sentido para seus controles. Uma caixa de diálogo com uma caixa de texto de uma linha pode ter o **tipo de dimensionamento** definido como **horizontal** somente, por exemplo.
 
-### <a name="setting-dynamic-layout-properties-programmatically"></a>Definir as propriedades de layout dinâmico programaticamente
+### <a name="setting-dynamic-layout-properties-programmatically"></a>Definindo propriedades de layout dinâmico programaticamente
 
-O procedimento anterior é útil para especificar propriedades de layout dinâmico para uma caixa de diálogo em tempo de design, mas se você quiser controlar o layout dinâmico em tempo de execução, você pode definir propriedades de layout dinâmico por meio de programação.
+O procedimento anterior é útil para especificar propriedades de layout dinâmico para uma caixa de diálogo em tempo de design, mas se você quiser controlar o layout dinâmico em tempo de execução, poderá definir propriedades de layout dinâmico programaticamente.
 
-#### <a name="to-set-dynamic-layout-properties-programmatically"></a>Para definir propriedades de layout dinâmico por meio de programação
+#### <a name="to-set-dynamic-layout-properties-programmatically"></a>Para definir propriedades de layout dinâmico programaticamente
 
-1. Localizar ou criar um local no código de implementação da sua classe de caixa de diálogo onde você deseja especificar o layout dinâmico para a caixa de diálogo. Por exemplo, você talvez queira adicionar um método, como `AdjustLayout` em sua caixa de diálogo e chame-o de locais onde o layout precisa ser alterado. Você pode chamar isso pela primeira vez ou depois de fazer alterações na caixa de diálogo do construtor.
+1. Localize ou crie um local no código de implementação da sua classe de caixa de diálogo onde você deseja especificar o layout dinâmico para a caixa de diálogo. Por exemplo, talvez você queira adicionar um método como `AdjustLayout` em sua caixa de diálogo e chamá-lo de locais onde o layout precisa ser alterado. Você pode primeiro chamá-lo do construtor ou depois de fazer alterações na caixa de diálogo.
 
-1. Para a caixa de diálogo, chame [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), um método da `CWnd` classe. `GetDynamicLayout` Retorna um ponteiro para um `CMFCDynamicLayout` objeto.
+1. Para a caixa de diálogo, chame [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), um método `CWnd` da classe. `GetDynamicLayout`Retorna um ponteiro para um `CMFCDynamicLayout` objeto.
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. Para o primeiro controle ao qual você deseja adicionar comportamento dinâmico, use os métodos estáticos na classe de layout dinâmico para criar o [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) estrutura que codifica a maneira como o controle deve ser ajustado. Você pode fazer isso selecionando primeiro o método estático apropriado: [CMFCDynamicLayout::MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout::MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout::MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone), ou [CMFCDynamicLayout:: MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Você passa uma porcentagem para os aspectos de horizontais e/ou verticais da mudança. Todos esses métodos estáticos retornam um objeto recém-criado MoveSettings que você pode usar para especificar o comportamento de movimentação de um controle.
+1. Para o primeiro controle ao qual você deseja adicionar comportamento dinâmico, use os métodos estáticos na classe de layout dinâmico para criar a estrutura [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) que codifica a maneira como o controle deve ser ajustado. Você faz isso primeiro escolhendo o método estático apropriado: [CMFCDynamicLayout:: MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout:: MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout:: MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)ou [CMFCDynamicLayout:: MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Você passa uma porcentagem para os aspectos horizontais e/ou verticais da movimentação. Todos esses métodos estáticos retornam um objeto MoveSettings recém-criado que você pode usar para especificar o comportamento de movimentação de um controle.
 
-   Tenha em mente que se movem de 100 significa que exatamente como a caixa de diálogo muda de tamanho, o que faz com que a borda do controle para se manter uma distância fixa da nova borda.
+   Tenha em mente que 100 significa mover exatamente o tamanho da caixa de diálogo, o que faz com que a borda do controle permaneça uma distância fixa da nova borda.
 
     ```cpp
     MoveSettings moveSettings = CMFCDynamicLayout::MoveHorizontal(100);
     ```
 
-1. Fazer a mesma coisa para o comportamento de tamanho, que usa o [SizeSettings](../mfc/reference/cmfcdynamiclayout-class.md#sizesettings_structure) tipo. Por exemplo, para especificar que um controle não altera tamanho quando a caixa de diálogo é redimensionado, use o seguinte código:
+1. Faça a mesma coisa para o comportamento de tamanho, que usa o tipo [SizeSettings](../mfc/reference/cmfcdynamiclayout-class.md#sizesettings_structure) . Por exemplo, para especificar que um controle não altera o tamanho quando a caixa de diálogo é redimensionada, use o seguinte código:
 
     ```cpp
     SizeSettings sizeSettings = CMFCDynamicLayout::SizeNone();
     ```
 
-1. Adicionar o controle para o Gerenciador de layout dinâmico usando o [CMFCDynamicLayout::AddItem](../mfc/reference/cmfcdynamiclayout-class.md#additem) método. Há duas sobrecargas para as diferentes maneiras de especificar o controle desejado. Uma usa o identificador do controle de janela (HWND), e a outra usa a ID do controle.
+1. Adicione o controle ao Gerenciador de layout dinâmico usando o método [CMFCDynamicLayout:: AddItem](../mfc/reference/cmfcdynamiclayout-class.md#additem) . Há duas sobrecargas para diferentes maneiras de especificar o controle desejado. Um usa o identificador de janela do controle (HWND) e o outro usa a ID de controle.
 
     ```cpp
     dynamicLayout->AddItem(hWndControl,
@@ -83,33 +83,33 @@ O procedimento anterior é útil para especificar propriedades de layout dinâmi
     sizeSettings);
     ```
 
-1. Repita para cada controle que precisa ser movida ou redimensionada.
+1. Repita para cada controle que precisa ser movido ou redimensionado.
 
-1. Se necessário, poderá usar o [CMFCDynamicLayout::HasItem](../mfc/reference/cmfcdynamiclayout-class.md#hasitem) método para determinar se um controle já está na lista de controles sujeitas a alterações de layout dyamic, ou o [CMFCDynamicLayout::IsEmpty](../mfc/reference/cmfcdynamiclayout-class.md#isempty) método para determinar se há quaisquer controles que estão sujeitos a alterações.
+1. Se necessário, pode usar o método [CMFCDynamicLayout:: HasItem](../mfc/reference/cmfcdynamiclayout-class.md#hasitem) para determinar se um controle já está na lista de controles que estão sujeitos a alterações de layout dinâmico ou o método [CMFCDynamicLayout:: IsEmpty](../mfc/reference/cmfcdynamiclayout-class.md#isempty) para determinar se há algum controle que estão sujeitos a alterações.
 
-1. Para habilitar o layout da caixa de diálogo, chame o [CWnd::EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) método.
+1. Para habilitar o layout da caixa de diálogo, chame o método [CWnd:: EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) .
 
     ```cpp
     pDialog->EnableDynamicLayout(TRUE);
     ```
 
-1. Na próxima vez que o usuário o redimensiona a caixa de diálogo, o [CMFCDynamicLayout::Adjust](../mfc/reference/cmfcdynamiclayout-class.md#adjust) método é chamado, que realmente aplica as configurações.
+1. Na próxima vez que o usuário redimensionar a caixa de diálogo, o método [CMFCDynamicLayout:: ADJUST](../mfc/reference/cmfcdynamiclayout-class.md#adjust) será chamado, o que realmente aplicará as configurações.
 
-1. Se você quiser desabilitar layout dinâmico, chame [CWnd::EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) com **falso** usada para o *bAtivado* parâmetro.
+1. Se você quiser desabilitar o layout dinâmico, chame [CWnd:: EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) com **false** como para o parâmetro *bEnabled* .
 
     ```cpp
     pDialog->EnableDynamicLayout(FALSE);
     ```
 
-#### <a name="to-set-the-dynamic-layout-programmatically-from-a-resource-file"></a>Para definir o layout dinâmico por meio de programação de um arquivo de recurso
+#### <a name="to-set-the-dynamic-layout-programmatically-from-a-resource-file"></a>Para definir o layout dinâmico programaticamente de um arquivo de recurso
 
-1. Use o [CMFCDynamicLayout::MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical) método para especificar um nome de recurso no arquivo de script de recurso relevante (arquivo. rc) que especifica as informações de layout dinâmico, como no exemplo a seguir:
+1. Use o método [CMFCDynamicLayout:: MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical) para especificar um nome de recurso no arquivo de script de recurso relevante (arquivo. rc) que especifica informações de layout dinâmico, como no exemplo a seguir:
 
     ```cpp
     dynamicLayout->LoadResource("IDD_DIALOG1");
     ```
 
-   O recurso denominado deve fazer referência a uma caixa de diálogo que contém informações de layout na forma de um **AFX_DIALOG_LAYOUT** entrada no arquivo de recurso, como no exemplo a seguir:
+   O recurso nomeado deve fazer referência a uma caixa de diálogo que contém informações de layout na forma de uma entrada **AFX_DIALOG_LAYOUT** no arquivo de recurso, como no exemplo a seguir:
 
     ```RC
     /////////////////////////////////////////////////////////////////////////////
@@ -147,4 +147,4 @@ O procedimento anterior é útil para especificar propriedades de layout dinâmi
 [Classes de controle](../mfc/control-classes.md)<br/>
 [Classes da caixa de diálogo](../mfc/dialog-box-classes.md)<br/>
 [Editor de caixa de diálogo](../windows/dialog-editor.md)<br/>
-[Layout do diálogo dinâmico para MFC no Visual C++ 2015](https://mariusbancila.ro/blog/2015/07/27/dynamic-dialog-layout-for-mfc-in-visual-c-2015/)
+[Layout de caixa de diálogo dinâmico para C++ MFC no Visual 2015](https://mariusbancila.ro/blog/2015/07/27/dynamic-dialog-layout-for-mfc-in-visual-c-2015/)

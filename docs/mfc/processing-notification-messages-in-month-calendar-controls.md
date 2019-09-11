@@ -8,26 +8,26 @@ helpviewer_keywords:
 - notifications [MFC], for CMonthCalCtrl
 - notifications [MFC], month calendar control
 ms.assetid: 607c3e90-0756-493b-9503-ce835a50c7ab
-ms.openlocfilehash: fc0bb475a95450c281c92b500083c9502df50931
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 452d24bf1ffd157366f357a510e8c8cfaad28d91
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346138"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908077"
 ---
 # <a name="processing-notification-messages-in-month-calendar-controls"></a>Processando mensagens de notificação em controles de calendário mensal
 
-Conforme os usuários interagem com o controle de calendário mensal (seleção das datas e/ou exibir um mês diferente), o controle (`CMonthCalCtrl`) envia mensagens de notificação à sua janela pai, normalmente, um objeto de exibição ou a caixa de diálogo. Se você quiser fazer algo em resposta, lidar com essas mensagens. Por exemplo, quando o usuário seleciona um novo mês para exibir, você pode fornecer um conjunto de datas que devem ser enfatizados.
+À medida que os usuários interagem com o controle de calendário mensal (selecionando datas e/ou exibindo um`CMonthCalCtrl`mês diferente), o controle () envia mensagens de notificação para sua janela pai, geralmente uma exibição ou objeto de caixa de diálogo. Manipule essas mensagens se desejar fazer algo em resposta. Por exemplo, quando o usuário seleciona um novo mês para exibição, você pode fornecer um conjunto de datas que devem ser enfatizadas.
 
-Use a janela Propriedades para adicionar manipuladores de notificação para a classe pai para essas mensagens que você deseja implementar.
+Use o [Assistente de classe](reference/mfc-class-wizard.md) para adicionar manipuladores de notificação à classe pai para as mensagens que você deseja implementar.
 
 A lista a seguir descreve as várias notificações enviadas pelo controle de calendário mensal.
 
-- Informações de solicitações de MCN_GETDAYSTATE sobre quais dias devem ser exibidos em negrito. Para obter informações sobre como manipular essa notificação, consulte [definindo o estado do dia de um controle de calendário mensal](../mfc/setting-the-day-state-of-a-month-calendar-control.md).
+- MCN_GETDAYSTATE solicita informações sobre quais dias devem ser exibidos em negrito. Para obter informações sobre como lidar com essa notificação, consulte [definindo o estado do dia de um controle de calendário mensal](../mfc/setting-the-day-state-of-a-month-calendar-control.md).
 
-- MCN_SELCHANGE notifica o pai que a data selecionada ou intervalo de data foi alterada.
+- MCN_SELCHANGE notifica o pai de que a data ou o intervalo selecionado da data foi alterado.
 
-- MCN_SELECT notifica o pai que foi feita uma seleção de data explícita.
+- MCN_SELECT notifica o pai de que uma seleção de data explícita foi feita.
 
 ## <a name="see-also"></a>Consulte também
 

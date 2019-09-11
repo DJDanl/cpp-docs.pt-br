@@ -1,18 +1,18 @@
 ---
 title: Criando um aplicativo MFC com base em formulários
-ms.date: 08/19/2019
+ms.date: 09/09/2019
 f1_keywords:
 - vc.appwiz.mfcforms.project
 helpviewer_keywords:
 - applications [MFC], forms-based
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
-ms.openlocfilehash: 95c7f6061933245b2eb2b796e7a678e1e6b010a6
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.openlocfilehash: 1dbbc5c29f85ced846cb3e07a02a5d6a55c94b20
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108470"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908053"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Criando um aplicativo MFC com base em formulários
 
@@ -30,7 +30,7 @@ Qualquer aplicativo baseado em caixa de diálogo, por definição, é baseado em
 
 A classe base para aplicativos baseados em formulário é [CFormView](cformview-class.md). Se seu aplicativo tiver suporte a banco de dados, você também poderá selecionar qualquer classe derivada de `CFormView`. Um formulário é qualquer janela derivada de `CFormView` ou de qualquer classe que herda de `CFormView`.
 
-Mesmo que você use uma classe base como [cvisualização](cview-class.md), você pode posteriormente tornar seus aplicativos baseados em formulários [adicionando uma classe MFC](adding-an-mfc-class.md) derivada de `CFormView` e marcando a caixa de seleção **gerar recursos modelodedoc** no [Assistente de classe do MFC](document-template-strings-mfc-add-class-wizard.md).
+Mesmo que você use uma classe base como [cvisualização](cview-class.md), você pode posteriormente tornar seus aplicativos baseados em formulários [adicionando uma classe MFC](adding-an-mfc-class.md) derivada de `CFormView`.
 
 Depois de terminar com o assistente, o projeto será aberto e, se você `CFormView` tiver selecionado (ou uma classe herdada de `CFormView`) como sua classe base ou se tiver criado um aplicativo baseado em caixa C++ de diálogo, o Visual abrirá o editor de caixa de diálogo. Neste ponto, você está pronto para criar seu primeiro formulário.
 

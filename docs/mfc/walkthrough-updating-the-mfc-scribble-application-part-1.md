@@ -1,6 +1,6 @@
 ---
 title: 'Passo a passo: Atualizando o aplicativo de rabisco do MFC (parte 1)'
-ms.date: 04/25/2019
+ms.date: 09/09/2019
 helpviewer_keywords:
 - examples [MFC], update existing application
 - ribbon UI, porting to
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 8211111e3f9e6fff2377a62689e6f8b1e0e40990
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 23ddf92514674c32e28c259c4c7aa8f742302485
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630420"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907415"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Passo a passo: Atualizando o aplicativo de rabisco do MFC (parte 1)
 
@@ -199,6 +199,7 @@ Uma faixa consiste no botão do **aplicativo** , que é o botão grande no lado 
 
 1. A modificação a seguir cria um botão sair que aparece na parte inferior do menu do botão do **aplicativo** .
 
+   1. Escolha a guia **modo de exibição de recursos** em **Gerenciador de soluções**.
    1. Na janela **Propriedades** , clique nas reticências ( **...** ) ao lado do **botão** para abrir o **Editor de itens**.
 
    1. Com o **botão** tipo de **Item** selecionado, clique em **Adicionar** para adicionar um botão. Altere a legenda `E&xit`para , ID `ID_APP_EXIT`para , imagem `8`para.
