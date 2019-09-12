@@ -71,7 +71,7 @@ Um *serviço* do Windows é um programa que pode ser executado em segundo plano 
 
 ## <a name="sdks-libraries-and-header-files"></a>SDKs, bibliotecas e arquivos de cabeçalho
 
-O Visual Studio inclui a biblioteca de tempo de execução C ( C++ CRT), a biblioteca padrão e outras bibliotecas específicas da Microsoft. A maioria das pastas de inclusão que contêm arquivos de cabeçalho para essas bibliotecas está localizada no diretório de instalação do Visual Studio, na pasta \VC\ Os arquivos de cabeçalho do Windows e do CRT são encontrados na pasta de instalação do SDK do Windows.
+O Visual Studio inclui a biblioteca de tempo de execução C ( C++ CRT), a biblioteca padrão e outras bibliotecas específicas da Microsoft. A maioria das pastas de inclusão que contêm arquivos de cabeçalho para essas bibliotecas está localizada no diretório de instalação do Visual Studio, na pasta \VC Os arquivos de cabeçalho do Windows e do CRT são encontrados na pasta de instalação do SDK do Windows.
 
 O [Gerenciador de pacotes do Vcpkg](../build/vcpkg.md) permite que você instale facilmente centenas de bibliotecas de software livre de terceiros para o Windows.
 
