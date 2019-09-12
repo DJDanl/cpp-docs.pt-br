@@ -1,31 +1,35 @@
 ---
-title: 'Como: Marshaling de cadeias de caracteres usando PInvoke'
+title: 'Como: Empacotar cadeias de caracteres usando PInvoke'
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/09/2016
 helpviewer_keywords:
 - interop [C++], strings
 - marshaling [C++], strings
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-ms.openlocfilehash: f316e33f1711ea0053fb68c0af7e89f90b793e05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3b39a4ce40de2a26ffba4f52ab1e39c94767089
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404397"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907562"
 ---
-# <a name="how-to-marshal-strings-using-pinvoke"></a>Como: Marshaling de cadeias de caracteres usando PInvoke
+# <a name="how-to-marshal-strings-using-pinvoke"></a>Como: Empacotar cadeias de caracteres usando PInvoke
 
-Este tópico explica como nativas funções que aceitam cadeias de caracteres de estilo C podem ser chamadas usando a cadeia de caracteres CLR digite System:: string usando o suporte de invocação de plataforma do .NET Framework. Programadores de Visual C++ são incentivados a usar os recursos de interoperabilidade C++ em vez disso (quando possível) como P/Invoke oferece pouco tempo de compilação relatório de erro, não é fortemente tipado e pode ser enfadonho implementar. Se a API não gerenciada é empacotada como uma DLL e o código-fonte não está disponível, o P/Invoke é a única opção, mas caso contrário, consulte [usando Interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+Este tópico explica como as funções nativas que aceitam cadeias de caracteres C-style podem ser chamadas usando o tipo de String CLR System:: String usando o suporte à invocação de plataforma .NET Framework. Os C++ programadores visuais são incentivados a C++ usar os recursos de interoperabilidade (quando possível) porque P/Invoke fornece pouco relatório de erros em tempo de compilação, não é de tipo seguro e pode ser entediante de implementar. Se a API não gerenciada for empacotada como uma DLL e o código-fonte não estiver disponível, P/Invoke será a única opção, mas, caso contrário, consulte [usando C++ a interoperabilidade (o PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
-Gerenciado e cadeias de caracteres são dispostas diferente na memória, então a passagem de cadeias de caracteres de código gerenciado para funções não gerenciadas requer o <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo para instruir o compilador a inserir os mecanismos de conversão necessária para realizar marshaling dos dados de cadeia de caracteres corretamente e com segurança.
+Cadeias de caracteres gerenciadas e não gerenciadas são dispostas de forma diferente na memória; portanto, passar cadeias <xref:System.Runtime.InteropServices.MarshalAsAttribute> de caracteres de funções gerenciadas para não gerenciadas requer que o atributo instrua o compilador a inserir os mecanismos de conversão necessários para realizar o marshaling dos dados da cadeia corretamente e com segurança.
 
-Assim como acontece com funções que usam somente em tipos de dados intrínsecos <xref:System.Runtime.InteropServices.DllImportAttribute> é usada para declarar os pontos de entrada gerenciado para as funções nativas, mas, para passar cadeias de caracteres – em vez de definir esses pontos de entrada como se estivesse cadeias de caracteres de estilo C, um identificador para o <xref:System.String> tipo pode ser usado em vez disso. Isso solicita que o compilador a inserir o código que executa a conversão necessária. Para cada argumento de função em uma função não gerenciada que usa uma cadeia de caracteres, o <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo deve ser usado para indicar que o objeto de cadeia de caracteres deve ser empacotado para a função nativa como uma cadeia de caracteres de estilo C.
+Assim como as funções que usam apenas tipos de dados <xref:System.Runtime.InteropServices.DllImportAttribute> intrínsecos, é usada para declarar pontos de entrada gerenciados nas funções nativas, mas--para passar cadeias de caracteres – em vez de definir esses pontos de entrada como pegar <xref:System.String> cadeias de caracteres em estilo C, um identificador para o tipo pode ser usado em vez disso. Isso solicita que o compilador Insira o código que executa a conversão necessária. Para cada argumento de função em uma função não gerenciada que usa uma cadeia de <xref:System.Runtime.InteropServices.MarshalAsAttribute> caracteres, o atributo deve ser usado para indicar que o objeto de cadeia de caracteres deve ser empacotado para a função nativa como uma cadeia de estilo C.
+
+O marshaler encapsula a chamada para a função não gerenciada em uma rotina de wrapper oculta que fixa e copia a cadeia de caracteres gerenciada em uma cadeia de caracteres alocada localmente no contexto não gerenciado, que é passada para a função não gerenciada. Quando a função não gerenciada retorna, o wrapper exclui o recurso ou, se ele estava na pilha, ele é recuperado quando o wrapper sai do escopo. A função não gerenciada não é responsável por essa memória. O código não gerenciado cria e exclui apenas a memória no heap configurado por seu próprio CRT, portanto, nunca há um problema com o marshaler usando uma versão do CRT diferente.
+
+Se a função não gerenciada retornar uma cadeia de caracteres, como um valor de retorno ou um parâmetro de saída, o marshaler a copiará para uma nova cadeia de caracteres gerenciada e, em seguida, liberará a memória. Para obter mais informações, consulte [comportamento de marshaling padrão](/dotnet/framework/interop/default-marshaling-behavior) e [empacotamento de dados com a invocação de plataforma](/dotnet/framework/interop/marshaling-data-with-platform-invoke).
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir consiste em uma não gerenciado e um módulo gerenciado. O módulo não gerenciado é uma DLL que define uma função chamada TakesAString que aceita uma cadeia de caracteres ANSI C-style na forma de um char *. O módulo gerenciado é um aplicativo de linha de comando que importa a função TakesAString, mas define como tirar uma System. String gerenciada, em vez de um char\*. O <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo é usado para indicar como a cadeia de caracteres gerenciada deve ser empacotada quando TakesAString é chamado.
+O código a seguir consiste em um módulo não gerenciado e um gerenciado. O módulo não gerenciado é uma DLL que define uma função chamada TakesAString que aceita uma cadeia de caracteres ANSI no estilo C na forma de um Char *. O módulo gerenciado é um aplicativo de linha de comando que importa a função TakesAString, mas a define como pegar um System. String gerenciado em vez de\*um Char. O <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo é usado para indicar como a cadeia de caracteres gerenciada deve ser empacotada quando TakesAString é chamado.
 
 ```
 // TraditionalDll2.cpp
@@ -73,9 +77,9 @@ int main() {
 }
 ```
 
-Essa técnica faz com que uma cópia da cadeia de caracteres a ser construído no heap não gerenciada, para que as alterações feitas à cadeia de caracteres pela função nativa não serão refletidas na cópia da cadeia de caracteres gerenciada.
+Essa técnica faz com que uma cópia da cadeia de caracteres seja construída no heap não gerenciado, portanto, as alterações feitas na cadeia de caracteres pela função nativa não serão refletidas na cópia gerenciada da cadeia de caracteres.
 
-Observe que nenhuma parte da DLL é exposta ao código gerenciado por meio do tradicional # diretiva include. Na verdade, a DLL é acessada no tempo de execução, para que os problemas com as funções importadas com `DllImport` não serão detectados em tempo de compilação.
+Observe que nenhuma parte da DLL é exposta ao código gerenciado por meio da diretiva de #include tradicional. Na verdade, a dll é acessada somente em tempo de execução, de modo `DllImport` que os problemas com funções importadas com o não serão detectados no momento da compilação.
 
 ## <a name="see-also"></a>Consulte também
 

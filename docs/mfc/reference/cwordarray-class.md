@@ -1,6 +1,6 @@
 ---
 title: Classe CWordArray
-ms.date: 11/04/2016
+ms.date: 09/07/2019
 f1_keywords:
 - CWordArray
 - AFXCOLL/CWordArray
@@ -42,16 +42,16 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: 945a77436f41f4981392e583c831723e667f867c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c136bbb14e0d7cffc604813731b6f87ba18063cf
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323603"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907906"
 ---
 # <a name="cwordarray-class"></a>Classe CWordArray
 
-Dá suporte a matrizes de palavras de 16 bits.
+Oferece suporte a matrizes de palavras de 16 bits.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -61,7 +61,7 @@ class CWordArray : public CObject
 
 ## <a name="members"></a>Membros
 
-As funções membro da `CWordArray` são semelhantes às funções de membro da classe [CObArray](../../mfc/reference/cobarray-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CObArray` para obter a função específica de membro. Onde quer que você vê uma [CObject](../../mfc/reference/cobject-class.md) ponteiro como um parâmetro de função ou um valor de retorno, substituir uma palavra.
+As funções de membro `CWordArray` do são semelhantes às funções de membro da classe [CObArray](../../mfc/reference/cobarray-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CObArray` para obter a função específica de membro. Sempre que você vir um ponteiro [CObject](../../mfc/reference/cobject-class.md) como um parâmetro de função ou valor de retorno, substitua uma palavra.
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
@@ -80,7 +80,7 @@ por exemplo, traduz para
 |Nome|Descrição|
 |----------|-----------------|
 |[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Inclui um elemento ao final da matriz; aumenta a matriz quando necessário.|
-|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Acrescenta outra matriz à matriz; aumenta a matriz quando necessário.|
+|[CObArray:: Append](../../mfc/reference/cobarray-class.md#append)|Acrescenta outra matriz à matriz; aumenta a matriz quando necessário.|
 |[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|Copia outra matriz à matriz; aumenta a matriz quando necessário.|
 |[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Retorna uma referência temporária ao ponteiro do elemento dentro da matriz.|
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libera toda memória não usada acima do limite superior atual.|
@@ -101,18 +101,18 @@ por exemplo, traduz para
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CObArray::operator &#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|Define ou obtém o elemento no índice especificado.|
+|[Operador CObArray::&#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|Define ou obtém o elemento no índice especificado.|
 
 ## <a name="remarks"></a>Comentários
 
-`CWordArray` incorpora o [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) macro para dar suporte à serialização e despejo de seus elementos. Se uma matriz de palavras é armazenada em um arquivo, com um operador de inserção sobrecarregado ou com o [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) função de membro, cada elemento é, por sua vez, serializado.
+`CWordArray`incorpora a macro [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) para dar suporte à serialização e ao despejo de seus elementos. Se uma matriz de palavras for armazenada em um arquivo morto, com um operador de inserção sobrecarregado ou com a função de membro [CObject:: Serialize](../../mfc/reference/cobject-class.md#serialize) , cada elemento será, por sua vez, serializado.
 
 > [!NOTE]
 >  Antes de usar uma matriz, utilize `SetSize` para estabelecer seu tamanho e alocar memória para ela. Se `SetSize` não for utilizado, incluir elementos à matriz fará com que ela seja frequentemente realocada e copiada. Realocações e cópias frequentes são ineficientes e podem fragmentar a memória.
 
-Se você precisar de um despejo de elementos individuais na matriz, você deve definir a profundidade do contexto de despejo para 1 ou maior.
+Se você precisar de um despejo de elementos individuais na matriz, deverá definir a profundidade do contexto de despejo como 1 ou maior.
 
-Para obter mais informações sobre como usar `CWordArray`, consulte o artigo [coleções](../../mfc/collections.md).
+Para obter mais informações sobre `CWordArray`como usar o, consulte o artigo [coleções](../../mfc/collections.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -122,11 +122,11 @@ Para obter mais informações sobre como usar `CWordArray`, consulte o artigo [c
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** & amp;lt;1}afxcoll.h
+**Cabeçalho:** afxcoll. h
 
-##  <a name="icommandsource_interface"></a>  Interface ICommandSource
+##  <a name="icommandsource_interface"></a>Interface ICommand
 
-Gerencia os comandos enviados de um objeto de origem de comando para um controle de usuário.
+Gerencia comandos enviados de um objeto de origem de comando para um controle de usuário.
 
 ```
 interface class ICommandSource
@@ -134,15 +134,15 @@ interface class ICommandSource
 
 ### <a name="remarks"></a>Comentários
 
-Ao hospedar um controle de usuário em uma exibição do MFC [classe CWinFormsView](../../mfc/reference/cwinformsview-class.md) comandos de rotas e atualização de comando mensagens de interface do usuário para o controle de usuário para permitir a manipulação de comandos MFC (por exemplo, itens de menu do quadro e botões da barra de ferramentas). Com a implementação, você dar o controle de usuário uma referência para o `ICommandSource` objeto.
+Quando você hospeda um controle de usuário em uma exibição do MFC, a [classe CWinFormsView](../../mfc/reference/cwinformsview-class.md) roteia comandos e atualiza mensagens de interface do usuário de comando para o controle de usuários para permitir que ele manipule comandos do MFC (por exemplo, itens de menu de quadro e botões da barra de ferramentas). Ao implementar, você dá ao usuário controle uma referência ao `ICommandSource` objeto.
 
-Confira [Como Adicione o roteamento de comando para o controle do Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para obter um exemplo de como usar `ICommandTarget`.
+Confira [Como Adicione roteamento de comando ao controle](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) de Windows Forms para obter um exemplo de como usar. `ICommandTarget`
 
-Para obter mais informações sobre como usar o Windows Forms, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Para obter mais informações sobre como usar Windows Forms, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 ##  <a name="addcommandhandler"></a>  ICommandSource::AddCommandHandler
 
-Adiciona um manipulador de comandos para um objeto de fonte de comando.
+Adiciona um manipulador de comando a um objeto de origem de comando.
 
 ```
 void AddCommandHandler(
@@ -153,20 +153,20 @@ void AddCommandHandler(
 ### <a name="parameters"></a>Parâmetros
 
 *cmdID*<br/>
-A ID de comando.
+A ID do comando.
 
 *cmdHandler*<br/>
 Um identificador para o método de manipulador de comando.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método adiciona o manipulador de comandos *cmdHandler* ao objeto de origem de comando e mapeia o manipulador a ser *cmdID*.
+Esse método adiciona o manipulador de comandos *cmdHandler* ao objeto de origem de comando e mapeia o manipulador para *cmdID*.
 
-Confira [Como Adicione o roteamento de comando para o controle do Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para obter um exemplo de como usar `AddCommandHandler`.
+Confira [Como Adicione roteamento de comando ao controle](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) de Windows Forms para obter um exemplo de como usar. `AddCommandHandler`
 
 ##  <a name="addcommandrangehandler"></a>  ICommandSource::AddCommandRangeHandler
 
-Adiciona um grupo de manipuladores de comandos para um objeto de fonte de comando.
+Adiciona um grupo de manipuladores de comando a um objeto de origem de comando.
 
 ```
 void AddCommandRangeHandler(
@@ -178,21 +178,21 @@ void AddCommandRangeHandler(
 ### <a name="parameters"></a>Parâmetros
 
 *cmdIDMin*<br/>
-O índice de início do intervalo de IDs de comando.
+O índice inicial do intervalo de ID de comando.
 
 *cmdIDMax*<br/>
-O índice final do intervalo de IDs de comando.
+O índice final do intervalo de ID de comando.
 
 *cmdHandler*<br/>
-Um identificador para o método do manipulador de mensagem para o qual os comandos são mapeados.
+Um identificador para o método de manipulador de mensagens para o qual os comandos são mapeados.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método mapeia um intervalo contíguo de IDs de comando para um manipulador de mensagens única e o adiciona ao objeto de fonte de comando. Isso é usado para lidar com um grupo de botões com um método.
+Esse método mapeia um intervalo contíguo de IDs de comando para um único manipulador de mensagens e o adiciona ao objeto de origem de comando. Isso é usado para lidar com um grupo de botões relacionados com um método.
 
 ##  <a name="addcommandrangeuihandler"></a>  ICommandSource::AddCommandRangeUIHandler
 
-Adiciona um grupo de manipuladores de mensagens de comando de interface do usuário para um objeto de fonte de comando.
+Adiciona um grupo de manipuladores de mensagens de comando da interface do usuário a um objeto de origem de comando.
 
 ```
 void AddCommandRangeUIHandler(
@@ -204,21 +204,21 @@ void AddCommandRangeUIHandler(
 ### <a name="parameters"></a>Parâmetros
 
 *cmdIDMin*<br/>
-O índice de início do intervalo de IDs de comando.
+O índice inicial do intervalo de ID de comando.
 
 *cmdIDMax*<br/>
-O índice final do intervalo de IDs de comando.
+O índice final do intervalo de ID de comando.
 
 *cmdHandler*<br/>
-Um identificador para o método do manipulador de mensagem para o qual os comandos são mapeados.
+Um identificador para o método de manipulador de mensagens para o qual os comandos são mapeados.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método mapeia um intervalo contíguo de IDs de comando para um manipulador de mensagens de comando de interface de usuário único e o adiciona ao objeto de fonte de comando. Isso é usado para lidar com um grupo de botões com um método.
+Esse método mapeia um intervalo contíguo de IDs de comando para um único manipulador de mensagens de comando de interface de usuário e a adiciona ao objeto de origem de comando. Isso é usado para lidar com um grupo de botões relacionados com um método.
 
 ##  <a name="addcommanduihandler"></a>  ICommandSource::AddCommandUIHandler
 
-Adiciona um manipulador de mensagens de comando de interface do usuário para um objeto de fonte de comando.
+Adiciona um manipulador de mensagens de comando da interface do usuário a um objeto de origem de comando.
 
 ```
 void AddCommandUIHandler(
@@ -229,18 +229,18 @@ void AddCommandUIHandler(
 ### <a name="parameters"></a>Parâmetros
 
 *cmdID*<br/>
-A ID de comando.
+A ID do comando.
 
 *cmdUIHandler*<br/>
-Um identificador para o método do manipulador de mensagem do comando de interface de usuário.
+Um identificador para o método do manipulador de mensagens de comando da interface do usuário.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método adiciona o manipulador de mensagens de comando de interface do usuário *cmdHandler* ao objeto de origem de comando e mapeia o manipulador a ser *cmdID*.
+Esse método adiciona o manipulador de mensagens de comando da interface do usuário *cmdHandler* ao objeto de origem de comando e mapeia o manipulador para *cmdID*.
 
-##  <a name="postcommand"></a>  ICommandSource::PostCommand
+##  <a name="postcommand"></a>ICommand::P ostCommand
 
-Posta uma mensagem sem aguardar que ele seja processado.
+Posta uma mensagem sem esperar que ela seja processada.
 
 ```
 void PostCommand(unsigned int command);
@@ -253,11 +253,11 @@ A ID de comando da mensagem a ser postada.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método assincronamente posta a mensagem mapeada para a ID especificada por *comando*. Ele chama [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) colocar a mensagem na fila de mensagens da janela e o retorna sem aguardar a janela correspondente processar a mensagem.
+Esse método posta de forma assíncrona a mensagem mapeada para a ID especificada pelo *comando*. Ele chama [CWnd::P ostmessage](../../mfc/reference/cwnd-class.md#postmessage) para colocar a mensagem na fila de mensagens da janela e, em seguida, retorna sem esperar que a janela correspondente processe a mensagem.
 
 ##  <a name="removecommandhandler"></a>  ICommandSource::RemoveCommandHandler
 
-Remove um manipulador de comandos de um objeto de origem do comando.
+Remove um manipulador de comandos de um objeto de origem de comando.
 
 ```
 void RemoveCommandHandler(unsigned int cmdID);
@@ -266,15 +266,15 @@ void RemoveCommandHandler(unsigned int cmdID);
 ### <a name="parameters"></a>Parâmetros
 
 *cmdID*<br/>
-A ID de comando.
+A ID do comando.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método Remove o manipulador de comandos mapeado para *cmdID* do objeto de origem de comando.
+Esse método remove o manipulador de comandos mapeado para *cmdID* do objeto de origem de comando.
 
 ##  <a name="removecommandrangehandler"></a>  ICommandSource::RemoveCommandRangeHandler
 
-Remove um grupo de manipuladores de comandos de um objeto de origem do comando.
+Remove um grupo de manipuladores de comando de um objeto de origem de comando.
 
 ```
 void RemoveCommandRangeUIHandler(
@@ -285,18 +285,18 @@ void RemoveCommandRangeUIHandler(
 ### <a name="parameters"></a>Parâmetros
 
 *cmdIDMin*<br/>
-O índice de início do intervalo de IDs de comando.
+O índice inicial do intervalo de ID de comando.
 
 *cmdIDMax*<br/>
-O índice final do intervalo de IDs de comando.
+O índice final do intervalo de ID de comando.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método Remove um grupo de manipuladores de mensagens, mapeados para as IDs de comando especificadas pelo *cmdIDMin* e *cmdIDMax*, do objeto de origem de comando.
+Esse método Remove um grupo de manipuladores de mensagens, mapeados para as IDs de comando especificadas por *cmdIDMin* e *cmdIDMax*, do objeto de origem de comando.
 
 ##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler
 
-Remove um grupo de manipuladores de mensagens de comando de interface do usuário de um objeto de origem do comando.
+Remove um grupo de manipuladores de mensagens de comando da interface do usuário de um objeto de origem de comando.
 
 ```
 void RemoveCommandRangeUIHandler(
@@ -307,18 +307,18 @@ void RemoveCommandRangeUIHandler(
 ### <a name="parameters"></a>Parâmetros
 
 *cmdIDMin*<br/>
-O índice de início do intervalo de IDs de comando.
+O índice inicial do intervalo de ID de comando.
 
 *cmdIDMax*<br/>
-O índice final do intervalo de IDs de comando.
+O índice final do intervalo de ID de comando.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método Remove um grupo de usuário interface comando de manipuladores de mensagens, mapeados para as IDs de comando especificadas pelo *cmdIDMin* e *cmdIDMax*, do objeto de origem de comando.
+Esse método Remove um grupo de manipuladores de mensagens de comando da interface do usuário, mapeados para as IDs de comando especificadas por *cmdIDMin* e *cmdIDMax*, do objeto de origem de comando.
 
 ##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler
 
-Remove um manipulador de mensagens de comando de interface do usuário de um objeto de origem do comando.
+Remove um manipulador de mensagens de comando da interface do usuário de um objeto de origem de comando.
 
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
@@ -327,15 +327,15 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ### <a name="parameters"></a>Parâmetros
 
 *cmdID*<br/>
-A ID de comando.
+A ID do comando.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método Remove o manipulador de mensagens de comando do usuário interface mapeado para *cmdID* do objeto de origem de comando.
+Esse método remove o manipulador de mensagens de comando da interface do usuário mapeado para *cmdID* do objeto de origem de comando.
 
-##  <a name="sendcommand"></a>  ICommandSource::SendCommand
+##  <a name="sendcommand"></a>ICommand:: SendCommand
 
-Envia uma mensagem e aguarda até que ele seja processado antes de retornar.
+Envia uma mensagem e aguarda que ela seja processada antes de retornar.
 
 ```
 void SendCommand(unsigned int command);
@@ -348,11 +348,11 @@ A ID de comando da mensagem a ser enviada.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia de forma síncrona a mensagem mapeada para a ID especificada por *comando*. Ele chama [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) colocar a mensagem na fila de mensagens da janela e o aguarda até que esse procedimento de janela processou a mensagem antes de retornar.
+Esse método envia de forma síncrona a mensagem mapeada para a ID especificada pelo *comando*. Ele chama [CWnd:: SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) para colocar a mensagem na fila de mensagens da janela e aguarda até que o procedimento da janela tenha processado a mensagem antes de retornar.
 
-##  <a name="icommandtarget_interface"></a>  ICommandTarget Interface
+##  <a name="icommandtarget_interface"></a>Interface ICommandTarget
 
-Fornece um controle de usuário com uma interface para receber comandos de um objeto de fonte de comando.
+Fornece um controle de usuário com uma interface para receber comandos de um objeto de origem de comando.
 
 ```
 interface class ICommandTarget
@@ -360,11 +360,11 @@ interface class ICommandTarget
 
 ### <a name="remarks"></a>Comentários
 
-Ao hospedar um controle de usuário em uma exibição do MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) comandos de rotas e atualização de comando mensagens de interface do usuário para o controle de usuário para permitir a manipulação de comandos MFC (por exemplo, itens de menu do quadro e botões da barra de ferramentas). Implementando `ICommandTarget`, você dar o controle de usuário, uma referência ao objeto.
+Quando você hospeda um controle de usuário em uma exibição do MFC, o [CWinFormsView](../../mfc/reference/cwinformsview-class.md) roteia comandos e atualiza mensagens da interface do usuário do comando para o controle de usuários para permitir que ele manipule comandos do MFC (por exemplo, itens de menu de quadro e botões da barra de ferramentas). Ao implementar `ICommandTarget`, você dá ao usuário controle uma referência ao objeto.
 
-Confira [Como Adicione o roteamento de comando para o controle do Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para obter um exemplo de como usar `ICommandTarget`.
+Confira [Como Adicione roteamento de comando ao controle](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) de Windows Forms para obter um exemplo de como usar. `ICommandTarget`
 
-Para obter mais informações sobre como usar o Windows Forms, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Para obter mais informações sobre como usar Windows Forms, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 ##  <a name="initialize"></a>  ICommandTarget::Initialize
 
@@ -377,17 +377,17 @@ void Initialize(ICommandSource^ cmdSource);
 ### <a name="parameters"></a>Parâmetros
 
 *cmdSource*<br/>
-Um identificador para o objeto de fonte de comando.
+Um identificador para o objeto de origem de comando.
 
 ### <a name="remarks"></a>Comentários
 
-Ao hospedar um controle de usuário em uma exibição do MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) comandos de rotas e atualização de comando mensagens de interface do usuário para o controle de usuário para permitir a manipulação de comandos MFC.
+Quando você hospeda um controle de usuário em uma exibição do MFC, o [CWinFormsView](../../mfc/reference/cwinformsview-class.md) roteia comandos e atualiza mensagens de interface do usuário de comando para o controle de usuários para permitir que ele manipule comandos do MFC.
 
-Esse método inicializa o objeto de destino do comando e a associa o objeto de origem do comando especificado *cmdSource*. Ele deve ser chamado na implementação de classe do controle de usuário. Na inicialização, você deve registrar manipuladores de comandos com o objeto de fonte de comando chamando [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) no `Initialize` implementação. Confira [Como Adicione o roteamento de comando para o controle do Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para obter um exemplo de como usar `Initialize` para fazer isso.
+Esse método inicializa o objeto de destino de comando e o associa ao objeto de origem de comando especificado *cmdSource*. Ele deve ser chamado na implementação da classe de controle de usuário. Na inicialização, você deve registrar manipuladores de comando com o objeto de origem de comando chamando [ICommand:: AddCommandHandler](../../mfc/reference/icommandsource-interface.md) na `Initialize` implementação. Confira [Como Adicione roteamento de comando ao controle](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) de Windows Forms para obter um exemplo de como usar `Initialize` para fazer isso.
 
-##  <a name="icommandui_interface"></a>  ICommandUI Interface
+##  <a name="icommandui_interface"></a>Interface ICommandUI
 
-Gerencia os comandos de interface do usuário.
+Gerencia comandos da interface do usuário.
 
 ```
 interface class ICommandUI
@@ -395,19 +395,19 @@ interface class ICommandUI
 
 ### <a name="remarks"></a>Comentários
 
-Essa interface fornece métodos e propriedades que gerenciam os comandos de interface do usuário. `ICommandUI` é semelhante à [classe CCmdUI](../../mfc/reference/ccmdui-class.md), exceto que `ICommandUI` é usado para aplicativos MFC que interoperam com componentes do .NET.
+Essa interface fornece métodos e propriedades que gerenciam comandos de interface do usuário. `ICommandUI`é semelhante à [classe CCmdUI](../../mfc/reference/ccmdui-class.md), exceto que `ICommandUI` é usado para aplicativos MFC que interoperam com componentes .net.
 
-`ICommandUI` é usado dentro de um `ON_UPDATE_COMMAND_UI` manipulador em uma - classe derivada. Quando um usuário de um aplicativo ativa (seleciona ou cliques) será exibido um menu, cada item de menu como habilitado ou desabilitado. O destino de cada comando de menu fornece essas informações com a implementação de um `ON_UPDATE_COMMAND_UI` manipulador. Para cada um dos objetos de interface do usuário de comando em seu aplicativo, use a janela Propriedades para criar uma entrada de mapa de mensagem e o protótipo de função para cada manipulador.
+`ICommandUI`é usado dentro de `ON_UPDATE_COMMAND_UI` um manipulador em uma classe derivada. Quando um usuário de um aplicativo é ativado (seleciona ou clica em) um menu, cada item de menu é exibido como habilitado ou desabilitado. O destino de cada comando de menu fornece essas informações implementando `ON_UPDATE_COMMAND_UI` um manipulador. Para cada um dos objetos de interface do usuário de comando em seu aplicativo, use o [Assistente de classe](mfc-class-wizard.md) ou a janela **propriedades** (em **modo de exibição de classe**) para criar uma entrada de mapa de mensagem e um protótipo de função para cada manipulador.
 
-Para obter mais informações sobre como as `ICommandUI` interface é usada no roteamento de comando, consulte [como: Adicionar comando de controle de formulários do roteamento para o Windows](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Para obter mais informações sobre como `ICommandUI` a interface é usada no roteamento de comandos [, consulte Como: Adicione o roteamento de comando ao controle](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)de Windows Forms.
 
-Para obter mais informações sobre como usar o Windows Forms, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Para obter mais informações sobre como usar Windows Forms, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-Para obter mais informações sobre como os comandos de interface do usuário são gerenciados no MFC, consulte [classe CCmdUI](../../mfc/reference/ccmdui-class.md).
+Para obter mais informações sobre como os comandos da interface do usuário são gerenciados no MFC, consulte [classe CCmdUI](../../mfc/reference/ccmdui-class.md).
 
-##  <a name="check"></a>  ICommandUI::Check
+##  <a name="check"></a>ICommandUI:: verificar
 
-Define o item de interface do usuário para esse comando para o estado de seleção apropriadas.
+Define o item de interface do usuário para esse comando para o estado de verificação apropriado.
 
 ```
 property UICheckState Check;
@@ -415,17 +415,17 @@ property UICheckState Check;
 
 ### <a name="remarks"></a>Comentários
 
-Essa propriedade define o item de interface do usuário para esse comando para o estado de seleção apropriadas. Definir `Check` com os seguintes valores:
+Essa propriedade define o item de interface do usuário para esse comando para o estado de verificação apropriado. Defina `Check` os seguintes valores:
 
 |Termo|Definição|
 |----------|----------------|
-|0|Desmarque a opção|
+|0|Desmarque|
 |1|Azure Functions|
 |2|Definir indeterminado|
 
 ##  <a name="continuerouting"></a>  ICommandUI::ContinueRouting
 
-Informa ao mecanismo de roteamento de comando para continua a rotear a mensagem atual a cadeia de manipuladores.
+Informa ao mecanismo de roteamento de comando para continuar a rotear a mensagem atual para baixo na cadeia de manipuladores.
 
 ```
 void ContinueRouting();
@@ -433,11 +433,11 @@ void ContinueRouting();
 
 ### <a name="remarks"></a>Comentários
 
-Essa é uma função de membro avançado que deve ser usada em conjunto com um [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) manipulador que retorna FALSE. Para obter mais informações, consulte a Observação técnica [TN006: Mapas de mensagem](../../mfc/tn006-message-maps.md).
+Essa é uma função de membro avançada que deve ser usada em conjunto com um manipulador [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) que retorna false. Para obter mais informações, consulte a [nota técnica TN006: Mapas](../../mfc/tn006-message-maps.md)de mensagens.
 
-##  <a name="enabled"></a>  ICommandUI::Enabled
+##  <a name="enabled"></a>ICommandUI:: habilitado
 
-Habilita ou desabilita o item de interface do usuário para esse comando.
+Habilita ou desabilita o item de interface do usuário para este comando.
 
 ```
 property bool Enabled;
@@ -445,11 +445,11 @@ property bool Enabled;
 
 ### <a name="remarks"></a>Comentários
 
-Esta propriedade habilita ou desabilita o item de interface do usuário para esse comando. Definir `Enabled` como TRUE para habilitar o item, FALSE para desabilitá-lo.
+Essa propriedade habilita ou desabilita o item de interface do usuário para este comando. Defina `Enabled` como true para habilitar o item, false para desabilitá-lo.
 
 ##  <a name="id"></a>  ICommandUI::ID
 
-Obtém a ID do objeto de interface do usuário representado pelo `ICommandUI` objeto.
+Obtém a ID do objeto da interface do usuário representado pelo `ICommandUI` objeto.
 
 ```
 property unsigned int ID;
@@ -457,11 +457,11 @@ property unsigned int ID;
 
 ### <a name="remarks"></a>Comentários
 
-Essa propriedade obtém a ID (um identificador) do item de menu, botão de barra de ferramentas, ou outro objeto de interface do usuário representado pelo `ICommandUI` objeto.
+Essa propriedade Obtém a ID (um identificador) do item de menu, botão da barra de ferramentas ou outro objeto de interface do `ICommandUI` usuário representado pelo objeto.
 
-##  <a name="index"></a>  ICommandUI::Index
+##  <a name="index"></a>ICommandUI:: index
 
-Obtém o índice do objeto de interface do usuário representado pelo `ICommandUI` objeto.
+Obtém o índice do objeto da interface do usuário representado pelo `ICommandUI` objeto.
 
 ```
 property unsigned int Index;
@@ -469,11 +469,11 @@ property unsigned int Index;
 
 ### <a name="remarks"></a>Comentários
 
-Essa propriedade obtém o índice (um identificador) do item de menu, botão de barra de ferramentas, ou outro objeto de interface do usuário representado pelo `ICommandUI` objeto.
+Essa propriedade Obtém o índice (um identificador) do item de menu, botão da barra de ferramentas ou outro objeto de interface do `ICommandUI` usuário representado pelo objeto.
 
-##  <a name="radio"></a>  ICommandUI::Radio
+##  <a name="radio"></a>ICommandUI:: Radio
 
-Define o item de interface do usuário para esse comando para o estado de seleção apropriadas.
+Define o item de interface do usuário para esse comando para o estado de verificação apropriado.
 
 ```
 property bool Radio;
@@ -481,11 +481,11 @@ property bool Radio;
 
 ### <a name="remarks"></a>Comentários
 
-Essa propriedade define o item de interface do usuário para esse comando para o estado de seleção apropriadas. Definir `Radio` como TRUE para habilitar o item; caso contrário, FALSE.
+Essa propriedade define o item de interface do usuário para esse comando para o estado de verificação apropriado. Defina `Radio` como true para habilitar o item; caso contrário, false.
 
 ##  <a name="text"></a>  ICommandUI::Text
 
-Define o texto do item de interface de usuário para esse comando.
+Define o texto do item de interface do usuário para este comando.
 
 ```
 property String^ Text;
@@ -493,11 +493,11 @@ property String^ Text;
 
 ### <a name="remarks"></a>Comentários
 
-Essa propriedade define o texto do item de interface de usuário para esse comando. Definir `Text` a um identificador de cadeia de caracteres de texto.
+Essa propriedade define o texto do item de interface do usuário para este comando. Defina `Text` como um identificador de cadeia de caracteres de texto.
 
-##  <a name="iview_interface"></a>  Interface IView
+##  <a name="iview_interface"></a>Interface do IView
 
-Implementa vários métodos que [CWinFormsView](../../mfc/reference/cwinformsview-class.md) usa para enviar notificações de exibição para um controle gerenciado.
+Implementa vários métodos que o [CWinFormsView](../../mfc/reference/cwinformsview-class.md) usa para enviar notificações de exibição a um controle gerenciado.
 
 ```
 interface class IView
@@ -505,11 +505,11 @@ interface class IView
 
 ### <a name="remarks"></a>Comentários
 
-`IView` implementa vários métodos que `CWinFormsView` usa para encaminhar as notificações de exibição comuns para um controle gerenciado hospedado. Esses são [OnInitialUpdate](../../mfc/reference/iview-interface.md), [OnUpdate](../../mfc/reference/iview-interface.md) e [OnActivateView](../../mfc/reference/iview-interface.md).
+`IView`implementa vários métodos que `CWinFormsView` o usa para encaminhar notificações de exibição comuns a um controle gerenciado hospedado. São [OnInitialUpdate](../../mfc/reference/iview-interface.md), [OnUpdate](../../mfc/reference/iview-interface.md) e [OnActivateView](../../mfc/reference/iview-interface.md).
 
-`IView` é semelhante à [CView](../../mfc/reference/cview-class.md), mas é usado somente com exibições gerenciadas e controles.
+`IView`é semelhante a [cvisualização](../../mfc/reference/cview-class.md), mas é usado somente com exibições e controles gerenciados.
 
-Para obter mais informações sobre como usar o Windows Forms, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Para obter mais informações sobre como usar Windows Forms, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 ##  <a name="onactivateview"></a>  IView::OnActivateView
 
@@ -521,20 +521,20 @@ void OnActivateView(bool activate);
 
 ### <a name="parameters"></a>Parâmetros
 
-*activate*<br/>
-Indica se o modo de exibição está sendo ativada ou desativada.
+*Activate*<br/>
+Indica se a exibição está sendo ativada ou desativada.
 
-##  <a name="oninitialupdate"></a>  IView::OnInitialUpdate
+##  <a name="oninitialupdate"></a>IView:: OnInitialUpdate
 
-Chamado pelo framework depois que o modo de exibição é anexado pela primeira vez no documento, mas antes que o modo de exibição é exibido inicialmente.
+Chamado pelo Framework depois que a exibição é anexada primeiro ao documento, mas antes de a exibição ser inicialmente exibida.
 
 ```
 void OnInitialUpdate();
 ```
 
-##  <a name="onupdate"></a>  IView::OnUpdate
+##  <a name="onupdate"></a>IView:: OnUpdate
 
-Chamado pelo MFC depois que o documento da exibição foi modificado.
+Chamado pelo MFC após a modificação do documento da exibição.
 
 ```
 void OnUpdate();
@@ -542,10 +542,10 @@ void OnUpdate();
 
 ### <a name="remarks"></a>Comentários
 
-Essa função permite que o modo de exibição atualizar sua exibição para refletir as modificações.
+Essa função permite que a exibição Atualize sua exibição para refletir as modificações.
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC COLETAR](../../overview/visual-cpp-samples.md)<br/>
+[COLETA de amostra do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)

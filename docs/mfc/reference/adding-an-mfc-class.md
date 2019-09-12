@@ -1,35 +1,29 @@
 ---
 title: Adicionando uma classe do MFC
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - vc.codewiz.classes.adding.mfc
 helpviewer_keywords:
 - classes [MFC], adding MFC
 - MFC, adding classes
 ms.assetid: 9a96b67f-40bf-43d4-8872-2f8dfc5404f1
-ms.openlocfilehash: 1cc3dc734917da46af99e67da40fe243941102e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 266940092e68a76f2ac485a81ac6ac90b02ee0ac
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296768"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907650"
 ---
 # <a name="adding-an-mfc-class"></a>Adicionando uma classe do MFC
 
-Para adicionar classes derivadas de classes da biblioteca Microsoft Foundation Class (MFC) ao seu projeto, use o **Add Class** comando disponível no [exibição de classe](/visualstudio/ide/viewing-the-structure-of-code). Especifique o nome da nova classe, selecione a classe base e selecione a ID da caixa de diálogo com a qual ele está associado (se houver). O Assistente de código cria um arquivo de cabeçalho e um arquivo de implementação e os adiciona ao seu projeto.
+Para adicionar classes derivadas de classes de biblioteca do Microsoft Foundation Class (MFC) ao seu projeto, use o botão **Adicionar classe** no [Assistente de classe](mfc-class-wizard.md). Especifique o nome da nova classe, selecione a classe base e selecione a ID da caixa de diálogo à qual ela está associada (se houver). O assistente cria um arquivo de cabeçalho e um arquivo de implementação e os adiciona ao seu projeto.
 
 > [!NOTE]
->  Você pode adicionar classes MFC para um aplicativo ATL COM se você inicialmente [criou o aplicativo com suporte do MFC](../../atl/reference/mfc-support-in-atl-projects.md). Você também pode adicionar classes MFC para projetos do Win32 que têm suporte do MFC.
+>  Você pode adicionar classes MFC a um aplicativo COM ATL se você [criou inicialmente o aplicativo com suporte do MFC](../../atl/reference/mfc-support-in-atl-projects.md). Você também pode adicionar classes MFC a projetos Win32 que têm suporte MFC.
 
-### <a name="to-add-an-mfc-class-to-your-project"></a>Para adicionar uma classe MFC ao seu projeto
+### <a name="to-add-an-mfc-class-to-your-project"></a>Para adicionar uma classe do MFC ao seu projeto
 
-1. Na exibição de classe, clique com botão direito no nome do projeto. Clique em **Add** e, em seguida, clique em **Add Class** para abrir o [Adicionar classe](../../ide/add-class-dialog-box.md) caixa de diálogo.
-
-1. No painel modelos, selecione **classe MFC** e pressione a **Add** botão.
-
-1. Definir as configurações para a nova classe de [MFC Class Wizard](../../mfc/reference/mfc-add-class-wizard.md) caixa de diálogo.
-
-1. Clique em **concluir** para fechar o assistente e exibir a nova classe no modo de exibição de classe. Você também pode exibir os arquivos criados pelo assistente no **Gerenciador de soluções**.
+Em Modo de Exibição de Classe, clique com o botão direito do mouse no nome do projeto. Clique em **Assistente de classe** e, em seguida, clique em **Adicionar classe** para abrir a caixa de diálogo [Adicionar classe MFC](mfc-add-class-wizard.md) . Use o **Assistente de classe** para adicionar manipuladores de mensagens ou novos métodos.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,6 +1,6 @@
 ---
 title: Classe CDialog
-ms.date: 11/04/2016
+ms.date: 09/07/2019
 f1_keywords:
 - CDialog
 - AFXWIN/CDialog
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: d9969b7dd41dc7a67e21bb2735b1d716bd988d07
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b07190c70fb11950b25aff45fb10e850c0e81b24
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506884"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907617"
 ---
 # <a name="cdialog-class"></a>Classe CDialog
 
@@ -97,7 +97,7 @@ As caixas de diálogo são de dois tipos: modal e sem janela restrita. Uma caixa
 
 Um `CDialog` objeto é uma combinação de um modelo de caixa de `CDialog`diálogo e de uma classe derivada. Use o editor de caixa de diálogo para criar o modelo de caixa de diálogo e armazená-lo em um recurso e, em seguida, `CDialog`use o assistente para adicionar classe para criar uma classe derivada de.
 
-Uma caixa de diálogo, como qualquer outra janela, recebe mensagens do Windows. Em uma caixa de diálogo, você está particularmente interessado em lidar com mensagens de notificação dos controles da caixa de diálogo, já que é assim que o usuário interage com sua caixa de diálogo. Use a janela Propriedades para selecionar as mensagens que você deseja manipular e elas adicionarão as entradas de mapa de mensagem e as funções de membro do manipulador de mensagens apropriadas à classe para você. Você só precisa escrever código específico do aplicativo nas funções de membro do manipulador.
+Uma caixa de diálogo, como qualquer outra janela, recebe mensagens do Windows. Em uma caixa de diálogo, você está particularmente interessado em lidar com mensagens de notificação dos controles da caixa de diálogo, já que é assim que o usuário interage com sua caixa de diálogo. Use o [Assistente de classe](mfc-class-wizard.md) para selecionar as mensagens que você deseja manipular e elas adicionarão as entradas de mapa de mensagem e as funções de membro do manipulador de mensagens apropriadas à classe para você. Você só precisa escrever código específico do aplicativo nas funções de membro do manipulador.
 
 Se preferir, você sempre poderá gravar entradas de mapeamento de mensagem e funções de membro manualmente.
 

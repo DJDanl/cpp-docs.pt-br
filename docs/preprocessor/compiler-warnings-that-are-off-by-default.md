@@ -6,10 +6,10 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 ms.openlocfilehash: a8b203c94d4a5af28837627fda1b8e1631dfb0c0
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 09/11/2019
 ms.locfileid: "70220492"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avisos de compilador desativados por padrão
@@ -125,7 +125,7 @@ Os avisos a seguir são desativados por padrão no Visual Studio 2015 e versões
 |[C4868](../error-messages/compiler-warnings/compiler-warning-c4868.md) (nível 4)|o compilador '_File_(*line_number*) ' não pode impor a ordem de avaliação da esquerda para a direita na lista de inicialização de chaves|
 |[C4905](../error-messages/compiler-warnings/compiler-warning-level-1-c4905.md) (nível 1)|literal amplo de cadeia de caracteres convertido em 'LPSTR'|
 |[C4906](../error-messages/compiler-warnings/compiler-warning-level-1-c4906.md) (nível 1)|literal de cadeia de caracteres convertido em 'LPWSTR'|
-|[C4917](../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md) (nível 1)|'declarador ': um GUID só pode ser associado a uma classe, interface ou namespace|
+|[C4917](../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md) (nível 1)|'*Declarador*': um GUID só pode ser associado a uma classe, interface ou namespace|
 |[C4928](../error-messages/compiler-warnings/compiler-warning-level-1-c4928.md) (nível 1)|inicialização de cópia ilegal; mais de uma conversão definida pelo usuário foi implicitamente aplicada|
 |[C4931](../error-messages/compiler-warnings/compiler-warning-level-4-c4931.md) (nível 4)|estamos supondo que a biblioteca de tipos foi criada para ponteiros de bit por número|
 |[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md) (nível 1)|reinterpret_cast usado entre classes relacionadas: '*Class1*' e '*class2*'|

@@ -7,45 +7,45 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-ms.openlocfilehash: 39e870db2f5476a630a8ed3bc68944dbb164d469
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 510acfa032ca4303962164a19130ecd1971060fc
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374162"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907957"
 ---
 # <a name="automation-servers"></a>Servidores de automação
 
-Automação torna possível para seu aplicativo para manipular objetos implementados em outro aplicativo ou para expor objetos para que eles podem ser manipulados. Um servidor de automação é um aplicativo que expõe objetos programáveis (chamados de objetos de automação) para outros aplicativos (chamado [clientes de automação](../mfc/automation-clients.md)). Servidores de automação, às vezes, são chamados de componentes de automação.
+A automação possibilita que seu aplicativo manipule objetos implementados em outro aplicativo ou expor objetos para que possam ser manipulados. Um servidor de automação é um aplicativo que expõe objetos programáveis (chamados de objetos de automação) a outros aplicativos (chamados de [clientes de automação](../mfc/automation-clients.md)). Os servidores de automação às vezes são chamados de componentes de automação.
 
-Expor objetos de automação permite que os clientes automatizar certos procedimentos, acessando diretamente os objetos e funcionalidade de servidor torna-se disponível. Expondo objetos dessa maneira é benéfico quando os aplicativos fornecem funcionalidade que é útil para outros aplicativos. Por exemplo, um processador de texto pode expor sua funcionalidade de verificação ortográfica para que outros programas podem usá-lo. Exposição de objetos, portanto, permite que os fornecedores melhorar a funcionalidade de seus aplicativos usando a funcionalidade prontas para uso de outros aplicativos.
+A exposição de objetos de automação permite que os clientes automatizem determinados procedimentos acessando diretamente os objetos e a funcionalidade disponibilizados pelo servidor. Expor objetos dessa maneira é benéfico quando os aplicativos fornecem funcionalidade útil para outros aplicativos. Por exemplo, um processador de texto pode expor sua funcionalidade de verificação ortográfica para que outros programas possam usá-la. A exposição de objetos, portanto, permite que os fornecedores aprimorem a funcionalidade dos aplicativos usando a funcionalidade pronta de outros aplicativos.
 
-Esses objetos de automação têm propriedades e métodos, como a interface externa. Propriedades são chamadas de atributos do objeto de automação. As propriedades são como os membros de dados de uma classe C++. Métodos são funções que funcionam em objetos de automação. Métodos são como as funções de membro público de uma classe C++.
+Esses objetos de automação têm propriedades e métodos como sua interface externa. As propriedades são atributos nomeados do objeto Automation. As propriedades são como os membros de dados C++ de uma classe. Os métodos são funções que funcionam em objetos de automação. Os métodos são como as funções de membro público C++ de uma classe.
 
 > [!NOTE]
->  Embora as propriedades são como membros de dados do C++, eles não são diretamente acessíveis. Para fornecer acesso transparente, configure uma variável interna no objeto de automação com um par de funções de membro get/set para acessá-los.
+>  Embora as propriedades sejam C++ como membros de dados, elas não são acessíveis diretamente. Para fornecer acesso transparente, configure uma variável interna no objeto Automation com um par de funções membro get/set para acessá-las.
 
-Expondo a funcionalidade do aplicativo por meio de uma interface comum e bem definida, automação torna possível a criação de aplicativos em um único geral linguagem de programação, como o Microsoft Visual Basic, em vez de em macro diversificada, específicos do aplicativo Idiomas.
+Expondo a funcionalidade do aplicativo por meio de uma interface comum e bem definida, a automação possibilita a criação de aplicativos em uma única linguagem de programação geral, como a Microsoft Visual Basic em vez de em diversas macros específicas do aplicativo Idiomas.
 
-##  <a name="_core_support_for_automation_servers"></a> Suporte para servidores de automação
+##  <a name="_core_support_for_automation_servers"></a>Suporte para servidores de automação
 
-Visual C++ e a estrutura MFC fornecem suporte extensivo para servidores de automação. Eles manipulam muita sobrecarga envolvida na tomada de um servidor de automação, para que você possa concentrar seus esforços na funcionalidade do seu aplicativo.
+O C++ visual e a estrutura do MFC fornecem amplo suporte para servidores de automação. Eles lidam com grande parte da sobrecarga envolvida na criação de um servidor de automação, para que você possa concentrar seus esforços na funcionalidade do seu aplicativo.
 
-Mecanismo de entidade de segurança do framework para dar suporte a automação é o mapa de expedição, um conjunto de macros que expande em declarações e chamadas necessárias para expor métodos e propriedades para OLE. Um mapa de expedição típico tem esta aparência:
+O mecanismo principal da estrutura para dar suporte à automação é o mapa de expedição, um conjunto de macros que se expande para as declarações e chamadas necessárias para expor métodos e propriedades para OLE. Um mapa de expedição típico é semelhante ao seguinte:
 
 [!code-cpp[NVC_MFCAutomation#1](../mfc/codesnippet/cpp/automation-servers_1.cpp)]
 
-A janela de propriedades e o modo de exibição de classe auxiliam na manutenção de mapas de expedição. Quando você adiciona um novo método ou propriedade a uma classe, o Visual C++ adiciona um correspondente `DISP_FUNCTION` ou `DISP_PROPERTY` macro com parâmetros que indica o nome de classe, os nomes internos e externos dos método ou propriedade e tipos de dados.
+O [Assistente de classe](reference/mfc-class-wizard.md) e modo de exibição de classe auxiliar na manutenção de mapas de expedição. Quando você adiciona um novo método ou propriedade a uma classe, o Visual Studio adiciona uma `DISP_FUNCTION` macro `DISP_PROPERTY` ou um correspondente com parâmetros que indicam o nome da classe, os nomes externos e internos do método ou da propriedade e os tipos de dados.
 
-O **Adicionar classe** caixa de diálogo também simplifica a declaração de classes de automação e o gerenciamento de suas propriedades e operações. Quando você usa a caixa de diálogo Adicionar classe para adicionar uma classe ao seu projeto, você pode especificar sua classe base. Se a classe base permite a automação, a caixa de diálogo Adicionar classe exibe controles usados para especificar se a nova classe deve dar suporte a automação, se ele é o "OLE que pode ser criado" (ou seja, se os objetos da classe podem ser criados em uma solicitação de um cliente COM) e o nome externo para o cliente de COM usar.
+A caixa de diálogo **Adicionar classe** também simplifica a declaração de classes de automação e o gerenciamento de suas propriedades e operações. Quando você usa a caixa de diálogo Adicionar classe para adicionar uma classe ao seu projeto, você especifica sua classe base. Se a classe base permitir a automação, a caixa de diálogo Adicionar classe exibirá os controles que você usa para especificar se a nova classe deve dar suporte à automação, se é "OLE creatable" (ou seja, se os objetos da classe podem ser criados em uma solicitação de um cliente COM) e o nome externo do cliente COM a ser usado.
 
-O **Adicionar classe** caixa de diálogo, em seguida, cria uma declaração de classe, incluindo as macros apropriadas para o OLE recursos que você especificou. Ele também adiciona o código de esqueleto para implementação da sua classe funções de membro.
+Em seguida, a caixa de diálogo **Adicionar classe** cria uma declaração de classe, incluindo as macros apropriadas para os recursos OLE que você especificou. Ele também adiciona o código esqueleto para implementação das funções de membro da classe.
 
-O Assistente de aplicativo do MFC simplifica as etapas envolvidas na obtenção de seu aplicativo de servidor de automação o plano. Se você selecionar o **automação** caixa de seleção do **recursos avançados** página de Assistente de aplicativo MFC adiciona ao seu aplicativo `InitInstance` as chamadas necessárias para registrar sua automação de função objetos e executar seu aplicativo como um servidor de automação.
+O assistente de aplicativo do MFC simplifica as etapas envolvidas na obtenção do aplicativo de servidor de automação fora do chão. Se você marcar a caixa de seleção **automação** na página **recursos avançados** , o assistente de aplicativo MFC adicionará à função `InitInstance` do aplicativo as chamadas necessárias para registrar seus objetos de automação e executar seu aplicativo como um Servidor de automação.
 
 ### <a name="what-do-you-want-to-do"></a>O que você deseja fazer
 
-- [Saiba mais sobre os clientes de automação](../mfc/automation-clients.md)
+- [Saiba mais sobre clientes de automação](../mfc/automation-clients.md)
 
 - [Saiba mais sobre a classe CCmdTarget](../mfc/reference/ccmdtarget-class.md)
 

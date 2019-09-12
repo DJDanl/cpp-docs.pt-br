@@ -5,30 +5,30 @@ helpviewer_keywords:
 - extended combo boxes [MFC], notifications
 - notifications [MFC], extended combo box controls
 ms.assetid: 4e442758-d054-4746-bb1a-6ff84accb127
-ms.openlocfilehash: 1890267f26ef43fd1dbf8fdea28f02e3d882d475
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 044cef644f746f7cb70944805882bd8e2f2806b4
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378185"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908103"
 ---
 # <a name="processing-notification-messages-in-extended-combo-box-controls"></a>Processando mensagens de notificação em controles de caixa de combinação estendida
 
-Conforme os usuários interagem com a caixa de combinação estendido, o controle (`CComboBoxEx`) envia mensagens de notificação à sua janela pai, normalmente, um objeto de exibição ou a caixa de diálogo. Se você quiser fazer algo em resposta, lidar com essas mensagens. Por exemplo, quando o usuário ativa a lista suspensa ou clica na caixa de edição do controle, a notificação de CBEN_BEGINEDIT é enviada.
+À medida que os usuários interagem com a caixa de combinação`CComboBoxEx`estendida, o controle () envia mensagens de notificação para sua janela pai, geralmente um objeto View ou Dialog. Manipule essas mensagens se desejar fazer algo em resposta. Por exemplo, quando o usuário ativa a lista suspensa ou clica na caixa de edição do controle, a notificação CBEN_BEGINEDIT é enviada.
 
-Use a janela Propriedades para adicionar manipuladores de notificação para a classe pai para essas mensagens que você deseja implementar.
+Use o [Assistente de classe](reference/mfc-class-wizard.md) para adicionar manipuladores de notificação à classe pai para as mensagens que você deseja implementar.
 
-A seguinte lista descreve várias notificações enviadas pelo controle de caixa de combinação estendido.
+A lista a seguir descreve as várias notificações enviadas pelo controle de caixa de combinação estendida.
 
 - CBEN_BEGINEDIT enviado quando o usuário ativa a lista suspensa ou clica na caixa de edição do controle.
 
 - CBEN_DELETEITEM enviado quando um item foi excluído.
 
-- CBEN_DRAGBEGIN enviado quando o usuário começa a arrastar a imagem do item exibido na parte de edição do controle.
+- CBEN_DRAGBEGIN Enviado quando o usuário começa a arrastar a imagem do item exibido na parte de edição do controle.
 
-- CBEN_ENDEDIT enviado quando o usuário concluiu uma operação dentro da caixa de edição ou se tiver selecionado um item da lista de lista suspensa do controle.
+- CBEN_ENDEDIT enviado quando o usuário concluiu uma operação dentro da caixa de edição ou selecionou um item na lista suspensa do controle.
 
-- CBEN_GETDISPINFO enviada para recuperar informações de exibição sobre um item de retorno de chamada.
+- CBEN_GETDISPINFO enviado para recuperar informações de exibição sobre um item de retorno de chamada.
 
 - CBEN_INSERTITEM enviado quando um novo item foi inserido no controle.
 
