@@ -1,6 +1,6 @@
 ---
 title: rand_s
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - rand_s
 apilocation:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 7a2c57713d4b455971f24b64dc124862749e927a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: MT
+ms.openlocfilehash: 2bbefad60d1d54ece0b467fc411ca9b6b7fe498f
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499559"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927445"
 ---
 # <a name="rand_s"></a>rand_s
 
@@ -51,7 +51,7 @@ Um ponteiro para um inteiro para manter o valor gerado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Zero se for bem-sucedido; caso contrário, um código de erro. Se o ponteiro de entrada randomValue for um ponteiro NULL, a função invocará um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **EINVAL** e definirá **errno** como **EINVAL**. Se a função falhar por qualquer outro motivo, *_randomValue_ será definido como 0.
+Zero se for bem-sucedido; caso contrário, um código de erro. Se o ponteiro de entrada _randomValue_ for um ponteiro NULL, a função invocará um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **EINVAL** e definirá **errno** como **EINVAL**. Se a função falhar por qualquer outro motivo, *_randomValue_ será definido como 0.
 
 ## <a name="remarks"></a>Comentários
 

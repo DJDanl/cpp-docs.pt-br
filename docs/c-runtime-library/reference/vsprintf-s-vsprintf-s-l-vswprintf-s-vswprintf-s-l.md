@@ -1,6 +1,6 @@
 ---
 title: vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
-ms.date: 03/26/2019
+ms.date: 09/12/2019
 apiname:
 - _vswprintf_s_l
 - vsprintf_s
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
-ms.openlocfilehash: 469a823d0f033a2f140d78a65cb0e69a3ef16d5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f9eddb33b813d147ea1fe17928ab691fb4ba262a
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383445"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927459"
 ---
-# <a name="vsprintfs-vsprintfsl-vswprintfs-vswprintfsl"></a>vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
+# <a name="vsprintf_s-_vsprintf_s_l-vswprintf_s-_vswprintf_s_l"></a>vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
 
-Grave saída formatada usando um ponteiro para uma lista de argumentos. Estas são versões de [vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, \__vswprintf_l](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md) com aprimoramentos de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Grave saída formatada usando um ponteiro para uma lista de argumentos. Essas funções são versões de [vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, \__vswprintf_l](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md) com aprimoramentos de segurança, conforme descrito em [recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -96,7 +96,7 @@ int vswprintf_s(
 Local de armazenamento de saída.
 
 *numberOfElements*<br/>
-Tamanho de *buffer* em caracteres.
+Tamanho do *buffer* em caracteres.
 
 *format*<br/>
 Especificação de formato.
@@ -109,21 +109,21 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**vsprintf_s** e **vswprintf_s** retornar o número de caracteres gravados, não incluindo o caractere nulo de terminação ou um valor negativo se ocorrer um erro de saída. Se *buffer* ou *formato* é um ponteiro nulo, se *numberOfElements* for zero, ou se a cadeia de caracteres de formato contém formatação inválida caracteres, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornarão -1 e defina **errno** à **EINVAL**.
+**vsprintf_s** e **vswprintf_s** retornam o número de caracteres gravados, não incluindo o caractere nulo de terminação ou um valor negativo se ocorrer um erro de saída. Se o *buffer* ou o *formato* for um ponteiro nulo, se *numberOfElements* for zero ou se a cadeia de caracteres de formato contiver caracteres de formatação inválidos, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornam-1 e definem **errno** como **EINVAL**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, formata e grava os dados fornecidos para a memória apontada por *buffer*.
+Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, formata e grava os dados fornecidos na memória apontada pelo *buffer*.
 
-**vswprintf_s** está em conformidade com o ISO C Standard para **vswprintf**, que requer o segundo parâmetro, *contagem*, do tipo **size_t**.
+**vswprintf_s** está em conformidade com o padrão ISO C para **vswprintf**, que requer o segundo parâmetro, *Count*, do tipo **size_t**.
 
 Essas funções são diferentes das versões não seguras apenas no sentido de que as versões seguras dão suporte a parâmetros posicionais. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
-Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho. E eles podem substituir automaticamente as funções não seguras por suas contrapartes seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -147,13 +147,15 @@ Para obter informações adicionais sobre compatibilidade, consulte [Compatibili
 
 ```C
 // crt_vsprintf_s.c
+// Compile with: cl /W4 crt_vsprintf_s.c
 // This program uses vsprintf_s to write to a buffer.
 // The size of the buffer is determined by _vscprintf.
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <stdarg.h>
 
-void test( char * format, ... )
+void test( char const * const format, ... )
 {
    va_list args;
    int len;
@@ -162,10 +164,13 @@ void test( char * format, ... )
    va_start( args, format );
    len = _vscprintf( format, args ) // _vscprintf doesn't count
                                + 1; // terminating '\0'
-   buffer = malloc( len * sizeof(char) );
-   vsprintf_s( buffer, len, format, args );
-   puts( buffer );
-   free( buffer );
+   buffer = (char *) malloc( len * sizeof(char) );
+   if ( NULL != buffer )
+   {
+      vsprintf_s( buffer, len, format, args );
+      puts( buffer );
+      free( buffer );
+   }
    va_end( args );
 }
 
@@ -189,4 +194,4 @@ This is a string
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
-[va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>
+[va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)

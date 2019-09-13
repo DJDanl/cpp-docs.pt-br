@@ -1,6 +1,6 @@
 ---
 title: rand
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - rand
 apilocation:
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 868c6239ac1b86dfc9ac72cc8cc83d1ba3002b4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 407640c5f00ae54c43450abcbbe8c2e3ba0fcf95
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357766"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927523"
 ---
 # <a name="rand"></a>rand
 
-Gera um número pseudoaleatório, usando um algoritmo bem conhecido e totalmente reproduzível. Uma versão mais por meio de programação segura dessa função está disponível. ver [rand_s](rand-s.md). Os números gerados pelo **rand** não são criptograficamente seguros. Para mais criptograficamente a geração de números aleatórios, use [rand_s](rand-s.md) ou as funções declaradas no C++ biblioteca padrão no [ \<aleatório >](../../standard-library/random.md).
+Gera um número pseudoaleatória usando um algoritmo bem conhecido e totalmente reproduzível. Uma versão mais programaticamente segura dessa função está disponível; consulte [rand_s](rand-s.md). Os números gerados por **Rand** não são criptograficamente seguros. Para geração de números aleatórios de segurança mais criptograficamente segura, use [rand_s](rand-s.md) ou as funções C++ declaradas na biblioteca padrão em [ \<> aleatórios](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,13 +45,13 @@ int rand( void );
 
 ## <a name="return-value"></a>Valor de retorno
 
-**RAND** retorna um número pseudoaleatório, como descrito acima. Nenhum erro é retornado.
+**Rand** retorna um número pseudoaleatória, conforme descrito acima. Nenhum erro é retornado.
 
 ## <a name="remarks"></a>Comentários
 
-O **rand** função retorna um inteiro pseudoaleatório no intervalo de 0 a **RAND_MAX** (32767). Use o [srand](srand.md) função para propagar o gerador de números pseudoaleatórios antes de chamar **rand**.
+A função **Rand** retorna um número inteiro pseudoaleatória no intervalo de 0 a **RAND_MAX** (32767). Use a função [srand](srand.md) para propagar o gerador de número de pseudoaleatória antes de chamar **Rand**.
 
-O **rand** função gera uma sequência bem conhecida e não é adequada para uso como uma função criptográfica. Para mais criptograficamente a geração de números aleatórios, use [rand_s](rand-s.md) ou as funções declaradas no C++ biblioteca padrão no [ \<aleatório >](../../standard-library/random.md). Para obter informações sobre o que há de errado com **rand** e como \<aleatório > lida com esses imprevistos, veja este vídeo intitulado [rand considerado prejudicial](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+A função **Rand** gera uma sequência bem conhecida e não é apropriada para uso como uma função criptográfica. Para geração de números aleatórios de segurança mais criptograficamente segura, use [rand_s](rand-s.md) ou as funções C++ declaradas na biblioteca padrão em [ \<> aleatórios](../../standard-library/random.md). Para obter informações sobre o que há de errado com \<Rand e como o > aleatório resolve essas deficiências, consulte este vídeo intitulado [Rand considerado prejudicial](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,42 +1,42 @@
 ---
 title: /DISASM
-ms.date: 1/17/2018
+ms.date: 01/17/2018
 f1_keywords:
 - /disasm
 helpviewer_keywords:
 - -DISASM dumpbin option
 - DISASM dumpbin option
 - /DISASM dumpbin option
-ms.openlocfilehash: 10e8187e896b3922438a8cf2dafa0aec4c91f904
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb394b2266470e77c50ce5398aea961c37ac34fb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272055"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927717"
 ---
 # <a name="disasm"></a>/DISASM
 
-Imprima a desmontagem de seções de código na saída (DUMPBIN).
+Imprima a desmontagem de seções de código na saída DUMPBIN.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/DISASM**{**:**\[**BYTES**|**NOBYTES**]}
+> **/DISASM**{ **:** \[**BYTES**|**NOBYTES**]}
 
 ### <a name="arguments"></a>Arguments
 
 **BYTES**<br/>
-Inclui os bytes de instrução junto com os argumentos e interpretado opcodes na saída de desmontagem. Esta é a opção padrão.
+Inclui os bytes de instrução junto com os opcodes e os argumentos interpretados na saída de desmontagem. Esta é a opção padrão.
 
 **NOBYTES**<br/>
 Não inclui os bytes de instrução na saída de desmontagem.
 
 ## <a name="remarks"></a>Comentários
 
-O **/DISASM** opção exibe a desmontagem de seções de código no arquivo. Ele usa símbolos de depuração se eles estiverem presentes no arquivo.
+A opção **/DISASM** exibe a desmontagem de seções de código no arquivo. Ele usa símbolos de depuração se estiverem presentes no arquivo.
 
-**/DISASM** só deve ser usado em imagens nativas, não gerenciadas. É a ferramenta equivalente para código gerenciado [ILDASM](/dotnet/framework/tools/ildasm-exe-il-disassembler).
+**/DISASM** só deve ser usado em imagens nativas, não gerenciadas. A ferramenta equivalente para código gerenciado é o [ILDASM](/dotnet/framework/tools/ildasm-exe-il-disassembler).
 
-Somente o [/HEADERS](headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos pelo [/GL (otimização de programa inteiro)](gl-whole-program-optimization.md) opção de compilador.
+Somente a opção [/Headers](headers.md) DUMPBIN está disponível para uso em arquivos produzidos pela opção de compilador [/GL (otimização de programa completo)](gl-whole-program-optimization.md) .
 
 ## <a name="see-also"></a>Consulte também
 

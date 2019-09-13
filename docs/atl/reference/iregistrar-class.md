@@ -1,6 +1,6 @@
 ---
 title: Interface IRegistrar
-ms.date: 2/1/2017
+ms.date: 02/01/2017
 f1_keywords:
 - IRegistrar
 - ATLIFASE/ATL::IRegistrar
@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
-ms.openlocfilehash: 984d95a1e0adb6835db7ca4bcabcff21f0be7beb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e347bdba1656a53cd705123a26650dad50d3892f
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276004"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927765"
 ---
 # <a name="iregistrar-interface"></a>Interface IRegistrar
 
-Essa interface é definida em atliface e é usado internamente pelo CAtlModule funções de membro, como [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).
+Essa interface é definida em atliface. h e é usada internamente por funções de membro CAtlModule, como [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,7 +34,7 @@ typedef interface IRegistrar IRegistrar;
 
 ## <a name="remarks"></a>Comentários
 
-Consulte o tópico [usando parâmetros substituíveis (pré-processador do registrador The)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) para obter mais detalhes.
+Consulte o tópico [usando parâmetros substituíveis (o pré-processador do registrador)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) para obter mais detalhes.
 
 ## <a name="members"></a>Membros
 
@@ -43,17 +43,17 @@ Consulte o tópico [usando parâmetros substituíveis (pré-processador do regis
 |Nome|Descrição|
 |----------|-----------------|
 |[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Registra o recurso. |
-|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Cancela o registro de recurso.|
+|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Cancela o registro do recurso.|
 |[IRegistrar::FileRegister](#fileregister)|Registra o arquivo.|
-|[IRegistrar::FileUnregister](#fileunregister)|Cancela o registro para o arquivo.|
+|[IRegistrar::FileUnregister](#fileunregister)|Cancela o registro do arquivo.|
 |[IRegistrar::StringRegister](#stringregister)|Registra a cadeia de caracteres.|
-|[IRegistrar::StringUnregister](#stringunregister)|Cancela o registro a cadeia de caracteres|
+|[IRegistrar::StringUnregister](#stringunregister)|Cancela o registro da cadeia de caracteres|
 |[IRegistrar::ResourceRegister](#resourceregister)|Registra o recurso.|
-|[IRegistrar::ResourceUnregister](#resourceunregister)|Cancela o registro de recurso.|
+|[IRegistrar::ResourceUnregister](#resourceunregister)|Cancela o registro do recurso.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlifase.h
+**Cabeçalho:** atlifase. h
 
 ##  <a name="resourceregistersz"></a>  IRegistrar::ResourceRegisterSz
 
@@ -68,7 +68,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz(
 
 ##  <a name="resourceunregistersz"></a>  IRegistrar::ResourceUnregisterSz
 
-Cancela o registro de recurso.
+Cancela o registro do recurso.
 
 ```
 virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz(
@@ -88,7 +88,7 @@ virtual HRESULT STDMETHODCALLTYPE FileRegister(
 
 ##  <a name="fileunregister"></a>  IRegistrar::FileUnregister
 
-Cancela o registro para o arquivo.
+Cancela o registro do arquivo.
 
 ```
 virtual HRESULT STDMETHODCALLTYPE FileUnregister(
@@ -97,16 +97,16 @@ virtual HRESULT STDMETHODCALLTYPE FileUnregister(
 
 ##  <a name="stringregister"></a>  IRegistrar::StringRegister
 
-Registra os dados de cadeia de caracteres especificada.
+Registra os dados de cadeia de caracteres especificados.
 
 ```
 virtual HRESULT STDMETHODCALLTYPE StringRegister(
     /* [in] */ _In_z_ LPCOLESTR data) = 0;
 ```
 
-##  <a name="stringunregister"></a>  IRegistrar::StringUnregister
+##  <a name="stringunregister"></a>IRegistrar:: StringUnregister
 
-Cancela o registro de dados de cadeia de caracteres especificada.
+Cancela o registro dos dados de cadeia de caracteres especificados.
 
 ```
 virtualHRESULT STDMETHODCALLTYPE StringUnregister(
@@ -126,7 +126,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
 
 ##  <a name="resourceunregister"></a>  IRegistrar::ResourceUnregister
 
-Cancela o registro de recurso.
+Cancela o registro do recurso.
 
 ```
 virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
@@ -140,4 +140,4 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
 [Usando parâmetros substituíveis (pré-processador do Registrador)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>
 [Classes de módulo](../../atl/atl-module-classes.md)<br/>
-[Componente de registro (Registrar)](../../atl/atl-registry-component-registrar.md)
+[Componente de Registro (Registrador)](../../atl/atl-registry-component-registrar.md)

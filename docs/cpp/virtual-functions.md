@@ -1,17 +1,17 @@
 ---
 title: Funções virtuais
-ms.date: 11/04/2016
+ms.date: 09/10/2019
 helpviewer_keywords:
 - functions [C++], virtual functions
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 07dfd8a602dca93c89a078b2eb69e04cf9d4a7a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c482107b5ad1546c64e0b70ef1714cff8a668ab
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393838"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926096"
 ---
 # <a name="virtual-functions"></a>Funções virtuais
 
@@ -19,7 +19,7 @@ Uma função virtual é uma função membro que espera-se que seja redefinida em
 
 As funções virtuais asseguram que a função correta seja chamada para um objeto, independentemente da expressão usada para fazer a chamada de função.
 
-Suponha que uma classe base contém uma função declarada como [virtual](../cpp/virtual-cpp.md) e uma classe derivada defina a mesma função. A função a partir da classe derivada é chamada para objetos da classe derivada, mesmo se ela for chamada usando um ponteiro ou uma referência à classe base. O exemplo a seguir mostra uma classe base que fornece uma implementação da função de `PrintBalance` e de duas classes derivadas
+Suponha que uma classe base contenha uma função declarada como [virtual](../cpp/virtual-cpp.md) e uma classe derivada defina a mesma função. A função a partir da classe derivada é chamada para objetos da classe derivada, mesmo se ela for chamada usando um ponteiro ou uma referência à classe base. O exemplo a seguir mostra uma classe base que fornece uma implementação da função de `PrintBalance` e de duas classes derivadas
 
 ```cpp
 // deriv_VirtualFunctions.cpp
@@ -30,6 +30,7 @@ using namespace std;
 class Account {
 public:
    Account( double d ) { _balance = d; }
+   virtual ~Account() {}
    virtual double GetBalance() { return _balance; }
    virtual void PrintBalance() { cerr << "Error. Balance not available for base type." << endl; }
 private:
@@ -50,15 +51,15 @@ public:
 
 int main() {
    // Create objects of type CheckingAccount and SavingsAccount.
-   CheckingAccount *pChecking = new CheckingAccount( 100.00 ) ;
-   SavingsAccount  *pSavings  = new SavingsAccount( 1000.00 );
+   CheckingAccount checking( 100.00 );
+   SavingsAccount  savings( 1000.00 );
 
    // Call PrintBalance using a pointer to Account.
-   Account *pAccount = pChecking;
+   Account *pAccount = &checking;
    pAccount->PrintBalance();
 
    // Call PrintBalance using a pointer to Account.
-   pAccount = pSavings;
+   pAccount = &savings;
    pAccount->PrintBalance();
 }
 ```
@@ -130,8 +131,6 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Saída
-
 ```Output
 Derived::NameOf
 Invoked by Base
@@ -141,11 +140,11 @@ Invoked by Derived
 
 Observe que, independentemente da função `NameOf` ser chamada por um ponteiro para `Base` ou um ponteiro para `Derived`, ela chama a função para `Derived`. Ela chama a função para `Derived` porque `NameOf` é uma função virtual, e `pBase` e `pDerived` apontam para um objeto do tipo `Derived`.
 
-Como funções virtuais são chamadas apenas para objetos de tipos de classe, você não pode declarar funções globais ou estáticas como **virtual**.
+Como as funções virtuais são chamadas apenas para objetos de tipos de classe, você não pode declarar funções globais ou estáticas como **virtuais**.
 
-O **virtual** palavra-chave pode ser usada ao declarar funções substitutas em uma classe derivada, mas é desnecessária; as substituições de funções virtuais são sempre virtuais.
+A palavra-chave **virtual** pode ser usada ao declarar funções de substituição em uma classe derivada, mas é desnecessária; as substituições de funções virtuais são sempre virtuais.
 
-Funções virtuais em uma classe base devem ser definidas, a menos que elas são declaradas usando o *especificador puro*. (Para obter mais informações sobre funções virtuais puras, consulte [Classes abstratas](../cpp/abstract-classes-cpp.md).)
+As funções virtuais em uma classe base devem ser definidas, a menos que sejam declaradas usando o *especificador puro*. (Para obter mais informações sobre funções virtuais puras, consulte [classes abstratas](../cpp/abstract-classes-cpp.md).)
 
 O mecanismo de chamada de funções virtuais pode ser suprimido ao qualificar explicitamente o nome da função usando o operador scope-resolution (`::`). Veja o exemplo anterior que envolve a classe `Account`. Para chamar `PrintBalance` na classe base, use um código como este:
 
