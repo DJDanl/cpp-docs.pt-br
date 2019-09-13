@@ -124,7 +124,7 @@ Posteriormente, você pode carregar os objetos do armazenamento persistente, rec
 
 Você pode considerar um objeto de arquivo morto como um tipo de fluxo binário. Como um fluxo de entrada/saída, um arquivo é associado a um arquivo e permite a gravação em buffer e a leitura de dados de e para o armazenamento. Um fluxo de entrada/saída processa sequências de caracteres ASCII, mas um arquivo morto processa dados de objeto binário em um formato eficiente e não redundante.
 
-Você deve criar um [](../../mfc/reference/cfile-class.md) objeto testcfile antes de criar um `CArchive` objeto. Além disso, você deve garantir que o status de carregamento/armazenamento do arquivo seja compatível com o modo aberto do arquivo. Você está limitado a um arquivo ativo por arquivo.
+Você deve criar um objeto [testcfile](../../mfc/reference/cfile-class.md) antes de criar um `CArchive` objeto. Além disso, você deve garantir que o status de carregamento/armazenamento do arquivo seja compatível com o modo aberto do arquivo. Você está limitado a um arquivo ativo por arquivo.
 
 Ao construir um `CArchive` objeto, você o anexa a um objeto da classe `CFile` (ou uma classe derivada) que representa um arquivo aberto. Você também especifica se o arquivo será usado para carregar ou armazenar. Um `CArchive` objeto pode processar não apenas tipos primitivos, mas também objetos de classes derivadas de [CObject](../../mfc/reference/cobject-class.md)projetadas para serialização. Uma classe serializável geralmente tem `Serialize` uma função membro e geralmente usa as macros [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) e [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) , conforme descrito em classe `CObject`.
 
@@ -198,7 +198,7 @@ Um ponteiro opcional para um buffer fornecido pelo usuário com o tamanho *nBufS
 
 Você não pode alterar essa especificação depois de criar o arquivo morto.
 
-Você não pode usar `CFile` operações para alterar o estado do arquivo até que você tenha fechado o arquivo morto. Qualquer operação desse tipo irá danificar a integridade do arquivo morto. Você pode acessar a posição do ponteiro do arquivo a qualquer momento durante a serialização obtendo o objeto File do arquivo da função [](#getfile) de membro GetFile e, em seguida, usando a função [testcfile:: GetPosition](../../mfc/reference/cfile-class.md#getposition) . Você deve chamar [CArchive:: flush](#flush) antes de obter a posição do ponteiro do arquivo.
+Você não pode usar `CFile` operações para alterar o estado do arquivo até que você tenha fechado o arquivo morto. Qualquer operação desse tipo irá danificar a integridade do arquivo morto. Você pode acessar a posição do ponteiro do arquivo a qualquer momento durante a serialização obtendo o objeto File do arquivo da função de membro [GetFile](#getfile) e, em seguida, usando a função [testcfile:: GetPosition](../../mfc/reference/cfile-class.md#getposition) . Você deve chamar [CArchive:: flush](#flush) antes de obter a posição do ponteiro do arquivo.
 
 ### <a name="example"></a>Exemplo
 
@@ -216,7 +216,7 @@ void Close();
 
 Nenhuma outra operação no arquivo é permitida. Depois de fechar um arquivo morto, você pode criar outro arquivo morto para o mesmo ou pode fechar o arquivo.
 
-A função `Close` de membro garante que todos os dados sejam transferidos do arquivo morto para ele e torna o arquivo indisponível. Para concluir a transferência do arquivo para a mídia de armazenamento, você deve primeiro usar o testcfile [:: fechar](../../mfc/reference/cfile-class.md#close) e depois `CFile` destruir o objeto.
+A função `Close` de membro garante que todos os dados sejam transferidos do arquivo morto para ele e torna o arquivo indisponível. Para concluir a transferência do arquivo para a mídia de armazenamento, você deve primeiro usar o [testcfile:: fechar](../../mfc/reference/cfile-class.md#close) e depois `CFile` destruir o objeto.
 
 ### <a name="example"></a>Exemplo
 
@@ -272,7 +272,7 @@ Durante a desserialização, a versão do objeto que está sendo lido.
 
 ### <a name="remarks"></a>Comentários
 
-Chamar essa função só é válido quando o `CArchive` objeto está sendo carregado ( [CArchive::](#isloading) isuploading retorna zero). Ela deve ser a primeira chamada na `Serialize` função e chamada apenas uma vez. Um valor de retorno de (UINT)-1 indica que o número de versão é desconhecido.
+Chamar essa função só é válido quando o `CArchive` objeto está sendo carregado ( [CArchive:: isuploading](#isloading) retorna zero). Ela deve ser a primeira chamada na `Serialize` função e chamada apenas uma vez. Um valor de retorno de (UINT)-1 indica que o número de versão é desconhecido.
 
 Uma `CObject`classe derivada pode usar VERSIONABLE_SCHEMA combinado (usando **OR bit a**bit) com a própria versão do esquema (na macro IMPLEMENT_SERIAL) para criar um "objeto com controle de versão", ou seja, `Serialize` um objeto cuja função membro possa ler várias versões. A funcionalidade de estrutura padrão (sem VERSIONABLE_SCHEMA) é lançar uma exceção quando a versão é incompatível.
 
@@ -296,7 +296,7 @@ Diferente de zero se o buffer do arquivo estiver vazio; caso contrário, 0.
 
 Essa função é fornecida para dar suporte à programação com a classe `CSocketFile`MFC Windows Sockets. Você não precisa usá-lo para um arquivo morto associado a um `CFile` objeto.
 
-O motivo para usar `IsBufferEmpty` o com um arquivo associado a `CSocketFile` um objeto é que o buffer do arquivo pode conter mais de uma mensagem ou um registro. Depois de receber uma mensagem, você deve `IsBufferEmpty` usar o para controlar um loop que continua a receber dados até que o buffer esteja vazio. Para obter mais informações, consulte [](../../mfc/reference/casyncsocket-class.md#receive) a função de membro de `CAsyncSocket`recebimento da classe, que mostra `IsBufferEmpty`como usar o.
+O motivo para usar `IsBufferEmpty` o com um arquivo associado a `CSocketFile` um objeto é que o buffer do arquivo pode conter mais de uma mensagem ou um registro. Depois de receber uma mensagem, você deve `IsBufferEmpty` usar o para controlar um loop que continua a receber dados até que o buffer esteja vazio. Para obter mais informações, consulte a função de membro de [recebimento](../../mfc/reference/casyncsocket-class.md#receive) da classe `CAsyncSocket`, que mostra como usar o `IsBufferEmpty`.
 
 Para obter mais informações, [consulte Windows Sockets: Usando soquetes com](../../mfc/windows-sockets-using-sockets-with-archives.md)arquivos mortos.
 

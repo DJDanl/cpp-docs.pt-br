@@ -73,7 +73,7 @@ Outras especializações da classe `ctype<CharType>`de modelo:
 
 - Converta um valor *ch* do tipo *CharType* em um valor do tipo **Char** com a `(char)ch`expressão.
 
-- Converta um *byte* de valor do tipo **Char** em um valor  do tipo CharType com `CharType(byte)`a expressão.
+- Converta um *byte* de valor do tipo **Char** em um valor do tipo *CharType* com `CharType(byte)`a expressão.
 
 Todas as outras operações são executadas em valores **Char** da mesma maneira que para a especialização `ctype<char>`explícita.
 
@@ -278,7 +278,7 @@ Um ponteiro para o primeiro caractere em um intervalo que corresponde a uma más
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro Protected retorna o menor `ptr` ponteiro no intervalo [ `first`, `last`) para o [](#do_is)qual do_is `maskVal`( \* , `ptr`) é true.
+A função de membro Protected retorna o menor ponteiro `ptr` no intervalo [ `first`, `last`) para o qual [do_is](#do_is)(`maskVal`, \* `ptr`) é true.
 
 ### <a name="example"></a>Exemplo
 
@@ -312,7 +312,7 @@ Um ponteiro para o primeiro caractere em um intervalo que não corresponde a uma
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro Protected retorna o menor `ptr` ponteiro no intervalo [ `first`, `last`) para o [](#do_is)qual do_is `maskVal`( \* , `ptr`) é false.
+A função de membro Protected retorna o menor ponteiro `ptr` no intervalo [ `first`, `last`) para o qual [do_is](#do_is)(`maskVal`, \* `ptr`) é false.
 
 ### <a name="example"></a>Exemplo
 
@@ -547,7 +547,7 @@ A segunda função de membro retorna um ponteiro para o intervalo de destino dos
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função de membro [](#do_narrow)retorna do_narrow`ch`( `default`,). A segunda função de membro [](#do_narrow) retorna do_narrow`first`( `last`, `default`, `dest`,). Somente os caracteres de origem básicos têm a garantia de terem uma imagem inversa exclusiva `CharType` em `narrow`. Para esses caracteres de origem básicos, a seguinte invariável se mantém: `narrow` ( [widen](#widen) ( **c** ), 0 ) == **c**.
+A primeira função de membro retorna [do_narrow](#do_narrow)(`ch`, `default`). A segunda função de membro retorna [do_narrow](#do_narrow)(`first`, `last`, `default`, `dest`). Somente os caracteres de origem básicos têm a garantia de terem uma imagem inversa exclusiva `CharType` em `narrow`. Para esses caracteres de origem básicos, a seguinte invariável se mantém: `narrow` ( [widen](#widen) ( **c** ), 0 ) == **c**.
 
 ### <a name="example"></a>Exemplo
 
@@ -716,7 +716,7 @@ A segunda função de membro retorna *Last*.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função de membro [](#do_tolower)retorna do_tolower`ch`(). A segunda função de membro [](#do_tolower)retorna do_tolower`first`( `last`,).
+A primeira função de membro retorna [do_tolower](#do_tolower)(`ch`). A segunda função de membro retorna [do_tolower](#do_tolower)(`first`, `last`).
 
 ### <a name="example"></a>Exemplo
 
@@ -771,7 +771,7 @@ A segunda função de membro retorna *Last*.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função de membro [](#do_toupper)retorna do_toupper`ch`(). A segunda função de membro retorna [do_toupper](#do_toupper)( `first`, `last`).
+A primeira função de membro retorna [do_toupper](#do_toupper)(`ch`). A segunda função de membro retorna [do_toupper](#do_toupper)( `first`, `last`).
 
 ### <a name="example"></a>Exemplo
 
@@ -829,7 +829,7 @@ A segunda função de membro retorna um ponteiro para o intervalo de destino de 
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função de membro [](#do_widen)retorna do_widen`byte`(). A segunda função de membro [](#do_widen)retorna do_widen`first`( `last`, `dest`,).
+A primeira função de membro retorna [do_widen](#do_widen)(`byte`). A segunda função de membro retorna [do_widen](#do_widen)(`first`, `last`, `dest`).
 
 ### <a name="example"></a>Exemplo
 

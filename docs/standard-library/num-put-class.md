@@ -21,7 +21,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457694"
 ---
-# <a name="numput-class"></a>Classe num_put
+# <a name="num_put-class"></a>Classe num_put
 
 Uma classe de modelo que descreve um objeto que pode servir como uma faceta de localidade para controlar conversões de valores numéricos em sequências do tipo `CharType`.
 
@@ -163,7 +163,7 @@ O campo saída de inteiro é gerado pelas mesmas regras usadas pelas funções d
 
 - Se **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & [Oct](../standard-library/ios-functions.md#oct), a especificação de conversão é`lo`.`ios_base::basefield` == `ios_base::`
 
-- Se **iosbase. Flags** & **ios_base:: BaseField**[](../standard-library/ios-functions.md#hex) `lx` == Hex,a especificação de conversão será.`ios_base::`
+- Se **iosbase. Flags** & **ios_base:: BaseField** `lx`[Hex,](../standard-library/ios-functions.md#hex)a especificação de conversão será. == `ios_base::`
 
 - Caso contrário, a especificação de conversão é `ld`.
 
@@ -215,7 +215,7 @@ comporta-se da mesma maneira que a primeira, exceto que gera um campo de saída 
 
 - Se **iosbase**. **sinalizadores** & [corrigidos](../standard-library/ios-functions.md#fixed), a especificação de conversão é`lf`.`ios_base::floatfield` == `ios_base::`
 
-- Se **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), a especificação de conversão é `le`. Se **iosbase**. **os sinalizadores** & [](../standard-library/ios-functions.md#uppercase) `e` `E`maiúsculos são diferentes de zero, sendo substituídos por.`ios_base::`
+- Se **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), a especificação de conversão é `le`. Se **iosbase**. **os sinalizadores** & `ios_base::`[ maiúsculos](../standard-library/ios-functions.md#uppercase) são diferentes de zero, `e` sendo substituídos por `E`.
 
 - Caso contrário, a especificação de conversão é **Ig**. Se **iosbase**. **flags** `g` `G`ios_base:: maiúsculas é diferente de zero, é substituído por. & 
 

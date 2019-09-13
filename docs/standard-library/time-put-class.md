@@ -21,7 +21,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68459953"
 ---
-# <a name="timeput-class"></a>Classe time_put
+# <a name="time_put-class"></a>Classe time_put
 
 A classe de modelo descreve um objeto que pode servir como uma faceta de localidade para controlar conversões de valores de tempo em sequências do tipo `CharType`.
 
@@ -191,7 +191,7 @@ Um iterador para a primeira posição após o último elemento inserido.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função de membro [](#do_put)retorna do_put`next`( `_Iosbase` `_Fill` `_Pt` ,,`_Mod`,, ,).`_Fmt` A segunda função membro copia para \* `next` ++ qualquer elemento no intervalo [`first`, `last`] que não seja um percentual (%). Para um percentual seguido por um caractere *C* no intervalo [`first`, `last`], a função avaliará `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) e ignorará após *C*. Se, no entanto, *C* for um caractere qualificador do EOQ# definido, seguido por um caractere `C2` no intervalo [`first`, `last`], a função avaliará `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) e ignorará após `C2`.
+A primeira função de membro retorna [do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`). A segunda função membro copia para \* `next` ++ qualquer elemento no intervalo [`first`, `last`] que não seja um percentual (%). Para um percentual seguido por um caractere *C* no intervalo [`first`, `last`], a função avaliará `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) e ignorará após *C*. Se, no entanto, *C* for um caractere qualificador do EOQ# definido, seguido por um caractere `C2` no intervalo [`first`, `last`], a função avaliará `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) e ignorará após `C2`.
 
 ### <a name="example"></a>Exemplo
 

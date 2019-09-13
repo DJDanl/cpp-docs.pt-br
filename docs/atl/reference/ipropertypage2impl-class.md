@@ -10,19 +10,19 @@ helpviewer_keywords:
 - IPropertyPage2 ATL implementation
 - IPropertyPage2Impl class
 ms.assetid: e89fbe90-203a-47f0-a5de-23616697e1ce
-ms.openlocfilehash: bf76182242f7b76e3a2c18f85b72674e88afa737
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ec6cb2f4fc6931a1bec429068b558bf7ac1906e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274763"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495601"
 ---
 # <a name="ipropertypage2impl-class"></a>Classe IPropertyPage2Impl
 
 Essa classe implementa `IUnknown` e herda a implementação padrão de [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,17 +42,17 @@ Sua classe, derivada de `IPropertyPage2Impl`.
 
 |Nome|Descrição|
 |----------|-----------------|
-|[IPropertyPage2Impl::EditProperty](#editproperty)|Especifica qual controle de propriedade receberá o foco quando a página de propriedade está ativada. A implementação de ATL retornará E_NOTIMPL.|
+|[IPropertyPage2Impl::EditProperty](#editproperty)|Especifica qual controle de propriedade receberá o foco quando a página de Propriedades for ativada. A implementação da ATL retorna E_NOTIMPL.|
 
 ## <a name="remarks"></a>Comentários
 
-O [IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2) interface estende [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) adicionando o `EditProperty` método. Esse método permite que um cliente selecionar uma propriedade específica em um objeto de página de propriedade.
+A interface [IPropertyPage2](/windows/win32/api/ocidl/nn-ocidl-ipropertypage2) estende o [IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage) adicionando o `EditProperty` método. Esse método permite que um cliente selecione uma propriedade específica em um objeto de página de propriedades.
 
-Classe `IPropertyPage2Impl` simplesmente retornar E_NOTIMPL para `IPropertyPage2::EditProperty`. No entanto, ele herda a implementação padrão de [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) e implementa `IUnknown` enviando informações para o despejo de compilações de dispositivo na depuração.
+A `IPropertyPage2Impl` classe simplesmente retorna E_NOTIMPL `IPropertyPage2::EditProperty`para. No entanto, ele herda a implementação padrão de [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) e implementa `IUnknown` enviando informações para o dispositivo de despejo em compilações de depuração.
 
-Quando você cria uma página de propriedades, sua classe geralmente é derivada de `IPropertyPageImpl`. Para fornecer suporte a extra `IPropertyPage2`, modifique sua definição de classe e substituir o `EditProperty` método.
+Quando você cria uma página de propriedades, sua classe normalmente é derivada `IPropertyPageImpl`de. Para fornecer o suporte extra do `IPropertyPage2`, modifique a definição de classe e substitua `EditProperty` o método.
 
-**Artigos relacionados** [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)
+**Artigos relacionados** [Tutorial do ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -64,11 +64,11 @@ Quando você cria uma página de propriedades, sua classe geralmente é derivada
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlctl.h
+**Cabeçalho:** atlctl. h
 
-##  <a name="editproperty"></a>  IPropertyPage2Impl::EditProperty
+##  <a name="editproperty"></a>IPropertyPage2Impl:: EditProperty
 
-Especifica qual controle de propriedade receberá o foco quando a página de propriedade está ativada.
+Especifica qual controle de propriedade receberá o foco quando a página de Propriedades for ativada.
 
 ```
 HRESULT EditProperty(DISPID dispID);
@@ -76,11 +76,11 @@ HRESULT EditProperty(DISPID dispID);
 
 ### <a name="return-value"></a>Valor de retorno
 
-Returns E_NOTIMPL.
+Retorna E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
-Ver [IPropertyPage2::EditProperty](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage2-editproperty) no Windows SDK.
+Consulte [IPropertyPage2:: EditProperty](/windows/win32/api/ocidl/nf-ocidl-ipropertypage2-editproperty) no SDK do Windows.
 
 ## <a name="see-also"></a>Consulte também
 

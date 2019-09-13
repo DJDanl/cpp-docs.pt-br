@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: 06a0c0e4b650945e10015c3220b926399ec9c6fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8fa4e7a035ded2e1a20dd278a5d54d40252e1958
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246307"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497045"
 ---
 # <a name="ccomobjectrootex-class"></a>Classe CComObjectRootEx
 
-Essa classe fornece métodos para lidar com o gerenciamento de contagem de referência de objeto para objetos não agregados e agregados.
+Essa classe fornece métodos para manipular o gerenciamento de contagem de referência de objeto para objetos não agregados e agregados.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -41,7 +41,7 @@ class CComObjectRootEx : public CComObjectRootBase
 #### <a name="parameters"></a>Parâmetros
 
 *ThreadModel*<br/>
-A classe cujos métodos implementam o modelo de threading desejado. Você pode escolher o modelo de threading explicitamente definindo *ThreadModel* à [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), ou [ CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Você pode aceitar o modelo de thread do servidor padrão, definindo *ThreadModel* à [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) ou [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).
+A classe cujos métodos implementam o modelo de threading desejado. Você pode escolher explicitamente o modelo de Threading definindo *ThreadModel* como [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)ou [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Você pode aceitar o modelo de thread padrão do servidor definindo *ThreadModel* como [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) ou [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).
 
 ## <a name="members"></a>Membros
 
@@ -50,56 +50,56 @@ A classe cujos métodos implementam o modelo de threading desejado. Você pode e
 |||
 |-|-|
 |[CComObjectRootEx](#ccomobjectrootex)|Construtor.|
-|[InternalAddRef](#internaladdref)|Incrementa a contagem de referência para um objeto não agregada.|
-|[InternalRelease](#internalrelease)|Diminui a contagem de referência para um objeto não agregado.|
-|[Bloqueio](#lock)|Se o modelo de thread é multithreaded, obtém a propriedade de um objeto de seção crítica.|
-|[Unlock](#unlock)|Se o modelo de thread é multithreaded, libera a propriedade de um objeto de seção crítica.|
+|[InternalAddRef](#internaladdref)|Incrementa a contagem de referência para um objeto não agregado.|
+|[InternalRelease](#internalrelease)|Decrementa a contagem de referência para um objeto não agregado.|
+|[Proprietário](#lock)|Se o modelo de thread for multi-threaded, o obterá a propriedade de um objeto de seção crítica.|
+|[Automático](#unlock)|Se o modelo de thread for multi-threaded, o liberará a propriedade de um objeto de seção crítica.|
 
-### <a name="ccomobjectrootbase-methods"></a>Métodos de CComObjectRootBase
+### <a name="ccomobjectrootbase-methods"></a>Métodos CComObjectRootBase
 
 |||
 |-|-|
-|[FinalConstruct](#finalconstruct)|Substituir em sua classe para executar qualquer inicialização exigida pelo seu objeto.|
-|[FinalRelease](#finalrelease)|Substituir em sua classe para realizar qualquer limpeza exigida pelo seu objeto.|
+|[FinalConstruct](#finalconstruct)|Substitua em sua classe para executar qualquer inicialização exigida pelo seu objeto.|
+|[FinalRelease](#finalrelease)|Substitua em sua classe para executar qualquer limpeza exigida pelo seu objeto.|
 |[OuterAddRef](#outeraddref)|Incrementa a contagem de referência para um objeto agregado.|
-|[OuterQueryInterface](#outerqueryinterface)|Delegados para externo `IUnknown` de um objeto agregado.|
-|[OuterRelease](#outerrelease)|Diminui a contagem de referência para um objeto agregado.|
+|[OuterQueryInterface](#outerqueryinterface)|Delega para a externa `IUnknown` de um objeto agregado.|
+|[OuterRelease](#outerrelease)|Decrementa a contagem de referência para um objeto agregado.|
 
 ### <a name="static-functions"></a>Funções estáticas
 
 |||
 |-|-|
 |[InternalQueryInterface](#internalqueryinterface)|Delega para o `IUnknown` de um objeto não agregado.|
-|[ObjectMain](#objectmain)|Chamado durante a inicialização do módulo e encerramento para classes derivadas listado no mapa de objetos.|
+|[ObjectMain](#objectmain)|Chamado durante a inicialização e terminação do módulo para classes derivadas listadas no mapa de objetos.|
 
 ### <a name="data-members"></a>Membros de Dados
 
 |||
 |-|-|
-|[m_dwRef](#m_dwref)|Com `m_pOuterUnknown`, que faz parte de uma união. Usado quando o objeto não é agregado para manter a contagem de referência de `AddRef` e `Release`.|
-|[m_pOuterUnknown](#m_pouterunknown)|Com `m_dwRef`, que faz parte de uma união. Usado quando o objeto for agregado para armazenar um ponteiro para o externo desconhecido.|
+|[m_dwRef](#m_dwref)|Com `m_pOuterUnknown`o, parte de uma União. Usado quando o objeto não é agregado para manter a contagem de referência `AddRef` de `Release`e.|
+|[m_pOuterUnknown](#m_pouterunknown)|Com `m_dwRef`o, parte de uma União. Usado quando o objeto é agregado para manter um ponteiro para o desconhecido externo.|
 
 ## <a name="remarks"></a>Comentários
 
-`CComObjectRootEx` lida com gerenciamento de contagem de referência de objeto para objetos não agregados e agregados. Ele armazena a contagem de referência de objeto, se seu objeto não está sendo agregado e mantém o ponteiro para o externo desconhecido se o objeto está sendo agregado. Para objetos agregados, `CComObjectRootEx` métodos podem ser usados para tratar a falha do objeto interno para construir e proteger o objeto externo quando as interfaces internas são liberadas após a exclusão ou o objeto interno é excluído.
+`CComObjectRootEx`manipula o gerenciamento de contagem de referência de objeto para objetos não agregados e agregados. Ela conterá a contagem de referências de objetos se o objeto não estiver sendo agregado e manterá o ponteiro para o desconhecido externo se o objeto estiver sendo agregado. Para objetos agregados, `CComObjectRootEx` os métodos podem ser usados para lidar com a falha do objeto interno a ser construído e para proteger o objeto externo da exclusão quando interfaces internas são liberadas ou o objeto interno é excluído.
 
-Uma classe que implementa um servidor COM deve herdar de `CComObjectRootEx` ou [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md).
+Uma classe que implementa um servidor com deve herdar `CComObjectRootEx` de ou [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md).
 
-Se sua definição de classe especifica o [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable) macro, ATL cria uma instância de `CComPolyObject<CYourClass>` quando `IClassFactory::CreateInstance` é chamado. Durante a criação, o valor do externo desconhecido é verificado. Se for NULL, `IUnknown` é implementada para um objeto não agregado. Se o externo desconhecido não for nulo, `IUnknown` é implementada para um objeto agregado.
+Se a definição de classe especificar a macro [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable) , a ATL criará `CComPolyObject<CYourClass>` uma `IClassFactory::CreateInstance` instância de quando for chamada. Durante a criação, o valor da externa Unknown é verificado. Se for NULL, `IUnknown` será implementado para um objeto não agregado. Se o desconhecido externo não for nulo, `IUnknown` será implementado para um objeto agregado.
 
-Se sua classe não especificar a macro DECLARE_POLY_AGGREGATABLE, ATL cria uma instância de `CAggComObject<CYourClass>` para objetos agregados ou uma instância de `CComObject<CYourClass>` para objetos não agregados.
+Se sua classe não especificar a macro DECLARE_POLY_AGGREGATABLE, a ATL criará uma instância `CAggComObject<CYourClass>` do para objetos agregados ou uma instância `CComObject<CYourClass>` do para objetos não agregados.
 
-A vantagem de usar `CComPolyObject` é que você evite ter dois `CComAggObject` e `CComObject` em seu módulo para tratar de casos agregados e não agregados. Um único `CComPolyObject` objeto lida com ambos os casos. Portanto, apenas uma cópia de vtable e uma cópia das funções existem em seu módulo. Se seu vtable for grande, isso pode diminuir substancialmente o tamanho do módulo. No entanto, se seu vtable for pequeno, usando `CComPolyObject` pode resultar em um tamanho de módulo ligeiramente maior porque ele não é otimizado para um objeto agregado ou não agregado, que estejam `CComAggObject` e `CComObject`.
+A vantagem de usar `CComPolyObject` o é que você evita ter `CComAggObject` ambos `CComObject` e em seu módulo para lidar com os casos agregados e não agregados. Um único `CComPolyObject` objeto trata ambos os casos. Portanto, apenas uma cópia da vtable e uma cópia das funções existem no seu módulo. Se a vtable for grande, isso poderá diminuir substancialmente o tamanho do módulo. No entanto, se a vtable for pequena `CComPolyObject` , o uso do pode resultar em um tamanho de módulo ligeiramente maior porque ele não é otimizado para um objeto agregado ou `CComAggObject` não `CComObject`agregado, como são e.
 
-Se o objeto for agregado, [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) é implementada por `CComAggObject` ou `CComPolyObject`. Essas classes delegar `QueryInterface`, `AddRef`, e `Release` chama `CComObjectRootEx`do `OuterQueryInterface`, `OuterAddRef`, e `OuterRelease` para encaminhar para o externo desconhecido. Normalmente, você substitui `CComObjectRootEx::FinalConstruct` em sua classe para criar todos os objetos agregados e substituir `CComObjectRootEx::FinalRelease` liberar todos agregados objetos.
+Se o objeto for agregado, [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) será implementado pelo `CComAggObject` ou `CComPolyObject`. Essas classes `QueryInterface`delegam `AddRef`,, `Release` e chamam `CComObjectRootEx`para `OuterQueryInterface`' `OuterAddRef`s, `OuterRelease` e para encaminhar para o desconhecido externo. Normalmente, você substitui `CComObjectRootEx::FinalConstruct` em sua classe para criar qualquer objeto agregado e substituir `CComObjectRootEx::FinalRelease` para liberar todos os objetos agregados.
 
-Se o objeto não é agregado, `IUnknown` é implementado por `CComObject` ou `CComPolyObject`. Nesse caso, chamadas para `QueryInterface`, `AddRef`, e `Release` são delegadas a `CComObjectRootEx`do `InternalQueryInterface`, `InternalAddRef`, e `InternalRelease` para executar as operações reais.
+Se o objeto não for agregado, `IUnknown` será implementado pelo `CComObject` ou `CComPolyObject`. Nesse caso, as chamadas para `QueryInterface`, `AddRef`, e `Release` são delegadas a `CComObjectRootEx` `InternalQueryInterface` `InternalAddRef`, e `InternalRelease` para executar as operações reais.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlcom
+**Cabeçalho:** atlcom. h
 
-##  <a name="ccomobjectrootex"></a>  CComObjectRootEx::CComObjectRootEx
+##  <a name="ccomobjectrootex"></a>CComObjectRootEx::CComObjectRootEx
 
 O construtor inicializa a contagem de referência como 0.
 
@@ -117,43 +117,43 @@ HRESULT FinalConstruct();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorne S_OK no êxito ou um do erro padrão valores HRESULT.
+Retorne S_OK em caso de êxito ou um dos valores HRESULT de erro padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, `CComObjectRootEx::FinalConstruct` simplesmente retorna S_OK.
+Por padrão, `CComObjectRootEx::FinalConstruct` o simplesmente retorna S_OK.
 
-Há vantagens em realizar a inicialização em `FinalConstruct` em vez do construtor da sua classe:
+Há vantagens em executar a inicialização em `FinalConstruct` vez do construtor de sua classe:
 
-- Você não pode retornar um código de status de um construtor, mas você pode retornar um HRESULT por meio de `FinalConstruct`do valor de retorno. Quando objetos de sua classe estão sendo criados usando a fábrica de classes padrão fornecida pelo ATL, esse valor de retorno é propagado de volta para o cliente COM, permitindo que você forneça informações de erro detalhadas.
+- Não é possível retornar um código de status de um construtor, mas você pode retornar um HRESULT por `FinalConstruct`meio do valor de retorno. Quando os objetos da sua classe estão sendo criados usando a fábrica de classes padrão fornecida pela ATL, esse valor de retorno é propagado de volta para o cliente COM, permitindo que você forneça informações detalhadas sobre o erro.
 
-- Você não pode chamar funções virtuais por meio do mecanismo do construtor de uma classe de função virtual. Chamar uma função virtual do construtor de uma classe resulta em uma chamada estaticamente resolvida para a função que ele está definido nesse ponto na hierarquia de herança. Chamadas para funções virtuais puras resultam em erros de vinculador.
+- Você não pode chamar funções virtuais por meio do mecanismo de função virtual do construtor de uma classe. Chamar uma função virtual do construtor de uma classe resulta em uma chamada resolvida estaticamente para a função conforme ela é definida nesse ponto na hierarquia de herança. Chamadas para funções virtuais puras resultam em erros de vinculador.
 
-   Sua classe não é a classe mais derivada na hierarquia de herança — ele se baseia em uma classe derivada fornecida pelo ATL para fornecer algumas das suas funcionalidades. Há uma boa chance de que sua inicialização precisará usar os recursos fornecidos pela classe (Isso é certamente verdadeiro quando objetos de sua classe precisam agregar outros objetos), mas o construtor em sua classe não tem nenhuma maneira de acessar esses recursos. O código de construção para a sua classe é executado antes que a classe mais derivada está totalmente construída.
+   Sua classe não é a classe mais derivada na hierarquia de herança — ela se baseia em uma classe derivada fornecida pela ATL para fornecer algumas de suas funcionalidades. Há uma boa chance de que sua inicialização precise usar os recursos fornecidos pela classe (isso certamente é verdade quando os objetos de sua classe precisam agregar outros objetos), mas o Construtor em sua classe não tem como acessar esses recursos. O código de construção para sua classe é executado antes que a classe mais derivada seja totalmente construída.
 
-   No entanto, `FinalConstruct` é chamado imediatamente depois de mais derivado classe está totalmente construído, permitindo que você chamar funções virtuais e usar a implementação de contagem de referência fornecida pela ATL.
+   No entanto, `FinalConstruct` é chamado imediatamente depois que a classe mais derivada é totalmente construída, permitindo que você chame funções virtuais e use a implementação de contagem de referência fornecida pela ATL.
 
 ### <a name="example"></a>Exemplo
 
-Normalmente, substitua este método na classe derivada de `CComObjectRootEx` criar qualquer agregados objetos. Por exemplo:
+Normalmente, substitua esse método na classe derivada de `CComObjectRootEx` para criar qualquer objeto agregado. Por exemplo:
 
 [!code-cpp[NVC_ATL_COM#40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]
 
-Se a construção falhar, você pode retornar um erro. Você também pode usar a macro [DECLARE_PROTECT_FINAL_CONSTRUCT](aggregation-and-class-factory-macros.md#declare_protect_final_construct) proteger seu objeto externo de ser excluído se, durante a criação, o objeto agregado interno incrementa a contagem de referência, em seguida, diminui a contagem como 0.
+Se a construção falhar, você poderá retornar um erro. Você também pode usar a macro [DECLARE_PROTECT_FINAL_CONSTRUCT](aggregation-and-class-factory-macros.md#declare_protect_final_construct) para proteger seu objeto externo de ser excluído se, durante a criação, o objeto agregado interno incrementar a contagem de referência, e decrementar a contagem para 0.
 
-Aqui está uma maneira comum de criar uma agregação:
+Aqui está uma maneira típica de criar uma agregação:
 
-- Adicionar um `IUnknown` ponteiro para sua classe de objeto e inicializá-lo como NULL no construtor.
+- Adicione um `IUnknown` ponteiro ao seu objeto de classe e inicialize-o como NULL no construtor.
 
-- Substituir `FinalConstruct` para criar a agregação.
+- Substitua `FinalConstruct` para criar a agregação.
 
-- Use o `IUnknown` ponteiro definido como o parâmetro para o [COM_INTERFACE_ENTRY_AGGREGATE](com-interface-entry-macros.md#com_interface_entry_aggregate) macro.
+- Use o `IUnknown` ponteiro que você definiu como o parâmetro para a macro [COM_INTERFACE_ENTRY_AGGREGATE](com-interface-entry-macros.md#com_interface_entry_aggregate) .
 
-- Substituir `FinalRelease` para liberar o `IUnknown` ponteiro.
+- Substitua `FinalRelease` para liberar o `IUnknown` ponteiro.
 
-##  <a name="finalrelease"></a>  CComObjectRootEx::FinalRelease
+##  <a name="finalrelease"></a>CComObjectRootEx::FinalRelease
 
-Você pode substituir esse método em sua classe derivada para realizar qualquer limpeza necessária para seu objeto.
+Você pode substituir esse método em sua classe derivada para executar qualquer limpeza necessária para seu objeto.
 
 ```
 void FinalRelease();
@@ -163,11 +163,11 @@ void FinalRelease();
 
 Por padrão, `CComObjectRootEx::FinalRelease` não faz nada.
 
-Executar limpeza na `FinalRelease` é preferível a adicionar código para o destruidor de sua classe, pois o objeto é construído ainda totalmente no ponto em que `FinalRelease` é chamado. Isso permite que você acesse com segurança os métodos fornecidos pela classe mais derivada. Isso é particularmente importante para liberar todos os objetos agregados antes da exclusão.
+Executar a limpeza `FinalRelease` no é preferível a adicionar código ao destruidor de sua classe, pois o objeto ainda está totalmente construído no ponto em `FinalRelease` que é chamado. Isso permite que você acesse com segurança os métodos fornecidos pela classe mais derivada. Isso é particularmente importante para a liberação de qualquer objeto agregado antes da exclusão.
 
 ##  <a name="internaladdref"></a>  CComObjectRootEx::InternalAddRef
 
-Incrementa a contagem de referência de um objeto não agregada em 1.
+Incrementa a contagem de referência de um objeto não agregado em 1.
 
 ```
 ULONG InternalAddRef();
@@ -175,11 +175,11 @@ ULONG InternalAddRef();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor que pode ser úteis para diagnóstico e teste.
+Um valor que pode ser útil para diagnóstico e teste.
 
 ### <a name="remarks"></a>Comentários
 
-Se o modelo de thread é multithreaded, `InterlockedIncrement` é usado para impedir que mais de um thread altere a contagem de referência ao mesmo tempo.
+Se o modelo de thread for multi-threaded, `InterlockedIncrement` será usado para impedir que mais de um thread altere a contagem de referência ao mesmo tempo.
 
 ##  <a name="internalqueryinterface"></a>  CComObjectRootEx::InternalQueryInterface
 
@@ -196,28 +196,28 @@ static HRESULT InternalQueryInterface(
 ### <a name="parameters"></a>Parâmetros
 
 *pThis*<br/>
-[in] Um ponteiro para o objeto que contém o mapa COM interfaces expostas a `QueryInterface`.
+no Um ponteiro para o objeto que contém o mapa COM de interfaces expostas para `QueryInterface`.
 
 *pEntries*<br/>
-[in] Um ponteiro para o `_ATL_INTMAP_ENTRY` estrutura que acessa um mapa das interfaces disponíveis.
+no Um ponteiro para a `_ATL_INTMAP_ENTRY` estrutura que acessa um mapa de interfaces disponíveis.
 
 *iid*<br/>
-[in] O GUID da interface que está sendo solicitado.
+no O GUID da interface que está sendo solicitada.
 
 *ppvObject*<br/>
-[out] Um ponteiro para o ponteiro de interface especificado na *iid*, ou nulo se a interface não foi encontrada.
+fora Um ponteiro para o ponteiro de interface especificado em *IID*ou NULL se a interface não for encontrada.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um dos valores HRESULT padrão.
+Um dos valores de HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-`InternalQueryInterface` somente lida com interfaces na tabela de mapa COM. Se o objeto for agregado, `InternalQueryInterface` não delegar para o externo desconhecido. Você pode inserir interfaces na tabela de mapa COM a macro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) ou uma de suas variantes.
+`InternalQueryInterface` somente lida com interfaces na tabela de mapa COM. Se o objeto for agregado, `InternalQueryInterface` o não delegará para o desconhecido externo. Você pode inserir interfaces na tabela de mapa com com a macro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) ou uma de suas variantes.
 
-##  <a name="internalrelease"></a>  CComObjectRootEx::InternalRelease
+##  <a name="internalrelease"></a>CComObjectRootEx::InternalRelease
 
-Diminui a contagem de referência de um objeto não agregado em 1.
+Decrementa a contagem de referência de um objeto não agregado em 1.
 
 ```
 ULONG InternalRelease();
@@ -225,15 +225,15 @@ ULONG InternalRelease();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Em ambos não são de depuração e compilações de depuração, essa função retorna um valor que pode ser útil para diagnóstico ou teste. O valor exato retornado depende de muitos fatores, como o sistema operacional usado e pode ou não ser, ser a contagem de referência.
+Em compilações de não depuração e depuração, essa função retorna um valor que pode ser útil para diagnóstico ou teste. O valor exato retornado depende de muitos fatores, como o sistema operacional usado, e pode ou não ser a contagem de referência.
 
 ### <a name="remarks"></a>Comentários
 
-Se o modelo de thread é multithreaded, `InterlockedDecrement` é usado para impedir que mais de um thread altere a contagem de referência ao mesmo tempo.
+Se o modelo de thread for multi-threaded, `InterlockedDecrement` será usado para impedir que mais de um thread altere a contagem de referência ao mesmo tempo.
 
-##  <a name="lock"></a>  CComObjectRootEx::Lock
+##  <a name="lock"></a>CComObjectRootEx:: Lock
 
-Se o modelo de thread é multithreaded, este método chama a função de API do Win32 [EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection), que aguarda até que o thread pode assumir a propriedade do objeto de seção crítica obtidos por meio de um membro de dados particulares.
+Se o modelo de thread for multi-threaded, esse método chamará a função de API do Win32 [EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection), que aguarda até que o thread possa assumir a propriedade do objeto de seção crítica obtido por meio de um membro de dados privado.
 
 ```
 void Lock();
@@ -241,13 +241,13 @@ void Lock();
 
 ### <a name="remarks"></a>Comentários
 
-Quando o código protegido termina a execução, o thread deve chamar `Unlock` para liberar a propriedade da seção crítica.
+Quando o código protegido termina de ser executado, o thread `Unlock` deve chamar para liberar a propriedade da seção crítica.
 
-Se o modelo de thread é single-threaded, esse método não fará nada.
+Se o modelo de thread for de thread único, esse método não fará nada.
 
 ##  <a name="m_dwref"></a>  CComObjectRootEx::m_dwRef
 
-Parte de uma união que acessa quatro bytes de memória.
+Parte de uma União que acessa quatro bytes de memória.
 
 ```
 long m_dwRef;
@@ -255,7 +255,7 @@ long m_dwRef;
 
 ### <a name="remarks"></a>Comentários
 
-Com `m_pOuterUnknown`, que faz parte de uma união:
+Com `m_pOuterUnknown`o, parte de uma União:
 
 ```
 union {
@@ -264,11 +264,11 @@ union {
 };
 ```
 
-Se o objeto não é agregado, a contagem de referência é acessado por `AddRef` e `Release` são armazenados em `m_dwRef`. Se o objeto for agregado, o ponteiro para o externo desconhecido é armazenado no [m_pOuterUnknown](#m_pouterunknown).
+Se o objeto não for agregado, a contagem de referência acessada pelo `AddRef` e `m_dwRef` `Release` será armazenada em. Se o objeto for agregado, o ponteiro para o desconhecido externo será armazenado em [m_pOuterUnknown](#m_pouterunknown).
 
 ##  <a name="m_pouterunknown"></a>  CComObjectRootEx::m_pOuterUnknown
 
-Parte de uma união que acessa quatro bytes de memória.
+Parte de uma União que acessa quatro bytes de memória.
 
 ```
 IUnknown*
@@ -277,7 +277,7 @@ IUnknown*
 
 ### <a name="remarks"></a>Comentários
 
-Com `m_dwRef`, que faz parte de uma união:
+Com `m_dwRef`o, parte de uma União:
 
 ```
 union {
@@ -286,11 +286,11 @@ union {
 };
 ```
 
-Se o objeto for agregado, o ponteiro para o externo desconhecido é armazenado em `m_pOuterUnknown`. Se o objeto não é agregado, a contagem de referência é acessado por `AddRef` e `Release` é armazenado em [m_dwRef](#m_dwref).
+Se o objeto for agregado, o ponteiro para o desconhecido externo será armazenado em `m_pOuterUnknown`. Se o objeto não for agregado, a contagem de referência acessada pelo `AddRef` e `Release` será armazenada em [m_dwRef](#m_dwref).
 
-##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain
+##  <a name="objectmain"></a>CComObjectRootEx:: ObjectMain
 
-Para cada classe listado no mapa de objetos, essa função é chamada depois que quando o módulo é inicializado, e novamente quando ele é encerrado.
+Para cada classe listada no mapa de objetos, essa função é chamada uma vez quando o módulo é inicializado e novamente quando é encerrada.
 
 ```
 static void WINAPI ObjectMain(bool bStarting);
@@ -299,13 +299,13 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="parameters"></a>Parâmetros
 
 *bStarting*<br/>
-[out] O valor será TRUE se a classe está sendo inicializada; Caso contrário, FALSE.
+fora O valor será TRUE se a classe estiver sendo inicializada; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-O valor de *bStarting* parâmetro indica se o módulo está sendo inicializado ou encerrada. A implementação padrão de `ObjectMain` não faz nada, mas você pode substituir essa função em sua classe para inicializá-la ou limpar os recursos que você deseja alocar para a classe. Observe que `ObjectMain` é chamado antes que todas as instâncias da classe são solicitadas.
+O valor do parâmetro *bStarting* indica se o módulo está sendo inicializado ou encerrado. A implementação padrão de `ObjectMain` não faz nada, mas você pode substituir essa função em sua classe para inicializar ou limpar os recursos que deseja alocar para a classe. Observe que `ObjectMain` é chamado antes de qualquer instância da classe ser solicitada.
 
-`ObjectMain` é chamado de ponto de entrada da DLL, portanto, o tipo de operação que a função de ponto de entrada pode executar é restrito. Para obter mais informações sobre essas restrições, consulte [DLLs e Visual C++ comportamento da biblioteca em tempo de execução](../../build/run-time-library-behavior.md) e [DllMain](/windows/desktop/Dlls/dllmain).
+`ObjectMain`é chamado a partir do ponto de entrada da DLL, portanto, o tipo de operação que a função de ponto de entrada pode executar é restrito. Para obter mais informações sobre essas restrições, consulte [DLLs e C++ o comportamento da biblioteca de tempo de execução Visual](../../build/run-time-library-behavior.md) e [DllMain](/windows/win32/Dlls/dllmain).
 
 ### <a name="example"></a>Exemplo
 
@@ -313,7 +313,7 @@ O valor de *bStarting* parâmetro indica se o módulo está sendo inicializado o
 
 ##  <a name="outeraddref"></a>  CComObjectRootEx::OuterAddRef
 
-Incrementa a contagem de referência do desconhecido de uma agregação externa.
+Incrementa a contagem de referência do desconhecido externo de uma agregação.
 
 ```
 ULONG OuterAddRef();
@@ -321,7 +321,7 @@ ULONG OuterAddRef();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor que pode ser úteis para diagnóstico e teste.
+Um valor que pode ser útil para diagnóstico e teste.
 
 ##  <a name="outerqueryinterface"></a>  CComObjectRootEx::OuterQueryInterface
 
@@ -334,18 +334,18 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 ### <a name="parameters"></a>Parâmetros
 
 *iid*<br/>
-[in] O GUID da interface que está sendo solicitado.
+no O GUID da interface que está sendo solicitada.
 
 *ppvObject*<br/>
-[out] Um ponteiro para o ponteiro de interface especificado na *iid*, ou nulo se a agregação não suporta a interface.
+fora Um ponteiro para o ponteiro de interface especificado em *IID*ou NULL se a agregação não oferecer suporte à interface.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um dos valores HRESULT padrão.
+Um dos valores de HRESULT padrão.
 
-##  <a name="outerrelease"></a>  CComObjectRootEx::OuterRelease
+##  <a name="outerrelease"></a>CComObjectRootEx::OuterRelease
 
-Diminui a contagem de referência do desconhecido de uma agregação externo.
+Decrementa a contagem de referência do desconhecido externo de uma agregação.
 
 ```
 ULONG OuterRelease();
@@ -353,11 +353,11 @@ ULONG OuterRelease();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Em compilações sem depuração, sempre retorna 0. Em compilações de depuração, retorna um valor que pode ser úteis para diagnóstico ou teste.
+Em compilações não depuradas, sempre retorna 0. Em compilações de depuração, retorna um valor que pode ser útil para diagnóstico ou teste.
 
-##  <a name="unlock"></a>  CComObjectRootEx::Unlock
+##  <a name="unlock"></a>CComObjectRootEx:: desbloquear
 
-Se o modelo de thread é multithreaded, este método chama a função de API do Win32 [LeaveCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection), que libera a propriedade do objeto de seção crítica obtidos por meio de um membro de dados particulares.
+Se o modelo de thread for multi-threaded, esse método chamará a função de API do Win32 [LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection), que libera a propriedade do objeto de seção crítica obtido por meio de um membro de dados privado.
 
 ```
 void Unlock();
@@ -365,9 +365,9 @@ void Unlock();
 
 ### <a name="remarks"></a>Comentários
 
-Para obter a propriedade, o thread deve chamar `Lock`. Cada chamada para `Lock` requer uma chamada correspondente para `Unlock` para liberar a propriedade da seção crítica.
+Para obter a propriedade, o thread deve `Lock`chamar. Cada chamada para `Lock` requer uma chamada correspondente para `Unlock` para liberar a propriedade da seção crítica.
 
-Se o modelo de thread é single-threaded, esse método não fará nada.
+Se o modelo de thread for de thread único, esse método não fará nada.
 
 ## <a name="see-also"></a>Consulte também
 
