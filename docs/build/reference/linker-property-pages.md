@@ -1,14 +1,14 @@
 ---
 title: Páginas de propriedade do vinculador
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-ms.openlocfilehash: 17880d50ae012b640cb83f3766883ab2b1bcbe73
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 55fcefd826ec6ecb153adad495e21ce97aa432f1
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537596"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927713"
 ---
 # <a name="linker-property-pages"></a>Páginas de propriedade do vinculador
 
@@ -34,7 +34,7 @@ Imprime mensagens de progresso do vinculador
 - **Sobre módulos incompatíveis com Seh** -exibe informações sobre módulos incompatíveis com a manipulação de exceção segura.
 - **Sobre a atividade do vinculador relacionada ao código gerenciado** – exiba informações sobre a atividade do vinculador relacionada ao código gerenciado.
 
-### <a name="version"></a>Versão
+### <a name="version"></a>Version
 
 A opção [/version](version-version-information.md) informa o vinculador para colocar um número de versão no cabeçalho do arquivo. exe ou. dll. Use DUMPBIN/HEADERS para ver o campo versão da imagem dos valores de cabeçalho OPCIONais para ver o efeito de **/version**.
 
@@ -48,7 +48,7 @@ A opção [/nologo](nologo-suppress-startup-banner-linker.md) impede a exibiçã
 
 ### <a name="ignore-import-library"></a>Ignorar Biblioteca de Importação
 
-Essa propriedade instrui o vinculador a não vincular nenhuma saída .lib gerada por esse build a nenhum projeto dependente. Isso permite que o sistema de projeto manipule arquivos .dll que não produzem um arquivo .lib quando compilados. Se um projeto depende de outro projeto que produz uma DLL, o sistema do projeto vincula automaticamente o arquivo .lib produzido por esse projeto filho. Isso pode não ser necessário para projetos que produzem DLLs COM ou DLLs somente de recursos; essas DLLs não têm exportações significativas. Se uma DLL não tem exportações, o vinculador não gera um arquivo .lib. Se nenhum arquivo .lib de exportação estiver presente no disco e o sistema de projeto instruir o vinculador a ser vinculado a essa DLL (ausente), o vínculo falhará. Use a propriedade **Ignorar Biblioteca de Importação** para resolver esse problema. Quando definido como **Sim**, o sistema de projeto ignora a presença ou a ausência do arquivo .lib e faz com que qualquer projeto que dependa desse projeto não seja vinculado ao arquivo .lib inexistente.
+Essa propriedade instrui o vinculador a não vincular nenhuma saída .lib gerada por esse build a nenhum projeto dependente. Ele permite que o sistema de projeto manipule arquivos. dll que não produzem um arquivo. lib quando compilado. Se um projeto depende de outro projeto que produz uma DLL, o sistema do projeto vincula automaticamente o arquivo .lib produzido por esse projeto filho. Essa propriedade pode ser desnecessária em projetos que produzem DLLs COM ou DLLs somente de recursos, pois essas DLLs não têm nenhuma exportação significativa. Se uma DLL não tiver exportações, o vinculador não gerará um arquivo. lib. Se nenhum arquivo Export. lib estiver presente e o sistema do projeto instruir o vinculador a vincular com a DLL ausente, o link falhará. Use a propriedade **Ignorar Biblioteca de Importação** para resolver esse problema. Quando definido como **Sim**, o sistema de projeto ignora a presença ou a ausência do arquivo. lib e faz com que qualquer projeto que dependa deste projeto não seja vinculado ao arquivo. lib inexistente.
 
 Para acessar essa propriedade de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>.
 
@@ -60,7 +60,7 @@ Para acessar essa propriedade de forma programática, confira <xref:Microsoft.Vi
 
 ### <a name="per-user-redirection"></a>Redirecionamento por usuário
 
-Tradicionalmente, o registro no Visual Studio é feito em HKEY_CLASSES_ROOT (HKCR). Com o Windows Vista e sistemas operacionais posteriores, para acessar HKCR, é necessário executar o Visual Studio no modo elevado. Os desenvolvedores nem sempre desejam executá-lo no modo elevado, mas ainda precisam trabalhar com o registro. O redirecionamento por usuário permite que você faça o registro sem precisar executar o Visual Studio nesse modo.
+Tradicionalmente, o registro no Visual Studio é feito em HKEY_CLASSES_ROOT (HKCR). Com o Windows Vista e sistemas operacionais posteriores, para acessar HKCR, é necessário executar o Visual Studio no modo elevado. Os desenvolvedores nem sempre querem executar no modo elevado, mas ainda devem trabalhar com o registro. O redirecionamento por usuário permite que você se registre sem precisar executar no modo elevado.
 
 O redirecionamento por usuário força as gravações em HKCR a serem redirecionadas para HKEY\_CURRENT\_USER (HKCU). Se o redirecionamento por usuário estiver desativado, isso poderá causar o [Erro de Build PRJ0050 do Projeto](../../error-messages/tool-errors/project-build-error-prj0050.md) quando o programa tentar fazer uma gravação em HKCR.
 
@@ -70,13 +70,13 @@ Permite que o usuário substitua o caminho da biblioteca ambiental. ([/LIBPATH](
 
 ### <a name="link-library-dependencies"></a>Dependências da Biblioteca de Links
 
-Especifica se os arquivos .lib produzidos por projetos dependentes devem ser vinculados. Normalmente, você deseja criar um vínculo com os arquivos .lib, mas esse pode não ser o caso para algumas DLLs.
+Especifica se os arquivos .lib produzidos por projetos dependentes devem ser vinculados. Normalmente, você deseja vincular os arquivos. lib, mas pode não ser o caso de determinadas DLLs.
 
-Especifique também um arquivo .obj fornecendo o nome de arquivo e o caminho relativo, por exemplo, "..\\..\MyLibProject\MyObjFile.obj". Se o código-fonte do arquivo .obj incluir um cabeçalho pré-compilado, por exemplo pch.h, o arquivo pch.obj estará localizado na mesma pasta de MyObjFile.obj e você também precisará adicionar pch.obj como uma dependência adicional.
+Especifique também um arquivo .obj fornecendo o nome de arquivo e o caminho relativo, por exemplo, "..\\..\MyLibProject\MyObjFile.obj". Se o código-fonte do arquivo. obj #includes um cabeçalho pré-compilado, por exemplo, PCH. h, o arquivo PCH. obj estará localizado na mesma pasta que MyObjFile. obj. Você também deve adicionar PCH. obj como uma dependência adicional.
 
 ### <a name="use-library-dependency-inputs"></a>Usar Entradas de Dependência da Biblioteca
 
-Especifica se as entradas para a ferramenta de bibliotecário são usadas em vez do próprio arquivo de biblioteca durante o vínculo em saídas de biblioteca de dependências do projeto. Em um projeto grande, quando um projeto dependente produz um arquivo .lib, o vínculo incremental é desabilitado. Se houver muitos projetos dependentes que produzem arquivos .lib, a compilação do aplicativo poderá levar muito tempo. Quando essa propriedade é definida como **Sim**, o sistema de projeto cria o vínculo nos arquivos .obj para os .libs produzidos por projetos dependentes, permitindo o vínculo incremental.
+Especifica se as entradas devem ser usadas para a ferramenta de bibliotecário, em vez do próprio arquivo de biblioteca, ao vincular as saídas de biblioteca das dependências do projeto. Em um projeto grande, quando um projeto dependente produz um arquivo .lib, o vínculo incremental é desabilitado. Se houver muitos projetos dependentes que produzem arquivos .lib, a compilação do aplicativo poderá levar muito tempo. Quando essa propriedade é definida como **Sim**, o sistema de projeto vincula nos arquivos. obj do. bibliotecas produzidos por projetos dependentes, habilitando a vinculação incremental.
 
 Para obter informações sobre como acessar a página de propriedades do vinculador **geral** , consulte [definir C++ Propriedades do compilador e de compilação no Visual Studio](../working-with-project-properties.md).
 
@@ -84,9 +84,9 @@ Para obter informações sobre como acessar a página de propriedades do vincula
 
 Especifica se o vinculador deve exibir um indicador de progresso mostrando qual porcentagem do link foi concluída. O padrão é não exibir essas informações de status. ([/LTCG](ltcg-link-time-code-generation.md): STATUS | LTCG: NOSTATUS)
 
-### <a name="prevent-dll-binding"></a>Impedir Associação de dll
+### <a name="prevent-dll-binding"></a>Impedir Associação de DLL
 
-[/ALLOWBIND](allowbind-prevent-dll-binding.md): não define um bit no cabeçalho de uma DLL que indica ao BIND. exe que a imagem não tem permissão para ser associada. Talvez você não queira que uma DLL seja vinculada caso ela tenha sido assinada digitalmente (a associação invalida a assinatura).
+[/ALLOWBIND](allowbind-prevent-dll-binding.md): não define um bit no cabeçalho de uma DLL que indica para BIND. exe que a imagem não tem permissão para ser associada. Talvez você não queira que uma DLL seja vinculada caso ela tenha sido assinada digitalmente (a associação invalida a assinatura).
 
 ### <a name="treat-linker-warning-as-errors"></a>Tratar aviso do vinculador como erros
 
@@ -94,12 +94,12 @@ Especifica se o vinculador deve exibir um indicador de progresso mostrando qual 
 
 ### <a name="force-file-output"></a>Forçar saída de arquivo
 
-A opção [/Force](force-force-file-output.md) informa o vinculador para criar um arquivo. exe ou dll, mesmo que um símbolo seja referenciado, mas não definido ou seja definido com multiplicação. Ele pode criar um arquivo. exe inválido.
+A opção [/Force](force-force-file-output.md) informa o vinculador para criar um arquivo. exe ou dll, mesmo que um símbolo seja referenciado, mas não definido, ou seja definido com multiplicação. Ele pode criar um arquivo. exe inválido.
 
 **Durante**
 
 - **Enabled** -/Force sem argumentos implica vários e não resolvidos.
-- **Somente símbolo definido multiplicado** – Use/Force: Multiple para criar um arquivo de saída se o link encontrar mais de uma definição para um símbolo.
+- **Somente símbolo definido multiplicado** – Use/Force: Multiple para criar um arquivo de saída, mesmo que o link encontre mais de uma definição para um símbolo.
 - **Somente símbolo não definido** – Use/Force: não resolvido para criar um arquivo de saída se o link encontrar ou não um símbolo indefinido. /FORCE: não resolvido será ignorado se o símbolo de ponto de entrada não for resolvido.
 
 ### <a name="create-hot-patchable-image"></a>Criar imagem com patches quentes
@@ -129,7 +129,7 @@ A opção [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) informa o vinculador
 
 ### <a name="ignore-specific-default-libraries"></a>Ignorar bibliotecas padrão específicas
 
-Especifica um ou mais nomes de bibliotecas padrão a serem ignoradas; Separe várias bibliotecas com ponto e vírgula. (/NODEFAULTLIB: [nome, nome,...])
+Especifica um ou mais nomes de bibliotecas padrão a serem ignoradas. Separe várias bibliotecas com ponto e vírgula. (/NODEFAULTLIB: [nome, nome,...])
 
 ### <a name="module-definition-file"></a>Arquivo de definição de módulo
 
@@ -276,11 +276,11 @@ A opção [/TSAWARE](tsaware-create-terminal-server-aware-application.md) define
 
 ### <a name="swap-run-from-cd"></a>Execução de permuta do CD
 
-A opção [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) informa o sistema operacional para primeiro copiar a saída do vinculador para um arquivo de permuta e, em seguida, executar a imagem a partir daí. Este é um recurso do Windows NT 4,0 (e posterior). Quando o **CD** for especificado, o sistema operacional copiará a imagem em um disco removível para um arquivo de paginação e, em seguida, a carregará.
+A opção [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) informa o sistema operacional para primeiro copiar a saída do vinculador para um arquivo de permuta e, em seguida, executar a imagem a partir daí. Esta opção é um recurso do Windows NT 4,0 (e posterior). Quando o **CD** for especificado, o sistema operacional copiará a imagem em um disco removível para um arquivo de paginação e, em seguida, a carregará.
 
 ### <a name="swap-run-from-network"></a>Execução de permuta da rede
 
-A opção [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) informa o sistema operacional para primeiro copiar a saída do vinculador para um arquivo de permuta e, em seguida, executar a imagem a partir daí. Este é um recurso do Windows NT 4,0 (e posterior). Se **net** for especificado, o sistema operacional primeiro copiará a imagem binária da rede para um arquivo de permuta e a carregará a partir daí. Essa opção é útil para executar aplicativos na rede.
+A opção [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) informa o sistema operacional para primeiro copiar a saída do vinculador para um arquivo de permuta e, em seguida, executar a imagem a partir daí. Esta opção é um recurso do Windows NT 4,0 (e posterior). Se **net** for especificado, o sistema operacional primeiro copiará a imagem binária da rede para um arquivo de permuta e a carregará a partir daí. Essa opção é útil para executar aplicativos na rede.
 
 ### <a name="driver"></a>Driver
 
@@ -297,11 +297,11 @@ Use a opção de vinculador [/Driver](driver-windows-nt-kernel-mode-driver.md) p
 
 ### <a name="references"></a>Referências
 
-[/Opt](opt-optimizations.md): REF elimina funções e/ou dados que nunca são referenciados enquanto/OPT: NOREF mantém funções e/ou dados que nunca são referenciados. 
+[/Opt](opt-optimizations.md): REF elimina funções e/ou dados que nunca são referenciados enquanto/OPT: NOREF mantém funções e/ou dados que nunca são referenciados.
 
 ### <a name="enable-comdat-folding"></a>Habilitar Dobra COMDAT
 
-Use [/opt](opt-optimizations.md): ICF\[= iterations] para executar o dobramento COMDAT idêntico. 
+Use [/opt](opt-optimizations.md): ICF\[= iterations] para executar o dobramento COMDAT idêntico.
 
 ### <a name="function-order"></a>Ordem da função
 
@@ -413,7 +413,7 @@ O qualificador **Unload** informa a função auxiliar de carregamento de atraso 
 
 ### <a name="nobind-delay-loaded-dll"></a>DLL de atraso NOBIND carregado
 
-O  qualificador NOBIND instrui o vinculador a não incluir um IAT vinculável na imagem final. O padrão é criar a IAT associável para DLLs carregadas com atraso. ([/DELAY](delay-delay-load-import-settings.md): NOBIND)
+O qualificador **NOBIND** instrui o vinculador a não incluir um IAT vinculável na imagem final. O padrão é criar a IAT associável para DLLs carregadas com atraso. ([/DELAY](delay-delay-load-import-settings.md): NOBIND)
 
 ### <a name="import-library"></a>Biblioteca de importação
 

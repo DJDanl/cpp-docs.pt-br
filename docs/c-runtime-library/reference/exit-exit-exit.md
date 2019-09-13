@@ -1,6 +1,6 @@
 ---
 title: exit, _Exit, _exit
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - _exit
 - exit
@@ -30,19 +30,19 @@ helpviewer_keywords:
 - processes, terminating
 - function calls, terminating
 - process termination, calling
-ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c16f306d745b96d8bc7c223213378140fdae14bb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339345"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927390"
 ---
-# <a name="exit-exit-exit"></a>exit, _Exit, _exit
+# <a name="exit-_exit-_exit"></a>exit, _Exit, _exit
 
-Encerra o processo de chamada. O **sair** função termina após a limpeza; **exit** e **exit** encerrá-lo imediatamente.
+Encerra o processo de chamada. A função **Exit** termina após a limpeza; **_exit** e **_exit** o encerram imediatamente.
 
 > [!NOTE]
-> Não use esse método para desligar um aplicativo de plataforma Universal do Windows (UWP), exceto em teste ou cenários de depuração. Maneiras programáticas ou interface do usuário de fechar um aplicativo da Store não são permitidas de acordo com o [políticas do Microsoft Store](/legal/windows/agreements/store-policies). Para obter mais informações, consulte [ciclo de vida do aplicativo UWP](/windows/uwp/launch-resume/app-lifecycle). Para obter mais informações sobre aplicativos do Windows 10, consulte [Guias de instrução para aplicativos do Windows 10](https://developer.microsoft.com/windows/apps).
+> Não use esse método para desligar um aplicativo Plataforma Universal do Windows (UWP), exceto em cenários de teste ou depuração. As maneiras programática ou de interface do usuário de fechar um aplicativo da loja não são permitidas de acordo com as [políticas de Microsoft Store](/legal/windows/agreements/store-policies). Para obter mais informações, consulte [ciclo de vida do aplicativo UWP](/windows/uwp/launch-resume/app-lifecycle). Para obter mais informações sobre aplicativos do Windows 10, consulte [Guias de instrução para aplicativos do Windows 10](https://developer.microsoft.com/windows/apps).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -65,11 +65,11 @@ Código de status de saída.
 
 ## <a name="remarks"></a>Comentários
 
-O **saia**, **exit** e **exit** funções encerram o processo de chamada. O **saia** função chama destruidores para objetos de thread local, em seguida, chama — na ordem do último a entrar, primeiro a sair (UEPS) — as funções que são registradas por **atexit** e **OnExit**e, em seguida, libera todos os buffers de arquivo antes de encerrar o processo. O **exit** e **exit** funções terminar o processo sem destruir objetos de thread local ou processamento **atexit** ou **OnExit**funções e sem eliminação de buffers de fluxo.
+As funções **Exit**, **_Exit** e **_Exit** encerram o processo de chamada. A função **Exit** chama destruidores para objetos de thread local e, em seguida, chama – na ordem UEPS (último a entrar, primeiro a sair) — as funções registradas por **atexit** e **_onexit**e, em seguida, libera todos os buffers de arquivo antes de encerrar o Process. As funções **_Exit** e **_Exit** encerram o processo sem destruir objetos locais de thread ou processar funções **atexit** ou **_onexit** e sem liberar buffers de fluxo.
 
-Embora o **saia**, **exit** e **exit** chamadas não retornam um valor, o valor na *status* é disponibilizado para o ambiente de host ou aguardando o processo de chamada, se houver uma, depois que o processo é encerrado. Normalmente, o chamador define o *status* valor como 0 para indicar uma saída normal ou para algum outro valor para indicar um erro. O *status* valor estará disponível para o comando de lote do sistema operacional **ERRORLEVEL** e é representado por uma das duas constantes: **EXIT_SUCCESS**, que representa um valor de 0, ou **EXIT_FAILURE**, que representa um valor de 1.
+Embora as chamadas **Exit**, **_Exit** e **_Exit** não retornem um valor, o valor no *status* é disponibilizado para o ambiente de host ou aguardando o processo de chamada, se houver um, após o processo sair. Normalmente, o chamador define o valor de *status* como 0 para indicar uma saída normal ou para algum outro valor para indicar um erro. O valor de *status* está disponível para o comando de lote do sistema operacional **ERRORLEVEL** e é representado por uma das duas constantes: **EXIT_SUCCESS**, que representa um valor de 0, ou **EXIT_FAILURE**, que representa um valor de 1.
 
-O **saia**, **exit**, **exit**, **quick_exit**, **cexit**, e **c_exit** funções se comportam da seguinte maneira.
+As funções **Exit**, **_Exit**, **_Exit**, **quick_exit**, **_cexit**e **_c_exit** se comportam da seguinte maneira.
 
 |Função|Descrição|
 |--------------|-----------------|
@@ -80,7 +80,7 @@ O **saia**, **exit**, **exit**, **quick_exit**, **cexit**, e **c_exit** funçõe
 |**_cexit**|Executa procedimentos completos de encerramento de biblioteca C e retorna ao chamador. Não encerra o processo.|
 |**_c_exit**|Executa procedimentos mínimos de encerramento de biblioteca C e retorna ao chamador. Não encerra o processo.|
 
-Quando você chama o **saia**, **exit** ou **exit** função, os destruidores de quaisquer objetos temporários ou automáticos que existem no momento da chamada não são chamados. Um objeto automático é um objeto de local não-estático definido em uma função. Um objeto temporário é um objeto que é criado pelo compilador, como um valor retornado por uma chamada de função. Para destruir um objeto automático antes de chamar **saia**, **exit**, ou **exit**explicitamente chamar o destruidor do objeto, como mostrado aqui:
+Quando você chama a função **Exit**, **_Exit** ou **_Exit** , os destruidores para todos os objetos temporários ou automáticos existentes no momento da chamada não são chamados. Um objeto automático é um objeto local não estático definido em uma função. Um objeto temporário é um objeto que é criado pelo compilador, como um valor retornado por uma chamada de função. Para destruir um objeto automático antes de chamar **Exit**, **_Exit**ou **_Exit**, chame explicitamente o destruidor para o objeto, como mostrado aqui:
 
 ```cpp
 void last_fn() {}
@@ -91,7 +91,7 @@ void last_fn() {}
 }
 ```
 
-Não use **DLL_PROCESS_ATTACH** chamar **sair** da **DllMain**. Para sair de **DLLMain** funcionar, retornar **falso** do **DLL_PROCESS_ATTACH**.
+Não use **DLL_PROCESS_ATTACH** para chamar **Exit** de **DllMain**. Para sair da função **DllMain** , retorne **false** de **DLL_PROCESS_ATTACH**.
 
 ## <a name="requirements"></a>Requisitos
 

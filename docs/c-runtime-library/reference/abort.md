@@ -1,6 +1,6 @@
 ---
 title: abort
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - abort
 apilocation:
@@ -22,19 +22,19 @@ helpviewer_keywords:
 - aborting current process
 - abort function
 - processes, aborting
-ms.openlocfilehash: d8cb190e36a64e8bd8cfcb75bc9a19c2a394fc48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ee07e50504b53e9e363f8b4fc5e9f4414637c449
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342192"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927473"
 ---
 # <a name="abort"></a>abort
 
 Anula o processo atual e retorna um código de erro.
 
 > [!NOTE]
-> Não use esse método para desligar um aplicativo da Microsoft Store ou aplicativo de plataforma Universal do Windows (UWP), exceto em teste ou cenários de depuração. Maneiras programáticas ou interface do usuário de fechar um aplicativo da Store não são permitidas de acordo com o [políticas do Microsoft Store](/legal/windows/agreements/store-policies). Para obter mais informações, consulte [ciclo de vida do aplicativo UWP](/windows/uwp/launch-resume/app-lifecycle).
+> Não use esse método para desligar um aplicativo Microsoft Store aplicativo ou Plataforma Universal do Windows (UWP), exceto em cenários de teste ou depuração. As maneiras programática ou de interface do usuário de fechar um aplicativo da loja não são permitidas de acordo com as [políticas de Microsoft Store](/legal/windows/agreements/store-policies). Para obter mais informações, consulte [ciclo de vida do aplicativo UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -44,27 +44,27 @@ void abort( void );
 
 ## <a name="return-value"></a>Valor de retorno
 
-**anular** retorna o controle para o processo de chamada. Por padrão, ele verifica se há um manipulador de sinal de anulação e gera `SIGABRT` caso haja algum definido. Em seguida **anular** encerra o processo atual e retorna um código de saída para o processo pai.
+**Abort** não retorna o controle para o processo de chamada. Por padrão, ele verifica se há um manipulador de sinal de anulação e gera `SIGABRT` caso haja algum definido. Em seguida, **Abort** encerra o processo atual e retorna um código de saída para o processo pai.
 
 ## <a name="remarks"></a>Comentários
 
 **Seção específica da Microsoft**
 
-Por padrão, quando um aplicativo é compilado com a biblioteca de tempo de execução de depuração, o **anular** rotina exibe uma mensagem de erro antes de `SIGABRT` é gerado. Para aplicativos de console em execução no modo de console, a mensagem é enviada para `STDERR`. Aplicativos da área de trabalho do Windows e aplicativos de console em execução no modo de janela exibem a mensagem em uma caixa de mensagem. Para suprimir a mensagem, use [set_abort_behavior](set-abort-behavior.md) para limpar o sinalizador `_WRITE_ABORT_MSG`. A mensagem exibida depende da versão do ambiente de tempo de execução usada. Para aplicativos compilados usando as versões mais recentes do Visual C++, a mensagem é semelhante a:
+Por padrão, quando um aplicativo é compilado com a biblioteca de tempo de execução de depuração, a rotina **Abort** exibe `SIGABRT` uma mensagem de erro antes de o ser gerado. Para aplicativos de console em execução no modo de console, a mensagem é enviada para `STDERR`. Aplicativos da área de trabalho do Windows e aplicativos de console em execução no modo de janela exibem a mensagem em uma caixa de mensagem. Para suprimir a mensagem, use [set_abort_behavior](set-abort-behavior.md) para limpar o sinalizador `_WRITE_ABORT_MSG`. A mensagem exibida depende da versão do ambiente de tempo de execução usada. Para aplicativos criados com o uso das versões mais recentes do C++Visual, a mensagem é semelhante a esta:
 
-> R6010 - Abort () foi chamado
+> R6010-Abort () foi chamado
 
 Nas versões anteriores da biblioteca em tempo de execução C, esta mensagem era exibida:
 
-> Este aplicativo solicitou o tempo de execução terminasse de maneira incomum. Entre em contato com a equipe de suporte do aplicativo para obter mais informações.
+> Este aplicativo solicitou o tempo de execução para encerrá-lo de maneira incomum. Entre em contato com a equipe de suporte do aplicativo para obter mais informações.
 
-Quando o programa é compilado no modo de depuração, a caixa de mensagem exibe opções para **Anular**, **Tentar novamente** ou **Ignorar**. Se o usuário escolher **Anular**, o programa será terminado imediatamente e retornará o código de saída 3. Se o usuário escolher **Tentar novamente**, um depurador será invocado para a depuração Just-In-Time, caso esteja disponível. Se o usuário escolhe **Ignore**, **anular** continuará o processamento normal.
+Quando o programa é compilado no modo de depuração, a caixa de mensagem exibe opções para **Anular**, **Tentar novamente** ou **Ignorar**. Se o usuário escolher **Anular**, o programa será terminado imediatamente e retornará o código de saída 3. Se o usuário escolher **Tentar novamente**, um depurador será invocado para a depuração Just-In-Time, caso esteja disponível. Se o usuário escolher **ignorar**, **abortar** continuará o processamento normal.
 
-Em compilações de depuração e comerciais **anular** , em seguida, verifica se um manipulador de sinal de anulação está definido. Se um manipulador de sinal não padrão for definido, **anular** chamadas `raise(SIGABRT)`. Use a função [signal](signal.md) para associar uma função de manipulador de sinal de anulação ao sinal `SIGABRT`. Você pode executar ações personalizadas – por exemplo, limpar recursos ou informações de log – e terminar o aplicativo com seu próprio código de erro na função de manipulador. Se nenhum manipulador personalizado de sinal for definido, **anular** não gera o `SIGABRT` sinal.
+Em compilações de varejo e de depuração, **abortar** verifica se um manipulador de sinal de anulação está definido. Se um manipulador de sinais não padrão for definido, **anule** as `raise(SIGABRT)`chamadas. Use a função [signal](signal.md) para associar uma função de manipulador de sinal de anulação ao sinal `SIGABRT`. Você pode executar ações personalizadas – por exemplo, limpar recursos ou informações de log – e terminar o aplicativo com seu próprio código de erro na função de manipulador. Se nenhum manipulador de sinais personalizado for definido, **Abort** não gerará `SIGABRT` o sinal.
 
-Por padrão, em compilações sem depuração de aplicativos de área de trabalho ou de console, **anular** , em seguida, invoca o mecanismo do serviço de relatório de erros do Windows (anteriormente conhecido como recuperação de desastres. Watson) para relatar falhas à Microsoft. Esse comportamento pode ser habilitado ou desabilitado chamando `_set_abort_behavior` e configurando ou mascarando o sinalizador `_CALL_REPORTFAULT`. Quando o sinalizador está definido, o Windows exibe uma caixa de mensagem contendo um texto semelhante a "Um problema impediu o programa de funcionar corretamente". O usuário pode escolher invocar um depurador com um botão **Depurar** ou escolher o botão **Fechar programa** para terminar o aplicativo com um código de erro definido pelo sistema operacional.
+Por padrão, em compilações não depuradas de aplicativos de desktop ou de console, **Abort** invoca o mecanismo de serviço relatório de erros do Windows (anteriormente conhecido como Dr. Watson) para relatar falhas à Microsoft. Esse comportamento pode ser habilitado ou desabilitado chamando `_set_abort_behavior` e configurando ou mascarando o sinalizador `_CALL_REPORTFAULT`. Quando o sinalizador está definido, o Windows exibe uma caixa de mensagem contendo um texto semelhante a "Um problema impediu o programa de funcionar corretamente". O usuário pode escolher invocar um depurador com um botão **Depurar** ou escolher o botão **Fechar programa** para terminar o aplicativo com um código de erro definido pelo sistema operacional.
 
-Se o relatório de manipulador de erros do Windows não é invocado, em seguida **anular** chamadas [exit](exit-exit-exit.md) para finalizar o processo com código de saída 3 e retornará controle para o processo pai ou o sistema operacional. `_exit` não libera os buffers de fluxo ou executa o processamento `atexit` / `_onexit`.
+Se o manipulador de relatórios de erros do Windows não for invocado, **Abort** chamará [_exit](exit-exit-exit.md) para encerrar o processo com o código de saída 3 e retornará o controle para o processo pai ou o sistema operacional. `_exit` não libera os buffers de fluxo ou executa o processamento `atexit` / `_onexit`.
 
 Para obter mais informações sobre depuração de CRT, consulte [Técnicas de Depuração CRT](/visualstudio/debugger/crt-debugging-techniques).
 

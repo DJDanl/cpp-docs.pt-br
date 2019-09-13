@@ -1,6 +1,6 @@
 ---
 title: C++Depurando páginas de propriedades
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 78115a6b-3799-4515-814e-8566b5bdc55d
 f1_keywords:
@@ -35,12 +35,12 @@ f1_keywords:
 - VC.Project.IVCWebSvcDebugPageObject.HttpUrl
 - VC.Project.IVCWebSvcDebugPageObject.DebuggerType
 - VC.Project.IVCWebSvcDebugPageObject.SQLDebugging
-ms.openlocfilehash: a63ac181b4ef281d6d78d951a46bba85103ba636
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 5f7a7bc0e2c696365daa38696fde6f1a480644b4
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537792"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927731"
 ---
 # <a name="c-debugging-property-pages"></a>C++Depurando páginas de propriedades
 
@@ -73,8 +73,8 @@ Especifica o tipo de depurador a ser usado. Quando definido como auto, o tipo de
 - **Somente nativo** -somente nativo
 - **Somente** gerenciados-somente gerenciados
 - Misto misto
-- Auto **-automático**
-- Script **-script**
+- **Auto-automático**
+- **Script-script**
 - **Somente GPU (C++ amp)** -somente GPU (C++ amp)
 
 ### <a name="environment"></a>Ambiente
@@ -144,8 +144,8 @@ Especifica o tipo de depurador a ser usado. Quando definido como auto, o tipo de
 - **Somente nativo** -somente nativo
 - **Somente** gerenciados-somente gerenciados
 - Misto misto
-- Auto **-automático**
-- Script **-script**
+- **Auto-automático**
+- **Script-script**
 - **Somente GPU (C++ amp)** -somente GPU (C++ amp)
 
 ### <a name="environment"></a>Ambiente
@@ -204,8 +204,8 @@ Especifica o tipo de depurador a ser usado. Quando definido como auto, o tipo de
 - **Somente nativo** -somente nativo
 - **Somente** gerenciados-somente gerenciados
 - Misto misto
-- Auto **-automático**
-- Script **-script**
+- **Auto-automático**
+- **Script-script**
 
 ## <a name="web-service-debugger-property-page"></a>Página de propriedades do depurador de serviço Web
 
@@ -222,8 +222,8 @@ Especifica o tipo de depurador a ser usado. Quando definido como auto, o tipo de
 - **Somente nativo** -somente nativo
 - **Somente** gerenciados-somente gerenciados
 - Misto misto
-- Auto **-automático**
-- Script **-script**
+- **Auto-automático**
+- **Script-script**
 
 ### <a name="sql-debugging"></a>Depuração SQL
 
