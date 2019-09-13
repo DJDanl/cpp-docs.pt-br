@@ -71,7 +71,7 @@ Um tipo que pode ser usado para representar estados intermediários de uma conve
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve um objeto que pode servir como uma [faceta de localidade](../standard-library/locale-class.md#facet_class), para controlar conversões entre uma sequência de valores do tipo *CharType* e uma sequência de valores do tipo *byte*. O Statetype da classe caracteriza a transformação – e um objeto *de classbinding* armazena todas as informações de estado necessárias durante uma conversão.
+A classe de modelo descreve um objeto que pode servir como uma [faceta de localidade](../standard-library/locale-class.md#facet_class), para controlar conversões entre uma sequência de valores do tipo *CharType* e uma sequência de valores do tipo *byte*. O *statetype* da classe caracteriza a transformação – e um objeto *de classbinding* armazena todas as informações de estado necessárias durante uma conversão.
 
 A codificação interna usa uma representação com um número fixo de bytes por caractere, geralmente o tipo **Char** ou o tipo **wchar_t**.
 
@@ -371,7 +371,7 @@ O número máximo de `Byte`s necessários para produzir um `CharType`.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro virtual protegido retorna o maior valor permitido que pode ser retornado [](#do_length)por do_length `first1`( `last1`,, 1) para valores válidos arbitrários de *first1* e *last1*.
+A função de membro virtual protegido retorna o maior valor permitido que pode ser retornado por [do_length](#do_length)(`first1`, `last1`, 1) para valores válidos arbitrários de *first1* e *last1*.
 
 ### <a name="example"></a>Exemplo
 

@@ -1,5 +1,5 @@
 ---
-title: Funções globais de controle de composição
+title: Funções globais de controle composto
 ms.date: 11/04/2016
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
@@ -18,19 +18,19 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: fb41134de21cc030ae4e96360cad67222026ce4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 58c7fed2d6e95967101e98589a13c114fe2e9a8a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278404"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496645"
 ---
-# <a name="composite-control-global-functions"></a>Funções globais de controle de composição
+# <a name="composite-control-global-functions"></a>Funções globais de controle composto
 
-Essas funções fornecem suporte para a criação de caixas de diálogo e para criação, hospedagem e licenciando controles ActiveX.
+Essas funções fornecem suporte para a criação de caixas de diálogo e para criação, hospedagem e licenciamento de controles ActiveX.
 
 > [!IMPORTANT]
->  As funções listadas na tabela a seguir não podem ser usadas em aplicativos executados no tempo de execução do Windows.
+>  As funções listadas na tabela a seguir não podem ser usadas em aplicativos que são executados no Windows Runtime.
 
 |||
 |-|-|
@@ -41,16 +41,16 @@ Essas funções fornecem suporte para a criação de caixas de diálogo e para c
 |[AtlAxCreateControlLic](#atlaxcreatecontrollic)|Cria um controle ActiveX licenciado, inicializa-o e hospeda-o na janela especificada.|
 |[AtlAxCreateControlLicEx](#atlaxcreatecontrollicex)|Cria um controle ActiveX licenciado, inicializa-o, hospeda-o na janela especificada e recupera um ponteiro de interface (ou ponteiros) do controle.|
 |[AtlAxAttachControl](#atlaxattachcontrol)|Anexa um controle criado anteriormente à janela especificada.|
-|[AtlAxGetHost](#atlaxgethost)|Usado para obter um ponteiro de interface direta para o contêiner para uma janela especificada (se houver), acordo com seu identificador.|
-|[AtlAxGetControl](#atlaxgetcontrol)|Usado para obter um ponteiro de interface direta para o controle contido em uma janela especificada (se houver), acordo com seu identificador.|
+|[AtlAxGetHost](#atlaxgethost)|Usado para obter um ponteiro de interface direto para o contêiner de uma janela especificada (se houver), considerando seu identificador.|
+|[AtlAxGetControl](#atlaxgetcontrol)|Usado para obter um ponteiro de interface direto para o controle contido dentro de uma janela especificada (se houver), considerando seu identificador.|
 |[AtlSetChildSite](#atlsetchildsite)|Inicializa o `IUnknown` do site filho.|
 |[AtlAxWinInit](#atlaxwininit)|Inicializa o código de hospedagem para objetos AxWin.|
-|[AtlAxWinTerm](#atlaxwinterm)|O código de hospedagem para objetos AxWin cancela a inicialização.|
+|[AtlAxWinTerm](#atlaxwinterm)|Desinicializa o código de hospedagem para objetos AxWin.|
 |[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Retorna informações sobre a interface de origem padrão de um objeto.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlhost.h
+**Cabeçalho:** atlhost. h
 
 ##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox
 
@@ -68,38 +68,38 @@ ATLAPI_(int) AtlAxDialogBox(
 ### <a name="parameters"></a>Parâmetros
 
 *hInstance*<br/>
-[in] Identifica uma instância do módulo cujo arquivo executável contém o modelo de caixa de diálogo.
+no Identifica uma instância do módulo cujo arquivo executável contém o modelo de caixa de diálogo.
 
 *lpTemplateName*<br/>
-[in] Identifica o modelo de caixa de diálogo. Esse parâmetro é o ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do modelo de caixa de diálogo ou um valor inteiro que especifica o identificador de recurso do modelo de caixa de diálogo. Se o parâmetro especifica um identificador de recurso, sua palavra de ordem superior deve ser zero e a palavra de ordem inferior deve conter o identificador. Você pode usar o [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) macro para criar esse valor.
+no Identifica o modelo da caixa de diálogo. Esse parâmetro é o ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do modelo da caixa de diálogo ou um valor inteiro que especifica o identificador de recurso do modelo da caixa de diálogo. Se o parâmetro especificar um identificador de recurso, sua palavra de ordem superior deverá ser zero e sua palavra de ordem inferior deverá conter o identificador. Você pode usar a macro [MAKEINTRESOURCE](/windows/win32/api/winuser/nf-winuser-makeintresourcew) para criar esse valor.
 
 *hWndParent*<br/>
-[in] Identifica a janela que possui a caixa de diálogo.
+no Identifica a janela que possui a caixa de diálogo.
 
 *lpDialogProc*<br/>
-[in] Aponta para o procedimento de caixa de diálogo. Para obter mais informações sobre o procedimento de caixa de diálogo, consulte [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc).
+no Aponta para o procedimento da caixa de diálogo. Para obter mais informações sobre o procedimento da caixa de diálogo, consulte [DialogProc](/windows/win32/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
-[in] Especifica o valor para passar para a caixa de diálogo do *lParam* parâmetro da mensagem WM_INITDIALOG.
+no Especifica o valor a ser passado para a caixa de diálogo no parâmetro *lParam* da mensagem WM_INITDIALOG.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um dos valores HRESULT padrão.
+Um dos valores de HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Para usar `AtlAxDialogBox` com um modelo de caixa de diálogo que contém um controle ActiveX, especifique uma cadeia CLSID, APPID ou URL válida, como o *texto* campo dos **controle** seção do recurso de caixa de diálogo, junto com " AtlAxWin80 "como o *nome da classe* campo sob a mesma seção. A seguir demonstra quais válida **controle** seção pode parecer com:
+Para usar `AtlAxDialogBox` com um modelo de caixa de diálogo que contém um controle ActiveX, especifique uma cadeia de caracteres CLSID, AppID ou URL válida como o campo de *texto* da seção de **controle** do recurso de caixa de diálogo, juntamente com "AtlAxWin80" como o campo de *nome de classe* na mesma seção. O exemplo a seguir demonstra o que uma seção de **controle** válida pode ter:
 
 ```
 CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-Para obter mais informações sobre como editar scripts de recurso, consulte [como: Abrir um arquivo de Script de recurso no formato de texto](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Para obter mais informações sobre instruções de definição de recurso de controle, consulte [parâmetros de controle comuns](/windows/desktop/menurc/common-control-parameters) no SDK do Windows: SDK Tools.
+Para obter mais informações sobre como editar scripts de [recursos, consulte Como: Abra um arquivo de script de recurso no](../../windows/how-to-open-a-resource-script-file-in-text-format.md)formato de texto. Para obter mais informações sobre como controlar as instruções de definição de recurso, consulte [parâmetros de controle comuns](/windows/win32/menurc/common-control-parameters) em SDK do Windows: SDK Tools.
 
-Para obter mais informações sobre caixas de diálogo em geral, consulte [DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa) e [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) no SDK do Windows.
+Para obter mais informações sobre caixas de diálogo em geral, consulte [caixa](/windows/win32/api/winuser/nf-winuser-dialogboxw) e [CreateDialogParam](/windows/win32/api/winuser/nf-winuser-createdialogparamw) no SDK do Windows.
 
-##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog
+##  <a name="atlaxcreatedialog"></a>AtlAxCreateDialog
 
 Cria uma caixa de diálogo sem modo a partir de um modelo de caixa de diálogo fornecido pelo usuário.
 
@@ -115,29 +115,29 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 ### <a name="parameters"></a>Parâmetros
 
 *hInstance*<br/>
-[in] Identifica uma instância do módulo cujo arquivo executável contém o modelo de caixa de diálogo.
+no Identifica uma instância do módulo cujo arquivo executável contém o modelo de caixa de diálogo.
 
 *lpTemplateName*<br/>
-[in] Identifica o modelo de caixa de diálogo. Esse parâmetro é o ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do modelo de caixa de diálogo ou um valor inteiro que especifica o identificador de recurso do modelo de caixa de diálogo. Se o parâmetro especifica um identificador de recurso, sua palavra de ordem superior deve ser zero e a palavra de ordem inferior deve conter o identificador. Você pode usar o [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) macro para criar esse valor.
+no Identifica o modelo da caixa de diálogo. Esse parâmetro é o ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do modelo da caixa de diálogo ou um valor inteiro que especifica o identificador de recurso do modelo da caixa de diálogo. Se o parâmetro especificar um identificador de recurso, sua palavra de ordem superior deverá ser zero e sua palavra de ordem inferior deverá conter o identificador. Você pode usar a macro [MAKEINTRESOURCE](/windows/win32/api/winuser/nf-winuser-makeintresourcew) para criar esse valor.
 
 *hWndParent*<br/>
-[in] Identifica a janela que possui a caixa de diálogo.
+no Identifica a janela que possui a caixa de diálogo.
 
 *lpDialogProc*<br/>
-[in] Aponta para o procedimento de caixa de diálogo. Para obter mais informações sobre o procedimento de caixa de diálogo, consulte [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc).
+no Aponta para o procedimento da caixa de diálogo. Para obter mais informações sobre o procedimento da caixa de diálogo, consulte [DialogProc](/windows/win32/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
-[in] Especifica o valor para passar para a caixa de diálogo do *lParam* parâmetro da mensagem WM_INITDIALOG.
+no Especifica o valor a ser passado para a caixa de diálogo no parâmetro *lParam* da mensagem WM_INITDIALOG.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um dos valores HRESULT padrão.
+Um dos valores de HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
 A caixa de diálogo resultante pode conter controles ActiveX.
 
-Ver [CreateDialog](/windows/desktop/api/winuser/nf-winuser-createdialoga) e [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) no Windows SDK.
+Consulte [CreateDialog](/windows/win32/api/winuser/nf-winuser-createdialogw) e [CreateDialogParam](/windows/win32/api/winuser/nf-winuser-createdialogparamw) no SDK do Windows.
 
 ##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl
 
@@ -154,41 +154,41 @@ ATLAPI AtlAxCreateControl(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszName*<br/>
-Um ponteiro para uma cadeia de caracteres a serem passados para o controle. Deve ser formatado em uma das seguintes maneiras:
+Um ponteiro para uma cadeia de caracteres a ser passada para o controle. Deve ser formatada de uma das seguintes maneiras:
 
-- Um ProgID, como "MSCAL. Calendar.7 "
+- Um ProgID como "MSCAL. Calendar. 7 "
 
-- Um CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Um CLSID como "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Uma URL, como "<http://www.microsoft.com>"
+- Uma URL como "<http://www.microsoft.com>"
 
 - Uma referência a um documento ativo, como "file://\\\Documents\MyDoc.doc"
 
-- Um fragmento de HTML, como "MSHTML:\<HTML >\<corpo > Esta é uma linha de texto\</BODY >\</HTML mais externas >"
+- Um fragmento de HTML como\<"Mshtml: HTML >\<corpo > é uma linha de texto\</Body >\</html >"
 
    > [!NOTE]
-   > "MSHTML:" deve preceder o fragmento HTML para que ela é designada como sendo um fluxo de MSHTML.
+   > "MSHTML:" deve preceder o fragmento HTML para que ele seja designado como sendo um fluxo MSHTML.
 
 *hWnd*<br/>
-[in] Identificador da janela que o controle será anexado.
+no Identificador para a janela à qual o controle será anexado.
 
 *pStream*<br/>
-[in] Um ponteiro para um fluxo que é usado para inicializar as propriedades do controle. Pode ser NULL.
+no Um ponteiro para um fluxo que é usado para inicializar as propriedades do controle. Pode ser NULL.
 
 *ppUnkContainer*<br/>
-[out] O endereço de um ponteiro que receberá o `IUnknown` do contêiner. Pode ser NULL.
+fora O endereço de um ponteiro que receberá o `IUnknown` do contêiner. Pode ser NULL.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um dos valores HRESULT padrão.
+Um dos valores de HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função global permite que você o mesmo resultado de chamar [AtlAxCreateControlEx](#atlaxcreatecontrolex)(*lpszName*, *hWnd*, *pStream*, NULL, NULL, NULL, NULL);.
+Essa função global fornece o mesmo resultado que chamar [AtlAxCreateControlEx](#atlaxcreatecontrolex)(*lpszName*, *HWND*, *pStream*, NULL, NULL, NULL, NULL);.
 
 Para criar um controle ActiveX licenciado, consulte [AtlAxCreateControlLic](#atlaxcreatecontrollic).
 
-##  <a name="atlaxcreatecontrolex"></a>  AtlAxCreateControlEx
+##  <a name="atlaxcreatecontrolex"></a>AtlAxCreateControlEx
 
 Cria um controle ActiveX, inicializa-o e hospeda-o na janela especificada. Um ponteiro de interface e um coletor de eventos para o novo controle também podem ser criados.
 
@@ -206,46 +206,46 @@ ATLAPI AtlAxCreateControlEx(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszName*<br/>
-Um ponteiro para uma cadeia de caracteres a serem passados para o controle. Deve ser formatado em uma das seguintes maneiras:
+Um ponteiro para uma cadeia de caracteres a ser passada para o controle. Deve ser formatada de uma das seguintes maneiras:
 
-- Um ProgID, como "MSCAL. Calendar.7 "
+- Um ProgID como "MSCAL. Calendar. 7 "
 
-- Um CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Um CLSID como "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Uma URL, como "<http://www.microsoft.com>"
+- Uma URL como "<http://www.microsoft.com>"
 
 - Uma referência a um documento ativo, como "file://\\\Documents\MyDoc.doc"
 
-- Um fragmento de HTML, como "MSHTML:\<HTML >\<corpo > Esta é uma linha de texto\</BODY >\</HTML mais externas >"
+- Um fragmento de HTML como\<"Mshtml: HTML >\<corpo > é uma linha de texto\</Body >\</html >"
 
    > [!NOTE]
-   > "MSHTML:" deve preceder o fragmento HTML para que ela é designada como sendo um fluxo de MSHTML.
+   > "MSHTML:" deve preceder o fragmento HTML para que ele seja designado como sendo um fluxo MSHTML.
 
 *hWnd*<br/>
-[in] Identificador da janela que o controle será anexado.
+no Identificador para a janela à qual o controle será anexado.
 
 *pStream*<br/>
-[in] Um ponteiro para um fluxo que é usado para inicializar as propriedades do controle. Pode ser NULL.
+no Um ponteiro para um fluxo que é usado para inicializar as propriedades do controle. Pode ser NULL.
 
 *ppUnkContainer*<br/>
-[out] O endereço de um ponteiro que receberá o `IUnknown` do contêiner. Pode ser NULL.
+fora O endereço de um ponteiro que receberá o `IUnknown` do contêiner. Pode ser NULL.
 
 *ppUnkControl*<br/>
-[out] O endereço de um ponteiro que receberá o `IUnknown` do controle criado. Pode ser NULL.
+fora O endereço de um ponteiro que receberá o `IUnknown` do controle criado. Pode ser NULL.
 
 *iidSink*<br/>
-O identificador de interface de uma interface de saída o objeto contido.
+O identificador de interface de uma interface de saída no objeto contido.
 
 *punkSink*<br/>
-Um ponteiro para o `IUnknown` interface do objeto coletor a ser conectado ao ponto de conexão especificado pela *iidSink* no objeto independente depois que o objeto contido foi criado com êxito.
+Um ponteiro para a `IUnknown` interface do objeto de coletor a ser conectado ao ponto de conexão especificado por *iidSink* no objeto contido depois que o objeto contido tiver sido criado com êxito.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um dos valores HRESULT padrão.
+Um dos valores de HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-`AtlAxCreateControlEx` é semelhante à [AtlAxCreateControl](#atlaxcreatecontrol) , mas também permite que você receber um ponteiro de interface para o controle criado recentemente e configurar um coletor de eventos para receber eventos acionados pelo controle.
+`AtlAxCreateControlEx`é semelhante a [AtlAxCreateControl](#atlaxcreatecontrol) , mas também permite que você receba um ponteiro de interface para o controle recém-criado e configure um coletor de eventos para receber eventos acionados pelo controle.
 
 Para criar um controle ActiveX licenciado, consulte [AtlAxCreateControlLicEx](#atlaxcreatecontrollicex).
 
@@ -265,23 +265,23 @@ ATLAPI AtlAxCreateControlLic(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszName*<br/>
-Um ponteiro para uma cadeia de caracteres a serem passados para o controle. Deve ser formatado em uma das seguintes maneiras:
+Um ponteiro para uma cadeia de caracteres a ser passada para o controle. Deve ser formatada de uma das seguintes maneiras:
 
-- Um ProgID, como "MSCAL. Calendar.7 "
+- Um ProgID como "MSCAL. Calendar. 7 "
 
-- Um CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Um CLSID como "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Uma URL, como "<http://www.microsoft.com>"
+- Uma URL como "<http://www.microsoft.com>"
 
 - Uma referência a um documento ativo, como "file://\\\Documents\MyDoc.doc"
 
-- Um fragmento de HTML, como "MSHTML:\<HTML >\<corpo > Esta é uma linha de texto\</BODY >\</HTML mais externas >"
+- Um fragmento de HTML como\<"Mshtml: HTML >\<corpo > é uma linha de texto\</Body >\</html >"
 
    > [!NOTE]
-   > "MSHTML:" deve preceder o fragmento HTML para que ela é designada como sendo um fluxo de MSHTML.
+   > "MSHTML:" deve preceder o fragmento HTML para que ele seja designado como sendo um fluxo MSHTML.
 
 *hWnd*<br/>
-Identificador da janela que o controle será anexado.
+Identificador para a janela à qual o controle será anexado.
 
 *pStream*<br/>
 Um ponteiro para um fluxo que é usado para inicializar as propriedades do controle. Pode ser NULL.
@@ -290,15 +290,15 @@ Um ponteiro para um fluxo que é usado para inicializar as propriedades do contr
 O endereço de um ponteiro que receberá o `IUnknown` do contêiner. Pode ser NULL.
 
 *bstrLic*<br/>
-O BSTR contendo a licença para o controle.
+O BSTR que contém a licença do controle.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um dos valores HRESULT padrão.
+Um dos valores de HRESULT padrão.
 
 ### <a name="example"></a>Exemplo
 
-Ver [hospedagem de AXHost de ATL usando do ActiveX controles](../../atl/hosting-activex-controls-using-atl-axhost.md) para obter um exemplo de como usar `AtlAxCreateControlLic`.
+Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) para obter uma amostra de `AtlAxCreateControlLic`como usar.
 
 ##  <a name="atlaxcreatecontrollicex"></a>  AtlAxCreateControlLicEx
 
@@ -319,23 +319,23 @@ ATLAPI AtlAxCreateControlLicEx(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszName*<br/>
-Um ponteiro para uma cadeia de caracteres a serem passados para o controle. Deve ser formatado em uma das seguintes maneiras:
+Um ponteiro para uma cadeia de caracteres a ser passada para o controle. Deve ser formatada de uma das seguintes maneiras:
 
-- Um ProgID, como "MSCAL. Calendar.7 "
+- Um ProgID como "MSCAL. Calendar. 7 "
 
-- Um CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Um CLSID como "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Uma URL, como "<http://www.microsoft.com>"
+- Uma URL como "<http://www.microsoft.com>"
 
 - Uma referência a um documento ativo, como "file://\\\Documents\MyDoc.doc"
 
-- Um fragmento de HTML, como "MSHTML:\<HTML >\<corpo > Esta é uma linha de texto\</BODY >\</HTML mais externas >"
+- Um fragmento de HTML como\<"Mshtml: HTML >\<corpo > é uma linha de texto\</Body >\</html >"
 
    > [!NOTE]
-   > "MSHTML:" deve preceder o fragmento HTML para que ela é designada como sendo um fluxo de MSHTML.
+   > "MSHTML:" deve preceder o fragmento HTML para que ele seja designado como sendo um fluxo MSHTML.
 
 *hWnd*<br/>
-Identificador da janela que o controle será anexado.
+Identificador para a janela à qual o controle será anexado.
 
 *pStream*<br/>
 Um ponteiro para um fluxo que é usado para inicializar as propriedades do controle. Pode ser NULL.
@@ -344,28 +344,28 @@ Um ponteiro para um fluxo que é usado para inicializar as propriedades do contr
 O endereço de um ponteiro que receberá o `IUnknown` do contêiner. Pode ser NULL.
 
 *ppUnkControl*<br/>
-[out] O endereço de um ponteiro que receberá o `IUnknown` do controle criado. Pode ser NULL.
+fora O endereço de um ponteiro que receberá o `IUnknown` do controle criado. Pode ser NULL.
 
 *iidSink*<br/>
-O identificador de interface de uma interface de saída o objeto contido.
+O identificador de interface de uma interface de saída no objeto contido.
 
 *punkSink*<br/>
-Um ponteiro para o `IUnknown` interface do objeto coletor a ser conectado ao ponto de conexão especificado pela *iidSink* no objeto independente depois que o objeto contido foi criado com êxito.
+Um ponteiro para a `IUnknown` interface do objeto de coletor a ser conectado ao ponto de conexão especificado por *iidSink* no objeto contido depois que o objeto contido tiver sido criado com êxito.
 
 *bstrLic*<br/>
-O BSTR contendo a licença para o controle.
+O BSTR que contém a licença do controle.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um dos valores HRESULT padrão.
+Um dos valores de HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-`AtlAxCreateControlLicEx` é semelhante à [AtlAxCreateControlLic](#atlaxcreatecontrollic) , mas também permite que você receber um ponteiro de interface para o controle criado recentemente e configurar um coletor de eventos para receber eventos acionados pelo controle.
+`AtlAxCreateControlLicEx`é semelhante a [AtlAxCreateControlLic](#atlaxcreatecontrollic) , mas também permite que você receba um ponteiro de interface para o controle recém-criado e configure um coletor de eventos para receber eventos acionados pelo controle.
 
 ### <a name="example"></a>Exemplo
 
-Ver [hospedagem de AXHost de ATL usando do ActiveX controles](../../atl/hosting-activex-controls-using-atl-axhost.md) para obter um exemplo de como usar `AtlAxCreateControlLicEx`.
+Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) para obter uma amostra de `AtlAxCreateControlLicEx`como usar.
 
 ##  <a name="atlaxattachcontrol"></a>  AtlAxAttachControl
 
@@ -381,17 +381,17 @@ ATLAPI AtlAxAttachControl(
 ### <a name="parameters"></a>Parâmetros
 
 *pControl*<br/>
-[in] Um ponteiro para o `IUnknown` do controle.
+no Um ponteiro para o `IUnknown` do controle.
 
 *hWnd*<br/>
-[in] Identificador da janela que hospedará o controle.
+no Identificador para a janela que hospedará o controle.
 
 *ppUnkContainer*<br/>
-[out] Um ponteiro para um ponteiro para o `IUnknown` do objeto contêiner.
+fora Um ponteiro para um ponteiro para o `IUnknown` do objeto de contêiner.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um dos valores HRESULT padrão.
+Um dos valores de HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
@@ -411,14 +411,14 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ### <a name="parameters"></a>Parâmetros
 
 *h*<br/>
-[in] Um identificador para a janela que está hospedando o controle.
+no Um identificador para a janela que está hospedando o controle.
 
 *pp*<br/>
-[out] O `IUnknown` do contêiner do controle.
+fora O `IUnknown` do contêiner do controle.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um dos valores HRESULT padrão.
+Um dos valores de HRESULT padrão.
 
 ##  <a name="atlaxgetcontrol"></a>  AtlAxGetControl
 
@@ -431,18 +431,18 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 ### <a name="parameters"></a>Parâmetros
 
 *h*<br/>
-[in] Um identificador para a janela que está hospedando o controle.
+no Um identificador para a janela que está hospedando o controle.
 
 *pp*<br/>
-[out] O `IUnknown` do controle que está sendo hospedado.
+fora O `IUnknown` do controle que está sendo hospedado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um dos valores HRESULT padrão.
+Um dos valores de HRESULT padrão.
 
 ##  <a name="atlsetchildsite"></a>  AtlSetChildSite
 
-Chame essa função para definir o site do objeto filho para o `IUnknown` do objeto pai.
+Chame essa função para definir o site do objeto filho como o `IUnknown` do objeto pai.
 
 ```
 HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
@@ -451,18 +451,18 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 ### <a name="parameters"></a>Parâmetros
 
 *punkChild*<br/>
-[in] Um ponteiro para o `IUnknown` interface do filho.
+no Um ponteiro para a `IUnknown` interface do filho.
 
 *punkParent*<br/>
-[in] Um ponteiro para o `IUnknown` interface do pai.
+no Um ponteiro para a `IUnknown` interface do pai.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor padrão de HRESULT.
+Um valor HRESULT padrão.
 
 ##  <a name="atlaxwininit"></a>  AtlAxWinInit
 
-Essa função inicializa o controle do ATL que hospeda o código Registrando as **"AtlAxWin80"** e **"AtlAxWinLic80"** classes de janela mais algumas mensagens personalizadas da janela.
+Essa função inicializa o código de hospedagem do controle da ATL ao registrar as classes de janela **"AtlAxWin80"** e **"AtlAxWinLic80"** , além de algumas mensagens de janela personalizadas.
 
 ```
 ATLAPI_(BOOL) AtlAxWinInit();
@@ -470,15 +470,15 @@ ATLAPI_(BOOL) AtlAxWinInit();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se a inicialização do controle de código de hospedagem foi bem-sucedida; Caso contrário, FALSE.
+Diferente de zero se a inicialização do código de hospedagem do controle foi bem-sucedida; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função deve ser chamada antes de usar o controle ATL que hospeda a API. Após uma chamada para essa função, o **"AtlAxWin"** classe de janela pode ser usado em chamadas para [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) ou [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), conforme descrito no SDK do Windows.
+Essa função deve ser chamada antes de usar a API de hospedagem do controle ATL. Após uma chamada para essa função, a classe de janela **"AtlAxWin"** pode ser usada em chamadas para [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) ou [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw), conforme descrito na SDK do Windows.
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm
 
-Essa função cancela o controle do ATL que hospeda o código Cancelando o registro a **"AtlAxWin80"** e **"AtlAxWinLic80"** classes de janela.
+Essa função cancela a inicialização do código de hospedagem do controle da ATL ao cancelar o registro das classes de janela **"AtlAxWin80"** e **"AtlAxWinLic80"** .
 
 ```
 inline BOOL AtlAxWinTerm();
@@ -490,9 +490,9 @@ Sempre retorna TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função simplesmente chama [UnregisterClass](/windows/desktop/api/winuser/nf-winuser-unregisterclassa) conforme descrito no SDK do Windows.
+Essa função simplesmente chama [UnregisterClass](/windows/win32/api/winuser/nf-winuser-unregisterclassw) conforme descrito na SDK do Windows.
 
-Chame essa função para limpar após todas as janelas existentes de host tenham sido destruídas se você chamasse [AtlAxWinInit](#atlaxwininit) e você não precisa criar host do windows. Se você não chamar essa função, a classe de janela será cancelada automaticamente quando o processo termina.
+Chame essa função para limpar depois que todas as janelas de host existentes tiverem sido destruídas se você chamou [AtlAxWinInit](#atlaxwininit) e não precisar mais criar janelas de host. Se você não chamar essa função, a classe Window terá o registro cancelado automaticamente quando o processo for encerrado.
 
 ##  <a name="atlgetobjectsourceinterface"></a>  AtlGetObjectSourceInterface
 
@@ -510,34 +510,34 @@ ATLAPI AtlGetObjectSourceInterface(
 ### <a name="parameters"></a>Parâmetros
 
 *punkObj*<br/>
-[in] Um ponteiro para o objeto para o qual informações deve ser retornado.
+no Um ponteiro para o objeto para o qual as informações serão retornadas.
 
 *plibid*<br/>
-[out] Um ponteiro para o LIBID da biblioteca de tipos que contém a definição da interface de origem.
+fora Um ponteiro para o LIBID da biblioteca de tipos que contém a definição da interface de origem.
 
 *piid*<br/>
-[out] Um ponteiro para a ID de interface da interface de origem do objeto padrão.
+fora Um ponteiro para a ID de interface da interface de origem padrão do objeto.
 
 *pdwMajor*<br/>
-[out] Um ponteiro para o número de versão principal da biblioteca de tipos que contém a definição da interface de origem.
+fora Um ponteiro para o número de versão principal da biblioteca de tipos que contém a definição da interface de origem.
 
 *pdwMinor*<br/>
-[out] Um ponteiro para o número de versão secundária da biblioteca de tipos que contém a definição da interface de origem.
+fora Um ponteiro para o número de versão secundária da biblioteca de tipos que contém a definição da interface de origem.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor padrão de HRESULT.
+Um valor HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-`AtlGetObjectSourceInterface` pode fornecer a você com a ID de interface da interface de origem padrão, juntamente com a ID da biblioteca e principais e os números de versão secundária da biblioteca de tipos que descrevem essa interface.
+`AtlGetObjectSourceInterface`o pode fornecer a ID de interface da interface de origem padrão, juntamente com os números de versão LIBID e Major e Minor da biblioteca de tipos que descreve essa interface.
 
 > [!NOTE]
->  Para essa função recuperar as informações solicitadas, o objeto representado pelo *punkObj* deve implementar `IDispatch` (e retornar informações de tipo por meio de `IDispatch::GetTypeInfo`) além de também deve implementar a qualquer um dos `IProvideClassInfo2` ou `IPersist`. As informações de tipo para a interface de origem devem estar na biblioteca de tipos como informações de tipo para `IDispatch`.
+>  Para que essa função recupere com êxito as informações solicitadas, o objeto representado por *punkObj* deve `IDispatch` implementar (e retornar informações de `IDispatch::GetTypeInfo`tipo por meio) e também deve `IProvideClassInfo2` implementar um ou `IPersist`. As informações de tipo para a interface de origem devem estar na mesma biblioteca de tipos que as informações `IDispatch`de tipo para.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como você pode definir uma classe de coletor de evento, `CEasySink`, que reduz o número de argumentos de modelo que você pode passar para `IDispEventImpl` para os itens essenciais. `EasyAdvise` e `EasyUnadvise` usar `AtlGetObjectSourceInterface` para inicializar o [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) membros antes de chamar [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) ou [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise).
+O exemplo a seguir mostra como você pode definir uma classe de coletor `CEasySink`de eventos,, que reduz o número de argumentos de modelo que `IDispEventImpl` você pode passar para o básico. `EasyAdvise` e `EasyUnadvise` use `AtlGetObjectSourceInterface` para inicializar os membros do [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) antes de chamar [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) ou [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise).
 
 [!code-cpp[NVC_ATL_Windowing#93](../../atl/codesnippet/cpp/composite-control-global-functions_1.h)]
 

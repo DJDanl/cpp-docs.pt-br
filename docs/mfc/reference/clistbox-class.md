@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: f7b62ecf64c70c554fe14883c45d6b7936c668d7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e47a580e786572b0741700721a9d1ba4ac925fcd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243575"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505689"
 ---
 # <a name="clistbox-class"></a>Classe CListBox
 
@@ -131,99 +131,99 @@ class CListBox : public CWnd
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CListBox::AddString](#addstring)|Adiciona uma cadeia de caracteres para uma caixa de listagem.|
-|[CListBox::CharToItem](#chartoitem)|Substituição para fornecer WM_CHAR personalizadas de tratamento para caixas de listagem do desenho do proprietário que não têm cadeias de caracteres.|
-|[CListBox::CompareItem](#compareitem)|Chamado pelo framework para determinar a posição de um novo item em uma caixa de lista classificada de desenho do proprietário.|
-|[CListBox::Create](#create)|Cria a caixa de listagem do Windows e anexa-o para o `CListBox` objeto.|
-|[CListBox::DeleteItem](#deleteitem)|Chamado pelo framework quando o usuário exclui um item de uma caixa de listagem do desenho proprietário.|
+|[CListBox::AddString](#addstring)|Adiciona uma cadeia de caracteres a uma caixa de listagem.|
+|[CListBox::CharToItem](#chartoitem)|Substitua para fornecer a manipulação de WM_CHAR personalizada para as caixas de listagem de desenho proprietário que não têm cadeias de caracteres.|
+|[CListBox::CompareItem](#compareitem)|Chamado pelo Framework para determinar a posição de um novo item em uma caixa de listagem de desenho proprietário classificada.|
+|[CListBox:: criar](#create)|Cria a caixa de listagem do Windows e a anexa ao `CListBox` objeto.|
+|[CListBox::DeleteItem](#deleteitem)|Chamado pelo Framework quando o usuário exclui um item de uma caixa de listagem de desenho proprietário.|
 |[CListBox::DeleteString](#deletestring)|Exclui uma cadeia de caracteres de uma caixa de listagem.|
-|[CListBox::Dir](#dir)|Adiciona os nomes de arquivos, unidades ou ambos, do diretório atual para uma caixa de listagem.|
-|[CListBox::DrawItem](#drawitem)|Chamado pelo framework quando um aspecto visual de uma caixa de listagem do desenho proprietário mude.|
-|[CListBox::FindString](#findstring)|Pesquisa uma cadeia de caracteres em uma caixa de listagem.|
-|[CListBox::FindStringExact](#findstringexact)|Localiza a primeira cadeia de caixa de listagem que corresponde a uma cadeia de caracteres especificada.|
-|[CListBox::GetAnchorIndex](#getanchorindex)|Recupera o índice baseado em zero do item atual da âncora em uma caixa de listagem.|
+|[CListBox::Dir](#dir)|Adiciona nomes de filedrives, unidades ou ambos do diretório atual a uma caixa de listagem.|
+|[CListBox::DrawItem](#drawitem)|Chamado pelo Framework quando um aspecto visual de uma caixa de listagem de desenho proprietário é alterado.|
+|[CListBox::FindString](#findstring)|Procura uma cadeia de caracteres em uma caixa de listagem.|
+|[CListBox::FindStringExact](#findstringexact)|Localiza a primeira cadeia de caracteres da caixa de listagem que corresponde a uma cadeia de caracteres especificada.|
+|[CListBox::GetAnchorIndex](#getanchorindex)|Recupera o índice de base zero do item de âncora atual em uma caixa de listagem.|
 |[CListBox::GetCaretIndex](#getcaretindex)|Determina o índice do item que tem o retângulo de foco em uma caixa de listagem de seleção múltipla.|
 |[CListBox::GetCount](#getcount)|Retorna o número de cadeias de caracteres em uma caixa de listagem.|
-|[CListBox::GetCurSel](#getcursel)|Retorna o índice baseado em zero da cadeia de caracteres selecionada no momento em uma caixa de listagem.|
-|[CListBox::GetHorizontalExtent](#gethorizontalextent)|Retorna a largura em pixels, uma caixa de listagem pode ser rolada horizontalmente.|
-|[CListBox::GetItemData](#getitemdata)|Retorna um valor associado ao item de caixa de listagem.|
-|[CListBox::GetItemDataPtr](#getitemdataptr)|Retorna um ponteiro para um item de caixa de listagem.|
+|[CListBox::GetCurSel](#getcursel)|Retorna o índice de base zero da cadeia de caracteres selecionada no momento em uma caixa de listagem.|
+|[CListBox::GetHorizontalExtent](#gethorizontalextent)|Retorna a largura em pixels em que uma caixa de listagem pode ser rolada horizontalmente.|
+|[CListBox::GetItemData](#getitemdata)|Retorna um valor associado ao item da caixa de listagem.|
+|[CListBox::GetItemDataPtr](#getitemdataptr)|Retorna um ponteiro para um item da caixa de listagem.|
 |[CListBox::GetItemHeight](#getitemheight)|Determina a altura dos itens em uma caixa de listagem.|
-|[CListBox::GetItemRect](#getitemrect)|Retorna o retângulo delimitador do item de caixa de listagem como ele é exibido no momento.|
+|[CListBox::GetItemRect](#getitemrect)|Retorna o retângulo delimitador do item da caixa de listagem, como ele é exibido no momento.|
 |[CListBox::GetListBoxInfo](#getlistboxinfo)|Recupera o número de itens por coluna.|
-|[CListBox::GetLocale](#getlocale)|Recupera o identificador de localidade para uma caixa de listagem.|
-|[CListBox::GetSel](#getsel)|Retorna o estado de seleção de um item de caixa de listagem.|
-|[CListBox::GetSelCount](#getselcount)|Retorna o número de cadeias de caracteres selecionada no momento em uma caixa de listagem de seleção múltipla.|
-|[CListBox::GetSelItems](#getselitems)|Retorna os índices das cadeias de caracteres selecionadas no momento em uma caixa de listagem.|
-|[CListBox::GetText](#gettext)|Copia um item de caixa de listagem em um buffer.|
-|[CListBox::GetTextLen](#gettextlen)|Retorna o comprimento em bytes de um item de caixa de listagem.|
+|[CListBox::GetLocale](#getlocale)|Recupera o identificador de localidade de uma caixa de listagem.|
+|[CListBox::GetSel](#getsel)|Retorna o estado de seleção de um item da caixa de listagem.|
+|[CListBox::GetSelCount](#getselcount)|Retorna o número de cadeias de caracteres selecionadas atualmente em uma caixa de listagem de seleção múltipla.|
+|[CListBox::GetSelItems](#getselitems)|Retorna os índices das cadeias de caracteres selecionadas atualmente em uma caixa de listagem.|
+|[CListBox::GetText](#gettext)|Copia um item da caixa de listagem em um buffer.|
+|[CListBox::GetTextLen](#gettextlen)|Retorna o comprimento em bytes de um item da caixa de listagem.|
 |[CListBox::GetTopIndex](#gettopindex)|Retorna o índice da primeira cadeia de caracteres visível em uma caixa de listagem.|
-|[CListBox::InitStorage](#initstorage)|Pré-aloca blocos de memória para cadeias de caracteres e itens de caixa de lista.|
+|[CListBox::InitStorage](#initstorage)|Prefixa blocos de memória para itens da caixa de listagem e cadeias de caracteres.|
 |[CListBox::InsertString](#insertstring)|Insere uma cadeia de caracteres em um local específico em uma caixa de listagem.|
-|[CListBox::ItemFromPoint](#itemfrompoint)|Retorna o índice do item mais próximo de um ponto de caixa de listagem.|
-|[CListBox::MeasureItem](#measureitem)|Chamado pelo framework quando uma caixa de listagem do desenho proprietário é criada para determinar as dimensões da caixa de listagem.|
+|[CListBox::ItemFromPoint](#itemfrompoint)|Retorna o índice do item da caixa de listagem mais próximo de um ponto.|
+|[CListBox::MeasureItem](#measureitem)|Chamado pelo Framework quando uma caixa de listagem de desenho proprietário é criada para determinar as dimensões da caixa de listagem.|
 |[CListBox::ResetContent](#resetcontent)|Limpa todas as entradas de uma caixa de listagem.|
-|[CListBox::SelectString](#selectstring)|Localiza e seleciona uma cadeia de caracteres em uma caixa de listagem de seleção única.|
-|[CListBox::SelItemRange](#selitemrange)|Marca ou desmarca um intervalo de cadeias de caracteres em uma caixa de listagem de seleção múltipla.|
-|[CListBox::SetAnchorIndex](#setanchorindex)|Define a âncora em uma caixa de listagem de seleção múltipla para começar uma seleção estendida.|
+|[CListBox::SelectString](#selectstring)|Procura e seleciona uma cadeia de caracteres em uma caixa de listagem de seleção única.|
+|[CListBox::SelItemRange](#selitemrange)|Seleciona ou anula a seleção de um intervalo de cadeias de caracteres em uma caixa de listagem de seleção múltipla.|
+|[CListBox::SetAnchorIndex](#setanchorindex)|Define a âncora em uma caixa de listagem de seleção múltipla para iniciar uma seleção estendida.|
 |[CListBox::SetCaretIndex](#setcaretindex)|Define o retângulo de foco para o item no índice especificado em uma caixa de listagem de seleção múltipla.|
 |[CListBox::SetColumnWidth](#setcolumnwidth)|Define a largura da coluna de uma caixa de listagem de várias colunas.|
 |[CListBox::SetCurSel](#setcursel)|Seleciona uma cadeia de caracteres da caixa de listagem.|
-|[CListBox::SetHorizontalExtent](#sethorizontalextent)|Define a largura em pixels, uma caixa de listagem pode ser rolada horizontalmente.|
-|[CListBox::SetItemData](#setitemdata)|Define um valor associado ao item de caixa de listagem.|
-|[CListBox::SetItemDataPtr](#setitemdataptr)|Define um ponteiro para o item de caixa de listagem.|
+|[CListBox::SetHorizontalExtent](#sethorizontalextent)|Define a largura em pixels em que uma caixa de listagem pode ser rolada horizontalmente.|
+|[CListBox::SetItemData](#setitemdata)|Define um valor associado ao item da caixa de listagem.|
+|[CListBox::SetItemDataPtr](#setitemdataptr)|Define um ponteiro para o item da caixa de listagem.|
 |[CListBox::SetItemHeight](#setitemheight)|Define a altura dos itens em uma caixa de listagem.|
 |[CListBox::SetLocale](#setlocale)|Define o identificador de localidade para uma caixa de listagem.|
-|[CListBox::SetSel](#setsel)|Marca ou desmarca um item de caixa de listagem em uma caixa de listagem de seleção múltipla.|
+|[CListBox::SetSel](#setsel)|Seleciona ou anula a seleção de um item da caixa de listagem em uma caixa de listagem de seleção múltipla.|
 |[CListBox::SetTabStops](#settabstops)|Define as posições de parada de tabulação em uma caixa de listagem.|
-|[CListBox::SetTopIndex](#settopindex)|Define o índice baseado em zero da primeira cadeia de caracteres visível em uma caixa de listagem.|
-|[CListBox::VKeyToItem](#vkeytoitem)|Substitua para fornecer WM_KEYDOWN personalizadas de tratamento para caixas de listagem com o conjunto de estilos LBS_WANTKEYBOARDINPUT.|
+|[CListBox::SetTopIndex](#settopindex)|Define o índice de base zero da primeira cadeia de caracteres visível em uma caixa de listagem.|
+|[CListBox::VKeyToItem](#vkeytoitem)|Substitua para fornecer manipulação de WM_KEYDOWN personalizada para caixas de listagem com o estilo LBS_WANTKEYBOARDINPUT definido.|
 
 ## <a name="remarks"></a>Comentários
 
-Uma caixa de listagem exibe uma lista de itens, como nomes de arquivo, o que o usuário pode exibir e selecionar.
+Uma caixa de listagem exibe uma lista de itens, como nomes de File, que o usuário pode exibir e selecionar.
 
 Em uma caixa de listagem de seleção única, o usuário pode selecionar apenas um item. Em uma caixa de listagem de seleção múltipla, um intervalo de itens pode ser selecionado. Quando o usuário seleciona um item, ele é realçado e a caixa de listagem envia uma mensagem de notificação para a janela pai.
 
-Você pode criar uma caixa de listagem de um modelo de caixa de diálogo ou diretamente em seu código. Para criá-lo diretamente, construir o `CListBox` do objeto e, em seguida, chamar o [Create](#create) a função de membro para criar o controle de caixa de listagem do Windows e anexá-lo para o `CListBox` objeto. Para usar uma caixa de listagem em um modelo de caixa de diálogo, declarar uma variável de caixa de listagem em sua classe de caixa de diálogo e, em seguida, use `DDX_Control` em sua classe de caixa de diálogo `DoDataExchange` função para conectar-se a variável de membro para o controle. (Isso é feito para você automaticamente quando você adiciona uma variável de controle a sua classe de caixa de diálogo.)
+Você pode criar uma caixa de listagem a partir de um modelo de diálogo ou diretamente no seu código. Para criá-lo diretamente, construa `CListBox` o objeto e, em seguida, chame a função [criar](#create) membro para criar o controle da caixa de listagem do `CListBox` Windows e anexá-lo ao objeto. Para usar uma caixa de listagem em um modelo de diálogo, declare uma variável da caixa de listagem na sua classe caixa de `DDX_Control` diálogo e, em seguida, `DoDataExchange` use na função da caixa de diálogo da sua classe para conectar a variável de membro ao controle. (isso é feito para você automaticamente quando você adiciona uma variável de controle à sua classe de caixa de diálogo.)
 
-Construção pode ser um processo de uma etapa em uma classe derivada de `CListBox`. Escrever um construtor para a classe derivada e a chamada `Create` do construtor.
+A construção pode ser um processo de uma etapa em uma classe derivada `CListBox`de. Escreva um construtor para a classe derivada e chame `Create` de dentro do construtor.
 
-Se você quiser manipular mensagens de notificação do Windows enviadas por uma caixa de listagem para seu pai (normalmente uma classe derivada de [CDialog](../../mfc/reference/cdialog-class.md)), adicione uma função de membro de entrada e o manipulador de mensagens do mapa de mensagem para a classe pai para cada mensagem.
+Se você quiser manipular as mensagens de notificação do Windows enviadas por uma caixa de listagem para seu pai (geralmente uma classe derivada de [CDialog](../../mfc/reference/cdialog-class.md)), adicione uma entrada de mapa de mensagem e uma função de membro de manipulador de mensagens à classe pai para cada mensagem.
 
 Cada entrada de mapa de mensagem usa o seguinte formato:
 
 `ON_Notification( id, memberFxn )`
 
-em que `id` Especifica a ID de janela filho do controle de caixa de listagem enviando a notificação e `memberFxn` é o nome da função de membro pai que você tenha escrito para manipular a notificação.
+em `id` que especifica a ID da janela filho do controle da caixa de listagem que envia `memberFxn` a notificação e é o nome da função de membro pai que você escreveu para manipular a notificação.
 
 O protótipo de função do pai é o seguinte:
 
 `afx_msg void memberFxn( );`
 
-A seguir está uma lista de entradas de mapa de mensagem potenciais e uma descrição dos casos em que eles seriam enviados ao pai:
+A seguir está uma lista de possíveis entradas de mapa de mensagem e uma descrição dos casos em que eles seriam enviados para o pai:
 
-- ON_LBN_DBLCLK o usuário clica duas vezes em uma cadeia de caracteres em uma caixa de listagem. Apenas uma caixa de listagem que tem o [LBS_NOTIFY](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) estilo enviará a mensagem de notificação.
+- ON_LBN_DBLCLK o usuário clica duas vezes em uma cadeia de caracteres em uma caixa de listagem. Somente uma caixa de listagem com o estilo [LBS_NOTIFY](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) enviará essa mensagem de notificação.
 
-- ON_LBN_ERRSPACE a caixa de listagem não é possível alocar memória suficiente para atender à solicitação.
+- ON_LBN_ERRSPACE a caixa de listagem não pode alocar memória suficiente para atender à solicitação.
 
-- A caixa de listagem ON_LBN_KILLFOCUS está perdendo o foco de entrada.
+- ON_LBN_KILLFOCUS a caixa de listagem está perdendo o foco de entrada.
 
-- ON_LBN_SELCANCEL a seleção atual da caixa de listagem é cancelada. Esta mensagem é enviada somente quando uma caixa de listagem tem o estilo LBS_NOTIFY.
+- ON_LBN_SELCANCEL a seleção atual da caixa de listagem foi cancelada. Esta mensagem é enviada somente quando uma caixa de listagem tem o estilo LBS_NOTIFY.
 
-- ON_LBN_SELCHANGE a seleção na caixa de listagem foi alterada. Esta notificação não será enviada se a seleção é alterada pela [CListBox::SetCurSel](#setcursel) função de membro. Essa notificação só se aplica a uma caixa de listagem que tem o estilo LBS_NOTIFY. A mensagem de notificação LBN_SELCHANGE é enviada para uma caixa de listagem de seleção múltipla sempre que o usuário pressiona uma tecla de direção, mesmo se a seleção não é alterado.
+- ON_LBN_SELCHANGE a seleção na caixa de listagem foi alterada. Essa notificação não será enviada se a seleção for alterada pela função de membro [CListBox:: Setcurseal](#setcursel) . Essa notificação se aplica somente a uma caixa de listagem que tem o estilo LBS_NOTIFY. A mensagem de notificação LBN_SELCHANGE é enviada para uma caixa de listagem de seleção múltipla sempre que o usuário pressiona uma tecla de seta, mesmo que a seleção não seja alterada.
 
-- A caixa de listagem ON_LBN_SETFOCUS está recebendo o foco de entrada.
+- ON_LBN_SETFOCUS a caixa de listagem está recebendo o foco de entrada.
 
-- Uma caixa de listagem do desenho proprietário que tem sem cadeias de caracteres ON_WM_CHARTOITEM recebe uma mensagem WM_CHAR.
+- ON_WM_CHARTOITEM uma caixa de listagem de desenho proprietário que não tem cadeias de caracteres recebe uma mensagem WM_CHAR.
 
-- Caixa de listagem de um ON_WM_VKEYTOITEM com o estilo LBS_WANTKEYBOARDINPUT recebe uma mensagem WM_KEYDOWN.
+- ON_WM_VKEYTOITEM uma caixa de listagem com o estilo LBS_WANTKEYBOARDINPUT recebe uma mensagem WM_KEYDOWN.
 
-Se você criar uma `CListBox` objeto dentro de uma caixa de diálogo (por meio de um recurso de caixa de diálogo), o `CListBox` objeto será destruído automaticamente quando o usuário fecha a caixa de diálogo.
+Se você criar um `CListBox` objeto dentro de uma caixa de diálogo (por meio de um recurso `CListBox` de caixa de diálogo), o objeto será destruído automaticamente quando o usuário fechar a caixa de diálogo.
 
-Se você criar uma `CListBox` objeto dentro de uma janela, você precisa destruir o `CListBox` objeto. Se você criar o `CListBox` do objeto na pilha, ele será destruído automaticamente. Se você criar o `CListBox` objeto no heap usando a **novos** função, você deve chamar **excluir** no objeto a destruí-la quando o usuário fecha a janela pai.
+Se você criar um `CListBox` objeto em uma janela, talvez seja necessário destruir o `CListBox` objeto. Se você criar o `CListBox` objeto na pilha, ele será destruído automaticamente. Se você criar o `CListBox` objeto no heap usando a **nova** função, deverá chamar **delete** no objeto para destruí-lo quando o usuário fechar a janela pai.
 
-Se você alocar qualquer memória na `CListBox` do objeto, substituir o `CListBox` destruidor para dispose da alocação.
+Se você alocar qualquer memória no `CListBox` objeto, substitua o `CListBox` destruidor para descartar a alocação.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -237,11 +237,11 @@ Se você alocar qualquer memória na `CListBox` do objeto, substituir o `CListBo
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxwin. h
+**Cabeçalho:** Afxwin. h
 
 ##  <a name="addstring"></a>  CListBox::AddString
 
-Adiciona uma cadeia de caracteres para uma caixa de listagem.
+Adiciona uma cadeia de caracteres a uma caixa de listagem.
 
 ```
 int AddString(LPCTSTR lpszItem);
@@ -250,17 +250,17 @@ int AddString(LPCTSTR lpszItem);
 ### <a name="parameters"></a>Parâmetros
 
 *lpszItem*<br/>
-Aponta para a cadeia de caracteres terminada em nulo a ser adicionado.
+Aponta para a cadeia de caracteres terminada em nulo que deve ser adicionada.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice baseado em zero na cadeia de caracteres na caixa de listagem. O valor retornado é LB_ERR se ocorrer um erro; o valor de retorno é LB_ERRSPACE se não houver espaço suficiente está disponível para armazenar a nova cadeia de caracteres.
+O índice de base zero para a cadeia de caracteres na caixa de listagem. O valor de retorno será LB_ERR se ocorrer um erro; o valor de retorno será LB_ERRSPACE se houver espaço insuficiente disponível para armazenar a nova cadeia de caracteres.
 
 ### <a name="remarks"></a>Comentários
 
-Se a caixa de listagem não foi criada com o [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) estilo, a cadeia de caracteres é adicionada ao final da lista. Caso contrário, a cadeia de caracteres é inserida na lista, e a lista é classificada. Se a caixa de listagem foi criada com o estilo LBS_SORT, mas não a [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) estilo, a estrutura classifica a lista por um ou mais chamadas para o `CompareItem` função de membro.
+Se a caixa de listagem não foi criada com o estilo [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , a cadeia de caracteres será adicionada ao final da lista. Caso contrário, a cadeia de caracteres será inserida na lista e a lista será classificada. Se a caixa de listagem tiver sido criada com o estilo LBS_SORT, mas não o estilo [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , a estrutura classificará a lista por uma ou `CompareItem` mais chamadas para a função membro.
 
-Use [InsertString](#insertstring) para inserir uma cadeia de caracteres em um local específico na caixa de listagem.
+Use [InsertString](#insertstring) para inserir uma cadeia de caracteres em um local específico dentro da caixa de listagem.
 
 ### <a name="example"></a>Exemplo
 
@@ -268,7 +268,7 @@ Use [InsertString](#insertstring) para inserir uma cadeia de caracteres em um lo
 
 ##  <a name="chartoitem"></a>  CListBox::CharToItem
 
-Chamado pelo framework quando a janela do pai da caixa de listagem recebe uma mensagem WM_CHARTOITEM da caixa de listagem.
+Chamado pelo Framework quando a janela pai da caixa de listagem recebe uma mensagem WM_CHARTOITEM da caixa de listagem.
 
 ```
 virtual int CharToItem(
@@ -279,36 +279,36 @@ virtual int CharToItem(
 ### <a name="parameters"></a>Parâmetros
 
 *nKey*<br/>
-O código do ANSI do caractere digitado pelo usuário.
+O código ANSI do caractere digitado pelo usuário.
 
 *nIndex*<br/>
-A posição atual do cursor do sistema de caixa de listagem.
+A posição atual do cursor da caixa de listagem.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna - 1 ou - 2 para nenhuma outra ação ou um número não negativo para especificar um índice de um item de caixa de listagem na qual executar a ação padrão para o pressionamento de tecla. A implementação padrão retorna - 1.
+Retorna-1 ou-2 para nenhuma ação adicional ou um número não negativo para especificar um índice de um item da caixa de listagem no qual executar a ação padrão para o pressionamento de tecla. A implementação padrão retorna-1.
 
 ### <a name="remarks"></a>Comentários
 
-A mensagem WM_CHARTOITEM é enviada pela caixa de listagem, quando ele recebe uma mensagem WM_CHAR, mas apenas se a caixa de listagem atende a todos estes critérios:
+A mensagem WM_CHARTOITEM é enviada pela caixa de listagem quando recebe uma mensagem WM_CHAR, mas somente se a caixa de listagem atender a todos esses critérios:
 
-- É uma caixa de listagem do desenho proprietário.
+- É uma caixa de listagem de desenho proprietário.
 
-- Não tem o [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) conjunto de estilos.
+- Não tem o estilo [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) definido.
 
 - Tem pelo menos um item.
 
-Você nunca deve chamar essa função por conta própria. Substitua essa função para fornecer sua própria manipulação personalizada das mensagens de teclado.
+Você mesmo nunca deve chamar essa função. Substitua essa função para fornecer sua própria manipulação personalizada de mensagens de teclado.
 
-Em sua substituição, você deve retornar um valor para dizer à estrutura qual ação é executada. Um valor retornado de - 1 ou - 2 indica que você tratou todos os aspectos de selecionando o item e não requer nenhuma ação adicional pela caixa de listagem. Antes de retorná - 1 ou - 2, você pode definir a seleção ou mover o cursor ou ambos. Para definir a seleção, use [SetCurSel](#setcursel) ou [SetSel](#setsel). Para mover o cursor, use [SetCaretIndex](#setcaretindex).
+Em sua substituição, você deve retornar um valor para informar ao Framework qual ação você executou. Um valor de retorno de-1 ou-2 indica que você tratou todos os aspectos da seleção do item e não requer nenhuma ação adicional na caixa de listagem. Antes de retornar-1 ou-2, você pode definir a seleção ou mover o cursor ou ambos. Para definir a seleção, use [Setcurseal](#setcursel) ou [SetSel](#setsel). Para mover o cursor, use [SetCaretIndex](#setcaretindex).
 
-Um valor retornado de 0 ou maior Especifica o índice de um item na caixa de listagem e indica que a caixa de listagem deve realizar a ação padrão para pressionamento de tecla em determinado item.
+Um valor de retorno 0 ou maior especifica o índice de um item na caixa de listagem e indica que a caixa de listagem deve executar a ação padrão para o pressionamento de tecla no item determinado.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CListBox#4](../../mfc/codesnippet/cpp/clistbox-class_2.cpp)]
 
-##  <a name="clistbox"></a>  CListBox::CListBox
+##  <a name="clistbox"></a>CListBox::CListBox
 
 Constrói um objeto `CListBox`.
 
@@ -318,7 +318,7 @@ CListBox();
 
 ### <a name="remarks"></a>Comentários
 
-Você constrói um `CListBox` objeto em duas etapas. Primeiro, chame o construtor `ClistBox` e, em seguida, chame `Create`, que inicializa a caixa de listagem do Windows e anexa-o para o `CListBox`.
+Você constrói um `CListBox` objeto em duas etapas. Primeiro, chame o construtor `ClistBox` e, em `Create`seguida, chame, que inicializa a caixa de listagem do Windows e `CListBox`a anexa ao.
 
 ### <a name="example"></a>Exemplo
 
@@ -326,7 +326,7 @@ Você constrói um `CListBox` objeto em duas etapas. Primeiro, chame o construto
 
 ##  <a name="compareitem"></a>  CListBox::CompareItem
 
-Chamado pelo framework para determinar a posição relativa de um novo item em uma caixa de lista classificada de desenho do proprietário.
+Chamado pelo Framework para determinar a posição relativa de um novo item em uma caixa de listagem de desenho de proprietário classificada.
 
 ```
 virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
@@ -335,31 +335,31 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpCompareItemStruct*<br/>
-Um ponteiro longo para um `COMPAREITEMSTRUCT` estrutura.
+Um ponteiro longo para uma `COMPAREITEMSTRUCT` estrutura.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Indica a posição relativa dos dois itens descrito o [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) estrutura. Pode ser qualquer um dos seguintes valores:
+Indica a posição relativa dos dois itens descritos na estrutura [COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct) . Pode ser qualquer um dos seguintes valores:
 
 |Valor|Significado|
 |-----------|-------------|
 |-1|Item 1 classifica antes do item 2.|
-|0|Item 1 e item 2 classificar o mesmo.|
-|1|Item 1 classifica após o item 2.|
+|0|O item 1 e o item 2 são classificados da mesma forma.|
+|1|O item 1 é classificado após o item 2.|
 
-Ver [CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) para obter uma descrição de `COMPAREITEMSTRUCT` estrutura.
+Consulte [CWnd:: OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) para obter uma descrição da `COMPAREITEMSTRUCT` estrutura.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, essa função membro não faz nada. Se você criar uma caixa de listagem do desenho proprietário com o estilo LBS_SORT, você deve substituir essa função de membro para ajudar a estrutura de novos itens adicionados à caixa de listagem de classificação.
+Por padrão, essa função de membro não faz nada. Se você criar uma caixa de listagem de desenho proprietário com o estilo LBS_SORT, deverá substituir essa função de membro para ajudar a estrutura na classificação de novos itens adicionados à caixa de listagem.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CListBox#5](../../mfc/codesnippet/cpp/clistbox-class_4.cpp)]
 
-##  <a name="create"></a>  CListBox::Create
+##  <a name="create"></a>CListBox:: criar
 
-Cria a caixa de listagem do Windows e anexa-o para o `CListBox` objeto.
+Cria a caixa de listagem do Windows e a anexa ao `CListBox` objeto.
 
 ```
 virtual BOOL Create(
@@ -372,34 +372,34 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parâmetros
 
 *dwStyle*<br/>
-Especifica o estilo da caixa de listagem. Aplicar qualquer combinação de [estilos de caixa de listagem](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) à caixa.
+Especifica o estilo da caixa de listagem. Aplique qualquer combinação de [estilos de caixa de listagem](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) à caixa.
 
 *rect*<br/>
-Especifica o tamanho da caixa de listagem e posição. Pode ser um `CRect` objeto ou um `RECT` estrutura.
+Especifica o tamanho e a posição da caixa de listagem. Pode ser um `CRect` objeto ou uma `RECT` estrutura.
 
 *pParentWnd*<br/>
-Especifica a janela do pai da caixa de listagem (geralmente um `CDialog` objeto). Ele não deve ser NULL.
+Especifica a janela pai da caixa de listagem (geralmente `CDialog` um objeto). Ele não deve ser nulo.
 
 *nID*<br/>
-Especifica a ID do controle. da caixa de listagem
+Especifica a ID de controle da caixa de listagem.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Você constrói um `CListBox` objeto em duas etapas. Primeiro, chame o construtor e, em seguida, chame `Create`, que inicializa a caixa de listagem do Windows e anexa-o para o `CListBox` objeto.
+Você constrói um `CListBox` objeto em duas etapas. Primeiro, chame o construtor e, em `Create`seguida, chame, que inicializa a caixa de listagem do Windows e `CListBox` o anexa ao objeto.
 
-Quando `Create` envios do Windows, executa o [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), e [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) mensagens para o controle de caixa de listagem.
+Quando `Create` o é executado, o Windows envia as mensagens [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)e [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) para o controle da caixa de listagem.
 
-Essas mensagens são manipuladas por padrão, o [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), e [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) funções de membro no `CWnd` classe base. Para estender o tratamento de mensagem padrão, derive uma classe de `CListBox`, adicionar um mapa de mensagem para a nova classe e substituir as funções de membro de manipulador de mensagens anterior. Substituir `OnCreate`, por exemplo, para executar a inicialização necessária para uma nova classe.
+Essas mensagens são tratadas por padrão pelas funções de membro [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)e [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) na `CWnd` classe base. Para estender a manipulação de mensagens padrão, derive uma `CListBox`classe de, adicione um mapa de mensagem à nova classe e substitua as funções de membro do manipulador de mensagens anterior. Substitua `OnCreate`, por exemplo, para executar a inicialização necessária para uma nova classe.
 
-Aplicar o seguinte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) a um controle de caixa de listagem.
+Aplique os seguintes [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) a um controle de caixa de listagem.
 
-- Sempre WS_CHILD
+- WS_CHILD sempre
 
-- Normalmente, WS_VISIBLE
+- WS_VISIBLE geralmente
 
 - WS_DISABLED raramente
 
@@ -407,9 +407,9 @@ Aplicar o seguinte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md
 
 - WS_HSCROLL para adicionar uma barra de rolagem horizontal
 
-- WS_GROUP para agrupar controles
+- WS_GROUP para controles de grupo
 
-- WS_TABSTOP para permitir o uso da tecla TAB para este controle
+- WS_TABSTOP para permitir tabulação para este controle
 
 ### <a name="example"></a>Exemplo
 
@@ -417,7 +417,7 @@ Aplicar o seguinte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md
 
 ##  <a name="deleteitem"></a>  CListBox::DeleteItem
 
-Chamado pelo framework quando o usuário exclui um item de um desenho proprietário `CListBox` de objeto ou destrói a caixa de listagem.
+Chamado pelo Framework quando o usuário exclui um item de um objeto de desenho `CListBox` proprietário ou destrói a caixa de listagem.
 
 ```
 virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
@@ -426,13 +426,13 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpDeleteItemStruct*<br/>
-Um ponteiro longo para um Windows [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) estrutura que contém informações sobre o item excluído.
+Um ponteiro longo para uma estrutura [DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct) do Windows que contém informações sobre o item excluído.
 
 ### <a name="remarks"></a>Comentários
 
-A implementação padrão dessa função não faz nada. Substitua essa função para redesenhar a uma caixa de listagem do desenho proprietário conforme necessário.
+A implementação padrão dessa função não faz nada. Substitua essa função para redesenhar uma caixa de listagem de desenho proprietário conforme necessário.
 
-Ver [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) para obter uma descrição de `DELETEITEMSTRUCT` estrutura.
+Consulte [CWnd:: OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) para obter uma descrição da `DELETEITEMSTRUCT` estrutura.
 
 ### <a name="example"></a>Exemplo
 
@@ -440,7 +440,7 @@ Ver [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) para ob
 
 ##  <a name="deletestring"></a>  CListBox::DeleteString
 
-Exclui o item na posição *nIndex* na caixa de listagem.
+Exclui o item na posição *nIndex* da caixa de listagem.
 
 ```
 int DeleteString(UINT nIndex);
@@ -449,23 +449,23 @@ int DeleteString(UINT nIndex);
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o índice baseado em zero da cadeia de caracteres a ser excluído.
+Especifica o índice de base zero da cadeia de caracteres a ser excluída.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Uma contagem das cadeias de caracteres restantes na lista. O valor de retorno é LB_ERR se *nIndex* Especifica um índice maior que o número de itens na lista.
+Uma contagem das cadeias de caracteres restantes na lista. O valor de retorno será LB_ERR se *nIndex* especificar um índice maior que o número de itens na lista.
 
 ### <a name="remarks"></a>Comentários
 
-Todos os itens que seguem *nIndex* agora mover uma posição para baixo. Por exemplo, se uma caixa de listagem contém dois itens, excluir o primeiro item fará com que o item restante ser, agora, na primeira posição. *nIndex*= 0 para o item na primeira posição.
+Todos os itens após *nIndex* agora se movem uma posição para baixo. Por exemplo, se uma caixa de listagem contiver dois itens, a exclusão do primeiro item fará com que o item restante esteja agora na primeira posição. *nIndex*= 0 para o item na primeira posição.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CListBox#7](../../mfc/codesnippet/cpp/clistbox-class_7.cpp)]
 
-##  <a name="dir"></a>  CListBox::Dir
+##  <a name="dir"></a>CListBox::D ir
 
-Adiciona uma lista de nomes de arquivos, unidades ou ambos para uma caixa de listagem.
+Adiciona uma lista de nomes de filedrives, unidades ou ambos a uma caixa de listagem.
 
 ```
 int Dir(
@@ -476,25 +476,25 @@ int Dir(
 ### <a name="parameters"></a>Parâmetros
 
 *attr*<br/>
-Pode ser qualquer combinação da **enum** valores descritos na `CFile::GetStatu` [s](../../mfc/reference/cfile-class.md#getstatus), ou qualquer combinação dos valores a seguir:
+Pode ser qualquer combinação dos valores de **Enumeração** descritos em `CFile::GetStatu` [s](../../mfc/reference/cfile-class.md#getstatus)ou qualquer combinação dos seguintes valores:
 
 |Valor|Significado|
 |-----------|-------------|
-|0x0000|Arquivo pode ser lido ou gravado.|
-|0x0001|Arquivo pode ser lidos do mas não gravado.|
-|0x0002|Arquivo está oculto e não aparece em uma listagem de diretório.|
-|0x0004|É um arquivo de sistema.|
-|0x0010|O nome especificado por *lpszWildCard* Especifica um diretório.|
-|0x0020|Arquivo foi arquivado.|
-|0x4000|Incluir todas as unidades que corresponde ao nome especificado por *lpszWildCard*.|
-|0x8000|Sinalizador exclusivo. Se o sinalizador exclusivo é definido, somente os arquivos do tipo especificado serão listados. Caso contrário, os arquivos do tipo especificado são listados, além de arquivos "normais".|
+|0x0000|O arquivo pode ser lido ou gravado.|
+|0x0001|O arquivo pode ser lido, mas não gravado no.|
+|0x0002|O arquivo está oculto e não aparece em uma listagem de diretório.|
+|0x0004|O arquivo é um arquivo do sistema.|
+|0x0010|O nome especificado por *lpszWildCard* especifica um diretório.|
+|0x0020|O arquivo foi arquivado.|
+|0x4000|Inclua todas as unidades que correspondem ao nome especificado por *lpszWildCard*.|
+|0x8000|Sinalizador exclusivo. Se o sinalizador exclusivo for definido, somente os arquivos do tipo especificado serão listados. Caso contrário, os arquivos do tipo especificado serão listados, além dos arquivos "normal".|
 
 *lpszWildCard*<br/>
-Aponta para uma cadeia de caracteres de especificação de arquivo. A cadeia de caracteres pode conter caracteres curinga (por exemplo, *.\*).
+Aponta para uma cadeia de caracteres de especificação de arquivo. A cadeia de caracteres pode conter curingas (por exemplo,\**.).
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice baseado em zero do último nome de arquivo adicionado à lista. O valor retornado é LB_ERR se ocorrer um erro; o valor de retorno é LB_ERRSPACE se não houver espaço suficiente está disponível para armazenar novas cadeias de caracteres.
+O índice de base zero do último nome de arquivo adicionado à lista. O valor de retorno será LB_ERR se ocorrer um erro; o valor de retorno será LB_ERRSPACE se houver espaço insuficiente disponível para armazenar as novas cadeias de caracteres.
 
 ### <a name="example"></a>Exemplo
 
@@ -502,7 +502,7 @@ O índice baseado em zero do último nome de arquivo adicionado à lista. O valo
 
 ##  <a name="drawitem"></a>  CListBox::DrawItem
 
-Chamado pelo framework quando um aspecto visual de uma caixa de listagem do desenho proprietário mude.
+Chamado pelo Framework quando um aspecto visual de uma caixa de listagem de desenho proprietário é alterado.
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -511,15 +511,15 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpDrawItemStruct*<br/>
-Um ponteiro longo para um [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) estrutura que contém informações sobre o tipo de desenho necessárias.
+Um ponteiro longo para uma estrutura [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) que contém informações sobre o tipo de desenho necessário.
 
 ### <a name="remarks"></a>Comentários
 
-O `itemAction` e `itemState` os membros a `DRAWITEMSTRUCT` estrutura define a ação de desenho que deve ser executada.
+Os `itemAction` Membros `itemState` e da`DRAWITEMSTRUCT` estrutura definem a ação de desenho a ser executada.
 
-Por padrão, essa função membro não faz nada. Substituir essa função de membro para implementar o desenho de um desenho proprietário `CListBox` objeto. O aplicativo deve restaurar todos os objetos de interface (GDI) do dispositivo gráficos selecionados para o contexto de exibição fornecido no *lpDrawItemStruct* antes desse membro função encerra.
+Por padrão, essa função de membro não faz nada. Substitua essa função de membro para implementar o desenho de um objeto `CListBox` de desenho proprietário. O aplicativo deve restaurar todos os objetos da interface de dispositivo de gráficos (GDI) selecionados para o contexto de exibição fornecido em *lpDrawItemStruct* antes que essa função de membro seja encerrada.
 
-Ver [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) para obter uma descrição de `DRAWITEMSTRUCT` estrutura.
+Consulte [CWnd:: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) para obter uma descrição da `DRAWITEMSTRUCT` estrutura.
 
 ### <a name="example"></a>Exemplo
 
@@ -538,18 +538,18 @@ int FindString(
 ### <a name="parameters"></a>Parâmetros
 
 *nStartAfter*<br/>
-Contém o índice baseado em zero do item antes do primeiro item a ser pesquisado. Quando a pesquisa alcançar a parte inferior da caixa de listagem, ele continua na parte superior da caixa de listagem para o item especificado pela *nStartAfter*. Se *nStartAfter* é -1, a caixa de listagem inteira é pesquisada desde o início.
+Contém o índice de base zero do item antes do primeiro item a ser pesquisado. Quando a pesquisa atingir a parte inferior da caixa de listagem, ela continuará na parte superior da caixa de listagem de volta para o item especificado por *nStartAfter*. Se *nStartAfter* for-1, a caixa de listagem inteira será pesquisada desde o início.
 
 *lpszItem*<br/>
-Aponta para a cadeia de caracteres terminada em nulo que contém o prefixo a ser pesquisado. A pesquisa é o caso independente, portanto, essa cadeia de caracteres pode conter qualquer combinação de letras maiusculas e minúsculas.
+Aponta para a cadeia de caracteres terminada em nulo que contém o prefixo a ser pesquisado. A pesquisa diferencia maiúsculas de minúsculas, portanto, essa cadeia de caracteres pode conter qualquer combinação de letras maiúsculas e minúsculas.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice baseado em zero do item correspondente ou LB_ERR se a pesquisa foi bem-sucedida.
+O índice de base zero do item correspondente ou LB_ERR se a pesquisa não tiver sido bem-sucedida.
 
 ### <a name="remarks"></a>Comentários
 
-Use o [SelectString](#selectstring) a função de membro para localizar e selecionar uma cadeia de caracteres.
+Use a função de membro [SelectString](#selectstring) para localizar e selecionar uma cadeia de caracteres.
 
 ### <a name="example"></a>Exemplo
 
@@ -557,7 +557,7 @@ Use o [SelectString](#selectstring) a função de membro para localizar e seleci
 
 ##  <a name="findstringexact"></a>  CListBox::FindStringExact
 
-Localiza a primeira cadeia de caixa de listagem que corresponde à cadeia de caracteres especificada em *lpszFind*.
+Localiza a primeira cadeia de caracteres da caixa de listagem que corresponde à cadeia de caracteres especificada em *lpszFind*.
 
 ```
 int FindStringExact(
@@ -568,18 +568,18 @@ int FindStringExact(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndexStart*<br/>
-Especifica o índice baseado em zero do item antes do primeiro item a ser pesquisado. Quando a pesquisa alcançar a parte inferior da caixa de listagem, ele continua na parte superior da caixa de listagem para o item especificado pela *nIndexStart*. Se *nIndexStart* é -1, a caixa de listagem inteira é pesquisada desde o início.
+Especifica o índice de base zero do item antes do primeiro item a ser pesquisado. Quando a pesquisa atingir a parte inferior da caixa de listagem, ela continuará na parte superior da caixa de listagem de volta para o item especificado por *nIndexStart*. Se *nIndexStart* for-1, a caixa de listagem inteira será pesquisada desde o início.
 
 *lpszFind*<br/>
-Aponta para a cadeia de caracteres terminada em nulo a ser pesquisado. Essa cadeia de caracteres pode conter um nome de arquivo completo, incluindo a extensão. A pesquisa não diferencia maiusculas de minúsculas, portanto, a cadeia de caracteres pode conter qualquer combinação de letras maiusculas e minúsculas.
+Aponta para a cadeia de caracteres terminada em nulo a ser pesquisada. Essa cadeia de caracteres pode conter um nome de arquivo completo, incluindo a extensão. A pesquisa não diferencia maiúsculas de minúsculas, portanto, a cadeia de caracteres pode conter qualquer combinação de letras maiúsculas e minúsculas.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice do item correspondente ou LB_ERR se a pesquisa foi bem-sucedida.
+O índice do item correspondente ou LB_ERR se a pesquisa não tiver sido bem-sucedida.
 
 ### <a name="remarks"></a>Comentários
 
-Se a caixa de listagem foi criada com um estilo de desenho do proprietário, mas sem os [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) estilo, a `FindStringExact` função de membro tenta corresponder o valor de palavras duplas contra o valor de *lpszFind*.
+Se a caixa de listagem tiver sido criada com um estilo de desenho proprietário, mas sem o estilo [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles), a função de membro `FindStringExact` tentará corresponder o valor de doubleword em relação ao valor de *lpszFind*.
 
 ### <a name="example"></a>Exemplo
 
@@ -587,7 +587,7 @@ Se a caixa de listagem foi criada com um estilo de desenho do proprietário, mas
 
 ##  <a name="getanchorindex"></a>  CListBox::GetAnchorIndex
 
-Recupera o índice baseado em zero do item atual da âncora na caixa de listagem.
+Recupera o índice de base zero do item de âncora atual na caixa de listagem.
 
 ```
 int GetAnchorIndex() const;
@@ -595,15 +595,15 @@ int GetAnchorIndex() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice do item de âncora atual, se bem-sucedido; Caso contrário, LB_ERR.
+O índice do item de âncora atual, se bem-sucedido; caso contrário, LB_ERR.
 
 ### <a name="remarks"></a>Comentários
 
-Em uma caixa de listagem de seleção múltipla, o item de âncora é o primeiro ou último item em um bloco contíguo itens selecionados.
+Em uma caixa de listagem de seleção múltipla, o item de âncora é o primeiro ou o último item em um bloco de itens selecionados contíguos.
 
 ### <a name="example"></a>Exemplo
 
-  Veja o exemplo de [CListBox::SetAnchorIndex](#setanchorindex).
+  Consulte o exemplo de [CListBox:: SetAnchorIndex](#setanchorindex).
 
 ##  <a name="getcaretindex"></a>  CListBox::GetCaretIndex
 
@@ -615,15 +615,15 @@ int GetCaretIndex() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice baseado em zero do item que tem o retângulo de foco em uma caixa de listagem. Se a caixa de listagem é uma caixa de listagem de seleção única, o valor de retorno é o índice do item que está selecionado, se houver.
+O índice de base zero do item que tem o retângulo de foco em uma caixa de listagem. Se a caixa de listagem for uma caixa de listagem de seleção única, o valor de retorno será o índice do item selecionado, se houver.
 
 ### <a name="remarks"></a>Comentários
 
-O item pode ou não pode ser selecionado.
+O item pode ou não ser selecionado.
 
 ### <a name="example"></a>Exemplo
 
-  Veja o exemplo de [CListBox::SetCaretIndex](#setcaretindex).
+  Consulte o exemplo de [CListBox:: SetCaretIndex](#setcaretindex).
 
 ##  <a name="getcount"></a>  CListBox::GetCount
 
@@ -639,7 +639,7 @@ O número de itens na caixa de listagem ou LB_ERR se ocorrer um erro.
 
 ### <a name="remarks"></a>Comentários
 
-A contagem retornada é maior do que o valor de índice do último item (o índice é baseado em zero).
+A contagem retornada é uma maior que o valor de índice do último item (o índice é baseado em zero).
 
 ### <a name="example"></a>Exemplo
 
@@ -647,7 +647,7 @@ A contagem retornada é maior do que o valor de índice do último item (o índi
 
 ##  <a name="getcursel"></a>  CListBox::GetCurSel
 
-Recupera o índice baseado em zero do item selecionado no momento, se houver, em uma caixa de listagem de seleção única.
+Recupera o índice de base zero do item selecionado no momento, se houver, em uma caixa de listagem de seleção única.
 
 ```
 int GetCurSel() const;
@@ -655,13 +655,13 @@ int GetCurSel() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice baseado em zero do item selecionado no momento se ele for uma caixa de listagem de seleção única. Ele é LB_ERR se nenhum item está selecionado no momento.
+O índice de base zero do item selecionado no momento se for uma caixa de listagem de seleção única. Será LB_ERR se nenhum item estiver selecionado no momento.
 
 Em uma caixa de listagem de seleção múltipla, o índice do item que tem o foco.
 
 ### <a name="remarks"></a>Comentários
 
-Não chame `GetCurSel` para uma caixa de listagem de seleção múltipla. Use [CListBox::GetSelItems](#getselitems) em vez disso.
+Não chame `GetCurSel` uma caixa de listagem de seleção múltipla. Use [CListBox:: GetSelItems](#getselitems) em vez disso.
 
 ### <a name="example"></a>Exemplo
 
@@ -669,7 +669,7 @@ Não chame `GetCurSel` para uma caixa de listagem de seleção múltipla. Use [C
 
 ##  <a name="gethorizontalextent"></a>  CListBox::GetHorizontalExtent
 
-Na caixa de listagem, recupera a largura em pixels pelo qual ele pode ser rolado horizontalmente.
+Recupera da caixa de listagem a largura em pixels pela qual ela pode ser rolada horizontalmente.
 
 ```
 int GetHorizontalExtent() const;
@@ -681,7 +681,7 @@ A largura rolável da caixa de listagem, em pixels.
 
 ### <a name="remarks"></a>Comentários
 
-Isso é aplicável somente se a caixa de listagem tem uma barra de rolagem horizontal.
+Isso será aplicável somente se a caixa de listagem tiver uma barra de rolagem horizontal.
 
 ### <a name="example"></a>Exemplo
 
@@ -689,7 +689,7 @@ Isso é aplicável somente se a caixa de listagem tem uma barra de rolagem horiz
 
 ##  <a name="getitemdata"></a>  CListBox::GetItemData
 
-Recupera o valor de palavras duplas de fornecida pelo aplicativo associado ao item de caixa de listagem especificada.
+Recupera o valor de doubleword fornecido pelo aplicativo associado ao item da caixa de listagem especificado.
 
 ```
 DWORD_PTR GetItemData(int nIndex) const;
@@ -698,15 +698,15 @@ DWORD_PTR GetItemData(int nIndex) const;
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o índice baseado em zero do item na caixa de listagem.
+Especifica o índice de base zero do item na caixa de listagem.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O valor associado com o item ou LB_ERR se ocorrer um erro.
+O valor associado ao item ou LB_ERR se ocorrer um erro.
 
 ### <a name="remarks"></a>Comentários
 
-O valor de palavras duplas era o *dwItemData* parâmetro de uma [SetItemData](#setitemdata) chamar.
+O valor de doubleword era o parâmetro *dwItemData* de uma chamada [SetItemData](#setitemdata) .
 
 ### <a name="example"></a>Exemplo
 
@@ -714,7 +714,7 @@ O valor de palavras duplas era o *dwItemData* parâmetro de uma [SetItemData](#s
 
 ##  <a name="getitemdataptr"></a>  CListBox::GetItemDataPtr
 
-Recupera o valor de 32 bits fornecida pelo aplicativo associado ao item de caixa de listagem especificada como um ponteiro (**void** <strong>\*</strong>).
+Recupera o valor de 32 bits fornecido pelo aplicativo associado ao item da caixa de listagem especificado como um ponteiro (**void** <strong>\*</strong>).
 
 ```
 void* GetItemDataPtr(int nIndex) const;
@@ -723,11 +723,11 @@ void* GetItemDataPtr(int nIndex) const;
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o índice baseado em zero do item na caixa de listagem.
+Especifica o índice de base zero do item na caixa de listagem.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Recupera um ponteiro ou -1 se ocorrer um erro.
+Recupera um ponteiro ou-1 se ocorrer um erro.
 
 ### <a name="example"></a>Exemplo
 
@@ -744,11 +744,11 @@ int GetItemHeight(int nIndex) const;
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o índice baseado em zero do item na caixa de listagem. Esse parâmetro é usado somente se a caixa de listagem tem o estilo LBS_OWNERDRAWVARIABLE; Caso contrário, ele deve ser definido como 0.
+Especifica o índice de base zero do item na caixa de listagem. Esse parâmetro será usado somente se a caixa de listagem tiver o estilo LBS_OWNERDRAWVARIABLE; caso contrário, ele deve ser definido como 0.
 
 ### <a name="return-value"></a>Valor de retorno
 
-A altura, em pixels, dos itens na caixa de listagem. Se a caixa de listagem tem o [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) estilo, o valor de retorno é a altura do item especificado por *nIndex*. Se ocorrer um erro, o valor de retorno é LB_ERR.
+A altura, em pixels, dos itens na caixa de listagem. Se a caixa de listagem tiver o estilo [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , o valor de retorno será a altura do item especificado por *nIndex*. Se ocorrer um erro, o valor de retorno será LB_ERR.
 
 ### <a name="example"></a>Exemplo
 
@@ -756,7 +756,7 @@ A altura, em pixels, dos itens na caixa de listagem. Se a caixa de listagem tem 
 
 ##  <a name="getitemrect"></a>  CListBox::GetItemRect
 
-Recupera as dimensões do retângulo a esse item dos limites de uma caixa de listagem como ele é exibido no momento na janela de caixa de listagem.
+Recupera as dimensões do retângulo que vincula um item da caixa de listagem, como ele é exibido atualmente na janela da caixa de listagem.
 
 ```
 int GetItemRect(
@@ -767,10 +767,10 @@ int GetItemRect(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o índice baseado em zero do item.
+Especifica o índice de base zero do item.
 
 *lpRect*<br/>
-Especifica um ponteiro longo para um [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) que recebe as coordenadas de cliente de caixa de listagem do item.
+Especifica um ponteiro longo para uma [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) que recebe as coordenadas de cliente da caixa de listagem do item.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -794,7 +794,7 @@ Número de itens por coluna do `CListBox` objeto.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro emula a funcionalidade dos [LB_GETLISTBOXINFO](/windows/desktop/Controls/lb-getlistboxinfo) da mensagem, conforme descrito no SDK do Windows.
+Essa função de membro emula a funcionalidade da mensagem [LB_GETLISTBOXINFO](/windows/win32/Controls/lb-getlistboxinfo) , conforme descrito na SDK do Windows.
 
 ##  <a name="getlocale"></a>  CListBox::GetLocale
 
@@ -806,15 +806,15 @@ LCID GetLocale() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O valor LCID (identificador) da localidade para cadeias de caracteres na caixa de listagem.
+O valor do identificador de localidade (LCID) para as cadeias de caracteres na caixa de listagem.
 
 ### <a name="remarks"></a>Comentários
 
-A localidade é usada, por exemplo, para determinar a ordem de classificação das cadeias de caracteres em uma caixa de lista classificada.
+A localidade é usada, por exemplo, para determinar a ordem de classificação das cadeias de caracteres em uma caixa de listagem classificada.
 
 ### <a name="example"></a>Exemplo
 
-  Veja o exemplo de [CListBox::SetLocale](#setlocale).
+  Consulte o exemplo para [CListBox:: setlocale](#setlocale).
 
 ##  <a name="getsel"></a>  CListBox::GetSel
 
@@ -827,17 +827,17 @@ int GetSel(int nIndex) const;
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o índice baseado em zero do item.
+Especifica o índice de base zero do item.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um número positivo se o item especificado estiver marcado; Caso contrário, é 0. O valor de retorno é LB_ERR se ocorrer um erro.
+Um número positivo se o item especificado for selecionado; caso contrário, será 0. O valor de retorno será LB_ERR se ocorrer um erro.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro funciona com ambas as caixas de listagem de seleção única e múltipla.
+Essa função de membro funciona com caixas de listagem de seleção única e múltipla.
 
-Para recuperar o índice do item de caixa de lista selecionado no momento, use [CListBox::GetCurSel](#getcursel).
+Para recuperar o índice do item da caixa de listagem selecionado no momento, use [CListBox:: Getcurseal](#getcursel).
 
 ### <a name="example"></a>Exemplo
 
@@ -853,11 +853,11 @@ int GetSelCount() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-A contagem de itens selecionados em uma caixa de listagem. Se a caixa de listagem é uma caixa de listagem de seleção única, o valor de retorno é LB_ERR.
+A contagem de itens selecionados em uma caixa de listagem. Se a caixa de listagem for uma caixa de listagem de seleção única, o valor de retorno será LB_ERR.
 
 ### <a name="example"></a>Exemplo
 
-  Veja o exemplo de [CListBox::GetSelItems](#getselitems).
+  Consulte o exemplo de [CListBox:: GetSelItems](#getselitems).
 
 ##  <a name="getselitems"></a>  CListBox::GetSelItems
 
@@ -875,11 +875,11 @@ int GetSelItems(
 Especifica o número máximo de itens selecionados cujos números de item devem ser colocados no buffer.
 
 *rgIndex*<br/>
-Especifica um ponteiro para um buffer grande o suficiente para o número de inteiros especificado por *nMaxItems*.
+Especifica um ponteiro para um buffer grande o suficiente para o número de inteiros especificados por *nMaxItems*.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O número real de itens colocados no buffer. Se a caixa de listagem é uma caixa de listagem de seleção única, o valor retornado é `LB_ERR`.
+O número real de itens colocados no buffer. Se a caixa de listagem for uma caixa de listagem de seleção única, o valor `LB_ERR`de retorno será.
 
 ### <a name="example"></a>Exemplo
 
@@ -902,21 +902,21 @@ void GetText(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o índice baseado em zero da cadeia de caracteres a ser recuperado.
+Especifica o índice de base zero da cadeia de caracteres a ser recuperada.
 
 *lpszBuffer*<br/>
-Aponta para o buffer que recebe a cadeia de caracteres. O buffer deve ter espaço suficiente para a cadeia de caracteres e um caractere nulo de terminação. O tamanho da cadeia de caracteres pode ser determinado antes do tempo chamando o `GetTextLen` função de membro.
+Aponta para o buffer que recebe a cadeia de caracteres. O buffer deve ter espaço suficiente para a cadeia de caracteres e um caractere nulo de terminação. O tamanho da cadeia de caracteres pode ser determinado antecipadamente chamando a função `GetTextLen` de membro.
 
 *rString*<br/>
 Uma referência a um objeto `CString`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O comprimento (em bytes) da cadeia de caracteres, exceto o caractere nulo de terminação. Se *nIndex* não especifica um índice válido, o valor retornado é LB_ERR.
+O comprimento (em bytes) da cadeia de caracteres, excluindo o caractere nulo de terminação. Se *nIndex* não especificar um índice válido, o valor de retorno será LB_ERR.
 
 ### <a name="remarks"></a>Comentários
 
-O segundo formulário desse membro de função preenche uma `CString` objeto com o texto de cadeia de caracteres.
+A segunda forma dessa função de membro preenche um `CString` objeto com o texto da cadeia de caracteres.
 
 ### <a name="example"></a>Exemplo
 
@@ -924,7 +924,7 @@ O segundo formulário desse membro de função preenche uma `CString` objeto com
 
 ##  <a name="gettextlen"></a>  CListBox::GetTextLen
 
-Obtém o comprimento de uma cadeia de caracteres em um item de caixa de listagem.
+Obtém o comprimento de uma cadeia de caracteres em um item da caixa de listagem.
 
 ```
 int GetTextLen(int nIndex) const;
@@ -933,19 +933,19 @@ int GetTextLen(int nIndex) const;
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o índice baseado em zero da cadeia de caracteres.
+Especifica o índice de base zero da cadeia de caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O comprimento da cadeia de caracteres em caracteres, exceto o caractere nulo de terminação. Se *nIndex* não especifica um índice válido, o valor retornado é LB_ERR.
+O comprimento da cadeia em caracteres, excluindo o caractere nulo de terminação. Se *nIndex* não especificar um índice válido, o valor de retorno será LB_ERR.
 
 ### <a name="example"></a>Exemplo
 
-  Veja o exemplo de [CListBox::GetText](#gettext).
+  Consulte o exemplo de [CListBox:: gettext](#gettext).
 
 ##  <a name="gettopindex"></a>  CListBox::GetTopIndex
 
-Recupera o índice baseado em zero do primeiro item visível em uma caixa de listagem.
+Recupera o índice de base zero do primeiro item visível em uma caixa de listagem.
 
 ```
 int GetTopIndex() const;
@@ -953,11 +953,11 @@ int GetTopIndex() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice baseado em zero do primeiro item visível em uma caixa de listagem se for bem-sucedido, LB_ERR caso contrário.
+O índice de base zero do primeiro item visível em uma caixa de listagem, se for bem-sucedido, LB_ERR caso contrário.
 
 ### <a name="remarks"></a>Comentários
 
-Inicialmente, o item 0 é na parte superior da caixa de listagem, mas se a caixa de listagem é rolada, outro item pode ser na parte superior.
+Inicialmente, o item 0 está na parte superior da caixa de listagem, mas se a caixa de listagem for rolada, outro item poderá estar na parte superior.
 
 ### <a name="example"></a>Exemplo
 
@@ -965,7 +965,7 @@ Inicialmente, o item 0 é na parte superior da caixa de listagem, mas se a caixa
 
 ##  <a name="initstorage"></a>  CListBox::InitStorage
 
-Aloca memória para armazenar itens de caixa de listagem.
+Aloca memória para armazenar itens da caixa de listagem.
 
 ```
 int InitStorage(
@@ -979,19 +979,19 @@ int InitStorage(
 Especifica o número de itens a serem adicionados.
 
 *nBytes*<br/>
-Especifica a quantidade de memória, em bytes, para alocar para cadeias de caracteres do item.
+Especifica a quantidade de memória, em bytes, a ser alocada para cadeias de caracteres de item.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, o número máximo de itens que a caixa de listagem pode armazenar antes de uma realocação de memória é necessário, LB_ERRSPACE caso contrário, o que significa que não há memória suficiente está disponível.
+Se for bem-sucedido, o número máximo de itens que a caixa de listagem pode armazenar antes de uma realocação de memória é necessária, caso contrário, LB_ERRSPACE, o que significa que não há memória suficiente disponível.
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função antes de adicionar um grande número de itens a um `CListBox`.
+Chame essa função antes de adicionar um grande número de itens a `CListBox`um.
 
-Essa função ajuda a acelerar a inicialização de caixas de listagem que têm um grande número de itens (mais de 100). Ele pré-aloca a quantidade especificada de memória de modo que os próximos [AddString](#addstring), [InsertString](#insertstring), e [Dir](#dir) funções usam o menor tempo possível. Você pode usar estimativas para os parâmetros. Se você superestimar, alguma memória extra será alocada; Se você subestimar, a alocação normal é usada para os itens que excedem a quantidade pré-alocada.
+Essa função ajuda a acelerar a inicialização de caixas de listagem que têm um grande número de itens (mais de 100). Ele prealoque a quantidade especificada de memória para que as funções [AddString](#addstring), [InsertString](#insertstring)e [dir](#dir) subsequentes tenham o menor tempo possível. Você pode usar estimativas para os parâmetros. Se você superestimar, uma memória extra é alocada; Se você subestimar, a alocação normal será usada para itens que excedem o valor prealocado.
 
-Windows 95/98 somente: O *nItems* parâmetro está limitado aos valores de 16 bits. Isso significa que caixas de listagem não podem conter mais de 32.767 itens. Embora o número de itens é restrito, o tamanho total dos itens em uma caixa de listagem é limitado apenas pela memória disponível.
+Somente Windows 95/98: O parâmetro *nItems* é limitado a valores de 16 bits. Isso significa que as caixas de listagem não podem conter mais de 32.767 itens. Embora o número de itens seja restrito, o tamanho total dos itens em uma caixa de listagem é limitado apenas pela memória disponível.
 
 ### <a name="example"></a>Exemplo
 
@@ -1010,18 +1010,18 @@ int InsertString(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o índice baseado em zero da posição para inserir a cadeia de caracteres. Se esse parâmetro for -1, a cadeia de caracteres é adicionada ao final da lista.
+Especifica o índice de base zero da posição para inserir a cadeia de caracteres. Se esse parâmetro for-1, a cadeia de caracteres será adicionada ao final da lista.
 
 *lpszItem*<br/>
-Aponta para a cadeia de caracteres terminada em nulo que deve ser inserido.
+Aponta para a cadeia de caracteres terminada em nulo que deve ser inserida.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice baseado em zero da posição em que a cadeia de caracteres foi inserida. O valor retornado é LB_ERR se ocorrer um erro; o valor de retorno é LB_ERRSPACE se não houver espaço suficiente está disponível para armazenar a nova cadeia de caracteres.
+O índice de base zero da posição na qual a cadeia de caracteres foi inserida. O valor de retorno será LB_ERR se ocorrer um erro; o valor de retorno será LB_ERRSPACE se houver espaço insuficiente disponível para armazenar a nova cadeia de caracteres.
 
 ### <a name="remarks"></a>Comentários
 
-Ao contrário o [AddString](#addstring) função de membro `InsertString` não faz com que uma lista com o [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) estilo a ser classificado.
+Ao contrário da função de membro [AddString](#addstring) , `InsertString` o não faz com que uma lista com o estilo [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) seja classificada.
 
 ### <a name="example"></a>Exemplo
 
@@ -1029,7 +1029,7 @@ Ao contrário o [AddString](#addstring) função de membro `InsertString` não f
 
 ##  <a name="itemfrompoint"></a>  CListBox::ItemFromPoint
 
-Determina o item de caixa de listagem mais próximo o ponto especificado na *pt*.
+Determina o item da caixa de listagem próximo ao ponto especificado em *pt*.
 
 ```
 UINT ItemFromPoint(
@@ -1040,26 +1040,26 @@ UINT ItemFromPoint(
 ### <a name="parameters"></a>Parâmetros
 
 *pt*<br/>
-Aponte para o qual encontrar o item mais próximo, especificado em relação ao canto superior esquerdo da área de cliente da caixa de listagem.
+Ponto para o qual encontrar o item mais próximo, especificado em relação ao canto superior esquerdo da área do cliente da caixa de listagem.
 
 *bOutside*<br/>
-Fazer referência a uma variável BOOL que será definida como TRUE se *pt* está fora da área de cliente do item de caixa de listagem mais próximo, FALSO se *pt* está dentro da área de cliente do item da caixa de lista mais próximo.
+Referência a uma variável BOOL que será definida como TRUE se o *pt* estiver fora da área do cliente do item da caixa de listagem mais próximo, false se o *pt* estiver dentro da área do cliente do item da caixa de listagem mais próximo.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice do item mais próximo ao ponto especificado na *pt*.
+O índice do item mais próximo ao ponto especificado em *pt*.
 
 ### <a name="remarks"></a>Comentários
 
-Você pode usar essa função para determinar qual item de caixa de listagem, o cursor do mouse se move sobre.
+Você pode usar essa função para determinar a qual item da caixa de listagem o cursor do mouse se move.
 
 ### <a name="example"></a>Exemplo
 
-  Veja o exemplo de [CListBox::SetAnchorIndex](#setanchorindex).
+  Consulte o exemplo de [CListBox:: SetAnchorIndex](#setanchorindex).
 
-##  <a name="measureitem"></a>  CListBox::MeasureItem
+##  <a name="measureitem"></a>CListBox::MeasureItem
 
-Chamado pelo framework quando uma caixa de listagem com um estilo de desenho proprietário é criada.
+Chamado pelo Framework quando uma caixa de listagem com um estilo de desenho proprietário é criada.
 
 ```
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
@@ -1068,15 +1068,15 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpMeasureItemStruct*<br/>
-Um ponteiro longo para um [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) estrutura.
+Um ponteiro longo para uma estrutura [MEASUREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-measureitemstruct) .
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, essa função membro não faz nada. Substituir essa função de membro e preencha o `MEASUREITEMSTRUCT` estrutura para informar ao Windows as dimensões da caixa de listagem. Se a caixa de listagem é criada com o [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) estilo, a estrutura chama essa função de membro para cada item na caixa de listagem. Caso contrário, esse membro é chamado apenas uma vez.
+Por padrão, essa função de membro não faz nada. Substitua essa função de membro e preencha a `MEASUREITEMSTRUCT` estrutura para informar o Windows das dimensões da caixa de listagem. Se a caixa de listagem for criada com o estilo [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , a estrutura chamará essa função de membro para cada item na caixa de listagem. Caso contrário, esse membro será chamado apenas uma vez.
 
-Para obter mais informações sobre como usar o [LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) estilo em uma caixa de listagem do desenho proprietário criado com o `SubclassDlgItem` função de membro `CWnd`, consulte a discussão na [14 de observação técnica](../../mfc/tn014-custom-controls.md).
+Para obter mais informações sobre como usar o estilo [LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) em uma caixa de listagem de desenho proprietário `SubclassDlgItem` criada com a `CWnd`função de membro do, consulte a discussão na [Nota técnica 14](../../mfc/tn014-custom-controls.md).
 
-Ver [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) para obter uma descrição de `MEASUREITEMSTRUCT` estrutura.
+Consulte [CWnd:: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) para obter uma descrição da `MEASUREITEMSTRUCT` estrutura.
 
 ### <a name="example"></a>Exemplo
 
@@ -1096,7 +1096,7 @@ void ResetContent();
 
 ##  <a name="selectstring"></a>  CListBox::SelectString
 
-Pesquisas de um item de caixa de listagem que corresponde à cadeia de caracteres especificada e, se um item correspondente for encontrado, ele seleciona o item.
+Procura um item da caixa de listagem que corresponda à cadeia de caracteres especificada e, se um item correspondente for encontrado, ele selecionará o item.
 
 ```
 int SelectString(
@@ -1107,24 +1107,24 @@ int SelectString(
 ### <a name="parameters"></a>Parâmetros
 
 *nStartAfter*<br/>
-Contém o índice baseado em zero do item antes do primeiro item a ser pesquisado. Quando a pesquisa alcançar a parte inferior da caixa de listagem, ele continua na parte superior da caixa de listagem para o item especificado pela *nStartAfter*. Se *nStartAfter* é -1, a caixa de listagem inteira é pesquisada desde o início.
+Contém o índice de base zero do item antes do primeiro item a ser pesquisado. Quando a pesquisa atingir a parte inferior da caixa de listagem, ela continuará na parte superior da caixa de listagem de volta para o item especificado por *nStartAfter*. Se *nStartAfter* for-1, a caixa de listagem inteira será pesquisada desde o início.
 
 *lpszItem*<br/>
-Aponta para a cadeia de caracteres terminada em nulo que contém o prefixo a ser pesquisado. A pesquisa é o caso independente, portanto, essa cadeia de caracteres pode conter qualquer combinação de letras maiusculas e minúsculas.
+Aponta para a cadeia de caracteres terminada em nulo que contém o prefixo a ser pesquisado. A pesquisa diferencia maiúsculas de minúsculas, portanto, essa cadeia de caracteres pode conter qualquer combinação de letras maiúsculas e minúsculas.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice do item selecionado, se a pesquisa foi bem-sucedida. Se a pesquisa tiver sido bem-sucedida, o valor retornado é LB_ERR e a seleção atual não é alterada.
+O índice do item selecionado se a pesquisa foi bem-sucedida. Se a pesquisa não tiver sido bem-sucedida, o valor de retorno será LB_ERR e a seleção atual não será alterada.
 
 ### <a name="remarks"></a>Comentários
 
-A caixa de listagem é rolada se necessário, para trazer o item selecionado para a exibição.
+A caixa de listagem é rolada, se necessário, para colocar o item selecionado em exibição.
 
-Essa função de membro não pode ser usada com uma caixa de listagem que tem o [LBS_MULTIPLESEL](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) estilo.
+Esta função de membro não pode ser usada com uma caixa de listagem que tenha o estilo [LBS_MULTIPLESEL](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
-Um item é selecionado, somente se seus caracteres inicias (do ponto de partida) corresponder aos caracteres na cadeia de caracteres especificado por *lpszItem*.
+Um item será selecionado somente se seus caracteres iniciais (do ponto de partida) corresponderem aos caracteres na cadeia de caracteres especificada por *lpszItem*.
 
-Use o `FindString` função de membro para localizar uma cadeia de caracteres sem selecionando o item.
+Use a `FindString` função membro para localizar uma cadeia de caracteres sem selecionar o item.
 
 ### <a name="example"></a>Exemplo
 
@@ -1144,13 +1144,13 @@ int SelItemRange(
 ### <a name="parameters"></a>Parâmetros
 
 *bSelect*<br/>
-Especifica como definir a seleção. Se *bSelecione* for TRUE, a cadeia de caracteres está selecionada e realçada; se FALSE, o realce é removido e a cadeia de caracteres não será mais selecionada.
+Especifica como definir a seleção. Se *bSelect* for true, a cadeia de caracteres será selecionada e realçada; Se for FALSE, o realce será removido e a cadeia de caracteres não será mais selecionada.
 
 *nFirstItem*<br/>
-Especifica o índice baseado em zero do primeiro item a ser definido.
+Especifica o índice de base zero do primeiro item a ser definido.
 
 *nLastItem*<br/>
-Especifica o índice baseado em zero do último item para definir.
+Especifica o índice de base zero do último item a ser definido.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1158,7 +1158,7 @@ LB_ERR se ocorrer um erro.
 
 ### <a name="remarks"></a>Comentários
 
-Use essa função membro somente com caixas de listagem de seleção múltipla. Se você precisa selecionar apenas um item em uma caixa de listagem de seleção múltipla — ou seja, se *nFirstItem* é igual a *nLastItem* — chame a [SetSel](#setsel) função de membro em vez disso.
+Use essa função de membro somente com caixas de listagem de seleção múltipla. Se você precisar selecionar apenas um item em uma caixa de listagem de seleção múltipla, ou seja, se *nFirstItem* for igual a *nLastItem* , chame a função membro [SetSel](#setsel) em vez disso.
 
 ### <a name="example"></a>Exemplo
 
@@ -1166,7 +1166,7 @@ Use essa função membro somente com caixas de listagem de seleção múltipla. 
 
 ##  <a name="setanchorindex"></a>  CListBox::SetAnchorIndex
 
-Define a âncora em uma caixa de listagem de seleção múltipla para começar uma seleção estendida.
+Define a âncora em uma caixa de listagem de seleção múltipla para iniciar uma seleção estendida.
 
 ```
 void SetAnchorIndex(int nIndex);
@@ -1175,11 +1175,11 @@ void SetAnchorIndex(int nIndex);
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o índice baseado em zero do item de caixa de listagem que será a âncora.
+Especifica o índice de base zero do item da caixa de listagem que será a âncora.
 
 ### <a name="remarks"></a>Comentários
 
-Em uma caixa de listagem de seleção múltipla, o item de âncora é o primeiro ou último item em um bloco contíguo itens selecionados.
+Em uma caixa de listagem de seleção múltipla, o item de âncora é o primeiro ou o último item em um bloco de itens selecionados contíguos.
 
 ### <a name="example"></a>Exemplo
 
@@ -1198,10 +1198,10 @@ int SetCaretIndex(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o índice baseado em zero do item para receber o retângulo de foco na caixa de listagem.
+Especifica o índice de base zero do item para receber o retângulo de foco na caixa de listagem.
 
 *bScroll*<br/>
-Se esse valor for 0, o item é rolado até que ele seja totalmente visível. Se esse valor não for 0, o item é rolado até que seja pelo menos parcialmente visível.
+Se esse valor for 0, o item será rolado até que fique totalmente visível. Se esse valor não for 0, o item será rolado até que seja pelo menos parcialmente visível.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1209,7 +1209,7 @@ LB_ERR se ocorrer um erro.
 
 ### <a name="remarks"></a>Comentários
 
-Se o item não estiver visível, ela é colocada na exibição.
+Se o item não estiver visível, ele será rolado para a exibição.
 
 ### <a name="example"></a>Exemplo
 
@@ -1217,7 +1217,7 @@ Se o item não estiver visível, ela é colocada na exibição.
 
 ##  <a name="setcolumnwidth"></a>  CListBox::SetColumnWidth
 
-Define a largura em pixels, de todas as colunas em uma caixa de listagem de várias colunas (criado com o [LBS_MULTICOLUMN](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) estilo).
+Define a largura em pixels de todas as colunas em uma caixa de listagem de várias colunas (criada com o estilo [LBS_MULTICOLUMN](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) ).
 
 ```
 void SetColumnWidth(int cxWidth);
@@ -1226,7 +1226,7 @@ void SetColumnWidth(int cxWidth);
 ### <a name="parameters"></a>Parâmetros
 
 *cxWidth*<br/>
-Especifica a largura em pixels, de todas as colunas.
+Especifica a largura em pixels de todas as colunas.
 
 ### <a name="example"></a>Exemplo
 
@@ -1234,7 +1234,7 @@ Especifica a largura em pixels, de todas as colunas.
 
 ##  <a name="setcursel"></a>  CListBox::SetCurSel
 
-Seleciona uma cadeia de caracteres e rola-lo na exibição, se necessário.
+Seleciona uma cadeia de caracteres e a rola para a exibição, se necessário.
 
 ```
 int SetCurSel(int nSelect);
@@ -1243,7 +1243,7 @@ int SetCurSel(int nSelect);
 ### <a name="parameters"></a>Parâmetros
 
 *nSelect*<br/>
-Especifica o índice baseado em zero da cadeia de caracteres a ser selecionado. Se *nSelecione* é -1, a caixa de listagem é definida para não ter nenhuma seleção.
+Especifica o índice de base zero da cadeia de caracteres a ser selecionada. Se *nSelecionar* for-1, a caixa de listagem será definida como sem seleção.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1253,15 +1253,15 @@ LB_ERR se ocorrer um erro.
 
 Quando a nova cadeia de caracteres é selecionada, a caixa de listagem remove o realce da cadeia de caracteres selecionada anteriormente.
 
-Use essa função membro somente com caixas de listagem de seleção única.
+Use essa função de membro somente com caixas de listagem de seleção única.
 
-Para definir ou remover uma seleção em uma caixa de listagem de seleção múltipla, use [CListBox::SetSel](#setsel).
+Para definir ou remover uma seleção em uma caixa de listagem de seleção múltipla, use [CListBox:: SetSel](#setsel).
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CListBox#32](../../mfc/codesnippet/cpp/clistbox-class_32.cpp)]
 
-##  <a name="sethorizontalextent"></a>  CListBox::SetHorizontalExtent
+##  <a name="sethorizontalextent"></a>CListBox::SetHorizontalExtent
 
 Define a largura, em pixels, pela qual uma caixa de listagem pode ser rolada horizontalmente.
 
@@ -1272,15 +1272,15 @@ void SetHorizontalExtent(int cxExtent);
 ### <a name="parameters"></a>Parâmetros
 
 *cxExtent*<br/>
-Especifica o número de pixels pelo qual a caixa de listagem pode ser rolada horizontalmente.
+Especifica o número de pixels pelos quais a caixa de listagem pode ser rolada horizontalmente.
 
 ### <a name="remarks"></a>Comentários
 
-Se o tamanho da caixa de listagem é menor do que esse valor, a barra de rolagem horizontal rolar horizontalmente itens na caixa de listagem. Se a caixa de listagem é tão grande quanto ou maior que esse valor, a barra de rolagem horizontal está oculto.
+Se o tamanho da caixa de listagem for menor que esse valor, a barra de rolagem horizontal irá rolar os itens horizontalmente na caixa de listagem. Se a caixa de listagem for tão grande ou maior que esse valor, a barra de rolagem horizontal ficará oculta.
 
-Para responder a uma chamada para `SetHorizontalExtent`, a caixa de listagem deve ter sido definida com o [WS_HSCROLL](../../mfc/reference/styles-used-by-mfc.md#window-styles) estilo.
+Para responder a uma chamada para `SetHorizontalExtent`, a caixa de listagem deve ter sido definida com o estilo [WS_HSCROLL](../../mfc/reference/styles-used-by-mfc.md#window-styles) .
 
-Essa função de membro não é útil para caixas de listagem de várias colunas. Para caixas de listagem de várias colunas, chame o `SetColumnWidth` função de membro.
+Essa função de membro não é útil para caixas de listagem de várias colunas. Para caixas de listagem de várias colunas, `SetColumnWidth` chame a função de membro.
 
 ### <a name="example"></a>Exemplo
 
@@ -1299,7 +1299,7 @@ int SetItemData(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o índice baseado em zero do item.
+Especifica o índice de base zero do item.
 
 *dwItemData*<br/>
 Especifica o valor a ser associado ao item.
@@ -1314,7 +1314,7 @@ LB_ERR se ocorrer um erro.
 
 ##  <a name="setitemdataptr"></a>  CListBox::SetItemDataPtr
 
-Define o valor de 32 bits associado com o item especificado em uma caixa de listagem para ser o ponteiro especificado ( **void** <strong>\*</strong>).
+Define o valor de 32 bits associado ao item especificado em uma caixa de listagem para ser o ponteiro especificado ( **void** <strong>\*</strong>).
 
 ```
 int SetItemDataPtr(
@@ -1325,10 +1325,10 @@ int SetItemDataPtr(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o índice baseado em zero do item.
+Especifica o índice de base zero do item.
 
 *pData*<br/>
-Especifica o ponteiro para ser associado ao item.
+Especifica o ponteiro a ser associado ao item.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1336,7 +1336,7 @@ LB_ERR se ocorrer um erro.
 
 ### <a name="remarks"></a>Comentários
 
-Esse ponteiro permanece válido durante a vida útil da caixa de listagem, mesmo que a posição relativa do item dentro da caixa de lista pode mudar à medida que itens são adicionados ou removidos. Portanto, o índice do item dentro da caixa pode alterar, mas o ponteiro permanece confiável.
+Esse ponteiro permanece válido durante a vida útil da caixa de listagem, mesmo que a posição relativa do item dentro da caixa de listagem possa ser alterada à medida que os itens são adicionados ou removidos. Portanto, o índice do item dentro da caixa pode ser alterado, mas o ponteiro permanece confiável.
 
 ### <a name="example"></a>Exemplo
 
@@ -1355,18 +1355,18 @@ int SetItemHeight(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o índice baseado em zero do item na caixa de listagem. Esse parâmetro é usado somente se a caixa de listagem tem o estilo LBS_OWNERDRAWVARIABLE; Caso contrário, ele deve ser definido como 0.
+Especifica o índice de base zero do item na caixa de listagem. Esse parâmetro será usado somente se a caixa de listagem tiver o estilo LBS_OWNERDRAWVARIABLE; caso contrário, ele deve ser definido como 0.
 
 *cyItemHeight*<br/>
 Especifica a altura, em pixels, do item.
 
 ### <a name="return-value"></a>Valor de retorno
 
-LB_ERR se o índice ou a altura é inválida.
+LB_ERR se o índice ou a altura for inválido.
 
 ### <a name="remarks"></a>Comentários
 
-Se a caixa de listagem tem o [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) estilo, essa função define a altura do item especificado por *nIndex*. Caso contrário, essa função define a altura de todos os itens na caixa de listagem.
+Se a caixa de listagem tiver o estilo [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , essa função definirá a altura do item especificado por *nIndex*. Caso contrário, essa função define a altura de todos os itens na caixa de listagem.
 
 ### <a name="example"></a>Exemplo
 
@@ -1374,7 +1374,7 @@ Se a caixa de listagem tem o [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-
 
 ##  <a name="setlocale"></a>  CListBox::SetLocale
 
-Define o identificador de localidade para essa caixa de listagem.
+Define o identificador de localidade para esta caixa de listagem.
 
 ```
 LCID SetLocale(LCID nNewLocale);
@@ -1383,15 +1383,15 @@ LCID SetLocale(LCID nNewLocale);
 ### <a name="parameters"></a>Parâmetros
 
 *nNewLocale*<br/>
-O novo valor LCID (identificador) de localidade a ser definido para a caixa de listagem.
+O novo valor de LCID (identificador de localidade) a ser definido para a caixa de listagem.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O valor LCID (identificador) localidade anterior para essa caixa de listagem.
+O valor do LCID (identificador de localidade) anterior desta caixa de listagem.
 
 ### <a name="remarks"></a>Comentários
 
-Se `SetLocale` não for chamado, o padrão localidade é obtida do sistema. Essa localidade padrão do sistema pode ser modificada por meio do painel de controle de aplicativo regionais (ou internacional).
+Se `SetLocale` não for chamado, a localidade padrão será obtida do sistema. Essa localidade padrão do sistema pode ser modificada usando o aplicativo regional (ou internacional) do painel de controle.
 
 ### <a name="example"></a>Exemplo
 
@@ -1410,10 +1410,10 @@ int SetSel(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Contém o índice baseado em zero da cadeia de caracteres a ser definido. Se -1, a seleção é adicionada ou removida de todas as cadeias de caracteres, dependendo do valor de *bSelecione*.
+Contém o índice de base zero da cadeia de caracteres a ser definida. Se-1, a seleção é adicionada ou removida de todas as cadeias de caracteres, dependendo do valor de *bSelect*.
 
 *bSelect*<br/>
-Especifica como definir a seleção. Se *bSelecione* for TRUE, a cadeia de caracteres está selecionada e realçada; se FALSE, o realce é removido e a cadeia de caracteres não será mais selecionada. A cadeia de caracteres especificada está selecionada e realçada por padrão.
+Especifica como definir a seleção. Se *bSelect* for true, a cadeia de caracteres será selecionada e realçada; Se for FALSE, o realce será removido e a cadeia de caracteres não será mais selecionada. A cadeia de caracteres especificada é selecionada e realçada por padrão.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1421,9 +1421,9 @@ LB_ERR se ocorrer um erro.
 
 ### <a name="remarks"></a>Comentários
 
-Use essa função membro somente com caixas de listagem de seleção múltipla.
+Use essa função de membro somente com caixas de listagem de seleção múltipla.
 
-Para selecionar um item de uma caixa de listagem de seleção única, use [CListBox::SetCurSel](#setcursel).
+Para selecionar um item de uma caixa de listagem de seleção única, use [CListBox:: Setcurseal](#setcursel).
 
 ### <a name="example"></a>Exemplo
 
@@ -1445,25 +1445,25 @@ BOOL SetTabStops(
 ### <a name="parameters"></a>Parâmetros
 
 *cxEachStop*<br/>
-Paradas de tabulação são definidas em cada *cxEachStop* unidades de diálogo. Ver *rgTabStops* para obter uma descrição de uma unidade de caixa de diálogo.
+As marcas de tabulação são definidas em todas as unidades de diálogo *cxEachStop* . Consulte *rgTabStops* para obter uma descrição de uma unidade de diálogo.
 
 *nTabStops*<br/>
-Especifica o número de paradas de tabulação para ter na caixa de listagem.
+Especifica o número de paradas de tabulação a serem feitas na caixa de listagem.
 
 *rgTabStops*<br/>
-Aponta para o primeiro membro de uma matriz de inteiros que contém as posições de parada de tabulação em unidades de diálogo. Uma unidade de caixa de diálogo é uma distância horizontal ou vertical. Uma unidade de caixa de diálogo horizontal é igual a um quarto da unidade de base de largura da caixa de diálogo atual e uma unidade de caixa de diálogo vertical é igual a um oitavo da unidade de base de altura da caixa de diálogo atual. As unidades base da caixa de diálogo são calculadas com base na altura e largura da fonte atual do sistema. O `GetDialogBaseUnits` função Windows retorna a caixa de diálogo atual unidades base em pixels. As paradas de tabulação devem ser classificadas em ordem; crescente guias de back-não são permitidas.
+Aponta para o primeiro membro de uma matriz de inteiros contendo as posições de parada de tabulação em unidades de diálogo. Uma unidade de caixa de diálogo é uma distância horizontal ou vertical. Uma unidade de caixa de diálogo horizontal é igual a um quarto da unidade de largura base da caixa de diálogo atual e uma unidade de caixa de diálogo vertical é igual a um oitavo da unidade de altura base da caixa de diálogo atual. As unidades base da caixa de diálogo são computadas com base na altura e na largura da fonte atual do sistema. A `GetDialogBaseUnits` função do Windows retorna as unidades base da caixa de diálogo atual em pixels. As paradas de tabulação devem ser classificadas em ordem crescente; Não são permitidas guias de trás.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se todas as guias foram definidas; Caso contrário, 0.
+Diferente de zero se todas as guias tiverem sido definidas; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Para definir paradas de tabulação para o tamanho padrão de 2 unidades de caixa de diálogo, chame a versão sem parâmetros dessa função de membro. Para definir paradas de tabulação para um tamanho diferente de 2, chame a versão com o *cxEachStop* argumento.
+Para definir paradas de tabulação com o tamanho padrão de 2 unidades de caixa de diálogo, chame a versão sem parâmetros dessa função de membro. Para definir paradas de tabulação com um tamanho diferente de 2, chame a versão com o argumento *cxEachStop* .
 
-Para definir paradas de tabulação para uma matriz de tamanhos, use a versão com o *rgTabStops* e *nTabStops* argumentos. Será definida para cada valor em uma parada de tabulação *rgTabStops*, até o número especificado por *nTabStops*.
+Para definir paradas de tabulação para uma matriz de tamanhos, use a versão com os argumentos *rgTabStops* e *nTabStops* . Uma parada de tabulação será definida para cada valor em *rgTabStops*, até o número especificado por *nTabStops*.
 
-Para responder a uma chamada para o `SetTabStops` função de membro, a caixa de listagem deve ter sido criada com o [LBS_USETABSTOPS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) estilo.
+Para responder a uma chamada para a `SetTabStops` função membro, a caixa de listagem deve ter sido criada com o estilo [LBS_USETABSTOPS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
 ### <a name="example"></a>Exemplo
 
@@ -1471,7 +1471,7 @@ Para responder a uma chamada para o `SetTabStops` função de membro, a caixa de
 
 ##  <a name="settopindex"></a>  CListBox::SetTopIndex
 
-Garante que um item específico da caixa de listagem está visível.
+Garante que um item de caixa de listagem específico esteja visível.
 
 ```
 int SetTopIndex(int nIndex);
@@ -1480,15 +1480,15 @@ int SetTopIndex(int nIndex);
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o índice baseado em zero do item de caixa de listagem.
+Especifica o índice de base zero do item da caixa de listagem.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Zero se tiver êxito, ou LB_ERR se ocorrer um erro.
+Zero se for bem-sucedido ou LB_ERR se ocorrer um erro.
 
 ### <a name="remarks"></a>Comentários
 
-O sistema rola para a caixa de listagem até que o item especificado pelo *nIndex* aparece na parte superior da lista de caixa ou o intervalo de rolagem máximo foi atingido.
+O sistema rola a caixa de listagem até que o item especificado por *nIndex* seja exibido na parte superior da caixa de listagem ou o intervalo máximo de rolagem tenha sido atingido.
 
 ### <a name="example"></a>Exemplo
 
@@ -1496,7 +1496,7 @@ O sistema rola para a caixa de listagem até que o item especificado pelo *nInde
 
 ##  <a name="vkeytoitem"></a>  CListBox::VKeyToItem
 
-Chamado pelo framework quando a janela do pai da caixa de listagem recebe uma mensagem WM_VKEYTOITEM da caixa de listagem.
+Chamado pelo Framework quando a janela pai da caixa de listagem recebe uma mensagem WM_VKEYTOITEM da caixa de listagem.
 
 ```
 virtual int VKeyToItem(
@@ -1507,30 +1507,30 @@ virtual int VKeyToItem(
 ### <a name="parameters"></a>Parâmetros
 
 *nKey*<br/>
-O código de tecla virtual da chave que o usuário pressionou. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h
+O código de chave virtual da chave que o usuário pressionou. Para obter uma lista de códigos de chaves virtuais padrão, consulte WinUser. h
 
 *nIndex*<br/>
-A posição atual do cursor do sistema de caixa de listagem.
+A posição atual do cursor da caixa de listagem.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna - 2 para nenhuma outra ação, - 1 para a ação padrão ou um número não negativo para especificar um índice de um item de caixa de listagem na qual executar a ação padrão para o pressionamento de tecla.
+Retorna-2 para nenhuma ação adicional,-1 para a ação padrão ou um número não negativo para especificar um índice de um item da caixa de listagem no qual executar a ação padrão para o pressionamento de tecla.
 
 ### <a name="remarks"></a>Comentários
 
-A mensagem WM_VKEYTOITEM é enviada pela caixa de listagem, quando ele recebe uma mensagem WM_KEYDOWN, mas apenas se a caixa de listagem atende os seguintes itens:
+A mensagem WM_VKEYTOITEM é enviada pela caixa de listagem quando recebe uma mensagem WM_KEYDOWN, mas somente se a caixa de listagem atender aos dois itens a seguir:
 
-- Tem o [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) conjunto de estilos.
+- Tem o estilo [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) definido.
 
 - Tem pelo menos um item.
 
-Você nunca deve chamar essa função por conta própria. Substitua essa função para fornecer sua própria manipulação personalizada das mensagens de teclado.
+Você mesmo nunca deve chamar essa função. Substitua essa função para fornecer sua própria manipulação personalizada de mensagens de teclado.
 
-Você deve retornar um valor para dizer à estrutura qual ação executada sua substituição. Um valor retornado de - 2 indica que o aplicativo tratou todos os aspectos de selecionando o item e não requer nenhuma ação adicional pela caixa de listagem. Retornando antes - 2, você poderia definir a seleção ou mover o cursor ou ambos. Para definir a seleção, use [SetCurSel](#setcursel) ou [SetSel](#setsel). Para mover o cursor, use [SetCaretIndex](#setcaretindex).
+Você deve retornar um valor para informar ao Framework qual ação sua substituição executou. Um valor de retorno de-2 indica que o aplicativo tratou todos os aspectos da seleção do item e não requer nenhuma ação adicional na caixa de listagem. Antes de retornar-2, você pode definir a seleção ou mover o cursor ou ambos. Para definir a seleção, use [Setcurseal](#setcursel) ou [SetSel](#setsel). Para mover o cursor, use [SetCaretIndex](#setcaretindex).
 
-Um valor retornado de - 1 indica que a caixa de listagem deve realizar a ação padrão em resposta ao pressionamento de tecla. A implementação padrão retorna - 1.
+Um valor de retorno de-1 indica que a caixa de listagem deve executar a ação padrão em resposta ao pressionamento de tecla. A implementação padrão retorna-1.
 
-Um valor retornado de 0 ou maior Especifica o índice de um item na caixa de listagem e indica que a caixa de listagem deve realizar a ação padrão para pressionamento de tecla em determinado item.
+Um valor de retorno 0 ou maior especifica o índice de um item na caixa de listagem e indica que a caixa de listagem deve executar a ação padrão para o pressionamento de tecla no item determinado.
 
 ### <a name="example"></a>Exemplo
 
@@ -1538,7 +1538,7 @@ Um valor retornado de 0 ou maior Especifica o índice de um item na caixa de lis
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo de CTRLTEST do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>

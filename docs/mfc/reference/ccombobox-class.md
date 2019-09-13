@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: a76be4be87471f26970a5b517d9993ae324b56c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b54a1913073ca0b23aeb17a57b16f589a074637b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253981"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507186"
 ---
 # <a name="ccombobox-class"></a>Classe CComboBox
 
@@ -137,52 +137,52 @@ class CComboBox : public CWnd
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CComboBox::AddString](#addstring)|Adiciona uma cadeia de caracteres ao final da lista na caixa de listagem de uma caixa de combinação ou na posição classificada das caixas de listagem com o estilo CBS_SORT.|
+|[CComboBox::AddString](#addstring)|Adiciona uma cadeia de caracteres ao final da lista na caixa de listagem de uma caixa de combinação ou na posição classificada para caixas de listagem com o estilo CBS_SORT.|
 |[CComboBox::Clear](#clear)|Exclui (limpa) a seleção atual, se houver, no controle de edição.|
-|[CComboBox::CompareItem](#compareitem)|Chamado pelo framework para determinar a posição relativa de um novo item de lista em uma caixa de combinação classificada desenhado pelo proprietário.|
-|[CComboBox::Copy](#copy)|Copia a seleção atual, se houver, na área de transferência no formato CF_TEXT.|
-|[CComboBox::Create](#create)|Cria a caixa de combinação e anexa-o para o `CComboBox` objeto.|
-|[CComboBox::Cut](#cut)|Exclui (cortes) a seleção atual, se houver, na edição de controlar e copia o texto excluído na área de transferência no formato CF_TEXT.|
-|[CComboBox::DeleteItem](#deleteitem)|Chamado pelo framework quando um item de lista é excluído de uma caixa de combinação do desenho proprietário.|
+|[CComboBox::CompareItem](#compareitem)|Chamado pelo Framework para determinar a posição relativa de um novo item de lista em uma caixa de combinação de desenho de proprietário classificada.|
+|[CComboBox::Copy](#copy)|Copia a seleção atual, se houver, para a área de transferência no formato CF_TEXT.|
+|[CComboBox::Create](#create)|Cria a caixa de combinação e a anexa ao `CComboBox` objeto.|
+|[CComboBox:: recortar](#cut)|Exclui (recorta) a seleção atual, se houver, no controle de edição e copia o texto excluído para a área de transferência no formato CF_TEXT.|
+|[CComboBox::DeleteItem](#deleteitem)|Chamado pelo Framework quando um item de lista é excluído de uma caixa de combinação desenhada pelo proprietário.|
 |[CComboBox::DeleteString](#deletestring)|Exclui uma cadeia de caracteres da caixa de listagem de uma caixa de combinação.|
-|[CComboBox::Dir](#dir)|Adiciona uma lista de nomes de arquivo para a caixa de listagem de uma caixa de combinação.|
-|[CComboBox::DrawItem](#drawitem)|Chamado pelo framework quando um aspecto visual de um alterações de caixa de combinação do desenho proprietário.|
+|[CComboBox::Dir](#dir)|Adiciona uma lista de nomes de arquivo à caixa de listagem de uma caixa de combinação.|
+|[CComboBox::DrawItem](#drawitem)|Chamado pelo Framework quando um aspecto visual de uma caixa de combinação desenhada pelo proprietário é alterado.|
 |[CComboBox::FindString](#findstring)|Localiza a primeira cadeia de caracteres que contém o prefixo especificado na caixa de listagem de uma caixa de combinação.|
-|[CComboBox::FindStringExact](#findstringexact)|Localiza a primeira cadeia de caixa de listagem (em uma caixa de combinação) que corresponde à cadeia de caracteres especificada.|
+|[CComboBox::FindStringExact](#findstringexact)|Localiza a primeira cadeia de caracteres da caixa de listagem (em uma caixa de combinação) que corresponde à cadeia de caracteres especificada.|
 |[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|Recupera informações sobre o `CComboBox` objeto.|
 |[CComboBox::GetCount](#getcount)|Recupera o número de itens na caixa de listagem de uma caixa de combinação.|
 |[CComboBox::GetCueBanner](#getcuebanner)|Obtém o texto de indicação que é exibido para um controle de caixa de combinação.|
-|[CComboBox::GetCurSel](#getcursel)|Recupera o índice do item selecionado no momento, se houver, na caixa de listagem de uma caixa de combinação.|
-|[CComboBox::GetDroppedControlRect](#getdroppedcontrolrect)|Recupera as coordenadas de tela da caixa de lista (removidos para baixo) visível de uma caixa de combinação suspensa.|
-|[CComboBox::GetDroppedState](#getdroppedstate)|Determina se a caixa de listagem de uma caixa de combinação suspensa está visível (ignorados para baixo).|
-|[CComboBox::GetDroppedWidth](#getdroppedwidth)|Recupera a largura mínima permitida para a parte de caixa de listagem suspensa de uma caixa de combinação.|
+|[CComboBox::GetCurSel](#getcursel)|Recupera o índice do item atualmente selecionado, se houver, na caixa de listagem de uma caixa de combinação.|
+|[CComboBox::GetDroppedControlRect](#getdroppedcontrolrect)|Recupera as coordenadas de tela da caixa de listagem visível (descartada) de uma caixa de combinação suspensa.|
+|[CComboBox::GetDroppedState](#getdroppedstate)|Determina se a caixa de listagem de uma caixa de combinação suspensa está visível (descartada).|
+|[CComboBox::GetDroppedWidth](#getdroppedwidth)|Recupera a largura mínima permitida para a parte da caixa de listagem suspensa de uma caixa de combinação.|
 |[CComboBox::GetEditSel](#geteditsel)|Obtém as posições de caractere inicial e final da seleção atual no controle de edição de uma caixa de combinação.|
 |[CComboBox::GetExtendedUI](#getextendedui)|Determina se uma caixa de combinação tem a interface do usuário padrão ou a interface do usuário estendida.|
-|[CComboBox::GetHorizontalExtent](#gethorizontalextent)|Retorna a largura em pixels, a parte da caixa de listagem da caixa de combinação pode ser rolada horizontalmente.|
-|[CComboBox::GetItemData](#getitemdata)|Recupera o valor de 32 bits fornecida pelo aplicativo associado ao item de caixa de combinação especificado.|
-|[CComboBox::GetItemDataPtr](#getitemdataptr)|Recupera o ponteiro de 32 bits fornecida pelo aplicativo que está associado com o item de caixa de combinação especificado.|
+|[CComboBox::GetHorizontalExtent](#gethorizontalextent)|Retorna a largura em pixels na qual a parte da caixa de listagem da caixa de combinação pode ser rolada horizontalmente.|
+|[CComboBox::GetItemData](#getitemdata)|Recupera o valor de 32 bits fornecido pelo aplicativo associado ao item da caixa de combinação especificado.|
+|[CComboBox::GetItemDataPtr](#getitemdataptr)|Recupera o ponteiro de 32 bits fornecido pelo aplicativo que está associado ao item da caixa de combinação especificado.|
 |[CComboBox::GetItemHeight](#getitemheight)|Recupera a altura dos itens de lista em uma caixa de combinação.|
 |[CComboBox::GetLBText](#getlbtext)|Obtém uma cadeia de caracteres da caixa de listagem de uma caixa de combinação.|
 |[CComboBox::GetLBTextLen](#getlbtextlen)|Obtém o comprimento de uma cadeia de caracteres na caixa de listagem de uma caixa de combinação.|
-|[CComboBox::GetLocale](#getlocale)|Recupera o identificador de localidade para uma caixa de combinação.|
+|[CComboBox::GetLocale](#getlocale)|Recupera o identificador de localidade de uma caixa de combinação.|
 |[CComboBox::GetMinVisible](#getminvisible)|Obtém o número mínimo de itens visíveis na lista suspensa da caixa de combinação atual.|
 |[CComboBox::GetTopIndex](#gettopindex)|Retorna o índice do primeiro item visível na parte de caixa de listagem da caixa de combinação.|
-|[CComboBox::InitStorage](#initstorage)|Pré-aloca blocos de memória para cadeias de caracteres na parte de caixa de listagem da caixa de combinação e itens.|
+|[CComboBox::InitStorage](#initstorage)|Prefixa blocos de memória para itens e cadeias de caracteres na parte da caixa de listagem da caixa de combinação.|
 |[CComboBox::InsertString](#insertstring)|Insere uma cadeia de caracteres na caixa de listagem de uma caixa de combinação.|
 |[CComboBox::LimitText](#limittext)|Limita o comprimento do texto que o usuário pode inserir no controle de edição de uma caixa de combinação.|
-|[CComboBox::MeasureItem](#measureitem)|Chamado pelo framework para determinar as dimensões da caixa de combinação quando uma caixa de combinação do desenho proprietário é criada.|
-|[CComboBox::Paste](#paste)|Insere os dados da área de transferência no controle de edição na posição atual do cursor. Dados são inseridos somente se a área de transferência contém dados no formato CF_TEXT.|
-|[CComboBox::ResetContent](#resetcontent)|Remove todos os itens da lista de caixa e editar o controle de uma caixa de combinação.|
-|[CComboBox::SelectString](#selectstring)|Pesquisa uma cadeia de caracteres na caixa de listagem de uma caixa de combinação e, se a cadeia de caracteres for encontrada, seleciona a cadeia de caracteres na caixa de listagem e copia a cadeia de caracteres para o controle de edição.|
+|[CComboBox::MeasureItem](#measureitem)|Chamado pelo Framework para determinar as dimensões da caixa de combinação quando uma caixa de combinação de desenho proprietário é criada.|
+|[CComboBox::P lar](#paste)|Insere os dados da área de transferência no controle de edição na posição atual do cursor. Os dados só serão inseridos se a área de transferência contiver dados no formato CF_TEXT.|
+|[CComboBox::ResetContent](#resetcontent)|Remove todos os itens da caixa de listagem e edita o controle de uma caixa de combinação.|
+|[CComboBox::SelectString](#selectstring)|Procura uma cadeia de caracteres na caixa de listagem de uma caixa de combinação e, se a cadeia de caracteres for encontrada, seleciona a cadeia de caracteres na caixa de listagem e copia a cadeia de caracteres para o controle de edição.|
 |[CComboBox::SetCueBanner](#setcuebanner)|Define o texto de indicação que é exibido para um controle de caixa de combinação.|
 |[CComboBox::SetCurSel](#setcursel)|Seleciona uma cadeia de caracteres na caixa de listagem de uma caixa de combinação.|
-|[CComboBox::SetDroppedWidth](#setdroppedwidth)|Define a largura mínima permitida para a parte de caixa de listagem suspensa de uma caixa de combinação.|
-|[CComboBox::SetEditSel](#seteditsel)|Seleciona os caracteres no controle de edição de uma caixa de combinação.|
+|[CComboBox::SetDroppedWidth](#setdroppedwidth)|Define a largura mínima permitida para a parte da caixa de listagem suspensa de uma caixa de combinação.|
+|[CComboBox::SetEditSel](#seteditsel)|Seleciona caracteres no controle de edição de uma caixa de combinação.|
 |[CComboBox::SetExtendedUI](#setextendedui)|Seleciona a interface do usuário padrão ou a interface do usuário estendida para uma caixa de combinação que tem o estilo CBS_DROPDOWN ou CBS_DROPDOWNLIST.|
-|[CComboBox::SetHorizontalExtent](#sethorizontalextent)|Define a largura em pixels, a parte da caixa de listagem da caixa de combinação pode ser rolada horizontalmente.|
-|[CComboBox::SetItemData](#setitemdata)|Define o valor de 32 bits associado com o item especificado em uma caixa de combinação.|
-|[CComboBox::SetItemDataPtr](#setitemdataptr)|Define o ponteiro de 32 bits associado com o item especificado em uma caixa de combinação.|
-|[CComboBox::SetItemHeight](#setitemheight)|Define a altura de itens de lista em uma caixa de combinação ou a altura da parte do controle de edição (ou texto estático) de uma caixa de combinação.|
+|[CComboBox::SetHorizontalExtent](#sethorizontalextent)|Define a largura em pixels na qual a parte da caixa de listagem da caixa de combinação pode ser rolada horizontalmente.|
+|[CComboBox::SetItemData](#setitemdata)|Define o valor de 32 bits associado ao item especificado em uma caixa de combinação.|
+|[CComboBox::SetItemDataPtr](#setitemdataptr)|Define o ponteiro de 32 bits associado ao item especificado em uma caixa de combinação.|
+|[CComboBox::SetItemHeight](#setitemheight)|Define a altura dos itens de lista em uma caixa de combinação ou a altura da parte do controle de edição (ou texto estático) de uma caixa de combinação.|
 |[CComboBox::SetLocale](#setlocale)|Define o identificador de localidade para uma caixa de combinação.|
 |[CComboBox::SetMinVisibleItems](#setminvisibleitems)|Define o número mínimo de itens visíveis na lista suspensa da caixa de combinação atual.|
 |[CComboBox::SetTopIndex](#settopindex)|Informa a parte da caixa de listagem da caixa de combinação para exibir o item com o índice especificado na parte superior.|
@@ -190,63 +190,63 @@ class CComboBox : public CWnd
 
 ## <a name="remarks"></a>Comentários
 
-Uma caixa de combinação consiste em uma caixa de listagem, combinada com um controle estático ou um controle de edição. A parte da caixa de listagem do controle pode ser exibida em todos os momentos ou talvez somente lista suspensa quando o usuário seleciona a seta suspensa ao lado do controle.
+Uma caixa de combinação consiste em uma caixa de listagem combinada com um controle estático ou o controle de edição. A parte da caixa de listagem do controle pode ser exibida sempre ou pode ser suspensa apenas quando o usuário seleciona a seta suspensa ao lado do controle.
 
-O item atualmente selecionado (se houver) na caixa de listagem é exibida nas estático ou controle de edição. Além disso, se a caixa de combinação tem o estilo de lista suspensa, o usuário pode digitar o caractere inicial de um dos itens na lista e a caixa de listagem, se estiver visível, realçará o próximo item com esse caractere inicial.
+O item selecionado no momento (se houver) na caixa de listagem é exibido no controle estático ou de edição. Além disso, se a caixa de combinação tiver o estilo de lista suspensa, o usuário poderá digitar o caractere inicial de um dos itens na lista e a caixa de listagem, se visível, realçará o próximo item com esse caractere inicial.
 
-A tabela a seguir compara a caixa de combinação de três [estilos](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles).
+A tabela a seguir compara os três [estilos](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)de caixa de combinação.
 
-|Estilo|Quando a caixa de listagem está visível|Controle de edição ou estático|
+|Estilo|Quando a caixa de listagem está visível|Controle estático ou de edição|
 |-----------|-------------------------------|-----------------------------|
-|Simples|Sempre|Editar|
-|Lista suspensa|Quando descartado para baixo|Editar|
-|Lista suspensa|Quando descartado para baixo|Estático|
+|Único|Sempre|Editar|
+|Lista suspensa|Quando solto|Editar|
+|Lista suspensa|Quando solto|Estático|
 
-Você pode criar um `CComboBox` objeto de um modelo de caixa de diálogo ou diretamente em seu código. Em ambos os casos, chame o construtor `CComboBox` para construir o `CComboBox` objeto; em seguida, chame o [Create](#create) função de membro para criar o controle e anexá-lo para o `CComboBox` objeto.
+Você pode criar um `CComboBox` objeto de um modelo de caixa de diálogo ou diretamente em seu código. Em ambos os casos, primeiro chame o `CComboBox` Construtor para construir `CComboBox` o objeto; em seguida, chame a função de membro [Create](#create) para criar `CComboBox` o controle e anexá-lo ao objeto.
 
-Se você quiser manipular mensagens de notificação do Windows enviadas por uma caixa de combinação para seu pai (normalmente uma classe derivada de `CDialog`), adicione uma função de membro de entrada e o manipulador de mensagens do mapa de mensagem para a classe pai para cada mensagem.
+Se você quiser manipular mensagens de notificação do Windows enviadas por uma caixa de combinação para seu pai (geralmente uma classe `CDialog`derivada de), adicione uma entrada de mapa de mensagem e uma função de membro de manipulador de mensagens à classe pai para cada mensagem.
 
 Cada entrada de mapa de mensagem usa o seguinte formato:
 
-**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
+**Na\_** _notificação_ **(** _ID_, _memberFxn_ **)**
 
-em que `id` Especifica a ID de janela filho do controle de caixa de combinação enviando a notificação e `memberFxn` é o nome da função de membro pai que você tenha escrito para manipular a notificação.
+em `id` que especifica a ID da janela filho do controle da caixa de combinação que envia a `memberFxn` notificação e é o nome da função de membro pai que você escreveu para manipular a notificação.
 
 O protótipo de função do pai é o seguinte:
 
 **afx_msg** `void` `memberFxn` **( );**
 
-A ordem em que determinadas notificações serão enviadas não pode ser prevista. Em particular, uma notificação CBN_SELCHANGE pode ocorrer antes ou depois de uma notificação CBN_CLOSEUP.
+A ordem na qual determinadas notificações serão enviadas não pode ser prevista. Em particular, uma notificação CBN_SELCHANGE pode ocorrer antes ou depois de uma notificação CBN_CLOSEUP.
 
-Entradas de mapa de mensagem possíveis são os seguintes:
+As entradas de mapa de mensagens em potencial são as seguintes:
 
-- ON_CBN_CLOSEUP (Windows 3.1 e posterior). A caixa de listagem de uma caixa de combinação foi fechada. Esta mensagem de notificação não foi enviada por uma caixa de combinação que tem o [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo.
+- ON_CBN_CLOSEUP (Windows 3,1 e posterior.) A caixa de listagem de uma caixa de combinação foi fechada. Essa mensagem de notificação não é enviada para uma caixa de combinação que tem o estilo [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
-- ON_CBN_DBLCLK o usuário clica duas vezes em uma cadeia de caracteres na caixa de listagem de uma caixa de combinação. Esta mensagem de notificação é enviada somente para uma caixa de combinação com o estilo CBS_SIMPLE. Para uma caixa de combinação com o [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) de estilo, um clique duplo não pode ocorrer porque um único clique oculta a caixa de listagem.
+- ON_CBN_DBLCLK o usuário clica duas vezes em uma cadeia de caracteres na caixa de listagem de uma caixa de combinação. Essa mensagem de notificação é enviada somente para uma caixa de combinação com o estilo CBS_SIMPLE. Para uma caixa de combinação com o estilo [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , um clique duplo não pode ocorrer porque um único clique oculta a caixa de listagem.
 
-- A caixa de listagem de uma caixa de combinação está prestes a lista suspensa de ON_CBN_DROPDOWN (ficar visível). Esta mensagem de notificação só pode acontecer para uma caixa de combinação com o estilo CBS_DROPDOWN ou CBS_DROPDOWNLIST.
+- ON_CBN_DROPDOWN a caixa de listagem de uma caixa de combinação está prestes a ser suspensa (tornar-se visível). Essa mensagem de notificação pode ocorrer somente para uma caixa de combinação com o estilo CBS_DROPDOWN ou CBS_DROPDOWNLIST.
 
-- ON_CBN_EDITCHANGE o usuário executou uma ação que pode ter alterado o texto na parte do controle de edição de uma caixa de combinação. Ao contrário de mensagem CBN_EDITUPDATE, esta mensagem é enviada depois que a tela de atualizações do Windows. Ele não será enviado se a caixa de combinação tem o estilo CBS_DROPDOWNLIST.
+- ON_CBN_EDITCHANGE o usuário executou uma ação que pode ter alterado o texto na parte de controle de edição de uma caixa de combinação. Ao contrário da mensagem CBN_EDITUPDATE, essa mensagem é enviada depois que o Windows atualiza a tela. Ele não será enviado se a caixa de combinação tiver o estilo CBS_DROPDOWNLIST.
 
-- ON_CBN_EDITUPDATE a parte do controle de edição de uma caixa de combinação é sobre o texto de exibição alterado. Esta mensagem de notificação é enviada depois que o controle formatou o texto, mas antes de exibir o texto. Ele não será enviado se a caixa de combinação tem o estilo CBS_DROPDOWNLIST.
+- ON_CBN_EDITUPDATE a parte de controle de edição de uma caixa de combinação está prestes a exibir o texto alterado. Essa mensagem de notificação é enviada depois que o controle tiver formatado o texto, mas antes de exibir o texto. Ele não será enviado se a caixa de combinação tiver o estilo CBS_DROPDOWNLIST.
 
-- ON_CBN_ERRSPACE a caixa de combinação não é possível alocar memória suficiente para atender a uma solicitação específica.
+- ON_CBN_ERRSPACE a caixa de combinação não pode alocar memória suficiente para atender a uma solicitação específica.
 
-- ON_CBN_SELENDCANCEL (Windows 3.1 e posterior). Indica que a seleção do usuário deve ser cancelada. O usuário clica em um item e, em seguida, clica em outra janela ou controle para ocultar a caixa de listagem de uma caixa de combinação. Esta mensagem de notificação é enviada antes da mensagem de notificação CBN_CLOSEUP para indicar que a seleção do usuário deve ser ignorada. A mensagem de notificação CBN_SELENDCANCEL ou CBN_SELENDOK é enviada, mesmo se a mensagem de notificação CBN_CLOSEUP não for enviada (como no caso de uma caixa de combinação com o estilo CBS_SIMPLE).
+- ON_CBN_SELENDCANCEL (Windows 3,1 e posterior.) Indica que a seleção do usuário deve ser cancelada. O usuário clica em um item e clica em outra janela ou controle para ocultar a caixa de listagem de uma caixa de combinação. Essa mensagem de notificação é enviada antes da mensagem de notificação CBN_CLOSEUP para indicar que a seleção do usuário deve ser ignorada. A mensagem de notificação CBN_SELENDCANCEL ou CBN_SELENDOK é enviada mesmo que a mensagem de notificação CBN_CLOSEUP não seja enviada (como no caso de uma caixa de combinação com o estilo CBS_SIMPLE).
 
-- ON_CBN_SELENDOK o usuário seleciona um item e, em seguida, pressionar a tecla ENTER ou clica a tecla de seta para baixo para ocultar a caixa de listagem de uma caixa de combinação. Esta mensagem de notificação é enviada antes da mensagem CBN_CLOSEUP para indicar que a seleção do usuário deve ser considerada válida. A mensagem de notificação CBN_SELENDCANCEL ou CBN_SELENDOK é enviada, mesmo se a mensagem de notificação CBN_CLOSEUP não for enviada (como no caso de uma caixa de combinação com o estilo CBS_SIMPLE).
+- ON_CBN_SELENDOK o usuário seleciona um item e pressiona a tecla ENTER ou clica na tecla de seta para baixo para ocultar a caixa de listagem de uma caixa de combinação. Essa mensagem de notificação é enviada antes da mensagem CBN_CLOSEUP para indicar que a seleção do usuário deve ser considerada válida. A mensagem de notificação CBN_SELENDCANCEL ou CBN_SELENDOK é enviada mesmo que a mensagem de notificação CBN_CLOSEUP não seja enviada (como no caso de uma caixa de combinação com o estilo CBS_SIMPLE).
 
 - ON_CBN_KILLFOCUS a caixa de combinação está perdendo o foco de entrada.
 
-- ON_CBN_SELCHANGE a seleção na caixa de listagem de uma caixa de combinação está prestes a ser alterado como resultado o usuário clicar na caixa de listagem ou alterar a seleção usando as teclas de direção. Ao processar essa mensagem, o texto no controle de edição da caixa de combinação só pode ser recuperado por meio de `GetLBText` ou outra função semelhante. `GetWindowText` não pode ser usado.
+- ON_CBN_SELCHANGE a seleção na caixa de listagem de uma caixa de combinação está prestes a ser alterada como resultado do usuário que está clicando na caixa de listagem ou alterando a seleção usando as teclas de direção. Ao processar essa mensagem, o texto no controle de edição da caixa de combinação só pode ser recuperado via `GetLBText` ou outra função semelhante. `GetWindowText`Não pode ser usado.
 
-- A caixa de combinação ON_CBN_SETFOCUS recebe o foco de entrada.
+- ON_CBN_SETFOCUS a caixa de combinação recebe o foco de entrada.
 
-Se você criar uma `CComboBox` objeto dentro de uma caixa de diálogo (por meio de um recurso de caixa de diálogo), o `CComboBox` objeto será destruído automaticamente quando o usuário fecha a caixa de diálogo.
+Se você criar um `CComboBox` objeto dentro de uma caixa de diálogo (por meio de um recurso `CComboBox` de caixa de diálogo), o objeto será destruído automaticamente quando o usuário fechar a caixa de diálogo.
 
-Se você inserir um `CComboBox` objeto dentro de outra janela do objeto, você não precisará destruí-lo. Se você criar o `CComboBox` do objeto na pilha, ele será destruído automaticamente. Se você criar o `CComboBox` objeto no heap usando a **novos** função, você deve chamar **excluir** no objeto a destruí-la quando a caixa de combinação do Windows é destruída.
+Se você inserir um `CComboBox` objeto dentro de outro objeto de janela, não será necessário destruí-lo. Se você criar o `CComboBox` objeto na pilha, ele será destruído automaticamente. Se você criar o `CComboBox` objeto no heap usando a **nova** função, deverá chamar **delete** no objeto para destruí-lo quando a caixa de combinação do Windows for destruída.
 
-**Observação** se você quiser manipular mensagens WM_KEYDOWN e WM_CHAR, você tem a subclasse da caixa de combinação editar e controles de caixa de lista, derivar classes de `CEdit` e `CListBox`, e adicionar manipuladores para essas mensagens para as classes derivadas. Para obter mais informações, consulte [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
+**Observação** Se você quiser manipular mensagens WM_KEYDOWN e WM_CHAR, terá que subclassear os controles de edição e caixa de listagem da caixa de combinação, derivar `CListBox`classes de `CEdit` e e adicionar manipuladores para essas mensagens às classes derivadas. Para obter mais informações, consulte [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -260,11 +260,11 @@ Se você inserir um `CComboBox` objeto dentro de outra janela do objeto, você n
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxwin. h
+**Cabeçalho:** Afxwin. h
 
 ##  <a name="addstring"></a>  CComboBox::AddString
 
-Adiciona uma cadeia de caracteres para a caixa de listagem de uma caixa de combinação.
+Adiciona uma cadeia de caracteres à caixa de listagem de uma caixa de combinação.
 
 ```
 int AddString(LPCTSTR lpszString);
@@ -273,26 +273,26 @@ int AddString(LPCTSTR lpszString);
 ### <a name="parameters"></a>Parâmetros
 
 *lpszString*<br/>
-Aponta para a cadeia de caracteres terminada em nulo a ser adicionado.
+Aponta para a cadeia de caracteres terminada em nulo que deve ser adicionada.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se o valor retornado for maior que ou igual a 0, ele é o índice baseado em zero na cadeia de caracteres na caixa de listagem. O valor de retorno será CB_ERR se ocorrer um erro; o valor de retorno é CB_ERRSPACE se não houver espaço suficiente está disponível para armazenar a nova cadeia de caracteres.
+Se o valor de retorno for maior ou igual a 0, ele será o índice de base zero para a cadeia de caracteres na caixa de listagem. O valor de retorno será CB_ERR se ocorrer um erro; o valor de retorno será CB_ERRSPACE se houver espaço insuficiente disponível para armazenar a nova cadeia de caracteres.
 
 ### <a name="remarks"></a>Comentários
 
-Se a caixa de listagem não foi criada com o [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo, a cadeia de caracteres é adicionada ao final da lista. Caso contrário, a cadeia de caracteres é inserida na lista, e a lista é classificada.
+Se a caixa de listagem não foi criada com o estilo [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , a cadeia de caracteres será adicionada ao final da lista. Caso contrário, a cadeia de caracteres será inserida na lista e a lista será classificada.
 
 > [!NOTE]
->  Não há suporte para essa função, o Windows `ComboBoxEx` controle. Para obter mais informações sobre esse controle, consulte [ComboBoxEx controles](/windows/desktop/Controls/comboboxex-controls) no SDK do Windows.
+>  Essa função não é suportada pelo `ComboBoxEx` controle do Windows. Para obter mais informações sobre esse controle, consulte [ComboBoxEx Controls](/windows/win32/Controls/comboboxex-controls) in the SDK do Windows.
 
-Para inserir uma cadeia de caracteres em um local específico dentro da lista, use o [InsertString](#insertstring) função de membro.
+Para inserir uma cadeia de caracteres em um local específico dentro da lista, use a função de membro [InsertString](#insertstring) .
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CComboBox#3](../../mfc/reference/codesnippet/cpp/ccombobox-class_1.cpp)]
 
-##  <a name="ccombobox"></a>  CComboBox::CComboBox
+##  <a name="ccombobox"></a>CComboBox::CComboBox
 
 Constrói um objeto `CComboBox`.
 
@@ -304,7 +304,7 @@ CComboBox();
 
 [!code-cpp[NVC_MFC_CComboBox#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_2.cpp)]
 
-##  <a name="clear"></a>  CComboBox::Clear
+##  <a name="clear"></a>CComboBox:: Clear
 
 Exclui (limpa) a seleção atual, se houver, no controle de edição da caixa de combinação.
 
@@ -314,7 +314,7 @@ void Clear();
 
 ### <a name="remarks"></a>Comentários
 
-Para excluir a seleção atual e colocar o conteúdo excluído na área de transferência, use o [Recortar](#cut) função de membro.
+Para excluir a seleção atual e inserir o conteúdo excluído na área de transferência, use a função de membro [Cut](#cut) .
 
 ### <a name="example"></a>Exemplo
 
@@ -322,7 +322,7 @@ Para excluir a seleção atual e colocar o conteúdo excluído na área de trans
 
 ##  <a name="compareitem"></a>  CComboBox::CompareItem
 
-Chamado pelo framework para determinar a posição relativa de um novo item na parte de caixa de listagem de uma caixa de combinação do desenho proprietário classificado.
+Chamado pelo Framework para determinar a posição relativa de um novo item na parte da caixa de listagem de uma caixa de combinação de desenho proprietário classificada.
 
 ```
 virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
@@ -331,31 +331,31 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpCompareItemStruct*<br/>
-Um ponteiro longo para um [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) estrutura.
+Um ponteiro longo para uma estrutura [COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct) .
 
 ### <a name="return-value"></a>Valor de retorno
 
-Indica a posição relativa dos dois itens descrito o `COMPAREITEMSTRUCT` estrutura. Ele pode ser qualquer um dos seguintes valores:
+Indica a posição relativa dos dois itens descritos na `COMPAREITEMSTRUCT` estrutura. Pode ser qualquer um dos seguintes valores:
 
 |Valor|Significado|
 |-----------|-------------|
 |- 1|Item 1 classifica antes do item 2.|
-|0|Item 1 e item 2 classificar o mesmo.|
-|1|Item 1 classifica após o item 2.|
+|0|O item 1 e o item 2 são classificados da mesma forma.|
+|1|O item 1 é classificado após o item 2.|
 
-Ver [CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) para obter uma descrição de `COMPAREITEMSTRUCT`.
+Consulte [CWnd:: OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) para obter uma descrição `COMPAREITEMSTRUCT`de.
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, essa função membro não faz nada. Se você criar uma caixa de combinação do desenho proprietário com o estilo LBS_SORT, você deve substituir essa função de membro para ajudar a estrutura de novos itens adicionados à caixa de listagem de classificação.
+Por padrão, essa função de membro não faz nada. Se você criar uma caixa de combinação de desenho proprietário com o estilo LBS_SORT, deverá substituir essa função de membro para ajudar a estrutura na classificação de novos itens adicionados à caixa de listagem.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CComboBox#5](../../mfc/reference/codesnippet/cpp/ccombobox-class_4.cpp)]
 
-##  <a name="copy"></a>  CComboBox::Copy
+##  <a name="copy"></a>CComboBox:: copiar
 
-Copia a seleção atual, se houver, no controle de edição da caixa de combinação na área de transferência no formato CF_TEXT.
+Copia a seleção atual, se houver, no controle de edição da caixa de combinação para a área de transferência no formato CF_TEXT.
 
 ```
 void Copy();
@@ -365,9 +365,9 @@ void Copy();
 
 [!code-cpp[NVC_MFC_CComboBox#6](../../mfc/reference/codesnippet/cpp/ccombobox-class_5.cpp)]
 
-##  <a name="create"></a>  CComboBox::Create
+##  <a name="create"></a>CComboBox:: criar
 
-Cria a caixa de combinação e anexa-o para o `CComboBox` objeto.
+Cria a caixa de combinação e a anexa ao `CComboBox` objeto.
 
 ```
 virtual BOOL Create(
@@ -380,42 +380,42 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parâmetros
 
 *dwStyle*<br/>
-Especifica o estilo da caixa de combinação. Aplicar qualquer combinação de [estilos de caixa de combinação](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) à caixa.
+Especifica o estilo da caixa de combinação. Aplique qualquer combinação de [estilos de caixa de combinação](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) à caixa.
 
 *rect*<br/>
-Aponta para a posição e tamanho da caixa de combinação. Pode ser um [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) ou um `CRect` objeto.
+Aponta para a posição e o tamanho da caixa de combinação. Pode ser uma [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) ou um `CRect` objeto.
 
 *pParentWnd*<br/>
-Especifica a janela do pai da caixa de combinação (geralmente um `CDialog`). Ele não deve ser NULL.
+Especifica a janela pai da caixa de combinação (geralmente `CDialog`um). Ele não deve ser nulo.
 
 *nID*<br/>
-Especifica a ID do controle. da caixa de combinação
+Especifica a ID de controle da caixa de combinação.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Você constrói um `CComboBox` objeto em duas etapas. Primeiro, chame o construtor e, em seguida, chame `Create`, que cria a caixa de combinação do Windows e anexa-o para o `CComboBox` objeto.
+Você constrói um `CComboBox` objeto em duas etapas. Primeiro, chame o construtor e, em `Create`seguida, chame, que cria a caixa de combinação do Windows e `CComboBox` a anexa ao objeto.
 
-Quando `Create` envios do Windows, executa o [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), e [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) mensagens para a caixa de combinação.
+Quando `Create` o é executado, o Windows envia as mensagens [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)e [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) para a caixa de combinação.
 
-Essas mensagens são manipuladas por padrão, o [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), e [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) funções de membro no `CWnd` classe base. Para estender o tratamento de mensagem padrão, derive uma classe de `CComboBox`, adicionar um mapa de mensagem para a nova classe e substituir as funções de membro de manipulador de mensagens anterior. Substituir `OnCreate`, por exemplo, para executar a inicialização necessária para uma nova classe.
+Essas mensagens são tratadas por padrão pelas funções de membro [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)e [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) na `CWnd` classe base. Para estender a manipulação de mensagens padrão, derive uma `CComboBox`classe de, adicione um mapa de mensagem à nova classe e substitua as funções de membro do manipulador de mensagens anterior. Substitua `OnCreate`, por exemplo, para executar a inicialização necessária para uma nova classe.
 
-Aplicar o seguinte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) a um controle de caixa de combinação. :
+Aplique os seguintes [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) a um controle de caixa de combinação. :
 
-- Sempre WS_CHILD
+- WS_CHILD sempre
 
-- Normalmente, WS_VISIBLE
+- WS_VISIBLE geralmente
 
 - WS_DISABLED raramente
 
-- WS_VSCROLL para adicionar a rolagem vertical para a caixa de listagem na caixa de combinação
+- WS_VSCROLL para adicionar a rolagem vertical da caixa de listagem na caixa de combinação
 
-- WS_HSCROLL para adicionar a rolagem horizontal para a caixa de listagem na caixa de combinação
+- WS_HSCROLL para adicionar rolagem horizontal para a caixa de listagem na caixa de combinação
 
-- WS_GROUP para agrupar controles
+- WS_GROUP para controles de grupo
 
 - WS_TABSTOP para incluir a caixa de combinação na ordem de tabulação
 
@@ -423,9 +423,9 @@ Aplicar o seguinte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md
 
 [!code-cpp[NVC_MFC_CComboBox#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_6.cpp)]
 
-##  <a name="cut"></a>  CComboBox::Cut
+##  <a name="cut"></a>CComboBox:: recortar
 
-Exclusões (cortes) a seleção atual, se houver, na caixa de combinação editar, controlar e copia o texto excluído na área de transferência no formato CF_TEXT.
+Exclui (recorta) a seleção atual, se houver, no controle de edição de caixa de combinação e copia o texto excluído para a área de transferência no formato CF_TEXT.
 
 ```
 void Cut();
@@ -433,7 +433,7 @@ void Cut();
 
 ### <a name="remarks"></a>Comentários
 
-Para excluir a seleção atual sem colocar o texto excluído na área de transferência, chame o [clara](#clear) função de membro.
+Para excluir a seleção atual sem colocar o texto excluído na área de transferência, chame a função de membro [Clear](#clear) .
 
 ### <a name="example"></a>Exemplo
 
@@ -441,7 +441,7 @@ Para excluir a seleção atual sem colocar o texto excluído na área de transfe
 
 ##  <a name="deleteitem"></a>  CComboBox::DeleteItem
 
-Chamado pelo framework quando o usuário exclui um item de um desenho proprietário `CComboBox` de objeto ou destrói a caixa de combinação.
+Chamado pelo Framework quando o usuário exclui um item de um objeto de desenho `CComboBox` proprietário ou destrói a caixa de combinação.
 
 ```
 virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
@@ -450,11 +450,11 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpDeleteItemStruct*<br/>
-Um ponteiro longo para um Windows [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) estrutura que contém informações sobre o item excluído. Ver [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) para obter uma descrição dessa estrutura.
+Um ponteiro longo para uma estrutura [DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct) do Windows que contém informações sobre o item excluído. Consulte [CWnd:: OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) para obter uma descrição dessa estrutura.
 
 ### <a name="remarks"></a>Comentários
 
-A implementação padrão dessa função não faz nada. Substitua essa função para redesenhar a caixa de combinação, conforme necessário.
+A implementação padrão dessa função não faz nada. Substitua essa função para redesenhar a caixa de combinação conforme necessário.
 
 ### <a name="example"></a>Exemplo
 
@@ -471,23 +471,23 @@ int DeleteString(UINT nIndex);
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o índice na cadeia de caracteres que deve ser excluído.
+Especifica o índice para a cadeia de caracteres a ser excluída.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se o valor retornado for maior que ou igual a 0, ele é uma contagem das cadeias de caracteres restantes na lista. O valor de retorno será CB_ERR se *nIndex* Especifica um índice maior que o número de itens na lista.
+Se o valor de retorno for maior ou igual a 0, será uma contagem das cadeias de caracteres restantes na lista. O valor de retorno será CB_ERR se *nIndex* especificar um índice maior que o número de itens na lista.
 
 ### <a name="remarks"></a>Comentários
 
-Todos os itens que seguem *nIndex* agora mover uma posição para baixo. Por exemplo, se uma caixa de combinação contém dois itens, excluir o primeiro item fará com que o item restante ser, agora, na primeira posição. *nIndex*= 0 para o item na primeira posição.
+Todos os itens após *nIndex* agora se movem uma posição para baixo. Por exemplo, se uma caixa de combinação contiver dois itens, a exclusão do primeiro item fará com que o item restante esteja agora na primeira posição. *nIndex*= 0 para o item na primeira posição.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CComboBox#9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]
 
-##  <a name="dir"></a>  CComboBox::Dir
+##  <a name="dir"></a>CComboBox::D ir
 
-Adiciona uma lista de nomes de arquivos ou unidades à caixa de listagem de uma caixa de combinação.
+Adiciona uma lista de nomes de filedrives ou unidades à caixa de listagem de uma caixa de combinação.
 
 ```
 int Dir(
@@ -498,42 +498,42 @@ int Dir(
 ### <a name="parameters"></a>Parâmetros
 
 *attr*<br/>
-Pode ser qualquer combinação da **enum** valores descritos na [cfile:: getStatus](../../mfc/reference/cfile-class.md#getstatus) ou qualquer combinação dos valores a seguir:
+Pode ser qualquer combinação dos valores de **Enumeração** descritos em [CFile:: GetStatus](../../mfc/reference/cfile-class.md#getstatus) ou qualquer combinação dos seguintes valores:
 
-- Arquivo DDL_READWRITE pode ser lido ou gravado para.
+- O arquivo DDL_READWRITE pode ser lido ou gravado.
 
-- DDL_READONLY arquivo podem ser lidos do mas não gravado.
+- O arquivo DDL_READONLY pode ser lido, mas não gravado no.
 
-- Arquivo DDL_HIDDEN está oculta e não aparece em uma listagem de diretório.
+- O arquivo DDL_HIDDEN está oculto e não aparece em uma listagem de diretório.
 
-- DDL_SYSTEM é um arquivo de sistema.
+- O arquivo DDL_SYSTEM é um arquivo de sistema.
 
-- DDL_DIRECTORY o nome especificado por *lpszWildCard* Especifica um diretório.
+- DDL_DIRECTORY o nome especificado por *lpszWildCard* especifica um diretório.
 
-- Arquivo DDL_ARCHIVE foi arquivado.
+- O arquivo DDL_ARCHIVE foi arquivado.
 
-- DDL_DRIVES incluem todas as unidades que corresponde ao nome especificado por *lpszWildCard*.
+- DDL_DRIVES incluem todas as unidades que correspondem ao nome especificado por *lpszWildCard*.
 
-- Sinalizador DDL_EXCLUSIVE exclusivo. Se o sinalizador exclusivo é definido, somente os arquivos do tipo especificado serão listados. Caso contrário, os arquivos do tipo especificado são listados, além de arquivos "normais".
+- DDL_EXCLUSIVE sinalizador exclusivo. Se o sinalizador exclusivo for definido, somente os arquivos do tipo especificado serão listados. Caso contrário, os arquivos do tipo especificado serão listados, além dos arquivos "normal".
 
 *lpszWildCard*<br/>
-Aponta para uma cadeia de caracteres de especificação de arquivo. A cadeia de caracteres pode conter caracteres curinga (por exemplo, *.\*).
+Aponta para uma cadeia de caracteres de especificação de arquivo. A cadeia de caracteres pode conter curingas (por exemplo,\**.).
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se o valor retornado for maior que ou igual a 0, ele é o índice baseado em zero do último nome de arquivo adicionado à lista. O valor de retorno será CB_ERR se ocorrer um erro; o valor de retorno é CB_ERRSPACE se não houver espaço suficiente está disponível para armazenar novas cadeias de caracteres.
+Se o valor de retorno for maior ou igual a 0, ele será o índice de base zero do último nome de arquivo adicionado à lista. O valor de retorno será CB_ERR se ocorrer um erro; o valor de retorno será CB_ERRSPACE se houver espaço insuficiente disponível para armazenar as novas cadeias de caracteres.
 
 ### <a name="remarks"></a>Comentários
 
-Não há suporte para essa função, o Windows `ComboBoxEx` controle. Para obter mais informações sobre esse controle, consulte [ComboBoxEx controles](/windows/desktop/Controls/comboboxex-controls) no SDK do Windows.
+Essa função não é suportada pelo `ComboBoxEx` controle do Windows. Para obter mais informações sobre esse controle, consulte [ComboBoxEx Controls](/windows/win32/Controls/comboboxex-controls) in the SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]
 
-##  <a name="drawitem"></a>  CComboBox::DrawItem
+##  <a name="drawitem"></a>CComboBox::D rawItem
 
-Chamado pelo framework quando um aspecto visual de um alterações de caixa de combinação do desenho proprietário.
+Chamado pelo Framework quando um aspecto visual de uma caixa de combinação de desenho proprietário é alterado.
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -542,21 +542,21 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpDrawItemStruct*<br/>
-Um ponteiro para um [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) estrutura que contém informações sobre o tipo de desenho necessárias.
+Um ponteiro para uma estrutura [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) que contém informações sobre o tipo de desenho necessário.
 
 ### <a name="remarks"></a>Comentários
 
-O `itemAction` membro o `DRAWITEMSTRUCT` estrutura define a ação de desenho a ser executada. Ver [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) para obter uma descrição dessa estrutura.
+O `itemAction` membro`DRAWITEMSTRUCT` da estrutura define a ação de desenho a ser executada. Consulte [CWnd:: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) para obter uma descrição dessa estrutura.
 
-Por padrão, essa função membro não faz nada. Substituir essa função de membro para implementar o desenho de um desenho proprietário `CComboBox` objeto. Antes que essa função de membro seja encerrado, o aplicativo deve restaurar todos os objetos de interface (GDI) do dispositivo gráficos selecionados para o contexto de exibição fornecido no *lpDrawItemStruct*.
+Por padrão, essa função de membro não faz nada. Substitua essa função de membro para implementar o desenho de um objeto `CComboBox` de desenho proprietário. Antes que essa função de membro seja encerrada, o aplicativo deve restaurar todos os objetos de interface de dispositivo de gráficos (GDI) selecionados para o contexto de exibição fornecido em *lpDrawItemStruct*.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]
 
-##  <a name="findstring"></a>  CComboBox::FindString
+##  <a name="findstring"></a>CComboBox:: FindString
 
-Encontra, mas não selecionar, a primeira cadeia de caracteres que contém o prefixo especificado na caixa de listagem de uma caixa de combinação.
+Localiza, mas não seleciona, a primeira cadeia de caracteres que contém o prefixo especificado na caixa de listagem de uma caixa de combinação.
 
 ```
 int FindString(
@@ -567,18 +567,18 @@ int FindString(
 ### <a name="parameters"></a>Parâmetros
 
 *nStartAfter*<br/>
-Contém o índice baseado em zero do item antes do primeiro item a ser pesquisado. Quando a pesquisa alcançar a parte inferior da caixa de listagem, ele continua na parte superior da caixa de listagem para o item especificado pela *nStartAfter*. Se-1, a caixa de listagem inteira é pesquisada desde o início.
+Contém o índice de base zero do item antes do primeiro item a ser pesquisado. Quando a pesquisa atingir a parte inferior da caixa de listagem, ela continuará na parte superior da caixa de listagem de volta para o item especificado por *nStartAfter*. Se-1, a caixa de listagem inteira será pesquisada desde o início.
 
 *lpszString*<br/>
-Aponta para a cadeia de caracteres terminada em nulo que contém o prefixo a ser pesquisado. A pesquisa é o caso independente, portanto, essa cadeia de caracteres pode conter qualquer combinação de letras maiusculas e minúsculas.
+Aponta para a cadeia de caracteres terminada em nulo que contém o prefixo a ser pesquisado. A pesquisa diferencia maiúsculas de minúsculas, portanto, essa cadeia de caracteres pode conter qualquer combinação de letras maiúsculas e minúsculas.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se o valor retornado for maior que ou igual a 0, ele é o índice baseado em zero do item correspondente. Ele será CB_ERR se a pesquisa foi bem-sucedida.
+Se o valor de retorno for maior ou igual a 0, ele será o índice de base zero do item correspondente. É CB_ERR se a pesquisa não foi bem-sucedida.
 
 ### <a name="remarks"></a>Comentários
 
-Não há suporte para essa função, o Windows `ComboBoxEx` controle. Para obter mais informações sobre esse controle, consulte [ComboBoxEx controles](/windows/desktop/Controls/comboboxex-controls) no SDK do Windows.
+Essa função não é suportada pelo `ComboBoxEx` controle do Windows. Para obter mais informações sobre esse controle, consulte [ComboBoxEx Controls](/windows/win32/Controls/comboboxex-controls) in the SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -586,7 +586,7 @@ Não há suporte para essa função, o Windows `ComboBoxEx` controle. Para obter
 
 ##  <a name="findstringexact"></a>  CComboBox::FindStringExact
 
-Chame o `FindStringExact` função de membro para localizar a primeira cadeia de caixa de listagem (em uma caixa de combinação) que corresponde à cadeia de caracteres especificada no *lpszFind*.
+Chame a `FindStringExact` função de membro para localizar a primeira cadeia de caracteres da caixa de listagem (em uma caixa de combinação) que corresponda à cadeia de caracteres especificada em *lpszFind*.
 
 ```
 int FindStringExact(
@@ -597,18 +597,18 @@ int FindStringExact(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndexStart*<br/>
-Especifica o índice baseado em zero do item antes do primeiro item a ser pesquisado. Quando a pesquisa alcançar a parte inferior da caixa de listagem, ele continua na parte superior da caixa de listagem para o item especificado pela *nIndexStart*. Se *nIndexStart* é -1, a caixa de listagem inteira é pesquisada desde o início.
+Especifica o índice de base zero do item antes do primeiro item a ser pesquisado. Quando a pesquisa atingir a parte inferior da caixa de listagem, ela continuará na parte superior da caixa de listagem de volta para o item especificado por *nIndexStart*. Se *nIndexStart* for-1, a caixa de listagem inteira será pesquisada desde o início.
 
 *lpszFind*<br/>
-Aponta para a cadeia de caracteres terminada em nulo a ser pesquisado. Essa cadeia de caracteres pode conter um nome de arquivo completo, incluindo a extensão. A pesquisa não diferencia maiusculas de minúsculas, para que essa cadeia de caracteres pode conter qualquer combinação de letras maiusculas e minúsculas.
+Aponta para a cadeia de caracteres terminada em nulo a ser pesquisada. Essa cadeia de caracteres pode conter um nome de arquivo completo, incluindo a extensão. A pesquisa não diferencia maiúsculas de minúsculas, portanto, essa cadeia de caracteres pode conter qualquer combinação de letras maiúsculas e minúsculas.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice baseado em zero do item correspondente ou CB_ERR se a pesquisa foi bem-sucedida.
+O índice de base zero do item correspondente ou CB_ERR se a pesquisa não tiver sido bem-sucedida.
 
 ### <a name="remarks"></a>Comentários
 
-Se a caixa de combinação foi criada com um estilo de desenho do proprietário, mas sem os [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo `FindStringExact` tenta corresponder o valor de palavras duplas contra o valor de *lpszFind*.
+Se a caixa de combinação tiver sido criada com um estilo de desenho proprietário, mas sem o estilo [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles), `FindStringExact` tentará corresponder o valor de doubleword com o valor de *lpszFind*.
 
 ### <a name="example"></a>Exemplo
 
@@ -625,17 +625,17 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
 ### <a name="parameters"></a>Parâmetros
 
 *pcbi*<br/>
-Um ponteiro para o [COMBOBOXINFO](/windows/desktop/api/winuser/ns-winuser-tagcomboboxinfo) estrutura.
+Um ponteiro para a estrutura [COMBOBOXINFO](/windows/win32/api/winuser/ns-winuser-comboboxinfo) .
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna verdadeiro em caso de êxito, FALSE em caso de falha.
+Retorna verdadeiro em caso de êxito, falso em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro emula a funcionalidade dos [CB_GETCOMBOBOXINFO](/windows/desktop/Controls/cb-getcomboboxinfo) da mensagem, conforme descrito no SDK do Windows.
+Essa função de membro emula a funcionalidade da mensagem [CB_GETCOMBOBOXINFO](/windows/win32/Controls/cb-getcomboboxinfo) , conforme descrito na SDK do Windows.
 
-##  <a name="getcount"></a>  CComboBox::GetCount
+##  <a name="getcount"></a>CComboBox:: GetCount
 
 Chame essa função de membro para recuperar o número de itens na parte da caixa de listagem de uma caixa de combinação.
 
@@ -645,7 +645,7 @@ int GetCount() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O número de itens. A contagem retornada é maior do que o valor de índice do último item (o índice é baseado em zero). Ele será CB_ERR se ocorrer um erro.
+O número de itens. A contagem retornada é uma maior que o valor de índice do último item (o índice é baseado em zero). É CB_ERR se ocorrer um erro.
 
 ### <a name="example"></a>Exemplo
 
@@ -667,26 +667,26 @@ BOOL GetCueBanner(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*lpszText*|[out] Ponteiro para um buffer que recebe o texto da faixa de indicação.|
-|*cchText*|[in] Tamanho do buffer que o *lpszText* parâmetro aponta.|
+|*lpszText*|fora Ponteiro para um buffer que recebe o texto da faixa de indicação.|
+|*cchText*|no Tamanho do buffer ao qual o parâmetro *lpszText* aponta.|
 
 ### <a name="return-value"></a>Valor de retorno
 
-Na primeira sobrecarga, uma [CString](../../atl-mfc-shared/using-cstring.md) objeto que contém o texto da faixa de indicação se existir; caso contrário, um `CString` objeto que tem comprimento zero.
+Na primeira sobrecarga, um objeto [CString](../../atl-mfc-shared/using-cstring.md) que contém o texto da faixa de indicação, se existir; caso contrário, `CString` um objeto que tem comprimento zero.
 
 - ou -
 
-Na segunda sobrecarga, TRUE se este método for bem-sucedida; Caso contrário, FALSE.
+Na segunda sobrecarga, TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Texto de indicação é um aviso que é exibido na área de entrada de controle de caixa de combinação. O texto de indicação é exibido até que o usuário forneça uma entrada.
+O texto de indicação é um prompt que é exibido na área de entrada do controle caixa de combinação. O texto de indicação é exibido até que o usuário forneça a entrada.
 
-Esse método envia o [CB_GETCUEBANNER](/windows/desktop/Controls/cb-getcuebanner) mensagem, que é descrita no SDK do Windows.
+Esse método envia a mensagem [CB_GETCUEBANNER](/windows/win32/Controls/cb-getcuebanner) , que é descrita na SDK do Windows.
 
 ##  <a name="getcursel"></a>  CComboBox::GetCurSel
 
-Chame essa função de membro para determinar qual item da caixa de combinação está selecionado.
+Chame essa função de membro para determinar qual item na caixa de combinação está selecionado.
 
 ```
 int GetCurSel() const;
@@ -694,11 +694,11 @@ int GetCurSel() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice baseado em zero do item atualmente selecionado na caixa de listagem de uma caixa de combinação ou CB_ERR se nenhum item está selecionado.
+O índice de base zero do item selecionado no momento na caixa de listagem de uma caixa de combinação ou CB_ERR se nenhum item for selecionado.
 
 ### <a name="remarks"></a>Comentários
 
-`GetCurSel` Retorna um índice na lista.
+`GetCurSel`Retorna um índice para a lista.
 
 ### <a name="example"></a>Exemplo
 
@@ -706,7 +706,7 @@ O índice baseado em zero do item atualmente selecionado na caixa de listagem de
 
 ##  <a name="getdroppedcontrolrect"></a>  CComboBox::GetDroppedControlRect
 
-Chamar o `GetDroppedControlRect` a função de membro para recuperar as coordenadas de tela da caixa visível (descartado) na lista suspensa de uma caixa de combinação suspensa.
+Chame a `GetDroppedControlRect` função de membro para recuperar as coordenadas de tela da caixa de listagem visível (descartada) de uma caixa de combinação suspensa.
 
 ```
 void GetDroppedControlRect(LPRECT lprect) const;
@@ -715,7 +715,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 ### <a name="parameters"></a>Parâmetros
 
 *lprect*<br/>
-Aponta para o [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) que deve receber as coordenadas.
+Aponta para a [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) que deve receber as coordenadas.
 
 ### <a name="example"></a>Exemplo
 
@@ -723,7 +723,7 @@ Aponta para o [estrutura RECT](/windows/desktop/api/windef/ns-windef-tagrect) qu
 
 ##  <a name="getdroppedstate"></a>  CComboBox::GetDroppedState
 
-Chamar o `GetDroppedState` a função de membro para determinar se a caixa de listagem de uma caixa de combinação suspensa está visível (ignorados para baixo).
+Chame a `GetDroppedState` função de membro para determinar se a caixa de listagem de uma caixa de combinação suspensa está visível (descartada).
 
 ```
 BOOL GetDroppedState() const;
@@ -731,7 +731,7 @@ BOOL GetDroppedState() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se a caixa de listagem estiver visível; Caso contrário, 0.
+Diferente de zero se a caixa de listagem estiver visível; caso contrário, 0.
 
 ### <a name="example"></a>Exemplo
 
@@ -747,17 +747,17 @@ int GetDroppedWidth() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, a largura mínima permitida, em pixels. Caso contrário, CB_ERR.
+Se for bem-sucedido, a largura mínima permitida, em pixels; caso contrário, CB_ERR.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função só se aplica a caixas de combinação com o [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo.
+Essa função só se aplica a caixas de combinação com o estilo [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
-Por padrão, a largura mínima permitida da caixa de listagem suspensa é 0. A largura mínima de permitido pode ser definida chamando [SetDroppedWidth](#setdroppedwidth). Quando a parte da caixa de listagem da caixa de combinação é exibida, sua largura seja o maior entre a largura mínima de permitidos ou a largura da caixa de combinação.
+Por padrão, a largura mínima permitida da caixa de listagem suspensa é 0. A largura mínima permitida pode ser definida chamando [SetDroppedWidth](#setdroppedwidth). Quando a parte da caixa de listagem da caixa de combinação é exibida, sua largura é maior que a largura mínima permitida ou a largura da caixa de combinação.
 
 ### <a name="example"></a>Exemplo
 
-  Veja o exemplo de [SetDroppedWidth](#setdroppedwidth).
+  Consulte o exemplo de [SetDroppedWidth](#setdroppedwidth).
 
 ##  <a name="geteditsel"></a>  CComboBox::GetEditSel
 
@@ -769,7 +769,7 @@ DWORD GetEditSel() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor de 32 bits que contém a posição inicial da palavra de ordem inferior e a posição do primeiro caractere não selecionado após o fim da seleção da palavra de ordem superior. Se essa função é usada em uma caixa de combinação sem um controle de edição, CB_ERR será retornado.
+Um valor de 32 bits que contém a posição inicial na palavra de ordem inferior e a posição do primeiro caractere não selecionado após o final da seleção na palavra de ordem superior. Se essa função for usada em uma caixa de combinação sem um controle de edição, CB_ERR será retornado.
 
 ### <a name="example"></a>Exemplo
 
@@ -777,7 +777,7 @@ Um valor de 32 bits que contém a posição inicial da palavra de ordem inferior
 
 ##  <a name="getextendedui"></a>  CComboBox::GetExtendedUI
 
-Chamar o `GetExtendedUI` a função de membro para determinar se uma caixa de combinação tem a interface do usuário padrão ou a interface do usuário estendida.
+Chame a `GetExtendedUI` função de membro para determinar se uma caixa de combinação tem a interface do usuário padrão ou a interface do usuário estendida.
 
 ```
 BOOL GetExtendedUI() const;
@@ -785,17 +785,17 @@ BOOL GetExtendedUI() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se a caixa de combinação tem a interface do usuário estendida; Caso contrário, 0.
+Diferente de zero se a caixa de combinação tiver a interface do usuário estendida; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
 A interface do usuário estendida pode ser identificada das seguintes maneiras:
 
-- Clicando no controle estático exibe a caixa de listagem somente para caixas de combinação com o [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo.
+- Clicar no controle estático exibe a caixa de listagem somente para caixas de combinação com o estilo [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
-- Pressionar a tecla de seta para baixo exibirá a caixa de lista (F4 está desabilitado).
+- Pressionar a tecla de seta para baixo exibe a caixa de listagem (F4 está desabilitado).
 
-Rolagem no controle estático é desabilitada quando a lista de itens não está visível (seta chaves estão desabilitadas).
+A rolagem no controle estático é desabilitada quando a lista de itens não está visível (as teclas de seta estão desabilitadas).
 
 ### <a name="example"></a>Exemplo
 
@@ -803,7 +803,7 @@ Rolagem no controle estático é desabilitada quando a lista de itens não está
 
 ##  <a name="gethorizontalextent"></a>  CComboBox::GetHorizontalExtent
 
-Recupera de caixa de combinação a largura em pixels pelo qual a parte da caixa de listagem da caixa de combinação pode ser rolada horizontalmente.
+Recupera da caixa de combinação a largura em pixels pela qual a parte da caixa de listagem da caixa de combinação pode ser rolada horizontalmente.
 
 ```
 UINT GetHorizontalExtent() const;
@@ -811,11 +811,11 @@ UINT GetHorizontalExtent() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-A largura rolável da parte de caixa de listagem da caixa de combinação, em pixels.
+A largura rolável da parte da caixa de listagem da caixa de combinação, em pixels.
 
 ### <a name="remarks"></a>Comentários
 
-Isso é aplicável somente se a parte de caixa de listagem da caixa de combinação tem uma barra de rolagem horizontal.
+Isso será aplicável somente se a parte da caixa de listagem da caixa de combinação tiver uma barra de rolagem horizontal.
 
 ### <a name="example"></a>Exemplo
 
@@ -823,7 +823,7 @@ Isso é aplicável somente se a parte de caixa de listagem da caixa de combinaç
 
 ##  <a name="getitemdata"></a>  CComboBox::GetItemData
 
-Recupera o valor de 32 bits fornecida pelo aplicativo associado ao item de caixa de combinação especificado.
+Recupera o valor de 32 bits fornecido pelo aplicativo associado ao item da caixa de combinação especificado.
 
 ```
 DWORD_PTR GetItemData(int nIndex) const;
@@ -832,15 +832,15 @@ DWORD_PTR GetItemData(int nIndex) const;
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Contém o índice baseado em zero de um item na caixa de listagem da caixa de combinação.
+Contém o índice de base zero de um item na caixa de listagem da caixa de combinação.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O valor de 32 bits associado com o item ou CB_ERR se ocorrer um erro.
+O valor de 32 bits associado ao item ou CB_ERR se ocorrer um erro.
 
 ### <a name="remarks"></a>Comentários
 
-O valor de 32 bits pode ser definido com o *dwItemData* parâmetro de uma [SetItemData](#setitemdata) chamada de função de membro. Use o `GetItemDataPtr` se o valor de 32 bits a ser recuperado é um ponteiro de função de membro (**void** <strong>\*</strong>).
+O valor de 32 bits pode ser definido com o parâmetro *dwItemData* de uma chamada de função membro [SetItemData](#setitemdata) . Use a `GetItemDataPtr` função de membro se o valor de 32 bits a ser recuperado for um ponteiro (**void** <strong>\*</strong>).
 
 ### <a name="example"></a>Exemplo
 
@@ -848,7 +848,7 @@ O valor de 32 bits pode ser definido com o *dwItemData* parâmetro de uma [SetIt
 
 ##  <a name="getitemdataptr"></a>  CComboBox::GetItemDataPtr
 
-Recupera o valor de 32 bits fornecida pelo aplicativo associado ao item de caixa de combinação especificado como um ponteiro (**void** <strong>\*</strong>).
+Recupera o valor de 32 bits fornecido pelo aplicativo associado ao item de caixa de combinação especificado como um ponteiro (**void** <strong>\*</strong>).
 
 ```
 void* GetItemDataPtr(int nIndex) const;
@@ -857,11 +857,11 @@ void* GetItemDataPtr(int nIndex) const;
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Contém o índice baseado em zero de um item na caixa de listagem da caixa de combinação.
+Contém o índice de base zero de um item na caixa de listagem da caixa de combinação.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Recupera um ponteiro ou -1 se ocorrer um erro.
+Recupera um ponteiro ou-1 se ocorrer um erro.
 
 ### <a name="example"></a>Exemplo
 
@@ -869,7 +869,7 @@ Recupera um ponteiro ou -1 se ocorrer um erro.
 
 ##  <a name="getitemheight"></a>  CComboBox::GetItemHeight
 
-Chamar o `GetItemHeight` a função de membro para recuperar a altura dos itens de lista em uma caixa de combinação.
+Chame a `GetItemHeight` função de membro para recuperar a altura dos itens de lista em uma caixa de combinação.
 
 ```
 int GetItemHeight(int nIndex) const;
@@ -878,7 +878,7 @@ int GetItemHeight(int nIndex) const;
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o componente da caixa de combinação cuja altura deve ser recuperado. Se o *nIndex* parâmetro é -1, a altura da parte do controle de edição (ou texto estático) da caixa de combinação é recuperada. Se a caixa de combinação com o [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo *nIndex* Especifica o índice baseado em zero do item cuja altura deve ser recuperado da lista. Caso contrário, *nIndex* deve ser definido como 0.
+Especifica o componente da caixa de combinação cuja altura deve ser recuperada. Se o parâmetro *nIndex* for-1, a altura da parte de controle de edição (ou texto estático) da caixa de combinação será recuperada. Se a caixa de combinação tiver o estilo [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , *nIndex* especificará o índice de base zero do item de lista cuja altura deve ser recuperada. Caso contrário, *nIndex* deverá ser definido como 0.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -888,7 +888,7 @@ A altura, em pixels, do item especificado em uma caixa de combinação. O valor 
 
 [!code-cpp[NVC_MFC_CComboBox#23](../../mfc/reference/codesnippet/cpp/ccombobox-class_23.cpp)]
 
-##  <a name="getlbtext"></a>  CComboBox::GetLBText
+##  <a name="getlbtext"></a>CComboBox::GetLBText
 
 Obtém uma cadeia de caracteres da caixa de listagem de uma caixa de combinação.
 
@@ -905,21 +905,21 @@ void GetLBText(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Contém o índice baseado em zero da cadeia de caracteres da caixa de listagem a ser copiado.
+Contém o índice de base zero da cadeia de caracteres da caixa de listagem a ser copiada.
 
 *lpszText*<br/>
-Aponta para um buffer que receberá a cadeia de caracteres. O buffer deve ter espaço suficiente para a cadeia de caracteres e um caractere nulo de terminação.
+Aponta para um buffer que deve receber a cadeia de caracteres. O buffer deve ter espaço suficiente para a cadeia de caracteres e um caractere nulo de terminação.
 
 *rString*<br/>
 Uma referência a um `CString`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O comprimento (em bytes) da cadeia de caracteres, exceto o caractere nulo de terminação. Se *nIndex* não especifica um índice válido, o valor de retorno será CB_ERR.
+O comprimento (em bytes) da cadeia de caracteres, excluindo o caractere nulo de terminação. Se *nIndex* não especificar um índice válido, o valor de retorno será CB_ERR.
 
 ### <a name="remarks"></a>Comentários
 
-O segundo formulário desse membro de função preenche uma `CString` objeto com o texto do item.
+A segunda forma dessa função de membro preenche um `CString` objeto com o texto do item.
 
 ### <a name="example"></a>Exemplo
 
@@ -936,19 +936,19 @@ int GetLBTextLen(int nIndex) const;
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Contém o índice baseado em zero da cadeia de caracteres de caixa de listagem.
+Contém o índice de base zero da cadeia de caracteres da caixa de listagem.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O comprimento da cadeia de caracteres em bytes, exceto o caractere nulo de terminação. Se *nIndex* não especifica um índice válido, o valor de retorno será CB_ERR.
+O comprimento da cadeia de caracteres em bytes, excluindo o caractere nulo de terminação. Se *nIndex* não especificar um índice válido, o valor de retorno será CB_ERR.
 
 ### <a name="example"></a>Exemplo
 
-  Veja o exemplo de [CComboBox::GetLBText](#getlbtext).
+  Consulte o exemplo de [CComboBox:: GetLBText](#getlbtext).
 
 ##  <a name="getlocale"></a>  CComboBox::GetLocale
 
-Recupera a localidade usada por caixa de combinação.
+Recupera a localidade usada pela caixa de combinação.
 
 ```
 LCID GetLocale() const;
@@ -956,7 +956,7 @@ LCID GetLocale() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O valor LCID (identificador) da localidade para cadeias de caracteres na caixa de combinação.
+O valor do identificador de localidade (LCID) para as cadeias de caracteres na caixa de combinação.
 
 ### <a name="remarks"></a>Comentários
 
@@ -964,11 +964,11 @@ A localidade é usada, por exemplo, para determinar a ordem de classificação d
 
 ### <a name="example"></a>Exemplo
 
-  Veja o exemplo de [CComboBox::SetLocale](#setlocale).
+  Consulte o exemplo para [CComboBox:: setlocale](#setlocale).
 
 ##  <a name="getminvisible"></a>  CComboBox::GetMinVisible
 
-Obtém o número mínimo de itens visíveis na lista suspensa de controle de caixa de combinação atual.
+Obtém o número mínimo de itens visíveis na lista suspensa do controle da caixa de combinação atual.
 
 ```
 int GetMinVisible() const;
@@ -980,11 +980,11 @@ O número mínimo de itens visíveis na lista suspensa atual.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia o [CB_GETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible) mensagem, que é descrita no SDK do Windows.
+Esse método envia a mensagem [CB_GETMINVISIBLE](/windows/win32/Controls/cb-setminvisible) , que é descrita na SDK do Windows.
 
 ##  <a name="gettopindex"></a>  CComboBox::GetTopIndex
 
-Recupera o índice baseado em zero do primeiro item visível na parte de caixa de listagem da caixa de combinação.
+Recupera o índice de base zero do primeiro item visível na parte da caixa de listagem da caixa de combinação.
 
 ```
 int GetTopIndex() const;
@@ -992,11 +992,11 @@ int GetTopIndex() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice baseado em zero do primeiro item visível na parte de caixa de listagem da caixa de combinação, se for bem-sucedido, CB_ERR caso contrário.
+O índice de base zero do primeiro item visível na parte de caixa de listagem da caixa de combinação, se for bem-sucedido, CB_ERR caso contrário.
 
 ### <a name="remarks"></a>Comentários
 
-Inicialmente, o item 0 é na parte superior da caixa de listagem, mas se a caixa de listagem é rolada, outro item pode ser na parte superior.
+Inicialmente, o item 0 está na parte superior da caixa de listagem, mas se a caixa de listagem for rolada, outro item poderá estar na parte superior.
 
 ### <a name="example"></a>Exemplo
 
@@ -1004,7 +1004,7 @@ Inicialmente, o item 0 é na parte superior da caixa de listagem, mas se a caixa
 
 ##  <a name="initstorage"></a>  CComboBox::InitStorage
 
-Aloca memória para armazenar itens de caixa de lista na parte de caixa de listagem da caixa de combinação.
+Aloca memória para armazenar itens da caixa de listagem na parte da caixa de listagem da caixa de combinação.
 
 ```
 int InitStorage(
@@ -1018,19 +1018,19 @@ int InitStorage(
 Especifica o número de itens a serem adicionados.
 
 *nBytes*<br/>
-Especifica a quantidade de memória, em bytes, para alocar para cadeias de caracteres do item.
+Especifica a quantidade de memória, em bytes, a ser alocada para cadeias de caracteres de item.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, o número máximo de itens que a parte da caixa de listagem da caixa de combinação pode armazenar antes de uma realocação de memória é necessário, CB_ERRSPACE caso contrário, o que significa que não há memória suficiente está disponível.
+Se obtiver êxito, o número máximo de itens que a parte da caixa de listagem de caixa de combinação pode armazenar antes de uma realocação de memória ser necessária, caso contrário, CB_ERRSPACE, o que significa que não há memória suficiente disponível.
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função antes de adicionar um grande número de itens à parte da caixa de listagem a `CComboBox`.
+Chame essa função antes de adicionar um grande número de itens à parte da caixa de listagem do `CComboBox`.
 
-Windows 95/98 somente: O *wParam* parâmetro está limitado aos valores de 16 bits. Isso significa que caixas de listagem não podem conter mais de 32.767 itens. Embora o número de itens é restrito, o tamanho total dos itens em uma caixa de listagem é limitado apenas pela memória disponível.
+Somente Windows 95/98: O parâmetro *wParam* é limitado a valores de 16 bits. Isso significa que as caixas de listagem não podem conter mais de 32.767 itens. Embora o número de itens seja restrito, o tamanho total dos itens em uma caixa de listagem é limitado apenas pela memória disponível.
 
-Essa função ajuda a acelerar a inicialização de caixas de listagem que têm um grande número de itens (mais de 100). Ele pré-aloca a quantidade especificada de memória de modo que os próximos [AddString](#addstring), [InsertString](#insertstring), e [Dir](#dir) funções usam o menor tempo possível. Você pode usar estimativas para os parâmetros. Se você superestimar, alguma memória extra será alocada; Se você subestimar, a alocação normal é usada para os itens que excedem a quantidade pré-alocada.
+Essa função ajuda a acelerar a inicialização de caixas de listagem que têm um grande número de itens (mais de 100). Ele prealoque a quantidade especificada de memória para que as funções [AddString](#addstring), [InsertString](#insertstring)e [dir](#dir) subsequentes tenham o menor tempo possível. Você pode usar estimativas para os parâmetros. Se você superestimar, uma memória extra é alocada; Se você subestimar, a alocação normal será usada para itens que excedem o valor prealocado.
 
 ### <a name="example"></a>Exemplo
 
@@ -1049,21 +1049,21 @@ int InsertString(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Contém o índice baseado em zero para a posição na caixa de listagem que receberá a cadeia de caracteres. Se esse parâmetro for -1, a cadeia de caracteres é adicionada ao final da lista.
+Contém o índice de base zero para a posição na caixa de listagem que receberá a cadeia de caracteres. Se esse parâmetro for-1, a cadeia de caracteres será adicionada ao final da lista.
 
 *lpszString*<br/>
-Aponta para a cadeia de caracteres terminada em nulo que deve ser inserido.
+Aponta para a cadeia de caracteres terminada em nulo que deve ser inserida.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice baseado em zero da posição em que a cadeia de caracteres foi inserida. O valor de retorno será CB_ERR se ocorrer um erro. O valor de retorno é CB_ERRSPACE se não houver espaço suficiente está disponível para armazenar a nova cadeia de caracteres.
+O índice de base zero da posição na qual a cadeia de caracteres foi inserida. O valor de retorno será CB_ERR se ocorrer um erro. O valor de retorno será CB_ERRSPACE se houver espaço insuficiente disponível para armazenar a nova cadeia de caracteres.
 
 ### <a name="remarks"></a>Comentários
 
-Ao contrário o [AddString](#addstring) função de membro, o `InsertString` função de membro não faz com que uma lista com o [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo a ser classificado.
+Ao contrário da função de membro [AddString](#addstring) , a `InsertString` função member não faz com que uma lista com o estilo [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) seja classificada.
 
 > [!NOTE]
->  Não há suporte para essa função, o Windows `ComboBoxEx` controle. Para obter mais informações sobre esse controle, consulte [ComboBoxEx controles](/windows/desktop/Controls/comboboxex-controls) no SDK do Windows.
+>  Essa função não é suportada pelo `ComboBoxEx` controle do Windows. Para obter mais informações sobre esse controle, consulte [ComboBoxEx Controls](/windows/win32/Controls/comboboxex-controls) in the SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
@@ -1071,7 +1071,7 @@ Ao contrário o [AddString](#addstring) função de membro, o `InsertString` fun
 
 ##  <a name="limittext"></a>  CComboBox::LimitText
 
-Limita o comprimento em bytes, do texto que o usuário pode inserir no controle de edição de uma caixa de combinação.
+Limita o comprimento em bytes do texto que o usuário pode inserir no controle de edição de uma caixa de combinação.
 
 ```
 BOOL LimitText(int nMaxChars);
@@ -1080,17 +1080,17 @@ BOOL LimitText(int nMaxChars);
 ### <a name="parameters"></a>Parâmetros
 
 *nMaxChars*<br/>
-Especifica o comprimento (em bytes) do texto que o usuário pode inserir. Se esse parâmetro for 0, o comprimento do texto é definido como 65.535 bytes.
+Especifica o comprimento (em bytes) do texto que o usuário pode inserir. Se esse parâmetro for 0, o tamanho do texto será definido como 65.535 bytes.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se for bem-sucedido. Se for chamado para uma caixa de combinação com o estilo [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou para uma caixa de combinação sem um controle de edição, o valor de retorno será CB_ERR.
+Diferente de zero, se for bem-sucedido. Se for chamado para uma caixa de combinação com o estilo [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou para uma caixa de combinação sem um controle de edição, o valor de retorno será CB_ERR.
 
 ### <a name="remarks"></a>Comentários
 
-Se a caixa de combinação não tem o estilo [CBS_AUTOHSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles), definir o limite de texto para ser maior que o tamanho do controle de edição não terá efeito.
+Se a caixa de combinação não tiver o estilo [CBS_AUTOHSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles), definir o limite de texto como maior que o tamanho do controle de edição não terá nenhum efeito.
 
-`LimitText` apenas limita o texto que o usuário pode inserir. Ele tem nenhum efeito em qualquer texto já está no controle de edição quando a mensagem é enviada, nem afeta o tamanho do texto copiado para o controle de edição quando uma cadeia de caracteres na caixa de listagem está selecionada.
+`LimitText`limita o texto que o usuário pode inserir. Ele não tem nenhum efeito em nenhum texto que já esteja no controle de edição quando a mensagem é enviada, nem afeta o comprimento do texto copiado para o controle de edição quando uma cadeia de caracteres na caixa de listagem é selecionada.
 
 ### <a name="example"></a>Exemplo
 
@@ -1098,7 +1098,7 @@ Se a caixa de combinação não tem o estilo [CBS_AUTOHSCROLL](../../mfc/referen
 
 ##  <a name="measureitem"></a>  CComboBox::MeasureItem
 
-Chamado pelo framework quando uma caixa de combinação com um estilo de desenho proprietário é criada.
+Chamado pelo Framework quando uma caixa de combinação com um estilo de desenho proprietário é criada.
 
 ```
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
@@ -1107,21 +1107,21 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parâmetros
 
 *lpMeasureItemStruct*<br/>
-Um ponteiro longo para um [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) estrutura.
+Um ponteiro longo para uma estrutura [MEASUREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-measureitemstruct) .
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, essa função membro não faz nada. Substituir essa função de membro e preencha o `MEASUREITEMSTRUCT` estrutura para informar ao Windows das dimensões da lista de caixa na caixa de combinação. Se a caixa de combinação é criada com o [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo, a estrutura chama essa função de membro para cada item na caixa de listagem. Caso contrário, esse membro é chamado apenas uma vez.
+Por padrão, essa função de membro não faz nada. Substitua essa função de membro e preencha a `MEASUREITEMSTRUCT` estrutura para informar o Windows das dimensões da caixa de listagem na caixa de combinação. Se a caixa de combinação for criada com o estilo [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , a estrutura chamará essa função de membro para cada item na caixa de listagem. Caso contrário, esse membro será chamado apenas uma vez.
 
-Usando o estilo CBS_OWNERDRAWFIXED em uma caixa de combinação do desenho proprietário criados com o [SubclassDlgItem](../../mfc/reference/cwnd-class.md#subclassdlgitem) função de membro de `CWnd` envolve considerações de programação ainda mais. Consulte a discussão na [14 de observação técnica](../../mfc/tn014-custom-controls.md).
+Usar o estilo CBS_OWNERDRAWFIXED em uma caixa de combinação de desenho proprietário criada com a função membro [SubclassDlgItem](../../mfc/reference/cwnd-class.md#subclassdlgitem) de `CWnd` envolve considerações de programação adicionais. Consulte a discussão na [Nota técnica 14](../../mfc/tn014-custom-controls.md).
 
-Ver [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) para obter uma descrição de `MEASUREITEMSTRUCT` estrutura.
+Consulte [CWnd:: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) para obter uma descrição da `MEASUREITEMSTRUCT` estrutura.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CComboBox#29](../../mfc/reference/codesnippet/cpp/ccombobox-class_29.cpp)]
 
-##  <a name="paste"></a>  CComboBox::Paste
+##  <a name="paste"></a>CComboBox::P lar
 
 Insere os dados da área de transferência no controle de edição da caixa de combinação na posição atual do cursor.
 
@@ -1131,7 +1131,7 @@ void Paste();
 
 ### <a name="remarks"></a>Comentários
 
-Dados são inseridos somente se a área de transferência contém dados no formato CF_TEXT.
+Os dados só serão inseridos se a área de transferência contiver dados no formato CF_TEXT.
 
 ### <a name="example"></a>Exemplo
 
@@ -1139,7 +1139,7 @@ Dados são inseridos somente se a área de transferência contém dados no forma
 
 ##  <a name="resetcontent"></a>  CComboBox::ResetContent
 
-Remove todos os itens da lista de caixa e editar o controle de uma caixa de combinação.
+Remove todos os itens da caixa de listagem e edita o controle de uma caixa de combinação.
 
 ```
 void ResetContent();
@@ -1151,7 +1151,7 @@ void ResetContent();
 
 ##  <a name="selectstring"></a>  CComboBox::SelectString
 
-Pesquisa uma cadeia de caracteres na caixa de listagem de uma caixa de combinação e se a cadeia de caracteres for encontrada, seleciona a cadeia de caracteres na caixa de listagem e copia para o controle de edição.
+Procura uma cadeia de caracteres na caixa de listagem de uma caixa de combinação e, se a cadeia de caracteres for encontrada, seleciona a cadeia de caracteres na caixa de listagem e a copia para o controle de edição.
 
 ```
 int SelectString(
@@ -1162,20 +1162,20 @@ int SelectString(
 ### <a name="parameters"></a>Parâmetros
 
 *nStartAfter*<br/>
-Contém o índice baseado em zero do item antes do primeiro item a ser pesquisado. Quando a pesquisa alcançar a parte inferior da caixa de listagem, ele continua na parte superior da caixa de listagem para o item especificado pela *nStartAfter*. Se-1, a caixa de listagem inteira é pesquisada desde o início.
+Contém o índice de base zero do item antes do primeiro item a ser pesquisado. Quando a pesquisa atingir a parte inferior da caixa de listagem, ela continuará na parte superior da caixa de listagem de volta para o item especificado por *nStartAfter*. Se-1, a caixa de listagem inteira será pesquisada desde o início.
 
 *lpszString*<br/>
-Aponta para a cadeia de caracteres terminada em nulo que contém o prefixo a ser pesquisado. A pesquisa é o caso independente, portanto, essa cadeia de caracteres pode conter qualquer combinação de letras maiusculas e minúsculas.
+Aponta para a cadeia de caracteres terminada em nulo que contém o prefixo a ser pesquisado. A pesquisa diferencia maiúsculas de minúsculas, portanto, essa cadeia de caracteres pode conter qualquer combinação de letras maiúsculas e minúsculas.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice baseado em zero do item selecionado se a cadeia de caracteres foi encontrada. Se a pesquisa tiver sido bem-sucedida, o valor de retorno será CB_ERR e a seleção atual não é alterada.
+O índice de base zero do item selecionado se a cadeia de caracteres foi encontrada. Se a pesquisa não tiver sido bem-sucedida, o valor de retorno será CB_ERR e a seleção atual não será alterada.
 
 ### <a name="remarks"></a>Comentários
 
-Uma cadeia de caracteres é selecionada apenas se seus caracteres inicias (do ponto de partida) corresponder aos caracteres na cadeia de caracteres de prefixo.
+Uma cadeia de caracteres será selecionada somente se seus caracteres iniciais (do ponto de partida) corresponderem aos caracteres na cadeia de caracteres do prefixo.
 
-Observe que o `SelectString` e `FindString` funções de membro localizar uma cadeia de caracteres, mas o `SelectString` função de membro também seleciona a cadeia de caracteres.
+Observe que as `SelectString` funções `FindString` e membro localizam uma cadeia de caracteres, `SelectString` mas a função membro também seleciona a cadeia de caracteres.
 
 ### <a name="example"></a>Exemplo
 
@@ -1193,27 +1193,27 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*lpszText*|[in] Ponteiro para um buffer de terminação nula que contém o texto de indicação.|
+|*lpszText*|no Ponteiro para um buffer com terminação nula que contém o texto de indicação.|
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se o método for bem-sucedido; Caso contrário, FALSE.
+TRUE se o método for bem-sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Texto de indicação é um aviso que é exibido na área de entrada de controle de caixa de combinação. O texto de indicação é exibido até que o usuário forneça uma entrada.
+O texto de indicação é um prompt que é exibido na área de entrada do controle caixa de combinação. O texto de indicação é exibido até que o usuário forneça a entrada.
 
-Esse método envia o [CB_SETCUEBANNER](/windows/desktop/Controls/cb-setcuebanner) mensagem, que é descrita no SDK do Windows.
+Esse método envia a mensagem [CB_SETCUEBANNER](/windows/win32/Controls/cb-setcuebanner) , que é descrita na SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define a variável *m_combobox*, que é usado para acessar programaticamente o controle de caixa de combinação. Essa variável é usada no exemplo a seguir.
+O exemplo de código a seguir define a variável, *m_combobox*, que é usada para acessar programaticamente o controle de caixa de combinação. Essa variável é usada no exemplo a seguir.
 
 [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define a faixa de indicação para o controle de caixa de combinação.
+O exemplo de código a seguir define a faixa de indicação para o controle da caixa de combinação.
 
 [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]
 
@@ -1228,15 +1228,15 @@ int SetCurSel(int nSelect);
 ### <a name="parameters"></a>Parâmetros
 
 *nSelect*<br/>
-Especifica o índice baseado em zero da cadeia de caracteres para selecionar. Se-1, qualquer seleção atual na caixa de listagem é removida e o controle de edição está desmarcado.
+Especifica o índice de base zero da cadeia de caracteres a ser selecionada. Se-1, qualquer seleção atual na caixa de listagem será removida e o controle de edição será limpo.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O índice baseado em zero do item selecionado se a mensagem for bem-sucedida. O valor de retorno será CB_ERR se *nSelecione* é maior que o número de itens na lista ou se *nSelecione* é definido como -1, que limpa a seleção.
+O índice de base zero do item selecionado se a mensagem for bem-sucedida. O valor de retorno será CB_ERR se *nSelecionar* for maior que o número de itens na lista ou se *nSelecionar* for definido como-1, o que limpará a seleção.
 
 ### <a name="remarks"></a>Comentários
 
-Se necessário, a caixa de listagem rola a cadeia de caracteres na exibição (se a caixa de listagem é visível). O texto no controle de edição da caixa de combinação é alterado para refletir a nova seleção. Qualquer seleção anterior na caixa de listagem é removida.
+Se necessário, a caixa de listagem rola a cadeia de caracteres para a exibição (se a caixa de listagem estiver visível). O texto no controle de edição da caixa de combinação é alterado para refletir a nova seleção. Qualquer seleção anterior na caixa de listagem é removida.
 
 ### <a name="example"></a>Exemplo
 
@@ -1253,17 +1253,17 @@ int SetDroppedWidth(UINT nWidth);
 ### <a name="parameters"></a>Parâmetros
 
 *nWidth*<br/>
-A largura mínima permitida da parte de caixa de listagem da caixa de combinação, em pixels.
+A largura mínima permitida da parte da caixa de listagem da caixa de combinação, em pixels.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, a nova largura da caixa de listagem, caso contrário CB_ERR.
+Se for bem-sucedida, a nova largura da caixa de listagem, caso contrário, CB_ERR.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função só se aplica a caixas de combinação com o [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo.
+Essa função só se aplica a caixas de combinação com o estilo [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
-Por padrão, a largura mínima permitida da caixa de listagem suspensa é 0. Quando a parte da caixa de listagem da caixa de combinação é exibida, sua largura seja o maior entre a largura mínima de permitidos ou a largura da caixa de combinação.
+Por padrão, a largura mínima permitida da caixa de listagem suspensa é 0. Quando a parte da caixa de listagem da caixa de combinação é exibida, sua largura é maior que a largura mínima permitida ou a largura da caixa de combinação.
 
 ### <a name="example"></a>Exemplo
 
@@ -1271,7 +1271,7 @@ Por padrão, a largura mínima permitida da caixa de listagem suspensa é 0. Qua
 
 ##  <a name="seteditsel"></a>  CComboBox::SetEditSel
 
-Seleciona os caracteres no controle de edição de uma caixa de combinação.
+Seleciona caracteres no controle de edição de uma caixa de combinação.
 
 ```
 BOOL SetEditSel(
@@ -1282,29 +1282,29 @@ BOOL SetEditSel(
 ### <a name="parameters"></a>Parâmetros
 
 *nStartChar*<br/>
-Especifica a posição inicial. Se a posição inicial é definida como -1, em seguida, qualquer seleção existente será removida.
+Especifica a posição inicial. Se a posição inicial for definida como-1, qualquer seleção existente será removida.
 
 *nEndChar*<br/>
-Especifica a posição final. Se a posição final estiver definida como -1, em seguida, todo o texto da posição inicial até o último caractere no controle de edição é selecionado.
+Especifica a posição final. Se a posição final for definida como-1, todo o texto da posição inicial para o último caractere no controle de edição será selecionado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Diferente de zero se a função de membro for bem-sucedida; Caso contrário, 0. Ele será CB_ERR se `CComboBox` tem o [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilizar ou não tem uma caixa de listagem.
+Diferente de zero se a função de membro for bem-sucedida; caso contrário, 0. É CB_ERR se `CComboBox` tem o estilo [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou não tem uma caixa de listagem.
 
 ### <a name="remarks"></a>Comentários
 
-As posições são baseados em zero. Para selecionar o primeiro caractere de controle de edição, você deve especificar uma posição inicial de 0. A posição final é o caractere logo após o último caractere para selecionar. Por exemplo, para selecionar os quatro primeiros caracteres do controle de edição, você usaria uma posição inicial de 0 e uma posição final de 4.
+As posições são baseadas em zero. Para selecionar o primeiro caractere do controle de edição, especifique uma posição inicial de 0. A posição final é para o caractere logo após o último caractere a ser selecionado. Por exemplo, para selecionar os quatro primeiros caracteres do controle de edição, você usaria uma posição inicial de 0 e uma posição final de 4.
 
 > [!NOTE]
->  Não há suporte para essa função, o Windows `ComboBoxEx` controle. Para obter mais informações sobre esse controle, consulte [ComboBoxEx controles](/windows/desktop/Controls/comboboxex-controls) no SDK do Windows.
+>  Essa função não é suportada pelo `ComboBoxEx` controle do Windows. Para obter mais informações sobre esse controle, consulte [ComboBoxEx Controls](/windows/win32/Controls/comboboxex-controls) in the SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
-  Veja o exemplo de [CComboBox::GetEditSel](#geteditsel).
+  Consulte o exemplo de [CComboBox:: GetEditSel](#geteditsel).
 
 ##  <a name="setextendedui"></a>  CComboBox::SetExtendedUI
 
-Chame o `SetExtendedUI` função de membro para selecionar a interface do usuário padrão ou a interface do usuário estendida para uma caixa de combinação que tem o [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo.
+Chame a `SetExtendedUI` função de membro para selecionar a interface do usuário padrão ou a interface do usuário estendida para uma caixa de combinação que tenha o estilo [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
 ```
 int SetExtendedUI(BOOL bExtended = TRUE);
@@ -1312,30 +1312,30 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bExtended*<br/>
-Especifica se a caixa de combinação deve usar a interface do usuário estendida ou a interface do usuário padrão. Um valor TRUE seleciona a interface do usuário estendida; um valor FALSE seleciona a interface de usuário padrão.
+*Bo*<br/>
+Especifica se a caixa de combinação deve usar a interface do usuário estendida ou a interface do usuário padrão. Um valor TRUE seleciona a interface do usuário estendida; um valor FALSE seleciona a interface do usuário padrão.
 
 ### <a name="return-value"></a>Valor de retorno
 
-CB_OKAY se a operação for bem-sucedida, ou CB_ERR se ocorrer um erro.
+CB_OKAY se a operação for bem-sucedida ou CB_ERR se ocorrer um erro.
 
 ### <a name="remarks"></a>Comentários
 
 A interface do usuário estendida pode ser identificada das seguintes maneiras:
 
-- Clicando no controle estático exibe a caixa de listagem somente para caixas de combinação com o estilo CBS_DROPDOWNLIST.
+- Clicar no controle estático exibe a caixa de listagem somente para caixas de combinação com o estilo CBS_DROPDOWNLIST.
 
-- Pressionar a tecla de seta para baixo exibirá a caixa de lista (F4 está desabilitado).
+- Pressionar a tecla de seta para baixo exibe a caixa de listagem (F4 está desabilitado).
 
-Rolagem no controle estático é desabilitada quando a lista de itens não estiver visível (e as teclas de direção estão desabilitadas).
+A rolagem no controle estático é desabilitada quando a lista de itens não está visível (as teclas de seta estão desabilitadas).
 
 ### <a name="example"></a>Exemplo
 
-  Veja o exemplo de [CComboBox::GetExtendedUI](#getextendedui).
+  Consulte o exemplo de [CComboBox:: GetExtendedUI](#getextendedui).
 
 ##  <a name="sethorizontalextent"></a>  CComboBox::SetHorizontalExtent
 
-Define a largura, em pixels, pela qual a parte da caixa de listagem da caixa de combinação pode ser rolada horizontalmente.
+Define a largura, em pixels, na qual a parte da caixa de listagem da caixa de combinação pode ser rolada horizontalmente.
 
 ```
 void SetHorizontalExtent(UINT nExtent);
@@ -1344,11 +1344,11 @@ void SetHorizontalExtent(UINT nExtent);
 ### <a name="parameters"></a>Parâmetros
 
 *nExtent*<br/>
-Especifica o número de pixels pelo qual a parte da caixa de listagem da caixa de combinação pode ser rolada horizontalmente.
+Especifica o número de pixels pelos quais a parte da caixa de listagem da caixa de combinação pode ser rolada horizontalmente.
 
 ### <a name="remarks"></a>Comentários
 
-Se a largura da caixa de listagem é menor do que esse valor, a barra de rolagem horizontal rolar horizontalmente itens na caixa de listagem. Se a largura da caixa de listagem é igual ou maior que esse valor, a barra de rolagem horizontal está oculto ou, se a caixa de combinação com o [CBS_DISABLENOSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo, desabilitado.
+Se a largura da caixa de listagem for menor que esse valor, a barra de rolagem horizontal irá rolar os itens horizontalmente na caixa de listagem. Se a largura da caixa de listagem for igual ou maior que esse valor, a barra de rolagem horizontal ficará oculta ou, se a caixa de combinação tiver o estilo [CBS_DISABLENOSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , será desabilitada.
 
 ### <a name="example"></a>Exemplo
 
@@ -1356,7 +1356,7 @@ Se a largura da caixa de listagem é menor do que esse valor, a barra de rolagem
 
 ##  <a name="setitemdata"></a>  CComboBox::SetItemData
 
-Define o valor de 32 bits associado com o item especificado em uma caixa de combinação.
+Define o valor de 32 bits associado ao item especificado em uma caixa de combinação.
 
 ```
 int SetItemData(
@@ -1367,7 +1367,7 @@ int SetItemData(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Contém um índice baseado em zero para o item a ser definido.
+Contém um índice de base zero para o item a ser definido.
 
 *dwItemData*<br/>
 Contém o novo valor a ser associado ao item.
@@ -1378,7 +1378,7 @@ CB_ERR se ocorrer um erro.
 
 ### <a name="remarks"></a>Comentários
 
-Use o `SetItemDataPtr` se o item de 32 bits deve ser um ponteiro de função de membro.
+Use a `SetItemDataPtr` função de membro se o item de 32 bits for um ponteiro.
 
 ### <a name="example"></a>Exemplo
 
@@ -1386,7 +1386,7 @@ Use o `SetItemDataPtr` se o item de 32 bits deve ser um ponteiro de função de 
 
 ##  <a name="setitemdataptr"></a>  CComboBox::SetItemDataPtr
 
-Define o valor de 32 bits associado com o item especificado em uma caixa de combinação para ser o ponteiro especificado (**void** <strong>\*</strong>).
+Define o valor de 32 bits associado ao item especificado em uma caixa de combinação para ser o ponteiro especificado (**void** <strong>\*</strong>).
 
 ```
 int SetItemDataPtr(
@@ -1397,10 +1397,10 @@ int SetItemDataPtr(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Contém um índice baseado em zero para o item.
+Contém um índice de base zero para o item.
 
 *pData*<br/>
-Contém o ponteiro para associar o item.
+Contém o ponteiro a ser associado ao item.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1408,7 +1408,7 @@ CB_ERR se ocorrer um erro.
 
 ### <a name="remarks"></a>Comentários
 
-Esse ponteiro permanece válido durante a vida útil da caixa de combinação, mesmo que a posição relativa do item dentro da caixa de combinação pode mudar à medida que itens são adicionados ou removidos. Portanto, o índice do item dentro da caixa pode alterar, mas o ponteiro permanece confiável.
+Esse ponteiro permanece válido durante a vida útil da caixa de combinação, mesmo que a posição relativa do item dentro da caixa de combinação possa ser alterada à medida que os itens são adicionados ou removidos. Portanto, o índice do item dentro da caixa pode ser alterado, mas o ponteiro permanece confiável.
 
 ### <a name="example"></a>Exemplo
 
@@ -1416,7 +1416,7 @@ Esse ponteiro permanece válido durante a vida útil da caixa de combinação, m
 
 ##  <a name="setitemheight"></a>  CComboBox::SetItemHeight
 
-Chamar o `SetItemHeight` a função de membro para definir a altura de itens de lista em uma caixa de combinação ou a altura da parte do controle de edição (ou texto estático) de uma caixa de combinação.
+Chame a `SetItemHeight` função de membro para definir a altura dos itens de lista em uma caixa de combinação ou a altura da parte do controle de edição (ou texto estático) de uma caixa de combinação.
 
 ```
 int SetItemHeight(
@@ -1427,22 +1427,22 @@ int SetItemHeight(
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica se a altura de itens de lista ou a altura da parte do controle de edição (ou texto estático) da caixa de combinação é definida.
+Especifica se a altura dos itens de lista ou a altura da parte de controle de edição (ou texto estático) da caixa de combinação está definida.
 
-Se a caixa de combinação com o [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo *nIndex* Especifica o índice baseado em zero do item de lista cuja altura deve ser definida; caso contrário, *nIndex* deve ser 0 e a altura de todos os itens de lista será definida.
+Se a caixa de combinação tiver o estilo [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , *nIndex* especificará o índice de base zero do item de lista cuja altura deve ser definida; caso contrário, *nIndex* deverá ser 0 e a altura de todos os itens da lista será definida.
 
-Se *nIndex* é -1, a altura do controle de edição ou parte do texto estático da caixa de combinação deve ser definido.
+Se *nIndex* for-1, a altura da parte do controle de edição ou do texto estático da caixa de combinação será definida.
 
 *cyItemHeight*<br/>
-Especifica a altura, em pixels, do componente caixa de combinação identificado pelo *nIndex*.
+Especifica a altura, em pixels, do componente de caixa de combinação identificado por *nIndex*.
 
 ### <a name="return-value"></a>Valor de retorno
 
-CB_ERR se o índice ou a altura é inválida; Caso contrário, 0.
+CB_ERR se o índice ou a altura for inválido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-A altura da parte do controle de edição (ou texto estático) da caixa de combinação é definida independentemente da altura dos itens da lista. Um aplicativo deve garantir que a altura da parte do controle de edição (ou texto estático) não é menor do que a altura de um item específico da caixa de listagem.
+A altura da parte do controle de edição (ou texto estático) da caixa de combinação é definida independentemente da altura dos itens da lista. Um aplicativo deve garantir que a porção da parte de controle de edição (ou texto estático) não seja menor do que a altura de um item de caixa de listagem específico.
 
 ### <a name="example"></a>Exemplo
 
@@ -1459,15 +1459,15 @@ LCID SetLocale(LCID nNewLocale);
 ### <a name="parameters"></a>Parâmetros
 
 *nNewLocale*<br/>
-O novo valor LCID (identificador) de localidade a ser definido para a caixa de combinação.
+O novo valor de LCID (identificador de localidade) a ser definido para a caixa de combinação.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O valor LCID (identificador) localidade anterior para a caixa de combinação.
+O valor do LCID (identificador de localidade) anterior desta caixa de combinação.
 
 ### <a name="remarks"></a>Comentários
 
-Se `SetLocale` não for chamado, o padrão localidade é obtida do sistema. Essa localidade padrão do sistema pode ser modificada por meio do painel de controle de aplicativo regionais (ou internacional).
+Se `SetLocale` não for chamado, a localidade padrão será obtida do sistema. Essa localidade padrão do sistema pode ser modificada usando o aplicativo regional (ou internacional) do painel de controle.
 
 ### <a name="example"></a>Exemplo
 
@@ -1475,7 +1475,7 @@ Se `SetLocale` não for chamado, o padrão localidade é obtida do sistema. Essa
 
 ##  <a name="setminvisibleitems"></a>  CComboBox::SetMinVisibleItems
 
-Define o número mínimo de itens visíveis na lista suspensa da caixa de combinação de atual de controle de caixa.
+Define o número mínimo de itens visíveis na lista suspensa do controle da caixa de combinação atual.
 
 ```
 BOOL SetMinVisibleItems(int iMinVisible);
@@ -1485,31 +1485,31 @@ BOOL SetMinVisibleItems(int iMinVisible);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*iMinVisible*|[in] Especifica o número mínimo de itens visíveis.|
+|*iMinVisible*|no Especifica o número mínimo de itens visíveis.|
 
 ### <a name="return-value"></a>Valor de retorno
 
-TRUE se esse método for bem-sucedida; Caso contrário, FALSE.
+TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método envia o [CB_SETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible) mensagem, que é descrita no SDK do Windows.
+Esse método envia a mensagem [CB_SETMINVISIBLE](/windows/win32/Controls/cb-setminvisible) , que é descrita na SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir define a variável *m_combobox*, que é usado para acessar programaticamente o controle de caixa de combinação. Essa variável é usada no exemplo a seguir.
+O exemplo de código a seguir define a variável, *m_combobox*, que é usada para acessar programaticamente o controle de caixa de combinação. Essa variável é usada no exemplo a seguir.
 
 [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]
 
 ### <a name="example"></a>Exemplo
 
-O exemplo de código a seguir insere 20 itens na lista suspensa de um controle de caixa de combinação. Em seguida, ele especifica que um mínimo de 10 itens ser exibida quando um usuário pressiona a seta suspensa.
+O exemplo de código a seguir insere 20 itens na lista suspensa de um controle de caixa de combinação. Em seguida, ele especifica que um mínimo de 10 itens seja exibido quando um usuário pressiona a seta suspensa.
 
 [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]
 
 ##  <a name="settopindex"></a>  CComboBox::SetTopIndex
 
-Garante que um determinado item está visível na parte de caixa de listagem da caixa de combinação.
+Garante que um item específico esteja visível na parte da caixa de listagem da caixa de combinação.
 
 ```
 int SetTopIndex(int nIndex);
@@ -1518,15 +1518,15 @@ int SetTopIndex(int nIndex);
 ### <a name="parameters"></a>Parâmetros
 
 *nIndex*<br/>
-Especifica o índice baseado em zero do item de caixa de listagem.
+Especifica o índice de base zero do item da caixa de listagem.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Zero se tiver êxito, ou CB_ERR se ocorrer um erro.
+Zero se for bem-sucedido ou CB_ERR se ocorrer um erro.
 
 ### <a name="remarks"></a>Comentários
 
-O sistema rola para a caixa de listagem até que o item especificado pelo *nIndex* aparece na parte superior da lista de caixa ou o intervalo de rolagem máximo foi atingido.
+O sistema rola a caixa de listagem até que o item especificado por *nIndex* seja exibido na parte superior da caixa de listagem ou o intervalo máximo de rolagem tenha sido atingido.
 
 ### <a name="example"></a>Exemplo
 
@@ -1534,7 +1534,7 @@ O sistema rola para a caixa de listagem até que o item especificado pelo *nInde
 
 ##  <a name="showdropdown"></a>  CComboBox::ShowDropDown
 
-Mostra ou oculta a caixa de listagem de uma caixa de combinação que tem o [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo.
+Mostra ou oculta a caixa de listagem de uma caixa de combinação que tem o estilo [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
 ```
 void ShowDropDown(BOOL bShowIt = TRUE);
@@ -1543,21 +1543,21 @@ void ShowDropDown(BOOL bShowIt = TRUE);
 ### <a name="parameters"></a>Parâmetros
 
 *bShowIt*<br/>
-Especifica se a caixa de listagem suspensa deve ser mostrado ou ocultado. Um valor TRUE mostra a caixa de listagem. Um valor falso oculta a caixa de listagem.
+Especifica se a caixa de listagem suspensa deve ser exibida ou ocultada. Um valor de TRUE mostra a caixa de listagem. Um valor de FALSE oculta a caixa de listagem.
 
 ### <a name="remarks"></a>Comentários
 
 Por padrão, uma caixa de combinação desse estilo mostrará a caixa de listagem.
 
-Essa função de membro não tem nenhum efeito em uma caixa de combinação criado com o [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo.
+Essa função de membro não tem nenhum efeito em uma caixa de combinação criada com o estilo [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
 ### <a name="example"></a>Exemplo
 
-  Veja o exemplo de [CComboBox::GetDroppedState](#getdroppedstate).
+  Consulte o exemplo de [CComboBox:: Getremovestate](#getdroppedstate).
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo de CTRLBARS do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
