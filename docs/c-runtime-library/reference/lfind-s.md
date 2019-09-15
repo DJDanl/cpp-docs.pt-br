@@ -1,9 +1,9 @@
 ---
 title: _lfind_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lfind_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lfind_s
 - _lfind_s
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-ms.openlocfilehash: 08c04d9d1ca69998d54304c96468298013907179
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69db97dc24b567714bda3e02f5f53ff381ae4911
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286421"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953446"
 ---
-# <a name="lfinds"></a>_lfind_s
+# <a name="_lfind_s"></a>_lfind_s
 
 Executa uma pesquisa linear da chave especificada. Uma versão de [_lfind](lfind.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -66,16 +69,16 @@ Número de elementos da matriz.
 Tamanho dos elementos da matriz de bytes.
 
 *compare*<br/>
-Ponteiro para a rotina de comparação. O primeiro parâmetro é o *contexto* ponteiro. O segundo parâmetro é um ponteiro para a chave a ser pesquisada. O terceiro parâmetro é um ponteiro para um elemento de matriz a ser comparado com a chave.
+Ponteiro para a rotina de comparação. O primeiro parâmetro é o ponteiro de *contexto* . O segundo parâmetro é um ponteiro para a chave a ser pesquisada. O terceiro parâmetro é um ponteiro para um elemento de matriz a ser comparado com a chave.
 
 *context*<br/>
 Um ponteiro para um objeto que pode ser acessado na função de comparação.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se a chave for encontrada, **lfind_s** retorna um ponteiro para o elemento da matriz na *base* que corresponde ao *chave*. Se a chave não for encontrada, **lfind_s** retorna **nulo**.
+Se a chave for encontrada, **_lfind_s** retornará um ponteiro para o elemento da matriz na *base* que corresponde à *chave*. Se a chave não for encontrada, **_lfind_s** retornará **NULL**.
 
-Se parâmetros inválidos forem passados para a função, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará **nulo**.
+Se parâmetros inválidos forem passados para a função, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará **NULL**.
 
 ### <a name="error-conditions"></a>Condições de Erro
 
@@ -88,9 +91,9 @@ Se parâmetros inválidos forem passados para a função, o manipulador de parâ
 
 ## <a name="remarks"></a>Comentários
 
-O **lfind_s** função executa uma pesquisa linear para o valor *chave* em uma matriz de *número* elementos, cada um dos *largura* bytes. Diferentemente **bsearch_s**, **lfind_s** exige que a matriz a ser classificado. O *base* argumento é um ponteiro para a base da matriz a ser pesquisada. O *comparar* argumento é um ponteiro para uma rotina fornecida pelo usuário que compara dois elementos de matriz e, em seguida, retorna um valor que especifica seu relacionamento. **lfind_s** chamadas a *comparar* rotina um ou mais vezes durante a pesquisa, passando o *contexto* ponteiro e ponteiros para dois elementos de matriz em cada chamada. O *comparar* rotina deve comparar os elementos e retornar diferente de zero (o que significa que os elementos são diferentes) ou 0 (ou seja, os elementos são idênticos).
+A função **_lfind_s** executa uma pesquisa linear para a *chave* de valor em uma matriz de elementos *Number* , cada um dos bytes de *largura* . Ao contrário de **bsearch_s**, **_lfind_s** não exige que a matriz seja classificada. O argumento *base* é um ponteiro para a base da matriz a ser pesquisada. O argumento *Compare* é um ponteiro para uma rotina fornecida pelo usuário que compara dois elementos de matriz e, em seguida, retorna um valor especificando sua relação. **_lfind_s** chama a rotina de *comparação* uma ou mais vezes durante a pesquisa, passando o ponteiro de *contexto* e os ponteiros para dois elementos de matriz em cada chamada. A rotina *Compare* deve comparar os elementos e retornar diferente de zero (o que significa que os elementos são diferentes) ou 0 (o que significa que os elementos são idênticos).
 
-**lfind_s** é semelhante ao **lfind** , exceto para a adição dos *contexto* ponteiro para os argumentos da função de comparação e a lista de parâmetros da função. O *contexto* ponteiro pode ser útil se a estrutura de dados pesquisada for parte de um objeto e o *comparar* função precisa acessar membros do objeto. O *comparar* função pode converter o ponteiro de void no objeto apropriado que o tipo e acessar membros desse objeto. A adição do *contexto* parâmetro torna **lfind_s** mais seguro, pois o contexto adicional pode ser usado para evitar bugs de reentrância associados ao uso de variáveis estáticas para disponibilizar dados para o *comparar* função.
+**_lfind_s** é semelhante a **_lfind** , exceto pela adição do ponteiro de *contexto* aos argumentos da função de comparação e da lista de parâmetros da função. O ponteiro de *contexto* poderá ser útil se a estrutura de dados pesquisada fizer parte de um objeto e a função *Compare* precisar acessar os membros do objeto. A função *Compare* pode converter o ponteiro void no tipo de objeto apropriado e os membros de acesso desse objeto. A adição do parâmetro de *contexto* torna o **_lfind_s** mais seguro, pois o contexto adicional pode ser usado para evitar bugs de reentrância associados ao uso de variáveis estáticas para disponibilizar os dados para a função de *comparação* .
 
 ## <a name="requirements"></a>Requisitos
 

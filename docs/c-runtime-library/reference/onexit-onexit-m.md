@@ -1,10 +1,10 @@
 ---
 title: _onexit, _onexit_m
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _onexit
 - _onexit_m
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _onexit
 - onexit_m
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-ms.openlocfilehash: c190f777032904802f771bab9fc323ba305ff32e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9afcd729f19f11b82e8f24c2b7fcf9ec40990deb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156035"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951341"
 ---
-# <a name="onexit-onexitm"></a>_onexit, _onexit_m
+# <a name="_onexit-_onexit_m"></a>_onexit, _onexit_m
 
 Registra uma rotina a ser chamada na hora de saída.
 
@@ -59,15 +62,15 @@ Ponteiro para uma função a ser chamada na saída.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**OnExit** retorna um ponteiro para a função se for bem-sucedido ou **nulo** se não houver nenhum espaço para armazenar o ponteiro de função.
+**_onexit** retornará um ponteiro para a função se for bem-sucedido ou **nulo** se não houver espaço para armazenar o ponteiro de função.
 
 ## <a name="remarks"></a>Comentários
 
-O **OnExit** função é passada para o endereço de uma função (*função*) a ser chamado quando o programa for encerrado normalmente. Chamadas sucessivas à **OnExit** criam um registro das funções que são executadas na ordem UEPS (último-no-primeiro a sair). As funções passadas para **OnExit** não pode receber parâmetros.
+A função **_onexit** recebe o endereço de uma função (*função*) a ser chamada quando o programa é encerrado normalmente. Chamadas sucessivas para **_onexit** criar um registro de funções que são executadas na ordem UEPS (último a entrar, primeiro a sair). As funções passadas para **_onexit** não podem usar parâmetros.
 
-No caso de quando **OnExit** é chamado de dentro de uma DLL, rotinas registradas com **OnExit** descarregamento de execução em uma DLL após **DllMain** é chamado com DLL_PROCESS_DETACH.
+No caso de **_onexit** ser chamado de dentro de uma dll, as rotinas registradas com **_onexit** são executadas no descarregamento de uma DLL depois que **DllMain** é chamado com DLL_PROCESS_DETACH.
 
-**OnExit** é uma extensão da Microsoft. Para fins de portabilidade ANSI, use [atexit](atexit.md). O **onexit_m** versão da função é para uso de modo misto.
+**_onexit** é uma extensão da Microsoft. Para fins de portabilidade ANSI, use [atexit](atexit.md). A versão **_onexit_m** da função é para uso de modo misto.
 
 ## <a name="requirements"></a>Requisitos
 

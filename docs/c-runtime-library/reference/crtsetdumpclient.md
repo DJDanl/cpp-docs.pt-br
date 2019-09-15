@@ -1,9 +1,9 @@
 ---
 title: _CrtSetDumpClient
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetDumpClient
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtSetDumpClient
 - CrtSetDumpClient
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - _CrtSetDumpClient function
 - CrtSetDumpClient function
 ms.assetid: f3dd06d0-c331-4a12-b68d-25378d112033
-ms.openlocfilehash: 09f319f6298dbec6b229b2923bd86fc9b50314de
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f739f86a8410c66135704d61944d122a38c196a5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342989"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938566"
 ---
-# <a name="crtsetdumpclient"></a>_CrtSetDumpClient
+# <a name="_crtsetdumpclient"></a>_CrtSetDumpClient
 
-Instala uma função definida pelo aplicativo para despejar **client_block** blocos de memória (somente versão de depuração) do tipo.
+Instala uma função definida pelo aplicativo para despejar blocos de memória de tipo **_CLIENT_BLOCK** (somente versão de depuração).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -50,21 +53,21 @@ Retorna a função de despejo de bloco do cliente definida anteriormente.
 
 ## <a name="remarks"></a>Comentários
 
-O **crtsetdumpclient** função permite que o aplicativo vincule sua própria função para despejar objetos armazenados no **client_block** processo de despejo de memória de depuração de blocos de memória em tempo de execução do C. Como resultado, sempre que uma depuração função de despejo, como [crtmemdumpallobjectssince](crtmemdumpallobjectssince.md) ou [crtdumpmemoryleaks](crtdumpmemoryleaks.md) Despeja um **client_block** bloco de memória, o aplicativo função de despejo é chamada também. **Crtsetdumpclient** fornece um aplicativo com um método fácil para detectar vazamentos de memória e para validação ou relatório do conteúdo dos dados armazenados no **client_block** blocos. Quando [Debug](../../c-runtime-library/debug.md) não está definido, as chamadas a **crtsetdumpclient** são removidas durante o pré-processamento.
+A função **_CrtSetDumpClient** permite que o aplicativo conecte sua própria função para despejar objetos armazenados em blocos de memória do **_CLIENT_BLOCK** no processo de despejo de memória de depuração de tempo de execução C. Como resultado, toda vez que uma função de despejo de depuração, como [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) ou [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) , despeja um bloco de memória **_CLIENT_BLOCK** , a função de despejo do aplicativo também é chamada. O **_CrtSetDumpClient** fornece um aplicativo com um método fácil para detectar vazamentos de memória e validar ou relatar o conteúdo dos dados armazenados em blocos do **_CLIENT_BLOCK** . Quando [_DEBUG](../../c-runtime-library/debug.md) não é definido, as chamadas para **_CrtSetDumpClient** são removidas durante o pré-processamento.
 
-O **crtsetdumpclient** função instala a nova função de despejo definida pelo aplicativo especificada em *dumpClient* e retorna a função de despejo definida anteriormente. Este é um exemplo de uma função de despejo de bloco do cliente:
+A função **_CrtSetDumpClient** instala a nova função de despejo definida pelo aplicativo especificada em *dumpClient* e retorna a função de despejo definida anteriormente. Este é um exemplo de uma função de despejo de bloco do cliente:
 
 ```C
 void DumpClientFunction( void *userPortion, size_t blockSize );
 ```
 
-O *userPortion* argumento é um ponteiro para o início da parte de dados do usuário do bloco de memória e *blockSize* Especifica o tamanho da memória alocada bloco em bytes. A função de despejo de bloco de cliente deve retornar **void**. O ponteiro para a função de despejo do cliente que é passado para **crtsetdumpclient** é do tipo **crt_dump_client**, conforme definido em crtdbg. h:
+O argumento *Userportation* é um ponteiro para o início da parte de dados do usuário do bloco de memória e *BlockSize* especifica o tamanho do bloco de memória alocado em bytes. A função de despejo de bloco de cliente deve retornar **void**. O ponteiro para a função de despejo de cliente que é transmitido para **_CrtSetDumpClient** é do tipo **_CRT_DUMP_CLIENT**, conforme definido em CRTDBG. h:
 
 ```C
 typedef void (__cdecl *_CRT_DUMP_CLIENT)( void *, size_t );
 ```
 
-Para obter mais informações sobre as funções que operam em **client_block** blocos de memória do tipo, consulte [funções de gancho de bloco de cliente](/visualstudio/debugger/client-block-hook-functions). A função [_CrtReportBlockType](crtreportblocktype.md) pode ser usada para retornar informações sobre tipos e subtipos de bloco.
+Para obter mais informações sobre as funções que operam em blocos de memória de tipo **_CLIENT_BLOCK** , consulte [funções de gancho de bloco de cliente](/visualstudio/debugger/client-block-hook-functions). A função [_CrtReportBlockType](crtreportblocktype.md) pode ser usada para retornar informações sobre tipos e subtipos de bloco.
 
 ## <a name="requirements"></a>Requisitos
 

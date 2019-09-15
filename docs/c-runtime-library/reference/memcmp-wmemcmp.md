@@ -1,10 +1,10 @@
 ---
 title: memcmp, wmemcmp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcmp
 - wmemcmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,8 +17,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
-topictype: APIRef
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memcmp
 - wmemcmp
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 228a74ac8cc83bca169779f1afd6936f5be59bee
-ms.sourcegitcommit: 010ecc2bb9a15deea192a34975176ec0426aa3d8
+ms.openlocfilehash: 2fa902c0fa5a4a78f6fd3e46edeb3799aaf92569
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265624"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951931"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -67,15 +69,15 @@ O número de caracteres a serem comparados. (Compara bytes para **memcmp**, cara
 
 O valor retornado indica a relação entre os buffers.
 
-|Valor retornado|Relação dos primeiros *contagem* caracteres de buf1 e buf2|
+|Valor retornado|Relação dos primeiros caracteres de *contagem* de buf1 e buf2|
 |------------------|---------------------------------------------------------------|
-|< 0|*buffer1* menor que *buffer2*|
-|0|*buffer1* idêntico ao *buffer2*|
-|> 0|*buffer1* maior que *buffer2*|
+|< 0|*buffer1* menor que *BUFFER2*|
+|0|*buffer1* idêntico a *BUFFER2*|
+|> 0|*buffer1* maior que *BUFFER2*|
 
 ## <a name="remarks"></a>Comentários
 
-Compara os primeiros *contagem* caracteres de *buffer1* e *buffer2* e retorna um valor que indica a relação. O sinal de um valor retornado diferente de zero é o sinal da diferença entre o primeiro par de valores diferentes nos buffers. Os valores são interpretados como **sem sinal** **char** para **memcmp**e como **wchar_t** para **wmemcmp**.
+Compara os primeiros caracteres de *contagem* de *buffer1* e *BUFFER2* e retorna um valor que indica sua relação. O sinal de um valor retornado diferente de zero é o sinal da diferença entre o primeiro par de valores diferentes nos buffers. Os valores são interpretados como **caracteres** **não assinados** para **memcmp**e como **wchar_t** para **wmemcmp**.
 
 ## <a name="requirements"></a>Requisitos
 

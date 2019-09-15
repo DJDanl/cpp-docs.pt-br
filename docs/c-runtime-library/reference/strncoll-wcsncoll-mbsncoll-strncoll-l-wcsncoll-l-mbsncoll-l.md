@@ -1,14 +1,14 @@
 ---
 title: _strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strncoll
 - _mbsncoll_l
 - _wcsncoll
 - _wcsncoll_l
 - _mbsncoll
 - _strncoll_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsncoll_l
 - strncoll
@@ -60,19 +63,19 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-ms.openlocfilehash: fe6c3283c9379b370911cc63184535e813b96d8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5120b37cd06266752194ec826a173474f6902fd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209768"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947257"
 ---
-# <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
+# <a name="_strncoll-_wcsncoll-_mbsncoll-_strncoll_l-_wcsncoll_l-_mbsncoll_l"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 
 Compara cadeias de caracteres usando informações específicas de localidade.
 
 > [!IMPORTANT]
-> **mbsncoll** e **mbsncoll_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncoll** e **_mbsncoll_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -125,21 +128,21 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna um valor que indica a relação de subcadeias de caracteres de *string1* e *string2*, da seguinte maneira.
+Cada uma dessas funções retorna um valor que indica a relação entre as subcadeias de *seqüência1* e *seqüência2*, como a seguir.
 
 |Valor retornado|Relação da string1 com a string2|
 |------------------|----------------------------------------|
-|< 0|*string1* é menor que *string2*.|
-|0|*string1* é idêntica à *string2*.|
-|> 0|*string1* é maior que *string2*.|
+|< 0|*seqüência1* é menor que *seqüência2*.|
+|0|*seqüência1* é idêntico a *seqüência2*.|
+|> 0|*seqüência1* é maior que *seqüência2*.|
 
-Cada uma dessas funções retorna **_NLSCMPERROR**. Para usar **_NLSCMPERROR**, inclua String. h ou mbstring. **wcsncoll** pode falhar se *string1* ou *string2* contém códigos de caractere largo que estão fora do domínio da sequência de agrupamento. Quando ocorre um erro, **wcsncoll** podem definir **errno** para **EINVAL**. Para verificar se há um erro em uma chamada para **wcsncoll**, defina **errno** como 0 e, em seguida, marque **errno** depois de chamar **wcsncoll**.
+Cada uma dessas funções retorna **_NLSCMPERROR**. Para usar o **_NLSCMPERROR**, inclua String. h ou MBSTRING. h. **_wcsncoll** pode falhar se *seqüência1* ou *seqüência2* contiver códigos de caracteres largos que estejam fora do domínio da sequência de agrupamento. Quando ocorre um erro, **_wcsncoll** pode definir **errno** como **EINVAL**. Para verificar se há um erro em uma chamada para **_wcsncoll**, defina **errno** como 0 e, em seguida, verifique **errno** depois de chamar **_wcsncoll**.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções executa uma comparação diferencia maiusculas de minúsculas dos primeiros *contagem* caracteres de *string1* e *string2*, de acordo com a página de código que está no momento Use. Use essas funções somente quando há uma diferença entre a ordem do conjunto de caracteres e a ordem lexicográfica dos caracteres na página de código atual e essa diferença é de interesse para a comparação de cadeia de caracteres. A ordem do conjunto de caracteres é dependente de localidade. As versões dessas funções que não têm o **l** sufixo usam a localidade atual, mas as versões que têm o **l** sufixo usam a localidade que é passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+Cada uma dessas funções executa uma comparação de maiúsculas e minúsculas dos primeiros caracteres de *contagem* em *seqüência1* e *seqüência2*, de acordo com a página de código em uso no momento. Use essas funções somente quando há uma diferença entre a ordem do conjunto de caracteres e a ordem lexicográfica dos caracteres na página de código atual e essa diferença é de interesse para a comparação de cadeia de caracteres. A ordem do conjunto de caracteres é dependente de localidade. As versões dessas funções que não têm o sufixo **_L** usam a localidade atual, mas as versões que têm o sufixo **_L** usam a localidade que é passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Todas essas funções validam seus parâmetros. Se qualquer um dos *string1* ou *string2* é um ponteiro nulo, ou *contagem* é maior que **INT_MAX**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **_NLSCMPERROR** e defina **errno** para **EINVAL**.
+Todas essas funções validam seus parâmetros. Se *seqüência1* ou *seqüência2* for um ponteiro nulo ou a *contagem* for maior que **INT_MAX**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **_NLSCMPERROR** e definirá **errno** como **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

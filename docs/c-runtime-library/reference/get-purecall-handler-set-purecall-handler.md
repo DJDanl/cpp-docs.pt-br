@@ -1,11 +1,11 @@
 ---
 title: _get_purecall_handler, _set_purecall_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_purecall_handler
 - _set_purecall_handler_m
 - _get_purecall_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_purecall_handler
 - _set_purecall_handler_m
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-ms.openlocfilehash: 0009b4bc1c7bf70bd84b9a82ecdc8643789e8164
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73fc2ffe5cd4ed65c8695432b53816090bbc5f8e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287394"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955670"
 ---
-# <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler, _set_purecall_handler
+# <a name="_get_purecall_handler-_set_purecall_handler"></a>_get_purecall_handler, _set_purecall_handler
 
 Obtém ou define o manipulador de erro para uma chamada de função virtual pura.
 
@@ -58,21 +61,21 @@ _purecall_handler __cdecl _set_purecall_handler(
 ### <a name="parameters"></a>Parâmetros
 
 *function*<br/>
-A função a ser chamada quando uma função virtual pura é chamada. Um **_purecall_handler** função deve ter um tipo de retorno void.
+A função a ser chamada quando uma função virtual pura é chamada. Uma função **_purecall_handler** deve ter um tipo de retorno void.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Anterior **_purecall_handler**. Retorna **nullptr** se não houver nenhum manipulador anterior.
+O **_purecall_handler**anterior. Retorna **nullptr** se não havia nenhum manipulador anterior.
 
 ## <a name="remarks"></a>Comentários
 
-O **get_purecall_handler** e **set_purecall_handler** funções são específicas da Microsoft e só se aplicam ao C++ código.
+As funções **_get_purecall_handler** e **_set_purecall_handler** são específicas da Microsoft e se aplicam C++ somente ao código.
 
-Uma chamada para uma função virtual pura é um erro porque não tem nenhuma implementação. Por padrão, o compilador gera código para invocar uma função de manipulador de erro quando uma função virtual pura é chamada, o que encerra o programa. Você pode instalar sua própria função de manipulador de erro para chamadas de função pura virtual, para capturá-las para fins de depuração ou relatório. Para usar seu próprio manipulador de erro, crie uma função que tem o **_purecall_handler** assinatura, em seguida, use **set_purecall_handler** para torná-lo o manipulador atual.
+Uma chamada para uma função virtual pura é um erro porque não tem nenhuma implementação. Por padrão, o compilador gera código para invocar uma função de manipulador de erro quando uma função virtual pura é chamada, o que encerra o programa. Você pode instalar sua própria função de manipulador de erro para chamadas de função pura virtual, para capturá-las para fins de depuração ou relatório. Para usar seu próprio manipulador de erro, crie uma função que tenha a assinatura **_purecall_handler** e, em seguida, use **_set_purecall_handler** para torná-la o manipulador atual.
 
-Como há somente um **_purecall_handler** para cada processo, quando você chama **set_purecall_handler** ele afeta imediatamente todos os threads. O último chamador em qualquer thread define o manipulador.
+Como há apenas um **_purecall_handler** para cada processo, quando você chama **_set_purecall_handler** , ele afeta imediatamente todos os threads. O último chamador em qualquer thread define o manipulador.
 
-Para restaurar o comportamento padrão, chame **set_purecall_handler** usando uma **nullptr** argumento.
+Para restaurar o comportamento padrão, chame **_set_purecall_handler** usando um argumento **nullptr** .
 
 ## <a name="requirements"></a>Requisitos
 

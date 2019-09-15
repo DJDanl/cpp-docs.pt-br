@@ -1,10 +1,10 @@
 ---
 title: _fputchar, _fputwchar
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fputchar
 - _fputwchar
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fputtchar
 - _fputwchar
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 57ec2350fa1d0b681c6eed0c4cfc4ec4660977e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39642be871c1c5b5c2deaf35b7c26d19c188b440
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287924"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956931"
 ---
-# <a name="fputchar-fputwchar"></a>_fputchar, _fputwchar
+# <a name="_fputchar-_fputwchar"></a>_fputchar, _fputwchar
 
 Grava um caractere em **stdout**.
 
@@ -62,13 +65,13 @@ O caractere a ser gravado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna o caractere gravado. Para **fputchar**, um valor de retorno **EOF** indica um erro. Para **fputwchar**, um valor de retorno **WEOF** indica um erro. Se c for **nulo**, essas funções gerarão uma exceção de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, eles retornam **EOF** (ou **WEOF**) e defina **errno** para **EINVAL**.
+Cada uma dessas funções retorna o caractere gravado. Para **_fputchar**, um valor de retorno de **EOF** indica um erro. Para **_fputwchar**, um valor de retorno de **WEOF** indica um erro. Se c for **NULL**, essas funções gerarão uma exceção de parâmetro inválida, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, elas retornam **EOF** (ou **WEOF**) e definem **errno** como **EINVAL**.
 
 Para obter mais informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Ambas as funções grava o único caractere *c* à **stdout** e avança o indicador conforme apropriado. **fputchar** é equivalente a `fputc( stdout )`. Também é equivalente a **putchar**, mas implementado somente como uma função, em vez de uma função e uma macro. Diferentemente **fputc** e **putchar**, essas funções não são compatíveis com o padrão ANSI.
+Ambas as funções gravam o único caractere *c* em **stdout** e avançam o indicador conforme apropriado. **_fputchar** é equivalente a `fputc( stdout )`. Ele também é equivalente a **putchar**, mas implementado somente como uma função, em vez de como uma função e uma macro. Ao contrário de **fputc** e **putchar**, essas funções não são compatíveis com o padrão ANSI.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -83,7 +86,7 @@ Ambas as funções grava o único caractere *c* à **stdout** e avança o indica
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console —**stdin**, **stdout**, e **stderr**— deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console do —**stdin**, **stdout**e **stderr**— devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

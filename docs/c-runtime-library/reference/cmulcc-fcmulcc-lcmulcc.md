@@ -1,11 +1,11 @@
 ---
 title: _Cmulcc, _FCmulcc, _LCmulcc
 ms.date: 03/30/2018
-apiname:
+api_name:
 - _Cmulcc
 - _FCmulcc
 - _LCmulcc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _Cmulcc
 - _FCmulcc
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - _Cmulcc function
 - _FCmulcc function
 - _LCmulcc function
-ms.openlocfilehash: f81ccb641a80ab264e8bc54ba1987e2c2c8469f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc21f8cbd2103993bc2b3e36020c57c8520f04a1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335368"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939072"
 ---
-# <a name="cmulcc-fcmulcc-lcmulcc"></a>_Cmulcc, _FCmulcc, _LCmulcc
+# <a name="_cmulcc-_fcmulcc-_lcmulcc"></a>_Cmulcc, _FCmulcc, _LCmulcc
 
 Multiplica dois números complexos.
 
@@ -54,15 +57,15 @@ _Lcomplex _LCmulcc( _Lcomplex x, _Lcomplex y );
 Um dos operandos complexos a multiplicar.
 
 *y*<br/>
-O operando outro complexo a multiplicar.
+O outro operando complexo a multiplicar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Um **_Dcomplex**, **fcomplex**, ou **_Lcomplex** estrutura que representa o produto complexo de números complexos *x* e *y*.
+Uma estrutura **_Dcomplex**, **_Fcomplex**ou **_Lcomplex** que representa o produto complexo dos números complexos *x* e *y*.
 
 ## <a name="remarks"></a>Comentários
 
-Porque os operadores aritméticos internos não funcionam na implementação da Microsoft de tipos complexos, o **_Cmulcc**, **_FCmulcc**, e **_LCmulcc** funções Simplifique a multiplicação de tipos complexos.
+Como os operadores aritméticos internos não funcionam na implementação da Microsoft dos tipos complexos, as funções **_Cmulcc**, **_FCmulcc**e **_LCmulcc** simplificam a multiplicação de tipos complexos.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -70,7 +73,7 @@ Porque os operadores aritméticos internos não funcionam na implementação da 
 |-------------|--------------|------------------|
 |**_Cmulcc**, **_FCmulcc**, **_LCmulcc**|\<complex.h>|\<complex.h>|
 
-Essas funções são específicas da Microsoft. Os tipos **_Dcomplex**, **fcomplex**, e **_Lcomplex** são específicas da Microsoft equivalentes aos tipos nativos C99 não implementadas **double Complex** , **float Complex**, e **long double Complex**, respectivamente. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Essas funções são específicas da Microsoft. Os tipos **_Dcomplex**, **_Fcomplex**e **_Lcomplex** são equivalentes específicos da Microsoft aos tipos nativos C99 não implementados **Double _Complex**, **float _Complex**e **Long duplo _Complex**, respectivamente. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 

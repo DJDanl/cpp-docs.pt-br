@@ -1,12 +1,12 @@
 ---
 title: strerror, _strerror, _wcserror, __wcserror
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strerror
 - _strerror
 - _wcserror
 - __wcserror
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __sys_errlist
 - wcserror
@@ -43,16 +46,16 @@ helpviewer_keywords:
 - __wcserror function
 - error messages, getting
 ms.assetid: 27b72255-f627-43c0-8836-bcda8b003e14
-ms.openlocfilehash: 4038fcc29c18e5d73024cbe5688c674e00d1409e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b4d70687bc2f428162d035c80d6bc8525a8fb9e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353853"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958140"
 ---
-# <a name="strerror-strerror-wcserror-wcserror"></a>strerror, _strerror, _wcserror, __wcserror
+# <a name="strerror-_strerror-_wcserror-__wcserror"></a>strerror, _strerror, _wcserror, __wcserror
 
-Obtém uma cadeia de caracteres de mensagem de erro do sistema (**strerror**, **wcserror**) ou formata uma cadeia de caracteres de mensagem de erro fornecida pelo usuário (**strError**, **wcserror**). Versões mais seguras dessas funções estão disponíveis; consulte [strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md).
+Obtém uma cadeia de caracteres de mensagem de erro do sistema (**strerror**, **_wcserror**) ou formata uma cadeia de caracteres de mensagem de erro fornecida pelo usuário ( **_strerror**, **__wcserror**). Versões mais seguras dessas funções estão disponíveis; consulte [strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -85,22 +88,22 @@ Todas essas funções retornam um ponteiro para a cadeia de caracteres de mensag
 
 ## <a name="remarks"></a>Comentários
 
-O **strerror** função mapas *errnum* para uma cadeia de caracteres de mensagem de erro e retorna um ponteiro para a cadeia de caracteres. Nem **strerror** nem **strError** imprimem a mensagem: Para fazer isso, você precisa chamar uma função de saída, como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+A função **strerror** mapeia *errnum* para uma cadeia de caracteres de mensagem de erro e retorna um ponteiro para a cadeia de caracteres. Nem **strerror** nem **_strerror** realmente imprime a mensagem: Para isso, você precisa chamar uma função de saída, como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
    fprintf( stderr, _strerror(NULL) );
 ```
 
-Se *strErrMsg* é passado como **nulo**, **strError** retorna um ponteiro para uma cadeia de caracteres que contém a mensagem de erro do sistema para a última chamada da biblioteca que produziu um erro. A cadeia de caracteres de mensagens de erro é encerrada pelo caractere newline ('\n'). Se *strErrMsg* não é igual a **nulo**, em seguida, **strError** retorna um ponteiro para uma cadeia de caracteres que contém (nessa ordem) sua mensagem de cadeia de caracteres, dois-pontos, um espaço, o erro do sistema mensagem para a última chamada da biblioteca que produz um erro e um caractere de nova linha. Sua mensagem da cadeia de caracteres pode ter, no máximo, 94 caracteres de comprimento.
+Se *strErrMsg* for passado como **NULL**, **_strerror** retornará um ponteiro para uma cadeia de caracteres que contém a mensagem de erro do sistema para a última chamada de biblioteca que produziu um erro. A cadeia de caracteres de mensagens de erro é encerrada pelo caractere newline ('\n'). Se *strErrMsg* não for igual a **NULL**, **_strerror** retornará um ponteiro para uma cadeia de caracteres que contenha (em ordem) sua mensagem de cadeia de caracteres, dois-pontos, um espaço, a mensagem de erro do sistema para a última chamada da biblioteca que produz um erro e uma nova linha espaço. Sua mensagem da cadeia de caracteres pode ter, no máximo, 94 caracteres de comprimento.
 
-O número do erro real para **strError** é armazenado na variável [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Para produzir resultados precisos, chame **strError** imediatamente após uma rotina da biblioteca retorna um erro. Caso contrário, chamadas subsequentes para **strerror** ou **strError** pode substituir o **errno** valor.
+O número de erro real para **_strerror** é armazenado na variável [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Para produzir resultados precisos, chame **_strerror** imediatamente após uma rotina de biblioteca retornar com um erro. Caso contrário, as chamadas subsequentes para **strerror** ou **_strerror** podem substituir o valor **errno** .
 
-**wcserror** e **wcserror** são versões de caractere largo de **strerror** e **strError**, respectivamente.
+**_wcserror** e **__wcserror** são versões de caracteres largos de **strerror** e **_strerror**, respectivamente.
 
-**strError**, **wcserror**, e **wcserror** não fazem parte da definição de ANSI; elas são extensões da Microsoft e recomendamos que você não use-os onde você deseja usar código portátil. Para compatibilidade ANSI, use **strerror** em vez disso.
+**_strerror**, **_wcserror**e **__wcserror** não fazem parte da definição de ANSI; Elas são extensões da Microsoft e recomendamos que você não as use onde desejar código portátil. Para compatibilidade com ANSI, use **strerror** em vez disso.
 
-Para obter cadeias de caracteres de erro, é recomendável **strerror** ou **wcserror** ao invés dos macros preteridos [sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) e [sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) e as funções internas preteridas **__sys_errlist** e **__sys_nerr**.
+Para obter cadeias de caracteres de erro, recomendamos **strerror** ou **_wcserror** em vez das macros preteridas [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) e [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) e as funções internas preteridas **__sys_errlist** e **__sys_nerr**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

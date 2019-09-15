@@ -1,9 +1,9 @@
 ---
 title: towctrans
 ms.date: 11/04/2016
-apiname:
+api_name:
 - towctrans
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - towctrans
 helpviewer_keywords:
 - towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
-ms.openlocfilehash: b814c65d2f5d0bb18b19d97a539d79dd6df8a1c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d63fc343647cd0f949f282e2a64d4a0636e62bd7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269157"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957433"
 ---
 # <a name="towctrans"></a>towctrans
 
@@ -51,11 +54,11 @@ Um identificador que contém o valor retornado de [wctrans](wctrans.md).
 
 ## <a name="return-value"></a>Valor de retorno
 
-O caractere *c*após **towctrans** usado a regra de transformação na *categoria*.
+O caractere *c*, após **towctrans** , usou a regra de transformação na *categoria*.
 
 ## <a name="remarks"></a>Comentários
 
-O valor de *categoria* deve ter sido retornado por uma chamada bem-sucedida anterior à [wctrans](wctrans.md).
+O valor da *categoria* deve ter sido retornado por uma chamada bem-sucedida anterior para [wctrans](wctrans.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -67,7 +70,7 @@ Para obter informações adicionais sobre compatibilidade, consulte [Compatibili
 
 ## <a name="example"></a>Exemplo
 
-Ver **wctrans** para obter um exemplo que usa **towctrans**.
+Consulte **wctrans** para obter um exemplo que usa **towctrans**.
 
 ## <a name="see-also"></a>Consulte também
 

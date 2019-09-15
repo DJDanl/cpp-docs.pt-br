@@ -1,11 +1,11 @@
 ---
 title: cbrt, cbrtf, cbrtl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - cbrt
 - cbrtf
 - cbrtl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cbrtl
 - cbrt
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: c395a063cfa07cdfb7e841f19bc64fb1c57ca796
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3983c5d3237b1a6cb82887a690919cbf21401ab
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341087"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939298"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -65,15 +68,15 @@ Valor de ponto flutuante
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **cbrt** funções retornam a raiz cúbica de *x*.
+As funções **cbrt** retornam a raiz do cubo de *x*.
 
-|Entrada|Exceção SEH|**matherr** exceção|
+|Entrada|Exceção SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|nenhum|nenhum|
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **cbrt** que utilizam **float** ou **longo** **double** tipos. Em um programa do C **cbrt** sempre usa e retorna **duplo**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **cbrt** que têm tipos **flutuantes** ou **longos** **duplos** . Em um programa C, **cbrt** sempre leva e retorna **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

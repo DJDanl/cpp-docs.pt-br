@@ -1,13 +1,16 @@
 ---
 title: __argc, __argv, __wargv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __wargv
 - __argv
 - __argc
-apilocation:
+api_location:
 - msvcrt120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __argv
 - __argc
@@ -17,14 +20,14 @@ helpviewer_keywords:
 - __wargv
 - __argc
 ms.assetid: 17001b0a-04ad-4762-b3a6-c54847f02d7c
-ms.openlocfilehash: f428d81215193361a409473a411eb5c4d91fa997
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 59ab1f5ba52e6dc84d44e8cb5465cfa412d01895
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743302"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940630"
 ---
-# <a name="argc-argv-wargv"></a>__argc, __argv, __wargv
+# <a name="__argc-__argv-__wargv"></a>__argc, __argv, __wargv
 
 A variável global `__argc` é uma contagem do número de argumentos de linha de comando passados para o programa. `__argv` é um ponteiro para uma matriz de cadeias de caracteres de caractere de byte único ou de caractere multibyte que contêm os argumentos do programa; `__wargv` é um ponteiro para uma matriz de cadeias de caracteres de caractere largo que contêm os argumentos do programa. Essas variáveis globais fornecem os argumentos para `main` ou `wmain`.
 

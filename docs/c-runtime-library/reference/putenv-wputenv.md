@@ -1,10 +1,10 @@
 ---
 title: _putenv, _wputenv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putenv
 - _wputenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tputenv
 - _wputenv
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _tputenv function
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
-ms.openlocfilehash: 952a4d62f6ceb6b689091ac09f6ca338d0b10864
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8fe699a476ea1dd09a6ce9922294bce398df16b2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357872"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949892"
 ---
-# <a name="putenv-wputenv"></a>_putenv, _wputenv
+# <a name="_putenv-_wputenv"></a>_putenv, _wputenv
 
 Cria, modifica ou remove as variáveis de ambiente. Versões mais seguras dessas funções estão disponíveis; consulte [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md).
 
@@ -66,11 +69,11 @@ Definição de cadeia de caracteres de ambiente.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna 0 se for bem-sucedido ou -1 caso de erro.
+Retorne 0 se for bem-sucedido ou-1 no caso de um erro.
 
 ## <a name="remarks"></a>Comentários
 
-O **putenv** função adiciona novas variáveis de ambiente ou modifica os valores das variáveis de ambiente existente. Variáveis de ambiente definem o ambiente no qual um processo é executado (por exemplo, o caminho de pesquisa padrão para bibliotecas a ser vinculado a um programa). **wputenv** é uma versão de caractere largo de **putenv**; o *cadeiacaracenv* argumento **wputenv** é uma cadeia de caracteres largos.
+A função **_putenv** adiciona novas variáveis de ambiente ou modifica os valores das variáveis de ambiente existentes. Variáveis de ambiente definem o ambiente no qual um processo é executado (por exemplo, o caminho de pesquisa padrão para bibliotecas a ser vinculado a um programa). **_wputenv** é uma versão de caractere largo do **_putenv**; o argumento *envstring* para **_wputenv** é uma cadeia de caracteres largos.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -78,16 +81,16 @@ O **putenv** função adiciona novas variáveis de ambiente ou modifica os valor
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tputenv**|**_putenv**|**_putenv**|**_wputenv**|
 
-O *cadeiacaracenv* argumento deve ser um ponteiro para uma cadeia de caracteres do formulário *varname*=*sequência_dovalor*, em que *varname* é o nome da variável de ambiente a ser adicionada ou modificada e *sequência_dovalor* é o valor da variável. Se *varname* já é parte do ambiente, seu valor é substituído pelo *sequência_dovalor*; caso contrário, o novo *varname* variável e seu *sequência_dovalor*  valor são adicionadas ao ambiente. Você pode remover uma variável do ambiente especificando uma vazia *sequência_dovalor*, ou em outras palavras, especificando somente *varname*=.
+O argumento *envstring* deve ser um ponteiro para uma cadeia de caracteres do formato *VarName*=*value_string*, em que *VarName* é o nome da variável de ambiente a ser adicionada ou modificada e *value_string* é a variável valor. Se *VarName* já fizer parte do ambiente, seu valor será substituído por *value_string*; caso contrário, a nova variável *VarName* e seu valor *value_string* serão adicionados ao ambiente. Você pode remover uma variável do ambiente especificando um *value_string*vazio ou, em outras palavras, especificando somente *VarName*=.
 
-**putenv** e **wputenv** afetam apenas o ambiente local para o processo atual; você não pode usá-los para modificar o ambiente de nível de comando. Isso é, essas funções operam somente nas estruturas de dados que são acessíveis para a biblioteca em tempo de execução e não no segmento de ambiente criado para um processo pelo sistema operacional. Quando o processo atual termina, o ambiente é revertido para o nível do processo de chamada (que, na maioria dos casos, é o nível do sistema operacional). No entanto, o ambiente modificado pode ser passado para novos processos criados por **spawn**, **EXEC**, ou **sistema**, e esses novos processos obtém os novos itens adicionados pelo **putenv** e **wputenv**.
+**_putenv** e **_wputenv** afetam apenas o ambiente local para o processo atual; Você não pode usá-los para modificar o ambiente de nível de comando. Isso é, essas funções operam somente nas estruturas de dados que são acessíveis para a biblioteca em tempo de execução e não no segmento de ambiente criado para um processo pelo sistema operacional. Quando o processo atual termina, o ambiente é revertido para o nível do processo de chamada (que, na maioria dos casos, é o nível do sistema operacional). No entanto, o ambiente modificado pode ser passado para quaisquer novos processos criados por **_spawn**, **_exec**ou **System**, e esses novos processos recebem novos itens adicionados por **_putenv** e **_wputenv**.
 
-Não altere uma entrada de ambiente diretamente: em vez disso, use **putenv** ou **wputenv** alterá-la. Em particular, direta, liberar elementos dos **[ Environ]** matriz global pode levar a memória inválida seja resolvida.
+Não altere uma entrada de ambiente diretamente: em vez disso, use **_putenv** ou **_wputenv** para alterá-la. Em particular, os elementos de liberação direta da matriz global **_environ []** podem levar à memória inválida que está sendo resolvida.
 
-**GETENV** e **putenv** usa a variável global **Environ** para acessar a tabela de ambiente; **wgetenv** e **wputenv** usar **wenviron**. **putenv** e **wputenv** pode alterar o valor de **Environ** e **wenviron**, invalidando, portanto, o **_envp** argumento para **principal** e o **_wenvp** argumento **wmain**. Portanto, é mais seguro usar **Environ** ou **wenviron** para acessar as informações de ambiente. Para obter mais informações sobre a relação de **putenv** e **wputenv** variáveis globais, consulte [Environ, wenviron](../../c-runtime-library/environ-wenviron.md).
+**getenv** e **_putenv** usam a variável global **_environ** para acessar a tabela de ambiente; **_wgetenv** e **_wputenv** usam **_wenviron**. **_putenv** e **_wputenv** podem alterar o valor de **_environ** e **_wenviron**, invalidando, portanto, o argumento **_envp** para **Main** e o argumento **_wenvp** para **wmain**. Portanto, é mais seguro usar **_environ** ou **_wenviron** para acessar as informações do ambiente. Para obter mais informações sobre a relação de **_putenv** e **_wputenv** a variáveis globais, consulte [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
-> O **putenv** e **_getenv** famílias de funções não são thread-safe. **_getenv** poderia retornar um ponteiro de cadeia de caracteres enquanto **putenv** está modificando a cadeia de caracteres, causando falhas aleatórias. As chamadas para essas funções devem estar sincronizadas.
+> As famílias de funções **_putenv** e **_getenv** não são thread-safe. **_getenv** poderia retornar um ponteiro de cadeia de caracteres enquanto **_putenv** estiver modificando a cadeia de caracteres, causando falhas aleatórias. As chamadas para essas funções devem estar sincronizadas.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -100,7 +103,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 ## <a name="example"></a>Exemplo
 
-Para obter um exemplo de como usar **putenv**, consulte [getenv, wgetenv](getenv-wgetenv.md).
+Para obter um exemplo de como usar **_putenv**, consulte [getenv, _wgetenv](getenv-wgetenv.md).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,10 +1,10 @@
 ---
 title: _ismbbtrail, _ismbbtrail_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbtrail
 - _ismbbtrail_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbtrail
 - ismbbtrail
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-ms.openlocfilehash: 5c09884f013e878fca516388f1ad933a2a08b35a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e445de41b05ac4829bdf108d1c98113cd5240ec0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286856"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953967"
 ---
-# <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail, _ismbbtrail_l
+# <a name="_ismbbtrail-_ismbbtrail_l"></a>_ismbbtrail, _ismbbtrail_l
 
 Determina se um byte é um byte à direita de um caractere multibyte.
 
@@ -61,11 +64,11 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**ismbbtrail** retorna um valor diferente de zero se o número inteiro *c* é o segundo byte de um caractere multibyte. Por exemplo, somente na página de código 932, os intervalos válidos são 0x40 a 0x7E e 0x80 a 0xFC.
+**_ismbbtrail** retornará um valor diferente de zero se o inteiro *c* for o segundo byte de um caractere multibyte. Por exemplo, somente na página de código 932, os intervalos válidos são 0x40 a 0x7E e 0x80 a 0xFC.
 
 ## <a name="remarks"></a>Comentários
 
-**ismbbtrail** usa a localidade atual para o comportamento dependente da localidade. **ismbbtrail_l** é idêntico, exceto que ele usa a localidade que é passada em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_ismbbtrail** usa a localidade atual para o comportamento dependente de localidade. **_ismbbtrail_l** é idêntico, exceto pelo fato de que ele usa a localidade que é passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,10 +1,10 @@
 ---
 title: _fdopen, _wfdopen
 ms.date: 12/12/2017
-apiname:
+api_name:
 - _fdopen
 - _wfdopen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tfdopen
 - _fdopen
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-ms.openlocfilehash: 0cde110bf1dd12c23a6b0b658809502743d9edd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5202c84cd1a9038faf68587f9207d376ed8c0af1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334769"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941253"
 ---
-# <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
+# <a name="_fdopen-_wfdopen"></a>_fdopen, _wfdopen
 
 Associa um fluxo com um arquivo que foi aberto anteriormente para E/S de nível inferior.
 
@@ -67,58 +70,58 @@ Tipo de acesso do arquivo.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna um ponteiro para o fluxo aberto. Um valor de ponteiro nulo indica um erro. Quando ocorre um erro, o manipulador de parâmetro inválido é invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EBADF**, que indica um descritor de arquivo incorreto, ou **EINVAL**, que indica que *modo*  é um ponteiro nulo.
+Cada uma dessas funções retorna um ponteiro para o fluxo aberto. Um valor de ponteiro nulo indica um erro. Quando ocorre um erro, o manipulador de parâmetro inválido é invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EBADF**, que indica um descritor de arquivo inválido ou **EINVAL**, que indica que o *modo* era um ponteiro nulo.
 
 Para obter mais informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **fdopen** função associa um fluxo de e/s com o arquivo que é identificado pelo *fd*e, portanto, permite que um arquivo é aberto para e/s baixo nível sejam armazenados em buffer e formatada. **wfdopen** é uma versão de caractere largo de **fdopen**; o *modo* argumento **wfdopen** é uma cadeia de caracteres largos. **wfdopen** e **fdopen** caso contrário, se comportam de forma idêntica.
+A função **_fdopen** associa um fluxo de e/s ao arquivo que é identificado pelo *FD*e, portanto, permite que um arquivo aberto para e/s de baixo nível seja armazenado em buffer e formatado. **_wfdopen** é uma versão de caractere largo do **_fdopen**; o argumento de *modo* para **_wfdopen** é uma cadeia de caracteres largos. caso contrário, **_wfdopen** e **_fdopen** se comportam de forma idêntica.
 
-Arquivo descritores passados para **fdopen** são de propriedade por retornado **arquivo &#42;**  fluxo. Se **fdopen** for bem-sucedida, não chame [ \_fechar](close.md) no descritor de arquivo. Chamando [fclose](fclose-fcloseall.md) em retornado **arquivo &#42;**  também fecha o descritor de arquivo.
+Os descritores de arquivo passados para **_fdopen** pertencem ao fluxo de **arquivos &#42;**  retornado. Se **_fdopen** for bem-sucedido, não chame [ \_fechar](close.md) no descritor de arquivo. Chamar [fclose](fclose-fcloseall.md) no **arquivo &#42;**  retornado também fecha o descritor de arquivo.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
-|Rotina Tchar.h|\_UNICODE e \_MBCS não definidos|\_MBCS definido|\_UNICODE definido|
+|Rotina Tchar.h|\_Unicode e \_MBCS não definidos|\_MBCS definição|\_Definido em UNICODE|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfdopen**|**_fdopen**|**_fdopen**|**_wfdopen**|
 
-O *modo* cadeia de caracteres Especifica o tipo de acesso ao arquivo solicitado para o arquivo:
+A cadeia de caracteres do *modo* especifica o tipo de acesso ao arquivo solicitado para o arquivo:
 
-| *modo* | Acesso |
+| *modo* | Access |
 |--------|--------|
-| **"r"** | Abre para leitura. Se o arquivo não existe ou não for encontrado, o **fopen** chamar falhar. |
+| **"r"** | Abre para leitura. Se o arquivo não existir ou não puder ser encontrado, a chamada **fopen** falhará. |
 | **"w"** | Abre um arquivo vazio para gravação. Se o arquivo determinado existir, seus conteúdos são destruídos. |
-| **"a"** | Abre para gravação no final do arquivo (acréscimo). Cria o arquivo se ele não existir. |
+| **"a"** | Abre para gravação no final do arquivo (acrescentando). Cria o arquivo se ele não existir. |
 | **"r+"** | Abre para leitura e gravação. O arquivo deve existir. |
 | **"w+"** | Abre um arquivo vazio para leitura e gravação. Se o arquivo existir, seus conteúdos são destruídos. |
 | **"a+"** | Abre para leitura e conexão. Cria o arquivo se ele não existir. |
 
-Quando um arquivo é aberto com o **"a"** ou **"+"** acessar o tipo, todas as operações de gravação ocorrem no final do arquivo. O ponteiro do arquivo pode ser reposicionado usando [fseek](fseek-fseeki64.md) ou [rewind](rewind.md), mas é sempre movido de volta até o final do arquivo antes de qualquer operação de gravação é realizada. Sendo assim, dados existentes não podem ser substituídos. Quando o **"r +"**, **"w +"**, ou **"+"** tipo de acesso for especificado, são permitidas leitura e gravação (o arquivo deve ser aberto para "atualização"). No entanto, quando você muda entre leitura e gravação, deve haver uma intervenção [fflush](fflush.md), [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md), ou [rewind](rewind.md) operação. Você pode especificar a posição atual para o [fsetpos](fsetpos.md) ou [fseek](fseek-fseeki64.md) operação, se você quiser.
+Quando um arquivo é aberto com o tipo de acesso **"a"** ou **"a +"** , todas as operações de gravação ocorrem no final do arquivo. O ponteiro do arquivo pode ser reposicionado usando [fseek](fseek-fseeki64.md) ou [retrocesso](rewind.md), mas sempre é movido de volta para o final do arquivo antes de qualquer operação de gravação ser executada. Sendo assim, dados existentes não podem ser substituídos. Quando o tipo de acesso **"r +"** , **"w +"** ou **"a +"** é especificado, a leitura e a gravação são permitidas (o arquivo é considerado aberto para "atualização"). No entanto, quando você alterna entre leitura e gravação, deve haver uma operação intermediária [fflush](fflush.md), [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md)ou [retrocesso](rewind.md) . Você pode especificar a posição atual para a operação [fsetpos](fsetpos.md) ou [fseek](fseek-fseeki64.md) , se desejar.
 
-Além dos valores acima, os caracteres a seguir podem ser incluídos no *modo* para especificar o modo de conversão de caracteres de nova linha:
+Além dos valores acima, os caracteres a seguir também podem ser incluídos no *modo* para especificar o modo de tradução para caracteres de nova linha:
 
-| *modo* modificador | Comportamento |
+| modificador de *modo* | Comportamento |
 |-----------------|----------|
 | **t** | Abra no modo de texto (convertido). Neste modo, combinações de CR-LF (retorno de carro – avanço de linha) são convertidas em LFs (avanços de uma linha) na entrada e caracteres de LF são convertidos em combinações de CR-LF na saída. Além disso, Ctrl+Z é interpretado como um caractere de fim do arquivo na entrada. |
-| **b** | Abre no modo binário (não convertido). Todas as conversões do **t** modo são suprimidas. |
-| **c** | Habilitar o sinalizador de confirmação associado *filename* para que o conteúdo do buffer de arquivo sejam gravado diretamente no disco, se **fflush** ou **flushall** é chamado. |
-| **n** | Redefinir o sinalizador de confirmação associado *filename* para "no-commit". Esse é o padrão. Também substitui o sinalizador de confirmação global se você vincular o programa a Commode.obj. O padrão do sinalizador de confirmação global é "no-commit", a menos que você vincule explicitamente o programa a Commode.obj. |
+| **b** | Abre no modo binário (não convertido). Todas as traduções do modo **t** são suprimidas. |
+| **c** | Habilite o sinalizador de confirmação para o *nome de arquivo* associado para que o conteúdo do buffer de arquivo seja gravado diretamente no disco se o **fflush** ou **_flushall** for chamado. |
+| **n** | Redefina o sinalizador de confirmação para o *nome de arquivo* associado como "sem confirmação". Esse é o padrão. Também substitui o sinalizador de confirmação global se você vincular o programa a Commode.obj. O padrão do sinalizador de confirmação global é "no-commit", a menos que você vincule explicitamente o programa a Commode.obj. |
 
-O **t**, **c**, e **n** *modo* opções são extensões da Microsoft para **fopen** e **fdopen**. Não as use se você quiser preservar a portabilidade ANSI.
+As opções de *modo* **t**, **c**e **n** são extensões da Microsoft para **fopen** e **_fdopen**. Não as use se você quiser preservar a portabilidade ANSI.
 
-Se **t** ou **b** não é fornecido na *modo*, o modo de translação padrão é definido pela variável global [ \_fmode](../../c-runtime-library/fmode.md). Se **t** ou **b** é prefixado para o argumento, a função falhará e retornará NULL. Para saber mais sobre os modos de texto e binário, consulte [E/S de texto e arquivo de modo binário](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Se **t** ou **b** não for fornecido no *modo*, o modo de tradução padrão será definido pela variável [ \_global fmode](../../c-runtime-library/fmode.md). Se **t** ou **b** for prefixado para o argumento, a função falhará e retornará NULL. Para saber mais sobre os modos de texto e binário, consulte [E/S de texto e arquivo de modo binário](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-Caracteres válidos para o *modo* cadeia de caracteres usada na **fopen** e **fdopen** correspondem às *oflag* argumentos usados no [ \_abra](open-wopen.md) e [ \_sopen](sopen-wsopen.md), conforme mostrado nesta tabela:
+Os caracteres válidos para a cadeia de caracteres de *modo* usada em **fopen** e **_fdopen** correspondem aos argumentos *oflag* usados em [ \_Open](open-wopen.md) e [ \_sopen](sopen-wsopen.md), conforme mostrado nesta tabela:
 
-|Caracteres em *modo* cadeia de caracteres|Equivalente *oflag* valor para **Open** e **sopen**|
+|Caracteres no *modo* String|Valor equivalente de *oflag* para **_open** e **_sopen**|
 |---------------------------------|---------------------------------------------------|
-|**a**|**\_U\_WRONLY &#124; \_s\_APPEND** (geralmente  **\_s\_WRONLY &#124; \_s\_CRI &#124; \_s \_APPEND**)|
-|**a+**|**\_U\_RDWR &#124; \_s\_APPEND** (geralmente  **\_s\_RDWR &#124; \_s\_APPEND &#124; \_s\_ CRIAR** )|
+|**a**|**\_O\_ &#124; WRONLYoAppend\_(geralmente o WRONLY o CRI o \_** **\_ &#124; \_ &#124; \_ \_ \_\_ ACRESCENTAR**)|
+|**a +**|**\_O\_ &#124; RDWRoAppend\_(geralmente o RDWR o Append o CR \_** **\_ &#124; \_ &#124; \_ \_ \_\_**  )|
 |**r**|**\_O\_RDONLY**|
 |**r+**|**\_O\_RDWR**|
-|**w**|**\_U\_WRONLY** (geralmente  **\_s\_WRONLY &#124; \_s\_criar &#124; \_s\_TRUNC**)|
-|**w+**|**\_U\_RDWR** (geralmente  **\_s\_RDWR &#124; \_s\_criar &#124; \_s\_TRUNC**)|
+|**w**|**\_O\_WRONLY** (geralmente  **\_oWRONLY\_ &#124; o CRI otrunc\_) &#124; \_\_ \_**|
+|**w+**|**\_O\_RDWR** (geralmente  **\_oRDWR\_ &#124; o CRI otrunc\_) &#124; \_\_ \_**|
 |**b**|**\_O\_BINARY**|
 |**t**|**\_O\_TEXT**|
 |**c**|Nenhum|
@@ -170,7 +173,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtfdopentxt"></a>Entrada: crt_fdopen.txt
+### <a name="input-crt_fdopentxt"></a>Entrada: crt_fdopen.txt
 
 ```Input
 Line one
@@ -190,4 +193,4 @@ Lines in file: 2
 [fclose, \_fcloseall](fclose-fcloseall.md)<br/>
 [fopen, \_wfopen](fopen-wfopen.md)<br/>
 [freopen, \_wfreopen](freopen-wfreopen.md)<br/>
-[\_Abrir, \_wopen](open-wopen.md)<br/>
+[\_abrir, \_wopen](open-wopen.md)<br/>

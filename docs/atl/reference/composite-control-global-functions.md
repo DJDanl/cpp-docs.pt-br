@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 58c7fed2d6e95967101e98589a13c114fe2e9a8a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 525fc01247053a1e2bc993398978cb332262a1a5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496645"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927776"
 ---
 # <a name="composite-control-global-functions"></a>Funções globais de controle composto
 
@@ -156,18 +156,18 @@ ATLAPI AtlAxCreateControl(
 *lpszName*<br/>
 Um ponteiro para uma cadeia de caracteres a ser passada para o controle. Deve ser formatada de uma das seguintes maneiras:
 
-- Um ProgID como "MSCAL. Calendar. 7 "
+- Um ProgID como`"MSCAL.Calendar.7"`
 
-- Um CLSID como "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Um CLSID, como`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Uma URL como "<http://www.microsoft.com>"
+- Uma URL como`"<https://www.microsoft.com>"`
 
-- Uma referência a um documento ativo, como "file://\\\Documents\MyDoc.doc"
+- Uma referência a um documento ativo, como`"file://\\\Documents\MyDoc.doc"`
 
-- Um fragmento de HTML como\<"Mshtml: HTML >\<corpo > é uma linha de texto\</Body >\</html >"
+- Um fragmento de HTML, como`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" deve preceder o fragmento HTML para que ele seja designado como sendo um fluxo MSHTML.
+   > `"MSHTML:"`deve preceder o fragmento HTML para que ele seja designado como sendo um fluxo MSHTML.
 
 *hWnd*<br/>
 no Identificador para a janela à qual o controle será anexado.
@@ -208,18 +208,18 @@ ATLAPI AtlAxCreateControlEx(
 *lpszName*<br/>
 Um ponteiro para uma cadeia de caracteres a ser passada para o controle. Deve ser formatada de uma das seguintes maneiras:
 
-- Um ProgID como "MSCAL. Calendar. 7 "
+- Um ProgID como`"MSCAL.Calendar.7"`
 
-- Um CLSID como "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Um CLSID, como`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Uma URL como "<http://www.microsoft.com>"
+- Uma URL como`"<https://www.microsoft.com>"`
 
-- Uma referência a um documento ativo, como "file://\\\Documents\MyDoc.doc"
+- Uma referência a um documento ativo, como`"file://\\\Documents\MyDoc.doc"`
 
-- Um fragmento de HTML como\<"Mshtml: HTML >\<corpo > é uma linha de texto\</Body >\</html >"
+- Um fragmento de HTML, como`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" deve preceder o fragmento HTML para que ele seja designado como sendo um fluxo MSHTML.
+   > `"MSHTML:"`deve preceder o fragmento HTML para que ele seja designado como sendo um fluxo MSHTML.
 
 *hWnd*<br/>
 no Identificador para a janela à qual o controle será anexado.
@@ -267,18 +267,18 @@ ATLAPI AtlAxCreateControlLic(
 *lpszName*<br/>
 Um ponteiro para uma cadeia de caracteres a ser passada para o controle. Deve ser formatada de uma das seguintes maneiras:
 
-- Um ProgID como "MSCAL. Calendar. 7 "
+- Um ProgID como`"MSCAL.Calendar.7"`
 
-- Um CLSID como "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Um CLSID, como`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Uma URL como "<http://www.microsoft.com>"
+- Uma URL como`"<https://www.microsoft.com>"`
 
-- Uma referência a um documento ativo, como "file://\\\Documents\MyDoc.doc"
+- Uma referência a um documento ativo, como`"file://\\\Documents\MyDoc.doc"`
 
-- Um fragmento de HTML como\<"Mshtml: HTML >\<corpo > é uma linha de texto\</Body >\</html >"
+- Um fragmento de HTML, como`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" deve preceder o fragmento HTML para que ele seja designado como sendo um fluxo MSHTML.
+   > `"MSHTML:"`deve preceder o fragmento HTML para que ele seja designado como sendo um fluxo MSHTML.
 
 *hWnd*<br/>
 Identificador para a janela à qual o controle será anexado.
@@ -321,18 +321,18 @@ ATLAPI AtlAxCreateControlLicEx(
 *lpszName*<br/>
 Um ponteiro para uma cadeia de caracteres a ser passada para o controle. Deve ser formatada de uma das seguintes maneiras:
 
-- Um ProgID como "MSCAL. Calendar. 7 "
+- Um ProgID como`"MSCAL.Calendar.7"`
 
-- Um CLSID como "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Um CLSID, como`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Uma URL como "<http://www.microsoft.com>"
+- Uma URL como`"<https://www.microsoft.com>"`
 
-- Uma referência a um documento ativo, como "file://\\\Documents\MyDoc.doc"
+- Uma referência a um documento ativo, como`"file://\\\Documents\MyDoc.doc"`
 
-- Um fragmento de HTML como\<"Mshtml: HTML >\<corpo > é uma linha de texto\</Body >\</html >"
+- Um fragmento de HTML, como`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" deve preceder o fragmento HTML para que ele seja designado como sendo um fluxo MSHTML.
+   > `"MSHTML:"`deve preceder o fragmento HTML para que ele seja designado como sendo um fluxo MSHTML.
 
 *hWnd*<br/>
 Identificador para a janela à qual o controle será anexado.

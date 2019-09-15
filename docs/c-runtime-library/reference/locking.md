@@ -1,9 +1,9 @@
 ---
 title: _locking
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _locking
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _locking
 helpviewer_keywords:
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4450c511b9d98c31b7e6a777f54f3bd8e0affbb7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157456"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953264"
 ---
-# <a name="locking"></a>_locking
+# <a name="_locking"></a>_locking
 
 Bloqueia ou desbloqueia os bytes de um arquivo.
 
@@ -59,32 +62,32 @@ O número de bytes a serem bloqueados.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**Locking** retorna 0 se for bem-sucedido. Um valor de retorno de -1 indica falha, caso em que [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como um dos valores a seguir.
+**_locking** retornará 0 se for bem-sucedido. Um valor de retorno de-1 indica falha; nesse caso, [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como um dos valores a seguir.
 
 |Valor errno|Condição|
 |-|-|
 | **EACCES** | Violação de bloqueio (arquivo já foi bloqueado ou desbloqueado). |
 | **EBADF** | Descritor de arquivo inválido. |
-| **EDEADLOCK** | Violação de bloqueio. Retornado quando o **lk_lock** ou **lk_rlck** sinalizador for especificado e o arquivo não pode ser bloqueado após 10 tentativas. |
-| **EINVAL** | Um argumento inválido foi fornecido ao **Locking**. |
+| **EDEADLOCK** | Violação de bloqueio. Retornado quando o sinalizador **_LK_LOCK** ou **_LK_RLCK** é especificado e o arquivo não pode ser bloqueado após 10 tentativas. |
+| **EINVAL** | Um argumento inválido foi fornecido para **_locking**. |
 
 Se houver uma falha devido a um parâmetro incorreto, como um descritor de arquivo inválido, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **Locking** função bloqueia ou desbloqueia *nbytes* bytes do arquivo especificado por *fd*. Os bytes bloqueados em um arquivo impedem o acesso a esses bytes por outros processos. Todos os bloqueios ou desbloqueios se iniciam na posição atual do ponteiro do arquivo e avança para os próximos bytes *nbytes*. É possível bloquear bytes após o final do arquivo.
+A função **_locking** bloqueia ou desbloqueia os bytes de *nbytes* do arquivo especificado por *fd*. Os bytes bloqueados em um arquivo impedem o acesso a esses bytes por outros processos. Todos os bloqueios ou desbloqueios se iniciam na posição atual do ponteiro do arquivo e avança para os próximos bytes *nbytes*. É possível bloquear bytes após o final do arquivo.
 
 *mode* deve ser uma das seguintes constantes de manifesto definidas em Locking.h.
 
-|*modo* valor|Efeito|
+|valor de *modo*|Efeito|
 |-|-|
 | **_LK_LOCK** | Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, o programa tentará novamente após 1 segundo. Se, após 10 tentativas, os bytes não puderem ser bloqueados, a constante retornará um erro. |
 | **_LK_NBLCK** | Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, a constante retornará um erro. |
-| **_LK_NBRLCK** | Same as **_LK_NBLCK**. |
-| **_LK_RLCK** | Mesmo que **lk_lock**. |
+| **_LK_NBRLCK** | O mesmo que **_LK_NBLCK**. |
+| **_LK_RLCK** | O mesmo que **_LK_LOCK**. |
 | **_LK_UNLCK** | Desbloqueia os bytes especificados, que devem ter sido bloqueados anteriormente. |
 
-Várias regiões de um arquivo que não se sobrepõem podem ser bloqueadas. Uma região que está sendo desbloqueada deve ter sido bloqueada anteriormente. **Locking** mescla regiões adjacentes; se duas regiões bloqueadas forem adjacentes, cada região deve ser desbloqueada separadamente. Regiões devem ser bloqueadas por um curto período de tempo e devem ser desbloqueadas antes de fechar um arquivo ou sair do programa.
+Várias regiões de um arquivo que não se sobrepõem podem ser bloqueadas. Uma região que está sendo desbloqueada deve ter sido bloqueada anteriormente. **_locking** não mescla regiões adjacentes; se duas regiões bloqueadas estiverem adjacentes, cada região deverá ser desbloqueada separadamente. Regiões devem ser bloqueadas por um curto período de tempo e devem ser desbloqueadas antes de fechar um arquivo ou sair do programa.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -149,7 +152,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtlockingtxt"></a>Entrada: crt_locking.txt
+### <a name="input-crt_lockingtxt"></a>Entrada: crt_locking.txt
 
 ```Input
 The first thirty bytes of this file will be locked.

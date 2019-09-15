@@ -1,12 +1,12 @@
 ---
 title: strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 ms.date: 01/22/2019
-apiname:
+api_name:
 - strcat_s
 - _mbscat_s
 - _mbscat_s_l
 - wcscat_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcat_s
 - wcscat_s
@@ -35,19 +38,19 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: bd7894ba77e7fa67fa3844587394bd3e2e821391
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4449ec788b33a541a04a46d972f56f792797a16e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354373"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957987"
 ---
-# <a name="strcats-wcscats-mbscats-mbscatsl"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
+# <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
 Acrescenta uma cadeia de caracteres. Estas versões de [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) têm aprimoramentos de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **mbscat_s** e **_mbscat_s_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** e **_mbscat_s_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -118,13 +121,13 @@ Zero se for bem-sucedido; um código de erro em caso de falha.
 
 |*strDestination*|*numberOfElements*|*strSource*|Valor retornado|Conteúdo de *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULO** ou não finalizado|qualquer|qualquer|**EINVAL**|não modificado|
-|qualquer|qualquer|**NULL**|**EINVAL**|*strDestination*[0] definido como 0|
-|qualquer|0 ou muito pequeno|qualquer|**ERANGE**|*strDestination*[0] definido como 0|
+|**Nulo** ou não terminado|qualquer|qualquer|**EINVAL**|não modificado|
+|qualquer|qualquer|**NULL**|**EINVAL**|*strDestination* [0] definido como 0|
+|qualquer|0 ou muito pequeno|qualquer|**ERANGE**|*strDestination* [0] definido como 0|
 
 ## <a name="remarks"></a>Comentários
 
-O **strcat_s** função acrescentará *strSource* para *strDestination* e encerra a cadeia de caracteres resultante com um caractere nulo. O caractere inicial de *strSource* substitui o caractere nulo de terminação de *strDestination*. O comportamento de **strcat_s** é indefinido se as cadeias de caracteres de origem e de destino se sobrepõem.
+A função **strcat_s** acrescenta *strSource* a *strDestination* e termina a cadeia de caracteres resultante com um caractere nulo. O caractere inicial de *strSource* substitui o caractere nulo de terminação de *strDestination*. O comportamento de **strcat_s** é indefinido se as cadeias de caracteres de origem e de destino se sobrepõem.
 
 Observe que o segundo parâmetro é o tamanho total do buffer, não o tamanho restante:
 
@@ -135,11 +138,11 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s** e **mbscat_s** são versões de caractere largo e caracteres multibyte **strcat_s**. Os argumentos e o valor de retorno **wcscat_s** são largos cadeias de caracteres; aqueles de **mbscat_s** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+**wcscat_s** e **_mbscat_s** são versões de caractere largo e de multibyte de **strcat_s**. Os argumentos e o valor de retorno de **wcscat_s** são cadeias de caracteres largos; os de **_mbscat_s** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
-Se *strDestination* for um ponteiro nulo ou não é terminada em nulo, ou se *strSource* é um **nulo** ponteiro, ou se a cadeia de caracteres de destino for muito pequena, o parâmetro inválido manipulador será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EINVAL** e defina **errno** para **EINVAL**.
+Se *strDestination* for um ponteiro NULL ou não for terminada em nulo, ou se *strSource* for um ponteiro **NULL** ou se a cadeia de caracteres de destino for muito pequena, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EINVAL** e definirá **errno** como **EINVAL**.
 
-As versões de funções que têm o **l** sufixo têm o mesmo comportamento, mas use o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões das funções que têm o sufixo **_L** têm o mesmo comportamento, mas usam o parâmetro Locale que é passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

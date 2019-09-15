@@ -1,9 +1,9 @@
 ---
 title: fegetexceptflag
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fegetexceptflag
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fegetexceptflag
 - fenv/fegetexceptflag
 helpviewer_keywords:
 - fegetexceptflag function
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
-ms.openlocfilehash: 43259001bd05bb7df9e2e1636c174018dcdaef3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d3bf59b28a464dc163dc027b867e890c3c8797b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334418"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941226"
 ---
 # <a name="fegetexceptflag"></a>fegetexceptflag
 
@@ -45,10 +48,10 @@ int fegetexceptflag(
 ### <a name="parameters"></a>Parâmetros
 
 *pstatus*<br/>
-Um ponteiro para um **fexcept_t** objeto para conter os valores atuais dos sinalizadores de exceção especificados por *, exceto*.
+Um ponteiro para um objeto **fexcept_t** para conter os valores atuais dos sinalizadores de exceção especificados por *Except*.
 
-*excepts*<br/>
-Os sinalizadores de exceção de ponto flutuante para armazenar no *pstatus*.
+*exceções*<br/>
+Os sinalizadores de exceção de ponto flutuante para armazenar em *pStatus*.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -56,7 +59,7 @@ Em caso de sucesso, retorna 0. Caso contrário, retornará um valor diferente de
 
 ## <a name="remarks"></a>Comentários
 
-O **fegetexceptflag** função armazena o estado atual dos sinalizadores de status de exceção de ponto flutuante especificado por *, exceto* no **fexcept_t** objeto apontado por *pstatus*.  *pstatus* deve apontar para um válido **fexcept_t** objeto ou o comportamento subsequente será indefinido. O **fegetexceptflag** função dá suporte a essas macros de exceção, definidas em \<fenv. h >:
+A função **fegetexceptflag** armazena o estado atual dos sinalizadores de status de exceção de ponto flutuante especificados por *Except* no objeto **fexcept_t** apontado por *pStatus*.  *pStatus* deve apontar para um objeto **fexcept_t** válido, ou o comportamento subsequente é indefinido. A função **fegetexceptflag** dá suporte a essas macros de \<exceção, definidas em fenv. h >:
 
 |Macro de exceção|Descrição|
 |---------------------|-----------------|
@@ -67,7 +70,7 @@ O **fegetexceptflag** função armazena o estado atual dos sinalizadores de stat
 |FE_UNDERFLOW|O resultado de uma operação de ponto flutuante anterior era muito pequeno para ser representado na precisão total. Um valor de denormal foi criado.|
 |FE_ALLEXCEPT|O OR bit a bit de todas as exceções de ponto flutuante com suporte.|
 
-O *, exceto* argumento pode ser zero, uma das macros de exceção de ponto flutuante com suporte ou bit a bit ou de duas ou mais das macros. O efeito de qualquer outro valor de argumento é indefinido.
+O argumento *Except* pode ser zero, uma das macros de exceção de ponto flutuante com suporte, ou a bit e vírgula de duas ou mais macros. O efeito de qualquer outro valor de argumento é indefinido.
 
 Para usar essa função, você deve desligar otimizações de ponto flutuante que poderiam impedir o acesso usando a diretiva `#pragma fenv_access(on)` antes da chamada. Para obter mais informações, consulte [fenv_access](../../preprocessor/fenv-access.md).
 
