@@ -1,10 +1,10 @@
 ---
 title: _getch_nolock, _getwch_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getwch_nolock
 - _getch_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getch_nolock
 - getwch_nolock
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - getch_nolock function
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
-ms.openlocfilehash: dbfc670b70a278e97794fc19f170cef565626dbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c8f27b468d0471f44211efa12dcee6453b3fac1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287528"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955463"
 ---
-# <a name="getchnolock-getwchnolock"></a>_getch_nolock, _getwch_nolock
+# <a name="_getch_nolock-_getwch_nolock"></a>_getch_nolock, _getwch_nolock
 
 Obtém um caractere do console, sem eco e sem bloquear o thread.
 
@@ -61,7 +64,7 @@ Retorna o caractere lido. Nenhum erro é retornado.
 
 ## <a name="remarks"></a>Comentários
 
-**getch_nolock** e **getwch_nolock** são idênticas às **getch** e **_getchw** , exceto que não serem protegidas contra interferência de outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+**_getch_nolock** e **_getwch_nolock** são idênticos a **_getch** e **_getchw** , exceto que não estão protegidos contra interferência por outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

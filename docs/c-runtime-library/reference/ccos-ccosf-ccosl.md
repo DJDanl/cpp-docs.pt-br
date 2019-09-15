@@ -1,11 +1,11 @@
 ---
 title: ccos, ccosf, ccosl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ccos
 - ccosf
 - ccosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ccos
 - ccosf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ccosf function
 - ccosl function
 ms.assetid: 4ab936ac-ff85-49ac-9418-2b69cf5d4696
-ms.openlocfilehash: d1a94f7ad0bbd525480d344fa8ac5b3ee591a1b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d6acddf979b7488be722bd850fe9e16816d1030
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340437"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943176"
 ---
 # <a name="ccos-ccosf-ccosl"></a>ccos, ccosf, ccosl
 
@@ -68,11 +71,11 @@ Um número complexo que representa o ângulo, em radianos.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O cosseno *z*, em radianos.
+O cosseno de *z*, em radianos.
 
 ## <a name="remarks"></a>Comentários
 
-Porque C++ permite sobrecargas, é possível chamar sobrecargas de **ccos** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **ccos** sempre usa e retorna um **_Dcomplex** valor.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **CCOs** que usam e retornam valores **_Fcomplex** e **_Lcomplex** . Em um programa C, **CCOs** sempre pega e retorna um valor **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,12 +1,12 @@
 ---
 title: _ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbclegal_l
 - _ismbclegal
 - _ismbcsymbol
 - _ismbcsymbol_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbcsymbol_l
 - _ismbcsymbol_l
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-ms.openlocfilehash: 07855ec970b2bf307238982987912f1e91505e96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e040db584725322e98d0a82b28912eea100aff7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286826"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953797"
 ---
-# <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
+# <a name="_ismbclegal-_ismbclegal_l-_ismbcsymbol-_ismbcsymbol_l"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 
 Verifica se um caractere multibyte é um caractere de símbolo ou legal.
 
@@ -85,18 +88,18 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c*< = 255 e houver um correspondente **ismbb** rotina (por exemplo, **ismbcalnum** corresponde ao **ismbbalnum**), o resultado é o valor retornado de correspondente **ismbb** rotina.
+Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c*< = 255 e houver uma rotina **_ismbb** correspondente (por exemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), o resultado será o valor de retorno da rotina **_ismbb** correspondente.
 
 ## <a name="remarks"></a>Comentários
 
 Cada uma dessas funções testa um determinado caractere multibyte quanto a uma determinada condição.
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam a localidade passada em vez da localidade atual para seu comportamento dependente da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam a localidade passada em vez da localidade atual para seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 |Rotina|Condição de teste|Exemplo da página de código 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclegal**|Multibyte válido|Retorna diferente de zero se e somente se o primeiro byte de *c* estiver dentro dos intervalos 0x81 – 0x9F ou 0xE0 – 0xFC, enquanto o segundo byte estiver dentro dos intervalos 0x40 – 0x7E ou 0x80 – FC.|
-|**_ismbcsymbol**|Símbolo multibyte|Retorna diferente de zero se e somente se 0x8141< < =*c*< lt;=0x81ac.|
+|**_ismbclegal**|Multibyte válido|Retornará zero se e somente se o primeiro byte de *c* estiver dentro dos intervalos 0X81-0X9F ou 0XE0-0xFC, enquanto o segundo byte está dentro dos intervalos 0X40-0x7E ou 0X80-FC.|
+|**_ismbcsymbol**|Símbolo multibyte|Retornará zero se e somente se 0x8141 < =*c*< = 0x81AC.|
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

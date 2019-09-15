@@ -1,11 +1,11 @@
 ---
 title: ccosh, ccoshf, ccoshl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ccosh
 - ccoshf
 - ccoshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ccosh
 - ccoshf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ccoshf function
 - ccoshl function
 ms.assetid: 79667449-4edf-4948-bf6b-720adf2b3f3b
-ms.openlocfilehash: c25441d4f25f9e77a0cb71d942e132f34c4c1f5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 978db0141ecd6799c3a8d19a3b4621ae1a2e8b43
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335549"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943282"
 ---
 # <a name="ccosh-ccoshf-ccoshl"></a>ccosh, ccoshf, ccoshl
 
@@ -68,11 +71,11 @@ Um número complexo que representa o ângulo, em radianos.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O cosseno hiperbólico *z*, em radianos.
+O cosseno hiperbólico de *z*, em radianos.
 
 ## <a name="remarks"></a>Comentários
 
-Porque C++ permite sobrecargas, é possível chamar sobrecargas de **ccosh** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **ccosh** sempre usa e retorna um **_Dcomplex** valor.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **ccosh** que usam e retornam valores **_Fcomplex** e **_Lcomplex** . Em um programa C, **ccosh** sempre pega e retorna um valor **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisitos
 

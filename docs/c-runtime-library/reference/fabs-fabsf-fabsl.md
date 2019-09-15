@@ -1,11 +1,11 @@
 ---
 title: fabs, fabsf, fabsl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fabsf
 - fabs
 - fabsl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fabs
 - fabsf
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 8df36c06fb3ca9af9be4cf704998946b3eaf9a6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 155b0e4ced7eb4ea0ade5445a62fc385f0c157e9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334938"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941491"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -70,7 +73,7 @@ Valor de ponto flutuante.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **fabs** funções retornam o valor absoluto do argumento *x*. Nenhum erro é retornado.
+As funções **fabs** retornam o valor absoluto do argumento *x*. Nenhum erro é retornado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
@@ -78,7 +81,7 @@ O **fabs** funções retornam o valor absoluto do argumento *x*. Nenhum erro é 
 
 ## <a name="remarks"></a>Comentários
 
-C++ permite sobrecargas, portanto, é possível chamar sobrecargas de **fabs** se você incluir o \<cmath > cabeçalho. Em um programa do C **fabs** sempre usa e retorna um **duplo**.
+C++permite sobrecarregar, para que você possa chamar sobrecargas de **fabs** se incluir o \<cabeçalho de > cmath. Em um programa C, **fabs** sempre pega e retorna um **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

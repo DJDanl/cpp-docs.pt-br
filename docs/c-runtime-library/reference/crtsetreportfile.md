@@ -1,9 +1,9 @@
 ---
 title: _CrtSetReportFile
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetReportFile
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtSetReportFile
 - _CrtSetReportFile
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - CrtSetReportFile function
 - _CrtSetReportFile function
 ms.assetid: 3126537e-511b-44af-9c1c-0605265eabc4
-ms.openlocfilehash: 32a560e09c47468daf48c185e23d6e289c6d1d9b
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: bf88bae40031f6e92d6f936ac8a50f85d6c4e36c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343012"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942288"
 ---
-# <a name="crtsetreportfile"></a>_CrtSetReportFile
+# <a name="_crtsetreportfile"></a>_CrtSetReportFile
 
-Depois de usar [CrtSetReportMode](crtsetreportmode.md) para especificar **_CRTDBG_MODE_FILE**, você pode especificar o identificador de arquivo para receber o texto da mensagem. **Crtsetreportfile** também é usado pelo [crtdbgreport, CrtDbgReportW](crtdbgreport-crtdbgreportw.md) para especificar o destino do texto (somente versão de depuração).
+Depois de usar [_CrtSetReportMode](crtsetreportmode.md) para especificar **_CRTDBG_MODE_FILE**, você pode especificar o identificador de arquivo para receber o texto da mensagem. **_CrtSetReportFile** também é usado pelo [_CrtDbgReport, _ CrtDbgReportW](crtdbgreport-crtdbgreportw.md) para especificar o destino do texto (somente versão de depuração).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,22 +48,22 @@ _HFILE _CrtSetReportFile(
 ### <a name="parameters"></a>Parâmetros
 
 *reportType*<br/>
-Tipo de relatório: **_CRT_WARN**, **crt_error**, e **_CRT_ASSERT**.
+Tipo de relatório: **_CRT_WARN**, **_CRT_ERROR**e **_CRT_ASSERT**.
 
 *reportFile*<br/>
-Novo arquivo de relatório do *reportType*.
+Novo arquivo de relatório para *reportType*.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Após a conclusão bem-sucedida, **crtsetreportfile** retorna o arquivo de relatório anterior definido para o tipo de relatório especificado em *reportType*. Se um valor inválido for passado *reportType*, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará **_CRTDBG_HFILE_ERROR**. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Após a conclusão bem-sucedida, **_CrtSetReportFile** retorna o arquivo de relatório anterior definido para o tipo de relatório especificado em *reportType*. Se um valor inválido for passado para *reportType*, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará **_CRTDBG_HFILE_ERROR**. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-**Crtsetreportfile** é usado com o [CrtSetReportMode](crtsetreportmode.md) função para definir o destino ou destinos de um tipo de relatório específico gerado por **crtdbgreport**. Quando **CrtSetReportMode** tiver sido chamado para atribuir a **_CRTDBG_MODE_FILE** modo para um tipo de relatório do reporting **crtsetreportfile** , em seguida, deve ser chamado para Defina o arquivo específico ou o fluxo a ser usado como o destino. Quando [Debug](../../c-runtime-library/debug.md) não está definido, as chamadas a **crtsetreportfile** são removidas durante o pré-processamento.
+**_CrtSetReportFile** é usado com a função [_CrtSetReportMode](crtsetreportmode.md) para definir o destino ou destinos para um tipo de relatório específico gerado pelo **_CrtDbgReport**. Quando **_CrtSetReportMode** tiver sido chamado para atribuir o modo de relatório **_CRTDBG_MODE_FILE** para um tipo de relatório específico, **_CrtSetReportFile** deverá ser chamado para definir o arquivo ou fluxo específico a ser usado como o destino. Quando [_DEBUG](../../c-runtime-library/debug.md) não é definido, as chamadas para **_CrtSetReportFile** são removidas durante o pré-processamento.
 
-A lista a seguir mostra as opções disponíveis para *reportFile* e o comportamento resultante de **crtdbgreport**. Essas opções são definidas como sinalizadores de bits em Crtdbg.h.
+A lista a seguir mostra as opções disponíveis para o *REPORTFILE* e o comportamento resultante de **_CrtDbgReport**. Essas opções são definidas como sinalizadores de bits em Crtdbg.h.
 
-- **Identificador de arquivo**
+- **identificador de arquivo**
 
    Um identificador para o arquivo que será o destino das mensagens. Nenhuma tentativa é feita para verificar a validade do identificador. É necessário abrir e fechar o identificador do arquivo. Por exemplo:
 
@@ -78,7 +81,7 @@ A lista a seguir mostra as opções disponíveis para *reportFile* e o comportam
 
 - **_CRTDBG_FILE_STDERR**
 
-   Grava a mensagem **stderr**, que pode ser redirecionada da seguinte maneira:
+   Grava a mensagem em **stderr**, que pode ser redirecionada da seguinte maneira:
 
    ```C
    freopen( "c:\\log2.txt", "w", stderr);
@@ -90,13 +93,13 @@ A lista a seguir mostra as opções disponíveis para *reportFile* e o comportam
 
 - **_CRTDBG_FILE_STDOUT**
 
-   Grava a mensagem **stdout**, que pode ser redirecionada.
+   Grava a mensagem em **stdout**, que você pode redirecionar.
 
 - **_CRTDBG_REPORT_FILE**
 
    Retorna o modo de relatório atual.
 
-O arquivo de relatório usado por cada tipo de relatório pode ser controlado separadamente. Por exemplo, é possível especificar que um *reportType* dos **crt_error** relatados ao **stderr**, enquanto um *reportType* do **_CRT_ASSERT** relatadas para um fluxo ou um identificador de arquivo definido pelo usuário.
+O arquivo de relatório usado por cada tipo de relatório pode ser controlado separadamente. Por exemplo, é possível especificar que um *reportType* de **_CRT_ERROR** seja relatado para **stderr**, enquanto um *reportType* de **_CRT_ASSERT** ser relatado a um identificador de arquivo ou fluxo definido pelo usuário.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -104,9 +107,9 @@ O arquivo de relatório usado por cada tipo de relatório pode ser controlado se
 |-------------|---------------------|---------------------|
 |**_CrtSetReportFile**|\<crtdbg.h>|\<errno.h>|
 
-Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-**Bibliotecas:** Versões de depuração [recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md) apenas.
+**DLLs** Depurar versões somente de [recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="see-also"></a>Consulte também
 

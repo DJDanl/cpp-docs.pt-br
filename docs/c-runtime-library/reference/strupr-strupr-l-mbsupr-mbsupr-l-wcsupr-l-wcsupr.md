@@ -1,14 +1,14 @@
 ---
 title: _strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsupr_l
 - _mbsupr
 - _strupr_l
 - _wcsupr
 - _wcsupr_l
 - _strupr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbsupr
 - _ftcsupr
@@ -60,19 +63,19 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-ms.openlocfilehash: c3d155ebfdc40c5dd479cffed0b892dd73f80138
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8078bddd022032196c0e10cd54b0ad68d9c71419
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269024"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957575"
 ---
-# <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
+# <a name="_strupr-_strupr_l-_mbsupr-_mbsupr_l-_wcsupr_l-_wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 
 Converte uma cadeia de caracteres em maiúsculas. Versões mais seguras dessas funções estão disponíveis; consulte [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).
 
 > [!IMPORTANT]
-> **mbsupr** e **mbsupr_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsupr** e **_mbsupr_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -141,11 +144,11 @@ Retorna um ponteiro para a cadeia de caracteres alterada. Como a modificação �
 
 ## <a name="remarks"></a>Comentários
 
-O **strupr** função converte, in-loco, cada letra minúscula em *str* em maiusculas. A conversão é determinada pela **LC_CTYPE** configuração de categoria da localidade. Outros caracteres não são afetados. Para obter mais informações sobre **LC_CTYPE**, consulte [setlocale](setlocale-wsetlocale.md). As versões dessas funções sem o **l** sufixo usar a localidade atual; as versões com o **l** sufixo são idênticas, exceto que eles usam a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+A função **_strupr** converte, em vigor, cada letra minúscula em *Str* em maiúsculas. A conversão é determinada pela configuração de categoria **LC_CTYPE** da localidade. Outros caracteres não são afetados. Para obter mais informações sobre o **LC_CTYPE**, consulte [setlocaling](setlocale-wsetlocale.md). As versões dessas funções sem o sufixo **_L** usam a localidade atual; as versões com o sufixo **_L** são idênticas, exceto que usam a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-**wcsupr** e **mbsupr** são versões de caractere largo e caracteres multibyte **strupr**. O argumento e o valor retornado de **wcsupr** são largos cadeias de caracteres; aqueles de **mbsupr** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+**_wcsupr** e **_mbsupr** são versões de caractere largo e de multibyte de **_strupr**. O argumento e o valor de retorno de **_wcsupr** são cadeias de caracteres largos; os de **_mbsupr** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
-Se *str* for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, essas funções retornarão a cadeia de caracteres original e definirão **errno** à **EINVAL**.
+Se *Str* for um ponteiro NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, essas funções retornarão a cadeia de caracteres original e definirá **errno** como **EINVAL**.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

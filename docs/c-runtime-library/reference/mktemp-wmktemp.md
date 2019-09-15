@@ -1,10 +1,10 @@
 ---
 title: _mktemp, _wmktemp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wmktemp
 - _mktemp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tmktemp
 - wmktemp
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-ms.openlocfilehash: c1c5f0ee12c9e07d76405014bb4a6a6ecc7d97e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7cfca04d4f0df2673a2221f00a1263f73e8516ec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156506"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951575"
 ---
-# <a name="mktemp-wmktemp"></a>_mktemp, _wmktemp
+# <a name="_mktemp-_wmktemp"></a>_mktemp, _wmktemp
 
 Cria um nome de arquivo exclusivo. Estão disponíveis versões mais seguras dessas funções; consulte [_mktemp_s, _wmktemp_s](mktemp-s-wmktemp-s.md).
 
@@ -70,11 +73,11 @@ Padrão de nome de arquivo.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna um ponteiro para o nameTemplate modificado. A função retornará **nulo** se *nameTemplate* está mal formado ou não mais nomes exclusivos podem ser criados a partir de determinado nameTemplate.
+Cada uma dessas funções retorna um ponteiro para o nametemplate modificado. A função retornará **NULL** se *nametemplate* estiver mal formado ou nenhum nome mais exclusivo puder ser criado a partir de nametemplate fornecido.
 
 ## <a name="remarks"></a>Comentários
 
-O **mktemp** função cria um nome de arquivo exclusivo modificando o *nameTemplate* argumento. **mktemp** manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento pelo sistema de tempo de execução. **wmktemp** é uma versão de caractere largo de **mktemp**; o argumento e o valor retornado de **wmktemp** são cadeias de caracteres largos. **wmktemp** e **mktemp** se comportam de forma idêntica caso contrário, exceto que **wmktemp** não manipula cadeias de caracteres multibyte.
+A função **_mktemp** cria um nome de arquivo exclusivo modificando o argumento *nametemplate* . o **_mktemp** manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo sequências de caracteres multibyte de acordo com a página de código multibyte atualmente em uso pelo sistema de tempo de execução. **_wmktemp** é uma versão de caractere largo do **_mktemp**; o argumento e o valor de retorno de **_wmktemp** são cadeias de caracteres largos. o **_wmktemp** e o **_mktemp** se comportam de forma idêntica, exceto pelo fato de que o **_wmktemp** não lida com cadeias de caracteres multibyte.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -82,17 +85,17 @@ O **mktemp** função cria um nome de arquivo exclusivo modificando o *nameTempl
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
-O *nameTemplate* argumento tem o formato *base*XXXXXX, em que *base* é a parte do novo nome do arquivo que você fornece e cada X é um espaço reservado para um caractere fornecido pelo **mktemp**. Cada caractere de espaço reservado na *nameTemplate* deve ser um x maiusculo. **mktemp** preserva *base* e substitui o primeiro X à direita com um caractere alfabético. **mktemp** substitui à direita seguinte x com um valor de cinco dígitos; esse valor é um número exclusivo que identifica o processo de chamada ou em programas multithread, o thread de chamada.
+O argumento *nametemplate* tem o formulário *base*xxxxxx, em que *base* é a parte do novo nome de arquivo que você fornece e cada X é um espaço reservado para um caractere fornecido por **_mktemp**. Cada caractere de espaço reservado em *nametemplate* deve ser uma x maiúsculo. **_mktemp** preserva a *base* e substitui o primeiro X à direita por um caractere alfabético. **_mktemp** substitui os seguintes X à direita por um valor de cinco dígitos; Esse valor é um número exclusivo que identifica o processo de chamada ou em programas multithread, o thread de chamada.
 
-Cada chamada bem-sucedida para **mktemp** modifica *nameTemplate*. Em cada chamada subsequente do mesmo processo ou thread com o mesmo *nameTemplate* argumento **mktemp** procura nomes de arquivo que correspondem aos nomes retornados por **mktemp** em chamadas anteriores. Se o arquivo não existe para um determinado nome, **mktemp** retorna esse nome. Se existirem arquivos para todos os nomes retornados anteriormente, **mktemp** cria um novo nome, substituindo o caractere alfabético que ele usado no nome retornado anteriormente com a próxima letra de minúscula disponível, em ordem, de 'a' a 'z'. Por exemplo, se *base* é:
+Cada chamada bem-sucedida para **_mktemp** modifica *nametemplate*. Em cada chamada subsequente do mesmo processo ou thread com o mesmo argumento *nametemplate* , **_mktemp** verifica os nomes de arquivo que correspondem aos nomes retornados por **_mktemp** nas chamadas anteriores. Se nenhum arquivo existir para um determinado nome, **_mktemp** retornará esse nome. Se existirem arquivos para todos os nomes retornados anteriormente, o **_mktemp** criará um novo nome substituindo o caractere alfabético usado no nome retornado anteriormente pela próxima letra minúscula disponível, em ordem, de ' a ' até ' z '. Por exemplo, se *base* for:
 
 > **fn**
 
-e o valor de cinco dígitos fornecido pelo **mktemp** for 12345, o primeiro nome retornado será:
+e o valor de cinco dígitos fornecido pelo **_mktemp** é 12345, o primeiro nome retornado é:
 
 > **fna12345**
 
-Se esse nome é usado para criar o arquivo FNA12345 e esse arquivo ainda existe, o próximo nome retornado em uma chamada do mesmo processo ou thread com o mesmo *base* para *nameTemplate* é:
+Se esse nome for usado para criar o arquivo FNA12345 e esse arquivo ainda existir, o próximo nome retornado em uma chamada do mesmo processo ou thread com a mesma *base* para *nametemplate* será:
 
 > **fnb12345**
 
@@ -100,9 +103,9 @@ Se FNA12345 não existir, o próximo nome retornado será novamente:
 
 > **fna12345**
 
-**mktemp** pode criar no máximo 26 nomes de arquivo exclusivos para qualquer determinada combinação de *base* e *nameTemplate* valores. Portanto, FNZ12345 é o último nome de arquivo exclusivo **mktemp** pode criar para o *base* e *nameTemplate* valores usados neste exemplo.
+**_mktemp** pode criar no máximo 26 nomes de arquivo exclusivos para qualquer combinação determinada de valores *base* e *nametemplate* . Portanto, FNZ12345 é o último nome de arquivo exclusivo que **_mktemp** pode criar para os valores *base* e *nametemplate* usados neste exemplo.
 
-Em caso de falha, **errno** está definido. Se *nameTemplate* tem um formato inválido (por exemplo, menos de 6 x), **errno** está definido como **EINVAL**. Se **mktemp** não pode criar um nome exclusivo porque todos os 26 nomes de arquivo possíveis já existem, **mktemp** nameTemplate define uma cadeia de caracteres vazia e retorna **EEXIST**.
+Em caso de falha, **errno** é definido. Se *nametemplate* tiver um formato inválido (por exemplo, menos de 6 X), **errno** será definido como **EINVAL**. Se **_mktemp** não puder criar um nome exclusivo porque todos os 26 nomes de arquivo possíveis já existem, **_mktemp** define nametemplate como uma cadeia de caracteres vazia e retorna **EEXIST**.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

@@ -1,9 +1,9 @@
 ---
 title: _msize_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _msize_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _msize_dbg
 - msize_dbg
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fa12689a35beaad0727c14327d1b948a62c29d0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156298"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951486"
 ---
-# <a name="msizedbg"></a>_msize_dbg
+# <a name="_msize_dbg"></a>_msize_dbg
 
 Calcula o tamanho do bloco de memória no heap (somente a versão de depuração).
 
@@ -49,19 +52,19 @@ size_t _msize_dbg(
 Ponteiro para o bloco de memória para o qual determinar o tamanho.
 
 *blockType*<br/>
-Tipo de bloco de memória especificado: **client_block** ou **normal_block**.
+Tipo de bloco de memória especificado: **_CLIENT_BLOCK** ou **_NORMAL_BLOCK**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Após a conclusão bem-sucedida, **msize_dbg** retorna o tamanho (em bytes) do bloco de memória especificado; caso contrário, retornará **nulo**.
+Após a conclusão bem-sucedida, **_msize_dbg** retorna o tamanho (em bytes) do bloco de memória especificado; caso contrário, ele retornará **NULL**.
 
 ## <a name="remarks"></a>Comentários
 
-**msize_dbg** é uma versão de depuração da _[msize](msize.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **msize_dbg** é reduzida a uma chamada para **msize**. Ambos **msize** e **msize_dbg** calcular o tamanho de um bloco de memória no heap de base, mas **msize_dbg** adiciona dois recursos de depuração: Ele inclui os buffers nos dois lados da parte do usuário do bloco de memória no tamanho retornado e permite que os cálculos de tamanho para os tipos de bloco.
+**_msize_dbg** é uma versão de depuração da função _[msize](msize.md) . Quando [_DEBUG](../../c-runtime-library/debug.md) não é definido, cada chamada para **_msize_dbg** é reduzida para uma chamada para **_msize**. **_Msize** e **_msize_dbg** calculam o tamanho de um bloco de memória no heap base, mas o **_msize_dbg** adiciona dois recursos de depuração: Ele inclui os buffers em ambos os lados da parte do usuário do bloco de memória no tamanho retornado e permite cálculos de tamanho para tipos de bloco específicos.
 
 Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre os tipos de blocos de alocação e como eles são usados, consulte [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipos de blocos no heap de depuração). Para obter informações sobre as diferenças entre chamar uma função de heap padrão e sua versão de depuração em um build de depuração de um aplicativo, consulte [Versões de depuração das funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-Esta função valida seu parâmetro. Se *memblock* for um ponteiro nulo, **msize** invocará um manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se o erro for tratado, a função definirá **errno** à **EINVAL** e retornará -1.
+Esta função valida seu parâmetro. Se *memblock* for um ponteiro nulo, **_msize** invocará um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se o erro for tratado, a função definirá **errno** como **EINVAL** e retornará-1.
 
 ## <a name="requirements"></a>Requisitos
 

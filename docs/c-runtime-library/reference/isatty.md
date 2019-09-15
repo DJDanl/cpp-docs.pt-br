@@ -1,9 +1,9 @@
 ---
 title: _isatty
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isatty
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _isatty
 helpviewer_keywords:
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d2ba2fdfeb1c8bffe47b0953f0629746d2eb599
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157455"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954549"
 ---
-# <a name="isatty"></a>_isatty
+# <a name="_isatty"></a>_isatty
 
 Determina se um descritor de arquivo está associado a um dispositivo de caracteres.
 
@@ -48,13 +51,13 @@ Descritor de arquivo que se refere ao dispositivo a ser testado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**isatty** retorna um valor diferente de zero se o descritor estiver associado um dispositivo de caracteres. Caso contrário, **isatty** retornará 0.
+**_isatty** retornará um valor diferente de zero se o descritor estiver associado a um dispositivo de caractere. Caso contrário, **_isatty** retornará 0.
 
 ## <a name="remarks"></a>Comentários
 
-O **isatty** função determina se *fd* está associado um dispositivo de caracteres (um terminal, console, impressora ou porta serial).
+A função **_isatty** determina se *FD* está associado a um dispositivo de caractere (um terminal, um console, uma impressora ou uma porta serial).
 
-Essa função valida o *fd* parâmetro. Se *fd* for um ponteiro de arquivo incorreto, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará 0 e definirá **errno** à **EBADF**.
+Essa função valida o parâmetro *FD* . Se *FD* for um ponteiro de arquivo incorreto, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará 0 e definirá **errno** como **EBADF**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,11 +1,11 @@
 ---
 title: assert Macro, _assert, _wassert
 ms.date: 11/04/2016
-apiname:
+api_name:
 - assert
 - _assert
 - _wassert
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - assert
 - _assert
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - assert function
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
-ms.openlocfilehash: a2cc780fbc93aa66bd7fd613c3e155cda27eb7f9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: badca46a0793e51602f0de87dfca21816dcd6295
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500330"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939614"
 ---
 # <a name="assert-macro-_assert-_wassert"></a>assert Macro, _assert, _wassert
 

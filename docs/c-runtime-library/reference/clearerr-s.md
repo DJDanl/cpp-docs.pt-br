@@ -1,9 +1,9 @@
 ---
 title: clearerr_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clearerr_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clearerr_s
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-ms.openlocfilehash: 03bdc533d3afa265be22ae3567fabe8e78f752a4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 12e76ba5133d99ed2d45d7cf15bada2ad1c5c38b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342938"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939144"
 ---
-# <a name="clearerrs"></a>clearerr_s
+# <a name="clearerr_s"></a>clearerr_s
 
 Redefine o indicador de erro para um fluxo. Esta é uma versão de [clearerr](clearerr.md) com melhorias de segurança conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -45,17 +48,17 @@ errno_t clearerr_s(
 ### <a name="parameters"></a>Parâmetros
 
 *stream*<br/>
-Ponteiro para **arquivo** estrutura
+Ponteiro para estrutura de **arquivo**
 
 ## <a name="return-value"></a>Valor de retorno
 
-Zero se bem-sucedido; **EINVAL** se *fluxo* está **nulo**.
+Zero se for bem-sucedido; **EINVAL** se o *fluxo* for **nulo**.
 
 ## <a name="remarks"></a>Comentários
 
-O **clearerr_s** função redefine o indicador de erro e o indicador de fim-de-arquivo para *fluxo*. Indicadores de erro não são removidos automaticamente; Depois que o indicador de erro para um fluxo especificado é definido, as operações naquele fluxo continuam a retornar um valor de erro até **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, ou [rewind](rewind.md) é chamado.
+A função **clearerr_s** redefine o indicador de erro e o indicador de fim de arquivo para o *fluxo*. Os indicadores de erro não são limpos automaticamente; Depois que o indicador de erro de um fluxo especificado é definido, as operações nesse fluxo continuam a retornar um valor de erro até que **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**ou [retrocesso](rewind.md) seja chamado.
 
-Se *stream* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retorna **EINVAL**.
+Se o *fluxo* for **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

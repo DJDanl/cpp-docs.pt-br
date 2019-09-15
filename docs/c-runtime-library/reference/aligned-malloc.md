@@ -1,9 +1,9 @@
 ---
 title: _aligned_malloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_malloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_malloc
 - alligned_malloc
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: c89dff7d2159855037fee565f2148a8edb89f07d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4a2b35e5344757a1269ccb781a0524383a4f792
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341815"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943865"
 ---
-# <a name="alignedmalloc"></a>_aligned_malloc
+# <a name="_aligned_malloc"></a>_aligned_malloc
 
 Aloca memória em um limite de alinhamento especificado.
 
@@ -57,11 +60,11 @@ Um ponteiro para o bloco de memória que foi alocado ou nulo se a operação fal
 
 ## <a name="remarks"></a>Comentários
 
-**aligned_malloc** se baseia [malloc](malloc.md).
+**_aligned_malloc** é baseado em [malloc](malloc.md).
 
-**aligned_malloc** está marcada `__declspec(noalias)` e `__declspec(restrict)`, o que significa que a função não é garantido que modifica variáveis globais e que o ponteiro retornado não é um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
+**_aligned_malloc** é marcado `__declspec(noalias)` como `__declspec(restrict)`e, o que significa que a função está garantida para não modificar variáveis globais e que o ponteiro retornado não tem um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
 
-Essa função define `errno` como `ENOMEM` se a alocação da memória tiver falhado ou se o tamanho solicitado for maior que `_HEAP_MAXREQ`. Para obter mais informações sobre `errno`, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Além disso, **aligned_malloc** valida seus parâmetros. Se *alinhamento* não for uma potência de 2 ou *tamanho* for zero, essa função invocará o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará NULL e definirá `errno` para `EINVAL`.
+Essa função define `errno` como `ENOMEM` se a alocação da memória tiver falhado ou se o tamanho solicitado for maior que `_HEAP_MAXREQ`. Para obter mais informações sobre `errno`, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Além disso, o **_aligned_malloc** valida seus parâmetros. Se o *alinhamento* não for uma potência de 2 ou o *tamanho* for zero, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função retornará NULL e `errno` definirá como `EINVAL`.
 
 ## <a name="requirements"></a>Requisitos
 

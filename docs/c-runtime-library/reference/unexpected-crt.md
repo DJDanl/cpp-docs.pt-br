@@ -1,9 +1,9 @@
 ---
 title: unexpected (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - unexpected
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - unexpected
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-ms.openlocfilehash: 78538c0a10e183e72c742b041b297275c0859a03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 796f5ddbf8467656b5430de1d504f162d891864d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155479"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957815"
 ---
 # <a name="unexpected-crt"></a>unexpected (CRT)
 
-Chamadas **encerrar** ou uma função especificada usando **set_unexpected**.
+Chama o **encerramento** ou a função que você especifica usando **set_unexpected**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,7 +42,7 @@ void unexpected( void );
 
 ## <a name="remarks"></a>Comentários
 
-O **inesperado** rotina não for usada com a implementação atual de tratamento de exceções C++. **inesperado** chamadas **encerrar** por padrão. Você pode alterar esse comportamento padrão escrevendo uma função de encerramento personalizada e chamando **set_unexpected** com o nome da sua função como seu argumento. **inesperado** chama a função last especificada como um argumento para **set_unexpected**.
+A rotina **inesperada** não é usada com a implementação atual da C++ manipulação de exceção. chamadas **inesperadas** **terminam** por padrão. Você pode alterar esse comportamento padrão escrevendo uma função de terminação personalizada e chamando **set_unexpected** com o nome da sua função como seu argumento. chamadas **inesperadas** a última função fornecida como um argumento para **set_unexpected**.
 
 ## <a name="requirements"></a>Requisitos
 

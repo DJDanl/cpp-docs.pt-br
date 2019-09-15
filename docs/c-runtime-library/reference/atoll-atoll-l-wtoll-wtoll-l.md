@@ -1,12 +1,12 @@
 ---
 title: atoll, _atoll_l, _wtoll, _wtoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wtoll
 - _atoll_l
 - _wtoll_l
 - atoll
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstoll_l
 - _wtoll
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 7933b3e25185b5abdbd10c1b3fd616742bb28f92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1b5fca9c3428bce26a8a40cf8271760fa97b10b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341178"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939473"
 ---
-# <a name="atoll-atolll-wtoll-wtolll"></a>atoll, _atoll_l, _wtoll, _wtoll_l
+# <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
-Converte uma cadeia de caracteres para um **longo** **longo** inteiro.
+Converte uma cadeia de caracteres em um **longo** inteiro **longo** .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -73,27 +76,27 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada função retorna o **longo** **longo** valor é produzido Interpretando os caracteres de entrada como um número. O valor de retorno **Atol** é 0 se a entrada não pode ser convertida em um valor desse tipo.
+Cada função retorna o **longo** valor **longo** que é produzido interpretando os caracteres de entrada como um número. O valor de retorno para **Palmira** será 0 se a entrada não puder ser convertida em um valor desse tipo.
 
-Estouro com grandes valores inteiros positivos **Atol** retorna **LLONG_MAX**, e para estouro com grandes valores inteiros negativos, ele retorna **LLONG_MIN**.
+Para estouro com grandes valores inteiros positivos, **Palmira** retorna **LLONG_MAX**e para estouro com grandes valores inteiros negativos, ele retorna **LLONG_MIN**.
 
-Em todos os casos de fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado for **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornam 0.
+Em todos os casos fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão **errno** como **EINVAL** e retornarão 0.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções convertem uma cadeia de caracteres para um **longo** **longo** valor inteiro.
+Essas funções convertem uma cadeia de caracteres em um **longo** valor inteiro **longo** .
 
 A cadeia de caracteres de entrada é uma sequência de caracteres que pode ser interpretada como um valor numérico do tipo especificado. A função para de ler a cadeia de caracteres de entrada no primeiro caractere que não consegue reconhecer como parte de um número. Esse caractere pode ser o caractere nulo ('\0' ou '\0' L) que encerra a cadeia de caracteres.
 
-O *str* argumento **Atol** tem a seguinte forma:
+O argumento *Str* para **Palmira** tem o seguinte formato:
 
-> [*espaço em branco*] [*sinal*] [*dígitos*]
+> [*espaço em branco*] [*assinar*] [*dígitos*]
 
-Um *espaço em branco* consiste em caracteres de espaço ou tabulação, que são ignorados; *sinal* é um sinal de mais (+) ou menos (-); e *dígitos* são um ou mais dígitos.
+Um *espaço em branco* consiste em caracteres de espaço ou tabulação, ignorados; o *sinal* é mais (+) ou menos (-); e os *dígitos* são um ou mais dígitos.
 
-**wtoll** é idêntica à **Atol** exceto que assume uma cadeia de caracteres largos como um parâmetro.
+**_wtoll** é idêntico ao **Palmira** , exceto pelo fato de que ele usa uma cadeia de caracteres larga como um parâmetro.
 
-As versões dessas funções que têm o **l** sufixo são idênticas às versões que não têm, exceto que usarem o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções que têm o sufixo **_L** são idênticas às versões que não têm, exceto que usam o parâmetro Locale que é passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -112,7 +115,7 @@ As versões dessas funções que têm o **l** sufixo são idênticas às versõe
 
 ## <a name="example"></a>Exemplo
 
-Esse programa mostra como usar o **Atol** funções para converter números armazenados como cadeias de caracteres para valores numéricos.
+Este programa mostra como usar as funções **Palmira** para converter números armazenados como cadeias de caracteres em valores numéricos.
 
 ```C
 // crt_atoll.c

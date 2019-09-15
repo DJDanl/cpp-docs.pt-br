@@ -1,10 +1,10 @@
 ---
 title: _tell, _telli64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _telli64
 - _tell
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tell
 - telli64
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54f672a1b230103d6f9ae1c45d2c9e487764939e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258566"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946265"
 ---
-# <a name="tell-telli64"></a>_tell, _telli64
+# <a name="_tell-_telli64"></a>_tell, _telli64
 
 Obtenha a posição do ponteiro de arquivo.
 
@@ -54,20 +57,20 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>Parâmetros
 
-*handle*<br/>
+*processamento*<br/>
 Descritor de arquivo que faz referência a um arquivo aberto.
 
 ## <a name="return-value"></a>Valor de retorno
 
 A posição atual do ponteiro de arquivo. Em dispositivos sem capacidade de busca, o valor retornado será indefinido.
 
-Um valor retornado de-1l indica um erro. Se *manipular* for um descritor de arquivo inválido, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EBADF** e retornarão-1l.
+Um valor de retorno de-1L indica um erro. Se o *identificador* for um descritor de arquivo inválido, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** como **EBADF** e retornará-1L.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-O **Tell** função obtém a posição atual do ponteiro do arquivo (se houver) associado a *manipular* argumento. A posição é expressa como o número de bytes do início do arquivo. Para o **_telli64** função, esse valor é expresso como um inteiro de 64 bits.
+A função **_tell** Obtém a posição atual do ponteiro do arquivo (se houver) associado ao argumento *Handle* . A posição é expressa como o número de bytes do início do arquivo. Para a função **_telli64** , esse valor é expresso como um inteiro de 64 bits.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -110,7 +113,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crttelltxt"></a>Entrada: crt_tell.txt
+### <a name="input-crt_telltxt"></a>Entrada: crt_tell.txt
 
 ```Input
 Line one.

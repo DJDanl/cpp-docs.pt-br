@@ -1,10 +1,10 @@
 ---
 title: _unlink, _wunlink
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _unlink
 - _wunlink
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tunlink
 - _unlink
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: ec59a02f1302fe4a2149889cf1b48090d061d6b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 878a1b4aa009bc8528dfac1908ed26c7e3b269ae
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268761"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957386"
 ---
-# <a name="unlink-wunlink"></a>_unlink, _wunlink
+# <a name="_unlink-_wunlink"></a>_unlink, _wunlink
 
 Excluir um arquivo.
 
@@ -61,13 +64,13 @@ Nome do arquivo a ser removido.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retornará 0 em caso de êxito. Caso contrário, a função retornará -1 e define **errno** para **EACCES**, que significa que o caminho Especifica um arquivo somente leitura ou um diretório, ou como **ENOENT**, que significa que o arquivo ou caminho não foi encontrado.
+Cada uma dessas funções retornará 0 em caso de êxito. Caso contrário, a função retornará-1 e definirá **errno** como **EACCES**, o que significa que o caminho Especifica um arquivo somente leitura ou um diretório, ou para **ENOENT**, o que significa que o arquivo ou o caminho não foi encontrado.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-O **unlink** função exclui o arquivo especificado por *filename*. **wunlink** é uma versão de caractere largo de **unlink**; o *filename* argumento **wunlink** é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
+A função **_unlink** exclui o arquivo especificado por *filename*. **_wunlink** é uma versão de caractere largo do **_unlink**; o argumento *filename* para **_wunlink** é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -102,7 +105,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtunlinktxt"></a>Entrada: crt_unlink.txt
+### <a name="input-crt_unlinktxt"></a>Entrada: crt_unlink.txt
 
 ```Input
 This file will be deleted.

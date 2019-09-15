@@ -1,10 +1,10 @@
 ---
 title: _ismbbkalnum, _ismbbkalnum_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbkalnum
 - _ismbbkalnum_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbkalnum
 - ismbbkalnum
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 4eca5738068dab7393f70edf619629b179637e73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b7f188e38a2d13bf08210d6c2408ab996f18849
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158001"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954173"
 ---
-# <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
+# <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum, _ismbbkalnum_l
 
 Determina se um dado caractere multibyte é um símbolo de texto não ASCII.
 
@@ -61,7 +64,7 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**ismbbkalnum** retorna um valor diferente de zero se o número inteiro *c* é um símbolo de texto não ASCII diferente de pontuação ou 0 se não for. **ismbbkalnum** usa a localidade atual para obter informações de caracteres dependentes da localidade. **ismbbkalnum_l** é idêntica à **ismbbkalnum** , exceto que ele usa a localidade como um parâmetro. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_ismbbkalnum** retornará um valor diferente de zero se o inteiro *c* for um símbolo de texto não-ASCII diferente de pontuação, ou 0 se não for. **_ismbbkalnum** usa a localidade atual para informações de caracteres dependentes de localidade. **_ismbbkalnum_l** é idêntico ao **_ismbbkalnum** , exceto pelo fato de que ele usa a localidade como um parâmetro. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

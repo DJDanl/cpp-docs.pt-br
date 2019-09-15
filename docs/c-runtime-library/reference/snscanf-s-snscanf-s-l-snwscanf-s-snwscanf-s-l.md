@@ -1,12 +1,12 @@
 ---
 title: _snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snwscanf_s_l
 - _snwscanf_s
 - _snscanf_s
 - _snscanf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sntscanf_s
 - snscanf_s
@@ -49,14 +52,14 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-ms.openlocfilehash: 8d56999aea69c4674070410774d5a2fa11abb178
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33507990c1b7e2c6fd1b30e2bdb9277ab611ef2a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355686"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947955"
 ---
-# <a name="snscanfs-snscanfsl-snwscanfs-snwscanfsl"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
+# <a name="_snscanf_s-_snscanf_s_l-_snwscanf_s-_snwscanf_s_l"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 
 Lê dados formatados de um comprimento especificado de uma cadeia de caracteres. Essas são versões de [_snscanf, _snscanf_l, _snwscanf, _snwscanf_l](snscanf-snscanf-l-snwscanf-snwscanf-l.md) com aprimoramentos de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -93,7 +96,7 @@ int __cdecl _snwscanf_s_l(
 A cadeia de caracteres de entrada para examinar.
 
 *length*<br/>
-Número de caracteres a examinar em *entrada*.
+Número de caracteres a serem examinados na *entrada*.
 
 *format*<br/>
 Um ou mais especificadores de formato.
@@ -102,26 +105,26 @@ Um ou mais especificadores de formato.
 A localidade a ser usada.
 
 *argument_list*<br/>
-Argumentos opcionais para serem atribuídos de acordo com a cadeia de caracteres de formato.
+Argumentos opcionais a serem atribuídos de acordo com a cadeia de caracteres de formato.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Ambas essas funções retornam o número de campos convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos mas não foram atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor retornado será **EOF** para um erro ou se o final da cadeia de caracteres for atingido antes da primeira conversão. Para obter mais informações, consulte [sscanf_s, _sscanf_s_l, swscanf_s e _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Ambas essas funções retornam o número de campos convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos mas não foram atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor de retorno é **EOF** para um erro ou se o final da cadeia de caracteres for atingido antes da primeira conversão. Para obter mais informações, consulte [sscanf_s, _sscanf_s_l, swscanf_s e _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Se *entrada* ou *formato* é um **nulo** ponteiro, o manipulador de parâmetro inválido será invocado, conforme descrito no [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EOF** e defina **errno** para **EINVAL**.
+Se *Input* ou *Format* for um ponteiro **NULL** , o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam **EOF** e definem **errno** como **EINVAL**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Esta função é como **sscanf_s** , exceto que ele fornece a capacidade de especificar um número fixo de caracteres a examinar da cadeia de entrada. Para obter mais informações, consulte [sscanf_s, _sscanf_s_l, swscanf_s e _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Essa função é como **sscanf_s** , exceto pelo fato de que ela fornece a capacidade de especificar um número fixo de caracteres para examinar a partir da cadeia de caracteres de entrada. Para obter mais informações, consulte [sscanf_s, _sscanf_s_l, swscanf_s e _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-O parâmetro de tamanho do buffer é necessário com os caracteres de campo do tipo **c**, **C**, **s**, **S**, e **[** . Para obter mais informações, consulte [Caracteres de campo de tipo scanf](../../c-runtime-library/scanf-type-field-characters.md).
+O parâmetro de tamanho do buffer é necessário com os caracteres de campo de tipo **c**, **c**, **s**, **s**e **[** . Para obter mais informações, consulte [Caracteres de campo de tipo scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> O parâmetro de tamanho é do tipo **sem sinal**, e não **size_t**.
+> O parâmetro de tamanho é do tipo não **assinado**, não **size_t**.
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

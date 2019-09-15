@@ -1,10 +1,10 @@
 ---
 title: _beginthread, _beginthreadex
 ms.date: 02/27/2018
-apiname:
+api_name:
 - _beginthread
 - _beginthreadex
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - beginthread
 - _beginthread
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: 27bc850281f7591b4fa23a03e9adc3bc02bda87b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8714e945464dd98483f9347c4226321a96cda61c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500314"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943641"
 ---
 # <a name="_beginthread-_beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -130,7 +133,7 @@ O sistema operacional manipula a alocação da pilha quando o **_beginthread** o
 
 *Arglist* é um parâmetro a ser passado para o thread recém-criado. Geralmente, trata-se do endereço de um item de dados, como uma cadeia de caracteres. *Arglist* pode ser **nulo** se não for necessário, mas **_beginthread** e **_beginthreadex** devem receber algum valor para passar para o novo thread. Todos os threads serão encerrados se qualquer thread chamar [Abort](abort.md), **Exit**, **_exit**ou **ExitProcess**.
 
-A localidade do novo thread é inicializada usando as informações de localidade atual global por processo. Se a localidade por thread for habilitada por uma chamada para [_configthreadlocale](configthreadlocale.md) (globalmente ou para novos threads somente), o thread poderá alterar sua localidade independentemente de outros threads chamando setlocale ou **_wsetlocale**. Os threads que não têm o sinalizador de localidade por thread definido podem afetar as informações de localidade em todos os outros threads que também não têm o sinalizador de localidade por thread definido, bem como todos os threads recém-criados. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+A localidade do novo thread é inicializada usando as informações de localidade atual global por processo. Se a localidade por thread for habilitada por uma chamada para [_configthreadlocale](configthreadlocale.md) (globalmente ou para novos threads somente), o thread poderá alterar sua localidade independentemente de outros threads chamando **setlocale** ou **_wsetlocale**. Os threads que não têm o sinalizador de localidade por thread definido podem afetar as informações de localidade em todos os outros threads que também não têm o sinalizador de localidade por thread definido, bem como todos os threads recém-criados. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 Para o código **/CLR** , **_beginthread** e **_beginthreadex** têm duas sobrecargas. Uma usa um ponteiro de função de Convenção de chamada nativa e o outro usa um ponteiro de função **_ clrcall** . A primeira sobrecarga não é à prova de domínio do aplicativo e nunca será. Se você estiver escrevendo um código **/CLR** , deverá garantir que o novo thread Insira o domínio do aplicativo correto antes de acessar os recursos gerenciados. Você pode fazer isso, por exemplo, usando a [função call_in_appdomain](../../dotnet/call-in-appdomain-function.md). A segunda sobrecarga é o aplicativo de domínio-seguro; o thread recém-criado sempre terminará no domínio do aplicativo do chamador de **_beginthread** ou **_beginthreadex**.
 

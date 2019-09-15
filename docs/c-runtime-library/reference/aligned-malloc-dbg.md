@@ -1,9 +1,9 @@
 ---
 title: _aligned_malloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_malloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_malloc_dbg
 - aligned_malloc_dbg
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - aligned_malloc_dbg function
 - _aligned_malloc_dbg function
 ms.assetid: fb0429c3-685d-4826-9075-2515c5bdc5c6
-ms.openlocfilehash: eb58313c892ffe13e9f8e34e98b7940022899d14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3db61d494ea94c9ccbf2844c9f47df66dad87ff7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341633"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939890"
 ---
-# <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
+# <a name="_aligned_malloc_dbg"></a>_aligned_malloc_dbg
 
 Aloca memória em um limite de alinhamento especificado com espaço adicional para um cabeçalho de depuração e buffers de substituição (apenas versão de depuração).
 
@@ -64,11 +67,11 @@ Um ponteiro para o bloco de memória que foi alocado ou nulo se a operação fal
 
 ## <a name="remarks"></a>Comentários
 
-**aligned_malloc_dbg** é uma versão de depuração de [aligned_malloc](aligned-malloc.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **aligned_malloc_dbg** é reduzida a uma chamada para `_aligned_malloc`. Ambos `_aligned_malloc` e **aligned_malloc_dbg** alocar um bloco de memória no heap de base, mas **aligned_malloc_dbg** oferece vários recursos de depuração: buffers nos dois lados da parte do usuário a bloco para testar se há perdas, e *filename*/*linenumber* informações para determinar a origem das solicitações de alocação. Tipos de alocação específicos com um parâmetro de tipo de bloco de controle não é um recurso de depuração com suporte para alocações alinhados. Alocações alinhadas serão exibido como um tipo de bloco normal_block.
+**_aligned_malloc_dbg** é uma versão de depuração da função [_aligned_malloc](aligned-malloc.md) . Quando [_DEBUG](../../c-runtime-library/debug.md) não é definido, cada chamada para **_aligned_malloc_dbg** é reduzida para uma chamada para `_aligned_malloc`. Tanto `_aligned_malloc` o quanto o **_aligned_malloc_dbg** alocam um bloco de memória no heap base, mas o **_aligned_malloc_dbg** oferece vários recursos de depuração: buffers em ambos os lados da parte do usuário do bloco para testar se há vazamentos e *nome do arquivo* informações de LineNumber para determinar a origem das solicitações de alocação. / O rastreamento de tipos de alocação específicos com um parâmetro de tipo de bloco não é um recurso de depuração com suporte para alocações alinhadas. As alocações alinhadas aparecerão como um tipo de bloco _NORMAL_BLOCK.
 
-**aligned_malloc_dbg** aloca o bloco de memória com um pouco mais de espaço que o solicitado *tamanho*. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. Quando um bloco é alocado, a parte do usuário do bloco é preenchida com o valor 0xCD e cada um dos buffers de substituição é preenchido com 0xFD.
+**_aligned_malloc_dbg** aloca o bloco de memória com um pouco mais de espaço do que o *tamanho*solicitado. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. Quando um bloco é alocado, a parte do usuário do bloco é preenchida com o valor 0xCD e cada um dos buffers de substituição é preenchido com 0xFD.
 
-**aligned_malloc_dbg** define `errno` à `ENOMEM` se uma alocação de memória falhar ou se a quantidade de memória necessária (incluindo a sobrecarga mencionada anteriormente) exceder `_HEAP_MAXREQ`. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Além disso, **aligned_malloc_dbg** valida seus parâmetros. Se *alinhamento* não for uma potência de 2 ou *tamanho* for zero, essa função invocará o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará NULL e definirá `errno` para `EINVAL`.
+**_aligned_malloc_dbg** define `errno` como `ENOMEM` se uma alocação de memória falhar ou se a quantidade de memória necessária (incluindo a sobrecarga mencionada anteriormente `_HEAP_MAXREQ`) exceder. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Além disso, o **_aligned_malloc_dbg** valida seus parâmetros. Se o *alinhamento* não for uma potência de 2 ou o *tamanho* for zero, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função retornará NULL e `errno` definirá como `EINVAL`.
 
 Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre os tipos de blocos de alocação e como eles são usados, consulte [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipos de blocos no heap de depuração). Para obter informações sobre as diferenças entre chamar uma função de heap padrão e sua versão de depuração em um build de depuração de um aplicativo, consulte [Versões de depuração das funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

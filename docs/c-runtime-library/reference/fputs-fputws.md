@@ -1,10 +1,10 @@
 ---
 title: fputs, fputws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fputs
 - fputws
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fputs
 - fputws
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-ms.openlocfilehash: 3f7c7cff3300ae28717062a41aebd9e19c0cb5e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7470901fda72e74caea12758bed4f23fcc087a33
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287961"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956910"
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
 
@@ -62,15 +65,15 @@ Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retornará um valor não negativo se for bem-sucedida. Em um erro **fputs** e **fputws** retornar **EOF**. Se *str* ou *fluxo* é um ponteiro nulo, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e, em seguida, **fputs** retorna **EOF**, e  **fputws** retorna **WEOF**.
+Cada uma dessas funções retornará um valor não negativo se for bem-sucedida. Em um erro, **fputs** e **fputws** retornam **EOF**. Se *Str* ou *Stream* for um ponteiro NULL, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definem **errno** como **EINVAL** e, em seguida, **fputs** retorna **EOF**e **fputws** retorna **WEOF**.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções cópias *str* à saída *fluxo* na posição atual. **fputws** copia o argumento de caractere largo *str* à *fluxo* como uma cadeia de caracteres multibyte ou uma cadeia de caracteres largos dependendo *fluxo*é aberto no modo de texto ou binário, respectivamente. Nenhuma função copia o caractere nulo de terminação.
+Cada uma dessas funções copia *Str* para o *fluxo* de saída na posição atual. **fputws** copia o argumento de caractere largo *Str* para *transmitir* como uma cadeia de caracteres multibyte ou uma cadeia de caracteres largos de acordo com o *fluxo* ser aberto no modo de texto ou no modo binário, respectivamente. Nenhuma função copia o caractere nulo de terminação.
 
-As duas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. **fputs** não oferece suporte a saída em um fluxo UNICODE.
+As duas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. Atualmente, o **fputs** não dá suporte à saída em um fluxo Unicode.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -85,7 +88,7 @@ As duas funções terão comportamento idêntico se o fluxo for aberto no modo A
 |**fputs**|\<stdio.h>|
 |**fputws**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console —**stdin**, **stdout**, e **stderr**— deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console do —**stdin**, **stdout**e **stderr**— devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

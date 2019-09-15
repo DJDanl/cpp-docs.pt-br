@@ -1,9 +1,9 @@
 ---
 title: _get_timezone
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_timezone
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_timezone
 - get_timezone
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-ms.openlocfilehash: 26cf8114ab766bdb394d2db9ad5842622a447bd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf77ca21383bcae6919b6c1d00b99c082ef99919
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287437"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955629"
 ---
-# <a name="gettimezone"></a>_get_timezone
+# <a name="_get_timezone"></a>_get_timezone
 
 Recupera a diferença em segundos entre o UTC (Tempo Universal Coordenado) e a hora local.
 
@@ -45,18 +48,18 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>Parâmetros
 
-*seconds*<br/>
+*seg*<br/>
 A diferença, em segundos, entre o UTC e a hora local.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Zero se for bem-sucedido ou um **errno** se ocorrer um erro de valor.
+Zero se for bem-sucedido ou um valor **errno** se ocorrer um erro.
 
 ## <a name="remarks"></a>Comentários
 
-O **get_timezone** função recupera a diferença em segundos entre o UTC e a hora local como um número inteiro. O valor padrão é de 28.800 segundos para a Hora Padrão do Pacífico (oito horas antes do UTC).
+A função **_get_timezone** recupera a diferença em segundos entre o UTC e a hora local como um inteiro. O valor padrão é de 28.800 segundos para a Hora Padrão do Pacífico (oito horas antes do UTC).
 
-Se *segundos* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retorna **EINVAL**.
+Se *segundos* for **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

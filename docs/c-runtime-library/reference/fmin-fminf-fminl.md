@@ -1,11 +1,11 @@
 ---
 title: fmin, fminf, fminl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmin
 - fminf
 - fminl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmin
 - fminf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df01f2205291920b8c0519db622c93048278beb1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333372"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957090"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -80,19 +83,19 @@ O segundo valor a ser comparado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, retorna o menor dos *x* ou *y*.
+Se for bem-sucedido, retorna o menor de *x* ou *y*.
 
 |Entrada|Resultado|
 |-----------|------------|
-|*x* é NaN|*y*|
-|*y* é NaN|*x*|
+|*x* é Nan|*y*|
+|*y* é Nan|*x*|
 |*x* e *y* são NaN|NaN|
 
-A função não causa [matherr](matherr.md) seja invocado, fazer com que todas as exceções de ponto flutuantes ou alterar o valor de **errno**.
+A função não faz com que o [_matherr](matherr.md) seja invocado, cause qualquer exceção de ponto flutuante ou altere o valor de **errno**.
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **fmin** que usam e retornam **float** e **longo** **double** tipos. Em um programa do C **fmin** sempre usa e retorna um **duplo**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **Fmin** que usam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **Fmin** sempre pega e retorna um **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

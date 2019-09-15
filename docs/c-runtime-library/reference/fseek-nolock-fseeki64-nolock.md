@@ -1,10 +1,10 @@
 ---
 title: _fseek_nolock, _fseeki64_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fseek_nolock
 - _fseeki64_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fseek_nolock
 - _fseeki64_nolock
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _fseeki64_nolock function
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
-ms.openlocfilehash: 57e9a57223d6af620f4f9160923675b4873ab3ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c72f44b214893a6702f5da5594db7725a2f02136
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287689"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956534"
 ---
-# <a name="fseeknolock-fseeki64nolock"></a>_fseek_nolock, _fseeki64_nolock
+# <a name="_fseek_nolock-_fseeki64_nolock"></a>_fseek_nolock, _fseeki64_nolock
 
 Move o ponteiro do arquivo para um local especificado.
 
@@ -69,11 +72,11 @@ Posição inicial.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Mesmo que [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md), respectivamente.
+O mesmo que [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md), respectivamente.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções são as versões sem bloqueio [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md), respectivamente. Esses são idênticos aos [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md) , exceto que eles não são protegidos contra interferência de outros threads. Essas funções podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+Essas funções são as versões sem bloqueio do [fseek](fseek-fseeki64.md) e do [_fseeki64](fseek-fseeki64.md), respectivamente. Eles são idênticos a [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md) , exceto que eles não são protegidos contra interferência por outros threads. Essas funções podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
 ## <a name="requirements"></a>Requisitos
 

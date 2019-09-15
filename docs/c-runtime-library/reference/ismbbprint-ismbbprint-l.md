@@ -1,10 +1,10 @@
 ---
 title: _ismbbprint, _ismbbprint_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbprint_l
 - _ismbbprint
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbprint_l
 - _ismbbprint
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-ms.openlocfilehash: 2fc697dd3ee4fee487beedf5e6e3deb706cc5f75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c40ddc931faa5f1dcff914d7c615207ed57d11cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286663"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954054"
 ---
-# <a name="ismbbprint-ismbbprintl"></a>_ismbbprint, _ismbbprint_l
+# <a name="_ismbbprint-_ismbbprint_l"></a>_ismbbprint, _ismbbprint_l
 
 Determina se um caractere multibyte especificado é um caractere de impressão.
 
@@ -61,11 +64,11 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**ismbbprint** retorna um valor diferente de zero se a expressão:
+**_ismbbprint** retornará um valor diferente de zero se a expressão:
 
 `isprint(c) || _ismbbkprint(c)`
 
-é diferente de zero para *c*, ou 0 se não for. **ismbbprint** usa a localidade atual para qualquer comportamento dependente da localidade. **ismbbprint_l** é idêntico, exceto que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+é diferente de zero para *c*ou 0 se não for. **_ismbbprint** usa a localidade atual para qualquer comportamento dependente de localidade. **_ismbbprint_l** é idêntico, exceto pelo fato de que ele usa a localidade transmitida em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

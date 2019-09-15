@@ -1,9 +1,9 @@
 ---
 title: feupdateenv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feupdateenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,20 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: HeaderDef
+api_type:
+- HeaderDef
 f1_keywords:
 - feupdateenv
 - fenv/feupdateenv
 helpviewer_keywords:
 - feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
-ms.openlocfilehash: 6d553d6899f55f5bdfb3ff313e88abfcb56ab4ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f40cab42e4a89b1fc5a100587b11b0e2aeeb55c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334068"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940982"
 ---
 # <a name="feupdateenv"></a>feupdateenv
 
@@ -43,7 +44,7 @@ int feupdateenv(
 ### <a name="parameters"></a>Parâmetros
 
 *penv*<br/>
-Ponteiro para um **fenv_t** objeto que contém um ambiente de ponto flutuante conforme definido por uma chamada para [fegetenv](fegetenv1.md) ou [feholdexcept](feholdexcept2.md). Você também pode especificar o ambiente de ponto flutuante de inicialização padrão usando a macro FE_DFL_ENV.
+Ponteiro para um objeto **fenv_t** que contém um ambiente de ponto flutuante, conforme definido por uma chamada para [fegetenv](fegetenv1.md) ou [feholdexcept](feholdexcept2.md). Você também pode especificar o ambiente de ponto flutuante de inicialização padrão usando a macro FE_DFL_ENV.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -51,7 +52,7 @@ Retorna 0 se todas as ações forem concluídas com êxito. Caso contrário, ret
 
 ## <a name="remarks"></a>Comentários
 
-O **feupdateenv** função executa várias ações. Primeiro, ela armazena os sinalizadores atuais de status de exceção de ponto flutuante gerados no armazenamento automático. Em seguida, ele define o ambiente atual de ponto flutuante do valor armazenado na **fenv_t** objeto apontado por *penv*. Se *penv* não está **FE_DFL_ENV** ou não apontar para um válido **fenv_t** do objeto, o comportamento subsequente será indefinido. Por fim, **feupdateenv** gera as exceções de ponto flutuantes armazenadas localmente.
+A função **feupdateenv** executa várias ações. Primeiro, ela armazena os sinalizadores atuais de status de exceção de ponto flutuante gerados no armazenamento automático. Em seguida, ele define o ambiente de ponto flutuante atual a partir do valor armazenado no objeto **fenv_t** apontado por *penv*. Se *penv* não for **FE_DFL_ENV** ou não apontar para um objeto **fenv_t** válido, o comportamento subsequente será indefinido. Por fim, **feupdateenv** gera as exceções de ponto flutuante armazenadas localmente.
 
 Para usar essa função, você deve desligar otimizações de ponto flutuante que poderiam impedir o acesso usando a diretiva `#pragma fenv_access(on)` antes da chamada. Para obter mais informações, consulte [fenv_access](../../preprocessor/fenv-access.md).
 

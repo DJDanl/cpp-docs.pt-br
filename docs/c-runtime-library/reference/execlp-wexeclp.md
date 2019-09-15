@@ -1,10 +1,10 @@
 ---
 title: _execlp, _wexeclp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wexeclp
 - _execlp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wexeclp
 - wexeclp
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _wexeclp function
 - wexeclp function
 ms.assetid: 7b179163-4bcd-4d6a-8baf-68f886791928
-ms.openlocfilehash: db13263ca4574d59821d5783b9ae83f278fef14d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ae1805dd00428aee0acca4bcb3ee221bce1d271
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339683"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937190"
 ---
-# <a name="execlp-wexeclp"></a>_execlp, _wexeclp
+# <a name="_execlp-_wexeclp"></a>_execlp, _wexeclp
 
 Carrega e executa novos processos filho.
 
@@ -63,14 +66,14 @@ intptr_t _wexeclp(
 *cmdname*<br/>
 Caminho do arquivo a ser executado.
 
-*arg0*, ... *argn*<br/>
+*arg0*,... *argN*<br/>
 Lista de ponteiros para os parâmetros.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, caso em que o **errno** variável global é definida.
+Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de-1 indica um erro; nesse caso, a variável global **errno** é definida.
 
-|**errno** value|Descrição|
+|valor **errno**|Descrição|
 |-------------------|-----------------|
 |**E2BIG**|O espaço necessário para os argumentos e as configurações de ambiente excede 32 KB.|
 |**EACCES**|O arquivo especificado tem uma violação de compartilhamento ou de bloqueio.|
@@ -84,9 +87,9 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções carrega e executa um novo processo, passando cada argumento de linha de comando como um parâmetro separado e usando o **caminho** variável de ambiente para localizar o arquivo a ser executado.
+Cada uma dessas funções carrega e executa um novo processo, passando cada argumento de linha de comando como um parâmetro separado e usando a variável de ambiente **path** para localizar o arquivo a ser executado.
 
-O **execlp** funções validam seus parâmetros. Se *cmdname* ou *arg0* é um ponteiro nulo ou cadeia de caracteres vazia, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornarão -1. Nenhum processo novo é inicializado.
+As funções **_execlp** validam seus parâmetros. Se *cmdname* ou *arg0* for um ponteiro nulo ou uma cadeia de caracteres vazia, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definem **errno** como **EINVAL** e retornam-1. Nenhum processo novo é inicializado.
 
 ## <a name="requirements"></a>Requisitos
 

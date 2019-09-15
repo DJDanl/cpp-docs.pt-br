@@ -1,9 +1,9 @@
 ---
 title: ferror
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ferror
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ferror
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-ms.openlocfilehash: 2be90ffe8a135b4108abd9504099bd2f6c28f249
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4efb1b01ac94f1cb2d28bffb1f09b594a0e71479
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334327"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941097"
 ---
 # <a name="ferror"></a>ferror
 
@@ -49,13 +52,13 @@ Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se nenhum erro tiver ocorrido na *stream*, **ferror** retornará 0. Caso contrário, retornará um valor diferente de zero. Se o fluxo for **nulo**, **ferror** invocará o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retornará 0.
+Se nenhum erro ocorreu no *fluxo*, o **referenciador** retorna 0. Caso contrário, retornará um valor diferente de zero. Se Stream for **NULL**, o **referenciador** invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará 0.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.
 
 ## <a name="remarks"></a>Comentários
 
-O **ferror** testes de rotina (implementada como uma função e como uma macro) para leitura ou gravação de erro no arquivo associado *fluxo*. Se tiver ocorrido um erro, o indicador de erro para o fluxo permanece definido até que o fluxo está fechado ou rebobinado ou até **clearerr** é chamado em relação a ela.
+A rotina do **referenciador** (implementada como uma função e como uma macro) testa um erro de leitura ou gravação no arquivo associado ao *fluxo*. Se ocorrer um erro, o indicador de erro para o fluxo permanecerá definido até que o fluxo seja fechado ou rebobinado, ou até que **clearerr** seja chamado em relação a ele.
 
 ## <a name="requirements"></a>Requisitos
 

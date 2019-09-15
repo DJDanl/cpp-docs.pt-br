@@ -1,9 +1,9 @@
 ---
 title: _kbhit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _kbhit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _kbhit
 - kbhit
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 9133d73e92438327bb2381e3293fd37076dd27ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49c8df1a2c600ad3976babea0b560108ea69efd8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286473"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953510"
 ---
-# <a name="kbhit"></a>_kbhit
+# <a name="_kbhit"></a>_kbhit
 
 Verifica no console se há entradas de teclado.
 
@@ -53,11 +56,11 @@ int _kbhit( void );
 
 ## <a name="return-value"></a>Valor de retorno
 
-**kbhit** retorna um valor diferente de zero se uma tecla foi pressionada. Caso contrário, retorna 0.
+**_kbhit** retornará um valor diferente de zero se uma tecla tiver sido pressionada. Caso contrário, retorna 0.
 
 ## <a name="remarks"></a>Comentários
 
-O **kbhit** função verifica o console para um pressionamento de tecla recente. Se a função retornar um valor diferente de zero, um pressionamento de tecla está aguardando no buffer. O programa pode, em seguida, chamar **getch** ou **getche** para obter o pressionamento de tecla.
+A função **_kbhit** verifica o console para obter um pressionamento de tecla recente. Se a função retornar um valor diferente de zero, um pressionamento de tecla está aguardando no buffer. O programa pode então chamar **_getch** ou **_getche** para obter o pressionamento de teclas.
 
 ## <a name="requirements"></a>Requisitos
 

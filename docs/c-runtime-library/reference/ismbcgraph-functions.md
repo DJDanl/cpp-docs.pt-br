@@ -1,7 +1,7 @@
 ---
 title: _ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbcpunct_l
 - _ismbcblank
 - _ismbcprint
@@ -12,7 +12,7 @@ apiname:
 - _ismbcspace_l
 - _ismbcspace
 - _ismbcgraph
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -24,7 +24,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbcspace
 - _ismbcgraph
@@ -56,14 +59,14 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
-ms.openlocfilehash: 05946def8c4d832751554a1653afa98c9965fee9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25136896555128339aaa4c79cec2ca9bf3ded43c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286869"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953902"
 ---
-# <a name="ismbcgraph-ismbcgraphl-ismbcprint-ismbcprintl-ismbcpunct-ismbcpunctl-ismbcblank-ismbcblankl-ismbcspace-ismbcspacel"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
+# <a name="_ismbcgraph-_ismbcgraph_l-_ismbcprint-_ismbcprint_l-_ismbcpunct-_ismbcpunct_l-_ismbcblank-_ismbcblank_l-_ismbcspace-_ismbcspace_l"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 
 Determina se o caractere é um caractere gráfico, um caractere de exibição, um caractere de pontuação ou um caractere de espaço.
 
@@ -120,9 +123,9 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste, ou 0 se não satisfizer. Se *c* < = 255 e houver um correspondente **ismbb** rotina (por exemplo, **ismbcalnum** corresponde ao **ismbbalnum**), o resultado é o valor retornado de correspondente **ismbb** rotina.
+Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste, ou 0 se não satisfizer. Se *c* < = 255 e houver uma rotina **_ismbb** correspondente (por exemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), o resultado será o valor de retorno da rotina **_ismbb** correspondente.
 
-As versões dessas funções são idênticas, exceto que aquelas que têm o **l** sufixo usam a localidade que é passada para o seu comportamento dependente da localidade, em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções são idênticas, exceto pelo fato de que aquelas que têm o sufixo **_L** usam a localidade passada para seu comportamento dependente de localidade, em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -130,11 +133,11 @@ Cada uma dessas funções testa um determinado caractere multibyte quanto a uma 
 
 |Rotina|Condição de teste|Exemplo da página de código 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcgraph**|Gráfico|Retorna diferente de zero se e somente se *c* é uma representação de byte único de qualquer caractere imprimível ASCII ou katakana, exceto um espaço em branco ().|
-|**_ismbcprint**|Imprimível|Retorna diferente de zero se e somente se *c* é uma representação de byte único de qualquer caractere imprimível ASCII ou katakana incluindo um espaço em branco ().|
-|**_ismbcpunct**|Pontuação|Retorna diferente de zero se e somente se *c* é uma representação de byte único de qualquer caractere de pontuação ASCII ou katakana.|
-|**_ismbcblank**|Espaço ou tabulação horizontal|Retorna diferente de zero se e somente se *c* é um espaço ou caractere de tabulação horizontal: *c*= 0x20 ou *c*= 0x09.|
-|**_ismbcspace**|Espaço em branco|Retorna diferente de zero se e somente se *c* é um caractere de espaço em branco: *c*= 0x20 ou 0x09&lt < =*c*< lt;=0x0D.|
+|**_ismbcgraph**|Graphic|Retornará zero se e somente se *c* for uma representação de byte único de qualquer caractere ASCII ou katakana imprimível, exceto um espaço em branco ().|
+|**_ismbcprint**|Imprimível|Retornará zero se e somente se *c* for uma representação de byte único de qualquer caractere ASCII ou katakana imprimível, incluindo um espaço em branco ().|
+|**_ismbcpunct**|Pontuação|Retornará zero se e somente se *c* for uma representação de byte único de qualquer caractere de Pontuação ASCII ou katakana.|
+|**_ismbcblank**|Espaço ou tabulação horizontal|Retornará zero se e somente se *c* for um espaço ou um caractere de tabulação horizontal: *c*= 0x20 ou *c*= 0x09.|
+|**_ismbcspace**|Espaço em branco|Retornará zero se e somente se *c* for um caractere de espaço em branco: *c*= 0x20 ou 0x09 < =*c*< = 0x0D.|
 
 ## <a name="requirements"></a>Requisitos
 

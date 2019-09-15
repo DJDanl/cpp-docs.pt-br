@@ -1,10 +1,10 @@
 ---
 title: _putch, _putwch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putwch
 - _putch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putch
 - putwch
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: da45744fe56c198cc97228cae8043abbb5436fbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e7d7d57f5418e8c15aa02f015d3346298fa0422
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358134"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950040"
 ---
-# <a name="putch-putwch"></a>_putch, _putwch
+# <a name="_putch-_putwch"></a>_putch, _putwch
 
 Grava um caractere no console.
 
@@ -62,13 +65,13 @@ O caractere a ser gerado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna *c* se houver êxito. Se **putch** falhar, retornará **EOF**; se **putwch** falhar, retornará **WEOF**.
+Retorna *c* se houver êxito. Se **_putch** falhar, ele retornará **EOF**; Se **_putwch** falhar, ele retornará **WEOF**.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções gravam o caractere *c* diretamente, sem buffer, no console. No Windows NT, **_putwch** grava caracteres Unicode usando a configuração de localidade do console atual.
+Essas funções gravam o caractere *c* diretamente, sem armazenar em buffer, no console. No Windows NT, **_putwch** grava caracteres Unicode usando a configuração de localidade do console atual.
 
-As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não serem protegidas contra interferência de outros threads. Para obter mais informações, consulte **putch_nolock**, **putwch_nolock**.
+As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não serem protegidas contra interferência de outros threads. Para obter mais informações, consulte **_putch_nolock**, **_putwch_nolock**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

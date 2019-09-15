@@ -1,10 +1,10 @@
 ---
 title: _strdate_s, _wstrdate_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strdate_s
 - _wstrdate_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strdate_s
 - wstrdate_s
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fadd30ec81cff59d675212e59c8513656c7b2f35
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353983"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940746"
 ---
-# <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
+# <a name="_strdate_s-_wstrdate_s"></a>_strdate_s, _wstrdate_s
 
 Copie a data atual do sistema para um buffer. Estas são versões de [_strdate, _wstrdate](strdate-wstrdate.md) com aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -79,26 +82,26 @@ Zero se for bem-sucedido. Se houver uma falha, o valor retornado será um códig
 
 ## <a name="error-conditions"></a>Condições de Erro
 
-|*buffer*|*numberOfElements*|Valor de|Conteúdo de *buffer*|
+|*buffer*|*numberOfElements*|Valor de|Conteúdo do *buffer*|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|(qualquer)|**EINVAL**|Não modificado|
-|Não **nulo** (apontando para o buffer válido)|0|**EINVAL**|Não modificado|
-|Não **nulo** (apontando para o buffer válido)|0 < *numberOfElements* < 9|**EINVAL**|Cadeia de caracteres vazia|
-|Não **nulo** (apontando para o buffer válido)|*numberOfElements* >= 9|0|Data atual formatada conforme especificado nos comentários|
+|Não **nulo** (apontando para um buffer válido)|0|**EINVAL**|Não modificado|
+|Não **nulo** (apontando para um buffer válido)|0 < *numberOfElements* < 9|**EINVAL**|Cadeia de caracteres vazia|
+|Não **nulo** (apontando para um buffer válido)|*numberOfElements* >= 9|0|Data atual formatada conforme especificado nos comentários|
 
 ## <a name="security-issues"></a>Problemas de segurança
 
-Passando um inválido não **nulo** valor para o buffer resultará em uma violação de acesso se o *numberOfElements* parâmetro é maior do que 9.
+A passagem de um valor não **nulo** inválido para o buffer resultará em uma violação de acesso se o parâmetro *numberOfElements* for maior que 9.
 
-Passar valores de tamanho que é maior que o tamanho real do *buffer* resultará em estouro de buffer.
+Passar valores para o tamanho maior que o tamanho real do *buffer* resultará em saturação do buffer.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções fornecem versões mais seguras **strDate** e **wstrdate**. O **strdate_s** função copia a data atual do sistema para o buffer apontado por *buffer*formatado **mm**/**dd** / **yy**, onde **mm** são dois dígitos que representa o mês **dd** são dois dígitos que representa o dia e **AA**  é os dois últimos dígitos do ano. Por exemplo, a cadeia de caracteres **05/12/99** representa 5 de dezembro de 1999. O buffer deve ter, no mínimo, 9 caracteres de comprimento.
+Essas funções fornecem versões mais seguras do **_strdate** e do **_wstrdate**. A **função _strdate_s** copia a data atual do sistema para o buffer apontado *pelo buffer*, formatada **mm**/**DD**/**AA**, em que **mm** é dois dígitos que representam o mês, **DD** é dois dígitos que representam o dia e **YY** são os dois últimos dígitos do ano. Por exemplo, a cadeia de caracteres **12/05/99** representa 5 de dezembro de 1999. O buffer deve ter, no mínimo, 9 caracteres de comprimento.
 
-**wstrdate_s** é uma versão de caractere largo de **strdate_s**; o argumento e o valor retornado de **wstrdate_s** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
+**_wstrdate_s** é uma versão de caractere largo do **_strdate_s**; o argumento e o valor de retorno de **_wstrdate_s** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
-Se *buffer* é um **nulo** ponteiro, ou se *numberOfElements* é menor que 9 caracteres, o manipulador de parâmetro inválido será invocado, conforme descrito em [ Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e defina **errno** à **EINVAL** se o buffer for **nulo** ou se *numberOfElements*é menor ou igual a 0 ou conjunto **errno** para **ERANGE** se *numberOfElements* for menor que 9.
+Se o *buffer* for um ponteiro **nulo** ou se *numberOfElements* tiver menos de 9 caracteres, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão-1 e definirá **errno** como **EINVAL** se o buffer for **nulo** ou se *numberOfElements* for menor ou igual a 0, ou definir **errno** como **ERANGE** se *NumberOfElements* é menor que 9.
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

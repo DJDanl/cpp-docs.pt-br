@@ -1,14 +1,14 @@
 ---
 title: lround, lroundf, lroundl, llround, llroundf, llroundl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - llround
 - llroundf
 - llroundl
 - lroundf
 - lround
 - lroundl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lround
 - lroundl
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: a1406f84179df555125b908caa13a0cde6516597
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d849e838811abbed83499d6da283148650bab875
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285839"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952998"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -89,7 +92,7 @@ O valor do ponto flutuante a ser arredondado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **lround** e **llround** funções retornam mais próximo **longo** ou **longo** **longo** inteiro para *x*. Valores decimais são arredondados para cima, independentemente da configuração do modo de arredondamento de ponto flutuante. Nenhum erro é retornado.
+As **funções Lround** e **llround** retornam o inteiro **longo ou longo Long para** *x*. Valores decimais são arredondados para cima, independentemente da configuração do modo de arredondamento de ponto flutuante. Nenhum erro é retornado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
@@ -97,7 +100,7 @@ O **lround** e **llround** funções retornam mais próximo **longo** ou **longo
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **lround** ou **llround** que tomam e retornam **float** e **longo** **duplas** valores. Em um programa do C **lround** e **llround** sempre tomam e retornam uma **double**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **Lround** ou **llround** que levam e retornam valores **float** e **Long** **duplos** . Em um programa C, **Lround** e **llround** sempre assumem e retornam um **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

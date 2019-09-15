@@ -1,14 +1,14 @@
 ---
 title: erf, erff, erfl, erfc, erfcf, erfcl
 ms.date: 01/31/2019
-apiname:
+api_name:
 - erff
 - erfl
 - erf
 - erfc
 - erfcf
 - erfcl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - erfl
 - erf
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 4270d8366686ea282a4dd37741d9f8e37991b88f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289190"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937614"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -89,17 +92,17 @@ Um valor de ponto flutuante.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **erf** funções retornam o Gauss função de erro de *x*. O **erfc** funções retornam o complementar em Gauss de função de erro de *x*.
+As funções **ERF** retornam a função de erro de magnetização de *x*. As funções **ERFC** retornam a função de erro de magnetização complementar de *x*.
 
 ## <a name="remarks"></a>Comentários
 
-O **erf** funções calculam a função de erro em Gauss de *x*, que é definida como:
+As funções **ERF** calculam a função de erro de magnetização de *x*, que é definida como:
 
-![A função de erro de x](media/crt_erf_formula.PNG "a função de erro de x")
+![A função Error de x](media/crt_erf_formula.PNG "A função Error de x")
 
-A função de erro complementar em Gauss é definida como 1 – ERF (x). O **erf** funções retornam um valor no intervalo de -1,0 a 1,0. Nenhum erro é retornado. O **erfc** funções retornam um valor no intervalo de 0 a 2. Se *x* é muito grande para **erfc**, o **errno** variável é definida como **ERANGE**.
+A função de erro de magnetização complementar é definida como 1-ERF (x). As funções **ERF** retornam um valor no intervalo de-1,0 a 1,0. Nenhum erro é retornado. As funções **ERFC** retornam um valor no intervalo de 0 a 2. Se *x* for muito grande para **ERFC**, a variável **errno** será definida como **ERANGE**.
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **erf** e **erfc** que tomam e retornam **float** e **longo** **duplas** tipos. Em um programa do C **erf** e **erfc** sempre tomam e retornam uma **double**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **ERF** e **ERFC** que levam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **ERF** e **ERFC** sempre assumem e retornam um **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

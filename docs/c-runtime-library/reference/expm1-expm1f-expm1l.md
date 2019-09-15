@@ -1,11 +1,11 @@
 ---
 title: expm1, expm1f, expm1l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - expm1l
 - expm1
 - expm1f
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - expm1l
 - expm1
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - expm1l function
 - expm1 function
 ms.assetid: 2a4dd2d9-370c-42b0-9067-0625efa272e0
-ms.openlocfilehash: 5971f879ecef7d4fa1027849cc44d598e877b5f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77bd44975e97cc646f7d2fd100d86b6661b8c2e9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334977"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941539"
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1, expm1f, expm1l
 
@@ -65,11 +68,11 @@ O valor de exponencial do ponto flutuante.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **expm1** funções retornam um valor de ponto flutuante que representa e<sup>x</sup> - 1, se for bem-sucedido. No estouro, **expm1** retorna **HUGE_VAL**, **expm1f** retorna **HUGE_VALF**, **expm1l** retorna **HUGE_VALL**, e **errno** está definido como **ERANGE**. Para obter mais informações sobre os códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+As funções **expm1** retornam um valor de ponto flutuante que representa e<sup>x</sup> -1, se for bem-sucedido. Em Overflow, **expm1** retorna **HUGE_VAL**, **expm1f** retorna **HUGE_VALF**, **expm1l** retorna **HUGE_VALL**e **errno** é definido como **ERANGE**. Para obter mais informações sobre os códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **expm1** que usam e retornam **float** e **longo** **double** valores. Em um programa do C **expm1** sempre usa e retorna um **duplo**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **expm1** que levam e retornam valores **float** e **Long** **duplos** . Em um programa C, **expm1** sempre pega e retorna um **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

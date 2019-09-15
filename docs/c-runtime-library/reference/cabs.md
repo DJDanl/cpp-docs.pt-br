@@ -1,9 +1,9 @@
 ---
 title: _cabs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cabsl
 - _cabs
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 3e95b6f568ce66b8e9e5483bd1dcbcfaa7af3d28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e2536fbeed2f466d3795e2ed26e643279e8bc67
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341061"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943418"
 ---
-# <a name="cabs"></a>_cabs
+# <a name="_cabs"></a>_cabs
 
 Calcula o valor absoluto de um número complexo.
 
@@ -54,11 +57,11 @@ Número complexo.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**CABs** retorna o valor absoluto do argumento se for bem-sucedido. No estouro, **CABs** retorna **HUGE_VAL** e define **errno** para **ERANGE**. Você pode alterar o tratamento de erro com [_matherr](matherr.md).
+**_cabs** retorna o valor absoluto de seu argumento, se for bem-sucedido. Em Overflow, **_cabs** retorna **HUGE_VAL** e define **errno** como **ERANGE**. Você pode alterar o tratamento de erro com [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **CABs** função calcula o valor absoluto de um número complexo, que deve ser uma estrutura do tipo [Complex](../../c-runtime-library/standard-types.md). A estrutura *z* é composto de um componente real *x* e um componente imaginário *y*. Uma chamada para **CABs** produz um valor equivalente da expressão `sqrt( z.x * z.x + z.y * z.y )`.
+A função **_cabs** calcula o valor absoluto de um número complexo, que deve ser uma estrutura do tipo [_complex](../../c-runtime-library/standard-types.md). A estrutura *z* é composta por um componente real *x* e um componente imaginário de *y*. Uma chamada para **_cabs** produz um valor equivalente ao da expressão `sqrt( z.x * z.x + z.y * z.y )`.
 
 ## <a name="requirements"></a>Requisitos
 

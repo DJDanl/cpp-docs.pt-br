@@ -1,10 +1,10 @@
 ---
 title: _fgetchar, _fgetwchar
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fgetchar
 - _fgetwchar
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fgetwchar
 - _fgettchar
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: c74618fa0be5392062d13618ff73e2ef45bf7c2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90a97308b8c60776d52e58feb84c5398456f26d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333950"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940870"
 ---
-# <a name="fgetchar-fgetwchar"></a>_fgetchar, _fgetwchar
+# <a name="_fgetchar-_fgetwchar"></a>_fgetchar, _fgetwchar
 
 Lê um caractere de **stdin**.
 
@@ -52,13 +55,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Valor de retorno
 
-**\_fgetchar** retorna o caractere lido como uma **int** ou retorna `EOF` para indicar um erro ou fim do arquivo. **\_fgetwchar** retorna, como um [wint_t](../../c-runtime-library/standard-types.md), o caractere largo que corresponde ao caractere lido ou retorna `WEOF` para indicar um erro ou fim do arquivo. Para ambas as funções, use **feof** ou **ferror** para distinguir entre um erro e uma condição de fim-de-arquivo.
+fgetchar retorna o caractere lido como um **int** ou retorna `EOF` para indicar um erro ou fim de arquivo.  **\_** fgetwchar retorna, como um [wint_t](../../c-runtime-library/standard-types.md), o caractere largo que corresponde ao caractere lido ou retorna `WEOF` para indicar um erro ou fim de arquivo.  **\_** Para ambas as funções, use **feof** ou **referenciador** para distinguir entre um erro e uma condição de fim de arquivo.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções leem um único caractere de **stdin**. A função, em seguida, incrementa o ponteiro de arquivo associado (se definido) para apontar para o próximo caractere. Se o fluxo estiver no fim do arquivo, o indicador de fim de arquivo para o fluxo será definido.
+Essas funções lêem um único caractere de **stdin**. A função, em seguida, incrementa o ponteiro de arquivo associado (se definido) para apontar para o próximo caractere. Se o fluxo estiver no fim do arquivo, o indicador de fim de arquivo para o fluxo será definido.
 
-**fgetchar** é equivalente a `fgetc( stdin )`. Também é equivalente a **getchar**, mas implementado somente como uma função, em vez de uma função e uma macro. **fgetwchar** é a versão de caractere largo de **fgetchar**.
+**_fgetchar** é equivalente a `fgetc( stdin )`. Ele também é equivalente a **GetChar**, mas implementado somente como uma função, em vez de como uma função e uma macro. **_fgetwchar** é a versão de caractere largo do **_fgetchar**.
 
 Essas funções não são compatíveis com o padrão ANSI.
 
@@ -75,7 +78,7 @@ Essas funções não são compatíveis com o padrão ANSI.
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console —**stdin**, **stdout**, e **stderr**— deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console do —**stdin**, **stdout**e **stderr**— devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

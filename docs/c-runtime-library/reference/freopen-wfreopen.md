@@ -1,10 +1,10 @@
 ---
 title: freopen, _wfreopen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - freopen
 - _wfreopen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wfreopen
 - _tfreopen
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - tfreopen function
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
-ms.openlocfilehash: f31f0eeacaf573fe0f6489f4dc8b5da03bf9b64f
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 9f6d4343db3cb507e43e409361059e83fad63148
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376100"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956854"
 ---
-# <a name="freopen-wfreopen"></a>freopen, _wfreopen
+# <a name="freopen-_wfreopen"></a>freopen, _wfreopen
 
 Reatribui um ponteiro de arquivo. Versões mais seguras dessas funções estão disponíveis; consulte [freopen_s, _wfreopen_s](freopen-s-wfreopen-s.md).
 
@@ -86,7 +89,7 @@ A função **freopen** fecha o arquivo atualmente associado ao *fluxo* e reatrib
 
 **freopen** normalmente é usado para redirecionar os arquivos pré-instalados **stdin**, **stdout**e **stderr** para os arquivos especificados pelo usuário. O novo arquivo associado ao *fluxo* é aberto com o *modo*, que é uma cadeia de caracteres que especifica o tipo de acesso solicitado para o arquivo, da seguinte maneira:
 
-|*modo*|Acesso|
+|*modo*|Access|
 |-|-|
 | **"r"** | Abre para leitura. Se o arquivo não existir ou não puder ser encontrado, a chamada **freopen** falhará. |
 | **"w"** | Abre um arquivo vazio para gravação. Se o arquivo determinado existir, seus conteúdos são destruídos. |

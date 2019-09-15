@@ -1,11 +1,11 @@
 ---
 title: casin, casinf, casinl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - casin
 - casinf
 - casinl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - casin
 - casinf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-ms.openlocfilehash: 209c3da6d6ed03cb5a5b129003c999b002a1a6b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3ae944c9808fd0fc6e8d1ffbd02da2a69454cc6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335588"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943389"
 ---
 # <a name="casin-casinf-casinl"></a>casin, casinf, casinl
 
-Recupera o arco seno de um número complexo, com cortes de ramificação fora do intervalo [-1, + 1] ao longo do eixo real.
+Recupera o arco seno de um número complexo, com os cortes de ramificação fora do intervalo [-1, + 1] ao longo do eixo real.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -68,11 +71,11 @@ Um número complexo que representa um ângulo, em radianos.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O arco seno de *z*, em radianos. O resultado não estiver associado ao longo do eixo imaginário e no intervalo [-π/2 + 2/π] ao longo do eixo real.
+O arco seno de *z*, em radianos. O resultado é não associado ao longo do eixo imaginário e no intervalo [-π/2, + π/2] ao longo do eixo real.
 
 ## <a name="remarks"></a>Comentários
 
-Porque C++ permite sobrecargas, é possível chamar sobrecargas de **casin** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **casin** sempre usa e retorna um **_Dcomplex** valor.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **Casin** que usam e retornam valores **_Fcomplex** e **_Lcomplex** . Em um programa C, **Casin** sempre pega e retorna um valor **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisitos
 

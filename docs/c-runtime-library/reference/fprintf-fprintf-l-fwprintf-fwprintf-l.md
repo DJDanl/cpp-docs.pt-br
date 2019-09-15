@@ -1,12 +1,12 @@
 ---
 title: fprintf, _fprintf_l, fwprintf, _fwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fwprintf
 - fprintf
 - _fprintf_l
 - _fwprintf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fprintf
 - fwprintf
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - print formatted data to streams
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-ms.openlocfilehash: d84ef50e6fd522e393bb87664fb1eb47f3d32bb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a296b8ac97a7f20a3834814c1ca3b7319720148
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333190"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956980"
 ---
-# <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
+# <a name="fprintf-_fprintf_l-fwprintf-_fwprintf_l"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
 
 Imprimir dados formatados em um fluxo. Versões mais seguras dessas funções estão disponíveis; consulte [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
 
@@ -89,17 +92,17 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**fprintf** retorna o número de bytes gravados. **fwprintf** retorna o número de caracteres largos gravados. Cada uma dessas funções retorna um valor negativo quando ocorre um erro de saída. Se *stream* ou *formato* está **nulo**, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornarão -1 e defina **errno** à **EINVAL**. A cadeia de caracteres de formato não é verificada para caracteres de formatação válidos conforme ela é ao usar **fprintf_s** ou **fwprintf_s**.
+**fprintf** retorna o número de bytes gravados. **fwprintf** retorna o número de caracteres largos gravados. Cada uma dessas funções retorna um valor negativo quando ocorre um erro de saída. Se o *fluxo* ou o *formato* for **nulo**, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornam-1 e definem **errno** como **EINVAL**. A cadeia de caracteres de formato não é verificada quanto a caracteres de formatação válidos como é quando se usa **fprintf_s** ou **fwprintf_s**.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.
 
 ## <a name="remarks"></a>Comentários
 
-**fprintf** formata e imprime uma série de caracteres e valores para a saída *fluxo*. Cada função *argumento* (se houver) é convertido e gerado de acordo com a especificação de formato correspondente em *formato*. Para **fprintf**, o *formato* argumento tem a mesma sintaxe e uso que nos **printf**.
+**fprintf** formata e imprime uma série de caracteres e valores no *fluxo*de saída. Cada *argumento* de função (se houver) é convertido e apresentado de acordo com a especificação de formato correspondente no *formato*. Para **fprintf**, o argumento de *formato* tem a mesma sintaxe e usa-o em **printf**.
 
-**fwprintf** é uma versão de caractere largo de **fprintf**; na **fwprintf**, *formato* é uma cadeia de caracteres largos. Essas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. **fprintf** não oferece suporte a saída em um fluxo UNICODE.
+**fwprintf** é uma versão de caractere largo do **fprintf**; em **fwprintf**, *Format* é uma cadeia de caracteres largos. Essas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. Atualmente, o **fprintf** não dá suporte à saída em um fluxo Unicode.
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
 > [!IMPORTANT]
 > Verifique se *format* não é uma cadeia de caracteres definida pelo usuário.

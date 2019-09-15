@@ -1,9 +1,9 @@
 ---
 title: fread_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fread_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: 1adc999d37025392f03a11daebfffdeeb637d92b
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: d1f1756af7427ecdfc8ff332f4a2211984a177d8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376140"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956843"
 ---
-# <a name="freads"></a>fread_s
+# <a name="fread_s"></a>fread_s
 
 Lê dados de um fluxo. Esta versão de [fread](fread.md) tem melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -68,7 +71,7 @@ Para obter mais informações sobre códigos de erro, consulte [_doserrno, errno
 
 ## <a name="remarks"></a>Comentários
 
-A função **fread_s** lê para *contar* os itens de *elementos* de elementar bytes do *fluxo* de entrada e os armazena no *buffer*.  O ponteiro de arquivo que está associado ao *fluxo* (se houver) é aumentado pelo número de bytes realmente lidos. Se o fluxo fornecido for aberto no modo de texto, os pares de retorno de carro-alimentação de linha serão substituídos por caracteres de alimentação de linha única. A substituição não interfere no ponteiro do arquivo ou no valor retornado. A posição do ponteiro do arquivo será indeterminada se ocorrer um erro. O valor de um item lido parcialmente não pode ser determinado.
+A função **fread_s** lê para *contar* os itens de *elementos de elementar* bytes do *fluxo* de entrada e os armazena no *buffer*.  O ponteiro de arquivo que está associado ao *fluxo* (se houver) é aumentado pelo número de bytes realmente lidos. Se o fluxo fornecido for aberto no modo de texto, os pares de retorno de carro-alimentação de linha serão substituídos por caracteres de alimentação de linha única. A substituição não interfere no ponteiro do arquivo ou no valor retornado. A posição do ponteiro do arquivo será indeterminada se ocorrer um erro. O valor de um item lido parcialmente não pode ser determinado.
 
 Essa função bloqueia outros threads. Se você precisar de uma versão sem bloqueio, use **_fread_nolock**.
 

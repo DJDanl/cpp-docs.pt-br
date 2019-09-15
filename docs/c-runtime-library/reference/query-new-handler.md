@@ -1,9 +1,9 @@
 ---
 title: _query_new_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _query_new_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _query_new_handler
 - query_new_handler
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-ms.openlocfilehash: febefbe46d95b7e5c8de026806a20d7eff74e7cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cbd434ee0b75f78a2492bd6239bd89f584215ff
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357870"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949689"
 ---
-# <a name="querynewhandler"></a>_query_new_handler
+# <a name="_query_new_handler"></a>_query_new_handler
 
 Retorna o endereço da rotina atual do novo manipulador.
 
@@ -46,11 +49,11 @@ _PNH _query_new_handler(
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna o endereço da rotina atual novo manipulador conforme definido pela **set_new_handler**.
+Retorna o endereço da rotina do novo manipulador atual, conforme definido por **_set_new_handler**.
 
 ## <a name="remarks"></a>Comentários
 
-O C++ **query_new_handler** função retorna o endereço da função de manipulação de exceção atual definida pelo C++ [set_new_handler](set-new-handler.md) função. **set_new_handler** é usado para especificar uma função de manipulação de exceção que assumirá o controle se o **nova** operador falha ao alocar memória. Para obter mais informações, consulte a discussão sobre os [operadores new e delete](../../cpp/new-and-delete-operators.md) na Referência da Linguagem C++.
+A C++ função **_query_new_handler** retorna o endereço da função de tratamento de exceção atual definida pela C++ função [_set_new_handler](set-new-handler.md) . **_set_new_handler** é usado para especificar uma função de tratamento de exceção que deve obter controle se o operador **New** falhar ao alocar memória. Para obter mais informações, consulte a discussão sobre os [operadores new e delete](../../cpp/new-and-delete-operators.md) na Referência da Linguagem C++.
 
 ## <a name="requirements"></a>Requisitos
 

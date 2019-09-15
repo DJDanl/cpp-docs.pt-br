@@ -1,10 +1,10 @@
 ---
 title: _execle, _wexecle
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execle
 - _wexecle
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wexecle
 - _execle
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _wexecle function
 - _execle function
 ms.assetid: 75efa9c5-96b7-4e23-acab-06258901f63a
-ms.openlocfilehash: dbd84dd8d8e150a063dad4dc89a572c317bce544
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3480b2220c71984dcc30cec54d00deac1f4dfbc7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288156"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937382"
 ---
-# <a name="execle-wexecle"></a>_execle, _wexecle
+# <a name="_execle-_wexecle"></a>_execle, _wexecle
 
 Carrega e executa novos processos filho.
 
@@ -65,7 +68,7 @@ intptr_t _wexecle(
 *cmdname*<br/>
 Caminho do arquivo a ser executado.
 
-*arg0*, ... *argn*<br/>
+*arg0*,... *argN*<br/>
 Lista de ponteiros para os parâmetros.
 
 *envp*<br/>
@@ -73,9 +76,9 @@ Matriz de ponteiros para as configurações de ambiente.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, caso em que o **errno** variável global é definida.
+Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de-1 indica um erro; nesse caso, a variável global **errno** é definida.
 
-|**errno** value|Descrição|
+|valor **errno**|Descrição|
 |-------------------|-----------------|
 |**E2BIG**|O espaço necessário para os argumentos e as configurações de ambiente excede 32 KB.|
 |**EACCES**|O arquivo especificado tem uma violação de compartilhamento ou de bloqueio.|
@@ -91,7 +94,7 @@ Para obter mais informações sobre esses códigos de retorno, consulte [_doserr
 
 Cada uma dessas funções carrega e executa um novo processo e passa cada argumento de linha de comando como um parâmetro separado e passa uma matriz de ponteiros para as configurações de ambiente.
 
-O **execle** funções validam seus parâmetros. Se *cmdname* ou *arg0* é um ponteiro nulo ou uma cadeia de caracteres vazia, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornarão -1. Nenhum processo novo é inicializado.
+As funções **_execle** validam seus parâmetros. Se *cmdname* ou *arg0* for um ponteiro nulo ou uma cadeia de caracteres vazia, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definem **errno** como **EINVAL** e retornam-1. Nenhum processo novo é inicializado.
 
 ## <a name="requirements"></a>Requisitos
 

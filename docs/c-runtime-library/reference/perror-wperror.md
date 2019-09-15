@@ -1,10 +1,10 @@
 ---
 title: perror, _wperror
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wperror
 - perror
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wperror
 - _tperror
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: c9026a96ecc74640eb2bcd7004d5d1e0fc287e38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 755b638f320fcc583faecfe6aa82269e4e1b3d8f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156092"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951031"
 ---
-# <a name="perror-wperror"></a>perror, _wperror
+# <a name="perror-_wperror"></a>perror, _wperror
 
 Imprima uma mensagem de erro.
 
@@ -59,7 +62,7 @@ Mensagem de cadeia de caracteres para imprimir.
 
 ## <a name="remarks"></a>Comentários
 
-O **perror** função imprime uma mensagem de erro para **stderr**. **wperror** é uma versão de caractere largo de **perror**; o *mensagem* argumento **wperror** é uma cadeia de caracteres largos. **wperror** e **perror** se comportam de forma idêntica caso contrário.
+A função **perror** imprime uma mensagem de erro em **stderr**. **_wperror** é uma versão de caractere largo do **_perror**; o argumento da *mensagem* para **_wperror** é uma cadeia de caracteres largos. **_wperror** e **_perror** se comportam de outra forma.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -67,13 +70,13 @@ O **perror** função imprime uma mensagem de erro para **stderr**. **wperror** 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tperror**|**perror**|**perror**|**_wperror**|
 
-*mensagem* é impresso primeiro, seguido por dois-pontos e, em seguida, pela mensagem de erro do sistema para a última chamada de biblioteca que gerou o erro e, finalmente, por um caractere de nova linha. Se *mensagem* é um ponteiro nulo ou um ponteiro para uma cadeia de caracteres nula **perror** imprime somente a mensagem de erro do sistema.
+a *mensagem* é impressa primeiro, seguida por dois-pontos, depois pela mensagem de erro do sistema para a última chamada de biblioteca que produziu o erro e, por fim, por um caractere de nova linha. Se *Message* for um ponteiro nulo ou um ponteiro para uma cadeia de caracteres nula, **perror** imprimirá apenas a mensagem de erro do sistema.
 
-O número do erro real é armazenado na variável [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (definida em ERRNO.H). As mensagens de erro do sistema são acessadas por meio da variável [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), que é uma matriz de mensagens ordenadas por número do erro. **perror** imprime a mensagem de erro apropriada usando o **errno** valor como um índice **sys_errlist**. O valor da variável [sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como o número máximo de elementos na **sys_errlist** matriz.
+O número do erro real é armazenado na variável [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (definida em ERRNO.H). As mensagens de erro do sistema são acessadas por meio da variável [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), que é uma matriz de mensagens ordenadas por número do erro. **perror** imprime a mensagem de erro apropriada usando o valor **errno** como um índice para **_sys_errlist**. O valor da variável [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como o número máximo de elementos na matriz **_sys_errlist** .
 
-Para obter resultados precisos, chame **perror** imediatamente após uma rotina da biblioteca retorna um erro. Caso contrário, chamadas subsequentes podem substituir os **errno** valor.
+Para obter resultados precisos, chame **perror** imediatamente depois que uma rotina de biblioteca retornar com um erro. Caso contrário, as chamadas subsequentes podem substituir o valor **errno** .
 
-No Windows no sistema operacional, alguns **errno** valores listados no ERRNO. H está sendo utilizada. Esses valores são reservados para uso pelo sistema operacional UNIX. Ver [doserrno, errno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter uma lista de **errno** valores usados pelo sistema operacional Windows. **perror** imprime uma cadeia de caracteres vazia para qualquer **errno** valor não usado por essas plataformas.
+No sistema operacional Windows, alguns valores de **errno** listados em errno. H não são usadas. Esses valores são reservados para uso pelo sistema operacional UNIX. Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter uma lista dos valores de **errno** usados pelo sistema operacional Windows. **perror** imprime uma cadeia de caracteres vazia para qualquer valor **errno** não usado por essas plataformas.
 
 ## <a name="requirements"></a>Requisitos
 

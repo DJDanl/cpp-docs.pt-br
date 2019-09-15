@@ -1,7 +1,7 @@
 ---
 title: Funções _exec, _wexec
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr120.dll
 - msvcr90.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr100.dll
 - msvcr110.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _texecve
 - texecl
@@ -53,12 +56,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: d31192a25cce86dad6f8e1e8b0258a457d0a5436
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: f4bef0ef4f3cad0411f6da54ce5e2d8883913754
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500131"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940357"
 ---
 # <a name="_exec-_wexec-functions"></a>Funções _exec, _wexec
 
@@ -73,7 +76,7 @@ Cada função desta família carrega e executa um novo processo:
 
 A letra no final do nome da função determina a variação.
 
-|_exec sufixo da função|DESCRIÇÃO|
+|_exec sufixo da função|Descrição|
 |----------------------------|-----------------|
 |`e`|`envp`, matriz de ponteiros para configurações de ambiente, que é passada para o novo processo.|
 |`l`|Os argumentos da linha de comando são passados individualmente para a função `_exec`. Normalmente usado quando o número de parâmetros para o novo processo é conhecido de antemão.|

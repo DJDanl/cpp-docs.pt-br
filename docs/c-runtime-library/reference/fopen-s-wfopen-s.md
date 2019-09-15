@@ -1,10 +1,10 @@
 ---
 title: fopen_s, _wfopen_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfopen_s
 - fopen_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fopen_s
 - _tfopen_s
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-ms.openlocfilehash: e4ccce3c4a4fe1e327b7830ef03f6ab69f2d7814
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 2a400918a171c0009e40be8a20b814e8ded336ce
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376219"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957135"
 ---
-# <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
+# <a name="fopen_s-_wfopen_s"></a>fopen_s, _wfopen_s
 
 Abre um arquivo. Estas versões de [fopen, _wfopen](fopen-wfopen.md) têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -129,7 +132,7 @@ Se *Mode* for **"a, CCS =** _Encoding_ **"** , o **fopen_s** primeiro tentará a
 
 O *modo* de cadeia de caracteres especifica o tipo de acesso solicitado para o arquivo, como a seguir.
 
-|*modo*|Acesso|
+|*modo*|Access|
 |-|-|
 | **"r"** | Abre para leitura. Se o arquivo não existir ou não puder ser encontrado, a chamada **fopen_s** falhará. |
 | **"w"** | Abre um arquivo vazio para gravação. Se o arquivo determinado existir, seus conteúdos são destruídos. |

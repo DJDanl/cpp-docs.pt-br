@@ -1,14 +1,14 @@
 ---
 title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strlwr_l
 - _strlwr
 - _wcslwr_l
 - _mbslwr_l
 - _wcslwr
 - _mbslwr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strlwr
 - wcslwr_l
@@ -57,19 +60,19 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-ms.openlocfilehash: c9749a319d28d869babdb54859a80fa7f1916394
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7393f634aeb7de0e8e65866dc11c6d41cc9de6b8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210223"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947437"
 ---
-# <a name="strlwr-wcslwr-mbslwr-strlwrl-wcslwrl-mbslwrl"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
+# <a name="_strlwr-_wcslwr-_mbslwr-_strlwr_l-_wcslwr_l-_mbslwr_l"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 
 Converte uma cadeia de caracteres em minúsculas. Versões mais seguras dessas funções estão disponíveis; consulte [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).
 
 > [!IMPORTANT]
-> **mbslwr** e **mbslwr_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslwr** e **_mbslwr_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -138,11 +141,11 @@ Cada uma dessas funções retorna um ponteiro para a cadeia de caracteres conver
 
 ## <a name="remarks"></a>Comentários
 
-O **strlwr** função converte todas as letras em maiusculas *str* minúsculas conforme determinado pelo **LC_CTYPE** configuração da categoria da localidade. Outros caracteres não são afetados. Para obter mais informações sobre **LC_CTYPE**, consulte [setlocale](setlocale-wsetlocale.md). As versões dessas funções sem o **l** sufixo usam a localidade atual para seu comportamento dependente da localidade; as versões com o **l** sufixo são idênticas, exceto que eles usam a localidade passada em em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+A função **_strlwr** converte todas as letras maiúsculas em *Str* em letras minúsculas, conforme determinado pela configuração de categoria **LC_CTYPE** da localidade. Outros caracteres não são afetados. Para obter mais informações sobre o **LC_CTYPE**, consulte [setlocaling](setlocale-wsetlocale.md). As versões dessas funções sem o sufixo **_L** usam a localidade atual para seu comportamento dependente de localidade; as versões com o sufixo **_L** são idênticas, exceto que usam a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-O **wcslwr** e **mbslwr** funções são versões de caractere largo e caracteres multibyte **strlwr**. O argumento e o valor retornado de **wcslwr** são largos cadeias de caracteres; aqueles de **mbslwr** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+As funções **_wcslwr** e **_mbslwr** são versões de caractere largo e de multibyte de **_strlwr**. O argumento e o valor de retorno de **_wcslwr** são cadeias de caracteres largos; os de **_mbslwr** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
-Se *str* é um **nulo** ponteiro, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, essas funções retornarão a cadeia de caracteres original e definirão **errno** à **EINVAL**.
+Se *Str* for um ponteiro **NULL** , o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, essas funções retornarão a cadeia de caracteres original e definirá **errno** como **EINVAL**.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

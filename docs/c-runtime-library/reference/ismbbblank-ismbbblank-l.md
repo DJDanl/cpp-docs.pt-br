@@ -1,10 +1,10 @@
 ---
 title: _ismbbblank, _ismbbblank_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbblank_l
 - _ismbbblank
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,16 +16,19 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-ms.openlocfilehash: c6709d5a5870c44d200b704e4a34043ff9c37226
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21f4c88b00774159f8e6945973641e67718494e6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286938"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954239"
 ---
-# <a name="ismbbblank-ismbbblankl"></a>_ismbbblank, _ismbbblank_l
+# <a name="_ismbbblank-_ismbbblank_l"></a>_ismbbblank, _ismbbblank_l
 
 Determina se um caractere multibyte especificado é um caractere em branco.
 
@@ -54,7 +57,7 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**_ismbbblank** retorna um valor diferente de zero se *c* representa um caractere de espaço (0x20), um caractere de tabulação horizontal (0x09) ou um caractere específico de localidade que é usado para separar palavras em uma linha de texto para o qual **isspace** for true; caso contrário, retornará 0. **_ismbbblank** usa a localidade atual para qualquer comportamento dependente da localidade. **_ismbbblank_l** é idêntico, exceto que em vez disso, ele usa a localidade que é passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_ismbbblank** retornará um valor diferente de zero se *c* representar um caractere de espaço (0x20), um caractere de tabulação horizontal (0x09) ou um caractere específico de localidade que é usado para separar palavras dentro de uma linha de texto para a qual **isspace** é verdadeiro; caso contrário, retornará 0. **_ismbbblank** usa a localidade atual para qualquer comportamento dependente de localidade. **_ismbbblank_l** é idêntico, exceto que ele usa a localidade que é passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

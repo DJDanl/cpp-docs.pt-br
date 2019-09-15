@@ -1,9 +1,9 @@
 ---
 title: _pclose
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _pclose
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _pclose
 - pclose
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-ms.openlocfilehash: eb0f54ec27992cd0e62b11d8fec5bd54c3daea4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 383dd96553463a2619537cf06fc6534770ed88d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156000"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951078"
 ---
-# <a name="pclose"></a>_pclose
+# <a name="_pclose"></a>_pclose
 
 Espera por um novo processador de comando e fecha o fluxo no pipe associado.
 
@@ -49,17 +52,17 @@ FILE *stream
 ### <a name="parameters"></a>Parâmetros
 
 *stream*<br/>
-Valor de retorno da chamada anterior a **popen**.
+Valor de retorno da chamada anterior para **_popen**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna o status de saída do processador de comando de encerramento ou -1 se ocorrer um erro. O formato do valor de retorno é o mesmo que para **cwait**, exceto os bytes inferiores e superiores são trocados. Se o fluxo for **nulo**, **pclose** define **errno** para **EINVAL** e retornará -1.
+Retorna o status de saída do processador de comando de encerramento ou-1 se ocorrer um erro. O formato do valor de retorno é o mesmo que para **_cwait**, exceto que os bytes de ordem inferior e de ordem superior são trocados. Se Stream for **NULL**, **_pclose** definirá **errno** como **EINVAL** e retornará-1.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **pclose** função de pesquisa a ID do processo do processador de comando (Cmd.exe) iniciada por associado **popen** chamar, executa uma [cwait](cwait.md) ligar o novo comando processador e fecha o fluxo no pipe associado.
+A função **_pclose** procura a ID do processo do processador de comando (cmd. exe) iniciado pela chamada **_popen** associada, executa uma chamada [_cwait](cwait.md) no novo processador de comando e fecha o fluxo no pipe associado.
 
 ## <a name="requirements"></a>Requisitos
 

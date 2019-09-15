@@ -1,11 +1,11 @@
 ---
 title: tgamma, tgammaf, tgammal
 ms.date: 04/05/2018
-apiname:
+api_name:
 - tgamma
 - tgammaf
 - tgammal
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tgamma
 - tgammaf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: c9ff92658163fc20ce21496aba34b22b3661748b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02926fa49bbabeb9cf532f53cfa6e30a77805e70
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155609"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946206"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -72,9 +75,9 @@ O valor do qual o gama será encontrado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, retornará o gama de *x*.
+Se for bem-sucedido, retorna o gama de *x*.
 
-Um erro de intervalo pode ocorrer se a magnitude de *x* é muito grande ou muito pequeno para o tipo de dados. Um erro de domínio ou intervalo pode ocorrer se *x* < = 0.
+Um erro de intervalo pode ocorrer se a magnitude de *x* for muito grande ou muito pequena para o tipo de dados. Um erro de domínio ou de intervalo pode ocorrer se *x* < = 0.
 
 |Problema|Valor de|
 |-----------|------------|
@@ -92,7 +95,7 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **tgamma** que usam e retornam **float** e **longo** **double** tipos. Em um programa do C **tgamma** sempre usa e retorna um **duplo**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **tgamma** que usam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **tgamma** sempre pega e retorna um **Double**.
 
 Se x for um número natural, essa função retornará o fatorial de (x-1).
 

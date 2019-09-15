@@ -1,9 +1,9 @@
 ---
 title: imaxabs
 ms.date: 04/05/2018
-apiname:
+api_name:
 - imaxabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - imaxabs
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-ms.openlocfilehash: a7492e08c3a078698292923ce395524ab5327ecf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1f20c4de2ff9070bae3bfaeb8ba2d97d87d2d4d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157482"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954685"
 ---
 # <a name="imaxabs"></a>imaxabs
 
@@ -47,10 +50,10 @@ Valor inteiro.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **imaxabs** função retorna o valor absoluto do argumento. Nenhum erro é retornado.
+A função **imaxabs** retorna o valor absoluto do argumento. Nenhum erro é retornado.
 
 > [!NOTE]
-> Porque o intervalo de inteiros negativos que podem ser representados usando **intmax_t** é maior que o intervalo de números inteiros positivos que podem ser representados, é possível fornecer um argumento para **imaxabs** que não pode ser convertido. Se o valor absoluto do argumento não pode ser representado pelo retorno de tipo, o comportamento de **imaxabs** é indefinido.
+> Como o intervalo de inteiros negativos que podem ser representados usando **intmax_t** é maior do que o intervalo de inteiros positivos que podem ser representados, é possível fornecer um argumento para **imaxabs** que não pode ser convertido. Se o valor absoluto do argumento não puder ser representado pelo tipo de retorno, o comportamento de **imaxabs** será indefinido.
 
 ## <a name="requirements"></a>Requisitos
 

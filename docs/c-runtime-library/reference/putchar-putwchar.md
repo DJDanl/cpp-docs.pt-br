@@ -1,10 +1,10 @@
 ---
 title: putchar, putwchar
 ms.date: 11/04/2016
-apiname:
+api_name:
 - putchar
 - putwchar
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - putchar
 - putwchar
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - standard output, writing to
 - putwchar function
 ms.assetid: 93657c7f-cca1-4032-8e3a-cd6ab6193748
-ms.openlocfilehash: becee3d79f58ac018d1161c1af36e9a4646640bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88d1181fc2718d49533f3179c8fd0bfd818d589a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357978"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949914"
 ---
 # <a name="putchar-putwchar"></a>putchar, putwchar
 
@@ -57,13 +60,13 @@ O caractere a ser gravado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna o caractere gravado. Para indicar um erro ou condição de fim-de-arquivo **putc** e **putchar** retornar **EOF**; **putwc** e **putwchar** retornar **WEOF**. Para todas as quatro rotinas, use [ferror](ferror.md) ou [feof](feof.md) para verificar se há um erro ou o fim do arquivo. Se passado um ponteiro nulo para *stream*, essas funções gerarão uma exceção de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, eles retornam **EOF** ou **WEOF** e defina **errno** para **EINVAL**.
+Retorna o caractere gravado. Para indicar um erro ou condição de fim de arquivo, **putc** e **putchar** retornam **EOF**; **putwc** e **putwchar** retornam **WEOF**. Para todas as quatro rotinas, use [ferror](ferror.md) ou [feof](feof.md) para verificar se há um erro ou o fim do arquivo. Se passar um ponteiro NULL para *Stream*, essas funções gerarão uma exceção de parâmetro inválida, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, ela retornará **EOF** ou **WEOF** e definirá **errno** como **EINVAL**.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.
 
 ## <a name="remarks"></a>Comentários
 
-O **putc** rotina grava o único caractere *c* para a saída *fluxo* na posição atual. Qualquer inteiro pode ser passado para **putc**, mas somente os 8 bits inferiores são gravados. O **putchar** rotina é idêntica ao `putc( c, stdout )`. Para cada rotina, se ocorrer um erro de leitura, o indicador de erro para o fluxo será definido. **putc** e **putchar** são semelhantes às **fputc** e **fputchar**, respectivamente, mas são implementados como funções e como macros (consulte [ Escolhendo entre funções e Macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** e **putwchar** são versões de caractere largo de **putc** e **putchar**, respectivamente.
+A rotina **putc** grava o único caractere *c* no *fluxo* de saída na posição atual. Qualquer inteiro pode ser passado para **putc**, mas apenas os 8 bits inferiores são gravados. A rotina **putchar** é idêntica a `putc( c, stdout )`. Para cada rotina, se ocorrer um erro de leitura, o indicador de erro para o fluxo será definido. **putc** e **putchar** são semelhantes a **fputc** e **_fputchar**, respectivamente, mas são implementadas como funções e macros (consulte [escolhendo entre funções e macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** e **putwchar** são versões de caracteres largos de **putc** e **putchar**, respectivamente.
 
 As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não serem protegidas contra interferência de outros threads. Elas pode ser mais rápidas, pois não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
@@ -80,7 +83,7 @@ As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não s
 |**putchar**|\<stdio.h>|
 |**putwchar**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Libraries
 

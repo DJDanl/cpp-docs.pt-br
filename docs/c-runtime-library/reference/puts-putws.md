@@ -1,10 +1,10 @@
 ---
 title: puts, _putws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putws
 - puts
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putts
 - _putws
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-ms.openlocfilehash: 0151d29f627a8f6b91142d619f64921333bb48f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cd38678b321853cb229d86f9554bb76efbc84d6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358080"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949796"
 ---
-# <a name="puts-putws"></a>puts, _putws
+# <a name="puts-_putws"></a>puts, _putws
 
 Grava uma cadeia de caracteres para **stdout**.
 
@@ -59,17 +62,17 @@ Cadeia de caracteres de saída.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um valor não negativo se for bem-sucedido. Se **coloca** falhar, retornará **EOF**; se **putws** falhar, retornará **WEOF**. Se *str* for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções definem **errno** à **EINVAL** e retornar **EOF** ou **WEOF**.
+Retorna um valor não negativo se for bem-sucedido. Se o **pressionamento** falhar, ele retornará **EOF**; Se **_putws** falhar, ele retornará **WEOF**. Se *Str* for um ponteiro NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tem permissão para continuar, as funções definem **errno** como **EINVAL** e retornam **EOF** ou **WEOF**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **coloca** função gravações *str* para o fluxo de saída padrão **stdout**, substituindo a cadeia de caracteres do caractere nulo de terminação ('\0') com um caractere de nova linha ('\n') na fluxo de saída.
+A função **colocar** grava *Str* no fluxo de saída padrão **stdout**, substituindo o caractere nulo de terminação da cadeia de caracteres (' \ 0 ') por um caractere de nova linha (' \n ') no fluxo de saída.
 
-**putws** é a versão de caractere largo de **coloca**; as duas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. **coloca** atualmente, não suporta a saída em um fluxo UNICODE.
+**_putws** é a versão de caractere largo de **coloca**; as duas funções se comportam de forma idêntica se o fluxo é aberto no modo ANSI. no momento, **o não dá** suporte à saída em um fluxo Unicode.
 
-**putwch** grava caracteres Unicode usando a configuração de localidade do CONSOLE atual.
+**_putwch** grava caracteres Unicode usando a configuração de localidade do console atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -84,7 +87,7 @@ O **coloca** função gravações *str* para o fluxo de saída padrão **stdout*
 |**puts**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Libraries
 

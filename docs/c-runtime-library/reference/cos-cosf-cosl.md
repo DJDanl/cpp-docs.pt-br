@@ -1,11 +1,11 @@
 ---
 title: cos, cosf, cosl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - cos
 - cosf
 - cosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cos
 - cosf
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335354"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942828"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -62,16 +65,16 @@ long double cos( long double x );  // C++ only
 
 ## <a name="return-value"></a>Valor de retorno
 
-O cosseno *x*. Se *x* é maior que ou igual a 263 ou menor que ou igual a -263, ocorre uma perda de significância no resultado.
+O cosseno de *x*. Se *x* for maior ou igual a 263, ou menor ou igual a-263, uma perda de significância no resultado ocorrerá.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
 |± QNAN, IND|nenhum|**_DOMAIN**|
-|± INF|**INVALID**|**_DOMAIN**|
+|± INF|**INVÁLIDO**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **cos** que usam e retornam **float** ou **longo** **double** valores. Em um programa do C **cos** sempre usa e retorna um **duplo**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **cos** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, o **cos** sempre usa e retorna um **Double**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -83,7 +86,7 @@ Para obter informações adicionais sobre compatibilidade, consulte [Compatibili
 
 ## <a name="example"></a>Exemplo
 
-Consulte o exemplo na [sin, sinf, sinl](sin-sinf-sinl.md).
+Veja o exemplo em [sin, sinf, sinl](sin-sinf-sinl.md).
 
 ## <a name="see-also"></a>Consulte também
 

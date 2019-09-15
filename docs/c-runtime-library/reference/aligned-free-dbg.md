@@ -1,9 +1,9 @@
 ---
 title: _aligned_free_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_free_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_free_dbg
 - aligned_free_dbg
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _aligned_free_dbg function
 - aligned_free_dbg function
 ms.assetid: eb0cb3c8-0992-4db8-bac3-65f1b8311ca6
-ms.openlocfilehash: f51b9b9573ab2e23a0a60979c55a33d2e5cff747
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b510d16b6e784202094bb05e6364f7af1b1fff97
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341888"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939913"
 ---
-# <a name="alignedfreedbg"></a>_aligned_free_dbg
+# <a name="_aligned_free_dbg"></a>_aligned_free_dbg
 
 Libera um bloco de memória que foi alocado com [aligned_malloc](aligned-malloc.md) ou [aligned_offset_malloc](aligned-offset-malloc.md) (somente depuração).
 
@@ -44,13 +47,13 @@ void _aligned_free_dbg(
 ### <a name="parameters"></a>Parâmetros
 
 *memblock*<br/>
-Um ponteiro para o bloco de memória que foi retornado para o [aligned_malloc](aligned-malloc.md) ou [aligned_offset_malloc](aligned-offset-malloc.md) função.
+Um ponteiro para o bloco de memória que foi retornado para a função [_aligned_malloc](aligned-malloc.md) ou [_aligned_offset_malloc](aligned-offset-malloc.md) .
 
 ## <a name="remarks"></a>Comentários
 
-O **aligned_free_dbg** função é uma versão de depuração de [aligned_free](aligned-free.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **aligned_free_dbg** é reduzida a uma chamada para `_aligned_free`. Ambos `_aligned_free` e **aligned_free_dbg** liberam um bloco de memória no heap de base, mas **aligned_free_dbg** acomoda um recurso de depuração: a capacidade de manter liberados blocos na lista vinculada do heap para Simule condições de memória insuficiente.
+A função **_aligned_free_dbg** é uma versão de depuração da função [_aligned_free](aligned-free.md) . Quando [_DEBUG](../../c-runtime-library/debug.md) não é definido, cada chamada para **_aligned_free_dbg** é reduzida para uma chamada para `_aligned_free`. Tanto `_aligned_free` o quanto o **_aligned_free_dbg** livres de um bloco de memória no heap base, mas o **_aligned_free_dbg** acomoda um recurso de depuração: a capacidade de manter os blocos liberados na lista vinculada do heap para simular condições de memória insuficiente.
 
-**aligned_free_dbg** realiza uma verificação de validade em todos os arquivos especificados e locais de bloco antes de executar a operação livre. O aplicativo não deve fornecer essas informações. Ao liberar um bloco de memória, o gerenciador de heap de depuração verifica automaticamente a integridade dos buffers nos dois lados da parte do usuário e emite um relatório de erro se tiver ocorrido substituição. Se o crtdbg_delay_free_mem_df de campo de bits de [crtdbgflag](../../c-runtime-library/crtdbgflag.md) sinalizador estiver definido, o bloco liberado é preenchido com o valor 0xDD, atribuído o tipo de bloco free_block e mantido na lista vinculada do heap de blocos de memória.
+o **_aligned_free_dbg** executa uma verificação de validade em todos os arquivos especificados e locais de bloco antes de executar a operação gratuita. O aplicativo não deve fornecer essas informações. Ao liberar um bloco de memória, o gerenciador de heap de depuração verifica automaticamente a integridade dos buffers nos dois lados da parte do usuário e emite um relatório de erro se tiver ocorrido substituição. Se o campo _CRTDBG_DELAY_FREE_MEM_DF bit do sinalizador [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) for definido, o bloco liberado será preenchido com o valor 0xDD, atribuído o tipo de bloco _FREE_BLOCK e mantido na lista vinculada de blocos de memória do heap.
 
 Se ocorrer um erro ao liberar a memória, o `errno` é definido com informações do sistema operacional sobre a natureza da falha. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
