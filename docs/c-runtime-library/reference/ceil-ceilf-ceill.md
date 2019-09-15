@@ -1,11 +1,11 @@
 ---
 title: ceil, ceilf, ceill
 ms.date: 04/05/2018
-apiname:
+api_name:
 - ceilf
 - ceil
 - ceill
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - ucrtbase.dll
 - ntdll.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ceil
 - ceilf
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: b128f20593d41fff3c4c50f6d68f8643798c5b66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0be81354c19da646fa96f6eb58fbc7c76eeddb33
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335432"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943199"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -67,17 +70,17 @@ Valor de ponto flutuante.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **ceil** funções retornam um valor de ponto flutuante que representa o menor inteiro que é maior que ou igual a *x*. Nenhum erro é retornado.
+As funções **Ceil** retornam um valor de ponto flutuante que representa o menor inteiro que é maior ou igual a *x*. Nenhum erro é retornado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
 |± **QNAN**, **IND**|nenhum|**_DOMAIN**|
 
-**ceil** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+o **Ceil** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **ceil** que utilizam **float** ou **longo** **double** tipos. Em um programa do C **ceil** sempre usa e retorna um **duplo**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **Ceil** que têm tipos **flutuantes** ou **longos** **duplos** . Em um programa C, **Ceil** sempre pega e retorna um **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

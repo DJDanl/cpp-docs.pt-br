@@ -1,9 +1,9 @@
 ---
 title: _heapchk
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapchk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapchk
 - heapchk
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: bdc0137761664a668d6ef95d739f09501e8290e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 857feb66d89d5dc406042478156483ecb86a2474
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331708"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954817"
 ---
-# <a name="heapchk"></a>_heapchk
+# <a name="_heapchk"></a>_heapchk
 
 Executa verificações de consistência no heap.
 
@@ -45,7 +48,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>Valor de retorno
 
-**heapchk** retorna uma das seguintes constantes de manifesto de inteiro definidas em malloc.
+**_heapchk** retorna uma das seguintes constantes de manifesto de inteiro definidas em malloc. h.
 
 |Valor retornado|Condição|
 |-|-|
@@ -55,11 +58,11 @@ int _heapchk( void );
 | **_HEAPEMPTY** | O heap não foi inicializado. |
 | **_HEAPOK** | O heap parece ser consistente. |
 
-Além disso, se ocorrer um erro, **heapchk** define **errno** para **ENOSYS**.
+Além disso, se ocorrer um erro, **_heapchk** definirá **errno** como **ENOSYS**.
 
 ## <a name="remarks"></a>Comentários
 
-O **heapchk** função ajuda a depurar problemas relacionados ao heap verificando a consistência mínima do heap. Se o sistema operacional não suporta **heapchk**(por exemplo, Windows 98), a função retorna **heapok** e define **errno** para **ENOSYS**.
+A função **_heapchk** ajuda a depurar problemas relacionados a heap verificando a consistência mínima do heap. Se o sistema operacional não oferecer suporte a **_heapchk**(por exemplo, Windows 98), a função retornará **_HEAPOK** e definirá **errno** como **ENOSYS**.
 
 ## <a name="requirements"></a>Requisitos
 

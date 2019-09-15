@@ -1,11 +1,11 @@
 ---
 title: fma, fmaf, fmal
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fma
 - fmaf
 - fmal
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fma
 - fmaf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: f96592e245e443bae2f3334da51cae5572753708
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ddc4061e5a24ee3b5176aedc569d134d85e0002
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333489"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957100"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -95,9 +98,9 @@ Caso contrário, pode retornar um dos seguintes valores:
 |Problema|Valor de|
 |-----------|------------|
 |*x* = infinito, *y* = 0 ou<br /><br /> *x* = 0, *y* = INFINITY|NaN|
-|*x* ou *y* = ± exata infinito, *z* = infinito com o sinal oposto|NaN|
-|*x* ou *y* = NaN|NaN|
-|não (*x* = 0, *y*= indefinido) e *z* = NaN<br /><br /> não (*x*= indefinido, *y*= 0) e *z* = NaN|NaN|
+|*x* ou *y* = infinito exato de ±, *z* = Infinity com o sinal oposto|NaN|
+|*x* ou *y* = Nan|NaN|
+|Não (*x* = 0, *y*= indefinido) e *z* = Nan<br /><br /> Não (*x*= indefinido, *y*= 0) e *z* = Nan|NaN|
 |Erro de intervalo de estouro|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|
 |Erro de intervalo de estouro negativo|valor correto, após o arredondamento.|
 
@@ -105,7 +108,7 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **fma** que usam e retornam **float** e **longo** **double** tipos. Em um programa do C **fma** sempre usa e retorna um **duplo**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **FMA** que usam e retornam tipos **float** e **Long** **duplos** . Em um programa C, o **FMA** sempre usa e retorna um **Double**.
 
 Esta função calcula o valor como se ele tivesse precisão infinita e arredonda o resultado final.
 

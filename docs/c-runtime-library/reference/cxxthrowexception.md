@@ -1,9 +1,9 @@
 ---
 title: _CxxThrowException
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CxxThrowException
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CxxThrowException
 - _CxxThrowException
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _CxxThrowException function
 - CxxThrowException function
 ms.assetid: 0b90bef5-b7d2-46e0-88e2-59e531e01a4d
-ms.openlocfilehash: 925b72a120b31029b76fa38bee73eea003511cd2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5b614d25502ddd5a58aedcf2ec843b2b1ab9d47
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288567"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942035"
 ---
-# <a name="cxxthrowexception"></a>_CxxThrowException
+# <a name="_cxxthrowexception"></a>_CxxThrowException
 
 Cria o registro de exceção e chama o ambiente de tempo de execução para iniciar o processamento da exceção.
 
@@ -56,7 +59,7 @@ Esse método é incluído em um arquivo somente de compilador que o compilador u
 
 ## <a name="requirements"></a>Requisitos
 
-**Fonte:** Throw.cpp
+**Original** Throw.cpp
 
 ## <a name="see-also"></a>Consulte também
 

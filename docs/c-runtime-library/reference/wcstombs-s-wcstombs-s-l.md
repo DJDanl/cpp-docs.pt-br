@@ -1,10 +1,10 @@
 ---
 title: wcstombs_s, _wcstombs_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcstombs_s_l
 - wcstombs_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcstombs_s
 - _wcstombs_s_l
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 105f2d33-221a-4f6d-864c-23c1865c42af
-ms.openlocfilehash: 3f30ef1f94803005a1afd99a6f82c46296f5c4f7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 135bcb90e6a82591bf05e56b60575719f4c7d45c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498996"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945026"
 ---
 # <a name="wcstombs_s-_wcstombs_s_l"></a>wcstombs_s, _wcstombs_s_l
 
@@ -124,9 +127,9 @@ A cadeia de caracteres de destino sempre é terminada em nulo (mesmo em caso de 
 
 Se *Count* for o valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), **wcstombs_s** converterá a maior parte da cadeia de caracteres que se ajustará ao buffer de destino, enquanto ainda deixará espaço para um terminador nulo. Se a cadeia de caracteres estiver truncada, o valor de retorno será **STRUNCATE**e a conversão será considerada com êxito.
 
-Se **wcstombs_s** converter com êxito a cadeia de caracteres de origem, ela colocará o tamanho em bytes da cadeia de caracteres convertida,  *&#42;* incluindo o terminador nulo, em pretransformvalue (a preactivavalue fornecida não é **nula**). Isso ocorre mesmo que o argumento *mbstr* seja **nulo** e forneça uma maneira de determinar o tamanho do buffer necessário. Observe que, se *mbstr* for **NULL**, *Count* será ignorado.
+Se **wcstombs_s** converter com êxito a cadeia de caracteres de origem, ela colocará o tamanho em bytes da cadeia de caracteres convertida, incluindo o terminador nulo, em  *&#42;pretransformvalue* (a *preactivavalue* fornecida não é **nula**). Isso ocorre mesmo que o argumento *mbstr* seja **nulo** e forneça uma maneira de determinar o tamanho do buffer necessário. Observe que, se *mbstr* for **NULL**, *Count* será ignorado.
 
-Se **wcstombs_s** encontrar um caractere largo, ele não poderá converter para um caractere multibyte, ele colocará 0 em  *&#42;* preligávalue, definirá o buffer de destino como uma cadeia de caracteres vazia, definirá **errno** como **EILSEQ**e retornará **EILSEQ**.
+Se **wcstombs_s** encontrar um caractere largo, ele não poderá converter para um caractere multibyte, ele colocará 0 em  *&#42;preligávalue*, definirá o buffer de destino como uma cadeia de caracteres vazia, definirá **errno** como **EILSEQ**e retornará **EILSEQ**.
 
 Se as sequências apontadas por *wcstr* e *mbstr* se sobrepõem, o comportamento de **wcstombs_s** é indefinido.
 

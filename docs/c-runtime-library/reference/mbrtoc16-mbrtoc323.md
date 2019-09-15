@@ -1,10 +1,10 @@
 ---
 title: mbrtoc16, mbrtoc323
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbrtoc16
 - mbrtoc32
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbrtoc16
 - mbrtoc32
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-ms.openlocfilehash: f8573ac321772d19141be0228891b290ba48b217
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52bcec5911fdc2ecbb073ae0042777aa4eb2b963
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331578"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952434"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
@@ -58,36 +61,36 @@ size_t mbrtoc32(
 ### <a name="parameters"></a>Parâmetros
 
 *destination*<br/>
-Ponteiro para o **char16_t** ou **char32_t** equivalente do caractere multibyte a ser convertido. Se for null, a função não armazenará um valor.
+Ponteiro para o equivalente de **char16_t** ou **char32_t** do caractere multibyte a ser convertido. Se for null, a função não armazenará um valor.
 
 *source*<br/>
 O ponteiro para a cadeia de caracteres multibyte a ser convertida.
 
 *max_bytes*<br/>
-O número máximo de bytes em *origem* para examinar um caractere a ser convertido. Isso deve ser um valor entre 1 e o número de bytes, incluindo qualquer terminador nulo, restantes no *fonte*.
+O número máximo de bytes na *origem* para examinar um caractere a ser convertido. Deve ser um valor entre um e o número de bytes, incluindo qualquer terminador nulo, restante na *origem*.
 
 *state*<br/>
-Ponteiro para um **mbstate_t** objeto de estado de conversão usado para interpretar a cadeia de caracteres multibyte para um ou mais caracteres de saída.
+Ponteiro para um objeto de estado de conversão **mbstate_t** usado para interpretar a cadeia de caracteres multibyte para um ou mais caracteres de saída.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Em caso de sucesso, retorna o valor da primeira dessas condições que se aplica, dado o atual *estado* valor:
+Em caso de sucesso, retorna o valor da primeira dessas condições que se aplicam, dado o valor do *estado* atual:
 
 |Valor|Condição|
 |-----------|---------------|
-|0|A próxima *max_bytes* ou menos caracteres convertidos de *fonte* correspondem ao caractere largo nulo, que é o valor armazenado se *destino* não é nulo.<br /><br /> *estado* contém o estado inicial do deslocamento.|
-|Entre 1 e *max_bytes*, inclusive|O valor retornado é o número de bytes de *origem* que concluir um caractere multibyte válido. O caractere largo convertido será armazenado se *destino* não é nulo.|
-|-3|O próximo caractere largo resultante de uma chamada anterior para a função foi armazenado no *destino* se *destino* não é nulo. Nenhum byte de *origem* são consumidos por essa chamada à função.<br /><br /> Quando *fonte* aponta para um caractere multibyte que requer mais de um caractere largo para representar (por exemplo, um par substituto), em seguida, a *estado* valor é atualizado para que a próxima chamada de função grave  o caractere adicional.|
-|-2|A próxima *max_bytes* bytes representam um incompleto, mas potencialmente válido de caractere multibyte. Nenhum valor é armazenado no *destino*. Esse resultado pode ocorrer se *max_bytes* é zero.|
-|-1|Ocorreu um erro de codificação. A próxima *max_bytes* ou menos bytes não contribuem para um caractere multibyte válido e completo. Nenhum valor é armazenado no *destino*.<br /><br /> **EILSEQ** é armazenado no **errno** e o estado de conversão *estado* não está especificado.|
+|0|Os próximos *max_bytes* ou menos caracteres convertidos da *origem* correspondem ao caractere de largura nula, que é o valor armazenado se o *destino* não for nulo.<br /><br /> o *estado* contém o estado de deslocamento inicial.|
+|Entre 1 e *max_bytes*, inclusive|O valor retornado é o número de bytes de *origem* que concluem um caractere multibyte válido. O caractere largo convertido será armazenado se o *destino* não for nulo.|
+|-3|O próximo caractere largo resultante de uma chamada anterior para a função foi armazenado no *destino* se o *destino* não for nulo. Nenhum byte da *origem* é consumido por essa chamada para a função.<br /><br /> Quando a *origem* aponta para um caractere multibyte que requer mais de um caractere largo para representar (por exemplo, um par alternativo), o valor de *estado* é atualizado para que a próxima chamada de função escreva o caractere adicional.|
+|-2|Os próximos *max_bytes* bytes representam um caractere multibyte incompleto, mas potencialmente válido. Nenhum valor é armazenado no *destino*. Esse resultado pode ocorrer se *max_bytes* for zero.|
+|-1|Ocorreu um erro de codificação. Os próximos *max_bytes* ou menos bytes não contribuem para um caractere multibyte completo e válido. Nenhum valor é armazenado no *destino*.<br /><br /> **EILSEQ** é armazenado em **errno** e o *estado* do estado de conversão não é especificado.|
 
 ## <a name="remarks"></a>Comentários
 
-O **mbrtoc16** função lê até *max_bytes* bytes do *origem* para localizar o primeiro caractere multibyte válido, completo e, em seguida, armazena o UTF-16 equivalente caractere em *destino*. Os bytes de origem são interpretados de acordo com a localidade de multibyte do thread atual. Se os caracteres multibyte exigirem mais de um caractere de saída UTF-16 como um par substituto, o *estado* valor é definido para armazenar o próximo caractere UTF-16 no *destino* na próxima chamada para **mbrtoc16**. O **mbrtoc32** função é idêntica, mas a saída é armazenada como um caractere UTF-32.
+A função **mbrtoc16** lê até *max_bytes* bytes da *origem* para localizar o primeiro caractere multibyte completo, válido e, em seguida, armazena o caractere UTF-16 equivalente no *destino*. Os bytes de origem são interpretados de acordo com a localidade de multibyte do thread atual. Se o caractere multibyte exigir mais de um caractere de saída UTF-16, como um par alternativo, o valor de *estado* será definido para armazenar o próximo caractere UTF-16 no *destino* na próxima chamada para **mbrtoc16**. A função **mbrtoc32** é idêntica, mas a saída é armazenada como um caractere UTF-32.
 
-Se *fonte* for null, essas funções retornam o equivalente de uma chamada feita usando argumentos de **nulo** para *destino*, **""** para *fonte*e 1 para *max_bytes*. Os valores passados de *destino* e *max_bytes* são ignorados.
+Se *Source* for NULL, essas funções retornarão o equivalente de uma chamada feita usando argumentos de **NULL** para *Destination*, **""** para *Source*e 1 para *max_bytes*. Os valores passados de *Destination* e *max_bytes* são ignorados.
 
-Se *fonte* for não nulo, a função começa no início da cadeia de caracteres e inspecionará até *max_bytes* bytes para determinar o número de bytes necessários para completar o próximo caractere multibyte, incluindo quaisquer sequências de deslocamento. Se os bytes examinados contiverem um caractere multibyte válido e completo, a função converterá o caractere no caractere ou caracteres largos de 16 bits ou 32 bits equivalentes. Se *destino* não for nulo, a função armazena o resultado do primeiro (e possivelmente único) caractere no destino. Se caracteres de saída adicionais forem necessários, um valor é definido *estado*, de modo que as chamadas subsequentes para a função os caracteres adicionais e retornam o valor -3. Se não houver mais caracteres de saída forem necessárias, em seguida *estado* é definido como estado inicial do deslocamento.
+Se *Source* não for NULL, a função começará no início da cadeia de caracteres e inspecionará até *max_bytes* bytes para determinar o número de bytes necessários para concluir o próximo caractere multibyte, incluindo quaisquer sequências de deslocamento. Se os bytes examinados contiverem um caractere multibyte válido e completo, a função converterá o caractere no caractere ou caracteres largos de 16 bits ou 32 bits equivalentes. Se o *destino* não for nulo, a função armazenará o primeiro (e, possivelmente, apenas) o caractere de resultado no destino. Se forem necessários caracteres de saída adicionais, um valor será definido no *estado*, para que as chamadas subsequentes para a função gerem os caracteres adicionais e retornem o valor-3. Se nenhum caractere de saída for necessário, *State* será definido como o estado de deslocamento inicial.
 
 ## <a name="requirements"></a>Requisitos
 

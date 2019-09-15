@@ -1,11 +1,11 @@
 ---
 title: casinh, casinhf, casinhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - casinh
 - casinhl
 - casinhf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - casinh
 - casinhf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6deec85dc980a7bd421de87349f512564912d98c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340671"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943381"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
 
-Recupera o seno hiperbólico inverso de um número complexo, com cortes de ramificação fora do intervalo [-i, + i] ao longo do eixo imaginário.
+Recupera o seno hiperbólico inverso de um número complexo, com os cortes de ramificação fora do intervalo [-i, + i] ao longo do eixo imaginário.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -68,11 +71,11 @@ Um número complexo que representa um ângulo, em radianos.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O seno hiperbólico inverso *z*, em radianos. O resultado não está associado ao longo do eixo real e no intervalo [-iπ/2 + 2/iπ] ao longo do eixo imaginário.
+O seno hiperbólico inverso de *z*, em radianos. O resultado é desassociado ao longo do eixo real e, no intervalo, [-iπ/2, + iπ/2] ao longo do eixo imaginário.
 
 ## <a name="remarks"></a>Comentários
 
-Porque C++ permite sobrecargas, é possível chamar sobrecargas de **casinh** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **casinh** sempre usa e retorna um **_Dcomplex** valor.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **casinh** que usam e retornam valores **_Fcomplex** e **_Lcomplex** . Em um programa C, **casinh** sempre pega e retorna um valor **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisitos
 

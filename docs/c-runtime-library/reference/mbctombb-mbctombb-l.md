@@ -1,10 +1,10 @@
 ---
 title: _mbctombb, _mbctombb_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbctombb_l
 - _mbctombb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbctombb_l
 - _mbctombb
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-ms.openlocfilehash: 7395d94a6ec18f989d4a7153425b7af406a0bf45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b449dfae04f875c819f34422b9a0ae92e2b8a7c2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331591"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952522"
 ---
-# <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
+# <a name="_mbctombb-_mbctombb_l"></a>_mbctombb, _mbctombb_l
 
 Converte um caractere multibyte de dois bytes em um caractere multibyte de um byte correspondente.
 
@@ -64,15 +67,15 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, **mbctombb** e **mbctombb_l** retorna o caractere de byte único que corresponde à *c*; caso contrário, retornará *c* .
+Se for bem-sucedido, **_mbctombb** e **_mbctombb_l** retornará o caractere de byte único que corresponde a *c*; caso contrário, retornará *c*.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbctombb** e **mbctombb_l** funções convertem um determinado caractere multibyte em um caractere multibyte de byte único correspondente. Caracteres devem corresponder aos caracteres de byte único dentro do intervalo 0x20 – 0x7E ou 0xA1 – 0xDF a ser convertido.
+As funções **_mbctombb** e **_mbctombb_l** convertem um determinado caractere multibyte em um caractere multibyte de byte único correspondente. Os caracteres devem corresponder a caracteres de byte único dentro do intervalo 0x20-0x7E ou 0xA1-0xDF a ser convertido.
 
-O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. A versão dessa função sem o **l** sufixo usa a localidade atual desse comportamento dependente da localidade; a versão com o **l** sufixo é idêntico, exceto que ele use o parâmetro de localidade passado em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. A versão dessa função sem o sufixo **_L** usa a localidade atual para esse comportamento dependente de localidade; a versão com o sufixo **_L** é idêntica, exceto pelo fato de que ele usa o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Nas versões anteriores, **mbctombb** foi chamado **zentohan**. Use **mbctombb** em vez disso.
+Nas versões anteriores, **_mbctombb** era chamado de **zentohan**. Use **_mbctombb** em vez disso.
 
 ## <a name="requirements"></a>Requisitos
 

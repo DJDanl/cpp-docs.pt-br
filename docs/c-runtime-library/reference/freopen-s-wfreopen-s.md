@@ -1,10 +1,10 @@
 ---
 title: freopen_s, _wfreopen_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfreopen_s
 - freopen_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - freopen_s
 - _tfreopen_s
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - wfreopen_s function
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-ms.openlocfilehash: 6efe858713bf8c315536098f1b6dabdbcba01bfa
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 30cd1612045a9f9a69e6ac856a601bac3101467f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376117"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956695"
 ---
-# <a name="freopens-wfreopens"></a>freopen_s, _wfreopen_s
+# <a name="freopen_s-_wfreopen_s"></a>freopen_s, _wfreopen_s
 
 Reatribui um ponteiro de arquivo. Estas versões de [freopen, _wfreopen](freopen-wfreopen.md) têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -89,7 +92,7 @@ Se qualquer um de *pfile*, *caminho*, *modo*ou *fluxo* for **nulo**, ou se o *ca
 
 **freopen_s** normalmente é usado para redirecionar os arquivos pré-instalados **stdin**, **stdout**e **stderr** para os arquivos especificados pelo usuário. O novo arquivo associado ao *fluxo* é aberto com o *modo*, que é uma cadeia de caracteres que especifica o tipo de acesso solicitado para o arquivo, da seguinte maneira:
 
-|*modo*|Acesso|
+|*modo*|Access|
 |-|-|
 | **"r"** | Abre para leitura. Se o arquivo não existir ou não puder ser encontrado, a chamada **freopen_s** falhará. |
 | **"w"** | Abre um arquivo vazio para gravação. Se o arquivo determinado existir, seus conteúdos são destruídos. |

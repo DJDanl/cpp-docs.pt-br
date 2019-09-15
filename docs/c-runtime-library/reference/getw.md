@@ -1,9 +1,9 @@
 ---
 title: _getw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getw
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getw
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: 615d3ac9bdc73ad200368eaeabf7c84951bc91ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad03c92ce90542ecae13609ee228ad094f64fc07
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157624"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954885"
 ---
-# <a name="getw"></a>_getw
+# <a name="_getw"></a>_getw
 
 Obtém um inteiro de um fluxo.
 
@@ -49,11 +52,11 @@ Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**getw** retorna o valor inteiro lido. Um valor de retorno **EOF** indica um erro ou o final do arquivo. No entanto, porque o **EOF** valor também é um valor inteiro legítimo, use **feof** ou **ferror** para verificar uma condição de fim-de-arquivo ou erro. Se *stream* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará **EOF**.
+**_getw** retorna o valor inteiro lido. Um valor de retorno de **EOF** indica um erro ou um fim de arquivo. No entanto, como o valor de **EOF** também é um valor inteiro legítimo, use **feof** ou **referenciador** para verificar uma condição de fim de arquivo ou de erro. Se o *fluxo* for **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará **EOF**.
 
 ## <a name="remarks"></a>Comentários
 
-O **getw** função lê o próximo valor binário do tipo **int** do arquivo associado *fluxo* e incrementa o ponteiro de arquivo associado (se houver) para apontar para o próximo caractere não lido. **getw** não assume nenhum alinhamento especial dos itens no fluxo. Problemas de portabilidade podem ocorrer com **getw** porque o tamanho do **int** tipo e a ordenação de bytes dentro de **int** tipo diferem entre sistemas.
+A função **_getw** lê o próximo valor binário do tipo **int** do arquivo associado ao *fluxo* e incrementa o ponteiro de arquivo associado (se houver) para apontar para o próximo caractere não lido. **_getw** não assume nenhum alinhamento especial de itens no fluxo. Problemas com portabilidade podem ocorrer com **_getw** porque o tamanho do tipo **int** e a ordenação de bytes dentro do tipo **int** diferem entre os sistemas.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -98,7 +101,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtgetwtxt"></a>Entrada: crt_getw.txt
+### <a name="input-crt_getwtxt"></a>Entrada: crt_getw.txt
 
 ```Input
 Line one.

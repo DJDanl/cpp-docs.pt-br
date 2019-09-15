@@ -1,10 +1,10 @@
 ---
 title: _getchar_nolock, _getwchar_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getchar_nolock
 - _getwchar_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getwchar_nolock
 - _getwchar_nolock
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - getchar_nolock function
 - standard input, reading from
 ms.assetid: dc49ba60-0647-4ae9-aa9a-a0618b1666de
-ms.openlocfilehash: feeda65d06dbcfecb6ea5adc60934abf3d0df415
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df7d07d4478d8feee1d5a0b35c40e4158a93be82
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331799"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955404"
 ---
-# <a name="getcharnolock-getwcharnolock"></a>_getchar_nolock, _getwchar_nolock
+# <a name="_getchar_nolock-_getwchar_nolock"></a>_getchar_nolock, _getwchar_nolock
 
 Lê um caractere da entrada padrão.
 
@@ -53,7 +56,7 @@ Consulte [getchar, getwchar](getchar-getwchar.md).
 
 ## <a name="remarks"></a>Comentários
 
-**getchar_nolock** e **getwchar_nolock** são idênticas às **getchar** e **getwchar** , exceto que eles não são protegidos contra interferência por outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+**_getchar_nolock** e **_getwchar_nolock** são idênticos a **GetChar** e **getwchar** , exceto que eles não são protegidos contra interferência por outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -68,7 +71,7 @@ Consulte [getchar, getwchar](getchar-getwchar.md).
 |**_getchar_nolock**|\<stdio.h>|
 |**_getwchar_nolock**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

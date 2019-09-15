@@ -1,12 +1,12 @@
 ---
 title: isspace, iswspace, _isspace_l, _iswspace_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iswspace
 - _isspace_l
 - _iswspace_l
 - isspace
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswspace
 - _istspace
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-ms.openlocfilehash: bb3d18e5034be50d69531d2686b6c270ba55a1cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b01aaf29ff0cd3994c45433db9ff0b9f4ca7481c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157377"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953639"
 ---
-# <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace, iswspace, _isspace_l, _iswspace_l
+# <a name="isspace-iswspace-_isspace_l-_iswspace_l"></a>isspace, iswspace, _isspace_l, _iswspace_l
 
 Determina se um inteiro representa um caractere de espaço.
 
@@ -74,11 +77,11 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas retornará diferente de zero se *c* é uma representação específica de um caractere de espaço. **isspace** retorna um valor diferente de zero se *c* é um caractere de espaço em branco (0x09 – 0x0D ou 0x20). O resultado da condição de teste para o **isspace** função depende do **LC_CTYPE** configuração de categoria da localidade; consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções que não têm o **l** sufixo usam a localidade atual para qualquer comportamento dependente da localidade; as versões que têm o **l** sufixo são idênticas, exceto que eles usam o localidade que é passada em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+Cada uma dessas rotinas retornará zero se *c* for uma representação específica de um caractere de espaço. **isspace** retornará um valor diferente de zero se *c* for um caractere de espaço em branco (0x09-0x0D ou 0x20). O resultado da condição de teste para a função **isspace** depende da configuração de categoria **LC_CTYPE** da localidade; consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções que não têm o sufixo **_L** usam a localidade atual para qualquer comportamento dependente de localidade; as versões que têm o sufixo **_L** são idênticas, exceto que usam a localidade que é passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-**iswspace** retorna um valor diferente de zero se *c* é um caractere largo que corresponde a um caractere de espaço em branco padrão.
+**iswspace** retornará um valor diferente de zero se *c* for um caractere largo que corresponde a um caractere de espaço em branco padrão.
 
-O comportamento de **isspace** e **isspace_l** é indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e *c* é não um desses valores, as funções geram uma asserção.
+O comportamento de **isspace** e **_isspace_l** será indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca CRT de depuração é usada e *c* não é um desses valores, as funções geram uma asserção.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

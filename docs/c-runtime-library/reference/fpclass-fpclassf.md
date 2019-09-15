@@ -1,10 +1,10 @@
 ---
 title: _fpclass, _fpclassf
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpclass
 - _fpclassf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fpclass
 - _fpclass
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 987c87cc7a03f4a24e47654ae52e8a2416a15184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e561cff956ca51707834bf869a1c114f0c99a3e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333216"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957036"
 ---
-# <a name="fpclass-fpclassf"></a>_fpclass, _fpclassf
+# <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
 Retorna um valor que indica a classificação de ponto flutuante do argumento.
 
@@ -60,7 +63,7 @@ O valor de ponto flutuante a ser testado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **fpclass** e **_fpclassf** funções retornam um valor inteiro que indica a classificação de ponto flutuante do argumento *x*. A classificação pode ter um dos valores a seguir, definidos em \<float.>.
+As funções **_fpclass** e **_fpclassf** retornam um valor inteiro que indica a classificação de ponto flutuante do argumento *x*. A classificação pode ter um dos valores a seguir, definidos em \<float.>.
 
 |Valor|Descrição|
 |-----------|-----------------|
@@ -69,7 +72,7 @@ O **fpclass** e **_fpclassf** funções retornam um valor inteiro que indica a c
 |**_FPCLASS_NINF**|Infinito negativo (-INF)|
 |**_FPCLASS_NN**|Negativo normalizado diferente de zero|
 |**_FPCLASS_ND**|Negativo desnormalizado|
-|**_FPCLASS_NZ**|Zero negativo (- 0)|
+|**_FPCLASS_NZ**|Zero negativo (-0)|
 |**_FPCLASS_PZ**|0 positivo (+0)|
 |**_FPCLASS_PD**|Positivo desnormalizado|
 |**_FPCLASS_PN**|Positivo normalizado diferente de zero|
@@ -77,7 +80,7 @@ O **fpclass** e **_fpclassf** funções retornam um valor inteiro que indica a c
 
 ## <a name="remarks"></a>Comentários
 
-O **fpclass** e **_fpclassf** funções são específicas da Microsoft. Elas são semelhantes a [fpclassify](fpclassify.md), mas retornam informações mais detalhadas sobre o argumento. O **_fpclassf** função só está disponível quando compilada para x64 plataforma.
+As funções **_fpclass** e **_fpclassf** são específicas da Microsoft. Elas são semelhantes a [fpclassify](fpclassify.md), mas retornam informações mais detalhadas sobre o argumento. A função **_fpclassf** só está disponível quando compilada para a plataforma x64.
 
 ## <a name="requirements"></a>Requisitos
 

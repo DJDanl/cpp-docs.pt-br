@@ -1,9 +1,9 @@
 ---
 title: clearerr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clearerr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clearerr
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-ms.openlocfilehash: c282a577bb7496f899f18abeac857c08388d12f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9fd2f7e7dfcf272e806a887b356418b7555913f5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340542"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942944"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -49,9 +52,9 @@ Ponteiro para a estrutura **FILE**.
 
 ## <a name="remarks"></a>Comentários
 
-O **clearerr** função redefine o indicador de erro e o indicador de fim-de-arquivo para *fluxo*. Indicadores de erro não são removidos automaticamente; Depois que o indicador de erro para um fluxo especificado é definido, as operações naquele fluxo continuam a retornar um valor de erro até **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, ou [rewind](rewind.md) é chamado.
+A função **clearerr** redefine o indicador de erro e o indicador de fim de arquivo para o *fluxo*. Os indicadores de erro não são limpos automaticamente; Depois que o indicador de erro de um fluxo especificado é definido, as operações nesse fluxo continuam a retornar um valor de erro até que **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**ou [retrocesso](rewind.md) seja chamado.
 
-Se *stream* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retorna. Para obter mais informações sobre **errno** e códigos de erro, consulte [constantes errno](../../c-runtime-library/errno-constants.md).
+Se o *fluxo* for **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará. Para obter mais informações sobre **errno** e códigos de erro, consulte [constantes errno](../../c-runtime-library/errno-constants.md).
 
 Uma versão mais segura dessa função está disponível. Consulte [clearerr_s](clearerr-s.md).
 

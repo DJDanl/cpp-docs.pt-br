@@ -1,11 +1,11 @@
 ---
 title: clog, clogf, clogl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clog
 - clogf
 - clogl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clog
 - clogf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-ms.openlocfilehash: fcbc9ba7984898d51f7a3d0beb5ef7c8b6d6892c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76ee6e4e81c275c8cbed0f74914521c0b44499bb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340626"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942917"
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
 
@@ -68,7 +71,7 @@ A base do logaritmo.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O logaritmo natural de *z*. O resultado não estiver associado ao longo do eixo real e no intervalo [-iπ, + iπ] ao longo do eixo imaginário.
+O logaritmo natural de *z*. O resultado é não associado ao longo do eixo real e no intervalo [-iπ, + iπ] ao longo do eixo imaginário.
 
 Os valores de retorno possíveis são:
 
@@ -82,7 +85,7 @@ Os valores de retorno possíveis são:
 
 ## <a name="remarks"></a>Comentários
 
-Porque C++ permite sobrecargas, é possível chamar sobrecargas de **clog** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **clog** sempre usa e retorna um **_Dcomplex** valor.
+Como C++ permite sobrecarga, você pode chamar sobrecargas de **obstruir** que usam e retornam valores **_Fcomplex** e **_Lcomplex** . Em um programa C, o **obstrui** sempre pega e retorna um valor **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,11 +1,11 @@
 ---
 title: floor, floorf, floorl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - floorf
 - floorl
 - floor
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - floor
 - floorl
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c646437b4a1d79ef79e53d79fcbc342e5360f3cd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333580"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957150"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -67,17 +70,17 @@ Valor de ponto flutuante.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **andar** funções retornam um valor de ponto flutuante que representa o maior inteiro menor ou igual a *x*. Nenhum erro é retornado.
+As funções **Floor** retornam um valor de ponto flutuante que representa o maior inteiro que é menor ou igual a *x*. Nenhum erro é retornado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|nenhum|_DOMAIN|
 
-**Floor** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+o **Floor** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Comentários
 
-C++ permite sobrecargas, portanto, é possível chamar sobrecargas de **andar** que usam e retornam **float** e **longo** **double** valores. Em um programa do C **andar** sempre usa e retorna um **duplo**.
+C++permite sobrecargas, para que você possa chamar sobrecargas de **piso** que levam e retornam valores float e **Long** **flutuantes** . Em um programa C, o **Floor** sempre pega e retorna um **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

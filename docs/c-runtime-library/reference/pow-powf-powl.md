@@ -1,11 +1,11 @@
 ---
 title: pow, powf, powl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - powl
 - pow
 - powf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - powl
 - pow
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: edf6116413caba52f9311f03bdfcc1d87e68a011
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 863d2b76ec131670b10eefc086fa3485bd0a983d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232228"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950296"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -80,13 +83,13 @@ Retorna o valor de *x*<sup>*y*</sup>. Nenhuma mensagem de erro é impressa em es
 
 ## <a name="remarks"></a>Comentários
 
-**pow** não reconhece valores de ponto flutuantes integrais maiores que 2<sup>64</sup> (por exemplo, 1.0E100).
+**pow** não reconhece valores inteiros de ponto flutuante maiores que 2<sup>64</sup> (por exemplo, 1,0 E100).
 
-**pow** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+o **pow** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-Como C++ permite sobrecargas, você pode chamar qualquer uma das várias sobrecargas de **pow**. Em um programa do C **pow** sempre pega dois **duplo** valores e retorna um **double** valor.
+Como C++ o permite sobrecarga, você pode chamar qualquer uma das várias sobrecargas de **pow**. Em um programa C, **pow** sempre usa dois valores **Double** e retorna um valor **Double** .
 
-A sobrecarga `pow(int, int)` não está mais disponível. Se você usar essa sobrecarga, o compilador poderá emitir [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Para evitar esse problema, converta o primeiro parâmetro para **duplas**, **float**, ou **longo** **double**.
+A sobrecarga `pow(int, int)` não está mais disponível. Se você usar essa sobrecarga, o compilador poderá emitir [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Para evitar esse problema, converta o primeiro parâmetro para **Double**, **float**ou **Long** **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

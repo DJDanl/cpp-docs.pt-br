@@ -1,12 +1,12 @@
 ---
 title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cwprintf_l
 - _cprintf_l
 - _cwprintf
 - _cprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwprintf
 - cwprintf
@@ -45,14 +48,14 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-ms.openlocfilehash: ce1913012ee37b19e15602daaa4eea042a69a3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa0dfe22312f5a4736a6bc1b7a52e90dfa425a14
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335318"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942658"
 ---
-# <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
+# <a name="_cprintf-_cprintf_l-_cwprintf-_cwprintf_l"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 
 Formata e imprime no console. Versões mais seguras estão disponíveis; consulte [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md).
 
@@ -95,13 +98,13 @@ O número de caracteres impressos.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções formatam e imprimem uma série de caracteres e valores diretamente no console, usando o **putch** função (**putwch** para **cwprintf**) para caracteres de saída . Cada argumento na *argument_list* (se houver) é convertido e gerado de acordo com a especificação de formato correspondente em *formato*. O *formato* argumento usa o [formatar a sintaxe de especificação de funções printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Ao contrário do **fprintf**, **printf**, e **sprintf** funções, nem **cprintf** nem **cwprintf**converte caracteres de alimentação de linha em combinações de retorno-alimentação de linha (CR-LF) do carro durante a geração.
+Essas funções formatam e imprimem uma série de caracteres e valores diretamente no console, usando a função **_putch** ( **_putwch** para **_cwprintf**) para caracteres de saída. Cada argumento em *argument_list* (se houver) é convertido e apresentado de acordo com a especificação de formato correspondente no *formato*. O argumento *Format* usa a [sintaxe de especificação de formato para funções printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Ao contrário das funções **fprintf**, **printf**e **sprintf** , nem **_cprintf** nem **_cwprintf** traduz os caracteres de feed de linha em combinações de CR-LF (retorno de carro) quando a saída é impressa.
 
-Uma distinção importante é que **cwprintf** exibe caracteres Unicode quando usado no Windows. Diferentemente **cprintf**, **cwprintf** usa as configurações atuais de localidade do console.
+Uma distinção importante é que o **_cwprintf** exibe caracteres Unicode quando usados no Windows. Ao contrário de **_cprintf**, o **_cwprintf** usa as configurações de localidade do console atual.
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade atual.
 
-**cprintf** valida o *formato* parâmetro. Se *formato* for um ponteiro nulo, a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará -1 e definirá **errno** à **EINVAL**.
+**_cprintf** valida o parâmetro de *formato* . Se *Format* for um ponteiro NULL, a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará-1 e definirá **errno** como **EINVAL**.
 
 > [!IMPORTANT]
 > Verifique se *format* não é uma cadeia de caracteres definida pelo usuário.

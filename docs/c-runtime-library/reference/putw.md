@@ -1,9 +1,9 @@
 ---
 title: _putw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putw
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putw
 - putw
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 3fd18c2a8869d6b09703547f50ee6e096bd72395
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0515ae911a653bde1208b1711bf33dd8b4e2f8e1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358036"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949739"
 ---
-# <a name="putw"></a>_putw
+# <a name="_putw"></a>_putw
 
 Grava um valor inteiro em um fluxo.
 
@@ -55,13 +58,13 @@ Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna o valor gravado. Um valor de retorno **EOF** pode indicar um erro. Porque **EOF** também é um valor inteiro legítimo, use **ferror** para verificar se um erro. Se *stream* for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retorna **EOF**.
+Retorna o valor gravado. Um valor de retorno de **EOF** pode indicar um erro. Como **EOF** também é um valor inteiro legítimo, use o **referenciador** para verificar um erro. Se *Stream* for um ponteiro NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** como **EINVAL** e retornará **EOF**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **putw** função grava um valor binário do tipo **int** para a posição atual do *stream.* **putw** não afeta o alinhamento dos itens no fluxo, nem faz isso assume nenhum alinhamento especial. **putw** é usada principalmente para compatibilidade com bibliotecas anteriores. Problemas de portabilidade podem ocorrer com **putw** porque o tamanho de um **int** e a ordenação de bytes dentro de um **int** diferem entre sistemas.
+A função **_putw** grava um valor binário do tipo **int** na posição atual do *fluxo.* **_putw** não afeta o alinhamento dos itens no fluxo, nem assume nenhum alinhamento especial. o **_putw** é principalmente para compatibilidade com bibliotecas anteriores. Problemas de portabilidade podem ocorrer com **_putw** porque o tamanho de um **int** e a ordenação de bytes em um **int** diferem entre os sistemas.
 
 ## <a name="requirements"></a>Requisitos
 

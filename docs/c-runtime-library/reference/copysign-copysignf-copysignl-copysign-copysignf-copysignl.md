@@ -1,14 +1,14 @@
 ---
 title: copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - copysignf
 - copysignl
 - _copysignl
 - _copysign
 - _copysignf
 - copysign
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _copysignl
 - copysign
@@ -36,14 +39,14 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-ms.openlocfilehash: 6f450da4a4391f94d1905beefdeca8e3f01fec51
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1575f0863b56256513cf6a93cf7b63f3d921af57
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349050"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942855"
 ---
-# <a name="copysign-copysignf-copysignl-copysign-copysignf-copysignl"></a>copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
+# <a name="copysign-copysignf-copysignl-_copysign-_copysignf-_copysignl"></a>copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
 
 Retorna um valor que tem a magnitude de um argumento e o sinal de outro.
 
@@ -92,11 +95,11 @@ O valor de ponto flutuante retornado como o sinal do resultado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **copysign** funções retornam um valor de ponto flutuante que combina a magnitude do *x* e o sinal de *y*. Nenhum erro é retornado.
+As funções **copysign** retornam um valor de ponto flutuante que combina a magnitude de *x* e o sinal de *y*. Nenhum erro é retornado.
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **copysign** que usam e retornam **float** ou **longo** **double** valores. Em um programa do C **copysign** sempre usa e retorna um **duplo**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **copysign** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **copysign** sempre pega e retorna um **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,10 +1,10 @@
 ---
 title: _mbsnbicmp, _mbsnbicmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbicmp_l
 - _mbsnbicmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strnicmp
 - _wcsnicmp_l
@@ -40,16 +43,16 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: 059d0781e465f6491f27fd634bbc4479104bc12f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19ffa4c47f0144ba136607fe5cef09e9bd65374f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331292"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952183"
 ---
-# <a name="mbsnbicmp-mbsnbicmpl"></a>_mbsnbicmp, _mbsnbicmp_l
+# <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp, _mbsnbicmp_l
 
-Compara **n** bytes de caracteres multibyte duas cadeias de caracteres e diferencia maiusculas e minúsculas.
+Compara **n** bytes de duas cadeias de caracteres multibyte e ignora maiúsculas e minúsculas.
 
 > [!IMPORTANT]
 > Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -78,23 +81,23 @@ O valor retornado indica a relação entre as subcadeias de caracteres.
 
 |Valor retornado|Descrição|
 |------------------|-----------------|
-|< 0|*string1* subcadeia de caracteres menor que *string2* subcadeia de caracteres.|
-|0|*string1* subcadeia de caracteres idêntica à *string2* subcadeia de caracteres.|
-|> 0|*string1* subcadeia de caracteres maior que *string2* subcadeia de caracteres.|
+|< 0|Subcadeia de caracteres *Cadeia1* menor que a subcadeia de *seqüência2* .|
+|0|Subcadeia de caracteres *seqüência1* idêntica à subcadeia de *seqüência2* .|
+|> 0|Subcadeia de caracteres *seqüência1* maior que a subcadeia de *seqüência2* .|
 
-Em um erro **mbsnbicmp** retorna **_NLSCMPERROR**, que é definido em String. h e mbstring.
+Em um erro, **_mbsnbicmp** retorna **_NLSCMPERROR**, que é definido em String. h e Mbstring. h.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbsnbicmp** função executa uma comparação ordinal de no máximo os primeiros *contagem* bytes de *string1* e *string2*. A comparação é executada convertendo cada caractere em minúsculas; [mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) é uma versão diferencia maiusculas de minúsculas do **mbsnbicmp**. A comparação termina se um caractere nulo de terminação for atingido na cadeia de caracteres antes de *contagem* caracteres serem comparados. Se as cadeias de caracteres são iguais quando um caractere nulo de terminação for atingido na cadeia de caracteres antes de *contagem* caracteres são comparados, a cadeia de caracteres mais curta será menor.
+A função **_mbsnbicmp** executa uma comparação ordinal de, no máximo, os bytes da primeira *contagem* de *seqüência1* e *seqüência2*. A comparação é executada convertendo cada caractere em minúsculas; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) é uma versão com diferenciação de maiúsculas e minúsculas do **_mbsnbicmp**. A comparação terminará se um caractere nulo de terminação for atingido em qualquer cadeia de caracteres antes de a *contagem* deles ser comparada. Se as cadeias de caracteres forem iguais quando um caractere nulo de terminação for atingido em uma cadeia de caracteres antes de a *contagem* de caracteres serem comparados, a cadeia de caracteres menor será menor.
 
-**mbsnbicmp** é semelhante ao [mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), exceto que ela compara cadeias de caracteres até *contagem* bytes em vez de por caracteres.
+**_mbsnbicmp** é semelhante a [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), exceto pelo fato de que ele compara Cadeias de caracteres com até *contagem* de bytes, em vez de personagens.
 
-Duas cadeias de caracteres que contêm caracteres localizados entre 'Z' e 'a' na tabela ASCII ('[', '\\', ']', '^', '_' e '\`') são comparadas de modo diferente, dependendo das maiúsculas e minúsculas delas. Por exemplo, as duas cadeias de caracteres "ABCDE" e "ABCD ^" comparadas de uma forma se a comparação é minúscula ("abcde" > "abcd ^") e de outra forma ("ABCDE" < "ABCD ^") se ele estiver em maiusculas.
+Duas cadeias de caracteres que contêm caracteres localizados entre 'Z' e 'a' na tabela ASCII ('[', '\\', ']', '^', '_' e '\`') são comparadas de modo diferente, dependendo das maiúsculas e minúsculas delas. Por exemplo, as duas cadeias de caracteres "ABCDE" e "ABCD ^" comparam uma maneira se a comparação for minúscula ("ABCDE" > "abcd ^") e a outra maneira ("ABCDE" < "ABCD ^") se for maiúscula.
 
-**mbsnbicmp** reconhece sequências de caracteres multibyte de acordo com o [página de código multibyte](../../c-runtime-library/code-pages.md) atualmente em uso. Ela não é afetada pela configuração da localidade atual.
+o **_mbsnbicmp** reconhece sequências de caracteres multibyte de acordo com a [página de código multibyte](../../c-runtime-library/code-pages.md) em uso no momento. Ela não é afetada pela configuração da localidade atual.
 
-Se qualquer um dos *string1* ou *string2* é um ponteiro nulo, **mbsnbicmp** invocará o manipulador de parâmetro inválido, conforme descrito em [devalidaçãodeparâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **_NLSCMPERROR** e define **errno** para **EINVAL**.
+Se *seqüência1* ou *seqüência2* for um ponteiro nulo, **_mbsnbicmp** invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **_NLSCMPERROR** e definirá **errno** como **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

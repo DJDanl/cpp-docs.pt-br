@@ -1,12 +1,12 @@
 ---
 title: atol, _atol_l, _wtol, _wtol_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - atol
 - _wtol_l
 - _wtol
 - _atol_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _atol_l
 - _ttol_l
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: 486b6dc3bdfbbaf4b7becadde76768a0bb1c7c00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04a2951a48e6dd2c3820551e0fc603ad4ed81086
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347802"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943587"
 ---
-# <a name="atol-atoll-wtol-wtoll"></a>atol, _atol_l, _wtol, _wtol_l
+# <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol, _atol_l, _wtol, _wtol_l
 
 Converte uma cadeia de caracteres em um inteiro longo.
 
@@ -83,25 +86,25 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada função retorna o **longo** valor produzido Interpretando os caracteres de entrada como um número. O valor retornado será 0l para **atol** se a entrada não pode ser convertida em um valor desse tipo.
+Cada função retorna o valor **longo** produzido interpretando os caracteres de entrada como um número. O valor de retorno será 0L para **Atol** se a entrada não puder ser convertida em um valor desse tipo.
 
-No caso de estouro com grandes valores inteiros positivos **atol** retorna **LONG_MAX**; no caso de estouro com grandes valores inteiros negativos **LONG_MIN** é retornado. Em todos os casos de fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornam 0.
+No caso de estouro com grandes valores inteiros positivos, **Atol** retorna **LONG_MAX**; no caso de estouro com grandes valores inteiros negativos, **LONG_MIN** é retornado. Em todos os casos fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão **errno** como **EINVAL** e retornarão 0.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções convertem uma cadeia de caracteres em um valor inteiro longo (**atol**).
+Essas funções convertem uma cadeia de caracteres em um valor inteiro longo (**Atol**).
 
 A cadeia de caracteres de entrada é uma sequência de caracteres que pode ser interpretada como um valor numérico do tipo especificado. A função para de ler a cadeia de caracteres de entrada no primeiro caractere que não consegue reconhecer como parte de um número. Esse caractere pode ser o caractere nulo ('\0' ou L'\0') que encerra a cadeia de caracteres.
 
-O *str* argumento **atol** tem a seguinte forma:
+O argumento *Str* para **Atol** tem o seguinte formato:
 
-> [*espaço em branco*] [*sinal*] [*dígitos*]]
+> [*espaço em branco*] [*assinar*] [*dígitos*]]
 
-Um *espaço em branco* consiste em caracteres de espaço ou tabulação, que são ignorados; *sinal* é um sinal de mais (+) ou menos (-); e *dígitos* são um ou mais dígitos.
+Um *espaço em branco* consiste em caracteres de espaço ou tabulação, ignorados; o *sinal* é mais (+) ou menos (-); e os *dígitos* são um ou mais dígitos.
 
-**wtol** é idêntica à **atol** exceto que assume uma cadeia de caracteres largos.
+**_wtol** é idêntico ao **Atol** , exceto pelo fato de que ele usa uma cadeia de caracteres larga.
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -119,7 +122,7 @@ As versões dessas funções com o **l** sufixo são idênticas, exceto que eles
 
 ## <a name="example"></a>Exemplo
 
-Esse programa mostra como os números armazenados como cadeias de caracteres podem ser convertidos em valores numéricos usando o **atol** função.
+Este programa mostra como os números armazenados como cadeias de caracteres podem ser convertidos em valores numéricos usando a função **Atol** .
 
 ```C
 // crt_atol.c

@@ -1,12 +1,12 @@
 ---
 title: strtod, _strtod_l, wcstod, _wcstod_l
 ms.date: 10/20/2017
-apiname:
+api_name:
 - wcstod
 - _wcstod_l
 - _strtod_l
 - strtod
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstod
 - strtod
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: c8c2b3b491e2e7265829fa88580529dc757ace8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5372525eb99dc9d39e31b10def0377c9aad5296c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376462"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946501"
 ---
-# <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
+# <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
 Converte cadeias de caracteres em um valor de precisão dupla.
 
@@ -89,13 +92,13 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**strtod** retorna o valor do número de ponto flutuante, exceto quando a representação causaria um estouro, nesse caso, a função retorna + /-**HUGE_VAL**. O sinal de **HUGE_VAL** coincide com o sinal do valor que não pode ser representado. **strtod** retorna 0 se nenhuma conversão pode ser realizada ou ocorrerá um estouro negativo.
+**strtod** retorna o valor do número de ponto flutuante, exceto quando a representação causar um estouro, caso em que a função retorna +/-**HUGE_VAL**. O sinal de **HUGE_VAL** corresponde ao sinal do valor que não pode ser representado. **strtod** retornará 0 se nenhuma conversão puder ser executada ou se ocorrer um estouro negativo.
 
-**wcstod** retorna valores de maneira semelhante a **strtod**. Para ambas as funções **errno** é definido como **ERANGE** se ocorre estouro ou estouro negativo e o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
+**wcstod** retorna valores de forma análoga ao **strtod**. Para ambas as funções, **errno** é definido como **ERANGE** se o estouro ou Subfluxo ocorre e o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-Cada função converte a cadeia de caracteres de entrada *strSource* para um **duplo**. O **strtod** função converte *strSource* para um valor de precisão dupla. **strtod** deixa de ler a cadeia de caracteres *strSource* no primeiro caractere que não reconhece como parte de um número. Este pode ser o caractere nulo de terminação. **wcstod** é uma versão de caractere largo de **strtod**; sua *strSource* argumento é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
+Cada função converte a cadeia de caracteres de entrada *strSource* em um **Double**. A função **strtod** converte *strSource* em um valor de precisão dupla. **strtod** interrompe a leitura da cadeia de caracteres *strSource* no primeiro caractere que ela não pode reconhecer como parte de um número. Este pode ser o caractere nulo de terminação. **wcstod** é uma versão de caractere largo do **strtod**; seu argumento *strSource* é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -104,17 +107,17 @@ Cada função converte a cadeia de caracteres de entrada *strSource* para um **d
 |**_tcstod**|**strtod**|**strtod**|**wcstod**|
 |**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
-O **LC_NUMERIC** configuração da categoria da localidade atual determina o reconhecimento do caractere de ponto fracionário *strSource*. Para obter mais informações sobre, consulte [setlocale](setlocale-wsetlocale.md). As funções sem o **l** sufixo usam a localidade atual; **strtod_l** é idêntico ao **strtod_l** , exceto que eles usam o *localidade* passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+A configuração de categoria **LC_NUMERIC** da localidade atual determina o reconhecimento do caractere de ponto de base em *strSource*. Para obter mais informações sobre, consulte [setlocale](setlocale-wsetlocale.md). As funções sem o sufixo **_L** usam a localidade atual; **_strtod_l** é idêntico ao **_strtod_l** , exceto pelo fato de que eles usam a *localidade* transmitida em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Se *endptr* não está **nulo**, um ponteiro para o caractere que parou a verificação é armazenado no local apontado pela *endptr*. Se nenhuma conversão puder ser executada (Nenhum dígito válido foi encontrado ou uma base inválida foi especificada), o valor de *strSource* é armazenado no local apontado por *endptr*.
+Se *endptr* não for **NULL**, um ponteiro para o caractere que parou a verificação será armazenado no local apontado por *endptr*. Se nenhuma conversão puder ser executada (nenhum dígito válido foi encontrado ou uma base inválida foi especificada), o valor de *strSource* será armazenado no local apontado por *endptr*.
 
-**strtod** espera *strSource* para apontar para uma cadeia de caracteres de uma das seguintes formas:
+**strtod** espera que *strSource* aponte para uma cadeia de caracteres de uma das seguintes formas:
 
-[*espaço em branco*] [*sinal*] {*dígitos* [*fracionário* *dígitos*] &#124;  *fracionário* *dígitos*} [{**eletrônico** &#124; **eletrônico**} [*entrada*] *dígitos*] [*espaço em branco*] [*entrada*] {**0x** &#124; **0x**} {*hexdigits* [ *fracionário* *hexdigits*] &#124; *fracionário* *hexdigits*} [{**p** &#124; **P**} [*sinal*] *hexdigits*] [*espaço em branco*] [*entrada*] { **INF** &#124; **infinito**} [*espaço em branco*] [*entrada*]  **NAN** [*sequência*]
+[*espaço em branco*] [*assinar*] { digits [ *dígitos*de &#124; *base* ] *dígitos*de *base* } [{**e** &#124; **e**} [*assinar*] *dígitos*] [*espaço em branco*] [*sinal*] {**0x** &#124; **0x**} {*hexdigits* [*Radix* *hexdigits*] &#124;  *Radix* *hexdigits*} [{**p** &#124; **p**} [*Sign*] *hexdigits*] [*espaço em branco*] [*Sign*] {**inf** &#124; **Infinity**} [*Whitespace*] [ *Sign*] **Nan** [*Sequence*]
 
-O entrelinhamento opcional *espaço em branco* pode consistir em caracteres de espaço ou tabulação, que são ignorados; *sinal* é um sinal de mais (+) ou menos (-); *dígitos* são um ou mais dígitos decimais; *hexdigits* são um ou mais dígitos hexadecimais; *fracionário* é o caractere de ponto fracionário, ou um ponto (.) na localidade "C" padrão, ou a específica de localidade de valor se a localidade atual for diferente ou quando *localidade* for especificado, um *sequência* é uma sequência de alfanumérico ou caracteres de sublinhado. Em formulários de número decimais e hexadecimais, se nenhum dígito aparecer antes do caractere de ponto fracionário, pelo menos um deverá aparecer após o caractere de ponto fracionário. No formato decimal, os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra de apresentação (**eletrônico** ou **eletrônico**) e um inteiro com sinal opcionalmente. Os dígitos hexadecimais no formulário hexadecimal, podem ser seguidos por um expoente, que consiste em uma letra de apresentação (**p** ou **P**) e um inteiro hexadecimal opcionalmente com sinal que representa o expoente como uma potência de 2. Em qualquer forma, se nem um expoente nem um caractere de ponto fracionário aparecer, um caractere de ponto fracionário é considerado siga o último dígito na cadeia de caracteres. O caso é ignorado em ambos os **INF** e **NAN** formulários. O primeiro caractere que não se ajusta a uma dessas formas interrompe o exame.
+O espaço em *branco* à esquerda opcional pode consistir em caracteres de espaço e tabulação, ignorados; o *sinal* é mais (+) ou menos (-); os *dígitos* são um ou mais dígitos decimais; *hexdigits* são um ou mais dígitos hexadecimais; *Radix* é o caractere de ponto fracionário, um ponto (.) na localidade padrão "C" ou o valor específico de localidade se a localidade atual for diferente ou quando a *localidade* for especificada; uma *sequência* é uma sequência de caracteres alfanuméricos ou de sublinhado. Nos formatos de número decimal e hexadecimal, se nenhum dígito aparecer antes do caractere de ponto de base, pelo menos um deve aparecer após o caractere de ponto de base. Na forma decimal, os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra introdutória (**e** ou **e**) e um inteiro assinado opcionalmente. Na forma hexadecimal, os dígitos hexadecimais podem ser seguidos por um expoente, que consiste em uma letra introdutória (**p** ou **p**) e um inteiro hexadecimal, opcionalmente assinado, que representa o expoente como uma potência de 2. Em qualquer forma, se nem uma parte de expoente nem um caractere de ponto de base aparecer, um caractere de ponto de base será considerado para seguir o último dígito na cadeia de caracteres. O caso é ignorado nos formulários **inf** e **Nan** . O primeiro caractere que não se ajusta a um desses formulários interrompe a verificação.
 
-As versões UCRT dessas funções não têm suporte para conversão do estilo Fortran (**1!d** ou **1!d**) letras de expoente. Essa extensão não padrão tinha suporte em versões anteriores do CRT e pode ser uma alteração significativa para seu código. As versões UCRT dão suporte a cadeias de caracteres hexadecimais e o ciclo completo de valores de INF e NAN, que não tinham suporte em versões anteriores. Isso também pode causar alterações significativas em seu código. Por exemplo, a cadeia de caracteres "0x1a" será interpretada pelo **strtod** como 0,0 nas versões anteriores, mas como 26.0 na versão do UCRT.
+As versões UCRT dessas funções não dão suporte à conversão de letras de expoente de estilo Fortran (**d** ou **d**). Essa extensão não padrão tinha suporte em versões anteriores do CRT e pode ser uma alteração significativa para seu código. As versões do UCRT dão suporte a cadeias de caracteres hexadecimais e a ida e volta de valores INF e NAN, que não têm suporte em versões anteriores. Isso também pode causar alterações significativas em seu código. Por exemplo, a cadeia de caracteres "0x1A" seria interpretada por **strtod** como 0,0 em versões anteriores, mas como 26,0 na versão UCRT.
 
 ## <a name="requirements"></a>Requisitos
 

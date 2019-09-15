@@ -1,10 +1,10 @@
 ---
 title: _getdcwd_dbg, _wgetdcwd_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getdcwd_dbg
 - _wgetdcwd_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getdcwd_dbg
 - getdcwd_dbg
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _wgetdcwd_dbg function
 - directories [C++], current working
 ms.assetid: 266bf6f0-0417-497f-963d-2e0f306d9385
-ms.openlocfilehash: 700cfe732dc390ca59a976694403bb3d91af5980
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb22f3716102c1b63b483e493eb44ac99228004
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331841"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955225"
 ---
-# <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
+# <a name="_getdcwd_dbg-_wgetdcwd_dbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
 
 Versões de depuração das funções [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md) (disponíveis somente durante a depuração).
 
@@ -71,26 +74,26 @@ Nome da unidade de disco.
 Local de armazenamento para o caminho.
 
 *maxlen*<br/>
-Comprimento máximo do caminho em caracteres: **char** para **getdcwd_dbg** e **wchar_t** para **wgetdcwd_dbg**.
+Comprimento máximo do caminho em caracteres: **Char** para **_getdcwd_dbg** e **wchar_t** para **_wgetdcwd_dbg**.
 
 *blockType*<br/>
-Tipo do bloco de memória solicitado: **client_block** ou **normal_block**.
+Tipo solicitado do bloco de memória: **_CLIENT_BLOCK** ou **_NORMAL_BLOCK**.
 
 *filename*<br/>
 Ponteiro para o nome do arquivo de origem que solicitou a operação de alocação ou **nulo**.
 
 *linenumber*<br/>
-Número de linha no arquivo de origem em que a operação de alocação foi solicitada ou **nulo**.
+Número de linha no arquivo de origem em que a operação de alocação foi solicitada ou **nula**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um ponteiro para *buffer*. Um **nulo** valor retornado indica um erro, e **errno** será definido como **ENOMEM**, indicando que há memória suficiente para alocar *maxlen* bytes (quando um **nulo** argumento é fornecido como *buffer*), ou **ERANGE**, que indica que o caminho é maior que *maxlen*  caracteres. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Retorna um ponteiro para o *buffer*. Um valor de retorno **nulo** indica um erro e **errno** é definido como **ENOMEM**, indicando que não há memória suficiente para alocar *maxlen* bytes (quando um argumento **nulo** é fornecido como *buffer*) ou para **ERANGE** , indicando que o caminho tem mais de *maxlen* caracteres. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **getdcwd_dbg** e **wgetdcwd_dbg** funções são idênticas às **getdcwd** e **wgetdcwd** , exceto que, quando **Debug** é definido, essas funções usam a versão de depuração **malloc** e **malloc_dbg** para alocar memória se **nulo** é passado como o *buffer* parâmetro. Para obter mais informações, consulte [_malloc_dbg](malloc-dbg.md).
+As funções **_getdcwd_dbg** e **_wgetdcwd_dbg** são idênticas a **_getdcwd** e **_wgetdcwd** , exceto que, quando **_DEBUG** é definido, essas funções usam a versão de depuração de **malloc** e **_malloc_dbg** para aloque memória se **NULL** for passado como o parâmetro *buffer* . Para obter mais informações, consulte [_malloc_dbg](malloc-dbg.md).
 
-Na maioria dos casos, não é necessário chamar essas funções explicitamente. Em vez disso, você pode definir as **crtdbg_map_alloc** sinalizador. Quando **crtdbg_map_alloc** for definido, chamadas para **getdcwd** e **wgetdcwd** são remapeadas para **getdcwd_dbg** e **_ wgetdcwd_dbg**, respectivamente, com o *blockType* definido como **normal_block**. Portanto, você não precisa chamar essas funções explicitamente, a menos que você deseja marcar os blocos de heap como **client_block**. Para obter mais informações, consulte [Tipos de Blocos no Heap de Depuração](/visualstudio/debugger/crt-debug-heap-details).
+Na maioria dos casos, não é necessário chamar essas funções explicitamente. Em vez disso, você pode definir o sinalizador **_CRTDBG_MAP_ALLOC** . Quando **_CRTDBG_MAP_ALLOC** é definido, as chamadas para **_getdcwd** e **_wgetdcwd** são remapeadas para **_getdcwd_dbg** e **_wgetdcwd_dbg**, respectivamente, com o *blockType* definido como **_NORMAL_BLOCK**. Portanto, você não precisa chamar essas funções explicitamente, a menos que queira marcar os blocos de heap como **_CLIENT_BLOCK**. Para obter mais informações, consulte [Tipos de Blocos no Heap de Depuração](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

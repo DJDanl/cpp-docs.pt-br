@@ -1,11 +1,11 @@
 ---
 title: log1p, log1pf, log1pl2
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log1p
 - log1pf
 - log1pl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - log1p
 - log1pf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: 2ac864d7e28823c95b0202c0a8f2454d03c64aff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aad6675a832e1715c505026fe11ffe77f1f6d275
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285980"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953211"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -72,7 +75,7 @@ O argumento de ponto flutuante.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, retornará natural (base -*eletrônico*) de log da (*x* + 1).
+Se for bem-sucedido, retorna o log natural (base-*e*) de (*x* + 1).
 
 Caso contrário, pode retornar um dos seguintes valores:
 
@@ -87,15 +90,15 @@ Caso contrário, pode retornar um dos seguintes valores:
 |±SNaN|Igual à entrada|INVALID||
 |±QNaN, indefinido|Igual à entrada|||
 
-O **errno** valor é definido como ERANGE se *x* = -1. O **errno** valor é definido como **EDOM** se *x* < -1.
+O valor de **errno** é definido como ERANGE Se *x* =-1. O valor de **errno** é definido como **EDOM** se *x* <-1.
 
 ## <a name="remarks"></a>Comentários
 
-O **log1p** funções podem ser mais precisas do que usando `log(x + 1)` quando *x* está próximo de 0.
+As funções **log1p** podem ser mais precisas do que `log(x + 1)` usar quando *x* é quase 0.
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **log1p** que usam e retornam **float** e **longo** **double** tipos. Em um programa do C **log1p** sempre usa e retorna um **duplo**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **log1p** que usam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **log1p** sempre pega e retorna um **Double**.
 
-Se *x* é um número natural, essa função retorna o logaritmo do fatorial de (*x* - 1).
+Se *x* for um número natural, essa função retornará o logaritmo do fatorial de (*x* -1).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,11 +1,11 @@
 ---
 title: ctanh, ctanhf, ctanhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ctanh
 - ctanhf
 - ctanhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ctanh
 - ctanhf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-ms.openlocfilehash: f63329e45fdcd3a26d613f73cd911fdf6fb10401
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dae59dcd4a71045b27c6ba9501580bf981b9828f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288934"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941961"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh, ctanhf, ctanhl
 
@@ -70,14 +73,14 @@ Um número complexo que representa um ângulo, em radianos.
 
 A tangente hiperbólica complexa de *z*.
 
-|Entrada|Exceção SEH|**matherr** exceção|
+|Entrada|Exceção SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|nenhum|_DOMAIN|
 |± ∞ (tan, tanf)|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Comentários
 
-Porque C++ permite sobrecargas, é possível chamar sobrecargas de **ctanh** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **ctanh** sempre usa e retorna um **_Dcomplex** valor.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **ctanh** que usam e retornam valores **_Fcomplex** e **_Lcomplex** . Em um programa C, **ctanh** sempre pega e retorna um valor **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisitos
 

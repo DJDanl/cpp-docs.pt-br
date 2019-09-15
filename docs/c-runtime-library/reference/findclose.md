@@ -1,9 +1,9 @@
 ---
 title: _findclose
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _findclose
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _findclose
 - findclose
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-ms.openlocfilehash: 29010f8a502d463eeb6ca98837a1b7dae9f5ae6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c67336cc12bcdee754edd40b91078faa83a17984
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333749"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957328"
 ---
-# <a name="findclose"></a>_findclose
+# <a name="_findclose"></a>_findclose
 
 Fecha o identificador de pesquisa especificado e libera os recursos associados.
 
@@ -44,12 +47,12 @@ int _findclose(
 
 ### <a name="parameters"></a>Parâmetros
 
-*handle*<br/>
-Identificador de pesquisa retornado por uma chamada anterior a **FindFirst**.
+*processamento*<br/>
+Identificador de pesquisa retornado por uma chamada anterior para **_findfirst**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, **FindClose** retornará 0. Caso contrário, retornará -1 e define **errno** à **ENOENT**, indicando que não mais arquivos correspondentes pôde ser encontrado.
+Se for bem-sucedido, **_findclose** retornará 0. Caso contrário, ele retornará-1 e definirá **errno** como **ENOENT**, indicando que não foi possível encontrar mais arquivos correspondentes.
 
 ## <a name="requirements"></a>Requisitos
 
