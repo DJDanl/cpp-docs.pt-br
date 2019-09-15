@@ -1,11 +1,11 @@
 ---
 title: time, _time32, _time64
 ms.date: 11/06/2018
-apiname:
+api_name:
 - time
 - _time64
 - _time32
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - time
 - _time64
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-ms.openlocfilehash: 693b70b3682876d7e6c3721f5d06aa13d31abb96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02dc7f250fe26d9ed7abfd89ca9a4c2163312e6d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155583"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946098"
 ---
-# <a name="time-time32-time64"></a>time, _time32, _time64
+# <a name="time-_time32-_time64"></a>time, _time32, _time64
 
 Obtém a hora do sistema.
 
@@ -59,19 +62,19 @@ Ponteiro para o local de armazenamento de hora.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna a hora como segundos decorridos desde a meia-noite de 1º de janeiro de 1970 ou -1 caso de erro.
+Retorna o tempo conforme os segundos decorridos desde a meia-noite, 1º de janeiro de 1970 ou-1 no caso de um erro.
 
 ## <a name="remarks"></a>Comentários
 
-O **tempo** função retorna o número de segundos passados desde a meia-noite (00: 00:00) de 1º de janeiro de 1970, Tempo Universal Coordenado (UTC), acordo com o relógio do sistema. O valor retornado é armazenado no local fornecido por *destTime*. Esse parâmetro pode ser **nulo**, caso em que o valor retornado não é armazenado.
+A função **time** retorna o número de segundos decorridos desde a meia-noite (00:00:00), 1º de janeiro de 1970, UTC (tempo Universal Coordenado), de acordo com o relógio do sistema. O valor de retorno é armazenado no local fornecido pelo *desttime*. Esse parâmetro pode ser **nulo**e, nesse caso, o valor de retorno não é armazenado.
 
-**tempo** é um wrapper para **_time64** e **time_t** é, por padrão, equivalente a **__time64_t**. Se você precisar forçar o compilador a interpretar **time_t** como o antigo 32-bit **time_t**, você pode definir **_USE_32BIT_TIME_T**. Isso não é recomendado, pois seu aplicativo poderá falhar após 18 de janeiro de 2038 e o uso dessa macro não é permitido em plataformas de 64 bits.
+o **tempo** é um wrapper para **_time64** e **time_t** é, por padrão, equivalente a **__time64_t**. Se você precisar forçar o compilador a interpretar **time_t** como o antigo **time_t**de 32 bits, você pode definir **_USE_32BIT_TIME_T**. Isso não é recomendado, pois seu aplicativo poderá falhar após 18 de janeiro de 2038 e o uso dessa macro não é permitido em plataformas de 64 bits.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho C necessário|Cabeçalho C++ necessário|
 |-------|------|---------------------|
-|**time**, **\_time32**, **\_time64**|\<time.h>|\<ctime > ou \<time. h >|
+|**time**, **\_time32**, **\_time64**|\<time.h>|\<CTime > ou \<time. h >|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

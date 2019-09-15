@@ -1,12 +1,12 @@
 ---
 title: scanf, _scanf_l, wscanf, _wscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wscanf_l
 - scanf
 - _scanf_l
 - wscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tscanf
 - _scanf_l
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: 48aa0bb3348a3336de9ee0eb9f9ec0d3e1a2b3cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c3b0f73561dcd41ef1643042baeac7fff0728b4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357116"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948839"
 ---
-# <a name="scanf-scanfl-wscanf-wscanfl"></a>scanf, _scanf_l, wscanf, _wscanf_l
+# <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
 Lê dados formatados do fluxo de entrada padrão. Versões mais seguras dessas funções estão disponíveis; consulte [scanf_s, scanf_s_l, wscanf_s, wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
 
@@ -89,20 +92,20 @@ A localidade a ser usada.
 
 Retorna o número de campos convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído.
 
-Se *formato* é um **nulo** ponteiro, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EOF** e defina **errno** para **EINVAL**.
+Se *Format* for um ponteiro **NULL** , o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam **EOF** e definem **errno** como **EINVAL**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **scanf** função lê dados de fluxo de entrada padrão **stdin** e grava os dados no local fornecido por *argumento*. Cada *argumento* deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo em *formato*. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
+A função **scanf** lê dados do fluxo de entrada do **stdin** padrão e grava os dados no local fornecido pelo *argumento*. Cada *argumento* deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo no *formato*. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
 > [!IMPORTANT]
-> Ao ler uma cadeia de caracteres com **scanf**, especifique sempre uma largura para o **%s** formato (por exemplo, **"% 32s texto"** , em vez de **"%s"**); caso contrário, entrada formatada incorretamente poderá facilmente causar um estouro de buffer. Como alternativa, considere o uso de [scanf_s, scanf_s_l, wscanf_s, wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) ou [fgets](fgets-fgetws.md).
+> Ao ler uma cadeia de caracteres com **scanf**, sempre especifique uma largura para o formato **% s** (por exemplo, **"% 32s"** em vez de **"% s"** ); caso contrário, a entrada formatada incorretamente poderá facilmente causar uma saturação do buffer. Como alternativa, considere o uso de [scanf_s, scanf_s_l, wscanf_s, wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) ou [fgets](fgets-fgetws.md).
 
-**wscanf** é uma versão de caractere largo de **scanf**; o *formato* argumento **wscanf** é uma cadeia de caracteres largos. **wscanf** e **scanf** terão comportamento idêntico se o fluxo for aberto no modo ANSI. **scanf** atualmente não dá suporte a entrada de um fluxo UNICODE.
+**wscanf** é uma versão de caractere largo do **scanf**; o argumento *Format* para **wscanf** é uma cadeia de caracteres largos. **wscanf** e **scanf** se comportam de forma idêntica se o fluxo é aberto no modo ANSI. Atualmente, o **scanf** não dá suporte à entrada de um fluxo Unicode.
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -120,7 +123,7 @@ Para obter mais informações, consulte [Campos de especificação de formato �
 |**scanf**, **_scanf_l**|\<stdio.h>|
 |**wscanf**, **_wscanf_l**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

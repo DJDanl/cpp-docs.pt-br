@@ -1,12 +1,12 @@
 ---
 title: _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _sprintf_p
 - _swprintf_p_l
 - _swprintf_p
 - _sprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sprintf_p
 - _swprintf_p_l
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-ms.openlocfilehash: c55dce7d37d63c79e8c8d9976a76adf331412812
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bb8993293236a20c87707db06715e9a012e643e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354936"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958021"
 ---
-# <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
+# <a name="_sprintf_p-_sprintf_p_l-_swprintf_p-_swprintf_p_l"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
 Grave dados formatados em uma cadeia de caracteres com a capacidade de especificar a ordem em que os parâmetros são usados na cadeia de caracteres de formato.
 
@@ -105,15 +108,15 @@ Para obter mais informações, consulte [Especificações de formato](../../c-ru
 
 ## <a name="return-value"></a>Valor de retorno
 
-O número de caracteres gravados ou -1 se ocorreu um erro.
+O número de caracteres gravados ou-1 se ocorreu um erro.
 
 ## <a name="remarks"></a>Comentários
 
-O **sprintf_p** função formata e armazena uma série de caracteres e valores em *buffer*. Cada argumento na *argument_list* (se houver) é convertido e gerado de acordo com a especificação de formato correspondente em *formato*. O *formato* argumento usa o [formatar a sintaxe de especificação de funções printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Um caractere nulo é acrescentado após o último caractere escrito. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido. A diferença entre **sprintf_p** e **sprintf_s** é que **sprintf_p** dá suporte a parâmetros posicionais, o que permite especificar a ordem na qual os argumentos são usado na cadeia de caracteres de formato. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+A função **_sprintf_p** formata e armazena uma série de caracteres e valores no *buffer*. Cada argumento no *argument_list* (se houver) é convertido e apresentado de acordo com a especificação de formato correspondente no *formato*. O argumento *Format* usa a [sintaxe de especificação de formato para funções printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Um caractere nulo é acrescentado após o último caractere escrito. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido. A diferença entre **_sprintf_p** e **sprintf_s** é que o **_sprintf_p** dá suporte a parâmetros posicionais, o que permite especificar a ordem na qual os argumentos são usados na cadeia de caracteres de formato. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**swprintf_p** é uma versão de caractere largo de **sprintf_p**; os argumentos de ponteiro para **swprintf_p** são cadeias de caracteres largos. Detecção de erros de codificação **swprintf_p** pode ser diferente no **sprintf_p**. **swprintf_p** e **fwprintf_p** se comportam de forma idêntica exceto que **swprintf_p** grava a saída para uma cadeia de caracteres em vez de um destino do tipo **arquivo**, e **swprintf_p** requer que o *contagem* parâmetro para especificar o número máximo de caracteres a serem gravados. As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+**_swprintf_p** é uma versão de caractere largo do **_sprintf_p**; os argumentos de ponteiro para **_swprintf_p** são cadeias de caracteres largos. A detecção de erros de codificação em **_swprintf_p** pode ser diferente daquela em **_sprintf_p**. **_swprintf_p** e **fwprintf_p** se comportam de forma idêntica, exceto que **_swprintf_p** grava a saída em uma cadeia de caracteres em vez de um destino do tipo **File**, e **_swprintf_p** requer que o parâmetro *Count* especifique o número máximo de caracteres a serem gravados. As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
-**sprintf_p** retorna o número de bytes armazenados no *buffer*, sem contar o caractere nulo de terminação. **swprintf_p** retorna o número de caracteres largos armazenados no *buffer*, sem contar o caractere largo nulo de terminação. Se *buffer* ou *formato* for um ponteiro nulo ou se a cadeia de caracteres de formato contiver caracteres de formatação inválidos, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro ](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e defina **errno** à **EINVAL**.
+**_sprintf_p** retorna o número de bytes armazenados no *buffer*, não contando o caractere nulo de terminação. **_swprintf_p** retorna o número de caracteres largos armazenados no *buffer*, sem contar a terminação de caractere nulo de finalização. Se o *buffer* ou o *formato* for um ponteiro nulo ou se a cadeia de caracteres de formato contiver caracteres de formatação inválidos, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam-1 e definem **errno** como **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

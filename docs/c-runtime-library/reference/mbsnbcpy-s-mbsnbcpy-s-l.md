@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcpy_s, _mbsnbcpy_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcpy_s_l
 - _mbsnbcpy_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbcpy_s_l
 - _mbsnbcpy_s
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-ms.openlocfilehash: 00f1fe7a6deb104a4f226e42858764f5649c52ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d00307f079ac72db93654f789c970b7f6a6e7dbe
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331487"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952202"
 ---
-# <a name="mbsnbcpys-mbsnbcpysl"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
+# <a name="_mbsnbcpy_s-_mbsnbcpy_s_l"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
 
-Cópias **n** bytes de uma cadeia de caracteres em uma cadeia de caracteres de destino. Essas versões de [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Copia **n** bytes de uma cadeia de caracteres para uma cadeia de caracteres de destino. Essas versões de [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
 > Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -96,16 +99,16 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Zero se bem-sucedido; **EINVAL** se um parâmetro inválido foi passado.
+Zero se for bem-sucedido; **EINVAL** se um parâmetro insatisfatório foi passado.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbsnbcpy_s** função cópias *contagem* bytes do *strSource* para *strDest*. Se *contagem* excede o tamanho de *strDest*, seja de cadeias de caracteres de entrada for um ponteiro nulo, ou *sizeInBytes* ou *contagem* é 0, a função invoca o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, a função retornará **EINVAL**. Se as cadeias de caracteres de origem e de destino se sobrepõem, o comportamento de **mbsnbcpy_s** é indefinido.
+A função **_mbsnbcpy_s** copia os bytes de *contagem* de *strSource* para *strDest*. Se *Count* exceder o tamanho de *strDest*, qualquer uma das cadeias de caracteres de entrada será um ponteiro nulo ou *sizeInBytes* ou *Count* será 0, a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução tiver permissão para continuar, a função retornará **EINVAL**. Se as cadeias de caracteres de origem e de destino se sobrepõem, o comportamento de **_mbsnbcpy_s** é indefinido.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> Ao contrário da versão não segura dessa função, **mbsnbcpy_s** não faz nenhum preenchimento nulo e o nulo sempre termina a cadeia de caracteres.
+> Diferentemente da versão não segura dessa função, **_mbsnbcpy_s** não faz nenhum preenchimento nulo e sempre nulo encerra a cadeia de caracteres.
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

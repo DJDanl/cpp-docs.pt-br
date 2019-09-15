@@ -1,10 +1,10 @@
 ---
 title: vfscanf, vfwscanf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vfwscanf
 - vfscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vfwscanf
 - _vftscanf
 - vfscanf
 ms.assetid: c06450ef-03f1-4d24-a8ac-d2dd98847918
-ms.openlocfilehash: 3076f63e05e156a479372adfca9dc707255f9e6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72591c9fa91855745f45f3f77c88dd0ed5b001a0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364773"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945518"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf, vfwscanf
 
@@ -60,15 +63,15 @@ Lista de argumentos variáveis.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna o número de campos que são convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. Se ocorrer um erro ou se o final do fluxo de arquivo for atingido antes da primeira conversão, o valor retornado será **EOF** para **vfscanf** e **vfwscanf**.
+Cada uma dessas funções retorna o número de campos que são convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. Se ocorrer um erro ou se o final do fluxo de arquivos for atingido antes da primeira conversão, o valor de retorno será **EOF** para **vfscanf** e **vfwscanf**.
 
-Essas funções validam seus parâmetros. Se *stream* ou *formato* é um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EOF** e defina **errno** para **EINVAL**.
+Essas funções validam seus parâmetros. Se *Stream* ou *Format* for um ponteiro NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam **EOF** e definem **errno** como **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-O **vfscanf** função lê dados da posição atual do *fluxo* nos locais fornecidos pela *arglist* lista de argumentos. Cada argumento na lista deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo em *formato*. *formato* controla a interpretação da entrada campos e tem o mesmo formato e função que o *formato* argumento **scanf**; consulte [scanf](scanf-scanf-l-wscanf-wscanf-l.md) para um Descrição da *formato*.
+A função **vfscanf** lê dados da posição atual do *fluxo* para os locais fornecidos pela lista de argumentos *Arglist* . Cada argumento na lista deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo no *formato*. o *formato* controla a interpretação dos campos de entrada e tem a mesma forma e função que o argumento de *formato* para **scanf**; consulte [scanf](scanf-scanf-l-wscanf-wscanf-l.md) para obter uma descrição do *formato*.
 
-**vfwscanf** é uma versão de caractere largo de **vfscanf**; o argumento de formato para **vfwscanf** é uma cadeia de caracteres largos. Essas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. **vfscanf** não dá suporte a entrada de um fluxo UNICODE.
+**vfwscanf** é uma versão de caractere largo do **vfscanf**; o argumento format para **vfwscanf** é uma cadeia de caracteres largos. Essas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. **vfscanf** não dá suporte à entrada de um fluxo Unicode.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

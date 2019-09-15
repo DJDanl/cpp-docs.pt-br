@@ -1,10 +1,10 @@
 ---
 title: _chdir, _wchdir
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wchdir
 - _chdir
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tchdir
 - _chdir
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: e4cf7a44864df0b5ecca531aab3db4546c25bb2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b54e0978626779be21900e543a546bfae05efe2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347659"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939366"
 ---
-# <a name="chdir-wchdir"></a>_chdir, _wchdir
+# <a name="_chdir-_wchdir"></a>_chdir, _wchdir
 
 Altera o diretório de trabalho atual.
 
@@ -61,19 +64,19 @@ Caminho do novo diretório de trabalho.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Essas funções retornarão um valor de 0 se forem bem-sucedidas. Um valor de retorno de -1 indica falha. Se o caminho especificado não pôde ser encontrado, **errno** é definido como **ENOENT**. Se *dirname* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará -1.
+Essas funções retornarão um valor de 0 se forem bem-sucedidas. Um valor de retorno de-1 indica falha. Se o caminho especificado não puder ser encontrado, **errno** será definido como **ENOENT**. Se *dirname* for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará-1.
 
 ## <a name="remarks"></a>Comentários
 
-O **chdir** função altera o diretório de trabalho atual para o diretório especificado por *dirname*. O *dirname* parâmetro deve se referir a um diretório existente. Essa função pode mudar o diretório de trabalho atual em qualquer unidade. Se uma nova letra da unidade for especificada na *dirname*, a letra da unidade padrão mudará também. Por exemplo, se A for a letra da unidade padrão e \BIN for o diretório de trabalho atual, a chamada a seguir alterará o diretório de trabalho atual para a unidade C e estabelecerá C como a nova unidade padrão:
+A função **_chdir** altera o diretório de trabalho atual para o diretório especificado por *dirname*. O parâmetro *dirname* deve se referir a um diretório existente. Essa função pode mudar o diretório de trabalho atual em qualquer unidade. Se uma nova letra de unidade for especificada em *dirname*, a letra da unidade padrão também será alterada. Por exemplo, se A for a letra da unidade padrão e \BIN for o diretório de trabalho atual, a chamada a seguir alterará o diretório de trabalho atual para a unidade C e estabelecerá C como a nova unidade padrão:
 
 ```C
 _chdir("c:\temp");
 ```
 
-Quando você usa o caractere de barra invertida opcional (**&#92;**) em caminhos, você deve colocar duas barras invertidas (**&#92;&#92;**) em uma cadeia de caracteres do C literal a representar uma única barra invertida ( **&#92;**).
+Ao usar o caractere de barra invertida opcional **&#92;** () em caminhos, você deve posicionar duas barras invertidas ( **&#92;** ) em um literal de cadeia de caracteres C para representar uma barra invertida simples ( **&#92;** ).
 
-**wchdir** é uma versão de caractere largo de **chdir**; o *dirname* argumento **wchdir** é uma cadeia de caracteres largos. **wchdir** e **chdir** se comportam de forma idêntica caso contrário.
+**_wchdir** é uma versão de caractere largo do **_chdir**; o argumento *dirname* para **_wchdir** é uma cadeia de caracteres largos. **_wchdir** e **_chdir** se comportam de outra forma.
 
 ### <a name="generic-text-routine-mapping"></a>Mapeamento da Rotina de Texto Genérico:
 

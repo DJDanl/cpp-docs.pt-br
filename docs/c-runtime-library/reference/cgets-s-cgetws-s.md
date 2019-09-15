@@ -1,10 +1,10 @@
 ---
 title: _cgets_s, _cgetws_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cgetws_s
 - _cgets_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cgets_s
 - cgets_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2039fc32cecb768c3c3fbc239446abedeb48f188
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340578"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939271"
 ---
-# <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
+# <a name="_cgets_s-_cgetws_s"></a>_cgets_s, _cgetws_s
 
 Obtém uma cadeia de caracteres do console. Estas versões de [_cgets e _cgetws](../../c-runtime-library/cgets-cgetws.md) têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -86,7 +89,7 @@ O valor retornado será zero se obtiver sucesso; caso contrário, um código de 
 
 ### <a name="error-conditions"></a>Condições de Erro
 
-|*buffer*|*numberOfElements*|*pSizeRead*|Valor de|Conteúdo de *buffer*|
+|*buffer*|*numberOfElements*|*pSizeRead*|Valor de|Conteúdo do *buffer*|
 |--------------|------------------------|-----------------|------------|--------------------------|
 |**NULL**|qualquer|qualquer|**EINVAL**|N/D|
 |Não **nulo**|zero|qualquer|**EINVAL**|não modificado|
@@ -94,9 +97,9 @@ O valor retornado será zero se obtiver sucesso; caso contrário, um código de 
 
 ## <a name="remarks"></a>Comentários
 
-**cgets_s** e **cgetws_s** ler uma cadeia de caracteres do console e copie a cadeia de caracteres (com um terminador nulo) *buffer*. **cgetws_s** a versão de caractere largo da função; não for mais o tamanho de caractere, o comportamento dessas duas funções é idêntico. O tamanho máximo da cadeia de caracteres a ser lido é passado como o *numberOfElements* parâmetro. Esse tamanho deve incluir um caractere extra para a terminação nula. O número real de caracteres lidos é colocado na *pSizeRead*.
+**_cgets_s** e **_cgetws_s** lêem uma cadeia de caracteres do console e copia a cadeia de caracteres (com um terminador nulo) no *buffer*. **_cgetws_s** é a versão de caractere largo da função; Além do tamanho do caractere, o comportamento dessas duas funções é idêntico. O tamanho máximo da cadeia de caracteres a ser lida é passado como o parâmetro *numberOfElements* . Esse tamanho deve incluir um caractere extra para a terminação nula. O número real de caracteres lidos é colocado em *pSizeRead*.
 
-Se ocorrer um erro durante a operação ou na validação dos parâmetros, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e **EINVAL** é retornado.
+Se ocorrer um erro durante a operação ou na validação dos parâmetros, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **errno** será definido como **EINVAL** e **EINVAL** será retornado.
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho e podem substituir automaticamente funções mais antigas e menos seguras por equivalentes mais novas e mais seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

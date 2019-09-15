@@ -1,12 +1,12 @@
 ---
 title: _vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vsprintf_p
 - _vswprintf_p
 - _vsprintf_p_l
 - _vswprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vsprintf_p
 - _vswprintf_p
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - _vsprintf_p function
 - _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
-ms.openlocfilehash: 15f368da84eb9cbf8c394a0e9b5eeec2611c3f7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e684bebc0a997e25963366b64fbab6d4f958e8eb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383432"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945233"
 ---
-# <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
+# <a name="_vsprintf_p-_vsprintf_p_l-_vswprintf_p-_vswprintf_p_l"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 
 Grave saída formatada usando um ponteiro para uma lista de argumentos, com a capacidade de especificar a ordem em que os argumentos são usados.
 
@@ -88,7 +91,7 @@ int _vswprintf_p_l(
 Local de armazenamento de saída.
 
 *sizeInBytes*<br/>
-Tamanho de *buffer* em caracteres.
+Tamanho do *buffer* em caracteres.
 
 *count*<br/>
 Número máximo de caracteres a armazenar a versão UNICODE dessa função.
@@ -104,17 +107,17 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**vsprintf_p** e **vswprintf_p** retornar o número de caracteres gravados, não incluindo o caractere nulo de terminação ou um valor negativo se ocorrer um erro de saída.
+**_vsprintf_p** e **_vswprintf_p** retornam o número de caracteres gravados, não incluindo o caractere nulo de terminação ou um valor negativo se ocorrer um erro de saída.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, formata e grava os dados fornecidos para a memória apontada por *buffer*.
+Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, formata e grava os dados fornecidos na memória apontada pelo *buffer*.
 
-Essas funções diferem da **vsprintf_s** e **vswprintf_s** somente em que eles oferecem suporte a parâmetros posicionais. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+Essas funções diferem do **vsprintf_s** e **vswprintf_s** somente no que dão suporte a parâmetros posicionais. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
-Se o *buffer* ou *formato* são parâmetros **nulo** ponteiros, se a contagem for zero, ou se a cadeia de caracteres de formato contém formatação inválida caracteres, o parâmetro inválido manipulador será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornarão -1 e defina **errno** à **EINVAL**.
+Se o *buffer* ou os parâmetros de *formato* forem ponteiros **nulos** , se Count for zero ou se a cadeia de caracteres de formato contiver caracteres de formatação inválidos, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornam-1 e definem **errno** como **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

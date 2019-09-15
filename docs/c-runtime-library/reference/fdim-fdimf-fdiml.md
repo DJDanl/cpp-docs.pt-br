@@ -1,11 +1,11 @@
 ---
 title: fdim, fdimf, fdiml
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fdim
 - fdimf
 - fdiml
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fdim
 - fdimf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 263635a32b21b01faa84405ab97bd5518f054ba5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74935f724b678b08e39604d9916c7c5de5925aee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334782"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941294"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -93,15 +96,15 @@ Caso contrário, pode retornar um dos seguintes erros:
 |-----------|------------|
 |Erro de intervalo de estouro|+HUGE_VAL, +HUGE_VALF ou +HUGE_VALL|
 |Erro de intervalo de estouro negativo|valor correto (após o arredondamento)|
-|*x* ou *y* é NaN|NaN|
+|*x* ou *y* é Nan|NaN|
 
 Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **fdim** que usam e retornam **float** e **longo** **double** tipos. Em um programa do C **fdim** sempre usa e retorna um **duplo**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **fdim** que usam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **fdim** sempre pega e retorna um **Double**.
 
-Exceto para o tratamento de NaN, essa função é equivalente a `fmax(x - y, 0)`.
+Exceto para a manipulação de NaN, essa função é equivalente `fmax(x - y, 0)`a.
 
 ## <a name="requirements"></a>Requisitos
 

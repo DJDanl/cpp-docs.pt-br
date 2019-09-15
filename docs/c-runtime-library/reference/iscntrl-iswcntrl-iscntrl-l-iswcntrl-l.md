@@ -1,12 +1,12 @@
 ---
 title: iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iscntrl
 - _iswcntrl_l
 - _iscntrl_l
 - iswcntrl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istcntrl_l
 - _iswcntrl_l
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-ms.openlocfilehash: 150073e78426f5029dd46cbc6766fbd6a2a242e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 302c357c054ad58043b00875d629ae70e5a23e0e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157416"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954441"
 ---
-# <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
+# <a name="iscntrl-iswcntrl-_iscntrl_l-_iswcntrl_l"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 
 Determina se um inteiro representa um caractere de controle.
 
@@ -75,11 +78,11 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas retornará diferente de zero se *c* é uma representação específica de um caractere de controle. **iscntrl** retorna um valor diferente de zero se *c* é um caractere de controle (0x00 – 0x1F ou 0x7F). **iswcntrl** retorna um valor diferente de zero se *c* é um controle de caractere largo. Cada uma dessas rotinas retornará 0 se *c* não satisfaz a condição de teste.
+Cada uma dessas rotinas retornará zero se *c* for uma representação específica de um caractere de controle. **iscntrl** retornará um valor diferente de zero se *c* for um caractere de controle (0X00-0x1F ou 0x7f). **iswcntrl** retornará um valor diferente de zero se *c* for um caractere de controle largo. Cada uma dessas rotinas retornará 0 se *c* não atender à condição de teste.
 
-As versões dessas funções que têm o **l** sufixo usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções que têm o sufixo **_L** usam o parâmetro Locale que é passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-O comportamento de **iscntrl** e **iscntrl_l** é indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e *c* é não um desses valores, as funções geram uma asserção.
+O comportamento de **iscntrl** e **_iscntrl_l** será indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca CRT de depuração é usada e *c* não é um desses valores, as funções geram uma asserção.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

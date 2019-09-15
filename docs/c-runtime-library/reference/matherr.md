@@ -1,9 +1,9 @@
 ---
 title: _matherr
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _matherr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _matherr
 - matherr
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-ms.openlocfilehash: b830dc940fa2abb131f70130033d27b057412137
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 340e3b8562e1f0f564810bc63cf6bd2e87ffdf63
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156897"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952767"
 ---
-# <a name="matherr"></a>_matherr
+# <a name="_matherr"></a>_matherr
 
 Manipula erros matemáticos.
 
@@ -46,17 +49,17 @@ Ponteiro para a estrutura que contém informações de erro.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**matherr** retorna 0 para indicar um erro ou um valor diferente de zero para indicar êxito. Se **matherr** retornar 0, uma mensagem de erro pode ser exibida e **errno** é definido como um valor de erro apropriado. Se **matherr** retorna um valor diferente de zero, nenhuma mensagem de erro é exibido e **errno** permanece inalterado.
+**_matherr** retorna 0 para indicar um erro ou um valor diferente de zero para indicar êxito. Se **_matherr** retornar 0, uma mensagem de erro poderá ser exibida e **errno** será definido como um valor de erro apropriado. Se **_matherr** retornar um valor diferente de zero, nenhuma mensagem de erro será exibida e **errno** permanecerá inalterado.
 
 Para obter mais informações sobre esses códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **matherr** função processa erros gerados pelas funções da biblioteca de matemática de ponto flutuante. Essas funções chamam **matherr** quando for detectado um erro.
+A função **_matherr** processa erros gerados pelas funções de ponto flutuante da biblioteca de matemática. Essas funções chamam **_matherr** quando um erro é detectado.
 
-Para a manipulação de erro especial, você pode fornecer uma definição diferente de **matherr**. Se você usar a versão dinamicamente vinculada da biblioteca em tempo de execução C (CRT), você pode substituir o padrão **matherr** rotina em um cliente executável com uma versão definida pelo usuário. No entanto, você não pode substituir o padrão **matherr** rotina em um cliente da DLL da DLL do CRT.
+Para tratamento de erro especial, você pode fornecer uma definição diferente de **_matherr**. Se você usar a versão vinculada dinamicamente da biblioteca de tempo de execução do C (CRT), poderá substituir a rotina **_matherr** padrão em um executável de cliente por uma versão definida pelo usuário. No entanto, você não pode substituir a rotina **_matherr** padrão em um cliente DLL da dll do CRT.
 
-Quando ocorre um erro em uma rotina de matemática **matherr** for chamado com um ponteiro para um **Exception** estrutura de tipo (definido em \<Math. h >) como um argumento. A estrutura **_exception** contém os seguintes elementos.
+Quando ocorre um erro em uma rotina matemática, **_matherr** é chamado com um ponteiro para uma estrutura de tipo **_exception** (definida \<em Math. h >) como um argumento. A estrutura **_exception** contém os seguintes elementos.
 
 ```C
 struct _exception
@@ -69,18 +72,18 @@ struct _exception
 };
 ```
 
-O **tipo** membro Especifica o tipo de erro de matemática. Ele é um dos valores a seguir, definidos em \<Math. h >:
+O membro de **tipo** especifica o tipo de erro matemático. É um dos seguintes valores, definidos em \<Math. h >:
 
 |Macro|Significado|
 |-|-|
-| **_DOMAIN** | Erro de argumento de domínio |
-| **_SING** | Singularidade do argumento |
+| **_DOMAIN** | Erro de domínio de argumento |
+| **_SING** | Singularidade de argumento |
 | **_OVERFLOW** | Erro de intervalo de estouro |
 | **_PLOSS** | Perda parcial de significância |
 | **_TLOSS** | Perda total de significância |
 | **_UNDERFLOW** | O resultado é muito pequeno para ser representado. (Não há suporte para essa condição no momento.) |
 
-O membro da estrutura **name** é um ponteiro de uma cadeia de caracteres terminada com caractere nulo, que contém o nome da função que causou o erro. Os membros da estrutura **arg1** e **arg2** especificam os valores que causaram o erro. Se apenas um argumento for fornecido, ele é armazenado em **arg1**.
+O membro da estrutura **name** é um ponteiro de uma cadeia de caracteres terminada com caractere nulo, que contém o nome da função que causou o erro. Os membros da estrutura **arg1** e **arg2** especificam os valores que causaram o erro. Se apenas um argumento for fornecido, ele será armazenado em **arg1**.
 
 O valor retornado padrão para o erro especificado é **retval**. Se você alterar o valor retornado, ele deverá especificar se realmente ocorreu um erro.
 

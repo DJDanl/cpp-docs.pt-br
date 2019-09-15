@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcmp, _mbsnbcmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcmp
 - _mbsnbcmp_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbcmp
 - tcsnbmp
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-ms.openlocfilehash: 4b21fde122f9804633ac037efaf1f343b5cb9440
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 512fd2dae54afa4a37b2b3d3103ab090d81909fa
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285298"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952310"
 ---
-# <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp, _mbsnbcmp_l
+# <a name="_mbsnbcmp-_mbsnbcmp_l"></a>_mbsnbcmp, _mbsnbcmp_l
 
 Compara os primeiros **n** bytes de duas cadeias de caracteres multibyte.
 
@@ -74,25 +77,25 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O valor retornado indica a relação ordinal entre as subcadeias de caracteres de *string1* e *string2*.
+O valor de retorno indica a relação ordinal entre as subcadeias de *seqüência1* e *seqüência2*.
 
 |Valor retornado|Descrição|
 |------------------|-----------------|
-|< 0|*string1* subcadeia de caracteres é menor que *string2* subcadeia de caracteres.|
-|0|*string1* subcadeia de caracteres é idêntica à *string2* subcadeia de caracteres.|
-|> 0|*string1* subcadeia de caracteres é maior que *string2* subcadeia de caracteres.|
+|< 0|a subcadeia de caracteres *seqüência1* é menor que a subcadeia de *seqüência2* .|
+|0|a subcadeia de caracteres *seqüência1* é idêntica à subcadeia de *seqüência2* .|
+|> 0|a subcadeia de caracteres *seqüência1* é maior que a subcadeia de *seqüência2* .|
 
-Em um erro de validação de parâmetro, **mbsnbcmp** e **mbsnbcmp_l** retornar **_NLSCMPERROR**, que é definido no \<String. h > e \< mbstring >.
+Em um erro de validação de parâmetro, **_mbsnbcmp** e **_mbsnbcmp_l** retornam **_NLSCMPERROR**, que \<é definido em String. \<h > e Mbstring. h >.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbsnbcmp** funções comparam no máximo a primeira *contagem* bytes na *string1* e *string2* e retornar um valor que indica o relação entre as subcadeias de caracteres. **mbsnbcmp** é uma versão diferencia maiusculas de minúsculas **mbsnbicmp**. Diferentemente **mbsnbcoll**, **mbsnbcmp** não é afetada pela ordem de agrupamento da localidade. **mbsnbcmp** reconhece sequências de caracteres multibyte de acordo com a atual multibyte [página de código](../../c-runtime-library/code-pages.md).
+As funções **_mbsnbcmp** comparam no máximo os primeiros bytes de *contagem* em *seqüência1* e *seqüência2* e retornam um valor que indica a relação entre as subcadeias de caracteres. **_mbsnbcmp** é uma versão com diferenciação de maiúsculas e minúsculas do **_mbsnbicmp**. Ao contrário de **_mbsnbcoll**, **_mbsnbcmp** não é afetado pela ordem de agrupamento da localidade. **_mbsnbcmp** reconhece sequências de caracteres multibyte de acordo com a [página de código](../../c-runtime-library/code-pages.md)multibyte atual.
 
-**mbsnbcmp** lembra **mbsncmp**, exceto pelo fato **mbsncmp** compara cadeias de caracteres por caracteres em vez de bytes.
+**_mbsnbcmp** se assemelha a **_mbsncmp**, exceto que **_mbsncmp** compara Cadeias de caracteres em vez de bytes.
 
-O valor de saída é afetado pela **LC_CTYPE** categoria de configuração de localidade, que especifica os bytes iniciais e bytes de caracteres multibyte à direita. Para obter mais informações sobre, consulte [setlocale](setlocale-wsetlocale.md). O **mbsnbcmp** função usa a localidade atual desse comportamento dependente da localidade. O **mbsnbcmp_l** função é idêntica, exceto que ele usa o *localidade* parâmetro em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração de categoria **LC_CTYPE** da localidade, que especifica os bytes de Lead e os bytes à direita de caracteres multibyte. Para obter mais informações sobre, consulte [setlocale](setlocale-wsetlocale.md). A função **_mbsnbcmp** usa a localidade atual para esse comportamento dependente de localidade. A função **_mbsnbcmp_l** é idêntica, exceto pelo fato de usar o parâmetro *locale* em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Se qualquer um dos *string1* ou *string2* é um ponteiro nulo, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornam **_NLSCMPERROR** e **errno** está definido como **EINVAL**.
+Se *seqüência1* ou *seqüência2* for um ponteiro nulo, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, as funções retornam **_NLSCMPERROR** e **errno** é definida como **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

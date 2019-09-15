@@ -1,10 +1,10 @@
 ---
 title: _execv, _wexecv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wexecv
 - _execv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _execv
 - _wexecv
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-ms.openlocfilehash: fd0447e7863e25571a968a821b45614d5d76d1bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb18603c618342f67bad28ebf0b99bd173ee5293
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339241"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941848"
 ---
-# <a name="execv-wexecv"></a>_execv, _wexecv
+# <a name="_execv-_wexecv"></a>_execv, _wexecv
 
 Carrega e executa novos processos filho.
 
@@ -64,9 +67,9 @@ Matriz de ponteiros para os parâmetros.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, caso em que o **errno** variável global é definida.
+Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de-1 indica um erro; nesse caso, a variável global **errno** é definida.
 
-|**errno** value|Descrição|
+|valor **errno**|Descrição|
 |-------------------|-----------------|
 |**E2BIG**|O espaço necessário para os argumentos e as configurações de ambiente excede 32 KB.|
 |**EACCES**|O arquivo especificado tem uma violação de compartilhamento ou de bloqueio.|
@@ -82,7 +85,7 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 Cada uma dessas funções carrega e executa um novo processo, passando uma matriz de ponteiros para argumentos de linha de comando.
 
-O **execv** funções validam seus parâmetros. Se *cmdname* for um ponteiro nulo, ou se *argv* é um ponteiro nulo, ponteiro para uma matriz vazia, ou se a matriz contiver uma cadeia de caracteres vazia como primeiro argumento, o **execv** funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornarão -1. Nenhum processo é inicializado.
+As funções **_execv** validam seus parâmetros. Se *cmdname* for um ponteiro nulo ou se *argv* for um ponteiro nulo, um ponteiro para uma matriz vazia ou se a matriz contiver uma cadeia de caracteres vazia como o primeiro argumento, as funções **_execv** invocarão o manipulador de parâmetro inválido, conforme descrito no [parâmetro Validação](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definem **errno** como **EINVAL** e retornam-1. Nenhum processo é inicializado.
 
 ## <a name="requirements"></a>Requisitos
 

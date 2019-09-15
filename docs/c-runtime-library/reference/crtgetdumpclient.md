@@ -1,9 +1,9 @@
 ---
 title: _CrtGetDumpClient
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtGetDumpClient
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtGetDumpClient
 - _CrtGetDumpClient
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - _CrtGetDumpClient function
 - CrtGetDumpClient function
 ms.assetid: 9051867f-341b-493b-b53d-45d2b454a3ad
-ms.openlocfilehash: e4700bd936bec97014508c4a971f6e6c278c6a11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b5c6c7d4d123d2d419f104ddaabd57c10ad320e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339917"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938742"
 ---
-# <a name="crtgetdumpclient"></a>_CrtGetDumpClient
+# <a name="_crtgetdumpclient"></a>_CrtGetDumpClient
 
-Recupera a função definida pelo aplicativo atual para despejar os **client_block** blocos de memória (somente versão de depuração) do tipo.
+Recupera a função atual definida pelo aplicativo para despejar os blocos de memória do tipo **_CLIENT_BLOCK** (somente versão de depuração).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,7 +48,7 @@ Retorna a rotina de despejo atual.
 
 ## <a name="remarks"></a>Comentários
 
-O **crtgetdumpclient** função recupera a função de gancho atual para despejar objetos armazenados na **client_block** processo de despejo de memória de depuração de blocos de memória para o tempo de execução C.
+A função **_CrtGetDumpClient** recupera a função de gancho atual para despejar objetos armazenados nos blocos de memória **_CLIENT_BLOCK** para o processo de despejo de memória de depuração de tempo de execução C.
 
 Para obter mais informações sobre como usar outras funções em tempo de execução compatíveis com gancho e escrever suas próprias funções de gancho definidas pelo cliente, consulte [Gravação da função de gancho de depuração](/visualstudio/debugger/debug-hook-function-writing).
 

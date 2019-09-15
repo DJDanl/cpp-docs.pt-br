@@ -1,10 +1,10 @@
 ---
 title: _getdcwd_nolock, _wgetdcwd_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wgetdcwd_nolock
 - _getdcwd_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wgetdcwd_nolock
 - tgetdcwd_nolock
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-ms.openlocfilehash: 47938c387ba30d7bcba038145c2dff9c7b59b750
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cef2c39d3cfcb7690a644d9d2db68f25259b8162
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157702"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955197"
 ---
-# <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
+# <a name="_getdcwd_nolock-_wgetdcwd_nolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
 
 Obtém o caminho completo do diretório de trabalho atual na unidade especificada.
 
@@ -72,7 +75,7 @@ Unidade de disco.
 Local de armazenamento para o caminho.
 
 *maxlen*<br/>
-Comprimento máximo de caminho em caracteres: **char** para **getdcwd** e **wchar_t** para **wgetdcwd**.
+Comprimento máximo do caminho em caracteres: **Char** para **_getdcwd** e **wchar_t** para **_wgetdcwd**.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -80,7 +83,7 @@ Consulte [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md).
 
 ## <a name="remarks"></a>Comentários
 
-**getdcwd_nolock** e **wgetdcwd_nolock** são idênticas às **getdcwd** e **wgetdcwd**, respectivamente, exceto que eles não são protegidos contra interferência de outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+**_getdcwd_nolock** e **_wgetdcwd_nolock** são idênticos a **_getdcwd** e **_wgetdcwd**, respectivamente, exceto que eles não são protegidos contra interferência por outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

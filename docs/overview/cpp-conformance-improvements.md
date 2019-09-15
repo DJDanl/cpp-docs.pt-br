@@ -5,12 +5,12 @@ description: O Microsoft C++ no Visual Studio está progredindo em direção à 
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: aeaaab704706bee575e3ae44726522cd04c17433
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
-ms.translationtype: HT
+ms.openlocfilehash: 8eae104d21de271f11c727262939121c20050092
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222307"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927945"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Aprimoramentos de conformidade do C++ no Visual Studio
 
@@ -268,7 +268,7 @@ int main() {
 
 ### <a name="binary-expressions-with-different-enum-types"></a>Expressões binárias com diferentes tipos de enumeração
 
-A capacidade de aplicar as conversões aritméticas usuais em operandos onde um é do tipo de enumeração e o outro é de um tipo de enumeração diferente ou um tipo de ponto flutuante é preterido em C++ 20 ([P1120R0](http://wg21.link/p1120r0)). No Visual Studio 2019 versão 16,2 e posteriores, o código a seguir produz um aviso de nível 4 quando a opção de compilador [/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md) está habilitada:
+A capacidade de aplicar as conversões aritméticas usuais em operandos onde um é do tipo de enumeração e o outro é de um tipo de enumeração diferente ou um tipo de ponto flutuante é preterido em C++ 20 ([P1120R0](https://wg21.link/p1120r0)). No Visual Studio 2019 versão 16,2 e posteriores, o código a seguir produz um aviso de nível 4 quando a opção de compilador [/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md) está habilitada:
 
 ```cpp
 enum E1 { a };
@@ -290,7 +290,7 @@ int main() {
 
 ### <a name="binary-expressions-with-enumeration-and-floating-point-types"></a>Expressões binárias com enumeração e tipos de ponto flutuante
 
-A capacidade de aplicar as conversões aritméticas usuais em operandos onde um é do tipo de enumeração e o outro é de um tipo de enumeração diferente ou um tipo de ponto flutuante é preterido em C++ 20 ([P1120R0](http://wg21.link/p1120r0)). Em outras palavras, o uso de uma operação binária entre uma enumeração e um tipo de ponto flutuante agora é um aviso quando a opção de compilador [/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md) está habilitada:
+A capacidade de aplicar as conversões aritméticas usuais em operandos onde um é do tipo de enumeração e o outro é de um tipo de enumeração diferente ou um tipo de ponto flutuante é preterido em C++ 20 ([P1120R0](https://wg21.link/p1120r0)). Em outras palavras, o uso de uma operação binária entre uma enumeração e um tipo de ponto flutuante agora é um aviso quando a opção de compilador [/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md) está habilitada:
 
 ```cpp
 enum E1 { a };
@@ -310,7 +310,7 @@ int main() {
 
 ### <a name="equality-and-relational-comparisons-of-arrays"></a>Igualdade e comparações relacionais de matrizes
 
-As comparações de igualdade e relacional entre dois operandos do tipo de matriz são preteridas em C++ 20 ([P1120R0](http://wg21.link/p1120r0)). Em outras palavras, uma operação de comparação entre duas matrizes (independentemente das semelhanças de classificação e extensão) é um aviso agora. A partir do Visual Studio 2019 versão 16,2, o código a seguir produz *C5056: operator ' = = ': preterido para tipos de matriz* quando a opção de compilador [/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md) está habilitada:
+As comparações de igualdade e relacional entre dois operandos do tipo de matriz são preteridas em C++ 20 ([P1120R0](https://wg21.link/p1120r0)). Em outras palavras, uma operação de comparação entre duas matrizes (independentemente das semelhanças de classificação e extensão) é um aviso agora. A partir do Visual Studio 2019 versão 16,2, o código a seguir produz *C5056: operator ' = = ': preterido para tipos de matriz* quando a opção de compilador [/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md) está habilitada:
 
 ```cpp
 int main() {

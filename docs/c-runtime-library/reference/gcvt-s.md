@@ -1,9 +1,9 @@
 ---
 title: _gcvt_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _gcvt_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gcvt_s
 - gcvt_s
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ecb6fe105d8a976979f91d38c9e536b10989310
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332283"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956118"
 ---
-# <a name="gcvts"></a>_gcvt_s
+# <a name="_gcvt_s"></a>_gcvt_s
 
 Converte um valor de ponto flutuante em uma cadeia de caracteres. Trata-se de uma versão de [_gcvt](gcvt.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -77,19 +80,19 @@ Zero se for bem-sucedido. Se ocorrer uma falha devido a um parâmetro inválido 
 
 ### <a name="error-conditions"></a>Condições de Erro
 
-|*buffer*|*sizeInBytes*|*value*|*digits*|Valor de|Valor em *buffer*|
+|*buffer*|*sizeInBytes*|*value*|*digits*|Valor de|Valor no *buffer*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
 |**NULL**|qualquer|qualquer|qualquer|**EINVAL**|Não modificado.|
-|Não **nulo** (aponta para a memória válida)|zero|qualquer|qualquer|**EINVAL**|Não modificado.|
-|Não **nulo** (aponta para a memória válida)|qualquer|qualquer|>= *sizeInBytes*|**EINVAL**|Não modificado.|
+|Not **NULL** (aponta para memória válida)|zero|qualquer|qualquer|**EINVAL**|Não modificado.|
+|Not **NULL** (aponta para memória válida)|qualquer|qualquer|>= *sizeInBytes*|**EINVAL**|Não modificado.|
 
 **Problemas de segurança**
 
-**gcvt_s** pode gerar uma violação de acesso se *buffer* não apontar para a memória válida e não é **nulo**.
+**_gcvt_s** pode gerar uma violação de acesso se o *buffer* não apontar para uma memória válida e não for **nulo**.
 
 ## <a name="remarks"></a>Comentários
 
-O **gcvt_s** função converte um ponto flutuante *valor* em uma cadeia de caracteres (que inclui um ponto decimal e um possível byte de sinal) e armazena a cadeia de caracteres no *buffer* . *buffer* deve ser grande o suficiente para acomodar o valor convertido e um caractere nulo de terminação, que é acrescentado automaticamente. Um buffer de tamanho **_CVTBUFSIZE** é suficiente para qualquer flutuantes valor de ponto. Se um tamanho de buffer de *dígitos* + 1 for usado, a função não substituirá o fim do buffer, portanto, não se esqueça de fornecer um buffer suficiente para esta operação. **gcvt_s** tenta produzir *dígitos* dígitos no formato decimal. Se não for possível, ele produzirá *dígitos* dígitos no formato exponencial. Zeros à direita podem ser suprimidos na conversão.
+A função **_gcvt_s** converte um *valor* de ponto flutuante em uma cadeia de caracteres (que inclui um ponto decimal e um possível byte de sinal) e armazena a cadeia de caracteres no *buffer*. o *buffer* deve ser grande o suficiente para acomodar o valor convertido mais um caractere nulo de terminação, que é acrescentado automaticamente. Um buffer de comprimento **_CVTBUFSIZE** é suficiente para qualquer valor de ponto flutuante. Se um tamanho de buffer de *dígitos* + 1 for usado, a função não substituirá o final do buffer, portanto, certifique-se de fornecer um buffer suficiente para esta operação. **_gcvt_s** tenta produzir dígitos de *dígitos* no formato decimal. Se não puder, ele produz dígitos de *dígitos* no formato exponencial. Zeros à direita podem ser suprimidos na conversão.
 
 No C++, o uso dessa função é simplificado por uma sobrecarga de modelo. A sobrecarga pode inferir o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

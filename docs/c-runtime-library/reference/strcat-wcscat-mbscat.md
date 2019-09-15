@@ -1,11 +1,11 @@
 ---
 title: strcat, wcscat, _mbscat
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbscat
 - wcscat
 - strcat
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbscat
 - _ftcscat
@@ -40,19 +43,19 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-ms.openlocfilehash: 629b66a5c9dded3a910919f5e302a97c4f731240
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 973c54c18e941b29526cb3e9b1cadb98f6582c4a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354334"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958271"
 ---
-# <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
+# <a name="strcat-wcscat-_mbscat"></a>strcat, wcscat, _mbscat
 
 Acrescenta uma cadeia de caracteres. Versões mais seguras dessas funções estão disponíveis; consulte [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md).
 
 > [!IMPORTANT]
-> **mbscat_s** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** não pode ser usado em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -100,12 +103,12 @@ Cada uma dessas funções retorna a cadeia de caracteres de destino (*strDestina
 
 ## <a name="remarks"></a>Comentários
 
-O **strcat** função acrescentará *strSource* para *strDestination* e encerra a cadeia de caracteres resultante com um caractere nulo. O caractere inicial de *strSource* substitui o caractere nulo de terminação de *strDestination*. O comportamento de **strcat** é indefinido se as cadeias de caracteres de origem e de destino se sobrepõem.
+A função **strcat** acrescenta *strSource* a *strDestination* e termina a cadeia de caracteres resultante com um caractere nulo. O caractere inicial de *strSource* substitui o caractere nulo de terminação de *strDestination*. O comportamento de **strcat** é indefinido se as cadeias de caracteres de origem e de destino se sobrepõem.
 
 > [!IMPORTANT]
-> Porque **strcat** não verifica se há espaço suficiente em *strDestination* antes de ser acrescentado *strSource*, ele é uma causa potencial de sobrecargas de buffer. Ao invés disso, considere usar [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
+> Como o **strcat** não verifica espaço suficiente em *strDestination* antes de acrescentar *strSource*, é uma possível causa de estouros de buffer. Ao invés disso, considere usar [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
 
-**wcscat** e **mbscat** são versões de caractere largo e caracteres multibyte **strcat**. Os argumentos e o valor de retorno **wcscat** são largos cadeias de caracteres; aqueles de **mbscat** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+**wcscat** e **_mbscat** são versões de caractere largo e de multibyte de **strcat**. Os argumentos e o valor de retorno de **wcscat** são cadeias de caracteres largos; os de **_mbscat** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

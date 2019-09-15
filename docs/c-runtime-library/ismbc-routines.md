@@ -1,7 +1,7 @@
 ---
 title: Rotinas _ismbc
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr100.dll
@@ -9,21 +9,24 @@ apilocation:
 - msvcr90.dll
 - msvcr120.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbc
 helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-ms.openlocfilehash: dd187be93b5df0160686fe765f65c25e14800b75
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 6dc14f269cafa8ccc343c5403ab0e23d319c71c3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748678"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940160"
 ---
-# <a name="ismbc-routines"></a>Rotinas _ismbc
+# <a name="_ismbc-routines"></a>Rotinas _ismbc
 
 Cada teste de rotina **_ismbc** testa um caractere multibyte `c` para uma condição determinada.
 
@@ -44,7 +47,7 @@ O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da loca
 |[_ismbcalnum, _ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Alfanumérico|Retornará um valor diferente de zero se e somente se `c` for uma representação de uma letra em inglês ASCII: Veja exemplos para `_ismbcdigit` e `_ismbcalpha`.|
 |[_ismbcalpha, _ismbcalpha_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Alfabético|Retornará um valor diferente de zero se e somente se `c` for uma representação de uma letra em inglês ASCII: Veja exemplos para `_ismbcupper` e `_ismbclower`; ou uma letra katakana: 0xA6<=`c`<=0xDF.|
 |[_ismbcdigit, _ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Dígito|Retornará um valor diferente de zero se e somente se `c` for uma representação de um byte único de um dígito ASCII: 0x30<=`c`<=0x39.|
-|[_ismbcgraph, _ismbcgraph_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Gráfico|Retorna um valor diferente de zero se e somente se `c` for uma representação de byte único de qualquer caractere imprimível ASCII ou katakana, exceto por um espaço em branco ( ). Confira exemplos de `_ismbcdigit`, `_ismbcalpha` e `_ismbcpunct`.|
+|[_ismbcgraph, _ismbcgraph_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Graphic|Retorna um valor diferente de zero se e somente se `c` for uma representação de byte único de qualquer caractere imprimível ASCII ou katakana, exceto por um espaço em branco ( ). Confira exemplos de `_ismbcdigit`, `_ismbcalpha` e `_ismbcpunct`.|
 |[_ismbclegal, _ismbclegal_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Caractere multibyte válido|Retornará um valor diferente de zero se e somente se o primeiro byte de `c` estiver dentro dos intervalos 0x81 – 0x9F ou 0xE0 – 0xFC, enquanto o segundo byte estiver dentro dos intervalos 0x40 – 0x7E ou 0x80 – FC.|
 |[_ismbclower, _ismbclower_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|Alfabético minúsculo|Retornará um valor diferente de zero se e somente se `c` for uma representação de um byte de uma letra minúscula ASCII em inglês: 0x61<=`c`<=0x7A.|
 |[_ismbcprint, _ismbcprint_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Imprimível|Retornará um valor diferente de zero se e somente se `c` for uma representação de byte único de qualquer caractere imprimível ASCII ou katakana, incluindo um espaço em branco ( ): Veja exemplos para `_ismbcspace`, `_ismbcdigit`, `_ismbcalpha` e `_ismbcpunct`.|

@@ -1,10 +1,10 @@
 ---
 title: _strdate, _wstrdate
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strdate
 - _wstrdate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstrdate
 - wstrdate
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: 4dc2ea7f25e644c9bf7a4ddca4a625991f37d912
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1164db5857643bac649e96493a3d66cdee3b6e2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353957"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958219"
 ---
-# <a name="strdate-wstrdate"></a>_strdate, _wstrdate
+# <a name="_strdate-_wstrdate"></a>_strdate, _wstrdate
 
 Copie a data atual do sistema para um buffer. Versões mais seguras dessas funções estão disponíveis; consulte [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md).
 
@@ -70,17 +73,17 @@ Um ponteiro para um buffer que contém a cadeia de caracteres de data formatada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna um ponteiro para a cadeia de caracteres resultante *datestr*.
+Cada uma dessas funções retorna um ponteiro para a cadeia de caracteres de caractere resultante *datestr*.
 
 ## <a name="remarks"></a>Comentários
 
 Versões mais seguras dessas funções estão disponíveis; consulte [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). É recomendável que as funções mais seguras sejam usadas sempre que possível.
 
-O **strDate** função copia a data atual do sistema para o buffer apontado por *datestr*formatado **mm**/**dd** / **yy**, onde **mm** são dois dígitos que representa o mês **dd** são dois dígitos que representa o dia e **AA**  é os dois últimos dígitos do ano. Por exemplo, a cadeia de caracteres **05/12/99** representa 5 de dezembro de 1999. O tamanho do buffer deve ser de, ao menos, 9 bytes.
+A **função _strdate** copia a data atual do sistema para o buffer apontado *por datestr*, formatada **mm**/**DD**/**AA**, em que **mm** é dois dígitos que representam o mês, **DD** é dois dígitos que representam o dia e **YY** são os dois últimos dígitos do ano. Por exemplo, a cadeia de caracteres **12/05/99** representa 5 de dezembro de 1999. O tamanho do buffer deve ser de, ao menos, 9 bytes.
 
-Se *datestr* é um **nulo** ponteiro, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e defina **errno** à **EINVAL**.
+Se *datestr* for um ponteiro **NULL** , o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam-1 e definem **errno** como **EINVAL**.
 
-**wstrdate** é uma versão de caractere largo de **strDate**; o argumento e o valor retornado de **wstrdate** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
+**_wstrdate** é uma versão de caractere largo do **_strdate**; o argumento e o valor de retorno de **_wstrdate** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

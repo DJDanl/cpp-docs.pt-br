@@ -1,11 +1,11 @@
 ---
 title: rint, rintf, rintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - rintf
 - rintl
 - rint
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rintf
 - rintl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57c4dc60d6b4d29e5c46fa6f1d03d0710ed44309
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357584"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949261"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -58,16 +61,16 @@ O valor do ponto flutuante a ser arredondado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **rimir** funções retornam um valor de ponto flutuante que representa o inteiro mais próximo a *x*. Valores decimais são arredondados de acordo com a configuração atual do modo de arredondamento ponto flutuante, o mesmo que o **nearbyint** funções. Ao contrário do **nearbyint** funções, o **rimir** funções podem gerar o **FE_INEXACT** exceção de ponto flutuante se o resultado é diferente no valor do argumento. Nenhum erro é retornado.
+As funções **rimir** retornam um valor de ponto flutuante que representa o inteiro mais próximo a *x*. Valores intermediários são arredondados de acordo com a configuração atual do modo de arredondamento de ponto flutuante, o mesmo que as funções **nearbyint** . Ao contrário das funções **nearbyint** , as funções **rimir** podem gerar a exceção de ponto flutuante **FE_INEXACT** se o resultado for diferente no valor do argumento. Nenhum erro é retornado.
 
-|Entrada|Exceção SEH|**matherr** exceção|
+|Entrada|Exceção SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|nenhum|nenhum|
 |Desnormalizado|EXCEPTION_FLT_UNDERFLOW|nenhum|
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **rimir** que usam e retornam **float** e **longo** **double** valores. Em um programa do C **rimir** sempre usa e retorna um **duplo**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **rimir** que levam e retornam valores **float** e **Long** **duplos** . Em um programa C, **rimir** sempre pega e retorna um **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

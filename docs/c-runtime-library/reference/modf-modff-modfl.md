@@ -1,11 +1,11 @@
 ---
 title: modf, modff, modfl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - modff
 - modf
 - modfl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - modff
 - _modfl
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 59d6e2b9b02ad182c5630d6dc9a989c035e8fa92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32caadb787031dca0b0726c546a11c5cd6722b82
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156324"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951534"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -69,11 +72,11 @@ Esta função retorna a parte fracionária com sinal de *x*. Nenhum erro é reto
 
 ## <a name="remarks"></a>Comentários
 
-O **modf** funções dividem o valor de ponto flutuante *x* em fracionários e partes de inteiro, cada um deles tem o mesmo sinal *x*. A parte fracionária com sinal de *x* é retornado. A parte inteira é armazenada como um valor de ponto flutuante em *intptr*.
+As funções **modf** dividem o valor de ponto flutuante *x* em partes fracionárias e de inteiros, cada um com o mesmo sinal de *x*. A parte fracionária assinada de *x* é retornada. A parte inteira é armazenada como um valor de ponto flutuante em *IntPtr*.
 
-**modf** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições sobre como usar a implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+o **modf** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições sobre como usar a implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-C++ permite sobrecargas, portanto, é possível chamar sobrecargas de **modf** que usam e retornam **float** ou **longo** **double** parâmetros. Em um programa do C **modf** sempre usa dois valores duplos e retorna um valor duplo.
+C++permite sobrecarga, portanto, você pode chamar sobrecargas de **modf** que usam e retornam parâmetros **duplos** **float** ou **Long** . Em um programa C, **modf** sempre usa dois valores double e retorna um valor Double.
 
 ## <a name="requirements"></a>Requisitos
 

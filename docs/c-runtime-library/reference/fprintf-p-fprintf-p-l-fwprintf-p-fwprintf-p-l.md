@@ -1,12 +1,12 @@
 ---
 title: _fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fwprintf_p
 - _fprintf_p_l
 - _fwprintf_p_l
 - _fprintf_p
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fprintf_p
 - _ftprintf_p
@@ -41,14 +44,14 @@ helpviewer_keywords:
 - ftprintf_p_l function
 - fwprintf_p_l function
 ms.assetid: 46b082e1-45ba-4383-9ee4-97015aa50bc6
-ms.openlocfilehash: db9e9a746193c7bf35913d6792d87aa9ba85fa79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6509aba4097b3b37443443b533ebd9fb92c923a1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333138"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956998"
 ---
-# <a name="fprintfp-fprintfpl-fwprintfp-fwprintfpl"></a>_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
+# <a name="_fprintf_p-_fprintf_p_l-_fwprintf_p-_fwprintf_p_l"></a>_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 
 Imprime dados formatados em um fluxo.
 
@@ -95,20 +98,20 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**fprintf_p** e **fwprintf_p** retornar o número de caracteres gravados ou retornam um valor negativo quando ocorre um erro de saída.
+**_fprintf_p** e **_fwprintf_p** retornam o número de caracteres gravados ou retornam um valor negativo quando ocorre um erro de saída.
 
 ## <a name="remarks"></a>Comentários
 
-**fprintf_p** formata e imprime uma série de caracteres e valores para a saída *fluxo*. Cada função *argumento* (se houver) é convertido e gerado de acordo com a especificação de formato correspondente em *formato*. Para **fprintf_p**, o *formato* argumento tem a mesma sintaxe e uso que nos **printf_p**. Essas funções dão suporte a parâmetros posicionais, o que significa que a ordem dos parâmetros usados pela cadeia de caracteres de formato pode ser alterada. Para obter mais informações sobre parâmetros posicionais, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+**_fprintf_p** formata e imprime uma série de caracteres e valores no *fluxo*de saída. Cada *argumento* de função (se houver) é convertido e apresentado de acordo com a especificação de formato correspondente no *formato*. Para **_fprintf_p**, o argumento de *formato* tem a mesma sintaxe e usa-o em **_printf_p**. Essas funções dão suporte a parâmetros posicionais, o que significa que a ordem dos parâmetros usados pela cadeia de caracteres de formato pode ser alterada. Para obter mais informações sobre parâmetros posicionais, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**fwprintf_p** é uma versão de caractere largo de **fprintf_p**; na **fwprintf_p**, *formato* é uma cadeia de caracteres largos. Essas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. **fprintf_p** atualmente, não suporta a saída em um fluxo UNICODE.
+**_fwprintf_p** é uma versão de caractere largo do **_fprintf_p**; em **_fwprintf_p**, *Format* é uma cadeia de caracteres largos. Essas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. Atualmente, o **_fprintf_p** não dá suporte à saída em um fluxo Unicode.
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade atual.
 
 > [!IMPORTANT]
 > Verifique se *format* não é uma cadeia de caracteres definida pelo usuário.
 
-Assim como as versões não seguras (consulte [fprintf, fprintf_l, fwprintf, fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), essas funções validam seus parâmetros e invocam o manipulador de parâmetro inválido, conforme descrito em [devalidaçãodeparâmetro](../../c-runtime-library/parameter-validation.md), se qualquer um dos *stream* ou *formato* for um ponteiro nulo ou se houver qualquer especificadores de formatação desconhecido ou mal formado. Se a execução puder continuar, as funções retornarão -1 e defina **errno** à **EINVAL**.
+Como as versões não seguras (consulte [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), essas funções validam seus parâmetros e invocam o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md), se o *fluxo* ou  *o formato* é um ponteiro nulo ou, se houver qualquer especificador de formatação desconhecido ou mal formado. Se a execução puder continuar, as funções retornam-1 e definem **errno** como **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

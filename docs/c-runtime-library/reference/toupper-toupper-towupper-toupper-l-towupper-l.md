@@ -1,13 +1,13 @@
 ---
 title: toupper, _toupper, towupper, _toupper_l, _towupper_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _toupper_l
 - towupper
 - toupper
 - _towupper_l
 - _toupper
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - towupper
 - _toupper
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-ms.openlocfilehash: 6dd564a27ee7f3c2bb095564e5c9423249d6babc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e17f139789b2c37292764f2e4508b59cddd2c03e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155492"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957915"
 ---
-# <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
+# <a name="toupper-_toupper-towupper-_toupper_l-_towupper_l"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
 Converta caractere em maiúscula.
 
@@ -85,19 +88,19 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Todas essas rotinas convertem uma cópia do *c*, se possível e retorna o resultado.
+Cada uma dessas rotinas converte uma cópia de *c*, se possível, e retorna o resultado.
 
-Se *c* é um caractere largo para o qual **iswlower** for diferente de zero e não há um caractere largo correspondente para o qual [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) for diferente de zero **towupper** retorna o caractere largo correspondente; Caso contrário, **towupper** retorna *c* inalterado.
+Se *c* for um caractere largo para o qual **iswlower** é diferente de zero e houver um caractere largo correspondente para o qual [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) é diferente de zero, **towupper** retornará o caractere largo correspondente; caso contrário, **towupper** retornará *c* inalterado.
 
 Não há valor retornado reservado para indicar um erro.
 
-Para que **toupper** para fornecer os resultados esperados, [isascii](isascii-isascii-iswascii.md) e [islower](islower-iswlower-islower-l-iswlower-l.md) devem retornar diferente de zero.
+Para que o **ToUpper** forneça os resultados esperados, [__isascii](isascii-isascii-iswascii.md) e [islow](islower-iswlower-islower-l-iswlower-l.md) devem retornar diferentes de zero.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas rotinas converte determinada letra minúscula em maiúscula, se for possível e relevante. A conversão de maiusculas e minúsculas de **towupper** é específica da localidade. Somente caracteres relevantes à localidade atual são alterados quanto a maiúsculas e minúsculas. As funções sem o **l** sufixo usam atualmente definida localidade. As versões dessas funções com o **l** sufixo usam a localidade como um parâmetro e usá-lo em vez de definida atualmente localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+Cada uma dessas rotinas converte determinada letra minúscula em maiúscula, se for possível e relevante. A conversão de casos de **towupper** é específica da localidade. Somente caracteres relevantes à localidade atual são alterados quanto a maiúsculas e minúsculas. As funções sem o sufixo **_L** usam a localidade definida atualmente. As versões dessas funções com o sufixo **_L** pegam a localidade como um parâmetro e usam isso em vez da localidade definida no momento. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Para que **toupper** para fornecer os resultados esperados, [isascii](isascii-isascii-iswascii.md) e [isupper](isupper-isupper-l-iswupper-iswupper-l.md) devem retornar diferente de zero.
+Para que o **ToUpper** forneça os resultados esperados, [__isascii](isascii-isascii-iswascii.md) e [IsUpper](isupper-isupper-l-iswupper-iswupper-l.md) devem retornar diferentes de zero.
 
 [Rotinas de conversão de dados](../../c-runtime-library/data-conversion.md)
 
@@ -109,7 +112,7 @@ Para que **toupper** para fornecer os resultados esperados, [isascii](isascii-is
 |**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
-> **toupper_l** e **towupper_l** não têm nenhuma dependência de localidade e não se destinam a serem chamadas diretamente. Eles são fornecidos para uso interno pela **_totupper_l**.
+> **_toupper_l** e **_towupper_l** não têm nenhuma dependência de localidade e não devem ser chamados diretamente. Eles são fornecidos para uso interno pelo **_totupper_l**.
 
 ## <a name="requirements"></a>Requisitos
 

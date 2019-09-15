@@ -1,9 +1,9 @@
 ---
 title: _fwrite_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fwrite_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fwrite_nolock
 - fwrite_nolock
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-ms.openlocfilehash: 1c899e34e19547b30a42135f3f818f220f1bc5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 035ee1d958c6ea6a13481d92311733ded9ed5f2c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332657"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956210"
 ---
-# <a name="fwritenolock"></a>_fwrite_nolock
+# <a name="_fwrite_nolock"></a>_fwrite_nolock
 
 Grava dados em um fluxo sem bloquear o thread.
 
@@ -66,7 +69,7 @@ O mesmo que [fwrite](fwrite.md).
 
 ## <a name="remarks"></a>Comentários
 
-Essa função é uma versão sem bloqueio do **fwrite**. Ela é idêntica à **fwrite** , exceto que não está protegida contra interferência de outros threads. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+Essa função é uma versão sem bloqueio do **fwrite**. É idêntico a **fwrite** , exceto que não é protegido contra interferência por outros threads. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
 ## <a name="requirements"></a>Requisitos
 

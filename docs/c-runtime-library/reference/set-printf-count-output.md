@@ -1,9 +1,9 @@
 ---
 title: _set_printf_count_output
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_printf_count_output
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_printf_count_output
 - _set_printf_count_output
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - set_printf_count_output function
 - _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
-ms.openlocfilehash: 0d4847d850b39c7c03ea92a98499715b1e6a4913
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d53b4e4c56a69582a4eb517fa1a5c9e10cd7d2f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356518"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948415"
 ---
-# <a name="setprintfcountoutput"></a>_set_printf_count_output
+# <a name="_set_printf_count_output"></a>_set_printf_count_output
 
-Habilitar ou desabilitar o suporte do **%n** Formatar [printf, printf_l, wprintf, wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-funções da família.
+Habilite ou desabilite o suporte do formato **% n** nas funções [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-Family.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -46,15 +49,15 @@ int _set_printf_count_output(
 ### <a name="parameters"></a>Parâmetros
 
 *enable*<br/>
-Um valor diferente de zero para habilitar **%n** dão suporte a 0 para desabilitar **%n** dão suporte.
+Um valor diferente de zero para habilitar o suporte a **% n** , 0 para desabilitar o suporte a **% n** .
 
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno
 
-O estado de **%n** suporte antes de chamar essa função: diferente de zero se **%n** suporte tiver sido habilitado, 0 se ele foi desabilitado.
+O estado do suporte de **% n** antes de chamar esta função: diferente de zero se o suporte a **% n** tiver sido habilitado, 0 se ele tiver sido desabilitado.
 
 ## <a name="remarks"></a>Comentários
 
-Por motivos de segurança, suporte para o **%n** especificador de formato é desabilitado por padrão no **printf** e todas as suas variantes. Se **%n** for encontrado em um **printf** especificação de formato, o comportamento padrão é invocar o manipulador de parâmetro inválido conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Chamando **set_printf_count_output** com um argumento diferente de zero fará com que **printf**-funções da família interpretar **%n** conforme descrito em [formato Sintaxe de especificação: funções printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Por causa de motivos de segurança, o suporte para o especificador de formato **% n** é desabilitado por padrão em **printf** e em todas as suas variantes. Se **% n** for encontrado em uma especificação de formato **printf** , o comportamento padrão será invocar o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Chamar **_set_printf_count_output** com um argumento diferente de zero fará com que as funções da família **printf**interpretem **% n** conforme descrito em [sintaxe de especificação de formato: funções printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,10 +1,10 @@
 ---
 title: vscanf, vwscanf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vscanf
 - vwscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vscanf
 - vwscanf
 - _vtscanf
 ms.assetid: d1df595b-11bc-4682-9441-a92616301e3b
-ms.openlocfilehash: 936dcc34fb0d2ed73919ca59c7419f2090c54e28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86e6588f6309989317c4cee7ec398cfa809afe9b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383497"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945441"
 ---
 # <a name="vscanf-vwscanf"></a>vscanf, vwscanf
 
@@ -57,18 +60,18 @@ Lista de argumentos variáveis.
 
 Retorna o número de campos que são convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído.
 
-Se *formato* é um **nulo** ponteiro, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EOF** e defina **errno** para **EINVAL**.
+Se *Format* for um ponteiro **NULL** , o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam **EOF** e definem **errno** como **EINVAL**.
 
 Para obter mais informações sobre esses e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **vscanf** função lê dados de fluxo de entrada padrão **stdin** e grava os dados nos locais fornecidos pela *arglist* lista de argumentos. Cada argumento na lista deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo em *formato*. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
+A função **vscanf** lê dados do fluxo de entrada do **stdin** padrão e grava os dados nos locais fornecidos pela lista de argumentos *Arglist* . Cada argumento na lista deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo no *formato*. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
 > [!IMPORTANT]
-> Quando você usa **vscanf** para ler uma cadeia de caracteres, especifique sempre uma largura para o **%s** formato (por exemplo, **"% 32s texto"** , em vez de **"%s"**); Caso contrário, entrada formatada incorretamente poderá causar um estouro de buffer. Como alternativa, você pode usar [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) ou [fgets](fgets-fgetws.md).
+> Quando você usa **vscanf** para ler uma cadeia de caracteres, sempre especifique uma largura para o formato **% s** (por exemplo, **"% 32s"** em vez de **"% s"** ); caso contrário, a entrada formatada incorretamente poderá causar uma saturação do buffer. Como alternativa, você pode usar [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) ou [fgets](fgets-fgetws.md).
 
-**vwscanf** é uma versão de caractere largo de **vscanf**; o *formato* argumento **vwscanf** é uma cadeia de caracteres largos. **vwscanf** e **vscanf** terão comportamento idêntico se o fluxo for aberto no modo ANSI. **vscanf** não dá suporte a entrada de um fluxo UNICODE.
+**vwscanf** é uma versão de caractere largo do **vscanf**; o argumento *Format* para **vwscanf** é uma cadeia de caracteres largos. **vwscanf** e **vscanf** se comportam de forma idêntica se o fluxo é aberto no modo ANSI. **vscanf** não dá suporte à entrada de um fluxo Unicode.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -85,7 +88,7 @@ Para obter mais informações, consulte [Campos de especificação de formato: f
 |**vscanf**|\<stdio.h>|
 |**vwscanf**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

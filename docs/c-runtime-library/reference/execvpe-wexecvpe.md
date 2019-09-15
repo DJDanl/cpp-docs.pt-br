@@ -1,10 +1,10 @@
 ---
 title: _execvpe, _wexecvpe
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execvpe
 - _wexecvpe
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wexecvpe
 - execvpe
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-ms.openlocfilehash: 064f8b94a9a97795015c09c11cd56e0370dcc60c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eab63cd54d410daf1dd4d09fb3d904feca0a230d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339397"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941733"
 ---
-# <a name="execvpe-wexecvpe"></a>_execvpe, _wexecvpe
+# <a name="_execvpe-_wexecvpe"></a>_execvpe, _wexecvpe
 
 Carrega e executa novos processos filho.
 
@@ -70,9 +73,9 @@ Matriz de ponteiros para as configurações de ambiente.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, caso em que o **errno** variável global é definida.
+Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de-1 indica um erro; nesse caso, a variável global **errno** é definida.
 
-|**errno** value|Descrição|
+|valor **errno**|Descrição|
 |-------------------|-----------------|
 |**E2BIG**|O espaço necessário para os argumentos e as configurações de ambiente excede 32 KB.|
 |**EACCES**|O arquivo especificado tem uma violação de compartilhamento ou de bloqueio.|
@@ -85,9 +88,9 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções carrega e executa um novo processo, passando uma matriz de ponteiros para argumentos de linha de comando e uma matriz de ponteiros para as configurações de ambiente. Essas funções usam a **caminho** variável de ambiente para localizar o arquivo a ser executado.
+Cada uma dessas funções carrega e executa um novo processo, passando uma matriz de ponteiros para argumentos de linha de comando e uma matriz de ponteiros para as configurações de ambiente. Essas funções usam a variável de ambiente **path** para localizar o arquivo a ser executado.
 
-O **execvpe** funções validam seus parâmetros. Se o *cmdname* for um ponteiro nulo, ou se *argv* é um ponteiro nulo, um ponteiro para uma matriz vazia ou um ponteiro para uma matriz que contém uma cadeia de caracteres vazia como o primeiro argumento, essas funções invocarão o inválido manipulador de parâmetro, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornarão -1. Nenhum processo é inicializado.
+As funções **_execvpe** validam seus parâmetros. Se *cmdname* for um ponteiro nulo, ou se *argv* for um ponteiro nulo, um ponteiro para uma matriz vazia ou um ponteiro para uma matriz que contém uma cadeia de caracteres vazia como o primeiro argumento, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [ Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definem **errno** como **EINVAL** e retornam-1. Nenhum processo é inicializado.
 
 ## <a name="requirements"></a>Requisitos
 

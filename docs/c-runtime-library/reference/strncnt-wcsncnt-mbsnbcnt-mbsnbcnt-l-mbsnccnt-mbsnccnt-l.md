@@ -1,14 +1,14 @@
 ---
 title: _strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcnt_l
 - _mbsnccnt
 - _wcsncnt
 - _strncnt
 - _mbsnccnt_l
 - _mbsnbcnt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbsnbcnt
 - wcsncnt
@@ -50,19 +53,19 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 456a11ae98fe8fb40c2ef1d6f4e6d86583f4b7b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c00ae3ff845dfbc3daf4a3ea6ce5c34c43e475f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209815"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947306"
 ---
-# <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
+# <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
 Retorna o número de caracteres ou bytes dentro de uma contagem especificada.
 
 > [!IMPORTANT]
-> **_mbsnbcnt**, **_mbsnbcnt_l**, **_mbsnccnt**, e **_mbsnccnt_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnbcnt**, **_mbsnbcnt_l**, **_mbsnccnt**e **_mbsnccnt_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -101,24 +104,24 @@ size_t _mbsnccnt_l(
 Cadeia de caracteres a ser examinada.
 
 *count*<br/>
-Número de caracteres ou bytes a ser examinado no *str*.
+Número de caracteres ou bytes a serem examinados em *Str*.
 
 *locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**_mbsnbcnt** e **_mbsnbcnt_l** retornar o número de bytes encontrado no primeiro *contagem* de caracteres multibyte de *str*. **_mbsnccnt** e **_mbsnccnt_l** retornar o número de caracteres encontrados no primeiro *contagem* de bytes de *str*. Se um caractere nulo é encontrado antes do exame de *str* tiver concluído, eles retornam o número de bytes ou caracteres encontrados antes do caractere nulo. Se *str* consiste em menos de *contagem* caracteres ou bytes, elas retornam o número de caracteres ou bytes na cadeia de caracteres. Se *contagem* é menor que zero, eles retornam 0. Nas versões anteriores, essas funções tinham um valor de retorno do tipo **int** vez **size_t**.
+**_mbsnbcnt** e **_mbsnbcnt_l** retornam o número de bytes encontrados na primeira *contagem* de caracteres multibyte de *Str*. **_mbsnccnt** e **_mbsnccnt_l** retornam o número de caracteres encontrados na primeira *contagem* de bytes de *Str*. Se for encontrado um caractere nulo antes da conclusão do exame de *Str* , eles retornarão o número de bytes ou caracteres encontrados antes do caractere nulo. Se *Str* consistir em menos de caracteres de *contagem* ou bytes, eles retornarão o número de caracteres ou bytes na cadeia de caracteres. Se *Count* for menor que zero, eles retornarão 0. Em versões anteriores, essas funções tinham um valor de retorno do tipo **int** em vez de **size_t**.
 
-**_strncnt** retorna o número de caracteres nos primeiros *contagem* bytes da cadeia de caracteres de byte único *str*. **_wcsncnt** retorna o número de caracteres nos primeiros *contagem* caracteres largos da cadeia de caracteres largos *str*.
+**_strncnt** retorna o número de caracteres nos primeiros bytes de *contagem* do *Str*de cadeia de caracteres de byte único. **_wcsncnt** retorna o número de caracteres na primeira *contagem* de caracteres do *Seq*de cadeia de caracteres largo.
 
 ## <a name="remarks"></a>Comentários
 
-**_mbsnbcnt** e **_mbsnbcnt_l** contar o número de bytes encontrado no primeiro *contagem* de caracteres multibyte de *str*. **_mbsnbcnt** e **_mbsnbcnt_l** substituir **mtob** e deve ser usado no lugar de **mtob**.
+**_mbsnbcnt** e **_mbsnbcnt_l** contam o número de bytes encontrados na primeira *contagem* de caracteres multibyte de *Str*. **_mbsnbcnt** e **_mbsnbcnt_l** substituem **mtob** e devem ser usados no lugar de **mtob**.
 
-**_mbsnccnt** e **_mbsnccnt_l** contar o número de caracteres encontrados no primeiro *contagem* de bytes de *str*. Se **_mbsnccnt** e **_mbsnccnt_l** encontrar um caractere nulo no segundo byte de um caractere de byte duplo, o primeiro byte também é considerado como nulo e não está incluído no valor de contagem retornado. **_mbsnccnt** e **_mbsnccnt_l** substituir **btom** e deve ser usado no lugar de **btom**.
+**_mbsnccnt** e **_mbsnccnt_l** contam o número de caracteres encontrados na primeira *contagem* de bytes de *Str*. Se **_mbsnccnt** e **_mbsnccnt_l** encontrar um caractere nulo no segundo byte de um caractere de dois bytes, o primeiro byte também será considerado nulo e não será incluído no valor de contagem retornado. **_mbsnccnt** e **_mbsnccnt_l** substituem **btom** e devem ser usados no lugar de **btom**.
 
-Se *str* é um **nulo** ponteiro ou é *contagem* for 0, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md), **errno** é definido como **EINVAL**, e a função retornará 0.
+Se *Str* for um ponteiro **nulo** ou a *contagem* for 0, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md), **errno** é definido como **EINVAL**e a função retorna 0.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 

@@ -1,9 +1,9 @@
 ---
 title: _CrtMemDifference
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtMemDifference
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtMemDifference
 - CrtMemDifference
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - CrtMemDifference function
 - _CrtMemDifference function
 ms.assetid: 0f327278-b551-482f-958b-76941f796ba4
-ms.openlocfilehash: f2c6306bf604737d0ace142674b21845a08e2dee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51bfa014d54f55843fcb112f318f143774abf8f3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339462"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938706"
 ---
-# <a name="crtmemdifference"></a>_CrtMemDifference
+# <a name="_crtmemdifference"></a>_CrtMemDifference
 
 Compara dois estados de memória e retorna suas diferenças (somente versão de depuração).
 
@@ -46,29 +49,29 @@ int _CrtMemDifference(
 ### <a name="parameters"></a>Parâmetros
 
 *stateDiff*<br/>
-Ponteiro para um **crtmemstate** estrutura que é usada para armazenar as diferenças entre os dois estados de memória (retornados).
+Ponteiro para uma estrutura **_CrtMemState** que é usada para armazenar as diferenças entre os dois Estados de memória (retornados).
 
 *oldState*<br/>
-Ponteiro para um estado de memória anterior (**crtmemstate** estrutura).
+Ponteiro para um estado de memória anterior (estrutura **_CrtMemState** ).
 
 *newState*<br/>
-Ponteiro para um estado de memória posterior (**crtmemstate** estrutura).
+Ponteiro para um estado de memória posterior (estrutura **_CrtMemState** ).
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se os estados de memória forem significativamente diferentes, **crtmemdifference** retorna TRUE. Caso contrário, a função retorna FALSE.
+Se os Estados de memória forem significativamente diferentes, **_CrtMemDifference** retornará true. Caso contrário, a função retorna FALSE.
 
 ## <a name="remarks"></a>Comentários
 
-O **crtmemdifference** funcionar compara *oldState* e *newState* e armazena suas diferenças em *stateDiff*, que pode, em seguida, ser usado pelo aplicativo para detectar vazamentos de memória e outros problemas de memória. Quando [Debug](../../c-runtime-library/debug.md) não está definido, as chamadas a **crtmemdifference** são removidas durante o pré-processamento.
+A função **_CrtMemDifference** compara *oldState* e *NewState* e armazena suas diferenças no *stateDiff*, que podem ser usadas pelo aplicativo para detectar vazamentos de memória e outros problemas de memória. Quando [_DEBUG](../../c-runtime-library/debug.md) não é definido, as chamadas para **_CrtMemDifference** são removidas durante o pré-processamento.
 
-*newState* e *oldState* devem ser um ponteiro válido para um **crtmemstate** estrutura, definida em crtdbg. h, que tenha sido preenchida por [crtmemcheckpoint](crtmemcheckpoint.md)antes de chamar **crtmemdifference**. *stateDiff* deve ser um ponteiro para uma instância previamente alocada dos **crtmemstate** estrutura. Se *stateDiff*, *newState*, ou *oldState* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [ Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como **EINVAL** e a função retornará FALSE.
+*NewState* e *oldState* devem ser um ponteiro válido para uma estrutura **_CrtMemState** , definida em CRTDBG. h, que foi preenchida por [_CrtMemCheckpoint](crtmemcheckpoint.md) antes de chamar **_CrtMemDifference**. *stateDiff* deve ser um ponteiro para uma instância alocada anteriormente da estrutura **_CrtMemState** . Se *stateDiff*, *NewState*ou *oldState* for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) for definido como **EINVAL** e a função retornar false.
 
-**Crtmemdifference** compara a **crtmemstate** campo valores blocos no *oldState* às *newState* e armazena o resultado no *stateDiff*. Quando o número de tipos de bloco alocados ou o número total de blocos alocados para cada tipo diferir entre os dois estados de memória, os estados serão considerados significativamente diferentes. A diferença entre a maior quantidade alocada ao mesmo tempo para os dois estados e a diferença entre o total de alocações para os dois estados também são armazenados no *stateDiff*.
+**_CrtMemDifference** compara os valores de campo **_CrtMemState** dos blocos em *oldState* para aqueles no *NewState* e armazena o resultado em *stateDiff*. Quando o número de tipos de bloco alocados ou o número total de blocos alocados para cada tipo diferir entre os dois estados de memória, os estados serão considerados significativamente diferentes. A diferença entre o maior valor já alocado de uma vez para os dois Estados e a diferença entre as alocações totais para os dois Estados também são armazenadas em *stateDiff*.
 
-Por padrão, os blocos internos de tempo de execução C (**crt_block**) não são incluídos em operações de estado de memória. O [crtsetdbgflag](crtsetdbgflag.md) função pode ser usada para ativar o **crtdbg_check_crt_df** um pouco de **crtdbgflag** para incluir esses blocos na detecção de vazamento e em outro estado de memória operações. Blocos de memória liberados (**free_block**) não causam **crtmemdifference** retorne TRUE.
+Por padrão, os blocos de tempo de execução C internos ( **_CRT_BLOCK**) não são incluídos nas operações de estado da memória. A função [_CrtSetDbgFlag](crtsetdbgflag.md) pode ser usada para ativar o **_CRTDBG_CHECK_CRT_DF** bit de **_crtDbgFlag** para incluir esses blocos na detecção de vazamentos e outras operações de estado de memória. Os blocos de memória liberada ( **_FREE_BLOCK**) não fazem com que **_CRTMEMDIFFERENCE** retorne true.
 
-Para obter mais informações sobre as funções de estado de heap e o **crtmemstate** estrutura, consulte [funções de relatório de estado de Heap](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details).
+Para obter mais informações sobre as funções de estado de heap e a estrutura **_CrtMemState** , consulte [heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -78,7 +81,7 @@ Para obter mais informações sobre as funções de estado de heap e o **crtmems
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-**Bibliotecas:** Versões de depuração [recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md) apenas.
+**DLLs** Depurar versões somente de [recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,14 +1,17 @@
 ---
 title: Funções de valor da cadeia de caracteres para numérico
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr110.dll
 - msvcr120.dll
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstoui64
 - _tcstoi64
@@ -16,12 +19,12 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-ms.openlocfilehash: 3f24b75c2fdb3aa0d84b16874d2d01f1cb96d4b9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: b9d8218bd5a3151e17b7ac380bb86c85dac3e6a3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743891"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944723"
 ---
 # <a name="string-to-numeric-value-functions"></a>Funções de valor da cadeia de caracteres para numérico
 
@@ -57,15 +60,15 @@ Se o ponteiro fornecido pelo usuário para um caractere de final de conversão n
 
 `strtod` espera uma cadeia de caracteres com o seguinte formato:
 
-[*whitespace*] [*sign*] [`digits`] [**.**`digits`] [ {**d** &#124; **D** &#124; **e** &#124; **E**}[*sign*]`digits`]
+[*whitespace*] [*sign*] [`digits`] [ **.** `digits`] [ {**d** &#124; **D** &#124; **e** &#124; **E**}[*sign*]`digits`]
 
-Um *espaço em branco* pode consistir em caracteres de espaço ou de tabulação, que são ignorados; *sign* é um mais (**+**) ou um menos (**-**); e `digits` é composto por um ou mais dígitos decimais. Se nenhum dígito aparecer antes do caractere fracionário, pelo menos um deverá aparecer após o caractere fracionário. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra de apresentação (**d**, **D**, **e** ou **E**) e um inteiro opcionalmente com sinal. Se nem um expoente nem um caractere fracionário aparecer, supõe-se que um caractere fracionário siga o último dígito na cadeia de caracteres. O primeiro caractere que não é adequado a esse formato interrompe o exame.
+Um *espaço em branco* pode consistir em caracteres de espaço ou de tabulação, que são ignorados; *sign* é um mais ( **+** ) ou um menos ( **-** ); e `digits` é composto por um ou mais dígitos decimais. Se nenhum dígito aparecer antes do caractere fracionário, pelo menos um deverá aparecer após o caractere fracionário. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra de apresentação (**d**, **D**, **e** ou **E**) e um inteiro opcionalmente com sinal. Se nem um expoente nem um caractere fracionário aparecer, supõe-se que um caractere fracionário siga o último dígito na cadeia de caracteres. O primeiro caractere que não é adequado a esse formato interrompe o exame.
 
 As funções `strtol`, `strtoul`, `_strtoi64` e `_strtoui64` esperam uma cadeia de caracteres com o seguinte formato:
 
-[*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [`digits`]
+[*whitespace*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **X** }]] [`digits`]
 
-Se o argumento base estiver entre 2 e 36, ele será usado como a base do número. Se for 0, os caracteres iniciais referenciados pelo ponteiro final de conversão são usados para determinar a base. Se o primeiro caractere é 0 e o segundo caractere não for 'x' ou 'X', a cadeia de caracteres é interpretada como um inteiro octal; Caso contrário, ele será interpretado como um número decimal. Se o primeiro caractere for '0' e o segundo caractere for 'x' ou 'X', a cadeia de caracteres será interpretada como um inteiro hexadecimal. Se o primeiro caractere for de '1' até '9', a cadeia de caracteres será interpretada como um inteiro hexadecimal. As letras 'a' a 'z' (ou 'A' a 'Z') recebem os valores 10 a 35; somente são permitidas letras cujos valores atribuídos são menores que *base*. `strtoul` e `_strtoui64` permitem um prefixo com sinal de mais (**+**) ou de menos (**-**). Um sinal de subtração à esquerda indica que o valor retornado é negado.
+Se o argumento base estiver entre 2 e 36, ele será usado como a base do número. Se for 0, os caracteres iniciais referenciados pelo ponteiro final de conversão são usados para determinar a base. Se o primeiro caractere é 0 e o segundo caractere não for 'x' ou 'X', a cadeia de caracteres é interpretada como um inteiro octal; Caso contrário, ele será interpretado como um número decimal. Se o primeiro caractere for '0' e o segundo caractere for 'x' ou 'X', a cadeia de caracteres será interpretada como um inteiro hexadecimal. Se o primeiro caractere for de '1' até '9', a cadeia de caracteres será interpretada como um inteiro hexadecimal. As letras 'a' a 'z' (ou 'A' a 'Z') recebem os valores 10 a 35; somente são permitidas letras cujos valores atribuídos são menores que *base*. `strtoul` e `_strtoui64` permitem um prefixo com sinal de mais ( **+** ) ou de menos ( **-** ). Um sinal de subtração à esquerda indica que o valor retornado é negado.
 
 O valor de saída é afetado pela configuração da categoria `LC_NUMERIC` da localidade; consulte [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar.
 

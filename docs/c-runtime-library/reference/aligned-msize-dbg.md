@@ -1,9 +1,9 @@
 ---
 title: _aligned_msize_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_msize_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,20 +14,23 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_msize_dbg
 helpviewer_keywords:
 - _aligned_msize_dbg
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
-ms.openlocfilehash: 054f7b88f93eef37a9a88fbb7895452f7c158716
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2a0ceab906dccacb2e1c78a8789d524b608a4ff
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342023"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939861"
 ---
-# <a name="alignedmsizedbg"></a>_aligned_msize_dbg
+# <a name="_aligned_msize_dbg"></a>_aligned_msize_dbg
 
 Retorna o tamanho de um bloco de memória alocado no heap (somente versão de depuração).
 
@@ -58,11 +61,11 @@ Retorna o tamanho (em bytes) como um inteiro sem sinal.
 
 ## <a name="remarks"></a>Comentários
 
-O *alinhamento* e *deslocamento* valores devem ser o mesmo que os valores passados para a função que alocou o bloco.
+Os valores de *alinhamento* e *deslocamento* devem ser iguais aos valores passados para a função que alocou o bloco.
 
-**aligned_msize_dbg** é uma versão de depuração de [aligned_msize](aligned-msize.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **aligned_msize_dbg** é reduzida a uma chamada para **aligned_msize**. Ambos **aligned_msize** e **aligned_msize_dbg** calcular o tamanho de um bloco de memória no heap de base, mas **aligned_msize_dbg** adiciona um recurso de depuração: Ele inclui os buffers nos dois lados da parte do usuário do bloco de memória no tamanho retornado.
+**_aligned_msize_dbg** é uma versão de depuração da função [_aligned_msize](aligned-msize.md) . Quando [_DEBUG](../../c-runtime-library/debug.md) não é definido, cada chamada para **_aligned_msize_dbg** é reduzida para uma chamada para **_aligned_msize**. **_Aligned_msize** e **_aligned_msize_dbg** calculam o tamanho de um bloco de memória no heap base, mas o **_aligned_msize_dbg** adiciona um recurso de depuração: Ele inclui os buffers em ambos os lados da parte do usuário do bloco de memória no tamanho retornado.
 
-Esta função valida seu parâmetro. Se *memblock* for um ponteiro nulo ou *alinhamento* não for uma potência de 2 **msize** invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro ](../../c-runtime-library/parameter-validation.md). Se o erro for tratado, a função definirá **errno** à **EINVAL** e retornará -1.
+Esta função valida seu parâmetro. Se *memblock* for um ponteiro nulo ou o *alinhamento* não for uma potência de 2, **_msize** invocará um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se o erro for tratado, a função definirá **errno** como **EINVAL** e retornará-1.
 
 Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre os tipos de blocos de alocação e como eles são usados, consulte [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipos de blocos no heap de depuração). Para obter informações sobre as diferenças entre chamar uma função de heap padrão e sua versão de depuração em um build de depuração de um aplicativo, consulte [Versões de depuração das funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

@@ -1,12 +1,12 @@
 ---
 title: _cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cscanf_l
 - _cscanf
 - _cwscanf
 - _cwscanf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwscanf
 - cwscanf_l
@@ -45,14 +48,14 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 8cb121166ab0103565260538521824d8999425e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee4c380d3e470fa6e3d12066d3bf34918acf1bea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335250"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938499"
 ---
-# <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
+# <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
 Lê os dados formatados do console. Versões mais seguras dessas funções estão disponíveis; consulte [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).
 
@@ -95,15 +98,15 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O número de campos que foram convertidos e atribuídos com êxito. O valor retornado não inclui campos que foram lidos, mas não atribuídos. O valor retornado será **EOF** para uma tentativa de leitura no final do arquivo. Isso pode ocorrer quando a entrada do teclado é redirecionada no nível de linha de comando do sistema operacional. Um valor retornado igual a 0 significa que nenhum campo foi atribuído.
+O número de campos que foram convertidos e atribuídos com êxito. O valor retornado não inclui campos que foram lidos, mas não atribuídos. O valor de retorno é **EOF** para uma tentativa de leitura no final do arquivo. Isso pode ocorrer quando a entrada do teclado é redirecionada no nível de linha de comando do sistema operacional. Um valor retornado igual a 0 significa que nenhum campo foi atribuído.
 
 ## <a name="remarks"></a>Comentários
 
-O **cscanf** função lê os dados diretamente do console nos locais fornecidos por *argumento*. A função [_getche](getch-getwch.md) é usada para ler caracteres. Cada parâmetro opcional deve ser um ponteiro para uma variável com um tipo que corresponde a um especificador de tipo em *formato*. O formato controla a interpretação da entrada campos e tem o mesmo formato e função que o *formato* parâmetro para o [scanf](scanf-scanf-l-wscanf-wscanf-l.md) função. Embora **cscanf** normalmente retorne um caractere de entrada, ele não faz isso se a última chamada era **ungetch**.
+A função **_cscanf** lê dados diretamente do console do para os locais fornecidos pelo *argumento*. A função [_getche](getch-getwch.md) é usada para ler caracteres. Cada parâmetro opcional deve ser um ponteiro para uma variável com um tipo que corresponde a um especificador de tipo no *formato*. O formato controla a interpretação dos campos de entrada e tem a mesma forma e função que o parâmetro de *formato* para a função [scanf](scanf-scanf-l-wscanf-wscanf-l.md) . Embora **_cscanf** normalmente Echo o caractere de entrada, ele não faz isso se a última chamada fosse **_ungetch**.
 
-Essa função valida seus parâmetros. Se o formato for **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará **EOF**.
+Essa função valida seus parâmetros. Se o formato for **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará **EOF**.
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

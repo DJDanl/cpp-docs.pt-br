@@ -1,9 +1,9 @@
 ---
 title: feclearexcept1
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feclearexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - feclearexcept
 - fenv/feclearexcept
 helpviewer_keywords:
 - feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-ms.openlocfilehash: 3c2f037a5be903fc006debfa7319c483431fdd92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9899d7068a289e7d5f71cb42a8373869d60c3070
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334730"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941266"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -43,16 +46,16 @@ int feclearexcept(
 
 ### <a name="parameters"></a>Parâmetros
 
-*excepts*<br/>
+*exceções*<br/>
 Os sinalizadores de status de exceção para limpar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna zero se *, exceto* for zero, ou se todas as exceções especificadas foram limpas com êxito. Caso contrário, retornará um valor diferente de zero.
+Retornará zero se *Except* for zero ou se todas as exceções especificadas tiverem sido limpas com êxito. Caso contrário, retornará um valor diferente de zero.
 
 ## <a name="remarks"></a>Comentários
 
-O **feclearexcept** sinalizadores de status de exceção especificados por ponto de função tenta limpar flutuante *, exceto*. A função dá suporte a essas macros de exceção, definidas em fenv.h:
+A função **feclearexcept** tenta limpar os sinalizadores de status de exceção de ponto flutuante especificados por *Except*. A função dá suporte a essas macros de exceção, definidas em fenv.h:
 
 |Macro de exceção|Descrição|
 |---------------------|-----------------|
@@ -63,7 +66,7 @@ O **feclearexcept** sinalizadores de status de exceção especificados por ponto
 |FE_UNDERFLOW|O resultado de uma operação de ponto flutuante anterior era muito pequeno para ser representado na precisão total. Um valor de denormal foi criado.|
 |FE_ALL_EXCEPT|O OR bit a bit de todas as exceções de ponto flutuante com suporte.|
 
-O *, exceto* argumento pode ser zero ou o OR bit a bit de um ou mais das macros de exceção com suporte. O resultado de qualquer outro valor de argumento é indefinido.
+O argumento *Except* pode ser zero, ou a bit e uma ou mais das macros de exceção com suporte. O resultado de qualquer outro valor de argumento é indefinido.
 
 ## <a name="requirements"></a>Requisitos
 

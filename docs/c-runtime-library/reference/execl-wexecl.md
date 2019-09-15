@@ -1,10 +1,10 @@
 ---
 title: _execl, _wexecl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execl
 - _wexecl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _execl
 - _wexecl
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _wexecl function
 - execl function
 ms.assetid: 81fefb8a-0a06-4221-b2bc-be18e38e89f4
-ms.openlocfilehash: 3d736849f90782425e6e1c1cff04536972318c91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 714ef80c4909e92100c4fa869b7544239f8edeb7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339267"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941945"
 ---
-# <a name="execl-wexecl"></a>_execl, _wexecl
+# <a name="_execl-_wexecl"></a>_execl, _wexecl
 
 Carrega e executa novos processos filho.
 
@@ -63,12 +66,12 @@ intptr_t _wexecl(
 *cmdname*<br/>
 Caminho do arquivo a ser executado.
 
-*arg0*, ... *argn*<br/>
+*arg0*,... *argN*<br/>
 Lista de ponteiros para os parâmetros.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, caso em que o **errno** variável global é definida.
+Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de-1 indica um erro; nesse caso, a variável global **errno** é definida.
 
 |Valor errno|Descrição|
 |-----------------|-----------------|
@@ -84,7 +87,7 @@ Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor
 
 Cada uma dessas funções carrega e executa um novo processo, passando cada argumento de linha de comando como um parâmetro separado. O primeiro argumento é o nome do arquivo executável ou comando e o segundo argumento deve ser o mesmo que o primeiro. Ele se torna `argv[0]` no processo executado. O terceiro argumento é o primeiro argumento, `argv[1]`, do processo que está sendo executado.
 
-O **execl** funções validam seus parâmetros. Se qualquer um dos *cmdname* ou *arg0* é um ponteiro nulo ou cadeia de caracteres vazia, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md) se execução tem permissão para continuar, essas funções definirão **errno** à **EINVAL** e retornarão -1. Nenhum processo novo é executado.
+As funções **_execl** validam seus parâmetros. Se *cmdname* ou *arg0* for um ponteiro nulo ou uma cadeia de caracteres vazia, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) , se a execução puder continuar, essas funções definirão **errno** como  **EINVAL** e Return-1. Nenhum processo novo é executado.
 
 ## <a name="requirements"></a>Requisitos
 

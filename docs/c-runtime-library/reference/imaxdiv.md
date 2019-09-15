@@ -1,9 +1,9 @@
 ---
 title: imaxdiv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - imaxdiv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - imaxdiv
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 23067b2028fc11193fae707e25165fb0ce754515
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72bbb1198b79d79bb81acc35ce6c2a836fdd5f1d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157325"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954627"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -51,11 +54,11 @@ O denominador.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**imaxdiv** chamado com argumentos de tipo [intmax_t](../../c-runtime-library/standard-types.md) retorna uma estrutura do tipo [imaxdiv_t](../../c-runtime-library/standard-types.md) que compreende o quociente e o resto.
+**imaxdiv** chamado com argumentos do tipo [intmax_t](../../c-runtime-library/standard-types.md) retorna uma estrutura do tipo [imaxdiv_t](../../c-runtime-library/standard-types.md) que compreende o quociente e o resto.
 
 ## <a name="remarks"></a>Comentários
 
-O **imaxdiv** função divide *número* pela *denom* e, portanto, calcula o quociente e o resto. O **imaxdiv_t** estrutura contém o quociente **intmax_t** **quot**e o resto **intmax_t** **rem**. O sinal do quociente é o mesmo do quociente matemático. Seu valor absoluto é o maior inteiro menor que o valor absoluto do quociente matemático. Se o denominador é 0, o programa é encerrado com uma mensagem de erro.
+A função **imaxdiv** divide *número* por *denom* e, portanto, computa o quociente e o resto. A estrutura **imaxdiv_t** contém o quociente, **intmax_t** **quot**e o resto, **intmax_t** **REM**. O sinal do quociente é o mesmo do quociente matemático. Seu valor absoluto é o maior inteiro menor que o valor absoluto do quociente matemático. Se o denominador é 0, o programa é encerrado com uma mensagem de erro.
 
 ## <a name="requirements"></a>Requisitos
 

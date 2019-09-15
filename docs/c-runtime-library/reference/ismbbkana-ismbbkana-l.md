@@ -1,10 +1,10 @@
 ---
 title: _ismbbkana, _ismbbkana_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbkana_l
 - _ismbbkana
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbkana_l
 - ismbbkana_l
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-ms.openlocfilehash: 723b914f5df92f20e4982bf6f7f04d1b251606f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ac05940f6ae9d0c0bd3cb2f6ea73fe301557be4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287011"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954158"
 ---
-# <a name="ismbbkana-ismbbkanal"></a>_ismbbkana, _ismbbkana_l
+# <a name="_ismbbkana-_ismbbkana_l"></a>_ismbbkana, _ismbbkana_l
 
 Testa um símbolo de katakana e é específico da página de código 932.
 
@@ -61,7 +64,7 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**ismbbkana** retorna um valor diferente de zero se o número inteiro *c* é um símbolo de katakana ou 0 se não for. **ismbbkana** usa a localidade atual para obter informações de caracteres dependentes da localidade. **ismbbkana_l** é idêntico, exceto que ele usa o objeto de localidade passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_ismbbkana** retornará um valor diferente de zero se o inteiro *c* for um símbolo Katakana ou 0 se não for. **_ismbbkana** usa a localidade atual para informações de caracteres dependentes de localidade. **_ismbbkana_l** é idêntico, exceto pelo fato de que ele usa o objeto de localidade passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,12 +1,12 @@
 ---
 title: strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbspbrk
 - wcspbrk
 - _mbspbrk_l
 - strpbrk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrpbrk
 - _mbspbrk
@@ -44,14 +47,14 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: 059b0659a8088783c6d169288de486b41a6e8d82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6b18ab6dabfb1181f3e65507d27f6afe98a5b9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209561"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947156"
 ---
-# <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
+# <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
 Procura cadeias de caracteres em conjuntos de caracteres especificados.
 
@@ -127,21 +130,21 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um ponteiro para a primeira ocorrência de qualquer caractere de *strCharSet* na *str*, ou um ponteiro nulo se os dois argumentos de cadeia de caracteres não têm caracteres em comum.
+Retorna um ponteiro para a primeira ocorrência de qualquer caractere de *strCharSet* em *Str*, ou um ponteiro NULL se os dois argumentos de cadeia de caracteres não tiverem caracteres em comum.
 
 ## <a name="remarks"></a>Comentários
 
-O `strpbrk` função retorna um ponteiro para a primeira ocorrência de um caractere em *str* que pertence ao conjunto de caracteres na *strCharSet*. A pesquisa não inclui o caractere nulo de terminação.
+A `strpbrk` função retorna um ponteiro para a primeira ocorrência de um caractere em *Str* que pertence ao conjunto de caracteres em *strCharSet*. A pesquisa não inclui o caractere nulo de terminação.
 
 `wcspbrk` e `_mbspbrk` são versões de caracteres largos e de caracteres multibyte de `strpbrk`. Os argumentos e o valor retornado de `wcspbrk` são cadeias de caracteres largos; aqueles de `_mbspbrk` são cadeias de caracteres multibyte.
 
-`_mbspbrk` valida seus parâmetros. Se *str* ou *strCharSet* for NULL, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `_mbspbrk` retorna nulo e define `errno` para EINVAL. `strpbrk` e `wcspbrk` não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
+`_mbspbrk` valida seus parâmetros. Se *Str* ou *strCharSet* for NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar `_mbspbrk` , retorna NULL e `errno` define como EINVAL. `strpbrk` e `wcspbrk` não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
 
 `_mbspbrk` é semelhante ao `_mbscspn`, exceto que `_mbspbrk` retorna um ponteiro em vez de um valor do tipo [size_t](../../c-runtime-library/standard-types.md).
 
-Em C, essas funções usam um **const** ponteiro para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga de colocar um ponteiro para **const** retorna um ponteiro para **const**; a versão que usa um ponteiro para não**const** retorna um ponteiro para não -**const** . _CRT_CONST_CORRECT_OVERLOADS a macro é definida se ambos os **const** e não-**const** versões dessas funções estão disponíveis. Se você precisar de não**const** comportamento para ambos C++ sobrecargas, defina o símbolo const_return.
+Em C, essas funções assumem um ponteiro **const** para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga que assume um ponteiro para **const** retorna um ponteiro para **const**; a versão que usa um ponteiro para não**const** retorna um ponteiro para não**const**. A macro _CRT_CONST_CORRECT_OVERLOADS será definida se as versões **const** e não**const** dessas funções estiverem disponíveis. Se você precisar do comportamento não**const** para ambas as C++ sobrecargas, defina o símbolo _CONST_RETURN.
 
-O valor de saída é afetado pela configuração da configuração LC_CTYPE categoria da localidade; Para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). As versões dessas funções sem o **l** sufixo usam a localidade atual desse comportamento dependente da localidade; a versão com o **l** sufixo é idêntico, exceto que ele usa o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da configuração de categoria LC_CTYPE da localidade; para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). As versões dessas funções sem o sufixo **_L** usam a localidade atual para esse comportamento dependente de localidade; a versão com o sufixo **_L** é idêntica, exceto pelo fato de que ele usa o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

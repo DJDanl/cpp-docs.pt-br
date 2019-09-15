@@ -1,12 +1,12 @@
 ---
 title: ispunct, iswpunct, _ispunct_l, _iswpunct_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ispunct
 - _iswpunct_l
 - iswpunct
 - _ispunct_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswpunct
 - _istpunct
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _iswpunct_l function
 - iswpunct_l function
 ms.assetid: 94403240-85c8-40a4-9c2b-e3e95c729c76
-ms.openlocfilehash: 209f94bb8f9d3338f62b719d4d4b94b152ed5ab7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54c51c612cf3b491b49d7e141df34ed5b4415520
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286529"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953698"
 ---
-# <a name="ispunct-iswpunct-ispunctl-iswpunctl"></a>ispunct, iswpunct, _ispunct_l, _iswpunct_l
+# <a name="ispunct-iswpunct-_ispunct_l-_iswpunct_l"></a>ispunct, iswpunct, _ispunct_l, _iswpunct_l
 
 Determina se um inteiro representa um caractere de pontuação.
 
@@ -73,11 +76,11 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas retornará diferente de zero se *c* é uma representação específica de um caractere de pontuação. **ispunct** retorna um valor diferente de zero para qualquer caractere imprimível que não é um caractere de espaço ou um caractere para o qual **isalnum** é diferente de zero. **iswpunct** retorna um valor diferente de zero para qualquer caractere largo imprimível que não é o caractere largo de espaço nem um caractere largo para o qual **iswalnum** é diferente de zero. Cada uma dessas rotinas retornará 0 se *c* não satisfaz a condição de teste.
+Cada uma dessas rotinas retornará zero se *c* for uma representação específica de um caractere de pontuação. **ispunct** retorna um valor diferente de zero para qualquer caractere imprimível que não seja um caractere de espaço ou um caractere para o qual **isalnum** seja diferente de zero. **iswpunct** retorna um valor diferente de zero para qualquer caractere largo imprimível que não seja o caractere de todo o espaço nem um caractere largo para o qual **iswalnum** é diferente de zero. Cada uma dessas rotinas retornará 0 se *c* não atender à condição de teste.
 
-O resultado da condição de teste para o **ispunct** função depende do **LC_CTYPE** configuração de categoria da localidade; consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções que não têm o **l** sufixo usam a localidade atual para qualquer comportamento dependente da localidade; as versões que têm o **l** sufixo são idênticas, exceto que eles usam o localidade que é passada em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O resultado da condição de teste para a função **ispunct** depende da configuração de categoria **LC_CTYPE** da localidade; consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções que não têm o sufixo **_L** usam a localidade atual para qualquer comportamento dependente de localidade; as versões que têm o sufixo **_L** são idênticas, exceto que usam a localidade que é passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-O comportamento de **ispunct** e **ispunct_l** é indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e *c* é não um desses valores, as funções geram uma asserção.
+O comportamento de **ispunct** e **_ispunct_l** será indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca CRT de depuração é usada e *c* não é um desses valores, as funções geram uma asserção.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

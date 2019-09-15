@@ -1,10 +1,10 @@
 ---
 title: _scalb, _scalbf
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _scalb
 - _scalbf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scalb
 - _scalb
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _scalbf function
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-ms.openlocfilehash: c3f776ec27c365601d4fe57fb6cf0a5c9b9e0cbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 630a5e3db2c39cb40d31c71e6a6dfa214ed91e34
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357194"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948891"
 ---
-# <a name="scalb-scalbf"></a>_scalb, _scalbf
+# <a name="_scalb-_scalbf"></a>_scalb, _scalbf
 
 Dimensiona o argumento por uma potência de 2.
 
@@ -61,13 +64,13 @@ Expoente inteiro longo.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retornará um valor exponencial se for bem-sucedido. No estouro (dependendo do sinal de *x*), **scalb** retorna + /- **HUGE_VAL**; a **errno** variável é definida como  **ERANGE**.
+Retornará um valor exponencial se for bem-sucedido. No estouro (dependendo do sinal de *x*), **_scalb** retorna +/- **HUGE_VAL**; a variável **errno** é definida como **ERANGE**.
 
 Para obter mais informações sobre este e outros códigos retornados, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **scalb** função calcula o valor de *x* \* 2<sup>*exp*</sup>.
+A função **_scalb** calcula o valor de *x* \* 2<sup>*exp*</sup>.
 
 ## <a name="requirements"></a>Requisitos
 

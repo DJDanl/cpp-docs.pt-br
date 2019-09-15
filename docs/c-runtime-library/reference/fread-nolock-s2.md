@@ -1,9 +1,9 @@
 ---
 title: _fread_nolock_s2
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fread_nolock_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-ms.openlocfilehash: 1dccbd362577e524f0455a2248d4d0f209ea6295
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7fded9860b7a1364841d5f9b8a7e3aa478a8420
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333099"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956900"
 ---
-# <a name="freadnolocks"></a>_fread_nolock_s
+# <a name="_fread_nolock_s"></a>_fread_nolock_s
 
 Lê dados de um fluxo sem bloquear outros threads. Esta versão de [fread_nolock](fread-nolock.md) tem melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -66,7 +69,7 @@ Consulte [fread_s](fread-s.md).
 
 ## <a name="remarks"></a>Comentários
 
-Essa função é uma versão sem bloqueio do **fread_s**. Ela é idêntica à **fread_s** , exceto que não está protegida contra interferência de outros threads. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+Essa função é uma versão sem bloqueio do **fread_s**. É idêntico a **fread_s** , exceto que não é protegido contra interferência por outros threads. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
 ## <a name="requirements"></a>Requisitos
 

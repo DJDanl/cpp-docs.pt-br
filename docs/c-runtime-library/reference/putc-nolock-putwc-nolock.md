@@ -1,10 +1,10 @@
 ---
 title: _putc_nolock, _putwc_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putc_nolock
 - _putwc_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _puttc_nolock
 - puttc_nolock
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _puttc_nolock function
 - _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
-ms.openlocfilehash: b2a30b83f0746b1b4f5ab03b4c3dfa0229656bb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdec6373f79fd711b371014fc58e17c190a26e95
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285122"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950117"
 ---
-# <a name="putcnolock-putwcnolock"></a>_putc_nolock, _putwc_nolock
+# <a name="_putc_nolock-_putwc_nolock"></a>_putc_nolock, _putwc_nolock
 
 Grava um caractere em um fluxo sem bloquear o thread.
 
@@ -72,9 +75,9 @@ Consulte **putc, putwc**.
 
 ## <a name="remarks"></a>Comentários
 
-**putc_nolock** e **putwc_nolock** são idênticas às versões sem o **NOLOCK** sufixo, exceto que eles não são protegidos contra interferência de outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+**_putc_nolock** e **_putwc_nolock** são idênticos às versões sem o sufixo **_nolock** , exceto que não estão protegidos contra interferência por outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
-**putwc_nolock** é a versão de caractere largo de **putc_nolock**; as duas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. **putc_nolock** atualmente, não suporta a saída em um fluxo UNICODE.
+**_putwc_nolock** é a versão de caractere largo do **_putc_nolock**; as duas funções se comportam de forma idêntica se o fluxo é aberto no modo ANSI. Atualmente, o **_putc_nolock** não dá suporte à saída em um fluxo Unicode.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -89,7 +92,7 @@ Consulte **putc, putwc**.
 |**_putc_nolock**|\<stdio.h>|
 |**_putwc_nolock**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Libraries
 

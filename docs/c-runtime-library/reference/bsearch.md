@@ -1,9 +1,9 @@
 ---
 title: bsearch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - bsearch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,19 +16,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - bsearch
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: e170ce67d22c0d97825a7eb754546a29daac6d89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e44e85d1c6d73a68da2edd099cdeb6156f9759d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347750"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939432"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -65,19 +68,19 @@ Função de retorno de chamada que compara dois elementos. A primeira é um pont
 
 ## <a name="return-value"></a>Valor de retorno
 
-**bSearch** retorna um ponteiro para uma ocorrência de *chave* na matriz apontada por *base*. Se *chave* não for encontrado, a função retorna **nulo**. Se a matriz não estiver em ordem de classificação crescente ou contiver registros duplicados com chaves idênticas, o resultado será imprevisível.
+**bsearch** retorna um ponteiro para uma ocorrência de *Key* na matriz apontada por *base*. Se a *chave* não for encontrada, a função retornará **NULL**. Se a matriz não estiver em ordem de classificação crescente ou contiver registros duplicados com chaves idênticas, o resultado será imprevisível.
 
 ## <a name="remarks"></a>Comentários
 
-O **bsearch** função executa uma pesquisa binária de uma matriz classificada de *número* elementos, cada um dos *largura* bytes de tamanho. O *base* valor é um ponteiro para a base da matriz a ser pesquisada, e *chave* é o valor que está sendo procurado. O *comparar* parâmetro é um ponteiro para uma rotina fornecida pelo usuário que compara a chave solicitada para um elemento de matriz e retorna um dos valores a seguir especifica seu relacionamento:
+A função **bsearch** executa uma pesquisa binária de uma matriz classificada de elementos *numéricos* , com tamanho de bytes de *largura* . O valor de *base* é um ponteiro para a base da matriz a ser pesquisada e *Key* é o valor que está sendo procurado. O parâmetro *Compare* é um ponteiro para uma rotina fornecida pelo usuário que compara a chave solicitada a um elemento de matriz e retorna um dos seguintes valores especificando sua relação:
 
-|Valor retornado por *comparar* rotina|Descrição|
+|Valor retornado pela rotina de *comparação*|Descrição|
 |-----------------------------------------|-----------------|
 |\< 0|A chave é menor que o elemento da matriz.|
 |0|A chave é igual ao elemento da matriz.|
 |> 0|A chave é maior que o elemento da matriz.|
 
-Essa função valida seus parâmetros. Se *compare*, *chave* ou *número* é **nulo**, ou se *base* é **NULL**e *número* for diferente de zero ou se *largura* for zero, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como `EINVAL` e a função retornará **nulo**.
+Essa função valida seus parâmetros. Se a *comparação*, a *chave* ou o *número* for **nulo**ou se *base* for **nulo** e o *número* for diferente de zero, ou se a *largura* for zero, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro ](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como `EINVAL` e a função retornará **NULL**.
 
 ## <a name="requirements"></a>Requisitos
 

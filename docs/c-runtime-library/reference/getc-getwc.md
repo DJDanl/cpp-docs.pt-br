@@ -1,10 +1,10 @@
 ---
 title: getc, getwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - getwc
 - getc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gettc
 - getwc
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-ms.openlocfilehash: bbaee79eac6802959a11f7f1ba30eaf590ecf2f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ceb3ca117271e7074c6cb72c9c1f9e74ebe3bc10
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331864"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955486"
 ---
 # <a name="getc-getwc"></a>getc, getwc
 
@@ -61,13 +64,13 @@ Fluxo de entrada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna o caractere lido. Para indicar um erro de leitura ou uma condição de fim-de-arquivo, **getc** retorna **EOF**, e **getwc** retorna **WEOF**. Para **getc**, use **ferror** ou **feof** para verificar um erro ou fim do arquivo. Se *stream* é **nulo**, **getc** e **getwc** invocarão o manipulador de parâmetro inválido, conforme descrito em [parâmetro Validação](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EOF** (ou **WEOF** para **getwc**) e defina **errno** para  **EINVAL**.
+Retorna o caractere lido. Para indicar um erro de leitura ou uma condição de fim de arquivo, **getc** retorna **EOF**e **getwc** retorna **WEOF**. Para **getc**, use o **referenciador** ou o **feof** para verificar se há um erro ou para o fim do arquivo. Se *Stream* for **NULL**, **getc** e **getwc** invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam **EOF** (ou **WEOF** para **getwc**) e definem **errno** como **EINVAL**.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.
 
 ## <a name="remarks"></a>Comentários
 
-Cada rotina lê um único caractere de um arquivo na posição atual e incrementa o ponteiro de arquivo associado (se definido) para apontar para o caractere seguinte. O arquivo está associado *fluxo*.
+Cada rotina lê um único caractere de um arquivo na posição atual e incrementa o ponteiro de arquivo associado (se definido) para apontar para o caractere seguinte. O arquivo está associado ao *fluxo*.
 
 Essas funções bloqueiam o thread de chamada e, portanto, são thread-safe. Para ver uma versão sem bloqueio, consulte [_getc_nolock, _getwc_nolock](getc-nolock-getwc-nolock.md).
 
@@ -75,8 +78,8 @@ Veja comentários específicos sobre a rotina a seguir.
 
 |Rotina|Comentários|
 |-------------|-------------|
-|**getc**|Mesmo que **fgetc**, mas implementado como uma função e como uma macro.|
-|**getwc**|Versão de caractere largo de **getc**. Lê um caractere multibyte ou um caractere largo se *stream* é aberto no modo de texto ou binário.|
+|**getc**|O mesmo que **fgetc**, mas implementado como uma função e como uma macro.|
+|**getwc**|Versão de caractere largo de **getc**. Lê um caractere multibyte ou um caractere largo de acordo com se o *fluxo* é aberto no modo de texto ou no modo binário.|
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -130,7 +133,7 @@ int main()
 }
 ```
 
-### <a name="input-crtgetctxt"></a>Entrada: crt_getc.txt
+### <a name="input-crt_getctxt"></a>Entrada: crt_getc.txt
 
 ```Input
 Line one.

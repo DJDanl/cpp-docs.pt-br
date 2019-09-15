@@ -1,9 +1,9 @@
 ---
 title: _query_new_mode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _query_new_mode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - query_new_mode
 - _query_new_mode
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - handler modes
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
-ms.openlocfilehash: 327f22c847793316bd126721b4a66846d7da84dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59724dafdc6488596478d0b44b254c4f498fce99
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358067"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950108"
 ---
-# <a name="querynewmode"></a>_query_new_mode
+# <a name="_query_new_mode"></a>_query_new_mode
 
-Retorna um inteiro que indica o novo modo de manipulador definido por **set_new_mode** para **malloc**.
+Retorna um inteiro que indica o novo modo de manipulador definido por **_set_new_mode** para **malloc**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,11 +48,11 @@ int _query_new_mode(
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna o novo manipulador modo atual, ou seja, 0 ou 1, para **malloc**. Um valor retornado de 1 indica que, em caso de falha ao alocar memória, **malloc** chama a nova rotina do manipulador; um valor de retorno 0 indica que não.
+Retorna o novo modo de manipulador atual, ou seja, 0 ou 1, para **malloc**. Um valor de retorno 1 indica que, em falha ao alocar memória, **malloc** chama a nova rotina do manipulador; um valor de retorno 0 indica que ele não faz isso.
 
 ## <a name="remarks"></a>Comentários
 
-O C++ **query_new_mode** função retorna um inteiro que indica o novo modo do manipulador que é definido pelo C++ [set_new_mode](set-new-mode.md) funcionar por [malloc](malloc.md). O novo modo do manipulador indica se deve, em caso de falha ao alocar memória, **malloc** é chamar a nova rotina do manipulador conforme definido pela [set_new_handler](set-new-handler.md). Por padrão, **malloc** não chama a nova rotina do manipulador em caso de falha. Você pode usar **set_new_mode** para substituir esse comportamento para que, em caso de falha **malloc** chame a nova rotina do manipulador da mesma forma que o **novo** operador faz quando ele não consegue aloca memória. Para obter mais informações, consulte a discussão sobre os [operadores new e delete](../../cpp/new-and-delete-operators.md) na Referência da Linguagem C++.
+A C++ função **_query_new_mode** retorna um inteiro que indica o novo modo de manipulador definido C++ pela função [_set_new_mode](set-new-mode.md) para [malloc](malloc.md). O novo modo de manipulador indica se, em caso de falha ao alocar memória, **malloc** é chamar a nova rotina do manipulador, conforme definido por [_set_new_handler](set-new-handler.md). Por padrão, o **malloc** não chama a nova rotina do manipulador em caso de falha. Você pode usar **_set_new_mode** para substituir esse comportamento para que, em falha, **malloc** chame a nova rotina do manipulador da mesma maneira que o **novo** operador faz quando ele falha ao alocar memória. Para obter mais informações, consulte a discussão sobre os [operadores new e delete](../../cpp/new-and-delete-operators.md) na Referência da Linguagem C++.
 
 ## <a name="requirements"></a>Requisitos
 

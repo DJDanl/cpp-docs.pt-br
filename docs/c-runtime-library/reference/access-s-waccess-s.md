@@ -1,10 +1,10 @@
 ---
 title: _access_s, _waccess_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _access_s
 - _waccess_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - waccess_s
 - access_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 17d19527323f3e97edecd22ca7c0a0262b1cfbad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0550b8fb42cb62d1a175960d6b0d4ed4dbecdcac
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335679"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939898"
 ---
-# <a name="accesss-waccesss"></a>_access_s, _waccess_s
+# <a name="_access_s-_waccess_s"></a>_access_s, _waccess_s
 
 Determina as permissões de leitura/gravação do arquivo. Esta é uma versão de [_access, _waccess](access-waccess.md) com melhorias de segurança, conforme a descrição em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -76,7 +79,7 @@ Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_n
 
 ## <a name="remarks"></a>Comentários
 
-Quando usado com arquivos, o **access_s** função determina se o arquivo especificado existe e pode ser acessado como especificado pelo valor da *modo*. Quando usado com diretórios **access_s** determina apenas se o diretório especificado existe. No Windows 2000 e sistemas operacionais posteriores, todos os diretórios leram em acesso de gravação.
+Quando usado com arquivos, a função **_access_s** determina se o arquivo especificado existe e pode ser acessado conforme especificado pelo valor de *Mode*. Quando usado com diretórios, **_access_s** determina apenas se o diretório especificado existe. No Windows 2000 e sistemas operacionais posteriores, todos os diretórios têm acesso de leitura e gravação.
 
 |valor do modo|Verifica o arquivo quanto a|
 |----------------|---------------------|
@@ -85,11 +88,11 @@ Quando usado com arquivos, o **access_s** função determina se o arquivo especi
 |04|Permissão de leitura.|
 |06|Permissão de leitura e gravação.|
 
-A permissão para ler ou gravar o arquivo não é suficiente para garantir a capacidade de abrir um arquivo. Por exemplo, se um arquivo estiver bloqueado por outro processo, ele pode não ser acessível, embora **access_s** retornará 0.
+A permissão para ler ou gravar o arquivo não é suficiente para garantir a capacidade de abrir um arquivo. Por exemplo, se um arquivo estiver bloqueado por outro processo, ele poderá não estar acessível, embora **_access_s** retorne 0.
 
-**waccess_s** é uma versão de caractere largo de **access_s**, em que o *caminho* argumento **waccess_s** é uma cadeia de caracteres largos. Caso contrário, **waccess_s** e **access_s** se comportam de forma idêntica.
+**_waccess_s** é uma versão de caractere largo de **_access_s**, onde o argumento *Path* para **_waccess_s** é uma cadeia de caracteres largos. Caso contrário, **_waccess_s** e **_access_s** se comportam de forma idêntica.
 
-Essas funções validam seus parâmetros. Se *caminho* for NULL ou *modo* não especifica um modo válido, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão `errno` como `EINVAL` e retornarão `EINVAL`.
+Essas funções validam seus parâmetros. Se o *caminho* for nulo ou o *modo* não especificar um modo válido, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão `errno` como `EINVAL` e retornarão `EINVAL`.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -106,7 +109,7 @@ Essas funções validam seus parâmetros. Se *caminho* for NULL ou *modo* não e
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo usa **access_s** para verificar o arquivo nomeado crt_access_s para ver se ele existe e se a gravação é permitida.
+Este exemplo usa **_access_s** para verificar o arquivo chamado crt_access_s. c para ver se ele existe e se a gravação é permitida.
 
 ```C
 // crt_access_s.c

@@ -1,9 +1,9 @@
 ---
 title: _set_se_translator
 ms.date: 02/21/2018
-apiname:
+api_name:
 - _set_se_translator
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_se_translator
 - set_se_translator
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: 23eb4e9016666567771832cefed686cb9197b02f
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 781deaad091b6aed72350100f7575c566bbae793
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299704"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948394"
 ---
-# <a name="setsetranslator"></a>_set_se_translator
+# <a name="_set_se_translator"></a>_set_se_translator
 
 Defina uma função de retorno de chamada por thread para converter exceções do Win32 (exceções estruturadas C) em C++ exceções tipadas.
 
@@ -71,7 +74,7 @@ typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_
 
 Para **_set_se_translator**, há implicações ao se vincular DINAMICAMENTE ao CRT; outra DLL no processo pode chamar **_set_se_translator** e substituir seu manipulador por seu próprio.
 
-Ao usar **_set_se_translator** de código gerenciado (código compilado com/CLR) ou código nativo e gerenciado Misto, lembre-se de que o tradutor afeta as exceções geradas somente no código nativo. Exceções gerenciadas geradas em código gerenciado (por exemplo, ao gerar `System::Exception`) não são roteadas por meio da função conversora. As exceções geradas no código gerenciado usando a  função RaiseException do Win32 ou causadas por uma exceção do sistema como uma exceção de divisão por zero são roteadas pelo tradutor.
+Ao usar **_set_se_translator** de código gerenciado (código compilado com/CLR) ou código nativo e gerenciado Misto, lembre-se de que o tradutor afeta as exceções geradas somente no código nativo. Exceções gerenciadas geradas em código gerenciado (por exemplo, ao gerar `System::Exception`) não são roteadas por meio da função conversora. As exceções geradas no código gerenciado usando a função RaiseException do Win32 ou causadas por uma exceção do sistema como uma exceção de divisão por zero são roteadas pelo tradutor.
 
 ## <a name="requirements"></a>Requisitos
 

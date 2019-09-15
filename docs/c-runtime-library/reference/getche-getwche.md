@@ -1,10 +1,10 @@
 ---
 title: _getche, _getwche
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getwche
 - _getche
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getwche
 - _getche
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - getwche function
 - _getche function
 ms.assetid: eac978a8-c43a-4130-938f-54f12e2a0fda
-ms.openlocfilehash: 87e9173e21ea51281276601b6fc5e3b73e244fca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf7aa10702dca5118d03d7ce2e2d4341941fc51c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287321"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955321"
 ---
-# <a name="getche-getwche"></a>_getche, _getwche
+# <a name="_getche-_getwche"></a>_getche, _getwche
 
 Obtém um caractere do console com eco.
 
@@ -56,7 +59,7 @@ Retorna o caractere lido. Nenhum erro é retornado.
 
 ## <a name="remarks"></a>Comentários
 
-O **getche** e **getwche** funções leem um único caractere no console com eco, o que significa que o caractere é exibido no console. Nenhuma dessas funções pode ser usada para ler CTRL+C. Ao ler uma tecla de função ou uma tecla de direção, cada função deve ser chamada duas vezes; a primeira chamada retorna 0 ou 0xE0 e a segunda chamada retorna o código da tecla de fato.
+As funções **_getche** e **_getwche** lêem um único caractere do console com Echo, o que significa que o caractere é exibido no console. Nenhuma dessas funções pode ser usada para ler CTRL+C. Ao ler uma tecla de função ou uma tecla de direção, cada função deve ser chamada duas vezes; a primeira chamada retorna 0 ou 0xE0 e a segunda chamada retorna o código da tecla de fato.
 
 Essas funções bloqueiam o thread de chamada e, portanto, são thread-safe. Para versões sem bloqueio, consulte [_getche_nolock, _getwche_nolock](getche-nolock-getwche-nolock.md).
 

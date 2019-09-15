@@ -1,14 +1,14 @@
 ---
 title: log, logf, logl, log10, log10f, log10l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log10f
 - logf
 - log10
 - log
 - log10l
 - logl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - logf
 - logl
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f610ead4d71a877051fdec8df2a1564089141eea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286006"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953223"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
@@ -76,7 +79,7 @@ Valor cujo logaritmos deve ser localizado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **log** funções retornam o logaritmo natural (base *eletrônico*) do *x* se for bem-sucedido. O **log10** funções retornam o logaritmo de base 10. Se *x* é negativo, essas funções retornarão um (IND, indefinido) por padrão. Se *x* é 0, elas retornarão infinito (INF).
+As funções de **log** retornam o logaritmo natural (base *e*) de *x* , se bem-sucedidas. As funções **log10** retornam o logaritmo de base 10. Se *x* for negativo, essas funções retornarão um indefinido (IND), por padrão. Se *x* for 0, eles retornarão infinito (inf).
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
@@ -88,7 +91,7 @@ O **log** funções retornam o logaritmo natural (base *eletrônico*) do *x* se 
 
 ## <a name="remarks"></a>Comentários
 
-C++ permite sobrecargas, portanto, é possível chamar sobrecargas de **log** e **log10** que tomam e retornam **float** ou **longo duplo** valores. Em um programa do C **log** e **log10** sempre tomam e retornam uma **double**.
+C++permite sobrecargas, para que você possa chamar sobrecargas de **log** e **log10** que levam e retornam valores **float** ou **Long duplo** . Em um programa C, o **log** e o **log10** sempre assumem e retornam um **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

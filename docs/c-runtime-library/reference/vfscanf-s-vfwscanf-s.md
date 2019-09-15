@@ -1,10 +1,10 @@
 ---
 title: vfscanf_s, vfwscanf_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vfscanf_s
 - vfwscanf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,20 +15,23 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vfscanf_s
 - vfwscanf_s
 - _vftscanf_s
 ms.assetid: 9b0133f0-9a18-4581-b24b-3b72683ad432
-ms.openlocfilehash: 7f2f39ef124220ddee0b42242a9991d63fe5969a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c6f3504c9c12ad5429a1b9649eda351c473671a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364851"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957370"
 ---
-# <a name="vfscanfs-vfwscanfs"></a>vfscanf_s, vfwscanf_s
+# <a name="vfscanf_s-vfwscanf_s"></a>vfscanf_s, vfwscanf_s
 
 Lê dados formatados de um fluxo. Essas versões de vfscanf, vfwscanf têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -60,18 +63,18 @@ Lista de argumentos variáveis.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna o número de campos que são convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. Se ocorrer um erro ou se o final do fluxo de arquivo for atingido antes da primeira conversão, o valor retornado será **EOF** para **vfscanf_s** e **vfwscanf_s**.
+Cada uma dessas funções retorna o número de campos que são convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. Se ocorrer um erro ou se o final do fluxo de arquivos for atingido antes da primeira conversão, o valor de retorno será **EOF** para **vfscanf_s** e **vfwscanf_s**.
 
-Essas funções validam seus parâmetros. Se *stream* for um ponteiro de arquivo inválido ou *formato* é um ponteiro nulo, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EOF** e defina **errno** para **EINVAL**.
+Essas funções validam seus parâmetros. Se o *fluxo* for um ponteiro de arquivo inválido, ou o *formato* for um ponteiro nulo, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam **EOF** e definem **errno** como **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-O **vfscanf_s** função lê dados da posição atual do *fluxo* nos locais fornecidos pela *arglist* lista de argumentos (se houver). Cada argumento na lista deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo em *formato*. *formato* controla a interpretação da entrada campos e tem o mesmo formato e função que o *formato* argumento **scanf_s**; consulte [campos de especificação de formato: funções scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) para obter uma descrição *formato*. **vfwscanf_s** é uma versão de caractere largo de **vfscanf_s**; o argumento de formato para **vfwscanf_s** é uma cadeia de caracteres largos. Essas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. **vfscanf_s** atualmente não dá suporte a entrada de um fluxo UNICODE.
+A função **vfscanf_s** lê dados da posição atual do *fluxo* para os locais que são fornecidos pela lista de argumentos *Arglist* (se houver). Cada argumento na lista deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo no *formato*. o *formato* controla a interpretação dos campos de entrada e tem a mesma forma e função que o argumento de *formato* para **scanf_s**; consulte [Formatar campos de especificação: funções scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) para obter uma descrição do *formato*. **vfwscanf_s** é uma versão de caractere largo do **vfscanf_s**; o argumento format para **vfwscanf_s** é uma cadeia de caracteres largos. Essas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. Atualmente, o **vfscanf_s** não dá suporte à entrada de um fluxo Unicode.
 
-A principal diferença entre as funções mais seguras (que têm o **s** sufixo) e as outras versões é que as funções mais seguras exigem que o tamanho em caracteres de cada **c**, **C**, **s**, **S**, e **[** campo de tipo a ser passado como um argumento imediatamente após a variável. Para obter mais informações, consulte [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) e [Especificação de largura scanf](../../c-runtime-library/scanf-width-specification.md).
+A principal diferença entre as funções mais seguras (que têm o sufixo **_S** ) e as outras versões é que as funções mais seguras exigem o tamanho em caracteres de cada **c**, **c**, **s**, **s**e **[** Type Field a ser passado como um argumento imediatamente após a variável. Para obter mais informações, consulte [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) e [Especificação de largura scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> O parâmetro de tamanho é do tipo **sem sinal**, e não **size_t**.
+> O parâmetro de tamanho é do tipo não **assinado**, não **size_t**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

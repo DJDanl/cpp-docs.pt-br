@@ -1,9 +1,9 @@
 ---
 title: _freea
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _freea
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - freea
 - _freea
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - freea function
 - memory deallocation
 ms.assetid: dcd30584-dd9d-443b-8c4c-13237a1cecac
-ms.openlocfilehash: ac9c5528755898b0de131bccf94185b501b0e720
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dcad8bea4f8cec28d8cb15a9937b1032593ef0cc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333060"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956719"
 ---
-# <a name="freea"></a>_freea
+# <a name="_freea"></a>_freea
 
 Desaloca ou libera um bloco de memória.
 
@@ -53,17 +56,17 @@ nenhuma.
 
 ## <a name="remarks"></a>Comentários
 
-O **freea** função desaloca um bloco de memória (*memblock*) que foi alocado anteriormente por uma chamada a [malloca](malloca.md). **freea** verifica se a memória foi alocada no heap ou a pilha. Se tiver sido alocada na pilha, **freea** não faz nada. Se tiver sido alocada no heap, o número de bytes liberados será equivalente ao número de bytes solicitados quando o bloco foi alocado. Se *memblock* é **nulo**, o ponteiro será ignorado e **freea** retorna imediatamente. A tentativa de liberar um ponteiro inválido (um ponteiro para um bloco de memória que não foi alocado por **malloca**) pode afetar solicitações posteriores de alocação e causar erros.
+A função **_freea** Desaloca um bloco de memória (*memblock*) que foi previamente alocado por uma chamada para [_malloca](malloca.md). **_freea** verifica se a memória foi alocada no heap ou na pilha. Se ele foi alocado na pilha, o **_freea** não fará nada. Se tiver sido alocada no heap, o número de bytes liberados será equivalente ao número de bytes solicitados quando o bloco foi alocado. Se *memblock* for **NULL**, o ponteiro será ignorado e **_freea** retornará imediatamente. A tentativa de liberar um ponteiro inválido (um ponteiro para um bloco de memória que não foi alocado por **_malloca**) pode afetar as solicitações de alocação subsequentes e causar erros.
 
-**freea** chamadas **livre** internamente se concluir que a memória é alocada no heap. Um marcador colocado na memória, no endereço imediatamente anterior à memória alocada, determina se a memória está no heap ou na pilha.
+**_freea** chamadas **gratuitas** internamente se descobrir que a memória está alocada no heap. Um marcador colocado na memória, no endereço imediatamente anterior à memória alocada, determina se a memória está no heap ou na pilha.
 
-Se ocorrer um erro liberar a memória **errno** é definido com informações do sistema operacional da natureza da falha. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Se ocorrer um erro na liberação da memória, **errno** será definido com informações do sistema operacional na natureza da falha. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Após um bloco de memória ter sido liberado, [_heapmin](heapmin.md) minimiza a quantidade de memória livre no heap juntando as regiões não utilizadas e liberando-as para o sistema operacional. A memória liberada que não for liberada para o sistema operacional será restaurada para o pool livre e ficará disponível para alocação novamente.
 
-Uma chamada para **freea** deve acompanhar todas as chamadas para **malloca**. Ele também é um erro ao chamar **freea** duas vezes na mesma memória. Quando o aplicativo está vinculado a uma versão de depuração das bibliotecas de tempo de execução C, particularmente com [malloc_dbg](malloc-dbg.md) recursos habilitados definindo **crtdbg_map_alloc**, é mais fácil localizar ausente ou duplicado chamadas para **freea**. Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (O heap de depuração do CRT).
+Uma chamada para **_freea** deve acompanhar todas as chamadas para **_malloca**. Também é um erro para chamar **_freea** duas vezes na mesma memória. Quando o aplicativo é vinculado a uma versão de depuração das bibliotecas de tempo de execução do C, particularmente com os recursos do [_malloc_dbg](malloc-dbg.md) habilitados pela definição de **_CRTDBG_MAP_ALLOC**, é mais fácil localizar chamadas ausentes ou duplicadas para **_freea**. Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (O heap de depuração do CRT).
 
-**freea** está marcado como `__declspec(noalias)`, que significa que a função não é garantido que modifica variáveis globais. Para obter mais informações, consulte [noalias](../../cpp/noalias.md).
+**_freea** é marcado `__declspec(noalias)`, o que significa que a função está garantida para não modificar variáveis globais. Para obter mais informações, consulte [noalias](../../cpp/noalias.md).
 
 ## <a name="requirements"></a>Requisitos
 

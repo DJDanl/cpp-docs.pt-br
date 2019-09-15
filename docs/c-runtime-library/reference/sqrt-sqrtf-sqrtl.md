@@ -1,11 +1,11 @@
 ---
 title: sqrt, sqrtf, sqrtl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - sqrtl
 - sqrtf
 - sqrt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - sqrt
 - sqrtf
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 7c17c973b98638195e2e2d2a5f793578437d11ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354893"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958103"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -69,13 +72,13 @@ Um valor de ponto flutuante não negativo
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **sqrt** que utilizam **float** ou **longo** **double** tipos. Em um programa do C **sqrt** sempre usa e retorna **duplo**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **sqrt** que usam tipos **float** ou **Long** **Double** . Em um programa C, **sqrt** sempre leva e retorna **Double**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **sqrt** funções retornam a raiz quadrada de *x*. Por padrão, se *x* for negativo, **sqrt** retorna um NaN indefinido.
+As funções **sqrt** retornam a raiz quadrada de *x*. Por padrão, se *x* for negativo, **sqrt** retornará um NaN indefinido.
 
-|Entrada|Exceção SEH|**matherr** exceção|
+|Entrada|Exceção SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
 |± QNAN,IND|nenhum|_DOMAIN|
 |- ∞|nenhum|_DOMAIN|

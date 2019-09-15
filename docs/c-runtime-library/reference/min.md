@@ -1,9 +1,9 @@
 ---
 title: __min
 ms.date: 04/05/2018
-apiname:
+api_name:
 - __min
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __min
 - min
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - minimum macro
 - _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
-ms.openlocfilehash: f9e867cd1f3e3519e440c91895e61e317d9688a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b5cc6517c125f91337ca0d9b12b7a49bd7c1753
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156545"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951730"
 ---
-# <a name="min"></a>__min
+# <a name="__min"></a>__min
 
-Uma macro de pré-processador que retorna o menor dos dois valores.
+Uma macro de pré-processador que retorna o menor de dois valores.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,7 +48,7 @@ Uma macro de pré-processador que retorna o menor dos dois valores.
 ### <a name="parameters"></a>Parâmetros
 
 *a*, *b*<br/>
-Valores de qualquer tipo que o **<** operador funciona em.
+Valores de qualquer tipo no qual **<** o operador funciona.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -53,9 +56,9 @@ O menor dos dois argumentos.
 
 ## <a name="remarks"></a>Comentários
 
-O **min** macro compara dois valores e retorna o valor do menor. Os argumentos podem ser de qualquer tipo de dados numérico, com ou sem sinal. Os argumentos e o valor retornado devem ser do mesmo tipo de dados.
+A macro **__min** compara dois valores e retorna o valor menor. Os argumentos podem ser de qualquer tipo de dados numérico, com ou sem sinal. Os argumentos e o valor retornado devem ser do mesmo tipo de dados.
 
-O argumento retornado é avaliado duas vezes, a macro. Isso pode levar a resultados inesperados se o argumento for uma expressão que altera seu valor quando ele é avaliado, tais como `*p++`.
+O argumento retornado é avaliado duas vezes pela macro. Isso pode levar a resultados inesperados se o argumento for uma expressão que altera seu valor quando ele é avaliado, como `*p++`.
 
 ## <a name="requirements"></a>Requisitos
 

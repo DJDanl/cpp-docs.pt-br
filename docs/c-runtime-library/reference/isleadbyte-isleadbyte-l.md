@@ -1,10 +1,10 @@
 ---
 title: isleadbyte, _isleadbyte_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isleadbyte_l
 - isleadbyte
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 1a3f427e49e53bb553020da100b0e713350fab3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b853dcea82c2afea91b2e0545d253786c88ae5e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286912"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954307"
 ---
-# <a name="isleadbyte-isleadbytel"></a>isleadbyte, _isleadbyte_l
+# <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
 Determina se um caractere é o byte inicial de um caractere multibyte.
 
@@ -56,15 +59,15 @@ Inteiro a ser testado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**isleadbyte** retorna um valor diferente de zero se o argumento satisfaz a condição de teste ou 0 se não existir. Na localidade "C" e em um byte do conjunto de caracteres localidades (SBCS), **isleadbyte** sempre retorna 0.
+**isleadbyte** retornará um valor diferente de zero se o argumento satisfizer a condição de teste ou 0 se não tiver. Na localidade "C" e em localidades SBCS (conjunto de caracteres de byte único), **isleadbyte** sempre retorna 0.
 
 ## <a name="remarks"></a>Comentários
 
-O **isleadbyte** macro retorna um valor diferente de zero se o argumento for o primeiro byte de um caractere multibyte. **isleadbyte** produz um resultado significativo para qualquer argumento inteiro de -1 (**EOF**) para **UCHAR_MAX** (0xFF), inclusivo.
+A macro **isleadbyte** retornará um valor diferente de zero se o argumento for o primeiro byte de um caractere multibyte. **isleadbyte** produz um resultado significativo para qualquer argumento inteiro de-1 (**EOF**) a **UCHAR_MAX** (0xFF), inclusive.
 
-O tipo de argumento esperado de **isleadbyte** é **int**; se um caractere com sinal for passado, o compilador poderá convertê-la em um inteiro pela extensão de sinal, gerando resultados imprevisíveis.
+O tipo de argumento esperado de **isleadbyte** é **int**; se um caractere assinado for passado, o compilador poderá convertê-lo em um inteiro por extensão de assinatura, gerando resultados imprevisíveis.
 
-A versão dessa função com o **l** sufixo é idêntico, exceto que ele usa a localidade passada em vez da localidade atual para o seu comportamento dependente da localidade.
+A versão dessa função com o sufixo **_L** é idêntica, exceto pelo fato de que ele usa a localidade passada em vez da localidade atual para seu comportamento dependente de localidade.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

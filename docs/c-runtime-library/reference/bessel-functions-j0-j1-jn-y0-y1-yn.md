@@ -1,14 +1,14 @@
 ---
 title: 'Funções Bessel: _j0, _j1, _jn, _y0, _y1, _yn'
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _j0
 - _j1
 - _jn
 - _y0
 - _y1
 - _yn
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c.bessel
 - _j0
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5420b34846998cdbcb4814d8319274f1a3516d91
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341096"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939466"
 ---
-# <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Funções Bessel: _j0, _j1, _jn, _y0, _y1, _yn
+# <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Funções Bessel: _j0, _j1, _jn, _y0, _y1, _yn
 
 Computa a função Bessel do primeiro ou do segundo tipo, de ordens 0, 1 ou n. As funções Bessel geralmente são usadas nos cálculos da teoria de ondas eletromagnéticas.
 
@@ -84,23 +87,23 @@ Ordem de inteiro da função Bessel.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas retorna uma função Bessel de *x*. Se *x* é negativo na **_y0**, **_y1**, ou **Yn** funções, a rotina definirá **errno** para  **EDOM**, imprime uma **_DOMAIN** mensagem de erro para **stderr**e retorna **_HUGE_VAL**. Você pode modificar por meio de tratamento de erros **matherr**.
+Cada uma dessas rotinas retorna uma função de Bessel de *x*. Se *x* for negativo nas funções **_y0**, **_y1**ou **_yn** , a rotina definirá **errno** como **Edom**, imprime uma mensagem de erro **_DOMAIN** em **stderr**e retornará **_HUGE_VAL**. Você pode modificar o tratamento de erros usando o **_matherr**.
 
 ## <a name="remarks"></a>Comentários
 
-O **_j0**, **_j1**, e **Jn** rotinas retornam as funções Bessel do primeiro tipo: ordens 0, 1 e n, respectivamente.
+As rotinas **_j0**, **_j1**e **_jn** retornam as funções de Bessel do primeiro tipo: Orders 0, 1 e n, respectivamente.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**INVALID**|**_DOMAIN**|
+|± **QNAN**, **IND**|**INVÁLIDO**|**_DOMAIN**|
 
-O **_y0**, **_y1**, e **Yn** rotinas retornam as funções Bessel do segundo tipo: ordens 0, 1 e n, respectivamente.
+As rotinas **_y0**, **_y1**e **_yn** retornam as funções de Bessel do segundo tipo: Orders 0, 1 e n, respectivamente.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**INVALID**|**_DOMAIN**|
+|± **QNAN**, **IND**|**INVÁLIDO**|**_DOMAIN**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**INVALID**|**_DOMAIN**|
+|&#124;x&#124; < 0,0|**INVÁLIDO**|**_DOMAIN**|
 
 ## <a name="requirements"></a>Requisitos
 

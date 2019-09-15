@@ -1,12 +1,12 @@
 ---
 title: islower, iswlower, _islower_l, _iswlower_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iswlower
 - _islower_l
 - islower
 - _iswlower_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istlower
 - islower
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-ms.openlocfilehash: b6b58522277b45fe8147dfa13a5930003f83c835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 957bae12c718b0466c8e9f6d39dd57d7c0ccca7d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331565"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954317"
 ---
-# <a name="islower-iswlower-islowerl-iswlowerl"></a>islower, iswlower, _islower_l, _iswlower_l
+# <a name="islower-iswlower-_islower_l-_iswlower_l"></a>islower, iswlower, _islower_l, _iswlower_l
 
 Determina se um inteiro representa um caractere minúsculo.
 
@@ -82,11 +85,11 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas retornará diferente de zero se *c* é uma representação específica de um caractere minúsculo. **islower** retorna um valor diferente de zero se *c* é um caractere minúsculo (a - z). **iswlower** retorna um valor diferente de zero se *c* for um caractere largo que corresponde a uma letra minúscula, ou se *c* é um de um conjunto de caracteres largos definidos pela implementação para o qual nenhum **iswcntrl**, **iswdigit**, **iswpunct**, ou **iswspace** é diferente de zero. Cada uma dessas rotinas retornará 0 se *c* não satisfaz a condição de teste.
+Cada uma dessas rotinas retornará zero se *c* for uma representação específica de um caractere minúsculo. **islow** retornará um valor diferente de zero se *c* for um caractere minúsculo (a-z). **iswlower** retornará um valor diferente de zero se *c* for um caractere largo que corresponde a uma letra minúscula ou se *c* for um conjunto de caracteres largos definidos pela implementação para os quais nenhum de **iswcntrl**, **iswdigit**, **iswpunct** , ou **iswspace** é diferente de zero. Cada uma dessas rotinas retornará 0 se *c* não atender à condição de teste.
 
-As versões dessas funções que têm o **l** sufixo usam a localidade passada em vez da localidade atual para seu comportamento dependente da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções que têm o sufixo **_L** usam a localidade que é passada em vez da localidade atual para seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-O comportamento de **islower** e **islower_l** é indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e *c* é não um desses valores, as funções geram uma asserção.
+O comportamento de **islow** e **_islower_l** será indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca CRT de depuração é usada e *c* não é um desses valores, as funções geram uma asserção.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

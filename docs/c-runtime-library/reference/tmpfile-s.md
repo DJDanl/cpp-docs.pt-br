@@ -1,9 +1,9 @@
 ---
 title: tmpfile_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - tmpfile_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tmpfile_s
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 341e1c8ed6dd20ec7e6a3d71999fb365e45e614a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64107f26fa651739f4d5bdd7521b15d9d458df65
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155570"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946049"
 ---
-# <a name="tmpfiles"></a>tmpfile_s
+# <a name="tmpfile_s"></a>tmpfile_s
 
 Cria um arquivo temporário. Trata-se de uma versão de [tmpfile](tmpfile.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -57,15 +60,15 @@ Retornará 0 se for bem-sucedido; um código de erro em caso de falha.
 |----------------|----------------------|---------------------------------|
 |**NULL**|**EINVAL**|não alterado|
 
-Se ocorrer o erro de validação de parâmetro acima, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e o valor retornado será **EINVAL**.
+Se ocorrer o erro de validação de parâmetro acima, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e o valor de retorno será **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-O **tmpfile_s** função cria um arquivo temporário e coloca um ponteiro nesse fluxo na *pFilePtr* argumento. O arquivo temporário é criado no diretório raiz. Para criar um arquivo temporário em um diretório que não seja a raiz, use [tmpnam_s](tmpnam-s-wtmpnam-s.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) em conjunto com [fopen](fopen-wfopen.md).
+A função **tmpfile_s** cria um arquivo temporário e coloca um ponteiro para esse fluxo no argumento *pFilePtr* . O arquivo temporário é criado no diretório raiz. Para criar um arquivo temporário em um diretório que não seja a raiz, use [tmpnam_s](tmpnam-s-wtmpnam-s.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) em conjunto com [fopen](fopen-wfopen.md).
 
-Se o arquivo não pode ser aberto, **tmpfile_s** grava **nulo** para o *pFilePtr* parâmetro. Esse arquivo temporário é excluído automaticamente quando o arquivo é fechado quando o programa for encerrado normalmente ou quando **rmtmp** é chamado, supondo que o diretório de trabalho atual não é alterado. O arquivo temporário é aberto no **w + b** modo (leitura/gravação binária).
+Se o arquivo não puder ser aberto, **tmpfile_s** gravará **NULL** no parâmetro *pFilePtr* . Esse arquivo temporário é excluído automaticamente quando o arquivo é fechado, quando o programa é encerrado normalmente ou quando **_rmtmp** é chamado, supondo que o diretório de trabalho atual não seja alterado. O arquivo temporário é aberto no modo **w + b** (leitura/gravação binária).
 
-Falha pode ocorrer se você tentar mais de **TMP_MAX_S** (consulte STDIO. H) chamadas de com **tmpfile_s**.
+A falha poderá ocorrer se você tentar mais de **TMP_MAX_S** (consulte STDIO. H) chamadas com **tmpfile_s**.
 
 ## <a name="requirements"></a>Requisitos
 

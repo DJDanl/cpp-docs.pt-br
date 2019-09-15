@@ -1,12 +1,12 @@
 ---
 title: ldexp, ldexpf, ldexpl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - ldexp
 - ldexpf
 - ldexpl
 - _ldexpl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ldexp
 - ldexpf
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 7fbf89f8d78e8a2ce1018a790350ec986dcab87e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fabd00c7ddc5c430c158089b7e5769158b46328
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286287"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953500"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -80,13 +83,13 @@ Expoente inteiro.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **ldexp** funções retornam o valor de *x* \* 2<sup>*exp* </sup> se for bem-sucedido. No estouro e dependendo do sinal de *x*, **ldexp** retorna + /- **HUGE_VAL**; a **errno** valor é definido como **ERANGE** .
+As funções **ldexp** retornarão o valor de *x* \* 2<sup>*exp*</sup> se for bem-sucedido. Em estouro, e dependendo do sinal de *x*, **ldexp** retorna +/- **HUGE_VAL**; o valor **errno** é definido como **ERANGE**.
 
-Para obter mais informações sobre **errno** e de erro possíveis valores de retorno, consulte [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obter mais informações sobre **errno** e possíveis valores de retorno de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **ldexp** que utilizam **float** ou **longo** **double** tipos. Em um programa C, **ldexp** sempre usa um **duplo** e um **int** e retorna um **double**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **ldexp** que têm tipos **flutuantes** ou **longos** **duplos** . Em um programa C, **ldexp** sempre leva um **Double** e um **int** e retorna um **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

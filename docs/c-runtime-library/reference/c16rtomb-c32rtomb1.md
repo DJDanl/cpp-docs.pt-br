@@ -1,10 +1,10 @@
 ---
 title: c16rtomb, c32rtomb
 ms.date: 01/22/2018
-apiname:
+api_name:
 - c16rtomb
 - c32rtomb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c16rtomb
 - c32rtomb
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-ms.openlocfilehash: ad58184c7bab6f95a842bda5f9eb545f09434a3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a16effe48442ccbb5144b57ead2fb15c908fe898
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341750"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943424"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
@@ -61,19 +64,19 @@ Ponteiro para uma matriz para armazenar o caractere multibyte convertido.
 Um caractere largo a ser convertido.
 
 *state*<br/>
-Um ponteiro para um **mbstate_t** objeto.
+Um ponteiro para um objeto **mbstate_t** .
 
 ## <a name="return-value"></a>Valor de retorno
 
-O número de bytes armazenados no objeto de matriz *mbchar*, incluindo quaisquer sequências de deslocamento. Se *wchar* não é um caractere largo válido, o valor (**size_t**)(-1) for retornado, **errno** é definido como **EILSEQ**e o valor de *estado* não está especificado.
+O número de bytes armazenados no objeto de matriz *mbchar*, incluindo quaisquer sequências de deslocamento. Se *WCHAR* não for um caractere largo válido, o valor (**size_t**) (-1) será retornado, **errno** será definido como **EILSEQ**e o valor de *State* não será especificado.
 
 ## <a name="remarks"></a>Comentários
 
-O **c16rtomb** função converte o caractere UTF-16 *wchar* à sequência de caractere estreito multibyte equivalente na localidade atual. Se *mbchar* não é um ponteiro nulo, a função armazena a sequência convertida no objeto de matriz apontada por *mbchar*. Até **MB_CUR_MAX** bytes são armazenados em *mbchar*, e *estado* é definido como o estado de deslocamento multibyte resultante.    Se *wchar* é um caractere largo nulo, uma sequência necessária para restaurar o estado de deslocamento inicial será armazenado, se necessário, seguido pelo caractere null, e *estado* é definido como o estado de conversão inicial. O **c32rtomb** função é idêntica, mas converte um caractere UTF-32.
+A função **c16rtomb** converte o caractere UTF-16 *WCHAR* na sequência de caracteres de vários bytes equivalentes na localidade atual. Se *mbchar* não for um ponteiro NULL, a função armazenará a sequência convertida no objeto de matriz apontado por *mbchar*. Até **MB_CUR_MAX** bytes são armazenados em *mbchar*e *State* é definido como o estado de mudança multibyte resultante.    Se *WCHAR* for um caractere largo nulo, uma sequência necessária para restaurar o estado de deslocamento inicial será armazenada, se necessário, seguida do caractere nulo e o *estado* será definido como o estado de conversão inicial. A função **c32rtomb** é idêntica, mas converte um caractere UTF-32.
 
-Se *mbchar* for um ponteiro nulo, o comportamento é equivalente a uma chamada para a função que substitui um buffer interno para *mbchar* e um caractere nulo largo para *wchar*.
+Se *mbchar* for um ponteiro NULL, o comportamento será equivalente a uma chamada para a função que substitui um buffer interno para *mbchar* e um caractere nulo largo para *WCHAR*.
 
-O *estado* objeto de estado de conversão permite que você faça chamadas subsequentes para essa função e outras funções reiniciáveis que mantenham o estado de deslocamento dos caracteres multibyte de saída. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis ou se uma chamada para **setlocale** é feita entre chamadas de função reiniciável.
+O objeto estado de conversão de *estado* permite que você faça chamadas subsequentes para essa função e outras funções reiniciáveis que mantêm o estado de deslocamento dos caracteres de saída multibyte. Os resultados são indefinidos quando você combina o uso de funções reiniciáveis e não reiniciáveis, ou se uma chamada para **setlocaling** é feita entre chamadas de função reiniciáveis.
 
 ## <a name="requirements"></a>Requisitos
 
