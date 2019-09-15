@@ -1,10 +1,10 @@
 ---
 title: isfinite, _finite, _finitef
 ms.date: 01/31/2019
-apiname:
+api_name:
 - _finite
 - _finitef
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - isfinite
 - finite
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-ms.openlocfilehash: d727839521978be66c3dc9ee173ee2ba0a567445
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2cde4d3a57884413f0c48aa299b171334c5f988
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333710"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957175"
 ---
-# <a name="isfinite-finite-finitef"></a>isfinite, _finite, _finitef
+# <a name="isfinite-_finite-_finitef"></a>isfinite, _finite, _finitef
 
 Determina se um valor de ponto flutuante é finito.
 
@@ -71,11 +74,11 @@ O valor de ponto flutuante a ser testado.
 
 ## <a name="return-value"></a>Valor retornado
 
-O `isfinite` macro e o `_finite` e `_finitef` funções retornam um valor diferente de zero se *x* é um normal ou subnormal finito valor. Elas retornam 0 se o argumento for infinito ou NaN. A função de modelo do C++ embutidas `isfinite` se comporta da mesma forma, mas retorna **verdadeira** ou **false**.
+A `isfinite` macro e as `_finite` funções `_finitef` e retornarão um valor diferente de zero se *x* for um valor finito normal ou de subnormal. Eles retornam 0 se o argumento é infinito ou um NaN. A C++ função `isfinite` de modelo embutida se comporta da mesma maneira, mas retorna **true** ou **false**.
 
 ## <a name="remarks"></a>Comentários
 
-`isfinite` é uma macro quando compilado como C e uma função de modelo embutida quando compilada como C++. O `_finite` e `_finitef` funções são específicas da Microsoft. A função `_finitef` só está disponível quando compilada para plataformas x86, ARM ou ARM64.
+`isfinite`é uma macro quando compilada como C e uma função de modelo embutida quando C++compilada como. As `_finite` funções `_finitef` e são específicas da Microsoft. A função `_finitef` só está disponível quando compilada para plataformas x86, ARM ou ARM64.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,12 +1,12 @@
 ---
 title: atof, _atof_l, _wtof, _wtof_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _wtof_l
 - atof
 - _atof_l
 - _wtof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstof
 - _ttof
@@ -46,14 +49,14 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 6c2ec158ac0b75a861b5b226d33de113d76988cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a624ae9f900395ed2117ed2bb89e2768c64daba9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341347"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939565"
 ---
-# <a name="atof-atofl-wtof-wtofl"></a>atof, _atof_l, _wtof, _wtof_l
+# <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof, _atof_l, _wtof, _wtof_l
 
 Converta uma cadeia de caracteres em duplo.
 
@@ -86,9 +89,9 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada função retorna o **duplas** valor produzido Interpretando os caracteres de entrada como um número. O valor retornado será 0,0 se a entrada não puder ser convertida para um valor desse tipo.
+Cada função retorna o valor **Double** produzido pela interpretação dos caracteres de entrada como um número. O valor retornado será 0,0 se a entrada não puder ser convertida para um valor desse tipo.
 
-Em todos os casos de fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornam 0.
+Em todos os casos fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão **errno** como **EINVAL** e retornarão 0.
 
 ## <a name="remarks"></a>Comentários
 
@@ -96,15 +99,15 @@ Essas funções convertem uma cadeia de caracteres em um valor de ponto flutuant
 
 A cadeia de caracteres de entrada é uma sequência de caracteres que pode ser interpretada como um valor numérico do tipo especificado. A função para de ler a cadeia de caracteres de entrada no primeiro caractere que não consegue reconhecer como parte de um número. Esse caractere pode ser o caractere nulo ('\0' ou L'\0') que encerra a cadeia de caracteres.
 
-O *str* argumento **atof** e **wtof** tem a seguinte forma:
+O argumento *Str* para **atof** e **_wtof** tem o seguinte formato:
 
-[*espaço em branco*] [*sinal*] [*dígitos*] [__.__ *dígitos*] [{**eletrônico** &#124; **eletrônico** } [*entrada*]*dígitos*]
+[*espaço em branco*] [*assinar*] [*dígitos*] [ __.__ *dígitos*] [{**e** &#124; **e** } [*assinar*]*dígitos*]
 
-Um *espaço em branco* consiste em caracteres de espaço ou tabulação, que são ignorados; *sinal* é um sinal de mais (+) ou menos (-); e *dígitos* são um ou mais dígitos decimais. Se nenhum dígito aparecer antes do ponto decimal, pelo menos um deverá aparecer após o ponto decimal. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra de apresentação (**eletrônico**, ou **eletrônico**) e um inteiro decimal opcionalmente com sinal.
+Um *espaço em branco* consiste em caracteres de espaço ou tabulação, ignorados; o *sinal* é mais (+) ou menos (-); e os *dígitos* são um ou mais dígitos decimais. Se nenhum dígito aparecer antes do ponto decimal, pelo menos um deverá aparecer após o ponto decimal. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra introdutória (**e**ou **e) e**um inteiro decimal assinado opcionalmente.
 
-As versões UCRT dessas funções não têm suporte para conversão do estilo Fortran (**1!d** ou **1!d**) letras de expoente. Essa extensão não padrão tinha suporte em versões anteriores do CRT e pode ser uma alteração significativa para seu código.
+As versões UCRT dessas funções não dão suporte à conversão de letras de expoente de estilo Fortran (**d** ou **d**). Essa extensão não padrão tinha suporte em versões anteriores do CRT e pode ser uma alteração significativa para seu código.
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o *localidade* parâmetro passado em vez da localidade atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de *localidade* passado em vez da localidade atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -122,7 +125,7 @@ As versões dessas funções com o **l** sufixo são idênticas, exceto que eles
 
 ## <a name="example"></a>Exemplo
 
-Esse programa mostra como os números armazenados como cadeias de caracteres podem ser convertidos em valores numéricos usando o **atof** e **atof_l** funções.
+Este programa mostra como os números armazenados como cadeias de caracteres podem ser convertidos em valores numéricos usando as funções **atof** e **_atof_l** .
 
 ```C
 // crt_atof.c

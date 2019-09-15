@@ -1,14 +1,14 @@
 ---
 title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsncpy_s_l
 - wcsncpy_s
 - _strncpy_s_l
 - strncpy_s
 - _mbsncpy_s
 - _wcsncpy_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsncpy_s
 - _wcsncpy_s_l
@@ -46,19 +49,19 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 2372cab4cfb689aa52de81d9e15602f2478ddde7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 196a3aac09db790da6b8137029383cca77c3d2ad
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209755"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947272"
 ---
-# <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
+# <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
 Copia caracteres de uma cadeia de caracteres para outra.  Essas versões do [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) tem aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **mbsncpy_s** e **mbsncpy_s_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncpy_s** e **_mbsncpy_s_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -162,22 +165,22 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Zero se tiver êxito, **STRUNCATE** se ocorreu truncamento, caso contrário, um código de erro.
+Zero se for bem-sucedido, **STRUNCATE** se ocorrer truncamento, caso contrário, um código de erro.
 
 ### <a name="error-conditions"></a>Condições de Erro
 
 |*strDest*|*numberOfElements*|*strSource*|Valor retornado|Conteúdo de *strDest*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
 |**NULL**|qualquer|qualquer|**EINVAL**|não modificado|
-|qualquer|qualquer|**NULL**|**EINVAL**|*strDest*[0] definido como 0|
+|qualquer|qualquer|**NULL**|**EINVAL**|*strDest* [0] definido como 0|
 |qualquer|0|qualquer|**EINVAL**|não modificado|
-|Não **nulo**|muito pequeno|qualquer|**ERANGE**|*strDest*[0] definido como 0|
+|Não **nulo**|muito pequeno|qualquer|**ERANGE**|*strDest* [0] definido como 0|
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções tentam copiar os primeiros *1!d* caracteres de *strSource* para *strDest*, onde *1!d* é o menor dos *contagem*  e o comprimento de *strSource*. Se esses *1!d* caracteres caiba dentro *strDest* (cujo tamanho é determinado como *numberOfElements*) e ainda deixar espaço para um terminador nulo, em seguida, esses caracteres são copiados e um nulo de terminação é anexado; Caso contrário, *strDest*[0] é definido para o caractere nulo e o parâmetro inválido manipulador é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
+Essas funções tentam copiar os primeiros caracteres *d* de *strSource* para *strDest*, onde *D* é o menor de *Count* e o comprimento de *strSource*. Se esses caracteres *D* couberem em *strDest* (cujo tamanho é fornecido como *numberOfElements*) e ainda deixar espaço para um terminador nulo, esses caracteres serão copiados e um nulo de terminação será acrescentado; caso contrário, *strDest*[0] é definido como o caractere nulo e o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
 
-Há uma exceção para o parágrafo acima. Se *contagem* é **TRUNCATE**, então, a maioria dos *strSource* couber em *strDest* é copiado enquanto ainda deixa espaço para o terminação nula que sempre é acrescentada.
+Há uma exceção para o parágrafo acima. Se *Count* for **_TRUNCATE**, a maior parte de *strSource* como se ajustará ao *strDest* será copiada e, ao mesmo tempo, deixará espaço para o nulo de encerramento, que é sempre acrescentado.
 
 Por exemplo,
 
@@ -186,22 +189,22 @@ char dst[5];
 strncpy_s(dst, 5, "a long string", 5);
 ```
 
-significa que estamos pedindo **strncpy_s** copiar cinco caracteres em um buffer de cinco bytes de comprimento; isso não deixaria nenhum espaço para o terminador nulo, portanto **strncpy_s** zera a cadeia de caracteres e chama o inválido manipulador de parâmetro.
+significa que estamos fazendo com que o **strncpy_s** Copie cinco caracteres em um buffer de cinco bytes de comprimento; Isso não deixaria nenhum espaço para o terminador nulo, portanto, **strncpy_s** Zera a cadeia de caracteres e chama o manipulador de parâmetro inválido.
 
-Se for necessário o comportamento de truncamento, use **TRUNCATE** ou (*tamanho* - 1):
+Se o comportamento de truncamento for necessário, use **_TRUNCATE** ou (*size* -1):
 
 ```C
 strncpy_s(dst, 5, "a long string", _TRUNCATE);
 strncpy_s(dst, 5, "a long string", 4);
 ```
 
-Observe que diferentemente **strncpy**, se *contagem* é maior que o comprimento da *strSource*, a cadeia de caracteres de destino não é preenchida com caracteres nulos até comprimento *contagem*.
+Observe que diferente de **strncpy**, se *Count* for maior que o comprimento de *strSource*, a cadeia de caracteres de destino não será preenchida com caracteres nulos até a *contagem*de comprimento.
 
 O comportamento de **strncpy_s** é indefinido se as cadeias de caracteres de origem e de destino se sobrepõem.
 
-Se *strDest* ou *strSource* está **nulo**, ou *numberOfElements* for 0, o manipulador de parâmetro inválido será invocado. Se a execução puder continuar, a função retornará **EINVAL** e define **errno** para **EINVAL**.
+Se *strDest* ou *strSource* for **nulo**ou *numberOfElements* for 0, o manipulador de parâmetro inválido será invocado. Se a execução puder continuar, a função retornará **EINVAL** e definirá **errno** como **EINVAL**.
 
-**wcsncpy_s** e **mbsncpy_s** são versões de caractere largo e caracteres multibyte **strncpy_s**. Os argumentos e o valor de retorno **wcsncpy_s** e **mbsncpy_s** variam de acordo. Essas seis funções se comportam de forma idêntica.
+**wcsncpy_s** e **_mbsncpy_s** são versões de caractere largo e de multibyte de **strncpy_s**. Os argumentos e o valor de retorno de **wcsncpy_s** e **mbsncpy_s** variam de acordo. Essas seis funções se comportam de forma idêntica.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
@@ -217,7 +220,7 @@ As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD
 |**_tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 > [!NOTE]
-> **strncpy_s_l**, **wcsncpy_s_l** e **mbsncpy_s_l** não ter nenhuma dependência de localidade e são fornecidas apenas para **tcsncpy_s_l** e não pretende ser chamado diretamente.
+> **_strncpy_s_l**, **_wcsncpy_s_l** e **_mbsncpy_s_l** não têm nenhuma dependência de localidade e são fornecidas apenas para **_tcsncpy_s_l** e não se destinam a serem chamadas diretamente.
 
 ## <a name="requirements"></a>Requisitos
 

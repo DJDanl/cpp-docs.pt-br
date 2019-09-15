@@ -1,11 +1,11 @@
 ---
 title: _create_locale, _wcreate_locale
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _create_locale
 - __create_locale
 - _wcreate_locale
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - create_locale
 - _create_locale
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 109a1d93692d0c65269b40fd0559381907ce1cab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a7098dc572ecdbefd891efc8443e977b01850fa4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340347"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938851"
 ---
-# <a name="createlocale-wcreatelocale"></a>_create_locale, _wcreate_locale
+# <a name="_create_locale-_wcreate_locale"></a>_create_locale, _wcreate_locale
 
 Cria um objeto de localidade.
 
@@ -62,30 +65,30 @@ Especificador de localidade.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for um válida *localidade* e *categoria* forem fornecidos, retornará as configurações de localidade especificada como um **locale_t** objeto. As configurações de localidade atual do programa não são alteradas.
+Se uma *localidade* e *categoria* válidas forem fornecidas, o retornará as configurações de localidade especificadas como um objeto **_locale_t** . As configurações de localidade atual do programa não são alteradas.
 
 ## <a name="remarks"></a>Comentários
 
-O **create_locale** função permite que você crie um objeto que representa certas configurações específicas de região, para uso em versões específicas de localidade de muitas funções CRT (funciona com o **l** sufixo ). O comportamento é semelhante à **setlocale**, exceto que em vez de aplicar as configurações de localidade especificadas ao ambiente atual, as configurações são salvas em um **locale_t** estrutura que é retornada. O **locale_t** estrutura deve ser liberada usando [free_locale](free-locale.md) quando ele não for mais necessário.
+A função **_create_locale** permite que você crie um objeto que representa determinadas configurações específicas de região, para uso em versões específicas de localidade de muitas funções de CRT (funções com o sufixo **_L** ). O comportamento é semelhante ao **setlocale**, exceto que, em vez de aplicar as configurações de localidade especificadas ao ambiente atual, as configurações são salvas em uma estrutura **_locale_t** retornada. A estrutura **_locale_t** deve ser liberada usando [_free_locale](free-locale.md) quando não for mais necessária.
 
-**wcreate_locale** é uma versão de caractere largo de **create_locale**; o *localidade* argumento **wcreate_locale** é uma cadeia de caracteres largos. **wcreate_locale** e **create_locale** se comportam de forma idêntica caso contrário.
+**_wcreate_locale** é uma versão de caractere largo do **_create_locale**; o argumento de *localidade* para **_wcreate_locale** é uma cadeia de caracteres largos. **_wcreate_locale** e **_create_locale** se comportam de outra forma.
 
-O *categoria* argumento especifica as partes do comportamento específico de localidade que são afetadas. Os sinalizadores usados para *categoria* e as partes do programa que afetam são conforme mostrado nesta tabela:
+O argumento *Category* especifica as partes do comportamento específico da localidade que são afetadas. Os sinalizadores usados para a *categoria* e as partes do programa que eles afetam são mostrados nesta tabela:
 
-| *categoria* sinalizador | Afeta |
+| sinalizador de *categoria* | Prejudica |
 |-----------------|---------|
 | **LC_ALL** |Todas as categorias, conforme listado abaixo. |
-| **LC_COLLATE** |O **strcoll**, **stricoll**, **wcscoll**, **wcsicoll**, **strxfrm**, **_ strncoll**, **strnicoll**, **wcsncoll**, **wcsnicoll**, e **wcsxfrm** funções. |
-| **LC_CTYPE** | As funções de manipulação de caracteres (exceto **isdigit**, **isxdigit**, **mbstowcs**, e **mbtowc**, que não são afetadas). |
-| **LC_MONETARY** | Informações de formatação monetária retornadas pela **localeconv** função. |
-| **LC_NUMERIC** | Caractere decimal para rotinas de saída formatadas (como **printf**), para as rotinas de conversão de dados e para as informações de formatação não-monetária retornadas pela **localeconv**. Além do caractere de vírgula decimal **LC_NUMERIC** separador de milhares de conjuntos e o agrupamento de controle de cadeia de caracteres retornada pela [localeconv](localeconv.md). |
-| **LC_TIME** | O **strftime** e **wcsftime** funções. |
+| **LC_COLLATE** |As funções **strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**e **wcsxfrm** . |
+| **LC_CTYPE** | As funções de manipulação de caracteres (exceto **IsDigit**, **isxdigit**, **mbstowcs**e **mbtowc**, que não são afetadas). |
+| **LC_MONETARY** | Informações de formatação monetária retornadas pela função **localeconv** . |
+| **LC_NUMERIC** | Caractere de ponto decimal para as rotinas de saída formatadas (como **printf**), para as rotinas de conversão de dados e para as informações de formatação não monetária retornadas por **localeconv**. Além do caractere de ponto decimal, **LC_NUMERIC** define o separador de milhar e a cadeia de caracteres de controle de agrupamento retornada por [localeconv](localeconv.md). |
+| **LC_TIME** | As funções **strftime** e **wcsftime** . |
 
-Essa função valida o *categoria* e *localidade* parâmetros. Se o parâmetro category não for um dos valores fornecidos na tabela anterior ou se *localidade* é **nulo**, a função retornará **nulo**.
+Essa função valida os parâmetros de *categoria* e *localidade* . Se o parâmetro Category não for um dos valores fornecidos na tabela anterior ou se *locale* for **NULL**, a função retornará **NULL**.
 
-O *localidade* argumento é um ponteiro para uma cadeia de caracteres que especifica a localidade. Para obter informações sobre o formato do *localidade* argumento, consulte [nomes de localidades, idiomas e cadeias de caracteres de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).
+O argumento de *localidade* é um ponteiro para uma cadeia de caracteres que especifica a localidade. Para obter informações sobre o formato do argumento de *localidade* , consulte [nomes de localidade, idiomas e cadeias de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).
 
-O *localidade* argumento pode assumir um nome de localidade, uma cadeia de caracteres de idioma, uma cadeia de caracteres de idioma e código de país/região, uma página de código, ou uma cadeia de caracteres de idioma, o código de país/região e página de código. O conjunto de nomes de localidade, idiomas, códigos de país/região e páginas de código disponíveis inclui tudo o que tem suporte na API NLS do Windows, com exceção das páginas de código que exigem mais de dois bytes por caractere – por exemplo, UTF-7 e UTF-8. Se você fornecer uma página de código como UTF-7 ou UTF-8 **create_locale** falhará e retornará **nulo**. O conjunto de nomes de localidades com suporte pelo **create_locale** descritos nos [nomes de localidades, idiomas e cadeias de caracteres de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). O conjunto de cadeias de caracteres de idioma e país/região com suporte pelo **create_locale** são listadas na [cadeias de caracteres de idioma](../../c-runtime-library/language-strings.md) e [cadeias de caracteres de país/região](../../c-runtime-library/country-region-strings.md).
+O argumento de *localidade* pode usar um nome de localidade, uma cadeia de caracteres de idioma, uma cadeia de caracteres de idioma e um código de país/região, uma página de código ou uma cadeia de caracteres de idioma, código de país/região e página de código. O conjunto de nomes de localidade, idiomas, códigos de país/região e páginas de código disponíveis inclui tudo o que tem suporte na API NLS do Windows, com exceção das páginas de código que exigem mais de dois bytes por caractere – por exemplo, UTF-7 e UTF-8. Se você fornecer uma página de código como UTF-7 ou UTF-8, **_create_locale** falhará e retornará **NULL**. O conjunto de nomes de localidade com suporte do **_create_locale** é descrito em [nomes de localidade, linguagens e cadeias de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). O conjunto de cadeias de caracteres de idioma e país/região com suporte do **_create_locale** está listado em cadeias de caracteres de [idioma](../../c-runtime-library/language-strings.md) e cadeias de [país/região](../../c-runtime-library/country-region-strings.md).
 
 Para obter mais informações sobre as configurações de localidade, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md).
 

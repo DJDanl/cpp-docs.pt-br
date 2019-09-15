@@ -1,9 +1,9 @@
 ---
 title: _umask
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _umask
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _umask
 helpviewer_keywords:
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: 113bf97b0fe93204cd41de20bc36a8be080a88b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44614384427b9b70102da03972969c9aa8ef4b83
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155414"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957489"
 ---
-# <a name="umask"></a>_umask
+# <a name="_umask"></a>_umask
 
 Define a máscara de permissão de arquivo padrão. Uma versão mais segura dessa função está disponível. Consulte [_umask_s](umask-s.md).
 
@@ -50,13 +53,13 @@ Configuração de permissão padrão.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**umask** retorna o valor anterior da *pmode*. Nenhum erro é retornado.
+**_umask** retorna o valor anterior de *pmode*. Nenhum erro é retornado.
 
 ## <a name="remarks"></a>Comentários
 
-O **umask** função define a máscara de permissão de arquivo do processo atual para o modo especificado por *pmode*. A máscara de permissão de arquivo modifica a configuração de permissão de novos arquivos criados pela **Creat**, **Open**, ou **sopen**. Se um bit na máscara for 1, o bit correspondente no valor da permissão solicitada do arquivo será definido como 0 (não permitido). Se um bit na máscara for 0, o bit correspondente será deixado inalterado. A configuração de permissão para um novo arquivo não é definida até que o arquivo é seja fechado pela primeira vez.
+A função **_umask** define a máscara de permissão de arquivo do processo atual para o modo especificado por *pmode*. A máscara de permissão de arquivo modifica a configuração de permissão de novos arquivos criados por **_creat**, **_open**ou **_sopen**. Se um bit na máscara for 1, o bit correspondente no valor da permissão solicitada do arquivo será definido como 0 (não permitido). Se um bit na máscara for 0, o bit correspondente será deixado inalterado. A configuração de permissão para um novo arquivo não é definida até que o arquivo é seja fechado pela primeira vez.
 
-A expressão de inteiro *pmode* contém uma ou ambas das seguintes constantes de manifesto, definidas em SYS\STAT. H:
+A expressão de inteiro *pmode* contém uma ou ambas as seguintes constantes de manifesto, definidas em SYS\Stat. T
 
 |*pmode*| |
 |-|-|
@@ -64,9 +67,9 @@ A expressão de inteiro *pmode* contém uma ou ambas das seguintes constantes de
 | **_S_IREAD** | Leitura permitida. |
 | **_S_IREAD** &#124; **_S_IWRITE** | Leitura e gravação permitidas. |
 
-Quando as duas constantes são informadas, elas são unidas com o operador OR bit a bit ( **&#124;** ). Se o *pmode* argumento é **s_iread**, leitura não será permitida (o arquivo é somente gravação). Se o *pmode* argumento é **s_iwrite**, gravação não é permitida (o arquivo é somente leitura). Por exemplo, se o bit de gravação estiver definido na máscara, quaisquer novos arquivos serão somente leitura. Observe que nos sistemas operacionais MS-DOS e Windows, todos os arquivos podem ser lidos; não é possível conceder permissão somente gravação. Portanto, definir a bit de leitura **umask** não tem nenhum efeito sobre os modos do arquivo.
+Quando ambas as constantes são fornecidas, elas são unidas com o operador OR bit- **&#124;** a-or (). Se o argumento *pmode* for **_S_IREAD**, a leitura não será permitida (o arquivo é somente gravação). Se o argumento *pmode* for **_S_IWRITE**, a gravação não será permitida (o arquivo é somente leitura). Por exemplo, se o bit de gravação estiver definido na máscara, quaisquer novos arquivos serão somente leitura. Observe que nos sistemas operacionais MS-DOS e Windows, todos os arquivos podem ser lidos; não é possível conceder permissão somente gravação. Portanto, definir o bit de leitura com **_umask** não tem nenhum efeito nos modos do arquivo.
 
-Se *pmode* não é uma combinação de uma das constantes de manifesto nem incorporar um conjunto alternativo de constantes, a função simplesmente irá ignorar os.
+Se *pmode* não for uma combinação de uma das constantes de manifesto ou incorporar um conjunto alternativo de constantes, a função simplesmente irá ignorá-las.
 
 ## <a name="requirements"></a>Requisitos
 

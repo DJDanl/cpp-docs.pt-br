@@ -1,12 +1,12 @@
 ---
 title: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _iswxdigit_l
 - iswxdigit
 - isxdigit
 - _isxdigit_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswxdigit
 - isxdigit
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-ms.openlocfilehash: 29429aa636d3a06b0ee6ceddfcc8a91a7db0e009
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18f360e66583dfbf5033f813deed0b56abc71260
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157340"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953586"
 ---
-# <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
+# <a name="isxdigit-iswxdigit-_isxdigit_l-_iswxdigit_l"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 
 Determina se um inteiro representa um caractere que é um dígito hexadecimal.
 
@@ -75,13 +78,13 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas retornará diferente de zero se *c* for uma representação específica de um dígito hexadecimal. **isxdigit** retorna um valor diferente de zero se *c* é um dígito hexadecimal (A - F, a – f ou 0 – 9). **iswxdigit** retorna um valor diferente de zero se *c* é um caractere largo que corresponde a um caractere de dígito hexadecimal. Cada uma dessas rotinas retornará 0 se *c* não satisfaz a condição de teste.
+Cada uma dessas rotinas retornará zero se *c* for uma representação específica de um dígito hexadecimal. **isxdigit** retornará um valor diferente de zero se *c* for um dígito hexadecimal (a-f, a-f ou 0-9). **iswxdigit** retornará um valor diferente de zero se *c* for um caractere largo que corresponde a um caractere de dígito hexadecimal. Cada uma dessas rotinas retornará 0 se *c* não atender à condição de teste.
 
-Para a localidade "C", o **iswxdigit** função não oferece suporte a caracteres hexadecimais de largura total Unicode.
+Para a localidade "C", a função **iswxdigit** não oferece suporte a caracteres hexadecimais de largura inteira Unicode.
 
-As versões dessas funções que têm o **l** sufixo usam a localidade passada em vez da localidade atual para seu comportamento dependente da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções que têm o sufixo **_L** usam a localidade que é passada em vez da localidade atual para seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-O comportamento de **isxdigit** e **isxdigit_l** é indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e *c* é não um desses valores, as funções geram uma asserção.
+O comportamento de **isxdigit** e **_isxdigit_l** será indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca CRT de depuração é usada e *c* não é um desses valores, as funções geram uma asserção.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

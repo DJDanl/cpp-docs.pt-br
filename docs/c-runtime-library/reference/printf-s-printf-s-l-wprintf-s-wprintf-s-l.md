@@ -1,12 +1,12 @@
 ---
 title: printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _printf_s_l
 - wprintf_s
 - _wprintf_s_l
 - printf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wprintf_s
 - printf_s
@@ -36,14 +39,14 @@ helpviewer_keywords:
 - tprintf_s_l function
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
-ms.openlocfilehash: 6b07fd90e0390d5c39bc8f5885f5744de20eeb79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8b324b5f3c23b324bdcd43e3529ad3a3d4d6847
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231995"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950193"
 ---
-# <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
+# <a name="printf_s-_printf_s_l-wprintf_s-_wprintf_s_l"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 
 Imprime saída formatada para o fluxo de saída padrão. Estas versões de [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md) contêm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -87,17 +90,17 @@ Retorna o número de caracteres impressos ou um valor negativo se ocorrer um err
 
 ## <a name="remarks"></a>Comentários
 
-O **printf_s** função formata e imprime uma série de caracteres e valores para o fluxo de saída padrão **stdout**. Se os argumentos seguirem o *formato* cadeia de caracteres, o *formato* cadeia de caracteres deve conter especificações que determinam o formato de saída para os argumentos.
+A função **printf_s** formata e imprime uma série de caracteres e valores para o fluxo de saída padrão, **stdout**. Se os argumentos seguirem a cadeia de caracteres de *formato* , a cadeia de caracteres de *formato* deverá conter especificações que determinam o formato de saída para os argumentos.
 
-A principal diferença entre **printf_s** e **printf** é que **printf_s** verifica a cadeia de caracteres de formato para caracteres de formatação válidos, enquanto **printf**  apenas verifica se a cadeia de caracteres de formato for um ponteiro nulo. Se uma das verificações falhar, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará -1 e definirá **errno** à **EINVAL**.
+A principal diferença entre **printf_s** e **printf** é que o **printf_s** verifica a cadeia de caracteres de formatação válida, enquanto **printf** verifica apenas se a cadeia de caracteres de formato é um ponteiro nulo. Se uma das verificações falhar, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará-1 e definirá **errno** como **EINVAL**.
 
-Para obter informações sobre **errno** e códigos de erro, consulte [doserrno, errno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obter informações sobre **errno** e códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**printf_s** e **fprintf_s** se comportam de forma idêntica exceto que **printf_s** grava a saída **stdout** em vez de um destino do tipo **Arquivo**. Para obter mais informações, consulte [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
+**printf_s** e **fprintf_s** se comportam de forma idêntica, exceto que **printf_s** grava a saída em **stdout** em vez de um destino do tipo **File**. Para obter mais informações, consulte [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
 
-**wprintf_s** é uma versão de caractere largo de **printf_s**; *formato* é uma cadeia de caracteres largos. **wprintf_s** e **printf_s** terão comportamento idêntico se o fluxo for aberto no modo ANSI. **printf_s** atualmente, não suporta a saída em um fluxo UNICODE.
+**wprintf_s** é uma versão de caractere largo do **printf_s**; *Format* é uma cadeia de caracteres largos. **wprintf_s** e **printf_s** se comportam de forma idêntica se o fluxo é aberto no modo ANSI. Atualmente, o **printf_s** não dá suporte à saída em um fluxo Unicode.
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -106,7 +109,7 @@ As versões dessas funções com o **l** sufixo são idênticas, exceto que eles
 |**_tprintf_s**|**printf_s**|**printf_s**|**wprintf_s**|
 |**_tprintf_s_l**|**_printf_s_l**|**_printf_s_l**|**_wprintf_s_l**|
 
-O *formato* argumento consiste em caracteres comuns, sequências de escape, e (se os argumentos seguirem *formato*) especificações de formato. Os caracteres comuns e as sequências de escape são copiadas para **stdout** na ordem de sua aparência. Por exemplo, a linha
+O argumento *Format* consiste em caracteres comuns, sequências de escape e (se os argumentos seguirem o *formato*) especificações de formato. Os caracteres e as sequências de escape comuns são copiados para **stdout** na ordem de sua aparência. Por exemplo, a linha
 
 ```C
 printf_s("Line one\n\t\tLine two\n");
@@ -119,7 +122,7 @@ Line one
         Line two
 ```
 
-[Especificações de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) sempre começam com um sinal de porcentagem (**%**) e são lidos da esquerda para a direita. Quando **printf_s** encontra a primeira especificação de formato (se houver), ele converte o valor do primeiro argumento após *formato* e produz saídas de acordo. A segunda especificação de formato faz com que o segundo argumento seja convertido e a saída gerada e assim por diante. Se houver mais argumentos do que especificações de formato, os argumentos extras serão ignorados. Os resultados serão indefinidos se não houver argumentos suficientes para as especificações de formato.
+As [especificações de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) sempre começam com um sinal **%** de porcentagem () e são lidas da esquerda para a direita. Quando o **printf_s** encontra a primeira especificação de formato (se houver), ele converte o valor do primeiro argumento após o *formato* e o gera de acordo. A segunda especificação de formato faz com que o segundo argumento seja convertido e a saída gerada e assim por diante. Se houver mais argumentos do que especificações de formato, os argumentos extras serão ignorados. Os resultados serão indefinidos se não houver argumentos suficientes para as especificações de formato.
 
 > [!IMPORTANT]
 > Verifique se *format* não é uma cadeia de caracteres definida pelo usuário.
@@ -131,7 +134,7 @@ Line one
 |**printf_s**, **_printf_s_l**|\<stdio.h>|
 |**wprintf_s**, **_wprintf_s_l**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

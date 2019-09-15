@@ -1,11 +1,11 @@
 ---
 title: round, roundf, roundl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - round
 - roundl
 - roundf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - roundf
 - roundl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b92f4a94fff06fe6948701240b61040a610981f3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357441"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949113"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -65,7 +68,7 @@ O valor do ponto flutuante a ser arredondado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **arredondar** funções retornam um valor de ponto flutuante que representa o inteiro mais próximo a *x*. Valores decimais são arredondados para cima, independentemente da configuração do modo de arredondamento de ponto flutuante. Nenhum erro é retornado.
+As funções **round** retornam um valor de ponto flutuante que representa o inteiro mais próximo a *x*. Valores decimais são arredondados para cima, independentemente da configuração do modo de arredondamento de ponto flutuante. Nenhum erro é retornado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
@@ -73,7 +76,7 @@ O **arredondar** funções retornam um valor de ponto flutuante que representa o
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **arredondar** que usam e retornam **float** e **longo** **double** valores. Em um programa do C **arredondar** sempre usa e retorna um **duplo**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **round** que levam e retornam valores **float** e **Long** **duplos** . Em um programa C, **round** sempre usa e retorna um **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

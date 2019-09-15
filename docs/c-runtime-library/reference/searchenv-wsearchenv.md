@@ -1,10 +1,10 @@
 ---
 title: _searchenv, _wsearchenv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _searchenv
 - _wsearchenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wsearchenv
 - _tsearchenv
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-ms.openlocfilehash: c1d2361fceec448c98fd9e5a368653aac38c83e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3139ab87335ba581ef65707602c5da1819ce4a1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356765"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948770"
 ---
-# <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
+# <a name="_searchenv-_wsearchenv"></a>_searchenv, _wsearchenv
 
 Usa caminhos de ambiente para pesquisar por um arquivo. Versões mais seguras dessas funções estão disponíveis; consulte [_searchenv_s, _wsearchenv_s](searchenv-s-wsearchenv-s.md).
 
@@ -88,19 +91,19 @@ O buffer para armazenar o caminho completo.
 
 ## <a name="remarks"></a>Comentários
 
-O **SEARCHENV** rotina procurará o arquivo de destino no domínio especificado. O *varname* variável pode ser qualquer ambiente ou variável definida pelo usuário — por exemplo, **caminho**, **LIB**, ou **INCLUDE**— que especifica um lista de caminhos de diretório. Porque **SEARCHENV** diferencia maiusculas de minúsculas *varname* deve corresponder ao uso de variável de ambiente.
+A rotina **_searchenv** procura o arquivo de destino no domínio especificado. A variável *VarName* pode ser qualquer ambiente ou variável definida pelo usuário — por exemplo, **Path**, **lib**ou **include**— que especifica uma lista de caminhos de diretório. Como **_searchenv** diferencia maiúsculas de minúsculas, *VarName* deve corresponder ao caso da variável de ambiente.
 
-A rotina pesquisa pelo arquivo primeiramente no diretório de trabalho atual. Se não encontrar o arquivo, ela procurará nos diretórios especificados pela variável de ambiente. Se o arquivo de destino estiver em um desses diretórios, o caminho criado recentemente é copiado para *pathname*. Se o *filename* arquivo não for encontrado, *pathname* contém uma cadeia de caracteres vazia terminada em nulo.
+A rotina pesquisa pelo arquivo primeiramente no diretório de trabalho atual. Se não encontrar o arquivo, ela procurará nos diretórios especificados pela variável de ambiente. Se o arquivo de destino estiver em um desses diretórios, o caminho recém-criado será copiado em *PathName*. Se o arquivo *filename* não for encontrado, *PathName* conterá uma cadeia de caracteres vazia terminada em nulo.
 
-O *pathname* buffer deve ser pelo menos **MAX_PATH** caracteres para acomodar o comprimento total do nome do caminho criado. Caso contrário, **SEARCHENV** poderia causar um estouro de *pathname* armazenar em buffer e causar um comportamento inesperado.
+O *buffer de nome de caminho deve* ter pelo menos **_MAX_PATH** caracteres para acomodar o comprimento completo do nome de caminho construído. Caso contrário, **_searchenv** poderá saturar o buffer de *nome de caminho* e causar um comportamento inesperado.
 
-**wsearchenv** é uma versão de caractere largo de **SEARCHENV**e os argumentos a serem **wsearchenv** são cadeias de caracteres largos. **wsearchenv** e **SEARCHENV** se comportam de forma idêntica caso contrário.
+**_wsearchenv** é uma versão de caractere largo de **_searchenv**, e os argumentos para **_wsearchenv** são cadeias de caracteres largos. **_wsearchenv** e **_searchenv** se comportam de outra forma.
 
-Se *filename* é uma cadeia de caracteres vazia, essas funções retornarão **ENOENT**.
+Se *filename* for uma cadeia de caracteres vazia, essas funções retornarão **ENOENT**.
 
-Se *filename* ou *pathname* é um **nulo** ponteiro, o manipulador de parâmetro inválido será invocado, conforme descrito no [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e defina **errno** à **EINVAL**.
+Se *filename* ou *PathName* for um ponteiro **NULL** , o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam-1 e definem **errno** como **EINVAL**.
 
-Para obter mais informações sobre **errno** e códigos de erro, consulte [constantes errno](../../c-runtime-library/errno-constants.md).
+Para obter mais informações sobre códigos de erro e **errno** , consulte [constantes errno](../../c-runtime-library/errno-constants.md).
 
 Em C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais recentes e mais seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

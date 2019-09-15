@@ -1,12 +1,12 @@
 ---
 title: _snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snwscanf
 - _snscanf_l
 - _snscanf
 - _snwscanf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _snscanf
 - _snscanf_l
@@ -48,14 +51,14 @@ helpviewer_keywords:
 - strings [C++], reading
 - _snscanf function
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
-ms.openlocfilehash: ba80bec70bbb96c383d0bbe73ed52f30fb90b7ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f259eede1b2927b4676467c3450504f7ff7c19de
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355400"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947938"
 ---
-# <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
+# <a name="_snscanf-_snscanf_l-_snwscanf-_snwscanf_l"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 
 Lê dados formatados de um comprimento especificado de uma cadeia de caracteres. Versões mais seguras dessas funções estão disponíveis; consulte [_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l](snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md).
 
@@ -96,30 +99,30 @@ int __cdecl _snwscanf_l(
 A cadeia de caracteres de entrada para examinar.
 
 *length*<br/>
-Número de caracteres a examinar em *entrada*.
+Número de caracteres a serem examinados na *entrada*.
 
 *format*<br/>
 Um ou mais especificadores de formato.
 
 *...*<br/>
-Variáveis opcionais que serão usadas para armazenar os valores extraídos da cadeia de entrada por especificadores de formato *formato*.
+Variáveis opcionais que serão usadas para armazenar os valores extraídos da cadeia de caracteres de entrada pelos especificadores de formato no *formato*.
 
 *locale*<br/>
 A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Ambas essas funções retornam o número de campos convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos mas não foram atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor retornado será **EOF** para um erro ou se o final da cadeia de caracteres for atingido antes da primeira conversão. Para obter mais informações, consulte [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
+Ambas essas funções retornam o número de campos convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos mas não foram atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor de retorno é **EOF** para um erro ou se o final da cadeia de caracteres for atingido antes da primeira conversão. Para obter mais informações, consulte [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
-Se *entrada* ou *formato* é um **nulo** ponteiro, ou se *comprimento* é menor que ou igual a zero, o manipulador de parâmetro inválido será invocado, como descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EOF** e defina **errno** para **EINVAL**.
+Se a *entrada* ou o *formato* for um ponteiro **nulo** ou se *Length* for menor ou igual a zero, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam **EOF** e definem **errno** como **EINVAL**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Esta função é como **sscanf** , exceto que ele fornece a capacidade de especificar um número fixo de caracteres a examinar da cadeia de entrada. Para obter mais informações, consulte [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
+Essa função é como **sscanf** , exceto pelo fato de que ela fornece a capacidade de especificar um número fixo de caracteres para examinar a partir da cadeia de caracteres de entrada. Para obter mais informações, consulte [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

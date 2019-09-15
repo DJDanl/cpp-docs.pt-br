@@ -1,9 +1,9 @@
 ---
 title: wcsrtombs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcsrtombs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcsrtombs
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-ms.openlocfilehash: 46ef195ec4685c327c4b5951ec44e5c363214b59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6640a027b03b7aa0dceaf8e61af6cb43a44d6e0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155323"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945050"
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 
@@ -64,7 +67,7 @@ Aponta indiretamente para o local da cadeia de caracteres largos a ser convertid
 O número de caracteres a ser convertido.
 
 *mbstate*<br/>
-Um ponteiro para um **mbstate_t** objeto de estado de conversão.
+Um ponteiro para um objeto de estado de conversão **mbstate_t** .
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -72,19 +75,19 @@ Retorna o número de bytes convertidos com êxito, não incluindo o byte nulo de
 
 ## <a name="remarks"></a>Comentários
 
-O **wcsrtombs** função converte uma cadeia de caracteres largos que começa no estado da conversão especificado contido na *mbstate*, base nos valores indiretos apontados em *wcstr*, no endereço de *mbstr*. A conversão continuará para cada caractere até: depois que um nulo de caractere largo de terminação for encontrado, quando um caractere não correspondente for encontrado, ou quando o próximo caractere exceder o limite contido em *contagem*. Se **wcsrtombs** encontra o caractere nulo de caractere largo (L '\0') antes ou quando *contagem* ocorre, ele converte em um 0 de 8 bits e é interrompido.
+A função **wcsrtombs** converte uma cadeia de caracteres largos, começando no estado de conversão especificado contido em *mbstate*, dos valores indiretos apontados em *wcstr*no endereço de *mbstr*. A conversão continuará para cada caractere até: depois que um caractere largo de encerramento nulo for encontrado, quando um caractere não correspondente for encontrado ou quando o próximo caractere exceder o limite contido na *contagem*. Se **wcsrtombs** encontrar o caractere nulo de caractere largo (L ' \ 0 ') antes ou quando ocorrer a *contagem* , ele o converterá em um 0 de 8 bits e será interrompido.
 
-Dessa forma, a cadeia de caracteres multibyte em *mbstr* é terminada em nulo somente se **wcsrtombs** encontrar um caractere nulo de caractere largo durante a conversão. Se as sequências apontadas por *wcstr* e *mbstr* se sobrepõem, o comportamento do **wcsrtombs** é indefinido. **wcsrtombs** é afetado pela categoria LC_TYPE da localidade atual.
+Assim, a cadeia de caracteres multibyte em *mbstr* será terminada em nulo somente se **wcsrtombs** encontrar um caractere nulo de caractere largo durante a conversão. Se as sequências apontadas por *wcstr* e *mbstr* se sobrepõem, o comportamento de **wcsrtombs** é indefinido. **wcsrtombs** é afetado pela categoria LC_TYPE da localidade atual.
 
-O **wcsrtombs** função difere [wcstombs, wcstombs_l](wcstombs-wcstombs-l.md) por sua capacidade de reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas posteriores às mesmas funções ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis.  Por exemplo, um aplicativo usaria **wcsrlen** vez **wcsnlen**, se uma chamada subsequente para **wcsrtombs** foram usadas em vez de **wcstombs**.
+A função **wcsrtombs** difere de [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md) por sua reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas subsequentes para as mesmas ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis.  Por exemplo, um aplicativo usaria **wcsrlen** em vez de **wcsnlen**, se uma chamada subsequente para **wcsrtombs** fosse usada em vez de **wcstombs**.
 
-Se o *mbstr* argumento é **nulo**, **wcsrtombs** retorna o tamanho necessário em bytes da cadeia de caracteres de destino. Se *mbstate* for nulo, a interna **mbstate_t** estado da conversão é usado. Se a sequência de caracteres *wchar* multibyte correspondente não tem representação de caractere, -1 será retornado e o **errno** está definido como **EILSEQ**.
+Se o argumento *mbstr* for **nulo**, **wcsrtombs** retornará o tamanho necessário em bytes da cadeia de caracteres de destino. Se *mbstate* for NULL, o estado de conversão **mbstate_t** interno será usado. Se a sequência de caracteres *WCHAR* não tiver uma representação de caractere multibyte correspondente, um-1 será retornado e o **errno** será definido como **EILSEQ**.
 
 Em C++, essa função tem uma sobrecarga de modelo que invoca o equivalente mais recente e seguro dessa função. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Exceções
 
-O **wcsrtombs** função será multithread-safe contanto que nenhuma função no thread atual chame **setlocale** enquanto essa função está em execução e o *mbstate* não é nulo.
+A função **wcsrtombs** é multithread segura, desde que nenhuma função no thread atual chame **setlocalize** enquanto essa função está em execução e o *mbstate* não é nulo.
 
 ## <a name="example"></a>Exemplo
 

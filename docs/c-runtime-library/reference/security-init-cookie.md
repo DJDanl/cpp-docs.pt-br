@@ -1,9 +1,9 @@
 ---
 title: __security_init_cookie
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __security_init_cookie
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - security_init_cookie
 - __security_init_cookie
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - security_init_cookie function
 - global security cookie
 ms.assetid: 32119905-0897-4a1c-84ca-bffd16c9b2af
-ms.openlocfilehash: c7b25e05b4574a7b397cd07d55000a5e53db58f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f7e9924f4a96803749418d777e5ee2020f9df78
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356830"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948712"
 ---
-# <a name="securityinitcookie"></a>__security_init_cookie
+# <a name="__security_init_cookie"></a>__security_init_cookie
 
 Inicializa o cookie de segurança global.
 
@@ -45,9 +48,9 @@ void __security_init_cookie(void);
 
 O cookie de segurança global é usado para proteção de estouro de buffer no código compilado com [/GS (Buffer Security Check)](../../build/reference/gs-buffer-security-check.md) e no código que usa a manipulação de exceção. Na entrada para uma função protegida contra estouro, o cookie é colocado na pilha e na saída o valor da pilha é comparado com o cookie global. Qualquer diferença entre eles indica que ocorreu um estouro do buffer e causa o encerramento imediato do programa.
 
-Normalmente, **security_init_cookie** é chamado pelo CRT quando ele é inicializado. Se você ignorar inicialização CRT — por exemplo, se você usar [/ENTRY](../../build/reference/entry-entry-point-symbol.md) para especificar um ponto de entrada, em seguida, você deve chamar **security_init_cookie** por conta própria. Se **security_init_cookie** não for chamado, a global cookie de segurança é definida como um valor padrão e a proteção de estouro de buffer está comprometida. Como um invasor pode explorar esse valor de cookie padrão para vencer as verificações de estouro de buffer, é recomendável que você sempre chame **security_init_cookie** ao definir seu próprio ponto de entrada.
+Normalmente, **__security_init_cookie** é chamado pelo CRT quando ele é inicializado. Se você ignorar a inicialização do CRT — por exemplo, se você usar [/entry](../../build/reference/entry-entry-point-symbol.md) para especificar um ponto de entrada, você deverá chamar o **__security_init_cookie** por conta própria. Se **__security_init_cookie** não for chamado, o cookie de segurança global será definido como um valor padrão e a proteção contra estouro de buffer será comprometida. Como um invasor pode explorar esse valor de cookie padrão para vencer as verificações de saturação de buffer, é recomendável que você sempre chame **__security_init_cookie** ao definir seu próprio ponto de entrada.
 
-A chamada para **security_init_cookie** devem ser feitas antes de qualquer protegida contra estouro função é inserida; caso contrário, será detectado um estouro de buffer artificiais. Para obter mais informações, consulte [Erro em Tempo de Execução C R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
+A chamada para **__security_init_cookie** deve ser feita antes que qualquer função protegida por saturação seja inserida; caso contrário, será detectada uma saturação de buffer falsa. Para obter mais informações, consulte [Erro em Tempo de Execução C R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -59,7 +62,7 @@ Consulte os exemplos em [Erro em Tempo de Execução C R6035](../../error-messag
 |-------------|---------------------|
 |**__security_init_cookie**|\<process.h>|
 
-**security_init_cookie** é uma extensão da Microsoft para a biblioteca de tempo de execução C padrão. Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+**__security_init_cookie** é uma extensão da Microsoft para a biblioteca de tempo de execução C padrão. Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,9 +1,9 @@
 ---
 title: _open_osfhandle
 ms.date: 05/21/2019
-apiname:
+api_name:
 - _open_osfhandle
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _open_osfhandle
 - open_osfhandle
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: 9e940844eb5e37755c10999feb294981afc8683a
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 2fa2d8190082967d14dd780aa9be7286996b1f9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821591"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951212"
 ---
-# <a name="openosfhandle"></a>_open_osfhandle
+# <a name="_open_osfhandle"></a>_open_osfhandle
 
-Associa um descritor de arquivo de tempo de execução do C com um identificador de arquivo do sistema operacional existente.
+Associa um descritor de arquivo em tempo de execução C a um identificador de arquivo do sistema operacional existente.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -58,7 +61,7 @@ Se for bem-sucedido, **_open_osfhandle** retornará um descritor de arquivo de t
 
 ## <a name="remarks"></a>Comentários
 
-O **open_osfhandle** função aloca um descritor de arquivo de tempo de execução C. Associa esse descritor de arquivo com o identificador de arquivo do sistema operacional especificado pelo *osfhandle*. Para evitar um aviso do compilador, converta o argumento *osfhandle* de **HANDLE** para **intptr_t**. O argumento *flags* é uma expressão inteira formada por uma ou mais constantes de manifesto definidas em \<fcntl.h>. Você pode usar o operador OR bit a bit ( **&#124;** ) para combinar duas ou mais constantes de manifesto para formar o *sinalizadores* argumento.
+A função **_open_osfhandle** aloca um descritor de arquivo em tempo de execução C. Ele associa este descritor de arquivo ao identificador de arquivo do sistema operacional especificado por *osfhandle*. Para evitar um aviso do compilador, converta o argumento *osfhandle* de **HANDLE** para **intptr_t**. O argumento *flags* é uma expressão inteira formada por uma ou mais constantes de manifesto definidas em \<fcntl.h>. Você pode usar o operador OR-bit ( **&#124;** ) para combinar duas ou mais constantes de manifesto para formar o argumento *flags* .
 
 As constantes de manifesto são definidas em \<fcntl.h>:
 
@@ -69,7 +72,7 @@ As constantes de manifesto são definidas em \<fcntl.h>:
 | **\_O\_TEXT** | Abre o arquivo no modo de texto (convertido). |
 | **\_O\_WTEXT** | Abre o arquivo no modo Unicode (convertido em UTF-16). |
 
-A chamada **_open_osfhandle** transfere a propriedade do identificador de arquivo do Win32 para o descritor de arquivo. Para fechar um arquivo aberto usando **_open_osfhandle**, chame [\_close](close.md). O identificador de arquivo do sistema operacional subjacente também é fechado por uma chamada para **_close**. Não chame a função **CloseHandle** do Win32 no identificador original. Se o descritor de arquivo pertence a um **arquivo &#42;**  stream e, em seguida, uma chamada para [fclose](fclose-fcloseall.md) fecha o descritor de arquivo e o identificador subjacente. Nesse caso, não chame **_close** no descritor de arquivo ou **CloseHandle** no identificador original.
+A chamada **_open_osfhandle** transfere a propriedade do identificador de arquivo do Win32 para o descritor de arquivo. Para fechar um arquivo aberto usando **_open_osfhandle**, chame [\_close](close.md). O identificador de arquivo do sistema operacional subjacente também é fechado por uma chamada para **_close**. Não chame a função **CloseHandle** do Win32 no identificador original. Se o descritor de arquivo pertencer a um fluxo de **arquivos &#42;**  , uma chamada para [fclose](fclose-fcloseall.md) fechará o descritor de arquivo e o identificador subjacente. Nesse caso, não chame **_close** no descritor de arquivo ou **CloseHandle** no identificador original.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,7 +1,7 @@
 ---
 title: Macro offsetof
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,19 +12,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - offsetof
 helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-ms.openlocfilehash: a0f367dbe6fa2681a7d413304f32b5699b8f7cee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 278fca89046fcfc98e8c3ff726918cb4319e4ab0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156053"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951257"
 ---
 # <a name="offsetof-macro"></a>Macro offsetof
 
@@ -53,10 +56,10 @@ Nome do membro na estrutura de dados pai para o qual determinar o deslocamento.
 
 ## <a name="remarks"></a>Comentários
 
-O **offsetof** macro retorna o deslocamento em bytes do *memberName* desde o início da estrutura especificado por *structName* como um valor do tipo **size_ t**. Você pode especificar tipos com o **struct** palavra-chave.
+A macro **offsetof** retorna o deslocamento em bytes de *MemberName* do início da estrutura especificada por *structName* como um valor do tipo **size_t**. Você pode especificar tipos com a palavra-chave **struct** .
 
 > [!NOTE]
-> **offsetof** não é uma função e não pode ser descrito usando um protótipo de C.
+> **offsetof** não é uma função e não pode ser descrito usando um protótipo C.
 
 ## <a name="requirements"></a>Requisitos
 

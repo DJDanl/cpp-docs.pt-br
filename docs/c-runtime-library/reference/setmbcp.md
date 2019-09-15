@@ -1,9 +1,9 @@
 ---
 title: _setmbcp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _setmbcp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _setmbcp
 - setmbcp
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: c1f4967baa5fda68a7df33bcd08935dca23fab16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1db6a83bd864180d513f61cf255bd862283a6cd0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356453"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948209"
 ---
-# <a name="setmbcp"></a>_setmbcp
+# <a name="_setmbcp"></a>_setmbcp
 
 Define uma nova página de código multibyte.
 
@@ -50,11 +53,11 @@ Nova configuração de página de código para rotinas multibyte independentes d
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna 0 se a página de código é definida com êxito. Se um valor de página de código inválido é fornecido para *codepage*, retorna -1 e a configuração de página de código é alterado. Conjuntos **errno** à **EINVAL** se ocorrer uma falha de alocação de memória.
+Retorna 0 se a página de código é definida com êxito. Se um valor de página de código inválido for fornecido para *CodePage*, retornará-1 e a configuração da página de código não será alterada. Define **errno** como **EINVAL** se ocorrer uma falha de alocação de memória.
 
 ## <a name="remarks"></a>Comentários
 
-O **setmbcp** função especifica uma nova página de código multibyte. Por padrão, o sistema de tempo de execução define automaticamente a página de código multibyte para a página de código ANSI padrão do sistema. A configuração de página de código multibyte afeta todas as rotinas multibyte que não são dependentes da localidade. No entanto, é possível instruir **setmbcp** para usar a página de código definida para a localidade atual (consulte a seguinte lista de constantes de manifesto e resultados de comportamento associados). Para obter uma lista das rotinas de multibyte que dependem da página de código de localidade em vez da página de código multibyte, consulte [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
+A função **_setmbcp** especifica uma nova página de código multibyte. Por padrão, o sistema de tempo de execução define automaticamente a página de código multibyte para a página de código ANSI padrão do sistema. A configuração de página de código multibyte afeta todas as rotinas multibyte que não são dependentes da localidade. No entanto, é possível instruir o **_setmbcp** a usar a página de código definida para a localidade atual (consulte a lista de constantes de manifesto e os resultados de comportamento associados a seguir). Para obter uma lista das rotinas de multibyte que dependem da página de código de localidade em vez da página de código multibyte, consulte [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
 
 A página de código multibyte também afeta o processamento de caracteres multibyte pelas rotinas de biblioteca em tempo de execução a seguir:
 
@@ -64,17 +67,17 @@ A página de código multibyte também afeta o processamento de caracteres multi
 |[_fullpath](fullpath-wfullpath.md)|[Funções _spawn](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 |[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 
-Além disso, todas as rotinas de biblioteca de tempo de execução que recebem caracteres multibyte *argv* ou *envp* argumentos como parâmetros de programa (como o **EXEC** e **spawn** famílias) processam essas cadeias de caracteres de acordo com a página de código multibyte. Portanto, essas rotinas também são afetadas por uma chamada para **setmbcp** que altera a página de código multibyte.
+Além disso, todas as rotinas de biblioteca de tempo de execução que recebem argumentos de programa *argv* ou *envp* de caractere multibyte como parâmetros (como as famílias **_exec** e **_spawn** ) processam essas cadeias de caracteres de acordo com a página de código multibyte. Portanto, essas rotinas também são afetadas por uma chamada para **_setmbcp** que altera a página de código multibyte.
 
-O *codepage* argumento pode ser definido para qualquer um dos seguintes valores:
+O argumento *CodePage* pode ser definido como qualquer um dos seguintes valores:
 
-- **_MB_CP_ANSI** obtido de página de código ANSI do uso do sistema operacional na inicialização do programa.
+- **_MB_CP_ANSI** Use a página de código ANSI obtida do sistema operacional na inicialização do programa.
 
-- **Mb_cp_locale** use a página de código da localidade atual obtida de uma chamada anterior a [setlocale](setlocale-wsetlocale.md).
+- **_MB_CP_LOCALE** Use a página de código da localidade atual Obtida de uma chamada anterior para [setlocale](setlocale-wsetlocale.md).
 
-- **_MB_CP_OEM** obtido de página de código OEM do uso do sistema operacional na inicialização do programa.
+- **_MB_CP_OEM** Use a página de código OEM obtida do sistema operacional na inicialização do programa.
 
-- **_MB_CP_SBCS** use a página de código de byte único. Quando a página de código é definida como **_MB_CP_SBCS**, uma rotina como [ismbblead](ismbblead-ismbblead-l.md) sempre retorna false.
+- **_MB_CP_SBCS** Use a página de código de byte único. Quando a página de código é definida como **_MB_CP_SBCS**, uma rotina como [_ismbblead](ismbblead-ismbblead-l.md) sempre retorna false.
 
 - Qualquer outro valor de página de código válido, independentemente de ser um valor ANSI, OEM ou outra página de código com suporte pelo sistema operacional (exceto UTF-7 e UTF-8, que não têm suporte).
 

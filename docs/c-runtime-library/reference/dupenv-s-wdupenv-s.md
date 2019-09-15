@@ -1,10 +1,10 @@
 ---
 title: _dupenv_s, _wdupenv_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _dupenv_s
 - _wdupenv_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tdupenv_s
 - _dupenv_s
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: bc8af3282b57c9fa411aac97f5fa4d414bc3305b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f66828e0941c2324d75797cbb1fa77bdfa184205
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288856"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942016"
 ---
-# <a name="dupenvs-wdupenvs"></a>_dupenv_s, _wdupenv_s
+# <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s, _wdupenv_s
 
 Obtém um valor do ambiente atual.
 
@@ -68,7 +71,7 @@ errno_t _wdupenv_s(
 Buffer para armazenar o valor da variável.
 
 *numberOfElements*<br/>
-Tamanho de *buffer*.
+Tamanho do *buffer*.
 
 *varname*<br/>
 Nome da variável de ambiente.
@@ -77,26 +80,26 @@ Nome da variável de ambiente.
 
 Zero em caso de êxito; código de erro em caso de falha.
 
-Essas funções validam seus parâmetros. Se *buffer* ou *varname* está **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções definem **errno** à **EINVAL** e retornar **EINVAL**.
+Essas funções validam seus parâmetros; Se *buffer* ou *VarName* for **NULL**, o manipulador de parâmetro inválido será invocado conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções definirão **errno** como **EINVAL** e retornarão **EINVAL**.
 
-Se essas funções não é possível alocar memória suficiente, elas definidas *buffer* à **nulo** e *numberOfElements* como 0 e retorno **ENOMEM**.
+Se essas funções não puderem alocar memória suficiente, elas definirão o *buffer* como **nulo** e *numberOfElements* como 0 e retornará **ENOMEM**.
 
 ## <a name="remarks"></a>Comentários
 
-O **dupenv_s** função pesquisa a lista de variáveis de ambiente para *varname*. Se a variável for encontrada, **dupenv_s** aloca um buffer e copia o valor da variável para o buffer. Endereço e o tamanho do buffer são retornados em *buffer* e *numberOfElements*. Alocando o próprio buffer, **dupenv_s** fornece uma alternativa mais conveniente para [getenv_s, wgetenv_s](getenv-s-wgetenv-s.md).
+A função **_dupenv_s** pesquisa a lista de variáveis de ambiente para *VarName*. Se a variável for encontrada, **_dupenv_s** alocará um buffer e copiará o valor da variável para o buffer. O endereço e o comprimento do buffer são retornados em *buffer* e *numberOfElements*. Ao alocar o buffer em si, o **_dupenv_s** fornece uma alternativa mais conveniente para [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 
 > [!NOTE]
 > É de responsabilidade do programa chamador liberar a memória chamando [free](free.md).
 
-Se a variável não for encontrada, em seguida *buffer* é definido como **nulo**, *numberOfElements* é definido como 0, e o valor de retorno é 0, porque essa situação não é considerada como um erro condição.
+Se a variável não for encontrada, o *buffer* será definido como **NULL**, *numberOfElements* será definido como 0 e o valor de retorno será 0 porque essa situação não é considerada uma condição de erro.
 
-Se você não estiver interessado no tamanho do buffer que você pode passar **nulo** para *numberOfElements*.
+Se você não estiver interessado no tamanho do buffer, poderá passar **NULL** para *numberOfElements*.
 
-**dupenv_s** não diferencia maiusculas de minúsculas no sistema operacional Windows. **dupenv_s** usa a cópia do ambiente apontado pela variável global **Environ** para acessar o ambiente. Consulte os comentários no [getenv_s, wgetenv_s](getenv-s-wgetenv-s.md) para uma discussão sobre **Environ**.
+**_dupenv_s** não diferencia maiúsculas de minúsculas no sistema operacional Windows. **_dupenv_s** usa a cópia do ambiente apontado pela variável global **_environ** para acessar o ambiente. Consulte os comentários em [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) para uma discussão de **_environ**.
 
-O valor em *buffer* é uma cópia do valor da variável de ambiente; modificá-lo não tem nenhum efeito no ambiente. Use a função [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md) para modificar o valor de uma variável de ambiente.
+O valor no *buffer* é uma cópia do valor da variável de ambiente; modificá-lo não tem nenhum efeito no ambiente. Use a função [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md) para modificar o valor de uma variável de ambiente.
 
-**wdupenv_s** é uma versão de caractere largo de **dupenv_s**; os argumentos de **wdupenv_s** são cadeias de caracteres largos. O **wenviron** variável global é uma versão de caractere largo de **Environ**. Consulte os comentários no [getenv_s, wgetenv_s](getenv-s-wgetenv-s.md) para obter mais informações sobre **wenviron**.
+**_wdupenv_s** é uma versão de caractere largo do **_dupenv_s**; os argumentos de **_wdupenv_s** são cadeias de caracteres largos. A variável global **_wenviron** é uma versão de caractere largo de **_environ**. Consulte os comentários em [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) para obter mais informações sobre **_wenviron**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

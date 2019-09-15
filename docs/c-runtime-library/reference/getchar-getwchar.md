@@ -1,10 +1,10 @@
 ---
 title: getchar, getwchar
 ms.date: 11/04/2016
-apiname:
+api_name:
 - getchar
 - getwchar
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getwchar
 - GetChar
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: 5f8d7dbeb35c8818706eb6070df613df8654feb6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b969dc48e949efa02b807ec0ea442da7cb793e15
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287235"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955409"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
@@ -47,11 +50,11 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna o caractere lido. Para indicar um erro de leitura ou uma condição de fim-de-arquivo, **getchar** retorna **EOF**, e **getwchar** retorna **WEOF**. Para **getchar**, use **ferror** ou **feof** para verificar um erro ou fim do arquivo.
+Retorna o caractere lido. Para indicar um erro de leitura ou uma condição de fim de arquivo, **GetChar** retorna **EOF**e **getwchar** retorna **WEOF**. Para **GetChar**, use **referenciador** ou **feof** para verificar se há um erro ou para o fim do arquivo.
 
 ## <a name="remarks"></a>Comentários
 
-Cada rotina lê um único caractere de **stdin** e incrementa o ponteiro de arquivo associado para apontar para o próximo caractere. **getchar** é o mesmo que [fgetchar](fgetc-fgetwc.md), mas é implementado como uma função e como uma macro.
+Cada rotina lê um único caractere de **stdin** e incrementa o ponteiro de arquivo associado para apontar para o próximo caractere. **GetChar** é o mesmo que [_fgetchar](fgetc-fgetwc.md), mas é implementado como uma função e como uma macro.
 
 Essas funções bloqueiam o thread de chamada e, portanto, são thread-safe. Para ver uma versão sem bloqueio, consulte [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
 
@@ -68,7 +71,7 @@ Essas funções bloqueiam o thread de chamada e, portanto, são thread-safe. Par
 |**getchar**|\<stdio.h>|
 |**getwchar**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

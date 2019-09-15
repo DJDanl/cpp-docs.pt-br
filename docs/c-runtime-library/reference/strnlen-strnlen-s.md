@@ -1,7 +1,7 @@
 ---
 title: strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcsnlen
 - strnlen_s
 - _mbstrnlen
@@ -10,7 +10,7 @@ apiname:
 - strnlen
 - wcsnlen_s
 - _mbsnlen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -24,7 +24,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcsnlen
 - strnlen_s
@@ -58,19 +61,19 @@ helpviewer_keywords:
 - string length
 - strnlen_l function
 ms.assetid: cc05ce1c-72ea-4ae4-a7e7-4464e56e5f80
-ms.openlocfilehash: 960d57ed8c2b1d1dbc6843932b8c76fef35c34a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6613c79bd9637b857dbf825eca2b37c71c154bec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209664"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947008"
 ---
-# <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
+# <a name="strnlen-strnlen_s-wcsnlen-wcsnlen_s-_mbsnlen-_mbsnlen_l-_mbstrnlen-_mbstrnlen_l"></a>strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
 
 Obtém o tamanho de uma cadeia de caracteres usando a localidade atual ou uma que foi enviada. Essas são versões mais seguras do [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md).
 
 > [!IMPORTANT]
-> **mbsnlen**, **mbsnlen_l**, **mbstrnlen**, e **mbstrnlen_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnlen**, **_mbsnlen_l**, **_mbstrnlen**e **_mbstrnlen_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -124,22 +127,22 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Essas funções retornam o número de caracteres na cadeia de caracteres, sem incluir o caractere de terminação nula. Se houver um terminador nulo dentro dos primeiros *numberOfElements* bytes da cadeia de caracteres (ou caracteres largos para **wcsnlen**), em seguida, *numberOfElements* é retornado ao indicar a condição de erro; cadeias de caracteres de terminação nula tem comprimento estritamente menor que *numberOfElements*.
+Essas funções retornam o número de caracteres na cadeia de caracteres, sem incluir o caractere de terminação nula. Se não houver nenhum terminador nulo dentro dos primeiros *numberOfElements* bytes da cadeia de caracteres (ou caracteres largos para **wcsnlen**), *numberOfElements* será retornado para indicar a condição de erro; cadeias de caracteres terminadas em nulo têm comprimentos estritamente menores que *numberOfElements*.
 
-**mbstrnlen** e **mbstrnlen_l** retornar -1 se a cadeia de caracteres contiver um caractere multibyte inválido.
+**_mbstrnlen** e **_mbstrnlen_l** retornam-1 se a cadeia de caracteres contém um caractere multibyte inválido.
 
 ## <a name="remarks"></a>Comentários
 
 > [!NOTE]
-> **strnlen** não é uma substituição para **strlen**; **strnlen** se destina a ser usado apenas para calcular o tamanho dos dados não confiáveis recebidos em um buffer de tamanho conhecido — por exemplo, um pacote de rede. **strnlen** calcula o comprimento, mas não passa o fim do buffer se a cadeia de caracteres não finalizada. Em outras situações, use **strlen**. (O mesmo se aplica ao **wcsnlen**, **mbsnlen**, e **mbstrnlen**.)
+> **strnlen** não é uma substituição para **strlen**; o **strnlen** destina-se a ser usado apenas para calcular o tamanho dos dados não confiáveis de entrada em um buffer de tamanho conhecido — por exemplo, um pacote de rede. **strnlen** calcula o comprimento, mas não percorre o final do buffer se a cadeia de caracteres for desterminada. Para outras situações, use **strlen**. (O mesmo se aplica a **wcsnlen**, **_mbsnlen**e **_mbstrnlen**.)
 
-Cada uma dessas funções retorna o número de caracteres em *str*, não incluindo o caractere nulo de terminação. No entanto, **strnlen** e **strnlen_s** interpretar a cadeia de caracteres como uma cadeia de caracteres de byte único e, portanto, o valor retornado é sempre igual ao número de bytes, mesmo se a cadeia de caracteres contiver multibyte caracteres. **wcsnlen** e **wcsnlen_s** são versões de caractere largo de **strnlen** e **strnlen_s** , respectivamente; os argumentos para **wcsnlen**  e **wcsnlen_s** são cadeias de caracteres largos e a contagem de caracteres estão em unidades de caractere largo. Caso contrário, **wcsnlen** e **strnlen** têm comportamento idêntico, assim como **strnlen_s** e **wcsnlen_s**.
+Cada uma dessas funções retorna o número de caracteres em *Str*, não incluindo o caractere nulo de terminação. No entanto, **strnlen** e **strnlen_s** interpretam a cadeia de caracteres como uma cadeia de caracteres de um byte único e, portanto, o valor de retorno é sempre igual ao número de bytes, mesmo se a cadeia de caracteres contiver caracteres multibyte. **wcsnlen** e **wcsnlen_s** são versões de caracteres largos de **strnlen** e **strnlen_s** , respectivamente; os argumentos para **wcsnlen** e **wcsnlen_s** são cadeias de caracteres largos e a contagem de caracteres está em unidades de caracteres largos. Caso contrário, **wcsnlen** e **strnlen** se comportam de forma idêntica, como **strnlen_s** e **wcsnlen_s**.
 
-**strnlen**, **wcsnlen**, e **mbsnlen** não validam seus parâmetros. Se *str* é **nulo**, ocorre uma violação de acesso.
+**strnlen**, **wcsnlen**e **_mbsnlen** não validam seus parâmetros. Se *Str* for **NULL**, ocorrerá uma violação de acesso.
 
-**strnlen_s** e **wcsnlen_s** validam seus parâmetros. Se *str* é **nulo**, as funções retornam 0.
+**strnlen_s** e **wcsnlen_s** validam seus parâmetros. Se *Str* for **NULL**, as funções retornarão 0.
 
-**mbstrnlen** também valida seus parâmetros. Se *str* é **nulo**, ou se *numberOfElements* é maior que **INT_MAX**, **mbstrnlen** gera uma exceção de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **mbstrnlen** define **errno** para **EINVAL** e retornará -1.
+o **_mbstrnlen** também valida seus parâmetros. Se *Str* for **NULL**ou se *numberOfElements* for maior que **INT_MAX**, **_mbstrnlen** gerará uma exceção de parâmetro inválida, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **_mbstrnlen** definirá **errno** como **EINVAL** e retornará-1.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -149,9 +152,9 @@ Cada uma dessas funções retorna o número de caracteres em *str*, não incluin
 |**_tcscnlen**|**strnlen**|**_mbsnlen**|**wcsnlen**|
 |**_tcscnlen_l**|**strnlen**|**_mbsnlen_l**|**wcsnlen**|
 
-**mbsnlen** e **mbstrnlen** retornam o número de caracteres multibyte em uma cadeia de caracteres multibyte. **mbsnlen** reconhece sequências de caracteres multibyte de acordo com a página de código multibyte que está atualmente em uso ou de acordo com a localidade que é passada; não testa a validade do caractere multibyte. **mbstrnlen** testa a validade de caracteres multibyte e reconhece sequências de caracteres multibyte. Se a cadeia de caracteres que é passada para **mbstrnlen** contém um caractere multibyte inválido **errno** está definido como **EILSEQ**.
+**_mbsnlen** e **_mbstrnlen** retornam o número de caracteres multibyte em uma cadeia de caracteres multibyte. o **_mbsnlen** reconhece sequências de caracteres multibyte de acordo com a página de código multibyte que está em uso ou de acordo com a localidade que é passada; Ele não testa a validade de caracteres multibyte. **_mbstrnlen** testa a validade de vários caracteres e reconhece sequências multibyte. Se a cadeia de caracteres passada para **_mbstrnlen** contiver um caractere multibyte inválido, **errno** será definido como **EILSEQ**.
 
-O valor de saída é afetado pela configuração da **LC_CTYPE** configuração da categoria da localidade; consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções são idênticas, exceto que aquelas que não têm o **l** sufixo usam a localidade atual desse comportamento dependente da localidade e as versões que têm o **l** sufixo em vez disso, use o parâmetro de localidade informado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da configuração de categoria **LC_CTYPE** da localidade; consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções são idênticas, exceto pelo fato de que aquelas que não têm o sufixo **_L** usam a localidade atual para esse comportamento dependente de localidade e as versões que têm o sufixo **_L** , em vez disso, usam o parâmetro Locale que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

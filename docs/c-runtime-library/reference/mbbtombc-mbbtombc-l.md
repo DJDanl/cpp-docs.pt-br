@@ -1,10 +1,10 @@
 ---
 title: _mbbtombc, _mbbtombc_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbbtombc_l
 - _mbbtombc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbbtombc_l
 - _mbbtombc
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-ms.openlocfilehash: 63b5dd33399201cd6ead7dbd1f710c8bebe53c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 244e603a3234b755d19a1c1d0738e8c22d74b8e2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156896"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952732"
 ---
-# <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
+# <a name="_mbbtombc-_mbbtombc_l"></a>_mbbtombc, _mbbtombc_l
 
 Converte um caractere multibyte de um byte em um caractere multibyte de dois bytes correspondente.
 
@@ -64,15 +67,15 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se **mbbtombc** converte com êxito *c*, ele retorna um caractere multibyte; caso contrário, retornará *c*.
+Se **_mbbtombc** converter o *c*com êxito, ele retornará um caractere multibyte; caso contrário, retornará *c*.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbbtombc** função converte um determinado caractere multibyte de byte único em um caractere multibyte de dois bytes correspondente. Caracteres devem estar dentro do intervalo 0x20 – 0x7E ou 0xA1 – 0xDF a ser convertido.
+A função **_mbbtombc** converte um determinado caractere multibyte de byte único em um caractere multibyte de byte duplo correspondente. Os caracteres devem estar dentro do intervalo 0x20-0x7E ou 0xA1-0xDF a ser convertido.
 
-O valor de saída é afetado pela configuração da **LC_CTYPE** configuração da categoria da localidade; consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões desta função são idênticas, exceto que **mbbtombc** usa a localidade atual desse comportamento dependente da localidade e **mbbtombc_l** em vez disso, usa o parâmetro de localidade informado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da configuração de categoria **LC_CTYPE** da localidade; consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessa função são idênticas, exceto que **_mbbtombc** usa a localidade atual para esse comportamento dependente de localidade e **_mbbtombc_l** , em vez disso, usa o parâmetro de localidade que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Em versões anteriores, **mbbtombc** foi nomeado **hantozen**. Para código novo, use **mbbtombc**.
+Em versões anteriores, **_mbbtombc** foi chamado de **hantozen**. Para obter um novo código, use **_mbbtombc**.
 
 ## <a name="requirements"></a>Requisitos
 

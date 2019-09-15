@@ -1,9 +1,9 @@
 ---
 title: _recalloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _recalloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _recalloc
 - recalloc
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _recalloc function
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
-ms.openlocfilehash: 3bcc238dcb950a8e30af16efc557e99d933efe92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f06631fe4dd0abcb0b18895ccb04e5b52cda6a2c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357714"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949442"
 ---
-# <a name="recalloc"></a>_recalloc
+# <a name="_recalloc"></a>_recalloc
 
 Uma combinação de **realloc** e **calloc**. Realoca uma matriz na memória e inicializa seus elementos como 0.
 
@@ -57,23 +60,23 @@ O comprimento, em bytes, de cada elemento.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**recalloc** retorna um **void** ponteiro para o bloco de memória realocado (e possivelmente migrado).
+**_recalloc** retorna um ponteiro **void** para o bloco de memória realocado (e possivelmente movido).
 
-Se não houver memória suficiente disponível para expandir o bloco para determinado tamanho, o bloco original será deixada inalterado e **nulo** é retornado.
+Se não houver memória suficiente disponível para expandir o bloco para o tamanho fornecido, o bloco original permanecerá inalterado e será retornado **NULL** .
 
-Se o tamanho solicitado for zero, o bloco apontado por *memblock* é liberado; o valor retornado será **nulo**, e *memblock* é deixado apontando para um bloco liberado.
+Se o tamanho solicitado for zero, o bloco apontado por *memblock* será liberado; o valor de retorno é **NULL**e *memblock* é deixado apontando para um bloco liberado.
 
-O valor retornado indica um espaço de armazenamento que sempre está sutilmente alinhado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo diferente de **void**, use uma conversão no valor de retorno de tipo.
+O valor retornado indica um espaço de armazenamento que sempre está sutilmente alinhado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo diferente de **void**, use uma conversão de tipo no valor de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-O **recalloc** função altera o tamanho de um bloco de memória alocada. O *memblock* argumento aponta para o início do bloco de memória. Se *memblock* é **nulo**, **recalloc** se comporta da mesma maneira que [calloc](calloc.md) e aloca um novo bloco de *número*  *  *tamanho* bytes. Cada elemento é inicializado como 0. Se *memblock* não está **nulo**, ele deve ser um ponteiro retornado por uma chamada anterior a **calloc**, [malloc](malloc.md), ou [realloc ](realloc.md).
+A função **_recalloc** altera o tamanho de um bloco de memória alocado. O argumento *memblock* aponta para o início do bloco de memória. Se *memblock* for **nulo**, **_recalloc** se comporta da mesma maneira que [calloc](calloc.md) e aloca um novo bloco de bytes de*tamanho* de *número* * . Cada elemento é inicializado como 0. Se *memblock* não for **NULL**, ele deverá ser um ponteiro retornado por uma chamada anterior para **calloc**, [malloc](malloc.md)ou [realloc](realloc.md).
 
-Como o novo bloco pode estar em um novo local de memória, o ponteiro retornado por **recalloc** não tem garantia de ser passado por meio de *memblock* argumento.
+Como o novo bloco pode estar em um novo local de memória, o ponteiro retornado por **_recalloc** não é garantido como sendo o ponteiro passado pelo argumento *memblock* .
 
-**recalloc** define **errno** à **ENOMEM** se a alocação de memória falhar ou se a quantidade de memória solicitada exceder **heap_maxreq**. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_recalloc** define **errno** como **ENOMEM** se a alocação de memória falhar ou se a quantidade de memória solicitada excede **_HEAP_MAXREQ**. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**recalloc** chamadas **realloc** para usar o C++ [set_new_mode](set-new-mode.md) função para definir o novo modo do manipulador. O novo modo do manipulador indica se, em caso de falha, **realloc** é chamar a nova rotina do manipulador conforme definido pela [set_new_handler](set-new-handler.md). Por padrão, **realloc** não chama a nova rotina do manipulador em caso de falha ao alocar memória. Você pode substituir esse comportamento padrão para que, quando **recalloc** falhar ao alocar memória, **realloc** chame a nova rotina do manipulador da mesma forma que o **novo** operador fará quando ele falhar pelo mesmo motivo. Para substituir o padrão, chame
+**recalloc** chama **realloc** para usar a C++ função [_set_new_mode](set-new-mode.md) para definir o novo modo de manipulador. O novo modo de manipulador indica se, em caso de falha, a **realocação** é chamar a nova rotina do manipulador, conforme definido por [_set_new_handler](set-new-handler.md). Por padrão, a **realocação** não chama a nova rotina do manipulador em caso de falha para alocar memória. Você pode substituir esse comportamento padrão para que, quando **_recalloc** falha ao alocar memória, a **realocação** chama a nova rotina do manipulador da mesma maneira que o **novo** operador faz quando ele falha pelo mesmo motivo. Para substituir o padrão, chame
 
 ```C
 _set_new_mode(1);
@@ -81,9 +84,9 @@ _set_new_mode(1);
 
 no início do programa ou vincule com NEWMODE.OBJ.
 
-Quando o aplicativo estiver vinculado a uma versão de depuração das bibliotecas de tempo de execução C, **recalloc** resolve [recalloc_dbg](recalloc-dbg.md). Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (O heap de depuração do CRT).
+Quando o aplicativo é vinculado a uma versão de depuração das bibliotecas de tempo de execução do C, o **_recalloc** é resolvido para [_recalloc_dbg](recalloc-dbg.md). Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (O heap de depuração do CRT).
 
-**recalloc** está marcada `__declspec(noalias)` e `__declspec(restrict)`, que significa que a função não é garantido que modifica variáveis globais e que o ponteiro retornado não é um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
+**_recalloc** é marcado `__declspec(noalias)` como `__declspec(restrict)`e, o que significa que a função está garantida para não modificar variáveis globais e que o ponteiro retornado não tem um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
 
 ## <a name="requirements"></a>Requisitos
 

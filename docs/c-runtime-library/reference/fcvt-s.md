@@ -1,9 +1,9 @@
 ---
 title: _fcvt_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fcvt_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fcvt_s
 - _fcvt_s
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: 51ff3c675f1f53aee9beab629b17193164a2e7eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a63b542333717a57097da455fb514eeef80344b4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334860"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941348"
 ---
-# <a name="fcvts"></a>_fcvt_s
+# <a name="_fcvt_s"></a>_fcvt_s
 
 Converte um número de ponto flutuante em uma cadeia de caracteres. Trata-se de uma versão de [_fcvt](fcvt.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -81,30 +84,30 @@ Ponteiro para o indicador de logon armazenado.
 
 Zero se for bem-sucedido. Se houver uma falha, o valor retornado será um código de erro. Códigos de erro são definidos em Errno.h. Para obter uma lista desses erros, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-No caso de um parâmetro inválido, conforme listado na tabela a seguir, essa função invoca o manipulador de parâmetro inválido, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retorna **EINVAL**.
+No caso de um parâmetro inválido, conforme listado na tabela a seguir, essa função invoca o manipulador de parâmetro inválido, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará **EINVAL**.
 
 ### <a name="error-conditions"></a>Condições de Erro
 
-|*buffer*|*sizeInBytes*|Valor |count|dec|sinal|Valor de|Valor em *buffer*|
+|*buffer*|*sizeInBytes*|value|Contagem|dec|sinal|Valor de|Valor no *buffer*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
 |**NULL**|qualquer|qualquer|qualquer|qualquer|qualquer|**EINVAL**|Não modificado.|
-|Não **nulo** (aponta para a memória válida)|<=0|qualquer|qualquer|qualquer|qualquer|**EINVAL**|Não modificado.|
+|Not **NULL** (aponta para memória válida)|<=0|qualquer|qualquer|qualquer|qualquer|**EINVAL**|Não modificado.|
 |qualquer|qualquer|qualquer|qualquer|**NULL**|qualquer|**EINVAL**|Não modificado.|
 |qualquer|qualquer|qualquer|qualquer|qualquer|**NULL**|**EINVAL**|Não modificado.|
 
 ## <a name="security-issues"></a>Problemas de segurança
 
-**fcvt_s** pode gerar uma violação de acesso se *buffer* não apontar para a memória válida e não é **nulo**.
+**_fcvt_s** poderá gerar uma violação de acesso se o *buffer* não apontar para uma memória válida e não for **nulo**.
 
 ## <a name="remarks"></a>Comentários
 
-O **fcvt_s** função converte um número de ponto flutuante em uma cadeia de caracteres terminada em nulo. O *valor* parâmetro é o número de ponto flutuante a ser convertido. **fcvt_s** armazena os dígitos de *valor* como uma cadeia de caracteres e acrescenta um caractere nulo ('\0'). O *contagem* parâmetro especifica o número de dígitos a serem armazenados após o ponto decimal. Dígitos em excesso são arredondados para *contagem* coloca. Se houver menos de *contagem* dígitos de precisão, a cadeia de caracteres será preenchida com zeros.
+A função **_fcvt_s** converte um número de ponto flutuante em uma cadeia de caracteres de caractere terminada em nulo. O parâmetro de *valor* é o número de ponto flutuante a ser convertido. **_fcvt_s** armazena os dígitos de *valor* como uma cadeia de caracteres e acrescenta um caractere nulo (' \ 0 '). O parâmetro *Count* especifica o número de dígitos a serem armazenados após o ponto decimal. Os dígitos em excesso são arredondados para os locais de *contagem* . Se houver menos de dígitos de *contagem* de precisão, a cadeia de caracteres será preenchida com zeros.
 
-Somente dígitos são armazenados na cadeia de caracteres. A posição do ponto decimal e o sinal de *valor* pode ser obtido *dec* e *entrada* após a chamada. O *dec* parâmetro aponta para um valor inteiro; o valor inteiro dando a posição do ponto decimal em relação ao início da cadeia de caracteres. Um valor inteiro de zero ou negativo indica que o ponto decimal se encontra à esquerda do primeiro dígito. O parâmetro *sinal* aponta para um inteiro que indica o sinal do *valor*. O inteiro é definido como 0 se *valor* for positivo e é definido como um número diferente de zero se *valor* é negativo.
+Somente dígitos são armazenados na cadeia de caracteres. A posição do ponto decimal e o sinal de *valor* podem ser obtidas de *Dec* e *Sign* após a chamada. O parâmetro *Dec* aponta para um valor inteiro; Esse valor inteiro fornece a posição do ponto decimal em relação ao início da cadeia de caracteres. Um valor inteiro de zero ou negativo indica que o ponto decimal se encontra à esquerda do primeiro dígito. O *sinal* de parâmetro aponta para um inteiro que indica o sinal de *valor*. O inteiro será definido como 0 se o *valor* for positivo e será definido como um número diferente de zero se o *valor* for negativo.
 
-Um buffer de tamanho **_CVTBUFSIZE** é suficiente para qualquer flutuantes valor de ponto.
+Um buffer de comprimento **_CVTBUFSIZE** é suficiente para qualquer valor de ponto flutuante.
 
-A diferença entre **ecvt_s** e **fcvt_s** está na interpretação do *contagem* parâmetro. **ecvt_s** interpreta *contagem* como o número total de dígitos na cadeia de saída, e **fcvt_s** interpreta *contagem* como o número de dígitos após o ponto decimal.
+A diferença entre **_ecvt_s** e **_fcvt_s** está na interpretação do parâmetro *Count* . **_ecvt_s** interpreta a *contagem* como o número total de dígitos na cadeia de caracteres de saída e **_fcvt_s** interpreta a *contagem* como o número de dígitos após o ponto decimal.
 
 No C++, o uso dessa função é simplificado por uma sobrecarga de modelo. A sobrecarga pode inferir o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
@@ -118,7 +121,7 @@ A versão de depuração dessa função preenche primeiro o buffer com 0xFD. Par
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-**Bibliotecas:** Todas as versões dos [recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md).
+**DLLs** Todas as versões dos [recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Exemplo
 

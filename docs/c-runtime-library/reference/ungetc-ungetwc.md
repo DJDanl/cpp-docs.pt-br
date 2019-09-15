@@ -1,10 +1,10 @@
 ---
 title: ungetc, ungetwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ungetwc
 - ungetc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ungettc
 - ungetwc
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-ms.openlocfilehash: c504540f8fbbe14961fa051bb93ebef350c2c1da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3b6c6ed3fe8ff5976afa1da2ed437e25c923b99
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155427"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957411"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 
@@ -62,19 +65,19 @@ Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, cada uma dessas funções retorna o argumento de caractere *c*. Se *c* não pode ser enviado de volta ou se nenhum caractere for lido, o fluxo de entrada permanecerá inalterado e **ungetc** retorna **EOF**; **ungetwc** retorna **WEOF**. Se *stream* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **EOF** ou **WEOF** será retornado e **errno** é definido como **EINVAL**.
+Se for bem-sucedida, cada uma dessas funções retornará o argumento de caractere *c*. Se *c* não puder ser enviado de volta ou se nenhum caractere tiver sido lido, o fluxo de entrada será inalterado e **ungetc** retornará **EOF**; **ungetwc** retorna **WEOF**. Se o *fluxo* for **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **EOF** ou **WEOF** será retornado e **errno** será definido como **EINVAL**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **ungetc** função envia o caractere *c* novamente no *fluxo* e limpa o indicador de final de arquivo. O fluxo deve estar aberto para leitura. Uma operação de leitura subsequente em *stream* começa com *c*. Uma tentativa de enviar por push **EOF** para o fluxo usando **ungetc** será ignorado.
+A função **ungetc** envia o caractere *c* de volta para o *fluxo* e limpa o indicador de fim de arquivo. O fluxo deve estar aberto para leitura. Uma operação de leitura subsequente no *fluxo* começa com *c*. Uma tentativa de enviar **EOF** para o fluxo usando **ungetc** é ignorada.
 
-Caracteres colocados no fluxo pelo **ungetc** podem ser apagados se **fflush**, [fseek](fseek-fseeki64.md), **fsetpos**, ou [rewind](rewind.md) é chamado antes que o caractere é lido do fluxo. O indicador de posição do arquivo terá o valor que tinha antes que os caracteres foram enviados de volta. O armazenamento externo correspondente para o fluxo não é alterado. Em uma bem-sucedida **ungetc** chamada em um fluxo de texto, o indicador de posição do arquivo é especificada até que todos os caracteres de retorno enviado sejam lidos ou descartados. Em cada bem-sucedida **ungetc** chamada em relação a um fluxo binário, o indicador de posição do arquivo será reduzida; se o valor for 0 antes de uma chamada, o valor será indefinido após a chamada.
+Os caracteres colocados no fluxo por **ungetc** poderão ser apagados se **fflush**, [fseek](fseek-fseeki64.md), **fsetpos**ou [retrocesso](rewind.md) for chamado antes de o caractere ser lido do fluxo. O indicador de posição do arquivo terá o valor que tinha antes que os caracteres foram enviados de volta. O armazenamento externo correspondente para o fluxo não é alterado. Em uma chamada **ungetc** bem-sucedida em relação a um fluxo de texto, o indicador de posição de arquivo não é especificado até que todos os caracteres enviados por push sejam lidos ou descartados. Em cada chamada de **ungetc** bem-sucedida em relação a um fluxo binário, o indicador de posição de arquivo é decrementado; Se seu valor era 0 antes de uma chamada, o valor é indefinido após a chamada.
 
-Os resultados serão imprevisíveis se **ungetc** é chamado duas vezes sem uma operação de leitura ou posicionamento de arquivo entre as duas chamadas. Após uma chamada para **fscanf**, uma chamada para **ungetc** pode falhar, a menos que outra operação de leitura (como **getc**) foi executada. Isso ocorre porque **fscanf** por sua vez chama **ungetc**.
+Os resultados serão imprevisíveis se **ungetc** for chamado duas vezes sem uma operação de leitura ou de posicionamento de arquivo entre as duas chamadas. Após uma chamada para **fscanf**, uma chamada para **ungetc** pode falhar, a menos que outra operação de leitura (como **getc**) tenha sido executada. Isso ocorre porque o próprio **fscanf** chama **ungetc**.
 
-**ungetwc** é uma versão de caractere largo de **ungetc**. No entanto, em cada bem-sucedida **ungetwc** chamada em um fluxo de texto ou binário, o valor do indicador de posição do arquivo é especificada até que todos os caracteres de retorno enviado sejam lidos ou descartados.
+**ungetwc** é uma versão de caractere largo do **ungetc**. No entanto, em cada chamada **ungetwc** bem-sucedida em um fluxo de texto ou binário, o valor do indicador de posição de arquivo não é especificado até que todos os caracteres enviados por push sejam lidos ou descartados.
 
 Essas funções são thread-safe e bloqueiam dados confidenciais durante a execução. Para ver uma versão sem bloqueio, consulte [_ungetc_nolock, _ungetwc_nolock](ungetc-nolock-ungetwc-nolock.md).
 
@@ -91,7 +94,7 @@ Essas funções são thread-safe e bloqueiam dados confidenciais durante a execu
 |**ungetc**|\<stdio.h>|
 |**ungetwc**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

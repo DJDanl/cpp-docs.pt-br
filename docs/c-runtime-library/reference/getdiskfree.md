@@ -1,9 +1,9 @@
 ---
 title: _getdiskfree
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getdiskfree
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getdiskfree
 - _getdiskfree
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0feee21ee76d076263ea3750d00fd0142f26b7d9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331760"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955107"
 ---
-# <a name="getdiskfree"></a>_getdiskfree
+# <a name="_getdiskfree"></a>_getdiskfree
 
-Usa informações sobre uma unidade de disco para preencher uma **diskfree_t** estrutura.
+Usa informações sobre uma unidade de disco para preencher uma estrutura **_diskfree_t** .
 
 > [!IMPORTANT]
 > Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -55,15 +58,15 @@ unsigned _getdiskfree(
 A unidade de disco cujas informações você deseja.
 
 *driveinfo*<br/>
-Um **diskfree_t** estrutura será preenchida com informações sobre a unidade.
+Uma estrutura **_diskfree_t** que será populada com informações sobre a unidade.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se a função obtiver êxito, o valor retornado será zero. Se a função falhar, o valor retornado será o código de erro. O valor **errno** está definido para todos os erros que são retornados pelo sistema operacional. Para obter mais informações sobre as condições de erro são indicados por **errno**, consulte [constantes errno](../../c-runtime-library/errno-constants.md).
+Se a função obtiver êxito, o valor retornado será zero. Se a função falhar, o valor retornado será o código de erro. O valor **errno** é definido para quaisquer erros retornados pelo sistema operacional. Para obter mais informações sobre condições de erro indicadas por **errno**, consulte [constantes errno](../../c-runtime-library/errno-constants.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **diskfree_t** estrutura é definida em Direct. h.
+A estrutura **_diskfree_t** é definida em Direct. h.
 
 ```C
 struct _diskfree_t {
@@ -74,7 +77,7 @@ struct _diskfree_t {
 };
 ```
 
-Essa função valida seus parâmetros. Se o *driveinfo* é de ponteiro **nulo** ou *unidade* Especifica uma unidade inválida, essa função invocará um manipulador de parâmetro inválido, conforme descrito em [ Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **EINVAL** e define **errno** para **EINVAL**. Intervalo de unidades válidas, de 0 a 26. Um *unidade* valor de 0 especifica a unidade atual; depois disso, os números são mapeados para letras do alfabeto inglês tal que 1 indica a unidade A, 3 indica a unidade C e assim por diante.
+Essa função valida seus parâmetros. Se o ponteiro do *DriveInfo* for **nulo** ou a *unidade* especificar uma unidade inválida, essa função invocará um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **EINVAL** e definirá **errno** como **EINVAL**. Intervalo de unidades válidas, de 0 a 26. Um valor de *unidade* de 0 especifica a unidade atual; Depois disso, os números são mapeados para letras do alfabeto em inglês, de modo que 1 indica a unidade A, 3 indica a unidade C e assim por diante.
 
 ## <a name="requirements"></a>Requisitos
 

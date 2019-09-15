@@ -1,9 +1,9 @@
 ---
 title: _lsearch_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lsearch_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lsearch_s
 - lsearch_s
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-ms.openlocfilehash: f57a96622419e3f72fc2df5b260cbbbdd59666ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c3c0ac41a4805acb558c75fb5ff4cbc0e3aa838
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156948"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953022"
 ---
-# <a name="lsearchs"></a>_lsearch_s
+# <a name="_lsearch_s"></a>_lsearch_s
 
 Executa uma pesquisa linear para um valor. Uma versão de [_lsearch](lsearch.md) com melhorias de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -74,9 +77,9 @@ Um ponteiro para um objeto que pode ser acessado na função de comparação.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se *chave* for encontrado, **lsearch_s** retorna um ponteiro para o elemento da matriz na *base* que corresponde ao *chave*. Se *chave* não for encontrado, **lsearch_s** retorna um ponteiro para o novo item adicionado ao final da matriz.
+Se *Key* for encontrada, **_lsearch_s** retornará um ponteiro para o elemento da matriz na *base* que corresponde à *chave*. Se a *chave* não for encontrada, **_lsearch_s** retornará um ponteiro para o item recém-adicionado no final da matriz.
 
-Se parâmetros inválidos forem passados para a função, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, então **errno** é definido como **EINVAL** e a função retornará **nulo**. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Se parâmetros inválidos forem passados para a função, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **errno** será definido como **EINVAL** e a função retornará **NULL**. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Condições de Erro
 
@@ -89,11 +92,11 @@ Se parâmetros inválidos forem passados para a função, o manipulador de parâ
 
 ## <a name="remarks"></a>Comentários
 
-O **lsearch_s** função executa uma pesquisa linear para o valor *chave* em uma matriz de *número* elementos, cada um dos *largura* bytes. Diferentemente **bsearch_s**, **lsearch_s** exige que a matriz a ser classificado. Se *chave* não for encontrado, em seguida, **lsearch_s** adiciona-ao final da matriz e incrementará *número*.
+A função **_lsearch_s** executa uma pesquisa linear para a *chave* de valor em uma matriz de elementos *Number* , cada um dos bytes de *largura* . Ao contrário de **bsearch_s**, **_lsearch_s** não exige que a matriz seja classificada. Se a *chave* não for encontrada, **_lsearch_s** a adicionará ao final da matriz e incrementará o *número*.
 
-O *comparar* função é um ponteiro para uma rotina fornecida pelo usuário que compara dois elementos de matriz e retorna um valor que especifica seu relacionamento. O *comparar* função também usa o ponteiro para o contexto como o primeiro argumento. **lsearch_s** chamadas *comparar* uma ou mais vezes durante a pesquisa, passando ponteiros para dois elementos de matriz em cada chamada. *Comparar* deve comparar os elementos e, em seguida, retornar um diferente de zero (ou seja, os elementos são diferentes) ou 0 (ou seja, os elementos são idênticos).
+A função *Compare* é um ponteiro para uma rotina fornecida pelo usuário que compara dois elementos de matriz e retorna um valor especificando sua relação. A função *Compare* também leva o ponteiro para o contexto como o primeiro argumento. chamadas _lsearch_s *comparam* uma ou mais vezes durante a pesquisa, passando ponteiros para dois elementos de matriz em cada chamada. *Compare* deve comparar os elementos e retornar zero (ou seja, os elementos são diferentes) ou 0 (o que significa que os elementos são idênticos).
 
-O *contexto* ponteiro pode ser útil se a estrutura de dados pesquisada for parte de um objeto e o *comparar* função precisa acessar membros do objeto. Por exemplo, o código na *comparar* função pode converter o ponteiro de void no objeto apropriado que o tipo e acessar membros desse objeto. A adição do *contexto* ponteiro torna **lsearch_s** mais seguro, pois o contexto adicional pode ser usado para evitar bugs de reentrância associados ao uso de variáveis estáticas para disponibilizar dados para o *comparar* função.
+O ponteiro de *contexto* poderá ser útil se a estrutura de dados pesquisada fizer parte de um objeto e a função *Compare* precisar acessar os membros do objeto. Por exemplo, o código na função *Compare* pode converter o ponteiro void no tipo de objeto apropriado e acessar os membros desse objeto. A adição do ponteiro de *contexto* torna a **_lsearch_s** mais segura porque o contexto adicional pode ser usado para evitar bugs de reentrância associados ao uso de variáveis estáticas para disponibilizar os dados para a função de *comparação* .
 
 ## <a name="requirements"></a>Requisitos
 

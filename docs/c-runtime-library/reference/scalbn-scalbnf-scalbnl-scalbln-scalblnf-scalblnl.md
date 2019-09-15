@@ -1,14 +1,14 @@
 ---
 title: scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - scalblnl
 - scalbnl
 - scalbnf
 - scalblnf
 - scalbn
 - scalbln
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scalblnf
 - scalbnl
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 7109340afaa634fc21177380d015c9eace506081
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 794d0bdceb13aafb83de85fb29e47a4fa3125cd6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357155"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948911"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -102,15 +105,15 @@ Expoente inteiro.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **scalbn** funções retornam o valor de *x* \* **FLT_RADIX**<sup>exp</sup> quando obtiver êxito. No estouro (dependendo do sinal de *x*), **scalbn** retorna + /- **HUGE_VAL**; a **errno** valor é definido como **ERANGE** .
+As **funções scalbn** retornam o valor *de x* \* **FLT_RADIX**<sup>exp</sup> quando bem-sucedidas. No estouro (dependendo do sinal de *x*), **scalbn** retorna +/- **HUGE_VAL**; o valor **errno** é definido como **ERANGE**.
 
-Para obter mais informações sobre **errno** e de erro possíveis valores de retorno, consulte [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obter mais informações sobre **errno** e possíveis valores de retorno de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-**FLT_RADIX** é definida no \<float. h > como a base de ponto flutuante nativo; em sistemas binários, tem um valor de 2, e **scalbn** é equivalente a [ldexp](ldexp.md).
+**FLT_RADIX** é definido em \<float. h > como a base de ponto flutuante nativo; em sistemas binários, ele tem um valor de 2 e **scalbn** é equivalente a [ldexp](ldexp.md).
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **scalbn** e **scalbln** que tomam e retornam **float** ou **longo** **duplas** tipos. Em um programa C, **scalbn** sempre usa um **duplo** e um **int** e retorna um **double**, e **scalbln**sempre usa um **duplas** e uma **longo** e retorna um **double**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **scalbn** e **scalbln** que levam e retornam tipos **float** ou **Long** **duplos** . Em um programa C, **scalbn** sempre leva um **Double** e um **int** e retorna um **Double**, e **scalbln** sempre leva um **Double** e um **Long** e retorna um **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,14 +1,14 @@
 ---
 title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - lrint
 - lrintl
 - lrintf
 - llrint
 - llrintf
 - llrintl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrint
 - lrintf
@@ -42,12 +45,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 01680a62e654112475a55bd8eac0cc14d254e2a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72870c3548f0fd6972183b0c090708c6eddc591e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285766"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953126"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -104,19 +107,19 @@ o valor a ser arredondado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, retornará o valor arredondado integral do *x*.
+Se for bem-sucedido, retorna o valor integral arredondado de *x*.
 
 |Problema|Valor de|
 |-----------|------------|
-|*x* está fora do intervalo do tipo de retorno<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|Gera **FE_INVALID** e retorna zero (0).|
+|*x* está fora do intervalo do tipo de retorno<br /><br /> *x* = ±∞<br /><br /> *x* = Nan|Gera **FE_INVALID** e retorna zero (0).|
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **lrint** e **llrint** que utilizam **float** e **longo**  **Double** tipos. Em um programa do C **lrint** e **llrint** sempre têm um **double**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **lrint** e **llrint** que têm tipos **float** e **Long** **Double** . Em um programa C, **lrint** e **llrint** sempre levam um **duplo**.
 
-Se *x* não representa o equivalente de ponto flutuante de um valor integral, essas funções geram **FE_INEXACT**.
+Se *x* não representar o equivalente de ponto flutuante de um valor integral, essas funções geram **FE_INEXACT**.
 
-**Específico da Microsoft**: Quando o resultado está fora do intervalo do tipo de retorno, ou quando o parâmetro for um NaN ou infinito, o valor de retorno é definido pela implementação. O compilador da Microsoft retorna um valor zero (0).
+**Específico da Microsoft**: Quando o resultado está fora do intervalo do tipo de retorno, ou quando o parâmetro é um NaN ou infinito, o valor de retorno é definido como implementação. O compilador da Microsoft retorna um valor zero (0).
 
 ## <a name="requirements"></a>Requisitos
 

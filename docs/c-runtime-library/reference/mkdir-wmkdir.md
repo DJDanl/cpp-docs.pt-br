@@ -1,10 +1,10 @@
 ---
 title: _mkdir, _wmkdir
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wmkdir
 - _mkdir
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mkdir
 - tmkdir
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d2fd45b566909a61a04a5cabb34c74b9b253430
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285191"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951727"
 ---
-# <a name="mkdir-wmkdir"></a>_mkdir, _wmkdir
+# <a name="_mkdir-_wmkdir"></a>_mkdir, _wmkdir
 
 Cria um novo diretório.
 
@@ -63,19 +66,19 @@ Caminho para um novo diretório.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna o valor 0 se o novo diretório foi criado. Em um erro, a função retornará -1 e definirá **errno** da seguinte maneira.
+Cada uma dessas funções retorna o valor 0 se o novo diretório foi criado. Em um erro, a função retorna-1 e define **errno** como a seguir.
 
-**EEXIST** diretório não foi criado porque *dirname* é o nome de um dispositivo, diretório ou arquivo existente.
+**EEXIST** O diretório não foi criado porque *dirname* é o nome de um arquivo, diretório ou dispositivo existente.
 
-**ENOENT** caminho não foi encontrado.
+**ENOENT** O caminho não foi encontrado.
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **mkdir** função cria um novo diretório com especificado *dirname.* **mkdir** pode criar apenas um novo diretório por chamada, portanto, somente o último componente de *dirname* pode nomear um novo diretório. **_mkdir** does not translate path delimiters. No Windows NT, a barra invertida (\\) e a barra "/" são delimitadores de caminho válidos em cadeias de caracteres em rotinas de tempo de execução.
+A função **_mkdir** cria um novo diretório com o *dirname especificado.* **_mkdir** pode criar apenas um novo diretório por chamada, de modo que somente o último componente de *dirname* pode nomear um novo diretório. **_mkdir** não converte os delimitadores de caminho. No Windows NT, a barra invertida (\\) e a barra "/" são delimitadores de caminho válidos em cadeias de caracteres em rotinas de tempo de execução.
 
-**wmkdir** é uma versão de caractere largo de **mkdir**; o *dirname* argumento **wmkdir** é uma cadeia de caracteres largos. **wmkdir** e **mkdir** se comportam de forma idêntica caso contrário.
+**_wmkdir** é uma versão de caractere largo do **_mkdir**; o argumento *dirname* para **_wmkdir** é uma cadeia de caracteres largos. **_wmkdir** e **_mkdir** se comportam de outra forma.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

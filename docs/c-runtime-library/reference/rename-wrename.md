@@ -1,10 +1,10 @@
 ---
 title: rename, _wrename
 ms.date: 11/04/2016
-apiname:
+api_name:
 - rename
 - _wrename
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wrename
 - _trename
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 3536bfb6c38c99a8d6d943102fb9303dd4d85b7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3d88c46fc055fb173264b40a56c755c360c7adf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357480"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949300"
 ---
-# <a name="rename-wrename"></a>rename, _wrename
+# <a name="rename-_wrename"></a>rename, _wrename
 
 Renomeie um arquivo ou diretório.
 
@@ -68,7 +71,7 @@ Ponteiro para o novo nome.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retornará 0 em caso de êxito. Em um erro, a função retorna um valor diferente de zero e define **errno** para um dos seguintes valores:
+Cada uma dessas funções retornará 0 em caso de êxito. Em um erro, a função retorna um valor diferente de zero e define **errno** como um dos seguintes valores:
 
 |Valor errno|Condição|
 |-|-|
@@ -82,7 +85,7 @@ Para ver outros valores retornados possíveis, consulte [_doserrno, _errno, syse
 
 A função **rename** renomeia o arquivo ou o diretório especificado por *oldname* para o nome fornecido por *newname*. O nome antigo deve ser o caminho de um arquivo ou diretório existente. O novo nome não pode ser o nome de um arquivo ou diretório existente. Você pode usar **rename** para mover um arquivo de um diretório ou dispositivo para outro fornecendo um caminho diferente no argumento *newname*. No entanto, não é possível usar **rename** para mover um diretório. Diretórios podem ser renomeados, mas não movidos.
 
-**wrename** é uma versão de caractere largo de **Rename**; os argumentos a serem **wrename** são cadeias de caracteres largos. **wrename** e **Rename** se comportam de forma idêntica caso contrário.
+**_wrename** é uma versão de caractere largo do **_rename**; os argumentos para **_wrename** são cadeias de caracteres largos. **_wrename** e **_rename** se comportam de outra forma.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

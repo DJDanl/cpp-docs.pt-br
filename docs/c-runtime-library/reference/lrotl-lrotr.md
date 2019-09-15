@@ -1,10 +1,10 @@
 ---
 title: _lrotl, _lrotr
 ms.date: 04/04/2018
-apiname:
+api_name:
 - _lrotl
 - _lrotr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrotr
 - lrotl
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-ms.openlocfilehash: 71ca61676e4551155f9f14e792c5c1cee65ddb7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea78aeb8829a80abae345b4e9e6ac3a7bbaddf8b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156951"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953038"
 ---
-# <a name="lrotl-lrotr"></a>_lrotl, _lrotr
+# <a name="_lrotl-_lrotr"></a>_lrotl, _lrotr
 
-Gira bits para a esquerda (**lrotl**) ou para a direita (**lrotr**).
+Gira bits para a esquerda ( **_lrotl**) ou direita ( **_lrotr**).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -63,7 +66,7 @@ Ambas as funções retornam o valor girado. Nenhum erro é retornado.
 
 ## <a name="remarks"></a>Comentários
 
-O **lrotl** e **lrotr** funções girar *valor* por *shift* bits. **lrotl** gira o valor à esquerda, em direção de bits mais significativos. **lrotr** gira o valor para a direita, em direção a bits menos significativos. Ambas as funções encapsulam bits girados de uma extremidade do *value* para a outra.
+As funções **_lrotl** e **_lrotr** giram *valor* por bits de *deslocamento* . **_lrotl** gira o valor à esquerda, em direção a bits mais significativos. **_lrotr** gira o valor certo, em direção a bits menos significativos. Ambas as funções encapsulam bits girados de uma extremidade do *value* para a outra.
 
 ## <a name="requirements"></a>Requisitos
 

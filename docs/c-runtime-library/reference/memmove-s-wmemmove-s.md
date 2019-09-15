@@ -1,10 +1,10 @@
 ---
 title: memmove_s, wmemmove_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wmemmove_s
 - memmove_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemmove_s
 - memmove_s
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: 28d879a205790d1f132caca1022d0740e317c342
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285135"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951788"
 ---
-# <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
+# <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
 Move um buffer para outro. Estas são versões de [memmove, wmemmove](memmove-wmemmove.md) com aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -65,7 +68,7 @@ Tamanho do buffer de destino.
 Objeto de origem.
 
 *count*<br/>
-Número de bytes (**memmove_s**) ou caracteres (**wmemmove_s**) para copiar.
+Número de bytes (**memmove_s**) ou caracteres (**wmemmove_s**) a serem copiados.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -73,17 +76,17 @@ Zero se for bem-sucedido ou um código de erro em caso de falha
 
 ### <a name="error-conditions"></a>Condições de Erro
 
-|*dest*|*numberOfElements*|*src*|Valor retornado|Conteúdo de *dest*|
+|*dest*|*numberOfElements*|*src*|Valor retornado|Conteúdo do *dest*|
 |------------|------------------------|-----------|------------------|------------------------|
 |**NULL**|qualquer|qualquer|**EINVAL**|não modificado|
 |qualquer|qualquer|**NULL**|**EINVAL**|não modificado|
-|qualquer|< *count*|qualquer|**ERANGE**|não modificado|
+|qualquer|< *contar*|qualquer|**ERANGE**|não modificado|
 
 ## <a name="remarks"></a>Comentários
 
-Cópias *contagem* bytes de caracteres de *src* para *dest*. Se algumas regiões da área de origem e o destino se sobrepõem, **memmove_s** garante que os bytes de origem originais na região sobreposta são copiados antes de serem substituídos.
+Copia os bytes de *contagem* de caracteres de *src* para *dest*. Se algumas regiões da área de origem e o destino se sobrepõem, o **memmove_s** garante que os bytes de origem originais na região de sobreposição sejam copiados antes de serem substituídos.
 
-Se *dest* ou se *src* for um ponteiro nulo ou se a cadeia de caracteres de destino for muito pequena, essas funções invocarão um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, essas funções retornarão **EINVAL** e defina **errno** para **EINVAL**.
+Se *dest* ou se *src* for um ponteiro NULL, ou se a cadeia de caracteres de destino for muito pequena, essas funções invocarão um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, essas funções retornarão **EINVAL** e definirá **errno** como **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

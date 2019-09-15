@@ -1,11 +1,11 @@
 ---
 title: lgamma, lgammaf, lgammal
 ms.date: 04/05/2018
-apiname:
+api_name:
 - lgamma
 - lgammaf
 - lgammal
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lgamma
 - lgammaf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: 43ce1599ab9161b9fadf5643ddd2ec739ab2d8b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9baf8f0fefb50cea6a5301aac9ffd48ff3cd5bde
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157265"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953367"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -65,9 +68,9 @@ Se for bem-sucedido, retorna o logaritmo natural do valor absoluto da função g
 
 |Problema|Valor de|
 |-----------|------------|
-|*x* = NaN|NaN|
+|*x* = Nan|NaN|
 |*x* = ±0|+INFINITY|
-|*x*= inteiro negativo|+INFINITY|
+|*x*= número inteiro negativo|+INFINITY|
 |±INFINITY|+INFINITY|
 |erro de polo|+HUGE_VAL, +HUGE_VALF ou +HUGE_VALL|
 |erro de intervalo de estouro|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|
@@ -76,9 +79,9 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **lgamma** que usam e retornam **float** e **longo** **double** tipos. Em um programa do C **lgamma** sempre usa e retorna um **duplo**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **lGamma** que usam e retornam tipos **float** e **Long** **duplos** . Em um programa C, **lGamma** sempre pega e retorna um **Double**.
 
-Se x for um número racional, essa função retorna o logaritmo do fatorial de (x - 1).
+Se x for um número racional, essa função retornará o logaritmo do fatorial de (x-1).
 
 ## <a name="requirements"></a>Requisitos
 

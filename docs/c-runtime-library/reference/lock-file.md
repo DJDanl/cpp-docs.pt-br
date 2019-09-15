@@ -1,9 +1,9 @@
 ---
 title: _lock_file
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lock_file
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lock_file
 - lock_file
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 4c6d9ef3ae9e2f63e702dd3fc6b01f7edea40626
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157429"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953310"
 ---
-# <a name="lockfile"></a>_lock_file
+# <a name="_lock_file"></a>_lock_file
 
-Bloqueia um **arquivo** objeto para garantir a consistência de thread que acessam o **arquivo** objeto simultaneamente.
+Bloqueia um objeto de **arquivo** para garantir a consistência de threads que acessam o objeto de **arquivo** simultaneamente.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -48,7 +51,7 @@ Identificador de arquivo.
 
 ## <a name="remarks"></a>Comentários
 
-O **lock_file** bloqueios de função a **arquivo** objeto especificado por *arquivo*. O arquivo subjacente não está bloqueado por **lock_file**. Use [unlock_file](unlock-file.md) para liberar o bloqueio no arquivo. Chamadas para **lock_file** e **unlock_file** devem ser iguais em um thread.
+A função **_lock_file** bloqueia o objeto de **arquivo** especificado pelo *arquivo*. O arquivo subjacente não está bloqueado pelo **_lock_file**. Use [unlock_file](unlock-file.md) para liberar o bloqueio no arquivo. Chamadas para **_lock_file** e **_unlock_file** devem ser combinadas em um thread.
 
 ## <a name="requirements"></a>Requisitos
 

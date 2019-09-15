@@ -1,9 +1,9 @@
 ---
 title: qsort
 ms.date: 11/04/2016
-apiname:
+api_name:
 - qsort
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - qsort
 helpviewer_keywords:
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: 8a770965a03e43227b99f122924c723691f79c61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f445158bb72c50507af913986aff2d225ee50928
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358092"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949704"
 ---
 # <a name="qsort"></a>qsort
 
@@ -64,9 +67,9 @@ Ponteiro para uma rotina fornecida pelo usuário que compara dois elementos de m
 
 ## <a name="remarks"></a>Comentários
 
-O **qsort** função implementa um algoritmo de classificação rápida para classificar uma matriz de *número* elementos, cada um dos *largura* bytes. O argumento *base* é um ponteiro para a base da matriz a ser classificado. **qsort** substitui essa matriz usando os elementos classificados.
+A função **qsort** implementa um algoritmo de classificação rápida para classificar uma matriz de elementos *Number* , cada um dos bytes de *largura* . O argumento *base* é um ponteiro para a base da matriz a ser classificada. **qsort** substitui essa matriz usando os elementos classificados.
 
-**qsort** chamadas a *comparar* uma rotina ou mais vezes durante a classificação e passa ponteiros para dois elementos de matriz em cada chamada.
+**qsort** chama a rotina de *comparação* uma ou mais vezes durante a classificação e passa ponteiros para dois elementos de matriz em cada chamada.
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -82,7 +85,7 @@ A rotina deve comparar os elementos e retornar um dos valores a seguir.
 
 A matriz é classificada em ordem crescente, conforme definido pela função de comparação. Para classificar uma matriz em ordem decrescente, inverta o sentido de “maior que” e “menor que” na função de comparação.
 
-Essa função valida seus parâmetros. Se *compare* ou *número* está **nulo**, ou se *base* é **nulo** e *número* é diferente de zero, ou se *largura* é menor que zero, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará e **errno** é definido como **EINVAL**.
+Essa função valida seus parâmetros. Se *Compare* ou *Number* for **NULL**ou se *base* for **NULL** e *Number* for zero ou se *Width* for menor que zero, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará e **errno** será definida como **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

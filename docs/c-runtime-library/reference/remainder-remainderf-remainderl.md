@@ -1,11 +1,11 @@
 ---
 title: remainder, remainderf, remainderl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - remainderl
 - remainder
 - remainderf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - remainderf
 - remainder
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 9a9abe82e69122ca87f44e293e1da725c97045d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 851f022325bb617cb2b0ae9a331b680b9d9fd303
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357636"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949419"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -61,13 +64,13 @@ O denominador.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O restante do ponto flutuante *x* / *y*. Se o valor de *y* é 0.0, **restante** retorna um NaN silencioso. Para obter informações sobre a representação de um NaN silencioso pela **printf** família, consulte [printf, printf_l, wprintf, wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+O restante de ponto flutuante de *x* / *y*. Se o valor de *y* for 0,0, **resto** retornará um NaN silencioso. Para obter informações sobre a representação de um NaN silencioso pela família **printf** , consulte [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **restante** funções calculam o restante de ponto flutuante *r* dos *x* / *y* que *x*   =  *n* \* *y* + *r*, onde *n*é o número inteiro mais próximo em valor para *x* / *y* e *n*é o mesmo sempre que &#124; *n*  -  *x* / *y* &#124; = 1/2. Quando *r* = 0, *r* tem o mesmo sinal *x*.
+As funções **restantes** calculam o *r* restante de ponto flutuante de *x* / *y* de forma que *x* = *n* \* *y* + *r*, em que *n* é o inteiro mais próximo no valor para *x* / *y* e *n*é mesmo sempre que &#124; *n* - *x* / *y* &#124; = 1/2. Quando *r* = 0, *r* tem o mesmo sinal que *x*.
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **restante** que usam e retornam **float** ou **longo** **double** valores. Em um programa do C **restante** sempre pega dois **duplo** argumentos e retorna um **double**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **resto** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **resto** sempre usa dois argumentos **duplos** e retorna um **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,9 +1,9 @@
 ---
 title: _set_error_mode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_error_mode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_error_mode
 - _set_error_mode
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-ms.openlocfilehash: 8c95ed45423b791a688f05ea30f48e188826a797
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15a6d72a79f0498fb7d81094ed3595dea1cf444f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356637"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948558"
 ---
-# <a name="seterrormode"></a>_set_error_mode
+# <a name="_set_error_mode"></a>_set_error_mode
 
-Modifica **error_mode** para determinar um local não padrão em que o tempo de execução C grava uma mensagem de erro para um erro que pode finalizar o programa.
+Modifica **__error_mode** para determinar um local não padrão em que o tempo de execução C grava uma mensagem de erro para um erro que pode encerrar o programa.
 
 > [!IMPORTANT]
 > Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -56,20 +59,20 @@ Retornará a configuração antiga ou -1 se ocorrer um erro.
 
 ## <a name="remarks"></a>Comentários
 
-Controla o coletor de saída de erro definindo o valor de **error_mode**. Por exemplo, você pode direcionar a saída para um erro padrão ou usar o **MessageBox** API.
+Controla o coletor de saída de erro definindo o valor de **__error_mode**. Por exemplo, você pode direcionar a saída para um erro padrão ou usar a API **MessageBox** .
 
-O *mode_val* parâmetro pode ser definido como um dos valores a seguir.
+O parâmetro *mode_val* pode ser definido como um dos valores a seguir.
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|**_OUT_TO_DEFAULT**|O coletor de erros é determinado pela **__app_type**.|
+|**_OUT_TO_DEFAULT**|O coletor de erro é determinado por **__app_type**.|
 |**_OUT_TO_STDERR**|O coletor de erros é um erro padrão.|
 |**_OUT_TO_MSGBOX**|O coletor de erros é uma caixa de mensagem.|
-|**_REPORT_ERRMODE**|Relatório atual **error_mode** valor.|
+|**_REPORT_ERRMODE**|Relatar o valor de **__error_mode** atual.|
 
-Se um valor diferente dos listados for passado, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **set_error_mode** define **errno** para **EINVAL** e retornará -1.
+Se um valor diferente dos listados for passado, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, **_set_error_mode** definirá **errno** como **EINVAL** e retornará-1.
 
-Quando ele é usado com um [assert](assert-macro-assert-wassert.md), **set_error_mode** exibe a instrução com falha na caixa de diálogo e lhe dá a opção de escolher o **ignorar** botão para que você possa Continue a executar o programa.
+Quando usado com uma [declaração](assert-macro-assert-wassert.md), **_set_error_mode** exibe a instrução com falha na caixa de diálogo e oferece a opção de escolher o botão **ignorar** para que você possa continuar a executar o programa.
 
 ## <a name="requirements"></a>Requisitos
 

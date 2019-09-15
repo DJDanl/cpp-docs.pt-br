@@ -1,7 +1,7 @@
 ---
-title: Primitivos de ponto flutuantes
+title: Primitivos de ponto flutuante
 ms.date: 01/31/2019
-apiname:
+api_name:
 - _dclass
 - _ldclass
 - _fdclass
@@ -37,7 +37,7 @@ apiname:
 - _dsin
 - _ldsin
 - _fdsin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -49,7 +49,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _dclass
 - _ldclass
@@ -122,18 +125,18 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: 230d0def145bcb443437b59303b2b36e348da2bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25d70062a76f9c32692f5df3f7abb96b49892725
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333606"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957168"
 ---
-# <a name="floating-point-primitives"></a>Primitivos de ponto flutuantes
+# <a name="floating-point-primitives"></a>Primitivos de ponto flutuante
 
-Funções primitivas específico da Microsoft que são usadas para implementar alguns padrão C runtime library (CRT) funções de ponto flutuante. Eles estão documentados aqui para fins de integridade, mas não são recomendados para uso. Algumas dessas funções são indicadas como não utilizado, pois elas são conhecidas por terem problemas na precisão, a manipulação de exceção e a conformidade com IEEE-754 comportamento. Eles existem na biblioteca do somente para compatibilidade com versões anteriores. Para o comportamento correto, portabilidade e adoção de padrões, prefira as funções de ponto flutuantes padrão dessas funções.
+Funções primitivas específicas da Microsoft que são usadas para implementar algumas funções padrão de ponto flutuante da biblioteca de tempo de execução C (CRT). Eles estão documentados aqui para fins de integridade, mas não são recomendados para uso. Algumas dessas funções são indicadas como não utilizadas, pois elas são conhecidas por ter problemas de precisão, manipulação de exceção e conformidade com o comportamento do IEEE-754. Eles existem na biblioteca somente para compatibilidade com versões anteriores. Para o comportamento correto, a portabilidade e a adesão aos padrões, prefira as funções de ponto flutuante padrão sobre essas funções.
 
-## <a name="dclass-ldclass-fdclass"></a>_dclass, _ldclass, _fdclass
+## <a name="_dclass-_ldclass-_fdclass"></a>_dclass, _ldclass, _fdclass
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -146,23 +149,23 @@ short __cdecl _fdclass(float x);
 ### <a name="parameters"></a>Parâmetros
 
 *x*<br/>
-Argumento da função de ponto flutuante.
+Argumento de função de ponto flutuante.
 
 ### <a name="remarks"></a>Comentários
 
-Esses primitivos de ponto flutuantes implementam as versões de C da macro do CRT [fpclassify](fpclassify.md) para tipos de ponto flutuante. A classificação do argumento *x* é retornado como uma das constantes, definidas em Math. h:
+Esses primitivos de ponto flutuante implementam as versões C da macro CRT [fpclassify](fpclassify.md) para tipos de ponto flutuante. A classificação do argumento *x* é retornada como uma dessas constantes, definida em Math. h:
 
 |Valor|Descrição|
 |-----------|-----------------|
 | **FP_NAN** | Um NaN silencioso, indeterminado ou com sinalização |
 | **FP_INFINITE** | Um infinito positivo ou negativo |
 | **FP_NORMAL** | Um valor positivo ou negativo normalizado diferente de zero |
-| **FP_SUBNORMAL** | Um valor de (desnormalizado) subnormal positivo ou negativo |
+| **FP_SUBNORMAL** | Um valor positivo ou negativo subnormal (desnormalizado) |
 | **FP_ZERO** | Um valor de zero positivo ou negativo |
 
-Para obter mais detalhes, você pode usar o específico da Microsoft [fpclass, _fpclassf](fpclass-fpclassf.md) funções. Use o [fpclassify](fpclassify.md) macro ou função para fins de portabilidade.
+Para obter detalhes adicionais, você pode usar as funções [_fpclass, _fpclassf](fpclass-fpclassf.md) específicas da Microsoft. Use a macro [fpclassify](fpclassify.md) ou a função para portabilidade.
 
-## <a name="dsign-ldsign-fdsign"></a>_dsign, _ldsign, _fdsign
+## <a name="_dsign-_ldsign-_fdsign"></a>_dsign, _ldsign, _fdsign
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -175,13 +178,13 @@ int __cdecl _fdsign(float x);
 ### <a name="parameters"></a>Parâmetros
 
 *x*<br/>
-Argumento da função de ponto flutuante.
+Argumento de função de ponto flutuante.
 
 ### <a name="remarks"></a>Comentários
 
-Esses primitivos de ponto flutuantes é implementar o [signbit](signbit.md) macro ou função no CRT. Elas retornam um valor diferente de zero se o bit de sinal for definido em significando (mantissa) do argumento *x*e 0 se o bit de sinal não está definido.
+Esses primitivos de ponto flutuante implementam a macro ou função [signbit](signbit.md) no CRT. Eles retornarão um valor diferente de zero se o bit de sinal estiver definido no significante (mantissa) do argumento *x*e 0 se o bit de sinal não estiver definido.
 
-## <a name="dpcomp-ldpcomp-fdpcomp"></a>_dpcomp, _ldpcomp, _fdpcomp
+## <a name="_dpcomp-_ldpcomp-_fdpcomp"></a>_dpcomp, _ldpcomp, _fdpcomp
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -194,21 +197,21 @@ int __cdecl _fdpcomp(float x, float y);
 ### <a name="parameters"></a>Parâmetros
 
 *x*, *y*<br/>
-Argumentos da função de ponto flutuante.
+Argumentos de função de ponto flutuante.
 
 ### <a name="remarks"></a>Comentários
 
-Esses primitivos de ponto flutuantes usam dois argumentos, *x* e *y*e retornar um valor que mostra seu relacionamento de ordenação, expressado como o bit a bit ou de constantes, definidas em Math. h:
+Esses primitivos de ponto flutuante usam dois argumentos, *x* e *y*, e retornam um valor que mostra a relação de ordenação, expressa como a bit a bit ou dessas constantes, definida em Math. h:
 
 | Valor | Descrição |
 |------------|-----------------|
 | **_FP_LT** | *x* pode ser considerado menor que *y* |
 | **_FP_EQ** | *x* pode ser considerado igual a *y* |
-| **_FP_GT** | *x* pode ser considerado maior do que *y* |
+| **_FP_GT** | *x* pode ser considerado maior que *y* |
 
-Esses primitivos implementam o [isgreater, isgreaterequal, isless, islessequal, islessgreater e isunordered](floating-point-ordering.md) macros e funções no CRT.
+Esses primitivos implementam as macros [isgreaterequal, isless, islessequal, islessgreater e isunordered](floating-point-ordering.md) e as funções no CRT.
 
-## <a name="dtest-ldtest-fdtest"></a>_dtest, _ldtest, _fdtest
+## <a name="_dtest-_ldtest-_fdtest"></a>_dtest, _ldtest, _fdtest
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -225,19 +228,19 @@ Ponteiro para um argumento de ponto flutuante.
 
 ### <a name="remarks"></a>Comentários
 
-Esses primitivos de ponto flutuantes implementam as versões de C++ da função CRT [fpclassify](fpclassify.md) para tipos de ponto flutuante. O argumento *x* é avaliada e a classificação é retornada como uma das constantes, definidas em Math. h:
+Esses primitivos de ponto flutuante implementam C++ as versões da função CRT [fpclassify](fpclassify.md) para tipos de ponto flutuante. O argumento *x* é avaliado e a classificação é retornada como uma dessas constantes, definidas em Math. h:
 
 |Valor|Descrição|
 |-----------|-----------------|
 | **FP_NAN** | Um NaN silencioso, indeterminado ou com sinalização |
 | **FP_INFINITE** | Um infinito positivo ou negativo |
 | **FP_NORMAL** | Um valor positivo ou negativo normalizado diferente de zero |
-| **FP_SUBNORMAL** | Um valor de (desnormalizado) subnormal positivo ou negativo |
+| **FP_SUBNORMAL** | Um valor positivo ou negativo subnormal (desnormalizado) |
 | **FP_ZERO** | Um valor de zero positivo ou negativo |
 
-Para obter mais detalhes, você pode usar o específico da Microsoft [fpclass, _fpclassf](fpclass-fpclassf.md) funções. Use o [fpclassify](fpclassify.md) função para fins de portabilidade.
+Para obter detalhes adicionais, você pode usar as funções [_fpclass, _fpclassf](fpclass-fpclassf.md) específicas da Microsoft. Use a função [fpclassify](fpclassify.md) para portabilidade.
 
-## <a name="dint-ldint-fdint"></a>_d_int, _ld_int, _fd_int
+## <a name="_d_int-_ld_int-_fd_int"></a>_d_int, _ld_int, _fd_int
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -257,9 +260,9 @@ Um expoente como um tipo integral.
 
 ### <a name="remarks"></a>Comentários
 
-Esses primitivos de ponto flutuantes levam um ponteiro para um valor de ponto flutuante *px* e um valor de expoente *exp*e remova a parte fracionária do valor de ponto flutuante abaixo o expoente determinado, se possível . O valor retornado é o resultado de **fpclassify** no valor da entrada *px* se ele for um NaN ou infinito e no valor de saída na *px* caso contrário.
+Esses primitivos de ponto flutuante levam um ponteiro para um valor de ponto flutuante *PX* e um valor de expoente *exp*e removem a parte fracionária do valor de ponto flutuante abaixo do expoente fornecido, se possível. O valor retornado é o resultado de **fpclassify** no valor de entrada em *PX* , se for um Nan ou um infinito, e no valor de saída em *PX* de outra forma.
 
-## <a name="dscale-ldscale-fdscale"></a>_dscale, _ldscale, _fdscale
+## <a name="_dscale-_ldscale-_fdscale"></a>_dscale, _ldscale, _fdscale
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -279,9 +282,9 @@ Um expoente como um tipo integral.
 
 ### <a name="remarks"></a>Comentários
 
-Esses primitivos de ponto flutuantes levam um ponteiro para um valor de ponto flutuante *px* e um valor de expoente *exp*, e o valor em escala *px* por 2<sup> *exp*</sup>, se possível. O valor retornado é o resultado de **fpclassify** no valor da entrada *px* se ele for um NaN ou infinito e no valor de saída na *px* caso contrário. Para fins de portabilidade, prefira a [ldexp, ldexpf e ldexpl](ldexp.md) funções.
+Esses primitivos de ponto flutuante usam um ponteiro para um valor de ponto flutuante *PX* e um valor de expoente *exp*e dimensionam o valor em *PX* por 2<sup>*exp*</sup>, se possível. O valor retornado é o resultado de **fpclassify** no valor de entrada em *PX* , se for um Nan ou um infinito, e no valor de saída em *PX* de outra forma. Para portabilidade, prefira as funções [ldexp, ldexpf e ldexpl](ldexp.md) .
 
-## <a name="dunscale-ldunscale-fdunscale"></a>_dunscale, _ldunscale, _fdunscale
+## <a name="_dunscale-_ldunscale-_fdunscale"></a>_dunscale, _ldunscale, _fdunscale
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -301,9 +304,9 @@ Ponteiro para um argumento de ponto flutuante.
 
 ### <a name="remarks"></a>Comentários
 
-Esses primitivos de ponto flutuantes dividem o valor de ponto flutuante apontado por *px* em usam significandos de (mantissa) e um expoente, se possível. O significando é dimensionado, de modo que o valor absoluto é maior que ou igual a 0,5 e menor que 1.0. O expoente é o valor *n*, em que o valor de ponto flutuante original é igual ao significando dimensionado vezes 2<sup>*n*</sup>. Este expoente inteiro *n* é armazenado no local apontado por *pexp*. O valor retornado é o resultado de **fpclassify** no valor da entrada *px* se for um NaN ou infinito e, em caso contrário, o valor de saída. Para fins de portabilidade, prefira a [frexp, frexpf, frexpl](frexp.md) funções.
+Esses primitivos de ponto flutuante dividem o valor de ponto flutuante apontado por *PX* em um significante (mantissa) e um expoente, se possível. O significante é dimensionado de forma que o valor absoluto seja maior ou igual a 0,5 e menor que 1,0. O expoente é o valor *n*, em que o valor de ponto flutuante original é igual ao significante dimensionado em horas 2<sup>*n*</sup>. Esse expoente de inteiro *n* é armazenado no local apontado por *pexp*. O valor retornado é o resultado de **fpclassify** no valor de entrada em *PX* , se for um Nan ou um infinito, e no valor de saída, caso contrário. Para portabilidade, prefira as funções [frexp, frexpf e frexpl](frexp.md) .
 
-## <a name="dexp-ldexp-fdexp"></a>_dexp, _ldexp, _fdexp
+## <a name="_dexp-_ldexp-_fdexp"></a>_dexp, _ldexp, _fdexp
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -316,7 +319,7 @@ short __cdecl _fdexp(float* px, float y, long exp);
 ### <a name="parameters"></a>Parâmetros
 
 *y*<br/>
-Argumento da função de ponto flutuante.
+Argumento de função de ponto flutuante.
 
 *px*<br/>
 Ponteiro para um argumento de ponto flutuante.
@@ -326,9 +329,9 @@ Um expoente como um tipo integral.
 
 ### <a name="remarks"></a>Comentários
 
-Esses primitivos de ponto flutuantes construir um valor de ponto flutuante no local apontado por *px* igual a *y* * 2<sup>*exp*</sup>. O valor retornado é o resultado de **fpclassify** no valor da entrada *y* se ele for um NaN ou infinito e no valor de saída na *px* caso contrário. Para fins de portabilidade, prefira a [ldexp, ldexpf e ldexpl](ldexp.md) funções.
+Esses primitivos de ponto flutuante constroem um valor de ponto flutuante no local apontado por *PX* igual a *y* * 2<sup>*exp*</sup>. O valor retornado é o resultado de **fpclassify** no valor de entrada em *y* se for um Nan ou infinito, e no valor de saída em *PX* de outra forma. Para portabilidade, prefira as funções [ldexp, ldexpf e ldexpl](ldexp.md) .
 
-## <a name="dnorm-fdnorm"></a>_dnorm, _fdnorm
+## <a name="_dnorm-_fdnorm"></a>_dnorm, _fdnorm
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -340,13 +343,13 @@ short __cdecl _fdnorm(unsigned short* ps);
 ### <a name="parameters"></a>Parâmetros
 
 *ps*<br/>
-Ponteiro para a representação de bit a bit de um valor de ponto flutuante expressada como uma matriz de **sem sinal** **curto**.
+Ponteiro para a representação de bit-de-vírgula de um valor de ponto flutuante expresso como uma matriz de **curto** **não assinado** .
 
 ### <a name="remarks"></a>Comentários
 
-Esses primitivos de ponto flutuantes normalizar a parte fracionária de um valor de ponto flutuante underflowed e ajustar os *característica*, ou expoente polarizada, para corresponder. O valor é passado como a representação de bit a bit do tipo de ponto flutuante, convertido em uma matriz de **sem sinal** **curto** por meio do `_double_val`, `_ldouble_val`, ou `_float_val` tipo União punning declarada em Math. h. O valor de retorno é o resultado de **fpclassify** sobre o valor de ponto flutuante de entrada se ele for um NaN ou infinito e, em caso contrário, o valor de saída.
+Esses primitivos de ponto flutuante normalizam a parte fracionária de um valor de ponto flutuante de estouro negativo e ajustam a *característica*, ou expoente tendenciosa, para corresponder. O valor é passado como a representação bit-de-vírgula do tipo de ponto flutuante convertido em uma matriz de **curto** `_double_val` **não assinado** por `_ldouble_val`meio de `_float_val` , ou tipo punning Union declarada em Math. h. O valor de retorno é o resultado de **fpclassify** no valor de ponto flutuante de entrada, se for um Nan ou um infinito, e no valor de saída, caso contrário.
 
-## <a name="dpoly-ldpoly-fdpoly"></a>_dpoly, _ldpoly, _fdpoly
+## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly, _ldpoly, _fdpoly
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -359,19 +362,19 @@ float __cdecl _fdpoly(float x, _float const* table, int n);
 ### <a name="parameters"></a>Parâmetros
 
 *x*<br/>
-Argumento da função de ponto flutuante.
+Argumento de função de ponto flutuante.
 
 *table*<br/>
-Ponteiro para uma tabela de coeficientes de constante para um polinomial.
+Ponteiro para uma tabela de coeficientes constantes para um polinomial.
 
 *n*<br/>
-Ordem do polinômio para avaliar.
+Ordem do polinomial a ser avaliada.
 
 ### <a name="remarks"></a>Comentários
 
-Esses primitivos de ponto flutuantes retornam a avaliação de *x* em polinomial da ordem *n* cujos coeficientes são representadas por valores constantes correspondentes na *tabela*. Por exemplo, se *tabela*\[0] = 3.0, *tabela*\[1] = 4.0, *tabela*\[2] = 5.0, e *n* = 2, ele representa o x 5.0 polinomial<sup>2</sup> + 4.0 x + 3.0. Se esse polinomial é avaliada para *x* do 2.0, o resultado é 31.0. Essas funções não são usadas internamente.
+Esses primitivos de ponto flutuante retornam a avaliação de *x* no polinomial da ordem *n* cujos coeficientes são representados pelos valores constantes correspondentes na *tabela*. Por exemplo, se *Table*\[0] = 3,0, *tabela*\[1] = 4,0, *Table*\[2] = 5,0 e *n* = 2, ele representa o polinomial 5.0 x<sup>2</sup> + 4.0 x + 3,0. Se esse polinomial for avaliado para *x* de 2,0, o resultado será 31,0. Essas funções não são usadas internamente.
 
-## <a name="dlog-dlog-dlog"></a>_dlog, _dlog, _dlog
+## <a name="_dlog-_dlog-_dlog"></a>_dlog, _dlog, _dlog
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -384,16 +387,16 @@ float __cdecl _fdlog(float x, int base_flag);
 ### <a name="parameters"></a>Parâmetros
 
 *x*<br/>
-Argumento da função de ponto flutuante.
+Argumento de função de ponto flutuante.
 
 *base_flag*<br/>
-Sinalizador que controla a base a ser usado, 0 para base *eletrônico* e diferente de zero para a base 10.
+Sinalizador que controla a base a ser usada, 0 para base *e e diferente* de zero para base 10.
 
 ### <a name="remarks"></a>Comentários
 
-Esses primitivos de ponto flutuantes retornam o log natural da *x*, ln (*x*) ou de log<sub>*eletrônico*</sub>(*x*), Quando *base_flag* é 0. Elas retornam o log de base 10 da *x*, ou de log<sub>10</sub>(*x*), quando *base_flag* for diferente de zero. Essas funções não são usadas internamente. Para fins de portabilidade, prefira as funções [logf, log, log10, logl, log10f e log10l](log-logf-log10-log10f.md).
+Esses primitivos de ponto flutuante retornam o log natural de *x*, ln (*x*) ou log<sub>*e*</sub>(*x*), quando *base_flag* é 0. Eles retornam a base de log 10 de *x*, ou log<sub>10</sub>(*x*), quando *base_flag* é diferente de zero. Essas funções não são usadas internamente. Para portabilidade, prefira o log de funções [, logf, logl, log10, log10f e log10l](log-logf-log10-log10f.md).
 
-## <a name="dsin-ldsin-fdsin"></a>_dsin, _ldsin, _fdsin
+## <a name="_dsin-_ldsin-_fdsin"></a>_dsin, _ldsin, _fdsin
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -406,14 +409,14 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 ### <a name="parameters"></a>Parâmetros
 
 *x*<br/>
-Argumento da função de ponto flutuante.
+Argumento de função de ponto flutuante.
 
 *quadrant*<br/>
-Deslocamento do quadrante do 0, 1, 2 ou 3 para usar para produzir `sin`, `cos`, `-sin`, e `-cos` resultados.
+Deslocamento de quadrante de 0, 1, 2 ou 3 a ser usado `sin`para `cos`produzir `-sin`,, `-cos` e resultados.
 
 ### <a name="remarks"></a>Comentários
 
-Esses primitivos de ponto flutuantes retornam o seno de *x* deslocamento pela *quadrante* módulo 4. Na verdade, eles retornam o seno, cosseno, - seno e - cosseno *x* quando *quadrante* módulo 4 é 0, 1, 2 ou 3, respectivamente. Essas funções não são usadas internamente. Para fins de portabilidade, prefira a [sin, sinf, sinl](sin-sinf-sinl.md), [cos, cosf e cosl](cos-cosf-cosl.md) funções.
+Esses primitivos de ponto flutuante retornam o seno de deslocamento *x* pelo módulo de *quadrante* 4. Efetivamente, elas retornam o seno, o cosseno, o seno e o cosseno de *x* quando o módulo de *quadrante* 4 é 0, 1, 2 ou 3, respectivamente. Essas funções não são usadas internamente. Para portabilidade, prefira as funções [sin, sinf, sinl](sin-sinf-sinl.md), [cos, cosf e COSL](cos-cosf-cosl.md) .
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,9 +1,9 @@
 ---
 title: mbrlen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbrlen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbrlen
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: ec9079b9b164e2b609a956ddf3a75cd42923bafc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9559731f39db35e03f640bb30b9af3fff00cf66
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156766"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952500"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -51,7 +54,7 @@ O ponteiro para o próximo byte a ser inspecionado em uma cadeia de caracteres m
 O número máximo de bytes a serem inspecionados.
 
 *mbstate*<br/>
-Ponteiro para o estado atual de deslocamento do byte inicial do *str*.
+Aponta para o estado atual de deslocamento do byte inicial de *Str*.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -59,18 +62,18 @@ Um dos seguintes valores:
 
 |||
 |-|-|
-0|A próxima *contagem* ou menos bytes completam o caractere multibyte que representa o caractere nulo largo.
-1 para *contagem*, inclusive|A próxima *contagem* ou menos bytes completam um caractere multibyte válido. O valor retornado é o número de bytes que completa os caracteres multibyte.
-(size_t)(-2)|A próxima *contagem* bytes contribuem para um caractere multibyte incompleto, mas potencialmente válido e todos os *contagem* bytes foram processados.
-(size_t)(-1)|Erro de codificação. A próxima *contagem* ou menos bytes não contribuem para um caractere multibyte válido e completo. Nesse caso, **errno** é definido como EILSEQ e o estado de conversão *mbstate* não está especificado.
+0|A próxima *contagem* ou menos bytes concluirá o caractere multibyte que representa o caractere nulo largo.
+1 para *contagem*, inclusivo|A próxima *contagem* ou menos bytes concluirá um caractere multibyte válido. O valor retornado é o número de bytes que completa os caracteres multibyte.
+(size_t)(-2)|Os bytes de *contagem* seguinte contribuem para um caractere multibyte incompleto, mas potencialmente válido, e todos os bytes de *contagem* foram processados.
+(size_t)(-1)|Erro de codificação. A próxima *contagem* ou menos bytes não contribuirá para um caractere multibyte completo e válido. Nesse caso, **errno** é definido como EILSEQ e o estado de conversão em *mbstate* não é especificado.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbrlen** função inspeciona no máximo *contagem* bytes, começando com o byte apontado por *str* para determinar o número de bytes que são necessários para concluir o próximo caractere multibyte, incluindo quaisquer sequências de deslocamento. É equivalente à chamada `mbrtowc(NULL, str, count, &mbstate)` onde *mbstate* é qualquer um fornecido pelo usuário **mbstate_t** objeto ou um objeto interno estático fornecido pela biblioteca.
+A função **mbrlen** inspeciona no máximo bytes de *contagem* começando com o byte apontado por *Str* para determinar o número de bytes necessários para concluir o próximo caractere multibyte, incluindo quaisquer sequências de deslocamento. É equivalente à chamada `mbrtowc(NULL, str, count, &mbstate)` , em que *mbstate* é um objeto **mbstate_t** fornecido pelo usuário ou um objeto interno estático fornecido pela biblioteca.
 
-O **mbrlen** função salva e usa o estado de deslocamento de um caractere multibyte incompleto na *mbstate* parâmetro. Isso proporciona **mbrlen** precisa ser a capacidade de reiniciar no meio de um caractere multibyte se examinando no máximo *contagem* bytes. Se *mbstate* for um ponteiro nulo, **mbrlen** usa um estático interno **mbstate_t** objeto para armazenar o estado de deslocamento. Porque o internal **mbstate_t** objeto não é thread-safe, é recomendável que você sempre aloque e passe seu próprio *mbstate* parâmetro.
+A função **mbrlen** salva e usa o estado de deslocamento de um caractere multibyte incompleto no parâmetro *mbstate* . Isso dá ao **mbrlen** a capacidade de reiniciar no meio de um caractere multibyte, se necessário, examinando no máximo os bytes de *contagem* . Se *mbstate* for um ponteiro nulo, **mbrlen** usará um objeto **mbstate_t** estático interno para armazenar o estado de deslocamento. Como o objeto **mbstate_t** interno não é thread-safe, é recomendável que você sempre aloque e transmita seu próprio parâmetro *mbstate* .
 
-O **mbrlen** função difere [mbclen, mblen, mblen_l](mbclen-mblen-mblen-l.md) por sua capacidade de reinicialização. O estado de deslocamento é armazenado no *mbstate* para chamadas posteriores às mesmas funções ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis.  Por exemplo, um aplicativo deve usar **wcsrlen** em vez de **wcslen** se uma chamada subsequente para **wcsrtombs** é usado em vez de **wcstombs**.
+A função **mbrlen** difere de [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md) por sua reinicialização. O estado de deslocamento é armazenado em *mbstate* para chamadas subsequentes para as mesmas ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis.  Por exemplo, um aplicativo deve usar **wcsrlen** em vez de **wcslen** se uma chamada subsequente para **wcsrtombs** for usada em vez de **wcstombs**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

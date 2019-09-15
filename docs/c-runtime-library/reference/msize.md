@@ -1,9 +1,9 @@
 ---
 title: _msize
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _msize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - msize
 - _msize
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-ms.openlocfilehash: 0321e42face817a0a9f12d780f72c86c67ba308d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1760cfa6a416e2eb4cd7b549cb5ae9bed00a609
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156285"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951432"
 ---
-# <a name="msize"></a>_msize
+# <a name="_msize"></a>_msize
 
 Retorna o tamanho de um bloco de memória alocado no heap.
 
@@ -50,15 +53,15 @@ Ponteiro para o bloco de memória.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**msize** retorna o tamanho (em bytes) como um inteiro sem sinal.
+**_msize** retorna o tamanho (em bytes) como um inteiro sem sinal.
 
 ## <a name="remarks"></a>Comentários
 
-O **msize** função retorna o tamanho, em bytes, do bloco de memória alocado por uma chamada para **calloc**, **malloc**, ou **realloc**.
+A função **_msize** retorna o tamanho, em bytes, do bloco de memória alocado por uma chamada para **calloc**, **malloc**ou **realloc**.
 
-Quando o aplicativo estiver vinculado a uma versão de depuração das bibliotecas de tempo de execução C, **msize** resolve [msize_dbg](msize-dbg.md). Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (O heap de depuração do CRT).
+Quando o aplicativo é vinculado a uma versão de depuração das bibliotecas de tempo de execução do C, o **_msize** é resolvido para [_msize_dbg](msize-dbg.md). Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (O heap de depuração do CRT).
 
-Esta função valida seu parâmetro. Se *memblock* for um ponteiro nulo, **msize** invocará um manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se o erro for tratado, a função definirá **errno** à **EINVAL** e retornará -1.
+Esta função valida seu parâmetro. Se *memblock* for um ponteiro nulo, **_msize** invocará um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se o erro for tratado, a função definirá **errno** como **EINVAL** e retornará-1.
 
 ## <a name="requirements"></a>Requisitos
 

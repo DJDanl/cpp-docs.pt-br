@@ -1,12 +1,12 @@
 ---
 title: _ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbclower
 - _ismbclower_l
 - _ismbcupper_l
 - _ismbcupper
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbcupper
 - _ismbclower
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-ms.openlocfilehash: 29a1e97f4583808931e5228a6905aed7c0a62702
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a64a0d9be83733fa5482eee84ce6576dd32c221
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157260"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953794"
 ---
-# <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
+# <a name="_ismbclower-_ismbclower_l-_ismbcupper-_ismbcupper_l"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 
 Verifica se um caractere multibyte está em letras minúsculas ou maiúsculas.
 
@@ -75,20 +78,20 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c*< = 255 e houver um correspondente **ismbb** rotina (por exemplo, **ismbcalnum** corresponde ao **ismbbalnum**), o resultado é o valor retornado de correspondente **ismbb** rotina.
+Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c*< = 255 e houver uma rotina **_ismbb** correspondente (por exemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), o resultado será o valor de retorno da rotina **_ismbb** correspondente.
 
 ## <a name="remarks"></a>Comentários
 
 Cada uma dessas funções testa um determinado caractere multibyte quanto a uma determinada condição.
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam a localidade passada em vez da localidade atual para seu comportamento dependente da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam a localidade passada em vez da localidade atual para seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 |Rotina|Condição de teste|Exemplo da página de código 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|Alfabético minúsculo|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII minúsculos em inglês: 0x61< < =*c*< = 0x7A.|
-|**_ismbclower_l**|Alfabético minúsculo|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII minúsculos em inglês: 0x61< < =*c*< = 0x7A.|
-|**_ismbcupper**|Alfabético maiúsculo|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII em maiusculas em inglês: 0x41 < =*c*< lt;=0x5a.|
-|**_ismbcupper_l**|Alfabético maiúsculo|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII em maiusculas em inglês: 0x41 < =*c*< lt;=0x5a.|
+|**_ismbclower**|Alfabético minúsculo|Retornará zero se e somente se *c* for uma representação de byte único de uma letra ASCII minúscula em inglês: 0x61 < =*c*< = 0x7A.|
+|**_ismbclower_l**|Alfabético minúsculo|Retornará zero se e somente se *c* for uma representação de byte único de uma letra ASCII minúscula em inglês: 0x61 < =*c*< = 0x7A.|
+|**_ismbcupper**|Alfabético maiúsculo|Retornará zero se e somente se *c* for uma representação de byte único de uma letra ASCII em letras maiúsculas: 0x41 < =*c*< = 0x5A.|
+|**_ismbcupper_l**|Alfabético maiúsculo|Retornará zero se e somente se *c* for uma representação de byte único de uma letra ASCII em letras maiúsculas: 0x41 < =*c*< = 0x5A.|
 
 ## <a name="requirements"></a>Requisitos
 

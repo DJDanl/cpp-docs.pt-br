@@ -1,9 +1,9 @@
 ---
 title: _CrtIsValidHeapPointer
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtIsValidHeapPointer
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtlsValidHeapPointer
 - _CrtIsValidHeapPointer
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _CrtIsValidHeapPointer function
 - CrtIsValidHeapPointer function
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
-ms.openlocfilehash: cdfb02c622cddc4c86a99f614e469abc527d8845
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a8746eb2da90ac5515d92113b977011a4647fe6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339384"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942391"
 ---
-# <a name="crtisvalidheappointer"></a>_CrtIsValidHeapPointer
+# <a name="_crtisvalidheappointer"></a>_CrtIsValidHeapPointer
 
 Verifica se um ponteiro especificado está em um heap alocado por alguma biblioteca em tempo de execução C, mas não necessariamente pela biblioteca CRT do chamador. Em versões do CRT anteriores ao Visual Studio 2010, isso verifica se o ponteiro especificado está no heap local (somente versão de depuração).
 
@@ -48,11 +51,11 @@ Ponteiro para o início de um bloco de memória alocado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**Crtisvalidheappointer** retornará TRUE se o ponteiro especificado está no heap compartilhado por todas as instâncias da biblioteca CRT. Em versões do CRT anteriores ao Visual Studio 2010, isso retornará TRUE se o ponteiro especificado estiver no heap local. Caso contrário, a função retorna FALSE.
+**_CrtIsValidHeapPointer** retornará true se o ponteiro especificado estiver no heap compartilhado por todas as instâncias de biblioteca do CRT. Em versões do CRT anteriores ao Visual Studio 2010, isso retornará TRUE se o ponteiro especificado estiver no heap local. Caso contrário, a função retorna FALSE.
 
 ## <a name="remarks"></a>Comentários
 
-Não recomendamos o uso dessa função. A partir da biblioteca CRT no Visual Studio 2010, todas as bibliotecas CRT compartilham um heap do sistema operacional, o *heap de processo*. O **crtisvalidheappointer** função informa se o ponteiro foi alocado em um heap CRT, mas não que ele foi alocado pela biblioteca CRT do chamador. Por exemplo, considere um bloco alocado usando a versão do Visual Studio 2010 da biblioteca CRT. Se o **crtisvalidheappointer** função exportada pela versão do Visual Studio 2012 da biblioteca CRT testa o ponteiro, ela retornará TRUE. Esse não é mais um teste útil. Nas versões da biblioteca CRT anteriores ao Visual Studio 2010, a função é usada para garantir que um endereço de memória específico está no heap local. O heap local refere-se ao heap criado e gerenciado por uma instância específica da biblioteca em tempo de execução C. Se uma DLL (biblioteca de vínculo dinâmico) contiver um link estático para a biblioteca em tempo de execução, ela terá sua própria instância do heap em tempo de execução e, portanto, seu próprio heap, independente do heap local do aplicativo. Quando [Debug](../../c-runtime-library/debug.md) não está definido, as chamadas a **crtisvalidheappointer** são removidas durante o pré-processamento.
+Não recomendamos o uso dessa função. A partir da biblioteca CRT no Visual Studio 2010, todas as bibliotecas CRT compartilham um heap do sistema operacional, o *heap de processo*. A função **_CrtIsValidHeapPointer** relata se o ponteiro foi alocado em um heap CRT, mas não foi alocado pela biblioteca CRT do chamador. Por exemplo, considere um bloco alocado usando a versão do Visual Studio 2010 da biblioteca CRT. Se a função **_CrtIsValidHeapPointer** exportada pela versão do Visual Studio 2012 da biblioteca CRT testar o ponteiro, ela retornará true. Esse não é mais um teste útil. Nas versões da biblioteca CRT anteriores ao Visual Studio 2010, a função é usada para garantir que um endereço de memória específico está no heap local. O heap local refere-se ao heap criado e gerenciado por uma instância específica da biblioteca em tempo de execução C. Se uma DLL (biblioteca de vínculo dinâmico) contiver um link estático para a biblioteca em tempo de execução, ela terá sua própria instância do heap em tempo de execução e, portanto, seu próprio heap, independente do heap local do aplicativo. Quando [_DEBUG](../../c-runtime-library/debug.md) não é definido, as chamadas para **_CrtIsValidHeapPointer** são removidas durante o pré-processamento.
 
 Como essa função retorna TRUE ou FALSE, ela pode ser passada para uma das macros [_ASSERT](assert-asserte-assert-expr-macros.md) para criar um mecanismo simples de tratamento de erro de depuração. O seguinte exemplo causa uma falha de asserção se o endereço especificado não está localizado no heap local:
 
@@ -60,7 +63,7 @@ Como essa função retorna TRUE ou FALSE, ela pode ser passada para uma das macr
 _ASSERTE( _CrtIsValidHeapPointer( userData ) );
 ```
 
-Para obter mais informações sobre como **crtisvalidheappointer** pode ser usado com outras macros e funções de depuração, consulte [Macros para relatórios](/visualstudio/debugger/macros-for-reporting). Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details).
+Para obter mais informações sobre como o **_CrtIsValidHeapPointer** pode ser usado com outras funções e macros de depuração, consulte [macros para relatórios](/visualstudio/debugger/macros-for-reporting). Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Requisitos
 

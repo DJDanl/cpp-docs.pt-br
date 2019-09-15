@@ -1,12 +1,12 @@
 ---
 title: strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strrchr
 - wcsrchr
 - _mbsrchr
 - _mbsrchr_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsrchr
 - _ftcsrchr
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-ms.openlocfilehash: 016be9a1d753787b6e0c3800df5a96baea1a19f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b5ce46f43f8bf6801882e1a86b57c22fd4f2ab5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347292"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946850"
 ---
-# <a name="strrchr-wcsrchr-mbsrchr-mbsrchrl"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
+# <a name="strrchr-wcsrchr-_mbsrchr-_mbsrchr_l"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 
 Verifica uma cadeia de caracteres para a última ocorrência de um caractere.
 
@@ -125,19 +128,19 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um ponteiro para a última ocorrência de *c* na *str*, ou nulo se *c* não foi encontrado.
+Retorna um ponteiro para a última ocorrência de *c* em *Str*, ou NULL se *c* não for encontrado.
 
 ## <a name="remarks"></a>Comentários
 
-O `strrchr` função localiza a última ocorrência *c* (convertido em **char**) em *str*. A pesquisa inclui o caractere nulo de terminação.
+A `strrchr` função localiza a última ocorrência de *c* (convertida em **Char**) em *Str*. A pesquisa inclui o caractere nulo de terminação.
 
 `wcsrchr` e `_mbsrchr` são versões de caracteres largos e de caracteres multibyte de `strrchr`. Os argumentos e o valor retornado de `wcsrchr` são cadeias de caracteres largos; aqueles de `_mbsrchr` são cadeias de caracteres multibyte.
 
-Em C, essas funções usam um **const** ponteiro para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga de colocar um ponteiro para **const** retorna um ponteiro para **const**; a versão que usa um ponteiro para não**const** retorna um ponteiro para não -**const** . _CRT_CONST_CORRECT_OVERLOADS a macro é definida se ambos os **const** e não-**const** versões dessas funções estão disponíveis. Se você precisar de não**const** comportamento para ambos C++ sobrecargas, defina o símbolo const_return.
+Em C, essas funções assumem um ponteiro **const** para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga que assume um ponteiro para **const** retorna um ponteiro para **const**; a versão que usa um ponteiro para não**const** retorna um ponteiro para não**const**. A macro _CRT_CONST_CORRECT_OVERLOADS será definida se as versões **const** e não**const** dessas funções estiverem disponíveis. Se você precisar do comportamento não**const** para ambas as C++ sobrecargas, defina o símbolo _CONST_RETURN.
 
-`_mbsrchr` valida seus parâmetros. Se *str* for NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `errno` é definido como EINVAL e `_mbsrchr` retornará 0. `strrchr` e `wcsrchr` não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
+`_mbsrchr` valida seus parâmetros. Se *Str* for NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar `errno` , será definida como EINVAL `_mbsrchr` e retornará 0. `strrchr` e `wcsrchr` não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
 
-O valor de saída é afetado pela configuração da configuração LC_CTYPE categoria da localidade; Para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da configuração de categoria LC_CTYPE da localidade; para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

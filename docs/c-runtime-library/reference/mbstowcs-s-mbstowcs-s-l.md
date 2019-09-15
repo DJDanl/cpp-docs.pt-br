@@ -1,10 +1,10 @@
 ---
 title: mbstowcs_s, _mbstowcs_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbstowcs_s_l
 - mbstowcs_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbstowcs_s_l
 - mbstowcs_s
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-ms.openlocfilehash: 7a1c29118c48bbbb5358e7d7ea57296f7ec908a8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0812c3f667f28c5c43d7932d4746052dbaff3a60
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499766"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952012"
 ---
 # <a name="mbstowcs_s-_mbstowcs_s_l"></a>mbstowcs_s, _mbstowcs_s_l
 
@@ -119,9 +122,9 @@ A cadeia de caracteres de destino sempre é terminada em nulo (mesmo em caso de 
 
 Se *Count* for o valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), **mbstowcs_s** converterá a maior parte da cadeia de caracteres que se ajustará ao buffer de destino, enquanto ainda deixará espaço para um terminador nulo.
 
-Se **mbstowcs_s** converter com êxito a cadeia de caracteres de origem, ela colocará o tamanho em caracteres largos da cadeia de caracteres convertida  *&#42;* , incluindo o terminador nulo, em preligávalue (a preactivavalue fornecida não é **nula**). Isso ocorre mesmo que o argumento *wcstr* seja **nulo** e forneça uma maneira de determinar o tamanho do buffer necessário. Observe que, se *wcstr* for **NULL**, *Count* será ignorado e *sizeInWords* deverá ser 0.
+Se **mbstowcs_s** converter com êxito a cadeia de caracteres de origem, ela colocará o tamanho em caracteres largos da cadeia de caracteres convertida, incluindo o terminador nulo, em  *&#42;preligávalue* (a *preactivavalue* fornecida não é **nula**). Isso ocorre mesmo que o argumento *wcstr* seja **nulo** e forneça uma maneira de determinar o tamanho do buffer necessário. Observe que, se *wcstr* for **NULL**, *Count* será ignorado e *sizeInWords* deverá ser 0.
 
-Se **mbstowcs_s** encontrar um caractere multibyte inválido, ele colocará 0  *&#42;* em preligávalue, definirá o buffer de destino como uma cadeia de caracteres vazia, definirá **errno** como **EILSEQ**e retornará **EILSEQ**.
+Se **mbstowcs_s** encontrar um caractere multibyte inválido, ele colocará 0 em  *&#42;preligávalue*, definirá o buffer de destino como uma cadeia de caracteres vazia, definirá **errno** como **EILSEQ**e retornará **EILSEQ**.
 
 Se as sequências apontadas por *mbstr* e *wcstr* se sobrepõem, o comportamento de **mbstowcs_s** é indefinido.
 

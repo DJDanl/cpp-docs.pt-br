@@ -1,9 +1,9 @@
 ---
 title: _lsearch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lsearch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lsearch
 - lsearch
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-ms.openlocfilehash: 340e8ac382972b15acc52013d5d6a51352db969c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92973536df478f4176970929c5f4dd48352bed13
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285650"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954069"
 ---
-# <a name="lsearch"></a>_lsearch
+# <a name="_lsearch"></a>_lsearch
 
 Executa uma pesquisa linear para um valor e o adicionará ao final da lista se ele não for encontrado. Uma versão mais segura dessa função está disponível; consulte [_lsearch_s](lsearch-s.md).
 
@@ -70,15 +73,15 @@ Ponteiro para a rotina de comparação. O primeiro parâmetro é um ponteiro par
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se a chave for encontrada, **lsearch** retorna um ponteiro para o elemento da matriz na *base* que corresponde ao *chave*. Se a chave não for encontrada, **lsearch** retorna um ponteiro para o novo item adicionado ao final da matriz.
+Se a chave for encontrada, **_lsearch** retornará um ponteiro para o elemento da matriz na *base* que corresponde à *chave*. Se a chave não for encontrada, **_lsearch** retornará um ponteiro para o item recém-adicionado no final da matriz.
 
 ## <a name="remarks"></a>Comentários
 
-O **lsearch** função executa uma pesquisa linear para o valor *chave* em uma matriz de *número* elementos, cada um dos *largura* bytes. Diferentemente **bsearch**, **lsearch** exige que a matriz a ser classificado. Se *chave* não for encontrado, **lsearch** adiciona-ao final da matriz e incrementará *número*.
+A função **_lsearch** executa uma pesquisa linear para a *chave* de valor em uma matriz de elementos *Number* , cada um dos bytes de *largura* . Ao contrário de **bsearch**, **_lsearch** não exige que a matriz seja classificada. Se a *chave* não for encontrada, **_lsearch** a adicionará ao final da matriz e incrementará o *número*.
 
-O *comparar* argumento é um ponteiro para uma rotina fornecida pelo usuário que compara dois elementos de matriz e retorna um valor que especifica seu relacionamento. **lsearch** chamadas a *comparar* rotina um ou mais vezes durante a pesquisa, passando ponteiros para dois elementos de matriz em cada chamada. *Comparar* deve comparar os elementos e retornar um diferente de zero (ou seja, os elementos são diferentes) ou 0 (ou seja, os elementos são idênticos).
+O argumento *Compare* é um ponteiro para uma rotina fornecida pelo usuário que compara dois elementos de matriz e retorna um valor especificando sua relação. **_lsearch** chama a rotina de *comparação* uma ou mais vezes durante a pesquisa, passando ponteiros para dois elementos de matriz em cada chamada. *Compare* deve comparar os elementos e retornar zero (ou seja, os elementos são diferentes) ou 0 (o que significa que os elementos são idênticos).
 
-Essa função valida seus parâmetros. Se *compare*, *chave* ou *número* é **nulo**, ou se *base* é **NULL**e *número* for diferente de zero ou se *largura* é menor que zero, o manipulador de parâmetro inválido é invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará **nulo**.
+Essa função valida seus parâmetros. Se *Compare*, *Key* ou *Number* for **NULL**ou se *base* for **NULL** e *Number* for zero, ou se *Width* for menor que zero, o manipulador de parâmetro inválido será invocado, conforme descrito em [Parameter Validação](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará **NULL**.
 
 ## <a name="requirements"></a>Requisitos
 

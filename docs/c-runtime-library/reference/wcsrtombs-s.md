@@ -1,9 +1,9 @@
 ---
 title: wcsrtombs_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcsrtombs_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcsrtombs_s
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-ms.openlocfilehash: bd965271a65fa91b427c7af7bbd4173b129e1d8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd43e4d4bf3a916f83fb014fc85aa5270fbd4c51
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188565"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945179"
 ---
-# <a name="wcsrtombss"></a>wcsrtombs_s
+# <a name="wcsrtombs_s"></a>wcsrtombs_s
 
 Converte uma cadeia de caracteres largos em sua representação de cadeia de caracteres multibyte. Uma versão de [wcsrtombs](wcsrtombs.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -64,16 +67,16 @@ O tamanho em bytes da cadeia de caracteres convertida, incluindo o terminador nu
 O endereço de um buffer da cadeia de caracteres multibyte convertida resultante.
 
 *sizeInBytes*<br/>
-O tamanho em bytes do *mbstr* buffer.
+O tamanho em bytes do buffer *mbstr* .
 
 *wcstr*<br/>
 Aponta para a cadeia de caracteres largos a ser convertida.
 
 *count*<br/>
-O número máximo de bytes a ser armazenado na *mbstr* buffer, ou [TRUNCATE](../../c-runtime-library/truncate.md).
+O número máximo de bytes a serem armazenados no buffer *mbstr* ou [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *mbstate*<br/>
-Um ponteiro para um **mbstate_t** objeto de estado de conversão.
+Um ponteiro para um objeto de estado de conversão **mbstate_t** .
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -81,42 +84,42 @@ Zero se for bem-sucedido ou um código de erro em caso de falha.
 
 |Condição de erro|Valor de retorno e **errno**|
 |---------------------|------------------------------|
-|*mbstr* está **nulo** e *sizeInBytes* > 0|**EINVAL**|
+|*mbstr* é **nulo** e *sizeInBytes* > 0|**EINVAL**|
 |*wcstr* é **nulo**|**EINVAL**|
-|O buffer de destino é muito pequeno para conter a cadeia de caracteres convertida (a menos que *contagem* é **TRUNCATE**; consulte os comentários abaixo)|**ERANGE**|
+|O buffer de destino é muito pequeno para conter a cadeia de caracteres convertida (a menos que a *contagem* seja **_TRUNCATE**; consulte os comentários abaixo)|**ERANGE**|
 
-Se qualquer uma dessas condições ocorrer, a exceção de parâmetro inválido será invocada, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retorna um código de erro e definirá **errno** conforme indicado na tabela.
+Se qualquer uma dessas condições ocorrer, a exceção de parâmetro inválido será invocada, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará um código de erro e definirá **errno** como indicado na tabela.
 
 ## <a name="remarks"></a>Comentários
 
-O **wcsrtombs_s** função converte uma cadeia de caracteres largos apontada por *wcstr* em caracteres multibyte armazenados no buffer apontado por *mbstr*, usando o estado de conversão contido em *mbstate*. A conversão continuará para cada caractere até que uma das seguintes condições seja atendida:
+A função **wcsrtombs_s** converte uma cadeia de caracteres largos apontados por *wcstr* em caracteres multibyte armazenados no buffer apontado pelo *mbstr*, usando o estado de conversão contido em *mbstate*. A conversão continuará para cada caractere até que uma das seguintes condições seja atendida:
 
 - Um caractere largo nulo é encontrado
 
 - Um caractere largo que não pode ser convertido é encontrado
 
-- O número de bytes armazenados na *mbstr* buffer equals *contagem*.
+- O número de bytes armazenados na *contagem*de Equals do buffer *mbstr* .
 
 A cadeia de caracteres de destino sempre é terminada em nulo (mesmo em caso de erro).
 
-Se *contagem* é o valor especial [TRUNCATE](../../c-runtime-library/truncate.md), em seguida, **wcsrtombs_s** converterá grande parte da cadeia de caracteres que caberá no buffer de destino ainda deixando espaço para um valor nulo terminador.
+Se *Count* for o valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), **wcsrtombs_s** converterá a maior parte da cadeia de caracteres que se ajustará ao buffer de destino, enquanto ainda deixará espaço para um terminador nulo.
 
-Se **wcsrtombs_s** converte com êxito a cadeia de caracteres de origem, ele colocará o tamanho em bytes da cadeia de caracteres convertida, incluindo o terminador nulo, em  *&#42;pReturnValue* (fornecido  *pReturnValue* não é **nulo**). Isso ocorre mesmo se o *mbstr* argumento é **nulo** e fornece uma maneira de determinar o tamanho do buffer. Observe que, se *mbstr* é **nulo**, *contagem* será ignorado.
+Se **wcsrtombs_s** converter com êxito a cadeia de caracteres de origem, ela colocará o tamanho em bytes da cadeia de caracteres convertida, incluindo o terminador nulo, em  *&#42;pretransformvalue* (a *preactivavalue* fornecida não é **nula**). Isso ocorre mesmo que o argumento *mbstr* seja **nulo** e forneça uma maneira de determinar o tamanho do buffer necessário. Observe que, se *mbstr* for **NULL**, *Count* será ignorado.
 
-Se **wcsrtombs_s** encontrar um caractere largo que não é possível converter um caractere multibyte, ele colocará -1 em  *\*pReturnValue*, definirá o buffer de destino como uma cadeia de caracteres vazia, definirá **errno** para **EILSEQ**e retorna **EILSEQ**.
+Se **wcsrtombs_s** encontrar um caractere largo, ele não poderá converter para um caractere multibyte, ele colocará-1 em  *\*preligávalue*, definirá o buffer de destino como uma cadeia de caracteres vazia, definirá **errno** como **EILSEQ**e retornará **EILSEQ** .
 
-Se as sequências apontadas por *wcstr* e *mbstr* se sobrepõem, o comportamento do **wcsrtombs_s** é indefinido. **wcsrtombs_s** é afetado pela categoria LC_TYPE da localidade atual.
+Se as sequências apontadas por *wcstr* e *mbstr* se sobrepõem, o comportamento de **wcsrtombs_s** é indefinido. **wcsrtombs_s** é afetado pela categoria LC_TYPE da localidade atual.
 
 > [!IMPORTANT]
-> Certifique-se de que *wcstr* e *mbstr* não se sobrepõem e que *contagem* reflete corretamente o número de caracteres largos a ser convertido.
+> Verifique se *wcstr* e *mbstr* não se sobrepõem e se *Count* reflete corretamente o número de caracteres largos a serem convertidos.
 
-O **wcsrtombs_s** função difere [wcstombs_s, wcstombs_s_l](wcstombs-s-wcstombs-s-l.md) por sua capacidade de reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas posteriores às mesmas funções ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis. Por exemplo, um aplicativo usaria **wcsrlen** vez **wcslen**, se uma chamada subsequente para **wcsrtombs_s** foram usadas em vez de **wcstombs_s**.
+A função **wcsrtombs_s** difere de [wcstombs_s, _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md) por sua reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas subsequentes para as mesmas ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis. Por exemplo, um aplicativo usaria **wcsrlen** em vez de **wcslen**, se uma chamada subsequente para **wcsrtombs_s** fosse usada em vez de **wcstombs_s**.
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Exceções
 
-O **wcsrtombs_s** função será multithread-safe contanto que nenhuma função no thread atual chame **setlocale** enquanto essa função está em execução e o *mbstate* é nulo.
+A função **wcsrtombs_s** é multithread segura, desde que nenhuma função no thread atual chame **setlocalize** enquanto essa função está em execução e o *mbstate* é nulo.
 
 ## <a name="example"></a>Exemplo
 

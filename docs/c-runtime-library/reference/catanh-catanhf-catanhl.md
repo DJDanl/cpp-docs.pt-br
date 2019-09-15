@@ -1,11 +1,11 @@
 ---
 title: catanh, catanhf, catanhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - catanh
 - catanhf
 - catanhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - catanh
 - catanhf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - catanhf function
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
-ms.openlocfilehash: 8c71d4e44de72b54fd334fc2464ca221f36855a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b21427eb4ab1a3ec8eab10d52e636bf253bc947
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340957"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943228"
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh, catanhf, catanhl
 
-Recupera a tangente hiperbólica inversa de um número complexo, com cortes de ramificação fora do intervalo [-1; + 1] ao longo do eixo real.
+Recupera a tangente hiperbólica inversa de um número complexo, com os cortes de ramificação fora do intervalo [-1; + 1] ao longo do eixo real.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -68,11 +71,11 @@ Um número complexo que representa um ângulo, em radianos.
 
 ## <a name="return-value"></a>Valor de retorno
 
-A tangente hiperbólica inversa de *z*, em radianos. O resultado não estiver associado ao longo do eixo real e no intervalo [-iπ/2; + 2/iπ] ao longo do eixo imaginário. Ocorrerá um erro de domínio se *z* estiver fora do intervalo [-1, + 1]. Ocorrerá um erro de polo se *z* é -1 ou + 1.
+A tangente hiperbólica inversa de *z*, em radianos. O resultado é não associado ao longo do eixo real e no intervalo [-iπ/2; + iπ/2] ao longo do eixo imaginário. Um erro de domínio ocorrerá se *z* estiver fora do intervalo [-1, + 1]. Um erro de pólo ocorrerá se *z* for-1 ou + 1.
 
 ## <a name="remarks"></a>Comentários
 
-Porque C++ permite sobrecargas, é possível chamar sobrecargas de **catanh** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **catanh** sempre usa e retorna um **_Dcomplex** valor.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **catanh** que usam e retornam valores **_Fcomplex** e **_Lcomplex** . Em um programa C, **catanh** sempre pega e retorna um valor **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisitos
 

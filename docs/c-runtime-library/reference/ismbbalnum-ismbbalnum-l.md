@@ -1,10 +1,10 @@
 ---
 title: _ismbbalnum, _ismbbalnum_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbalnum
 - _ismbbalnum_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbalnum
 - ismbbalnum
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - ismbbalnum_l function
 - _ismbbalnum function
 ms.assetid: 8025de50-a871-49fd-9ae6-f437b47aa987
-ms.openlocfilehash: 5b5f54754907c09a34b0f4c3bae3e5c27336ca36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d817ea6875149f9342854b0c22b27b0c93d29636
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286555"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954291"
 ---
-# <a name="ismbbalnum-ismbbalnuml"></a>_ismbbalnum, _ismbbalnum_l
+# <a name="_ismbbalnum-_ismbbalnum_l"></a>_ismbbalnum, _ismbbalnum_l
 
 Determina se um caractere multibyte especificado é alfa ou numérico.
 
@@ -60,13 +63,13 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**ismbbalnum** retorna um valor diferente de zero se a expressão:
+**_ismbbalnum** retornará um valor diferente de zero se a expressão:
 
 `isalnum(c) || _ismbbkalnum(c)`
 
-é diferente de zero para *c*, ou 0 se não for.
+é diferente de zero para *c*ou 0 se não for.
 
-A versão dessa função com o **l** sufixo é idêntico, exceto que ele usa a localidade passada em vez da localidade atual para o seu comportamento dependente da localidade.
+A versão dessa função com o sufixo **_L** é idêntica, exceto pelo fato de que ele usa a localidade passada em vez da localidade atual para seu comportamento dependente de localidade.
 
 ## <a name="requirements"></a>Requisitos
 

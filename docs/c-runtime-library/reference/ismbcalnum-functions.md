@@ -1,14 +1,14 @@
 ---
 title: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbcalpha
 - _ismbcalnum
 - _ismbcdigit
 - _ismbcalnum_l
 - _ismbcdigit_l
 - _ismbcalpha_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbcdigit
 - ismbcalnum_l
@@ -46,14 +49,14 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f13d1faab2923827707d8749a8783a10cf989b88
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157264"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953960"
 ---
-# <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
+# <a name="_ismbcalnum-_ismbcalnum_l-_ismbcalpha-_ismbcalpha_l-_ismbcdigit-_ismbcdigit_l"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 
 Verifica se um caractere multibyte é um alfanumérico, alfa ou um caractere de dígito.
 
@@ -102,19 +105,19 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c*< = 255 e houver um correspondente **ismbb** rotina (por exemplo, **ismbcalnum** corresponde ao **ismbbalnum**), o resultado é o valor retornado de correspondente **ismbb** rotina.
+Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c*< = 255 e houver uma rotina **_ismbb** correspondente (por exemplo, **_ismbcalnum** corresponde a **_ismbbalnum**), o resultado será o valor de retorno da rotina **_ismbb** correspondente.
 
 ## <a name="remarks"></a>Comentários
 
 Cada uma dessas rotinas testa um determinado caractere multibyte quanto a uma determinada condição.
 
-As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam a localidade passada em vez da localidade atual para seu comportamento dependente da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam a localidade passada em vez da localidade atual para seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 |Rotina|Condição de teste|Exemplo da página de código 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcalnum**, **_ismbcalnum_l**|Alfanumérico|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII em inglês: Consulte exemplos para **ismbcdigit** e **ismbcalpha**.|
-|**_ismbcalpha**, **_ismbcalpha_l**|Alfabético|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII em inglês: 0x41 < =*c*< lt;=0x5a ou 0x61< < =*c*< lt;=0x7a; ou uma letra katakana: 0xa6< < =*c*< lt;=0xDF.|
-|**_ismbcdigit**, **_ismbcdigit**|Dígito|Retorna diferente de zero se e somente se *c* é uma representação de byte único de um dígito ASCII: 0x30 < =*c*< lt;=0x39.|
+|**_ismbcalnum**, **_ismbcalnum_l**|Alfanumérico|Retornará zero se e somente se *c* for uma representação de byte único de uma letra ASCII em inglês: Veja exemplos de **_ismbcdigit** e **_ismbcalpha**.|
+|**_ismbcalpha**, **_ismbcalpha_l**|Alfabético|Retornará zero se e somente se *c* for uma representação de byte único de uma letra ASCII em inglês: 0x41 < =*c*< = 0x5A ou 0x61 < =*c*< = 0x7A; ou uma letra katakana: 0xA6 < =*c*< = 0xDF.|
+|**_ismbcdigit**, **_ismbcdigit**|Dígito|Retornará zero se e somente se *c* for uma representação de byte único de um dígito ASCII: 0x30 < =*c*< = 0x39.|
 
 ## <a name="requirements"></a>Requisitos
 

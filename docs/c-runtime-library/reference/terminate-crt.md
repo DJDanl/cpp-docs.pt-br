@@ -1,9 +1,9 @@
 ---
 title: terminate (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - terminate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - terminate
 helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-ms.openlocfilehash: 1f655d328b4d97a2989ad49005ed8a9f44fd9d79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b76ce42817fa1a6b79ef32965fcfa550a508e88d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155622"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946194"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
-Chamadas [anular](abort.md) ou uma função especificada usando **set_terminate**.
+Chama [Abort](abort.md) ou uma função que você especifica usando **set_terminate**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -41,7 +44,7 @@ void terminate( void );
 
 ## <a name="remarks"></a>Comentários
 
-O **encerrar** função é usada com o tratamento de exceções C++ e é chamada nos seguintes casos:
+A função **Terminate** é usada com C++ manipulação de exceção e é chamada nos seguintes casos:
 
 - Não foi encontrado nenhum manipulador catch correspondente a uma exceção do C++ gerada.
 
@@ -49,7 +52,7 @@ O **encerrar** função é usada com o tratamento de exceções C++ e é chamada
 
 - A pilha é corrompida depois de gerar uma exceção.
 
-**encerrar** chamadas [anular](abort.md) por padrão. Você pode alterar esse padrão escrevendo sua própria função de encerramento e chamar **set_terminate** com o nome da sua função como seu argumento. **encerrar** chama a função last especificada como um argumento para **set_terminate**. Para obter mais informações, consulte [Exceções do C++ sem tratamento](../../cpp/unhandled-cpp-exceptions.md).
+**encerrar** chamadas [abortar](abort.md) por padrão. Você pode alterar esse padrão escrevendo sua própria função de encerramento e chamando **set_terminate** com o nome da sua função como seu argumento. **Terminate** chama a última função fornecida como um argumento para **set_terminate**. Para obter mais informações, consulte [Exceções do C++ sem tratamento](../../cpp/unhandled-cpp-exceptions.md).
 
 ## <a name="requirements"></a>Requisitos
 

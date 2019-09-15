@@ -1,10 +1,10 @@
 ---
 title: memcpy_s, wmemcpy_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcpy_s
 - wmemcpy_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 802d75307096e649df15b1864b99699fba92a3a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285317"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952794"
 ---
-# <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
+# <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
 Copia bytes entre buffers. Estas são versões de [memcpy, wmemcpy](memcpy-wmemcpy.md) com melhorias de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -73,18 +76,18 @@ Zero se for bem-sucedido; um código de erro em caso de falha.
 
 ### <a name="error-conditions"></a>Condições de Erro
 
-|*dest*|*destSize*|*src*|*count*|Valor retornado|Conteúdo de *dest*|
+|*dest*|*destSize*|*src*|*count*|Valor retornado|Conteúdo do *dest*|
 |------------|----------------|-----------|---|------------------|------------------------|
 |qualquer|qualquer|qualquer|0|0|Não modificado|
 |**NULL**|qualquer|qualquer|diferente de zero|**EINVAL**|Não modificado|
-|qualquer|qualquer|**NULL**|diferente de zero|**EINVAL**|*dest* é zerado|
-|qualquer|< *count*|qualquer|diferente de zero|**ERANGE**|*dest* é zerado|
+|qualquer|qualquer|**NULL**|diferente de zero|**EINVAL**|o *dest* está zerado|
+|qualquer|< *contar*|qualquer|diferente de zero|**ERANGE**|o *dest* está zerado|
 
 ## <a name="remarks"></a>Comentários
 
-**memcpy_s** cópias *contagem* bytes do *src* para *dest*; **wmemcpy_s** cópias *contagem* caracteres largos (dois bytes). Se a origem e destino se sobrepõem, o comportamento de **memcpy_s** é indefinido. Use **memmove_s** para lidar com regiões sobrepostas.
+**memcpy_s** copia bytes de *contagem* de *src* para *dest*; o **wmemcpy_s** copia os caracteres largos da *contagem* (dois bytes). Se a origem e o destino se sobrepõem, o comportamento de **memcpy_s** é indefinido. Use **memmove_s** para lidar com regiões sobrepostas.
 
-Essas funções validam seus parâmetros. Se *contagem* for diferente de zero e *dest* ou *src* é um ponteiro nulo, ou *destSize* é menor do que *contagem*, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EINVAL** ou **ERANGE** e defina **errno** para o valor de retorno.
+Essas funções validam seus parâmetros. Se *Count* for diferente de zero e *dest* ou *src* for um ponteiro nulo, ou *destSize* for menor que *Count*, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornarão **EINVAL** ou **ERANGE** e definirá **errno** como o valor de retorno.
 
 ## <a name="requirements"></a>Requisitos
 

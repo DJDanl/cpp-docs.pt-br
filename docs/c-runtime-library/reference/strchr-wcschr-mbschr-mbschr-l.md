@@ -1,12 +1,12 @@
 ---
 title: strchr, wcschr, _mbschr, _mbschr_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strchr
 - wcschr
 - _mbschr_l
 - _mbschr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftcschr
 - strchr
@@ -41,14 +44,14 @@ helpviewer_keywords:
 - tcschr function
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
-ms.openlocfilehash: 8668c186a16dc3f3dc2c7223eb10c100fa6d72fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb0b170473ae48b8d339f5e3db8350087997bfeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354257"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940824"
 ---
-# <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr, wcschr, _mbschr, _mbschr_l
+# <a name="strchr-wcschr-_mbschr-_mbschr_l"></a>strchr, wcschr, _mbschr, _mbschr_l
 
 Localiza um caractere em uma cadeia de caracteres usando a localidade atual ou uma categoria de estado de conversão LC_CTYPE especificada.
 
@@ -124,17 +127,17 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna um ponteiro para a primeira ocorrência de *c* na *str*, ou nulo se *c* não foi encontrado.
+Cada uma dessas funções retorna um ponteiro para a primeira ocorrência de *c* em *Str*, ou NULL se *c* não for encontrado.
 
 ## <a name="remarks"></a>Comentários
 
-O `strchr` função localiza a primeira ocorrência do *c* na *str*, ou retorna NULL se *c* não foi encontrado. O caractere de terminação nulo é incluído na pesquisa.
+A `strchr` função localiza a primeira ocorrência de *c* em *Str*ou retorna NULL se *c* não for encontrado. O caractere de terminação nulo é incluído na pesquisa.
 
-`wcschr`, `_mbschr` e `_mbschr_l` são versões de caracteres largos e caracteres multibyte de `strchr`. Os argumentos e o valor retornado de `wcschr` são cadeias de caracteres largos; aqueles de `_mbschr` são cadeias de caracteres multibyte. `_mbschr` reconhece sequências de caracteres multibyte. Além disso, se a cadeia de caracteres for um ponteiro nulo, `_mbschr` invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `_mbschr` retorna nulo e define `errno` para EINVAL. `strchr` e `wcschr` não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
+`wcschr`, `_mbschr` e `_mbschr_l` são versões de caracteres largos e caracteres multibyte de `strchr`. Os argumentos e o valor retornado de `wcschr` são cadeias de caracteres largos; aqueles de `_mbschr` são cadeias de caracteres multibyte. `_mbschr` reconhece sequências de caracteres multibyte. Além disso, se a cadeia de caracteres for um ponteiro nulo, `_mbschr` invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar `_mbschr` , retorna NULL e `errno` define como EINVAL. `strchr` e `wcschr` não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
 
-O valor de saída é afetado pela configuração da configuração LC_CTYPE categoria da localidade; Para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da configuração de categoria LC_CTYPE da localidade; para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Em C, essas funções usam um **const** ponteiro para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga de colocar um ponteiro para **const** retorna um ponteiro para **const**; a versão que usa um ponteiro para não**const** retorna um ponteiro para não -**const** . _CRT_CONST_CORRECT_OVERLOADS a macro é definida se ambos os **const** e não-**const** versões dessas funções estão disponíveis. Se você precisar de não**const** comportamento para ambos C++ sobrecargas, defina o símbolo const_return.
+Em C, essas funções assumem um ponteiro **const** para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga que assume um ponteiro para **const** retorna um ponteiro para **const**; a versão que usa um ponteiro para não**const** retorna um ponteiro para não**const**. A macro _CRT_CONST_CORRECT_OVERLOADS será definida se as versões **const** e não**const** dessas funções estiverem disponíveis. Se você precisar do comportamento não**const** para ambas as C++ sobrecargas, defina o símbolo _CONST_RETURN.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

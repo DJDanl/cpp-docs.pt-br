@@ -1,9 +1,9 @@
 ---
 title: _CrtSetDebugFillThreshold
 ms.date: 03/21/2018
-apiname:
+api_name:
 - _CrtSetDebugFillThreshold
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-ms.openlocfilehash: ebe958ddc1c9a5c372f4ae68336e0dea3144e8b4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fe7d998a44502709edde33d22c1b1e88cf5ecbee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342967"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942292"
 ---
-# <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
+# <a name="_crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 
 Recupera ou modifica o limite controlando o comportamento de preenchimento de buffer nas funções de depuração.
 
@@ -45,15 +48,15 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 ### <a name="parameters"></a>Parâmetros
 
 *newThreshold*<br/>
-Novo tamanho de limite em bytes.
+Novo tamanho do limite em bytes.
 
 ## <a name="return-value"></a>Valor retornado
 
-O valor de limite anterior.
+O valor do limite anterior.
 
 ## <a name="remarks"></a>Comentários
 
-As versões de depuração de algumas funções de CRT com segurança avançada preenchem o buffer passado para elas com um caractere especial (0xFE). Isso ajuda a localizar casos em que o tamanho incorreto foi passado para a função. Infelizmente, isso também reduz o desempenho. Para melhorar o desempenho, use **crtsetdebugfillthreshold** para desabilitar o preenchimento de buffer para buffers maiores que o *newThreshold* limite. Um *newThreshold* valor 0 desativa para todos os buffers.
+As versões de depuração de algumas funções CRT com segurança avançada preenchem o buffer passado para eles com um caractere especial (0xFE). Isso ajuda a localizar casos em que o tamanho incorreto foi passado para a função. Infelizmente, isso também reduz o desempenho. Para melhorar o desempenho, use **_CrtSetDebugFillThreshold** para desabilitar o preenchimento de buffer para buffers maiores do que o limite de *newThreshold* . Um valor de *newThreshold* de 0 desabilita-o para todos os buffers.
 
 O limite padrão é **SIZE_T_MAX**.
 
@@ -101,11 +104,11 @@ Veja a seguir uma lista das funções afetadas.
 |-------------|---------------------|
 |**_CrtSetDebugFillThreshold**|\<crtdbg.h>|
 
-Essa função é específico da Microsoft. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Essa função é específica da Microsoft. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Libraries
 
-Versões de depuração a [bibliotecas de tempo de execução C](../../c-runtime-library/crt-library-features.md) apenas.
+Depurar versões somente das [bibliotecas de tempo de execução do C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Exemplo
 

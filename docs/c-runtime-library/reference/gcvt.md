@@ -1,9 +1,9 @@
 ---
 title: _gcvt
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _gcvt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gcvt
 helpviewer_keywords:
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: 9cf966b455af601d09b4444a5c590e305a6681c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3618f5571275783131c74c89f29218f89023f70e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332242"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956097"
 ---
-# <a name="gcvt"></a>_gcvt
+# <a name="_gcvt"></a>_gcvt
 
 Converte um valor de ponto flutuante em uma cadeia de caracteres que é armazenada um buffer. Uma versão mais segura dessa função está disponível, consulte [_gcvt_s](gcvt-s.md).
 
@@ -62,15 +65,15 @@ Local de armazenamento para o resultado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**gcvt** retorna um ponteiro para a cadeia de caracteres de dígitos.
+**_gcvt** retorna um ponteiro para a cadeia de caracteres de dígitos.
 
 ## <a name="remarks"></a>Comentários
 
-O **gcvt** função converte um ponto flutuante *valor* em uma cadeia de caracteres (que inclui um ponto decimal e um possível byte de sinal) e armazena a cadeia de caracteres no *buffer*. O *buffer* deve ser grande o suficiente para acomodar o valor convertido e um caractere nulo de terminação, que é acrescentado automaticamente. Se um tamanho de buffer de *dígitos* + 1 for usado, a função substituirá o final do buffer. Isso ocorre porque a cadeia de caracteres convertida inclui um ponto decimal e pode conter informações expoente e sinal. Não há nenhuma provisão para estouros. **gcvt** tenta produzir *dígitos* dígitos no formato decimal. Se não for possível, ele produzirá *dígitos* dígitos no formato exponencial. Zeros à direita podem ser suprimidos na conversão.
+A função **_gcvt** converte um *valor* de ponto flutuante em uma cadeia de caracteres (que inclui um ponto decimal e um possível byte de sinal) e armazena a cadeia de caracteres no *buffer*. O *buffer* deve ser grande o suficiente para acomodar o valor convertido mais um caractere nulo de terminação, que é acrescentado automaticamente. Se um tamanho de buffer de *dígitos* + 1 for usado, a função substituirá o final do buffer. Isso ocorre porque a cadeia de caracteres convertida inclui um ponto decimal e pode conter informações expoente e sinal. Não há nenhuma provisão para estouros. **_gcvt** tenta produzir dígitos de *dígitos* no formato decimal. Se não puder, ele produz dígitos de *dígitos* no formato exponencial. Zeros à direita podem ser suprimidos na conversão.
 
-Um *buffer* de comprimento **_CVTBUFSIZE** é suficiente para qualquer flutuantes valor de ponto.
+Um *buffer* de comprimento **_CVTBUFSIZE** é suficiente para qualquer valor de ponto flutuante.
 
-Essa função valida seus parâmetros. Se *buffer* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retorna **nulo**.
+Essa função valida seus parâmetros. Se o *buffer* for **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará **NULL**.
 
 ## <a name="requirements"></a>Requisitos
 
