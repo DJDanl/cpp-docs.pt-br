@@ -1,11 +1,11 @@
 ---
 title: sin, sinf, sinl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - sinl
 - sinf
 - sin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sinl
 - sinf
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4ef8ac08ada6162932bbf9b872f30e6aa88b79b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356245"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948074"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -62,7 +65,7 @@ long double sin(long double x);  // C++ only
 
 ## <a name="return-value"></a>Valor retornado
 
-O **sin** funções retornam o seno *x*. Se *x* é maior que ou igual a 263 ou menor que ou igual a -263, ocorre uma perda de significância no resultado.
+As funções **sin** retornam o seno de *x*. Se *x* for maior ou igual a 263, ou menor ou igual a-263, uma perda de significância no resultado ocorrerá.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
@@ -73,7 +76,7 @@ Para obter mais informações sobre os códigos de retorno, consulte [errno, _do
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ permite sobrecargas, é possível chamar sobrecargas de **sin** que usam e retornam **float** ou **longo** **double** valores. Em um programa do C **sin** sempre usa e retorna **duplo**.
+Como C++ o permite sobrecarga, você pode chamar sobrecargas de **sin** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **sin** sempre usa e retorna **Double**.
 
 ## <a name="requirements"></a>Requisitos
 
