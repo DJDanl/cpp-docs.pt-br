@@ -1,7 +1,7 @@
 ---
 title: iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _iswcsym_l
 - __iswcsym
 - __iscsym
@@ -10,7 +10,7 @@ apiname:
 - __iswcsymf
 - __iscsymf
 - _iscsymf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _iswcsym_l
 - _iswcsymf_l
@@ -62,14 +65,14 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-ms.openlocfilehash: 8ee84243b98c08504ac0bb63593e39c32230b706
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef5b2487fb49739f9a073adbc87546fb5d49d542
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331630"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954408"
 ---
-# <a name="iscsym-iscsymf-iscsym-iswcsym-iscsymf-iswcsymf-iscsyml-iswcsyml-iscsymfl-iswcsymfl"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
+# <a name="iscsym-iscsymf-__iscsym-__iswcsym-__iscsymf-__iswcsymf-_iscsym_l-_iswcsym_l-_iscsymf_l-_iswcsymf_l"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 
 Determine se um inteiro representa um caractere que pode ser usado em um identificador.
 
@@ -111,20 +114,20 @@ int _iswcsymf_l(
 ### <a name="parameters"></a>Parâmetros
 
 *c*<br/>
-Inteiro a ser testado. *c* deve estar no intervalo de 0 a 255 para a versão de caractere estreito da função.
+Inteiro a ser testado. *c* deve estar no intervalo de 0-255 para a versão de caractere estreito da função.
 
 *locale*<br/>
 A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Ambos **iscsym** e **iswcsym** retornam um valor diferente de zero se *c* é uma letra, sublinhado ou dígito. Ambos **iscsymf** e **iswcsymf** retornam um valor diferente de zero se *c* for uma letra ou um sublinhado. Cada uma dessas rotinas retornará 0 se *c* não satisfaz a condição de teste. As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o *localidade* passada em vez da localidade atual para seu comportamento dependente da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**__Iscsym** e **__iswcsym** retornarão um valor diferente de zero se *c* for uma letra, um sublinhado ou um dígito. **__Iscsymf** e **__iswcsymf** retornarão um valor diferente de zero se *c* for uma letra ou um sublinhado. Cada uma dessas rotinas retornará 0 se *c* não atender à condição de teste. As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam a *localidade* passada em vez da localidade atual para seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Comentários
 
 Essas rotinas são definidas como macros, a menos que a macro do pré-processador _CTYPE_DISABLE_MACROS seja definida. Quando você usa as versões de macro dessas rotinas, os argumentos podem ser avaliados mais de uma vez. Tenha cuidado ao usar expressões que têm efeitos colaterais na lista de argumentos.
 
-Para fins de compatibilidade **iscsym** e **iscsymf** são definidas como macros somente quando [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) não está definido ou está definido como 0; Caso contrário, eles serão indefinidos.
+Para compatibilidade com versões anteriores, **iscsym** e **iscsymf** são definidos como macros somente quando [ &#95; &#95;stdc&#95; ](../../preprocessor/predefined-macros.md) não está definido ou é definido como 0; caso contrário, eles serão indefinidos.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -132,7 +135,7 @@ Para fins de compatibilidade **iscsym** e **iscsymf** são definidas como macros
 |-------------|---------------------|
 |**iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, **_iswcsymf_l**|C: \<ctype.h><br /><br /> C++: \<cctype> ou \<ctype.h>|
 
-O **iscsym**, **iscsymf**, **iscsym**, **iswcsym**, **iscsymf**, **_ iswcsymf**, **iscsym_l**, **iswcsym_l**, **iscsymf_l**, e **iswcsymf_l** rotinas são Específico da Microsoft. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+As rotinas **iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**e **_iswcsymf_l** são específicas da Microsoft. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 
