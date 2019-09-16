@@ -35,13 +35,13 @@ no O endereço onde o ponteiro VMCS é armazenado.
 
 ## <a name="return-value"></a>Valor retornado
 
-0
+0\
 A operação foi bem-sucedida.
 
-uma
+1\
 A operação falhou com o status estendido disponível `VM-instruction error field` no do VMCs atual.
 
-2
+2\
 A operação falhou sem status disponível.
 
 ## <a name="remarks"></a>Comentários
