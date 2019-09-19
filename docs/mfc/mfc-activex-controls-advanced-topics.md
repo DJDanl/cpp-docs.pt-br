@@ -1,5 +1,5 @@
 ---
-title: 'Controles ActiveX MFC: Tópicos avançados'
+title: 'Controles ActiveX do MFC: Tópicos avançados'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
@@ -12,100 +12,100 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: df71e2e59763644bd4aefb5d3e3afa46f82f538a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0daabf3d236eb7038f22c54ea76d616baf613a0
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392707"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095996"
 ---
-# <a name="mfc-activex-controls-advanced-topics"></a>Controles ActiveX MFC: Tópicos avançados
+# <a name="mfc-activex-controls-advanced-topics"></a>Controles ActiveX do MFC: Tópicos avançados
 
 Este artigo aborda tópicos avançados relacionados ao desenvolvimento de controles ActiveX. Elas incluem:
 
-- [Usando Classes de banco de dados em controles ActiveX](#_core_using_database_classes_in_activex_controls)
+- [Usando classes de banco de dados em controles ActiveX](#_core_using_database_classes_in_activex_controls)
 
-- [Implementando uma propriedade com parâmetros](#_core_implementing_a_parameterized_property)
+- [Implementando uma propriedade parametrizada](#_core_implementing_a_parameterized_property)
 
 - [Tratamento de erros em seu controle ActiveX](#_core_handling_errors_in_your_activex_control)
 
-- [Manipulação de chaves especiais no controle](#_core_handling_special_keys_in_your_control)
+- [Manipulando chaves especiais no controle](#_core_handling_special_keys_in_your_control)
 
-- [Acessando controles de caixa de diálogo que são invisíveis no tempo de execução](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)
+- [Acessando controles de caixa de diálogo que são invisíveis em tempo de execução](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)
 
 >[!IMPORTANT]
-> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem o ActiveX, consulte [controles ActiveX](activex-controls.md).
+> O ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre as tecnologias modernas que substituem o ActiveX, consulte [controles ActiveX](activex-controls.md).
 
-##  <a name="_core_using_database_classes_in_activex_controls"></a> Usando Classes de banco de dados em controles ActiveX
+##  <a name="_core_using_database_classes_in_activex_controls"></a>Usando classes de banco de dados em controles ActiveX
 
-Como as classes de controle ActiveX fazem parte da biblioteca de classes, você pode aplicar os mesmos procedimentos e as regras para usar classes de banco de dados em um aplicativo MFC padrão para o desenvolvimento de controles ActiveX que usam as classes de banco de dados do MFC.
+Como as classes de controle ActiveX fazem parte da biblioteca de classes, você pode aplicar os mesmos procedimentos e regras para usar classes de banco de dados em um aplicativo MFC padrão para desenvolver controles ActiveX que usam as classes de banco de dados MFC.
 
-Para obter uma visão geral das classes de banco de dados do MFC, consulte [Classes de banco de dados MFC (DAO e ODBC)](../data/mfc-database-classes-odbc-and-dao.md). O artigo apresenta as classes MFC ODBC e MFC DAO classes e direciona você para obter mais detalhes sobre qualquer um.
+Para obter uma visão geral das classes de banco de dados MFC, consulte [classes de banco de dados MFC (DAO e ODBC)](../data/mfc-database-classes-odbc-and-dao.md). O artigo apresenta as classes ODBC do MFC e as classes do MFC DAO e direciona você para obter mais detalhes sobre ambos.
 
 > [!NOTE]
->  Os assistentes e o ambiente do Visual C++ não têm suporte DAO (embora as classes DAO estão incluídas e você ainda pode usá-los). A Microsoft recomenda que você use [modelos OLE DB](../data/oledb/ole-db-programming.md) ou [ODBC e MFC](../data/odbc/odbc-and-mfc.md) para novos projetos. Você só deve usar DAO em manutenção de aplicativos existentes.
+>   O DAO tem suporte por meio do Office 2013. O DAO 3,6 é a versão final e é considerado obsoleto. O ambiente C++ visual e os assistentes não dão suporte a DAO (embora as classes DAO estejam incluídas e você ainda possa usá-las). A Microsoft recomenda que você use [modelos de OLE DB](../data/oledb/ole-db-programming.md) ou [ODBC e MFC](../data/odbc/odbc-and-mfc.md) para novos projetos. Você só deve usar o DAO na manutenção de aplicativos existentes.
 
-##  <a name="_core_implementing_a_parameterized_property"></a> Implementando uma propriedade com parâmetros
+##  <a name="_core_implementing_a_parameterized_property"></a>Implementando uma propriedade parametrizada
 
-Uma propriedade com parâmetros (às vezes chamada de uma matriz de propriedade) é um método para expor uma coleção homogênea de valores como uma única propriedade do controle. Por exemplo, você pode usar uma propriedade com parâmetros para expor um dicionário como uma propriedade ou uma matriz. No Visual Basic, essa propriedade é acessada usando a notação de matriz:
+Uma propriedade parametrizada (às vezes chamada de matriz de propriedade) é um método para expor uma coleção homogênea de valores como uma única propriedade do controle. Por exemplo, você pode usar uma propriedade com parâmetros para expor uma matriz ou um dicionário como uma propriedade. Em Visual Basic, essa propriedade é acessada usando a notação de matriz:
 
 [!code-vb[NVC_MFC_AxVb#1](../mfc/codesnippet/visualbasic/mfc-activex-controls-advanced-topics_1.vb)]
 
-Use o Assistente para adicionar propriedade para implementar uma propriedade com parâmetros. O Assistente para adicionar propriedade implementa a propriedade adicionando um par de funções de Get/Set que permitem que o usuário acessar a propriedade usando a notação acima do controle ou da maneira padrão.
+Use o assistente para adicionar propriedade para implementar uma propriedade parametrizada. O assistente para adicionar propriedade implementa a propriedade adicionando um par de funções get/set que permitem ao usuário de controle acessar a propriedade usando a notação acima ou da maneira padrão.
 
-Semelhante aos métodos e propriedades, propriedades parametrizadas também têm um limite para o número de parâmetros permitidos. No caso de propriedades parametrizadas, o limite é de 15 parâmetros (com um parâmetro reservado para armazenar o valor da propriedade).
+Semelhante a métodos e propriedades, as propriedades parametrizadas também têm um limite para o número de parâmetros permitidos. No caso de propriedades parametrizadas, o limite é de 15 parâmetros (com um parâmetro reservado para armazenar o valor da propriedade).
 
-O procedimento a seguir adiciona uma propriedade com parâmetros, chamada matriz, que pode ser acessado como uma matriz bidimensional de inteiros.
+O procedimento a seguir adiciona uma propriedade parametrizada, chamada array, que pode ser acessada como uma matriz bidimensional de inteiros.
 
-#### <a name="to-add-a-parameterized-property-using-the-add-property-wizard"></a>Para adicionar uma propriedade com parâmetros usando o Assistente para adicionar propriedade
+#### <a name="to-add-a-parameterized-property-using-the-add-property-wizard"></a>Para adicionar uma propriedade com parâmetros usando o assistente para adicionar propriedade
 
-1. Carregar o projeto do seu controle.
+1. Carregue o projeto do seu controle.
 
-1. No modo de exibição de classe, expanda o nó de biblioteca do seu controle.
+1. Em Modo de Exibição de Classe, expanda o nó biblioteca do seu controle.
 
-1. Para abrir o menu de atalho, clique com botão direito no nó de interface para o seu controle (o segundo nó do nó de biblioteca).
+1. Clique com o botão direito do mouse no nó da interface do seu controle (o segundo nó do nó da biblioteca) para abrir o menu de atalho.
 
-1. No menu de atalho, clique em **Add** e, em seguida, clique em **adicionar propriedade**.
+1. No menu de atalho, clique em **Adicionar** e, em seguida, clique em **Adicionar Propriedade**.
 
-1. No **nome da propriedade** , digite `Array`.
+1. Na caixa **nome da propriedade** , digite `Array`.
 
-1. No **tipo de propriedade** caixa, selecione **curto**.
+1. Na caixa **tipo de propriedade** , selecione **curto**.
 
-1. Para **implementação** tipo, clique em **métodos Get/Set**.
+1. Para tipo de **implementação** , clique em **obter/definir métodos**.
 
-1. No **função Obtenha** e **função Set** caixas, digite nomes exclusivos para seu Get e definir funções ou aceite os nomes padrão.
+1. Nas caixas **obter** função e **definir função** , digite nomes exclusivos para suas funções Get e Set ou aceite os nomes padrão.
 
-9. Adicione um parâmetro chamado *linha* (tipo *curto*), usando o **nome do parâmetro** e **tipo de parâmetro** controles.
+9. Adicione um parâmetro, chamado *Row* (tipo *Short*), usando os controles de **nome de parâmetro** e **tipo de parâmetro** .
 
-10. Adicionar um segundo parâmetro chamado *coluna* (tipo *curto*).
+10. Adicione um segundo parâmetro chamado *coluna* (tipo *curto*).
 
 11. Clique em **Finalizar**.
 
-### <a name="changes-made-by-the-add-property-wizard"></a>As alterações feitas pelo Assistente para adicionar propriedade
+### <a name="changes-made-by-the-add-property-wizard"></a>Alterações feitas pelo Assistente para adicionar propriedade
 
-Quando você adiciona uma propriedade personalizada, o Assistente para adicionar propriedade faz alterações para o cabeçalho de classe de controle (. H) e a implementação (. Arquivos CPP).
+Quando você adiciona uma propriedade personalizada, o assistente para adicionar propriedade faz alterações no cabeçalho da classe de controle (. H) e a implementação (. CPP).
 
-As linhas a seguir são adicionadas à classe do controle. Arquivo do H:
+As linhas a seguir são adicionadas à classe Control. Arquivo H:
 
 [!code-cpp[NVC_MFC_AxUI#35](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_2.h)]
 
-Esse código declara duas funções chamadas `GetArray` e `SetArray` que permitem que o usuário solicitar uma linha e coluna específica ao acessar a propriedade.
+Esse código declara duas funções chamadas `GetArray` e `SetArray` que permitem que o usuário solicite uma linha e uma coluna específicas ao acessar a propriedade.
 
-Além disso, o Assistente para adicionar propriedade adiciona as seguintes linhas ao mapa de expedição de controle, na implementação de classe do controle (. Arquivo CPP):
+Além disso, o assistente para adicionar propriedade adiciona as seguintes linhas ao mapa de expedição de controle, localizado na implementação da classe de controle (. CPP) arquivo:
 
 [!code-cpp[NVC_MFC_AxUI#36](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_3.cpp)]
 
-Por fim, as implementações do `GetArray` e `SetArray` funções são adicionadas ao final da. Arquivo CPP. Na maioria dos casos, você modificará a função Get para retornar o valor da propriedade. A função de conjunto geralmente conterá o código que deve executar antes ou após as alterações de propriedade.
+Por fim, as implementações `GetArray` das `SetArray` funções e são adicionadas ao final do. Arquivo CPP. Na maioria dos casos, você modificará a função Get para retornar o valor da propriedade. A função Set geralmente conterá o código que deve ser executado, antes ou depois da alteração da propriedade.
 
-Para essa propriedade é útil, você poderia declarar uma variável de membro na classe de controle do tipo de matriz bidimensional **curto**, para armazenar os valores da propriedade com parâmetros. Em seguida, você poderia modificar a função de Get para retornar o valor armazenado na linha apropriada e na coluna, conforme indicado pelos parâmetros e modifique a função de conjunto para atualizar o valor referenciado pelos parâmetros de linha e coluna.
+Para que essa propriedade seja útil, você pode declarar uma variável de membro de matriz bidimensional na classe de controle, do tipo **Short**, para armazenar valores para a propriedade parametrizada. Em seguida, você poderia modificar a função Get para retornar o valor armazenado na linha e coluna adequadas, conforme indicado pelos parâmetros e modificar a função Set para atualizar o valor referenciado pelos parâmetros Row e Column.
 
-##  <a name="_core_handling_errors_in_your_activex_control"></a> Tratamento de erros em seu controle ActiveX
+##  <a name="_core_handling_errors_in_your_activex_control"></a>Tratamento de erros em seu controle ActiveX
 
-Se ocorrerem as condições de erro no controle, você talvez precise relatar o erro para o contêiner de controle. Há dois métodos para relatar erros, dependendo da situação em que o erro ocorre. Se o erro ocorrer dentro de uma propriedade obter ou definir a função, ou dentro da implementação de um método de automação OLE, o controle deve chamar [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror), que sinaliza para o usuário do controle que ocorreu um erro. Se o erro ocorrer em outra ocasião, o controle deve chamar [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror), que dispara um evento de erro de estoque.
+Se as condições de erro ocorrerem no controle, talvez seja necessário reportar o erro para o contêiner de controle. Há dois métodos para relatar erros, dependendo da situação em que o erro ocorre. Se o erro ocorrer na função Get ou set de uma propriedade ou na implementação de um método de automação OLE, o controle deverá chamar [COleControl:: ThrowError](../mfc/reference/colecontrol-class.md#throwerror), que sinaliza ao usuário de controle que ocorreu um erro. Se o erro ocorrer em qualquer outro momento, o controle deverá chamar [COleControl:: FireError](../mfc/reference/colecontrol-class.md#fireerror), que dispara um evento de erro de estoque.
 
-Para indicar o tipo de erro que ocorreu, o controle deve passar um código de erro para `ThrowError` ou `FireError`. Um código de erro é um código de status do OLE, que tem um valor de 32 bits. Quando possível, escolha um código de erro do conjunto padrão de códigos definidos no OLECTL. Arquivo de cabeçalho de H. A tabela a seguir resume esses códigos.
+Para indicar o tipo de erro que ocorreu, o controle deve passar um código de erro para `ThrowError` ou `FireError`. Um código de erro é um código de status OLE, que tem um valor de 32 bits. Quando possível, escolha um código de erro do conjunto padrão de códigos definido no OLECTL. Arquivo de cabeçalho H. A tabela a seguir resume esses códigos.
 
-### <a name="activex-control-error-codes"></a>Códigos de erro do controle ActiveX
+### <a name="activex-control-error-codes"></a>Códigos de erro de controle ActiveX
 
 |Erro|Descrição|
 |-----------|-----------------|
@@ -113,7 +113,7 @@ Para indicar o tipo de erro que ocorreu, o controle deve passar um código de er
 |CTL_E_OVERFLOW|Estouro|
 |CTL_E_OUTOFMEMORY|Memória insuficiente|
 |CTL_E_DIVISIONBYZERO|Divisão por zero|
-|CTL_E_OUTOFSTRINGSPACE|Sem espaço de cadeia de caracteres|
+|CTL_E_OUTOFSTRINGSPACE|Espaço insuficiente na cadeia de caracteres|
 |CTL_E_OUTOFSTACKSPACE|Espaço em pilha insuficiente|
 |CTL_E_BADFILENAMEORNUMBER|Nome ou número de arquivo inválido|
 |CTL_E_FILENOTFOUND|Arquivo não encontrado|
@@ -123,60 +123,60 @@ Para indicar o tipo de erro que ocorreu, o controle deve passar um código de er
 |CTL_E_FILEALREADYEXISTS|O arquivo já existe|
 |CTL_E_BADRECORDLENGTH|Comprimento de registro inválido|
 |CTL_E_DISKFULL|Disco cheio|
-|CTL_E_BADRECORDNUMBER|Número de registro inválido|
-|CTL_E_BADFILENAME|Nome de arquivo inválido|
+|CTL_E_BADRECORDNUMBER|Número de registro inadequado|
+|CTL_E_BADFILENAME|Nome de arquivo inadequado|
 |CTL_E_TOOMANYFILES|Muitos arquivos|
 |CTL_E_DEVICEUNAVAILABLE|Dispositivo não disponível|
 |CTL_E_PERMISSIONDENIED|Permissão negada|
-|CTL_E_DISKNOTREADY|Disco não está pronto|
-|CTL_E_PATHFILEACCESSERROR|Erro de acesso do caminho/arquivo|
+|CTL_E_DISKNOTREADY|O disco não está pronto|
+|CTL_E_PATHFILEACCESSERROR|Erro de acesso ao caminho/arquivo|
 |CTL_E_PATHNOTFOUND|demarcador não localizado|
-|CTL_E_INVALIDPATTERNSTRING|Cadeia de caracteres padrão inválida|
-|CTL_E_INVALIDUSEOFNULL|Uso inválido de nulo|
+|CTL_E_INVALIDPATTERNSTRING|Cadeia de caracteres de padrão inválida|
+|CTL_E_INVALIDUSEOFNULL|Uso inválido de NULL|
 |CTL_E_INVALIDFILEFORMAT|Formato de arquivo inválido|
 |CTL_E_INVALIDPROPERTYVALUE|Valor de propriedade inválido|
 |CTL_E_INVALIDPROPERTYARRAYINDEX|Índice de matriz de propriedade inválido|
-|CTL_E_SETNOTSUPPORTEDATRUNTIME|Conjunto não tem suportado em tempo de execução|
-|CTL_E_SETNOTSUPPORTED|Conjunto não tem suportado (propriedade somente leitura)|
+|CTL_E_SETNOTSUPPORTEDATRUNTIME|Não há suporte para Set em tempo de execução|
+|CTL_E_SETNOTSUPPORTED|Não há suporte para Set (Propriedade somente leitura)|
 |CTL_E_NEEDPROPERTYARRAYINDEX|Índice da matriz de propriedade necessário|
-|CTL_E_SETNOTPERMITTED|Definição não permitida|
-|CTL_E_GETNOTSUPPORTEDATRUNTIME|Obter não tem suporte em tempo de execução|
-|CTL_E_GETNOTSUPPORTED|Obter sem suporte (propriedade de somente gravação)|
+|CTL_E_SETNOTPERMITTED|Definir não permitido|
+|CTL_E_GETNOTSUPPORTEDATRUNTIME|Não há suporte para Get em tempo de execução|
+|CTL_E_GETNOTSUPPORTED|Não há suporte para Get (Propriedade somente gravação)|
 |CTL_E_PROPERTYNOTFOUND|Propriedade não localizada|
-|CTL_E_INVALIDCLIPBOARDFORMAT|Formato inválido de área de transferência|
+|CTL_E_INVALIDCLIPBOARDFORMAT|Formato de área de transferência inválido|
 |CTL_E_INVALIDPICTURE|Imagem inválida|
 |CTL_E_PRINTERERROR|Erro de impressora|
-|CTL_E_CANTSAVEFILETOTEMP|Não é possível salvar o arquivo para TEMP|
+|CTL_E_CANTSAVEFILETOTEMP|Não é possível salvar o arquivo em TEMP|
 |CTL_E_SEARCHTEXTNOTFOUND|Texto de pesquisa não encontrado|
 |CTL_E_REPLACEMENTSTOOLONG|Substituições muito longas|
 
-Se necessário, use a macro CUSTOM_CTL_SCODE para definir um código de erro personalizado para uma condição que não é coberto por um dos códigos padrão. O parâmetro dessa macro deve ser um inteiro entre 1000 e 32767, inclusivo. Por exemplo:
+Se necessário, use a macro CUSTOM_CTL_SCODE para definir um código de erro personalizado para uma condição que não seja coberta por um dos códigos padrão. O parâmetro para essa macro deve ser um inteiro entre 1000 e 32767, inclusive. Por exemplo:
 
 [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]
 
-Se você estiver criando um controle ActiveX para substituir um controle existente do VBX, defina os códigos de erro do controle ActiveX com os mesmos valores numéricos, que o controle VBX usa para garantir que os códigos de erro são compatíveis.
+Se você estiver criando um controle ActiveX para substituir um controle VBX existente, defina seus códigos de erro de controle ActiveX com os mesmos valores numéricos que o controle VBX usa para garantir que os códigos de erro sejam compatíveis.
 
-##  <a name="_core_handling_special_keys_in_your_control"></a> Manipulação de chaves especiais no controle
+##  <a name="_core_handling_special_keys_in_your_control"></a>Manipulando chaves especiais no controle
 
-Em alguns casos você talvez queira manipular determinadas combinações de pressionamento de tecla de forma especial; Por exemplo, inserir uma nova linha quando a tecla ENTER é pressionada em um texto de várias linhas, controle de caixa ou mover entre um grupo de edição controla quando um direcional pressionado de ID da chave.
+Em alguns casos, talvez você queira lidar com certas combinações de teclas de forma especial; por exemplo, insira uma nova linha quando a tecla ENTER for pressionada em um controle de caixa de texto de várias linhas ou mova-se entre um grupo de controles de edição quando uma ID de chave direcional for pressionada.
 
-Se a classe base do seu controle ActiveX `COleControl`, você pode substituir [CWnd::PreTranslateMessage](../mfc/reference/cwnd-class.md#pretranslatemessage) para lidar com mensagens antes que o contêiner as processa. Ao usar essa técnica, sempre retornam **verdadeira** se você manipular a mensagem em seu substituto do `PreTranslateMessage`.
+Se a classe base do seu controle ActiveX for `COleControl`, você poderá substituir [CWnd::P retranslatemessage](../mfc/reference/cwnd-class.md#pretranslatemessage) para tratar as mensagens antes de o contêiner processá-las. Ao usar essa técnica, sempre retornará **true** se você tratar a mensagem em sua substituição de `PreTranslateMessage`.
 
-O exemplo de código a seguir demonstra uma possível maneira de lidar com todas as mensagens relacionadas às chaves direcionais.
+O exemplo de código a seguir demonstra uma possível maneira de lidar com qualquer mensagem relacionada às chaves direcionais.
 
 [!code-cpp[NVC_MFC_AxUI#38](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_5.cpp)]
 
-Para obter mais informações sobre o tratamento de interfaces de teclado para um controle ActiveX, consulte a documentação do SDK do ActiveX.
+Para obter mais informações sobre como manipular interfaces de teclado para um controle ActiveX, consulte a documentação do SDK do ActiveX.
 
-##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> Acessando controles de caixa de diálogo que são invisíveis no tempo de execução
+##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a>Acessando controles de caixa de diálogo que são invisíveis em tempo de execução
 
-Você pode criar controles de caixa de diálogo que não tem nenhuma interface do usuário e são invisível em tempo de execução. Se você adicionar um invisível em tempo de execução controle ActiveX a uma caixa de diálogo e use [CWnd::GetDlgItem](../mfc/reference/cwnd-class.md#getdlgitem) para o controle de acesso, o controle não funcionará corretamente. Em vez disso, você deve usar uma das técnicas a seguir para obter um objeto que representa o controle:
+Você pode criar controles de caixa de diálogo que não têm interface do usuário e que estão invisíveis no tempo de execução. Se você adicionar um controle de ActiveX invisível no tempo de execução a uma caixa de diálogo e usar [CWnd:: GetDlgItem](../mfc/reference/cwnd-class.md#getdlgitem) para acessar o controle, o controle não funcionará corretamente. Em vez disso, você deve usar uma das seguintes técnicas para obter um objeto que representa o controle:
 
-- Usando o Assistente de adição membro variável, selecione **variável de controle** e, em seguida, selecione a ID. do controle Insira um nome de variável de membro e selecione a classe de wrapper do controle como o **tipo de controle**.
+- Usando o assistente para Adicionar variável de membro, selecione **variável de controle** e, em seguida, selecione a ID do controle. Insira um nome de variável de membro e selecione a classe wrapper do controle como o **tipo de controle**.
 
      - ou -
 
-- Declare uma variável local e a subclasse como o item de caixa de diálogo. Inserir código semelhante ao seguinte (`CMyCtrl` é a classe de wrapper, IDC_MYCTRL1 é a ID do controle):
+- Declare uma variável local e uma subclasse como o item de diálogo. Insira um código semelhante ao seguinte (`CMyCtrl` é a classe wrapper, IDC_MYCTRL1 é a ID do controle):
 
    [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 
