@@ -1,22 +1,24 @@
 ---
 title: Estrutura CDaoFieldInfo
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - CDaoFieldInfo
 helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-ms.openlocfilehash: a5c4013a323c85ad19a3fade20f76852e053362a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e98f5ba69f6702dd768cfe6605f993064e1b896c
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399818"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096109"
 ---
 # <a name="cdaofieldinfo-structure"></a>Estrutura CDaoFieldInfo
 
-O `CDaoFieldInfo` estrutura contém informações sobre um objeto de campo definido para objetos de acesso de dados (DAO).
+A `CDaoFieldInfo` estrutura contém informações sobre um objeto de campo definido para DAO (objetos de acesso a dados).
+
+O DAO tem suporte por meio do Office 2013. O DAO 3,6 é a versão final e é considerado obsoleto.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,116 +45,116 @@ struct CDaoFieldInfo
 #### <a name="parameters"></a>Parâmetros
 
 *m_strName*<br/>
-Exclusivamente nomeia o objeto de campo. Para obter detalhes, consulte o tópico "Propriedade de nome" na Ajuda do DAO.
+Nomeia exclusivamente o objeto Field. Para obter detalhes, consulte o tópico "propriedade de nome" na ajuda do DAO.
 
 *m_nType*<br/>
-Um valor que indica o tipo de dados do campo. Para obter detalhes, consulte o tópico "Propriedade do tipo" na Ajuda do DAO. O valor dessa propriedade pode ser um dos seguintes:
+Um valor que indica o tipo de dados do campo. Para obter detalhes, consulte o tópico "Type Property" na ajuda do DAO. O valor dessa propriedade pode ser um dos seguintes:
 
-- `dbBoolean` Sim/não igual a verdadeiro/falso
+- `dbBoolean`Sim/Não, o mesmo que verdadeiro/falso
 
-- `dbByte` Byte
+- `dbByte`Minuciosa
 
-- `dbInteger` curto
+- `dbInteger`Baixo
 
-- `dbLong` Longas
+- `dbLong`Longas
 
-- `dbCurrency` Moeda; classe do MFC consulte [COleCurrency](../../mfc/reference/colecurrency-class.md)
+- `dbCurrency`Moeda consulte MFC Class [COleCurrency](../../mfc/reference/colecurrency-class.md)
 
-- `dbSingle` Único
+- `dbSingle`Exclusivo
 
-- `dbDouble` Double
+- `dbDouble`Clique
 
-- `dbDate` Data/hora; classe do MFC consulte [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)
+- `dbDate`Data/hora; consulte MFC Class [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)
 
-- `dbText` Texto; classe do MFC consulte [CString](../../atl-mfc-shared/reference/cstringt-class.md)
+- `dbText`Texto Confira classe do MFC [CString](../../atl-mfc-shared/reference/cstringt-class.md)
 
-- `dbLongBinary` Binário longo (objeto OLE); Você talvez queira usar a classe do MFC [CByteArray](../../mfc/reference/cbytearray-class.md) em vez da classe `CLongBinary` como `CByteArray` é mais avançada e fácil de usar.
+- `dbLongBinary`Binário longo (objeto OLE); Talvez você queira usar a classe MFC [CByteArray](../../mfc/reference/cbytearray-class.md) em vez da `CLongBinary` classe `CByteArray` , pois é mais rica e fácil de usar.
 
-- `dbMemo` Memorando; Consulte classe do MFC `CString`
+- `dbMemo`Campos consulte classe do MFC`CString`
 
-- `dbGUID` Um identificador global exclusivo/identificador universal exclusivo usado com chamadas de procedimento remoto. Para obter mais informações, consulte o tópico "Propriedade do tipo" na Ajuda do DAO.
+- `dbGUID`Identificador global exclusivo/identificador universal exclusivo usado com chamadas de procedimento remoto. Para obter mais informações, consulte o tópico "Type Property" na ajuda do DAO.
 
 > [!NOTE]
->  Não use tipos de dados de cadeia de caracteres para dados binários. Isso faz com que seus dados de passagem, a camada de conversão Unicode/ANSI, resultando em maior sobrecarga e possivelmente inesperada de tradução.
+>  Não use tipos de dados de cadeia de caracteres para dados binários. Isso faz com que os dados passem pela camada de conversão Unicode/ANSI, resultando em maior sobrecarga e conversão possivelmente inesperada.
 
 *m_lSize*<br/>
-Um valor que indica o tamanho máximo, em bytes, de um objeto de campo do DAO que contém o texto ou o tamanho fixo de um objeto de campo que contém os valores de texto ou numérica. Para obter detalhes, consulte o tópico "Propriedade de tamanho" na Ajuda do DAO. Tamanhos de podem ser um dos seguintes valores:
+Um valor que indica o tamanho máximo, em bytes, de um objeto de campo DAO que contém texto ou o tamanho fixo de um objeto de campo que contém valores de texto ou numéricos. Para obter detalhes, consulte o tópico "propriedade de tamanho" na ajuda do DAO. Os tamanhos podem ser um dos seguintes valores:
 
 |Tipo|Tamanho (Bytes)|Descrição|
 |----------|--------------------|-----------------|
-|`dbBoolean`|1 byte|Sim/não (igual a verdadeiro/falso)|
+|`dbBoolean`|1 byte|Sim/não (o mesmo que verdadeiro/falso)|
 |`dbByte`|1|Byte|
 |`dbInteger`|2|Inteiro|
 |`dbLong`|4|Long|
 |`dbCurrency`|8|Moeda ([COleCurrency](../../mfc/reference/colecurrency-class.md))|
 |`dbSingle`|4|Simples|
 |`dbDouble`|8|Duplo|
-|`dbDate`|8|Date/Time ([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
+|`dbDate`|8|Data/hora ([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
 |`dbText`|1 - 255|Texto ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|
-|`dbLongBinary`|0|Binário longo (OLE Object; [CByteArray](../../mfc/reference/cbytearray-class.md); use em vez de `CLongBinary`)|
-|`dbMemo`|0|Memo ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|
-|`dbGUID`|16|Um identificador global exclusivo/identificador universal exclusivo usado com chamadas de procedimento remoto.|
+|`dbLongBinary`|0|Binário longo (objeto OLE; [CByteArray](../../mfc/reference/cbytearray-class.md); usar em vez `CLongBinary`de)|
+|`dbMemo`|0|Memorando ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|
+|`dbGUID`|16|Identificador global exclusivo/identificador universal exclusivo usado com chamadas de procedimento remoto.|
 
 *m_lAttributes*<br/>
-Especifica as características de um objeto de campo contido por um tabledef, conjunto de registros, querydef ou objeto de índice. O valor retornado pode ser uma soma das constantes, criados com o C++ OR bit a bit (**&#124;**) operador:
+Especifica as características de um objeto Field contido por um objeto tabledef, recordset, QueryDef ou index. O valor retornado pode ser uma soma dessas constantes, criadas com o operador C++ bit-a- **&#124;** a-or ():
 
-- `dbFixedField` O tamanho do campo é fixo (padrão para campos numéricos).
+- `dbFixedField`O tamanho do campo é fixo (padrão para campos numéricos).
 
-- `dbVariableField` O tamanho do campo é variável (somente para campos de texto).
+- `dbVariableField`O tamanho do campo é variável (somente campos de texto).
 
-- `dbAutoIncrField` O valor do campo para novos registros é incrementado automaticamente para um inteiro longo exclusivo que não pode ser alterado. Só tem suporte para tabelas de banco de dados Microsoft Jet.
+- `dbAutoIncrField`O valor do campo para novos registros é incrementado automaticamente para um inteiro longo e exclusivo que não pode ser alterado. Com suporte apenas para tabelas de banco de dados Microsoft Jet.
 
-- `dbUpdatableField` O valor do campo pode ser alterado.
+- `dbUpdatableField`O valor do campo pode ser alterado.
 
-- `dbDescending` O campo é classificado em decrescente (Z - A ou 0 a 100) ordem (aplica-se somente a um objeto de campo em uma coleção de campos de um objeto de índice; no MFC, o índice em si objetos estão contidos nos objetos tabledef). Se você omitir essa constante, o campo será classificado em crescente (A - Z ou 0 – 100) ordem (padrão).
+- `dbDescending`O campo é classificado em ordem decrescente (Z-A ou 100-0) (aplica-se somente a um objeto Field em uma coleção Fields de um objeto index; no MFC, os objetos de índice estão contidos em objetos TableDef). Se você omitir essa constante, o campo será classificado em ordem crescente (A-Z ou 0-100) (padrão).
 
-Ao verificar a configuração dessa propriedade, você pode usar o C++ bit a bit- e operador (**&**) para testar se um atributo específico. Ao definir vários atributos, você pode combiná-los ao combinar as constantes apropriadas com OR bit a bit (**&#124;**) operador. Para obter detalhes, consulte o tópico "Propriedade Attributes" na Ajuda do DAO.
+Ao verificar a configuração dessa propriedade, você pode usar o operador C++ and bit a bit ( **&** ) para testar um atributo específico. Ao definir vários atributos, você pode combiná-los combinando as constantes apropriadas com o operador bit- **&#124;** a-or (). Para obter detalhes, consulte o tópico "propriedade Attributes" na ajuda do DAO.
 
 *m_nOrdinalPosition*<br/>
-Um valor que especifica a ordem numérica no qual você deseja que um campo representado por um objeto DAO do campo a ser exibido em relação a outros campos. Você pode definir essa propriedade com [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield). Para obter detalhes, consulte o tópico "Propriedade OrdinalPosition" na Ajuda do DAO.
+Um valor que especifica a ordem numérica na qual você deseja que um campo representado por um objeto de campo do DAO seja exibido em relação a outros campos. Você pode definir essa propriedade com [CDaoTableDef::](../../mfc/reference/cdaotabledef-class.md#createfield). Para obter detalhes, consulte o tópico "Propriedade OrdinalPosition" na ajuda do DAO.
 
 *m_bRequired*<br/>
-Indica se um objeto de campo do DAO requer um valor não nulo. Se essa propriedade for TRUE, o campo não permite um valor Null. Se for necessário for definido como FALSE, o campo pode conter valores nulos, bem como valores que atendem às condições especificadas pelas configurações das propriedades Permitir comprimento zero e a regra de validação. Para obter detalhes, consulte o tópico "Propriedade necessária" na Ajuda do DAO. Você pode definir essa propriedade para um tabledef com [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).
+Indica se um objeto de campo DAO requer um valor não nulo. Se essa propriedade for TRUE, o campo não permitirá um valor nulo. Se Required for definido como FALSE, o campo poderá conter valores nulos, bem como os valores que atendem às condições especificadas pelas configurações de propriedade AllowZeroLength e RegraDeValidação. Para obter detalhes, consulte o tópico "Propriedade necessária" na ajuda do DAO. Você pode definir essa propriedade para um TableDef com [CDaoTableDef::](../../mfc/reference/cdaotabledef-class.md#createfield).
 
 *m_bAllowZeroLength*<br/>
-Indica se uma cadeia de caracteres vazia ("") é um valor válido de um objeto de campo do DAO com um tipo de dados de texto ou Memorando. Se essa propriedade for TRUE, uma cadeia de caracteres vazia é um valor válido. Você pode definir essa propriedade como FALSE para garantir que você não pode usar uma cadeia de caracteres vazia para definir o valor de um campo. Para obter detalhes, consulte o tópico "Propriedade Permitir comprimento zero", na Ajuda do DAO. Você pode definir essa propriedade para um tabledef com [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).
+Indica se uma cadeia de caracteres vazia ("") é um valor válido de um objeto de campo do DAO com um tipo de dados de texto ou memorando. Se essa propriedade for TRUE, uma cadeia de caracteres vazia será um valor válido. Você pode definir essa propriedade como FALSE para garantir que não seja possível usar uma cadeia de caracteres vazia para definir o valor de um campo. Para obter detalhes, consulte o tópico "Propriedade AllowZeroLength" na ajuda do DAO. Você pode definir essa propriedade para um TableDef com [CDaoTableDef::](../../mfc/reference/cdaotabledef-class.md#createfield).
 
 *m_lCollatingOrder*<br/>
-Especifica a sequência da ordem de classificação em texto para comparação de cadeia de caracteres ou classificação. Para obter detalhes, consulte o tópico "Personalizando o Windows registro configurações para acesso a dados" na Ajuda do DAO. Para obter uma lista dos possíveis valores retornados, consulte o `m_lCollatingOrder` membro a [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) estrutura. Você pode definir essa propriedade para um tabledef com [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).
+Especifica a sequência da ordem de classificação no texto para comparação ou classificação de cadeia de caracteres. Para obter detalhes, consulte o tópico "Personalizando configurações do registro do Windows para acesso a dados" na ajuda do DAO. Para obter uma lista dos possíveis valores retornados, consulte o `m_lCollatingOrder` membro da estrutura [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) . Você pode definir essa propriedade para um TableDef com [CDaoTableDef::](../../mfc/reference/cdaotabledef-class.md#createfield).
 
 *m_strForeignName*<br/>
-Um valor que, em uma relação, e especifica o nome do objeto de campo DAO em uma tabela externa que corresponde a um campo em uma tabela primária. Para obter detalhes, consulte o tópico "Propriedade ForeignName" na Ajuda do DAO.
+Um valor que, em uma relação, especifica o nome do objeto de campo DAO em uma tabela estrangeira que corresponde a um campo em uma tabela primária. Para obter detalhes, consulte o tópico "Propriedade ForeignName" na ajuda do DAO.
 
 *m_strSourceField*<br/>
-Indica o nome do campo que é a fonte original dos dados para um objeto de campo do DAO contido por um tabledef, conjunto de registros ou objeto querydef. Essa propriedade indica o nome do campo original associado a um objeto de campo. Por exemplo, você pode usar essa propriedade para determinar a origem dos dados em um campo de consulta cujo nome não está relacionado ao nome do campo na tabela subjacente. Para obter detalhes, consulte o tópico "SourceField e SourceTable propriedades" na Ajuda do DAO. Você pode definir essa propriedade para um tabledef com [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).
+Indica o nome do campo que é a fonte original dos dados para um objeto de campo DAO contido por um objeto tabledef, Recordset ou querydef. Essa propriedade indica o nome do campo original associado a um objeto Field. Por exemplo, você pode usar essa propriedade para determinar a fonte original dos dados em um campo de consulta cujo nome não está relacionado ao nome do campo na tabela subjacente. Para obter detalhes, consulte o tópico "Origemfield, propriedades de SourceTable" na ajuda do DAO. Você pode definir essa propriedade para um TableDef com [CDaoTableDef::](../../mfc/reference/cdaotabledef-class.md#createfield).
 
 *m_strSourceTable*<br/>
-Indica o nome da tabela que é a fonte original dos dados para um objeto de campo do DAO contido por um tabledef, conjunto de registros ou objeto querydef. Essa propriedade indica o nome da tabela original associado a um objeto de campo. Por exemplo, você pode usar essa propriedade para determinar a origem dos dados em um campo de consulta cujo nome não está relacionado ao nome do campo na tabela subjacente. Para obter detalhes, consulte o tópico "SourceField e SourceTable propriedades" na Ajuda do DAO. Você pode definir essa propriedade para um tabledef com [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).
+Indica o nome da tabela que é a fonte original dos dados para um objeto de campo DAO contido por um objeto tabledef, Recordset ou querydef. Esta propriedade indica o nome da tabela original associado a um objeto Field. Por exemplo, você pode usar essa propriedade para determinar a fonte original dos dados em um campo de consulta cujo nome não está relacionado ao nome do campo na tabela subjacente. Para obter detalhes, consulte o tópico "Origemfield, propriedades de SourceTable" na ajuda do DAO. Você pode definir essa propriedade para um TableDef com [CDaoTableDef::](../../mfc/reference/cdaotabledef-class.md#createfield).
 
 *m_strValidationRule*<br/>
-Um valor que valida os dados em um campo como ele é alterado ou adicionado a uma tabela. Para obter detalhes, consulte o tópico "Propriedade de regra de validação" na Ajuda do DAO. Você pode definir essa propriedade para um tabledef com [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).
+Um valor que valida os dados em um campo à medida que eles são alterados ou adicionados a uma tabela. Para obter detalhes, consulte o tópico "Propriedade RegraDeValidação" na ajuda do DAO. Você pode definir essa propriedade para um TableDef com [CDaoTableDef::](../../mfc/reference/cdaotabledef-class.md#createfield).
 
-Para obter informações relacionadas sobre tabledefs, consulte o `m_strValidationRule` membro a [CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md) estrutura.
+Para obter informações relacionadas sobre os TableDefs, `m_strValidationRule` consulte o membro da estrutura [CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md) .
 
 *m_strValidationText*<br/>
-Um valor que especifica o texto da mensagem que seu aplicativo exibe o valor de um objeto de campo do DAO satisfaça a regra de validação especificada pela configuração da propriedade de regra de validação. Para obter detalhes, consulte o tópico "Propriedade do texto de validação" na Ajuda do DAO. Você pode definir essa propriedade para um tabledef com [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).
+Um valor que especifica o texto da mensagem que seu aplicativo exibe se o valor de um objeto de campo do DAO não atender à regra de validação especificada pela configuração da Propriedade RegraDeValidação. Para obter detalhes, consulte o tópico "Propriedade do TextoDeValidação" na ajuda do DAO. Você pode definir essa propriedade para um TableDef com [CDaoTableDef::](../../mfc/reference/cdaotabledef-class.md#createfield).
 
 *m_strDefaultValue*<br/>
-O valor padrão de um objeto de campo do DAO. Quando um novo registro é criado, a configuração da propriedade DefaultValue é automaticamente inserida como o valor do campo. Para obter detalhes, consulte o tópico "Propriedade DefaultValue" na Ajuda do DAO. Você pode definir essa propriedade para um tabledef com [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).
+O valor padrão de um objeto de campo do DAO. Quando um novo registro é criado, a configuração da Propriedade DefaultValue é inserida automaticamente como o valor do campo. Para obter detalhes, consulte o tópico "Propriedade DefaultValue" na ajuda do DAO. Você pode definir essa propriedade para um TableDef com [CDaoTableDef::](../../mfc/reference/cdaotabledef-class.md#createfield).
 
 ## <a name="remarks"></a>Comentários
 
-As referências ao primário, secundário e todos acima indicam como as informações são retornadas pela `GetFieldInfo` função de membro em classes [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getfieldinfo), [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo), e [ CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getfieldinfo).
+As referências a primário, secundário e todos acima indicam como as informações são `GetFieldInfo` retornadas pela função de membro nas classes [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getfieldinfo), [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)e [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getfieldinfo).
 
-Objetos de campo não são representados por uma classe do MFC. Em vez disso, os objetos DAO MFC objetos das seguintes classes subjacentes contêm coleções de objetos de campo: [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md), [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), e [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Essas classes fornecem funções de membro para acessar alguns itens individuais de informações de campo, ou você pode acessá-los todos de uma vez com um `CDaoFieldInfo` objeto chamando o `GetFieldInfo` a função de membro do objeto contentor.
+Os objetos de campo não são representados por uma classe MFC. Em vez disso, os objetos DAO subjacentes aos objetos do MFC das seguintes classes contêm coleções de objetos de campo: [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md), [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)e [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Essas classes fornecem funções de membro para acessar alguns itens individuais de informações de campo, ou você pode acessá-los de `CDaoFieldInfo` uma só vez com `GetFieldInfo` um objeto chamando a função de membro do objeto recipiente.
 
-Além de seu uso para examinar as propriedades do objeto, você também pode usar `CDaoFieldInfo` para construir um parâmetro de entrada para a criação de novos campos em um tabledef. Opções mais simples estão disponíveis para essa tarefa, mas se você quiser um controle mais preciso, você pode usar a versão do [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield) que usa um `CDaoFieldInfo` parâmetro.
+Além de seu uso para examinar as propriedades do objeto, você `CDaoFieldInfo` também pode usar para construir um parâmetro de entrada para criar novos campos em um TableDef. As opções mais simples estão disponíveis para essa tarefa, mas se você quiser um controle mais preciso, poderá usar a versão de [CDaoTableDef::](../../mfc/reference/cdaotabledef-class.md#createfield) que `CDaoFieldInfo` usa um parâmetro.
 
-As informações recuperadas pelo `GetFieldInfo` função de membro (da classe que contém o campo) é armazenada em um `CDaoFieldInfo` estrutura. Chamar o `GetFieldInfo` a função de membro do objeto contentor cuja coleção de campos, o objeto de campo é armazenado. `CDaoFieldInfo` também define um `Dump` compilações de função de membro na depuração. Você pode usar `Dump` para despejar o conteúdo de um `CDaoFieldInfo` objeto.
+As informações recuperadas `GetFieldInfo` pela função de membro (da classe que contém o campo) são armazenadas em `CDaoFieldInfo` uma estrutura. Chame a `GetFieldInfo` função de membro do objeto recipiente em cuja coleção de campos o objeto de campo está armazenado. `CDaoFieldInfo`também define uma `Dump` função de membro em compilações de depuração. Você pode usar `Dump` para despejar o conteúdo de `CDaoFieldInfo` um objeto.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdao.h
+**Cabeçalho:** AFXDAO. h
 
 ## <a name="see-also"></a>Consulte também
 
