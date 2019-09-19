@@ -1,21 +1,21 @@
 ---
 title: 'Como: Criar e usar instâncias de weak_ptr'
 ms.custom: how-to
-ms.date: 07/12/2018
+ms.date: 09/18/2019
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: 63eed40117d1a79c69bd05e5bd1503d4222f556d
-ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
+ms.openlocfilehash: e5d1b13d894a617ca514e26f14fde3f514540d34
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787084"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127173"
 ---
 # <a name="how-to-create-and-use-weak_ptr-instances"></a>Como: Criar e usar instâncias de weak_ptr
 
 Às vezes, um objeto deve armazenar uma maneira de acessar o objeto subjacente `shared_ptr` de um sem fazer com que a contagem de referência seja incrementada. Normalmente, essa situação ocorre quando você tem referências cíclicas `shared_ptr` entre instâncias.
 
-O melhor design é evitar a propriedade compartilhada de ponteiros sempre que possível. No entanto, se você precisar ter propriedade `shared_ptr` compartilhada de instâncias, evite referências cíclicas entre elas. Quando as referências cíclicas são inevitáveis ou até mesmo preferíveis por algum `weak_ptr` motivo, use para dar a um ou mais dos proprietários uma referência `shared_ptr`fraca a outra. Usando um `weak_ptr`, você pode criar um `shared_ptr` que une a um conjunto existente de instâncias relacionadas, mas somente se o recurso de memória subjacente ainda for válido. Uma `weak_ptr` em si não participa da contagem de referência e, portanto, não pode impedir que a contagem de referência vá para zero. No entanto, você pode `weak_ptr` usar um para tentar obter uma nova cópia do `shared_ptr` com a qual ela foi inicializada. Se a memória já tiver sido excluída, `bad_weak_ptr` uma exceção será lançada. Se a memória ainda for válida, o novo ponteiro compartilhado incrementará a contagem de referência e garantirá que a memória será válida, desde que `shared_ptr` a variável permaneça no escopo.
+O melhor design é evitar a propriedade compartilhada de ponteiros sempre que possível. No entanto, se você precisar ter propriedade `shared_ptr` compartilhada de instâncias, evite referências cíclicas entre elas. Quando as referências cíclicas são inevitáveis ou até mesmo preferíveis por algum `weak_ptr` motivo, use para dar a um ou mais dos proprietários uma referência `shared_ptr`fraca a outra. Usando um `weak_ptr`, você pode criar um `shared_ptr` que une a um conjunto existente de instâncias relacionadas, mas somente se o recurso de memória subjacente ainda for válido. Uma `weak_ptr` em si não participa da contagem de referência e, portanto, não pode impedir que a contagem de referência vá para zero. No entanto, você pode `weak_ptr` usar um para tentar obter uma nova cópia do `shared_ptr` com a qual ela foi inicializada. Se a memória já tiver sido excluída, `weak_ptr`o operador bool do `false`será retornado. Se a memória ainda for válida, o novo ponteiro compartilhado incrementará a contagem de referência e garantirá que a memória será válida, desde que `shared_ptr` a variável permaneça no escopo.
 
 ## <a name="example"></a>Exemplo
 

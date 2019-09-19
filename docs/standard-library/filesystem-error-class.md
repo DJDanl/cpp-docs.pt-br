@@ -4,14 +4,14 @@ ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
-ms.openlocfilehash: c3dbfc080f0a1494950016f42189d932be05b0f1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7bd6b2d3d716ba25999388d44e7bd5a8d0750eb5
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240736"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127209"
 ---
-# <a name="filesystemerror-class"></a>Classe filesystem_error
+# <a name="filesystem_error-class"></a>Classe filesystem_error
 
 Uma classe base para todas as exceções geradas para relatar um estouro de baixo nível no sistema.
 
@@ -23,7 +23,7 @@ class filesystem_error    : public system_error;
 
 ## <a name="remarks"></a>Comentários
 
-A classe serve como a classe base para todas as exceções geradas para relatar um erro em funções \<filesystem >. Ele armazena um objeto do tipo `string`, chamado `mymesg` aqui para fins de explicação. Ele também armazena dois objetos do tipo `path`, chamado `mypval1` e `mypval2`.
+A classe serve como a classe base para todas as exceções geradas para relatar um erro em funções \<filesystem >. Ele armazena um objeto do tipo `string`, chamado `mymesg` aqui para fins de exposição. Ele também armazena dois objetos do tipo `path`, chamados `mypval1` e `mypval2`.
 
 ## <a name="members"></a>Membros
 
@@ -31,7 +31,7 @@ A classe serve como a classe base para todas as exceções geradas para relatar 
 
 |||
 |-|-|
-|[filesystem_error](#filesystem_error)|Constrói um `filesystem_error` mensagem.|
+|[filesystem_error](#filesystem_error)|Constrói uma `filesystem_error` mensagem.|
 
 ### <a name="functions"></a>Funções
 
@@ -43,13 +43,13 @@ A classe serve como a classe base para todas as exceções geradas para relatar 
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<filesystem >
+**Cabeçalho:** \<> do sistema de arquivos
 
 **Namespace:** std::experimental::filesystem
 
-## <a name="filesystem_error"></a> filesystem_error
+## <a name="filesystem_error"></a>filesystem_error
 
-O primeiro construtor constrói sua mensagem de *what_arg* e *ec*. O segundo construtor também constrói sua mensagem de *pval1*, que armazena em `mypval1`. O terceiro construtor também constrói sua mensagem de *pval1*, que armazena em `mypval1`e de *pval2*, que armazena em `mypval2`.
+O primeiro construtor constrói sua mensagem do *what_arg* e do *EC*. O segundo construtor também constrói sua mensagem de *pval1*, que é armazenada no `mypval1`. O terceiro construtor também constrói sua mensagem de *pval1*, que armazena em `mypval1`e de *pval2*, que armazena no `mypval2`.
 
 ```cpp
 filesystem_error(const string& what_arg,
@@ -70,16 +70,16 @@ filesystem_error(const string& what_arg,
 *what_arg*\
 Mensagem especificada.
 
-*EC*\
+*Comunidade*\
 Código de erro especificado.
 
 *mypval1*\
-Parâmetro adicional de mensagem especificada.
+Outro parâmetro de mensagem especificado.
 
 *mypval2*\
-Parâmetro de mensagem especificado ainda mais.
+Outro parâmetro de mensagem especificado.
 
-## <a name="path1"></a> path1
+## <a name="path1"></a>path1
 
 A função membro retorna `mypval1`
 
@@ -87,7 +87,7 @@ A função membro retorna `mypval1`
 const path& path1() const noexcept;
 ```
 
-## <a name="path2"></a> path2
+## <a name="path2"></a>caminho
 
 A função membro retorna `mypval2`
 
@@ -95,9 +95,9 @@ A função membro retorna `mypval2`
 const path& path2() const noexcept;
 ```
 
-## <a name="what"></a> o que
+## <a name="what"></a>acontece
 
-A função membro retorna um ponteiro para um `NTBS`, preferencialmente composto por `runtime_error::what()`, `system_error::what()`, `mymesg`, `mypval1.native_string()`, e `mypval2.native_string()`.
+A função member retorna um ponteiro para um `NTBS`, preferencialmente composto `runtime_error::what()`de `system_error::what()`, `mymesg`, `mypval1.native_string()`, e `mypval2.native_string()`.
 
 ```cpp
 const char *what() const noexcept;

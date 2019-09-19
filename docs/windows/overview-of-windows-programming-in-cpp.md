@@ -1,13 +1,13 @@
 ---
 title: Visão geral de programação do Windows no C++
-ms.date: 07/28/2019
+ms.date: 09/17/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 10ef9698e27099d5856c1ed5f8ed2f21cea72c24
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 96a03194059f59f57780bfd70cab3065d6a1aff0
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514802"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127189"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Visão geral de programação do Windows no C++
 
@@ -17,7 +17,7 @@ Esta seção discute como usar o Visual Studio e as bibliotecas de wrapper MFC/A
 
 ## <a name="command-line-console-applications"></a>Aplicativos de linha de comando (console)
 
-C++os aplicativos de console são executados na linha de comando em uma janela de console e podem exibir apenas a saída de texto. Para obter mais informações, consulte [console Applications](console-applications-in-visual-cpp.md).
+C++os aplicativos de console são executados na linha de comando em uma janela de console e podem exibir apenas a saída de texto. Para obter mais informações, consulte [criar C++ um projeto de aplicativo de console](../get-started/tutorial-console-cpp.md).
 
 ## <a name="native-desktop-client-applications"></a>Aplicativos cliente de desktop nativos
 
@@ -43,7 +43,7 @@ O [com (Component Object Model)](/windows/win32/com/the-component-object-model) 
 
 ## <a name="universal-windows-platform-apps"></a>Aplicativos da Plataforma Universal do Windows
 
-O Plataforma Universal do Windows (UWP) é a API moderna do Windows. Os aplicativos UWP são executados em qualquer dispositivo Windows 10, usam XAML para a interface do usuário e são totalmente habilitados para toque. Para obter mais informações sobre a UWP, consulte [o que é um aplicativo UWP (plataforma universal do Windows)?](/windows/uwp/get-started/whats-a-uwp) e [guia para aplicativos](/windows/uwp/get-started/universal-application-platform-guide)universais do Windows.
+O Plataforma Universal do Windows (UWP) é a API moderna do Windows. Os aplicativos UWP são executados em qualquer dispositivo Windows 10, usam XAML para a interface do usuário e são totalmente habilitados para toque. Para obter mais informações sobre a UWP, consulte [o que é um aplicativo UWP (plataforma universal do Windows)?](/windows/uwp/get-started/whats-a-uwp) e [guia para aplicativos universais do Windows](/windows/uwp/get-started/universal-application-platform-guide).
 
 O suporte C++ original para UWP consistiu em (1) C++/CX, um dialeto de C++ com extensões de sintaxe ou (2) a biblioteca de Windows Runtime (WRL), que se baseia em C++ Standard e com. O C++/CX e o WRL ainda têm suporte. Para novos projetos, recomendamos [ C++o/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), que é totalmente baseado no C++ padrão e fornece um desempenho mais rápido.
 
@@ -67,7 +67,7 @@ Os drivers são componentes de nível baixo que tornam os dados de dispositivos 
 
 ## <a name="windows-services"></a>Serviços Windows
 
-Um *serviço* do Windows é um programa que pode ser executado em segundo plano com pouca ou nenhuma interação do usuário. Esses programas são chamados de daemons em sistemas UNIX. Para obter mais informações, consulte [Serviços](/windows/win32/services/services).
+Um *serviço* do Windows é um programa que pode ser executado em segundo plano com pouca ou nenhuma interação do usuário. Esses programas são chamados de *daemons* em sistemas UNIX. Para obter mais informações, consulte [Serviços](/windows/win32/services/services).
 
 ## <a name="sdks-libraries-and-header-files"></a>SDKs, bibliotecas e arquivos de cabeçalho
 
