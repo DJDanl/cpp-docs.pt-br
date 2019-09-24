@@ -134,12 +134,12 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 9f7886a88ebd98d5d7ab1848ea7a788967362ad7
-ms.sourcegitcommit: d3829ae0c3db909f96057755a80665f5ea4896ea
+ms.openlocfilehash: d1a4da3d5e721c85879441a53ef4bc00549b587d
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550446"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230493"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>Avisos do compilador C4400 a C4599
 
@@ -153,7 +153,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |-------------|-------------|
 |[Aviso do compilador (nível 1) C4600](compiler-warning-level-1-c4600.md)|#pragma '*nome da macro*': esperada uma cadeia de caracteres não vazia válida|
 |[Aviso do compilador (nível 4) C4400](../../error-messages/compiler-warnings/compiler-warning-level-4-c4400.md)|'*Type*': não há suporte para qualificadores const/volatile neste tipo|
-|[Aviso do compilador (nível 1) C4401](../../error-messages/compiler-warnings/compiler-warning-level-1-c4401.md)|'área de bits ': membro é campo de bit|
+|[Aviso do compilador (nível 1) C4401](../../error-messages/compiler-warnings/compiler-warning-level-1-c4401.md)|'*área de bits ':* membro é campo de bit|
 |[Aviso do compilador (nível 1) C4402](../../error-messages/compiler-warnings/compiler-warning-level-1-c4402.md)|deve usar o operador PTR|
 |[Aviso do compilador (nível 1) C4403](../../error-messages/compiler-warnings/compiler-warning-level-1-c4403.md)|operador PTR inválido|
 |[Aviso do compilador (nível 3) C4404](../../error-messages/compiler-warnings/compiler-warning-level-3-c4404.md)|período na diretiva ignorado|
@@ -299,13 +299,13 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 1) C4568|'*Function*': nenhum membro corresponde à assinatura da substituição explícita|
 |Aviso do compilador (nível 3) C4569|'*Function*': nenhum membro corresponde à assinatura da substituição explícita|
 |[Aviso do compilador (nível 3) C4570](../../error-messages/compiler-warnings/compiler-warning-level-3-c4570.md)|'*Type*': não é declarado explicitamente como abstract, mas tem funções abstract|
-|[Aviso do compilador (nível 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|Informação: a semântica catch (...) foi alterada desde o C++ Visual 7,1; as exceções estruturadas (SEH) não são mais detectadas|
+|[Aviso do compilador (nível 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|informação: a semântica catch (...) foi alterada desde o C++ Visual 7,1; as exceções estruturadas (SEH) não são mais detectadas|
 |[Aviso do compilador (nível 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|O atributo [ParamArray] está preterido em/CLR, use '... ' Stead|
 |Aviso do compilador (nível 1) C4573|o uso de "*função lambda*" requer que o compilador Capture "This", mas o modo de captura padrão atual não permite|
 |Aviso do compilador (nível 4) C4574|'*Identifier*' está definido como ' 0 ': você quis dizer usar ' #if identifier '?|
 |Aviso do compilador (nível 1) C4575|' __vectorcall ' incompatível com a opção '/CLR ': convertendo para ' __stdcall '|
 |Aviso do compilador (nível 1, erro) C4576|um tipo entre parênteses seguido por uma lista de inicializadores é uma sintaxe de conversão de tipo explícito não padrão|
-|Aviso do compilador (nível 1, desativado) C4577|' noexcept ' usado sem modo de tratamento de exceção especificado; a rescisão na exceção não é garantida. Especificar/EHsc|
+|[Aviso do compilador (nível 1, desativado) C4577](../../error-messages/compiler-warnings/compiler-warning-level-1-c4577.md)|' noexcept ' usado sem modo de tratamento de exceção especificado; a rescisão na exceção não é garantida. Especificar/EHsc|
 |Aviso do compilador (nível 1, erro) C4578|' ABS ': conversão de '*type1*' para '*type2*', possível perda de dados (você pretendia chamar '*Function*' ou para #include \<cmath >?)|
 |[Aviso do compilador (nível 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] é preterido; em vez disso, especifique System:: Attribute ou Platform:: Metadata como uma classe base|
 |[Aviso do compilador (nível 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|comportamento preterido: ' "*String*" ' substituído por '*String*' para processar o atributo|
