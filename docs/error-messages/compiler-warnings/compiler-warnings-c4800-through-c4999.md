@@ -63,8 +63,6 @@ f1_keywords:
 - C5042
 - C5043
 - C5044
-- C5045
-- C5046
 - C5047
 - C5048
 - C5049
@@ -74,7 +72,6 @@ f1_keywords:
 - C5102
 - C5103
 - C5104
-- C5105
 - C5106
 - C5107
 helpviewer_keywords:
@@ -139,8 +136,6 @@ helpviewer_keywords:
 - C5042
 - C5043
 - C5044
-- C5045
-- C5046
 - C5047
 - C5048
 - C5049
@@ -150,15 +145,14 @@ helpviewer_keywords:
 - C5102
 - C5103
 - C5104
-- C5105
 - C5106
 - C5107
-ms.openlocfilehash: ae73d4ba503dfbbc27f91040c31beb91da3b7e54
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 7e715dcbac9dc59fe09ee1f917c02a23b3c4db14
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631545"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230472"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Avisos do Compilador C4800 a C5999
 
@@ -219,7 +213,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4912](compiler-warning-level-1-c4912.md)|'*Attribute*': atributo tem comportamento indefinido em um UDT aninhado|
 |[Aviso do compilador (nível 4) C4913](compiler-warning-level-4-c4913.md)|o operador binário definido pelo usuário ', ' existe, mas nenhuma sobrecarga pôde converter todos os operandos, operador binário interno padrão ', ' usado|
 |Aviso do compilador (nível 1) C4916|para ter um DISPID, '*Description*': deve ser introduzido por uma interface|
-|[Aviso do compilador (nível 1) C4917](compiler-warning-level-1-c4917.md)|'declarador ': um GUID só pode ser associado a uma classe, interface ou namespace|
+|[Aviso do compilador (nível 1) C4917](compiler-warning-level-1-c4917.md)|'*Declarador*': um GUID só pode ser associado a uma classe, interface ou namespace|
 |[Aviso do compilador (nível 4) C4918](compiler-warning-level-4-c4918.md)|'*Character*': caractere inválido na lista de otimização de pragma|
 |[Aviso do compilador (nível 1) C4920](compiler-warning-level-1-c4920.md)|enum enum member member_1 = value_1 já visto em enum enum as member_2 = value_2|
 |Aviso do compilador (nível 3) C4921|'*Description*': o valor de atributo '*Attribute*' não deve ser especificado em várias vezes|
@@ -241,7 +235,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Aviso do compilador (nível 1) C4945](compiler-warning-level-1-c4945.md)|'*Symbol*': não é possível importar o símbolo de '*Assembly1*': como '*Symbol*' já foi importado de outro assembly '*Assembly2*'|
 |[Aviso do compilador (nível 1) C4946](compiler-warning-level-1-c4946.md)|reinterpret_cast usado entre classes relacionadas: '*Class1*' e '*class2*'|
 |[Aviso do compilador (nível 1) C4947](compiler-warning-level-1-c4947.md)|'*Type_or_Member*': marcado como obsoleto|
-|[Aviso do compilador (nível 2) C4948](compiler-warning-level-2-c4948.md)|o tipo de retornode ' acessador ' não corresponde ao último tipo de parâmetro do setter correspondente|
+|[Aviso do compilador (nível 2) C4948](compiler-warning-level-2-c4948.md)|o tipo de retorno de '*acessador*' não corresponde ao último tipo de parâmetro do setter correspondente|
 |[Aviso do compilador (nível 1 e nível 4) C4949](compiler-warning-level-1-and-level-4-c4949.md)|pragmas "Managed" e "Unmanaged" são significativos somente quando compilados com "/CLR [: Option]"|
 |[Aviso do compilador (nível 1, erro) C4950](compiler-warning-c4950.md)|'*Type_or_Member*': marcado como obsoleto|
 |[Aviso do compilador (nível 1) C4951](compiler-warning-level-1-c4951.md)|'*Function*' foi editado desde que os dados de perfil foram coletados, dados de perfil de função não usados|
@@ -276,7 +270,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 3) C4991|Warbird: função '*Function*' marcada como __forceinline não embutida porque o nível de proteção do embutido é maior que o pai|
 |Aviso do compilador (nível 3) C4992|Warbird: função '*Function*' marcada como __forceinline não embutida porque contém assembly embutido que não pode ser protegido|
 |[Aviso do compilador (nível 3) C4995](compiler-warning-level-3-c4995.md)|'*Function*': o nome foi marcado como #pragma preterido|
-|[Aviso do compilador (nível 3) C4996](compiler-warning-level-3-c4996.md)|'*preterido-declaração*': reprovação *-mensagem* (ou "foi declarado preterido")|
+|[Aviso do compilador (nível 3) C4996](compiler-warning-level-3-c4996.md)|'*preterido-declaração*': *reprovação-mensagem* (ou "foi declarado preterido")|
 |[Aviso do compilador (nível 1) C4997](compiler-warning-level-1-c4997.md)|"*Class*": coclass não implementa uma interface com ou pseudo-interface|
 |Aviso do compilador (nível 1) C4998|FALHA na expectativa: *expectativa*(*valor*)|
 |[Aviso do compilador C4999](compiler-warning-level-1-c4999.md)|AVISO desconhecido escolha o comando de suporte técnico no menu da C++ ajuda visual ou abra o arquivo de ajuda do suporte técnico para obter mais informações|
@@ -303,10 +297,10 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |Aviso do compilador (nível 3) C5042|'*declaração*': declarações de função em escopo de bloco não podem ser especificadas ' inline C++' no padrão; remover especificador ' inline '|
 |Aviso do compilador (nível 2) C5043|'*especificação*': a especificação de exceção não corresponde à declaração anterior|
 |Aviso do compilador (nível 4) C5044|Um argumento para *opção* de opção de linha de comando aponta para um caminho '*Path*' que não existe|
-|[Aviso do compilador C5045](c5045.md)|O compilador irá inserir a mitigação Spectre para a carga de memória se a opção/Qspectre for especificada|
-|[Aviso do compilador (nível 2) C5046](c5046.md)|'*função*': Símbolo envolvendo tipo com vínculo interno não definido|
+| [Aviso do compilador C5045](c5045.md) | O compilador irá inserir a mitigação Spectre para a carga de memória se a opção/Qspectre for especificada |
+| [Aviso do compilador (nível 2) C5046](c5046.md) | '*função*': Símbolo envolvendo tipo com vínculo interno não definido |
 | Aviso do compilador (nível 1) C5047 | o uso de não \_padrão\_ \_se existir com módulos não for suportado |
-| Aviso do compilador (nível 1) C5048 | O uso da macro' macroname ' pode resultar em uma saída não determinística |
+| Aviso do compilador (nível 1) C5048 | O uso da macro '*macroname*' pode resultar em uma saída não determinística |
 | Aviso do compilador (nível 1) C5049 | '*String*': A inserção de um caminho completo pode resultar na saída dependente da máquina |
 | Aviso do compilador (nível 1) C5050 | Possível ambiente incompatível ao importar o módulo '*module_name*': *problema* |
 | Aviso do compilador (nível 1) C5100 | \_\_Argumentos\_VAsãoreservados\_ para uso em Macros Variadic\_ |
@@ -314,7 +308,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 | Aviso do compilador (nível 1) C5102 | ignorando definição de macro de linha de comando inválida '*Value*' |
 | Aviso do compilador (nível 1) C5103 | colar '*token1*' e '*token2*' não resulta em um token de pré-processamento válido |
 | Aviso do compilador (nível 1) C5104 | encontrado '*string1*#*string2*' na lista de substituição de macro, você quis dizer '*seqüência1*' "#*string2*'? |
-| Aviso do compilador (nível 1) C5105 | a expansão de macro produzindo ' defined ' tem comportamento indefinido |
+| [Aviso do compilador (nível 1) C5105](c5105.md) | a expansão de macro produzindo ' defined ' tem comportamento indefinido |
 | Aviso do compilador (nível 1) C5106 | macro redefinida com nomes de parâmetros diferentes |
 | Aviso do compilador (nível 1) C5107 | caractere '*Char*' de terminação ausente |
 
