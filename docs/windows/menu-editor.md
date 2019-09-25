@@ -40,10 +40,10 @@ helpviewer_keywords:
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
 ms.openlocfilehash: f2a5f1ac63007bf44dc331e2104c6e9e5cac23da
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514829"
 ---
 # <a name="menu-editor-c"></a>Editor de menuC++()
@@ -137,7 +137,7 @@ Mantendo pressionada a tecla **Ctrl** , selecione os comandos de menus ou submen
 
 - Usar comandos do menu de atalho:
 
-   1. Clique com o botão direito do mouse em um ou mais menus ou comandos de menu e escolha Recortar (para mover) ou **copiar**.
+   1. Clique com o botão direito do mouse em um ou mais menus ou comandos de menu e escolha **recortar** (para mover) ou **copiar**.
 
    1. Se você estiver movendo os itens para outro recurso de menu ou arquivo de script de recurso, [abra-o em outra janela](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
@@ -162,7 +162,7 @@ Os [menus pop-up](../mfc/menus-mfc.md) exibem comandos usados com frequência. E
 Depois de criar o recurso de menu, o código do aplicativo precisa carregar o recurso de menu e usar [TrackPopupMenu](/windows/win32/api/winuser/nf-winuser-trackpopupmenu) para que o menu seja exibido. Depois que o usuário tiver descartado o menu pop-up selecionando fora dele, ou tiver selecionado um comando, essa função retornará. Se o usuário escolher um comando, essa mensagem de comando será enviada para a janela cujo identificador foi passado.
 
 > [!NOTE]
-> Para programas da biblioteca do Microsoft Foundation Class (MFC) e programas da ATL, use assistentes de **código** para vincular comandos de menu ao código. Para obter mais informações, consulte [adicionando um evento](../ide/adding-an-event-visual-cpp.md) e [mapeando mensagens para](../mfc/reference/mapping-messages-to-functions.md)o functions.
+> Para programas da biblioteca do Microsoft Foundation Class (MFC) e programas da ATL, use **assistentes de código** para vincular comandos de menu ao código. Para obter mais informações, consulte [adicionando um evento](../ide/adding-an-event-visual-cpp.md) e [mapeando mensagens para o Functions](../mfc/reference/mapping-messages-to-functions.md).
 
 - Para criar um menu pop-up, crie um menu com um título vazio e não forneça uma *legenda*. Em seguida, adicione um comando de menu ao menu novo, mova para o primeiro comando de menu abaixo do título do menu em branco com a legenda temporária *Digite aqui* e digite uma *legenda* e qualquer outra informação.
 

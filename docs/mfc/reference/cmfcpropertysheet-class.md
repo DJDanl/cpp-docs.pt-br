@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
 ms.openlocfilehash: f7c9d2b472a443d8bf556d0b12dfe202ea8607a1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69505080"
 ---
 # <a name="cmfcpropertysheet-class"></a>Classe CMFCPropertySheet
@@ -102,7 +102,7 @@ Execute as seguintes etapas para usar a `CMFCPropertySheet` classe em seu aplica
 
 1. Chame o método [CMFCPropertySheet:: SetLook](#setlook) no Construtor CMyPropertySheet. Um parâmetro desse método especifica que as páginas de propriedades devem ser exibidas como guias ao longo da parte superior ou esquerda da folha de propriedades; guias no estilo de uma folha de propriedades do Microsoft OneNote; botões em um controle da barra de ferramentas do Microsoft Outlook; Nós em um controle de árvore; ou como uma lista de itens no lado esquerdo da folha de propriedades.
 
-1. Se você criar uma folha de propriedades no estilo de uma barra de ferramentas do Microsoft Outlook, chame o método [CMFCPropertySheet::](#seticonslist) setíconeslist para associar uma lista de imagens ao conjunto de páginas de propriedades.
+1. Se você criar uma folha de propriedades no estilo de uma barra de ferramentas do Microsoft Outlook, chame o método [CMFCPropertySheet:: Setíconeslist](#seticonslist) para associar uma lista de imagens ao conjunto de páginas de propriedades.
 
 1. Chame o método [CMFCPropertySheet:: AddPage](#addpage) para cada página de propriedades.
 

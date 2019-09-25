@@ -10,10 +10,10 @@ helpviewer_keywords:
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
 ms.openlocfilehash: 3a7f9c5720c4bd6a43a1a95f9bc19680ba0a9c1e
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69631720"
 ---
 # <a name="cancellation-in-the-ppl"></a>Cancelamento no PPL
@@ -97,7 +97,7 @@ A `cancel_current_task` função gera; portanto, você não precisa retornar exp
 > [!CAUTION]
 > Nunca jogue `task_canceled` do seu código. Chame `cancel_current_task` em seu lugar.
 
-Quando uma tarefa termina no estado cancelado, o método [Concurrency:: Task:: Get](reference/task-class.md#get) gera [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md). (Por outro lado, [Concurrency:: tarefa:: Wait](reference/task-class.md#wait) retorna [task_status::](reference/concurrency-namespace-enums.md#task_group_status) cancelado e não gera.) O exemplo a seguir ilustra esse comportamento para uma continuação baseada em tarefa. Uma continuação baseada em tarefa é sempre chamada, mesmo quando a tarefa Antecedent é cancelada.
+Quando uma tarefa termina no estado cancelado, o método [Concurrency:: Task:: Get](reference/task-class.md#get) gera [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md). (Por outro lado, [Concurrency:: tarefa:: Wait](reference/task-class.md#wait) retorna [task_status:: cancelado](reference/concurrency-namespace-enums.md#task_group_status) e não gera.) O exemplo a seguir ilustra esse comportamento para uma continuação baseada em tarefa. Uma continuação baseada em tarefa é sempre chamada, mesmo quando a tarefa Antecedent é cancelada.
 
 [!code-cpp[concrt-task-canceled#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_3.cpp)]
 
@@ -144,7 +144,7 @@ O tempo de execução escolhe o token de cancelamento para a tarefa que `when_an
 
 ###  <a name="cancel"></a>Usando o método Cancel para cancelar o trabalho paralelo
 
-Os métodos [Concurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) e [Concurrency:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) definem um grupo de tarefas para o estado cancelado. Depois de chamar `cancel`, o grupo de tarefas não inicia as tarefas futuras. Os `cancel` métodos podem ser chamados por várias tarefas filho. Uma tarefa cancelada faz com que os métodos [Concurrency:: task_group:: Wait](reference/task-group-class.md#wait) e [Concurrency:: structured_task_group:: Wait](reference/structured-task-group-class.md#wait) retornem [Concurrency::](reference/concurrency-namespace-enums.md#task_group_status)cancelado.
+Os métodos [Concurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) e [Concurrency:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) definem um grupo de tarefas para o estado cancelado. Depois de chamar `cancel`, o grupo de tarefas não inicia as tarefas futuras. Os `cancel` métodos podem ser chamados por várias tarefas filho. Uma tarefa cancelada faz com que os métodos [Concurrency:: task_group:: Wait](reference/task-group-class.md#wait) e [Concurrency:: structured_task_group:: Wait](reference/structured-task-group-class.md#wait) retornem [Concurrency:: cancelado](reference/concurrency-namespace-enums.md#task_group_status).
 
 Se um grupo de tarefas for cancelado, as chamadas de cada tarefa filho para o tempo de execução poderão disparar um *ponto de interrupção*, o que fará com que o tempo de execução gere e pegue um tipo de exceção interna para cancelar as tarefas ativas. O Tempo de Execução de Simultaneidade não define pontos de interrupção específicos; Eles podem ocorrer em qualquer chamada para o tempo de execução. O tempo de execução deve lidar com as exceções que ele gera para executar o cancelamento. Portanto, não manipule exceções desconhecidas no corpo de uma tarefa.
 
@@ -152,7 +152,7 @@ Se uma tarefa filho executar uma operação demorada e não chamar o tempo de ex
 
 [!code-cpp[concrt-task-tree#6](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_6.cpp)]
 
-Este exemplo verifica o cancelamento em cada 100<sup></sup> da iteração do loop de tarefa. A frequência com a qual você verifica o cancelamento depende da quantidade de trabalho que sua tarefa executa e da rapidez necessária para que as tarefas respondam ao cancelamento.
+Este exemplo verifica o cancelamento em<sup>cada 100 da</sup> iteração do loop de tarefa. A frequência com a qual você verifica o cancelamento depende da quantidade de trabalho que sua tarefa executa e da rapidez necessária para que as tarefas respondam ao cancelamento.
 
 Se você não tiver acesso ao objeto do grupo de tarefas pai, chame a função [Concurrency:: is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) para determinar se o grupo de tarefas pai foi cancelado.
 
