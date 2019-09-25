@@ -403,10 +403,10 @@ helpviewer_keywords:
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
 ms.openlocfilehash: bae2f9a5a4f39c4eeffe68cc33e744e44c6800c8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69507009"
 ---
 # <a name="cdc-class"></a>Classe CDC
@@ -668,7 +668,7 @@ Há ocasiões em que você pode precisar de informações de métrica de texto d
 |[GetTextMetrics](#gettextmetrics)|[GetOutputTextMetrics](#getoutputtextmetrics)|
 |[GetCharWidth](#getcharwidth)|[GetOutputCharWidth](#getoutputcharwidth)|
 
-Para obter mais informações `CDC`sobre o, consulte contextos de [dispositivo](../../mfc/device-contexts.md).
+Para obter mais informações `CDC`sobre o, consulte [contextos de dispositivo](../../mfc/device-contexts.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -1689,7 +1689,7 @@ O recurso de ícone deve ter sido carregado anteriormente usando as funções `C
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo para [CWnd::](../../mfc/reference/cwnd-class.md#isiconic)isicony.
+  Consulte o exemplo para [CWnd:: Isicony](../../mfc/reference/cwnd-class.md#isiconic).
 
 ##  <a name="drawstate"></a>  CDC::DrawState
 
@@ -1896,7 +1896,7 @@ Aponta para uma estrutura [Rect](/windows/win32/api/windef/ns-windef-rect) ou ob
 Um objeto [CString](../../atl-mfc-shared/reference/cstringt-class.md) que contém os caracteres especificados a serem desenhados.
 
 *nFormat*<br/>
-Especifica o método de formatação do texto. Pode ser qualquer combinação dos valores descritos para o parâmetro *uFormat* em [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext) no SDK do Windows. (Combine usando o operador or
+Especifica o método de formatação do texto. Pode ser qualquer combinação dos valores descritos para o parâmetro *uFormat* em [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext) no SDK do Windows. (Combine usando **o operador OR**
 
 > [!NOTE]
 >  Algumas combinações de sinalizador *uFormat* podem fazer com que a cadeia de caracteres passada seja modificada. O uso de DT_MODIFYSTRING com DT_END_ELLIPSIS ou DT_PATH_ELLIPSIS pode fazer com que a cadeia de caracteres seja modificada, `CString` causando uma asserção na substituição. Os valores DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP e DT_NOPREFIX não podem ser usados com o valor DT_TABSTOP.
@@ -2049,11 +2049,11 @@ Para cada objeto de um determinado tipo, a função de retorno de chamada que vo
 
 Observe que os novos recursos do Microsoft C++ Visual permitem que você use uma função comum como a função `EnumObjects`passada para. O endereço passado para `EnumObjects` é um ponteiro para uma função exportada com **exportação** e com a Convenção de chamada do Pascal. Em aplicativos do modo proteger, você não precisa criar essa função com a função MakeProcInstance do Windows ou liberar a função após o uso com a função FreeProcInstance do Windows.
 
-Você também não precisa exportar o nome da função em uma instrução Exports no arquivo de definição de módulo do aplicativo. Em vez disso, você pode usar o modificador da função de **exportação** , como em
+Você também não precisa exportar o nome da função em uma instrução **Exports** no arquivo de definição de módulo do aplicativo. Em vez disso, você pode usar o modificador da função de **exportação** , como em
 
 **exportação de retorno de chamada int** AFunction **(LPSTR**, **LPSTR);**
 
-para fazer com que o compilador emita o registro de exportação adequado para exportação por nome sem alias. Isso funciona para a maioria das necessidades. Para alguns casos especiais, como a exportação de uma função por ordinal ou alias da exportação, você ainda precisa usar uma instrução Exports em um arquivo de definição de módulo.
+para fazer com que o compilador emita o registro de exportação adequado para exportação por nome sem alias. Isso funciona para a maioria das necessidades. Para alguns casos especiais, como a exportação de uma função por ordinal ou alias da exportação, você ainda precisa usar uma instrução **Exports** em um arquivo de definição de módulo.
 
 Para compilar programas do Microsoft Foundation, você normalmente usará as opções do compilador/GA e/GEs. A opção de compilador/GW não é usada com as classes do Microsoft Foundation. (Se você usar a função `MakeProcInstance`do Windows, será necessário converter explicitamente o ponteiro de função retornado de FARPROC para o tipo necessário nesta API.) As interfaces de registro de retorno de chamada agora são de tipo seguro (você deve passar um ponteiro de função que aponta para o tipo certo de função para o retorno de chamada específico).
 
@@ -3097,7 +3097,7 @@ O valor do recurso solicitado se a função for bem-sucedida.
 
 ### <a name="example"></a>Exemplo
 
-  Consulte o exemplo de [CPrintDialog::](../../mfc/reference/cprintdialog-class.md#getdefaults)GetDefaults.
+  Consulte o exemplo de [CPrintDialog:: GetDefaults](../../mfc/reference/cprintdialog-class.md#getdefaults).
 
 ##  <a name="getfontdata"></a>  CDC::GetFontData
 
@@ -4926,7 +4926,7 @@ Os tipos PT_BEZIERTO sempre ocorrem em conjuntos de três. A posição atual def
 
 - PT_CLOSEFIGURE especifica que a figura é fechada automaticamente depois que o tipo PT_LINETO ou PT_BEZIERTO para esse ponto é concluído. Uma linha é desenhada deste ponto para o PT_MOVETO ou `MoveTo` o ponto mais recente.
 
-   Esse sinalizador é combinado com o tipo PT_LINETO para uma linha, ou com o tipo de ponto final PT_BEZIERTO para um spline Bzier, usando o operador or A posição atual é definida como o ponto final da linha de fechamento.
+   Esse sinalizador é combinado com o tipo PT_LINETO para uma linha, ou com o tipo de ponto final PT_BEZIERTO para um spline Bzier, usando **o operador OR** A posição atual é definida como o ponto final da linha de fechamento.
 
 *nCount*<br/>
 Especifica o número total de pontos na matriz *lpPoints* , o mesmo que o número de bytes na matriz *lpTypes* .
@@ -5740,11 +5740,11 @@ Se um aplicativo for permitir que o trabalho de impressão seja cancelado durant
 
 Observe que os recursos do Microsoft Visual C++ simplificam a criação da função de retorno de `SetAbortProc`chamada passada para. O endereço passado para a `EnumObjects` função membro é um ponteiro para uma função exportada com `__declspec(dllexport)` e `__stdcall` com a Convenção de chamada.
 
-Você também não precisa exportar o nome da função em uma instrução Exports no arquivo de definição de módulo do aplicativo. Em vez disso, você pode usar o modificador da função de **exportação** , como em
+Você também não precisa exportar o nome da função em uma instrução **Exports** no arquivo de definição de módulo do aplicativo. Em vez disso, você pode usar o modificador da função de **exportação** , como em
 
 **exportação de retorno de chamada bool** AFunction ( **HDC**, `int` **);**
 
-para fazer com que o compilador emita o registro de exportação adequado para exportação por nome sem alias. Isso funciona para a maioria das necessidades. Para alguns casos especiais, como a exportação de uma função por ordinal ou alias da exportação, você ainda precisa usar uma instrução Exports em um arquivo de definição de módulo.
+para fazer com que o compilador emita o registro de exportação adequado para exportação por nome sem alias. Isso funciona para a maioria das necessidades. Para alguns casos especiais, como a exportação de uma função por ordinal ou alias da exportação, você ainda precisa usar uma instrução **Exports** em um arquivo de definição de módulo.
 
 As interfaces de registro de retorno de chamada agora são de tipo seguro (você deve passar um ponteiro de função que aponta para o tipo certo de função para o retorno de chamada específico).
 

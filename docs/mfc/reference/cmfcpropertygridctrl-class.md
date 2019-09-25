@@ -151,10 +151,10 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
 ms.openlocfilehash: 20b3bafcdbaf02b0f7e40f0092d7f6661855114d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69505169"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
@@ -1115,7 +1115,7 @@ TRUE se o controle da grade de propriedades estiver no modo alfabético; caso co
 
 Quando o controle da grade de propriedades está no modo alfabético, todas as propriedades são classificadas alfabeticamente por seus nomes. Caso contrário, as propriedades são agrupadas em seus nós pai.
 
-Use o método [CMFCPropertyGridCtrl::](#setalphabeticmode) setalfabéticamode para habilitar ou desabilitar o modo alfabético.
+Use o método [CMFCPropertyGridCtrl:: Setalfabéticamode](#setalphabeticmode) para habilitar ou desabilitar o modo alfabético.
 
 ##  <a name="isalwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip
 
@@ -1508,7 +1508,7 @@ no A cor das linhas desenhadas entre as propriedades.
 
 Para qualquer parâmetro, especifique o `((COLORREF)-1)` valor de cor para usar a cor padrão para esse elemento do controle de grade de propriedade.
 
-Para personalizar a aparência de uma propriedade específica, derive uma classe da classe [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) e, em seguida, substitua o [CMFCPropertyGridProperty::](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname)ondesenhename, [CMFCPropertyGridProperty::](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue)ontracevalue, [ Métodos CMFCPropertyGridProperty:: OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox)e [CMFCPropertyGridProperty:: OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) .
+Para personalizar a aparência de uma propriedade específica, derive uma classe da classe [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) e, em seguida, substitua o [CMFCPropertyGridProperty:: ondesenhename](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname), [CMFCPropertyGridProperty:: ontracevalue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue), [ Métodos CMFCPropertyGridProperty:: OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox)e [CMFCPropertyGridProperty:: OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) .
 
 ##  <a name="setdescriptionrows"></a>CMFCPropertyGridCtrl::SetDescriptionRows
 

@@ -16,10 +16,10 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
 ms.openlocfilehash: a1c7bb070a75f4406556817163931f0707706c40
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69508122"
 ---
 # <a name="mfc-activex-controls"></a>Controles ActiveX MFC
@@ -81,7 +81,7 @@ Toda a comunicação de um controle com o contêiner é executada pelo `COleCont
 
 Um controle tem dois Estados básicos: ativo e inativo. Tradicionalmente, esses Estados foram diferenciados pelo fato de o controle tivesse uma janela. Um controle ativo tinha uma janela; um controle inativo não. Com a introdução da ativação sem janela, essa distinção não é mais universal, mas ainda se aplica a muitos controles.
 
-Quando um [controle sem janela](../mfc/providing-windowless-activation.md) fica ativo, ele invoca a captura do mouse, o foco do teclado, a rolagem e outros serviços do Windows a partir de seu contêiner. Você também pode [fornecer a interação com o mouse para controles](../mfc/providing-mouse-interaction-while-inactive.md)inativos, bem como criar controles que [aguardem até que sejam ativados para criar uma janela](../mfc/turning-off-the-activate-when-visible-option.md).
+Quando um [controle sem janela](../mfc/providing-windowless-activation.md) fica ativo, ele invoca a captura do mouse, o foco do teclado, a rolagem e outros serviços do Windows a partir de seu contêiner. Você também pode [fornecer a interação com o mouse para controles inativos](../mfc/providing-mouse-interaction-while-inactive.md), bem como criar controles que [aguardem até que sejam ativados para criar uma janela](../mfc/turning-off-the-activate-when-visible-option.md).
 
 Quando um controle com uma janela se torna ativo, ele é capaz de interagir totalmente com o contêiner de controle, o usuário e o Windows. A figura a seguir demonstra os caminhos de comunicação entre o controle ActiveX, o contêiner de controle e o sistema operacional.
 
@@ -92,7 +92,7 @@ Processamento de mensagens do Windows em um controle ActiveX em janelas (quando 
 
 A capacidade de serializar dados, às vezes conhecida como persistência, permite que o controle grave o valor de suas propriedades no armazenamento persistente. Os controles podem ser recriados lendo o estado do objeto do armazenamento.
 
-Observe que um controle não é responsável por obter acesso ao meio de armazenamento. Em vez disso, o contêiner do controle é responsável por fornecer o controle com um meio de armazenamento a ser usado nos horários apropriados. Para obter mais informações sobre serialização, consulte o [artigo controles ActiveX do MFC: Serialização](../mfc/mfc-activex-controls-serializing.md). Para obter informações sobre como otimizar a serialização, consulte Otimizando a [persistência e a inicialização](../mfc/optimizing-persistence-and-initialization.md) nos controles ActiveX: Otimização.
+Observe que um controle não é responsável por obter acesso ao meio de armazenamento. Em vez disso, o contêiner do controle é responsável por fornecer o controle com um meio de armazenamento a ser usado nos horários apropriados. Para obter mais informações sobre serialização, consulte o [artigo controles ActiveX do MFC: Serialização](../mfc/mfc-activex-controls-serializing.md). Para obter informações sobre como otimizar a serialização, consulte [otimizando a persistência e a inicialização](../mfc/optimizing-persistence-and-initialization.md) nos controles ActiveX: Otimização.
 
 ##  <a name="_core_installing_activex_control_classes_and_tools"></a>Instalando classes e ferramentas de controle ActiveX
 

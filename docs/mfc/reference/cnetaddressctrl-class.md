@@ -21,10 +21,10 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
 ms.openlocfilehash: 5e485c22bcc4bf35f61226d84345102052689f89
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69504527"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl Class
@@ -58,7 +58,7 @@ class CNetAddressCtrl : public CEdit
 
 ## <a name="remarks"></a>Comentários
 
-O controle de endereço de rede verifica se o formato do endereço que o usuário insere está correto. O controle, na verdade, não se conecta ao endereço de rede. O método [CNetAddressCtrl::](#setallowtype) SetAllowType especifica um ou mais tipos de endereço que o método [CNetAddressCtrl:: GetAddress](#getaddress) pode analisar e verificar. Um endereço pode estar na forma de um IPv4, IPv6 ou endereço nomeado para um servidor, rede, host ou destino de mensagem de difusão. Se o formato do endereço estiver incorreto, você poderá usar o método [CNetAddressCtrl::D isplayerrortip](#displayerrortip) para exibir uma caixa de mensagem InfoTip que aponta graficamente para a caixa de texto do controle de endereço de rede e exibir uma mensagem de erro predefinida.
+O controle de endereço de rede verifica se o formato do endereço que o usuário insere está correto. O controle, na verdade, não se conecta ao endereço de rede. O método [CNetAddressCtrl:: SetAllowType](#setallowtype) especifica um ou mais tipos de endereço que o método [CNetAddressCtrl:: GetAddress](#getaddress) pode analisar e verificar. Um endereço pode estar na forma de um IPv4, IPv6 ou endereço nomeado para um servidor, rede, host ou destino de mensagem de difusão. Se o formato do endereço estiver incorreto, você poderá usar o método [CNetAddressCtrl::D isplayerrortip](#displayerrortip) para exibir uma caixa de mensagem InfoTip que aponta graficamente para a caixa de texto do controle de endereço de rede e exibir uma mensagem de erro predefinida.
 
 A `CNetAddressCtrl` classe é derivada da classe [CEdit](../../mfc/reference/cedit-class.md) . Consequentemente, o controle de endereço de rede fornece acesso a todas as mensagens de controle de edição do Windows.
 
@@ -176,7 +176,7 @@ O valor `S_OK` se esse método for bem-sucedido; caso contrário, um código de 
 
 ### <a name="remarks"></a>Comentários
 
-Use o método [CNetAddressCtrl::](#setallowtype) SetAllowType para especificar os tipos de endereços aos quais o controle de endereço de rede atual pode dar suporte. Use o método [CNetAddressCtrl:: GetAddress](#getaddress) para validar e analisar o endereço de rede que o usuário insere. Use o método [CNetAddressCtrl::D isplayerrortip](#displayerrortip) para exibir uma mensagem de erro InfoTip se o método [CNetAddressCtrl:: GetAddress](#getaddress) não for bem-sucedido.
+Use o método [CNetAddressCtrl:: SetAllowType](#setallowtype) para especificar os tipos de endereços aos quais o controle de endereço de rede atual pode dar suporte. Use o método [CNetAddressCtrl:: GetAddress](#getaddress) para validar e analisar o endereço de rede que o usuário insere. Use o método [CNetAddressCtrl::D isplayerrortip](#displayerrortip) para exibir uma mensagem de erro InfoTip se o método [CNetAddressCtrl:: GetAddress](#getaddress) não for bem-sucedido.
 
 Essa mensagem invoca a macro [NetAddr_DisplayErrorTip](/windows/win32/api/shellapi/nf-shellapi-netaddr_displayerrortip) , que é descrita na SDK do Windows. Essa macro envia a `NCM_DISPLAYERRORTIP` mensagem.
 
@@ -201,7 +201,7 @@ O valor S_OK se esse método for bem-sucedido; caso contrário, um código de er
 
 Se esse método for bem-sucedido, a estrutura [NET_ADDRESS_INFO](/windows/win32/shell/hkey-type) conterá informações adicionais sobre o endereço de rede.
 
-Use o método [CNetAddressCtrl::](#setallowtype) SetAllowType para especificar os tipos de endereços aos quais o controle de endereço de rede atual pode dar suporte. Use o método [CNetAddressCtrl:: GetAddress](#getaddress) para validar e analisar o endereço de rede que o usuário insere. Use o método [CNetAddressCtrl::D isplayerrortip](#displayerrortip) para exibir uma mensagem de erro InfoTip se o método [CNetAddressCtrl:: GetAddress](#getaddress) não for bem-sucedido.
+Use o método [CNetAddressCtrl:: SetAllowType](#setallowtype) para especificar os tipos de endereços aos quais o controle de endereço de rede atual pode dar suporte. Use o método [CNetAddressCtrl:: GetAddress](#getaddress) para validar e analisar o endereço de rede que o usuário insere. Use o método [CNetAddressCtrl::D isplayerrortip](#displayerrortip) para exibir uma mensagem de erro InfoTip se o método [CNetAddressCtrl:: GetAddress](#getaddress) não for bem-sucedido.
 
 Esse método invoca a macro [NetAddr_GetAddress](/windows/win32/api/shellapi/nf-shellapi-netaddr_getaddress) , que é descrita na SDK do Windows. Essa macro envia a mensagem NCM_GETADDRESS.
 
@@ -241,7 +241,7 @@ S_OK se esse método for bem-sucedido; caso contrário, um código de erro COM.
 
 ### <a name="remarks"></a>Comentários
 
-Use o método [CNetAddressCtrl::](#setallowtype) SetAllowType para especificar os tipos de endereços aos quais o controle de endereço de rede atual pode dar suporte. Use o método [CNetAddressCtrl:: GetAddress](#getaddress) para validar e analisar o endereço de rede que o usuário insere. Use o método [CNetAddressCtrl::D isplayerrortip](#displayerrortip) para exibir uma mensagem de erro InfoTip se o método [CNetAddressCtrl:: GetAddress](#getaddress) não for bem-sucedido.
+Use o método [CNetAddressCtrl:: SetAllowType](#setallowtype) para especificar os tipos de endereços aos quais o controle de endereço de rede atual pode dar suporte. Use o método [CNetAddressCtrl:: GetAddress](#getaddress) para validar e analisar o endereço de rede que o usuário insere. Use o método [CNetAddressCtrl::D isplayerrortip](#displayerrortip) para exibir uma mensagem de erro InfoTip se o método [CNetAddressCtrl:: GetAddress](#getaddress) não for bem-sucedido.
 
 Essa mensagem invoca a macro [NetAddr_SetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_setallowtype) , que é descrita na SDK do Windows. Essa macro envia a mensagem NCM_SETALLOWTYPE.
 

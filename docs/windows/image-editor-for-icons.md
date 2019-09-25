@@ -43,10 +43,10 @@ helpviewer_keywords:
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
 ms.openlocfilehash: 0f8fe228b804538b6a0d0377f05d79c34e787587
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514225"
 ---
 # <a name="image-editor-for-icons-c"></a>Editor de imagem para íconesC++()
@@ -62,7 +62,7 @@ Você também pode usar o **Editor de imagem** e o [Editor binário](binary-edit
 
 Além de criar novos recursos gráficos, você pode [importar imagens existentes](../windows/how-to-copy-resources.md#import-and-export-resources) para edição e, em seguida, adicioná-las ao seu projeto. Você também pode abrir e editar imagens que não fazem parte de um projeto para [edição de imagem](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)autônoma.
 
-Para obter informações sobre o **Editor de imagem**, consulte como [criar um ícone ou outra imagem](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [Editar uma imagem](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [usar uma ferramenta de desenho](../windows/using-a-drawing-tool-image-editor-for-icons.md), [trabalhar com cores](../windows/working-with-color-image-editor-for-icons.md)e [teclas](../windows/accelerator-keys-image-editor-for-icons.md)de aceleração.
+Para obter informações sobre o **Editor de imagem**, consulte como [criar um ícone ou outra imagem](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [Editar uma imagem](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [usar uma ferramenta de desenho](../windows/using-a-drawing-tool-image-editor-for-icons.md), [trabalhar com cores](../windows/working-with-color-image-editor-for-icons.md)e [teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md).
 
 > [!NOTE]
 > Baixe sem custo a **biblioteca de imagens do Visual Studio** que contém várias animações, bitmaps e ícones que você pode usar em seus aplicativos. Para obter mais informações sobre como baixar a biblioteca, consulte a [biblioteca de imagens do Visual Studio](/visualstudio/designers/the-visual-studio-image-library).
@@ -123,7 +123,7 @@ Como muitas das ferramentas de desenho estão disponíveis no [teclado](../windo
 
 Com o seletor de **opção** , você pode especificar a largura de uma linha, um traço de pincel e muito mais. O ícone no botão seletor de **Opções** é alterado dependendo de qual ferramenta você selecionou.
 
-![Seletor de forma de desenho&#45;na barra de ferramentas do editor de imagens](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")<br/>
+![Seletor de forma de&#45;desenho na barra de ferramentas do editor de imagens](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")<br/>
 Seletor de **opção** na barra de ferramentas do **Editor de imagem**
 
 ### <a name="text-tool"></a>Ferramenta de texto
@@ -186,7 +186,7 @@ A janela do **Editor de imagens** mostra duas exibições de uma imagem, com uma
 
 Uma exibição é o tamanho real e a outra é ampliada por um fator de ampliação padrão de 6. As exibições nesses dois painéis são atualizadas automaticamente, todas as alterações feitas em um painel são exibidas imediatamente no outro. Os dois painéis facilitam a tarefa de trabalhar em uma exibição ampliada da imagem, na qual você pode distinguir pixels individuais e, ao mesmo tempo, observar o efeito do seu trabalho na exibição de tamanho real da imagem.
 
-O painel esquerdo usa o máximo de espaço necessário (até metade da janela de **imagem** ) para exibir a exibição de ampliação 1:1 padrão da imagem. O painel direito exibe uma imagem de ampliação de 6:1 com zoom padrão. Você pode alterar a ampliação em cada painel usando a ferramenta de ampliação na barra de ferramentas do **Editor de imagens** ou usando as teclas de aceleração.
+O painel esquerdo usa o máximo de espaço necessário (até metade da janela de **imagem** ) para exibir a exibição de ampliação 1:1 padrão da imagem. O painel direito exibe uma imagem de ampliação de 6:1 com zoom padrão. Você pode alterar a ampliação em cada painel usando a ferramenta de **ampliação** na barra de ferramentas do **Editor de imagens** ou usando as teclas de aceleração.
 
 Você pode ampliar o painel menor da janela do **Editor de imagem** e usar os dois painéis para mostrar regiões diferentes de uma imagem grande. Selecione dentro do painel para selecioná-lo.
 
@@ -203,7 +203,7 @@ Por padrão, o **Editor de imagem** exibe a exibição no painel esquerdo em tam
 1. Na barra de ferramentas do **Editor de imagem** , selecione a seta à direita da ferramenta de **ampliação** e selecione o fator de ampliação no submenu: **1x**, **2x**, **6 vezes**ou **8x**.
 
    > [!NOTE]
-   > Para selecionar um fator de ampliação diferente daqueles listados na ferramenta de ampliação, use as teclas de aceleração.
+   > Para selecionar um fator de ampliação diferente daqueles listados na ferramenta de **ampliação** , use as teclas de aceleração.
 
 ### <a name="to-display-or-hide-the-pixel-grid"></a>Para exibir ou ocultar a grade de pixels
 

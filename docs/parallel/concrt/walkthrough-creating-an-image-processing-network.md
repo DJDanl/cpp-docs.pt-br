@@ -6,17 +6,17 @@ helpviewer_keywords:
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
 ms.openlocfilehash: 680037e0e14c3ebd9171cacf477520e025eecebe
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69512165"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Passo a passo: Criando uma rede de processamento de imagens
 
 Este documento demonstra como criar uma rede de blocos de mensagens assíncronas que executam o processamento de imagens.
 
-A rede determina quais operações executar em uma imagem com base em suas características. Este exemplo usa o modelo de Dataflow para rotear imagens por meio da rede. No modelo de fluxo de dados, componentes independentes de um programa se comunicam uns com os outros enviando mensagens. Quando um componente recebe uma mensagem, ele pode executar alguma ação e, em seguida, passar o resultado dessa ação para outro componente. Compare isso com o modelo de *fluxo de controle* , no qual um aplicativo usa estruturas de controle, por exemplo, instruções condicionais, loops e assim por diante, para controlar a ordem das operações em um programa.
+A rede determina quais operações executar em uma imagem com base em suas características. Este exemplo usa o modelo de *Dataflow* para rotear imagens por meio da rede. No modelo de fluxo de dados, componentes independentes de um programa se comunicam uns com os outros enviando mensagens. Quando um componente recebe uma mensagem, ele pode executar alguma ação e, em seguida, passar o resultado dessa ação para outro componente. Compare isso com o modelo de *fluxo de controle* , no qual um aplicativo usa estruturas de controle, por exemplo, instruções condicionais, loops e assim por diante, para controlar a ordem das operações em um programa.
 
 Uma rede baseada em Dataflow cria um *pipeline* de tarefas. Cada estágio do pipeline executa simultaneamente parte da tarefa geral. Como analogia, podemos usar uma linha de montagem de automóveis. À medida que cada veículo passa pela linha do assembly, uma estação monta o quadro, outro instala o mecanismo e assim por diante. Ao permitir que vários veículos sejam montados simultaneamente, a linha do assembly fornece uma melhor taxa de transferência do que a montagem de veículos completos, um de cada vez.
 

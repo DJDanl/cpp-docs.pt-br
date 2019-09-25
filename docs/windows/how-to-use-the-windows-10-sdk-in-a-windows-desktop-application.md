@@ -4,10 +4,10 @@ ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
 ms.openlocfilehash: 8dbf18d24c0369507743c3c1da624838f9ab4703
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69513826"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Como: Usar o SDK do Windows 10 em um aplicativo de área de trabalho do Windows
@@ -22,7 +22,7 @@ A partir do Visual Studio 2015 e do SDK do Windows 10, a biblioteca CRT foi sepa
 
 1. Verifique se o SDK do Windows 10 está instalado. O SDK do Windows 10 é instalado como parte do **desenvolvimento de desktop C++ com** carga de trabalho. Uma versão autônoma está disponível em [downloads e ferramentas para Windows 10](https://developer.microsoft.com/windows/downloads).
 
-2. Abra o menu de atalho para o nó do projeto e escolha redirecionar **versão do SDK**.
+2. Abra o menu de atalho para o nó do projeto e escolha **redirecionar versão do SDK**.
 
    ![Redirecionar versão do SDK](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")
 
@@ -54,7 +54,7 @@ A partir do Visual Studio 2015 e do SDK do Windows 10, a biblioteca CRT foi sepa
 
 ### <a name="to-target-the-windows-81-sdk"></a>Para direcionar o SDK do Windows 8.1
 
-1. Abra o menu de atalho para o nó do projeto e escolha redirecionar **versão do SDK**.
+1. Abra o menu de atalho para o nó do projeto e escolha **redirecionar versão do SDK**.
 
 2. Na lista suspensa **versão da plataforma de destino** , escolha **8,1**.
 

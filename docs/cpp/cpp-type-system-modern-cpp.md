@@ -4,10 +4,10 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
 ms.openlocfilehash: b947bd6955a80e051d1dab81061b4b2bf2ab19c8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69498637"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema do tipo C++ (C++ moderno)
@@ -63,7 +63,7 @@ A ilustração a seguir mostra os tamanhos relativos dos tipos internos:
 
 A tabela a seguir lista os tipos fundamentais usados com mais frequência:
 
-|Tipo|Size|Comentário|
+|Tipo|Tamanho|Comentário|
 |----------|----------|-------------|
 |int|4 bytes|A opção padrão para valores integrais.|
 |double|8 bytes|A opção padrão para valores de ponto flutuante.|

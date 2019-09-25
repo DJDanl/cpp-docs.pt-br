@@ -8,15 +8,15 @@ helpviewer_keywords:
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
 ms.openlocfilehash: 7bc0cb58cbbe995aa9d74e3ccb627ddc442bd4fb
-ms.sourcegitcommit: ec524d1f87bcce2b26b02e6d297f42c94b3db36e
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70026083"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Passo a passo: Criar e usar sua própria Biblioteca de vínculo dinâmico (C++)
 
-Este guia passo a passo mostra como usar o IDE do Visual Studio para criar sua própria DLL (biblioteca de vínculo dinâmico) escrita no Microsoft C++ (MSVC). Em seguida, ele mostra como usar a DLL de C++ outro aplicativo. As DLLs (também conhecidas como *bibliotecas* compartilhadas em sistemas operacionais baseados em UNIX) são um dos tipos mais úteis de componentes do Windows. Você pode usá-los como uma maneira de compartilhar código e recursos e reduzir o tamanho dos seus aplicativos. As DLLs podem até mesmo facilitar o serviço e estender seus aplicativos.
+Este guia passo a passo mostra como usar o IDE do Visual Studio para criar sua própria DLL (biblioteca de vínculo dinâmico) escrita no Microsoft C++ (MSVC). Em seguida, ele mostra como usar a DLL de C++ outro aplicativo. As DLLs (também conhecidas como *bibliotecas compartilhadas* em sistemas operacionais baseados em UNIX) são um dos tipos mais úteis de componentes do Windows. Você pode usá-los como uma maneira de compartilhar código e recursos e reduzir o tamanho dos seus aplicativos. As DLLs podem até mesmo facilitar o serviço e estender seus aplicativos.
 
 Neste tutorial, você criará uma DLL que implementa algumas funções matemáticas. Em seguida, você criará um aplicativo de console que usa as funções da DLL. Você também obterá uma introdução a algumas técnicas de programação e convenções usadas em DLLs do Windows.
 
@@ -38,7 +38,7 @@ Este passo a passo cria duas soluções do Visual Studio: uma que cria a DLL e o
 
 Este passo a passo não aborda algumas situações comuns. O código não mostra o uso de C++ DLLs por outras linguagens de programação. Ele não mostra como [criar uma DLL somente de recursos](creating-a-resource-only-dll.md)ou como usar [vinculação explícita](linking-an-executable-to-a-dll.md#linking-explicitly) para carregar DLLs em tempo de execução em vez de em tempo de carregamento. Com certeza, você pode usar o MSVC e o Visual Studio para fazer todas essas coisas.
 
-Para saber mais sobre DLLs, consulte [Criar DLLs C/C ++ no Visual Studio](dlls-in-visual-cpp.md). Para obter mais informações sobre vinculação implícita e vinculação explícita, consulte [determinar qual método de vinculação usar](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Para obter informações sobre C++ como criar DLLs para uso com linguagens de programação que usam convenções de vinculação de linguagem c, consulte Exportando [ C++ funções para uso em executáveis de linguagem c](exporting-cpp-functions-for-use-in-c-language-executables.md). Para saber mais sobre como criar DLLs para usar com linguagens .NET, consulte [Chamando funções DLL a partir de aplicativos Visual Basic](calling-dll-functions-from-visual-basic-applications.md).
+Para saber mais sobre DLLs, consulte [Criar DLLs C/C ++ no Visual Studio](dlls-in-visual-cpp.md). Para obter mais informações sobre vinculação implícita e vinculação explícita, consulte [determinar qual método de vinculação usar](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Para obter informações sobre C++ como criar DLLs para uso com linguagens de programação que usam convenções de vinculação de linguagem c, consulte [exportando C++ funções para uso em executáveis de linguagem c](exporting-cpp-functions-for-use-in-c-language-executables.md). Para saber mais sobre como criar DLLs para usar com linguagens .NET, consulte [Chamando funções DLL a partir de aplicativos Visual Basic](calling-dll-functions-from-visual-basic-applications.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -194,7 +194,7 @@ No momento, essa DLL não faz muita coisa. Em seguida, você criará um arquivo 
 
 Este arquivo de cabeçalho declara algumas funções para produzir uma sequência de Fibonacci generalizada, tendo em conta dois valores iniciais. Uma chamada para `fibonacci_init(1, 1)` gera a conhecida sequência de números de Fibonacci.
 
-Observe as instruções do pré-processador na parte superior do arquivo. O novo modelo de projeto para um projeto DLL adiciona exportações ** _ProjectName_&#95; às macros de pré-processador definidas. Neste exemplo, o Visual Studio define **MATHLIBRARY&#95;EXPORTS** quando seu projeto de DLL MathLibrary é compilado.
+Observe as instruções do pré-processador na parte superior do arquivo. O novo modelo de projeto para um projeto DLL adiciona **exportações _ProjectName_&#95; às macros de pré-processador definidas. Neste exemplo, o Visual Studio define **MATHLIBRARY&#95;EXPORTS** quando seu projeto de DLL MathLibrary é compilado.
 
 Quando a macro **MATHLIBRARY&#95;EXPORTS** é definida, a macro **MATHLIBRARY&#95;API** define o modificador `__declspec(dllexport)` nas declarações da função. Esse modificador instrui o compilador e o vinculador a exportar uma função ou variável da DLL para uso por outros aplicativos. Quando **MATHLIBRARY&#95;EXPORTS** está indefinido, por exemplo, quando o arquivo de cabeçalho é incluído por um aplicativo cliente, **MATHLIBRARY&#95;API** aplica o modificador `__declspec(dllimport)` às declarações. Esse modificador otimiza a importação da função ou variáveis em aplicativos. Para saber mais, confira [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
