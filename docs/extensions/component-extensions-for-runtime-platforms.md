@@ -1,7 +1,7 @@
 ---
 title: Extensões de componentes para .NET e UWP
 ms.date: 10/12/2018
-ms.topic: landing-page
+ms.topic: overview
 helpviewer_keywords:
 - what's new [C++], keywords
 - what's new [C++], language features
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 76cbb20d108745984490e67b53db39f58e34d327
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 1e47a138fece021cf015884222d8cf5c766655fd
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70311685"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274678"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Extensões de componentes para .NET e UWP
 
@@ -97,7 +97,7 @@ As seguintes construções de linguagem são implementadas como modelos, em vez 
 
 Os seguintes declaradores de tipo instruem o tempo de execução a gerenciar automaticamente o tempo de vida e a exclusão de objetos alocados.
 
-|Operator|Finalidade|Referência|
+|Operador|Finalidade|Referência|
 |--------------|-------------|---------------|
 |`^`|Declara um identificador para um objeto; ou seja, um ponteiro para um objeto do Windows Runtime ou do CLR que é automaticamente excluído quando não puder mais ser usado.|[Operador Handle to Object (^)](handle-to-object-operator-hat-cpp-component-extensions.md)|
 |`%`|Declara uma referência de companhamento; ou seja, uma referência a um objeto do Windows Runtime ou do CLR que é automaticamente excluído quando não puder mais ser usado.|[Operador de Referência de Acompanhamento](tracking-reference-operator-cpp-component-extensions.md)|
