@@ -4,12 +4,12 @@ ms.date: 08/08/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: bfc9bb17100a3ee5c662062963c71ee532487239
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 8c99b2dd60e6c2266d5095a477ee4a5b2e0c8bd0
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273715"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685192"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opções de compilador listadas por categoria
 
@@ -122,6 +122,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para uma li
 |[/Zc](zc-conformance.md)|Especifica o comportamento padrão em [/ze](za-ze-disable-language-extensions.md).|
 |[/Ze](za-ze-disable-language-extensions.md)|Preterido. Habilita extensões de linguagem C89.|
 |[/Zf](zf.md)|Melhora o tempo de geração de PDB em compilações paralelas.|
+|[/ZH](zh.md)|Especifica MD5, SHA-1 ou SHA-256 para somas de verificação nas informações de depuração.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Inclui informações de depuração em um banco de dados do programa compatível com Editar e Continuar. (apenas x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Gera informações completas de depuração.|
 |[/Zl](zl-omit-default-library-name.md)|Remove o nome da biblioteca padrão do arquivo .obj.|
