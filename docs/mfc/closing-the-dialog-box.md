@@ -5,19 +5,19 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], closing
 - dialog boxes [MFC], closing
 ms.assetid: 946f5675-c482-46a4-a5dd-34fe138ffae5
-ms.openlocfilehash: 07e4159eccde1fab89d4a5ffadee4e6d11fc20f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48ea954552b3ea9aa7193a47fc2a66d731312d77
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326840"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685380"
 ---
 # <a name="closing-the-dialog-box"></a>Fechando a caixa de diálogo
 
-Caixa de diálogo modal fecha quando o usuário escolhe um dos seus botões, normalmente no botão Okey ou o botão Cancelar. Escolher o botão Okey ou Cancelar faz com que o Windows enviar o objeto de caixa de diálogo uma **BN_CLICKED** mensagem de notificação de controle com o botão ou a ID do, do **IDOK** ou **IDCANCEL**. `CDialog` fornece funções de manipulador de padrão para essas mensagens: `OnOK` e `OnCancel`. A chamada de manipuladores padrão a `EndDialog` a função de membro para fechar a janela da caixa de diálogo. Você também pode chamar `EndDialog` de seu próprio código. Para obter mais informações, consulte o [EndDialog](../mfc/reference/cdialog-class.md#enddialog) função de membro da classe `CDialog` no *referência da MFC*.
+Uma caixa de diálogo modal é fechada quando o usuário escolhe um de seus botões, normalmente o botão OK ou o botão Cancelar. Escolher o botão OK ou cancelar faz com que o Windows envie o objeto da caixa de diálogo uma mensagem de notificação de controle **BN_CLICKED** com a ID do botão, **IDOK** ou **IDCANCEL**. `CDialog` fornece funções de manipulador padrão para essas mensagens: `OnOK` e `OnCancel`. Os manipuladores padrão chamam a função de membro `EndDialog` para fechar a janela de diálogo. Você também pode chamar `EndDialog` de seu próprio código. Para obter mais informações, consulte a função membro [EndDialog](../mfc/reference/cdialog-class.md#enddialog) da classe `CDialog` na *referência do MFC*.
 
-Para organizar para fechar e excluir uma caixa de diálogo sem janela restrita, substituir `PostNcDestroy` e chamar o **exclua** operador no **isso** ponteiro. [Destruindo a caixa de diálogo](../mfc/destroying-the-dialog-box.md) explica o que acontece em seguida.
+Para organizar o fechamento e a exclusão de uma caixa de diálogo sem janela restrita, substitua `PostNcDestroy` e invoque o operador **delete** **no ponteiro.** [A destruição da caixa de diálogo](../mfc/destroying-the-dialog-box.md) explica o que acontece em seguida.
 
 ## <a name="see-also"></a>Consulte também
 
-[Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+[Trabalhando com caixas de diálogo no MFC](../mfc/life-cycle-of-a-dialog-box.md)

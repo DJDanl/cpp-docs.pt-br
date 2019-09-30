@@ -1,15 +1,16 @@
 ---
 title: Como relatar um problema com o conjunto de ferramentas do Microsoft C++
-ms.date: 06/21/2019
+description: Como criar um bom relatório de problemas e informações de reprodução para o C++ conjunto de ferramentas da Microsoft.
+ms.date: 09/24/2019
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 13826349836e4c58b7d6a7ce8936186930bc7100
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
-ms.translationtype: HT
+ms.openlocfilehash: 350e902501aca5cbe2b4022ec1f977719844644b
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344377"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685696"
 ---
 # <a name="how-to-report-a-problem-with-the-microsoft-c-toolset-or-documentation"></a>Como relatar um problema com o conjunto de ferramentas ou a documentação do Microsoft C++
 
@@ -317,9 +318,9 @@ Finalmente, anexe os arquivos de reprodução pré-processados (*nomedoarquivo*.
 
 ### <a name="link-repros"></a>Reproduções de vinculação
 
-Uma *reprodução de vinculação* é o conteúdo gerado pelo vinculador de um diretório especificado pela variável de ambiente **link\_repro**. Ela contém artefatos de compilação que demonstram coletivamente um problema que acontece no tempo de vinculação. Os exemplos incluem uma falha de back-end que envolve a Geração de Código Durante o Tempo de Vinculação (LTCG) ou uma falha de vinculador. Esses artefatos de compilação são aqueles necessários como entrada do vinculador para que o problema possa ser reproduzido. Uma reprodução de vinculação pode ser criada com facilidade usando essa variável de ambiente. Ela habilita o recurso de geração de reprodução interno do vinculador.
+Uma *reprodução de link* é o conteúdo gerado pelo vinculador de um diretório, especificado pela variável de ambiente **link @ no__t-2repro** ou como um argumento para a opção vinculador [/LINKREPRO](../build/reference/linkrepro.md) . Ela contém artefatos de compilação que demonstram coletivamente um problema que acontece no tempo de vinculação. Os exemplos incluem uma falha de back-end que envolve a Geração de Código Durante o Tempo de Vinculação (LTCG) ou uma falha de vinculador. Esses artefatos de compilação são os necessários como entrada de vinculador para que o problema possa ser reproduzido. Uma reprodução de link pode ser criada facilmente usando essa variável de ambiente. Ela habilita o recurso de geração de reprodução interno do vinculador.
 
-#### <a name="to-generate-a-link-repro"></a>Para gerar uma reprodução de vinculação
+#### <a name="to-generate-a-link-repro-using-the-link_repro-environment-variable"></a>Para gerar uma reprodução de link usando a variável de ambiente link_repro
 
 1. Capture os argumentos de linha de comando usados para criar sua reprodução, conforme descrito em [Para relatar o conteúdo da linha de comando](#to-report-the-contents-of-the-command-line).
 
@@ -327,9 +328,9 @@ Uma *reprodução de vinculação* é o conteúdo gerado pelo vinculador de um d
 
 1. Na janela do console de prompt de comando do desenvolvedor, mude para o diretório que contém seu projeto de reprodução.
 
-1. Digite **mkdir linkrepro** para criar um diretório para a reprodução de vinculação.
+1. Digite **mkdir linkrepro** para criar um diretório chamado *linkrepro* para a reprodução do link. Você pode usar um nome diferente para capturar outra reprodução de link.
 
-1. Digite o comando **set link\_repro=linkrepro** para definir a variável de ambiente **link\_repro** para o diretório que você criou. Se o build for executado de um diretório diferente, o que geralmente ocorre em projetos mais complexos, defina **link\_repro** como o caminho completo para o diretório linkrepro.
+1. Digite o comando **set link\_repro=linkrepro** para definir a variável de ambiente **link\_repro** para o diretório que você criou. Se o Build for executado de um diretório diferente, como geralmente é o caso para projetos mais complexos, defina o **link @ no__t-1repro** como o caminho completo para o diretório de reprodução do link em vez disso.
 
 1. Para compilar o projeto de reprodução no Visual Studio, na janela do console de prompt de comando do desenvolvedor, digite o comando **devenv**. Isso garante que o valor da variável de ambiente **link\_repro** esteja visível para o Visual Studio. Para compilar o projeto na linha de comando, use os argumentos de linha de comando capturados acima para duplicar a compilação de reprodução.
 
@@ -339,11 +340,23 @@ Uma *reprodução de vinculação* é o conteúdo gerado pelo vinculador de um d
 
 1. Na janela do console de prompt de comando do desenvolvedor, digite o comando **set link\_repro=** para limpar a variável de ambiente **link\_repro**.
 
-Por fim, compacte a reprodução compactando todo o diretório linkrepro em um arquivo .zip ou semelhante e anexe-o ao seu relatório.
+Por fim, empacote a reprodução ao compactar todo o diretório linkrepro em um arquivo. zip ou semelhante e anexá-lo ao relatório.
+
+A opção de vinculador **/LINKREPRO** tem o mesmo efeito que a variável de ambiente **link @ no__t-2repro** . Você pode usar a opção [/LINKREPROTARGET](../build/reference/linkreprotarget.md) para especificar o nome a ser filtrado para a reprodução do link gerado. Para usar o **/LINKREPROTARGET**, você também deve especificar a opção de vinculador **/out** .
+
+#### <a name="to-generate-a-link-repro-using-the-linkrepro-option"></a>Para gerar uma reprodução de link usando a opção/LINKREPRO
+
+1. Crie um diretório para manter a reprodução do link. Vamos nos referir ao caminho de diretório completo que você criará como _diretório-caminho_. Use aspas duplas em volta do caminho se ele incluir espaços.
+
+1. Adicione o comando **/LINKREPRO:** _Directory-Path_ à linha de comando do vinculador. No Visual Studio, abra a caixa de diálogo **páginas de propriedades** do seu projeto. Selecione a **página de propriedades de** **linha de comando**  > **vinculador** > . Em seguida, insira a opção **/LINKREPRO:** _Directory-Path_ na caixa **Opções adicionais** . Escolha **OK** para salvar suas alterações.
+
+1. Compile seu projeto de reprodução e confirme se o problema esperado ocorreu.
+
+Por fim, empacote a reprodução ao compactar o diretório de reprodução do link do _caminho do diretório_ inteiro em um arquivo. zip ou semelhante e anexá-lo ao relatório.
 
 ### <a name="other-repros"></a>Outras reproduções
 
-Se você não puder reduzir o problema a um único arquivo de origem ou reprodução pré-processada, e o problema não exigir uma reprodução de vinculação, poderemos investigar um projeto do IDE. Todas as diretrizes sobre como criar uma boa reprodução ainda se aplicam: O código deve ser mínimo e independente. O problema deve ocorrer em nossas ferramentas mais recentes e, se for relevante, não deve ser visto em outros compiladores.
+Se você não puder reduzir o problema para um único arquivo de origem ou reprodução pré-processado, e o problema não exigir uma reprodução de link, podemos investigar um projeto do IDE. Todas as diretrizes sobre como criar uma boa reprodução ainda se aplicam: O código deve ser mínimo e independente. O problema deve ocorrer em nossas ferramentas mais recentes e, se for relevante, não deve ser visto em outros compiladores.
 
 Crie sua reprodução como um projeto do IDE mínimo e empacote-o compactando toda a estrutura do diretório em um arquivo .zip ou semelhante e anexe-o ao relatório.
 

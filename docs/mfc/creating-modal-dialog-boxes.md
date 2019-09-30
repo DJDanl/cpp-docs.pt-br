@@ -6,17 +6,17 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], modal
 ms.assetid: 26c7a68c-79f6-4862-a5a8-6024984644d2
-ms.openlocfilehash: 5de6eeb616f32c7b8829d827988a972e41658530
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed0fe3b7ef8aeddea01f573bfe8e1c01a6b5b443
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174088"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685676"
 ---
 # <a name="creating-modal-dialog-boxes"></a>Criando caixas de diálogo modais
 
-Para criar uma caixa de diálogo modal, chamar qualquer um dos dois construtores públicos declarados no [CDialog](../mfc/reference/cdialog-class.md). Em seguida, chame o objeto de caixa de diálogo [DoModal](../mfc/reference/cdialog-class.md#domodal) função de membro para exibir a caixa de diálogo e gerenciar a interação com ele até que o usuário escolhe Okey ou Cancelar. Esse gerenciamento por `DoModal` faz com que a caixa de diálogo modal. Para caixas de diálogo modal, `DoModal` carrega o recurso de caixa de diálogo.
+Para criar uma caixa de diálogo modal, chame qualquer um dos dois construtores públicos declarados em [CDialog](../mfc/reference/cdialog-class.md). Em seguida, chame a função de membro [DoModal](../mfc/reference/cdialog-class.md#domodal) do objeto Dialog para exibir a caixa de diálogo e gerenciar a interação com ela até que o usuário escolha OK ou cancelar. Esse gerenciamento por `DoModal` é o que torna a caixa de diálogo modal. Para caixas de diálogo modais, `DoModal` carrega o recurso de caixa de diálogo.
 
 ## <a name="see-also"></a>Consulte também
 
-[Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+[Trabalhando com caixas de diálogo no MFC](../mfc/life-cycle-of-a-dialog-box.md)

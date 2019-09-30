@@ -3,12 +3,12 @@ title: Opções do compilador listadas em ordem alfabética
 ms.date: 08/08/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 90c7ee5637a5d1e0f9d48c0f128364ee0df73dab
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 39dd11245ef88d1d59d3eda8cbeaa5fc4494b9a8
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273641"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685331"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opções do compilador listadas em ordem alfabética
 
@@ -99,7 +99,7 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para uma li
 |[/OD](od-disable-debug.md)|Desabilita a otimização.|
 |[/Og](og-global-optimizations.md)|Preterido. Usa otimizações globais.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Gera funções intrínsecas.|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|Habilita a [`#pragma omp`](../../preprocessor/omp.md) diretiva no código-fonte.|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|Habilita a diretiva [`#pragma omp`](../../preprocessor/omp.md) no código-fonte.|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|Favorece código pequeno.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Favorece código rápido.|
 |[/Ox](ox-full-optimization.md)|Um subconjunto de/O2 que não inclui/GF ou/GY.|
@@ -157,6 +157,7 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para uma li
 |[/Ze](za-ze-disable-language-extensions.md)|Preterido. Habilita extensões de linguagem.|
 |[/Zf](zf.md)|Melhora o tempo de geração de PDB em compilações paralelas.|
 |[/Zg](zg-generate-function-prototypes.md)|Removido no Visual Studio 2015. Gera protótipos de função.|
+|[/ZH](zh.md)|Especifica MD5, SHA-1 ou SHA-256 para somas de verificação nas informações de depuração.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Inclui informações de depuração em um banco de dados do programa compatível com Editar e Continuar.|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Gera informações completas de depuração.|
 |[/Zl](zl-omit-default-library-name.md)|Remove o nome da biblioteca padrão do arquivo .obj (somente x86).|
