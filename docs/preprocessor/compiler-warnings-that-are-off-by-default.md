@@ -5,12 +5,12 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: ac6ad3b5bbe5f3a738dc0019a43ff08a17cf27ca
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: f74c413a81a1da6398666a0c15936cb76b5a7144
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685721"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712668"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avisos de compilador desativados por padrão
 
@@ -150,13 +150,13 @@ Os avisos a seguir são desativados por padrão no Visual Studio 2015 e versões
 |C5042 (nível 3)|'*Function*': declarações de função em escopo de bloco não podem ser especificadas ' inline C++' no Standard; remover especificador ' inline ' <sup>15,5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|O compilador irá inserir a mitigação de Spectre para a carga de memória se a opção/Qspectre especificou <sup>15,7</sup>|
 
-<sup>14,1</sup> este aviso está disponível a partir do Visual Studio 2015 atualização 1. <br/>
-<sup>14,3</sup> este aviso está disponível a partir do Visual Studio 2015 atualização 3. <br/>
-<sup>15,3</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,3. <br/>
-<sup>15,5</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,5. <br/>
-<sup>15,7</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,7. <br/>
-<sup>15,8</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,8. <br/>
-<sup>16,0</sup> este aviso está disponível a partir do Visual Studio 2019 RTM. <br/>
+<sup>14,1</sup> este aviso está disponível a partir do Visual Studio 2015 atualização 1. \
+<sup>14,3</sup> este aviso está disponível a partir do Visual Studio 2015 atualização 3.
+<sup>15,3</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,3. \
+<sup>15,5</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,5. \
+<sup>15,7</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,7. \
+<sup>15,8</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,8. \
+<sup>16,0</sup> este aviso está disponível a partir do Visual Studio 2019 RTM. \
 <sup>Perm</sup> Esse aviso será desativado, a menos que a opção de compilador [/permissive-](../build/reference/permissive-standards-conformance.md) esteja definida.
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Avisos desativados por padrão em versões anteriores

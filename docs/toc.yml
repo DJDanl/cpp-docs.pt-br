@@ -409,6 +409,8 @@
                   href: build/reference/vcxproj-file-structure.md
                 - name: Arquivo de projeto de exemplo
                   href: build/reference/project-files.md
+                - name: Estrutura de arquivos .vcxproj.filters
+                  href: build/reference/vcxproj-filters-files.md
             - name: Páginas de propriedades de projeto C++
               expanded: false
               items:
@@ -434,7 +436,7 @@
                   href: build/reference/nmake-property-page.md
                 - name: Páginas de propriedades Ferramenta de Manifesto
                   href: build/reference/manifest-tool-property-pages.md
-                - name: Páginas de propriedades de Recursos
+                - name: Páginas de propriedades Recursos
                   href: build/reference/resources-property-pages.md
                 - name: Página de propriedades de Recursos Gerenciados
                   href: build/reference/managed-resources-property-page.md
@@ -794,6 +796,8 @@
                       href: build/reference/zf.md
                     - name: /Zg (gerar protótipos de função)
                       href: build/reference/zg-generate-function-prototypes.md
+                    - name: /ZH (algoritmo de hash para soma de verificação em informações de depuração)
+                      href: build/reference/zh.md
                     - name: /Zl (omitir nome da biblioteca padrão)
                       href: build/reference/zl-omit-default-library-name.md
                     - name: /Zm (especificar limite de alocação da memória de cabeçalho pré-compilado)
@@ -952,6 +956,10 @@
                   href: build/reference/largeaddressaware-handle-large-addresses.md
                 - name: /LIBPATH (libpath adicional)
                   href: build/reference/libpath-additional-libpath.md
+                - name: /LINKREPRO (nome do diretório de reprodução de link)
+                  href: build/reference/linkrepro.md
+                - name: /LINKREPROTARGET (nome do arquivo de reprodução de link)
+                  href: build/reference/linkreprotarget.md
                 - name: /LTCG (geração de código do tempo de vinculação)
                   href: build/reference/ltcg-link-time-code-generation.md
                 - name: /MACHINE (especificar plataforma de destino)
@@ -1521,6 +1529,8 @@
           href: ide/writing-and-refactoring-code-cpp.md
         - name: Navegar pelo código C++
           href: ide/navigate-code-cpp.md
+        - name: Definir preferências de codificação em C++
+          href: ide/how-to-set-preferences.md
         - name: Colaborar usando o Live Share para C++
           href: ide/live-share-cpp.md
         - name: Alterar assinatura
@@ -4802,14 +4812,14 @@
                       href: preprocessor/hash-undef-directive-c-cpp.md
                     - name: '#Diretiva using (C++/CLI)'
                       href: preprocessor/hash-using-directive-cpp.md
-                - name: Operadores de pré-processador
+                - name: Operadores do pré-processador
                   expanded: false
                   items:
                     - name: Operadores de pré-processador
                       href: preprocessor/preprocessor-operators.md
                     - name: 'Operador stringizing (#)'
                       href: preprocessor/stringizing-operator-hash.md
-                    - name: 'Operador de caracterização (#@)'
+                    - name: 'Operador charizing (#@)'
                       href: preprocessor/charizing-operator-hash-at.md
                     - name: 'Operador de colagem de token (##)'
                       href: preprocessor/token-pasting-operator-hash-hash.md
@@ -4840,7 +4850,7 @@
               items:
                 - name: Diretivas Pragma e a palavra-chave __pragma
                   href: preprocessor/pragma-directives-and-the-pragma-keyword.md
-                - name: Pragma alloc_text
+                - name: alloc_text (pragma)
                   href: preprocessor/alloc-text.md
                 - name: auto_inline pragma
                   href: preprocessor/auto-inline.md
@@ -9873,10 +9883,10 @@
               href: standard-library/regular-expressions-cpp.md
             - name: Navegação no sistema de arquivos
               href: standard-library/file-system-navigation.md
-        - name: Biblioteca de SafeInt
+        - name: Biblioteca SafeInt
           expanded: false
           items:
-            - name: Biblioteca de SafeInt
+            - name: Biblioteca SafeInt
               href: safeint/safeint-library.md
             - name: Classe SafeInt
               href: safeint/safeint-class.md

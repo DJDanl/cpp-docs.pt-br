@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 23cd1c3ce767cf8046e3439432db795f032dc370
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685586"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712697"
 ---
 # <a name="linker-options"></a>Opções do vinculador
 
@@ -88,7 +88,7 @@ Você pode usar o [Comentário](../../preprocessor/comment-c-cpp.md) pragma para
 |[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)|Informa ao compilador que o aplicativo oferece suporte a endereços maiores que dois gigabytes|
 |[/LIBPATH](libpath-additional-libpath.md)|Especifica um caminho para pesquisar antes do caminho da biblioteca ambiental.|
 |[/LINKREPRO](linkrepro.md)|Especifica um caminho para gerar artefatos de reprodução de link no.|
-|[/LINKREPROTARGET](linkreprotarget.md)|Gera uma reprodução de link somente ao produzir o destino especificado.|
+|[/LINKREPROTARGET](linkreprotarget.md)|Gera uma reprodução de link somente ao produzir o destino especificado. <sup>16,1</sup>|
 |[/LTCG](ltcg-link-time-code-generation.md)|Especifica a geração do código de tempo de vinculação.|
 |[/MACHINE](machine-specify-target-platform.md)|Especifica a plataforma de destino.|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|Cria um arquivo de manifesto lado a lado e, como opção, o insere no binário.|
@@ -137,7 +137,7 @@ Você pode usar o [Comentário](../../preprocessor/comment-c-cpp.md) pragma para
 |[/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md)|Assina parcialmente um arquivo de Metadados de Tempo de Execução do Windows (.winmd) colocando a chave pública no arquivo winmd.|
 |[/WX](wx-treat-linker-warnings-as-errors.md)|Trata avisos de vinculador como erros.|
 
-Para obter mais informações, consulte [Opções de link controladas por compilador](compiler-controlled-link-options.md).
+<sup>16,1</sup> essa opção está disponível a partir do Visual Studio 2019 versão 16,1.
 
 ## <a name="see-also"></a>Consulte também
 
