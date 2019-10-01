@@ -12,7 +12,7 @@
           href: general-mfc-topics.md
         - name: Usando os arquivos de origem MFC
           href: using-the-mfc-source-files.md
-        - name: Versões de biblioteca do MFC
+        - name: versões de biblioteca MFC
           expanded: false
           items:
             - name: Versões de biblioteca do MFC
@@ -1023,7 +1023,7 @@
             - name: Ciclo de vida de uma caixa de diálogo
               expanded: false
               items:
-                - name: Ciclo de vida de uma caixa de diálogo
+                - name: Trabalhar com caixas de diálogo no MFC
                   href: life-cycle-of-a-dialog-box.md
                 - name: Criando e exibindo caixas de diálogo
                   href: creating-and-displaying-dialog-boxes.md
