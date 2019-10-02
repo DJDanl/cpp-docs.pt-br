@@ -150,13 +150,13 @@ Os avisos a seguir são desativados por padrão no Visual Studio 2015 e versões
 |C5042 (nível 3)|'*Function*': declarações de função em escopo de bloco não podem ser especificadas ' inline C++' no Standard; remover especificador ' inline ' <sup>15,5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|O compilador irá inserir a mitigação de Spectre para a carga de memória se a opção/Qspectre especificou <sup>15,7</sup>|
 
-<sup>14,1</sup> este aviso está disponível a partir do Visual Studio 2015 atualização 1. \
-<sup>14,3</sup> este aviso está disponível a partir do Visual Studio 2015 atualização 3.
-<sup>15,3</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,3. \
-<sup>15,5</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,5. \
-<sup>15,7</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,7. \
-<sup>15,8</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,8. \
-<sup>16,0</sup> este aviso está disponível a partir do Visual Studio 2019 RTM. \
+<sup>14,1</sup> este aviso está disponível a partir do Visual Studio 2015 atualização 1.\
+<sup>14,3</sup> este aviso está disponível a partir do Visual Studio 2015 atualização 3.\
+<sup>15,3</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,3.\
+<sup>15,5</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,5.\
+<sup>15,7</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,7.\
+<sup>15,8</sup> este aviso está disponível a partir do Visual Studio 2017 versão 15,8.\
+<sup>16,0</sup> este aviso está disponível a partir do Visual Studio 2019 RTM.\
 <sup>Perm</sup> Esse aviso será desativado, a menos que a opção de compilador [/permissive-](../build/reference/permissive-standards-conformance.md) esteja definida.
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Avisos desativados por padrão em versões anteriores
