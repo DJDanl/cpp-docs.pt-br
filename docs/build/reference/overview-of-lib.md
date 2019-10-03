@@ -1,55 +1,58 @@
 ---
 title: Visão geral de LIB
-ms.date: 11/04/2016
+description: Visão geral do uso e das opções da ferramenta de biblioteca, lib. exe.
+ms.date: 09/25/2019
 f1_keywords:
 - Lib
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-ms.openlocfilehash: 97d7b8892574fbe485a8d6c5e344e4a77aaf8519
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7223ef0a624cf15c43bd067db8a7919efd27df17
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320273"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685495"
 ---
 # <a name="overview-of-lib"></a>Visão geral de LIB
 
-LIB cria bibliotecas padrão, importe as bibliotecas e exportar arquivos que você pode usar com [LINK](linker-options.md) ao compilar um programa. LIB é executado em um prompt de comando.
+LIB (lib. exe) cria bibliotecas padrão, importa bibliotecas e exporta arquivos que você pode usar com o [link](linker-options.md) ao criar um programa. LIB é executado a partir de um prompt de comando.
 
-Você pode usar LIB nos seguintes modos:
+Você pode usar a LIB nos seguintes modos:
 
-- [Criar ou modificar uma biblioteca COFF](managing-a-library.md)
+- [Criando ou modificando uma biblioteca COFF](managing-a-library.md)
 
-- [Extrair um objeto de membro para um arquivo](extracting-a-library-member.md)
+- [Extraindo um objeto de membro para um arquivo](extracting-a-library-member.md)
 
 - [Criando um arquivo de exportação e uma biblioteca de importação](working-with-import-libraries-and-export-files.md)
 
-Esses modos são mutuamente excludentes; Você pode usar LIB no modo de apenas um por vez.
+Esses modos são mutuamente exclusivos; Você pode usar a LIB em apenas um modo por vez.
 
-## <a name="lib-options"></a>Opções de lib
+## <a name="lib-options"></a>Opções de LIB
 
-A tabela a seguir lista as opções para lib.exe, com um link para obter mais informações.
+A tabela a seguir lista as opções de lib. exe, com um link para mais informações.
 
 |Opção|Descrição|
 |-|-|
-|**/DEF**|Crie uma biblioteca de importação e um arquivo de exportação.<br/><br/>Para obter mais informações, consulte [Compilando uma biblioteca de importação e exportação de arquivo](building-an-import-library-and-export-file.md).|
-|**/ERRORREPORT**|   Envie à Microsoft informações sobre erros internos com lib.exe.<br/><br/>Para obter mais informações, consulte [executando LIB](running-lib.md).|
-|**/EXPORT**|   Exporta uma função de seu programa.<br/><br/>Para obter mais informações, consulte [Compilando uma biblioteca de importação e exportação de arquivo](building-an-import-library-and-export-file.md).|
-|**/EXTRACT**|   Crie um arquivo de objeto (. obj) que contém uma cópia de um membro de uma biblioteca existente.<br/><br/>Para obter mais informações, consulte [extraindo um membro da biblioteca](extracting-a-library-member.md).|
-|**/INCLUDE**|   Adiciona um símbolo à tabela de símbolos.<br/><br/>Para obter mais informações, consulte [Compilando uma biblioteca de importação e exportação de arquivo](building-an-import-library-and-export-file.md).|
+|**/DEF**|Crie uma biblioteca de importação e um arquivo de exportação.<br/><br/>Para obter mais informações, consulte [criando uma biblioteca de importação e um arquivo de exportação](building-an-import-library-and-export-file.md).|
+|**/ERRORREPORT**|   Envie informações à Microsoft sobre erros internos com o lib. exe.<br/><br/>Para obter mais informações, consulte [Executando LIB](running-lib.md).|
+|**/EXPORT**|   Exporta uma função do seu programa.<br/><br/>Para obter mais informações, consulte [criando uma biblioteca de importação e um arquivo de exportação](building-an-import-library-and-export-file.md).|
+|**/EXTRACT**|   Crie um arquivo de objeto (. obj) que contenha uma cópia de um membro de uma biblioteca existente.<br/><br/>Para obter mais informações, consulte [extraindo um membro da biblioteca](extracting-a-library-member.md).|
+|**/INCLUDE**|   Adiciona um símbolo à tabela de símbolos.<br/><br/>Para obter mais informações, consulte [criando uma biblioteca de importação e um arquivo de exportação](building-an-import-library-and-export-file.md).|
 |**/LIBPATH**|   Substitui o caminho da biblioteca de ambiente.<br/><br/>Para obter mais informações, consulte [Gerenciando uma biblioteca](managing-a-library.md).|
+|**/LINKREPRO**|   Cria artefatos necessários para reproduzir uma falha de lib. exe ou um erro interno.<br/><br/>Para obter mais informações, consulte [Executando LIB](running-lib.md).|
+|**/LINKREPROTARGET**|   Gera apenas os artefatos **/LINKREPRO** quando lib. exe é usado com um arquivo especificado.<br/><br/>Para obter mais informações, consulte [Executando LIB](running-lib.md).|
 |**/LIST**|   Exibe informações sobre a biblioteca de saída para a saída padrão.<br/><br/>Para obter mais informações, consulte [Gerenciando uma biblioteca](managing-a-library.md).|
-|**/LTCG**|   Faz com que a biblioteca a ser criada usando a geração de código para link-time.<br/><br/>Para obter mais informações, consulte [executando LIB](running-lib.md).|
-|**/MACHINE**|   Especifica a plataforma de destino para o programa.<br/><br/>Para obter mais informações, consulte [executando LIB](running-lib.md).|
-|**/NAME**|   Ao criar uma biblioteca de importação, especifica o nome da DLL para o qual a biblioteca de importação está sendo criada.<br/><br/>Para obter mais informações, consulte [Gerenciando uma biblioteca](managing-a-library.md).|
-|**/NODEFAULTLIB**|   Remove uma ou mais bibliotecas padrão da lista de bibliotecas que busca ao resolver referências externas.<br/><br/>Para obter mais informações, consulte [Gerenciando uma biblioteca](managing-a-library.md).|
-|**/NOLOGO**|   Suprime a exibição do que o número de versão e mensagem de direitos autorais do LIB e impede a repetição de arquivos de comando.<br/><br/>Para obter mais informações, consulte [executando LIB](running-lib.md).|
-|**/OUT**|   Substitui o nome do arquivo de saída padrão.<br/><br/>Para obter mais informações, consulte [Gerenciando uma biblioteca](managing-a-library.md).|
+|**/LTCG**|   Faz com que a biblioteca seja criada usando a geração de código de tempo de vinculação.<br/><br/>Para obter mais informações, consulte [Executando LIB](running-lib.md).|
+|**/MACHINE**|   Especifica a plataforma de destino para o programa.<br/><br/>Para obter mais informações, consulte [Executando LIB](running-lib.md).|
+|**/NAME**|   Ao criar uma biblioteca de importação, especifica o nome da DLL para a qual a biblioteca de importação está sendo compilada.<br/><br/>Para obter mais informações, consulte [Gerenciando uma biblioteca](managing-a-library.md).|
+|**/NODEFAULTLIB**|   Remove uma ou mais bibliotecas padrão da lista de bibliotecas que pesquisa ao resolver referências externas.<br/><br/>Para obter mais informações, consulte [Gerenciando uma biblioteca](managing-a-library.md).|
+|**/NOLOGO**|   Suprime a exibição da mensagem de direitos autorais de LIB e o número de versão e impede o eco de arquivos de comando.<br/><br/>Para obter mais informações, consulte [Executando LIB](running-lib.md).|
+|**/OUT**|   Substitui o nome de arquivo de saída padrão.<br/><br/>Para obter mais informações, consulte [Gerenciando uma biblioteca](managing-a-library.md).|
 |**/REMOVE**|   Omite um objeto da biblioteca de saída.<br/><br/>Para obter mais informações, consulte [Gerenciando uma biblioteca](managing-a-library.md).|
-|**/SUBSYSTEM**|   Informa o sistema operacional como executar um programa criado por meio da vinculação para a biblioteca de saída.<br/><br/>Para obter mais informações, consulte [Gerenciando uma biblioteca](managing-a-library.md).|
-|**/VERBOSE**|   Exibe detalhes sobre o progresso da sessão, incluindo nomes de arquivos. obj que está sendo adicionados.<br/><br/>Para obter mais informações, consulte [executando LIB](running-lib.md).|
-|**/WX**|   Trate avisos como erros.<br/><br/>Para obter mais informações, consulte [executando LIB](running-lib.md).|
+|**/SUBSYSTEM**|   Informa ao sistema operacional como executar um programa criado vinculando-se à biblioteca de saída.<br/><br/>Para obter mais informações, consulte [Gerenciando uma biblioteca](managing-a-library.md).|
+|**/VERBOSE**|   Exibe detalhes sobre o progresso da sessão, incluindo nomes dos arquivos. obj que estão sendo adicionados.<br/><br/>Para obter mais informações, consulte [Executando LIB](running-lib.md).|
+|**/WX**|   Tratar avisos como erros.<br/><br/>Para obter mais informações, consulte [Executando LIB](running-lib.md).|
 
 ## <a name="see-also"></a>Consulte também
 
