@@ -3,12 +3,12 @@ title: Conectar-se a seu sistema Linux de destino no Visual Studio
 description: Como se conectar a um computador Linux remoto ou WSL de dentro de um projeto do Visual Studio C++.
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 75d8b3db64d9b1f3562d6730685b7c29fe4982f4
-ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
+ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
+ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383397"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71925567"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Conectar-se a seu sistema Linux de destino no Visual Studio
 
@@ -94,11 +94,12 @@ No Visual Studio 2017, você se conecta à WSL usando as mesmas etapas para se c
 
 Suporte nativo adicionado do Visual Studio 2019 versão 16.1 para uso de C++ com o [WSL (Subsistema Windows para Linux)](https://docs.microsoft.com/windows/wsl/about).  Isso significa que você não precisa mais adicionar uma conexão remota ou configurar o SSH para criar e depurar em sua instalação local do WSL. É possível encontrar detalhes sobre [como instalar o WSL](https://docs.microsoft.com/windows/wsl/install-win10) aqui.
 
-Para configurar a instalação do WSL para funcionar com o Visual Studio, você precisará das seguintes ferramentas instaladas: gcc, gdb, make, rsync e zip. É possível instalá-las em distribuições que usam apt com este comando: 
+Para configurar a instalação do WSL para funcionar com o Visual Studio, você precisará das seguintes ferramentas instaladas: gcc ou Clang, gdb, Make, rsync e zip. Você pode instalá-los em distribuições que usam a apt usando esse comando, que também instala o compilador g + +: 
 
 ```bash
 sudo apt install g++ gdb make rsync zip
 ```
+Para obter mais informações, consulte [baixar, instalar e configurar a carga de trabalho do Linux](download-install-and-setup-the-linux-development-workload.md).
 
 Para configurar seu projeto para WSL, confira [Configurar um projeto do Linux](configure-a-linux-project.md) ou [Configurar um projeto do Linux CMake](cmake-linux-project.md) dependendo de qual tipo de projeto que você tem. Para seguir as instruções passo a passo para criar um aplicativo de console simples com o WSL, confira esta postagem introdutória no blog sobre [C++ com Visual Studio 2019 e o WSL (Subsistema Windows para Linux)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/).
 
