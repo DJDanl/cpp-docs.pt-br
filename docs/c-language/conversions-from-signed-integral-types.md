@@ -1,6 +1,6 @@
 ---
 title: Conversões de tipos integrais com sinal
-ms.date: 11/04/2016
+ms.date: 10/02/2019
 helpviewer_keywords:
 - integral conversions, from signed
 - integers, converting
@@ -8,16 +8,18 @@ helpviewer_keywords:
 - data type conversion [C++], signed and unsigned integers
 - type conversion [C++], signed and unsigned integers
 ms.assetid: 5eea32f8-8b14-413d-acac-c063b3d118d7
-ms.openlocfilehash: 4d2f0ab43adf3cbad3d1ffa244551c67883c6606
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 79608b5ca4335ee3c30bdab27e7efade5b7e2f54
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152775"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998729"
 ---
 # <a name="conversions-from-signed-integral-types"></a>Conversões de tipos integrais com sinal
 
-Quando um inteiro com sinal é convertido em um inteiro sem sinal de tamanho igual ou maior e o valor do inteiro com sinal não é negativo, o valor não é alterado. A conversão é feita estendendo o sinal do inteiro com sinal. Um inteiro com sinal é convertido em um inteiro com sinal mais curto truncando os bits de ordem superior. O resultado é interpretado como um valor sem sinal, conforme é mostrado neste exemplo.
+Quando um inteiro assinado é convertido em um número inteiro ou em um tipo de ponto flutuante, se o valor original for representável no tipo de resultado, o valor será inalterado.
+
+Quando um inteiro assinado é convertido em um número inteiro de tamanho maior, o valor é Sign-Extended. Quando convertido para um inteiro de tamanho menor, os bits de ordem superior são truncados. O resultado é interpretado usando o tipo de resultado, conforme mostrado neste exemplo:
 
 ```C
 int i = -3;
@@ -27,46 +29,64 @@ u = i;
 printf_s( "%hu\n", u );  // Prints 65533
 ```
 
-Nenhuma informação é perdida quando um inteiro com sinal é convertido em um valor flutuante; no entanto, um pouco de precisão pode ser perdido quando um valor **long int** ou **unsigned long int** é convertido em um valor **float**.
+Ao converter um inteiro assinado em um tipo de ponto flutuante, se o valor original não for reapresentável exatamente no tipo de resultado, o resultado será o próximo valor reapresentável mais alto ou mais baixo.
 
-A tabela a seguir resume as conversões de tipos integrais com sinal. Essa tabela pressupõe que, por padrão, o tipo **char** tenha sinal. Se você usar uma opção de tempo de compilação para alterar o padrão do tipo **char** para sem sinal, as conversões fornecidas na tabela [Conversões de Tipos Integrais sem Sinal](../c-language/conversions-from-unsigned-integral-types.md) para o tipo **unsigned char** serão aplicadas no lugar das conversões indicadas na tabela a seguir, Conversões de Tipos Integrais Com Sinal.
+Para obter informações sobre os tamanhos de tipos de ponto flutuante e integral, consulte [armazenamento de tipos básicos](../c-language/storage-of-basic-types.md).
 
-### <a name="conversions-from-signed-integral-types"></a>Conversões de tipos integrais com sinal
+A tabela a seguir resume as conversões de tipos integrais com sinal. Ele assume que o tipo **Char** é assinado por padrão. Se você usar uma opção de tempo de compilação para alterar o padrão para o tipo de **caractere** para não assinado, as conversões fornecidas na tabela [conversões de tipos de integral não assinados](../c-language/conversions-from-unsigned-integral-types.md) para o tipo de **caractere não** assinado serão aplicadas, em vez das conversões nesta tabela.
+
+**Seção específica da Microsoft**
+
+No compilador da Microsoft, **int** e **Long** são tipos distintos, mas equivalentes. A conversão de um valor **int** continua da mesma maneira que a conversão de um **longo**.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="table-of-conversions-from-signed-integral-types"></a>Tabela de conversões de tipos integrais assinados
 
 |De|Para|Método|
 |----------|--------|------------|
-|**char**1|**short**|Extensão de sinal|
+|**caractere**<sup>1</sup>|**short**|Extensão de sinal|
 |**char**|**long**|Extensão de sinal|
+|**char**|**long long**|Extensão de sinal|
 |**char**|**unsigned char**|Preserva o padrão; o bit de ordem superior perde a função como bit de sinal|
 |**char**|**unsigned short**|Extensão de sinal para **short**; converte **short** em **unsigned short**|
 |**char**|**unsigned long**|Extensão de sinal para **long**; converter **long** em **unsigned long**|
+|**char**|**longo longo sem sinal**|Estender conexão para **longa duração**; Converter **longo** longo para **sem sinal** longo longo|
 |**char**|**float**|Extensão de sinal para **long**; converte **long** em **float**|
 |**char**|**double**|Extensão de sinal para **long**; converte **long** em **double**|
 |**char**|**long double**|Extensão de sinal para **long**; converte **long** em **double**|
 |**short**|**char**|Preserva o byte de ordem inferior|
 |**short**|**long**|Extensão de sinal|
+|**short**|**long long**|Extensão de sinal|
 |**short**|**unsigned char**|Preserva o byte de ordem inferior|
 |**short**|**unsigned short**|Preserva o padrão de bits; o bit de ordem superior perde a função como bit de sinal|
 |**short**|**unsigned long**|Extensão de sinal para **long**; converter **long** em **unsigned long**|
+|**short**|**longo longo sem sinal**|Estender conexão para **longa duração**; Converter **longo** longo para **sem sinal** longo longo|
 |**short**|**float**|Extensão de sinal para **long**; converte **long** em **float**|
 |**short**|**double**|Extensão de sinal para **long**; converte **long** em **double**|
 |**short**|**long double**|Extensão de sinal para **long**; converte **long** em **double**|
 |**long**|**char**|Preserva o byte de ordem inferior|
 |**long**|**short**|Preserva a palavra de ordem inferior|
+|**long**|**long long**|Extensão de sinal|
 |**long**|**unsigned char**|Preserva o byte de ordem inferior|
 |**long**|**unsigned short**|Preserva a palavra de ordem inferior|
 |**long**|**unsigned long**|Preserva o padrão de bits; o bit de ordem superior perde a função como bit de sinal|
-|**long**|**float**|É representado como **float**. Se **long** não puder ser representado exatamente, um pouco da precisão será perdido.|
-|**long**|**double**|É representado como **double**. Se **long** não puder ser representado exatamente como **double**, um pouco da precisão será perdido.|
-|**long**|**long double**|É representado como **double**. Se **long** não puder ser representado exatamente como **double**, um pouco da precisão será perdido.|
+|**long**|**longo longo sem sinal**|Estender conexão para **longa duração**; Converter **longo** longo para **sem sinal** longo longo|
+|**long**|**float**|É representado como **float**. Se **Long** não puder ser representado exatamente, alguma precisão será perdida.|
+|**long**|**double**|É representado como **double**. Se **Long** não puder ser representado exatamente como **Double**, alguma precisão será perdida.|
+|**long**|**long double**|É representado como **double**. Se **Long** não puder ser representado exatamente como **Double**, alguma precisão será perdida.|
+|**long long**|**char**|Preserva o byte de ordem inferior|
+|**long long**|**short**|Preserva a palavra de ordem inferior|
+|**long long**|**long**|Preservar DWORD de ordem inferior|
+|**long long**|**unsigned char**|Preserva o byte de ordem inferior|
+|**long long**|**unsigned short**|Preserva a palavra de ordem inferior|
+|**long long**|**unsigned long**|Preservar DWORD de ordem inferior|
+|**long long**|**longo longo sem sinal**|Preserva o padrão de bits; o bit de ordem superior perde a função como bit de sinal|
+|**long long**|**float**|É representado como **float**. Se **longos** não puderem ser representados exatamente, alguma precisão será perdida.|
+|**long long**|**double**|É representado como **double**. Se **longos** não puderem ser representados exatamente como um **duplo**, alguma precisão será perdida.|
+|**long long**|**long double**|É representado como **double**. Se **longos** não puderem ser representados exatamente como um **duplo**, alguma precisão será perdida.|
 
-1. Todas as entradas de **char** pressupõem que, por padrão, o tipo **char** tem sinal.
-
-**Seção específica da Microsoft**
-
-Para o compilador de C de 32 bits da Microsoft, um inteiro é equivalente a um **long**. A conversão de um valor **int** é realizada da mesma forma que para um **long**.
-
-**Fim da seção específica da Microsoft**
+<sup>1</sup> todas as entradas **Char** pressupõem que o tipo **Char** é assinado por padrão.
 
 ## <a name="see-also"></a>Consulte também
 

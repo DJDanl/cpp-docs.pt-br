@@ -1,16 +1,16 @@
 ---
 title: Aprimoramentos de conformidade do C++
-ms.date: 09/25/2019
+ms.date: 10/04/2019
 description: O Microsoft C++ no Visual Studio está progredindo em direção à plena conformidade com o padrão de linguagem C++20.
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 02cf57666c3bffd1adabb912f042f22b71e8d8f5
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: d313a9a1f9f2bc1aa091935658ca1214f929c048
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816361"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998890"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Aprimoramentos de conformidade do C++ no Visual Studio
 
@@ -132,7 +132,7 @@ int main()
 }
 ```
 
-Para evitar o erro, remova o qualificador **constexpr** ou, caso contrário, altere o modo `/std:c++17`de conformidade para.
+Para evitar o erro, remova o qualificador **constexpr** ou, caso contrário, altere o modo de conformidade para `/std:c++17`.
 
 ### <a name="stdcreate_directory-failure-codes"></a>Códigos de falha de `std::create_directory`
 
@@ -338,7 +338,7 @@ std::equal(std::begin(a), std::end(a), std::begin(b), std::end(b));
 
 ### <a name="effect-of-defining-spaceship-operator-on--and-"></a>Efeito da definição do operador de espaçamento em = = e! =
 
-Uma definição do operador de espaçamento ( **<=>** ) sozinha não reescreverá expressões que envolvam **==** ou **! =** a menos que o operador de espaço `= default` esteja marcado como ([P1185R2](https://wg21.link/p1185r2)). O exemplo a seguir é compilado no Visual Studio 2019 RTW e na versão 16,1, mas produz C2678 no Visual Studio 2019 versão 16,2:
+Uma definição do operador de espaçamento ( **<=>** ) sozinha não reescreverá expressões que envolvam **==** ou **! =** a menos que o operador de espaço esteja marcado como `= default` ([P1185R2](https://wg21.link/p1185r2)). O exemplo a seguir é compilado no Visual Studio 2019 RTW e na versão 16,1, mas produz C2678 no Visual Studio 2019 versão 16,2:
 
 ```cpp
 #include <compare>
@@ -380,19 +380,19 @@ bool neq(const S& lhs, const S& rhs) {
 ### <a name="standard-library-improvements"></a>Aprimoramentos da biblioteca padrão
 
 - \<charconv > `to_chars()` com precisão fixa/científica. (A precisão geral está atualmente planejada para 16,4.)
-- [P0020R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html): >\<float atômico, >\<duplo atômico, >\<longo Duplo atômico
+- [P0020R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html): Atomic @ no__t-1float >, Atomic @ no__t-2Double >, Atomic @ no__t-3long Double >
 - [P0463R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html): endian
 - [P0482R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html): Suporte de biblioteca para char8_t
 - [P0600R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf): [\[nodiscard]] para a STL, parte 1
 - [P0653R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html): to_address ()
-- [P0754R2](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0754r2.pdf): \<versão >
+- [P0754R2](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0754r2.pdf): \<version >
 - [P0771R1](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0771r1.pdf): Noexcept para o construtor de movimentação std:: function
 
 ## <a name="improvements_163"></a>Melhorias de conformidade no Visual Studio 2019 versão 16,3
 
 ### <a name="stream-extraction-operators-for-char-removed"></a>Operadores de extração de fluxo para char * removidos
 
-Os operadores de extração de fluxo para ponteiro para caracteres foram removidos e substituídos pelos operadores de extração para a matriz de caracteres (por [P0487R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)). WG21 considera que as sobrecargas removidas não são seguras. Em [/std: c + + modo mais recente](../build/reference/std-specify-language-standard-version.md) , o exemplo a seguir agora produz *C2679: Binary ' > > ': nenhum operador encontrado que usa um operando à direita do tipo '\*char ' (ou não há uma conversão aceitável)* :
+Os operadores de extração de fluxo para ponteiro para caracteres foram removidos e substituídos pelos operadores de extração para a matriz de caracteres (por [P0487R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)). WG21 considera que as sobrecargas removidas não são seguras. Em [/std: c + + modo mais recente](../build/reference/std-specify-language-standard-version.md) , o exemplo a seguir agora produz *C2679: binary ' > > ': nenhum operador encontrado que usa um operando à direita do tipo ' Char @ no__t-2 ' (ou não há uma conversão aceitável)* :
 
 ```cpp
    char x[42];
@@ -414,7 +414,7 @@ São **necessárias** novas palavras-chave e o **conceito** foi adicionado ao co
 
 ### <a name="constructors-as-type-names-disallowed"></a>Construtores como nomes de tipo não permitidos
 
-Os nomes de construtor não são mais considerados nomes de classe injetados quando aparecem em um nome qualificado após um alias para uma especialização de modelo de classe. Anteriormente, isso permitia o uso de construtores como um nome de tipo para declarar outras entidades. O exemplo a seguir agora *produz C3646: ' TotalDuration ': especificador*de substituição desconhecido:
+Os nomes de construtor não são mais considerados nomes de classe injetados quando aparecem em um nome qualificado após um alias para uma especialização de modelo de classe. Anteriormente, isso permitia o uso de construtores como um nome de tipo para declarar outras entidades. O exemplo a seguir agora produz *C3646: ' TotalDuration ': especificador de substituição desconhecido @ no__t-0:
 
 ```cpp
 #include <chrono>
@@ -425,7 +425,7 @@ class Foo {
 
 ```
 
-Para evitar o erro, declare `TotalDuration` conforme mostrado aqui:
+Para evitar o erro, declare `TotalDuration`, conforme mostrado aqui:
 
 ```cpp
 #include <chrono>
@@ -455,7 +455,11 @@ void g()
 extern "C" void f(int, int, int, BOOL){}
 ```
 
-Para evitar os erros no exemplo anterior, use **bool** em vez de **bool** consistentemente em ambas as `f`declarações de.
+Para evitar os erros no exemplo anterior, use **bool** em vez de **bool** consistentemente em ambas as declarações de `f`.
+
+### <a name="standard-library-improvements"></a>Aprimoramentos da biblioteca padrão
+
+Os cabeçalhos não padrão \<stdexcpt. h > e \<typeinfo. h > foram removidos. O código que os inclui deve incluir os cabeçalhos padrão \<exception > e \<typeinfo >, respectivamente.
 
 ## <a name="update_160"></a>Correções de bugs e alterações de comportamento no Visual Studio 2019
 
@@ -474,7 +478,7 @@ Para evitar o erro, remova o modificador **constexpr** da declaração da funç�
 
 ### <a name="correct-diagnostics-for-basic_string-range-constructor"></a>Diagnóstico correto para o construtor do intervalo basic_string
 
-No Visual Studio 2019, o construtor de intervalo `basic_string` não suprime mais o diagnóstico do compilador com `static_cast`. O código a seguir compila sem avisos no Visual Studio 2017, apesar da possível perda de dados de `wchar_t` para **Char** ao inicializar: `out`
+No Visual Studio 2019, o construtor de intervalo `basic_string` não suprime mais o diagnóstico do compilador com `static_cast`. O código a seguir compila sem avisos no Visual Studio 2017, apesar da possível perda de dados de `wchar_t` para **Char** ao inicializar `out`:
 
 ```cpp
 std::wstring ws = /* … */;
@@ -578,7 +582,7 @@ void example()
 
 ### <a name="function-template-bodies-containing-constexpr-if-statements"></a>Corpos de modelo de função que contêm instruções constexpr if
 
-Corpos de função de modelo que contêm se as instruções **constexpr** têm algumas verificações relacionadas à análise de [/permissive-](../build/reference/permissive-standards-conformance.md) habilitadas. Por exemplo, no Visual Studio 2017, o código a *seguir produz C7510: ' Type ': o uso de nome de tipo dependente deve ser prefixado com* ' TypeName ' somente se a opção **/permissive-** não estiver definida. No Visual Studio 2019, o mesmo código gera erros mesmo quando a opção **/permissive-** é definida:
+Corpos de função de modelo que contêm se as instruções **constexpr** têm algumas verificações relacionadas à análise de [/permissive-](../build/reference/permissive-standards-conformance.md) habilitadas. Por exemplo, no Visual Studio 2017, o código a seguir produz *C7510: ' Type ': o uso de nome de tipo dependente deve ser prefixado com ' TypeName '*  somente se a opção **/permissive-** não estiver definida. No Visual Studio 2019, o mesmo código gera erros mesmo quando a opção **/permissive-** é definida:
 
 ```cpp
 template <typename T>
@@ -609,11 +613,11 @@ int main()
 }
 ```
 
-Para evitar o erro, adicione a palavra-chave**TypeName** à Declaração `a`de `typename T::Type a;`:.
+Para evitar o erro, adicione a palavra-chave**TypeName** à declaração de `a`: `typename T::Type a;`.
 
 ### <a name="inline-assembly-code-isnt-supported-in-a-lambda-expression"></a>Não há suporte ao código do assembly embutido em uma expressão lambda
 
-A equipe C++ da Microsoft recentemente tomou conhecimento de um problema de segurança em que o uso do assembler embutido em um lambda poderia causar a corrupção `ebp` de (o registro do endereço de retorno) em tempo de execução. Um invasor mal-intencionado possivelmente poderia tirar proveito desse cenário. Dada a natureza do problema, o fato de que só há suporte ao assembler embutido em x86 e a interação instável entre o assembler embutido e o restante do compilador, a solução mais segura para o problema era não permitir o assembler embutido em uma expressão lambda.
+A equipe C++ da Microsoft recentemente tomou conhecimento de um problema de segurança em que o uso do assembler embutido em um lambda poderia levar à corrupção de `ebp` (o registro de endereço de retorno) em tempo de execução. Um invasor mal-intencionado possivelmente poderia tirar proveito desse cenário. Dada a natureza do problema, o fato de que só há suporte ao assembler embutido em x86 e a interação instável entre o assembler embutido e o restante do compilador, a solução mais segura para o problema era não permitir o assembler embutido em uma expressão lambda.
 
 O único uso do assembler embutido em uma expressão lambda que encontramos “em condições naturais” era capturar o endereço de retorno. Nesse cenário, é possível capturar o endereço de retorno em todas as plataformas usando simplesmente um `_ReturnAddress()` intrínseco do compilador.
 
@@ -722,7 +726,7 @@ Agora, a função `reserve` de contêiner não ordenada na verdade reserva N ele
 
 - Anteriormente, alguns valores temporais que eram passados para a biblioteca de simultaneidade estourariam, por exemplo, `condition_variable::wait_for(seconds::max())`. Agora corrigidos, os estouros mudaram o comportamento em um ciclo aparentemente aleatório de 29 dias (quando uint32_t milissegundos aceitos pelas APIs do Win32 subjacentes estouravam).
 
-- Agora o cabeçalho <ctime> declara corretamente `timespec` e `timespec_get` no namespace `std`, além de declará-los no namespace global.
+- O cabeçalho de > de @no__t 0ctime agora declara corretamente `timespec` e `timespec_get` no namespace `std`, além de declará-los no namespace global.
 
 ### <a name="various-fixes-for-containers"></a>Várias correções de contêineres
 
@@ -868,7 +872,7 @@ O objeto `*this` em uma expressão lambda agora pode ser capturado por valor. Es
 
 ### <a name="removing-operator-for-bool"></a>Removendo `operator++` para **bool**
 
-`operator++`Não é mais suportado em tipos **bool** . Para saber mais, veja [Remover operator++(bool) preterido](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html).
+Não há mais suporte para `operator++` em tipos **bool** . Para saber mais, veja [Remover operator++(bool) preterido](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html).
 
 ### <a name="removing-deprecated-register-keyword"></a>Removendo palavra-chave de **registro** preterido
 
@@ -1268,7 +1272,7 @@ constexpr bool f(const array<1> &arr)
 }
 ```
 
-Para corrigir o erro, declare `array::size()` a função como **constexpr** ou remova o qualificador **constexpr** de `f`.
+Para corrigir o erro, declare a função `array::size()` como **constexpr** ou remova o qualificador **constexpr** de `f`.
 
 ### <a name="class-types-passed-to-variadic-functions"></a>Tipos de classe passados para funções variadic
 
@@ -2105,7 +2109,7 @@ extern constexpr int x = 10;
 error LNK2005: "int const x" already defined
 ```
 
-Se um arquivo de cabeçalho contiver uma variável declarada como **constexpr externa**, `__declspec(selectany)` ele precisará ser marcado para ter suas declarações duplicadas combinadas corretamente:
+Se um arquivo de cabeçalho contiver uma variável declarada como **constexpr externa**, ele precisará ser marcado `__declspec(selectany)` para ter suas declarações duplicadas combinadas corretamente:
 
 ```cpp
 extern constexpr __declspec(selectany) int x = 10;
@@ -2153,7 +2157,7 @@ static_assert(std::is_convertible<D *, B *>::value, "fail");
 
 ### <a name="noexcept_removal"></a>Remoção de especificação de exceção dinâmica e **noexcept**
 
-No c++ 17, `throw()` é um alias para `throw(<type list>)` `throw(...)` noexcept e é removido, e certos tipos podem incluir **noexcept**. Essa mudança pode causar problemas de compatibilidade de origem com o código que está em conformidade com a C++14 ou anterior. O **/Zc: noexceptTypes-** switch pode ser usado para reverter para a versão c++ 14 de **noexcept** ao usar o modo c++ 17 em geral. Ela permite atualizar seu código-fonte para estar em conformidade com a C++17 sem precisar reescrever todo o código `throw()` ao mesmo tempo.
+No C++ 17, `throw()` é um alias para **noexcept**, `throw(<type list>)` e `throw(...)` são removidos, e certos tipos podem incluir **noexcept**. Essa mudança pode causar problemas de compatibilidade de origem com o código que está em conformidade com a C++14 ou anterior. O **/Zc: noexceptTypes-** switch pode ser usado para reverter para a versão c++ 14 de **noexcept** ao usar o modo c++ 17 em geral. Ela permite atualizar seu código-fonte para estar em conformidade com a C++17 sem precisar reescrever todo o código `throw()` ao mesmo tempo.
 
 O compilador agora também diagnostica mais especificações de exceção incompatíveis em declarações no modo C++17 ou com [/permissive-](../build/reference/permissive-standards-conformance.md) com o novo aviso C5043.
 
@@ -2632,7 +2636,7 @@ struct X : Base<T>
 };
 ```
 
-Para corrigir o erro, adicione a palavra-chave template `Base<T>::example<int>();` à instrução, conforme mostrado no exemplo a seguir:
+Para corrigir o erro, adicione a palavra-chave **Template** à instrução `Base<T>::example<int>();`, conforme mostrado no exemplo a seguir:
 
 ```cpp
 template<typename T> struct Base
