@@ -1,6 +1,6 @@
 ---
 title: Exceção bad_typeid
-ms.date: 11/04/2016
+ms.date: 10/04/2019
 f1_keywords:
 - bad_typeid
 - bad_typeid_cpp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - bad_typeid exception
 - exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
-ms.openlocfilehash: 2ff7339b02cfe8c21cebfa7d9bb0cc98b3e08799
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6410f27342ed40300ff236ee1c47ada740255f84
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68242271"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998808"
 ---
-# <a name="badtypeid-exception"></a>Exceção bad_typeid
+# <a name="bad_typeid-exception"></a>Exceção bad_typeid
 
-O **bad_typeid** exceção é lançada pela [operador typeid](../cpp/typeid-operator.md) quando o operando **typeid** é um ponteiro nulo.
+A exceção **bad_typeid** é gerada pelo [operador typeid](../cpp/typeid-operator.md) quando o operando para **typeid** é um ponteiro nulo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -44,12 +44,12 @@ public:
 };
 ```
 
-A exemplo a seguir mostra a **typeid** operador lançando uma **bad_typeid** exceção.
+O exemplo a seguir mostra o operador **typeid** gerando uma exceção **bad_typeid** .
 
 ```cpp
 // expre_bad_typeid.cpp
 // compile with: /EHsc /GR
-#include <typeinfo.h>
+#include <typeinfo>
 #include <iostream>
 
 class A{
@@ -80,5 +80,5 @@ Object is NULL
 
 ## <a name="see-also"></a>Consulte também
 
-[Informações de tipo em tempo de execução](../cpp/run-time-type-information.md)<br/>
+[Informações de tipo em tempo de execução](../cpp/run-time-type-information.md)\
 [Palavras-chave](../cpp/keywords-cpp.md)
