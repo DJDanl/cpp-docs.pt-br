@@ -5,12 +5,12 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: b84c51bc6adbb4fd879aadbca2856887e51fc401
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2e307bbbf79e6340d4090e471fe643726b5366f9
+ms.sourcegitcommit: a9f1a1ba078c2b8c66c3d285accad8e57dc4539a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311633"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72037806"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Diferenças no comportamento do tratamento de exceções em /CLR
 
@@ -149,7 +149,7 @@ caught an SEH Exception
 
 ##  <a name="vcconexceptionfiltersandexception_continue_execution"></a>Filtros de exceção e EXCEPTION_CONTINUE_EXECUTION
 
-Se um filtro retornar `EXCEPTION_CONTINUE_EXECUTION` em um aplicativo gerenciado, ele será tratado como se o filtro fosse `EXCEPTION_CONTINUE_SEARCH`retornado. Para obter mais informações sobre essas constantes, consulte [instrução try-Except](../cpp/try-except-statement.md).
+Se um filtro retornar `EXCEPTION_CONTINUE_EXECUTION` em um aplicativo gerenciado, ele será tratado como se o filtro fosse retornado `EXCEPTION_CONTINUE_SEARCH`. Para obter mais informações sobre essas constantes, consulte [instrução try-Except](../cpp/try-except-statement.md).
 
 O exemplo a seguir demonstra essa diferença:
 
@@ -190,7 +190,7 @@ Counter=-3
 
 ##  <a name="vcconthe_set_se_translatorfunction"></a>A função _set_se_translator
 
-A função tradutor, definida por uma chamada para `_set_se_translator`, afeta apenas o código não gerenciado. O exemplo a seguir demonstra essa limitação:
+A função Translator, definida por uma chamada para `_set_se_translator`, afeta apenas o código não gerenciado. O exemplo a seguir demonstra essa limitação:
 
 ```cpp
 // clr_exception_handling_8.cpp
@@ -279,4 +279,4 @@ Caught an SEH exception with exception code: e0000101
 
 [Tratamento de Exceção](../extensions/exception-handling-cpp-component-extensions.md)<br/>
 [safe_cast](../extensions/safe-cast-cpp-component-extensions.md)<br/>
-[Tratamento de Exceção](../cpp/exception-handling-in-visual-cpp.md)
+[Tratamento de exceção em MSVC](../cpp/exception-handling-in-visual-cpp.md)
