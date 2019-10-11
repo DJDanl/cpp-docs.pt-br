@@ -1,5 +1,5 @@
 ---
-title: 'Operador condicional:? :'
+title: 'Operador condicional: &quest;:'
 ms.date: 11/04/2016
 f1_keywords:
 - '?:'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-ms.openlocfilehash: 8744ca8546d48e9283cc0dfa9d80babf5076f8b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a66b82682f90345518a2d520945e3aff1f78f89
+ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399142"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72276812"
 ---
-# <a name="conditional-operator--"></a>Operador condicional:? :
+# <a name="conditional-operator-quest-"></a>Operador condicional: &quest;:
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,36 +25,36 @@ expression ? expression : expression
 
 ## <a name="remarks"></a>Comentários
 
-O operador condicional (**?:**) é um operador ternário (utiliza três operandos). O operador condicional funciona desta forma:
+O operador condicional ( **?:** ) é um operador ternário (ele usa três operandos). O operador condicional funciona desta forma:
 
-- O primeiro operando é convertido implicitamente em **bool**. É avaliado e todos os efeitos colaterais são concluídos antes de continuar.
+- O primeiro operando é implicitamente convertido em **bool**. É avaliado e todos os efeitos colaterais são concluídos antes de continuar.
 
-- Se o primeiro operando for avaliado como **verdadeira** (1), o segundo operando é avaliado.
+- Se o primeiro operando for avaliado como **true** (1), o segundo operando será avaliado.
 
-- Se o primeiro operando for avaliado como **falsos** (0), o terceiro operando é avaliado.
+- Se o primeiro operando for avaliado como **false** (0), o terceiro operando será avaliado.
 
 O resultado do operador condicional é o resultado de qualquer operando avaliado — o segundo ou o terceiro. Somente um dos dois operandos dos dois mais recentes é avaliado em uma expressão condicional.
 
-As expressões condicionais têm a capacidade da direita para a esquerda. O primeiro operando deve ser do tipo integral ou ponteiro. As seguintes regras se aplicam para o segundo e terceiro operandos:
+As expressões condicionais têm a capacidade da direita para a esquerda. O primeiro operando deve ser do tipo integral ou ponteiro. As regras a seguir se aplicam ao segundo e ao terceiro operando:
 
-- Se ambos os operandos forem do mesmo tipo, o resultado é desse tipo.
+- Se ambos os operandos forem do mesmo tipo, o resultado será desse tipo.
 
-- Se ambos os operandos forem de tipos de aritmética ou de enumeração, as conversões aritméticas comuns (abordados [conversões padrão](standard-conversions.md)) serão executadas para convertê-los em um tipo comum.
+- Se ambos os operandos forem de tipos aritméticos ou de enumeração, as conversões aritméticas usuais (cobertas em [conversões padrão](standard-conversions.md)) serão executadas para convertê-los em um tipo comum.
 
-- Se ambos os operandos forem de tipos de ponteiro ou se uma é um tipo de ponteiro e o outro é uma expressão constante que é avaliada como 0, conversões de ponteiro serão executadas para convertê-los em um tipo comum.
+- Se ambos os operandos forem de tipos de ponteiro ou se um for um tipo de ponteiro e o outro for uma expressão constante que é avaliada como 0, as conversões de ponteiro serão executadas para convertê-las em um tipo comum.
 
-- Se ambos os operandos forem de tipos de referência, conversões de referência serão executadas para convertê-los em um tipo comum.
+- Se ambos os operandos forem de tipos de referência, as conversões de referência serão executadas para convertê-los em um tipo comum.
 
-- Se ambos os operandos forem do tipo void, o tipo comum será do tipo nulo.
+- Se ambos os operandos forem do tipo void, o tipo comum será de tipo void.
 
-- Se ambos os operandos forem do mesmo tipo definido pelo usuário, o tipo comum é desse tipo.
+- Se ambos os operandos forem do mesmo tipo definido pelo usuário, o tipo comum será esse tipo.
 
-- Se os operandos têm tipos diferentes e pelo menos um dos operandos tem tipo definido pelo usuário, em seguida, as regras do idioma são usadas para determinar o tipo comum. (Consulte aviso abaixo).
+- Se os operandos tiverem tipos diferentes e pelo menos um dos operandos tiver o tipo definido pelo usuário, as regras de idioma serão usadas para determinar o tipo comum. (Consulte o aviso abaixo.)
 
 Todas as combinações do segundo e do terceiro operando que não estiverem na lista anterior são ilegais. O tipo de resultado é o tipo comum, e é um l-value se o segundo e o terceiro operandos forem do mesmo tipo e ambos forem l-values.
 
 > [!WARNING]
->  Se os tipos do segundo e terceiro operandos não forem idênticos, regras de conversão de tipo complexo, conforme especificado no padrão do C++, são invocadas. Essas conversões podem resultar em comportamento inesperado, incluindo a construção e destruição de objetos temporários. Por esse motivo, recomendamos enfaticamente a qualquer um (1) Evite usar tipos definidos pelo usuário como operandos com o operador condicional ou (2) se você usar tipos definidos pelo usuário, então converter explicitamente cada operando em um tipo comum.
+>  Se os tipos do segundo e do terceiro operandos não forem idênticos, as regras de conversão de tipo complexo, conforme C++ especificado no padrão, serão invocadas. Essas conversões podem levar a um comportamento inesperado, incluindo a construção e a destruição de objetos temporários. Por esse motivo, Aconselhamos enfaticamente que você (1) Evite usar tipos definidos pelo usuário como operandos com o operador condicional ou (2) se você usar tipos definidos pelo usuário e, em seguida, converter explicitamente cada operando em um tipo comum.
 
 ## <a name="example"></a>Exemplo
 
