@@ -62,7 +62,7 @@ Suponha que tenhamos um aplicativo, o Apl. exe, criado usando o Visual C++. O ma
 
 Para o carregador do sistema operacional, esse manifesto diz que o Apl. exe depende de um assembly chamado Fabrikam. SxS. library, versão 2.0.20121.0, criado para uma arquitetura de processador x86 de 32 bits. O assembly lado a lado dependente pode ser instalado como um assembly compartilhado ou como um assembly privado.
 
-O manifesto do assembly para um assembly compartilhado é instalado na pasta%WINDIR%\WinSxS\Manifests\ Ele identifica o assembly e lista seu conteúdo, ou seja, as DLLs que fazem parte do assembly:
+O manifesto do assembly para um assembly compartilhado é instalado na pasta%WINDIR%\\WinSxS\\Manifests\\ Ele identifica o assembly e lista seu conteúdo, ou seja, as DLLs que fazem parte do assembly:
 
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
