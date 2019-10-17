@@ -1,6 +1,6 @@
 ---
-title: /analyze (Análise do código)
-ms.date: 10/01/2019
+title: /analyze (análise do código)
+ms.date: 10/15/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnablePREfast
 - /analyze
@@ -11,42 +11,48 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: d647045d76dc32544f8146424b220547890b0943
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: f537fdea2703805c7ab1c57ba0d4429f6b683ae4
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816328"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444891"
 ---
-# <a name="analyze-code-analysis"></a>/analyze (Análise do código)
+# <a name="analyze-code-analysis"></a>/analyze (análise do código)
 
 Habilita opções de análise e controle de código.
 
 ## <a name="syntax"></a>Sintaxe
 
-```cmd
-/analyze[-][:WX-][:log filename][:quiet][:stacksize number][:max_paths number][:only][:ruleset]
-```
+> **/Analyze**[-] [ **: WX-** ] [ **: log** *filename*] [ **: Quiet**] [ **: stacksize** *número*] [ **:** *número*de max_paths] [ **: somente**] [ **:** conjunto de regras de conjunto de *regras] [* **:p lugin**  *plugin-dll*]
 
-## <a name="arguments"></a>Argumentos
+## <a name="arguments"></a>Arguments
 
-/Analyze ativa a análise no modo padrão. A saída da análise vai para a janela de **saída** como outras mensagens de erro. Use **/Analyze-** para desativar explicitamente a análise.
+**/analyze**\
+Ativa a análise no modo padrão. A saída da análise vai para a janela de **saída** como outras mensagens de erro. Use **/Analyze-** para desativar explicitamente a análise.
 
-/analyze: WX-especificando **/analyze: WX-** significa que os avisos de análise de código não são tratados como erros quando você compila usando **/WX**. Para obter mais informações, consulte [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Nível de Aviso)](compiler-option-warning-level.md).
+**/analyze: WX-** \
+Os avisos de análise de código não são tratados como erros quando você compila usando **/WX**. Para obter mais informações, consulte [/WX (nível de aviso)](compiler-option-warning-level.md).
 
-/analyze: log `filename` os resultados detalhados do analisador são gravados como XML no arquivo especificado por `filename`.
+**/analyze:** *nome de arquivo*de log \
+Os resultados detalhados do analisador são gravados como XML no arquivo especificado por *filename*.
 
-/analyze: Quiet desativa a saída do analisador na janela de **saída** .
+**/analyze: quiet**\
+Desativa a saída do analisador na janela de **saída** .
 
-/analyze: stacksize `number` o parâmetro `number` que é usado com essa opção especifica o tamanho, em bytes, do quadro de pilha para o qual o aviso [C6262](/visualstudio/code-quality/c6262) é gerado. O espaço antes de `number` é opcional. Se esse parâmetro não for especificado, o tamanho do quadro da pilha será de 16 KB por padrão.
+**/analyze: stacksize** *número*\
+O parâmetro *Number* que é usado com essa opção especifica o tamanho, em bytes, do quadro de pilha para o qual o aviso [C6262](/visualstudio/code-quality/c6262) é gerado. O espaço antes do *número* é opcional. Se esse parâmetro não for especificado, o tamanho do quadro de pilha será 16 KB por padrão.
 
-/analyze: max_paths `number` o parâmetro `number` que é usado com essa opção especifica o número máximo de caminhos de código a serem analisados. Se esse parâmetro não for especificado, o número será 256 por padrão. Valores maiores executam uma verificação mais completa, mas a análise pode demorar mais.
+**/analyze:** *número*de max_paths \
+O parâmetro *Number* usado com essa opção especifica o número máximo de caminhos de código a serem analisados. Se esse parâmetro não for especificado, o número será 256 por padrão. Valores maiores causam uma verificação mais completa, mas a análise pode levar mais tempo.
 
-/analyze: apenas normalmente, o compilador gera código e faz mais verificação de sintaxe depois de executar o analisador. A opção **/analyze: only** desativa essa passagem de geração de código; Isso torna a análise mais rápida, mas erros de compilação e avisos que podem ter sido descobertos pelo passo de geração de código do compilador não são emitidos. Se o programa não estiver livre de erros de geração de código, os resultados da análise poderão não ser confiáveis; consequentemente, recomendamos que você use essa opção apenas se o código já tiver passado na verificação da sintaxe de geração de código sem erros.
+**/analyze: somente**\
+Normalmente, o compilador gera o código e faz mais verificação de sintaxe depois de executar o analisador. A opção **/analyze: only** desativa essa passagem de geração de código. Ele torna a análise mais rápida, mas erros de compilação e avisos que a passagem de geração de código do compilador podem encontrar não são emitidos. Se o programa não estiver livre de erros de geração de código, os resultados da análise poderão não ser confiáveis. Recomendamos que você use essa opção somente se o código já passar na verificação da sintaxe de geração de código sem erros.
 
-/analyze: RuleSet `<file_path>.ruleset` permite que você especifique quais conjuntos de regras analisar, incluindo conjuntos de regras personalizadas que você pode criar por conta própria. Quando essa opção é definida, o mecanismo de regras é mais eficiente porque exclui não membros do conjunto de regras especificado antes da execução. Quando a opção não estiver definida, o mecanismo verificará todas as regras.
+**/analyze: RuleSet** *file_path. RuleSet*\
+Permite especificar quais conjuntos de regras analisar, incluindo conjuntos de regras personalizados que você pode criar por conta própria. Quando essa opção é definida, o mecanismo de regras é mais eficiente, pois ele exclui os não membros do conjunto de regras especificado antes da execução. Caso contrário, o mecanismo verificará todas as regras.
 
-Os conjuntos de regras que acompanham o Visual Studio são encontrados em **%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule sets.**
+Os conjuntos de regras que acompanham o Visual Studio são encontrados em *%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule sets.*
 
 O conjunto de regras personalizadas de exemplo a seguir informa ao mecanismo de regras para verificar C6001 e C26494. Você pode posicionar esse arquivo em qualquer lugar, desde que ele tenha uma extensão `.ruleset` e forneça o caminho completo no argumento.
 
@@ -60,10 +66,29 @@ O conjunto de regras personalizadas de exemplo a seguir informa ao mecanismo de 
 </RuleSet>
 ```
 
-/analyze: plugin habilita o plug-in PREfast especificado como parte das execuções de análise de código.
+**/analyze:** plugin *plug-in-DLL*\
+Habilita o plug-in PREfast especificado como parte das execuções de análise de código.
+
+::: moniker range="<=vs-2017"
+
 LocalEspC. dll é o plug-in que implementa verificações de análise de código relacionadas à simultaneidade no intervalo de avisos de C261XX. Por exemplo, [C26100](/visualstudio/code-quality/c26100), [C26101](/visualstudio/code-quality/c26101),..., [C26167](/visualstudio/code-quality/c26167).
 
 Para executar LocalEspC. dll, use esta opção de compilador: **/analyze: plugin LocalEspC. dll**
+
+::: moniker-end
+::: moniker range=">=vs-2019"
+
+ConcurrencyCheck. dll implementa verificações de análise de código relacionadas à simultaneidade no intervalo de avisos do C261XX. Por exemplo, [C26100](/visualstudio/code-quality/c26100), [C26101](/visualstudio/code-quality/c26101),..., [C26167](/visualstudio/code-quality/c26167).
+
+Para executar ConcurrencyCheck. dll, primeiro execute este comando em um prompt de comando do desenvolvedor:
+
+```cmd
+set Esp.Extensions=ConcurrencyCheck.dll
+```
+
+Em seguida, use esta opção de compilador: **/analyze: plugin EspXEngine. dll**.
+
+::: moniker-end
 
 Para executar CppCoreCheck. dll, primeiro execute este comando em um prompt de comando do desenvolvedor:
 
@@ -81,11 +106,7 @@ Para obter mais informações, consulte [análise de código paraC++ c/visão ge
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Expanda o nó **Propriedades de Configuração**.
-
-1. Expanda o nó **análise de código** .
-
-1. Selecione a página de propriedades **geral** .
+1. Selecione as **Propriedades de configuração** > **análise de código** >  página de propriedades**geral** .
 
 1. Modifique uma ou mais das propriedades de **análise de código** .
 
@@ -95,5 +116,5 @@ Para obter mais informações, consulte [análise de código paraC++ c/visão ge
 
 ## <a name="see-also"></a>Consulte também
 
-- [Opções do compilador MSVC](compiler-options.md)
-- [Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Opções do compilador MSVC](compiler-options.md)\
+[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)
