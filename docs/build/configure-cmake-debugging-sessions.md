@@ -3,24 +3,28 @@ title: Configurar as sessões de depuração do CMake no Visual Studio
 ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 9899f99994935ec419fff400670644b7d78a190a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41f53c0c3ea46a8a1aa11215968aaee6c13c2dea
+ms.sourcegitcommit: e33126222c418daf977533ea9e2819d99e0d7b8d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195498"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72534111"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurar sessões de depuração do CMake
 
 Todos os destinos executáveis do CMake são mostrados na lista suspensa **Item de Inicialização** na barra de ferramentas **Geral**. Para iniciar uma sessão de depuração, basta selecionar um e iniciar o depurador.
 
-![Lista suspensa de item de inicialização do CMake](media/cmake-startup-item-dropdown.png "CMake startup item dropdown")
+![Menu suspenso de item de inicialização CMake](media/cmake-startup-item-dropdown.png "Menu suspenso de item de inicialização CMake")
 
-Inicie também uma sessão de depuração por meio dos menus do CMake.
+Você também pode iniciar uma sessão de depuração de Gerenciador de Soluções. Primeiro, alterne para o **modo de exibição de destinos CMake** na janela **Gerenciador de soluções** .
+
+![Botão de exibição de destinos CMake](media/cmake-targets-view.png  "Item de menu de exibição de destinos CMake")
+
+Em seguida, clique com o botão direito do mouse em qualquer executável e selecione **depurar** ou **depurar e iniciar as configurações**. **Debug** inicia automaticamente a depuração do destino selecionado, com base em sua configuração ativa. **Configurações de depuração e inicialização** abre o arquivo *Launch. vs. JSON* e adiciona uma nova configuração de depuração para o destino selecionado.
 
 ## <a name="customize-debugger-settings"></a>Personalizar configurações do depurador
 
-Para personalizar as configurações do depurador para qualquer destino executável do CMake no projeto, clique com o botão direito do mouse no arquivo CMakeLists.txt específico e selecione **Configurações de Depuração e de Inicialização**. (Ou selecione um destino no **exibição de destinos** na **Gerenciador de soluções**.) Quando você seleciona um destino do CMake no submenu, um arquivo chamado **Launch** é criado. Esse arquivo é pré-populado com informações sobre o destino do CMake selecionado e permite que você especifique parâmetros adicionais, como argumentos de programa ou o tipo de depurador. Para referenciar qualquer chave em um **Cmakesettings** do arquivo, preceda-o com `cmake.` na **Launch**. O exemplo a seguir mostra um simples **Launch** arquivo que recebe o valor da `remoteCopySources` chave no **Cmakesettings** arquivo para a configuração selecionada no momento:
+Para personalizar as configurações do depurador para qualquer destino executável do CMake no projeto, clique com o botão direito do mouse no arquivo CMakeLists.txt específico e selecione **Configurações de Depuração e de Inicialização**. (Ou selecione um destino no **modo de exibição destinos** no **Gerenciador de soluções**.) Quando você seleciona um destino CMake no submenu, um arquivo chamado **Launch. vs. JSON** é criado. Esse arquivo é pré-populado com informações sobre o destino do CMake selecionado e permite que você especifique parâmetros adicionais, como argumentos de programa ou o tipo de depurador. Para fazer referência a qualquer chave em um arquivo **CMakeSettings. JSON** , preceda-a com `cmake.` em **Launch. vs. JSON**. O exemplo a seguir mostra um arquivo de **inicialização simples. vs. JSON** que efetua pull do valor da chave de `remoteCopySources` no arquivo **CMakeSettings. JSON** para a configuração selecionada no momento:
 
 ```json
 {
@@ -38,11 +42,11 @@ Para personalizar as configurações do depurador para qualquer destino executá
 }
 ```
 
-Assim que você salva o **Launch** arquivo, em que uma entrada é criada a **Item de inicialização** lista suspensa com o novo nome. Editando a **Launch** arquivo, você pode criar quantas configurações de depuração que desejar para qualquer número de destinos do CMake.
+Assim que você salvar o arquivo **Launch. vs. JSON** , uma entrada será criada no menu suspenso **item de inicialização** com o novo nome. Editando o arquivo **Launch. vs. JSON** , você pode criar quantas configurações de depuração desejar para qualquer número de destinos CMake.
 
 ## <a name="support-for-cmakesettings-variables"></a>Suporte para variáveis de CMakeSettings
 
- **Launch** dá suporte a variáveis que são declaradas no **Cmakesettings** (veja abaixo) e que são aplicáveis à configuração selecionada no momento. Ele também tem uma chave chamada `currentDir`, que define o diretório atual do aplicativo da inicialização para um projeto local:
+ **Inicialização. o vs. JSON** dá suporte a variáveis declaradas em **CMakeSettings. JSON** (veja abaixo) e que são aplicáveis à configuração selecionada no momento. Ele também tem uma chave chamada `currentDir`, que define o diretório atual do aplicativo de inicialização para um projeto local:
 
 ```json
 {
@@ -60,7 +64,7 @@ Quando você executa o aplicativo, o valor de `currentDir` é algo semelhante a
 C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 ```
 
-A chave 'cwd' define o diretório atual do aplicativo para um projeto remoto inicia. O valor padrão é '${debugInfo.defaultWorkingDirectory}' que é avaliada como 
+A chave ' CWD ' define o diretório atual do aplicativo de inicialização para um projeto remoto. O valor padrão é ' $ {debugInfo. defaultWorkingDirectory} ', que é avaliado como 
 
 ```cmd
 /var/tmp/src/bfc6f7f4-4f0f-8b35-80d7-9198fa973fb9/Linux-Debug
