@@ -3,10 +3,10 @@ title: Coleções (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
 ms.openlocfilehash: ff3fb9899355ec05083dc15c16d74c9aa1d3fd8f
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70740327"
 ---
 # <a name="collections-ccx"></a>Coleções (C++/CX)
@@ -15,7 +15,7 @@ Em um C++programa/CX, você pode fazer uso gratuito de contêineres STL (Standar
 
 O Windows Runtime define as interfaces para coleções e tipos relacionados, e C++/CX fornece as implementações concretas C++ no arquivo de cabeçalho Collection. h. Esta ilustração mostra as relações entre os tipos de coleção:
 
-![Árvore&#43;&#43;&#47;de herança c CX para tipos de coleção](../cppcx/media/cppcxcollectionsinheritancetree.png "árvore de herança c&#43;&#43;&#47;CX para tipos de coleção")
+![Árvore&#43;&#43;&#47;de herança C CX para tipos de coleção](../cppcx/media/cppcxcollectionsinheritancetree.png "Árvore&#43;&#43;&#47;de herança C CX para tipos de coleção")
 
 - A [classe Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) é semelhante à [classe std::vector](../standard-library/vector-class.md).
 
@@ -34,18 +34,18 @@ O Windows Runtime define as interfaces para coleções e tipos relacionados, e C
 
 ## <a name="vector-usage"></a>Uso do vetor
 
-Quando sua classe precisa passar um contêiner de sequência para outro componente Windows Runtime, use [Windows:: Foundation:: Collections:: IVector\<t >](/uwp/api/Windows.Foundation.Collections.IVector_T_) como o parâmetro ou tipo de retorno, e [Platform:: Collections::\<vector T >](../cppcx/platform-collections-vector-class.md) como a implementação concreta. Se você tentar usar um tipo `Vector` em um valor ou parâmetro de retorno público, será gerado o erro do compilador C3986. Você pode corrigir o erro alterando `Vector` para `IVector`.
+Quando sua classe tiver que passar um contêiner de sequência para outro componente Windows Runtime, use [Windows:: Foundation:: Collections:: IVector \<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_) como o parâmetro ou tipo de retorno, e [Platform:: Collections:: vetor \<T >](../cppcx/platform-collections-vector-class.md) como o implementação concreta. Se você tentar usar um tipo `Vector` em um valor ou parâmetro de retorno público, será gerado o erro do compilador C3986. Você pode corrigir o erro alterando `Vector` para `IVector`.
 
 > [!IMPORTANT]
 > Se você estiver passando uma sequência no seu próprio programa, use `Vector` ou `std::vector` , pois eles são mais eficientes do que `IVector`. Use `IVector` somente ao passar o contêiner pela ABI.
 >
-> O sistema do tipo Windows Runtime não dá suporte ao conceito de matrizes denteadas e, portanto, você não pode passar um\<IVector < Platform:: array T > > como um valor de retorno ou um parâmetro de método. Para passar uma matriz denteada ou uma sequência de sequências através da ABI, use `IVector<IVector<T>^>`.
+> O sistema do tipo Windows Runtime não dá suporte ao conceito de matrizes denteadas e, portanto, você não pode passar um IVector < Platform:: array \<T > > como um valor de retorno ou parâmetro de método. Para passar uma matriz denteada ou uma sequência de sequências através da ABI, use `IVector<IVector<T>^>`.
 
 `Vector<T>` fornece os métodos necessários para adição, remoção e acesso a itens na coleção e é implicitamente conversível em `IVector<T>`. Você também pode usar algoritmos STL em instâncias de `Vector<T>`. O exemplo a seguir demonstra alguns usos básicos. As funções [begin](../cppcx/begin-function.md) e [end](../cppcx/end-function.md) aqui são do namespace `Platform::Collections` , não do namespace `std` .
 
 [!code-cpp[cx_collections#01](../cppcx/codesnippet/CPP/collections/class1.cpp#01)]
 
-Se você tiver um código existente que `std::vector` usa e deseja reutilizá-lo em um componente Windows Runtime, basta usar um `Vector` dos construtores que utilizam um `std::vector` ou um par de iteradores para construir um `Vector` no ponto em que você passa o coleção em toda a ABI. O exemplo a seguir mostra como usar o construtor de movimentação `Vector` para inicialização eficiente de um `std::vector`. Após a operação de movimentação, a variável de `vec` original não será mais válida.
+Se você tiver um código existente que usa `std::vector` e quiser reutilizá-lo em um componente Windows Runtime, use apenas um dos construtores `Vector` que usa um `std::vector` ou um par de iteradores para construir um `Vector` no ponto em que você passa a coleção em toda a ABI. O exemplo a seguir mostra como usar o construtor de movimentação `Vector` para inicialização eficiente de um `std::vector`. Após a operação de movimentação, a variável de `vec` original não será mais válida.
 
 [!code-cpp[cx_collections#02](../cppcx/codesnippet/CPP/collections/class1.cpp#02)]
 
@@ -57,13 +57,13 @@ Qualquer elemento a ser armazenado em um [Platform::Collections::Vector](../cppc
 
 ## <a name="vectorproxy-elements"></a>Elementos VectorProxy
 
-[Plataforma:: Collections:: VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) e [plataforma:: Collections:: VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) habilitam o uso `range for` de loops e algoritmos como [std:: Sort](../standard-library/algorithm-functions.md#sort) com um contêiner [IVector\<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_) . Porém, os elementos `IVector` não podem ser acessados por meio do desreferenciamento do ponteiro C++; eles podem ser acessados somente por pelos métodos [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) e [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) . Portanto, esses `Platform::Details::VectorProxy<T>` iteradores usam as classes proxy e `Platform::Details::ArrowProxy<T>` para fornecer acesso aos elementos individuais por meio __\*__ de operadores,  __\[__ __->__ e], conforme exigido pela biblioteca padrão. Estritamente falando, dado um `IVector<Person^> vec`, o tipo de `*begin(vec)` será `VectorProxy<Person^>`. Entretanto, o objeto proxy é quase sempre transparente ao seu código. Esses objetos proxy não estão documentados porque são apenas para uso interno dos iteradores, mas é útil saber como o mecanismo funciona.
+[Plataforma:: Collections:: VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) e [plataforma:: Collections:: VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) permitem o uso de `range for` loops e algoritmos como [std:: sort](../standard-library/algorithm-functions.md#sort) com um [IVector \<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_) contêiner. Porém, os elementos `IVector` não podem ser acessados por meio do desreferenciamento do ponteiro C++; eles podem ser acessados somente por pelos métodos [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) e [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) . Portanto, esses iteradores usam as classes proxy `Platform::Details::VectorProxy<T>` e `Platform::Details::ArrowProxy<T>` para fornecer acesso aos elementos individuais por meio de operadores __\*__ , __->__ e __\[]__ , conforme exigido pela biblioteca padrão. Estritamente falando, dado um `IVector<Person^> vec`, o tipo de `*begin(vec)` será `VectorProxy<Person^>`. Entretanto, o objeto proxy é quase sempre transparente ao seu código. Esses objetos proxy não estão documentados porque são apenas para uso interno dos iteradores, mas é útil saber como o mecanismo funciona.
 
 Quando você usar um loop `range for` sobre contêineres `IVector` , use `auto&&` para habilitar a variável de iterador para associar corretamente aos elementos `VectorProxy` . Se você usar `auto` ou `auto&`, o aviso do compilador C4239 será gerado e `VectoryProxy` será mencionado no texto de aviso.
 
 A ilustração a seguir mostra um loop `range for` sobre um `IVector<Person^>`. Observe que a execução é interrompida no ponto de interrupção na linha 64. A janela **QuickWatch** mostra que a variável de iterador `p` é na verdade um `VectorProxy<Person^>` que tem as variáveis de membro `m_v` e `m_i` . Entretanto, quando você chama `GetType` nessa variável, é retornado o tipo idêntico à instância `Person` de `p2`. A conclusão é que, embora `VectorProxy` e `ArrowProxy` possam aparecer em **QuickWatch**, determinados erros do compilador do depurador, ou outros locais, geralmente não precisam ter uma codificação explícita para eles.
 
-![VectorProxy no intervalo&#45;com base no loop](../cppcx/media/vectorproxy-1.png "VectorProxy no&#45;intervalo para loop")
+![VectorProxy no loop&#45;baseado em intervalo](../cppcx/media/vectorproxy-1.png "VectorProxy no loop&#45;baseado em intervalo")
 
 Um cenário em que é necessário codificar em torno do objeto proxy é quando você precisa executar um `dynamic_cast` nos elementos — por exemplo, quando você está procurando objetos XAML de um determinado tipo em uma coleção de elementos `UIElement` . Nesse caso, você deve primeiro converter o elemento em [Platform::Object](../cppcx/platform-object-class.md)^ e depois executar a conversão dinâmica:
 
@@ -84,7 +84,7 @@ void FindButton(UIElementCollection^ col)
 
 ## <a name="map-usage"></a>Uso do mapa
 
-Este exemplo mostra como inserir itens e vê-los em uma [plataforma:: Collections:: map](../cppcx/platform-collections-map-class.md)e, em seguida, retornar `Map` o como somente leitura [Windows:: Foundation:: Collections:: IMapView]/UWP/API/Windows.Foundation.Collections.IMapView_K_V_) Escreva.
+Este exemplo mostra como inserir itens e procurar em uma [plataforma:: Collections:: map](../cppcx/platform-collections-map-class.md)e retornar o `Map` como um tipo [Windows:: Foundation:: Collections:: IMapView]/UWP/API/Windows.Foundation.Collections.IMapView_K_V_) somente leitura.
 
 [!code-cpp[cx_collections#04](../cppcx/codesnippet/CPP/collections/class1.cpp#04)]
 
@@ -103,9 +103,9 @@ Os elementos de uma coleção modificável podem ser alterados, mas os elementos
 [classe Platform::Collections::Map](../cppcx/platform-collections-map-class.md)<br/>
 uma coleção modificável, associativa. Os elementos de mapa são pares chave-valor. Há suporte para as operações de pesquisar uma chave para recuperar seu valor associado e iterar por todos os pares chave-valor.
 
-`Map` e `MapView` se tornam modelos no `<K, V, C = std::less<K>>`; portanto, você pode personalizar o comparador.  Além disso, `Vector` e `VectorView` se tornam modelos no `<T, E = std::equal_to<T>>` para que você possa personalizar o comportamento de `IndexOf()`. Isso é importante principalmente para `Vector` e `VectorView` e estruturas de valor. Por exemplo, para criar um\<comparador Windows:: Foundation::D atetime >, você deve fornecer um comparador personalizado porque DateTime não sobrecarrega o operador = =.
+`Map` e `MapView` se tornam modelos no `<K, V, C = std::less<K>>`; portanto, você pode personalizar o comparador.  Além disso, `Vector` e `VectorView` se tornam modelos no `<T, E = std::equal_to<T>>` para que você possa personalizar o comportamento de `IndexOf()`. Isso é importante principalmente para `Vector` e `VectorView` e estruturas de valor. Por exemplo, para criar um \<Windows de vetor:: Foundation::D ateTime >, você deve fornecer um comparador personalizado porque DateTime não sobrecarrega o operador = =.
 
-[classe Platform::Collections::MapView](../cppcx/platform-collections-mapview-class.md)<br/>
+[Classe Platform::Collections::MapView](../cppcx/platform-collections-mapview-class.md)<br/>
 Uma versão somente leitura de `Map`.
 
 [Platform::Collections::Vector Class](../cppcx/platform-collections-vector-class.md)<br/>
@@ -125,23 +125,23 @@ Um iterador STL que satisfaz os requisitos de um iterador de acesso aleatório S
 
 ### <a name="begin-and-end-functions"></a>Funções begin() e end()
 
-Para simplificar o uso da STL para processar `Vector`, `VectorView`, `Map`, `MapView`e `Windows::Foundation::Collections` objetos arbitrários, C++o/CX dá suporte a sobrecargas da [função Begin](../cppcx/begin-function.md) e [End Function](../cppcx/end-function.md) não-member funções.
+Para simplificar o uso da STL para processar `Vector`, `VectorView`, `Map`, `MapView` e objetos de `Windows::Foundation::Collections` arbitrários C++, o/CX dá suporte a sobrecargas das funções [begin function](../cppcx/begin-function.md) e [End Function](../cppcx/end-function.md) não-member.
 
 A tabela a seguir lista os iteradores e as funções disponíveis.
 
 |Iterators|Funções|
 |---------------|---------------|
-|[Platform::Collections::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (Armazena [internamente o Windows:: Foundation:: Collections:: IVector\<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_) e int.)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md)([Windows::Foundation::Collections:: IVector\<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_))|
-|[Platform::Collections::VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (Internamente armazena [IVectorView\<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)^ e int.)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([IVectorView\<T>](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)^)|
-|[Platform::Collections::InputIterator\<T>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Internamente armazena [IIterator\<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ e T.)|[Iniciar](../cppcx/begin-function.md)/ [término](../cppcx/end-function.md) ([IIterable\<T>](/uwp/api/Windows.Foundation.Collections.IIterable_T_))|
-|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Internamente armazena [IIterator\<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ e T.)|[início](../cppcx/begin-function.md)/ [final](../cppcx/end-function.md) ([IMap\<K,V>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).|
-|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Internamente armazena [IIterator\<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ e T.)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_))|
+|[Plataforma:: Collections:: VectorIterator \<T >](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (Armazena internamente o [Windows:: Foundation:: Collections:: IVector \<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_) e int.)|[início](../cppcx/begin-function.md) / [fim](../cppcx/end-function.md)([Windows:: Foundation:: Collections:: IVector \<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_))|
+|[Plataforma:: Collections:: VectorViewIterator \<T >](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (Internamente armazena [IVectorView \<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)^ e int.)|/ [final](../cppcx/end-function.md) de [início](../cppcx/begin-function.md) ([\<T de IVectorView >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)^)|
+|[Plataforma:: Collections:: InputIterator \<T >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Internamente armazena [IIterator \<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ e t.)|[início](../cppcx/begin-function.md) de / [final](../cppcx/end-function.md) ([IIterable \<T >](/uwp/api/Windows.Foundation.Collections.IIterable_T_))|
+|[Plataforma:: Collections:: InputIterator < IKeyValuePair \<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Internamente armazena [IIterator \<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ e t.)|[início](../cppcx/begin-function.md) / [fim](../cppcx/end-function.md) ([IMap \<K, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).|
+|[Plataforma:: Collections:: InputIterator < IKeyValuePair \<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Internamente armazena [IIterator \<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ e t.)|[início](../cppcx/begin-function.md) / [fim](../cppcx/end-function.md) ([Windows:: Foundation:: Collections:: IMapView]/UWP/API/Windows.Foundation.Collections.IMapView_K_V_))|
 
 ### <a name="collection-change-events"></a>Eventos de alteração de coleção
 
 `Vector` e `Map` oferecem suporte à associação de dados em coleções XAML implementando eventos que ocorrem quando um objeto de coleção é alterado ou redefinido, ou quando um elemento de uma coleção é inserido, removido ou alterado. Você pode escrever seus próprios tipos que ofereçam suporte à associação de dados, embora eles não possam ser herdados de `Map` nem de `Vector` , pois esses tipos são lacrados.
 
-Os delegados [Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) e [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) especificam as assinaturas dos manipuladores de eventos para eventos de alteração da coleção. A classe enum pública [Windows::Foundation::Collections::CollectionChange](/uwp/api/windows.foundation.collections.collectionchange) e as classes ref `Platform::Collection::Details::MapChangedEventArgs` e `Platform::Collections::Details::VectorChangedEventArgs` armazenam os argumentos de eventos para determinar o que provocou o evento. Os `*EventArgs` tipos são definidos `Details` no namespace porque você não precisa construí-los ou consumi-los explicitamente ao usar `Map` ou `Vector`.
+Os delegados [Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) e [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) especificam as assinaturas dos manipuladores de eventos para eventos de alteração da coleção. A classe enum pública [Windows::Foundation::Collections::CollectionChange](/uwp/api/windows.foundation.collections.collectionchange) e as classes ref `Platform::Collection::Details::MapChangedEventArgs` e `Platform::Collections::Details::VectorChangedEventArgs` armazenam os argumentos de eventos para determinar o que provocou o evento. Os tipos de `*EventArgs` são definidos no namespace `Details` porque você não precisa construí-los ou consumi-los explicitamente ao usar `Map` ou `Vector`.
 
 ## <a name="see-also"></a>Consulte também
 

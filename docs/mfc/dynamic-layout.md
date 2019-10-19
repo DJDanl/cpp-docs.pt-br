@@ -3,10 +3,10 @@ title: Layout dinâmico
 ms.date: 09/09/2019
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
 ms.openlocfilehash: 1b0d035d3c551fd309d515ccb8b22159218c1b0a
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70907555"
 ---
 # <a name="dynamic-layout"></a>Layout dinâmico
@@ -23,7 +23,7 @@ Após ser redimensionado, a área da caixa de listagem é aumentada para mostrar
 
 ![Depois de ser redimensionado.](../mfc/media/mfcdynamiclayout5.png "Depois de ser redimensionado.")
 
-Você pode controlar o layout dinâmico especificando os detalhes de cada controle no editor de recursos no IDE ou pode fazer isso programaticamente acessando o `CMFCDynamicLayout` objeto para um controle específico e definindo as propriedades.
+Você pode controlar o layout dinâmico especificando os detalhes de cada controle no editor de recursos no IDE, ou pode fazer isso programaticamente acessando o objeto `CMFCDynamicLayout` para um controle específico e definindo as propriedades.
 
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>Definindo propriedades de layout dinâmico no editor de recursos
 
@@ -55,13 +55,13 @@ O procedimento anterior é útil para especificar propriedades de layout dinâmi
 
 1. Localize ou crie um local no código de implementação da sua classe de caixa de diálogo onde você deseja especificar o layout dinâmico para a caixa de diálogo. Por exemplo, talvez você queira adicionar um método como `AdjustLayout` em sua caixa de diálogo e chamá-lo de locais onde o layout precisa ser alterado. Você pode primeiro chamá-lo do construtor ou depois de fazer alterações na caixa de diálogo.
 
-1. Para a caixa de diálogo, chame [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), um método `CWnd` da classe. `GetDynamicLayout`Retorna um ponteiro para um `CMFCDynamicLayout` objeto.
+1. Para a caixa de diálogo, chame [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), um método da classe `CWnd`. `GetDynamicLayout` retorna um ponteiro para um objeto `CMFCDynamicLayout`.
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. Para o primeiro controle ao qual você deseja adicionar comportamento dinâmico, use os métodos estáticos na classe de layout dinâmico para criar a estrutura [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) que codifica a maneira como o controle deve ser ajustado. Você faz isso primeiro escolhendo o método estático apropriado: [CMFCDynamicLayout:: MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout:: MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout:: MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)ou [CMFCDynamicLayout:: MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Você passa uma porcentagem para os aspectos horizontais e/ou verticais da movimentação. Todos esses métodos estáticos retornam um objeto MoveSettings recém-criado que você pode usar para especificar o comportamento de movimentação de um controle.
+1. Para o primeiro controle ao qual você deseja adicionar comportamento dinâmico, use os métodos estáticos na classe de layout dinâmico para criar a estrutura [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) que codifica a maneira como o controle deve ser ajustado. Você faz isso primeiro escolhendo o método estático apropriado: [CMFCDynamicLayout:: MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout:: MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout:: MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)ou [CMFCDynamicLayout:: MoveHorizontalAndVertical ](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Você passa uma porcentagem para os aspectos horizontais e/ou verticais da movimentação. Todos esses métodos estáticos retornam um objeto MoveSettings recém-criado que você pode usar para especificar o comportamento de movimentação de um controle.
 
    Tenha em mente que 100 significa mover exatamente o tamanho da caixa de diálogo, o que faz com que a borda do controle permaneça uma distância fixa da nova borda.
 
