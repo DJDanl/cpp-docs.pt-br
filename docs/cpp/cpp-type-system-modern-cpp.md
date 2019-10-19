@@ -4,10 +4,10 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
 ms.openlocfilehash: b947bd6955a80e051d1dab81061b4b2bf2ab19c8
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69498637"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema do tipo C++ (C++ moderno)
@@ -16,11 +16,11 @@ O conceito do *tipo* é muito importante no C++. Cada variável, argumento de fu
 
 ## <a name="terminology"></a>Terminologia
 
-**Variável**: O nome simbólico de uma quantidade de dados para que o nome possa ser usado para acessar os dados aos quais ele se refere em todo o escopo do código em que está definido. No C++, a *variável* geralmente é usada para fazer referência a instâncias de tipos de dados escalares, enquanto instâncias de outros tipos geralmente são chamadas de *objetos*.
+**Variável**: o nome simbólico de uma quantidade de dados para que o nome possa ser usado para acessar os dados aos quais ele se refere em todo o escopo do código onde ele está definido. No C++, a *variável* geralmente é usada para fazer referência a instâncias de tipos de dados escalares, enquanto instâncias de outros tipos geralmente são chamadas de *objetos*.
 
-**Objeto**: Para simplificar e consistência, este artigo usa o termo *objeto* para se referir a qualquer instância de uma classe ou estrutura, e quando ele é usado no sentido geral inclui todos os tipos, até mesmo variáveis escalares.
+**Objeto**: para simplificar e consistência, este artigo usa o termo *objeto* para se referir a qualquer instância de uma classe ou estrutura, e quando ele é usado no sentido geral inclui todos os tipos, até mesmo variáveis escalares.
 
-**Tipo de Pod** (dados antigos simples): Essa categoria informal de tipos C++ de dados no refere-se a tipos que são escalares (consulte a seção tipos fundamentais) ou que são *classes Pod*. Uma classe POD não tem membros de dados estáticos que também não sejam PODs e não tem construtores definidos pelo usuário, destruidores definidos pelo usuário ou operadores de atribuição definidos pelo usuário. Além disso, uma classe POD não tem função virtual, nenhuma classe base e nenhum membro de dados não estático particular ou protegido. Os tipos POD são quase sempre usados para a troca de dados externos, por exemplo, com um módulo escrito na linguagem C (que tem apenas tipos POD).
+**Tipo de Pod** (dados antigos simples): essa categoria informal de C++ tipos de dados no refere-se a tipos que são escalares (consulte a seção tipos fundamentais) ou que são *classes Pod*. Uma classe POD não tem membros de dados estáticos que também não sejam PODs e não tem construtores definidos pelo usuário, destruidores definidos pelo usuário ou operadores de atribuição definidos pelo usuário. Além disso, uma classe POD não tem função virtual, nenhuma classe base e nenhum membro de dados não estático particular ou protegido. Os tipos POD são quase sempre usados para a troca de dados externos, por exemplo, com um módulo escrito na linguagem C (que tem apenas tipos POD).
 
 ## <a name="specifying-variable-and-function-types"></a>Especificando tipos de variável e de função
 
@@ -59,24 +59,24 @@ Os tipos fundamentais são reconhecidos pelo compilador, que tem regras internas
 
 A ilustração a seguir mostra os tamanhos relativos dos tipos internos:
 
-![Tamanho em bytes de tipos&#45;internos no](../cpp/media/built-intypesizes.png "tamanho em bytes de tipos&#45;internos")
+![Tamanho em bytes de tipos&#45;internos](../cpp/media/built-intypesizes.png "Tamanho em bytes de tipos&#45;internos")
 
 A tabela a seguir lista os tipos fundamentais usados com mais frequência:
 
-|Tipo|Tamanho|Comentário|
+|Digite|Tamanho|Comentário|
 |----------|----------|-------------|
 |int|4 bytes|A opção padrão para valores integrais.|
 |double|8 bytes|A opção padrão para valores de ponto flutuante.|
 |bool|1 byte|Representa valores que podem ser true ou false.|
 |char|1 byte|Use os caracteres ASCII em cadeias de caracteres do estilo C mais antigo ou objetos std::string que nunca precisarão ser convertidos em UNICODE.|
 |wchar_t|2 bytes|Representa os valores de caractere "largos" que podem ser codificados no formato UNICODE (UTF-16 no Windows, outros sistemas operacionais podem ser diferentes). Esse é o tipo de caractere usado em cadeias de caracteres do tipo `std::wstring`.|
-|unsigned&nbsp;char|1 byte|O C++ não tem o tipo `byte` interno.  Use unsigned char para representar um valor de bytes.|
+|&nbsp;char não assinado|1 byte|O C++ não tem o tipo `byte` interno.  Use unsigned char para representar um valor de bytes.|
 |unsigned int|4 bytes|Escolha padrão para sinalizadores de bit.|
 |long long|8 bytes|Representa valores inteiros muito grandes.|
 
 ## <a name="the-void-type"></a>O tipo void
 
-O tipo **void** é um tipo especial; Você não pode declarar uma variável do tipo **void**, mas pode declarar uma variável do tipo __void \*__  (ponteiro para **void**), que às vezes é necessário ao alocar memória bruta (não tipada). No entanto, os ponteiros para **void** não são de tipo seguro e, em geral, seu uso C++é fortemente desencorajado no moderno. Em uma declaração de função, um valor de retorno **nulo** significa que a função não retorna um valor; Esse é um uso comum e aceitável de **void**. Embora a linguagem C exigia funções que têm zero parâmetros para declarar **void** na lista de parâmetros, por exemplo `fou(void)`, essa prática é desencorajada em moderno C++ e deve ser declarada `fou()`. Para obter mais informações, consulte [conversões de tipo e segurança de tipo](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+O tipo **void** é um tipo especial; Você não pode declarar uma variável do tipo **void**, mas pode declarar uma variável do tipo __void \*__ (ponteiro para **void**), que às vezes é necessário ao alocar memória bruta (não tipada). No entanto, os ponteiros para **void** não são de tipo seguro e, em geral, seu uso C++é fortemente desencorajado no moderno. Em uma declaração de função, um valor de retorno **nulo** significa que a função não retorna um valor; Esse é um uso comum e aceitável de **void**. Embora a linguagem C exigia funções que têm zero parâmetros para declarar **void** na lista de parâmetros, por exemplo, `fou(void)`, essa prática é desencorajada em C++ moderno e deve ser declarada `fou()`. Para obter mais informações, consulte [conversões de tipo e segurança de tipo](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="const-type-qualifier"></a>Qualificador do tipo const
 
@@ -94,7 +94,7 @@ Um tipo **const** é diferente de sua versão não const; por exemplo, **const i
 
 ## <a name="string-types"></a>Tipos de cadeia de caracteres
 
-Estritamente falando, a C++ linguagem não tem nenhum tipo de cadeia de caracteres interno; **Char** e **wchar_t** armazenam caracteres únicos-você deve declarar uma matriz desses tipos para aproximar uma cadeia de caracteres, adicionando um valor nulo de encerramento (por `'\0'`exemplo, ASCII) ao elemento da matriz, um após o último caractere válido (também chamado de *Cadeia de caracteres C-Style*). As cadeias de caracteres de estilo C exigiam que muito mais códigos fossem escritos ou o uso de funções da biblioteca de utilitários de cadeia de caracteres externos. Mas, no C++moderno, temos os tipos `std::string` de biblioteca padrão (para cadeias de caracteres de caractere de tipo **de caractere de 8 bits)** ou `std::wstring` (para cadeias de caracteres de tipo **wchar_t**de 16 bits). Esses C++ contêineres de biblioteca padrão podem ser considerados como tipos de cadeia de caracteres nativos porque fazem parte das bibliotecas padrão incluídas em qualquer ambiente C++ de compilação compatível. Basta usar a diretiva `#include <string>` para tornar esses tipos disponíveis em seu programa. (Se você estiver usando o MFC ou o ATL, a classe CString também estará disponível, mas não fará parte do padrão C++.) O uso de matrizes de caracteres de terminação nula (as cadeias de caracteres de estilo C mencionadas anteriormente) não é nada aconselhável em C++ moderno.
+Estritamente falando, a C++ linguagem não tem nenhum tipo de cadeia de caracteres interno; **Char** e **wchar_t** armazenam caracteres únicos-você deve declarar uma matriz desses tipos para aproximar uma cadeia de caracteres, adicionando um valor nulo de encerramento (por exemplo, ASCII `'\0'`) ao elemento da matriz, um após o último caractere válido (também chamado de  *Cadeia de caracteres C-Style*). As cadeias de caracteres de estilo C exigiam que muito mais códigos fossem escritos ou o uso de funções da biblioteca de utilitários de cadeia de caracteres externos. Mas, no C++moderno, temos os tipos de biblioteca padrão `std::string` (para cadeias de caracteres de caractere de tipo **de caractere de 8 bits)** ou `std::wstring` (para cadeias de caracteres de tipo **wchar_t**de 16 bits). Esses C++ contêineres de biblioteca padrão podem ser considerados como tipos de cadeia de caracteres nativos porque fazem parte das bibliotecas padrão incluídas em qualquer ambiente C++ de compilação compatível. Basta usar a diretiva `#include <string>` para tornar esses tipos disponíveis em seu programa. (Se você estiver usando MFC ou ATL, a classe CString também estará disponível, mas não faz parte do C++ padrão.) O uso de matrizes de caracteres com terminação nula (as cadeias de estilo C mencionadas anteriormente) é altamente C++desencorajado no moderno.
 
 ## <a name="user-defined-types"></a>Tipos definidos pelo usuário
 
@@ -106,7 +106,7 @@ Quando você define uma **classe**, **struct**, **Union**ou **enum**, essa const
 
 ## <a name="pointer-types"></a>Tipos de ponteiro
 
-Desde as primeiras versões da linguagem C, o C++ continua permitindo que você declare uma variável de um tipo de ponteiro usando o declarador especial `*` (asterisco). Um tipo de ponteiro armazena o endereço do local na memória em que o valor real de dados é armazenado. No moderno C++, eles são chamados de *ponteiros brutos*e são acessados em seu código por `*` meio de operadores especiais `->` (asterisco) ou (traço com maior que). Isso é chamado de cancelamento de *referência*e qual deles você usa depende se você está desreferenciando um ponteiro para um escalar ou um ponteiro para um membro em um objeto. O trabalho com tipos de ponteiro foi durante muito tempo um dos aspectos mais desafiadores e confusos do desenvolvimento de programas em C e C++. Esta seção descreve alguns fatos e práticas para ajudar a usar ponteiros brutos se você quiser, mas, no C++ moderno, ele não é mais necessário (ou recomendado) para usar ponteiros brutos para a propriedade do objeto, devido à evolução do [ponteiro inteligente](../cpp/smart-pointers-modern-cpp.md) (discutido mais no final desta seção). Ainda é útil e seguro usar ponteiros brutos para observar objetos, mas se você tiver de usá-los para a propriedade de objeto, faça isso com muito cuidado e considerando como os objetos possuídos por eles são criados e destruídos.
+Desde as primeiras versões da linguagem C, o C++ continua permitindo que você declare uma variável de um tipo de ponteiro usando o declarador especial `*` (asterisco). Um tipo de ponteiro armazena o endereço do local na memória em que o valor real de dados é armazenado. No moderno C++, eles são chamados de *ponteiros brutos*e são acessados em seu código por meio de operadores especiais `*` (asterisco) ou `->` (Dash com maior que). Isso é chamado de cancelamento de *referência*e qual deles você usa depende se você está desreferenciando um ponteiro para um escalar ou um ponteiro para um membro em um objeto. O trabalho com tipos de ponteiro foi durante muito tempo um dos aspectos mais desafiadores e confusos do desenvolvimento de programas em C e C++. Esta seção descreve alguns fatos e práticas para ajudar a usar ponteiros brutos se você quiser, mas, no C++ moderno, ele não é mais necessário (ou recomendado) para usar ponteiros brutos para a propriedade do objeto, devido à evolução do [ponteiro inteligente](../cpp/smart-pointers-modern-cpp.md) (discutido mais no final desta seção). Ainda é útil e seguro usar ponteiros brutos para observar objetos, mas se você tiver de usá-los para a propriedade de objeto, faça isso com muito cuidado e considerando como os objetos possuídos por eles são criados e destruídos.
 
 A primeira coisa que você deve saber é que a declaração de uma variável de ponteiro bruto alocará somente a memória necessária para armazenar um endereço do local da memória a que o ponteiro fará referência quando sua referência for removida. A alocação da memória do próprio valor de dados (também chamada de *armazenamento de backup*) ainda não está alocada. Ou seja, declarando uma variável de ponteiro bruto, você está criando uma variável do endereço de memória, não uma variável de dados real. Remover a referência de uma variável de ponteiro antes de verificar se ela contém um endereço válido para um repositório de backup causará um comportamento indefinido (geralmente um erro fatal) em seu programa. O exemplo a seguir demonstra esse tipo de erro:
 
@@ -134,7 +134,7 @@ O exemplo remove a referência de um tipo de ponteiro sem ter memória alocada p
                               // "pNumber".
 ```
 
-O exemplo de código corrigido usa a memória de pilha local para criar o repositório de backup para o qual `pNumber` aponta. Usamos um tipo fundamental para simplificar. Na prática, o armazenamento de backup para ponteiros é, geralmente, tipos definidos pelo usuário que são alocados dinamicamente em uma área de memória chamada *heap* (ou *armazenamento gratuito*) usando uma **nova** expressão de palavra-chave (em programação em estilo C, a mais antiga `malloc()` A função de biblioteca de tempo de execução C foi usada). Uma vez alocadas, essas variáveis são geralmente chamadas de objetos, especialmente se elas forem baseadas em uma definição de classe. A memória alocada com **New** deve ser excluída por uma instrução **delete** correspondente (ou, se você usou `malloc()` a função para alocá-la, a função `free()`de tempo de execução C).
+O exemplo de código corrigido usa a memória de pilha local para criar o repositório de backup para o qual `pNumber` aponta. Usamos um tipo fundamental para simplificar. Na prática, o armazenamento de backup para ponteiros é, geralmente, tipos definidos pelo usuário que são alocados dinamicamente em uma área de memória chamada *heap* (ou *armazenamento gratuito*) usando uma **nova** expressão de palavra-chave (em programação em estilo C, o @no_ mais antigo a função de biblioteca de tempo de execução _t_3 C foi usada). Uma vez alocadas, essas variáveis são geralmente chamadas de objetos, especialmente se elas forem baseadas em uma definição de classe. A memória alocada com **New** deve ser excluída por uma instrução **delete** correspondente (ou, se você usou a função `malloc()` para alocá-la, a função de tempo de execução C `free()`).
 
 No entanto, é fácil esquecer de excluir um objeto alocado dinamicamente, especialmente em um código complexo, que causa um bug de recurso chamado de *vazamento de memória*. Por esse motivo, o uso de ponteiros brutos é altamente desaconselhável em C++ moderno. É quase sempre melhor encapsular um ponteiro bruto em um [ponteiro inteligente](../cpp/smart-pointers-modern-cpp.md), que liberará automaticamente a memória quando o destruidor for invocado (quando o código sair do escopo do ponteiro inteligente); usando ponteiros inteligentes, você praticamente elimina uma classe inteira de bugs em C++ seus programas. No exemplo a seguir, suponha que `MyClass` seja um tipo definido pelo usuário que tem um método público `DoSomeWork();`
 

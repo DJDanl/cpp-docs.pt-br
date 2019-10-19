@@ -1,18 +1,18 @@
 ---
 title: Classe Platform::ArrayReference
-ms.date: 12/30/2016
+ms.date: 10/16/2019
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::ArrayReference::ArrayReference
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-ms.openlocfilehash: 923f60e90517e377b99d5e29f38c48b2633c3c46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7e587902f1c99b294ed79255397aeffccee26b5
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161565"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587923"
 ---
 # <a name="platformarrayreference-class"></a>Classe Platform::ArrayReference
 
@@ -28,13 +28,13 @@ class ArrayReference
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
-|[ArrayReference::ArrayReference](#ctor)|Inicializa uma nova instância da classe `ArrayReference`.|
+|[ArrayReference::ArrayReference](#ctor)|Inicializa uma nova instância da classe `ArrayReference` .|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[Operador ArrayReference::operator()](#operator-call)|Converte essa `ArrayReference` em uma `Platform::Array<T>^*`.|
 |[Operador ArrayReference::operator=](#operator-assign)|Atribui o conteúdo de outra `ArrayReference` a essa instância.|
@@ -43,21 +43,21 @@ class ArrayReference
 
 ### <a name="remarks"></a>Comentários
 
-Usando `ArrayReference` para preencher uma matriz de estilo C, você evita a operação de cópia adicional que estaria envolvida ao copiar primeiramente em uma variável `Platform::Array` e, em seguida, na matriz de estilo C. Quando você usa `ArrayReference`, há apenas uma operação de cópia. Para obter um exemplo de código, consulte [matriz e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Usando `ArrayReference` para preencher uma matriz de estilo C, você evita a operação de cópia adicional que estaria envolvida ao copiar primeiramente em uma variável `Platform::Array` e, em seguida, na matriz de estilo C. Quando você usa `ArrayReference`, há apenas uma operação de cópia. Para obter um exemplo de código, consulte [array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
 ### <a name="requirements"></a>Requisitos
 
-**Cliente com suporte mínimo:** Windows 8
+**Mínimo de cliente com suporte:** Windows 8
 
-**Servidor com suporte mínimo:** Windows Server 2012
+**Mínimo de servidor com suporte:** Windows Server 2012
 
-**Namespace:** Plataforma
+**Namespace:** Platform
 
 **Cabeçalho:** vccorlib.h
 
-## <a name="ctor"></a>  Construtor arrayreference:: Arrayreference
+## <a name="ctor"></a>Construtor ArrayReference:: ArrayReference
 
-Inicializa uma nova instância dos [arrayreference](../cppcx/platform-arrayreference-class.md) classe.
+Inicializa uma nova instância da classe [Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) .
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -79,9 +79,9 @@ Objeto `ArrayReference` cujos dados serão movidos para inicializar a nova inst�
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="operator-assign"></a>  Arrayreference:: Operator operador =
+## <a name="operator-assign"></a>Operador ArrayReference:: Operator =
 
-Atribui o objeto especificado ao atual [arrayreference](../cppcx/platform-arrayreference-class.md) objeto usando a semântica de movimentação.
+Atribui o objeto especificado ao objeto [Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) atual usando a semântica de movimentação.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -94,7 +94,7 @@ ArrayReference& operator=(ArrayReference&& otherArg);
 *otherArg*<br/>
 O objeto que é movido para o objeto `ArrayReference` atual.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Referência a um objeto do tipo `ArrayReference`.
 
@@ -102,9 +102,9 @@ Referência a um objeto do tipo `ArrayReference`.
 
 `Platform::ArrayReference` é um modelo de classe C++ padrão, não uma classe de referência.
 
-## <a name="operator-call"></a>  ArrayReference::operator() Operator
+## <a name="operator-call"></a>Operador ArrayReference:: Operator ()
 
-Converte o atual [Platform:: arrayreference](../cppcx/platform-arrayreference-class.md) do objeto para um [Platform:: array](../cppcx/platform-array-class.md) classe.
+Converte o objeto [Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) atual de volta para uma classe [Platform:: array](../cppcx/platform-array-class.md) .
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -112,13 +112,13 @@ Converte o atual [Platform:: arrayreference](../cppcx/platform-arrayreference-cl
 Array<TArg>^ operator ();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um identificador para um objeto do tipo `Array<TArg>^`
 
 ### <a name="remarks"></a>Comentários
 
-[Platform:: arrayreference](../cppcx/platform-arrayreference-class.md) e [Platform:: array](../cppcx/platform-array-class.md) são classes de modelos de classe C++ padrão, não ref.
+[Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) é um modelo C++ de classe padrão, e [Platform:: array](../cppcx/platform-array-class.md) é uma classe ref.
 
 ## <a name="see-also"></a>Consulte também
 

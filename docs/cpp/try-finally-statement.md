@@ -21,10 +21,10 @@ helpviewer_keywords:
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 ms.openlocfilehash: c26b72f7c675a4130f38c515cf71ecc290328ccc
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69498602"
 ---
 # <a name="try-finally-statement"></a>Instrução try-finally
@@ -33,19 +33,19 @@ ms.locfileid: "69498602"
 
 A sintaxe a seguir descreve a instrução **try – finally** :
 
-> **\_\_Tente**<br/>
+> **\_ \_try**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;código protegido<br/>
+> &nbsp; &nbsp; &nbsp; código &nbsp;//protegido<br/>
 > }<br/>
-> **\_\_disso**<br/>
+> **\_ \_finally**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;código de encerramento<br/>
+> &nbsp; &nbsp; &nbsp; &nbsp;//código de encerramento<br/>
 > }
 
 ## <a name="grammar"></a>Gramática
 
 *try-finally-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;instrução try *composto-instrução*  **\_finally composta\_**  **\_ \_**
+&nbsp; &nbsp; &nbsp; &nbsp; **\_** \_try *de instrução composta* **\_ 0finally** *instrução composta*
 
 A instrução **try-finally** é uma extensão da Microsoft para a C C++ e linguagens que permite aos aplicativos de destino garantir a execução do código de limpeza quando a execução de um bloco de código é interrompida. A limpeza consiste em tarefas como desalocar memória, fechar arquivos e liberar identificadores de arquivos. A instrução **try-finally** é especialmente útil para rotinas que têm vários lugares em que uma verificação é feita para um erro que poderia causar um retorno prematuro da rotina.
 
@@ -66,15 +66,15 @@ O controle alcança uma instrução **__try** por execução sequencial simples 
 
 Se ocorrer uma exceção no bloco **__try** , o sistema operacional deverá encontrar um manipulador para a exceção ou o programa falhará. Se um manipulador for encontrado, todos e todos os blocos **__finally** serão executados e a execução será retomada no manipulador.
 
-Por exemplo, imagine que uma série de chamadas de função vincula a função A à função D, conforme mostrado na figura a seguir. Cada função tem um manipulador de encerramento. Se uma exceção for gerada na função D e for manipulada em um, os manipuladores de terminação serão chamados nessa ordem, pois o sistema desenrolará a pilha: D, C, B.
+Por exemplo, imagine que uma série de chamadas de função vincula a função A à função D, conforme mostrado na figura a seguir. Cada função tem um manipulador de encerramento. Se uma exceção é gerada na função D e tratada na A, os manipuladores de encerramento são chamados nessa ordem à medida que o sistema desenrola a pilha: D, C, B.
 
-![Ordem de execução&#45;do manipulador de encerramento](../cpp/media/vc38cx1.gif "da&#45;execução do manipulador de encerramento") <br/>
+![Ordem de execução&#45;do manipulador de encerramento](../cpp/media/vc38cx1.gif "Ordem de execução&#45;do manipulador de encerramento") <br/>
 Ordem de execução do manipulador de encerramento
 
 > [!NOTE]
 > O comportamento de try – finally é diferente de algumas outras linguagens que dão suporte ao uso de **finally**, C#como.  Um único **__try** pode ter um, mas não ambos, de **__finally** e **__except**.  Se ambos devem ser usados juntos, uma instrução try-except externa deve incluir a instrução interna try-finally.  As regras que especificam quando cada bloco é executado também são diferentes.
 
-Para compatibilidade com as versões anteriores, **_try**, **_finally**e **_leave** são sinônimos para **__try**, **__finally**e **__leave** , a menos que a opção do compilador [/za \(desabilite as extensões de linguagem) ](../build/reference/za-ze-disable-language-extensions.md)é especificado.
+Para compatibilidade com versões anteriores, **_try**, **_finally**e **_leave** são sinônimos para **__try**, **__finally**e **__leave** , a menos que a opção de compilador [/za \(Disable extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) seja determinado.
 
 ## <a name="the-__leave-keyword"></a>A palavra-chave __leave
 
