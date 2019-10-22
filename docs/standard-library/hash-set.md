@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - hash_set header
 ms.assetid: 6b556967-c808-4869-9b4d-f9e030864435
-ms.openlocfilehash: 559bbff00b8e5204dd4f381abaf9987b4752db48
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 00ca476816213d38b3c50c64e0978e65ac1a5ea1
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452017"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687941"
 ---
-# <a name="lthashsetgt"></a>&lt;hash_set&gt;
+# <a name="lthash_setgt"></a>&lt;hash_set&gt;
 
 > [!NOTE]
 > Este cabeçalho é obsoleto. A alternativa é [<unordered_set>](../standard-library/unordered-set.md).
 
-Define as classes de modelo do contêiner hash_set e hash_multiset e seus modelos de suporte.
+Define os modelos de classe de contêiner hash_set e hash_multiset e seus modelos de suporte.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -44,9 +44,9 @@ Define as classes de modelo do contêiner hash_set e hash_multiset e seus modelo
 
 ### <a name="classes"></a>Classes
 
-|Classe|Descrição|
+|Class|Descrição|
 |-|-|
-|[Classe hash_compare](../standard-library/hash-compare-class.md)|Descreve um objeto que pode ser usado por qualquer um dos contêineres associativos de hash — hash_map, hash_multimap, hash_set ou hash_multiset — como um `Traits` objeto de parâmetro padrão para ordenar e aplicar hash aos elementos que eles contêm.|
+|[Classe hash_compare](../standard-library/hash-compare-class.md)|Descreve um objeto que pode ser usado por qualquer um dos contêineres associativos de hash — hash_map, hash_multimap, hash_set ou hash_multiset — como um objeto de parâmetro de `Traits` padrão para ordenar e aplicar hash aos elementos que eles contêm.|
 |[Classe hash_set](../standard-library/hash-set-class.md)|Usado para o armazenamento e a recuperação rápida de dados de uma coleção na qual os valores dos elementos contidos são exclusivos e funcionam como valores chave.|
 |[Classe hash_multiset](../standard-library/hash-multiset-class.md)|Usado para o armazenamento e a recuperação rápida de dados de uma coleção na qual os valores dos elementos contidos são exclusivos e funcionam como valores chave.|
 

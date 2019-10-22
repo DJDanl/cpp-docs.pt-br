@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun1_ref_t class
 ms.assetid: 7d6742f6-19ba-4523-b3c8-0e5b8f11464f
-ms.openlocfilehash: 88ab2c436b3dd3b5a289124e73b6f1b5d21f96a5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 238d6147b2afa5ca3e143bc57aa4892e17d2c869
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243861"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687751"
 ---
-# <a name="memfun1reft-class"></a>Classe mem_fun1_ref_t
+# <a name="mem_fun1_ref_t-class"></a>Classe mem_fun1_ref_t
 
-Uma classe de adaptador que permite uma `non_const` função de membro que usa um único argumento seja chamada como um objeto de função binária quando inicializado com um argumento de referência. Preterido no c++11, removido do c++17.
+Uma classe de adaptador que permite que um `non_const` função membro que usa um único argumento para ser chamado como um objeto de função binária quando inicializado com um argumento de referência. Preterido no C++ 11, removido do C++ 17.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,22 +33,22 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Pm*\
+@No__t_1 *_Pm*
 Um ponteiro para a função membro da classe `Type` a ser convertida em um objeto de função.
 
-*À esquerda*\
-O objeto que o *_Pm* função de membro é chamada em.
+\ *à esquerda*
+O objeto no qual a função de membro *_Pm* é chamada.
 
-*Certo*\
+\ *à direita*
 O argumento que está sendo fornecido para *_Pm*.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Uma função binária adaptável.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo armazena uma cópia dos *_Pm*, que deve ser um ponteiro para uma função de membro de classe `Type`, em um objeto de membro privado. Ela define sua função de membro `operator()` como de retorno (**esquerdo**.\* `_Pm`) (**direito**).
+O modelo de classe armazena uma cópia de *_Pm*, que deve ser um ponteiro para uma função de membro da classe `Type`, em um objeto de membro privado. Ele define sua função membro `operator()` como retorno (**Left**. \* `_Pm`) (**direita**).
 
 ## <a name="example"></a>Exemplo
 

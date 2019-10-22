@@ -16,14 +16,14 @@ helpviewer_keywords:
 - std::regex_iterator::operator->
 - std::regex_iterator::operator++
 ms.assetid: 0cfd8fd0-5a95-4f3c-bf8e-6ef028c423d3
-ms.openlocfilehash: ccf806a7918100c58e04ab403f3a8b895e8dc256
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fb609df2bf52873dac3cddaa6b12f82ea1b53237
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451567"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689085"
 ---
-# <a name="regexiterator-class"></a>Classe regex_iterator
+# <a name="regex_iterator-class"></a>Classe regex_iterator
 
 Classe de iterador para correspondências.
 
@@ -38,18 +38,18 @@ class regex_iterator
 
 ## <a name="parameters"></a>Parâmetros
 
-*Bidirecional*\
+@No__t_1 *bidirecional*
 O tipo de iterador para subcorrespondências.
 
-*Elem*\
+@No__t_1 *elem*
 O tipo de elemento a ser correspondido.
 
-*RXtraits*\
+@No__t_1 *RXtraits*
 Classe de características para elementos.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve um objeto de iterador de avanço constante. Ele extrai objetos do tipo `match_results<BidIt>` aplicando repetidamente seu objeto de expressão regular `*pregex` à sequência de caracteres definida pelo intervalo do iterador `[begin, end)`.
+O modelo de classe descreve um objeto iterador de encaminhamento constante. Ele extrai objetos do tipo `match_results<BidIt>` aplicando repetidamente seu objeto de expressão regular `*pregex` à sequência de caracteres definida pelo intervalo do iterador `[begin, end)`.
 
 ### <a name="constructors"></a>Construtores
 
@@ -171,7 +171,7 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 O iterador a ser comparado.
 
 ### <a name="remarks"></a>Comentários
@@ -215,12 +215,12 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 O iterador a ser comparado.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retornará verdadeiro se `*this` e *direita* forem iteradores de fim `begin == right.begin`de sequência ou se nenhum for um `pregex == right.pregex`iterador de fim de sequência e, `end == right.end`, e `flags == right.flags`. Caso contrário, retorna false.
+A função de membro retornará true se `*this` e *Right* forem iteradores de fim de sequência ou se nenhum for um iterador de fim de sequência e `begin == right.begin`, `end == right.end`, `pregex == right.pregex` e `flags == right.flags`. Caso contrário, retorna false.
 
 ## <a name="op_arrow"></a>  regex_iterator::operator-&gt;
 
@@ -273,21 +273,21 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Início da sequência de correspondência.
 
-*última*\
+*última* \
 Fim da sequência de correspondência.
 
-*outra*\
+\ *novamente*
 Expressão regular para correspondências.
 
-*fixo*\
+\ de *f*
 Sinalizadores de correspondências.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor cria um iterador de fim de sequência. O `begin` segundo construtor inicializa o valor armazenado com *primeiro*, o valor `end` armazenado com *Last*, o valor `pregex` armazenado com `&re`e o valor `flags` armazenado com *f*. Depois, chama `regex_search(begin, end, match, *pregex, flags)`. Se a pesquisa falhar, o construtor define o objeto como um iterador de fim de sequência.
+O primeiro construtor cria um iterador de fim de sequência. O segundo construtor inicializa o valor armazenado `begin` com *primeiro*, o valor armazenado `end` por *último*, o valor armazenado `pregex` com `&re` e o valor armazenado `flags` com *f*. Depois, chama `regex_search(begin, end, match, *pregex, flags)`. Se a pesquisa falhar, o construtor define o objeto como um iterador de fim de sequência.
 
 ## <a name="regex_type"></a>  regex_iterator::regex_type
 
@@ -316,11 +316,11 @@ O tipo é um sinônimo de `match_results<BidIt>`, em que `BidIt` é o parâmetro
 ## <a name="see-also"></a>Consulte também
 
 [\<regex>](../standard-library/regex.md)\
-[Classe regex_constants](../standard-library/regex-constants-class.md)\
-[Classe regex_error](../standard-library/regex-error-class.md)\
-[\<funções > Regex](../standard-library/regex-functions.md)\
-[Classe regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<operadores de > Regex](../standard-library/regex-operators.md)\
-[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
-[Classe regex_traits](../standard-library/regex-traits-class.md)\
+\ [classe regex_constants](../standard-library/regex-constants-class.md)
+\ [classe regex_error](../standard-library/regex-error-class.md)
+[\<regex > funções](../standard-library/regex-functions.md) \
+\ [Classe regex_iterator](../standard-library/regex-iterator-class.md)
+[operadores de > de \<regex](../standard-library/regex-operators.md) \
+\ [classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)
+\ [Classe regex_traits](../standard-library/regex-traits-class.md)
 [\<Typedef regex>](../standard-library/regex-typedefs.md)

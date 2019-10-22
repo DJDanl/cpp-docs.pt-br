@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a322e517a4adb51879fc2a60f6c08f6561276de9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449127"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689504"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -20,16 +20,16 @@ Define vários tipos e funções básicas para a operação de iostreams. Esse c
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho**: \<Ios >
+**Cabeçalho**: \<ios >
 
 **Namespace:** std
 
 > [!NOTE]
-> A \<biblioteca de > do IOS `#include <iosfwd>` usa a instrução.
+> A biblioteca de > de \<ios usa a instrução `#include <iosfwd>`.
 
 ## <a name="remarks"></a>Comentários
 
-Um grande grupo de funções são manipuladores. Um manipulador declarado em \<ios> altera os valores armazenados em seu objeto de argumento da classe [ios_base](../standard-library/ios-base-class.md). Outros manipuladores executam ações em fluxos controlados por objetos de um tipo derivado dessa classe, como uma especialização de uma das classes de modelo [basic_istream](../standard-library/basic-istream-class.md) ou [basic_ostream](../standard-library/basic-ostream-class.md). Por exemplo, [noskipws](../standard-library/ios-functions.md#noskipws)(**Str**) limpa o sinalizador `ios_base::skipws` de formato no objeto `str`, que pode ser de um desses tipos.
+Um grande grupo de funções são manipuladores. Um manipulador declarado em \<ios> altera os valores armazenados em seu objeto de argumento da classe [ios_base](../standard-library/ios-base-class.md). Outros manipuladores executam ações em fluxos controlados por objetos de um tipo derivado dessa classe, como uma especialização de um dos modelos de classe [basic_istream](../standard-library/basic-istream-class.md) ou [basic_ostream](../standard-library/basic-ostream-class.md). Por exemplo, [noskipws](../standard-library/ios-functions.md#noskipws)(**Str**) limpa o sinalizador de formato `ios_base::skipws` no objeto `str`, que pode ser de um desses tipos.
 
 Também é possível chamar um manipulador inserindo-o em um fluxo de saída ou extraindo-o de um fluxo de entrada, devido às operações especiais de inserção e extração fornecidas para as classes derivadas de `ios_base`. Por exemplo:
 
@@ -95,8 +95,8 @@ chama [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 |||
 |-|-|
-|[basic_ios](../standard-library/basic-ios-class.md)|A classe de modelo descreve as funções membro e de armazenamento comuns a ambos os fluxos de entrada (da classe de modelo [basic_istream](../standard-library/basic-istream-class.md)) e os fluxos de saída (da classe de modelo [basic_ostream](../standard-library/basic-ostream-class.md)) que dependem dos parâmetros do modelo.|
-|[fpos](../standard-library/fpos-class.md)|A classe de modelo descreve um objeto que pode armazenar todas as informações necessárias para restaurar um indicador de posição de arquivo arbitrária dentro de qualquer fluxo.|
+|[basic_ios](../standard-library/basic-ios-class.md)|O modelo de classe descreve as funções de armazenamento e membro comuns a fluxos de entrada (do modelo de classe [basic_istream](../standard-library/basic-istream-class.md)) e fluxos de saída (do modelo de classe [basic_ostream](../standard-library/basic-ostream-class.md)) que dependem dos parâmetros do modelo.|
+|[fpos](../standard-library/fpos-class.md)|O modelo de classe descreve um objeto que pode armazenar todas as informações necessárias para restaurar um indicador de posição de arquivo arbitrário dentro de qualquer fluxo.|
 |[ios_base](../standard-library/ios-base-class.md)|A classe descreve as funções membro e de armazenamento comuns aos fluxos de entrada e de saída que não dependem dos parâmetros do modelo.|
 
 ## <a name="see-also"></a>Consulte também

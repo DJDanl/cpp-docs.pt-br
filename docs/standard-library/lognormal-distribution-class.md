@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: 20967204d1df40d2b8dbb21c499e45404f44a4ae
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bcf587c5029fdf0b61da45dbd4ee9250f4c3a43b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453814"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687795"
 ---
-# <a name="lognormaldistribution-class"></a>Classe lognormal_distribution
+# <a name="lognormal_distribution-class"></a>Classe lognormal_distribution
 
 Gera uma distribuição normal de log.
 
@@ -68,12 +68,12 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType*\
-O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+@No__t_1 *RealType*
+O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou tipo **Double** se nenhum for fornecido, distribuído de acordo com a distribuição normal de log. A tabela a seguir contém links para artigos sobre cada um dos membros.
+O modelo de classe descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou tipo **Double** se nenhum for fornecido, distribuído de acordo com a distribuição normal de log. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -195,13 +195,13 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*d*\
+*m* \
 O parâmetro de distribuição `m`.
 
-*&* \
+\ *s*
 O parâmetro de distribuição `s`.
 
-*Parm*\
+\ de *parâmetros*
 A estrutura `param_type` usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
@@ -230,13 +230,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*d*\
+*m* \
 O parâmetro de distribuição `m`.
 
-*&* \
+\ *s*
 O parâmetro de distribuição `s`.
 
-*Certo*\
+\ *à direita*
 A estrutura `param_type` usada para comparar.
 
 ### <a name="remarks"></a>Comentários

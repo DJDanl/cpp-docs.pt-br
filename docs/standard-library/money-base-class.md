@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-ms.openlocfilehash: 5b19635cf4d2cce58ec50226c463a075cfac5b0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c614832b0cbb1cc23e42ecb3a939ccf1334a5cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455563"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689320"
 ---
-# <a name="moneybase-class"></a>Classe money_base
+# <a name="money_base-class"></a>Classe money_base
 
-A classe descreve uma enumeração e uma estrutura comuns para todas as especializações da classe de modelo [moneypunct](../standard-library/moneypunct-class.md).
+A classe descreve uma enumeração e uma estrutura comum a todas as especializações do modelo de classe [moneypunct](../standard-library/moneypunct-class.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,17 +28,17 @@ struct pattern
 
 ## <a name="remarks"></a>Comentários
 
-A enumeração `part` descreve os valores possíveis em elementos do campo de matriz no padrão de estrutura. Os valores de `part` são:
+A `part` de enumeração descreve os valores possíveis em elementos do campo de matriz no padrão de estrutura. Os valores de `part` são:
 
-- `none`para corresponder a zero ou mais espaços ou não gerar nada.
+- `none` para corresponder a zero ou mais espaços ou não gerar nada.
 
-- `sign`para corresponder ou gerar um sinal positivo ou negativo.
+- `sign` para corresponder ou gerar um sinal positivo ou negativo.
 
-- `space`para corresponder a zero ou mais espaços ou gerar um espaço.
+- `space` para corresponder a zero ou mais espaços ou gerar um espaço.
 
-- `symbol`para corresponder ou gerar um símbolo de moeda.
+- `symbol` para corresponder ou gerar um símbolo de moeda.
 
-- `value`para corresponder ou gerar um valor monetário.
+- `value` para corresponder ou gerar um valor monetário.
 
 ## <a name="requirements"></a>Requisitos
 

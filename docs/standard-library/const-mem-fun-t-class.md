@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun_t class
 ms.assetid: f169d381-019b-4a0e-a9a3-54da6d948270
-ms.openlocfilehash: 0bdfdbac7a23a4b0e3b830b05990bf028c7bb316
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5263612a26b2bcb606ad712a2a8e0a521ce9437a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244556"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688204"
 ---
-# <a name="constmemfunt-class"></a>Classe const_mem_fun_t
+# <a name="const_mem_fun_t-class"></a>Classe const_mem_fun_t
 
-Uma classe de adaptador que permite que uma função de membro const que não usa argumentos seja chamada como um objeto de função unária quando inicializado com um argumento de referência. Preterido no c++11, removido do c++17.
+Uma classe de adaptador que permite que uma função de membro const que não usa argumentos seja chamada como um objeto de função unária quando inicializado com um argumento de referência. Preterido no C++ 11, removido do C++ 17.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,19 +30,19 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ### <a name="parameters"></a>Parâmetros
 
-*PM*\
+@No__t_1 *PM*
 Um ponteiro para a função membro da classe `Type` a ser convertida em um objeto de função.
 
-*Pleft*\
-O objeto que o *Pm* função de membro é chamada em.
+@No__t_1 *pleft*
+O objeto no qual a função de membro *PM* é chamada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Uma função unária adaptável.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo armazena uma cópia dos *Pm*, que deve ser um ponteiro para uma função de membro de classe `Type`, em um objeto de membro privado. Ela define sua função de membro `operator()` como de retorno (`Pleft` -> \* `Pm`) () **const**.
+O modelo de classe armazena uma cópia de *PM*, que deve ser um ponteiro para uma função membro da classe `Type`, em um objeto de membro privado. Ele define sua função membro `operator()` como o retorno (`Pleft` -> \* `Pm`) () **const**.
 
 ## <a name="example"></a>Exemplo
 

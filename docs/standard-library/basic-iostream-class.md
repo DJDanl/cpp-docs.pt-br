@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - basic_iostream class
 ms.assetid: 294b680b-eb49-4066-8db2-6d52dac9d6e3
-ms.openlocfilehash: 052271e2e2cc929875489e27abde2147bc5c070a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 190c9aa23493cea67bae44be93fd3fdbdecc4447
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460094"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690005"
 ---
-# <a name="basiciostream-class"></a>Classe basic_iostream
+# <a name="basic_iostream-class"></a>Classe basic_iostream
 
 Uma classe de fluxo que pode fazer tanto entrada quanto saída.
 
@@ -35,7 +35,7 @@ public:
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve um objeto que controla inserções, por meio de sua classe base [basic_ostream](../standard-library/basic-ostream-class.md)< `Elem`, `Tr`> e extrações, por meio de sua classe base [basic_istream](../standard-library/basic-istream-class.md)< `Elem`, `Tr`>. Os dois objetos compartilham uma classe base virtual comum [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>. Eles também gerenciam um buffer de fluxo comum, com elementos do tipo `Elem`, cujas características de caractere são determinadas pela classe `Tr`. O construtor inicializa suas classes base por meio de `basic_istream`( **strbuf**) e `basic_ostream`( **strbuf**).
+O modelo de classe descreve um objeto que controla as inserções, por meio de sua classe base [basic_ostream](../standard-library/basic-ostream-class.md) <  `Elem`, `Tr` > e extrações, por meio de sua classe base [basic_istream](../standard-library/basic-istream-class.md) <  `Elem`, `Tr` >. Os dois objetos compartilham uma classe base virtual comum [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>. Eles também gerenciam um buffer de fluxo comum, com elementos do tipo `Elem`, cujas características de caractere são determinadas pela classe `Tr`. O construtor inicializa suas classes base por meio de `basic_istream`( **strbuf**) e `basic_ostream`( **strbuf**).
 
 ### <a name="constructors"></a>Construtores
 
@@ -75,10 +75,10 @@ basic_iostream();
 
 ### <a name="parameters"></a>Parâmetros
 
-*strbuf*\
+\ *strbuf*
 Um objeto `basic_streambuf` existente.
 
-*Certo*\
+\ *à direita*
 Um objeto `basic_iostream` Existente usado para construir um novo `basic_iostream`.
 
 ### <a name="remarks"></a>Comentários
@@ -97,12 +97,12 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 Uma referência `rvalue` a um objeto `basic_iostream` do qual atribuir.
 
 ### <a name="remarks"></a>Comentários
 
-As chamadas `swap(right)`de operador de membro.
+O operador membro chama `swap(right)`.
 
 ## <a name="swap"></a>  basic_iostream::swap
 
@@ -114,12 +114,12 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 O objeto `basic_iostream` a trocar.
 
 ### <a name="remarks"></a>Comentários
 
-As chamadas `swap(right)`de função de membro.
+A função de membro chama `swap(right)`.
 
 ## <a name="see-also"></a>Consulte também
 

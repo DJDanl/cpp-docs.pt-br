@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::time_put [C++], do_put
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
-ms.openlocfilehash: 73f4cdd0028164ce5f8215258c517c2e59eb7538
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2c0ae501693a8abffc72a23be9c427f31bad65b6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459953"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685428"
 ---
 # <a name="time_put-class"></a>Classe time_put
 
-A classe de modelo descreve um objeto que pode servir como uma faceta de localidade para controlar conversões de valores de tempo em sequências do tipo `CharType`.
+O modelo de classe descreve um objeto que pode servir como uma faceta de localidade para controlar conversões de valores de tempo para sequências do tipo `CharType`.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -35,10 +35,10 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType*\
+@No__t_1 *CharType*
 O tipo usado em um programa para codificar caracteres.
 
-*OutputIterator*\
+@No__t_1 *OutputIterator*
 O tipo de iterador no qual as funções put de tempo gravam sua saída.
 
 ## <a name="remarks"></a>Comentários
@@ -98,30 +98,30 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parâmetros
 
-*última*\
+*próximo* \
 Um iterador de saída no qual a sequência de caracteres que representa a data e hora deve ser inserida.
 
-*_Iosbase*\
+@No__t_1 *_Iosbase*
 Não utilizado.
 
-*_Pt*\
+@No__t_1 *_Pt*
 As informações de data e hora que estão sendo geradas.
 
-*_Fmt*\
+@No__t_1 *_Fmt*
 O formato da saída. Consulte [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) para obter valores válidos.
 
-*_Mod*\
+@No__t_1 *_Mod*
 Um modificador do formato. Consulte [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) para obter valores válidos.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador para a primeira posição após o último elemento inserido.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro protegido virtual gera elementos sequenciais `next` começando com os valores de hora armazenados \* no objeto `_Pt`, `tm`do tipo. A função retorna um iterador que designa o próximo local a inserir um elemento após a saída gerada.
+A função de membro protegido virtual gera elementos sequenciais que começam em `next` de valores de tempo armazenados no objeto \* `_Pt`, do tipo `tm`. A função retorna um iterador que designa o próximo local a inserir um elemento após a saída gerada.
 
-A saída é gerada pelas mesmas regras usadas pelo `strftime`, com um último argumento de *_Pt*, para gerar uma série de elementos **Char** em uma matriz. Cada elemento **Char** é presumido para mapear para um elemento equivalente `CharType` do tipo por um mapeamento simples e um para um. Se *_Mod* for igual a zero, o formato efetivo será "% F", em que F é substituído por *_Fmt*. Caso contrário, o formato efetivo é "% MF", onde M é substituído por *_Mod*.
+A saída é gerada pelas mesmas regras usadas pelo `strftime`, com um último argumento de *_Pt*, para gerar uma série de elementos **Char** em uma matriz. Cada elemento **Char** é presumido para mapear para um elemento equivalente do tipo `CharType` por um mapeamento simples de um-para-um. Se *_Mod* for igual a zero, o formato efetivo será "% F", em que F é substituído por *_Fmt*. Caso contrário, o formato efetivo é "% MF", onde M é substituído por *_Mod*.
 
 ### <a name="example"></a>Exemplo
 
@@ -161,37 +161,37 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>Parâmetros
 
-*última*\
+*próximo* \
 Um iterador de saída no qual a sequência de caracteres que representa a data e hora deve ser inserida.
 
-*_Iosbase*\
+@No__t_1 *_Iosbase*
 Não utilizado.
 
-*_Fill*\
+@No__t_1 *_Fill*
 O caractere do tipo `CharType` usado para espaçamento.
 
-*_Pt*\
+@No__t_1 *_Pt*
 As informações de data e hora que estão sendo geradas.
 
-*_Fmt*\
+@No__t_1 *_Fmt*
 O formato da saída. Consulte [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) para obter valores válidos.
 
-*_Mod*\
+@No__t_1 *_Mod*
 Um modificador do formato. Consulte [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) para obter valores válidos.
 
-*primeiro*\
+*primeiro* \
 O início da cadeia de caracteres de formatação da saída. Consulte [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) para obter valores válidos.
 
-*última*\
+*última* \
 O final da cadeia de caracteres de formatação da saída. Consulte [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) para obter valores válidos.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador para a primeira posição após o último elemento inserido.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função de membro retorna [do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`). A segunda função membro copia para \* `next` ++ qualquer elemento no intervalo [`first`, `last`] que não seja um percentual (%). Para um percentual seguido por um caractere *C* no intervalo [`first`, `last`], a função avaliará `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) e ignorará após *C*. Se, no entanto, *C* for um caractere qualificador do EOQ# definido, seguido por um caractere `C2` no intervalo [`first`, `last`], a função avaliará `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) e ignorará após `C2`.
+A primeira função de membro retorna [do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`). A segunda função membro copia para \* `next` ++ qualquer elemento no intervalo [`first`, `last`] que não seja um percentual (%). Para um percentual seguido por um caractere *C* no intervalo [`first`, `last`), a função avalia `next`  =  `do_put` (`next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) e ignora *c*. Se, no entanto, *C* for um caractere qualificador do set EOQ #, seguido por um caractere 3 no intervalo [4, 5), a função avaliará 6 7 8 (9, 0 , 1, 2, 3, *C*) e ignora 5 anteriores.
 
 ### <a name="example"></a>Exemplo
 
@@ -247,18 +247,18 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
 ### <a name="remarks"></a>Comentários
 
 Os valores possíveis para o parâmetro *_Refs* e seu significado são:
 
-- 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
+- 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
-- 1: O tempo de vida do objeto deve ser gerenciado manualmente.
+- 1: o tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: Esses valores não estão definidos.
+- \> 1: esses valores não estão definidos.
 
 O construtor inicializa seu objeto base com [locale:: faceta](../standard-library/locale-class.md#facet_class)( *_Refs*).
 

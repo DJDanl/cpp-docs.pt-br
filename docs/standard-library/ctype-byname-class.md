@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-ms.openlocfilehash: 0b0f33781cc9f1f54661a44a5434c94316432a45
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: dcaaff45fb33155710f788af4ceb657eff97464e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457889"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689742"
 ---
-# <a name="ctypebyname-class"></a>Classe ctype_byname
+# <a name="ctype_byname-class"></a>Classe ctype_byname
 
-A classe de modelo derivada descreve um objeto que pode servir como uma faceta ctype de determinada localidade, permitindo a classificação e conversão de caracteres entre maiúsculas e minúsculas, assim como entre conjuntos de caracteres especificados de localidade e nativos.
+O modelo de classe derivada descreve um objeto que pode servir como uma faceta CType de uma determinada localidade, permitindo a classificação de caracteres e a conversão de caracteres entre os conjuntos de caracteres de letras maiúsculas e nativas e os especificados.
 
 ## <a name="syntax"></a>Sintaxe
 

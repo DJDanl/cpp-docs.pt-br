@@ -7,14 +7,14 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: 703038ed435de36d60fcf97aa5100197602e7130
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a0d7f57d13b4387dd5ba39048adf65d9ec7ca3f5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455044"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684419"
 ---
-# <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
+# <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
 Define modelos para constantes de tempo de compilação que fornecem informações sobre as propriedades de seus argumentos de tipo ou produzem tipos transformados.
 
@@ -26,22 +26,22 @@ Define modelos para constantes de tempo de compilação que fornecem informaçõ
 
 ## <a name="remarks"></a>Comentários
 
-As classes e os modelos \<no type_traits > são usados para dar suporte à inferência de tipos, classificação e transformação no momento da compilação. Eles também são usados para detectar erros relacionados ao tipo e para ajudá-lo a otimizar seu código genérico. As características do tipo unário descrevem uma propriedade de um tipo, as características do tipo binary descrevem uma relação entre os tipos e as características da transformação modificam uma propriedade de um tipo.
+As classes e os modelos no \<type_traits > são usados para dar suporte à inferência de tipos, classificação e transformação no momento da compilação. Eles também são usados para detectar erros relacionados ao tipo e para ajudá-lo a otimizar seu código genérico. As características do tipo unário descrevem uma propriedade de um tipo, as características do tipo binary descrevem uma relação entre os tipos e as características da transformação modificam uma propriedade de um tipo.
 
-A classe `integral_constant` auxiliar e suas `true_type` especializações de modelo `false_type` e formam as classes base para predicados de tipo. Um *predicado de tipo* é um modelo que usa um ou mais argumentos de tipo. Quando um predicado de tipo se aplica *true*, ele é derivado publicamente, direta ou indiretamente, de [true_type](../standard-library/type-traits-typedefs.md#true_type). Quando um predicado de tipo *tem false*, ele é derivado publicamente, direta ou indiretamente, de [false_type](../standard-library/type-traits-typedefs.md#false_type).
+A classe auxiliar `integral_constant` e suas especializações de modelo `true_type` e `false_type` forma as classes base para predicados de tipo. Um *predicado de tipo* é um modelo que usa um ou mais argumentos de tipo. Quando um predicado de tipo se aplica *true*, ele é derivado publicamente, direta ou indiretamente, de [true_type](../standard-library/type-traits-typedefs.md#true_type). Quando um predicado de tipo *tem false*, ele é derivado publicamente, direta ou indiretamente, de [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
 Um *modificador de tipo* ou uma *característica da transformação* é um modelo que usa um ou mais argumentos de modelo e tem um membro, `type`, que é sinônimo do tipo modificado.
 
 ### <a name="alias-templates"></a>Modelos de alias
 
-Para simplificar as expressões de características de tipo, `typename some_trait<T>::type` os [modelos de alias](../cpp/aliases-and-typedefs-cpp.md) para são fornecidos, em que *some_trait* é o nome da classe de modelo. Por exemplo, [add_const](../standard-library/add-const-class.md) tem o modelo de alias para seu tipo `add_const_t`, definido como:
+Para simplificar as expressões de características de tipo, os [modelos de alias](../cpp/aliases-and-typedefs-cpp.md) para `typename some_trait<T>::type` são fornecidos, em que *some_trait* é o nome do modelo de classe. Por exemplo, [add_const](../standard-library/add-const-class.md) tem o modelo de alias para seu tipo `add_const_t`, definido como:
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-Estes são os aliases fornecidos para os `type` Membros:
+Estes são os aliases fornecidos para os membros do `type`:
 
 ||||
 |-|-|-|

@@ -7,12 +7,12 @@ f1_keywords:
 - string/std::u32string
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
-ms.openlocfilehash: a1ade5547b98e4376a00f33d45d695a328b772d3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 950ca5ae34b6469c3d79b7297d4fe7b7644d2fcf
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459227"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688925"
 ---
 # <a name="ltstringgt-typedefs"></a>&lt;string&gt; typedefs
 
@@ -23,7 +23,7 @@ ms.locfileid: "68459227"
 
 ## <a name="string"></a>  string
 
-Um tipo que descreve uma especialização da classe de modelo [basic_string](../standard-library/basic-string-class.md) com elementos do tipo **Char**.
+Um tipo que descreve uma especialização do modelo de classe [basic_string](../standard-library/basic-string-class.md) com elementos do tipo **Char**.
 
 Outros typedefs que especializam `basic_string` incluem [wstring](../standard-library/string-typedefs.md#wstring), [u16string](../standard-library/string-typedefs.md#u16string) e [u32string](../standard-library/string-typedefs.md#u32string).
 
@@ -45,7 +45,7 @@ Para obter uma lista de construtores de cadeia de caracteres, consulte [basic_st
 
 ## <a name="u16string"></a>  u16string
 
-Um tipo que descreve uma especialização da classe de modelo [basic_string](../standard-library/basic-string-class.md) com elementos do tipo `char16_t`.
+Um tipo que descreve uma especialização do modelo de classe [basic_string](../standard-library/basic-string-class.md) com elementos do tipo `char16_t`.
 
 Outros typedefs que especializam `basic_string` incluem [wstring](../standard-library/string-typedefs.md#wstring), [string](../standard-library/string-typedefs.md#string) e [u32string](../standard-library/string-typedefs.md#u32string).
 
@@ -59,7 +59,7 @@ Para obter uma lista de construtores de cadeia de caracteres, consulte [basic_st
 
 ## <a name="u32string"></a>  u32string
 
-Um tipo que descreve uma especialização da classe de modelo [basic_string](../standard-library/basic-string-class.md) com elementos do tipo `char32_t`.
+Um tipo que descreve uma especialização do modelo de classe [basic_string](../standard-library/basic-string-class.md) com elementos do tipo `char32_t`.
 
 Outros typedefs que especializam `basic_string` incluem [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) e [wstring](../standard-library/string-typedefs.md#wstring).
 
@@ -73,7 +73,7 @@ Para obter uma lista de construtores de cadeia de caracteres, consulte [basic_st
 
 ## <a name="wstring"></a>  wstring
 
-Um tipo que descreve uma especialização da classe de modelo [basic_string](../standard-library/basic-string-class.md) com elementos do tipo **wchar_t**.
+Um tipo que descreve uma especialização do modelo de classe [basic_string](../standard-library/basic-string-class.md) com elementos do tipo **wchar_t**.
 
 Outros typedefs que especializam `basic_string` incluem [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) e [u32string](../standard-library/string-typedefs.md#u32string).
 
@@ -94,7 +94,7 @@ basic_string<wchar_t> wstr(L"");
 Para obter uma lista de construtores de cadeia de caracteres, consulte [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
 > [!NOTE]
-> O tamanho de **wchar_t** é definido pela implementação. Se o seu código depende de **wchar_t** para ser um determinado tamanho, verifique a implementação da plataforma (por exemplo, `sizeof(wchar_t)`com). Se você precisar de um tipo de caractere de cadeia com uma largura que garantidamente continuará a mesma em todas as plataformas, use [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) ou [u32string](../standard-library/string-typedefs.md#u32string).
+> O tamanho de **wchar_t** é definido pela implementação. Se o seu código depende de **wchar_t** para ser um determinado tamanho, verifique a implementação da plataforma (por exemplo, com `sizeof(wchar_t)`). Se você precisar de um tipo de caractere de cadeia com uma largura que garantidamente continuará a mesma em todas as plataformas, use [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) ou [u32string](../standard-library/string-typedefs.md#u32string).
 
 ## <a name="see-also"></a>Consulte também
 

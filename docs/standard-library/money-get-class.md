@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::money_get [C++], do_get
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
-ms.openlocfilehash: eb5e1a7b83db561687f83be96c79add8b54589e8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d882edd5ce55b15d03512ca9a55a49bc3424ee7a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455553"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687678"
 ---
-# <a name="moneyget-class"></a>Classe money_get
+# <a name="money_get-class"></a>Classe money_get
 
-A classe de modelo descreve um objeto que pode servir como uma faceta de localidade para controlar conversões de sequências do tipo `CharType` em valores monetários.
+O modelo de classe descreve um objeto que pode servir como uma faceta de localidade para controlar conversões de sequências do tipo `CharType` para valores monetários.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,10 +36,10 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType*\
+@No__t_1 *CharType*
 O tipo usado em um programa para codificar caracteres em uma localidade.
 
-*InputIterator*\
+@No__t_1 *InputIterator*
 O tipo de iterador do qual as funções get leem sua entrada.
 
 ## <a name="remarks"></a>Comentários
@@ -105,31 +105,31 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Iterador de entrada que trata o início da sequência a ser convertido.
 
-*última*\
+*última* \
 Iterador de entrada que trata o fim da sequência a ser convertido.
 
-*Intl*\
+@No__t_1 *intl*
 Um valor booliano que indica o tipo do símbolo de moeda esperado na sequência: **true** se internacional, **false** se nacional.
 
-*Iosbase*\
+@No__t_1 *Iosbase*
 Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
 
-*Status*\
+*Estado* \
 Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas ou não.
 
-*Val*\
+*valor* \
 Uma cadeia de caracteres que armazena a sequência convertida.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de entrada que trata o primeiro elemento após o campo de entrada monetário.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função membro virtual protegida virtual tenta corresponder elementos sequenciais, começando pelo primeiro na sequência [ `first`, `last`) até ter reconhecido um campo de entrada monetária completo e não vazio. Se for bem-sucedido, ele converterá esse campo em uma sequência de um ou mais dígitos decimais, opcionalmente precedido por um sinal `-`de subtração (), para representar o valor e armazenará o resultado no *valor*do objeto [string_type](#string_type) . Ela retorna um iterador que designa o primeiro elemento após o campo de entrada monetário. Caso contrário, a função armazena uma sequência vazia em *Val* e `ios_base::failbit` define no *estado*. Ela retorna um iterador que designa o primeiro elemento após qualquer prefixo de um campo de entrada monetário válido. Em ambos os casos, se o valor retornado for igual a `last`, a função definirá `ios_base::eofbit` em `State`.
+A primeira função membro virtual protegida virtual tenta corresponder elementos sequenciais, começando pelo primeiro na sequência [ `first`, `last`) até ter reconhecido um campo de entrada monetária completo e não vazio. Se for bem-sucedido, ele converterá esse campo em uma sequência de um ou mais dígitos decimais, opcionalmente precedido por um sinal de subtração (`-`), para representar a quantidade e armazenar o resultado no *valor*do objeto [string_type](#string_type) . Ela retorna um iterador que designa o primeiro elemento após o campo de entrada monetário. Caso contrário, a função armazena uma sequência vazia em *Val* e define `ios_base::failbit` no *estado*. Ela retorna um iterador que designa o primeiro elemento após qualquer prefixo de um campo de entrada monetário válido. Em ambos os casos, se o valor retornado for igual a `last`, a função definirá `ios_base::eofbit` em `State`.
 
 A segunda função de membro virtual protegido se comporta da mesma forma que a primeira, exceto que, se for bem-sucedida, ela converterá a sequência de dígitos assinada opcionalmente em um valor do tipo **Long double** e armazenará esse valor em *Val*.
 
@@ -187,31 +187,31 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Iterador de entrada que trata o início da sequência a ser convertido.
 
-*última*\
+*última* \
 Iterador de entrada que trata o fim da sequência a ser convertido.
 
-*Intl*\
+@No__t_1 *intl*
 Um valor booliano que indica o tipo do símbolo de moeda esperado na sequência: **true** se internacional, **false** se nacional.
 
-*Iosbase*\
+@No__t_1 *Iosbase*
 Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório
 
-*Status*\
+*Estado* \
 Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
-*Val*\
+*valor* \
 Uma cadeia de caracteres que armazena a sequência convertida.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de entrada que trata o primeiro elemento após o campo de entrada monetário.
 
 ### <a name="remarks"></a>Comentários
 
-Ambas as funções de membro retornam [do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`.
+Ambas as funções de membro retornam [do_get](#do_get) `(first, last, Intl, Iosbase, State, val)`.
 
 ### <a name="example"></a>Exemplo
 
@@ -284,18 +284,18 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
 ### <a name="remarks"></a>Comentários
 
 Os valores possíveis para o parâmetro *_Refs* e seu significado são:
 
-- 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
+- 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
-- 1: O tempo de vida do objeto deve ser gerenciado manualmente.
+- 1: o tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: Esses valores não estão definidos.
+- \> 1: esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 
@@ -311,7 +311,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve uma especialização da classe de modelo [basic_string](../standard-library/basic-string-class.md).
+O tipo descreve uma especialização do modelo de classe [basic_string](../standard-library/basic-string-class.md).
 
 ## <a name="see-also"></a>Consulte também
 

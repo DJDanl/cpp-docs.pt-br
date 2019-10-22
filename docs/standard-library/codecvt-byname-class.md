@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-ms.openlocfilehash: 62781d575d6b9dda3f3c1e2a744091221c6f9584
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b48f01126eba7082230fc5e19150d42d1dfad2f3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459860"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688299"
 ---
-# <a name="codecvtbyname-class"></a>Classe codecvt_byname
+# <a name="codecvt_byname-class"></a>Classe codecvt_byname
 
-Uma classe de modelo derivada que descreve um objeto que pode funcionar como uma faceta de agrupamento de uma determinada localidade, permitindo a recuperação de informações específicas a uma área cultural no que diz respeito a conversões.
+Um modelo de classe derivada que descreve um objeto que pode servir como uma faceta de agrupamento de uma determinada localidade, permitindo a recuperação de informações específicas para uma área cultural em relação a conversões.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,10 +43,10 @@ protected:
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Locname*\
+@No__t_1 *_Locname*
 Uma localidade nomeada.
 
-*_Refs*\
+@No__t_1 *_Refs*
 Uma contagem de referência inicial.
 
 ## <a name="remarks"></a>Comentários

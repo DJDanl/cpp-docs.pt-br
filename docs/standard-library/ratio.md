@@ -31,12 +31,12 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: f84bea2e3f4a01bb9428eddde3efbf53b73bc2f3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5f6919c84c3fb125e149ba6bcd69b6b7f996d17f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458160"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687058"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -60,7 +60,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-O modelo `ratio` define as constantes `num` estáticas `den` e, `num` por exemplo,  /  `den` = = numerador `den` /denominador e `num` não têm fatores comuns. `num` / `den`é o valor que é representado pela classe de modelo. Portanto, `type` designa a `ratio<num, den>`instanciação.
+O modelo `ratio` define as constantes estáticas `num` e `den` de modo que `num`  /  `den` = = numerador/denominador e `num` e `den` não tenham fatores comuns. `num`  /  `den` é o valor representado pelo modelo de classe. Portanto, `type` designa a `ratio<num, den>` de instanciação.
 
 ### <a name="specializations"></a>Especializações
 
@@ -70,7 +70,7 @@ O modelo `ratio` define as constantes `num` estáticas `den` e, `num` por exempl
 
 Cada especialização adota dois parâmetros de modelo que também devem ser especializações de `ratio`. O valor de `type` é determinado por uma operação lógica associada.
 
-|Nome|Valor `type`|
+|Name|Valor `type`|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|

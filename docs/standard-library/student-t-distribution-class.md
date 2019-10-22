@@ -21,14 +21,14 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: 42e7337a2a0803af51e7dd11f53c482dbfc2aa0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ebf9324d478a12476b548dc62455e205b9261430
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458996"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685861"
 ---
-# <a name="studenttdistribution-class"></a>Classe student_t_distribution
+# <a name="student_t_distribution-class"></a>Classe student_t_distribution
 
 Gera uma distribuição *t* de Student.
 
@@ -64,12 +64,12 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType*\
-O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+@No__t_1 *RealType*
+O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou tipo **Double** se nenhum for fornecido, distribuído de acordo com a distribuição *t*do aluno. A tabela a seguir contém links para artigos sobre cada um dos membros.
+O modelo de classe descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou tipo **Double** se nenhum for fornecido, distribuído de acordo com a distribuição *t*do aluno. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -177,7 +177,7 @@ explicit student_t_distribution(const param_type& parm);
 *n*\
 O parâmetro de distribuição `n`.
 
-*Parm*\
+\ de *parâmetros*
 O pacote de parâmetro usado para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
@@ -208,7 +208,7 @@ struct param_type {
 *n*\
 O parâmetro de distribuição `n`.
 
-*Certo*\
+\ *à direita*
 O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários

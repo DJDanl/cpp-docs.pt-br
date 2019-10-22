@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 80d5d297cc28cfb019dae99e9e9736e4b2eb654f
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 0b8ca5744418860cc6b4868dda9174ae2eb68a98
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957122"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685886"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
-Define a classe de modelo do contêiner `basic_string` e diversos modelos de suporte.
+Define o modelo de classe de contêiner `basic_string` e vários modelos de suporte.
 
 Para obter mais informações sobre `basic_string`, consulte [basic_string Class](../standard-library/basic-string-class.md)
 
@@ -32,16 +32,16 @@ A linguagem C++ e a biblioteca C++ padrão dão suporte a dois tipos de cadeias 
 
 - Matrizes de caracteres com terminação nula geralmente conhecidas como cadeias de caracteres C.
 
-- Objetos de classe de modelo, `basic_string`do tipo, que lidam com todos os argumentos de modelo semelhantes a **caracteres**.
+- objetos de modelo de classe, do tipo `basic_string`, que lidam com todos os argumentos de modelo semelhantes a **caracteres**.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nome de tipo|Descrição|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Um tipo que descreve uma especialização da classe `basic_string` de modelo com elementos do tipo **Char** como `string`um.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Um tipo que descreve uma especialização da classe `basic_string` de modelo com elementos do tipo **wchar_t** como `wstring`um.|
-|[u16string](../standard-library/string-typedefs.md#u16string)|Um tipo que descreve uma especialização da classe modelo `basic_string` com base em elementos do tipo `char16_t`.|
-|[u32string](../standard-library/string-typedefs.md#u32string)|Um tipo que descreve uma especialização da classe modelo `basic_string` com base em elementos do tipo `char32_t`.|
+|[string](../standard-library/string-typedefs.md#string)|Um tipo que descreve uma especialização do modelo de classe `basic_string` com elementos do tipo **Char** como um `string`.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Um tipo que descreve uma especialização do modelo de classe `basic_string` com elementos do tipo **wchar_t** como um `wstring`.|
+|[u16string](../standard-library/string-typedefs.md#u16string)|Um tipo que descreve uma especialização do modelo de classe `basic_string` com base em elementos do tipo `char16_t`.|
+|[u32string](../standard-library/string-typedefs.md#u32string)|Um tipo que descreve uma especialização do modelo de classe `basic_string` com base em elementos do tipo `char32_t`.|
 
 ### <a name="operators"></a>Operadores
 
@@ -81,10 +81,10 @@ A linguagem C++ e a biblioteca C++ padrão dão suporte a dois tipos de cadeias 
 
 ### <a name="classes"></a>Classes
 
-|Classe|Descrição|
+|Class|Descrição|
 |-|-|
-|[Classe basic_string](../standard-library/basic-string-class.md)|Uma classe de modelo que descreve os objetos que pode armazenar uma sequência de objetos arbitrários do tipo caractere.|
-|[Struct char_traits](../standard-library/char-traits-struct.md)|Uma classe de modelo que descreve os atributos associados a um caractere do tipo CharType|
+|[Classe basic_string](../standard-library/basic-string-class.md)|Um modelo de classe que descreve objetos que podem armazenar uma sequência de objetos arbitrários do tipo caractere.|
+|[Struct char_traits](../standard-library/char-traits-struct.md)|Um modelo de classe que descreve os atributos associados a um caractere do tipo CharType|
 
 ### <a name="specializations"></a>Especializações
 

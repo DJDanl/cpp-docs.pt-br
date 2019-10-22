@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: 0a2bbc69d4f2d3af0ee6e00a2672436a5f15ab67
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3b839126b7b5541c3a9dd033fcbbc8221bde7c22
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448125"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689468"
 ---
-# <a name="istreambufiterator-class"></a>Classe istreambuf_iterator
+# <a name="istreambuf_iterator-class"></a>Classe istreambuf_iterator
 
-A classe de modelo istreambuf_iterator descreve um objeto de iterador de entrada que extrai elementos de caractere de um buffer de fluxo de entrada, que acessa por meio de um objeto que armazena, do tipo ponteiro para `basic_streambuf`\< **CharType**, **Traits**>.
+O modelo de classe istreambuf_iterator descreve um objeto de iterador de entrada que extrai elementos de caractere de um buffer de fluxo de entrada, que ele acessa por meio de um objeto que ele armazena, do ponteiro de tipo para `basic_streambuf` \< **CharType**, de **características**> .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,10 +39,10 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType*\
+@No__t_1 *CharType*
 O tipo que representa o tipo de caractere para istreambuf_iterator.
 
-*Características*\
+@No__t_1 de *características*
 O tipo que representa o tipo de caractere para istreambuf_iterator. Esse argumento é opcional e o valor padrão é `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Comentários
@@ -142,16 +142,16 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 O iterador com relação ao qual verificar quanto à igualdade.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se os dois `istreambuf_iterator`s forem iteradores de final do fluxo ou se nenhum deles for um iterador de final do fluxo; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
-Um intervalo é definido pelo `istreambuf_iterator` para a posição atual e o iterador de fim de fluxo, mas como todos os iteradores de fluxo não-end são equivalentes `equal` na função membro, não é possível definir nenhum subintervalo usando `istreambuf_iterator`s. Os operadores `==` e `!=` têm a mesma semântica.
+Um intervalo é definido pelo `istreambuf_iterator` para a posição atual e o iterador de fim de fluxo, mas como todos os iteradores de fluxo não-end são equivalentes sob a função de membro `equal`, não é possível definir quaisquer subintervalos usando `istreambuf_iterator`s. Os operadores `==` e `!=` têm a mesma semântica.
 
 ### <a name="example"></a>Exemplo
 
@@ -239,15 +239,15 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*strbuf*\
+\ *strbuf*
 O buffer do fluxo de entrada ao qual o `istreambuf_iterator` está sendo anexado.
 
-*_Istr*\
+@No__t_1 *_Istr*
 O fluxo de entrada ao qual o `istreambuf_iterator` está sendo anexado.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor inicializa o ponteiro de buffer de fluxo de entrada com *strbuf*. O segundo construtor inicializa o ponteiro de buffer de fluxo de entrada com *_Istr*. `rdbuf`e, eventualmente, tenta extrair e armazenar um objeto do tipo `CharType`.
+O primeiro construtor inicializa o ponteiro de buffer de fluxo de entrada com *strbuf*. O segundo construtor inicializa o ponteiro de buffer de fluxo de entrada com *_Istr*. `rdbuf` e, eventualmente, tenta extrair e armazenar um objeto do tipo `CharType`.
 
 ### <a name="example"></a>Exemplo
 
@@ -289,7 +289,7 @@ O operador de desreferenciamento retorna o próximo caractere no fluxo.
 CharType operator*() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O caractere seguinte no fluxo.
 
@@ -330,13 +330,13 @@ istreambuf_iterator<CharType, Traits>& operator++();
 istreambuf_iterator<CharType, Traits> operator++(int);
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um `istreambuf_iterator` ou uma referência a um `istreambuf_iterator`.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro operador eventualmente tenta extrair e armazenar um objeto do tipo `CharType` a partir do fluxo de entrada associado. O segundo operador faz uma cópia do objeto, incrementa o objeto e, em seguida, retorna a cópia.
+O primeiro operador eventualmente tenta extrair e armazenar um objeto do tipo `CharType` do fluxo de entrada associado. O segundo operador faz uma cópia do objeto, incrementa o objeto e, em seguida, retorna a cópia.
 
 ### <a name="example"></a>Exemplo
 
@@ -374,7 +374,7 @@ Retorna o valor de um membro, se houver.
 const Elem* operator->() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O operador retorna **&\*\*this**.
 

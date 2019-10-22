@@ -7,14 +7,14 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 9d2f9d79d200579f539f7d9edc49d4a907e6cdb2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 924ca5ae1d32753bbe315252d942425712962639
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455575"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689460"
 ---
-# <a name="iteratortraits-struct"></a>Struct iterator_traits
+# <a name="iterator_traits-struct"></a>Struct iterator_traits
 
 Um struct auxiliar de modelo usado para especificar todas as definições de tipo crítico que um iterador deve ter.
 
@@ -41,13 +41,13 @@ O struct de modelo define os tipos membro
 
 - `difference_type`: um sinônimo para `Iterator::difference_type`.
 
-- `distance_type`: um sinônimo para`Iterator::difference_type.`
+- `distance_type`: um sinônimo para `Iterator::difference_type.`
 
 - `pointer`: um sinônimo para `Iterator::pointer`.
 
 - `reference`: um sinônimo para `Iterator::reference`.
 
-As especializações parciais determinam os tipos críticos associados a um ponteiro de  <strong>\*</strong> objeto do tipo Type ou **const** <strong>\*</strong>.
+As especializações parciais determinam os tipos críticos associados a um ponteiro de objeto do **tipo tipo** <strong>\*</strong> ou **const** <strong>\*</strong>.
 
 Nesta implementação, também é possível usar várias funções de modelo que não usam especialização parcial:
 
@@ -71,7 +71,7 @@ template <class Ty>
 ptrdiff_t *_Dist_type(const Ty *);
 ```
 
-que determinam vários dos mesmos tipos mais indiretamente. Use essas funções como argumentos em uma chamada de função. Sua única finalidade é fornecer um parâmetro de classe de modelo útil para a função chamada.
+que determinam vários dos mesmos tipos mais indiretamente. Use essas funções como argumentos em uma chamada de função. Sua única finalidade é fornecer um parâmetro de modelo de classe útil para a função chamada.
 
 ## <a name="example"></a>Exemplo
 

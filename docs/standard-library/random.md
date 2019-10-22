@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 5738a1ea5ab950466f347090649e72471edf5608
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fbff6123c810251109dd48d74a5bd4632793be6f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458302"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689100"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -19,16 +19,16 @@ Define instalações para a geração aleatória de números, permitindo a cria�
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho**: \<> aleatório
+**Cabeçalho**: \<random >
 
 **Namespace:** std
 
 > [!NOTE]
-> A \<biblioteca de > aleatória usa a instrução ' #include < initializer_list > '.
+> A biblioteca \<random > usa a instrução ' #include < initializer_list > '.
 
 ## <a name="summary"></a>Resumo
 
-Um *gerador de número aleatório* é um objeto que produz uma sequência de valores pseudoaleatórios. Um gerador que produz valores que são distribuídos uniformemente em um intervalo especificado é um URNG (*Gerador de Número Aleatório Uniforme*). Uma classe de modelo designada para funcionar como um URNG é referida como um *engine* se essa classe tiver determinados traços em comum, discutidos posteriormente neste artigo. Um URNG pode ser e geralmente é, combinado a uma *distribution* transmitindo o URNG como um argumento para que o `operator()` da distribuição produza valores que são distribuídos de maneira definida pela distribuição.
+Um *gerador de número aleatório* é um objeto que produz uma sequência de valores pseudoaleatórios. Um gerador que produz valores que são distribuídos uniformemente em um intervalo especificado é um URNG (*Gerador de Número Aleatório Uniforme*). Um modelo de classe criado para funcionar como um URNG é chamado de *mecanismo* se essa classe tiver determinadas características comuns, que serão discutidas posteriormente neste artigo. Um URNG pode ser e geralmente é, combinado a uma *distribution* transmitindo o URNG como um argumento para que o `operator()` da distribuição produza valores que são distribuídos de maneira definida pela distribuição.
 
 Esses links levam para as seções principais deste artigo:
 
@@ -42,7 +42,7 @@ Esses links levam para as seções principais deste artigo:
 
 ### <a name="quick-tips"></a>Dicas rápidas
 
-Aqui estão algumas dicas para ter em mente ao usar \<> aleatórios:
+Aqui estão algumas dicas para ter em mente ao usar \<random >:
 
 - Para a maioria dos propósitos, os URNGs produzem bits brutos que podem ser moldados pelas distribuições. (Uma exceção notável disso é [std::shuffle()](../standard-library/algorithm-functions.md#shuffle), pois ele utiliza um URNG diretamente.)
 
@@ -52,7 +52,7 @@ Aqui estão algumas dicas para ter em mente ao usar \<> aleatórios:
 
 - O emparelhamento mais útil para a maioria dos aplicativos é o mecanismo `mt19937` com `uniform_int_distribution`, como mostrado no [exemplo de código](#code) posteriormente neste artigo.
 
-Há muitas opções a serem escolhidas no \<cabeçalho > aleatório e qualquer uma delas é preferível à função `rand()`de tempo de execução C desatualizada. Para obter informações sobre o que há `rand()` de errado \<com e como > aleatório resolve essas deficiências, consulte [este vídeo](https://go.microsoft.com/fwlink/p/?linkid=397615).
+Há muitas opções para escolher no cabeçalho \<random > e qualquer uma delas é preferível à `rand()` de função de tempo de execução C desatualizada. Para obter informações sobre o que há de errado com `rand()` e como \<random > resolve essas deficiências, consulte [este vídeo](https://go.microsoft.com/fwlink/p/?linkid=397615).
 
 ## <a name="code"></a> Exemplos
 
@@ -215,13 +215,13 @@ Esse código demonstra duas aleatorizações diferentes, aleatorizar um vetor de
 
 URNGs geralmente são descritos de acordo com essas propriedades:
 
-1. **Duração do período**: Quantas iterações são necessárias para repetir a sequência de números gerada. Quanto maior, melhor.
+1. **Duração do período**: quantas iterações são necessárias para repetir a sequência de números gerada. Quanto maior, melhor.
 
-2. **Desempenho**: A velocidade com que os números podem ser gerados e quanta memória isso ocupa. Quanto menor, melhor.
+2. **Desempenho**: a velocidade com que os números podem ser gerados e quanta memória isso ocupa. Quanto menor, melhor.
 
-3. **Qualidade**: Qual a proximidade de uma sequência gerada de números verdadeiramente aleatórios. Isso geralmente é chamado de “*aleatoriedade*”.
+3. **Qualidade**: a proximidade de uma sequência gerada de números verdadeiramente aleatórios. Isso geralmente é chamado de “*aleatoriedade*”.
 
-As seções a seguir listam os geradores de número aleatório uniforme (URNGs) \<fornecidos no cabeçalho de > aleatório.
+As seções a seguir listam os geradores de número aleatório uniforme (URNGs) fornecidos no cabeçalho \<random >.
 
 ####  <a name="rd"></a> Gerador não determinístico
 
@@ -329,7 +329,7 @@ Adaptadores de mecanismo são modelos que adaptam outros mecanismos (básicos). 
 
 ###  <a name="distributions"></a> Distribuições de Número Aleatório
 
-As seções a seguir listam as distribuições fornecidas \<no cabeçalho > aleatório. As distribuições são um mecanismo de pós-processamento, que geralmente usam uma saída de URNG como entrada e distribuem a saída de acordo com uma função de densidade probabilística estatística definida. Para obter mais informações, consulte a seção [Mecanismos e Distribuições](#engdist).
+As seções a seguir listam as distribuições fornecidas no cabeçalho \<random >. As distribuições são um mecanismo de pós-processamento, que geralmente usam uma saída de URNG como entrada e distribuem a saída de acordo com uma função de densidade probabilística estatística definida. Para obter mais informações, consulte a seção [Mecanismos e Distribuições](#engdist).
 
 #### <a name="uniform-distributions"></a>Distribuições Uniformes
 
@@ -389,7 +389,7 @@ As seções a seguir listam as distribuições fornecidas \<no cabeçalho > alea
 
 ### <a name="utility-functions"></a>Funções do Utilitário
 
-Esta seção lista as funções de utilitário gerais fornecidas no \<cabeçalho > aleatório.
+Esta seção lista as funções de utilitário gerais fornecidas no cabeçalho \<random >.
 
 |||
 |-|-|
@@ -397,7 +397,7 @@ Esta seção lista as funções de utilitário gerais fornecidas no \<cabeçalho
 
 ### <a name="operators"></a>Operadores
 
-Esta seção lista os operadores fornecidos no \<cabeçalho > aleatório.
+Esta seção lista os operadores fornecidos no cabeçalho \<random >.
 
 |||
 |-|-|
@@ -408,19 +408,19 @@ Esta seção lista os operadores fornecidos no \<cabeçalho > aleatório.
 
 ## <a name="engdist"></a> Mecanismos e distribuições
 
-Consulte as seções a seguir para obter informações sobre cada uma dessas categorias de classe de \<modelo definidas em > aleatórios. Ambas essas categorias de classe de modelo assumem um tipo como um argumento e usam nomes de parâmetro de modelo compartilhados para descrever as propriedades de tipo que são permitidas como um tipo de argumento real, como a seguir:
+Consulte as seções a seguir para obter informações sobre cada uma dessas categorias de modelo de classe definidas em \<random >. Ambas as categorias de modelo de classe usam um tipo como um argumento e usam nomes de parâmetro de modelo compartilhado para descrever as propriedades do tipo que são permitidas como um tipo de argumento real, da seguinte maneira:
 
-- `IntType`indica um **curto**, **inteiro**, **longo**, **longo**, demorado, não assinado, **inteiro**, sem sinal, **longo**ou **sem**sinal longo.
+- `IntType` indica um **curto**, **inteiro**, **longo**, **longo**, demorado, não **assinado,** **int**não assinado, **longo**ou **não**assinado longo.
 
-- `UIntType`indica **não assinado**, **int**sem sinal, **longo**não assinado ou longo e **não assinado**.
+- `UIntType` indica **não assinado**, um **int**não assinado, **um longo sem** **sinal ou um longo longo não assinado**.
 
-- `RealType`indica um ponto **flutuante**, **duplo**ou **longo Duplo**.
+- `RealType` indica um ponto **flutuante**, **duplo**ou **longo Duplo**.
 
 ### <a name="engines"></a>Mecanismos
 
 [Modelos do mecanismo](#eng) e [Modelos de adaptador do mecanismo](#engadapt) são modelos cujos parâmetros personalizam o gerador criado.
 
-Um *engine* é uma classe ou classe de modelos cujas instâncias (geradores) agem como uma fonte de números aleatórios distribuídos uniformemente entre um valor mínimo e um máximo. Um *adaptador do mecanismo* oferece uma sequência de valores que têm propriedades de aleatoriedade diferentes assumindo valores produzidos por outro mecanismo de número aleatório e aplicando um algoritmo de algum tipo a esses valores.
+Um *mecanismo* é um modelo de classe ou classe cujas instâncias (geradores) atuam como uma fonte de números aleatórios distribuídos uniformemente entre um valor mínimo e máximo. Um *adaptador do mecanismo* oferece uma sequência de valores que têm propriedades de aleatoriedade diferentes assumindo valores produzidos por outro mecanismo de número aleatório e aplicando um algoritmo de algum tipo a esses valores.
 
 Cada mecanismo e adaptador do mecanismo possuem os seguintes membros:
 
@@ -440,7 +440,7 @@ Cada mecanismo e adaptador do mecanismo possuem os seguintes membros:
 
 - Um construtor explícito com o argumento `seed_seq& seq` que cria uma gerador propagado como se fosse chamando `seed(seq)`.
 
-- `void discard(unsigned long long count)``operator()` chama`count` efetivamente os horários e descarta cada valor.
+- `void discard(unsigned long long count)` chama efetivamente `operator()` horas de `count` e descarta cada valor.
 
 **Adaptadores do mecanismo** também dão suporte a esses membros (`Engine` é o primeiro parâmetro de modelo de um adaptador do mecanismo, designando o tipo do mecanismo básico):
 
@@ -458,7 +458,7 @@ Cada mecanismo mantém um *state* que determina a sequência de valores que ser�
 
 ### <a name="distributions"></a>Distribuições
 
-[Distribuições de Número Aleatório](#distributions) é uma classe ou classe de modelos cujas instâncias transformam uma transmissão de números aleatórios distribuídos uniformemente obtidos de um mecanismo em uma transmissão de números aleatórios que têm uma distribuição específica. Cada distribuição possui os seguintes membros:
+[Distribuições de números aleatórios](#distributions) são um modelo de classe ou classe cujas instâncias transformam um fluxo de números aleatórios distribuídos uniformemente obtidos de um mecanismo em um fluxo de números aleatórios que têm uma distribuição específica. Cada distribuição possui os seguintes membros:
 
 - `typedef` `numeric-type` `result_type` é o tipo retornado pelo `operator()` da distribuição. O `numeric-type` é transferido como um parâmetro de modelo na instanciação.
 
@@ -503,7 +503,7 @@ Há dois URNGs bastante úteis no Visual Studio — `mt19937` e `random_device` 
 
 <sup>* Quando fornecido com uma semente conhecida.</sup>
 
-Embora o Padrão ISO C++ não exija que o `random_device` seja protegido por criptografia, no Visual Studio, ele é implementado com proteção criptográfica. (O termo “proteção criptográfica” não implica em garantias, mas se refere ao nível mínimo de entropia e, portanto, ao nível de previsibilidade, que um determinado algoritmo aleatório oferece. Para obter mais informações, consulte o artigo da Wikipédia [Cryptographically secure pseudorandom number generator](https://go.microsoft.com/fwlink/p/?linkid=398017) (Gerador de número pseudoaleatório protegido criptograficamente.) Como o Padrão ISO C++ não requer isso, outras plataformas podem implementar `random_device` como um gerador de número pseudoaleatório simples (sem proteção criptográfica) e pode ser adequado somente como uma fonte de semeação para outro gerador. Verifique a documentação dessas plataformas ao usar `random_device` no código entre plataformas.
+Embora o Padrão ISO C++ não exija que o `random_device` seja protegido por criptografia, no Visual Studio, ele é implementado com proteção criptográfica. (O termo “proteção criptográfica” não implica em garantias, mas se refere ao nível mínimo de entropia e, portanto, ao nível de previsibilidade, que um determinado algoritmo aleatório oferece. Para obter mais informações, consulte o artigo da Wikipédia [pseudoaleatória o gerador de número criptograficamente seguro](https://go.microsoft.com/fwlink/p/?linkid=398017).) Como o padrão C++ ISO não requer isso, outras plataformas podem implementar `random_device` como um gerador de números pseudo aleatórios simples (não criptograficamente seguro) e só pode ser adequado como uma fonte de semente para outro gerador. Verifique a documentação dessas plataformas ao usar `random_device` no código entre plataformas.
 
 Por definição, resultados do `random_device` não são reproduzíveis e um efeito colateral é que ele pode ser executado de maneira significativamente mais lenta do que outros URNGs. A maioria dos aplicativos que não exige proteção criptográfica usa o `mt19937` ou um mecanismo semelhante, embora possa ser útil propagá-lo com uma chamada para `random_device`, como mostrado no [exemplo de código](#code).
 

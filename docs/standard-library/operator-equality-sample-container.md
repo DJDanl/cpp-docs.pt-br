@@ -13,19 +13,19 @@ helpviewer_keywords:
 - operator==, containers
 - == operator, with specific standard C++ objects
 ms.assetid: d3d8754e-5157-4b8b-bf9c-da41856f5eed
-ms.openlocfilehash: 168785abb09ca198435c301040d7628a6dd12b26
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3f84e8e5f7d0c09a865fe47d7493daecf68cf60c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460151"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689203"
 ---
 # <a name="operator-ltsample-containergt"></a>operator== (&lt;sample container&gt;)
 
 > [!NOTE]
 > Este tópico está na documentação da C++ Microsoft como um exemplo não funcional de contêineres usados na biblioteca C++ padrão. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
 
-Sobrecarrega `operator==` para comparar dois objetos da classe de modelo [Container](../standard-library/sample-container-class.md).
+Sobrecargas `operator==` para comparar dois objetos do [contêiner](../standard-library/sample-container-class.md)de modelo de classe.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,9 +36,9 @@ bool operator==(
     const Container <Ty>& right);
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Retorna `left.`[o tamanho](../standard-library/container-class-size.md) ` == right.size && equal(left.`[final](../standard-library/container-class-end.md)`, left.`[do início. ](../standard-library/container-class-begin.md)`, right.begin)`
+Retorna `left.`[tamanho](../standard-library/container-class-size.md) ` == right.size && equal(left.`[início](../standard-library/container-class-begin.md) `, left.` `, right.begin)` de[término](../standard-library/container-class-end.md) .
 
 ## <a name="see-also"></a>Consulte também
 

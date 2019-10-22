@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: d93ead4f301b6c5df918a6f402cea6963a9535e1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 01396384cbd551cca5682c7ffd1b31d89e6d1dc2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243364"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688397"
 ---
-# <a name="binarynegate-class"></a>Classe binary_negate
+# <a name="binary_negate-class"></a>Classe binary_negate
 
-Uma classe de modelo que fornece uma função membro que nega o valor retornado de uma função binária especificada. Preterida no c++17 em favor da [not_fn](functional-functions.md#not_fn).
+Um modelo de classe que fornece uma função de membro que nega o valor de retorno de uma função binária especificada. Preterido em C++ 17 em favor do [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,22 +33,22 @@ class binary_negate
 
 ### <a name="parameters"></a>Parâmetros
 
-*Func*\
+*Func* \
 A função binária a ser negada.
 
-*À esquerda*\
+\ *à esquerda*
 O operando left da função binária a ser negada.
 
-*Certo*\
+\ *à direita*
 O operando right da função binária a ser negada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 A negação da função binária.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo armazena uma cópia de um objeto de função binária *Func*. Ela define sua função de membro `operator()` como retornando `!Func(left, right)`.
+O modelo de classe armazena uma cópia de um objeto de função binária *Func*. Ele define sua função membro `operator()` como retorno `!Func(left, right)`.
 
 O construtor de `binary_negate` raramente é usado diretamente. A função auxiliar [not2](../standard-library/functional-functions.md#not2) geralmente é a preferencial para declarar e usar o predicado do adaptador **binary_negator**.
 

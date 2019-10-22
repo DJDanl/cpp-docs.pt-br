@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-ms.openlocfilehash: b9dff8a871895eee6774b75ca1c83dca6fd42ff3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: aafa6f9498ee315c25e73833baf3c13d99d36743
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460228"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689309"
 ---
-# <a name="moneyput-class"></a>Classe money_put
+# <a name="money_put-class"></a>Classe money_put
 
-A classe de modelo descreve um objeto que pode servir como uma faceta de localidade para controlar conversões de valores monetários em sequências do tipo `CharType`.
+O modelo de classe descreve um objeto que pode servir como uma faceta de localidade para controlar conversões de valores monetários em sequências do tipo `CharType`.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,10 +37,10 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType*\
+@No__t_1 *CharType*
 O tipo usado em um programa para codificar caracteres em uma localidade.
 
-*OutputIterator*\
+@No__t_1 *OutputIterator*
 O tipo de iterador para o qual as funções put monetárias gravam sua saída.
 
 ## <a name="remarks"></a>Comentários
@@ -108,22 +108,22 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parâmetros
 
-*última*\
+*próximo* \
 Um iterador que trata o primeiro elemento na cadeia de caracteres inserida.
 
-*_Intl*\
+@No__t_1 *_Intl*
 Um valor booliano que indica o tipo do símbolo de moeda esperado na sequência: **true** se internacional, **false** se nacional.
 
-*_Iosbase*\
+@No__t_1 *_Iosbase*
 Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório
 
-*_Fill*\
+@No__t_1 *_Fill*
 Um caractere que é usado para espaçamento.
 
-*Val*\
+*valor* \
 Um objeto de cadeia de caracteres a ser convertido.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de saída que aborda uma posição além do último elemento produzido.
 
@@ -191,7 +191,7 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
 ### <a name="remarks"></a>Comentários
@@ -202,7 +202,7 @@ Os valores possíveis para o parâmetro *_Refs* e seu significado são:
 
 - 1: o tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \>1: esses valores não estão definidos.
+- \> 1: esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 
@@ -230,22 +230,22 @@ iter_type put(
 
 ### <a name="parameters"></a>Parâmetros
 
-*última*\
+*próximo* \
 Um iterador que trata o primeiro elemento na cadeia de caracteres inserida.
 
-*_Intl*\
+@No__t_1 *_Intl*
 Um valor booliano que indica o tipo do símbolo de moeda esperado na sequência: **true** se internacional, **false** se nacional.
 
-*_Iosbase*\
+@No__t_1 *_Iosbase*
 Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório
 
-*_Fill*\
+@No__t_1 *_Fill*
 Um caractere que é usado para espaçamento.
 
-*Val*\
+*valor* \
 Um objeto de cadeia de caracteres a ser convertido.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de saída que aborda uma posição além do último elemento produzido.
 
@@ -291,7 +291,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve uma especialização da classe de modelo [basic_string](../standard-library/basic-string-class.md) cujos objetos podem armazenar sequências de elementos da sequência de origem.
+O tipo descreve uma especialização do modelo de classe [basic_string](../standard-library/basic-string-class.md) cujos objetos podem armazenar sequências de elementos da sequência de origem.
 
 ## <a name="see-also"></a>Consulte também
 

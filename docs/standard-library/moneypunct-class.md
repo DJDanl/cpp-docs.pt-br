@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: b6cd2524f8ae010e81d06a30d9a001398a106622
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460200"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689292"
 ---
 # <a name="moneypunct-class"></a>Classe moneypunct
 
-A classe de modelo descreve um objeto que pode servir como uma faceta de localidade para descrever as sequências do tipo *CharType* usado para representar um campo de entrada monetário ou um campo de saída monetária. Se o parâmetro de modelo *intl* for *true*, as convenções internacionais serão observadas.
+O modelo de classe descreve um objeto que pode servir como uma faceta de localidade para descrever as sequências do tipo *CharType* usado para representar um campo de entrada monetário ou um campo de saída monetária. Se o parâmetro de modelo *intl* for *true*, as convenções internacionais serão observadas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType*\
+@No__t_1 *CharType*
 O tipo usado em um programa para codificar caracteres.
 
-*Intl*\
+@No__t_1 *intl*
 Um sinalizador que especifica se as convenções internacionais devem ser observadas.
 
 ## <a name="remarks"></a>Comentários
@@ -140,7 +140,7 @@ Retorna uma sequência de elementos específica de localidade a ser usada como u
 string_type curr_symbol() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma cadeia de caracteres que contém o símbolo de moeda.
 
@@ -177,7 +177,7 @@ Retorna uma sequência de elementos específica de localidade a ser usada como u
 CharType decimal_point() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma sequência de elementos específica de localidade a ser usada como um símbolo de vírgula decimal.
 
@@ -223,7 +223,7 @@ Uma função membro virtual protegida que retorna uma sequência de elementos es
 virtual string_type do_curr_symbol() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma sequência de elementos específica de localidade a ser usada como um símbolo de vírgula decimal.
 
@@ -239,7 +239,7 @@ Uma função membro virtual protegida que retorna uma sequência de elementos es
 virtual CharType do_decimal_point() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma sequência de elementos específica de localidade a ser usada como um símbolo de vírgula decimal.
 
@@ -255,7 +255,7 @@ Uma função membro virtual protegida retorna uma contagem do número de dígito
 virtual int do_frac_digits() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma contagem do número de dígitos específica de localidade a ser exibida à direita de qualquer vírgula decimal.
 
@@ -271,13 +271,13 @@ Uma função membro virtual protegida que retorna uma regra específica de local
 virtual string do_grouping() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma regra específica de localidade para determinar como os dígitos são agrupados à esquerda de qualquer vírgula decimal.
 
 ### <a name="example"></a>Exemplo
 
-Consulte o exemplo de [agrupamento](#grouping), onde a função membro virtual é chamada por `grouping`.
+Consulte o exemplo de [agrupamento](#grouping), em que a função membro virtual é chamada por `grouping`.
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -287,21 +287,21 @@ Uma função membro virtual protegida que é chamada para retornar uma regra esp
 virtual pattern do_neg_format() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A função membro virtual protegida retorna uma regra específica de localidade para determinar como gerar o campo de saída monetário para um valor negativo. Cada um dos quatro elementos de `pattern::field` pode ter os valores:
 
-- `none`para corresponder a zero ou mais espaços ou não gerar nada.
+- `none` para corresponder a zero ou mais espaços ou não gerar nada.
 
-- `sign`para corresponder ou gerar um sinal positivo ou negativo.
+- `sign` para corresponder ou gerar um sinal positivo ou negativo.
 
-- `space`para corresponder a zero ou mais espaços ou gerar um espaço.
+- `space` para corresponder a zero ou mais espaços ou gerar um espaço.
 
-- `symbol`para corresponder ou gerar um símbolo de moeda.
+- `symbol` para corresponder ou gerar um símbolo de moeda.
 
-- `value`para corresponder ou gerar um valor monetário.
+- `value` para corresponder ou gerar um valor monetário.
 
-Os componentes de um campo de saída monetária são gerados e os componentes de um campo de entrada monetária são correspondidos na ordem em `pattern::field`que esses elementos aparecem. `sign`Cada um `value` `symbol` dosvalores`space` ,, e ou deve aparecer exatamente uma vez. `none` O valor `none` não deve aparecer primeiro. O valor space não **deve** não devem aparecer primeiro ou por último. Se `Intl` for true, Order será `symbol`, `sign` `none` ,`value`, e.
+Os componentes de um campo de saída monetária são gerados e os componentes de um campo de entrada monetária são correspondidos na ordem em que esses elementos aparecem em `pattern::field`. Cada um dos valores `sign`, `symbol`, `value` e `none` ou `space` deve aparecer exatamente uma vez. O valor `none` não deve aparecer primeiro. O valor space não **deve** não devem aparecer primeiro ou por último. Se `Intl` for true, a ordem será `symbol`, `sign`, `none` e `value`.
 
 A versão de modelo `moneypunct`\< **CharType**, **Intl**> retorna `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
@@ -317,7 +317,7 @@ Uma função membro virtual protegida que é chamada para retornar uma sequênci
 virtual string_type do_negative_sign() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma sequência de elementos específica de localidade a ser usada como um sinal negativo.
 
@@ -333,9 +333,9 @@ Uma função membro virtual protegida que é chamada para retornar uma regra esp
 virtual pattern do_pos_format() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A função membro virtual protegida retorna uma regra específica de localidade para determinar como gerar o campo de saída monetário para um valor positivo. (Ela também determina como corresponder os componentes de um campo de entrada monetário.) A codificação é a mesma usada para [do_neg_format](#do_neg_format).
+A função membro virtual protegida retorna uma regra específica de localidade para determinar como gerar o campo de saída monetário para um valor positivo. (Ele também determina como corresponder os componentes de um campo de entrada monetária.) A codificação é a mesma para [do_neg_format](#do_neg_format).
 
 A versão do modelo de moneypunct\< **CharType**, **Inputlterator**> retorna `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
@@ -351,7 +351,7 @@ Uma função membro virtual protegida que retorna uma sequência de elementos es
 virtual string_type do_positive_sign() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma sequência de elementos específica de localidade a ser usada como um sinal positivo.
 
@@ -367,7 +367,7 @@ Uma função membro virtual protegida que retorna um elemento específico de loc
 virtual CharType do_thousands_sep() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um elemento específico de localidade a ser usado como um separador de grupo à esquerda de qualquer vírgula decimal.
 
@@ -383,7 +383,7 @@ Retorna uma contagem do número de dígitos específica de localidade a ser exib
 int frac_digits() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma contagem do número de dígitos específica de localidade a ser exibida à direita de qualquer vírgula decimal.
 
@@ -452,7 +452,7 @@ Retorna uma regra específica de localidade para determinar como os dígitos sã
 string grouping() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma regra específica de localidade para determinar como os dígitos são agrupados à esquerda de qualquer vírgula decimal.
 
@@ -523,18 +523,18 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
 ### <a name="remarks"></a>Comentários
 
 Os valores possíveis para o parâmetro *_Refs* e seu significado são:
 
-- 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
+- 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
-- 1: O tempo de vida do objeto deve ser gerenciado manualmente.
+- 1: o tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: Esses valores não estão definidos.
+- \> 1: esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 
@@ -548,7 +548,7 @@ Retorna uma regra específica de localidade para formatação de saídas com val
 pattern neg_format() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma regra específica de localidade para formatação de saídas com valores negativos.
 
@@ -596,7 +596,7 @@ Retorna uma sequência de elementos específica de localidade a ser usada como u
 string_type negative_sign() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de sinal negativo.
 
@@ -658,7 +658,7 @@ Retorna uma regra específica de localidade para formatação de saídas com val
 pattern pos_format() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma regra específica de localidade para formatação de saídas com valores positivos.
 
@@ -706,7 +706,7 @@ Retorna uma sequência de elementos específica de localidade a ser usada como u
 string_type positive_sign() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma sequência de elementos específica de localidade a ser usada como um símbolo de sinal positivo.
 
@@ -770,7 +770,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve uma especialização da classe de modelo [basic_string](../standard-library/basic-string-class.md) cujos objetos podem armazenar cópias das sequências de pontuação.
+O tipo descreve uma especialização do modelo de classe [basic_string](../standard-library/basic-string-class.md) cujos objetos podem armazenar cópias das sequências de pontuação.
 
 ## <a name="thousands_sep"></a>  moneypunct::thousands_sep
 
@@ -780,7 +780,7 @@ Retorna uma sequência de elementos específica de localidade a ser usada como u
 CharType thousands_sep() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma sequência de elementos específica de localidade a ser usada como separador de milhares
 

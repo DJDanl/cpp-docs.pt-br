@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: 8ccd9d7e58b9cadec83b64df5553564db20a5745
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1af44635400037c6359b13c4f2925c3ac7f2d9d5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244522"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689746"
 ---
-# <a name="constmemfun1t-class"></a>Classe const_mem_fun1_t
+# <a name="const_mem_fun1_t-class"></a>Classe const_mem_fun1_t
 
-Uma classe de adaptador que permite que uma função de membro **const** que usa um único argumento seja chamada como um objeto de função binário quando inicializada com um argumento de ponteiro. Preterido no c++11, removido do c++17.
+Uma classe de adaptador que permite que uma função de membro **const** que usa um único argumento seja chamada como um objeto de função binário quando inicializada com um argumento de ponteiro. Preterido no C++ 11, removido do C++ 17.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,23 +30,23 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 ### <a name="parameters"></a>Parâmetros
 
-*member_ptr*\
+\ *member_ptr*
 Um ponteiro para a função membro da classe `Type` a ser convertida em um objeto de função.
 
-*À esquerda*\
-O **const** do objeto que o *member_ptr* função de membro é chamada em.
+\ *à esquerda*
+O objeto **const** no qual a função de membro *member_ptr* é chamada.
 
-*Certo*\
+\ *à direita*
 O argumento que está sendo fornecido para *member_ptr*.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Uma função binária adaptável.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo armazena uma cópia dos *member_ptr*, que deve ser um ponteiro para uma função de membro de classe `Type`, em um objeto de membro privado. Ela define sua função de membro `operator()` como retornando `(left->member_ptr)(right) const`.
+O modelo de classe armazena uma cópia de *member_ptr*, que deve ser um ponteiro para uma função de membro da classe `Type`, em um objeto de membro privado. Ele define sua função membro `operator()` como retorno `(left->member_ptr)(right) const`.
 
 ## <a name="example"></a>Exemplo
 
-O construtor de `const_mem_fun1_t` raramente é usado diretamente. `mem_fn` é usado para se adaptar a funções de membro. Ver [mem_fn](../standard-library/functional-functions.md#mem_fn) para obter um exemplo de como usar adaptadores de função de membro.
+O construtor de `const_mem_fun1_t` raramente é usado diretamente. `mem_fn` é usado para adaptar as funções de membro. Consulte [mem_fn](../standard-library/functional-functions.md#mem_fn) para obter um exemplo de como usar adaptadores de função membro.
