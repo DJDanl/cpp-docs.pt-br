@@ -70,16 +70,16 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: bc9f9bd1157af96ced3c901309f19dcaa5dadab3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5373bd6a99605f5a63fb6aa2ed6de50c12b1c8f1
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246703"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687616"
 ---
-# <a name="numericlimits-class"></a>Classe numeric_limits
+# <a name="numeric_limits-class"></a>Classe numeric_limits
 
-A classe de modelo descreve propriedades aritméticas de tipos numéricos internos.
+O modelo de classe descreve as propriedades aritméticas de tipos numéricos internos.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -90,14 +90,14 @@ template <class Type>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo*\
-O tipo de dados do elemento fundamental cujas propriedades estão sendo testadas ou consultadas ou definidas. *Tipo de* também podem ser declaradas **const**, **volátil**, ou **const volátil**.
+*Tipo* \
+O tipo de dados do elemento fundamental cujas propriedades estão sendo testadas ou consultadas ou definidas. O *tipo* também pode ser declarado **const**, **volatile**ou **const volatile**.
 
 ## <a name="remarks"></a>Comentários
 
-O cabeçalho define especializações explícitas para os tipos **wchar_t**, **bool**, **char**, **assinado char**, **sem sinal char**, **curto**, **unsigned short**, **int**, **int sem sinal**, **longa**, **unsigned long**, **float**, **double**, **longo duplo**, **long long**, **longo longo sem sinal**, **char16_t**, e **char32_t**. Para essas especializações explícitas, o membro [numeric_limits:: is_specialized](#is_specialized) é **verdadeiro**, e todos os membros relevantes têm valores significativos. O programa pode fornecer especializações explícitas adicionais. A maioria das funções de membro da classe descreve ou testa possíveis implementações de **float**.
+O cabeçalho define especializações explícitas para os tipos **wchar_t**, **bool**, **Char**, **sinal assinado**, **não**assinado, **curto**, **não assinado curto**, **int**, n **sinal int**, **Long**, **longo não assinado**, **flutuante**, **duplo**, **longo Duplo**, longo **, demorado**, longo, **char16_t**e **char32_t**. Para essas especializações explícitas, o membro [numeric_limits:: is_specialized](#is_specialized) é **verdadeiro**e todos os membros relevantes têm valores significativos. O programa pode fornecer especializações explícitas adicionais. A maioria das funções de membro da classe descreve ou testa possíveis implementações de **float**.
 
-Para uma especialização arbitrária, nenhum membro tem valores significativos. Um objeto de membro que não tem um valor significativo armazena zero (ou **falsos**) e retorna uma função de membro que não retorna um valor significativo `Type(0)`.
+Para uma especialização arbitrária, nenhum membro tem valores significativos. Um objeto de membro que não tem um valor significativo armazena zero (ou **false**) e uma função de membro que não retorna um valor significativo retorna `Type(0)`.
 
 ## <a name="static-functions-and-constants"></a>Constantes e funções estáticas
 
@@ -110,7 +110,7 @@ Para uma especialização arbitrária, nenhum membro tem valores significativos.
 |[has_denorm](#has_denorm)|Testa se um tipo permite valores desnormalizados.|
 |[has_denorm_loss](#has_denorm_loss)|Testa se a perda de precisão é detectada como uma perda de desnormalização em vez de um resultado inexato.|
 |[has_infinity](#has_infinity)|Testa se um tipo tem uma representação de infinito positivo.|
-|[has_quiet_NaN](#has_quiet_nan)|Testa se um tipo tem uma representação de um silencioso não é um número (NAN), que é não-sinalização.|
+|[has_quiet_NaN](#has_quiet_nan)|Testa se um tipo tem uma representação para um número (NAN) silencioso, que não é sinal.|
 |[has_signaling_NaN](#has_signaling_nan)|Testa se um tipo tem uma representação para não sinalizar um número (NAN).|
 |[infinity](#infinity)|A representação de infinito positivo para um tipo, se disponível.|
 |[is_bounded](#is_bounded)|Testa se o conjunto de valores que um tipo pode representar é finito.|
@@ -119,7 +119,7 @@ Para uma especialização arbitrária, nenhum membro tem valores significativos.
 |[is_integer](#is_integer)|Testa se um tipo tem uma representação de inteiro.|
 |[is_modulo](#is_modulo)|Testa se um tipo tem uma representação de módulo.|
 |[is_signed](#is_signed)|Testa se um tipo tem uma representação com sinal.|
-|[is_specialized](#is_specialized)|Testa se um tipo tem uma especialização explícita definida na classe de modelo `numeric_limits`.|
+|[is_specialized](#is_specialized)|Testa se um tipo tem uma especialização explícita definida no modelo de classe `numeric_limits`.|
 |[lowest](#lowest)|Retorna o valor finito mais negativo.|
 |[max](#max)|Retorna o valor máximo finito para um tipo.|
 |[max_digits10](#max_digits10)|Retorna o número de dígitos decimais necessários para garantir que dois valores distintos do tipo tenham diferentes representações decimais.|
@@ -136,7 +136,7 @@ Para uma especialização arbitrária, nenhum membro tem valores significativos.
 |[tinyness_before](#tinyness_before)|Testa se um tipo pode determinar que um valor é muito pequeno para representar como um valor normalizado antes de arredondá-lo.|
 |[traps](#traps)|Testa se o trapping que relata exceções aritméticas é implementada para um tipo.|
 
-### <a name="denorm_min"></a> denorm_min
+### <a name="denorm_min"></a>denorm_min
 
 Retorna o menor valor desnormalizado diferente de zero.
 
@@ -144,15 +144,15 @@ Retorna o menor valor desnormalizado diferente de zero.
 static constexpr Type denorm_min() throw();
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 O menor valor desnormalizado diferente de zero.
 
 #### <a name="remarks"></a>Comentários
 
-**Long double** é o mesmo que **duplo** para o compilador do C++.
+**Long double** é o mesmo que **Double** para o C++ compilador.
 
-A função retorna o valor mínimo para o tipo, que é o mesmo como [min](#min) se [has_denorm](#has_denorm) não é igual a `denorm_present`.
+A função retorna o valor mínimo para o tipo, que é o mesmo que [min](#min) se [has_denorm](#has_denorm) não for igual a `denorm_present`.
 
 #### <a name="example"></a>Exemplo
 
@@ -195,7 +195,7 @@ for long double objects is: 4.94066e-324
 0
 ```
 
-### <a name="digits"></a> dígitos
+### <a name="digits"></a>números
 
 Retorna o número de dígitos de base que o tipo pode representar sem perda de precisão.
 
@@ -203,7 +203,7 @@ Retorna o número de dígitos de base que o tipo pode representar sem perda de p
 static constexpr int digits = 0;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 O número de dígitos de base que o tipo pode representar sem perda de precisão.
 
@@ -239,7 +239,7 @@ int main( )
 63
 ```
 
-### <a name="digits10"></a> digits10
+### <a name="digits10"></a>digits10
 
 Retorna o número de dígitos decimais que o tipo pode representar sem perda de precisão.
 
@@ -247,7 +247,7 @@ Retorna o número de dígitos decimais que o tipo pode representar sem perda de 
 static constexpr int digits10 = 0;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 O número de dígitos decimais que o tipo pode representar sem perda de precisão.
 
@@ -283,7 +283,7 @@ int main( )
 The float is; 100000000
 ```
 
-### <a name="epsilon"></a> épsilon
+### <a name="epsilon"></a>epsilo
 
 A função retorna a diferença entre 1 e o menor valor maior que 1 que é representável para o tipo de dados.
 
@@ -291,7 +291,7 @@ A função retorna a diferença entre 1 e o menor valor maior que 1 que é repre
 static constexpr Type epsilon() throw();
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 A diferença entre 1 e o menor valor maior que 1 que é representável para o tipo de dados.
 
@@ -335,7 +335,7 @@ The difference between 1 and the smallest value greater than 1
 for long double objects is: 2.22045e-016
 ```
 
-### <a name="has_denorm"></a> has_denorm
+### <a name="has_denorm"></a>has_denorm
 
 Testa se um tipo permite valores desnormalizados.
 
@@ -343,13 +343,13 @@ Testa se um tipo permite valores desnormalizados.
 static constexpr float_denorm_style has_denorm = denorm_absent;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 Um valor de enumeração do tipo **const**`float_denorm_style`, indicando se o tipo permite valores desnormalizados.
 
 #### <a name="remarks"></a>Comentários
 
-A membro armazena `denorm_present` para um tipo de ponto flutuante desnormalizado tem valores, eficaz um número variável de bits exponenciais.
+O membro armazena `denorm_present` para um tipo de ponto flutuante que tem valores desnormalizados, efetivamente um número variável de bits de expoente.
 
 #### <a name="example"></a>Exemplo
 
@@ -381,7 +381,7 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0
 ```
 
-### <a name="has_denorm_loss"></a> has_denorm_loss
+### <a name="has_denorm_loss"></a>has_denorm_loss
 
 Testa se a perda de precisão é detectada como uma perda de desnormalização em vez de um resultado inexato.
 
@@ -389,7 +389,7 @@ Testa se a perda de precisão é detectada como uma perda de desnormalização e
 static constexpr bool has_denorm_loss = false;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 **True** se a perda de precisão for detectada como uma perda de desnormalização; **false** se não for.
 
@@ -427,7 +427,7 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0
 ```
 
-### <a name="has_infinity"></a> has_infinity
+### <a name="has_infinity"></a>has_infinity
 
 Testa se um tipo tem uma representação de infinito positivo.
 
@@ -435,7 +435,7 @@ Testa se um tipo tem uma representação de infinito positivo.
 static constexpr bool has_infinity = false;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 **true** se o tipo tiver uma representação de infinito positivo; **false** se não tiver.
 
@@ -473,7 +473,7 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0
 ```
 
-### <a name="has_quiet_nan"></a> has_quiet_NaN
+### <a name="has_quiet_nan"></a>has_quiet_NaN
 
 Testa se um tipo tem uma representação de um silencioso NAN (não é um número), que é sem sinal.
 
@@ -481,7 +481,7 @@ Testa se um tipo tem uma representação de um silencioso NAN (não é um númer
 static constexpr bool has_quiet_NaN = false;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 **true** se o **tipo** tiver uma representação de NAN silencioso; **false** se não tiver.
 
@@ -519,7 +519,7 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0
 ```
 
-### <a name="has_signaling_nan"></a> has_signaling_NaN
+### <a name="has_signaling_nan"></a>has_signaling_NaN
 
 Testa se um tipo tem uma representação para não sinalizar um número (NAN).
 
@@ -527,7 +527,7 @@ Testa se um tipo tem uma representação para não sinalizar um número (NAN).
 static constexpr bool has_signaling_NaN = false;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 **true** se o tipo tiver uma representação de um NAN com sinal; **false** se não tiver.
 
@@ -565,7 +565,7 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0
 ```
 
-### <a name="infinity"></a> Infinito
+### <a name="infinity"></a>infinito
 
 A representação de infinito positivo para um tipo, se disponível.
 
@@ -573,7 +573,7 @@ A representação de infinito positivo para um tipo, se disponível.
 static constexpr Type infinity() throw();
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 A representação de infinito positivo para um tipo, se disponível.
 
@@ -619,7 +619,7 @@ The representation of infinity for type double is: inf
 The representation of infinity for type long double is: inf
 ```
 
-### <a name="is_bounded"></a> is_bounded
+### <a name="is_bounded"></a>is_bounded
 
 Testa se o conjunto de valores que um tipo pode representar é finito.
 
@@ -627,7 +627,7 @@ Testa se o conjunto de valores que um tipo pode representar é finito.
 static constexpr bool is_bounded = false;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 **True** se o tipo tiver um conjunto limitado de valores representáveis; **false** se não tiver.
 
@@ -673,7 +673,7 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1
 ```
 
-### <a name="is_exact"></a> is_exact
+### <a name="is_exact"></a>is_exact
 
 Testa se os cálculos feitos em um tipo estão livres de erros de arredondamento.
 
@@ -681,7 +681,7 @@ Testa se os cálculos feitos em um tipo estão livres de erros de arredondamento
 static constexpr bool is_exact = false;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 **true** se os cálculos estiverem livres de erros de arredondamento; **false** se não estiverem.
 
@@ -727,7 +727,7 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1
 ```
 
-### <a name="is_iec559"></a> is_iec559
+### <a name="is_iec559"></a>is_iec559
 
 Testa se um tipo está em conformidade com os padrões IEC 559.
 
@@ -735,7 +735,7 @@ Testa se um tipo está em conformidade com os padrões IEC 559.
 static constexpr bool is_iec559 = false;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 **true** se o tipo estiver em conformidade com os padrões IEC 559; **false** se não estiver.
 
@@ -777,7 +777,7 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0
 ```
 
-### <a name="is_integer"></a> is_integer
+### <a name="is_integer"></a>is_integer
 
 Testa se um tipo tem uma representação de inteiro.
 
@@ -785,7 +785,7 @@ Testa se um tipo tem uma representação de inteiro.
 static constexpr bool is_integer = false;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 **true** se o tipo tiver uma representação de inteiro; **false** se não tiver.
 
@@ -827,7 +827,7 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1
 ```
 
-### <a name="is_modulo"></a> is_modulo
+### <a name="is_modulo"></a>is_modulo
 
 Testa se um **tipo** tem uma representação de módulo.
 
@@ -835,7 +835,7 @@ Testa se um **tipo** tem uma representação de módulo.
 static constexpr bool is_modulo = false;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 **true** se o tipo tiver uma representação de módulo; **false** se não tiver.
 
@@ -877,7 +877,7 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1
 ```
 
-### <a name="is_signed"></a> is_signed
+### <a name="is_signed"></a>is_signed
 
 Testa se um tipo tem uma representação com sinal.
 
@@ -885,7 +885,7 @@ Testa se um tipo tem uma representação com sinal.
 static constexpr bool is_signed = false;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 **true** se o tipo tiver uma representação com sinal; **false** se não tiver.
 
@@ -927,21 +927,21 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0
 ```
 
-### <a name="is_specialized"></a> is_specialized
+### <a name="is_specialized"></a>is_specialized
 
-Testa se um tipo tem uma especialização explícita definida na classe de modelo `numeric_limits`.
+Testa se um tipo tem uma especialização explícita definida no modelo de classe `numeric_limits`.
 
 ```cpp
 static constexpr bool is_specialized = false;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
-**true** se o tipo tiver uma especialização explícita definida na classe de modelo; **false** se não tiver.
+**true** se o tipo tiver uma especialização explícita definida no modelo de classe; **false** se não.
 
 #### <a name="remarks"></a>Comentários
 
-Todos os tipos escalares, exceto ponteiros, têm uma especialização explícita definida para a classe de modelo `numeric_limits`.
+Todos os tipos escalares diferentes de ponteiros têm uma especialização explícita definida para o modelo de classe `numeric_limits`.
 
 #### <a name="example"></a>Exemplo
 
@@ -981,7 +981,7 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0
 ```
 
-### <a name="lowest"></a> mais baixo
+### <a name="lowest"></a>máximo
 
 Retorna o valor finito mais negativo.
 
@@ -989,15 +989,15 @@ Retorna o valor finito mais negativo.
 static constexpr Type lowest() throw();
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 Retorna o valor finito mais negativo.
 
 #### <a name="remarks"></a>Comentários
 
-Retorna o valor finito mais negativo para o tipo (que é normalmente `min()` para tipos de inteiro e `-max()` para tipos de ponto flutuante). O valor retornado será significativo se `is_bounded` está **verdadeiro**.
+Retorna o valor finito mais negativo para o tipo (que normalmente é `min()` para tipos inteiros e `-max()` para tipos de ponto flutuante). O valor de retorno será significativo se `is_bounded` for **true**.
 
-### <a name="max"></a> Max
+### <a name="max"></a>maximizar
 
 Retorna o valor máximo finito para um tipo.
 
@@ -1005,13 +1005,13 @@ Retorna o valor máximo finito para um tipo.
 static constexpr Type max() throw();
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 O valor máximo finito para um tipo.
 
 #### <a name="remarks"></a>Comentários
 
-O valor máximo finito é INT_MAX para o tipo **int** e FLT_MAX para o tipo **float**. O valor retornado será significativo se [is_bounded](#is_bounded) for **true**.
+O valor finito máximo é INT_MAX para o tipo **int** e FLT_MAX para o tipo **float**. O valor retornado será significativo se [is_bounded](#is_bounded) for **true**.
 
 #### <a name="example"></a>Exemplo
 
@@ -1039,7 +1039,7 @@ int main() {
 }
 ```
 
-### <a name="max_digits10"></a> max_digits10
+### <a name="max_digits10"></a>max_digits10
 
 Retorna o número de dígitos decimais necessários para garantir que dois valores distintos do tipo tenham diferentes representações decimais.
 
@@ -1047,7 +1047,7 @@ Retorna o número de dígitos decimais necessários para garantir que dois valor
 static constexpr int max_digits10 = 0;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 Retorna o número de dígitos decimais necessários para garantir que dois valores distintos do tipo tenham diferentes representações decimais.
 
@@ -1055,7 +1055,7 @@ Retorna o número de dígitos decimais necessários para garantir que dois valor
 
 O membro armazena o número de dígitos decimais necessários para garantir que dois valores distintos do tipo tenham diferentes representações decimais.
 
-### <a name="max_exponent"></a> max_exponent
+### <a name="max_exponent"></a>max_exponent
 
 Retorna o expoente integral positivo máximo que o tipo de ponto flutuante pode representar como um valor finito quando uma base de base é elevada a essa potência.
 
@@ -1063,7 +1063,7 @@ Retorna o expoente integral positivo máximo que o tipo de ponto flutuante pode 
 static constexpr int max_exponent = 0;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 O expoente com base integral máximo representável pelo tipo.
 
@@ -1101,7 +1101,7 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024
 ```
 
-### <a name="max_exponent10"></a> max_exponent10
+### <a name="max_exponent10"></a>max_exponent10
 
 Retorna o expoente integral positivo máximo que o tipo de ponto flutuante pode representar como um valor finito quando uma base de dez é elevada a essa potência.
 
@@ -1109,7 +1109,7 @@ Retorna o expoente integral positivo máximo que o tipo de ponto flutuante pode 
 static constexpr int max_exponent10 = 0;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 O expoente de base 10 integral máxima representável pelo tipo.
 
@@ -1147,7 +1147,7 @@ The maximum base 10 exponent for type double is:  308
 The maximum base 10 exponent for type long double is:  308
 ```
 
-### <a name="min"></a> min
+### <a name="min"></a>min
 
 Retorna o valor normalizado mínimo para um tipo.
 
@@ -1155,13 +1155,13 @@ Retorna o valor normalizado mínimo para um tipo.
 static constexpr Type min() throw();
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 O valor normalizado mínimo para o tipo.
 
 #### <a name="remarks"></a>Comentários
 
-O valor normalizado mínimo é INT_MIN para o tipo **int** e FLT_MIN para o tipo **float**. O valor retornado será significativo se [is_bounded](#is_bounded) é **verdadeiro** ou se [is_signed](#is_signed) é **false**.
+O valor normalizado mínimo é INT_MIN para o tipo **int** e FLT_MIN para o tipo **float**. O valor de retorno será significativo se [is_bounded](#is_bounded) for **true** ou se [is_signed](#is_signed) for **false**.
 
 #### <a name="example"></a>Exemplo
 
@@ -1197,7 +1197,7 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768
 ```
 
-### <a name="min_exponent"></a> min_exponent
+### <a name="min_exponent"></a>min_exponent
 
 Retorna o expoente integral negativo máximo que o tipo de ponto flutuante pode representar como um valor finito quando uma base de base é elevada a essa potência.
 
@@ -1205,7 +1205,7 @@ Retorna o expoente integral negativo máximo que o tipo de ponto flutuante pode 
 static constexpr int min_exponent = 0;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 O expoente com base integral mínima representável pelo tipo.
 
@@ -1243,7 +1243,7 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021
 ```
 
-### <a name="min_exponent10"></a> min_exponent10
+### <a name="min_exponent10"></a>min_exponent10
 
 Retorna o expoente integral negativo máximo que o tipo de ponto flutuante pode representar como um valor finito quando uma base de dez é elevada a essa potência.
 
@@ -1251,7 +1251,7 @@ Retorna o expoente integral negativo máximo que o tipo de ponto flutuante pode 
 static constexpr int min_exponent10 = 0;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 O expoente de base 10 integral mínimo representável pelo tipo.
 
@@ -1289,7 +1289,7 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307
 ```
 
-### <a name="quiet_nan"></a> quiet_NaN
+### <a name="quiet_nan"></a>quiet_NaN
 
 Retorna a representação de um NAN (não é um número) silencioso para o tipo.
 
@@ -1297,7 +1297,7 @@ Retorna a representação de um NAN (não é um número) silencioso para o tipo.
 static constexpr Type quiet_NaN() throw();
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 A representação de um NAN silencioso para o tipo.
 
@@ -1335,7 +1335,7 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN
 ```
 
-### <a name="radix"></a> Radix
+### <a name="radix"></a>Radix
 
 Retorna a base integral, conhecida como base, usada para a representação de um tipo.
 
@@ -1343,7 +1343,7 @@ Retorna a base integral, conhecida como base, usada para a representação de um
 static constexpr int radix = 0;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 A base integral para a representação do tipo.
 
@@ -1381,7 +1381,7 @@ The base for type int is:  2
 The base for type long double is:  2
 ```
 
-### <a name="round_error"></a> round_error
+### <a name="round_error"></a>round_error
 
 Retorna o erro de arredondamento máximo para o tipo.
 
@@ -1389,7 +1389,7 @@ Retorna o erro de arredondamento máximo para o tipo.
 static constexpr Type round_error() throw();
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 O erro de arredondamento máximo para o tipo.
 
@@ -1423,7 +1423,7 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5
 ```
 
-### <a name="round_style"></a> round_style
+### <a name="round_style"></a>round_style
 
 Retorna um valor que descreve os vários métodos que uma implementação pode escolher para o arredondamento de um valor de ponto flutuante para um valor inteiro.
 
@@ -1431,7 +1431,7 @@ Retorna um valor que descreve os vários métodos que uma implementação pode e
 static constexpr float_round_style round_style = round_toward_zero;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 Um valor da enumeração `float_round_style` que descreve o estilo de arredondamento.
 
@@ -1470,7 +1470,7 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0
 ```
 
-### <a name="signaling_nan"></a> signaling_NaN
+### <a name="signaling_nan"></a>signaling_NaN
 
 Retorna a representação de um sinal NAN (não é um número) para o tipo.
 
@@ -1478,7 +1478,7 @@ Retorna a representação de um sinal NAN (não é um número) para o tipo.
 static constexpr Type signaling_NaN() throw();
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 A representação de um NAN com sinal para o tipo.
 
@@ -1510,7 +1510,7 @@ int main( )
 }
 ```
 
-### <a name="tinyness_before"></a> tinyness_before
+### <a name="tinyness_before"></a>tinyness_before
 
 Testa se um tipo pode determinar que um valor é muito pequeno para representar como um valor normalizado antes de arredondá-lo.
 
@@ -1518,9 +1518,9 @@ Testa se um tipo pode determinar que um valor é muito pequeno para representar 
 static constexpr bool tinyness_before = false;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
-**True** se o tipo puder detectar valores pequenos antes do arredondamento; **falsos** se não for possível.
+**true** se o tipo puder detectar valores minúsculos antes do arredondamento; **false** se não puder.
 
 #### <a name="remarks"></a>Comentários
 
@@ -1560,7 +1560,7 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0
 ```
 
-### <a name="traps"></a> interceptações
+### <a name="traps"></a>interceptações
 
 Testa se o trapping que relata exceções aritméticas é implementada para um tipo.
 
@@ -1568,7 +1568,7 @@ Testa se o trapping que relata exceções aritméticas é implementada para um t
 static constexpr bool traps = false;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 **true** se o trapping for implementada para o tipo; **false** se não for.
 

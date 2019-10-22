@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-ms.openlocfilehash: 8284e56e8afb1e5518cbcbb772079b4f19d57b18
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3f1fb202692d09fa87eb775677e46e1c3f36dbad
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451726"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688942"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
-Define várias classes de modelo que dão suporte a operações de iostreams em sequências armazenadas em um objeto de matriz alocada. Essas sequências são facilmente convertidas para e de objetos da classe de modelo [basic_string](../standard-library/basic-string-class.md).
+Define vários modelos de classe que dão suporte a operações iostreams em sequências armazenadas em um objeto de matriz alocado. Essas sequências são facilmente convertidas de e para objetos do modelo de classe [basic_string](../standard-library/basic-string-class.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -77,7 +77,7 @@ void swap (
 
 ## <a name="remarks"></a>Comentários
 
-Objetos do tipo `char *` podem usar a funcionalidade em [\<strstream>](../standard-library/strstream.md) para streaming. No entanto, \<o strstream > foi preterido \<e o uso de sstream > é incentivado.
+Objetos do tipo `char *` podem usar a funcionalidade em [\<strstream>](../standard-library/strstream.md) para streaming. No entanto, \<strstream > é preterida e o uso de \<sstream > é incentivado.
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -100,12 +100,12 @@ Objetos do tipo `char *` podem usar a funcionalidade em [\<strstream>](../standa
 
 ### <a name="classes"></a>Classes
 
-|Classe|Descrição|
+|Class|Descrição|
 |-|-|
 |[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|Descreve um buffer de fluxo que controla a transmissão de elementos do tipo `Elem`, cujas características de caractere são determinadas pela classe `Tr`, para e de uma sequência de elementos armazenados em um objeto de matriz.|
-|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Descreve um objeto que controla a extração de elementos e objetos codificados de um buffer de fluxo da classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**elem**, **TR**, `Alloc`>, com elementos do tipo `Elem`, cujo caractere as características são determinadas pela classe `Tr` e cujos elementos são alocados por um alocador de classe `Alloc`.|
-|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Descreve um objeto que controla a inserção de elementos e objetos codificados em um buffer de fluxo da classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**elem**, **TR**, `Alloc`>, com `Elem`elementos do tipo, cujas características de caractere são determinadas pela classe `Tr`e cujos elementos são alocados por um alocador de classe. `Alloc`|
-|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Descreve um objeto que controla a inserção e a extração de elementos e objetos codificados usando um buffer de fluxo da classe `Alloc` [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**elem**, **TR**, > `Elem`, com elementos do tipo, cujos as características de caractere são determinadas pela classe `Tr`e cujos elementos são alocados por um alocador de `Alloc`classe.|
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Descreve um objeto que controla a extração de elementos e objetos codificados de um buffer de fluxo da classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <**elem**, **TR**, `Alloc` >, com elementos do tipo `Elem`, cujas características de caractere são determinadas por a classe `Tr` e cujos elementos são alocados por um alocador de `Alloc` de classe.|
+|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Descreve um objeto que controla a inserção de elementos e objetos codificados em um buffer de fluxo da classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <**elem**, **TR**, `Alloc` >, com elementos do tipo `Elem`, cujas características de caractere são determinadas pelo `Tr` de classe e cujos elementos são alocados por um alocador de `Alloc` de classe.|
+|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Descreve um objeto que controla a inserção e a extração de elementos e objetos codificados usando um buffer de fluxo da classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <**elem**, **TR**, `Alloc` >, com elementos do tipo `Elem`, cujas características de caracteres são determinado pela classe `Tr` e cujos elementos são alocados por um alocador de `Alloc` de classe.|
 
 ## <a name="requirements"></a>Requisitos
 

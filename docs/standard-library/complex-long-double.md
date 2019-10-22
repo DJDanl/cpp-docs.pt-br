@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 280fb4c15219b11d2325ff37a296e133810bf2b5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: afd85321ee443359f17850384b06b854dfe89985
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449486"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688226"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
-Essa classe de modelo explicitamente especializada descreve um objeto que armazena um par ordenado de objetos, ambos os dois tipos duplos, o primeiro que representa a parte real de um número complexo e o segundo que representa a parte imaginária.
+Esse modelo de classe explicitamente especializado descreve um objeto que armazena um par ordenado de objetos, ambos os dois tipos **duplos**, o primeiro que representa a parte real de um número complexo e o segundo que representa a parte imaginária.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,32 +32,32 @@ public:
 complex(
     constexpr complex<long double>& complexNum);
 
-// rest same as template class complex
+// rest same as class template complex
 };
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*_RealVal*\
+@No__t_1 *_RealVal*
 O valor do tipo **long double** da parte real do número complexo que está sendo construído.
 
-*_ImagVal*\
+@No__t_1 *_ImagVal*
 O valor do tipo **Long double** para a parte imaginário do número complexo que está sendo construído.
 
-*complexNum*\
+\ *complexNum*
 O número complexo do tipo **Double** ou do tipo **float** cujas partes reais e imaginários são usadas para inicializar um número complexo de tipo **Long duplo** que está sendo construído.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Um número complexo de tipo **longo Duplo**.
 
 ## <a name="remarks"></a>Comentários
 
-A especialização explícita da classe `complex` template para uma classe complexa do tipo **Long** difere da classe template somente nos construtores que ele define. A conversão de **longa dupla** para **flutuante** pode ser implícita, mas a conversão de **duplo** para **longo Duplo** é necessária para ser **explícita**. O uso de **explícito** exclui a iniciação com conversão de tipo usando a sintaxe de atribuição.
+A especialização explícita do modelo de classe `complex` a uma classe complexa de tipo **Long duplo** difere do modelo de classe somente nos construtores que ele define. A conversão de **longa dupla** para **flutuante** pode ser implícita, mas a conversão de **duplo** para **longo Duplo** é necessária para ser **explícita**. O uso de **explícito** exclui a iniciação com conversão de tipo usando a sintaxe de atribuição.
 
-Para obter mais informações sobre a classe `complex` de modelo e seus membros, consulte [classe complexa](../standard-library/complex-class.md).
+Para obter mais informações sobre o modelo de classe `complex` e seus membros, consulte [classe complexa](../standard-library/complex-class.md).
 
-**Específico da Microsoft**: Os tipos **longos duplos** e **duplos** têm a mesma representação, mas são tipos distintos. Para obter mais informações, consulte [tipos fundamentais](../cpp/fundamental-types-cpp.md).
+**Específico da Microsoft**: os tipos **longos duplos** e **duplos** têm a mesma representação, mas são tipos distintos. Para obter mais informações, consulte [tipos fundamentais](../cpp/fundamental-types-cpp.md).
 
 ## <a name="example"></a>Exemplo
 

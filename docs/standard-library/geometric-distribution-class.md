@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: ead6382e61066a72f97eacea91bba5b38aa00677
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 66af7aba99d1510b6d4416543e54890a9e891f7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453927"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688014"
 ---
-# <a name="geometricdistribution-class"></a>Classe geometric_distribution
+# <a name="geometric_distribution-class"></a>Classe geometric_distribution
 
 Gera uma distribuição geométrica.
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*IntType*\
-O tipo de resultado inteiro, o padrão é **int**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+@No__t_1 *IntType*
+O tipo de resultado inteiro, o padrão é **int**. Para possíveis tipos, consulte [\<random >](../standard-library/random.md).
 
-*URNG*\
-O mecanismo do gerador de número aleatório uniforme. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+@No__t_1 *URNG*
+O mecanismo do gerador de número aleatório uniforme. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-A classe do modelo descreve uma distribuição que produz valores de um tipo de integral especificado pelo usuário com uma distribuição geométrica. A tabela a seguir contém links para artigos sobre cada um dos membros.
+O modelo de classe descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário com uma distribuição geométrica. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -220,10 +220,10 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*DTI*\
+*p* \
 O parâmetro de distribuição `p`.
 
-*Parm*\
+\ de *parâmetros*
 A estrutura do parâmetro usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
@@ -251,10 +251,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*DTI*\
+*p* \
 O parâmetro de distribuição `p`.
 
-*Certo*\
+\ *à direita*
 O instância de `param_type` a ser comparada com isto.
 
 ### <a name="remarks"></a>Comentários

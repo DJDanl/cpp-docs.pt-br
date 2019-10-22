@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-ms.openlocfilehash: 0836ed683b398981e95e401a73ded6367c7ab472
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 21efed39fdaabe0f95f83e9dc5cdfcc508a147c5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241812"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684457"
 ---
-# <a name="tupleelement-class"></a>Classe tuple_element
+# <a name="tuple_element-class"></a>Classe tuple_element
 
 Encapsula um elemento `tuple`. Elementos `array` e `pair` de encapsulamento de especializações.
 
@@ -56,35 +56,35 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Índice*\
+@No__t_1 de *índice*
 O índice do elemento designado.
 
-*tupla*\
+@No__t_1 de *tupla*
 O tipo da tupla.
 
-*Elem*\
+@No__t_1 *elem*
 O tipo de um elemento de matriz.
 
-*Tamanho*\
+@No__t_1 de *tamanho*
 O tamanho da matriz.
 
-*T1*\
+@No__t_1 *T1*
 O tipo do primeiro elemento em um par.
 
-*T2*\
+*T2* \
 O tipo do segundo elemento em um par.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo `tuple_element` tem um typedef aninhado `type` que é um sinônimo para o tipo de índice *índice* do tipo de tupla *tupla*.
+O modelo de classe `tuple_element` tem uma `type` de typedef aninhado que é um sinônimo para o tipo no *índice* de índice da *tupla*do tipo de tupla.
 
 O typedef `tuple_element_t` é um alias conveniente para `tuple_element<Index, Tuple>::type`.
 
-A especialização de classe de modelo para matrizes fornece uma interface para `array` como uma tupla de elementos `Size`, cada um com o mesmo tipo. Cada especialização tem um typedef aninhado `type` que é um sinônimo para o tipo dos *índice* elemento do `array`, com qualquer qualificações constantes ou voláteis preservadas.
+A especialização de modelo de classe para matrizes fornece uma interface para um `array` como uma tupla de elementos `Size`, cada um dos quais tem o mesmo tipo. Cada especialização tem um typedef aninhado `type` que é um sinônimo para o tipo do elemento *index* do `array`, com quaisquer qualificações const-volatile preservadas.
 
 As especializações de modelo para os tipos `pair` fornecem um único membro typedef, `type`, que é um sinônimo para o tipo de elemento na posição especificada no par, com qualquer qualificações constantes e/ou voláteis preservadas. O typedef `tuple_element_t` é um alias conveniente para `tuple_element<N, pair<T1, T2>>::type`.
 
-Use o [função get &lt;utilitário&gt; ](../standard-library/utility-functions.md#get) para retornar o elemento em uma posição especificada, ou de um tipo especificado.
+Use a [função get &lt;utility &gt;](../standard-library/utility-functions.md#get) para retornar o elemento em uma posição especificada ou de um tipo especificado.
 
 ## <a name="example"></a>Exemplo
 
@@ -178,6 +178,6 @@ int main() {
 
 **Cabeçalho:** \<array> (para a especialização de matriz)
 
-**Cabeçalho:** \<utilitário > (para especializações de par)
+**Header:** \<utility > (para especializações de par)
 
 **Namespace:** std

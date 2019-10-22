@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 44d44d48f66c9bdbf03d4e36e752ea3dee5ff9c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 687665d2ad8bf80f4f2db07ce11c4866ff1ee903
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453172"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688258"
 ---
 # <a name="complex-class"></a>Classe complex
 
-A classe de modelo descreve um objeto que armazena dois objetos do `Type`tipo, um que representa a parte real de um número complexo e um que representa a parte imaginária.
+O modelo de classe descreve um objeto que armazena dois objetos do tipo `Type`, um que representa a parte real de um número complexo e um que representa a parte imaginária.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,7 +40,7 @@ Um objeto da classe `Type`:
 
 Em particular, talvez não exista nenhuma diferença sutil entre a construção da cópia e a construção padrão seguida pela atribuição. Nenhuma das operações em objetos da classe `Type` pode gerar exceções.
 
-Existem especializações explícitas do complexo de classe de modelo para os três tipos de ponto flutuante. Nessa implementação, um valor de qualquer `Type` outro tipo é conversão a **dobrar** para cálculos reais, com o resultado **duplo** atribuído de volta ao objeto armazenado do tipo. `Type`
+Existem especializações explícitas de modelo de classe complexos para os três tipos de ponto flutuante. Nessa implementação, um valor de qualquer outro tipo `Type` é conversão a **dobrar** para cálculos reais, com o resultado **duplo** atribuído de volta ao objeto armazenado do tipo `Type`.
 
 ## <a name="members"></a>Membros
 
@@ -91,18 +91,18 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_RealVal*\
+@No__t_1 *_RealVal*
 O valor da parte real usada para inicializar o número complexo que está sendo construído.
 
-*_ImagVal*\
+@No__t_1 *_ImagVal*
 O valor da parte imaginária usada para inicializar o número complexo que está sendo construído.
 
-*complexNum*\
+\ *complexNum*
 O número complexo cujas partes reais e imaginárias são usadas para inicializar o número complexo que está sendo construído.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor inicializa a parte real armazenada em  *\_RealVal* e a parte imaginário armazenada em  *\_Imagval*. O segundo construtor inicializa a parte real armazenada `complexNum.real()` para e a parte imaginário armazenada em. `complexNum.imag()`
+O primeiro construtor inicializa a parte real armazenada para *\_RealVal* e a parte imaginário armazenada em *\_Imagval*. O segundo construtor inicializa a parte real armazenada para `complexNum.real()` e a parte imaginário armazenada em `complexNum.imag()`.
 
 Nessa implementação, se um tradutor não dá suporte a funções membro de modelo, o modelo:
 
@@ -171,10 +171,10 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 Um número complexo cujo valor imaginário deve ser extraído.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A parte imaginária do número complexo.
 
@@ -228,10 +228,10 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 Um número complexo ou um número que é do mesmo tipo que o parâmetro do número complexo de destino.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um número complexo multiplicado pelo número especificado como um parâmetro.
 
@@ -313,10 +313,10 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 Um número complexo ou um número que é do mesmo tipo que o parâmetro do número complexo de destino.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um número complexo que tem o número especificado como um parâmetro adicionado.
 
@@ -416,13 +416,13 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parâmetros
 
-*complexNum*\
+\ *complexNum*
 Um número complexo a ser subtraído do número complexo de destino.
 
-*_RealPart*\
+@No__t_1 *_RealPart*
 Um número real a ser subtraído do número complexo de destino.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um número complexo que tem o número especificado como um parâmetro subtraído dele.
 
@@ -524,13 +524,13 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parâmetros
 
-*complexNum*\
+\ *complexNum*
 Um número complexo a ser subtraído do número complexo de destino.
 
-*_RealPart*\
+@No__t_1 *_RealPart*
 Um número real a ser subtraído do número complexo de destino.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um número complexo dividido pelo número especificado como um parâmetro.
 
@@ -626,10 +626,10 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 Um número complexo ou um número que é do mesmo tipo que o parâmetro do número complexo de destino.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um número complexo que recebeu o número especificado como um parâmetro.
 
@@ -703,10 +703,10 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 Um número complexo cujo valor real deve ser extraído.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A parte real do número complexo.
 
@@ -745,7 +745,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 Um tipo que representa o tipo de dados usado para representar as partes reais e imaginárias de um número complexo.
 
@@ -755,7 +755,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Comentários
 
-`value_type`é um sinônimo para o parâmetro de `Type` modelo complexo de classe.
+`value_type` é um sinônimo para o parâmetro de modelo de `Type` complexo de classe.
 
 ### <a name="example"></a>Exemplo
 

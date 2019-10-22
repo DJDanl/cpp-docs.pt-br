@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: 2eac3324516cf88a114064cf0145593c7bf4806b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f7f6f038c0e8bc922874388065ce06d76854bc1b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459463"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688313"
 ---
-# <a name="chisquareddistribution-class"></a>Classe chi_squared_distribution
+# <a name="chi_squared_distribution-class"></a>Classe chi_squared_distribution
 
 Gera uma distribuição qui-quadrada.
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType*\
-O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+@No__t_1 *RealType*
+O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
-*URNG*\
-O mecanismo do gerador de número aleatório uniforme. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+@No__t_1 *URNG*
+O mecanismo do gerador de número aleatório uniforme. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve uma distribuição que produz valores de um tipo de ponto flutuante especificado pelo usuário ou tipo **Double** se nenhum for fornecido, distribuído de acordo com a distribuição qui-quadrada. A tabela a seguir contém links para artigos sobre cada um dos membros.
+O modelo de classe descreve uma distribuição que produz valores de um tipo de ponto flutuante especificado pelo usuário ou tipo **Double** se nenhum for fornecido, distribuído de acordo com a distribuição qui-quadrada. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -238,7 +238,7 @@ explicit chi_squared_distribution(const param_type& parm);
 *n*\
 O parâmetro de distribuição `n`.
 
-*Parm*\
+\ de *parâmetros*
 A estrutura do parâmetro usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
@@ -269,7 +269,7 @@ struct param_type {
 *n*\
 O parâmetro de distribuição `n`.
 
-*Certo*\
+\ *à direita*
 O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários

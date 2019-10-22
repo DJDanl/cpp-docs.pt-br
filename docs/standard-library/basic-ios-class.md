@@ -55,16 +55,16 @@ helpviewer_keywords:
 - std::basic_ios [C++], tie
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
-ms.openlocfilehash: e2341dcc0f2f03fbfa212d1ea49993016e193638
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 614e26b2329edeec2cccb32c7ba18b23e9d5320d
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460100"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688433"
 ---
-# <a name="basicios-class"></a>Classe basic_ios
+# <a name="basic_ios-class"></a>Classe basic_ios
 
-A classe de modelo descreve as funções membro e de armazenamento comuns a ambos os fluxos de entrada (da classe de modelo [basic_istream](../standard-library/basic-istream-class.md)) e os fluxos de saída (da classe de modelo [basic_ostream](../standard-library/basic-ostream-class.md)) que dependem dos parâmetros do modelo. (A classe [ios_base](../standard-library/ios-base-class.md) descreve o que é comum e não depende dos parâmetros de modelo.) Um objeto da classe **basic_ios\<Class elem, características de classe >** ajuda a controlar um fluxo com elementos do `Elem`tipo, cujas características de caractere são determinadas pela classe `Traits`.
+O modelo de classe descreve as funções de armazenamento e membro comuns a fluxos de entrada (do modelo de classe [basic_istream](../standard-library/basic-istream-class.md)) e fluxos de saída (do modelo de classe [basic_ostream](../standard-library/basic-ostream-class.md)) que dependem dos parâmetros do modelo. (A classe [ios_base](../standard-library/ios-base-class.md) descreve o que é comum e não depende de parâmetros de modelo.) Um objeto da classe **basic_ios \<class elem, características de classe >** ajuda a controlar um fluxo com elementos do tipo `Elem`, cujas características de caractere são determinadas pelo `Traits` de classe.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -76,10 +76,10 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem*\
+@No__t_1 *elem*
 Um tipo.
 
-*Características*\
+@No__t_1 de *características*
 Uma variável do tipo `char_traits`.
 
 ## <a name="remarks"></a>Comentários
@@ -140,7 +140,7 @@ Um objeto da classe **basic_ios\<classe Elem, classe Traits>** armazena:
 
 |Operador|Descrição|
 |-|-|
-|[explicit operator bool](#op_bool)|Permite o uso de `basic_ios` um objeto como um **bool**. Conversão de tipo automática é desabilitada para evitar efeitos colaterais comuns não intencionais.|
+|[explicit operator bool](#op_bool)|Permite o uso de um objeto `basic_ios` como um **bool**. Conversão de tipo automática é desabilitada para evitar efeitos colaterais comuns não intencionais.|
 |[operator void *](#op_void_star)|Indica se o fluxo ainda é válido.|
 |[operator!](#op_not)|Indica se o fluxo não é inválido.|
 
@@ -158,7 +158,7 @@ Indica a perda de integridade do buffer de fluxo
 bool bad() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se `rdstate & badbit` for diferente de zero; caso contrário, **false**.
 
@@ -194,7 +194,7 @@ basic_ios();
 
 ### <a name="parameters"></a>Parâmetros
 
-*SB*\
+\ *SB*
 Buffer padrão para armazenar elementos de entrada ou saída.
 
 ### <a name="remarks"></a>Comentários
@@ -220,15 +220,15 @@ void clear(io_state state);
 
 ### <a name="parameters"></a>Parâmetros
 
-*status*\
+*estado* \
 Adicional Os sinalizadores que você deseja definir depois de limpar todos os sinalizadores. Assume o padrão de `goodbit`.
 
-*reraise*\
+*relançar* \
 Adicional Especifica se a exceção deve ser gerada novamente. O padrão é **false** (não irá gerar novamente a exceção).
 
 ### <a name="remarks"></a>Comentários
 
-Os sinalizadores são `goodbit`, `failbit`, `eofbit`e. `badbit` Teste esses sinalizadores com [good](#good), [bad](#bad), [eof](#eof) e [fail](#fail)
+Os sinalizadores são `goodbit`, `failbit`, `eofbit` e `badbit`. Teste esses sinalizadores com [good](#good), [bad](#bad), [eof](#eof) e [fail](#fail)
 
 A função de membro substitui as informações de estado de fluxo armazenadas com:
 
@@ -238,7 +238,7 @@ Se `state` **&** [exceptions](#exceptions) for diferente de zero, gera um objeto
 
 ### <a name="example"></a>Exemplo
 
-Consulte [rdstate](#rdstate) e [getline](../standard-library/string-functions.md#getline) para obter exemplos `clear`usando.
+Consulte [rdstate](#rdstate) e [getline](../standard-library/string-functions.md#getline) para obter exemplos usando `clear`.
 
 ## <a name="copyfmt"></a>  basic_ios::copyfmt
 
@@ -251,16 +251,16 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 O fluxo cujos sinalizadores você deseja copiar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O objeto **this** para o fluxo para o qual você está copiando os sinalizadores.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro relata o evento de **apagamento\_** de eventos de retorno de chamada. Em seguida, ele copia da *direita* para  **\*esse** caractere de preenchimento, o ponteiro de ligação e as informações de formatação. Antes de alterar a máscara de exceção, ele relata o evento `copyfmt_event`de retorno de chamada. Se, após a cópia estar concluída, **state &** [exceptions](#exceptions) for diferente de zero, a função chamará [clear](#clear) efetivamente com o argumento [rdstate](#rdstate). Retorna **\*this**.
+A função membro relata o **\_event**de eventos de retorno de chamada. Em seguida, ele copia da *direita* para **\*this** o caractere de preenchimento, o ponteiro de ligação e as informações de formatação. Antes de alterar a máscara de exceção, ela relata o evento de retorno de chamada `copyfmt_event`. Se, após a cópia estar concluída, **state &** [exceptions](#exceptions) for diferente de zero, a função chamará [clear](#clear) efetivamente com o argumento [rdstate](#rdstate). Retorna **\*this**.
 
 ### <a name="example"></a>Exemplo
 
@@ -291,7 +291,7 @@ Indica se o final de um fluxo foi atingido.
 bool eof() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se o final do fluxo tiver sido atingido; caso contrário, **false** .
 
@@ -333,10 +333,10 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Newexcept*\
+@No__t_1 *Newexcept*
 Os sinalizadores que você deseja que gerem uma exceção.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Os sinalizadores atualmente especificados para gerar uma exceção para o fluxo.
 
@@ -388,7 +388,7 @@ Indica falha ao extrair um campo válido de um fluxo.
 bool fail() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se [rdstate](#rdstate) `& (badbit|failbit)` for diferente de zero, caso contrário, **false**.
 
@@ -421,10 +421,10 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>Parâmetros
 
-*º*\
+@No__t_1 de *caracteres*
 O caractere que você deseja usar como caractere de preenchimento.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O caractere de preenchimento atual.
 
@@ -465,9 +465,9 @@ Indica que o fluxo está em boas condições.
 bool good() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**true** se [rdstate](#rdstate) `== goodbit` (nenhum sinalizador de estado estiver definido), caso contrário, **false**.
+**true** se [rdstate](#rdstate) `== goodbit` (nenhum sinalizador de estado está definido), caso contrário, **false**.
 
 Para obter mais informações sobre `goodbit`, consulte [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
@@ -485,10 +485,10 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Localização*\
+@No__t_1 de *Loc*
 Uma cadeia de caracteres de localidade.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A localidade anterior.
 
@@ -528,10 +528,10 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Sb*\
+@No__t_1 *_Sb*
 Buffer padrão para armazenar elementos de entrada ou saída.
 
-*_Isstd*\
+@No__t_1 *_Isstd*
 Especifica se esse é um fluxo padrão.
 
 ### <a name="remarks"></a>Comentários
@@ -544,7 +544,7 @@ A função membro armazena valores em todos os objetos membro, de modo que:
 
 - [rdstate](#rdstate) retornará [goodbit](../standard-library/ios-base-class.md#iostate) se *_Sb* for diferente de zero; caso contrário, retornará [badbit](../standard-library/ios-base-class.md#iostate).
 
-- [exceções](#exceptions) retorna `goodbit`.
+- as [exceções](#exceptions) retornam `goodbit`.
 
 - [flags](../standard-library/ios-base-class.md#flags) retorna [skipws](../standard-library/ios-base-class.md#fmtflags) &#124; [dec](../standard-library/ios-base-class.md#fmtflags).
 
@@ -576,12 +576,12 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 O objeto `ios_base` do qual mover valores.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro protegido move todos os valores armazenados  à direita `*this` para, exceto `stream buffer pointer`o armazenado, que não foi alterado à *direita* e definido como um ponteiro nulo `*this`no. O armazenado `tie pointer` é definido como um ponteiro nulo à *direita*.
+A função membro protegido move todos os valores armazenados à *direita* para `*this`, exceto o `stream buffer pointer` armazenado, que não foi alterado à *direita* e definido como um ponteiro nulo no `*this`. O `tie pointer` armazenado é definido como um ponteiro nulo à *direita*.
 
 ## <a name="narrow"></a>  basic_ios::narrow
 
@@ -593,19 +593,19 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*º*\
+@No__t_1 de *caracteres*
 O **caractere** a ser convertido.
 
-*Os*\
+@No__t_1 *padrão*
 O **caractere** que você deseja retornar se nenhum equivalente for encontrado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O **caractere** equivalente a um determinado `char_type`.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna [use_facet](../standard-library/basic-filebuf-class.md#open)\<CType\<E > > ( [getloc](../standard-library/ios-base-class.md#getloc)()).`narrow` ( `Char`, `Default`).
+A função membro retorna [use_facet](../standard-library/basic-filebuf-class.md#open) \<ctype \<E > > ( [getloc](../standard-library/ios-base-class.md#getloc)()). `narrow` (`Char`, `Default`).
 
 ### <a name="example"></a>Exemplo
 
@@ -644,7 +644,7 @@ Indica se o fluxo ainda é válido.
 operator void *() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O operador retorna um ponteiro nulo apenas se [fail](#fail).
 
@@ -674,7 +674,7 @@ Indica se o fluxo não é inválido.
 bool operator!() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna [fail](#fail).
 
@@ -698,7 +698,7 @@ int main( )
 
 ## <a name="op_bool"></a>  basic_ios::operator bool
 
-Permite o uso de `basic_ios` um objeto como um **bool**. Conversão de tipo automática é desabilitada para evitar efeitos colaterais comuns não intencionais.
+Permite o uso de um objeto `basic_ios` como um **bool**. Conversão de tipo automática é desabilitada para evitar efeitos colaterais comuns não intencionais.
 
 ```cpp
 explicit operator bool() const;
@@ -706,7 +706,7 @@ explicit operator bool() const;
 
 ### <a name="remarks"></a>Comentários
 
-O operador retornará um valor conversível para **false** somente `fail()`se. O tipo de retorno é conversível somente para **bool**, `void *` não para ou outro tipo escalar conhecido.
+O operador retornará um valor conversível para **false** somente se `fail()`. O tipo de retorno é conversível somente para **bool**, não para `void *` ou outro tipo escalar conhecido.
 
 ## <a name="pos_type"></a>  basic_ios::pos_type
 
@@ -728,7 +728,7 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Sb*\
+@No__t_1 *_Sb*
 Um fluxo.
 
 ### <a name="remarks"></a>Comentários
@@ -769,7 +769,7 @@ Lê o estado dos bits para sinalizadores.
 iostate rdstate() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 As informações de estado de fluxo armazenadas.
 
@@ -820,7 +820,7 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_State*\
+@No__t_1 *_State*
 Sinalizadores adicionais a serem definidos.
 
 ### <a name="remarks"></a>Comentários
@@ -870,12 +870,12 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>Parâmetros
 
-*strbuf*\
+\ *strbuf*
 O buffer de fluxo para se tornar o buffer de leitura.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro protegido armazena *strbuf* no `stream buffer pointer`. Ele não chama `clear`.
+A função membro protegido armazena *strbuf* no `stream buffer pointer`. ela não chama `clear`.
 
 ## <a name="tie"></a>  basic_ios::tie
 
@@ -889,10 +889,10 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Str*\
+\ de *Str*
 Um fluxo.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A primeira função membro retorna o ponteiro de ligação armazenado. A segunda função de membro armazena *Str* no ponteiro de ligação e retorna seu valor armazenado anterior.
 
@@ -928,7 +928,7 @@ typedef Traits traits_type;
 
 ## <a name="widen"></a>  basic_ios::widen
 
-Localiza o equivalente `char_type` a um determinado **caractere**.
+Localiza o `char_type` equivalente a um determinado **caractere**.
 
 ```cpp
 char_type widen(char Char) const;
@@ -936,12 +936,12 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*º*\
+@No__t_1 de *caracteres*
 O caractere a ser convertido.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Localiza o equivalente `char_type` a um determinado **caractere**.
+Localiza o `char_type` equivalente a um determinado **caractere**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -977,12 +977,12 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 O objeto `basic_ios` usado para trocar valores.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro protegido troca todos os valores armazenados *à direita* com `*this` , exceto o armazenado `stream buffer pointer`.
+A função membro protegido troca todos os valores armazenados *à direita* com `*this`, exceto o `stream buffer pointer` armazenado.
 
 ## <a name="see-also"></a>Consulte também
 

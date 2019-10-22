@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-ms.openlocfilehash: 506ab5fccd44ad37a08a9f741f44f24d3a85b87d
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: ee35f880ddf40561cacb5c4d519f2e6291ad77a8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956991"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689110"
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
 
-Define o priority_queue e queue das classes de modelo e de vários modelos de suporte.
+Define os modelos de classe priority_queue e Queue e vários modelos de suporte.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -24,7 +24,7 @@ Define o priority_queue e queue das classes de modelo e de vários modelos de su
 **Namespace:** std
 
 > [!NOTE]
-> A \<biblioteca de > de fila também `#include <initializer_list>` usa a instrução.
+> A biblioteca \<queue > também usa a instrução `#include <initializer_list>`.
 
 ## <a name="members"></a>Membros
 

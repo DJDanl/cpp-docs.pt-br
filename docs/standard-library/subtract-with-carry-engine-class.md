@@ -16,14 +16,14 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 17091e33c504df60c0b6b8e346d2a6fd3893679c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 63cbbb3a1a508b41c1e0632eda3eeabe4fda6696
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447410"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685825"
 ---
-# <a name="subtractwithcarryengine-class"></a>Classe subtract_with_carry_engine
+# <a name="subtract_with_carry_engine-class"></a>Classe subtract_with_carry_engine
 
 Gera uma sequência aleatória usando o algoritmo de subtração com transferência (Fibonacci com retardo).
 
@@ -36,13 +36,13 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parâmetros
 
-*UInttype*\
-O tipo de resultado inteiro sem sinal. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+@No__t_1 de *UIntType*
+O tipo de resultado inteiro sem sinal. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
-*MOSTRAR*\
+*W* \
 **Tamanho da palavra**. Tamanho de cada palavra da sequência de estado, em bits. **Pré-condição**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*&* \
+@No__t_1 *S*
 **Curto retardo**. Número de valores inteiros. **Pré-condição**: `0 < S < R`
 
 *R*\
@@ -60,18 +60,18 @@ Para obter mais informações sobre membros do mecanismo, consulte [\<random>](.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo `substract_with_carry_engine` é uma melhoria em relação a [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Nenhum desses mecanismos é tão rápido nem apresenta resultados de qualidade tão altos quanto o [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
+O modelo de classe de `substract_with_carry_engine` é uma melhoria em relação ao [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Nenhum desses mecanismos é tão rápido nem apresenta resultados de qualidade tão altos quanto o [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Esse mecanismo produz valores de um tipo integral sem sinal especificado pelo usuário usando a relação de recorrência (*ponto final*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, em que `cy(i)` terá o valor `1` se `x(i - S) - x(i - R) - cy(i - 1) < 0`; caso contrário, `0` e `M` terão o valor `2`<sup>W</sup>. O estado do mecanismo é um indicador de transporte mais valores de *R* . Esses valores consistem nos últimos valores de *r* retornados `operator()` se tiverem sido chamados pelo menos do *r* vezes, `N` caso contrário, os valores retornados e os `R - N` últimos valores da semente.
+Esse mecanismo produz valores de um tipo integral não assinado especificado pelo usuário usando a relação de recorrência ( *período*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, em que `cy(i)` tem o valor `1` se `x(i - S) - x(i - R) - cy(i - 1) < 0`, caso contrário `0` e `M` tem o valor `2`<sup>W</sup>. O estado do mecanismo é um indicador de transporte mais valores de *R* . Esses valores consistem nos últimos valores de *r* retornados se `operator()` tiver sido chamado pelo menos *r* vezes, caso contrário, os valores de `N` que foram retornados e os últimos valores de `R - N` da semente.
 
 O argumento de modelo `UIntType` deve ser grande o suficiente para manter valores até `M - 1`.
 
 Embora seja possível construir um gerador diretamente com base nesse mecanismo, também é possível usar um dos typedefs predefinidos:
 
-`ranlux24_base`: Usado como base para `ranlux24`.
+`ranlux24_base`: usado como base para `ranlux24`.
 `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
 
-`ranlux48_base`: Usado como base para `ranlux48`.
+`ranlux48_base`: usado como base para `ranlux48`.
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
 Para obter informações detalhadas sobre o algoritmo de mecanismo de subtração com transferência, consulte o artigo da Wikipédia [Lagged Fibonacci generator](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator) (Gerador de retardamento de Fibonacci).

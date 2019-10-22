@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: 4a173ea022f21c454d8edd66f94d2d9b14faa4e1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9e8334db52e05f4a61adb7256e87ed611f0d3ecb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460217"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689278"
 ---
-# <a name="moveiterator-class"></a>Classe move_iterator
+# <a name="move_iterator-class"></a>Classe move_iterator
 
 O modelo de classe `move_iterator` é um wrapper para um iterador. O move_iterator apresenta o mesmo comportamento do iterador que ele encapsula (armazena), exceto pelo fato de que transforma o operador de desreferência do iterador armazenado em uma referência rvalue, transformando uma cópia em um movimento. Para obter mais informações sobre rvalues, consulte [Declarador de referência Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -39,7 +39,7 @@ class move_iterator;
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve um objeto que se comporta como um iterador, exceto quando desreferenciado. Ela armazena um iterador de acesso aleatório do tipo `Iterator`, acessado pela função membro `base()`. Todas as operações em um `move_iterator` são executadas diretamente no iterador armazenado, exceto pelo fato de que o resultado de `operator*` é implicitamente convertido em `value_type&&` para criar uma referência rvalue.
+O modelo de classe descreve um objeto que se comporta como um iterador, exceto quando desreferenciado. Ela armazena um iterador de acesso aleatório do tipo `Iterator`, acessado pela função membro `base()`. Todas as operações em um `move_iterator` são executadas diretamente no iterador armazenado, exceto pelo fato de que o resultado de `operator*` é implicitamente convertido em `value_type&&` para criar uma referência rvalue.
 
 Um `move_iterator` pode ser capaz de operações que não são definidas pelo iterador encapsulado. Essas operações não devem ser usadas.
 
@@ -54,7 +54,7 @@ Um `move_iterator` pode ser capaz de operações que não são definidas pelo it
 |Nome de tipo|Descrição|
 |-|-|
 |[iterator_type](#iterator_type)|Um sinônimo para o parâmetro de modelo `RandomIterator`.|
-|[iterator_category](#iterator_category)|Um sinônimo para uma expressão **TypeName** mais longa do mesmo nome `iterator_category` identifica as capacidades gerais do iterador.|
+|[iterator_category](#iterator_category)|Um sinônimo para uma expressão **TypeName** mais longa do mesmo nome, `iterator_category` identifica as capacidades gerais do iterador.|
 |[value_type](#value_type)|Um sinônimo para uma expressão **TypeName** mais longa do mesmo nome, `value_type` descreve o tipo dos elementos do iterador.|
 |[difference_type](#difference_type)|Um sinônimo para uma expressão **TypeName** mais longa do mesmo nome, `difference_type` descreve o tipo integral necessário para expressar valores de diferença entre elementos.|
 |[pointer](#pointer)|Um sinônimo para o parâmetro de modelo `RandomIterator`.|
@@ -100,7 +100,7 @@ A função membro retorna o iterador armazenado.
 
 ## <a name="difference_type"></a>  move_iterator::difference_type
 
-O tipo `difference_type` `move_iterator` é`typedef` baseado na característica`difference_type`do iterador e pode ser usado de forma intercambiável.
+O tipo `difference_type` é uma `typedef` `move_iterator` com base no `difference_type` de características do iterador e pode ser usado de forma intercambiável com ele.
 
 ```cpp
 typedef typename iterator_traits<RandomIterator>::difference_type difference_type;
@@ -112,7 +112,7 @@ O tipo é um sinônimo para a característica do iterador `typename iterator_tra
 
 ## <a name="iterator_category"></a>  move_iterator::iterator_category
 
-O tipo `iterator_category` `move_iterator` é`typedef` baseado na característica`iterator_category`do iterador e pode ser usado de forma intercambiável.
+O tipo `iterator_category` é uma `typedef` `move_iterator` com base no `iterator_category` de características do iterador e pode ser usado de forma intercambiável com ele.
 
 ```cpp
 typedef typename iterator_traits<RandomIterator>::iterator_category  iterator_category;
@@ -147,7 +147,7 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 O iterador a ser usado como o iterador armazenado.
 
 ### <a name="remarks"></a>Comentários
@@ -164,10 +164,10 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Off*\
+@No__t_1 *_Off*
 Um deslocamento para adicionar à posição atual para determinar a nova posição atual.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna o novo elemento atual.
 
@@ -279,7 +279,7 @@ O operador retorna `(reference)*base()`.
 
 ## <a name="op_arrow"></a>  move_iterator::operator-&gt;
 
-Como um normal `RandomIterator` `operator->`, ele fornece acesso aos campos que pertencem ao elemento atual.
+Como um `RandomIterator` normal `operator->`, ele fornece acesso aos campos que pertencem ao elemento atual.
 
 ```cpp
 pointer operator->() const;
@@ -291,7 +291,7 @@ O operador retorna `&**this`.
 
 ## <a name="pointer"></a>  move_iterator::pointer
 
-O tipo `pointer` é um **typedef** baseado no iterador `RandomIterator` aleatório para `move_iterator`e pode ser usado de forma intercambiável.
+O tipo `pointer` é um **typedef** baseado na `RandomIterator` do iterador aleatório para `move_iterator` e pode ser usado de forma intercambiável.
 
 ```cpp
 typedef RandomIterator  pointer;
@@ -303,7 +303,7 @@ O tipo é um sinônimo de `RandomIterator`.
 
 ## <a name="reference"></a>  move_iterator::reference
 
-O tipo `reference` é um **typedef** baseado em `value_type&&` for `move_iterator`e pode ser usado de forma intercambiável com `value_type&&`.
+O tipo `reference` é um **typedef** baseado em `value_type&&` para `move_iterator` e pode ser usado de forma intercambiável com `value_type&&`.
 
 ```cpp
 typedef value_type&& reference;
@@ -315,7 +315,7 @@ O tipo é um sinônimo para `value_type&&`, que é uma referência de rvalue.
 
 ## <a name="value_type"></a>  move_iterator::value_type
 
-O tipo `value_type` `move_iterator` é`typedef` baseado na característica`value_type`do iterador e pode ser usado de forma intercambiável.
+O tipo `value_type` é uma `typedef` `move_iterator` com base no `value_type` de características do iterador e pode ser usado de forma intercambiável com ele.
 
 ```cpp
 typedef typename iterator_traits<RandomIterator>::value_type   value_type;

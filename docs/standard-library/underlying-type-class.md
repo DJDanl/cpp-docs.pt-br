@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - underlying_type
 ms.assetid: 691ddce3-2677-4480-bd35-d933fab85d3e
-ms.openlocfilehash: 465383357e6c0306c24fe8325327327c3a3b64c1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ea4768d78047112a7584ca49b0e4487fad55a970
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454979"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688837"
 ---
-# <a name="underlyingtype-class"></a>Classe underlying_type
+# <a name="underlying_type-class"></a>Classe underlying_type
 
 Produz o tipo integral subjacente para um tipo de enumeração.
 
@@ -26,12 +26,12 @@ struct underlying_type;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*\
+*T* \
 O tipo a ser modificado.
 
 ## <a name="remarks"></a>Comentários
 
-O `type` typedef do membro da classe de modelo nomeia o tipo integral subjacente de *t*, quando *t* é um tipo de enumeração, caso contrário, não `type`há nenhum typedef de membro.
+O `type` typedef do membro do modelo de classe nomeia o tipo integral subjacente *t*, quando *t* é um tipo de enumeração, caso contrário, não há nenhum typedef de membro `type`.
 
 ## <a name="requirements"></a>Requisitos
 

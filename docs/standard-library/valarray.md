@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: c18b72017e4999e377bf8575f624f8fdda5b0caf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ed90273fe293ae2e08c3c91762c12c42bb368c16
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448345"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688769"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
-Define o valarray da classe de modelo e várias classes de modelo e funções com suporte.
+Define o modelo de classe valarray e vários modelos e funções de classe de suporte.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -24,11 +24,11 @@ Define o valarray da classe de modelo e várias classes de modelo e funções co
 **Namespace:** std
 
 > [!NOTE]
-> A \<biblioteca de > valarray usa a instrução ' #include < initializer_list > '.
+> A biblioteca \<valarray > usa a instrução ' #include < initializer_list > '.
 
 ## <a name="remarks"></a>Comentários
 
-Essas classes de modelo e funções são latitudes incomuns permitidas por razões de desempenho aprimorado. Especificamente, qualquer função retornando `valarray<T1>` tipo pode retornar um objeto de algum outro tipo T2. Nesse caso, qualquer função que aceite um ou mais argumentos do tipo `valarray<T2>` deve ter sobrecargas que aceitam combinações arbitrárias desses argumentos, cada uma substituída por um argumento do tipo T2.
+Esses modelos e funções de classe são permitidos latitude incomum no interesse do desempenho aprimorado. Especificamente, qualquer função que retorna o tipo `valarray<T1>` pode retornar um objeto de algum outro tipo T2. Nesse caso, qualquer função que aceite um ou mais argumentos do tipo `valarray<T2>` deve ter sobrecargas que aceitem combinações arbitrárias desses argumentos, cada uma substituída por um argumento do tipo T2.
 
 ## <a name="members"></a>Membros
 
@@ -84,18 +84,18 @@ Essas classes de modelo e funções são latitudes incomuns permitidas por razõ
 |||
 |-|-|
 |[Classe gslice](../standard-library/gslice-class.md)|Uma classe de utilitário para valarray usada para definir fatias multidimensionais de um valarray.|
-|[Classe gslice_array](../standard-library/gslice-array-class.md)|Uma classe de modelo auxiliar interna, que dá suporte a objetos de fatia geral fornecendo operações entre matrizes de subconjunto definidas pela fatia geral de um valarray.|
-|[Classe indirect_array](../standard-library/indirect-array-class.md)|Uma classe de modelo auxiliar interna, que dá suporte a objetos que são subconjuntos de valarrays fornecendo operações entre matrizes de subconjunto definidas pela especificação de um subconjunto de índices de uma valarray pai.|
-|[Classe mask_array](../standard-library/mask-array-class.md)|Uma classe de modelo interno e auxiliar, que dá suporte para objetos que são subconjuntos dos valarrays pai, especificados com uma expressão booliana, ao fornecer operações entre as matrizes de subconjunto.|
+|[Classe gslice_array](../standard-library/gslice-array-class.md)|Um modelo de classe auxiliar interno que dá suporte a objetos de fatia geral, fornecendo operações entre as matrizes de subconjuntos definidas pela fatia geral de um valarray.|
+|[Classe indirect_array](../standard-library/indirect-array-class.md)|Um modelo de classe auxiliar interno que dá suporte a objetos que são subconjuntos de valarrays fornecendo operações entre as matrizes de subconjuntos definidas especificando um subconjunto de índices de um valarray pai.|
+|[Classe mask_array](../standard-library/mask-array-class.md)|Um modelo de classe auxiliar interno que dá suporte a objetos que são subconjuntos de valarrays pai, especificados com uma expressão booleana, fornecendo operações entre as matrizes de subconjuntos.|
 |[Classe slice](../standard-library/slice-class.md)|Uma classe de utilitário para valarray usada para definir subconjuntos unidimensionais, parecidos com um vetor de uma valarray.|
-|[Classe slice_array](../standard-library/slice-array-class.md)|Uma classe de modelo auxiliar interna, que dá suporte a objetos de fatia fornecendo operações entre matrizes de subconjunto definidas pela fatia de um valarray.|
-|[Classe valarray](../standard-library/valarray-class.md)|A classe de modelo descreve um objeto que controla uma sequência de elementos do `Type` tipo que são armazenados como uma matriz e projetados para executar operações matemáticas de alta velocidade, otimizadas para o desempenho computacional.|
+|[Classe slice_array](../standard-library/slice-array-class.md)|Um modelo de classe auxiliar interno que dá suporte a objetos de fatia, fornecendo operações entre as matrizes de subconjuntos definidas pela fatia de um valarray.|
+|[Classe valarray](../standard-library/valarray-class.md)|O modelo de classe descreve um objeto que controla uma sequência de elementos do tipo `Type` que são armazenados como uma matriz e projetados para executar operações matemáticas de alta velocidade, otimizadas para desempenho computacional.|
 
 ### <a name="specializations"></a>Especializações
 
 |||
 |-|-|
-|[Classe valarray\<bool>](../standard-library/valarray-bool-class.md)|Uma versão especializada da classe de modelo valarray\<o**tipo**> para elementos do tipo **bool**.|
+|[Classe valarray\<bool>](../standard-library/valarray-bool-class.md)|Uma versão especializada do modelo de classe valarray \<**tipo**> a elementos do tipo **bool**.|
 
 ## <a name="see-also"></a>Consulte também
 

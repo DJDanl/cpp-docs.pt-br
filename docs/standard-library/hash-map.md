@@ -6,19 +6,19 @@ f1_keywords:
 - std::<hash_map>
 helpviewer_keywords:
 - hash_map header
-ms.openlocfilehash: cca38386892ce4df6bf9863e0cbac3dc16106d35
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e586a933c2a80b7e611bcd4b4714e300eb21a0ad
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448661"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689569"
 ---
-# <a name="lthashmapgt"></a>&lt;hash_map&gt;
+# <a name="lthash_mapgt"></a>&lt;hash_map&gt;
 
 > [!NOTE]
-> Este cabeçalho é obsoleto. A alternativa é [ \<unordered_map >](unordered-map.md).
+> Este cabeçalho é obsoleto. A alternativa é [\<unordered_map >](unordered-map.md).
 
-Define as classes de modelo do contêiner hash_map e hash_multimap e seus modelos de suporte.
+Define os modelos de classe de contêiner hash_map e hash_multimap e seus modelos de suporte.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,7 +30,7 @@ Define as classes de modelo do contêiner hash_map e hash_multimap e seus modelo
 
 |Versão hash_map|Versão hash_multimap|Descrição|
 |-----------------------|----------------------------|-----------------|
-|[operator!= (hash_map)](hash-map-operators.md#op_neq)|[operator!=(hash_multimap)](hash-map-operators.md#op_neq_mm)|Testa se o objeto hash_map ou hash_multimap no lado esquerdo do operador não é igual ao objeto hash_map ou hash_multimap no lado direito.|
+|[operator!= (hash_map)](hash-map-operators.md#op_neq)|[operador! = (hash_multimap)](hash-map-operators.md#op_neq_mm)|Testa se o objeto hash_map ou hash_multimap no lado esquerdo do operador não é igual ao objeto hash_map ou hash_multimap no lado direito.|
 |[operator== (hash_map)](hash-map-operators.md#op_eq_eq)|[operator== (hash_multimap)](hash-map-operators.md#op_eq_eq_mm)|Testa se o objeto hash_map ou hash_multimap no lado esquerdo do operador é igual ao objeto hash_map ou hash_multimap no lado direito.|
 
 ### <a name="specialized-template-functions"></a>Funções de Modelo Especializadas
@@ -41,9 +41,9 @@ Define as classes de modelo do contêiner hash_map e hash_multimap e seus modelo
 
 ### <a name="classes"></a>Classes
 
-|Classe|Descrição|
+|Class|Descrição|
 |-|-|
-|[Classe hash_compare](hash-compare-class.md)|Descreve um objeto que pode ser usado por qualquer um dos contêineres associativos de hash — hash_map, hash_multimap, hash_set ou hash_multiset — como um `Traits` objeto de parâmetro padrão para ordenar e aplicar hash aos elementos que eles contêm.|
+|[Classe hash_compare](hash-compare-class.md)|Descreve um objeto que pode ser usado por qualquer um dos contêineres associativos de hash — hash_map, hash_multimap, hash_set ou hash_multiset — como um objeto de parâmetro de `Traits` padrão para ordenar e aplicar hash aos elementos que eles contêm.|
 |[Classe value_compare](value-compare-class.md)|Fornece um objeto de função que pode comparar os elementos de um hash_map comparando os valores de suas chaves para determinar sua ordem relativa no hash_map.|
 |[Classe hash_map](hash-map-class.md)|Usado para o armazenamento e a recuperação rápida de dados de uma coleção em que cada elemento é um par que tem uma chave de classificação cujo valor é único, bem como um valor de dados associado.|
 |[Classe hash_multimap](hash-multimap-class.md)|Usado para o armazenamento e a recuperação rápida de dados de uma coleção em que cada elemento é um par que tem uma chave de classificação cujo valor não precisa ser único e ser um valor de dados associado.|

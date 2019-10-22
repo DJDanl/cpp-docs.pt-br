@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 59424a9f6a9434b5d7d3f4298cbb0bc03926621c
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 19068de41cfdcb17ae624858c137bf624851479f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957060"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684067"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
-Define o vetor da classe de modelo de contêiner e diversos modelos de suporte.
+Define o vetor de modelo de classe de contêiner e vários modelos de suporte.
 
 O `vector` é um contêiner que organiza os elementos de um determinado tipo em uma sequência linear. Ele permite acesso aleatório rápido a qualquer elemento, bem como adições e remoções dinâmicas em relação à sequência. O `vector` é o contêiner preferencial para uma sequência quando o desempenho de acesso aleatório é reduzido.
 
 > [!NOTE]
-> A \<biblioteca de > de vetor também `#include <initializer_list>` usa a instrução.
+> A biblioteca \<vector > também usa a instrução `#include <initializer_list>`.
 
 Para obter mais informações sobre a classe `vector`, consulte [Classe vector](../standard-library/vector-class.md). Para obter informações sobre a especialização `vector<bool>`, consulte [Classe vector\<bool>](../standard-library/vector-bool-class.md).
 
@@ -77,16 +77,16 @@ void swap (
 
 ### <a name="parameters"></a>Parâmetros
 
-*Escreva*\
+*Tipo* \
 O parâmetro de modelo do tipo de dados armazenados no vetor.
 
-*Alocador*\
+@No__t_1 de *alocador*
 O parâmetro de modelo do objeto allocator armazenado responsável pela alocação e desalocação de memória.
 
-*mantida*\
+\ *à esquerda*
 O primeiro vetor (à esquerda) em uma operação de comparação
 
-*Certo*\
+\ *à direita*
 O segundo vetor (à direita) em uma operação de comparação.
 
 ## <a name="members"></a>Membros
@@ -106,14 +106,14 @@ O segundo vetor (à direita) em uma operação de comparação.
 
 |||
 |-|-|
-|[Classe vector](../standard-library/vector-class.md)|Uma classe de modelo de contêineres de sequências que organiza os elementos de um determinado tipo de maneira linear e permite o acesso aleatório rápido a qualquer elemento.|
+|[Classe vector](../standard-library/vector-class.md)|Um modelo de classe de contêineres de sequência que organizam elementos de um determinado tipo em uma organização linear e permitem acesso aleatório rápido a qualquer elemento.|
 
 ### <a name="specializations"></a>Especializações
 
 |||
 |-|-|
 |hash|Retorna um hash do vetor.|
-|[Classe vector\<bool>](../standard-library/vector-bool-class.md)|Uma especialização completa do vetor de classe de modelo dos elementos do tipo `bool` com um alocador para o tipo subjacente usado pela especialização.|
+|[Classe vector\<bool>](../standard-library/vector-bool-class.md)|Uma especialização completa do vetor de modelo de classe para elementos do tipo `bool` com um alocador para o tipo subjacente usado pela especialização.|
 
 ## <a name="requirements"></a>Requisitos
 

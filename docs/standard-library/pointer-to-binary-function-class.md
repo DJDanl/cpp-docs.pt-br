@@ -7,16 +7,16 @@ helpviewer_keywords:
 - pointer_to_binary_function function
 - pointer_to_binary_function class
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
-ms.openlocfilehash: fcc643d7569bd4f71b11249babdb49ef1362dc8b
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 890ebb7d4c2b8fbd51a4460e21efba3e763ead7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240486"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687189"
 ---
-# <a name="pointertobinaryfunction-class"></a>Classe pointer_to_binary_function
+# <a name="pointer_to_binary_function-class"></a>Classe pointer_to_binary_function
 
-Converte um ponteiro de função binária em uma função binária adaptável. Preterido no c++11, removido do c++17.
+Converte um ponteiro de função binária em uma função binária adaptável. Preterido no C++ 11, removido do C++ 17.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,22 +33,22 @@ class pointer_to_binary_function
 
 ### <a name="parameters"></a>Parâmetros
 
-*pfunc*\
+\ *pFunc*
 A função binária a ser convertida.
 
-*À esquerda*\
+\ *à esquerda*
 O objeto à esquerda no qual *\*pfunc* é chamado.
 
-*Certo*\
+\ *à direita*
 O objeto à direita no qual *\*pfunc* é chamado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-A classe de modelo armazena uma cópia de `pfunc`. Ela define sua função de membro `operator()` como retornando `(* pfunc)(Left, right)`.
+O modelo de classe armazena uma cópia de `pfunc`. Ele define sua função membro `operator()` como retorno `(* pfunc)(Left, right)`.
 
 ## <a name="remarks"></a>Comentários
 
-Um ponteiro de função binária é um objeto de função e pode ser passado para qualquer algoritmo da Biblioteca Padrão C++ que esperar uma função binária como parâmetro, mas não é adaptável. Para usá-lo com um adaptador, como associar um valor a ele ou usá-lo com um negador, ele deve ser fornecido com os tipos aninhados `first_argument_type`, `second_argument_type`, e `result_type` que possibilitam essa adaptação. A conversão por `pointer_to_binary_function` permite que os adaptadores de função funcionem com ponteiros de função binária.
+Um ponteiro de função binária é um objeto de função e pode ser passado para qualquer algoritmo da Biblioteca Padrão C++ que esperar uma função binária como parâmetro, mas não é adaptável. Para usá-lo com um adaptador, como associar um valor a ele ou usá-lo com um negador, ele deve ser fornecido com os tipos aninhados `first_argument_type`, `second_argument_type` e `result_type` que possibilitam tal adaptação. A conversão por `pointer_to_binary_function` permite que os adaptadores de função funcionem com ponteiros de função binária.
 
 ## <a name="example"></a>Exemplo
 
