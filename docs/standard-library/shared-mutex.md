@@ -45,24 +45,24 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: 7dd72550bc8658158b399e88573526269202f8f4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bd5df2917d377e7bc119d1aa85a32c4d5149c305
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450429"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686443"
 ---
-# <a name="ltsharedmutex"></a>&lt;shared_mutex>
+# <a name="ltshared_mutex"></a>&lt;shared_mutex >
 
-O &lt;cabeçalho de > shared_mutex fornece primitivos de sincronização para proteção de dados compartilhados que podem ser acessados por vários threads. Além do controle de acesso exclusivo fornecido pelas classes mutex, as classes shared mutex também permitem propriedade compartilhada por vários segmentos para acesso não exclusivo. Classes shared mutex podem ser usadas para controlar os recursos que podem ser lidos por vários threads sem causar uma condição de corrida, mas devem ser escritos exclusivamente por um único thread.
+O cabeçalho de > de &lt;shared_mutex fornece primitivos de sincronização para proteção de dados compartilhados que podem ser acessados por vários threads. Além do controle de acesso exclusivo fornecido pelas classes mutex, as classes shared mutex também permitem propriedade compartilhada por vários segmentos para acesso não exclusivo. Classes shared mutex podem ser usadas para controlar os recursos que podem ser lidos por vários threads sem causar uma condição de corrida, mas devem ser escritos exclusivamente por um único thread.
 
-O cabeçalho &lt;shared_mutex > define as classes `shared_mutex` e `shared_timed_mutex`, a classe `shared_lock`de modelo e a função `swap` de modelo para o suporte a mutex compartilhado.
+O &lt;shared_mutex de cabeçalho > define as classes `shared_mutex` e `shared_timed_mutex`, o modelo de classe `shared_lock` e a função de modelo `swap` para suporte a mutex compartilhado.
 
 |Classes|Descrição|
 |-------------|-----------------|
 |[shared_mutex Class](#class_shared_mutex)|Um tipo shared mutex que pode ser bloqueado exclusivamente por um agente ou compartilhado não exclusivamente por vários agentes.|
 |[shared_timed_mutex Class](#class_shared_timed_mutex)|Um tipo shared timed mutex que pode ser bloqueado exclusivamente por um agente ou compartilhado não exclusivamente por vários agentes.|
-|[shared_lock Class](#class_shared_lock)|Uma classe de modelo que encapsula um shared mutex para dar suporte a operações de tempo limite de bloqueio e compartilhamento não exclusivo por vários agentes.|
+|[shared_lock Class](#class_shared_lock)|Um modelo de classe que encapsula um mutex compartilhado para dar suporte a operações de bloqueio cronometradas e compartilhamento não exclusivo por vários agentes.|
 
 |Funções|Descrição|
 |---------------|-----------------|
@@ -101,10 +101,10 @@ Um tipo shared timed mutex dá suporte aos métodos adicionais `try_lock_shared_
 
 - O método `try_lock_shared_until` tenta obter a propriedade compartilhada do mutex até que o tempo absoluto especificado tenha passado. Se o tempo especificado já tiver passado, o método será equivalente a `try_lock_shared`. O método não retorna antes do tempo especificado, a menos que a propriedade compartilhada seja obtida. Seu valor de retorno será **true** se o método obtiver a propriedade, mas, caso contrário, será **false**.
 
-A classe de modelo `shared_lock` estende o suporte para bloqueio e transferência de propriedade temporizados para um shared mutex. A propriedade do mutex podem ser obtida em ou após a construção e pode ser transferida para outro objeto `shared_lock`. Objetos do tipo `shared_lock` podem ser movidos, mas não copiados.
+O modelo de classe `shared_lock` estende o suporte ao bloqueio e à transferência de propriedade com tempo hábil para um mutex compartilhado. A propriedade do mutex podem ser obtida em ou após a construção e pode ser transferida para outro objeto `shared_lock`. Objetos do tipo `shared_lock` podem ser movidos, mas não copiados.
 
 > [!WARNING]
-> A partir do Visual Studio 2015, C++ os tipos de sincronização de biblioteca padrão são baseados em primitivos de sincronização do Windows e não usam mais ConcRT (exceto quando a plataforma de destino é o Windows XP). Os tipos definidos em &lt;shared_mutex > não devem ser usados com tipos ou funções ConcRT.
+> A partir do Visual Studio 2015, C++ os tipos de sincronização de biblioteca padrão são baseados em primitivos de sincronização do Windows e não usam mais ConcRT (exceto quando a plataforma de destino é o Windows XP). Os tipos definidos no &lt;shared_mutex > não devem ser usados com nenhum tipo ou função ConcRT.
 
 ## <a name="classes"></a>Classes
 
@@ -169,7 +169,7 @@ public:
 
 ###  <a name="class_shared_lock"></a> Classe shared_lock
 
-A classe de modelo `shared_lock` controla a propriedade compartilhada de um objeto shared mutex dentro de um escopo. O parâmetro de modelo deve ser de um tipo shared mutex.
+O modelo de classe `shared_lock` controla a propriedade compartilhada de um objeto mutex compartilhado dentro de um escopo. O parâmetro de modelo deve ser de um tipo shared mutex.
 
 ```cpp
 class shared_lock {

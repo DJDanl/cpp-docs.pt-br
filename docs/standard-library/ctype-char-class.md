@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-ms.openlocfilehash: 7fe1eef32741d63e7b2e2c2320d18f445784c44f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 08bf2c5c814eaed7b409295fcf50c66577f6a5d9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455460"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688159"
 ---
 # <a name="ctypeltchargt-class"></a>Classe ctype&lt;char&gt;
 
-A classe é uma especialização explícita da classe `ctype\<CharType>` de modelo para o tipo **Char**, descrevendo um objeto que pode servir como uma faceta de localidade para caracterizar várias propriedades de um caractere do tipo **Char**.
+A classe é uma especialização explícita do modelo de classe `ctype\<CharType>` para digitar **Char**, descrevendo um objeto que pode servir como uma faceta de localidade para caracterizar várias propriedades de um caractere do tipo **Char**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -106,17 +106,17 @@ protected:
 
 ## <a name="remarks"></a>Comentários
 
-A especialização explícita é diferente da classe de modelo de várias maneiras:
+A especialização explícita difere do modelo de classe de várias maneiras:
 
-- Um objeto da classe CType < `char`> armazena um ponteiro para o primeiro elemento de uma tabela de máscara de CType, uma matriz de UCHAR_MAX + 1 elementos `ctype_base::mask`do tipo. Ele também armazena um objeto booliano que indica se a matriz deve ser excluída (usando `operator delete[]`) quando o objeto ctype\< **Elem**> é destruído.
+- Um objeto da classe CType < `char` > armazena um ponteiro para o primeiro elemento de uma tabela de máscara de CType, uma matriz de UCHAR_MAX + 1 elementos do tipo `ctype_base::mask`. Ele também armazena um objeto booliano que indica se a matriz deve ser excluída (usando `operator delete[]`) quando o objeto ctype\< **Elem**> é destruído.
 
-- Seu único construtor público permite que você `tab`especifique, a tabela de máscara de `del`CType e o objeto booliano que será verdadeiro se a matriz deve ser excluída quando `char`o objeto de > de < CType é destruído, bem como a contagem de referência parâmetro refs.
+- Seu único construtor público permite que você especifique `tab`, a tabela de máscara de CType e `del`, o objeto booliano que será verdadeiro se a matriz tiver que ser excluída quando o objeto de > de `char` de < CType for destruído, bem como o parâmetro de contagem de referência refs.
 
-- A função `table` membro protegido retorna a tabela de máscara CType armazenada.
+- A função membro protegido `table` retorna a tabela de máscara CType armazenada.
 
-- O objeto `table_size` de membro estático especifica o número mínimo de elementos em uma tabela de máscara de CType.
+- O objeto membro estático `table_size` especifica o número mínimo de elementos em uma tabela de máscara de CType.
 
-- A função `classic_table`de membro estático protegido (retorna a tabela de máscara de CType apropriada para a localidade "C".
+- A função de membro estático protegido `classic_table` (retorna a tabela de máscara de CType apropriada para a localidade "C".
 
 - Não existem funções de membro virtuais protegidas [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is) ou [do_scan_not](../standard-library/ctype-class.md#do_scan_not). As funções de membro público correspondentes executam as operações equivalentes por conta própria.
 

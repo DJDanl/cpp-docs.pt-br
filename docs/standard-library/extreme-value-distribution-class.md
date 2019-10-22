@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 810a02e620e6b38732daf611d3b44a4a277322a5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a9d83bee5a9186ba35a7cce81600947dd1cf4141
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457769"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688076"
 ---
-# <a name="extremevaluedistribution-class"></a>Classe extreme_value_distribution
+# <a name="extreme_value_distribution-class"></a>Classe extreme_value_distribution
 
 Gera uma distribuição Extreme Value.
 
@@ -71,15 +71,15 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType*\
-O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+@No__t_1 *RealType*
+O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
-*URNG*\
-O mecanismo do gerador de número aleatório. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+@No__t_1 *URNG*
+O mecanismo do gerador de número aleatório. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve uma distribuição que produz valores de um tipo de ponto flutuante especificado pelo usuário ou tipo **Double** se nenhum for fornecido, distribuído de acordo com a distribuição de valor extremo. A tabela a seguir contém links para artigos sobre cada um dos membros.
+O modelo de classe descreve uma distribuição que produz valores de um tipo de ponto flutuante especificado pelo usuário ou tipo **Double** se nenhum for fornecido, distribuído de acordo com a distribuição de valor extremo. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -192,13 +192,13 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*a_value*\
+\ *a_value*
 O parâmetro de distribuição `a`.
 
-*b_value*\
+\ *b_value*
 O parâmetro de distribuição `b`.
 
-*Parm*\
+\ de *parâmetros*
 A estrutura `param_type` usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*a_value*\
+\ *a_value*
 O parâmetro de distribuição `a`.
 
-*b_value*\
+\ *b_value*
 O parâmetro de distribuição `b`.
 
-*Certo*\
+\ *à direita*
 O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários

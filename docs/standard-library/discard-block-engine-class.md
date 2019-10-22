@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: 76a78a2f47bd160c6b2b981b1ccdda2ef3a90575
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: eb00945084affb2be9299953e5ca9352c56d3b32
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454390"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688099"
 ---
-# <a name="discardblockengine-class"></a>Classe discard_block_engine
+# <a name="discard_block_engine-class"></a>Classe discard_block_engine
 
 Gera uma sequência aleatória descartando valores retornados pelo mecanismo de base.
 
@@ -26,14 +26,14 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Motores*\
+@No__t_1 do *mecanismo*
 O tipo de mecanismo de base.
 
-*DTI*\
+*P* \
 **Tamanho do bloco**. O número de valores em cada bloco.
 
 *R*\
-**Bloco usado**. O número de valores em cada bloco usado. O restante são descartados (`P` - `R`). **Pré-condição**: `0 < R ≤ P`
+**Bloco usado**. O número de valores em cada bloco usado. Os demais são descartados (`P`  -  `R`). **Pré-condição**: `0 < R ≤ P`
 
 ## <a name="members"></a>Membros
 
@@ -46,7 +46,7 @@ Para obter mais informações sobre membros do mecanismo, consulte [\<random>](.
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe de modelo descreve um adaptador de mecanismo que produz valores descartando alguns dos valores retornados pelo mecanismo de base.
+Esse modelo de classe descreve um adaptador de mecanismo que produz valores descartando alguns dos valores retornados por seu mecanismo base.
 
 ## <a name="requirements"></a>Requisitos
 

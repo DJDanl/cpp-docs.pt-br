@@ -7,16 +7,16 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: f6c51d85aa4a9f5516fe08dad163274051d94c13
-ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
+ms.openlocfilehash: e8c468da35ae23e5a37c2dfc5ac3fbdf47408c71
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71195822"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686091"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
-Define a pilha de classes de modelo e dois modelos de suporte.
+Define a pilha de modelos de classe e dois modelos de suporte.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -25,7 +25,7 @@ Define a pilha de classes de modelo e dois modelos de suporte.
 **Namespace:** std
 
 > [!NOTE]
-> A \<biblioteca de > de pilha também `#include <initializer_list>` usa a instrução.
+> A biblioteca \<stack > também usa a instrução `#include <initializer_list>`.
 
 ## <a name="members"></a>Membros
 

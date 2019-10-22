@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: 8a504f58f9f64aa8b0d26b17090387c5c2b5de21
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e37b2371238211033d6a8a0847a41677b4e908a2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454137"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688048"
 ---
 # <a name="freelist-class"></a>Classe freelist
 
@@ -37,7 +37,7 @@ class freelist : public Max
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe de modelo gerencia uma lista de blocos de memória de tamanho *sz* com o comprimento máximo da lista determinada pela classe máxima passada no *máximo*.
+Esse modelo de classe gerencia uma lista de blocos de memória de tamanho *sz* com o comprimento máximo da lista determinada pela classe máxima passada no *máximo*.
 
 ### <a name="constructors"></a>Construtores
 
@@ -76,7 +76,7 @@ Remove o primeiro bloco de memória da lista livre.
 void *pop();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna um ponteiro para o bloco de memória removido da lista.
 
@@ -98,13 +98,13 @@ bool push(void* ptr);
 |---------------|-----------------|
 |*ptr*|Um ponteiro para o bloco de memória a ser adicionado à lista livre.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**true** se a `full` função da classe Max retornar **false**; caso contrário, a `push` função retornará **false**.
+**true** se a função `full` da classe Max retornar **false**; caso contrário, a função `push` retornará **false**.
 
 ### <a name="remarks"></a>Comentários
 
-Se a `full` função da classe Max retornar **false**, essa função de membro adicionará o bloco de memória apontado por *PTR* ao início da lista.
+Se a função `full` da classe Max retornar **false**, essa função de membro adicionará o bloco de memória apontado por *PTR* ao cabeçalho da lista.
 
 ## <a name="see-also"></a>Consulte também
 

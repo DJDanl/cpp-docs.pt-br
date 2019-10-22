@@ -1,5 +1,5 @@
 ---
-title: '&lt;cvt-wbuffer&gt;'
+title: '&lt;cvt-wbuffer &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - stdext.cvt.<cvt/wbuffer>
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - cvt/wbuffer header
 ms.assetid: 6e6eb44c-1bc4-4d8c-a4bd-b39c753ce725
-ms.openlocfilehash: f2ed70eb85a26b5b3e7039b4d430ca85f3131a14
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a360b9cd0b163615bed71ee4b070f8d97848fa66
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455422"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688145"
 ---
 # <a name="ltcvtwbuffergt"></a>&lt;cvt/wbuffer&gt;
 
-O cabeçalho `<cvt/wstring>` nas versões anteriores do Visual Studio definia a classe de modelo da [Classe wbuffer_convert](../standard-library/wbuffer-convert-class.md) no namespace stdext::cvt. O cabeçalho é mantido para compatibilidade com versões anteriores. O novo código deve usar a versão da classe que é definida em [\<locale>](../standard-library/locale.md) no namespace `std`
+O cabeçalho `<cvt/wstring>` nas versões anteriores do Visual Studio definiu a classe template do modelo de classe [wbuffer_convert](../standard-library/wbuffer-convert-class.md) no namespace stdext:: CVT. O cabeçalho é mantido para compatibilidade com versões anteriores. O novo código deve usar a versão da classe que é definida em [\<locale>](../standard-library/locale.md) no namespace `std`
 
 ## <a name="syntax"></a>Sintaxe
 
