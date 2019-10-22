@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7a21f0c4f81277200ff069baf751fa013a3c0cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449652"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688354"
 ---
-# <a name="cachesuballoc-class"></a>Classe cache_suballoc
+# <a name="cache_suballoc-class"></a>Classe cache_suballoc
 
 Define um [alocador de blocos](../standard-library/allocators-header.md) que aloca e desaloca os blocos de memória de um único tamanho.
 
@@ -36,9 +36,9 @@ class cache_suballoc
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo cache_suballoc armazena blocos de memória desalocados em uma lista livre com comprimento não associado `freelist<sizeof(Type), max_unbounded>`, usando e subaloca blocos de memória de um bloco maior alocado com o **operador novo** quando a lista livre está vazia.
+O modelo de classe cache_suballoc armazena blocos de memória desalocados em uma lista livre com comprimento não associado, usando `freelist<sizeof(Type), max_unbounded>` e subaloca blocos de memória de um bloco maior alocado com o **operador novo** quando a lista livre estiver vazia.
 
-Cada parte contém `Sz * Nelts` bytes de memória utilizável e os dados que o **operador New** e o **operador Delete** exigem. Partes alocadas nunca são liberadas.
+Cada parte contém `Sz * Nelts` bytes de memória utilizável e os dados que o **operador novo** e a **exclusão do operador** exigem. Partes alocadas nunca são liberadas.
 
 ### <a name="constructors"></a>Construtores
 
@@ -73,7 +73,7 @@ void *allocate(std::size_t count);
 |---------------|-----------------|
 |*count*|O número de elementos na matriz a serem alocados.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o objeto alocado.
 

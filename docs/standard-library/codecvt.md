@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: fc711b14a2d30041b4585a9515a95e42280f5306
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 972672e80ce4f82402296317c75e35dcd10c9e93
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458604"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688277"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-Define várias classes de modelo que descrevem os objetos com base na classe de modelo [codecvt](../standard-library/codecvt-class.md). Esses objetos podem servir como [facetas de localidade](../standard-library/locale-class.md#facet_class) que controlam conversões entre uma sequência de valores do `Elem` tipo e uma sequência de valores do tipo **Char**.
+Define vários modelos de classe que descrevem objetos com base no modelo de classe [codecvt](../standard-library/codecvt-class.md). Esses objetos podem servir como [facetas de localidade](../standard-library/locale-class.md#facet_class) que controlam conversões entre uma sequência de valores do tipo `Elem` e uma sequência de valores do tipo **Char**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -50,7 +50,7 @@ Para fluxos de bytes (armazenados em um arquivo, transmitidos como uma sequênci
 
 ### <a name="classes"></a>Classes
 
-|Classe|Descrição|
+|Class|Descrição|
 |-|-|
 |[codecvt_utf8](codecvt-utf8-class.md)|Representa uma faceta de localidade convertida entre caracteres largos codificados como UCS-2 ou UCS-4 e um fluxo de bytes codificado como UTF-8.|
 |[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Representa uma faceta de localidade convertida entre caracteres largos codificados como UTF-16 e um fluxo de bytes codificado como UTF-8.|

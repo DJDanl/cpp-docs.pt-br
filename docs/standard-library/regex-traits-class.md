@@ -38,14 +38,14 @@ helpviewer_keywords:
 - std::regex_traits [C++], imbue
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
-ms.openlocfilehash: a34346b4fc15beb605836037ef8a05a541562f33
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2a04e0f1c202717bb6d40a10f07475d78453ffd7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451507"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689043"
 ---
-# <a name="regextraits-class"></a>Classe regex_traits
+# <a name="regex_traits-class"></a>Classe regex_traits
 
 Descreve as características dos elementos de correspondência.
 
@@ -58,12 +58,12 @@ class regex_traits
 
 ## <a name="parameters"></a>Parâmetros
 
-*Elem*\
+@No__t_1 *elem*
 O tipo de elemento de caractere a ser descrito.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve várias características de expressão regular para o tipo *elem*. A classe de modelo [Basic_regex Class](../standard-library/basic-regex-class.md) usa essas informações para manipular elementos do tipo *elem*.
+O modelo de classe descreve várias características de expressão regular para o tipo *elem*. A [classe basic_regex](../standard-library/basic-regex-class.md) do modelo de classe usa essas informações para manipular elementos do tipo *elem*.
 
 Cada objeto `regex_traits` contém um objeto do tipo `regex_traits::locale` que é usado por algumas de suas funções membro. A localidade padrão é uma cópia de `regex_traits::locale()`. A função membro `imbue` substitui o objeto de localidade e a função de membro `getloc` retorna uma cópia do objeto de localidade.
 
@@ -95,7 +95,7 @@ Cada objeto `regex_traits` contém um objeto do tipo `regex_traits::locale` que 
 |[lookup_collatename](#lookup_collatename)|Mapeia uma sequência para um elemento de agrupamento.|
 |[transform](#transform)|É convertido na sequência ordenada equivalente.|
 |[transform_primary](#transform_primary)|É convertido na sequência ordenada sem distinção de maiúsculas e minúsculas.|
-|[translate](#translate)|É convertido no elemento correspondente equivalente.|
+|[Traduzir](#translate)|É convertido no elemento correspondente equivalente.|
 |[translate_nocase](#translate_nocase)|É convertido no elemento correspondente equivalente sem distinção de maiúsculas e minúsculas.|
 |[value](#value)|Converte um elemento em um valor de dígito.|
 
@@ -221,12 +221,12 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*localização*\
+\ de *Loc*
 O objeto de localidade a ser armazenado.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro copia *Loc* para o `locale` objeto armazenado e retorna uma cópia do valor anterior do objeto armazenado `locale` .
+A função de membro copia *Loc* para o objeto de `locale` armazenado e retorna uma cópia do valor anterior do objeto de `locale` armazenado.
 
 ## <a name="isctype"></a>  regex_traits::isctype
 
@@ -238,10 +238,10 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*\
+*ch* \
 O elemento para teste.
 
-*CLS*\
+\ *CLS*
 As classes de teste.
 
 ### <a name="remarks"></a>Comentários
@@ -258,7 +258,7 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Str*\
+\ de *Str*
 A sequência terminada em nulo.
 
 ### <a name="remarks"></a>Comentários
@@ -288,10 +288,10 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Início da sequência a ser pesquisada.
 
-*última*\
+*última* \
 Fim da sequência a ser pesquisada.
 
 ### <a name="remarks"></a>Comentários
@@ -313,10 +313,10 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Início da sequência a ser pesquisada.
 
-*última*\
+*última* \
 Fim da sequência a ser pesquisada.
 
 ### <a name="remarks"></a>Comentários
@@ -372,10 +372,10 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Início da sequência a ser transformada.
 
-*última*\
+*última* \
 Fim da sequência a ser transformada.
 
 ### <a name="remarks"></a>Comentários
@@ -393,10 +393,10 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Início da sequência a ser transformada.
 
-*última*\
+*última* \
 Fim da sequência a ser transformada.
 
 ### <a name="remarks"></a>Comentários
@@ -413,7 +413,7 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*\
+*ch* \
 O elemento a ser convertido.
 
 ### <a name="remarks"></a>Comentários
@@ -430,7 +430,7 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*\
+*ch* \
 O elemento a ser convertido.
 
 ### <a name="remarks"></a>Comentários
@@ -447,10 +447,10 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH*\
+*ch* \
 O elemento a ser convertido.
 
-*Radix*\
+\ de *base*
 A base aritmética a ser usada.
 
 ### <a name="remarks"></a>Comentários
@@ -460,12 +460,12 @@ A função membro retorna o valor representado pelo caractere *ch* no *Radix*bas
 ## <a name="see-also"></a>Consulte também
 
 [\<regex>](../standard-library/regex.md)\
-[Classe regex_constants](../standard-library/regex-constants-class.md)\
-[Classe regex_error](../standard-library/regex-error-class.md)\
-[\<funções > Regex](../standard-library/regex-functions.md)\
-[Classe regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<operadores de > Regex](../standard-library/regex-operators.md)\
-[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
-[\<TYPEDEFs de > de Regex](../standard-library/regex-typedefs.md)\
+\ [classe regex_constants](../standard-library/regex-constants-class.md)
+\ [classe regex_error](../standard-library/regex-error-class.md)
+[\<regex > funções](../standard-library/regex-functions.md) \
+\ [Classe regex_iterator](../standard-library/regex-iterator-class.md)
+[operadores de > de \<regex](../standard-library/regex-operators.md) \
+\ [classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)
+[\<regex > typedefs](../standard-library/regex-typedefs.md) \
 Classe [regex_traits\<char>](../standard-library/regex-traits-char-class.md)\
 [Classe regex_traits\<wchar_t>](../standard-library/regex-traits-wchar-t-class.md)

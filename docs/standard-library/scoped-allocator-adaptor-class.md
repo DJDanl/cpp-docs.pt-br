@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::outer_allocator
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
-ms.openlocfilehash: 1fb2842df50b0e803419e3cccdeb921c9b4fa591
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6ba135d0c3a69293415d1c46d70679d9f8bc8a37
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458005"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686550"
 ---
-# <a name="scopedallocatoradaptor-class"></a>Classe scoped_allocator_adaptor
+# <a name="scoped_allocator_adaptor-class"></a>Classe scoped_allocator_adaptor
 
 Representa um aninhamento de alocadores.
 
@@ -43,13 +43,13 @@ class scoped_allocator_adaptor;
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo encapsula um aninhamento um ou mais alocadores de. Cada classe desse tipo tem um alocador mais externo do tipo `outer_allocator_type`, um sinônimo de `Outer`, que é uma base pública do objeto `scoped_allocator_adaptor`. `Outer` é usado para alocar memória para ser usada por um contêiner. Você pode obter uma referência a esse objeto base do alocador chamando `outer_allocator`.
+O modelo de classe encapsula um aninhamento de um ou mais alocadores. Cada classe desse tipo tem um alocador mais externo do tipo `outer_allocator_type`, um sinônimo de `Outer`, que é uma base pública do objeto `scoped_allocator_adaptor`. `Outer` é usado para alocar memória para ser usada por um contêiner. Você pode obter uma referência a esse objeto base do alocador chamando `outer_allocator`.
 
 O restante do aninhamento tem tipo `inner_allocator_type`. Um alocador interno é usado para alocar memória para elementos dentro de um contêiner. Você pode obter uma referência para o objeto armazenado desse tipo chamando `inner_allocator`. Se `Inner...` não está vazio, `inner_allocator_type` tem tipo `scoped_allocator_adaptor<Inner...>` e `inner_allocator` designa um objeto de membro. Caso contrário, `inner_allocator_type` tem tipo `scoped_allocator_adaptor<Outer>` e `inner_allocator` designa o objeto inteiro.
 
 O aninhamento se comporta como se tivesse profundidade arbitrária, replicando seu alocador encapsulado mais interno, conforme necessário.
 
-Vários conceitos que não fazem parte da interface visível ajudam a descrever o comportamento dessa classe de modelo. Um *alocador mais externo* media todas as chamadas para os métodos construct e destroy. Ele é definido efetivamente pela função recursiva `OUTERMOST(X)`, em que `OUTERMOST(X)` é um dos seguintes.
+Vários conceitos que não fazem parte da interface visível ajudam a descrever o comportamento desse modelo de classe. Um *alocador mais externo* media todas as chamadas para os métodos construct e destroy. Ele é definido efetivamente pela função recursiva `OUTERMOST(X)`, em que `OUTERMOST(X)` é um dos seguintes.
 
 - Se `X.outer_allocator()` for bem formado, `OUTERMOST(X)` será `OUTERMOST(X.outer_allocator())`.
 
@@ -57,7 +57,7 @@ Vários conceitos que não fazem parte da interface visível ajudam a descrever 
 
 Três tipos são definidos para fins de exposição:
 
-|Tipo|Descrição|
+|Digite|Descrição|
 |----------|-----------------|
 |`Outermost`|O tipo de `OUTERMOST(*this)`.|
 |`Outermost_traits`|`allocator_traits<Outermost>`|
@@ -65,13 +65,13 @@ Três tipos são definidos para fins de exposição:
 
 ### <a name="constructors"></a>Construtores
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[scoped_allocator_adaptor](#scoped_allocator_adaptor)|Constrói um objeto `scoped_allocator_adaptor`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |`const_pointer`|Esse tipo é um sinônimo do `const_pointer` que está associado com o alocador `Outer`.|
 |`const_void_pointer`|Esse tipo é um sinônimo do `const_void_pointer` que está associado com o alocador `Outer`.|
@@ -88,13 +88,13 @@ Três tipos são definidos para fins de exposição:
 
 ### <a name="structs"></a>Structs
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[Struct scoped_allocator_adaptor::rebind](#rebind_struct)|Define o tipo `Outer::rebind\<Other>::other` como um sinônimo de `scoped_allocator_adaptor\<Other, Inner...>`.|
 
 ### <a name="methods"></a>Métodos
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[allocate](#allocate)|Aloca memória usando o alocador `Outer`.|
 |[construct](#construct)|Cria um objeto.|
@@ -119,7 +119,7 @@ Três tipos são definidos para fins de exposição:
 
 **Namespace:** std
 
-## <a name="allocate"></a>  scoped_allocator_adaptor::allocate
+## <a name="allocate"></a>scoped_allocator_adaptor:: Allocate
 
 Aloca memória usando o alocador `Outer`.
 
@@ -129,17 +129,17 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>Parâmetros
 
-*contar*\
+*contagem* \
 O número de elementos para os quais um armazenamento suficiente deve ser alocado.
 
-*Hint*\
+\ de *dica*
 Um ponteiro que pode ajudar o objeto alocador localizando o endereço de um objeto alocado antes da solicitação.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A primeira função membro retorna `Outer_traits::allocate(outer_allocator(), count)`. A segunda função membro retorna `Outer_traits::allocate(outer_allocator(), count, hint)`.
 
-## <a name="construct"></a>  scoped_allocator_adaptor::construct
+## <a name="construct"></a>scoped_allocator_adaptor:: Construct
 
 Cria um objeto.
 
@@ -168,19 +168,19 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR*\
+\ *PTR*
 Um ponteiro para o local da memória em que o objeto deve ser criado.
 
-*argumento*\
+*args* \
 Uma lista de argumentos.
 
-*primeiro*\
+*primeiro* \
 Um objeto do primeiro tipo em um par.
 
-*microssegundo*\
+*segundo* \
 Um objeto do segundo tipo em um par.
 
-*Certo*\
+\ *à direita*
 Um objeto existente a ser movido ou copiado.
 
 ### <a name="remarks"></a>Comentários
@@ -193,7 +193,7 @@ O primeiro método constrói o objeto em *PTR* chamando `Outermost_traits::const
 
 - Se `uses_allocator<Ty, inner_allocator_type>` for true e `is_constructible<Ty, args..., inner_allocator()>` for true, então `xargs...` será `args..., inner_allocator()`.
 
-O segundo método constrói o objeto de par em *PTR* `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)`chamando, onde `xargs...` `xargs...` é `first...` modificado como na lista acima e `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)`, em que é `second...` modificado como na lista acima.
+O segundo método constrói o objeto de par em *PTR* chamando `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)`, em que `xargs...` é `first...` modificado como na lista acima e `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)`, em que `xargs...` é `second...` modificado como na lista acima.
 
 O terceiro método se comporta da mesma maneira que `this->construct(ptr, piecewise_construct, tuple<>, tuple<>)`.
 
@@ -203,7 +203,7 @@ O quinto método se comporta da mesma maneira que `this->construct(ptr, piecewis
 
 O sexto método se comporta da mesma maneira que `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(right.first), forward_as_tuple(std::forward<Uy2>(right.second))`.
 
-## <a name="deallocate"></a>  scoped_allocator_adaptor::deallocate
+## <a name="deallocate"></a>scoped_allocator_adaptor::d eallocate
 
 Desaloca objetos usando o alocador externo.
 
@@ -213,13 +213,13 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR*\
+\ *PTR*
 Um ponteiro para o local inicial dos objetos a serem desalocados.
 
-*contar*\
+*contagem* \
 O número de objetos a serem desalocados.
 
-## <a name="destroy"></a>  scoped_allocator_adaptor::destroy
+## <a name="destroy"></a>scoped_allocator_adaptor::d estroy
 
 Destrói um objeto especificado.
 
@@ -230,14 +230,14 @@ void destroy(Ty* ptr)
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR*\
+\ *PTR*
 Um ponteiro para o objeto a ser destruído.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 `Outermost_traits::destroy(OUTERMOST(*this), ptr)`
 
-## <a name="inner_allocator"></a>  scoped_allocator_adaptor::inner_allocator
+## <a name="inner_allocator"></a>scoped_allocator_adaptor::inner_allocator
 
 Recupera uma referência ao objeto armazenado do tipo `inner_allocator_type`.
 
@@ -246,11 +246,11 @@ inner_allocator_type& inner_allocator() noexcept;
 const inner_allocator_type& inner_allocator() const noexcept;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma referência ao objeto armazenado do tipo `inner_allocator_type`.
 
-## <a name="max_size"></a>  scoped_allocator_adaptor::max_size
+## <a name="max_size"></a>scoped_allocator_adaptor::max_size
 
 Determina o número máximo de objetos que podem ser alocados pelo alocador externo.
 
@@ -258,18 +258,18 @@ Determina o número máximo de objetos que podem ser alocados pelo alocador exte
 size_type max_size();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 `Outer_traits::max_size(outer_allocator())`
 
-## <a name="a-nameopas--scopedallocatoradaptoroperator"></a><a name="op_as">scoped_allocator_adaptor:: Operator =
+## <a name="a-nameop_as--scoped_allocator_adaptoroperator"></a><a name="op_as"> scoped_allocator_adaptor:: Operator =
 
 ```cpp
 scoped_allocator_adaptor& operator=(const scoped_allocator_adaptor&) = default;
 scoped_allocator_adaptor& operator=(scoped_allocator_adaptor&&) = default;
 ```
 
-## <a name="a-nameopeqeq--scopedallocatoradaptoroperator"></a><a name="op_eq_eq">scoped_allocator_adaptor:: Operator = =
+## <a name="a-nameop_eq_eq--scoped_allocator_adaptoroperator"></a><a name="op_eq_eq"> scoped_allocator_adaptor:: Operator = =
 
 ```cpp
 template <class OuterA1, class OuterA2, class... InnerAllocs>
@@ -277,7 +277,7 @@ bool operator==(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
 const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
 ```
 
-## <a name="a-nameopnoeq--scopedallocatoradaptoroperator"></a><a name="op_noeq">scoped_allocator_adaptor:: Operator! =
+## <a name="a-nameop_noeq--scoped_allocator_adaptoroperator"></a><a name="op_noeq"> scoped_allocator_adaptor:: Operator! =
 
 ```cpp
 template <class OuterA1, class OuterA2, class... InnerAllocs>
@@ -285,7 +285,7 @@ bool operator!=(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
 const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
 ```
 
-## <a name="outer_allocator"></a>  scoped_allocator_adaptor::outer_allocator
+## <a name="outer_allocator"></a>scoped_allocator_adaptor::outer_allocator
 
 Recupera uma referência ao objeto armazenado do tipo `outer_allocator_type`.
 
@@ -294,7 +294,7 @@ outer_allocator_type& outer_allocator() noexcept;
 const outer_allocator_type& outer_allocator() const noexcept;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma referência ao objeto armazenado do tipo `outer_allocator_type`.
 
@@ -302,7 +302,7 @@ Uma referência ao objeto armazenado do tipo `outer_allocator_type`.
 
 Define o tipo `Outer::rebind\<Other>::other` como um sinônimo de `scoped_allocator_adaptor\<Other, Inner...>`.
 
-reassociar struct {typedef Other_traits:: reassociar\<outros > Other_alloc; typedef scoped_allocator_adaptor\<Other_alloc, Inner... > outros; };
+reassociar struct {typedef Other_traits:: reassociate \<Other > Other_alloc; typedef scoped_allocator_adaptor \<Other_alloc, Inner... > outros; };
 
 ## <a name="scoped_allocator_adaptor"></a> Construtor scoped_allocator_adaptor::scoped_allocator_adaptor
 
@@ -327,20 +327,20 @@ scoped_allocator_adaptor(Outer2&& al,
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 Um `scoped_allocator_adaptor` existente.
 
-*&* \
+*al* \
 Um alocador existente a ser usado como o alocador externo.
 
-*Deixa*\
+\ *REST*
 Um alocador existente a ser usado como os alocadores internos.
 
 ### <a name="remarks"></a>Comentários
 
 O primeiro padrão de construtor cria seus objetos de alocador armazenado. Cada um dos três construtores a seguir constrói seus objetos alocadores armazenados dos objetos correspondentes à *direita*. O último construtor cria seus objetos de alocador armazenado dos argumentos correspondentes na lista de argumentos.
 
-## <a name="select_on_container_copy_construction"></a>  scoped_allocator_adaptor::select_on_container_copy_construction
+## <a name="select_on_container_copy_construction"></a>scoped_allocator_adaptor::select_on_container_copy_construction
 
 Cria um novo objeto `scoped_allocator_adaptor` com cada objeto de alocador armazenado inicializado, por meio da chamada de `select_on_container_copy_construction` para cada alocador correspondente.
 
@@ -348,9 +348,9 @@ Cria um novo objeto `scoped_allocator_adaptor` com cada objeto de alocador armaz
 scoped_allocator_adaptor select_on_container_copy_construction();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Esse método retorna efetivamente `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`. O resultado é um novo `scoped_allocator_adaptor` objeto com cada objeto alocador armazenado inicializado `al.select_on_container_copy_construction()` chamando o alocador *Al*correspondente.
+Esse método retorna efetivamente `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`. O resultado é um novo objeto `scoped_allocator_adaptor` com cada objeto alocador armazenado inicializado chamando `al.select_on_container_copy_construction()` para o alocador correspondente *Al*.
 
 ## <a name="see-also"></a>Consulte também
 

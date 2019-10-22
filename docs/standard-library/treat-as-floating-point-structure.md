@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 f1_keywords:
 - chrono/std::chrono::treat_as_floating_point
 ms.assetid: d0a2161c-bbb2-4924-8961-7568d5ad5434
-ms.openlocfilehash: 4cf3ac5be972d8636f1d3dbda3b195f4012517be
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: add69179b23a953a937458cbfa55254b21c5ea37
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459877"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685109"
 ---
-# <a name="treatasfloatingpoint-structure"></a>Estrutura treat_as_floating_point
+# <a name="treat_as_floating_point-structure"></a>Estrutura treat_as_floating_point
 
 Especifica se `Rep` pode ser tratado como um tipo de ponto flutuante.
 
@@ -24,11 +24,11 @@ struct treat_as_floating_point : is_floating_point<Rep>;
 
 ## <a name="remarks"></a>Comentários
 
-`Rep` pode ser tratado como um tipo de ponto flutuante somente quando a especialização `treat_as_floating_point<Rep>` é derivada de [true_type](../standard-library/type-traits-typedefs.md#true_type). A classe de modelo pode ser especializada para um tipo definido pelo usuário.
+`Rep` pode ser tratado como um tipo de ponto flutuante somente quando a especialização `treat_as_floating_point<Rep>` é derivada de [true_type](../standard-library/type-traits-typedefs.md#true_type). O modelo de classe pode ser especializado para um tipo definido pelo usuário.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<> Chrono
+**Cabeçalho:** \<chrono >
 
 **Namespace:** std::chrono
 

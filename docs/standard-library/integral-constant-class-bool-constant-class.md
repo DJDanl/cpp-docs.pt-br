@@ -10,14 +10,14 @@ helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-ms.openlocfilehash: c85da1f3be7821f8d82cd2b19dab2a5864426a5a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9577ce51d4b0773f7b309fe3dc6dcb5820693dcb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452040"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689528"
 ---
-# <a name="integralconstant-class-boolconstant-class"></a>Classe integral_constant, classe bool_constant
+# <a name="integral_constant-class-bool_constant-class"></a>Classe integral_constant, classe bool_constant
 
 Cria uma constante integral de um tipo e um valor.
 
@@ -36,17 +36,17 @@ struct integral_constant {
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*\
+*T* \
 O tipo da constante.
 
-*l*\
+*v* \
 O valor da constante.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo `integral_constant`, quando especializada com um tipo integral *T* e um valor *v* desse tipo, representa um objeto que contém uma constante desse tipo integral com o valor especificado. O membro denominado `type` é um alias para o tipo da especialização de modelo gerada e o membro `value` contém o valor *v* usado para criar a especialização.
+O modelo de classe `integral_constant`, quando especializado com um tipo integral *t* e um valor *v* desse tipo, representa um objeto que mantém uma constante desse tipo integral com o valor especificado. O membro denominado `type` é um alias para o tipo da especialização de modelo gerada e o membro `value` contém o valor *v* usado para criar a especialização.
 
-A `bool_constant` classe de modelo é uma especialização parcial `integral_constant` explícita de que usa **bool** como o argumento *T* .
+O modelo de classe `bool_constant` é uma especialização parcial explícita de `integral_constant` que usa **bool** como o argumento *t* .
 
 ## <a name="example"></a>Exemplo
 
@@ -81,5 +81,5 @@ integral_constant<bool, false> == false
 ## <a name="see-also"></a>Consulte também
 
 [<type_traits>](../standard-library/type-traits.md)\
-[false_type](../standard-library/type-traits-typedefs.md#false_type)\
+\ [false_type](../standard-library/type-traits-typedefs.md#false_type)
 [true_type](../standard-library/type-traits-typedefs.md#true_type)

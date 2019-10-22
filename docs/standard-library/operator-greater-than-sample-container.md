@@ -10,19 +10,19 @@ helpviewer_keywords:
 - '> operator, comparing specific objects'
 - operator >
 ms.assetid: 49bd417a-3305-4ffa-9884-39d3904ed87d
-ms.openlocfilehash: e7da0250dc647d2d519b9c3d105fb942717c7a4c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 80bcc6b81ec7d6771895f711d61a507f057eae2a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449739"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689193"
 ---
 # <a name="operatorgt-ltsample-containergt"></a>operator&gt; (&lt;sample container&gt;)
 
 > [!NOTE]
 > Este tópico está na documentação da C++ Microsoft como um exemplo não funcional de contêineres usados na biblioteca C++ padrão. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
 
-Sobrecarrega **operator>** para comparar dois objetos da classe de modelo [Container](../standard-library/sample-container-class.md).
+O operador de sobrecargas **>** para comparar dois objetos do [contêiner](../standard-library/sample-container-class.md)de modelo de classe.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,7 +33,7 @@ bool operator*gt;(
     const Container <Ty>& right);
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna `right < left`.
 

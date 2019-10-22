@@ -9,16 +9,16 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 88244879be9ab27c826c0b051b724fa1c3ed4784
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456759"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688466"
 ---
 # <a name="ltarraygt-operators"></a>Operadores &lt;array&gt;
 
-O \<cabeçalho de > de matriz inclui essas funções de modelo de comparação de não membros de **matriz** .
+O cabeçalho de > de \<array inclui essas funções de modelo de comparação de não membros de **matriz** .
 
 ||||
 |-|-|-|
@@ -38,16 +38,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*\
+*Ty* \
 O tipo de um elemento.
 
-*P*\
+*N* \
 O tamanho da matriz.
 
-*mantida*\
+\ *à esquerda*
 Contêiner esquerdo a comparar.
 
-*Certo*\
+\ *à direita*
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
@@ -111,21 +111,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*\
+*Ty* \
 O tipo de um elemento.
 
-*P*\
+*N* \
 O tamanho da matriz.
 
-*mantida*\
+\ *à esquerda*
 Contêiner esquerdo a comparar.
 
-*Certo*\
+\ *à direita*
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
-As função de modelo sobrecarrega `operator<` para comparar dois objetos da classe de modelo [Classe array](../standard-library/array-class-stl.md). A função retorna `lexicographical_compare(left.begin(), left.end(), right.begin())`.
+A função de modelo sobrecarrega `operator<` para comparar dois objetos da [classe de matriz](../standard-library/array-class-stl.md)de modelo de classe. A função retorna `lexicographical_compare(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Exemplo
 
@@ -184,16 +184,16 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*\
+*Ty* \
 O tipo de um elemento.
 
-*P*\
+*N* \
 O tamanho da matriz.
 
-*mantida*\
+\ *à esquerda*
 Contêiner esquerdo a comparar.
 
-*Certo*\
+\ *à direita*
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
@@ -257,21 +257,21 @@ bool operator==(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*\
+*Ty* \
 O tipo de um elemento.
 
-*P*\
+*N* \
 O tamanho da matriz.
 
-*mantida*\
+\ *à esquerda*
 Contêiner esquerdo a comparar.
 
-*Certo*\
+\ *à direita*
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
-As função de modelo sobrecarrega `operator==` para comparar dois objetos da classe de modelo [Classe array](../standard-library/array-class-stl.md). A função retorna `equal(left.begin(), left.end(), right.begin())`.
+A função de modelo sobrecarrega `operator==` para comparar dois objetos da [classe de matriz](../standard-library/array-class-stl.md)de modelo de classe. A função retorna `equal(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Exemplo
 
@@ -330,16 +330,16 @@ bool operator>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*\
+*Ty* \
 O tipo de um elemento.
 
-*P*\
+*N* \
 O tamanho da matriz.
 
-*mantida*\
+\ *à esquerda*
 Contêiner esquerdo a comparar.
 
-*Certo*\
+\ *à direita*
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
@@ -403,16 +403,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*\
+*Ty* \
 O tipo de um elemento.
 
-*P*\
+*N* \
 O tamanho da matriz.
 
-*mantida*\
+\ *à esquerda*
 Contêiner esquerdo a comparar.
 
-*Certo*\
+\ *à direita*
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários

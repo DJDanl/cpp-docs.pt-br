@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: 05260d6800597b64908ff0aeffac47b09fed9a0e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d7840d114acfa0f3daa01c8dfdb6c6114829d93d
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449695"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689911"
 ---
-# <a name="cachefreelist-class"></a>Classe cache_freelist
+# <a name="cache_freelist-class"></a>Classe cache_freelist
 
 Define um [alocador de blocos](../standard-library/allocators-header.md) que aloca e desaloca os blocos de memória de um único tamanho.
 
@@ -37,7 +37,7 @@ class cache_freelist
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo cache_freelist mantém uma lista gratuita de blocos de memória de tamanho *sz*. Quando a lista livre está cheia, ela usa o **operador Delete** para desalocar os blocos de memória. Quando a lista livre está vazia, ela usa o **operador novo** para alocar novos blocos de memória. O tamanho máximo da lista livre é determinado pela classe máxima da classe passada no parâmetro *Max* .
+O modelo de classe cache_freelist mantém uma lista gratuita de blocos de memória de tamanho *sz*. Quando a lista livre está cheia, ela usa o **operador Delete** para desalocar os blocos de memória. Quando a lista livre está vazia, ela usa o **operador novo** para alocar novos blocos de memória. O tamanho máximo da lista livre é determinado pela classe máxima da classe passada no parâmetro *Max* .
 
 Cada bloco de memória contém os bytes de *sz* de memória utilizável e os dados que o **operador New** e o **operador Delete** exigem.
 
@@ -74,7 +74,7 @@ void *allocate(std::size_t count);
 |---------------|-----------------|
 |*count*|O número de elementos na matriz a serem alocados.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o objeto alocado.
 

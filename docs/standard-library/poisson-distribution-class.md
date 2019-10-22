@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 19fab66c3ffca428114e4586c4ad6d6de3fdbf83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 180b84c6ac7bef94a93f73c0bdefc6a6f95164f0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458459"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689122"
 ---
-# <a name="poissondistribution-class"></a>Classe poisson_distribution
+# <a name="poisson_distribution-class"></a>Classe poisson_distribution
 
 Gera uma distribuição Poisson.
 
@@ -67,12 +67,12 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*IntType*\
-O tipo de resultado inteiro, o padrão é **int**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+@No__t_1 *IntType*
+O tipo de resultado inteiro, o padrão é **int**. Para possíveis tipos, consulte [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário com uma distribuição Poisson. A tabela a seguir contém links para artigos sobre cada um dos membros.
+O modelo de classe descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário com uma distribuição Poisson. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -207,10 +207,10 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*significa*\
+*média* \
 O parâmetro de distribuição `mean`.
 
-*Parm*\
+\ de *parâmetros*
 A estrutura do parâmetro usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
