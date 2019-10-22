@@ -10,22 +10,22 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: b3352110c2074b325ac345c05dbf899c0bdbd0ab
-ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
+ms.openlocfilehash: e27ff146c75da6e90e6336106beba714dbe7c8a8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69975899"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689875"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
 Inclua o cabeçalho padrão \<chrono> para definir classes e funções que representam e manipulam durações de tempo e instantes de tempo.
 
-A partir do Visual Studio 2015, a implementação `steady_clock` do foi alterada para atender C++ aos requisitos padrão de enchente e monotônico. `steady_clock` agora é baseado em QueryPerformanceCounter() e `high_resolution_clock` agora é uma typedef para `steady_clock`. Como resultado, no compilador C++ `steady_clock::time_point` Microsoft agora há um typedef para `chrono::time_point<steady_clock>`; no entanto, essa regra não é necessariamente o caso para outras implementações.
+A partir do Visual Studio 2015, a implementação do `steady_clock` foi alterada para atender C++ aos requisitos padrão de enchente e monotônico. `steady_clock` agora é baseado em QueryPerformanceCounter() e `high_resolution_clock` agora é uma typedef para `steady_clock`. Como resultado, no Microsoft C++ Compiler `steady_clock::time_point` agora é um typedef para `chrono::time_point<steady_clock>`; no entanto, essa regra não é necessariamente o caso para outras implementações.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<> Chrono
+**Cabeçalho:** \<chrono >
 
 **Namespace:** std
 
@@ -42,7 +42,7 @@ A partir do Visual Studio 2015, a implementação `steady_clock` do foi alterada
 
 |||
 |-|-|
-|[Estrutura common_type](../standard-library/common-type-structure.md)|Descreve especializações da classe de modelo [common_type](../standard-library/common-type-class.md) para instanciações de `duration` e `time_point`.|
+|[Estrutura common_type](../standard-library/common-type-structure.md)|Descreve as especializações do modelo de classe [common_type](../standard-library/common-type-class.md) para instanciações de `duration` e `time_point`.|
 |[Estrutura duration_values](../standard-library/duration-values-structure.md)|Fornece valores específicos para o parâmetro de modelo `duration` `Rep`.|
 |[estrutura high_resolution_clock](../standard-library/high-resolution-clock-struct.md)||
 |[Struct steady_clock](../standard-library/steady-clock-struct.md)|Representa um relógio `steady`.|
@@ -78,31 +78,31 @@ Para obter mais informações sobre tipos de índice usados nas seguintes typede
 
 |||
 |-|-|
-|`typedef duration<long long, nano> nanoseconds;`|Sinônimo de um `duration` tipo que tem um período de tique de 1 nanossegundo.|
-|`typedef duration<long long, micro> microseconds;`|Sinônimo de um `duration` tipo que tem um período de tique de 1 microssegundo.|
-|`typedef duration<long long, milli> milliseconds;`|Sinônimo de um `duration` tipo que tem um período de tique de 1 milissegundo.|
-|`typedef duration<long long> seconds;`|Sinônimo de um `duration` tipo que tem um período de tique de 1 segundo.|
-|`typedef duration<int, ratio<60> > minutes;`|Sinônimo de um `duration` tipo que tem um período de tique de 1 minuto.|
-|`typedef duration<int, ratio<3600> > hours;`|Sinônimo de um `duration` tipo que tem um período de tique de 1 hora.|
+|`typedef duration<long long, nano> nanoseconds;`|Sinônimo de um tipo de `duration` que tem um período de tique de 1 nanossegundo.|
+|`typedef duration<long long, micro> microseconds;`|Sinônimo de um tipo de `duration` que tem um período de tique de 1 microssegundo.|
+|`typedef duration<long long, milli> milliseconds;`|Sinônimo de um tipo de `duration` que tem um período de tique de 1 milissegundo.|
+|`typedef duration<long long> seconds;`|Sinônimo de um tipo de `duration` que tem um período de tique de 1 segundo.|
+|`typedef duration<int, ratio<60> > minutes;`|Sinônimo de um tipo de `duration` que tem um período de tique de 1 minuto.|
+|`typedef duration<int, ratio<3600> > hours;`|Sinônimo de um tipo de `duration` que tem um período de tique de 1 hora.|
 
 ### <a name="literals"></a>Literais
 
-**(C++ 11)** O \<cabeçalho de > Chrono define os seguintes [literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md) que você pode usar para maior conveniência, segurança de tipo e manutenção do seu código. Esses literais são definidos no namespace embutido `literals::chrono_literals` e estão no escopo quando std::chrono está no escopo.
+**(C++ 11)** O cabeçalho de > de \<chrono define os seguintes [literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md) que você pode usar para maior conveniência, segurança de tipo e manutenção do seu código. Esses literais são definidos no namespace embutido `literals::chrono_literals` e estão no escopo quando std::chrono está no escopo.
 
 |||
 |-|-|
 |operador de horas "" h (valor longo longo não atribuído)|Especifica horas como um valor integral.|
-|duração\<dupla, taxa\<3600 > operador de > "" h (valor duplo longo)|Especifica horas como um valor de ponto flutuante.|
+|duração \<double, ratio \<3600 > operador de > "" h (valor duplo longo)|Especifica horas como um valor de ponto flutuante.|
 |minutos (operador "" min) (valor longo longo não atribuído)|Especifica minutos como um valor integral.|
-|duração\<dupla, taxa\<60 > > (operador "" min) (valor duplo longo)|Especifica minutos como um valor de ponto flutuante.|
+|duração \<double, taxa \<60 > > (operador "" min) (valor duplo longo)|Especifica minutos como um valor de ponto flutuante.|
 |operador de segundos "" s (valor longo longo sem sinal)|Especifica minutos como um valor integral.|
-|operador\<de > de duração duplo "" s (valor duplo longo)|Especifica segundos como um valor de ponto flutuante.|
+|Duration \<double operador de > "" s (valor duplo longo)|Especifica segundos como um valor de ponto flutuante.|
 |operador de milissegundos "" MS (valor longo longo sem sinal)|Especifica milissegundos como um valor integral.|
-|Duration\<Double, Mili > Operator "" MS (extensally Double Val)|Especifica milissegundos como um valor de ponto flutuante.|
+|Duration \<double, operador de > Mili "" MS (valor duplo longo)|Especifica milissegundos como um valor de ponto flutuante.|
 |operador de microssegundos "" US (valor longo longo sem sinal)|Especifica microssegundos como um valor integral.|
-|duração\<dupla, operador de micro > "" US (Val de longa dupla)|Especifica microssegundos como um valor de ponto flutuante.|
+|duração \<double, operador de micro > "" US (valor duplo longo)|Especifica microssegundos como um valor de ponto flutuante.|
 |operador de nanossegundos "" NS (valor longo longo sem sinal)|Especifica nanossegundos como um valor integral.|
-|duração\<dupla, operador do nano > "" NS (valor duplo longo)|Especifica nanossegundos como um valor de ponto flutuante.|
+|duração \<double, operador do nano > "" NS (valor duplo longo)|Especifica nanossegundos como um valor de ponto flutuante.|
 
 Os exemplos a seguir mostram como usar os literais chrono.
 

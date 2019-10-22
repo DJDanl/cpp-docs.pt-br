@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-ms.openlocfilehash: e66c3e869f01775512419c877cd52c7f0e0fa2c4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8d257a57100615e592f6ebd62b5c91c6c59df408
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449077"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687864"
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 
-Declara referências de encaminhamento para várias classes de modelo usadas em iostreams. Todas essas classes de modelo são definidas em outros cabeçalhos padrão. Inclua explicitamente esse cabeçalho somente quando precisar de uma de suas declarações, mas não de sua definição.
+Declara referências de encaminhamento a vários modelos de classe usados em iostreams. Todos esses modelos de classe são definidos em outros cabeçalhos padrão. Inclua explicitamente esse cabeçalho somente quando precisar de uma de suas declarações, mas não de sua definição.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -62,7 +62,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
 ```
 
-## <a name="forward-declarationstemplate-classes"></a>Declarações de encaminhamento/Classes de modelo
+## <a name="forward-declarations-and-class-templates"></a>Declarações de encaminhamento e modelos de classe
 
 ```cpp
 template <class _Statetype>

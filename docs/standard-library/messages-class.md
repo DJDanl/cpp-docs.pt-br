@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449933"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687682"
 ---
 # <a name="messages-class"></a>Classe messages
 
-A classe de modelo descreve um objeto que pode servir como uma faceta de localidade para recuperar mensagens localizadas em um catálogo de mensagens internacionalizadas de uma determinada localidade.
+O modelo de classe descreve um objeto que pode servir como uma faceta de localidade para recuperar mensagens localizadas de um catálogo de mensagens internacionalizadas para uma determinada localidade.
 
 Atualmente, enquanto a classe de mensagens é implementada, não há mensagens.
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType*\
+@No__t_1 *CharType*
 O tipo usado em um programa para codificar caracteres em uma localidade.
 
 ## <a name="remarks"></a>Comentários
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Catval*\
+@No__t_1 *_Catval*
 O catálogo a ser fechado.
 
 ### <a name="remarks"></a>Comentários
@@ -122,7 +122,7 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Catval*\
+@No__t_1 *_Catval*
 O catálogo a ser fechado.
 
 ### <a name="remarks"></a>Comentários
@@ -149,19 +149,19 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Catval*\
+@No__t_1 *_Catval*
 O valor de identificação que especifica o catálogo de mensagens a ser pesquisado.
 
-*Definir*\
+*_ Definir* \
 O primeiro identificado usado para localizar uma mensagem em um catálogo de mensagens.
 
-*_Message*\
+@No__t_1 *_Message*
 O segundo identificado usado para localizar uma mensagem em um catálogo de mensagens.
 
-*_Dfault*\
+@No__t_1 *_Dfault*
 A cadeia de caracteres a ser retornada em caso de falha.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Ele retorna uma cópia de *_Dfault* em caso de falha. Caso contrário, ela retorna uma cópia da sequência de mensagem especificada.
 
@@ -185,13 +185,13 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Catname*\
+@No__t_1 *_Catname*
 O nome do catálogo a ser pesquisado.
 
-*_Loc*\
+@No__t_1 *_Loc*
 A localidade que está sendo pesquisada no catálogo.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Ele retorna um valor que compara menor que zero na falha. Caso contrário, o valor retornado pode ser usado como o primeiro argumento em uma chamada posterior para [get](#get).
 
@@ -219,19 +219,19 @@ string_type get(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Catval*\
+@No__t_1 *_Catval*
 O valor de identificação que especifica o catálogo de mensagens a ser pesquisado.
 
-*Definir*\
+*_ Definir* \
 O primeiro identificado usado para localizar uma mensagem em um catálogo de mensagens.
 
-*_Message*\
+@No__t_1 *_Message*
 O segundo identificado usado para localizar uma mensagem em um catálogo de mensagens.
 
-*_Dfault*\
+@No__t_1 *_Dfault*
 A cadeia de caracteres a ser retornada em caso de falha.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Ele retorna uma cópia de *_Dfault* em caso de falha. Caso contrário, ela retorna uma cópia da sequência de mensagem especificada.
 
@@ -254,21 +254,21 @@ protected: messages(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
-*_Locname*\
+@No__t_1 *_Locname*
 O nome da localidade.
 
 ### <a name="remarks"></a>Comentários
 
 Os valores possíveis para o parâmetro *_Refs* e seu significado são:
 
-- 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
+- 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
-- 1: O tempo de vida do objeto deve ser gerenciado manualmente.
+- 1: o tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: Esses valores não estão definidos.
+- \> 1: esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 
@@ -286,13 +286,13 @@ catalog open(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Catname*\
+@No__t_1 *_Catname*
 O nome do catálogo a ser pesquisado.
 
-*_Loc*\
+@No__t_1 *_Loc*
 A localidade que está sendo pesquisada no catálogo.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Ele retorna um valor que compara menor que zero na falha. Caso contrário, o valor retornado pode ser usado como o primeiro argumento em uma chamada posterior para [get](#get).
 
@@ -310,7 +310,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve uma especialização da classe de modelo [basic_string](../standard-library/basic-string-class.md) cujos objetos podem armazenar cópias das sequências de mensagens.
+O tipo descreve uma especialização do modelo de classe [basic_string](../standard-library/basic-string-class.md) cujos objetos podem armazenar cópias das sequências de mensagens.
 
 ## <a name="see-also"></a>Consulte também
 

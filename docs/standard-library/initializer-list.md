@@ -2,16 +2,16 @@
 title: '&lt;initializer_list&gt;'
 ms.date: 11/04/2016
 ms.assetid: 820b6448-fb01-49a4-aeaa-546ad7576ea4
-ms.openlocfilehash: 5d0778fde6b7a7b6182b8e57cd4c663ec77ca85a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d04eb7e20a989fe310835250c6e51af754edbaf8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455330"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687902"
 ---
-# <a name="ltinitializerlistgt"></a>&lt;initializer_list&gt;
+# <a name="ltinitializer_listgt"></a>&lt;initializer_list&gt;
 
-Define a classe de modelo do contêiner `initializer_list` e diversos modelos de suporte.
+Define o modelo de classe de contêiner `initializer_list` e vários modelos de suporte.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -21,7 +21,7 @@ Define a classe de modelo do contêiner `initializer_list` e diversos modelos de
 
 ### <a name="classes"></a>Classes
 
-|Classe|Descrição|
+|Class|Descrição|
 |-|-|
 |[initializer_list](../standard-library/initializer-list-class.md)|Fornece acesso a uma matriz de elementos em que cada membro é do tipo especificado.|
 

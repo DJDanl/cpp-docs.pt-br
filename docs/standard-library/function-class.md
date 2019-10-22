@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: d775af68b8238093c794a0f78d7e24f2a515ee56
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 432b61c7bc5b7f0e6f82e5bfeca7758c70785774
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243799"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689630"
 ---
 # <a name="function-class"></a>Classe function
 
@@ -79,15 +79,15 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fty*\
+@No__t_1 *Fty*
 O tipo de função a ser encapsulada.
 
-*AX*\
+@No__t_1 *AX*
 A função do alocador.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo é um wrapper de chamada cuja assinatura de chamada é `Ret(T1, T2, ..., TN)`. Você pode usá-lo para circunscrever uma variedade de objetos resgatáveis em um wrapper uniforme.
+O modelo de classe é um wrapper de chamada cuja assinatura de chamada é `Ret(T1, T2, ..., TN)`. Você pode usá-lo para circunscrever uma variedade de objetos resgatáveis em um wrapper uniforme.
 
 Algumas funções membro usam um operando que nomeia o objeto de destino desejado. É possível especificar esse operando de várias maneiras:
 
@@ -134,7 +134,7 @@ Um objeto `function` vazio não tem um objeto que pode ser chamado ou uma refer�
 |[operator()](#op_call)|Chama um objeto que pode ser chamado.|
 |[operator=](#op_eq)|Substitui o objeto que pode ser chamado armazenado.|
 
-## <a name="assign"></a> Atribuir
+## <a name="assign"></a>Cancele
 
 Atribui um objeto que pode ser chamado a esse objeto de função.
 
@@ -152,20 +152,20 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Func*\
+@No__t_1 *_Func*
 Um objeto que pode ser chamado.
 
-*_Fnref*\
+@No__t_1 *_Fnref*
 Um wrapper de referência que contém um objeto que pode ser chamado.
 
-*AX*\
+@No__t_1 *AX*
 Um objeto alocador.
 
 ### <a name="remarks"></a>Comentários
 
-As funções membro substituem o `callable object` mantido por `*this` pelo objeto que pode ser chamado passado como o `operand`. Ambas alocam o armazenamento com o objeto de alocador *Ax*.
+As funções membro substituem o `callable object` mantido por `*this` pelo objeto que pode ser chamado passado como o `operand`. Ambos alocam armazenamento com o objeto de alocador *AX*.
 
-## <a name="function"></a> função
+## <a name="function"></a>funcionamento
 
 Constrói um wrapper que é vazio ou armazena um objeto que pode ser chamado, de tipo arbitrário com uma assinatura fixa.
 
@@ -190,22 +190,22 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 O objeto de função a ser copiado.
 
-*FX*\
+@No__t_1 *FX*
 O tipo do objeto que pode ser chamado.
 
-*_Func*\
+@No__t_1 *_Func*
 O objeto que pode ser chamado a ser encapsulado.
 
-*ALLOC*\
+@No__t_1 de *alocação*
 O tipo do alocador.
 
-*AX*\
+@No__t_1 *AX*
 O alocador.
 
-*_Fnref*\
+@No__t_1 *_Fnref*
 A referência do objeto que pode ser chamado a ser encapsulado.
 
 ### <a name="remarks"></a>Comentários
@@ -282,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a> operador não especificado
+## <a name="op_unspecified"></a>operador não especificado
 
 Testa se o objeto que pode ser chamado armazenado existe.
 
@@ -292,7 +292,7 @@ operator unspecified();
 
 ### <a name="remarks"></a>Comentários
 
-O operador retorna um valor que pode ser convertido em **bool** com um valor true somente se o objeto não está vazio. Você pode usá-lo para testar se o objeto está vazio.
+O operador retornará um valor que será convertido para **bool** com um valor true somente se o objeto não estiver vazio. Você pode usá-lo para testar se o objeto está vazio.
 
 ### <a name="example"></a>Exemplo
 
@@ -324,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a> Operator)
+## <a name="op_call"></a>operador ()
 
 Chama um objeto que pode ser chamado.
 
@@ -337,10 +337,10 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parâmetros
 
-*TN*\
+@No__t_1 *TN*
 O tipo do enésimo argumento de chamada.
 
-*TN*\
+\ *TN*
 O enésimo argumento de chamada.
 
 ### <a name="remarks"></a>Comentários
@@ -375,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="op_eq"></a> operador =
+## <a name="op_eq"></a>operador =
 
 Substitui o objeto que pode ser chamado armazenado.
 
@@ -390,16 +390,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parâmetros
 
-*npc*\
+\ *NPC*
 Uma constante de ponteiro nulo.
 
-*Certo*\
+\ *à direita*
 O objeto de função a ser copiado.
 
-*Fn*\
+*fn* \
 O objeto que pode ser chamado a ser encapsulado.
 
-*fnref*\
+\ *fnref*
 A referência do objeto que pode ser chamado a ser encapsulado.
 
 ### <a name="remarks"></a>Comentários
@@ -457,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a> result_type
+## <a name="result_type"></a>result_type
 
 O tipo retornado do objeto que pode ser chamado armazenado.
 
@@ -499,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a> troca
+## <a name="swap"></a>permuta
 
 Troca dois objetos resgatáveis.
 
@@ -509,12 +509,12 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 O objeto de função com o qual será feita a troca.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro troca os objetos de destino entre `*this` e *direito*. Ela faz isso em um horário constante e não gera exceções.
+A função membro troca os objetos de destino entre `*this` e *direita*. Ela faz isso em um horário constante e não gera exceções.
 
 ### <a name="example"></a>Exemplo
 
@@ -558,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a> Destino
+## <a name="target"></a>alvo
 
 Testa se o objeto pode ser chamado conforme especificado.
 
@@ -571,14 +571,14 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fty2*\
+@No__t_1 *Fty2*
 O tipo de objeto que pode ser chamado de destino a ser testado.
 
 ### <a name="remarks"></a>Comentários
 
-O tipo *Fty2* deve ser chamado para os tipos de argumento `T1, T2, ..., TN` e o tipo de retorno `Ret`. Se `target_type() == typeid(Fty2)`, a função modelo membro retornará o endereço do objeto de destino; caso contrário, retornará 0.
+O tipo *Fty2* deve ser chamável para os tipos de argumento `T1, T2, ..., TN` e o tipo de retorno `Ret`. Se `target_type() == typeid(Fty2)`, a função modelo membro retornará o endereço do objeto de destino; caso contrário, retornará 0.
 
-Um tipo *Fty2* pode ser chamado para os tipos de argumento `T1, T2, ..., TN` e o tipo de retorno `Ret` se, para lvalues `fn, t1, t2, ..., tN` tipos `Fty2, T1, T2, ..., TN`, respectivamente, `INVOKE(fn, t1, t2, ..., tN)` está bem formado e, se `Ret`não é **void**, conversível em `Ret`.
+Um tipo *Fty2* é chamado para os tipos de argumento `T1, T2, ..., TN` e o tipo de retorno `Ret` se, para lvalues `fn, t1, t2, ..., tN` de tipos `Fty2, T1, T2, ..., TN`, respectivamente, `INVOKE(fn, t1, t2, ..., tN)` é bem formado e, se `Ret` não for **void**, conversível para `Ret`.
 
 ### <a name="example"></a>Exemplo
 
@@ -619,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a> target_type
+## <a name="target_type"></a>target_type
 
 Obtém informações de tipo sobre o objeto que pode ser chamado.
 

@@ -14,16 +14,16 @@ f1_keywords:
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-ms.openlocfilehash: 109e51ad9eba54f31b90da9b8b85bec105c7dce6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6d89348867982bfb86c0bf2404a017f6a448d1a1
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240413"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687134"
 ---
-# <a name="pointertraits-struct"></a>Struct pointer_traits
+# <a name="pointer_traits-struct"></a>Struct pointer_traits
 
-Fornece informações que são necessárias a um objeto da classe de modelo `allocator_traits` para descrever um alocador com o tipo de ponteiro `Ptr`.
+Fornece informações necessárias para um objeto do tipo `allocator_traits` para descrever um alocador com tipo de ponteiro `Ptr`.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -66,11 +66,11 @@ struct Ptr
 
 ### <a name="methods"></a>Métodos
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[pointer_to](#pointer_to)|Converte uma referência arbitrária em um objeto da classe `Ptr`.|
 
-### <a name="pointer_to"></a> pointer_to
+### <a name="pointer_to"></a>pointer_to
 
 O método estático que retorna `Ptr::pointer_to(obj)`, se essa função existir. Caso contrário, não é possível converter uma referência arbitrária para um objeto da classe `Ptr`. Se `Ptr` for um ponteiro bruto, esse método retornará `addressof(obj)`.
 

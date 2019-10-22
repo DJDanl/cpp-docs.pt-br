@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-ms.openlocfilehash: 8eb497e6a4380affd0f13f41c7b55990c562b7d3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c81990f14c6f9dc2400362015b838df5aed86429
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453651"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689425"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
-Define a lista de classes de modelo do contêiner e diversos modelos de suporte.
+Define a lista de modelos de classe de contêiner e vários modelos de suporte.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,7 +25,7 @@ Define a lista de classes de modelo do contêiner e diversos modelos de suporte.
 ```
 
 > [!NOTE]
-> A \<lista > biblioteca também usa a `#include <initializer_list>` instrução.
+> A biblioteca \<list > também usa a instrução `#include <initializer_list>`.
 
 ## <a name="members"></a>Membros
 
@@ -50,7 +50,7 @@ Define a lista de classes de modelo do contêiner e diversos modelos de suporte.
 
 |||
 |-|-|
-|[Classe list](../standard-library/list-class.md)|Uma classe de modelo de contêineres de sequência que mantém seus elementos em uma organização linear e permite inserções e exclusões eficientes em qualquer local na sequência.|
+|[Classe list](../standard-library/list-class.md)|Um modelo de classe de contêineres de sequência que mantém seus elementos em uma organização linear e permite inserções e exclusões eficientes em qualquer local dentro da sequência.|
 
 ## <a name="see-also"></a>Consulte também
 

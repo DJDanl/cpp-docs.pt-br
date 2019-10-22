@@ -108,16 +108,16 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 056b7e47c474c64bf357523e2995ef49d456a9cd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e269028ff28b00586fd8d8dcef728f11037dfbc8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449180"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687899"
 ---
-# <a name="iosbase-class"></a>Classe ios_base
+# <a name="ios_base-class"></a>Classe ios_base
 
-A classe descreve as funções membro e de armazenamento comuns aos fluxos de entrada e de saída que não dependem dos parâmetros do modelo. (A classe de modelo [basic_ios](../standard-library/basic-ios-class.md) descreve o que é comum e depende dos parâmetros do modelo.)
+A classe descreve as funções membro e de armazenamento comuns aos fluxos de entrada e de saída que não dependem dos parâmetros do modelo. (O modelo de classe [basic_ios](../standard-library/basic-ios-class.md) descreve o que é comum e depende de parâmetros de modelo.)
 
 Um objeto da classe ios_base armazena informações de formatação, que consistem em:
 
@@ -129,7 +129,7 @@ Um objeto da classe ios_base armazena informações de formatação, que consist
 
 - Uma precisão de exibição em um objeto do tipo **int**.
 
-- Um objeto de localidade em um objeto do `locale`tipo.
+- Um objeto de localidade em um objeto do tipo `locale`.
 
 - Duas matrizes extensíveis, com elementos do tipo **Long** e cursor **void** .
 
@@ -199,7 +199,7 @@ Um objeto da classe ios_base também armazena informações de estado de fluxo, 
 
 |||
 |-|-|
-|[failure](#failure)|A classe de membro serve como a classe base para todas as exceções geradas pela função de membro [clear](../standard-library/basic-ios-class.md#clear) na classe de modelo [basic_ios](../standard-library/basic-ios-class.md).|
+|[failure](#failure)|A classe Member serve como a classe base para todas as exceções geradas pela função membro [Clear](../standard-library/basic-ios-class.md#clear) no modelo de classe [basic_ios](../standard-library/basic-ios-class.md).|
 |[flags](#flags)|Define ou retorna as configurações de sinalizador atuais.|
 |[getloc](#getloc)|Retorna o objeto de localidade armazenado.|
 |[imbue](#imbue)|Altera a localidade.|
@@ -241,11 +241,11 @@ enum event {
 
 O tipo é um tipo enumerado que descreve um objeto que pode armazenar o evento de retorno de chamada usado como argumento para uma função registrada com [register_callback](#register_callback). Os valores de eventos distintos são:
 
-- `copyfmt_event`, para identificar um retorno de chamada que ocorre perto do final de uma ligação para [copyfmt](../standard-library/basic-ios-class.md#copyfmt), logo antes da [máscara de exceção](../standard-library/ios-base-class.md) ser copiada.
+- `copyfmt_event`, para identificar um retorno de chamada que ocorre perto do final de uma chamada para [copyfmt](../standard-library/basic-ios-class.md#copyfmt), logo antes da [máscara de exceção](../standard-library/ios-base-class.md) ser copiada.
 
-- `erase_event`para identificar um retorno de chamada que ocorre no início de uma chamada para [copyfmt](../standard-library/basic-ios-class.md#copyfmt)ou no início de uma chamada para o destruidor para  **\*isso**.
+- `erase_event`, para identificar um retorno de chamada que ocorre no início de uma chamada para [copyfmt](../standard-library/basic-ios-class.md#copyfmt)ou no início de uma chamada para o destruidor para **\*this**.
 
-- `imbue_event`para identificar um retorno de chamada que ocorre no final de uma chamada para [imbue](#imbue), logo antes da função retornar.
+- `imbue_event`, para identificar um retorno de chamada que ocorre no final de uma chamada para [imbue](#imbue), logo antes da função retornar.
 
 ### <a name="example"></a>Exemplo
 
@@ -264,13 +264,13 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_E*\
+@No__t_1 *_E*
 O [evento](#event).
 
-*_Base*\
+@No__t_1 *_Base*
 O fluxo no qual o evento foi chamado.
 
-*_I*\
+@No__t_1 *_i*
 Um número definido pelo usuário.
 
 ### <a name="remarks"></a>Comentários
@@ -344,10 +344,10 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>Parâmetros
 
-*fmtfl*\
+\ *fmtfl*
 A nova configuração `fmtflags`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A configuração `fmtflags` anterior ou atual.
 
@@ -463,7 +463,7 @@ Retorna o objeto de localidade armazenado.
 locale getloc() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O objeto de localidade armazenado.
 
@@ -495,16 +495,16 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Loc*\
+@No__t_1 *_Loc*
 A nova configuração de localidade.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A localidade anterior.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro armazena *_Loc* no objeto locale e, em seguida, relata o evento `imbue_event`de retorno de chamada e. Ela retorna o valor armazenado anterior.
+A função membro armazena *_Loc* no objeto locale e, em seguida, relata o evento de retorno de chamada e `imbue_event`. Ela retorna o valor armazenado anterior.
 
 ### <a name="example"></a>Exemplo
 
@@ -532,7 +532,7 @@ ios_base();
 
 ### <a name="remarks"></a>Comentários
 
-O construtor (protegido) não faz nada. Uma chamada posterior a **basic_ios::** [init](../standard-library/basic-ios-class.md#init) deve inicializar o objeto antes de ser destruída com segurança. Sendo assim, o único uso seguro da classe ios_base é como uma classe base para a classe de modelo [basic_ios](../standard-library/basic-ios-class.md).
+O construtor (protegido) não faz nada. Uma chamada posterior a **basic_ios::** [init](../standard-library/basic-ios-class.md#init) deve inicializar o objeto antes de ser destruída com segurança. Portanto, o único uso seguro para a classe ios_base é como uma classe base para o modelo de classe [basic_ios](../standard-library/basic-ios-class.md).
 
 ## <a name="iostate"></a>iostate
 
@@ -572,7 +572,7 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Índ*\
+*índ* \
 O índice do valor a ser armazenado como um `iword`.
 
 ### <a name="remarks"></a>Comentários
@@ -609,7 +609,7 @@ O tipo é um `bitmask type` que descreve um objeto que pode armazenar o modo de 
 
 - `app`, para buscar até o final de um fluxo antes de cada inserção.
 
-- `ate`, para procurar o final de um fluxo quando seu objeto de controle é criado pela primeira vez.
+- `ate`, para buscar até o final de um fluxo quando seu objeto de controle é criado pela primeira vez.
 
 - `binary`, para ler um arquivo como um fluxo binário, em vez de um fluxo de texto.
 
@@ -647,10 +647,10 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo `ios_base`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O objeto ao qual a atribuição está sendo feita.
 
@@ -671,10 +671,10 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Prec*\
+@No__t_1 *_Prec*
 O número de dígitos significativos a serem exibidos, ou o número de dígitos após o ponto decimal em notação fixa.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A primeira função membro retorna a [precisão de exibição](../standard-library/ios-base-class.md) armazenada. A segunda função de membro armazena *_Prec* na precisão de exibição e retorna seu valor armazenado anterior.
 
@@ -716,7 +716,7 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Idx*\
+@No__t_1 *_Idx*
 O índice do valor a ser armazenado como `pword`.
 
 ### <a name="remarks"></a>Comentários
@@ -742,15 +742,15 @@ void register_callback(
 
 ### <a name="parameters"></a>Parâmetros
 
-*PFN*\
+\ *PFN*
 Ponteiro para a função de retorno.
 
-*Índ*\
+*índ* \
 Um número definido pelo usuário.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro envia o par `{pfn, idx}` para a [pilha de retorno de chamada](../standard-library/ios-base-class.md)da pilha de retorno de chamada armazenado. Quando um evento de retorno de chamada **EV** é relatado, as funções são chamadas, na ordem inversa do registro, `(*pfn)(ev, *this, idx)`pela expressão.
+A função de membro envia o par `{pfn, idx}` para a [pilha de retorno de chamada](../standard-library/ios-base-class.md)da pilha de retorno de chamada armazenada. Quando um evento de retorno de chamada **EV** é relatado, as funções são chamadas, na ordem inversa do registro, pela expressão `(*pfn)(ev, *this, idx)`.
 
 ### <a name="example"></a>Exemplo
 
@@ -904,19 +904,19 @@ fmtflags setf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Mask*\
+@No__t_1 *_Mask*
 Os sinalizadores a serem ativados.
 
-*_Unset*\
+@No__t_1 *_Unset*
 Os sinalizadores a serem desligados.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Os sinalizadores de formato anteriores
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função de membro efetivamente chama [sinalizadores](#flags)(  *\_sinalizadores*de  *\_máscara* &#124; ) (definir bits selecionados) e, em seguida, retorna os sinalizadores de formato anteriores. A segunda função de membro efetivamente `flags(_Mask & fmtfl, flags & ~_Mask)` chama (substitua os bits selecionados em uma máscara) e retorna os sinalizadores de formato anteriores.
+A primeira função de membro chama efetivamente [sinalizadores](#flags)( *\_Mask* &#124; *\_Flags*) (definir bits selecionados) e, em seguida, retorna os sinalizadores de formato anteriores. A segunda função de membro efetivamente chama `flags(_Mask & fmtfl, flags & ~_Mask)` (substituir os bits selecionados em uma máscara) e retorna os sinalizadores de formato anteriores.
 
 ### <a name="example"></a>Exemplo
 
@@ -954,16 +954,16 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Sync*\
-Se todos os fluxos estão sincronizados `stdio`com o.
+@No__t_1 *_Sync*
+Se todos os fluxos estão em sincronia com `stdio`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Configuração anterior para esta função.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro estático armazena `stdio` um sinalizador de sincronização, que é inicialmente **verdadeiro**. Quando **true**, esse sinalizador garante que as operações no mesmo arquivo sejam sincronizadas corretamente entre as funções [iostreams](../standard-library/iostreams-conventions.md) e aquelas definidas na C++ biblioteca padrão. Caso contrário, a sincronização pode ou não ser garantida, mas o desempenho pode ser melhorado. A função armazena *_Sync* no `stdio` sinalizador de sincronização e retorna seu valor armazenado anterior. Você pode chamá-la de forma confiável somente antes de executar qualquer operação nos fluxos padrão.
+A função de membro estático armazena um sinalizador de sincronização `stdio`, que é inicialmente **verdadeiro**. Quando **true**, esse sinalizador garante que as operações no mesmo arquivo sejam sincronizadas corretamente entre as funções [iostreams](../standard-library/iostreams-conventions.md) e aquelas definidas na C++ biblioteca padrão. Caso contrário, a sincronização pode ou não ser garantida, mas o desempenho pode ser melhorado. A função armazena *_Sync* no sinalizador de sincronização `stdio` e retorna seu valor armazenado anterior. Você pode chamá-la de forma confiável somente antes de executar qualquer operação nos fluxos padrão.
 
 ## <a name="unsetf"></a>unsetf
 
@@ -977,16 +977,16 @@ void unsetf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Mask*\
+@No__t_1 *_Mask*
 Os sinalizadores que você deseja desativar.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro efetivamente chama [sinalizadores](#flags)(`~` *_Mask* **& flags**) (limpar bits selecionados).
+A função membro efetivamente chama [sinalizadores](#flags)(`~` *_Mask* **& sinalizadores**) (limpar bits selecionados).
 
 ### <a name="example"></a>Exemplo
 
-Consulte [ios_base:: setf](#setf) para obter uma amostra de `unsetf`como usar.
+Consulte [ios_base:: setf](#setf) para obter uma amostra de como usar `unsetf`.
 
 ## <a name="width"></a>Largura
 
@@ -1001,10 +1001,10 @@ streamsize width(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Wide*\
+@No__t_1 *_Wide*
 O tamanho desejado do fluxo de saída.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A configuração de largura atual.
 
@@ -1041,7 +1041,7 @@ Especifica que uma variável faz parte do fluxo.
 static int xalloc( );
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A função membro static retorna um valor estático armazenado, que é incrementado em cada chamada.
 

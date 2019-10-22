@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-ms.openlocfilehash: 145ce22091ea1a42619ad7b1fd25507c6315a9ec
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a5fea8f4a1bc1612a35db71cc515ba4799e95da6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454491"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689722"
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 
-Define o deque de classes de modelo do contêiner e diversos modelos de suporte.
+Define o modelo de classe de contêiner deque e vários modelos de suporte.
 
 ## <a name="requirements"></a>Requisitos
 
 **Cabeçalho**: \<deque>
 
 > [!NOTE]
-> A \<biblioteca de > deque também usa `#include <initializer_list>` a instrução.
+> A biblioteca \<deque > também usa a instrução `#include <initializer_list>`.
 
 ## <a name="members"></a>Membros
 
@@ -47,7 +47,7 @@ Define o deque de classes de modelo do contêiner e diversos modelos de suporte.
 
 |||
 |-|-|
-|[Classe deque](../standard-library/deque-class.md)|Uma classe de modelo de contêineres de sequência que organiza os elementos de determinado tipo em uma organização linear e, assim como os vetores, permite acesso aleatório rápido a qualquer elemento e uma inserção e exclusão eficientes na parte posterior do contêiner.|
+|[Classe deque](../standard-library/deque-class.md)|Um modelo de classe de contêineres de sequência que organizam elementos de um determinado tipo em uma organização linear e, como vetores, permitem acesso aleatório rápido a qualquer elemento e inserção e exclusão eficientes na parte posterior do contêiner.|
 
 ## <a name="see-also"></a>Consulte também
 
