@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: bb66e7c0120da9f140ce33da7ecc61299a4d2867
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459255"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685991"
 ---
 # <a name="ltstringgt-operators"></a>Operadores de &lt;cadeia de caracteres&gt;
 
@@ -103,19 +103,19 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Parâmetros
 
-*mantida*\
+\ *à esquerda*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser concatenado.
 
-*Certo*\
+\ *à direita*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser concatenado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A cadeia de caracteres que é a concatenação de cadeias de caracteres de entrada.
 
 ### <a name="remarks"></a>Comentários
 
-As funções de cada sobrecarga `operator+` para concatenar dois objetos da classe de modelo [Classe basic_string](../standard-library/basic-string-class.md). Efetivamente retornam `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Para obter mais informações, consulte [Append](../standard-library/basic-string-class.md#append).
+As funções que cada sobrecarga `operator+` para concatenar dois objetos da [classe basic_string](../standard-library/basic-string-class.md)do modelo de classe. Todos efetivamente retornam `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Para obter mais informações, consulte [Append](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Exemplo
 
@@ -192,13 +192,13 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*mantida*\
+\ *à esquerda*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*Certo*\
+\ *à direita*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **verdadeiro** se o objeto da cadeia de caracteres à esquerda do operador é diferente do objeto da cadeia de caracteres à direita; caso contrário é **falso**.
 
@@ -283,13 +283,13 @@ bool operator==(
 
 ### <a name="parameters"></a>Parâmetros
 
-*mantida*\
+\ *à esquerda*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*Certo*\
+\ *à direita*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **verdadeiro** se o objeto da cadeia de caracteres à esquerda do operador é igual ao objeto da cadeia de caracteres à direita; caso contrário é **falso**.
 
@@ -374,13 +374,13 @@ bool operator<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*mantida*\
+\ *à esquerda*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*Certo*\
+\ *à direita*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **verdadeiro** se o objeto da cadeia de caracteres à esquerda do operador é menor que o objeto da cadeia de caracteres à direita; caso contrário é **falso**.
 
@@ -470,13 +470,13 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*mantida*\
+\ *à esquerda*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*Certo*\
+\ *à direita*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **verdadeiro** se o objeto da cadeia de caracteres à esquerda do operador é lexicograficamente menor ou igual ao objeto da cadeia de caracteres à direita; caso contrário é **falso**.
 
@@ -563,19 +563,19 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Ostr*\
+@No__t_1 *_Ostr*
 O fluxo de saída que está sendo gravado.
 
-*Str*\
+\ de *Str*
 A cadeia de caracteres a ser inserida no fluxo de saída.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Grava o valor da cadeia de caracteres especificada no fluxo de saída *_Ostr*.
 
 ### <a name="remarks"></a>Comentários
 
-O operador função de modelo sobrecarrega **< <** para inserir um objeto *Str* da classe template [basic_string](../standard-library/basic-string-class.md) no fluxo  *\_OSTR*. A função retorna `_Ostr.write( str.c_str, str.size )`efetivamente.
+O operador função de modelo sobrecarrega **< <** para inserir um objeto *Str* do modelo de classe [basic_string](../standard-library/basic-string-class.md) no *\_Ostr*de fluxo. A função retorna efetivamente `_Ostr.write( str.c_str, str.size )`.
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -600,13 +600,13 @@ bool operator>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*mantida*\
+\ *à esquerda*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*Certo*\
+\ *à direita*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **verdadeiro** se o objeto da cadeia de caracteres à esquerda do operador é lexicograficamente maior que o objeto da cadeia de caracteres à direita; caso contrário é **falso**.
 
@@ -703,13 +703,13 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*mantida*\
+\ *à esquerda*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*Certo*\
+\ *à direita*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **verdadeiro** se o objeto da cadeia de caracteres à esquerda do operador é lexicograficamente maior ou igual ao objeto da cadeia de caracteres à direita; caso contrário é **falso**.
 
@@ -796,13 +796,13 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Istr*\
+@No__t_1 *_Istr*
 O fluxo de entrada usado para extrair a sequência
 
-*Certo*\
+\ *à direita*
 A cadeia de caracteres que está sendo extraída do fluxo de entrada.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Lê o valor da cadeia de caracteres especificada de *_Istr* e retorna-o à *direita*.
 

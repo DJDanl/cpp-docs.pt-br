@@ -1,5 +1,5 @@
 ---
-title: '&lt;cvt-wstring&gt;'
+title: '&lt;cvt-wstring &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - stdext.cvt.<cvt/wstring>
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - cvt/wstring header
 ms.assetid: d78b04bb-9ac0-4adb-8ffe-3aefb9b14c2d
-ms.openlocfilehash: 7b540644d0d1ba0f539688e9d7e30ef7ae631f91
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 57b4dd482c7659b4ce5e27b20e4626c6809f8a4e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455381"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688123"
 ---
 # <a name="ltcvtwstringgt"></a>&lt;cvt/wstring&gt;
 
-O cabeçalho `<cvt/wstring>` nas versões anteriores do Visual Studio definia a classe de modelo da [Classe wstring_convert](../standard-library/wstring-convert-class.md) no namespace stdext::cvt. O cabeçalho é mantido para compatibilidade com versões anteriores. O novo código deve usar a versão da classe que é definida em [\<locale>](../standard-library/locale.md) no namespace `std`
+O cabeçalho `<cvt/wstring>` nas versões anteriores do Visual Studio definiu a classe template do modelo de classe [wstring_convert](../standard-library/wstring-convert-class.md) no namespace stdext:: CVT. O cabeçalho é mantido para compatibilidade com versões anteriores. O novo código deve usar a versão da classe que é definida em [\<locale>](../standard-library/locale.md) no namespace `std`
 
 ## <a name="syntax"></a>Sintaxe
 
