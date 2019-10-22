@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_base class
 ms.assetid: 7e95c083-91b4-4b3f-8918-0d4ea244a040
-ms.openlocfilehash: 1a32ba5e583fdb20118a3397f1ddb326302f2de1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6fca9b2130407b165a7a7bfb1fb2a9ec81774e20
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459382"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689887"
 ---
-# <a name="codecvtbase-class"></a>Classe codecvt_base
+# <a name="codecvt_base-class"></a>Classe codecvt_base
 
-Uma classe base para a classe codecvt que é usada para definir um tipo de enumeração referenciado `result`como, usado como o tipo de retorno para as funções de membro da faceta para indicar o resultado de uma conversão.
+Uma classe base para a classe codecvt que é usada para definir um tipo de enumeração referido como `result`, usada como o tipo de retorno para as funções de membro da faceta para indicar o resultado de uma conversão.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,13 +38,13 @@ protected:
 
 ## <a name="remarks"></a>Comentários
 
-A classe descreve uma enumeração comum a todas as especializações da classe de modelo [codecvt](../standard-library/codecvt-class.md). O resultado da enumeração descreve os possíveis valores de retornos de [do_in](../standard-library/codecvt-class.md#do_in) ou [do_out](../standard-library/codecvt-class.md#do_out):
+A classe descreve uma enumeração comum a todas as especializações do modelo de classe [codecvt](../standard-library/codecvt-class.md). O resultado da enumeração descreve os possíveis valores de retornos de [do_in](../standard-library/codecvt-class.md#do_in) ou [do_out](../standard-library/codecvt-class.md#do_out):
 
-- `ok`se a conversão entre as codificações de caracteres internas e externas for bem sucedido.
+- `ok` se a conversão entre as codificações de caracteres internas e externas for bem sucedido.
 
-- `partial`Se o destino não for grande o suficiente para que a conversão tenha sucesso.
+- `partial` se o destino não for grande o suficiente para que a conversão tenha sucesso.
 
-- `error`se a sequência de origem estiver mal formada.
+- `error` se a sequência de origem estiver mal formada.
 
 - `noconv` se a função não realizar nenhuma conversão.
 

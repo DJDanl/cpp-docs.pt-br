@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: 2a7ce9a8593b0dd93b1c3cfe58f2d87fe10ea997
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2d9f0bedd9e541e65f04ac20375f16f41413cf03
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240541"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684427"
 ---
-# <a name="unarynegate-class"></a>Classe unary_negate
+# <a name="unary_negate-class"></a>Classe unary_negate
 
-Uma classe de modelo que fornece uma função membro que nega o valor retornado de uma função unária especificado. Preterida no c++17 em favor da [not_fn](functional-functions.md#not_fn).
+Um modelo de classe que fornece uma função de membro que nega o valor de retorno de uma função unário especificada. Preterido em C++ 17 em favor do [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,19 +31,19 @@ class unary_negate
 
 ### <a name="parameters"></a>Parâmetros
 
-*Func*\
+*Func* \
 A função unária a ser negada.
 
-*À esquerda*\
+\ *à esquerda*
 O operando da função unária a ser negada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 A negação da função unária.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo armazena uma cópia de um objeto de função unária  *\_Func*. Ela define sua função de membro `operator()` como retornando `!_Func(left)`.
+O modelo de classe armazena uma cópia de um objeto de função unário *\_Func*. Ele define sua função membro `operator()` como retorno `!_Func(left)`.
 
 O construtor de `unary_negate` raramente é usado diretamente. A função auxiliar [not1](../standard-library/functional-functions.md#not1) fornece uma maneira fácil de declarar e usar o predicado do adaptador **unary_negator**.
 

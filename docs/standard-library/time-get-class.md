@@ -38,16 +38,16 @@ helpviewer_keywords:
 - std::time_get [C++], get_weekday
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
-ms.openlocfilehash: 45eeb7bdf944682ca168b8bff01b42815cfa7f28
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e605423b829305bd1e7bde8be4fdbf312c8ce3c1
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460009"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685498"
 ---
-# <a name="timeget-class"></a>Classe time_get
+# <a name="time_get-class"></a>Classe time_get
 
-A classe de modelo descreve um objeto que pode servir como uma faceta de localidade para controlar conversões de sequências do tipo `CharType` em valores de tempo.
+O modelo de classe descreve um objeto que pode servir como uma faceta de localidade para controlar conversões de sequências do tipo `CharType` para valores de tempo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -59,10 +59,10 @@ class time_get : public time_base;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType*\
+@No__t_1 *CharType*
 O tipo usado em um programa para codificar caracteres.
 
-*InputIterator*\
+@No__t_1 *InputIterator*
 O iterador do qual os valores de tempo são lidos.
 
 ## <a name="remarks"></a>Comentários
@@ -127,7 +127,7 @@ Retorna a ordem de data usada por uma faceta.
 dateorder date_order() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A ordem de data usada por uma faceta.
 
@@ -187,7 +187,7 @@ Uma função membro virtual protegida que é chamada para retornar a ordem de da
 virtual dateorder do_date_order() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A ordem de data usada por uma faceta.
 
@@ -217,34 +217,34 @@ iter_type first,
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Um iterador de Entrada que indica o início da sequência a ser convertido.
 
-*última*\
+*última* \
 Um iterador de Entrada que indica o final da sequência.
 
-*iosbase*\
+\ *iosbase*
 Um objeto de fluxo.
 
-*status*\
+*estado* \
 Um campo em iosbase onde os elementos de bitmask apropriados são definidos para indicar erros.
 
-*ptm*\
+\ *PTM*
 Um ponteiro para a estrutura de tempo na qual o tempo deve ser armazenado.
 
-*fmt*\
+\ *fmt*
 Um caractere especificador de conversão.
 
-*resto*\
+*mod* \
 Um caractere modificador opcional.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna um iterador que designa o primeiro elemento não convertido. Uma falha de conversão `ios_base::failbit` é `state` definida em e retorna *primeiro*.
+Retorna um iterador que designa o primeiro elemento não convertido. Uma falha de conversão define `ios_base::failbit` em `state` e retorna *primeiro*.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro virtual converte e ignora um ou mais elementos Input no intervalo [`first`, `last`) para determinar os valores armazenados em um ou mais membros de `*pt`. Uma falha de conversão `ios_base::failbit` é `state` definida em e retorna *primeiro*. Caso contrário, a função retornará um iterador que designa o primeiro elemento não convertido.
+A função membro virtual converte e ignora um ou mais elementos Input no intervalo [`first`, `last`) para determinar os valores armazenados em um ou mais membros de `*pt`. Uma falha de conversão define `ios_base::failbit` em `state` e retorna *primeiro*. Caso contrário, a função retornará um iterador que designa o primeiro elemento não convertido.
 
 Os especificadores de conversão são:
 
@@ -310,28 +310,28 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Iterador de entrada que trata o início da sequência a ser convertido.
 
-*última*\
+*última* \
 Iterador de entrada que trata o fim da sequência a ser convertido.
 
-*iosbase*\
+\ *iosbase*
 Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
 
-*status*\
+*estado* \
 Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
-*ptm*\
+\ *PTM*
 Um ponteiro para o local em que as informações de data devem ser armazenadas.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de entrada que trata o primeiro elemento após o campo de entrada.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro virtual protegida tenta corresponder elementos sequenciais, começando pelo primeiro na sequência [`first`, `last`] até ter reconhecido um campo de entrada de data completo e não vazio. Se for bem-sucedido, ele converterá esse campo em seu valor equivalente como os componentes **TM:\_: TM Mon**, **TM:\_: TM Day**e **TM::\_TM year**e armazenará os resultados `ptm->tm_mon`em `ptm->tm_day`,, e `ptm->tm_year`, respectivamente. Ela retorna um iterador que designa o primeiro elemento após o campo de entrada de data. Caso contrário, a função `iosbase::failbit` será definida no *estado*. Ela retorna um iterador que designa o primeiro elemento após qualquer prefixo de um campo de entrada de data válido. Em ambos os casos, se o valor de retorno for igual a Last `ios_base::eofbit` , a função será definida no *estado*.
+A função membro virtual protegida tenta corresponder elementos sequenciais, começando pelo primeiro na sequência [`first`, `last`] até ter reconhecido um campo de entrada de data completo e não vazio. Se for bem-sucedido, ele converterá esse campo em seu valor equivalente como os componentes **TM:: tm \_mon**, **TM:: TM \_day**e **TM:: TM \_year**e armazenará os resultados em `ptm->tm_mon`, `ptm->tm_day` e `ptm->tm_year`, respectivamente. Ela retorna um iterador que designa o primeiro elemento após o campo de entrada de data. Caso contrário, a função definirá `iosbase::failbit` no *estado*. Ela retorna um iterador que designa o primeiro elemento após qualquer prefixo de um campo de entrada de data válido. Em ambos os casos, se o valor de retorno for igual a *Last*, a função definirá `ios_base::eofbit` no *estado*.
 
 O formato do campo de entrada de data é dependente da localidade. Para a localidade padrão, o campo de entrada de data tem o formato MMM DD, YYYY, em que:
 
@@ -361,28 +361,28 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Iterador de entrada que trata o início da sequência a ser convertido.
 
-*última*\
+*última* \
 Iterador de entrada que trata o fim da sequência a ser convertido.
 
-*iosbase*\
+\ *iosbase*
 Não utilizado.
 
-*status*\
+*estado* \
 Um parâmetro de saída que define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
-*ptm*\
+\ *PTM*
 Um ponteiro para o local em que as informações de mês devem ser armazenadas.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de entrada que trata o primeiro elemento após o campo de entrada.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro virtual protegida tenta corresponder elementos sequenciais, começando pelo primeiro na sequência [`first`, `last`] até ter reconhecido um campo de entrada de mês completo e não vazio. Se for bem-sucedido, ele converterá esse campo em seu valor equivalente como o componente **TM:\_: TM Mon**e armazenará o `ptm->tm_mon`resultado em. Ela retorna um iterador que designa o primeiro elemento após o campo de entrada de mês. Caso contrário, a função `ios_base::failbit` será definida no *estado*. Ela retorna um iterador que designa o primeiro elemento após qualquer prefixo de um campo de entrada de mês válido. Em ambos os casos, se o valor de retorno for igual a Last `ios_base::eofbit` , a função será definida no *estado*.
+A função membro virtual protegida tenta corresponder elementos sequenciais, começando pelo primeiro na sequência [`first`, `last`] até ter reconhecido um campo de entrada de mês completo e não vazio. Se for bem-sucedido, ele converterá esse campo em seu valor equivalente como o componente **TM:: tm \_mon**e armazenará o resultado em `ptm->tm_mon`. Ela retorna um iterador que designa o primeiro elemento após o campo de entrada de mês. Caso contrário, a função definirá `ios_base::failbit` no *estado*. Ela retorna um iterador que designa o primeiro elemento após qualquer prefixo de um campo de entrada de mês válido. Em ambos os casos, se o valor de retorno for igual a *Last*, a função definirá `ios_base::eofbit` no *estado*.
 
 O campo de entrada de mês é uma sequência que corresponde à sequência mais longa de um conjunto de sequências específicas à localidade, como jan, janeiro, fev, fevereiro e assim por diante. O valor convertido é o número de meses desde janeiro.
 
@@ -404,28 +404,28 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Iterador de entrada que trata o início da sequência a ser convertido.
 
-*última*\
+*última* \
 Iterador de entrada que trata o fim da sequência a ser convertido.
 
-*iosbase*\
+\ *iosbase*
 Não utilizado.
 
-*status*\
+*estado* \
 Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
-*ptm*\
+\ *PTM*
 Um ponteiro para o local em que as informações de data devem ser armazenadas.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de entrada que trata o primeiro elemento após o campo de entrada.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro virtual protegida tenta corresponder elementos sequenciais, começando pelo primeiro na sequência [`first`, `last`] até ter reconhecido um campo de entrada de hora completo e não vazio. Se for bem-sucedido, ele converterá esse campo em seu valor equivalente, `tm::tm_hour`como `tm::tm_min`os componentes `tm::tm_sec`, e, e armazenará `ptm->tm_hour`os `ptm->tm_min`resultados em `ptm->tm_sec`, e, respectivamente. Ela retorna um iterador que designa o primeiro elemento após o campo de entrada de hora. Caso contrário, a função `ios_base::failbit` será definida no *estado*. Ela retorna um iterador que designa o primeiro elemento após qualquer prefixo de um campo de entrada de hora válido. Em ambos os casos, se o valor de retorno for igual a Last `ios_base::eofbit` , a função será definida no *estado*.
+A função membro virtual protegida tenta corresponder elementos sequenciais, começando pelo primeiro na sequência [`first`, `last`] até ter reconhecido um campo de entrada de hora completo e não vazio. Se for bem-sucedido, ele converterá esse campo em seu valor equivalente, pois os componentes `tm::tm_hour`, `tm::tm_min` e `tm::tm_sec`, e armazenará os resultados em `ptm->tm_hour`, `ptm->tm_min` e `ptm->tm_sec`, respectivamente. Ela retorna um iterador que designa o primeiro elemento após o campo de entrada de hora. Caso contrário, a função definirá `ios_base::failbit` no *estado*. Ela retorna um iterador que designa o primeiro elemento após qualquer prefixo de um campo de entrada de hora válido. Em ambos os casos, se o valor de retorno for igual a *Last*, a função definirá `ios_base::eofbit` no *estado*.
 
 Nessa implementação, o campo de entrada de hora tem o formato HH:MM:SS, em que:
 
@@ -455,28 +455,28 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Iterador de entrada que trata o início da sequência a ser convertido.
 
-*última*\
+*última* \
 Iterador de entrada que trata o fim da sequência a ser convertido.
 
-*iosbase*\
+\ *iosbase*
 Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
 
-*status*\
+*estado* \
 Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
-*ptm*\
+\ *PTM*
 Um ponteiro para o local em que as informações de dia da semana devem ser armazenadas.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de entrada que trata o primeiro elemento após o campo de entrada.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro protegido virtual tenta corresponder elementos sequenciais começando no *primeiro* na sequência [ `first`, `last`) até que tenha reconhecido um campo de entrada de dia da semana completo e não vazio. Se for bem-sucedido, ele converterá esse campo em seu valor equivalente como o componente **TM:\_: TM WDIA**e armazenará o `ptm->tm_wday`resultado em. Ela retorna um iterador que designa o primeiro elemento após o campo de entrada de dia da semana. Caso contrário, a função `ios_base::failbit` será definida no *estado*. Ela retorna um iterador que designa o primeiro elemento após qualquer prefixo de um campo de entrada de dia da semana válido. Em ambos os casos, se o valor de retorno for igual a Last `ios_base::eofbit` , a função será definida no *estado*.
+A função de membro protegido virtual tenta corresponder elementos sequenciais começando no *primeiro* na sequência [`first`, `last`) até que tenha reconhecido um campo de entrada de dia da semana completo e não vazio. Se for bem-sucedido, ele converterá esse campo em seu valor equivalente como o componente **TM:: tm \_wday**e armazenará o resultado em `ptm->tm_wday`. Ela retorna um iterador que designa o primeiro elemento após o campo de entrada de dia da semana. Caso contrário, a função definirá `ios_base::failbit` no *estado*. Ela retorna um iterador que designa o primeiro elemento após qualquer prefixo de um campo de entrada de dia da semana válido. Em ambos os casos, se o valor de retorno for igual a *Last*, a função definirá `ios_base::eofbit` no *estado*.
 
 O campo de entrada de dia da semana é uma sequência que corresponde à sequência mais longa de um conjunto de sequências específicas à localidade, como dom, domingo, seg, segunda-feira e assim por diante. O valor convertido é o número de dias desde domingo.
 
@@ -498,28 +498,28 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Iterador de entrada que trata o início da sequência a ser convertido.
 
-*última*\
+*última* \
 Iterador de entrada que trata o fim da sequência a ser convertido.
 
-*iosbase*\
+\ *iosbase*
 Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
 
-*status*\
+*estado* \
 Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
-*ptm*\
+\ *PTM*
 Um ponteiro para o local em que as informações de ano devem ser armazenadas.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de entrada que trata o primeiro elemento após o campo de entrada.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro protegido virtual tenta corresponder elementos sequenciais começando no *primeiro* na sequência [ `first`, `last`) até que tenha reconhecido um campo de entrada de ano completo e não vazio. Se for bem-sucedido, ele converterá esse campo em seu valor equivalente como o componente **TM:\_: TM**, e armazenará o `ptm->tm_year`resultado em. Ela retorna um iterador que designa o primeiro elemento após o campo de entrada de ano. Caso contrário, a função `ios_base::failbit` será definida no *estado*. Ela retorna um iterador que designa o primeiro elemento após qualquer prefixo de um campo de entrada de ano válido. Em ambos os casos, se o valor de retorno for igual a Last `ios_base::eofbit` , a função será definida no *estado*.
+A função de membro protegido virtual tenta corresponder elementos sequenciais começando no *primeiro* na sequência [`first`, `last`) até que tenha reconhecido um campo de entrada de ano completo e não vazio. Se for bem-sucedido, ele converterá esse campo em seu valor equivalente como o componente **TM:: tm \_year**e armazenará o resultado em `ptm->tm_year`. Ela retorna um iterador que designa o primeiro elemento após o campo de entrada de ano. Caso contrário, a função definirá `ios_base::failbit` no *estado*. Ela retorna um iterador que designa o primeiro elemento após qualquer prefixo de um campo de entrada de ano válido. Em ambos os casos, se o valor de retorno for igual a *Last*, a função definirá `ios_base::eofbit` no *estado*.
 
 O campo de entrada de ano é uma sequência de dígitos decimais cujo valor numérico correspondente deve estar no intervalo [1900, 2036]. O valor armazenado é esse valor menos 1900. Nessa implementação, os valores no intervalo [69, 136] representam o intervalo de anos [1969, 2036]. Valores no intervalo [0, 69] também são permitidos, mas podem representar o intervalo de anos [1900, 1969] ou [2000, 2069], dependendo do ambiente de translação específico.
 
@@ -553,36 +553,36 @@ iter_type get(
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Iterador de entrada que indica o início da sequência a ser convertido.
 
-*última*\
+*última* \
 Iterador de entrada que indica o final da sequência a ser convertido.
 
-*iosbase*\
+\ *iosbase*
 O fluxo.
 
-*status*\
+*estado* \
 Os elementos de bitmask apropriados são definidos para o estado de fluxo para indicar erros.
 
-*ptm*\
+\ *PTM*
 Ponteiro para a estrutura de tempo na qual o tempo deve ser armazenado.
 
-*fmt*\
+\ *fmt*
 Um caractere especificador de conversão.
 
-*resto*\
+*mod* \
 Um caractere modificador opcional.
 
-*fmt_first*\
+\ *fmt_first*
 Aponta para o início das diretivas de formato.
 
-*fmt_last*\
+\ *fmt_last*
 Aponta para o final das diretivas de formato.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna um iterador para o primeiro caractere após os dados que foram usados para atribuir a estrutura `*ptm`de tempo.
+Retorna um iterador para o primeiro caractere após os dados que foram usados para atribuir a estrutura de tempo `*ptm`.
 
 ### <a name="remarks"></a>Comentários
 
@@ -590,11 +590,11 @@ A primeira função membro retorna `do_get(first, last, iosbase, state, ptm, fmt
 
 A segunda função membro chama `do_get` sob o controle do formato delimitado por `[fmt_first, fmt_last)`. Ela trata o formato como uma sequência de campos, em que cada uma delas determina a conversão de zero ou mais elementos de entrada delimitados por `[first, last)`. Ela retorna um iterador que designa o primeiro elemento não convertido. Há três tipos de campos:
 
-A por cento (%) no formato, seguido por um modificador opcional *mod* no conjunto [EOQ #], seguido por um especificador de conversão *fmt*, substitui *primeiro* pelo valor retornado por `do_get(first, last, iosbase, state, ptm, fmt, mod)`. Uma falha de conversão `ios_base::failbit` é definida em *estado* e retorna.
+A por cento (%) no formato, seguido por um modificador opcional *mod* no conjunto [EOQ #], seguido por um especificador de conversão *fmt*, substitui *primeiro* pelo valor retornado por `do_get(first, last, iosbase, state, ptm, fmt, mod)`. Uma falha de conversão define `ios_base::failbit` em *estado* e retorna.
 
 Um elemento de espaço em branco no formato ignora após zero ou mais elementos de espaço em branco de entrada.
 
-Qualquer outro elemento no formato deve corresponder ao próximo elemento de entrada, que é ignorado. Uma falha de correspondência `ios_base::failbit` define em *estado* e retorna.
+Qualquer outro elemento no formato deve corresponder ao próximo elemento de entrada, que é ignorado. Uma falha de correspondência define `ios_base::failbit` no *estado* e retorna.
 
 ## <a name="get_date"></a>  time_get::get_date
 
@@ -610,28 +610,28 @@ iter_type get_date(iter_type first,
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Iterador de entrada que trata o início da sequência a ser convertido.
 
-*última*\
+*última* \
 Iterador de entrada que trata o fim da sequência a ser convertido.
 
-*iosbase*\
+\ *iosbase*
 Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
 
-*status*\
+*estado* \
 Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
-*ptm*\
+\ *PTM*
 Um ponteiro para o local em que as informações de data devem ser armazenadas.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de entrada que trata o primeiro elemento após o campo de entrada.
 
 ### <a name="remarks"></a>Comentários
 
-A função member retorna [do_get_date](#do_get_date)(`first`, `last`, `iosbase` `state`,, `ptm`).
+A função de membro retorna [do_get_date](#do_get_date)(`first`, `last`, `iosbase`, `state`, `ptm`).
 
 Observe que os meses são contados de 0 a 11.
 
@@ -704,28 +704,28 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Iterador de entrada que trata o início da sequência a ser convertido.
 
-*última*\
+*última* \
 Iterador de entrada que trata o fim da sequência a ser convertido.
 
-*iosbase*\
+\ *iosbase*
 Não utilizado.
 
-*status*\
+*estado* \
 Um parâmetro de saída que define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
-*ptm*\
+\ *PTM*
 Um ponteiro para o local em que as informações de mês devem ser armazenadas.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de entrada que trata o primeiro elemento após o campo de entrada.
 
 ### <a name="remarks"></a>Comentários
 
-A função member retorna [do_get_monthname](#do_get_monthname)(`first`, `last`, `iosbase` `state`,, `ptm`).
+A função de membro retorna [do_get_monthname](#do_get_monthname)(`first`, `last`, `iosbase`, `state`, `ptm`).
 
 ### <a name="example"></a>Exemplo
 
@@ -796,28 +796,28 @@ iter_type get_time(iter_type first,
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Iterador de entrada que trata o início da sequência a ser convertido.
 
-*última*\
+*última* \
 Iterador de entrada que trata o fim da sequência a ser convertido.
 
-*iosbase*\
+\ *iosbase*
 Não utilizado.
 
-*status*\
+*estado* \
 Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
-*ptm*\
+\ *PTM*
 Um ponteiro para o local em que as informações de data devem ser armazenadas.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de entrada que trata o primeiro elemento após o campo de entrada.
 
 ### <a name="remarks"></a>Comentários
 
-A função member retorna [do_get_time](#do_get_time)(`first`, `last`, `iosbase` `state`,, `ptm`).
+A função de membro retorna [do_get_time](#do_get_time)(`first`, `last`, `iosbase`, `state`, `ptm`).
 
 ### <a name="example"></a>Exemplo
 
@@ -877,28 +877,28 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Iterador de entrada que trata o início da sequência a ser convertido.
 
-*última*\
+*última* \
 Iterador de entrada que trata o fim da sequência a ser convertido.
 
-*iosbase*\
+\ *iosbase*
 Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
 
-*status*\
+*estado* \
 Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
-*ptm*\
+\ *PTM*
 Um ponteiro para o local em que as informações de dia da semana devem ser armazenadas.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de entrada que trata o primeiro elemento após o campo de entrada.
 
 ### <a name="remarks"></a>Comentários
 
-A função member retorna [do_get_weekday](#do_get_weekday)(`first`, `last`, `iosbase` `state`,, `ptm`).
+A função de membro retorna [do_get_weekday](#do_get_weekday)(`first`, `last`, `iosbase`, `state`, `ptm`).
 
 ### <a name="example"></a>Exemplo
 
@@ -954,28 +954,28 @@ iter_type get_year(iter_type first,
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Iterador de entrada que trata o início da sequência a ser convertido.
 
-*última*\
+*última* \
 Iterador de entrada que trata o fim da sequência a ser convertido.
 
-*iosbase*\
+\ *iosbase*
 Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
 
-*status*\
+*estado* \
 Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
-*ptm*\
+\ *PTM*
 Um ponteiro para o local em que as informações de ano devem ser armazenadas.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de entrada que trata o primeiro elemento após o campo de entrada.
 
 ### <a name="remarks"></a>Comentários
 
-A função member retorna [do_get_year](#do_get_year)(`first`, `last`, `iosbase` `state`,, `ptm`).
+A função de membro retorna [do_get_year](#do_get_year)(`first`, `last`, `iosbase`, `state`, `ptm`).
 
 ### <a name="example"></a>Exemplo
 
@@ -1040,18 +1040,18 @@ explicit time_get(size_t refs = 0);
 
 ### <a name="parameters"></a>Parâmetros
 
-*refs*\
+\ *refs*
 Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
 ### <a name="remarks"></a>Comentários
 
 Os valores possíveis para o parâmetro *refs* e seu significado são:
 
-- 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
+- 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
-- 1: O tempo de vida do objeto deve ser gerenciado manualmente.
+- 1: o tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: Esses valores não estão definidos.
+- \> 1: esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 

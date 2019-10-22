@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: b947d9ba268c9b4028415216e4ad0813f2d71947
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fed6219c483bdade0132d5faae8b6597bcc5d732
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450520"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686465"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
-Define as classes de modelo do contêiner set e multiset e seus modelos de suporte.
+Define o conjunto de modelos de classe de contêiner e multiconjunto e seus modelos de suporte.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -24,7 +24,7 @@ Define as classes de modelo do contêiner set e multiset e seus modelos de supor
 **Namespace:** std
 
 > [!NOTE]
-> O \<conjunto > biblioteca também usa a `#include <initializer_list>` instrução.
+> A biblioteca \<set > também usa a instrução `#include <initializer_list>`.
 
 ## <a name="members"></a>Membros
 

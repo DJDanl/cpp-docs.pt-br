@@ -38,14 +38,14 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 115f5ad4461b98f24e3aa6756e501b91ae3a1566
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: cbc1a9eb9432a454ca5dc04205b9d0c7b631a430
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456441"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690100"
 ---
-# <a name="allocatorbase-class"></a>Classe allocator_base
+# <a name="allocator_base-class"></a>Classe allocator_base
 
 Define a classe base e as funções comuns necessárias para criar um alocador definido pelo usuário de um filtro de sincronização.
 
@@ -78,7 +78,7 @@ class allocator_base
 |[difference_type](#difference_type)|Um tipo integral com sinal que pode representar a diferença entre os valores de ponteiros para o tipo de objeto gerenciado pelo alocador.|
 |[pointer](#pointer)|Um tipo que fornece um ponteiro para o tipo de objeto gerenciado pelo alocador.|
 |[reference](#reference)|Um tipo que fornece uma referência ao tipo de objeto gerenciado pelo alocador.|
-|[size_type](#size_type)|Um tipo integral sem sinal que pode representar o comprimento de qualquer sequência que um objeto da classe de modelo `allocator_base` possa alocar.|
+|[size_type](#size_type)|Um tipo integral não assinado que pode representar o comprimento de qualquer sequência que um objeto do tipo `allocator_base` possa alocar.|
 |[value_type](#value_type)|Um tipo que é gerenciado pelo alocador.|
 
 ### <a name="member-functions"></a>Funções de membro
@@ -114,7 +114,7 @@ char *_Charalloc(size_type count);
 |---------------|-----------------|
 |*count*|O número de elementos na matriz a serem alocados.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o objeto alocado.
 
@@ -153,10 +153,10 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Val*\
+*valor* \
 O valor const ou não const do objeto cujo endereço está sendo pesquisado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro const ou não const para o objeto localizado, de valor const ou não const, respectivamente.
 
@@ -182,7 +182,7 @@ pointer allocate(size_type _Nx);
 |*_Nx*|O número de elementos na matriz a serem alocados.|
 |*_Hint*|Este parâmetro é ignorado.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o objeto alocado.
 
@@ -299,7 +299,7 @@ Retorna o número de elementos do tipo `Type` que podem ser alocados por um obje
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O número de elementos que podem ser alocados.
 
@@ -325,7 +325,7 @@ typedef Type& reference;
 
 ## <a name="size_type"></a>  allocator_base::size_type
 
-Um tipo integral sem sinal que pode representar o comprimento de qualquer sequência que um objeto da classe de modelo `allocator_base` possa alocar.
+Um tipo integral não assinado que pode representar o comprimento de qualquer sequência que um objeto do tipo `allocator_base` possa alocar.
 
 ```cpp
 typedef std::size_t size_type;

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-ms.openlocfilehash: bfe0e9dcb0bf8f8b74487404998e06d233097a39
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7b49e63302ad0c26f393fdfd9dd443c77455a643
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453111"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688250"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
@@ -35,30 +35,30 @@ constexpr complex(
 
 constexpr complex(
     const complex<long double>& complexNum);
-// rest same as template class complex
+// rest same as class template complex
 };
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*_RealVal*\
+@No__t_1 *_RealVal*
 O valor do tipo **float** da parte real do número complexo que está sendo construído.
 
-*_ImagVal*\
+@No__t_1 *_ImagVal*
 O valor do tipo **float** da parte imaginária do número complexo que está sendo construído.
 
-*complexNum*\
+\ *complexNum*
 O número complexo do tipo **Double** ou do tipo **Long double** cujas partes reais e imaginários são usadas para inicializar um número complexo do tipo **float** que está sendo construído.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Um número complexo do tipo **float**.
 
 ## <a name="remarks"></a>Comentários
 
-A especialização explícita da classe de modelo complexa para uma classe complexa do tipo **float** difere apenas da classe de modelo nos construtores que ela define. A conversão de **float** para **Double** pode ser implícita, mas a conversão menos segura de **float** para **Long double** é necessária para ser **explícita**. O uso de **explícito** exclui a iniciação com conversão de tipo usando a sintaxe de atribuição.
+A especialização explícita do modelo de classe complexo para uma classe complexa do tipo **float** difere do modelo de classe somente nos construtores que ele define. A conversão de **float** para **Double** pode ser implícita, mas a conversão menos segura de **float** para **Long double** é necessária para ser **explícita**. O uso de **explícito** exclui a iniciação com conversão de tipo usando a sintaxe de atribuição.
 
-Para obter mais informações sobre a classe do modelo `complex`, consulte [Classe complexa](../standard-library/complex-class.md). Para obter uma lista de membros da classe do modelo `complex`, consulte.
+Para obter mais informações sobre o modelo de classe `complex`, consulte [classe complexa](../standard-library/complex-class.md). Para obter uma lista de membros do modelo de classe `complex`, consulte.
 
 ## <a name="example"></a>Exemplo
 

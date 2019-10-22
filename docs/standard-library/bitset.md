@@ -7,16 +7,16 @@ helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-ms.openlocfilehash: 5de13e66523ee5a5dbcb4c2c54d38037909a4c95
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e017cad251f57cb477b0bf711cdd6243d7fd9893
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449701"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689922"
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
 
-Define o bitset de classe de modelo e duas funções de modelo de suporte para representar e manipular as sequências de bits de tamanho fixo.
+Define o modelo de classe conjunto e duas funções de modelo de suporte para representar e manipular sequências de tamanho fixo de bits.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -40,7 +40,7 @@ Define o bitset de classe de modelo e duas funções de modelo de suporte para r
 
 |||
 |-|-|
-|[bitset](../standard-library/bitset-class.md)|A classe de modelo descreve um tipo de objeto que armazena uma sequência que consiste em um número fixo de bits que fornecem uma maneira compacta de manter sinalizadores para um conjunto de itens ou condições.|
+|[bitset](../standard-library/bitset-class.md)|O modelo de classe descreve um tipo de objeto que armazena uma sequência que consiste em um número fixo de bits que fornecem uma maneira compacta de manter os sinalizadores para um conjunto de itens ou condições.|
 
 ## <a name="see-also"></a>Consulte também
 

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - wbuffer_convert class
 ms.assetid: 4a56f9bf-4138-4612-b516-525fea401358
-ms.openlocfilehash: d19abf74bd9f794bc39ce04e5ed22e360cde75b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de0091af93120290105ce7603fae5acff257b76
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410870"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688538"
 ---
-# <a name="wbufferconvert-class"></a>Classe wbuffer_convert
+# <a name="wbuffer_convert-class"></a>Classe wbuffer_convert
 
 Descreve um buffer de fluxo que controla a transmissão de elementos de/para um buffer de fluxo de bytes.
 
@@ -35,11 +35,11 @@ class wbuffer_convert
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe de modelo descreve um buffer de fluxo que controla a transmissão de elementos do tipo `_Elem`, cujas características dos caracteres são descritas pela classe `Traits`, de/para um buffer de fluxo de bytes do tipo `std::streambuf`.
+Esse modelo de classe descreve um buffer de fluxo que controla a transmissão de elementos do tipo `_Elem`, cujas características de caracteres são descritas pela classe `Traits`, de e para um buffer de fluxo de bytes do tipo `std::streambuf`.
 
 A conversão entre uma sequência de valores `Elem` e as sequências multibyte é executada por um objeto da classe `Codecvt<Elem, char, std::mbstate_t>`, que atende aos requisitos da faceta de conversão de código padrão `std::codecvt<Elem, char, std::mbstate_t>`.
 
-Um objeto desta classe de modelo armazena:
+Um objeto desse modelo de classe armazena:
 
 - Um ponteiro para o buffer de fluxo de bytes subjacente
 

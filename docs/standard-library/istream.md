@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 0ad27bf849e8d4b9188868b9a29bf423b4cafafa
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8e9675a673462c8eaab94d29a3ae36a4786737b7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458737"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687852"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
-Define a classe de modelo basic_istream, que atua como mediador de extrações para os iostreams e a classe de modelo basic_iostream, que atua como mediador de extrações e inserções. O cabeçalho também define um manipulador relacionado. Esse arquivo de cabeçalho geralmente é incluído para você por outro cabeçalho iostreams, dificilmente você precisará incluí-lo diretamente.
+Define o modelo de classe basic_istream, que Media extratos para o iostreams e o modelo de classe basic_iostream, que Media as inserções e extrações. O cabeçalho também define um manipulador relacionado. Esse arquivo de cabeçalho geralmente é incluído para você por outro cabeçalho iostreams, dificilmente você precisará incluí-lo diretamente.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -49,10 +49,10 @@ Define a classe de modelo basic_istream, que atua como mediador de extrações p
 
 ### <a name="classes"></a>Classes
 
-|Classe|Descrição|
+|Class|Descrição|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|Uma classe de fluxo que pode fazer tanto entrada quanto saída.|
-|[basic_istream](../standard-library/basic-istream-class.md)|A classe de modelo descreve um objeto que controla a extração de elementos e objetos codificados de um buffer de `Elem`fluxo com elementos do tipo, também conhecidos como [char_type](../standard-library/basic-ios-class.md#char_type), cujas características de caractere `Tr`são determinadas pela classe, também conhecido como [traits_type](../standard-library/basic-ios-class.md#traits_type).|
+|[basic_istream](../standard-library/basic-istream-class.md)|O modelo de classe descreve um objeto que controla a extração de elementos e objetos codificados de um buffer de fluxo com elementos do tipo `Elem`, também conhecido como [char_type](../standard-library/basic-ios-class.md#char_type), cujas características de caractere são determinadas pela classe `Tr`, também conhecida como [ traits_type](../standard-library/basic-ios-class.md#traits_type).|
 
 ## <a name="see-also"></a>Consulte também
 

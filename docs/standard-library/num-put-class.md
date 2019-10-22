@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::num_put [C++], do_put
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
-ms.openlocfilehash: ac034a4b80225bd9674e72ca3255938316c5905a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 49d76c5d553054934907cd2ddc0b7fd1f8b1e998
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457694"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687639"
 ---
 # <a name="num_put-class"></a>Classe num_put
 
-Uma classe de modelo que descreve um objeto que pode servir como uma faceta de localidade para controlar conversões de valores numéricos em sequências do tipo `CharType`.
+Um modelo de classe que descreve um objeto que pode servir como uma faceta de localidade para controlar conversões de valores numéricos em sequências do tipo `CharType`.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -35,10 +35,10 @@ class num_put : public locale::facet;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType*\
+@No__t_1 *CharType*
 O tipo usado em um programa para codificar caracteres em uma localidade.
 
-*OutputIterator*\
+@No__t_1 *OutputIterator*
 O tipo de iterador para o qual as funções put numéricas gravam sua saída.
 
 ## <a name="remarks"></a>Comentários
@@ -139,19 +139,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parâmetros
 
-*última*\
+*próximo* \
 Um iterador que trata o primeiro elemento na cadeia de caracteres inserida.
 
-*_Iosbase*\
+@No__t_1 *_Iosbase*
 Foi especificado o fluxo que contém a localidade com a faceta numpunct usada para pontuar a saída e os sinalizadores para a formatação da saída.
 
-*_Fill*\
+@No__t_1 *_Fill*
 Um caractere que é usado para espaçamento.
 
-*Val*\
+*valor* \
 O número ou tipo booliano que será a saída.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de saída que aborda uma posição além do último elemento produzido.
 
@@ -159,19 +159,19 @@ Um iterador de saída que aborda uma posição além do último elemento produzi
 
 A primeira função de membro virtual protegido gera elementos sequenciais começando em *Next* para produzir um campo de saída de inteiro a partir do valor de *Val*. A função retorna um iterador designando o próximo local para inserir um elemento além do campo de saída inteiro gerado.
 
-O campo saída de inteiro é gerado pelas mesmas regras usadas pelas funções de impressão para gerar uma série de elementos **Char** em um arquivo. Cada elemento Char é presumido para mapear para um elemento equivalente `CharType` do tipo por um mapeamento simples e um para um. No entanto, `do_put` quando uma função de impressão acompanha um campo com espaços ou o dígito 0, `fill`em vez disso usa. A especificação de conversão de impressão equivalente é determinada da seguinte forma:
+O campo saída de inteiro é gerado pelas mesmas regras usadas pelas funções de impressão para gerar uma série de elementos **Char** em um arquivo. Cada elemento Char é presumido para mapear para um elemento equivalente do tipo `CharType` por um mapeamento simples de um-para-um. No entanto, quando uma função de impressão acompanha um campo com espaços ou o dígito 0, `do_put` usa `fill`. A especificação de conversão de impressão equivalente é determinada da seguinte forma:
 
-- Se **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & [Oct](../standard-library/ios-functions.md#oct), a especificação de conversão é`lo`.`ios_base::basefield` == `ios_base::`
+- Se **iosbase**. [flags](../standard-library/ios-base-class.md#flags)  &  `ios_base::basefield`  ==  `ios_base::`[Oct](../standard-library/ios-functions.md#oct), a especificação de conversão é `lo`.
 
-- Se **iosbase. Flags** & **ios_base:: BaseField** `lx`[Hex,](../standard-library/ios-functions.md#hex)a especificação de conversão será. == `ios_base::`
+- Se **iosbase. flags**  & **ios_base:: basefield**  ==  `ios_base::`[hex](../standard-library/ios-functions.md#hex), a especificação de conversão será `lx`.
 
 - Caso contrário, a especificação de conversão é `ld`.
 
 Se **iosbase**. [width](../standard-library/ios-base-class.md#width) é diferente de zero, uma largura de campo deste valor é anexado. Em seguida, a função chama **iosbase**. **width**(0) para redefinir a largura do campo como zero.
 
-O preenchimento ocorre apenas se o número mínimo de elementos *N* necessários para especificar o campo de saída for menor que **iosbase**. [width](../standard-library/ios-base-class.md#width). Esse preenchimento consiste em uma sequência de *N* - cópias de**largura** de **preenchimento**. O preenchimento ocorre então da seguinte maneira:
+O preenchimento ocorre apenas se o número mínimo de elementos *N* necessários para especificar o campo de saída for menor que **iosbase**. [width](../standard-library/ios-base-class.md#width). Esse preenchimento consiste em uma sequência de *N*  -  cópias de**largura** de **preenchimento**. O preenchimento ocorre então da seguinte maneira:
 
-- Se **iosbase**. **sinalizadores** & [restantes,](../standard-library/ios-functions.md#left)o **sinalizador-** é anexado.`ios_base::adjustfield` == `ios_base::` (O preenchimento ocorre após o texto gerado.)
+- Se **iosbase**. os **sinalizadores**  &  `ios_base::adjustfield`  ==  `ios_base::`[esquerda](../standard-library/ios-functions.md#left), o sinalizador **-** é anexado. (O preenchimento ocorre após o texto gerado.)
 
 - Se **iosbase.flags** & **ios_base::adjustfield** == `ios_base::`[internal](../standard-library/ios-functions.md#internal), o sinalizador **0** é anexado. (Para um campo de saída numérico, o preenchimento ocorre quando as funções de impressão são preenchidas com 0.)
 
@@ -213,11 +213,11 @@ virtual iter_type do_put(iter_type next,
 
 comporta-se da mesma maneira que a primeira, exceto que gera um campo de saída de ponto flutuante do valor de **val**. **fac**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) determina a sequência que separa os dígitos de inteiros dos dígitos de fração. A especificação de conversão de impressão equivalente é determinada da seguinte forma:
 
-- Se **iosbase**. **sinalizadores** & [corrigidos](../standard-library/ios-functions.md#fixed), a especificação de conversão é`lf`.`ios_base::floatfield` == `ios_base::`
+- Se **iosbase**. os **sinalizadores**  &  `ios_base::floatfield`  ==  `ios_base::`[corrigidos](../standard-library/ios-functions.md#fixed), a especificação de conversão é `lf`.
 
-- Se **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), a especificação de conversão é `le`. Se **iosbase**. **os sinalizadores** & `ios_base::`[ maiúsculos](../standard-library/ios-functions.md#uppercase) são diferentes de zero, `e` sendo substituídos por `E`.
+- Se **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), a especificação de conversão é `le`. Se **iosbase**. os **sinalizadores**  &  `ios_base::`[letras maiúsculas](../standard-library/ios-functions.md#uppercase) são diferentes de zero, `e` é substituído por `E`.
 
-- Caso contrário, a especificação de conversão é **Ig**. Se **iosbase**. **flags** `g` `G`ios_base:: maiúsculas é diferente de zero, é substituído por. & 
+- Caso contrário, a especificação de conversão é **Ig**. Se **iosbase**. **flags**  & **ios_base:: maiúsculas** é diferente de zero, `g` é substituído por `G`.
 
 Se **iosbase**. **flags** & **ios_base::fixed** se for diferente de zero ou se **iosbase**. [precision](../standard-library/ios-base-class.md#precision) é maior que zero, uma precisão com o valor **iosbase**. **precision** é anexado à especificação de conversão. O preenchimento comporta-se da mesma maneira que um campo de saída inteiro. O caractere de preenchimento é **fill**. Por fim:
 
@@ -234,7 +234,7 @@ virtual iter_type do_put(iter_type next,
     long double val) const;
 ```
 
-comporta o mesmo da terceira, exceto que o qualificador `l` na especificação de conversão é substituído por. `L`
+comporta-se a terceira, exceto que o qualificador `l` na especificação de conversão é substituído por `L`.
 
 A quinta função membro virtual protegida:
 
@@ -258,7 +258,7 @@ virtual iter_type do_put(iter_type next,
 
 comporta-se o mesmo que o primeiro, exceto pelo fato de que ele gera um campo de saída booliano do *Val*.
 
-Um campo de saída booliano adota um de dois formatos. Se `iosbase.flags & ios_base::` [boolalpha](../standard-library/ios-functions.md#boolalpha) for **false**, a função de membro `do_put(_Next, _Iosbase, _Fill, (long)val)`retornará, que normalmente produz uma sequência gerada de 0 (para **falso**) ou 1 (para **verdadeiro**). Caso contrário, a sequência gerada será *fac*. [falsoname](../standard-library/numpunct-class.md#falsename) (para **falso**) ou *fac*. [TrueName](../standard-library/numpunct-class.md#truename) (para **verdadeiro**).
+Um campo de saída booliano adota um de dois formatos. Se `iosbase.flags & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) for **false**, a função de membro retornará `do_put(_Next, _Iosbase, _Fill, (long)val)`, que normalmente produz uma sequência gerada de 0 (para **falso**) ou 1 (para **verdadeiro**). Caso contrário, a sequência gerada será *fac*. [falsename](../standard-library/numpunct-class.md#falsename) (para **false**) ou *fac*. [TrueName](../standard-library/numpunct-class.md#truename) (para **verdadeiro**).
 
 A sétima função membro virtual protegida:
 
@@ -308,18 +308,18 @@ explicit num_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
 ### <a name="remarks"></a>Comentários
 
 Os valores possíveis para o parâmetro *_Refs* e seu significado são:
 
-- 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
+- 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
-- 1: O tempo de vida do objeto deve ser gerenciado manualmente.
+- 1: o tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: Esses valores não estão definidos.
+- \> 1: esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 
@@ -381,19 +381,19 @@ iter_type put(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dest*\
+\ de *dest*
 Um iterador que trata o primeiro elemento na cadeia de caracteres inserida.
 
-*_Iosbase*\
+@No__t_1 *_Iosbase*
 Foi especificado o fluxo que contém a localidade com a faceta numpunct usada para pontuar a saída e os sinalizadores para a formatação da saída.
 
-*_Fill*\
+@No__t_1 *_Fill*
 Um caractere que é usado para espaçamento.
 
-*Val*\
+*valor* \
 O número ou tipo booliano que será a saída.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de saída que aborda uma posição além do último elemento produzido.
 

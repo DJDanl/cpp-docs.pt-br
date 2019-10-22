@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 73730e0a4a22e7f5e63809cc2c1603cbda1ab596
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 035e5153b4e4c84743a64bcc9cec24920a6a0336
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449660"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688360"
 ---
-# <a name="cachechunklist-class"></a>Classe cache_chunklist
+# <a name="cache_chunklist-class"></a>Classe cache_chunklist
 
 Define um [alocador de blocos](../standard-library/allocators-header.md) que aloca e desaloca os blocos de memória de um único tamanho.
 
@@ -36,7 +36,7 @@ class cache_chunklist
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe de modelo usa o **operador New** para alocar partes de memória bruta, Subalocando blocos para alocar armazenamento para um bloco de memória quando necessário; Ele armazena blocos de memória desalocados em uma lista gratuita separada para cada parte e usa o **operador Delete** para desalocar uma parte quando nenhum de seus blocos de memória está em uso.
+Esse modelo de classe usa o **operador New** para alocar partes de memória bruta, Subalocando blocos para alocar armazenamento para um bloco de memória quando necessário; Ele armazena blocos de memória desalocados em uma lista gratuita separada para cada parte e usa o **operador Delete** para desalocar uma parte quando nenhum de seus blocos de memória está em uso.
 
 Cada bloco de memória contém os bytes de *sz* de memória utilizável e um ponteiro para a parte à qual ele pertence. Cada parte contém `Nelts` blocos de memória, três ponteiros, um int e os dados que o **operador New** e o **operador Delete** exigem.
 
@@ -73,7 +73,7 @@ void *allocate(std::size_t count);
 |---------------|-----------------|
 |*count*|O número de elementos na matriz a serem alocados.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o objeto alocado.
 

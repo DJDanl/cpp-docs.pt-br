@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: c506a6a2e1e2c0610f8a6129d2bfb42f762e998a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458590"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689821"
 ---
 # <a name="collate-class"></a>Classe collate
 
-Uma classe de modelo que descreve um objeto que pode funcionar como uma faceta de localidade para controlar a ordenação e o agrupamento de caracteres em uma cadeia de caracteres, as comparações entre eles e o hash de cadeias de caracteres.
+Um modelo de classe que descreve um objeto que pode servir como uma faceta de localidade para controlar a ordenação e o agrupamento de caracteres dentro de uma cadeia de caracteres, comparações entre eles e o hash de cadeias.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType*\
+@No__t_1 *CharType*
 O tipo usado em um programa para codificar caracteres.
 
 ## <a name="remarks"></a>Comentários
@@ -108,21 +108,21 @@ const char* _Locname,
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
-*_Locname*\
+@No__t_1 *_Locname*
 O nome da localidade.
 
 ### <a name="remarks"></a>Comentários
 
 Os valores possíveis para o parâmetro *_Refs* e seu significado são:
 
-- 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
+- 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
-- 1: O tempo de vida do objeto deve ser gerenciado manualmente.
+- 1: o tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: Esses valores não estão definidos.
+- \> 1: esses valores não estão definidos.
 
 O construtor inicializa seu objeto base com **locale::** [faceta](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
@@ -139,19 +139,19 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*\
+\ *first1*
 Ponteiro para o primeiro elemento na primeira sequência a ser comparada.
 
-*last1*\
+\ *last1*
 Ponteiro para o último elemento na primeira sequência a ser comparada.
 
-*first2*\
+\ *first2*
 Ponteiro para o primeiro elemento na segunda sequência a ser comparada.
 
-*last2*\
+\ *last2*
 Ponteiro para o último elemento na segunda sequência a ser comparada.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A função membro retornará:
 
@@ -205,19 +205,19 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1*\
+\ *first1*
 Ponteiro para o primeiro elemento na primeira sequência a ser comparada.
 
-*last1*\
+\ *last1*
 Ponteiro para o último elemento na primeira sequência a ser comparada.
 
-*first2*\
+\ *first2*
 Ponteiro para o primeiro elemento na segunda sequência a ser comparada.
 
-*last2*\
+\ *last2*
 Ponteiro para o último elemento na segunda sequência a ser comparada.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A função membro retornará:
 
@@ -229,7 +229,7 @@ A função membro retornará:
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro virtual protegido compara a sequência em [* first1, Last1) * com a sequência em *[first2, last2*). Ele compara valores aplicando `operator<` -se entre pares de elementos correspondentes `CharType`do tipo. A primeira sequência comparará menos se ela tiver o elemento menor do par desigual mais antigo nas sequências ou, se não existir nenhum par desigual, mas a primeira sequência for menor.
+A função de membro virtual protegido compara a sequência em [* first1, Last1) * com a sequência em *[first2, last2*). Ele compara valores aplicando `operator<` entre pares de elementos correspondentes do tipo `CharType`. A primeira sequência comparará menos se ela tiver o elemento menor do par desigual mais antigo nas sequências ou, se não existir nenhum par desigual, mas a primeira sequência for menor.
 
 ### <a name="example"></a>Exemplo
 
@@ -245,13 +245,13 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Um ponteiro para o primeiro caractere na sequência cujo valor será determinado.
 
-*última*\
+*última* \
 Um ponteiro para o último caractere na sequência cujo valor será determinado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor de hash do tipo **longo** da sequência.
 
@@ -273,13 +273,13 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Um ponteiro para o primeiro caractere na sequência a ser convertida.
 
-*última*\
+*última* \
 Um ponteiro para o último caractere na sequência a ser convertida.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma cadeia de caracteres que é a sequência de caracteres transformados.
 
@@ -301,13 +301,13 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Um ponteiro para o primeiro caractere na sequência cujo valor será determinado.
 
-*última*\
+*última* \
 Um ponteiro para o último caractere na sequência cujo valor será determinado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor de hash do tipo **longo** da sequência.
 
@@ -355,7 +355,7 @@ typedef basic_string<CharType> string_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve uma especialização da classe de modelo [basic_string](../standard-library/basic-string-class.md) cujos objetos podem armazenar cópias das sequências de origem.
+O tipo descreve uma especialização do modelo de classe [basic_string](../standard-library/basic-string-class.md) cujos objetos podem armazenar cópias da sequência de origem.
 
 ### <a name="example"></a>Exemplo
 
@@ -371,13 +371,13 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
+*primeiro* \
 Um ponteiro para o primeiro caractere na sequência a ser convertida.
 
-*última*\
+*última* \
 Um ponteiro para o último caractere na sequência a ser convertida.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma cadeia de caracteres que contém a sequência de caracteres transformados.
 

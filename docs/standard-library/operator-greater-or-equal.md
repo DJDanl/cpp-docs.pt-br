@@ -13,19 +13,19 @@ helpviewer_keywords:
 - operator >=
 - operator>=
 ms.assetid: 14fbebf5-8b75-4afa-a51b-3112d31c07cf
-ms.openlocfilehash: 6eb8db25f5f30a978de197d699acf28bf8bea116
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 08c73602d87cbfc31364148d9565071da7b732c4
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447956"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687356"
 ---
 # <a name="operatorgt"></a>operator&gt;=
 
 > [!NOTE]
 > Este tópico está na documentação da C++ Microsoft como um exemplo não funcional de contêineres usados na biblioteca C++ padrão. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
 
-Sobrecarregue **operator>=** para comparar dois objetos da classe de modelo [Container](../standard-library/sample-container-class.md).
+Operador de sobrecargas **> =** para comparar dois objetos do [contêiner](../standard-library/sample-container-class.md)de modelo de classe.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,7 +36,7 @@ bool operator>=(
     const Container <Ty>& right);
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna `!(left < right)`.
 

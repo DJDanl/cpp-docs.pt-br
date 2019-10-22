@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454194"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689214"
 ---
 # <a name="numpunct-class"></a>Classe numpunct
 
-Uma classe de modelo que descreve um objeto que pode servir como uma faceta de local para descrever as sequências do tipo `CharType` usadas para representar informações sobre a formatação e pontuação de expressões numéricas e boolianas.
+Um modelo de classe que descreve um objeto que pode servir como uma faceta local para descrever as sequências do tipo `CharType` usadas para representar informações sobre a formatação e a pontuação de expressões numéricas e booleanas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType*\
+@No__t_1 *CharType*
 O tipo usado em um programa para codificar caracteres em uma localidade.
 
 ## <a name="remarks"></a>Comentários
@@ -111,7 +111,7 @@ Retorna um elemento específico de localidade a ser usado como uma vírgula deci
 CharType decimal_point() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um elemento específico de localidade a ser usado como uma vírgula decimal.
 
@@ -154,7 +154,7 @@ Uma função membro virtual protegida que é chamada para retornar um elemento e
 virtual CharType do_decimal_point() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um elemento específico de localidade a ser usado como uma vírgula decimal.
 
@@ -170,7 +170,7 @@ A função membro virtual protegida retorna uma cadeia de caracteres a ser usada
 virtual string_type do_falsename() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma cadeia de caracteres que contém uma sequência a ser usada como uma representação de texto do valor **false**.
 
@@ -190,7 +190,7 @@ Uma função membro virtual protegida que é chamada para retornar uma regra esp
 virtual string do_grouping() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma regra específica de localidade para determinar como os dígitos são agrupados à esquerda de qualquer vírgula decimal.
 
@@ -200,7 +200,7 @@ A função membro virtual protegida retorna uma regra específica de localidade 
 
 ### <a name="example"></a>Exemplo
 
-Consulte o exemplo de [agrupamento](#grouping), onde a função membro virtual é chamada por `grouping`.
+Consulte o exemplo de [agrupamento](#grouping), em que a função membro virtual é chamada por `grouping`.
 
 ## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
 
@@ -210,13 +210,13 @@ Uma função membro virtual protegida que é chamada para retornar um elemento e
 virtual CharType do_thousands_sep() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna um elemento específico de localidade a ser usado como um separador de milhares.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro virtual protegido retorna um elemento específico de localidade do `CharType` tipo a ser usado como um separador de grupo à esquerda de qualquer ponto decimal.
+A função de membro virtual protegido retorna um elemento específico de localidade do tipo `CharType` para usar como um separador de grupo à esquerda de qualquer ponto decimal.
 
 ### <a name="example"></a>Exemplo
 
@@ -248,9 +248,9 @@ Retorna uma cadeia de caracteres a ser usada como uma representação de texto d
 string_type falsename() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma cadeia de caracteres que contém `CharType`uma sequência de s a ser usada como uma representação de texto do valor **false**.
+Uma cadeia de caracteres que contém uma sequência de `CharType`s para usar como uma representação de texto do valor **false**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -297,7 +297,7 @@ Retorna uma regra específica de localidade para determinar como os dígitos sã
 string grouping() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma regra específica de localidade para determinar como os dígitos são agrupados à esquerda de qualquer vírgula decimal.
 
@@ -345,18 +345,18 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
 ### <a name="remarks"></a>Comentários
 
 Os valores possíveis para o parâmetro *_Refs* e seu significado são:
 
-- 0: O tempo de vida do objeto é gerenciado pelas localidades que o contêm.
+- 0: o tempo de vida do objeto é gerenciado pelas localidades que o contêm.
 
-- 1: O tempo de vida do objeto deve ser gerenciado manualmente.
+- 1: o tempo de vida do objeto deve ser gerenciado manualmente.
 
-- \> 1: Esses valores não estão definidos.
+- \> 1: esses valores não estão definidos.
 
 Nenhum exemplo direto é possível, pois o destruidor está protegido.
 
@@ -372,7 +372,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve uma especialização da classe de modelo [basic_string](../standard-library/basic-string-class.md) cujos objetos podem armazenar cópias das sequências de pontuação.
+O tipo descreve uma especialização do modelo de classe [basic_string](../standard-library/basic-string-class.md) cujos objetos podem armazenar cópias das sequências de pontuação.
 
 ## <a name="thousands_sep"></a>  numpunct::thousands_sep
 
@@ -382,7 +382,7 @@ Retorna um elemento específico de localidade a ser usado como um separador de m
 CharType thousands_sep() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um elemento específico de localidade a ser usado como um separador de milhares.
 
@@ -425,7 +425,7 @@ Retorna uma cadeia de caracteres a ser usada como uma representação de texto d
 string_type falsename() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma cadeia de caracteres a ser usada como uma representação de texto do valor **true**.
 
