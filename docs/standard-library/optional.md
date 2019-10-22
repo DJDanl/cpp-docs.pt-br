@@ -5,20 +5,20 @@ f1_keywords:
 - <optional>
 helpviewer_keywords:
 - <optional>
-ms.openlocfilehash: f3b4896a3cb4774e46b36480dd9769fa131fc287
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: bce31811c98d351f3c561b3136d41f7ed23d13e0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957174"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687254"
 ---
 # <a name="ltoptionalgt"></a>&lt;optional&gt;
 
-Define a classe de modelo do contêiner `optional` e diversos modelos de suporte.
+Define o modelo de classe de contêiner `optional` e vários modelos de suporte.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<> opcional
+**Cabeçalho:** \<optional >
 
 **Namespace:** std
 
@@ -36,14 +36,14 @@ Define a classe de modelo do contêiner `optional` e diversos modelos de suporte
 |[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Testa se o objeto à esquerda é maior ou igual ao objeto à direita.|
 
 > [!NOTE]
-> Além das comparações relacionais \<, os operadores de > opcionais também dão `T`suporte à comparação com **nullopt** e.
+> Além das comparações relacionais, \<optional operadores de > também dão suporte à comparação com **nullopt** e `T`.
 
 ### <a name="functions"></a>Funções
 
 |||
 |-|-|
 |[make_optional](../standard-library/optional-functions.md#make_optional)|Torna um objeto opcional.|
-|[swap](../standard-library/optional-functions.md#swap)|Permuta os valores contidos de dois `optional` objetos.|
+|[swap](../standard-library/optional-functions.md#swap)|Permuta os valores contidos de dois objetos `optional`.|
 
 ### <a name="classes-and-structs"></a>Classes e structs
 
@@ -58,7 +58,7 @@ Define a classe de modelo do contêiner `optional` e diversos modelos de suporte
 
 |||
 |-|-|
-|[nullopt](../standard-library/optional-functions.md#nullopt)|Uma instância do `nullopt_t` para comparações.|
+|[nullopt](../standard-library/optional-functions.md#nullopt)|Uma instância de `nullopt_t` para comparações.|
 
 ## <a name="see-also"></a>Consulte também
 

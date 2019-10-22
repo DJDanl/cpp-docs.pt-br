@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-ms.openlocfilehash: b8fe1ab2db792819831f5c50aa99a02559f71cdd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 56d8931cb404d9c0f3f5113f8b2ca0f1158209f2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451814"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689339"
 ---
-# <a name="messagesbyname-class"></a>Classe messages_byname
+# <a name="messages_byname-class"></a>Classe messages_byname
 
-A classe de modelo derivada descreve um objeto que pode funcionar como uma faceta de mensagem de uma determinada localidade, permitindo a recuperação das mensagens localizadas.
+O modelo de classe derivada descreve um objeto que pode servir como uma faceta de mensagem de uma determinada localidade, habilitando a recuperação de mensagens localizadas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,10 +39,10 @@ protected:
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Locname*\
+@No__t_1 *_Locname*
 Uma localidade nomeada.
 
-*_Refs*\
+@No__t_1 *_Refs*
 Uma contagem de referência inicial.
 
 ## <a name="remarks"></a>Comentários

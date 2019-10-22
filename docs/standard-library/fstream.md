@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - fstream header
 ms.assetid: 660de351-0489-41df-b239-40e0cdcab46b
-ms.openlocfilehash: ba6a4152b8d37f5b0186f9d05c6ba850e8c2e54c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1f85367b9ae527c9387d085acc1496bfbbf7cc9e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454016"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688037"
 ---
 # <a name="ltfstreamgt"></a>&lt;fstream&gt;
 
@@ -38,12 +38,12 @@ Define várias classes que dão suporte a operações de iostreams em sequência
 
 ### <a name="classes"></a>Classes
 
-|Classe|Descrição|
+|Class|Descrição|
 |-|-|
-|[basic_filebuf](../standard-library/basic-filebuf-class.md)|A classe de modelo descreve um buffer de fluxo que controla a transmissão de elementos do tipo `Elem`, cujas características dos caracteres são determinadas pela classe `Tr`, para e de uma sequência de elementos armazenados em um arquivo externo.|
-|[basic_fstream](../standard-library/basic-fstream-class.md)|A classe de modelo descreve um objeto que controla a inserção e a extração de elementos e objetos codificados usando um buffer de fluxo da classe [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**elem**, **TR**>, com elementos do tipo `Elem`, cujos as características de caractere são determinadas pela classe `Tr`.|
-|[basic_ifstream](../standard-library/basic-ifstream-class.md)|A classe de modelo descreve um objeto que controla a extração de elementos e objetos codificados de um buffer de fluxo da classe [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**elem**, **TR**> `Elem`, com elementos do tipo, cujas características de caractere são determinadas pela classe `Tr`.|
-|[basic_ofstream](../standard-library/basic-ofstream-class.md)|A classe de modelo descreve um objeto que controla a inserção de elementos e objetos codificados em um buffer de fluxo da classe [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**elem**, **TR**>, `Elem`com elementos do tipo, cujas características de caractere são determinadas pela classe `Tr`.|
+|[basic_filebuf](../standard-library/basic-filebuf-class.md)|O modelo de classe descreve um buffer de fluxo que controla a transmissão de elementos do tipo `Elem`, cujas características de caractere são determinadas pela classe `Tr`, de e para uma sequência de elementos armazenados em um arquivo externo.|
+|[basic_fstream](../standard-library/basic-fstream-class.md)|O modelo de classe descreve um objeto que controla a inserção e a extração de elementos e objetos codificados usando um buffer de fluxo da classe [basic_filebuf](../standard-library/basic-filebuf-class.md) \<**Elem**, **TR**>, com elementos do tipo `Elem`, cujo caractere as características são determinadas pela classe `Tr`.|
+|[basic_ifstream](../standard-library/basic-ifstream-class.md)|O modelo de classe descreve um objeto que controla a extração de elementos e objetos codificados de um buffer de fluxo da classe [basic_filebuf](../standard-library/basic-filebuf-class.md) \<**Elem**, **TR**>, com elementos do tipo `Elem`, cujas características de caracteres são determinado pela classe `Tr`.|
+|[basic_ofstream](../standard-library/basic-ofstream-class.md)|O modelo de classe descreve um objeto que controla a inserção de elementos e objetos codificados em um buffer de fluxo da classe [basic_filebuf](../standard-library/basic-filebuf-class.md) \<**Elem**, **TR**>, com elementos do tipo `Elem`, cujas características de caracteres são determinadas pela classe `Tr`.|
 
 ## <a name="see-also"></a>Consulte também
 

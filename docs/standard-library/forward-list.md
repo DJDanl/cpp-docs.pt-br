@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: a8b343fbe5e175828b4b8470da486a6dea9f3455
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 708e16cb4b8a1640f4978b806bc52beed24decd4
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457007"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688058"
 ---
-# <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
+# <a name="ltforward_listgt"></a>&lt;forward_list&gt;
 
-Define a classe de modelo de contêiner forward_list, bem como diversos modelos de suporte.
+Define o modelo de classe de contêiner forward_list e vários modelos de suporte.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -24,7 +24,7 @@ Define a classe de modelo de contêiner forward_list, bem como diversos modelos 
 **Namespace:** std
 
 > [!NOTE]
-> A \<biblioteca de > forward_list também usa `#include <initializer_list>` a instrução.
+> A biblioteca \<forward_list > também usa a instrução `#include <initializer_list>`.
 
 ## <a name="members"></a>Membros
 

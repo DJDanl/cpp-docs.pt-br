@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 3c3c7fc34e75772c10ba39ecc51f6d2ac59d7ad5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2e861d2250585fbcdf3e1ef63d92f18185fc7f1c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456300"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687770"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
-Define o mapa e o multimapa das classes de modelo do contêiner e seus modelos de suporte.
+Define os modelos de classe de contêiner Map e Multimap e seus modelos de suporte.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -24,7 +24,7 @@ Define o mapa e o multimapa das classes de modelo do contêiner e seus modelos d
 **Namespace:** std
 
 > [!NOTE]
-> O \<mapa > biblioteca também usa a `#include <initializer_list>` instrução.
+> A biblioteca \<map > também usa a instrução `#include <initializer_list>`.
 
 ## <a name="members"></a>Membros
 

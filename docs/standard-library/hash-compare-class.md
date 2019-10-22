@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - hash_compare class
 ms.assetid: d502bb59-de57-4585-beb9-00e3a998c0af
-ms.openlocfilehash: 399b412c41128f513cf01d1e034bad2bbc5ef79f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4fb44a371630a66275f6ef59a0bf66b4cb73a71f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448802"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689558"
 ---
-# <a name="hashcompare-class"></a>Classe hash_compare
+# <a name="hash_compare-class"></a>Classe hash_compare
 
-A classe de modelo descreve um objeto que pode ser usado por qualquer um dos contêineres associativos de hash — hash_map, hash_multimap, hash_set ou hash_multiset — como um objeto de parâmetro **Traits** padrão para ordenar e fazer o hash dos elementos que eles contêm.
+O modelo de classe descreve um objeto que pode ser usado por qualquer um dos contêineres associativos de hash — hash_map, hash_multimap, hash_set ou hash_multiset — como um objeto de parâmetro de **características** padrão para ordenar e aplicar hash aos elementos que eles contêm.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,15 +23,15 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
 
 ## <a name="remarks"></a>Comentários
 
-Cada contêiner associativo de hash armazena um objeto de características de hash `Traits` do tipo (um parâmetro de modelo). Você pode derivar uma classe de uma especialização de hash_compare para substituir seletivamente determinadas funções e objetos ou pode fornecer sua própria versão dessa classe se atender a certos requisitos mínimos. Especificamente, para um objeto hash_comp do tipo `hash_compare<Key, Traits>`, o seguinte comportamento é exigido pelos contêineres acima:
+Cada contêiner associativo de hash armazena um objeto de características de hash do tipo `Traits` (um parâmetro de modelo). Você pode derivar uma classe de uma especialização de hash_compare para substituir seletivamente determinadas funções e objetos ou pode fornecer sua própria versão dessa classe se atender a certos requisitos mínimos. Especificamente, para um objeto hash_comp do tipo `hash_compare<Key, Traits>`, o seguinte comportamento é exigido pelos contêineres acima:
 
-- Para todos os `key` valores do `Key`tipo, a chamada hash_comp`key`() serve como uma função de hash, que produz uma distribuição de valores do `size_t`tipo. A função fornecida por hash_compare retorna `key`.
+- Para todos os valores `key` do tipo `Key`, a chamada **hash_comp**(`key`) serve como uma função de hash, que produz uma distribuição de valores do tipo `size_t`. A função fornecida por hash_compare retorna `key`.
 
-- Para qualquer valor `key1` do tipo `Key` que precede `key2` na sequência e tenha o mesmo valor de hash (valor retornado pela função de hash), **hash_comp**(`key2`, `key1`) é false. A função deve impor uma ordenação total em valores do `Key`tipo. A função fornecida por hash_compare retorna *comp*(`key2`, `key1`) `,` em que *comp* é um objeto armazenado do `Traits` tipo que você pode especificar ao construir o objeto hash_comp. Para o tipo `Traits` `less<Key>`de parâmetro padrão, as chaves de classificação nunca diminuem em valor.
+- Para qualquer valor `key1` do tipo `Key` que precede `key2` na sequência e tem o mesmo valor de hash (valor retornado pela função de hash), **hash_comp**(`key2`, `key1`) é false. A função deve impor uma ordenação total em valores do tipo `Key`. A função fornecida por hash_compare retorna *comp*(`key2`, `key1`) `,` em que *comp* é um objeto armazenado do tipo `Traits` que você pode especificar ao construir o objeto hash_comp. Para o tipo de parâmetro de `Traits` padrão `less<Key>`, as chaves de classificação nunca diminuem em valor.
 
-- A constante `bucket_size` de inteiro especifica o número médio de elementos por "Bucket" (entrada de tabela de hash) que o contêiner deve tentar não exceder. Ela deve ser maior que zero. O valor fornecido por hash_compare é 4.
+- A constante de inteiro `bucket_size` especifica o número médio de elementos por "Bucket" (entrada de tabela de hash) que o contêiner deve tentar não exceder. Ela deve ser maior que zero. O valor fornecido por hash_compare é 4.
 
-- A constante `min_buckets` de inteiro especifica o número mínimo de buckets a serem mantidos na tabela de hash. Ela deve ser uma potência de dois e maior que zero. O valor fornecido por hash_compare é 8.
+- A constante de inteiro `min_buckets` especifica o número mínimo de buckets a serem mantidos na tabela de hash. Ela deve ser uma potência de dois e maior que zero. O valor fornecido por hash_compare é 8.
 
 ## <a name="example"></a>Exemplo
 

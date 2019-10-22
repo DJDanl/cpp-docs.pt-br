@@ -13,19 +13,19 @@ helpviewer_keywords:
 - operator!=
 - operator !=
 ms.assetid: ef2be7f0-1c94-4edc-b65c-731fddd519f4
-ms.openlocfilehash: 1214dd7d5034b80b14f8dd1422aa1a3b8a253023
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 89d41d099d151f77d91cd94b22047824779dcf54
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447643"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687344"
 ---
 # <a name="operator"></a>operator!=
 
 > [!NOTE]
 > Este tópico está na documentação da C++ Microsoft como um exemplo não funcional de contêineres usados na biblioteca C++ padrão. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
 
-Sobrecarrega `operator!=` para comparar dois objetos da classe de modelo [Container](../standard-library/sample-container-class.md).
+Sobrecargas `operator!=` para comparar dois objetos do [contêiner](../standard-library/sample-container-class.md)de modelo de classe.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,7 +36,7 @@ bool operator!=(
     const Container <Ty>& right);
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna `!(left == right)`.
 

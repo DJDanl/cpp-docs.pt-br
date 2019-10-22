@@ -7,16 +7,16 @@ helpviewer_keywords:
 - pointer_to_unary_function function
 - pointer_to_unary_function class
 ms.assetid: 05600207-b916-4759-beca-6b6facd2d6f6
-ms.openlocfilehash: cff84f1f15eea34c60162f702dfe05350d1383d1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2b6bf82faa39e22c5af584a9fc3ebf68f5851463
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240463"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689134"
 ---
-# <a name="pointertounaryfunction-class"></a>Classe pointer_to_unary_function
+# <a name="pointer_to_unary_function-class"></a>Classe pointer_to_unary_function
 
-Converte um ponteiro de função unária em uma função unária adaptável. Preterido no c++11, removido do c++17.
+Converte um ponteiro de função unária em uma função unária adaptável. Preterido no C++ 11, removido do C++ 17.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,19 +32,19 @@ class pointer_to_unary_function
 
 ### <a name="parameters"></a>Parâmetros
 
-*pfunc*\
+\ *pFunc*
 A função binária a ser convertida.
 
-*À esquerda*\
+\ *à esquerda*
 O objeto no qual o  *\*pfunc* é chamado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-A classe de modelo armazena uma cópia de `pfunc`. Ela define sua função membro `operator()` como de retorno (\* **pfunc**)(_ *Left*).
+O modelo de classe armazena uma cópia de `pfunc`. Ela define sua função membro `operator()` como de retorno (\* **pfunc**)(_ *Left*).
 
 ## <a name="remarks"></a>Comentários
 
-Um ponteiro de função unária é um objeto de função e pode ser passado para qualquer algoritmo da Biblioteca Padrão C++ que esperar uma função unária como parâmetro, mas não é adaptável. Para usá-lo com um adaptador, como associar um valor a ele ou usá-lo com um negador, ele deve ser fornecido com os tipos aninhados `argument_type` e `result_type` que possibilitam essa adaptação. A conversão por `pointer_to_unary_function` permite que os adaptadores de função funcionem com ponteiros de função binária.
+Um ponteiro de função unária é um objeto de função e pode ser passado para qualquer algoritmo da Biblioteca Padrão C++ que esperar uma função unária como parâmetro, mas não é adaptável. Para usá-lo com um adaptador, como associar um valor a ele ou usá-lo com um negador, ele deve ser fornecido com os tipos aninhados `argument_type` e `result_type` que possibilitam tal adaptação. A conversão por `pointer_to_unary_function` permite que os adaptadores de função funcionem com ponteiros de função binária.
 
 ## <a name="example"></a>Exemplo
 

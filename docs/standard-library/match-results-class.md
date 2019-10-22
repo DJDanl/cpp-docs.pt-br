@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: 72a948c7f8422b36b94a16cdb2c815bca92d20c7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c282791fb0ff85c0c8818c6905c51703614f4675
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456380"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689394"
 ---
-# <a name="matchresults-class"></a>Classe match_results
+# <a name="match_results-class"></a>Classe match_results
 
 Contém uma sequência de subcorrespondências.
 
@@ -26,15 +26,15 @@ class match_results
 
 ## <a name="parameters"></a>Parâmetros
 
-*Bidirecional*\
+@No__t_1 *bidirecional*
 O tipo de iterador para subcorrespondências.
 
-*Alocação*\
+@No__t_1 de *alocação*
 O tipo de um distribuidor para gerenciar o armazenamento.
 
 ## <a name="remarks"></a>Comentários
 
-A classe de modelo descreve um objeto que controla uma sequência de elementos não modificáveis do tipo `sub_match<BidIt>` gerada por uma pesquisa de expressão regular. Cada elemento aponta para a subsequência que corresponde ao grupo de captura correspondente a esse elemento.
+O modelo de classe descreve um objeto que controla uma sequência não modificável de elementos do tipo `sub_match<BidIt>` gerados por uma pesquisa de expressão regular. Cada elemento aponta para a subsequência que corresponde ao grupo de captura correspondente a esse elemento.
 
 ### <a name="constructors"></a>Construtores
 
@@ -69,10 +69,10 @@ A classe de modelo descreve um objeto que controla uma sequência de elementos n
 |[length](#length)|Retorna o comprimento de uma subcorrespondência.|
 |[max_size](#max_size)|Obtém o maior número de subcorrespondências.|
 |[propostas](#position)|Iniciar o deslocamento de um subgrupo.|
-|[prefix](#prefix)|Obtém a sequência antes da primeira subcorrespondência.|
+|[prefixo](#prefix)|Obtém a sequência antes da primeira subcorrespondência.|
 |[size](#size)|Número de contagens de subcorrespondências.|
 |[str](#str)|Retorna uma subcorrespondência.|
-|[suffix](#suffix)|Obtém a sequência após a última subcorrespondência.|
+|[sufixo](#suffix)|Obtém a sequência após a última subcorrespondência.|
 |[swap](#swap)|Troca dois objetos match_results.|
 
 ### <a name="operators"></a>Operadores
@@ -298,21 +298,21 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>Parâmetros
 
-*OutIt*\
+@No__t_1 *OutIt*
 O tipo de iterador de saída.
 
 *out*\
 O fluxo de saída no qual gravar.
 
-*fmt*\
+\ *fmt*
 A cadeia de caracteres de formato.
 
-*flags*\
+*sinalizadores* \
 Os sinalizadores de formato.
 
 ### <a name="remarks"></a>Comentários
 
-Cada função de membro gera texto formatado sob o controle do formato *fmt*. A primeira função de membro grava o texto formatado na sequência definida por *seu argumento e* *retorna.* A segunda função membro retorna um objeto de cadeia de caracteres que mantém uma cópia do texto formatado.
+Cada função de membro gera texto formatado sob o controle do formato *fmt*. A primeira função de membro grava o texto formatado na sequência definida por *seu argumento e* *retorna.* A segunda função de membro retorna um objeto de cadeia de caracteres que contém uma cópia do texto formatado.
 
 Para gerar texto formatado. o texto literal na cadeia de caracteres de formato é copiado normalmente para a sequência de destino. Cada sequência de escape na cadeia de caracteres de formato é substituída pelo texto que ela representa. Os detalhes da cópia e da substituição são controlados pelos sinalizadores de formato transmitidos à função.
 
@@ -350,7 +350,7 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*projeto*\
+*sub* \
 O índice da subcorrespondência.
 
 ### <a name="remarks"></a>Comentários
@@ -369,15 +369,15 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*alocação*\
+\ de *alocação*
 O objeto de alocador a ser armazenado.
 
-*Certo*\
+\ *à direita*
 O objeto match_results a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor cria um objeto `match_results` que não mantém nenhuma subcorrespondência. O segundo construtor constrói um `match_results` objeto que é uma cópia do *lado direito*.
+O primeiro construtor cria um objeto `match_results` que não mantém nenhuma subcorrespondência. O segundo construtor constrói um objeto `match_results` que é uma cópia do *lado direito*.
 
 ## <a name="max_size"></a>  match_results::max_size
 
@@ -401,12 +401,12 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 O objeto match_results a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 
-O operador member substitui a sequência controlada por `*this` por uma cópia da sequência controlada pela *direita*.
+O operador membro substitui a sequência controlada por `*this` com uma cópia da sequência controlada pela *direita*.
 
 ## <a name="op_at"></a>  match_results::operator[]
 
@@ -423,7 +423,7 @@ const_reference operator[](size_type n) const;
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna uma referência ao elemento *n* da sequência controlada, ou uma referência a um objeto vazio `sub_match` se `size() <= n` ou se o grupo de captura *n* não fizer parte da correspondência.
+A função membro retorna uma referência ao elemento *n* da sequência controlada ou uma referência a um objeto `sub_match` vazio se `size() <= n` ou se o grupo de captura *n* não fizer parte da correspondência.
 
 ## <a name="position"></a>  match_results::position
 
@@ -435,7 +435,7 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*projeto*\
+*sub* \
 Índice da subcorrespondência.
 
 ### <a name="remarks"></a>Comentários
@@ -500,7 +500,7 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*projeto*\
+*sub* \
 Índice da subcorrespondência.
 
 ### <a name="remarks"></a>Comentários
@@ -541,12 +541,12 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 O objeto match_results a ser trocado.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro troca o conteúdo de `*this` e *à direita* em tempo constante e não gera exceções.
+A função membro troca o conteúdo de `*this` e *direita* em tempo constante e não gera exceções.
 
 ## <a name="value_type"></a>  match_results::value_type
 
