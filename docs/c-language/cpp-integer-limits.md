@@ -1,23 +1,25 @@
 ---
-title: Limites de inteiro C++
-ms.date: 01/29/2018
+title: Limites de C++ C e inteiros
+ms.date: 10/21/2019
 helpviewer_keywords:
 - limits, integer
 - limits, integer constants
 - integer limits
 ms.assetid: 0c23cbd6-29fb-4d9c-b689-5984e19748de
-ms.openlocfilehash: 057da1ac8e4549a05d10a01cc3aead678045d9c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 6940f36e37ec58ca8fe23c9062928cbf90b125bd
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548285"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778370"
 ---
-# <a name="c-integer-limits"></a>Limites de inteiro C++
+# <a name="c-and-c-integer-limits"></a>Limites de C++ C e inteiros
 
 **Seção específica da Microsoft**
 
-Os limites para tipos de inteiros estão listadas na tabela a seguir. Esses limites são definidos no arquivo de cabeçalho padrão LIMITS.H. O Microsoft C também permite a declaração de variáveis de inteiro dimensionadas, que são tipos integrais de 8, 16 ou 32 bits de tamanho. Para obter mais informações sobre inteiros dimensionados, consulte [Tipos de inteiros dimensionados](../c-language/c-sized-integer-types.md).
+Os limites para tipos de inteiros em C C++ e estão listados na tabela a seguir. Esses limites são definidos no arquivo de cabeçalho padrão C `<limits.h>`. O C++ `<limits>` de cabeçalho da biblioteca padrão inclui `<climits>`, que inclui `<limits.h>`.
+
+O Microsoft C também permite a declaração de variáveis inteiras de tamanho, que são tipos integrais de tamanho de 8, 16-, 32-ou 64 bits. Para obter mais informações sobre os inteiros de tamanho em C, consulte [tipos de inteiro de tamanho](../c-language/c-sized-integer-types.md).
 
 ## <a name="limits-on-integer-constants"></a>Limites em constantes de inteiro
 
@@ -39,6 +41,9 @@ Os limites para tipos de inteiros estão listadas na tabela a seguir. Esses limi
 |**LONG_MIN**|Valor mínimo para uma variável do tipo **long**.|-2147483647 - 1|
 |**LONG_MAX**|Valor máximo para uma variável do tipo **long**.|2147483647|
 |**ULONG_MAX**|Valor máximo para uma variável do tipo **unsigned long**.|4294967295 (0xffffffff)|
+|**LLONG_MIN**|Valor mínimo para uma variável do tipo **longo**longo.|-9.223.372.036.854.775.807-1|
+|**LLONG_MAX**|Valor máximo para uma variável do tipo **longo**longo.|9,223,372,036,854,775,807|
+|**ULLONG_MAX**|Valor máximo para uma variável do tipo **sem sinal longo**.|18446744073709551615 (0xFFFFFFFFFFFFFFFF)|
 
 Se um valor exceder a representação do maior inteiro, o compilador da Microsoft gera um erro.
 
