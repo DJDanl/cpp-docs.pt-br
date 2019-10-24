@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 20668a49-cab7-4153-a6d9-7439aac3ff3b
-ms.openlocfilehash: af220854f71a84902d9ad417242b6d037d4ba0f2
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 52b20c5a8eccbf9e8a87cfa7e8fb01da846153d8
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148069"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778455"
 ---
 # <a name="elements-of-c"></a>Elementos de C
 
@@ -34,7 +34,7 @@ Os seguintes tópicos são abordados:
 
 - [Pontuação e caracteres especiais](../c-language/punctuation-and-special-characters.md)
 
-A seção também inclui tabelas de referência de [Trígrafos](../c-language/trigraphs.md), [limites em constantes de ponto flutuante](../c-language/limits-on-floating-point-constants.md), [limites de inteiro C++](../c-language/cpp-integer-limits.md) e [sequências de Escape](../c-language/escape-sequences.md).
+A seção também inclui tabelas de referência para [trigrafos](../c-language/trigraphs.md), [limites de constantes de ponto flutuante](../c-language/limits-on-floating-point-constants.md), [limites C++ de C e inteiro](../c-language/cpp-integer-limits.md)e [sequências de escape](../c-language/escape-sequences.md).
 
 Operadores são símbolos (caracteres individuais e combinações de caracteres) que especificam como os valores devem ser manipulados. Cada símbolo é interpretado como uma única unidade, chamada de token. Para obter mais informações, consulte [Operators](../c-language/c-operators.md).
 
