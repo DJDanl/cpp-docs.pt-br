@@ -3,26 +3,26 @@ title: Aplicativos da área de C++trabalho (Visual)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.topic: overview
-ms.openlocfilehash: 91fcc596a4c30e3fa74043c846eda6f06b666f2c
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 98909097cf791d55f5971a89643839e07b0c60d1
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274731"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778499"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplicativos da área de C++trabalho (Visual)
 
-Um *aplicativo* de área C++ de trabalho no é um aplicativo nativo que pode acessar o conjunto completo de APIs do Windows e é executado em uma janela ou no console do sistema. Os aplicativos de C++ área de trabalho no podem ser executados no Windows XP por meio do Windows 10 (embora o Windows XP não seja mais oficialmente suportado e existam muitas APIs do Windows que foram introduzidas desde então). 
+Um *aplicativo* de área C++ de trabalho no é um aplicativo nativo que pode acessar o conjunto completo de APIs do Windows e é executado em uma janela ou no console do sistema. Os aplicativos de C++ área de trabalho no podem ser executados no Windows XP por meio do Windows 10 (embora o Windows XP não seja mais oficialmente suportado e existam muitas APIs do Windows que foram introduzidas desde então).
 
-Um aplicativo de área de trabalho é diferente de um aplicativo UWP (Plataforma Universal do Windows), que pode ser executado em computadores que executam o Windows 10 e também no XBox, Windows Phone, Surface Hub e outros dispositivos. Para obter mais informações sobre a área de trabalho vs. Aplicativos UWP, consulte [escolher sua tecnologia](/windows/win32/choose-your-technology).
+Um aplicativo de área de trabalho é diferente de um aplicativo UWP (Plataforma Universal do Windows), que pode ser executado em computadores que executam o Windows 10 e também no XBox, Windows Phone, Surface Hub e outros dispositivos. Para obter mais informações sobre aplicativos da área de trabalho vs. UWP, consulte [escolher sua tecnologia](/windows/win32/choose-your-technology).
 
-### <a name="desktop-bridge"></a>Ponte de desktop
+## <a name="desktop-bridge"></a>Ponte de desktop
 
 No Windows 10, você pode empacotar seu aplicativo de área de trabalho existente ou objeto COM como um aplicativo UWP e adicionar recursos UWP, como toque, ou chamar APIs do conjunto de API do Windows moderno. Você também pode adicionar um aplicativo UWP a uma solução de desktop no Visual Studio e empacotá-los juntos em um único pacote e usar APIs do Windows para se comunicar entre eles.
 
 No Visual Studio 2017 versão 15,4 e posterior, você pode criar um projeto de pacote de aplicativos do Windows para simplificar bastante o trabalho de empacotamento de seu aplicativo de área de trabalho existente. Algumas restrições se aplicam em relação a quais chamadas de registro ou APIs seu aplicativo de desktop usa, mas em muitos casos, você pode criar caminhos de código alternativos para obter uma funcionalidade semelhante durante a execução em um pacote de aplicativo. Para saber mais, veja [Ponte de Desktop](/windows/uwp/porting/desktop-to-uwp-root).
 
-### <a name="terminology"></a>Terminologia
+## <a name="terminology"></a>Terminologia
 
 - Um aplicativo *Win32* é um aplicativo de área de C++ trabalho do Windows no que pode usar APIs nativas do [Windows C e/ou APIs com](/windows/win32/apiindex/windows-api-list) e APIs de biblioteca do CRT e Standard e bibliotecas de terceiros. Um aplicativo Win32 que é executado em uma janela requer que o desenvolvedor trabalhe explicitamente com mensagens do Windows dentro de uma função de procedimento do Windows. Apesar do nome, um aplicativo Win32 pode ser compilado como um binário de 32 bits (x86) ou 64 bits (x64). No IDE do Visual Studio, os termos x86 e Win32 são sinônimos.
 
@@ -39,20 +39,20 @@ Qualquer aplicativo de área C++ de trabalho no pode usar classes e funções de
 |Título|Descrição|
 |-----------|-----------------|
 |[Aplicativos do Console do Windows em C++](console-applications-in-visual-cpp.md)|Contém informações sobre aplicativos de console. Um aplicativo de console Win32 (ou Win64) não tem nenhuma janela própria e nenhum loop de mensagem. Ele é executado na janela do console e a entrada e a saída são manipuladas por meio da linha de comando.|
-|[Passo a passo: como criar aplicativos de área de trabalho do Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Crie um aplicativo de área de trabalho do Windows simples.|
+|[Passo a passo: criando aplicativos da área de trabalho do Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Crie um aplicativo de área de trabalho do Windows simples.|
 |[Criando um aplicativo da área de trabalho do Windows vazio](creating-an-empty-windows-desktop-application.md)|Como criar um projeto de área de trabalho do Windows que não tem arquivos padrão.|
 |[Adicionando arquivos a aplicativos Win32 vazios](adding-files-to-an-empty-win32-applications.md)|Como adicionar arquivos a um projeto vazio.|
 |[Trabalhando com arquivos de recurso](working-with-resource-files.md)|Como adicionar imagens, ícones, tabelas de cadeia de caracteres e outros recursos a um aplicativo de área de trabalho.|
 |[Recursos para criar um jogo usando DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Links para conteúdo para a criação de C++jogos no.|
-|[Passo a passo: Criando e usando uma biblioteca estática](walkthrough-creating-and-using-a-static-library-cpp.md)|Como criar um arquivo binário. lib.|
-|[Como: usar o SDK do Windows 10 em um aplicativo da área de trabalho do Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contém etapas para configurar seu projeto para criar usando o SDK do Windows 10.|
+|[Walkthrough: Criando e usando uma biblioteca estática](walkthrough-creating-and-using-a-static-library-cpp.md)|Como criar um arquivo binário. lib.|
+|[Como usar o SDK do Windows 10 em um aplicativo da área de trabalho do Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contém etapas para configurar seu projeto para criar usando o SDK do Windows 10.|
 
 ## <a name="related-articles"></a>Artigos relacionados
 
 |Título|Descrição|
 |-----------|-----------------|
 |[Desenvolvimento em Windows](/windows/win32/index)|Contém informações sobre a API do Windows e COM. (Algumas APIs do Windows e DLLs de terceiros são implementadas como objetos COM.)|
-|[Hilo Desenvolvendo C++ aplicativos para o Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Descreve como criar um aplicativo de área de trabalho do Windows Rich Client que usa animação do Windows e Direct2D para criar uma interface do usuário baseada em carrossel.  Este tutorial não foi atualizado desde o Windows 7, mas ainda fornece uma introdução completa à programação do Win32.|
+|[Hilo: desenvolvendo C++ aplicativos para o Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Descreve como criar um aplicativo de área de trabalho do Windows Rich Client que usa animação do Windows e Direct2D para criar uma interface do usuário baseada em carrossel.  Este tutorial não foi atualizado desde o Windows 7, mas ainda fornece uma introdução completa à programação do Win32.|
 |[Visão geral da programação do Windows no C++](overview-of-windows-programming-in-cpp.md)|Descreve os principais recursos da programação da área C++de trabalho do Windows no.|
 
 ## <a name="see-also"></a>Consulte também

@@ -1,6 +1,6 @@
 ---
 title: 'Sintaxe de especificação de formato: funções printf e and wprintf'
-ms.date: 07/30/2019
+ms.date: 10/21/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: db144703a89fe1a6a76ed15f1cf77395c4565fab
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: e4def787dc5792921298999eb643ff56dd2c9f3d
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500088"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778384"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxe de especificação de formato: funções printf e wprintf
 
-As várias funções `printf` e `wprintf` usam uma cadeia de caracteres de formato e argumentos opcionais e produzem uma sequência formatada de caracteres de saída. A cadeia de caracteres de formato contém zero ou mais *diretivas*, que são caracteres literais para saída, ou *especificações de conversão* codificadas, que descrevem como formatar um argumento na saída. Este artigo descreve a sintaxe usada para codificar as especificações de conversão na cadeia de caracteres de formato. Para obter uma lista dessas funções, veja [E/S de fluxo](../c-runtime-library/stream-i-o.md).
+As várias funções `printf` e `wprintf` usam uma cadeia de caracteres de formato e argumentos opcionais e produzem uma sequência formatada de caracteres de saída. A cadeia de caracteres de formato contém zero ou mais *diretivas*, que são caracteres literais para saída, ou *especificações de conversão* codificadas, que descrevem como formatar um argumento na saída. Este artigo descreve a sintaxe usada para codificar as especificações de conversão na cadeia de caracteres de formato. Para obter uma lista dessas funções, veja [E/S de fluxo](../c-runtime-library/stream-i-o.md). 
 
 Uma especificação de conversão consiste em campos obrigatórios e opcionais neste formulário:
 
@@ -39,13 +39,16 @@ A especificação de conversão básica contém apenas o sinal de porcentagem e 
 
 <a name="type"></a>
 
+> [!NOTE] 
+> No Visual Studio 2015, a `printf` e a `scanf` família de funções foram declaradas como **embutidas** e movidas para os cabeçalhos `<stdio.h>` e `<conio.h>`. Se você estiver migrando um código mais antigo, poderá ver *LNK2019* em conexão com essas funções. Para obter mais informações, consulte o [histórico de alterações Visual C++ 2003-2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
+
 ## <a name="type-conversion-specifier"></a>Especificador de conversão de tipo
 
 O caractere de especificador de conversão de *tipo* especifica se o argumento correspondente deve ser interpretado como um caractere, uma cadeia de caracteres, um ponteiro, um inteiro ou um número de ponto flutuante. O caractere de *tipo* é o único campo de especificação de formato necessário e aparece depois de quaisquer campos opcionais.
 
 Os argumentos que seguem o formato cadeia de caracteres são interpretados de acordo com o caractere de *tipo* correspondente e o prefixo de [tamanho](#size) opcional. As conversões dos tipos de caracteres `char` e `wchar_t` são especificadas usando **c** ou **C**, e as cadeias de caracteres de byte único e vários bytes ou de caracteres largos são especificadas usando **s** ou **S**, dependendo de qual função de formatação está sendo usada. Argumentos de caractere e de cadeia de caracteres que são especificados usando **c** e **s** são interpretados como `char` e `char*` pelas funções da família `printf` ou como `wchar_t` e `wchar_t*` pelas funções da família `wprintf`. Argumentos de caractere e de cadeia de caracteres que são especificados usando **C** e **S** são interpretados como `wchar_t` e `wchar_t*` pelas funções da família `printf` ou como `char` e `char*` pelas funções da família `wprintf`. O comportamento é específico da Microsoft.
 
-Tipos de inteiro como `short`, `int`, `long`, `long long` e suas variações `unsigned` são especificados usando **d**, **i**, **o**, **u**, **x** e **X**. Tipos de ponto flutuante como `float`, `double` e `long double` são especificados usando **a**, **A**, **e**, **E**, **f**, **F**, **g** e **G**. Por padrão, a menos que sejam modificados por um prefixo de *tamanho*, os argumentos inteiros são forçados para o tipo `int` e argumentos de ponto flutuante são forçados a `double`. Em sistemas de 64 bits, um `int` é um valor de 32 bits; portanto, inteiros de 64 bits serão truncados quando forem formatados para saída, a menos que um prefixo de *tamanho* de **ll** ou **I64** seja usado. Tipos de ponteiro que são especificados por **p** usam o tamanho de ponteiro padrão para a plataforma.
+Tipos inteiros, como `short`, `int`, `long`, `long long` e suas variantes de `unsigned`, são especificados usando **d**, **i**, **o**, **u**, **x**e **x**. Tipos de ponto flutuante, como 1, 2 e 3, são especificados usando **um**, **a** **, e**, **e**, **f**, **f**, **g**e **g**. Por padrão, a menos que sejam modificados por um prefixo de *tamanho* , os argumentos inteiros são forçados a 3 tipo e argumentos de ponto flutuante são forçados a 4. Em sistemas de 64 bits, um `int` é um valor de 32 bits; portanto, inteiros de 64 bits serão truncados quando forem formatados para saída, a menos que um prefixo de *tamanho* de **ll** ou **I64** seja usado. Tipos de ponteiro que são especificados por **p** usam o tamanho de ponteiro padrão para a plataforma.
 
 > [!NOTE]
 > **Específico para a Microsoft** O caractere de tipo **Z** e o comportamento do **c**, **C**, **s** e os caracteres de tipo **S**, quando usados com as funções `printf` e `wprintf`, são extensões da Microsoft. O padrão ISO C usa **c** e **s** consistentemente para cadeias de caracteres e caracteres estreitos, e **C** e **S** para cadeias de caracteres e caracteres largos, em todas as funções de formatação.
@@ -157,7 +160,7 @@ O caractere de *tipo* determina a interpretação de *precisão* ou a precisão 
 
 ### <a name="how-precision-values-affect-type"></a>Como os valores de precisão afetam o tipo
 
-|Tipo|Significado|Padrão|
+|Digite|Significado|Padrão|
 |----------|-------------|-------------|
 |**a**, **A**|A precisão especifica o número de dígitos após a vírgula.|A precisão padrão é 13. Se a precisão for 0, nenhum ponto decimal será impresso, a menos que o sinalizador **#** seja usado.|
 |**c**, **C**|A precisão não tem nenhum efeito.|O caractere foi impresso.|

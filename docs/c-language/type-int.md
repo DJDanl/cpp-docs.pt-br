@@ -7,12 +7,12 @@ helpviewer_keywords:
 - portability [C++], type int
 - signed integers
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
-ms.openlocfilehash: 848c9799e7ab5cfdfd2b25cc84e55de02c673f3e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: c69d2308abe2ee3d7e6b392f5a9e78a004791501
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150006"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778366"
 ---
 # <a name="type-int"></a>Tipo int
 
@@ -22,7 +22,7 @@ Os especificadores de tipo `int` e `unsigned int` (ou simplesmente `unsigned`) d
 
 **Seção específica da Microsoft**
 
-Os inteiros com sinal são representados no formato de dois complementos. O bit mais significativo contém o sinal: 1 para negativo, 0 para positivo e zero. O intervalo de valores é determinado em [Limites de Inteiros do C++](../c-language/cpp-integer-limits.md), que é obtido do arquivo de cabeçalho LIMITS.H.
+Os inteiros com sinal são representados no formato de dois complementos. O bit mais significativo contém o sinal: 1 para o negativo, 0 para o sinal positivo e zero. O intervalo de valores é fornecido em [limites C C++ e inteiros](../c-language/cpp-integer-limits.md), que é obtido dos limites. Arquivo de cabeçalho H.
 
 **Fim da seção específica da Microsoft**
 
