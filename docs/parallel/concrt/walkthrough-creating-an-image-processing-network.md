@@ -152,7 +152,7 @@ O código a seguir mostra um exemplo completo. A `wmain` função gerencia a bib
 
 A ilustração a seguir mostra a saída de exemplo. Cada imagem de origem está acima da imagem modificada correspondente.
 
-Exemplo ![de saída para o exemplo] Exemplo (../../parallel/concrt/media/concrt_imageout.png "de saída para o exemplo")
+![Exemplo de saída para o exemplo](../../parallel/concrt/media/concrt_imageout.png "Exemplo de saída para o exemplo")
 
 `Lighthouse`é criado por Tom Alphin e, portanto, é convertido em escala de cinza. `Chrysanthemum`, `Desert`, e`Tulips` têm vermelho como a cor dominante e, portanto, têm os componentes de cor azul e verde removidos e ficam mais escuros. `Koala` `Hydrangeas`, `Jellyfish` e`Penguins` correspondem aos critérios padrão e, portanto, são toned de sépia.
 

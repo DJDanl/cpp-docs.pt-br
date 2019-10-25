@@ -3242,7 +3242,7 @@ Um ponteiro para um `CBrush` objeto se for bem-sucedido; caso contrário, NULL.
 
 Um pincel de meio-tom mostra pixels que são alternadamente cores de primeiro plano e plano de fundo para criar um padrão pontilhado. Veja a seguir um exemplo de um padrão pontilhado criado por um pincel de meio-tom.
 
-![Detalhe de um traço de caneta] dificado (../../mfc/reference/media/vc318s1.gif "Detalhe de um traço de caneta") dificado
+![Detalhe de um traço de caneta dificado ](../../mfc/reference/media/vc318s1.gif "Detalhe de um traço de caneta dificado")
 
 ##  <a name="getkerningpairs"></a>  CDC::GetKerningPairs
 
