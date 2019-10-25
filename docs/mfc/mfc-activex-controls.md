@@ -39,7 +39,7 @@ Você pode criar controles ActiveX sem janela e controles que só criam uma jane
 
 Um controle ActiveX é implementado como um servidor em processo (normalmente um pequeno objeto) que pode ser usado em qualquer contêiner OLE. Observe que a funcionalidade completa de um controle ActiveX está disponível somente quando usada em um contêiner OLE projetado para estar ciente dos controles ActiveX. Consulte [controles ActiveX de porta para outros aplicativos](../mfc/containers-for-activex-controls.md) para obter uma lista de contêineres que dão suporte a controles ActiveX. Esse tipo de contêiner, em seguida chamado de "contêiner de controle", pode operar um controle ActiveX usando as propriedades e os métodos do controle e recebe notificações do controle ActiveX na forma de eventos. A figura a seguir demonstra essa interação.
 
-Interação ![do contêiner e controle do controle ActiveX] Interação (../mfc/media/vc37221.gif "do contêiner e controle do controle ActiveX") <br/>
+![Interação do contêiner e controle do controle ActiveX](../mfc/media/vc37221.gif "Interação do contêiner e controle do controle ActiveX") <br/>
 Interação entre um contêiner de controle ActiveX e um controle ActiveX em janelas
 
 Para obter algumas informações recentes sobre como otimizar seus controles ActiveX, [consulte controles ActiveX do MFC: Otimização](../mfc/mfc-activex-controls-optimization.md).
