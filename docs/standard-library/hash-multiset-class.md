@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-ms.openlocfilehash: 6b3a57d110f2416f5539399ed087e0acbb156991
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 7881b1d6775206fbea40c3ba4b15572a6d4b3580
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689580"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890079"
 ---
 # <a name="hash_multiset-class"></a>Classe hash_multiset
 
@@ -109,13 +109,13 @@ class hash_multiset
 
 ### <a name="parameters"></a>Parâmetros
 
-@No__t_1 de *chave*
+\ de *chave*
 O tipo de dados do elemento a ser armazenado no hash_multiset.
 
-@No__t_1 de *características*
+\ de *características*
 O tipo que inclui dois objetos de função, uma das classes Compare, que é um predicado binário capaz de comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa e uma função de hash que é um predicado unário mapeando valores de chave dos elementos para não assinados números inteiros do tipo `size_t`. Esse argumento é opcional e o `hash_compare<Key, less<Key> >` é o valor padrão.
 
-@No__t_1 de *alocador*
+\ de *alocador*
 O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação de memória do hash_multiset. Esse argumento é opcional e o valor padrão é `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentários
@@ -839,16 +839,17 @@ Insere um elemento construído em um hash_multiset, com uma dica de posicionamen
 ```cpp
 template <class ValTy>
 iterator insert(
-    const_iterator _Where,
+    const_iterator where,
     ValTy&& val);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|-|-|
-|*val*|O valor de um elemento a ser inserido no [hash_multiset](../standard-library/hash-multiset-class.md), a menos que o `hash_multiset` já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.|
-|*_Where*|O local a partir do qual se começa a procurar pelo ponto de inserção correto. (A inserção pode ocorrer em tempo constante amortizado, em vez de tempo logarítmica, se o ponto de inserção imediatamente segue *_Where*.)|
+*valor* \
+O valor de um elemento a ser inserido no [hash_multiset](../standard-library/hash-multiset-class.md), a menos que o `hash_multiset` já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.
+
+*onde* \
+O local a partir do qual se começa a procurar pelo ponto de inserção correto. (A inserção pode ocorrer em tempo constante amortizado, em vez de tempo logarítmica, se o ponto de inserção for imediatamente seguido de *onde*.)
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -856,7 +857,7 @@ A função membro [hash_multiset::emplace](#emplace) retorna um iterador que apo
 
 ### <a name="remarks"></a>Comentários
 
-A inserção pode ocorrer em tempo constante amortizado, em vez de tempo logarítmica, se o ponto de inserção imediatamente seguir *_Where*.
+A inserção pode ocorrer em tempo constante amortizado, em vez de tempo logarítmica, se o ponto de inserção imediatamente seguir *onde*.
 
 ### <a name="example"></a>Exemplo
 
@@ -1091,7 +1092,7 @@ The hash_multiset hms1 doesn't have an element with a key less than 40.
 Remove um elemento ou um intervalo de elementos em um hash_multiset das posições especificadas ou remove elementos que correspondem a uma chave especificada.
 
 ```cpp
-iterator erase(iterator _Where);
+iterator erase(iterator where);
 
 iterator erase(iterator first, iterator last);
 
@@ -1100,7 +1101,7 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parâmetros
 
-@No__t_1 *_Where*
+*onde* \
 Posição do elemento a ser removido do hash_multiset.
 
 *primeiro* \
@@ -1392,33 +1393,42 @@ hash_multiset(
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last);
+    InputIterator first,
+    InputIterator last);
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last,
+    InputIterator first,
+    InputIterator last,
     const Traits& Comp);
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last,
+    InputIterator first,
+    InputIterator last,
     const Traits& Comp,
     const Allocator& Al);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|-|-|
-|*&*|A classe do alocador de armazenamento a ser usado para este objeto `hash_multiset`, cujo padrão é `Allocator`.|
-|*Às*|A função de comparação do tipo `const Traits` usada para ordenar os elementos no `hash_multiset`, cujo padrão é `hash_compare`.|
-|*Direita*|O `hash_multiset` do qual o `hash_multiset` construído é uma cópia.|
-|*Primeiro*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
-|*Última*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
-|*IList*|O initializer_list que contém os elementos a serem copiados.|
+*Al* \
+A classe do alocador de armazenamento a ser usado para este objeto `hash_multiset`, cujo padrão é `Allocator`.
+
+*Comp* \
+A função de comparação do tipo `const Traits` usada para ordenar os elementos no `hash_multiset`, cujo padrão é `hash_compare`.
+
+\ *à direita*
+O `hash_multiset` do qual o `hash_multiset` construído é uma cópia.
+
+*primeiro* \
+A posição do primeiro elemento no intervalo de elementos a serem copiados.
+
+*última* \
+A posição do primeiro elemento além do intervalo de elementos a serem copiados.
+
+*IList* \
+O initializer_list que contém os elementos a serem copiados.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1428,13 +1438,13 @@ Todos os construtores inicializam seus hash_multisets.
 
 Todos os construtores armazenam um objeto de função do tipo `Traits`, que é usado para estabelecer uma ordem entre as chaves do `hash_multiset` e que, posteriormente, pode ser retornado ao chamar [hash_multiset::key_comp](#key_comp). Para obter mais informações sobre `Traits`, consulte o tópico [Classe hash_multiset](../standard-library/hash-multiset-class.md).
 
-Os três primeiros construtores especificam um `hash_multiset` inicial vazio, o segundo que especifica o tipo de função de comparação (*comp*) a ser usado no estabelecimento da ordem dos elementos e o terceiro que especifica explicitamente o tipo de alocador (*Al*) a ser utiliza. A palavra-chave **explicit** suprime determinados tipos de conversão automática de tipo.
+Os três primeiros construtores especificam um `hash_multiset`inicial vazio, o segundo que especifica o tipo de função de comparação (*comp*) a ser usado no estabelecimento da ordem dos elementos e o terceiro que especifica explicitamente o tipo de alocador (*Al*) a ser utiliza. A palavra-chave **explicit** suprime determinados tipos de conversão automática de tipo.
 
 O quarto Construtor move o `hash_multiset` `Right`.
 
 A quinto, o sexto e o sétimo construtor usam um initializer_list.
 
-Os três últimos construtores copiam o intervalo (`First`, `Last`) de um `hash_multiset` com clareza crescente para especificar o tipo de função de comparação da classe Compare e do alocador.
+Os três últimos construtores copiam o intervalo (`first`, `last`) de um `hash_multiset` com clareza crescente para especificar o tipo de função de comparação da classe Compare e do alocador.
 
 A ordem real dos elementos de um contêiner de conjunto de hash depende da função de hash, da função de ordenação e do tamanho atual da tabela de hash e não pode, de modo geral, ser prevista como era possível com o contêiner do conjunto, em que foi determinada somente pela função de ordenação.
 
@@ -1447,46 +1457,53 @@ Insere um elemento ou um intervalo de elementos em um hash_multiset.
 
 ```cpp
 iterator insert(
-    const Type& Val);
+    const Type& value);
 
 iterator insert(
-    iterator Where,
+    iterator where,
     const Type& Al);
 
 void insert(
     initializer_list<Type> IList);
 
 iterator insert(
-    const Type& Val);
+    const Type& value);
 
 iterator insert(
-    Iterator Where,
-    const Type& Val);
+    Iterator where,
+    const Type& value);
 
 template <class InputIterator>
 void insert(
-    InputIterator First,
-    InputIterator Last);
+    InputIterator first,
+    InputIterator last);
 
 template <class ValTy>
 iterator insert(
-    ValTy&& Val);
+    ValTy&& value);
 
 template <class ValTy>
 iterator insert(
-    const_iterator Where,
-    ValTy&& Val);
+    const_iterator where,
+    ValTy&& value);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|Descrição|
-|-|-|
-|*Val*|O valor de um elemento a ser inserido no hash_multiset, a menos que hash_multiset já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.|
-|*Where*|O local a partir do qual se começa a procurar pelo ponto de inserção correto. (A inserção poderá ocorrer em um tempo constante amortizado, em vez de no tempo logarítmico, se o ponto de inserção seguir `_Where` imediatamente.)|
-|*Primeiro*|A posição do primeiro elemento a ser copiado de um hash_multiset.|
-|*Última*|A posição logo após o último elemento a ser copiado de um hash_multiset.|
-|*IList*|A initializer_list que contém os elementos a serem copiados.|
+*value*\
+O valor de um elemento a ser inserido no hash_multiset, a menos que hash_multiset já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.
+
+*onde* \
+O local a partir do qual se começa a procurar pelo ponto de inserção correto. (A inserção pode ocorrer em tempo constante amortizado, em vez de tempo logarítmica, se o ponto de inserção for imediatamente seguido de *onde*.)
+
+*primeiro* \
+A posição do primeiro elemento a ser copiado de um hash_multiset.
+
+*última* \
+A posição logo após o último elemento a ser copiado de um hash_multiset.
+
+*IList* \
+A initializer_list que contém os elementos a serem copiados.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -1494,7 +1511,7 @@ As duas primeiras funções membro de inserção retornam um iterador que aponta
 
 As três funções membro seguintes usam uma initializer_list.
 
-A terceira função membro insere a sequência de valores de elemento em um hash_multiset que corresponde a cada elemento tratado por um iterador no intervalo (`First`,`Last`) de um hash_multiset especificado.
+A terceira função membro insere a sequência de valores de elemento em um hash_multiset que corresponde a cada elemento tratado por um iterador no intervalo (`first`,`last`) de um hash_multiset especificado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1540,7 +1557,7 @@ Para obter mais informações sobre *características* , consulte o tópico da [
 
 O objeto armazenado define uma função membro:
 
-**operador booliano**( **const Key&** *_xVal,* **const Key&** _ `yVal`);
+`bool operator<(const Key& _xVal, const Key& _yVal);`
 
 que retornará **true** se `_xVal` preceder e não for igual a `_yVal` na ordem de classificação.
 
