@@ -12,16 +12,16 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 30367e003d2dad95e870854098e7fcae34f50efa
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243327"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890140"
 ---
 # <a name="ltbitsetgt-operators"></a>Operadores &lt;bitset&gt;
 
-## <a name="op_amp"></a> Operador&amp;
+## <a name="op_amp">Operador </a>&amp;
 
 Executa um `AND` bit a bit entre dois bitsets.
 
@@ -35,15 +35,15 @@ operator&(
 
 ### <a name="parameters"></a>Parâmetros
 
-*À esquerda*\
+\ *à esquerda*
 O primeiro dos dois bitsets cujos respectivos elementos devem ser combinados com o `AND` bit a bit.
 
-*Certo*\
+\ *à direita*
 A segunda das duas valarrays cujos respectivos elementos devem ser combinados com o `AND` bit a bit.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um bitset cujos elementos são o resultado da execução de `AND` operação nos elementos correspondentes de *esquerdo* e *direita*.
+Um conjunto cujos elementos são o resultado da execução da operação `AND` nos elementos correspondentes da *esquerda* e da *direita*.
 
 ### <a name="example"></a>Exemplo
 
@@ -73,7 +73,7 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a> operador&lt;&lt;
+## <a name="op_lt_lt"></a>&lt; de&lt;do operador
 
 Insere uma representação de texto da sequência de bits no fluxo de saída.
 
@@ -86,18 +86,18 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo **bitset\<N>** que deve ser inserido no fluxo de saída como uma cadeia de caracteres.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma representação de texto de sequência de bits em `ostr`.
+Uma representação de texto da sequência de bits em `ostr`.
 
 ### <a name="remarks"></a>Comentários
 
-As sobrecargas de função de modelo `operator<<`, permitindo que um bitset seja gravado primeiro ser convertido em uma cadeia de caracteres. A função de modelo é executada efetivamente:
+A função de modelo sobrecarrega `operator<<`, permitindo que um conjunto seja escrito sem primeiro convertê-lo em uma cadeia de caracteres. A função de modelo é executada efetivamente:
 
-**ostr** << _*direita*. [to_string](bitset-class.md) <**CharType**, **Traits**, **allocator**\<**CharType**>>)
+`ostr << right.`[to_string](bitset-class.md)`<CharType, Traits, allocator<CharType>>()`
 
 ### <a name="example"></a>Exemplo
 
@@ -130,36 +130,34 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a> operador&gt;&gt;
+## <a name="op_gt_gt"></a>&gt; de&gt;do operador
 
 Lê uma cadeia de caracteres de bit em um bitset.
 
 ```
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
-    basic_istream<CharType, Traits>&
-_Istr,
-    bitset<N>&
-    right);
+    basic_istream<CharType, Traits>& i_str,
+    bitset<N>& right);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Istr*\
+\ *i_str*
 A cadeia de caracteres que é inserida no fluxo de entrada a ser inserido no bitset.
 
-*Certo*\
+\ *à direita*
 O bitset que está recebendo os bits do fluxo de entrada.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A função de modelo retorna a cadeia de caracteres *_Istr*.
+A função template retorna a cadeia de caracteres *i_str*.
 
 ### <a name="remarks"></a>Comentários
 
-As sobrecargas de função de modelo `operator>>` para armazenar no bitset _ *direito* o valor bitset (`str`), onde `str` é um objeto do tipo [basic_string](basic-string-class.md)  <  **CharType**, **Traits**, **alocador** \< **CharType**>> **&** extraídos da *_Istr*.
+A função de modelo sobrecarrega `operator>>` para armazenar no conjunto *direito* do valor `bitset(str)`, em que `str` é um objeto do tipo [basic_string](basic-string-class.md)`< CharType, Traits, allocator< CharType > >&` extraído de *i_str*.
 
-A função de modelo extrai elementos de *_Istr* e os insere em um bitset até:
+A função de modelo extrai elementos de *i_str* e os insere no conjunto até:
 
 - Todos os elementos do bit terem sido extraídos do fluxo de entrada e armazenados no bitset.
 
@@ -216,7 +214,7 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a> operador ^
+## <a name="op_xor"></a>operador ^
 
 Executa um `EXCLUSIVE-OR` bit a bit entre dois bitsets.
 
@@ -230,15 +228,15 @@ operator^(
 
 ### <a name="parameters"></a>Parâmetros
 
-*À esquerda*\
+\ *à esquerda*
 O primeiro dos dois bitsets cujos respectivos elementos devem ser combinados com o `EXCLUSIVE-OR` bit a bit.
 
-*Certo*\
+\ *à direita*
 A segunda das duas valarrays cujos respectivos elementos devem ser combinados com o `EXCLUSIVE-OR` bit a bit.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um bitset cujos elementos são o resultado da execução de `EXCLUSIVE-OR` operação nos elementos correspondentes de *esquerdo* e *direita*.
+Um conjunto cujos elementos são o resultado da execução da operação `EXCLUSIVE-OR` nos elementos correspondentes da *esquerda* e da *direita*.
 
 ### <a name="example"></a>Exemplo
 
@@ -268,7 +266,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a> operador&#124;
+## <a name="op_or"></a>operador&#124;
 
 Executa um `OR` bit a bit entre dois bitsets.
 
@@ -282,15 +280,15 @@ operator|(
 
 ### <a name="parameters"></a>Parâmetros
 
-*À esquerda*\
+\ *à esquerda*
 O primeiro dos dois bitsets cujos respectivos elementos devem ser combinados com o `OR` bit a bit.
 
-*Certo*\
+\ *à direita*
 A segunda das duas valarrays cujos respectivos elementos devem ser combinados com o `OR` bit a bit.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um bitset cujos elementos são o resultado da execução de `OR` operação nos elementos correspondentes de *esquerdo* e *direita*.
+Um conjunto cujos elementos são o resultado da execução da operação `OR` nos elementos correspondentes da *esquerda* e da *direita*.
 
 ### <a name="example"></a>Exemplo
 

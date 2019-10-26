@@ -79,12 +79,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: f1015e53e137b9001bd90233c281345d474bc03f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689695"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890199"
 ---
 # <a name="forward_list-class"></a>Classe forward_list
 
@@ -103,7 +103,7 @@ class forward_list
 Tipo * \
 O tipo de dados do elemento a ser armazenado na forward_list.
 
-@No__t_1 de *alocador*
+\ de *alocador*
 O objeto alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória na forward_list. Esse parâmetro é opcional. O valor padrão é alocador < `Type` >.
 
 ## <a name="remarks"></a>Comentários
@@ -524,7 +524,7 @@ O número de elementos na lista construída.
 *Valor* \
 O valor dos elementos na lista construída.
 
-@No__t_1 *à direita*
+\ *à direita*
 A lista da qual a lista construída é uma cópia.
 
 *Primeiro* \
@@ -678,7 +678,7 @@ O objeto de função compare que é usado para classificar elementos.
 
 ### <a name="remarks"></a>Comentários
 
-`forward_list::merge` remove os elementos da `right` de `forward_list` e os insere nesse `forward_list`. As duas sequências devem ser ordenadas pelo mesmo predicado, descrito abaixo. A sequência combinada também é ordenada por esse objeto de função de comparação.
+`forward_list::merge` remove os elementos da `right`de `forward_list` e os insere nesse `forward_list`. As duas sequências devem ser ordenadas pelo mesmo predicado, descrito abaixo. A sequência combinada também é ordenada por esse objeto de função de comparação.
 
 Para os iteradores `Pi` e `Pj` que designam elementos nas posições `i` e `j`, a primeira função membro impõe a ordem `!(*Pj < *Pi)` sempre que `i < j`. (Os elementos são classificados em ordem `ascending`.) A segunda função de membro impõe a ordem `! comp(*Pj, *Pi)` sempre que `i < j`.
 
@@ -810,7 +810,7 @@ void resize(size_type _Newsize, const Type& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-@No__t_1 *_Newsize*
+\ *_Newsize*
 O número de elementos na lista de encaminhamento redimensionada.
 
 *valor* \
@@ -898,7 +898,7 @@ A posição na forward_list de destino após a qual o elemento deve ser inserido
 *Source*\
 A forward_list de origem que deve ser inserida na forward_list de destino.
 
-@No__t_1 *ITER*
+\ *ITER*
 O elemento a ser inserido da forward_list de origem.
 
 *Primeiro* \
@@ -1044,4 +1044,4 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para o parâmetro de modelo _ `Ty`.
+O tipo é um sinônimo do parâmetro de modelo `Type`.
