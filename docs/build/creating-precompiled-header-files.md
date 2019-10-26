@@ -1,22 +1,22 @@
 ---
 title: Arquivos de cabeçalho pré-compilado
-ms.date: 08/19/2019
+ms.date: 10/24/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 273d8cf996c2717339dd20dcbc7512f9c62afa8d
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
+ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69630507"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920106"
 ---
 # <a name="precompiled-header-files"></a>Arquivos de cabeçalho pré-compilado
 
-Quando você cria um novo projeto no Visual Studio, um *arquivo de cabeçalho pré-compilado* chamado *PCH. h* é adicionado ao projeto. (No Visual Studio 2017 e anterior, o arquivo foi chamado de *stdafx. h*.) A finalidade do arquivo é acelerar o processo de compilação. Todos os arquivos de cabeçalho estáveis, por exemplo, cabeçalhos `<vector>`de biblioteca padrão, como, devem ser incluídos aqui. O cabeçalho pré-compilado é compilado somente quando ele ou qualquer arquivo que ele inclui, são modificados. Se você fizer alterações apenas no código-fonte do projeto, a compilação ignorará a compilação para o cabeçalho pré-compilado. 
+Quando você cria um novo projeto no Visual Studio, um *arquivo de cabeçalho pré-compilado* chamado *PCH. h* é adicionado ao projeto. (No Visual Studio 2017 e anterior, o arquivo foi chamado de *stdafx. h*.) A finalidade do arquivo é acelerar o processo de compilação. Todos os arquivos de cabeçalho estáveis, por exemplo, cabeçalhos de biblioteca padrão, como `<vector>`, devem ser incluídos aqui. O cabeçalho pré-compilado é compilado somente quando ele ou qualquer arquivo que ele inclui, são modificados. Se você fizer alterações apenas no código-fonte do projeto, a compilação ignorará a compilação para o cabeçalho pré-compilado. 
 
 As opções do compilador para cabeçalhos pré-compilados são [/y](reference/y-precompiled-headers.md). Nas páginas de propriedades do projeto, as opções estão localizadas em **Propriedades de configuraçãoC++ > C/> cabeçalhos pré-compilados**. Você pode optar por não usar cabeçalhos pré-compilados e pode especificar o nome do arquivo de cabeçalho e o nome e o caminho do arquivo de saída. 
 
@@ -87,7 +87,7 @@ Quando você especifica a opção usar arquivo de cabeçalho pré-compilado (/Yu
 
 ### <a name="pragma-consistency"></a>Consistência de pragma
 
-Os Pragmas processados durante a criação de um arquivo PCH geralmente afetam o arquivo com o qual o arquivo PCH é usado posteriormente. Os `comment` pragmas e `message` não afetam o restante da compilação.
+Os Pragmas processados durante a criação de um arquivo PCH geralmente afetam o arquivo com o qual o arquivo PCH é usado posteriormente. Os pragmas `comment` e `message` não afetam o restante da compilação.
 
 Esses pragmas afetam apenas o código dentro do arquivo PCH; Eles não afetam o código que utiliza subseqüentemente o arquivo PCH:
 
@@ -116,7 +116,7 @@ Quando você usa um cabeçalho pré-compilado criado usando/YC ou/Yu, o compilad
 
 Esta tabela lista as opções de compilador que podem disparar um aviso de inconsistência ao usar um cabeçalho pré-compilado:
 
-|Opção|Nome|Regra|
+|Opção|Name|Regra|
 |------------|----------|----------|
 |/D|Definir constantes e macros|Deve ser o mesmo entre a compilação que criou o cabeçalho pré-compilado e a compilação atual. O estado das constantes definidas não é verificado, mas resultados imprevisíveis podem ocorrer se os arquivos dependerem dos valores das constantes alteradas.|
 |/E ou/EP|Copiar saída do pré-processador para a saída padrão|Os cabeçalhos pré-compilados não funcionam com a opção/E ou/EP.|
@@ -179,9 +179,9 @@ UNSTABLEHDRS = unstable.h
 CLFLAGS = /c /W3
 # List all linker options common to both debug and final
 # versions of your code here:
-LINKFLAGS = /NOD /ONERROR:NOEXE
+LINKFLAGS = /nologo
 !IF "$(DEBUG)" == "1"
-CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi /f
+CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi
 LINKFLAGS = $(LINKFLAGS) /COD
 LIBS      = slibce
 !ELSE
@@ -257,7 +257,7 @@ void savetime( void );
 //
 #ifndef __UNSTABLE_H
 #define __UNSTABLE_H
-#include<iostream.h>
+#include<iostream>
 void notstable( void );
 #endif // __UNSTABLE_H
 ```
@@ -270,6 +270,7 @@ void notstable( void );
 #include"another.h"
 #include"stable.h"
 #include"unstable.h"
+using namespace std;
 // The following code represents code that is deemed stable and
 // not likely to change. The associated interface code is
 // precompiled. In this example, the header files STABLE.H and
@@ -307,5 +308,5 @@ int main( void )
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de build C/C++](reference/c-cpp-building-reference.md)<br/>
+[Referência de compilação C/C++](reference/c-cpp-building-reference.md)<br/>
 [Opções do compilador MSVC](reference/compiler-options.md)
