@@ -53,6 +53,6 @@ Depois de gerar a reprodução do link, abra essa página de propriedades novame
 
 ## <a name="see-also"></a>Consulte também
 
-@No__t de [referência do vinculador MSVC](linking.md)-1
+[referência do vinculador MSVC](linking.md)\
 [Opções do vinculador MSVC](linker-options.md)\
 [/LINKREPROTARGET](linkreprotarget.md)
