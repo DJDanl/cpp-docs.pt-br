@@ -1,23 +1,25 @@
 ---
 title: Opções de DUMPBIN
-ms.date: 11/04/2016
+ms.date: 10/24/2019
 f1_keywords:
 - dumpbin
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 655087236e3e4644c6215da2adccd9755c767b77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81c66f1971294531a2904a0b681819476bcc1eb2
+ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272735"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144549"
 ---
 # <a name="dumpbin-options"></a>Opções de DUMPBIN
 
-Uma opção consiste em um especificador de opção, que é um traço (-) ou uma barra (/), seguido do nome da opção. Nomes de opção não podem ser abreviados. Algumas opções de levam argumentos, especificados após dois-pontos (:). Não há espaços ou tabulações são permitidas em uma especificação de opção. Use um ou mais espaços ou tabulações para separar as especificações de opção na linha de comando. Nomes de opção e seus argumentos de nome de arquivo ou a palavra-chave não diferenciam maiusculas de minúsculas. A maioria das opções se aplicam a todos os arquivos binários; Alguns se aplicam somente a determinados tipos de arquivos. Por padrão, o DUMPBIN envia informações para a saída padrão. Use o [/out](out-dumpbin.md) opção para enviar a saída para um arquivo.
+Uma opção consiste em um *especificador de opção*, que é um traço (`-`) ou uma barra (`/`), seguido pelo nome da opção. Nomes de opção não podem ser abreviados. Algumas opções usam argumentos, especificados após um sinal de dois-pontos (`:`). Não são permitidos espaços ou guias dentro de uma especificação de opção. Use um ou mais espaços ou guias para separar as especificações de opção na linha de comando. Nomes de opção e seus argumentos de nome de arquivo ou palavra-chave não diferenciam maiúsculas de minúsculas. A maioria das opções se aplica a todos os arquivos binários, mas alguns aplicam-se apenas a determinados tipos de arquivos. Por padrão, o DUMPBIN envia informações para a saída padrão. Use a opção [/out](out-dumpbin.md) para enviar a saída para um arquivo.
 
-Opção DUMPBIN tem as seguintes opções:
+## <a name="options-list"></a>Lista de opções
+
+DUMPBIN tem as seguintes opções:
 
 - [/ALL](all.md)
 
@@ -29,9 +31,9 @@ Opção DUMPBIN tem as seguintes opções:
 
 - [/DIRECTIVES](directives.md)
 
-- [/DISASM](disasm.md)
+- [\[/DISASM: {BYTES\|nobytes}\]](disasm.md)
 
-- [/ERRORREPORT (dumpbin.exe)](errorreport-dumpbin-exe.md)
+- [/ERRORREPORT: {NONE | PROMPT | FILA | NOVAMENTE](errorreport-dumpbin-exe.md)
 
 - [/EXPORTS](dash-exports.md)
 
@@ -39,27 +41,29 @@ Opção DUMPBIN tem as seguintes opções:
 
 - [/HEADERS](headers.md)
 
-- [/IMPORTS](imports-dumpbin.md)
+- [/IMPORTS\[: nome de arquivo\]](imports-dumpbin.md)
 
 - [/LINENUMBERS](linenumbers.md)
 
-- [/LINKERMEMBER](linkermember.md)
+- [\[/LINKERMEMBER: {1 | 2}\]](linkermember.md)
 
 - [/LOADCONFIG](loadconfig.md)
 
-- [/OUT](out-dumpbin.md)
+- [/NOPDB](nopdb.md)
+
+- [/OUT: nome de arquivo](out-dumpbin.md)
 
 - [/PDATA](pdata.md)
 
-- [/PDBPATH](pdbpath.md)
+- [\[/PDBPATH:\] detalhado](pdbpath.md)
 
-- [/RANGE](range.md)
+- [/RANGEE: vaMin\[, vaMax\]](range.md)
 
-- [/RAWDATA](rawdata.md)
+- [/RAWDATA\[: {NONE\|1\|2\|4\|8}\[, #\]\]](rawdata.md)
 
 - [/RELOCATIONS](relocations.md)
 
-- [/ SEÇÃO](section-dumpbin.md)
+- [/SECTION: nome](section-dumpbin.md)
 
 - [/SUMMARY](summary.md)
 
@@ -67,7 +71,10 @@ Opção DUMPBIN tem as seguintes opções:
 
 - [/TLS](tls.md)
 
+Para listar as opções com suporte do DUMPBIN na linha de comando, use a opção **/?** Option.
+
 ## <a name="see-also"></a>Consulte também
 
-[Ferramentas de Build do MSVC adicionais](c-cpp-build-tools.md)<br/>
+[Ferramentas de compilação MSVC adicionais](c-cpp-build-tools.md)\
+\ de [linha de comando DUMPBIN](dumpbin-command-line.md)
 [Referência de DUMPBIN](dumpbin-reference.md)
