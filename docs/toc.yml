@@ -1157,34 +1157,7 @@
                     - name: Makefile de exemplo
                       href: build/reference/sample-makefile.md
                 - name: Blocos de descrição
-                  expanded: false
-                  items:
-                    - name: Blocos de descrição
-                      href: build/reference/description-blocks.md
-                    - name: Destinos
-                      expanded: false
-                      items:
-                        - name: Destinos
-                          href: build/reference/targets.md
-                        - name: Pseudodestinos
-                          href: build/reference/pseudotargets.md
-                        - name: Vários destinos
-                          href: build/reference/multiple-targets.md
-                        - name: Dependências cumulativas
-                          href: build/reference/cumulative-dependencies.md
-                        - name: Destinos em vários blocos de descrição
-                          href: build/reference/targets-in-multiple-description-blocks.md
-                        - name: Efeitos colaterais da dependência
-                          href: build/reference/dependency-side-effects.md
-                    - name: Dependentes
-                      expanded: false
-                      items:
-                        - name: Dependentes
-                          href: build/reference/dependents.md
-                        - name: Dependentes inferidos
-                          href: build/reference/inferred-dependents.md
-                        - name: Procurar dependentes em caminhos
-                          href: build/reference/search-paths-for-dependents.md
+                  href: build/reference/description-blocks.md
                 - name: Comandos em um makefile
                   expanded: false
                   items:
@@ -1410,6 +1383,8 @@
                       href: build/reference/linkermember.md
                     - name: /LOADCONFIG
                       href: build/reference/loadconfig.md
+                    - name: /NOPDB
+                      href: build/reference/nopdb.md
                     - name: /OUT (DUMPBIN)
                       href: build/reference/out-dumpbin.md
                     - name: /PDATA
