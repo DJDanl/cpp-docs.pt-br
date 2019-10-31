@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62267122"
 ---
-# <a name="staticcast-operator"></a>Operador static_cast
+# <a name="static_cast-operator"></a>Operador static_cast
 
 Converte um *expressão* para o tipo de *id de tipo,* com base apenas nos tipos que estão presentes na expressão.
 

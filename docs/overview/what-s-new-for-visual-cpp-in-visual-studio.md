@@ -7,7 +7,7 @@ author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: f02c5878f5f741c216499f619bfd1392483bfa86
 ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/03/2019
 ms.locfileid: "67552351"

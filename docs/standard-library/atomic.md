@@ -94,7 +94,7 @@ As especializações parciais `atomic<T *>` se aplicam a todos os tipos de ponte
 
 As especializações `atomic<integral>` aplicam-se a todos os tipos integrais. Elas fornecem operações adicionais que não estão disponíveis por meio do modelo primário.
 
-Cada tipo `atomic<integral>` tem uma macro correspondente que você pode usar em um `if directive` para determinar no tempo de compilação se operações desse tipo estão livres de bloqueio. Se o valor da macro for zero, operações do tipo não serão livres de bloqueio. Se o valor for 1, as operações podem ser livres de bloqueio e uma verificação de tempo de execução será necessária. Se o valor for 2, as operações serão livres de bloqueio. Você pode usar a função `atomic_is_lock_free` para determinar no tempo de execução se as operações no tipo são livres de bloqueio.
+Cada tipo `atomic<integral>` tem uma macro correspondente que você pode usar em um `if directive` para determinar no tempo de compilação se operações desse tipo estão livres de bloqueio. Se o valor da macro for zero, operações do tipo não serão livres de bloqueio. Se o valor for 1, as operações podem ser livres de bloqueio e uma verificação de runtime será necessária. Se o valor for 2, as operações serão livres de bloqueio. Você pode usar a função `atomic_is_lock_free` para determinar no tempo de execução se as operações no tipo são livres de bloqueio.
 
 Para cada um dos tipos integrais, há um tipo atômico nomeado correspondente que gerencia um objeto desse tipo integral. Cada tipo `atomic_integral` tem o mesmo conjunto de funções membro que a instanciação correspondente de `atomic<T>` e pode ser passado para qualquer uma das funções atômicas não membro.
 

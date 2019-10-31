@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62399017"
 ---
-# <a name="dynamiccast-operator"></a>Operador dynamic_cast
+# <a name="dynamic_cast-operator"></a>Operador dynamic_cast
 
 Converte o operando `expression` em um objeto do tipo `type-id`.
 

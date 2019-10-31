@@ -252,7 +252,7 @@ Descreve como compilar um programa gravado na linguagem de programação C.
 Descreve como criar e compilar um programa C++/CLI que usa o .NET Framework.
 
 [Walkthrough: Compilando C++um programa/CX na linha de comando](walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)<br/>
-Descreve como criar e compilar um programa C++/CX que usa o Tempo de Execução do Windows.
+Descreve como criar e compilar um programa C++/CX que usa o Windows Runtime.
 
 [Definir o caminho e as variáveis de ambiente para compilações de linha de comando](setting-the-path-and-environment-variables-for-command-line-builds.md)<br/>
 Como definir variáveis de ambiente para usar um conjunto de ferramentas de 32 bits ou 64 bits para direcionar plataformas x86, x64, ARM e ARM64.

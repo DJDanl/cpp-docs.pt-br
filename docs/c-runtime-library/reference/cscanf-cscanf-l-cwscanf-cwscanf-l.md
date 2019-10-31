@@ -63,7 +63,7 @@ Lê os dados formatados do console. Versões mais seguras dessas funções estã
 > No Visual Studio 2015, a `printf` e a `scanf` família de funções foram declaradas como **embutidas** e movidas para os cabeçalhos `<stdio.h>` e `<conio.h>`. Se você estiver migrando um código mais antigo, poderá ver *LNK2019* em conexão com essas funções. Para obter mais informações, consulte o [histórico de alterações Visual C++ 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 

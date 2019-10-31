@@ -98,7 +98,7 @@ Estritamente falando, a C++ linguagem não tem nenhum tipo de cadeia de caracter
 
 ## <a name="user-defined-types"></a>Tipos definidos pelo usuário
 
-Quando você define uma **classe**, **struct**, **Union**ou **enum**, essa construção é usada no restante do seu código como se fosse um tipo fundamental. Ele tem um tamanho conhecido na memória e certas regras sobre como pode ser usado aplicado para verificar o tempo de compilação e, no tempo de execução, para a vida útil de seu programa. As principais diferenças entre os tipos internos fundamentais e os tipos definidos pelo usuário são:
+Quando você define uma **classe**, **struct**, **Union**ou **enum**, essa construção é usada no restante do seu código como se fosse um tipo fundamental. Ele tem um tamanho conhecido na memória e certas regras sobre como pode ser usado aplicado para verificar o tempo de compilação e, no runtime, para a vida útil de seu programa. As principais diferenças entre os tipos internos fundamentais e os tipos definidos pelo usuário são:
 
 - O compilador não tem conhecimento interno de um tipo definido pelo usuário. Ele aprende o tipo quando ele encontra a definição pela primeira vez durante o processo de compilação.
 

@@ -33,7 +33,7 @@ Se você tiver um aplicativo da Windows 8.1 Store, você poderá usar este proce
 
    Você precisa ter instalado as **Ferramentas do Windows 8.1 na instalação do Visual Studio**. Se essas ferramentas não estiverem instaladas, inicie a instalação do **Visual Studio** pela janela **Programas e Recursos**, escolha **Visual Studio 2017** e, na janela de instalação, escolha **Modificar**. Localize as **Ferramentas do Windows 8.1**, verifique se essa opção está selecionada e escolha **OK**.
 
-1. Abra a janela **Propriedades do Projeto** e, em **C++** > **Geral**, defina o **Conjunto de Ferramentas da Plataforma** como **v141**, o conjunto de ferramentas para o Visual Studio 2017.
+1. Abra a janela **Propriedades do Projeto** e, em **C++**  > **Geral**, defina o **Conjunto de Ferramentas da Plataforma** como **v141**, o conjunto de ferramentas para o Visual Studio 2017.
 
 1. Compile o projeto como um projeto Windows 8.1 e resolva eventuais erros de build. Quaisquer erros neste estágio são provavelmente devido a alterações interruptivas nas ferramentas de build e bibliotecas. Consulte [Histórico de alterações de 2003 – 2015 do Visual C++](../porting/visual-cpp-change-history-2003-2015.md) para obter uma explicação detalhada das alterações que podem afetar seu código.
 

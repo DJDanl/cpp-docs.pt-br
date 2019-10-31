@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
 ms.openlocfilehash: af395ea6f8c8e6a88bd2b003f0eee948bde8b6a9
 ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2019
 ms.locfileid: "65449097"
@@ -18,7 +18,7 @@ A Microsoft publicou o código-fonte da Biblioteca padrão, da maior parte da bi
 
 Na maioria dos casos, o documento de Novidades ou o de Alterações Significativas para cada versão do Visual Studio não menciona alterações de internos de biblioteca. Afinal, você não deveria ser afetado por esses detalhes de implementação. No entanto, algumas vezes a tentação de usar um código que você pode ver dentro da biblioteca é muito grande. Este tópico discute as dependências em CRT ou em internos de Biblioteca padrão que você possa ter utilizado e discute como atualizar seu código para remover essas dependências e torná-lo mais portátil ou migrar para novas versões da biblioteca.
 
-## <a name="hashseq"></a>_Hash_seq
+## <a name="_hash_seq"></a>_Hash_seq
 
 A função de hash interna `std::_Hash_seq(const unsigned char *, size_t)`, usada para implementar `std::hash` em alguns tipos de cadeia de caracteres, era visível em versões recentes da Biblioteca padrão. Essa função implementava um [hash FNV-1a]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) em uma sequência de caracteres.
 

@@ -15,7 +15,7 @@ ms.locfileid: "72688028"
 
 Inclua o cabeçalho padrão \<future > para definir modelos de classe e modelos de suporte que simplificam a execução de uma função — possivelmente em um thread separado — e a recuperação do resultado. O resultado é o valor retornado pela função ou uma exceção que é emitida pela função, mas não é capturada na função.
 
-Esse cabeçalho usa ConcRT (Tempo de Execução de Simultaneidade) para que você possa usá-lo juntamente com outros mecanismos ConcRT. Para obter mais informações sobre o ConcRT, consulte [Tempo de execução de simultaneidade](../parallel/concrt/concurrency-runtime.md).
+Esse cabeçalho usa ConcRT (Runtime de Simultaneidade) para que você possa usá-lo juntamente com outros mecanismos ConcRT. Para obter mais informações sobre o ConcRT, consulte [Tempo de execução de simultaneidade](../parallel/concrt/concurrency-runtime.md).
 
 ## <a name="syntax"></a>Sintaxe
 

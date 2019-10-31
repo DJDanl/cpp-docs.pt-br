@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
 ms.openlocfilehash: d9544e3002cfa489e9700b83367b15b164e9b513
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "65516131"

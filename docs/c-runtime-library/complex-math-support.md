@@ -9,7 +9,7 @@ helpviewer_keywords:
 - complex numbers
 ms.openlocfilehash: 493886fcf1dbfd3dc16487dd8650206c428bb06d
 ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "66186087"

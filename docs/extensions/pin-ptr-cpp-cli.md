@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
 ms.openlocfilehash: a8c6733a9f6e5c9650333f96a92ff18eedb9c356
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "65516491"
 ---
-# <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
+# <a name="pin_ptr-ccli"></a>pin_ptr (C++/CLI)
 
 Declara um *ponteiro de fixação*, que é usado apenas com o Common Language Runtime.
 
