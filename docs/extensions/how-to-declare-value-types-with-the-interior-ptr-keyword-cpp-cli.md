@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
 ms.openlocfilehash: 2b75f6c4763ddd7d3fd2d802371e21c40d506b16
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "65515751"
 ---
-# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Como: declarar tipos de valor com a palavra-chave interior_ptr (C++/CLI)
+# <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Como: declarar tipos de valor com a palavra-chave interior_ptr (C++/CLI)
 
 Um **interior_ptr** pode ser usado com um tipo de valor.
 

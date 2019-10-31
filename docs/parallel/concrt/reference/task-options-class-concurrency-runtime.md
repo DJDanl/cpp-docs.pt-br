@@ -11,7 +11,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62407868"
 ---
-# <a name="taskoptions-class-concurrency-runtime"></a>task_options Classe (Tempo de Execução de Simultaneidade)
+# <a name="task_options-class-concurrency-runtime"></a>task_options Classe (Tempo de Execução de Simultaneidade)
 
 Representa as opções permitidas para criar uma tarefa
 

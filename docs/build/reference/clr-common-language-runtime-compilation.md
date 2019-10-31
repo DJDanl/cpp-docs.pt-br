@@ -26,7 +26,7 @@ Permite que aplicativos e componentes usem recursos do CLR (Common Language Runt
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/clr**[**:**_options_]
+> **/clr**[ **:** _options_]
 
 ## <a name="arguments"></a>Arguments
 
@@ -83,7 +83,7 @@ Se você compilar usando **/c**, poderá especificar o tipo CLR do arquivo de sa
 
 Para obter informações sobre como determinar o tipo de imagem CLR de um arquivo, confira [/CLRHEADER](clrheader.md).
 
-Todos os módulos passados para uma invocação especificada do vinculador precisam ser compilados com a mesma opção do compilador da biblioteca em tempo de execução (**/MD** ou **/LD**).
+Todos os módulos passados para uma invocação especificada do vinculador precisam ser compilados com a mesma opção do compilador da biblioteca em tempo de execução ( **/MD** ou **/LD**).
 
 Use a opção do vinculador [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md) para inserir um recurso em um assembly. As opções do vinculador [/DELAYSIGN](delaysign-partially-sign-an-assembly.md), [/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md) e [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) também permitem que você personalize como um assembly é criado.
 

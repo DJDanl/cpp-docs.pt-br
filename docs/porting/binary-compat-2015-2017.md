@@ -13,9 +13,9 @@ ms.locfileid: "72587897"
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2019"></a>Compatibilidade binária de C++ entre o Visual Studio 2015 e o Visual Studio 2019
 
-No Visual Studio 2013 e em versões anteriores, não havia garantia de compatibilidade binária entre arquivos-objetos (OBJs), bibliotecas estáticas (LIBs), bibliotecas dinâmicas (DLLs) e executáveis (EXEs) compilados com versões diferentes do conjunto de ferramentas do compilador e das bibliotecas de tempo de execução. 
+No Visual Studio 2013 e em versões anteriores, não havia garantia de compatibilidade binária entre arquivos-objetos (OBJs), bibliotecas estáticas (LIBs), bibliotecas dinâmicas (DLLs) e executáveis (EXEs) compilados com versões diferentes do conjunto de ferramentas do compilador e das bibliotecas de runtime. 
 
-No Visual Studio 2015 e posteriores, o número principal do conjunto de ferramentas do C++ é 14 (v140 para Visual Studio 2015, v141 para Visual Studio 2017 e v142 para Visual Studio 2019). Isso reflete o fato de que tanto as bibliotecas de tempo de execução quanto os aplicativos compilados com uma das versões do compilador apresentam compatibilidade binária. Isso significa que, se você tiver uma biblioteca de terceiros que foi criada com o Visual Studio 2015, você não precisará recompilá-la a fim de consumi-la de um aplicativo criado com o Visual Studio 2017 ou com o Visual Studio 2019.
+No Visual Studio 2015 e posteriores, o número principal do conjunto de ferramentas do C++ é 14 (v140 para Visual Studio 2015, v141 para Visual Studio 2017 e v142 para Visual Studio 2019). Isso reflete o fato de que tanto as bibliotecas de runtime quanto os aplicativos compilados com uma das versões do compilador apresentam compatibilidade binária. Isso significa que, se você tiver uma biblioteca de terceiros que foi criada com o Visual Studio 2015, você não precisará recompilá-la a fim de consumi-la de um aplicativo criado com o Visual Studio 2017 ou com o Visual Studio 2019.
 
 A única exceção a essa regra é que as bibliotecas estáticas ou os arquivos-objeto são compilados com o comutador de compilador `/GL` que não apresenta compatibilidade binária. 
 

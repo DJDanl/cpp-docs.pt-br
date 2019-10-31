@@ -20,9 +20,9 @@ Para obter informações sobre a versão mais recente do Visual Studio, consulte
 > [!NOTE]
 > Não há alterações significativas binárias entre o Visual Studio 2015 e Visual Studio 2017.
 
-Ao fazer a atualização para uma nova versão do Visual Studio, você pode encontrar erros de compilação e/ou de tempo de execução no código que foi compilado anteriormente e executado corretamente. As alterações na nova versão que causam tais problemas são conhecidas como *alterações significativas* e, normalmente, são exigidas pelas modificações no padrão da linguagem C++, nas assinaturas de função ou no layout de objetos na memória.
+Ao fazer a atualização para uma nova versão do Visual Studio, você pode encontrar erros de compilação e/ou de runtime no código que foi compilado anteriormente e executado corretamente. As alterações na nova versão que causam tais problemas são conhecidas como *alterações significativas* e, normalmente, são exigidas pelas modificações no padrão da linguagem C++, nas assinaturas de função ou no layout de objetos na memória.
 
-Para evitar os erros de tempo de execução que são difíceis de detectar e diagnosticar, é recomendável nunca vincular estaticamente a binários compilados usando uma versão diferente do compilador. Além disso, ao fazer atualização de um projeto EXE ou DLL, assegure-se de atualizar as bibliotecas às quais ele se vincula. Não passe tipos CRT (Tempo de execução de C) ou de Biblioteca do C++ Standard entre binários (incluindo DLLs) compilados usando diferentes versões do compilador. Para obter mais informações, consulte [Erros potenciais ao passar objetos CRT entre limites de DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+Para evitar os erros de tempo de execução que são difíceis de detectar e diagnosticar, é recomendável nunca vincular estaticamente a binários compilados usando uma versão diferente do compilador. Além disso, ao fazer atualização de um projeto EXE ou DLL, assegure-se de atualizar as bibliotecas às quais ele se vincula. Não passe tipos CRT (Runtime de C) ou de Biblioteca do C++ Standard entre binários (incluindo DLLs) compilados usando diferentes versões do compilador. Para obter mais informações, consulte [Erros potenciais ao passar objetos CRT entre limites de DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
 
 Você nunca deve escrever código que dependa de um determinado layout de um objeto que não seja uma interface COM ou um objeto POD. Se você escrever tal código, será preciso garantir que ele funcione após a atualização. Para obter mais informações, consulte [Portabilidade em limites ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md).
 
@@ -84,13 +84,13 @@ Além disso, aprimoramentos contínuos para a conformidade do compilador podem a
 
 - **FLT_ROUNDS**
 
-   No Visual Studio 2013, a macro FLT_ROUNDS expandia-se para uma expressão constante, o que era incorreto, porque o modo de arredondamento é configurável no tempo de execução, por exemplo, pela chamada de fesetround. A macro FLT_ROUNDS agora é dinâmica e reflete corretamente o modo de arredondamento atual.
+   No Visual Studio 2013, a macro FLT_ROUNDS expandia-se para uma expressão constante, o que era incorreto, porque o modo de arredondamento é configurável no runtime, por exemplo, pela chamada de fesetround. A macro FLT_ROUNDS agora é dinâmica e reflete corretamente o modo de arredondamento atual.
 
 #### <a name="new-and-newh"></a>\<new> e \<new.h>
 
 - **new e delete**
 
-   Nas versões anteriores da biblioteca, as funções new e delete do operador definido pela implementação foram exportadas da biblioteca de tempo de execução DLL (por exemplo, msvcr120.dll). Essas funções de operador agora estão sempre vinculadas estaticamente em seus binários, mesmo ao usar as bibliotecas de tempo de execução DLLs.
+   Nas versões anteriores da biblioteca, as funções new e delete do operador definido pela implementação foram exportadas da biblioteca de runtime DLL (por exemplo, msvcr120.dll). Essas funções de operador agora estão sempre vinculadas estaticamente em seus binários, mesmo ao usar as bibliotecas de runtime DLLs.
 
    Essa não é uma alteração da falha para o código nativo ou misto (`/clr`), no entanto, para o código compilado como [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), essa alteração pode causar falha ao compilar seu código. Se você compilar o código como `/clr:pure`, talvez seja necessário adicionar `#include <new>` ou `#include <new.h>` para contornar erros de build devidos a essa alteração. A opção `/clr:pure` foi preterida no Visual Studio 2015 e não tem suporte no Visual Studio 2017. Os códigos que precisarem ser "puros" deverão ser movidos para C#.
 
@@ -195,7 +195,7 @@ Além disso, aprimoramentos contínuos para a conformidade do compilador podem a
 
    A precisão padrão dos especificadores de formato %A e %a era de 6 nas versões anteriores da biblioteca. A precisão padrão agora é de 13 para conformidade com o Padrão C.
 
-   Essa é uma alteração de comportamento de tempo de execução na saída de qualquer função que usa uma cadeia de caracteres de formato com %A ou %a. No comportamento antigo, a saída usando o especificador %A seria "1.1A2B3Cp+111". Agora, a saída para o mesmo valor é "1.1A2B3C4D5E6F7p+111". Para obter o comportamento antigo, você pode especificar a precisão, por exemplo, %.6A. Consulte [Especificação da precisão](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).
+   Essa é uma alteração de comportamento de runtime na saída de qualquer função que usa uma cadeia de caracteres de formato com %A ou %a. No comportamento antigo, a saída usando o especificador %A seria "1.1A2B3Cp+111". Agora, a saída para o mesmo valor é "1.1A2B3C4D5E6F7p+111". Para obter o comportamento antigo, você pode especificar a precisão, por exemplo, %.6A. Consulte [Especificação da precisão](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).
 
 - **Especificador %F**
 
@@ -245,11 +245,11 @@ Além disso, aprimoramentos contínuos para a conformidade do compilador podem a
 
 - **strtof e wcstof**
 
-   As funções `strtof` e `wcstof` falhavam ao definir `errno` como ERANGE quando o valor não era representável como um float. Esse erro era específico dessas duas funções; as funções `strtod`, `wcstod`, `strtold` e `wcstold` não foram afetadas. Esse problema foi corrigido e é uma alteração da falha de tempo de execução.
+   As funções `strtof` e `wcstof` falhavam ao definir `errno` como ERANGE quando o valor não era representável como um float. Esse erro era específico dessas duas funções; as funções `strtod`, `wcstod`, `strtold` e `wcstold` não foram afetadas. Esse problema foi corrigido e é uma alteração da falha de runtime.
 
 - **Funções de alocação alinhada**
 
-   Nas versões anteriores, as funções de alocação alinhada (`_aligned_malloc`, `_aligned_offset_malloc` etc.) aceitariam silenciosamente as solicitações de um bloco com um alinhamento 0. O alinhamento solicitado deve ser uma potência de dois, que o zero não é. Um alinhamento solicitado de 0 agora é tratado como um parâmetro inválido. Esse problema foi corrigido e é uma alteração da falha de tempo de execução.
+   Nas versões anteriores, as funções de alocação alinhada (`_aligned_malloc`, `_aligned_offset_malloc` etc.) aceitariam silenciosamente as solicitações de um bloco com um alinhamento 0. O alinhamento solicitado deve ser uma potência de dois, que o zero não é. Um alinhamento solicitado de 0 agora é tratado como um parâmetro inválido. Esse problema foi corrigido e é uma alteração da falha de runtime.
 
 - **Funções heap**
 
@@ -736,7 +736,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
 
 - **Uniões com structs anônimos**
 
-   Para entrar em conformidade com o padrão, o comportamento do tempo de execução foi alterado para membros de estruturas anônimas em uniões. O construtor para membros de estrutura anônima em uma união não é mais implicitamente chamado quando a união é criada. Além disso, o destruidor para membros de estrutura anônima em uma união não é mais implicitamente chamado quando a união sai do escopo. Considere o código a seguir, em que uma união U contém uma estrutura anônima que contém uma estrutura membro nomeada S que tem um destruidor.
+   Para entrar em conformidade com o padrão, o comportamento do runtime foi alterado para membros de estruturas anônimas em uniões. O construtor para membros de estrutura anônima em uma união não é mais implicitamente chamado quando a união é criada. Além disso, o destruidor para membros de estrutura anônima em uma união não é mais implicitamente chamado quando a união sai do escopo. Considere o código a seguir, em que uma união U contém uma estrutura anônima que contém uma estrutura membro nomeada S que tem um destruidor.
 
     ```cpp
     #include <stdio.h>
@@ -777,7 +777,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
     warning C4587: 'U::s': behavior change: constructor is no longer implicitly calledwarning C4588: 'U::s': behavior change: destructor is no longer implicitly called
     ```
 
-   Para restaurar o comportamento original, nomeie a estrutura anônima. O comportamento de tempo de execução de estruturas não anônimas é o mesmo, independentemente da versão do compilador.
+   Para restaurar o comportamento original, nomeie a estrutura anônima. O comportamento de runtime de estruturas não anônimas é o mesmo, independentemente da versão do compilador.
 
     ```cpp
     #include <stdio.h>
@@ -1777,7 +1777,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
 
 - **Chamar 'operator *type*()' (conversão definida pelo usuário) em tipos de não classe**
 
-   As versões anteriores do compilador permitiam que o 'operator *type*()' fosse chamado em tipos de não classe ignorando-o silenciosamente. Esse comportamento antigo criava um risco de geração silenciosa de código incorreto, resultando em um comportamento imprevisível do tempo de execução. O compilador não aceita mais código escrito dessa maneira e, em vez disso, emite o erro do compilador C2228.
+   As versões anteriores do compilador permitiam que o 'operator *type*()' fosse chamado em tipos de não classe ignorando-o silenciosamente. Esse comportamento antigo criava um risco de geração silenciosa de código incorreto, resultando em um comportamento imprevisível do runtime. O compilador não aceita mais código escrito dessa maneira e, em vez disso, emite o erro do compilador C2228.
 
     ```Output
     error C2228: left of '.operator type' must have class/struct/union
@@ -2066,7 +2066,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
 
 - **#pragma warning(push)** e **#pragma warning(pop) incompatíveis** (afeta apenas `/Wall` `/WX`)
 
-   As versões anteriores do compilador não detectavam a combinação de alterações de estado `#pragma warning(push)` com alterações de estado `#pragma warning(pop)` em um arquivo de origem diferente, o que é raramente pretendido. Esse comportamento antigo criava um risco do programa ser compilado com um conjunto de avisos habilitados diferentes do que o programador pretendia, resultando, possivelmente, em comportamento silencioso de tempo de execução incorreto. Agora o compilador detecta e notifica o programador do código escrito dessa maneira e emite um aviso do compilador C5031 opcional no local do `#pragma warning(pop)` correspondente, caso esteja habilitado. Esse aviso inclui uma observação que faz referência ao local do #pragma warning(push) correspondente.
+   As versões anteriores do compilador não detectavam a combinação de alterações de estado `#pragma warning(push)` com alterações de estado `#pragma warning(pop)` em um arquivo de origem diferente, o que é raramente pretendido. Esse comportamento antigo criava um risco do programa ser compilado com um conjunto de avisos habilitados diferentes do que o programador pretendia, resultando, possivelmente, em comportamento silencioso de runtime incorreto. Agora o compilador detecta e notifica o programador do código escrito dessa maneira e emite um aviso do compilador C5031 opcional no local do `#pragma warning(pop)` correspondente, caso esteja habilitado. Esse aviso inclui uma observação que faz referência ao local do #pragma warning(push) correspondente.
 
     ```Output
     warning C5031: #pragma warning(pop): likely mismatch, popping warning state pushed in different file
@@ -2495,7 +2495,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
 
 - **Construtores triviais de cópia e movimentação padronizados ou excluídos respeitam especificadores de acesso**
 
-   As versões anteriores do compilador não verificavam o especificador de acesso dos construtores triviais de cópia e movimentação padronizados ou excluídos antes de permitir que fossem chamados. Esse comportamento antigo estava incorreto e não está em conformidade com o padrão C++. Em alguns casos, esse comportamento antigo criava um risco de geração silenciosa de código incorreto, resultando em um comportamento imprevisível do tempo de execução. Agora o compilador verifica o especificador de acesso dos construtores triviais de cópia e movimentação padronizados ou excluídos para determinar se podem ser chamados e se não puderem, emite um aviso do compilador C2248 como resultado.
+   As versões anteriores do compilador não verificavam o especificador de acesso dos construtores triviais de cópia e movimentação padronizados ou excluídos antes de permitir que fossem chamados. Esse comportamento antigo estava incorreto e não está em conformidade com o padrão C++. Em alguns casos, esse comportamento antigo criava um risco de geração silenciosa de código incorreto, resultando em um comportamento imprevisível do runtime. Agora o compilador verifica o especificador de acesso dos construtores triviais de cópia e movimentação padronizados ou excluídos para determinar se podem ser chamados e se não puderem, emite um aviso do compilador C2248 como resultado.
 
     ```Output
     error C2248: 'S::S' cannot access private member declared in class 'S'
@@ -3034,7 +3034,7 @@ O compilador C++ no Visual Studio 2013 detecta incompatibilidades em _ITERATOR_D
 
 - Apesar de recomendarmos que você não crie Aplicativos do Windows Forms em C++/CLI, há suporte para a manutenção de aplicativos de interface do usuário de C++/CLI existentes. Se você tiver que criar um Aplicativo do Windows Forms ou qualquer outro aplicativo de interface do usuário do .NET, use o C# ou o Visual Basic. Usar o C++/CLI somente para fins de interoperabilidade.
 
-### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>Biblioteca de Padrões Paralelos e Biblioteca de Tempo de Execução de Simultaneidade
+### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>Biblioteca de Padrões Paralelos e Biblioteca de Runtime de Simultaneidade
 
 A enumeração `SchedulerType` de `UmsThreadDefault` foi preterida. A especificação de `UmsThreadDefault` produz um aviso de preterido e mapeia internamente de volta para o `ThreadScheduler`.
 
@@ -3050,7 +3050,7 @@ A enumeração `SchedulerType` de `UmsThreadDefault` foi preterida. A especifica
 
 - Para implementar várias otimizações e verificações de depuração, a implementação da Biblioteca Padrão do C++ interrompe intencionalmente a compatibilidade binária entre as versões do Visual Studio (2005, 2008, 2010, 2012). Quando a Biblioteca do C++ Standard é usada, isso proíbe a mistura de arquivos de objeto e das bibliotecas estáticas que são compiladas usando versões diferentes em um binário (EXE ou DLL) e proíbe a passagem dos objetos da Biblioteca do C++ Standard entre binários que são compilados usando versões diferentes. A mistura de arquivos-objetos e bibliotecas estáticas usando a Biblioteca Padrão do C++ que foi compilada usando o Visual Studio 2010 com aquelas que foram compiladas usando o compilador C++ no Visual Studio 2012, emite erros de vinculador sobre a incompatibilidade de _MSC_VER, em que _MSC_VER é a macro que contém a versão principal do compilador (1700 para o Visual C++ no Visual Studio 2012). Essa verificação não pode detectar a combinação de DLL e não pode detectar uma combinação que envolva Visual Studio 2008 ou anterior.
 
-- Além de detectar incompatibilidades de _ITERATOR_DEBUG_LEVEL, que foi implementado no Visual Studio 2010, o compilador C++ no Visual Studio 2012 detecta incompatibilidades de Biblioteca em Tempo de Execução. Essas incompatibilidades ocorrem quando as opções de compilador `/MT` (versão estática), `/MTd` (depuração estática), `/MD` (versão dinâmica) e `/MDd` (depuração dinâmica) são combinadas.
+- Além de detectar incompatibilidades de _ITERATOR_DEBUG_LEVEL, que foi implementado no Visual Studio 2010, o compilador C++ no Visual Studio 2012 detecta incompatibilidades de Biblioteca em Runtime. Essas incompatibilidades ocorrem quando as opções de compilador `/MT` (versão estática), `/MTd` (depuração estática), `/MD` (versão dinâmica) e `/MDd` (depuração dinâmica) são combinadas.
 
 - `operator<()`, `operator>()`, `operator<=()` e `operator>=()` estavam disponíveis anteriormente para as famílias de contêineres `std::unordered_map` e `stdext::hash_map`, embora suas implementações não fossem úteis. Esses operadores não padrão foram removidos do Visual C++ no Visual Studio 2012. Além disso, a implementação de `operator==()` e `operator!=()` para a família `std::unordered_map` foi estendida para cobrir a família `stdext::hash_map`. (É recomendável que você evite o uso da família `stdext::hash_map` no novo código.)
 
@@ -3058,7 +3058,7 @@ A enumeração `SchedulerType` de `UmsThreadDefault` foi preterida. A especifica
 
 ### <a name="crt"></a>CRT
 
-- O heap do CRT (Tempo de execução de C), que é usado para new e malloc(), não é mais particular. O CRT agora usa o heap do processo. Isso significa que o heap não será destruído quando uma DLL for descarregada, portanto as DLLs vinculadas estaticamente à CRT devem garantir que a memória alocada pelo código da DLL seja limpa antes de ser descarregada.
+- O heap do CRT (Runtime de C), que é usado para new e malloc(), não é mais particular. O CRT agora usa o heap do processo. Isso significa que o heap não será destruído quando uma DLL for descarregada, portanto as DLLs vinculadas estaticamente à CRT devem garantir que a memória alocada pelo código da DLL seja limpa antes de ser descarregada.
 
 - A função `iscsymf()` faz declarações com valores negativos.
 
@@ -3264,7 +3264,7 @@ A enumeração `SchedulerType` de `UmsThreadDefault` foi preterida. A especifica
 
 ### <a name="ide"></a>IDE
 
-- A caixa de diálogo de encerramento do aplicativo não termina mais um aplicativo. Em versões anteriores, quando a função `abort()` ou `terminate()` fechava o build de varejo de um aplicativo, a Biblioteca em tempo de execução de C exibia uma mensagem de encerramento do aplicativo em uma caixa de diálogo ou janela de console. A mensagem dizia, em parte, "Este aplicativo solicitou que o Tempo de execução terminasse de maneira incomum. Entre em contato com equipe de suporte do aplicativo para obter mais informações." A mensagem de encerramento do aplicativo era redundante porque o Windows subseqüentemente exibia o manipulador de encerramento atual, que normalmente era a caixa de diálogo Relatório de Erros do Windows (Dr. Watson) ou o depurador do Visual Studio. Do Visual Studio 2010 em diante, a Biblioteca em tempo de execução de C não exibe a mensagem. Além disso, o tempo de execução impede que o aplicativo finalize antes do início de um depurador. Essa só é uma alteração da falha se você depende do comportamento anterior da mensagem de encerramento do aplicativo.
+- A caixa de diálogo de encerramento do aplicativo não termina mais um aplicativo. Em versões anteriores, quando a função `abort()` ou `terminate()` fechava o build de varejo de um aplicativo, a Biblioteca em tempo de execução de C exibia uma mensagem de encerramento do aplicativo em uma caixa de diálogo ou janela de console. A mensagem dizia, em parte, "Este aplicativo solicitou que o Runtime terminasse de maneira incomum. Entre em contato com equipe de suporte do aplicativo para obter mais informações." A mensagem de encerramento do aplicativo era redundante porque o Windows subseqüentemente exibia o manipulador de encerramento atual, que normalmente era a caixa de diálogo Relatório de Erros do Windows (Dr. Watson) ou o depurador do Visual Studio. Do Visual Studio 2010 em diante, a Biblioteca em tempo de execução de C não exibe a mensagem. Além disso, o runtime impede que o aplicativo finalize antes do início de um depurador. Essa só é uma alteração da falha se você depende do comportamento anterior da mensagem de encerramento do aplicativo.
 
 - Especificamente para o Visual Studio 2010, o IntelliSense não funciona para código ou atributos de C++/CLI, **Localizar Todas as Referências** não funciona para variáveis locais e o Modelo de Código não recupera nomes de tipo de assemblies importados ou não resolve tipos para seus nomes totalmente qualificados.
 
@@ -3470,7 +3470,7 @@ A enumeração `SchedulerType` de `UmsThreadDefault` foi preterida. A especifica
 
 - Ao chamar `valarray::resize()`, o conteúdo de `valarray` será perdido e será substituído por valores padrão. O método `resize()` é destinado para reinicializar o `valarray` em vez de aumentá-lo dinamicamente como um vetor.
 
-- Iteradores de depuração: aplicativos criados com uma versão de depuração da Biblioteca em tempo de execução de C e que usam iteradores de maneira incorreta, podem começar a ver declarações em tempo de execução. Para desabilitar essas declarações, você deve definir _HAS_ITERATOR_DEBUGGING (substituída por [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) após o Visual Studio 2010) como 0. Para obter mais informações, consulte [Suporte a iterador de depuração](../standard-library/debug-iterator-support.md)
+- Iteradores de depuração: aplicativos criados com uma versão de depuração da Biblioteca em runtime de C e que usam iteradores de maneira incorreta, podem começar a ver declarações em runtime. Para desabilitar essas declarações, você deve definir _HAS_ITERATOR_DEBUGGING (substituída por [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) após o Visual Studio 2010) como 0. Para obter mais informações, consulte [Suporte a iterador de depuração](../standard-library/debug-iterator-support.md)
 
 ## <a name="visual-c-net-2003-breaking-changes"></a>Alterações significativas do Visual C++ .NET 2003
 

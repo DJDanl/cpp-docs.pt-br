@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
 ms.openlocfilehash: 80aade53bf1d1c9aa30c4b8c8fe59c2247fe3cfb
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "65515781"
 ---
-# <a name="identifier-ccli"></a>__identifier (C++/CLI)
+# <a name="__identifier-ccli"></a>__identifier (C++/CLI)
 
 Permite o uso de palavras-chave C++ como identificadores.
 

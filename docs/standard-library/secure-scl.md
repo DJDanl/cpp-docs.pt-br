@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68450536"
 ---
-# <a name="securescl"></a>_SECURE_SCL
+# <a name="_secure_scl"></a>_SECURE_SCL
 
 Substituído por [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), essa macro define se os [Iteradores verificados](../standard-library/checked-iterators.md) estão habilitados. Por padrão, a depuração de iterador está habilitada em builds de depuração e desabilitado em builds de varejo.
 

@@ -54,7 +54,7 @@ int main() {
 }
 ```
 
-## <a name="using-iteratordebuglevel"></a>Usando _ITERATOR_DEBUG_LEVEL
+## <a name="using-_iterator_debug_level"></a>Usando _ITERATOR_DEBUG_LEVEL
 
 É possível usar a macro do pré-processador [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) para desligar o recurso do iterador de depuração em um build de depuração. Esse programa não é declarado, mas ainda dispara um comportamento indefinido.
 

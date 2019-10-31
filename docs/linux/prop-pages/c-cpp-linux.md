@@ -5,7 +5,7 @@ ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
 f1_keywords: []
 ms.openlocfilehash: b5be7582970c45e25f1e2c90971d587c19eac2a0
 ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/10/2019
 ms.locfileid: "66821341"

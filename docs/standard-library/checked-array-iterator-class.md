@@ -20,7 +20,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68452305"
 ---
-# <a name="checkedarrayiterator-class"></a>Classe checked_array_iterator
+# <a name="checked_array_iterator-class"></a>Classe checked_array_iterator
 
 A classe `checked_array_iterator` permite que você transforme uma matriz ou um ponteiro em um iterador verificado. Use essa classe como um wrapper (usando a função [make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)) para matrizes ou ponteiros brutos como uma maneira direcionada de fornecer verificação e gerenciar avisos de ponteiros não verificados, em vez de silenciar esses avisos globalmente. Se necessário, você pode usar a versão não verificada da classe, [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md).
 

@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
 ms.openlocfilehash: 71850807f6332f31195ef9bafbd9468f48cb6fb3
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "65516381"
@@ -43,7 +43,7 @@ Na sintaxe acima, os seguintes termos são usados:
 *class-key*<br/>
 **class** ou **typename**
 
-*type-parameter-identifier(s)*, lista de identificadores separados por vírgula que especificam os nomes dos parâmetros de tipo.
+*type-parameter-identifier(s)* , lista de identificadores separados por vírgula que especificam os nomes dos parâmetros de tipo.
 
 *constraint-clauses*<br/>
 Uma lista (não separada por vírgulas) de cláusulas **where** que especificam as restrições para os parâmetros de tipo. Assume o formato:
@@ -51,7 +51,7 @@ Uma lista (não separada por vírgulas) de cláusulas **where** que especificam 
 > **where** *type-parameter-identifier* **:** *constraint-list*  **...**
 
 *constraint-list*<br/>
-*class-or-interface*[`,` *...*]
+*class-or-interface*[`,` *...* ]
 
 *accessibility-modifiers*<br/>
 Modificadores de acessibilidade para a classe genérica. Para o Windows Runtime, o único modificador permitido é **private**. Para o Common Language Runtime, os modificadores permitidos são **private** e **public**.
