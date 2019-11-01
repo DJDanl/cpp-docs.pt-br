@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: c457158c03ed484f20ee847005fa509bfab1bcd2
+ms.sourcegitcommit: 53bfb772c43319d49686c167f492606348ad362b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52674060"
+---
 # <a name="metadata-and-markdown-template"></a>Metadados e modelo Markdown
 
 Esse modelo de documentos básicos contém exemplos da sintaxe Markdown, bem como diretrizes de definição dos metadados. Para aproveitá-la ao máximo, é necessário exibir o [Markdown bruto](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) e a [exibição renderizada](https://github.com/dotnet/docs/blob/master/styleguide/template.md) (por exemplo, o Markdown bruto mostra o bloco de metadados, ao contrário da exibição renderizada).
