@@ -21,17 +21,17 @@ Especifica o alinhamento da embalagem para a estrutura, União e membros de clas
 
 ## <a name="syntax"></a>Sintaxe
 
-> **pacote de #pragma (Mostrar)** \
-> **pacote de #pragma (Push** [ **,** *identificador* ] [ **,** *n* ] **)** \
-> **pacote de #pragma (pop** [ **,** { *identificador* | *n* }] **)** \
-> **pacote de #pragma (** [ *n* ] **)**
+> **#pragma pack( show )** \
+> **#pragma pack( push** [ **,** *identifier* ] [ **,** *n* ] **)** \
+> **#pragma pack( pop** [ **,** { *identifier* | *n* } ] **)** \
+> **#pragma pack(** [ *n* ] **)**
 
 ### <a name="parameters"></a>Parâmetros
 
-**programa**\
+**show**\
 Adicional Exibe o valor de byte atual para o alinhamento da embalagem. O valor é exibido por uma mensagem de aviso.
 
-**pressionado**\
+**push**\
 Adicional Envia o valor de alinhamento atual da embalagem na pilha interna do compilador e define o valor de alinhamento atual da embalagem como *n*. Se *n* não for especificado, o valor de alinhamento de embalagem atual será enviado por push.
 
 **pop**\
