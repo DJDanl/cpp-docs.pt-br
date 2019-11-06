@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 1) C4003
+title: Aviso do compilador (nível 1) C4003
 ms.date: 11/04/2016
 f1_keywords:
 - C4003
 helpviewer_keywords:
 - C4003
 ms.assetid: 0ed1c285-4428-4c90-8131-86897e31f115
-ms.openlocfilehash: 7b1b87c643111f2b12124e348be8fb823e113937
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4adbffe3220060ee9d43f01cf94628f85d3991cc
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187296"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627381"
 ---
-# <a name="compiler-warning-level-1-c4003"></a>Compilador aviso (nível 1) C4003
+# <a name="compiler-warning-level-1-c4003"></a>Aviso do compilador (nível 1) C4003
 
-parâmetros reais insuficientes para 'identifier' macro
+parâmetros reais insuficientes para macro ' identifier '
 
-O número de parâmetros formais na definição da macro excede o número de parâmetros reais na macro. Expansão de macro substitui o texto vazio para os parâmetros ausentes.
+O número de parâmetros formais na definição de macro excede o número de parâmetros reais na macro. A expansão de macro substitui o texto vazio pelos parâmetros ausentes.
 
 O exemplo a seguir gera C4003:
 
-```
+```cpp
 // C4003.cpp
 // compile with: /WX
 #define test(a,b) (a+b)

@@ -1,6 +1,6 @@
 ---
 title: Projetos do Visual Studio – C++
-ms.date: 12/12/2018
+ms.date: 10/25/2019
 helpviewer_keywords:
 - ATL projects, creating
 - Visual Studio C++ projects, creating
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 30d3b13ba4d392cdc5d1c7c611b61066503647a2
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: d6bfefdaa3dfc67f861cf116718f89c0e9766e47
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837064"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624473"
 ---
 # <a name="visual-studio-projects---c"></a>Projetos do Visual Studio – C++
 
-Um *projeto do Visual Studio* é um projeto baseado no sistema de build do MSBuild. O MSBuild é o sistema de build nativo para o Visual Studio e, geralmente, é o melhor sistema de build a ser usado para aplicativos UWP, bem como para aplicativos da Área de Trabalho que usam bibliotecas MFC ou ATL, componentes COM e outros programas específicos do Windows. O MSBuild está totalmente integrado ao Visual Studio, mas você também pode usá-lo na linha de comando. 
+Um *projeto do Visual Studio* é um projeto baseado no sistema de build do MSBuild. O MSBuild é o sistema de compilação nativo do Visual Studio e geralmente é o melhor sistema de compilação a ser usado para programas específicos do Windows. O MSBuild está totalmente integrado ao Visual Studio, mas você também pode usá-lo na linha de comando. Para projetos de plataforma cruzada ou projetos que usam bibliotecas de software livre, recomendamos o uso [de projetos CMake no Visual Studio](cmake-projects-in-visual-studio.md) no visual Studio 2017 e posterior. Para obter informações sobre como atualizar projetos do MSBuild de versões anteriores do Visual Studio, consulte o [Guia de portagem e atualização da Microsoft C++ ](../porting/visual-cpp-porting-and-upgrading-guide.md).
 
 ## <a name="create-a-project"></a>Criar um projeto
 
@@ -25,7 +25,7 @@ Um *projeto do Visual Studio* é um projeto baseado no sistema de build do MSBui
 
 Crie projetos C++ escolhendo **Arquivo** > **Novo** > **Projeto** e, em seguida, definindo a **Linguagem** como C++. Na lista de resultados, você verá uma lista de modelos de projeto pela qual poderá filtrar, definindo a **Plataforma** ou o **Tipo de Projeto** e digitando palavras-chave na caixa de pesquisa. 
 
-   ![Modelos de Projeto do Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Caixa de diálogo Novo Projeto do Visual Studio 2019")
+   ![Modelos de projeto do Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Caixa de diálogo novo projeto do Visual Studio 2019")
 
 ::: moniker-end
 
@@ -33,11 +33,11 @@ Crie projetos C++ escolhendo **Arquivo** > **Novo** > **Projeto** e, em seguida,
 
 Crie projetos C++ escolhendo **Arquivo** > **Novo** > **Projeto** e, em seguida, escolhendo Visual C++ no painel esquerdo. No painel central, você verá uma lista de modelos de projeto:
 
-   ![Modelos de projeto](../overview/media/vs2017-new-project.png "Caixa de diálogo \"Novo projeto\" do Visual Studio 2017")
+   ![Modelos de projeto](../overview/media/vs2017-new-project.png "Caixa de diálogo novo projeto do Visual Studio 2017")
 
 ::: moniker-end
 
-Para obter mais informações sobre todos os modelos de projeto padrão incluídos no Visual Studio, confira [Modelos de projeto C++ no Visual Studio](reference/visual-cpp-project-types.md). Criar seus próprios modelos de projeto. Para obter mais informações, confira [Como: Criar modelos de projeto](/visualstudio/ide/how-to-create-project-templates).
+Para obter mais informações sobre todos os modelos de projeto padrão incluídos no Visual Studio, confira [Modelos de projeto C++ no Visual Studio](reference/visual-cpp-project-types.md). Criar seus próprios modelos de projeto. Para obter mais informações, consulte [como: criar modelos de projeto](/visualstudio/ide/how-to-create-project-templates).
 
 Depois que você criar um projeto, ele será exibido na janela [Gerenciador de Soluções](/visualstudio/ide/solutions-and-projects-in-visual-studio):
 
@@ -87,3 +87,4 @@ Como criar um projeto do Visual Studio com base em uma coleção flexível de ar
 ## <a name="see-also"></a>Consulte também
 
 [Sistemas de Compilação e Projetos](projects-and-build-systems-cpp.md)<br>
+[Guia C++ de atualização e portabilidade da Microsoft](../porting/visual-cpp-porting-and-upgrading-guide.md)

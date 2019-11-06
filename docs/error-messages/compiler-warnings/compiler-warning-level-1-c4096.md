@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4096
+title: Aviso do compilador (nível 1) C4096
 ms.date: 11/04/2016
 f1_keywords:
 - C4096
 helpviewer_keywords:
 - C4096
 ms.assetid: abf3cca2-2f21-45d8-b025-6b513b00681e
-ms.openlocfilehash: 287465e9a3f5681f459f0823a4409b0906309a55
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f526b26eda4c02825d225aa007c6029cc4b03dd
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280447"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627073"
 ---
-# <a name="compiler-warning-level-1-c4096"></a>Compilador aviso (nível 1) C4096
+# <a name="compiler-warning-level-1-c4096"></a>Aviso do compilador (nível 1) C4096
 
-'a': não é uma interface COM; não será emitida para IDL
+' a ': a interface não é uma interface COM; Não será emitido para IDL
 
 Uma definição de interface que você pode ter pretendido como uma interface COM não foi definida como uma interface COM e, portanto, não será emitida para o arquivo IDL.
 
-Ver [atributos de Interface](../../windows/attributes/interface-attributes.md) para uma lista de atributos que indicam uma interface é uma interface COM.
+Consulte [atributos de interface](../../windows/attributes/interface-attributes.md) para obter uma lista de atributos que indicam que uma interface é uma interface com.
 
 O exemplo a seguir gera C4096:
 
-```
+```cpp
 // C4096.cpp
 // compile with: /W1 /LD
 #include "windows.h"

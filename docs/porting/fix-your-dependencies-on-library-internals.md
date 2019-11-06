@@ -1,20 +1,20 @@
 ---
-title: Corrigir suas dependências de internos de biblioteca
+title: Corrija suas dependências C++ em elementos internos da biblioteca
 ms.date: 05/24/2017
 helpviewer_keywords:
 - library internals in an upgraded Visual Studio C++ project
 - _Hash_seq in an upgraded Visual Studio C++ project
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
-ms.openlocfilehash: af395ea6f8c8e6a88bd2b003f0eee948bde8b6a9
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 5486cd65a34e3ef69f3b2e948ba0ad020e68b326
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449097"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627006"
 ---
-# <a name="fix-your-dependencies-on-library-internals"></a>Corrigir suas dependências de internos de biblioteca
+# <a name="fix-your-dependencies-on-c-library-internals"></a>Corrija suas dependências C++ em elementos internos da biblioteca
 
-A Microsoft publicou o código-fonte da Biblioteca padrão, da maior parte da biblioteca de tempo de execução do C e de outras bibliotecas da Microsoft em muitas versões do Visual Studio. A intenção é ajudá-lo a entender o comportamento da biblioteca e para depurar seu código. Um efeito colateral da publicação do código-fonte da biblioteca é que alguns valores internos, algumas estruturas de dados e funções são expostos, mesmo que não façam parte da interface de biblioteca. Eles normalmente têm nomes que começam com dois sublinhados ou um sublinhado seguido por uma letra maiúscula, nomes que o padrão do C++ reserva para implementações. Esses valores, essas estruturas e essas funções são detalhes de implementação que podem se alterar conforme as bibliotecas evoluem ao longo do tempo e, portanto, convém evitar quaisquer dependências neles. Se fizer isso, você corre o risco de ter problemas e de ter um código não portátil ao tentar migrar seu código para novas versões das bibliotecas.
+A Microsoft publicou o código-fonte da Biblioteca padrão, da maior parte da Biblioteca de Runtime  do C e de outras bibliotecas da Microsoft em muitas versões do Visual Studio. A intenção é ajudá-lo a entender o comportamento da biblioteca e para depurar seu código. Um efeito colateral da publicação do código-fonte da biblioteca é que alguns valores internos, algumas estruturas de dados e funções são expostos, mesmo que não façam parte da interface de biblioteca. Eles normalmente têm nomes que começam com dois sublinhados ou um sublinhado seguido por uma letra maiúscula, nomes que o padrão do C++ reserva para implementações. Esses valores, essas estruturas e essas funções são detalhes de implementação que podem se alterar conforme as bibliotecas evoluem ao longo do tempo e, portanto, convém evitar quaisquer dependências neles. Se fizer isso, você corre o risco de ter problemas e de ter um código não portátil ao tentar migrar seu código para novas versões das bibliotecas.
 
 Na maioria dos casos, o documento de Novidades ou o de Alterações Significativas para cada versão do Visual Studio não menciona alterações de internos de biblioteca. Afinal, você não deveria ser afetado por esses detalhes de implementação. No entanto, algumas vezes a tentação de usar um código que você pode ver dentro da biblioteca é muito grande. Este tópico discute as dependências em CRT ou em internos de Biblioteca padrão que você possa ter utilizado e discute como atualizar seu código para remover essas dependências e torná-lo mais portátil ou migrar para novas versões da biblioteca.
 
@@ -76,6 +76,6 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 
 ## <a name="see-also"></a>Consulte também
 
-[Atualizando projetos de versões anteriores do Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Atualizando projetos de versões anteriores do VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visão geral de possíveis problemas de atualização (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Atualizar seu código para o CRT Universal](upgrade-your-code-to-the-universal-crt.md)

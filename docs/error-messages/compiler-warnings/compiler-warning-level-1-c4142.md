@@ -1,33 +1,33 @@
 ---
-title: Compilador aviso (nível 1) C4142
+title: Aviso do compilador (nível 1) C4142
 ms.date: 11/04/2016
 f1_keywords:
 - C4142
 helpviewer_keywords:
 - C4142
 ms.assetid: 1fdfc3dc-60a2-4f00-b133-20e400f9b7a6
-ms.openlocfilehash: 762f52c9f051a660cce68d424e02fc45422376e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97b13ad65335df435d071c106f577aefca7e072d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302274"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625001"
 ---
-# <a name="compiler-warning-level-1-c4142"></a>Compilador aviso (nível 1) C4142
+# <a name="compiler-warning-level-1-c4142"></a>Aviso do compilador (nível 1) C4142
 
-redefinição benigna de tipo
+redefinição benigno do tipo
 
-Um tipo é redefinido de forma que não tem efeito sobre o código gerado.
+Um tipo é redefinido de uma maneira que não tem efeito sobre o código gerado.
 
-Para corrigir verificando as possíveis causas:
+Para corrigir, marque as seguintes causas possíveis:
 
-- Uma função de membro de uma classe derivada tem um tipo de retorno diferente da função de membro correspondente da classe base.
+- Uma função membro de uma classe derivada tem um tipo de retorno diferente da função de membro correspondente da classe base.
 
-- Um tipo definido com o `typedef` comando é redefinido com o uso de uma sintaxe diferente.
+- Um tipo definido com o comando `typedef` é redefinido usando sintaxe diferente.
 
 O exemplo a seguir gera C4142:
 
-```
+```c
 // C4142.c
 // compile with: /W1
 float X2;

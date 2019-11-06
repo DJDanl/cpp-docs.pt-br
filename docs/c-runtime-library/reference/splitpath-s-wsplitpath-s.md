@@ -34,12 +34,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: f97c07ed01ae629fe3eb61346c6c0fcd8fa803f0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8eeb6a0f43827578c5d5ba900c35a3ac30f4ae7c
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958048"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625835"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
@@ -93,14 +93,14 @@ errno_t _wsplitpath_s(
 *path*<br/>
 Caminho completo.
 
-*drive*<br/>
+*Dirigir*<br/>
 Letra da unidade, seguida por dois-pontos ( **:** ). Você pode passar **NULL** para esse parâmetro se não precisar da letra da unidade.
 
 *driveNumberOfElements*<br/>
 O tamanho do buffer da *unidade* em caracteres de byte único ou largos. Se a *unidade* for **nula**, esse valor deverá ser 0.
 
-*dir*<br/>
-Caminho do diretório, incluindo barra à direita. Barras invertidas **/** (), barras invertidas ( **\\** ) ou ambas podem ser usadas. Você pode passar **NULL** para esse parâmetro se não precisar do caminho do diretório.
+*comando*<br/>
+Caminho do diretório, incluindo barra à direita. Barras invertidas ( **/** ), barras invertidas ( **\\** ) ou ambas podem ser usadas. Você pode passar **NULL** para esse parâmetro se não precisar do caminho do diretório.
 
 *dirNumberOfElements*<br/>
 O tamanho do buffer de *dir* em caracteres de byte único ou largos. Se *dir* for **NULL**, esse valor deverá ser 0.
@@ -117,13 +117,13 @@ Extensão de nome de arquivo, incluindo o ponto à esquerda ( **.** ). Você pod
 *extNumberOfElements*<br/>
 O tamanho do buffer *ext* em caracteres de byte único ou largos. Se *ext* for **NULL**, esse valor deverá ser 0.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Zero se for bem-sucedido; um código de erro em caso de falha.
 
 ### <a name="error-conditions"></a>Condições de Erro
 
-|Condição|Valor de retorno|
+|Condição|Valor retornado|
 |---------------|------------------|
 |o *caminho* é **nulo**|**EINVAL**|
 |a *unidade* é **nula**, *driveNumberOfElements* é diferente de zero|**EINVAL**|
@@ -153,7 +153,7 @@ Cada componente do caminho completo é armazenado em um buffer separado; as cons
 
 A tabela a seguir lista os valores das constantes do manifesto.
 
-|Nome|Valor|
+|Name|Valor|
 |----------|-----------|
 |_MAX_DRIVE|3|
 |_MAX_DIR|256|
@@ -164,7 +164,7 @@ Se o caminho completo não contiver um componente (por exemplo, um nome de arqui
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir automaticamente o tamanho do buffer, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -173,7 +173,7 @@ As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD
 |**_splitpath_s**|\<stdlib.h>|
 |**_wsplitpath_s**|\<stdlib.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

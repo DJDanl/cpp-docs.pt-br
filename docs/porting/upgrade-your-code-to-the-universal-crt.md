@@ -2,16 +2,16 @@
 title: Atualize seu código para o CRT Universal
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 68edcd57ee03ac861a6d2105456f4dbf699c1210
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 0554ff713b499f99e7e7508faf687c1635e6d912
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449000"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627183"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Atualize seu código para o CRT Universal
 
-No Visual Studio 2015, o Microsoft CRT (Biblioteca em Tempo de Execução do C) foi refatorado. A biblioteca padrão do C, as extensões POSIX e as funções, macros e variáveis globais específicas da Microsoft foram movidas para uma nova biblioteca, a Biblioteca em tempo de execução do C Universal (Universal CRT ou UCRT). Os componentes específicos do compilador do CRT foram movidos para uma nova biblioteca vcruntime.
+No Visual Studio 2015, o Microsoft CRT (Biblioteca em Runtime do C) foi refatorado. A biblioteca padrão do C, as extensões POSIX e as funções, macros e variáveis globais específicas da Microsoft foram movidas para uma nova biblioteca, a Biblioteca em runtime do C Universal (Universal CRT ou UCRT). Os componentes específicos do compilador do CRT foram movidos para uma nova biblioteca vcruntime.
 
 O UCRT agora é um componente do Windows e é fornecido como parte do Windows 10. O UCRT dá suporte a uma ABI estável baseada em convenções de chamada C, e está em estreita conformidade com o padrão ICO C99, com apenas algumas exceções. Ele não está mais associado a uma versão específica do compilador. É possível usar o UCRT em qualquer versão do Windows com suporte no Visual Studio 2015 ou no Visual Studio 2017. A vantagem é que você não precisa mais atualizar seus builds para definir como destino uma nova versão do CRT com cada atualização do Visual Studio.
 
@@ -47,6 +47,6 @@ Muitas funções foram adicionadas ou atualizadas no UCRT para melhorar a confor
 
 [Guia de atualização e portabilidade do Visual C++](visual-cpp-porting-and-upgrading-guide.md)<br/>
 [Visão geral de possíveis problemas de atualização (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
-[Atualizando projetos de versões anteriores do Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Atualizando projetos de versões anteriores do VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Histórico de alterações de 2003 a 2015 do Visual C++](visual-cpp-change-history-2003-2015.md)<br/>
 [Aprimoramentos de conformidade do C++ no Visual Studio](../overview/cpp-conformance-improvements.md)

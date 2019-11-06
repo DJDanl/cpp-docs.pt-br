@@ -1,18 +1,18 @@
 ---
-title: Modificando WINVER e _WIN32_WINNT
+title: Atualizar WINVER e _WIN32_WINNT
 ms.date: 09/04/2017
 helpviewer_keywords:
 - WINVER in an upgraded Visual Studio C++ project
 - _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: a83e92444e7010e4d3b65153b2e60e1c5d952cef
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 0cfdb3d065a85bd02ef21de9c4c5282cf54fcb2a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511608"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627253"
 ---
-# <a name="modifying-winver-and-_win32_winnt"></a>Modificando WINVER e _WIN32_WINNT
+# <a name="update-winver-and-_win32_winnt"></a>Atualizar WINVER e _WIN32_WINNT
 
 Visual C++ não oferece mais suporte ao direcionamento de Windows 95, Windows 98, Windows ME, Windows NT ou Windows 2000. Se suas macros **WINVER** ou **_WIN32_WINNT** forem atribuídas a uma dessas versões do Windows, você deverá modificar as macros. Quando você atualiza um projeto criado usando uma versão anterior do Visual C++, poderá ver erros de compilação relacionados às macros **WINVER** ou **_WIN32_WINNT** se elas forem atribuídas a uma versão do Windows que não tem mais suporte.
 

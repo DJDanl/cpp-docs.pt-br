@@ -1,15 +1,15 @@
 ---
-title: 'Guia de portabilidade: Scribble do MFC'
-ms.date: 11/19/2018
+title: 'Guia de portabilidade: rabisco do MFC'
+ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: e808f67b1479653add27a54ddf91f6578c046734
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: c5e0e8fecd99e4f03077574da7b7fcb3e538762b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511538"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627219"
 ---
-# <a name="porting-guide-mfc-scribble"></a>Guia de portabilidade: Scribble do MFC
+# <a name="porting-guide-mfc-scribble"></a>Guia de portabilidade: rabisco do MFC
 
 Este tópico é o primeiro de vários que apresentam o procedimento de atualização para projetos do Visual Studio C++ que foram criados em versões anteriores do Visual Studio para Visual Studio 2017. Estes tópicos apresentam o processo de atualização por exemplos, começando com um projeto muito simples e passando para outros um pouco mais complexos. Neste tópico, trabalhamos pelo processo de atualização para um projeto específico, o Scribble do MFC. Ele é adequado como uma introdução básica sobre o processo de atualização para projetos do C++.
 
@@ -23,13 +23,13 @@ Antes de tentar atualizar, verifique se você tem a carga de trabalho da Área d
 
 Em seguida, faça o backup de toda a solução e todo o seu conteúdo.
 
-Por fim, precisamos decidir sobre o método de atualização específico. Para soluções e projetos mais complexos que não foram atualizados por um longo período, você deve considerar atualizar uma versão do Visual Studio de cada vez. Dessa forma, você pode restringir qual versão do Visual Studio introduziu um problema. Para um projeto simples, vale a pena tentar abri-lo na versão mais recente do Visual Studio e permitir que o assistente converta o projeto. Se isso não funcionar, você poderá tentar atualizar uma versão de cada vez, se tiver acesso às versões apropriadas do Visual Studio.
+Por fim, abra a solução na versão mais recente do Visual Studio e permita que o assistente converta o projeto. 
 
 Observe que você também pode executar devenv na linha de comando, usando a opção `/Upgrade`, em vez de usar o assistente para atualizar seus projetos. Consulte [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Isso poderia ser útil para automatizar o processo de atualização para um grande número de projetos.
 
 ### <a name="step-1-converting-the-project-file"></a>Etapa 1. Conversão do arquivo de projeto
 
-Quando você abre um arquivo de projeto antigo no Visual Studio 2017, o Visual Studio se oferece para converter o arquivo de projeto para a versão mais recente, o que aceitamos. A caixa de diálogo a seguir é exibida:
+Quando você abre um arquivo de projeto antigo no Visual Studio, o Visual Studio oferece para converter o arquivo de projeto para a versão mais recente, que aceitamos. A caixa de diálogo a seguir é exibida:
 
 ![Examinar alterações de projeto e solução](../porting/media/scribbleprojectupgrade.PNG "Examinar alterações de projeto e solução")
 
@@ -49,7 +49,7 @@ Nesse caso, os problemas eram todos avisos e Visual Studio fez as alterações a
 
 ### <a name="step-2-getting-it-to-build"></a>Etapa 2. Realização do build
 
-Antes de compilar, verificamos o conjunto de ferramentas de plataforma para que saibamos qual versão do compilador o sistema de projeto está usando. Na caixa de diálogo de propriedades do projeto, em **Propriedades de Configuração**, na categoria **Geral**, observe a propriedade **Conjunto de Ferramentas da Plataforma**. Ela contém a versão do Visual Studio e o número de versão da ferramenta de plataforma, que nesse caso é v141 para a versão do Visual Studio 2017 das ferramentas. Quando você converte um projeto que foi compilado originalmente com o Visual Studio C++ 2010, 2012, 2013 ou 2015, o conjunto de ferramentas não é atualizado automaticamente para o conjunto de ferramentas do Visual Studio 2017.
+Antes de compilar, verificamos o conjunto de ferramentas de plataforma para que saibamos qual versão do compilador o sistema de projeto está usando. Na caixa de diálogo de propriedades do projeto, em **Propriedades de Configuração**, na categoria **Geral**, observe a propriedade **Conjunto de Ferramentas da Plataforma**. Ela contém a versão do Visual Studio e o número de versão da ferramenta de plataforma, que nesse caso é v141 para a versão do Visual Studio 2017 das ferramentas. Quando você converte um projeto que foi compilado originalmente com o Visual Studio 2010, 2012, 2013 ou 2015, o conjunto de ferramentas não é atualizado automaticamente para o conjunto de ferramentas mais recente.
 
 Para fazer a transição para Unicode, abra as propriedades do projeto, em **Propriedades de Configuração**, escolha a seção **Geral** e localize a propriedade **Conjunto de Caracteres**. Altere-a de **Usar Conjunto de Caracteres Multibyte** para **Usar Conjunto de Caracteres Unicode**. O efeito dessa alteração é que agora as macros _UNICODE e UNICODE estão definidas e _MBCS não está, o que pode ser verificado na caixa de diálogo de propriedades na categoria **C/C++** na propriedade **Linha de Comando**.
 
@@ -87,5 +87,5 @@ O Scribble era um aplicativo de área de trabalho do Windows pequeno e simples e
 
 ## <a name="see-also"></a>Consulte também
 
-[Portando e atualizando: exemplos e estudos de caso](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Portabilidade e atualização: exemplos e estudos de caso](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Próximo exemplo: COM Spy](../porting/porting-guide-com-spy.md)

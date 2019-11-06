@@ -38,12 +38,12 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: 4449ec788b33a541a04a46d972f56f792797a16e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b0f2d1a295908ba2f0c8a89f57e81d6f822f3535
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957987"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625788"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
@@ -113,7 +113,7 @@ Buffer de cadeia de caracteres de origem com terminação nula.
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Zero se for bem-sucedido; um código de erro em caso de falha.
 
@@ -122,8 +122,8 @@ Zero se for bem-sucedido; um código de erro em caso de falha.
 |*strDestination*|*numberOfElements*|*strSource*|Valor retornado|Conteúdo de *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**Nulo** ou não terminado|qualquer|qualquer|**EINVAL**|não modificado|
-|qualquer|qualquer|**NULL**|**EINVAL**|*strDestination* [0] definido como 0|
-|qualquer|0 ou muito pequeno|qualquer|**ERANGE**|*strDestination* [0] definido como 0|
+|qualquer|qualquer|**NULL**|**EINVAL**|*strDestination*[0] definido como 0|
+|qualquer|0 ou muito pequeno|qualquer|**ERANGE**|*strDestination*[0] definido como 0|
 
 ## <a name="remarks"></a>Comentários
 
@@ -146,7 +146,7 @@ As versões das funções que têm o sufixo **_L** têm o mesmo comportamento, m
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -162,7 +162,7 @@ As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD
 |**wcscat_s**|\<string.h> ou \<wchar.h>|
 |**_mbscat_s**|\<mbstring.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

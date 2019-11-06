@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 0a40dad34d607bb52b062fc2cec163dfc8b62219
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1cd2a15db0a27dedd88b9abf24b98d338515c949
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943664"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624779"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -80,7 +80,7 @@ O tamanho do buffer usado para armazenar o resultado.
 *tmSource*<br/>
 Estrutura de hora/data. Essa função assume um ponteiro para um objeto **struct** **TM** válido.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Zero se for bem-sucedido. Se houver uma falha, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, o valor retornado será um código de erro. Códigos de erro são definidos em ERRNO.H. Para obter mais informações, consulte [Constantes errno](../../c-runtime-library/errno-constants.md). Os códigos de erro reais retornados para cada condição de erro são mostrados na tabela a seguir.
 
@@ -88,9 +88,9 @@ Zero se for bem-sucedido. Se houver uma falha, o manipulador de parâmetro invá
 
 |*buffer*|*numberOfElements*|*tmSource*|Valor de|Valor no *buffer*|
 |--------------|------------------------|----------|------------|-----------------------|
-|**NULL**|Any|Any|**EINVAL**|Não modificado|
-|Not **NULL** (aponta para memória válida)|0|Any|**EINVAL**|Não modificado|
-|Não **nulo**|0< tamanho < 26|Any|**EINVAL**|Cadeia de caracteres vazia|
+|**NULL**|Qualquer|Qualquer|**EINVAL**|Não modificado|
+|Not **NULL** (aponta para memória válida)|0|Qualquer|**EINVAL**|Não modificado|
+|Não **nulo**|0< tamanho < 26|Qualquer|**EINVAL**|Cadeia de caracteres vazia|
 |Não **nulo**|>= 26|**NULL**|**EINVAL**|Cadeia de caracteres vazia|
 |Não **nulo**|>= 26|Estrutura de hora inválida ou valores fora do intervalo para os componentes da hora|**EINVAL**|Cadeia de caracteres vazia|
 
@@ -115,9 +115,11 @@ A função **asctime** converte uma hora armazenada como uma estrutura em uma ca
 
 A cadeia de caracteres convertida também é ajustada de acordo com as configurações de fuso horário local. Consulte as funções [time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md) e [localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md) para informações sobre a configuração da hora local e a função [_tzset](tzset.md) para informações sobre a definição do ambiente de fuso horário e variáveis globais.
 
-O resultado da cadeia de caracteres produzido por **asctime_s** contém exatamente 26 caracteres e `Wed Jan 02 02:03:55 1980\n\0`tem o formulário. Um relógio de 24 horas é usado. Todos os campos têm uma largura constante. O caractere de nova linha e o caractere nulo ocupam as duas últimas posições da cadeia de caracteres. O valor passado como o segundo parâmetro deve ser pelo menos desse tamanho. Se for menor, um código de erro, **EINVAL**, será retornado.
+O resultado da cadeia de caracteres produzido por **asctime_s** contém exatamente 26 caracteres e tem o formulário `Wed Jan 02 02:03:55 1980\n\0`. Um relógio de 24 horas é usado. Todos os campos têm uma largura constante. O caractere de nova linha e o caractere nulo ocupam as duas últimas posições da cadeia de caracteres. O valor passado como o segundo parâmetro deve ser pelo menos desse tamanho. Se for menor, um código de erro, **EINVAL**, será retornado.
 
 **_wasctime_s** é uma versão de caractere largo do **asctime_s**. **_wasctime_s** e **asctime_s** se comportam de outra forma.
+
+As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mapeamento da Rotina de Texto Genérico
 

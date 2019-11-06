@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4002
+title: Aviso do compilador (nível 1) C4002
 ms.date: 11/04/2016
 f1_keywords:
 - C4002
 helpviewer_keywords:
 - C4002
 ms.assetid: 6bda1dfe-e2e4-4771-9794-5a404c466dd5
-ms.openlocfilehash: f2d2166a1370c02cfbc2346a63a424239ccb2b92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6aac8285e3935bb0fb910b52a7dd813d0a708732
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187255"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627402"
 ---
-# <a name="compiler-warning-level-1-c4002"></a>Compilador aviso (nível 1) C4002
+# <a name="compiler-warning-level-1-c4002"></a>Aviso do compilador (nível 1) C4002
 
-Muitos parâmetros reais para 'identifier' macro
+muitos parâmetros reais para macro ' identifier '
 
-O número de parâmetros reais na macro excede o número de parâmetros formais na definição da macro. O pré-processador coleta os parâmetros extras, mas ignora durante a expansão de macro.
+O número de parâmetros reais na macro excede o número de parâmetros formais na definição de macro. O pré-processador coleta os parâmetros extras, mas os ignora durante a expansão da macro.
 
-C4002 podem ocorrer ao usar incorretamente [Macros Variadic](../../preprocessor/variadic-macros.md).
+C4002 pode ocorrer ao usar [Macros Variadic](../../preprocessor/variadic-macros.md)incorretamente.
 
 O exemplo a seguir gera C4002:
 
-```
+```cpp
 // C4002.cpp
 // compile with: /W1
 #define test(a) (a)
@@ -37,11 +37,11 @@ int main() {
 }
 ```
 
-Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003: vírgulas adicionais em macro não é mais aceito.
+Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003: vírgulas extras em macro não são mais aceitas.
 
-O compilador não aceitará mais vírgulas adicionais em uma macro. Para o código seja válido no Visual Studio .NET 2003 e versões do Visual Studio .NET do Visual C++, remova as vírgulas adicionais.
+O compilador não aceitará mais vírgulas extras em uma macro. Para que o código seja válido nas versões do Visual Studio .NET 2003 e do Visual Studio .NET do C++Visual, remova as vírgulas extras.
 
-```
+```cpp
 // C4002b.cpp
 // compile with: /W1
 #define F(x,y)

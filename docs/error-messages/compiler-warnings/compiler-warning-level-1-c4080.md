@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 1) C4080
+title: Aviso do compilador (nível 1) C4080
 ms.date: 11/04/2016
 f1_keywords:
 - C4080
 helpviewer_keywords:
 - C4080
 ms.assetid: 964fb3f4-b9fd-450b-aa23-35cece126172
-ms.openlocfilehash: a91963d524300c8768768a8a4615b1ab27e033e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ecc50d4f967826cca691fae4f119c1dee2efef5
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256278"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626888"
 ---
-# <a name="compiler-warning-level-1-c4080"></a>Compilador aviso (nível 1) C4080
+# <a name="compiler-warning-level-1-c4080"></a>Aviso do compilador (nível 1) C4080
 
-Identificador esperado para o nome do segmento; encontrado 'symbol'
+identificador esperado para o nome do segmento; ' Symbol ' encontrado
 
-O nome do segmento no [#pragma alloc_text](../../preprocessor/alloc-text.md) deve ser uma cadeia de caracteres ou um identificador. O compilador ignora o pragma se não for encontrado um identificador válido.
+O nome do segmento no [#pragma alloc_text](../../preprocessor/alloc-text.md) deve ser uma cadeia de caracteres ou um identificador. O compilador ignora o pragma se um identificador válido não for encontrado.
 
 O exemplo a seguir gera C4080:
 
-```
+```cpp
 // C4080.cpp
 // compile with: /W1
 extern "C" void func(void);

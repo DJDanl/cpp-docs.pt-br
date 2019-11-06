@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 1) C4109
+title: Aviso do compilador (nível 1) C4109
 ms.date: 11/04/2016
 f1_keywords:
 - C4109
 helpviewer_keywords:
 - C4109
 ms.assetid: 9e8d95c6-e05d-47e0-bd87-78974b3cc06c
-ms.openlocfilehash: 1156bbfbed7aed9524b24b046b9ce9acdbdc8b8a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6b6c0f182aff9bdb4a5e4e7d35dfd111e11e079
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300200"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626312"
 ---
-# <a name="compiler-warning-level-1-c4109"></a>Compilador aviso (nível 1) C4109
+# <a name="compiler-warning-level-1-c4109"></a>Aviso do compilador (nível 1) C4109
 
-identificador inesperado 'identifier'
+identificador ' identificador ' inesperado
 
 O pragma que contém o identificador inesperado é ignorado.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // C4109.cpp
 // compile with: /W1 /LD
 #pragma init_seg( abc ) // C4109

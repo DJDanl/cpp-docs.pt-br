@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4155
+title: Aviso do compilador (nível 1) C4155
 ms.date: 11/04/2016
 f1_keywords:
 - C4155
 helpviewer_keywords:
 - C4155
 ms.assetid: ba233353-09e3-4195-8127-13a27ddd8d70
-ms.openlocfilehash: 1f47b990762ebe2ea18368949c1781fcf5553d8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9359012d7782e9f8eb9054cbcc7fa3d53b3c6697
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391849"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624973"
 ---
-# <a name="compiler-warning-level-1-c4155"></a>Compilador aviso (nível 1) C4155
+# <a name="compiler-warning-level-1-c4155"></a>Aviso do compilador (nível 1) C4155
 
-exclusão de uma expressão de matriz sem o uso da forma matricial de 'delete'
+exclusão de uma expressão de matriz sem usar a forma de matriz de ' Delete '
 
-O formato da matriz de **excluir** deve ser usado para excluir uma matriz. Este aviso ocorre apenas sob compatibilidade com ANSI (/Za).
+A forma de matriz de **delete** deve ser usada para excluir uma matriz. Esse aviso ocorre somente sob compatibilidade com ANSI (/Za).
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4155:
 
-```
+```cpp
 // C4155.cpp
 // compile with: /Za /W1
 #include <stdio.h>

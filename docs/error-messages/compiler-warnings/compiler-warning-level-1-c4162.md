@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4162
+title: Aviso do compilador (nível 1) C4162
 ms.date: 11/04/2016
 f1_keywords:
 - C4162
 helpviewer_keywords:
 - C4162
 ms.assetid: 21ae3c92-501d-4689-ad7d-13753cb65eff
-ms.openlocfilehash: 6c6b675fd47cb6e98255515c7cd77c6dd48ea02b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e70898065a40a965b08b090bc59263acd918515
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391810"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624846"
 ---
-# <a name="compiler-warning-level-1-c4162"></a>Compilador aviso (nível 1) C4162
+# <a name="compiler-warning-level-1-c4162"></a>Aviso do compilador (nível 1) C4162
 
-'identifier': nenhuma função com vínculo a C encontrada
+' identifier ': nenhuma função com vínculo de C foi encontrada
 
-Uma função com vínculo a C é declarada, mas não pode ser encontrada.
+Uma função com vínculo de C é declarada, mas não pode ser encontrada.
 
-Para resolver este aviso, compile em um arquivo. c (invocar o compilador C).  Se você deve invocar o compilador do C++, coloque extern "C" antes da declaração de função.
+Para resolver esse aviso, compile em um arquivo. c (invocar o compilador C).  Se você precisar invocar C++ o compilador, coloque "C" externo antes da declaração da função.
 
 O exemplo a seguir gera C4162
 
-```
+```cpp
 // C4162.cpp
 // compile with: /c /W1
 unsigned char _bittest(long* a, long b);
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-Solução possível:
+Resolução possível:
 
-```
+```cpp
 // C4162b.cpp
 // compile with: /c
 extern "C"

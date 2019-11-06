@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4867
 ms.assetid: 8a257d70-c3a7-462d-b285-e57c952a8bf7
-ms.openlocfilehash: 0fd5de46f713aed08508f8755c9e54c3ff46366b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e093d262bc26cf0acfbb181d621fffc1aa391ee9
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447197"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626596"
 ---
 # <a name="compiler-warning-c4867"></a>Aviso do compilador C4867
 
-'function': chamada de função faltando lista de argumentos; Use 'chamar' para criar um ponteiro para membro
+' function ': chamada de função ausente na lista de argumentos; Use ' call ' para criar um ponteiro para membro
 
-Um ponteiro para função de membro foi inicializado incorretamente.
+Um ponteiro para uma função membro foi inicializado incorretamente.
 
-Esse aviso pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio 2005: conformidade aprimorada do ponteiro para membro.  O código compilado antes do Visual Studio 2005 agora irá gerar C4867.
+Esse aviso pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio 2005: conformidade aprimorada de ponteiro para membro.  O código que compilou antes do Visual Studio 2005 agora irá gerar C4867.
 
-Esse aviso é emitido sempre como um erro. Use o [aviso](../../preprocessor/warning.md) pragma para desabilitar esse aviso. Para obter mais informações sobre C4867 e MFC/ATL, consulte [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning).
+Esse aviso é sempre emitido como um erro. Use o pragma de [aviso](../../preprocessor/warning.md) para desabilitar este aviso. Para obter mais informações sobre C4867 e MFC/ATL, consulte [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning).
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4867.
 
-```
+```cpp
 // C4867.cpp
 // compile with: /c
 class A {

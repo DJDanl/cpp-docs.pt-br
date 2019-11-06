@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4091
+title: Aviso do compilador (nível 1) C4091
 ms.date: 11/04/2016
 f1_keywords:
 - C4091
 helpviewer_keywords:
 - C4091
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
-ms.openlocfilehash: 87432a74dfe7c09a52f436d4e91b3f70eb66856b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce6dd980ef70f129a0dbae474b8f717f7573f861
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410441"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626746"
 ---
-# <a name="compiler-warning-level-1-c4091"></a>Compilador aviso (nível 1) C4091
+# <a name="compiler-warning-level-1-c4091"></a>Aviso do compilador (nível 1) C4091
 
-'palavra-chave': ignorado à esquerda de 'type' quando nenhuma variável é declarada
+' keyword ': ignorado à esquerda de ' type ' quando nenhuma variável é declarada
 
-O compilador detectou uma situação em que o usuário provavelmente se destina a uma variável para ser declarada, mas o compilador não foi capaz de declarar a variável.
+O compilador detectou uma situação em que o usuário provavelmente pretendia que uma variável fosse declarada, mas o compilador não conseguiu declarar a variável.
 
 ## <a name="example"></a>Exemplo
 
-Um `__declspec` atributo no início de uma declaração de tipo definido pelo usuário se aplica à variável desse tipo. C4091 indica que nenhuma variável é declarada. O exemplo a seguir gera C4091.
+Um atributo `__declspec` no início de uma declaração de tipo definida pelo usuário se aplica à variável desse tipo. C4091 indica que nenhuma variável está declarada. O exemplo a seguir gera C4091.
 
-```
+```cpp
 // C4091.cpp
 // compile with: /W1 /c
 __declspec(dllimport) class X {}; // C4091
@@ -38,9 +38,9 @@ class __declspec(dllimport) X3 {};
 
 ## <a name="example"></a>Exemplo
 
-Se um identificador é um typedef, ele também não pode ser um nome de variável. O exemplo a seguir gera C4091.
+Se um identificador for um typedef, ele também não poderá ser um nome de variável. O exemplo a seguir gera C4091.
 
-```
+```cpp
 // C4091_b.cpp
 // compile with: /c /W1 /WX
 #define LIST 4
