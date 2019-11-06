@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 1) C4138
+title: Aviso do compilador (nível 1) C4138
 ms.date: 11/04/2016
 f1_keywords:
 - C4138
 helpviewer_keywords:
 - C4138
 ms.assetid: 65ebf929-bba0-4237-923b-c1b66adfe17d
-ms.openlocfilehash: 96f8915b9bec166496ca4305d796ce8ef514ca15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6e368f27371b744efa4006630938f68f51a2ca0
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402522"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627103"
 ---
-# <a name="compiler-warning-level-1-c4138"></a>Compilador aviso (nível 1) C4138
+# <a name="compiler-warning-level-1-c4138"></a>Aviso do compilador (nível 1) C4138
 
-' * /' encontrado fora de comentário
+' */' encontrado fora do comentário
 
-O delimitador de comentário de fechamento não é precedido por um delimitador de comentário de abertura. O compilador pressupõe um espaço entre o asterisco (<strong>\*</strong>) e uma barra (/).
+O delimitador de comentário de fechamento não é precedido por um delimitador de comentário de abertura. O compilador assume um espaço entre o asterisco (<strong>\*</strong>) e a barra (/).
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // C4138a.cpp
 // compile with: /W1
 int */*comment*/ptr;   // C4138 Ambiguous first delimiter causes warning
@@ -32,9 +32,9 @@ int main()
 
 Esse aviso pode ser causado pela tentativa de aninhar comentários.
 
-Esse aviso pode ser resolvido se você comentar seções de código que contêm comentários, coloque o código em um **#if / #endif** bloquear e definir a expressão de controle como zero:
+Esse aviso pode ser resolvido se você comentar seções de código que contenham comentários, coloque o código em um bloco **#if/#endif** e defina a expressão de controle como zero:
 
-```
+```cpp
 // C4138b.cpp
 // compile with: /W1
 #if 0

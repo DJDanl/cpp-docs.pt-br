@@ -1,31 +1,31 @@
 ---
 title: Portando para a Plataforma Universal do Windows (C++)
-ms.date: 11/04/2016
+ms.date: 10/23/2019
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 6bda600abfea04e1158f6ff993e04e5076e4c24b
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
-ms.translationtype: HT
+ms.openlocfilehash: 9314cb564e792a7d4949d422a3942e9d46a23cb2
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278457"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627203"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portando para a Plataforma Universal do Windows (C++)
 
-Neste tópico, você pode encontrar informações sobre como portar código C++ existente para a plataforma de aplicativo do Windows 10, a Plataforma Universal do Windows. O termo *universal* significa que seu código pode ser executado em qualquer um dos dispositivos que executam o Windows 10, incluindo desktop, telefones, tablets e dispositivos futuros que executem o Windows 10. Você cria um único projeto e uma única interface do usuário baseada em XAML que funciona bem em qualquer dispositivo que executa Windows 10. Você pode usar recursos de layout dinâmico em XAML para permitir que a interface do usuário do aplicativo se adapte aos diferentes tamanhos de exibição.
+Neste tópico, você pode encontrar informações sobre como portar código C++ existente para a plataforma de aplicativo do Windows 10, a Plataforma Universal do Windows. O que significa que o termo *Universal* é que seu código pode ser executado em qualquer um dos dispositivos que executam o Windows 10. Você cria um único projeto e uma única interface do usuário baseada em XAML que funciona bem em qualquer dispositivo que executa Windows 10. Você pode usar recursos de layout dinâmico em XAML para permitir que a interface do usuário do aplicativo se adapte aos diferentes tamanhos de exibição.
 
-A documentação do Centro de Desenvolvimento do Windows contém um guia para portabilidade de aplicativos do Windows 8.1 para a Plataforma Universal do Windows. Consulte [Mover do Windows Runtime 8 para UWP](/windows/uwp/porting/w8x-to-uwp-root). Embora o guia se concentre principalmente em código C#, a maioria das diretrizes são aplicáveis ao C++. Os procedimentos a seguir contêm informações mais detalhadas.
+A documentação do Centro de Desenvolvimento do Windows contém um guia para portabilidade de aplicativos do Windows 8.1 para a Plataforma Universal do Windows. Consulte [Mover do Windows Runtime 8 para UWP](/windows/uwp/porting/w8x-to-uwp-root). Embora o guia se concentre principalmente em código C#, a maioria das diretrizes são aplicáveis ao C++. Os procedimentos a seguir contêm informações mais detalhadas. Consulte também [mover de um aplicativo de área de trabalho para UWP](/windows/uwp/porting/desktop-to-uwp-migrate).
 
 Este tópico contém os procedimentos a seguir para portabilidade de código para a UWP.
 
 - [Portabilidade de um aplicativo da Windows 8.1 Store para a UWP](#BK_81StoreApp)
 
-- [Portabilidade de um Componente do Tempo de Execução do Windows 8.1 para a UWP](#BK_81Component)
+- [Portabilidade de um Componente do Runtime do Windows 8.1 para a UWP](#BK_81Component)
 
-Se você tiver uma DLL de área de trabalho clássica Win32 e desejar chamá-la de um aplicativo da UWP, você poderá fazer isso também. Usando esses procedimentos, você pode criar uma camada da interface do usuário da UWP para um aplicativo C++ da área de trabalho do Windows clássica existente ou seu código C++ padrão de plataforma cruzada. Confira [Como usar o código C++ existente em um aplicativo da Plataforma Universal do Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
+Se você tiver uma DLL de área de trabalho clássica Win32 e desejar chamá-la de um aplicativo da UWP, você poderá fazer isso também. Usando esses procedimentos, você pode criar uma camada da interface do usuário da UWP para um aplicativo C++ da área de trabalho do Windows clássica existente ou seu código C++ padrão de plataforma cruzada. Veja [Como usar o código C++ existente em um aplicativo da Plataforma Universal do Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md). 
 
 ## <a name="BK_81StoreApp"></a> Portabilidade de um aplicativo da Windows 8.1 Store para a UWP
 
-Se você tiver um aplicativo da Windows 8.1 Store, você poderá usar este procedimento para fazê-lo funcionar na UWP e em qualquer dispositivo que execute o Windows 10.  É uma boa ideia primeiro compilar o projeto com o Visual Studio 2017 como um projeto do Windows 8.1 para primeiro eliminar quaisquer problemas decorrentes das alterações no compilador e bibliotecas. Depois disso, há duas maneiras para converter isso em um projeto do Windows 10 da UWP. A maneira mais fácil (conforme explicado no procedimento a seguir) é criar um projeto Universal do Windows e copiar o código existente dentro dele. Se você estiver usando um projeto Universal para área de trabalho do Windows 8.1 e Windows 8.1 Phone, seu projeto será iniciado com dois layouts diferentes em XAML mas terminará com um único layout dinâmico, que se ajusta o tamanho de exibição.
+Se você tiver um aplicativo da Windows 8.1 Store, você poderá usar este procedimento para fazê-lo funcionar na UWP e em qualquer dispositivo que execute o Windows 10.  É uma boa ideia criar primeiro o projeto com o Visual Studio 2019 como um projeto Windows 8.1, para primeiro eliminar os problemas que surgirem de alterações no compilador e nas bibliotecas. Depois disso, há duas maneiras para converter isso em um projeto do Windows 10 da UWP. A maneira mais fácil (conforme explicado no procedimento a seguir) é criar um projeto Universal do Windows e copiar o código existente dentro dele. Se você estiver usando um projeto Universal para área de trabalho do Windows 8.1 e Windows 8.1 Phone, seu projeto será iniciado com dois layouts diferentes em XAML mas terminará com um único layout dinâmico, que se ajusta o tamanho de exibição.
 
 ### <a name="to-port-a-windows-81-store-app-to-the-uwp"></a>Para portar um aplicativo da Windows 8.1 Store para a UWP
 
@@ -68,13 +68,13 @@ Se você tiver um aplicativo da Windows 8.1 Store, você poderá usar este proce
 
 1. Execute e depure o aplicativo em um emulador ou um dispositivo físico para cada tipo de dispositivo ao qual seu aplicativo dá suporte. Para executar um emulador, você precisa executar o Visual Studio em um computador físico, não em uma máquina virtual.
 
-## <a name="BK_81Component"></a> Portabilidade um Componente do Tempo de Execução do Windows 8.1 para a UWP
+## <a name="BK_81Component"></a> Portabilidade um Componente do Runtime do Windows 8.1 para a UWP
 
-Se você tiver uma DLL ou um Componente do Tempo de Execução do Windows que já funciona com aplicativos da Windows 8.1 Store, você poderá usar este procedimento fazer com que o componente ou DLL funcione com a UWP e o Windows 10. O procedimento básico é criar um novo projeto e copiar seu código nele.
+Se você tiver uma DLL ou um componente do Windows Runtime que já funciona com aplicativos da Windows 8.1 Store, você poderá usar este procedimento fazer com que o componente ou DLL funcione com a UWP e o Windows 10. O procedimento básico é criar um novo projeto e copiar seu código nele.
 
-### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>Para portar um Componente do Tempo de Execução do Windows 8.1 para a UWP
+### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>Para portar um Componente do Runtime do Windows 8.1 para a UWP
 
-1. Na caixa de diálogo **Novo Projeto** no Visual Studio 2017, localize o nó **Windows Universal**. Se você não vir esse nó, instale primeiro o [SDK do Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk). Escolha o modelo **Componente do Tempo de Execução do Windows**, dê um nome para seu componente e escolha o botão **OK**. O nome do componente será usado como o nome do namespace, então você talvez queira usar o mesmo nome do namespace do seu projeto antigo. Isso requer que você crie o projeto em uma pasta diferente da antiga. Se você escolher um nome diferente, você poderá atualizar o nome do namespace nos arquivos de código gerados.
+1. Na caixa de diálogo **Novo Projeto** no Visual Studio 2017, localize o nó **Windows Universal**. Se você não vir esse nó, instale primeiro o [SDK do Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk). Escolha o modelo **componente do Windows Runtime**, dê um nome para seu componente e escolha o botão **OK**. O nome do componente será usado como o nome do namespace, então você talvez queira usar o mesmo nome do namespace do seu projeto antigo. Isso requer que você crie o projeto em uma pasta diferente da antiga. Se você escolher um nome diferente, você poderá atualizar o nome do namespace nos arquivos de código gerados.
 
 1. Feche o projeto.
 

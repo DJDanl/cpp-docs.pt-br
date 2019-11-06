@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
-ms.openlocfilehash: 29e99da02aa0144699d3c20e523b5e5e4b6b8f72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d3f72ddf7675ea7ad73022dc55a60fdc74d4390
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363525"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623624"
 ---
 # <a name="compiler-warning-c4484"></a>Aviso do compilador C4484
 
-'override_function': corresponde ao método de classe ref base 'base_class_function', mas não está marcado como 'virtual', 'new' ou 'override'; 'new' (e não 'virtual') é assumido
+' override_function ': corresponde ao método de classe ref base ' base_class_function ', mas não está marcado como ' virtual ', ' New ' ou ' override '; ' New ' (e not ' virtual ') é assumido
 
-Ao compilar com **/clr**, o compilador não substituirá implicitamente uma função de classe base, o que significa que a função obterá um novo slot em vtable. Para resolver, especifica explicitamente se uma função é uma substituição.
+Ao compilar com **/CLR**, o compilador não substituirá implicitamente uma função de classe base, o que significa que a função receberá um novo slot na vtable. Para resolver, especifique explicitamente se uma função é uma substituição.
 
 Para obter mais informações, consulte:
 
@@ -27,13 +27,13 @@ Para obter mais informações, consulte:
 
 - [novo (novo slot em vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
-C4484 sempre é emitido como um erro. Use o [aviso](../../preprocessor/warning.md) pragma para suprimir C4484.
+C4484 é sempre emitido como um erro. Use o pragma de [aviso](../../preprocessor/warning.md) para suprimir C4484.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4484.
 
-```
+```cpp
 // C4484.cpp
 // compile with: /clr
 ref struct A {

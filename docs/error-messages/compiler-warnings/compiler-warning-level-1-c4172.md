@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4172
+title: Aviso do compilador (nível 1) C4172
 ms.date: 11/04/2016
 f1_keywords:
 - C4172
 helpviewer_keywords:
 - C4172
 ms.assetid: a8d2bf65-d8b1-4fe3-8340-a223d7e7fde6
-ms.openlocfilehash: caa71da9182c1da1d17d87d901084d0ee9badf73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d53972dbcb2e3ab6a95b0b874cc6bb98cd66840
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391784"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624822"
 ---
-# <a name="compiler-warning-level-1-c4172"></a>Compilador aviso (nível 1) C4172
+# <a name="compiler-warning-level-1-c4172"></a>Aviso do compilador (nível 1) C4172
 
-retornando o endereço de variável local ou temporário
+retornando endereço de variável local ou temporária
 
-Uma função retorna o endereço de um objeto temporário ou variável local. Objetos temporários e variáveis locais são destruídos quando uma função retornar, portanto, o endereço retornado não é válido.
+Uma função retorna o endereço de uma variável local ou de um objeto temporário. Variáveis locais e objetos temporários são destruídos quando uma função retorna, de modo que o endereço retornado não é válido.
 
-Recrie a função para que ela não retorna o endereço de um objeto local.
+Reprojete a função para que ela não retorne o endereço de um objeto local.
 
 O exemplo a seguir gera C4172:
 
-```
+```cpp
 // C4172.cpp
 // compile with: /W1 /LD
 float f = 10;

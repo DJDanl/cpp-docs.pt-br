@@ -1,13 +1,13 @@
 ---
 title: 'Guia de portabilidade: Spy++'
-ms.date: 11/19/2018
+ms.date: 10/23/2019
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
-ms.translationtype: HT
+ms.openlocfilehash: 5505e0dbf23dd02f4ae5924ff4f2bacff3f11eea
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630454"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627225"
 ---
 # <a name="porting-guide-spy"></a>Guia de portabilidade: Spy++
 
@@ -15,7 +15,7 @@ Este estudo de caso de portabilidade foi projetado para dar a você uma ideia de
 
 ## <a name="spy"></a>Spy++
 
-O Spy++ é uma ferramenta de diagnóstico de GUI amplamente utilizada para a Área de Trabalho do Windows, que fornece todos os tipos de informações sobre os elementos de interface do usuário na Área de Trabalho do Windows. Ele mostra a hierarquia de janelas completa e fornece acesso aos metadados sobre cada janela e controle. Este aplicativo útil é fornecido com o Visual Studio há muitos anos. Encontramos uma versão antiga dele que foi compilada pela última vez em Visual C++ 6.0 e o portamos para Visual Studio 2015. A experiência do Visual Studio 2017 deve ser quase idêntica.
+O Spy++ é uma ferramenta de diagnóstico de GUI amplamente utilizada para a Área de Trabalho do Windows, que fornece todos os tipos de informações sobre os elementos de interface do usuário na Área de Trabalho do Windows. Ele mostra a hierarquia de janelas completa e fornece acesso aos metadados sobre cada janela e controle. Este aplicativo útil é fornecido com o Visual Studio há muitos anos. Encontramos uma versão antiga dele que foi compilada pela última vez em Visual C++ 6.0 e o portamos para Visual Studio 2015. A experiência do Visual Studio 2017 ou do Visual Studio 2019 deve ser quase idêntica.
 
 Consideramos este caso como sendo típico para portabilidade de aplicativos da Área de Trabalho do Windows que usam o MFC e a API do Win32, especialmente para projetos antigos que não foram atualizados com cada versão do Visual C++ desde o Visual C++ 6.0.
 
@@ -25,7 +25,7 @@ O arquivo de projeto, dois arquivos .dsw antigos do Visual C++ 6.0, foram conver
 
 Depois de atualizar os dois projetos, nossa solução tinha esta aparência:
 
-![A solução Spy&#43;&#43;](../porting/media/spyxxsolution.PNG "A solução Spy&#43;&#43;")
+![A solução&#43; &#43; Spy](../porting/media/spyxxsolution.PNG "A solução&#43; &#43; Spy")
 
 Temos dois projetos, um com um grande número de arquivos de C++ e o outro com uma DLL que é escrita em C.
 
@@ -280,7 +280,7 @@ Indo para a definição deste macro, podemos ver que ele faz referência à fun�
 (static_cast< LRESULT (AFX_MSG_CALL CWnd::*)(CPoint) > (&ThisClass :: OnNcHitTest)) },
 ```
 
-O problema tem a ver com a incompatibilidade no ponteiro para os tipos de função de membro. O problema não é a conversão de `CHotLinkCtrl` como um tipo de classe para `CWnd` como o tipo de classe, já que é essa uma conversão válida de classe derivada para classe base. O problema é o tipo de retorno: UINT vs. LRESULT. LRESULT é resolvido para LONG_PTR, que é um ponteiro de 64 bits ou um ponteiro de 32 bits dependendo do tipo binário de destino, então UINT não é convertido para esse tipo. Isso não é incomum ao atualizar o código escrito antes de 2005, já que o tipo de retorno de vários métodos de mapa de mensagens foram alterados de UINT para LRESULT no Visual Studio 2005 como parte das alterações de compatibilidade de 64 bits. Alteramos o tipo de retorno no código a seguir de UINT para LRESULT:
+O problema tem a ver com a incompatibilidade no ponteiro para os tipos de função de membro. O problema não é a conversão de `CHotLinkCtrl` como um tipo de classe para `CWnd` como o tipo de classe, já que é essa uma conversão válida de classe derivada para classe base. O problema é o tipo de retorno: UINT versus LRESULT. LRESULT é resolvido para LONG_PTR, que é um ponteiro de 64 bits ou um ponteiro de 32 bits dependendo do tipo binário de destino, então UINT não é convertido para esse tipo. Isso não é incomum ao atualizar o código escrito antes de 2005, já que o tipo de retorno de vários métodos de mapa de mensagens foram alterados de UINT para LRESULT no Visual Studio 2005 como parte das alterações de compatibilidade de 64 bits. Alteramos o tipo de retorno no código a seguir de UINT para LRESULT:
 
 ```cpp
 afx_msg UINT OnNcHitTest(CPoint point);
@@ -292,7 +292,7 @@ Após a alteração, temos o seguinte código:
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-Como há cerca de dez ocorrências dessa função todas em diferentes classes derivadas de CWnd, é útil usar **Ir para Definição** (Teclado: **F12**) e **Ir para Declaração** (Teclado: **CTRL**+**F12**) quando o cursor está na função no editor para localizá-las e navegar para elas da janela de ferramentas **Localizar Símbolo**. **Ir Para Definição** é geralmente o mais útil dos dois. **Ir Para Declaração** localizará declarações que não sejam a declaração de classe definidora, assim como declarações de classe friend ou referências de encaminhamento.
+Como há cerca de dez ocorrências dessa função, todas em diferentes classes derivadas de CWnd, é útil usar **Ir Para Definição** (teclado: **F12**) e **Ir Para Declaração** (teclado: **Ctrl**+**F12**) quando o cursor está sobre a função no editor para localizar essas ocorrências e navegar para elas da janela de ferramentas **Localizar Símbolo**. **Ir Para Definição** é geralmente o mais útil dos dois. **Ir Para Declaração** localizará declarações que não sejam a declaração de classe definidora, assim como declarações de classe friend ou referências de encaminhamento.
 
 ##  <a name="mfc_changes"></a> Etapa 9. Alterações do MFC
 
@@ -466,7 +466,7 @@ class CTreeListBox : public CListBox
   BOOL m_bStdMouse : 1;
 ```
 
-Esse código foi escrito antes que o tipo bool interno tivesse suporte no Visual C++. Nesse código, BOOL era um **typedef** para **int**. O tipo **int** é um tipo **com sinal** e a representação de bits de um **int com sinal** é usar o primeiro bit como um bit de sinal, então um campo de bits do tipo int poderia ser interpretado como a representação de 0 ou -1, o que provavelmente não é o pretendido.
+Esse código foi escrito antes que o tipo bool interno tivesse suporte no Visual C++. Nesse código, BOOL era um **typedef** para **int**. O tipo **int** é um tipo **assinado** , e a representação de bits de um **int assinado** é usar o primeiro bit como um bit de sinal, de modo que um campo de bits do tipo int poderia ser interpretado como representando 0 ou-1, provavelmente não é o que pretendia.
 
 Você não saberia dizer por que estes são campos de bits apenas olhando o código. Manter o tamanho do objeto pequeno era realmente o intuito ou há algum lugar em que o layout binário do objeto é usado? Nós os alteramos para membros BOOL comuns, já que não vimos nenhum motivo para o uso de um campo de bits. Não há garantia de que usar campos de bits para manter o tamanho de um objeto pequeno funcione. Isso depende de como o compilador dispõe o tipo.
 
@@ -542,7 +542,7 @@ Colocamos \_T em torno do literal de cadeia de caracteres para remover o erro.
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-A macro \_T tem o efeito de fazer com que um literal de cadeia de caracteres seja compilado como uma cadeia de caracteres **char** ou uma cadeia de caracteres **wchar_t**, dependendo da configuração de MBCS ou UNICODE. Para substituir todas as cadeias de caracteres por \_T no Visual Studio, primeiro abra a caixa **Substituição Rápida** (Teclado: **CTRL**+**F**) ou **Substituir nos Arquivos** (Teclado: **CTRL**+**Shift**+**H**), então escolha a caixa de seleção **Usar Expressões Regulares**. Digite `((\".*?\")|('.+?'))` como o texto de pesquisa e `_T($1)` como o texto de substituição. Se você já tiver a macro \_T em torno de algumas cadeias de caracteres, este procedimento a adicionará novamente; além disso, ele também poderá encontrar casos em que você não deseja \_T, por exemplo, quando usar `#include`, portanto, é melhor usar **Substituir Próximo** em vez de **Substituir Tudo**.
+A macro \_T tem o efeito de fazer com que um literal de cadeia de caracteres seja compilado como uma cadeia de caracteres **char** ou uma cadeia de caracteres **wchar_t**, dependendo da configuração de MBCS ou UNICODE. Para substituir todas as cadeias de caracteres por \_T no Visual Studio, abra primeiro a caixa **Substituição Rápida** (teclado: **Ctrl**+**F**) ou **Substituir nos Arquivos** (teclado: **Ctrl**+**Shift**+**H**), depois escolha a caixa de seleção **Usar Expressões Regulares**. Digite `((\".*?\")|('.+?'))` como o texto de pesquisa e `_T($1)` como o texto de substituição. Se você já tiver a macro \_T em torno de algumas cadeias de caracteres, este procedimento a adicionará novamente; além disso, ele também poderá encontrar casos em que você não deseja \_T, por exemplo, quando usar `#include`, portanto, é melhor usar **Substituir Próximo** em vez de **Substituir Tudo**.
 
 Essa função específica, [wsprintf](/windows/win32/api/winuser/nf-winuser-wsprintfw), na verdade é definida nos cabeçalhos do Windows e a documentação para ela recomenda que ela não seja usada, devido a um possível estouro de buffer. Nenhum tamanho é fornecido para o buffer `szTmp`, portanto, não há nenhuma maneira para a função verificar se o buffer pode conter todos os dados a serem gravados nele. Consulte a próxima seção sobre portabilidade para o CRT Seguro, na qual podemos resolver outros problemas semelhantes. Nós acabamos por substituí-lo por [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).
 
@@ -673,5 +673,5 @@ Portabilidade do Spy++ do código Visual C++ 6.0 original para o compilador mais
 
 ## <a name="see-also"></a>Consulte também
 
-[Portando e atualizando: exemplos e estudos de caso](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Portabilidade e atualização: exemplos e estudos de caso](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Estudo de caso anterior: COM Spy](../porting/porting-guide-com-spy.md)

@@ -1,6 +1,7 @@
 ---
 title: _strdate_s, _wstrdate_s
-ms.date: 11/04/2016
+description: _strdate_s e _wstrdate_s são versões CRT seguras das funções _strdate e _wstrdate que colocam a data atual em um buffer.
+ms.date: 11/01/2019
 api_name:
 - _strdate_s
 - _wstrdate_s
@@ -36,27 +37,27 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-ms.openlocfilehash: fadd30ec81cff59d675212e59c8513656c7b2f35
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7d04c134fcd19753ac0cecf8cc3b87e902d92e83
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940746"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625759"
 ---
 # <a name="_strdate_s-_wstrdate_s"></a>_strdate_s, _wstrdate_s
 
-Copie a data atual do sistema para um buffer. Estas são versões de [_strdate, _wstrdate](strdate-wstrdate.md) com aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Copie a data atual do sistema para um buffer. Essas funções são versões do [_strdate, _wstrdate](strdate-wstrdate.md) com aprimoramentos de segurança, conforme descrito em [recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintaxe
 
 ```C
 errno_t _strdate_s(
    char *buffer,
-   size_t numberOfElements
+   size_t size
 );
 errno_t _wstrdate_s(
    wchar_t *buffer,
-   size_t numberOfElements
+   size_t size
 );
 template <size_t size>
 errno_t _strdate_s(
@@ -70,42 +71,44 @@ errno_t _wstrdate_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*buffer*<br/>
-Um ponteiro para um buffer que será preenchido com a cadeia de caracteres de data formatada.
+\ de *buffer*
+Um ponteiro para um buffer para colocar a cadeia de caracteres de data formatada.
 
-*numberOfElements*<br/>
-O tamanho do buffer.
+\ de *tamanho*
+Tamanho do buffer em unidades de caracteres.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Zero se for bem-sucedido. Se houver uma falha, o valor retornado será um código de erro. Códigos de erro são definidos em ERRNO.H; consulte a tabela abaixo para os erros exatos gerados por esta função. Para obter mais informações sobre códigos de erro, consulte [errno](../../c-runtime-library/errno-constants.md).
+Zero se for bem-sucedido. O valor de retorno é um código de erro se houver uma falha. Códigos de erro são definidos em ERRNO.H; consulte a tabela abaixo para os erros exatos gerados por esta função. Para obter mais informações sobre códigos de erro, consulte [errno](../../c-runtime-library/errno-constants.md).
 
-## <a name="error-conditions"></a>Condições de Erro
+## <a name="error-conditions"></a>Condições de erro
 
-|*buffer*|*numberOfElements*|Valor de|Conteúdo do *buffer*|
+|*buffer*|*size*|Valor de|Conteúdo do *buffer*|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|(qualquer)|**EINVAL**|Não modificado|
 |Não **nulo** (apontando para um buffer válido)|0|**EINVAL**|Não modificado|
-|Não **nulo** (apontando para um buffer válido)|0 < *numberOfElements* < 9|**EINVAL**|Cadeia de caracteres vazia|
-|Não **nulo** (apontando para um buffer válido)|*numberOfElements* >= 9|0|Data atual formatada conforme especificado nos comentários|
+|Não **nulo** (apontando para um buffer válido)|0 < *tamanho* < 9|**EINVAL**|Cadeia de caracteres vazia|
+|Não **nulo** (apontando para um buffer válido)|*tamanho* > = 9|0|Data atual formatada conforme especificado nos comentários|
 
 ## <a name="security-issues"></a>Problemas de segurança
 
-A passagem de um valor não **nulo** inválido para o buffer resultará em uma violação de acesso se o parâmetro *numberOfElements* for maior que 9.
+Passar um valor inválido, não nulo para o *buffer* resultará em uma violação de acesso se o parâmetro de *tamanho* for maior que nove.
 
-Passar valores para o tamanho maior que o tamanho real do *buffer* resultará em saturação do buffer.
+Passar um valor para o *tamanho* maior que o tamanho real dos resultados do *buffer* em uma saturação do buffer.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções fornecem versões mais seguras do **_strdate** e do **_wstrdate**. A **função _strdate_s** copia a data atual do sistema para o buffer apontado *pelo buffer*, formatada **mm**/**DD**/**AA**, em que **mm** é dois dígitos que representam o mês, **DD** é dois dígitos que representam o dia e **YY** são os dois últimos dígitos do ano. Por exemplo, a cadeia de caracteres **12/05/99** representa 5 de dezembro de 1999. O buffer deve ter, no mínimo, 9 caracteres de comprimento.
+Essas funções fornecem versões mais seguras do **_strdate** e do **_wstrdate**. A função **_strdate_s** copia a data atual do sistema para o buffer apontado pelo *buffer*. Ele está formatado `mm/dd/yy`, em que `mm` é o mês de dois dígitos, `dd` é o dia de dois dígitos e `yy` são os dois últimos dígitos do ano. Por exemplo, a cadeia de caracteres `12/05/99` representa 5 de dezembro de 1999. O buffer deve ter pelo menos nove caracteres de comprimento.
 
 **_wstrdate_s** é uma versão de caractere largo do **_strdate_s**; o argumento e o valor de retorno de **_wstrdate_s** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
-Se o *buffer* for um ponteiro **nulo** ou se *numberOfElements* tiver menos de 9 caracteres, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão-1 e definirá **errno** como **EINVAL** se o buffer for **nulo** ou se *numberOfElements* for menor ou igual a 0, ou definir **errno** como **ERANGE** se *NumberOfElements* é menor que 9.
+Quando o *buffer* é um ponteiro **nulo** ou o *tamanho* é menor que nove caracteres, o manipulador de parâmetro inválido é invocado. Ele é descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam-1. Eles definem **errno** como **EINVAL** se o buffer for **nulo** ou se o *tamanho* for menor ou igual a 0. Ou, eles definem **errno** como **ERANGE** se o *tamanho* for menor que 9.
 
-Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir o tamanho do buffer automaticamente, o que elimina a necessidade de especificar um argumento de *tamanho* . E eles podem substituir automaticamente as funções não seguras por suas contrapartes mais recentes e mais seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-### <a name="generic-text-routine-mapping"></a>Mapeamento da Rotina de Texto Genérico:
+As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+### <a name="generic-text-routine-mapping"></a>Mapeamento de rotina de texto genérico:
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -125,11 +128,11 @@ Veja o exemplo de [time](time-time32-time64.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Gerenciamento de Tempo](../../c-runtime-library/time-management.md)<br/>
-[asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>
-[ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>
-[gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
-[localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
-[mktime, _mktime32, _mktime64](mktime-mktime32-mktime64.md)<br/>
-[time, _time32, _time64](time-time32-time64.md)<br/>
-[_tzset](tzset.md)<br/>
+[Gerenciamento de Tempo](../../c-runtime-library/time-management.md)\
+[asctime_s, _wasctime_s](asctime-s-wasctime-s.md)\
+[ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)\
+[gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)\
+[localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)\
+[mktime, _mktime32, _mktime64](mktime-mktime32-mktime64.md)\
+[time, _time32, _time64](time-time32-time64.md)\
+[_tzset](tzset.md)

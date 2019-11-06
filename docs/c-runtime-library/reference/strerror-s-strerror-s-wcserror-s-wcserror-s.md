@@ -42,12 +42,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: f8d461566f748ce5af3d4b2aab443b5966c27dd7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 74caba0398fdb5cdd0f9c80270a42d2903200a5d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958162"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625816"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -112,7 +112,7 @@ Número do erro.
 *strErrMsg*<br/>
 Mensagem fornecida pelo usuário.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Zero se for bem-sucedido ou um código de erro em caso de falha.
 
@@ -125,7 +125,7 @@ Zero se for bem-sucedido ou um código de erro em caso de falha.
 
 ## <a name="remarks"></a>Comentários
 
-A função **strerror_s** mapeia *errnum* para uma cadeia de caracteres de mensagem de erro, retornando a cadeia de caracteres no *buffer*. **_strerror_s** não pega o número do erro; Ele usa o valor atual de **errno** para determinar a mensagem apropriada. Nem **strerror_s** nem **_strerror_s** realmente imprime a mensagem: Para isso, você precisa chamar uma função de saída, como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+A função **strerror_s** mapeia *errnum* para uma cadeia de caracteres de mensagem de erro, retornando a cadeia de caracteres no *buffer*. **_strerror_s** não pega o número do erro; Ele usa o valor atual de **errno** para determinar a mensagem apropriada. Nem **strerror_s** nem **_strerror_s** realmente imprime a mensagem: para isso, você precisa chamar uma função de saída, como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -149,7 +149,7 @@ Essas funções validam seus parâmetros. Se o buffer for **nulo** ou se o parâ
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir automaticamente o tamanho do buffer, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -164,7 +164,7 @@ As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD
 |**strerror_s**, **_strerror_s**|\<string.h>|
 |**_wcserror_s**, **__wcserror_s**|\<string.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

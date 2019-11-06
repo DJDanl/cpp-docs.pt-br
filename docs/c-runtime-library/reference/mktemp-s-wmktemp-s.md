@@ -35,12 +35,12 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: b0db1a50f638c6130e4beb6798431179edec153b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 464f0dfbdb0b84e1fd29ec650e53f5c2543c4403
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951591"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624218"
 ---
 # <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s, _wmktemp_s
 
@@ -69,19 +69,19 @@ errno_t _wmktemp_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nameTemplate*<br/>
+*nometemplate*<br/>
 Padrão de nome de arquivo.
 
 *sizeInChars*<br/>
 Tamanho do buffer em caracteres de byte único em **_mktemp_s**; caracteres largos em **_wmktemp_s**, incluindo o terminador nulo.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Ambas as funções retornam zero em caso de êxito, um código de erro em caso de falha.
 
 ### <a name="error-conditions"></a>Condições de Erro
 
-|*nameTemplate*|*sizeInChars*|Valor retornado|Novo valor em *nametemplate*|
+|*nometemplate*|*sizeInChars*|Valor retornado|Novo valor em *nametemplate*|
 |----------------|-------------------|----------------------|-------------------------------|
 |**NULL**|qualquer|**EINVAL**|**NULL**|
 |Formato incorreto (consulte a seção de comentários para o formato correto)|qualquer|**EINVAL**|cadeia de caracteres vazia|
@@ -93,6 +93,8 @@ Se qualquer uma das condições de erro acima ocorrer, o manipulador de parâmet
 
 A função **_mktemp_s** cria um nome de arquivo exclusivo modificando o argumento *nametemplate* , de modo que após a chamada, o ponteiro *nametemplate* aponta para uma cadeia de caracteres que contém o novo nome de arquivo. o **_mktemp_s** manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo sequências de caracteres multibyte de acordo com a página de código multibyte atualmente em uso pelo sistema de tempo de execução. **_wmktemp_s** é uma versão de caractere largo do **_mktemp_s**; o argumento de **_wmktemp_s** é uma cadeia de caracteres largos. o **_wmktemp_s** e o **_mktemp_s** se comportam de forma idêntica, exceto pelo fato de que o **_wmktemp_s** não lida com cadeias de caracteres multibyte.
 
+As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
@@ -103,7 +105,7 @@ O argumento *nametemplate* tem o formato **baseXXXXXX**, em que *base* é a part
 
 Cada chamada bem-sucedida para **_mktemp_s** modifica *nametemplate*. Em cada chamada subsequente do mesmo processo ou thread com o mesmo argumento *nametemplate* , **_mktemp_s** verifica os nomes de arquivo que correspondem aos nomes retornados por **_mktemp_s** nas chamadas anteriores. Se nenhum arquivo existir para um determinado nome, **_mktemp_s** retornará esse nome. Se existirem arquivos para todos os nomes retornados anteriormente, o **_mktemp_s** criará um novo nome substituindo o caractere alfabético usado no nome retornado anteriormente pela próxima letra minúscula disponível, em ordem, de ' a ' até ' z '. Por exemplo, se *base* for:
 
-> **fn**
+> **FN**
 
 e o valor de cinco dígitos fornecido pelo **_mktemp_s** é 12345, o primeiro nome retornado é:
 
@@ -128,7 +130,7 @@ Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as s
 |**_mktemp_s**|\<io.h>|
 |**_wmktemp_s**|\<io.h> ou \<wchar.h>|
 
-Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

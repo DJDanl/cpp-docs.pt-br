@@ -1,25 +1,25 @@
 ---
-title: Compatibilidade binária de C++ entre o Visual Studio 2015 e o Visual Studio 2019
+title: C++compatibilidade binária entre o Visual Studio 2015 e o Visual Studio 2019
 ms.date: 10/17/2019
 helpviewer_keywords:
 - binary compatibility, Visual C++
 ms.assetid: 591580f6-3181-4bbe-8ac3-f4fbaca949e6
-ms.openlocfilehash: 6365ded349ad08a167b76ca9f6ab43e6e7752987
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 761f6187a8b30ecb4214821c7f91d1b26e9c647c
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587897"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627017"
 ---
-# <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2019"></a>Compatibilidade binária de C++ entre o Visual Studio 2015 e o Visual Studio 2019
+# <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2019"></a>C++compatibilidade binária entre o Visual Studio 2015 e o Visual Studio 2019
 
 No Visual Studio 2013 e em versões anteriores, não havia garantia de compatibilidade binária entre arquivos-objetos (OBJs), bibliotecas estáticas (LIBs), bibliotecas dinâmicas (DLLs) e executáveis (EXEs) compilados com versões diferentes do conjunto de ferramentas do compilador e das bibliotecas de runtime. 
 
-No Visual Studio 2015 e posteriores, o número principal do conjunto de ferramentas do C++ é 14 (v140 para Visual Studio 2015, v141 para Visual Studio 2017 e v142 para Visual Studio 2019). Isso reflete o fato de que tanto as bibliotecas de runtime quanto os aplicativos compilados com uma das versões do compilador apresentam compatibilidade binária. Isso significa que, se você tiver uma biblioteca de terceiros que foi criada com o Visual Studio 2015, você não precisará recompilá-la a fim de consumi-la de um aplicativo criado com o Visual Studio 2017 ou com o Visual Studio 2019.
+No Visual Studio 2015 e posteriores, o número principal do conjunto de ferramentas do C++ é 14 (v140 para Visual Studio 2015, v141 para Visual Studio 2017 e v142 para Visual Studio 2019). Isso reflete o fato de que as bibliotecas de tempo de execução e os aplicativos compilados com qualquer uma dessas versões do compilador são compatíveis com binários. Isso significa que, se você tiver uma biblioteca de terceiros que foi criada com o Visual Studio 2015, você não precisará recompilá-la a fim de consumi-la de um aplicativo criado com o Visual Studio 2017 ou com o Visual Studio 2019.
 
-A única exceção a essa regra é que as bibliotecas estáticas ou os arquivos-objeto são compilados com o comutador de compilador `/GL` que não apresenta compatibilidade binária. 
+A única exceção a essa regra é que as bibliotecas estáticas ou os arquivos-objeto são compilados com o comutador de compilador `/GL` que não apresenta compatibilidade binária.
 
-Quando você mistura binários criados com diferentes versões com suporte do conjunto de ferramentas do MSVC, redistribuível do Visual C++ no qual o aplicativo é executado não pode ser mais antigo do que qualquer uma das versões de conjunto de ferramentas usadas para criar seu aplicativo ou as bibliotecas que ele consome. 
+Quando você mistura binários criados com versões diferentes com suporte do conjunto de ferramentas do C++ MSVC, o Visual redistribuível no qual seu aplicativo é executado não pode ser mais antigo do que qualquer uma das versões do conjunto de ferramentas usadas para criar seu aplicativo ou quaisquer bibliotecas consumidas.
 
 ## <a name="upgrade-microsoft-visual-c-redistributable-from-visual-studio-2015-or-2017-to-visual-studio-2019"></a>Atualizar o Microsoft C++ Visual redistribuível do visual Studio 2015 ou 2017 para o Visual Studio 2019
 

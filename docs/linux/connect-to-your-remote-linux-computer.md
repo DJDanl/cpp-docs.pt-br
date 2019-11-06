@@ -3,12 +3,12 @@ title: Conectar-se a seu sistema Linux de destino no Visual Studio
 description: Como se conectar a um computador Linux remoto ou WSL de dentro de um projeto do Visual Studio C++.
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 3d91faa7aa83c86e8c2f3544ee61c16f75f8c346
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925567"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626762"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Conectar-se a seu sistema Linux de destino no Visual Studio
 
@@ -79,6 +79,20 @@ Para configurar essa conexão remota:
    Os logs incluem conexões, todos os comandos enviados para o computador remoto (texto, código de saída e tempo de execução) e toda a saída do Visual Studio para o shell. O registro em log funciona para qualquer projeto CMake de plataforma cruzada ou do Linux com base em MSBuild no Visual Studio.
 
    Você pode configurar a saída para ir para um arquivo ou para o painel **Log de Plataforma Cruzada** na Janela de Saída. Nos projetos Linux baseados no MSBuild, os comandos emitidos para o computador remoto pelo MSBuild não são roteados para a **Janela de Saída** porque são emitidos fora do processo. Em vez disso, eles são registrados em um arquivo com o prefixo "msbuild_".
+   
+## <a name="tcp-port-forwarding"></a>Encaminhamento de porta TCP
+
+O suporte ao Linux do Visual Studio tem uma dependência do encaminhamento de porta TCP. **Rsync** e **gdbserver** serão afetados se o encaminhamento de porta TCP estiver desabilitado no seu sistema remoto. 
+
+Rsync é usado por projetos do Linux baseados em MSBuild e projetos CMake para [Copiar cabeçalhos do seu sistema remoto para o Windows a ser usado para o IntelliSense](configure-a-linux-project.md#remote_intellisense). Se não for possível habilitar o encaminhamento de porta TCP, você poderá desabilitar o download automático de cabeçalhos remotos por meio de ferramentas > Opções > > do Gerenciador de conexões > de cabeçalhos remotos do IntelliSense Manager. Se o sistema remoto ao qual você está tentando se conectar não tiver o encaminhamento de porta TCP habilitado, você verá o erro a seguir quando o download de cabeçalhos remotos para IntelliSense for iniciado.
+
+![Erro de cabeçalhos](media/port-forwarding-headers-error.png)
+
+Rsync também é usado pelo suporte do CMake do Visual Studio para copiar arquivos de origem para o sistema remoto. Se não for possível habilitar o encaminhamento de porta TCP, você poderá usar o SFTP como seu método de fontes de cópia remota. O SFTP é geralmente mais lento do que o rsync, mas não tem uma dependência no encaminhamento de porta TCP. Você pode gerenciar o método de fontes de cópia remota com a propriedade remoteCopySourcesMethod no [Editor de configurações do cmake](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects). Se o encaminhamento de porta TCP estiver desabilitado em seu sistema remoto, você verá um erro na janela de saída CMake na primeira vez que o rsync é invocado.
+
+![Erro de rsync](media/port-forwarding-copy-error.png)
+
+Gdbserver pode ser usado para depuração em dispositivos inseridos. Se não for possível habilitar o encaminhamento de porta TCP, você precisará usar o gdb para todos os cenários de depuração remota. O gdb é usado por padrão durante a depuração de projetos em um sistema remoto. 
 
    ::: moniker-end
 

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-ms.openlocfilehash: 0d409928de4bf66bcc6d6dda3008131f87e790c3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b296c641be68efac7410328a448a4ad2bd0fa88e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460163"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626826"
 ---
-# <a name="maxnone-class"></a>Classe max_none
+# <a name="max_none-class"></a>Classe max_none
 
 Descreve um objeto da [classe max](../standard-library/allocators-header.md) que limita um objeto [freelist](../standard-library/freelist-class.md) a um comprimento máximo igual a zero.
 
@@ -72,7 +72,7 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro não faz nada. Ele é chamado após cada chamada bem-sucedida de `cache_freelist::allocate` para o operador **New**. O argumento *_Nx* é o número de blocos de memória na parte alocada pelo operador **New**.
+Essa função membro não faz nada. Ele é chamado após cada chamada bem-sucedida pelo `cache_freelist::allocate` para o operador **New**. O argumento *_Nx* é o número de blocos de memória na parte alocada pelo operador **New**.
 
 ## <a name="deallocated"></a>  max_none::deallocated
 
@@ -90,7 +90,7 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Comentários
 
-A função membro não faz nada. Essa função `cache_freelist::deallocate` de membro é chamada depois de cada chamada de to Operator **delete**. O argumento *_Nx* é o número de blocos de memória na parte desalocada pelo operador **delete**.
+A função membro não faz nada. Essa função de membro é chamada depois de cada chamada por `cache_freelist::deallocate` para a **exclusão**do operador. O argumento *_Nx* é o número de blocos de memória na parte desalocada pelo operador **delete**.
 
 ## <a name="full"></a>  max_none::full
 
@@ -100,13 +100,13 @@ Retorna um valor que especifica se mais blocos de memória devem ser adicionados
 bool full();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Essa função de membro sempre retorna **true**.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro é chamada por `cache_freelist::deallocate`. Se a chamada retornar **true**, `deallocate` colocará o bloco de memória na lista livre; se ele retornar false `deallocate` , chamará o operador **delete** para desalocar o bloco.
+Essa função membro é chamada por `cache_freelist::deallocate`. Se a chamada retornar **true**, `deallocate` colocará o bloco de memória na lista livre; Se ele retornar **false**, `deallocate` chamará o operador **delete** para desalocar o bloco.
 
 ## <a name="released"></a>  max_none::released
 

@@ -1,25 +1,25 @@
 ---
-title: Compilador aviso (nível 1) C4258
+title: Aviso do compilador (nível 1) C4258
 ms.date: 11/04/2016
 f1_keywords:
 - C4258
 helpviewer_keywords:
 - C4258
 ms.assetid: bbb75e6d-6693-4e62-8ed3-b006a0ec55e3
-ms.openlocfilehash: a3ce4c81a86920baddfc1b277df0236a96254be4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75d706fafacc5c1524915d063a7fa392cea01b4c
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207390"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624875"
 ---
-# <a name="compiler-warning-level-1-c4258"></a>Compilador aviso (nível 1) C4258
+# <a name="compiler-warning-level-1-c4258"></a>Aviso do compilador (nível 1) C4258
 
-'variable': definição a partir o loop é ignorada; a definição do escopo delimitador é usada"
+' Variable ': a definição do loop for é ignorada; a definição do escopo de circunscrição é usada "
 
-Sob [/Ze](../../build/reference/za-ze-disable-language-extensions.md) e [/ZC: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md), variáveis definidas em um [para](../../cpp/for-statement-cpp.md) loop saem do escopo após o **para** loop termina. Este aviso ocorre se uma variável com o mesmo nome da variável de loop, mas definido no loop delimitador, é usada novamente no escopo que contém o **para** loop. Por exemplo:
+Em [/ze](../../build/reference/za-ze-disable-language-extensions.md) e [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md), as variáveis definidas em um loop [for](../../cpp/for-statement-cpp.md) saem do escopo depois que o loop **for** termina. Esse aviso ocorre se uma variável com o mesmo nome que a variável de loop, mas definida no loop delimitador, for usada novamente no escopo que contém o loop **for** . Por exemplo:
 
-```
+```cpp
 // C4258.cpp
 // compile with: /Zc:forScope /W1
 int main()

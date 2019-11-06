@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 67bed9a8ce9b5cfbe11a5383d2f67ea6c02d1106
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
-ms.translationtype: HT
+ms.openlocfilehash: ea047aca90b03179c0a39cb653e0b9bc08306c64
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552369"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626212"
 ---
 # <a name="c-in-visual-studio"></a>C++ no Visual Studio
 
@@ -36,7 +36,7 @@ Descubra quais foram as novidades do C++ para cada versão do Visual Studio, de 
 [Aprimoramentos de conformidade do C++ no Visual Studio](cpp-conformance-improvements.md)<br/>
 Saiba mais sobre as melhorias de conformidade do C++ no Visual Studio.
 
-[Conformidade com a linguagem Visual C++](visual-cpp-language-conformance.md)<br/>
+[Tabela C++ de conformidade de idioma da Microsoft](visual-cpp-language-conformance.md)<br/>
 Uma lista de status de conformidade por recurso no compilador C++ do MSVC.
 
 [Histórico de alterações de 2003 a 2015 do Visual C++](../porting/visual-cpp-change-history-2003-2015.md)<br/>
@@ -162,7 +162,7 @@ Programação para o CLR (Common Language Runtime).
 
 ## <a name="third-party-open-source-c-libraries"></a>Bibliotecas C++ de software livre de terceiros
 
-A ferramenta de linha de comando **vcpkg** multiplataforma simplifica bastante a descoberta e a instalação de mais de 900 bibliotecas C++ de software livre. Consulte [vcpkg: Gerenciador de pacotes de C++ para Windows](../build/vcpkg.md).
+A ferramenta de linha de comando **vcpkg** multiplataforma simplifica bastante a descoberta e a instalação de mais de 900 bibliotecas C++ de software livre. Consulte [vcpkg: gerenciador de pacotes de C++ para Windows](../build/vcpkg.md).
 
 ## <a name="feedback-and-community"></a>Comentários e comunidade
 

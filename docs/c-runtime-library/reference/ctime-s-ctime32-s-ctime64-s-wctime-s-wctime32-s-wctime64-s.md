@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: d983ee4219985c7b213812a69f6f83f49dbf389b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a6329319be5d002c8f0a35ceb0258cb9081923f7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942017"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624406"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
@@ -139,16 +139,16 @@ Deve ser grande o suficiente para conter 26 caracteres. Um ponteiro para o resul
 *numberOfElements*<br/>
 O tamanho do buffer.
 
-*sourceTime*<br/>
+*origemtime*<br/>
 Ponteiro para a hora armazenada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Zero se for bem-sucedido. Se houver uma falha devido a um parâmetro inválido, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, um código de erro será retornado. Códigos de erro são definidos em ERRNO.H; para obter uma lista desses erros, consulte [errno](../../c-runtime-library/errno-constants.md). Os códigos de erro reais gerados para cada condição de erro são mostrados na tabela a seguir.
 
 ## <a name="error-conditions"></a>Condições de Erro
 
-|*buffer*|*numberOfElements*|*sourceTime*|Valor de|Valor no *buffer*|
+|*buffer*|*numberOfElements*|*origemtime*|Valor de|Valor no *buffer*|
 |--------------|------------------------|------------|------------|-----------------------|
 |**NULL**|qualquer|qualquer|**EINVAL**|Não modificado|
 |Not **NULL** (aponta para memória válida)|0|qualquer|**EINVAL**|Não modificado|
@@ -172,6 +172,8 @@ A cadeia de caracteres convertida também é ajustada de acordo com as configura
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir automaticamente o tamanho do buffer, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
+As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
@@ -187,7 +189,7 @@ No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sob
 |**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<time.h>|
 |**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<time.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Libraries
 

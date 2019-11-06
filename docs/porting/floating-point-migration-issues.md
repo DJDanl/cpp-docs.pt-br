@@ -2,16 +2,16 @@
 title: Problemas de migração de ponto flutuante
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: a259cf276c0347fda4954b46318cc79be88028ee
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
-ms.translationtype: HT
+ms.openlocfilehash: 0a84b764d395063f38cae299cff75437318b024e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332342"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626986"
 ---
 # <a name="floating-point-migration-issues"></a>Problemas de migração de ponto flutuante
 
-Às vezes, ao atualizar os projetos para uma versão mais nova do Visual Studio, você poderá achar que os resultados de algumas operações de ponto flutuantes foram alterados. Isso geralmente ocorre por um desses dois motivos: alterações de geração de código que aproveitam melhor o processador disponível e correções de bugs ou alterações nos algoritmos usados em funções matemáticas no CRT (biblioteca em tempo de execução C). Em geral, os novos resultados estão corretos e estão dentro dos limites especificados pelo padrão da linguagem. Continue lendo para descobrir o que mudou e se isso for importante, como obter os mesmos resultados obtidos antes pelas funções.
+Às vezes, ao atualizar os projetos para uma versão mais nova do Visual Studio, você poderá achar que os resultados de algumas operações de ponto flutuantes foram alterados. Isso geralmente ocorre por um desses dois motivos: alterações de geração de código que aproveitam melhor o processador disponível e correções de bugs ou alterações nos algoritmos usados em funções matemáticas no CRT (biblioteca de runtime C). Em geral, os novos resultados estão corretos e estão dentro dos limites especificados pelo padrão da linguagem. Continue lendo para descobrir o que mudou e se isso for importante, como obter os mesmos resultados obtidos antes pelas funções.
 
 ## <a name="new-math-functions-and-universal-crt-changes"></a>Novas funções matemáticas e alterações do CRT Universal
 
@@ -31,6 +31,6 @@ Na maioria dos casos, as alterações de ponto flutuante nas bibliotecas e nos c
 
 ## <a name="see-also"></a>Consulte também
 
-[Atualizando projetos de versões anteriores do Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Atualizando projetos de versões anteriores do VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visão geral de possíveis problemas de atualização (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Histórico de alterações de 2003 a 2015 do Visual C++](visual-cpp-change-history-2003-2015.md)

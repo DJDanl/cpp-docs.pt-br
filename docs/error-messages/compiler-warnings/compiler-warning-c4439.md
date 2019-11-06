@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4439
 ms.assetid: 9449958f-f407-4824-829b-9e092f2af97d
-ms.openlocfilehash: d604c234b9445a7e5304118124620f0057f30975
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7cab2e55fca640438051fbb79ac933e83d5f3cbb
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311339"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623650"
 ---
 # <a name="compiler-warning-c4439"></a>Aviso do compilador C4439
 
-'function': definição de função com um tipo gerenciado na assinatura deve ter um clrcall convenção de chamada
+' function ': a definição de função com um tipo gerenciado na assinatura deve ter uma Convenção de chamada ir_ clrcall
 
-O compilador implicitamente substituído uma convenção de chamada com [clrcall](../../cpp/clrcall.md). Para resolver este aviso, remova os `__cdecl` ou `__stdcall` convenção de chamada.
+O compilador substituiu implicitamente uma Convenção de chamada por [_ unclrcall](../../cpp/clrcall.md). Para resolver esse aviso, remova o `__cdecl` ou `__stdcall` Convenção de chamada.
 
-C4439 sempre é emitido como um erro. Você pode desativar esse aviso com a `#pragma warning` ou **/wd**; consulte [aviso](../../preprocessor/warning.md) ou [/w, /W0, / W1, / w2, / w3, / W4, / W1, / w2, / w3, / W4, /Wall, /wd, /, /wo, /Wv, /WX (nível de aviso)](../../build/reference/compiler-option-warning-level.md)para obter mais informações.
+C4439 é sempre emitido como um erro. Você pode desativar esse aviso com o `#pragma warning` ou **/WD**; consulte [Warning](../../preprocessor/warning.md) ou [/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/We,/wo,/WV,/WX (nível de aviso)](../../build/reference/compiler-option-warning-level.md) para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4439.
 
-```
+```cpp
 // C4439.cpp
 // compile with: /clr
 void __stdcall f( System::String^ arg ) {}   // C4439

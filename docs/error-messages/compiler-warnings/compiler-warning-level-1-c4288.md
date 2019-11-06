@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4288
+title: Aviso do compilador (nível 1) C4288
 ms.date: 11/04/2016
 f1_keywords:
 - C4288
 helpviewer_keywords:
 - C4288
 ms.assetid: 6aaeb139-90cd-457a-9d37-65687042736f
-ms.openlocfilehash: d8769f5663ca0bde9048e52d4579012dfccab0a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81094bf019060b56337347f7d364ead7c78c8128
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207089"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626654"
 ---
-# <a name="compiler-warning-level-1-c4288"></a>Compilador aviso (nível 1) C4288
+# <a name="compiler-warning-level-1-c4288"></a>Aviso do compilador (nível 1) C4288
 
-extensão não padrão usada: 'var': variável de controle de loop declarada no loop for é usada fora do escopo de loop for; ela está em conflito com a declaração no escopo externo
+extensão não padrão usada: ' var ': a variável de controle de loop declarada no loop for é usada fora do escopo de loop for; Ele está em conflito com a declaração no escopo externo
 
-Ao compilar com [/Ze](../../build/reference/za-ze-disable-language-extensions.md) e **/Zc:forscope-**, uma variável declarada em um **para** loop foi usado após o [para](../../cpp/for-statement-cpp.md)-escopo de loop. Uma extensão da Microsoft para a linguagem C++ permite que essa variável permanece no escopo e C4288 lembra você de que a primeira declaração da variável não é usada.
+Ao compilar com [/ze](../../build/reference/za-ze-disable-language-extensions.md) e **/Zc: forScope-** , uma variável declarada em um loop **for** é usada após o escopo [do loop for](../../cpp/for-statement-cpp.md). Uma extensão da Microsoft para C++ o idioma permite que essa variável permaneça no escopo e C4288 o lembra de que a primeira declaração da variável não é usada.
 
-Ver [/ZC: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) para obter informações sobre como especificar a extensão da Microsoft no **para** loops com /ze.
+Consulte [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) para obter informações sobre como especificar a extensão da Microsoft no **para** loops com/Ze.
 
 O exemplo a seguir gera C4288:
 
-```
+```cpp
 // C4288.cpp
 // compile with: /W1 /c /Zc:forScope-
 int main() {

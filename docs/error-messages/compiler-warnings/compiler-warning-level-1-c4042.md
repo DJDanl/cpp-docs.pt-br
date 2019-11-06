@@ -1,35 +1,35 @@
 ---
-title: Compilador aviso (nível 1) C4042
+title: Aviso do compilador (nível 1) C4042
 ms.date: 11/04/2016
 f1_keywords:
 - C4042
 helpviewer_keywords:
 - C4042
 ms.assetid: e4bd861b-1194-426b-bf79-68c5b021eb0a
-ms.openlocfilehash: 99f4f45aad82aa9898dad4cffb60b8e3311ddc9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db7f0425c3752c20ca8c5d4b6c95845ff64475c5
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152131"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627031"
 ---
-# <a name="compiler-warning-level-1-c4042"></a>Compilador aviso (nível 1) C4042
+# <a name="compiler-warning-level-1-c4042"></a>Aviso do compilador (nível 1) C4042
 
-'identifier': possui classe de armazenamento incorreta
+' identifier ': tem uma classe de armazenamento inadequada
 
-A classe de armazenamento especificado não pode ser usada com este identificador neste contexto. Em vez disso, o compilador usa a classe de armazenamento padrão:
+A classe de armazenamento especificada não pode ser usada com este identificador neste contexto. Em vez disso, o compilador usa a classe de armazenamento padrão:
 
-- `extern`, se *identificador* é uma função.
+- `extern`, se o *identificador* for uma função.
 
-- **auto**, se *identificador* é um parâmetro formal ou uma variável local.
+- **auto**, se o *identificador* for um parâmetro formal ou uma variável local.
 
-- Nenhum armazenamento de classe, se *identificador* é uma variável global.
+- Nenhuma classe de armazenamento, se o *identificador* for uma variável global.
 
-Esse aviso pode ser provocado pela especificação de uma classe de armazenamento diferente de **registrar** em uma declaração de parâmetro.
+Esse aviso pode ser causado pela especificação de uma classe de armazenamento diferente de **registro** em uma declaração de parâmetro.
 
 O exemplo a seguir gera C4042
 
-```
+```cpp
 // C4042.cpp
 // compile with: /W1 /LD
 int func2( __declspec( thread ) int tls_i )    // C4042

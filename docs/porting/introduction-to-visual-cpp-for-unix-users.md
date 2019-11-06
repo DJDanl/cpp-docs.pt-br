@@ -1,67 +1,53 @@
 ---
-title: Introdução ao Visual C++ para usuários do UNIX
-ms.date: 09/01/2017
+title: Introdução à Microsoft C++ para usuários do UNIX
+ms.date: 10/23/2019
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 7f73e51e02eafe46c279a8f828803912d8cd190a
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
-ms.translationtype: HT
+ms.openlocfilehash: 791c513553acbd300204746ae1e1dddf7a3ae5c4
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631691"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626996"
 ---
-# <a name="introduction-to-visual-c-for-unix-users"></a>Introdução ao Visual C++ para usuários do UNIX
+# <a name="introduction-to-microsoft-c-for-unix-users"></a>Introdução à Microsoft C++ para usuários do UNIX
 
-Este tópico fornece informações para usuários do UNIX novatos no Visual Studio e que desejam tornar-se produtivos com o C++ e com o IDE (Ambiente de Desenvolvimento Integrado) do Visual Studio.
+Este tópico fornece informações para os usuários de todos os tipos de UNIX que são novos no Visual Studio e que desejam se tornar produtivos C++ a partir da linha de comando ou usando o Visual Studio. Você pode usar o Visual Studio com o C++ compilador da Microsoft para o Windows de destino. Você também pode usar o IDE do Visual Studio com GCC ou clang em ambientes UNIX, como computadores Linux remotos, MinGW-w64 e subsistema do Windows para Linux. Para usar C++ o no Visual Studio, o **desenvolvimento de C++ desktop com** carga de trabalho deve ser instalado. Abra o Instalador do Visual Studio para instalar a carga de trabalho ou adicionar ou remover componentes opcionais. Instale também o **desenvolvimento do Linux C++ com** carga de trabalho se você for direcionar a um computador Linux remoto. Para o desenvolvimento do Android ou do IOS, instale o **desenvolvimento móvel com C++**  carga de trabalho.
 
 ## <a name="getting-started-on-the-command-line"></a>Introdução à linha de comando
 
-É possível usar o compilador C++ na linha de comando de forma semelhante à que você usaria um ambiente de linha de comando UNIX. A compilação ocorre no prompt de comando usando o compilador C e C++ da linha de comando (CL.EXE), o vinculador (LINK.EXE) e outras ferramentas, incluindo o NMAKE.EXE, a versão da Microsoft do utilitário da marca UNIX.
+Você pode usar o compilador C++ da Microsoft na linha de comando de uma maneira semelhante à de usar um ambiente de linha de comando Unix. A compilação ocorre no prompt de comando usando o compilador C e C++ da linha de comando (CL.EXE), o vinculador (LINK.EXE) e outras ferramentas, incluindo o NMAKE.EXE, a versão da Microsoft do utilitário da marca UNIX.
 
-No UNIX, os comandos são instalados em uma pasta comum, como /usr/bin. No Visual Studio, as ferramentas de linha de comando são instaladas no seu diretório de instalação do Visual Studio no subdiretório VC\bin e seus subdiretórios. Ao contrário do UNIX, essas ferramentas não estão disponíveis em uma janela do prompt de comando simples. Para usar as ferramentas de linha de comando, use um atalho de prompt de comando do desenvolvedor ou execute um arquivo de comando de desenvolvedor, como vcvarsall.bat. Isso configura o caminho e outras variáveis de ambiente necessários para compilar programas do C++ na linha de comando. Para obter mais informações, confira [Compilar código C/C++ na linha de comando](../build/building-on-the-command-line.md) e [Passo a passo: Compilando um programa do C++ nativo na linha de comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
-
-Para abrir um atalho de prompt de comando do desenvolvedor, digite *prompt de comando do desenvolvedor* no controle de pesquisa de área de trabalho e escolha o resultado **Prompt de comando do desenvolvedor** para a sua versão do Visual Studio. Para escolher um prompt de comando do desenvolvedor pré-configurado para um host e arquitetura de destino específicos, abra o menu **Iniciar** (o ícone do Windows no canto da área de trabalho) e, em seguida, role até a pasta para a sua versão do Visual Studio, como **Visual Studio 2017**. Abra a pasta e escolha o atalho do prompt de comando para a arquitetura preferencial de host e de destino.
-
-Para aproveitar os recursos mais avançados, como o depurador do Visual Studio, pesquisa no código IntelliSense e preenchimento de declaração, designers visuais, gerenciamento de projeto e assim por diante, é necessário usar o IDE do Visual Studio.
+No UNIX, os comandos são instalados em uma pasta comum, como /usr/bin. No Visual Studio, as ferramentas de linha de comando são instaladas no seu diretório de instalação do Visual Studio no subdiretório VC\bin e seus subdiretórios. Ao contrário do UNIX, essas ferramentas não estão disponíveis em uma janela do prompt de comando simples. Para usar as ferramentas de linha de comando, você deve usar um prompt de comando de desenvolvedor especial que configura o caminho e outras variáveis de ambiente que são C++ necessárias para compilar programas. Para obter mais informações, consulte [Compilar código C/C++ na linha de comando](../build/building-on-the-command-line.md) e [Instruções passo a passo: compilando um programa C++ nativo na linha de comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
 
 ## <a name="debugging-your-code"></a>Depurando seu código
 
-Se você usar a linha de comando e executar os aplicativos em sua estação de trabalho de desenvolvimento, uma caixa de diálogo para executar o depurador do Visual Studio será exibida quando o código encontrar uma violação de acesso à memória, uma exceção sem tratamento ou outros erros irrecuperáveis. Se você clicar em **OK**, então o ambiente de desenvolvimento do Visual Studio será iniciado e o depurador será aberto no ponto de falha. É possível depurar seus aplicativos dessa maneira e, nesse caso, seu código-fonte só estaria disponível se você compilasse com a opção [/Z7, /Zi, /ZI (formato de informação de depuração)](../build/reference/z7-zi-zi-debug-information-format.md). Para obter mais informações, consulte [Depurando código nativo](/visualstudio/debugger/debugging-native-code) e [Usando o IDE do Visual Studio para desenvolvimento de área de trabalho do C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+Você pode usar o depurador do Visual Studio para C++ projetos da Microsoft na linha de comando ou de dentro do IDE. Compile com a opção [/Z7,/Zi,/Zi (formato de informações de depuração)](../build/reference/z7-zi-zi-debug-information-format.md) para habilitar a passagem por meio de fontes. Para obter mais informações, consulte [Depurando código nativo](/visualstudio/debugger/debugging-native-code) e [Usando o IDE do Visual Studio para desenvolvimento de área de trabalho do C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
-## <a name="using-the-development-environment"></a>Usando o ambiente de desenvolvimento
+Para programas compilados com GCC ou Clang, o Visual Studio invoca o GDB, o LLDB ou qualquer depurador personalizado que você especificar.
 
-É mais fácil usar o ambiente de desenvolvimento para editar e compilar seu código-fonte em um *projeto*. Um projeto é uma coleção de fonte e arquivos relacionados que serão compilados em uma única unidade, como uma biblioteca ou um executável. Um projeto também contém informações sobre como os arquivos devem ser criados. As informações sobre projetos são armazenadas em um arquivo de projeto com a extensão .prj.
+## <a name="visual-studio-project-system"></a>Sistema de projeto do Visual Studio
 
-Um aplicativo composto por várias bibliotecas e executáveis, cada um deles criado eventualmente com um conjunto diferente de opções do compilador ou até mesmo em uma linguagem diferente, é armazenado em vários projetos que fazem parte de uma única *solução*. Uma solução é uma abstração para um contêiner agrupar vários projetos. As informações sobre soluções são armazenadas em um arquivo de solução com a extensão .sln. Para obter mais informações, consulte [Soluções e projetos no Visual Studio](/visualstudio/ide/solutions-and-projects-in-visual-studio) e [Usando o IDE do Visual Studio para desenvolvimento de área de trabalho do C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+O sistema de projeto do Visual Studio é chamado de MSBuild. Ele usa arquivos de projeto em formato XML; C++ arquivos de projeto têm a extensão. vcxproj. Um aplicativo composto por várias bibliotecas e executáveis, cada um deles criado eventualmente com um conjunto diferente de opções do compilador ou até mesmo em uma linguagem diferente, é armazenado em vários projetos que fazem parte de uma única *solução*. Uma solução é uma abstração para um contêiner agrupar vários projetos. As informações sobre soluções são armazenadas em um arquivo de solução com a extensão .sln. Para obter mais informações, consulte [Soluções e projetos no Visual Studio](/visualstudio/ide/solutions-and-projects-in-visual-studio) e [Usando o IDE do Visual Studio para desenvolvimento de área de trabalho do C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md). No menu principal, escolha **arquivo** > **novo** **projeto** de > para ver os modelos de projeto disponíveis do Visual Studio.
 
-## <a name="importing-your-existing-code"></a>Importando seu código existente
-
-Você pode usar o compilador do C++ para compilar o código existente que está configurado para compilar com ou sem um makefile e colocá-lo em um projeto do Visual Studio. Para obter mais informações, confira [Como: Criar um projeto em C++ de um código existente](../build/how-to-create-a-cpp-project-from-existing-code.md).
-
-## <a name="creating-a-new-project"></a>Criando um novo projeto
-
-É possível criar novos projetos no ambiente de desenvolvimento. O Visual Studio oferece vários modelos que fornecem código padrão para vários projetos comuns. É possível usar assistentes de aplicativo para gerar projetos com estruturas de tópicos de código para vários tipos de aplicativo.
-
-É possível começar com um projeto vazio usando o **Assistente de aplicativo de console (Win32)** . Marque a caixa de seleção **Projeto vazio**. Em seguida, é possível adicionar arquivos novos e existentes ao projeto mais tarde.
-
-Quando você cria um projeto, é necessário nomeá-lo. Por padrão, o nome do projeto é igual ao nome da DLL (biblioteca de vínculo dinâmico) ou do executável compilado com base no projeto. Para obter mais informações, consulte [Criando soluções e projetos](/visualstudio/ide/creating-solutions-and-projects).
+A partir do Visual Studio 2017, o suporte para projetos CMake é adicionado, bem como opções para usar o C++ compilador da Microsoft com qualquer sistema de compilação arbitrário ou com uma pasta flexível de arquivos de origem e nenhum arquivo de projeto. Para obter mais informações, consulte [projetos do cmake no Visual Studio](../build/cmake-projects-in-visual-studio.md) e [abrir projetos de pasta no Visual Studio](../build/open-folder-projects-cpp.md).
 
 ## <a name="microsoft-specific-modifiers"></a>Modificadores específicos da Microsoft
 
 O compilador do Microsoft C++ implementa várias extensões da linguagem de programação C++ padrão para dar suporte à programação para sistemas operacionais Windows. Essas extensões são usadas para especificar atributos de classe de armazenamento, convenções de chamada de função e endereçamento baseado, entre outros. Para obter uma lista completa de todas as extensões do C++ compatíveis, consulte [Modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-Você pode desabilitar todas as extensões específicas da Microsoft para C++ usando a opção do compilador `/Za`. Essa opção é recomendada se você desejar escrever um código para ser executado em várias plataformas. Para obter mais informações sobre a opção do compilador `/Za`, confira [/Za, /Ze (desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md). Para obter mais informações sobre a conformidade do compilador C++, consulte [Conformidade com a linguagem Visual C++](../overview/visual-cpp-language-conformance.md) e [Comportamento não padrão](../cpp/nonstandard-behavior.md).
+Você pode desabilitar todas as extensões específicas da Microsoft para C++ usando a opção do compilador `/Za`. Essa opção é recomendada se você desejar escrever um código para ser executado em várias plataformas. Para obter mais informações sobre a opção do compilador `/Za`, confira [/Za, /Ze (desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md). Para obter mais informações C++ sobre a conformidade do compilador, consulte [tabela de conformidade de idioma da C++ Microsoft](../overview/visual-cpp-language-conformance.md) e comportamento não [padrão](../cpp/nonstandard-behavior.md).
 
-## <a name="precompiled-headers"></a>Cabeçalhos Pré-compilados
+## <a name="precompiled-headers"></a>Cabeçalhos pré-compilados
 
 Os compiladores C e C++ da Microsoft fornecem opções para pré-compilar qualquer código C ou C++, incluindo código embutido. Usando esse recurso de desempenho, é possível compilar um corpo de código estável, armazenar o estado compilado do código em um arquivo e, durante as compilações subsequentes, combinar o código pré-compilado com código que ainda está em desenvolvimento. Cada compilação subsequente é mais rápida, porque o código estável não precisa ser recompilado.
 
-Por padrão, todo código pré-compilado é especificado nos arquivos *pch.h* e *pch.cpp* (*stdafx.h* e *stdafx.cpp* no Visual Studio 2017 e versões anteriores). O assistente **Novo projeto** criará automaticamente esses arquivos para você, a menos que você desmarque a opção **Cabeçalho pré-compilado**. Para obter mais informações sobre cabeçalhos pré-compilados, consulte [Criando arquivos de cabeçalho pré-compilados](../build/creating-precompiled-header-files.md).
+Por padrão, todo código pré-compilado é especificado nos arquivos *pch.h* e *pch.cpp* (*stdafx.h* e *stdafx.cpp* no Visual Studio 2017 e versões anteriores). Para obter mais informações sobre cabeçalhos pré-compilados, consulte [Criando arquivos de cabeçalho pré-compilados](../build/creating-precompiled-header-files.md).
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-Para obter mais informações, consulte [Porting from UNIX to Win32 (Portabilidade do UNIX para Win32)](../porting/porting-from-unix-to-win32.md).
+Para obter mais informações, consulte [executando programas do Linux no Windows](../porting/porting-from-unix-to-win32.md).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4368
 ms.assetid: cb85bcee-fd3d-4aa5-b626-2324f07a4f1b
-ms.openlocfilehash: b2af1166738d867c84ff4ebae832f831af7940ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1870d076d21c02574793a8079c4658b39ebf121
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311476"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623642"
 ---
 # <a name="compiler-warning-c4368"></a>Aviso do compilador C4368
 
-não é possível definir 'member' como um membro do tipo' gerenciado': não há suporte para tipos mistos
+Não é possível definir ' member ' como um membro de ' type ' gerenciado: tipos mistos não são suportados
 
-É possível inserir um membro de dados nativos em um tipo CLR.
+Não é possível inserir um membro de dados nativo em um tipo CLR.
 
-No entanto, você pode declarar um ponteiro para um tipo nativo e controlar seu tempo de vida no construtor e destruidor e o finalizador da classe gerenciada. Para obter mais informações, consulte [destruidores e finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+No entanto, você pode declarar um ponteiro para um tipo nativo e controlar seu tempo de vida no construtor e destruidor e finalizador de sua classe gerenciada. Para obter mais informações [, consulte destruidores e finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
-Esse aviso é emitido sempre como um erro. Use o [aviso](../../preprocessor/warning.md) pragma para desabilitar C4368.
+Esse aviso é sempre emitido como um erro. Use o pragma de [aviso](../../preprocessor/warning.md) para desabilitar o C4368.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4368.
 
-```
+```cpp
 // C4368.cpp
 // compile with: /clr /c
 struct N {};
