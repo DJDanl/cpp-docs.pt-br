@@ -70,7 +70,7 @@ A tabela a seguir lista os tipos fundamentais usados com mais frequência:
 |bool|1 byte|Representa valores que podem ser true ou false.|
 |char|1 byte|Use os caracteres ASCII em cadeias de caracteres do estilo C mais antigo ou objetos std::string que nunca precisarão ser convertidos em UNICODE.|
 |wchar_t|2 bytes|Representa os valores de caractere "largos" que podem ser codificados no formato UNICODE (UTF-16 no Windows, outros sistemas operacionais podem ser diferentes). Esse é o tipo de caractere usado em cadeias de caracteres do tipo `std::wstring`.|
-|&nbsp;char não assinado|1 byte|O C++ não tem o tipo `byte` interno.  Use unsigned char para representar um valor de bytes.|
+|unsigned&nbsp;char|1 byte|O C++ não tem o tipo `byte` interno.  Use unsigned char para representar um valor de bytes.|
 |unsigned int|4 bytes|Escolha padrão para sinalizadores de bit.|
 |long long|8 bytes|Representa valores inteiros muito grandes.|
 
