@@ -1,21 +1,21 @@
 ---
 title: .MODEL
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .MODEL
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: c409bf10a2f863c380cda6b4822583ffb3787da6
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
-ms.translationtype: HT
+ms.openlocfilehash: b341cfaec35c08f5ac16447890c85570e9c9c0df
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934094"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703583"
 ---
-# <a name="model"></a>.MODEL
+# <a name="model-32-bit-masm"></a>. MODELO (MASM de 32 bits)
 
-Inicializa o modelo de memória do programa.
+Inicializa o modelo de memória do programa. (somente MASM de 32 bits.)
 
 ## <a name="syntax"></a>Sintaxe
 

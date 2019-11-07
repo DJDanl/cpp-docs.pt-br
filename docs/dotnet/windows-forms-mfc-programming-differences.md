@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - Windows Forms [C++], compared to MFC
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
-ms.openlocfilehash: 165c72b4f91073947d3914ae773e277cce192564
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 52de36217a5ab47eddcbe1abd6617860dcb910b8
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "70311856"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73704183"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Windows Forms/diferenças de programação MFC
 
@@ -22,7 +22,7 @@ No entanto, se você estiver acostumado com o MFC, poderá ser usado para criar 
 
 Para obter mais informações sobre Windows Forms aplicativos, consulte [introdução ao Windows Forms](/dotnet/framework/winforms/windows-forms-overview).
 
-Para um aplicativo de exemplo que mostra Windows Forms usado com MFC, consulte [integração do MFC e do Windows Forms](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Para um aplicativo de exemplo que mostra Windows Forms usado com MFC, consulte [integração do MFC e do Windows Forms](https://www.microsoft.com/en-us/download/details.aspx?id=2113).
 
 O seguinte modo de exibição MFC ou recursos de roteamento de comando e documento não têm equivalentes no Windows Forms:
 
