@@ -111,6 +111,17 @@
           href: build/cmake-predefined-configuration-reference.md
     - name: 'vcpkg: Um gerenciador de pacotes para C++'
       href: build/vcpkg.md
+    - name: C++ Build Insights
+      expanded: false
+      items:
+        - name: Introdução ao C++ Build Insights
+          href: build-insights/get-started-with-cpp-build-insights.md
+        - name: Noções básicas sobre o Windows Performance Analyzer
+          href: build-insights/wpa-basics.md
+        - name: referência do vcperf.exe
+          href: build-insights/vcperf-reference.md
+        - name: Referência de exibições do Windows Performance Analyzer
+          href: build-insights/wpa-views-reference.md
     - name: Arquivos de cabeçalho pré-compilados
       href: build/creating-precompiled-header-files.md
     - name: Builds de lançamento do C++
@@ -1896,7 +1907,7 @@
           href: windows/redistributing-web-client-applications.md
         - name: ClickOnce Implantação para aplicativos do Visual C++
           href: windows/clickonce-deployment-for-visual-cpp-applications.md
-        - name: Executar um aplicativo do C++ CLR em uma versão anterior do tempo de execução
+        - name: Executar um aplicativo do C++ CLR em uma versão anterior do runtime
           href: windows/running-a-cpp-clr-application-on-a-previous-runtime-version.md
 - name: Desenvolvimento da UWP
   expanded: false
@@ -2177,7 +2188,7 @@
       items:
         - name: Biblioteca de Modelos C++ do Windows Runtime  (WRL)
           href: cppcx/wrl/windows-runtime-cpp-template-library-wrl.md
-        - name: 'Como: ativar e usar um componente do Tempo de Execução do Windows usando a WRL'
+        - name: 'Como: ativar e usar um componente do Windows Runtime usando a WRL'
           href: cppcx/wrl/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md
         - name: 'Como: executar operações assíncronas usando a WRL'
           href: cppcx/wrl/how-to-complete-asynchronous-operations-using-wrl.md
@@ -2811,20 +2822,38 @@
 - name: Portar e atualizar código C++
   expanded: false
   items:
-    - name: Guia de atualização e portabilidade do Visual C++
+    - name: Guia de atualização e portabilidade do Microsoft C++
       href: porting/visual-cpp-porting-and-upgrading-guide.md
+    - name: Atualizar projetos de versões anteriores
+      items:
+        - name: Atualizar projetos de versões anteriores
+          href: porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md
+        - name: Visão Geral de possíveis problemas de atualização
+          href: porting/overview-of-potential-upgrade-issues-visual-cpp.md
+        - name: Atualize seu código para o CRT Universal
+          href: porting/upgrade-your-code-to-the-universal-crt.md
+        - name: Atualizar WINVER e _WIN32_WINNT
+          href: porting/modifying-winver-and-win32-winnt.md
+        - name: Corrigir suas dependências de internos de biblioteca
+          href: porting/fix-your-dependencies-on-library-internals.md
+        - name: Problemas de migração de ponto flutuante
+          href: porting/floating-point-migration-issues.md
+        - name: Usar multiplataforma nativa no Visual Studio para compilar projetos antigos
+          href: porting/use-native-multi-targeting.md
+        - name: Recursos do C++ preteridos no Visual Studio 2019
+          href: porting/features-deprecated-in-visual-studio.md
+        - name: VCBuild versus MSBuild
+          href: porting/build-system-changes.md
+        - name: Portabilidade de bibliotecas de terceiros
+          href: porting/porting-third-party-libraries.md
+        - name: Portabilidade de aplicativos de dados
+          href: data/data-access-programming-mfc-atl.md
     - name: Histórico de alterações de 2003 a 2015 do Visual C++
       href: porting/visual-cpp-change-history-2003-2015.md
     - name: O que há de novo no Visual C++ de 2003 até 2015
       href: porting/visual-cpp-what-s-new-2003-through-2015.md
-    - name: Compatibilidade binária de C++ entre 2015 e 2017
+    - name: Compatibilidade binária de C++ entre 2015 e 2019
       href: porting/binary-compat-2015-2017.md
-    - name: Visão geral de possíveis problemas de atualização (Visual C++)
-      href: porting/overview-of-potential-upgrade-issues-visual-cpp.md
-    - name: Portabilidade de bibliotecas de terceiros
-      href: porting/porting-third-party-libraries.md
-    - name: Portabilidade de aplicativos de dados
-      href: data/data-access-programming-mfc-atl.md
     - name: 'Porta e atualização: exemplos e estudos de caso'
       items:
         - name: Exemplos e estudos de caso
@@ -2835,27 +2864,9 @@
           href: porting/porting-guide-com-spy.md
         - name: 'Guia de portabilidade: Spy++'
           href: porting/porting-guide-spy-increment.md
-    - name: Atualizar projetos de versões anteriores
-      items:
-        - name: Atualizar projetos de versões anteriores
-          href: porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md
-        - name: Atualize seu código para o CRT Universal
-          href: porting/upgrade-your-code-to-the-universal-crt.md
-        - name: Modificando WINVER e _WIN32_WINNT
-          href: porting/modifying-winver-and-win32-winnt.md
-        - name: Corrigir suas dependências de internos de biblioteca
-          href: porting/fix-your-dependencies-on-library-internals.md
-        - name: Problemas de migração de ponto flutuante
-          href: porting/floating-point-migration-issues.md
-        - name: Usar multiplataforma nativa no Visual Studio para compilar projetos antigos
-          href: porting/use-native-multi-targeting.md
-        - name: Recursos do Visual C++ preteridos no Visual Studio 2019
-          href: porting/features-deprecated-in-visual-studio.md
-        - name: Alterações no sistema de compilação
-          href: porting/build-system-changes.md
-    - name: Introdução ao Visual C++ para usuários do UNIX
+    - name: Introdução ao Microsoft C++ para usuários do UNIX
       href: porting/introduction-to-visual-cpp-for-unix-users.md
-    - name: Portabilidade de UNIX para Win32
+    - name: Como executar programas do Linux no Windows
       href: porting/porting-from-unix-to-win32.md
     - name: Porta para a Plataforma Universal do Windows (C++)
       items:
@@ -6414,10 +6425,10 @@
                   href: c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md
                 - name: Inicialização CRT
                   href: c-runtime-library/crt-initialization.md
-            - name: Rotinas de tempo de execução C universais por categoria
+            - name: Rotinas de runtime C universais por categoria
               expanded: false
               items:
-                - name: Rotinas de tempo de execução C universais por categoria
+                - name: Rotinas de runtime C universais por categoria
                   href: c-runtime-library/run-time-routines-by-category.md
                 - name: Acesso a argumento
                   href: c-runtime-library/argument-access.md
@@ -10042,46 +10053,46 @@
                           href: parallel/amp/reference/concurrency-precise-math-namespace.md
                         - name: 'Funções do namespace Concurrency::precise_math'
                           href: parallel/amp/reference/concurrency-precise-math-namespace-functions.md
-            - name: ConCRT (Tempo de Execução de Simultaneidade)
+            - name: ConCRT (Runtime de Simultaneidade)
               expanded: false
               items:
-                - name: Tempo de Execução de Simultaneidade
+                - name: Runtime de Simultaneidade
                   href: parallel/concrt/concurrency-runtime.md
-                - name: Visão geral do Tempo de Execução de Simultaneidade
+                - name: Visão geral do Runtime de Simultaneidade
                   href: parallel/concrt/overview-of-the-concurrency-runtime.md
-                - name: Tratamento de exceções no tempo de execução de simultaneidade
+                - name: Tratamento de exceções no runtime de simultaneidade
                   href: parallel/concrt/exception-handling-in-the-concurrency-runtime.md
-                - name: Ferramentas de diagnóstico em paralelo (Tempo de Execução de Simultaneidade)
+                - name: Ferramentas de diagnóstico em paralelo (Runtime de Simultaneidade)
                   href: parallel/concrt/parallel-diagnostic-tools-concurrency-runtime.md
                 - name: Criando operações assíncronas em C++ para aplicativos UWP
                   href: parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md
-                - name: Comparando o Tempo de Execução de Simultaneidade com outros modelos de simultaneidade
+                - name: Comparando o Runtime de Simultaneidade com outros modelos de simultaneidade
                   expanded: false
                   items:
-                    - name: Comparando o Tempo de Execução de Simultaneidade com outros modelos de simultaneidade
+                    - name: Comparando o Runtime de Simultaneidade com outros modelos de simultaneidade
                       href: parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md
-                    - name: Migrando de OpenMP no Tempo de Execução de Simultaneidade
+                    - name: Migrando de OpenMP no Runtime de Simultaneidade
                       expanded: false
                       items:
-                        - name: Migrando de OpenMP no Tempo de Execução de Simultaneidade
+                        - name: Migrando de OpenMP no Runtime de Simultaneidade
                           href: parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md
-                        - name: 'Como: converter um loop OpenMP paralelo para loop para usar o Tempo de Execução de Simultaneidade'
+                        - name: 'Como: converter um loop OpenMP paralelo para loop para usar o Runtime de Simultaneidade'
                           href: parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md
-                        - name: 'Como: converter um loop OpenMP que usa cancelamento para usar o Tempo de Execução de Simultaneidade'
+                        - name: 'Como: converter um loop OpenMP que usa cancelamento para usar o Runtime de Simultaneidade'
                           href: parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md
-                        - name: 'Como: converter um loop OpenMP que usa tratamento de exceções para usar o Tempo de Execução de Simultaneidade'
+                        - name: 'Como: converter um loop OpenMP que usa tratamento de exceções para usar o Runtime de Simultaneidade'
                           href: parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md
-                        - name: 'Como: converter um loop OpenMP que usa uma variável de redução para usar o Tempo de Execução de Simultaneidade'
+                        - name: 'Como: converter um loop OpenMP que usa uma variável de redução para usar o Runtime de Simultaneidade'
                           href: parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md
                 - name: Biblioteca de padrões paralelos (PPL)
                   expanded: false
                   items:
                     - name: Biblioteca de padrões paralelos (PPL)
                       href: parallel/concrt/parallel-patterns-library-ppl.md
-                    - name: Paralelismo de tarefa (tempo de execução de simultaneidade)
+                    - name: Paralelismo de tarefa (runtime de simultaneidade)
                       expanded: false
                       items:
-                        - name: Paralelismo de tarefa (tempo de execução de simultaneidade)
+                        - name: Paralelismo de tarefa (runtime de simultaneidade)
                           href: parallel/concrt/task-parallelism-concurrency-runtime.md
                         - name: 'Como: usar parallel_invoke para escrever uma rotina de classificação em paralelo'
                           href: parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md
@@ -10150,10 +10161,10 @@
                       href: parallel/concrt/synchronization-data-structures.md
                     - name: Comparando estruturas de dados com a API do Windows
                       href: parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md
-                - name: Agendador de tarefas (Tempo de Execução de Simultaneidade)
+                - name: Agendador de tarefas (Runtime de Simultaneidade)
                   expanded: false
                   items:
-                    - name: Agendador de tarefas (Tempo de Execução de Simultaneidade)
+                    - name: Agendador de tarefas (Runtime de Simultaneidade)
                       href: parallel/concrt/task-scheduler-concurrency-runtime.md
                     - name: Instâncias de agendador
                       expanded: false
@@ -10196,10 +10207,10 @@
                           href: parallel/concrt/memory-management-functions.md
                         - name: 'Como: usar Alloc e Free para melhorar o desempenho da memória'
                           href: parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md
-                - name: Instruções passo a passo do Tempo de Execução de Simultaneidade
+                - name: Instruções passo a passo do Runtime de Simultaneidade
                   expanded: false
                   items:
-                    - name: Instruções passo a passo do Tempo de Execução de Simultaneidade
+                    - name: Instruções passo a passo do Runtime de Simultaneidade
                       href: parallel/concrt/concurrency-runtime-walkthroughs.md
                     - name: 'Passo a passo: Conectando usando tarefas e solicitações HTTP XML'
                       href: parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md
@@ -10215,27 +10226,27 @@
                       href: parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md
                     - name: 'Passo a passo: Removendo trabalho de um thread de interface de usuário'
                       href: parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md
-                    - name: 'Passo a passo: Usando o Tempo de Execução de Simultaneidade em um aplicativo habilitado para COM'
+                    - name: 'Passo a passo: Usando o Runtime de Simultaneidade em um aplicativo habilitado para COM'
                       href: parallel/concrt/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application.md
                     - name: 'Passo a passo: Adaptando um código existente para usar tarefas leves'
                       href: parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md
                     - name: 'Passo a passo: Criar um bloco de mensagem personalizado'
                       href: parallel/concrt/walkthrough-creating-a-custom-message-block.md
-                - name: Práticas recomendadas do Tempo de Execução de Simultaneidade
+                - name: Práticas recomendadas do Runtime de Simultaneidade
                   expanded: false
                   items:
-                    - name: Práticas recomendadas do Tempo de Execução de Simultaneidade
+                    - name: Práticas recomendadas do Runtime de Simultaneidade
                       href: parallel/concrt/concurrency-runtime-best-practices.md
                     - name: Práticas recomendadas na Biblioteca de Padrões Paralelos
                       href: parallel/concrt/best-practices-in-the-parallel-patterns-library.md
                     - name: Práticas recomendadas na Biblioteca de Agentes Assíncrona
                       href: parallel/concrt/best-practices-in-the-asynchronous-agents-library.md
-                    - name: Práticas recomendadas gerais no Tempo de Execução de Simultaneidade
+                    - name: Práticas recomendadas gerais no Runtime de Simultaneidade
                       href: parallel/concrt/general-best-practices-in-the-concurrency-runtime.md
                 - name: Referência
                   expanded: false
                   items:
-                    - name: Referência (Tempo de Execução de Simultaneidade)
+                    - name: Referência (Runtime de Simultaneidade)
                       href: parallel/concrt/reference/reference-concurrency-runtime.md
                     - name: Namespace concurrency
                       expanded: false
@@ -10392,7 +10403,7 @@
                           href: parallel/concrt/reference/scheduler-interface-structure.md
                         - name: Classe scheduler_not_attached
                           href: parallel/concrt/reference/scheduler-not-attached-class.md
-                        - name: Estrutura scheduler_ptr (Tempo de Execução de Simultaneidade)
+                        - name: Estrutura scheduler_ptr (Runtime de Simultaneidade)
                           href: parallel/concrt/reference/scheduler-ptr-structure-concurrency-runtime.md
                         - name: Classe scheduler_resource_allocation_error
                           href: parallel/concrt/reference/scheduler-resource-allocation-error-class.md
@@ -10416,7 +10427,7 @@
                           href: parallel/concrt/reference/structured-task-group-class.md
                         - name: Classe target_block
                           href: parallel/concrt/reference/target-block-class.md
-                        - name: Classe task (Tempo de Execução de Simultaneidade)
+                        - name: Classe task (Runtime de Simultaneidade)
                           href: parallel/concrt/reference/task-class.md
                         - name: Classe task_canceled
                           href: parallel/concrt/reference/task-canceled-class.md
@@ -10428,7 +10439,7 @@
                           href: parallel/concrt/reference/task-group-class.md
                         - name: Classe task_handle
                           href: parallel/concrt/reference/task-handle-class.md
-                        - name: Classe task_options (Tempo de Execução de Simultaneidade)
+                        - name: Classe task_options (Runtime de Simultaneidade)
                           href: parallel/concrt/reference/task-options-class-concurrency-runtime.md
                         - name: Classe timer
                           href: parallel/concrt/reference/timer-class.md

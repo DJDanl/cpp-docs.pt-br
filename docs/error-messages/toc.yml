@@ -141,6 +141,8 @@
       href: compiler-errors-1/fatal-error-c1046.md
     - name: Erro fatal C1047
       href: compiler-errors-1/fatal-error-c1047.md
+    - name: Erro fatal C1049
+      href: compiler-errors-1/fatal-error-c1049.md
     - name: Erro fatal C1051
       href: compiler-errors-1/fatal-error-c1051.md
     - name: Erro fatal C1052
@@ -4256,44 +4258,44 @@
   href: compiler-warnings/compiler-warnings-by-compiler-version.md
 - name: Avisos de compilador desativados por padrão
   href: ../preprocessor/compiler-warnings-that-are-off-by-default.md
-- name: Erros de tempo de execução de C
+- name: Erros de runtime de C
   expanded: false
   items:
-    - name: Erros de tempo de execução de C (Rxxxx)
+    - name: Erros de runtime de C (Rxxxx)
       href: tool-errors/c-runtime-errors-r6002-through-r6035.md
-    - name: Erro de tempo de execução de C R6002
+    - name: Erro de runtime de C R6002
       href: tool-errors/c-runtime-error-r6002.md
-    - name: Erro de tempo de execução de C R6008
+    - name: Erro de runtime de C R6008
       href: tool-errors/c-runtime-error-r6008.md
-    - name: Erro de tempo de execução de C R6009
+    - name: Erro de runtime de C R6009
       href: tool-errors/c-runtime-error-r6009.md
-    - name: Erro de tempo de execução de C R6016
+    - name: Erro de runtime de C R6016
       href: tool-errors/c-runtime-error-r6016.md
-    - name: Erro de tempo de execução de C R6017
+    - name: Erro de runtime de C R6017
       href: tool-errors/c-runtime-error-r6017.md
-    - name: Erro de tempo de execução de C R6018
+    - name: Erro de runtime de C R6018
       href: tool-errors/c-runtime-error-r6018.md
-    - name: Erro de tempo de execução de C R6019
+    - name: Erro de runtime de C R6019
       href: tool-errors/c-runtime-error-r6019.md
-    - name: Erro de tempo de execução de C R6024
+    - name: Erro de runtime de C R6024
       href: tool-errors/c-runtime-error-r6024.md
-    - name: Erro de tempo de execução de C R6025
+    - name: Erro de runtime de C R6025
       href: tool-errors/c-runtime-error-r6025.md
-    - name: Erro de tempo de execução de C R6026
+    - name: Erro de runtime de C R6026
       href: tool-errors/c-runtime-error-r6026.md
-    - name: Erro de tempo de execução de C R6027
+    - name: Erro de runtime de C R6027
       href: tool-errors/c-runtime-error-r6027.md
-    - name: Erro de tempo de execução de C R6028
+    - name: Erro de runtime de C R6028
       href: tool-errors/c-runtime-error-r6028.md
-    - name: Erro de tempo de execução de C R6030
+    - name: Erro de runtime de C R6030
       href: tool-errors/c-runtime-error-r6030.md
-    - name: Erro de tempo de execução de C R6031
+    - name: Erro de runtime de C R6031
       href: tool-errors/c-runtime-error-r6031.md
-    - name: Erro de tempo de execução de C R6032
+    - name: Erro de runtime de C R6032
       href: tool-errors/c-runtime-error-r6032.md
-    - name: Erro de tempo de execução de C R6033
+    - name: Erro de runtime de C R6033
       href: tool-errors/c-runtime-error-r6033.md
-    - name: Erro de tempo de execução de C R6035
+    - name: Erro de runtime de C R6035
       href: tool-errors/c-runtime-error-r6035.md
 - name: Avisos e erros do CVTRES
   expanded: false
