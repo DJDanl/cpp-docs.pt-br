@@ -1,21 +1,21 @@
 ---
 title: .K3D
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .K3D
 helpviewer_keywords:
 - .K3D directive
 ms.assetid: b69757dc-64a5-4ead-85af-fa5abbbbfdb6
-ms.openlocfilehash: c8023b1f7f884c3bd041764a9daa52b4e9d3feb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb64703626da3fcd03836f007d9af54e1553de2f
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204065"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703724"
 ---
-# <a name="k3d"></a>.K3D
+# <a name="k3d-32-bit-masm"></a>. K3D (MASM de 32 bits)
 
-Habilitar a montagem de K3D instruções.
+Habilita o assembly de instruções K3D. (somente MASM de 32 bits.)
 
 ## <a name="syntax"></a>Sintaxe
 

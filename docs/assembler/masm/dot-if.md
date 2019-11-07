@@ -1,35 +1,35 @@
 ---
 title: .IF
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .IF
 helpviewer_keywords:
 - .IF directive
 ms.assetid: dccc7615-8fc7-4829-9f39-0ee405f6c1e3
-ms.openlocfilehash: cf9c594d843c937dd2191bee2a7cebadbc615c82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83c9ff588e2fe273e24e1d0b1c16517c5eee3365
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185260"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703781"
 ---
-# <a name="if"></a>.IF
+# <a name="if-32-bit-masm"></a>. IF (32-bit MASM)
 
-Gera código que testa `condition1` (por exemplo, AX > 7) e executa o *instruções* se a condição for true.
+Gera código que testa `condition1` (por exemplo, AX > 7) e executa as *instruções* se essa condição for verdadeira. (somente MASM de 32 bits.)
 
 ## <a name="syntax"></a>Sintaxe
 
-> . Se condition1<br/>
+> . SE condição1<br/>
 > instruções<br/>
 > [[. Condição2 ELSEIF<br/>
-> statements]]<br/>
-> [[.ELSE<br/>
-> statements]]<br/>
+> Statements]]<br/>
+> [[. RESTANTE<br/>
+> Statements]]<br/>
 > .ENDIF
 
 ## <a name="remarks"></a>Comentários
 
-Se um [. ELSE](../../assembler/masm/dot-else.md) segue, suas instruções é executadas se a condição original era falsa. Observe que as condições são avaliadas em tempo de execução.
+Se a [. A seguir,](../../assembler/masm/dot-else.md) suas instruções serão executadas se a condição original for falsa. Observe que as condições são avaliadas em tempo de execução.
 
 ## <a name="see-also"></a>Consulte também
 

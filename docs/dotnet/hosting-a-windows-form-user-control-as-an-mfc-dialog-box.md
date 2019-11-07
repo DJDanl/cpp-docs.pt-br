@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: 96730cb3902674373e3e2429b7bc51cbbe257ff3
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 1351f0b2aa4ebc288469231a27c691237b52b1c1
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "70311634"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73704129"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hospedando um controle de usuário do Windows Form como uma caixa de diálogo MFC
 
-O MFC fornece a classe de modelo [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) para que você possa hospedar um controle de<xref:System.Windows.Forms.UserControl>usuário Windows Forms () em uma caixa de diálogo modal ou do MFC sem janela. `CWinFormsDialog`é derivado da classe MFC [CDialog](../mfc/reference/cdialog-class.md), portanto, a caixa de diálogo pode ser iniciada como modal ou sem janela restrita.
+O MFC fornece a classe de modelo [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) para que você possa hospedar um Windows Forms controle de usuário (<xref:System.Windows.Forms.UserControl>) em uma caixa de diálogo modal ou do MFC sem janela. `CWinFormsDialog` é derivada da classe MFC [CDialog](../mfc/reference/cdialog-class.md), portanto, a caixa de diálogo pode ser iniciada como modal ou sem janela restrita.
 
-O processo que `CWinFormsDialog` o usa para hospedar o controle de usuário é semelhante ao descrito em [hospedando um controle de usuário do Windows Form em uma caixa de diálogo do MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). No entanto, `CWinFormsDialog` o gerencia a inicialização e a hospedagem do controle de usuário para que ele não precise ser programado manualmente.
+O processo que o `CWinFormsDialog` usa para hospedar o controle de usuário é semelhante ao descrito em [hospedando um controle de usuário do Windows Form em uma caixa de diálogo do MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). No entanto, o `CWinFormsDialog` gerencia a inicialização e a hospedagem do controle de usuário para que ele não precise ser programado manualmente.
 
-Para um aplicativo de exemplo que mostra Windows Forms usado com MFC, consulte [integração do MFC e do Windows Forms](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Para um aplicativo de exemplo que mostra Windows Forms usado com MFC, consulte [integração do MFC e do Windows Forms](https://www.microsoft.com/en-us/download/details.aspx?id=2113).
 
 ### <a name="to-create-the-mfc-host-application"></a>Para criar o aplicativo host do MFC
 
@@ -27,7 +27,7 @@ Para um aplicativo de exemplo que mostra Windows Forms usado com MFC, consulte [
 
    No menu **arquivo** , selecione **novo**e, em seguida, clique em **projeto**. Na pasta **Visual C++**  , selecione **aplicativo MFC**.
 
-   Na caixa **nome** , insira `MFC03` e altere a configuração da solução para **Adicionar à solução**. Clique em **OK**.
+   Na caixa **nome** , digite `MFC03` e altere a configuração da solução para **Adicionar à solução**. Clique em **OK**.
 
    No **Assistente de aplicativo do MFC**, aceite todos os padrões e clique em **concluir**. Isso cria um aplicativo MFC com uma interface de vários documentos.
 
@@ -39,13 +39,13 @@ Para um aplicativo de exemplo que mostra Windows Forms usado com MFC, consulte [
 
 1. Adicione uma referência ao controle .NET.
 
-   Em **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto **MFC03** e escolha **Adicionar**, **referências**. Na **página de propriedades**, clique em **Adicionar nova referência**, selecione WindowsControlLibrary1 (na guia **projetos** ) e clique em **OK**. Isso adiciona uma referência na forma de uma opção de compilador [/Fu](../build/reference/fu-name-forced-hash-using-file.md) para que o programa seja compilado; Ele também copia WindowsControlLibrary1. dll no `MFC03` diretório do projeto para que o programa seja executado.
+   Em **Gerenciador de soluções**, clique com o botão direito do mouse no nó do projeto **MFC03** e escolha **Adicionar**, **referências**. Na **página de propriedades**, clique em **Adicionar nova referência**, selecione WindowsControlLibrary1 (na guia **projetos** ) e clique em **OK**. Isso adiciona uma referência na forma de uma opção de compilador [/Fu](../build/reference/fu-name-forced-hash-using-file.md) para que o programa seja compilado; Ele também copia WindowsControlLibrary1. dll no diretório do projeto `MFC03` para que o programa seja executado.
 
-1. Adicione `#include <afxwinforms.h>` a *PCH. h* (*stdafx. h* no Visual Studio 2017 e anteriores), no final das instruções existentes `#include` .
+1. Adicione `#include <afxwinforms.h>` a *PCH. h* (*stdafx. h* no Visual Studio 2017 e anteriores), no final das instruções `#include` existentes.
 
-1. Adicione uma nova classe que subclasses `CDialog`.
+1. Adicione uma nova classe que as subclasses `CDialog`.
 
-   Clique com o botão direito do mouse no nome do projeto e adicione uma classe do MFC ( `CDialog`chamada CHostForWinForm) que subclasses. Como você não precisa do recurso caixa de diálogo, você pode excluir a ID do recurso (selecione **modo de exibição de recursos**, a pasta de **diálogo** e `IDD_HOSTFORWINFORM` excluir recurso.  Em seguida, remova todas as referências à ID no código.).
+   Clique com o botão direito do mouse no nome do projeto e adicione uma classe do MFC (chamada CHostForWinForm) que as subclasses `CDialog`. Como você não precisa do recurso caixa de diálogo, é possível excluir a ID do recurso (selecione **modo de exibição de recursos**, expandir a pasta de **diálogo** e excluir `IDD_HOSTFORWINFORM` recurso.  Em seguida, remova todas as referências à ID no código.).
 
 1. Substitua `CDialog` nos arquivos CHostForWinForm. h e CHostForWinForm. cpp por `CWinFormsDialog<WindowsControlLibrary1::UserControl1>`.
 
@@ -137,4 +137,4 @@ Para um aplicativo de exemplo que mostra Windows Forms usado com MFC, consulte [
 ## <a name="see-also"></a>Consulte também
 
 <xref:System.Windows.Forms.UserControl?displayProperty=fullName>
-[Usando um controle de usuário do Windows Form no MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)
+[usando um controle de usuário do Windows Form no MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)
