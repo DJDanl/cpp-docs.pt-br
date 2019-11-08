@@ -1,16 +1,16 @@
 ---
 title: Tabela de conformidade com a linguagem Microsoft C++
-ms.date: 08/12/2019
+ms.date: 10/31/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
-ms.translationtype: HT
+ms.openlocfilehash: e3e86acb81120af1b663b56681ff0f8c41036b5a
+ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631639"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754065"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabela de conformidade com a linguagem Microsoft C++
 
@@ -172,7 +172,7 @@ Para obter detalhes sobre melhorias de conformidade e outras mudanças no Visual
 |&nbsp;&nbsp;[P0463R1 endian](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)|Não|
 |&nbsp;&nbsp;[P0475R1 Omissão da cópia garantida para construção em trechos](https://wg21.link/P0475R1)|Não|
 |&nbsp;&nbsp;[P0476R2 <bit> bit_cast](https://wg21.link/P0476R2)|Não|
-|&nbsp;&nbsp;[P0482R6 char8_t: Um tipo para caracteres e cadeia de caracteres UTF-8](https://wg21.link/P0482R6)|Não|
+|&nbsp;&nbsp;[P0482R6 char8_t: um tipo para caracteres UTF-8 e Strings](https://wg21.link/P0482R6)|Não|
 |&nbsp;&nbsp;[P0487R1 Corrigindo operador>>(basic_istream&, CharT*)](https://wg21.link/P0487R1)|Não|
 |&nbsp;&nbsp;[P0528R3 Comparação e troca atômica com bits de preenchimento](https://wg21.link/P0528R3)|Não|
 |&nbsp;&nbsp;[P0556R3 <bit> ispow2(), ceil2(), floor2(), log2p1()](https://wg21.link/P0556R3)|Não|
@@ -233,7 +233,7 @@ Para obter detalhes sobre melhorias de conformidade e outras mudanças no Visual
 |&nbsp;&nbsp;[N4562 Conceitos básicos da biblioteca: \<optional>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#optional)|VS 2017 15.0|
 |&nbsp;&nbsp;[N4562 Conceitos básicos da biblioteca: \<string_view>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#string.view)|VS 2017 15.0|
 |&nbsp;&nbsp;[N4562 Conceitos básicos da biblioteca: \<tuple> apply()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#tuple)|VS 2017 15.0|
-|&nbsp;&nbsp;[Conceitos básicos da biblioteca N4562: Pesquisa Boyer-Moore()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 Corrigindo tipos de retorno da ferramenta de pesquisa](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[N4562 Conceitos básicos de biblioteca: Boyer-Moore search()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 Corrigindo tipos de retorno da ferramenta de pesquisa](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0003R5 Removendo Especificações de Exceção Dinâmica](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0004R1 Removendo aliases iostreams preteridos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0004r1.html)|VS 2015.2 <sup>[rem](#note_rem)</sup>|
 |&nbsp;&nbsp;[P0005R4 not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html)<br/>&nbsp;&nbsp;[P0358R1 Correções para not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
@@ -338,7 +338,7 @@ __VS 2017 15.7__ indica os recursos com suporte no Visual Studio 2017 versão 15
 __VS 2019 16.0__ indica os recursos com suporte no Visual Studio 2019 versão 16.0 (RTW).<br/>
 __VS 2019 16.1__ indica os recursos com suporte no Visual Studio 2019 versão 16.1.
 
-### <a name="notes"></a>Observações
+### <a name="notes"></a>Anotações
 
 <a name="note_A"></a>__A__ No modo [/std:c++14](../build/reference/std-specify-language-standard-version.md), especificações de exceções dinâmicas permanecem não implementadas, e `throw()` ainda é tratado como um sinônimo para `__declspec(nothrow)`. No C++17, as especificações de exceções dinâmicas foram, em grande parte, removidas por P0003R5, deixando um vestígio: `throw()` foi preterido e obrigado a se comportar como um sinônimo de `noexcept`. No modo [/std:c++17](../build/reference/std-specify-language-standard-version.md), agora o MSVC está em conformidade com o padrão, fornecendo a `throw()` o mesmo comportamento de `noexcept`, ou seja, a imposição por meio de encerramento.
 
@@ -346,7 +346,7 @@ A opção do compilador [/Zc:noexceptTypes](../build/reference/zc-noexcepttypes.
 
 <a name="note_B"></a>__B__ Com suporte no modo [/permissive-](../build/reference/permissive-standards-conformance.md) no Visual Studio 2017 versão 15.7. Veja [Suporte à pesquisa de nome em duas fases chega ao MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/) para obter mais informações.
 
-<a name="note_C"></a>__C__ O suporte do compilador às regras do Pré-processador C99 está incompleto no Visual Studio 2017. Há suporte para macros variadic, mas existem diversos bugs no comportamento do pré-processador. Estamos revisando o pré-processador e enviaremos experimentalmente essas alterações com o modo [/ permissive-](../build/reference/permissive-standards-conformance.md) em breve.
+<a name="note_C"></a>__C__ O suporte do compilador às regras do Pré-processador C99 está incompleto no Visual Studio 2017. Estamos sobrelançando o pré-processador e começamos a enviar essas alterações no Visual Studio 2017 versão 15,8 com a opção de compilador [/experimental: pré-processador](../build/reference/experimental-preprocessor.md) .
 
 <a name="note_D"></a>__D__ Com suporte em [/std:c++14](../build/reference/std-specify-language-standard-version.md) com um aviso suprimível, [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md).
 
@@ -367,14 +367,14 @@ A opção do compilador [/Zc:noexceptTypes](../build/reference/zc-noexcepttypes.
 <a name="note_rem"></a>__rem__ Recursos removidos quando a opção do compilador [/std:c++17](../build/reference/std-specify-language-standard-version.md) (ou [/std:c++latest](../build/reference/std-specify-language-standard-version.md)) for especificada. Esses recursos podem ser habilitados novamente de modo a facilitar a transição para os modos de idioma mais recentes pelo uso destas macros: `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS` e `_HAS_UNEXPECTED`.
 
 <a name="note_charconv"></a>__charconv__ `from_chars()` e `to_chars()` estão disponíveis para números inteiros. A linha do tempo para o ponto flutuante `from_chars()` e ponto flutuante `to_chars()` é da seguinte maneira:
-- VS 2017 15.7: Inteiro `from_chars()` e `to_chars()`.
-- VS 2017 15.8: Ponto flutuante `from_chars()`.
-- VS 2017 15.9: as sobrecargas do ponto flutuante `to_chars()` para decimal mais curto.
-- VS 2019 16.0: as sobrecargas do ponto flutuante `to_chars()` para hexadecimal mais curto e hexadecimal de precisão.
-- VS 2019 16.2: as sobrecargas do ponto flutuante `to_chars()` para precisão fixa e precisão científica.
-- Ainda não implementado: a sobrecarga do ponto flutuante `to_chars()` para precisão geral. 
+- VS 2017 15,7: inteiro `from_chars()` e `to_chars()`.
+- VS 2017 15,8: `from_chars()`de ponto flutuante.
+- VS 2017 15,9: sobrecargas de `to_chars()` de ponto flutuante para decimal mais curto.
+- VS 2019 16,0: sobrecargas de `to_chars()` de ponto flutuante para Hex hexadecimal e precisão mais curto.
+- VS 2019 16,2: ponto flutuante `to_chars()` sobrecargas para precisão fixa e precisão científica.
+- Ainda não implementado: a sobrecarga de `to_chars()` de ponto flutuante para precisão geral. 
 
-<a name ="note_parallel"></a> __parallel__ Biblioteca de algoritmos paralelos do C++17 concluída. Isso não significa que cada algoritmo é paralelizado em todos os casos; os algoritmos mais importantes foram paralelizados, e assinaturas de política de execução são fornecidas mesmo se os algoritmos não foram paralelizados. O cabeçalho interno central da nossa implementação, yvals_core.h, contém as seguintes "Notas de algoritmos paralelos": O C++ permite a implementação de algoritmos paralelos como chamadas para os algoritmos seriais.  Essa implementação paraleliza várias chamadas de algoritmo comum, mas não todas.
+<a name ="note_parallel"></a> __parallel__ Biblioteca de algoritmos paralelos do C++17 concluída. Isso não significa que cada algoritmo é paralelizado em todos os casos; os algoritmos mais importantes foram paralelizados, e assinaturas de política de execução são fornecidas mesmo se os algoritmos não foram paralelizados. O cabeçalho interno central de nossa implementação, yvals_core. h, contém as seguintes "notas de algoritmos C++ paralelos": permite que uma implementação implemente algoritmos paralelos como chamadas para os algoritmos de série.  Essa implementação paraleliza várias chamadas de algoritmo comum, mas não todas.
 
 Os seguintes algoritmos são paralelizados:
 
