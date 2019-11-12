@@ -3,12 +3,12 @@ title: Instalar uma carga de trabalho do Linux para C++ no Visual Studio
 description: Descreve como baixar, instalar e configurar a carga de trabalho do Linux para C++ no Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: ad0fd856fc15ce9f787ba620463480bfe3e59d47
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 68e347a4f90fc15f9d3846c82c3392213e1bd7bc
+ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925417"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912910"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Baixar, instalar e configurar a carga de trabalho do Linux
 
@@ -36,7 +36,7 @@ Para qualquer um desses cenários, a carga de trabalho **Desenvolvimento para Li
 
    ![Caixa de pesquisa do Windows](media/visual-studio-installer-search.png)
 
-2. Procure o instalador sob os resultados dos **Aplicativos** e clique duas vezes nele. Quando o instalador é aberto, escolha **Modificar** e, em seguida, clique na guia **Cargas de trabalho**. Role para baixo até **Outros conjuntos de ferramentas** e selecione a carga de trabalho **Desenvolvimento para Linux com C++** .
+2. Procure o instalador sob os resultados dos **Aplicativos** e clique duas vezes nele. Quando o instalador for aberto, escolha **Modificar**e, em seguida, clique na guia **cargas de trabalho** . Role para baixo até **outros conjuntos de ferramentas** e selecione o desenvolvimento do **Linux com C++**  carga de trabalho.
 
    ![Carga de trabalho do Visual C++ para Desenvolvimento em Linux](media/linuxworkload.png)
 
@@ -46,9 +46,9 @@ Para qualquer um desses cenários, a carga de trabalho **Desenvolvimento para Li
 
 ## <a name="options-for-creating-a-linux-environment"></a>Opções para criar um ambiente Linux
 
-Se você ainda não tem um computador Linux, é possível criar uma máquina virtual do Linux no Azure. Para obter mais informações, confira [Início Rápido: Criar uma máquina virtual do Linux no portal do Azure](/azure/virtual-machines/linux/quick-create-portal).
+Se você ainda não tem um computador Linux, é possível criar uma máquina virtual do Linux no Azure. Para obter mais informações, consulte [Início Rápido: criar uma máquina virtual Linux no portal do Azure](/azure/virtual-machines/linux/quick-create-portal).
 
-No Windows 10, você pode instalar e ter sua distribuição favorita do Linux como destino no WSL (Subsistema do Windows para Linux). Para obter mais informações, confira [Guia de instalação do Subsistema do Windows para Linux para Windows 10](/windows/wsl/install-win10). O WSL é um ambiente de console conveniente, mas não é recomendado para aplicativos gráficos. 
+No Windows 10, você pode instalar e ter sua distribuição favorita do Linux como destino no WSL (Subsistema do Windows para Linux). Para obter mais informações, confira [Guia de instalação do Subsistema do Windows para Linux para Windows 10](/windows/wsl/install-win10). Se não for possível acessar a Windows Store, você poderá [baixar manualmente os pacotes do WSL distribuição](/windows/wsl/install-manual). O WSL é um ambiente de console conveniente, mas não é recomendado para aplicativos gráficos. 
 
 ::: moniker-end
 
@@ -80,7 +80,7 @@ Os projetos do Linux no Visual Studio exigem que as seguintes dependências seja
 
 ::: moniker range="vs-2019" 
 
-## <a name="linux-setup-ubuntu-on-wsl"></a>Configuração do Linux: Ubuntu no WSL
+## <a name="linux-setup-ubuntu-on-wsl"></a>Instalação do Linux: Ubuntu no WSL
 
 Quando o seu alvo for o WSL, não é necessário adicionar uma conexão remota nem configurar o SSH para compilar e depurar. O **zip** e o **rsync** são necessários para a sincronização automática de cabeçalhos do Linux com o Visual Studio para o suporte ao IntelliSense. Se os aplicativos necessários ainda não estiverem presentes, você poderá instalá-los da seguinte maneira:
 
