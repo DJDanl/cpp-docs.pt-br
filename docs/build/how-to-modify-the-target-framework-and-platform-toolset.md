@@ -1,18 +1,18 @@
 ---
-title: 'Como: Modificar o Framework de destino e o conjunto de ferramentas de plataforma'
+title: Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma
 ms.custom: conceptual
 ms.date: 07/24/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: 6af7a4eb47c1d3f8b9c52eec39795c9307ca9d8e
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: c5e7172fea06f6b455422fb023a0b6462b5c4103
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492226"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964898"
 ---
-# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Como: Modificar o Framework de destino e o conjunto de ferramentas de plataforma
+# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma
 
 Você pode editar um arquivo de C++ projeto do Visual Studio para direcionar versões C++ diferentes do conjunto de ferramentas de plataforma, oC++SDK do Windows e o .NET Framework (apenas projetos/CLI). Por padrão, o sistema do projeto usa a versão do .NET Framework e do conjunto de ferramentas que corresponde à versão do Visual Studio usada para criar o projeto. Você pode modificar todos esses valores no arquivo. vcxproj para que você possa usar a mesma base de código para cada destino de compilação.
 
@@ -30,9 +30,9 @@ O Visual Studio também dá suporte a multidirecionamento para C++ projetos. Voc
 
 ## <a name="target-framework-ccli-project-only"></a>Estrutura de destinoC++(somente projeto/CLI)
 
-Ao alterar a Estrutura de destino, altere também o conjunto de ferramentas da plataforma para uma versão que suporte essa Estrutura. Por exemplo, para direcionar o .NET Framework 4,5, você deve usar um conjunto de ferramentas de plataforma compatível, como o Visual Studio 2015 (V140), Visual Studio 2013 (V120) ou o Visual Studio 2012 (V110). Você pode usar o conjunto de ferramentas do [SDK do Windows 7,1](https://www.microsoft.com/en-us/download/details.aspx?id=8279) para direcionar o .NET Framework 2,0, 3,0, 3,5 e 4 e as plataformas x86/x64.
+Ao alterar a Estrutura de destino, altere também o conjunto de ferramentas da plataforma para uma versão que suporte essa Estrutura. Por exemplo, para direcionar o .NET Framework 4,5, você deve usar um conjunto de ferramentas de plataforma compatível, como o Visual Studio 2015 (V140), Visual Studio 2013 (V120) ou o Visual Studio 2012 (V110). Você pode usar o conjunto de ferramentas do [SDK do Windows 7,1](https://www.microsoft.com/download/details.aspx?id=8279) para direcionar o .NET Framework 2,0, 3,0, 3,5 e 4 e as plataformas x86/x64.
 
-É possível estender a plataforma de destino ainda mais criando um conjunto de ferramentas personalizado da plataforma. Para obter mais informações, consulte [ C++ multi-Targeting nativo](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) no C++ blog do Visual.
+É possível estender a plataforma de destino ainda mais criando um conjunto de ferramentas personalizado da plataforma. Para obter mais informações, consulte [ C++ multi-Targeting nativo](https://devblogs.microsoft.com/cppblog/c-native-multi-targeting/) no C++ blog do Visual.
 
 ### <a name="to-change-the-target-framework"></a>Para alterar a Estrutura de destino
 
@@ -63,7 +63,7 @@ Ao alterar a Estrutura de destino, altere também o conjunto de ferramentas da p
 
 1. No painel direito, selecione **conjunto de ferramentas de plataforma** e, em seguida, selecione o conjunto de ferramentas desejado na lista suspensa. Por exemplo, se você tiver instalado o conjunto de ferramentas do Visual Studio 2010, selecione **visual studio 2010 (V100)** para usá-lo para seu projeto.
 
-1. Escolha o botão **OK**.
+1. Selecione o botão **OK**.
 
 ## <a name="see-also"></a>Consulte também
 

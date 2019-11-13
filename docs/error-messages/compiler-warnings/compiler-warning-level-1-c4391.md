@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4391
+title: Aviso do compilador (nível 1) C4391
 ms.date: 11/04/2016
 f1_keywords:
 - C4391
 helpviewer_keywords:
 - C4391
 ms.assetid: 95c6182c-fae9-4174-8f7b-98aa352e68ca
-ms.openlocfilehash: d9d1cebe08a6a163d76271ab001ec91b7cee82a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60b68906697f76d56ff6c0e13f1b4ec105ef1c25
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386454"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966124"
 ---
-# <a name="compiler-warning-level-1-c4391"></a>Compilador aviso (nível 1) C4391
+# <a name="compiler-warning-level-1-c4391"></a>Aviso do compilador (nível 1) C4391
 
-'assinatura': tipo de retorno incorreto para função intrínseca, esperado 'type'
+' Signature ': tipo de retorno incorreto para função intrínseca, esperado ' type '
 
-Uma declaração de função para um intrínseco de compilador tinha o tipo de retorno incorreto. A imagem resultante pode não funcionar corretamente.
+Uma declaração de função para um compilador intrínseco tinha o tipo de retorno incorreto. A imagem resultante pode não ser executada corretamente.
 
-Para corrigir este aviso, corrija a declaração ou excluir a declaração e simplesmente #include do arquivo de cabeçalho apropriado.
+Para corrigir esse aviso, corrija a declaração ou exclua a declaração e simplesmente #include o arquivo de cabeçalho apropriado.
 
 O exemplo a seguir gera C4391:
 
-```
+```cpp
 // C4391.cpp
 // compile with: /W1
 // processor: x86

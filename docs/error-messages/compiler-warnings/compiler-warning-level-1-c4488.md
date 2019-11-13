@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4488
+title: Aviso do compilador (nível 1) C4488
 ms.date: 11/04/2016
 f1_keywords:
 - C4488
 helpviewer_keywords:
 - C4488
 ms.assetid: 55625e46-ddb5-4c7c-99c7-cd4aa9f879bd
-ms.openlocfilehash: c816c1b3f5481ccff19fd2a2377c5fc98f950fee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3d176d034e679f3cca145ccb2fc77cc7fa64f3d
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404072"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965567"
 ---
-# <a name="compiler-warning-level-1-c4488"></a>Compilador aviso (nível 1) C4488
+# <a name="compiler-warning-level-1-c4488"></a>Aviso do compilador (nível 1) C4488
 
-'function': requer 'palavra-chave' palavra-chave para implementar o método de interface 'interface_method'
+' function ': requer palavra-chave ' keyword ' para implementar o método de interface ' interface_method '
 
-Uma classe deve implementar todos os membros de uma interface da qual ela herda diretamente. Um membro implementado deve ter acessibilidade pública e deve ser marcado como virtual.
+Uma classe deve implementar todos os membros de uma interface da qual ele herda diretamente. Um membro implementado deve ter acessibilidade pública e deve ser marcado como virtual.
 
 ## <a name="example"></a>Exemplo
 
-C4488 pode ocorrer se um membro implementado não é público. O exemplo a seguir gera C4488.
+C4488 pode ocorrer se um membro implementado não for público. O exemplo a seguir gera C4488.
 
-```
+```cpp
 // C4488.cpp
 // compile with: /clr /c /W1 /WX
 interface struct MyI {
@@ -42,9 +42,9 @@ public:
 
 ## <a name="example"></a>Exemplo
 
-C4488 pode ocorrer se um membro implementado não está marcado como virtual. O exemplo a seguir gera C4488.
+C4488 pode ocorrer se um membro implementado não estiver marcado como virtual. O exemplo a seguir gera C4488.
 
-```
+```cpp
 // C4488_b.cpp
 // compile with: /clr /c /W1 /WX
 interface struct MyI {

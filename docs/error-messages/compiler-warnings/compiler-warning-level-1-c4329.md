@@ -1,25 +1,25 @@
 ---
-title: Compilador aviso (nível 1) C4329
+title: Aviso do compilador (nível 1) C4329
 ms.date: 11/04/2016
 f1_keywords:
 - C4329
 helpviewer_keywords:
 - C4329
 ms.assetid: 4316f51a-2c56-4b3f-831e-65d24b83b65c
-ms.openlocfilehash: 31ea3aec2c7dd8e02a23a5c3cf6e5ac406636516
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0eb99d9ab6ac58f32013a8b50330f6139548f499
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390510"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966069"
 ---
-# <a name="compiler-warning-level-1-c4329"></a>Compilador aviso (nível 1) C4329
+# <a name="compiler-warning-level-1-c4329"></a>Aviso do compilador (nível 1) C4329
 
-__declspec(align()) is ignored on enum
+__declspec (align ()) é ignorado em enum
 
-Usar o [alinhar](../../cpp/align-cpp.md) palavra-chave da [declspec](../../cpp/declspec.md) modificador não é permitido em um `enum`. O exemplo a seguir gera C4329:
+O uso da palavra-chave [align](../../cpp/align-cpp.md) do modificador [__declspec](../../cpp/declspec.md) não é permitido em um `enum`. O exemplo a seguir gera C4329:
 
-```
+```cpp
 // C4329.cpp
 // compile with: /W1 /LD
 enum __declspec(align(256)) TestEnum {   // C4329
