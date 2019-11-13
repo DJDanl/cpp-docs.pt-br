@@ -1,21 +1,21 @@
 ---
-title: Compilador aviso (nível 1) C4532
+title: Aviso do compilador (nível 1) C4532
 ms.date: 11/04/2016
 f1_keywords:
 - C4532
 helpviewer_keywords:
 - C4532
 ms.assetid: 4e2a286a-d233-4106-9f65-29be1a94ca02
-ms.openlocfilehash: bcadf31eda079ebb8ea7a496efe4c945e16b1ab7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b47eb192bc01e6fe2c6c9423ed2c672f16c6818f
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160751"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966247"
 ---
-# <a name="compiler-warning-level-1-c4532"></a>Compilador aviso (nível 1) C4532
+# <a name="compiler-warning-level-1-c4532"></a>Aviso do compilador (nível 1) C4532
 
-'continue': salto para fora do bloco Finally/finally possui comportamento indefinido durante manipulação de encerramento
+' continue ': salto para fora de __finally bloco/finally tem comportamento indefinido durante tratamento de encerramento
 
 O compilador encontrou uma das seguintes palavras-chave:
 
@@ -25,15 +25,15 @@ O compilador encontrou uma das seguintes palavras-chave:
 
 - [goto](../../cpp/goto-statement-cpp.md)
 
-fazendo com que um salto de uma [Finally](../../cpp/try-finally-statement.md) ou [finalmente](../../dotnet/finally.md) bloco durante um encerramento anormal.
+fazendo com que um salto saia de um bloco de [__finally](../../cpp/try-finally-statement.md) ou [finally](../../dotnet/finally.md) durante o encerramento anormal.
 
-Se ocorrer uma exceção, e enquanto a pilha está sendo desenrolada durante a execução de manipuladores de término (a `__finally` ou blocos finally), e seu código salta fora de um `__finally` bloquear antes do `__finally` bloco termina, o comportamento será indefinido. Controle não pode retornar ao código de desenrolamento, portanto, a exceção não pode ser tratada corretamente.
+Se ocorrer uma exceção e enquanto a pilha estiver sendo desfeita durante a execução dos manipuladores de terminação (os blocos `__finally` ou finally) e seu código sair de um bloco de `__finally` antes de o bloco de `__finally` terminar, o comportamento será indefinido. O controle não pode retornar ao código de desenrolamento, portanto, a exceção pode não ser manipulada corretamente.
 
-Se você deve ir de um **Finally** de blocos, verifique primeiro para encerramento anormal.
+Se você precisar sair de um bloco de **__finally** , verifique a conclusão anormal primeiro.
 
-O exemplo a seguir gera C4532; Comente simplesmente as instruções de salto para resolver os avisos.
+O exemplo a seguir gera C4532; Basta comentar as instruções de salto para resolver os avisos.
 
-```
+```cpp
 // C4532.cpp
 // compile with: /W1
 // C4532 expected

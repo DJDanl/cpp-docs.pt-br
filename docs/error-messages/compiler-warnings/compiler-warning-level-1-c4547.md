@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4547
+title: Aviso do compilador (nível 1) C4547
 ms.date: 11/04/2016
 f1_keywords:
 - C4547
 helpviewer_keywords:
 - C4547
 ms.assetid: 3edf1c2e-c0d5-444d-ae83-44a7cce24bb2
-ms.openlocfilehash: 3293e07eb7c03c71d582d83e40bc011fa7c1eb11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4425fea3bc22b1929127e2fa84baea8ce848578
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410363"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966161"
 ---
-# <a name="compiler-warning-level-1-c4547"></a>Compilador aviso (nível 1) C4547
+# <a name="compiler-warning-level-1-c4547"></a>Aviso do compilador (nível 1) C4547
 
-'operator': operador antes da vírgula não tem nenhum efeito; operador esperado com efeito colateral
+' operator ': o operador antes da vírgula não tem efeito; operador esperado com efeito colateral
 
-O compilador detectou uma expressão de vírgula mal formado.
+O compilador detectou uma expressão de vírgula mal formada.
 
-Esse aviso é desativado por padrão. Para obter mais informações, consulte [compilador avisos que são desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+Esse aviso está desativado por padrão. Para obter mais informações, consulte [os avisos do compilador que estão desativados por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 O exemplo a seguir gera C4547:
 
-```
+```cpp
 // C4547.cpp
 // compile with: /W1
 #pragma warning (default : 4547)
