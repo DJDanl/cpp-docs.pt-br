@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 1) C4621
+title: Aviso do compilador (nível 1) C4621
 ms.date: 11/04/2016
 f1_keywords:
 - C4621
 helpviewer_keywords:
 - C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-ms.openlocfilehash: d35c4143d5b90c7a6a49337931dad4ba73804f20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dd4defe18a94f65e265d02f6c26c715667cd696
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221348"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052601"
 ---
-# <a name="compiler-warning-level-1-c4621"></a>Compilador aviso (nível 1) C4621
+# <a name="compiler-warning-level-1-c4621"></a>Aviso do compilador (nível 1) C4621
 
-nenhuma forma de pós-fixo de 'operator--' encontrada para tipo 'type', usando forma de prefixo
+nenhuma forma de sufixo de ' operator--' encontrada para o tipo ' type ', usando o formato de prefixo
 
-Não havia nenhum operador de decremento de sufixo definido para o tipo determinado. O compilador usado o operador de prefixo sobrecarregado.
+Não havia um operador de diminuição de sufixo definido para o tipo fornecido. O compilador usou o operador de prefixo sobrecarregado.
 
-Esse aviso pode ser evitado com a definição de um sufixo `--` operador. Criar uma versão de dois argumentos do `--` operador conforme mostrado abaixo:
+Esse aviso pode ser evitado com a definição de um operador de `--` de sufixo. Crie uma versão de dois argumentos do operador de `--`, conforme mostrado abaixo:
 
-```
+```cpp
 // C4621.cpp
 // compile with: /W1
 class A

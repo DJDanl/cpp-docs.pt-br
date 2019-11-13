@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4677
+title: Aviso do compilador (nível 1) C4677
 ms.date: 11/04/2016
 f1_keywords:
 - C4677
 helpviewer_keywords:
 - C4677
 ms.assetid: a8d656a1-e2ff-4f8b-9028-201765131026
-ms.openlocfilehash: 66b8d42b63bcbf328703523c4eeda7a047f4643c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8567e7392537507a25121977448ac47ec079316b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374567"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051377"
 ---
-# <a name="compiler-warning-level-1-c4677"></a>Compilador aviso (nível 1) C4677
+# <a name="compiler-warning-level-1-c4677"></a>Aviso do compilador (nível 1) C4677
 
-'function': assinatura de membro não private contém tipo private de assembly 'private_type'
+' function ': assinatura de membro não privado contém tipo privado de assembly ' private_type '
 
-Um tipo que tem acessibilidade pública fora do assembly usa um tipo que tem acesso privado fora do assembly. Um componente que faz referência ao tipo pública de assembly não poderá usar os membros de tipo ou membros que fazem referência o tipo private de assembly.
+Um tipo que tem acessibilidade pública fora do assembly usa um tipo que tem acesso privado fora do assembly. Um componente que referencia o tipo de assembly público não poderá usar o membro de tipo ou membros que referenciam o tipo privado do assembly.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4677.
 
-```
+```cpp
 // C4677.cpp
 // compile with: /clr /c /W1
 delegate void TestDel();

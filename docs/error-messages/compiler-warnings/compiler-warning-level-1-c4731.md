@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 1) C4731
+title: Aviso do compilador (nível 1) C4731
 ms.date: 11/04/2016
 f1_keywords:
 - C4731
 helpviewer_keywords:
 - C4731
 ms.assetid: 5658c24c-3e6f-4505-835b-1fb92d47cab0
-ms.openlocfilehash: af091d1d35fff955afcc5af3da48b80416e79f36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2591756dfaa8887affbe4e470f1c98738b6b680
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385427"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052424"
 ---
-# <a name="compiler-warning-level-1-c4731"></a>Compilador aviso (nível 1) C4731
+# <a name="compiler-warning-level-1-c4731"></a>Aviso do compilador (nível 1) C4731
 
-'ponteiro': 'Registrar' modificado por código de assembly embutido de registro de ponteiro de quadro
+' pointer ': ponteiro de quadro registra ' Register ' modificado por código de assembly embutido
 
-Um registro de ponteiro de quadro foi modificado. Você deve salvar e restaurar o registro no seu assembly bloco ou o quadro de variável embutida (local ou parâmetro, dependendo do registro modificado) ou seu código pode não funcionar corretamente.
+Um registro de ponteiro de quadro foi modificado. Você deve salvar e restaurar o registro em sua variável de quadro ou bloco de assembly embutido (local ou parâmetro, dependendo do registro modificado) ou o seu código pode não funcionar corretamente.
 
 O exemplo a seguir gera C4731:
 
-```
+```cpp
 // C4731.cpp
 // compile with: /W1 /LD
 // processor: x86
@@ -39,4 +39,4 @@ void bad(int p) {
 }
 ```
 
-EBP é o ponteiro de quadro (FPO não é permitido) e ele está sendo modificado. Quando `p` posterior referenciado, ele é referenciado relativo a `EBP`. Mas `EBP` foi substituída pelo código, portanto, o programa não funcionará corretamente e ainda pode falhar.
+EBP é o ponteiro de quadro (FPO não é permitido) e está sendo modificado. Quando `p` é referenciado posteriormente, ele é referenciado em relação a `EBP`. Mas `EBP` foi substituído pelo código, portanto, o programa não funcionará corretamente e pode até mesmo falhar.

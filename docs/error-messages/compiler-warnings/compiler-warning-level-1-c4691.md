@@ -1,33 +1,33 @@
 ---
-title: Compilador aviso (nível 1) C4691
+title: Aviso do compilador (nível 1) C4691
 ms.date: 11/04/2016
 f1_keywords:
 - C4691
 helpviewer_keywords:
 - C4691
 ms.assetid: 722133d9-87f6-46c1-9e86-9825453d6999
-ms.openlocfilehash: c194e19c8766b67eb7deef32e7228564cda5f1e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6124171bb5f257dac1dd972f7943d001fb54c9ca
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406373"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051357"
 ---
-# <a name="compiler-warning-level-1-c4691"></a>Compilador aviso (nível 1) C4691
+# <a name="compiler-warning-level-1-c4691"></a>Aviso do compilador (nível 1) C4691
 
-'type': tipo referenciado era esperado no assembly não referenciado 'file', tipo definido na unidade de tradução atual usada em vez disso
+' type ': tipo referenciado era esperado em ' file ' de assembly não referenciado, tipo definido na unidade de tradução atual usado em vez disso
 
-O arquivo de metadados que contém a definição de tipo original não é referenciado, e o compilador está usando uma definição de tipo local.
+O arquivo de metadados que contém a definição de tipo original não é referenciado e o compilador está usando uma definição de tipo local.
 
-No caso em que você está recriando *arquivo*, pode ser ignorado ou desativado com pragma C4691 [aviso](../../preprocessor/warning.md).  Ou seja, se o arquivo que você está criando é o mesmo que o arquivo em que o compilador espera encontrar a definição de tipo, você pode ignorar C4691.
+No caso em que você está recompilando o *arquivo*, C4691 pode ser ignorado ou desativado com pragma [Warning](../../preprocessor/warning.md).  Ou seja, se o arquivo que você está compilando for o mesmo que o arquivo em que o compilador espera encontrar a definição de tipo, você poderá ignorar C4691.
 
-No entanto, um comportamento inesperado pode ocorrer se o compilador usa uma definição que não seja do mesmo assembly que é referenciado em metadados. Tipos CLR são tipados não apenas pelo nome do tipo, mas também pelo assembly.  Ou seja, um tipo Z do assembly z.dll é diferente de um tipo Z do assembly y.dll.
+No entanto, um comportamento inesperado pode ocorrer se o compilador usar uma definição que não seja do mesmo assembly referenciado nos metadados; Os tipos CLR são digitados não apenas pelo nome do tipo, mas também pelo assembly.  Ou seja, um tipo Z do assembly Z. dll é diferente de um tipo Z do assembly y. dll.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo contém a definição do tipo original.
+Este exemplo contém a definição de tipo original.
 
-```
+```cpp
 // C4691_a.cpp
 // compile with: /clr /LD /W1
 public ref class Original_Type {};
@@ -35,9 +35,9 @@ public ref class Original_Type {};
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo faz referência a C4691_a.dll e declara um campo do tipo Original_Type.
+Este exemplo faz referência a C4691_a. dll e declara um campo do tipo Original_Type.
 
-```
+```cpp
 // C4691_b.cpp
 // compile with: /clr /LD
 #using "C4691_a.dll"
@@ -49,11 +49,11 @@ public:
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C4691.  Observe que este exemplo contém uma definição para Original_Type e não faz referência a C4691a.dll.
+O exemplo a seguir gera C4691.  Observe que este exemplo contém uma definição para Original_Type e não faz referência a C4691a. dll.
 
-Para resolver, fazer referência ao arquivo de metadados que contém a definição de tipo original e remova a declaração de local e a definição.
+Para resolver, referencie o arquivo de metadados que contém a definição de tipo original e remova a declaração e a definição local.
 
-```
+```cpp
 // C4691_c.cpp
 // compile with: /clr /LD /W1
 // C4691 expected

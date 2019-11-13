@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4804
+title: Aviso do compilador (nível 1) C4804
 ms.date: 11/04/2016
 f1_keywords:
 - C4804
 helpviewer_keywords:
 - C4804
 ms.assetid: 069e8f44-3ef6-43bb-8524-4116fc6eea83
-ms.openlocfilehash: 28b3e49717993a3bf20c8cfec5938d698266c0f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97ad076325b11329896d98367fb3ac311ec5ded9
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406529"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051565"
 ---
-# <a name="compiler-warning-level-1-c4804"></a>Compilador aviso (nível 1) C4804
+# <a name="compiler-warning-level-1-c4804"></a>Aviso do compilador (nível 1) C4804
 
-'operation': uso não seguro de tipo 'bool' em operação
+' Operation ': uso não seguro do tipo ' bool ' na operação
 
-Esse aviso é para quando você tiver usado um `bool` variável ou um valor de forma inesperada. Por exemplo, C4804 será gerado se você usar operadores, como o operador unário negativo (**-**) ou o operador de complemento (`~`). O compilador avalia a expressão.
+Esse aviso é para quando você usou uma variável ou valor de `bool` de forma inesperada. Por exemplo, C4804 será gerado se você usar operadores como o operador unário negativo ( **-** ) ou o operador de complemento (`~`). O compilador avalia a expressão.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4804:
 
-```
+```cpp
 // C4804.cpp
 // compile with: /W1
 

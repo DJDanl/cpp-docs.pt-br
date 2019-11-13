@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 1) C4930
+title: Aviso do compilador (nível 1) C4930
 ms.date: 11/04/2016
 f1_keywords:
 - C4930
 helpviewer_keywords:
 - C4930
 ms.assetid: 89a206c9-c536-4186-8e81-1cde3e7f4f5b
-ms.openlocfilehash: 15cd1ed61c747e2c9168b9fc0fee03dca8403a24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b21cc6364692eb2f3b1d56b03d175df1f2ad7ee8
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242780"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050264"
 ---
-# <a name="compiler-warning-level-1-c4930"></a>Compilador aviso (nível 1) C4930
+# <a name="compiler-warning-level-1-c4930"></a>Aviso do compilador (nível 1) C4930
 
-'protótipo': função prototipada não chamada (era uma definição de variável se destina?)
+' Prototype ': função de protótipo não chamada (era uma definição de variável pretendida?)
 
-O compilador detectou um protótipo de função não utilizada. Se o protótipo foi pretendido como uma declaração de variável, remova os parênteses de abertura/fechamento.
+O compilador detectou um protótipo de função não utilizado. Se o protótipo foi planejado como uma declaração de variável, remova os parênteses de abertura/fechamento.
 
 O exemplo a seguir gera C4930:
 
-```
+```cpp
 // C4930.cpp
 // compile with: /W1
 class Lock {
@@ -43,7 +43,7 @@ C4930 também pode ocorrer quando o compilador não pode distinguir entre uma de
 
 O exemplo a seguir gera C4930:
 
-```
+```cpp
 // C4930b.cpp
 // compile with: /EHsc /W1
 
@@ -112,4 +112,4 @@ int main()
 }
 ```
 
-No exemplo acima, o resultado de um método que assuma zero argumentos é passado como um argumento para o construtor de uma variável de classe local sem nome. A chamada pode ser sem ambiguidade graças nomear a variável local ou prefixando a chamada de método com uma instância do objeto juntamente com o operador de ponteiro para membro apropriado.
+No exemplo acima, o resultado de um método que usa zero argumentos é passado como um argumento para o construtor de uma variável de classe local sem nome. A chamada pode ser desambiguada, nomeando a variável local ou prefixando a chamada de método com uma instância de objeto junto com o operador ponteiro para membro apropriado.

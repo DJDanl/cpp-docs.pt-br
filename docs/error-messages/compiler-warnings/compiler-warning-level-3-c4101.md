@@ -1,25 +1,25 @@
 ---
-title: Compilador aviso (nível 3) C4101
+title: Aviso do compilador (nível 3) C4101
 ms.date: 11/04/2016
 f1_keywords:
 - C4101
 helpviewer_keywords:
 - C4101
 ms.assetid: d98563cd-9dce-4aae-8f12-bd552a4ea677
-ms.openlocfilehash: d1109a32e754a6055e5e1d90632ad85332d832f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5effdbb4c7e83999655641a248c389c7c4d260d0
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402314"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051898"
 ---
-# <a name="compiler-warning-level-3-c4101"></a>Compilador aviso (nível 3) C4101
+# <a name="compiler-warning-level-3-c4101"></a>Aviso do compilador (nível 3) C4101
 
-'identifier': variável local não referenciada
+' identifier ': variável local não referenciada
 
-A variável local nunca é usada. Este aviso ocorrerá na situação óbvia:
+A variável local nunca é usada. Esse aviso ocorrerá na situação óbvia:
 
-```
+```cpp
 // C4101a.cpp
 // compile with: /W3
 int main() {
@@ -27,9 +27,9 @@ int i;   // C4101
 }
 ```
 
-No entanto, esse aviso também ocorrerá ao chamar um **estático** função de membro por meio de uma instância da classe:
+No entanto, esse aviso também ocorrerá ao chamar uma função de membro **estático** por meio de uma instância da classe:
 
-```
+```cpp
 // C4101b.cpp
 // compile with:  /W3
 struct S {
@@ -46,10 +46,10 @@ int main() {
 }
 ```
 
-Nessa situação, o compilador usa informações sobre `si` para acessar o **estáticos** função, mas a instância da classe não é necessária para chamar o **estático** funcionar; portanto, o aviso. Para resolver este aviso, você pode:
+Nessa situação, o compilador usa informações sobre `si` acessar a função **estática** , mas a instância da classe não é necessária para chamar a função **estática** ; Portanto, o aviso. Para resolver esse aviso, você pode:
 
-- Adicione um construtor, em que o compilador seria usar a instância do `si` na chamada para `func`.
+- Adicione um construtor, no qual o compilador usaria a instância de `si` na chamada para `func`.
 
-- Remover o **estáticos** palavra-chave da definição da `func`.
+- Remova a palavra-chave **static** da definição de `func`.
 
-- Chame o **estáticos** função explicitamente: `int y = S::func();`.
+- Chame a função **estática** explicitamente: `int y = S::func();`.

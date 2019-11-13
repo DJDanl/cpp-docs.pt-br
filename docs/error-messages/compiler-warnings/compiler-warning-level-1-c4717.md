@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 1) C4717
+title: Aviso do compilador (nível 1) C4717
 ms.date: 11/04/2016
 f1_keywords:
 - C4717
 helpviewer_keywords:
 - C4717
 ms.assetid: 5ef3c6c7-8599-4714-a973-0f5b69cdab3c
-ms.openlocfilehash: 0cf9aef8f68ca5972fd3d7886cd8061b88d043ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bc95cc770914a1c02a7a40f9754415c2f013d63
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221135"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051340"
 ---
-# <a name="compiler-warning-level-1-c4717"></a>Compilador aviso (nível 1) C4717
+# <a name="compiler-warning-level-1-c4717"></a>Aviso do compilador (nível 1) C4717
 
-'function': recursivo em todos os caminhos de controle, função causará estouro de pilha de tempo de execução
+"function": recursivo em todos os caminhos de controle, função causará estouro de pilha de tempo de execução
 
-Todos os caminhos através de uma função contém uma chamada para a função. Como não há nenhuma maneira de sair da função sem primeiro chamar próprio recursivamente, a função nunca será encerrado.
+Cada caminho por meio de uma função contém uma chamada para a função. Como não há nenhuma maneira de sair da função sem primeiro chamar a si mesma recursivamente, a função nunca será encerrada.
 
 O exemplo a seguir gera C4717:
 
-```
+```cpp
 // C4717.cpp
 // compile with: /W1 /c
 // C4717 expected

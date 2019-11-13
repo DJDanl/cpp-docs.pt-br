@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 1) C4912
+title: Aviso do compilador (nível 1) C4912
 ms.date: 11/04/2016
 f1_keywords:
 - C4912
 helpviewer_keywords:
 - C4912
 ms.assetid: ba1f1a66-8c20-4792-9ac8-43e49f729ae2
-ms.openlocfilehash: 7a6f7df79a98685a7eec1582ae248ea3f620c5fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e9e13cd909ec77397eac8b40ec4323b2b5847d9
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207041"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050260"
 ---
-# <a name="compiler-warning-level-1-c4912"></a>Compilador aviso (nível 1) C4912
+# <a name="compiler-warning-level-1-c4912"></a>Aviso do compilador (nível 1) C4912
 
-'attribute': atributo possui comportamento indefinido em um UDT aninhado
+' attribute ': atributo tem comportamento indefinido em um UDT aninhado
 
-Atributos que se aplicam a UDTs aninhados (-tipo definido pelo usuário, que pode ser um typedef, união ou struct) podem ser ignorados.
+Os atributos que se aplicam a UDTs aninhados (tipo definido pelo usuário, que pode ser um typedef, Union ou struct) podem ser ignorados.
 
-O código a seguir mostra como esse aviso será gerado:
+O código a seguir mostra como esse aviso seria gerado:
 
-```
+```cpp
 // C4912.cpp
 // compile with: /W1
 #include <windows.h>

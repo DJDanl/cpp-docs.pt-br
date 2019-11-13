@@ -6,42 +6,42 @@ helpviewer_keywords:
 - ml64.exe
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
-ms.openlocfilehash: 1a92d2a22e8aa9df29c18fa36ff4508eb8eec57f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: d9b550313c8e65e47db70dc81519abce7db95da5
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445857"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050183"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM para x64 (ml64.exe)
 
-Visual Studio inclui 32 bits e 64 bits versões hospedadas do Microsoft Assembler (MASM) para o código de destino x64. Chamado ml64.exe, isso é o assembler que aceita x64 linguagem assembler. As ferramentas de linha de comando (MASM) são instaladas quando você escolhe uma carga de trabalho do C++ durante a instalação do Visual Studio. As ferramentas MASM não estão disponíveis como um download separado. Para obter instruções sobre como baixar e instalar uma cópia do Visual Studio, consulte [instalar o Visual Studio](/visualstudio/install/install-visual-studio). Se você não deseja instalar o Visual Studio IDE completo, mas apenas deseja que as ferramentas de linha de comando, baixe o [ferramentas de Build para o Visual Studio](https://visualstudio.microsoft.com/downloads/).
+O Visual Studio inclui versões hospedadas de 32 bits e 64 bits do Microsoft assembler (MASM) para direcionar o código x64. Chamado ml64. exe, este é o montador que aceita a linguagem x64 Assembler. As ferramentas de linha de comando MASM são instaladas quando você C++ escolhe uma carga de trabalho durante a instalação do Visual Studio. As ferramentas do MASM não estão disponíveis como um download separado. Para obter instruções sobre como baixar e instalar uma cópia do Visual Studio, consulte [instalar o Visual Studio](/visualstudio/install/install-visual-studio). Se você não quiser instalar o IDE completo do Visual Studio, mas quiser apenas as ferramentas de linha de comando, baixe as [ferramentas de Build para o Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
 
-Para usar MASM para compilar código para x64, tem como alvo na linha de comando, você deve usar um prompt de comando do desenvolvedor para x64 destinos, que define o caminho necessário e outras variáveis de ambiente. Para obter informações sobre como iniciar um prompt de comando do desenvolvedor, consulte [código de compilação C/C++ na linha de comando](../../build/building-on-the-command-line.md).
+Para usar o MASM para criar código para destinos x64 na linha de comando, você deve usar um prompt de comando do desenvolvedor para destinos x64, que define o caminho necessário e outras variáveis de ambiente. Para obter informações sobre como iniciar um prompt de comando do desenvolvedor, consulte [criarC++ C/Code na linha de comando](../../build/building-on-the-command-line.md).
 
-Para obter informações sobre opções de linha de comando ml64.exe, consulte [ML e ML64 Referência de linha de comando](../../assembler/masm/ml-and-ml64-command-line-reference.md).
+Para obter informações sobre opções de linha de comando do ml64. exe, consulte [referência de linha de comando ml e ml64](../../assembler/masm/ml-and-ml64-command-line-reference.md).
 
-Assembler embutido ou o uso da palavra-chave do ASM, não há suporte para x64 ou ARM público-alvo. Portar seu x86 que assembler embutido de usos de código para x64 ou ARM, você pode converter seu código em C++, use intrínsecos do compilador ou criar arquivos de origem de idioma do assembler. O Microsoft C++ compilador oferece suporte aos intrínsecos para permitir que você use instruções de função especial para verificação/teste, interconectada e assim por diante, em como perto de uma maneira em plataforma cruzada possível de bits de exemplo, privilegiado,. Para obter informações sobre intrínsecos disponíveis, consulte [intrínsecos do compilador](../../intrinsics/compiler-intrinsics.md).
+O Assembler embutido ou o uso da palavra-chave ASM não tem suporte para destinos x64 ou ARM. Para portar seu código x86 que usa o Assembler embutido para x64 ou ARM, você pode C++converter seu código para, usar intrínsecos do compilador ou criar arquivos de origem do assembler-Language. O compilador C++ da Microsoft dá suporte a intrínsecos para permitir que você use instruções de função especial, por exemplo, com privilégios, verificação/teste de bits, intercadeados e assim por diante, no mais próximo possível de uma plataforma cruzada. Para obter informações sobre intrínsecos disponíveis, consulte [intrínsecos do compilador](../../intrinsics/compiler-intrinsics.md).
 
-## <a name="add-an-assembler-language-file-to-a-visual-studio-c-project"></a>Adicionar um arquivo de linguagem assembler a um Visual Studio C++ projeto
+## <a name="add-an-assembler-language-file-to-a-visual-studio-c-project"></a>Adicionar um arquivo Assembler-Language a um projeto C++ do Visual Studio
 
-O sistema de projeto do Visual Studio dá suporte a arquivos de idioma do assembler criados por meio de MASM em seus projetos C++. Você pode criar arquivos de origem de idioma de montador e criá-los em arquivos de objeto usando-se (MASM), que dá suporte a x64 totalmente de x64. Em seguida, você pode vincular esses arquivos de objeto para o seu código C++ compilado para x64 destinos. Isso é uma maneira de superar a falta de x64 assembler embutido.
+O sistema de projeto do Visual Studio dá suporte a arquivos de linguagem assembler criados C++ usando MASM em seus projetos. Você pode criar arquivos de origem do assembler x64 e compilá-los em arquivos de objeto usando o MASM, que dá suporte totalmente a x64. Em seguida, você pode vincular esses arquivos de C++ objeto ao seu código criado para destinos x64. Essa é uma maneira de superar a falta de um montador em x64 embutido.
 
-### <a name="to-add-an-assembler-language-file-to-an-existing-visual-studio-c-project"></a>Para adicionar um arquivo de linguagem assembler a um existente do Visual Studio C++ projeto
+### <a name="to-add-an-assembler-language-file-to-an-existing-visual-studio-c-project"></a>Para adicionar um arquivo Assembler-Language a um projeto existente C++ do Visual Studio
 
-1. Selecione o projeto no **Gerenciador de Soluções**. Na barra de menus, escolha **Project**, **personalizações da compilação**.
+1. Selecione o projeto no **Gerenciador de Soluções**. Na barra de menus, escolha **projeto**, **criar personalizações**.
 
-1. No **Visual C++ compilar arquivos de personalização** diálogo caixa, marque a caixa de seleção ao lado **masm(.targets,.props)**. Escolher **Okey** para salvar sua seleção e fechar a caixa de diálogo.
+1. Na caixa de diálogo **arquivos de personalização de compilação Visual C++**  , marque a caixa de seleção ao lado de **MASM (. targets,. props)** . Escolha **OK** para salvar sua seleção e fechar a caixa de diálogo.
 
-1. Na barra de menus, escolha **Project**, **Adicionar Novo Item**.
+1. Na barra de menus, escolha **projeto**, **Adicionar novo item**.
 
-1. No **Adicionar Novo Item** caixa de diálogo, selecione **arquivo do C++ (. cpp)** no painel central. No **nome** controle de edição, digite um novo nome de arquivo que tem um **ASM** extensão em vez. cpp. Escolher **adicionar** para adicionar o arquivo ao seu projeto e fechar a caixa de diálogo.
+1. Na caixa de diálogo **Adicionar novo item** , selecione  **C++ arquivo (. cpp)** no painel central. No controle **nome** de edição, insira um novo nome de arquivo que tenha uma extensão **. asm** em vez de. cpp. Escolha **Adicionar** para adicionar o arquivo ao seu projeto e feche a caixa de diálogo.
 
-Crie seu código de assembler idioma no arquivo de. ASM que você adicionou. Quando você compila sua solução, o assembler (MASM) é invocado para montar o arquivo. ASM em um arquivo de objeto, em seguida, é vinculado ao seu projeto. Para facilitar o acesso de símbolo, declarar suas funções de montador como `extern "C"` seu código-fonte C++, em vez de usar o C++ nomeia convenções decoration em sua linguagem de montador arquivos de origem.
+Crie seu código de idioma do assembler no arquivo. asm que você adicionou. Quando você cria sua solução, o MASM Assembler é invocado para montar o arquivo. asm em um arquivo de objeto que é vinculado ao seu projeto. Para facilitar o acesso ao símbolo, declare suas funções do assembler como C++ `extern "C"` em seu código-fonte, C++ em vez de usar as convenções de decoração de nome em seus arquivos de origem do assembler-Language.
 
-## <a name="ml64-specific-directives"></a>Diretivas específicas ml64
+## <a name="ml64-specific-directives"></a>Diretivas específicas do ml64
 
-Você pode usar as seguintes diretivas ml64 específicos em seu código-fonte assembler linguagem que tem como alvo x64:
+Você pode usar as seguintes diretivas específicas do ml64 em seu código-fonte do assembler-Language direcionado para x64:
 
 - [.ALLOCSTACK](../../assembler/masm/dot-allocstack.md)
 
@@ -57,11 +57,11 @@ Você pode usar as seguintes diretivas ml64 específicos em seu código-fonte as
 
 - [.SETFRAME](../../assembler/masm/dot-setframe.md)
 
-Além disso, o [PROC](../../assembler/masm/proc.md) diretiva foi atualizada para uso com ml64.exe.
+Além disso, a diretiva [proc](../../assembler/masm/proc.md) foi atualizada para uso com ml64. exe.
 
-## <a name="32-bit-address-mode-address-size-override"></a>Modo de endereço de 32 bits (substituição de tamanho de endereço)
+## <a name="32-bit-address-mode-address-size-override"></a>Modo de endereço de 32 bits (substituição do tamanho do endereço)
 
-MASM emite a substituição de tamanho de endereço 0x67 se um operando de memória inclui registros de 32 bits. Por exemplo, os exemplos a seguir fazem com que a substituição de tamanho de endereço a ser emitida:
+MASM emitirá a substituição do tamanho do endereço 0x67 se um operando de memória incluir registros de 32 bits. Por exemplo, os exemplos a seguir fazem com que a substituição do tamanho do endereço seja emitida:
 
 ```asm
 mov rax, QWORD PTR [ecx]
@@ -71,9 +71,9 @@ prefetch [eax]
 movnti rax, QWORD PTR [r8d]
 ```
 
-MASM pressupõe que se um deslocamento de 32 bits é exibido apenas como um operando de memória, tratamento de 64 bits destina-se. Atualmente, não há nenhum suporte para endereçamento de 32 bits com esses operandos.
+MASM pressupõe que se um deslocamento de 32 bits aparecer sozinho como um operando de memória, o endereçamento de 64 bits será pretendido. Atualmente, não há suporte para endereçamento de 32 bits com esses operandos.
 
-Por fim, a mistura de tamanhos de registro dentro de um operando de memória, conforme demonstrado no código a seguir gera um erro.
+Por fim, misturar tamanhos de registro dentro de um operando de memória, conforme demonstrado no código a seguir, gera um erro.
 
 ```asm
 mov eax, DWORD PTR [rcx*2+r10d]

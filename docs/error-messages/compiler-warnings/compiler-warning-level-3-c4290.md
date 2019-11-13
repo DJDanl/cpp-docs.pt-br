@@ -1,35 +1,35 @@
 ---
-title: Compilador aviso (nível 3) C4290
+title: Aviso do compilador (nível 3) C4290
 ms.date: 11/04/2016
 f1_keywords:
 - C4290
 helpviewer_keywords:
 - C4290
 ms.assetid: d1c6d85b-28e0-4a1f-9d48-23593337a6fb
-ms.openlocfilehash: c585294686298a1197d437d41a0d541f1268985f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ccacd7d5f4dfd2e9ad8de3958d7aa43571091fe
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402080"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051658"
 ---
-# <a name="compiler-warning-level-3-c4290"></a>Compilador aviso (nível 3) C4290
+# <a name="compiler-warning-level-3-c4290"></a>Aviso do compilador (nível 3) C4290
 
-C++especificação de exceção ignorada, exceto to indicam uma função não é __declspec(nothrow)
+C++especificação de exceção ignorada, exceto para indicar que uma função não é __declspec (nothrow)
 
-Uma função é declarada usando a especificação de exceção, o que o Visual C++ aceita, mas não implementa. Codifique com exceção de especificações que são ignoradas durante a compilação precisa ser recompilado e vinculado para ser reutilizado em futuras versões que dão suporte a especificações de exceção.
+Uma função é declarada usando A especificação de C++ exceção, que o Visual aceita, mas não implementa. O código com especificações de exceção que são ignoradas durante a compilação pode precisar ser recompilado e vinculado para ser reutilizado em versões futuras que dão suporte a especificações de exceção.
 
-Para obter mais informações, consulte [especificações de exceção (lançar)](../../cpp/exception-specifications-throw-cpp.md) .
+Para obter mais informações, consulte [especificações de exceção (throw)](../../cpp/exception-specifications-throw-cpp.md) .
 
-Você pode evitar esse aviso usando o [aviso](../../preprocessor/warning.md) pragma:
+Você pode evitar esse aviso usando o pragma de [aviso](../../preprocessor/warning.md) :
 
-```
+```cpp
 #pragma warning( disable : 4290 )
 ```
 
 O exemplo de código a seguir gera C4290:
 
-```
+```cpp
 // C4290.cpp
 // compile with: /EHs /W3 /c
 void f1(void) throw(int) {}   // C4290
