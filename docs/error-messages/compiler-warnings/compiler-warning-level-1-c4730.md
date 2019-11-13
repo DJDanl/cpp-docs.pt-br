@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-ms.openlocfilehash: 4da60194deaeac3c79f8c3e9be3bd87d91bc7ca2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cdd6018afd26b09f7a4555ff8d0431c3364f09e
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386350"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051332"
 ---
 # <a name="compiler-warning-level-1-c4730"></a>Aviso C4730 (compilador) (nível 1)
 
-'principal': misturar _m64 e expressões podem resultar em um código incorreto de ponto flutuante
+' Main ': misturar _m64 e expressões de ponto flutuante podem resultar em código incorreto
 
-Uma função usa [__m64](../../cpp/m64.md) e **float**/**double** tipos. Espaço de registro como o MMX e os registros de ponto flutuante compartilham o mesmo físico (não podem ser usados simultaneamente), usando `__m64` e **float**/**double** tipos no mesmo função pode resultar em corrupção de dados, possivelmente causando uma exceção.
+Uma função usa tipos [__m64](../../cpp/m64.md) e **float**/**Double** . Como os registros de ponto flutuante e MMX compartilham o mesmo espaço físico de registro (não podem ser usados simultaneamente), o uso de `__m64` e **float**/tipos **Double** na mesma função pode resultar em dados corrompidos, possivelmente causando uma exceção.
 
-Para usar com segurança `__m64` tipos e tipos de ponto flutuante na mesma função, cada instrução que usa um dos tipos deve ser separada pela **_m_empty()** (para MMX) ou **_m_femms()** (para 3DNow!) intrínseco.
+Para usar com segurança tipos de `__m64` e tipos de ponto flutuante na mesma função, cada instrução que usa um dos tipos deve ser separada pelo **_m_empty ()** (para o MMX) ou **_m_femms ()** (para 3DNow!) intrínseco.
 
 O exemplo a seguir gera C4730:
 
-```
+```cpp
 // C4730.cpp
 // compile with: /W1
 // processor: x86

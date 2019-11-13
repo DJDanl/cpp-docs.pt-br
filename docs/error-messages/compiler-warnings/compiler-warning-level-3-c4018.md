@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 3) C4018
+title: Aviso do compilador (nível 3) C4018
 ms.date: 11/04/2016
 f1_keywords:
 - C4018
 helpviewer_keywords:
 - C4018
 ms.assetid: 6e8cbb04-d914-4319-b431-cbc2fbe40eb1
-ms.openlocfilehash: 6436f62a06cbe931ca5b42751d60507f21675c5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e136a82f8a0ecb3f5375d3a486dd017df7edb6e0
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402366"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051978"
 ---
-# <a name="compiler-warning-level-3-c4018"></a>Compilador aviso (nível 3) C4018
+# <a name="compiler-warning-level-3-c4018"></a>Aviso do compilador (nível 3) C4018
 
-'expression': incompatibilidade de signed/unsigned
+' Expression ': incompatibilidade de assinado/não assinado
 
-Comparando um número assinado e exigia que o compilador para converter o valor com sinal em sem sinal.
+A comparação de um número assinado e não assinado exigia que o compilador converta o valor assinado para não assinado.
 
-Esse aviso pode ser corrigido se você converter um dos dois tipos, quando o teste de tipos assinados e não assinados.
+Esse aviso pode ser corrigido se você converter um dos dois tipos durante o teste de tipos assinados e não assinados.
 
 O exemplo a seguir gera C4018:
 
-```
+```cpp
 // C4018.cpp
 // compile with: /W3
 int main() {

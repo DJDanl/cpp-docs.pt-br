@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4925
+title: Aviso do compilador (nível 1) C4925
 ms.date: 11/04/2016
 f1_keywords:
 - C4925
 helpviewer_keywords:
 - C4925
 ms.assetid: a4b206c0-016a-4f28-873a-bb8bb41bad50
-ms.openlocfilehash: cb7b416fe15380dc914bd57152e8a0ce3618ee85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88eb09bdde1fa8dc50fa601cf7ae200d2851ac03
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393500"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052302"
 ---
-# <a name="compiler-warning-level-1-c4925"></a>Compilador aviso (nível 1) C4925
+# <a name="compiler-warning-level-1-c4925"></a>Aviso do compilador (nível 1) C4925
 
-'method': método dispinterface não pode ser chamado a partir do script
+' method ': método de dispinterface não pode ser chamado a partir de script
 
-Linguagens de script não é possível criar um VT_BYREF 'parâmetro in', ele só pode criar VT_BYREF 'parâmetros out'.
+As linguagens de script não podem criar um VT_BYREF parâmetro ' in ', ele só pode criar VT_BYREF parâmetros ' out '.
 
-Outra maneira de resolver este aviso é não torne o parâmetro (na definição e implementação) um tipo de ponteiro.
+Outra maneira de resolver esse aviso não torna o parâmetro (na definição e implementação) um tipo de ponteiro.
 
 O exemplo a seguir gera C4925:
 
-```
+```cpp
 // C4925.cpp
 // compile with: /LD /W1
 #define _ATL_ATTRIBUTES 1

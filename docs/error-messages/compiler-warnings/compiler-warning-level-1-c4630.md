@@ -1,25 +1,25 @@
 ---
-title: Compilador aviso (nível 1) C4630
+title: Aviso do compilador (nível 1) C4630
 ms.date: 11/04/2016
 f1_keywords:
 - C4630
 helpviewer_keywords:
 - C4630
 ms.assetid: d8926376-7acc-4fc7-8438-6f0de3468870
-ms.openlocfilehash: 98ea72bef0cb95163604144c1069a13c3b27d81c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 893364183594782b825377f57fa4e525338d62d8
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324526"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052551"
 ---
-# <a name="compiler-warning-level-1-c4630"></a>Compilador aviso (nível 1) C4630
+# <a name="compiler-warning-level-1-c4630"></a>Aviso do compilador (nível 1) C4630
 
-'symbol': especificador de classe de armazenamento de 'extern' inválido em definição de membro
+' Symbol ': especificador de classe de armazenamento ' extern ' inválido na definição de membro
 
-Um membro de dados ou uma função de membro é definida como `extern`. Membros não podem ser externos, embora podem objetos inteiros. O compilador ignora o `extern` palavra-chave. O exemplo a seguir gera C4630:
+Um membro de dados ou uma função de membro é definida como `extern`. Os membros não podem ser externos, embora objetos inteiros possam. O compilador ignora a palavra-chave `extern`. O exemplo a seguir gera C4630:
 
-```
+```cpp
 // C4630.cpp
 // compile with: /W1 /LD
 class A {

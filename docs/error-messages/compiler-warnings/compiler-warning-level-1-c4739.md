@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4739
+title: Aviso do compilador (nível 1) C4739
 ms.date: 11/04/2016
 f1_keywords:
 - C4739
 helpviewer_keywords:
 - C4739
 ms.assetid: 600873b3-7c85-4cd4-944e-cd8e01bfcbb0
-ms.openlocfilehash: 4c48ad9349361324c18ec790c51d1095cce104e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df8f3bcf6cfcc9feb2a400526285ccd9cb0396e4
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280432"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052416"
 ---
-# <a name="compiler-warning-level-1-c4739"></a>Compilador aviso (nível 1) C4739
+# <a name="compiler-warning-level-1-c4739"></a>Aviso do compilador (nível 1) C4739
 
-referência à variável 'var' excede seu espaço de armazenamento
+referência à variável ' var ' excede seu espaço de armazenamento
 
-Um valor foi atribuído a uma variável, mas o valor é maior que o tamanho da variável. Memória será gravada além do local da memória da variável e perda de dados.
+Um valor foi atribuído a uma variável, mas o valor é maior que o tamanho da variável. A memória será gravada além do local da memória da variável e a perda de dados será possível.
 
-Para resolver este aviso, atribua apenas um valor a uma variável cujo tamanho pode acomodar o valor.
+Para resolver esse aviso, atribua apenas um valor a uma variável cujo tamanho possa acomodar o valor.
 
 O exemplo a seguir gera C4739:
 
-```
+```cpp
 // C4739.cpp
 // compile with: /RTCs /Zi /W1 /c
 char *pc;

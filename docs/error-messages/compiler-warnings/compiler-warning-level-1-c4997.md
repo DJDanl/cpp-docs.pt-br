@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 1) C4997
+title: Aviso do compilador (nível 1) C4997
 ms.date: 11/04/2016
 f1_keywords:
 - C4997
 helpviewer_keywords:
 - C4997
 ms.assetid: d39678fd-0c1a-4104-8a45-9e3f20de0407
-ms.openlocfilehash: 298653e7ebed272db1baa11514ac5bff27944b3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f531374a0aaa06372b811d25e1ce45bee10656f
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384097"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052222"
 ---
-# <a name="compiler-warning-level-1-c4997"></a>Compilador aviso (nível 1) C4997
+# <a name="compiler-warning-level-1-c4997"></a>Aviso do compilador (nível 1) C4997
 
-'class': coclass não implementa uma interface COM ou pseudointerface
+"Class": coclass não implementa uma interface COM ou pseudo-interface
 
-Uma classe marcada com o [coclass](../../windows/coclass.md) atributo não implementa uma interface.
+Uma classe marcada com o atributo [coclass](../../windows/coclass.md) não implementou uma interface.
 
 O exemplo a seguir gera C4997:
 
-```
+```cpp
 // C4997.cpp
 // compile with: /WX
 // to resolve this C4997, uncomment all code

@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 2) C4356
+title: Aviso do compilador (nível 2) C4356
 ms.date: 11/04/2016
 f1_keywords:
 - C4356
 helpviewer_keywords:
 - C4356
 ms.assetid: 3af3defe-de33-43b6-bd6c-2c2e09e34f3f
-ms.openlocfilehash: 218aac1cc98d9b119490a547d63b4b5ee83e53df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f110ee633fed1c3b43ecc06dadcc27fde4f14bde
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402457"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052017"
 ---
-# <a name="compiler-warning-level-2-c4356"></a>Compilador aviso (nível 2) C4356
+# <a name="compiler-warning-level-2-c4356"></a>Aviso do compilador (nível 2) C4356
 
-'member': membro de dados estático não pode ser inicializado via classe derivada
+' member ': membro de dados static não pode ser inicializado via classe derivada
 
-A inicialização de um membro de dados estáticos ill foi formada. O compilador aceita a inicialização. Para evitar o aviso, inicialize o membro por meio da classe base.
+A inicialização de um membro de dados estáticos estava mal formada. O compilador aceitou a inicialização. Para evitar o aviso, inicialize o membro por meio da classe base.
 
-Use o [aviso](../../preprocessor/warning.md) pragma para suprimir este aviso.
+Use o pragma de [aviso](../../preprocessor/warning.md) para suprimir este aviso.
 
 O exemplo a seguir gera C4356:
 
-```
+```cpp
 // C4356.cpp
 // compile with: /W2 /EHsc
 #include <iostream>

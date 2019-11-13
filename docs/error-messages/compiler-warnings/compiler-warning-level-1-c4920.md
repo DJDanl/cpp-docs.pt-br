@@ -1,25 +1,25 @@
 ---
-title: Compilador aviso (nível 1) C4920
+title: Aviso do compilador (nível 1) C4920
 ms.date: 11/04/2016
 f1_keywords:
 - C4920
 helpviewer_keywords:
 - C4920
 ms.assetid: 1e501f2e-93c1-4d27-a4fa-54fc86271ae7
-ms.openlocfilehash: cd501cf0e3b434523623276027056c93c77fc278
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7cbb29c8dae24a87fcd5a32b4cf46d7a8ac4c790
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393474"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050237"
 ---
-# <a name="compiler-warning-level-1-c4920"></a>Compilador aviso (nível 1) C4920
+# <a name="compiler-warning-level-1-c4920"></a>Aviso do compilador (nível 1) C4920
 
-membro de membro de enumeração de enum = valor já visto em enumeração de enum como membro = valor
+enum enum member membro = valor já visto em enum enum as member = Value
 
-Se um TLB que você passa para #import tem o mesmo símbolo definido em dois ou mais enumerações, este aviso indica que símbolos idênticos subsequentes serão ignorados e serão ser comentados no arquivo. TLH.
+Se um. tlb que você passar para #import tiver o mesmo símbolo definido em duas ou mais enumerações, esse aviso indicará que símbolos idênticos subsequentes serão ignorados e serão comentados no arquivo. tlh.
 
-Supondo que um. tlb que contém:
+Supondo um. tlb que contém:
 
 ```
 library MyLib
@@ -34,9 +34,9 @@ library MyLib
 };
 ```
 
-Os exemplos a seguir gera C4920,
+o exemplo a seguir gera C4920,
 
-```
+```cpp
 // C4920.cpp
 // compile with: /W1
 #import "t4920.tlb"   // C4920

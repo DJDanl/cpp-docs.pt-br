@@ -1,33 +1,33 @@
 ---
-title: Compilador aviso (nível 2) C4396
+title: Aviso do compilador (nível 2) C4396
 ms.date: 11/04/2016
 f1_keywords:
 - C4396
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-ms.openlocfilehash: 84045ea2c285be8b1c1c9d1fd62b417db00dd29c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e874e00d44eef29240cca55541837facfcf64495
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402444"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052035"
 ---
-# <a name="compiler-warning-level-2-c4396"></a>Compilador aviso (nível 2) C4396
+# <a name="compiler-warning-level-2-c4396"></a>Aviso do compilador (nível 2) C4396
 
-"name": o especificador embutido não pode ser usado quando uma declaração friend se refere a uma especialização de um modelo de função
+"Name": o especificador embutido não pode ser usado quando uma declaração Friend se refere a uma especialização de um modelo de função
 
-Uma especialização de um modelo de função não é possível especificar qualquer um dos [embutido](../../cpp/inline-functions-cpp.md) especificadores. O compilador emite aviso C4396 e ignora o especificador embutido.
+Uma especialização de um modelo de função não pode especificar nenhum dos especificadores [embutidos](../../cpp/inline-functions-cpp.md) . O compilador emite C4396 de aviso e ignora o especificador embutido.
 
 ### <a name="to-correct-this-error"></a>Para corrigir este erro
 
-- Remover o `inline`, `__inline`, ou `__forceinline` especificador da declaração da função de amigo.
+- Remova o especificador `inline`, `__inline`ou `__forceinline` da declaração de função Friend.
 
 ## <a name="example"></a>Exemplo
 
-O código exemplo seguinte mostra um amigo inválido de função declaração com um `inline` especificador.
+O exemplo de código a seguir mostra uma declaração de função Friend inválida com um especificador de `inline`.
 
-```
+```cpp
 // C4396.cpp
 // compile with: /W2 /c
 

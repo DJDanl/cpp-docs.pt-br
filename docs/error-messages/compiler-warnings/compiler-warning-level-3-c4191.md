@@ -1,43 +1,43 @@
 ---
-title: Compilador aviso (nível 3) C4191
+title: Aviso do compilador (nível 3) C4191
 ms.date: 11/04/2016
 f1_keywords:
 - C4191
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 72a485811647911207b6d048c686acdadd142b65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd0d7dc57c8d3c94a52f72b536657bb3ea1c6b3a
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402249"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051877"
 ---
-# <a name="compiler-warning-level-3-c4191"></a>Compilador aviso (nível 3) C4191
+# <a name="compiler-warning-level-3-c4191"></a>Aviso do compilador (nível 3) C4191
 
-' operator/operation': conversão não segura de 'type of expression' em 'type required'
+' operador/operação ': conversão não segura de ' tipo de expressão ' para ' tipo necessário '
 
-Várias operações que envolvem ponteiros de função são consideradas não seguras:
+Várias operações envolvendo ponteiros de função são consideradas inseguras:
 
-- Tipos de função com as convenções de chamada diferentes.
+- Tipos de função com diferentes convenções de chamada.
 
-- Tipos de função com as convenções de retornados diferentes.
+- Tipos de função com diferentes convenções de retorno.
 
-- Tipos de argumento ou retorno com tamanhos diferentes, tipo categorias ou classificações.
+- Argumentos ou tipos de retorno com tamanhos diferentes, categorias de tipo ou classificações.
 
-- Comprimentos de lista de argumento diferentes (em `__cdecl`, somente na conversão da lista mais longa para a lista mais curta, mesmo se for mais curto é varargs).
+- Comprimentos de lista de argumentos diferentes (em `__cdecl`, somente na conversão de uma lista mais longa para uma lista mais curta, mesmo se mais curto for varargs).
 
-- Ponteiro para dados (diferente de **void**<strong>\*</strong>) tem um alias em relação a um ponteiro para função.
+- Ponteiro para dados (diferente de **void** <strong>\*</strong>) com alias em relação a um ponteiro para funcionar.
 
-- Outra diferença de tipo que produziria um erro ou aviso em um `reinterpret_cast`.
+- Qualquer outra diferença de tipo que produza um erro ou um aviso em um `reinterpret_cast`.
 
-Chamar essa função através do ponteiro resultante pode fazer com que seu programa falhe.
+Chamar essa função por meio do ponteiro de resultado pode fazer com que o programa falhe.
 
-Esse aviso é desativado por padrão. Ver [compilador avisos que são desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.
+Esse aviso está desativado por padrão. Consulte [os avisos do compilador que estão desativados por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.
 
 O exemplo a seguir gera C4191:
 
-```
+```cpp
 // C4191.cpp
 // compile with: /W3 /clr
 #pragma warning(default: 4191)

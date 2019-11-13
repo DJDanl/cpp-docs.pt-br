@@ -1,31 +1,31 @@
 ---
-title: Compilador aviso (nível 1) C4906
+title: Aviso do compilador (nível 1) C4906
 ms.date: 11/04/2016
 f1_keywords:
 - C4906
 helpviewer_keywords:
 - C4906
 ms.assetid: 05318e74-799b-412a-9dce-f02b8161d762
-ms.openlocfilehash: a62b10ca96dc9c27e57eafdcc87cf0d5e0605b4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ef1798cee93e0896000dd0187222cf675011af9
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380546"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050143"
 ---
-# <a name="compiler-warning-level-1-c4906"></a>Compilador aviso (nível 1) C4906
+# <a name="compiler-warning-level-1-c4906"></a>Aviso do compilador (nível 1) C4906
 
 literal de cadeia de caracteres convertido em 'LPWSTR'
 
-O compilador detectou uma conversão não segura. A conversão foi bem-sucedida, mas você deve usar uma rotina de conversão.
+O compilador detectou uma conversão não segura. A conversão teve sucesso, mas você deve usar uma rotina de conversão.
 
-Esse aviso é desativado por padrão. Ver [compilador avisos que são desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.
+Esse aviso está desativado por padrão. Consulte [os avisos do compilador que estão desativados por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4906:
 
-```
+```cpp
 // C4906.cpp
 // compile with: /W1
 #pragma warning(default : 4906)

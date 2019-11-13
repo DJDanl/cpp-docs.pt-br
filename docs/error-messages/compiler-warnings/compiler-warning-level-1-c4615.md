@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 1) C4615
+title: Aviso do compilador (nível 1) C4615
 ms.date: 11/04/2016
 f1_keywords:
 - C4615
 helpviewer_keywords:
 - C4615
 ms.assetid: 7b107c01-0da2-4e01-8b40-93813e30b94c
-ms.openlocfilehash: 1032261c39e0a285ac686e09573161de3b46e0e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c682b309cbabbaf97346e37038806d331f949ac
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324539"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052602"
 ---
-# <a name="compiler-warning-level-1-c4615"></a>Compilador aviso (nível 1) C4615
+# <a name="compiler-warning-level-1-c4615"></a>Aviso do compilador (nível 1) C4615
 
-\#Aviso de Pragma: tipo de aviso de usuário desconhecido
+aviso de pragma de \#: tipo de aviso de usuário desconhecido
 
-Um especificador de aviso inválido foi usado com **pragma** [aviso](../../preprocessor/warning.md). Para resolver o erro, use um especificador de aviso válido.
+Um especificador de aviso inválido foi usado com **pragma** [Warning](../../preprocessor/warning.md). Para resolver o erro, use um especificador de aviso válido.
 
 O exemplo a seguir gera C4615:
 
-```
+```cpp
 // C4615.cpp
 // compile with: /W1 /LD
 #pragma warning(enable : 4401)   // C4615, 'enable' not valid specifier

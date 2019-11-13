@@ -1,31 +1,31 @@
 ---
-title: Compilador aviso (nível 1) C4794
+title: Aviso do compilador (nível 1) C4794
 ms.date: 11/04/2016
 f1_keywords:
 - C4794
 helpviewer_keywords:
 - C4794
 ms.assetid: badc9c36-fa1a-4fec-929b-7bfda7a7b79f
-ms.openlocfilehash: d44e3af88de9457fdc5c2df905ccbae22d3562da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d669280c0dc6a730a22480e602dac8cc6153449
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280367"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052372"
 ---
-# <a name="compiler-warning-level-1-c4794"></a>Compilador aviso (nível 1) C4794
+# <a name="compiler-warning-level-1-c4794"></a>Aviso do compilador (nível 1) C4794
 
-segmento da variável de armazenamento local de thread 'variável' alterado de 'nome da seção' para '$ TLS Section'
+o segmento da variável de armazenamento local do thread ' variável ' mudou de ' nome da seção ' para '. TLS $ '
 
-Você usou [#pragma data_seg](../../preprocessor/data-seg.md) para colocar uma variável de tls em uma seção não começando com $ TLS Section.
+Você usou [#pragma data_seg](../../preprocessor/data-seg.md) para colocar uma variável TLS em uma seção que não começa com. TLS $.
 
-O $ TLS Section*x* seção continuará a existir no arquivo de objeto no qual [__declspec(thread)](../../cpp/thread.md) variáveis são definidas. Uma seção do TLS Section no EXE ou DLL resultarão essas seções.
+A seção. TLS $*x* existirá no arquivo de objeto em que as variáveis [de __declspec (thread)](../../cpp/thread.md) são definidas. Uma seção. TLS no EXE ou DLL resultará nessas seções.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4794:
 
-```
+```cpp
 // C4794.cpp
 // compile with: /W1 /c
 #pragma data_seg(".someseg")

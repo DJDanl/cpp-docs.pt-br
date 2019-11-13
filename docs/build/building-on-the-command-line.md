@@ -2,7 +2,7 @@
 title: Usar o conjunto C++ de ferramentas da Microsoft na linha de comando
 description: Use a cadeia de ferramentas do compilador do MSVC (Microsoft C++) na linha de comando fora do IDE do Visual Studio.
 ms.custom: conceptual
-ms.date: 10/22/2019
+ms.date: 11/12/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,20 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 7aa8673b7bb29591c7cf1c26b96b48261db9fee4
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811164"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051489"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Usar o conjunto C++ de ferramentas da Microsoft na linha de comando
 
-Compile aplicativos C e C++ na linha de comando usando as ferramentas incluídas no Visual Studio. O conjunto C++ de ferramentas de compilador da Microsoft (MSVC) também é baixável como um pacote autônomo da página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads/) . Faz parte do pacote de **ferramentas de Build para Visual Studio** . Você pode optar por baixar apenas as ferramentas de que precisa C++ para o desenvolvimento.
+Compile aplicativos C e C++ na linha de comando usando as ferramentas incluídas no Visual Studio. O conjunto C++ de ferramentas de compilador da Microsoft (MSVC) também é baixável como um pacote autônomo que não inclui o IDE do Visual Studio.
+
+## <a name="download-and-install-the-tools"></a>Baixar e instalar as ferramentas
+
+Se você tiver instalado o Visual Studio e C++ uma carga de trabalho, terá todas as ferramentas de linha de comando. Para obter informações sobre como instalar C++ o e o Visual Studio, consulte [instalar C++ o suporte no Visual Studio](vscpp-step-0-installation.md). Se você quiser apenas o conjunto de ferramentas de linha de comando, baixe as [ferramentas de Build para o Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019). Quando você executa o executável baixado, ele atualiza e executa o Instalador do Visual Studio. Para instalar apenas as ferramentas de que você C++ precisa para o desenvolvimento, selecione a carga de trabalho  **C++ ferramentas de compilação** . Você pode selecionar bibliotecas opcionais e conjuntos de ferramentas para incluir nos **detalhes da instalação**. Para compilar o código usando os conjuntos de ferramentas do Visual Studio 2015 ou 2017, selecione as ferramentas de Build MSVC v140 ou MSVC v141 opcionais. Quando estiver satisfeito com suas seleções, escolha **instalar**.
 
 ## <a name="how-to-use-the-command-line-tools"></a>Como usar as ferramentas de linha de comando
 

@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4807
+title: Aviso do compilador (nível 1) C4807
 ms.date: 11/04/2016
 f1_keywords:
 - C4807
 helpviewer_keywords:
 - C4807
 ms.assetid: 089c9f87-fd81-402e-9826-66a8ef1ef1fe
-ms.openlocfilehash: a68596136e61aa33176365a4eff818124463b77e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c18dbac0681067d9bc52455dfdbe44a24c786ee7
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390458"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051538"
 ---
-# <a name="compiler-warning-level-1-c4807"></a>Compilador aviso (nível 1) C4807
+# <a name="compiler-warning-level-1-c4807"></a>Aviso do compilador (nível 1) C4807
 
-'operation': mistura não segura de tipo 'type' e o campo de bits com sinal do tipo 'type'
+' Operation ': combinação não segura do tipo ' type ' e um campo de bits assinado do tipo ' type '
 
-Esse aviso é gerado durante a comparação de um campo de bits com sinal de um bit para um `bool` variável. Como um campo de bits com sinal, de um bit só pode conter os valores de -1 ou 0, é perigoso para compará-la para `bool`. Nenhum aviso é gerado sobre misturar `bool` e um bit, sem sinal campos de bits, pois elas são idênticas às `bool` e só podem ter 0 ou 1.
+Esse aviso é gerado ao comparar um campo de bits assinado de um bit a uma variável `bool`. Como um campo de bit assinado de um bit só pode conter os valores-1 ou 0, é perigoso compará-lo com `bool`. Nenhum aviso é gerado sobre a combinação de `bool` e bitfields não assinados, uma vez que eles são idênticos a `bool` e só podem conter 0 ou 1.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4807:
 
-```
+```cpp
 // C4807.cpp
 // compile with: /W1
 typedef struct bitfield {

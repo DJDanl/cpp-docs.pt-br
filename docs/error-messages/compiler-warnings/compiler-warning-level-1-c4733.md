@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4733
+title: Aviso do compilador (nível 1) C4733
 ms.date: 11/04/2016
 f1_keywords:
 - C4733
 helpviewer_keywords:
 - C4733
 ms.assetid: 7ef4f577-772d-4b66-a7bf-8958a6b250bc
-ms.openlocfilehash: 0d0b0b912ef15294f9a4362a79dffd6d7eeabed8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbecdda481748aa77eefdab8d61e50350804e09f
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221109"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051320"
 ---
-# <a name="compiler-warning-level-1-c4733"></a>Compilador aviso (nível 1) C4733
+# <a name="compiler-warning-level-1-c4733"></a>Aviso do compilador (nível 1) C4733
 
-Asm embutido atribuindo para 'FS:0': manipulador não registrado como manipulador seguro
+Asm embutido atribuindo a ' FS: 0 ': manipulador não registrado como manipulador seguro
 
-Uma função modificando o valor no FS:0 para adicionar um novo manipulador de exceção pode não funcionar com exceções de segurança, porque o manipulador não pode ser registrado como um manipulador de exceção válido (consulte [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)).
+Uma função que modifica o valor em FS: 0 a adição de um novo manipulador de exceção pode não funcionar com exceções seguras, pois o manipulador pode não ser registrado como um manipulador de exceção válido (consulte [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)).
 
-Para resolver este aviso, ou remova a definição de FS:0 ou desativar esse aviso e usar [. SAFESEH](../../assembler/masm/dot-safeseh.md) para especificar os manipuladores de exceção segura.
+Para resolver esse aviso, remova o FS: 0 definição ou desative este aviso e use [. SAFESEH](../../assembler/masm/dot-safeseh.md) para especificar os manipuladores de exceção segura.
 
 O exemplo a seguir gera C4733:
 
-```
+```cpp
 // C4733.cpp
 // compile with: /W1 /c
 // processor: x86

@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Compilando um C++ programa nativo na linha de comando'
+title: 'Instruções passo a passo: compilando um programa do C++ nativo na linha de comando'
 description: Use o compilador C++ da Microsoft em um prompt de comando.
 ms.custom: conceptual
 ms.date: 04/23/2019
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: 36017b28ab91478da2515cd7c8588a998013171d
-ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.openlocfilehash: daab00768f8140869a8db39c73f4fec3ab6304c7
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960708"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051519"
 ---
-# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Passo a passo: Compilando um C++ programa nativo na linha de comando
+# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Instruções passo a passo: compilando um programa do C++ nativo na linha de comando
 
 O Visual Studio inclui um compilador de C++ linha de comando que você pode usar para criar tudo, desde aplicativos de console básicos até plataforma universal do Windows aplicativos, aplicativos de área de trabalho, drivers de dispositivo e componentes .net.
 
-Neste tutorial, você cria um C++ programa básico, "Olá, mundo", usando um editor de texto e, em seguida, o compila na linha de comando. Se você quiser experimentar o IDE do Visual Studio em vez de usar a linha de comando, consulte [Walkthrough: Trabalhando com projetos e soluções (C++) ](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) ou [usando o IDE do Visual Studio C++ para desenvolvimento de desktops](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+Neste tutorial, você cria um C++ programa básico, "Olá, mundo", usando um editor de texto e, em seguida, o compila na linha de comando. Se você quiser experimentar o IDE do Visual Studio em vez de usar a linha de comando, consulte [passo a passos: trabalhando com projetosC++e soluções ()](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) ou [usando o IDE C++ do Visual Studio para desenvolvimento de área de trabalho](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 Neste passo a passo, é possível usar o próprio programa do Visual C++ em vez de digitar o programa mostrado, ou usar uma amostra de código do Visual C++ de outro artigo de ajuda.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para concluir este passo a passos, você deve ter instalado o Visual Studio e o **desenvolvimento de C++ área de trabalho opcional com** a Workload ou as ferramentas de Build de linha de comando para o Visual Studio.
 
 O Visual Studio é um poderoso ambiente de desenvolvimento integrado (IDE) que dá suporte a um editor completo, gerenciadores de recursos, depuradores e compiladores para muitas linguagens e plataformas. Para obter informações sobre como baixar e instalar o Visual Studio, incluindo o Visual Studio Community Edition gratuito e para incluir suporte para C/C++ Development, consulte [instalar C++ o suporte no Visual Studio](vscpp-step-0-installation.md).
 
-As ferramentas de compilação para o Visual Studio instalam apenas os compiladores, as ferramentas e as bibliotecas de linha de comando necessários C++ para criar C e programas. É perfeito para os laboratórios de compilação ou exercícios de sala de aula e é instalado de forma relativamente rápida. Para instalar apenas as ferramentas de linha de comando, procure ferramentas de compilação para Visual Studio na página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads/) .
+As ferramentas de compilação para o Visual Studio instalam apenas os compiladores, as ferramentas e as bibliotecas de linha de comando necessários C++ para criar C e programas. É perfeito para os laboratórios de compilação ou exercícios de sala de aula e é instalado de forma relativamente rápida. Para instalar apenas as ferramentas de linha de comando, procure ferramentas de compilação para Visual Studio na página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) .
 
 Antes de criar um C ou C++ programa na linha de comando, você deve verificar se as ferramentas estão instaladas e se pode acessá-las na linha de comando. O C++ Visual tem requisitos complexos para o ambiente de linha de comando para localizar as ferramentas, os cabeçalhos e as bibliotecas que ele usa. **Você não pode usar C++ o Visual em uma janela de prompt de comando simples** sem fazer alguma preparação. Felizmente, o C++ Visual instala atalhos para que você inicie um prompt de comando do desenvolvedor que tem o ambiente configurado para compilações de linha de comando. Infelizmente, os nomes dos atalhos de prompt de comando do desenvolvedor e onde eles estão localizados são diferentes em quase todas as C++ versões do Visual e em versões diferentes do Windows. Sua primeira tarefa de explicação explicativa está encontrando a certa para usar.
 
@@ -63,7 +63,7 @@ Antes de criar um C ou C++ programa na linha de comando, você deve verificar se
    Se você não encontrar o atalho do prompt de comando do desenvolvedor ou se receber uma mensagem de erro ao inserir `cl`, a instalação C++ do Visual poderá ter um problema. Tente reinstalar o componente Visual C++ no Visual Studio ou reinstale as ferramentas de Build C++ do Microsoft Visual. Não vá para a próxima seção até que isso funcione. Para obter mais informações sobre como instalar e solucionar problemas do Visual C++, consulte instalar o [Visual Studio](/visualstudio/install/install-visual-studio).
 
    > [!NOTE]
-   > Dependendo da versão do Windows no computador e da configuração de segurança do sistema, talvez seja necessário clicar com o botão direito do mouse para abrir o menu de atalho do atalho do prompt de comando do desenvolvedor e escolher **Executar como administrador** para compilar e executar com êxito o programa que você cria seguindo este passo a passos.
+   > Dependendo da versão do Windows no computador e da configuração de segurança do sistema, talvez seja necessário clicar com o botão direito do mouse para abrir o menu de atalho para o atalho do prompt de comando do desenvolvedor e escolher **Executar como administrador** para compilar e executar com êxito o programa que você criar, seguindo este passo a passos.
 
 ### <a name="create-a-visual-c-source-file-and-compile-it-on-the-command-line"></a>Criar um arquivo C++ de origem Visual e compilá-lo na linha de comando
 
@@ -152,7 +152,7 @@ Para compilar um programa que tenha arquivos de código-fonte adicionais, insira
 
 `cl /EHsc file1.cpp file2.cpp file3.cpp`
 
-A opção de linha de comando `/EHsc` instrui o compilador a habilitar C++ o tratamento de exceções. Para obter mais informações, consulte [/EH (modelo de tratamento de exceção)](reference/eh-exception-handling-model.md).
+A opção de linha de comando `/EHsc` instrui o compilador a habilitar C++ o tratamento de exceção. Para obter mais informações, consulte [/EH (modelo de tratamento de exceção)](reference/eh-exception-handling-model.md).
 
 Quando você fornece arquivos de origem adicionais, o compilador usa o primeiro arquivo de entrada para criar o nome do programa. Nesse caso, ele gera um programa chamado arquivo1. exe. Para alterar o nome para Program1. exe, adicione uma opção de vinculador [/out](reference/out-output-file-name.md) :
 

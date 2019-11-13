@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 2) C4250
+title: Aviso do compilador (nível 2) C4250
 ms.date: 11/04/2016
 f1_keywords:
 - C4250
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: 8baf3c03c87dc70a80b785d7f81cbee4e1d828f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03826f10659cbdf6035cd4dedebecca3e3302e3a
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349705"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052108"
 ---
-# <a name="compiler-warning-level-2-c4250"></a>Compilador aviso (nível 2) C4250
+# <a name="compiler-warning-level-2-c4250"></a>Aviso do compilador (nível 2) C4250
 
-'class1': herda 'class2::member' via domínio
+' class1 ': herda ' class2:: member ' via predominância
 
-Dois ou mais membros têm o mesmo nome. No `class2` é herdada porque é uma classe base para as outras classes que contidos neste membro.
+Dois ou mais membros têm o mesmo nome. A `class2` é herdada porque é uma classe base para as outras classes que continham esse membro.
 
-Para suprimir C4250, use o [aviso](../../preprocessor/warning.md) pragma.
+Para suprimir C4250, use o pragma de [aviso](../../preprocessor/warning.md) .
 
-Como uma classe base virtual é compartilhada entre várias classes derivadas, um nome em uma classe derivada domina um nome em uma classe base. Por exemplo, dada a hierarquia de classe a seguir, há duas definições de fun herdada no losango: a instância de vbc::func() por meio da classe fraca e o dominante:: func() por meio da classe dominante. Uma chamada não-qualificada de func() por meio de um objeto de classe de losango, sempre chama a instância de dominate:: func().  Se a classe fraca introduzir uma instância de func(), nem seria dominam a definição e a chamada será sinalizada como ambígua.
+Como uma classe base virtual é compartilhada entre várias classes derivadas, um nome em uma classe derivada domina um nome em uma classe base. Por exemplo, considerando a seguinte hierarquia de classe, há duas definições de Func herdadas dentro de Diamond: a instância vbc:: Func () por meio da classe fraca e a dominante:: Func () por meio da classe dominante. Uma chamada não qualificada de Func () por meio de um objeto de classe Diamond, sempre chama a instância dominable:: Func ().  Se a classe fraca fosse introduzir uma instância de Func (), nenhuma definição dominaria e a chamada seria sinalizada como ambígua.
 
-```
+```cpp
 // C4250.cpp
 // compile with: /c /W2
 #include <stdio.h>
@@ -49,7 +49,7 @@ int main() {
 
 O exemplo a seguir gera C4250.
 
-```
+```cpp
 // C4250_b.cpp
 // compile with: /W2 /EHsc
 #include <iostream>
@@ -82,7 +82,7 @@ int main() {
 
 Este exemplo mostra uma situação mais complexa. O exemplo a seguir gera C4250.
 
-```
+```cpp
 // C4250_c.cpp
 // compile with: /W2 /EHsc
 #include <iostream>

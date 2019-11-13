@@ -1,23 +1,23 @@
 ---
-title: Compilador aviso (nível 1) C4965
+title: Aviso do compilador (nível 1) C4965
 ms.date: 11/04/2016
 f1_keywords:
 - C4965
 helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-ms.openlocfilehash: 2e93fdeba7f9b5b10340ccd1920807a3fcb345a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac1ffc1626a8b72fd7c9026afb6c6a54bace3750
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383822"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052227"
 ---
-# <a name="compiler-warning-level-1-c4965"></a>Compilador aviso (nível 1) C4965
+# <a name="compiler-warning-level-1-c4965"></a>Aviso do compilador (nível 1) C4965
 
-box implícito de inteiro 0; Use nullptr ou conversão explícita
+caixa implícita de inteiro 0; usar nullptr ou conversão explícita
 
-Conversão boxing implícita de tipos de valor de recursos do Visual C++. Uma instrução que resultaram em uma atribuição de nulo usando extensões gerenciadas para C++ agora se torna uma atribuição em um int. box
+O C++ Visual apresenta uma Boxing implícita de tipos de valor. Uma instrução que resultou em uma atribuição nula usando extensões gerenciadas C++ agora se torna uma atribuição para um inteiro em caixa.
 
 Para obter mais informações, consulte [Boxing](../../extensions/boxing-cpp-component-extensions.md).
 
@@ -25,7 +25,7 @@ Para obter mais informações, consulte [Boxing](../../extensions/boxing-cpp-com
 
 O exemplo a seguir gera C4965.
 
-```
+```cpp
 // C4965.cpp
 // compile with: /clr /W1
 int main() {

@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 2) C4156
+title: Aviso do compilador (nível 2) C4156
 ms.date: 11/04/2016
 f1_keywords:
 - C4156
 helpviewer_keywords:
 - C4156
 ms.assetid: 9adf3acb-c0fe-42a8-a4db-5822b1493f77
-ms.openlocfilehash: 7d9a4ed09f026267e2c0f37fbbe4550ecd668dfc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95605aa29e1faba449e19dcf20e6895d31cc5874
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350459"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052138"
 ---
-# <a name="compiler-warning-level-2-c4156"></a>Compilador aviso (nível 2) C4156
+# <a name="compiler-warning-level-2-c4156"></a>Aviso do compilador (nível 2) C4156
 
-exclusão de uma expressão de matriz sem o uso da forma matricial de 'delete'; forma matricial substituída
+exclusão de uma expressão de matriz sem usar a forma de matriz de ' Delete '; formulário de matriz substituído
 
-Forma de não-matriz **excluir** não é possível excluir uma matriz. O compilador traduziu **excluir** para o formato da matriz.
+A forma não matricial da **exclusão** não pode excluir uma matriz. O compilador converteu a **exclusão** para o formulário de matriz.
 
-Este aviso ocorre apenas sob extensões da Microsoft (/Ze).
+Esse aviso ocorre somente em extensões da Microsoft (/Ze).
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // C4156.cpp
 // compile with: /W2
 int main()
