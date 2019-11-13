@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 1) C4374
+title: Aviso do compilador (nível 1) C4374
 ms.date: 11/04/2016
 f1_keywords:
 - C4374
 helpviewer_keywords:
 - C4374
 ms.assetid: 4ac9aaec-d815-4b6e-825f-fa872092dd3b
-ms.openlocfilehash: 5cf18a3dcd94f59ce1ae8feb675f251bea5715a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31a43467020e3d90a2f02c667f7cdb6177b4d833
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302235"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966449"
 ---
-# <a name="compiler-warning-level-1-c4374"></a>Compilador aviso (nível 1) C4374
+# <a name="compiler-warning-level-1-c4374"></a>Aviso do compilador (nível 1) C4374
 
-'function1': método de interface não será implementado por método não virtual 'function2'
+' function1 ': o método de interface não será implementado pelo método não virtual ' function2 '
 
-O compilador espera encontrar o [virtual](../../cpp/virtual-specifier.md) palavra-chave em uma definição de método.
+O compilador esperava encontrar a palavra-chave [virtual](../../cpp/virtual-specifier.md) em uma definição de método.
 
 O exemplo a seguir gera C4374:
 
-```
+```cpp
 // C4374.cpp
 // compile with: /clr /W1 /c /WX
 public interface class I {

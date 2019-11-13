@@ -1,25 +1,25 @@
 ---
-title: Compilador aviso (nível 1) C4533
+title: Aviso do compilador (nível 1) C4533
 ms.date: 11/04/2016
 f1_keywords:
 - C4533
 helpviewer_keywords:
 - C4533
 ms.assetid: 359fecda-d540-46e5-b214-dbabe9ef50d2
-ms.openlocfilehash: 8ac7f00ad3401e88224c0150324822ce71e95018
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ee88af66238497216d7e5dab497394a58a55805
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160764"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965759"
 ---
-# <a name="compiler-warning-level-1-c4533"></a>Compilador aviso (nível 1) C4533
+# <a name="compiler-warning-level-1-c4533"></a>Aviso do compilador (nível 1) C4533
 
-inicialização de 'variável' é ignorada pela instrução de' '
+a inicialização de ' Variable ' é ignorada por ' instrução '
 
-Uma instrução em seu programa alterada o fluxo de controle, de modo que, uma instrução que inicializar uma variável não foi executada. O exemplo a seguir gera C4533:
+Uma instrução em seu programa alterou o fluxo de controle, de modo que uma instrução que Inicializa uma variável não foi executada. O exemplo a seguir gera C4533:
 
-```
+```cpp
 // C4533.cpp
 // compile with: /W1
 #include <stdio.h>

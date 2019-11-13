@@ -1,33 +1,33 @@
 ---
-title: Compilador aviso (nível 1) C4383
+title: Aviso do compilador (nível 1) C4383
 ms.date: 11/04/2016
 f1_keywords:
 - C4383
 helpviewer_keywords:
 - C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
-ms.openlocfilehash: 2510dda59047632e2a4823f734feeffd0c0a5b02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9681408841173bad4aca3305e727ddde6cd98f14
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390432"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966170"
 ---
-# <a name="compiler-warning-level-1-c4383"></a>Compilador aviso (nível 1) C4383
+# <a name="compiler-warning-level-1-c4383"></a>Aviso do compilador (nível 1) C4383
 
-'instance_dereference_operator': o significado de desreferenciar um identificador pode ser alterado, quando um operador definido pelo usuário 'operator' não existe; Escreva o operador como uma função estática para ser explícito sobre o operando
+' instance_dereference_operator ': o significado de desreferenciar um identificador pode mudar, quando existe um operador ' operador ' definido pelo usuário; gravar o operador como uma função estática para ser explícito sobre o operando
 
-Quando você adiciona uma substituição do operador de desreferenciamento de instância definida pelo usuário em um tipo gerenciado, você possivelmente substituir a capacidade do operador de desreferenciamento do tipo para retornar objeto o identificador do. Considere o operador de desreferência de escrever um estático, definidos pelo usuário.
+Quando você adiciona uma substituição de instância definida pelo usuário do operador de desreferência em um tipo gerenciado, é possível substituir a capacidade do operador de desreferência do tipo para retornar o objeto do identificador. Considere escrever um operador de desreferência estático definido pelo usuário.
 
-Para obter mais informações, consulte [operador Handle to Object (^)](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) e [operador de referência de acompanhamento](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
+Para obter mais informações, consulte [manipulador para operador de objeto (^)](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) e [operador de referência de rastreamento](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
-Além disso, um operador de instância não está disponível para outros compiladores de linguagem por meio de metadados referenciados. Para obter mais informações, consulte [operadores definidos pelo usuário (C++/CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
+Além disso, um operador de instância não está disponível para outros compiladores de linguagem por meio de metadados referenciados. Para obter mais informações, consulte [operadores definidos pelo usuárioC++(/CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4383.
 
-```
+```cpp
 // C4383.cpp
 // compile with: /clr /W1
 

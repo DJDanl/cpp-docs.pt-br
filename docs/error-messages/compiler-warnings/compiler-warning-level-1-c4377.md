@@ -1,31 +1,31 @@
 ---
-title: Compilador aviso (nível 1) C4377
+title: Aviso do compilador (nível 1) C4377
 ms.date: 11/04/2016
 f1_keywords:
 - C4377
 helpviewer_keywords:
 - C4377
 ms.assetid: a1c797b8-cd5e-4a56-b430-d07932e811cf
-ms.openlocfilehash: d8c89967e0dc900e098ca03d22932451f26a6a0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30e2ecb1d5e0de290c028cdfb53c7df831a732b4
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410416"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966455"
 ---
-# <a name="compiler-warning-level-1-c4377"></a>Compilador aviso (nível 1) C4377
+# <a name="compiler-warning-level-1-c4377"></a>Aviso do compilador (nível 1) C4377
 
-tipos nativos são private por padrão. -d1PrivateNativeTypes é preterido
+os tipos nativos são privados por padrão; -d1PrivateNativeTypes é preterido
 
-Em versões anteriores, os tipos nativos em assemblies foram públicos por padrão e uma opção do compilador interno, não documentada, (**/d1PrivateNativeTypes**) foi usado para torná-los em particular.
+Em versões anteriores, os tipos nativos em assemblies eram públicos por padrão e uma opção de compilador interna e não documentada ( **/d1PrivateNativeTypes**) foi usada para torná-los particulares.
 
-Todos os tipos nativos e o CLR, agora são private por padrão em um assembly, portanto **/d1PrivateNativeTypes** não for mais necessário.
+Todos os tipos, nativo e CLR, agora são privados por padrão em um assembly, portanto, **/d1PrivateNativeTypes** não é mais necessário.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4377.
 
-```
+```cpp
 // C4377.cpp
 // compile with: /clr /d1PrivateNativeTypes /W1
 // C4377 warning expected

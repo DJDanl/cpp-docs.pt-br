@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 1) C4561
+title: Aviso do compilador (nível 1) C4561
 ms.date: 11/04/2016
 f1_keywords:
 - C4561
 helpviewer_keywords:
 - C4561
 ms.assetid: 3a10c12c-601b-4b6c-9861-331fd022e021
-ms.openlocfilehash: 24a3ca8b35266e93f298314f45015b7a480e2af0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0fd27142f0404a53fa2fee87fb2309e2f54d2c2
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397283"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965976"
 ---
-# <a name="compiler-warning-level-1-c4561"></a>Compilador aviso (nível 1) C4561
+# <a name="compiler-warning-level-1-c4561"></a>Aviso do compilador (nível 1) C4561
 
-fastcall' incompatível com o ' / clr' opção: convertendo para '\_stdcall '
+' __fastcall ' incompatível com a opção '/CLR ': convertendo para '\__stdcall '
 
-O [fastcall](../../cpp/fastcall.md) convenção de chamada de função não pode ser usada com o [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opção de compilador. O compilador ignora as chamadas para `__fastcall`. Para corrigir este aviso, remova as chamadas para **fastcall** ou compilar sem **/clr**.
+A Convenção de chamada de função [__fastcall](../../cpp/fastcall.md) não pode ser usada com a opção de compilador [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) . O compilador ignora as chamadas para `__fastcall`. Para corrigir esse aviso, remova as chamadas para **__fastcall** ou compile sem **/CLR**.
 
 O exemplo a seguir gera C4561:
 
-```
+```cpp
 // C4561.cpp
 // compile with: /clr /W1 /c
 // processor: x86

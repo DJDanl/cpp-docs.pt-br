@@ -1,23 +1,23 @@
 ---
-title: Compilador aviso (nível 1) C4470
+title: Aviso do compilador (nível 1) C4470
 ms.date: 11/04/2016
 f1_keywords:
 - C4470
 helpviewer_keywords:
 - C4470
 ms.assetid: f52a3eaa-a235-4747-a47d-9ec4ad4cb0ea
-ms.openlocfilehash: 7fd4644ab39e350c0c0badb527875b427a2c6987
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc1efad7f18310727e2fdb756e49b95294357c4d
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160894"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965406"
 ---
-# <a name="compiler-warning-level-1-c4470"></a>Compilador aviso (nível 1) C4470
+# <a name="compiler-warning-level-1-c4470"></a>Aviso do compilador (nível 1) C4470
 
-pragmas de controle de ponto flutuante ignorados sob /clr
+pragmas de controle de ponto flutuante ignorados sob/CLR
 
-Os pragmas de controle de float:
+Os pragmas de controle flutuante:
 
 - [fenv_access](../../preprocessor/fenv-access.md)
 
@@ -25,11 +25,11 @@ Os pragmas de controle de float:
 
 - [fp_contract](../../preprocessor/fp-contract.md)
 
-não têm nenhum efeito em [/clr](../../build/reference/clr-common-language-runtime-compilation.md).
+Não têm nenhum efeito em [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).
 
 O exemplo a seguir gera C4470:
 
-```
+```cpp
 // C4470.cpp
 // compile with: /clr /W1 /LD
 #pragma float_control(except, on)   // C4470
