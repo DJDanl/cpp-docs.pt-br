@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: 1351f0b2aa4ebc288469231a27c691237b52b1c1
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 7fc2aad1e0a550fb8f22b311518ae9fb16c076a5
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73704129"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964944"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hospedando um controle de usuário do Windows Form como uma caixa de diálogo MFC
 
@@ -19,7 +19,7 @@ O MFC fornece a classe de modelo [CWinFormsDialog](../mfc/reference/cwinformsdia
 
 O processo que o `CWinFormsDialog` usa para hospedar o controle de usuário é semelhante ao descrito em [hospedando um controle de usuário do Windows Form em uma caixa de diálogo do MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). No entanto, o `CWinFormsDialog` gerencia a inicialização e a hospedagem do controle de usuário para que ele não precise ser programado manualmente.
 
-Para um aplicativo de exemplo que mostra Windows Forms usado com MFC, consulte [integração do MFC e do Windows Forms](https://www.microsoft.com/en-us/download/details.aspx?id=2113).
+Para um aplicativo de exemplo que mostra Windows Forms usado com MFC, consulte [integração do MFC e do Windows Forms](https://www.microsoft.com/download/details.aspx?id=2113).
 
 ### <a name="to-create-the-mfc-host-application"></a>Para criar o aplicativo host do MFC
 

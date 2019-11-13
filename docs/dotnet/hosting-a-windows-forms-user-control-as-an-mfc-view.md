@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-ms.openlocfilehash: 9eb157ecbc738e1d7a1c3022d5f156fb590e8f04
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: bf91730f98685935d50ee0076739b436e8d9da60
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73704120"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964941"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Hospedando um controle de usuário dos Windows Forms como uma exibição MFC
 
@@ -21,7 +21,7 @@ O resultado final é semelhante ao modelo usado pela [classe CFormView](../mfc/r
 
 Como as exibições do MFC Windows Forms são controles ActiveX, elas não têm as mesmas `hwnd` que as exibições do MFC. Além disso, eles não podem ser passados como um ponteiro para uma exibição [cvisualização](../mfc/reference/cview-class.md) . Em geral, use .NET Framework métodos para trabalhar com Windows Forms exibições e contar com menos no Win32.
 
-Para um aplicativo de exemplo que mostra Windows Forms usado com MFC, consulte [integração do MFC e do Windows Forms](https://www.microsoft.com/en-us/download/details.aspx?id=2113).
+Para um aplicativo de exemplo que mostra Windows Forms usado com MFC, consulte [integração do MFC e do Windows Forms](https://www.microsoft.com/download/details.aspx?id=2113).
 
 ## <a name="in-this-section"></a>Nesta seção
 

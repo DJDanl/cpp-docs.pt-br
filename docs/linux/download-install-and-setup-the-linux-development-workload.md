@@ -3,12 +3,12 @@ title: Instalar uma carga de trabalho do Linux para C++ no Visual Studio
 description: Descreve como baixar, instalar e configurar a carga de trabalho do Linux para C++ no Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 68e347a4f90fc15f9d3846c82c3392213e1bd7bc
-ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
+ms.openlocfilehash: 1dad17756cbc12fdf65250b7c54314ff2a645287
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73912910"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966207"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Baixar, instalar e configurar a carga de trabalho do Linux
 
@@ -48,29 +48,31 @@ Para qualquer um desses cenários, a carga de trabalho **Desenvolvimento para Li
 
 Se você ainda não tem um computador Linux, é possível criar uma máquina virtual do Linux no Azure. Para obter mais informações, consulte [Início Rápido: criar uma máquina virtual Linux no portal do Azure](/azure/virtual-machines/linux/quick-create-portal).
 
-No Windows 10, você pode instalar e ter sua distribuição favorita do Linux como destino no WSL (Subsistema do Windows para Linux). Para obter mais informações, confira [Guia de instalação do Subsistema do Windows para Linux para Windows 10](/windows/wsl/install-win10). Se não for possível acessar a Windows Store, você poderá [baixar manualmente os pacotes do WSL distribuição](/windows/wsl/install-manual). O WSL é um ambiente de console conveniente, mas não é recomendado para aplicativos gráficos. 
+No Windows 10, você pode instalar e ter sua distribuição favorita do Linux como destino no WSL (Subsistema do Windows para Linux). Para obter mais informações, confira [Guia de instalação do Subsistema do Windows para Linux para Windows 10](/windows/wsl/install-win10). Se não for possível acessar a Windows Store, você poderá [baixar manualmente os pacotes do WSL distribuição](/windows/wsl/install-manual). O WSL é um ambiente de console conveniente, mas não é recomendado para aplicativos gráficos.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Os projetos do Linux no Visual Studio exigem que as seguintes dependências sejam instaladas em seu sistema Linux remoto ou WSL: 
-- **Um compilador – o** Visual Studio 2019 tem suporte pronto para o gcc e o [Clang](https://docs.microsoft.com/en-us/cpp/build/clang-support-cmake?view=vs-2019). 
-- **gdb** – o Visual Studio inicia automaticamente o gdb no sistema Linux e usa o front-end do depurador do Visual Studio para fornecer uma experiência de depuração de fidelidade total no Linux. 
+Os projetos do Linux no Visual Studio exigem que as seguintes dependências sejam instaladas em seu sistema Linux remoto ou WSL:
+
+- **Um compilador – o** Visual Studio 2019 tem suporte pronto para o gcc e o [Clang](/cpp/build/clang-support-cmake?view=vs-2019).
+- **gdb** – o Visual Studio inicia automaticamente o gdb no sistema Linux e usa o front-end do depurador do Visual Studio para fornecer uma experiência de depuração de fidelidade total no Linux.
 - **rsync** e **zip** -a inclusão de rsync e zip permite que o Visual Studio Extraia Arquivos de cabeçalho do seu sistema Linux para o sistema de arquivos do Windows para uso pelo IntelliSense.
 - **Make**
 - **OpenSSH-Server** (somente sistemas Linux remotos)-o Visual Studio se conecta a sistemas Linux remotos por meio de uma conexão SSH segura.
 - **CMake** (somente projetos CMake) – você pode instalar [binários CMake vinculados estaticamente da Microsoft para Linux](https://github.com/microsoft/CMake/releases).
 
-Os comandos a seguir pressupõem que você esteja usando g + + em vez de Clang. 
+Os comandos a seguir pressupõem que você esteja usando g + + em vez de Clang.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Os projetos do Linux no Visual Studio exigem que as seguintes dependências sejam instaladas em seu sistema Linux remoto ou WSL: 
+Os projetos do Linux no Visual Studio exigem que as seguintes dependências sejam instaladas em seu sistema Linux remoto ou WSL:
+
 - **gcc** -o Visual Studio 2017 tem suporte pronto para o gcc.
-- **gdb** – o Visual Studio inicia automaticamente o gdb no sistema Linux e usa o front-end do depurador do Visual Studio para fornecer uma experiência de depuração de fidelidade total no Linux. 
+- **gdb** – o Visual Studio inicia automaticamente o gdb no sistema Linux e usa o front-end do depurador do Visual Studio para fornecer uma experiência de depuração de fidelidade total no Linux.
 - **rsync** e **zip** -a inclusão de rsync e zip permite que o Visual Studio Extraia Arquivos de cabeçalho do seu sistema Linux para o sistema de arquivos do Windows a ser usado para o IntelliSense.
 - **Make**
 - **OpenSSH-Server** -o Visual Studio se conecta a sistemas Linux remotos por meio de uma conexão SSH segura.
@@ -78,7 +80,7 @@ Os projetos do Linux no Visual Studio exigem que as seguintes dependências seja
 
 ::: moniker-end
 
-::: moniker range="vs-2019" 
+::: moniker range="vs-2019"
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Instalação do Linux: Ubuntu no WSL
 

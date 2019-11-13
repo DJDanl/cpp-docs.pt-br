@@ -1,23 +1,23 @@
 ---
-title: Compilador aviso (nível 1) C4489
+title: Aviso do compilador (nível 1) C4489
 ms.date: 11/04/2016
 f1_keywords:
 - C4489
 helpviewer_keywords:
 - C4489
 ms.assetid: 43b51c8c-27b5-44c9-b974-fe4b48f4896f
-ms.openlocfilehash: dd150621ad3474444861982c095ae8a6addb52fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78ceecb5918ccb74bd61afe62bbf8b542d585f81
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404033"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966193"
 ---
-# <a name="compiler-warning-level-1-c4489"></a>Compilador aviso (nível 1) C4489
+# <a name="compiler-warning-level-1-c4489"></a>Aviso do compilador (nível 1) C4489
 
-'especificador de ': não é permitido no método de interface 'method'; Substituir especificadores são permitidos apenas em métodos de classe de classe e o valor de referência
+' especificador ': não permitido no método de interface ' method '; os especificadores de substituição só são permitidos em métodos de classe ref e de valor
 
-Uma palavra-chave do especificador incorretamente foi usada em um método de interface.
+Uma palavra-chave de especificador foi usada incorretamente em um método de interface.
 
 Para obter mais informações, consulte [especificadores de substituição](../../extensions/override-specifiers-cpp-component-extensions.md).
 
@@ -25,7 +25,7 @@ Para obter mais informações, consulte [especificadores de substituição](../.
 
 O exemplo a seguir gera C4489.
 
-```
+```cpp
 // C4489.cpp
 // compile with: /clr /c /W1
 public interface class I {

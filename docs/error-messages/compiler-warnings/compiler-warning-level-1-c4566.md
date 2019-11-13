@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4566
+title: Aviso do compilador (nível 1) C4566
 ms.date: 11/04/2016
 f1_keywords:
 - C4566
 helpviewer_keywords:
 - C4566
 ms.assetid: 65f40730-e86f-447c-b37b-16caadcfe311
-ms.openlocfilehash: c864feb2478e9f99ad6e4c0087dcef72b55de601
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6a62b399aa32ec6caf2e5a9ee6d4c5836601ba4
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397257"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965966"
 ---
-# <a name="compiler-warning-level-1-c4566"></a>Compilador aviso (nível 1) C4566
+# <a name="compiler-warning-level-1-c4566"></a>Aviso do compilador (nível 1) C4566
 
-caractere representado pela nome de caractere universal 'char' não pode ser representado na página de código atual (página)
+o caractere representado pelo nome de caractere universal ' char ' não pode ser representado na página de código atual (página)
 
-Não, todos os caracteres Unicode podem ser representados na página de código ANSI atual.
+Nem todo caractere Unicode pode ser representado em sua página de código ANSI atual.
 
-Cadeias de caracteres estreitas (caracteres de um byte) são convertidas em caracteres multibyte, enquanto não são de cadeias de caracteres largas (dois bytes de caracteres).
+Cadeias restritas (caracteres de um byte) são convertidas em caracteres de byte múltiplo, ao passo que as cadeias de caracteres de dois bytes não são.
 
 O exemplo a seguir gera C4566:
 
-```
+```cpp
 // C4566.cpp
 // compile with: /W1
 int main() {

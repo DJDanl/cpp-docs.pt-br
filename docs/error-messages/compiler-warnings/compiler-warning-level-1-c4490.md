@@ -1,23 +1,23 @@
 ---
-title: Compilador aviso (nível 1) C4490
+title: Aviso do compilador (nível 1) C4490
 ms.date: 11/04/2016
 f1_keywords:
 - C4490
 helpviewer_keywords:
 - C4490
 ms.assetid: f9b03ecf-41a1-4f4d-a74c-2c1e88234ccc
-ms.openlocfilehash: bf51994c210bd751e0d29bec169dfc4366784486
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41fa124eed365b87b419a4019262c0c673399295
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161089"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966189"
 ---
-# <a name="compiler-warning-level-1-c4490"></a>Compilador aviso (nível 1) C4490
+# <a name="compiler-warning-level-1-c4490"></a>Aviso do compilador (nível 1) C4490
 
-'override': uso incorreto de especificador de substituição; 'function' não coincide com um método de classe ref base
+' override ': uso incorreto de especificador de substituição; ' function ' não corresponde a um método base ref class
 
-Um especificador de substituição foi usado incorretamente. Por exemplo, você não substituir uma função de interface, você implementá-la.
+Um especificador de substituição foi usado incorretamente. Por exemplo, você não substitui uma função de interface, você a implementa.
 
 Para obter mais informações, consulte [especificadores de substituição](../../extensions/override-specifiers-cpp-component-extensions.md).
 
@@ -25,7 +25,7 @@ Para obter mais informações, consulte [especificadores de substituição](../.
 
 O exemplo a seguir gera C4490.
 
-```
+```cpp
 // C4490.cpp
 // compile with: /clr /c /W1
 
