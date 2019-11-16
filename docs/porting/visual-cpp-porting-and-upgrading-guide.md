@@ -1,15 +1,15 @@
 ---
 title: Guia C++ de atualização e portabilidade da Microsoft
 description: Atualize o C++ código da Microsoft para a versão mais recente do Visual Studio.
-ms.date: 10/29/2019
+ms.date: 11/05/2019
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.topic: overview
-ms.openlocfilehash: d67c2665574242a46d697f6e9f24321556146958
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 04c3950d637c01031e78d0d95e13232143ceb232
+ms.sourcegitcommit: 4dde7914608508e47c21cae03ac58fe953a0c29b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625688"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119494"
 ---
 # <a name="microsoft-c-porting-and-upgrading-guide"></a>Guia C++ de atualização e portabilidade da Microsoft
 
@@ -25,7 +25,7 @@ Se um aplicativo herdado estiver em execução satisfatoriamente, em um ambiente
 
 - O mesmo código pode ser executado mais rapidamente devido a otimizações aprimoradas do compilador.
 
-- Os C++ recursos modernos e as práticas de programação eliminam muitas causas comuns de bugs e é muito mais fácil manter essas linguagens de estilo C mais antigas.
+- Recursos C++ modernos e práticas de programação eliminam muitas causas comuns de bugs e geram código que é muito mais fácil de manter do que os idiomas do estilo C mais antigos.
 
 - Os tempos de compilação são significativamente mais rápidos, devido a melhorias de desempenho no compilador e no vinculador.
 
@@ -48,6 +48,7 @@ Para obter mais informações, consulte [Usar a multiplataforma nativa no Visual
 |Título|Descrição|
 |-----------|-----------------|
 |[Atualizando C++ projetos de versões anteriores do Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Como atualizar sua base de código para o Visual Studio 2019 e v142 do compilador.|
+|[Ferramentas IDE para atualizar C++ o código](ide-tools-for-upgrading-code.md)|Recursos de IDE úteis que ajudam no processo de atualização.|
 |[C++Compatibilidade binária entre 2015 e 2019](binary-compat-2015-2017.md)|Consuma bibliotecas v140 no estado em que se encontram de projetos v142.|
 |[Usar direcionamento múltiplo nativo no Visual Studio para compilar projetos antigos](use-native-multi-targeting.md)|Use o Visual Studio 2019 com compiladores e bibliotecas mais antigos.|
 |[Histórico de alterações de 2003 a 2015 do Visual C++](visual-cpp-change-history-2003-2015.md)|Uma lista de todas as alterações nas bibliotecas da C++ Microsoft e ferramentas de compilação do Visual Studio 2003 até 2015 que podem exigir alterações no seu código.|
