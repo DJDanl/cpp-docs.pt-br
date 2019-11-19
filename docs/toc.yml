@@ -4931,6 +4931,8 @@
               href: intrinsics/compiler-intrinsics.md
             - name: Intrínsecos ARM
               href: intrinsics/arm-intrinsics.md
+            - name: Intrínsecos do ARM64
+              href: intrinsics/arm64-intrinsics.md
             - name: Lista de intrínsecos x86
               href: intrinsics/x86-intrinsics-list.md
             - name: Lista de intrínsecos x64 (amd64)
