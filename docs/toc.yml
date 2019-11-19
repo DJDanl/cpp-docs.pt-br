@@ -2848,6 +2848,8 @@
           href: porting/porting-third-party-libraries.md
         - name: Portabilidade de aplicativos de dados
           href: data/data-access-programming-mfc-atl.md
+    - name: Ferramentas IDE para atualizar o código C++
+      href: porting/ide-tools-for-upgrading-code.md
     - name: Histórico de alterações de 2003 a 2015 do Visual C++
       href: porting/visual-cpp-change-history-2003-2015.md
     - name: O que há de novo no Visual C++ de 2003 até 2015
@@ -6111,7 +6113,7 @@
                   href: windows/attributes/com-attributes.md
                 - name: Atributos IDL
                   href: windows/attributes/idl-attributes.md
-                - name: 'Atributos do consumidor OLE DB '
+                - name: Atributos do consumidor OLE DB
                   href: windows/attributes/ole-db-consumer-attributes.md
                 - name: Atributos de compilador
                   href: windows/attributes/compiler-attributes.md
@@ -6165,7 +6167,7 @@
                   href: windows/attributes/coclass.md
                 - name: com_interface_entry
                   href: windows/attributes/com-interface-entry-cpp.md
-                - name: 'Controle '
+                - name: Controle
                   href: windows/attributes/control.md
                 - name: cpp_quote
                   href: windows/attributes/cpp-quote.md
