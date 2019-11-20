@@ -1,6 +1,6 @@
 ---
 title: Classe array (Biblioteca Padrão C++)| Microsoft Docs
-ms.date: 11/04/2016
+ms.date: 11/13/2019
 f1_keywords:
 - array/std::array
 - array/std::array::const_iterator
@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: aba7026fa60045720c893478c1ea637dbaa037c1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e93f5089e62956e7473c95eb6835046b5fe992bf
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456915"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189416"
 ---
 # <a name="array-class-c-standard-library"></a>Classe array (Biblioteca padrão C++)
 
@@ -140,7 +140,7 @@ class array;
 |Função membro|Descrição|
 |-|-|
 |[array](#array)|Constrói um objeto de matriz.|
-|[assign](#assign)|Substitui todos os elementos.|
+|[assign](#assign)|(Obsolete. Use `fill`.) Replaces all elements.|
 |[at](#at)|Acessa um elemento em uma posição especificada.|
 |[back](#back)|Acessa o último elemento.|
 |[begin](#begin)|Designa o início da sequência controlada.|
@@ -192,7 +192,7 @@ array(const array& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+*right*\
 Objeto ou intervalo a inserir.
 
 ### <a name="remarks"></a>Comentários
@@ -204,32 +204,34 @@ O construtor de cópia `array(const array& right)` inicializa a sequência contr
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_array.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    typedef std::array<int, 4> Myarray;
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    Myarray c0 = { 0, 1, 2, 3 };
+
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     Myarray c1(c0);
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c1.begin();
-        it != c1.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c1)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -240,56 +242,6 @@ int main()
 ## <a name="assign"></a>  array::assign
 
 Obsoleto no C++ 11, substituído por [preenchimento](#fill). Substitui todos os elementos.
-
-```cpp
-void assign(const Ty& val);
-```
-
-### <a name="parameters"></a>Parâmetros
-
-*Val*\
-O valor a atribuir.
-
-### <a name="remarks"></a>Comentários
-
-A função member substitui a sequência controlada por `*this` por uma repetição de `N` elementos do valor *Val*.
-
-### <a name="example"></a>Exemplo
-
-```cpp
-// std__array__array_assign.cpp
-// compile with: /EHsc
-#include <array>
-#include <iostream>
-
-typedef std::array<int, 4> Myarray;
-int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
-
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
-    std::cout << std::endl;
-
-    Myarray c1;
-    c1.assign(4);
-
-// display contents " 4 4 4 4"
-    for (Myarray::const_iterator it = c1.begin();
-        it != c1.end(); ++it)
-        std::cout << " " << *it;
-    std::cout << std::endl;
-
-    return (0);
-    }
-```
-
-```Output
-0 1 2 3
-4 4 4 4
-```
 
 ## <a name="at"></a>  array::at
 
@@ -303,39 +255,38 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*desconto*\
+*off*\
 Posição do elemento a acessar.
 
 ### <a name="remarks"></a>Comentários
 
-As funções de membro retornam uma referência ao elemento da sequência controlada na posição *off*. Se a posição for inválida, a função lançará um objeto da classe `out_of_range`.
+The member functions return a reference to the element of the controlled sequence at position *off*. Se a posição for inválida, a função lançará um objeto da classe `out_of_range`.
 
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_at.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display odd elements " 1 3"
+    // display odd elements " 1 3"
     std::cout << " " << c0.at(1);
     std::cout << " " << c0.at(3);
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ## <a name="back"></a>  array::back
@@ -355,28 +306,27 @@ As funções membro retornam uma referência ao último elemento da sequência c
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_back.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display last element " 3"
+    // display last element " 3"
     std::cout << " " << c0.back();
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -400,29 +350,28 @@ A função membro retorna um iterador de acesso aleatório que aponta para o pri
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_begin.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::iterator it2 = c0.begin();
     std::cout << " " << *it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -432,21 +381,21 @@ int main()
 
 ## <a name="cbegin"></a>  array::cbegin
 
-Retorna um iterador **const** que aborda o primeiro elemento no intervalo.
+Returns a **const** iterator that addresses the first element in the range.
 
 ```cpp
 const_iterator cbegin() const noexcept;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um iterador de acesso aleatório **const** que aponta para o primeiro elemento do intervalo ou o local logo após o final de um intervalo vazio (para um intervalo vazio, `cbegin() == cend()`).
+A **const** random-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Comentários
 
 Com o valor de retorno `cbegin`, os elementos do intervalo não podem ser modificados.
 
-Você pode usar essa função membro no lugar da função membro `begin()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. `Container` No exemplo, considere ser um contêiner modificável (não **const**) de qualquer tipo que dê suporte `begin()` a e. `cbegin()`
+Você pode usar essa função membro no lugar da função membro `begin()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. In the example, consider `Container` to be a modifiable (non- **const**) container of any kind that supports `begin()` and `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -458,13 +407,13 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  array::cend
 
-Retorna um iterador **const** que aborda o local logo após o último elemento em um intervalo.
+Returns a **const** iterator that addresses the location just beyond the last element in a range.
 
 ```cpp
 const_iterator cend() const noexcept;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de acesso aleatório que aponta para além do fim do intervalo.
 
@@ -472,7 +421,7 @@ Um iterador de acesso aleatório que aponta para além do fim do intervalo.
 
 `cend` é usado para testar se um iterador passou do fim de seu intervalo.
 
-Você pode usar essa função membro no lugar da função membro `end()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. `Container` No exemplo, considere ser um contêiner modificável (não **const**) de qualquer tipo que dê suporte `end()` a e. `cend()`
+Você pode usar essa função membro no lugar da função membro `end()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. In the example, consider `Container` to be a modifiable (non- **const**) container of any kind that supports `end()` and `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -499,8 +448,6 @@ O tipo descreve um objeto que pode servir como um iterador de acesso aleatório 
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_const_iterator.cpp
-// compile with: /EHsc /W4
 #include <array>
 #include <iostream>
 
@@ -508,14 +455,14 @@ typedef std::array<int, 4> MyArray;
 
 int main()
 {
-    MyArray c0 = {0, 1, 2, 3};
+    MyArray c0 = { 0, 1, 2, 3 };
 
     // display contents " 0 1 2 3"
     std::cout << "it1:";
-    for ( MyArray::const_iterator it1 = c0.begin();
-          it1 != c0.end();
-          ++it1 ) {
-       std::cout << " " << *it1;
+    for (MyArray::const_iterator it1 = c0.begin();
+        it1 != c0.end();
+        ++it1) {
+        std::cout << " " << *it1;
     }
     std::cout << std::endl;
 
@@ -549,29 +496,28 @@ O tipo descreve um objeto que pode servir como um ponteiro de constante para ele
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_const_pointer.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::const_pointer ptr = &*c0.begin();
     std::cout << " " << *ptr;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -594,29 +540,28 @@ O tipo descreve um objeto que pode servir como uma referência constante para um
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_const_reference.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::const_reference ref = *c0.begin();
     std::cout << " " << ref;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -639,29 +584,28 @@ O tipo descreve um objeto que pode servir como um iterador inverso constante par
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_const_reverse_iterator.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display last element " 3"
+    // display last element " 3"
     Myarray::const_reverse_iterator it2 = c0.rbegin();
     std::cout << " " << *it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -677,7 +621,7 @@ Retorna um iterador const para o primeiro elemento em uma matriz invertida.
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de acesso aleatório invertido const que trata do primeiro elemento em uma matriz invertida ou que trata de qual foi o último elemento na matriz não invertida.
 
@@ -688,8 +632,6 @@ Com o valor retornado de `crbegin`, o objeto de matriz não pode ser modificado.
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// array_crbegin.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
@@ -723,7 +665,7 @@ Retorna um iterador const que trata o local após o último elemento em uma matr
 const_reverse_iterator crend() const noexcept;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de acesso aleatório inverso const que trata o local após o último elemento em uma matriz invertida (o local que precedeu o primeiro elemento na matriz não invertida).
 
@@ -740,8 +682,6 @@ O valor retornado por `crend` não deve ser desreferenciado.
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// array_crend.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
@@ -778,29 +718,28 @@ As funções membro retornam o endereço do primeiro elemento na sequência cont
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_data.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::pointer ptr = c0.data();
     std::cout << " " << *ptr;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -823,29 +762,28 @@ O tipo inteiro com sinal descreve um objeto que pode representar a diferença en
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_difference_type.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display distance first-last " -4"
+    // display distance first-last " -4"
     Myarray::difference_type diff = c0.begin() - c0.end();
     std::cout << " " << diff;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -868,34 +806,33 @@ A função membro retornará true somente se `N == 0`.
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_empty.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display whether c0 is empty " false"
+    // display whether c0 is empty " false"
     std::cout << std::boolalpha << " " << c0.empty();
     std::cout << std::endl;
 
     std::array<int, 0> c1;
 
-// display whether c1 is empty " true"
+    // display whether c1 is empty " true"
     std::cout << std::boolalpha << " " << c1.empty();
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -921,29 +858,28 @@ As funções membro retornam um iterador de acesso aleatório que aponta para lo
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_end.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display last element " 3"
+    // display last element " 3"
     Myarray::iterator it2 = c0.end();
     std::cout << " " << *--it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -972,27 +908,28 @@ void fill(const Type& val);
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// array_fill.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
-int main( )
+int main()
 {
-   using namespace std;
-   array<int, 2> v1 = {1, 2};
-   array<int, 2>::iterator iter;
+    using namespace std;
+    array<int, 2> v1 = { 1, 2 };
 
-   cout << "v1 = " ;
-   for (iter = v1.begin(); iter != v1.end(); iter++)
-      cout << *iter << " ";
-   cout << endl;
+    cout << "v1 = ";
+    for (const auto& it : v1)
+    {
+        std::cout << " " << it;
+    }
+    cout << endl;
 
-   v1.fill(3);
-   cout << "v1 = " ;
-   for (iter = v1.begin(); iter != v1.end(); iter++)
-      cout << *iter << " ";
-   cout << endl;
+    v1.fill(3);
+    cout << "v1 = ";
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
+    cout << endl;
 }
 ```
 
@@ -1013,28 +950,27 @@ As funções membro retornam uma referência ao primeiro elemento da sequência 
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_front.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     std::cout << " " << c0.front();
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1057,8 +993,6 @@ O tipo descreve um objeto que pode servir como um iterador de acesso aleatório 
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_iterator.cpp
-// compile with: /EHsc /W4
 #include <array>
 #include <iostream>
 
@@ -1066,14 +1000,14 @@ typedef std::array<int, 4> MyArray;
 
 int main()
 {
-    MyArray c0 = {0, 1, 2, 3};
+    MyArray c0 = { 0, 1, 2, 3 };
 
     // display contents " 0 1 2 3"
     std::cout << "it1:";
-    for ( MyArray::iterator it1 = c0.begin();
-          it1 != c0.end();
-          ++it1 ) {
-       std::cout << " " << *it1;
+    for (MyArray::iterator it1 = c0.begin();
+        it1 != c0.end();
+        ++it1) {
+        std::cout << " " << *it1;
     }
     std::cout << std::endl;
 
@@ -1108,28 +1042,27 @@ A função membro retorna `N`.
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_max_size.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display (maximum) size " 4"
+    // display (maximum) size " 4"
     std::cout << " " << c0.max_size();
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1149,41 +1082,40 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*desconto*\
+*off*\
 Posição do elemento a acessar.
 
 ### <a name="remarks"></a>Comentários
 
-As funções de membro retornam uma referência ao elemento da sequência controlada na posição *off*. Se a posição for inválida, o comportamento será indefinido.
+The member functions return a reference to the element of the controlled sequence at position *off*. Se a posição for inválida, o comportamento será indefinido.
 
-Há também uma função [Get](array-functions.md#get) de não-membro disponível para obter uma referência a um elemento de uma **matriz**.
+There is also a non-member [get](array-functions.md#get) function available to get a reference to an element of an **array**.
 
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_operator_sub.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display odd elements " 1 3"
+    // display odd elements " 1 3"
     std::cout << " " << c0[1];
     std::cout << " " << c0[3];
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1201,43 +1133,44 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+*right*\
 O contêiner a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 
-O operador member atribui cada elemento da *direita* para o elemento correspondente da sequência controlada e, em seguida, retorna `*this`. Você o usa para substituir a sequência controlada por uma cópia da sequência controlada *à direita*.
+The member operator assigns each element of *right* to the corresponding element of the controlled sequence, then returns `*this`. You use it to replace the controlled sequence with a copy of the controlled sequence in *right*.
 
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_operator_as.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     Myarray c1;
     c1 = c0;
 
-// display copied contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c1.begin();
-        it != c1.end(); ++it)
-        std::cout << " " << *it;
+    // display copied contents " 0 1 2 3"
+        // display contents " 0 1 2 3"
+    for (auto it : c1)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1260,29 +1193,28 @@ O tipo descreve um objeto que pode servir como um ponteiro para elementos da seq
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_pointer.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::pointer ptr = &*c0.begin();
     std::cout << " " << *ptr;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1306,29 +1238,28 @@ As funções membro retornam um iterador invertido que aponta pra logo além do 
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_rbegin.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display last element " 3"
+    // display last element " 3"
     Myarray::const_reverse_iterator it2 = c0.rbegin();
     std::cout << " " << *it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1351,29 +1282,28 @@ O tipo descreve um objeto que pode servir como uma referência para um elemento 
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_reference.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::reference ref = *c0.begin();
     std::cout << " " << ref;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1397,29 +1327,28 @@ As funções membro retornam um iterador invertido que aponta para o primeiro el
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_rend.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::const_reverse_iterator it2 = c0.rend();
     std::cout << " " << *--it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1442,29 +1371,28 @@ O tipo descreve um objeto que pode servir como um iterador invertido para a sequ
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_reverse_iterator.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display last element " 3"
+    // display last element " 3"
     Myarray::reverse_iterator it2 = c0.rbegin();
     std::cout << " " << *it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1487,28 +1415,27 @@ A função membro retorna `N`.
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_size.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display size " 4"
+    // display size " 4"
     std::cout << " " << c0.size();
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1531,29 +1458,28 @@ O tipo inteiro sem sinal descreve um objeto que pode representar o tamanho de qu
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_size_type.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display distance last-first " 4"
+    // display distance last-first " 4"
     Myarray::size_type diff = c0.end() - c0.begin();
     std::cout << " " << diff;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1571,53 +1497,54 @@ void swap(array& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+*right*\
 Matriz com a qual trocar conteúdo.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro troca as sequências controladas `*this` entre e *à direita*. Realiza uma série de atribuições de elemento e chamadas do construtor proporcionais a `N`.
+The member function swaps the controlled sequences between `*this` and *right*. Realiza uma série de atribuições de elemento e chamadas do construtor proporcionais a `N`.
 
-Também há uma função de [permuta](array-functions.md#swap) não-membro disponível para alternar duas instâncias de **matriz** .
+There is also a non-member [swap](array-functions.md#swap) function available to swap two **array** instances.
 
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_swap.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-    Myarray c1 = {4, 5, 6, 7};
+    Myarray c1 = { 4, 5, 6, 7 };
     c0.swap(c1);
 
-// display swapped contents " 4 5 6 7"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display swapped contents " 4 5 6 7"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     swap(c0, c1);
 
-// display swapped contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display swapped contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1641,33 +1568,31 @@ O tipo é um sinônimo do parâmetro de modelo `Ty`.
 ### <a name="example"></a>Exemplo
 
 ```cpp
-// std__array__array_value_type.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        {
-        Myarray::value_type val = *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        Myarray::value_type val = it;
         std::cout << " " << val;
-        }
+    }
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output

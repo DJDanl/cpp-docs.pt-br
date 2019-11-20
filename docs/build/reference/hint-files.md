@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: af28dac17c57c8c0699950cc1fdb542642c01722
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707107"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189000"
 ---
 # <a name="hint-files"></a>Arquivos de dica
 
@@ -36,8 +36,8 @@ Um arquivo de dica contém dicas personalizáveis pelo usuário, que têm a mesm
 
 > [!IMPORTANT]
 > Se você modificar ou adicionar um arquivo de dica, precisará executar etapas adicionais para que as alterações entrem em vigor:
-> - Em versões anteriores ao Visual Studio 2017 versão 15.6: exclua o arquivo .sdf e/ou o arquivo VC.db da solução para todas as alterações.
-> - Nas versões do Visual Studio 2017 15.6 a 15.9: feche e reabra a solução após a adição de novos arquivos de dica.
+> - In versions before Visual Studio 2017 version 15.6: Delete the .sdf file and/or VC.db file in the solution for all changes.
+> - In Visual Studio 2017 version 15.6 and later: Close and reopen the solution after adding new hint files.
 
 ## <a name="scenario"></a>Cenário
 
@@ -92,13 +92,13 @@ A partir do Visual Studio 2017 versão 15.8 em diante, há vários recursos para
 
 - Há uma Ação Rápida para criar um arquivo de dica que inclui a macro realçada ou, se houver um arquivo de dica existente, para adicionar a macro ao arquivo de dica.
 
-![Macro Realçada.](media/hint-squiggle-and-actions.png "Rabisco de dica e Ações Rápidas")
+![Highlighted Macro.](media/hint-squiggle-and-actions.png "Hint squiggle and Quick Actions")
 
 Depois de executar qualquer uma das Ações Rápidas, o analisador revisa novamente os arquivos afetados pelo arquivo de dica.
 
-Por padrão, a macro do problema é realçada como uma sugestão. O realce pode ser alterado para algo mais perceptível, como um rabisco vermelho ou verde. Use a opção **Macros em Regiões de Navegação Ignoradas** na seção **Rabiscos de Código** em **Ferramentas** > **Opções** > **Editor de Texto** > **C/C++** > **Exibir**.
+Por padrão, a macro do problema é realçada como uma sugestão. O realce pode ser alterado para algo mais perceptível, como um rabisco vermelho ou verde. Use a opção **Macros em Regiões de Navegação Ignoradas** na seção **Rabiscos de Código** em **Ferramentas** > **Opções** > **Editor de Texto** > **C/C++**  > **Exibir**.
 
-![Macros na Opção de Regiões de Navegação Ignoradas.](media/skipped-regions-squiggle-option.png "Opção de rabisco de Regiões Ignoradas.")
+![Macros in Skipped Browsing Regions Option.](media/skipped-regions-squiggle-option.png "Skipped regions squiggle option.")
 
 ## <a name="display-browsing-database-errors"></a>Exibir Erros de Banco de Dados de Navegação
 
@@ -166,7 +166,7 @@ A ilustração mostra alguns dos diretórios físicos em um projeto do Visual St
 
 ### <a name="hint-file-directories"></a>Diretórios de arquivos de dica
 
-![Diretórios de arquivos de dicas comuns e específicos ao projeto](media/hintfile.png "HintFile")
+![Common and project&#45;specific hint file directories.](media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>Diretórios e conteúdo do arquivo de dica
 

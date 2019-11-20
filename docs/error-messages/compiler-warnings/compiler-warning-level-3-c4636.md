@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 3) C4636
+title: Compiler Warning (level 3) C4636
 ms.date: 11/04/2016
 f1_keywords:
 - C4636
 helpviewer_keywords:
 - C4636
 ms.assetid: 59112a0f-850f-41c6-bd84-8ae8dc84706a
-ms.openlocfilehash: 7327189a61e2545bb6003cd95e1ddb116f9f7c94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1ee63b813c8ef468291eea4575286f40f96ff6a
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401696"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189128"
 ---
-# <a name="compiler-warning-level-3-c4636"></a>Compilador aviso (nível 3) C4636
+# <a name="compiler-warning-level-3-c4636"></a>Compiler Warning (level 3) C4636
 
-Comentário de documento XML aplicado para 'Criar': marca requer não vazia ' atributo.
+XML document comment applied to 'construct': tag requires non-empty '' attribute.
 
-Uma marca, tais como `cref`, não tinha um valor.
+A tag, such as `cref`, did not have a value.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C4636.
+The following sample generates C4636.
 
-```
+```cpp
 // C4636.cpp
 // compile with: /clr /doc /W3 /c
 /// <see cref=''/>

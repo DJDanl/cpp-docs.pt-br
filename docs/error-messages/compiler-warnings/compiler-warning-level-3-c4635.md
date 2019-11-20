@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 3) C4635
+title: Compiler Warning (level 3) C4635
 ms.date: 11/04/2016
 f1_keywords:
 - C4635
 helpviewer_keywords:
 - C4635
 ms.assetid: b2ba90de-c093-4a76-8076-b65878467574
-ms.openlocfilehash: 21873a883b19924ce3ef41511d65f8ae640875f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6fd45dc6c28c0d12eb2b2991f8a087b1841d1a9
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401716"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189141"
 ---
-# <a name="compiler-warning-level-3-c4635"></a>Compilador aviso (nível 3) C4635
+# <a name="compiler-warning-level-3-c4635"></a>Compiler Warning (level 3) C4635
 
-Destino de comentário de documento XML:-XML malformado: motivo
+XML document comment target: badly-formed XML: reason
 
-O compilador encontrar algum problema com as marcas XML.  Corrigir o problema e recompile
+The compiler found some problem with the XML tags.  Fix the problem and recompile
 
-O exemplo a seguir gera C4635:
+The following sample generates C4635:
 
-```
+```cpp
 // C4635.cpp
 // compile with: /doc /clr /W3 /c
 /// <summary>
@@ -33,6 +33,6 @@ O exemplo a seguir gera C4635:
 public ref class Test {};
 ```
 
-Observe que a saída deste exemplo diz: **End marca 'member' não coincide com a marca de início 'Resumo'.**
+Notice that the output for this sample says: **End tag 'member' does not match the start tag 'summary'.**
 
-O problema com este exemplo é que a marca de fim \<summary > está mal formado, e o compilador não reconhecê-lo como o \<resumo > marca de fim.  O \<membro > marca será inserida no arquivo. XDC pelo compilador em cada compilação /doc.  Portanto, o problema aqui é que a marca de fim \</member >, não coincide com a marca de início anterior que o compilador processado (\<resumo >.
+The problem with this sample is that the end tag for \<summary> is poorly formed, and the compiler does not recognize it as the \<summary> end tag.  The \<member> tag is embedded in the .xdc file by the compiler in every /doc compilation.  So, the problem here is that the end tag \</member>, does not match the previous start tag that the compiler processed (\<summary>.

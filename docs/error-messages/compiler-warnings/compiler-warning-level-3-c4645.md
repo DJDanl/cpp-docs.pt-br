@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 3) C4645
+title: Compiler Warning (level 3) C4645
 ms.date: 11/04/2016
 f1_keywords:
 - C4645
 helpviewer_keywords:
 - C4645
 ms.assetid: fd7c1ddf-f0d0-4e10-bab9-ccb4c3476298
-ms.openlocfilehash: a3e5c834a3f14b9a125176dcddd5bcc355cf1faa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4fa286f177284c03e5067b4af56f4e606b073653
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401638"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189368"
 ---
-# <a name="compiler-warning-level-3-c4645"></a>Compilador aviso (nível 3) C4645
+# <a name="compiler-warning-level-3-c4645"></a>Compiler Warning (level 3) C4645
 
-função declarada com __declspec(noreturn) tem uma instrução return
+function declared with __declspec(noreturn) has a return statement
 
-Um [retornar](../../cpp/return-statement-in-program-termination-cpp.md) instrução foi encontrada em uma função que é marcada com o [noreturn](../../cpp/noreturn.md) `__declspec` modificador. O `return` instrução foi ignorada.
+A [return](../../cpp/return-statement-in-program-termination-cpp.md) statement was found in a function that is marked with the [noreturn](../../cpp/noreturn.md) `__declspec` modifier. The `return` statement was ignored.
 
-O exemplo a seguir gera C4645:
+The following sample generates C4645:
 
-```
+```cpp
 // C4645.cpp
 // compile with:  /W3
 void __declspec(noreturn) func() {
