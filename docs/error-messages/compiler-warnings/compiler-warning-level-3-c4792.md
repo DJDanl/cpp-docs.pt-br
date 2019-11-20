@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 3) C4792
+title: Compiler Warning (level 3) C4792
 ms.date: 11/04/2016
 f1_keywords:
 - C4792
 helpviewer_keywords:
 - C4792
 ms.assetid: c047ce69-a622-44e1-9425-d41aa9261c61
-ms.openlocfilehash: adf233673c4b654927aa9488565adf6ceef5d3e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84a8a8bbb08ac97fe87d63d1ea44587790f87d92
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401560"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189339"
 ---
-# <a name="compiler-warning-level-3-c4792"></a>Compilador aviso (nível 3) C4792
+# <a name="compiler-warning-level-3-c4792"></a>Compiler Warning (level 3) C4792
 
-função 'function' declarada usando sysimport e referenciada em código nativo; biblioteca de importação necessária para vincular
+function 'function' declared using sysimport and referenced from native code; import library required to link
 
-Uma função nativa que foi importada para o programa com DllImport foi chamada de uma função não gerenciada. Portanto, você deve vincular a biblioteca de importação para a DLL.
+A native function that was imported into the program with DllImport was called from an unmanaged function. Therefore, you must link to the import library for the DLL.
 
-Esse aviso não pode ser resolvido no código ou alterando a maneira como você compilar. Use o [aviso](../../preprocessor/warning.md) pragma para desabilitar esse aviso.
+This warning cannot be resolved in code or by changing the way you compile. Use the [warning](../../preprocessor/warning.md) pragma to disable this warning.
 
-O exemplo a seguir gera C4792:
+The following sample generates C4792:
 
-```
+```cpp
 // C4792.cpp
 // compile with: /clr /W3
 // C4792 expected

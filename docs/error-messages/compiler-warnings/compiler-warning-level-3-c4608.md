@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4608
 ms.assetid: 8b8f5f28-8ce9-457e-9d3d-a8c0efce9b6a
-ms.openlocfilehash: 4f1bef80b8cddccc036a5151bb4cc4ac01483a36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3599209043b877a60fbd7796959b8c9b76e1fb86
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401755"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188978"
 ---
 # <a name="compiler-warning-level-3-c4608"></a>Aviso do compilador (nível 3) C4608
 
-'union_member' já foi inicializado por outro membro de união na lista de inicializadores, 'union_member'
+'union_member' has already been initialized by another union member in the initializer list, 'union_member'
 
-Dois membros da mesma união foram inicializados em uma lista de inicialização. Você pode acessar somente um membro da união.
+Two members of the same union were initialized in an initialization list. You can only access one member of the union.
 
-O exemplo a seguir gera C4608:
+The following sample generates C4608:
 
-```
+```cpp
 // C4608.cpp
 // compile with: /W3 /c
 class X {
