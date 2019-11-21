@@ -1,34 +1,34 @@
 ---
-title: Sistema do tipo C++ (C++ moderno)
-ms.date: 11/19/2018
+title: C++ type system
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: b947bd6955a80e051d1dab81061b4b2bf2ab19c8
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 1f12f7505438dc995aaf8a045fd903488e9ff092
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69498637"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246597"
 ---
-# <a name="c-type-system-modern-c"></a>Sistema do tipo C++ (C++ moderno)
+# <a name="c-type-system"></a>C++ type system
 
-O conceito do *tipo* é muito importante no C++. Cada variável, argumento de função e valor de retorno de função deve ter um tipo para ser compilado. Além disso, cada expressão (incluindo valores literais) recebe implicitamente um tipo do compilador antes de ser avaliada. Alguns exemplos de tipos incluem **int** para armazenar valores integrais, **duplo** para armazenar valores de ponto flutuante (também conhecidos como tipos de dados *escalares* ) ou a classe de biblioteca padrão [std:: basic_string](../standard-library/basic-string-class.md) para armazenar texto. Você pode criar seu próprio tipo definindo uma **classe** ou **struct**. O tipo especifica a quantidade de memória que será atribuída à variável (ou o resultado da expressão), os tipos de valores que podem ser armazenados nessa variável, como os valores (como padrão de bits) são interpretados e as operações que podem ser executadas nele. Este artigo contém uma visão geral informal dos principais recursos do sistema de tipos C++.
+The concept of *type* is very important in C++. Cada variável, argumento de função e valor de retorno de função deve ter um tipo para ser compilado. Além disso, cada expressão (incluindo valores literais) recebe implicitamente um tipo do compilador antes de ser avaliada. Some examples of types include **int** to store integral values, **double** to store floating-point values (also known as *scalar* data types), or the Standard Library class [std::basic_string](../standard-library/basic-string-class.md) to store text. You can create your own type by defining a **class** or **struct**. O tipo especifica a quantidade de memória que será atribuída à variável (ou o resultado da expressão), os tipos de valores que podem ser armazenados nessa variável, como os valores (como padrão de bits) são interpretados e as operações que podem ser executadas nele. Este artigo contém uma visão geral informal dos principais recursos do sistema de tipos C++.
 
 ## <a name="terminology"></a>Terminologia
 
-**Variável**: o nome simbólico de uma quantidade de dados para que o nome possa ser usado para acessar os dados aos quais ele se refere em todo o escopo do código onde ele está definido. No C++, a *variável* geralmente é usada para fazer referência a instâncias de tipos de dados escalares, enquanto instâncias de outros tipos geralmente são chamadas de *objetos*.
+**Variable**: The symbolic name of a quantity of data so that the name can be used to access the data it refers to throughout the scope of the code where it is defined. In C++, *variable* is generally used to refer to instances of scalar data types, whereas instances of other types are usually called *objects*.
 
-**Objeto**: para simplificar e consistência, este artigo usa o termo *objeto* para se referir a qualquer instância de uma classe ou estrutura, e quando ele é usado no sentido geral inclui todos os tipos, até mesmo variáveis escalares.
+**Object**: For simplicity and consistency, this article uses the term *object* to refer to any instance of a class or structure, and when it is used in the general sense includes all types, even scalar variables.
 
-**Tipo de Pod** (dados antigos simples): essa categoria informal de C++ tipos de dados no refere-se a tipos que são escalares (consulte a seção tipos fundamentais) ou que são *classes Pod*. Uma classe POD não tem membros de dados estáticos que também não sejam PODs e não tem construtores definidos pelo usuário, destruidores definidos pelo usuário ou operadores de atribuição definidos pelo usuário. Além disso, uma classe POD não tem função virtual, nenhuma classe base e nenhum membro de dados não estático particular ou protegido. Os tipos POD são quase sempre usados para a troca de dados externos, por exemplo, com um módulo escrito na linguagem C (que tem apenas tipos POD).
+**POD type** (plain old data): This informal category of data types in C++ refers to types that are scalar (see the Fundamental types section) or are *POD classes*. Uma classe POD não tem membros de dados estáticos que também não sejam PODs e não tem construtores definidos pelo usuário, destruidores definidos pelo usuário ou operadores de atribuição definidos pelo usuário. Além disso, uma classe POD não tem função virtual, nenhuma classe base e nenhum membro de dados não estático particular ou protegido. Os tipos POD são quase sempre usados para a troca de dados externos, por exemplo, com um módulo escrito na linguagem C (que tem apenas tipos POD).
 
 ## <a name="specifying-variable-and-function-types"></a>Especificando tipos de variável e de função
 
-C++é uma linguagem *fortemente tipada* e também é *digitada estaticamente*; cada objeto tem um tipo e esse tipo nunca é alterado (não deve ser confundido com objetos de dados estáticos).
-**Quando você declara uma variável** em seu código, deve especificar seu tipo explicitamente ou usar a palavra-chave **auto** para instruir o compilador a deduzir o tipo do inicializador.
-**Quando você declara uma função** em seu código, deve especificar o tipo de cada argumento e seu valor de retorno, ou **void** se nenhum valor for retornado pela função. A exceção se dá quando você está usando modelos de função, que permitem argumentos de tipos arbitrários.
+C++ is a *strongly typed* language and it is also *statically-typed*; every object has a type and that type never changes (not to be confused with static data objects).
+**When you declare a variable** in your code, you must either specify its type explicitly, or use the **auto** keyword to instruct the compiler to deduce the type from the initializer.
+**When you declare a function** in your code, you must specify the type of each argument and its return value, or **void** if no value is returned by the function. A exceção se dá quando você está usando modelos de função, que permitem argumentos de tipos arbitrários.
 
-Após a primeira declaração de uma variável, você não pode alterar seu tipo em um momento posterior. No entanto, você pode copiar o valor da variável ou o valor de retorno de uma função para outra variável de tipo diferente. Essas operações são chamadas de *conversões de tipo*, que às vezes são necessárias, mas também são fontes potenciais de perda ou incorreção de dados.
+Após a primeira declaração de uma variável, você não pode alterar seu tipo em um momento posterior. No entanto, você pode copiar o valor da variável ou o valor de retorno de uma função para outra variável de tipo diferente. Such operations are called *type conversions*, which are sometimes necessary but are also potential sources of data loss or incorrectness.
 
 Ao declarar uma variável do tipo POD, é altamente recomendável inicializá-la, ou seja, dar a ela um valor inicial. Até que você inicialize uma variável, ela terá o valor “garbage”, que consiste nos bits que estavam nesse local de memória anteriormente. Esse é um aspecto importante da linguagem C++ a ser lembrado, especialmente se você estiver vindo de outra linguagem que manipule a inicialização para você. Ao declarar uma variável do tipo de classe não POD, o construtor manipula a inicialização.
 
@@ -53,13 +53,13 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>Tipos (internos) fundamentais
 
-Ao contrário de algumas linguagens, C++ não tem tipo base universal do qual todos os outros tipos são derivados. O idioma inclui muitos *tipos fundamentais*, também conhecidos como *tipos internos*. Isso inclui tipos numéricos, como **int**, **Double**, **Long**, **bool**, mais os tipos **Char** e **wchar_t** para caracteres ASCII e Unicode, respectivamente. Todos os tipos fundamentais (exceto **bool**, **Double**, **wchar_t** e os tipos relacionados) têm todas as versões não assinadas, que modificam o intervalo de valores que a variável pode armazenar. Por exemplo, um **int**, que armazena um inteiro com sinal de 32 bits, pode representar um valor de-2.147.483.648 a 2.147.483.647. Um **int não assinado**, que também é armazenado como 32 bits, pode armazenar um valor de 0 a 4.294.967.295. O número total de valores possíveis em cada caso é o mesmo; somente o intervalo é diferente.
+Ao contrário de algumas linguagens, C++ não tem tipo base universal do qual todos os outros tipos são derivados. The language includes many *fundamental types*, also known as *built-in types*. This includes numeric types such as **int**, **double**, **long**, **bool**, plus the **char** and **wchar_t** types for ASCII and UNICODE characters, respectively. Most fundamental types (except **bool**, **double**, **wchar_t** and related types) all have unsigned versions, which modify the range of values that the variable can store. For example, an **int**, which stores a 32-bit signed integer, can represent a value from -2,147,483,648 to 2,147,483,647. An **unsigned int**, which is also stored as 32-bits, can store a value from 0 to 4,294,967,295. O número total de valores possíveis em cada caso é o mesmo; somente o intervalo é diferente.
 
-Os tipos fundamentais são reconhecidos pelo compilador, que tem regras internas que controlam que operações você poderá executar neles e como eles serão convertidos em outros tipos fundamentais. Para obter uma lista completa de tipos internos e seus limites de tamanho e numérico, consulte [tipos fundamentais](../cpp/fundamental-types-cpp.md).
+Os tipos fundamentais são reconhecidos pelo compilador, que tem regras internas que controlam que operações você poderá executar neles e como eles serão convertidos em outros tipos fundamentais. For a complete list of built-in types and their size and numeric limits, see [Fundamental Types](../cpp/fundamental-types-cpp.md).
 
 A ilustração a seguir mostra os tamanhos relativos dos tipos internos:
 
-![Tamanho em bytes de tipos&#45;internos](../cpp/media/built-intypesizes.png "Tamanho em bytes de tipos&#45;internos")
+![Size in bytes of built&#45;in types](../cpp/media/built-intypesizes.png "Size in bytes of built&#45;in types")
 
 A tabela a seguir lista os tipos fundamentais usados com mais frequência:
 
@@ -76,11 +76,11 @@ A tabela a seguir lista os tipos fundamentais usados com mais frequência:
 
 ## <a name="the-void-type"></a>O tipo void
 
-O tipo **void** é um tipo especial; Você não pode declarar uma variável do tipo **void**, mas pode declarar uma variável do tipo __void \*__ (ponteiro para **void**), que às vezes é necessário ao alocar memória bruta (não tipada). No entanto, os ponteiros para **void** não são de tipo seguro e, em geral, seu uso C++é fortemente desencorajado no moderno. Em uma declaração de função, um valor de retorno **nulo** significa que a função não retorna um valor; Esse é um uso comum e aceitável de **void**. Embora a linguagem C exigia funções que têm zero parâmetros para declarar **void** na lista de parâmetros, por exemplo, `fou(void)`, essa prática é desencorajada em C++ moderno e deve ser declarada `fou()`. Para obter mais informações, consulte [conversões de tipo e segurança de tipo](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+The **void** type is a special type; you cannot declare a variable of type **void**, but you can declare a variable of type __void \*__ (pointer to **void**), which is sometimes necessary when allocating raw (un-typed) memory. However, pointers to **void** are not type-safe and generally their use is strongly discouraged in modern C++. In a function declaration, a **void** return value means that the function does not return a value; this is a common and acceptable use of **void**. While the C language required functions that have zero parameters to declare **void** in the parameter list, for example, `fou(void)`, this practice is discouraged in modern C++ and should be declared `fou()`. For more information, see [Type Conversions and Type Safety](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="const-type-qualifier"></a>Qualificador do tipo const
 
-Qualquer tipo interno ou definido pelo usuário pode ser qualificado pela palavra-chave const. Além disso, as funções de membro podem ser qualificadas como **const**e até mesmo **constantes**sobrecarregadas. O valor de um tipo **const** não pode ser modificado após ser inicializado.
+Qualquer tipo interno ou definido pelo usuário pode ser qualificado pela palavra-chave const. Additionally, member functions may be **const**-qualified and even **const**-overloaded. The value of a **const** type cannot be modified after it is initialized.
 
 ```cpp
 
@@ -88,27 +88,27 @@ const double PI = 3.1415;
 PI = .75 //Error. Cannot modify const variable.
 ```
 
-O qualificador **const** é usado extensivamente em declarações de função e variável, e a "correção constante" é um C++conceito importante no; Basicamente, isso significa usar **const** para garantir, no momento da compilação, que os valores não são modificados de forma não intencional. Para obter mais informações, consulte [const](../cpp/const-cpp.md).
+The **const** qualifier is used extensively in function and variable declarations and "const correctness" is an important concept in C++; essentially it means to use **const** to guarantee, at compile time, that values are not modified unintentionally. For more information, see [const](../cpp/const-cpp.md).
 
-Um tipo **const** é diferente de sua versão não const; por exemplo, **const int** é um tipo distinto de **int**. Você pode usar o C++ operador **const_cast** nessas raras ocasiões em que você deve remover *const-qualidade* de uma variável. Para obter mais informações, consulte [conversões de tipo e segurança de tipo](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+A **const** type is distinct from its non-const version; for example, **const int** is a distinct type from **int**. You can use the C++ **const_cast** operator on those rare occasions when you must remove *const-ness* from a variable. For more information, see [Type Conversions and Type Safety](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="string-types"></a>Tipos de cadeia de caracteres
 
-Estritamente falando, a C++ linguagem não tem nenhum tipo de cadeia de caracteres interno; **Char** e **wchar_t** armazenam caracteres únicos-você deve declarar uma matriz desses tipos para aproximar uma cadeia de caracteres, adicionando um valor nulo de encerramento (por exemplo, ASCII `'\0'`) ao elemento da matriz, um após o último caractere válido (também chamado de  *Cadeia de caracteres C-Style*). As cadeias de caracteres de estilo C exigiam que muito mais códigos fossem escritos ou o uso de funções da biblioteca de utilitários de cadeia de caracteres externos. Mas, no C++moderno, temos os tipos de biblioteca padrão `std::string` (para cadeias de caracteres de caractere de tipo **de caractere de 8 bits)** ou `std::wstring` (para cadeias de caracteres de tipo **wchar_t**de 16 bits). Esses C++ contêineres de biblioteca padrão podem ser considerados como tipos de cadeia de caracteres nativos porque fazem parte das bibliotecas padrão incluídas em qualquer ambiente C++ de compilação compatível. Basta usar a diretiva `#include <string>` para tornar esses tipos disponíveis em seu programa. (Se você estiver usando MFC ou ATL, a classe CString também estará disponível, mas não faz parte do C++ padrão.) O uso de matrizes de caracteres com terminação nula (as cadeias de estilo C mencionadas anteriormente) é altamente C++desencorajado no moderno.
+Strictly speaking, the C++ language has no built-in string type; **char** and **wchar_t** store single characters - you must declare an array of these types to approximate a string, adding a terminating null value (for example, ASCII `'\0'`) to the array element one past the last valid character (also called a *C-style string*). As cadeias de caracteres de estilo C exigiam que muito mais códigos fossem escritos ou o uso de funções da biblioteca de utilitários de cadeia de caracteres externos. But in modern C++, we have the Standard Library types `std::string` (for 8-bit **char**-type character strings) or `std::wstring` (for 16-bit **wchar_t**-type character strings). These C++ Standard Library containers can be thought of as native string types because they are part of the standard libraries that are included in any compliant C++ build environment. Basta usar a diretiva `#include <string>` para tornar esses tipos disponíveis em seu programa. (If you are using MFC or ATL, the CString class is also available, but is not part of the C++ standard.) The use of null-terminated character arrays (the C-style strings previously mentioned) is strongly discouraged in modern C++.
 
 ## <a name="user-defined-types"></a>Tipos definidos pelo usuário
 
-Quando você define uma **classe**, **struct**, **Union**ou **enum**, essa construção é usada no restante do seu código como se fosse um tipo fundamental. Ele tem um tamanho conhecido na memória e certas regras sobre como pode ser usado aplicado para verificar o tempo de compilação e, no runtime, para a vida útil de seu programa. As principais diferenças entre os tipos internos fundamentais e os tipos definidos pelo usuário são:
+When you define a **class**, **struct**, **union**, or **enum**, that construct is used in the rest of your code as if it were a fundamental type. Ele tem um tamanho conhecido na memória e certas regras sobre como pode ser usado aplicado para verificar o tempo de compilação e, no runtime, para a vida útil de seu programa. As principais diferenças entre os tipos internos fundamentais e os tipos definidos pelo usuário são:
 
-- O compilador não tem conhecimento interno de um tipo definido pelo usuário. Ele aprende o tipo quando ele encontra a definição pela primeira vez durante o processo de compilação.
+- O compilador não tem conhecimento interno de um tipo definido pelo usuário. It learns of the type when it first encounters the definition during the compilation process.
 
-- Você especifica que operações podem ser executadas em seu tipo, e como ele pode ser convertido em outros tipos, definindo (por meio de sobrecarga) os operadores apropriados, como membros de classe ou funções de não membro. Para obter mais informações, consulte [sobrecarga de função](function-overloading.md)
+- Você especifica que operações podem ser executadas em seu tipo, e como ele pode ser convertido em outros tipos, definindo (por meio de sobrecarga) os operadores apropriados, como membros de classe ou funções de não membro. For more information, see [Function Overloading](function-overloading.md)
 
 ## <a name="pointer-types"></a>Tipos de ponteiro
 
-Desde as primeiras versões da linguagem C, o C++ continua permitindo que você declare uma variável de um tipo de ponteiro usando o declarador especial `*` (asterisco). Um tipo de ponteiro armazena o endereço do local na memória em que o valor real de dados é armazenado. No moderno C++, eles são chamados de *ponteiros brutos*e são acessados em seu código por meio de operadores especiais `*` (asterisco) ou `->` (Dash com maior que). Isso é chamado de cancelamento de *referência*e qual deles você usa depende se você está desreferenciando um ponteiro para um escalar ou um ponteiro para um membro em um objeto. O trabalho com tipos de ponteiro foi durante muito tempo um dos aspectos mais desafiadores e confusos do desenvolvimento de programas em C e C++. Esta seção descreve alguns fatos e práticas para ajudar a usar ponteiros brutos se você quiser, mas, no C++ moderno, ele não é mais necessário (ou recomendado) para usar ponteiros brutos para a propriedade do objeto, devido à evolução do [ponteiro inteligente](../cpp/smart-pointers-modern-cpp.md) (discutido mais no final desta seção). Ainda é útil e seguro usar ponteiros brutos para observar objetos, mas se você tiver de usá-los para a propriedade de objeto, faça isso com muito cuidado e considerando como os objetos possuídos por eles são criados e destruídos.
+Desde as primeiras versões da linguagem C, o C++ continua permitindo que você declare uma variável de um tipo de ponteiro usando o declarador especial `*` (asterisco). Um tipo de ponteiro armazena o endereço do local na memória em que o valor real de dados é armazenado. In modern C++, these are referred to as *raw pointers*, and are accessed in your code through special operators `*` (asterisk) or `->` (dash with greater-than). This is called *dereferencing*, and which one that you use depends on whether you are dereferencing a pointer to a scalar or a pointer to a member in an object. O trabalho com tipos de ponteiro foi durante muito tempo um dos aspectos mais desafiadores e confusos do desenvolvimento de programas em C e C++. This section outlines some facts and practices to help use raw pointers if you want to, but in modern C++ it’s no longer required (or recommended) to use raw pointers for object ownership at all, due to the evolution of the [smart pointer](../cpp/smart-pointers-modern-cpp.md) (discussed more at the end of this section). Ainda é útil e seguro usar ponteiros brutos para observar objetos, mas se você tiver de usá-los para a propriedade de objeto, faça isso com muito cuidado e considerando como os objetos possuídos por eles são criados e destruídos.
 
-A primeira coisa que você deve saber é que a declaração de uma variável de ponteiro bruto alocará somente a memória necessária para armazenar um endereço do local da memória a que o ponteiro fará referência quando sua referência for removida. A alocação da memória do próprio valor de dados (também chamada de *armazenamento de backup*) ainda não está alocada. Ou seja, declarando uma variável de ponteiro bruto, você está criando uma variável do endereço de memória, não uma variável de dados real. Remover a referência de uma variável de ponteiro antes de verificar se ela contém um endereço válido para um repositório de backup causará um comportamento indefinido (geralmente um erro fatal) em seu programa. O exemplo a seguir demonstra esse tipo de erro:
+A primeira coisa que você deve saber é que a declaração de uma variável de ponteiro bruto alocará somente a memória necessária para armazenar um endereço do local da memória a que o ponteiro fará referência quando sua referência for removida. Allocation of the memory for the data value itself (also called *backing store*) is not yet allocated. Ou seja, declarando uma variável de ponteiro bruto, você está criando uma variável do endereço de memória, não uma variável de dados real. Remover a referência de uma variável de ponteiro antes de verificar se ela contém um endereço válido para um repositório de backup causará um comportamento indefinido (geralmente um erro fatal) em seu programa. O exemplo a seguir demonstra esse tipo de erro:
 
 ```cpp
 int* pNumber;       // Declare a pointer-to-int variable.
@@ -134,9 +134,9 @@ O exemplo remove a referência de um tipo de ponteiro sem ter memória alocada p
                               // "pNumber".
 ```
 
-O exemplo de código corrigido usa a memória de pilha local para criar o repositório de backup para o qual `pNumber` aponta. Usamos um tipo fundamental para simplificar. Na prática, o armazenamento de backup para ponteiros é, geralmente, tipos definidos pelo usuário que são alocados dinamicamente em uma área de memória chamada *heap* (ou *armazenamento gratuito*) usando uma **nova** expressão de palavra-chave (em programação em estilo C, o @no_ mais antigo a função de biblioteca de tempo de execução _t_3 C foi usada). Uma vez alocadas, essas variáveis são geralmente chamadas de objetos, especialmente se elas forem baseadas em uma definição de classe. A memória alocada com **New** deve ser excluída por uma instrução **delete** correspondente (ou, se você usou a função `malloc()` para alocá-la, a função de tempo de execução C `free()`).
+O exemplo de código corrigido usa a memória de pilha local para criar o repositório de backup para o qual `pNumber` aponta. Usamos um tipo fundamental para simplificar. In practice, the backing store for pointers are most often user-defined types that are dynamically-allocated in an area of memory called the *heap* (or *free store*) by using a **new** keyword expression (in C-style programming, the older `malloc()` C runtime library function was used). Once allocated, these variables are usually referred to as objects, especially if they are based on a class definition. Memory that is allocated with **new** must be deleted by a corresponding **delete** statement (or, if you used the `malloc()` function to allocate it, the C runtime function `free()`).
 
-No entanto, é fácil esquecer de excluir um objeto alocado dinamicamente, especialmente em um código complexo, que causa um bug de recurso chamado de *vazamento de memória*. Por esse motivo, o uso de ponteiros brutos é altamente desaconselhável em C++ moderno. É quase sempre melhor encapsular um ponteiro bruto em um [ponteiro inteligente](../cpp/smart-pointers-modern-cpp.md), que liberará automaticamente a memória quando o destruidor for invocado (quando o código sair do escopo do ponteiro inteligente); usando ponteiros inteligentes, você praticamente elimina uma classe inteira de bugs em C++ seus programas. No exemplo a seguir, suponha que `MyClass` seja um tipo definido pelo usuário que tem um método público `DoSomeWork();`
+However, it is easy to forget to delete a dynamically-allocated object- especially in complex code, which causes a resource bug called a *memory leak*. Por esse motivo, o uso de ponteiros brutos é altamente desaconselhável em C++ moderno. It is almost always better to wrap a raw pointer in a [smart pointer](../cpp/smart-pointers-modern-cpp.md), which will automatically release the memory when its destructor is invoked (when the code goes out of scope for the smart pointer); by using smart pointers you virtually eliminate a whole class of bugs in your C++ programs. No exemplo a seguir, suponha que `MyClass` seja um tipo definido pelo usuário que tem um método público `DoSomeWork();`
 
 ```cpp
 void someFunction() {
@@ -147,15 +147,15 @@ void someFunction() {
   // for the unique_ptr, freeing the resource.
 ```
 
-Para obter mais informações sobre apontadores inteligentes, consulte [ponteiros inteligentes](../cpp/smart-pointers-modern-cpp.md).
+For more information about smart pointers, see [Smart Pointers](../cpp/smart-pointers-modern-cpp.md).
 
-Para obter mais informações sobre conversões de ponteiro, consulte [conversões de tipo e segurança de tipo](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+For more information about pointer conversions, see [Type Conversions and Type Safety](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
-Para obter mais informações sobre ponteiros em geral, consulte [ponteiros](../cpp/pointers-cpp.md).
+For more information about pointers in general, see [Pointers](../cpp/pointers-cpp.md).
 
 ## <a name="windows-data-types"></a>Tipos de dados do Windows
 
-Na programação Win32 clássica para C e C++, a maioria das funções usa typedefs e macros #define específicas do Windows (definidas em `windef.h`) para especificar os tipos de parâmetros e valores de retorno. Esses tipos de dados do Windows são basicamente apenas nomes especiais (aliases) fornecidos para tiposC++ C/internos. Para obter uma lista completa desses TYPEDEFs e definições de pré-processador, consulte [tipos de dados do Windows](/windows/win32/WinProg/windows-data-types). Alguns desses typedefs, como HRESULT e LCID, são úteis e descritivos. Outros, como INT, não têm significado especial e são apenas aliases para tipos C++ fundamentais. Outros tipos de dados do Windows têm nomes que foram mantidos desde a época da programação em C e de processadores de 16 bits, e não têm finalidade ou significado em hardware ou sistemas operacionais modernos. Também há tipos de dados especiais associados à biblioteca de Windows Runtime, listados como [Windows Runtime tipos de dados base](/windows/win32/WinRT/base-data-types). Em C++ moderno, a orientação geral é dar preferência aos tipos C++ fundamentais, a menos que o tipo do Windows comunique qualquer significado adicional sobre como o valor deve ser interpretado.
+Na programação Win32 clássica para C e C++, a maioria das funções usa typedefs e macros #define específicas do Windows (definidas em `windef.h`) para especificar os tipos de parâmetros e valores de retorno. These Windows data types are mostly just special names (aliases) given to C/C++ built-in types. For a complete list of these typedefs and preprocessor definitions, see [Windows Data Types](/windows/win32/WinProg/windows-data-types). Alguns desses typedefs, como HRESULT e LCID, são úteis e descritivos. Outros, como INT, não têm significado especial e são apenas aliases para tipos C++ fundamentais. Outros tipos de dados do Windows têm nomes que foram mantidos desde a época da programação em C e de processadores de 16 bits, e não têm finalidade ou significado em hardware ou sistemas operacionais modernos. There are also special data types associated with the Windows Runtime Library, listed as [Windows Runtime base data types](/windows/win32/WinRT/base-data-types). Em C++ moderno, a orientação geral é dar preferência aos tipos C++ fundamentais, a menos que o tipo do Windows comunique qualquer significado adicional sobre como o valor deve ser interpretado.
 
 ## <a name="more-information"></a>Mais informações
 
@@ -163,11 +163,11 @@ Para obter mais informações sobre o sistema de tipos C++, consulte os tópicos
 
 |||
 |-|-|
-|[Tipos de valor](../cpp/value-types-modern-cpp.md)|Descreve *tipos de valor* juntamente com problemas relacionados ao seu uso.|
-|[Conversões de tipo e segurança de tipo](../cpp/type-conversions-and-type-safety-modern-cpp.md)|Descreve problemas de conversão de tipos comuns e mostra como evitá-los.|
+|[Tipos de valor](../cpp/value-types-modern-cpp.md)|Describes *value types* along with issues relating to their use.|
+|[Type Conversions and Type Safety](../cpp/type-conversions-and-type-safety-modern-cpp.md)|Descreve problemas de conversão de tipos comuns e mostra como evitá-los.|
 
 ## <a name="see-also"></a>Consulte também
 
-[Bem-vindo ao C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)
