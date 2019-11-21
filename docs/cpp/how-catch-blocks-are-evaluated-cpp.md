@@ -8,38 +8,38 @@ helpviewer_keywords:
 - exception handling, catching and deleting exceptions
 - types [C++], exception handling
 ms.assetid: 202dbf07-8ace-4b3b-b3ae-4b45c275e0b4
-ms.openlocfilehash: 7504439c565d4dfb720bc2fa7e097e3230733423
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 027dc87923a588ea891dbf6dd835e2baba75a1cb
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153678"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245852"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Como blocos catch são avaliados (C++)
 
-O C++ permite lançar exceções de qualquer tipo, embora seja recomendável lançar os tipos derivados de std::exception. Uma exceção de C++ pode ser capturada por um **catch** manipulador que especifica o mesmo tipo da exceção lançada ou por um manipulador que pode capturar qualquer tipo de exceção.
+O C++ permite lançar exceções de qualquer tipo, embora seja recomendável lançar os tipos derivados de std::exception. A C++ exception can be caught by a **catch** handler that specifies the same type as the thrown exception, or by a handler that can catch any type of exception.
 
 Se o tipo de exceção lançada for uma classe, que também tenha uma classe base (ou classes), ela pode ser capturada pelos manipuladores que aceitam classes base do tipo da exceção, bem como por referências às bases do tipo da exceção. Observe que, quando uma exceção é capturada por uma referência, ela é associada ao objeto de exceção lançado real; caso contrário, é uma cópia (bem semelhante a um argumento para uma função).
 
-Quando uma exceção é lançada, ela pode ser capturada pelos seguintes tipos de **catch** manipuladores:
+When an exception is thrown, it may be caught by the following types of **catch** handlers:
 
 - Um manipulador que pode aceitar qualquer tipo (usando a sintaxe de reticências).
 
-- Um manipulador que aceita o mesmo tipo que o objeto de exceção; porque é uma cópia **const** e **volátil** modificadores são ignorados.
+- A handler that accepts the same type as the exception object; because it is a copy, **const** and **volatile** modifiers are ignored.
 
 - Um manipulador que aceita uma referência para mesmo tipo do objeto de exceção.
 
-- Um manipulador que aceita uma referência a um **const** ou **volátil** formulário do mesmo tipo que o objeto de exceção.
+- A handler that accepts a reference to a **const** or **volatile** form of the same type as the exception object.
 
-- Um manipulador que aceita uma classe base do mesmo tipo que o objeto de exceção; uma vez que é uma cópia **const** e **volátil** modificadores são ignorados. O **catch** manipulador para uma classe base não deve preceder o **catch** manipulador para a classe derivada.
+- A handler that accepts a base class of the same type as the exception object; since it is a copy, **const** and **volatile** modifiers are ignored. The **catch** handler for a base class must not precede the **catch** handler for the derived class.
 
 - Um manipulador que aceita uma referência a uma classe base do mesmo tipo do objeto de exceção.
 
-- Um manipulador que aceita uma referência a um **const** ou **volátil** forma de uma classe base do mesmo tipo que o objeto de exceção.
+- A handler that accepts a reference to a **const** or **volatile** form of a base class of the same type as the exception object.
 
 - Um manipulador que aceita um ponteiro no qual um objeto de ponteiro gerado pode ser convertido pelas regras padrão de conversão de ponteiro.
 
-A ordem na qual **catch** manipuladores aparecem é importante, porque manipuladores para um determinado **tente** bloco são examinadas em ordem de sua aparência. Por exemplo, é um erro para colocar o manipulador de uma classe base antes do manipulador de uma classe derivada. Depois que a correspondência **catch** manipulador for encontrado, os manipuladores subsequentes não são verificados. Como resultado, um sinal de reticências **catch** manipulador deve ser o último manipulador para seu **tente** bloco. Por exemplo:
+The order in which **catch** handlers appear is significant, because handlers for a given **try** block are examined in order of their appearance. Por exemplo, é um erro para colocar o manipulador de uma classe base antes do manipulador de uma classe derivada. After a matching **catch** handler is found, subsequent handlers are not examined. As a result, an ellipsis **catch** handler must be the last handler for its **try** block. Por exemplo:
 
 ```cpp
 // ...
@@ -62,8 +62,8 @@ catch( CExcptClass E )
 }
 ```
 
-Neste exemplo, no botão de reticências **catch** manipulador é o único manipulador que é examinado.
+In this example, the ellipsis **catch** handler is the only handler that is examined.
 
 ## <a name="see-also"></a>Consulte também
 
-[Tratamento de exceções em C++](../cpp/cpp-exception-handling.md)
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
