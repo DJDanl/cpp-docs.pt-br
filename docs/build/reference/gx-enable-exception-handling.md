@@ -1,6 +1,6 @@
 ---
 title: /GX (habilitar tratamento de exceções)
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 f1_keywords:
 - /gx
 helpviewer_keywords:
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enable exception handling compiler option [C++]
 - GX compiler option [C++]
 ms.assetid: 933b43ba-de77-4ff8-a48b-7074de90bc1c
-ms.openlocfilehash: 43be8f6d0f080f0d85568ce5b089751fc68f0e8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 171ff0d0dfb1dec41bae5f6be63c941802c402a4
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291997"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245082"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (habilitar tratamento de exceções)
 
-Preterido. Habilita o tratamento de exceções síncronas usando a suposição de que funções declarado usando `extern "C"` nunca geram uma exceção.
+Preterido. Enables synchronous exception handling using the assumption that functions declared by using `extern "C"` never throw an exception.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,19 +30,17 @@ Preterido. Habilita o tratamento de exceções síncronas usando a suposição d
 
 ## <a name="remarks"></a>Comentários
 
-**/GX** foi preterido. Use o equivalente [/EHsc](eh-exception-handling-model.md) opção em vez disso. Para obter uma lista de opções do compilador preterido, consulte o **preteridos e removidos opções do compilador** seção [opções de compilador listadas por categoria](compiler-options-listed-by-category.md).
+**/GX** is deprecated. Use the equivalent [/EHsc](eh-exception-handling-model.md) option instead. For a list of deprecated compiler options, see the **Deprecated and Removed Compiler Options** section in [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
 
-Por padrão, **/EHsc**, o equivalente **/GX**, está em vigor quando você compila usando o ambiente de desenvolvimento do Visual Studio. Ao usar as ferramentas de linha de comando, sem tratamento de exceções é especificado. Este é o equivalente de **/GX-**.
-
-Para obter mais informações, consulte [tratamento de exceções de C++](../../cpp/cpp-exception-handling.md).
+By default, **/EHsc**, the equivalent of **/GX**, is in effect when you compile by using the Visual Studio development environment. When using the command line tools, no exception handling is specified. This is the equivalent of **/GX-** .
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. No painel de navegação, escolha **propriedades de configuração**, **C/C++**, **linha de comando**.
+1. In the navigation pane, choose **Configuration Properties**, **C/C++** , **Command Line**.
 
-1. Digite a opção de compilador na **opções adicionais** caixa.
+1. Type the compiler option in the **Additional Options** box.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 

@@ -1,23 +1,23 @@
 ---
-title: 'Como: Criar e usar instâncias shared_ptr'
+title: 'How to: Create and use shared_ptr instances'
 ms.custom: how-to
-ms.date: 05/22/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: d0ee1a5e8c5d26e8e0bec060ffe3d5fea30ce0fa
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: 9820e4cd2d1b981d82760fc1cea4e07c85792177
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866144"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245826"
 ---
-# <a name="how-to-create-and-use-shared_ptr-instances"></a>Como: Criar e usar instâncias shared_ptr
+# <a name="how-to-create-and-use-shared_ptr-instances"></a>How to: Create and Use shared_ptr instances
 
 O tipo `shared_ptr` é um ponteiro inteligente na biblioteca padrão do C++ que foi projetado para cenários em que mais de um proprietário pode ter que gerenciar o tempo de vida do objeto na memória. Depois de inicializar um `shared_ptr`, você pode copiá-lo, passá-lo pelo valor em argumentos de função e atribuí-lo a outras instâncias `shared_ptr`. Todas as instâncias apontam para o mesmo objeto e compartilham o acesso a um "bloco de controle" que incrementa e decrementa a contagem de referência sempre que um novo `shared_ptr` é adicionado, sai do escopo ou é redefinido. Quando a contagem de referência alcança zero, o bloco de controle exclui o recurso de memória e ele mesmo.
 
 A ilustração a seguir mostra várias instâncias `shared_ptr` que apontam para um local da memória.
 
-![Diagrama de ponteiro compartilhado](../cpp/media/shared_ptr.png "Diagrama de ponteiro compartilhado")
+![Shared pointer diagram](media/shared_ptr.png "Shared pointer diagram")
 
 ## <a name="example-setup"></a>Configuração de exemplo
 
@@ -74,25 +74,25 @@ int main()
 
 Sempre que possível, use a função [make_shared](../standard-library/memory-functions.md#make_shared) para criar um `shared_ptr` quando o recurso de memória for criado pela primeira vez. `make_shared` é à prova de exceção. Ele usa a mesma chamada para alocar a memória para o bloco de controle e o recurso, que reduz a sobrecarga de construção. Se você não usar `make_shared`, deverá usar uma expressão `new` explícita para criar o objeto antes de passá-lo para o construtor `shared_ptr`. O exemplo a seguir mostra várias maneiras de declarar e inicializar um `shared_ptr` junto com um novo objeto.
 
-[!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
+[!code-cpp[stl_smart_pointers#1](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
 ## <a name="example-2"></a>Exemplo 2
 
 O exemplo a seguir mostra como declarar e inicializar instâncias `shared_ptr` que assumem a posse compartilhada de um objeto que já foi alocado por outro `shared_ptr`. Suponha que `sp2` seja um `shared_ptr` inicializado.
 
-[!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
+[!code-cpp[stl_smart_pointers#2](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
 
 ## <a name="example-3"></a>Exemplo 3:
 
 `shared_ptr` também será útil em contêineres da Biblioteca Padrão do C++ quando você estiver usando algoritmos que copiam elementos. Você pode encapsular os elementos em um `shared_ptr` e, em seguida, copiá-lo em outros contêineres sabendo que a memória subjacente é válida somente pelo tempo em que for necessária. O exemplo a seguir mostra como usar o algoritmo `remove_copy_if` em instâncias `shared_ptr` em um vetor.
 
-[!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
+[!code-cpp[stl_smart_pointers#4](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 
 ## <a name="example-4"></a>Exemplo 4
 
 Você pode usar `dynamic_pointer_cast`, `static_pointer_cast` e `const_pointer_cast` para converter um `shared_ptr`. Essas funções se parecem com os operadores `dynamic_cast`, `static_cast` e `const_cast`. O exemplo a seguir mostra como testar o tipo derivado de cada elemento em um vetor de `shared_ptr` de classes base e, em seguida, copiar os elementos e exibir informações sobre eles.
 
-[!code-cpp[stl_smart_pointers#5](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
+[!code-cpp[stl_smart_pointers#5](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
 ## <a name="example-5"></a>Exemplo 5
 
@@ -114,8 +114,8 @@ Você pode passar um `shared_ptr` para outra função das seguintes maneiras:
 
 O exemplo a seguir mostra como `shared_ptr` sobrecarrega vários operadores de comparação para habilitar comparações do ponteiro na memória que pertence às instâncias `shared_ptr`.
 
-[!code-cpp[stl_smart_pointers#3](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
+[!code-cpp[stl_smart_pointers#3](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
 
 ## <a name="see-also"></a>Consulte também
 
-[Ponteiros inteligentes (C++ moderno)](../cpp/smart-pointers-modern-cpp.md)
+[Ponteiros inteligentes (C++ moderno)](smart-pointers-modern-cpp.md)
