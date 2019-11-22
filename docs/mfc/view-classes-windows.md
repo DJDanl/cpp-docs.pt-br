@@ -8,24 +8,24 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-ms.openlocfilehash: f3e9ea2ebf3eb0ce04fde0339aaf0243686248a9
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: a3e0f837bc13c022bec91bfff6e38c1513abaf16
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096037"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302966"
 ---
 # <a name="view-classes-windows"></a>Classes de exibição (Windows)
 
-`CView`e suas classes derivadas são janelas filhas que representam a área do cliente de uma janela do quadro. Exibições mostram dados e aceitam entrada para um documento.
+`CView` e suas classes derivadas são janelas filhas que representam a área do cliente de uma janela do quadro. Exibições mostram dados e aceitam entrada para um documento.
 
 Uma classe de exibição é associada a uma classe de documento e a uma classe de janela de quadro usando um objeto Document-Template.
 
 [Cvisualização](../mfc/reference/cview-class.md)<br/>
-A classe base para exibições específicas do aplicativo dos dados de um documento. Exibições exibem dados e aceitam entrada do usuário para editar ou selecionar os dados. Derive sua classe ou classes de `CView`exibição do.
+A classe base para exibições específicas do aplicativo dos dados de um documento. Exibições exibem dados e aceitam entrada do usuário para editar ou selecionar os dados. Derive sua classe ou classes de exibição de `CView`.
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-A classe base para exibições com recursos de rolagem. Derive sua classe de `CScrollView` exibição de para rolagem automática.
+A classe base para exibições com recursos de rolagem. Derive sua classe de exibição de `CScrollView` para rolagem automática.
 
 ## <a name="form-and-record-views"></a>Exibições de formulário e de registro
 
@@ -34,13 +34,13 @@ Os modos de exibição de formulário também estão rolando exibições. Elas s
 As exibições de registro são derivadas de exibições de formulário. Além do modelo de caixa de diálogo, eles também têm uma conexão com um banco de dados.
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-Uma exibição de rolagem cujo layout é definido em um modelo de caixa de diálogo. Derive uma classe `CFormView` de para implementar uma interface do usuário com base em um modelo de caixa de diálogo.
+Uma exibição de rolagem cujo layout é definido em um modelo de caixa de diálogo. Derive uma classe de `CFormView` para implementar uma interface do usuário com base em um modelo de caixa de diálogo.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-Fornece uma exibição de formulário diretamente conectada a um objeto Recordset do objeto de acesso a dados (DAO). Como todos os modos de exibição `CDaoRecordView` de formulário, um é baseado em um modelo de caixa de diálogo. O DAO é usado com bancos de dados do Access e tem suporte por meio do Office 2013. 3,6 é a versão final e é considerada obsoleta.
+Fornece uma exibição de formulário diretamente conectada a um objeto Recordset do objeto de acesso a dados (DAO). Como todos os modos de exibição de formulário, um `CDaoRecordView` é baseado em um modelo de caixa de diálogo. O DAO é usado com bancos de dados do Access e tem suporte por meio do Office 2013. O DAO 3,6 é a versão final e é considerado obsoleto.
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Fornece uma exibição de formulário diretamente conectada a um objeto Recordset Open Database Connectivity (ODBC). Como todos os modos de exibição `CRecordView` de formulário, um é baseado em um modelo de caixa de diálogo.
+Fornece uma exibição de formulário diretamente conectada a um objeto Recordset Open Database Connectivity (ODBC). Como todos os modos de exibição de formulário, um `CRecordView` é baseado em um modelo de caixa de diálogo.
 
 [CHtmlEditView](../mfc/reference/chtmleditview-class.md)<br/>
 Um modo de exibição de formulário que fornece a funcionalidade da plataforma de edição HTML do WebBrowser.
@@ -66,7 +66,7 @@ Uma exibição que contém um controle de árvore do Windows (consulte [CTreeCtr
 
 ## <a name="related-classes"></a>Classes relacionadas
 
-`CSplitterWnd`permite que você tenha várias exibições em uma única janela de quadro. `CPrintDialog`e `CPrintInfo` suportam a capacidade de visualização de impressão e impressão das exibições. `CRichEditDoc`e `CRichEditCntrItem` são usados com `CRichEditView` o para implementar recursos de contêiner OLE.
+`CSplitterWnd` permite que você tenha várias exibições em uma única janela de quadro. `CPrintDialog` e `CPrintInfo` dão suporte à capacidade da visualização de impressão e impressão de modos de exibição. `CRichEditDoc` e `CRichEditCntrItem` são usados com `CRichEditView` para implementar recursos de contêiner OLE.
 
 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)<br/>
 Uma janela que o usuário pode dividir em vários painéis. Esses painéis podem ser redimensionáveis pelo usuário ou pelo tamanho fixo.
@@ -75,13 +75,13 @@ Uma janela que o usuário pode dividir em vários painéis. Esses painéis podem
 Fornece uma caixa de diálogo padrão para imprimir um arquivo.
 
 [CPrintInfo](../mfc/reference/cprintinfo-structure.md)<br/>
-Uma estrutura que contém informações sobre um trabalho de impressão ou de visualização de impressão. Usado pela `CView`arquitetura de impressão do.
+Uma estrutura que contém informações sobre um trabalho de impressão ou de visualização de impressão. Usado pela arquitetura de impressão de `CView`.
 
 [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
-Mantém a lista de itens de cliente OLE que estão em `CRichEditView`um.
+Mantém a lista de itens de cliente OLE que estão em um `CRichEditView`.
 
 [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
-Fornece acesso do lado do cliente a um item OLE armazenado em `CRichEditView`um.
+Fornece acesso do lado do cliente a um item OLE armazenado em um `CRichEditView`.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -12,20 +12,20 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: d93d2d50bab4b63258a3e0fe4cd2f24c2fcde4f3
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 387f53e3123b6863fcf218da39c7c5e356eb8219
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095787"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303411"
 ---
 # <a name="framework-mfc"></a>Framework (MFC)
 
 Seu trabalho com a estrutura de biblioteca do Microsoft Foundation Class (MFC) baseia-se amplamente em algumas classes principais e em C++ várias ferramentas visuais. Algumas classes encapsulam uma grande parte da API (interface de programação de aplicativo) do Win32. Outras classes encapsulam conceitos de aplicativos, como documentos, exibições e o próprio aplicativo. Ainda outros encapsulam recursos OLE e a funcionalidade de acesso a dados ODBC e DAO.  (O DAO tem suporte por meio do Office 2013. O DAO 3,6 é a versão final e é considerado obsoleto.)
 
-Por exemplo, o conceito Win32's da janela é encapsulado pela classe `CWnd`do MFC. Ou seja, uma C++ classe chamada `CWnd` encapsula ou "encapsula" o identificador que `HWND` representa uma janela do Windows. Da mesma forma `CDialog` , a classe encapsula as caixas de diálogo do Win32.
+Por exemplo, o conceito Win32's da janela é encapsulado pela classe MFC `CWnd`. Ou seja, uma C++ classe chamada `CWnd` encapsula ou "encapsula" o identificador de `HWND` que representa uma janela do Windows. Da mesma forma, a classe `CDialog` encapsula as caixas de diálogo do Win32.
 
-Encapsulamento significa que a C++ classe `CWnd`, por exemplo, contém uma variável de membro do `HWND`tipo, e as funções de membro da classe encapsulam chamadas para funções do Win32 `HWND` que usam um como parâmetro. As funções de membro de classe normalmente têm o mesmo nome que a função do Win32 que encapsulam.
+Encapsulamento significa que a C++ classe `CWnd`, por exemplo, contém uma variável de membro do tipo `HWND`, e as funções de membro da classe encapsulam chamadas para funções do Win32 que usam um `HWND` como um parâmetro. As funções de membro de classe normalmente têm o mesmo nome que a função do Win32 que encapsulam.
 
 ## <a name="in-this-section"></a>Nesta seção
 

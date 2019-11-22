@@ -1,12 +1,12 @@
 ---
 title: Visão geral das convenções ARM64 ABI
 ms.date: 03/27/2019
-ms.openlocfilehash: 3a3df475b8f814fcecaf2e67a0a62c7267a0de30
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.openlocfilehash: 07d58bbd64795235ad63a7b26b6f18fcffdcd1d2
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163223"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303260"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Visão geral das convenções ARM64 ABI
 
@@ -65,7 +65,7 @@ Alinhamento de layout padrão para globais e estáticos:
 | 1 | 1 |
 | 2 - 7 | 4 |
 | 8 - 63 | 8 |
-| > = 64 | 16 |
+| >= 64 | 16 |
 
 ## <a name="integer-registers"></a>Registros de inteiro
 
@@ -74,13 +74,13 @@ A arquitetura AArch64 dá suporte a registros de inteiro 32:
 | Registro | Volátil? | Função |
 | - | - | - |
 | x0 | Volátil | Parâmetro/Registro transitório 1, registro de resultados |
-| X1-120 | Volátil | Parâmetro/Registro transitório 2-8 |
-| x8-X15 | Volátil | Registros de rascunho |
-| X16-X17 | Volátil | Intra-Procedure-chamar os registros de rascunho |
+| x1-x7 | Volátil | Parâmetro/Registro transitório 2-8 |
+| x8-x15 | Volátil | Registros de rascunho |
+| x16-x17 | Volátil | Intra-Procedure-chamar os registros de rascunho |
 | x18 | Não volátil | Registro de plataforma: no modo kernel, aponta para KPCR para o processador atual; no modo de usuário, aponta para TEB |
 | x19-x28 | Não volátil | Registros de rascunho |
-| x29/FP | Não volátil | Ponteiro de quadro |
-| X30/LR | Não volátil | Registros de link |
+| x29/fp | Não volátil | Ponteiro de quadro |
+| x30/lr | Não volátil | Registros de link |
 
 Cada registro pode ser acessado como um valor de 64 bits completo (via x0-X30) ou como um valor de 32 bits (via W0-W30). operações de 32 bits zero-Estenda seus resultados até 64 bits.
 
@@ -96,9 +96,9 @@ A arquitetura AArch64 também dá suporte a 32 registros de ponto flutuante/SIMD
 
 | Registro | Volátil? | Função |
 | - | - | - |
-| V0 | Volátil | Parâmetro/Registro transitório 1, registro de resultados |
+| v0 | Volátil | Parâmetro/Registro transitório 1, registro de resultados |
 | v1-v7 | Volátil | O parâmetro/os registros de rascunho 2-8 |
-| V8-v15 | Não volátil | Registros de rascunho (somente os bits de 64 baixos são não-voláteis) |
+| v8-v15 | Não volátil | Registros de rascunho (somente os bits de 64 baixos são não-voláteis) |
 | v16-v31 | Volátil | Registros de rascunho |
 
 Cada registro pode ser acessado como um valor de 128 bits completo (via V0-V31 ou q0-q31). Ele pode ser acessado como um valor de 64 bits (via D0-D31), como um valor de 32 bits (via S0-S31), como um valor de 16 bits (via H0-H31) ou como um valor de 8 bits (via B0-B31). Acessos menores que 128 bits acessam apenas os bits inferiores do registro completo de bit 128. Eles deixam os bits restantes intocados, a menos que especificado de outra forma. (AArch64 é diferente de AArch32, em que os registradores menores foram empacotados sobre os registros maiores.)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-ms.openlocfilehash: c6c1272d41eb7a01ec5a7ee10fadb4ab21547ce7
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: fda4e968a4761fcf1e2245964bd5dca3f41a82ad
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096052"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302979"
 ---
 # <a name="view-classes-architecture"></a>Classes de exibição (arquitetura)
 
-`CView`e suas classes derivadas são janelas filhas que representam a área do cliente de uma janela do quadro. Exibições mostram dados e aceitam entrada para um documento.
+`CView` e suas classes derivadas são janelas filhas que representam a área do cliente de uma janela do quadro. Exibições mostram dados e aceitam entrada para um documento.
 
 Uma classe de exibição é associada a uma classe de documento e a uma classe de janela de quadro usando um objeto Document-Template.
 
@@ -26,7 +26,7 @@ Uma classe de exibição é associada a uma classe de documento e a uma classe d
 A classe base para exibições específicas do aplicativo dos dados de um documento. Exibições exibem dados e aceitam entrada do usuário para editar ou selecionar os dados. Derive suas classes de exibição do `CView`.
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-A classe base para exibições com recursos de rolagem. Derive sua classe de `CScrollView` exibição de para rolagem automática.
+A classe base para exibições com recursos de rolagem. Derive sua classe de exibição de `CScrollView` para rolagem automática.
 
 ## <a name="form-and-record-views"></a>Exibições de formulário e de registro
 
@@ -35,10 +35,10 @@ Os modos de exibição de formulário também estão rolando exibições. Elas s
 As exibições de registro são derivadas de exibições de formulário. Além do modelo de caixa de diálogo, eles também têm uma conexão com um banco de dados.
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-Uma exibição de rolagem cujo layout é definido em um modelo de caixa de diálogo. Derive uma classe `CFormView` de para implementar uma interface do usuário com base em um modelo de caixa de diálogo.
+Uma exibição de rolagem cujo layout é definido em um modelo de caixa de diálogo. Derive uma classe de `CFormView` para implementar uma interface do usuário com base em um modelo de caixa de diálogo.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-Fornece uma exibição de formulário diretamente conectada a um objeto Recordset do objeto de acesso a dados (DAO). Como todos os modos de exibição `CDaoRecordView` de formulário, um é baseado em um modelo de caixa de diálogo. O DAO é usado com bancos de dados do Access e tem suporte por meio do Office 2013. 3,6 é a versão final e é considerada obsoleta.
+Fornece uma exibição de formulário diretamente conectada a um objeto Recordset do objeto de acesso a dados (DAO). Como todos os modos de exibição de formulário, um `CDaoRecordView` é baseado em um modelo de caixa de diálogo. O DAO é usado com bancos de dados do Access e tem suporte por meio do Office 2013. O DAO 3,6 é a versão final e é considerado obsoleto.
 
 [CHtmlView](../mfc/reference/chtmlview-class.md)<br/>
 Dá suporte a um controle para navegação na Web dentro de um aplicativo. O controle oferece suporte a HTML dinâmico no MFC.
@@ -47,7 +47,7 @@ Dá suporte a um controle para navegação na Web dentro de um aplicativo. O con
 Fornece suporte do MFC OLE DB para exibições de formulário.
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Fornece uma exibição de formulário diretamente conectada a um objeto Recordset Open Database Connectivity (ODBC). Como todos os modos de exibição `CRecordView` de formulário, um é baseado em um modelo de caixa de diálogo.
+Fornece uma exibição de formulário diretamente conectada a um objeto Recordset Open Database Connectivity (ODBC). Como todos os modos de exibição de formulário, um `CRecordView` é baseado em um modelo de caixa de diálogo.
 
 ## <a name="control-views"></a>Exibições de controle
 

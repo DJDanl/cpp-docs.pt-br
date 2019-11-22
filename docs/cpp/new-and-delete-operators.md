@@ -1,6 +1,6 @@
 ---
 title: Operadores new e delete
-ms.date: 05/07/2019
+ms.date: 11/19/2019
 f1_keywords:
 - delete_cpp
 - new
@@ -8,50 +8,49 @@ helpviewer_keywords:
 - new keyword [C++]
 - delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: 8dd5e6a555872c443e32e9ea464ea49d4ae18f99
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: c64b15f1e1e63b1e743743883429ffd11007de0a
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222371"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246442"
 ---
 # <a name="new-and-delete-operators"></a>Operadores new e delete
 
-C++ oferece suporte a alocação dinâmica e desalocação de objetos usando o [novos](../cpp/new-operator-cpp.md) e [excluir](../cpp/delete-operator-cpp.md) operadores. Esses operadores alocam memória para objetos de um pool chamado de repositório livre. O **novos** operador chama a função especial [operador new](../cpp/new-operator-cpp.md)e o **excluir** operador chama a função especial [operador delete](../cpp/delete-operator-cpp.md).
+C++ supports dynamic allocation and deallocation of objects using the [new](new-operator-cpp.md) and [delete](delete-operator-cpp.md) operators. Esses operadores alocam memória para objetos de um pool chamado de repositório livre. The **new** operator calls the special function [operator new](new-operator-cpp.md), and the **delete** operator calls the special function [operator delete](delete-operator-cpp.md).
 
-O **novos** funcionar no C++ biblioteca padrão suporta o comportamento especificado na C++ padrão, o que é lançar uma exceção std:: bad_alloc se a alocação de memória falhar. Se você ainda desejar a versão de não lançamento do **novo**, vincule seu programa com nothrownew. No entanto, quando você vincular com nothrownew, o padrão **operador new** na biblioteca padrão C++ não funciona mais.
+The **new** function in the C++ Standard Library supports the behavior specified in the C++ standard, which is to throw a std::bad_alloc exception if the memory allocation fails. If you still want the non-throwing version of **new**, link your program with nothrownew.obj. However, when you link with nothrownew.obj, the default **operator new** in the C++ Standard Library no longer functions.
 
-Para obter uma lista dos arquivos de biblioteca que compõem a biblioteca de tempo de execução do C e a biblioteca padrão C++, consulte [recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md).
+For a list of the library files that comprise the C Runtime Library and the C++ Standard Library, see [CRT Library Features](../c-runtime-library/crt-library-features.md).
 
-##  <a id="new_operator"> </a> O novo operador
+##  <a id="new_operator"> </a> The new operator
 
-Quando uma instrução como a seguinte é encontrada em um programa, ele converte em uma chamada para a função **operador new**:
+When a statement such as the following is encountered in a program, it translates into a call to the function **operator new**:
 
 ```cpp
 char *pch = new char[BUFFER_SIZE];
 ```
 
-Se a solicitação for para zero bytes de armazenamento, **operador new** retorna um ponteiro para um objeto distinto (ou seja, chamadas repetidas para **operador new** retornam ponteiros diferentes). Se não houver memória insuficiente para a solicitação de alocação **operador new** lança uma exceção std:: bad_alloc ou retorna **nullptr** se você tiver vinculado não jogando **operador new** dão suporte.
+If the request is for zero bytes of storage, **operator new** returns a pointer to a distinct object (that is, repeated calls to **operator new** return different pointers). If there is insufficient memory for the allocation request, **operator new** throws a `std::bad_alloc` exception, or returns **nullptr** if you have linked in non-throwing **operator new** support.
 
-Você pode escrever uma rotina que tenta liberar a memória e repetir a alocação; ver [set_new_handler](../c-runtime-library/reference/set-new-handler.md) para obter mais informações. Para obter mais detalhes sobre o esquema de recuperação, consulte a seção de memória insuficiente do tratamento deste tópico.
+You can write a routine that attempts to free memory and retry the allocation; see [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) for more information. For more details on the recovery scheme, see the Handling insufficient memory section of this topic.
 
-Os dois escopos para **operador new** funções são descritas na tabela a seguir.
+The two scopes for **operator new** functions are described in the following table.
 
-### <a name="scope-for-operator-new-functions"></a>Escopo para funções operator new
+### <a name="scope-for-operator-new-functions"></a>Scope for operator new functions
 
 |Operador|Escopo|
 |--------------|-----------|
-|**:: operador new**|Global|
-|*nome da classe* **:: operador new**|Classe|
+|**::operator new**|Global|
+|*class-name* **::operator new**|Class|
 
-O primeiro argumento para **operador new** deve ser do tipo `size_t` (um tipo definido no \<stddef. h >), e o tipo de retorno é sempre **void** <strong>\*</strong>.
+The first argument to **operator new** must be of type `size_t` (a type defined in \<stddef.h>), and the return type is always **void** <strong>\*</strong>.
 
-Global **operador new** função é chamada quando o **novos** operador é usado para alocar objetos de tipos internos, objetos do tipo de classe que não contêm definidos pelo usuário **operador new** funções e matrizes de qualquer tipo. Quando o **novos** operador é usado para alocar objetos de um tipo de classe onde um **operador new** for definido, essa classe **operador new** é chamado.
+The global **operator new** function is called when the **new** operator is used to allocate objects of built-in types, objects of class type that do not contain user-defined **operator new** functions, and arrays of any type. When the **new** operator is used to allocate objects of a class type where an **operator new** is defined, that class's **operator new** is called.
 
-Uma **operador new** função definida para uma classe é uma função de membro estático (que não é possível, portanto, ser virtual) que oculta global **operador new** função para objetos desse tipo de classe. Considere o caso em que **novo** é usado para alocar e definir memória para um determinado valor:
+An **operator new** function defined for a class is a static member function (which cannot, therefore, be virtual) that hides the global **operator new** function for objects of that class type. Consider the case where **new** is used to allocate and set memory to a given value:
 
 ```cpp
-// spec1_the_operator_new_function1.cpp
 #include <malloc.h>
 #include <memory.h>
 
@@ -78,16 +77,15 @@ int main()
 }
 ```
 
-O argumento fornecido entre parênteses para **novos** é passado para `Blanks::operator new` como o `chInit` argumento. No entanto, a global **operador new** função é ocultada, fazendo com que o código como o seguinte para gerar um erro:
+The argument supplied in parentheses to **new** is passed to `Blanks::operator new` as the `chInit` argument. However, the global **operator new** function is hidden, causing code such as the following to generate an error:
 
 ```cpp
 Blanks *SomeBlanks = new Blanks;
 ```
 
-O compilador dá suporte a matriz de membros **novos** e **excluir** operadores em uma declaração de classe. Por exemplo:
+The compiler supports member array **new** and **delete** operators in a class declaration. Por exemplo:
 
 ```cpp
-// spec1_the_operator_new_function2.cpp
 class MyClass
 {
 public:
@@ -107,13 +105,11 @@ int main()
 }
 ```
 
-### <a name="handling-insufficient-memory"></a>Manipulação de memória insuficiente
+### <a name="handling-insufficient-memory"></a>Handling insufficient memory
 
-Os testes para alocação de memória com falha podem ser feitos com código, como este:
+Testing for failed memory allocation can be done as shown here:
 
 ```cpp
-// insufficient_memory_conditions.cpp
-// compile with: /EHsc
 #include <iostream>
 using namespace std;
 #define BIG_NUMBER 100000000
@@ -126,33 +122,30 @@ int main() {
 }
 ```
 
-Há outra maneira de lidar com solicitações de alocação de memória com falha: escrever uma rotina de recuperação personalizada para lidar com essa falha, em seguida, registre sua função chamando o [set_new_handler](../c-runtime-library/reference/set-new-handler.md) função de tempo de execução.
+There is another way to handle failed memory allocation requests. Write a custom recovery routine to handle such a failure, then register your function by calling the [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) run-time function.
 
-##  <a id="delete_operator"> </a> O operador delete
+##  <a id="delete_operator"> </a> The delete operator
 
-Memória alocada dinamicamente usando o **novos** operador pode ser liberado usando o **excluir** operador. O operador delete chama a **operador delete** função, que libera memória para o pool disponível. Usando o **excluir** operador também faz com que o destruidor da classe (se houver) a ser chamado.
+Memory that is dynamically allocated using the **new** operator can be freed using the **delete** operator. The delete operator calls the **operator delete** function, which frees memory back to the available pool. Using the **delete** operator also causes the class destructor (if there is one) to be called.
 
-Há global e do escopo da classe **operador delete** funções. Somente um **operador delete** função pode ser definida para uma determinada classe; se definido, ele oculta global **operador delete** função. Global **operador delete** função sempre é chamada para matrizes de qualquer tipo.
+There are global and class-scoped **operator delete** functions. Only one **operator delete** function can be defined for a given class; if defined, it hides the global **operator delete** function. The global **operator delete** function is always called for arrays of any type.
 
-Global **operador delete** função. Existem duas formas para global **operador delete** e membro da classe **operador delete** funções:
+The global **operator delete** function. Two forms exist for the  global **operator delete**  and class-member **operator delete** functions:
 
 ```cpp
 void operator delete( void * );
 void operator delete( void *, size_t );
 ```
 
-Apenas uma das duas formas anteriores pode estar presente para uma determinada classe. A primeira forma usa um único argumento do tipo `void *`, que contém um ponteiro para o objeto a ser desalocado. O segundo formulário — a desalocação de tamanho — leva dois argumentos, o primeiro deles é um ponteiro para o bloco de memória para desalocar e o segundo é o número de bytes a ser desalocado. É o tipo de retorno de ambos os formulários **void** (**operador delete** não pode retornar um valor).
+Only one of the preceding two forms can be present for a given class. The first form takes a single argument of type `void *`, which contains a pointer to the object to deallocate. The second form—sized deallocation—takes two arguments, the first of which is a pointer to the memory block to deallocate and the second of which is the number of bytes to deallocate. The return type of both forms is **void** (**operator delete** cannot return a value).
 
-A intenção a segunda forma é para acelerar a pesquisa para a categoria de tamanho correto do objeto a ser excluído, que geralmente não é armazenado perto a alocação em si e provavelmente eliminado do cache; a segunda forma é particularmente útil quando um **operador delete** função de uma classe base é usada para excluir um objeto de uma classe derivada.
+The intent of the second form is to speed up searching for the correct size category of the object to be deleted, which is often not stored near the allocation itself and likely uncached. The second form is useful when an **operator delete** function from a base class is used to delete an object of a derived class.
 
-O **operador delete** função é estática; portanto, não pode ser virtual. O **operador delete** função obedece o controle de acesso, conforme descrito em [controle de acesso de membro](../cpp/member-access-control-cpp.md).
+The **operator delete** function is static; therefore, it cannot be virtual. The **operator delete** function obeys access control, as described in [Member-Access Control](member-access-control-cpp.md).
 
-O exemplo a seguir mostra o definido pelo usuário **operador new** e **operador delete** funções projetadas para registrar alocações e Desalocações de memória:
+The following example shows user-defined **operator new** and **operator delete** functions designed to log allocations and deallocations of memory:
 
 ```cpp
-// spec1_the_operator_delete_function1.cpp
-// compile with: /EHsc
-// arguments: 3
 #include <iostream>
 using namespace std;
 
@@ -198,9 +191,9 @@ int main( int argc, char *argv[] ) {
 }
 ```
 
-O código anterior pode ser usado para detectar "vazamento de memória” – ou seja, a memória atribuída no repositório livre, mas nunca liberada. Para executar essa detecção global **novos** e **excluir** operadores são redefinidos para contar a alocação e desalocação de memória.
+O código anterior pode ser usado para detectar "vazamento de memória” – ou seja, a memória atribuída no repositório livre, mas nunca liberada. To perform this detection, the global **new** and **delete** operators are redefined to count allocation and deallocation of memory.
 
-O compilador dá suporte a matriz de membros **novos** e **excluir** operadores em uma declaração de classe. Por exemplo:
+The compiler supports member array **new** and **delete** operators in a class declaration. Por exemplo:
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp

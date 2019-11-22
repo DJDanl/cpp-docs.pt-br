@@ -62,16 +62,16 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 3e4ded466b673bff3c0630e798877b69d1ca384d
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096063"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303479"
 ---
 # <a name="cdaoworkspace-class"></a>Classe CDaoWorkspace
 
-Gerencia uma sessão de banco de dados nomeada e protegida por senha do logon para fazer logoff, por um único usuário.
+Gerencia uma sessão de banco de dados nomeada e protegida por senha do logon para fazer logoff, por um único usuário. O DAO tem suporte por meio do Office 2013. O DAO 3,6 é a versão final e é considerado obsoleto.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -133,7 +133,7 @@ Na maioria dos casos, você não precisará de vários espaços de trabalho, e n
 
 ## <a name="capabilities"></a>Capacidades
 
-A `CDaoWorkspace` classe fornece o seguinte:
+A classe `CDaoWorkspace` fornece o seguinte:
 
 - Acesso explícito, se necessário, a um espaço de trabalho padrão, criado inicializando o mecanismo de banco de dados. Normalmente, você usa o espaço de trabalho padrão do DAO implicitamente criando objetos de banco de dados e conjunto de registros.
 
@@ -149,7 +149,7 @@ O MFC não implementa as coleções de usuários e grupos no DAO, que são usada
 
 ## <a name="usage"></a>Uso
 
-Você pode usar a `CDaoWorkspace` classe para:
+Você pode usar a classe `CDaoWorkspace` para:
 
 - Abra explicitamente o espaço de trabalho padrão.
 
@@ -163,18 +163,19 @@ A criação de um novo espaço de trabalho que ainda não existe na coleção de
 
 Abrir explicitamente o espaço de trabalho padrão ou abrir um espaço de trabalho existente na coleção de espaços de trabalho, é descrito na função de membro [Open](#open) .
 
-Encerre uma sessão de espaço de trabalho fechando o espaço de trabalho com a função de membro [fechar](#close) . `Close`Fecha todos os bancos de dados que você não fechou anteriormente, revertendo as transações não confirmadas.
+Encerre uma sessão de espaço de trabalho fechando o espaço de trabalho com a função de membro [fechar](#close) . `Close` fecha todos os bancos de dados que você não fechou anteriormente, revertendo todas as transações não confirmadas.
 
 ## <a name="transactions"></a>Transações
-O DAO 3,6 é a versão final e é considerado obsoleto. gerencia transações no nível do espaço de trabalho; Portanto, as transações em um espaço de trabalho com vários bancos de dados abertos se aplicam a todos os bancos de dados. Por exemplo, se dois bancos de dados tiverem atualizações não confirmadas e você chamar o [CommitTrans](#committrans), todas as atualizações serão confirmadas. Se você quiser limitar as transações a um único banco de dados, precisará de um objeto espaço de trabalho separado para ele.
+
+O DAO gerencia transações no nível do espaço de trabalho; Portanto, as transações em um espaço de trabalho com vários bancos de dados abertos se aplicam a todos os bancos de dados. Por exemplo, se dois bancos de dados tiverem atualizações não confirmadas e você chamar o [CommitTrans](#committrans), todas as atualizações serão confirmadas. Se você quiser limitar as transações a um único banco de dados, precisará de um objeto espaço de trabalho separado para ele.
 
 ## <a name="implicit-use-of-the-default-workspace"></a>Uso implícito do espaço de trabalho padrão
 
 O MFC usa o espaço de trabalho padrão do DAO implicitamente nas seguintes circunstâncias:
 
-- Se você criar um novo `CDaoDatabase` objeto, mas não fizer isso por meio de `CDaoWorkspace` um objeto existente, o MFC criará um objeto de espaço de trabalho temporário para você, que corresponde ao espaço de trabalho padrão do DAO. Se você fizer isso para vários bancos de dados, todos os objetos de banco de dados serão associados ao espaço de trabalho padrão. Você pode acessar o espaço de trabalho de um `CDaoDatabase` banco de dados por meio de um membro de dado.
+- Se você criar um novo objeto `CDaoDatabase`, mas não fizer isso por meio de um objeto `CDaoWorkspace` existente, o MFC criará um objeto de espaço de trabalho temporário para você, que corresponde ao espaço de trabalho padrão do DAO. Se você fizer isso para vários bancos de dados, todos os objetos de banco de dados serão associados ao espaço de trabalho padrão. Você pode acessar o espaço de trabalho de um banco de dados por meio de um membro `CDaoDatabase` Data.
 
-- Da mesma forma, se você `CDaoRecordset` criar um objeto sem fornecer um ponteiro para `CDaoDatabase` um objeto, o MFC criará um objeto de banco de dados temporário e, por extensão, um objeto de espaço de trabalho temporário. Você pode acessar um banco de dados do Recordset e, indiretamente, seu `CDaoRecordset` espaço de trabalho, por meio de um membro de dado.
+- Da mesma forma, se você criar um objeto `CDaoRecordset` sem fornecer um ponteiro para um objeto `CDaoDatabase`, o MFC criará um objeto de banco de dados temporário e, por extensão, um objeto de espaço de trabalho temporário. Você pode acessar um banco de dados do Recordset e, indiretamente, seu espaço de trabalho, por meio de um membro `CDaoRecordset` Data.
 
 ## <a name="other-operations"></a>Outras operações
 
@@ -202,7 +203,7 @@ virtual void Append();
 
 ### <a name="remarks"></a>Comentários
 
-`Append`anexa um objeto de espaço de trabalho recém-criado à coleção de espaços de trabalho do mecanismo de banco de dados. Os espaços de trabalho não persistem entre as sessões do mecanismo de banco de dados; Eles são armazenados somente na memória, não no disco. Você não precisa acrescentar um espaço de trabalho; Se você não fizer isso, ainda poderá usá-lo.
+`Append` acrescenta um objeto de espaço de trabalho recém-criado à coleção de espaços de trabalho do mecanismo de banco de dados. Os espaços de trabalho não persistem entre as sessões do mecanismo de banco de dados; Eles são armazenados somente na memória, não no disco. Você não precisa acrescentar um espaço de trabalho; Se você não fizer isso, ainda poderá usá-lo.
 
 Um espaço de trabalho anexado permanece na coleção de espaços de trabalho, em um estado ativo, aberto, até que você chame sua função de membro de [fechamento](#close) .
 
@@ -218,7 +219,7 @@ void BeginTrans();
 
 ### <a name="remarks"></a>Comentários
 
-Depois de chamar `BeginTrans`, as atualizações feitas para os dados ou a estrutura do banco de dados entrarão em vigor quando você confirmar a transação. Como o espaço de trabalho define um único espaço de transação, a transação se aplica a todos os bancos de dados abertos no espaço de trabalho. Há duas maneiras de concluir a transação:
+Depois que você chamar `BeginTrans`, as atualizações feitas em seus dados ou estrutura de banco de dados entrarão em vigor quando você confirmar a transação. Como o espaço de trabalho define um único espaço de transação, a transação se aplica a todos os bancos de dados abertos no espaço de trabalho. Há duas maneiras de concluir a transação:
 
 - Chame a função de membro [CommitTrans](#committrans) para confirmar a transação e salvar as alterações na fonte de dados.
 
@@ -242,9 +243,9 @@ Depois de construir o C++ objeto, você tem duas opções:
 
 - Chame a função de membro [Open](#open) do objeto para abrir o espaço de trabalho padrão ou para abrir um objeto existente na coleção de espaços de trabalho.
 
-- Ou chame a função de membro [Create](#create) do objeto para criar um novo objeto de espaço de trabalho DAO. Isso inicia explicitamente uma nova sessão de espaço de trabalho, que pode ser consultada por meio do `CDaoWorkspace` objeto. Depois de `Create`chamar, você pode chamar [Append](#append) se quiser adicionar o espaço de trabalho à coleção de espaços de trabalho do mecanismo de banco de dados.
+- Ou chame a função de membro [Create](#create) do objeto para criar um novo objeto de espaço de trabalho DAO. Isso inicia explicitamente uma nova sessão de espaço de trabalho, que pode ser consultada por meio do objeto `CDaoWorkspace`. Depois de chamar `Create`, você poderá chamar [Append](#append) se quiser adicionar o espaço de trabalho à coleção de espaços de trabalho do mecanismo de banco de dados.
 
-Consulte a visão geral de classe para [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) para obter informações sobre quando você precisa criar `CDaoWorkspace` um objeto explicitamente. Normalmente, você usa espaços de trabalho criados implicitamente quando abre um objeto [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) sem especificar um espaço de trabalho ou quando você abre um objeto [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) sem especificar um objeto de banco de dados. Objetos DAO do MFC criados dessa maneira usam o espaço de trabalho padrão do DAO, que é criado uma vez e reutilizado.
+Consulte a visão geral de classe para [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) para obter informações sobre quando você precisa criar explicitamente um objeto de `CDaoWorkspace`. Normalmente, você usa espaços de trabalho criados implicitamente quando abre um objeto [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) sem especificar um espaço de trabalho ou quando você abre um objeto [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) sem especificar um objeto de banco de dados. Objetos DAO do MFC criados dessa maneira usam o espaço de trabalho padrão do DAO, que é criado uma vez e reutilizado.
 
 Para liberar um espaço de trabalho e seus objetos contidos, chame a função de membro [Close](#close) do objeto de espaço de trabalho.
 
@@ -258,7 +259,7 @@ virtual void Close();
 
 ### <a name="remarks"></a>Comentários
 
-Fechar um objeto de espaço de trabalho aberto libera o objeto DAO subjacente e, se o espaço de trabalho for um membro da coleção de espaços de trabalho, o o removerá da coleção. A `Close` chamada é uma boa prática de programação.
+Fechar um objeto de espaço de trabalho aberto libera o objeto DAO subjacente e, se o espaço de trabalho for um membro da coleção de espaços de trabalho, o o removerá da coleção. Chamar `Close` é uma boa prática de programação.
 
 > [!CAUTION]
 >  Fechar um objeto de espaço de trabalho fecha todos os bancos de dados abertos no espaço de trabalho. Isso resulta em todos os conjuntos de registros abertos nos bancos de dados que estão sendo fechados também, e quaisquer edições ou atualizações pendentes são revertidas. Para obter informações relacionadas, consulte as funções de membro [CDaoDatabase:: Close](../../mfc/reference/cdaodatabase-class.md#close), [CDaoRecordset:: fechar](../../mfc/reference/cdaorecordset-class.md#close), [CDaoTableDef:: Close](../../mfc/reference/cdaotabledef-class.md#close)e [CDaoQueryDef:: Close](../../mfc/reference/cdaoquerydef-class.md#close) .
@@ -277,10 +278,10 @@ void CommitTrans();
 
 ### <a name="remarks"></a>Comentários
 
-Uma transação consiste em uma série de alterações nos dados ou na estrutura do banco de dados, começando com uma chamada para [BeginTrans](#begintrans). Quando você concluir a transação, confirme-a ou reverta-a (cancele as alterações) com a [reversão](#rollback). Por padrão, sem transações, as atualizações dos registros são confirmadas imediatamente. A `BeginTrans` chamada faz com que o compromisso das atualizações seja atrasado `CommitTrans`até que você chame.
+Uma transação consiste em uma série de alterações nos dados ou na estrutura do banco de dados, começando com uma chamada para [BeginTrans](#begintrans). Quando você concluir a transação, confirme-a ou reverta-a (cancele as alterações) com a [reversão](#rollback). Por padrão, sem transações, as atualizações dos registros são confirmadas imediatamente. Chamar `BeginTrans` faz com que o compromisso das atualizações seja atrasado até que você chame `CommitTrans`.
 
 > [!CAUTION]
->  Dentro de um espaço de trabalho, as transações são sempre globais para o espaço de trabalho e não são limitadas a apenas um banco de dados ou conjunto de registros. Se você executar operações em mais de um banco de dados ou conjunto de registros dentro `CommitTrans` de uma transação de espaço de trabalho `Rollback` , o confirmará todas as atualizações pendentes e restaurará todas as operações nesses bancos de dados e conjuntos de registros.
+>  Dentro de um espaço de trabalho, as transações são sempre globais para o espaço de trabalho e não são limitadas a apenas um banco de dados ou conjunto de registros. Se você executar operações em mais de um banco de dados ou conjunto de registros dentro de uma transação de espaço de trabalho, o `CommitTrans` confirmará todas as atualizações pendentes e `Rollback` restaurará todas as operações nesses bancos de dados e conjuntos de registros.
 
 Quando você fecha um banco de dados ou espaço de trabalho com transações pendentes, as transações são todas revertidas.
 
@@ -309,61 +310,61 @@ static void PASCAL CompactDatabase(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszSrcName*<br/>
-O nome de um banco de dados existente e fechado. Pode ser um caminho completo e um nome de arquivo, como "C\\: \MYDB. MDB ". Se o nome do arquivo tiver uma extensão, você deverá especificá-la. Se sua rede der suporte à UNC (Convenção de nomenclatura uniforme), você também poderá especificar um caminho de rede,\\como\\"\\\\\\\MYSERVER\\\MYSHARE \MYDIR \MYDB. MDB ". (As barras invertidas duplas são necessárias nas cadeias\\de caracteres de C++ caminho porque "" é o caractere de escape.)
+O nome de um banco de dados existente e fechado. Pode ser um caminho completo e um nome de arquivo, como "C:\\\MYDB. MDB ". Se o nome do arquivo tiver uma extensão, você deverá especificá-la. Se sua rede der suporte à UNC (Convenção de nomenclatura uniforme), você também poderá especificar um caminho de rede, como "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB ". (As barras invertidas duplas são necessárias nas cadeias de caracteres de caminho C++ porque "\\" é o caractere de escape.)
 
 *lpszDestName*<br/>
 O caminho completo do banco de dados compactado que você está criando. Você também pode especificar um caminho de rede como com *lpszSrcName*. Você não pode usar o argumento *lpszDestName* para especificar o mesmo arquivo de banco de dados que *lpszSrcName*.
 
 *lpszPassword*<br/>
-Uma senha, usada quando você deseja compactar um banco de dados protegido por senha. Observe que, se você usar a versão `CompactDatabase` do que usa uma senha, deverá fornecer todos os parâmetros. Além disso, como esse é um parâmetro de conexão, ele requer formatação especial, da seguinte maneira:; PWD = *lpszPassword*. Por exemplo:; PWD = "feliz". (O ponto e vírgula à esquerda é necessário.)
+Uma senha, usada quando você deseja compactar um banco de dados protegido por senha. Observe que, se você usar a versão do `CompactDatabase` que usa uma senha, deverá fornecer todos os parâmetros. Além disso, como esse é um parâmetro de conexão, ele requer formatação especial, da seguinte maneira:; PWD = *lpszPassword*. Por exemplo:; PWD = "feliz". (O ponto e vírgula à esquerda é necessário.)
 
 *lpszLocale*<br/>
-Uma expressão de cadeia de caracteres usada para especificar a ordem de agrupamento para criar *lpszDestName*. Se você omitir esse argumento aceitando o valor padrão `dbLangGeneral` de (veja abaixo), a localidade do novo banco de dados será a mesma do banco de dados antigo. Os possíveis valores são:
+Uma expressão de cadeia de caracteres usada para especificar a ordem de agrupamento para criar *lpszDestName*. Se você omitir esse argumento aceitando o valor padrão de `dbLangGeneral` (veja abaixo), a localidade do novo banco de dados será a mesma do banco de dados antigo. Os possíveis valores são:
 
-- `dbLangGeneral`Inglês, alemão, francês, Português, italiano e espanhol moderno
+- `dbLangGeneral` inglês, alemão, francês, Português, italiano e espanhol moderno
 
-- `dbLangArabic`Árabe
+- `dbLangArabic` árabe
 
-- `dbLangCyrillic`Russo
+- `dbLangCyrillic` russo
 
-- `dbLangCzech`Tcheco
+- `dbLangCzech` tcheco
 
-- `dbLangDutch`Holandês
+- `dbLangDutch` holandês
 
-- `dbLangGreek`Grego
+- `dbLangGreek` grego
 
-- `dbLangHebrew`Hebraico
+- `dbLangHebrew` Hebraico
 
-- `dbLangHungarian`Húngaro
+- `dbLangHungarian` húngaro
 
-- `dbLangIcelandic`Islandês
+- `dbLangIcelandic` Islandês
 
-- `dbLangNordic`Idiomas nórdico (somente versão 1,0 do mecanismo de banco de dados do Microsoft Jet)
+- `dbLangNordic` idiomas nórdico (somente versão 1,0 do mecanismo de banco de dados do Microsoft Jet)
 
-- `dbLangNorwdan`Norueguês e dinamarquês
+- `dbLangNorwdan` norueguês e dinamarquês
 
-- `dbLangPolish`Polonês
+- `dbLangPolish` polonês
 
-- `dbLangSpanish`Espanhol tradicional
+- `dbLangSpanish` espanhol tradicional
 
-- `dbLangSwedfin`Sueco e finlandês
+- `dbLangSwedfin` sueco e finlandês
 
-- `dbLangTurkish`Turco
+- `dbLangTurkish` Turco
 
 *nOptions*<br/>
-Indica uma ou mais opções para o banco de dados de destino, *lpszDestName*. Se você omitir esse argumento aceitando o valor padrão, o *lpszDestName* terá a mesma criptografia e a mesma versão que *lpszSrcName*. Você pode combinar a `dbEncrypt` opção `dbDecrypt` ou com uma das opções de versão usando o operador OR Os valores possíveis, que especificam um formato de banco de dados, não uma versão do mecanismo de banco de dados, são:
+Indica uma ou mais opções para o banco de dados de destino, *lpszDestName*. Se você omitir esse argumento aceitando o valor padrão, o *lpszDestName* terá a mesma criptografia e a mesma versão que *lpszSrcName*. Você pode combinar a opção `dbEncrypt` ou `dbDecrypt` com uma das opções de versão usando o operador bit-a-OR. Os valores possíveis, que especificam um formato de banco de dados, não uma versão do mecanismo de banco de dados, são:
 
-- `dbEncrypt`Criptografar o banco de dados durante a compactação.
+- `dbEncrypt` criptografar o banco de dados durante a compactação.
 
-- `dbDecrypt`Descriptografar o banco de dados durante a compactação.
+- `dbDecrypt` descriptografar o banco de dados durante a compactação.
 
-- `dbVersion10`Crie um banco de dados que usa o mecanismo de banco de dados do Microsoft Jet versão 1,0 durante a compactação.
+- `dbVersion10` criar um banco de dados que usa o mecanismo de banco de dados Microsoft Jet versão 1,0 durante a compactação.
 
-- `dbVersion11`Crie um banco de dados que usa o mecanismo de banco de dados do Microsoft Jet versão 1,1 durante a compactação.
+- `dbVersion11` criar um banco de dados que usa o mecanismo de banco de dados Microsoft Jet versão 1,1 durante a compactação.
 
-- `dbVersion20`Crie um banco de dados que usa o mecanismo de banco de dados do Microsoft Jet versão 2,0 durante a compactação.
+- `dbVersion20` criar um banco de dados que usa o mecanismo de banco de dados Microsoft Jet versão 2,0 durante a compactação.
 
-- `dbVersion30`Crie um banco de dados que usa o mecanismo de banco de dados do Microsoft Jet versão 3,0 durante a compactação.
+- `dbVersion30` criar um banco de dados que usa o mecanismo de banco de dados Microsoft Jet versão 3,0 durante a compactação.
 
 Você pode usar `dbEncrypt` ou `dbDecrypt` no argumento options para especificar se deseja criptografar ou descriptografar o banco de dados conforme ele é compactado. Se você omitir uma constante de criptografia ou se incluir `dbDecrypt` e `dbEncrypt`, *lpszDestName* terá a mesma criptografia que *lpszSrcName*. Você pode usar uma das constantes de versão no argumento options para especificar a versão do formato de dados para o banco de dado compactado. Essa constante afeta apenas a versão do formato de dados de *lpszDestName*. Você pode especificar apenas uma constante de versão. Se você omitir uma constante de versão, *lpszDestName* terá a mesma versão que *lpszSrcName*. Você pode compactar *lpszDestName* apenas para uma versão igual ou posterior à do *lpszSrcName*.
 
@@ -375,7 +376,7 @@ Você pode usar `dbEncrypt` ou `dbDecrypt` no argumento options para especificar
 À medida que você altera os dados em um banco de dado, o arquivo de dados pode ficar fragmentado e usar mais espaço em disco do que o necessário. Periodicamente, você deve compactar seu banco de dados para desfragmentar o arquivo de banco de dados Normalmente, o banco de dados compactado é menor. Você também pode optar por alterar a ordem de agrupamento, a criptografia ou a versão do formato de dados enquanto copia e compacta o banco de dado.
 
 > [!CAUTION]
->  A `CompactDatabase` função de membro não converterá corretamente um banco de dados completo do Microsoft Access de uma versão para outra. Somente o formato de dados é convertido. Objetos definidos pelo Microsoft Access, como formulários e relatórios, não são convertidos. No entanto, os dados são convertidos corretamente.
+>  A função membro `CompactDatabase` não converterá corretamente um banco de dados completo do Microsoft Access de uma versão para outra. Somente o formato de dados é convertido. Objetos definidos pelo Microsoft Access, como formulários e relatórios, não são convertidos. No entanto, os dados são convertidos corretamente.
 
 > [!TIP]
 >  Você também pode usar `CompactDatabase` para copiar um arquivo de banco de dados.
@@ -384,7 +385,7 @@ Para obter mais informações sobre como compactar bancos de dados, consulte o t
 
 ##  <a name="create"></a>CDaoWorkspace:: criar
 
-Chame essa função de membro para criar um novo objeto de espaço de trabalho DAO e associá `CDaoWorkspace` -lo ao objeto MFC.
+Chame essa função de membro para criar um novo objeto de espaço de trabalho DAO e associá-lo ao objeto MFC `CDaoWorkspace`.
 
 ```
 virtual void Create(
@@ -410,11 +411,11 @@ O processo de criação geral é:
 
 1. Construa um objeto [CDaoWorkspace](#cdaoworkspace) .
 
-1. Chame a função de `Create` membro do objeto para criar o espaço de trabalho DAO subjacente. Você deve especificar um nome de espaço de trabalho.
+1. Chame a função de membro `Create` do objeto para criar o espaço de trabalho DAO subjacente. Você deve especificar um nome de espaço de trabalho.
 
 1. Opcionalmente, chame [Append](#append) se você quiser adicionar o espaço de trabalho à coleção de espaços de trabalho do mecanismo de banco de dados. Você pode trabalhar com o espaço de trabalho sem acrescentá-lo.
 
-Após a `Create` chamada, o objeto de espaço de trabalho está em um estado aberto, pronto para uso. Você não chama `Open` após `Create`. Você não chamará `Create` se o espaço de trabalho já existir na coleção de espaços de trabalho. `Create`Inicializa o mecanismo de banco de dados se ele ainda não tiver sido inicializado para seu aplicativo.
+Após a chamada de `Create`, o objeto de espaço de trabalho está em um estado aberto, pronto para uso. Você não chama `Open` após `Create`. Você não chamará `Create` se o espaço de trabalho já existir na coleção de espaços de trabalho. `Create` Inicializa o mecanismo de banco de dados se ele ainda não tiver sido inicializado para seu aplicativo.
 
 ##  <a name="getdatabasecount"></a>  CDaoWorkspace::GetDatabaseCount
 
@@ -424,13 +425,13 @@ Chame essa função de membro para recuperar o número de objetos de banco de da
 short GetDatabaseCount();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O número de bancos de dados abertos no espaço de trabalho.
 
 ### <a name="remarks"></a>Comentários
 
-`GetDatabaseCount`será útil se você precisar executar um loop por todos os bancos de dados definidos na coleção de bancos de dados do espaço de trabalho. Para obter informações sobre um determinado banco de dados na coleção, consulte [GetDatabaseInfo](#getdatabaseinfo). O uso típico é para `GetDatabaseCount` chamar o número de bancos de dados abertos e, em seguida, usar esse número como um índice de loop `GetDatabaseInfo`para chamadas repetidas para.
+`GetDatabaseCount` será útil se você precisar executar um loop por todos os bancos de dados definidos na coleção de bancos de dados do espaço de trabalho. Para obter informações sobre um determinado banco de dados na coleção, consulte [GetDatabaseInfo](#getdatabaseinfo). O uso típico é chamar `GetDatabaseCount` para o número de bancos de dados abertos e, em seguida, usar esse número como um índice de loop para chamadas repetidas para `GetDatabaseInfo`.
 
 ##  <a name="getdatabaseinfo"></a>  CDaoWorkspace::GetDatabaseInfo
 
@@ -461,9 +462,9 @@ Opções que especificam quais informações sobre o banco de dados recuperar. A
 
 - AFX_DAO_PRIMARY_INFO (padrão) nome, atualizável, transações
 
-- AFX_DAO_SECONDARY_INFO Informações primárias mais: Versão, ordem de agrupamento, tempo limite de consulta
+- AFX_DAO_SECONDARY_INFO Informações primárias mais: versão, ordem de agrupamento, tempo limite de consulta
 
-- AFX_DAO_ALL_INFO Informações primárias e secundárias mais: Connect
+- AFX_DAO_ALL_INFO Informações primárias e secundárias mais: conectar
 
 *lpszName*<br/>
 O nome do objeto de banco de dados, para pesquisa por nome. O nome é uma cadeia de caracteres com até 14 caracteres que nomeia exclusivamente o novo objeto de espaço de trabalho.
@@ -482,7 +483,7 @@ Chame essa função de membro para obter o local das configurações de iniciali
 static CString PASCAL GetIniPath();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um [CString](../../atl-mfc-shared/reference/cstringt-class.md) que contém o local do registro.
 
@@ -500,7 +501,7 @@ Chame essa função de membro para obter o valor atual da propriedade IsolateODB
 BOOL GetIsolateODBCTrans();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se as transações ODBC forem isoladas; caso contrário, 0.
 
@@ -520,7 +521,7 @@ Chame essa função de membro para obter o valor atual da Propriedade LoginTimeo
 static short PASCAL GetLoginTimeout();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O número de segundos antes de ocorrer um erro quando você tenta fazer logon em um banco de dados ODBC.
 
@@ -534,13 +535,13 @@ Para obter informações relacionadas, consulte o tópico "Propriedade LoginTime
 
 ##  <a name="getname"></a>  CDaoWorkspace::GetName
 
-Chame essa função de membro para obter o nome definido pelo usuário do objeto de espaço de trabalho `CDaoWorkspace` DAO subjacente ao objeto.
+Chame essa função de membro para obter o nome definido pelo usuário do objeto de espaço de trabalho DAO subjacente ao objeto de `CDaoWorkspace`.
 
 ```
 CString GetName();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma [CString](../../atl-mfc-shared/reference/cstringt-class.md) que contém o nome definido pelo usuário do objeto de espaço de trabalho DAO.
 
@@ -558,7 +559,7 @@ Chame essa função de membro para obter o nome do proprietário do espaço de t
 CString GetUserName();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um [CString](../../atl-mfc-shared/reference/cstringt-class.md) que representa o proprietário do objeto de espaço de trabalho.
 
@@ -576,7 +577,7 @@ Chame essa função de membro para determinar a versão do mecanismo de banco de
 static CString PASCAL GetVersion();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um [CString](../../atl-mfc-shared/reference/cstringt-class.md) que indica a versão do mecanismo de banco de dados associada ao objeto.
 
@@ -594,13 +595,13 @@ Chame essa função de membro para recuperar o número de objetos de espaço de 
 short GetWorkspaceCount();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O número de espaços de trabalho abertos na coleção de espaços de trabalho.
 
 ### <a name="remarks"></a>Comentários
 
-Essa contagem não inclui nenhum espaço de trabalho aberto não acrescentado à coleção. `GetWorkspaceCount`será útil se você precisar executar um loop por todos os espaços de trabalho definidos na coleção de espaços de trabalho. Para obter informações sobre um determinado espaço de trabalho na coleção, consulte [GetWorkspaceInfo](#getworkspaceinfo). O uso típico é para `GetWorkspaceCount` chamar o número de espaços de trabalho abertos e, em seguida, usar esse número como um índice de `GetWorkspaceInfo`loop para chamadas repetidas para.
+Essa contagem não inclui nenhum espaço de trabalho aberto não acrescentado à coleção. `GetWorkspaceCount` será útil se você precisar executar um loop por todos os espaços de trabalho definidos na coleção de espaços de trabalho. Para obter informações sobre um determinado espaço de trabalho na coleção, consulte [GetWorkspaceInfo](#getworkspaceinfo). O uso típico é chamar `GetWorkspaceCount` para o número de espaços de trabalho abertos e, em seguida, usar esse número como um índice de loop para chamadas repetidas para `GetWorkspaceInfo`.
 
 ##  <a name="getworkspaceinfo"></a>  CDaoWorkspace::GetWorkspaceInfo
 
@@ -631,9 +632,9 @@ Opções que especificam quais informações sobre o espaço de trabalho recuper
 
 - Nome do AFX_DAO_PRIMARY_INFO (padrão)
 
-- AFX_DAO_SECONDARY_INFO Informações primárias mais: Nome de usuário
+- AFX_DAO_SECONDARY_INFO Informações primárias mais: nome de usuário
 
-- AFX_DAO_ALL_INFO Informações primárias e secundárias mais: Isolar ODBCTrans
+- AFX_DAO_ALL_INFO Informações primárias e secundárias mais: isolar ODBCTrans
 
 *lpszName*<br/>
 O nome do objeto de espaço de trabalho, para pesquisa por nome. O nome é uma cadeia de caracteres com até 14 caracteres que nomeia exclusivamente o novo objeto de espaço de trabalho.
@@ -644,7 +645,7 @@ Para obter uma descrição das informações retornadas em *wkspcinfo*, consulte
 
 ##  <a name="idle"></a>CDaoWorkspace:: Idle
 
-Chame `Idle` para fornecer ao mecanismo de banco de dados a oportunidade de executar tarefas em segundo plano que podem não estar atualizadas devido ao processamento intensivo de dados.
+Chame `Idle` para fornecer ao mecanismo de banco de dados a oportunidade de executar tarefas em segundo plano que talvez não estejam atualizadas devido ao processamento intensivo de dados.
 
 ```
 static void PASCAL Idle(int nAction = dbFreeLocks);
@@ -653,30 +654,30 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
 ### <a name="parameters"></a>Parâmetros
 
 *nAction*<br/>
-Uma ação a ser tomada durante o processamento de ociosidade. Atualmente, a única ação válida `dbFreeLocks`é.
+Uma ação a ser tomada durante o processamento de ociosidade. Atualmente, a única ação válida é `dbFreeLocks`.
 
 ### <a name="remarks"></a>Comentários
 
 Isso geralmente é verdadeiro em ambientes multiusuários multitarefas em que não há tempo de processamento em segundo plano suficiente para manter todos os registros em um conjunto de registros atual.
 
 > [!NOTE]
->  A `Idle` chamada não é necessária com bancos de dados criados com a versão 3,0 do mecanismo de banco de dados do Microsoft Jet. Use `Idle` somente para bancos de dados criados com versões anteriores.
+>  A chamada de `Idle` não é necessária com bancos de dados criados com a versão 3,0 do mecanismo de banco de dados do Microsoft Jet. Use `Idle` apenas para bancos de dados criados com versões anteriores.
 
-Normalmente, os bloqueios de leitura são removidos e os dados em objetos Recordset do tipo dynaset local são atualizados somente quando nenhuma outra ação (incluindo movimentos do mouse) está ocorrendo. Se você chamar `Idle`periodicamente, fornecerá ao mecanismo de banco de dados um tempo para acompanhar as tarefas de processamento em segundo plano liberando bloqueios de leitura desnecessários. A especificação `dbFreeLocks` da constante como um argumento atrasa o processamento até que todos os bloqueios de leitura sejam liberados.
+Normalmente, os bloqueios de leitura são removidos e os dados em objetos Recordset do tipo dynaset local são atualizados somente quando nenhuma outra ação (incluindo movimentos do mouse) está ocorrendo. Se você chama periodicamente `Idle`, fornece o mecanismo de banco de dados com tempo para acompanhar as tarefas de processamento em segundo plano liberando bloqueios de leitura desnecessários. Especificar a constante de `dbFreeLocks` como um argumento atrasa o processamento até que todos os bloqueios de leitura sejam liberados.
 
-Essa função de membro não é necessária em ambientes de usuário único, a menos que várias instâncias de um aplicativo estejam em execução. A `Idle` função de membro pode aumentar o desempenho em um ambiente multiusuário, pois força o mecanismo de banco de dados a liberar o disco, liberando os bloqueios na memória. Você também pode liberar bloqueios de leitura fazendo operações parte de uma transação.
+Essa função de membro não é necessária em ambientes de usuário único, a menos que várias instâncias de um aplicativo estejam em execução. A função de membro `Idle` pode aumentar o desempenho em um ambiente multiusuário, pois força o mecanismo de banco de dados a liberar o disco, liberando os bloqueios na memória. Você também pode liberar bloqueios de leitura fazendo operações parte de uma transação.
 
 Para obter informações relacionadas, consulte o tópico "método ocioso" na ajuda do DAO.
 
 ##  <a name="isopen"></a>CDaoWorkspace:: IsOpen
 
-Chame essa função de membro para determinar se `CDaoWorkspace` o objeto está aberto — ou seja, se o objeto MFC foi inicializado por uma chamada para [Open](#open) ou uma chamada para [Create](#create).
+Chame essa função de membro para determinar se o objeto de `CDaoWorkspace` está aberto — ou seja, se o objeto MFC foi inicializado por uma chamada para [Open](#open) ou uma chamada para [Create](#create).
 
 ```
 BOOL IsOpen() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se o objeto de espaço de trabalho estiver aberto; caso contrário, 0.
 
@@ -709,15 +710,15 @@ O nome do objeto de espaço de trabalho DAO a ser aberto — uma cadeia de carac
 
 ### <a name="remarks"></a>Comentários
 
-Depois de construir um `CDaoWorkspace` objeto, chame essa função de membro para executar um dos seguintes procedimentos:
+Depois de construir um objeto `CDaoWorkspace`, chame essa função de membro para executar uma das seguintes ações:
 
 - Abra explicitamente o espaço de trabalho padrão. Passe NULL para *lpszName*.
 
-- Abra um objeto `CDaoWorkspace` existente, um membro da coleção de espaços de trabalho, por nome. Passe um nome válido para um objeto de espaço de trabalho existente.
+- Abra um objeto `CDaoWorkspace` existente, um membro da coleção espaços de trabalho, por nome. Passe um nome válido para um objeto de espaço de trabalho existente.
 
-`Open`coloca o objeto de espaço de trabalho em um estado aberto e também Inicializa o mecanismo de banco de dados se ele ainda não tiver sido inicializado para seu aplicativo.
+`Open` coloca o objeto de espaço de trabalho em um estado aberto e também Inicializa o mecanismo de banco de dados se ele ainda não tiver sido inicializado para seu aplicativo.
 
-Embora muitas `CDaoWorkspace` funções de membro só possam ser chamadas depois que o espaço de trabalho tiver sido aberto, as funções de membro a seguir, que operam no mecanismo de banco C++ de dados, estarão disponíveis após a construção do objeto, mas antes de uma chamada para `Open`:
+Embora muitas `CDaoWorkspace` funções membro só possam ser chamadas depois que o espaço de trabalho tiver sido aberto, as funções de membro a seguir, que operam no mecanismo de banco de C++ dados, estarão disponíveis após a construção do objeto, mas antes de uma chamada para `Open`:
 
 ||||
 |-|-|-|
@@ -736,7 +737,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 ### <a name="parameters"></a>Parâmetros
 
 *lpszName*<br/>
-O caminho e o nome de arquivo de um banco de dados do mecanismo do Microsoft Jet existente. Se você omitir o caminho, somente o diretório atual será pesquisado. Se o seu sistema der suporte à UNC (Convenção de nomenclatura uniforme), você também poderá especificar um caminho de rede,\\como\\:\\"\\\\\\\MYSERVER \MYSHARE \MYDIR \MYDB. MDB ". (As barras invertidas duplas são necessárias na cadeia de\\caracteres do caminho C++ porque "" é o caractere de escape.)
+O caminho e o nome de arquivo de um banco de dados do mecanismo do Microsoft Jet existente. Se você omitir o caminho, somente o diretório atual será pesquisado. Se o seu sistema der suporte à UNC (Convenção de nomenclatura uniforme), você também poderá especificar um caminho de rede, como: "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB ". (As barras invertidas duplas são necessárias na cadeia de caracteres do caminho porque C++ "\\" é o caractere de escape.)
 
 ### <a name="remarks"></a>Comentários
 
@@ -760,12 +761,12 @@ void Rollback();
 ### <a name="remarks"></a>Comentários
 
 > [!CAUTION]
->  Em um objeto de espaço de trabalho, as transações são sempre globais para o espaço de trabalho e não são limitadas a apenas um banco de dados ou conjunto de registros. Se você executar operações em mais de um banco de dados ou conjunto de registros dentro `Rollback` de uma transação de espaço de trabalho, o restaurará todas as operações em todos os conjuntos de registros e dos mesmos.
+>  Em um objeto de espaço de trabalho, as transações são sempre globais para o espaço de trabalho e não são limitadas a apenas um banco de dados ou conjunto de registros. Se você executar operações em mais de um banco de dados ou conjunto de registros dentro de uma transação de espaço de trabalho, o `Rollback` restaurará todas as operações em todos os conjuntos de registros e bancos de dados.
 
 Se você fechar um objeto de espaço de trabalho sem salvar ou reverter nenhuma transação pendente, as transações serão automaticamente revertidas. Se você chamar o [CommitTrans](#committrans) ou `Rollback` sem primeiro chamar [BeginTrans](#begintrans), ocorrerá um erro.
 
 > [!NOTE]
->  Quando você inicia uma transação, o mecanismo de banco de dados registra suas operações em um arquivo mantido no diretório especificado pela variável de ambiente TEMP na estação de trabalho. Se o arquivo de log de transações esgotar o armazenamento disponível em sua unidade temporária, o mecanismo de banco de dados `CDaoException` fará com que o MFC lance um (erro do DAO 2004). Neste ponto, se você chamar `CommitTrans`, um número indeterminado de operações será confirmado, mas as demais operações não concluídas serão perdidas e a operação precisará ser reiniciada. Chamar `Rollback` libera o log de transações e reverter todas as operações na transação.
+>  Quando você inicia uma transação, o mecanismo de banco de dados registra suas operações em um arquivo mantido no diretório especificado pela variável de ambiente TEMP na estação de trabalho. Se o arquivo de log de transações esgotar o armazenamento disponível em sua unidade temporária, o mecanismo de banco de dados fará com que o MFC lance um `CDaoException` (erro do DAO 2004). Neste ponto, se você chamar `CommitTrans`, um número indeterminado de operações será confirmado, mas as demais operações não concluídas serão perdidas e a operação precisará ser reiniciada. Chamar `Rollback` libera o log de transações e reverte todas as operações na transação.
 
 ##  <a name="setdefaultpassword"></a>  CDaoWorkspace::SetDefaultPassword
 
@@ -786,11 +787,11 @@ A senha padrão que você define aplica-se a novos espaços de trabalho criados 
 
 Para usar essa função de membro:
 
-1. Construa um `CDaoWorkspace` objeto, mas não chame `Create`.
+1. Construa um objeto `CDaoWorkspace`, mas não chame `Create`.
 
 1. Chame `SetDefaultPassword` e, se desejar, [SetDefaultUser](#setdefaultuser).
 
-1. Chame `Create` este objeto de espaço de trabalho ou os subsequentes, sem especificar uma senha.
+1. Chame `Create` para este objeto de espaço de trabalho ou os próximos, sem especificar uma senha.
 
 Por padrão, a propriedade DefaultUser é definida como "admin" e a propriedade DefaultPassword é definida como uma cadeia de caracteres vazia ("").
 
@@ -807,7 +808,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
 ### <a name="parameters"></a>Parâmetros
 
 *lpszDefaultUser*<br/>
-O nome de usuário padrão. Um nome de usuário pode ter de 1-20 A caracteres de comprimento e incluir caracteres alfabéticos, caracteres acentuados, números, espaços e símbolos, exceto para: "(aspas),/(barra invertida), \ \[ (barra invertida), \] (colchetes) &#124; ,: (dois-pontos), ( pipe), \< (sinal de menor que), > (sinal de maior que), + (sinal de adição), = (sinal de igual),; (ponto e vírgula),, (vírgula), (ponto de \* interrogação), (asterisco), espaços à esquerda e caracteres de controle (ASCII 00 a ASCII 31). Para obter informações relacionadas, consulte o tópico "propriedade de nome de usuário" na ajuda do DAO.
+O nome de usuário padrão. Um nome de usuário pode ter de 1-20 A caracteres de comprimento e incluir caracteres alfabéticos, caracteres acentuados, números, espaços e símbolos, exceto para: "(aspas),/(barra invertida), \ (barra invertida), \[ \] (colchetes) &#124; ,: (dois-pontos), (ponto-e-vírgula), \< (sinal de igual), > (sinal de maior que), + (sinal de adição) (ponto e vírgula),, (vírgula), (ponto de interrogação), \* (asterisco), espaços à esquerda e caracteres de controle (ASCII 00 a ASCII 31). Para obter informações relacionadas, consulte o tópico "propriedade de nome de usuário" na ajuda do DAO.
 
 ### <a name="remarks"></a>Comentários
 
@@ -815,11 +816,11 @@ O nome de usuário padrão que você define aplica-se a novos espaços de trabal
 
 Para usar essa função de membro:
 
-1. Construa um `CDaoWorkspace` objeto, mas não chame `Create`.
+1. Construa um objeto `CDaoWorkspace`, mas não chame `Create`.
 
 1. Chame `SetDefaultUser` e, se desejar, [SetDefaultPassword](#setdefaultpassword).
 
-1. Chame `Create` este objeto de espaço de trabalho ou os subsequentes, sem especificar um nome de usuário.
+1. Chame `Create` para este objeto de espaço de trabalho ou os próximos, sem especificar um nome de usuário.
 
 Por padrão, a propriedade DefaultUser é definida como "admin" e a propriedade DefaultPassword é definida como uma cadeia de caracteres vazia ("").
 
@@ -840,10 +841,10 @@ Uma cadeia de caracteres que contém o nome de uma subchave do registro do Windo
 
 ### <a name="remarks"></a>Comentários
 
-Chame `SetIniPath` somente se precisar especificar configurações especiais. Para obter mais informações, consulte o tópico "Propriedade IniPath" na ajuda do DAO.
+Chame `SetIniPath` somente se você precisar especificar configurações especiais. Para obter mais informações, consulte o tópico "Propriedade IniPath" na ajuda do DAO.
 
 > [!NOTE]
->  Chame `SetIniPath` durante a instalação do aplicativo, não quando o aplicativo é executado. `SetIniPath`deve ser chamado antes de abrir quaisquer espaços de trabalho, bancos de dados ou conjuntos de registros; caso contrário, o MFC lançará uma exceção.
+>  Chame `SetIniPath` durante a instalação do aplicativo, não quando o aplicativo é executado. `SetIniPath` deve ser chamado antes de abrir quaisquer espaços de trabalho, bancos de dados ou conjuntos de registros; caso contrário, o MFC lançará uma exceção.
 
 Você pode usar esse mecanismo para configurar o mecanismo de banco de dados com as configurações de registro fornecidas pelo usuário. O escopo deste atributo é limitado ao seu aplicativo e não pode ser alterado sem reiniciar o aplicativo.
 

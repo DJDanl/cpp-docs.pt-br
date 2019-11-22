@@ -4,12 +4,12 @@ ms.date: 10/31/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 6f8301c07f87feee80191f5db14fea5b16f02863
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 2233c0767fb7fac2fe496e744750f380e1c3b698
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624421"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303242"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Referência de esquema de CMakeSettings.json
 
@@ -73,7 +73,7 @@ Como o Ninja é criado para velocidades rápidas de builds em vez de flexibilida
 
 Para especificar um gerador do Visual Studio no Visual Studio 2017, abra o no menu principal escolhendo **CMake | Altere as configurações de CMake**. Exclua "Ninja" e digite "V". Isso ativa o IntelliSense, que permite escolher o gerador desejado.
 
-Para especificar um gerador do Visual Studio no Visual Studio 2019, clique com o botão direito do mouse no arquivo *CMakeLists. txt* em **Gerenciador de soluções** e escolha **configurações de CMake para projeto** > **Mostrar configurações avançadas** > **CMake Gerador**.
+Para especificar um gerador do Visual Studio no Visual Studio 2019, clique com o botão direito do mouse no arquivo *CMakeLists. txt* em **Gerenciador de soluções** e escolha **configurações de CMake para projeto** > **Mostrar configurações avançadas** > **gerador de CMake**.
 
 Quando a configuração ativa especifica um gerador do Visual Studio, por padrão, MSBuild.exe é invocado com argumentos `-m -v:minimal`. Para personalizar a compilação, dentro do arquivo *CMakeSettings. JSON* , você pode especificar [argumentos de linha de comando](../build/reference/msbuild-visual-cpp-overview.md) adicionais do MSBuild a serem passados para o sistema de compilação por meio da propriedade `buildCommandArgs`:
 
@@ -88,7 +88,7 @@ Quando a configuração ativa especifica um gerador do Visual Studio, por padrã
   - MinSizeRel
   - RelWithDebInfo
  
-- `buildRoot`: especifica o diretório no qual o CMake gera scripts de build para o gerador escolhido.  Mapeia para o comutador **-DCMAKE_BINARY_DIR** e especifica onde o *CMakeCache. txt* será criado. Se a pasta não existir, ela será criada. As macros com suporte incluem `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}` e `${env.VARIABLE}`.
+- `buildRoot`: especifica o diretório no qual o CMake gera scripts de build para o gerador escolhido.  Mapeia para a opção **-DCMAKE_BINARY_DIR** e especifica onde o *CMakeCache. txt* será criado. Se a pasta não existir, ela será criada. As macros com suporte incluem `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}` e `${env.VARIABLE}`.
 - `installRoot`: especifica o diretório no qual o CMake gera destinos de instalação para o gerador escolhido. Macros com suporte incluem `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `cmakeCommandArgs`: Especifica opções de linha de comando adicionais passadas para CMake quando invocada para gerar os arquivos de projeto.
 - `cmakeToolchain`: especifica o arquivo de cadeia de ferramentas. Isso é passado para o CMake usando -DCMAKE_TOOLCHAIN_FILE."
@@ -163,15 +163,15 @@ Observe que se você não definir a `"type"`, o tipo de `"STRING"` será conside
 
 Um *ambiente* encapsula as variáveis de ambiente que são definidas no processo que o Visual Studio usa para invocar CMake. exe. Para projetos MSVC, as variáveis são aquelas que são definidas em um [prompt de comando do desenvolvedor](building-on-the-command-line.md) para uma plataforma específica. Por exemplo, o ambiente de `msvc_x64_x64` é o mesmo que executar o **prompt de comando do desenvolvedor para vs 2017** ou **Prompt de Comando do Desenvolvedor para vs 2019** com os argumentos **-Arch = AMD64-host_arch = AMD64** . Você pode usar a sintaxe de `env.{<variable_name>}` em *CMakeSettings. JSON* para fazer referência às variáveis de ambiente individuais, por exemplo, para construir caminhos para pastas.  Os seguintes ambientes predefinidos são fornecidos:
 
-- linux_arm: direcione o Linux de ARM remotamente.
+- linux_arm: direcione o Linux do ARM remotamente.
 - linux_x64: direcione o Linux x64 remotamente.
 - linux_x86: direcione o Linux x86 remotamente.
-- msvc_arm: direcione as janelas ARM com o compilador MSVC.
+- msvc_arm: direcionar as janelas ARM com o compilador MSVC.
 - msvc_arm_x64: direcione as janelas ARM com o compilador MSVC de 64 bits.
-- msvc_arm64: direcionar o Windows ARM64 com o compilador MSVC.
-- msvc_arm64_x64: direcionar o Windows ARM64 com o compilador MSVC de 64 bits.
+- msvc_arm64: direcione o Windows ARM64 com o compilador MSVC.
+- msvc_arm64_x64: direcione o Windows ARM64 com o compilador MSVC de 64 bits.
 - msvc_x64: direcione o Windows x64 com o compilador MSVC.
-- msvc_x64_x64: direcione o Windows x64 com o compilador MSVC de 64 bits.
+- msvc_x64_x64: direcionar o Windows x64 com o compilador MSVC de 64 bits.
 - msvc_x86: direcione o Windows x86 com o compilador MSVC.
 - msvc_x86_x64: direcione o Windows x86 com o compilador MSVC de 64 bits.
 
@@ -256,7 +256,7 @@ No exemplo a seguir, a configuração de Depuração x86 define seu próprio val
       "generator": "Ninja",
       "configurationType": "Debug",
       "inheritEnvironments": [ "msvc_x64" ],
-      // Since this configuration doesn’t modify BuildDir, it inherits
+      // Since this configuration doesn't modify BuildDir, it inherits
       // from the one defined globally.
       "buildRoot": "${env.BuildDir}\\${name}"
     }

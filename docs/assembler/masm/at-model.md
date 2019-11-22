@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Model symbol'
 ms.assetid: a67c04ac-6ba7-458c-8138-0346e5b85eb6
-ms.openlocfilehash: 806c631a18044b98af77ad55ec44a434b2617d34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09e5663a8c3bfe0f2ce0a94bcb4006f2dd654cc2
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180291"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301910"
 ---
-# <a name="model"></a>@Model
+# <a name="model"></a>Modelo de \@
 
-1 para **TINY** modelar, 2 para **pequeno** de modelo 3 para o **COMPACT** modelar, 4 para **médio** de modelo, 5 para **grande**modelar, 6 para **ENORME** modelo e 7 para **simples** modelo (numéricos serão iguais).
+1 para modelo **Tiny** , 2 para **modelo pequeno** , 3 para **modelo compacto** , 4 para modelo **médio** , 5 para modelo **grande** , 6 para modelo **enorme** e 7 para modelo **simples** (equivalente numérico).
 
 ## <a name="syntax"></a>Sintaxe
 
-> @Model
+> **Modelo de \@**
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de símbolos](../../assembler/masm/symbols-reference.md)<br/>
+[Referência de símbolos](../../assembler/masm/symbols-reference.md)

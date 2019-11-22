@@ -7,18 +7,16 @@ helpviewer_keywords:
 - CDaoParameterInfo structure [MFC]
 - DAO (Data Access Objects), Parameters collection
 ms.assetid: 45fd53cd-cb84-4e12-b48d-7f2979f898ad
-ms.openlocfilehash: 4f0ee7ebe1d5d4eff50194c2d5c5cccf8f373c61
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 9f96cba8ea43db7e24e834b1de4ffb593b2c6e0d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096076"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303484"
 ---
 # <a name="cdaoparameterinfo-structure"></a>Estrutura CDaoParameterInfo
 
-A `CDaoParameterInfo` estrutura contém informações sobre um objeto de parâmetro definido para DAO (objetos de acesso a dados).
-O DAO 3,6 é a versão final e é considerado obsoleto.
-
+A estrutura de `CDaoParameterInfo` contém informações sobre um objeto de parâmetro definido para DAO (objetos de acesso a dados). O DAO 3,6 é a versão final e é considerado obsoleto.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -44,16 +42,16 @@ O valor do parâmetro, armazenado em um objeto [COleVariant](../../mfc/reference
 
 ## <a name="remarks"></a>Comentários
 
-As referências a primária e secundária acima indicam como as informações são retornadas pela função de membro [GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) na `CDaoQueryDef`classe.
+As referências a primária e secundária acima indicam como as informações são retornadas pela função de membro [GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) na classe `CDaoQueryDef`.
 
-O MFC não encapsula objetos de parâmetro DAO em uma classe. Objetos de QueryDef do DAO `CDaoQueryDef` os objetos do MFC subjacentes armazenam parâmetros em suas coleções de parâmetros. Para acessar os objetos de parâmetro em um objeto [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) , chame a função de `GetParameterInfo` membro do objeto querydef para um nome de parâmetro específico ou um índice na coleção de parâmetros. Você pode usar a função de membro [CDaoQueryDef:: GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount) em conjunto `GetParameterInfo` com para fazer o loop pela coleção de parâmetros.
+O MFC não encapsula objetos de parâmetro DAO em uma classe. Objetos de QueryDef do DAO subjacentes ao MFC `CDaoQueryDef` objetos armazenam parâmetros em suas coleções de parâmetros. Para acessar os objetos de parâmetro em um objeto [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) , chame a função membro `GetParameterInfo` do objeto querydef para um nome de parâmetro específico ou um índice na coleção de parâmetros. Você pode usar a função de membro [CDaoQueryDef:: GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount) em conjunto com `GetParameterInfo` para executar um loop na coleção de parâmetros.
 
-As informações recuperadas pela função de membro [CDaoQueryDef:: GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) são armazenadas `CDaoParameterInfo` em uma estrutura. Chame `GetParameterInfo` o objeto QueryDef em cuja coleção de parâmetros o objeto de parâmetro está armazenado.
+As informações recuperadas pela função de membro [CDaoQueryDef:: GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) são armazenadas em uma estrutura de `CDaoParameterInfo`. Chame `GetParameterInfo` para o objeto QueryDef em cuja coleção de parâmetros o objeto de parâmetro está armazenado.
 
 > [!NOTE]
 >  Se você quiser obter ou definir apenas o valor de um parâmetro, use as funções de membro [GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue) e [SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue) da classe `CDaoRecordset`.
 
-`CDaoParameterInfo`também define uma `Dump` função de membro em compilações de depuração. Você pode usar `Dump` para despejar o conteúdo de `CDaoParameterInfo` um objeto.
+`CDaoParameterInfo` também define uma função de membro de `Dump` em compilações de depuração. Você pode usar `Dump` para despejar o conteúdo de um objeto `CDaoParameterInfo`.
 
 ## <a name="requirements"></a>Requisitos
 

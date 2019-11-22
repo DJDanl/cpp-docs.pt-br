@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Time symbol'
 ms.assetid: a9712e51-be60-4ac4-a497-54a1aa0a1acd
-ms.openlocfilehash: 36de4c0ee131231372bd004d8aec5691b6620adf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0731e2c1be191dc5d7717166db5af4f43fa7733
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179166"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301893"
 ---
-# <a name="time"></a>@Time
+# <a name="time"></a>Tempo de \@
 
-A hora do sistema no formato de 24 horas hh (macro de texto).
+A hora do sistema no formato de 24 horas HH: mm: SS (macro de texto).
 
 ## <a name="syntax"></a>Sintaxe
 
-> @Time
+> **Tempo de \@**
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de símbolos](../../assembler/masm/symbols-reference.md)<br/>
+[Referência de símbolos](../../assembler/masm/symbols-reference.md)
