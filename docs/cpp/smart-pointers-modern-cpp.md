@@ -1,4 +1,4 @@
----
+﻿---
 title: Ponteiros inteligentes (C++ moderno)
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -31,7 +31,7 @@ Acesse o ponteiro encapsulado usando os operadores de ponteiros familiares, `->`
 A linguagem de ponteiro inteligente C++ é semelhante à criação de objeto em linguagens como C#: você cria o objeto e permite que o sistema cuide de sua exclusão no momento certo. A diferença é que nenhum coletor de lixo separado é executado em segundo plano; a memória é gerenciada com as regras de escopo C++ padrão de modo que o ambiente em runtime seja mais rápido e mais eficiente.
 
 > [!IMPORTANT]
->  Crie sempre ponteiros inteligentes em uma linha de código separada, nunca em uma lista de parâmetros, de forma que um vazamento sutil de recursos não ocorre devido a determinadas regras de alocação da lista de parâmetros.
+>  Crie sempre ponteiros inteligentes em uma linha de código separada, nunca em uma lista de parâmetros, de forma que um vazamento sutil de recursos não ocorra devido a determinadas regras de alocação da lista de parâmetros.
 
 O exemplo a seguir mostra como um tipo de ponteiro inteligente `unique_ptr` da biblioteca padrão do C++ pode ser usado para encapsular um ponteiro para um objeto grande.
 
