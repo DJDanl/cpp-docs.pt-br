@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@InStr symbol'
 ms.assetid: 980d5b9f-2b88-4306-8955-df6cd2133e68
-ms.openlocfilehash: ed1bda10d7797a2c1bba43a4824a331d196def4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20ea0b24892c6d77e4a8f577713c2b5ad970bf41
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179010"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302068"
 ---
-# <a name="instr"></a>@InStr
+# <a name="instr"></a>\@InStr
 
-Função de macro que localiza a primeira ocorrência de *string2* na *string1*, começando no *posição* dentro de *string1*. Se *posição* não aparecer, pesquisa começa no início do *string1*. Retorna um inteiro de posição ou 0 se *string2* não foi encontrado.
+Função de macro que localiza a primeira ocorrência de *string2* em *seqüência1*, começando na *posição* dentro de *seqüência1*. Se a *posição* não for exibida, a pesquisa começará no início de *seqüência1*. Retorna um inteiro de posição ou 0 se *string2* não for encontrado.
 
 ## <a name="syntax"></a>Sintaxe
 
-> @InStr( [[position]], string1, string2 )
+> **\@InStr (** ⟦*posição*⟧ __,__ *seqüência1* __,__ *seqüência2* **)**
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de símbolos](../../assembler/masm/symbols-reference.md)<br/>
+[Referência de símbolos](../../assembler/masm/symbols-reference.md)

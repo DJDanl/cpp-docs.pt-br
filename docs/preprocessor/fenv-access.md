@@ -1,6 +1,7 @@
 ---
 title: Pragma fenv_access
-ms.date: 08/29/2019
+description: Descreve o uso e os efeitos da diretiva pragma fenv_access. A diretiva fenv_access controla o acesso ao ambiente de ponto flutuante em tempo de execução.
+ms.date: 11/19/2019
 f1_keywords:
 - vc-pragma.fenv_access
 - fenv_access_CPP
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, fenv_access
 - fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
-ms.openlocfilehash: c8e66881bde12df28bf24e18230471cb4caca792
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e03eb404f2805a4f7c96509600c063c1b1acf629
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218599"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305853"
 ---
 # <a name="fenv_access-pragma"></a>Pragma fenv_access
 
@@ -25,9 +26,17 @@ Desabilita (**ativa**) ou habilita (**desativa**) otimizações que podem altera
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, **fenv_access** é **off**. Se o compilador puder assumir que seu código não acessa ou manipula o ambiente de ponto flutuante, ele poderá executar muitas otimizações de código de ponto flutuante. Defina **fenv_access** como **on** para informar ao compilador que seu código acessa o ambiente de ponto flutuante para testar sinalizadores de status, exceções ou para definir sinalizadores de modo de controle. O compilador desabilita essas otimizações para que seu código possa acessar o ambiente de ponto flutuante de forma consistente.
+Por padrão, **fenv_access** está **desativado**. O compilador pressupõe que seu código não acessa ou manipula o ambiente de ponto flutuante. Se o acesso ao ambiente não for necessário, o compilador poderá fazer mais para otimizar seu código de ponto flutuante.
 
-Para obter mais informações sobre o comportamento de ponto flutuante, consulte [/FP (especificar comportamento de ponto flutuante)](../build/reference/fp-specify-floating-point-behavior.md).
+Habilite **fenv_access** se o código testar sinalizadores de status de ponto flutuante, exceções ou definir sinalizadores de modo de controle. O compilador desabilita otimizações de ponto flutuante, para que seu código possa acessar o ambiente de ponto flutuante de forma consistente.
+
+A opção de linha de comando [/fp: strict] habilita automaticamente **fenv_access**. Para obter mais informações sobre esse e outro comportamento de ponto flutuante, consulte [/FP (especificar comportamento de ponto flutuante)](../build/reference/fp-specify-floating-point-behavior.md).
+
+Há restrições sobre as maneiras pelas quais você pode usar o **fenv_access** pragma em combinação com outras configurações de ponto flutuante:
+
+- Você não pode habilitar **fenv_access** , a menos que a semântica precisa esteja habilitada. A semântica precisa pode ser habilitada pelo [float_control](float-control.md) pragma ou usando as opções de compilador [/fp: preciso](../build/reference/fp-specify-floating-point-behavior.md) ou [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md) . O padrão do compilador é **/fp: preciso** se nenhuma outra opção de linha de comando de ponto flutuante for especificada.
+
+- Você não pode usar **float_control** para desabilitar a semântica precisa quando **fenv_access (on)** é definido.
 
 Os tipos de otimizações que estão sujeitos a **fenv_access** são:
 
@@ -75,7 +84,7 @@ int main() {
 out=9.999999776482582e-03
 ```
 
-Se você comentar `#pragma fenv_access (on)` a partir do exemplo anterior, observe que a saída é diferente porque o compilador faz a avaliação de tempo de compilação, que não usa o modo de controle.
+Se você comentar `#pragma fenv_access (on)` do exemplo anterior, a saída será diferente. É porque o compilador faz a avaliação em tempo de compilação, que não usa o modo de controle.
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp

@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 86c393796b1ce3efdb92d8aefd1f653390619ea4
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: a24349980e9395257f20fcfcc0987883060a7c1d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837512"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303135"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Estrutura de arquivos .vcxproj e .props
 
@@ -33,7 +33,7 @@ Caso você opte por editar um arquivo .vcxproj manualmente, lembre-se destes fat
    <ClCompile Include="$(IntDir)\generated.cpp"/>
    ```
 
-   "Sem suporte" significa que não há garantia de que as macros funcionarão em todas as operações no IDE. Macros que não alteram seu valor em configurações diferentes devem funcionar, mas talvez não sejam preservadas caso um item seja movido para um projeto ou um filtro diferente. Macros que alteram seu valor em diferentes configurações causarão problemas, porque o IDE não espera que os caminhos de item de projeto sejam diferentes para diferentes configurações de projeto.
+   "Sem suporte" significa que não há garantia de que as macros funcionarão em todas as operações no IDE. As macros que não alteram seu valor em configurações diferentes devem funcionar, mas podem não ser preservadas se um item for movido para um filtro ou projeto diferente. Macros que alteram seu valor em diferentes configurações causarão problemas, porque o IDE não espera que os caminhos de item de projeto sejam diferentes para diferentes configurações de projeto.
 
 1. Para adicionar, remover ou modificar propriedades do projeto corretamente quando elas forem editadas na caixa de diálogo **Propriedades do Projeto**, o arquivo precisa conter grupos separados para cada configuração de projeto e as condições precisam estar neste formato:
 
@@ -55,7 +55,7 @@ A primeira coisa a ser observada é que os elementos de nível superior são exi
 
 - Há vários grupos de propriedades, cada um com um rótulo exclusivo, e que ocorrem em uma ordem específica.
 
-A ordem dos elementos no arquivo de projeto é muito importante, pois o MSBuild se baseia em um modelo de avaliação sequencial.  Se o arquivo de projeto, incluindo todos os arquivos .targets e .props importados, consiste em várias definições de uma propriedade, a última definição substitui as anteriores. No exemplo a seguir, o valor "xyz" será definido durante a compilação, porque o mecanismo MSBuild o encontra por último durante sua avaliação.
+A ordem dos elementos no arquivo de projeto é muito importante, pois o MSBuild se baseia em um modelo de avaliação sequencial.  Se o arquivo de projeto, incluindo todos os arquivos .targets e .props importados, consiste em várias definições de uma propriedade, a última definição substitui as anteriores. No exemplo a seguir, o valor "XYZ" será definido durante a compilação porque o mecanismo MSBUild o encontrará por último durante sua avaliação.
 
 ```xml
   <MyProperty>abc</MyProperty>
@@ -104,7 +104,7 @@ O grupo de itens `ProjectConfigurations` não é usado no momento do build. O ID
 
 ### <a name="projectconfiguration-elements"></a>Elementos de ProjectConfiguration
 
-O snippet a seguir mostra uma configuração de projeto. Neste exemplo, 'Debug|x64' é o nome da configuração. O nome da configuração de projeto precisa estar no formato $(Configuration)|$(Platform). Um nó de Configuração de Projeto pode ter duas propriedades: Configuração e plataforma. Essas propriedades serão definidas automaticamente com os valores especificados aqui quando a configuração estiver ativa.
+O snippet a seguir mostra uma configuração de projeto. Neste exemplo, 'Debug|x64' é o nome da configuração. O nome da configuração de projeto precisa estar no formato $(Configuration)|$(Platform). Um nó de Configuração de Projeto pode ter duas propriedades: Configuração e Plataforma. Essas propriedades serão definidas automaticamente com os valores especificados aqui quando a configuração estiver ativa.
 
 ```xml
 <ProjectConfiguration Include="Debug|x64">
@@ -153,7 +153,7 @@ A folha de propriedades **Microsoft.Cpp.default.props** é fornecida com o Visua
 <PropertyGroup Label="Configuration" />
 ```
 
-Um grupo de propriedades `Configuration` tem uma condição de configuração anexada (como `Condition=”'$(Configuration)|$(Platform)'=='Debug|Win32'”`) e é fornecido em várias cópias, uma por configuração. Esse grupo de propriedades hospeda as propriedades que são definidas para uma configuração específica. As propriedades de configuração incluem PlatformToolset e também controlam a inclusão de folhas de propriedades do sistema em **Microsoft.Cpp.props**. Por exemplo, se você definir a propriedade `<CharacterSet>Unicode</CharacterSet>`, a folha de propriedades do sistema **microsoft.Cpp.unicodesupport.Props** será incluída. Se você inspecionar **Microsoft.Cpp.props**, verá a linha `<Import Condition=”'$(CharacterSet)' == 'Unicode'”   Project=”$(VCTargetsPath)\microsoft.Cpp.unicodesupport.props”/>`.
+Um grupo de propriedades `Configuration` tem uma condição de configuração anexada (como `Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"`) e é fornecido em várias cópias, uma por configuração. Esse grupo de propriedades hospeda as propriedades que são definidas para uma configuração específica. As propriedades de configuração incluem PlatformToolset e também controlam a inclusão de folhas de propriedades do sistema em **Microsoft.Cpp.props**. Por exemplo, se você definir a propriedade `<CharacterSet>Unicode</CharacterSet>`, a folha de propriedades do sistema **microsoft.Cpp.unicodesupport.Props** será incluída. Se você inspecionar **Microsoft.Cpp.props**, verá a linha `<Import Condition="'$(CharacterSet)' == 'Unicode'" Project="$(VCTargetsPath)\microsoft.Cpp.unicodesupport.props" />`.
 
 ### <a name="microsoftcppprops-import-element"></a>Elemento Microsoft.Cpp.props Import
 
@@ -195,7 +195,7 @@ O grupo `PropertySheets` contém as importações para as folhas de propriedades
 
 Há várias instâncias desse grupo de propriedades, um por configuração para todas as configurações de projeto. Cada grupo de propriedades precisa ter uma condição de configuração anexada. Se as configurações estiverem ausentes, a caixa de diálogo **Propriedades do Projeto** não funcionará corretamente. Ao contrário dos grupos de propriedades acima, esse não tem um rótulo. Esse grupo contém as configurações no nível de configuração do projeto. Essas configurações se aplicam a todos os arquivos que fazem parte do grupo de itens especificado. Os metadados de definição de item de personalização de build são inicializados aqui.
 
-Esse PropertyGroup precisa vir após `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />` e não deve haver nenhum outro PropertyGroup sem um Label antes dele (caso contrário, a edição de Propriedades do Projeto não funcionará corretamente).
+Este PropertyGroup deve vir após `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />` e não deve haver nenhum outro PropertyGroup sem um rótulo antes dele (caso contrário, a edição das propriedades do projeto não funcionará corretamente).
 
 ### <a name="per-configuration-itemdefinitiongroup-elements"></a>Elementos ItemDefinitionGroup por configuração
 
@@ -218,8 +218,8 @@ Os metadados deverão ter condições de configuração para cada configuração
 ```xml
 <ItemGroup>
   <ClCompile Include="stdafx.cpp">
-    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
-    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|x64’">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</TreatWarningAsError>
   </ClCompile>
 </ItemGroup>
 ```

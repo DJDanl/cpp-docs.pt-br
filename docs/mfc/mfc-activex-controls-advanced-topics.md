@@ -1,5 +1,5 @@
 ---
-title: 'Controles ActiveX do MFC: Tópicos avançados'
+title: 'Controles ActiveX MFC: tópicos avançados'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: e0daabf3d236eb7038f22c54ea76d616baf613a0
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 9f1fa862a30a83cbda049fc63bac6c33a101587b
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095996"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305381"
 ---
-# <a name="mfc-activex-controls-advanced-topics"></a>Controles ActiveX do MFC: Tópicos avançados
+# <a name="mfc-activex-controls-advanced-topics"></a>Controles ActiveX MFC: tópicos avançados
 
 Este artigo aborda tópicos avançados relacionados ao desenvolvimento de controles ActiveX. Elas incluem:
 
@@ -43,7 +43,7 @@ Como as classes de controle ActiveX fazem parte da biblioteca de classes, você 
 Para obter uma visão geral das classes de banco de dados MFC, consulte [classes de banco de dados MFC (DAO e ODBC)](../data/mfc-database-classes-odbc-and-dao.md). O artigo apresenta as classes ODBC do MFC e as classes do MFC DAO e direciona você para obter mais detalhes sobre ambos.
 
 > [!NOTE]
->   O DAO tem suporte por meio do Office 2013. O DAO 3,6 é a versão final e é considerado obsoleto. O ambiente C++ visual e os assistentes não dão suporte a DAO (embora as classes DAO estejam incluídas e você ainda possa usá-las). A Microsoft recomenda que você use [modelos de OLE DB](../data/oledb/ole-db-programming.md) ou [ODBC e MFC](../data/odbc/odbc-and-mfc.md) para novos projetos. Você só deve usar o DAO na manutenção de aplicativos existentes.
+> O DAO tem suporte por meio do Office 2013. O DAO 3,6 é a versão final e é considerado obsoleto. O ambiente C++ visual e os assistentes não dão suporte a DAO (embora as classes DAO estejam incluídas e você ainda possa usá-las). A Microsoft recomenda que você use [modelos de OLE DB](../data/oledb/ole-db-programming.md) ou [ODBC e MFC](../data/odbc/odbc-and-mfc.md) para novos projetos. Você só deve usar o DAO na manutenção de aplicativos existentes.
 
 ##  <a name="_core_implementing_a_parameterized_property"></a>Implementando uma propriedade parametrizada
 
@@ -95,7 +95,7 @@ Além disso, o assistente para adicionar propriedade adiciona as seguintes linha
 
 [!code-cpp[NVC_MFC_AxUI#36](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_3.cpp)]
 
-Por fim, as implementações `GetArray` das `SetArray` funções e são adicionadas ao final do. Arquivo CPP. Na maioria dos casos, você modificará a função Get para retornar o valor da propriedade. A função Set geralmente conterá o código que deve ser executado, antes ou depois da alteração da propriedade.
+Por fim, as implementações das funções `GetArray` e `SetArray` são adicionadas ao final do. Arquivo CPP. Na maioria dos casos, você modificará a função Get para retornar o valor da propriedade. A função Set geralmente conterá o código que deve ser executado, antes ou depois da alteração da propriedade.
 
 Para que essa propriedade seja útil, você pode declarar uma variável de membro de matriz bidimensional na classe de controle, do tipo **Short**, para armazenar valores para a propriedade parametrizada. Em seguida, você poderia modificar a função Get para retornar o valor armazenado na linha e coluna adequadas, conforme indicado pelos parâmetros e modificar a função Set para atualizar o valor referenciado pelos parâmetros Row e Column.
 
@@ -160,7 +160,7 @@ Se você estiver criando um controle ActiveX para substituir um controle VBX exi
 
 Em alguns casos, talvez você queira lidar com certas combinações de teclas de forma especial; por exemplo, insira uma nova linha quando a tecla ENTER for pressionada em um controle de caixa de texto de várias linhas ou mova-se entre um grupo de controles de edição quando uma ID de chave direcional for pressionada.
 
-Se a classe base do seu controle ActiveX for `COleControl`, você poderá substituir [CWnd::P retranslatemessage](../mfc/reference/cwnd-class.md#pretranslatemessage) para tratar as mensagens antes de o contêiner processá-las. Ao usar essa técnica, sempre retornará **true** se você tratar a mensagem em sua substituição de `PreTranslateMessage`.
+Se a classe base do seu controle ActiveX for `COleControl`, você poderá substituir [CWnd::P retranslatemessage](../mfc/reference/cwnd-class.md#pretranslatemessage) para tratar mensagens antes de o contêiner processá-las. Ao usar essa técnica, sempre retornará **true** se você tratar a mensagem em sua substituição de `PreTranslateMessage`.
 
 O exemplo de código a seguir demonstra uma possível maneira de lidar com qualquer mensagem relacionada às chaves direcionais.
 

@@ -4,12 +4,12 @@ description: Como configurar, compilar e depurar um C++ projeto CMake de softwar
 author: mikeblome
 ms.topic: tutorial
 ms.date: 11/08/2019
-ms.openlocfilehash: 05f120335180d27e84a99819ee97c233dd1b39a7
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965095"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303258"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Tutorial: criar C++ projetos de plataforma cruzada no Visual Studio
 
@@ -24,7 +24,7 @@ Neste tutorial, você aprenderá como:
 > * Adicionar uma conexão a um computador Linux
 > * compilar e depurar o mesmo destino no Linux
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 * Configurar o Visual Studio para Desenvolvimento em C++ Multiplataforma
   * Primeiro, [Instale o Visual Studio](https://visualstudio.microsoft.com/vs/) e escolha o **desenvolvimento de C++ desktop com** o e o **desenvolvimento do Linux C++ com cargas**de trabalho. Essa instalação mínima é de apenas 3 GB. Dependendo da velocidade de download, a instalação não deve levar mais de 10 minutos.
@@ -155,7 +155,7 @@ Nesta etapa, vamos depurar um programa de exemplo que demonstra a biblioteca do 
 
    Se você já tiver adicionado uma conexão remota, poderá abrir essa janela navegando até **ferramentas > opções > Gerenciador de conexões > plataforma cruzada**.
 
-1. Forneça as [informações de conexão para seu computador Linux](/cpp/linux/connect-to-your-remote-linux-computer.md) e escolha **conectar**. O Visual Studio adiciona esse computador como ao CMakeSettings. JSON como sua conexão padrão para o **Linux-Debug**. Ele também efetua pull dos cabeçalhos de seu computador remoto, para que você obtenha o [IntelliSense específico para essa conexão remota](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense). Em seguida, o Visual Studio envia os arquivos para o computador remoto e gera o cache CMake no sistema remoto. Essas etapas podem levar algum tempo, dependendo da velocidade da rede e da potência da sua máquina remota. Você saberá que ela está completa quando a mensagem "extração de informações de destino concluída" aparecer na janela saída do CMake.
+1. Forneça as [informações de conexão para seu computador Linux](/cpp/linux/connect-to-your-remote-linux-computer) e escolha **conectar**. O Visual Studio adiciona esse computador como ao CMakeSettings. JSON como sua conexão padrão para o **Linux-Debug**. Ele também efetua pull dos cabeçalhos de seu computador remoto, para que você obtenha o [IntelliSense específico para essa conexão remota](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense). Em seguida, o Visual Studio envia os arquivos para o computador remoto e gera o cache CMake no sistema remoto. Essas etapas podem levar algum tempo, dependendo da velocidade da rede e da potência da sua máquina remota. Você saberá que ela está completa quando a mensagem "extração de informações de destino concluída" aparecer na janela saída do CMake.
 
 ## <a name="set-a-breakpoint-build-and-run-on-linux"></a>Definir um ponto de interrupção, compilar e executar no Linux
 

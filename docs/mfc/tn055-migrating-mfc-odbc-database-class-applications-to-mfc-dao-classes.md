@@ -1,5 +1,5 @@
 ---
-title: 'TN055: Migrando aplicativos da classe de banco de dados ODBC do MFC para classes DAO do MFC'
+title: 'TN055: migrando aplicativos de classe de banco de dados ODBC MFC para classes DAO MFC'
 ms.date: 09/17/2019
 helpviewer_keywords:
 - DAO [MFC], migration
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-ms.openlocfilehash: 7107964cc894a0aa45be5de362c9edd166dc0af1
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 744e1c71476ccfbe6ea8f8359dcdb9a29efc995e
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095965"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305365"
 ---
-# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: Migrando aplicativos da classe de banco de dados ODBC do MFC para classes DAO do MFC
+# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: migrando aplicativos de classe de banco de dados ODBC MFC para classes DAO MFC
 
 > [!NOTE]
-> O DAO é usado com bancos de dados do Access e tem suporte por meio do Office 2013. 3,6 é a versão final e é considerada obsoleta. O ambiente C++ visual e os assistentes não dão suporte a DAO (embora as classes DAO estejam incluídas e você ainda possa usá-las). A Microsoft recomenda que você use [modelos de OLE DB](../data/oledb/ole-db-templates.md) ou [ODBC e MFC](../data/odbc/odbc-and-mfc.md) para novos projetos. Você só deve usar o DAO na manutenção de aplicativos existentes.
+> O DAO é usado com bancos de dados do Access e tem suporte por meio do Office 2013. O DAO 3,6 é a versão final e é considerado obsoleto. O ambiente C++ visual e os assistentes não dão suporte a DAO (embora as classes DAO estejam incluídas e você ainda possa usá-las). A Microsoft recomenda que você use [modelos de OLE DB](../data/oledb/ole-db-templates.md) ou [ODBC e MFC](../data/odbc/odbc-and-mfc.md) para novos projetos. Você só deve usar o DAO na manutenção de aplicativos existentes.
 
 ## <a name="overview"></a>Visão geral
 
@@ -74,12 +74,12 @@ Provavelmente, as diferenças mais óbvias entre as classes são as alterações
 ||`DFX_Currency`|
 |`RFX_Single`|`DFX_Single`|
 |`RFX_Double`|`DFX_Double`|
-|`RFX_Date`<sup>1</sup>|`DFX_Date`(`COleDateTime`baseado em)|
+|`RFX_Date`<sup>1</sup>|`DFX_Date` (baseado em`COleDateTime`)|
 |`RFX_Text`|`DFX_Text`|
 |`RFX_Binary`|`DFX_Binary`|
 |`RFX_LongBinary`|`DFX_LongBinary`|
 
-<sup>1</sup> a `RFX_Date` função é baseada em `CTime` e `TIMESTAMP_STRUCT`.
+<sup>1</sup> a função `RFX_Date` é baseada em `CTime` e `TIMESTAMP_STRUCT`.
 
 As principais alterações na funcionalidade que podem afetar seu aplicativo e exigem mais do que alterações de nome simples são listadas abaixo.
 
@@ -87,22 +87,22 @@ As principais alterações na funcionalidade que podem afetar seu aplicativo e e
 
    Com o MFC de classes ODBC, é necessário definir essas opções por meio de macros ou de tipos enumerados.
 
-   Com as classes DAO, o DAO fornece a definição dessas opções em um arquivo de cabeçalho (DBDAOINT. H). Portanto, o tipo de conjunto de registros é um `CRecordset`membro enumerado de, mas com o DAO ele é uma constante. Por exemplo, você usaria **instantâneo** ao especificar o tipo de `CRecordset` no ODBC, mas **DB_OPEN_SNAPSHOT** ao especificar o tipo `CDaoRecordset`de.
+   Com as classes DAO, o DAO fornece a definição dessas opções em um arquivo de cabeçalho (DBDAOINT. H). Portanto, o tipo de conjunto de registros é um membro enumerado de `CRecordset`, mas com o DAO ele é uma constante. Por exemplo, você usaria **instantâneo** ao especificar o tipo de `CRecordset` no ODBC, mas **DB_OPEN_SNAPSHOT** ao especificar o tipo de `CDaoRecordset`.
 
-- O tipo de conjunto de `CRecordset` registros padrão para é **instantâneo** , enquanto o `CDaoRecordset` tipo de conjunto de registros padrão para é **dynaset** (consulte a observação abaixo para obter um problema adicional sobre instantâneos de classe ODBC).
+- O tipo de conjunto de registros padrão para `CRecordset` é **instantâneo** , enquanto o tipo de conjunto de registros padrão para `CDaoRecordset` é **dynaset** (consulte a observação abaixo para obter um problema adicional sobre instantâneos de classe ODBC).
 
-- A classe `CRecordset` ODBC tem uma opção para criar um tipo de conjunto de registros somente de encaminhamento. `CDaoRecordset` Na classe, somente encaminhamento não é um tipo de conjunto de registros, mas sim uma propriedade (ou opção) de determinados tipos de conjuntos de registros.
+- A classe ODBC `CRecordset` tem uma opção para criar um tipo de conjunto de registros somente de encaminhamento. Na classe `CDaoRecordset`, somente encaminhamento não é um tipo de conjunto de registros, mas sim uma propriedade (ou opção) de determinados tipos de conjuntos de registros.
 
-- Um conjunto de registros somente acréscimo ao abrir `CRecordset` um objeto significava que os dados do conjunto de registros podem ser lidos e anexados. Com `CDaoRecordset` o objeto, a opção somente acrescentar significa literalmente que os dados do conjunto de registros só podem ser acrescentados (e não lidos).
+- Um conjunto de registros somente de acréscimo ao abrir um `CRecordset` objeto significava que os dados do conjunto de registros podem ser lidos e anexados. Com o objeto `CDaoRecordset`, a opção somente acrescentar significa literalmente que os dados do conjunto de registros só podem ser acrescentados (e não lidos).
 
-- As funções de membro de transação das classes ODBC são `CDatabase` membros de e agem no nível de banco de dados. Nas classes DAO, as funções de membro de transação são membros de uma classe de nível`CDaoWorkspace`superior () e, portanto `CDaoDatabase` , podem afetar vários objetos que compartilham o mesmo espaço de trabalho (espaço de transação).
+- As funções de membro de transação das classes ODBC são membros de `CDatabase` e agem no nível de banco de dados. Nas classes DAO, as funções de membro de transação são membros de uma classe de nível superior (`CDaoWorkspace`) e, portanto, podem afetar vários objetos `CDaoDatabase` que compartilham o mesmo espaço de trabalho (espaço de transação).
 
-- A classe de exceção foi alterada. `CDBExceptions`são lançadas nas classes ODBC e `CDaoExceptions` nas classes DAO.
+- A classe de exceção foi alterada. `CDBExceptions` são lançadas nas classes ODBC e `CDaoExceptions` nas classes DAO.
 
-- `RFX_Date`usa `CTime` objetos `TIMESTAMP_STRUCT` e enquanto `DFX_Date` usa .`COleDateTime` O `COleDateTime` é quase idêntico a `CTime`, mas é baseado em uma **Data** OLE de 8 bytes em vez de um **time_t** de 4 bytes, para que possa conter um intervalo muito maior de dados.
+- `RFX_Date` usa objetos `CTime` e `TIMESTAMP_STRUCT` enquanto `DFX_Date` usa `COleDateTime`. A `COleDateTime` é quase idêntica à `CTime`, mas é baseada em uma **Data** OLE de 8 bytes em vez de uma **time_t** de 4 bytes, para que possa conter um intervalo muito maior de dados.
 
    > [!NOTE]
-   > Os instantâneos DAO (`CDaoRecordset`) são somente leitura, enquanto os instantâneos ODBC (`CRecordset`) podem ser atualizáveis dependendo do driver e do uso da biblioteca de cursores ODBC. Se você estiver usando a biblioteca de cursores, `CRecordset` os instantâneos serão atualizáveis. Se você estiver usando qualquer um dos drivers da Microsoft do desktop Driver Pack 3,0 sem a biblioteca de cursores `CRecordset` ODBC, os instantâneos serão somente leitura. Se você estiver usando outro driver, verifique a documentação do driver para ver se os instantâneos`STATIC_CURSORS`() são somente leitura.
+   > Os instantâneos DAO (`CDaoRecordset`) são somente leitura enquanto os instantâneos ODBC (`CRecordset`) podem ser atualizados dependendo do driver e do uso da biblioteca de cursores ODBC. Se você estiver usando a biblioteca de cursores, `CRecordset` instantâneos serão atualizáveis. Se você estiver usando qualquer um dos drivers da Microsoft do desktop Driver Pack 3,0 sem a biblioteca de cursores ODBC, os instantâneos de `CRecordset` serão somente leitura. Se você estiver usando outro driver, verifique a documentação do driver para ver se os instantâneos (`STATIC_CURSORS`) são somente leitura.
 
 ## <a name="see-also"></a>Consulte também
 

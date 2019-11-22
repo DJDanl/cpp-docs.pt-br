@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Version symbol'
 ms.assetid: d7005811-de5c-4f8f-96e9-0e50d7ebca90
-ms.openlocfilehash: 3ad5b73f14bf158b47a802169ca26ade2ea54c59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e086064e8b294214b71974809c5b35fa2f736157
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178815"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301872"
 ---
-# <a name="version"></a>@Version
+# <a name="version"></a>Versão do \@
 
-615 em 6.15 MASM (macro de texto).
+A versão principal e secundária do MASM relatada na linha de comando, como um único número (macro de texto). Por exemplo, MASM versão 14.23.28107.0 produz "1423".
 
 ## <a name="syntax"></a>Sintaxe
 
-> @Version
+> **Versão do \@**
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de símbolos](../../assembler/masm/symbols-reference.md)<br/>
+[Referência de símbolos](../../assembler/masm/symbols-reference.md)
