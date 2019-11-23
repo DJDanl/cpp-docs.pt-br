@@ -1,6 +1,6 @@
 ---
-title: Raw pointers (C++)
-description: How to use raw pointers in C++
+title: Ponteiros brutos (C++)
+description: Como usar ponteiros brutos emC++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
@@ -11,11 +11,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74250656"
 ---
-# <a name="raw-pointers-c"></a>Raw pointers (C++)
+# <a name="raw-pointers-c"></a>Ponteiros brutos (C++)
 
-A pointer is a type of variable that stores the address of an object in memory and is used to access that object. A *raw pointer* is a pointer whose lifetime is not controlled by an encapsulating object such as a [smart pointer](smart-pointers-modern-cpp.md). A raw pointer can be assigned the address of another non-pointer variable, or it can be assigned a value of [nullptr](nullptr.md). A pointer that has not been assigned a value contains random data.
+Um ponteiro é um tipo de variável que armazena o endereço de um objeto na memória e é usada para acessar esse objeto. Um *ponteiro bruto* é um ponteiro cujo tempo de vida não é controlado por um objeto encapsulamento, como um [ponteiro inteligente](smart-pointers-modern-cpp.md). Um ponteiro bruto pode ser atribuído ao endereço de outra variável que não seja de ponteiro ou pode ser atribuído a um valor de [nullptr](nullptr.md). Um ponteiro que não tenha sido atribuído a um valor contém dados aleatórios.
 
-A pointer can also be *dereferenced* to retrieve the value of the object that it points at. The *member access operator* provides access to an object's members.
+Um ponteiro também pode ser *desreferenciado* para recuperar o valor do objeto que ele aponta. O *operador de acesso de membro* fornece acesso aos membros de um objeto.
 
 ```cpp
     int* p = nullptr; // declare pointer and initialize it
@@ -26,7 +26,7 @@ A pointer can also be *dereferenced* to retrieve the value of the object that it
 
 ```
 
-A pointer can point to a typed object or to **void**. When a program allocates a new object on the [heap](https://wikipedia.org/wiki/Heap) in memory, it receives the address of that object in the form of a pointer. Such pointers are called *owning pointers*; an owning pointer (or a copy of it) must be used to explicitly delete the heap-allocated object when it is no longer needed. Failure to delete the memory results in a *memory leak* and renders that memory location unavailable to any other program on the machine. For more information, see [new and delete operators](new-and-delete-operators.md).
+Um ponteiro pode apontar para um objeto tipado ou para **void**. Quando um programa aloca um novo objeto no [heap](https://wikipedia.org/wiki/Heap) na memória, ele recebe o endereço desse objeto na forma de um ponteiro. Tais ponteiros são chamados de *ponteiros de propriedade*; um ponteiro de propriedade (ou uma cópia dele) deve ser usado para excluir explicitamente o objeto alocado de heap quando ele não for mais necessário. A falha ao excluir a memória resulta em um *vazamento de memória* e renderiza esse local de memória indisponível para qualquer outro programa no computador. Para obter mais informações, consulte [operadores New e Delete](new-and-delete-operators.md).
 
 ```cpp
 
@@ -35,7 +35,7 @@ A pointer can point to a typed object or to **void**. When a program allocates a
     delete mc; // delete object (please don't forget!)
 ```
 
-A pointer (if it isn't declared as **const**) can be incremented or decremented so that it points to a new location in memory. This is called *pointer arithmetic* and is used in C-style programming to iterate over elements in arrays or other data structures. A **const** pointer can't be made to point to a different memory location, and in that sense is very similar to a [reference](references-cpp.md). For more information, see [const and volatile pointers](const-and-volatile-pointers.md).
+Um ponteiro (se não é declarado como **const**) pode ser incrementado ou diminuído para que ele aponte para um novo local na memória. Isso é chamado de *aritmética de ponteiro* e é usado na programação em estilo C para iterar sobre elementos em matrizes ou outras estruturas de dados. Um ponteiro **const** não pode ser feito para apontar para um local de memória diferente e, nesse sentido, é muito semelhante a uma [referência](references-cpp.md). Para obter mais informações, consulte [ponteiros const e volatile](const-and-volatile-pointers.md).
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
@@ -49,13 +49,13 @@ A pointer (if it isn't declared as **const**) can be incremented or decremented 
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
-On 64-bit operating systems, a pointer has a size of 64 bits; a system's pointer size determines how much addressable memory it can have. All copies of a pointer point to the same memory location. Pointers (along with references) are used extensively in C++ to pass larger objects to and from functions because it is usually far more efficient to copy an object's 64-bit address than to copy an entire object. When defining a function, specify pointer parameters as **const** unless you intend for the function to modify the object. In general, **const** references are the preferred way to pass objects to functions unless the value of the object can possibly be **nullptr**.
+Em sistemas operacionais de 64 bits, um ponteiro tem um tamanho de 64 bits; o tamanho de um ponteiro do sistema determina o quanto de memória endereçável ele pode ter. Todas as cópias de um ponteiro apontam para o mesmo local de memória. Ponteiros (juntamente com referências) são usados extensivamente C++ no para passar objetos maiores de e para funções, pois geralmente é muito mais eficiente copiar o endereço de 64 bits de um objeto do que copiar um objeto inteiro. Ao definir uma função, especifique parâmetros de ponteiro como **const** , a menos que você pretenda que a função modifique o objeto. Em geral, as referências **const** são a maneira preferida de passar objetos para funções, a menos que o valor do objeto possivelmente possa ser **nullptr**.
 
-[Pointers to functions](#pointers_to_functions) enable functions to be passed to other functions and are used for "callbacks" in C-style programming. Modern C++ uses [lambda expressions](lambda-expressions-in-cpp.md) for this purpose.
+[Ponteiros para funções](#pointers_to_functions) permitem que as funções sejam passadas para outras funções e são usadas para "retornos de chamada" na programação em estilo C. O C++ moderno usa [expressões lambda](lambda-expressions-in-cpp.md) para essa finalidade.
 
-## <a name="initialization-and-member-access"></a>Initialization and member access
+## <a name="initialization-and-member-access"></a>Inicialização e acesso de membro
 
-The following example shows how to declare a raw pointer and initialize it with an object allocated on the heap, and then how to use it. It also shows a few of the dangers associated with raw pointers. (Remember, this is C-style programming and not modern C++!)
+O exemplo a seguir mostra como declarar um ponteiro bruto e inicializá-lo com um objeto alocado no heap e como usá-lo. Ele também mostra alguns dos perigos associados a ponteiros brutos. (Lembre-se, essa é a programação em estilo C C++e não é moderna!)
 
 ```cpp
 #include <iostream>
@@ -133,14 +133,14 @@ int main()
 }
 ```
 
-## <a name="pointer-arithmetic-and-arrays"></a>Pointer arithmetic and arrays
+## <a name="pointer-arithmetic-and-arrays"></a>Aritmética de ponteiro e matrizes
 
-Pointers and arrays are closely related. When an array is passed by-value to a function, it is passed as a pointer to the first element. The following example demonstrates the following important properties of pointers and arrays:
+Ponteiros e matrizes estão fortemente relacionados. Quando uma matriz é passada por valor para uma função, ela é passada como um ponteiro para o primeiro elemento. O exemplo a seguir demonstra as seguintes propriedades importantes de ponteiros e matrizes:
 
-- the `sizeof` operator returns the total size in bytes of an array
-- to determine the number of elements, divide total bytes by the size of one element
-- when an array is passed to a function, it *decays* to a pointer type
-- the `sizeof` operator when applied to a pointer returns the pointer size, 4 bytes on x86 or 8 bytes on x64
+- o operador `sizeof` retorna o tamanho total em bytes de uma matriz
+- para determinar o número de elementos, divida o total de bytes pelo tamanho de um elemento
+- Quando uma matriz é passada para uma função, ela *decays* a um tipo de ponteiro
+- o operador de `sizeof` quando aplicado a um ponteiro retorna o tamanho do ponteiro, 4 bytes em x86 ou 8 bytes em x64
 
 ```cpp
 #include <iostream>
@@ -166,9 +166,9 @@ int main()
 }
 ```
 
-Certain arithmetic operations can be performed on non-const pointers to make them point to a new memory location. A pointer can be incremented and decremented using the **++** , **+=** , **-=** and **--** operators. This technique can be used in arrays and is especially useful in buffers of untyped data. A **void\*** increments by the size of a **char** (1 byte). A typed pointer increments by size of the type it points to.
+Determinadas operações aritméticas podem ser executadas em ponteiros não const para que apontem para um novo local da memória. Um ponteiro pode ser incrementado e diminuído usando os operadores **++** , **+=** , **-=** e **--** . Essa técnica pode ser usada em matrizes e é especialmente útil em buffers de dados não tipados. Um **\*void** é incrementado pelo tamanho de um **Char** (1 byte). Um ponteiro tipado é incrementado por tamanho do tipo para o qual ele aponta.
 
-The following example demonstrates how pointer arithmetic can be used to access individual pixels in a bitmap on Windows. Note the use of **new** and **delete**, and the dereference operator. 
+O exemplo a seguir demonstra como a aritmética de ponteiro pode ser usada para acessar pixels individuais em um bitmap no Windows. Observe o uso de **New** e **delete**e o operador de desreferência. 
 
 ```cpp
 #include <Windows.h>
@@ -233,11 +233,11 @@ int main()
 }
 ```
 
-## <a name="void-pointers"></a>void* pointers
+## <a name="void-pointers"></a>void * ponteiros
 
-A pointer to **void** simply points to a raw memory location. Sometimes it is necessary to use **void\*** pointers, for example when passing between C++ code and C functions. 
+Um ponteiro para **anular** simplesmente aponta para um local de memória bruto. Às vezes, é necessário usar ponteiros **void\*** , por exemplo, ao C++ passar entre as funções Code e C. 
 
-When a typed pointer is cast to a void pointer, the contents of the memory location are not changed, but the type information is lost, so that you can't perform increment or decrement operations. A memory location can be cast, for example, from MyClass* to void* and back again to MyClass*. Such operations are inherently error-prone and require great care to avoid errors. Modern C++ discourages the use of void pointers unless absolutely necessary.
+Quando um ponteiro tipado é convertido em um ponteiro void, o conteúdo do local da memória não é alterado, mas as informações de tipo são perdidas, para que você não possa executar operações de incremento ou decréscimo. Um local de memória pode ser convertido, por exemplo, de MyClass * para void * e de volta para MyClass *. Essas operações são inerentemente propensas a erros e exigem muito cuidado para evitar erros. O C++ moderno não incentiva o uso de ponteiros void, a menos que seja absolutamente necessário.
 
 ```cpp
 
@@ -290,11 +290,11 @@ int main()
 }
 ```
 
-## <a name="pointers_to_functions"></a> Pointers to functions
+## <a name="pointers_to_functions"></a>Ponteiros para funções
 
-In C-style programming, function pointers are used primarily to pass functions to other functions. In this scenario, the caller can customize the behavior of a function without modifying it. In modern C++, [lambda expressions](lambda-expressions-in-cpp.md) provide the same capability with greater type safety and other advantages.
+Na programação em estilo C, os ponteiros de função são usados principalmente para passar funções para outras funções. Nesse cenário, o chamador pode personalizar o comportamento de uma função sem modificá-la. No moderno C++, as [expressões lambda](lambda-expressions-in-cpp.md) fornecem o mesmo recurso com maior segurança de tipos e outras vantagens.
 
-A function pointer declaration specifies the signature that the pointed-to function must have:
+Uma declaração de ponteiro de função especifica a assinatura que a função indicada para deve ter:
 
 ```cpp
 // Declare pointer to any function that...
@@ -310,7 +310,7 @@ void (*x)();
 int (*i)(int i, string s, double d);
 ```
 
-The following example shows a function `combine` that takes as a parameter any function that accepts a `std::string` and returns a `std::string`. Depending on the function that is passed to `combine` it will either prepend or append a string.
+O exemplo a seguir mostra uma função `combine` que usa como um parâmetro qualquer função que aceita um `std::string` e retorna um `std::string`. Dependendo da função que é passada para `combine` ela precederá ou acrescentará uma cadeia de caracteres.
 
 ```cpp
 #include <iostream>
@@ -344,7 +344,7 @@ int main()
 
 ## <a name="see-also"></a>Consulte também
 
-[Smart pointers](smart-pointers-modern-cpp.md)
-[Indirection Operator: *](indirection-operator-star.md)<br/>
-[Operador address-of: &](address-of-operator-amp.md)</br>
-[Welcome back to C++](welcome-back-to-cpp-modern-cpp.md)
+[Ponteiros inteligentes](smart-pointers-modern-cpp.md)
+[operador de indireção: *](indirection-operator-star.md)<br/>
+[Operador endereço de: &](address-of-operator-amp.md)</br>
+[Bem-vindo de volta paraC++](welcome-back-to-cpp-modern-cpp.md)

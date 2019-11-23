@@ -69,7 +69,7 @@ C++as promoções são "de preservação de valor", pois o valor após a promoç
 
 As promoções de preservação de valores e as promoções que preservam o signedness normalmente geram os mesmos resultados. No entanto, eles podem produzir resultados diferentes se o objeto promovido aparecer como:
 
-- Um operando de `/`, `%`, `/=`, `%=`, `<`, `<=`, `>` ou `>=`
+- Um operando de `/`, `%`, `/=`, `%=`, `<`, `<=`, `>`ou `>=`
 
    Esses operadores dependem do sinal para determinar o resultado. A preservação de valor e a preservação de promoções geram resultados diferentes quando aplicadas a esses operandos.
 
@@ -101,7 +101,7 @@ int main()
 // Output: 65533
 ```
 
-No exemplo anterior, um **curto assinado**, `i`, é definido e inicializado com um número negativo. A expressão `(u = i)` faz com que `i` sejam convertidos em um **curto não assinado** antes da atribuição para `u`.
+No exemplo anterior, um **curto assinado**, `i`, é definido e inicializado com um número negativo. A expressão `(u = i)` faz com que `i` seja convertido em um **curto não assinado** antes da atribuição para `u`.
 
 ### <a name="unsigned-to-signed"></a>Não assinado para assinado
 
@@ -175,7 +175,7 @@ int main() {
 
 A primeira instrução no exemplo acima mostra a multiplicação de dois tipos integrais, `iVal` e `ulVal`. A condição atendida é que nenhum operando é do tipo flutuante e um operando é do tipo **não assinado int**. Portanto, o outro operando, `iVal`, é convertido para o tipo **int não assinado**. O resultado é então atribuído a `dVal`. A condição atendida aqui é que um operando é do tipo **Double**, portanto, o resultado **int não assinado** da multiplicação é convertido para o tipo **Double**.
 
-A segunda instrução no exemplo anterior mostra a adição de um **float** e um tipo integral: `fVal` e `ulVal`. A variável `ulVal` é convertida no tipo **float** (terceira condição na tabela). O resultado da adição é convertido para o tipo **Double** (segunda condição na tabela) e atribuído a `dVal`.
+A segunda instrução no exemplo anterior mostra a adição de um **float** e um tipo integral: `fVal` e `ulVal`. A variável `ulVal` é convertida para o tipo **float** (terceira condição na tabela). O resultado da adição é convertido para o tipo **Double** (segunda condição na tabela) e atribuído a `dVal`.
 
 ## <a name="pointer-conversions"></a>Conversões de ponteiro
 
@@ -194,7 +194,7 @@ Gráfico de herança para ilustração de acessibilidade a classe base
 
 A tabela a seguir mostra a acessibilidade da classe base para a situação ilustrada na figura.
 
-|Tipo de função|Derivação|Conversão de<br /><br /> B * para um @ no__t-0 legal?|
+|Tipo de função|Derivação|Conversão de<br /><br /> B * para uma\* legal?|
 |----------------------|----------------|-------------------------------------------|
 |Função externa (fora do escopo da classe)|Particular|Não|
 ||Protegido|Não|
@@ -210,7 +210,7 @@ O segundo caso em que um ponteiro para uma classe pode ser convertido em um pont
 
 O resultado de tal conversão é um ponteiro para o *subobjeto*, a parte do objeto que é completamente descrito pela classe base.
 
-O código a seguir define duas classes, `A` e `B`, onde `B` é derivado de `A`. (Para obter mais informações sobre herança, consulte [classes derivadas](../cpp/inheritance-cpp.md).) Ele define `bObject`, um objeto do tipo `B`, e dois ponteiros (`pA` e `pB`) que apontam para o objeto.
+O código a seguir define duas classes, `A` e `B`, onde `B` é derivado de `A`. (Para obter mais informações sobre herança, consulte [classes derivadas](../cpp/inheritance-cpp.md).) Em seguida, ele define `bObject`, um objeto do tipo `B`e dois ponteiros (`pA` e `pB`) que apontam para o objeto.
 
 ```cpp
 // C2039 expected
@@ -275,7 +275,7 @@ char *pszPath = szPath; // Equals &szPath[0].
 
 Uma expressão que resulta em uma função que retorna um tipo específico é convertido em um ponteiro para uma função que retorna esse tipo, exceto quando:
 
-- A expressão é usada como um operando para o operador address-of ( **&** ).
+- A expressão é usada como um operando para o operador de endereço ( **&** ).
 
 - A expressão é usada como um operando para o operador function-call.
 

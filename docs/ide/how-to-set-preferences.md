@@ -36,7 +36,7 @@ Para ocultar todas as janelas de ferramentas e maximizar a janela do editor de c
 
 ## <a name="set-c-coding-styles-and-formatting"></a>Definir C++ estilos e formatação de codificação
 
-Você pode especificar muitas opções de formatação de código individuais, como recuo e posições de chave. Para fazer isso, vá para **ferramentas** > **Opções** > **Editor de texto**@no__t-**5 CC++/**  > **formatação** (ou digite **Ctrl + Q** e procure "formatação"). Como alternativa, você pode especificar um dos estilos de [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) (ou seu próprio estilo ClangFormat personalizado).
+Você pode especificar muitas opções de formatação de código individuais, como recuo e posições de chave. Para fazer isso, vá para **ferramentas** > **Opções** > **Editor de texto** > **formatação** **C/C++**  > (ou digite **Ctrl + Q** e procure "formatação"). Como alternativa, você pode especificar um dos estilos de [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) (ou seu próprio estilo ClangFormat personalizado).
 
 ![Captura de tela das opções de ClangFormat](media/clang-format-ide.png)
 
@@ -44,7 +44,7 @@ Para obter mais informações sobre todas as opções de formatação, consulte 
 
 ## <a name="set-the-color-theme"></a>Definir o tema de cores
 
-Para definir um plano de fundo claro ou escuro, digite **Ctrl + Q** e procure "Color Theme". Você também pode encontrá-los indo para **ferramentas** > **Opções** > **ambiente**e escolhendo **tema de cores**.
+Para definir um plano de fundo claro ou escuro, digite **Ctrl + Q** e procure "Color Theme". Você também pode encontrá-las acessando **ferramentas** > **Opções** > **ambiente**e escolhendo **tema de cores**.
 
 ![Captura de tela de temas de cor](media/tools-options-color-theme.png)
 
@@ -54,15 +54,15 @@ Por exemplo, aqui está o tema escuro:
 
 ## <a name="customize-code-colorization"></a>Personalizar a colorização de código
 
-No Visual Studio 2019, você pode escolher entre três *esquemas de cores*predefinidos. Eles especificam como os elementos de código são coloridos no editor. Para escolher um tema, vá para **ferramentas** > **Opções** > **Editor de texto**@no__t-**5 CC++/**  > **exibição**e escolha **esquema de cores**:
+No Visual Studio 2019, você pode escolher entre três *esquemas de cores*predefinidos. Eles especificam como os elementos de código são coloridos no editor. Para escolher um tema, vá para **ferramentas** > **Opções** > **Editor de texto** > **exibição** **CC++ /**  > e escolha **esquema de cores**:
 
 ![Captura de C++ tela das opções de esquema de cores, com realce avançado](media/color-schemes.png)
 
-No esquema de cores chamado **Visual Studio 2017**, a maioria dos elementos de código é simplesmente preta. No esquema de cores **avançado** , as funções, as variáveis locais, as macros e outros elementos são colored. No **Enhanced (Globals vs. Members)** , as funções globais e as variáveis são coloridas para o contraste com os membros da classe. O modo padrão é **avançado**e tem esta aparência:
+No esquema de cores chamado **Visual Studio 2017**, a maioria dos elementos de código é simplesmente preta. No esquema de cores **avançado** , as funções, as variáveis locais, as macros e outros elementos são colored. No esquema **avançado (Globals vs. Members)** , as funções globais e variáveis são coloridas para o contraste com os membros da classe. O modo padrão é **avançado**e tem esta aparência:
 
 ![Captura de tela do esquema de cores avançado](media/color-scheme-enhanced.png)
 
-Independentemente de qual tema ou esquema de cores estiver ativo, você poderá personalizar a fonte e as cores para elementos de código individuais. Para fazer isso, vá para **ferramentas** > **Opções** > **ambiente** > **fontes e cores** (ou digite **Ctrl + Q** e pesquise por "fontes"). Role a lista de itens de exibição até ver as C++ opções.
+Independentemente de qual tema ou esquema de cores estiver ativo, você poderá personalizar a fonte e as cores para elementos de código individuais. Para fazer isso, acesse **ferramentas** > **opções** > **ambiente** > **fontes e cores** (ou digite **Ctrl + Q** e procure "fontes"). Role a lista de itens de exibição até ver as C++ opções.
 
 ![Captura de C++ tela das opções de fonte e cor](media/tools-options-cpp-colors.png)
 
@@ -80,7 +80,7 @@ Você pode adicionar ou remover comandos ou criar uma barra de ferramentas perso
 
 ![Captura de tela da barra de ferramentas, com seta para baixo e barra pontilhada realçada](media/toolbar-move-edit.png).
 
-Para obter mais informações, confira [Como: Personalize menus e barras de ferramentas no Visual Studio @ no__t-0.
+Para obter mais informações, consulte [como: personalizar menus e barras de ferramentas no Visual Studio](/visualstudio/ide/how-to-customize-menus-and-toolbars-in-visual-studio).
 
 ## <a name="show-or-hide-line-numbers"></a>Mostrar ou ocultar números de linha
 
@@ -90,4 +90,4 @@ Você pode especificar se os números de linha são mostrados à esquerda das ja
 
 ## <a name="create-keyboard-shortcuts"></a>Criar atalhos de teclado
 
-Muitos comandos no Visual Studio têm *atalhos de teclado*, combinações de teclas com as teclas CTRL, ALT e Shift. Você pode modificar esses atalhos de teclado ou criar novos próprios no Visual Studio. Vá para **ferramentas** > **Opções** > **ambiente** > **teclado** (ou digite **Ctrl + Q** e procure "atalhos"). Para obter mais informações, consulte [identificar e personalizar atalhos de teclado no Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+Muitos comandos no Visual Studio têm *atalhos de teclado*, combinações de teclas com as teclas CTRL, ALT e Shift. Você pode modificar esses atalhos de teclado ou criar novos próprios no Visual Studio. Vá para **ferramentas** > **opções** > **ambiente** > **teclado** (ou digite **Ctrl + Q** e pesquise por "atalhos"). Para obter mais informações, consulte [identificar e personalizar atalhos de teclado no Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
