@@ -45,7 +45,7 @@ Essas suposições são feitas na descrição da manipulação de exceção:
 
 1. Não há código condicional em epilogs.
 
-1. Registro de ponteiro de quadro dedicado: Se o SP for salvo em outro registro (x29) no prólogo, esse registro permanecerá inalterado em toda a função. Isso significa que o SP original pode ser recuperado a qualquer momento.
+1. Registro de ponteiro de quadro dedicado: se o SP for salvo em outro registro (x29) no prólogo, esse registro permanecerá inalterado durante toda a função. Isso significa que o SP original pode ser recuperado a qualquer momento.
 
 1. A menos que o SP seja salvo em outro registro, toda a manipulação do ponteiro de pilha ocorre estritamente dentro do prólogo e do epílogo.
 
@@ -55,9 +55,9 @@ Essas suposições são feitas na descrição da manipulação de exceção:
 
 (media/arm64-exception-handling-stack-frame.png "layout do quadro de pilhas") de layout do quadro de ![pilhas]
 
-Para funções encadeadas de quadro, o par FP e LR pode ser salvo em qualquer posição na área variável local, dependendo das considerações de otimização. O objetivo é maximizar o número de locais que podem ser alcançados por uma única instrução com base no ponteiro do quadro (x29) ou no ponteiro de pilha (SP). No entanto, para funções `alloca`, ela deve ser encadeada e x29 deve apontar para a parte inferior da pilha. Para permitir uma melhor cobertura de modo de endereçamento de pares de registro, as áreas de salvamento de registro não volátil são posicionadas na parte superior da pilha de área local. Aqui estão exemplos que ilustram várias das sequências de prólogo mais eficientes. Para fins de clareza e melhor localidade de cache, a ordem de armazenamento de registros salvos por receptor em todos os Prologs canônicos está na ordem "crescente". `#framesz` abaixo representa o tamanho da pilha inteira (excluindo a área alloca). `#localsz` e `#outsz` indicam o tamanho da área local (incluindo a área de salvamento para o par \<x29, LR >) e o tamanho do parâmetro de saída, respectivamente.
+Para funções encadeadas de quadro, o par FP e LR pode ser salvo em qualquer posição na área variável local, dependendo das considerações de otimização. O objetivo é maximizar o número de locais que podem ser alcançados por uma única instrução com base no ponteiro do quadro (x29) ou no ponteiro de pilha (SP). No entanto, para funções `alloca`, ela deve ser encadeada e x29 deve apontar para a parte inferior da pilha. Para permitir uma melhor cobertura de modo de endereçamento de pares de registro, as áreas de salvamento de registro não volátil são posicionadas na parte superior da pilha de área local. Aqui estão exemplos que ilustram várias das sequências de prólogo mais eficientes. Para fins de clareza e melhor localidade de cache, a ordem de armazenamento de registros salvos por receptor em todos os Prologs canônicos está na ordem "crescente". `#framesz` abaixo representa o tamanho da pilha inteira (excluindo a área alloca). `#localsz` e `#outsz` indicam o tamanho da área local (incluindo a área de salvamento para o \<x29, a LR > pair) e o tamanho do parâmetro de saída, respectivamente.
 
-1. Encadeado, #localsz \< = 512
+1. Encadeado, #localsz \<= 512
 
     ```asm
         stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -96,7 +96,7 @@ Para funções encadeadas de quadro, o par FP e LR pode ser salvo em qualquer po
         sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Todos os locais são acessados com base no SP. \<x29, LR > aponta para o quadro anterior. Para o tamanho do quadro \< = 512, "sub-SP,..." pode ser otimizado para fora se a área regs salva for movida para a parte inferior da pilha. A desvantagem é que não é consistente com outros layouts acima, e regs salvos fazem parte do intervalo para o modo de endereçamento de deslocamento de regs e pré e pós-indexado.
+   Todos os locais são acessados com base no SP. \<x29, LR > aponta para o quadro anterior. Para o tamanho do quadro \<= 512, o "sub SP,..." pode ser otimizado para fora se a área regs salva for movida para a parte inferior da pilha. A desvantagem é que não é consistente com outros layouts acima, e regs salvos fazem parte do intervalo para o modo de endereçamento de deslocamento de regs e pré e pós-indexado.
 
 1. Funções não encadeadas e não folha (a LR é salva na área de salvamento de int)
 
@@ -128,11 +128,11 @@ Para funções encadeadas de quadro, o par FP e LR pode ser salvo em qualquer po
         sub    sp,sp,#(framesz-16)      // allocate the remaining local area
     ```
 
-   \* a alocação da área de salvamento de reg não é dobrada no STP porque um STP reg-LR previamente indexado não pode ser representado com os códigos de liberação.
+   \* a alocação da área de salvamento do reg não é dobrada no STP porque um STP do reg-LR previamente indexado não pode ser representado com os códigos de liberação.
 
    Todos os locais são acessados com base no SP. \<x29 > aponta para o quadro anterior.
 
-1. Encadeado, #framesz \< = 512, #outsz = 0
+1. Encadeado, #framesz \<= 512, #outsz = 0
 
     ```asm
         stp    x29,lr,[sp,#-framesz]!       // pre-indexed, save <x29,lr>
@@ -287,18 +287,18 @@ Os códigos de liberação são codificados de acordo com a tabela a seguir. Tod
 |Código de desenrolamento|Bits e interpretação|
 |-|-|
 |`alloc_s`|000xxxxx: alocar pilha pequena com o tamanho \< 512 (2 ^ 5 * 16).|
-|`save_r19r20_x`|    001zzzzz: salvar \<x19, X20 > par em `[sp-#Z*8]!`, deslocamento previamente indexado > =-248 |
-|`save_fplr`|        01zzzzzz: Salve o par \<x29, LR > em `[sp+#Z*8]`, offset \< = 504. |
-|`save_fplr_x`|        10zzzzzz: Salve o par \<x29, LR > em `[sp-(#Z+1)*8]!`, deslocamento previamente indexado > =-512 |
+|`save_r19r20_x`|    001zzzzz: salvar \<x19, X20 par de > em `[sp-#Z*8]!`, deslocamento previamente indexado > =-248 |
+|`save_fplr`|        01zzzzzz: Salve o par \<x29, LR > em `[sp+#Z*8]`, offset \<= 504. |
+|`save_fplr_x`|        10zzzzzz: salvar \<x29, LR > par em `[sp-(#Z+1)*8]!`, deslocamento previamente indexado > =-512 |
 |`alloc_m`|        11000xxx'xxxxxxxx: alocar uma pilha grande com o tamanho \< 16K (2 ^ 11 * 16). |
-|`save_regp`|        110010xx'xxzzzzzz: salvar o par x (19 + #X) em `[sp+#Z*8]`, deslocamento \< = 504 |
-|`save_regp_x`|        110011xx'xxzzzzzz: salvar o par x (19 + #X) em `[sp-(#Z+1)*8]!`, deslocamento previamente indexado > =-512 |
-|`save_reg`|        110100xx'xxzzzzzz: salvar o reg x (19 + #X) em `[sp+#Z*8]`, deslocamento \< = 504 |
-|`save_reg_x`|        1101010x'xxxzzzzz: salvar reg x (19 + #X) em `[sp-(#Z+1)*8]!`, deslocamento previamente indexado > =-256 |
-|`save_lrpair`|         1101011x'xxzzzzzz: salvar par \<x (19 + 2 * #X), LR > em `[sp+#Z*8]`, deslocamento \< = 504 |
-|`save_fregp`|        1101100x'xxzzzzzz: salvar par d (8 + #X) em `[sp+#Z*8]`, deslocamento \< = 504 |
+|`save_regp`|        110010xx'xxzzzzzz: salvar o par x (19 + #X) em `[sp+#Z*8]`, offset \<= 504 |
+|`save_regp_x`|        110011xx'xxzzzzzz: Economize o par x (19 + #X) em `[sp-(#Z+1)*8]!`, deslocamento previamente indexado > =-512 |
+|`save_reg`|        110100xx'xxzzzzzz: salvar reg x (19 + #X) em `[sp+#Z*8]`, offset \<= 504 |
+|`save_reg_x`|        1101010x'xxxzzzzz: salvar o reg x (19 + #X) em `[sp-(#Z+1)*8]!`, deslocamento previamente indexado > =-256 |
+|`save_lrpair`|         1101011x'xxzzzzzz: salvar o par \<x (19 + 2 * #X), LR > em `[sp+#Z*8]`, offset \<= 504 |
+|`save_fregp`|        1101100x'xxzzzzzz: salvar par d (8 + #X) em `[sp+#Z*8]`, offset \<= 504 |
 |`save_fregp_x`|        1101101x'xxzzzzzz: salvar par d (8 + #X), em `[sp-(#Z+1)*8]!`, deslocamento previamente indexado > =-512 |
-|`save_freg`|        1101110x'xxzzzzzz: salvar reg d (8 + #X) em `[sp+#Z*8]`, deslocamento \< = 504 |
+|`save_freg`|        1101110x'xxzzzzzz: salvar reg d (8 + #X) em `[sp+#Z*8]`, offset \<= 504 |
 |`save_freg_x`|        11011110 ' xxxzzzzz: salvar reg d (8 + #X) em `[sp-(#Z+1)*8]!`, deslocamento previamente indexado > =-256 |
 |`alloc_l`|         11100000 ' xxxxxxxx'xxxxxxxx'xxxxxxxx: alocar uma pilha grande com o tamanho \< 256M (2 ^ 24 * 16) |
 |`set_fp`|        11100001: configurar x29: com: `mov x29,sp` |
@@ -314,25 +314,25 @@ Os códigos de liberação são codificados de acordo com a tabela a seguir. Tod
 |`arithmetic(ror)`|    11100111 ' 100zxxxx: ROR LR com cookie reg (z) (0 = x28, 1 = SP); `ror lr, lr, reg(z)` |
 | |            11100111: xxxz----:----reservado |
 | |              11101xxx: reservado para os casos de pilha personalizados abaixo gerados somente para rotinas de ASM |
-| |              11101000: Pilha personalizada para MSFT_OP_TRAP_FRAME |
-| |              11101001: Pilha personalizada para MSFT_OP_MACHINE_FRAME |
-| |              11101010: Pilha personalizada para MSFT_OP_CONTEXT |
-| |              11101100: Pilha personalizada para MSFT_OP_CLEAR_UNWOUND_TO_CALL |
+| |              11101000: pilha personalizada para MSFT_OP_TRAP_FRAME |
+| |              11101001: pilha personalizada para MSFT_OP_MACHINE_FRAME |
+| |              11101010: pilha personalizada para MSFT_OP_CONTEXT |
+| |              11101100: pilha personalizada para MSFT_OP_CLEAR_UNWOUND_TO_CALL |
 | |              1111xxxx: reservado |
 
 Em instruções com valores grandes que abrangem vários bytes, os bits mais significativos são armazenados primeiro. Esse design possibilita a localização do tamanho total em bytes do código de desenrolação pesquisando apenas o primeiro byte do código. Como cada código de desenrolação é mapeado exatamente para uma instrução em um prólogo ou epílogo, você pode calcular o tamanho do prólogo ou do epílogo. Você pode percorrer o início da sequência até o final e usar uma tabela de pesquisa ou dispositivo semelhante para determinar quanto tempo o opcode correspondente é.
 
-O endereçamento de deslocamento após o índice não é permitido em um prólogo. Todos os intervalos de deslocamento (#Z) correspondem à codificação de endereçamento STP/STR, exceto `save_r19r20_x`, em que 248 é suficiente para todas as áreas de salvamento (10 registros int + 8 registros de FP + 8 registros de entrada).
+O endereçamento de deslocamento após o índice não é permitido em um prólogo. Todos os intervalos de deslocamento (#Z) correspondem à codificação de endereçamento de STP/STR, exceto `save_r19r20_x`, em que 248 é suficiente para todas as áreas de salvamento (10 registros int + 8 registros de FP + 8 registros de entrada).
 
-`save_next` deve seguir um par salvar para registro volátil int ou FP: `save_regp`, `save_regp_x`, `save_fregp`, `save_fregp_x`, `save_r19r20_x` ou outro `save_next`. Ele salva o próximo par de registro no próximo slot de 16 bytes na ordem "crescente". Um `save_next` refere-se ao primeiro par de registro de FP quando segue o `save-next` que denota o último par de registros int.
+`save_next` deve seguir um par salvar para registro volátil int ou FP: `save_regp`, `save_regp_x`, `save_fregp`, `save_fregp_x`, `save_r19r20_x`ou outra `save_next`. Ele salva o próximo par de registro no próximo slot de 16 bytes na ordem "crescente". Uma `save_next` refere-se ao primeiro par de registro de FP quando segue o `save-next` que denota o último par de registros int.
 
-Como o tamanho das instruções de retorno e salto regulares é o mesmo, não há necessidade de um código de desenrolação `end` separado para cenários de chamada tail.
+Como o tamanho das instruções de retorno e salto regulares é o mesmo, não há necessidade de um código de desenrolação `end` separado para cenários de chamada final.
 
-`end_c` foi projetado para manipular fragmentos de função não contíguos para fins de otimização. Um `end_c` que indica o fim dos códigos de desenrolamento no escopo atual deve ser seguido por outra série de código de desenrolação terminada com um real `end`. Os códigos de liberação entre `end_c` e `end` representam as operações de prólogo na região pai (prólogo "fantasma").  Mais detalhes e exemplos são descritos na seção abaixo.
+`end_c` foi projetado para manipular fragmentos de função não contíguos para fins de otimização. Um `end_c` que indica o fim dos códigos de desenrolamento no escopo atual deve ser seguido por outra série de código de desenrolação terminada com uma `end`real. Os códigos de liberação entre `end_c` e `end` representam as operações de prólogo na região pai (prólogo "fantasma").  Mais detalhes e exemplos são descritos na seção abaixo.
 
 ### <a name="packed-unwind-data"></a>Dados de desenrolamento compactados
 
-Para funções cujos Prologs e epilogs seguem o formato canônico descrito abaixo, os dados de desenrolamento compactados podem ser usados. Ele elimina a necessidade de um registro. xdata totalmente e reduz significativamente o custo de fornecer dados desenrolados. Os Prologs canônicos e os epilogs são projetados para atender aos requisitos comuns de uma função simples: Um que não requer um manipulador de exceção e que faça suas operações de configuração e desmontagem em uma ordem padrão.
+Para funções cujos Prologs e epilogs seguem o formato canônico descrito abaixo, os dados de desenrolamento compactados podem ser usados. Ele elimina a necessidade de um registro. xdata totalmente e reduz significativamente o custo de fornecer dados desenrolados. Os Prologs canônicos e os epilogs são projetados para atender aos requisitos comuns de uma função simples: um que não requer um manipulador de exceção e que faça suas operações de configuração e desmontagem em uma ordem padrão.
 
 O formato de um registro. pData com dados de desenrolamento compactados tem esta aparência:
 
@@ -350,45 +350,45 @@ Os campos são os seguintes:
 - O **tamanho do quadro** é um campo de 9 bits que indica o número de bytes de pilha alocados para essa função, dividido por 16. Funções que alocam mais de (8K-16) bytes de pilha devem usar um registro Full. xdata. Ele inclui a área da variável local, a área de parâmetros de saída, a área de chamada int e FP salvas e a área de parâmetros de página inicial, mas exclui a área de alocação dinâmica.
 - **CR** é um sinalizador de 2 bits que indica se a função inclui instruções adicionais para configurar uma cadeia de quadros e o link de retorno:
   - 00 = função não encadeada, \<x29, o par de > do LR não é salvo na pilha.
-  - 01 = função não encadeada, o \<lr > é salvo na pilha
+  - 01 = função não encadeada, \<LR > é salvo na pilha
   - 10 = reservado;
-  - 11 = função encadeada, uma instrução de par de armazenamento/carga é usada em prólogo/epílogo \<x29, LR >
+  - 11 = função encadeada, uma instrução de par de loja/carga é usada em prólogo/epílogo \<x29, LR >
 - **H** é um sinalizador de 1 bit que indica se a função coloca o parâmetro inteiro registrado (x0-120) armazenando-os no início da função. (0 = não registra os registros em casa, 1 = residências).
 - **RegI** é um campo de 4 bits que indica o número de registros int não volátil (x19-x28) salvos no local da pilha canônica.
-- **RegF** é um campo de 3 bits que indica o número de registros FP não voláteis (D8-D15) salvos no local da pilha canônica. (RegF = 0: nenhum registro de FP é salvo; RegF > 0: RegF + 1 os registros de FP são salvos). Os dados de desenrolamento compactados não podem ser usados para a função que salvam apenas um registro de FP.
+- **RegF** é um campo de 3 bits que indica o número de registros FP não voláteis (D8-D15) salvos no local da pilha canônica. (RegF = 0: nenhum registro de FP é salvo; RegF > 0: RegF + 1 registros de FP são salvos). Os dados de desenrolamento compactados não podem ser usados para a função que salvam apenas um registro de FP.
 
-Os logs canônicos que se enquadram nas categorias 1, 2 (sem a área de parâmetro de saída), 3 e 4 na seção acima podem ser representados pelo formato de desenrolamento embalado.  O epilogs para funções canônicas segue um formato semelhante, exceto **H** não tem efeito, a instrução `set_fp` é omitida e a ordem das etapas e as instruções em cada etapa são invertidas no epílogo. O algoritmo para o pacote. xdata segue estas etapas, detalhadas na tabela a seguir:
+Os logs canônicos que se enquadram nas categorias 1, 2 (sem a área de parâmetro de saída), 3 e 4 na seção acima podem ser representados pelo formato de desenrolamento embalado.  O epilogs para funções canônicas segue um formato semelhante, exceto **H** não tem efeito, a instrução `set_fp` é omitida e a ordem das etapas e as instruções em cada etapa são revertidas no epílogo. O algoritmo para o pacote. xdata segue estas etapas, detalhadas na tabela a seguir:
 
-Etapa 0: Pré-computação do tamanho de cada área.
+Etapa 0: pré-computação do tamanho de cada área.
 
-Etapa 1: Salvar chamadas int-registros salvos.
+Etapa 1: salvar int Callum-registros salvos.
 
-Etapa 2: Esta etapa é específica para o tipo 4 nas seções iniciais. a LR é salva no final da área de int.
+Etapa 2: esta etapa é específica para o tipo 4 nas seções iniciais. a LR é salva no final da área de int.
 
-Etapa 3: Salve os registros de chamada FP-salvo.
+Etapa 3: salvar os registros de chamada FP-Saved.
 
-Etapa 4: Salve os argumentos de entrada na área de parâmetros de início.
+Etapa 4: salvar os argumentos de entrada na área de parâmetros de início.
 
-Etapa 5: Aloque a pilha restante, incluindo a área local, \<x29, o par de > do LR e a área de parâmetros de saída. 5a corresponde ao tipo canônico 1. 5b e 5C são para o tipo canônico 2. 5D e 5e são para o tipo 3 e o tipo 4.
+Etapa 5: alocar a pilha restante, incluindo a área local, \<x29, o > do par e a área de parâmetro de saída. 5a corresponde ao tipo canônico 1. 5b e 5C são para o tipo canônico 2. 5D e 5e são para o tipo 3 e o tipo 4.
 
 Etapa #|Valores de sinalizador|n º de instruções|Opcode|Código de desenrolamento
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **RegI** <= 10|RegIt/2 + **regi** % 2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+1|0 < **RegI** <= 10|RegIt/2 + **regi** %2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
 2|**CR**= = 01 *|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
-3|0 < **RegF** <=7|(RegF + 1) / 2 +<br/>(RegF + 1)% 2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
+3|0 < **RegF** <=7|(RegF + 1) / 2 +<br/>(RegF + 1) %2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
 4|**H** == 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
 5a|**CR** = = 11 & & #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
 5b|**CR** = = 11 & &<br/>512 < #locsz < = 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
 5C|**CR** = = 11 & & #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5D|(**CR** = = 00 \| @ NO__T-2 **CR**= = 01) & &<br/>#locsz < = 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
-5E|(**CR** = = 00 \| @ NO__T-2 **CR**= = 01) & &<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+5D|(**CR** = = 00 \|\| **CR**= = 01) & &<br/>#locsz < = 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
+5E|(**CR** = = 00 \|\| **CR**= = 01) & &<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-\* se **CR** = = 01 e **RegI** for um número ímpar, Step 2 e Last save_rep na etapa 1 serão mesclados em um save_regp.
+\* se **CR** = = 01 e **RegI** for um número ímpar, a etapa 2 e a última save_rep na etapa 1 serão mescladas em uma save_regp.
 
-\* @ no__t-1 se **regit** == **CR** = = 0 e **RegF** ! = 0, o primeiro STP para o ponto flutuante fará a predecrementação.
+\*\* se **regit** == **CR** = = 0 e **RegF** ! = 0, o primeiro STP para o ponto flutuante fará a predecrementação.
 
-\* @ no__t-1 @ no__t-2 nenhuma instrução correspondente a `mov x29,sp` está presente no epílogo. Os dados desenrolados compactados não poderão ser usados se uma função exigir a restauração do SP de x29.
+\*\*\* nenhuma instrução correspondente ao `mov x29,sp` está presente no epílogo. Os dados desenrolados compactados não poderão ser usados se uma função exigir a restauração do SP de x29.
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>Desenrolar Prologs parciais e epilogs
 
@@ -476,11 +476,11 @@ Um caso típico de fragmentos de função é "separação de código" com esse c
 
    Somente o prólogo deve ser descrito. Isso não pode ser representado no formato Compact. pData. No caso Full. xdata, ele pode ser representado pela definição de epílogo Count = 0. Consulte a região 1 no exemplo acima.
 
-   Códigos de liberação: `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
+   Códigos de desenrolação: `set_fp`, `save_regp 0,240`, `save_fplr_x_256``end`.
 
 1. Somente epilogs (região 2: prólogo está na região do host)
 
-   Supõe-se que, pelo controle de tempo que salta nessa região, todos os códigos de prólogo foram executados. O desenrolamento parcial pode ocorrer em epilogs da mesma maneira que em uma função normal. Esse tipo de região não pode ser representado por Compact. pData. No registro Full. xdata, ele pode ser codificado com um prólogo "fantasma", com colchetes por um par de códigos de desenrolamento `end_c` e `end`.  O @no__t inicial-0 indica que o tamanho de prólogo é zero. Epílogo o índice de início dos pontos de epílogo únicos para `set_fp`.
+   Supõe-se que, pelo controle de tempo que salta nessa região, todos os códigos de prólogo foram executados. O desenrolamento parcial pode ocorrer em epilogs da mesma maneira que em uma função normal. Esse tipo de região não pode ser representado por Compact. pData. No registro Full. xdata, ele pode ser codificado com um prólogo "fantasma", com colchetes por um `end_c` e um par de código desenrolar `end`.  O `end_c` inicial indica que o tamanho de prólogo é zero. Epílogo o índice de início dos pontos de epílogo únicos para `set_fp`.
 
    Código de desenrolamento para a região 2: `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
 
@@ -521,7 +521,7 @@ Outro caso mais complicado de fragmentos de função é "disposição de reduç�
 
 No prólogo da região 1, o espaço da pilha é pré-alocado. Você pode ver que a região 2 terá o mesmo código de desenrolação mesmo que ele seja movido para fora de sua função de host.
 
-Região 1: `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end` com índice de início epílogo aponta para `set_fp` como de costume.
+Região 1: `set_fp`, `save_regp 0,240`, `save_fplr_x_256``end` com os pontos de índice inicial do epílogo para `set_fp` como de costume.
 
 Região 2: `save_regp 2, 224`, `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`. Epílogo Iniciar índice aponta para o primeiro código de desenrolação `save_regp 2, 224`.
 
@@ -535,7 +535,7 @@ Se um fragmento não tiver prólogo e nenhum epílogo, ele ainda exigirá seu pr
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="example-1-frame-chained-compact-form"></a>Exemplo 1: Estrutura encadeada, formato compacto
+### <a name="example-1-frame-chained-compact-form"></a>Exemplo 1: estrutura encadeada, formato compacto
 
 ```asm
 |Foo|     PROC
@@ -553,7 +553,7 @@ Se um fragmento não tiver prólogo e nenhum epílogo, ele ainda exigirá seu pr
     ;Flags[SingleProEpi] functionLength[492] RegF[0] RegI[1] H[0] frameChainReturn[Chained] frameSize[2080]
 ```
 
-### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Exemplo 2: Encadeamento de quadros, formulário completo com prólogo de espelho & epílogo
+### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Exemplo 2: encadeamento de quadros, formulário completo com prólogo de espelho & epílogo
 
 ```asm
 |Bar|     PROC
@@ -587,7 +587,7 @@ Se um fragmento não tiver prólogo e nenhum epílogo, ele ainda exigirá seu pr
 
 Epílogo Start index [0] aponta para a mesma sequência de código de desenrolamento de prólogo.
 
-### <a name="example-3-variadic-unchained-function"></a>Exemplo 3: Função não encadeada Variadic
+### <a name="example-3-variadic-unchained-function"></a>Exemplo 3: Variadic função não encadeada
 
 ```asm
 |Delegate| PROC

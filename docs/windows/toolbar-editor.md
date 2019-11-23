@@ -107,13 +107,13 @@ O **Editor de barra de ferramentas** permite que você:
 
 1. Na caixa de diálogo **Adicionar recurso** , selecione **barra de ferramentas** na lista **tipo de recurso** e escolha **novo**.
 
-   Se um sinal de adição **+** () aparecer ao lado do tipo de recurso **da barra de ferramentas** , isso significará que os modelos de barra de ferramentas estão disponíveis. Selecione o sinal de adição para expandir a lista de modelos, selecione um modelo e escolha **novo**.
+   Se um sinal de adição ( **+** ) aparecer ao lado do tipo de recurso **da barra de ferramentas** , isso significará que os modelos de barra de ferramentas estão disponíveis. Selecione o sinal de adição para expandir a lista de modelos, selecione um modelo e escolha **novo**.
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Para converter bitmaps em recursos da barra de ferramentas
 
 1. Abra um recurso de bitmap existente no [Editor de imagens](../windows/image-editor-for-icons.md). Se o bitmap ainda não estiver no arquivo *. rc* , clique com o botão direito do mouse no arquivo *. rc* e escolha **importar**e, em seguida, navegue até o bitmap que você deseja adicionar ao arquivo *. rc* e selecione **abrir**.
 
-1. Acesse o menu**Editor da barra de ferramentas**de **imagem** > .
+1. Vá para a **imagem** de menu > **Editor de barra de ferramentas**.
 
    A caixa de diálogo **novo recurso de barra de ferramentas** é exibida. Você pode alterar a largura e a altura das imagens de ícone para corresponder ao bitmap. A imagem da barra de ferramentas é exibida no **Editor da barra de ferramentas**.
 
@@ -134,7 +134,7 @@ O **Editor de barra de ferramentas** permite que você:
 
    - Atribua uma ID ao botão em branco na extremidade direita da barra de ferramentas. Você pode fazer isso editando a propriedade **ID** na [janela Propriedades](/visualstudio/ide/reference/properties-window). Por exemplo, você pode desejar dar um botão de barra de ferramentas com a mesma ID como uma opção de menu. Nesse caso, use a caixa de listagem suspensa para selecionar a **ID** da opção de menu.
 
-   - Selecione o botão em branco na extremidade direita da barra de ferramentas no painel **exibição da barra de ferramentas** e comece a desenhar. Uma ID de comando de botão padrão é atribuída\<(ID_BUTTON n >).
+   - Selecione o botão em branco na extremidade direita da barra de ferramentas no painel **exibição da barra de ferramentas** e comece a desenhar. Uma ID de comando de botão padrão é atribuída (ID_BUTTON\<n >).
 
 #### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Para adicionar uma imagem a uma barra de ferramentas como um botão
 
@@ -145,11 +145,11 @@ O **Editor de barra de ferramentas** permite que você:
    > [!NOTE]
    > Se você abrir a imagem no Visual Studio, ela será aberta no **Editor de imagem**. Você também pode abrir a imagem em outros programas gráficos.
 
-1. Vá para o menu **Editar** > **cópia**.
+1. Vá para o menu **editar** > **cópia**.
 
 1. Alterne para a barra de ferramentas selecionando sua guia na parte superior da janela de origem.
 
-1. Vá para o menu **Editar** > **colar**.
+1. Vá para o menu **editar** > **colar**.
 
    A imagem será exibida na barra de ferramentas como um novo botão.
 
@@ -163,7 +163,7 @@ No painel **exibição da barra de ferramentas** , arraste o botão que você de
 
 - Para inserir ou remover espaço entre os botões em uma barra de ferramentas, arraste-os para longe ou para outro na barra de ferramentas.
 
-|Ação|Etapa|
+|Action|Etapa|
 |------|------|
 |Para inserir um espaço antes de um botão que não é seguido por um espaço|Arraste o botão para a direita ou para baixo até que ele se sobreponha ao próximo botão sobre a metade.|
 |Para inserir um espaço antes de um botão seguido por um espaço e manter o espaço à direita|Arraste o botão até que a borda direita ou inferior esteja apenas tocando no botão Avançar ou simplesmente sobreponha-o.|
@@ -189,20 +189,20 @@ Por exemplo, para ver a dica de ferramenta do botão **Imprimir** no **WordPad**
 
 1. Abra o **WordPad**.
 
-1. Focalize o ponteiro do mouse sobre o botão da barra de ferramentas imprimir `Print` e observe que a palavra agora está flutuando no ponteiro do mouse.
+1. Focalize o ponteiro do mouse sobre o botão da barra de ferramentas **Imprimir** e observe que a palavra `Print` agora está flutuando no ponteiro do mouse.
 
 1. Examine a barra de status na parte inferior da janela do **WordPad** e observe que agora ela mostra o texto `Prints the active document`.
 
-`Print`é o nome da dica de `Prints the active document` ferramenta e é a descrição do botão da barra de status.
+`Print` é o nome da dica de ferramenta e `Prints the active document` é a descrição do botão da barra de status.
 
-Se você quiser esse efeito usando o **Editor de barra de ferramentas**, defina a `Prints the active document\nPrint`propriedade **prompt** como.
+Se você quiser esse efeito usando o **Editor da barra de ferramentas**, defina a propriedade **prompt** como `Prints the active document\nPrint`.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 MFC ou ATL
 
 ## <a name="see-also"></a>Consulte também
 
-[Menus e outros recursos](/windows/win32/menurc/resources)
-[dos editores de recursos](../windows/resource-editors.md)<br/>
+[Menus e outros recursos](../windows/resource-editors.md)
+[dos editores de recursos](/windows/win32/menurc/resources)<br/>
 [Propriedades do botão de barra de ferramentas](../windows/toolbar-button-properties.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Classe Platform::Collections::Vector
+title: '{1&gt;Classe Platform::Collections::Vector&lt;1}'
 ms.date: 10/01/2019
 ms.topic: reference
 f1_keywords:
@@ -28,7 +28,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/02/2019
 ms.locfileid: "71816573"
 ---
-# <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
+# <a name="platformcollectionsvector-class"></a>{1&gt;Classe Platform::Collections::Vector&lt;1}
 
 Representa uma coleção sequencial de objetos que podem ser acessados separadamente por índice. Implementa [Windows:: Foundation:: Collections:: IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) para ajudar com a [vinculação de dados](/windows/uwp/data-binding/data-binding-in-depth)XAML.
 
@@ -57,9 +57,9 @@ Os tipos permitidos são:
 
 1. classe ref pública^
 
-1. estrutura de valor
+1. {1&gt;estrutura de valor&lt;1}
 
-1. classe de enum pública
+1. {1&gt;classe enum pública&lt;1}
 
 A classe **vector** é a C++ implementação concreta da interface [Windows:: Foundation:: Collections:: IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) .
 
@@ -69,13 +69,13 @@ Se você tentar usar um tipo de **vetor** em um valor de retorno público ou par
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[Vector::Vector](#ctor)|Inicializa uma nova instância da classe Vector.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[Vetor:: Append](#append)|Insere o item especificado após o último item no Vector atual.|
 |[Vetor:: Clear](#clear)|Exclui todos os elementos no Vector atual.|
@@ -91,18 +91,18 @@ Se você tentar usar um tipo de **vetor** em um valor de retorno público ou par
 |[Vector::SetAt](#setat)|Atribui o valor especificado ao elemento no Vector atual que é identificado pelo índice especificado.|
 |[Vetor:: Size](#size)|Retorna o número de elementos no objeto Vector atual.|
 
-### <a name="events"></a>Events
+### <a name="events"></a>Eventos
 
 |||
 |-|-|
-|Nome|Descrição|
-|evento [Windows:: Foundation:: Collection:: VectorChangedEventHandler @ no__t-1T > ^ vectorchanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Ocorre quando o Vector é alterado.|
+|{1&gt;Nome&lt;1}|Descrição|
+|evento [Windows:: Foundation:: Collection:: VectorChangedEventHandler\<t > ^ vectorchanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Ocorre quando o Vector é alterado.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `Vector`
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** collection.h
 
@@ -143,13 +143,13 @@ Retorna um iterador que aponta para o primeiro elemento em Vector.
 virtual Windows::Foundation::Collections::IIterator <T>^ First();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador que aponta para o primeiro elemento em Vector.
 
 ### <a name="remarks"></a>Comentários
 
-Uma maneira conveniente de manter o iterador retornado pelo primeiro () é atribuir o valor de retorno a uma variável declarada com a palavra-chave de dedução de tipo **automático** . Por exemplo: `auto x = myVector->First();`. Este iterador conhece a duração da coleta.
+Uma maneira conveniente de manter o iterador retornado pelo primeiro () é atribuir o valor de retorno a uma variável declarada com a palavra-chave de dedução de tipo **automático** . Por exemplo, `auto x = myVector->First();`. Este iterador conhece a duração da coleta.
 
 Quando você precisar de um par de iteradores para passar para uma função STL, use as funções gratuitas [Windows:: Foundation:: coleções:: Begin](../cppcx/begin-function.md) e [Windows:: Foundation:: Collections:: End](../cppcx/end-function.md)
 
@@ -168,7 +168,7 @@ virtual T GetAt(unsigned int index);
 *index*<br/>
 Um inteiro não assinado com base zero que especifica um determinado elemento no objeto Vector.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O elemento especificado pelo parâmetro de *índice* . O tipo de elemento é definido pelo TypeName de *T* .
 
@@ -192,13 +192,13 @@ O índice com base zero do início dos itens a serem recuperados.
 *dest*<br/>
 Uma matriz de itens alocada pelo chamador que começa no elemento especificado por *startIndex* e termina no último elemento no vetor.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O número de itens recuperados.
 
 ### <a name="remarks"></a>Comentários
 
-Esta função não se destina a ser usada diretamente pelo código do cliente. Ele é usado internamente na [função to_vector](../cppcx/to-vector-function.md) para habilitar a conversão eficiente de Platform:: vector instâncias para instâncias std:: vector.
+Esta função não se destina a ser usada diretamente pelo código do cliente. Ele é usado internamente na [função to_vector](../cppcx/to-vector-function.md) para permitir a conversão eficiente de instâncias de plataforma:: vector para instâncias std:: vector.
 
 ## <a name="getview"></a>Método Vector:: GetView
 
@@ -210,7 +210,7 @@ Retorna uma exibição somente leitura de um Vector; isto é, um IVectorView.
 Windows::Foundation::Collections::IVectorView<T>^ GetView();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um objeto IVectorView.
 
@@ -234,7 +234,7 @@ O índice de base zero do item se o *valor* do parâmetro for encontrado; caso c
 
 O parâmetro de *índice* será 0 se o item for o primeiro elemento do vetor ou o item não for encontrado. Se o valor de retorno for **true**, o item foi encontrado e será o primeiro elemento; caso contrário, o item não foi encontrado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se o item especificado for encontrado; caso contrário, **false**.
 
@@ -328,7 +328,7 @@ Retorna o número de elementos no objeto Vector atual.
 virtual property unsigned int Size;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O número de elementos no Vector atual.
 

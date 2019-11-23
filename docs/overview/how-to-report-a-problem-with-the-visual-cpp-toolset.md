@@ -89,11 +89,11 @@ Copie e cole toda a linha de comando em seu relatório.
 
 Precisamos de uma descrição detalhada do problema encontrado. Isso serve para que possamos garantir que teremos o mesmo efeito em nossos computadores. Também é útil às vezes que saibamos o que você estava tentando fazer e o que você esperava que acontecesse.
 
-Uma boa descrição fornece as **mensagens de erro exatas** emitidas pelo conjunto de ferramentas ou o comportamento de tempo de execução exato que você vir. Precisamos dessas informações para confirmar se reproduzimos o problema corretamente. Inclua **toda** a saída do compilador, não apenas a última mensagem de erro. Precisamos ver tudo o que levou ao problema relatado. Se você puder duplicar o problema usando o compilador de linha de comando, essa saída do compilador é o que preferimos. O IDE e outros sistemas de compilação podem filtrar as mensagens de erro que você vê ou capturar somente a primeira linha de uma mensagem de erro.
+Uma boa descrição fornece as **mensagens de erro exatas** emitidas pelo conjunto de ferramentas ou o comportamento de runtime exato que você vir. Precisamos dessas informações para confirmar se reproduzimos o problema corretamente. Inclua **toda** a saída do compilador, não apenas a última mensagem de erro. Precisamos ver tudo o que levou ao problema relatado. Se você puder duplicar o problema usando o compilador de linha de comando, essa saída do compilador é o que preferimos. O IDE e outros sistemas de compilação podem filtrar as mensagens de erro que você vê ou capturar somente a primeira linha de uma mensagem de erro.
 
 Se o problema é que o compilador aceita código inválido e não gera um diagnóstico, inclua isso em seu relatório.
 
-Para relatar um problema de comportamento de tempo de execução, inclua uma **cópia exata** do que o programa imprime e o que você espera ver. Idealmente, você vai inserir isso na saída da instrução em si, por exemplo, `printf("This should be 5: %d\n", actual_result);`. Se o programa falhar ou travar, mencione isso também.
+Para relatar um problema de comportamento de runtime, inclua uma **cópia exata** do que o programa imprime e o que você espera ver. Idealmente, você vai inserir isso na saída da instrução em si, por exemplo, `printf("This should be 5: %d\n", actual_result);`. Se o programa falhar ou travar, mencione isso também.
 
 Adicione outros detalhes que puderem nos ajudar a diagnosticar o problema encontrado, como soluções alternativas que você possa ter descoberto. Evite repetir informações encontradas em outro lugar no relatório.
 
@@ -111,7 +111,7 @@ Uma boa reprodução é:
 
 - **Com a versão mais recente do compilador.** As reproduções devem usar a atualização mais recente da versão mais recente do conjunto de ferramentas sempre que possível. Ou use a versão mais recente de pré-lançamento da próxima atualização ou da próxima versão principal. Em versões mais recentes, os problemas que podem ocorrer nas versões mais antigas do conjunto de ferramentas frequentemente foram corrigidos. As correções são implementadas em versões mais antigas apenas em circunstâncias excepcionais.
 
-- **Comparadas com outros compiladores**, se for relevante. As reproduções que envolvem código C++ portátil devem verificar o comportamento em relação a outros compiladores se possível. O padrão C++ acaba por determinar a correção do programa e nenhum compilador é perfeito. No entanto, quando o Clang e o GCC aceitam seu código sem um diagnóstico e o MSVC não, você provavelmente encontrou um bug em nosso compilador. (Outras possibilidades incluem diferenças de comportamento entre o Unix e o Windows, níveis diferentes de implementação dos padrões de C++ e assim por diante.) Se todos os compiladores rejeitam seu código, é provável que o código esteja incorreto. Ver mensagens de erro diferentes pode ajudá-lo a diagnosticar o problema por conta própria.
+- **Comparadas com outros compiladores**, se for relevante. As reproduções que envolvem código C++ portátil devem verificar o comportamento em relação a outros compiladores se possível. O padrão C++ acaba por determinar a correção do programa e nenhum compilador é perfeito. No entanto, quando o Clang e o GCC aceitam seu código sem um diagnóstico e o MSVC não, você provavelmente encontrou um bug em nosso compilador. (Outras possibilidades incluem diferenças no comportamento do UNIX e do Windows, ou níveis C++ diferentes de implementação de padrões e assim por diante.) Quando todos os compiladores rejeitam seu código, é provável que seu código esteja incorreto. Ver mensagens de erro diferentes pode ajudá-lo a diagnosticar o problema por conta própria.
 
    Você pode encontrar listas de compiladores online nos quais pode testar seu código em [Compiladores C++ Online](https://isocpp.org/blog/2013/01/online-c-compilers) no site do ISO C++ ou nesta [Lista de Compiladores C++ Online](https://arnemertz.github.io/online-compilers/) no GitHub. Alguns exemplos específicos incluem [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) e [Coliru](https://coliru.stacked-crooked.com/).
 
@@ -219,7 +219,7 @@ Se a vinculação incremental está habilitada e a falha ocorreu apenas após um
 
 #### <a name="bad-code-generation"></a>Geração de código incorreto
 
-A geração de código incorreto é rara. Isso acontece quando o compilador gera código incorreto por engano, o que faz com que o aplicativo falhe no tempo de execução. Em vez disso, ele deve gerar código ou detectar um problema no momento da compilação. Se você acreditar que o problema encontrado resulta na geração de código incorreto, trate o relatório da mesma forma que uma [Falha de back-end (geração de código)](#backend-code-generation-crash).
+A geração de código incorreto é rara. Isso acontece quando o compilador gera código incorreto por engano, o que faz com que o aplicativo falhe no runtime. Em vez disso, ele deve gerar código ou detectar um problema no momento da compilação. Se você acreditar que o problema encontrado resulta na geração de código incorreto, trate o relatório da mesma forma que uma [Falha de back-end (geração de código)](#backend-code-generation-crash).
 
 Para esse tipo de falha, ofereça uma [reprodução de vinculação](#link-repros) se estiver usando o argumento de linha de comando **/GL** para cl.exe. Caso contrário, forneça uma [Reprodução pré-processada](#preprocessed-repros).
 
@@ -318,7 +318,7 @@ Finalmente, anexe os arquivos de reprodução pré-processados (*nomedoarquivo*.
 
 ### <a name="link-repros"></a>Reproduções de vinculação
 
-Uma *reprodução de link* é o conteúdo gerado pelo vinculador de um diretório, especificado pela variável de ambiente **link @ no__t-2repro** ou como um argumento para a opção vinculador [/LINKREPRO](../build/reference/linkrepro.md) . Ela contém artefatos de compilação que demonstram coletivamente um problema que acontece no tempo de vinculação. Os exemplos incluem uma falha de back-end que envolve a Geração de Código Durante o Tempo de Vinculação (LTCG) ou uma falha de vinculador. Esses artefatos de compilação são os necessários como entrada de vinculador para que o problema possa ser reproduzido. Uma reprodução de link pode ser criada facilmente usando essa variável de ambiente. Ela habilita o recurso de geração de reprodução interno do vinculador.
+Uma *reprodução de link* é o conteúdo gerado pelo vinculador de um diretório, especificado pelo **link\_** variável de ambiente de reprodução ou como um argumento para a opção de vinculador [/LINKREPRO](../build/reference/linkrepro.md) . Ela contém artefatos de compilação que demonstram coletivamente um problema que acontece no tempo de vinculação. Os exemplos incluem uma falha de back-end que envolve a Geração de Código Durante o Tempo de Vinculação (LTCG) ou uma falha de vinculador. Esses artefatos de compilação são os necessários como entrada de vinculador para que o problema possa ser reproduzido. Uma reprodução de link pode ser criada facilmente usando essa variável de ambiente. Ela habilita o recurso de geração de reprodução interno do vinculador.
 
 #### <a name="to-generate-a-link-repro-using-the-link_repro-environment-variable"></a>Para gerar uma reprodução de link usando a variável de ambiente link_repro
 
@@ -330,7 +330,7 @@ Uma *reprodução de link* é o conteúdo gerado pelo vinculador de um diretóri
 
 1. Digite **mkdir linkrepro** para criar um diretório chamado *linkrepro* para a reprodução do link. Você pode usar um nome diferente para capturar outra reprodução de link.
 
-1. Digite o comando **set link\_repro=linkrepro** para definir a variável de ambiente **link\_repro** para o diretório que você criou. Se o Build for executado de um diretório diferente, como geralmente é o caso para projetos mais complexos, defina o **link @ no__t-1repro** como o caminho completo para o diretório de reprodução do link em vez disso.
+1. Digite o comando **set link\_repro=linkrepro** para definir a variável de ambiente **link\_repro** para o diretório que você criou. Se o Build for executado de um diretório diferente, como geralmente é o caso para projetos mais complexos, defina o **link\_reprodução** para o caminho completo para o diretório de reprodução do link em vez disso.
 
 1. Para compilar o projeto de reprodução no Visual Studio, na janela do console de prompt de comando do desenvolvedor, digite o comando **devenv**. Isso garante que o valor da variável de ambiente **link\_repro** esteja visível para o Visual Studio. Para compilar o projeto na linha de comando, use os argumentos de linha de comando capturados acima para duplicar a compilação de reprodução.
 
@@ -342,13 +342,13 @@ Uma *reprodução de link* é o conteúdo gerado pelo vinculador de um diretóri
 
 Por fim, empacote a reprodução ao compactar todo o diretório linkrepro em um arquivo. zip ou semelhante e anexá-lo ao relatório.
 
-A opção de vinculador **/LINKREPRO** tem o mesmo efeito que a variável de ambiente **link @ no__t-2repro** . Você pode usar a opção [/LINKREPROTARGET](../build/reference/linkreprotarget.md) para especificar o nome a ser filtrado para a reprodução do link gerado. Para usar o **/LINKREPROTARGET**, você também deve especificar a opção de vinculador **/out** .
+A opção de vinculador **/LINKREPRO** tem o mesmo efeito que o **link\_** variável de ambiente de reprodução. Você pode usar a opção [/LINKREPROTARGET](../build/reference/linkreprotarget.md) para especificar o nome a ser filtrado para a reprodução do link gerado. Para usar o **/LINKREPROTARGET**, você também deve especificar a opção de vinculador **/out** .
 
 #### <a name="to-generate-a-link-repro-using-the-linkrepro-option"></a>Para gerar uma reprodução de link usando a opção/LINKREPRO
 
 1. Crie um diretório para manter a reprodução do link. Vamos nos referir ao caminho de diretório completo que você criará como _diretório-caminho_. Use aspas duplas em volta do caminho se ele incluir espaços.
 
-1. Adicione o comando **/LINKREPRO:** _Directory-Path_ à linha de comando do vinculador. No Visual Studio, abra a caixa de diálogo **páginas de propriedades** do seu projeto. Selecione a **página de propriedades de** **linha de comando**  > **vinculador** > . Em seguida, insira a opção **/LINKREPRO:** _Directory-Path_ na caixa **Opções adicionais** . Escolha **OK** para salvar suas alterações.
+1. Adicione o comando **/LINKREPRO:** _Directory-Path_ à linha de comando do vinculador. No Visual Studio, abra a caixa de diálogo **páginas de propriedades** do seu projeto. Selecione a **página de propriedades de** linha de **comando** do > **vinculador > conexão** . Em seguida, insira a opção **/LINKREPRO:** _Directory-Path_ na caixa **Opções adicionais** . Escolha **OK** para salvar suas alterações.
 
 1. Compile seu projeto de reprodução e confirme se o problema esperado ocorreu.
 
@@ -356,7 +356,7 @@ Por fim, empacote a reprodução ao compactar o diretório de reprodução do li
 
 ### <a name="other-repros"></a>Outras reproduções
 
-Se você não puder reduzir o problema para um único arquivo de origem ou reprodução pré-processado, e o problema não exigir uma reprodução de link, podemos investigar um projeto do IDE. Todas as diretrizes sobre como criar uma boa reprodução ainda se aplicam: O código deve ser mínimo e independente. O problema deve ocorrer em nossas ferramentas mais recentes e, se for relevante, não deve ser visto em outros compiladores.
+Se você não puder reduzir o problema para um único arquivo de origem ou reprodução pré-processado, e o problema não exigir uma reprodução de link, podemos investigar um projeto do IDE. Todas as orientações sobre como criar uma boa reprodução ainda se aplicam: o código deve ser mínimo e autônomo. O problema deve ocorrer em nossas ferramentas mais recentes e, se for relevante, não deve ser visto em outros compiladores.
 
 Crie sua reprodução como um projeto do IDE mínimo e empacote-o compactando toda a estrutura do diretório em um arquivo .zip ou semelhante e anexe-o ao relatório.
 

@@ -30,7 +30,7 @@ Você pode habilitar os avisos que normalmente estão desativados por padrão us
 
 - [/Wall](../build/reference/compiler-option-warning-level.md)
 
-   `/Wall` habilita todos os avisos que são desativados por padrão. Se você usar essa opção, poderá desativar os avisos individuais usando a opção [/WD](../build/reference/compiler-option-warning-level.md) .
+   `/Wall` habilita todos os avisos que estão desativados por padrão. Se você usar essa opção, poderá desativar os avisos individuais usando a opção [/WD](../build/reference/compiler-option-warning-level.md) .
 
 - [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
@@ -60,13 +60,13 @@ Os avisos a seguir são desativados por padrão no Visual Studio 2015 e versões
 |[C4342](../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md) (nível 1)|alteração de comportamento: '*Function*' chamado, mas um operador membro foi chamado em versões anteriores|
 |[C4350](../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md) (nível 1)|alteração de comportamento: '*member1*' chamado em vez de '*membro2*'|
 |[C4355](../error-messages/compiler-warnings/compiler-warning-c4355.md)|'this' : usado na lista de inicializadores do membro base|
-|[C4365](../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md) (nível 4)|'*Action*': conversão de '*type_1*' para '*type_2*', incompatibilidade de assinada/não assinado|
+|[C4365](../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md) (nível 4)|'*ação*': conversão de '*type_1*' para '*type_2*', incompatibilidade de assinada/não assinado|
 |C4370 (nível 3)|layout da classe foi alterado de uma versão anterior do compilador devido a empacotamento melhor|
 |[C4371](../error-messages/compiler-warnings/c4371.md) (nível 3)|'*ClassName*': o layout da classe pode ter mudado de uma versão anterior do compilador devido ao melhor empacotamento do membro '*Member*'|
 |C4388 (nível 4)|incompatibilidade de signed/unsigned|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (nível 2)|'*Function*': assinatura de função contém tipo '*Type*'; C++ os objetos não são seguros para passar entre o código puro e o misto ou nativo|
 |C4426 (nível 1)|os sinalizadores de otimização foram alterados após incluir o cabeçalho, pode ser devido a #pragma Optimize () <sup>14,1</sup>|
-|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (nível 4)|'*Class1*': O layout do objeto em/vd2 será alterado devido à base virtual '*class2*'|
+|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (nível 4)|'*Class1*': o layout de objeto em/vd2 será alterado devido à base virtual '*class2*'|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (nível 4)|dynamic_cast da base virtual '*Class1*' para '*class2*' poderia falhar em alguns contextos|
 |C4444 (nível 3)|top level '__unaligned' não é implementado nesse contexto|
 |[C4464](../error-messages/compiler-warnings/c4464.md) (nível 4)|o caminho de inclusão relativo contém '.. '|
@@ -100,7 +100,7 @@ Os avisos a seguir são desativados por padrão no Visual Studio 2015 e versões
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (nível 1)|dígrafos não suportados com -Ze. Sequência de caracteres '*dígrafo*' não interpretada como token alternativo para '*Char*'|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) (nível 3)|'*Instance*': construção de objeto estático local não é thread-safe|
 | C4643 (nível 4) | O C++ '*identificador*' de declaração de encaminhamento no namespace std não é permitido pelo padrão. <sup>15.8</sup> |
-|C4647 (nível 3)|alteração de comportamento: __is_pod (*Type*) tem um valor diferente em versões anteriores|
+|C4647 (nível 3)|alteração de comportamento: __is_pod (*tipo*) tem um valor diferente em versões anteriores|
 |C4654 (nível 4)|O código colocado antes da inclusão da linha de cabeçalho pré-compilado será ignorado. Adicione código ao cabeçalho pré-compilado. <sup>14.1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (nível 4)|'*Symbol*' não está definido como uma macro de pré-processador, substituindo por ' 0 ' para '*diretivas*'|
 |[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) (nível 4)|'*Symbol*': nenhum atributo de parâmetro direcional especificado, padronizando para [in]|
@@ -108,10 +108,10 @@ Os avisos a seguir são desativados por padrão no Visual Studio 2015 e versões
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (nível 1)|'*Function*': assinatura de membro não privado contém tipo nativo de assembly privado '*native_type*'|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (nível 4)|'*Function*': função não embutida|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (nível 3)|armazenando o resultado float de 32 bits na memória, possível perda de desempenho|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|o acesso volátil de '*expression*' está sujeito à configuração/volatile: @no__t&#124;-1iso MS >; Considere usar funções intrínsecas do __iso_volatile_load/Store|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|o acesso volátil de '*expression*' está sujeito a/volatile:\<&#124;ISO MS > Setting; Considere usar __iso_volatile_load funções intrínsecas/Store|
 |C4749 (nível 4)|com suporte condicional: offsetof aplicado ao tipo de layout não padrão '*Type*'|
 |C4767 (nível 4)|o nome da seção '*Symbol*' tem mais de 8 caracteres e será truncado pelo vinculador|
-|C4768 (nível 3)|atributos over_ declspec antes da especificação de vinculação serem ignorados|
+|C4768 (nível 3)|atributos de __declspec antes da especificação de vinculação serem ignorados|
 |C4774 (nível 4)|'*String*': cadeia de caracteres de formato esperada no *número* de argumento não é um literal de cadeia de caracteres|
 |C4777 (nível 4)|'*Function*': a cadeia de caracteres de formato '*String*' requer um argumento do tipo '*type1*', mas o *número* do argumento Variadic tem o tipo '*type2*'|
 |C4786 (nível 3)|'*Symbol*': o nome do objeto foi truncado para '*Number*' caracteres nas informações de depuração|
@@ -128,7 +128,7 @@ Os avisos a seguir são desativados por padrão no Visual Studio 2015 e versões
 |[C4917](../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md) (nível 1)|'*Declarador*': um GUID só pode ser associado a uma classe, interface ou namespace|
 |[C4928](../error-messages/compiler-warnings/compiler-warning-level-1-c4928.md) (nível 1)|inicialização de cópia ilegal; mais de uma conversão definida pelo usuário foi implicitamente aplicada|
 |[C4931](../error-messages/compiler-warnings/compiler-warning-level-4-c4931.md) (nível 4)|estamos supondo que a biblioteca de tipos foi criada para ponteiros de bit por número|
-|[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md) (nível 1)|reinterpret_cast usado entre classes relacionadas: '*Class1*' e '*class2*'|
+|[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md) (nível 1)|reinterpret_cast usado entre as classes relacionadas: '*Class1*' e '*class2*'|
 |C4962|'*Function*': otimizações guiadas por perfil desabilitadas porque otimizações fizeram com que os dados de perfil se tornem inconsistentes|
 |[C4986](../error-messages/compiler-warnings/compiler-warning-c4986.md) (nível 4)|'*Symbol*': a especificação de exceção não corresponde à declaração anterior|
 |C4987 (nível 4)|extensão não padrão usada: 'throw (...)'|
@@ -174,8 +174,8 @@ Esse aviso foi desativado por padrão nas versões do compilador antes do Visual
 
 |||
 |-|-|
-|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (nível 4)|faltando especificador de tipo - int assumido. Observação: C não dá mais suporte a default-int|
+|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (nível 4)|faltando especificador de tipo - int assumido. Observação: C não suporta mais default-int|
 
 ## <a name="see-also"></a>Consulte também
 
-[warning](../preprocessor/warning.md)
+[aviso](../preprocessor/warning.md)
