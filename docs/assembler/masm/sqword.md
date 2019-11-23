@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - SQWORD directive
 ms.assetid: 329245f1-af34-4540-a912-73e9045c47fa
-ms.openlocfilehash: 8457e14ce4d53df6dffbcea4ee1a83e19a23cc49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37350e3248ec5118bc60a31ae61feed364682c31
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210296"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393685"
 ---
 # <a name="sqword"></a>SQWORD
 
-Aloca e inicializa, opcionalmente, de 8 bytes com sinal de armazenamento para cada `initializer`. Também pode ser usado como um especificador de tipo em qualquer lugar que um tipo é legal.
+Allocates and optionally initializes 8 signed bytes of storage for each *initializer*. Also can be used as a type specifier anywhere a type is legal.
 
 ## <a name="syntax"></a>Sintaxe
 
-> name SQWORD initializer [[, initializer]]...
+> *name* **SQWORD** *initializer* ⟦ __,__ *initializer* ...⟧
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>
-[QWORD](../../assembler/masm/qword.md)<br/>
-[DQ](../../assembler/masm/dq.md)<br/>
+[Directives Reference](../../assembler/masm/directives-reference.md)\
+[QWORD](../../assembler/masm/qword.md)\
+[DQ](../../assembler/masm/dq.md)

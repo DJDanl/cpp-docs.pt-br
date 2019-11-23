@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - TBYTE directive
 ms.assetid: d5f96bb0-403c-413e-9e3c-2af1ce528da7
-ms.openlocfilehash: ff933455e3fb9134749ed0af0331b413f72860e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0a67133bf38eaaf8f14dfa7f1584bfc12ffe6fd
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216937"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393152"
 ---
 # <a name="tbyte"></a>TBYTE
 
-Aloca e inicializa opcionalmente 10 bytes de armazenamento para cada `initializer`. Também pode ser usado como um especificador de tipo em qualquer lugar que um tipo é legal.
+Allocates and optionally initializes 10 bytes of storage for each *initializer*. Can also be used as a type specifier anywhere a type is legal.
 
 ## <a name="syntax"></a>Sintaxe
 
-> [[nome]] TBYTEinitializer [[, inicializador]]...
+> ⟦*name*⟧ **TBYTE** *initializer* ⟦ __,__ *initializer* ...⟧
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>
-[DT](../../assembler/masm/dt.md)<br/>
+[Directives Reference](../../assembler/masm/directives-reference.md)\
+[DT](../../assembler/masm/dt.md)

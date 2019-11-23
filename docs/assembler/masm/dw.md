@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - DW directive
 ms.assetid: 451d0e24-b65b-4cbb-b81d-ea27680feaf3
-ms.openlocfilehash: 091404138e18cec96ffa47342b3e1c189ba614c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0f863fd77a0e17c486553185fa6f27513b70b37
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203987"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397749"
 ---
 # <a name="dw"></a>DW
 
-Aloca e inicializa, opcionalmente, uma palavra (2 bytes) de armazenamento para cada `initializer`. Também pode ser usado como um especificador de tipo em qualquer lugar que um tipo é legal. `DW` é um sinônimo de [WORD](../../assembler/masm/word.md).
+Allocates and optionally initializes a word (2 bytes) of storage for each *initializer*. Can also be used as a type specifier anywhere a type is legal. **DW** is a synonym of [WORD](../../assembler/masm/word.md).
 
 ## <a name="syntax"></a>Sintaxe
 
-> [[nome]] Inicializador de DW [[, inicializador]]...
+> ⟦*name*⟧ **DW** *initializer* ⟦ __,__ *initializer* ...⟧
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>
-[SWORD](../../assembler/masm/sword.md)<br/>
+[Directives Reference](../../assembler/masm/directives-reference.md)\
+[SWORD](../../assembler/masm/sword.md)

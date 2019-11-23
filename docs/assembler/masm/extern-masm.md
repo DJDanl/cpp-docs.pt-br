@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - EXTERN directive
 ms.assetid: 667d703d-3aaf-4139-a586-29bc5dab1aff
-ms.openlocfilehash: 30d1b3ae7c6676aeb97b91c7627da859525b9ce1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc66338d90b54ecb12ef3ab1aa56214fb445cb13
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203609"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397563"
 ---
 # <a name="extern-masm"></a>EXTERN (MASM)
 
-Define uma ou mais variáveis externas, rótulos ou símbolos chamados *nome* cujo tipo seja *tipo*.
+Defines one or more external variables, labels, or symbols called *name* whose type is *type*.
 
 ## <a name="syntax"></a>Sintaxe
 
-> EXTERN [[*langtype*]] *nome* [[(*altid*)]]: *tipo* [[, [[*langtype*]]  *nome da* [[(*altid*)]]: *tipo*]]...
+> **EXTERN** ⟦*language-type*⟧ *name* ⟦ __(__ *altid* __)__ ⟧ __:__ *type* ⟦ __,__ ⟦*language-type*⟧ *name* ⟦ __(__ *altid* __)__ ⟧ __:__ *type* ...⟧
 
 ## <a name="remarks"></a>Comentários
 
-O *tipo* pode ser [ABS](../../assembler/masm/operator-abs.md), quais importações *nome* como uma constante. Mesmo que [EXTRN](../../assembler/masm/extrn.md).
+The *type* can be [ABS](../../assembler/masm/operator-abs.md), which imports *name* as a constant. Same as [EXTRN](../../assembler/masm/extrn.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>
+[Referência de diretivas](../../assembler/masm/directives-reference.md)

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - TEXTEQU directive
 ms.assetid: 7c01df77-10d6-4555-8fe0-c5f7762df86d
-ms.openlocfilehash: 34d408bbe4234e004df50905e2cf881616af719a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e58c98b07a26e4c65f2c8e4a1f664b5f5045595f
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210073"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393179"
 ---
 # <a name="textequ"></a>TEXTEQU
 
-Atribui *textitem* à *nome*. O *textitem* pode ser uma cadeia de caracteres literal, uma constante precedida por um `%`, ou a cadeia de caracteres retornada por uma função de macro.
+Assigns *textitem* to *name*. The *textitem* can be a literal string, a constant preceded by a `%`, or the string returned by a macro function.
 
 ## <a name="syntax"></a>Sintaxe
 
-> name TEXTEQU [[textitem]]
+> *name* **TEXTEQU** ⟦*textitem*⟧
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

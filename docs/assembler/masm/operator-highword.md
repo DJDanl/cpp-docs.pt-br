@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator HIGHWORD
 - HIGHWORD operator
 ms.assetid: 6a3e4d60-e7b6-4cab-b4d7-d4cb7fb307c9
-ms.openlocfilehash: 907bac76016e702591e1a28a00275c53867955be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6982c17ad2699546bdd57cd7338f54cbb61941e
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200740"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396872"
 ---
 # <a name="operator-highword"></a>operador HIGHWORD
 
-Retorna os primeiros 16 bits de 32 bits baixos do *expressão*. Expressões MASM são valores de 64 bits.
+Returns the high 16 bits of the low 32 bits of *expression*. MASM expressions are 64-bit values.
 
 ## <a name="syntax"></a>Sintaxe
 
-> Expressão HIGHWORD
+> **HIGHWORD** *expression*
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de operadores](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

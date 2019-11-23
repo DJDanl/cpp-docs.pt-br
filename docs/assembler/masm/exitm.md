@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - EXITM directive
 ms.assetid: a3484d33-04a9-4791-8d53-3fc3bc7b417c
-ms.openlocfilehash: 8d9b1e118e8afd8e2f001d5b2afca5c3d449fa4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0fc40b6dad2785c02f097910f26b7465ddf5dbcc
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203140"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397570"
 ---
 # <a name="exitm"></a>EXITM
 
-Encerra a expansão do bloco de repetição ou macro atual e inicia o assembly da próxima instrução fora do bloco.
+Terminates expansion of the current repeat or macro block and begins assembly of the next statement outside the block.
 
 ## <a name="syntax"></a>Sintaxe
 
-> EXITM [[textitem]]
+> **EXITM** ⟦*textitem*⟧
 
 ## <a name="remarks"></a>Comentários
 
-Em uma função de macro *textitem* é o valor retornado.
+In a macro function, *textitem* is the value returned.
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

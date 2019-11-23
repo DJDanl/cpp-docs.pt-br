@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - ALIGN directive
 ms.assetid: 1c386b23-439f-4ec3-a6de-74427b25e47f
-ms.openlocfilehash: eb42b1952b3fd59438f0dd4c29d48c91c4d8864d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22b18f2e238c780377b84fc2be3eb6678686bb73
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166471"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399280"
 ---
 # <a name="align-masm"></a>ALIGN (MASM)
 
-O **ALINHAR** diretiva alinha o próximo elemento de dados ou a instrução em um endereço que é um múltiplo de seu parâmetro. O parâmetro deve ser uma potência de 2 (por exemplo, 1, 2, 4 e assim por diante) que é menor ou igual ao alinhamento de segmento.
+The **ALIGN** directive aligns the next data element or instruction on an address that is a multiple of its parameter. The parameter must be a power of 2 (for example, 1, 2, 4, and so on) that is less than or equal to the segment alignment.
 
 ## <a name="syntax"></a>Sintaxe
 
-> ALIGN [[*number*]]
+> **ALIGN** ⟦*number*⟧
 
 ## <a name="remarks"></a>Comentários
 
-O **ALINHAR** diretiva permite especificar o deslocamento de início de um elemento de dados ou uma instrução. Dados alinhados podem melhorar o desempenho, às custas de espaço desperdiçado entre os elementos de dados. Grandes melhorias de desempenho podem ser vistas quando os acessos a dados estão em limites que se ajustam a linhas de cache. Acessos em limites naturais para tipos nativos significa menos tempo gasto no hardware interno realinhamento microcódigo.
+The **ALIGN** directive allows you to specify the beginning offset of a data element or an instruction. Aligned data can improve performance, at the expense of wasted space between data elements. Large performance improvements can be seen when data accesses are on boundaries that fit within cache lines. Accesses on natural boundaries for native types means less time spent in internal hardware realignment microcode.
 
-A necessidade de instruções alinhadas é rara em processadores modernos que usam um modelo de endereçamento simples, mas podem ser necessário para destinos de salto no código mais antigo para outros modelos de endereçamento.
+The need for aligned instructions is rare on modern processors that use a flat addressing model, but may be required for jump targets in older code for other addressing models.
 
-Quando dados são alinhados, o espaço foi ignorado é preenchido com zeros. Quando as instruções estão alinhadas, o espaço foi ignorado é preenchido com instruções de NOP dimensionado adequadamente.
+When data is aligned, the skipped space is padded with zeroes. When instructions are aligned, the skipped space is filled with appropriately-sized NOP instructions.
 
 ## <a name="see-also"></a>Consulte também
 
-[EVEN](even.md)<br/>
-[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>
+[EVEN](even.md)\
+[Directives reference](directives-reference.md)
