@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - DT directive
 ms.assetid: 96c5c4e9-7053-49f0-946a-8088e178e79a
-ms.openlocfilehash: f41d5b2ff5fab35dae3d5b2125c5cd3a1b106058
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4e72bc0ffcbbb84ee9c66d385ad79a2a57b4657
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178469"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397758"
 ---
 # <a name="dt"></a>DT
 
-Aloca e inicializa opcionalmente 10 bytes de armazenamento para cada `initializer`. Também pode ser usado como um especificador de tipo em qualquer lugar que um tipo é legal. `DT` é um sinônimo de [TBYTE](../../assembler/masm/tbyte.md).
+Allocates and optionally initializes 10 bytes of storage for each *initializer*. Can also be used as a type specifier anywhere a type is legal. **DT** is a synonym of [TBYTE](../../assembler/masm/tbyte.md).
 
 ## <a name="syntax"></a>Sintaxe
 
-> [[nome]] Inicializador DT [[, inicializador]]...
+> ⟦*name*⟧ **DT** *initializer* ⟦ __,__ *initializer* ...⟧
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](../../assembler/masm/directives-reference.md)

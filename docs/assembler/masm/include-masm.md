@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - INCLUDE directive
 ms.assetid: 1c7964ee-715c-414e-a45e-74af93476eb4
-ms.openlocfilehash: e63d7cb85ad5379adcc1beea3c3c96eff0d91339
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e04cd761a7456c7337669822be87e8e5da8e805b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184535"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397340"
 ---
 # <a name="include-masm"></a>INCLUDE (MASM)
 
-Inserções de código-fonte de arquivo de origem fornecido por *filename* no arquivo de origem durante o assembly.
+Inserts source code from the source file given by *filename* into the current source file during assembly.
 
 ## <a name="syntax"></a>Sintaxe
 
-> INCLUIR nome de arquivo
+> **INCLUDE** *filename*
 
 ## <a name="remarks"></a>Comentários
 
-O *filename* deverão ser colocados entre colchetes angulares, se ele inclui uma barra invertida, ponto e vírgula, maior-que símbolo, menor-que o símbolo, marca de aspas simples ou aspas duplas.
+The *filename* must be enclosed in angle brackets if it includes a backslash, semicolon, greater-than symbol, less-than symbol, single quotation mark, or double quotation mark.
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

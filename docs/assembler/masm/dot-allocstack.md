@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - .ALLOCSTACK directive
 ms.assetid: 9801594b-7ac2-4df2-a49d-07d9dd9af99e
-ms.openlocfilehash: b92db3d03bb5c45e67473cd4085f2369698f6b42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d9d86371503992d1bebe738fb6e6773581b10e3
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185647"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398623"
 ---
 # <a name="allocstack"></a>.ALLOCSTACK
 
-Gera uma **UWOP_ALLOC_SMALL** ou um **UWOP_ALLOC_LARGE** com o tamanho especificado para o deslocamento atual no prólogo.
+Generates a **UWOP_ALLOC_SMALL** or a **UWOP_ALLOC_LARGE** with the specified size for the current offset in the prologue.
 
 ## <a name="syntax"></a>Sintaxe
 
-> . Tamanho ALLOCSTACK
+> **.ALLOCSTACK** *size*
 
 ## <a name="remarks"></a>Comentários
 
-MASM escolherá a codificação mais eficiente para um determinado tamanho.
+MASM will choose the most efficient encoding for a given size.
 
-. ALLOCSTACK permite que os usuários ml64.exe especificar como uma função de quadro é desenrolado e só é permitido dentro do prólogo, que se estende do [PROC](../../assembler/masm/proc.md) declaração de quadro para o [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) diretiva. Essas diretivas não geram código; elas só geram `.xdata` e `.pdata`. . ALLOCSTACK deve ser precedido por instruções que realmente implementam as ações a ser organizado. É uma boa prática para encapsular as diretivas de desenrolamento e o código que eles se destinam à desenrolamento em uma macro para garantir que o contrato.
+**.ALLOCSTACK** allows ml64.exe users to specify how a frame function unwinds and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.ALLOCSTACK** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
 
-O `size` operando deve ser um múltiplo de 8.
+The *size* operand must be a multiple of 8.
 
-Para obter mais informações, consulte [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Amostra
 
-O exemplo a seguir mostra como especificar um manipulador de exceção/desenrolamento:
+The following sample shows how to specify an unwind/exception handler:
 
 ```asm
 ; ml64 ex3.asm /link /entry:Example1  /SUBSYSTEM:Console
@@ -65,4 +65,4 @@ END
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>
+[Referência de diretivas](../../assembler/masm/directives-reference.md)

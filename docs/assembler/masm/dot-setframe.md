@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - .SETFRAME directive
 ms.assetid: eaa9b5ed-4daa-4f1e-bdb6-100758007ab3
-ms.openlocfilehash: c2c35cdb2889350b27e9fb11c397b684506972c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a21dda496d32abcfeb4692d0228afdbcfd4e5ebb
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178170"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397927"
 ---
 # <a name="setframe"></a>.SETFRAME
 
-Preenchimentos no quadro de campo e o deslocamento registrar as informações de desenrolamento usando o registro especificado (`reg`) e deslocamento (`offset`). O deslocamento deve ser um múltiplo de 16 e menor ou igual a 240. Essa diretiva também gera um `UWOP_SET_FPREG` entrada de código de desenrolamento para registrar especificado usando o deslocamento atual do prólogo.
+Fills in the frame register field and offset in the unwind information using the specified register (*reg*) and offset (*offset*). The offset must be a multiple of 16 and less than or equal to 240. This directive also generates a `UWOP_SET_FPREG` unwind code entry for the specified register using the current prologue offset.
 
 ## <a name="syntax"></a>Sintaxe
 
-> . Reg SETFRAME, deslocamento
+> **.SETFRAME** *reg*, *offset*
 
 ## <a name="remarks"></a>Comentários
 
-. SETFRAME permite que os usuários de ml64.exe especificar como uma função de quadro é desenrolado e só é permitida dentro do prólogo, que se estende do [PROC](../../assembler/masm/proc.md) declaração de quadro para o [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) diretiva. Essas diretivas não geram código; elas só geram `.xdata` e `.pdata`. . SETFRAME deve ser precedido por instruções que realmente implementam as ações a ser organizado. É uma boa prática para encapsular as diretivas de desenrolamento e o código que eles se destinam à desenrolamento em uma macro para garantir que o contrato.
+**.SETFRAME** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.SETFRAME** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
 
-Para obter mais informações, consulte [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Amostra
 
 ### <a name="description"></a>Descrição
 
-O exemplo a seguir mostra como usar um ponteiro de quadro:
+The following sample shows how to use a frame pointer:
 
 ### <a name="code"></a>Código
 
@@ -64,4 +64,4 @@ END
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)
