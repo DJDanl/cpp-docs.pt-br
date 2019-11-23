@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .FARDATA directive
 ms.assetid: 4458ef66-5626-4607-bf83-71637b459f77
-ms.openlocfilehash: f25e5db4c5f17a5644db7fceea28eec29209e688
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 3a92bec747019cec1b14d3615ae5fb5a795fdc9d
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703811"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398261"
 ---
-# <a name="fardata-32-bit-masm"></a>. FARDATA (MASM de 32 bits)
+# <a name="fardata-32-bit-masm"></a>.FARDATA (32-bit MASM)
 
-Quando usado com [. MODELO](../../assembler/masm/dot-model.md), inicia um segmento de dados distante para dados inicializados (nome do segmento FAR_DATA ou *nome*). (somente MASM de 32 bits.)
+When used with [.MODEL](../../assembler/masm/dot-model.md), starts a far data segment for initialized data (segment name FAR_DATA or *name*). (32-bit MASM only.)
 
 ## <a name="syntax"></a>Sintaxe
 
-> . FARDATA [[name]]
+> **.FARDATA** ⟦*name*⟧
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

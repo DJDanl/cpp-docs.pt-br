@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - UNION directive
 ms.assetid: 52504abf-7dc1-47c5-944c-b886803a0c6a
-ms.openlocfilehash: 37d486c6a9b8ba66a892e3cf9b3f68532509782d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7cb39d578fd96603bc769333b48c27669a94db9
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216877"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74392986"
 ---
 # <a name="union"></a>UNION
 
-Declara uma união de um ou mais tipos de dados. O *declarações de campo* deve ser definições de dados válido. Omitir a [termina](../../assembler/masm/ends-masm.md) *nome* rótulo no aninhados **união** definições.
+Declares a union of one or more data types. The *field-declarations* must be valid data definitions. Omit the [ENDS](../../assembler/masm/ends-masm.md) *name* label on nested **UNION** definitions.
 
 ## <a name="syntax"></a>Sintaxe
 
-> *name* UNION [[*alignment*]] [[, NONUNIQUE]]<br/>
-> *field-declarations*<br/>
-> [[*name*]] ENDS
+> *name* **UNION** ⟦*alignment*⟧ ⟦ __,__ **NONUNIQUE**⟧\
+> *field-declarations*\
+> ⟦*name*⟧ **ENDS**
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](../../assembler/masm/directives-reference.md)

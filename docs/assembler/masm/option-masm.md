@@ -6,37 +6,37 @@ f1_keywords:
 helpviewer_keywords:
 - OPTION directive
 ms.assetid: 8e10dabd-e36f-4586-ab01-ada96736b0bd
-ms.openlocfilehash: a8215bf1f816baa490a768fb2cab0b3c2e53e20b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f90ab0115c3dde894d468bbbe60ffa0193b8336
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217251"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395174"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
 
-Habilita e desabilita recursos do montador.
+Enables and disables features of the assembler.
 
 ## <a name="syntax"></a>Sintaxe
 
-> OPÇÃO *optionlist*
+> **OPTION** *optionlist*
 
 ## <a name="remarks"></a>Comentários
 
-As opções disponíveis incluem:
+Available options include:
 
 |||||
 |-|-|-|-|
-|**CASEMAP**|**DOTNAME**|**NODOTNAME**|**EMULADOR**|
+|**CASEMAP**|**DOTNAME**|**NODOTNAME**|**EMULATOR**|
 |**NOEMULATOR**|**EPILOGUE**|**EXPR16**|**EXPR32**|
-|**IDIOMA**|**LJMP**|**NOLJMP**|**M510**|
+|**LANGUAGE**|**LJMP**|**NOLJMP**|**M510**|
 |**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**OFFSET**|
 |**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|
 |**PROC**|**PROLOGUE**|**READONLY**|**NOREADONLY**|
 |**SCOPED**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|
 
-A sintaxe de LINGUAGEM é **opção de LINGUAGEM:**<em>x</em>, onde *x* é um dos C, SYSCALL, STDCALL, PASCAL, FORTRAN ou BASIC.  SYSCALL, PASCAL, FORTRAN e BASIC não têm suporte com usado com [. MODELO](../../assembler/masm/dot-model.md) simples.
+The syntax for LANGUAGE is **OPTION LANGUAGE:** <em>x</em>, where *x* is one of C, SYSCALL, STDCALL, PASCAL, FORTRAN, or BASIC.  SYSCALL, PASCAL, FORTRAN, and BASIC are not supported with used with [.MODEL](../../assembler/masm/dot-model.md) FLAT.
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator .TYPE
 - .TYPE operator
 ms.assetid: bf4a4be6-d019-40df-a966-8f8f34f775ea
-ms.openlocfilehash: 5e51ccd682129c618ccafd2e3ef26ed093b9c5a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 476026bddb4629b231baa76322f5cf0e835cd40b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201071"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397041"
 ---
 # <a name="operator-type"></a>operador .TYPE
 
-Ver [OPATTR](../../assembler/masm/operator-opattr.md).
+See [OPATTR](../../assembler/masm/operator-opattr.md).
 
 ## <a name="syntax"></a>Sintaxe
 
-> . Expressão de tipo
+> **.TYPE** *expression*
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de operadores](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

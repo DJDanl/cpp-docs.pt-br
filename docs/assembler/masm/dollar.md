@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - $ symbol
 ms.assetid: c9c36297-0dc2-4d41-b071-a22d8f4a47bb
-ms.openlocfilehash: 434a879f8ece1a43be1139da83d2cf9b2983888a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f323f460c03fd2819cca95a14938e462aa933f5e
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178880"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398763"
 ---
 # <a name=""></a>$
 
-O valor atual do contador local.
+The current value of the location counter.
 
 ## <a name="syntax"></a>Sintaxe
 
-> $
+> **$**
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de símbolos](../../assembler/masm/symbols-reference.md)<br/>
+[Referência de símbolos](../../assembler/masm/symbols-reference.md)
