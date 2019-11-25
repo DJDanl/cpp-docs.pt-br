@@ -3648,24 +3648,7 @@
             - name: Referência da linguagem C++
               href: cpp/cpp-language-reference.md
             - name: Bem-vindo de volta ao C++ (C++ moderno)
-              expanded: false
-              items:
-                - name: Bem-vindo de volta ao C++ (C++ moderno)
-                  href: cpp/welcome-back-to-cpp-modern-cpp.md
-                - name: Inicialização uniforme e delegação de construtores
-                  href: cpp/uniform-initialization-and-delegating-constructors.md
-                - name: Tempo de vida do objeto e gerenciamento de recursos (C++ moderno)
-                  href: cpp/object-lifetime-and-resource-management-modern-cpp.md
-                - name: Recursos de objetos próprios (RAII)
-                  href: cpp/objects-own-resources-raii.md
-                - name: Contêineres (C++ moderno)
-                  href: cpp/containers-modern-cpp.md
-                - name: Algoritmos (C++ moderno)
-                  href: cpp/algorithms-modern-cpp.md
-                - name: Cadeia de caracteres e formatação de E/S (C++ moderno)
-                  href: cpp/string-and-i-o-formatting-modern-cpp.md
-                - name: Portabilidade em limites ABI (C++ moderno)
-                  href: cpp/portability-at-abi-boundaries-modern-cpp.md
+              href: cpp/welcome-back-to-cpp-modern-cpp.md
             - name: Convenções lexicais
               expanded: false
               items:
@@ -3807,46 +3790,55 @@
                   href: cpp/alignof-and-alignas-cpp.md
                 - name: 'Tipos triviais, de layout padrão e de POD'
                   href: cpp/trivial-standard-layout-and-pod-types.md
-            - name: Tipos fundamentais
-              expanded: false
-              items:
-                - name: Tipos fundamentais
-                  href: cpp/fundamental-types-cpp.md
-                - name: Intervalos de tipos de dados
-                  href: cpp/data-type-ranges.md
-                - name: nullptr
-                  href: cpp/nullptr.md
-                - name: void
-                  href: cpp/void-cpp.md
-                - name: bool
-                  href: cpp/bool-cpp.md
-                - name: false
-                  href: cpp/false-cpp.md
-                - name: true
-                  href: cpp/true-cpp.md
-                - name: 'char, wchar_t, char16_t, char32_t'
-                  href: cpp/char-wchar-t-char16-t-char32-t.md
-                - name: '__int8, __int16, __int32, __int64'
-                  href: cpp/int8-int16-int32-int64.md
-                - name: __m64
-                  href: cpp/m64.md
-                - name: __m128
-                  href: cpp/m128.md
-                - name: __m128d
-                  href: cpp/m128d.md
-                - name: __m128i
-                  href: cpp/m128i.md
-                - name: '__ptr32, __ptr64'
-                  href: cpp/ptr32-ptr64.md
-                - name: Limites numéricos
+                - name: Sistema de tipos
                   expanded: false
                   items:
-                    - name: Limites numéricos
-                      href: cpp/numerical-limits-cpp.md
-                    - name: Limites de inteiro
-                      href: cpp/integer-limits.md
-                    - name: Limites flutuantes
-                      href: cpp/floating-limits.md
+                    - name: Sistema de tipos
+                      href: cpp/cpp-type-system-modern-cpp.md
+                    - name: Tipos de valor
+                      href: cpp/value-types-modern-cpp.md
+                    - name: Conversões e segurança de tipo
+                      href: cpp/type-conversions-and-type-safety-modern-cpp.md
+                    - name: Tipos fundamentais
+                      expanded: false
+                      items:
+                        - name: Tipos fundamentais
+                          href: cpp/fundamental-types-cpp.md
+                        - name: Intervalos de tipos de dados
+                          href: cpp/data-type-ranges.md
+                        - name: nullptr
+                          href: cpp/nullptr.md
+                        - name: void
+                          href: cpp/void-cpp.md
+                        - name: bool
+                          href: cpp/bool-cpp.md
+                        - name: false
+                          href: cpp/false-cpp.md
+                        - name: true
+                          href: cpp/true-cpp.md
+                        - name: 'char, wchar_t, char16_t, char32_t'
+                          href: cpp/char-wchar-t-char16-t-char32-t.md
+                        - name: '__int8, __int16, __int32, __int64'
+                          href: cpp/int8-int16-int32-int64.md
+                        - name: __m64
+                          href: cpp/m64.md
+                        - name: __m128
+                          href: cpp/m128.md
+                        - name: __m128d
+                          href: cpp/m128d.md
+                        - name: __m128i
+                          href: cpp/m128i.md
+                        - name: '__ptr32, __ptr64'
+                          href: cpp/ptr32-ptr64.md
+                        - name: Limites numéricos
+                          expanded: false
+                          items:
+                            - name: Limites numéricos
+                              href: cpp/numerical-limits-cpp.md
+                            - name: Limites de inteiro
+                              href: cpp/integer-limits.md
+                            - name: Limites flutuantes
+                              href: cpp/floating-limits.md
                 - name: Conversões padrão
                   href: cpp/standard-conversions.md
                 - name: Conversões e segurança de tipo
@@ -4004,7 +3996,7 @@
                       href: cpp/if-exists-statement.md
                     - name: Instrução __if_not_exists
                       href: cpp/if-not-exists-statement.md
-                    - name: instrução Switch
+                    - name: Instrução switch
                       href: cpp/switch-statement-cpp.md
                 - name: Instruções de iteração
                   expanded: false
@@ -4013,7 +4005,7 @@
                       href: cpp/iteration-statements-cpp.md
                     - name: Instrução while
                       href: cpp/while-statement-cpp.md
-                    - name: Instrução do-while
+                    - name: instrução Do-while
                       href: cpp/do-while-statement-cpp.md
                     - name: Instrução for
                       href: cpp/for-statement-cpp.md
@@ -4107,6 +4099,12 @@
                       href: cpp/public-cpp.md
                 - name: Inicialização de chaves
                   href: cpp/initializing-classes-and-structs-without-constructors-cpp.md
+                - name: Tempo de vida do objeto e gerenciamento de recursos (RAII)
+                  href: cpp/object-lifetime-and-resource-management-modern-cpp.md
+                - name: Idioma pimpl para encapsulamento do tempo de compilação
+                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
+                - name: Portabilidade em limites ABI
+                  href: cpp/portability-at-abi-boundaries-modern-cpp.md
                 - name: Construtores
                   expanded: false
                   items:
@@ -9788,8 +9786,10 @@
             - name: Programação de iostream
               expanded: false
               items:
-                - name: Programação de iostream
+                - name: programação iostream
                   href: standard-library/iostream-programming.md
+                - name: Cadeia de caracteres e formatação de E/S
+                  href: text/string-and-i-o-formatting-modern-cpp.md
                 - name: O que é um fluxo
                   expanded: false
                   items:
