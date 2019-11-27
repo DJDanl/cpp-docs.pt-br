@@ -53,13 +53,13 @@ O uso de Instruções de IT em código Thumb-2 não é permitido, exceto para es
 
 - A instrução de destino deve ser uma das seguintes:
 
-   |Opcodes de 16 bits|Classe|Restrições|
+   |Opcodes de 16 bits|Classe|{1&gt;Restrições&lt;1}|
    |---------------------|-----------|------------------|
    |MOV, MVN|Mover|Rm != PC, Rd != PC|
    |LDR, LDR[S]B, LDR[S]H|Carregar da memória|Mas não formulários literais LDR|
    |STR, STRB, STRH|Armazenar na memória||
    |ADD, ADC, RSB, SBC, SUB|Somar ou subtrair|Mas não formulários ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
-   |CMP, CMN|Comparar|Rm != PC, Rn != PC|
+   |CMP, CMN|{1&gt;Compare&lt;1}|Rm != PC, Rn != PC|
    |MUL|Multiplicar||
    |ASR, LSL, LSR, ROR|Deslocamento de bits||
    |AND, BIC, EOR, ORR, TST|Aritmética de bits||
@@ -77,10 +77,10 @@ O processador ARM oferece suporte a 16 registros inteiros:
 
 |Registro|Volátil?|Função|
 |--------------|---------------|----------|
-|r0|Volátil|Parâmetro, resultado, registro de rascunho 1|
-|r1|Volátil|Parâmetro, resultado, registro de rascunho 2|
-|r2|Volátil|Parâmetro, registro de rascunho 3|
-|r3|Volátil|Parâmetro, registro de rascunho 4|
+|r0|Volatile|Parâmetro, resultado, registro de rascunho 1|
+|r1|Volatile|Parâmetro, resultado, registro de rascunho 2|
+|r2|Volatile|Parâmetro, registro de rascunho 3|
+|r3|Volatile|Parâmetro, registro de rascunho 4|
 |r4|Não volátil||
 |r5|Não volátil||
 |r6|Não volátil||
@@ -89,7 +89,7 @@ O processador ARM oferece suporte a 16 registros inteiros:
 |r9|Não volátil||
 |r10|Não volátil||
 |r11|Não volátil|Ponteiro de quadro|
-|r12|Volátil|Registro de rascunho de chamada dentro do procedimento|
+|r12|Volatile|Registro de rascunho de chamada dentro do procedimento|
 |r13 (SP)|Não volátil|Ponteiro de pilha|
 |r14 (LR)|Não volátil|Registro de link|
 |r15 (PC)|Não volátil|Contador de programa|
@@ -104,22 +104,22 @@ O Windows tem suporte apenas a variações de ARM com suporte no coprocessador V
 
 |Únicos|Duplos|Quads|Volátil?|Função|
 |-------------|-------------|-----------|---------------|----------|
-|s0-s3|d0-d1|q0|Volátil|Parâmetros, resultado, registro de rascunho|
-|s4-s7|d2-d3|q1|Volátil|Parâmetros, registro de rascunho|
-|s8-s11|d4-d5|q2|Volátil|Parâmetros, registro de rascunho|
-|s12-s15|d6-d7|q3|Volátil|Parâmetros, registro de rascunho|
+|s0-s3|d0-d1|q0|Volatile|Parâmetros, resultado, registro de rascunho|
+|s4-s7|d2-d3|q1|Volatile|Parâmetros, registro de rascunho|
+|s8-s11|d4-d5|q2|Volatile|Parâmetros, registro de rascunho|
+|s12-s15|d6-d7|q3|Volatile|Parâmetros, registro de rascunho|
 |s16-s19|d8-d9|q4|Não volátil||
 |s20-s23|d10-d11|q5|Não volátil||
 |s24-s27|d12-d13|q6|Não volátil||
 |s28-s31|d14-d15|q7|Não volátil||
-||d16-d31|q8-q15|Volátil||
+||d16-d31|q8-q15|Volatile||
 
 A próxima tabela ilustra os campos de status do ponto flutuante e do registro de controle (FPSCR):
 
 |Bits|Significado|Volátil?|Função|
 |----------|-------------|---------------|----------|
-|31-28|NZCV|Volátil|Sinalizadores de status|
-|27|QC|Volátil|Saturação cumulativa|
+|31-28|NZCV|Volatile|Sinalizadores de status|
+|27|QC|Volatile|Saturação cumulativa|
 |26|AHP|Não volátil|Controle de meia precisão alternativo|
 |25|DN|Não volátil|Controle de modo NaN padrão|
 |24|FZ|Não volátil|Controle de modo Flush-to-zero|
@@ -127,7 +127,7 @@ A próxima tabela ilustra os campos de status do ponto flutuante e do registro d
 |21-20|Passo|Não volátil|Passo do Vetor, deve ser sempre 0|
 |18-16|Len|Não volátil|Comprimento do Vetor, deve ser sempre 0|
 |15, 12-8|IDE, IXE etc.|Não volátil|Bits de habilitação de captura de exceção, deve ser sempre 0|
-|7, 4-0|IDC, IXC etc.|Volátil|Sinalizadores de exceção cumulativa|
+|7, 4-0|IDC, IXC etc.|Volatile|Sinalizadores de exceção cumulativa|
 
 ## <a name="floating-point-exceptions"></a>Exceções de ponto flutuante
 

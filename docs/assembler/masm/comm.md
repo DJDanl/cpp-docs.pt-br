@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
-ms.openlocfilehash: 063689087b6114f9a2d544ef0b459bf594da3cc4
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: d36161ba54ca80fc0f576c6f0a7c2a9410bf8075
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398821"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541031"
 ---
 # <a name="comm"></a>COMM
 
-Creates a communal variable with the attributes specified in *definition*.
+Cria uma variável pouca com os atributos especificados na *definição*.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **COMM** *definition* ⟦ __,__ *definition* ...⟧
+> Definição de **comm** *⟦* __,__ *Definition* ... ⟧
 
 ## <a name="remarks"></a>Comentários
 
-Communal variables are allocated by the linker, and can't be initialized. This means that you can't depend on the location or sequence of such variables.
+As variáveis pouca são alocadas pelo vinculador e não podem ser inicializadas. Isso significa que você não pode depender do local ou da sequência dessas variáveis.
 
-Each *definition* has the following form:
+Cada *definição* tem o seguinte formato:
 
-⟦*langtype*⟧ ⟦⦃**NEAR** &#124; **FAR**⦄⟧ _label_ **:** _type_⟦ **:** _count_⟧
+⟦*tipo de idioma*⟧ ⟦**próximo** | rótulo ⟧ **:** _tipo_⟦ **:** _contagem_⟧
 
-The optional *langtype* sets the naming conventions for the name that follows. It overrides any language specified by the **.MODEL** directive. The optional **NEAR** or **FAR** override the current memory model. The *label* is the name of the variable. The *type* can be any type specifier ([BYTE](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md), and so on) or an integer specifying the number of bytes. The optional *count* specifies the number of elements in the declared data object; the default is one.
+O *tipo de idioma* opcional define as convenções de nomenclatura para o nome que segue. Ele substitui qualquer idioma especificado pelo **.** Diretiva de modelo. O opcional **próximo** ou **longe** substitui o modelo de memória atual. O *rótulo* é o nome da variável. O *tipo* pode ser qualquer especificador de tipo ([byte](../../assembler/masm/byte-masm.md), [Word](../../assembler/masm/word.md)e assim por diante) ou um inteiro especificando o número de bytes. A *contagem* opcional especifica o número de elementos no objeto de dados declarado. A *contagem* padrão é um.
 
 ## <a name="example"></a>Exemplo
 
-This example creates an array of 512 BYTE elements:
+Este exemplo cria uma matriz de elementos de 512 bytes:
 
 ```asm
 COMM FAR ByteArray:BYTE:512
@@ -41,4 +41,4 @@ COMM FAR ByteArray:BYTE:512
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)
+[Referência de diretivas](directives-reference.md)

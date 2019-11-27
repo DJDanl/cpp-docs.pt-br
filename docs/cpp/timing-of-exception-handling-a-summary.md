@@ -1,5 +1,5 @@
 ---
-title: 'Timing of exception handling: A summary'
+title: 'Tempo de manipulação de exceção: um resumo'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
@@ -18,12 +18,12 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246329"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Timing of exception handling: A summary
+# <a name="timing-of-exception-handling-a-summary"></a>Tempo de manipulação de exceção: um resumo
 
-A termination handler is executed no matter how the **__try** statement block is terminated. Causes include jumping out of the **__try** block, a `longjmp` statement that transfers control out of the block, and unwinding the stack due to exception handling.
+Um manipulador de encerramento é executado, independentemente de como o bloco de instrução de **__try** é encerrado. As causas incluem a saída do bloco de **__try** , uma instrução `longjmp` que transfere o controle do bloco e desenrolando a pilha devido à manipulação de exceção.
 
 > [!NOTE]
->  The Microsoft C++ compiler supports two forms of the `setjmp` and `longjmp` statements. A versão rápida ignora a manipulação de término, mas é mais eficiente. To use this version, include the file \<setjmp.h>. A outra versão oferece suporte à manipulação de término conforme descrito no parágrafo anterior. To use this version, include the file \<setjmpex.h>. O aumento no desempenho da versão rápida depende da configuração de hardware.
+>  O compilador C++ da Microsoft dá suporte a duas formas das instruções `setjmp` e `longjmp`. A versão rápida ignora a manipulação de término, mas é mais eficiente. Para usar essa versão, inclua o arquivo \<setjmp. h >. A outra versão oferece suporte à manipulação de término conforme descrito no parágrafo anterior. Para usar essa versão, inclua o arquivo \<setjmpex. h >. O aumento no desempenho da versão rápida depende da configuração de hardware.
 
 O sistema operacional executa todos os manipuladores de término na ordem apropriada antes que qualquer outro código possa ser executado, incluindo o corpo de um manipulador de exceção.
 
@@ -35,7 +35,7 @@ Quando a causa da interrupção é uma exceção, o sistema deve primeiro execut
 
 1. Se esse filtro passar o controle (retornar 0), o processo continuará até que seja encontrado um filtro que não passe o controle.
 
-1. If this filter returns -1, execution continues where the exception was raised, and no termination takes place.
+1. Se esse filtro retornar-1, a execução continuará onde a exceção foi gerada e nenhum encerramento ocorrerá.
 
 1. Se o filtro retornar 1, ocorrerão os seguintes eventos:
 
@@ -49,5 +49,5 @@ Quando a causa da interrupção é uma exceção, o sistema deve primeiro execut
 
 ## <a name="see-also"></a>Consulte também
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
+[Escrevendo um manipulador de encerramento](../cpp/writing-a-termination-handler.md)<br/>
 [Tratamento de exceções estruturado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

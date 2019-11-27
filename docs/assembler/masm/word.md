@@ -15,14 +15,14 @@ ms.locfileid: "74392831"
 ---
 # <a name="word"></a>WORD
 
-Allocates and optionally initializes a word (2 bytes) of storage for each *initializer*. Can also be used as a type specifier anywhere a type is legal.
+Aloca e, opcionalmente, Inicializa uma palavra (2 bytes) de armazenamento para cada *inicializador*. Também pode ser usado como um especificador de tipo em qualquer lugar em que um tipo é válido.
 
 ## <a name="syntax"></a>Sintaxe
 
-> ⟦*name*⟧ **WORD** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*Name*⟧ **Word** *inicializador* ⟦ __,__ *inicializador* ... ⟧
 
 ## <a name="see-also"></a>Consulte também
 
-[Directives reference](../../assembler/masm/directives-reference.md)\
-[SWORD](../../assembler/masm/sword.md)\
+[Referência de diretivas](../../assembler/masm/directives-reference.md)\
+\ [gumes](../../assembler/masm/sword.md)
 [DW](../../assembler/masm/dw.md)

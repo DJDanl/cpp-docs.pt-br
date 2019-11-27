@@ -24,17 +24,17 @@ ms.locfileid: "74246400"
 
 Algumas das origens mais comuns de erros do programa não são sinalizadas como exceções pelo sistema. Por exemplo, se você tenta alocar um bloco de memória, mas não há memória suficiente, o tempo de execução ou a função de API não geram uma exceção, mas retornam um código de erro.
 
-However, you can treat any condition as an exception by detecting that condition in your code and then reporting it by calling the [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) function. Ao sinalizar erros dessa maneira, você aproveitas as vantagens de manipulação de exceções estruturada em qualquer tipo de erro de tempo de execução.
+No entanto, você pode tratar qualquer condição como uma exceção detectando essa condição em seu código e, em seguida, relatando-a chamando a função [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) . Ao sinalizar erros dessa maneira, você aproveitas as vantagens de manipulação de exceções estruturada em qualquer tipo de erro de tempo de execução.
 
 Para usar a manipulação de exceção estruturada com erros:
 
 - Defina seu próprio código de exceção para o evento.
 
-- Call `RaiseException` when you detect a problem.
+- Chame `RaiseException` ao detectar um problema.
 
 - Use filtros de manipulação de exceções para testar o código de exceção definido.
 
-The \<winerror.h> file shows the format for exception codes. Para verificar se você não definiu um código em conflito com um código de exceção existente, defina o terceiro bit mais significativo como 1. Os quatro bit mais significativos devem ser definidos como mostrado na tabela a seguir.
+O arquivo \<Winerror. h > mostra o formato dos códigos de exceção. Para verificar se você não definiu um código em conflito com um código de exceção existente, defina o terceiro bit mais significativo como 1. Os quatro bit mais significativos devem ser definidos como mostrado na tabela a seguir.
 
 |Bits|Configuração binária recomendada|Descrição|
 |----------|--------------------------------|-----------------|
@@ -44,14 +44,14 @@ The \<winerror.h> file shows the format for exception codes. Para verificar se v
 
 Você pode definir os dois primeiros bits com uma configuração diferente do 11 binário se você desejar, embora a configuração de “erro” seja apropriada para a maioria das exceções. É importante lembrar de definir os bits 29 e 28 conforme mostrado na tabela anterior.
 
-The resulting error code should therefore have the highest four bits set to hexadecimal E. For example, the following definitions define exception codes that do not conflict with any Windows exception codes. (No entanto, talvez seja necessário verificar se os códigos são usados por DLL de terceiros.)
+O código de erro resultante, portanto, deve ter os quatro bits mais altos definidos como hexadecimal E. Por exemplo, as definições a seguir definem códigos de exceção que não entram em conflito com nenhum código de exceção do Windows. (No entanto, talvez seja necessário verificar se os códigos são usados por DLL de terceiros.)
 
 ```cpp
 #define STATUS_INSUFFICIENT_MEM       0xE0000001
 #define STATUS_FILE_BAD_FORMAT        0xE0000002
 ```
 
-Depois que você tiver definido um código de exceção, poderá usá-lo para gerar uma exceção. For example, the following code raises the `STATUS_INSUFFICIENT_MEM` exception in response to a memory allocation problem:
+Depois que você tiver definido um código de exceção, poderá usá-lo para gerar uma exceção. Por exemplo, o código a seguir gera a exceção `STATUS_INSUFFICIENT_MEM` em resposta a um problema de alocação de memória:
 
 ```cpp
 lpstr = _malloc( nBufferSize );
@@ -59,7 +59,7 @@ if (lpstr == NULL)
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);
 ```
 
-Se você quiser simplesmente gerar uma exceção, pode definir os últimos três parâmetros como 0. Os últimos três parâmetros são úteis para passar informações adicionais e definir um sinalizador que impeça manipuladores de continuarem a execução. See the [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) function in the Windows SDK for more information.
+Se você quiser simplesmente gerar uma exceção, pode definir os últimos três parâmetros como 0. Os últimos três parâmetros são úteis para passar informações adicionais e definir um sinalizador que impeça manipuladores de continuarem a execução. Consulte a função [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) no SDK do Windows para obter mais informações.
 
 Em seus filtros de manipulação de exceções, você pode testar os códigos que você definiu. Por exemplo:
 
@@ -73,5 +73,5 @@ __except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
 
 ## <a name="see-also"></a>Consulte também
 
-[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
-[Structured exception handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Escrevendo um manipulador de exceção](../cpp/writing-an-exception-handler.md)<br/>
+[Manipulação de exceção estruturada (C++C/)](../cpp/structured-exception-handling-c-cpp.md)

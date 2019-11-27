@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4792
+title: Aviso do compilador (nível 3) C4792
 ms.date: 11/04/2016
 f1_keywords:
 - C4792
@@ -13,15 +13,15 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189339"
 ---
-# <a name="compiler-warning-level-3-c4792"></a>Compiler Warning (level 3) C4792
+# <a name="compiler-warning-level-3-c4792"></a>Aviso do compilador (nível 3) C4792
 
-function 'function' declared using sysimport and referenced from native code; import library required to link
+função ' function ' declarada usando sysimport e referenciada de código nativo; biblioteca de importação necessária para vincular
 
-A native function that was imported into the program with DllImport was called from an unmanaged function. Therefore, you must link to the import library for the DLL.
+Uma função nativa que foi importada para o programa com DllImport foi chamada de uma função não gerenciada. Portanto, você deve vincular à biblioteca de importação para a DLL.
 
-This warning cannot be resolved in code or by changing the way you compile. Use the [warning](../../preprocessor/warning.md) pragma to disable this warning.
+Esse aviso não pode ser resolvido no código ou alterando a maneira como você compila. Use o pragma de [aviso](../../preprocessor/warning.md) para desabilitar este aviso.
 
-The following sample generates C4792:
+O exemplo a seguir gera C4792:
 
 ```cpp
 // C4792.cpp

@@ -15,12 +15,12 @@ ms.locfileid: "74393179"
 ---
 # <a name="textequ"></a>TEXTEQU
 
-Assigns *textitem* to *name*. The *textitem* can be a literal string, a constant preceded by a `%`, or the string returned by a macro function.
+Atribui *textitem* ao *nome*. O *textitem* pode ser uma cadeia de caracteres literal, uma constante precedida por um `%`ou a cadeia de caracteres retornada por uma função de macro.
 
 ## <a name="syntax"></a>Sintaxe
 
-> *name* **TEXTEQU** ⟦*textitem*⟧
+> *nome* **TEXTEQU** ⟦*textitem*⟧
 
 ## <a name="see-also"></a>Consulte também
 
-[Directives reference](directives-reference.md)
+[Referência de diretivas](directives-reference.md)

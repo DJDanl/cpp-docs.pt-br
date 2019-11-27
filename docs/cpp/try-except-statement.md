@@ -37,65 +37,65 @@ ms.locfileid: "74245170"
 
 **Seção específica da Microsoft**
 
-The **try-except** statement is a Microsoft extension to the C and C++ languages that supports structured exception handling.
+A instrução **try-Except** é uma extensão da Microsoft para o C C++ e idiomas que dão suporte à manipulação de exceção estruturada.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **\_\_try**<br/>
+> **\_\_tentar**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;// guarded code<br/>
+> &nbsp;&nbsp;&nbsp;código &nbsp;//protegido<br/>
 > }<br/>
-> **\_\_except** ( *expression* )<br/>
+> **\_\_exceto** ( *expressão* )<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;// exception handler code<br/>
+> &nbsp;&nbsp;&nbsp;o código de manipulador de exceção &nbsp;//<br/>
 > }
 
 ## <a name="remarks"></a>Comentários
 
-The **try-except** statement is a Microsoft extension to the C and C++ languages that enables target applications to gain control when events that normally terminate program execution occur. Such events are called *exceptions*, and the mechanism that deals with exceptions is called *structured exception handling* (SEH).
+A instrução **try-Except** é uma extensão da Microsoft para a C C++ e linguagens que permite aos aplicativos de destino obter controle quando os eventos que normalmente encerram a execução do programa ocorrem. Esses eventos são chamados de *exceções*, e o mecanismo que lida com exceções é chamado de SEH ( *manipulação de exceção estruturada* ).
 
-For related information, see the [try-finally statement](../cpp/try-finally-statement.md).
+Para obter informações relacionadas, consulte a [instrução try-finally](../cpp/try-finally-statement.md).
 
 As exceções podem ser baseadas em hardware ou software. Mesmo quando os aplicativos não podem se recuperar completamente das exceções de hardware ou software, a manipulação de exceção estruturada permite exibir informações de erro e interceptar o estado interno do aplicativo para ajudar a diagnosticar o problema. Isso é especialmente útil para os problemas intermitentes que não podem ser reproduzidos facilmente.
 
 > [!NOTE]
-> A manipulação de exceção estruturada funciona com Win32 para arquivos de código-fonte em C e C++. No entanto, não é projetada especificamente para C++. Você pode garantir que o código seja mais portátil usando a manipulação de exceção de C++. Além disso, a manipulação de exceção de C++ é mais flexível, pois pode tratar exceções de qualquer tipo. For C++ programs, it is recommended that you use the C++ exception-handling mechanism ([try, catch, and throw](../cpp/try-throw-and-catch-statements-cpp.md) statements).
+> A manipulação de exceção estruturada funciona com Win32 para arquivos de código-fonte em C e C++. No entanto, não é projetada especificamente para C++. Você pode garantir que o código seja mais portátil usando a manipulação de exceção de C++. Além disso, a manipulação de exceção de C++ é mais flexível, pois pode tratar exceções de qualquer tipo. Para C++ programas, é recomendável que você use o C++ mecanismo de tratamento de exceções (instruções[try, catch e throw](../cpp/try-throw-and-catch-statements-cpp.md) ).
 
-The compound statement after the **__try** clause is the body or guarded section. The compound statement after the **__except** clause is the exception handler. O manipulador especifica um conjunto de ações a ser executado se uma exceção for gerada durante a execução do corpo da seção protegida. A execução procede da seguinte maneira:
+A instrução composta após a cláusula **__try** é o corpo ou a seção protegida. A instrução composta após a cláusula **__except** é o manipulador de exceção. O manipulador especifica um conjunto de ações a ser executado se uma exceção for gerada durante a execução do corpo da seção protegida. A execução procede da seguinte maneira:
 
 1. A seção protegida é executada.
 
-1. If no exception occurs during execution of the guarded section, execution continues at the statement after the **__except** clause.
+1. Se nenhuma exceção ocorrer durante a execução da seção protegida, a execução continuará na instrução após a cláusula de **__except** .
 
-1. If an exception occurs during execution of the guarded section or in any routine the guarded section calls, the **__except** *expression* (called the *filter* expression) is evaluated and the value determines how the exception is handled. Há três valores possíveis:
+1. Se ocorrer uma exceção durante a execução da seção protegida ou em qualquer rotina que a seção protegida chamar, a *expressão* de **__except** (chamada de expressão de *filtro* ) será avaliada e o valor determinará como a exceção será tratada. Há três valores possíveis:
 
-   - EXCEPTION_CONTINUE_EXECUTION (-1) Exception is dismissed. Continue a execução no ponto onde ocorreu a exceção.
+   - A exceção EXCEPTION_CONTINUE_EXECUTION (-1) é ignorada. Continue a execução no ponto onde ocorreu a exceção.
 
-   - EXCEPTION_CONTINUE_SEARCH (0) Exception is not recognized. Continue pesquisando manipuladores na pilha; primeiro os que contêm as instruções **try-except**, depois os que têm a próxima precedência mais alta.
+   - A exceção EXCEPTION_CONTINUE_SEARCH (0) não é reconhecida. Continue pesquisando manipuladores na pilha; primeiro os que contêm as instruções **try-except**, depois os que têm a próxima precedência mais alta.
 
-   - EXCEPTION_EXECUTE_HANDLER (1) Exception is recognized. Transfer control to the exception handler by executing the **__except** compound statement, then continue execution after the **__except** block.
+   - EXCEPTION_EXECUTE_HANDLER (1) exceção é reconhecida. Transfira o controle para o manipulador de exceção executando a instrução **__except** composta e continue a execução após o bloco de **__except** .
 
-Because the **__except** expression is evaluated as a C expression, it is limited to a single value, the conditional-expression operator, or the comma operator. Se um processamento mais extenso for necessário, a expressão poderá chamar uma rotina que retorne um dos três valores listados acima.
+Como a expressão de **__except** é avaliada como uma expressão C, ela é limitada a um único valor, ao operador de expressão condicional ou ao operador de vírgula. Se um processamento mais extenso for necessário, a expressão poderá chamar uma rotina que retorne um dos três valores listados acima.
 
 Cada aplicativo pode ter seu próprio manipulador de exceção.
 
-It is not valid to jump into a **__try** statement, but valid to jump out of one. The exception handler is not called if a process is terminated in the middle of executing a **try-except** statement.
+Não é válido pular para uma instrução **__try** , mas é válido para saltar de uma. O manipulador de exceção não será chamado se um processo for encerrado no meio da execução de uma instrução **try-Except** .
 
-For compatibility with previous versions, **_try**, **_except**, and **_leave** are synonyms for **__try**, **__except**, and **__leave** unless compiler option [/Za \(Disable language extensions)](../build/reference/za-ze-disable-language-extensions.md) is specified.
+Para a compatibilidade com versões anteriores, **_try**, **_except**e **_leave** são sinônimos de **__try**, **__except**e **__Leave** , a menos que a opção do compilador [/za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
 
 ### <a name="the-__leave-keyword"></a>A palavra-chave __leave
 
-The **__leave** keyword is valid only within the guarded section of a **try-except** statement, and its effect is to jump to the end of the guarded section. A execução continua na primeira instrução após o manipulador de exceção.
+A palavra-chave **__leave** só é válida na seção protegida de uma instrução **try-Except** e seu efeito é ir para o final da seção protegida. A execução continua na primeira instrução após o manipulador de exceção.
 
-A **goto** statement can also jump out of the guarded section, and it does not degrade performance as it does in a **try-finally** statement because stack unwinding does not occur. However, we recommend that you use the **__leave** keyword rather than a **goto** statement because you are less likely to make a programming mistake if the guarded section is large or complex.
+Uma instrução **goto** também pode sair da seção protegida e não degrada o desempenho da mesma forma que em uma instrução **try-finally** porque o desenrolamento de pilha não ocorre. No entanto, recomendamos que você use a palavra-chave **__leave** em vez de uma instrução **goto** porque é menos provável que você faça um erro de programação se a seção protegida for grande ou complexa.
 
 ### <a name="structured-exception-handling-intrinsic-functions"></a>Funções intrínsecas da manipulação de exceção estruturada
 
-Structured exception handling provides two intrinsic functions that are available to use with the **try-except** statement: `GetExceptionCode` and `GetExceptionInformation`.
+A manipulação de exceção estruturada fornece duas funções intrínsecas que estão disponíveis para uso com a instrução **try-Except** : `GetExceptionCode` e `GetExceptionInformation`.
 
-`GetExceptionCode` returns the code (a 32-bit integer) of the exception.
+`GetExceptionCode` retorna o código (um inteiro de 32 bits) da exceção.
 
-The intrinsic function `GetExceptionInformation` returns a pointer to a structure containing additional information about the exception. Por esse ponteiro, você pode acessar qual era o estado do computador no momento em que ocorreu uma exceção de hardware. A estrutura é a seguinte:
+A função intrínseca `GetExceptionInformation` retorna um ponteiro para uma estrutura que contém informações adicionais sobre a exceção. Por esse ponteiro, você pode acessar qual era o estado do computador no momento em que ocorreu uma exceção de hardware. A estrutura é a seguinte:
 
 ```cpp
 typedef struct _EXCEPTION_POINTERS {
@@ -104,19 +104,19 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
 ```
 
-The pointer types `PEXCEPTION_RECORD` and `PCONTEXT` are defined in the include file \<winnt.h>, and `_EXCEPTION_RECORD` and `_CONTEXT` are defined in the include file \<excpt.h>
+Os tipos de ponteiro `PEXCEPTION_RECORD` e `PCONTEXT` são definidos no arquivo de inclusão \<Winnt. h > e `_EXCEPTION_RECORD` e `_CONTEXT` são definidos no arquivo de inclusão \<Excpt. h >
 
-You can use `GetExceptionCode` within the exception handler. However, you can use `GetExceptionInformation` only within the exception filter expression. As informações para as quais ele aponta ficam normalmente na pilha e não estarão mais disponíveis quando o controle for transferido para o manipulador de exceção.
+Você pode usar `GetExceptionCode` dentro do manipulador de exceção. No entanto, você pode usar `GetExceptionInformation` apenas dentro da expressão de filtro de exceção. As informações para as quais ele aponta ficam normalmente na pilha e não estarão mais disponíveis quando o controle for transferido para o manipulador de exceção.
 
-The intrinsic function `AbnormalTermination` is available within a termination handler. It returns 0 if the body of the **try-finally** statement terminates sequentially. Em todos os outros casos, retorna 1.
+A função intrínseca `AbnormalTermination` está disponível dentro de um manipulador de encerramento. Retornará 0 se o corpo da instrução **try-finally terminar em** sequência. Em todos os outros casos, retorna 1.
 
-excpt.h defines some alternate names for these intrinsics:
+Excpt. h define alguns nomes alternativos para esses intrínsecos:
 
-`GetExceptionCode` equivale a `_exception_code`
+`GetExceptionCode` é equivalente a `_exception_code`
 
-`GetExceptionInformation` equivale a `_exception_info`
+`GetExceptionInformation` é equivalente a `_exception_info`
 
-`AbnormalTermination` equivale a `_abnormal_termination`
+`AbnormalTermination` é equivalente a `_abnormal_termination`
 
 ## <a name="example"></a>Exemplo
 
@@ -186,6 +186,6 @@ world
 
 ## <a name="see-also"></a>Consulte também
 
-[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
+[Escrevendo um manipulador de exceção](../cpp/writing-an-exception-handler.md)<br/>
 [Tratamento de exceções estruturado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

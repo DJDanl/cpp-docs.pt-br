@@ -1,5 +1,5 @@
 ---
-title: Pragma float_control
+title: float_control (pragma)
 description: Descreve o uso e os efeitos da diretiva pragma float_control. A diretiva float_control controla o estado da semântica precisa de ponto flutuante e semântica de exceção em tempo de execução.
 ms.date: 11/18/2019
 f1_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74305500"
 ---
-# <a name="float_control-pragma"></a>Pragma float_control
+# <a name="float_control-pragma"></a>float_control (pragma)
 
 Especifica o comportamento de ponto flutuante para uma função.
 
@@ -37,7 +37,7 @@ Especifica se a semântica deexceção de ponto flutuante deve ser habilitada ou
 
 **Except** só pode ser definido como **on** quando **preciso** também for definido como **on**.
 
-**push**\
+\ **Push**
 Envia por push a configuração de **float_control** atual para a pilha interna do compilador.
 
 \ **pop**

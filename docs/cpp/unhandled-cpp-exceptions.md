@@ -17,7 +17,7 @@ ms.locfileid: "74246058"
 ---
 # <a name="unhandled-c-exceptions"></a>Exceções C++ não tratadas
 
-If a matching handler (or ellipsis **catch** handler) cannot be found for the current exception, the predefined `terminate` run-time function is called. (You can also explicitly call `terminate` in any of your handlers.) The default action of `terminate` is to call `abort`. Se você quiser que `terminate` chame outra função em seu programa antes de sair do aplicativo, chame a função `set_terminate` com o nome da função a ser chamada como seu único argumento. Você pode chamar `set_terminate` em qualquer momento do programa. The `terminate` routine always calls the last function given as an argument to `set_terminate`.
+Se um manipulador correspondente (ou manipulador de **captura** de reticências) não puder ser encontrado para a exceção atual, a função de tempo de execução `terminate` predefinida será chamada. (Você também pode chamar `terminate` explicitamente em qualquer um de seus manipuladores.) A ação padrão de `terminate` é chamar `abort`. Se você quiser que `terminate` chame outra função em seu programa antes de sair do aplicativo, chame a função `set_terminate` com o nome da função a ser chamada como seu único argumento. Você pode chamar `set_terminate` em qualquer momento do programa. A rotina de `terminate` sempre chama a última função fornecida como um argumento para `set_terminate`.
 
 ## <a name="example"></a>Exemplo
 
@@ -56,4 +56,4 @@ A função `term_func` deve encerrar o programa ou o thread atual, idealmente ch
 
 ## <a name="see-also"></a>Consulte também
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[Práticas C++ recomendadas modernas para exceções e tratamento de erros](../cpp/errors-and-exception-handling-modern-cpp.md)

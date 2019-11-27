@@ -15,11 +15,11 @@ ms.locfileid: "74398404"
 ---
 # <a name="err"></a>**.ERR**
 
-Generates an error.
+Gera um erro.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **.ERR** ⟦*message*⟧
+> **. ERR** ⟦*mensagem*⟧
 
 ## <a name="see-also"></a>Consulte também
 

@@ -17,12 +17,12 @@ ms.locfileid: "74396469"
 ---
 # <a name="operator-seg"></a>operador SEG
 
-Returns the segment of *expression*.
+Retorna o segmento de *expressão*.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **SEG** *expression*
+> *Expressão* seg
 
 ## <a name="see-also"></a>Consulte também
 
-[Operators reference](operators-reference.md)
+[Referência de operadores](operators-reference.md)

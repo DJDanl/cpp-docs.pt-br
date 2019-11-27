@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (Level 3) C4738
+title: Aviso do compilador (nível 3) C4738
 ms.date: 11/04/2016
 f1_keywords:
 - C4738
@@ -13,21 +13,21 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189404"
 ---
-# <a name="compiler-warning-level-3-c4738"></a>Compiler Warning (Level 3) C4738
+# <a name="compiler-warning-level-3-c4738"></a>Aviso do compilador (nível 3) C4738
 
 armazenando o resultado float de 32 bits na memória, possível perda de desempenho
 
-C4738 warns that the result of an assignment, cast, passed argument, or other operation may need to be rounded or that the operation ran out of registers and needed to use memory (spilling). This can result in performance loss.
+O C4738 avisa que o resultado de uma atribuição, conversão, argumento passado ou outra operação pode precisar ser arredondado ou que a operação ficou sem registros e precisa usar a memória (despejo). Isso pode resultar em perda de desempenho.
 
-To resolve this warning and avoid rounding, compile with [/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md) or use `double` instead of `float`.
+Para resolver esse aviso e evitar o arredondamento, compile com [/fp: Fast](../../build/reference/fp-specify-floating-point-behavior.md) ou use `double` em vez de `float`.
 
-To resolve this warning and avoid running out of registers, change the order of computation and modify your use of inlining
+Para resolver esse aviso e evitar a ausência de registros, altere a ordem de computação e modifique o uso de inlining
 
-This warning is off by default. For more information, see [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+Esse aviso está desativado por padrão. Para obter mais informações, consulte [os avisos do compilador que estão desativados por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Exemplo
 
-The following sample generates C4738:
+O exemplo a seguir gera C4738:
 
 ```cpp
 // C4738.cpp

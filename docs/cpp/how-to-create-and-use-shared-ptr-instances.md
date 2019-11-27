@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create and use shared_ptr instances'
+title: Como criar e usar instâncias de shared_ptr
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,13 +11,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74245826"
 ---
-# <a name="how-to-create-and-use-shared_ptr-instances"></a>How to: Create and Use shared_ptr instances
+# <a name="how-to-create-and-use-shared_ptr-instances"></a>Como criar e usar instâncias de shared_ptr
 
 O tipo `shared_ptr` é um ponteiro inteligente na biblioteca padrão do C++ que foi projetado para cenários em que mais de um proprietário pode ter que gerenciar o tempo de vida do objeto na memória. Depois de inicializar um `shared_ptr`, você pode copiá-lo, passá-lo pelo valor em argumentos de função e atribuí-lo a outras instâncias `shared_ptr`. Todas as instâncias apontam para o mesmo objeto e compartilham o acesso a um "bloco de controle" que incrementa e decrementa a contagem de referência sempre que um novo `shared_ptr` é adicionado, sai do escopo ou é redefinido. Quando a contagem de referência alcança zero, o bloco de controle exclui o recurso de memória e ele mesmo.
 
 A ilustração a seguir mostra várias instâncias `shared_ptr` que apontam para um local da memória.
 
-![Shared pointer diagram](media/shared_ptr.png "Shared pointer diagram")
+![Diagrama de ponteiro compartilhado](media/shared_ptr.png "Diagrama de ponteiro compartilhado")
 
 ## <a name="example-setup"></a>Configuração de exemplo
 
@@ -82,7 +82,7 @@ O exemplo a seguir mostra como declarar e inicializar instâncias `shared_ptr` q
 
 [!code-cpp[stl_smart_pointers#2](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
 
-## <a name="example-3"></a>Exemplo 3:
+## <a name="example-3"></a>Exemplo 3
 
 `shared_ptr` também será útil em contêineres da Biblioteca Padrão do C++ quando você estiver usando algoritmos que copiam elementos. Você pode encapsular os elementos em um `shared_ptr` e, em seguida, copiá-lo em outros contêineres sabendo que a memória subjacente é válida somente pelo tempo em que for necessária. O exemplo a seguir mostra como usar o algoritmo `remove_copy_if` em instâncias `shared_ptr` em um vetor.
 

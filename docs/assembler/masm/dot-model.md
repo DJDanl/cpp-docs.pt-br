@@ -13,40 +13,40 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398105"
 ---
-# <a name="model-32-bit-masm"></a>.MODEL (32-bit MASM)
+# <a name="model-32-bit-masm"></a>. MODELO (MASM de 32 bits)
 
-Inicializa o modelo de memória do programa. (32-bit MASM only.)
+Inicializa o modelo de memória do programa. (somente MASM de 32 bits.)
 
 ## <a name="syntax"></a>Sintaxe
 
-> **.MODEL** *memory-model* ⟦ __,__ *language-type*⟧ ⟦ __,__ *stack-option*⟧
+> **. Modelo** *de memória-modelo* ⟦ __,__ *tipo de linguagem*⟧ ⟦ __,__ *Stack-Option*⟧
 
 ### <a name="parameters"></a>Parâmetros
 
-*memory-model*\
+\ *de modelo de memória*
 Parâmetro obrigatório que determina o tamanho dos pontos de dados e código.
 
-*language-type*\
+\ *de tipo de idioma*
 Parâmetro opcional que define as convenções de nomenclatura e chamadas para procedimentos e símbolos públicos.
 
-*stack-option*\
+\ *de opção de pilha*
 Parâmetro opcional.
 
-*stack-option* is not used if *memory-model* is **FLAT**.
+*a opção de pilha* não será usada se o *modelo de memória* for **simples**.
 
-Specifying **NEARSTACK** groups the stack segment into a single physical segment (**DGROUP**) along with data. The stack segment register (**SS**) is assumed to hold the same address as the data segment register (**DS**). **FARSTACK** does not group the stack with **DGROUP**; thus **SS** does not equal **DS**.
+Especificar **NEARSTACK** agrupa o segmento de pilha em um único segmento físico (**DGROUP**) junto com os dados. O registro de segmento de pilha (**SS**) é considerado para manter o mesmo endereço que o registro de segmento de dados (**DS**). **FARSTACK** não agrupa a pilha com **DGROUP**; Portanto, **SS** não é igual a **DS**.
 
 ## <a name="remarks"></a>Comentários
 
-**.MODEL** is not used in [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**. O modelo** não é usado em [MASM para x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 A tabela a seguir lista os possíveis valores para cada parâmetro ao direcionar plataformas de 16 bits e 32 bits:
 
 |Parâmetro|Valores de 32 bits|Valores de 16 bits (suporte para o desenvolvimento de 16 bits anterior)|
 |---------------|--------------------|----------------------------------------------------------------|
-|*memory-model*|**FLAT**|**TINY**, **SMALL**, **COMPACT**, **MEDIUM**, **LARGE**, **HUGE**, **FLAT**|
-|*language-type*|**C**, **STDCALL**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
-|*stack-option*|Não usado|**NEARSTACK**, **FARSTACK**|
+|*memória-modelo*|**PLANOS**|**minúsculo**, **pequeno**, **compacto**, **médio**, **grande**, **enorme**, **simples**|
+|*tipo de idioma*|**C**, **stdcall**|**C**, **básico**, **Fortran**, **Pascal**, **syscall**, **stdcall**|
+|*opção de pilha*|Não usado|**NEARSTACK**, **FARSTACK**|
 
 ## <a name="code"></a>Código
 

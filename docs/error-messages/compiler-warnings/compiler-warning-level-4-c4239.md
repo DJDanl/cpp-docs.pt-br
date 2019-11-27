@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 4) C4239
+title: Aviso do compilador (nível 4) C4239
 ms.date: 11/04/2016
 f1_keywords:
 - C4239
 helpviewer_keywords:
 - C4239
 ms.assetid: a23dc16a-649e-4870-9a24-275de1584fcd
-ms.openlocfilehash: 067d1aef41280f4d14fe799e4f4ee26a9f1b9f5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcb66fca7e5b8708171849f885518c15b8355ac4
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401014"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541729"
 ---
-# <a name="compiler-warning-level-4-c4239"></a>Compilador aviso (nível 4) C4239
+# <a name="compiler-warning-level-4-c4239"></a>Aviso do compilador (nível 4) C4239
 
-extensão não padrão usada: 'token': conversão de 'type' para 'type'
+extensão não padrão usada: ' token ': conversão de ' type ' para ' type '
 
-Essa conversão de tipo não é permitida pelo padrão C++, mas é permitido aqui como uma extensão. Esse aviso é sempre seguido pelo menos uma linha de explicação que descreve a regra de idioma que está sendo violada.
+Essa conversão de C++ tipo não é permitida pelo padrão, mas é permitida aqui como uma extensão. Esse aviso é sempre seguido por pelo menos uma linha de explicação que descreve a regra de idioma que está sendo violada.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4239.
 
-```
+```cpp
 // C4239.cpp
 // compile with: /W4 /c
 struct C {
@@ -39,11 +39,11 @@ void func(void) {
 
 ## <a name="example"></a>Exemplo
 
-Conversão de tipo integral para tipo de enumeração não é estritamente permitida.
+A conversão do tipo integral para o tipo enum não é estritamente permitida.
 
 O exemplo a seguir gera C4239.
 
-```
+```cpp
 // C4239b.cpp
 // compile with: /W4 /c
 enum E { value };

@@ -79,13 +79,13 @@ class CDaoDatabase : public CObject
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[CDaoDatabase::CDaoDatabase](#cdaodatabase)|Constrói um objeto `CDaoDatabase`. Chame `Open` para conectar o objeto a um banco de dados.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[CDaoDatabase::CanTransact](#cantransact)|Retornará zero se o banco de dados oferecer suporte a transações.|
 |[CDaoDatabase::CanUpdate](#canupdate)|Retornará zero se o objeto de `CDaoDatabase` for atualizável (não somente leitura).|
@@ -113,7 +113,7 @@ class CDaoDatabase : public CObject
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[CDaoDatabase::m_pDAODatabase](#m_pdaodatabase)|Um ponteiro para o objeto de banco de dados DAO subjacente.|
 |[CDaoDatabase::m_pWorkspace](#m_pworkspace)|Um ponteiro para o objeto [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) que contém o banco de dados e define seu espaço de transação.|
@@ -157,7 +157,7 @@ Cada banco de dados mantém suas próprias coleções de objetos TableDef, Query
 
 `CDaoDatabase`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** AFXDAO. h
 

@@ -30,7 +30,7 @@ O tutorial mostra como realizar essas tarefas:
 
 [!INCLUDE[note_settings_general](../mfc/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;Pré-requisitos&lt;1}
 
 Para concluir este passo a passos, você deve ter o Visual Studio instalado com o **desenvolvimento de desktop com C++**  carga de trabalho e o componente opcional **do Visual C++ MFC para x86 e x64** .
 

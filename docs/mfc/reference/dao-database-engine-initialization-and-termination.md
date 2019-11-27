@@ -23,7 +23,7 @@ O DAO é usado com bancos de dados do Access e tem suporte por meio do Office 20
 |[AfxDaoInit](#afxdaoinit)|Inicializa o mecanismo de banco de dados DAO.|
 |[AfxDaoTerm](#afxdaoterm)|Encerra o mecanismo de banco de dados DAO.|
 
-##  <a name="afxdaoinit"></a>  AfxDaoInit
+##  <a name="afxdaoinit"></a>AfxDaoInit
 
 Essa função inicializa o mecanismo de banco de dados DAO.
 
@@ -40,11 +40,11 @@ Na maioria dos casos, você não precisa chamar `AfxDaoInit` porque o aplicativo
 
 Para obter informações relacionadas, e para obter um exemplo de como chamar `AfxDaoInit`, consulte a [Nota técnica 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
   **Cabeçalho** AFXDAO. h
 
-##  <a name="afxdaoterm"></a>  AfxDaoTerm
+##  <a name="afxdaoterm"></a>AfxDaoTerm
 
 Essa função encerra o mecanismo de banco de dados DAO.
 
@@ -61,7 +61,7 @@ Em DLLs comuns do MFC, chame `AfxDaoTerm` antes da função `ExitInstance`, mas 
 
 Para obter informações relacionadas, consulte a [Nota técnica 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
   **Cabeçalho** AFXDAO. h
 

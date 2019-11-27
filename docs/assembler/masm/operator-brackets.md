@@ -1,5 +1,5 @@
 ---
-title: operator brackets
+title: colchetes do operador
 ms.date: 08/30/2018
 f1_keywords:
 - operator []
@@ -15,9 +15,9 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397080"
 ---
-# <a name="operator-"></a>operator \[\]
+# <a name="operator-"></a>\] de \[do operador
 
-Returns *expression1* plus \[*expression2*\].
+Retorna *expression1* e \[*expression2*\].
 
 ## <a name="syntax"></a>Sintaxe
 

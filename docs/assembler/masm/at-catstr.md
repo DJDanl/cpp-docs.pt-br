@@ -15,12 +15,12 @@ ms.locfileid: "74399228"
 ---
 # <a name="catstr"></a>\@CatStr
 
-Macro function that concatenates one or more strings. Retorna uma cadeia de caracteres.
+Função de macro que concatena uma ou mais cadeias de caracteres. Retorna uma cadeia de caracteres.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **\@CatStr(** *string1* ⟦ __,__ *string2*...⟧ **)**
+> **\@CatStr (** *seqüência1* ⟦ __,__ *seqüência2*... ⟧ **)**
 
 ## <a name="see-also"></a>Consulte também
 
-[Symbols reference](symbols-reference.md)
+[Referência de símbolos](symbols-reference.md)

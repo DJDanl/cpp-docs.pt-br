@@ -15,7 +15,7 @@ ms.locfileid: "74397878"
 ---
 # <a name="tfcond"></a>.TFCOND
 
-Toggles listing of false conditional blocks.
+Alterna a listagem de falsos blocos condicionais.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,4 +23,4 @@ Toggles listing of false conditional blocks.
 
 ## <a name="see-also"></a>Consulte também
 
-[Directives reference](directives-reference.md)
+[Referência de diretivas](directives-reference.md)

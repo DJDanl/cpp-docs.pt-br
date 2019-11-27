@@ -31,70 +31,70 @@ ms.locfileid: "74246299"
 
 **Seção específica da Microsoft**
 
-The following syntax describes the **try-finally** statement:
+A sintaxe a seguir descreve a instrução **try – finally** :
 
-> **\_\_try**<br/>
+> **\_\_tentar**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;// guarded code<br/>
+> &nbsp;&nbsp;&nbsp;código &nbsp;//protegido<br/>
 > }<br/>
-> **\_\_finally**<br/>
+> **\_\_finalmente**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;// termination code<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;//código de encerramento<br/>
 > }
 
 ## <a name="grammar"></a>Gramática
 
 *try-finally-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **\_\_try** *compound-statement* **\_\_finally** *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp; **\_\_tente** *a instrução composta* **\_\_finalmente** *a instrução composta*
 
-The **try-finally** statement is a Microsoft extension to the C and C++ languages that enables target applications to guarantee execution of cleanup code when execution of a block of code is interrupted. A limpeza consiste em tarefas como desalocar memória, fechar arquivos e liberar identificadores de arquivos. The **try-finally** statement is especially useful for routines that have several places where a check is made for an error that could cause premature return from the routine.
+A instrução **try-finally** é uma extensão da Microsoft para a C C++ e linguagens que permite aos aplicativos de destino garantir a execução do código de limpeza quando a execução de um bloco de código é interrompida. A limpeza consiste em tarefas como desalocar memória, fechar arquivos e liberar identificadores de arquivos. A instrução **try-finally** é especialmente útil para rotinas que têm vários lugares em que uma verificação é feita para um erro que poderia causar um retorno prematuro da rotina.
 
-For related information and a code sample, see [try-except Statement](../cpp/try-except-statement.md). For more information on structured exception handling in general, see [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). For more information on handling exceptions in managed applications with C++/CLI, see [Exception Handling under /clr](../extensions/exception-handling-cpp-component-extensions.md).
+Para obter informações relacionadas e um exemplo de código, consulte [instrução try-Except](../cpp/try-except-statement.md). Para obter mais informações sobre manipulação de exceção estruturada em geral, consulte [manipulação de exceção estruturada](../cpp/structured-exception-handling-c-cpp.md). Para obter mais informações sobre como lidar com exceções em C++aplicativos gerenciados com a/CLI, consulte [tratamento de exceção em/CLR](../extensions/exception-handling-cpp-component-extensions.md).
 
 > [!NOTE]
-> A manipulação de exceção estruturada funciona com Win32 para arquivos de código-fonte em C e C++. No entanto, não é projetada especificamente para C++. Você pode garantir que o código seja mais portátil usando a manipulação de exceção de C++. Além disso, a manipulação de exceção de C++ é mais flexível, pois pode tratar exceções de qualquer tipo. For C++ programs, it is recommended that you use the C++ exception-handling mechanism ([try, catch, and throw](../cpp/try-throw-and-catch-statements-cpp.md) statements).
+> A manipulação de exceção estruturada funciona com Win32 para arquivos de código-fonte em C e C++. No entanto, não é projetada especificamente para C++. Você pode garantir que o código seja mais portátil usando a manipulação de exceção de C++. Além disso, a manipulação de exceção de C++ é mais flexível, pois pode tratar exceções de qualquer tipo. Para C++ programas, é recomendável que você use o C++ mecanismo de tratamento de exceções (instruções[try, catch e throw](../cpp/try-throw-and-catch-statements-cpp.md) ).
 
-The compound statement after the **__try** clause is the guarded section. The compound statement after the **__finally** clause is the termination handler. O manipulador especifica um conjunto de ações que são executadas quando você sai da seção protegida, independentemente de a saída da seção protegida ser realizada por uma exceção (encerramento anormal) ou por queda padrão (encerramento normal).
+A instrução composta após a cláusula **__try** é a seção protegida. A instrução composta após a cláusula **__finally** é o manipulador de terminação. O manipulador especifica um conjunto de ações que são executadas quando você sai da seção protegida, independentemente de a saída da seção protegida ser realizada por uma exceção (encerramento anormal) ou por queda padrão (encerramento normal).
 
-Control reaches a **__try** statement by simple sequential execution (fall through). When control enters the **__try**, its associated handler becomes active. Se o fluxo de controle chegar ao fim do bloco try, a execução continuará da seguinte maneira:
+O controle alcança uma instrução **__try** por execução sequencial simples (que se enquadra). Quando o controle entra na **__try**, seu manipulador associado se torna ativo. Se o fluxo de controle chegar ao fim do bloco try, a execução continuará da seguinte maneira:
 
 1. O manipulador de término é invocado.
 
-1. When the termination handler completes, execution continues after the **__finally** statement. Regardless of how the guarded section ends (for example, via a **goto** out of the guarded body or a **return** statement), the termination handler is executed *before* the flow of control moves out of the guarded section.
+1. Quando o manipulador de encerramento for concluído, a execução continuará após a instrução de **__finally** . Independentemente de como a seção protegida terminar (por exemplo, por meio de uma **goto** fora do corpo protegido ou de uma instrução **Return** ), o manipulador de terminação será executado *antes que* o fluxo de controle seja movido para fora da seção protegida.
 
-   A **__finally** statement does not block searching for an appropriate exception handler.
+   Uma instrução **__finally** não bloqueia a pesquisa de um manipulador de exceção apropriado.
 
-If an exception occurs in the **__try** block, the operating system must find a handler for the exception or the program will fail. If a handler is found, any and all **__finally** blocks are executed and execution resumes in the handler.
+Se ocorrer uma exceção no bloco de **__try** , o sistema operacional deverá encontrar um manipulador para a exceção ou o programa falhará. Se um manipulador for encontrado, todos e todos os blocos de **__finally** serão executados e a execução será retomada no manipulador.
 
 Por exemplo, imagine que uma série de chamadas de função vincula a função A à função D, conforme mostrado na figura a seguir. Cada função tem um manipulador de encerramento. Se uma exceção é gerada na função D e tratada na A, os manipuladores de encerramento são chamados nessa ordem à medida que o sistema desenrola a pilha: D, C, B.
 
-![Order of termination&#45;handler execution](../cpp/media/vc38cx1.gif "Order of termination&#45;handler execution") <br/>
+![Ordem de execução&#45;do manipulador de encerramento](../cpp/media/vc38cx1.gif "Ordem de execução&#45;do manipulador de encerramento") <br/>
 Ordem de execução do manipulador de encerramento
 
 > [!NOTE]
-> The behavior of try-finally is different from some other languages that support the use of **finally**, such as C#.  A single **__try** may have either, but not both, of **__finally** and **__except**.  Se ambos devem ser usados juntos, uma instrução try-except externa deve incluir a instrução interna try-finally.  As regras que especificam quando cada bloco é executado também são diferentes.
+> O comportamento de try – finally é diferente de algumas outras linguagens que dão suporte ao uso de **finally**, C#como.  Um único **__try** pode ter um, mas não ambos, de **__finally** e **__except**.  Se ambos devem ser usados juntos, uma instrução try-except externa deve incluir a instrução interna try-finally.  As regras que especificam quando cada bloco é executado também são diferentes.
 
-For compatibility with previous versions, **_try**, **_finally**, and **_leave** are synonyms for **__try**, **__finally**, and **__leave** unless compiler option [/Za \(Disable language extensions)](../build/reference/za-ze-disable-language-extensions.md) is specified.
+Para a compatibilidade com versões anteriores, **_try**, **_finally**e **_leave** são sinônimos de **__try**, **__finally**e **__Leave** , a menos que a opção do compilador [/za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
 
 ## <a name="the-__leave-keyword"></a>A palavra-chave __leave
 
-The **__leave** keyword is valid only within the guarded section of a **try-finally** statement, and its effect is to jump to the end of the guarded section. A execução continua na primeira instrução do manipulador de encerramento.
+A palavra-chave **__leave** só é válida na seção protegida de uma instrução **try-finally** e seu efeito é ir para o final da seção protegida. A execução continua na primeira instrução do manipulador de encerramento.
 
-A **goto** statement can also jump out of the guarded section, but it degrades performance because it invokes stack unwinding. The **__leave** statement is more efficient because it does not cause stack unwinding.
+Uma instrução **goto** também pode sair da seção protegida, mas ela degrada o desempenho porque ele invoca o desenrolamento de pilha. A instrução **__leave** é mais eficiente porque não causa o desenrolamento da pilha.
 
 ## <a name="abnormal-termination"></a>encerramento anormal
 
-Exiting a **try-finally** statement using the [longjmp](../c-runtime-library/reference/longjmp.md) run-time function is considered abnormal termination. It is illegal to jump into a **__try** statement, but legal to jump out of one. All **__finally** statements that are active between the point of departure (normal termination of the **__try** block) and the destination (the **__except** block that handles the exception) must be run. Isso se chama desenrolamento local.
+Sair de uma instrução **try – finally** usando a função de tempo de execução [longjmp](../c-runtime-library/reference/longjmp.md) é considerado encerramento anormal. É ilegal pular para uma instrução **__try** , mas legal para saltar de uma. Todas as instruções de **__finally** que estão ativas entre o ponto de saída (término normal do bloco de **__try** ) e o destino (o bloco de **__except** que manipula a exceção) devem ser executados. Isso se chama desenrolamento local.
 
-If a **try** block is prematurely terminated for any reason, including a jump out of the block, the system executes the associated **finally** block as a part of the process of unwinding the stack. In such cases, the [AbnormalTermination](/windows/win32/Debug/abnormaltermination) function returns **true** if called from within the **finally** block; otherwise, it returns **false**.
+Se um bloco **try** for encerrado prematuramente por qualquer motivo, incluindo um salto para fora do bloco, o sistema executará o bloco **finally** associado como parte do processo de desenrolar a pilha. Nesses casos, a função [AbnormalTermination](/windows/win32/Debug/abnormaltermination) retornará **true** se for chamada de dentro do bloco **finally** ; caso contrário, retornará **false**.
 
-The termination handler is not called if a process is killed in the middle of executing a **try-finally** statement.
+O manipulador de encerramento não será chamado se um processo for eliminado no meio da execução de uma instrução **try-finally** .
 
 **Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
+[Escrevendo um manipulador de encerramento](../cpp/writing-a-termination-handler.md)<br/>
 [Tratamento de exceções estruturado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
-[Termination-Handler Syntax](/windows/win32/Debug/termination-handler-syntax)
+[Sintaxe do manipulador de terminação](/windows/win32/Debug/termination-handler-syntax)

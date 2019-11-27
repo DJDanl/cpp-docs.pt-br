@@ -15,16 +15,16 @@ ms.locfileid: "74397418"
 ---
 # <a name="ifdef"></a>IFDEF
 
-Grants assembly if *name* is a previously defined label, variable, or symbol.
+Concede o assembly se o *nome* for um rótulo, uma variável ou um símbolo definido anteriormente.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **IFDEF** *name*
+> *Nome* do ifdef
 
 ## <a name="remarks"></a>Comentários
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Confira [se](../../assembler/masm/if-masm.md) para obter a sintaxe completa.
 
 ## <a name="see-also"></a>Consulte também
 
-[Directives reference](directives-reference.md)
+[Referência de diretivas](directives-reference.md)

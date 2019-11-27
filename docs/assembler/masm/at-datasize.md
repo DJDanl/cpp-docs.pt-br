@@ -13,14 +13,14 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399144"
 ---
-# <a name="datasize"></a>\@DataSize
+# <a name="datasize"></a>\@de datas
 
-0 for **TINY**, **SMALL**, **MEDIUM**, and **FLAT** models, 1 for **COMPACT** and **LARGE** models, and 2 for **HUGE** model (numeric equate).
+0 para **modelos minúsculos**, **pequenos**, **médios**e **simples** , 1 para modelos **compactados** e **grandes** , e 2 para modelo **grande** (equivalente numérico).
 
 ## <a name="syntax"></a>Sintaxe
 
-> **\@DataSize**
+> **\@de datas**
 
 ## <a name="see-also"></a>Consulte também
 
-[Symbols reference](symbols-reference.md)
+[Referência de símbolos](symbols-reference.md)

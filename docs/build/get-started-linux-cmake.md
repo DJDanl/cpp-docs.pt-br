@@ -24,7 +24,7 @@ Neste tutorial, você aprenderá como:
 > * Adicionar uma conexão a um computador Linux
 > * compilar e depurar o mesmo destino no Linux
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;Pré-requisitos&lt;1}
 
 * Configurar o Visual Studio para Desenvolvimento em C++ Multiplataforma
   * Primeiro, [Instale o Visual Studio](https://visualstudio.microsoft.com/vs/) e escolha o **desenvolvimento de C++ desktop com** o e o **desenvolvimento do Linux C++ com cargas**de trabalho. Essa instalação mínima é de apenas 3 GB. Dependendo da velocidade de download, a instalação não deve levar mais de 10 minutos.
@@ -191,7 +191,7 @@ Como é um aplicativo de área de trabalho, você precisa fornecer algumas infor
 
 Neste tutorial, você clonou uma base de código diretamente do GitHub. Você criou, executou e depurau no Windows sem modificações. Em seguida, você usou a mesma base de código, com alterações de configuração secundárias, para compilar, executar e depurar em um computador Linux remoto.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Saiba mais sobre como configurar e depurar projetos do CMake no Visual Studio:
 

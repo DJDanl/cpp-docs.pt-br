@@ -36,8 +36,8 @@ Um arquivo de dica contém dicas personalizáveis pelo usuário, que têm a mesm
 
 > [!IMPORTANT]
 > Se você modificar ou adicionar um arquivo de dica, precisará executar etapas adicionais para que as alterações entrem em vigor:
-> - In versions before Visual Studio 2017 version 15.6: Delete the .sdf file and/or VC.db file in the solution for all changes.
-> - In Visual Studio 2017 version 15.6 and later: Close and reopen the solution after adding new hint files.
+> - Em versões anteriores ao Visual Studio 2017 versão 15,6: exclua o arquivo. sdf e/ou o arquivo VC. DB na solução para todas as alterações.
+> - No Visual Studio 2017 versão 15,6 e posteriores: feche e reabra a solução depois de adicionar novos arquivos de dica.
 
 ## <a name="scenario"></a>Cenário
 
@@ -92,13 +92,13 @@ A partir do Visual Studio 2017 versão 15.8 em diante, há vários recursos para
 
 - Há uma Ação Rápida para criar um arquivo de dica que inclui a macro realçada ou, se houver um arquivo de dica existente, para adicionar a macro ao arquivo de dica.
 
-![Highlighted Macro.](media/hint-squiggle-and-actions.png "Hint squiggle and Quick Actions")
+![Macro realçada.](media/hint-squiggle-and-actions.png "Dica rabisca e ações rápidas")
 
 Depois de executar qualquer uma das Ações Rápidas, o analisador revisa novamente os arquivos afetados pelo arquivo de dica.
 
 Por padrão, a macro do problema é realçada como uma sugestão. O realce pode ser alterado para algo mais perceptível, como um rabisco vermelho ou verde. Use a opção **Macros em Regiões de Navegação Ignoradas** na seção **Rabiscos de Código** em **Ferramentas** > **Opções** > **Editor de Texto** > **C/C++**  > **Exibir**.
 
-![Macros in Skipped Browsing Regions Option.](media/skipped-regions-squiggle-option.png "Skipped regions squiggle option.")
+![Macros na opção de regiões de navegação ignorada.](media/skipped-regions-squiggle-option.png "Opção de áreas sinuosa ignorada.")
 
 ## <a name="display-browsing-database-errors"></a>Exibir Erros de Banco de Dados de Navegação
 
@@ -166,7 +166,7 @@ A ilustração mostra alguns dos diretórios físicos em um projeto do Visual St
 
 ### <a name="hint-file-directories"></a>Diretórios de arquivos de dica
 
-![Common and project&#45;specific hint file directories.](media/hintfile.png "HintFile")
+![Diretórios de arquivos&#45;de dica específicos do projeto e comuns.](media/hintfile.png "Dica de")
 
 ### <a name="directories-and-hint-file-contents"></a>Diretórios e conteúdo do arquivo de dica
 
@@ -183,7 +183,7 @@ A lista mostra os diretórios nesse projeto que contêm arquivos de dica e o con
     #define _In_count_(size)
     ```
 
-- Depurar
+- Depuração
 
     ```cpp.hint
     // Debug

@@ -1,7 +1,7 @@
 ---
-title: Pointers (C++)
+title: PonteirosC++()
 ms.date: 11/19/2019
-description: About raw pointers and smart pointers in Microsoft C++.
+description: Sobre ponteiros brutos e ponteiros C++inteligentes na Microsoft.
 helpviewer_keywords:
 - pointers (C++)
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
@@ -12,26 +12,26 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246418"
 ---
-# <a name="pointers-c"></a>Pointers (C++)
+# <a name="pointers-c"></a>PonteirosC++()
 
-A pointer is a variable that stores the memory address of an object. Pointers are used extensively in both C and C++ for three main purposes:
+Um ponteiro é uma variável que armazena o endereço de memória de um objeto. Os ponteiros são usados extensivamente em C C++ e para três finalidades principais:
 
-- to allocate new objects on the heap,
-- to pass functions to other functions
-- to iterate over elements in arrays or other data structures.
+- para alocar novos objetos no heap,
+- para passar funções para outras funções
+- para iterar sobre elementos em matrizes ou outras estruturas de dados.
 
-In C-style programming, *raw pointers* are used for all these scenarios. However, raw pointers are the source of many serious programming errors. Therefore, their use is strongly discouraged except where they provide a significant performance benefit and there is no ambiguity as to which pointer is the *owning pointer* that is responsible for deleting the object. Modern C++ provides *smart pointers* for allocating objects, *iterators* for traversing data structures, and *lambda expressions* for passing functions. By using these language and library facilities instead of raw pointers, you will make your program safer, easier to debug, and simpler to understand and maintain. See [Smart pointers](smart-pointers-modern-cpp.md), [Iterators](../standard-library/iterators.md), and [Lambda expressions](lambda-expressions-in-cpp.md) for more information.
+Na programação em estilo C, *ponteiros brutos* são usados para todos esses cenários. No entanto, os ponteiros brutos são a fonte de muitos erros sérios de programação. Portanto, seu uso é fortemente desencorajado, exceto onde eles fornecem um benefício de desempenho significativo e não há nenhuma ambiguidade sobre qual ponteiro é o *ponteiro proprietário* responsável pela exclusão do objeto. O C++ moderno fornece *ponteiros inteligentes* para alocar objetos, *iteradores* para atravessar estruturas de dados e *expressões lambda* para passar funções. Usando esses recursos de biblioteca e de linguagem em vez de ponteiros brutos, você tornará seu programa mais seguro, mais fácil de depurar e mais simples de entender e manter. Consulte [ponteiros inteligentes](smart-pointers-modern-cpp.md), [iteradores](../standard-library/iterators.md)e [expressões lambda](lambda-expressions-in-cpp.md) para obter mais informações.
 
 ## <a name="in-this-section"></a>Nesta seção
 
-- [Raw pointers](raw-pointers.md)
-- [Const and volatile pointers](const-and-volatile-pointers.md)
-- [new and delete operators](new-and-delete-operators.md)
-- [Smart pointers](smart-pointers-modern-cpp.md)
-- [How to: Create and use unique_ptr instances](how-to-create-and-use-unique-ptr-instances.md)
-- [How to: Create and use shared_ptr instances](how-to-create-and-use-shared-ptr-instances.md)
-- [How to: Create and use weak_ptr instances](how-to-create-and-use-weak-ptr-instances.md)
-- [How to: Create and use CComPtr and CComQIPtr instances](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)
+- [Ponteiros brutos](raw-pointers.md)
+- [Ponteiros const e voláteis](const-and-volatile-pointers.md)
+- [operadores New e Delete](new-and-delete-operators.md)
+- [Ponteiros inteligentes](smart-pointers-modern-cpp.md)
+- [Como criar e usar instâncias de unique_ptr](how-to-create-and-use-unique-ptr-instances.md)
+- [Como criar e usar instâncias de shared_ptr](how-to-create-and-use-shared-ptr-instances.md)
+- [Como criar e usar instâncias de weak_ptr](how-to-create-and-use-weak-ptr-instances.md)
+- [Como: criar e usar instâncias CComPtr e CComQIPtr](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)
 
 ## <a name="see-also"></a>Consulte também
 

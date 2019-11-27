@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 4) C4254
+title: Aviso do compilador (nível 4) C4254
 ms.date: 11/04/2016
 f1_keywords:
 - c4254
 helpviewer_keywords:
 - C4254
 ms.assetid: c7dcef24-d535-4c98-bb41-fc3d2b88fd11
-ms.openlocfilehash: 925428cffae37ea26144e5b550cbc7988b33ef01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33b3ba795acb8c72c7d1630071aa2884b6137464
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400975"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541937"
 ---
-# <a name="compiler-warning-level-4-c4254"></a>Compilador aviso (nível 4) C4254
+# <a name="compiler-warning-level-4-c4254"></a>Aviso do compilador (nível 4) C4254
 
-'operator': conversão de 'type1' em 'type2', possível perda de dados
+' operator ': conversão de ' type1 ' para ' type2 ', possível perda de dados
 
-Um campo de bits maior foi atribuído a um campo de bits menor. Pode haver uma perda de dados.
+Um campo de bits maior foi atribuído a um campo de bits menor. Pode haver perda de dados.
 
-Esse aviso é desativado por padrão. Ver [compilador avisos que são desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.
+Esse aviso está desativado por padrão. Consulte [os avisos do compilador que estão desativados por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.
 
 O exemplo a seguir gera C4254:
 
-```
+```cpp
 // C4254.cpp
 // compile with: /W4
 #pragma warning(default: 4254)

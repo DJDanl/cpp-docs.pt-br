@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 4) C4220
+title: Aviso do compilador (nível 4) C4220
 ms.date: 11/04/2016
 f1_keywords:
 - C4220
 helpviewer_keywords:
 - C4220
 ms.assetid: aba18868-825f-4763-9af6-3296406a80e4
-ms.openlocfilehash: 177fb01ba4181f72740724d107fe08e6680ed492
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 781626e20f787bf582605ebd2d4943a7d5f2aa0c
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401105"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541913"
 ---
-# <a name="compiler-warning-level-4-c4220"></a>Compilador aviso (nível 4) C4220
+# <a name="compiler-warning-level-4-c4220"></a>Aviso do compilador (nível 4) C4220
 
-varargs corresponde parâmetros restantes
+varargs corresponde aos parâmetros restantes
 
-Sob as extensões da Microsoft padrão (/Ze), um ponteiro para uma função corresponde a um ponteiro para uma função com argumentos semelhantes, mas a variável.
+Nas extensões padrão da Microsoft (/Ze), um ponteiro para uma função corresponde a um ponteiro para uma função com argumentos semelhantes, mas variáveis.
 
 ## <a name="example"></a>Exemplo
 
-```
+```c
 // C4220.c
 // compile with: /W4
 
@@ -34,4 +34,4 @@ int main()
 }
 ```
 
-Esses ponteiros não coincidem em compatibilidade com ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Tais ponteiros não coincidem sob compatibilidade com ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

@@ -15,11 +15,11 @@ ms.locfileid: "74398388"
 ---
 # <a name="errdef"></a>.ERRDEF
 
-Generates an error if *name* is a previously defined label, variable, or symbol.
+Gera um erro se o *nome* for um rótulo, uma variável ou um símbolo definido anteriormente.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **.ERRDEF** *name* ⟦ __,__ *message*⟧
+> **. ERRDEF** *nome* ⟦ __,__ *mensagem*⟧
 
 ## <a name="see-also"></a>Consulte também
 

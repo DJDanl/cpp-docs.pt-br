@@ -35,7 +35,7 @@ Arquivos de cabeçalho para C++ a biblioteca padrão e extensões, por categoria
 | [Erros e tratamento de exceção](../cpp/errors-and-exception-handling-modern-cpp.md) | [\<cassert >](cassert.md), [\<> de exceção](exception.md), [\<stdexcept >](stdexcept.md), [\<system_error >](system-error.md)<sup>11</sup> |
 | Utilitários gerais | \<qualquer ><sup>17</sup>, [\<conjunto >](bitset.md), \<charconv ><sup>17</sup>, [\<cstdlib >](cstdlib.md), \<execução ><sup>17,\<</sup> [funcional](functional.md)>,\<de [memória](memory.md)>, \<memory_resource ><sup>17</sup>, \<opcional<sup>> 17</sup>,\<[proporção](ratio.md)><sup>11</sup>, [\<scoped_allocator >](scoped-allocator.md)<sup>11</sup>, [\<tupla >](tuple.md)<sup>11</sup>, [\<type_traits >](type-traits.md)<sup>11</sup>, [\<typeindex >](typeindex.md)<sup>11</sup>, [\<Utility](utility.md)>, \<variante ><sup>17</sup> |
 | [E/s e formatação](../text/string-and-i-o-formatting-modern-cpp.md) | [\<cinttypes >](cinttypes.md)<sup>11</sup>, [\<cstdio >](cstdio.md), [\<FileSystem >](filesystem.md)<sup>17</sup>, [\<fstream >](fstream.md), [\<iomanip >](iomanip.md), [\<ios >](ios.md), [\<iosfwd >](iosfwd.md), [\<iostream >](iostream.md), [\<IStream >](istream.md), [\<ostream >](ostream.md), [\<sstream >](sstream.md), [\<streambuf >](streambuf.md), [\<strstream >](strstream.md)<sup>c </sup>, \<syncstream ><sup>20</sup> |
-| Iterators | [\<iterator>](iterator.md) |
+| {1&gt;Iteradores&lt;1} | [\<iterator>](iterator.md) |
 | Suporte a linguagens | [\<cfloat >](cfloat.md), [\<climits >](climits.md), [\<codecvt >](codecvt.md)<sup>11 a</sup>, \<Compare ><sup>20</sup>, \<Contract ><sup>20</sup>, \<corrotineiro ><sup>20</sup>, [\<csetjmp >](csetjmp.md), [\<csignal >](csignal.md), [\<cstdarg >](cstdarg.md), [\<cstddef >](cstddef.md), [\<cstdint >](cstdint.md)<sup>11</sup>, [\<](cstdlib.md)cstdlib >,\<[exceção](exception.md) > , [\<initializer_list >](initializer-list.md)<sup>11</sup>, [\<limites >](limits.md), [\<novo >](new.md),\<[TypeInfo >](typeinfo.md), \<versão ><sup>20</sup> |
 | Localização | [\<clocale >](clocale.md), [\<codecvt >](codecvt.md)<sup>11</sup>, [\<CVT/wbuffer >](cvt-wbuffer.md), [\<CVT/wstring >](cvt-wstring.md), [\<locale](locale.md) > |
 | Matemática e numéricos | \<bit ><sup>20</sup>, [\<cfenv >](cfenv.md)<sup>11</sup>, [\<cmath >](cmath.md), [\<Complex >](complex.md), [\<cstdlib >](cstdlib.md), [\<limites >](limits.md),\<[numérico](numeric.md)>, [\<Random >](random.md)<sup>11</sup>,\<[proporção >](ratio.md)<sup>11</sup>, [\<valarray >](valarray.md) |
@@ -44,7 +44,7 @@ Arquivos de cabeçalho para C++ a biblioteca padrão e extensões, por categoria
 | Intervalos | intervalos de \<><sup>20</sup> |
 | Expressões regulares | [\<regex >](regex.md)<sup>11</sup> |
 | Cadeias de caracteres e dados de caractere | [\<cctype >](cctype.md), [\<cstdlib >](cstdlib.md), [\<cstring >](cstring.md), [\<cuchar >](cuchar.md)<sup>11</sup>, [\<cwchar >](cwchar.md), [\<cwctype >](cwctype.md), [\<Regex >](regex.md)<sup>11</sup>, [\<String](string.md)>, [\<string_view](string-view.md)><sup>17</sup> |
-| Hora | [\<chrono >](chrono.md)<sup>11</sup>, [\<CTime >](ctime.md) |
+| Tempo | [\<chrono >](chrono.md)<sup>11</sup>, [\<CTime >](ctime.md) |
 
 <sup>11</sup> adicionado no padrão c++ 11.
 <sup>14</sup> adicionado no padrão c++ 14. \
@@ -69,13 +69,13 @@ Arquivos de cabeçalho para C++ a biblioteca padrão e extensões, por categoria
 |Contêineres do adaptador|[\<queue>](queue.md), [\<stack>](stack.md)|
 |[Erros e tratamento de exceção](../cpp/errors-and-exception-handling-modern-cpp.md)|[\<de exceção >](exception.md), [\<stdexcept >](stdexcept.md) [,\<system_error >](system-error.md)|
 |[E/s e formatação](../text/string-and-i-o-formatting-modern-cpp.md)|[\<filesystem>](filesystem.md), [\<fstream>](fstream.md), [\<iomanip>](iomanip.md), [\<ios>](ios.md), [\<iosfwd>](iosfwd.md), [\<iostream>](iostream.md), [\<istream>](istream.md), [\<ostream>](ostream.md), [\<sstream>](sstream.md), [\<streambuf>](streambuf.md), [\<strstream>](strstream.md)|
-|Iterators|[\<iterator>](iterator.md)|
+|{1&gt;Iteradores&lt;1}|[\<iterator>](iterator.md)|
 |Localização|[\<codecvt>](codecvt.md), [\<cvt/wbuffer>](cvt-wbuffer.md), [\<cvt/wstring>](cvt-wstring.md), [\<locale>](locale.md)|
 |Matemática e numéricos|[\<complex>](complex.md), [\<limits>](limits.md), [\<numeric>](numeric.md), [\<random>](random.md), [\<ratio>](ratio.md), [\<valarray>](valarray.md)|
 |[Gerenciamento de memória](../cpp/smart-pointers-modern-cpp.md)|[\<alocadores >](allocators-header.md), [\<> de memória](memory.md), [\<novo >](new.md), [\<scoped_allocator >](scoped-allocator.md)|
 |Multithreading|[\<atomic >](atomic.md), [\<CONDITION_VARIABLE >](condition-variable.md),\<> [futuro](future.md),\<[mutex >](mutex.md), [\<shared_mutex >](shared-mutex.md),\<[thread](thread.md) >|
 |Outros utilitários|[\<conjunto >](bitset.md), [\<Chrono >](chrono.md), [\<funcional >](functional.md), [\<initializer_list >](initializer-list.md),\<[tupla >](tuple.md), [\<type_traits](type-traits.md)>, [\<TypeInfo >](typeinfo.md), [\<typeindex >](typeindex.md),\<[Utility >](utility.md)|
-|Cadeias de caracteres e dados de caractere|[\<regex>](regex.md), [\<string>](string.md), [\<string_view>](string-view.md)
+|Cadeias de caracteres e dados de caractere|[\<regex >](regex.md), [\<cadeia de caracteres >](string.md) [,\<string_view >](string-view.md)
 
 ::: moniker-end
 

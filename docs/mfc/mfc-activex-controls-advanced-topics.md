@@ -79,7 +79,7 @@ O procedimento a seguir adiciona uma propriedade parametrizada, chamada array, q
 
 10. Adicione um segundo parâmetro chamado *coluna* (tipo *curto*).
 
-11. Clique em **Finalizar**.
+11. Clique em **Concluir**.
 
 ### <a name="changes-made-by-the-add-property-wizard"></a>Alterações feitas pelo Assistente para adicionar propriedade
 
@@ -107,11 +107,11 @@ Para indicar o tipo de erro que ocorreu, o controle deve passar um código de er
 
 ### <a name="activex-control-error-codes"></a>Códigos de erro de controle ActiveX
 
-|Erro|Descrição|
+|Error|Descrição|
 |-----------|-----------------|
 |CTL_E_ILLEGALFUNCTIONCALL|Chamada de função ilegal|
 |CTL_E_OVERFLOW|Estouro|
-|CTL_E_OUTOFMEMORY|Memória insuficiente|
+|CTL_E_OUTOFMEMORY|Sem memória|
 |CTL_E_DIVISIONBYZERO|Divisão por zero|
 |CTL_E_OUTOFSTRINGSPACE|Espaço insuficiente na cadeia de caracteres|
 |CTL_E_OUTOFSTACKSPACE|Espaço em pilha insuficiente|

@@ -17,12 +17,12 @@ ms.locfileid: "74396454"
 ---
 # <a name="operator-"></a>Operador ;;
 
-Treats *text* as a comment in a macro that appears only in the macro definition. The listing does not show *text* where the macro is expanded.
+Trata o *texto* como um comentário em uma macro que aparece apenas na definição de macro. A listagem não mostra o *texto* onde a macro é expandida.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **;;** *text*
+> **;;** *texto* de
 
 ## <a name="see-also"></a>Consulte também
 
-[Operators reference](operators-reference.md)
+[Referência de operadores](operators-reference.md)

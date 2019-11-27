@@ -17,12 +17,12 @@ ms.locfileid: "74396675"
 ---
 # <a name="operator-low32"></a>operator LOW32
 
-Returns the low 32 bits of *expression*. MASM expressions are 64-bit values.
+Retorna os poucos 32 bits da *expressão*. As expressões MASM são valores de 64 bits.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **LOW32** *expression*
+> *Expressão* LOW32
 
 ## <a name="see-also"></a>Consulte também
 
-[Operators reference](operators-reference.md)
+[Referência de operadores](operators-reference.md)

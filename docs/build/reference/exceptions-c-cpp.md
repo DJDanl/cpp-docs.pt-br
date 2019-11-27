@@ -1,5 +1,5 @@
 ---
-title: DLL loading exception codes (C/C++)
+title: Códigos de exceção de carregamento de DLLC++(C/)
 ms.date: 11/19/2019
 f1_keywords:
 - ERROR_MOD_NOT_FOUND
@@ -21,13 +21,13 @@ ms.locfileid: "74243846"
 ---
 # <a name="exceptions-cc"></a>Exceções (C/C++)
 
-Two exception codes can be raised when failures are encountered:
+Dois códigos de exceção podem ser gerados quando as falhas são encontradas:
 
-- For a **LoadLibrary** failure
+- Para uma falha de **LoadLibrary**
 
-- For a **GetProcAddress** failure
+- Para uma falha de **GetProcAddress**
 
-Here is the exception information:
+Aqui estão as informações de exceção:
 
 ```
 //
@@ -37,11 +37,11 @@ Here is the exception information:
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-The exception codes thrown are the standard VcppException(ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) and VcppException(ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND) values. The exception passes a pointer to a **DelayLoadInfo** structure in the LPDWORD value that can be retrieved by **GetExceptionInformation** in the [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) structure, ExceptionInformation[0] field.
+Os códigos de exceção lançados são os valores padrão VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) e VcppException (ERROR_SEVERITY_ERROR ERROR_PROC_NOT_FOUND). A exceção passa um ponteiro para uma estrutura **DelayLoadInfo** no valor LPDWORD que pode ser recuperado por **GetExceptionInformation** no campo [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) estrutura, ExceptionInformation [0].
 
-Additionally, if the incorrect bits are set in the grAttrs field, the exception ERROR_INVALID_PARAMETER is thrown. This exception is, for all intents and purposes, fatal.
+Além disso, se os bits incorretos forem definidos no campo grAttrs, a exceção ERROR_INVALID_PARAMETER será lançada. Essa exceção é, para todas as intenções e finalidades, fatais.
 
-See [Structure and Constant Definitions](structure-and-constant-definitions.md) for more information.
+Consulte [definições de estrutura e constantes](structure-and-constant-definitions.md) para obter mais informações.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,5 +1,5 @@
 ---
-title: REPEAT
+title: REPETIR
 ms.date: 08/30/2018
 f1_keywords:
 - REPEAT
@@ -13,16 +13,16 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74394322"
 ---
-# <a name="repeat"></a>REPEAT
+# <a name="repeat"></a>REPETIR
 
-Marks a block that is to be repeated *expression* times. Same as [REPT](../../assembler/masm/rept.md).
+Marca um bloco que deve ser repetido vezes na *expressão* . O mesmo que [REPT](../../assembler/masm/rept.md).
 
 ## <a name="syntax"></a>Sintaxe
 
-> **REPEAT** *expression*\
-> *statements*\
+> \ de *expressão* de **repetição**
+> *instruções*\
 > **ENDM**
 
 ## <a name="see-also"></a>Consulte também
 
-[Directives reference](directives-reference.md)
+[Referência de diretivas](directives-reference.md)

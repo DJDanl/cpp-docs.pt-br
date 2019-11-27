@@ -19,7 +19,7 @@ ms.locfileid: "74397130"
 ---
 # <a name="operator-"></a>Operador +
 
-The first operator returns *expression1* plus *expression2*.
+O primeiro operador retorna *expression1* Plus *expression2*.
 
 ## <a name="syntax"></a>Sintaxe
 

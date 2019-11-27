@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4637
+title: Aviso do compilador (nível 3) C4637
 ms.date: 11/04/2016
 f1_keywords:
 - C4637
@@ -13,13 +13,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189113"
 ---
-# <a name="compiler-warning-level-3-c4637"></a>Compiler Warning (level 3) C4637
+# <a name="compiler-warning-level-3-c4637"></a>Aviso do compilador (nível 3) C4637
 
-XML document comment target: \<include> tag discarded.  reason
+Destino de comentário de documento XML: \<incluir > marca descartada.  reason
 
-The syntax of an [\<include>](../../build/reference/include-visual-cpp.md) tag was not correct.
+A sintaxe de uma [\<incluir >](../../build/reference/include-visual-cpp.md) marca não estava correta.
 
-The following sample generates C4637:
+O exemplo a seguir gera C4637:
 
 ```cpp
 // C4637.cpp

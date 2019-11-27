@@ -1,5 +1,5 @@
 ---
-title: operator &lt;&gt;
+title: '&gt; de &lt;do operador'
 ms.date: 08/30/2018
 f1_keywords:
 - <>
@@ -15,14 +15,14 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74396797"
 ---
-# <a name="operator-ltgt"></a>operator &lt;&gt;
+# <a name="operator-ltgt"></a>&gt; de &lt;do operador
 
-Treats *text* as a single literal element.
+Trata o *texto* como um único elemento literal.
 
 ## <a name="syntax"></a>Sintaxe
 
-> __\<__ *text* __>__
+> __>__ de *texto* __\<__
 
 ## <a name="see-also"></a>Consulte também
 
-[Operators reference](operators-reference.md)
+[Referência de operadores](operators-reference.md)

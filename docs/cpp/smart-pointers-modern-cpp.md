@@ -12,11 +12,11 @@ ms.locfileid: "74303358"
 ---
 # <a name="smart-pointers-modern-c"></a>Ponteiros inteligentes (C++ moderno)
 
-Na programação do C++ moderna, a biblioteca padrão inclui *ponteiros inteligentes*, que são usados para ajudar a garantir que os programas estejam livres de memória e vazamentos de recursos e são protegidos contra exceções.
+Na programação C++ moderna, a biblioteca padrão inclui *ponteiros inteligentes*, que são usados para ajudar a garantir que os programas estejam livres de vazamentos de memória e de recursos e sejam seguros para exceções.
 
 ## <a name="uses-for-smart-pointers"></a>Uso de ponteiros inteligentes
 
-Ponteiros inteligentes são definidos na namespace `std` no arquivo de cabeçalho [\<memória >](../standard-library/memory.md). Eles são essenciais para a linguagem de programação [RAII](objects-own-resources-raii.md) ou *Aquisição de Recurso é Inicialização*. O objetivo principal dessa linguagem é garantir que a aquisição de recursos ocorra ao mesmo tempo em que o objeto é inicializado, de forma que todos os recursos do objeto sejam criados e preparados em uma linha de código. Em termos práticos, o princípio fundamental da linguagem RAII é fornecer a propriedade de qualquer recurso alocado a heap, por exemplo, memória alocada dinamicamente ou identificadores de objetos do sistema, a um objeto alocado em pilha cujo destruidor contenha o código para excluir ou liberar o recurso e também qualquer código de limpeza associado.
+Os ponteiros inteligentes são definidos no namespace `std` no arquivo de cabeçalho [> memória\<](../standard-library/memory.md) . Eles são cruciais para a [RAII](objects-own-resources-raii.md) ou a *aquisição de recursos é* a linguagem de programação de inicialização. O objetivo principal dessa linguagem é garantir que a aquisição de recursos ocorra ao mesmo tempo em que o objeto é inicializado, de forma que todos os recursos do objeto sejam criados e preparados em uma linha de código. Em termos práticos, o princípio fundamental da linguagem RAII é fornecer a propriedade de qualquer recurso alocado a heap, por exemplo, memória alocada dinamicamente ou identificadores de objetos do sistema, a um objeto alocado em pilha cujo destruidor contenha o código para excluir ou liberar o recurso e também qualquer código de limpeza associado.
 
 Na maioria dos casos, quando você inicializa um ponteiro bruto ou identificador de recursos para apontar para um recurso real, transforma o ponteiro em ponteiro inteligente imediatamente. Em C++ moderno, os ponteiros brutos são usados somente em pequenos blocos de código de escopo limitado, loops ou funções auxiliares onde o desempenho é essencial e não há possibilidade de confusão sobre a propriedade.
 
@@ -33,17 +33,17 @@ A linguagem de ponteiro inteligente C++ é semelhante à criação de objeto em 
 > [!IMPORTANT]
 >  Crie sempre ponteiros inteligentes em uma linha de código separada, nunca em uma lista de parâmetros, de forma que um vazamento sutil de recursos não ocorre devido a determinadas regras de alocação da lista de parâmetros.
 
-O exemplo a seguir mostra como um tipo de ponteiro inteligente `unique_ptr` da biblioteca padrão do C++ pode ser usado para encapsular um ponteiro para um objeto grande.
+O exemplo a seguir mostra como um tipo de ponteiro inteligente `unique_ptr` C++ da biblioteca padrão pode ser usado para encapsular um ponteiro para um objeto grande.
 
 [!code-cpp[smart_pointers_intro#2](codesnippet/CPP/smart-pointers-modern-cpp_2.cpp)]
 
 O exemplo demonstra as etapas essenciais a seguir para o uso de ponteiros inteligentes.
 
-1. Declare o ponteiro inteligente como uma variável automática (local). (Não use as expressões **new** ou `malloc` no próprio ponteiro inteligente.)
+1. Declare o ponteiro inteligente como uma variável automática (local). (Não use a expressão **New** ou `malloc` no próprio ponteiro inteligente.)
 
 1. No parâmetro de tipo, especifique o tipo apontado do ponteiro encapsulado.
 
-1. Passe um ponteiro bruto para um **novo** objeto no construtor de ponteiro inteligente. (Algumas funções do utilitário ou construtores de ponteiro inteligente fazem isso para você.)
+1. Passe um ponteiro bruto para um objeto **New**-Ed no construtor de ponteiro inteligente. (Algumas funções do utilitário ou construtores de ponteiro inteligente fazem isso para você.)
 
 1. Use os operadores `->` e `*` sobrecarregados para acessar o objeto.
 
@@ -55,7 +55,7 @@ Os ponteiros inteligentes têm suas próprias funções de membro, que são aces
 
 [!code-cpp[smart_pointers_intro#3](codesnippet/CPP/smart-pointers-modern-cpp_3.cpp)]
 
-Os ponteiros inteligentes geralmente oferecem uma maneira de acessar diretamente seu ponteiro bruto. Ponteiros inteligentes da biblioteca padrão do C++ têm uma função membro `get` para essa finalidade, e `CComPtr` tem um membro de classe`p` público. Fornecendo acesso direto ao ponteiro subjacente, você pode usar o ponteiro inteligente para gerenciar a memória em seu próprio código e ainda passar o ponteiro bruto para o código que não oferece suporte a ponteiros inteligentes.
+Os ponteiros inteligentes geralmente oferecem uma maneira de acessar diretamente seu ponteiro bruto. C++Os ponteiros inteligentes da biblioteca padrão têm uma função de membro `get` para essa finalidade e `CComPtr` tem um membro de classe de `p` pública. Fornecendo acesso direto ao ponteiro subjacente, você pode usar o ponteiro inteligente para gerenciar a memória em seu próprio código e ainda passar o ponteiro bruto para o código que não oferece suporte a ponteiros inteligentes.
 
 [!code-cpp[smart_pointers_intro#4](codesnippet/CPP/smart-pointers-modern-cpp_4.cpp)]
 
@@ -103,7 +103,7 @@ Além dos apontadores inteligentes para objetos COM, a ATL também define os pon
 Ponteiro inteligente que impõe a propriedade exclusiva transferindo a propriedade na cópia. Comparável à classe `std::auto_ptr` preterida.
 
 [Classe CHeapPtr](../atl/reference/cheapptr-class.md)<br/>
-Ponteiro inteligente para objetos alocados usando o função [malloc](../c-runtime-library/reference/malloc.md) do C.
+Ponteiro inteligente para objetos que são alocados usando a função de [malloc](../c-runtime-library/reference/malloc.md) C.
 
 [Classe CAutoVectorPtr](../atl/reference/cautovectorptr-class.md)<br/>
 Ponteiro inteligente para matrizes que são alocadas usando `new[]`.

@@ -1,5 +1,5 @@
 ---
-title: Pragma fenv_access
+title: fenv_access (pragma)
 description: Descreve o uso e os efeitos da diretiva pragma fenv_access. A diretiva fenv_access controla o acesso ao ambiente de ponto flutuante em tempo de execução.
 ms.date: 11/19/2019
 f1_keywords:
@@ -16,13 +16,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74305853"
 ---
-# <a name="fenv_access-pragma"></a>Pragma fenv_access
+# <a name="fenv_access-pragma"></a>fenv_access (pragma)
 
 Desabilita (**ativa**) ou habilita (**desativa**) otimizações que podem alterar testes de sinalizador de ambiente de ponto flutuante e alterações de modo.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **#pragma fenv_access (** { **on** | **off** } **)**
+> **fenv_access de #pragma (** { **on** | **off** } **)**
 
 ## <a name="remarks"></a>Comentários
 
