@@ -17,17 +17,17 @@ ms.locfileid: "74398337"
 ---
 # <a name="perioderridn-perioderridni"></a>&period;ERRIDN, &period;ERRIDNI
 
-Generates an error if the text items are identical.
+Gera um erro se os itens de texto forem idênticos.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **.ERRIDN** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧\
-> **.ERRIDNI** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧
+> **. ERRIDN** *textitem1* __,__ *textitem2* ⟦ __,__ *mensagem*⟧ \
+> **. ERRIDNI** *textitem1* __,__ *textitem2* ⟦ __,__ *mensagem*⟧
 
 ## <a name="remarks"></a>Comentários
 
-If **&period;ERRIDNI** is given, the comparison is case insensitive.
+Se **&period;ERRIDNI** for fornecido, a comparação não diferenciará maiúsculas de minúsculas.
 
 ## <a name="see-also"></a>Consulte também
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Referência de diretivas](../../assembler/masm/directives-reference.md)

@@ -1,31 +1,31 @@
 ---
-title: Compilador aviso (nível 3) C4823
+title: Aviso do compilador (nível 3) C4823
 ms.date: 11/04/2016
 f1_keywords:
 - C4823
 helpviewer_keywords:
 - C4823
 ms.assetid: 8a77560d-dcea-4cae-aebb-8ebf1b4cef85
-ms.openlocfilehash: 28d490c341c4d14c2e6c03e13007b5a8be423622
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a96877252b0b7699f5e4033f8e695f4d9016a6c9
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401534"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541263"
 ---
-# <a name="compiler-warning-level-3-c4823"></a>Compilador aviso (nível 3) C4823
+# <a name="compiler-warning-level-3-c4823"></a>Aviso do compilador (nível 3) C4823
 
-'function': usa ponteiros de fixação de desenrolamento, mas semântica não está habilitada. Considere o uso de /EHa
+' function ': usa ponteiros de fixação, mas semântica de liberação não está habilitada. Considere o uso de/EHa
 
-Para Desafixar um objeto no heap gerenciado apontado por um ponteiro de fixação declarado em um escopo de bloco, o compilador simula o comportamento de destruidores de classes locais, "fingindo", que o ponteiro de fixação tem um destruidor que anula o ponteiro. Para habilitar uma chamada para um destruidor depois de gerar uma exceção, você deve habilitar liberação de objeto, que pode ser feito por meio [/EHsc](../../build/reference/eh-exception-handling-model.md).
+Para Desafixar um objeto na heap gerenciada apontada por um ponteiro de fixação declarado em um escopo de bloco, o compilador simula o comportamento de destruidores de classes locais, "fingindo" o ponteiro de fixação tem um destruidor que invalidará o ponteiro. Para habilitar uma chamada para um destruidor depois de lançar uma exceção, você deve habilitar o desenrolamento de objeto, o que pode ser feito usando [/EHsc](../../build/reference/eh-exception-handling-model.md).
 
-Manualmente, você pode desafixar o objeto e ignorar o aviso.
+Você também pode desafixar manualmente o objeto e ignorar o aviso.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4823.
 
-```
+```cpp
 // C4823.cpp
 // compile with: /clr /W3 /EHa-
 using namespace System;
