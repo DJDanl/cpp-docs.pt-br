@@ -19,7 +19,7 @@ ms.locfileid: "74541692"
 
 Possível incompatibilidade.
 
-Considere o seguinte exemplo de código. Se a definição do Construtor S2:: S2 (int i,...) tiver sido compilada usando uma versão do compilador da C++ Microsoft antes da versão 7, mas o exemplo a seguir for compilado usando a versão atual, a chamada para o construtor para S3 não funcionará corretamente devido a uma alteração de Convenção de chamada de caso especial. Se ambos foram compilados usando o C++ Visual 6,0, a chamada não funcionaria bem à direita, a menos que nenhum parâmetro fosse passado para as reticências.
+Considere o exemplo de código a seguir. Se a definição do Construtor S2:: S2 (int i,...) tiver sido compilada usando uma versão do compilador da C++ Microsoft antes da versão 7, mas o exemplo a seguir for compilado usando a versão atual, a chamada para o construtor para S3 não funcionará corretamente devido a uma alteração de Convenção de chamada de caso especial. Se ambos foram compilados usando o C++ Visual 6,0, a chamada não funcionaria bem à direita, a menos que nenhum parâmetro fosse passado para as reticências.
 
 Para corrigir esse aviso,
 
