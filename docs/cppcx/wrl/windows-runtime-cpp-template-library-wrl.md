@@ -36,7 +36,7 @@ A biblioteca C++ de modelos Windows Runtime C++e o/CX fornecem benefícios difer
 
 - A finalidade e o design da biblioteca C++ de modelos de Windows Runtime é inspirado pelo Active Template Library (ATL), que é um conjunto de classes baseadas C++ em modelo que simplificam a programação de objetos com. Como Windows Runtime C++ biblioteca de modelos usa C++ o padrão para encapsular o Windows Runtime, você pode facilmente portar e interagir com muitos componentes com existentes gravados em ATL no Windows Runtime. Se você já conhece a ATL, pode descobrir que Windows Runtime C++ programação da biblioteca de modelos é mais fácil.
 
-## <a name="getting-started"></a>Introdução
+## <a name="getting-started"></a>Guia de Introdução
 
 Aqui estão alguns recursos que podem ajudá-lo a começar a trabalhar C++ com a biblioteca de modelos do Windows Runtime imediatamente.
 
@@ -115,7 +115,7 @@ Windows Runtime C++ biblioteca de modelos fornece tipos que representam alguns c
 
 [RuntimeClass](runtimeclass-class.md) representa uma classe instanciada que herda um conjunto de interfaces especificadas. Um objeto `RuntimeClass` pode fornecer uma combinação de suporte para uma ou mais interfaces COM Windows Runtime ou uma referência fraca a um componente.
 
-### <a name="module"></a>{1&gt;{2&gt;Módulo&lt;2}&lt;1}
+### <a name="module"></a>Módulo
 
 O [módulo](module-class.md) representa uma coleção de objetos relacionados. Um objeto `Module` gerencia fábricas de classes, que criam objetos e registro, o que permite que outros aplicativos usem um objeto.
 
