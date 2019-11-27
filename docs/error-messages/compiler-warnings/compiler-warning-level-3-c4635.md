@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4635
+title: Aviso do compilador (nível 3) C4635
 ms.date: 11/04/2016
 f1_keywords:
 - C4635
@@ -13,13 +13,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189141"
 ---
-# <a name="compiler-warning-level-3-c4635"></a>Compiler Warning (level 3) C4635
+# <a name="compiler-warning-level-3-c4635"></a>Aviso do compilador (nível 3) C4635
 
-XML document comment target: badly-formed XML: reason
+Destino de comentário de documento XML: XML com formato incorreto: motivo
 
-The compiler found some problem with the XML tags.  Fix the problem and recompile
+O compilador encontrou algum problema com as marcas XML.  Corrigir o problema e recompilar
 
-The following sample generates C4635:
+O exemplo a seguir gera C4635:
 
 ```cpp
 // C4635.cpp
@@ -33,6 +33,6 @@ The following sample generates C4635:
 public ref class Test {};
 ```
 
-Notice that the output for this sample says: **End tag 'member' does not match the start tag 'summary'.**
+Observe que a saída para este exemplo diz: **a marca de fim ' member ' não corresponde à marca de início ' summary '.**
 
-The problem with this sample is that the end tag for \<summary> is poorly formed, and the compiler does not recognize it as the \<summary> end tag.  The \<member> tag is embedded in the .xdc file by the compiler in every /doc compilation.  So, the problem here is that the end tag \</member>, does not match the previous start tag that the compiler processed (\<summary>.
+O problema com esse exemplo é que a marca de fim para \<Resumo > é mal formada, e o compilador não o reconhece como a \<Resumo > marca de fim.  A marca de > de membro \<é inserida no arquivo. xdc pelo compilador em cada compilação/doc.  Portanto, o problema aqui é que a marca final \</member >, não corresponde à marca de início anterior que o compilador processou (\<Resumo >.

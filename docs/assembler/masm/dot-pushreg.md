@@ -15,23 +15,23 @@ ms.locfileid: "74398032"
 ---
 # <a name="pushreg"></a>.PUSHREG
 
-Generates a `UWOP_PUSH_NONVOL` unwind code entry for the specified register number using the current offset in the prologue.
+Gera uma entrada de código de desenrolação `UWOP_PUSH_NONVOL` para o número de registro especificado usando o deslocamento atual no prólogo.
 
 ## <a name="syntax"></a>Sintaxe
 
-> .PUSHREG register
+> . Registro de PUSHREG
 
 ## <a name="remarks"></a>Comentários
 
-**.PUSHREG** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) **FRAME** declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.PUSHREG** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**. O PUSHREG** permite que os usuários do ml64. exe especifiquem como a função de quadro se desenrola e só é permitida dentro do prólogo, que se estende da declaração de **quadro** [proc](../../assembler/masm/proc.md) para o [. Diretiva endprólogo](../../assembler/masm/dot-endprolog.md) . Essas diretivas não geram código; Eles geram apenas `.xdata` e `.pdata`. **. PUSHREG** deve ser precedido por instruções que realmente implementam as ações a serem rebobinadas. É uma boa prática encapsular as diretivas de desenrolamento e o código que elas devem desenrolar em uma macro para garantir o contrato.
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Para obter mais informações, consulte [MASM para x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Amostra
 
 ### <a name="description"></a>Descrição
 
-The following sample shows how to push non-volatile registers.
+O exemplo a seguir mostra como enviar por push registros não voláteis.
 
 ### <a name="code"></a>Código
 
@@ -57,4 +57,4 @@ END
 
 ## <a name="see-also"></a>Consulte também
 
-[Directives reference](directives-reference.md)
+[Referência de diretivas](directives-reference.md)

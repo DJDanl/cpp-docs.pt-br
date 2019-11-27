@@ -13,14 +13,14 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397901"
 ---
-# <a name="stack-32-bit-masm"></a>.STACK (32-bit MASM)
+# <a name="stack-32-bit-masm"></a>. PILHA (MASM de 32 bits)
 
-When used with [.MODEL](../../assembler/masm/dot-model.md), defines a stack segment (with segment name **STACK**). The optional *size* specifies the number of bytes for the stack (default 1,024). The **.STACK** directive automatically closes the stack statement. (32-bit MASM only.)
+Quando usado com [. MODELO](../../assembler/masm/dot-model.md), define um segmento de pilha (com o nome de segmento **pilha**). O *tamanho* opcional especifica o número de bytes para a pilha (padrão 1.024). O **.** A diretiva de pilha fecha automaticamente a instrução Stack. (somente MASM de 32 bits.)
 
 ## <a name="syntax"></a>Sintaxe
 
-> **.STACK** ⟦*size*⟧
+> **.** ⟦ De*tamanho*de pilha ⟧
 
 ## <a name="see-also"></a>Consulte também
 
-[Directives reference](directives-reference.md)
+[Referência de diretivas](directives-reference.md)

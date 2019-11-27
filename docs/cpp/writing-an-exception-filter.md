@@ -13,12 +13,12 @@ ms.locfileid: "74245981"
 ---
 # <a name="writing-an-exception-filter"></a>Escrevendo um filtro de exceção
 
-Você pode lidar com uma exceção indo diretamente ao nível do manipulador de exceção ou continuando a execução. Instead of using the exception handler code to handle the exception and falling through, you can use *filter* to clean up the problem and then, by returning -1, resume normal flow without clearing the stack.
+Você pode lidar com uma exceção indo diretamente ao nível do manipulador de exceção ou continuando a execução. Em vez de usar o código do manipulador de exceção para lidar com a exceção e fazer a passagem, você pode usar o *filtro* para limpar o problema e, em seguida, retornar-1, retomar o fluxo normal sem limpar a pilha.
 
 > [!NOTE]
->  Algumas exceções não podem ser retomadas. If *filter* evaluates to -1 for such an exception, the system raises a new exception. When you call [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception), you determine whether the exception will continue.
+>  Algumas exceções não podem ser retomadas. Se o *filtro* for avaliado como-1 para essa exceção, o sistema gerará uma nova exceção. Ao chamar [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception), você determina se a exceção continuará.
 
-For example, the following code uses a function call in the *filter* expression: this function handles the problem and then returns -1 to resume normal flow of control:
+Por exemplo, o código a seguir usa uma chamada de função na expressão de *filtro* : essa função manipula o problema e, em seguida, retorna-1 para retomar o fluxo de controle normal:
 
 ```cpp
 // exceptions_Writing_an_Exception_Filter.cpp
@@ -45,11 +45,11 @@ int Eval_Exception ( int n_except ) {
 }
 ```
 
-It is a good idea to use a function call in the *filter* expression whenever *filter* needs to do anything complex. Avaliar a expressão causa a execução da função, nesse caso, `Eval_Exception`.
+É uma boa ideia usar uma chamada de função na expressão de *filtro* sempre que o *filtro* precisar fazer algo complexo. Avaliar a expressão causa a execução da função, nesse caso, `Eval_Exception`.
 
-Note the use of [GetExceptionCode](/windows/win32/Debug/getexceptioncode) to determine the exception. Você deve chamar essa função dentro do próprio filtro. `Eval_Exception` cannot call `GetExceptionCode`, but it must have the exception code passed to it.
+Observe o uso de [GetExceptionCode](/windows/win32/Debug/getexceptioncode) para determinar a exceção. Você deve chamar essa função dentro do próprio filtro. `Eval_Exception` não pode chamar `GetExceptionCode`, mas deve ter o código de exceção passado para ele.
 
-Esse manipulador passa o controle para outro manipulador, a menos que a exceção seja um inteiro ou um estouro de ponto flutuante. Se for o caso, o manipulador chamará uma função (`ResetVars` é apenas um exemplo, não uma função de API) para redefinir alguns variáveis globais. *Statement-block-2*, which in this example is empty, can never be executed because `Eval_Exception` never returns EXCEPTION_EXECUTE_HANDLER (1).
+Esse manipulador passa o controle para outro manipulador, a menos que a exceção seja um inteiro ou um estouro de ponto flutuante. Se for o caso, o manipulador chamará uma função (`ResetVars` é apenas um exemplo, não uma função de API) para redefinir alguns variáveis globais. *Statement-Block-2*, que neste exemplo está vazio, nunca pode ser executado porque `Eval_Exception` nunca retorna EXCEPTION_EXECUTE_HANDLER (1).
 
 Usar uma chamada de função é uma boa técnica de uso geral para lidar com expressões de filtro complexas. Outros dois recursos da linguagem C úteis são:
 
@@ -57,7 +57,7 @@ Usar uma chamada de função é uma boa técnica de uso geral para lidar com exp
 
 - O operador vírgula
 
-O operador condicional geralmente é útil, pois pode ser usado para verificar se há um código de retorno específico e retornar um de dois valores diferentes. For example, the filter in the following code recognizes the exception only if the exception is STATUS_INTEGER_OVERFLOW:
+O operador condicional geralmente é útil, pois pode ser usado para verificar se há um código de retorno específico e retornar um de dois valores diferentes. Por exemplo, o filtro no código a seguir reconhecerá a exceção somente se a exceção for STATUS_INTEGER_OVERFLOW:
 
 ```cpp
 __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ? 1 : 0 ) {
@@ -69,7 +69,7 @@ O propósito do operador condicional nesse caso é basicamente fornecer clareza,
 __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ) {
 ```
 
-The conditional operator is more useful in situations where you might want the filter to evaluate to -1, EXCEPTION_CONTINUE_EXECUTION.
+O operador condicional é mais útil em situações em que você talvez queira que o filtro seja avaliado como-1, EXCEPTION_CONTINUE_EXECUTION.
 
 O operador vírgula permite executar várias operações independentes dentro de uma única expressão. O efeito é basicamente o de executar várias instruções e depois retornar o valor da última expressão. Por exemplo, o código a seguir armazena o código de exceção em uma variável e o testa:
 
@@ -79,5 +79,5 @@ __except( nCode = GetExceptionCode(), nCode == STATUS_INTEGER_OVERFLOW )
 
 ## <a name="see-also"></a>Consulte também
 
-[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
+[Escrevendo um manipulador de exceção](../cpp/writing-an-exception-handler.md)<br/>
 [Tratamento de exceções estruturado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -46,7 +46,7 @@ Objetos de índice e objetos de campo de índice não são representados por uma
 
 Chame a função membro `GetIndexInfo` do objeto tabledef ou Recordset contido em cuja coleção de índices é armazenada no objeto de índice em que você está interessado. Em seguida, acesse o membro `m_pFieldInfos` do objeto [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) . O comprimento da matriz de `m_pFieldInfos` é armazenado em `m_nFields`. `CDaoIndexFieldInfo` também define uma função de membro de `Dump` em compilações de depuração. Você pode usar `Dump` para despejar o conteúdo de um objeto `CDaoIndexFieldInfo`.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** AFXDAO. h
 

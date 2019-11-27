@@ -35,7 +35,7 @@ Encapsulamento significa que a C++ classe `CWnd`, por exemplo, contém uma vari�
 
 [Assistentes e editores de recursos](../mfc/wizards-and-the-resource-editors.md)
 
-## <a name="in-related-sections"></a>Em seções relacionadas
+## <a name="in-related-sections"></a>Nas seções relacionadas
 
 [Compilando no Framework](../mfc/building-on-the-framework.md)
 

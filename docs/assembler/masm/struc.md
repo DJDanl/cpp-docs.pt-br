@@ -15,7 +15,7 @@ ms.locfileid: "74393672"
 ---
 # <a name="struc"></a>STRUC
 
-See [STRUCT](../../assembler/masm/struct-masm.md).
+Consulte [struct](../../assembler/masm/struct-masm.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,4 +23,4 @@ See [STRUCT](../../assembler/masm/struct-masm.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Directives reference](directives-reference.md)
+[Referência de diretivas](directives-reference.md)

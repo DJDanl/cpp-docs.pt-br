@@ -16,12 +16,12 @@ ms.locfileid: "74396167"
 ---
 # <a name="operator-short"></a>operador SHORT
 
-Sets the type of *label* to short. All jumps to *label* must be short (within the range -128 to +127 bytes from the jump instruction to *label*).
+Define o tipo de *rótulo* como curto. Todos os saltos para o *rótulo* devem ser curtos (dentro do intervalo de-128 a + 127 bytes da instrução de salto para o *rótulo*).
 
 ## <a name="syntax"></a>Sintaxe
 
-> **SHORT** *label*
+> *Rótulo* curto
 
 ## <a name="see-also"></a>Consulte também
 
-[Operators reference](operators-reference.md)
+[Referência de operadores](operators-reference.md)

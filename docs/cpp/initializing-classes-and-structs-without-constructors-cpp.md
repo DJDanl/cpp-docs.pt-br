@@ -1,6 +1,6 @@
 ---
-title: Brace initialization for classes, structs, and unions
-description: Use brace initialization with any C++ class, struct or union
+title: Inicialização de chaves para classes, structs e uniões
+description: Usar a inicialização de chave C++ com qualquer classe, struct ou União
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
 ms.openlocfilehash: 41ff38bc4bcc9ebca913b5e66b5ac2f395044222
@@ -10,9 +10,9 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246496"
 ---
-# <a name="brace-initialization"></a>Brace initialization
+# <a name="brace-initialization"></a>Inicialização de chaves
 
-It is not always necessary to define a constructor for a class, especially ones that are relatively simple. Users can initialize objects of a class or struct by using uniform initialization, as shown in the following example:
+Nem sempre é necessário definir um construtor para uma classe, especialmente aqueles que são relativamente simples. Os usuários podem inicializar objetos de uma classe ou estrutura usando a inicialização uniforme, conforme mostrado no exemplo a seguir:
 
 ```cpp
 // no_constructor.cpp
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-Note that when a class or struct has no constructor, you provide the list elements in the order that the members are declared in the class. If the class has a constructor, provide the elements in the order of the parameters. If a type has a default constructor, either implicitly or explicitly declared, you can use default brace initialization (with empty braces). For example, the following class may be initialized by using both default and non-default brace initialization:
+Observe que, quando uma classe ou struct não tem nenhum construtor, você fornece os elementos da lista na ordem em que os membros são declarados na classe. Se a classe tiver um construtor, forneça os elementos na ordem dos parâmetros. Se um tipo tiver um construtor padrão, implicitamente ou explicitamente declarado, você poderá usar a inicialização de chave padrão (com chaves vazias). Por exemplo, a seguinte classe pode ser inicializada usando a inicialização de chave padrão e não padrão:
 
 ```cpp
 #include <string>
@@ -90,7 +90,7 @@ int main()
 }
 ```
 
-If a class has non-default constructors, the order in which class members appear in the brace initializer is the order in which the corresponding parameters appear in the constructor, not the order in which the members are declared (as with `class_a` in the previous example). Otherwise, if the type has no declared constructor, the order in which the members appear in the brace initializer is the same as the order in which they are declared; in this case, you can initialize as many of the public members as you wish, but you cannot skip any member. The following example shows the order that's used in brace initialization when there is no declared constructor:
+Se uma classe tiver construtores não padrão, a ordem na qual os membros da classe aparecem no inicializador de chave é a ordem na qual os parâmetros correspondentes aparecem no construtor, não a ordem na qual os membros são declarados (como com `class_a` no exemplo anterior). Caso contrário, se o tipo não tiver um construtor declarado, a ordem na qual os membros aparecerão no inicializador de chaves será igual à ordem na qual eles são declarados; Nesse caso, você pode inicializar quantos membros públicos desejar, mas não pode ignorar nenhum membro. O exemplo a seguir mostra a ordem usada na inicialização de chaves quando não há um construtor declarado:
 
 ```cpp
 class class_d {
@@ -112,7 +112,7 @@ int main()
 }
 ```
 
-If the default constructor is explicitly declared but marked as deleted, default brace initialization cannot be used:
+Se o construtor padrão for declarado explicitamente, mas marcado como excluído, a inicialização de chave padrão não poderá ser usada:
 
 ```cpp
 class class_f {
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-You can use brace initialization anywhere you would typically do initialization—for example, as a function parameter or a return value, or with the **new** keyword:
+Você pode usar a inicialização de chaves em qualquer lugar em que normalmente faria a inicialização — por exemplo, como um parâmetro de função ou um valor de retorno, ou com a **nova** palavra-chave:
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -136,18 +136,18 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-## <a name="initializer_list-constructors"></a>initializer_list constructors
+## <a name="initializer_list-constructors"></a>construtores de initializer_list
 
-The [initializer_list Class](../standard-library/initializer-list-class.md) represents a list of objects of a specified type that can be used in a constructor, and in other contexts. You can construct an initializer_list by using brace initialization:
+A [classe initializer_list](../standard-library/initializer-list-class.md) representa uma lista de objetos de um tipo especificado que podem ser usados em um construtor e em outros contextos. Você pode construir um initializer_list usando a inicialização de chaves:
 
 ```cpp
 initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
->  To use this class, you must include the [\<initializer_list>](../standard-library/initializer-list.md) header.
+>  Para usar essa classe, você deve incluir o [\<initializer_list cabeçalho >](../standard-library/initializer-list.md) .
 
-An `initializer_list` can be copied. In this case, the members of the new list are references to the members of the original list:
+Um `initializer_list` pode ser copiado. Nesse caso, os membros da nova lista são referências aos membros da lista original:
 
 ```cpp
 initializer_list<int> ilist1{ 5, 6, 7 };
@@ -156,7 +156,7 @@ if (ilist1.begin() == ilist2.begin())
     cout << "yes" << endl; // expect "yes"
 ```
 
-The standard library container classes, and also `string`, `wstring`, and `regex`, have `initializer_list` constructors. The following examples show how to do brace initialization with these constructors:
+As classes de contêiner de biblioteca padrão, e também `string`, `wstring`e `regex`, têm construtores de `initializer_list`. Os exemplos a seguir mostram como fazer a inicialização de chaves com estes construtores:
 
 ```cpp
 vector<int> v1{ 9, 10, 11 };

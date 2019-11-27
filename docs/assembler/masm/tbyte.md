@@ -15,13 +15,13 @@ ms.locfileid: "74393152"
 ---
 # <a name="tbyte"></a>TBYTE
 
-Allocates and optionally initializes 10 bytes of storage for each *initializer*. Can also be used as a type specifier anywhere a type is legal.
+Aloca e, opcionalmente, inicializa 10 bytes de armazenamento para cada *inicializador*. Também pode ser usado como um especificador de tipo em qualquer lugar em que um tipo é válido.
 
 ## <a name="syntax"></a>Sintaxe
 
-> ⟦*name*⟧ **TBYTE** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*Name*⟧ **Tbyte** *inicializador* ⟦ __,__ *inicializador* ... ⟧
 
 ## <a name="see-also"></a>Consulte também
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+[Referência de diretivas](../../assembler/masm/directives-reference.md)\
 [DT](../../assembler/masm/dt.md)

@@ -15,15 +15,15 @@ ms.locfileid: "74398766"
 ---
 # <a name="df"></a>DF
 
-Allocates and optionally initializes 6 bytes of storage for each *initializer*. **DF** is a synonym of [FWORD](../../assembler/masm/fword.md).
+Aloca e, opcionalmente, inicializa 6 bytes de armazenamento para cada *inicializador*. **DF** é um sinônimo de [FWORD](../../assembler/masm/fword.md).
 
 ## <a name="syntax"></a>Sintaxe
 
-> ⟦*name*⟧ **DF** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*Name*⟧ **DF** *inicializador* ⟦ __,__ *inicializador* ... ⟧
 
 ## <a name="remarks"></a>Comentários
 
-Also can be used as a type specifier anywhere a type is legal.
+Também pode ser usado como um especificador de tipo em qualquer lugar em que um tipo é válido.
 
 ## <a name="see-also"></a>Consulte também
 

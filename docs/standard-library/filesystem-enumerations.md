@@ -22,7 +22,7 @@ ms.locfileid: "74303505"
 
 Este tópico documenta as enumerações no cabeçalho filesystem.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** \<experimental/filesystem>
 
@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>Valores
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |`none`|Comportamento padrão: ignorar links simbólicos para diretórios. A permissão negada é um erro.|
 |`follow_directory_symlink`|Tratar links simbólicos para diretórios como diretórios reais.|
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valores
 
-|Nome|Valor|Descrição|
+|{1&gt;Nome&lt;1}|Valor|Descrição|
 |----------|-----------|-----------------|
 |`not_found`|-1|Representa um arquivo que não existe.|
 |`none`|0|Representa um arquivo que não tem um atributo de tipo. (Sem suporte.)|

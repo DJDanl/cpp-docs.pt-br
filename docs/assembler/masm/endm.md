@@ -15,7 +15,7 @@ ms.locfileid: "74397658"
 ---
 # <a name="endm"></a>ENDM
 
-Terminates a macro or repeat block.
+Encerra uma macro ou um bloco de repetição.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,8 +23,8 @@ Terminates a macro or repeat block.
 
 ## <a name="remarks"></a>Comentários
 
-See [MACRO](../../assembler/masm/macro.md), [FOR](../../assembler/masm/for-masm.md), [FORC](../../assembler/masm/forc.md), [REPEAT](../../assembler/masm/repeat.md), or [WHILE](while-masm.md).
+Consulte [macro](../../assembler/masm/macro.md), [para](../../assembler/masm/for-masm.md), [forçada](../../assembler/masm/forc.md), [REPEAT](../../assembler/masm/repeat.md)ou [while](while-masm.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Directives reference](directives-reference.md)
+[Referência de diretivas](directives-reference.md)

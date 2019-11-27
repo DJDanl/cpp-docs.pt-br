@@ -15,7 +15,7 @@ ms.locfileid: "74398142"
 ---
 # <a name="listmacro"></a>.LISTMACRO
 
-Starts listing of macro expansion statements that generate code or data.
+Inicia a listagem de instruções de expansão de macro que geram código ou dados.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,8 +23,8 @@ Starts listing of macro expansion statements that generate code or data.
 
 ## <a name="remarks"></a>Comentários
 
-Esse é o padrão. Same as [.XALL](../../assembler/masm/dot-xall.md).
+Esse é o padrão. O mesmo que [. XALL](../../assembler/masm/dot-xall.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Directives reference](directives-reference.md)
+[Referência de diretivas](directives-reference.md)

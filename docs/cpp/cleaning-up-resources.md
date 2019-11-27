@@ -18,19 +18,19 @@ ms.locfileid: "74246644"
 ---
 # <a name="cleaning-up-resources"></a>Limpando recursos
 
-Durante a execução do manipulador de término, talvez você não saiba quais recursos foram realmente alocados antes que o manipulador de término seja chamado. It is possible that the **__try** statement block was interrupted before all resources were allocated, so that not all resources were opened.
+Durante a execução do manipulador de término, talvez você não saiba quais recursos foram realmente alocados antes que o manipulador de término seja chamado. É possível que o bloco de instrução de **__try** tenha sido interrompido antes de todos os recursos serem alocados, para que nem todos os recursos fossem abertos.
 
 Portanto, para garantir, você deve verificar quais recursos estão realmente abertos antes de continuar com a limpeza da manipulação de término. Um procedimento recomendado é fazer o seguinte:
 
 1. Inicialize os identificadores como NULL.
 
-1. In the **__try** statement block, allocate resources. Os identificadores são definidos como valores positivos conforme o recurso é alocado.
+1. No bloco de instrução **__try** , aloque recursos. Os identificadores são definidos como valores positivos conforme o recurso é alocado.
 
-1. In the **__finally** statement block, release each resource whose corresponding handle or flag variable is nonzero or not NULL.
+1. No bloco de instrução **__finally** , libere cada recurso cuja variável identificador ou sinalizador correspondente seja diferente de zero ou não seja nulo.
 
 ## <a name="example"></a>Exemplo
 
-For example, the following code uses a termination handler to close three files and a memory block that were allocated in the **__try** statement block. Antes de limpar um recurso, o código primeiro verifica se o recurso foi alocado.
+Por exemplo, o código a seguir usa um manipulador de encerramento para fechar três arquivos e um bloco de memória que foram alocados no bloco de instrução **__try** . Antes de limpar um recurso, o código primeiro verifica se o recurso foi alocado.
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -72,5 +72,5 @@ int main() {
 
 ## <a name="see-also"></a>Consulte também
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
+[Escrevendo um manipulador de encerramento](../cpp/writing-a-termination-handler.md)<br/>
 [Tratamento de exceções estruturado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

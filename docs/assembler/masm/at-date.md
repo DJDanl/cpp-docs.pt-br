@@ -13,14 +13,14 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399136"
 ---
-# <a name="date"></a>\@Date
+# <a name="date"></a>Data de \@
 
-The system date in the format mm/dd/yy (text macro).
+A data do sistema no formato mm/dd/aa (macro de texto).
 
 ## <a name="syntax"></a>Sintaxe
 
-> **\@Date**
+> **Data de \@**
 
 ## <a name="see-also"></a>Consulte também
 
-[Symbols reference](symbols-reference.md)
+[Referência de símbolos](symbols-reference.md)

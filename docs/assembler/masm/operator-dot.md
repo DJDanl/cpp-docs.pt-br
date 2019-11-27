@@ -1,5 +1,5 @@
 ---
-title: operator dot
+title: ponto de operador
 ms.date: 08/30/2018
 f1_keywords:
 - operator .
@@ -17,14 +17,14 @@ ms.locfileid: "74397022"
 ---
 # <a name="operator-"></a>Operador .
 
-The first operator returns *expression* plus the offset of *field* within its structure or union. The second operator returns value at the location pointed to by *register* plus the offset of *field* within its structure or union.
+O primeiro operador retorna *expressão* mais o deslocamento do *campo* dentro de sua estrutura ou União. O segundo operador retorna o valor no local apontado pelo *registro* mais o deslocamento do *campo* dentro de sua estrutura ou União.
 
 ## <a name="syntax"></a>Sintaxe
 
-> *expression* __.__ *field*⟦ __.__ *field* ...⟧
+> *expressão* __.__ *campo*⟦ __.__ *campo* ... ⟧
 >
-> **\[** _register_ **]** __.__ *field*⟦ __.__ *field* ...⟧
+> _registro_de\[ **]** __.__ *campo*⟦ __.__ *campo* ... ⟧
 
 ## <a name="see-also"></a>Consulte também
 
-[Operators reference](operators-reference.md)
+[Referência de operadores](operators-reference.md)

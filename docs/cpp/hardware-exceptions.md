@@ -27,7 +27,7 @@ As exceções de hardware reconhecidas pelo windows são resumidas na seguinte t
 |--------------------|------------------------|
 |STATUS_ACCESS_VIOLATION|Leitura ou gravação em um local de memória inacessível.|
 |STATUS_BREAKPOINT|Encontro de um ponto de interrupção definido por hardware; usado somente por depuradores.|
-|STATUS_DATATYPE_MISALIGNMENT|Leitura ou gravação de dados em um endereço que não está alinhado corretamente; por exemplo, as entidades de 16 bits devem ser alinhadas em limites de 2 bytes. (Not applicable to Intel 80*x*86 processors.)|
+|STATUS_DATATYPE_MISALIGNMENT|Leitura ou gravação de dados em um endereço que não está alinhado corretamente; por exemplo, as entidades de 16 bits devem ser alinhadas em limites de 2 bytes. (Não aplicável a processadores Intel 80*x*86.)|
 |STATUS_FLOAT_DIVIDE_BY_ZERO|Divisão do tipo de ponto flutuante por 0,0.|
 |STATUS_FLOAT_OVERFLOW|Expoente positivo máximo do tipo de ponto flutuante excedido.|
 |STATUS_FLOAT_UNDERFLOW|Magnitude excedida do expoente negativo mais baixo do tipo de ponto flutuante.|
@@ -38,9 +38,9 @@ As exceções de hardware reconhecidas pelo windows são resumidas na seguinte t
 |STATUS_INTEGER_OVERFLOW|Tentativa de uma operação que excede o intervalo do inteiro.|
 |STATUS_SINGLE_STEP|Execução de uma instrução no modo de etapa única; usado somente por depuradores.|
 
-Muitas das exceções listadas na tabela anterior devem ser tratadas por depuradores, pelo sistema operacional, ou outro código de nível baixo. Com a exceção de erros de inteiro e de ponto flutuante, seu código não deve tratar esses erros. Assim, geralmente você deve usar o filtro de tratamento de exceções para ignorar exceções (avaliado como 0). Caso contrário, você poderá impedir que os mecanismos de nível inferior respondam adequadamente. You can, however, take appropriate precautions against the potential effect of these low-level errors by [writing termination handlers](../cpp/writing-a-termination-handler.md).
+Muitas das exceções listadas na tabela anterior devem ser tratadas por depuradores, pelo sistema operacional, ou outro código de nível baixo. Com a exceção de erros de inteiro e de ponto flutuante, seu código não deve tratar esses erros. Assim, geralmente você deve usar o filtro de tratamento de exceções para ignorar exceções (avaliado como 0). Caso contrário, você poderá impedir que os mecanismos de nível inferior respondam adequadamente. No entanto, você pode tomar as precauções apropriadas contra o efeito potencial desses erros de nível inferior [escrevendo manipuladores de encerramento](../cpp/writing-a-termination-handler.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
+[Escrevendo um manipulador de exceção](../cpp/writing-an-exception-handler.md)<br/>
 [Tratamento de exceções estruturado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -35,7 +35,7 @@ Quando você coloca o cursor na frente de uma chave, '{' ou '}', o editor realç
 
 Outras opções de estrutura de tópicos estão localizadas em **Editar** > **Estrutura de Tópicos** no menu principal.
 
-## <a name="line-numbers"></a>Os números de linha
+## <a name="line-numbers"></a>Números de linha
 
 Você pode adicionar números de linha ao seu projeto acessando **ferramentas** > **Opções** > **Editor de texto** > **todas as linguagens** > **geral** ou pesquisando por "número de linha" com **início rápido (Ctrl + Q)** . Os números de linha podem ser definidos para todas as linguagens ou para linguagens específicas, incluindo C++.
 
@@ -59,7 +59,7 @@ Passe o mouse sobre qualquer variável, função ou outro símbolo para obter in
 
 ::: moniker range="vs-2019"
 
-![Informações rápidas em C&#43;&#43;](../ide/media/quick-info-vs2019.png "Informação Rápida")
+![Informações rápidas em C&#43;&#43;](../ide/media/quick-info-vs2019.png "Informações Rápidas")
 
 A dica de ferramenta **Informações Rápidas** tem um link **Pesquisar Online**. Acesse **Ferramentas** > **Opções** > **Editor de Texto** > **C++**  > **Exibir** para especificar o provedor de pesquisa. 
 
@@ -71,7 +71,7 @@ Se houver um erro no código, passe o mouse sobre ele, e as **Informações Ráp
 
 ::: moniker range="<=vs-2017"
 
-![Informações rápidas em C&#43;&#43;](../ide/media/quick-info.png "Informação Rápida")
+![Informações rápidas em C&#43;&#43;](../ide/media/quick-info.png "Informações Rápidas")
 
 Se houver um erro no código, passe o mouse sobre ele, e as **Informações Rápidas** exibirão a mensagem de erro. Encontre também a mensagem de erro na janela **Lista de Erros**.
 
@@ -93,11 +93,11 @@ Passe o mouse sobre uma variável ou uma declaração da função, clique com o 
 
 Posicione o cursor sobre qualquer tipo, palavra-chave ou função ou imediatamente após eles e pressione **F1** para ir diretamente para o tópico de referência relevante em docs.microsoft.com. **F1** também funciona em itens da Lista de Erros e em muitas caixas de diálogo.
 
-## <a name="class-view"></a>Exibição de Classe
+## <a name="class-view"></a>Modo de exibição de classe
 
 O **Modo de Exibição de Classe** exibe um conjunto pesquisável de árvores de todos os símbolos de códigos e suas hierarquias de pai/filho e escopo, organizadas por projeto. Configure o que o **Modo de Exibição de Classe** exibe em **Configurações do Modo de Exibição de Classe** (clique no ícone da caixa de engrenagem na parte superior da janela).
 
-![Modo de Exibição de Classe em C&#43;&#43;](../ide/media/class-view.png "Exibição de Classe")
+![Modo de Exibição de Classe em C&#43;&#43;](../ide/media/class-view.png "Modo de exibição de classe")
 
 ## <a name="generate-graph-of-include-files"></a>Gerar grafo de arquivos de inclusão
 

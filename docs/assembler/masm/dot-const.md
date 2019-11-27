@@ -15,7 +15,7 @@ ms.locfileid: "74398559"
 ---
 # <a name="const"></a>.CONST
 
-When used with [.MODEL](../../assembler/masm/dot-model.md), starts a constant data segment (with segment name **CONST**).
+Quando usado com [. MODELO](../../assembler/masm/dot-model.md), inicia um segmento de dados constante (com nome de segmento **const**).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,7 +23,7 @@ When used with [.MODEL](../../assembler/masm/dot-model.md), starts a constant da
 
 ## <a name="remarks"></a>Comentários
 
-This segment has the read-only attribute.
+Este segmento tem o atributo somente leitura.
 
 ## <a name="see-also"></a>Consulte também
 

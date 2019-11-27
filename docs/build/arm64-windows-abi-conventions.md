@@ -51,7 +51,7 @@ No entanto, os acessos à memória não armazenada em cache (dispositivo) ainda 
 
 Alinhamento de layout padrão para locais:
 
-| Tamanho em bytes | Alinhamento em bytes |
+| Tamanho em Bytes | Alinhamento em bytes |
 | - | - |
 | 1 | 1 |
 | 2 | 2 |
@@ -60,7 +60,7 @@ Alinhamento de layout padrão para locais:
 
 Alinhamento de layout padrão para globais e estáticos:
 
-| Tamanho em bytes | Alinhamento em bytes |
+| Tamanho em Bytes | Alinhamento em bytes |
 | - | - |
 | 1 | 1 |
 | 2 - 7 | 4 |
@@ -73,10 +73,10 @@ A arquitetura AArch64 dá suporte a registros de inteiro 32:
 
 | Registro | Volátil? | Função |
 | - | - | - |
-| x0 | Volátil | Parâmetro/Registro transitório 1, registro de resultados |
-| x1-x7 | Volátil | Parâmetro/Registro transitório 2-8 |
-| x8-x15 | Volátil | Registros de rascunho |
-| x16-x17 | Volátil | Intra-Procedure-chamar os registros de rascunho |
+| x0 | Volatile | Parâmetro/Registro transitório 1, registro de resultados |
+| x1-x7 | Volatile | Parâmetro/Registro transitório 2-8 |
+| x8-x15 | Volatile | Registros de rascunho |
+| x16-x17 | Volatile | Intra-Procedure-chamar os registros de rascunho |
 | x18 | Não volátil | Registro de plataforma: no modo kernel, aponta para KPCR para o processador atual; no modo de usuário, aponta para TEB |
 | x19-x28 | Não volátil | Registros de rascunho |
 | x29/fp | Não volátil | Ponteiro de quadro |
@@ -96,10 +96,10 @@ A arquitetura AArch64 também dá suporte a 32 registros de ponto flutuante/SIMD
 
 | Registro | Volátil? | Função |
 | - | - | - |
-| v0 | Volátil | Parâmetro/Registro transitório 1, registro de resultados |
-| v1-v7 | Volátil | O parâmetro/os registros de rascunho 2-8 |
+| v0 | Volatile | Parâmetro/Registro transitório 1, registro de resultados |
+| v1-v7 | Volatile | O parâmetro/os registros de rascunho 2-8 |
 | v8-v15 | Não volátil | Registros de rascunho (somente os bits de 64 baixos são não-voláteis) |
-| v16-v31 | Volátil | Registros de rascunho |
+| v16-v31 | Volatile | Registros de rascunho |
 
 Cada registro pode ser acessado como um valor de 128 bits completo (via V0-V31 ou q0-q31). Ele pode ser acessado como um valor de 64 bits (via D0-D31), como um valor de 32 bits (via S0-S31), como um valor de 16 bits (via H0-H31) ou como um valor de 8 bits (via B0-B31). Acessos menores que 128 bits acessam apenas os bits inferiores do registro completo de bit 128. Eles deixam os bits restantes intocados, a menos que especificado de outra forma. (AArch64 é diferente de AArch32, em que os registradores menores foram empacotados sobre os registros maiores.)
 

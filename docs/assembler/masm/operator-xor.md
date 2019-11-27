@@ -17,12 +17,12 @@ ms.locfileid: "74395320"
 ---
 # <a name="operator-xor"></a>operador XOR
 
-Returns the result of a bitwise **XOR** operation for *expression1* and *expression2*.
+Retorna o resultado de uma operação de **XOR** bit a bit para *expression1* e *expression2*.
 
 ## <a name="syntax"></a>Sintaxe
 
-> *expression1* **XOR** *expression2*
+> *expressão1* **XOR** *expression2*
 
 ## <a name="see-also"></a>Consulte também
 
-[Operators reference](operators-reference.md)
+[Referência de operadores](operators-reference.md)

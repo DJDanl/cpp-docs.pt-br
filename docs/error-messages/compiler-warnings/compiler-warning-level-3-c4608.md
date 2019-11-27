@@ -15,11 +15,11 @@ ms.locfileid: "74188978"
 ---
 # <a name="compiler-warning-level-3-c4608"></a>Aviso do compilador (nível 3) C4608
 
-'union_member' has already been initialized by another union member in the initializer list, 'union_member'
+' union_member ' já foi inicializado por outro membro de União na lista de inicializadores, ' union_member '
 
-Two members of the same union were initialized in an initialization list. You can only access one member of the union.
+Dois membros da mesma União foram inicializados em uma lista de inicialização. Você só pode acessar um membro da União.
 
-The following sample generates C4608:
+O exemplo a seguir gera C4608:
 
 ```cpp
 // C4608.cpp

@@ -1,5 +1,5 @@
 ---
-title: TITLE
+title: TÍTULO
 ms.date: 08/30/2018
 f1_keywords:
 - title
@@ -13,14 +13,14 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74393200"
 ---
-# <a name="title"></a>TITLE
+# <a name="title"></a>TÍTULO
 
-Defines the program listing title.
+Define o título da listagem do programa.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **TITLE** *text*
+> *Texto* do título
 
 ## <a name="see-also"></a>Consulte também
 
-[Directives reference](directives-reference.md)
+[Referência de diretivas](directives-reference.md)

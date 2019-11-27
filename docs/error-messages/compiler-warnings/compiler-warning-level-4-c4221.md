@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 4) C4221
+title: Aviso do compilador (nível 4) C4221
 ms.date: 11/04/2016
 f1_keywords:
 - C4221
 helpviewer_keywords:
 - C4221
 ms.assetid: 8532bd68-54dc-4526-8597-f61dcb0a0129
-ms.openlocfilehash: f552a5d76d1a778cdf72cbe079138f609350ffb1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa87c240472df2926753781f0f14cbd69752de00
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401092"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541933"
 ---
-# <a name="compiler-warning-level-4-c4221"></a>Compilador aviso (nível 4) C4221
+# <a name="compiler-warning-level-4-c4221"></a>Aviso do compilador (nível 4) C4221
 
-extensão não padrão usada: 'identifier': não pode ser inicializado usando endereço da variável automática
+extensão não padrão usada: ' identifier ': não pode ser inicializada usando endereço de variável automática
 
-Com as extensões da Microsoft padrão (/Ze), você pode inicializar um tipo de agregação (**array**, `struct`, ou **união**) com o endereço de uma variável de local (automático).
+Com as extensões padrão da Microsoft (/Ze), você pode inicializar um tipo de agregação (**matriz**, `struct`ou **União**) com o endereço de uma variável local (automática).
 
 ## <a name="example"></a>Exemplo
 
-```
+```c
 // C4221.c
 // compile with: /W4
 struct S
@@ -40,4 +40,4 @@ int main()
 }
 ```
 
-Essas inicializações são inválidas para a compatibilidade com ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Essas inicializações são inválidas sob compatibilidade com ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

@@ -43,7 +43,7 @@ Um `configuration` tem estas propriedades:
 - `codeAnalysisRuleset`: especifica o conjunto de regras para usar ao executar a análise de código. Pode ser um caminho completo ou o nome do arquivo de um conjunto de regras instalado pelo Visual Studio.
 - `configurationType`: especifica a configuração do tipo de build para o gerador selecionado. Pode ser um destes:
 
-  - Depurar
+  - Depuração
   - Versão
   - MinSizeRel
   - RelWithDebInfo
@@ -83,7 +83,7 @@ Quando a configuração ativa especifica um gerador do Visual Studio, por padrã
 
 - `configurationType`: especifica a configuração do tipo de build para o gerador selecionado. Pode ser um destes:
 
-  - Depurar
+  - Depuração
   - Versão
   - MinSizeRel
   - RelWithDebInfo

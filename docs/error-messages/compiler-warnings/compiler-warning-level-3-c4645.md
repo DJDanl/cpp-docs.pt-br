@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4645
+title: Aviso do compilador (nível 3) C4645
 ms.date: 11/04/2016
 f1_keywords:
 - C4645
@@ -13,13 +13,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189368"
 ---
-# <a name="compiler-warning-level-3-c4645"></a>Compiler Warning (level 3) C4645
+# <a name="compiler-warning-level-3-c4645"></a>Aviso do compilador (nível 3) C4645
 
-function declared with __declspec(noreturn) has a return statement
+função declarada com __declspec (noreturn) tem uma instrução return
 
-A [return](../../cpp/return-statement-in-program-termination-cpp.md) statement was found in a function that is marked with the [noreturn](../../cpp/noreturn.md) `__declspec` modifier. The `return` statement was ignored.
+Uma instrução de [retorno](../../cpp/return-statement-in-program-termination-cpp.md) foi encontrada em uma função que está marcada com o modificador [noreturn](../../cpp/noreturn.md) `__declspec`. A instrução `return` foi ignorada.
 
-The following sample generates C4645:
+O exemplo a seguir gera C4645:
 
 ```cpp
 // C4645.cpp

@@ -73,7 +73,7 @@ O valor de *dest*.
 **memcpy** copia bytes de *contagem* de *src* para *dest*; o **wmemcpy** copia os caracteres largos da *contagem* (dois bytes). Se a origem e o destino se sobrepõem, o comportamento de **memcpy** é indefinido. Use **memmove** para lidar com regiões sobrepostas.
 
 > [!IMPORTANT]
-> Certifique-se de que o buffer de destino seja do mesmo tamanho ou maior que o buffer de origem. Para obter mais informações, consulte [Evitando saturações de buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
+> Certifique-se de que o buffer de destino seja do mesmo tamanho ou maior que o buffer de origem. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 > [!IMPORTANT]
 > Como tantas estouros de buffer e, portanto, possíveis explorações de segurança, foram rastreadas para uso impróprio de **memcpy**, essa função está listada entre as funções "banidas" pelo SDL (ciclo de vida de desenvolvimento da segurança).  Você pode observar que algumas classes de biblioteca VC + + continuam a usar o **memcpy**.  Além disso, você pode observar que o otimizador do compilador VC + + às vezes emite chamadas para **memcpy**.  O produto Visual C++ foi desenvolvido de acordo com o processo SDL e, portanto, o uso desta função proibida foi cuidadosamente avaliado.  No caso do uso dela pela biblioteca, as chamadas foram cuidadosamente examinadas para garantir que os estouros de buffer não serão permitidos por meio dessas chamadas.  No caso do compilador, algumas vezes determinados padrões de código são reconhecidos como idênticos ao padrão de **memcpy**e, portanto, são substituídos por uma chamada para a função.  Nesses casos, o uso de **memcpy** não é mais não seguro do que as instruções originais teriam; Eles simplesmente foram otimizados para uma chamada para a função **memcpy** ajustada pelo desempenho.  Assim como o uso de funções CRT "seguras" não garante a segurança (elas apenas dificultam a segurança), o uso de funções "banidas" não garante o perigo (eles simplesmente exigem maior investigação para garantir a segurança).
@@ -94,14 +94,14 @@ ou
 #include <wchar.h>
 ```
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**memcpy**|\<memory.h> ou \<string.h>|
 |**wmemcpy**|\<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

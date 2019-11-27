@@ -15,22 +15,22 @@ ms.locfileid: "74397460"
 ---
 # <a name="if-masm"></a>IF (MASM)
 
-Grants assembly of *ifstatements* if *expression1* is true (nonzero) or *elseifstatements* if *expression1* is false (0) and *expression2* is true.
+Concede o assembly de *ifstatements* se *expressão1* for true (diferente de zero) ou *elseifstatements* se *expressão1* for false (0) e *expression2* for true.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **IF** *expression1*\
-> *if-statements*\
-> ⟦**ELSEIF** *expression2*\
-> *elseif-statements*⟧\
+> **Se** *expressão1*\
+> *instruções if*\
+> ⟦**ElseIf** *expression2*\
+> *ElseIf-instruções*⟧ \
 > ⟦**ELSE**\
-> *else-statements*⟧\
+> *else – instruções*⟧ \
 > **ENDIF**
 
 ## <a name="remarks"></a>Comentários
 
-The following directives may be substituted for [ELSEIF](../../assembler/masm/elseif-masm.md): **ELSEIFB**, **ELSEIFDEF**, **ELSEIFDIF**, **ELSEIFDIFI**, **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**, and **ELSEIFNDEF**. Optionally, assembles *else-statements* if the previous expression is false. Note that the expressions are evaluated at assembly time.
+As seguintes diretivas podem ser substituídas por [ElseIf](../../assembler/masm/elseif-masm.md): **ELSEIFB**, **ELSEIFDEF**, **ELSEIFDIF**, **ELSEIFDIFI**, **ElseIf**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**e **ELSEIFNDEF**. Opcionalmente, o monta *instruções ELSE* se a expressão anterior for false. Observe que as expressões são avaliadas no momento do assembly.
 
 ## <a name="see-also"></a>Consulte também
 
-[Directives reference](directives-reference.md)
+[Referência de diretivas](directives-reference.md)

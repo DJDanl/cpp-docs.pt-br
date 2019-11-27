@@ -17,12 +17,12 @@ ms.locfileid: "74396569"
 ---
 # <a name="operator-offset"></a>operador OFFSET
 
-Returns the offset into the relevant segment of *expression*.
+Retorna o deslocamento para o segmento de *expressão*relevante.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **OFFSET** *expression*
+> *Expressão* de deslocamento
 
 ## <a name="see-also"></a>Consulte também
 
-[Operators reference](operators-reference.md)
+[Referência de operadores](operators-reference.md)

@@ -17,7 +17,7 @@ ms.locfileid: "74395223"
 ---
 # <a name="operator-zero"></a>operador ZERO?
 
-Status of zero flag. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+Status do sinalizador zero. Usado somente no [. SE](../../assembler/masm/dot-if.md), [. WHILE](../../assembler/masm/dot-while.md), ou [. Repita](../../assembler/masm/dot-repeat.md) os blocos e avaliados em tempo de execução, não no momento do assembly.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,4 +25,4 @@ Status of zero flag. Used only within [.IF](../../assembler/masm/dot-if.md), [.W
 
 ## <a name="see-also"></a>Consulte também
 
-[Operators reference](operators-reference.md)
+[Referência de operadores](operators-reference.md)

@@ -15,7 +15,7 @@ ms.locfileid: "74392764"
 ---
 # <a name="ymmword"></a>YMMWORD
 
-Used for 256-bit multimedia operands with Intel Advanced Vector Extensions (AVX) instructions.
+Usado para operandos de multimídia de 256 bits com instruções de AVX (extensões de vetor avançado) da Intel.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,8 +23,8 @@ Used for 256-bit multimedia operands with Intel Advanced Vector Extensions (AVX)
 
 ## <a name="remarks"></a>Comentários
 
-**YMMWORD** is intended to represent the same type as `__m256` for the AVX intrinsics.
+**YMMWORD** destina-se a representar o mesmo tipo que `__m256` para os intrínsecos AVX.
 
 ## <a name="see-also"></a>Consulte também
 
-[Directives reference](directives-reference.md)
+[Referência de diretivas](directives-reference.md)

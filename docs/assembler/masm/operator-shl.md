@@ -17,12 +17,12 @@ ms.locfileid: "74396181"
 ---
 # <a name="operator-shl"></a>operador SHL
 
-Returns the result of shifting the bits of *expression* left *count* number of bits.
+Retorna o resultado da mudança dos bits do número de *contagem* de bits à esquerda da *expressão* .
 
 ## <a name="syntax"></a>Sintaxe
 
-> *expression* **SHL** *count*
+> *contagem* de **SHL** de *expressão*
 
 ## <a name="see-also"></a>Consulte também
 
-[Operators reference](operators-reference.md)
+[Referência de operadores](operators-reference.md)

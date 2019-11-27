@@ -13,9 +13,9 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398598"
 ---
-# <a name="alpha-32-bit-masm"></a>.ALPHA (32-bit MASM)
+# <a name="alpha-32-bit-masm"></a>. ALFA (MASM de 32 bits)
 
-Orders segments alphabetically. (32-bit MASM only.)
+Ordena os segmentos alfabeticamente. (somente MASM de 32 bits.)
 
 ## <a name="syntax"></a>Sintaxe
 

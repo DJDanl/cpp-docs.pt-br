@@ -53,7 +53,7 @@ As informações recuperadas pela função de membro [CDaoQueryDef:: GetParamete
 
 `CDaoParameterInfo` também define uma função de membro de `Dump` em compilações de depuração. Você pode usar `Dump` para despejar o conteúdo de um objeto `CDaoParameterInfo`.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** AFXDAO. h
 

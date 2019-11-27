@@ -15,12 +15,12 @@ ms.locfileid: "74398938"
 ---
 # <a name="sizestr"></a>\@SizeStr
 
-A macro function that returns the length of the given string. Returns an integer.
+Uma função de macro que retorna o comprimento da cadeia de caracteres especificada. Retorna um número inteiro.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **\@SizeStr(** *string* **)**
+> **\@SizeStr (cadeia de** *caracteres* **)**
 
 ## <a name="see-also"></a>Consulte também
 
-[Symbols reference](symbols-reference.md)
+[Referência de símbolos](symbols-reference.md)

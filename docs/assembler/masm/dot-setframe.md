@@ -15,23 +15,23 @@ ms.locfileid: "74397927"
 ---
 # <a name="setframe"></a>.SETFRAME
 
-Fills in the frame register field and offset in the unwind information using the specified register (*reg*) and offset (*offset*). The offset must be a multiple of 16 and less than or equal to 240. This directive also generates a `UWOP_SET_FPREG` unwind code entry for the specified register using the current prologue offset.
+Preenche o campo de registro de quadro e o deslocamento nas informações de desenrolamento usando o registro (*reg*) e o deslocamento (*deslocamento*) especificados. O deslocamento deve ser um múltiplo de 16 e menor ou igual a 240. Essa diretiva também gera uma entrada de código de desenrolação `UWOP_SET_FPREG` para o registro especificado usando o deslocamento de prólogo atual.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **.SETFRAME** *reg*, *offset*
+> **.**  *Reg*frame, *deslocamento*
 
 ## <a name="remarks"></a>Comentários
 
-**.SETFRAME** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.SETFRAME** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**. SETFRAME** permite que os usuários de ml64. exe especifiquem como uma função de quadro se desenrola e só é permitido dentro do prólogo, que se estende da declaração de quadro [proc](../../assembler/masm/proc.md) para o [. Diretiva endprólogo](../../assembler/masm/dot-endprolog.md) . Essas diretivas não geram código; Eles geram apenas `.xdata` e `.pdata`. **. SETFRAME** deve ser precedido por instruções que realmente implementam as ações a serem rebobinadas. É uma boa prática encapsular as diretivas de desenrolamento e o código que elas devem desenrolar em uma macro para garantir o contrato.
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Para obter mais informações, consulte [MASM para x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Amostra
 
 ### <a name="description"></a>Descrição
 
-The following sample shows how to use a frame pointer:
+O exemplo a seguir mostra como usar um ponteiro de quadro:
 
 ### <a name="code"></a>Código
 
@@ -64,4 +64,4 @@ END
 
 ## <a name="see-also"></a>Consulte também
 
-[Directives reference](directives-reference.md)
+[Referência de diretivas](directives-reference.md)

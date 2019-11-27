@@ -17,12 +17,12 @@ ms.locfileid: "74396872"
 ---
 # <a name="operator-highword"></a>operador HIGHWORD
 
-Returns the high 16 bits of the low 32 bits of *expression*. MASM expressions are 64-bit values.
+Retorna os 16 bits altos de 32 bits de *expressão*baixa. As expressões MASM são valores de 64 bits.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **HIGHWORD** *expression*
+> *Expressão* HIGHWORD
 
 ## <a name="see-also"></a>Consulte também
 
-[Operators reference](operators-reference.md)
+[Referência de operadores](operators-reference.md)

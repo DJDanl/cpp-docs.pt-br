@@ -14,7 +14,7 @@ ms.locfileid: "74245153"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Restrições em manipuladores de exceções
 
-The principal limitation to using exception handlers in code is that you cannot use a **goto** statement to jump into a **__try** statement block. Em vez disso, você deve digitar o bloco de instruções por meio do fluxo de controle normal. You can jump out of a **__try** statement block and nest exception handlers as you choose.
+A principal limitação do uso de manipuladores de exceção no código é que você não pode usar uma instrução **goto** para saltar para um bloco de instrução **__try** . Em vez disso, você deve digitar o bloco de instruções por meio do fluxo de controle normal. Você pode saltar de um bloco de instrução **__try** e aninhar manipuladores de exceção conforme escolher.
 
 ## <a name="see-also"></a>Consulte também
 

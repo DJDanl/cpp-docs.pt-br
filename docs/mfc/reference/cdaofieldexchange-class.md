@@ -37,16 +37,16 @@ class CDaoFieldExchange
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|Retornará zero se a operação atual for apropriada para o tipo de campo que está sendo atualizado.|
 |[CDaoFieldExchange::SetFieldType](#setfieldtype)|Especifica o tipo de membro de dados do conjunto de registros — coluna ou parâmetro — representado por todas as chamadas subsequentes para funções DFX até a próxima chamada para `SetFieldType`.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[CDaoFieldExchange::m_nOperation](#m_noperation)|A operação DFX que está sendo executada pela chamada atual para a função de membro `DoFieldExchange` do conjunto de registros.|
+|[CDaoFieldExchange:: m_nOperation](#m_noperation)|A operação DFX que está sendo executada pela chamada atual para a função de membro `DoFieldExchange` do conjunto de registros.|
 |[CDaoFieldExchange:: m_prs](#m_prs)|Um ponteiro para o conjunto de registros no qual as operações DFX estão sendo executadas.|
 
 ## <a name="remarks"></a>Comentários
@@ -73,11 +73,11 @@ A função membro [IsValidOperation](#isvalidoperation) é fornecida para escrev
 
 `CDaoFieldExchange`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** AFXDAO. h
 
-##  <a name="isvalidoperation"></a>  CDaoFieldExchange::IsValidOperation
+##  <a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation
 
 Se você escrever sua própria função DFX, chame `IsValidOperation` no início da função para determinar se a operação atual pode ser executada em um tipo de membro de dados de campo específico (um `CDaoFieldExchange::outputColumn` ou um `CDaoFieldExchange::param`).
 
@@ -95,7 +95,7 @@ Algumas das operações executadas pelo mecanismo DFX se aplicam apenas a um dos
 
 Para obter informações adicionais sobre como escrever rotinas de DFX personalizadas, consulte a [Nota técnica 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md).
 
-##  <a name="m_noperation"></a>  CDaoFieldExchange::m_nOperation
+##  <a name="m_noperation"></a>CDaoFieldExchange:: m_nOperation
 
 Identifica a operação a ser executada no objeto [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) associado ao objeto de troca de campo.
 
@@ -132,7 +132,7 @@ Contém um ponteiro para o objeto [CDaoRecordset](../../mfc/reference/cdaorecord
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setfieldtype"></a>  CDaoFieldExchange::SetFieldType
+##  <a name="setfieldtype"></a>CDaoFieldExchange::SetFieldType
 
 Chame `SetFieldType` na substituição de `DoFieldExchange` da sua classe de `CDaoRecordset`.
 

@@ -34,9 +34,9 @@ A palavra-chave **auto** direciona o compilador para usar a expressão de inicia
 
 Recomendamos que você use a palavra-chave **auto** para a maioria das situações, a menos que você realmente queira uma conversão — porque ela fornece estes benefícios:
 
-- {1&gt;Vigor:&lt;1} se o tipo da expressão for modificado, e isso inclui a alteração de um tipo de retorno da função, ele apenas funciona.
+- **Robustez:** Se o tipo da expressão for alterado — isso incluirá quando um tipo de retorno de função for alterado — ele simplesmente funcionará.
 
-- {1&gt;Desempenho:&lt;1} você tem a garantia de que não haverá conversão.
+- **Desempenho:** Você tem a garantia de que não haverá nenhuma conversão.
 
 - **Usabilidade:** Você não precisa se preocupar com as dificuldades e erros de ortografia do nome do tipo.
 
@@ -123,7 +123,7 @@ int main()
 
 A tabela a seguir lista as restrições sobre o uso da palavra-chave **auto** e a mensagem de erro de diagnóstico correspondente que o compilador emite.
 
-|Número do erro|Descrição|
+|{1&gt;Número do erro&lt;1}|Descrição|
 |------------------|-----------------|
 |[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|A palavra-chave **auto** não pode ser combinada com nenhum outro especificador de tipo.|
 |[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|Um símbolo declarado com a palavra-chave **auto** deve ter um inicializador.|

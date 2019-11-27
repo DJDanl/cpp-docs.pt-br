@@ -1,5 +1,5 @@
 ---
-title: operator &amp;&amp; (MASM Run Time)
+title: '&amp; de &amp;do operador (tempo de execução MASM)'
 ms.date: 08/30/2018
 f1_keywords:
 - operator &&
@@ -14,9 +14,9 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74396766"
 ---
-# <a name="operator-ampamp-masm-run-time"></a>operator &amp;&amp; (MASM Run Time)
+# <a name="operator-ampamp-masm-run-time"></a>&amp; de &amp;do operador (tempo de execução MASM)
 
-Logical **AND**. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+**And**lógico. Usado somente no [. SE](../../assembler/masm/dot-if.md), [. WHILE](../../assembler/masm/dot-while.md), ou [. Repita](../../assembler/masm/dot-repeat.md) os blocos e avaliados em tempo de execução, não no momento do assembly.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -24,4 +24,4 @@ Logical **AND**. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE
 
 ## <a name="see-also"></a>Consulte também
 
-[Operators reference](operators-reference.md)
+[Referência de operadores](operators-reference.md)

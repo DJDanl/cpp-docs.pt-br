@@ -45,7 +45,7 @@ Para obter mais informações, consulte [Usar a multiplataforma nativa no Visual
 
 ## <a name="in-this-section"></a>Nesta seção
 
-|Título|Descrição|
+|Title|Descrição|
 |-----------|-----------------|
 |[Atualizando C++ projetos de versões anteriores do Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Como atualizar sua base de código para o Visual Studio 2019 e v142 do compilador.|
 |[Ferramentas IDE para atualizar C++ o código](ide-tools-for-upgrading-code.md)|Recursos de IDE úteis que ajudam no processo de atualização.|

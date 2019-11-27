@@ -17,12 +17,12 @@ ms.locfileid: "74396544"
 ---
 # <a name="operator-or"></a>operador Or
 
-Returns the result of a bitwise OR operation for *expression1* and *expression2*.
+Retorna o resultado de uma operação OR bit a bit para *expression1* e *expression2*.
 
 ## <a name="syntax"></a>Sintaxe
 
-> *expression1* **OR** *expression2*
+> *expression1* **ou** *expression2*
 
 ## <a name="see-also"></a>Consulte também
 
-[Operators reference](operators-reference.md)
+[Referência de operadores](operators-reference.md)
