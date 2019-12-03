@@ -1,5 +1,5 @@
 ---
-title: Pragma warning
+title: pragma de aviso
 ms.date: 08/29/2019
 f1_keywords:
 - warning_CPP
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: 9a79f0c4a9eed6b62e42f056f9d1994b44b57297
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: c6c9668f614f932b0a96f30ad3e0395e39ddc400
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216464"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683338"
 ---
-# <a name="warning-pragma"></a>Pragma warning
+# <a name="warning-pragma"></a>pragma de aviso
 
 Permite a modificação seletiva do comportamento de mensagens de aviso do compilador.
 
 ## <a name="syntax"></a>Sintaxe
 
 > **aviso de #pragma (** \
-> &nbsp;&nbsp;&nbsp;&nbsp;*especificador de aviso* **:** *aviso-lista de números*\
-> &nbsp;&nbsp;&nbsp;&nbsp;[ **;** *especificador de aviso* **:** *aviso-número-lista* ...] **)** \
+> &nbsp;&nbsp;&nbsp;&nbsp;*aviso-especificador* **:** *aviso-lista de números*\
+> &nbsp;&nbsp;&nbsp;&nbsp;[ **;** *aviso-especificador* **:** *aviso-número-lista* ...] **)** \
 > **aviso de #pragma (Push** [ **,** *n* ] **)** \
 > **aviso de #pragma (pop)**
 
@@ -37,8 +37,8 @@ Os seguintes parâmetros de especificador de aviso estão disponíveis.
 |------------------------|-------------|
 |*1, 2, 3, 4*|Aplique o nível fornecido aos avisos especificados. Também ativa um aviso especificado que está desativado por padrão.|
 |*default*|Redefina o comportamento de aviso para seu valor padrão. Também ativa um aviso especificado que está desativado por padrão. O aviso será gerado em seu nível padrão e documentado.<br /><br /> Para obter mais informações, consulte [os avisos do compilador que estão desativados por padrão](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|*disable*|Não emita as mensagens de aviso especificadas.|
-|*error*|Relate os avisos especificados como erros.|
+|*desativar*|Não emita as mensagens de aviso especificadas.|
+|*ao*|Relate os avisos especificados como erros.|
 |*uma vez*|Exiba as mensagens especificadas somente uma vez.|
 |*eliminação*|Empurra o estado atual do pragma na pilha, desabilita o aviso especificado para a próxima linha e depois exibe a pilha de aviso para que o estado de pragma seja redefinido.|
 
@@ -63,7 +63,7 @@ Essa diretiva é funcionalmente equivalente ao seguinte código:
 
 O compilador adiciona 4000 a todos os números de aviso que estejam entre 0 e 999.
 
-Para os números de aviso no intervalo de 4700 a 4999, que são os associados à geração de códigos, o estado do aviso em vigor quando o compilador encontra a chave aberta de uma função ficará em vigor pelo restante da função. O uso do pragma de **aviso** na função para alterar o estado de um número de aviso maior que 4699 só entra em vigor após o final da função. O exemplo a seguir mostra o posicionamento correto dos pragmas de **aviso** para desabilitar uma mensagem de aviso de geração de código e, em seguida, restaurá-la.
+Para números de aviso no intervalo de 4700-4999, que são os associados à geração de código, o estado do aviso em vigor quando o compilador encontra a definição de função entrará em vigor para o restante da função. O uso do pragma de **aviso** na função para alterar o estado de um número de aviso maior que 4699 só entra em vigor após o final da função. O exemplo a seguir mostra o posicionamento correto dos pragmas de **aviso** para desabilitar uma mensagem de aviso de geração de código e, em seguida, restaurá-la.
 
 ```cpp
 // pragma_warning.cpp
@@ -91,9 +91,9 @@ O pragma de **aviso** também dá suporte à seguinte sintaxe, em que *n* repres
 
 `#pragma warning( pop )`
 
-O pragma `warning( push )` armazena o estado de aviso atual para cada aviso. O pragma `warning( push, n )` armazena o estado atual para cada aviso e define o nível de aviso global como *n*.
+O `warning( push )` de pragma armazena o estado de aviso atual para cada aviso. O `warning( push, n )` de pragma armazena o estado atual de cada aviso e define o nível de aviso global como *n*.
 
-O pragma `warning( pop )` exibe o último estado de aviso enviado por push para a pilha. As alterações feitas no estado de aviso entre *Push* e *pop* são desfeitas. Considere este exemplo:
+O `warning( pop )` de pragma exibe o último estado de aviso enviado por push para a pilha. As alterações feitas no estado de aviso entre *Push* e *pop* são desfeitas. Considere este exemplo:
 
 ```cpp
 #pragma warning( push )

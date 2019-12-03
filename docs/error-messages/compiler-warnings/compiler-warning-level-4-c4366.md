@@ -1,33 +1,33 @@
 ---
-title: Compilador aviso (nível 4) C4366
+title: Aviso do compilador (nível 4) C4366
 ms.date: 11/04/2016
 f1_keywords:
 - C4366
 helpviewer_keywords:
 - C4366
 ms.assetid: 65d2942f-3741-42f4-adf2-4920d5a055ca
-ms.openlocfilehash: 11fcb0070359201de39ca5f33c83d000e02f0835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18045377210b6c020786ad2ec2e003d0e764e4b5
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391550"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683269"
 ---
-# <a name="compiler-warning-level-4-c4366"></a>Compilador aviso (nível 4) C4366
+# <a name="compiler-warning-level-4-c4366"></a>Aviso do compilador (nível 4) C4366
 
-O resultado do operador unário 'operator' deve ser unaligned
+O resultado do operador ' operator ' unário pode não estar alinhado
 
-Se um membro da estrutura nunca pode ser não alinhado devido a empacotamento, o compilador avisará a quando que o endereço do membro é atribuído a um ponteiro alinhado. Por padrão, todos os ponteiros são alinhados.
+Se um membro de estrutura nunca fosse alinhado devido à embalagem, o compilador avisará quando o endereço desse membro for atribuído a um ponteiro alinhado. Por padrão, todos os ponteiros são alinhados.
 
-Para resolver C4366, alterar o alinhamento da estrutura ou declare o ponteiro com o [unaligned](../../cpp/unaligned.md) palavra-chave.
+Para resolver C4366, altere o alinhamento da estrutura ou declare o ponteiro com a palavra-chave [__unaligned](../../cpp/unaligned.md) .
 
-Para obter mais informações, consulte unaligned e [pack](../../preprocessor/pack.md).
+Para obter mais informações, consulte __unaligned e [Pack](../../preprocessor/pack.md).
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4366.
 
-```
+```cpp
 // C4366.cpp
 // compile with: /W4 /c
 // processor: IPF x64

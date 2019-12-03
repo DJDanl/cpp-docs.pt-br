@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 4) C4408
+title: Aviso do compilador (nível 4) C4408
 ms.date: 11/04/2016
 f1_keywords:
 - C4408
 helpviewer_keywords:
 - C4408
 ms.assetid: 8488a186-ed1d-425c-aaeb-c72472c1da68
-ms.openlocfilehash: 3c7613d42bbd0ac7fa58a0b95ba68efb60d9f50a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90ca85384b28f1cf2cdef5e4083813686b96c524
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391563"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74682963"
 ---
-# <a name="compiler-warning-level-4-c4408"></a>Compilador aviso (nível 4) C4408
+# <a name="compiler-warning-level-4-c4408"></a>Aviso do compilador (nível 4) C4408
 
-anonymousstruct ou união não declarou nenhum membro de dados
+anonymousstruct ou Union não declarou nenhum membro de dados
 
-Um struct anônimo ou união deve ter pelo menos um membro de dados.
+Uma struct ou União anônima deve ter pelo menos um membro de dados.
 
 O exemplo a seguir gera C4408:
 
-```
+```cpp
 // C4408.cpp
 // compile with: /W4 /LD
 static union

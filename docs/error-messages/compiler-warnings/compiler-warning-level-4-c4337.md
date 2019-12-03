@@ -1,25 +1,25 @@
 ---
-title: Compilador aviso (nível 4) C4337
+title: Aviso do compilador (nível 4) C4337
 ms.date: 11/04/2016
 f1_keywords:
 - C4337
 helpviewer_keywords:
 - C4337
 ms.assetid: 70bc72d9-aac5-45cd-abd3-ebe42a05897b
-ms.openlocfilehash: 2bfa5f9b30fa0325df1c3655ded53ab0525449c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f86d03e30e2776a8dae4cf56032c45d0022ca01d
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400832"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683303"
 ---
-# <a name="compiler-warning-level-4-c4337"></a>Compilador aviso (nível 4) C4337
+# <a name="compiler-warning-level-4-c4337"></a>Aviso do compilador (nível 4) C4337
 
-biblioteca de tipos com referência cruzada 'typelib1' em 'typelib2' está sendo importada automaticamente
+a biblioteca de tipos de referência cruzada ' typelib1 ' em ' typelib2 ' está sendo importada automaticamente
 
-O atributo auto_search [a diretiva #import](../../preprocessor/hash-import-directive-cpp.md) causou uma biblioteca de tipos a serem importadas implicitamente.
+O atributo auto_search da [diretiva #import](../../preprocessor/hash-import-directive-cpp.md) fez com que uma biblioteca de tipos fosse importada implicitamente.
 
-Bibliotecas de tipo dois determinado no disco criado a partir de dois arquivos a seguir (compilados com midl.exe):
+Dadas duas bibliotecas de tipos em disco criadas a partir dos dois arquivos a seguir (compilado com MIDL. exe):
 
 ```
 // C4337a.idl
@@ -60,7 +60,7 @@ library C4337bLib
 
 O exemplo a seguir gera C4337:
 
-```
+```cpp
 // C4337.cpp
 // compile with: /W4 /LD
 #import "c4337b.tlb" auto_search   // C4337
