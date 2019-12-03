@@ -1,23 +1,23 @@
 ---
-title: Compilador aviso (nível 4) C4481
+title: Aviso do compilador (nível 4) C4481
 ms.date: 11/04/2016
 f1_keywords:
 - C4481
 helpviewer_keywords:
 - C4481
 ms.assetid: 7bfd4e0c-b452-4e6c-b7c4-ac5cc93fe4ea
-ms.openlocfilehash: fe96ff50f4081e3c9dbe3c7eb68da156a69c96ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb51d16cc15c244b31d65f7777de66c372bbde33
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400754"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683201"
 ---
-# <a name="compiler-warning-level-4-c4481"></a>Compilador aviso (nível 4) C4481
+# <a name="compiler-warning-level-4-c4481"></a>Aviso do compilador (nível 4) C4481
 
-extensão não padrão usada: substituir especificador 'palavra-chave'
+extensão não padrão usada: especificador de substituição ' palavra-chave '
 
-Uma palavra-chave que não está no padrão do C++, por exemplo, um dos especificadores de substituição também funciona em /clr foi usada.  Para obter mais informações, consulte
+Foi usada uma palavra-chave que não está C++ no padrão, por exemplo, um dos especificadores de substituição que também funciona em/CLR.  Para obter mais informações, consulte
 
 - [/clr (compilação do Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
 
@@ -27,7 +27,7 @@ Uma palavra-chave que não está no padrão do C++, por exemplo, um dos especifi
 
 O exemplo a seguir gera C4481.
 
-```
+```cpp
 // C4481.cpp
 // compile with: /W4 /c
 class B {

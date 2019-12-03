@@ -1,19 +1,19 @@
 ---
-title: Compilador aviso (nível 4) C4512
+title: Aviso do compilador (nível 4) C4512
 ms.date: 11/04/2016
 f1_keywords:
 - C4512
 helpviewer_keywords:
 - C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-ms.openlocfilehash: c5e84fe1d0e558e689e48fba8df112861f81acec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3b8f11b55cf6ef2df601c125a1b6629aa0554da
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220984"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683191"
 ---
-# <a name="compiler-warning-level-4-c4512"></a>Compilador aviso (nível 4) C4512
+# <a name="compiler-warning-level-4-c4512"></a>Aviso do compilador (nível 4) C4512
 
 "classe": não foi possível gerar um operador de atribuição
 
@@ -31,13 +31,13 @@ Você pode resolver o aviso C4512 para o código de uma destas três maneiras:
 
 - Remova **const** ou o operador de referência do item de dados na classe.
 
-- Use o #pragma [aviso](../../preprocessor/warning.md) instrução para suprimir o aviso.
+- Use a instrução #pragma [Warning](../../preprocessor/warning.md) para suprimir o aviso.
 
 ## <a name="example"></a>Exemplo
 
 O seguinte exemplo gera C4512.
 
-```
+```cpp
 // C4512.cpp
 // compile with: /EHsc /W4
 // processor: x86

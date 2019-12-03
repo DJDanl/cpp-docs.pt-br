@@ -1,5 +1,5 @@
 ---
-title: /w, /W0, / W1, / w2, / w3, / W4, / W1, / w2, / w3, / W4, /Wall, /wd, /, /wo, /Wv, /WX (nível de aviso)
+title: /w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/We,/wo,/WV,/WX (nível de aviso)
 ms.date: 01/31/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.DisableSpecificWarnings
@@ -57,88 +57,89 @@ helpviewer_keywords:
 - -w compiler option [C++]
 - /W2 compiler option [C++]
 - /Wv compiler option [C++]
-ms.openlocfilehash: 7b5c19c95cff3058bb3dcc6640f8ab07cf01edd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d2fd21c476ef4346aa86e682047ea644183b2f3
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294233"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683053"
 ---
-# <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w, /W0, / W1, / w2, / w3, / W4, / W1, / w2, / w3, / W4, /Wall, /wd, /, /wo, /Wv, /WX (nível de aviso)
+# <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/We,/wo,/WV,/WX (nível de aviso)
 
 Especifica como o compilador gera avisos para uma determinada compilação.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/w**
->  **/W0**
->  **/W1**
->  **/w2**
->  **/w3** 
->  **/W4**
->  **/Wall**
->  **/Wv**\[**:**_versão _] **/WX**
->  **/W1**_aviso_
->  **/w2** _ Aviso_
->  **/w3**_aviso_
->  **/W4**_aviso_ 
->  **/wd**_aviso_
->  **/we**_aviso_ 
->  **/wo**_aviso_
+> **/w**\
+> \ **/W0**
+> \ **/W1**
+> \ **/W2**
+> \ **/w3**
+> \ **/W4**
+> \ **/Wall**
+> **/WV**\[ **:** _version_] \
+> \ **/WX**
+> \ de_aviso_ **/W1**
+> \ de_aviso_ **/W2**
+> \ de_aviso_ **/w3**
+> \ de_aviso_ **/W4**
+> \ de_aviso_ **/WD**
+> \ de_aviso_ **/We**
+> _aviso_ de/Wo
 
 ## <a name="remarks"></a>Comentários
 
-As opções de aviso especificam quais avisos do compilador para exibição e o comportamento de aviso para a compilação inteiro.
+As opções de aviso especificam quais avisos do compilador Exibir e o comportamento de aviso para toda a compilação.
 
-As opções de aviso e argumentos relacionados são descritos na tabela a seguir:
+As opções de aviso e os argumentos relacionados são descritos na tabela a seguir:
 
 |Opção|Descrição|
 ------------|-----------------|
 |**/w**|Suprime todos os avisos do compilador.|
-|**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|Especifica o nível de avisos a ser gerado pelo compilador. Os níveis de aviso válido variam de 0 a 4:<br />**/ W0** Suprime todos os avisos. Isso é equivalente a **/w**.<br />**/ W1** exibe avisos de nível 1 (grave). **/ W1** é a configuração padrão no compilador de linha de comando.<br />**/ W2** exibe nível 1 e avisos do nível 2 (significativos).<br />**/ W3** monitores de nível 1, nível 2 e avisos de nível 3 (qualidade de produção). **/ W3** é a configuração padrão no IDE.<br />**/ W4** exibe nível 1, nível 2 e avisos de nível 3, e todos os nível 4 avisos (informativos) que não são desativados por padrão. É recomendável que você use esta opção para fornecer avisos de lint-like. Para um novo projeto, talvez seja melhor usar **/W4** em todas as compilações; Isso garantirá o menor número possível código de difícil de encontrar defeitos.|
-|**/Wall**|Exibe todos os avisos são exibidos pelo **/W4** e todos os outros avisos que **/W4** não inclui — por exemplo, os avisos são desativados por padrão. Para obter mais informações, consulte [compilador avisos que são desativada por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|**/Wv**\[**:**_version_]|Exibe apenas os avisos introduzidos na versão do compilador *versão* e versões anteriores. Você pode usar essa opção para suprimir avisos de novo no código quando você migra para uma versão mais recente do compilador e para manter o processo de compilação existente enquanto você corrigi-los. O parâmetro opcional *versão* assume a forma *nn*[. *mm*[. *bbbbb*]] em que *nn* é o número de versão principal *mm* é o número de versão secundária opcional, e *bbbbb* é o número da compilação opcional o compilador. Por exemplo, use */Wv:17* para exibir avisos introduzidos no Visual Studio 2012 (ou seja, qualquer versão do compilador que tem um número de versão principal de 17) ou anterior, mas suprimir avisos introduzidos no Visual Studio 2013 (versão principal 18) e posterior. Por padrão, **/Wv** usa o número de versão atual do compilador e sem avisos estão suprimidos. Para obter informações sobre quais os avisos são suprimidos pela versão do compilador, consulte [avisos do compilador pela versão do compilador](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md).|
-|**/WX**|Trata todos os avisos do compilador como erros. Para um novo projeto, talvez seja melhor usar **/WX** em todas as compilações; resolver todos os avisos garante o menor número possível código de difícil de encontrar defeitos.<br /><br /> O vinculador também tem um **/WX** opção. Para obter mais informações, consulte [/WX (Tratar Avisos do Vinculador como Erros)](wx-treat-linker-warnings-as-errors.md).|
-|**/w1**_nnnn_<br /><br /> **/w2**_nnnn_<br /><br /> **/w3**_nnnn_<br /><br /> **/w4**_nnnn_|Define o nível de aviso para o número de aviso especificado por _nnnn_. Isso lhe permite alterar o comportamento do compilador para que o aviso quando um nível de aviso específico é definido. Você pode usar essas opções em combinação com outras opções de aviso para impor suas própria codificação padrões para avisos, em vez dos valores padrão fornecidos pelo Visual Studio.<br /><br /> Por exemplo, **/w34326** faz com que o C4326 a ser gerado como um aviso de nível 3, em vez de nível 1. Se você compilar usando ambos os **/w34326** opção e o **/w2** opção, o aviso C4326 não é gerado.|
-|**/wd**_nnnn_|Suprime o aviso do compilador que é especificado pelo _nnnn_.<br /><br /> Por exemplo, **/wd4326** suprime o aviso C4326 do compilador.|
-|**/we**_nnnn_|Trata o aviso do compilador que é especificado pelo _nnnn_ como um erro.<br /><br /> Por exemplo, **/we4326** faz com que o número de aviso C4326 seja tratado como um erro pelo compilador.|
-|**/wo**_nnnn_|Relatórios de aviso do compilador que é especificado por _nnnn_ apenas uma vez.<br /><br /> Por exemplo, **/wo4326** causas aviso C4326 seja relatado somente uma vez, na primeira vez que ela for encontrada pelo compilador.|
+|**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|Especifica o nível de avisos a serem gerados pelo compilador. Os níveis de aviso válidos variam de 0 a 4:<br />**/W0** suprime todos os avisos. Isso é equivalente a **/w**.<br />**/W1** exibe avisos de nível 1 (grave). **/W1** é a configuração padrão no compilador de linha de comando.<br />**/W2** exibe avisos de nível 1 e nível 2 (significativos).<br />**/W3** exibe os avisos de nível 1, nível 2 e nível 3 (qualidade de produção). **/W3** é a configuração padrão no IDE.<br />**/W4** exibe os avisos nível 1, nível 2 e nível 3 e todos os avisos de nível 4 (informativo) que não são desativados por padrão. Recomendamos que você use essa opção para fornecer avisos sem fiapos. Para um novo projeto, pode ser melhor usar **/W4** em todas as compilações; Isso garantirá o menor número possível de defeitos de código difíceis de encontrar.|
+|**/Wall**|Exibe todos os avisos exibidos por **/W4** e todos os outros avisos que o **/W4** não inclui, por exemplo, os avisos que estão desativados por padrão. Para obter mais informações, consulte [os avisos do compilador que estão desativados por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md).|
+|**/WV**\[ **:** _versão_]|Exibe somente os avisos introduzidos na *versão* da versão do compilador e versões anteriores. Você pode usar essa opção para suprimir novos avisos no código ao migrar para uma versão mais recente do compilador e para manter o processo de compilação existente enquanto você os corrige. A *versão* opcional do parâmetro assume a forma *NN*[. *mm*[. *bbbbb*]] em que *NN* é o número de versão principal, *mm* é o número de versão secundária opcional e *bbbbb* é o número de Build opcional do compilador. Por exemplo, use */WV: 17* para exibir avisos introduzidos no Visual Studio 2012 (ou seja, qualquer versão do compilador que tenha um número de versão principal de 17) ou anterior, mas suprimir avisos introduzidos em Visual Studio 2013 (versão mais recente 18) e posterior. Por padrão, **/WV** usa o número de versão do compilador atual e nenhum aviso é suprimido. Para obter informações sobre quais avisos são suprimidos pela versão do compilador, consulte [avisos do compilador por versão do compilador](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md).|
+|**/WX**|Trata todos os avisos do compilador como erros. Para um novo projeto, pode ser melhor usar **/WX** em todas as compilações; resolver todos os avisos garante o menor número possível de defeitos de código difíceis de encontrar.<br /><br /> O vinculador também tem uma opção **/WX** . Para obter mais informações, consulte [/WX (Tratar Avisos do Vinculador como Erros)](wx-treat-linker-warnings-as-errors.md).|
+|**/W1**_nnnn_<br /><br /> **/W2**_nnnn_<br /><br /> **/w3**_nnnn_<br /><br /> **/W4**_nnnn_|Define o nível de aviso para o número de aviso especificado por _nnnn_. Isso permite que você altere o comportamento do compilador para esse aviso quando um nível de aviso específico é definido. Você pode usar essas opções em combinação com outras opções de aviso para impor seus próprios padrões de codificação para avisos, em vez dos padrões fornecidos pelo Visual Studio.<br /><br /> Por exemplo, **/w34326** faz com que C4326 seja gerado como um aviso de nível 3 em vez de nível 1. Se você compilar usando a opção **/w34326** e a opção **/W2** , o aviso C4326 não será gerado.|
+|**/WD**_nnnn_|Suprime o aviso do compilador que é especificado por _nnnn_.<br /><br /> Por exemplo, **/wd4326** suprime C4326 de aviso do compilador.|
+|**/We**_nnnn_|Trata o aviso do compilador que é especificado por _nnnn_ como um erro.<br /><br /> Por exemplo, **/we4326** faz com que o número de aviso C4326 seja tratado como um erro pelo compilador.|
+|**/wo**_nnnn_|Relata o aviso do compilador que é especificado por _nnnn_ apenas uma vez.<br /><br /> Por exemplo, **/wo4326** faz com que o aviso C4326 seja relatado apenas uma vez, na primeira vez que for encontrado pelo compilador.|
 
-Se você usar qualquer uma das opções de aviso quando você cria um cabeçalho pré-compilado usando o [/Yc](yc-create-precompiled-header-file.md) opção, qualquer uso do cabeçalho pré-compilado usando o [/Yu](yu-use-precompiled-header-file.md) opção faz com que essas mesmas opções de aviso para estar em vigor novamente. Você pode substituir as opções de aviso definidas no cabeçalho pré-compilado usando outra opção de aviso na linha de comando.
+Se você usar qualquer uma das opções de aviso ao criar um cabeçalho pré-compilado usando a opção [/YC](yc-create-precompiled-header-file.md) , qualquer uso do cabeçalho pré-compilado usando a opção [/Yu](yu-use-precompiled-header-file.md) fará com que as mesmas opções de aviso entrem em vigor novamente. Você pode substituir as opções de aviso definidas no cabeçalho pré-compilado usando outra opção de aviso na linha de comando.
 
-Você pode usar um [#pragma aviso](../../preprocessor/warning.md) diretiva para controlar o nível de aviso que é relatado em tempo de compilação nos arquivos de origem específico.
+Você pode usar uma diretiva de [aviso #pragma](../../preprocessor/warning.md) para controlar o nível de aviso relatado em tempo de compilação em arquivos de origem específicos.
 
-Diretivas pragma de aviso no código-fonte não são afetadas pela **/w** opção.
+As diretivas pragma de aviso no código-fonte não são afetadas pela opção **/w** .
 
-O [documentação de erros de compilação](../../error-messages/compiler-errors-1/c-cpp-build-errors.md) descreve os avisos e os níveis de aviso e indica por que determinadas instruções podem não ser compilados como você deseja.
+A [documentação de erros de compilação](../../error-messages/compiler-errors-1/c-cpp-build-errors.md) descreve os avisos e os níveis de aviso e indica por que determinadas instruções não podem ser compiladas como você pretende.
 
 ### <a name="to-set-the-compiler-options-in-the-visual-studio-development-environment"></a>Para definir as opções do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Para definir a **/W0**, **/W1**, **/w2**, **/w3**, **/W4**, **/Wall**, **/Wv**, **/WX** ou **/WX-** opções, selecionadas o **propriedades de configuração** > **C / C++**   >  **Gerais** página de propriedades.
+1. Para definir as opções **/W0**, **/W1**, **/W2**, **/w3**, **/W4**, **/Wall**, **/WV**, **/WX** ou **/WX-** , selecione as **Propriedades de configuração** > página de propriedades **geral** **C++ C/**  > .
 
-   - Para definir a **/W0**, **/W1**, **/w2**, **/w3**, **/W4**, ou **/Wall** modificar opções, o **nível de aviso** propriedade.
+   - Para definir as opções **/W0**, **/W1**, **/W2**, **/w3**, **/W4**ou **/Wall** , modifique a propriedade **nível de aviso** .
 
-   - Para definir a **/WX** ou **/WX-** modificar opções, o **tratar avisos como erros** propriedade.
+   - Para definir as opções **/WX** ou **/WX-** , modifique a propriedade **tratar avisos como erros** .
 
-   - Para definir a versão para o **/Wv** opção, insira o número de versão do compilador na **aviso versão** propriedade.
+   - Para definir a versão para a opção **/WV** , insira o número de versão do compilador na propriedade **versão de aviso** .
 
-1. Para definir a **/wd** ou **/we** opções, selecionadas o **propriedades de configuração** > **C/C++**  >   **Advanced** página de propriedades.
+1. Para definir as opções **/WD** ou **/We** , selecione as **Propriedades de configuração** > página de propriedades **avançado** **C/C++**  > .
 
-   - Para definir a **/wd** opção, selecione a **desabilita avisos específicos** propriedade controle de lista suspensa e, em seguida, escolha **editar**. Na caixa de edição do **desabilitar avisos específicos** caixa de diálogo, insira o número de aviso. Para inserir mais de um aviso, separe os valores por meio de um ponto e vírgula (**;**). Por exemplo, para desabilitar C4001 e C4010, insira **4001; 4010**. Escolher **Okey** para salvar suas alterações e retornar para o **páginas de propriedade** caixa de diálogo.
+   - Para definir a opção **/WD** , selecione o controle da lista suspensa desabilitar a propriedade **avisos específicos** e escolha **Editar**. Na caixa de edição do diálogo **desabilitar avisos específicos** , insira o número de aviso. Para inserir mais de um aviso, separe os valores usando um ponto-e-vírgula ( **;** ). Por exemplo, para desabilitar C4001 e C4010, digite **4001; 4010**. Escolha **OK** para salvar as alterações e retornar à caixa de diálogo **páginas de propriedades** .
 
-   - Para definir a **/we** opção, selecione a **tratar avisos específicos como erros** propriedade controle de lista suspensa e, em seguida, escolha **editar**. Na caixa de edição do **tratar avisos específicos como erros** caixa de diálogo, insira o número de aviso. Para inserir mais de um aviso, separe os valores por meio de um ponto e vírgula (**;**). Por exemplo, para tratar C4001 e C4010 como erros, insira **4001; 4010**. Escolher **Okey** para salvar suas alterações e retornar para o **páginas de propriedade** caixa de diálogo.
+   - Para definir a opção **/We** , selecione o controle de lista suspensa **tratar avisos específicos como erros** e escolha **Editar**. Na caixa de edição do diálogo **tratar avisos específicos como erros** , insira o número de aviso. Para inserir mais de um aviso, separe os valores usando um ponto-e-vírgula ( **;** ). Por exemplo, para tratar C4001 e C4010 como erros, digite **4001; 4010**. Escolha **OK** para salvar as alterações e retornar à caixa de diálogo **páginas de propriedades** .
 
-1. Para definir a **/wo** opção, selecione a **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades. Insira a opção de compilador na **opções adicionais** caixa.
+1. Para definir a opção **/wo** , selecione as **Propriedades de configuração** > **CC++ /**  > página de propriedades de **linha de comando** . Insira a opção do compilador na caixa **Opções adicionais** .
 
 1. Escolha **OK** para salvar suas alterações.
 
-### <a name="to-set-the-compiler-option-programmatically"></a>Definir a opção do compilador de maneira programática
+### <a name="to-set-the-compiler-option-programmatically"></a>Para definir a opção do compilador programaticamente
 
 - Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WarningLevel%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WarnAsError%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableSpecificWarnings%2A> e <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do compilador MSVC](compiler-options.md)<br/>
+[Opções do compilador MSVC](compiler-options.md)\
 [Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

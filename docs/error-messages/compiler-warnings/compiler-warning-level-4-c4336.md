@@ -1,25 +1,25 @@
 ---
-title: Compilador aviso (nível 4) C4336
+title: Aviso do compilador (nível 4) C4336
 ms.date: 11/04/2016
 f1_keywords:
 - C4336
 helpviewer_keywords:
 - C4336
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
-ms.openlocfilehash: 4946b932fa897dab057e430f16c781e2d06bebd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33c4a25618c1afcf93704b161483bc4c0a6e16a0
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400845"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683316"
 ---
-# <a name="compiler-warning-level-4-c4336"></a>Compilador aviso (nível 4) C4336
+# <a name="compiler-warning-level-4-c4336"></a>Aviso do compilador (nível 4) C4336
 
-Importar o tipo de referência cruzado type_lib1' library' antes de importar 'type_lib2'
+importar biblioteca de tipos de referência cruzada ' type_lib1 ' antes de importar ' type_lib2 '
 
-Uma biblioteca de tipos foi referenciada com o [#import](../../preprocessor/hash-import-directive-cpp.md) diretiva. No entanto, a biblioteca de tipos continha uma referência a outra biblioteca de tipos que não foi referenciada com `#import`. Esse outro arquivo. tlb foi encontrado pelo compilador.
+Uma biblioteca de tipos foi referenciada com a diretiva [#import](../../preprocessor/hash-import-directive-cpp.md) . No entanto, a biblioteca de tipos continha uma referência a outra biblioteca de tipos que não foi referenciada com `#import`. Esse outro arquivo. tlb foi encontrado pelo compilador.
 
-Bibliotecas de tipo dois determinado no disco criado a partir de dois arquivos a seguir (compilados com midl.exe):
+Dadas duas bibliotecas de tipos em disco criadas a partir dos dois arquivos a seguir (compilado com MIDL. exe):
 
 ```
 // c4336a.idl
@@ -34,7 +34,7 @@ library c4336aLib
 };
 ```
 
-A biblioteca de tipos segundo:
+A segunda biblioteca de tipos:
 
 ```
 // c4336b.idl
@@ -52,7 +52,7 @@ library C4336bLib
 
 O exemplo a seguir gera C4336:
 
-```
+```cpp
 // C4336.cpp
 // compile with: /W4 /LD
 // #import "C4336a.tlb"
