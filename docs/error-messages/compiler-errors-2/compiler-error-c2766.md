@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2766
 ms.assetid: 8032f4ca-6827-4f04-9c61-c44643c85cc4
-ms.openlocfilehash: 87ea9f693265080d744746c6a8014b2b8b6db13a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48faee02bba18754972954a2ca464417bd552758
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257550"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759796"
 ---
 # <a name="compiler-error-c2766"></a>Erro do compilador C2766
 
-especialização explícita; 'especialização' já foi definida
+especialização explícita; ' especialização ' já foi definido
 
-Especializações explícitas duplicadas não são permitidas. Para obter mais informações, consulte [especialização explícita de modelos de função](../../cpp/explicit-specialization-of-function-templates.md).
+Não são permitidas especializações explícitas duplicadas. Para obter mais informações, consulte [especialização explícita dos modelos de função](../../cpp/explicit-specialization-of-function-templates.md).
 
 O exemplo a seguir gera C2766:
 
-```
+```cpp
 // C2766.cpp
 // compile with: /c
 template<class T>

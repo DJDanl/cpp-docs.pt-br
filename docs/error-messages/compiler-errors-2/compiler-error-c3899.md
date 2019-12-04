@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
-ms.openlocfilehash: 26860ba0e8fd92f491ee389147605ba82cecf25c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 022bc1a37f7d9cfdb2c206592dd303a9c3c95080
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376023"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749107"
 ---
 # <a name="compiler-error-c3899"></a>Erro do compilador C3899
 
-'var': uso l-value de membro de dados initonly não é permitido diretamente dentro de uma região parallel na classe 'class'
+' var ': o uso de l-Value de membro de dados InitOnly não é permitido diretamente dentro de uma região Parallel na classe ' class '
 
-Uma [initonly (C++/CLI)](../../dotnet/initonly-cpp-cli.md) membro de dados não pode ser inicializado dentro dessa parte de um construtor que está em um [paralelo](../../parallel/openmp/reference/parallel.md) região.  Isso é porque o compilador faz uma realocação interna desse código, de modo que ela efetivamente não é parte do construtor.
+Um membro de dados [InitOnly (C++/CLI)](../../dotnet/initonly-cpp-cli.md) não pode ser inicializado dentro dessa parte de um construtor que está em uma região [paralela](../../parallel/openmp/reference/parallel.md) .  Isso ocorre porque o compilador faz uma realocação interna desse código, de modo que ele não faz mais parte do construtor.
 
-Para resolver, inicialize o membro de dados initonly no construtor, mas fora da região paralela.
+Para resolver, inicialize o membro de dados InitOnly no construtor, mas fora da região paralela.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3899.
 
-```
+```cpp
 // C3899.cpp
 // compile with: /clr /openmp
 #include <omp.h>

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
-ms.openlocfilehash: 2c2d2f2598d06ca228a96f2786fcb02888e29a1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff2b59338c707767fa1d3c382feaa1bfcdf29ce2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386610"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758483"
 ---
 # <a name="compiler-error-c3918"></a>Erro do compilador C3918
 
-uso requer 'membro' seja um membro de dados
+uso requer que ' member ' seja um membro de dados
 
-C3918 pode ocorrer por vários motivos relacionados a eventos.
+O C3918 pode ocorrer por vários motivos relacionados a eventos.
 
 ## <a name="example"></a>Exemplo
 
-C3918 pode ocorrer porque um membro de classe é necessária no contexto atual. O exemplo a seguir gera C3918.
+C3918 pode ocorrer porque um membro de classe é necessário no contexto atual. O exemplo a seguir gera C3918.
 
-```
+```cpp
 // C3918.cpp
 // compile with: /clr /c
 public ref class C {
@@ -43,11 +43,11 @@ public:
 
 ## <a name="example"></a>Exemplo
 
-C3918 também é causado se você tentar verificar um evento trivial para null (o nome do evento deixará de fornecer acesso direto para o delegado de repositório de backup para o evento).
+C3918 também será causado se você tentar verificar se um evento trivial é nulo (o nome do evento não fornecerá mais acesso direto ao delegado de armazenamento de backup para o evento).
 
 O exemplo a seguir gera C3918.
 
-```
+```cpp
 // C3918_2.cpp
 // compile with: /clr /c
 using namespace System;
@@ -68,9 +68,9 @@ ref struct EventSource : public IEFace {
 
 ## <a name="example"></a>Exemplo
 
-C3918 também pode ocorrer se você se inscrever incorretamente a um evento. O exemplo a seguir gera C3918.
+C3918 também pode ocorrer se você assinar incorretamente um evento. O exemplo a seguir gera C3918.
 
-```
+```cpp
 // C3918_3.cpp
 // compile with: /clr /c
 using namespace System;

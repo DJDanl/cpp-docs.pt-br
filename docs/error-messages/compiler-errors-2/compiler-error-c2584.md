@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2584
 ms.assetid: 836e2c0a-86c0-4742-b432-beb0191ad20e
-ms.openlocfilehash: b61ad65555b5d5232468206f6170223c5f160a34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c3b10ecd6808ccd864ecf877fe9f1d0e9f30a3a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360459"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748626"
 ---
 # <a name="compiler-error-c2584"></a>Erro do compilador C2584
 
-'Class': direta base 'Base2' é inacessível; já é uma base de 'Base1'
+' Class ': base direta ' base2 ' está inacessível; Já é uma base de ' Base1 '
 
-`Class` já deriva diretamente de `Base1`. `Base2` também deriva de `Base1`. `Class` não é possível derivar `Base2` porque isso significaria herdando (indiretamente) `Base1` novamente, que não é legal porque `Base1` já é uma classe base direta.
+`Class` já deriva diretamente do `Base1`. `Base2` também deriva de `Base1`. `Class` não pode derivar de `Base2` porque isso significaria herdar (indiretamente) de `Base1` novamente, o que não é válido porque `Base1` já é uma classe base direta.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C2584.
 
-```
+```cpp
 // C2584.cpp
 // compile with: /c
 struct A1 {

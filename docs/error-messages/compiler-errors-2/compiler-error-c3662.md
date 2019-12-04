@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3662
 ms.assetid: 61bd3e41-a86b-42c0-be89-d992d3906ff1
-ms.openlocfilehash: 28d8df02d63fc1b16a392a2df83524cd616d5ab3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48fe8bd4a6872ff214d185ac77553debab78ab20
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400299"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758184"
 ---
 # <a name="compiler-error-c3662"></a>Erro do compilador C3662
 
-'member': gerenciado do especificador de substituição 'especificador' só é permitido em funções de membro de classes de WinRT ou
+' member ': especificador de substituição ' especificador ' permitido somente em funções membro de classes Managed ou WinRT
 
-Um especificador de substituição foi usado em um membro de tipo nativo, que não é permitido.
+Um especificador de substituição foi usado em um membro de tipo nativo, o que não é permitido.
 
 Para obter mais informações, consulte [substituições explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
@@ -25,7 +25,7 @@ Para obter mais informações, consulte [substituições explícitas](../../exte
 
 O exemplo a seguir gera C3662.
 
-```
+```cpp
 // C3662.cpp
 // compile with: /clr /c
 struct S {

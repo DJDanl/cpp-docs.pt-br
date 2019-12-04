@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2005
 ms.assetid: 090530ed-e0ec-4358-833a-ca24260e7ffe
-ms.openlocfilehash: 49d0375d5733410d728797d2a881075377b33ba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff998beaa1d954f05a07d8ccf1b59cec0f4e3958
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208991"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737472"
 ---
 # <a name="compiler-error-c2005"></a>Erro do compilador C2005
 
-\#linha esperado um número de linha, encontrado 'token'
+\#linha esperava um número de linha, encontrou ' token '
 
-O `#line` diretiva deve ser seguida por um número de linha.
+A diretiva de `#line` deve ser seguida por um número de linha.
 
 O exemplo a seguir gera C2005:
 
-```
+```cpp
 // C2005.cpp
 int main() {
    int i = 0;
@@ -29,9 +29,9 @@ int main() {
 }
 ```
 
-Solução possível:
+Resolução possível:
 
-```
+```cpp
 // C2005b.cpp
 int main() {
    int i = 0;

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3703
 ms.assetid: 7e3677d9-f2be-4c26-998f-423564e9023c
-ms.openlocfilehash: 0b34760bc3f5b23148ce84cf590685efad2008df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1071623c8dbaef52a6a391d8858e7502de9c74b4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324630"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757989"
 ---
 # <a name="compiler-error-c3703"></a>Erro do compilador C3703
 
-'manipulador de eventos ': um método de manipulador de eventos deve ter a mesma classe de armazenamento como a origem 'event'
+"manipulador de eventos": um método de manipulador de eventos deve ter a mesma classe de armazenamento que o "evento" de origem
 
-Uma [evento](../../cpp/event-handling.md) tem uma classe de armazenamento diferente que o manipulador de eventos para o qual ele está conectado. Por exemplo, esse erro ocorre se o manipulador de eventos é uma função de membro estático e o evento não é estático. Para corrigir esse erro, forneça o evento e o manipulador de eventos a mesma classe de armazenamento.
+Um [evento](../../cpp/event-handling.md) tem uma classe de armazenamento diferente do manipulador de eventos ao qual está conectado. Por exemplo, esse erro ocorrerá se o manipulador de eventos for uma função membro estática e o evento não for estático. Para corrigir esse erro, dê ao evento e ao manipulador de eventos a mesma classe de armazenamento.
 
 O exemplo a seguir gera C3703:
 
-```
+```cpp
 // C3703.cpp
 // C3703 expected
 #include <stdio.h>

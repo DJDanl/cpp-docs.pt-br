@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3838
 ms.assetid: d6f470c2-131a-4a8c-843a-254acd43da83
-ms.openlocfilehash: c8664c9df837d44ab6e356d54ff9e35c3776778a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 468fc5e8cb6b3a76880f12fe0aab14810f458a90
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208070"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741346"
 ---
 # <a name="compiler-error-c3838"></a>Erro do compilador C3838
 
-explicitamente não pode herdar de 'type'
+Não é possível herdar explicitamente de ' type '
 
-Especificado `type` não pode atuar como uma classe base em qualquer classe.
+O `type` especificado não pode atuar como uma classe base em nenhuma classe.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3838:
 
-```
+```cpp
 // C3838a.cpp
 // compile with: /clr /c
 public ref class B : public System::Enum {};   // C3838

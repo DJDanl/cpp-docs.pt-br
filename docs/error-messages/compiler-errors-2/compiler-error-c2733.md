@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2733
 ms.assetid: 67f83561-c633-407c-a2ee-f9fd16e165bf
-ms.openlocfilehash: 26819f1928223b5fa96d275290105f32787057f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ef669a49f4a3ec5a1af1a15a79f2511fa2699dd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208318"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755779"
 ---
 # <a name="compiler-error-c2733"></a>Erro do compilador C2733
 
-segundo vínculo a C de função sobrecarregada 'function' não permitido
+o segundo vínculo C da função sobrecarregada ' function ' não é permitido
 
-Mais de uma função sobrecarregada foi declarada com vinculação C. Ao usar a ligação de C, apenas uma forma de uma função especificada pode ser externa. Como funções sobrecarregadas têm o mesmo nome não decorado, não pode ser usados com programas em C.
+Mais de uma função sobrecarregada é declarada com vínculo C. Ao usar vínculo C, apenas uma forma de uma função especificada pode ser externa. Como as funções sobrecarregadas têm o mesmo nome não decorado, elas não podem ser usadas com programas C.
 
 O exemplo a seguir gera C2733:
 
-```
+```cpp
 // C2733.cpp
 extern "C" {
    void F1(int);

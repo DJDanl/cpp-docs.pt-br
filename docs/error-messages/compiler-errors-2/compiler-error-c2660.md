@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
-ms.openlocfilehash: 3f236f18faa92df660ed677df293373fe9f0800c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: febeb75cbde6738bd9079b7bd86f88c521c29e40
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360366"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756052"
 ---
 # <a name="compiler-error-c2660"></a>Erro do compilador C2660
 
-'function': função não aceita parâmetros de número
+' function ': a função não tem parâmetros numéricos
 
 A função é chamada com um número incorreto de parâmetros.
 
-C2660 pode ocorrer se você acidentalmente chamar uma função da API do Windows em vez de uma função de membro MFC de mesmo nome. Para resolver esse problema:
+C2660 pode ocorrer se você chamar acidentalmente uma função de API do Windows em vez de uma função membro MFC de mesmo nome. Para resolver esse problema:
 
-- Ajuste a chamada de função em conformidade com o formato da chamada de função de membro.
+- Ajuste a chamada de função para estar de acordo com o formato da chamada de função de membro.
 
-- Use o operador de resolução de escopo (`::`) para indicar ao compilador para buscar o nome da função no espaço para nome global.
+- Use o operador de resolução de escopo (`::`) para instruir o compilador a buscar o nome da função no espaço de nome global.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C2660.
 
-```
+```cpp
 // C2660.cpp
 void func( int, int ) {}
 
@@ -43,7 +43,7 @@ int main() {
 
 C2660 também pode ocorrer se você tentar chamar diretamente o método Dispose de um tipo gerenciado. Para obter mais informações, consulte [destruidores e finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). O exemplo a seguir gera C2660.
 
-```
+```cpp
 // C2660_a.cpp
 // compile with: /clr
 using namespace System;
@@ -63,9 +63,9 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-C2660 ocorrerá se uma classe derivada oculta uma função.
+C2660 ocorrerá se uma classe derivada ocultar uma função.
 
-```
+```cpp
 // C2660b.cpp
 // C2660 expected
 #include <stdio.h>
@@ -94,9 +94,9 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-C2660 pode ocorrer se você chamar uma propriedade indexada incorretamente.
+C2660 pode ocorrer se você invocar uma propriedade indexada incorretamente.
 
-```
+```cpp
 // C2660c.cpp
 // compile with: /clr
 ref class X {
@@ -119,9 +119,9 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-C2660 pode ocorrer se você chamar uma propriedade indexada incorretamente.
+C2660 pode ocorrer se você invocar uma propriedade indexada incorretamente.
 
-```
+```cpp
 // C2660d.cpp
 // compile with: /clr
 ref class A{
@@ -142,9 +142,9 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-C2660 pode ocorrer se você definir um novo operador em uma classe de modelo, mas onde o novo operador cria um objeto cujo tipo é diferente de um tipo delimitador.
+C2660 pode ocorrer se você definir um novo operador em uma classe de modelo, mas onde o novo operador cria um objeto cujo tipo é diferente do tipo delimitador.
 
-```
+```cpp
 // C2660e.cpp
 // compile with: /c
 #include <malloc.h>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3883
 ms.assetid: cdd1c1f4-f268-4469-9c62-d52303114b0c
-ms.openlocfilehash: 51ecf5fbc793c02a23e2aa02fb08e37ebe4b0ad0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dbb0328aa1810d55f2d974aed822992b53101b5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347032"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736653"
 ---
 # <a name="compiler-error-c3883"></a>Erro do compilador C3883
 
-'var': um membro de dados estáticos initonly deve ser inicializado
+' var ': um membro de dados InitOnly static deve ser inicializado
 
-Uma variável marcadas com [initonly](../../dotnet/initonly-cpp-cli.md) não foi inicializado corretamente.
+Uma variável marcada com [InitOnly](../../dotnet/initonly-cpp-cli.md) não foi inicializada corretamente.
 
 O exemplo a seguir gera C3883:
 
-```
+```cpp
 // C3883.cpp
 // compile with: /clr
 ref struct Y1 {
@@ -32,7 +32,7 @@ ref struct Y1 {
 
 O exemplo a seguir demonstra uma possível resolução:
 
-```
+```cpp
 // C3883b.cpp
 // compile with: /clr /c
 ref struct Y1 {
@@ -43,7 +43,7 @@ ref struct Y1 {
 
 O exemplo a seguir mostra como inicializar em um construtor estático:
 
-```
+```cpp
 // C3883c.cpp
 // compile with: /clr /LD
 ref struct Y1 {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2879
 ms.assetid: ac92b645-2394-49de-8632-43d44e0553ed
-ms.openlocfilehash: 9ac8f5e5edb1a6ed7314c5b5d125fcc9bfbe67de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c7238faf94a2493894534ae5684634b65bb4342
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378890"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736289"
 ---
 # <a name="compiler-error-c2879"></a>Erro do compilador C2879
 
-'symbol': apenas um namespace existente pode ser dado um nome alternativo por uma definição de alias de namespace
+' Symbol ': somente um namespace existente pode receber um nome alternativo por uma definição de alias de namespace
 
-Não é possível criar uma [alias de namespace](../../cpp/namespaces-cpp.md#namespace_aliases) a um símbolo que não seja um namespace.
+Você não pode criar um [alias de namespace](../../cpp/namespaces-cpp.md#namespace_aliases) para um símbolo que não seja um namespace.
 
 O exemplo a seguir gera C2879:
 
-```
+```cpp
 // C2879.cpp
 int main() {
    int i;

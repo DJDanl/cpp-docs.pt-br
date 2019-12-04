@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3854
 ms.assetid: 32a9ead0-c6c7-485a-8802-c7b1fe921d3a
-ms.openlocfilehash: 3b48e2c65003537102864fdafe7db70b06ade029
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c62117e9437233f614aa0e57a3848fcb8dd0c79
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265523"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754843"
 ---
 # <a name="compiler-error-c3854"></a>Erro do compilador C3854
 
-expressão à esquerda de '=' é avaliada como uma função. Não é possível atribuir a uma função (uma função não é um l-value)
+a expressão à esquerda de ' = ' é avaliada como uma função. Não é possível atribuir a uma função (uma função não é um l-Value)
 
-Uma referência não pode ser reinicializada. Desreferenciar uma referência a uma função resulta em uma função, que é um rvalue, aos quais você não pode atribuir. Portanto, é possível atribuir por meio de uma referência a uma função.
+Uma referência não pode ser reinicializada. A desreferência de uma referência a uma função produz uma função, que é um Rvalue, à qual você não pode atribuir. Portanto, você não pode atribuir por meio de uma referência a uma função.
 
 O exemplo a seguir gera C3854:
 
-```
+```cpp
 // C3854.cpp
 int afunc(int i)
 {

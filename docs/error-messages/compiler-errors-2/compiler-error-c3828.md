@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3828
 ms.assetid: 8d9cee75-9504-4bc8-88b6-2413618a3f45
-ms.openlocfilehash: f499bb2a8fd6d3148935daec89835b79d2ff5b49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b47ddbf0775cab2bd7214f68d1b4ed6e06e6eea
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390588"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741697"
 ---
 # <a name="compiler-error-c3828"></a>Erro do compilador C3828
 
-tipo de objeto: argumentos de posicionamento não permitidos durante a criação de instâncias de gerenciadas ou WinRTclasses
+' tipo de objeto ': argumentos de posicionamento não permitidos ao criar instâncias de Managed ou WinRTclasses
 
-Ao criar um objeto de um tipo de tempo de execução do Windows ou um tipo gerenciado, você não pode usar o formulário de posicionamento do operador [gcnew de novo, ref](../../extensions/ref-new-gcnew-cpp-component-extensions.md) ou [novos](../../cpp/new-operator-cpp.md).
+Ao criar um objeto de um tipo gerenciado ou tipo de Windows Runtime, você não pode usar a forma de posicionamento de Operator [ref New, gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md) ou [New](../../cpp/new-operator-cpp.md).
 
 O exemplo a seguir gera C3828 e mostra como corrigi-lo:
 
-```
+```cpp
 // C3828a.cpp
 // compile with: /clr
 ref struct M {

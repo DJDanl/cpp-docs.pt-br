@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2706
 ms.assetid: e18da924-c42d-4b09-8e29-f4e0382d7dc6
-ms.openlocfilehash: 9767d36d44b99423d600d299d0803901d3dbfec5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bca86d3c0cf886c64a1d668468c793d0e77b2867
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161102"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757456"
 ---
 # <a name="compiler-error-c2706"></a>Erro do compilador C2706
 
-EXCEPT inválido sem correspondência \__try (faltando '}' no \_bloco _try?)
+__except ilegal sem _try \_correspondente (faltando '} ' no bloco \__try?)
 
-O compilador não encontrou uma chave de fechamento para um `__try` bloco.
+O compilador não encontrou uma chave de fechamento para um bloco de `__try`.
 
 O exemplo a seguir gera C2706:
 
-```
+```cpp
 // C2706.cpp
 int main() {
    __try {

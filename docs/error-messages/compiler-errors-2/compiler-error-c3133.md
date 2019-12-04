@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3133
 ms.assetid: 4a709405-b67b-4061-8a2a-19fa5fb34a2a
-ms.openlocfilehash: 0a0c30203f886934a19fde35e51602b57cc1b14d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 003befa97b033eec38d7187966da15e4a275f310
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164846"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760706"
 ---
 # <a name="compiler-error-c3133"></a>Erro do compilador C3133
 
-Atributos não podem ser aplicados a C++ varargs
+Atributos não podem ser aplicados C++ a varargs
 
-Um atributo foi aplicado incorretamente. Atributos não podem ser aplicados a um sinal de reticências que representam argumentos de variável.
+Um atributo foi aplicado incorretamente. Atributos não podem ser aplicados a reticências que representam argumentos variáveis.
 
 Para obter mais informações, consulte [atributos definidos pelo usuário](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
@@ -25,7 +25,7 @@ Para obter mais informações, consulte [atributos definidos pelo usuário](../.
 
 O exemplo a seguir gera C3133.
 
-```
+```cpp
 // C3133.cpp
 // compile with: /clr /c
 ref struct MyAttr: System::Attribute {};

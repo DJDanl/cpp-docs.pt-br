@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2217
 ms.assetid: 1ce1e3f5-4171-4376-804d-967f7e612935
-ms.openlocfilehash: f178f969afa189910c9d23d70226ecc6c15876a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7417c651fde6bef781bb6eb2e081cd3ad8ecc3a0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353528"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741294"
 ---
 # <a name="compiler-error-c2217"></a>Erro do compilador C2217
 
-'attribute1' requer 'attribute2'
+' attribute1 ' requer ' attribute2 '
 
 O primeiro atributo de função requer o segundo atributo.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
 
-1. Interrupção (`__interrupt`) função declarada como `near`. Interrupção funções devem ser `far`.
+1. Função Interrupt (`__interrupt`) declarada como `near`. As funções de interrupção devem ser `far`.
 
-1. Interromper a função declarada com `__stdcall`, ou `__fastcall`. Funções de interrupção deve usar C convenções de chamada.
+1. Função de interrupção declarada com `__stdcall`ou `__fastcall`. As funções de interrupção devem usar as convenções de chamada C.
 
 ## <a name="example"></a>Exemplo
 
-C2217 também pode ocorrer se você tentar associar um delegado a uma função CLR que usa um número variável de argumentos. Se a função também tem a sobrecarga de matriz e parâmetro, use-a. O exemplo a seguir gera C2217.
+C2217 também pode ocorrer se você tentar associar um delegado a uma função CLR que usa um número variável de argumentos. Se a função também tiver sobrecarga de matriz de parâmetro e, use-a em vez disso. O exemplo a seguir gera C2217.
 
-```
+```cpp
 // C2217.cpp
 // compile with: /clr
 using namespace System;

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2247
 ms.assetid: 72efa03e-615e-4ef9-aede-0a98654b20fd
-ms.openlocfilehash: ab1f83e2075128441cbffd2d939e3b99b45be4c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e82b406b20d77a824b62207b1766fec55ac65c5c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301364"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758899"
 ---
 # <a name="compiler-error-c2247"></a>Erro do compilador C2247
 
-'identifier' não está acessível porque 'class' usa 'especificador' para herdar de 'class'
+' identifier ' não acessível porque ' class ' usa ' especificador ' para herdar de ' class '
 
-`identifier` é herdado de uma classe declarada com acesso particular ou protegido.
+`identifier` é herdada de uma classe declarada com acesso privado ou protegido.
 
 O exemplo a seguir gera C2247:
 
-```
+```cpp
 // C2247.cpp
 class A {
 public:
@@ -32,11 +32,11 @@ class C : public B {} c;   // so even though C's B is public
 int j = c.i;               // C2247, i not accessible
 ```
 
-Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003: controle com membros protegidos de acesso. Um membro protegido (n) só pode ser acessado por meio de uma função de membro de uma classe (B) que herda da classe (A) do qual ele (n) é um membro.
+Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003: controle de acesso com membros protegidos. Um membro protegido (n) só pode ser acessado por meio de uma função membro de uma classe (B) que herda da classe (A) da qual ele (n) é um membro.
 
-Para o código que é válido no Visual Studio .NET 2003 e versões do Visual Studio .NET do Visual C++, declare o membro seja um amigo do tipo. Herança pública também pode ser usada.
+Para o código que é válido nas versões do Visual Studio .NET 2003 e do Visual Studio .NET do C++Visual, declare o membro como um amigo do tipo. A herança pública também pode ser usada.
 
-```
+```cpp
 // C2247b.cpp
 // compile with: /c
 // C2247 expected
@@ -57,11 +57,11 @@ void A::f() {
 }
 ```
 
-C2247 também podem ser gerados como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003: privada as classes base agora inacessível. Uma classe (A) que é uma classe base particular em um tipo não (B) deve estar acessível para um tipo (C) que usa B como uma classe base.
+O C2247 também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003: as classes base privadas agora estão inacessíveis. Uma classe (A) que é uma classe base privada para um tipo (B) não deve ser acessível a um tipo (C) que usa B como uma classe base.
 
-Para o código que é válido no Visual Studio .NET 2003 e versões do Visual Studio .NET do Visual C++, use o operador de escopo.
+Para o código que é válido nas versões do Visual Studio .NET 2003 e do Visual Studio .NET do C++Visual, use o operador de escopo.
 
-```
+```cpp
 // C2247c.cpp
 // compile with: /c
 struct A {};

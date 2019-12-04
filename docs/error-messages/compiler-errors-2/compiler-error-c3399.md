@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3399
 ms.assetid: 306ad199-d150-4f6c-bcf1-24a7948b93be
-ms.openlocfilehash: d05a861a2baedb86482503b6860098f12c41bd78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d20b5e816930969278536fe3771df4ad38c3c86b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300421"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737511"
 ---
 # <a name="compiler-error-c3399"></a>Erro do compilador C3399
 
-'type': não é possível fornecer argumentos ao criar uma instância de um parâmetro genérico
+' type ': não é possível fornecer argumentos ao criar uma instância de um parâmetro genérico
 
-Quando você especifica o `gcnew()` restrição, você especificar que o tipo de restrição terá um construtor sem parâmetros. Portanto, é um erro ao tentar instanciar esse tipo e passar um parâmetro.
+Ao especificar a restrição de `gcnew()`, você especifica que o tipo de restrição terá um construtor sem parâmetros. Portanto, é um erro tentar criar uma instância desse tipo e passar um parâmetro.
 
-Ver [restrições em parâmetros de tipo genéricos (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) para obter mais informações.
+Consulte [restrições em parâmetros de tipo genéricoC++(/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3399.
 
-```
+```cpp
 // C3399.cpp
 // compile with: /clr /c
 generic <class T>

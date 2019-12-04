@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3040
 ms.assetid: 29e857ac-74f0-4ec6-becf-9026e38c160e
-ms.openlocfilehash: b0bc4956cfc08ae50026827d78136a70b82d568e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a7ee7b814be1963e2d98b54e547cc5965eef9d3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349991"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754947"
 ---
 # <a name="compiler-error-c3040"></a>Erro do compilador C3040
 
-'var': tipo de variável em cláusula 'reduction' é incompatível com o operador de reduction 'operator'
+' var ': tipo de variável na cláusula ' reduction ' é incompatível com operador de reduction ' operator '
 
-Uma variável em uma [redução](../../parallel/openmp/reference/reduction.md) cláusula não pode ser usada com o operador de redução.
+Uma variável em uma cláusula [Reduction](../../parallel/openmp/reference/reduction.md) não pode ser usada com o operador de redução.
 
 O exemplo a seguir gera C3040:
 
-```
+```cpp
 // C3040.cpp
 // compile with: /openmp /c
 #include "omp.h"

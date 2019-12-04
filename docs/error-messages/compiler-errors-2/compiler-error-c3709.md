@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3709
 ms.assetid: d5576b04-2f93-420a-8f3e-8b8e987e8dab
-ms.openlocfilehash: 3eb2963916cbbcbd925f755f9162ce59e9bff569
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47320c79dbbfc2152c126c80d1eb8c061f3ceb3a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328426"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757911"
 ---
 # <a name="compiler-error-c3709"></a>Erro do compilador C3709
 
-'function': sintaxe inadequada ao especificar evento em hook /\__unhook
+' function ': sintaxe inadequada para especificar o evento no __hook/\__unhook
 
-Quando você especifica uma origem de evento com [hook](../../cpp/hook.md) ou [unhook](../../cpp/unhook.md), o primeiro parâmetro deve ser um método de evento válido e o segundo parâmetro deve ser um objeto de fonte de evento válido (não um método).
+Quando você especifica uma origem de evento com [__hook](../../cpp/hook.md) ou [__unhook](../../cpp/unhook.md), o primeiro parâmetro deve ser um método de evento válido e o segundo parâmetro deve ser um objeto de origem de evento válido (não um método).
 
 O exemplo a seguir gera C3709:
 
-```
+```cpp
 // C3709.cpp
 // compile with: /LD
 [event_source(native)]

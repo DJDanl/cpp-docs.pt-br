@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2929
 ms.assetid: 11134027-6adc-4733-b6bd-b94486bd1933
-ms.openlocfilehash: fe2a56f7722c70c11e980fb6ee59230ffd056c5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d420e3f6470a94874549fadc8cd90e4dac20fe6e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385713"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760987"
 ---
 # <a name="compiler-error-c2929"></a>Erro do compilador C2929
 
-'identifier': instanciação explícita; não é possível forçar explicitamente e suprimir instanciação de membro de classe de modelo
+' identifier ': instanciação explícita; Não é possível forçar explicitamente e suprimir a instanciação do membro de classe de template
 
-Você explicitamente não é possível instanciar um identificador enquanto impede que ele seja instanciado.
+Você não pode instanciar explicitamente um identificador ao impedir que ele seja instanciado.
 
 O exemplo a seguir gera C2929:
 
-```
+```cpp
 // C2929.cpp
 // compile with: /c
 template<typename T>

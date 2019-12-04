@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2888
 ms.assetid: 244f593e-ff25-4dad-b31f-84dafa3bc84a
-ms.openlocfilehash: c5b547f1c4d62a6f48b6c5f8f901be309e81a67c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93fe37c72a04e8c942f910ed3a631e5ba2a542bc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311892"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760909"
 ---
 # <a name="compiler-error-c2888"></a>Erro do compilador C2888
 
-'identifier': símbolo não pode ser definido dentro do namespace 'namespace'
+' identifier ': símbolo não pode ser definido no namespace ' namespace '
 
-Um símbolo que pertencem ao namespace um deve ser definido em um namespace que inclui A.
+Um símbolo que pertence ao namespace A deve ser definido em um namespace que inclui um.
 
 O exemplo a seguir gera C2888:
 
-```
+```cpp
 // C2888.cpp
 // compile with: /c
 namespace M {

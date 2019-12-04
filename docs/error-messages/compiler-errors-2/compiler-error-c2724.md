@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2724
 ms.assetid: 4e4664bc-8c96-4156-b79f-03436f532ea8
-ms.openlocfilehash: 3014a12767cb9a73dc65852c544b7ac9574b9a52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f48bf45eeed491469b161ac1edcdb57d04eb5863
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383055"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760680"
 ---
 # <a name="compiler-error-c2724"></a>Erro do compilador C2724
 
-'identifier': 'static' não deve ser usado em funções membro definidas no escopo do arquivo
+"Identifier": "Static" não deve ser usado em funções membro definidas no escopo do arquivo
 
-Funções de membro estático devem ser declaradas com vinculação externa.
+Funções de membro static devem ser declaradas com vínculo externo.
 
 O exemplo a seguir gera C2724:
 
-```
+```cpp
 // C2724.cpp
 class C {
    static void func();

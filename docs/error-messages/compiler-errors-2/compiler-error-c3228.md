@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3228
 ms.assetid: 9015adf9-17b0-4312-b4a7-c1f33e4126f4
-ms.openlocfilehash: 63e7afa16c21aa8c4e335d22693ca71d7ab8d6a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81ced2765ab1ac7d0d138209ee33e163d7451041
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173971"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743426"
 ---
 # <a name="compiler-error-c3228"></a>Erro do compilador C3228
 
-'function': argumento de tipo genérico para o 'parâmetro' não pode ser 'type', ele deve ser um tipo de identificador valuetype
+' function ': argumento de tipo genérico para ' param ' não pode ser ' type ', ele deve ser um ValueType ou um tipo de identificador
 
-Um tipo incorreto foi passado como um argumento de tipo genérico.
+Um tipo incorreto foi passado como argumento de tipo genérico.
 
 O exemplo a seguir gera C3228:
 
-```
+```cpp
 // C3228.cpp
 // compile with: /clr
 class A {};

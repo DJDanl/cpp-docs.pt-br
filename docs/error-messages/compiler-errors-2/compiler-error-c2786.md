@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2786
 ms.assetid: 6676d8c0-86dd-4a39-bdda-b75a35f4d137
-ms.openlocfilehash: b03155ad1a209ae59327dd31d432f5623f380ac9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba5d05e9c7cc702509144fb876a1301bfc8bf3d4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265991"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739604"
 ---
 # <a name="compiler-error-c2786"></a>Erro do compilador C2786
 
-'type': operando inválido para uuidof
+' type ': operando inválido para __uuidof
 
-O [uuidof](../../cpp/uuidof-operator.md) operador usa um tipo definido pelo usuário com um GUID anexado ou um objeto desse tipo definido pelo usuário.  Possíveis causas:
+O operador [__uuidof](../../cpp/uuidof-operator.md) usa um tipo definido pelo usuário com um GUID anexado ou um objeto desse tipo definido pelo usuário.  Possíveis causas:
 
 1. O argumento não é um tipo definido pelo usuário.
 
-1. `__uuidof` não é possível extrair o GUID do argumento.
+1. `__uuidof` não pode extrair o GUID do argumento.
 
 O exemplo a seguir gera C2786:
 
-```
+```cpp
 // C2786.cpp
 struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 

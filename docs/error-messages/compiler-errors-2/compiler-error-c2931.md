@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2931
 ms.assetid: 33430407-b149-4ba3-baf8-b0dae1ea3a5d
-ms.openlocfilehash: 8fffa6e272da64ca7baa35af635b2b0a7d40c6f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03c5c1865343afdc0fd7a67ce393c7e1a5d2966f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385739"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757690"
 ---
 # <a name="compiler-error-c2931"></a>Erro do compilador C2931
 
-'class': id de classe de tipo é redefinida como uma função de membro de 'identifier'
+' class ': tipo-classe-ID redefinida como uma função membro de ' identifier '
 
-Você não pode usar uma classe genérica ou o modelo como uma função de membro de outra classe.
+Você não pode usar uma classe genérica ou de modelo como uma função membro de outra classe.
 
-Esse erro pode ser causado se as chaves são correspondidas incorretamente.
+Esse erro pode ser causado se as chaves forem correspondidas incorretamente.
 
 O exemplo a seguir gera C2931:
 
-```
+```cpp
 // C2931.cpp
 // compile with: /c
 template<class T>
@@ -38,9 +38,9 @@ struct MyStruct2 {
 };
 ```
 
-C2931 também podem ocorrer ao usar genéricos:
+C2931 também pode ocorrer ao usar genéricos:
 
-```
+```cpp
 // C2931b.cpp
 // compile with: /clr /c
 generic<class T> ref struct GC {};

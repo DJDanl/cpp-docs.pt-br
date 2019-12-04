@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2392
 ms.assetid: 98ced473-6383-46ed-b79c-21857d65dcb2
-ms.openlocfilehash: 5977d9bf41d55ef6db8409e0187153fdbf91149e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15fa4a19cdd791ddb3636f30a636cc084bdc4a5f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393591"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744999"
 ---
 # <a name="compiler-error-c2392"></a>Erro do compilador C2392
 
-'method1': retornos covariantes tipos não têm suporte em gerenciado ou WinRTtypes, caso contrário 'method2' poderia ser substituído
+' method1 ': tipos de retornos covariantes não são suportados em Managed ou WinRTtypes, caso contrário, ' method2 ' seria substituído
 
-Tipos de retorno covariantes não são permitidos para funções de membro de tempo de execução do Windows ou ao compilar com o [/clr (compilação de tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md) opção.
+Os tipos de retorno covariantes não são permitidos para funções membro Windows Runtime ou ao compilar com a opção [/CLR (Common Language Runtime compilação)](../../build/reference/clr-common-language-runtime-compilation.md) .
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C2392 e mostra como corrigi-lo.
 
-```
+```cpp
 // C2392.cpp
 // compile with: /clr
 public ref struct B {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3671
 ms.assetid: d684e4ae-87e2-4424-80bb-6f346652c831
-ms.openlocfilehash: c4534b11f3aedf638f69337fb6a7af778e086bb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 030a6acb19c0907956d2a5b833b683821591e5c5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215011"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758106"
 ---
 # <a name="compiler-error-c3671"></a>Erro do compilador C3671
 
-'function_1': função não substitui 'function_2'
+' function_1 ': a função não substitui ' function_2 '
 
-Ao usar a sintaxe de substituição explícita, o compilador gera um erro se uma função não é substituída.  Ver [substituições explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md) para obter mais informações.
+Ao usar a sintaxe de substituição explícita, o compilador gerará um erro se uma função não for substituída.  Consulte [substituições explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md) para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3671.
 
-```
+```cpp
 // C3671.cpp
 // compile with: /clr /c
 ref struct S {

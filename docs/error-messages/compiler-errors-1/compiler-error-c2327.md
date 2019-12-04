@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2327
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
-ms.openlocfilehash: abc9aa92c41947a2536e53108c1fb646792a8202
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36222b8469f5a51254c6a6172e20384ebafc89ab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300843"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747768"
 ---
 # <a name="compiler-error-c2327"></a>Erro do compilador C2327
 
-'symbol': não é um nome de tipo, static ou enumerador
+' Symbol ': não é um nome de tipo, estático ou enumerador
 
 O código dentro de uma classe aninhada tenta acessar um membro da classe delimitadora que não é um nome de tipo, um membro estático ou um enumerador.
 
-Ao compilar com **/clr**, uma causa comum para C2327 é uma propriedade com o mesmo nome que o tipo de propriedade.
+Ao compilar com **/CLR**, uma causa comum para C2327 é uma propriedade com o mesmo nome que o tipo de propriedade.
 
 O exemplo a seguir gera C2327:
 
-```
+```cpp
 // C2327.cpp
 int x;
 class enclose {
@@ -40,9 +40,9 @@ public:
 };
 ```
 
-C2327 também poderá ocorrer se o nome de um tipo está oculto pelo nome do membro:
+C2327 também pode ocorrer se o nome de um tipo estiver oculto pelo nome de um membro:
 
-```
+```cpp
 // C2327b.cpp
 class X {};
 
@@ -54,9 +54,9 @@ class S {
 };
 ```
 
-Também pode ser acionado C2327 nessa situação, em que você precisa especificar completamente o tipo de dados do parâmetro:
+O C2327 também pode disparar nessa situação, onde você precisa especificar totalmente o tipo de dados do parâmetro:
 
-```
+```cpp
 // C2327c.cpp
 // compile with: /c
 struct A {};
@@ -71,7 +71,7 @@ struct B {
 
 O exemplo a seguir gera C2327:
 
-```
+```cpp
 // C2327d.cpp
 // compile with: /clr /c
 using namespace System;
@@ -105,7 +105,7 @@ namespace NA {
 
 O exemplo a seguir mostra C2327 quando uma propriedade tem o mesmo nome que o tipo de propriedade:
 
-```
+```cpp
 // C2327f.cpp
 // compile with: /clr /c
 public value class Address {};

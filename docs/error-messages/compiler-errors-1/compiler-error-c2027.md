@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2027
 ms.assetid: a39150c0-ec04-45ec-934c-a838bfe76627
-ms.openlocfilehash: 901e9b791616c5684b352c1fda7687f67b895d9c
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 62cf208d9d0025afba06d32a15b9a1e50777c473
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447367"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750995"
 ---
 # <a name="compiler-error-c2027"></a>Erro do compilador C2027
 
-uso do tipo indefinido 'type'
+uso de tipo indefinido ' type '
 
-Um tipo não pode ser usado até que ele está definido. Para resolver o erro, certifique-se de que o tipo é totalmente definido antes de fazer referência a ele.
+Um tipo não pode ser usado até que seja definido. Para resolver o erro, verifique se o tipo está totalmente definido antes de fazer referência a ele.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C2027.
 
-```
+```cpp
 // C2027.cpp
 class C;
 class D {
@@ -43,11 +43,11 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-É possível declarar um ponteiro para um tipo declarado mas indefinido. Mas C++ não permite uma referência a um tipo indefinido.
+É possível declarar um ponteiro para um tipo declarado, mas indefinido. Mas C++ não permite uma referência a um tipo indefinido.
 
 O exemplo a seguir gera C2027.
 
-```
+```cpp
 // C2027_b.cpp
 class A;
 A& CreateA();

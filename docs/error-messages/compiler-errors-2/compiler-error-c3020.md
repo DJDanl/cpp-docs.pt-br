@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
-ms.openlocfilehash: 0e2d8e70dcc9b23c56a321487cd4b933a1086387
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b066e813203f10b902e49a62af97a9a041874752
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386675"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742113"
 ---
 # <a name="compiler-error-c3020"></a>Erro do compilador C3020
 
-'var': variável de índice do OpenMP 'loop for' não pode ser modificado no corpo do loop
+' var ': a variável de índice do loop de OpenMP ' for ' não pode ser modificada no corpo do loop
 
-Um OpenMP `for` loop não pode modificar o índice (contador de loop) no corpo do `for` loop.
+Um loop de `for` de OpenMP pode não modificar o índice (contador de loop) no corpo do loop de `for`.
 
 O exemplo a seguir gera C3020:
 
-```
+```cpp
 // C3020.cpp
 // compile with: /openmp
 int main() {
@@ -38,11 +38,11 @@ int main() {
 }
 ```
 
-Uma variável declarada com [lastprivate](../../parallel/openmp/reference/lastprivate.md) não pode ser usado como o índice dentro de um loop em paralelo.
+Uma variável declarada com [lastprivate](../../parallel/openmp/reference/lastprivate.md) não pode ser usada como o índice dentro de um loop paralelizado.
 
-O exemplo a seguir fornecerá C3020 para a segunda lastprivate porque esse lastprivate disparará uma gravação em idx_a mais externa dentro do loop for. A primeira lastprivate não dá a um erro porque esse lastprivate dispara uma gravação em idx_a mais externo fora do loop for (tecnicamente, no final da última iteração). O exemplo a seguir gera C3020.
+O exemplo a seguir fornecerá C3020 para o segundo lastprivate porque esse lastprivate disparará uma gravação para idx_a dentro do loop for mais externo. O primeiro lastprivate não dá um erro porque o lastprivate dispara uma gravação para idx_a fora do loop for mais externo (tecnicamente, no final da última iteração). O exemplo a seguir gera C3020.
 
-```
+```cpp
 // C3020b.cpp
 // compile with: /openmp /c
 float a[100][100];
@@ -61,7 +61,7 @@ void test(int first, int last)
 
 O exemplo a seguir demonstra uma possível resolução:
 
-```
+```cpp
 // C3020c.cpp
 // compile with: /openmp /c
 float a[100][100];

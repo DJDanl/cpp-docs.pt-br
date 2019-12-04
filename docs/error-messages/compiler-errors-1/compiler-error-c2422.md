@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2422
 ms.assetid: ef0ec302-4028-4778-b134-0b8cea4bcad9
-ms.openlocfilehash: 524eeadb6cf066d3eba3a7e88c45a9e2b993c0ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39f779ee846cf4f328f9c7af59ae394d97d7a3ca
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402862"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744726"
 ---
 # <a name="compiler-error-c2422"></a>Erro do compilador C2422
 
-substituição de segmento inválido em 'operando'
+substituição de segmento ilegal em ' operando '
 
-Código de assembly embutido incorretamente usa um operador de substituição de segmento (dois-pontos) em um operando.  Possíveis causas incluem:
+O código de assembly embutido usa incorretamente um operador de substituição de segmento (dois-pontos) em um operando.  As possíveis causas incluem:
 
-- O registro anterior o operador não é um registro de segmento.
+- O registro anterior ao operador não é um registro de segmento.
 
-- O registro anterior o operador não é o registro de segmento único no operando.
+- O registro que antecede o operador não é o único registro de segmento no operando.
 
 - O operador de substituição de segmento aparece dentro de um operador de indireção (colchetes).
 
-- A expressão que segue o operador de substituição de segmento não é um operando imediato ou um operando de memória.
+- A expressão após o operador de substituição de segmento não é um operando imediato ou um operando de memória.
 
 O exemplo a seguir gera C2422:
 
-```
+```cpp
 // C2422.cpp
 // processor: x86
 int main() {

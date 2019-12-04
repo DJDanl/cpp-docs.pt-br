@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2279
 ms.assetid: 1b5c88ef-2336-49b8-9ddb-d61f97c73e14
-ms.openlocfilehash: f35e384a5b242eb28427e1ff62ac55a3e9b206c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3b37788d6e4727761ab993f0502746edace18e9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388847"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759172"
 ---
 # <a name="compiler-error-c2279"></a>Erro do compilador C2279
 
 especificação de exceção não pode aparecer em uma declaração de typedef
 
-Sob **/Za**, [especificações de exceção](../../cpp/exception-specifications-throw-cpp.md) não são permitidos em uma declaração de typedef.
+Em **/za**, as [especificações de exceção](../../cpp/exception-specifications-throw-cpp.md) não são permitidas em uma declaração de typedef.
 
 O exemplo a seguir gera C2279:
 
-```
+```cpp
 // C2279.cpp
 // compile with: /Za /c
 typedef int (*xy)() throw(...);   // C2279

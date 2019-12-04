@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3452
 ms.assetid: e5293dcf-cb70-4133-ae2a-0bb496950ba0
-ms.openlocfilehash: 165c031f23f3b317300900970b30414da42e7840
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c491217f01d8e78375401b54faa48d9db410ccad
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397439"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756715"
 ---
 # <a name="compiler-error-c3452"></a>Erro do compilador C3452
 
-membro de argumento da lista não constante
+membro de argumento de lista não constante
 
-Um argumento foi passado para um atributo que espera uma constante, um valor que pode ser avaliada em tempo de compilação.
+Um argumento foi passado para um atributo que esperava uma constante, um valor que pode ser avaliado em tempo de compilação.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3452.
 
-```
+```cpp
 // C3452.cpp
 // compile with: /c
 int i;

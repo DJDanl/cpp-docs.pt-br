@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3100
 ms.assetid: 7a9c9eaf-08ef-442d-94a0-e457beee8549
-ms.openlocfilehash: 98fa90d184db596458ec7b943e3c35ddc5b7bce9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a0e0995b1a4dcbc92f02de03920893f884c2c7c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324799"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750033"
 ---
 # <a name="compiler-error-c3100"></a>Erro do compilador C3100
 
-'target': qualificador de atributo desconhecido
+' target ': qualificador de atributo desconhecido
 
 Um destino de atributo inválido foi especificado.
 
@@ -25,7 +25,7 @@ Para obter mais informações, consulte [atributos definidos pelo usuário](../.
 
 O exemplo a seguir gera C3100.
 
-```
+```cpp
 // C3100.cpp
 // compile with: /clr /c
 using namespace System;

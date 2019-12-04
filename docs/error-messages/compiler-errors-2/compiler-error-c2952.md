@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2952
 ms.assetid: a40e18a2-d02c-4511-854f-6c6fd6789a1a
-ms.openlocfilehash: e0d48c7ce52a87a0d33d2407ef0188ef37b3b9f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a76fc1718941ec5043f14064fa8c2609829ede3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395346"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755961"
 ---
 # <a name="compiler-error-c2952"></a>Erro do compilador C2952
 
-'declaração de ': declaração de tipo ausente da lista de parâmetros de modelo
+' declaração ': declaração de tipo ausente na lista de parâmetros de modelo
 
-Uma declaração de modelo ill foi formada.
+Uma declaração de modelo estava mal formada.
 
 O exemplo a seguir gera C2952:
 
-```
+```cpp
 // C2952.cpp
 // compile with: /c
 template <class T>
@@ -40,9 +40,9 @@ template <class T1>
 void S<T>::S1<T1>::f() {}
 ```
 
-C2952 também podem ocorrer ao usar genéricos:
+C2952 também pode ocorrer ao usar genéricos:
 
-```
+```cpp
 // C2952b.cpp
 // compile with: /clr /c
 generic <class T>

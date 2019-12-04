@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 9a5094b6c3d914c2f66ee8ed94bcdcce5827f130
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 7e3f52b2b69058549cb8aa3e14d2a4b4048fc4e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447193"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756845"
 ---
 # <a name="compiler-error-c3867"></a>Erro do compilador C3867
 
-'func': chamada de função faltando lista de argumentos; usar ' & func' para criar um ponteiro para membro
+' Func ': lista de argumentos ausente na chamada de função; Use ' & Func ' para criar um ponteiro para membro
 
-Você tentou tomar o endereço de uma função de membro sem qualificar a função de membro com seu nome de classe e o operador address-of.
+Você tentou pegar o endereço de uma função membro sem qualificar a função membro com seu nome de classe e o operador address-of.
 
-Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio 2005: conformidade aprimorada do ponteiro para membro. O código compilado antes do Visual Studio 2005 agora irá gerar C3867.
+Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio 2005: conformidade aprimorada de ponteiro para membro. O código que compilou antes do Visual Studio 2005 agora irá gerar C3867.
 
 ## <a name="example"></a>Exemplo
 
-C3867 podem ser emitidos do compilador com uma resolução sugerida enganoso. Sempre que possível, use a classe mais derivada.
+O C3867 pode ser emitido a partir do compilador com uma resolução sugerida enganosa. Sempre que possível, use a classe mais derivada.
 
 O exemplo a seguir gera C3867 e mostra como corrigi-lo.
 
-```
+```cpp
 // C3867_1.cpp
 // compile with: /c
 struct Base {
@@ -49,7 +49,7 @@ void Derived::Bar() {
 
 O exemplo a seguir gera C3867 e mostra como corrigi-lo.
 
-```
+```cpp
 // C3867_2.cpp
 #include<stdio.h>
 
@@ -81,7 +81,7 @@ int main() {
 
 O exemplo a seguir gera C3867 e mostra como corrigi-lo.
 
-```
+```cpp
 // C3867_3.cpp
 class X {
 public:
@@ -100,7 +100,7 @@ int main() {
 
 O exemplo a seguir gera C3867.
 
-```
+```cpp
 // C3867_4.cpp
 // compile with: /c
 class A {
@@ -124,7 +124,7 @@ public:
 
 O exemplo a seguir gera C3867.
 
-```
+```cpp
 // C3867_5.cpp
 // compile with: /EHsc
 #include <iostream>

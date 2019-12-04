@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2750
 ms.assetid: 30450034-feb5-448c-9655-b8c5f3639695
-ms.openlocfilehash: 34d19e8e9f51c90c48ec0d429f98bb82e3d829d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56f4e6e1d6c392fc377fe5fdf11643ae8a2e503a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228532"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759601"
 ---
 # <a name="compiler-error-c2750"></a>Erro do compilador C2750
 
-'type': não é possível usar 'new' no tipo de referência; Use 'gcnew'
+' type ': não é possível usar ' New ' no tipo de referência; em vez disso, use ' gcnew '
 
-Para criar uma instância de um tipo CLR, que faz com que a instância a ser colocado no heap coletado como lixo, você deve usar [gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md).
+Para criar uma instância de um tipo CLR, que faz com que a instância seja colocada no heap coletado por lixo, você deve usar [gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md).
 
 O exemplo a seguir gera C2750:
 
-```
+```cpp
 // C2750.cpp
 // compile with: /clr
 ref struct Y1 {};

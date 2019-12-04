@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3825
 ms.assetid: 18e204a1-f26e-42c6-8d74-2b49cc95f940
-ms.openlocfilehash: ddb665dab303b3133d4018910c2142a20a889bb0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98d9dbee8b3d290af0ddd1851380758290a21d4a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390575"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741710"
 ---
 # <a name="compiler-error-c3825"></a>Erro do compilador C3825
 
-'class': gerenciada ou WinRTclass pode apenas suporte gerenciado ou WinRTevents
+' class ': um Managed ou WinRTclass pode dar suporte apenas a Managed ou WinRTevents
 
-Eventos do .NET só têm suporte em classes gerenciadas. Somente os eventos de tempo de execução do Windows têm suporte nas classes de tempo de execução do Windows. Para corrigir esse erro em código gerenciado, altere o parâmetro de tipo de `event_source` e `event_receiver` partir `native` para `managed`. Como alternativa, remova o atributo.
+Somente eventos .NET têm suporte em classes gerenciadas. Somente Windows Runtime eventos têm suporte em classes Windows Runtime. Para corrigir esse erro em código gerenciado, altere o parâmetro de tipo de `event_source` e `event_receiver` de `native` para `managed`. Como alternativa, remova o atributo.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3825 e mostra como corrigi-lo:
 
-```
+```cpp
 // C3825a.cpp
 // compile with: /clr
 public delegate void del1();

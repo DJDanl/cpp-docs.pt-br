@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3238
 ms.assetid: 19942497-b3c5-4df0-9144-142ced92468b
-ms.openlocfilehash: d70bb6dac7cb43701b57f3821872e02ab31426dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f60a9abbc5702c1a0d14d0f894c9b1684378c3f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173275"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759354"
 ---
 # <a name="compiler-error-c3238"></a>Erro do compilador C3238
 
-'type': um tipo com este nome já foi encaminhado para o assembly 'assembly'
+' type ': um tipo com este nome já foi encaminhado para o assembly ' assembly '
 
-Um tipo foi definido em um aplicativo cliente que também é definido, por meio do encaminhamento de sintaxe, em um assembly referenciado de tipo. Ambos os tipos não podem ser definidos no escopo do aplicativo.
+Um tipo foi definido em um aplicativo cliente que também é definido, por meio da sintaxe de encaminhamento de tipo, em um assembly referenciado. Os dois tipos não podem ser definidos no escopo do aplicativo.
 
-Ver [encaminhamento de tipo (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md) para obter mais informações.
+Consulte o [encaminhamento deC++tipo (/CLI)](../../extensions/type-forwarding-cpp-cli.md) para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir cria um assembly que contém um tipo que foi encaminhado de outro assembly.
 
-```
+```cpp
 // C3238.cpp
 // compile with: /clr /LD
 public ref class R {};
@@ -33,9 +33,9 @@ public ref class R {};
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir cria um assembly que é usado para conter a definição de tipo, mas contém não apenas a sintaxe de encaminhamento de tipo.
+O exemplo a seguir cria um assembly que costumava conter a definição de tipo, mas não só contém a sintaxe de encaminhamento de tipo.
 
-```
+```cpp
 // C3238_b.cpp
 // compile with: /clr /LD
 #using "C3238.dll"
@@ -46,7 +46,7 @@ O exemplo a seguir cria um assembly que é usado para conter a definição de ti
 
 O exemplo a seguir gera C3238.
 
-```
+```cpp
 // C3238_c.cpp
 // compile with: /clr /c
 // C3238 expected

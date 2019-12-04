@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2283
 ms.assetid: 8a5b3175-b480-4598-a1f7-0b50504c5caa
-ms.openlocfilehash: 1113236680241a80c462e382c8c9c7de342b5463
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f3568aa5dfee116a225256a4452465c05f72f6f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388742"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759146"
 ---
 # <a name="compiler-error-c2283"></a>Erro do compilador C2283
 
-'identifier': especificador puro ou substituição abstract especificador não permitido no struct sem nome
+' identifier ': especificador puro ou especificador de substituição abstract não permitido em struct sem nome
 
-Uma função de membro de uma classe sem nome ou a estrutura é declarada com um especificador puro, que não é permitido.
+Uma função membro de uma classe ou estrutura sem nome é declarada com um especificador puro, o que não é permitido.
 
 O exemplo a seguir gera C2283:
 
-```
+```cpp
 // C2283.cpp
 // compile with: /c
 struct {

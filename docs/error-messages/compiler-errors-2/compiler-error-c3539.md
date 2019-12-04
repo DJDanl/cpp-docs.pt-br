@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3539
 ms.assetid: 34a33a0f-d1b6-498f-b312-ffad2d4799b3
-ms.openlocfilehash: be1051859ebbcbdc22a9b71f8c5adba2e75c4e92
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 85381b237480b86b59c33f02601a1b9dc644a5a4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344654"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761524"
 ---
 # <a name="compiler-error-c3539"></a>Erro do compilador C3539
 
-'type': um argumento de modelo não pode ser um tipo que contenha 'auto'
+' type ': um argumento de template não pode ser um tipo que contenha ' auto '
 
-O tipo de argumento de modelo indicado não pode conter um uso do `auto` palavra-chave.
+O tipo de argumento de modelo indicado não pode conter um uso da palavra-chave `auto`.
 
-### <a name="to-correct-this-error"></a>Para corrigir este erro
+### <a name="to-correct-this-error"></a>Para corrigir esse erro
 
-1. Não especifique o argumento de modelo com o `auto` palavra-chave.
+1. Não especifique o argumento de modelo com a palavra-chave `auto`.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir produz C3539.
 
-```
+```cpp
 // C3539.cpp
 // Compile with /Zc:auto
 template<class T> class C{};

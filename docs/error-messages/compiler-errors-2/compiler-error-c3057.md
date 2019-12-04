@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3057
 ms.assetid: b0b2ba88-9c74-4bec-bf60-8fc72eade34c
-ms.openlocfilehash: b2b827ec8d6b6ac21d80ded43e70f72098b3f367
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da7742a8268adfd2345c0606e2f60dae4e58887c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265510"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761136"
 ---
 # <a name="compiler-error-c3057"></a>Erro do compilador C3057
 
-'symbol': inicialização dinâmica de símbolos de 'threadprivate' não é suportada atualmente
+' Symbol ': a inicialização dinâmica de símbolos ' threadprivate ' não tem suporte no momento
 
-O valor inicializado de um símbolo usado em uma [threadprivate](../../parallel/openmp/reference/threadprivate.md) cláusula deve ser conhecida no tempo de compilação.
+O valor inicializado de um símbolo usado em uma cláusula [threadprivate](../../parallel/openmp/reference/threadprivate.md) deve ser conhecido no momento da compilação.
 
 O exemplo a seguir gera C3057:
 
-```
+```cpp
 // C3057.cpp
 // compile with: /openmp /c
 extern int f();
@@ -47,7 +47,7 @@ int main() {
 
 O exemplo a seguir gera C3057:
 
-```
+```cpp
 // C3057b.cpp
 // compile with: /openmp /c
 extern int Initialize();

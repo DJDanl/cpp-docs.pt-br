@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3352
 ms.assetid: f233bed7-474e-425f-aad2-7801578169d4
-ms.openlocfilehash: 6641f05c8daa5ad505c0bcb8d29a369ad5fd9a9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b679a89bb768ad7a50d0bbaa7b814c7a72f9f4c5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402626"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740423"
 ---
 # <a name="compiler-error-c3352"></a>Erro do compilador C3352
 
-'function': a função especificada não coincide com o tipo de delegado 'type'
+' function ': a função especificada não corresponde ao tipo delegado ' type '
 
-A lista de parâmetros para `function` e o delegado não coincidem.
+As listas de parâmetros para `function` e o delegado não coincidem.
 
-Para obter mais informações, consulte [delegado (extensões de componentes C++)](../../extensions/delegate-cpp-component-extensions.md).
+Para obter mais informações, consulte [delegar (extensõesC++ de componente)](../../extensions/delegate-cpp-component-extensions.md).
 
 O exemplo a seguir gera C3352:
 
-```
+```cpp
 // C3352.cpp
 // compile with: /clr
 delegate int D( int, int );

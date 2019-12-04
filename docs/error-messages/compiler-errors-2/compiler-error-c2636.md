@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2636
 ms.assetid: 379873ec-8d05-49f8-adf1-b067bc07bdb8
-ms.openlocfilehash: f196058bf458cf0732e3a19b98df366eb046e93a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f93998d717cbc3558bcab5045cc34c3f6a2c9a89
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395437"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737030"
 ---
 # <a name="compiler-error-c2636"></a>Erro do compilador C2636
 
-'identifier': ponteiro para membro de referência é inválido
+' identifier ': ponteiro para membro de referência é inválido
 
 Um ponteiro para um membro de referência foi declarado.
 
 O exemplo a seguir gera C2636:
 
-```
+```cpp
 // C2636.cpp
 struct S {};
 int main() {

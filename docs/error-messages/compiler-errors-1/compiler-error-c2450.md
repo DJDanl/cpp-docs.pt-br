@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2450
 ms.assetid: 929f1c06-8774-468b-be2a-f428757875a2
-ms.openlocfilehash: 3cbab274f8f7cd04d5fb86db69572e0b7fc1c04e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d015bd165986467a82f33a2ae0dda08c6f6d248
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208965"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744141"
 ---
 # <a name="compiler-error-c2450"></a>Erro do compilador C2450
 
-expressão de switch de tipo 'type' é inválida
+expressão switch do tipo ' type ' é inválida
 
-O `switch` expressão é avaliada como um tipo inválido. Ele deve ser avaliada como um tipo de inteiro ou um tipo de classe com conversão inequívoca para um tipo inteiro. Se for avaliada como um tipo definido pelo usuário, você deve fornecer um operador de conversão.
+A expressão de `switch` é avaliada como um tipo inválido. Ele deve ser avaliado como um tipo inteiro ou um tipo de classe com conversão não ambígua para um tipo inteiro. Se ele for avaliado como um tipo definido pelo usuário, você deverá fornecer um operador de conversão.
 
 O exemplo a seguir gera C2450:
 
-```
+```cpp
 // C2450.cpp
 class X {
 public:

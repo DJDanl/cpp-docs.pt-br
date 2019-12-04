@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
-ms.openlocfilehash: e8b97c8c6e5d23c406bf2d5831279810e7de0902
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1bd287c6b7e0b07938db55c282c69cd00fd25df
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376179"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761537"
 ---
 # <a name="compiler-error-c3538"></a>Erro do compilador C3538
 
-em uma lista de declaradores 'auto' sempre deve ser deduzido para o mesmo tipo
+em uma lista de declaradores, ' auto ' deve sempre deduzir para o mesmo tipo
 
-Todas as variáveis declaradas em uma lista de declaração não resolver para o mesmo tipo.
+Todas as variáveis declaradas em uma lista de declarações não são resolvidas para o mesmo tipo.
 
-### <a name="to-correct-this-error"></a>Para corrigir este erro
+### <a name="to-correct-this-error"></a>Para corrigir esse erro
 
-1. Certifique-se de que todos os `auto` declarações na lista de deduzam para o mesmo tipo.
+1. Certifique-se de que todas as declarações de `auto` na lista sejam deduzidas para o mesmo tipo.
 
 ## <a name="example"></a>Exemplo
 
-As instruções a seguir produzem C3538. Cada instrução declara diversas variáveis, mas cada uso do `auto` palavra-chave não deduzir o mesmo tipo.
+As instruções a seguir produzem C3538. Cada instrução declara várias variáveis, mas cada uso da palavra-chave `auto` não é deduzido para o mesmo tipo.
 
-```
+```cpp
 // C3538.cpp
 // Compile with /Zc:auto
 // C3538 expected

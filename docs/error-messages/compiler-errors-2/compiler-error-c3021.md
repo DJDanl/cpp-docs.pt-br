@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3021
 ms.assetid: 0cef6d97-e267-438a-ac8b-0daf5bbbc2cf
-ms.openlocfilehash: 4863947fe2fedf9301fac302820cb69193581222
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a90a3378690140c27fe938c269f4fb00f6eae12
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386688"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742100"
 ---
 # <a name="compiler-error-c3021"></a>Erro do compilador C3021
 
-'arg': argumento está vazia na diretiva de OpenMP 'diretiva'
+' arg ': argumento está vazio na diretiva de OpenMP ' diretivo '
 
 Um argumento é necessário para uma diretiva de OpenMP.
 
@@ -23,7 +23,7 @@ Um argumento é necessário para uma diretiva de OpenMP.
 
 O exemplo a seguir gera C3021:
 
-```
+```cpp
 // C3021.cpp
 // compile with: /openmp
 #include <stdio.h>

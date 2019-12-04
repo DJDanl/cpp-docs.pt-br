@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2893
 ms.assetid: ec0cbe43-005d-45da-8742-aaeb9b81d28e
-ms.openlocfilehash: f1fad1ad18af54945ef32dadaac50a6de4dbd62f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca603eb94d5d528a7fed15e0320e1f5d88bf0629
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366375"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760870"
 ---
 # <a name="compiler-error-c2893"></a>Erro do compilador C2893
 
-Falha ao especializar template de função 'nome do modelo'
+Falha ao especializar o modelo de função ' nome do modelo '
 
-O compilador Falha ao especializar um modelo de função. Pode haver várias causas para esse erro.
+O compilador não pôde especializar um modelo de função. Pode haver muitas causas para esse erro.
 
-Em geral, a maneira de resolver um erro de C2893 é examinar a assinatura da função e verifique se que você pode criar uma instância de todos os tipos.
+Em geral, a maneira de resolver um erro C2893 é examinar a assinatura da função e certificar-se de que você pode instanciar todos os tipos.
 
 ## <a name="example"></a>Exemplo
 
-C2893 ocorre porque `f`do parâmetro de modelo `T` é deduzida como sendo `std::map<int,int>`, mas `std::map<int,int>` não tem nenhum membro `data_type` (`T::data_type` não pode ser instanciado com `T = std::map<int,int>`.). O exemplo a seguir gera C2893.
+C2893 ocorre porque o parâmetro de modelo do `f``T` é deduzido para ser `std::map<int,int>`, mas `std::map<int,int>` não tem nenhum membro `data_type` (`T::data_type` não pode ser instanciado com `T = std::map<int,int>`.). O exemplo a seguir gera C2893.
 
-```
+```cpp
 // C2893.cpp
 // compile with: /c /EHsc
 #include<map>

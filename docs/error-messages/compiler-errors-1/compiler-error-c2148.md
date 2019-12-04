@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2148
 ms.assetid: e510c2c9-7b57-4ce8-be03-ba363e2cc5d9
-ms.openlocfilehash: 893f1f029b2ea1aaf7ff53a5ee5cee7fcbe36e7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aac14024e7ed2942eaf80c45817ba9c208e7e1ce
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175368"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756494"
 ---
 # <a name="compiler-error-c2148"></a>Erro do compilador C2148
 
-tamanho total da matriz não deve exceder 0x7fffffff bytes
+o tamanho total da matriz não deve exceder 0x7fffffff bytes
 
 Uma matriz excede o limite. Reduza o tamanho da matriz.
 
@@ -23,7 +23,7 @@ Uma matriz excede o limite. Reduza o tamanho da matriz.
 
 O exemplo a seguir gera C2148:
 
-```
+```cpp
 // C2148.cpp
 #include <stdio.h>
 #include <stdlib.h>

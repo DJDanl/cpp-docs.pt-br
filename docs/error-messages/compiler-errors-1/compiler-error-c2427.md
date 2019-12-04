@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2427
 ms.assetid: a7d421af-6180-40b4-b7a6-9f3bc7dfaaf9
-ms.openlocfilehash: b794b90a476f7712c80e7617ec3c0696afb290ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d92f3bce54a4558702d2a6d3870323eb0edd5d4d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402821"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744609"
 ---
 # <a name="compiler-error-c2427"></a>Erro do compilador C2427
 
-'class': não é possível definir classe neste escopo
+' class ': não é possível definir a classe neste escopo
 
-Foi feita uma tentativa para definir uma classe aninhada, mas a classe aninhada é um membro de uma classe base, não a classe que contém mais.
+Foi feita uma tentativa de definir uma classe aninhada, mas a classe aninhada é membro de uma classe base, e não da classe mais contenção.
 
 O exemplo a seguir gera C2427:
 
-```
+```cpp
 // C2427.cpp
 // compile with: /c
 template <class T>

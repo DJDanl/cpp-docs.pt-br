@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3114
 ms.assetid: b5d2df4f-87d0-4292-9981-25c6a6013c05
-ms.openlocfilehash: c5a4feae5c8805a27c020b532fd58e0562e46b6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f548c72a0e95c533ed711fe9f2583a7abd6c500
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404111"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760755"
 ---
 # <a name="compiler-error-c3114"></a>Erro do compilador C3114
 
-'argumento': argumento de atributo nomeado não válido
+' Argument ': não é um argumento de atributo nomeado válido
 
-Em ordem para um membro de dados de classe de atributo ser um argumento nomeado válido, ele não deve ser marcado `static`, `const`, ou `literal`. Se uma propriedade, a propriedade não deve ser `static` e deve ter get e definir acessadores.
+Para que um membro de dados da classe de atributo seja um argumento nomeado válido, ele não deve ser marcado `static`, `const`ou `literal`. Se uma propriedade, a propriedade não deve ser `static` e deve ter acessadores get e Set.
 
-Para obter mais informações, consulte [propriedade](../../extensions/property-cpp-component-extensions.md) e [atributos definidos pelo usuário](../../extensions/user-defined-attributes-cpp-component-extensions.md).
+Para obter mais informações, consulte [Propriedade](../../extensions/property-cpp-component-extensions.md) e [atributos definidos pelo usuário](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3114.
 
-```
+```cpp
 // C3114.cpp
 // compile with: /clr /c
 public ref class A : System::Attribute {

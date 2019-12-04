@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2462
 ms.assetid: a8601bf8-f5ce-41de-9117-e2632bd4996b
-ms.openlocfilehash: 0b342f8b878c48a77336fab4921cf4a668e248ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4eb50ddac51ea78ab3a28d7703384f02eb026ecb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368286"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743920"
 ---
 # <a name="compiler-error-c2462"></a>Erro do compilador C2462
 
-'identifier': não é possível definir um tipo em um 'new-expression'
+' identifier ': não é possível definir um tipo em uma ' New-Expression '
 
-Você não pode definir um tipo no campo de operando a `new` operador. Colocar a definição de tipo em uma instrução separada.
+Você não pode definir um tipo no campo operando do operador de `new`. Coloque a definição de tipo em uma instrução separada.
 
 O exemplo a seguir gera C2462:
 
-```
+```cpp
 // C2462.cpp
 int main() {
    new struct S { int i; };   // C2462

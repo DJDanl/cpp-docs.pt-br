@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3705
 ms.assetid: 8361017d-5782-4214-a9d7-e9825fd29bc8
-ms.openlocfilehash: 8a1a5a7c3c54742f6952f6885a70fd5c1dcf6e0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4f77457be95ae22b2a67214207d361ca105811d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227064"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757924"
 ---
 # <a name="compiler-error-c3705"></a>Erro do compilador C3705
 
-'function': não é possível encontrar a interface de eventos
+' function ': não é possível encontrar a interface de eventos
 
-Você deve definir uma interface de eventos para usar eventos COM. Observe que o `#include` linhas dos arquivos de cabeçalho de ATL mostrados no exemplo a seguir são necessárias para usar eventos COM. Para corrigir esse erro, remova a definição do `IEvents` interface no código de exemplo.
+Você deve definir uma interface de evento para usar eventos COM. Observe que as linhas de `#include` dos arquivos de cabeçalho ATL mostrados no exemplo abaixo são necessárias para o uso de eventos COM. Para corrigir esse erro, remova o comentário da definição da interface `IEvents` no código de exemplo.
 
 O exemplo a seguir gera C3705:
 
-```
+```cpp
 // C3705.cpp
 // compile with: /c
 #define _ATL_ATTRIBUTES 1

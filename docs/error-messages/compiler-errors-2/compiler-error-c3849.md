@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
-ms.openlocfilehash: ec6725472d31b0b2ade0cd73da4440036239fde3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8492f108b57fbc63bd171276b1aa601f96a28b24
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381053"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754882"
 ---
 # <a name="compiler-error-c3849"></a>Erro do compilador C3849
 
-chamada Function-style em uma expressão do tipo 'type' perderia qualificadores constantes e/ou volatile para número de todas as sobrecargas de operator disponíveis
+a chamada function-Style em uma expressão do tipo ' type ' perderia qualificadores const e/ou voláteis para todas as sobrecargas de operador disponíveis para todos os números
 
-Uma variável com um tipo const volátil especificado só pode chamar membros a funções definidas com qualificações constantes ou voláteis de igual ou superior.
+Uma variável com um tipo const-volatile especificado só pode chamar funções de membro definidas com qualificações const-volatile iguais ou maiores.
 
-Para corrigir esse erro, forneça uma função de membro apropriado. Você não pode executar uma conversão em const ou volatile objeto qualificado quando a conversão resulta na perda de qualificação. Você pode obter qualificadores, mas você não pode perder qualificadores em uma conversão.
+Para corrigir esse erro, forneça uma função de membro apropriada. Não é possível executar uma conversão em um objeto de qualificado const ou volátil quando a conversão causa perda de qualificação. Você pode obter qualificadores, mas não pode perder qualificadores em uma conversão.
 
 Os exemplos a seguir geram C3849:
 
-```
+```cpp
 // C3849.cpp
 void glbFunc3(int i, char c)
 {

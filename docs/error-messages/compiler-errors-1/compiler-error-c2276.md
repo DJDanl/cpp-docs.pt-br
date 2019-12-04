@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2276
 ms.assetid: 62005ad9-6cb9-4b1f-965d-b875adaf695e
-ms.openlocfilehash: 2128be2be4f0b5be37bbfc5098a35bb39afe5906
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69bbabbf38f7ee02d08f4b5e9dc4bed167919291
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388833"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760056"
 ---
 # <a name="compiler-error-c2276"></a>Erro do compilador C2276
 
-'operator': operação inválida na expressão de função de membro associada
+' operator ': operação inválida em expressão de função membro associada
 
 O compilador encontrou um problema com a sintaxe para criar um ponteiro para membro.
 
 O exemplo a seguir gera C2276:
 
-```
+```cpp
 // C2276.cpp
 class A {
 public:

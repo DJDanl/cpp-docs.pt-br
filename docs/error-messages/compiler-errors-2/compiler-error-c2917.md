@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2917
 ms.assetid: ec9da9ee-0f37-47b3-87dd-19ef5a14dc4c
-ms.openlocfilehash: 6926d96eccadacd427cc4d13b93db494809c3775
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f4b82c1138326bad93d3836d6a77c55f2f546e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406776"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761039"
 ---
 # <a name="compiler-error-c2917"></a>Erro do compilador C2917
 
-'name': parâmetro de modelo inválido
+' name ': parâmetro de template inválido
 
 Uma lista de parâmetros de modelo contém um identificador que não era um parâmetro de modelo.
 
@@ -23,7 +23,7 @@ Uma lista de parâmetros de modelo contém um identificador que não era um par�
 
 O exemplo a seguir gera C2917.
 
-```
+```cpp
 // C2917.cpp
 // compile with: /c
 template<class T> class Vector {

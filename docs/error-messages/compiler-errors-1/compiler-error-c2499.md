@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2499
 ms.assetid: b323ff4d-b3c1-4bfd-b052-ae7292d53222
-ms.openlocfilehash: 645dd3923e65240de17803a8831a0223ff0e1656
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29fbb691304f9fc101f2367e014ae1e4e2231ff0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360548"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756975"
 ---
 # <a name="compiler-error-c2499"></a>Erro do compilador C2499
 
-'class': uma classe não pode ser sua própria classe base
+' class ': uma classe não pode ser sua própria classe base
 
-Tentativa de especificar a classe que você está definindo como uma classe base.
+Você tentou especificar a classe que está definindo como uma classe base.
 
 O exemplo a seguir gera C2499:
 
-```
+```cpp
 // C2499.cpp
 // compile with: /c
 class CMyClass : public CMyClass {};   // C2499

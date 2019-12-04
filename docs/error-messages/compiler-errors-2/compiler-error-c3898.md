@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3898
 ms.assetid: d9a90df6-87e4-4fe7-ab01-c226ee86bf10
-ms.openlocfilehash: 503f295d62c598e3138b1a001d6b350c0d90ea84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02c649fb906b0c5f09afe25952a8670c1a0e7f3d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385440"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749198"
 ---
 # <a name="compiler-error-c3898"></a>Erro do compilador C3898
 
-'var': membros de dados de tipo só podem ser membros de tipos gerenciados
+' var ': membros de dados de tipo só podem ser membros de tipos gerenciados
 
-Uma [initonly](../../dotnet/initonly-cpp-cli.md) membro de dados foi declarado em uma classe nativa.  Um `initonly` membro de dados só pode ser declarado em uma classe CLR.
+Um membro de dados [InitOnly](../../dotnet/initonly-cpp-cli.md) foi declarado em uma classe nativa.  Um membro de dados `initonly` só pode ser declarado em uma classe CLR.
 
 O exemplo a seguir gera C3898:
 
-```
+```cpp
 // C3898.cpp
 // compile with: /clr
 struct Y1 {
@@ -30,9 +30,9 @@ struct Y1 {
 };
 ```
 
-Solução possível:
+Resolução possível:
 
-```
+```cpp
 // C3898b.cpp
 // compile with: /clr /c
 ref struct Y1 {

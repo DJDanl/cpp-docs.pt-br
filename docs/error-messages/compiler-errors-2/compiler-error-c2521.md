@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2521
 ms.assetid: 6042821b-e345-4a54-a7e9-a2c9019ea016
-ms.openlocfilehash: 27d822a3daf2c20aa57ebd8b45a7a6c7afa3d3cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cabd13b3292995d2baa8c5c66e9bc9ee85118c44
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282268"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746442"
 ---
 # <a name="compiler-error-c2521"></a>Erro do compilador C2521
 
-função não tem nenhum argumento
+a função não assume nenhum argumento
 
 Você tentou usar argumentos com um destruidor ou finalizador.
 
@@ -25,7 +25,7 @@ Para obter mais informações, consulte [destruidores e finalizadores](../../dot
 
 O exemplo a seguir gera C2521.
 
-```
+```cpp
 // C2521.cpp
 // compile with: /clr
 ref class R {

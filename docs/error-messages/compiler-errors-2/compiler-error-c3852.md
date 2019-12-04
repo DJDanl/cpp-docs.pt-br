@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3852
 ms.assetid: 194e5c5e-0dfb-414e-86db-791c11eb610c
-ms.openlocfilehash: 4ad7718f4efbeb3b0bc481755fd239615ab796cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f264333d802967d0350caa8ab4ba4925ffe019af
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380923"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754869"
 ---
 # <a name="compiler-error-c3852"></a>Erro do compilador C3852
 
-'member' com o tipo 'type': inicialização de agregação não pôde inicializar este membro
+' member ' com tipo ' type ': a inicialização de agregação não pôde inicializar este membro
 
-Foi feita uma tentativa para atribuir uma inicialização padrão como parte de uma inicialização de agregação para um membro de dados que não pode receber uma inicialização padrão em uma inicialização de agregação.
+Foi feita uma tentativa de atribuir uma inicialização padrão como parte de uma inicialização de agregação a um membro de dados que não pode receber uma inicialização padrão em uma inicialização de agregação.
 
 Os exemplos a seguir geram C3852:
 
-```
+```cpp
 // C3852.cpp
 struct S
 {

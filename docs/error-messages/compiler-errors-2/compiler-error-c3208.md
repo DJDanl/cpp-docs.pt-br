@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3208
 ms.assetid: 6d060bfe-52cf-4599-8f70-bdeb5a670df3
-ms.openlocfilehash: fa665f17de7ff6bec00ecdaf9d1749b0626c9181
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61577ac4f28b8432a4425a76002ed5ad83186419
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402665"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761888"
 ---
 # <a name="compiler-error-c3208"></a>Erro do compilador C3208
 
-'function': lista de parâmetros de modelo para classe modelo 'class' não coincide com lista de parâmetros de template para parâmetro de modelo 'parameter'
+' function ': a lista de parâmetros de template para o modelo de classe ' class ' não corresponde à lista de parâmetros de template para o parâmetro de modelo de modelo ' Parameter '
 
-Um parâmetro de modelo não tem o mesmo número de parâmetros de modelo que o modelo de classe fornecido.
+Um parâmetro de modelo de modelo não tem o mesmo número de parâmetros de modelo que o modelo de classe fornecido.
 
 O exemplo a seguir gera C3208:
 
-```
+```cpp
 // C3208.cpp
 template <template <class T> class TT >
 int f();

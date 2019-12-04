@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2598
 ms.assetid: 40777c62-39ba-441e-b081-f49f94b43547
-ms.openlocfilehash: 521a67bdf1e1f64853a3f87933b3fa714c8e33f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1ad34d454c5dc80feaac1df1383854391100ab0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257745"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759315"
 ---
 # <a name="compiler-error-c2598"></a>Erro do compilador C2598
 
-especificação de vinculação deve estar no escopo global
+a especificação de vinculação deve estar no escopo global
 
 O especificador de vinculação é declarado no escopo local.
 
 O exemplo a seguir gera C2598:
 
-```
+```cpp
 // C2598.cpp
 // compile with: /c
 void func() {

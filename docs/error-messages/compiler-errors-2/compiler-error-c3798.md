@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3798
 ms.assetid: b2f8b1d8-8812-49b8-a346-28e48f02ba5c
-ms.openlocfilehash: a11c88f536e3282e887e32ef437077e61f4424cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc21f0bdcc8e2171dd0c87fc31396e6caab9e6fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400143"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755311"
 ---
 # <a name="compiler-error-c3798"></a>Erro do compilador C3798
 
-'especificador de ': declaração de propriedade não pode possuir especificador de substituição (deve ser colocado na propriedade métodos get/set em vez disso)
+' especificador ': a declaração de propriedade não pode ter especificador de substituição (deve ser colocado em vez dos métodos get/set de propriedade)
 
-Uma propriedade foi declarada incorretamente. Para saber mais, veja
+Uma propriedade foi declarada incorretamente. Para obter mais informações, veja
 
 - [propriedade](../../extensions/property-cpp-component-extensions.md)
 
@@ -29,7 +29,7 @@ Uma propriedade foi declarada incorretamente. Para saber mais, veja
 
 O exemplo a seguir gera C3798
 
-```
+```cpp
 // C3798.cpp
 // compile with: /clr /c
 ref struct A {

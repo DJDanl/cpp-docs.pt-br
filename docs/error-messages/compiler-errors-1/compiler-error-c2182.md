@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2182
 ms.assetid: dfd8d47d-9606-496e-bd96-4bf41ba1f857
-ms.openlocfilehash: 3c33e722143c15c566d96226429adbb8868b34ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da702087ad4d445d7fd4abe1956040a45b4414b6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385973"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737134"
 ---
 # <a name="compiler-error-c2182"></a>Erro do compilador C2182
 
-'identifier': uso ilegal do tipo 'void'
+' identifier ': uso inválido do tipo ' void '
 
-Uma variável é declarada tipo `void`.
+Uma variável é declarada como tipo `void`.
 
 O exemplo a seguir gera C2182:
 
-```
+```cpp
 // C2182.cpp
 // compile with: /c
 int main() {

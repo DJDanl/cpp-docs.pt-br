@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3731
 ms.assetid: 45f89fcd-464c-4bc8-8a42-edcb5416d26c
-ms.openlocfilehash: 5acc33869648f83cd44bc557128c685f521ddf88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9acf80eec0d36db64fa070d691533e7085754ac0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328062"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752945"
 ---
 # <a name="compiler-error-c3731"></a>Erro do compilador C3731
 
-evento incompatível 'function1' e o manipulador 'function2'; origem do evento e o manipulador de eventos devem ser do mesmo tipo
+evento ' function1 ' e manipulador ' function2 ' incompatíveis; a origem do evento e o manipulador de eventos devem ser do mesmo tipo
 
-A origem do evento e o receptor de evento devem ter o mesmo tipo (por exemplo `native` versus `com` tipos). Para corrigir esse erro, verifique os tipos de origem do evento e a correspondência de manipulador de eventos.
+A origem do evento e o receptor do evento devem ter o mesmo tipo (por exemplo `native` tipos vs. `com`). Para corrigir esse erro, faça com que os tipos da origem do evento e do manipulador de eventos correspondam.
 
 O exemplo a seguir gera C3731:
 
-```
+```cpp
 // C3731.cpp
 // compile with: /clr
 #using <mscorlib.dll>

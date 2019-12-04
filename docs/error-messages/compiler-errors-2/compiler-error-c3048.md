@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3048
 ms.assetid: 48e07091-94d9-471d-befe-7e2507631edd
-ms.openlocfilehash: 451ae87f26357f47df4efdaa4393450f660a9000
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bec5921ea3d44c60d5d385da811beb6674c1a8d5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187589"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761306"
 ---
 # <a name="compiler-error-c3048"></a>Erro do compilador C3048
 
-Expressão após '#pragma omp atomic' possui forma inadequada
+Expressão após ' #pragma OMP Atomic ' tem forma inadequada
 
-Uma diretiva atomic foi especificada incorretamente.
+Uma diretiva atômica foi especificada incorretamente.
 
 O exemplo a seguir gera C3048:
 
-```
+```cpp
 // C3048.cpp
 // compile with: /openmp vcomps.lib
 #include "omp.h"

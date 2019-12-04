@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-ms.openlocfilehash: 4a1d46f3b000b5054564b05ca2c3c94a9e7b6398
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca779269d573e3e5d270fccad6afe6220083fa42
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386870"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755987"
 ---
 # <a name="compiler-error-c2666"></a>Erro do compilador C2666
 
-'identifier': número sobrecargas possuem conversões similares
+' identifier ': sobrecargas de número têm conversões semelhantes
 
-Uma função sobrecarregada ou o operador é ambíguo.   Listas de parâmetros formais podem ser muito semelhantes para o compilador resolver a ambiguidade.  Para resolver esse erro, converta explicitamente um ou mais dos parâmetros reais.
+Uma função ou um operador sobrecarregado é ambíguo.   Listas de parâmetros formais podem ser muito semelhantes para que o compilador resolva a ambiguidade.  Para resolver esse erro, converta explicitamente um ou mais dos parâmetros reais.
 
 O exemplo a seguir gera C2666:
 
-```
+```cpp
 // C2666.cpp
 struct complex {
    complex(double);
@@ -39,15 +39,15 @@ Esse erro também pode ser gerado como resultado do trabalho de conformidade do 
 
 - operadores binários e conversões definidas pelo usuário para tipos de ponteiro
 
-- conversão de qualificação não é o mesmo que a conversão de identidade
+- a conversão de qualificação não é igual à conversão de identidades
 
-Para os operadores binários \<, >, \<= e > = um passado parâmetro agora é convertido implicitamente no tipo do operando se o tipo do parâmetro define um operador de conversão definida pelo usuário a ser convertido para o tipo do operando. Agora há potencial de ambiguidade.
+Para os operadores binários \<, >, \<= e > =, um parâmetro passado agora será convertido implicitamente no tipo do operando se o tipo do parâmetro definir um operador de conversão definido pelo usuário para converter para o tipo do operando. Agora há potencial para ambigüidade.
 
-Para o código que é válido no Visual Studio .NET 2003 e versões do Visual Studio .NET do Visual C++, chame o operador de classe explicitamente usando a sintaxe da função.
+Para o código que é válido nas versões do Visual Studio .NET 2003 e do Visual Studio .NET do C++Visual, chame o operador de classe explicitamente usando a sintaxe de função.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // C2666b.cpp
 #include <string.h>
 #include <stdio.h>
@@ -106,7 +106,7 @@ int main()
 
 O exemplo a seguir gera C2666
 
-```
+```cpp
 // C2666c.cpp
 // compile with: /c
 

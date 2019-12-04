@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2903
 ms.assetid: bf6b223f-4921-48c7-82b9-ff318b42c801
-ms.openlocfilehash: 7002e45770c994d5cd10e1cd632561be57246086
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df097cf38fea47702b639b44fd2f2ac3341df2ba
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378525"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735899"
 ---
 # <a name="compiler-error-c2903"></a>Erro do compilador C2903
 
-'identifier': símbolo não é um modelo de classe nem um modelo de função
+' identifier ': símbolo não é um modelo de classe nem um modelo de função
 
-Código de tentativas de instanciação explícita de algo que não é um modelo.
+O código tenta instanciação explícita de algo que não é um modelo.
 
 O exemplo a seguir gera C2903:
 
-```
+```cpp
 // C2903.cpp
 // compile with: /c
 namespace N {
@@ -34,9 +34,9 @@ void g() {
 }
 ```
 
-C2903 também podem ocorrer ao usar genéricos:
+C2903 também pode ocorrer ao usar genéricos:
 
-```
+```cpp
 // C2903b.cpp
 // compile with: /clr /c
 namespace N {

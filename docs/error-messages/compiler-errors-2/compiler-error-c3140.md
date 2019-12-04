@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3140
 ms.assetid: 122f8943-fac3-4db8-a3a8-2c5d19233de6
-ms.openlocfilehash: e7dde3eb27c018502225ea3bc45e4bee7c699379
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc1e1828583b3ac8342c12a62e6ba4c1694b5824
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374957"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760563"
 ---
 # <a name="compiler-error-c3140"></a>Erro do compilador C3140
 
-não é possível ter vários atributos 'module' na mesma unidade de compilação
+Não é possível ter vários atributos ' module ' na mesma unidade de compilação
 
-O [módulo](../../windows/module-cpp.md) atributo só pode ser definido uma vez por projeto.
+O atributo [Module](../../windows/module-cpp.md) só pode ser definido uma vez por projeto.
 
 O exemplo a seguir gera C3140:
 
-```
+```cpp
 // C3140.cpp
 // compile with: /c
 [emitidl];

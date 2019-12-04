@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3537
 ms.assetid: f537ebd1-4fb0-4e09-a453-4f38db2c6881
-ms.openlocfilehash: 50a06180dabfa192292fae7ba1962b6b7455bb89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef3e954987b84ea128342b38307769903df4b346
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375919"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740475"
 ---
 # <a name="compiler-error-c3537"></a>Erro do compilador C3537
 
-'type': não pode ser convertido para um tipo que contenha 'auto'
+' type ': não é possível converter em um tipo que contenha ' auto '
 
-Você não pode converter uma variável para o tipo indicado, porque o tipo contém o `auto` palavra-chave e o padrão [/ZC: auto](../../build/reference/zc-auto-deduce-variable-type.md) opção do compilador está em vigor.
+Você não pode converter uma variável para o tipo indicado porque o tipo contém a palavra-chave `auto` e a opção de compilador [/Zc: auto](../../build/reference/zc-auto-deduce-variable-type.md) do padrão está em vigor.
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir produz C3537 porque as variáveis são convertidas em um tipo que contém o `auto` palavra-chave.
+O código a seguir produz C3537 porque as variáveis são convertidas em um tipo que contém a palavra-chave `auto`.
 
-```
+```cpp
 // C3537.cpp
 // Compile with /Zc:auto
 int main()

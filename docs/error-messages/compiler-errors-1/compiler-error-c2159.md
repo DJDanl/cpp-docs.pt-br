@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2159
 ms.assetid: 925a2cbd-43c9-45ee-a373-84004350b380
-ms.openlocfilehash: fd845fffe9778e51af7db77144607233ed9ddefd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c0ef75f63f5aa57e02297ebd94d4224048b0f2d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174842"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755844"
 ---
 # <a name="compiler-error-c2159"></a>Erro do compilador C2159
 
@@ -21,7 +21,7 @@ Uma declaração contém mais de uma classe de armazenamento.
 
 O exemplo a seguir gera C2159:
 
-```
+```cpp
 // C2159.cpp
 // compile with: /c
 static int i;   // OK

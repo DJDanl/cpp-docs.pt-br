@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3280
 ms.assetid: 86dc5bbc-8818-4786-a728-9334268d308b
-ms.openlocfilehash: b43ea73a626ba35f58054a94046915d4eba97181
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 127ff9d56f48ad276a59fba984deba16f2f8c339
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382041"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757586"
 ---
 # <a name="compiler-error-c3280"></a>Erro do compilador C3280
 
-'class': uma função de membro de um tipo gerenciado não pode ser compilada como uma função não gerenciada
+' class ': uma função membro de um tipo gerenciado não pode ser compilada como uma função não gerenciada
 
-Gerenciado funções não podem ser compiladas como funções não gerenciadas de membro de classe.
+As funções de membro de classe gerenciada não podem ser compiladas como funções não gerenciadas.
 
 O exemplo a seguir gera C3280:
 
-```
+```cpp
 // C3280_2.cpp
 // compile with: /clr
 ref struct A {

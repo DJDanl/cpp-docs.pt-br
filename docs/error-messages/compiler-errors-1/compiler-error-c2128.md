@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2128
 ms.assetid: 08cbf734-75b3-49f2-9026-9b319947612d
-ms.openlocfilehash: 80015118bf9e8bc8d8c4fba578f4ff1fa4651034
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 461492946271a141cbdb563b34769e69e9cf75e1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397634"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755168"
 ---
 # <a name="compiler-error-c2128"></a>Erro do compilador C2128
 
-'function': alloc_text/same_seg aplicável apenas a funções com vínculo a C
+' function ': alloc_text/same_seg aplicável somente a funções com vínculo de C
 
-`pragma` `alloc_text` só pode ser usado com as funções declaradas com vinculação C.
+`pragma` `alloc_text` só pode ser usada com funções declaradas para ter vínculo C.
 
 O exemplo a seguir gera C2128:
 
-```
+```cpp
 // C2128.cpp
 // compile with: /c
 

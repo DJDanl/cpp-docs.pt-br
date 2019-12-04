@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3197
 ms.assetid: 4e385c3b-222e-425c-9612-46e83ed41650
-ms.openlocfilehash: be9b7dadb4f67a6392cd7a2c46caf61d983e79eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1519daf906485f78fe155d0f67e63d8e8e97ae29
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329030"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739213"
 ---
 # <a name="compiler-error-c3197"></a>Erro do compilador C3197
 
-'palavra-chave': só pode ser usado em definições
+' keyword ': só pode ser usada em definições
 
 Uma palavra-chave foi usada em uma declaração, mas só é válida em uma definição.
 
 O exemplo a seguir gera C3197:
 
-```
+```cpp
 // C3197.cpp
 // compile with: /clr /c
 ref struct R abstract;   // C3197

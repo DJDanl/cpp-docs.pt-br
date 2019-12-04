@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2387
 ms.assetid: 6847b8e1-ffac-458d-ab88-0c92f72f2527
-ms.openlocfilehash: df9e92bfa333be88e860bbdecd5acaa64ec80440
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a884099c7407113d7ef7604f4eec28e0fa86d87e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393669"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745092"
 ---
 # <a name="compiler-error-c2387"></a>Erro do compilador C2387
 
-'type': classe base ambígua
+' type ': classe base ambígua
 
-O compilador não pôde inequivocamente resolver uma chamada de função porque a função existe em mais de uma classe base.
+O compilador não pôde resolver uma chamada de função de forma não ambígua porque a função existe em mais de uma classe base.
 
-Para resolver esse erro, remova uma das classes base a herança ou qualifique explicitamente a chamada de função.
+Para resolver esse erro, remova uma das classes base da herança ou qualifique explicitamente a chamada de função.
 
 O exemplo a seguir gera C2387:
 
-```
+```cpp
 // C2387.cpp
 namespace N1 {
    struct B {

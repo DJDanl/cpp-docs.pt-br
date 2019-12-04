@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3290
 ms.assetid: 0baf684b-1143-4953-ac99-a2fa267d8017
-ms.openlocfilehash: f2a346354d8da7d78c5517b01b4438bfb8af50ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a7a73c13c28923761674294d8d6e601b95ffad96
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222701"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760147"
 ---
 # <a name="compiler-error-c3290"></a>Erro do compilador C3290
 
-'type': uma propriedade trivial não pode ter o tipo de referência
+' type ': uma propriedade trivial não pode possuir tipo de referência
 
-Uma propriedade foi declarada incorretamente. Quando você declarar uma propriedade trivial, o compilador cria uma variável que atualizará a propriedade e não é possível ter uma referência de acompanhamento de variável em uma classe.
+Uma propriedade foi declarada incorretamente. Quando você declara uma propriedade trivial, o compilador cria uma variável que a propriedade atualizará e não é possível ter uma variável de referência de rastreamento em uma classe.
 
-Ver [propriedade](../../extensions/property-cpp-component-extensions.md) e [operador de referência de acompanhamento](../../extensions/tracking-reference-operator-cpp-component-extensions.md) para obter mais informações.
+Consulte operador de [referência](../../extensions/tracking-reference-operator-cpp-component-extensions.md) de [Propriedade](../../extensions/property-cpp-component-extensions.md) e acompanhamento para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3290.
 
-```
+```cpp
 // C3290.cpp
 // compile with: /clr /c
 ref struct R {};

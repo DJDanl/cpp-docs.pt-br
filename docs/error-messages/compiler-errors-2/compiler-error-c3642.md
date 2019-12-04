@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3642
 ms.assetid: 429790c2-9614-4d85-b31c-687c8d8f83ff
-ms.openlocfilehash: d524c49075c400caa345dd26ed681734ea0cfb94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c3f9f05bf04c9a1c20fff7910836e7b50468a8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385609"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742451"
 ---
 # <a name="compiler-error-c3642"></a>Erro do compilador C3642
 
-' return_type/args': não é possível chamar uma função com clrcall convenção de chamada do código nativo
+' return_type/args ': não é possível chamar uma função com __clrcall Convenção de chamada de código nativo
 
-Uma função que é marcada com o [clrcall](../../cpp/clrcall.md) convenção de chamada não pode ser chamada de código nativo (não gerenciado).
+Uma função que é marcada com a Convenção de chamada [__clrcall](../../cpp/clrcall.md) não pode ser chamada de código nativo (não gerenciado).
 
-*args/return_type* é o nome da função ou o tipo do `__clrcall` função que você está tentando chamar.  Um tipo é usado ao chamar por meio de um ponteiro de função.
+*return_type/args* é o nome da função ou o tipo da função `__clrcall` que você está tentando chamar.  Um tipo é usado quando você está chamando por um ponteiro de função.
 
-Para chamar uma função gerenciada de um contexto nativo, você pode adicionar uma função de "wrapper" que chamará o `__clrcall` função. Ou, você pode usar o mecanismo de empacotamento do CLR; consulte [como: Empacotar o uso de ponteiros de função PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) para obter mais informações.
+Para chamar uma função gerenciada de um contexto nativo, você pode adicionar uma função de "wrapper" que chamará a função `__clrcall`. Ou, você pode usar o mecanismo de Marshalling do CLR; consulte [como realizar marshaling de ponteiros de função usando o PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) para obter mais informações.
 
 O exemplo a seguir gera C3642:
 
-```
+```cpp
 // C3642.cpp
 // compile with: /clr
 using namespace System;

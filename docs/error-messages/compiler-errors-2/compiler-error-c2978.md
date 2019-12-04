@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2978
 ms.assetid: 5e7bee82-e266-4ccd-ad2e-ee89606ec5bf
-ms.openlocfilehash: cf682bf14246754cca74a43dffc39761ff6125c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3996e8e8d40ca24bf54fdf5bbbfde90f3d609c9d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395320"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751542"
 ---
 # <a name="compiler-error-c2978"></a>Erro do compilador C2978
 
-Erro de sintaxe: esperado 'keyword1' ou 'keyword2'; encontrado o tipo 'keyword3'; Não há suporte para parâmetros sem tipo em genéricos
+erro de sintaxe: ' keyword1 ' ou ' keyword2 ' esperado; tipo ' keyword3 ' encontrado; Não há suporte para parâmetros sem tipo em genéricos
 
-Uma classe genérica foi declarada incorretamente. Ver [genéricos](../../extensions/generics-cpp-component-extensions.md)para obter mais informações.
+Uma classe genérica foi declarada incorretamente. Consulte [genéricos](../../extensions/generics-cpp-component-extensions.md)para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C2978.
 
-```
+```cpp
 // C2978.cpp
 // compile with: /clr /c
 generic <ref class T>   // C2978

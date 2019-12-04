@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2831
 ms.assetid: c8c04288-0889-4265-a077-17f94cbcdcc9
-ms.openlocfilehash: b0708a7c45f33e30280666cf9bc903723d6a9c26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2fa97e4b293d306a7d6ceecd08256c8212f8cb7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227825"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736887"
 ---
 # <a name="compiler-error-c2831"></a>Erro do compilador C2831
 
-'operator operador' não pode ter parâmetros padrão
+' operator Operator ' não pode ter parâmetros padrão
 
-Apenas três operadores podem ter parâmetros padrão:
+Somente três operadores podem ter parâmetros padrão:
 
 - [new](../../cpp/new-operator-cpp.md)
 
@@ -27,7 +27,7 @@ Apenas três operadores podem ter parâmetros padrão:
 
 O exemplo a seguir gera C2831:
 
-```
+```cpp
 // C2831.cpp
 // compile with: /c
 #define BINOP <=

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3042
 ms.assetid: bf73f61e-5bd2-40a8-9b06-6244e6a15a41
-ms.openlocfilehash: deb3b8d6251316bceb71ce03f2bda88520bbb9b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4347e5ee0e61ada700082b4954b616ce894e57b9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182579"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761384"
 ---
 # <a name="compiler-error-c3042"></a>Erro do compilador C3042
 
-cláusulas 'copyprivate' e 'nowait' não podem aparecer juntas em diretiva de 'diretiva' OpenMP
+as cláusulas ' copyprivate ' e ' nowait ' não podem aparecer juntas na diretiva de OpenMP ' diretivo '
 
-O [copyprivate](../../parallel/openmp/reference/copyprivate.md) e [nowait](../../parallel/openmp/reference/nowait.md) cláusulas são mutuamente exclusivas na diretiva especificada. Para corrigir esse erro, remova uma ou ambas as `copyprivate` ou `nowait` cláusulas.
+As cláusulas [copyprivate](../../parallel/openmp/reference/copyprivate.md) e [nowait](../../parallel/openmp/reference/nowait.md) são mutuamente exclusivas na diretiva especificada. Para corrigir esse erro, remova uma ou ambas as cláusulas `copyprivate` ou `nowait`.
 
 O exemplo a seguir gera C3042:
 
-```
+```cpp
 // C3042.cpp
 // compile with: /openmp /c
 #include <stdio.h>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2819
 ms.assetid: fcc7762d-cb82-4bb1-a715-0d82da832edf
-ms.openlocfilehash: 17b863d24d43f0dc7afb0fc4776953dcb41929e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a3768cb23c65eb3e2d818f81ff7c6a561c8d7ec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174933"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750644"
 ---
 # <a name="compiler-error-c2819"></a>Erro do compilador C2819
 
-o tipo 'type' não tem um membro sobrecarregado 'operator' ->
+o tipo ' type ' não tem um membro sobrecarregado ' operator-> '
 
 Você precisa definir `operator->()` para usar essa operação de ponteiro.
 
 O exemplo a seguir gera C2819:
 
-```
+```cpp
 // C2819.cpp
 // compile with: /c
 class A {
@@ -49,9 +49,9 @@ void F(D j) {
 }
 ```
 
-C2819 também podem ocorrer ao usar [semântica da pilha do C++ para tipos de referência](../../dotnet/cpp-stack-semantics-for-reference-types.md). O exemplo a seguir gera C2819:
+C2819 também pode ocorrer ao usar [ C++ a semântica de pilha para tipos de referência](../../dotnet/cpp-stack-semantics-for-reference-types.md). O exemplo a seguir gera C2819:
 
-```
+```cpp
 // C2819_b.cpp
 // compile with: /clr
 ref struct R {

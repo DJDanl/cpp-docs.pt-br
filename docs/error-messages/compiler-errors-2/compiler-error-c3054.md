@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3054
 ms.assetid: 6f4b7ac5-0d12-474b-b611-76ff26ee41ac
-ms.openlocfilehash: 1dd6450d661700d9b2f7f94e625abd9ecc64ed08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a35f72be07799f61587c77b511395223ae72939
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265562"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761183"
 ---
 # <a name="compiler-error-c3054"></a>Erro do compilador C3054
 
-'#pragma omp parallel' não é suportado atualmente em uma classe genérica ou uma função
+' #pragma OMP Parallel ' não tem suporte atualmente em uma classe ou função genérica
 
 Para obter mais informações, consulte [genéricos](../../extensions/generics-cpp-component-extensions.md) e [OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md).
 
@@ -23,7 +23,7 @@ Para obter mais informações, consulte [genéricos](../../extensions/generics-c
 
 O exemplo a seguir gera C3054.
 
-```
+```cpp
 // C3054.cpp
 // compile with: /openmp /clr /c
 #include <omp.h>

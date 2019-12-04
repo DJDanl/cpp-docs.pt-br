@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3189
 ms.assetid: b254de79-931e-4a59-a9f4-1c690d90ca5e
-ms.openlocfilehash: b2de290178657ae427b5ad7999c511ae7ff9f1eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b53056cf8a7b4b9b49720ef17e8f9318390059a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300623"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761615"
 ---
 # <a name="compiler-error-c3189"></a>Erro do compilador C3189
 
-' typeid\<digite declarador abstrato >': não há suporte para esta sintaxe, use:: typeid em vez disso
+' typeid\<tipo abstract declarator > ': essa sintaxe não é mais suportada, use:: typeid em vez disso
 
-Um formato obsoleto da [typeid](../../extensions/typeid-cpp-component-extensions.md) foi usado, use o novo formulário.
+Uma forma obsoleta de [typeid](../../extensions/typeid-cpp-component-extensions.md) foi usada, use o novo formulário.
 
 O exemplo a seguir gera C3189:
 
-```
+```cpp
 // C3189.cpp
 // compile with: /clr
 int main() {

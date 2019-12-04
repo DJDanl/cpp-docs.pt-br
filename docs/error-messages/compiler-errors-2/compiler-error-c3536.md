@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3536
 ms.assetid: 8d866075-866b-49eb-9979-ee27b308f7e3
-ms.openlocfilehash: a16c5bd46d806d09861d5734b637c2c9d9b2f9d0
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: a140847b642ac2437b67aa957328c3b8fbfc592d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345486"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761563"
 ---
 # <a name="compiler-error-c3536"></a>Erro do compilador C3536
 
-'symbol': não pode ser usado antes de ser inicializado
+' Symbol ': não pode ser usado antes de ser inicializado
 
 O símbolo indicado não pode ser usado antes de ser inicializado. Na prática, isso significa que uma variável não pode ser usada para se inicializar.
 
-### <a name="to-correct-this-error"></a>Para corrigir este erro
+### <a name="to-correct-this-error"></a>Para corrigir esse erro
 
-1. Não inicialize uma variável com ele próprio.
+1. Não inicialize uma variável com ela mesma.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir produz C3536 porque cada variável é inicializada com ele próprio.
+O exemplo a seguir gera C3536 porque cada variável é inicializada com ela mesma.
 
-```
+```cpp
 // C3536.cpp
 // Compile with /Zc:auto
 int main()

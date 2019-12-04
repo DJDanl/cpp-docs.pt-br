@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C1197
 ms.assetid: 22b801b7-e792-41f6-a461-973c03c69f25
-ms.openlocfilehash: e1c00a001c807b0cc6a5946b61ca4e9d5dc0167a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f698262c73f0b311a92a8940107b552430919bb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62229111"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747235"
 ---
 # <a name="fatal-error-c1197"></a>Erro fatal C1197
 
-não é possível fazer referência a 'mscorlib.dll_1' como o programa já referenciou 'mscorlib.dll_2'
+Não é possível referenciar ' mscorlib. dll_1 ' porque o programa já referenciou ' mscorlib. dll_2 '
 
-O compilador é correspondente a uma versão do common language runtime.  No entanto, foi feita uma tentativa para fazer referência a uma versão de um arquivo do common language runtime de uma versão anterior.
+O compilador é correspondido a uma versão do Common Language Runtime.  No entanto, foi feita uma tentativa de fazer referência a uma versão de um arquivo de Common Language Runtime de uma versão anterior.
 
-Para resolver esse erro, somente os arquivos de referência da versão do common language runtime que acompanha a versão do Visual C++, você estão compilando com.
+Para resolver esse erro, somente os arquivos de referência da versão do Common Language Runtime fornecidos com a versão do Visual C++ com a qual você está compilando.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C1197:
 
-```
+```cpp
 // C1197.cpp
 // compile with: /clr /c
 // processor: x86

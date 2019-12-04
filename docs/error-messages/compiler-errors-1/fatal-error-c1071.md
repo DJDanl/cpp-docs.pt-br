@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C1071
 ms.assetid: 489f1786-370e-4ecd-af67-538fe6e5bd4e
-ms.openlocfilehash: 8fe6b0f3bb1253f72c97f29070ba81cdbdf80508
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f39359d55b5564c6379c84f07e942cf3484e011
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166653"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747404"
 ---
 # <a name="fatal-error-c1071"></a>Erro fatal C1071
 
-fim de arquivo inesperado encontrado no comentário
+fim inesperado de arquivo encontrado no comentário
 
-O compilador atingiu o fim do arquivo ao examinar um comentário.
+O compilador atingiu o final do arquivo durante a verificação de um comentário.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
 
-1. Falta o terminador de comentário (* /).
+1. Terminador de comentário ausente (*/).
 
-1. Caractere de nova linha ausente após um comentário na última linha de um arquivo de origem.
+1. Caractere de linhagem ausente após um comentário na última linha de um arquivo de origem.
 
 O exemplo a seguir gera C1071:
 
-```
+```cpp
 // C1071.cpp
 int main() {
 }

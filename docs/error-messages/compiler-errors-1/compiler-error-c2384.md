@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2384
 ms.assetid: 8145f7ad-31b1-406d-ac43-0d557feab635
-ms.openlocfilehash: 1909fb999dd0f60224029b726f773c11fa69ee40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ce5c2f2540fbd2aca3509fa1dac55073a002abb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347149"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745248"
 ---
 # <a name="compiler-error-c2384"></a>Erro do compilador C2384
 
-'member': não é possível aplicar __declspec(thread) a um membro de um ou a classe de WinRT
+' member ': não é possível aplicar __declspec (thread) a um membro de uma classe gerenciada ou WinRT
 
-O [thread](../../cpp/thread.md) `__declspec` modificador não pode ser usado em uma classe de tempo de execução do Windows ou um membro de um.
+O modificador de `__declspec` de [thread](../../cpp/thread.md) não pode ser usado em um membro de uma classe gerenciada ou Windows Runtime.
 
-DLLs carregadas de thread estático armazenamento local no código gerenciado pode somente ser usado para estaticamente — a DLL deve ser carregada estaticamente quando o processo é iniciado. Tempo de execução do Windows não oferece suporte a armazenamento local de thread.
+O armazenamento local de thread estático no código gerenciado só pode ser usado para DLLs carregadas estaticamente — a DLL deve ser carregada estaticamente quando o processo é iniciado. Windows Runtime não dá suporte ao armazenamento local de threads.
 
-A linha a seguir gera C2384 e mostra como corrigi-lo no C++código /CLI:
+A linha a seguir gera C2384 e mostra como corrigi-lo C++no código/CLI:
 
-```
+```cpp
 // C2384.cpp
 // compile with: /clr /c
 public ref class B {

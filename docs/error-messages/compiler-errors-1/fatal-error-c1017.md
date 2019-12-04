@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - C1017
 ms.assetid: 5542e604-599d-4e36-8f83-1d454c5753c9
-ms.openlocfilehash: e2309b93be65b049c35abf96572e144a0a518007
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0feda3bc4c3729d3101be356220aa0124ba85190
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383172"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756936"
 ---
 # <a name="fatal-error-c1017"></a>Erro fatal C1017
 
-expressão de constante de inteiro inválido
+expressão de constante de inteiro inválida
 
-A expressão em um `#if` diretiva não existe ou não foi avaliada como uma constante.
+A expressão em uma diretiva de `#if` não existia ou não foi avaliada como uma constante.
 
-Constantes definidas usando `#define` devem ter valores que são avaliadas como uma constante de inteiro se eles forem usados em um `#if`, `#elif`, ou `#else` diretiva.
+As constantes definidas usando `#define` devem ter valores que são avaliados como uma constante de inteiro se forem usados em uma diretiva `#if`, `#elif`ou `#else`.
 
 O exemplo a seguir gera C1017:
 
-```
+```cpp
 // C1017.cpp
 #define CONSTANT_NAME "YES"
 #if CONSTANT_NAME   // C1017
 #endif
 ```
 
-Solução possível:
+Resolução possível:
 
-```
+```cpp
 // C1017b.cpp
 // compile with: /c
 #define CONSTANT_NAME 1
@@ -40,11 +40,11 @@ Solução possível:
 #endif
 ```
 
-Porque `CONSTANT_NAME` for avaliada como uma cadeia de caracteres e não é um inteiro, o `#if` diretiva gera o erro fatal C1017.
+Como `CONSTANT_NAME` é avaliada como uma cadeia de caracteres e não como um inteiro, a diretiva `#if` gera um erro fatal C1017.
 
-Em outros casos, o pré-processador avalia uma constante não definida como zero. Isso pode causar resultados não intencionais, conforme mostrado no exemplo a seguir. `YES` é indefinido, portanto, ele será avaliado como zero. A expressão `#if` `CONSTANT_NAME` é avaliada como false e o código a ser usado em `YES` é removido pelo pré-processador. `NO` também é indefinido (zero), então `#elif` `CONSTANT_NAME==NO` é avaliada como true (`0 == 0`), fazendo com que o pré-processador deixar o código no `#elif` parte da instrução — exatamente o oposto do comportamento pretendido.
+Em outros casos, o pré-processador avalia uma constante indefinida como zero. Isso pode causar resultados não intencionais, conforme mostrado no exemplo a seguir. `YES` é indefinido, portanto, ele é avaliado como zero. A expressão `#if` `CONSTANT_NAME` é avaliada como false e o código a ser usado em `YES` é removido pelo pré-processador. `NO` também é indefinido (zero); portanto, `#elif` `CONSTANT_NAME==NO` é avaliado como true (`0 == 0`), fazendo com que o pré-processador deixe o código na parte `#elif` da instrução — exatamente o oposto do comportamento pretendido.
 
-```
+```cpp
 // C1017c.cpp
 // compile with: /c
 #define CONSTANT_NAME YES
@@ -55,4 +55,4 @@ Em outros casos, o pré-processador avalia uma constante não definida como zero
 #endif
 ```
 
-Para ver exatamente como o compilador trata as diretivas de pré-processamento, use [/P](../../build/reference/p-preprocess-to-a-file.md), [/E](../../build/reference/e-preprocess-to-stdout.md), ou [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md).
+Para ver exatamente como o compilador manipula as diretivas de pré-processador, use [/p](../../build/reference/p-preprocess-to-a-file.md), [/e](../../build/reference/e-preprocess-to-stdout.md)ou [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md).

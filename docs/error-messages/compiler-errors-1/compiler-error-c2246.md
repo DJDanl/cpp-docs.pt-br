@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2246
 ms.assetid: 4f3e4f83-21f3-4256-af96-43e0bb060311
-ms.openlocfilehash: c8efb71e0a39c56628fc582421e0f24ceb9b290c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89352029afbae4d977a4109f76c0e18bb761b4d4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302599"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758912"
 ---
 # <a name="compiler-error-c2246"></a>Erro do compilador C2246
 
-'identifier': membro de dados static inválido em classe definida localmente
+' identifier ': membro de dados estáticos inválido na classe definida localmente
 
-Um membro de uma classe, estrutura ou união com escopo local é declarado `static`.
+Um membro de uma classe, estrutura ou União com escopo local é declarado `static`.
 
 O exemplo a seguir gera C2246:
 
-```
+```cpp
 // C2246.cpp
 // compile with: /c
 void func( void ) {

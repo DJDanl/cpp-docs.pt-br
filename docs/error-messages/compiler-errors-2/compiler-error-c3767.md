@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3767
 ms.assetid: 5247cdcd-639c-4527-bd37-37e74c4e8fab
-ms.openlocfilehash: 61f7479986cccfa3851d85bf8e7bc0e9da3d1cea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 994b235b4775c28126d92c241a7e42dc837d4493
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400195"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757196"
 ---
 # <a name="compiler-error-c3767"></a>Erro do compilador C3767
 
-candidatas 'function' não está acessíveis
+funções de candidato de ' função ' não acessíveis
 
-Uma função friend definida em uma classe não deve ser tratado como se fosse definido e declarado no escopo de namespace global. Ele pode, no entanto, ser encontrados pela pesquisa dependente de argumento.
+Uma função Friend definida em uma classe não deve ser tratada como se fosse definida e declarada no escopo do namespace global. No entanto, ele pode ser encontrado pela pesquisa dependente de argumento.
 
-C3767 também pode ser causado por uma alteração significativa: tipos nativos agora são private por padrão em uma **/clr** compilação; consulte [visibilidade de tipo](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) para obter mais informações.
+C3767 também pode ser causado por uma alteração significativa: os tipos nativos agora são privados por padrão em uma compilação **/CLR** ; consulte [visibilidade de tipo](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3767:
 
-```
+```cpp
 // C3767a.cpp
 // compile with: /clr
 using namespace System;
@@ -56,7 +56,7 @@ int main() {
 
 O exemplo a seguir gera C3767:
 
-```
+```cpp
 // C3767c.cpp
 // compile with: /clr /c
 

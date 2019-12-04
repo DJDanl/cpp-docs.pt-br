@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3655
 ms.assetid: 724919ab-2915-4b61-8794-44648e162d62
-ms.openlocfilehash: 7a13d4d7c08f6510e5ab71c07c31baa9359b47b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61762612cf5b2153319435532dca100eb77c274d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227103"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756299"
 ---
 # <a name="compiler-error-c3655"></a>Erro do compilador C3655
 
-'function': função já substituída explicitamente
+' function ': função já substituída explicitamente
 
-Uma função só pode ser explicitamente substituída uma vez. Para obter mais informações, consulte [substituições explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Uma função só pode ser substituída explicitamente uma vez. Para obter mais informações, consulte [substituições explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 O exemplo a seguir gera C3655:
 
-```
+```cpp
 // C3655.cpp
 // compile with: /clr /c
 public ref struct B {

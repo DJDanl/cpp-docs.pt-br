@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2286
 ms.assetid: 078e0201-35cc-42e2-8dbc-6f8cf557b098
-ms.openlocfilehash: 7d3b8297c5f5da29b99abe78999396e8c44df0fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79697a17d322ae15a21e522efa7dfd5c2342f7a6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182763"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759159"
 ---
 # <a name="compiler-error-c2286"></a>Erro do compilador C2286
 
-ponteiros para membros de representação 'identifier' já está definido como 'herança' - declaração ignorada
+ponteiros para membros da representação ' identifier ' já estão definidos como ' Inheritance '-Declaração ignorada
 
-Existem duas representações diferentes de membros do ponteiro para a classe.
+Existem duas representações de ponteiro para membro diferentes para a classe.
 
 Para obter mais informações, consulte [palavras-chave de herança](../../cpp/inheritance-keywords.md).
 
@@ -25,7 +25,7 @@ Para obter mais informações, consulte [palavras-chave de herança](../../cpp/i
 
 O exemplo a seguir gera C2286:
 
-```
+```cpp
 // C2286.cpp
 // compile with: /c
 class __single_inheritance X;

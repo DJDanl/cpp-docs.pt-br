@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3182
 ms.assetid: f3681266-308e-4990-a979-8eef8920e186
-ms.openlocfilehash: 6866c7bbcee0a4097e490b344c79a6eec7f94570
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6b183eb30dd0e617e69ab9aac58bea5cb721591
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382384"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761654"
 ---
 # <a name="compiler-error-c3182"></a>Erro do compilador C3182
 
-'class': uma declaração de acesso ou declaração de using membro é ilegal dentro de um gerenciado ou WinRTtype
+' class ': uma declaração de using de membro ou declaração de acesso é inválida em um Managed ou WinRTtype
 
-Um [usando](../../cpp/using-declaration.md) declaração é inválida em todos os formulários de classes gerenciadas.
+Uma declaração [using](../../cpp/using-declaration.md) é inválida em todas as formas de classes gerenciadas.
 
 O exemplo a seguir gera C3182 e mostra como corrigi-lo.
 
-```
+```cpp
 // C3182a.cpp
 // compile with: /clr /c
 ref struct B {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2675
 ms.assetid: 4b92a12b-bff8-4dd5-a109-620065fc146c
-ms.openlocfilehash: aea79509d0e1ae5c31fcf0cf369c28af39a21154
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b7b81ce7314fbad02d6873403fc5cf1bdd54709
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367922"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760368"
 ---
 # <a name="compiler-error-c2675"></a>Erro do compilador C2675
 
-unário 'operator': 'type' não define este operador ou uma conversão para um tipo aceitável ao operador pré-definido
+' operator ' unário: ' type ' não define este operador ou uma conversão para um tipo aceitável para o operador predefinido
 
-C2675 também podem ocorrer ao usar um operador unário, e o tipo não define o operador ou uma conversão para um tipo aceitável ao operador pré-definido. Para usar o operador, você deve sobrecarregá-lo para o tipo especificado ou definir uma conversão para um tipo para o qual o operador está definido.
+C2675 também pode ocorrer ao usar um operador unário, e o tipo não define o operador ou uma conversão para um tipo aceitável para o operador predefinido. Para usar o operador, você deve sobrecarregar para o tipo especificado ou definir uma conversão para um tipo para o qual o operador é definido.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C2675.
 
-```
+```cpp
 // C2675.cpp
 struct C {
    C(){}
