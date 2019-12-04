@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3415
 ms.assetid: fa2db8ab-2820-4ec3-a740-fb5e2adcfb29
-ms.openlocfilehash: 3d4163fac83e24d30f29aed92e7a1ec1fc9e362f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da7b49d30866b9fa5ab27a93357fd2812aaa2806
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242858"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742919"
 ---
 # <a name="compiler-error-c3415"></a>Erro do compilador C3415
 
-várias seções 'section_name' encontradas com atributos diferentes ('value')
+várias seções ' section_name ' encontradas com atributos diferentes (' value ')
 
 Valores conflitantes foram especificados na [seção](../../preprocessor/section.md) pragmas.
 
-`value` é a configuração atual para a seção, conforme especificado no ntimage.h. Por exemplo:
+`value` é a configuração atual para a seção, conforme especificado em ntimage. h. Por exemplo:
 
 ```
 // Section contains extended relocations.
@@ -42,7 +42,7 @@ Valores conflitantes foram especificados na [seção](../../preprocessor/section
 
 O exemplo a seguir gera C3415:
 
-```
+```cpp
 // C3415.cpp
 #pragma section("mysec1",write)
 #pragma section("mysec1",read)   // C3415

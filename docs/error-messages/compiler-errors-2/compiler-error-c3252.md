@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3252
 ms.assetid: aa9ad096-e9ac-41c7-8ad9-b966751c7c75
-ms.openlocfilehash: ee9245fb8eb89b9234e76dc10304b1d05bc1fdcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbfe3ffaca66cad4922b5771ee8c9003acba7571
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164833"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754323"
 ---
 # <a name="compiler-error-c3252"></a>Erro do compilador C3252
 
-'method': não é possível reduzir acessibilidade de um método virtual em um gerenciado ou um tipo de WinRT
+' method ': não é possível reduzir a acessibilidade de um método virtual em um tipo gerenciado ou WinRT
 
-Uma classe que implementa um método virtual de uma classe base ou qualquer método de uma interface não é possível reduzir o acesso desse método.
+Uma classe que implementa um método virtual de uma classe base ou de qualquer método de uma interface não pode reduzir o acesso desse método.
 
-Observe que todos os métodos em uma interface públicos.
+Observe que todos os métodos em uma interface são públicos.
 
 O exemplo a seguir gera C3252 e mostra como corrigi-lo:
 
-```
+```cpp
 // C3252.cpp
 // compile with: /clr /c
 ref class A {

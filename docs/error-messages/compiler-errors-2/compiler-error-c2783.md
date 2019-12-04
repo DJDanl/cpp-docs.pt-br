@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2783
 ms.assetid: 1ce94a11-bb8b-4be3-a222-f1f105da74b3
-ms.openlocfilehash: 539eeebc39fa7fc061cc615f29d87d3e6bcfc5c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: adba87853bac764d4975d6b6fa9aa44940ced03c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408427"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739669"
 ---
 # <a name="compiler-error-c2783"></a>Erro do compilador C2783
 
-'declaração de ': não foi possível deduzir argumento de template para 'identifier'
+' declaração ': não foi possível deduzir o argumento de modelo para ' identifier '
 
-O compilador não pode determinar um argumento de modelo. Argumentos padrão não podem ser usados para deduzir um argumento de modelo.
+O compilador não pode determinar um argumento de modelo. Os argumentos padrão não podem ser usados para deduzir um argumento de modelo.
 
 O exemplo a seguir gera C2783:
 
-```
+```cpp
 // C2783.cpp
 template<typename T1, typename T2>
 T1 f(T2) {
@@ -35,9 +35,9 @@ int main() {
 }
 ```
 
-C2783 também podem ocorrer ao usar genéricos:
+C2783 também pode ocorrer ao usar genéricos:
 
-```
+```cpp
 // C2783b.cpp
 // compile with: /clr
 using namespace System;

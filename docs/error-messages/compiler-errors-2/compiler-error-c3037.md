@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3037
 ms.assetid: 9ba8a890-d3c7-4cce-93c5-d358e2bfad28
-ms.openlocfilehash: a022cfe6057f9ea518664090b5842faf4e822cb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d11f1419fdaac5e2283d0ae53a1ed068214e437e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350199"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754986"
 ---
 # <a name="compiler-error-c3037"></a>Erro do compilador C3037
 
-'var': variável em cláusula 'reduction' deve ser shared em contexto delimitador
+' var ': a variável na cláusula ' reduction ' deve ser compartilhada no contexto delimitador
 
-Uma variável especificada em uma [redução](../../parallel/openmp/reference/reduction.md) cláusula não pode ser privada para cada thread no contexto.
+Uma variável especificada em uma cláusula de [redução](../../parallel/openmp/reference/reduction.md) pode não ser privada para cada thread no contexto.
 
 O exemplo a seguir gera C3037:
 
-```
+```cpp
 // C3037.cpp
 // compile with: /openmp /c
 int g_i;

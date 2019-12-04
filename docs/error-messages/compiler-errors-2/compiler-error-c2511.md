@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2511
 ms.assetid: df999efe-fe2b-418b-bb55-4af6a0592631
-ms.openlocfilehash: 9d9ba48b0607e7a30b8748d4e9ae4f7025f11dea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff78cb50b274fe40d513739264bd7e9894bbed9d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165015"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746559"
 ---
 # <a name="compiler-error-c2511"></a>Erro do compilador C2511
 
-'identifier': função de membro não encontrada em 'class' sobrecarregada
+' identifier ': função membro sobrecarregada não encontrada em ' class '
 
-Nenhuma versão da função é declarada com os parâmetros especificados.  Possíveis causas:
+Nenhuma versão da função foi declarada com os parâmetros especificados.  Possíveis causas:
 
-1. Parâmetros incorretos passados à função.
+1. Parâmetros incorretos passados para a função.
 
-1. Parâmetros passados na ordem errada.
+1. Parâmetros passados em ordem errada.
 
 1. Ortografia incorreta de nomes de parâmetro.
 
 O exemplo a seguir gera C2511:
 
-```
+```cpp
 // C2511.cpp
 // compile with: /c
 class C {

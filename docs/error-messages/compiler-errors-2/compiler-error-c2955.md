@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
-ms.openlocfilehash: c012e5189b9ca1d0b0e786cbddacedee7c6728d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8afdeaf43c0c9789753b9165f1e8a8287aaac76d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300733"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742867"
 ---
 # <a name="compiler-error-c2955"></a>Erro do compilador C2955
 
-'identifier': uso do modelo de classe ou alias genérico requer o modelo ou a lista de argumentos genéricos
+' identifier ': o uso de template de classe ou alias genérico requer template ou lista de argumentos genéricos
 
-Você não pode usar um modelo de classe ou a classe genérica como um identificador sem um modelo ou uma lista de argumentos genéricos.
+Você não pode usar um modelo de classe ou uma classe genérica como um identificador sem um modelo ou uma lista de argumentos genéricos.
 
 Para obter mais informações, consulte [modelos de classe](../../cpp/class-templates.md).
 
 O exemplo a seguir gera C2955 e mostra como corrigi-lo:
 
-```
+```cpp
 // C2955.cpp
 // compile with: /c
 template<class T>
@@ -33,9 +33,9 @@ X x1;   // C2955
 X<int> x2;   // OK - this is how to fix it.
 ```
 
-C2955 também pode ocorrer durante a tentativa de uma definição fora de linha para uma função declarada em um modelo de classe:
+C2955 também pode ocorrer ao tentar uma definição fora de linha para uma função declarada em um modelo de classe:
 
-```
+```cpp
 // C2955_b.cpp
 // compile with: /c
 template <class T>
@@ -52,9 +52,9 @@ template <class T>
 void CT<T>::CTFunc2() {}
 ```
 
-C2955 também podem ocorrer ao usar genéricos:
+C2955 também pode ocorrer ao usar genéricos:
 
-```
+```cpp
 // C2955_c.cpp
 // compile with: /clr
 generic <class T>
@@ -70,7 +70,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-**Visual Studio 2017 e posterior:** O compilador corretamente diagnostica listas de argumentos de modelo ausentes quando o modelo é exibido em uma lista de parâmetros de modelo (por exemplo, como parte de um argumento de modelo padrão ou um parâmetro de modelo sem tipo). O código a seguir é compilado no Visual Studio 2015, mas produz um erro no Visual Studio 2017.
+**Visual Studio 2017 e posterior:** O compilador diagnostica corretamente as listas de argumentos de modelo ausentes quando o modelo é exibido em uma lista de parâmetros de modelo (por exemplo, como parte de um argumento de modelo padrão ou um parâmetro de modelo sem tipo). O código a seguir é compilado no Visual Studio 2015, mas produz um erro no Visual Studio 2017.
 
 ```
 template <class T> class ListNode;

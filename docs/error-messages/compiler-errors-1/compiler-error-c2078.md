@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2078
 ms.assetid: 9bead850-4123-46cf-a634-5c77ba974b2b
-ms.openlocfilehash: a800a6efa6e02f323b4b6597f1aa983f13674e83
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 514776c0feb12c46dea56dd8e85043345754a229
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182802"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756442"
 ---
 # <a name="compiler-error-c2078"></a>Erro do compilador C2078
 
-Muitos inicializadores
+muitos inicializadores
 
-O número de inicializadores excede o número de objetos sejam inicializados.
+O número de inicializadores excede o número de objetos a serem inicializados.
 
-O compilador pode deduzir a atribuição correta de inicializadores de objetos e objetos internos quando chaves internas estiverem omitidas da lista de inicializadores. Braçadeiras completa também elimina a ambiguidade e resulta na atribuição correta. Braçadeiras parcial podem causar C2078 devido à ambiguidade na atribuição de inicializadores de objetos.
+O compilador pode deduzir a atribuição correta de inicializadores a objetos e objetos internos quando chaves internas são omitido da lista de inicializadores. O braçadeiras completo também elimina ambigüidade e resulta na atribuição correta. Braçadeiras parciais podem causar C2078 devido à ambiguidade na atribuição de inicializadores a objetos.
 
 O exemplo a seguir gera C2078 e mostra como corrigi-lo:
 
-```
+```cpp
 // C2078.cpp
 // Compile by using: cl /c /W4 C2078.cpp
 struct S {

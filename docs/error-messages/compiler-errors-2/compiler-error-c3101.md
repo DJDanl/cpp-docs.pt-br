@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3101
 ms.assetid: 4f673766-d4f7-4632-94a5-d36a83f7f4b5
-ms.openlocfilehash: d39afc548010df95bdf31b2c7708bc4fa0310bcd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dca91b9359417b8c4cce9329e2aa25107016c086
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404189"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749994"
 ---
 # <a name="compiler-error-c3101"></a>Erro do compilador C3101
 
-expressão inválida para o campo' argumento de atributo nomeado'
+expressão inválida para argumento de atributo nomeado ' Field '
 
 Ao inicializar um argumento de atributo nomeado, o valor deve ser uma constante de tempo de compilação.
 
@@ -25,7 +25,7 @@ Para obter mais informações sobre atributos, consulte [atributos definidos pel
 
 O exemplo a seguir gera C3101.
 
-```
+```cpp
 // C3101.cpp
 // compile with: /clr /c
 ref class AAttribute : System::Attribute {

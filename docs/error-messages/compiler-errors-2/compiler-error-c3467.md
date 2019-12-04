@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3467
 ms.assetid: e2b844d0-4920-412f-99fd-cd8051c4aa41
-ms.openlocfilehash: 70375950543b9525fca10fff3084c923095fa35e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bba505b01df8eb1b253fbecb0db93d94ae62d5ac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173477"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756364"
 ---
 # <a name="compiler-error-c3467"></a>Erro do compilador C3467
 
-'type': este tipo já foi enviado
+' type ': este tipo já foi encaminhado
 
-O compilador encontrou mais de uma declaração de encaminhamento de tipo para o mesmo tipo. É permitida apenas uma declaração por tipo.
+O compilador encontrou mais de uma declaração de tipo forward para o mesmo tipo. Somente uma declaração por tipo é permitida.
 
-Para obter mais informações, consulte [encaminhamento de tipo (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Para obter mais informações, consulte [tipo encaminhamentoC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir cria um componente.
 
-```
+```cpp
 // C3467.cpp
 // compile with: /LD /clr
 public ref class R {};
@@ -35,7 +35,7 @@ public ref class R {};
 
 O exemplo a seguir gera C3467.
 
-```
+```cpp
 // C3467_b.cpp
 // compile with: /clr /c
 #using "C3467.dll"

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3269
 ms.assetid: c575f067-244d-4dd5-bf58-9e7630ea58b7
-ms.openlocfilehash: 406b388460b3d449471c884dd6461f2ce59a10f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95f71c9312faaf5c14bd8990898257002c528c0e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365709"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754011"
 ---
 # <a name="compiler-error-c3269"></a>Erro do compilador C3269
 
-'function': uma função de membro de uma ou não gerenciado WinRTtype não pode ser declarada com '...'
+' function ': uma função membro de um Managed ou WinRTtype não pode ser declarada com '... '
 
-Gerenciado e funções de membro de classe WinRT não podem declarar a listas de parâmetros de comprimento variável.
+As funções de membro de classe gerenciada e WinRT não podem declarar listas de parâmetros de comprimento variável.
 
 O exemplo a seguir gera C3269 e mostra como corrigi-lo:
 
-```
+```cpp
 // C3269_2.cpp
 // compile with: /clr
 

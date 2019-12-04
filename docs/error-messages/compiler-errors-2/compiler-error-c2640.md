@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2640
 ms.assetid: e4d137ab-ed1d-457c-9eec-b70d97f1b0b4
-ms.openlocfilehash: d0dc2dd514186a94811b816c5f3f470a057186f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75acfa4d702b31052b7113117c71bf66ed9de149
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182594"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758236"
 ---
 # <a name="compiler-error-c2640"></a>Erro do compilador C2640
 
-'identifier': based modificador inválido em referência
+' identifier ': modificador de __based inválido na referência
 
-O `__based` modificador pode ser usado em ponteiros apenas.
+O modificador de `__based` pode ser usado somente em ponteiros.
 
 O exemplo a seguir gera C2640:
 
-```
+```cpp
 // C2640.cpp
 void f(int i) {
     void *vp;

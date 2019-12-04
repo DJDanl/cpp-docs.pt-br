@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2334
 ms.assetid: 36142855-e00b-4bbf-80f5-a301edeff46e
-ms.openlocfilehash: 4f068792193fd22ccddc39f9afc555e7c8672d8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8a096a89bdb076b857e5adc49ad8162551612f2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188363"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747690"
 ---
 # <a name="compiler-error-c2334"></a>Erro do compilador C2334
 
-tokens inesperados anteriores ': ou {'; ignorando corpo aparente de função
+token (s) inesperados antes de ': ou {'; ignorando corpo de função aparente
 
 O exemplo a seguir gera C2334. Esse erro ocorre após o erro C2059:
 
-```
+```cpp
 // C2334.cpp
 // compile with: /c
 // C2059 expected

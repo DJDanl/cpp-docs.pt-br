@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: 93058d34ca9a17ab175a55a7bc7b953d369e65c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec902266550e591623894823e6336bd2436bfbd5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324760"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758028"
 ---
 # <a name="compiler-error-c3699"></a>Erro do compilador C3699
 
-'operator': não é possível usar esta indireção no tipo 'type'
+' operator ': não é possível usar esta indireção no tipo ' type '
 
-Foi feita uma tentativa para usar o caminho indireto que não é permitido em `type`.
+Foi feita uma tentativa de usar indireção que não é permitido em `type`.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3699.
 
-```
+```cpp
 // C3699.cpp
 // compile with: /clr /c
 using namespace System;
@@ -36,9 +36,9 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-Uma propriedade trivial não pode ter um tipo de referência. Ver [propriedade](../../extensions/property-cpp-component-extensions.md) para obter mais informações. O exemplo a seguir gera C3699.
+Uma propriedade trivial não pode ter tipo de referência. Consulte a [Propriedade](../../extensions/property-cpp-component-extensions.md) para obter mais informações. O exemplo a seguir gera C3699.
 
-```
+```cpp
 // C3699_b.cpp
 // compile with: /clr /c
 ref struct C {
@@ -49,9 +49,9 @@ ref struct C {
 
 ## <a name="example"></a>Exemplo
 
-O equivalente a uma sintaxe de "ponteiro para um ponteiro" é um identificador para uma referência de rastreamento. O exemplo a seguir gera C3699.
+O equivalente a uma sintaxe "ponteiro para um ponteiro" é um identificador para uma referência de rastreamento. O exemplo a seguir gera C3699.
 
-```
+```cpp
 // C3699_c.cpp
 // compile with: /clr /c
 using namespace System;

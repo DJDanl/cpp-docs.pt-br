@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3351
 ms.assetid: c021bbbe-1067-4f51-af4f-940d2b792eb5
-ms.openlocfilehash: 3935acc645403efcd579a80340ebb9794bc1052a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d93d6b08268aa8d6a7a7ad2e2086f4799417bbb4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402652"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737459"
 ---
 # <a name="compiler-error-c3351"></a>Erro do compilador C3351
 
-'object': construtor delegate: segundo argumento deve ser o endereço de uma função membro estática ou uma função global
+Construtor ' Object ': delegate: o segundo argumento deve ser endereço de uma função membro estática ou função global
 
-O compilador espera-se o endereço de uma função declarada `static`.
+O compilador esperava o endereço de uma função declarada `static`.
 
 O exemplo a seguir gera C3351:
 
-```
+```cpp
 // C3351a.cpp
 // compile with: /clr
 delegate int D(int, int);

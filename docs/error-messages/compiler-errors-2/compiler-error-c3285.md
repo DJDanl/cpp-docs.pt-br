@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3285
 ms.assetid: 04e8f210-d67e-4810-b153-e1efe2986c8f
-ms.openlocfilehash: 6bc211fb2394a9a2989702c13e19bd63ea8a5ad7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5799511575617ad1705bbce50a939ee46599628
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381326"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755337"
 ---
 # <a name="compiler-error-c3285"></a>Erro do compilador C3285
 
-para cada instrução não pode operar em variáveis do tipo 'type'
+instrução for each não pode operar em variáveis do tipo ' type '
 
-O `for each` repete um grupo de instruções inseridas para cada elemento em uma matriz ou uma coleção de objetos.
+A instrução `for each` repete um grupo de instruções inseridas para cada elemento em uma matriz ou uma coleção de objetos.
 
-Ver [para cada um, no](../../dotnet/for-each-in.md) para obter mais informações.
+Consulte [para cada um, em](../../dotnet/for-each-in.md) para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3285.
 
-```
+```cpp
 // C3285.cpp
 // compile with: /clr
 int main() {

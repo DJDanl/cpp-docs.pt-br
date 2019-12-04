@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3181
 ms.assetid: 5d450f8b-6cef-4452-a0c4-2076e967451d
-ms.openlocfilehash: dc848d4108ed4a1a7b6646647a1bbb1ec8dcadf7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e30ed7016ca3a4d4948a08c5c09268e52c9a407d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382381"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761667"
 ---
 # <a name="compiler-error-c3181"></a>Erro do compilador C3181
 
-'type': operando inválido para o operador
+' type ': operando inválido para operador
 
-Um parâmetro inválido foi passado para o [typeid](../../extensions/typeid-cpp-component-extensions.md) operador. O parâmetro deve ser um tipo gerenciado.
+Um parâmetro inválido foi passado para o operador [typeid](../../extensions/typeid-cpp-component-extensions.md) . O parâmetro deve ser um tipo gerenciado.
 
-Observe que o compilador usa aliases para tipos nativos que são mapeados para tipos de common language runtime.
+Observe que o compilador usa aliases para tipos nativos que são mapeados para tipos no Common Language Runtime.
 
 O exemplo a seguir gera C3181:
 
-```
+```cpp
 // C3181a.cpp
 // compile with: /clr
 using namespace System;

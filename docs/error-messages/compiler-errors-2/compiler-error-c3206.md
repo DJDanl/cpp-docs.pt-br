@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3206
 ms.assetid: d62995b5-e349-4418-bbe8-8a5e776ca7b0
-ms.openlocfilehash: 665244cbfc87f32274f9eaf9afacfb1caad50659
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a602238ca5a2f2a64eaa601cc6733a897b9fdb4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402678"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738681"
 ---
 # <a name="compiler-error-c3206"></a>Erro do compilador C3206
 
-'function': argumento de tipo inválido para 'param', faltando lista de argumentos de tipo no tipo de classe 'typename'
+' function ': argumento de tipo inválido para ' param ', lista de argumentos de tipo ausente no tipo de classe ' TypeName '
 
-Uma função de modelo é definida como colocar um argumento de tipo de modelo. No entanto, foi passado um argumento de modelo do modelo.
+Uma função de modelo é definida como pegar um argumento de tipo de modelo. No entanto, um argumento de modelo de modelo foi passado.
 
 O exemplo a seguir gera C3206:
 
-```
+```cpp
 // C3206.cpp
 template <class T>
 void f() {}
@@ -36,9 +36,9 @@ void f1() {
 }
 ```
 
-Solução possível:
+Resolução possível:
 
-```
+```cpp
 // C3206b.cpp
 // compile with: /c
 template <class T>
@@ -52,9 +52,9 @@ void f1() {
 }
 ```
 
-C3206 também podem ocorrer ao usar genéricos:
+C3206 também pode ocorrer ao usar genéricos:
 
-```
+```cpp
 // C3206c.cpp
 // compile with: /clr
 generic <class GT1>
@@ -68,9 +68,9 @@ int main() {
 }
 ```
 
-Solução possível:
+Resolução possível:
 
-```
+```cpp
 // C3206d.cpp
 // compile with: /clr
 generic <class GT1>
@@ -86,7 +86,7 @@ int main() {
 
 Um modelo de classe não é permitido como um argumento de tipo de modelo. O exemplo a seguir gera C3206:
 
-```
+```cpp
 // C3206e.cpp
 template <class T>
 struct S {};
@@ -101,9 +101,9 @@ int main() {
 }
 ```
 
-Solução possível:
+Resolução possível:
 
-```
+```cpp
 // C3206f.cpp
 template <class T>
 struct S {};
@@ -118,9 +118,9 @@ int main() {
 }
 ```
 
-Se um parâmetro de modelo for necessário, você deve encapsular a função em uma classe de modelo que usa um parâmetro de modelo:
+Se um parâmetro de modelo de modelo for necessário, você precisará encapsular a função em uma classe de modelo que usa um parâmetro de modelo de modelo:
 
-```
+```cpp
 // C3206g.cpp
 template <class T>
 struct S {};

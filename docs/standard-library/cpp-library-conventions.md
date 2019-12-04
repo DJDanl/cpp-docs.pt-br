@@ -11,12 +11,12 @@ helpviewer_keywords:
 - coding conventions, C++ Standard Library
 - naming conventions [C++], C++ library
 ms.assetid: bf41b79a-2d53-4f46-8d05-779358335146
-ms.openlocfilehash: 8747ef490c0997b1fa3fd5186618b7189fa00970
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d92636a7ed63e09396ff68749560cde9d1f8639c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450689"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755701"
 ---
 # <a name="c-library-conventions"></a>Convenções da Biblioteca C++
 
@@ -24,7 +24,7 @@ A biblioteca C++ obedece às mesmas convenções da Biblioteca C Padrão, além 
 
 Uma implementação tem determinada latitude em como ela declara tipos e funções na biblioteca C++:
 
-- Os nomes de funções na biblioteca C Padrão podem ter uma vinculação extern #"C++" ou extern "C". Inclua o cabeçalho do C Padrão apropriado em vez de declarar uma entidade de biblioteca embutida.
+- Os nomes das funções na biblioteca C padrão podem ter o vínculo externoC++"" ou externo "C". Inclua o cabeçalho do C Padrão apropriado em vez de declarar uma entidade de biblioteca embutida.
 
 - O nome de uma função de membro em uma classe de biblioteca pode ter assinaturas de função adicionais além daquelas listadas neste documento. Você pode ter certeza de que uma chamada da função descrita aqui se comporta como esperado, mas não é possível usar de forma confiável o endereço de uma função de membro da biblioteca. (O tipo pode não ser o esperado.)
 
