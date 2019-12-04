@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2886
 ms.assetid: c01588a1-484c-4dc9-a3f1-f900c6e44543
-ms.openlocfilehash: 2fa7450f03505501c2c4a45023dbb6a86937bb9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a64457c84a48c73ad6714da01e48d41f3cc92efb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388807"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748717"
 ---
 # <a name="compiler-error-c2886"></a>Erro do compilador C2886
 
-'class::identifier': símbolo não pode ser usado em uma declaração de using membro
+' classe:: identificador ': símbolo não pode ser usado em uma declaração de using de membro
 
-Um `using` declaração usa um símbolo, como um nome de namespace. Um `using` declaração é para declarar membros de classe base.
+Uma declaração de `using` usa um símbolo, como um nome de namespace. Uma declaração de `using` é para declarar membros de classe base.
 
 O exemplo a seguir gera C2886:
 
-```
+```cpp
 // C2886.cpp
 // compile with: /c
 namespace Z {

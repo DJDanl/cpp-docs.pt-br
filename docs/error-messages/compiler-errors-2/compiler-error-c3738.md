@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3738
 ms.assetid: dd3ee011-e204-4264-bf3a-da32c4ef7038
-ms.openlocfilehash: e313c7d66bc030183e330dd961fad2fb35f02ac2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffefa0eff23e11412573b8062fa15bb5679923e7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327802"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752763"
 ---
 # <a name="compiler-error-c3738"></a>Erro do compilador C3738
 
-'calling_convention': a convenção de chamada da instanciação explícita deve corresponder do template sendo instanciado
+' calling_convention ': a Convenção de chamada da instanciação explícita deve corresponder à do modelo que está sendo instanciado
 
-É recomendável que você não especificar uma convenção de chamada em uma instanciação explícita. Se for necessário, no entanto, as convenções de chamada devem corresponder.
+É recomendável que você não especifique uma Convenção de chamada em uma instanciação explícita. Se você precisar, no entanto, as convenções de chamada devem corresponder.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3738.
 
-```
+```cpp
 // C3738.cpp
 // compile with: /clr
 // processor: x86

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2216
 ms.assetid: 250f6bdc-a5e1-495f-a1e8-6e8e7021ad9d
-ms.openlocfilehash: 66c29c0e296a0eb13ef36ddb543b26af504b3230
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78426722a4d23f8cf0b94c0b1989002e6a23f90b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400403"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741307"
 ---
 # <a name="compiler-error-c2216"></a>Erro do compilador C2216
 
-'keyword1' não pode ser usado com 'keyword2'
+' keyword1 ' não pode ser usado com ' keyword2 '
 
-Duas palavras-chave que são mutuamente exclusivas foram usadas em conjunto.
+Duas palavras-chave mutuamente excludentes foram usadas juntas.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C2216.
 
-```
+```cpp
 // C2216.cpp
 // compile with: /clr /c
 ref struct Y1 {
@@ -36,7 +36,7 @@ ref struct Y1 {
 
 O exemplo a seguir gera C2216.
 
-```
+```cpp
 // C2216b.cpp
 // compile with: /clr /c
 public ref class X {
@@ -49,7 +49,7 @@ public ref class X {
 
 O exemplo a seguir gera C2216.
 
-```
+```cpp
 // C2216c.cpp
 // compile with: /clr /c
 public interface struct I {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2736
 ms.assetid: 95a6bc28-c0cb-49dc-87e6-e993dbbba881
-ms.openlocfilehash: 7ce63c1e9d9e6ab04a7f7200c5b34f346100733b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a7781ebcd7cefdbcff13599912c06062f20501e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300759"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759679"
 ---
 # <a name="compiler-error-c2736"></a>Erro do compilador C2736
 
-palavra-chave de 'palavra-chave' não é permitida em conversão
+palavra-chave ' keyword ' não é permitida em conversão
 
 A palavra-chave é inválida em uma conversão.
 
 O exemplo a seguir gera C2736:
 
-```
+```cpp
 // C2736.cpp
 int main() {
    return (virtual) 0;   // C2736

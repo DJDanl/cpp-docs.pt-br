@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3139
 ms.assetid: 95c92263-10ac-4ff3-b385-6312dd92adbc
-ms.openlocfilehash: f224be74a94e0e769e7c26bc99b4790d69f6b65b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 274f3cdb3425a8a0e1e282ca6e9ca79f70077233
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375516"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761242"
 ---
 # <a name="compiler-error-c3139"></a>Erro do compilador C3139
 
-'struct': não é possível exportar um UDT sem membros
+' struct ': não é possível exportar um UDT sem membros
 
-Você tentou aplicar a [exportar](../../windows/export.md) de atributo a um vazio UDT (tipo definido pelo usuário). Por exemplo:
+Você tentou aplicar o atributo de [exportação](../../windows/export.md) a um UDT (tipo definido pelo usuário) vazio. Por exemplo:
 
-```
+```cpp
 // C3139.cpp
 #include "unknwn.h"
 [emitidl];

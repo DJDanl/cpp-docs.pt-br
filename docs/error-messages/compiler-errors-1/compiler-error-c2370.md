@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2370
 ms.assetid: 03403e8f-f393-47c4-bd25-5c1c7ea7d5cd
-ms.openlocfilehash: 28c337a5cadfaeced39ee6ed73601338941029fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab7b19799925f9aa02f67ffdbec181628391e495
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188033"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745649"
 ---
 # <a name="compiler-error-c2370"></a>Erro do compilador C2370
 
-'identifier': redefinição; classe de armazenamento diferentes
+' identificador ': redefinição; classe de armazenamento diferente
 
-O identificador já foi declarado com uma classe de armazenamento diferente.
+O identificador já está declarado com uma classe de armazenamento diferente.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C2370:
 
-```
+```cpp
 // C2370.cpp
 // compile with: /Za /c
 extern int i;
@@ -35,7 +35,7 @@ int i;   // OK
 
 O exemplo a seguir gera C2370:
 
-```
+```cpp
 // C2370b.cpp
 #define Thread __declspec( thread )
 extern int tls_i;

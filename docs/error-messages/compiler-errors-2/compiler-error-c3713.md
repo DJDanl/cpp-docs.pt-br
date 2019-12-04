@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3713
 ms.assetid: 75c6b9b6-955b-49bd-9bc8-ced88b496a1f
-ms.openlocfilehash: 8c8c3b5e6016c7f4af471a163463c91d478fea91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d78d1fb3028e8618035c1c6f7bb3eb0f65409dd2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328374"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753348"
 ---
 # <a name="compiler-error-c3713"></a>Erro do compilador C3713
 
-'method': um método de manipulador de eventos deve ter os mesmos parâmetros de função como a origem 'method'
+' method ': um método de manipulador de eventos deve ter os mesmos parâmetros de função que o ' método ' de origem
 
-Você definiu um método de manipulador de eventos que não usa os mesmos parâmetros como o método de evento de origem. Para corrigir esse erro, dê o método de manipulador de eventos os mesmos parâmetros de método de evento de origem.
+Você definiu um método de manipulador de eventos que não usou os mesmos parâmetros que o método de evento de origem. Para corrigir esse erro, dê ao método manipulador de eventos os mesmos parâmetros que os do método de evento de origem.
 
 O exemplo a seguir gera C3713:
 
-```
+```cpp
 // C3713.cpp
 // compile with: /c
 [event_source(native)]

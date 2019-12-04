@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - C3068
 ms.assetid: 613e3447-b4a8-4268-a661-297bed63ccdf
-ms.openlocfilehash: 4790c9caafd28722f3631104cfe5cfc762cf6426
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e20333a4fc18219f7f2514f3aefe73b81f284a6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406880"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759484"
 ---
 # <a name="compiler-error-c3068"></a>Erro do compilador C3068
 
-'function': uma função 'naked' não pode conter objetos que possam requerer liberação caso uma exceção de C++
+' function ': uma função ' naked ' não pode conter objetos que exijam desenrolar se C++ uma exceção ocorreu
 
-O compilador não pôde executar o desenrolamento de pilha em um [naked](../../cpp/naked-cpp.md) função que gerou uma exceção porque um objeto temporário foi criado a função e o tratamento de exceções C++ ([/EHsc](../../build/reference/eh-exception-handling-model.md)) foi especificado.
+O compilador não pôde executar o desenrolamento de pilha em uma função [Naked](../../cpp/naked-cpp.md) que gerou uma exceção porque um objeto temporário foi criado na função e C++ o tratamento de exceção ([/EHsc](../../build/reference/eh-exception-handling-model.md)) foi especificado.
 
 Para resolver esse erro, faça pelo menos um dos seguintes:
 
-- Não compile com /EHsc.
+- Não compilar com/EHsc.
 
-- Não marcar a função como `naked`.
+- Não marque a função como `naked`.
 
 - Não crie um objeto temporário na função.
 
-Se uma função cria um objeto temporário na pilha, se a função lançará uma exceção, e se o tratamento de exceções C++ estiver habilitado, o compilador limpará a pilha se uma exceção é lançada.
+Se uma função criar um objeto temporário na pilha, se a função lançar uma exceção e se C++ a manipulação de exceção estiver habilitada, o compilador limpará a pilha se uma exceção for lançada.
 
-Quando uma exceção é lançada, o compilador gerou o código, chamado de prólogo e epílogo e que não estão presentes em uma função naked, é executado para uma função.
+Quando uma exceção é lançada, o código gerado pelo compilador, chamado prólogo e epílogo e que não estão presentes em uma função Naked, é executado para uma função.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3068:
 
-```
+```cpp
 // C3068.cpp
 // compile with: /EHsc
 // processor: x86

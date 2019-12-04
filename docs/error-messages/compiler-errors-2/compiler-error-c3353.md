@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3353
 ms.assetid: 5699c04b-d504-46ce-bf71-c200318fed71
-ms.openlocfilehash: c38642d7abd4f2fd50792c548c9a5521b2da10ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 332e0b253aed53f2adadf448b6a9c0681abc825e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402639"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747443"
 ---
 # <a name="compiler-error-c3353"></a>Erro do compilador C3353
 
-'delegate': um delegado só pode ser criado de uma função global ou uma função de membro de um ou o tipo de WinRT
+' delegate ': um delegate só pode ser criado a partir de uma função global ou de uma função membro de um tipo gerenciado ou WinRT
 
-Delegados, declarado com o [delegar](../../extensions/delegate-cpp-component-extensions.md) palavra-chave, só podem ser declarados no escopo global.
+Delegados, declarados com a palavra-chave [delegate](../../extensions/delegate-cpp-component-extensions.md) , só podem ser declarados em escopo global.
 
 O exemplo a seguir gera C3353:
 
-```
+```cpp
 // C3353.cpp
 // compile with: /clr
 delegate int f;   // C3353

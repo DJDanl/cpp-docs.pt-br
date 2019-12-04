@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3227
 ms.assetid: 7939c23a-96c8-43c2-89e9-f217d132d155
-ms.openlocfilehash: b175b14af55a9a462e040f064cc6e38d13fffb94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 460000531dba77e42379199f276c9e2e02f43a9b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173973"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743413"
 ---
 # <a name="compiler-error-c3227"></a>Erro do compilador C3227
 
-'parameter': não é possível usar 'palavra-chave' para alocar um tipo genérico
+' Parameter ': não é possível usar ' keyword ' para alocar um tipo genérico
 
-Para criar uma instância de um tipo, um construtor apropriado é necessário. No entanto, o compilador não é capaz de garantir que um construtor apropriado está disponível.
+Para criar uma instância de um tipo, é necessário um construtor apropriado. No entanto, o compilador não é capaz de garantir que um construtor apropriado esteja disponível.
 
-Você pode usar modelos, em vez de genéricos para resolver esse erro, ou você pode usar um dos vários métodos para criar uma instância do tipo.
+Você pode usar modelos em vez de genéricos para resolver esse erro ou pode usar um dos vários métodos para criar uma instância do tipo.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3227.
 
-```
+```cpp
 // C3227.cpp
 // compile with: /clr /c
 generic<class T> interface class ICreate {

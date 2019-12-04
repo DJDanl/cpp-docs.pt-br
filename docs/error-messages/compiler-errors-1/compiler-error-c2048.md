@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2048
 ms.assetid: 44704726-85fc-42f0-afb9-194df8c4ca7c
-ms.openlocfilehash: 2cdb151d882d7b494e8d32494b0b3c8c62e01b3b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 039be85541a7cd3864187433e5b3299bca7d067e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408856"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740124"
 ---
 # <a name="compiler-error-c2048"></a>Erro do compilador C2048
 
 mais de um padrão
 
-Um `switch` instrução contém várias `default` rótulos. Exclua uma da `default` rótulos para resolver o erro.
+Uma instrução `switch` contém vários rótulos de `default`. Exclua um dos rótulos de `default` para resolver o erro.
 
 O exemplo a seguir gera C2048:
 
-```
+```cpp
 // C2048.cpp
 int main() {
    int a = 1;
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-Solução possível:
+Resolução possível:
 
-```
+```cpp
 // C2048b.cpp
 int main() {
    int a = 1;

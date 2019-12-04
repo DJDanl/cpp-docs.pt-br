@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2181
 ms.assetid: d52b2fe4-566a-40a9-b8e2-8dce1f287668
-ms.openlocfilehash: a676794b5dedd17cfb973de36d3771ef1130a786
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64aea11924d9a1624090c2dd6f640ee2f9a037a0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386090"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737147"
 ---
 # <a name="compiler-error-c2181"></a>Erro do compilador C2181
 
-else inválido sem if correspondente
+senão inválido sem correspondência se
 
-Cada `else` deve ter uma correspondência `if`.
+Cada `else` deve ter um `if`correspondente.
 
 O exemplo a seguir gera C2181:
 
-```
+```cpp
 // C2181.cpp
 int main() {
    int i = 0;
@@ -30,9 +30,9 @@ int main() {
 }
 ```
 
-Solução possível:
+Resolução possível:
 
-```
+```cpp
 // C2181b.cpp
 int main() {
    int i = 0;

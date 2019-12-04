@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3364
 ms.assetid: 98654741-60fe-4472-a6af-e580f8c0a6e1
-ms.openlocfilehash: e99ab3919edcfb883701c08c52cd7aad60cd4591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eae1e7ddbc34d36b55d7afa424c137db00ef047d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400351"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757339"
 ---
 # <a name="compiler-error-c3364"></a>Erro do compilador C3364
 
-'delegate': construtor delegate: o argumento deve ser um ponteiro para a função global ou de função de membro de classe gerenciada
+' delegate ': construtor delegate: o argumento deve ser um ponteiro para a função membro da classe gerenciada ou da função global
 
-O segundo parâmetro do construtor do delegado usa o endereço de uma função de membro ou o endereço de uma função de membro estático de qualquer classe. Ambos são tratadas como endereços simples.
+O segundo parâmetro do construtor do delegado pega o endereço de uma função membro ou o endereço de uma função membro estática de qualquer classe. Ambos são tratados como endereços simples.
 
 O exemplo a seguir gera C3364:
 
-```
+```cpp
 // C3364_2.cpp
 // compile with: /clr
 

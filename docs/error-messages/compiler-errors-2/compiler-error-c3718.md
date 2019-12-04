@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3718
 ms.assetid: 346b5205-c44d-49d3-b66a-96417d3d6986
-ms.openlocfilehash: 765791499370836f7c99ea7af69cb34bcf1e21fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0bcf784f5b522d05585d63a3b38a2befb5aa191
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328244"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753192"
 ---
 # <a name="compiler-error-c3718"></a>Erro do compilador C3718
 
-somente é possível chamar 'event' no contexto de uma função de membro da classe recebedora
+Só é possível chamar ' Event ' no contexto de uma função membro da classe destinatária
 
 O `event` só pode ser chamado a partir da classe receptora.
 
@@ -23,7 +23,7 @@ O `event` só pode ser chamado a partir da classe receptora.
 
 O exemplo a seguir gera C3718:
 
-```
+```cpp
 // C3718.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"

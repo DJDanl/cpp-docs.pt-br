@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3366
 ms.assetid: efc55bcf-c16d-43c1-a36f-87a6165fa2a8
-ms.openlocfilehash: 4d1cd510cda9957ced1d9dd5fd8fea267f39220d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5173b1c0df7de6a4e8d9993e680b961a82bb10a7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300551"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738460"
 ---
 # <a name="compiler-error-c3366"></a>Erro do compilador C3366
 
-'variable': membros de dados estáticos gerenciados ou WinRTtypes devem ser definidos dentro da definição de classe
+' Variable ': membros de dados estáticos de Managed ou WinRTtypes devem ser definidos dentro da definição de classe
 
-Você tentou fazer referência a um membro estático de uma classe de WinRT ou .NET ou a interface fora da definição da classe ou interface.
+Você tentou fazer referência a um membro estático de uma interface ou classe do WinRT ou .NET fora da definição dessa classe ou interface.
 
-O compilador precisa saber a definição completa da classe (para emitir os metadados após uma passagem) e requer que os membros de dados estáticos sejam inicializados dentro da classe.
+O compilador precisa saber a definição completa da classe (para emitir os metadados após uma passagem) e exige que os membros de dados estáticos sejam inicializados dentro da classe.
 
 Por exemplo, o exemplo a seguir gera C3366 e mostra como corrigi-lo:
 
-```
+```cpp
 // C3366.cpp
 // compile with: /clr /c
 ref class X {

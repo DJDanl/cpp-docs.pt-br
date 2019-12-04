@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2810
 ms.assetid: f63e8f24-d7f6-42ac-904f-72ff49592ba6
-ms.openlocfilehash: 171b9d1b3b09b793c55756500cafed1db7eb9d99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c598065fb6d5965f92504019275a921d12acb27
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281775"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760576"
 ---
 # <a name="compiler-error-c2810"></a>Erro do compilador C2810
 
-'interface': uma interface só pode herdar de outra interface
+' interface ': uma interface só pode herdar de outra interface
 
-Uma [interface](../../cpp/interface.md) só pode herdar de outra interface e não pode herdar de uma classe ou struct.
+Uma [interface](../../cpp/interface.md) só pode herdar de outra interface e não pode herdar de uma classe ou estrutura.
 
 O exemplo a seguir gera C2810:
 
-```
+```cpp
 // C2810.cpp
 #include <unknwn.h>
 class CBase1 {

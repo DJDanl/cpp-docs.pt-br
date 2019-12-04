@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3153
 ms.assetid: d775d97e-2480-484f-81f1-88406b10f947
-ms.openlocfilehash: 62b9e7499c52153183f14eae47c488da6a59b458
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54fa7de8eb3df8d4b3695544c5285cc202275492
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374866"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745909"
 ---
 # <a name="compiler-error-c3153"></a>Erro do compilador C3153
 
-'interface': você não pode criar uma instância de uma interface
+' interface ': não é possível criar uma instância de uma interface
 
-Uma interface não pode ser instanciada. Para usar os membros de uma interface, derive uma classe de interface, implementar os membros de interface e, em seguida, usar os membros.
+Uma interface não pode ser instanciada. Para usar os membros de uma interface, derive uma classe da interface, implemente os membros da interface e, em seguida, use os membros.
 
 O exemplo a seguir gera C3153:
 
-```
+```cpp
 // C3153.cpp
 // compile with: /clr
 interface class A {

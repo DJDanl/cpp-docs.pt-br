@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3469
 ms.assetid: e23b0e5c-c704-4e67-a868-bf02c2055d85
-ms.openlocfilehash: 1e935fb90c93d6f301226f3e9029c04929f179ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 546de5a65f6e4c2fd370ba781d01945df2bbfce5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397426"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760537"
 ---
 # <a name="compiler-error-c3469"></a>Erro do compilador C3469
 
-'type': uma classe genérica não pode ser encaminhada.
+' type ': uma classe de Generic não pode ser encaminhada
 
-É possível usar o encaminhamento de tipo em uma classe genérica.
+Você não pode usar o encaminhamento de tipo em uma classe genérica.
 
-Para obter mais informações, consulte [encaminhamento de tipo (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Para obter mais informações, consulte [tipo encaminhamentoC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir cria um componente.
 
-```
+```cpp
 // C3469.cpp
 // compile with: /clr /LD
 generic<typename T>
@@ -38,7 +38,7 @@ public ref class GR2 {};
 
 O exemplo a seguir gera C3466.
 
-```
+```cpp
 // C3469_b.cpp
 // compile with: /clr /c
 #using "C3469.dll"

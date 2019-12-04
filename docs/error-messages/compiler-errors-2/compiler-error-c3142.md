@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3142
 ms.assetid: 795137ad-d00a-4a9c-9665-0cd8bfb5da8b
-ms.openlocfilehash: 38bf40b6e1b7495232d7c33317408b872081e9f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e23ab20cb147ea8113e1f92f8e24d55b72faa71
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374944"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746013"
 ---
 # <a name="compiler-error-c3142"></a>Erro do compilador C3142
 
-'property_name': é possível tomar o endereço de uma propriedade
+' property_name ': não é possível obter o endereço de uma propriedade
 
 O endereço de uma propriedade não está disponível para o desenvolvedor.
 
 O exemplo a seguir gera C3142:
 
-```
+```cpp
 // C3142_2.cpp
 // compile with: /clr
 using namespace System;

@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - C2042
 ms.assetid: e111788f-41ce-405a-9824-a4c1c26059e6
-ms.openlocfilehash: 3302b3a529ad8af054bb29bced66bc939abcc060
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6bc66f5b3a7bd669ef06cac3b53631ff7948e8ad
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384433"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740384"
 ---
 # <a name="compiler-error-c2042"></a>Erro do compilador C2042
 
-não assinado/assinado palavras-chave mutuamente exclusivas
+Palavras-chave assinadas/não assinados mutuamente exclusivas
 
-As palavras-chave `signed` e `unsigned` são usados em uma única declaração.
+As palavras-chave `signed` e `unsigned` são usadas em uma única declaração.
 
 O exemplo a seguir gera C2042:
 
-```
+```cpp
 // C2042.cpp
 unsigned signed int i;   // C2042
 ```
 
-Solução possível:
+Resolução possível:
 
-```
+```cpp
 // C2042b.cpp
 // compile with: /c
 unsigned int i;

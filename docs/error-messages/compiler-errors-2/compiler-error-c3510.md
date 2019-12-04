@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3510
 ms.assetid: c48387bc-0300-4a4d-97f7-3fb90f82a451
-ms.openlocfilehash: dbb65628aa6e0da94a91a59724ca8e1cd5b56491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f9dea77b739aa59474e60cf852fff2577ab6ba9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187346"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753621"
 ---
 # <a name="compiler-error-c3510"></a>Erro do compilador C3510
 
-não é possível localizar a biblioteca de tipos dependente 'type_lib'
+Não é possível localizar a biblioteca de tipos dependente ' type_lib '
 
-[no_registry](../../preprocessor/no-registry.md) e [auto_search](../../preprocessor/auto-search.md) foram passados para `#import` , mas o compilador não pôde localizar uma biblioteca de tipos referenciada.
+[no_registry](../../preprocessor/no-registry.md) e [auto_search](../../preprocessor/auto-search.md) foram passados para `#import`, mas o compilador não conseguiu encontrar uma biblioteca de tipos referenciada.
 
-Para resolver esse erro, certifique-se de que todas as bibliotecas de tipos e bibliotecas de tipo de referência estão disponíveis para o compilador.
+Para resolver esse erro, verifique se todas as bibliotecas de tipos e bibliotecas de tipos referenciadas estão disponíveis para o compilador.
 
 O exemplo a seguir gera C3510:
 
-Suponha que as bibliotecas de dois tipos a seguir foram criadas e que C3510a.tlb foi excluído ou não no caminho.
+Suponha que as duas bibliotecas de tipos a seguir foram criadas e que o C3510a. tlb foi excluído ou não no caminho.
 
 ```
 // C3510a.idl
@@ -38,7 +38,7 @@ library C3510aLib
 };
 ```
 
-E, em seguida, o código-fonte da biblioteca de tipos segundo:
+E, em seguida, o código-fonte para a segunda biblioteca de tipos:
 
 ```
 // C3510b.idl
@@ -56,7 +56,7 @@ library C3510bLib
 
 E, em seguida, o código do cliente:
 
-```
+```cpp
 // C3510.cpp
 #import "c3510b.tlb" no_registry auto_search   // C3510
 int main() {

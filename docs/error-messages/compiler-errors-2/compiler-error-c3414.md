@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3414
 ms.assetid: 715f5432-b509-4f8f-84f5-e1463bac490f
-ms.openlocfilehash: 86ed40f31ae17724700e9d2c68950027d0eefb69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee1e6913d108d0e5519eac6399ed83ac057da9e2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173399"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742932"
 ---
 # <a name="compiler-error-c3414"></a>Erro do compilador C3414
 
-'member': função membro importada não pode ser definida.
+' member ': a função membro importada não pode ser definida
 
-Um membro foi definido no código que também esteja definido em um assembly referenciado.
+Um membro foi definido no código que também é definido em um assembly referenciado.
 
 O exemplo a seguir gera C3414:
 
-```
+```cpp
 // C3414a2.cpp
 // compile with: /clr /LD
 public ref class MyClass {
@@ -32,7 +32,7 @@ public:
 
 E, em seguida:
 
-```
+```cpp
 // C3414b2.cpp
 // compile with: /clr
 #using <C3414a2.dll>

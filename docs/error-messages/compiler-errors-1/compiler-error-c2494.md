@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2494
 ms.assetid: 5dfd07ab-351d-49c9-b54e-f0a104776ab8
-ms.openlocfilehash: 0a8be1dd5ce8d906bc4d0b1ce72295a57f68b6cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e46eff4ec2b1afdb309b3c4db89c9283e2fc8971
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361640"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757027"
 ---
 # <a name="compiler-error-c2494"></a>Erro do compilador C2494
 
-'palavra-chave' não pode ser chamado de dentro de uma expressão de filtro ou finally/bloco finally
+' palavra-chave ' não pode ser chamada de dentro de uma expressão de filtro ou __finally bloco/finally
 
-Não é possível usar `keyword` em um `__finally` ou bloco finally.
+Você não pode usar `keyword` em um bloco `__finally` ou finally.
 
 O exemplo a seguir gera C2494:
 
-```
+```cpp
 // C2494.cpp
 #include <malloc.h>
 
@@ -35,9 +35,9 @@ int main() {
 }
 ```
 
-C2494 também podem ocorrer ao usar **/clr**.
+C2494 também pode ocorrer ao usar **/CLR**.
 
-```
+```cpp
 // C2494b.cpp
 // compile with: /clr
 #include <malloc.h>

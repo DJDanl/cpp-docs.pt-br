@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3711
 ms.assetid: 26d581cc-2153-4ee0-b814-a371184be3e1
-ms.openlocfilehash: 391b78077ea526ebbaf99552b3220f85928a9096
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f2414a51321bf249e3ac049a7048f41b71cb856
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328387"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753400"
 ---
 # <a name="compiler-error-c3711"></a>Erro do compilador C3711
 
-'method': um método de fonte de eventos não gerenciados deve retornar void ou um tipo integral
+' method ': um método de origem de evento não gerenciado deve retornar um tipo void ou integral
 
-Você definiu um método na origem do evento não retornar void ou um tipo integral. Para corrigir esse erro, verifique o evento e o manipulador de eventos têm um tipo de retorno `void` ou um tipo integral, como `int` ou `long`.
+Você definiu um método na origem do evento que não retornou void ou um tipo integral. Para corrigir esse erro, faça com que o manipulador de eventos e evento tenha um tipo de retorno de `void` ou um tipo integral, como `int` ou `long`.
 
 O exemplo a seguir gera C3711:
 
-```
+```cpp
 // C3711.cpp
 #include <atlbase.h>
 #include <atlcom.h>

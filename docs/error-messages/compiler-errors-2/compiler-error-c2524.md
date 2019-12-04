@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2524
 ms.assetid: e71d17f5-2fc2-416b-8dbd-e9bed85eb33a
-ms.openlocfilehash: 369aa5f21c072472808ffba06c3bc5c5e608ac22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e53a0c08f07bf69378fbb7603f63c596f641355
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282177"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758652"
 ---
 # <a name="compiler-error-c2524"></a>Erro do compilador C2524
 
-'destruidor': um destruidor/finalizador deve ter uma lista de parâmetros 'void'
+' destruidor ': um destruidor/finalizador deve ter uma lista de parâmetros ' void '
 
-O destruidor ou finalizador tinha uma lista de parâmetros que não seja [void](../../cpp/void-cpp.md). Outros tipos de parâmetros não são permitidos.
+O destruidor ou finalizador tinha uma lista de parâmetros que não é [nula](../../cpp/void-cpp.md). Outros tipos de parâmetro não são permitidos.
 
 ## <a name="example"></a>Exemplo
 
 O código a seguir reproduz C2524.
 
-```
+```cpp
 // C2524.cpp
 // compile with: /c
 class A {
@@ -38,7 +38,7 @@ class A {
 
 O código a seguir reproduz C2524.
 
-```
+```cpp
 // C2524_b.cpp
 // compile with: /clr /c
 ref struct I1 {

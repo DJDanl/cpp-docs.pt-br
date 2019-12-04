@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3487
 ms.assetid: 39bda474-4418-4a79-98bf-2b22fa92eaaa
-ms.openlocfilehash: 01f8a1bd74ed2b7a3150afae5b46128c6f5b0ca2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b38755470e3746066711382b2ed471badc8e197
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381132"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738434"
 ---
 # <a name="compiler-error-c3487"></a>Erro do Compilador C3487
 
-tipo de retorno: todos retornam expressões devem ser deduzidas para o mesmo tipo: anteriormente era 'tipo de retorno'
+' tipo de retorno ': todas as expressões de retorno devem ser deduzidas para o mesmo tipo: anteriormente, era ' tipo de retorno '
 
-Um lambda deve especificar seu tipo de retorno, a menos que ele contém uma única instrução return. Se um lambda contém múltiplas instruções de retorno, eles devem todos ter o mesmo tipo.
+Um lambda deve especificar seu tipo de retorno, a menos que ele contenha uma única instrução de retorno. Se um lambda contiver várias instruções Return, todas deverão ter o mesmo tipo.
 
-### <a name="to-correct-this-error"></a>Para corrigir este erro
+### <a name="to-correct-this-error"></a>Para corrigir esse erro
 
-- Especifique um tipo de retorno à direita para o lambda. Verifique se todas as devoluções de lambda são do mesmo tipo ou podem ser convertidas implicitamente para o tipo de retorno.
+- Especifique um tipo de retorno à direita para o lambda. Verifique se todos os retornos do lambda são do mesmo tipo ou se podem ser convertidos implicitamente no tipo de retorno.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C3487 porque os tipos de retorno do lambda não são compatíveis:
+O exemplo a seguir gera C3487 porque os tipos de retorno do lambda não coincidem:
 
-```
+```cpp
 // C3487.cpp
 // Compile by using: cl /c /W4 C3487.cpp
 

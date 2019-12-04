@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - C3488
 ms.assetid: 0a6fcd76-dd3b-48d7-abb3-22eccda96034
-ms.openlocfilehash: ed3cccb77a40ab646c9a6375cf4c182de62aa478
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b69ed4ac8b7e706096d107e9dfaa4447ca1bc79
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381092"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738421"
 ---
 # <a name="compiler-error-c3488"></a>Erro do compilador C3488
 
-'var' não é permitida quando o modo de captura padrão é por referência
+' var ' não é permitido quando o modo de captura padrão é por referência
 
-Quando você especifica que o modo de captura padrão para uma expressão lambda por referência, você não pode passar uma variável por referência para a cláusula capture dessa expressão.
+Quando você especifica que o modo de captura padrão para uma expressão lambda é por referência, não é possível passar uma variável por referência à cláusula Capture dessa expressão.
 
-### <a name="to-correct-this-error"></a>Para corrigir este erro
+### <a name="to-correct-this-error"></a>Para corrigir esse erro
 
-- Não passar explicitamente a variável para a cláusula de captura ou
+- Não passe explicitamente a variável para a cláusula Capture ou
 
-- Não especifique por referência como o modo de captura padrão, ou
+- Não especifique by-reference como o modo de captura padrão ou
 
-- Especifique por valor como o modo de captura padrão, ou
+- Especificar por valor como o modo de captura padrão ou
 
-- A variável passada por valor para a cláusula de captura. (Isso pode mudar o comportamento da expressão lambda).
+- Passe a variável por valor para a cláusula Capture. (Isso pode alterar o comportamento da expressão lambda.)
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C3488 porque uma referência à variável `n` aparece na cláusula de captura de uma expressão lambda cujo padrão é por referência:
+O exemplo a seguir gera C3488 porque uma referência à variável `n` aparece na cláusula Capture de uma expressão lambda cujo modo padrão é por referência:
 
-```
+```cpp
 // C3488a.cpp
 
 int main()
@@ -45,9 +45,9 @@ int main()
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra quatro possíveis resoluções para C3488:
+O exemplo a seguir mostra quatro resoluções possíveis para C3488:
 
-```
+```cpp
 // C3488b.cpp
 
 int main()

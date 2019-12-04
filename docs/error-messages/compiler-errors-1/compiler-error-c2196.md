@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2196
 ms.assetid: fd2f6a58-48ce-4e58-96f8-e37720feb8e7
-ms.openlocfilehash: f21652161cb654fa41562ff97b2a5b4741f51855
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec677e14b856f4b8a572006d61668ef089e42834
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174556"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758509"
 ---
 # <a name="compiler-error-c2196"></a>Erro do compilador C2196
 
-Caso o valor 'value' já foi usado.
+o valor de caso ' value ' já foi usado.
 
-Uma instrução switch usa o mesmo valor caso mais de uma vez.
+Uma instrução switch usa o mesmo valor de case mais de uma vez.
 
 O exemplo a seguir gera C2196:
 
-```
+```cpp
 // C2196.cpp
 int main() {
    int i = 0;

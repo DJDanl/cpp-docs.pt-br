@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3207
 ms.assetid: 4a28b976-142a-4cff-aa2f-480b892c50ca
-ms.openlocfilehash: 51873e089499e42f4ddeb97c95e3f18416df447c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 718c731985e6578787d190c70cb8041bd85ab8e7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402704"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751061"
 ---
 # <a name="compiler-error-c3207"></a>Erro do compilador C3207
 
-'function': argumento de template inválido para 'arg', o modelo de classe esperado
+' function ': argumento de template inválido para ' arg ', modelo de classe esperado
 
-Uma função de modelo é definida como colocar um argumento de modelo do modelo. No entanto, foi passado um argumento de tipo de modelo.
+Uma função de modelo é definida como pegar um argumento de modelo de modelo. No entanto, um argumento de tipo de modelo foi passado.
 
 O exemplo a seguir gera C3207:
 
-```
+```cpp
 // C3207.cpp
 template <template <class T> class TT>
 void f(){}

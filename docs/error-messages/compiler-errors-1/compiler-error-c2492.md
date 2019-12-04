@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2492
 ms.assetid: 8c44c9bb-c366-4fe5-a0ab-882e38608aaa
-ms.openlocfilehash: e2b08ef3e46681147c4efd77cbffadb096bbfc16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd52b434f86bdc93124c6005bbf7fadad3cb56b2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360704"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757053"
 ---
 # <a name="compiler-error-c2492"></a>Erro do compilador C2492
 
-'*variável*': dados com duração de armazenamento de thread podem não ter dll interface
+'*Variable*': dados com duração de armazenamento de threads não podem ter a interface DLL
 
-A variável é declarada com o [thread](../../cpp/thread.md) de atributo e com a DLL de interface. O endereço do `thread` variável não é conhecida até o tempo de execução, portanto, ele não pode ser vinculado a uma DLL de importação ou exportação.
+A variável é declarada com o atributo [thread](../../cpp/thread.md) e com a interface DLL. O endereço da variável `thread` não é conhecido até o tempo de execução, portanto não pode ser vinculado a uma importação ou exportação de DLL.
 
 O exemplo a seguir gera C2492:
 
-```
+```cpp
 // C2492.cpp
 // compile with: /c
 class C {

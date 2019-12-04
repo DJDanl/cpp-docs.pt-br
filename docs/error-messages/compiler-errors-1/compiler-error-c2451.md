@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2451
 ms.assetid: a64c93a5-ab8d-4d39-ae57-9ee7ef803036
-ms.openlocfilehash: bd69861b42e14ae30b4d57658719e7a2ce3617ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c42f9349323b08a86b0f8bb9ff79e8f0da6ed77
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208779"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744115"
 ---
 # <a name="compiler-error-c2451"></a>Erro do compilador C2451
 
-expressão condicional de tipo 'type' é inválida
+expressão condicional do tipo ' type ' é inválida
 
-A expressão condicional é avaliada como um tipo de inteiro.
+A expressão condicional é avaliada como um tipo inteiro.
 
 O exemplo a seguir gera C2451:
 
-```
+```cpp
 // C2451.cpp
 class B {};
 

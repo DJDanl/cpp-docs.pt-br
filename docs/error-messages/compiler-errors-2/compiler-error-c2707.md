@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-ms.openlocfilehash: ce86f69b36b915b3e757b5d18430c99cb288e4e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e29812563ef1d4d7f6612ea2516f2f6327e90e1b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160998"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760433"
 ---
 # <a name="compiler-error-c2707"></a>Erro do compilador C2707
 
-'identifier': contexto incorreto para função intrínseca
+' identifier ': contexto inadequado para função intrínseca
 
 Intrínsecos de manipulação de exceção estruturados são inválidos em determinados contextos:
 
-- `_exception_code()` fora de um filtro de exceção ou `__except` bloco
+- `_exception_code()` fora de um filtro de exceção ou bloco de `__except`
 
 - `_exception_info()` fora de um filtro de exceção
 
-- `_abnormal_termination()` fora de um `__finally` bloco
+- `_abnormal_termination()` fora de um bloco de `__finally`
 
-Para resolver o erro, certifique-se de que os intrínsecos de manipulação de exceção são colocados no contexto apropriado.
+Para resolver o erro, certifique-se de que os intrínsecos de manipulação de exceções sejam colocados no contexto apropriado.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C2707.
 
-```
+```cpp
 // C2707.cpp
 #include <windows.h>
 #include <stdio.h>

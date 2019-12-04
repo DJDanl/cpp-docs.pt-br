@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2513
 ms.assetid: ab5b21d3-61e2-4df7-8eea-6f14d6ba8620
-ms.openlocfilehash: 13840246a5dc6a1c1bdbcb55dc47f212ee353d81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 093a5856fdcfa6311fcef93214672b035c91b4fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165210"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746520"
 ---
 # <a name="compiler-error-c2513"></a>Erro do compilador C2513
 
-'type': nenhuma variável declarada antes de '='
+' type ': nenhuma variável declarada antes de ' = '
 
-O especificador de tipo aparece na declaração sem nenhum identificador de variável.
+O especificador de tipo aparece em declaração sem identificador de variável.
 
 O exemplo a seguir gera C2513:
 
-```
+```cpp
 // C2513.cpp
 int main() {
    int = 9;   // C2513
@@ -29,9 +29,9 @@ int main() {
 }
 ```
 
-Esse erro também pode ser gerado como resultado de um trabalho de conformidade do compilador feito para o Visual Studio .NET 2003: inicialização de um typedef não é mais permitido. A inicialização de um typedef não é permitida pelo padrão e agora gera um erro do compilador.
+Esse erro também pode ser gerado como resultado de um trabalho de conformidade do compilador feito para o Visual Studio .NET 2003: a inicialização de um typedef não é mais permitida. A inicialização de um typedef não é permitida pelo padrão e agora gera um erro do compilador.
 
-```
+```cpp
 // C2513b.cpp
 // compile with: /c
 typedef struct S {
@@ -41,4 +41,4 @@ typedef struct S {
 // } S;
 ```
 
-Uma alternativa seria excluir `typedef` definir uma variável com a lista de inicializador agregado, mas isso não é recomendado porque ele será criar uma variável com o mesmo nome que o tipo e ocultar o nome do tipo.
+Uma alternativa seria excluir `typedef` para definir uma variável com a lista de inicializadores de agregação, mas isso não é recomendável porque criará uma variável com o mesmo nome do tipo e ocultará o nome do tipo.

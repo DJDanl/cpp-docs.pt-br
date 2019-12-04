@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2385
 ms.assetid: 6d3dd1f2-e56d-49d7-865c-6a9acdb17417
-ms.openlocfilehash: bffb4c1088c41832e69b0c6f161b47f6f9f08d06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1247e4da05d65677f602a82591efd3e0c0c374e0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393695"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745246"
 ---
 # <a name="compiler-error-c2385"></a>Erro do compilador C2385
 
-acesso ambíguo de 'member'
+acesso ambíguo de ' member '
 
-O membro pode derivar de mais de um objeto (herdado de mais de um objeto).  Para resolver esse erro,
+O membro pode derivar de mais de um objeto (ele é herdado de mais de um objeto).  Para resolver esse erro,
 
-- Torne o membro não ambígua, fornecendo uma conversão.
+- Torne o membro inequívoca fornecendo uma conversão.
 
-- Renomear os membros ambíguos nas classes base.
+- Renomeie os membros ambíguos nas classes base.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C2385.
 
-```
+```cpp
 // C2385.cpp
 // C2385 expected
 #include <stdio.h>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3211
 ms.assetid: 85e33fed-3b59-4315-97e6-20d31c6a985a
-ms.openlocfilehash: 6de2129a1cdd6391245148816b29faa65d7e8721
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7eaad3088eafb55a310a1c95306d6c265c777021
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311755"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740501"
 ---
 # <a name="compiler-error-c3211"></a>Erro do compilador C3211
 
-'especialização explícita': especialização explícita está usando a sintaxe de especialização parcial, use o modelo <> em vez disso
+' especialização explícita ': especialização explícita está usando sintaxe de especialização parcial, use o modelo < > em vez disso
 
-Uma especialização explícita ill foi formada.
+Uma especialização explícita estava mal formada.
 
 O exemplo a seguir gera C3211:
 
-```
+```cpp
 // C3211.cpp
 // compile with: /LD
 template<class T>

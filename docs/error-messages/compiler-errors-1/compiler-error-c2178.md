@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2178
 ms.assetid: 79a14158-17f3-4221-bd06-9d675c49cef4
-ms.openlocfilehash: cd153bb5b331872bfe35b046d41612998bd0eff7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85cac4919c048c30a3ed1ff5573a3c14b77da0bd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385999"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737186"
 ---
 # <a name="compiler-error-c2178"></a>Erro do compilador C2178
 
-'*identificador*'não pode ser declarada com'*especificador*' especificador
+'*Identifier*' não pode ser declarado com o especificador '*especificador*'
 
-Um `mutable` especificador foi usado em uma declaração, mas o especificador não é permitido neste contexto.
+Um especificador de `mutable` foi usado em uma declaração, mas o especificador não é permitido neste contexto.
 
-O `mutable` especificador pode ser aplicado somente aos nomes de membros de dados de classe e não pode ser aplicado a nomes declarados `const` ou `static`e não pode ser aplicado para fazer referência a membros.
+O especificador de `mutable` só pode ser aplicado a nomes de membros de dados de classe e não pode ser aplicado a nomes declarados `const` ou `static`e não pode ser aplicado a membros de referência.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como C2178 podem ocorrer e como corrigi-lo.
+O exemplo a seguir mostra como C2178 pode ocorrer e como corrigi-lo.
 
-```
+```cpp
 // C2178.cpp
 // compile with: cl /c /W4 C2178.cpp
 

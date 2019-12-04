@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2531
 ms.assetid: c49afe15-55f8-4dc8-ac01-bf653622a7db
-ms.openlocfilehash: 03e055e9830b8168fb19885a04c8d40d24713d23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4247e026f6680adab45ceebe2b395ad781ccfc7e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378941"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737108"
 ---
 # <a name="compiler-error-c2531"></a>Erro do compilador C2531
 
-'identifier': referência a um pouco ilegal de campo
+' identifier ': referência a um campo de bits inválida
 
 Referências a campos de bits não são permitidas.
 
-O exemplo a seguir gera uma C2531:
+O exemplo a seguir gera C2531:
 
-```
+```cpp
 // C2531.cpp
 // compile with: /c
 class P {

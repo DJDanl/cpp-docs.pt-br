@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3868
 ms.assetid: f0e45c2a-2149-4885-a03b-0d230069f03a
-ms.openlocfilehash: 3d759d8e527bf38c7408f3497b27287e030d387e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cea8ee926bb5c1bc7482e53ed48a310c870774d1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338435"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761464"
 ---
 # <a name="compiler-error-c3868"></a>Erro do compilador C3868
 
-'type': restrições no parâmetro genérico 'parameter' são diferentes na declaração
+' type ': restrições no parâmetro genérico ' Parameter ' diferem das na declaração
 
 Várias declarações devem ter as mesmas restrições genéricas.  Para obter mais informações, consulte [Genéricos](../../extensions/generics-cpp-component-extensions.md).
 
@@ -23,7 +23,7 @@ Várias declarações devem ter as mesmas restrições genéricas.  Para obter m
 
 O exemplo a seguir gera C3868.
 
-```
+```cpp
 // C3868.cpp
 // compile with: /clr /c
 interface struct I1;

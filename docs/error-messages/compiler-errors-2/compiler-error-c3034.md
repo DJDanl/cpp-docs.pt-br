@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3034
 ms.assetid: 49db8bac-2720-4622-94e3-7988f1603fa3
-ms.openlocfilehash: d0a5da87feeabc5d3d5b558ce0dd6bdfe3869d53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56ae2ddf35148fe263e406f48526cd68c4f91352
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165561"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748288"
 ---
 # <a name="compiler-error-c3034"></a>Erro do compilador C3034
 
-Diretiva de OpenMP 'directive1' não pode ser aninhada diretamente dentro de diretiva de 'directive2'
+Diretiva de OpenMP ' directive1 ' não pode ser aninhada diretamente dentro da diretiva ' directive2 '
 
-Algumas políticas não podem ser aninhadas. Para corrigir esse erro, você pode mesclar as declarações de ambas as diretivas com o bloco de uma diretiva de, ou você pode construir diretivas consecutivas.
+Algumas diretivas não podem ser aninhadas. Para corrigir esse erro, você pode mesclar as instruções de ambas as diretivas no bloco de uma diretiva ou pode construir diretivas consecutivas.
 
 O exemplo a seguir gera C3034:
 
-```
+```cpp
 // C3034.cpp
 // compile with: /openmp /link vcomps.lib
 int main() {

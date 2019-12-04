@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3894
 ms.assetid: 6d5ac903-1dea-431d-8e3a-cebca4342983
-ms.openlocfilehash: 4d935e140d89cb5c3714450597677a7a02a245e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c08a7eca473a4ae043879b49266efec6b8afe7b1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385479"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749432"
 ---
 # <a name="compiler-error-c3894"></a>Erro do compilador C3894
 
-'var': uso l-value de membro de dados estáticos initonly só é permitido no construtor da classe da classe 'class'
+' var ': o uso de l-Value de membro de dados InitOnly static só é permitido no construtor de classe da classe ' class '
 
-Estática [initonly](../../dotnet/initonly-cpp-cli.md) membros de dados só podem ser usados como l-values em seu ponto de declaração ou em um construtor estático.
+Membros de dados [InitOnly](../../dotnet/initonly-cpp-cli.md) estáticos só podem ser usados como valores l em seu ponto de declaração ou em um construtor estático.
 
-Membros de dados initonly (não estático) de instância só podem ser usados como l-values em seu ponto de declaração ou em construtores de (não estático) da instância.
+Membros de dados InitOnly de instância (não estáticos) só podem ser usados como valores l em seu ponto de declaração ou em construtores de instância (não estáticos).
 
 O exemplo a seguir gera C3894:
 
-```
+```cpp
 // C3894.cpp
 // compile with: /clr
 ref struct Y1 {

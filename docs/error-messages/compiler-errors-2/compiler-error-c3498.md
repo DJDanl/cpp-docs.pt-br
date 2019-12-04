@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3498
 ms.assetid: 0a5a7817-0872-4119-83bf-980a19113374
-ms.openlocfilehash: 463e210e5a1ac5eb6d197062ed8921f9bbae4ad2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771e8c72ab4386bb45a11983318f412e784f5bc9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380990"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738096"
 ---
 # <a name="compiler-error-c3498"></a>Erro do compilador C3498
 
-'var': não é possível capturar uma variável que tem um gerenciado ou WinRTtype
+' var ': não é possível capturar uma variável que tenha um Managed ou WinRTtype
 
-Não é possível capturar uma variável que tem um tipo gerenciado ou um tipo de tempo de execução do Windows em um lambda.
+Você não pode capturar uma variável que tenha um tipo gerenciado ou um tipo de Windows Runtime em um lambda.
 
-### <a name="to-correct-this-error"></a>Para corrigir este erro
+### <a name="to-correct-this-error"></a>Para corrigir esse erro
 
-- Passe o gerenciado ou variável de tempo de execução do Windows para a lista de parâmetros da expressão lambda.
+- Passe a variável gerenciada ou Windows Runtime para a lista de parâmetros da expressão lambda.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C3498 como uma variável que tem um tipo gerenciado aparece na lista de captura de uma expressão lambda:
+O exemplo a seguir gera C3498 porque uma variável que tem um tipo gerenciado é exibida na lista de captura de uma expressão lambda:
 
-```
+```cpp
 // C3498a.cpp
 // compile with: /clr
 using namespace System;
@@ -42,9 +42,9 @@ int main()
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir resolve C3498, passando a variável gerenciada `s` à lista de parâmetros da expressão lambda:
+O exemplo a seguir resolve C3498 passando a variável gerenciada `s` para a lista de parâmetros da expressão lambda:
 
-```
+```cpp
 // C3498b.cpp
 // compile with: /clr
 using namespace System;

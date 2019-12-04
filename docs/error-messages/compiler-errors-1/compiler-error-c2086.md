@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2086
 ms.assetid: 4329bf72-90c8-444c-8524-4ef75e6b2139
-ms.openlocfilehash: 094a794627b886abc7db5ba4d74c6fe97ff82461
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 417763e8c26918d3cd83702b283244d1c13d9d1f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216120"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735743"
 ---
 # <a name="compiler-error-c2086"></a>Erro do compilador C2086
 
-'identifier': redefinição
+' identificador ': redefinição
 
-O identificador está definido mais de uma vez, ou uma declaração subsequente é diferente da anterior.
+O identificador é definido mais de uma vez ou uma declaração subsequente difere de uma anterior.
 
-C2086 também pode ser o resultado da compilação incremental para um assembly do c# referenciado. Recompile o assembly do c# para resolver esse erro.
+C2086 também pode ser o resultado da compilação incremental para um assembly C# referenciado. Recompile C# o assembly para resolver esse erro.
 
 O exemplo a seguir gera C2086:
 
-```
+```cpp
 // C2086.cpp
 main() {
   int a;

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2345
 ms.assetid: e1cc88b0-0223-4d07-975b-fa99956a82bd
-ms.openlocfilehash: ceb2a835ca94399f27640628105afcde986af1b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85d9e312bafe0cf6c9390f7484281e1aefb22aab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188303"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760017"
 ---
 # <a name="compiler-error-c2345"></a>Erro do compilador C2345
 
-align(Value): valor de alinhamento inválido
+align (valor): valor de alinhamento inválido
 
-Você passou um valor para o [alinhar](../../cpp/align-cpp.md) palavra-chave que está fora do intervalo permitido.
+Você passou um valor para a palavra-chave [align](../../cpp/align-cpp.md) que está fora do intervalo permitido.
 
 O código a seguir gera C2345
 
-```
+```cpp
 // C2345.cpp
 // compile with: /c
 __declspec(align(0)) int a;   // C2345

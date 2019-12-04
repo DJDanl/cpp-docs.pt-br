@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2229
 ms.assetid: 933c7cf2-a463-4e74-b0b4-59dedad987fb
-ms.openlocfilehash: 998067e9af178c1898c3443c4e84da965c22fa81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d974c4f0630a592daad956448bf21cea21efb7c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301728"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759263"
 ---
 # <a name="compiler-error-c2229"></a>Erro do compilador C2229
 
-o tipo 'identifier' tem uma matriz de tamanho zero ilegal
+o tipo ' identifier ' tem uma matriz de tamanho zero inválida
 
-Um membro de um campo de bits ou de estrutura contém uma matriz de tamanho zero não é o último membro.
+Um membro de um campo de estrutura ou de bits contém uma matriz de tamanho zero que não é o último membro.
 
-Como você pode ter uma matriz de tamanho zero como o último membro de struct, você deve especificar seu tamanho ao alocar o struct.
+Como você pode ter uma matriz de tamanho zero como o último membro da estrutura, você deve especificar seu tamanho ao alocar a estrutura.
 
-Se a matriz de tamanho zero não é o último membro de struct, o compilador não pode calcular o deslocamento para os campos restantes.
+Se a matriz de tamanho zero não for o último membro da estrutura, o compilador não poderá calcular o deslocamento dos campos restantes.
 
 O exemplo a seguir gera C2229:
 
-```
+```cpp
 // C2229.cpp
 struct S {
    int a[0];  // C2229  zero-sized array

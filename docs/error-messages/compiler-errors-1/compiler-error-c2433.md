@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2433
 ms.assetid: 7079fedd-6059-4125-82ef-ebe275f1f9d1
-ms.openlocfilehash: 8a98fcf7570605694569b7ae466ae0a3c7cf14bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9edb30e574e212bd30fd60dd3ce5aaddc650dc11
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166731"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744427"
 ---
 # <a name="compiler-error-c2433"></a>Erro do compilador C2433
 
-'identifier': 'modificador' não é permitido em declarações de dados
+' identifier ': ' modificador ' não permitido em declarações de dados
 
-O `friend`, `virtual`, e `inline` modificadores não podem ser usados para declarações de dados.
+Os modificadores `friend`, `virtual`e `inline` não podem ser usados para declarações de dados.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C2433.
 
-```
+```cpp
 // C2433.cpp
 class C{};
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2881
 ms.assetid: b49c63c2-b064-4d4b-a75e-ddd2af947522
-ms.openlocfilehash: 82a4fbe94bc7250244d57f549e52037d6a54c784
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c171fd529943bb07a6c512e4ac97f64f13f959d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378910"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736276"
 ---
 # <a name="compiler-error-c2881"></a>Erro do compilador C2881
 
-'namespace1': já é usado como um alias para 'namespace2'
+' Namespace1 ': já está sendo usado como um alias para ' namespace2 '
 
-Você não pode usar o mesmo nome como um alias de dois namespaces.
+Você não pode usar o mesmo nome que um alias para dois namespaces.
 
 O exemplo a seguir gera C2881:
 
-```
+```cpp
 // C2881.cpp
 // compile with: /c
 namespace A {

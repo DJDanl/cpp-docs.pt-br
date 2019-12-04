@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2015
 ms.assetid: 8f40af0a-3a5a-4d6a-8ed7-125966e6bfed
-ms.openlocfilehash: d761dfde26cce9c99ccd4c3e6fd86ae1d6e16ddc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83b78336d74037b9f9f52da8327479f506db1ffc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351086"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751060"
 ---
 # <a name="compiler-error-c2015"></a>Erro do compilador C2015
 
-número excessivo de caracteres na constante
+muitos caracteres na constante
 
-Uma constante de caractere contém mais de dois caracteres. O limite é um caractere para constantes de caractere padrão e dois caracteres para constantes de caracteres longa.
+Uma constante de caractere contém mais de dois caracteres. O limite é um caractere para constantes de caractere padrão e dois caracteres para constantes de caractere longo.
 
 Uma sequência de escape, como \t, é convertida em um único caractere.
 
@@ -25,7 +25,7 @@ Uma sequência de escape, como \t, é convertida em um único caractere.
 
 O exemplo a seguir gera C2015:
 
-```
+```cpp
 // C2015.cpp
 // compile with: /c
 
@@ -35,9 +35,9 @@ char test2 = 'e';   // OK
 
 ## <a name="example"></a>Exemplo
 
-C2015 também podem ocorrer ao usar uma extensão da Microsoft, constantes de caractere convertidas em inteiros.  O exemplo a seguir gera C2015:
+C2015 também pode ocorrer ao usar uma extensão da Microsoft, constantes de caractere convertidas em inteiros.  O exemplo a seguir gera C2015:
 
-```
+```cpp
 // C2015b.cpp
 #include <stdio.h>
 

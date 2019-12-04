@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2909
 ms.assetid: 1c9df8ae-925d-4002-a5f8-a71413c45f9e
-ms.openlocfilehash: 7a777e87d8110ac16740346a8494f9501ce93b37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c9a40bd271fa04146193e8315e205e293e8a34d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404280"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750475"
 ---
 # <a name="compiler-error-c2909"></a>Erro do compilador C2909
 
-'identifier': instanciação explícita de modelo de função requer tipo de retorno
+' identifier ': instanciação explícita do modelo de função requer tipo de retorno
 
-Uma instanciação explícita de um modelo de função exige a especificação explícita de seu tipo de retorno. Especificação de tipo de retorno implícito não funciona.
+Uma instanciação explícita de um modelo de função requer especificação explícita de seu tipo de retorno. A especificação de tipo de retorno implícita não funciona.
 
 O exemplo a seguir gera C2909:
 
-```
+```cpp
 // C2909.cpp
 // compile with: /c
 template<class T> int f(T);

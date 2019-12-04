@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C3493
 ms.assetid: 734b4257-12a3-436f-8488-c8c55ec81634
-ms.openlocfilehash: 1bbf9b269075717ae397b7d29ee28c278b1e4ec8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 178d1221886dc62edd9785d211e2189fa50962f4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381027"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738291"
 ---
 # <a name="compiler-error-c3493"></a>Erro do compilador C3493
 
-'var' não pode ser capturado implicitamente porque nenhum modo de captura padrão foi especificado
+' var ' não pode ser capturado implicitamente porque nenhum modo de captura padrão foi especificado
 
-A captura de expressão lambda vazio, `[]`, especifica que a expressão lambda faz não explicitamente ou implicitamente capturar todas as variáveis.
+A captura de expressão lambda vazia, `[]`, especifica que a expressão lambda não captura explicitamente ou implicitamente nenhuma variável.
 
-### <a name="to-correct-this-error"></a>Para corrigir este erro
+### <a name="to-correct-this-error"></a>Para corrigir esse erro
 
-- Fornecer um modo de captura padrão, ou
+- Forneça um modo de captura padrão ou
 
 - Capture explicitamente uma ou mais variáveis.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C3493 porque ele modifica uma variável externa, mas Especifica a cláusula capture vazia:
+O exemplo a seguir gera C3493 porque ele modifica uma variável externa, mas especifica a cláusula de captura vazia:
 
-```
+```cpp
 // C3493a.cpp
 
 int main()
@@ -41,9 +41,9 @@ int main()
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir resolve C3493 especificando por referência como o modo de captura padrão.
+O exemplo a seguir resolve C3493 especificando by-reference como o modo de captura padrão.
 
-```
+```cpp
 // C3493b.cpp
 
 int main()

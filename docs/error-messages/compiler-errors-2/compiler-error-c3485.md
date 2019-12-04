@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3485
 ms.assetid: d67536f9-67a1-4ad9-9a94-d8bbbca3d0dc
-ms.openlocfilehash: 2fcaecd6be35e2ae6822133930b48b6bbf02aafe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0eacb6ce6426674d23fc78596ead3730f46ae370
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381131"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743036"
 ---
 # <a name="compiler-error-c3485"></a>Erro do compilador C3485
 
-uma definição de lambda não pode ter cv-qualifiers
+uma definição de lambda não pode ter nenhum qualificador CV
 
-Não é possível usar um `const` ou `volatile` qualificador como parte da definição de uma expressão lambda.
+Você não pode usar um qualificador `const` ou `volatile` como parte da definição de uma expressão lambda.
 
-### <a name="to-correct-this-error"></a>Para corrigir este erro
+### <a name="to-correct-this-error"></a>Para corrigir esse erro
 
-- Remover o `const` ou `volatile` qualificador da definição da expressão lambda.
+- Remova o `const` ou o qualificador de `volatile` da definição de sua expressão lambda.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C3485 porque ele usa o `const` qualificador como parte da definição de uma expressão lambda:
+O exemplo a seguir gera C3485 porque ele usa o qualificador `const` como parte da definição de uma expressão lambda:
 
-```
+```cpp
 // C3485.cpp
 
 int main()
