@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3853
 ms.assetid: 5b71805d-52b4-44ec-80ae-37c68d876f6a
-ms.openlocfilehash: c2282196d045ffd88696149f7d22d4ed7f9603ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef6a57b7528a07756a5a9034482bf99ed3f8cc87
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265471"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754856"
 ---
 # <a name="compiler-error-c3853"></a>Erro do compilador C3853
 
-'=': reinicializar uma referência ou atribuir através de uma referência à função é ilegal
+' = ': reinicializar uma referência ou atribuição por meio de uma referência a função é inválida
 
-Não é possível atribuir a uma referência por meio de uma função porque funções não são l-Values.
+Não é possível atribuir a uma referência por meio de uma função porque as funções não são lvalue.
 
 Os exemplos a seguir geram C3853:
 
-```
+```cpp
 // C3853.cpp
 // compile with: /EHsc
 #include <iostream>

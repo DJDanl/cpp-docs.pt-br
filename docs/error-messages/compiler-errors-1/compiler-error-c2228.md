@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2228
 ms.assetid: 901cadb1-ce90-4ae0-a360-547a9ba2ca18
-ms.openlocfilehash: 20e295d09e39a12ed8163ec980fa304cd4167218
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56eed6aeff5a955253a440d5931d66118f4604e0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404332"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759276"
 ---
 # <a name="compiler-error-c2228"></a>Erro do compilador C2228
 
-esquerda de '.identifier' deve ter a classe/struct/union
+esquerda de '. Identifier ' deve ter Class/struct/Union
 
-O operando à esquerda do período (.) não é uma classe, estrutura ou união.
+O operando à esquerda do período (.) não é uma classe, estrutura ou União.
 
 O exemplo a seguir gera C2228:
 
-```
+```cpp
 // C2228.cpp
 int i;
 struct S {
@@ -38,8 +38,8 @@ int main() {
 }
 ```
 
-Você também verá esse erro se você usar uma sintaxe incorreta ao usar extensões gerenciadas. Ao passo que em outras linguagens do Visual Studio, você pode usar o operador ponto para acessar um membro de uma classe gerenciada, um ponteiro para o objeto em C++ significa que você precisa usar o operador para acessar o membro ->:
+Você também verá esse erro se usar a sintaxe incorreta ao usar extensões gerenciadas. Enquanto em outras linguagens do Visual Studio, você pode usar o operador ponto para acessar um membro de uma classe gerenciada, um ponteiro para C++ o objeto no significa que você precisa usar o operador-> para acessar o membro:
 
-Wrong: `String * myString = checkedListBox1->CheckedItems->Item[0].ToString();`
+Errado: `String * myString = checkedListBox1->CheckedItems->Item[0].ToString();`
 
-Certo: `String * myString = checkedListBox1->CheckedItems->Item[0]->ToString();`
+À direita: `String * myString = checkedListBox1->CheckedItems->Item[0]->ToString();`

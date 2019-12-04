@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3262
 ms.assetid: 3e74b9aa-de3c-4492-9331-ee73012b958b
-ms.openlocfilehash: 1b6f9c1cd8ed983ba0784a49b8972325047c8d9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f810cb300ab6db61cc6188aa5e9427ed2141338
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366167"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754193"
 ---
 # <a name="compiler-error-c3262"></a>Erro do compilador C3262
 
-indexação de array inválida: '#' dimensão (ões) especificada para '#'-dimensional 'tipo de matriz'
+indexação de matriz inválida: ' # ' dimensão (ões) especificada (s) para ' # '-dimensional ' tipo de matriz '
 
-Uma matriz era incorretamente subscrita. O número de índices pode não corresponder ao número de dimensões na matriz.
+Um script de matriz foi impropriamente incorretamente. O número de índices pode não corresponder ao número de dimensões na matriz.
 
 O exemplo a seguir gera C3262:
 
-```
+```cpp
 // C3262.cpp
 // compile with: /clr
 #using <mscorlib.dll>

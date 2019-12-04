@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2297
 ms.assetid: 65849fe5-17e1-4b7e-b50c-f508b05ddaa4
-ms.openlocfilehash: f2b1fb0590b8fd72b0365185b245d7b16566d11d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f07d522f7594d78df566b6a4be47ad0dadd4b3d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182711"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759081"
 ---
 # <a name="compiler-error-c2297"></a>Erro do compilador C2297
 
-'operator': operando à direita inválido
+' operator ': operando da direita incorreto
 
-O operando à direita usado com `operator` é inválido.
+O operando direito usado com `operator` é inválido.
 
-Por exemplo, o compilador pode ver uma declaração em que você pretendia uma chamada de função.
+Por exemplo, o compilador pode ver uma declaração em que você pretendeu uma chamada de função.
 
 O exemplo a seguir gera C2297:
 
-```
+```cpp
 // C2297.cpp
 struct MyStruct {
    struct Help {

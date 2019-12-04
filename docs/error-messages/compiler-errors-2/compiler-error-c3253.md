@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3253
 ms.assetid: da40be26-0f78-4730-8727-ad11cddf8869
-ms.openlocfilehash: 5d161dfab8dff48a1ddd5a8a5036c0bb4d5549aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c895def372fd74f077725479112873020264371f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173243"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754258"
 ---
 # <a name="compiler-error-c3253"></a>Erro do compilador C3253
 
-'function': erro com a substituição explícita
+' function ': erro com substituição explícita
 
-Uma substituição explícita foi especificada incorretamente. Por exemplo, você não pode especificar uma implementação para uma substituição que você também especificar como puro. Para obter mais informações, consulte [substituições explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Uma substituição explícita foi especificada incorretamente. Por exemplo, você não pode especificar uma implementação para uma substituição que também especifica como pura. Para obter mais informações, consulte [substituições explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 O exemplo a seguir gera C3253:
 
-```
+```cpp
 // C3253.cpp
 // compile with: /clr
 public interface struct I {

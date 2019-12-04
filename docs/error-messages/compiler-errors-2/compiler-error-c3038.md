@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3038
 ms.assetid: 140ada3e-5636-43ef-a4ee-22a9f66a771f
-ms.openlocfilehash: 0baceeec9911181d9b21c53edf55b73686801316
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26fee4f5d636ac56ae01499f6b600d38f56bbe46
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350147"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754960"
 ---
 # <a name="compiler-error-c3038"></a>Erro do compilador C3038
 
-'var': variável em cláusula 'private' não pode ser uma variável de reduction em contexto delimitador
+' var ': a variável na cláusula ' Private ' não pode ser uma variável de redução no contexto delimitador
 
-Variáveis que aparecem o [redução](../../parallel/openmp/reference/reduction.md) cláusula de uma diretiva paralela não pode ser especificada em uma [privada](../../parallel/openmp/reference/private-openmp.md) cláusula em uma diretiva de compartilhamento de trabalho que está associado a construção parallel.
+Variáveis que aparecem na cláusula [Reduction](../../parallel/openmp/reference/reduction.md) de uma diretiva Parallel não podem ser especificadas em uma cláusula [Private](../../parallel/openmp/reference/private-openmp.md) em uma diretiva de compartilhamento de trabalho que se associa à construção paralela.
 
 O exemplo a seguir gera C3038:
 
-```
+```cpp
 // C3038.cpp
 // compile with: /openmp /c
 int g_i, g_i2;

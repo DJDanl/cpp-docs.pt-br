@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2850
 ms.assetid: f3efe86c-4168-4e76-a133-3f8314c69f51
-ms.openlocfilehash: 34c2054226ea452f76fdb15b87454677a6a6fe8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a87767bb9194a0a9858dd1734abbe516ffcfac0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256848"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758496"
 ---
 # <a name="compiler-error-c2850"></a>Erro do compilador C2850
 
-'Criar': só é permitida no escopo do arquivo; não pode estar em uma construção aninhada
+' Construct ': permitido somente no escopo do arquivo; pode não estar em uma construção aninhada
 
 Construções, como alguns pragmas, só podem aparecer no escopo global.
 
 O exemplo a seguir gera C2850:
 
-```
+```cpp
 // C2850.cpp
 // compile with: /c /Yc
 // try the following line instead

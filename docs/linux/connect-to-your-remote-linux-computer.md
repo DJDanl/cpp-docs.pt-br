@@ -3,12 +3,12 @@ title: Conectar-se a seu sistema Linux de destino no Visual Studio
 description: Como se conectar a um computador Linux remoto ou a um subsistema do Windows para Linux de dentro C++ de um projeto do Visual Studio.
 ms.date: 11/09/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 6f7116ab5dc6c77f88d0787beac32d1c1e0a4716
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 4069979100c3b71a32e90ad72fb334d21a226e64
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966568"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755272"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Conectar-se a seu sistema Linux de destino no Visual Studio
 
@@ -82,7 +82,7 @@ Para configurar essa conexão remota:
 
 ## <a name="tcp-port-forwarding"></a>Encaminhamento de porta TCP
 
-O suporte ao Linux do Visual Studio tem uma dependência do encaminhamento de porta TCP. **Rsync** e **gdbserver** serão afetados se o encaminhamento de porta TCP estiver desabilitado no seu sistema remoto. 
+O suporte ao Linux do Visual Studio tem uma dependência do encaminhamento de porta TCP. **Rsync** e **gdbserver** serão afetados se o encaminhamento de porta TCP estiver desabilitado no seu sistema remoto. Se você for afetado por essa dependência, poderá votar neste [tíquete de sugestão](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html) na Comunidade de desenvolvedores.
 
 rsync é usado por projetos do Linux baseados em MSBuild e projetos CMake para [Copiar cabeçalhos do seu sistema remoto para o Windows para uso pelo IntelliSense](configure-a-linux-project.md#remote_intellisense). Quando não for possível habilitar o encaminhamento de porta TCP, desabilite o download automático de cabeçalhos remotos. Para desabilitá-lo, use **ferramentas > opções > > do Gerenciador de conexões > cabeçalhos remotos Gerenciador do IntelliSense**. Se o sistema remoto não tiver o encaminhamento de porta TCP habilitado, você verá esse erro quando o download de cabeçalhos remotos para IntelliSense começar:
 

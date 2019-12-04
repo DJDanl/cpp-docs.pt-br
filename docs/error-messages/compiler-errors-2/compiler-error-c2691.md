@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2691
 ms.assetid: 6925f8f3-ea60-4909-91e6-b781492c645d
-ms.openlocfilehash: 34287b785532394d33e94e37e7a6a9955d935f14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73fd3188fd1ee4c95d8444bea0f3c05beefa478f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360184"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760213"
 ---
 # <a name="compiler-error-c2691"></a>Erro do compilador C2691
 
-'data type': gerenciada ou WinRTarray não pode ter esse tipo de elemento
+' tipo de dados ': um WinRTarray ou gerenciado não pode ter este tipo de elemento
 
-O tipo de um ou um elemento da matriz WinRT pode ser um tipo de valor ou um tipo de referência.
+O tipo de um elemento de matriz gerenciado ou WinRT pode ser um tipo de valor ou um tipo de referência.
 
 O exemplo a seguir gera C2691:
 
-```
+```cpp
 // C2691a.cpp
 // compile with: /clr
 class A {};

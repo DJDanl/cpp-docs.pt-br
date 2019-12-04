@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2133
 ms.assetid: 8942f9e8-9818-468f-97db-09dbd124fcae
-ms.openlocfilehash: 68672ae76024d3d09d738d997c485a3205c7dd2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b51b556ea576e02b85a5c2ee5032909af39c7b2f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397569"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758431"
 ---
 # <a name="compiler-error-c2133"></a>Erro do compilador C2133
 
-'identifier': tamanho desconhecido
+' identifier ': tamanho desconhecido
 
-Uma matriz não dimensionada é declarada como um membro de uma classe, estrutura, união ou enumeração. A opção /Za (ANSI C) não permite matrizes sem tamanho do membro.
+Uma matriz sem tamanho é declarada como membro de uma classe, estrutura, União ou enumeração. A opção/Za (ANSI C) não permite matrizes de membros sem tamanho.
 
 O exemplo a seguir gera C2133:
 
-```
+```cpp
 // C2133.cpp
 // compile with: /Za
 struct X {
@@ -29,9 +29,9 @@ struct X {
 };
 ```
 
-Solução possível:
+Resolução possível:
 
-```
+```cpp
 // C2133b.cpp
 // compile with: /c
 struct X {

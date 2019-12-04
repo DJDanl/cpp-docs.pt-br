@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2090
 ms.assetid: e8176e55-382b-453d-aa27-6597f0274afd
-ms.openlocfilehash: d805a4d6e0da0e94288ac36c6680a952b7633b86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c87bc75e984c544646a28a663302acd5733ac25
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347240"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755935"
 ---
 # <a name="compiler-error-c2090"></a>Erro do compilador C2090
 
@@ -21,14 +21,14 @@ Uma função não pode retornar uma matriz. Em vez disso, retorne um ponteiro pa
 
 O exemplo a seguir gera C2090:
 
-```
+```cpp
 // C2090.cpp
 int func1(void)[] {}   // C2090
 ```
 
-Solução possível:
+Resolução possível:
 
-```
+```cpp
 // C2090b.cpp
 // compile with: /c
 int* func2(int * i) {

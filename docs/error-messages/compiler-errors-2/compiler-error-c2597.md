@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2597
 ms.assetid: 2e48127d-e3ff-4a40-8156-2863e45b1a38
-ms.openlocfilehash: b7bdd10ebd70eb61746690958532854dd98c6429
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 680268948f8642b02768bd4b3092666982e14eb7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228584"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759302"
 ---
 # <a name="compiler-error-c2597"></a>Erro do compilador C2597
 
-referência inválida para membro não estática 'identifier'
+referência inválida para membro não estático ' identifier '
 
 Possíveis causas:
 
-1. Um membro não estático é especificado em uma função de membro estático. Para acessar o membro não estático, você deve passar em ou crie uma instância local da classe e usar um operador de acesso de membro (`.` ou `->`).
+1. Um membro não estático é especificado em uma função de membro estático. Para acessar o membro não estático, você deve passar ou criar uma instância local da classe e usar um operador de acesso para membro (`.` ou `->`).
 
-1. O identificador especificado não é um membro de classe, estrutura ou união. Verifica a ortografia de identificador.
+1. O identificador especificado não é um membro de uma classe, estrutura ou União. Verifique a ortografia do identificador.
 
-1. Um operador de acesso de membro se refere a uma função não membro.
+1. Um operador de acesso de membro refere-se a uma função não membro.
 
 1. O exemplo a seguir gera C2597 e mostra como corrigi-lo:
 
-```
+```cpp
 // C2597.cpp
 // compile with: /c
 struct s1 {

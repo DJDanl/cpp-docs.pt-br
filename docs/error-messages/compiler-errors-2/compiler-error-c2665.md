@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2665
 ms.assetid: a7f99b61-2eae-4f2b-ba75-ea68fd1e8312
-ms.openlocfilehash: 63817c4181edb942f43f41c24fb10278d14f397e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95ca5ea846f9cd45bdb1e9706ae377589d37a285
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386883"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756013"
 ---
 # <a name="compiler-error-c2665"></a>Erro do compilador C2665
 
-'function': nenhuma das sobrecargas Número1 pode converter Número2 de parâmetro de tipo 'type'
+' function ': nenhuma das sobrecargas de Número1 pode converter o parâmetro núm2 do tipo ' type '
 
-Um parâmetro da função sobrecarregada não pode ser convertido para o tipo solicitado.  Possíveis resoluções:
+Um parâmetro da função sobrecarregada não pode ser convertido para o tipo necessário.  Possíveis resoluções:
 
 - Forneça um operador de conversão.
 
@@ -27,7 +27,7 @@ Um parâmetro da função sobrecarregada não pode ser convertido para o tipo so
 
 O exemplo a seguir gera C2665.
 
-```
+```cpp
 // C2665.cpp
 void func(short, char*){}
 void func(char*, char*){}

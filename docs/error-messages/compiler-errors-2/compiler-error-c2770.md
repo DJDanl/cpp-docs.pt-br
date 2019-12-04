@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2770
 ms.assetid: 100001b5-80b0-4971-8ff6-9023f443c926
-ms.openlocfilehash: 9397b52838f61449f0475a31d5bb4077dad7f587
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f6c82823dc619982ff148a83e2cc3316b42cfab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257395"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759770"
 ---
 # <a name="compiler-error-c2770"></a>Erro do compilador C2770
 
-argumento (s) de template_or_generic explícita inválida para 'template'
+argumento (s) de template_or_generic explícito inválidos para ' template '
 
-Candidatos do modelo de função com modelo explícito ou argumentos genéricos resultaram em tipos de função não permitidos.
+Os candidatos a modelos de função com modelo explícito ou argumentos genéricos resultaram em tipos de função não permitidos.
 
 O exemplo a seguir gera C2770:
 
-```
+```cpp
 // C2770.cpp
 #include <stdio.h>
 template <class T>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3041
 ms.assetid: 9df1ae44-3ac7-4c6c-899f-f35ffe7ccf0d
-ms.openlocfilehash: 43f75e9d054f574eb121d20eb35d302cef849566
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9f9b9a598760b251d911f3f0a5ddd1114dd764c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182568"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754934"
 ---
 # <a name="compiler-error-c3041"></a>Erro do compilador C3041
 
-'var': variável em cláusula 'copyprivate' deve ser private em contexto delimitador
+' var ': a variável na cláusula ' copyprivate ' deve ser privada no contexto delimitador
 
-Uma variável passada para [copyprivate](../../parallel/openmp/reference/copyprivate.md) não podem ser compartilhados em contexto delimitador.
+Uma variável passada para [copyprivate](../../parallel/openmp/reference/copyprivate.md) não pode ser compartilhada no contexto delimitador.
 
 O exemplo a seguir gera C3041:
 
-```
+```cpp
 // C3041.cpp
 // compile with: /openmp /c
 #include "omp.h"

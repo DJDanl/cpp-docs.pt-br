@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2361
 ms.assetid: efbdaeb9-891c-4f7d-97da-89088a8413f3
-ms.openlocfilehash: ca03a42cbf746a1ef32d9c79c23de637f05b56fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 747b85b57bee9e53f13a978254798a1dc268ef85
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364357"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759887"
 ---
 # <a name="compiler-error-c2361"></a>Erro do compilador C2361
 
-inicialização de 'identifier' é ignorada por rótulo 'default'
+a inicialização de ' identifier ' é ignorada pelo rótulo ' default '
 
-A inicialização de `identifier` pode ser ignorada em um `switch` instrução. Você não pode ir após uma declaração com um inicializador, a menos que a declaração é incluída em um bloco. (A menos que ela é declarada dentro de um bloco, a variável está dentro do escopo até o final do `switch` instrução.)
+A inicialização de `identifier` pode ser ignorada em uma instrução `switch`. Não é possível pular uma declaração com um inicializador, a menos que a declaração seja colocada em um bloco. (A menos que seja declarado dentro de um bloco, a variável estará dentro do escopo até o final da instrução de `switch`.)
 
 O exemplo a seguir gera C2361:
 
-```
+```cpp
 // C2361.cpp
 void func( void ) {
    int x;
@@ -35,9 +35,9 @@ void func( void ) {
 }
 ```
 
-Solução possível:
+Resolução possível:
 
-```
+```cpp
 // C2361b.cpp
 // compile with: /c
 void func( void ) {

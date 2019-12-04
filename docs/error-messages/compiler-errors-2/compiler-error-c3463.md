@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3463
 ms.assetid: 153efcc0-085c-4615-84ea-d22942618bdf
-ms.openlocfilehash: a0c7772291085bcd872cbc1ca23b79d2fa829ad9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4aa8405d9baac61b8d3addead6ac19bbf6fd3b0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222339"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756585"
 ---
 # <a name="compiler-error-c3463"></a>Erro do compilador C3463
 
-'type': tipo não permitido em atributo 'implements'
+' type ': tipo não permitido no atributo ' Implements '
 
-Um tipo inválido foi passado para o [implementa](../../windows/implements-cpp.md) atributo. Por exemplo, você pode passar uma interface para `implements`, mas você não pode passar um ponteiro para uma interface.
+Um tipo inválido foi passado para o atributo [Implements](../../windows/implements-cpp.md) . Por exemplo, você pode passar uma interface para `implements`, mas não pode passar um ponteiro para uma interface.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3463.
 
-```
+```cpp
 // C3463.cpp
 // compile with: /c
 #include <windows.h>

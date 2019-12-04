@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2296
 ms.assetid: 47d270f4-13ce-4c16-81e2-7d67c6c4a540
-ms.openlocfilehash: ab9c9450b6e906a47a66f6c28c42ca016c98381b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 020f046648488ca67923b7035acaa6c79ce495e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182672"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759068"
 ---
 # <a name="compiler-error-c2296"></a>Erro do compilador C2296
 
-'operator': operando esquerdo inválido
+' operator ': operando esquerdo insatisfatório
 
 O operando esquerdo usado com `operator` é inválido.
 
-Por exemplo, o compilador pode ver uma declaração em que você pretendia uma chamada de função.
+Por exemplo, o compilador pode ver uma declaração em que você pretendeu uma chamada de função.
 
 O exemplo a seguir gera C2296:
 
-```
+```cpp
 // C2296.cpp
 struct MyStruct {
    struct Help {

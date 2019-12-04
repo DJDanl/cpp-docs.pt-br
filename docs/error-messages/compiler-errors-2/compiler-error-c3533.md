@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3533
 ms.assetid: a68b1ba5-466e-4190-a1a4-505ccfe548b7
-ms.openlocfilehash: 7a567e4396999f98d9e9740db0acf951c443d525
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce95bba417e9be3603f15376a0fd65a48f951a2f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397374"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755636"
 ---
 # <a name="compiler-error-c3533"></a>Erro do compilador C3533
 
-'type': um parâmetro não pode ter um tipo que contenha 'auto'
+' type ': um parâmetro não pode ter um tipo que contenha ' auto '
 
-Um parâmetro de modelo ou método não pode ser declarado com o `auto` palavra-chave se o padrão [/ZC: auto](../../build/reference/zc-auto-deduce-variable-type.md) opção do compilador está em vigor.
+Um parâmetro de método ou modelo não pode ser declarado com a palavra-chave `auto` se a opção de compilador [/Zc: auto](../../build/reference/zc-auto-deduce-variable-type.md) padrão estiver em vigor.
 
-### <a name="to-correct-this-error"></a>Para corrigir este erro
+### <a name="to-correct-this-error"></a>Para corrigir esse erro
 
-1. Remover o `auto` palavra-chave da declaração de parâmetro.
+1. Remova a palavra-chave `auto` da declaração de parâmetro.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir produz C3533 porque ele declara um parâmetro de função com o `auto` palavra-chave e ele é compilado com **/ZC: auto**.
+O exemplo a seguir gera C3533 porque ele declara um parâmetro de função com a palavra-chave `auto` e é compilado com **/Zc: auto**.
 
-```
+```cpp
 // C3533a.cpp
 // Compile with /Zc:auto
 void f(auto j) {} // C3533
@@ -35,9 +35,9 @@ void f(auto j) {} // C3533
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir produz C3533 no modo c++14, porque ele declara um parâmetro de modelo com o `auto` palavra-chave e ele é compilado com **/ZC: auto**. (No c++17, esta é uma definição válida de um modelo de classe com um parâmetro único modelo sem tipo cujo tipo é deduzido.)
+O exemplo a seguir gera C3533 no modo C++ 14 porque ele declara um parâmetro de modelo com a palavra-chave `auto` e é compilado com **/Zc: auto**. (No C++ 17, essa é uma definição válida de um modelo de classe com um único parâmetro de modelo sem tipo cujo tipo é deduzido.)
 
-```
+```cpp
 // C3533b.cpp
 // Compile with /Zc:auto
 template<auto T> class C {}; // C3533

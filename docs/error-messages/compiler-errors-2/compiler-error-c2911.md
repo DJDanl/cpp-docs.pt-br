@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2911
 ms.assetid: 83c7c01a-ab6a-4179-9fb0-289a9ec8d44e
-ms.openlocfilehash: 56977f481a77c1f5865bec5d6ecc01c99d8224cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59061ab8126e3ba45c0b456bb4428652cab8a7e9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408466"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761095"
 ---
 # <a name="compiler-error-c2911"></a>Erro do compilador C2911
 
-'member': não pode ser declarada ou definida no escopo atual
+' member ': não pode ser declarado ou definido no escopo atual
 
-Dentro de um namespace, classe ou função, você pode definir apenas um membro do mesmo namespace, classe ou da função ou um membro que é colocado entre o mesmo namespace, classe ou função.
+Dentro de um namespace, classe ou função, você só pode definir um membro do mesmo namespace, classe ou função ou um membro que esteja incluído no mesmo namespace, classe ou função.
 
 O exemplo a seguir gera C2911:
 
-```
+```cpp
 // C2911.cpp
 struct A;
 

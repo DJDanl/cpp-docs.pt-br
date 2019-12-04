@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3072
 ms.assetid: cdd5cb6b-c478-4698-adfa-c40188d34a18
-ms.openlocfilehash: 2b76fa91d739e9cc89251aaf56aa9b196e62a68d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8fe0802a7529551fce1c0b7242c867db52d8842
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406724"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756754"
 ---
 # <a name="compiler-error-c3072"></a>Erro do compilador C3072
 
-o operador 'operator' não pode ser aplicado a uma instância de uma classe ref
+operador "Operator" não pode ser aplicado a uma instância de uma ref class
 
-usar o operador unário '`operator` ' operador para converter uma instância de uma classe de referência para um tipo de identificador
+usar o operador '`operator` ' unário para converter uma instância de uma ref class em um tipo de identificador
 
-Um tipo CLR requer operadores CLR, não os operadores nativos (ou padrão).  Para obter mais informações, consulte [operador de referência de acompanhamento](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
+Um tipo CLR requer operadores CLR, não operadores nativos (ou padrão).  Para obter mais informações, consulte [Control Reference Operator](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3072.
 
-```
+```cpp
 // C3072.cpp
 // compile with: /clr
 ref class R {};
