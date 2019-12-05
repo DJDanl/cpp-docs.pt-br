@@ -1,35 +1,39 @@
 ---
-title: Compilador aviso (nível 4) C4437
+title: Aviso do compilador (nível 4) C4437
 ms.date: 11/04/2016
+f1_keywords:
+- C4437
+helpviewer_keywords:
+- C4437
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-ms.openlocfilehash: 9ff52ae6d10f7d4ba429bbf3457a2a6b969998d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cd50d5c4d79b82c135ab4e84ec390dee9e906ef
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391459"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810649"
 ---
-# <a name="compiler-warning-level-4-c4437"></a>Compilador aviso (nível 4) C4437
+# <a name="compiler-warning-level-4-c4437"></a>Aviso do compilador (nível 4) C4437
 
-dynamic_cast da base virtual 'class1' para 'class2' pode falhar em alguns contextos de compilação com/vd2 ou defina 'class2' #pragma vtordisp(2) em vigor
+dynamic_cast da base virtual ' class1 ' para ' class2 ' poderia falhar em alguns contextos compilados com/vd2 ou definir ' class2 ' com #pragma vtordisp (2) em vigor
 
-Esse aviso é desativado por padrão. Ver [compilador avisos que são desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.
+Esse aviso está desativado por padrão. Consulte [os avisos do compilador que estão desativados por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.
 
-O compilador encontrou uma `dynamic_cast` operação com as seguintes características.
+O compilador encontrou uma operação de `dynamic_cast` com as seguintes características.
 
 - A conversão é de um ponteiro de classe base para um ponteiro de classe derivada.
 
-- Virtualmente, a classe derivada herda a classe base.
+- A classe derivada herda virtualmente a classe base.
 
-- A classe derivada não tem um `vtordisp` campo para a base virtual.
+- A classe derivada não tem um campo `vtordisp` para a base virtual.
 
-- A conversão não for encontrada em um construtor ou destruidor da classe derivada, ou alguma classe que ainda mais herda da classe derivada (caso contrário, aviso do compilador C4436 será emitido).
+- A conversão não é encontrada em um construtor ou destruidor da classe derivada, ou alguma classe que herda mais da classe derivada (caso contrário, o aviso do compilador C4436 será emitido).
 
-O aviso indica que o `dynamic_cast` pode não executar corretamente se estiver funcionando em um objeto parcialmente construído.  Essa situação ocorre quando a função é chamada de um construtor ou destruidor de uma classe que herda da classe derivada que é chamada no aviso.  Se a classe derivada que é chamada no aviso nunca é ainda mais derivado, ou função não é chamada durante a construção de objeto ou destruição, o aviso pode ser ignorado.
+O aviso indica que a `dynamic_cast` pode não ser executada corretamente se estiver operando em um objeto parcialmente construído.  Essa situação ocorre quando a função delimitadora é chamada de um construtor ou destruidor de uma classe que herda a classe derivada nomeada no aviso.  Se a classe derivada nomeada no aviso nunca for mais derivada ou se a função de circunscrição não for chamada durante a construção ou destruição do objeto, o aviso poderá ser ignorado.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C4437 e demonstra o problema de geração de código que surge da ausentes `vtordisp` campo.
+O exemplo a seguir gera C4437 e demonstra o problema de geração de código que ocorre no campo `vtordisp` ausente.
 
 ```cpp
 // C4437.cpp

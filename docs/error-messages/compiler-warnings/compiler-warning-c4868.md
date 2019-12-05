@@ -3,31 +3,33 @@ title: Aviso do compilador C4868
 ms.date: 10/26/2017
 f1_keywords:
 - C4868
+helpviewer_keywords:
+- C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-ms.openlocfilehash: 72700091fcd22271e6913228a1206b3d5efcbdef
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: c1d49eb61a5c7c47fa83dacb39ed50f42e0fb147
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447170"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810483"
 ---
-# <a name="compiler-warning-level-4-c4868"></a>(Nível 4) de aviso do compilador C4868
+# <a name="compiler-warning-level-4-c4868"></a>Aviso do compilador (nível 4) C4868
 
-> '_arquivo_(*line_number*)' compilador não pode impor a ordem de avaliação da esquerda para a direita na lista de inicializadores entre chaves
+> o compilador '_File_(*line_number*) ' não pode impor a ordem de avaliação da esquerda para a direita na lista de inicializadores de chaves
 
-Os elementos de uma lista de inicializadores entre chaves devem ser avaliados em ordem da esquerda para a direita. Há dois casos em que o compilador é capaz de garantir nesta ordem: a primeira é quando alguns dos elementos são objetos passados por valor; o segundo é ao compilar com `/clr` e alguns dos elementos são campos de objetos ou elementos da matriz. Quando o compilador não pode garantir a avaliação da esquerda para a direita, ele emitirá o aviso C4868.
+Os elementos de uma lista de inicializadores entre chaves devem ser avaliados na ordem da esquerda para a direita. Há dois casos em que o compilador não pode garantir esse pedido: o primeiro é quando alguns dos elementos são objetos passados por valor; a segunda é quando se compila com `/clr` e alguns dos elementos são campos de objetos ou são elementos de matriz. Quando o compilador não pode garantir a avaliação da esquerda para a direita, ele emite o aviso C4868.
 
-Esse aviso pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para Visual Studio 2015 atualização 2. O código compilado antes do Visual Studio 2015 atualização 2 agora pode gerar C4868.
+Esse aviso pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio 2015 atualização 2. O código que compilou antes do Visual Studio 2015 atualização 2 agora pode gerar C4868.
 
-Esse aviso é desativado por padrão. Use `/Wall` para ativar esse aviso.
+Esse aviso está desativado por padrão. Use `/Wall` para ativar este aviso.
 
-Para resolver este aviso, considere se a avaliação da esquerda para a direita dos elementos de lista de inicializador é necessária, como quando a avaliação dos elementos pode produzir efeitos colaterais depende da ordem. Em muitos casos, a ordem na qual os elementos são avaliados não tem efeito observável.
+Para resolver esse aviso, primeiro considere se a avaliação da esquerda para a direita dos elementos da lista de inicializadores é necessária, por exemplo, quando a avaliação dos elementos pode produzir efeitos colaterais dependentes de ordem. Em muitos casos, a ordem na qual os elementos são avaliados não tem um efeito observável.
 
-Se a ordem de avaliação deve ser esquerda para a direita, considere se é possível passar os elementos por `const` de referência em vez disso. Uma alteração de como isso elimina o aviso no exemplo de código a seguir.
+Se a ordem de avaliação deve ser da esquerda para a direita, considere se é possível passar os elementos por `const` referência em vez disso. Uma alteração como essa elimina o aviso no exemplo de código a seguir.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo gera C4868 e mostra uma maneira de corrigir isso:
+Este exemplo gera C4868 e mostra uma maneira de corrigi-lo:
 
 ```cpp
 // C4868.cpp
