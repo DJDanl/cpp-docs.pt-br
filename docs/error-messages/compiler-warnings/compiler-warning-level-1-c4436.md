@@ -1,33 +1,37 @@
 ---
-title: Compilador aviso (nível 1) C4436
+title: Aviso do compilador (nível 1) C4436
 ms.date: 11/04/2016
+f1_keywords:
+- C4436
+helpviewer_keywords:
+- C4436
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-ms.openlocfilehash: 487fb8c804ac34ba52661774c2552199c764f6b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 762a458072a0a1104cd1af55ef1f61772485b6c9
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408180"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810617"
 ---
-# <a name="compiler-warning-level-1-c4436"></a>Compilador aviso (nível 1) C4436
+# <a name="compiler-warning-level-1-c4436"></a>Aviso do compilador (nível 1) C4436
 
-dynamic_cast da base virtual 'class1' para 'class2' no construtor ou destruidor poderia falhar com o objeto parcialmente construído Compile com/vd2 ou defina 'class2' #pragma vtordisp(2) em vigor
+dynamic_cast da base virtual ' class1 ' para ' class2 ' no construtor ou destruidor pode falhar com a compilação de objeto parcialmente construída com/vd2 ou definir ' class2 ' com #pragma vtordisp (2) em vigor
 
-O compilador encontrou uma `dynamic_cast` operação com as seguintes características.
+O compilador encontrou uma operação de `dynamic_cast` com as seguintes características.
 
 - A conversão é de um ponteiro de classe base para um ponteiro de classe derivada.
 
-- Virtualmente, a classe derivada herda a classe base.
+- A classe derivada herda virtualmente a classe base.
 
-- A classe derivada não tem um `vtordisp` campo para a base virtual.
+- A classe derivada não tem um campo `vtordisp` para a base virtual.
 
-- A conversão for encontrada em um construtor ou destruidor da classe derivada, ou alguma classe que ainda mais herda da classe derivada.
+- A conversão é encontrada em um construtor ou destruidor da classe derivada, ou alguma classe que herda mais da classe derivada.
 
-O aviso indica a `dynamic_cast` pode não executar corretamente, se ele está operando em um objeto parcialmente construído.  Isso acontece se o construtor/destruidor derivado está operando em um Subobjeto do algum objeto mais derivado.  Se a classe derivada chamada no aviso nunca é ainda mais derivado, o aviso pode ser ignorado.
+O aviso indica que o `dynamic_cast` pode não ser executado corretamente, se estiver operando em um objeto parcialmente construído.  Isso acontece se o construtor/destruidor derivado estiver operando em um subobjeto de um objeto derivado adicional.  Se a classe derivada nomeada no aviso nunca for mais derivada, o aviso poderá ser ignorado.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C4436 e demonstra o problema de geração de código que surge da ausentes `vtordisp` campo.
+O exemplo a seguir gera C4436 e demonstra o problema de geração de código que ocorre no campo `vtordisp` ausente.
 
 ```cpp
 // C4436.cpp

@@ -1,17 +1,17 @@
 ---
 title: Visão geral do desenvolvimento em C++ no Visual Studio
 description: O IDE do Visual Studio é compatível com o desenvolvimento de C++ no Windows, Linux, Android e iOS com um editor de código, um depurador, estruturas de teste, analisadores estáticos e outras ferramentas de programação.
-ms.date: 03/08/2019
+ms.date: 12/02/2019
 helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 54ed590122f1eb914ff039378914a1fd4adc5f10
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
-ms.translationtype: HT
+ms.openlocfilehash: d72ea2ab4fa83259152101b357c6b2b69e74c723
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182896"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810630"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Visão geral do desenvolvimento em C++ no Visual Studio
 
@@ -29,13 +29,13 @@ O Visual Studio dá suporte a qualquer sistema de projeto ou ferramenta de build
 
    ::: moniker range="vs-2019"
 
-   ![Novos Modelos de Projeto](../build/media/mathclient-project-name-2019.png "Caixa de diálogo \"Novo projeto\" do Visual Studio 2019")
+   ![Novos modelos de projeto](../build/media/mathclient-project-name-2019.png "Caixa de diálogo novo projeto do Visual Studio 2019")
 
    ::: moniker-end
 
    ::: moniker range="<=vs-2017"
 
-   ![Modelos de projeto](media/vs2017-new-project.png "Caixa de diálogo \"Novo projeto\" do Visual Studio 2017")
+   ![Modelos de projeto](media/vs2017-new-project.png "Caixa de diálogo novo projeto do Visual Studio 2017")
 
    ::: moniker-end
 
@@ -71,15 +71,15 @@ Use o gerenciador de pacotes [vcpkg](../build/vcpkg.md) para obter e instalar bi
 
 Se o programa tiver uma interface do usuário, você poderá usar um designer para populá-lo rapidamente com controles como botões, caixas de listagem e assim por diante. Ao arrastar um controle da janela de ferramentas e soltá-lo na superfície de design, o Visual Studio gerará os recursos e o código necessários para fazer tudo funcionar. Em seguida, você escreverá o código para personalizar a aparência e o comportamento.
 
-![Designer e Caixa de Ferramentas](media/vs2017-toolbox-designer.png "Designer e Caixa de Ferramentas do Visual Studio 2017")
+![Designer e caixa de ferramentas](media/vs2017-toolbox-designer.png "Designer e caixa de ferramentas do Visual Studio 2017")
 
-Para obter mais informações sobre como criar uma interface do usuário para um aplicativo da Plataforma Universal do Windows, confira [Design e interface do usuário](https://developer.microsoft.com/windows/design).
+Para obter mais informações sobre como criar uma interface do usuário para um aplicativo Plataforma Universal do Windows, consulte [design e IU](https://developer.microsoft.com/windows/design).
 
 Para obter mais informações sobre como criar uma interface do usuário para um aplicativo MFC, confira [Aplicativos da área de trabalho do MFC](../mfc/mfc-desktop-applications.md). Para obter informações sobre programas Windows Win32, confira [Aplicativos da área de trabalho do Windows](../windows/windows-desktop-applications-cpp.md).
 
 ## <a name="write-code"></a>Escrever código
 
-Depois que você cria um projeto, todos os arquivos de projeto são exibidos na janela **Gerenciador de Soluções**. Uma *solução* é um contêiner lógico para um ou mais projetos relacionados. Quando você clica em um arquivo .h ou .cpp no **Gerenciador de Soluções**, o arquivo é aberto no editor de códigos.
+Depois que você cria um projeto, todos os arquivos de projeto são exibidos na janela **Gerenciador de Soluções**. (Uma *solução* é um contêiner lógico para um ou mais projetos relacionados.) Quando você clica em um arquivo. h ou. cpp em **Gerenciador de soluções**, o arquivo é aberto no editor de código.
 
 ![Gerenciador de Soluções e editor de código](media/vs2017-solution-explorer-code-editor.png "Gerenciador de Soluções e editor de código do Visual Studio 2017")
 
@@ -87,33 +87,31 @@ O editor de códigos é um processador de texto especializado para código-fonte
 
 ## <a name="add-and-edit-resources"></a>Adicionar e editar recursos
 
-O termo *recurso* inclui itens como caixas de diálogo, ícones, imagens, cadeias de caracteres localizáveis, telas iniciais, cadeias de conexão de banco de dados ou dados arbitrários que você deseja incluir no arquivo executável.
-
-Para obter mais informações sobre como adicionar e editar recursos em projetos do C++ da área de trabalho nativos, confira [Trabalhando com arquivos de recurso](../windows/working-with-resource-files.md).
+Um programa ou DLL do Windows geralmente inclui alguns *recursos*, como caixas de diálogo, ícones, imagens, cadeias de caracteres localizáveis, telas de abertura, cadeias de conexão de banco de dados ou qualquer dado arbitrário. O Visual Studio inclui ferramentas para adicionar e editar recursos. Para obter mais informações, consulte [trabalhando com arquivos de recursos](../windows/working-with-resource-files.md).
 
 ## <a name="build-compile-and-link"></a>Build (compilar e vincular)
 
-Escolha **Build** > **Compilar Solução** na barra de menus ou insira a combinação de teclas Ctrl+Shift+B para compilar e vincular um projeto. Os avisos e os erros de build são relatados na Lista de Erros (Ctrl+\\, E). A janela de **Saída** (Alt+2) mostra informações sobre o processo de build.
+Escolha **compilar** > **criar solução** na barra de menus ou insira a combinação de teclas **Ctrl + Shift + B** para compilar e vincular um projeto. Erros e avisos de compilação são relatados no Lista de Erros (**Ctrl +\\, E**). A janela **saída** (**ALT + 2**) mostra informações sobre o processo de compilação.
 
-![Lista de Erros e Janela de Saída](media/vs2017-output-error-list.png "Janela de Saída e Lista de Erros do Visual Studio 2017")
+![Janela de Saída e Lista de Erros](media/vs2017-output-error-list.png "Janela de saída do Visual Studio 2017 e Lista de Erros")
 
 Para saber mais sobre como configurar builds, confira [Como trabalhar com Propriedades de Projeto](../build/working-with-project-properties.md) e [Projetos e sistemas de build](../build/projects-and-build-systems-cpp.md).
 
 Use também o compilador (cl.exe) e muitas outras ferramentas autônomas relacionadas a build, como NMAKE e LIB, diretamente na linha de comando. Para obter mais informações, confira [Compilar o código C/C++ na linha de comando](../build/building-on-the-command-line.md) e [Referência de build do C/C++](../build/reference/c-cpp-building-reference.md).
 
-## <a name="debug"></a>Depurar
+## <a name="debug"></a>Depuração
 
-É possível iniciar a depuração pressionando **F5**. A execução pausa em qualquer ponto de interrupção que você tiver definido. Também é possível executar o código em etapas, exibir os valores de variáveis ou de registros especificados e, em alguns casos, até mesmo fazer alterações no código e continuar a depuração sem a recompilação. A ilustração a seguir mostra uma sessão de depuração em que a execução é pausada no ponto de interrupção. Os valores dos membros da estrutura de dados são visíveis na **janela Inspeção**.
+É possível iniciar a depuração pressionando **F5**. A execução pausa em todos os pontos de interrupção que você definiu (pressionando **F9**). Você também pode percorrer o código uma linha por vez (**F10**), exibir os valores das variáveis ou dos registros e, mesmo em alguns casos, fazer alterações no código e continuar a depuração sem precisar compilá-la novamente. A ilustração a seguir mostra uma sessão de depuração em que a execução é pausada no ponto de interrupção. Os valores dos membros da estrutura de dados são visíveis na **janela Inspeção**.
 
 ![Sessão de depuração](media/vs2017-debug-watch.png "Sessão de depuração do Visual Studio 2017")
 
 Para obter mais informações, consulte [Depuração no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
 
-## <a name="test"></a>Teste
+## <a name="test"></a>{1&gt;Testar&lt;1}
 
 O Visual Studio inclui o Microsoft Unit Test Framework para C++, além de suporte para Boost.Test, Google Test e CTest. Execute os testes na janela do **Gerenciador de Testes**:
 
-![Gerenciador de Testes](media/cpp-test-explorer-passed.png "Gerenciador de Testes do Visual Studio 2017")
+![Gerenciador de Testes](media/cpp-test-explorer-passed.png "Gerenciador de testes do Visual Studio 2017")
 
 Para saber mais, confira [Verificar código usando testes de unidade](/visualstudio/test/unit-test-your-code) e [Gravar testes de unidade para C/C++ no Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp).
 
@@ -125,11 +123,11 @@ O Visual Studio inclui ferramentas de análise de código estático que podem de
 
 É possível implantar os aplicativos tradicionais de área de trabalho e os aplicativos da UWP para os clientes por meio da Microsoft Store. A implantação do CRT é manipulada automaticamente em segundo plano. Para obter mais informações, confira [Publicar aplicativos e jogos do Windows](/windows/uwp/publish/).
 
-Também é possível implantar uma área de trabalho nativa do C++ em outro computador. Para saber mais, confira [Implantar aplicativos da área de trabalho](../windows/deploying-native-desktop-applications-visual-cpp.md).
+Você também pode implantar uma área C++ de trabalho nativa em outro computador. Para obter mais informações, confira [Implantando aplicativos da área de trabalho](../windows/deploying-native-desktop-applications-visual-cpp.md).
 
 Para obter mais informações sobre como implantar um programa do C++/CLI, confira [Guia de Implantação para Desenvolvedores](/dotnet/framework/deployment/deployment-guide-for-developers).
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Explore ainda mais o Visual Studio seguindo um dos seguintes artigos introdutórios:
 
