@@ -5,16 +5,16 @@ f1_keywords:
 - _div64
 helpviewer_keywords:
 - _div64 intrinsic
-ms.openlocfilehash: 1d05c5d6e25540a5de1b2f8231697c9a738759ce
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 59c5eae66f9e93cb88f9512e405376f2ef5f1ceb
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216770"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858016"
 ---
 # <a name="_div64"></a>_div64
 
-O `_div64` intrínseco divide um inteiro de 64 bits por um inteiro de 32 bits. O valor de retorno contém o quociente e o intrínseco retorna o resto por meio de um parâmetro de ponteiro. `_div64`é **específico da Microsoft**.
+O `_div64` intrínseco divide um inteiro de 64 bits por um inteiro de 32 bits. O valor de retorno contém o quociente e o intrínseco retorna o resto por meio de um parâmetro de ponteiro. `_div64` é **específica da Microsoft**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,13 +43,13 @@ Os 32 bits do quociente.
 
 ## <a name="remarks"></a>Comentários
 
-O `_div64` intrínseco divide *dividendo* por *divisor*. Ele armazena o restante no número inteiro de 32 bits apontado por *resto*e retorna os 32 bits do quociente.
+O comparador `_div64` divide *dividendo* por *divisor*. Ele armazena o restante no número inteiro de 32 bits apontado por *resto*e retorna os 32 bits do quociente.
 
 O `_div64` intrínseco está disponível a partir do Visual Studio 2019 RTM.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
-|Intrínseco|Arquitetura|Cabeçalho|
+|Intrinsic|Arquitetura|Cabeçalho|
 |---------------|------------------|------------|
 |`_div64`|x86, x64|\<immintrin.h>|
 

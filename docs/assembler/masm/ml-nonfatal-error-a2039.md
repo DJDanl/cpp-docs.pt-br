@@ -1,26 +1,26 @@
 ---
 title: Erro não fatal A2039 (ML)
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2039
 helpviewer_keywords:
 - A2039
 ms.assetid: ad8cdaae-b20d-45f0-acb1-79880979c6b7
-ms.openlocfilehash: f383de4acb8f8cce236d5357aea7d333e0df9df5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b60ec30055b17707439e798dfff5e0678a3d39e
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177598"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856643"
 ---
 # <a name="ml-nonfatal-error-a2039"></a>Erro não fatal A2039 (ML)
 
 **linha muito longa**
 
-Uma linha do arquivo de origem excedeu o limite de 512 caracteres.
+Uma linha de arquivo de origem excedeu o limite de 512 caracteres.
 
-Se várias linhas físicas são concatenadas com o caractere de continuação de linha (\), a linha lógica resultante é ainda é limitada a 512 caracteres.
+Se várias linhas físicas forem concatenadas com o caractere de continuação de linha (\), a linha lógica resultante ainda estará limitada a 512 caracteres.
 
 ## <a name="see-also"></a>Consulte também
 

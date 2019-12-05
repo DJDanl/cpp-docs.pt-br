@@ -1,36 +1,36 @@
 ---
 title: Erro não fatal A2008 (ML)
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2008
 helpviewer_keywords:
 - A2008
 ms.assetid: ca24157f-c88a-4678-ae06-3bc3cd956001
-ms.openlocfilehash: 7f85a3aabb7b1955cede912168dfc04618b8f2b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 192d82186a58d4e6b534ab5ec65b696d4d7ce3ee
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201973"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856747"
 ---
 # <a name="ml-nonfatal-error-a2008"></a>Erro não fatal A2008 (ML)
 
-**Erro de sintaxe:**
+**erro de sintaxe:**
 
 Um token no local atual causou um erro de sintaxe.
 
-Pode ter ocorrido um dos seguintes:
+Uma das seguintes opções pode ter ocorrido:
 
-- Um prefixo de ponto foi adicionado a ou omitido de uma diretiva.
+- Um prefixo de ponto foi adicionado ou omitido de uma diretiva.
 
-- Uma palavra reservada (como **C** ou **tamanho**) foi usado como um identificador.
+- Uma palavra reservada (como **C** ou **size**) foi usada como um identificador.
 
-- Foi usada uma instrução que não estava disponível com a seleção atual do processador ou coprocessador.
+- Foi usada uma instrução que não estava disponível com a seleção de processador ou coprocessador atual.
 
-- Um operador de tempo de execução de comparação (como `==`) foi usado em uma instrução condicional de assembly em vez de um operador relacional (como [EQ](../../assembler/masm/operator-eq.md)).
+- Um operador de tempo de execução de comparação (como `==`) foi usado em uma instrução de assembly condicional em vez de um operador relacional (como [EQ](../../assembler/masm/operator-eq.md)).
 
-- Uma instrução ou uma diretiva foi atribuída a operandos insuficientes.
+- Uma instrução ou diretiva recebeu poucos operandos.
 
 - Uma diretiva obsoleta foi usada.
 
