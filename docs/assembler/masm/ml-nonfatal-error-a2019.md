@@ -1,26 +1,26 @@
 ---
 title: Erro não fatal A2019 (ML)
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2019
 helpviewer_keywords:
 - A2019
 ms.assetid: 7dff209b-6d91-4e39-88a3-5d6329bac537
-ms.openlocfilehash: 48a80c643bb42ce39df00297c7f5579445c99df9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23412ccd6dc84d889b62acfb4ba09cb1bde8b82a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201930"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856721"
 ---
 # <a name="ml-nonfatal-error-a2019"></a>Erro não fatal A2019 (ML)
 
-**operando deve ser o tipo de registro ou campo**
+**o operando deve ser um tipo ou campo de registro**
 
-O seguinte operando a [largura](../../assembler/masm/operator-width.md) ou [MÁSCARA](../../assembler/masm/operator-mask.md) operador não era válido.
+O operando após o operador [Width](../../assembler/masm/operator-width.md) ou [Mask](../../assembler/masm/operator-mask.md) não era válido.
 
-O [largura](../../assembler/masm/operator-width.md) operador usa um operando que é o nome de um campo ou um registro. O [MÁSCARA](../../assembler/masm/operator-mask.md) operador usa um operando que é o nome de um campo ou um tipo de registro.
+O operador de [largura](../../assembler/masm/operator-width.md) usa um operando que é o nome de um campo ou registro. O operador [Mask](../../assembler/masm/operator-mask.md) usa um operando que é o nome de um campo ou um tipo de registro.
 
 ## <a name="see-also"></a>Consulte também
 
