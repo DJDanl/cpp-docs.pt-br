@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: 9d5b8cc3e3ce6445e021163df5301a38aab2c514
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: 98662dc0b5439c1f8857e4f2ad259793a4d03e41
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683337"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898770"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Aviso do compilador (nível 3) C4996
 
@@ -23,7 +23,7 @@ Seu código usa uma função, membro de classe, variável ou TypeDef marcado com
 
 ## <a name="remarks"></a>Comentários
 
-Muitas funções, funções de membro, funções de modelo e variáveis globais em bibliotecas do Visual Studio são *preteridas*. Algumas, como as funções POSIX, são preteridas porque têm um nome preferencial diferente. Algumas funções de biblioteca de tempo de execução C são preteridas porque não são seguras e têm uma variante mais segura. Outras foram preteridas porque estão obsoletas. As mensagens de substituição geralmente incluem uma substituição sugerida para a função preterida ou a variável global.
+Muitas funções, funções de membro, funções de modelo e variáveis globais em bibliotecas do Visual Studio são *preteridas*. Alguns, como o POSIX e as funções específicas da Microsoft, são preteridos porque agora têm um nome preferencial diferente. Algumas funções de biblioteca de tempo de execução C são preteridas porque não são seguras e têm uma variante mais segura. Outras foram preteridas porque estão obsoletas. As mensagens de substituição geralmente incluem uma substituição sugerida para a função preterida ou a variável global.
 
 ## <a name="turn-off-the-warning"></a>Desativar o aviso
 
@@ -61,9 +61,9 @@ Aqui estão algumas das fontes comuns de erros e avisos do C4996:
 
 **O nome POSIX deste item foi preterido. Em vez disso, use o ISO C++ C e o nome compatível:** *New-Name*. **Consulte a ajuda online para obter detalhes.**
 
-A Microsoft renomeou algumas funções POSIX no CRT para estar em conformidade com as regras C99 e C++ 03 para nomes de funções globais definidas pela implementação. Somente os nomes são preteridos, e não as próprias funções. Na maioria dos casos, um sublinhado à esquerda foi adicionado ao nome da função POSIX para criar um nome de conformidade de padrões. O compilador emite um aviso de reprovação para o nome da função original e sugere o nome preferencial.
+A Microsoft renomeou algumas funções de biblioteca POSIX e específicas da Microsoft no CRT para estar em conformidade com as restrições C99 e C++ 03 em nomes reservados e globais definidos pela implementação. *Somente os nomes são preteridos, e não as próprias funções*. Na maioria dos casos, um sublinhado à esquerda foi adicionado ao nome da função para criar um nome de conformidade. O compilador emite um aviso de reprovação para o nome da função original e sugere o nome preferencial.
 
-Para corrigir esse problema, geralmente recomendamos que você altere seu código para usar os nomes de função sugeridos. No entanto, os nomes atualizados são específicos da Microsoft. Se precisar usar os nomes de função existentes para motivos de portabilidade, você poderá desativar esses avisos. As funções POSIX ainda estão disponíveis na biblioteca com seus nomes originais.
+Para corrigir esse problema, geralmente recomendamos que você altere seu código para usar os nomes de função sugeridos. No entanto, os nomes atualizados são específicos da Microsoft. Se precisar usar os nomes de função existentes para motivos de portabilidade, você poderá desativar esses avisos. As funções ainda estão disponíveis na biblioteca com seus nomes originais.
 
 Para desativar os avisos de substituição para essas funções, defina a macro de pré-processador **\_CRT\_NONSTDC\_nenhum aviso de\_** . Você pode definir essa macro na linha de comando, incluindo a opção `/D_CRT_NONSTDC_NO_WARNINGS`.
 

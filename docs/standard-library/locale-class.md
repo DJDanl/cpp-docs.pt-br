@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a11f5bf7e8c280da3ba2cae82cf355a3b28c0577
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890164"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898838"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -108,7 +108,7 @@ messages<char>
 messages<wchar_t>
 ```
 
-(A última categoria é exigida pela Posix, mas não pelo C Standard.)
+(A última categoria é exigida pelo POSIX, mas não pelo padrão C.)
 
 Algumas dessas facetas predefinidas são usadas pelas classes `iostream`, para controlar a conversão de valores numéricos de e para sequências de texto.
 
@@ -120,7 +120,7 @@ Nessa implementação, também é possível chamar a função membro estática:
 static locale empty();
 ```
 
-para construir um objeto de localidade que não tenha nenhuma faceta. Também é uma localidade transparente. Se as funções de modelo [has_facet](../standard-library/locale-functions.md#has_facet) e [use_facet](../standard-library/locale-functions.md#use_facet) não puderem localizar a faceta solicitada em uma localidade transparente, elas consultarão primeiro a localidade global e, em seguida, se isso for transparente, a localidade clássica. Portanto, você pode escrever:
+para construir um objeto de localidade que não tenha nenhuma faceta. Também é uma localidade transparente. Se o modelo funcionar [has_facet](../standard-library/locale-functions.md#has_facet) e [use_facet](../standard-library/locale-functions.md#use_facet) não conseguir localizar a faceta solicitada em uma localidade transparente, eles consultarão primeiro a localidade global e, em seguida, se isso for transparente, a localidade clássica. Portanto, você pode escrever:
 
 ```cpp
 cout.imbue(locale::empty());
@@ -138,7 +138,7 @@ cout.imbue(loc);
 
 As regras de formatação numérica para inserções subsequentes em `cout` permanecem iguais as da localidade C, mesmo que a localidade global forneça regras que se modificam para inserção de valores monetários e de data.
 
-### <a name="constructors"></a>Construtores
+### <a name="constructors"></a>{1&gt;Construtores&lt;1}
 
 |Construtor|Descrição|
 |-|-|
@@ -175,12 +175,12 @@ As regras de formatação numérica para inserções subsequentes em `cout` perm
 
 ### <a name="classes"></a>Classes
 
-|Class|Descrição|
+|Classe|Descrição|
 |-|-|
 |[facet](#facet_class)|Uma classe que serve como a classe base para todas as facetas de localidade.|
 |[`id`](#id_class)|A classe do membro fornece uma identificação exclusiva da faceta usada como um índice para procurar facetas em uma localidade.|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 **Cabeçalho:** \<locale>
 
@@ -224,7 +224,7 @@ Dois valores mais úteis são:
 
 - `all`, correspondente à União C de todas as categorias LC_ALL
 
-Você pode representar um grupo arbitrário de categorias usando `OR` com essas constantes, como em `monetary` &#124;`time`.
+Você pode representar um grupo arbitrário de categorias usando `OR` com essas constantes, como em `monetary` &#124; `time`.
 
 ## <a name="classic"></a>  locale::classic
 
@@ -292,12 +292,12 @@ locale combine(const locale& source_locale) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *source_locale*
+*source_locale*\
 A localidade que contém a faceta a ser inserida na localidade de destino.
 
 ### <a name="return-value"></a>Valor retornado
 
-A função member retorna um objeto Locale que substitui ou adiciona a **\*essa** faceta `Facet` listada em *source_locale*.
+A função membro retorna um objeto Locale que substitui ou adiciona a **\*essa** faceta `Facet` listada em *source_locale*.
 
 ### <a name="example"></a>Exemplo
 
@@ -360,7 +360,7 @@ static locale global(const locale& new_default_locale);
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *new_default_locale*
+*new_default_locale*\
 A localidade a ser usada como localidade padrão pelo programa.
 
 ### <a name="return-value"></a>Valor retornado
@@ -437,19 +437,19 @@ locale(const locale& from_locale, const Facet* new_facet);
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *locale_name*
+*locale_name*\
 Nome de uma localidade.
 
-\ *from_locale*
+*from_locale*\
 Uma localidade que deve ser copiada ao construir uma nova localidade.
 
-*Outros* \
+*Outros*\
 Uma localidade da qual se deve selecionar uma categoria.
 
-\ *new_category*
+*new_category*\
 A categoria a ser substituída na localidade construída.
 
-\ *new_facet*
+*new_facet*\
 A faceta a ser substituída na localidade construída.
 
 ### <a name="remarks"></a>Comentários
@@ -468,7 +468,7 @@ Substitui de `locale(locale_name, all)` as facetas correspondentes a uma categor
 
 `template<class Facet> locale(const locale& from_locale, Facet* new_facet);`
 
-Substitui (ou adiciona) ao *from_locale* da faceta *new_facet*, se *new_facet* não for um ponteiro nulo.
+Substitui (ou adiciona) à *from_locale* da faceta *new_facet*, se *new_facet* não for um ponteiro nulo.
 
 Se o nome da localidade *locale_name* for um ponteiro nulo ou for inválido, a função lançará [runtime_error](../standard-library/runtime-error-class.md).
 
