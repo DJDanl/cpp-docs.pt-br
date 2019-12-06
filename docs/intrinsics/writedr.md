@@ -6,14 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __writedr intrinsic
 ms.assetid: ac55c1ee-df2f-41d4-a429-6f369d2a934d
-ms.openlocfilehash: 715ef7432d506c2758c9c3da913e9c0ebb24e13f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 473e7223e9974d0125e772c152ea85ae90b97342
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219228"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858055"
 ---
 # <a name="__writedr"></a>__writedr
+
+**Seção específica da Microsoft**
 
 Grava o valor especificado para o registro de depuração especificado.
 
@@ -26,27 +28,27 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue); /* x64 */
 
 ### <a name="parameters"></a>Parâmetros
 
-*DebugRegister*\
+\ *DebugRegister*
 no Um número de 0 a 7 que identifica o registro de depuração.
 
-*Debugvalue*\
+\ *debugvalue*
 no Um valor a ser gravado no registro de depuração.
 
 ## <a name="remarks"></a>Comentários
 
 Esses intrínsecos estão disponíveis apenas no modo kernel, e as rotinas estão disponíveis somente como intrínsecas.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
-|Intrínseco|Arquitetura|
+|Intrinsic|Arquitetura|
 |---------------|------------------|
 |`__writedr`|x86, x64|
 
-**Arquivo de cabeçalho** \<> intrin. h
+**Arquivo de cabeçalho** \<intrin. h >
 
 **Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
-[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)\
+\ [intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)
 [__readdr](../intrinsics/readdr.md)

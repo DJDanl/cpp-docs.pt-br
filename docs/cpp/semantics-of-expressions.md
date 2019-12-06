@@ -7,16 +7,16 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6770d3fb314222c7c58b6b97fa42d74cbc1e9b33
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331193"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857314"
 ---
 # <a name="semantics-of-expressions"></a>Semântica de expressões
 
-As expressões são avaliadas de acordo com a precedência e o agrupamento dos respectivos operadores. ([Operator Precedence and Associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md) na [convenções lexicais](../cpp/lexical-conventions.md), mostra as relações do C++ impõem de operadores em expressões.)
+As expressões são avaliadas de acordo com a precedência e o agrupamento dos respectivos operadores. ([Precedência de operador e Associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md) em [convenções lexicais](../cpp/lexical-conventions.md), mostra as C++ relações que os operadores impõem em expressões.)
 
 ## <a name="order-of-evaluation"></a>Ordem de avaliação
 
@@ -43,8 +43,8 @@ int main()
 54
 ```
 
-![Ordem de avaliação em uma expressão](../cpp/media/vc38zv1.gif "ordem de avaliação em uma expressão") <br/>
-Ordem de avaliação de expressão
+![Ordem de avaliação em uma expressão](../cpp/media/vc38zv1.gif "Ordem de avaliação em uma expressão") <br/>
+Expressão-ordem de avaliação
 
 A ordem na qual a expressão mostrada na figura acima é avaliada é determinada pela precedência e associatividade dos operadores:
 
@@ -52,27 +52,27 @@ A ordem na qual a expressão mostrada na figura acima é avaliada é determinada
 
 1. A adição (+) tem a precedência mais alta a seguir, de modo que `a` é adicionado ao produto de `b` vezes `c`.
 
-1. O deslocamento à esquerda (<<) tem a precedência mais baixa na expressão, mas há duas ocorrências. Como o operador de deslocamento para a esquerda é agrupado da esquerda para a direita, a subexpressão à esquerda é avaliada primeiro, seguida pela subexpressão à direita.
+1. SHIFT esquerda (< <) tem a menor precedência na expressão, mas há duas ocorrências. Como o operador de deslocamento para a esquerda é agrupado da esquerda para a direita, a subexpressão à esquerda é avaliada primeiro, seguida pela subexpressão à direita.
 
 Quando são usados parênteses para agrupar as subexpressões, eles alteram a precedência e também a ordem em que a expressão é avaliada, conforme mostra a figura a seguir.
 
-![Ordem de avaliação de expressão com parênteses](../cpp/media/vc38zv2.gif "ordem de avaliação de expressão com parênteses") <br/>
-Ordem de avaliação da expressão com parênteses
+![Ordem de avaliação da expressão com parênteses](../cpp/media/vc38zv2.gif "Ordem de avaliação da expressão com parênteses") <br/>
+Expressão-ordem de avaliação com parênteses
 
 Expressões como as da figura acima são avaliadas apenas por seus efeitos colaterais — nesse caso, para transferir informações para o dispositivo de saída padrão.
 
 ## <a name="notation-in-expressions"></a>Notação em expressões
 
-A linguagem C++ especifica determinadas compatibilidades ao especificar operandos. A tabela a seguir mostra os tipos de operandos aceitáveis aos operadores que exigem operandos do tipo *tipo*.
+A linguagem C++ especifica determinadas compatibilidades ao especificar operandos. A tabela a seguir mostra os tipos de operandos aceitáveis para operadores que exigem operandos *do tipo Type.*
 
 ### <a name="operand-types-acceptable-to-operators"></a>Tipos de operandos aceitáveis para operadores
 
 |Tipo esperado|Tipos permitidos|
 |-------------------|-------------------|
-|*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|
-|*type* \*|*type* \*<br /> `const` *type* \*<br /> `volatile` *type* \*<br /> `volatile const` *type* \*|
-|`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|
-|`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|
+|*type*|*tipo* de `const`<br /> *tipo* de `volatile`<br /> *tipo*&<br /> *tipo* de `const`&<br /> *tipo* de `volatile`&<br /> *tipo* de `volatile const`<br /> *tipo* de `volatile const`&|
+|*tipo* \*|*tipo* \*<br /> `const` *tipo* \*<br /> `volatile` *tipo* \*<br /> `volatile const` *tipo* \*|
+|*tipo* de `const`|*type*<br /> *tipo* de `const`<br />*tipo* de `const`&|
+|*tipo* de `volatile`|*type*<br /> *tipo* de `volatile`<br /> *tipo* de `volatile`&|
 
 Como as regras acima podem sempre ser usadas em conjunto, um ponteiro const para um objeto volatile pode ser fornecido onde um ponteiro é esperado.
 
@@ -88,15 +88,15 @@ func( i, ++i );
 
 A linguagem C++ não garante a ordem de avaliação dos argumentos para uma chamada de função. Portanto, no exemplo anterior, `func` pode receber os valores 7 e 8 ou 8 e 8 para seus parâmetros, dependendo se os parâmetros são avaliados da esquerda para a direita ou da direita para a esquerda.
 
-## <a name="c-sequence-points-microsoft-specific"></a>Pontos de sequência do C++ (Specific da Microsoft)
+## <a name="c-sequence-points-microsoft-specific"></a>C++pontos de sequência (específicos da Microsoft)
 
 Uma expressão pode modificar o valor de um objeto apenas uma vez entre "pontos de sequência" consecutivos.
 
 No momento, a definição da linguagem C++ não especifica pontos de sequência. O Microsoft C++ usa os mesmos pontos de sequência que o ANSI C para qualquer expressão que envolva operadores de C e não envolva operadores sobrecarregados. Quando os operadores estão sobrecarregados, a semântica muda de sequenciamento de operadores para sequenciamento de chamada de funções. O Microsoft C++ os seguintes pontos de sequência:
 
-- Deixado operando do operador AND lógico (& &). O operando esquerdo do operador AND lógico é completamente avaliado e todos os efeitos colaterais são concluídos antes de continuar. Não há nenhuma garantia de que o operando direito do operador AND lógico será avaliado.
+- Operando esquerdo do operador AND lógico (& &). O operando esquerdo do operador AND lógico é completamente avaliado e todos os efeitos colaterais são concluídos antes de continuar. Não há nenhuma garantia de que o operando direito do operador AND lógico será avaliado.
 
-- Operando do operador OR lógico à esquerda (&#124;&#124;). O operando esquerdo do operador OR lógico é completamente avaliado e todos os efeitos colaterais são concluídos antes de continuar. Não há nenhuma garantia de que o operando direito do operador OR lógico será avaliado.
+- Operando esquerdo do operador OR lógico (&#124;&#124;). O operando esquerdo do operador OR lógico é completamente avaliado e todos os efeitos colaterais são concluídos antes de continuar. Não há nenhuma garantia de que o operando direito do operador OR lógico será avaliado.
 
 - Operando esquerdo do operador vírgula O operando esquerdo do operador vírgula é completamente avaliado e todos os efeitos colaterais são concluídos antes de continuar. Os dois operandos do operador vírgula são sempre avaliados.
 
@@ -106,7 +106,7 @@ No momento, a definição da linguagem C++ não especifica pontos de sequência.
 
 - O término de uma expressão de inicialização completa, por exemplo, o término de uma inicialização em uma instrução de declaração.
 
-- A expressão em uma instrução de expressão. As instruções da expressão consistem em uma expressão opcional seguida por um ponto e vírgula (;). A expressão é completamente avaliada em relação a seus efeitos colaterais.
+- A expressão em uma instrução de expressão. As instruções da expressão consistem de uma expressão opcional seguida por um ponto e vírgula (;). A expressão é completamente avaliada em relação a seus efeitos colaterais.
 
 - A expressão de controle em uma instrução de seleção (if ou switch). A expressão é completamente avaliada e todos os efeitos colaterais são concluídos antes que o código dependente da seleção seja executado.
 

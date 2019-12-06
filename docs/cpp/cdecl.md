@@ -9,32 +9,30 @@ f1_keywords:
 helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
-ms.openlocfilehash: 298485d310ee4039b13781a8b5cd88a489af3b8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4cca797c0bff94a54b0f3302c6c475908870a99
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232396"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857613"
 ---
-# <a name="cdecl"></a>__cdecl
+# <a name="__cdecl"></a>__cdecl
 
-**Seção específica da Microsoft**
-
-**cdecl** é a convenção de chamada para o C padrão e C++ programas. Porque a pilha é limpa pelo chamador, ele pode fazer `vararg` funções. O **cdecl** convenção de chamada cria executáveis maiores do que [stdcall](../cpp/stdcall.md)porque requer que cada chamada de função para incluir o código de limpeza de pilha. A lista a seguir mostra a implementação dessa convenção de chamada.
+**__cdecl** é a Convenção de chamada padrão para C C++ e programas. Como a pilha é limpa pelo chamador, ela pode fazer `vararg` funções. A Convenção de chamada **__cdecl** cria executáveis maiores do que [__stdcall](../cpp/stdcall.md), pois requer cada chamada de função para incluir o código de limpeza da pilha. A lista a seguir mostra a implementação dessa convenção de chamada. O modificador de **__cdecl** é específico da Microsoft.
 
 |Elemento|Implementação|
 |-------------|--------------------|
 |Ordem de passagem de argumentos|Da direita para a esquerda.|
 |Responsabilidade de manutenção de pilha|A função de chamada remove os argumentos da pilha.|
-|Convenção de decoração de nome|O caractere de sublinhado (_) é prefixado para nomes, exceto quando \_funções cdecl que usam vínculos do C são exportadas.|
+|Convenção de decoração de nome|O caractere de sublinhado (_) é prefixado para nomes, exceto quando \__cdecl funções que usam vínculo de C são exportadas.|
 |Convenção de conversão de maiúsculas/minúsculas|Nenhuma conversão de maiúsculas/minúsculas é realizada.|
 
 > [!NOTE]
 >  Para obter informações relacionadas, consulte [nomes decorados](../build/reference/decorated-names.md).
 
-Coloque o **cdecl** modificador antes de uma variável ou um nome de função. Como a convenções de chamada e nomenclatura de C são padrão, o único momento em que você deve usar **cdecl** em código x86 é quando você tiver especificado o `/Gv` (vectorcall), `/Gz` (stdcall) ou `/Gr` (fastcall) opção de compilador. O [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) forças de opção de compilador o **cdecl** convenção de chamada.
+Coloque o modificador de **__cdecl** antes de uma variável ou um nome de função. Como as convenções de nomenclatura e chamada C são o padrão, a única vez que você deve usar **__cdecl** no código x86 é quando você especificou a opção de compilador `/Gv` (vectorcall), `/Gz` (stdcall) ou `/Gr` (fastcall). A opção de compilador [/gd](../build/reference/gd-gr-gv-gz-calling-convention.md) força a Convenção de chamada **__cdecl** .
 
-No ARM e x64 processadores **cdecl** é aceito, mas normalmente é ignorado pelo compilador. Por convenção no ARM e x64, os argumentos são passados nos registros quando possível, e os argumentos subsequentes são passados na pilha. No x64 de código, use **cdecl** para substituir o **/Gv** opção do compilador e use a convenção de chamada x64 padrão.
+Em processadores ARM e x64, **__cdecl** é aceito, mas normalmente ignorado pelo compilador. Por convenção no ARM e x64, os argumentos são passados nos registros quando possível, e os argumentos subsequentes são passados na pilha. No código x64, use **__cdecl** para substituir a opção de compilador **/GV** e usar a Convenção de chamada x64 padrão.
 
 Para funções de classe não estáticas, se a função for definida como fora da linha, o modificador da convenção de chamada não precisará ser especificado na definição fora da linha. Ou seja, para métodos de membro de classe não estática, a convenção de chamada especificada durante a declaração é assumida no ponto de definição. Dada esta definição de classe:
 
@@ -56,7 +54,7 @@ equivale a isto:
 void __cdecl CMyClass::mymethod() { return; }
 ```
 
-Para compatibilidade com versões anteriores, **cdecl** e **cdecl** são um sinônimo de **cdecl** , a menos que a opção de compilador [/Za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) for especificado.
+Para compatibilidade com versões anteriores, **cdecl** e **_cdecl** são um sinônimo para **__cdecl** , a menos que a opção de compilador [/za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
 
 ## <a name="example"></a>Exemplo
 

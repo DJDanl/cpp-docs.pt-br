@@ -1,5 +1,5 @@
 ---
-title: Diretivas pragma e a palavra-chave __pragma
+title: Diretivas Pragma e a palavra-chave __pragma
 ms.date: 08/29/2019
 f1_keywords:
 - '#pragma'
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 2cf075e4ff8049593a1e77c5d2c1c259b224877b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6cfbcd325dc895719bad5dccc9c19bcda90cdaa0
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222304"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858068"
 ---
-# <a name="pragma-directives-and-the-__pragma-keyword"></a>Diretivas pragma e a palavra-chave __pragma
+# <a name="pragma-directives-and-the-__pragma-keyword"></a>Diretivas Pragma e a palavra-chave __pragma
 
 As diretivas pragma especificam recursos de compilador específicos do computador ou do sistema operacional. A palavra-chave **__pragma** , que é específica para o compilador da Microsoft, permite que você codifique as diretivas pragma nas definições de macro.
 
@@ -45,12 +45,12 @@ Os compiladores C e C++ da Microsoft reconhecem os seguintes pragmas:
 |-|-|-|
 |[alloc_text](../preprocessor/alloc-text.md)|[auto_inline](../preprocessor/auto-inline.md)|[bss_seg](../preprocessor/bss-seg.md)|
 |[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[comment](../preprocessor/comment-c-cpp.md)|
-|[componente](../preprocessor/component.md)|em [conformidade](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|
+|[componente](../preprocessor/component.md)|[conformidade](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|
 |[data_seg](../preprocessor/data-seg.md)|[preterido](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|
 |[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|
 |[function](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
 |[init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|
-|[intrinsic](../preprocessor/intrinsic.md)|[loop](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
+|[intrínseco](../preprocessor/intrinsic.md)|[loop](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
 |[administra](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)|[omp](../preprocessor/omp.md)|
 |[uma vez](../preprocessor/once.md)|[otimizar](../preprocessor/optimize.md)|[pack](../preprocessor/pack.md)|
 |[pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|
@@ -79,9 +79,7 @@ cl /Zp8 some_file.cpp
 
 ## <a name="the-__pragma-keyword"></a>A palavra-chave __pragma ()
 
-**Específico da Microsoft**
-
-O compilador também dá suporte à palavra-chave **__pragma** , que tem a mesma funcionalidade que a diretiva **#pragma** . A diferença é que a palavra-chave **__pragma** é utilizável embutida em uma definição de macro. A diretiva **#pragma** não é utilizável em uma definição de macro, porque o compilador interpreta o caractere de sinal de número (' # ') na diretiva como o [operador de cadeia de caracteres (#)](../preprocessor/stringizing-operator-hash.md).
+O compilador também dá suporte à palavra-chave **__pragma** específica da Microsoft, que tem a mesma funcionalidade que a diretiva **#pragma** . A diferença é que a palavra-chave **__pragma** é utilizável embutida em uma definição de macro. A diretiva **#pragma** não é utilizável em uma definição de macro, porque o compilador interpreta o caractere de sinal de número (' # ') na diretiva como o [operador de cadeia de caracteres (#)](../preprocessor/stringizing-operator-hash.md).
 
 O exemplo de código a seguir demonstra como a palavra-chave **__pragma** pode ser usada em uma macro. Esse código foi retirado do cabeçalho mfcdual.h no exemplo ACDUAL em "Exemplos de suporte a COM de compilador":
 
@@ -103,10 +101,8 @@ END_CATCH_ALL \
 return _hr; \
 ```
 
-**Final específico da Microsoft**
-
 ## <a name="see-also"></a>Consulte também
 
 [Referência deC++ C/pré-processador](../preprocessor/c-cpp-preprocessor-reference.md)\
-[Pragmas de C](../c-language/c-pragmas.md)\
+\ de [pragmas C](../c-language/c-pragmas.md)
 [Palavras-chave](../cpp/keywords-cpp.md)

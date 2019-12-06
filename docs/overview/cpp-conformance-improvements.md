@@ -1,16 +1,16 @@
 ---
 title: Aprimoramentos de conformidade do C++
-ms.date: 10/04/2019
+ms.date: 12/04/2019
 description: O Microsoft C++ no Visual Studio está progredindo em direção à plena conformidade com o padrão de linguagem C++20.
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 0bbfc364da217525251df0c5f09544ed1ccfe5b6
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 06fa060b674e51a3352a9a928bccdbfa6c63aae4
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627080"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858029"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Aprimoramentos de conformidade do C++ no Visual Studio
 
@@ -461,6 +461,245 @@ Para evitar os erros no exemplo anterior, use **bool** em vez de **bool** consis
 
 Os cabeçalhos não padrão \<stdexcpt. h > e \<typeInfo. h > foram removidos. O código que os inclui deve incluir os cabeçalhos padrão \<exceção > e \<TypeInfo >, respectivamente.
 
+## <a name="improvements_164"></a>Melhorias de conformidade no Visual Studio 2019 versão 16,4
+
+### <a name="better-enforcement-of-two-phase-name-lookup-for-qualified-ids-in-permissive-"></a>Melhor imposição de pesquisa de nome de duas fases para as IDs qualificadas em/permissive-
+
+A pesquisa de nome em duas fases requer que os nomes não dependentes usados nos corpos do modelo fiquem visíveis para o modelo no tempo de definição. Anteriormente, esses nomes podem ter sido encontrados quando o modelo é instanciado. Essa alteração facilita a gravação de código compatível portátil em MSVC no sinalizador [/permissive-](../build/reference/permissive-standards-conformance.md) .
+
+No Visual Studio 2019 versão 16,4, com o sinalizador **/permissive-** definido, o exemplo a seguir produz um erro porque `N::f` não é visível quando o modelo de `f<T>` é definido:
+
+```cpp
+template <class T>
+int f() {
+    return N::f() + T{}; // error C2039: 'f': is not a member of 'N'
+}
+
+namespace N {
+    int f() { return 42; }
+}
+```
+
+Normalmente, isso pode ser corrigido, incluindo cabeçalhos ausentes ou funções ou variáveis declaradoras de encaminhamento, conforme mostrado no exemplo a seguir:
+
+```cpp
+namespace N {
+    int f();
+}
+
+template <class T>
+int f() {
+    return N::f() + T{};
+}
+
+namespace N {
+    int f() { return 42; }
+}
+```
+
+### <a name="implicit-conversion-of-integral-constant-expressions-to-null-pointer"></a>Conversão implícita de expressões de constante integral para ponteiro nulo
+
+O compilador MSVC agora implementa o [CWG Issue 903](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#903) no modo de conformidade (/permissive-). Essa regra não permite a conversão implícita de expressões de constante integral (exceto para o literal inteiro ' 0 ') para constantes de ponteiro NULL. O exemplo a seguir produz C2440 no modo de conformidade:
+
+```cpp
+int* f(bool* p) {
+    p = false; // error C2440: '=': cannot convert from 'bool' to 'bool *'
+    p = 0; // OK
+    return false; // error C2440: 'return': cannot convert from 'bool' to 'int *'
+}
+```
+
+Para corrigir o erro, use **nullptr** em vez de **false**. Observe que o literal 0 ainda é permitido:
+
+```cpp
+int* f(bool* p) {
+    p = nullptr; // OK
+    p = 0; // OK
+    return nullptr; // OK
+}
+```
+
+### <a name="standard-rules-for-types-of-integer-literals"></a>Regras padrão para tipos de literais inteiros
+
+No modo de conformidade (habilitado por [/permissive-](../build/reference/permissive-standards-conformance.md)), o MSVC usa as regras padrão para tipos de literais inteiros. Anteriormente, literais decimais muito grandes para caber em um ' int ' assinado eram do tipo ' unsigned int '. Agora, esses literais recebem o próximo tipo de inteiro com sinal maior, ' Long Long '. Além disso, literais com o sufixo ' ', que são muito grandes para caber em um tipo assinado, recebem o tipo ' sem sinal longo long '.
+
+Isso pode levar a geração de diagnósticos de aviso diferentes e diferenças de comportamento para operações aritméticas executadas em literais.
+
+O exemplo a seguir mostra o novo comportamento no Visual Studio 2019, versão 16,4. A variável `i` é do tipo **int sem sinal** e, portanto, o aviso é gerado. Os bits de ordem superior da variável `j` são definidos como 0.
+
+```cpp
+void f(int r) {
+    int i = 2964557531; // warning C4309: truncation of constant value
+    long long j = 0x8000000000000000ll >> r; // literal is now unsigned, shift will fill high-order bits with 0
+}
+```
+
+O exemplo a seguir demonstra como manter o comportamento antigo e, portanto, evitar os avisos e a alteração de comportamento de tempo de execução:
+
+```cpp
+void f(int r) {
+int i = 2964557531u; // OK
+long long j = (long long)0x8000000000000000ll >> r; // shift will keep high-order bits
+}
+```
+
+### <a name="function-parameters-that-shadow-template-parameters"></a>Parâmetros de função que os parâmetros de modelo de sombra
+
+O compilador MSVC agora gera um erro quando um parâmetro de função sombreia um parâmetro de modelo:
+
+```cpp
+template<typename T>
+void f(T* buffer, int size, int& size_read);
+
+template<typename T, int Size>
+void f(T(&buffer)[Size], int& Size) // error C7576: declaration of 'Size' shadows a template parameter
+{
+    return f(buffer, Size, Size);
+}
+```
+
+Para corrigir o erro, altere o nome de um dos parâmetros:
+
+```cpp
+template<typename T>
+void f(T* buffer, int size, int& size_read);
+
+template<typename T, int Size>
+void f(T (&buffer)[Size], int& size_read)
+{
+    return f(buffer, Size, size_read);
+}
+```
+
+### <a name="user-provided-specializations-of-type-traits"></a>Especializações fornecidas pelo usuário de características de tipo
+
+Em conformidade com a subcláusula *meta. rqmts* do padrão, o compilador MSVC agora gera um erro quando encontra uma especialização definida pelo usuário de um dos modelos de type_traits especificados no namespace `std`. A menos que especificado de outra forma, essas especializações resultam em um comportamento indefinido. O exemplo a seguir tem um comportamento indefinido porque ele viola a regra e o `static_assert` falha com o erro **C2338**.
+
+```cpp
+#include <type_traits>
+struct S;
+
+template<>
+struct std::is_fundamental<S> : std::true_type {};
+
+static_assert(std::is_fundamental<S>::value, "fail");
+```
+
+Para evitar o erro, defina uma struct que herde da type_trait desejada e especializar que:
+
+```cpp
+#include <type_traits>
+
+struct S;
+
+template<typename T>
+struct my_is_fundamental : std::is_fundamental<T> {};
+
+template<>
+struct my_is_fundamental<S> : std::true_type { };
+
+static_assert(my_is_fundamental<S>::value, "fail");
+```
+
+### <a name="changes-to-compiler-provided-comparison-operators"></a>Alterações nos operadores de comparação fornecidos pelo compilador
+
+O compilador MSVC agora implementa as seguintes alterações para operadores de comparação por [P1630R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1630r1.html) quando a opção [/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md) está habilitada:
+
+O compilador não irá mais reescrever expressões com `operator==` se envolverem um tipo de retorno que não seja um **bool**. O código a seguir agora produz o *erro C2088: '! = ': inválido para struct*:
+
+```cpp
+struct U {
+  operator bool() const;
+};
+
+struct S {
+  U operator==(const S&) const;
+};
+
+bool neq(const S& lhs, const S& rhs) {
+  return lhs != rhs;
+}
+```
+
+Para evitar o erro, você deve definir explicitamente o operador necessário:
+
+```cpp
+struct U {
+    operator bool() const;
+};
+
+struct S {
+    U operator==(const S&) const;
+    U operator!=(const S&) const;
+};
+
+bool neq(const S& lhs, const S& rhs) {
+    return lhs != rhs;
+}
+```
+
+O compilador não definirá mais um operador de comparação padronizado se for um membro de uma classe do tipo União. O exemplo a seguir agora produz *C2120: ' void ' inválido com todos os tipos*:
+
+```cpp
+#include <compare>
+
+union S {
+    int a;
+    char b;
+    auto operator<=>(const S&) const = default;
+};
+
+bool lt(const S& lhs, const S& rhs) {
+    return lhs < rhs;
+}
+```
+
+Para evitar o erro, defina um corpo para o operador:
+
+```cpp
+#include <compare>
+
+union S {
+  int a;
+  char b;
+  auto operator<=>(const S&) const { ... }
+}; 
+
+bool lt(const S& lhs, const S& rhs) {
+  return lhs < rhs;
+}
+```
+
+O compilador não definirá mais um operador de comparação padronizado se a classe contiver um membro de referência. O código a seguir agora produz o *erro C2120: ' void ' inválido com todos os tipos*:
+
+```cpp
+#include <compare>
+
+struct U {
+    int& a;
+    auto operator<=>(const U&) const = default;
+};
+
+bool lt(const U& lhs, const U& rhs) {
+    return lhs < rhs;
+}
+```
+
+Para evitar o erro, defina um corpo para o operador:
+
+```cpp
+#include <compare>
+
+struct U {
+    int& a;
+    auto operator<=>(const U&) const { ... };
+};
+
+bool lt(const U& lhs, const U& rhs) {
+    return lhs < rhs;
+}
+```
+
 ## <a name="update_160"></a>Correções de bugs e alterações de comportamento no Visual Studio 2019
 
 ### <a name="reinterpret_cast-in-a-constexpr-function"></a>Reinterpret_cast em uma função constexpr
@@ -738,7 +977,7 @@ Agora, a função `reserve` de contêiner não ordenada na verdade reserva N ele
 
 - Adição das sobrecargas para funções de membro extrair e mesclar do contêiner que aceitam contêineres rvalue de acordo com [P0083 "Unindo mapas e conjuntos"](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r3.pdf)
 
-### <a name="stdbasic_istreamread-processing-of-rn--n"></a>Processamento de `std::basic_istream::read`r\\n = > \\n em \\
+### <a name="stdbasic_istreamread-processing-of-rn--n"></a>Processamento de \\r\\n = > \\n em `std::basic_istream::read`
 
 `std::basic_istream::read` foi corrigido para não gravar em partes do buffer fornecido temporariamente como parte do processamento de \\r\\n => \\n. Essa alteração perde um pouco da vantagem de desempenho que foi obtida no Visual Studio 2017 15.8 para leituras com mais de 4 K. No entanto, as melhorias na eficiência evitando três chamadas virtuais por caractere ainda estão presentes.
 
@@ -2820,7 +3059,7 @@ struct S
 {
     constexpr void f();
 };
- 
+
 template<>
 constexpr void S<int>::f()
 {

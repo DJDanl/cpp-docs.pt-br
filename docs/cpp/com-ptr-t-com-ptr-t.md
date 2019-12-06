@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 5a3923ee488771e807600069855299fc240b3212
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c169e454029a28f644a2aabc8d3089bf3069c8c5
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498705"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857587"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
@@ -21,7 +21,7 @@ Constrói um objeto **_com_ptr_t** .
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 // Default constructor.
 // Constructs a NULL smart pointer.
 _com_ptr_t() throw();
@@ -133,34 +133,36 @@ explicit _com_ptr_t(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pInterface*<br/>
 Um ponteiro de interface bruto.
 
 *fAddRef*<br/>
-Se for true `AddRef` , será chamado para incrementar a contagem de referência do ponteiro de interface encapsulado.
+Se for TRUE, `AddRef` será chamado para incrementar a contagem de referência do ponteiro de interface encapsulado.
 
 *cp*<br/>
 Um objeto **_com_ptr_t** .
 
 *p*<br/>
-Um ponteiro de interface bruto, seu tipo sendo diferente do tipo de ponteiro inteligente desse objeto **_com_ptr_t** .
+Um ponteiro de interface bruto, seu tipo sendo diferente do tipo de ponteiro inteligente deste **_com_ptr_t** objeto.
 
 *varSrc*<br/>
 Um objeto `_variant_t`.
 
 *clsid*<br/>
-O `CLSID` de uma coclass.
+A `CLSID` de uma coclass.
 
 *dwClsContext*<br/>
 Contexto para execução do código executável.
 
 *lpcStr*<br/>
-Uma cadeia de caracteres multibyte que contém `CLSID` um (começando com " **{** ") ou `ProgID`um.
+Uma cadeia de caracteres multibyte que mantém um `CLSID` (começando com " **{** ") ou um `ProgID`.
 
 *pOuter*<br/>
 O desconhecido externo para [agregação](/windows/win32/com/aggregation).
+
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

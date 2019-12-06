@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, about statements
 - Visual C, statements
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
-ms.openlocfilehash: 1b5863a021fd74bb80162d589af7c2a1a5b36f9b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: bfa6840553055202f26f55e1dc5971bfd047b2de
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147042"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857067"
 ---
 # <a name="overview-of-c-statements"></a>Visão geral de instruções C
 
@@ -33,11 +33,11 @@ As instruções C consistem em tokens, expressões e outras instruções. Uma in
 
 [jump-statement](../c-language/break-statement-c.md)
 
-[try-except-statement](../c-language/try-except-statement-c.md)
+[tente-Except-Statement](../c-language/try-except-statement-c.md) /* \*específicas da Microsoft /
 
-/* Específico da Microsoft \*/[try-finally-statement](../c-language/try-finally-statement-c.md) /\* Específico da Microsoft \*/
+[instrução try-finally-](../c-language/try-finally-statement-c.md) /\* \*específica da Microsoft /
 
-Geralmente, o corpo da instrução é uma “instrução composta”. Uma instrução composta consiste em outras instruções que podem incluir palavras-chave. A instrução compound é delimitada por chaves (**{ }**). Todas as outras instruções C terminam com ponto-e-vírgula (**;**). O ponto-e-vírgula é um terminador de instrução.
+Geralmente, o corpo da instrução é uma “instrução composta”. Uma instrução composta consiste em outras instruções que podem incluir palavras-chave. A instrução compound é delimitada por chaves ( **{ }** ). Todas as outras instruções C terminam com ponto-e-vírgula ( **;** ). O ponto-e-vírgula é um terminador de instrução.
 
 A instrução da expressão contém a expressão C que pode conter operadores aritméticos ou lógicos introduzidos em [Expressões e atribuições](../c-language/expressions-and-assignments.md). A instrução null é uma instrução vazia.
 

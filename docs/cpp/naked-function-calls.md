@@ -11,18 +11,18 @@ helpviewer_keywords:
 - naked keyword [C++]
 - naked keyword [C++], storage-class attribute
 ms.assetid: 2a66847a-a43f-4541-a7be-c9f5f29b5fdb
-ms.openlocfilehash: f9d8a8747d4a808d040b814005782ed8187bf274
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 242fe83807c6608a09492d0f1f817e3b6e50e530
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301572"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857392"
 ---
 # <a name="naked-function-calls"></a>Chamadas de função naked
 
-## <a name="microsoft-specific"></a>Específico da Microsoft
+**Seção específica da Microsoft**
 
-As funções declaradas com o **naked** atributo são emitidas sem código de prólogo ou epílogo, permitindo que você escrever suas próprias sequências de prólogo/epílogo personalizado usando o [assembler embutido](../assembler/inline/inline-assembler.md). As funções naked são fornecidas como um recurso avançado. Elas permitem declarar uma função que está sendo chamada de um contexto diferente de C/C++ e, portanto, fazer suposições diferentes sobre onde estão os parâmetros ou quais registros são preservados. Os exemplos incluem rotinas como manipuladores de interrupção. Esse recurso é particularmente útil para gravadores de drivers de dispositivos virtuais (VxDs).
+As funções declaradas com o atributo **Naked** são emitidas sem o prólogo ou código epílogo, permitindo que você escreva suas próprias sequências de prólogo/epílogo personalizadas usando o [montador embutido](../assembler/inline/inline-assembler.md). As funções naked são fornecidas como um recurso avançado. Elas permitem declarar uma função que está sendo chamada de um contexto diferente de C/C++ e, portanto, fazer suposições diferentes sobre onde estão os parâmetros ou quais registros são preservados. Os exemplos incluem rotinas como manipuladores de interrupção. Esse recurso é particularmente útil para gravadores de drivers de dispositivos virtuais (VxDs).
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
 

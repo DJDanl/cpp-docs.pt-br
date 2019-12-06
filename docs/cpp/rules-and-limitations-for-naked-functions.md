@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-ms.openlocfilehash: c813b97b85469165aae892b0a4cce888112e3dc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec5c7d635dbbb63af7177395c5ad08356e1a26f0
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267360"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857301"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Regras e limitações para funções naked
 
-## <a name="microsoft-specific"></a>Específico da Microsoft
+**Seção específica da Microsoft**
 
 As seguintes regras e restrições se aplicam às funções naked:
 
-- O **retornar** instrução não é permitida.
+- A instrução **Return** não é permitida.
 
 - O tratamento de exceções estruturado e tratamento de exceções de C++ não são permitidos, pois eles devem desenrolar pelo quadro de pilhas.
 
@@ -31,9 +31,9 @@ As seguintes regras e restrições se aplicam às funções naked:
 
 - Você não pode declarar objetos da classe do C++ no escopo lexical da função. No entanto, é possível declarar objetos em um bloco aninhado.
 
-- O **naked** palavra-chave é ignorado ao compilar com [/clr](../build/reference/clr-common-language-runtime-compilation.md).
+- A palavra-chave **Naked** é ignorada durante a compilação com [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
-- Para [fastcall](../cpp/fastcall.md) funções naked, sempre que houver uma referência em C /C++ código como um dos argumentos do registro, o código de prólogo deve armazenar os valores do registro no local da pilha para essa variável. Por exemplo:
+- Para [__fastcall](../cpp/fastcall.md) funções Naked, sempre que houver uma referência em C/C++ Code para um dos argumentos de registro, o código de prólogo deverá armazenar os valores desse registro no local da pilha para essa variável. Por exemplo:
 
 ```cpp
 // nkdfastcl.cpp
