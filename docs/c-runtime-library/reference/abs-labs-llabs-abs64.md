@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: bf5b4be654a3bd48b3e0d43ac97ce02b348942bc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: df5b6a30bf219b78f77f11604d3bbbe3b954c59f
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939925"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857847"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
@@ -72,7 +72,7 @@ float abs( float n );   // C++ only
 *n*<br/>
 Valor numérico.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 As funções **ABS**, **Labs**, **llabs** e **_abs64** retornam o valor absoluto do parâmetro *n*. Nenhum erro é retornado.
 
@@ -80,16 +80,16 @@ As funções **ABS**, **Labs**, **llabs** e **_abs64** retornam o valor absoluto
 
 Como C++ o permite sobrecarregar, você pode chamar sobrecargas de **ABS** que levam e retornam valores **longos longo** **, longo,** **flutuantes** **,** **duplos**e **longos** . Essas sobrecargas são definidas no cabeçalho \<cmath>. Em um programa C, o **ABS** sempre pega e retorna um **int**.
 
-**Específico da Microsoft**: Como o intervalo de inteiros negativos que podem ser representados usando qualquer tipo integral é maior que o intervalo de inteiros positivos que podem ser representados usando esse tipo, é possível fornecer para essas funções um argumento que não possa ser convertido. Se o valor absoluto do argumento não puder ser representado pelo tipo de retorno, as funções **ABS** retornarão o valor do argumento inalterado. Especificamente, `abs(INT_MIN)` retorna `INT_MIN`, `labs(LONG_MIN)` retorna `LONG_MIN`, `llabs(LLONG_MIN)` retorna `LLONG_MIN` e `_abs64(_I64_MIN)` retorna `_I64_MIN`. Isso significa que as funções **ABS** não podem ser usadas para garantir um valor positivo.
+**Específico da Microsoft**: como o intervalo de inteiros negativos que podem ser representados usando qualquer tipo integral é maior do que o intervalo de inteiros positivos que podem ser representados usando esse tipo, é possível fornecer um argumento para essas funções que não podem ser convertidas. Se o valor absoluto do argumento não puder ser representado pelo tipo de retorno, as funções **ABS** retornarão o valor do argumento inalterado. Especificamente, `abs(INT_MIN)` retorna `INT_MIN`, `labs(LONG_MIN)` retorna `LONG_MIN`, `llabs(LLONG_MIN)` retorna `LLONG_MIN` e `_abs64(_I64_MIN)` retorna `_I64_MIN`. Isso significa que as funções **ABS** não podem ser usadas para garantir um valor positivo.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 |Rotina|Cabeçalho C necessário|Cabeçalho C++ necessário|
 |-------------|-----------------------|---------------------------|
 |**abs**, **labs**, **llabs**|\<math.h> ou \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> ou \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> ou \<stdlib.h>|
 
-Para usar as versões sobrecarregadas do **ABS** no C++, você deve incluir o \<cabeçalho de > cmath.
+Para usar as versões sobrecarregadas do **ABS** no C++, você deve incluir o cabeçalho \<cmath >.
 
 ## <a name="example"></a>Exemplo
 

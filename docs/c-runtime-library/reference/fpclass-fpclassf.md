@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 2e561cff956ca51707834bf869a1c114f0c99a3e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: db95453a44f6a55d4bf98638351dcda4bd8377c9
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957036"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857834"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -61,11 +61,11 @@ int _fpclassf(
 *x*<br/>
 O valor de ponto flutuante a ser testado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 As funções **_fpclass** e **_fpclassf** retornam um valor inteiro que indica a classificação de ponto flutuante do argumento *x*. A classificação pode ter um dos valores a seguir, definidos em \<float.>.
 
-|Valor|Descrição|
+|Value|Descrição|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|Sinalização de NaN|
 |**_FPCLASS_QNAN**|NaN silencioso|
@@ -80,9 +80,9 @@ As funções **_fpclass** e **_fpclassf** retornam um valor inteiro que indica a
 
 ## <a name="remarks"></a>Comentários
 
-As funções **_fpclass** e **_fpclassf** são específicas da Microsoft. Elas são semelhantes a [fpclassify](fpclassify.md), mas retornam informações mais detalhadas sobre o argumento. A função **_fpclassf** só está disponível quando compilada para a plataforma x64.
+As funções **_fpclass** e **_fpclassf** são específicas da Microsoft. Elas são semelhantes a [fpclassify](fpclassify.md), mas retornam informações mais detalhadas sobre o argumento. A função **_fpclassf** só estará disponível quando compilada para a plataforma x64.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 |Função|Cabeçalho necessário|
 |--------------|---------------------|

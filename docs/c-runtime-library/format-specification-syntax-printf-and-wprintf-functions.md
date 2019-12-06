@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: e4def787dc5792921298999eb643ff56dd2c9f3d
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778384"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857860"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxe de especificação de formato: funções printf e wprintf
 
@@ -46,16 +46,16 @@ A especificação de conversão básica contém apenas o sinal de porcentagem e 
 
 O caractere de especificador de conversão de *tipo* especifica se o argumento correspondente deve ser interpretado como um caractere, uma cadeia de caracteres, um ponteiro, um inteiro ou um número de ponto flutuante. O caractere de *tipo* é o único campo de especificação de formato necessário e aparece depois de quaisquer campos opcionais.
 
-Os argumentos que seguem o formato cadeia de caracteres são interpretados de acordo com o caractere de *tipo* correspondente e o prefixo de [tamanho](#size) opcional. As conversões dos tipos de caracteres `char` e `wchar_t` são especificadas usando **c** ou **C**, e as cadeias de caracteres de byte único e vários bytes ou de caracteres largos são especificadas usando **s** ou **S**, dependendo de qual função de formatação está sendo usada. Argumentos de caractere e de cadeia de caracteres que são especificados usando **c** e **s** são interpretados como `char` e `char*` pelas funções da família `printf` ou como `wchar_t` e `wchar_t*` pelas funções da família `wprintf`. Argumentos de caractere e de cadeia de caracteres que são especificados usando **C** e **S** são interpretados como `wchar_t` e `wchar_t*` pelas funções da família `printf` ou como `char` e `char*` pelas funções da família `wprintf`. O comportamento é específico da Microsoft.
+Os argumentos que seguem o formato cadeia de caracteres são interpretados de acordo com o caractere de *tipo* correspondente e o prefixo de [tamanho](#size) opcional. As conversões dos tipos de caracteres `char` e `wchar_t` são especificadas usando **c** ou **C**, e as cadeias de caracteres de byte único e vários bytes ou de caracteres largos são especificadas usando **s** ou **S**, dependendo de qual função de formatação está sendo usada. Argumentos de caractere e de cadeia de caracteres que são especificados usando **c** e **s** são interpretados como `char` e `char*` pelas funções da família `printf` ou como `wchar_t` e `wchar_t*` pelas funções da família `wprintf`. Argumentos de caractere e de cadeia de caracteres que são especificados usando **C** e **S** são interpretados como `wchar_t` e `wchar_t*` pelas funções da família `printf` ou como `char` e `char*` pelas funções da família `wprintf`. Esse comportamento é específico da Microsoft.
 
-Tipos inteiros, como `short`, `int`, `long`, `long long` e suas variantes de `unsigned`, são especificados usando **d**, **i**, **o**, **u**, **x**e **x**. Tipos de ponto flutuante, como 1, 2 e 3, são especificados usando **um**, **a** **, e**, **e**, **f**, **f**, **g**e **g**. Por padrão, a menos que sejam modificados por um prefixo de *tamanho* , os argumentos inteiros são forçados a 3 tipo e argumentos de ponto flutuante são forçados a 4. Em sistemas de 64 bits, um `int` é um valor de 32 bits; portanto, inteiros de 64 bits serão truncados quando forem formatados para saída, a menos que um prefixo de *tamanho* de **ll** ou **I64** seja usado. Tipos de ponteiro que são especificados por **p** usam o tamanho de ponteiro padrão para a plataforma.
+Tipos inteiros, como `short`, `int`, `long`, `long long`e suas variantes de `unsigned`, são especificados usando **d**, **i**, **o**, **u**, **x**e **x**. Tipos de ponto flutuante, como `float`, `double`e `long double`, são especificados usando **um**, **a** **, e**, **e**, **f**, **f**, **g**e **g**. Por padrão, a menos que sejam modificados por um prefixo de *tamanho* , os argumentos inteiros são forçados a `int` tipo e argumentos de ponto flutuante são forçados a `double`. Em sistemas de 64 bits, um `int` é um valor de 32 bits; portanto, inteiros de 64 bits serão truncados quando forem formatados para saída, a menos que um prefixo de *tamanho* de **ll** ou **I64** seja usado. Tipos de ponteiro que são especificados por **p** usam o tamanho de ponteiro padrão para a plataforma.
 
 > [!NOTE]
-> **Específico para a Microsoft** O caractere de tipo **Z** e o comportamento do **c**, **C**, **s** e os caracteres de tipo **S**, quando usados com as funções `printf` e `wprintf`, são extensões da Microsoft. O padrão ISO C usa **c** e **s** consistentemente para cadeias de caracteres e caracteres estreitos, e **C** e **S** para cadeias de caracteres e caracteres largos, em todas as funções de formatação.
+> **Específico da Microsoft:** O caractere de tipo **Z** e o comportamento dos caracteres de tipo **c**, **c**, **s**e **s** quando são usados com as funções `printf` e `wprintf` são extensões da Microsoft. O padrão ISO C usa **c** e **s** consistentemente para cadeias de caracteres e caracteres estreitos, e **C** e **S** para cadeias de caracteres e caracteres largos, em todas as funções de formatação.
 
 ### <a name="type-field-characters"></a>Caracteres de campo de tipo
 
-|Caractere de tipo|Argumento|Formato de saída|
+|Caractere de tipo|Argument|Formato de saída|
 |--------------------|--------------|-------------------|
 |**c**|Caractere|Quando usado com funções `printf`, especifica um caractere de byte único; quando usado com funções `wprintf`, especifica um caractere largo.|
 |**C**|Caractere|Quando usado com funções `printf`, especifica um caractere largo; quando usado com funções `wprintf`, especifica um caractere de byte único.|
@@ -74,16 +74,16 @@ Tipos inteiros, como `short`, `int`, `long`, `long long` e suas variantes de `un
 |**a**|Ponto flutuante|Valor hexadecimal de ponto flutuante de precisão dupla e assinado que tem o formato [-]0x*h.hhhh*__p±__*dd*, no qual *h.hhhh* são os dígitos hexadecimais (usando letras minúsculas) da mantissa e *dd* são um ou mais dígitos para o expoente. A precisão especifica o número de dígitos após a vírgula.|
 |**A**|Ponto flutuante|Valor hexadecimal de ponto flutuante de precisão dupla e assinado que tem o formato [-]0X*h.hhhh*__P±__*dd*, em que *h.hhhh* são os dígitos hexadecimais (usando letras maiúsculas) da mantissa e *dd* são um ou mais dígitos para o expoente. A precisão especifica o número de dígitos após a vírgula.|
 |**n**|Ponteiro para o inteiro|Número de caracteres gravados com êxito até o momento no fluxo ou no buffer. Esse valor é armazenado no inteiro cujo endereço é fornecido como o argumento. O tamanho do número inteiro apontado pode ser controlado por um prefixo de especificação de tamanho de argumento. O especificador **n** é desabilitado por padrão; para obter mais informações, consulte a observação de segurança importante.|
-|**p**|Tipo ponteiro|Exibe o argumento como um endereço usando dígitos hexadecimais.|
+|**p**|Tipo de ponteiro|Exibe o argumento como um endereço usando dígitos hexadecimais.|
 |**s**|Cadeia de Caracteres|Quando usado com funções `printf`, especifica uma cadeia de caracteres de byte único ou uma cadeia de caracteres de bytes múltiplos; quando usado com funções `wprintf`, especifica uma cadeia de caracteres largos. Os caracteres são exibidos até o primeiro caractere nulo ou até que o valor de *precisão* seja atingido.|
 |**S**|Cadeia de Caracteres|Quando usado com funções `printf`, especifica uma cadeia de caracteres largos; quando usado com funções `wprintf`, especifica uma cadeia de caracteres de byte único ou uma cadeia de caracteres de bytes múltiplos. Os caracteres são exibidos até o primeiro caractere nulo ou até que o valor de *precisão* seja atingido.|
 |**Z**|Estrutura `ANSI_STRING` ou `UNICODE_STRING`|Quando o endereço de uma estrutura [ANSI_STRING](/windows/win32/api/ntdef/ns-ntdef-string) ou [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) é passado como o argumento, exibe a cadeia de caracteres contida no buffer apontado pelo campo `Buffer` da estrutura. Use um prefixo modificador de *tamanho* de **w** para especificar um argumento `UNICODE_STRING` – por exemplo, `%wZ`. O campo `Length` da estrutura deve ser definido como a duração, em bytes, da cadeia de caracteres. O campo `MaximumLength` da estrutura deve ser definido como a duração, em bytes, do buffer.<br /><br /> Normalmente, o caractere de tipo **Z** é usado somente em funções de depuração de driver que usam uma especificação de conversão, como `dbgPrint` e `kdPrint`.|
 
 A partir do Visual Studio 2015, se o argumento que corresponde a um especificador de conversão de ponto flutuante (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) for infinito, indefinido ou NaN, a saída formatada estará em conformidade com o padrão C99. Esta tabela lista a saída formatada:
 
-|Valor|Saída|
+|Value|Saída|
 |-----------|------------|
-|infinity|`inf`|
+|{1&gt;infinity&lt;1}|`inf`|
 |NaN silencioso|`nan`|
 |Sinalização de NaN|`nan(snan)`|
 |NaN indefinido|`nan(ind)`|
@@ -92,12 +92,12 @@ Qualquer um desses valores pode ser ter um sinal como prefixo. Se um caractere e
 
 Antes do Visual Studio 2015, o CRT usava um formato diferente não padrão para saída de valores infinitos, indefinidos e NaN:
 
-|Valor|Saída|
+|Value|Saída|
 |-----------|------------|
 |+ infinity|`1.#INF` *random-digits*|
 |- infinity|`-1.#INF` *random-digits*|
 |Indefinite (mesmo que NaN silencioso)|*dígito* `.#IND` *random-digits*|
-|NaN|*dígito* `.#NAN` *random-digits*|
+|{1&gt;NaN&lt;1}|*dígito* `.#NAN` *random-digits*|
 
 Qualquer um desses poderia ter um sinal como prefixo e poderia ser formatado de forma ligeiramente diferente, dependendo da largura do campo e da precisão, às vezes com efeitos incomuns. Por exemplo, `printf("%.2f\n", INFINITY)` imprimiria `1.#J` porque o #INF poderia ser "arredondado" para uma precisão de 2 dígitos.
 
@@ -160,7 +160,7 @@ O caractere de *tipo* determina a interpretação de *precisão* ou a precisão 
 
 ### <a name="how-precision-values-affect-type"></a>Como os valores de precisão afetam o tipo
 
-|Digite|Significado|Padrão|
+|{1&gt;Tipo&lt;1}|Significado|Padrão|
 |----------|-------------|-------------|
 |**a**, **A**|A precisão especifica o número de dígitos após a vírgula.|A precisão padrão é 13. Se a precisão for 0, nenhum ponto decimal será impresso, a menos que o sinalizador **#** seja usado.|
 |**c**, **C**|A precisão não tem nenhum efeito.|O caractere foi impresso.|
@@ -204,7 +204,7 @@ No Visual C++, embora `long double` seja um tipo diferente, ele tem a mesma repr
 Um especificador de tipo **hc** ou **hC** é sinônimo de **c** em funções `printf` e de **C** em funções `wprintf`. Um especificador de tipo **lc**, **lC**, **wc** ou **wC** é sinônimo de **C** em funções `printf` e de **c** em funções `wprintf`. Um especificador de tipo **hs** ou **hS** é sinônimo de **s** em funções `printf` e de **S** em funções `wprintf`. Um especificador de tipo **ls**, **lS**, **ws** ou **wS** é sinônimo de **S** em funções `printf` e de **s** em funções `wprintf`.
 
 > [!NOTE]
-> **Específico para a Microsoft** Os prefixos modificadores de tamanho de argumento **I** (i maiúsculo), **I32**, **I64** e **w** são extensões da Microsoft e não são compatíveis com ISO C. O prefixo **h** quando é usado com o tipo de dados `char` e o prefixo **l** (L minúsculo) quando usado com o tipo de dados `double` são extensões da Microsoft.
+> **Específico da Microsoft:** Os prefixos do modificador de tamanho de argumento **i** (maiúsculo), **i32**, **i64**e **w** são extensões da Microsoft e não são compatíveis com ISO C. O prefixo **h** quando é usado com o tipo de dados `char` e o prefixo **l** (L minúsculo) quando usado com o tipo de dados `double` são extensões da Microsoft.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - class types [C++], anonymous
 - anonymous class types
 ms.assetid: 9ba667b2-8c2a-4c29-82a6-fa120b9233c8
-ms.openlocfilehash: 9cd27fb40522a07ce4591b654ee8a6dda53b4f28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 815cc4a81addc673349a3133b24ed73cfe0207e2
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184457"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857665"
 ---
 # <a name="anonymous-class-types"></a>Tipos de classe anônima
 
-As classes podem ser anônimas — ou seja, eles podem ser declarados sem um *identificador*. Isso é útil quando você substituir um nome de classe com um **typedef** nome, da seguinte maneira:
+As classes podem ser anônimas, ou seja, elas podem ser declaradas sem um *identificador*. Isso é útil quando você substitui um nome de classe por um nome de **typedef** , como no seguinte:
 
 ```cpp
 typedef struct
@@ -43,13 +43,13 @@ struct PTValue
 PTValue ptv;
 ```
 
-No código anterior, `iValue` podem ser acessados usando o operador de seleção de membro de objeto (**.**) da seguinte maneira:
+No código anterior, `iValue` pode ser acessado usando o operador de seleção de membro de objeto ( **.** ) da seguinte maneira:
 
 ```cpp
 int i = ptv.iValue;
 ```
 
-As classes anônimas estão sujeitas a determinadas restrições. (Para obter mais informações sobre unions anônimas, consulte [uniões](../cpp/unions.md).) Classes anônimas:
+As classes anônimas estão sujeitas a determinadas restrições. (Para obter mais informações sobre uniões anônimas, consulte [uniões](../cpp/unions.md).) Classes anônimas:
 
 - Não é possível ter um construtor ou um destruidor.
 
@@ -57,9 +57,9 @@ As classes anônimas estão sujeitas a determinadas restrições. (Para obter ma
 
 - Não é possível ser retornado como valores de retorno de funções.
 
-## <a name="anonymous-structs"></a>Estruturas anônimas
+## <a name="anonymous-structs"></a>Structs anônimos
 
-### <a name="microsoft-specific"></a>Específico da Microsoft
+**Seção específica da Microsoft**
 
 Uma extensão do Microsoft C permite que você declare uma variável de estrutura dentro de outra estrutura sem nomeá-la. Essas estruturas aninhadas são chamadas de estruturas anônimas. O C++ não permite estruturas anônimas.
 

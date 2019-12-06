@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 40ff315c179a6b62a3073d4f07e4e6a6d1c1acab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 07c8a79e0a9569db80607e1ec1e16cd4b502783c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941121"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857821"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -46,13 +46,13 @@ int feraiseexcept(
 *exceções*<br/>
 As exceções de ponto flutuante que serão geradas.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Se todas as exceções especificadas forem geradas com êxito, retornará 0.
 
 ## <a name="remarks"></a>Comentários
 
-A função **feraiseexcept** tenta gerar as exceções de ponto flutuante especificadas por *Except*.   A função **feraiseexcept** dá suporte a essas macros de \<exceção, definidas em fenv. h >:
+A função **feraiseexcept** tenta gerar as exceções de ponto flutuante especificadas por *Except*.   A função **feraiseexcept** dá suporte a essas macros de exceção, definidas em \<fenv. h >:
 
 |Macro de exceção|Descrição|
 |---------------------|-----------------|
@@ -67,15 +67,15 @@ O argumento *Except* pode ser zero, um dos valores da macro de exceção, ou o b
 
 Para usar essa função, você deve desligar otimizações de ponto flutuante que poderiam impedir o acesso usando a diretiva `#pragma fenv_access(on)` antes da chamada. Para obter mais informações, consulte [fenv_access](../../preprocessor/fenv-access.md).
 
-**Específico da Microsoft:** As exceções especificadas em *Except* são geradas na ordem FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. No entanto, FE_INEXACT pode ser gerado quando FE_OVERFLOW ou FE_UNDERFLOW é gerado, mesmo que não seja especificado em *Except*. **Fim da seção específica da Microsoft**
+**Específico da Microsoft:** As exceções especificadas em *Except* são geradas na ordem FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW FE_INEXACT. No entanto, FE_INEXACT pode ser gerado quando FE_OVERFLOW ou FE_UNDERFLOW é gerado, mesmo que não seja especificado em *Except*.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
 |*feraiseexcept*|\<fenv.h>|\<cfenv>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 

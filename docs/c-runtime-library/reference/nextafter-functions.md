@@ -51,12 +51,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: c56c9f8032c9af2ed4404428abe3b9ee26b4b603
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c6b100fb24d879a16780650d8a374ec26f28c048
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951363"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857717"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -93,26 +93,26 @@ O valor do ponto flutuante a ser iniciado.
 *y*<br/>
 O valor do ponto flutuante a ser destinado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Retorna o próximo valor de ponto flutuante reapresentável do tipo de retorno após *x* na direção de *y*. Se *x* e *y* forem iguais, a função retornará *y*, convertida no tipo de retorno, sem exceção disparada. Se *x* não for igual a *y*e o resultado for um desnormal ou zero, os Estados de exceção de ponto flutuante **FE_UNDERFLOW** e **FE_INEXACT** serão definidos e o resultado correto será retornado. Se *x* ou *y* for um NaN, o valor de retorno será um dos NANs de entrada. Se *x* é finito e o resultado é infinito ou não representável no tipo, um infinito ou NaN assinado corretamente é retornado, os Estados de exceção de ponto flutuante **FE_OVERFLOW** e **FE_INEXACT** são definidos e **errno** é definido como **ERANGE** .
+Retorna o próximo valor de ponto flutuante reapresentável do tipo de retorno após *x* na direção de *y*. Se *x* e *y* forem iguais, a função retornará *y*, convertida no tipo de retorno, sem exceção disparada. Se *x* não for igual a *y*e o resultado for um desnormal ou zero, os Estados de exceção de ponto flutuante **FE_UNDERFLOW** e **FE_INEXACT** serão definidos e o resultado correto será retornado. Se *x* ou *y* for um NaN, o valor de retorno será um dos NANs de entrada. Se *x* é finito e o resultado é infinito ou não representável no tipo, um infinito ou NaN assinado corretamente é retornado, os **FE_OVERFLOW** e **FE_INEXACT** Estados de exceção de ponto flutuante são definidos e **errno** é definido como **ERANGE**.
 
 ## <a name="remarks"></a>Comentários
 
 As famílias de funções **nextafter** e **nexttoward** são equivalentes, exceto para o tipo de parâmetro de *y*. Se *x* e *y* forem iguais, o valor retornado será *y* convertido para o tipo de retorno.
 
-Como C++ \<o permite sobrecarga, se você incluir cmath > poderá chamar sobrecargas de **nextafter** e **nexttoward** que retornam tipos **float** e **Long** **Double** . Em um programa C, **nextafter** e **nexttoward** sempre retornam **Double**.
+Como C++ o permite sobrecarga, se você incluir \<cmath > poderá chamar sobrecargas de **nextafter** e **nexttoward** que retornam tipos **float** e **Long** **Double** . Em um programa C, **nextafter** e **nexttoward** sempre retornam **Double**.
 
 As funções **_nextafter** e **_nextafterf** são específicas da Microsoft. A função **_nextafterf** só está disponível durante a compilação para x64.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-------------|---------------------------|-------------------------------|
 |**nextafter**, **nextafterf**, **nextafterl**, **_nextafterf**, **nexttoward**, **nexttowardf**, **nexttowardl**|\<math.h>|\<math.h> ou \<cmath>|
 |**_nextafter**|\<float.h>|\<float.h> ou \<cfloat>|
 
-Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 

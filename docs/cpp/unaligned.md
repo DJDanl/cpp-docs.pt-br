@@ -8,24 +8,24 @@ f1_keywords:
 helpviewer_keywords:
 - __unaligned keyword [C++]
 ms.assetid: 0cd83aad-1840-47e3-ad33-59bfcbe6375b
-ms.openlocfilehash: 8eb1b93aa55601125600b6c69d9bff3d9ca43aa3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1090a0f3345f749a2afbd80566a9af7b9ea32d53
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244110"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857249"
 ---
-# <a name="unaligned"></a>__unaligned
+# <a name="__unaligned"></a>__unaligned
 
-**Específico da Microsoft**. Quando você declara um ponteiro com o **unaligned** modificador, o compilador pressupõe que o ponteiro aborda os dados que não estão alinhados. Consequentemente, o código de plataforma apropriada é gerado para lidar com leituras não alinhadas e grava através do ponteiro.
+**Específico da Microsoft**. Quando você declara um ponteiro com o modificador **__unaligned** , o compilador pressupõe que o ponteiro endereça os dados que não estão alinhados. Consequentemente, o código apropriado para a plataforma é gerado para lidar com leituras e gravações não alinhadas pelo ponteiro.
 
 ## <a name="remarks"></a>Comentários
 
-Esse modificador descreve o alinhamento dos dados resolvidos pelo ponteiro; o ponteiro em si é considerado alinhado.
+Este modificador descreve o alinhamento dos dados endereçados pelo ponteiro; o ponteiro em si é considerado alinhado.
 
-A necessidade do **unaligned** palavra-chave varia por plataforma e o ambiente. Falha ao marcar os dados adequadamente pode resultar em problemas, desde as penalidades de desempenho para falhas de hardware. O **unaligned** modificador não é válido para o x86 de plataforma.
+A necessidade da palavra-chave **__unaligned** varia de acordo com a plataforma e o ambiente. A falha na marcação dos dados de forma adequada pode resultar em problemas que variam de penalidades de desempenho a falhas de hardware. O modificador de **__unaligned** não é válido para a plataforma x86.
 
-Para compatibilidade com versões anteriores, **_unaligned** é um sinônimo de **unaligned** , a menos que a opção de compilador [/Za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) é especificado.
+Para compatibilidade com versões anteriores, **_unaligned** é um sinônimo para **__unaligned** , a menos que a opção de compilador [/za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
 
 Para obter mais informações sobre alinhamento, consulte:
 

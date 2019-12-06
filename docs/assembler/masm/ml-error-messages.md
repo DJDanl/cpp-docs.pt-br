@@ -1,18 +1,18 @@
 ---
 title: Mensagens de erro ML
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - vc.errors.ml
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
-ms.openlocfilehash: b9238591ae025c4af258d8b5feda6e05c8bd291b
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 2db928d22219d33f89396bb29530680d4b3c8dba
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397190"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856937"
 ---
 # <a name="ml-error-messages"></a>Mensagens de erro ML
 
@@ -42,7 +42,7 @@ A linha aproximada em que existe a condição de erro.
 *Error_type*\
 Erro fatal, erro ou aviso.
 
-\ de *código*
+*Código*\
 O código de erro exclusivo de 5 ou 6 dígitos.
 
 *Message_text*\

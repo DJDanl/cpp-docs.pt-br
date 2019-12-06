@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: a15e519be14d9a05cb30a8c9282baccc87a5f35e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14b5c12715d1c4c27d9ef8e262170acb2f85e526
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267683"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857340"
 ---
 # <a name="pointers-to-members"></a>Ponteiros para membros
 
@@ -28,7 +28,7 @@ As declarações dos ponteiros para os membros são casos especiais de declaraç
 
    - Um especificador de classe de armazenamento opcional.
 
-   - Opcional **const** e/ou **volátil** especificadores.
+   - Especificadores **const** e/ou **voláteis** opcionais.
 
    - O especificador de tipo: o nome de um tipo.  Este é o tipo de membro a ser apontado, não a classe.
 
@@ -38,23 +38,23 @@ As declarações dos ponteiros para os membros são casos especiais de declaraç
 
    - O nome qualificado da classe que contém os membros a serem apontados.
 
-   - O __::__ operador.
+   - O operador __::__ .
 
-   - O __\*__ operador.
+   - O operador de __\*__ .
 
-   - Opcional **const** e/ou **volátil** especificadores.
+   - Especificadores **const** e/ou **voláteis** opcionais.
 
    - O identificador que nomeia o ponteiro para o membro.
 
 1. Um inicializador opcional:
 
-   - O **=** operador.
+   - O operador de **=** .
 
-   - O **&** operador.
+   - O operador de **&** .
 
    - O nome qualificado da classe.
 
-   - O __::__ operador.
+   - O operador __::__ .
 
    - O nome de um membro não estático da classe de tipo apropriado.
 
@@ -82,7 +82,7 @@ int main()
 }
 ```
 
-No exemplo anterior, `pwCaption` é um ponteiro para qualquer membro da classe `Window` que tem o tipo `char*`. O tipo de `pwCaption` é `char * Window::* `. O fragmento de código a seguir declara ponteiros para as funções de membro `SetCaption` e `GetCaption`.
+No exemplo anterior, `pwCaption` é um ponteiro para qualquer membro da classe `Window` que tenha o tipo `char*`. O tipo de `pwCaption` é `char * Window::* `. O fragmento de código a seguir declara ponteiros para as funções de membro `SetCaption` e `GetCaption`.
 
 ```cpp
 const char * (Window::*pfnwGC)() = &Window::GetCaption;
@@ -104,7 +104,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';
 ```
 
-A diferença entre o **.** <strong>\*</strong> e **->** <strong>\*</strong> operadores (os operadores de ponteiro para membro) é que o **.** <strong>\*</strong> operador seleciona membros dado um objeto ou uma referência de objeto, enquanto o **->** <strong>\*</strong> operador seleciona membros por meio de um ponteiro. (Para obter mais informações sobre esses operadores, consulte [expressões com operadores de ponteiro para membro](../cpp/pointer-to-member-operators-dot-star-and-star.md).)
+A diferença entre o **.** <strong>\*</strong> e **->** operadores de <strong>\*</strong> (os operadores de ponteiro para membro) é que o **.** <strong>\*</strong> operador seleciona os membros que receberam uma referência de objeto ou objeto, enquanto o operador **->** <strong>\*</strong> seleciona Membros por meio de um ponteiro. (Para obter mais informações sobre esses operadores, consulte [expressões com operadores de ponteiro para membro](../cpp/pointer-to-member-operators-dot-star-and-star.md).)
 
 O resultado dos operadores de ponteiro para membro é o tipo do membro — nesse caso, `char *`.
 
@@ -127,13 +127,13 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 
 ## <a name="restrictions-on-pointers-to-members"></a>Restrições em ponteiros para membros
 
-O endereço de um membro estático não é um ponteiro para um membro. É um ponteiro normal para uma instância do membro estático. Como apenas uma instância de um membro estático existe para todos os objetos de uma determinada classe, comuns address-of (**&**) e desreferência (<strong>\*</strong>) operadores podem ser usados.
+O endereço de um membro estático não é um ponteiro para um membro. É um ponteiro normal para uma instância do membro estático. Como existe apenas uma instância de um membro estático para todos os objetos de uma determinada classe, os operadores de endereço ( **&** ) e de desreferência (<strong>\*</strong>) comuns podem ser usados.
 
 ## <a name="pointers-to-members-and-virtual-functions"></a>Ponteiros para membros e funções virtuais
 
 Chamar uma função virtual por meio de uma função de ponteiro para membro funciona como se a função tivesse sido chamada diretamente; a função correta é procurada na tabela v e chamada.
 
-A chave para as funções virtuais funcionarem, como sempre, é chamá-las por meio de um ponteiro para uma classe base. (Para obter mais informações sobre funções virtuais, consulte [funções virtuais](../cpp/virtual-functions.md).)
+A chave para as funções virtuais funcionarem, como sempre, é chamá-las por meio de um ponteiro para uma classe base. (Para obter mais informações sobre as funções virtuais, consulte [funções virtuais](../cpp/virtual-functions.md).)
 
 O código a seguir mostra como chamar uma função virtual com uma função de ponteiro para membro:
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - + operator [C++], unary operators
 - + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
-ms.openlocfilehash: c1d5fc926b396f1ec44b9e44e79721e2ca4a0908
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83fedd9d3cc6cd7c08ba79d2ed83e9f62d919e29
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244151"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857236"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>Operadores unários de adição e de negação: + e -
 
@@ -29,19 +29,21 @@ ms.locfileid: "62244151"
 
 ## <a name="-operator"></a>Operador +
 
-O resultado do operador de adição unário (**+**) é o valor do operando. O operando para o operador de adição unário deve ser de um tipo aritmético.
+O resultado do operador de adição unário ( **+** ) é o valor de seu operando. O operando para o operador de adição unário deve ser de um tipo aritmético.
 
-A promoção integral é executada em operandos integrais. O tipo resultante é o tipo para o qual o operando é promovido. Assim, a expressão `+ch`, onde `ch` é do tipo **char**, resulta em um tipo **int**; o valor é inalterado. Ver [conversões padrão](standard-conversions.md) para obter mais informações sobre como a promoção é feita.
+A promoção integral é executada em operandos integrais. O tipo resultante é o tipo para o qual o operando é promovido. Assim, a expressão `+ch`, em que `ch` é do tipo **Char**, resulta no tipo **int**; o valor não é modificado. Consulte [conversões padrão](standard-conversions.md) para obter mais informações sobre como a promoção é feita.
 
 ## <a name="--operator"></a>Operador -
 
-O operador de negação unário (**-**) produz o negativo do seu operando. O operando para o operador de negação unário deve ser um tipo aritmético.
+O operador de negação unário ( **-** ) produz o negativo de seu operando. O operando para o operador de negação unário deve ser um tipo aritmético.
 
-A promoção de integral é executada em operandos integrais, e o tipo resultante é o tipo para o qual o operando é promovido. Ver [conversões padrão](standard-conversions.md) para obter mais informações sobre como a promoção é realizada.
+A promoção de integral é executada em operandos integrais, e o tipo resultante é o tipo para o qual o operando é promovido. Consulte [conversões padrão](standard-conversions.md) para obter mais informações sobre como a promoção é executada.
 
-## <a name="microsoft-specific"></a>específica da Microsoft
+**Seção específica da Microsoft**
 
 A negação unária de quantidades não assinadas é executada subtraindo o valor do operando de 2^n, onde n é o número de bits em um objeto de um determinado tipo sem assinatura.
+
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

@@ -65,12 +65,12 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-ms.openlocfilehash: ef5b2487fb49739f9a073adbc87546fb5d49d542
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bc38e72818446a94a51a37b8df5c8c8582971b3f
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954408"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857756"
 ---
 # <a name="iscsym-iscsymf-__iscsym-__iswcsym-__iscsymf-__iswcsymf-_iscsym_l-_iswcsym_l-_iscsymf_l-_iswcsymf_l"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 
@@ -119,9 +119,9 @@ Inteiro a ser testado. *c* deve estar no intervalo de 0-255 para a versão de ca
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**__Iscsym** e **__iswcsym** retornarão um valor diferente de zero se *c* for uma letra, um sublinhado ou um dígito. **__Iscsymf** e **__iswcsymf** retornarão um valor diferente de zero se *c* for uma letra ou um sublinhado. Cada uma dessas rotinas retornará 0 se *c* não atender à condição de teste. As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam a *localidade* passada em vez da localidade atual para seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+Tanto **__iscsym** quanto **__iswcsym** retornarão um valor diferente de zero se *c* for uma letra, um sublinhado ou um dígito. Tanto **__iscsymf** quanto **__iswcsymf** retornarão um valor diferente de zero se *c* for uma letra ou um sublinhado. Cada uma dessas rotinas retornará 0 se *c* não atender à condição de teste. As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam a *localidade* passada em vez da localidade atual para seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -129,13 +129,13 @@ Essas rotinas são definidas como macros, a menos que a macro do pré-processado
 
 Para compatibilidade com versões anteriores, **iscsym** e **iscsymf** são definidos como macros somente quando [ &#95; &#95;stdc&#95; ](../../preprocessor/predefined-macros.md) não está definido ou é definido como 0; caso contrário, eles serão indefinidos.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, **_iswcsymf_l**|C: \<ctype.h><br /><br /> C++: \<cctype> ou \<ctype.h>|
 
-As rotinas **iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**e **_iswcsymf_l** são específicas da Microsoft. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+As rotinas **iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**e **_iswcsymf_l** são específicas da Microsoft. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 

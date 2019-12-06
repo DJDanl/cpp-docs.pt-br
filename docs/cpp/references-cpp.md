@@ -9,24 +9,24 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-ms.openlocfilehash: aafc582299402eabab2736ac7d07b6c4c397413c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2353f0861f0f249416d0bb84a7a951b1cb6d64bc
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244203"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857327"
 ---
 # <a name="references-c"></a>Referências (C++)
 
-Uma referência, como um ponteiro, armazena o endereço de um objeto que está localizado em outro lugar na memória. Ao contrário de um ponteiro, uma referência depois que ela é inicializada não pode ser feita se referir a um objeto diferente ou definido como null. Há dois tipos de referências: referências lvalue que se referem a uma referência de variável e rvalue nomeado que se referem a um [objeto temporário](../cpp/temporary-objects.md). A & operador significa uma referência de lvalue e a & & operador significa uma referência rvalue ou uma referência universal (um lvalue ou rvalue), dependendo do contexto.
+Uma referência, como um ponteiro, armazena o endereço de um objeto localizado em outro lugar na memória. Ao contrário de um ponteiro, uma referência após ser inicializada não pode ser feita para fazer referência a um objeto diferente ou definir como NULL. Há dois tipos de referências: referências lvalue que se referem a uma variável nomeada e referências a rvalue que se referem a um [objeto temporário](../cpp/temporary-objects.md). O operador & significa uma referência lvalue e o operador & & significa uma referência rvalue ou uma referência universal (rvalue ou lvalue), dependendo do contexto.
 
 As referências podem ser declaradas usando a seguinte sintaxe:
 
-> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* \[**=** *expression*]**;**
+> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* \[ **=** *expression*] **;**
 
 Qualquer declarador válido que especifique uma referência pode ser usado. A menos que se trate de uma referência para um tipo de matriz ou função, a seguinte sintaxe simplificada se aplica:
 
-> \[*especificadores de classe de armazenamento*] \[ *qualificadores cv*] *especificadores de tipo* \[ **&** ou **&&**] \[ *qualificadores cv*] *identificador* \[ **=** *expressão*]**;**
+> \[*especificadores de classe de armazenamento*] \[*CV-Qualifiers*] *tipo-especificadores* \[ **&** ou **&&** ] \[ID *de qualificadores CV],* *identificador* \[*expressão*de **=** ] **;**
 
 As referências são declaradas usando a seguinte sequência:
 
@@ -34,7 +34,7 @@ As referências são declaradas usando a seguinte sequência:
 
    - Um especificador de classe de armazenamento opcional.
 
-   - Opcional **const** e/ou **volátil** qualificadores.
+   - Qualificadores **const** e/ou **voláteis** opcionais.
 
    - O especificador de tipo: o nome de um tipo.
 
@@ -42,15 +42,15 @@ As referências são declaradas usando a seguinte sequência:
 
    - Um modificador opcional específico da Microsoft. Para obter mais informações, consulte [modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-   - O **&** operador ou **&&** operador.
+   - O operador de **&** ou operador de **&&** .
 
-   - Opcional **const** e/ou **volátil** qualificadores.
+   - **Const** e/ou **volatile** qualificadores opcionais.
 
    - O identificador.
 
 1. Um inicializador opcional.
 
-Os formulários de declarador mais complexos para ponteiros para matrizes e funções também se aplicam a referências a matrizes e funções. Para obter mais informações, consulte [ponteiros](../cpp/pointers-cpp.md).
+Os formulários declaradores mais complexos para ponteiros para matrizes e funções também se aplicam a referências a matrizes e funções. Para obter mais informações, consulte [ponteiros](../cpp/pointers-cpp.md).
 
 Vários declaradores e inicializadores podem aparecer em uma lista separada por vírgulas após um único especificador de declaração. Por exemplo:
 

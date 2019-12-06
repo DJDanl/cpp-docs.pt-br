@@ -55,12 +55,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 721ea80272f7a76e959528ec4114d69bd0e80507
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: abe34dc0f3baf9bdc63e0314ac70af3783d2bd9a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945306"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857704"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -159,9 +159,9 @@ A localidade a ser usada.
 
 Para obter mais informações, consulte [Especificações de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-A função **vsnprintf** retorna o número de caracteres gravados, não contando o caractere nulo de terminação. Se o tamanho do buffer especificado por *Count* não for suficientemente grande para conter a saída especificada por *Format* e *argptr*, o valor de retorno de **vsnprintf** será o número de caracteres que seriam gravados, não contando o NULL caractere, se a *contagem* fosse suficientemente grande. Se o valor de retorno for maior que *Count* -1, a saída será truncada. Um valor retornado -1 indica que ocorreu um erro de codificação.
+A função **vsnprintf** retorna o número de caracteres gravados, não contando o caractere nulo de terminação. Se o tamanho do buffer especificado pela *contagem* não for suficientemente grande para conter a saída especificada *por Format* e *argptr*, o valor de retorno de **vsnprintf** será o número de caracteres que seriam gravados, não contando o caractere nulo, se *Count* fosse suficientemente grande. Se o valor de retorno for maior que *Count* -1, a saída será truncada. Um valor retornado -1 indica que ocorreu um erro de codificação.
 
 As funções **_vsnprintf** e **_vsnwprintf** retornam o número de caracteres gravados se o número de caracteres a serem gravados for menor ou igual à *contagem*; Se o número de caracteres a serem gravados for maior que a *contagem*, essas funções retornarão-1 indicando que a saída foi truncada.
 
@@ -171,7 +171,7 @@ Se o *formato* for **nulo**ou se *o buffer* for **nulo** e a *contagem* não for
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, formata os dados e grava até a *contagem* de caracteres para a memória apontada por *buffer*. A função **vsnprintf** sempre grava um terminador nulo, mesmo se ele truncar a saída. Ao usar **_vsnprintf** e **_vsnwprintf**, o buffer será encerrado em nulo somente se houver espaço no final (ou seja, se o número de caracteres a serem gravados for menor que *Count*).
+Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, formata os dados e grava até a *contagem* de caracteres para a memória apontada por *buffer*. A função **vsnprintf** sempre grava um terminador nulo, mesmo se ele truncar a saída. Ao usar **_vsnprintf** e **_vsnwprintf**, o buffer será encerrado em nulo somente se houver espaço no final (ou seja, se o número de caracteres a serem gravados for menor que a *contagem*).
 
 > [!IMPORTANT]
 > Para evitar certos tipos de riscos de segurança, verifique se o *formato* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
@@ -181,9 +181,9 @@ Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seg
 >
 > Como **vsnprintf** sempre grava o nulo de terminação, o parâmetro de *contagem* pode ser igual ao tamanho do buffer.
 
-A partir do UCRT no Visual Studio 2015 e no Windows 10, o **vsnprintf** não é mais idêntico ao **_vsnprintf**. A função **vsnprintf** está em conformidade com o C99 Standard; o **_vnsprintf** é mantido para compatibilidade com versões anteriores com o Visual Studio Code mais antigo.
+A partir do UCRT no Visual Studio 2015 e no Windows 10, o **vsnprintf** não é mais idêntico ao **_vsnprintf**. A função **vsnprintf** está em conformidade com o C99 Standard; **_vnsprintf** é mantido para compatibilidade com versões anteriores com o Visual Studio Code mais antigo.
 
-As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro Locale passado em vez da localidade do thread atual.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
@@ -194,14 +194,14 @@ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 |**_vsntprintf**|**_vsnprintf**|**_vsnprintf**|**_vsnwprintf**|
 |**_vsntprintf_l**|**_vsnprintf_l**|**_vsnprintf_l**|**_vsnwprintf_l**|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-------------|---------------------------|-------------------------------|
 |**vsnprintf**, **_vsnprintf**, **_vsnprintf_l**|\<stdio.h>|\<stdio.h> ou \<cstdio>|
 |**_vsnwprintf**, **_vsnwprintf_l**|\<stdio.h> ou \<wchar.h>|\<stdio.h>, \<wchar.h>, \<cstdio> ou \<cwchar>|
 
-As funções **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** e **_vsnwprintf_l** são específicas da Microsoft. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+As funções **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** e **_vsnwprintf_l** são específicas da Microsoft. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

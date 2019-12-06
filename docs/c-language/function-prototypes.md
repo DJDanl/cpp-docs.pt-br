@@ -8,12 +8,12 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-ms.openlocfilehash: 2c75db3e1550927af57054a2cc1561d9df1567a4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 9c42ce5b23e6f755dafd57bdb5a5f79cf1adb4ec
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148798"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857080"
 ---
 # <a name="function-prototypes"></a>Protótipos de função
 
@@ -24,7 +24,7 @@ Uma declaração de função precede a definição de função e especifica o no
 *declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\* *attribute-seq*<sub>opt</sub> é específico da Microsoft \*/
+/\* *atributo-Seq*<sub>opt</sub> é \*específico da Microsoft /
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
@@ -43,14 +43,14 @@ Uma declaração de função precede a definição de função e especifica o no
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*: /\* Um declarador de função \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* Declarador de novo estilo \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* Declarador de estilo obsoleto \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**   /\* Declarador de novo estilo \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Declarador de estilo obsoleto \*/
 
 O protótipo tem o mesmo formato que a definição de função, exceto que é ele é encerrado por um ponto-e-vírgula imediatamente depois do parêntese de fechamento e, portanto, não tem corpo. Em ambos os casos, o tipo de retorno deve concordar com o tipo de retorno especificado na definição de função.
 
 Os protótipos de função têm os seguintes usos importantes:
 
-- Eles estabelecem o tipo de retorno para funções que retornam tipos diferentes de **int**. Embora as funções que retornem valores **int** não precisem de protótipos, os protótipos são recomendados.
+- Eles estabelecem o tipo de retorno para funções que retornam tipos diferentes de **int**. Embora as funções que retornam valores **int** não exijam protótipos, os protótipos são recomendados.
 
 - Sem protótipos completos, as conversões padrão são feitas, mas nenhuma tentativa será feita para verificar o tipo ou o número de argumentos com o número de parâmetros.
 

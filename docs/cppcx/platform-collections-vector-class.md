@@ -1,6 +1,6 @@
 ---
 title: '{1&gt;Classe Platform::Collections::Vector&lt;1}'
-ms.date: 10/01/2019
+ms.date: 12/04/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: a70856be04a63cad1c700cb3cc52711dde410265
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: b7774c2cdab7b9abcb3ebac1453779055eacf897
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816573"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857886"
 ---
 # <a name="platformcollectionsvector-class"></a>{1&gt;Classe Platform::Collections::Vector&lt;1}
 
@@ -49,13 +49,13 @@ Especifica um predicado binário para testar a igualdade com valores do tipo *T*
 
 ### <a name="remarks"></a>Comentários
 
-Os tipos permitidos são:
+{1&gt;Os tipos permitidos são:&lt;1}
 
-1. números inteiros
+1. {1&gt;números inteiros&lt;1}
 
 1. classe de interface ^
 
-1. classe ref pública^
+1. {1&gt;classe ref pública^&lt;1}
 
 1. {1&gt;estrutura de valor&lt;1}
 
@@ -67,15 +67,15 @@ Se você tentar usar um tipo de **vetor** em um valor de retorno público ou par
 
 ### <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores públicos
+### <a name="public-constructors"></a>Construtores Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[Vector::Vector](#ctor)|Inicializa uma nova instância da classe Vector.|
 
-### <a name="public-methods"></a>Métodos públicos
+### <a name="public-methods"></a>Métodos Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[Vetor:: Append](#append)|Insere o item especificado após o último item no Vector atual.|
 |[Vetor:: Clear](#clear)|Exclui todos os elementos no Vector atual.|
@@ -84,25 +84,25 @@ Se você tentar usar um tipo de **vetor** em um valor de retorno público ou par
 |[Vector::GetMany](#getmany)|Recupera uma sequência de itens de Vector atual, começando no índice especificado.|
 |[Vector::GetView](#getview)|Retorna uma exibição somente leitura de um Vector; isto é, um [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
 |[Vector::IndexOf](#indexof)|Procura o item especificado no vetor atual, e se encontrado, retorna o índice do item.|
-|[Vector::InsertAt](#insertat)|Insere o item especificado no Vector atual após o elemento identificado pelo índice especificado.|
+|[Vector::InsertAt](#insertat)|Insere o item especificado no vetor atual no elemento identificado pelo índice especificado.|
 |[Vector::ReplaceAll](#replaceall)|Exclui os elementos no Vector atual e insere os elementos da matriz especificada.|
 |[Vector::RemoveAt](#removeat)|Exclui o elemento identificado pelo índice especificado do Vector atual.|
 |[Vector::RemoveAtEnd](#removeatend)|Exclui o elemento no final do Vector atual.|
 |[Vector::SetAt](#setat)|Atribui o valor especificado ao elemento no Vector atual que é identificado pelo índice especificado.|
 |[Vetor:: Size](#size)|Retorna o número de elementos no objeto Vector atual.|
 
-### <a name="events"></a>Eventos
+### <a name="events"></a>Events
 
 |||
 |-|-|
-|{1&gt;Nome&lt;1}|Descrição|
+|Name|Descrição|
 |evento [Windows:: Foundation:: Collection:: VectorChangedEventHandler\<t > ^ vectorchanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Ocorre quando o Vector é alterado.|
 
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+## <a name="inheritance-hierarchy"></a>Hierarquia de Herança
 
 `Vector`
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos do
 
 **Cabeçalho:** collection.h
 
@@ -244,7 +244,7 @@ O IndexOf usa o std::find_if para encontrar o item. Tipos de elementos personali
 
 ##  <a name="insertat"></a>Método Vector:: InsertAt
 
-Insere o item especificado no Vector atual após o elemento identificado pelo índice especificado.
+Insere o item especificado no vetor atual no elemento identificado pelo índice especificado.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -258,7 +258,7 @@ virtual void InsertAt(unsigned int index, T item)
 Um inteiro não assinado com base zero que especifica um determinado elemento no objeto Vector.
 
 *item*<br/>
-Um item a ser inserido no vetor após o elemento especificado pelo *índice*. O tipo de *Item* é definido pelo TypeName de *T* .
+Um item a ser inserido no vetor no elemento especificado pelo *índice*. O tipo de *Item* é definido pelo TypeName de *T* .
 
 ## <a name="removeat"></a>Método Vector:: RemoveAt
 
@@ -394,4 +394,4 @@ O último elemento em uma sequência de objetos que é usado para inicializar o 
 
 [Coleções (C++/CX)](collections-c-cx.md)<br/>
 [Namespace da plataforma](platform-namespace-c-cx.md)<br/>
-[Criando componentes de Windows Runtime noC++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[Criando componentes do Windows Runtime no C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

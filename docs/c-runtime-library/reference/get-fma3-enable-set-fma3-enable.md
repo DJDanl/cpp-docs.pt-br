@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _get_FMA3_enable
 - _set_FMA3_enable
 ms.assetid: 4c1dc4bc-e86b-451b-9211-5a2ba6c98ee4
-ms.openlocfilehash: e18db90779ed59a6ca6976f69a5993d94d61c6bc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dee75bf5b16b5fe5b619444f7f2736010bb42a84
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955927"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857796"
 ---
 # <a name="_get_fma3_enable-_set_fma3_enable"></a>_get_FMA3_enable, _set_FMA3_enable
 
@@ -45,17 +45,17 @@ int _get_FMA3_enable();
 *flag*<br/>
 Defina como 1 para habilitar as implementações de FMA3 das funções da biblioteca de pontos flutuantes matemáticas do transcendental em plataformas x64, ou como 0 para usar as implementações que não usam instruções FMA3.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Um valor diferente de zero se as implementações de FMA3 das funções da biblioteca de pontos flutuantes matemáticas do transcendental estiverem habilitadas. Caso contrário, zero.
 
 ## <a name="remarks"></a>Comentários
 
-Use a função **_set_FMA3_enable** para habilitar ou desabilitar o uso de instruções FMA3 nas funções de ponto flutuante de matemática do transcendental na biblioteca do CRT. O valor de retorno reflete a implementação em uso após a alteração. Se a CPU não oferecer suporte a instruções FMA3, essa função não poderá habilitá-las na biblioteca e o valor de retorno será zero. Use **_get_FMA3_enable** para obter o estado atual da biblioteca. Por padrão, em plataformas x64, o código de inicialização CRT detecta se a CPU dá suporte a instruções FMA3 e habilita ou desabilita as implementações de FMA3 na biblioteca.
+Use a função **_set_FMA3_enable** para habilitar ou desabilitar o uso de instruções FMA3 nas funções de ponto flutuante de matemática transcendental na biblioteca CRT. O valor de retorno reflete a implementação em uso após a alteração. Se a CPU não oferecer suporte a instruções FMA3, essa função não poderá habilitá-las na biblioteca e o valor de retorno será zero. Use **_get_FMA3_enable** para obter o estado atual da biblioteca. Por padrão, em plataformas x64, o código de inicialização CRT detecta se a CPU dá suporte a instruções FMA3 e habilita ou desabilita as implementações de FMA3 na biblioteca.
 
 Como as implementações de FMA3 usam algoritmos diferentes, pequenas diferenças no resultado de computações podem ser observadas quando as implementações de FMA3 são habilitadas ou desabilitadas, ou entre computadores que não dão suporte a FMA3. Para obter mais informações, consulte [problemas de migração de ponto flutuante](../../porting/floating-point-migration-issues.md).
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 As funções **_set_FMA3_enable** e **_get_FMA3_enable** só estão disponíveis nas versões x64 do CRT.
 
