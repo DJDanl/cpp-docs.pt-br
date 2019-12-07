@@ -41,12 +41,12 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: 0e11c11b468ff6e058ccf5c75b000396e0473bfa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 34f92bedfa9606c90196f2e3a5e47dc341b23aea
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747626"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898754"
 ---
 # <a name="errno-constants"></a>Constantes errno
 
@@ -72,13 +72,13 @@ Há suporte para os seguintes valores de **errno**:
 |**EAGAIN**|Sem mais processos. Ocorreu uma falha ao tentar criar um novo processo, pois não há mais slot do processo, ou não há mais memória suficiente ou o nível de aninhamento máximo foi atingido.|
 |**E2BIG**|A lista de argumentos é muito longa.|
 |**EACCES**|Permissão negada. A configuração de permissão do arquivo não permite o acesso especificado. Esse erro indica que foi feita uma tentativa de acessar um arquivo (ou, em alguns casos, um diretório) de um modo incompatível com os atributos do arquivo.<br/><br/>Por exemplo, o erro pode ocorrer quando é feita uma tentativa de leitura de um arquivo que não está aberto, de abertura de um arquivo existente somente leitura para gravação ou de abertura de um diretório em vez de um arquivo. Em versões do sistema operacional MS-DOS 3.0 e posteriores, **EACCES** também pode indicar um bloqueio ou violação de compartilhamento.<br/><br/>O erro também pode ocorrer em uma tentativa de renomear um arquivo ou diretório ou remover um diretório existente.|
-|**EBADF**|Número de arquivo incorreto. Existem duas causas possíveis: 1) O descritor de arquivo especificado não é um valor válido ou não se refere a um arquivo aberto. 2) uma tentativa foi feita para gravar em um arquivo ou dispositivo aberto para acesso somente leitura.|
+|**EBADF**|Número de arquivo incorreto. Há duas causas possíveis: 1) o descritor de arquivo especificado não é um valor válido ou não faz referência a um arquivo aberto. 2) uma tentativa foi feita para gravar em um arquivo ou dispositivo aberto para acesso somente leitura.|
 |**EDEADLOCK**|Ocorreria um deadlock de recursos. O argumento para uma função matemática não está no domínio da função.|
 |**EDOM**|Argumento matemático.|
 |**EEXIST**|Há arquivos. Foi feita uma tentativa de criar um arquivo que já existe. Por exemplo, os sinalizadores **_O_CREAT** e **_O_EXCL** são especificados em uma chamada **_open**, mas o arquivo denominado já existe.|
 |**EILSEQ**|Sequência ilegal de bytes (por exemplo, em uma cadeia de caracteres MBCS).|
 |**EINVAL**|Argumento inválido. Um valor inválido foi fornecido para um dos argumentos de uma função. Por exemplo, o valor fornecido para a origem ao posicionar o ponteiro do arquivo (por meio de uma chamada para **fseek**) ocorre antes do início do arquivo.|
-|**EMFILE**|Muitos arquivos abertos. Não há outros descritores de arquivos disponíveis, portanto, não é possível abrir outros arquivos.|
+|**EMFILE**|Número excessivo de arquivos abertos. Não há outros descritores de arquivos disponíveis, portanto, não é possível abrir outros arquivos.|
 |**ENOENT**|Arquivo ou diretório inexistente. O arquivo ou diretório especificado não existe ou não pode ser encontrado. Essa mensagem pode ocorrer sempre que um arquivo especificado não existir ou um componente de um caminho não especificar um diretório existente.|
 |**ENOEXEC**|Erro de formato exec. Foi feita uma tentativa de executar um arquivo que não é executável, ou que tem um formato inválido de arquivo executável.|
 |**ENOMEM**|Não há núcleos suficientes. Não há memória suficiente disponível para o operador tentado. Por exemplo, essa mensagem pode ocorrer quando não houver memória suficiente disponível para executar um processo filho, ou quando a solicitação de alocação em uma chamada **getcwd** não puder ser satisfeita.|
@@ -87,7 +87,7 @@ Há suporte para os seguintes valores de **errno**:
 |**EXDEV**|Link de dispositivo cruzado. Foi feita uma tentativa de mover um arquivo para um dispositivo diferente (usando a função **rename**).|
 |**STRUNCATE**|Uma cópia ou concatenação da cadeia de caracteres resultou em uma cadeia de caracteres truncada. Confira [_TRUNCATE](../c-runtime-library/truncate.md).
 
-Os valores a seguir têm suporte para compatibilidade com o Posix. Eles são os valores necessários em sistemas não Posix.
+Os valores a seguir têm suporte para compatibilidade com POSIX. Eles são valores obrigatórios em sistemas não POSIX.
 
 ```C
 #define E2BIG /* argument list too long */

@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f2c90bd7c1d88a94d1dab05b98442111faa71a2
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457017"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898811"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,7 +29,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Desde o lançamento do Visual Studio 2017, o cabeçalho \<de > do sistema de arquivos ainda C++ não era um padrão. C++no Visual Studio 2017 (MSVC v141) implementa o padrão final de rascunho, encontrado em [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> Desde o lançamento do Visual Studio 2017, o \<> cabeçalho do sistema de arquivos ainda não C++ era um padrão. C++no Visual Studio 2017 (MSVC v141) implementa o padrão final de rascunho, encontrado em [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
 Esse cabeçalho dá suporte a sistemas de sistema para uma das duas classes amplas de sistemas operacionais de host: Microsoft Windows e POSIX.
 
@@ -37,13 +37,13 @@ Enquanto a maioria das funcionalidades são comuns para ambos os sistemas operac
 
 - O Windows dá suporte a vários nomes de raiz, como c: ou \\\nome_rede. Um sistema de arquivos consiste em uma floresta de árvores, cada uma com seu próprio diretório raiz, como c:\ ou \\\network_name\\e cada uma com seu próprio diretório atual, para completar um nome de caminho relativo (que não é um nome de caminho absoluto).
 
-- O Posix dá suporte a uma única árvore, sem nome de raiz, o único diretório raiz / e um único diretório atual.
+- O POSIX dá suporte a uma única árvore, sem nome raiz, diretório raiz único/e um único diretório atual.
 
 Outra diferença significativa é a representação nativa dos nomes de caminho:
 
 - O Windows usa uma sequência de terminação nula de wchar_t, codificada como UTF-16 (um ou dois elementos para cada caractere).
 
-- O Posix usa uma sequência de terminação nula de caracteres, codificada como UTF-8 (um ou mais elementos para cada caractere).
+- O POSIX usa uma sequência de caracteres terminada em nulo, codificada como UTF-8 (um ou mais elementos para cada caractere).
 
 - Um objeto do caminho de classe armazena o nome do caminho no formato nativo, mas dá suporte à conversão fácil entre esse formato armazenado e vários formatos externos:
 
@@ -63,7 +63,7 @@ Outra diferença é o detalhamento com que cada sistema operacional permite espe
 
 1. O Windows registra se um arquivo é somente leitura ou gravável, um atributo que não tem nenhum significado para diretórios.
 
-1. O Posix registra se um arquivo pode ser lido, gravado ou executado (verificado se for um diretório) pelo proprietário, pelo grupo do proprietário ou por todo mundo, bem como algumas outras permissões.
+1. O POSIX registra se um arquivo pode ser lido, gravado ou executado (verificado se um diretório), pelo proprietário, pelo grupo do proprietário ou por todos, além de algumas outras permissões.
 
 É comum aos dois sistemas a estrutura imposta a um nome de caminho quando você passar do nome da raiz. Para o nome de caminho c:/abc/xyz/def.ext:
 
@@ -108,7 +108,7 @@ Para obter mais informações e exemplos de código, consulte [Navegação do Si
 |-|-|
 |[Estrutura space_info](../standard-library/space-info-structure.md)|Mantém informações sobre um volume.|
 
-## <a name="functions"></a>Funções
+## <a name="functions"></a>{1&gt;Funções&lt;1}
 
 [\<funções filesystem>](../standard-library/filesystem-functions.md)
 

@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: e6eef7152e45e8177c451fc25592fab85c58ccb5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b9ddb3117afe37060b8013be235bdb11a2a031ac
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449758"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898846"
 ---
-# <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
+# <a name="ltsystem_errorgt"></a>&lt;system_error&gt;
 
-Inclua o cabeçalho \<system_error > para definir a classe `system_error` de exceção e os modelos relacionados para o processamento de erros de sistema de nível inferior.
+Inclua o cabeçalho \<system_error > para definir o `system_error` de classe de exceção e os modelos relacionados para o processamento de erros de sistema de nível inferior.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 **Cabeçalho:** \<system_error>
 
@@ -26,7 +26,7 @@ Inclua o cabeçalho \<system_error > para definir a classe `system_error` de exc
 
 ## <a name="members"></a>Membros
 
-### <a name="objects"></a>Objetos
+### <a name="objects"></a>Objetos do
 
 |||
 |-|-|
@@ -35,7 +35,7 @@ Inclua o cabeçalho \<system_error > para definir a classe `system_error` de exc
 |[is_error_condition_enum_v](../standard-library/system-error-functions.md#is_error_condition_enum_v)||
 |[system_category](../standard-library/system-error-functions.md#system_category)|Representa a categoria de erros causados por estouros de nível inferior do sistema.|
 
-### <a name="functions"></a>Funções
+### <a name="functions"></a>{1&gt;Funções&lt;1}
 
 |||
 |-|-|
@@ -55,7 +55,7 @@ Inclua o cabeçalho \<system_error > para definir a classe `system_error` de exc
 
 |||
 |-|-|
-|[errc](../standard-library/system-error-enums.md#errc)|Fornece nomes simbólicos para todas as macros de código de erro definidas pelo Posix em `<errno.h>`.|
+|[errc](../standard-library/system-error-enums.md#errc)|Fornece nomes simbólicos para todas as macros de código de erro definidas pelo POSIX em `<errno.h>`.|
 
 ### <a name="classes-and-structs"></a>Classes e structs
 
