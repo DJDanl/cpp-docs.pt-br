@@ -1,5 +1,5 @@
 ---
-title: 'Como: Cadeias de caracteres de Unicode de marshaling usando Interop do C++'
+title: Como realizar marshaling de cadeias de caracteres Unicode usando interop C++
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f666e52b604e4713f02cb14744ac12a0407366a3
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400546"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988167"
 ---
-# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Como: Cadeias de caracteres de Unicode de marshaling usando Interop do C++
+# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Como realizar marshaling de cadeias de caracteres Unicode usando interop C++
 
-Este tópico demonstra uma faceta de interoperabilidade do Visual C++. Para obter mais informações, consulte [usando Interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+Este tópico demonstra uma faceta da interoperabilidade Visual C++ . Para obter mais informações, [consulte C++ usando a interoperabilidade (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
-O código a seguir exemplos de uso de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) #pragma diretivas para implementar gerenciados e funções no mesmo arquivo, mas essas funções interoperam da mesma maneira, se definida em arquivos separados. Arquivos que contêm apenas as funções não gerenciadas não precisa ser compilado com [/clr (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md).
+Os exemplos de código a seguir usam as diretivas de #pragma [gerenciadas e não gerenciadas](../preprocessor/managed-unmanaged.md) para implementar funções gerenciadas e não gerenciadas no mesmo arquivo, mas essas funções interoperam da mesma maneira, se definidas em arquivos separados. Os arquivos que contêm apenas funções não gerenciadas não precisam ser compilados com [/CLR (compilação em tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md).
 
-Este tópico demonstra como cadeias de caracteres Unicode podem ser passados do gerenciado para uma função não gerenciada e vice-versa. Para interoperar com outros tipos de cadeias de caracteres, consulte os tópicos a seguir:
+Este tópico demonstra como cadeias de caracteres Unicode podem ser passadas de um gerenciado para uma função não gerenciada e vice-versa. Para interoperar com outros tipos de cadeias de caracteres, consulte os seguintes tópicos:
 
-- [Como: realizar marshaling de cadeias de caracteres ANSI usando a interop do C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
+- [Como realizar marshaling de cadeias de caracteres ANSI usando interop do C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
-- [Como: realizar marshaling de cadeias de caracteres COM usando a interop do C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
+- [Como realizar marshaling de cadeias de caracteres COM usando interop do C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
 
 ## <a name="example"></a>Exemplo
 
-Para passar uma cadeia de caracteres Unicode de gerenciado para uma função não gerenciada, a função PtrToStringChars (declarada em vcclr) pode ser usada para acesso na memória em que a cadeia de caracteres gerenciada é armazenada. Como esse endereço será passado para uma função nativa, é importante que a memória ser fixado com [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) para impedir que os dados de cadeia de caracteres que estão sendo realocados, deve um ciclo de coleta de lixo ocorrer durante a executa a função não gerenciada.
+Para passar uma cadeia de caracteres Unicode de um gerenciado para uma função não gerenciada, a função PtrToStringChars (declarada em Vcclr. h) pode ser usada para acessar na memória onde a cadeia de caracteres gerenciada está armazenada. Como esse endereço será passado para uma função nativa, é importante que a memória seja fixada com [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) para impedir que os dados da cadeia de caracteres sejam realocados, caso ocorra um ciclo de coleta de lixo enquanto a função não gerenciada é executada.
 
-```
+```cpp
 // MarshalUnicode1.cpp
 // compile with: /clr
 #include <iostream>
@@ -63,9 +63,9 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra o marshaling de dados necessárias para acessar uma cadeia de caracteres Unicode em uma função gerenciada chamada por uma função não gerenciada. A função gerenciada, a cadeia de caracteres Unicode nativa, ao receber o converterá em uma cadeia de caracteres gerenciada usando o <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> método.
+O exemplo a seguir demonstra o marshaling de dados necessário para acessar uma cadeia de caracteres Unicode em uma função gerenciada chamada por uma função não gerenciada. A função gerenciada, ao receber a cadeia de caracteres Unicode nativa, converte-a em uma cadeia de caracteres gerenciada usando o método <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A>.
 
-```
+```cpp
 // MarshalUnicode2.cpp
 // compile with: /clr
 #include <iostream>

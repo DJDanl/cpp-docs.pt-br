@@ -1,5 +1,5 @@
 ---
-title: 'Como: Marshaling de ponteiros inseridos usando Interop do C++'
+title: Como realizar marshaling de ponteiros inseridos usando interop C++
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 972d7a9c09100c35cb0bf527efbd0884c909c46d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345735"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988179"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Como: Marshaling de ponteiros inseridos usando Interop do C++
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Como realizar marshaling de ponteiros inseridos usando interop C++
 
-O código a seguir exemplos de uso de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) #pragma diretivas para implementar gerenciados e funções no mesmo arquivo, mas essas funções interoperam da mesma maneira, se definida em arquivos separados. Arquivos que contêm apenas as funções não gerenciadas não precisa ser compilado com [/clr (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md).
+Os exemplos de código a seguir usam as diretivas de #pragma [gerenciadas e não gerenciadas](../preprocessor/managed-unmanaged.md) para implementar funções gerenciadas e não gerenciadas no mesmo arquivo, mas essas funções interoperam da mesma maneira, se definidas em arquivos separados. Os arquivos que contêm apenas funções não gerenciadas não precisam ser compilados com [/CLR (compilação em tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como uma função não gerenciada que usa uma estrutura que contém ponteiros pode ser chamada de uma função gerenciada. A função gerenciada cria uma instância da estrutura e inicializa o ponteiro inserido com a nova palavra-chave (em vez do [gcnew de novo, ref](../extensions/ref-new-gcnew-cpp-component-extensions.md) palavra-chave). Porque isso aloca a memória no heap nativo, não é necessário para fixar a matriz para suprimir a coleta de lixo. No entanto, a memória deve ser explicitamente excluída para evitar vazamentos de memória.
+O exemplo a seguir demonstra como uma função não gerenciada que usa uma estrutura que contém ponteiros pode ser chamada de uma função gerenciada. A função gerenciada cria uma instância da estrutura e inicializa o ponteiro inserido com a nova palavra-chave (em vez da palavra-chave [ref New, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) ). Como isso aloca a memória no heap nativo, não é necessário fixar a matriz para suprimir a coleta de lixo. No entanto, a memória deve ser excluída explicitamente para evitar o vazamento de memória.
 
-```
+```cpp
 // marshal_embedded_pointer.cpp
 // compile with: /clr
 #include <iostream>

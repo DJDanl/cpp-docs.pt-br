@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 4) C4816
+title: Aviso do compilador (nível 4) C4816
 ms.date: 11/04/2016
 f1_keywords:
 - C4816
 helpviewer_keywords:
 - C4816
 ms.assetid: 60f730ae-d942-4db9-ab97-41d4a874d8da
-ms.openlocfilehash: 719a950f2cc15b51dcbbb7e8f4f476f92fe326c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e96cb81d78b0e49e6978ff6ec78cdbfcfdc89e6d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349585"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990063"
 ---
-# <a name="compiler-warning-level-4-c4816"></a>Compilador aviso (nível 4) C4816
+# <a name="compiler-warning-level-4-c4816"></a>Aviso do compilador (nível 4) C4816
 
-'param': parâmetro possui uma matriz de tamanho zero que será truncada (a menos que o objeto é passado por referência)
+' param ': o parâmetro tem uma matriz de tamanho zero que será truncada (a menos que o objeto seja passado por referência)
 
-Um parâmetro para um objeto com uma matriz de tamanho zero não foi passado por referência. A matriz não será copiada quando o objeto é passado.
+Um parâmetro para um objeto com uma matriz de tamanho zero não foi passado por referência. A matriz não será copiada quando o objeto for passado.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4816:
 
-```
+```cpp
 // C4816.cpp
 // compile with: /W4
 #include <stdio.h>

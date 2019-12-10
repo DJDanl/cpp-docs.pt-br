@@ -6370,6 +6370,8 @@
                   expanded: false
                   items:
                     - name: Arquivos e fluxos
+                      href: c-runtime-library/files-and-streams.md
+                    - name: Texto e fluxos binários
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: Byte e fluxos largos
                       href: c-runtime-library/byte-and-wide-streams.md

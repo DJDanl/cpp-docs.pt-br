@@ -1,5 +1,5 @@
 ---
-title: '&lt;seealso > (comentários de documentação do C++)'
+title: '&lt;seeAlso > (C++ comentários de documentação)'
 ms.date: 11/04/2016
 f1_keywords:
 - <seealso>
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - seealso C++ XML tag
 - <seealso> C++ XML tag
 ms.assetid: cb33d100-9c50-4485-8d0c-573429eff155
-ms.openlocfilehash: ea399e98723a265ef3c17f2282b7c81299b4abc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 698db2df462f561acd897d0d0e56b3106a915466
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318830"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988612"
 ---
 # <a name="ltseealsogt"></a>&lt;seealso&gt;
 
@@ -40,13 +40,13 @@ Compile com [/doc](doc-process-documentation-comments-c-cpp.md) para processar c
 
 Consulte [\<summary>](summary-visual-cpp.md) para obter um exemplo sobre o uso de \<seealso>.
 
-O compilador MSVC tentará resolver referências cref em uma passagem por meio de comentários de documentação.  Portanto, se você estiver usando as regras de pesquisa do C++ e um símbolo não for encontrado pelo compilador, a referência será marcada como não resolvida.
+O compilador MSVC tentará resolver referências CREF em um passo entre os comentários da documentação.  Portanto, se você estiver usando as regras de pesquisa do C++ e um símbolo não for encontrado pelo compilador, a referência será marcada como não resolvida.
 
 ## <a name="example"></a>Exemplo
 
 Na amostra a seguir, um símbolo não resolvido é referenciado em um cref. O comentário XML do cref para B::Test será `<seealso cref="!:B::Test" />`, enquanto a referência a A::Test é um `<seealso cref="M:A.Test" />` bem formado.
 
-```
+```cpp
 // xml_seealso_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_seealso_tag.dll

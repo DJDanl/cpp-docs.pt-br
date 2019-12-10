@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4253
 ms.assetid: ec7433a9-aa9c-495a-a9f2-075e7bc3e7bc
-ms.openlocfilehash: d2fd7238a3f57b11b91813bd40b66cb3e9f47202
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3f45880571e5c06f76d5f063ff993e2f6b2be9b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352510"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988091"
 ---
 # <a name="linker-tools-warning-lnk4253"></a>Aviso LNK4253 (Ferramentas de Vinculador)
 
-seção 'section1' não mesclada dentro de 'section2'; já mesclada dentro de 'Remoções3'
+a seção ' section1 ' não foi mesclada em ' section2 '; Já mesclado em ' section3 '
 
-O vinculador detectou vários, solicitações de mesclagem conflitante. O vinculador irá ignorar uma das solicitações.
+O vinculador detectou várias solicitações de mesclagem conflitantes. O vinculador irá ignorar uma das solicitações.
 
-Um **/MERGE** opção ou diretiva é encontrada e o `from` seção já foram mesclada em uma seção diferente devido a um anteriores **/MERGE** opção ou diretiva (ou devido a uma mesclagem implícita de o vinculador).
+Uma opção ou diretiva **/Merge** é encontrada e a seção `from` já foi mesclada em uma seção diferente devido a uma opção **/Merge** ou diretiva anterior (ou devido a uma mesclagem implícita do vinculador).
 
-Para resolver LNK4253, remova uma das solicitações de mesclagem.
+Para resolver o LNK4253, remova uma das solicitações de mesclagem.
 
-Ao direcionar x86 máquinas e destinos do Windows CE (ARM, MIPS, suporte a SH4 e Thumb) com o Visual C++, o. Seção de CRT agora é somente leitura. Se seu código depende do comportamento anterior (. As seções de CRT são leitura/gravação), você pode ver um comportamento inesperado.
+Ao direcionar computadores x86 e destinos de Windows CE (ARM, MIPS, SH4 e Thumb) com C++Visual, o. A seção CRT agora é somente leitura. Se seu código depende do comportamento anterior (. As seções CRT são de leitura/gravação), você pode ver um comportamento inesperado.
 
 Para obter mais informações, consulte
 
@@ -33,9 +33,9 @@ Para obter mais informações, consulte
 
 ## <a name="example"></a>Exemplo
 
-No exemplo a seguir, o vinculador é instruído para mesclar o `.rdata` seção duas vezes, mas em diferentes seções. O exemplo a seguir gera LNK4253.
+No exemplo a seguir, o vinculador é instruído a Mesclar a seção `.rdata` duas vezes, mas em seções diferentes. O exemplo a seguir gera LNK4253.
 
-```
+```cpp
 // LNK4253.cpp
 // compile with: /W1 /link /merge:.rdata=text2
 // LNK4253 expected

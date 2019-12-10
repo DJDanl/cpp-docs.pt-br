@@ -1,5 +1,5 @@
 ---
-title: '&lt;valor > (comentários de documentação do C++)'
+title: '> de valor deC++ &lt;(comentários de documentação)'
 ms.date: 11/04/2016
 f1_keywords:
 - value
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value C++ XML tag
 - <value> C++ XML tag
 ms.assetid: 0ba0a0d5-bcd7-4862-a169-83f2721ad80e
-ms.openlocfilehash: c0863b41791254992d16d373328ff6c8a5d6f94f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de84d1faca59a6c8e4f82fba3605cbd54a05bd2e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317023"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988600"
 ---
 # <a name="ltvaluegt"></a>&lt;value&gt;
 
@@ -36,7 +36,7 @@ Compile com [/doc](doc-process-documentation-comments-c-cpp.md) para processar c
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // xml_value_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_value_tag.dll

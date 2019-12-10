@@ -6,44 +6,44 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfdbbeb735f98f77046790e21c19dd2d21b9d5c6
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384589"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988113"
 ---
 # <a name="stlclr-containers"></a>Contêineres STL/CLR
 
-A biblioteca STL/CLR consiste em contêineres que são semelhantes àquelas encontradas na biblioteca padrão C++, mas ele é executado dentro do ambiente gerenciado do .NET Framework. Ele não é mantido atualizado com a biblioteca padrão C++ reais e é mantido para dar suporte.
+A biblioteca STL/CLR consiste em contêineres semelhantes aos encontrados na biblioteca C++ padrão, mas é executado dentro do ambiente gerenciado do .NET Framework. Ele não é mantido atualizado com a biblioteca padrão real C++ e é mantido para suporte herdado.
 
-Este documento fornece uma visão geral dos contêineres STL/CLR, como os requisitos de elementos de contêiner, os tipos de elementos que podem ser inseridos em contêineres e os problemas de propriedade com os elementos nos contêineres. Quando apropriado, as diferenças entre a biblioteca padrão C++ nativo e a STL/CLR são mencionadas.
+Este documento fornece uma visão geral dos contêineres na STL/CLR, como os requisitos para elementos de contêiner, os tipos de elementos que você pode inserir nos contêineres e problemas de propriedade com os elementos nos contêineres. Quando apropriado, as diferenças entre a C++ biblioteca padrão nativa e a STL/CLR são mencionadas.
 
 ## <a name="requirements-for-container-elements"></a>Requisitos dos elementos de contêiner
 
-Todos os elementos inseridos em contêineres STL/CLR devem obedecer a determinadas diretrizes. Para obter mais informações, consulte [requisitos para elementos de contêiner STL/CLR](../dotnet/requirements-for-stl-clr-container-elements.md).
+Todos os elementos inseridos em contêineres STL/CLR devem obedecer a certas diretrizes. Para obter mais informações, consulte [Requirements for STL/CLR container Elements](../dotnet/requirements-for-stl-clr-container-elements.md).
 
-## <a name="valid-container-elements"></a>Elementos de contêiner válido
+## <a name="valid-container-elements"></a>Elementos de contêiner válidos
 
-Contêineres STL/CLR podem conter um dos dois tipos de elementos:
+Os contêineres STL/CLR podem conter um dos dois tipos de elementos:
 
-- Trata-se para tipos de referência.
+- Identificadores para tipos de referência.
 
 - Tipos de referência.
 
-- Tipos de valor não Demarcado.
+- Tipos de valor desemoldurados.
 
-Você não é possível inserir tipos de valor demarcado em qualquer um dos contêineres STL/CLR.
+Não é possível inserir tipos de valor boxed em nenhum dos contêineres STL/CLR.
 
 ### <a name="handles-to-reference-types"></a>Identificadores para tipos de referência
 
-Você pode inserir um identificador para um tipo de referência em um contêiner STL/CLR. Um identificador em C++ que se destina ao CLR é análogo a um ponteiro em C++ nativo. Para obter mais informações, consulte [operador Handle to Object (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
+Você pode inserir um identificador para um tipo de referência em um contêiner STL/CLR. Um identificador no C++ que se destina ao CLR é análogo a um ponteiro em C++nativo. Para obter mais informações, consulte [operador de identificador para objeto (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
 
 #### <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como inserir um identificador para um objeto de funcionário em um [cliext::set](../dotnet/set-stl-clr.md).
+O exemplo a seguir mostra como inserir um identificador para um objeto Employee em um [cliext:: Set](../dotnet/set-stl-clr.md).
 
-```
+```cpp
 // cliext_container_valid_reference_handle.cpp
 // compile with: /clr
 
@@ -132,13 +132,13 @@ int main()
 
 ### <a name="reference-types"></a>Tipos de referência
 
-Também é possível inserir um tipo de referência (em vez de um identificador para um tipo de referência) em um contêiner STL/CLR. A principal diferença é que, quando um contêiner de tipos de referência é excluído, o destruidor é chamado para todos os elementos dentro desse contêiner. Em um contêiner de identificadores em tipos de referência, os destruidores para esses elementos não seriam chamados.
+Também é possível inserir um tipo de referência (em vez de um identificador para um tipo de referência) em um contêiner STL/CLR. A principal diferença aqui é que, quando um contêiner de tipos de referência é excluído, o destruidor é chamado para todos os elementos dentro desse contêiner. Em um contêiner de identificadores para tipos de referência, os destruidores desses elementos não seriam chamados.
 
 #### <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como inserir um objeto de funcionário em um `cliext::set`.
+O exemplo a seguir mostra como inserir um objeto Employee em um `cliext::set`.
 
-```
+```cpp
 // cliext_container_valid_reference.cpp
 // compile with: /clr
 
@@ -225,17 +225,17 @@ int main()
 }
 ```
 
-### <a name="unboxed-value-types"></a>Tipos de valor não demarcado
+### <a name="unboxed-value-types"></a>Tipos de valor unboxed
 
-Você também pode inserir um tipo value unboxed em um contêiner STL/CLR. Um tipo value unboxed é um tipo de valor que não tenha sido *box* em um tipo de referência.
+Você também pode inserir um tipo de valor unboxed em um contêiner STL/CLR. Um tipo de valor unboxed é um tipo de valor que não foi *encaixado* em um tipo de referência.
 
-Um elemento de tipo de valor pode ser um dos tipos de valor padrão, como um `int`, ou pode ser um tipo de valor definidos pelo usuário, como um `value class`. Para obter mais informações, consulte [Classes e Structs](../extensions/classes-and-structs-cpp-component-extensions.md)
+Um elemento de tipo de valor pode ser um dos tipos de valor padrão, como um `int`, ou pode ser um tipo de valor definido pelo usuário, como um `value class`. Para obter mais informações, consulte [classes e structs](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 #### <a name="example"></a>Exemplo
 
-O exemplo a seguir modifica o primeiro exemplo, fazendo com que o funcionário classe um tipo de valor. Esse tipo de valor, em seguida, é inserido em um `cliext::set` assim como no primeiro exemplo.
+O exemplo a seguir modifica o primeiro exemplo fazendo com que a classe Employee seja um tipo Value. Esse tipo de valor é inserido em uma `cliext::set` assim como no primeiro exemplo.
 
-```
+```cpp
 // cliext_container_valid_valuetype.cpp
 // compile with: /clr
 
@@ -296,19 +296,19 @@ int main()
 }
 ```
 
-Se você tentar inserir um identificador para um tipo de valor em um contêiner [erro do compilador C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md) é gerado.
+Se você tentar inserir um identificador para um tipo de valor em um contêiner, o [erro do compilador C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md) será gerado.
 
-### <a name="performance-and-memory-implications"></a>Desempenho e as implicações de memória
+### <a name="performance-and-memory-implications"></a>Implicações de desempenho e memória
 
-Você deve considerar vários fatores ao determinar se irá usar identificadores para referenciar tipos ou tipos de valor como elementos de contêiner. Se você decidir usar tipos de valor, lembre-se de que uma cópia do elemento é feita sempre que um elemento é inserido no contêiner. Para objetos pequenos, isso não deve ser um problema, mas se os objetos que estão sendo inseridos forem grandes, o desempenho poderá ser prejudicado. Além disso, se você estiver usando tipos de valor, é impossível armazenar um elemento em vários contêineres ao mesmo tempo, pois cada contêiner teria sua própria cópia do elemento.
+Você deve considerar vários fatores ao determinar se deve usar identificadores para referenciar tipos ou tipos de valor como elementos de contêiner. Se você decidir usar tipos de valor, lembre-se de que uma cópia do elemento é feita toda vez que um elemento é inserido no contêiner. Para objetos pequenos, isso não deve ser um problema, mas se os objetos que estão sendo inseridos forem grandes, o desempenho poderá ser prejudicado. Além disso, se você estiver usando tipos de valor, é impossível armazenar um elemento em vários contêineres ao mesmo tempo porque cada contêiner teria sua própria cópia do elemento.
 
-Se você decidir usar identificadores para tipos de referência em vez disso, o desempenho pode aumentar porque não é necessário fazer uma cópia do elemento quando ele é inserido no contêiner. Além disso, ao contrário de com tipos de valor, o mesmo elemento pode existir em vários contêineres. No entanto, se você decidir usar identificadores, você deve ter cuidado para garantir que o identificador é válido e que o objeto se refere a não foi excluído em outro lugar no programa.
+Se você decidir usar identificadores para referenciar tipos, o desempenho poderá aumentar porque não é necessário fazer uma cópia do elemento quando ele for inserido no contêiner. Além disso, ao contrário dos tipos de valor, o mesmo elemento pode existir em vários contêineres. No entanto, se você decidir usar identificadores, deverá ter cuidado para garantir que o identificador seja válido e que o objeto ao qual ele se refere não tenha sido excluído em outro lugar do programa.
 
 ## <a name="ownership-issues-with-containers"></a>Problemas de propriedade com contêineres
 
-Contêineres STL/CLR funcionam em semântica de valor. Sempre que você insere um elemento em um contêiner, uma cópia desse elemento é inserida. Se você deseja obter a semântica de referência, você pode inserir um identificador para um objeto, em vez do próprio objeto.
+Os contêineres na STL/CLR funcionam na semântica de valor. Toda vez que você insere um elemento em um contêiner, uma cópia desse elemento é inserida. Se você quiser obter semântica semelhante à referência, poderá inserir um identificador para um objeto em vez do próprio objeto.
 
-Quando você chama não criptografado ou apaga o método de um contêiner de objetos de identificador, os que os identificadores se referem a objetos não são liberados da memória. Você deve explicitamente excluí-lo, ou, porque esses objetos residem no heap gerenciado, permitir que o coletor de lixo Libere a memória depois que ele determina que o objeto não está sendo usado.
+Quando você chama o método Clear ou Erase de um contêiner de objetos Handle, os objetos aos quais os identificadores se referem não são liberados da memória. Você deve excluir explicitamente o objeto ou, como esses objetos residem no heap gerenciado, permita que o coletor de lixo libere a memória depois de determinar que o objeto não está mais sendo usado.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,6 +1,7 @@
 ---
 title: Funções obsoletas
-ms.date: 01/22/2019
+description: Lista as funções obsoletas que foram preteridas e removidas da Microsoft C Runtime Library (CRT).
+ms.date: 12/09/2019
 api_name:
 - _beep
 - _sleep
@@ -53,16 +54,16 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: da5bd0569e7116bfd45e6112da8231d6fc2c9b44
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c913e44a4f0d06813e877645bd01855baa6fd4dc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940137"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988777"
 ---
 # <a name="obsolete-functions"></a>Funções obsoletas
 
-Determinadas funções de biblioteca são obsoletas e têm equivalentes mais recentes. Recomendamos que você altere-as para as versões atualizadas. Outras funções obsoletas foram removidas do CRT. Este tópico lista as funções preteridas como obsoletas e as funções removidas em uma versão específica do Visual Studio.
+Determinadas funções de biblioteca são obsoletas e têm equivalentes mais recentes. Recomendamos que você altere essas funções para as versões atualizadas. Outras funções obsoletas foram removidas do CRT. Este artigo lista as funções preteridas como obsoletas e as funções removidas em uma versão específica do Visual Studio.
 
 ## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Preteridas como obsoletas no Visual Studio 2015
 
@@ -84,14 +85,12 @@ Determinadas funções de biblioteca são obsoletas e têm equivalentes mais rec
 |-----------------------|-----------------|
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|
 |[gets, _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|
-|[_get_output_format](../c-runtime-library/get-output-format.md)|Nenhum|
-|[_heapadd](../c-runtime-library/heapadd.md)|Nenhum|
-|[_heapset](../c-runtime-library/heapset.md)|Nenhum|
-|[inp, inpw](../c-runtime-library/inp-inpw.md)|Nenhum|
-|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Nenhum|
-|[outp, outpw](../c-runtime-library/outp-outpw.md)|Nenhum|
-|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Nenhum|
-|[_set_output_format](../c-runtime-library/set-output-format.md)|Nenhum|
+|[_get_output_format](../c-runtime-library/get-output-format.md)|{1&gt;Nenhum&lt;1}|
+|[_heapadd](../c-runtime-library/heapadd.md)|{1&gt;Nenhum&lt;1}|
+|[_heapset](../c-runtime-library/heapset.md)|{1&gt;Nenhum&lt;1}|
+|[inp, inpw, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|{1&gt;Nenhum&lt;1}|
+|[Arq, outpw, _outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|{1&gt;Nenhum&lt;1}|
+|[_set_output_format](../c-runtime-library/set-output-format.md)|{1&gt;Nenhum&lt;1}|
 
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Removida do CRT nas versões anteriores do Visual Studio
 

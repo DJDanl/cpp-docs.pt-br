@@ -1,7 +1,10 @@
 ---
-title: _inp, _inpw, _inpd
-ms.date: 11/04/2016
+title: inp, _inp, inpw, _inpw, _inpd
+description: Descreve as funções INP, _inp, inpw, _inpd _inpw e removidas obsoletas da Microsoft C Runtime Library (CRT).
+ms.date: 12/09/2019
 api_name:
+- inp
+- inpw
 - _inp
 - _inpw
 - _inpd
@@ -18,7 +21,8 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- inpd
+- inp
+- inpw
 - _inp
 - _inpw
 - _inpd
@@ -32,26 +36,24 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: 4668002fdf709e3e425ac379f136e228250896d4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 48e0e58d2886c5a8bb90a86c81cb785d364666e8
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944990"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988717"
 ---
-# <a name="_inp-_inpw-_inpd"></a>_inp, _inpw, _inpd
+# <a name="inp-_inp-inpw-_inpw-_inpd"></a>inp, _inp, inpw, _inpw, _inpd
 
-Entradas, de uma porta, um byte (`_inp`), uma palavra (`_inpw`) ou uma palavra dupla (`_inpd`).
-
-> [!IMPORTANT]
->  Essas funções estão obsoletas. A partir do Visual Studio 2015, elas não estão disponíveis no CRT.
+Entradas, de uma porta, um byte (`inp`, `_inp`), uma palavra (`inpw`, `_inpw`) ou uma palavra dupla (`_inpd`).
 
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Essas funções estão obsoletas. A partir do Visual Studio 2015, elas não estão disponíveis no CRT.  
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 int _inp(
    unsigned short port
 );
@@ -63,12 +65,12 @@ unsigned long _inpd(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*port*<br/>
+\ de *porta*
 Número da porta de E/S.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 As funções retornam o byte, a palavra, ou as palavras duplas lidas de `port`. Nenhum erro é retornado.
 
@@ -78,7 +80,9 @@ As funções `_inp`, `_inpw` e `_inpd` leem um byte, uma palavra e uma palavra d
 
 Como essas funções leem diretamente de uma porta de E/S, não é possível usá-las no código do usuário.
 
-## <a name="requirements"></a>Requisitos
+Os nomes `inp` e `inpw` são nomes mais antigos e preteridos para as funções `_inp` e `_inpw`. Para obter mais informações, consulte [nomes de funções POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
+
+## <a name="requirements"></a>Requisitos do
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -86,7 +90,7 @@ Como essas funções leem diretamente de uma porta de E/S, não é possível us�
 |`_inpw`|\<conio.h>|
 |`_inpd`|\<conio.h>|
 
-Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md).
+Para obter informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Libraries
 
@@ -94,5 +98,5 @@ Todas as versões das [bibliotecas em tempo de execução C](../c-runtime-librar
 
 ## <a name="see-also"></a>Consulte também
 
-[E/S de porta e console](../c-runtime-library/console-and-port-i-o.md)<br/>
-[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)
+[E/S de porta e console](../c-runtime-library/console-and-port-i-o.md)\
+[Arq, outpw, _outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)

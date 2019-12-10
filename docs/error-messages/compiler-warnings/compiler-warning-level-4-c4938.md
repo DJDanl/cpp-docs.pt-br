@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 4) C4938
+title: Aviso do compilador (nível 4) C4938
 ms.date: 11/04/2016
 f1_keywords:
 - C4938
 helpviewer_keywords:
 - C4938
 ms.assetid: 6acac81a-9d23-465e-b700-ed4b6e8edcd0
-ms.openlocfilehash: da2725a398a99b5943e128038e75622115a9e34f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c752b5daea42eac7c7dd0e14581d9e781aac9c96
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280198"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988743"
 ---
-# <a name="compiler-warning-level-4-c4938"></a>Compilador aviso (nível 4) C4938
+# <a name="compiler-warning-level-4-c4938"></a>Aviso do compilador (nível 4) C4938
 
-'var': Variável de redução de ponto flutuante pode causar resultados inconsistentes sob /fp: strict ou #pragma fenv_access
+' var ': variável de redução de ponto flutuante pode causar resultados inconsistentes em/fp: strict ou #pragma fenv_access
 
-Você não deve usar [/fp: strict](../../build/reference/fp-specify-floating-point-behavior.md) ou [fenv_access](../../preprocessor/fenv-access.md) com OpenMP reduções de ponto flutuantes, porque a soma é computada em uma ordem diferente. Assim, os resultados podem diferir dos resultados sem /openmp.
+Você não deve usar [/fp: strict](../../build/reference/fp-specify-floating-point-behavior.md) ou [fenv_access](../../preprocessor/fenv-access.md) com reduções de ponto flutuante de OpenMP, pois a soma é computada em uma ordem diferente. Assim, os resultados podem ser diferentes dos resultados sem/OpenMP.
 
 O exemplo a seguir gera C4938:
 
-```
+```cpp
 // C4938.cpp
 // compile with: /openmp /W4 /fp:strict /c
 // #pragma fenv_access(on)
@@ -36,7 +36,7 @@ double test(int first, int last) {
 }
 ```
 
-Sem paralelização explícita, a soma é calculada da seguinte maneira:
+Sem a paralelização explícita, a soma é calculada da seguinte maneira:
 
 ```
 sum = a[first] + a[first + 1] + ... + a[last];

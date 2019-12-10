@@ -93,12 +93,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 0de96306e645ec85562e414a96283923e93a00ad
-ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
+ms.openlocfilehash: e2c7fe6f2ea63f2cbd259e4114843fcfc28fcd84
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787096"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988332"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Macros comuns para comandos e propriedades do MSBuild
 
@@ -106,13 +106,13 @@ Dependendo das opções de instalação, o Visual Studio pode disponibilizar cen
 
 ## <a name="view-the-current-properties-and-macros"></a>Exibir as macros e as propriedades atuais
 
-Para exibir todas as macros disponíveis no momento, na caixa de diálogo **páginas de propriedades** , em **diretórios do vc + +** , escolha a seta suspensa no final de uma linha de propriedade. Clique em **Editar** e, na caixa de diálogo Editar, escolha o botão macros. O conjunto atual de propriedades e macros visíveis para o Visual Studio é listado junto com o valor atual de cada uma. Para obter mais informações, consulte a seção **especificando valores definidos pelo usuário** na [ C++ referência de página de propriedades do projeto](property-pages-visual-cpp.md).
+Para exibir todas as macros disponíveis no momento, na caixa de diálogo **páginas de propriedades** , em **diretórios do vc + +** , escolha a seta suspensa no final de uma linha de propriedade. Clique em **Editar** e, na caixa de diálogo Editar, escolha o botão **macros** . O conjunto atual de propriedades e macros visíveis para o Visual Studio é listado junto com o valor atual de cada uma. Para obter mais informações, consulte a seção **especificando valores definidos pelo usuário** na [ C++ referência de página de propriedades do projeto](property-pages-visual-cpp.md).
 
-![Botão de macros do vc + +](../media/vcppdir_libdir_macros.png "Menu") de macros
+![Botão de macros do VC + +](../media/vcppdir_libdir_macros.png "Menu de macros")
 
 ## <a name="list-of-common-macros"></a>Lista de macros comuns
 
-Esta tabela descreve um subconjunto comumente usado das macros disponíveis; Há muitos outros não listados aqui. Vá para a caixa de diálogo macros para ver todas as propriedades e seus valores atuais em seu projeto. Para obter detalhes sobre como as definições de propriedade do MSBuild são criadas e usadas como macros em arquivos .props, .targets e .vcxproj, confira [Propriedades do MSBuild](/visualstudio/msbuild/msbuild-properties).
+Esta tabela descreve um subconjunto comumente usado das macros disponíveis; Há muitos outros não listados aqui. Vá para a caixa de diálogo **macros** para ver todas as propriedades e seus valores atuais em seu projeto. Para obter detalhes sobre como as definições de propriedade do MSBuild são criadas e usadas como macros em arquivos .props, .targets e .vcxproj, confira [Propriedades do MSBuild](/visualstudio/msbuild/msbuild-properties).
 
 |Macro|Descrição|
 |-----------|-----------------|
@@ -131,7 +131,7 @@ Esta tabela descreve um subconjunto comumente usado das macros disponíveis; Há
 |**$(ProjectFileName)**|O nome de arquivo do projeto (definido como nome base + extensão de arquivo).|
 |**$(ProjectName)**|O nome de base do projeto.|
 |**$(ProjectPath)**|O nome de caminho absoluto do projeto (definido como unidade + caminho + nome base + extensão de arquivo).|
-|**$ (PublishDir)**|O local de saída para o destino de publicação; inclui a barra invertida à direita\\' '. O padrão é a pasta **$ (OutDir) app.\\ Publish** .|
+|**$ (PublishDir)**|O local de saída para o destino de publicação; inclui a barra invertida '\\' à direita. O padrão é a pasta **$ (OutDir). publish\\** .|
 |**$(RemoteMachine)**|Definido como o valor da propriedade **Computador Remoto** na página de propriedades de Depuração. Confira [Alterando as configurações do projeto para uma configuração de depuração do C/C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) para obter mais informações.|
 |**$(RootNameSpace)**|O namespace, se houver, que contém o aplicativo.|
 |**$(SolutionDir)**|O diretório da solução (definido como unidade + caminho); inclui a barra invertida à direita '\\'. Definido somente durante o build de uma solução no IDE.|
@@ -144,9 +144,9 @@ Esta tabela descreve um subconjunto comumente usado das macros disponíveis; Há
 |**$(TargetFileName)**|O nome do arquivo de saída primária do build (definido como nome base + extensão de arquivo).|
 |**$(TargetName)**|O nome base do arquivo de saída primária para o build.|
 |**$(TargetPath)**|O nome de caminho absoluto do arquivo de saída primária do build (definido como unidade + caminho + nome base + extensão de arquivo).|
-|**$(VCInstallDir)**|O diretório que contém o conteúdo do C++ da instalação do Visual Studio. Essa propriedade contém a versão do conjunto de ferramentas C++ de destino da Microsoft (MSVC), que pode ser diferente do Visual Studio do host. Por exemplo, ao compilar com `$(PlatformToolset) = v140`, **$ (VCInstallDir)** contém o caminho para a instalação do Visual Studio 2015.|
+|**$(VCInstallDir)**|O diretório que contém o conteúdo do C++ da instalação do Visual Studio. Essa propriedade contém a versão do conjunto de ferramentas C++ de destino da Microsoft (MSVC), que pode ser diferente do Visual Studio do host. Por exemplo, ao criar com `$(PlatformToolset) = v140`, **$ (VCInstallDir)** contém o caminho para a instalação do Visual Studio 2015.|
 |**$(VSInstallDir)**|O diretório no qual você instalou o Visual Studio. Essa propriedade contém a versão do conjunto de ferramentas do Visual Studio de destino, que pode ser diferente do Visual Studio de host. Por exemplo, ao compilar com `$(PlatformToolset) = v110`, **$(VSInstallDir)** contém o caminho para a instalação do Visual Studio 2012.|
-|**$(WebDeployPath)**|O caminho relativo da raiz de implantação da Web ao qual as saídas do projeto pertencem. Retorna o mesmo valor que <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>.|
+|**$(WebDeployPath)**|O caminho relativo da raiz de implantação da Web ao qual as saídas do projeto pertencem.|
 |**$(WebDeployRoot)**|O caminho absoluto para o local de **\<localhost>** . Por exemplo, c:\inetpub\wwwroot.|
 
 ## <a name="obsolete-macros"></a>Macros obsoletas
@@ -155,11 +155,11 @@ O sistema de build para o C++ foi alterado de maneira significativa entre o Visu
 
 |Macro|Descrição|
 |-----------|-----------------|
-|**$(InputDir)**|(Migrado.) O diretório do arquivo de entrada (definido como unidade + caminho); inclui a barra invertida à direita '\\'. Se o projeto é a entrada, essa macro é equivalente a **$(ProjectDir)** .|
-|**$(InputExt)**|(Migrado.) A extensão do arquivo de entrada. Inclui o “.” antes da extensão de arquivo. Se o projeto é a entrada, essa macro é equivalente a **$(ProjectExt)** . Para arquivos de origem, isso é **%(Extension)** .|
-|**$(InputFileName)**|(Migrado.) O nome do arquivo de entrada (definido como nome base + extensão de arquivo). Se o projeto é a entrada, essa macro é equivalente a **$(ProjectFileName)** . Para arquivos de origem, isso é **%(Identity)** .|
-|**$(InputName)**|(Migrado.) O nome base do arquivo de entrada. Se o projeto é a entrada, essa macro é equivalente a **$(ProjectName)** . Para arquivos de origem, isso é **%(Filename)** .|
-|**$(InputPath)**|(Migrado.) O nome de caminho absoluto do arquivo de entrada (definido como unidade + caminho + nome base + extensão de arquivo). Se o projeto é a entrada, essa macro é equivalente a **$(ProjectPath)** . Para arquivos de origem, isso é **%(FullPath)** .|
+|**$(InputDir)**|(Migrado.) O diretório do arquivo de entrada (definido como unidade + caminho); inclui a barra invertida '\\' à direita. Se o projeto é a entrada, essa macro é equivalente a **$(ProjectDir)** .|
+|**$(InputExt)**|(Migrado.) A extensão de arquivo do arquivo de entrada. Inclui o “.” antes da extensão de arquivo. Se o projeto é a entrada, essa macro é equivalente a **$(ProjectExt)** . Para arquivos de origem, isso é **%(Extension)** .|
+|**$(InputFileName)**|(Migrado.) O nome de arquivo do arquivo de entrada (definido como nome de base + extensão de arquivo). Se o projeto é a entrada, essa macro é equivalente a **$(ProjectFileName)** . Para arquivos de origem, isso é **%(Identity)** .|
+|**$(InputName)**|(Migrado.) O nome de base do arquivo de entrada. Se o projeto é a entrada, essa macro é equivalente a **$(ProjectName)** . Para arquivos de origem, isso é **%(Filename)** .|
+|**$(InputPath)**|(Migrado.) O nome do caminho absoluto do arquivo de entrada (definido como unidade + caminho + nome base + extensão do arquivo). Se o projeto é a entrada, essa macro é equivalente a **$(ProjectPath)** . Para arquivos de origem, isso é **%(FullPath)** .|
 |**$(ParentName)**|Nome do item que contém esse item de projeto. Esse será o nome da pasta pai, ou o nome do projeto.|
 |**$(SafeInputName)**|O nome do arquivo como um nome de classe válido, menos a extensão de arquivo. Essa propriedade não tem uma equivalência exata.|
 |**$(SafeParentName)**|O nome do pai imediato em um formato de nome válido. Por exemplo, um formulário é o pai de um arquivo .resx. Essa propriedade não tem uma equivalência exata.|
@@ -167,6 +167,6 @@ O sistema de build para o C++ foi alterado de maneira significativa entre o Visu
 
 ## <a name="see-also"></a>Consulte também
 
-[Projetos do Visual Studio-C++](../creating-and-managing-visual-cpp-projects.md)\
-[Guia C++ de atualização e portabilidade do Visual](../../porting/visual-cpp-porting-and-upgrading-guide.md)\
+[Projetos do Visual Studio C++ -](../creating-and-managing-visual-cpp-projects.md)\
+[Guia C++ de portabilidade e atualização do Visual](../../porting/visual-cpp-porting-and-upgrading-guide.md)\
 [Visão geral de possíveis problemas de atualização](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)

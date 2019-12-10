@@ -1,27 +1,27 @@
 ---
-title: 'Como: Detectar a compilação - clr'
+title: 'Como: detectar-compilação de CLR'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compilation, detecting /clr
 - /clr compiler option [C++], detecting use of
 ms.assetid: a9310045-4810-4637-a64a-0b31a08791c1
-ms.openlocfilehash: 0b02be1bcd0afc9fd857e689ceafdcab5eaf05d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42b2952e3b63023ca26c6b1f7d0ccb8871082499
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387351"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988217"
 ---
-# <a name="how-to-detect-clr-compilation"></a>Como: Detectar a compilação /clr
+# <a name="how-to-detect-clr-compilation"></a>Como detectar a compilação /clr
 
-Use o `_MANAGED` ou `_M_CEE` macro para ver se um módulo for compilado com **/clr**. Para obter mais informações, consulte [/clr (compilação de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+Use a macro `_MANAGED` ou `_M_CEE` para ver se um módulo é compilado com **/CLR**. Para obter mais informações, consulte [/clr (compilação de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
-Para obter mais informações sobre as macros, consulte [Macros predefinidas](../preprocessor/predefined-macros.md).
+Para obter mais informações sobre macros, consulte [macros predefinidas](../preprocessor/predefined-macros.md).
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // detect_CLR_compilation.cpp
 // compile with: /clr
 #include <stdio.h>

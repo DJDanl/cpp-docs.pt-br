@@ -4,28 +4,28 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-ms.openlocfilehash: f7db4320cf901412e3a9e3de682d0cfbcc9f23bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2574ba5a10bbf5eddc68d6e0265d5dfc99c6d8fc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223008"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988340"
 ---
 # <a name="finally"></a>finally
 
-Além `try` e `catch` cláusulas, dá suporte a tratamento de exceção do CLR um `finally` cláusula. A semântica é idêntica a `__finally` bloquear (SEH) de manipulação de exceção estruturada. Um `__finally` bloco pode seguir uma `try` ou `catch` bloco.
+Além das cláusulas `try` e `catch`, a manipulação de exceção do CLR dá suporte a uma cláusula `finally`. A semântica é idêntica à `__finally` bloco no SEH (manipulação de exceção estruturada). Um bloco de `__finally` pode seguir um `try` ou `catch` bloco.
 
 ## <a name="remarks"></a>Comentários
 
-A finalidade de `finally` bloco é limpar todos os recursos, após a exceção ocorreu. Observe que o `finally` bloco sempre será executado mesmo se nenhuma exceção foi lançada. O `catch` bloco é executado somente se uma exceção gerenciada é gerada dentro associado `try` bloco.
+A finalidade do bloco de `finally` é limpar todos os recursos deixados depois que a exceção ocorreu. Observe que o bloco de `finally` é sempre executado, mesmo que nenhuma exceção tenha sido lançada. O bloco de `catch` só será executado se uma exceção gerenciada for lançada dentro do bloco de `try` associado.
 
-`finally` é uma palavra-chave contextual; ver [contextual as palavras-chave](../extensions/context-sensitive-keywords-cpp-component-extensions.md) para obter mais informações.
+`finally` é uma palavra-chave sensível ao contexto; consulte [palavras-chave sensíveis ao contexto](../extensions/context-sensitive-keywords-cpp-component-extensions.md) para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra um simples `finally` bloco:
+O exemplo a seguir demonstra um bloco de `finally` simples:
 
-```
+```cpp
 // keyword__finally.cpp
 // compile with: /clr
 using namespace System;

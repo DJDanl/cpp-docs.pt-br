@@ -1,5 +1,5 @@
 ---
-title: 'Como: Marshaling de retornos de chamada e delegados usando Interop do C++'
+title: Como realizar marshal de retornos de chamadas e delegados usando o C++ Interop
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: f8088bf90162fd2177599c252b0eee6332d61289
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 592eae0ff59baddb79b810d46669b78ecc801155
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344950"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988190"
 ---
-# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Como: Marshaling de retornos de chamada e delegados usando Interop do C++
+# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Como realizar marshal de retornos de chamadas e delegados usando o C++ Interop
 
-Este tópico demonstra a realização de marshaling de retornos de chamada e delega (a versão gerenciada de um retorno de chamada) entre códigos gerenciados e não gerenciados usando o Visual C++.
+Este tópico demonstra o marshaling de retornos de chamada e delegados (a versão gerenciada de um retorno de chamada) entre códigos gerenciados C++e não gerenciados usando o Visual.
 
-O código a seguir exemplos de uso de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) #pragma diretivas para implementar gerenciados e funções no mesmo arquivo, mas as funções também pode ser definidas em arquivos separados. Arquivos que contêm apenas as funções não gerenciadas não precisa ser compilado com o [/clr (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md).
+Os exemplos de código a seguir usam as diretivas de #pragma [gerenciadas e não gerenciadas](../preprocessor/managed-unmanaged.md) para implementar funções gerenciadas e não gerenciadas no mesmo arquivo, mas as funções também podem ser definidas em arquivos separados. Os arquivos que contêm apenas funções não gerenciadas não precisam ser compilados com a [compilação/CLR (Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como configurar uma API não gerenciada para disparar um representante gerenciado. Um representante gerenciado é criado e um dos métodos a interoperabilidade, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, é usado para recuperar o ponto de entrada subjacente para o delegado. Esse endereço é então passado para a função não gerenciada, o que faz a chamada sem o conhecimento do fato de que ele é implementado como uma função gerenciada.
+O exemplo a seguir demonstra como configurar uma API não gerenciada para disparar um delegado gerenciado. Um delegado gerenciado é criado e um dos métodos de interoperabilidade, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, é usado para recuperar o ponto de entrada subjacente para o delegado. Esse endereço é passado para a função não gerenciada, que o chama sem conhecimento do fato de que ele é implementado como uma função gerenciada.
 
-Observe que é possível, mas não necessário, para fixar o representante que usa [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) para impedir que ela seja localizado novamente ou descartado pelo coletor de lixo. Proteção da coleta de lixo prematura é necessária, mas a fixação oferece mais proteção do que é necessário, pois ele impede a coleta, mas também previne a realocação.
+Observe que é possível, mas não necessário, fixar o delegado usando [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) para impedir que ele seja realocado ou Descartado pelo coletor de lixo. A proteção da coleta de lixo prematura é necessária, mas a fixação fornece mais proteção do que o necessário, pois impede a coleta, mas também impede a relocação.
 
-Se um delegado novamente está localizado, uma coleta de lixo, ele não afetará o retorno de chamada subjacentes gerenciados, então, <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> é usado para adicionar uma referência ao delegado, permitindo que a realocação do delegado, mas impedindo o descarte. O uso de GCHandle em vez de pin_ptr reduz o potencial de fragmentação do heap gerenciado.
+Se um delegado for realocado por uma coleta de lixo, ele não afetará o retorno de chamada gerenciado de subposição, portanto <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> será usado para adicionar uma referência ao delegado, permitindo a realocação do delegado, mas impedindo a alienação. O uso de GCHandle em vez de pin_ptr reduz o potencial de fragmentação do heap gerenciado.
 
-```
+```cpp
 // MarshalDelegate1.cpp
 // compile with: /clr
 #include <iostream>
@@ -79,9 +79,9 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir é semelhante ao exemplo anterior, mas nesse caso, o ponteiro de função fornecida é armazenado por API não gerenciada, para que ele pode ser chamado a qualquer momento, exigindo que a coleta de lixo ser suprimidos durante um período arbitrário. Como resultado, o exemplo a seguir usa uma instância global do <xref:System.Runtime.InteropServices.GCHandle> para impedir que o delegado que estão sendo realocados, independentemente do escopo da função. Conforme discutido no primeiro exemplo, usando pin_ptr é desnecessário para esses exemplos, mas nesse caso, não funcionariam de qualquer forma, o escopo de um pin_ptr é limitado a uma única função.
+O exemplo a seguir é semelhante ao exemplo anterior, mas, nesse caso, o ponteiro de função fornecido é armazenado pela API não gerenciada, portanto, ele pode ser invocado a qualquer momento, exigindo que a coleta de lixo seja suprimida por um período de tempo arbitrário. Como resultado, o exemplo a seguir usa uma instância global do <xref:System.Runtime.InteropServices.GCHandle> para impedir que o delegado seja realocado, independentemente do escopo da função. Conforme discutido no primeiro exemplo, o uso de pin_ptr é desnecessário para esses exemplos, mas nesse caso não funcionaria mesmo assim, pois o escopo de uma pin_ptr é limitado a uma única função.
 
-```
+```cpp
 // MarshalDelegate2.cpp
 // compile with: /clr
 #include <iostream>
