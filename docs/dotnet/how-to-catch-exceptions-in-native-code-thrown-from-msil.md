@@ -6,12 +6,12 @@ helpviewer_keywords:
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: c3afa29d8c9bee1c1f1cc2fd1869d108c08a249b
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 23adb573a62e93933c487f611c05aed4c08494ef
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246685"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988273"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Como capturar exceções em código nativo lançadas a partir de MSIL
 
@@ -23,7 +23,7 @@ Para obter mais informações, consulte [manipulação de exceção estruturadaC
 
 O exemplo a seguir define um módulo com duas funções, uma que gera uma exceção nativa e outra que gera uma exceção MSIL.
 
-```
+```cpp
 // catch_MSIL_in_native.cpp
 // compile with: /clr /c
 void Test() {
@@ -39,7 +39,7 @@ void Test2() {
 
 O exemplo a seguir define um módulo que captura uma exceção nativa e MSIL.
 
-```
+```cpp
 // catch_MSIL_in_native_2.cpp
 // compile with: /clr catch_MSIL_in_native.obj
 #include <iostream>

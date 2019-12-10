@@ -1,25 +1,25 @@
 ---
-title: 'Como: Converter System:: String em cadeia de caracteres padrão'
+title: Como converter System::String na cadeia de caracteres padrão
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ Standard Library, converting System::String to standard string
 - string conversion, System::String
 ms.assetid: 79e2537e-d4eb-459f-9506-0e738045b59e
-ms.openlocfilehash: 3ea3c56af2fefaf7c65055135e8549fb153c9a8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7dd73b8fed98918135b66af1b6351977426cd26e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379110"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988511"
 ---
-# <a name="how-to-convert-systemstring-to-standard-string"></a>Como: Converter System:: String em cadeia de caracteres padrão
+# <a name="how-to-convert-systemstring-to-standard-string"></a>Como converter System::String na cadeia de caracteres padrão
 
-Você pode converter um <xref:System.String> à `std::string` ou `std::wstring`, sem usar `PtrToStringChars` em vcclr.
+Você pode converter um <xref:System.String> para `std::string` ou `std::wstring`, sem usar `PtrToStringChars` em Vcclr. h.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // convert_system_string.cpp
 // compile with: /clr
 #include <string>

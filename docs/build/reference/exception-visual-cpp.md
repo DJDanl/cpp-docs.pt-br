@@ -1,5 +1,5 @@
 ---
-title: '&lt;exceção > (comentários de documentação do C++)'
+title: '&lt;de exceção >C++ (comentários da documentação)'
 ms.date: 11/04/2016
 f1_keywords:
 - exception
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <exception> C++ XML tag
 - exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
-ms.openlocfilehash: 327c1bc27f4ae71aa214e09f375f963dad5b33d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ddfe647fa2db55b3ca606265011896a66398a8a2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292959"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988301"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -41,11 +41,11 @@ Uma descrição.
 
 Compile com [/doc](doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.
 
-O compilador MSVC tentará resolver referências cref em uma passagem por meio de comentários de documentação.  Portanto, se você estiver usando as regras de pesquisa do C++ e um símbolo não for encontrado pelo compilador, a referência será marcada como não resolvida. Confira [\<seealso>](seealso-visual-cpp.md) para obter mais informações.
+O compilador MSVC tentará resolver referências CREF em um passo entre os comentários da documentação.  Portanto, se você estiver usando as regras de pesquisa do C++ e um símbolo não for encontrado pelo compilador, a referência será marcada como não resolvida. Confira [\<seealso>](seealso-visual-cpp.md) para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // xml_exception_tag.cpp
 // compile with: /clr /doc /LD
 // post-build command: xdcmake xml_exception_tag.dll

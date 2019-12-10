@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: e087e3cd36ab85d6f3f6b5cfed1b55cac66ea142
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: 1ec3e64548cead53cea906cdf2abd3dd25ee06d4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541692"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991389"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>Aviso do compilador (nível 4) C4256
 
@@ -19,7 +19,7 @@ ms.locfileid: "74541692"
 
 Possível incompatibilidade.
 
-Considere o exemplo de código a seguir. Se a definição do Construtor S2:: S2 (int i,...) tiver sido compilada usando uma versão do compilador da C++ Microsoft antes da versão 7, mas o exemplo a seguir for compilado usando a versão atual, a chamada para o construtor para S3 não funcionará corretamente devido a uma alteração de Convenção de chamada de caso especial. Se ambos foram compilados usando o C++ Visual 6,0, a chamada não funcionaria bem à direita, a menos que nenhum parâmetro fosse passado para as reticências.
+Considere o seguinte exemplo de código. Se a definição do Construtor S2:: S2 (int i,...) tiver sido compilada usando uma versão do compilador da C++ Microsoft antes da versão 7, mas o exemplo a seguir for compilado usando a versão atual, a chamada para o construtor para S3 não funcionará corretamente devido a uma alteração de Convenção de chamada de caso especial. Se ambos foram compilados usando o C++ Visual 6,0, a chamada não funcionaria bem à direita, a menos que nenhum parâmetro fosse passado para as reticências.
 
 Para corrigir esse aviso,
 

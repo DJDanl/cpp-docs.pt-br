@@ -1,34 +1,34 @@
 ---
-title: 'Como: Converter de um contêiner STL/CLR em uma coleção .NET'
+title: Como converter de um contêiner STL/CLR em uma coleção .NET
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-ms.openlocfilehash: cf67e362751dd164916cc94cd644d55110d88a5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7539b10ca6c503aede61d19de3d14fb9dcee8be
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387520"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988519"
 ---
-# <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>Como: Converter de um contêiner STL/CLR em uma coleção .NET
+# <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>Como converter de um contêiner STL/CLR em uma coleção .NET
 
-Este tópico mostra como converter contêineres STL/CLR em suas coleções do .NET equivalentes. Por exemplo, vamos mostrar como converter um STL/CLR [vetor](../dotnet/vector-stl-clr.md) para um .NET <xref:System.Collections.Generic.ICollection%601> e como converter um STL/CLR [mapa](../dotnet/map-stl-clr.md) para um .NET <xref:System.Collections.Generic.IDictionary%602>, mas o procedimento é semelhante para todas as coleções e contêineres.
+Este tópico mostra como converter contêineres STL/CLR em suas coleções .NET equivalentes. Como exemplo, mostramos como converter um [vetor](../dotnet/vector-stl-clr.md) STL/CLR em um <xref:System.Collections.Generic.ICollection%601> .net e como converter um [mapa](../dotnet/map-stl-clr.md) STL/CLR em um <xref:System.Collections.Generic.IDictionary%602>.net, mas o procedimento é semelhante para todas as coleções e contêineres.
 
-### <a name="to-create-a-collection-from-a-container"></a>Para criar uma coleção de um contêiner
+### <a name="to-create-a-collection-from-a-container"></a>Para criar uma coleção a partir de um contêiner
 
-1. Use um dos seguintes métodos:
+1. Use um dos métodos a seguir:
 
-   - Para converter a parte de um contêiner, chame o [make_collection](../dotnet/make-collection-stl-clr.md) de função e passar o iterador de início e o iterador de fim do contêiner STL/CLR a ser copiado para a coleção do .NET. Essa função de modelo usa um iterador STL/CLR como um argumento de modelo. O primeiro exemplo demonstra esse método.
+   - Para converter parte de um contêiner, chame a função [make_collection](../dotnet/make-collection-stl-clr.md) e passe o iterador Begin e o iterador end do contêiner STL/CLR a ser copiado para a coleção .net. Essa função de modelo usa um iterador STL/CLR como um argumento de modelo. O primeiro exemplo demonstra esse método.
 
-   - Para converter um contêiner inteiro, converta o contêiner para uma interface de coleção apropriada do .NET ou a coleção de interface. O segundo exemplo demonstra esse método.
+   - Para converter um contêiner inteiro, converta o contêiner em uma interface de coleção .NET ou coleção de interface apropriada. O segundo exemplo demonstra esse método.
 
 ## <a name="example"></a>Exemplo
 
-Neste exemplo, criamos um STL/CLR `vector` e adicionar elementos de 5 a ele. Em seguida, criamos uma coleção .NET chamando o `make_collection` função. Por fim, podemos exibir o conteúdo da coleção criada recentemente.
+Neste exemplo, criamos um `vector` STL/CLR e adicionamos cinco elementos a ele. Em seguida, criamos uma coleção .NET chamando a função `make_collection`. Por fim, exibimos o conteúdo da coleção recém-criada.
 
-```
+```cpp
 // cliext_convert_vector_to_icollection.cpp
 // compile with: /clr
 
@@ -70,9 +70,9 @@ The contents of the System::Collections::Generic::ICollection are:
 
 ## <a name="example"></a>Exemplo
 
-Neste exemplo, criamos um STL/CLR `map` e adicionar elementos de 5 a ele. Em seguida, criamos um .NET <xref:System.Collections.Generic.IDictionary%602> e atribua a `map` diretamente para ele. Por fim, podemos exibir o conteúdo da coleção criada recentemente.
+Neste exemplo, criamos um `map` STL/CLR e adicionamos cinco elementos a ele. Em seguida, criamos um <xref:System.Collections.Generic.IDictionary%602> .NET e atribuímos o `map` diretamente a ele. Por fim, exibimos o conteúdo da coleção recém-criada.
 
-```
+```cpp
 // cliext_convert_map_to_idictionary.cpp
 // compile with: /clr
 
@@ -114,5 +114,5 @@ Key: 74.00 Value: 74
 ## <a name="see-also"></a>Consulte também
 
 [Referência de biblioteca STL/CLR](../dotnet/stl-clr-library-reference.md)<br/>
-[Como: converter de um coleção do .NET em um contêiner do STL/CLR](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)<br/>
+[Como converter de um coleção .NET em um contêiner STL/CLR](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)<br/>
 [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

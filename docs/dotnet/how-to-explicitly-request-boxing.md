@@ -1,23 +1,23 @@
 ---
-title: 'Como: Solicitar explicitamente a conversão Boxing'
+title: Como fazer uma conversão boxing de solicitação explícita
 ms.date: 11/04/2016
 helpviewer_keywords:
 - boxing, explicitly requesting
 ms.assetid: 1359e6e5-162d-4f5d-9b6a-1690d93df3ee
-ms.openlocfilehash: c27330e4e7699b6f0e9d6c612c2befe884a69b4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 721a57219c7216cb57f497011da1733c9e3eb7f2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387273"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988494"
 ---
-# <a name="how-to-explicitly-request-boxing"></a>Como: Solicitar explicitamente a conversão Boxing
+# <a name="how-to-explicitly-request-boxing"></a>Como fazer uma conversão boxing de solicitação explícita
 
-Você pode solicitar explicitamente a conversão boxing atribuindo uma variável para uma variável do tipo `Object`.
+Você pode solicitar a Boxing explicitamente atribuindo uma variável a uma variável do tipo `Object`.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // vcmcppv2_explicit_boxing3.cpp
 // compile with: /clr
 using namespace System;

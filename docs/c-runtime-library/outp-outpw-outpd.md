@@ -1,10 +1,13 @@
 ---
-title: _outp, _outpw, _outpd
-ms.date: 11/04/2016
+title: Arq, outpw, _outp, _outpw, _outpd
+description: Descreve as funções obsoletas e removidas arq, outpw, _outp, _outpw e _outpd da biblioteca de tempo de execução do Microsoft C (CRT).
+ms.date: 12/09/2019
 api_name:
 - _outpd
 - _outp
 - _outpw
+- outp
+- outpw
 api_location:
 - msvcrt.dll
 - msvcr100.dll
@@ -21,6 +24,8 @@ f1_keywords:
 - _outpw
 - _outpd
 - _outp
+- outp
+- outpw
 - outpd
 helpviewer_keywords:
 - outpw function
@@ -36,49 +41,47 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: d1e7028ae833e1358ce3199b7e7079535c84d135
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 03d3df0bae9c2fa3cdd107f3c0de65105077c401
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944125"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988379"
 ---
-# <a name="_outp-_outpw-_outpd"></a>_outp, _outpw, _outpd
+# <a name="outp-outpw-_outp-_outpw-_outpd"></a>Arq, outpw, _outp, _outpw, _outpd
 
-Saídas, em uma porta, um byte (`_outp`), uma palavra (`_outpw`) ou uma palavra dupla (`_outpd`).
-
-> [!IMPORTANT]
->  Essas funções estão obsoletas. A partir do Visual Studio 2015, elas não estão disponíveis no CRT.
+Saídas, em uma porta, um byte (`outp`, `_outp`), uma palavra (`outpw`, `_outpw`) ou uma palavra dupla (`_outpd`).
 
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Essas funções estão obsoletas. A partir do Visual Studio 2015, elas não estão disponíveis no CRT.  
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-
-      int _outp(
-unsigned short port,
-int databyte
+```cpp
+int _outp(
+   unsigned short port,
+   int databyte
 );
 unsigned short _outpw(
-unsigned short port,
-unsigned short dataword
+   unsigned short port,
+   unsigned short dataword
 );
 unsigned long _outpd(
-unsigned short port,
-unsigned long dataword
+   unsigned short port,
+   unsigned long dataword
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
-*port*<br/>
+### <a name="parameters"></a>Parâmetros
+
+\ de *porta*
 Número da porta.
 
-*databyte, dataword*<br/>
+*databyte,\ de dataword*
 Valores de saída.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 As funções retornam a saída de dados. Nenhum erro é retornado.
 
@@ -88,7 +91,9 @@ As funções `_outp`, `_outpw` e `_outpd` gravam um byte, uma palavra e uma pala
 
 Como essas funções gravam diretamente em uma porta de E/S, não é possível usá-las no código do usuário. Para obter informações sobre o uso de portas de E/S nesses sistemas operacionais, pesquise por “Serial Communications in Win32” (Comunicação Serial no Win32) no MSDN.
 
-## <a name="requirements"></a>Requisitos
+Os nomes `outp` e `outpw` são nomes mais antigos e preteridos para as funções `_outp` e `_outpw`. Para obter mais informações, consulte [nomes de funções POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
+
+## <a name="requirements"></a>Requisitos do
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -96,7 +101,7 @@ Como essas funções gravam diretamente em uma porta de E/S, não é possível u
 |`_outpw`|\<conio.h>|
 |`_outpd`|\<conio.h>|
 
-Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md).
+Para obter informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Libraries
 
@@ -104,5 +109,5 @@ Todas as versões das [bibliotecas em tempo de execução C](../c-runtime-librar
 
 ## <a name="see-also"></a>Consulte também
 
-[E/S de porta e console](../c-runtime-library/console-and-port-i-o.md)<br/>
-[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)
+[E/S de porta e console](../c-runtime-library/console-and-port-i-o.md)\
+[inp, inpw, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)

@@ -1,25 +1,25 @@
 ---
-title: 'Como: Definir e instalar um manipulador de exceção Global'
+title: Como definir e instalar um identificador de exceção global
 ms.date: 11/04/2016
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-ms.openlocfilehash: d1b8452d19172bf16817c36032189accfd855539
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27666702a548c0c71b7e25597a1927520968b124
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387390"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988306"
 ---
-# <a name="how-to-define-and-install-a-global-exception-handler"></a>Como: Definir e instalar um manipulador de exceção Global
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>Como definir e instalar um identificador de exceção global
 
-O exemplo de código a seguir demonstra como sem tratamento de exceções podem ser capturadas. O formulário de exemplo contém um botão que, quando pressionadas, executa uma referência nula, causando uma exceção seja lançada. Essa funcionalidade representa uma falha de código típico. A exceção resultante é capturada pelo manipulador de exceção de todo o aplicativo instalado pela função principal.
+O exemplo de código a seguir demonstra como as exceções não tratadas podem ser capturadas. O formulário de exemplo contém um botão que, quando pressionado, executa uma referência nula, fazendo com que uma exceção seja gerada. Essa funcionalidade representa uma falha de código típica. A exceção resultante é detectada pelo manipulador de exceção de todo o aplicativo instalado pela função main.
 
-Isso é realizado pela vinculação de um delegado para o <xref:System.Windows.Forms.Application.ThreadException> eventos. Nesse caso, exceções subsequentes, em seguida, são enviadas para o `App::OnUnhandled` método.
+Isso é feito associando um delegado ao evento <xref:System.Windows.Forms.Application.ThreadException>. Nesse caso, as exceções subsequentes são enviadas para o método `App::OnUnhandled`.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // global_exception_handler.cpp
 // compile with: /clr
 #using <system.dll>

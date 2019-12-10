@@ -1,5 +1,5 @@
 ---
-title: Considerações para escrever o código de prólogo-epílogo
+title: Considerações para escrever o código prólogo-epílogo
 ms.date: 11/04/2016
 helpviewer_keywords:
 - stack frame layout
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: c7814de2-bb5c-4f5f-96d0-bcfd2ad3b182
-ms.openlocfilehash: a70c444af9e1622b3f46837fcfa2d5e8856abf30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a598ddbdd1b5f91c97e32905202e264b444c05d0
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399129"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988705"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Considerações para escrever o código de prólogo/epílogo
 
 **Seção específica da Microsoft**
 
-Antes de escrever suas próprias sequências de código de prólogo e epílogo, é importante entender como o registro de ativação é apresentado. Também é útil saber como usar o `__LOCAL_SIZE` símbolo.
+Antes de escrever suas próprias sequências de código prólogo e epílogo, é importante entender como o quadro de pilhas é disposto. Também é útil saber como usar o símbolo de `__LOCAL_SIZE`.
 
-##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Layout de quadro de pilha
+##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a>Layout do quadro de pilhas
 
 Este exemplo mostra o código padrão do prólogo que pode aparecer em uma função de 32 bits:
 
@@ -47,16 +47,16 @@ A pilha sempre vai para baixo (dos endereços de memória mais altos para os mai
 
 O compilador fornece um símbolo, `__LOCAL_SIZE`, para uso no bloco embutido do assembler do código de prólogo da função. Esse símbolo é usado para alocar espaço para as variáveis locais no quadro da pilha no código personalizado de prólogo.
 
-O compilador determina o valor de `__LOCAL_SIZE`. Seu valor é o número total de bytes de todas as variáveis locais definidas pelo usuário e variáveis temporárias geradas pelo compilador. `__LOCAL_SIZE` pode ser usado apenas como um operando imediato; ele não pode ser usado em uma expressão. Você não deve alterar ou redefinir o valor desse símbolo. Por exemplo:
+O compilador determina o valor de `__LOCAL_SIZE`. Seu valor é o número total de bytes de todas as variáveis locais definidas pelo usuário e variáveis temporárias geradas pelo compilador. `__LOCAL_SIZE` pode ser usado somente como um operando imediato; Ele não pode ser usado em uma expressão. Você não deve alterar ou redefinir o valor desse símbolo. Por exemplo:
 
 ```
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error
 ```
 
-O exemplo a seguir de uma função naked que contém personalizado de prólogo e epílogo sequências usa o `__LOCAL_SIZE` símbolo na sequência de prólogo:
+O exemplo a seguir de uma função Naked contendo prólogo personalizado e sequências epílogos usa o símbolo de `__LOCAL_SIZE` na sequência de prólogo:
 
-```
+```cpp
 // the__local_size_symbol.cpp
 // processor: x86
 __declspec ( naked ) int main() {
