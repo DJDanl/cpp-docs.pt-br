@@ -11,16 +11,16 @@ helpviewer_keywords:
 - /Zl compiler option [C++]
 - default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-ms.openlocfilehash: cb8083d874abe17add1d27096ebce143d03a04cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bcb90dbf071253dc0561845e3bd713dc42d5aef
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315541"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988561"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (omitir nome da biblioteca padrão)
 
-Omite o nome da biblioteca padrão C em tempo de execução do arquivo. obj. Por padrão, o compilador coloca o nome da biblioteca no arquivo .obj para direcionar o vinculador à biblioteca correta.
+Omite o nome padrão da biblioteca de tempo de execução do C do arquivo. obj. Por padrão, o compilador coloca o nome da biblioteca no arquivo .obj para direcionar o vinculador à biblioteca correta.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,19 +30,19 @@ Omite o nome da biblioteca padrão C em tempo de execução do arquivo. obj. Por
 
 ## <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre a biblioteca padrão, consulte [usar a biblioteca de tempo de execução](md-mt-ld-use-run-time-library.md).
+Para obter mais informações sobre a biblioteca padrão, consulte [usar biblioteca de tempo de execução](md-mt-ld-use-run-time-library.md).
 
-Você pode usar **/Zl** para compilar os arquivos. obj que você planeja colocar em uma biblioteca. Embora a omitir o nome da biblioteca salva apenas uma pequena quantidade de espaço para um arquivo. obj único, o espaço total salvado é significativo em uma biblioteca que contém muitos módulos de objeto.
+Você pode usar o **/zl** para compilar arquivos. obj que você planeja colocar em uma biblioteca. Embora a omissão do nome da biblioteca Economize apenas uma pequena quantidade de espaço para um único arquivo. obj, o espaço total economizado é significativo em uma biblioteca que contém muitos módulos de objeto.
 
-Essa opção é uma opção avançada. Essa opção remove determinado suporte de biblioteca de tempo de execução C que pode ser exigida pelo seu aplicativo, resultando em erros de tempo de vinculação, se seu aplicativo depende desse suporte. Se você usar essa opção, você deve fornecer os componentes necessários de alguma outra forma.
+Essa opção é uma opção avançada. Definir essa opção remove determinados suporte à biblioteca de tempo de execução C que podem ser exigidos pelo seu aplicativo, resultando em erros de tempo de vinculação se seu aplicativo depende desse suporte. Se você usar essa opção, deverá fornecer os componentes necessários de alguma outra maneira.
 
-Use [/NODEFAULTLIB (ignorar bibliotecas)](nodefaultlib-ignore-libraries.md). para direcionar o vinculador para ignorar as referências da biblioteca em todos os arquivos. obj.
+Use [/NODEFAULTLIB (ignorar bibliotecas)](nodefaultlib-ignore-libraries.md). para direcionar o vinculador para ignorar referências de biblioteca em todos os arquivos. obj.
 
 Para obter mais informações, consulte [Recursos da biblioteca CRT](../../c-runtime-library/crt-library-features.md).
 
-Ao compilar com **/Zl**, `_VC_NODEFAULTLIB` está definido.  Por exemplo:
+Ao compilar com **/zl**, `_VC_NODEFAULTLIB` é definido.  Por exemplo:
 
-```
+```cpp
 // vc_nodefaultlib.cpp
 // compile with: /Zl
 void Test() {
@@ -56,13 +56,13 @@ void Test() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Clique o **C/C++** pasta.
+1. Clique na pasta **CC++ /** .
 
-1. Clique o **avançado** página de propriedades.
+1. Clique na página de propriedades **avançado** .
 
-1. Modificar a **omitir os nomes de bibliotecas padrão** propriedade.
+1. Modifique a propriedade **omitir nomes de biblioteca padrão** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 

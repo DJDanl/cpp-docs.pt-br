@@ -10,36 +10,36 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: e2aed98d9131b3d7b96cdc3e3297823d69d0ad38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf241d4e599ad58c2e39680d8ed4e4e250b42b18
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393786"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988545"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Conceitos básicos em usar exceções gerenciadas
 
-Este tópico aborda o tratamento de exceções em aplicativos gerenciados. Ou seja, um aplicativo que é compilado com o **/clr** opção de compilador.
+Este tópico discute a manipulação de exceções em aplicativos gerenciados. Ou seja, um aplicativo que é compilado com a opção de compilador **/CLR** .
 
-## <a name="in-this-topic"></a>Neste tópico
+## <a name="in-this-topic"></a>{1&gt;Neste tópico&lt;1}
 
-- [Lançando exceções em /clr](#vcconbasicconceptsinusingmanagedexceptionsanchor1)
+- [Gerando exceções em/CLR](#vcconbasicconceptsinusingmanagedexceptionsanchor1)
 
-- [Blocos de Try/Catch para extensões CLR](#vcconbasicconceptsinusingmanagedexceptionsanchor2)
+- [Blocos try/catch para extensões CLR](#vcconbasicconceptsinusingmanagedexceptionsanchor2)
 
 ## <a name="remarks"></a>Comentários
 
-Se você compilar com o **/clr** opção, você pode tratar exceções de CLR, bem como standard <xref:System.Exception> classe fornece vários métodos úteis para o processamento de exceções de CLR e é recomendada como uma classe base para exceções definidas pelo usuário classes.
+Se você compilar com a opção **/CLR** , você pode manipular exceções CLR, bem como a classe de <xref:System.Exception> padrão fornece muitos métodos úteis para processar exceções CLR e é recomendado como uma classe base para classes de exceção definidas pelo usuário.
 
-Não há suporte para capturar tipos de exceção derivados de uma interface em **/clr**. Além disso, o common language runtime não permite que você para capturar exceções de estouro de pilha; uma exceção de estouro de pilha, o processo será encerrado.
+Não há suporte para a captura de tipos de exceção derivados de uma interface em **/CLR**. Além disso, o Common Language Runtime não permite capturar exceções de estouro de pilha; uma exceção de estouro de pilha encerrará o processo.
 
-Para obter mais informações sobre as diferenças no tratamento de exceções em aplicativos gerenciados e não gerenciados, consulte [diferenças na exceção tratamento comportamento em extensões gerenciadas para C++](../dotnet/differences-in-exception-handling-behavior-under-clr.md).
+Para obter mais informações sobre as diferenças no tratamento de exceções em aplicativos gerenciados e não gerenciados, consulte [diferenças no comportamento de tratamento C++de exceções em extensões gerenciadas para ](../dotnet/differences-in-exception-handling-behavior-under-clr.md)o.
 
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a> Lançando exceções em /clr
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>Gerando exceções em/CLR
 
-A expressão de lançamento do C++ é estendida para lançar um identificador para um tipo CLR. O exemplo a seguir cria um tipo de exceção personalizada e, em seguida, gera uma instância desse tipo:
+A C++ expressão throw é estendida para lançar um identificador para um tipo CLR. O exemplo a seguir cria um tipo de exceção personalizada e, em seguida, gera uma instância desse tipo:
 
-```
+```cpp
 // clr_exception_handling.cpp
 // compile with: /clr /c
 ref struct MyStruct: public System::Exception {
@@ -53,9 +53,9 @@ void GlobalFunction() {
 }
 ```
 
-Um tipo de valor deve ser boxed antes que está sendo lançada:
+Um tipo de valor deve estar em caixa antes de ser gerado:
 
-```
+```cpp
 // clr_exception_handling_2.cpp
 // compile with: /clr /c
 value struct MyValueStruct {
@@ -68,11 +68,11 @@ void GlobalFunction() {
 }
 ```
 
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> Blocos de Try/Catch para extensões CLR
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>Blocos try/catch para extensões CLR
 
-O mesmo **tente**/**catch** estrutura de bloco pode ser usada para capturar o CLR e exceções nativas:
+O mesmo **teste**/estrutura de bloco **Catch** pode ser usado para capturar as exceções nativas e CLR:
 
-```
+```cpp
 // clr_exception_handling_3.cpp
 // compile with: /clr
 using namespace System;
@@ -126,25 +126,25 @@ In 'catch(MyStruct^ catchException)'
 11
 ```
 
-### <a name="order-of-unwinding-for-c-objects"></a>Ordem de desenrolamento para objetos C++
+### <a name="order-of-unwinding-for-c-objects"></a>Ordem de liberação de C++ objetos
 
-Desenrolar ocorre para todos os objetos C++ com destruidores que podem estar na pilha de tempo de execução entre a função gerando e a função de manipulação. Porque os tipos CLR são alocados no heap, o desenrolamento não é aplicável a eles.
+O desenrolamento ocorre para C++ todos os objetos com destruidores que podem estar na pilha de tempo de execução entre a função de lançamento e a função de manipulação. Como os tipos CLR são alocados no heap, o desenrolamento não se aplica a eles.
 
-A ordem de eventos para uma exceção lançada é da seguinte maneira:
+A ordem dos eventos de uma exceção gerada é a seguinte:
 
-1. O runtime percorre a pilha procurando para a cláusula catch apropriada ou, no caso de SEH, uma, exceto o filtro para SEH, para capturar a exceção. Cláusulas catch são pesquisadas primeiro em ordem léxica e, em seguida, dinamicamente para baixo da pilha de chamadas.
+1. O tempo de execução percorre a pilha procurando a cláusula catch apropriada ou, no caso de SEH, um filtro Except para SEH, para capturar a exceção. As cláusulas catch são pesquisadas primeiro na ordem léxica e, em seguida, dinamicamente na pilha de chamadas.
 
-1. Depois que o manipulador correto for encontrado, a pilha é desenrolada para esse ponto. Para cada chamada de função na pilha, seus objetos locais são destruídos e Finally blocos são executados, da maioria aninhados para fora.
+1. Depois que o manipulador correto for encontrado, a pilha será rebobinada para esse ponto. Para cada chamada de função na pilha, seus objetos locais são destruidos e __finally blocos são executados, da mais aninhada para fora.
 
-1. Depois que a pilha é liberada, a cláusula catch é executada.
+1. Depois que a pilha é rebobinada, a cláusula catch é executada.
 
 ### <a name="catching-unmanaged-types"></a>Capturando tipos não gerenciados
 
-Quando um tipo de objeto não gerenciado é lançado, ela é empacotada com uma exceção do tipo <xref:System.Runtime.InteropServices.SEHException>. Ao procurar apropriado **catch** cláusula, há duas possibilidades.
+Quando um tipo de objeto não gerenciado é gerado, ele é encapsulado com uma exceção do tipo <xref:System.Runtime.InteropServices.SEHException>. Ao pesquisar a cláusula **Catch** apropriada, há duas possibilidades.
 
-- Se for encontrado um tipo nativo do C++, a exceção é desempacotada e em comparação com o tipo encontrado. Essa comparação permite que um tipo nativo do C++ ser capturada da maneira normal.
+- Se um tipo C++ nativo for encontrado, a exceção será desencapsulada e comparada ao tipo encontrado. Essa comparação permite que um C++ tipo nativo seja detectado da maneira normal.
 
-- No entanto, se um **catch** cláusula do tipo **SEHException** ou qualquer uma das suas classes base é examinado pela primeira vez, a cláusula será interceptar a exceção. Portanto, você deve colocar todas as cláusulas catch que capturar tipos nativos do C++ primeiro antes de quaisquer cláusulas de tipos CLR de catch.
+- No entanto, se uma cláusula **Catch** do tipo **SEHException** ou qualquer uma de suas classes base for examinada primeiro, a cláusula interceptará a exceção. Portanto, você deve posicionar todas as cláusulas catch que C++ capturam tipos nativos primeiro antes de qualquer cláusula catch de tipos CLR.
 
 Observe que
 
@@ -158,11 +158,11 @@ e
 catch(...)
 ```
 
-ambos irá capturar qualquer tipo lançado, incluindo exceções SEH.
+ambos capturarão qualquer tipo gerado, incluindo Exceções SEH.
 
-Se um tipo não gerenciado é capturado por catch(Object^), ele será destrói o objeto gerado.
+Se um tipo não gerenciado for capturado por catch (Object ^), ele não destruirá o objeto gerado.
 
-Ao gerar ou capturar exceções for gerenciada, é recomendável que você use o [/EHsc](../build/reference/eh-exception-handling-model.md) opção de compilador em vez de **/EHs** ou **/EHa**.
+Ao lançar ou capturar exceções não gerenciadas, recomendamos que você use a opção de compilador [/EHsc](../build/reference/eh-exception-handling-model.md) em vez de **o/EHS** ou **/EHA**.
 
 ## <a name="see-also"></a>Consulte também
 

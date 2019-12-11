@@ -1,17 +1,17 @@
 ---
 title: PROC
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PROC
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: 5d1e44fcc4adbbe012b2f31fe9c6c27511bafff1
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: e68a7fc9814ba1ca07095e036e88fb5917220086
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395025"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987937"
 ---
 # <a name="proc"></a>PROC
 
@@ -25,6 +25,8 @@ Marca o início e o fim de um bloco de procedimento chamado *rótulo*. As instru
 > *rótulo* **ENDP**
 
 ## <a name="remarks"></a>Comentários
+
+Os argumentos ⟧ de ⟦*Distance*⟧ e ⟦ *-Type*são válidos somente em MASM de 32 bits.
 
 ⟦**Frame** ⟦ __:__ *ehandler-address*⟧ ⟧ é válido somente com ml64. exe e faz com que MASM gere uma entrada de tabela de função em. pData e desenrola informações em. xdata para o comportamento de desenrolamento de manipulação de exceção estruturada de uma função.
 
