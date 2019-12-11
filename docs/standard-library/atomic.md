@@ -1,6 +1,7 @@
 ---
 title: '&lt;atomic&gt;'
-ms.date: 11/04/2016
+description: Descreve os tipos e funções disponíveis no cabeçalho atômico da biblioteca padrão C++ .
+ms.date: 12/06/2019
 f1_keywords:
 - <atomic>
 - atomic/std::atomic_int_least32_t
@@ -48,12 +49,12 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: b33ec1e7fdc7f93062248a9ad42c78c3b30801fe
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d11e8bf2067c1c8525725ae74e713ac834d89ec4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688456"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991172"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -68,17 +69,17 @@ Define classes e modelos de classe a serem usados para criar tipos que dão supo
 ## <a name="remarks"></a>Comentários
 
 > [!NOTE]
-> No código que é compilado usando **/CLR**, esse cabeçalho é bloqueado.
+> No código que é compilado usando [/CLR: Pure](../build/reference/clr-common-language-runtime-compilation.md), esse cabeçalho é bloqueado. Tanto **/CLR: Pure** quanto **/CLR: safe** são preteridos no Visual Studio 2017 e versões posteriores.
 
 Uma operação atômica tem duas propriedades-chave que o ajudarão a usar vários threads para manipular um objeto corretamente sem usar bloqueios de mutex.
 
-- Como uma operação atômica é indivisível, uma segunda operação atômica no mesmo objeto de um thread diferente pode obter o estado do objeto apenas antes ou depois da primeira operação atômica.
+- Como uma operação atômica é indivisível, uma segunda operação atômica no mesmo objeto de um thread diferente pode obter o estado do objeto somente antes ou depois da primeira operação atômica.
 
 - Com base em seu argumento [memory_order](../standard-library/atomic-enums.md#memory_order_enum), uma operação atômica estabelece os requisitos de ordenação para a visibilidade dos efeitos de outras operações atômicas no mesmo thread. Consequentemente, inibe a otimizações do compilador que violam os requisitos de ordenação.
 
 Em algumas plataformas, pode não ser possível implementar operações atômicas com eficiência para alguns tipos sem usar bloqueios `mutex`. Um tipo atômico será *livre de bloqueio* se nenhuma operação atômica no tipo usar bloqueios.
 
-**C++11**: em manipuladores de sinal, você pode executar operações atômicas em um objeto `obj` se `obj.is_lock_free()` ou `atomic_is_lock_free(x)` for true.
+**C++ 11**: em manipuladores de sinal, você pode executar operações atômicas em um objeto `obj` se `obj.is_lock_free()` ou `atomic_is_lock_free(x)` forem true.
 
 A classe [atomic_flag](../standard-library/atomic-flag-structure.md) fornece um tipo atômico mínimo que contém um sinalizador **bool** . Suas operações são sempre livres de bloqueio.
 
@@ -92,9 +93,9 @@ As especializações parciais `atomic<T *>` se aplicam a todos os tipos de ponte
 
 ## <a name="integral-specializations"></a>Especializações integrais
 
-As especializações `atomic<integral>` aplicam-se a todos os tipos integrais. Elas fornecem operações adicionais que não estão disponíveis por meio do modelo primário.
+As especializações `atomic<integral>` aplicam-se a todos os tipos integrais. Eles fornecem operações adicionais que não estão disponíveis por meio do modelo primário.
 
-Cada tipo `atomic<integral>` tem uma macro correspondente que você pode usar em um `if directive` para determinar no tempo de compilação se operações desse tipo estão livres de bloqueio. Se o valor da macro for zero, operações do tipo não serão livres de bloqueio. Se o valor for 1, as operações podem ser livres de bloqueio e uma verificação de runtime será necessária. Se o valor for 2, as operações serão livres de bloqueio. Você pode usar a função `atomic_is_lock_free` para determinar no tempo de execução se as operações no tipo são livres de bloqueio.
+Cada tipo `atomic<integral>` tem uma macro correspondente que você pode usar em um `if directive` para determinar no tempo de compilação se operações desse tipo estão livres de bloqueio. Se o valor da macro for zero, as operações no tipo não serão sem bloqueio. Se o valor for 1, as operações podem ser livres de bloqueio e uma verificação de runtime será necessária. Se o valor for 2, as operações serão livres de bloqueio. Você pode usar a função `atomic_is_lock_free` para determinar no runtime se as operações no tipo são livres de bloqueio.
 
 Para cada um dos tipos integrais, há um tipo atômico nomeado correspondente que gerencia um objeto desse tipo integral. Cada tipo `atomic_integral` tem o mesmo conjunto de funções membro que a instanciação correspondente de `atomic<T>` e pode ser passado para qualquer uma das funções atômicas não membro.
 
@@ -163,9 +164,9 @@ Os nomes Typedef existem para especializações do modelo atômico para alguns d
 |----------|-----------------|
 |[memory_order Enum](../standard-library/atomic-enums.md#memory_order_enum)|Fornece nomes simbólicos para operações de sincronização em locais na memória. Essas operações afetam como atribuições em um thread se tornam visíveis em outro.|
 
-## <a name="functions"></a>Funções
+## <a name="functions"></a>{1&gt;Funções&lt;1}
 
-Na lista a seguir, as funções que não terminam em `_explicit` têm a semântica do `_explicit` correspondente, exceto que têm argumentos [memory_order](../standard-library/atomic-enums.md#memory_order_enum) implícitos de `memory_order_seq_cst`.
+Na lista a seguir, as funções que não terminam em `_explicit` têm a semântica do `_explicit`correspondente, exceto que eles têm os argumentos implícitos de [memory_order](../standard-library/atomic-enums.md#memory_order_enum) de `memory_order_seq_cst`.
 
 |Name|Descrição|
 |----------|-----------------|

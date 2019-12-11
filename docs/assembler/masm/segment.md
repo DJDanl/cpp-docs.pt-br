@@ -1,17 +1,17 @@
 ---
 title: SEGMENT
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - SEGMENT
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: b7344d9cb685e0212748d7835e19f398f14979e7
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 933e4e42b4b0f9cc979a3e67805d017f723472ef
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393723"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988007"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -35,15 +35,15 @@ O intervalo de endereços de memória do qual um endereço inicial para o segmen
 |**DWORD**|Próximo endereço de palavra dupla disponível (4 bytes por palavra dupla).|
 |**PARA**|Próximo endereço de parágrafo disponível (16 bytes por parágrafo).|
 |**PAGE**|Próximo endereço de página disponível (256 bytes por página).|
-|**Alinhar**(*n*)|Próximo endereço do *n*º de bytes disponível. Consulte a seção comentários para obter mais informações.|
+|**ALIGN**(*n*)|Próximo endereço do *n*º de bytes disponível. Consulte a seção comentários para obter mais informações.|
 
 Se esse parâmetro não for especificado, o **para** será usado por padrão.
 
-*combinar*\
+*combinar* (somente MASM de 32 bits) \
 **Público**, **pilha**, **comum**, **memória**, **em**<em>endereço</em>, **privado**
 
-*usar*\
-**USE16**, **USE32**, **simples**
+*uso* (somente MASM de 32 bits) \
+**USE16**, **USE32**, **FLAT**
 
 *características*\
 **Informações**, **leitura**, **gravação**, **execução**, **compartilhada**, **noPage**, **NoCache**e **descarte**

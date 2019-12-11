@@ -1,31 +1,31 @@
 ---
-title: Compilador aviso (nível 4) C4702
+title: Aviso do compilador (nível 4) C4702
 ms.date: 11/04/2016
 f1_keywords:
 - C4702
 helpviewer_keywords:
 - C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
-ms.openlocfilehash: 96ae3a0742db5e3a5006f031ce62beb281c38ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e46bfef925f999ed7f04b5bbe7c88800209ed14
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395242"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990652"
 ---
-# <a name="compiler-warning-level-4-c4702"></a>Compilador aviso (nível 4) C4702
+# <a name="compiler-warning-level-4-c4702"></a>Aviso do compilador (nível 4) C4702
 
-Código inacessível
+código inacessível
 
-Esse aviso é o resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003: código inacessível. Quando o compilador (back-end) detecta código inacessível, ele irá gerar C4702, um aviso de nível 4.
+Esse aviso é o resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003: código inacessível. Quando o compilador (back-end) detecta o código inacessível, ele gera C4702, um aviso de nível 4.
 
-Para o código que é válido em versões do Visual Studio .NET 2003 e o Visual Studio .NET do Visual C++, remova o código inacessível ou garantir que todo código-fonte é acessível por algum fluxo de execução.
+Para o código que é válido nas versões do Visual Studio .NET 2003 e do Visual Studio .NET do C++Visual, remova o código inacessível ou garanta que todo o código-fonte possa ser acessado por algum fluxo de execução.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4702.
 
-```
+```cpp
 // C4702.cpp
 // compile with: /W4
 #include <stdio.h>
@@ -38,13 +38,13 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-Ao compilar com **/GX**, **/EHc**, **/EHsc**, ou **/EHac** e usando funções extern do C, código pode se tornar inacessível porque extern C funções são consideradas para não gerar, portanto, o bloco catch não pode ser acessado.  Se você achar que esse aviso não é válido porque uma função pode gerar, compilar com **/EHa** ou **/EHs**, dependendo da exceção gerada.
+Ao compilar com **/GX**, **/EHc**, **/EHsc**ou **/EHac** e usar as funções do c externo, o código pode ficar inacessível porque as funções externas de c são consideradas não lançadas, portanto, o bloco catch não está acessível.  Se você sentir que esse aviso não é válido porque uma função pode gerar, compile com **/EHA** ou **o/EHS**, dependendo da exceção lançada.
 
-Para obter mais informações, consulte [/EH (modelo de tratamento de exceção)](../../build/reference/eh-exception-handling-model.md) para obter mais informações.
+Para obter mais informações, consulte [/eh (modelo de tratamento de exceções)](../../build/reference/eh-exception-handling-model.md) para obter mais informações.
 
 O exemplo a seguir gera C4702.
 
-```
+```cpp
 // C4702b.cpp
 // compile with: /W4 /EHsc
 #include <iostream>
