@@ -1,131 +1,215 @@
 ---
-title: Bem-vindo ao C++ (C++ moderno)
-ms.date: 11/04/2016
+title: Bem-vindo de volta ao C++ (C++ moderno)
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 1f59395001722244cb407ef07ed8a301f08df85b
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 2739da77fbfa973ca716abc6d8fa4920b81095d9
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624753"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303329"
 ---
-# <a name="welcome-back-to-c-modern-c"></a>Bem-vindo ao C++ (C++ moderno)
+# <a name="welcome-back-to-c-modern-c"></a>Bem-vindo de volta ao C++ (C++ moderno)
 
-A C++ é uma das linguagens de programação mais usadas do mundo e os programas bem escritos que a utilizam são rápidos e eficientes. Essa linguagem é mais flexível que as demais porque é possível usá-la para criar diversos aplicativos, desde jogos divertidos e envolventes a softwares científicos de alto desempenho, drivers de dispositivos, programas incorporados e aplicativos clientes do Windows. Há mais de 20 anos, C++ é usada para solucionar problemas como esses e de muitos outros tipos. Mas talvez você ainda não saiba que cada vez mais programadores C++ estão deixando a programação C para trás e usando a moderna linguagem C++ em seu lugar.
+Nos últimos 25 anos, C++ o tem sido uma das linguagens de programação mais amplamente usadas do mundo. os programas bem escritos que a utilizam são rápidos e eficientes. A linguagem é mais flexível do que outras linguagens porque permite que você acesse recursos de hardware de baixo nível para maximizar a velocidade e minimizar os requisitos de memória. Você pode usá-lo para criar uma ampla gama de aplicativos – de jogos, para software científico de alto desempenho, drivers de dispositivo, programas incorporados, bibliotecas e compiladores para outras linguagens de programação, aplicativos de cliente do Windows e muito mais.
 
-Um dos requisitos originais da C++ é a compatibilidade com as versões anteriores da linguagem C. Com isso, a linguagem C++ passou por diversas iterações — C com classes, especificações da linguagem C++ original e muitas outras melhorias. Por causa dessa herança, a linguagem C++ muitas vezes é chamada de linguagem de programação multiparadigma. Com a C++, você pode deixar a programação estritamente processual em estilo C que envolve ponteiros brutos, matrizes, cadeias de caracteres com terminação nula, estruturas de dados personalizadas e outros recursos que podem garantir um desempenho ótimo, mas que também geram muitos bugs e aumentam a complexidade.  Como a programação em C vem acompanhada de todos esses riscos, um dos principais objetivos da linguagem C++ era possibilitar a criação de programas fortemente tipados, fáceis de gravar, ampliar e manter. No início, a linguagem C++ adotou paradigmas de programação como a programação orientada a objetos. Com os anos, outros recursos foram adicionados à linguagem com bibliotecas padrão de estruturas de dados e algoritmos altamente testados. Foram essas adições que possibilitaram o estilo C++ moderno.
+Um dos requisitos originais da C++ é a compatibilidade com as versões anteriores da linguagem C. Como resultado C++ , o sempre permitiu a programação em estilo C com ponteiros brutos, matrizes, cadeias de caracteres com terminação nula, estruturas de dados personalizadas e outros recursos que podem permitir um ótimo desempenho, mas também podem gerar bugs e complexidade. A evolução do C++ tem recursos enfatizados que reduzem muito a necessidade de usar os idiomas do estilo C. Os antigos recursos de programação de C estão lá quando você precisa deles, mas com C++ o código moderno você deve precisar deles menos e menos. O C++ código moderno é mais simples, seguro, mais elegante e ainda tão rápido quanto nunca.
 
-Destaques do C++ moderno:
+As seções a seguir fornecem uma visão geral dos principais recursos do C++moderno. A menos que indicado de outra forma, os recursos listados aqui estão disponíveis no C++ 11 e posterior. No compilador da C++ Microsoft, você pode definir a opção de compilador [/std](../build/reference/std-specify-language-standard-version.md) para especificar qual versão do padrão usar para seu projeto.
 
-- Escopo baseado em heap, em vez de escopo global estático ou heap.
+## <a name="raii-and-smart-pointers"></a>RAII e ponteiros inteligentes
 
-- Dedução de tipo, em vez de nomes de tipo explícitos.
-
-- Ponteiros inteligentes, em vez de ponteiros duplos.
-
-- tipos de `std::string` e `std::wstring` (consulte [\<cadeia de caracteres >](../standard-library/string.md)) em vez de matrizes de `char[]` brutas.
-
-- Contêineres de biblioteca padrão como `vector`, `list`e `map` em vez de matrizes brutas ou contêineres personalizados. [ C++ ](../standard-library/cpp-standard-library-header-files.md) Consulte [> de vetor de\<](../standard-library/vector.md), [> de\<de lista](../standard-library/list.md)e\<de [mapa >](../standard-library/map.md).
-
-- C++[Algoritmos](../standard-library/algorithm.md) de biblioteca padrão em vez de codificados manualmente.
-
-- Exceções para relatar e lidar com condições de erro.
-
-- Comunicação entre threads sem bloqueio usando C++ a biblioteca padrão `std::atomic<>` (consulte [\<Atomic >](../standard-library/atomic.md)) em vez de outros mecanismos de comunicação entre threads.
-
-- [Funções lambda](../cpp/lambda-expressions-in-cpp.md) embutidas em vez de funções pequenas implementadas separadamente.
-
-- Loops for com base em intervalo para escrever loops mais robustos que funcionam com C++ matrizes, contêineres de biblioteca padrão e coleções de Windows Runtime no formulário `for ( for-range-declaration : expression )`. Isso faz parte do suporte à linguagem base. Para obter mais informações, consulte [instrução com base em intervaloC++()](../cpp/range-based-for-statement-cpp.md).
-
-A linguagem C++ também evoluiu. Compare os snippets de código a seguir. Este trecho mostra como a linguagem C++ era antigamente:
-
-```cpp
-#include <vector>
-
-void f()
-{
-    // Assume circle and shape are user-defined types
-    circle* p = new circle( 42 );
-    vector<shape*> v = load_shapes();
-
-    for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {
-        if( *i && **i == *p )
-            cout << **i << " is a match\n";
-    }
-
-    // CAUTION: If v's pointers own the objects, then you
-    // must delete them all before v goes out of scope.
-    // If v's pointers do not own the objects, and you delete
-    // them here, any code that tries to dereference copies
-    // of the pointers will cause null pointer exceptions.
-    for( vector<circle*>::iterator i = v.begin();
-            i != v.end(); ++i ) {
-        delete *i; // not exception safe
-    }
-
-    // Don't forget to delete this, too.
-    delete p;
-} // end f()
-```
-
-Veja o mesmo código com a linguagem C++ moderna:
+Uma das principais classes de bugs na programação em estilo C é o *vazamento de memória* devido à falha ao chamar **delete** para memória que foi alocada com **New**. O C++ moderno enfatiza o princípio de que a *aquisição de recursos é a inicialização* que declara que qualquer recurso (memória de heap, identificadores de arquivo, soquetes e assim por diante) deve *pertencer* a um objeto que cria, ou recebe, o recurso recém alocado em seu construtor e o exclui em seu destruidor. Ao aderir ao princípio do RAII, você garante que todos os recursos serão retornados corretamente ao sistema operacional quando o objeto proprietário sair do escopo. Para dar suporte à adoção fácil de princípios RAII C++ , a biblioteca padrão fornece três tipos de ponteiro inteligente: [std:: unique_ptr](../standard-library/unique-ptr-class.md), [std:: shared_ptr](../standard-library/shared-ptr-class.md)e [std:: weak_ptr](../standard-library/weak-ptr-class.md). Um ponteiro inteligente manipula a alocação e a exclusão da memória que ela possui. O exemplo a seguir mostra uma classe com um membro de matriz que é alocado no heap na chamada para `make_unique()`. As chamadas para **New** e **delete** são encapsuladas pela classe `unique_ptr`. Quando um objeto de `widget` sai do escopo, o destruidor de unique_ptr será invocado e liberará a memória que foi alocada para a matriz.  
 
 ```cpp
 #include <memory>
+class widget
+{
+private:
+    std::unique_ptr<int> data;
+public:
+    widget(const int size) { data = std::make_unique<int>(size); }
+    void do_something() {}
+};
+
+void functionUsingWidget() {
+    widget w(1000000);   // lifetime automatically tied to enclosing scope
+                // constructs w, including the w.data gadget member
+    // ...
+    w.do_something();
+    // ...
+} // automatic destruction and deallocation for w and w.data
+
+```
+
+Sempre que possível, use um ponteiro inteligente ao alocar memória heap. Se você precisar usar os operadores novo e excluir explicitamente, siga o princípio de RAII. Para obter mais informações, consulte [tempo de vida do objeto e gerenciamento de recursos (RAII)](object-lifetime-and-resource-management-modern-cpp.md).
+
+## <a name="stdstring-and-stdstring_view"></a>std:: String e std:: string_view
+
+As cadeias de caracteres C-style são outra grande fonte de bugs. Usando [std:: String e std:: wstring](../standard-library/basic-string-class.md) , você pode eliminar praticamente todos os erros associados às cadeias de estilo C e obter o benefício das funções de membro para pesquisa, acréscimo, pendência e assim por diante. Ambos são altamente otimizados para velocidade. Ao passar uma cadeia de caracteres para uma função que requer somente acesso somente leitura, no (C++ 17), você pode usar [std:: string_view](../standard-library/basic-string-view-class.md) para obter um benefício de desempenho ainda maior.
+
+## <a name="stdvector-and-other-standard-library-containers"></a>contêineres std:: vector e outros standard library
+
+Todos os contêineres de biblioteca padrão seguem o princípio do RAII, fornecem iteradores para a passagem segura de elementos, são altamente otimizados para desempenho e foram totalmente testados quanto à exatidão. Ao usar esses contêineres sempre que possível, você elimina o potencial de bugs ou ineficiências que podem ser introduzidos em estruturas de dados personalizadas. Por padrão, use [vector](../standard-library/vector-class.md) como o contêiner sequencial preferencial C++no. Isso é equivalente a `List<T>` em linguagens .NET.
+
+```cpp
+vector<string> apples;
+apples.push_back("Granny Smith");
+```
+
+Use [MAP](../standard-library/map-class.md) (não `unordered_map`) como o contêiner associativo padrão. Use [set](../standard-library/set-class.md), [Multimap](../standard-library/multimap-class.md) [e para](../standard-library/multiset-class.md) degenerado e vários casos.
+
+```cpp
+map<string, string> apple_color;
+// ...
+apple_color["Granny Smith"] = "Green";
+```
+
+Quando a otimização de desempenho for necessária, considere o uso de:
+
+- O tipo de [matriz](../standard-library/array-class-stl.md) ao inserir é importante, por exemplo, como um membro de classe.
+
+- Contêineres associativos não ordenados, como [unordered_map](../standard-library/unordered-map-class.md). Elas têm uma sobrecarga por elemento menor e uma pesquisa em tempo constante, mas podem ser mais difíceis de usar de forma correta e eficiente.
+
+- `vector`classificados. Para obter mais informações, consulte [Algoritmos](../cpp/algorithms-modern-cpp.md).
+
+Não use matrizes de estilo C. Para APIs mais antigas que precisam de acesso direto aos dados, use métodos de acessador como `f(vec.data(), vec.size());` em vez disso. Para obter mais informações sobre contêineres, consulte [ C++ standard library containers](../standard-library/stl-containers.md).
+
+## <a name="standard-library-algorithms"></a>Algoritmos de biblioteca padrão
+
+Antes de supor que você precisa escrever um algoritmo personalizado para seu programa, primeiro examine os C++ [algoritmos](../standard-library/algorithm.md)de biblioteca padrão. A biblioteca padrão contém uma variedade cada vez maior de algoritmos para muitas operações comuns, como pesquisa, classificação, filtragem e randomização. A biblioteca de matemática é extensa. A partir do C++ 17, são fornecidas versões paralelas de muitos algoritmos.
+
+Aqui estão alguns exemplos importantes:
+
+- **for_each**, o algoritmo de passagem padrão (juntamente com loops for baseado em intervalo). 
+
+- **transformar**, para modificação não in-loco de elementos de contêiner
+
+- **find_if**, o algoritmo de pesquisa padrão.
+
+- **classifique**, **lower_bound**e outros algoritmos de classificação e pesquisa padrão.
+
+Para escrever um comparador, use **<** estrito e use *lambdas nomeados* quando possível.
+
+```cpp
+auto comp = [](const widget& w1, const widget& w2)
+     { return w1.weight() < w2.weight(); }
+
+sort( v.begin(), v.end(), comp );
+
+auto i = lower_bound( v.begin(), v.end(), comp );
+```
+
+## <a name="auto-instead-of-explicit-type-names"></a>automático em vez de nomes de tipo explícitos
+
+O c++ 11 introduziu a palavra-chave [auto](auto-cpp.md) para uso em declarações de variáveis, funções e modelos. **auto** informa ao compilador para deduzir o tipo do objeto para que você não precise digitá-lo explicitamente. **auto** é especialmente útil quando o tipo deduzido é um modelo aninhado:
+
+```cpp
+map<int,list<string>>::iterator i = m.begin(); // C-style
+auto i = m.begin(); // modern C++
+```
+
+## <a name="range-based-for-loops"></a>Loops for com base em intervalo
+
+A iteração em estilo C em matrizes e contêineres é propenso a indexação de erros e também é entediante de digitar. Para eliminar esses erros e tornar seu código mais legível, use loops for baseado em intervalo com contêineres de biblioteca padrão, bem como matrizes brutas. Para obter mais informações, consulte [instrução com base em intervalo](../cpp/range-based-for-statement-cpp.md).
+
+```cpp
+#include <iostream>
 #include <vector>
 
-void f()
+int main()
 {
-    // ...
-    auto p = make_shared<circle>( 42 );
-    vector<shared_ptr<shape>> v = load_shapes();
+    std::vector<int> v {1,2,3};
 
-    for( auto& s : v )
+    // C-style
+    for(int i = 0; i < v.size(); ++i)
     {
-        if( s && *s == *p )
-        {
-            cout << *s << " is a match\n";
-        }
+        std::cout << v[i];
+    }
+
+    // Modern C++:
+    for(auto& num : v)
+    {
+        std::cout << num;
     }
 }
 ```
 
-Na linguagem C++ moderna, você não precisa usar novos tratamentos de exceções nem excluí-los, pois é possível usar ponteiros inteligentes. Ao usar a função de dedução e de [lambda](../cpp/lambda-expressions-in-cpp.md)de tipo **automático** , você pode escrever código mais rápido, apertar e entender melhor. E um loop **for** baseado em intervalo é mais limpo, mais fácil de usar e menos propenso a erros não intencionais do que um loop **em** estilo C. Você pode usar texto clichê com linhas de código mínimas para gravar seu aplicativo. Você também pode fazer com que o código seja à prova de exceções e memória e que ele não precise lidar com alocação/desalocação ou códigos de erros.
+## <a name="constexpr-expressions-instead-of-macros"></a>expressões constexpr em vez de macros
 
-A linguagem C++ moderna incorpora dois tipos de poliformismo: tempo de compilação, por meio de modelos, e tempo de execução, por meio de herança e virtualização. É possível combinar esses dois tipos de poliformismo para melhorar a eficiência. O C++ modelo de biblioteca padrão `shared_ptr` usa métodos virtuais internos para realizar sua eliminação de tipo aparentemente sem esforço. Porém, não use a virtualização em excesso no poliformismo quando um modelo for a melhor opção. Os modelos podem ser muito úteis.
+As macros em C++ C e são tokens que são processados pelo pré-processador antes da compilação. Cada instância de um token de macro é substituída pelo seu valor ou expressão definido antes de o arquivo ser compilado. As macros são comumente usadas na programação em estilo C para definir valores constantes de tempo de compilação. No entanto, as macros são propensas a erros e são difíceis de depurar. No moderno C++, você deve preferir variáveis [constexpr](constexpr-cpp.md) para constantes de tempo de compilação:
 
-Se está migrando de outra linguagem para C++, principalmente de uma linguagem gerenciada em que a maioria dos tipos é de referência e poucos são de valor, você precisa saber que as classes C++ são tipos de valor por padrão. No entanto, você pode especificá-los como tipos de referência para habilitar o comportamento polimórfico que possibilita usar a programação orientada a objetos. Uma perspectiva útil: os tipos de valor estão mais relacionados à memória e ao controle de layouts. Já os tipos de referência estão mais relacionados às classes básicas e funções virtuais para possibilitar o uso de poliformismo. Por padrão, os tipos de valor podem ser copiados. Cada um deles tem um construtor de cópia ou operador de atribuição de cópia. Ao especificar um tipo de referência, desabilite a funcionalidade de cópia das classes, o construtor de cópia e o operador de atribuição de cópia, e use um destruidor virtual, que é compatível com poliformismo. Os tipos de valor também estão relacionados ao conteúdo que, quando copiado, gera dois valores independentes, que podem ser modificados separadamente. Porém, os tipos de referência estão relacionados à identidade: o tipo de objeto. Por isso, esses tipos também são chamados de polimórficos.
+```cpp
+#define SIZE 10 / C-style
+constexpr int size = 10; // modern C++
+```
 
-A C++ está passando por uma renovação porque a potência voltou a ser essencial. Linguagens como Java e C# são úteis quando a produtividade do programador é um aspecto importante. Contudo, elas têm suas limitações quando potência e desempenho são essenciais. Para obter alta eficiência e potência, principalmente em dispositivos com hardware limitado, não há páreo para a linguagem C++.
+### <a name="uniform-initialization"></a>Inicialização uniforme
 
-Além de a linhagem ser moderna, as ferramentas de desenvolvimento também são. O Visual Studio torna as partes do ciclo de desenvolvimento robustas e eficientes. Ele conta com ferramentas de ALM (Gerenciamento de ciclo de vida de aplicativos), melhorias de IDE, como IntelliSense, mecanismos úteis para ferramentas, como XAML, e ferramentas de compilação, depuração e muitas outras.
+No moderno C++, você pode usar a inicialização de chaves para qualquer tipo. Essa forma de inicialização é especialmente conveniente ao inicializar matrizes, vetores ou outros contêineres. No exemplo a seguir, `v2` é inicializado com três instâncias de `S`. `v3` é inicializado com três instâncias de `S` que são inicializadas com chaves. O compilador infere o tipo de cada elemento com base no tipo declarado de `v3`.
 
-Os artigos da documentação sobre esse assunto fornecem diretrizes de alto nível e melhores práticas para os recursos e as técnicas mais importantes para gravar programas C++ modernos.
+```cpp
+#include <vector>
 
-- [C++Sistema de tipos](../cpp/cpp-type-system-modern-cpp.md)
+struct S
+{
+    std::string name;
+    float num;
+    S(std::string s, float f) : name(s), num(f) {}
+};
 
-- [Inicialização uniforme e delegação de construtores](../cpp/uniform-initialization-and-delegating-constructors.md)
+int main()
+{
+    // C-style initialization
+    std::vector<S> v;
+    S s1("Norah", 2.7);
+    S s2("Frank", 3.5);
+    S s3("Jeri", 85.9);
 
-- [Tempo de vida do objeto e gerenciamento de recursos](../cpp/object-lifetime-and-resource-management-modern-cpp.md)
+    v.push_back(s1);
+    v.push_back(s2);
+    v.push_back(s3);
 
-- [Recursos de objetos próprios (RAII)](../cpp/objects-own-resources-raii.md)
+    // Modern C++:
+    std::vector<S> v2 {s1, s2, s3};
 
-- [Ponteiros inteligentes](../cpp/smart-pointers-modern-cpp.md)
+    // or...
+    std::vector<S> v3{ {"Norah", 2.7}, {"Frank", 3.5}, {"Jeri", 85.9} };
 
-- [Pimpl para encapsulamento de tempo de compilação](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)
+}
+```
 
-- [Contêineres](../cpp/containers-modern-cpp.md)
+Para obter mais informações, consulte [inicialização de chaves](initializing-classes-and-structs-without-constructors-cpp.md).
 
-- [Algoritmos](../cpp/algorithms-modern-cpp.md)
+## <a name="move-semantics"></a>Mover semântica
 
-- [Cadeia de caracteres e formatação de e/ C++s (moderno)](../cpp/string-and-i-o-formatting-modern-cpp.md)
+O C++ moderno fornece *semântica de movimentação* que possibilita eliminar cópias de memória desnecessárias, que em versões anteriores do idioma eram inevitáveis em determinadas situações. Uma operação de *movimentação* transfere a propriedade de um recurso de um objeto para o seguinte sem fazer uma cópia. Ao implementar uma classe que possui um recurso como memória de heap, identificadores de arquivo e assim por diante, você pode definir um *Construtor de movimentação* e mover o *operador de atribuição* para ele. O compilador escolherá esses membros especiais durante a resolução de sobrecarga em situações em que uma cópia não é necessária. Os tipos de contêiner de biblioteca padrão invocarão o Construtor move em objetos, se houver um definido. Para obter mais informações, consulte [mover construtores e mover operadores de atribuiçãoC++()](move-constructors-and-move-assignment-operators-cpp.md).
 
-- [Erros e tratamento de exceção](../cpp/errors-and-exception-handling-modern-cpp.md)
+## <a name="lambda-expressions"></a>Expressões lambda
 
-- [Portabilidade nos limites da ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md)
+Na programação em estilo C, uma função pode ser passada para outra função por meio de um *ponteiro de função*. Os ponteiros de função são inconvenientes para manter e entender, pois a função a que eles se referem pode ser definida em outro lugar no código-fonte, longe do ponto em que ele está sendo invocado. Além disso, eles não são de tipo seguro. O C++ moderno fornece objetos de função, classes que substituem o operador [()](function-call-operator-parens.md) , que permite que eles sejam chamados como uma função. A maneira mais conveniente de criar objetos de função é com [expressões lambda](../cpp/lambda-expressions-in-cpp.md)embutidas. O exemplo a seguir mostra como usar uma expressão lambda para passar um objeto Function, que a função `for_each` invocará em cada elemento no vetor:
 
-Para obter mais informações, consulte o artigo [Stack Overflow C++ quais idiomas são preteridos no c++ 11](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11).
+```cpp
+    std::vector<int> v {1,2,3,4,5};
+    int x = 2;
+    int y = 4;
+    auto result = find_if(begin(v), end(v), [=](int i) { return i > x && i < y; });
+```
+
+A expressão lambda `[=](int i) { return i > x && i < y; }` pode ser lida como "a função que usa um único argumento do tipo `int` e retorna um booliano que indica se a expressão é verdadeira. Observe que as variáveis `x` e `y` do contexto ao redor podem ser usadas no lambda. O `[=]` especifica que essas variáveis são *capturadas* por valor; em outras palavras, a expressão lambda tem suas próprias cópias desses valores.
+
+## <a name="exceptions"></a>Exceções
+
+Como regra geral, o moderno C++ enfatiza exceções em vez de códigos de erro como a melhor maneira de relatar e tratar condições de erro. Para obter mais informações, [consulte C++ práticas recomendadas modernas para exceções e tratamento de erros](errors-and-exception-handling-modern-cpp.md).
+
+## <a name="stdatomic"></a>std:: Atomic
+
+Use o C++ struct padrão de biblioteca Standard [:: Atomic](../standard-library/atomic-structure.md) e os tipos relacionados para mecanismos de comunicação entre threads.
+
+## <a name="stdvariant-c17"></a>std:: Variant (C++ 17)
+
+As uniões são comumente usadas na programação em estilo C para conservar a memória, permitindo que os membros de diferentes tipos ocupem o mesmo local de memória. No entanto, as uniões não são de tipo seguro e estão sujeitas a erros de programação. O c++ 17 apresenta a classe [std:: Variant](../standard-library/variant-class.md) como uma alternativa mais robusta e segura para as uniões. A função [std:: visite](../standard-library/variant-functions.md#visit) pode ser usada para acessar os membros de um tipo de `variant` de forma segura de tipo.
 
 ## <a name="see-also"></a>Consulte também
 
