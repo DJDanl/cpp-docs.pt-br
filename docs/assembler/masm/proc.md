@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: e68a7fc9814ba1ca07095e036e88fb5917220086
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 85d9a1e82eebcd83cb0f12f5ca751ec9415af18d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987937"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318664"
 ---
 # <a name="proc"></a>PROC
 
-Marca o início e o fim de um bloco de procedimento chamado *rótulo*. As instruções no bloco podem ser chamadas com a instrução **Call** ou a diretiva [Invoke](../../assembler/masm/invoke.md) .
+Marca o início e o fim de um bloco de procedimento chamado *rótulo*. As instruções no bloco podem ser chamadas com a instrução **Call** ou a diretiva [Invoke](invoke.md) .
 
 ## <a name="syntax"></a>Sintaxe
 
-> *rótulo* **proc** ⟦*Distance*⟧ ⟦*idioma-tipo*⟧ ⟦*visibilidade*⟧ ⟦ __\<__ *prologuearg* __>__ ⟧ ⟦**usa** *reglist*⟧ ⟦ __,__ *parâmetro* ⟦ __:__ *marca*⟧... ⟧\
+> *rótulo* **proc** ⟦*Distance*⟧ ⟦*idioma-tipo*⟧ ⟦ **pública** | **privado** | **Exportar** ⟧ ⟦ __\<__ *prologuearg* __>__ ⟧ ⟦**usa** *reglist*⟧ ⟦ __,__ *parâmetro* ⟦ __:__ *marca*⟧... ⟧\
 > ⟦**Quadro** ⟦ __:__ *ehandler-address*⟧ ⟧ \
 > *instruções*\
 > *rótulo* **ENDP**
@@ -30,9 +30,9 @@ Os argumentos ⟧ de ⟦*Distance*⟧ e ⟦ *-Type*são válidos somente em MASM
 
 ⟦**Frame** ⟦ __:__ *ehandler-address*⟧ ⟧ é válido somente com ml64. exe e faz com que MASM gere uma entrada de tabela de função em. pData e desenrola informações em. xdata para o comportamento de desenrolamento de manipulação de exceção estruturada de uma função.
 
-Quando o atributo de **quadro** é usado, ele deve ser seguido por um [. Diretiva endprólogo](../../assembler/masm/dot-endprolog.md) .
+Quando o atributo de **quadro** é usado, ele deve ser seguido por um [. Diretiva endprólogo](dot-endprolog.md) .
 
-Consulte [MASM para x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) para obter mais informações sobre como usar o ml64. exe.
+Consulte [MASM para x64 (ml64. exe)](masm-for-x64-ml64-exe.md) para obter mais informações sobre como usar o ml64. exe.
 
 ## <a name="example"></a>Exemplo
 
@@ -79,6 +79,7 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)
+[Referência de diretivas](directives-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

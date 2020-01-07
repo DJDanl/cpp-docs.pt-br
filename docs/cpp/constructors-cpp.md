@@ -1,17 +1,17 @@
 ---
 title: Construtores (C++)
-ms.date: 11/19/2019
+ms.date: 12/27/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 6cdf6241542c3f93484097c65015181a91647d49
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 985c63c5c937f9e85b6898cdbcc61f347688b96d
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246614"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546387"
 ---
 # <a name="constructors-c"></a>Construtores (C++)
 
@@ -478,6 +478,52 @@ Se um construtor gerar uma exceção, a ordem de destruição será a inversa da
 
 1. Se o construtor não for representante, todos os objetos da classe base e membros completamente construídos serão destruídos. No entanto, como o próprio objeto não está totalmente construído, o destruidor não é executado.
 
+## <a name="extended_aggregate"></a>Construtores derivados e inicialização de agregação estendida
+
+Se o construtor de uma classe base for não público, mas estiver acessível a uma classe derivada, em seguida, em **/std: modo c++ 17** no Visual Studio 2017 e posterior, você não poderá usar chaves vazias para inicializar um objeto do tipo derivado.
+
+O exemplo a seguir mostra o comportamento de conformidade do C++14:
+
+```cpp
+struct Derived;
+
+struct Base {
+    friend struct Derived;
+private:
+    Base() {}
+};
+
+struct Derived : Base {};
+
+Derived d1; // OK. No aggregate init involved.
+Derived d2 {}; // OK in C++14: Calls Derived::Derived()
+               // which can call Base ctor.
+```
+
+No C++ 17, `Derived` agora é considerado um tipo de agregação. Isso significa que a inicialização de `Base` por meio do construtor padrão privado acontece diretamente como parte da regra de inicialização de agregação estendida. Anteriormente, o construtor privado `Base` era chamado por meio do construtor `Derived`, e isso era bem-sucedido devido à declaração friend.
+
+O exemplo a seguir mostra o comportamento do C++ 17 no Visual Studio 2017 e posterior no modo **/std: c++ 17** :
+
+```cpp
+struct Derived;
+
+struct Base {
+    friend struct Derived;
+private:
+    Base() {}
+};
+
+struct Derived : Base {
+    Derived() {} // add user-defined constructor
+                 // to call with {} initialization
+};
+
+Derived d1; // OK. No aggregate init involved.
+
+Derived d2 {}; // error C2248: 'Base::Base': cannot access
+               // private member declared in class 'Base'
+```
+
 ### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>Construtores para classes que têm várias heranças
 
 Se uma classe for derivada de várias classes base, os construtores de classe base serão chamados na ordem em que estão listados na declaração da classe derivada:
@@ -652,6 +698,6 @@ int main(){
 - [Mover construtores e mover operadores de atribuição](move-constructors-and-move-assignment-operators-cpp.md)
 - [Delegando construtores](delegating-constructors.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Classes e structs](classes-and-structs-cpp.md)
