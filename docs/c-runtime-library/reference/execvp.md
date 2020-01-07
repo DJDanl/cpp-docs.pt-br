@@ -1,6 +1,6 @@
 ---
 title: execvp
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - execvp
 api_location:
@@ -23,16 +23,18 @@ f1_keywords:
 helpviewer_keywords:
 - execvp function
 ms.assetid: a0d0e898-9f06-4aa9-94ce-3ad317318c3a
-ms.openlocfilehash: 2303635da0799af2209693d86f97d8136f05d712
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8df4164a4f3d9e0377e84adbe2d6950c0b3ceeca
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941749"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299528"
 ---
 # <a name="execvp"></a>execvp
 
-Essa função POSIX foi preterida. Em vez disso, use [_execvp](execvp-wexecvp.md) compatível com ISO C++.
+O nome da função POSIX implementada pela Microsoft `execvp` é um alias preterido para a função [_execvp](execvp-wexecvp.md) . Por padrão, ele gera o [aviso do compilador (nível 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). O nome é preterido porque não segue as regras padrão do C para nomes específicos da implementação. No entanto, a função ainda tem suporte.
+
+É recomendável usar [_execvp](execvp-wexecvp.md) em vez disso. Ou, você pode continuar a usar esse nome de função e desabilitar o aviso. Para obter mais informações, consulte desligar os nomes de [função](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [de aviso](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) e POSIX.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

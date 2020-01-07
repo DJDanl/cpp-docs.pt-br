@@ -10,16 +10,16 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 79c43ed11bfc73ec4bfaedad0a20b45fb6ca1ffb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3194c34bacfe7b2ed758ab245c5858eadb18e64e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154146"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301516"
 ---
 # <a name="function-call-operator-"></a>Operador de chamada da função: ()
 
-Uma expressão pós-fixada seguida pelo operador de chamada de função, **()**, especifica uma chamada de função.
+Uma expressão de sufixo seguida pelo operador de chamada de função, **()** , especifica uma chamada de função.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,9 +32,9 @@ postfix-expression
 
 Os argumentos para o operador de chamada de função são zero ou mais expressões separadas por vírgulas — os argumentos reais para a função.
 
-O *postfix-expression* deve ser avaliada como um endereço de função (por exemplo, um identificador de função ou o valor de um ponteiro de função), e *argument-expression-list* é uma lista de expressões (separadas por vírgulas) cujos valores (argumentos) são passados para a função. O argumento *argument-expression-list* pode estar vazio.
+A *expressão de sufixo* deve ser avaliada como um endereço de função (por exemplo, um identificador de função ou o valor de um ponteiro de função), e a *lista de expressão de argumento* é uma lista de expressões (separadas por vírgulas) cujos valores (os argumentos) são passados para a função. O argumento *argument-expression-list* pode estar vazio.
 
-O *postfix-expression* deve ser um destes tipos:
+A *expressão de sufixo* deve ser de um destes tipos:
 
 - Tipo de retorno de função `T`. Uma declaração de exemplo é
 
@@ -129,7 +129,7 @@ int main()
 }
 ```
 
-O código anterior define uma classe chamada `Point`, que contém dados privados de objetos que representam *x* e *y* coordenadas. Esses objetos de dados devem ser alterados e seus valores recuperados. Esse programa é apenas um de vários projetos para essa classe; o uso das funções `GetX` e `SetX` ou `GetY` e `SetY` é outro projeto possível.
+O código anterior define uma classe chamada `Point`, que contém objetos de dados privados que representam coordenadas *x* e *y* . Esses objetos de dados devem ser alterados e seus valores recuperados. Esse programa é apenas um de vários projetos para essa classe; o uso das funções `GetX` e `SetX` ou `GetY` e `SetY` é outro projeto possível.
 
 As funções que retornam tipos de classe, os ponteiros para tipos de classe ou referências a tipos de classe podem ser usados como o operando à esquerda para operadores de seleção de membros. Portanto, o código a seguir é válido:
 
@@ -174,10 +174,10 @@ int main() {
 }
 ```
 
-As funções podem ser chamadas recursivamente. Para obter mais informações sobre declarações de função, consulte [funções](functions-cpp.md). Material relacionado está em [programa e ligação](../cpp/program-and-linkage-cpp.md).
+As funções podem ser chamadas recursivamente. Para obter mais informações sobre declarações de função, consulte [funções](functions-cpp.md). O material relacionado está em [unidades de tradução e vinculação](../cpp/program-and-linkage-cpp.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Expressões pós-fixadas](../cpp/postfix-expressions.md)<br/>
-[Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operadores internos C++, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Chamada de função](../c-language/function-call-c.md)
