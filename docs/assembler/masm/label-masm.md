@@ -1,28 +1,29 @@
 ---
 title: LABEL (MASM)
-ms.date: 11/20/2019
+ms.date: 12/17/2019
 f1_keywords:
 - Label
 helpviewer_keywords:
 - LABEL directive
 ms.assetid: 39ec44e8-91e6-4f3c-8cf0-b66479974e42
-ms.openlocfilehash: 1a36be660249a7ce76e36aee6b78177b205001c2
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 65f0e4912b19ede978296e8bcb2992fa48b78f8e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397266"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312983"
 ---
-# <a name="label-masm"></a>LABEL (MASM)
+# <a name="label"></a>LABEL
 
-Cria um novo rótulo atribuindo o valor do contador de local atual e o *tipo* fornecido para *nome*.
+Cria um novo rótulo atribuindo o valor do contador de local atual e o *qualificador* fornecido ao *nome*.
 
 ## <a name="syntax"></a>Sintaxe
 
-> *tipo* de **rótulo** de *nome*
+> **rótulo** de nome *qualificadotype*
 >
-> **rótulo** de nome ⟦ próximo ** | **  | **proc**⟧ **PTR** ⟦*tipo*⟧
+> **rótulo** de nome ⟦ próximo ** | **  | **proc**⟧ **PTR** ⟦*qualifiedtype*⟧
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de diretivas](directives-reference.md)
+[Referência de diretivas](directives-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)
