@@ -1,6 +1,6 @@
 ---
 title: Operador LENGTHOF
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator LENGTHOF
 - LENGTHOF
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LENGTHOF operator
 - operator LENGTHOF
 ms.assetid: 09c40dbb-a4e0-4fc6-80ab-dc9967240ef6
-ms.openlocfilehash: 454d69e282d9aa642bf4cbe4c0f09e2f33bae439
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 72a0eed6b612cae112060c33cf236c0c40320d32
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396834"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311441"
 ---
 # <a name="operator-lengthof"></a>Operador LENGTHOF
 
@@ -23,6 +23,7 @@ Retorna o número de objetos de dados na *variável*.
 
 > *Variável* LENGTHOF
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de operadores](operators-reference.md)
+\ de [referência de operadores](operators-reference.md)
+[MASM BNF Grammar](masm-bnf-grammar.md)
