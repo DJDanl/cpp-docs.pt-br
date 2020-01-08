@@ -1,6 +1,6 @@
 ---
-title: Tipos fundamentais (C++)
-ms.date: 11/04/2016
+title: Tipos internos (C++)
+ms.date: 12/11/2019
 f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
@@ -43,28 +43,28 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: daa2ad2680a9d7d0239a70ed37ec1d90a3d96d97
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: f6bfc72bf279d09e89423866d9cb46ad3496b49c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857535"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301490"
 ---
-# <a name="fundamental-types--c"></a>Tipos fundamentais (C++)
+# <a name="built-in-types-c"></a>Tipos internos (C++)
 
-Os tipos fundamentais C++ no são divididos em três categorias: integral, ponto flutuante e void. Os tipos integrais são capazes de manipular números inteiros. Os tipos de ponto flutuante são capazes de especificar valores que podem ter partes fracionárias.
+Os C++ tipos internos (também chamados de *tipos fundamentais*) são especificados pelo idioma padrão e são criados no compilador. Os tipos internos não são definidos em nenhum arquivo de cabeçalho. Os tipos internos são divididos em três categorias: integral, ponto flutuante e nulo. Os tipos integrais são capazes de manipular números inteiros. Os tipos de ponto flutuante são capazes de especificar valores que podem ter partes fracionárias.
 
-O tipo [void](../cpp/void-cpp.md) descreve um conjunto vazio de valores. Nenhuma variável do tipo **void** pode ser especificada — ela é usada principalmente para declarar funções que não retornam valores ou para declarar ponteiros genéricos para dados tipados sem tipo ou arbitrariamente. Qualquer expressão pode ser convertida explicitamente ou converter para o tipo **void**. No entanto, tais expressões estão restritas aos seguintes usos:
+O tipo [void](void-cpp.md) descreve um conjunto vazio de valores. Nenhuma variável do tipo **void** pode ser especificada — ela é usada principalmente para declarar funções que não retornam valores ou para declarar ponteiros genéricos para dados tipados sem tipo ou arbitrariamente. Qualquer expressão pode ser convertida explicitamente ou converter para o tipo **void**. No entanto, tais expressões estão restritas aos seguintes usos:
 
-- Uma instrução de expressão. (Consulte [expressões](../cpp/expressions-cpp.md)para obter mais informações.)
+- Uma instrução de expressão. (Para obter mais informações, consulte [Expressions](expressions-cpp.md).)
 
-- O operando esquerdo do operador vírgula. (Consulte [operador de vírgula](../cpp/comma-operator.md) para obter mais informações.)
+- O operando esquerdo do operador vírgula. (Para obter mais informações, consulte [operador de vírgula](comma-operator.md).)
 
-- O segundo ou terceiro operando do operador condicional (`? :`). (Consulte [expressões com o operador condicional](../cpp/conditional-operator-q.md) para obter mais informações.)
+- O segundo ou terceiro operando do operador condicional (`? :`). (Para obter mais informações, consulte [expressões com o operador condicional](conditional-operator-q.md).)
 
-A tabela a seguir explica as restrições de tamanhos de tipo. Essas restrições são independentes da implementação da Microsoft.
+A tabela a seguir explica as restrições de tamanhos de tipo em relação umas com as outras. Essas restrições são obrigatórias pelo C++ padrão e são independentes da implementação da Microsoft. O tamanho absoluto de determinados tipos internos não é especificado no padrão.
 
-### <a name="fundamental-types-of-the-c-language"></a>Tipos fundamentais da linguagem C++
+### <a name="built-in-type-size-restrictions"></a>Restrições de tamanho de tipo interno
 
 |Categoria|{1&gt;Tipo&lt;1}|Conteúdo|
 |--------------|----------|--------------|
@@ -82,9 +82,9 @@ A tabela a seguir explica as restrições de tamanhos de tipo. Essas restriçõe
 
 **Seção específica da Microsoft**
 
-A tabela a seguir lista a quantidade de armazenamento necessária para tipos fundamentais no Microsoft C++.
+A tabela a seguir lista a quantidade de armazenamento necessária para tipos internos no Microsoft C++. Em particular, observe que **Long** é de 4 bytes mesmo em sistemas operacionais de 64 bits.
 
-### <a name="sizes-of-fundamental-types"></a>Tamanhos de tipos fundamentais
+### <a name="sizes-of-built-in-types"></a>Tamanhos de tipos internos
 
 |{1&gt;Tipo&lt;1}|Tamanho|
 |----------|----------|
@@ -95,10 +95,10 @@ A tabela a seguir lista a quantidade de armazenamento necessária para tipos fun
 
 **Fim da seção específica da Microsoft**
 
-Consulte [intervalos de tipos de dados](../cpp/data-type-ranges.md) para obter um resumo do intervalo de valores de cada tipo.
+Consulte [intervalos de tipos de dados](data-type-ranges.md) para obter um resumo do intervalo de valores de cada tipo.
 
-Para obter mais informações sobre conversão de tipo, consulte [conversões padrão](../cpp/standard-conversions.md).
+Para obter mais informações sobre conversão de tipo, consulte [conversões padrão](standard-conversions.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Intervalos de tipos de dados](../cpp/data-type-ranges.md)
+[Intervalos de tipos de dados](data-type-ranges.md)

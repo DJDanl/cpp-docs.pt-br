@@ -1,24 +1,22 @@
 ---
-title: Declaração de uso
+title: usando declaração
 ms.date: 11/04/2016
 helpviewer_keywords:
 - using declaration
-- declaring namespaces, unqualified names in namespaces
 - declarations [C++], using-declaration
 - namespaces [C++], unqualified names in
 - using keyword [C++]
-- declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: 46d8b1e13b55988efd40643482ffd6123034ccb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a158094141307acb507d5f3e873c600e89135ad7
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403341"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301269"
 ---
-# <a name="using-declaration"></a>Declaração de uso
+# <a name="using-declaration"></a>usando declaração
 
-A declaração using introduz um nome na região declarativa em que a declaração using é exibida.
+A Declaração **using** apresenta um nome para a região declarativa na qual a declaração using é exibida.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,15 +27,15 @@ using declarator-list ;
 
 ### <a name="parameters"></a>Parâmetros
 
-*especificador aninhados de nome* uma sequência de namespace, classe, ou nomes de enumeração e operadores de resolução de escopo (:), terminada por um operador de resolução de escopo. Um operador de resolução de escopo único pode ser usado para introduzir um nome de namespace global. A palavra-chave **typename** é opcional e pode ser usado para resolver nomes dependentes quando introduzida em um modelo de classe de uma classe base.
+*especificador de nome aninhado* Uma sequência de nomes de namespace, classe ou enumeração e operadores de resolução de escopo (::), terminados por um operador de resolução de escopo. Um operador de resolução de escopo único pode ser usado para introduzir um nome do namespace global. O **TypeName** de palavra-chave é opcional e pode ser usado para resolver nomes dependentes quando introduzido em um modelo de classe de uma classe base.
 
-*não qualificado id* não qualificada id-expressão, que pode ser um identificador, um nome de operador sobrecarregado, um definidos pelo usuário literal operador ou conversão de nome de função, um nome de destruidor de classe ou uma lista de nome e o argumento de modelo.
+*ID não qualificada* Uma expressão de ID não qualificada, que pode ser um identificador, um nome de operador sobrecarregado, um operador literal definido pelo usuário ou um nome de função de conversão, um nome de destruidor de classe ou um nome de modelo e uma lista de argumentos.
 
-*lista de declaradores* uma lista separada por vírgulas de [**typename**] *especificador aninhados de nome* *não qualificados id* declaradores, seguidas opcionalmente por uma botão de reticências.
+*Declarador-lista* Uma lista separada por vírgulas de [**TypeName**]- *nome-especificador* - *ID não qualificado* declaradores, seguidos opcionalmente por uma elipse.
 
 ## <a name="remarks"></a>Comentários
 
-Uma declaração using introduz um nome não qualificado como um sinônimo para uma entidade declarada em outro lugar. Ele permite que um único nome de um namespace específico a ser usado sem qualificação explícita na região de declaração na qual ele aparece. Isso está em contraste com o [diretiva using](../cpp/namespaces-cpp.md#using_directives), que permite *todos os* os nomes em um namespace sejam usados sem qualificação. O **usando** palavra-chave também é usado para [aliases de tipo](../cpp/aliases-and-typedefs-cpp.md).
+Uma declaração using introduz um nome não qualificado como um sinônimo para uma entidade declarada em outro lugar. Ele permite que um único nome de um namespace específico seja usado sem qualificação explícita na região de declaração na qual ele aparece. Isso é diferente da [diretiva using](../cpp/namespaces-cpp.md#using_directives), que permite que *todos* os nomes em um namespace sejam usados sem qualificação. A palavra-chave **using** também é usada para [aliases de tipo](../cpp/aliases-and-typedefs-cpp.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -127,7 +125,7 @@ In B::f()
 
 ## <a name="example"></a>Exemplo
 
-Membros declarados usando uma declaração pode ser referenciada por meio de qualificação explícita. O prefixo `::` refere-se ao namespace global.
+Os membros declarados usando uma declaração using podem ser referenciados usando a qualificação explícita. O prefixo `::` refere-se ao namespace global.
 
 ```cpp
 // using_declaration3.cpp
@@ -169,7 +167,7 @@ In A::g
 
 Quando uma declaração using é feita, o sinônimo criado pela declaração se refere apenas às definições que são válidas no ponto da declaração using. As definições adicionadas a um namespace depois da declaração using são sinônimos inválidos.
 
-Um nome definido por uma **usando** declaração é um alias para seu nome original. Não afeta o tipo, a vinculação ou outros atributos da declaração original.
+Um nome definido por uma declaração **using** é um alias para seu nome original. Não afeta o tipo, a vinculação ou outros atributos da declaração original.
 
 ```cpp
 // post_declaration_namespace_additions.cpp
@@ -327,7 +325,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Namespaces](../cpp/namespaces-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

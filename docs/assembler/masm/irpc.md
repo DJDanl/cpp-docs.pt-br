@@ -1,17 +1,17 @@
 ---
 title: IRPC
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - IRPC
 helpviewer_keywords:
 - IRPC directive
 ms.assetid: 9f7d848c-fc5a-40e2-abf0-28db783e007d
-ms.openlocfilehash: 67b3385c823b360983051647fcce10e989f98a47
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 61b113b8708af0c2e12d82f820e428867ad3116c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397272"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317169"
 ---
 # <a name="irpc"></a>IRPC
 
@@ -21,8 +21,9 @@ ms.locfileid: "74397272"
 
 ## <a name="remarks"></a>Comentários
 
-Consulte [forçada](../../assembler/masm/forc.md).
+Consulte [forçada](forc.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de diretivas](directives-reference.md)
+[Referência de diretivas](directives-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

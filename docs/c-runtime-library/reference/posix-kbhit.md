@@ -1,6 +1,6 @@
 ---
 title: kbhit
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - kbhit
 api_location:
@@ -23,16 +23,18 @@ f1_keywords:
 helpviewer_keywords:
 - kbhit function
 ms.assetid: 73f1eed7-b3ef-4887-8ec6-755367de1d7d
-ms.openlocfilehash: ffdf73bc5511df2ebc6be34f8bbf4255641ba25b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 501b85e1184e2e10cc288f5e3dfb144ca2aff2a6
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950598"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300931"
 ---
 # <a name="kbhit"></a>kbhit
 
-Essa função POSIX foi preterida. Em vez disso, use [_kbhit](kbhit.md) compatível com ISO C++.
+O nome da função específica da Microsoft `kbhit` é um alias preterido para a função [_kbhit](kbhit.md) . Por padrão, ele gera o [aviso do compilador (nível 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). O nome é preterido porque não segue as regras padrão do C para nomes específicos da implementação. No entanto, a função ainda tem suporte.
+
+É recomendável usar [_kbhit](kbhit.md) em vez disso. Ou, você pode continuar a usar esse nome de função e desabilitar o aviso. Para obter mais informações, consulte desligar os nomes de [função](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [de aviso](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) e POSIX.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

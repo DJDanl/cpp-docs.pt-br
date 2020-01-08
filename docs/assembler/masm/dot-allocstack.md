@@ -1,17 +1,17 @@
 ---
 title: .ALLOCSTACK
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .ALLOCSTACK
 helpviewer_keywords:
 - .ALLOCSTACK directive
 ms.assetid: 9801594b-7ac2-4df2-a49d-07d9dd9af99e
-ms.openlocfilehash: 6d9d86371503992d1bebe738fb6e6773581b10e3
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: bcc94619dfa24ab5c8b5d23a60825641290ef176
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398623"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314179"
 ---
 # <a name="allocstack"></a>.ALLOCSTACK
 
@@ -25,11 +25,11 @@ Gera um **UWOP_ALLOC_SMALL** ou um **UWOP_ALLOC_LARGE** com o tamanho especifica
 
 MASM escolherá a codificação mais eficiente para um determinado tamanho.
 
-**. ALLOCSTACK** permite que os usuários de ml64. exe especifiquem como uma função de quadro desenrola e só é permitida dentro do prólogo, que se estende da declaração de quadro [proc](../../assembler/masm/proc.md) para o [. Diretiva endprólogo](../../assembler/masm/dot-endprolog.md) . Essas diretivas não geram código; Eles geram apenas `.xdata` e `.pdata`. **. ALLOCSTACK** deve ser precedido por instruções que realmente implementam as ações a serem rebobinadas. É uma boa prática encapsular as diretivas de desenrolamento e o código que elas devem desenrolar em uma macro para garantir o contrato.
+**. ALLOCSTACK** permite que os usuários de ml64. exe especifiquem como uma função de quadro desenrola e só é permitida dentro do prólogo, que se estende da declaração de quadro [proc](proc.md) para o [. Diretiva endprólogo](dot-endprolog.md) . Essas diretivas não geram código; Eles geram apenas `.xdata` e `.pdata`. **. ALLOCSTACK** deve ser precedido por instruções que realmente implementam as ações a serem rebobinadas. É uma boa prática encapsular as diretivas de desenrolamento e o código que elas devem desenrolar em uma macro para garantir o contrato.
 
 O operando de *tamanho* deve ser um múltiplo de 8.
 
-Para obter mais informações, consulte [MASM para x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Para obter mais informações, consulte [MASM para x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Amostra
 
@@ -63,6 +63,7 @@ text ENDS
 END
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)
+[Referência de diretivas](directives-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

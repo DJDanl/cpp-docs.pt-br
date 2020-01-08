@@ -1,20 +1,20 @@
 ---
 title: Referência de operadores MASM
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-ms.openlocfilehash: 5295307ad668b76e5ff39882ce2613f2042f914a
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: c0059ab1b0204b79e040d18bd5aa88145775ebcd
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395206"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318755"
 ---
 # <a name="masm-operators-reference"></a>Referência de operadores MASM
 
-## <a name="arithmetic"></a>Operações
+## <a name="arithmetic"></a>Aritmético
 
 ||||
 |-|-|-|
@@ -77,7 +77,7 @@ ms.locfileid: "74395206"
 |[DESLOCAMENTO (deslocamento relativo ao segmento)](operator-offset.md)|[SECTIONREL (deslocamento relativo da seção)](operator-sectionrel.md)|
 |[SEG (obter segmento)](operator-seg.md)||
 
-## <a name="type"></a>Tipo
+## <a name="type"></a>{1&gt;Tipo&lt;1}
 
 ||||
 |-|-|-|
@@ -88,6 +88,7 @@ ms.locfileid: "74395206"
 |[SIZEOF (tamanho do tipo ou variável)](operator-sizeof.md)|[ISSO (local atual)](operator-this.md)|[TYPE (obter tipo de expressão)](operator-type.md)|
 |[. TIPO (obter informações de tipo de argumento)](operator-dot-type.md)|||
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência do Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)<br/>
+[Referência do Microsoft macro assembler](microsoft-macro-assembler-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

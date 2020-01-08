@@ -1,6 +1,6 @@
 ---
 title: module, import e export
-ms.date: 07/15/2019
+ms.date: 12/12/2019
 f1_keywords:
 - module_cpp
 - import_cpp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - modules [C++]
 - modules [C++], import
 - modules [C++], export
-description: Use a instrução de importação para acessar tipos e funções definidos no módulo especificado.
-ms.openlocfilehash: ee1d50a76a3304359c0771aa0174968439f5faa4
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+description: Use declarações de importação e exportação para acessar e publicar tipos e funções definidas no módulo especificado.
+ms.openlocfilehash: ae28bce8e06840cafa5c92521f6e9a62aa5bfde6
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273620"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301451"
 ---
 # <a name="module-import-export"></a>module, import e export
 
-As palavras-chave **módulo**, **importar**e **Exportar** estão disponíveis no c++ 20 e exigem a opção de compilador [/experimental: module](../build/reference/experimental-module.md) juntamente com [/std: C + + mais recente](../build/reference/std-specify-language-standard-version.md). Para obter mais informações, consulte [visão geral dos C++módulos no ](modules-cpp.md).
+As declarações **módulo**, **importar**e **Exportar** estão disponíveis no c++ 20 e exigem a opção de compilador [/experimental: module](../build/reference/experimental-module.md) juntamente com [/std: C + + mais recente](../build/reference/std-specify-language-standard-version.md). Para obter mais informações, consulte [visão geral dos C++módulos no ](modules-cpp.md).
 
 ## <a name="module"></a>module
 
-Use a instrução **Module** no início de um arquivo de implementação de módulo para especificar que o conteúdo do arquivo pertence ao módulo nomeado. 
+Coloque uma declaração de **módulo** no início de um arquivo de implementação de módulo para especificar que o conteúdo do arquivo pertence ao módulo nomeado.
 
 ```cpp
 module ModuleA;
@@ -31,7 +31,7 @@ module ModuleA;
 
 ## <a name="export"></a>export
 
-Use a instrução **Export Module** para o arquivo de interface principal do módulo, que deve ter a extensão **. IXX**:
+Use uma declaração de **módulo de exportação** para o arquivo de interface principal do módulo, que deve ter a extensão **. IXX**:
 
 ```cpp
 export module ModuleA;
@@ -66,11 +66,11 @@ void main() {
 }
 ```
 
-A palavra-chave **Export** pode não aparecer em um arquivo de implementação de módulo. Quando o modificador de **exportação** é aplicado a um nome de namespace, todos os nomes no namespace são exportados.
+A palavra-chave **Export** pode não aparecer em um arquivo de implementação de módulo. Quando a **exportação** é aplicada a um nome de namespace, todos os nomes no namespace são exportados.
 
 ## <a name="import"></a>import
 
-Use a instrução de **importação** para tornar os nomes de um módulo visíveis em seu programa. A instrução import deve aparecer após a instrução Module e depois de qualquer #include diretivas, mas antes de qualquer declaração no arquivo.
+Use uma declaração de **importação** para tornar os nomes de um módulo visíveis em seu programa. A declaração de importação deve aparecer após a declaração de módulo e depois de qualquer #include diretivas, mas antes de qualquer declaração no arquivo.
 
 ```cpp
 module ModuleA;
@@ -86,6 +86,45 @@ class Baz
 {...};
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="remarks"></a>Comentários
+
+Tanto a **importação** quanto o **módulo** são tratados como palavras-chave somente quando aparecem no início de uma linha lógica:
+
+```cpp
+
+// OK:
+module ;
+module module-name
+import :
+import <
+import "
+import module-name
+export module ;
+export module module-name
+export import :
+export import <
+export import "
+export import module-name
+
+// Error:
+int i; module ;
+```
+
+**Seção específica da Microsoft**
+
+Na Microsoft C++, a **importação** e o **módulo** de tokens são sempre identificadores e nunca palavras-chave quando são usados como argumentos para uma macro.
+
+### <a name="example"></a>Exemplo
+
+```cpp
+#define foo(…) __VA_ARGS__
+foo(
+import // Always an identifier, never a keyword
+)
+```
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Veja também
 
 [Visão geral dos módulos noC++](modules-cpp.md)

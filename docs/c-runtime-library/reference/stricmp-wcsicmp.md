@@ -1,6 +1,6 @@
 ---
 title: stricmp, wcsicmp
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - stricmp
 - wcsicmp
@@ -26,13 +26,15 @@ helpviewer_keywords:
 - stricmp function
 - wcsicmp function
 ms.assetid: 2e3c6703-2635-4961-a253-e2c4c5029ed8
-ms.openlocfilehash: 8288aa8c9b631b9c4d5317fb13fdbbfcd9cad40a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d47249a3b41c76bf87ece8ed2e8a0fbbfc05ff09
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958121"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300502"
 ---
 # <a name="stricmp-wcsicmp"></a>stricmp, wcsicmp
 
-Essas funções POSIX foram preteridas. Ao invés disso, use ISO C++ compatível com [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md).
+Os nomes de função específicos da Microsoft `stricmp` e `wcsicmp` são aliases preteridos para as funções [_stricmp e _wcsicmp](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md) . Por padrão, eles geram o [aviso do compilador (nível 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Os nomes são preteridos porque não seguem as regras padrão do C para nomes específicos da implementação. No entanto, as funções ainda têm suporte.
+
+É recomendável usar [_stricmp ou _wcsicmp](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md) em vez disso. Ou, você pode continuar a usar esses nomes de função e desabilitar o aviso. Para obter mais informações, consulte desligar os nomes de [função](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [de aviso](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) e POSIX.

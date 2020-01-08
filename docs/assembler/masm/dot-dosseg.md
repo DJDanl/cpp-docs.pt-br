@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .DOSSEG directive
 ms.assetid: 175ad470-0a2b-4e2b-b078-65e224fec040
-ms.openlocfilehash: 17edea122afc03a8c3a2fdc86ee6c06c2ccf3c85
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: e27b0ae185542c11ee29119575d5c8225501f71e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398482"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313841"
 ---
 # <a name="dosseg-32-bit-masm"></a>. DOSSEG (MASM de 32 bits)
 
@@ -23,8 +23,9 @@ Ordena os segmentos de acordo com a Convenção de segmento do MS-DOS: CODE Firs
 
 ## <a name="remarks"></a>Comentários
 
-Os segmentos em DGROUP seguem esta ordem: segmentos que não estão em BSS ou pilha, segmentos de BSS e, por fim, segmentos de pilha. Usado principalmente para garantir o suporte do CodeView em programas autônomos do MASM. O mesmo que [DOSSEG](../../assembler/masm/dosseg.md).
+Os segmentos em DGROUP seguem esta ordem: segmentos que não estão em BSS ou pilha, segmentos de BSS e, por fim, segmentos de pilha. Usado principalmente para garantir o suporte do CodeView em programas autônomos do MASM. O mesmo que [DOSSEG](dosseg.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)
+[Referência de diretivas](directives-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

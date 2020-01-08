@@ -1,17 +1,17 @@
 ---
 title: .NOLIST
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .NOLIST
 helpviewer_keywords:
 - .NOLIST directive
 ms.assetid: 78f5cd18-7d2d-46ef-8325-11d6a501ee2d
-ms.openlocfilehash: d06945e431fce335fa7904e4cc7f452647db450f
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 777ed4bc06757f1b185c0496fd82ed44a797eef5
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398079"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317598"
 ---
 # <a name="nolist"></a>.NOLIST
 
@@ -23,8 +23,9 @@ Suprime a listagem de programas.
 
 ## <a name="remarks"></a>Comentários
 
-O mesmo que [. XLIST](../../assembler/masm/dot-xlist.md).
+O mesmo que [. XLIST](dot-xlist.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de diretivas](directives-reference.md)
+[Referência de diretivas](directives-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: bfc114a6e71c0eb0ae70005c2657871b6c9e9692
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 92f14a352e5c177d767232eed36a7e705fd155ce
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398105"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317624"
 ---
 # <a name="model-32-bit-masm"></a>. MODELO (MASM de 32 bits)
 
@@ -38,7 +38,7 @@ Especificar **NEARSTACK** agrupa o segmento de pilha em um único segmento físi
 
 ## <a name="remarks"></a>Comentários
 
-**. O modelo** não é usado em [MASM para x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**. O modelo** não é usado em [MASM para x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
 
 A tabela a seguir lista os possíveis valores para cada parâmetro ao direcionar plataformas de 16 bits e 32 bits:
 
@@ -86,6 +86,7 @@ fxn ENDP
 end
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)
+[Referência de diretivas](directives-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

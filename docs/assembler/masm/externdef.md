@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EXTERNDEF directive
 ms.assetid: 95a10de6-c345-4428-a2f2-90f7d411dc86
-ms.openlocfilehash: e757781151bd1bb57940e5c54f7333a5daa93c74
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2cc5884a7473da9175a6b6af4b4251314deffeb4
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987888"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313386"
 ---
 # <a name="externdef"></a>EXTERNDEF
 
@@ -25,8 +25,9 @@ Define uma ou mais variáveis, rótulos ou símbolos externos chamados *Name* cu
 
 O argumento de *tipo de idioma* é válido somente no MASM de 32 bits.
 
-Se o *nome* for definido no módulo, ele será tratado como [público](../../assembler/masm/public-masm.md). Se o *nome* for referenciado no módulo, ele será tratado como [externo](../../assembler/masm/extern-masm.md). Se o *nome* não for referenciado, ele será ignorado. O *tipo* pode ser [ABS](../../assembler/masm/operator-abs.md), que importa o *nome* como uma constante. Normalmente usado em arquivos de inclusão.
+Se o *nome* for definido no módulo, ele será tratado como [público](public-masm.md). Se o *nome* for referenciado no módulo, ele será tratado como [externo](extern-masm.md). Se o *nome* não for referenciado, ele será ignorado. O *tipo* pode ser [ABS](operator-abs.md), que importa o *nome* como uma constante. Normalmente usado em arquivos de inclusão.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)
+[Referência de diretivas](directives-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2099
 ms.assetid: 30e151ee-d458-4901-b0c0-d45054a913f5
-ms.openlocfilehash: 9c83b4a50cb9cf5c5b1992f0f64e2eeb013b48e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9fb7739111d13a585579455ed97cecaca3266e4
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376936"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301932"
 ---
 # <a name="compiler-error-c2099"></a>Erro do compilador C2099
 
 inicializador não é uma constante
 
-Esse erro é emitido apenas pelo compilador C e ocorre apenas para variáveis não automático.  O compilador a inicializa variáveis não automático ao início do programa e os valores que eles são inicializados com devem ser constantes.
+Esse erro é emitido somente pelo compilador C e ocorre apenas para variáveis não automáticas.  O compilador inicializa as variáveis não automáticas no início do programa e os valores que elas são inicializadas devem ser constantes.
 
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C2099.
 
-```
+```c
 // C2099.c
 int j;
 int *p;
@@ -32,9 +32,9 @@ j = *p;   // C2099 *p is not a constant
 
 ## <a name="example"></a>Exemplo
 
-C2099 também pode ocorrer porque o compilador não consegue realizar dobra constante em uma expressão em **/fp: strict** porque o ponto flutuante as configurações de ambiente de precisão (consulte [controlfp_s](../../c-runtime-library/reference/controlfp-s.md) para obter mais informações) podem diferir da compilação para o tempo de execução.
+C2099 também pode ocorrer porque o compilador não é capaz de executar o dobramento constante em uma expressão sob **/fp: strict** porque as configurações do ambiente de precisão de ponto flutuante (consulte [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md) para obter mais informações) podem ser diferentes da compilação para o tempo de execução.
 
-Quando a constante dobra falhar, o compilador invoca inicialização dinâmica, que não é permitida em C.
+Quando o dobramento de constante falha, o compilador invoca a inicialização dinâmica, o que não é permitido em C.
 
 Para resolver esse erro, compile o módulo como um arquivo. cpp ou Simplifique a expressão.
 
@@ -42,7 +42,7 @@ Para obter mais informações, consulte [/fp (especificar comportamento de ponto
 
 O exemplo a seguir gera C2099.
 
-```
+```c
 // C2099_2.c
 // compile with: /fp:strict /c
 float X = 2.0 - 1.0;   // C2099

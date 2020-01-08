@@ -1,6 +1,6 @@
 ---
 title: '&gt; de &lt;do operador'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - <>
 - operator <>
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - operator <>
 - <> operator
 ms.assetid: bc5acf43-df3e-499b-a3ed-1672cfa0d1ed
-ms.openlocfilehash: 07d0488c124975424767115fa0d3ce4da0e75efb
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 1ff41051bac8d93f3f95fc244cecd87694343b97
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396797"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311202"
 ---
 # <a name="operator-ltgt"></a>&gt; de &lt;do operador
 
@@ -23,6 +23,7 @@ Trata o *texto* como um único elemento literal.
 
 > __>__ de *texto* __\<__
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de operadores](operators-reference.md)
+\ de [referência de operadores](operators-reference.md)
+[MASM BNF Grammar](masm-bnf-grammar.md)

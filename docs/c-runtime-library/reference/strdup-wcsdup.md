@@ -1,6 +1,6 @@
 ---
 title: strdup, wcsdup
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - wcsdup
 - strdup
@@ -26,13 +26,15 @@ helpviewer_keywords:
 - wcsdup function
 - strdup function
 ms.assetid: c9ac0935-b525-4e95-8a64-396fc7e34ee9
-ms.openlocfilehash: ec62ba2d561d214a285caeb120eb2dd12935f792
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e381a1933a6b657108a66053bad1c7ff795c1a29
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958165"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300515"
 ---
 # <a name="strdup-wcsdup"></a>strdup, wcsdup
 
-Essas funções POSIX foram preteridas. Use [strdup, wcsdup, mbsdup](strdup-wcsdup-mbsdup.md) compatíveis com ISO C++ em vez disso.
+Os nomes de função POSIX implementados pela Microsoft `strdup` e `wcsdup` são aliases preteridos para as funções [_strdup e _wcsdup](strdup-wcsdup-mbsdup.md) . Por padrão, eles geram o [aviso do compilador (nível 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Os nomes são preteridos porque não seguem as regras padrão do C para nomes específicos da implementação. No entanto, as funções ainda têm suporte.
+
+É recomendável usar [_strdup e _wcsdup](strdup-wcsdup-mbsdup.md) em vez disso. Ou, você pode continuar a usar esses nomes de função e desabilitar o aviso. Para obter mais informações, consulte desligar os nomes de [função](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [de aviso](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) e POSIX.

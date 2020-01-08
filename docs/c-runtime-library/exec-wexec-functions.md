@@ -56,12 +56,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: f4bef0ef4f3cad0411f6da54ce5e2d8883913754
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dab670c5baef1c51c39a4c936380fab92c5103cc
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940357"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300294"
 ---
 # <a name="_exec-_wexec-functions"></a>Funções _exec, _wexec
 
@@ -118,7 +118,7 @@ As chamadas `_execl`, `_execle`, `_execlp` e `_execlpe` costumam ser usadas quan
 
 As chamadas `_execv`, `_execve`, `_execvp` e `_execvpe` são úteis quando o número de parâmetros para o novo processo é variável. Os ponteiros para os parâmetros são passados como uma matriz, `argv`. O parâmetro `argv`[0] costuma ser um ponteiro para `cmdname`. Os parâmetros de `argv`[1] até `argv`[`n`] apontam para as cadeias de caracteres que formam a nova lista de parâmetros. O parâmetro `argv`[`n`+1] deve ser um ponteiro **NULL** para marcar o final da lista de parâmetros.
 
-Os arquivos abertos quando uma chamada `_exec` é feita continuam abertos no novo processo. Nas chamadas `_execl`, `_execlp`, `_execv` e `_execvp`, o novo processo herda o ambiente do processo de chamada. Chamadas `_execle`, `_execlpe`, `_execve` e `_execvpe` alteram o ambiente para o novo processo passando uma lista de configurações de ambiente por meio do parâmetro `envp`. `envp` é uma matriz de ponteiros de caractere e cada elemento (exceto o elemento final) aponta para uma cadeia de caracteres encerrada nula que define uma variável de ambiente. Normalmente, uma cadeia de caracteres assim tem a forma `NAME`=`value`, em que `NAME` é o nome de uma variável de ambiente e `value` é o valor da cadeia de caracteres cuja variável está definida. (Observe que o `value` não está entre aspas duplas.) O elemento final da matriz `envp` deve ser **NULL**. Quando o próprio `envp` é **NULL**, o novo processo herda as configurações de ambiente do processo de chamada.
+Os arquivos abertos quando uma chamada `_exec` é feita continuam abertos no novo processo. Nas chamadas `_execl`, `_execlp`, `_execv` e `_execvp`, o novo processo herda o ambiente do processo de chamada. Chamadas `_execle`, `_execlpe`, `_execve` e `_execvpe` alteram o ambiente para o novo processo passando uma lista de configurações de ambiente por meio do parâmetro `envp`. `envp` é uma matriz de ponteiros de caractere e cada elemento (exceto o elemento final) aponta para uma cadeia de caracteres encerrada nula que define uma variável de ambiente. Normalmente, uma cadeia de caracteres assim tem a forma `NAME`=`value`, em que `NAME` é o nome de uma variável de ambiente e `value` é o valor da cadeia de caracteres cuja variável está definida. (Observe que `value` não está entre aspas duplas.) O elemento final da matriz de `envp` deve ser **nulo**. Quando o próprio `envp` é **NULL**, o novo processo herda as configurações de ambiente do processo de chamada.
 
 Um programa executado com uma das funções `_exec` é sempre carregado na memória como se o campo de alocação máximo no cabeçalho do arquivo .exe do programa estivesse definido com o valor padrão de 0xFFFFH.
 
@@ -126,7 +126,7 @@ As chamadas `_exec` não preservam os modos de conversão de arquivos abertos. S
 
 ## <a name="example"></a>Exemplo
 
-```
+```c
 // crt_args.c
 // Illustrates the following variables used for accessing
 // command-line arguments and environment variables:
@@ -157,7 +157,7 @@ char **envp )       // Array of environment variable strings
 
 Execute o seguinte programa para executar Crt_args.exe:
 
-```
+```c
 // crt_exec.c
 // Illustrates the different versions of exec, including
 //      _execl          _execle          _execlp          _execlpe
@@ -232,11 +232,11 @@ int main( int ac, char* av[] )
 }
 ```
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 **Header:** process.h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Controle de processo e de ambiente](../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](../c-runtime-library/reference/abort.md)<br/>

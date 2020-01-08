@@ -20,12 +20,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: ecc01362bdc14af32df5093ad1ac1ee606026d8f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 331d43f3e3a88786f8dac0a6f609f988beea9dbb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940372"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300295"
 ---
 # <a name="filename-search-functions"></a>Funções de pesquisa de nome de arquivo
 
@@ -108,7 +108,7 @@ As funções `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64` e `_wfindne
 
 ## <a name="example"></a>Exemplo
 
-```
+```c
 // crt_find.c
 // This program uses the 32-bit _find functions to print
 // a list of all files (and their attributes) with a .C extension
@@ -156,6 +156,6 @@ N   N   N   Y   blah.c       Wed Feb 13 09:21:42 2002       1715
 N   N   N   Y   test.c       Wed Feb 06 14:30:44 2002        312
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Chamadas do sistema](../c-runtime-library/system-calls.md)

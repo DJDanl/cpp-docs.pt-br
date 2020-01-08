@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
-ms.openlocfilehash: 93e7c891b1c964eca5b3ff7fd15956ef25ea05e6
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 0ea02806cae3295af0846baa6c4e9049d54c271b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987946"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315167"
 ---
 # <a name="comm"></a>COMM
 
@@ -31,7 +31,7 @@ Cada *definição* tem o seguinte formato:
 
 Os argumentos de *tipo de idioma*, **próximo**e **distante** são válidos somente em MASM de 32 bits.
 
-O *tipo de idioma* opcional define as convenções de nomenclatura para o nome que segue. Ele substitui qualquer idioma especificado pelo **.** Diretiva de modelo. O opcional **próximo** ou **longe** substitui o modelo de memória atual. O *rótulo* é o nome da variável. O *tipo* pode ser qualquer especificador de tipo ([byte](../../assembler/masm/byte-masm.md), [Word](../../assembler/masm/word.md)e assim por diante) ou um inteiro especificando o número de bytes. A *contagem* opcional especifica o número de elementos no objeto de dados declarado. A *contagem* padrão é um.
+O *tipo de idioma* opcional define as convenções de nomenclatura para o nome que segue. Ele substitui qualquer idioma especificado pelo **.** Diretiva de modelo. O opcional **próximo** ou **longe** substitui o modelo de memória atual. O *rótulo* é o nome da variável. O *tipo* pode ser qualquer especificador de tipo ([byte](byte-masm.md), [Word](word.md)e assim por diante) ou um inteiro especificando o número de bytes. A *contagem* opcional especifica o número de elementos no objeto de dados declarado. A *contagem* padrão é um.
 
 ## <a name="example"></a>Exemplo
 
@@ -41,6 +41,7 @@ Este exemplo cria uma matriz de elementos de 512 bytes:
 COMM FAR ByteArray:BYTE:512
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de diretivas](directives-reference.md)
+[Referência de diretivas](directives-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

@@ -1,25 +1,25 @@
 ---
 title: Erro não fatal A2054 (ML)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A2054
 helpviewer_keywords:
 - A2054
 ms.assetid: 878a2ced-0b88-49e5-bea5-0a014efb08b6
-ms.openlocfilehash: aaca79c69bfda41e234d44abd3ddc24376af6ffe
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6a6c4312b3a3c19644b95556b6ef44ec898ccc9e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856558"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316961"
 ---
 # <a name="ml-nonfatal-error-a2054"></a>Erro não fatal A2054 (ML)
 
 **erro forçado: valor diferente de 0**
 
-A diretiva de erro condicional [. ERRNZ](../../assembler/masm/dot-errnz.md) foi usado para gerar esse erro.
+A diretiva de erro condicional [. ERRNZ](dot-errnz.md) foi usado para gerar esse erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Mensagens de erro de ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Mensagens de erro de ML](ml-error-messages.md)

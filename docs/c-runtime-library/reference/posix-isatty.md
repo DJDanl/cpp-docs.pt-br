@@ -1,6 +1,6 @@
 ---
 title: isatty
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - isatty
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - isatty function
 ms.assetid: 610d0b09-a1db-41ef-9f45-a2c6076b4683
-ms.openlocfilehash: 9fc9014ab24248dfb06973f71bb4bf97e2ab4abd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c42d68ae6471ae992783b7869e554448f0934289
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950645"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300944"
 ---
 # <a name="isatty"></a>isatty
 
-Essa função POSIX foi preterida. Em vez disso, use [_isatty](isatty.md) compatível com ISO C++.
+O nome da função POSIX implementada pela Microsoft `isatty` é um alias preterido para a função [_isatty](isatty.md) . Por padrão, ele gera o [aviso do compilador (nível 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). O nome é preterido porque não segue as regras padrão do C para nomes específicos da implementação. No entanto, a função ainda tem suporte.
+
+É recomendável usar [_isatty](isatty.md) em vez disso. Ou, você pode continuar a usar esse nome de função e desabilitar o aviso. Para obter mais informações, consulte desligar os nomes de [função](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [de aviso](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) e POSIX.

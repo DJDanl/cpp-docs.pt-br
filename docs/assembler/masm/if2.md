@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IF2 directive
 - IF2 directive
 ms.assetid: a0f75564-b51b-4e39-ad3b-f7421e7ecad6
-ms.openlocfilehash: f1b5126d9294c229d773acd29af463164bb46536
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 60f8b0dcedb61ac06de929aff300845e342d7cfc
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397441"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317312"
 ---
 # <a name="if1-and-if2"></a>IF1 e IF2
 
@@ -29,7 +29,7 @@ O bloco **IF2** será avaliado em cada passagem de assembly se a **opção: SETI
 
 ## <a name="remarks"></a>Comentários
 
-Confira [se](../../assembler/masm/if-masm.md) para obter a sintaxe completa.
+Confira [se](if-masm.md) para obter a sintaxe completa.
 
 Diferentemente da versão 5,1, MASM 6,1 e acima fazem a maior parte de seu trabalho em sua primeira passagem e, em seguida, executa quantas etapas subsequentes forem necessárias. Por outro lado, o MASM 5,1 sempre se reúne em duas passagens de origem. Como resultado, talvez seja necessário revisar ou excluir algumas construções dependentes de Pass em MASM 6,1 e superior.
 
@@ -43,6 +43,7 @@ Para garantir a compatibilidade, MASM 6,1 e superior dão suporte a diretivas 5,
 
 MASM 6,1 e acima lidam com as construções de primeira passagem de forma diferente. Ele trata o **. Diretiva ERR1** como **. ERR**e a diretiva **IF1** como **If**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de diretivas](directives-reference.md)
+[Referência de diretivas](directives-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

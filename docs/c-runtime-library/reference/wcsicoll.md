@@ -1,6 +1,6 @@
 ---
 title: wcsicoll
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - wcsicoll
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - wcsicoll function
 ms.assetid: d049022d-cf60-467f-842b-9a508d9aeaff
-ms.openlocfilehash: 42325998612ae7375fd84fad6ca471eee4dabf3b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 37a2ded6e6c28bb850dbdb225a8c64fc613f86d5
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945069"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301724"
 ---
 # <a name="wcsicoll"></a>wcsicoll
 
-Essa função POSIX foi preterida. Use a [_wcsicoll](stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md) compatível com ISO C++ em vez disso.
+O nome da função específica da Microsoft `wcsicoll` é um alias preterido para a função [_wcsicoll](stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md) . Por padrão, ele gera o [aviso do compilador (nível 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). O nome é preterido porque não segue as regras padrão do C para nomes específicos da implementação. No entanto, a função ainda tem suporte.
+
+É recomendável usar [_wcsicoll](stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md) em vez disso. Ou, você pode continuar a usar esse nome de função e desabilitar o aviso. Para obter mais informações, consulte desligar os nomes de [função](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [de aviso](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) e POSIX.

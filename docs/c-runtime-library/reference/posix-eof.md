@@ -1,6 +1,6 @@
 ---
 title: eof
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - eof
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - eof function
 ms.assetid: 2e8fb55b-b736-46a6-be5e-15f8876a714f
-ms.openlocfilehash: e8dd9b9e86b9e0c4204462467ebc6db8be4b5336
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 40f0d17fd1acdd7b2f716a96acf121a837dc8153
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950806"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300983"
 ---
 # <a name="eof"></a>eof
 
-Essa função POSIX foi preterida. Em vez disso, use [_eof](eof.md) compatível com ISO C++.
+O nome da função específica da Microsoft `eof` é um alias preterido para a função [_eof](eof.md) . Por padrão, ele gera o [aviso do compilador (nível 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). O nome é preterido porque não segue as regras padrão do C para nomes específicos da implementação. No entanto, a função ainda tem suporte.
+
+É recomendável usar [_eof](eof.md) em vez disso. Ou, você pode continuar a usar esse nome de função e desabilitar o aviso. Para obter mais informações, consulte desligar os nomes de [função](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [de aviso](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) e POSIX.

@@ -1,6 +1,6 @@
 ---
-title: locking
-ms.date: 11/04/2016
+title: bloqueio
+ms.date: 12/16/2019
 api_name:
 - locking
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - locking function
 ms.assetid: 1db15308-543e-44cf-a26f-5539f8e4fb2f
-ms.openlocfilehash: 94149cedd1fabff9387398532dfba52cfdc62b73
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a573789ba3b836a39683e2f0f6c96cd36530adc5
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950531"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300911"
 ---
-# <a name="locking"></a>locking
+# <a name="locking"></a>bloqueio
 
-Essa função POSIX foi preterida. Em vez disso, use [_locking](locking.md) compatível com ISO C++.
+O nome da função específica da Microsoft `locking` é um alias preterido para a função [_locking](locking.md) . Por padrão, ele gera o [aviso do compilador (nível 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). O nome é preterido porque não segue as regras padrão do C para nomes específicos da implementação. No entanto, a função ainda tem suporte.
+
+É recomendável usar [_locking](locking.md) em vez disso. Ou, você pode continuar a usar esse nome de função e desabilitar o aviso. Para obter mais informações, consulte desligar os nomes de [função](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [de aviso](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) e POSIX.

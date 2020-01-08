@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2190
 ms.assetid: 34e15f85-d979-4948-80fc-46c414508a70
-ms.openlocfilehash: b52797b945b1a652506b4a85171e60a91544bbf0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 027c7f49b361ef3aa06a4d74e10f0ff27331b4a9
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282823"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301880"
 ---
 # <a name="compiler-error-c2190"></a>Erro do compilador C2190
 
-primeira lista de parâmetros mais de um segundo
+primeira lista de parâmetros mais longa que a segunda
 
 Uma função C foi declarada uma segunda vez com uma lista de parâmetros mais curta. C não oferece suporte a funções sobrecarregadas.
 
 O exemplo a seguir gera C2190:
 
-```
+```c
 // C2190.c
 // compile with: /Za /c
 void func( int, float );

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3010
 ms.assetid: e959d038-bba6-432a-9c0a-0470474de7d9
-ms.openlocfilehash: c5f0d33632cb155b8365c8de421fa5eaf91421c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbce65840280d3171ea84638b968686fa65633be
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350329"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302244"
 ---
 # <a name="compiler-error-c3010"></a>Erro do compilador C3010
 
-'Rótulo': salto para fora do bloco estruturado de OpenMP não permitido
+' label ': salto para fora do bloco estruturado de OpenMP não permitido
 
-Código não é possível saltar para dentro ou fora de um bloco de OpenMP.
+O código não pode saltar para dentro ou para fora de um bloco de OpenMP.
 
 O exemplo a seguir gera C3010:
 
-```
+```c
 // C3010.c
 // compile with: /openmp
 int main() {

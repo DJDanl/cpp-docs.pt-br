@@ -1,6 +1,6 @@
 ---
-title: read
-ms.date: 11/04/2016
+title: '{1&gt;read&lt;1}'
+ms.date: 12/16/2019
 api_name:
 - read
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - read function
 ms.assetid: 9e0eead4-d38c-4f65-87f5-f6c12da40ead
-ms.openlocfilehash: 290274fa2385db13025cabf5948a3692f372505f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 881a6b6c3592a169fffbfb42e05567e362376ee4
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950471"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300853"
 ---
-# <a name="read"></a>read
+# <a name="read"></a>{1&gt;read&lt;1}
 
-Essa função POSIX foi preterida. Em vez disso, use [_read](read.md) compatível com ISO C++.
+O nome da função POSIX implementada pela Microsoft `read` é um alias preterido para a função [_read](read.md) . Por padrão, ele gera o [aviso do compilador (nível 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). O nome é preterido porque não segue as regras padrão do C para nomes específicos da implementação. No entanto, a função ainda tem suporte.
+
+É recomendável usar [_read](read.md) em vez disso. Ou, você pode continuar a usar esse nome de função e desabilitar o aviso. Para obter mais informações, consulte desligar os nomes de [função](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [de aviso](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) e POSIX.

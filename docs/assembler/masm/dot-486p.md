@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .486P directive
 ms.assetid: ad1ff7a8-18e8-47cd-8e3b-dfd57a0ca370
-ms.openlocfilehash: 5af95920e652bc48df7960dc2c1e984491f8151f
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 323b6ca6f288d04d2a353f53b8dacc50795e4ab7
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398679"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314569"
 ---
 # <a name="486p-32-bit-masm"></a>.486P (MASM de 32 bits)
 
@@ -21,6 +21,7 @@ Habilita o assembly de todas as instruções (incluindo privilégios) para o pro
 
 > **.486P**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)
+[Referência de diretivas](directives-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

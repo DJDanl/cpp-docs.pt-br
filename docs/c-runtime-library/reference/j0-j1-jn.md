@@ -1,6 +1,6 @@
 ---
 title: j0, j1, jn
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - jn
 - j0
@@ -29,13 +29,15 @@ helpviewer_keywords:
 - j1 function
 - j0 function
 ms.assetid: ec8a9512-aacb-423c-a845-fc8927e6e21d
-ms.openlocfilehash: 6737c1f4cc69ab4f66fb145ea76a814bf9ff1662
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a3dc02c1e85a57be119899a962d284d923cb42d8
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953525"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299228"
 ---
 # <a name="j0-j1-jn"></a>j0, j1, jn
 
-Essas funções POSIX foram preteridas. Em vez disso, use [_j0, _j1, _jn](bessel-functions-j0-j1-jn-y0-y1-yn.md) compatível com ISO C++.
+Os nomes de função POSIX implementados pela Microsoft `j0`, `j1`e `jn` são aliases preteridos para as funções [_j0, _j1 e _jn](bessel-functions-j0-j1-jn-y0-y1-yn.md) . Por padrão, eles geram o [aviso do compilador (nível 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Os nomes são preteridos porque não seguem as regras padrão do C para nomes específicos da implementação. No entanto, as funções ainda têm suporte.
+
+É recomendável usar [_j0, _j1 e _jn](bessel-functions-j0-j1-jn-y0-y1-yn.md) em vez disso. Ou, você pode continuar a usar esses nomes de função e desabilitar o aviso. Para obter mais informações, consulte desligar os nomes de [função](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [de aviso](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) e POSIX.

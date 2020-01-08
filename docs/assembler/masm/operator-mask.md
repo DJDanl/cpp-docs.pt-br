@@ -1,6 +1,6 @@
 ---
 title: operador MASK
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator MASK
 - MASK
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MASK operator
 - operator MASK
 ms.assetid: bf997f99-17c8-4230-ab69-7a9774a75d93
-ms.openlocfilehash: 0ce068350ef21ce3fd03003c19ae4f2bf313c986
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 064022b3fb49a498a8ab7f8513b89d4c9964e346
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396635"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317845"
 ---
 # <a name="operator-mask"></a>operador MASK
 
@@ -23,6 +23,7 @@ Retorna uma máscara de bits na qual os bits em *recordfieldname* ou *registro* 
 
 > **Mask** {*recordfieldname* | *registro*}
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de operadores](operators-reference.md)
+\ de [referência de operadores](operators-reference.md)
+[MASM BNF Grammar](masm-bnf-grammar.md)

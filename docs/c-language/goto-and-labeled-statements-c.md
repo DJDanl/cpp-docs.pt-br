@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-ms.openlocfilehash: b23e7e6310ba4ed968e2eac8e6d07d81ee4e79ba
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: b5e0d602332c87510b1fe5f59db3e497b88f0acb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151941"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299111"
 ---
 # <a name="goto-and-labeled-statements-c"></a>Instruções goto e identificadas (C)
 
@@ -26,10 +26,10 @@ A instrução `goto` transfere o controle para um rótulo. O rótulo fornecido d
 &nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
 
 *jump-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**
+&nbsp;&nbsp;&nbsp;&nbsp;o identificador **goto** **;**
 
 *labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **:**  *statement*
+&nbsp;&nbsp;&nbsp;*identificador*de &nbsp; **:** *instrução*
 
 O rótulo de uma instrução é significante somente para uma instrução `goto`; em qualquer outro contexto, uma instrução rotulada é executada sem considerar o rótulo.
 
@@ -39,7 +39,7 @@ Um elemento *jump-statement* deve residir na mesma função e pode aparecer ante
 
 Este exemplo demonstra a instrução `goto`:
 
-```
+```c
 // goto.c
 #include <stdio.h>
 
@@ -67,6 +67,6 @@ int main()
 
 Neste exemplo, uma instrução `goto` transfere o controle para o ponto rotulado `stop` quando o valor de `i` é igual a 5.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Instruções](../c-language/statements-c.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .SEQ directive
 ms.assetid: 1f8bca31-e29d-4537-b9ca-f8463af75281
-ms.openlocfilehash: 545252885edef6ff83fca85366b2714211f96fc5
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 2d495074a6b5c151d3f949c524bc77edc1dc35bb
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397936"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317533"
 ---
 # <a name="seq-32-bit-masm"></a>. SEQ (MASM de 32 bits)
 
@@ -21,6 +21,7 @@ Ordena os segmentos sequencialmente (a ordem padrão). (somente MASM de 32 bits.
 
 > **.SEQ**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de diretivas](directives-reference.md)
+[Referência de diretivas](directives-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

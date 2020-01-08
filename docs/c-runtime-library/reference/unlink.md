@@ -1,6 +1,6 @@
 ---
 title: unlink
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - unlink
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - unlink function
 ms.assetid: 2cd82055-5770-48be-88ee-4b2c70541c46
-ms.openlocfilehash: 8c2bf5638132af4743dcd37bceb228730749cce3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5d8251c77a3c4d16ec6328c1c8e6d73d935db139
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945755"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301035"
 ---
 # <a name="unlink"></a>unlink
 
-Essa função POSIX foi preterida. Em vez disso, use [_unlink](unlink-wunlink.md) compatível com ISO C++.
+O nome da função POSIX implementada pela Microsoft `unlink` é um alias preterido para a função [_unlink](unlink-wunlink.md) . Por padrão, ele gera o [aviso do compilador (nível 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). O nome é preterido porque não segue as regras padrão do C para nomes específicos da implementação. No entanto, a função ainda tem suporte.
+
+É recomendável usar [_unlink](unlink-wunlink.md) em vez disso. Ou, você pode continuar a usar esse nome de função e desabilitar o aviso. Para obter mais informações, consulte desligar os nomes de [função](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [de aviso](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) e POSIX.

@@ -6,30 +6,30 @@ helpviewer_keywords:
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-ms.openlocfilehash: 387b2f4a7156e42e59bd70c5a6f747943fb54ca7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 373ce9fa2c2c96fac349940076873a4a637a9dbe
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313578"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298708"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Por que números de ponto flutuante podem perder a precisão
 
-Valores decimais de ponto flutuantes geralmente não têm uma representação binária exata. Isso é um efeito colateral de como a CPU representa dados de ponto flutuante. Por esse motivo, você pode enfrentar alguma perda de precisão e algumas operações de ponto flutuantes podem produzir resultados inesperados.
+Valores decimais de ponto flutuante geralmente não têm uma representação binária exata. Esse é um efeito colateral de como a CPU representa dados de ponto flutuante. Por esse motivo, você pode experimentar alguma perda de precisão e algumas operações de ponto flutuante podem produzir resultados inesperados.
 
-Esse comportamento é o resultado de uma das seguintes opções:
+Esse comportamento é o resultado de um dos seguintes:
 
 - A representação binária do número decimal pode não ser exata.
 
-- Há uma incompatibilidade de tipo entre os números usados (por exemplo, mixagem float e double).
+- Há uma incompatibilidade de tipos entre os números usados (por exemplo, a combinação de float e Double).
 
-Para resolver o comportamento, a maioria dos programadores, certifique-se de que o valor é maior ou menor que o que é necessária, ou eles obterem e usam uma biblioteca de Binary Coded Decimal (BCD) que manterá a precisão.
+Para resolver o comportamento, a maioria dos programadores garante que o valor seja maior ou menor do que o necessário, ou que eles obtenham e usem uma biblioteca de BCD codificado em binários que manterá a precisão.
 
-Representação binária de valores de ponto flutuante afeta a precisão e a precisão dos cálculos de ponto flutuante. Usa o Microsoft Visual C++ [formato de ponto flutuante IEEE](ieee-floating-point-representation.md).
+A representação binária de valores de ponto flutuante afeta a precisão e a precisão dos cálculos de ponto flutuante. O Microsoft C++ visual usa o [formato de ponto flutuante IEEE](ieee-floating-point-representation.md).
 
 ## <a name="example"></a>Exemplo
 
-```
+```c
 // Floating-point_number_precision.c
 // Compile options needed: none. Value of c is printed with a decimal
 // point precision of 10 and 6 (printf rounded value by default) to
@@ -58,10 +58,10 @@ int main() {
 They are not equal! The value of c is  2.4679999352 or 2.468000
 ```
 
-## <a name="comments"></a>Comentários
+## <a name="comments"></a>Comments
 
-Para ÉPSILON, você pode usar as constantes FLT_EPSILON, que é definido para ponto flutuante como 1.192092896e-07F, ou DBL_EPSILON, que é definido para dupla como 2.2204460492503131e-016. Você precisa incluir float. h para constantes. Essas constantes são definidas como positivo o menor número x, tal que x + 1,0 não é igual a 1,0. Como esse é um número muito pequeno, você deve empregar tolerância definida pelo usuário para cálculos que envolvem números muito grandes.
+Para épsilon, você pode usar as constantes FLT_EPSILON, que são definidas para float como 1.192092896 e-07F, ou DBL_EPSILON, que é definido para Double como 2.2204460492503131 e-016. Você precisa incluir float. h para essas constantes. Essas constantes são definidas como o menor número positivo x, de modo que x + 1.0 não seja igual a 1,0. Como esse é um número muito pequeno, você deve empregar a tolerância definida pelo usuário para cálculos que envolvem números muito grandes.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Otimizando seu código](optimizing-your-code.md)

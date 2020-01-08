@@ -1,17 +1,17 @@
 ---
 title: $
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - $
 helpviewer_keywords:
 - $ symbol
 ms.assetid: c9c36297-0dc2-4d41-b071-a22d8f4a47bb
-ms.openlocfilehash: f323f460c03fd2819cca95a14938e462aa933f5e
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: aa19dfb895ae01b33c26e1ccc87e68445249e42c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398763"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314699"
 ---
 # <a name=""></a>$
 
@@ -21,6 +21,7 @@ O valor atual do contador de localização.
 
 > **$**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de símbolos](../../assembler/masm/symbols-reference.md)
+[Referência de símbolos](symbols-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

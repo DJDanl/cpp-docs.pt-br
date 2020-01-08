@@ -1,22 +1,22 @@
 ---
 title: Classe alignment_of
-ms.date: 11/04/2016
+ms.date: 12/11/2019
 f1_keywords:
 - type_traits/std::alignment_of
 helpviewer_keywords:
 - alignment_of class
 - alignment_of
 ms.assetid: 4141c59a-f94e-41c4-93fd-9ea578b27387
-ms.openlocfilehash: 5222e70965db69d33ec62039bf9013a52d145705
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d241848edf57fe4876c35e22f1762abf5d6888fa
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456446"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302309"
 ---
-# <a name="alignmentof-class"></a>Classe alignment_of
+# <a name="alignment_of-class"></a>Classe alignment_of
 
-Obtém o alinhamento do tipo especificado. Este struct é implementado em termos de [alignof](../cpp/alignof-and-alignas-cpp.md). Use `alignof` diretamente quando você apenas precisar consultar um valor de alinhamento. Use alignment_of quando precisar de uma constante integral, por exemplo, ao fazer expedição de marcação.
+Obtém o alinhamento do tipo especificado. Este struct é implementado em termos de [alignof](../cpp/alignment-cpp-declarations.md). Use **alignof** diretamente quando precisar consultar apenas um valor de alinhamento. Use alignment_of quando precisar de uma constante integral, por exemplo, ao fazer expedição de marcação.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,13 +34,13 @@ O tipo a ser consultado.
 
 A consulta de tipo contém o valor do alinhamento do tipo *Ty*.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
-**Cabeçalho:** \<type_traits>
+**Cabeçalho:** \<type_traits >
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe aligned_storage](../standard-library/aligned-storage-class.md)

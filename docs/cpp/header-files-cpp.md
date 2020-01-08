@@ -1,18 +1,18 @@
 ---
 title: Arquivos de cabeçalhoC++()
-ms.date: 04/20/2018
+ms.date: 12/11/2019
 helpviewer_keywords:
 - header files [C++]
-ms.openlocfilehash: 98d37944f8c037f3ba25d80c7d35b3560ad11d40
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: ca5036ee53372f44e53b5a6452d4ab220fc3977d
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980482"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301477"
 ---
 # <a name="header-files-c"></a>Arquivos de cabeçalhoC++()
 
-Os nomes dos elementos do programa, como variáveis, funções, classes e assim por diante, devem ser declarados antes que possam ser usados. Por exemplo, você não pode apenas `x = 42` escrever sem primeiro declarar ' x '.
+Os nomes dos elementos do programa, como variáveis, funções, classes e assim por diante, devem ser declarados antes que possam ser usados. Por exemplo, você não pode apenas escrever `x = 42` sem primeiro declarar ' x '.
 
 ```cpp
 int x; // declaration
@@ -23,9 +23,12 @@ A declaração informa ao compilador se o elemento é um **int**, um **Double**,
 
 Para minimizar o potencial de erros, C++ o adotou a Convenção de uso de *arquivos de cabeçalho* para conter declarações. Você faz as declarações em um arquivo de cabeçalho e, em seguida, usa a diretiva #include em cada arquivo. cpp ou outro arquivo de cabeçalho que requer essa declaração. A diretiva #include insere uma cópia do arquivo de cabeçalho diretamente no arquivo. cpp antes da compilação.
 
+> [!NOTE]
+> No Visual Studio 2019, o recurso de *módulos* do c++ 20 é apresentado como uma melhoria e substituição eventual para arquivos de cabeçalho. Para obter mais informações, consulte [visão geral dos C++módulos no ](modules-cpp.md).
+
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra uma maneira comum de declarar uma classe e, em seguida, usá-la em um arquivo de origem diferente. Vamos começar com o arquivo de cabeçalho, `my_class.h`. Ele contém uma definição de classe, mas observe que a definição está incompleta; a função `do_something` de membro não está definida:
+O exemplo a seguir mostra uma maneira comum de declarar uma classe e, em seguida, usá-la em um arquivo de origem diferente. Vamos começar com o arquivo de cabeçalho, `my_class.h`. Ele contém uma definição de classe, mas observe que a definição está incompleta; a função de membro `do_something` não está definida:
 
 ```cpp
 // my_class.h
@@ -40,7 +43,7 @@ namespace N
 }
 ```
 
-Em seguida, crie um arquivo de implementação (normalmente com uma extensão. cpp ou semelhante). Vamos chamar o arquivo my_class. cpp e fornecer uma definição para a declaração de membro. Adicionamos uma `#include` diretiva para o arquivo "my_class. h" para que a declaração my_class seja inserida neste ponto no arquivo. cpp e incluímos `<iostream>` para efetuar pull da declaração para `std::cout`. Observe que as aspas são usadas para arquivos de cabeçalho no mesmo diretório que o arquivo de origem, e os colchetes angulares são usados para cabeçalhos de biblioteca padrão. Além disso, muitos cabeçalhos de biblioteca padrão não têm. h ou qualquer outra extensão de arquivo.
+Em seguida, crie um arquivo de implementação (normalmente com uma extensão. cpp ou semelhante). Vamos chamar o arquivo my_class. cpp e fornecer uma definição para a declaração de membro. Adicionamos uma diretiva `#include` para o arquivo "my_class. h" para que a declaração de my_class inserida neste ponto no arquivo. cpp e incluímos `<iostream>` para efetuar pull da declaração para `std::cout`. Observe que as aspas são usadas para arquivos de cabeçalho no mesmo diretório que o arquivo de origem, e os colchetes angulares são usados para cabeçalhos de biblioteca padrão. Além disso, muitos cabeçalhos de biblioteca padrão não têm. h ou qualquer outra extensão de arquivo.
 
 No arquivo de implementação, opcionalmente, podemos usar uma instrução **using** para evitar ter que qualificar cada menção de "my_class" ou "cout" com "N::" ou "std::".  Não coloque **usando** instruções em seus arquivos de cabeçalho!
 
@@ -58,7 +61,7 @@ void my_class::do_something()
 }
 ```
 
-Agora, podemos usar `my_class` em outro arquivo. cpp. Podemos #include o arquivo de cabeçalho para que o compilador receba a declaração. Tudo o que o compilador precisa saber é que my_class é uma classe que tem uma função de membro `do_something()`público chamada.
+Agora, podemos usar `my_class` em outro arquivo. cpp. Podemos #include o arquivo de cabeçalho para que o compilador receba a declaração. Tudo o que o compilador precisa saber é que my_class é uma classe que tem uma função de membro público chamada `do_something()`.
 
 ```cpp
 // my_program.cpp
@@ -74,11 +77,11 @@ int main()
 }
 ```
 
-Depois que o compilador conclui a compilação de cada arquivo. cpp em arquivos. obj, ele passa os arquivos. obj para o vinculador. Quando o vinculador mescla os arquivos de objeto, ele encontra exatamente uma definição para my_class; Ele está no arquivo. obj produzido para my_class. cpp e a compilação é realizada com sucesso.
+Depois que o compilador conclui a compilação de cada arquivo. cpp em arquivos. obj, ele passa os arquivos. obj para o vinculador. Quando o vinculador mescla os arquivos de objeto, ele encontra exatamente uma definição para my_class; Ele está no arquivo. obj produzido por my_class. cpp e a compilação é realizada com sucesso.
 
 ## <a name="include-guards"></a>Incluir proteções
 
-Normalmente, os arquivos de cabeçalho têm uma *proteção include* ou uma `#pragma once` diretiva para garantir que eles não sejam inseridos várias vezes em um único arquivo. cpp.
+Normalmente, os arquivos de cabeçalho têm uma diretiva *include Guard* ou uma `#pragma once` para garantir que eles não sejam inseridos várias vezes em um único arquivo. cpp.
 
 ```cpp
 // my_class.h
