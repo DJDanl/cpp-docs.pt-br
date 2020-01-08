@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - EXTERN directive
 ms.assetid: 667d703d-3aaf-4139-a586-29bc5dab1aff
-ms.openlocfilehash: 38ea50e75f2a8e19a7a99860f691904053b6739a
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 681c4091a3c54a781bed4b01b235dfeb04f552c6
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987861"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318092"
 ---
-# <a name="extern-masm"></a>EXTERN (MASM)
+# <a name="extern"></a>EXTERN
 
 Define uma ou mais variáveis, rótulos ou símbolos externos chamados *Name* cujo tipo é *Type*.
 
@@ -25,8 +25,9 @@ Define uma ou mais variáveis, rótulos ou símbolos externos chamados *Name* cu
 
 O argumento de *tipo de idioma* é válido somente no MASM de 32 bits.
 
-O *tipo* pode ser [ABS](../../assembler/masm/operator-abs.md), que importa o *nome* como uma constante. O mesmo que [EXTRN](../../assembler/masm/extrn.md).
+O *tipo* pode ser [ABS](operator-abs.md), que importa o *nome* como uma constante. O mesmo que [EXTRN](extrn.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)
+[Referência de diretivas](directives-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

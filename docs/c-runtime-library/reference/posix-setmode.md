@@ -1,6 +1,6 @@
 ---
 title: setmode
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - setmode
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - setmode function
 ms.assetid: cb959d9e-09f3-45af-8943-85f4ca0d3f5a
-ms.openlocfilehash: 18812b5262b7809e4d2fe1b94a311dec8a577c4f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4c8d73c2e89a18d38d0443bc2d5983bbc5ea7742
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950581"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300827"
 ---
 # <a name="setmode"></a>setmode
 
-Essa função POSIX foi preterida. Em vez disso, use [_setmode](setmode.md) compatível com ISO C++.
+O nome da função específica da Microsoft `setmode` é um alias preterido para a função [_setmode](setmode.md) . Por padrão, ele gera o [aviso do compilador (nível 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). O nome é preterido porque não segue as regras padrão do C para nomes específicos da implementação. No entanto, a função ainda tem suporte.
+
+É recomendável usar [_setmode](setmode.md) em vez disso. Ou, você pode continuar a usar esse nome de função e desabilitar o aviso. Para obter mais informações, consulte desligar os nomes de [função](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [de aviso](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) e POSIX.
