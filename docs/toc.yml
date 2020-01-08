@@ -1964,7 +1964,7 @@
               href: cppcx/attributes-c-cx.md
             - name: Como reprovar tipos e membros
               href: cppcx/deprecating-types-and-members-c-cx.md
-        - name: Como compilar aplicativos e bibliotecas
+        - name: Compilando aplicativos e bibliotecas
           expanded: false
           items:
             - name: Como compilar aplicativos e bibliotecas
@@ -2269,7 +2269,7 @@
                 - name: Classe Module
                   expanded: false
                   items:
-                    - name: Classe Module
+                    - name: Classe de módulo
                       href: cppcx/wrl/module-class.md
                     - name: 'Classe Module::GenericReleaseNotifier'
                       href: cppcx/wrl/module-genericreleasenotifier-class.md
@@ -2929,7 +2929,7 @@
                       href: c-language/evaluation-of-tokens.md
                 - name: Palavras-chave do C
                   href: c-language/c-keywords.md
-                - name: Identificadores C
+                - name: identificadores C
                   expanded: false
                   items:
                     - name: Identificadores C
@@ -2992,7 +2992,7 @@
               items:
                 - name: Estrutura do programa
                   href: c-language/program-structure.md
-                - name: Arquivos e programas de origem
+                - name: Arquivos de origem e programas de origem
                   expanded: false
                   items:
                     - name: Arquivos e programas de origem
@@ -3058,7 +3058,7 @@
                 - name: Classes de armazenamento C
                   expanded: false
                   items:
-                    - name: Classes de armazenamento C
+                    - name: classes de armazenamento C
                       href: c-language/c-storage-classes.md
                     - name: Especificadores de classe de armazenamento para declarações de nível externo
                       href: c-language/storage-class-specifiers-for-external-level-declarations.md
@@ -3089,7 +3089,7 @@
                 - name: Declaradores e declarações de variável
                   expanded: false
                   items:
-                    - name: Declaradores e declarações de variável
+                    - name: Declaradores e declarações de variáveis
                       href: c-language/declarators-and-variable-declarations.md
                     - name: Declarações de variável simples
                       href: c-language/simple-variable-declarations.md
@@ -3277,7 +3277,7 @@
                     - name: Operadores de atribuição C
                       expanded: false
                       items:
-                        - name: Operadores de atribuição C
+                        - name: operadores de atribuição C
                           href: c-language/c-assignment-operators.md
                         - name: Atribuição simples (C)
                           href: c-language/simple-assignment-c.md
@@ -3352,7 +3352,7 @@
                 - name: Visão geral das funções
                   expanded: false
                   items:
-                    - name: Visão geral das funções
+                    - name: Visão geral de funções
                       href: c-language/overview-of-functions.md
                     - name: Formas obsoletas de declarações e definições de função
                       href: c-language/obsolete-forms-of-function-declarations-and-definitions.md
@@ -3654,23 +3654,14 @@
               items:
                 - name: Convenções lexicais
                   href: cpp/lexical-conventions.md
-                - name: Visão geral da translação de arquivo
-                  href: cpp/overview-of-file-translation.md
-                - name: Conjuntos de caracteres
+                - name: Tokens e conjuntos de caracteres
                   href: cpp/character-sets.md
-                - name: Tokens
-                  href: cpp/tokens-cpp.md
                 - name: Comentários
                   href: cpp/comments-cpp.md
                 - name: Identificadores
                   href: cpp/identifiers-cpp.md
                 - name: Palavras-chave
-                  expanded: false
-                  items:
-                    - name: Palavras-chave
-                      href: cpp/keywords-cpp.md
-                    - name: Palavra-chave auto
-                      href: cpp/auto-keyword.md
+                  href: cpp/keywords-cpp.md
                 - name: Pontuadores
                   href: cpp/punctuators-cpp.md
                 - name: 'Literais de ponteiro, numéricos e boolianos'
@@ -3684,165 +3675,99 @@
               items:
                 - name: Conceitos básicos
                   href: cpp/basic-concepts-cpp.md
-                - name: Declarações e definições
-                  expanded: false
-                  items:
-                    - name: Sistema do tipo C++
-                      href: cpp/cpp-type-system-modern-cpp.md
-                    - name: Declarações e definições
-                      href: cpp/declarations-and-definitions-cpp.md
-                    - name: Visão geral dos declaradores
-                      href: cpp/overview-of-declarators.md
-                    - name: Especificadores
-                      href: cpp/specifiers.md
-                    - name: extern
-                      href: cpp/extern-cpp.md
-                    - name: Arquivos de cabeçalho
-                      href: cpp/header-files-cpp.md
-                    - name: Ponto de declaração em C++
-                      href: cpp/point-of-declaration-in-cpp.md
-                    - name: Inicializadores
-                      href: cpp/initializers.md
-                    - name: Aliases e typedefs
-                      href: cpp/aliases-and-typedefs-cpp.md
-                    - name: Declaração de uso
-                      href: cpp/using-declaration.md
-                    - name: Resolvendo declarações ambíguas
-                      href: cpp/resolving-ambiguous-declarations-cpp.md
-                    - name: Classes de armazenamento
-                      href: cpp/storage-classes-cpp.md
-                    - name: const
-                      href: cpp/const-cpp.md
-                    - name: constexpr
-                      href: cpp/constexpr-cpp.md
-                    - name: volatile
-                      href: cpp/volatile-cpp.md
-                    - name: auto
-                      href: cpp/auto-cpp.md
-                    - name: decltype
-                      href: cpp/decltype-cpp.md
-                    - name: Atributos
-                      href: cpp/attributes.md
+                - name: Sistema do tipo C++
+                  href: cpp/cpp-type-system-modern-cpp.md
                 - name: Escopo
                   href: cpp/scope-visual-cpp.md
                 - name: Arquivos de cabeçalho
                   href: cpp/header-files-cpp.md
-                - name: Programa e ligação
-                  expanded: false
-                  items:
-                    - name: Programa e ligação
-                      href: cpp/program-and-linkage-cpp.md
-                    - name: extern
-                      href: cpp/using-extern-to-specify-linkage.md
-                - name: Inicialização e término
-                  expanded: false
-                  items:
-                    - name: Inicialização e término
-                      href: cpp/startup-and-termination-cpp.md
-                    - name: 'main: inicialização do programa'
-                      expanded: false
-                      items:
-                        - name: 'main: inicialização do programa'
-                          href: cpp/main-program-startup.md
-                        - name: Usando wmain em vez main
-                          href: cpp/using-wmain-instead-of-main.md
-                        - name: Definições de argumento
-                          href: cpp/argument-definitions.md
-                        - name: Expansão de curinga
-                          href: cpp/wildcard-expansion.md
-                        - name: Analisando argumentos de linha de comando C++
-                          href: cpp/parsing-cpp-command-line-arguments.md
-                        - name: Personalizando processamento de linha de comando C++
-                          href: cpp/customizing-cpp-command-line-processing.md
-                        - name: Restrições da função main
-                          href: cpp/main-function-restrictions.md
-                    - name: Término do programa
-                      expanded: false
-                      items:
-                        - name: Término do programa
-                          href: cpp/program-termination.md
-                        - name: Função exit
-                          href: cpp/exit-function.md
-                        - name: Função abort
-                          href: cpp/abort-function.md
-                        - name: Instrução return no término do programa
-                          href: cpp/return-statement-in-program-termination-cpp.md
-                    - name: Considerações de inicialização adicionais
-                      href: cpp/additional-startup-considerations.md
-                    - name: Considerações de término adicionais
-                      expanded: false
-                      items:
-                        - name: Considerações de término adicionais
-                          href: cpp/additional-termination-considerations.md
-                        - name: Usando saída ou retorno
-                          href: cpp/using-exit-or-return.md
-                        - name: Usando atexit
-                          href: cpp/using-atexit.md
-                        - name: Usando abort
-                          href: cpp/using-abort.md
+                - name: Unidades de tradução e vinculação
+                  href: cpp/program-and-linkage-cpp.md
+                - name: função main e argumentos de linha de comando
+                  href: cpp/main-function-command-line-args.md
+                - name: Término do programa
+                  href: cpp/program-termination.md
                 - name: Lvalues e rvalues
                   href: cpp/lvalues-and-rvalues-visual-cpp.md
                 - name: Objetos temporários
                   href: cpp/temporary-objects.md
-                - name: Alinhamento (declarações C++)
+                - name: Alinhamento
                   href: cpp/alignment-cpp-declarations.md
-                - name: alignof e alignas
-                  href: cpp/alignof-and-alignas-cpp.md
                 - name: 'Tipos triviais, de layout padrão e de POD'
                   href: cpp/trivial-standard-layout-and-pod-types.md
-                - name: Sistema de tipos
-                  expanded: false
-                  items:
-                    - name: Sistema de tipos
-                      href: cpp/cpp-type-system-modern-cpp.md
-                    - name: Tipos de valor
-                      href: cpp/value-types-modern-cpp.md
-                    - name: Conversões e segurança de tipo
-                      href: cpp/type-conversions-and-type-safety-modern-cpp.md
-                    - name: Tipos fundamentais
-                      expanded: false
-                      items:
-                        - name: Tipos fundamentais
-                          href: cpp/fundamental-types-cpp.md
-                        - name: Intervalos de tipos de dados
-                          href: cpp/data-type-ranges.md
-                        - name: nullptr
-                          href: cpp/nullptr.md
-                        - name: void
-                          href: cpp/void-cpp.md
-                        - name: bool
-                          href: cpp/bool-cpp.md
-                        - name: false
-                          href: cpp/false-cpp.md
-                        - name: true
-                          href: cpp/true-cpp.md
-                        - name: 'char, wchar_t, char16_t, char32_t'
-                          href: cpp/char-wchar-t-char16-t-char32-t.md
-                        - name: '__int8, __int16, __int32, __int64'
-                          href: cpp/int8-int16-int32-int64.md
-                        - name: __m64
-                          href: cpp/m64.md
-                        - name: __m128
-                          href: cpp/m128.md
-                        - name: __m128d
-                          href: cpp/m128d.md
-                        - name: __m128i
-                          href: cpp/m128i.md
-                        - name: '__ptr32, __ptr64'
-                          href: cpp/ptr32-ptr64.md
-                        - name: Limites numéricos
-                          expanded: false
-                          items:
-                            - name: Limites numéricos
-                              href: cpp/numerical-limits-cpp.md
-                            - name: Limites de inteiro
-                              href: cpp/integer-limits.md
-                            - name: Limites flutuantes
-                              href: cpp/floating-limits.md
-                - name: Conversões padrão
-                  href: cpp/standard-conversions.md
+                - name: Tipos de valor
+                  href: cpp/value-types-modern-cpp.md
                 - name: Conversões e segurança de tipo
                   href: cpp/type-conversions-and-type-safety-modern-cpp.md
+                - name: Conversões padrão
+                  href: cpp/standard-conversions.md
+            - name: Tipos internos
+              expanded: false
+              items:
+                - name: Tipos internos
+                  href: cpp/fundamental-types-cpp.md
+                - name: Intervalos de tipos de dados
+                  href: cpp/data-type-ranges.md
+                - name: nullptr
+                  href: cpp/nullptr.md
+                - name: void
+                  href: cpp/void-cpp.md
+                - name: bool
+                  href: cpp/bool-cpp.md
+                - name: false
+                  href: cpp/false-cpp.md
+                - name: true
+                  href: cpp/true-cpp.md
+                - name: 'char, wchar_t, char16_t, char32_t'
+                  href: cpp/char-wchar-t-char16-t-char32-t.md
+                - name: '__int8, __int16, __int32, __int64'
+                  href: cpp/int8-int16-int32-int64.md
+                - name: __m64
+                  href: cpp/m64.md
+                - name: __m128
+                  href: cpp/m128.md
+                - name: __m128d
+                  href: cpp/m128d.md
+                - name: __m128i
+                  href: cpp/m128i.md
+                - name: '__ptr32, __ptr64'
+                  href: cpp/ptr32-ptr64.md
+                - name: Limites numéricos
+                  expanded: false
+                  items:
+                    - name: Limites numéricos
+                      href: cpp/numerical-limits-cpp.md
+                    - name: Limites de inteiro
+                      href: cpp/integer-limits.md
+                    - name: Limites flutuantes
+                      href: cpp/floating-limits.md
+            - name: Declarações e definições
+              expanded: false
+              items:
+                - name: Declarações e definições
+                  href: cpp/declarations-and-definitions-cpp.md
+                - name: Classes de armazenamento
+                  href: cpp/storage-classes-cpp.md
+                - name: auto
+                  href: cpp/auto-cpp.md
+                - name: const
+                  href: cpp/const-cpp.md
+                - name: constexpr
+                  href: cpp/constexpr-cpp.md
+                - name: extern
+                  href: cpp/extern-cpp.md
+                - name: Inicializadores
+                  href: cpp/initializers.md
+                - name: Aliases e typedefs
+                  href: cpp/aliases-and-typedefs-cpp.md
+                - name: usando declaração
+                  href: cpp/using-declaration.md
+                - name: volatile
+                  href: cpp/volatile-cpp.md
+                - name: decltype
+                  href: cpp/decltype-cpp.md
+                - name: Atributos
+                  href: cpp/attributes.md
             - name: 'Operadores internos, precedência e associatividade'
               expanded: false
               items:
@@ -4005,7 +3930,7 @@
                       href: cpp/iteration-statements-cpp.md
                     - name: Instrução while
                       href: cpp/while-statement-cpp.md
-                    - name: instrução Do-while
+                    - name: Instrução do-while
                       href: cpp/do-while-statement-cpp.md
                     - name: Instrução for
                       href: cpp/for-statement-cpp.md
@@ -4602,7 +4527,7 @@
                     - name: _com_ptr_t class
                       expanded: false
                       items:
-                        - name: _com_ptr_t class
+                        - name: Classe _com_ptr_t
                           href: cpp/com-ptr-t-class.md
                         - name: Funções de membro _com_ptr_t
                           expanded: false
@@ -4778,7 +4703,7 @@
                 - name: Operadores do pré-processador
                   expanded: false
                   items:
-                    - name: Operadores de pré-processador
+                    - name: Operadores do pré-processador
                       href: preprocessor/preprocessor-operators.md
                     - name: 'Operador stringizing (#)'
                       href: preprocessor/stringizing-operator-hash.md
@@ -4797,17 +4722,8 @@
                       href: preprocessor/variadic-macros.md
                     - name: Macros de pré-processador predefinidas
                       href: preprocessor/predefined-macros.md
-            - name: Resumo de gramática (C/C++)
-              expanded: false
-              items:
-                - name: Resumo de gramática (C/C++)
-                  href: preprocessor/grammar-summary-c-cpp.md
-                - name: Definições para o resumo de gramática
-                  href: preprocessor/definitions-for-the-grammar-summary.md
-                - name: Convenções de gramática
-                  href: preprocessor/conventions.md
-                - name: Gramática do pré-processador
-                  href: preprocessor/preprocessor-grammar.md
+            - name: Resumo de gramática de pré-processador (C/C++)
+              href: preprocessor/grammar-summary-c-cpp.md
             - name: Diretivas Pragma e a palavra-chave __pragma
               expanded: false
               items:
@@ -5264,10 +5180,10 @@
               href: assembler/masm/masm-for-x64-ml64-exe.md
             - name: Referência de linha de comando ML e ML64
               href: assembler/masm/ml-and-ml64-command-line-reference.md
-            - name: Referência de diretivas
+            - name: Referência de diretivas (MASM)
               expanded: false
               items:
-                - name: Referência de diretivas
+                - name: Referência de diretivas (MASM)
                   href: assembler/masm/directives-reference.md
                 - name: =
                   href: assembler/masm/equal.md
@@ -5289,9 +5205,9 @@
                   href: assembler/masm/dot-686.md
                 - name: .686P
                   href: assembler/masm/dot-686p.md
-                - name: ALIAS (MASM)
+                - name: ALIAS
                   href: assembler/masm/alias-masm.md
-                - name: ALIGN (MASM)
+                - name: ALIGN
                   href: assembler/masm/align-masm.md
                 - name: .ALLOCSTACK
                   href: assembler/masm/dot-allocstack.md
@@ -5301,7 +5217,7 @@
                   href: assembler/masm/assume.md
                 - name: .BREAK
                   href: assembler/masm/dot-break.md
-                - name: BYTE (MASM)
+                - name: BYTE
                   href: assembler/masm/byte-masm.md
                 - name: CATSTR
                   href: assembler/masm/catstr.md
@@ -5309,7 +5225,7 @@
                   href: assembler/masm/dot-code.md
                 - name: COMM
                   href: assembler/masm/comm.md
-                - name: COMMENT (MASM)
+                - name: COMMENT
                   href: assembler/masm/comment-masm.md
                 - name: .CONST
                   href: assembler/masm/dot-const.md
@@ -5343,13 +5259,13 @@
                   href: assembler/masm/echo.md
                 - name: .ELSE
                   href: assembler/masm/dot-else.md
-                - name: ELSE (MASM)
+                - name: ELSE
                   href: assembler/masm/else-masm.md
-                - name: ELSEIF (MASM)
+                - name: ELSEIF
                   href: assembler/masm/elseif-masm.md
                 - name: ELSEIF2
                   href: assembler/masm/elseif2.md
-                - name: END (MASM)
+                - name: END
                   href: assembler/masm/end-masm.md
                 - name: .ENDIF
                   href: assembler/masm/dot-endif.md
@@ -5359,7 +5275,7 @@
                   href: assembler/masm/endp.md
                 - name: .ENDPROLOG
                   href: assembler/masm/dot-endprolog.md
-                - name: ENDS (MASM)
+                - name: ENDS
                   href: assembler/masm/ends-masm.md
                 - name: .ENDW
                   href: assembler/masm/dot-endw.md
@@ -5391,7 +5307,7 @@
                   href: assembler/masm/dot-exit.md
                 - name: EXITM
                   href: assembler/masm/exitm.md
-                - name: EXTERN (MASM)
+                - name: EXTERN
                   href: assembler/masm/extern-masm.md
                 - name: EXTERNDEF
                   href: assembler/masm/externdef.md
@@ -5401,7 +5317,7 @@
                   href: assembler/masm/dot-fardata.md
                 - name: .FARDATA?
                   href: assembler/masm/dot-fardata-q.md
-                - name: FOR (MASM)
+                - name: FOR
                   href: assembler/masm/for-masm.md
                 - name: FORC
                   href: assembler/masm/forc.md
@@ -5409,13 +5325,13 @@
                   href: assembler/masm/dot-fpo.md
                 - name: FWORD
                   href: assembler/masm/fword.md
-                - name: GOTO (MASM)
+                - name: GOTO
                   href: assembler/masm/goto-masm.md
                 - name: GROUP
                   href: assembler/masm/group.md
                 - name: .IF
                   href: assembler/masm/dot-if.md
-                - name: IF (MASM)
+                - name: IF
                   href: assembler/masm/if-masm.md
                 - name: IF2
                   href: assembler/masm/if2.md
@@ -5433,9 +5349,9 @@
                   href: assembler/masm/ifnb.md
                 - name: IFNDEF
                   href: assembler/masm/ifndef.md
-                - name: INCLUDE (MASM)
+                - name: INCLUDE
                   href: assembler/masm/include-masm.md
-                - name: INCLUDELIB (MASM)
+                - name: INCLUDELIB
                   href: assembler/masm/includelib-masm.md
                 - name: INSTR
                   href: assembler/masm/instr.md
@@ -5447,7 +5363,7 @@
                   href: assembler/masm/irpc.md
                 - name: .K3D
                   href: assembler/masm/dot-k3d.md
-                - name: LABEL (MASM)
+                - name: LABEL
                   href: assembler/masm/label-masm.md
                 - name: .LALL
                   href: assembler/masm/dot-lall.md
@@ -5463,7 +5379,7 @@
                   href: assembler/masm/dot-listmacro.md
                 - name: .LISTMACROALL
                   href: assembler/masm/dot-listmacroall.md
-                - name: LOCAL (MASM)
+                - name: LOCAL
                   href: assembler/masm/local-masm.md
                 - name: MACRO
                   href: assembler/masm/macro.md
@@ -5473,7 +5389,7 @@
                   href: assembler/masm/dot-mmx.md
                 - name: .MODEL
                   href: assembler/masm/dot-model.md
-                - name: NAME (MASM)
+                - name: NAME
                   href: assembler/masm/name-masm.md
                 - name: .NOCREF
                   href: assembler/masm/dot-nocref.md
@@ -5483,7 +5399,7 @@
                   href: assembler/masm/dot-nolistif.md
                 - name: .NOLISTMACRO
                   href: assembler/masm/dot-nolistmacro.md
-                - name: OPTION (MASM)
+                - name: OPTION
                   href: assembler/masm/option-masm.md
                 - name: ORG
                   href: assembler/masm/org.md
@@ -5499,7 +5415,7 @@
                   href: assembler/masm/proc.md
                 - name: PROTO
                   href: assembler/masm/proto.md
-                - name: PUBLIC (MASM)
+                - name: PUBLIC
                   href: assembler/masm/public-masm.md
                 - name: PURGE
                   href: assembler/masm/purge.md
@@ -5519,7 +5435,7 @@
                   href: assembler/masm/real4.md
                 - name: REAL8
                   href: assembler/masm/real8.md
-                - name: RECORD (MASM)
+                - name: RECORD
                   href: assembler/masm/record-masm.md
                 - name: .REPEAT
                   href: assembler/masm/dot-repeat.md
@@ -5535,7 +5451,7 @@
                   href: assembler/masm/dot-savereg.md
                 - name: .SAVEXMM128
                   href: assembler/masm/dot-savexmm128.md
-                - name: SBYTE (MASM)
+                - name: SBYTE
                   href: assembler/masm/sbyte-masm.md
                 - name: SDWORD
                   href: assembler/masm/sdword.md
@@ -5557,7 +5473,7 @@
                   href: assembler/masm/dot-startup.md
                 - name: STRUC
                   href: assembler/masm/struc.md
-                - name: STRUCT (MASM)
+                - name: STRUCT
                   href: assembler/masm/struct-masm.md
                 - name: SUBSTR
                   href: assembler/masm/substr.md
@@ -5575,7 +5491,7 @@
                   href: assembler/masm/dot-tfcond.md
                 - name: TITLE
                   href: assembler/masm/title.md
-                - name: TYPEDEF (MASM)
+                - name: TYPEDEF
                   href: assembler/masm/typedef-masm.md
                 - name: UNION
                   href: assembler/masm/union.md
@@ -5585,7 +5501,7 @@
                   href: assembler/masm/dot-untilcxz.md
                 - name: .WHILE
                   href: assembler/masm/dot-while.md
-                - name: WHILE (MASM)
+                - name: WHILE
                   href: assembler/masm/while-masm.md
                 - name: WORD
                   href: assembler/masm/word.md
@@ -5944,6 +5860,8 @@
                       href: assembler/masm/ml-warning-a4012.md
                     - name: Aviso ML A4014
                       href: assembler/masm/ml-warning-a4014.md
+            - name: Gramática MASM BNF
+              href: assembler/masm/masm-bnf-grammar.md
         - name: Extensões de componentes para .NET e UWP
           expanded: false
           items:
@@ -10593,7 +10511,7 @@
             - name: Programação de OLE DB
               expanded: false
               items:
-                - name: Programação de OLE DB
+                - name: programação de OLE DB
                   href: data/oledb/ole-db-programming.md
                 - name: Visão geral da programação de OLE DB
                   expanded: false
