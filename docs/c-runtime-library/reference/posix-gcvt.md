@@ -1,6 +1,6 @@
 ---
 title: gcvt
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - gcvt
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - gcvt function
 ms.assetid: 913478fd-ef22-4dee-b558-ff2bd6d72f3d
-ms.openlocfilehash: 8a1118aa0b7b68137e0748ae8e19e44e7134c3da
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dc7fa39bc278ffcbf8c81eae5ddbbbe3737fd964
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950729"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301113"
 ---
 # <a name="gcvt"></a>gcvt
 
-Essa função POSIX foi preterida. Em vez disso, use [_gcvt](gcvt.md) compatível com ISO C++ ou [_gcvt_s](gcvt-s.md) de segurança avançada.
+O nome da função específica da Microsoft `gcvt` é um alias preterido para a função [_gcvt](gcvt.md) . Por padrão, ele gera o [aviso do compilador (nível 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). O nome é preterido porque não segue as regras padrão do C para nomes específicos da implementação. No entanto, a função ainda tem suporte.
+
+É recomendável usar [_gcvt](gcvt.md) ou a função de [_gcvt_s](gcvt-s.md) com segurança avançada em vez disso. Ou, você pode continuar a usar esse nome de função e desabilitar o aviso. Para obter mais informações, consulte desligar os nomes de [função](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [de aviso](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) e POSIX.

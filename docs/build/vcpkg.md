@@ -6,20 +6,20 @@ ms.author: mblome
 ms.date: 05/16/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 58f8a9b8223dc54bf083ebbac97528f88890777c
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
-ms.translationtype: HT
+ms.openlocfilehash: ce28d42fd3452a5e8195f3ced6bbbb06430b1d14
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837014"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676945"
 ---
-# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Um gerenciador de pacotes do C++ para Windows, Linux e MacOS
+# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: um gerenciador de pacotes do C++ para Windows, Linux e MacOS
 
 O vcpkg é um gerenciador de pacotes de linha de comando que simplifica bastante a aquisição e instalação de bibliotecas de terceiros no Windows, Linux e MacOS. Se seu projeto usa bibliotecas de terceiros, é recomendável que você use o vcpkg para instalá-las. O vcpkg dá suporte a bibliotecas de software livre e proprietárias. Todas as bibliotecas do catálogo do vcpkg no Windows foram testadas quanto à compatibilidade com o Visual Studio 2015, o Visual Studio 2017 e o Visual Studio 2019. A partir de maio de 2018, há mais de 900 bibliotecas no catálogo do Windows e mais de 350 no catálogo do Linux/MacOS. A comunidade do C++ é adicionando mais bibliotecas a ambos os catálogos de forma contínua.
 
 ## <a name="simple-yet-flexible"></a>Simples e flexível
 
-Com um único comando, você pode baixar fontes e compilar uma biblioteca. O próprio vcpkg é um projeto de software livre disponível no GitHub. Você pode personalizar seus clones particulares de qualquer forma que desejar. Por exemplo, você pode especificar diferentes bibliotecas ou diferentes versões de bibliotecas das que são encontradas no catálogo público. Você pode ter vários clones de vcpkg em um único computador, cada um gerando conjuntos personalizados de bibliotecas e/ou opções de compilação, etc. Cada clone é um ambiente autocontido, com sua própria cópia do vcpkg.exe que funciona apenas em sua própria hierarquia. O vcpkg não é adicionado a nenhuma variável de ambiente e não tem nenhuma dependência no Registro do Windows ou no Visual Studio.
+Com um único comando, você pode baixar fontes e compilar uma biblioteca. O próprio vcpkg é um projeto de software livre disponível no GitHub. Você pode personalizar seus clones particulares de qualquer forma que desejar. Por exemplo, você pode especificar diferentes bibliotecas ou diferentes versões de bibliotecas das que são encontradas no catálogo público. Você pode ter vários clones de vcpkg em um único computador, cada um produzindo conjuntos personalizados de bibliotecas e/ou opções de compilação, etc. Cada clone é um ambiente independente com sua própria cópia do vcpkg. exe que funciona apenas em sua própria hierarquia. O vcpkg não é adicionado a nenhuma variável de ambiente e não tem nenhuma dependência no Registro do Windows ou no Visual Studio.
 
 ## <a name="sources-not-binaries"></a>Fontes não binárias
 
@@ -27,7 +27,7 @@ Para bibliotecas no catálogo do Windows, o vcpkg baixa fontes em vez de binári
 
 Se você criar um clone de vcpkg com bibliotecas particulares na coleção de portas, você poderá adicionar uma porta que baixa os cabeçalhos e os binários pré-criados e grave um arquivo portfile.cmake que simplesmente copia esses arquivos para o local desejado.
 
-[1] *Observação: as fontes não estão disponíveis para algumas bibliotecas proprietárias. O vcpkg baixará binários pré-criados compatíveis nesses casos.*
+[1] *Observação: para algumas bibliotecas proprietárias, as fontes não estão disponíveis. O Vcpkg baixará binários predefinidos compatíveis nesses casos.*
 
 ## <a name="installation"></a>Instalação
 
@@ -111,7 +111,7 @@ Execute **vcpkg integrate install** para configurar o Visual Studio para localiz
 
 Agora você pode #incluir cabeçalhos simplesmente digitando a pasta/cabeçalho e o preenchimento automático ajuda você. Não será necessária nenhuma etapa adicional para vinculação a bibliotecas ou adição de referências de projeto. A ilustração a seguir mostra como o Visual Studio localiza os cabeçalhos azure-storage-cpp. O vcpkg coloca seus cabeçalhos na subpasta **/installed**, particionada pela plataforma de destino. O diagrama a seguir mostra a lista de arquivos de inclusão na subpasta **/was** para a biblioteca:
 
-![Integração do vcpkg e IntelliSense](media/vcpkg-intellisense.png "vcpkg e IntelliSense")
+![integração do vcpkg IntelliSense](media/vcpkg-intellisense.png "vcpkg e IntelliSense")
 
 ### <a name="per-project"></a>Por projeto
 
@@ -119,7 +119,7 @@ Se você precisar usar uma versão específica de uma biblioteca que é diferent
 
 1. Faça uma cópia nova do vcpkg
 1. Modifique o portfile para a biblioteca para obter a versão necessária
-1. Execute **vcpkg install \<library>**.
+1. Execute **vcpkg install \<library>** .
 1. Use **vcpkg integrate project** para criar um pacote NuGet que faz referência a essa biblioteca com base em cada projeto.
 
 ## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Integrar com o Visual Studio Code (Linux/MacOS)
@@ -182,7 +182,7 @@ Você pode modificar seu clone do vcpkg da maneira que desejar. Você pode criar
 
 ## <a name="uninstall-vcpkg"></a>Desinstalar o vcpkg
 
-Basta excluir o diretório.
+Basta excluir o diretório vcpkg A exclusão desse diretório desinstala a distribuição vcpkg e todas as bibliotecas que o vcpkg instalou.
 
 ## <a name="send-feedback-about-vcpkg"></a>Enviar comentários sobre o vcpkg
 
@@ -206,7 +206,7 @@ O conteúdo de uma instância de vcpkg é:
 
 ## <a name="command-line-reference"></a>Referência de linha de comando
 
-|Comando|Descrição|
+|{1&gt;Comando&lt;1}|Descrição|
 |---------|---------|
 |**vcpkg search [pat]**|Pesquisar pacotes disponíveis para instalação|
 |**vcpkg install \<pkg>...**|Instalar um pacote|

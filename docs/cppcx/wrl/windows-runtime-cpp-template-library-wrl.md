@@ -3,12 +3,12 @@ title: Biblioteca de Modelos C++ do Windows Runtime  (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7a7b37a32ebaa0bb6ad71c8f710300256589388d
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: 41b8b45f89e94b8de2ddcb9c87bfd72122db8e1a
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541198"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676932"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteca de Modelos C++ do Windows Runtime  (WRL)
 
@@ -85,7 +85,7 @@ Windows Runtime C++ biblioteca de modelos se assemelha ao Active Template Librar
 
 Windows Runtime C++ biblioteca de modelos dá suporte à funcionalidade com que é necessária para aplicativos UWP. Portanto, ele difere da ATL porque omite o suporte direto para recursos COM, como:
 
-- Aggregation
+- agregação
 
 - implementações de estoque
 
@@ -103,7 +103,7 @@ Windows Runtime C++ biblioteca de modelos dá suporte à funcionalidade com que 
 
 - COM+
 
-## <a name="concepts"></a>Conceitos
+## <a name="concepts"></a>Conceitos do
 
 Windows Runtime C++ biblioteca de modelos fornece tipos que representam alguns conceitos básicos. As seções a seguir descrevem esses tipos.
 
@@ -119,7 +119,7 @@ Windows Runtime C++ biblioteca de modelos fornece tipos que representam alguns c
 
 O [módulo](module-class.md) representa uma coleção de objetos relacionados. Um objeto `Module` gerencia fábricas de classes, que criam objetos e registro, o que permite que outros aplicativos usem um objeto.
 
-### <a name="callback"></a>Retorno
+### <a name="callback"></a>Retorno de chamada
 
 A função de [retorno de chamada](callback-function-wrl.md) cria um objeto cuja função de membro é um manipulador de eventos (um método de retorno de chamada). Use a função `Callback` para gravar operações assíncronas.
 
@@ -147,5 +147,5 @@ Um objeto `WeakRef` normalmente representa um objeto cuja existência é control
 |-|-|
 |[Principais APIs por categoria](key-wrl-apis-by-category.md)|Realça os tipos de C++ biblioteca de modelos, funções e macros do Windows Runtime primário.|
 |[Referência](wrl-reference.md)|Contém informações de referência para a C++ biblioteca de modelos do Windows Runtime.|
-|[Referência C++rápida/CX)](../../cppcx/quick-reference-c-cx.md)|Descreve brevemente os C++recursos do/CX que dão suporte ao Windows Runtime.|
+|[Referência rápida (C++/CX)](../../cppcx/quick-reference-c-cx.md)|Descreve brevemente os C++recursos do/CX que dão suporte ao Windows Runtime.|
 |[Usando componentes Windows Runtime no VisualC++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Mostra como usar C++o/CX para criar um componente Windows Runtime básico.|
