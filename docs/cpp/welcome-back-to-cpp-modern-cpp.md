@@ -3,12 +3,12 @@ title: Bem-vindo de volta ao C++ (C++ moderno)
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 2739da77fbfa973ca716abc6d8fa4920b81095d9
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 4dee4779e941c66af1c23f62a88cecec4916a475
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303329"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301737"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Bem-vindo de volta ao C++ (C++ moderno)
 
@@ -47,7 +47,7 @@ Sempre que possível, use um ponteiro inteligente ao alocar memória heap. Se vo
 
 ## <a name="stdstring-and-stdstring_view"></a>std:: String e std:: string_view
 
-As cadeias de caracteres C-style são outra grande fonte de bugs. Usando [std:: String e std:: wstring](../standard-library/basic-string-class.md) , você pode eliminar praticamente todos os erros associados às cadeias de estilo C e obter o benefício das funções de membro para pesquisa, acréscimo, pendência e assim por diante. Ambos são altamente otimizados para velocidade. Ao passar uma cadeia de caracteres para uma função que requer somente acesso somente leitura, no (C++ 17), você pode usar [std:: string_view](../standard-library/basic-string-view-class.md) para obter um benefício de desempenho ainda maior.
+As cadeias de caracteres C-style são outra grande fonte de bugs. Usando [std:: String e std:: wstring](../standard-library/basic-string-class.md) , você pode eliminar praticamente todos os erros associados às cadeias de estilo C e obter o benefício das funções de membro para pesquisa, acréscimo, pendência e assim por diante. Ambos são altamente otimizados para velocidade. Ao passar uma cadeia de caracteres para uma função que requer somente acesso somente leitura, no C++ 17, você pode usar [std:: string_view](../standard-library/basic-string-view-class.md) para obter um benefício de desempenho ainda maior.
 
 ## <a name="stdvector-and-other-standard-library-containers"></a>contêineres std:: vector e outros standard library
 
@@ -211,7 +211,7 @@ Use o C++ struct padrão de biblioteca Standard [:: Atomic](../standard-library/
 
 As uniões são comumente usadas na programação em estilo C para conservar a memória, permitindo que os membros de diferentes tipos ocupem o mesmo local de memória. No entanto, as uniões não são de tipo seguro e estão sujeitas a erros de programação. O c++ 17 apresenta a classe [std:: Variant](../standard-library/variant-class.md) como uma alternativa mais robusta e segura para as uniões. A função [std:: visite](../standard-library/variant-functions.md#visit) pode ser usada para acessar os membros de um tipo de `variant` de forma segura de tipo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
 [Expressões Lambda](../cpp/lambda-expressions-in-cpp.md)<br/>
