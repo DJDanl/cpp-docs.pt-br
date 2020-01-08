@@ -23,12 +23,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: f7a898d70e506ed4707ea718faa0ed618682c2c7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: df8f59088cd402503fe31f768557e3ed936b31ec
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944819"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301685"
 ---
 # <a name="to-functions"></a>Funções to
 
@@ -48,10 +48,10 @@ As funções **to** e as conversões de macro são as seguintes.
 |`__toascii`|`__toascii`|Converte `c` em caractere ASCII|
 |`tolower`|`tolower`|Converte `c` em minúscula, se apropriado|
 |`_tolower`|`_tolower`|Converte `c` em minúscula|
-|`towlower`|Nenhum|Converte `c` em letra minúscula de caractere largo correspondente|
+|`towlower`|{1&gt;Nenhum&lt;1}|Converte `c` em letra minúscula de caractere largo correspondente|
 |`toupper`|`toupper`|Converte `c` em maiúscula, se apropriado|
 |`_toupper`|`_toupper`|Converte `c` em maiúscula|
-|`towupper`|Nenhum|Converte c em letra maiúscula de caractere largo correspondente|
+|`towupper`|{1&gt;Nenhum&lt;1}|Converte c em letra maiúscula de caractere largo correspondente|
 
 Para usar as versões de função das rotinas **to** que também são definidas como macros, remova as definições de macro com diretivas `#undef` ou não inclua CTYPE. H. Se você usar a opção do compilador /Za, o compilador usará a versão da função `toupper` ou `tolower`. As declarações das funções `toupper` e `tolower` estão em STDLIB. H.
 
@@ -79,7 +79,7 @@ As funções `towlower` e `towupper` retornarão uma cópia convertida de `c` se
 
 ## <a name="example"></a>Exemplo
 
-```
+```c
 // crt_toupper.c
 /* This program uses toupper and tolower to
  * analyze all characters between 0x0 and 0x7F. It also
@@ -115,7 +115,7 @@ Some of THESE letters are Capitals.
 sOME OF these LETTERS ARE cAPITALS.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Conversão de Dados](../c-runtime-library/data-conversion.md)<br/>
 [Localidade](../c-runtime-library/locale.md)<br/>

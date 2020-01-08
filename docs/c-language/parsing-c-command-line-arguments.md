@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-ms.openlocfilehash: da8a21ac9ff7ce4fd6bde4d2d1e50d8f30806b78
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: ace6d1b8295d0901ef22f3c354b32ad17e296e87
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151202"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299085"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analisando argumentos de linha de comando C
 
@@ -23,15 +23,15 @@ O código de inicialização do Microsoft C usa as seguintes regras para interpr
 
 - Os argumentos são delimitados por espaço em branco, que é um espaço ou uma tabulação.
 
-- Uma cadeia de caracteres cercada por aspas duplas são interpretadas como um único argumento, independentemente do espaço em branco contido. Uma cadeia de caracteres entre aspas pode ser inserida em um argumento. Observe que o acento circunflexo (**^**) não é reconhecido como um caractere de escape ou um delimitador.
+- Uma cadeia de caracteres cercada por aspas duplas são interpretadas como um único argumento, independentemente do espaço em branco contido. Uma cadeia de caracteres entre aspas pode ser inserida em um argumento. Observe que o acento circunflexo ( **^** ) não é reconhecido como um caractere de escape ou um delimitador.
 
-- Aspas duplas precedidas por uma barra invertida, **\\"**, são interpretadas como um caractere literal de aspas duplas (**"**).
+- Aspas duplas precedidas por uma barra invertida, **\\"** , são interpretadas como um caractere literal de aspas duplas ( **"** ).
 
 - As barras invertidas são interpretadas literalmente, a menos que precedam imediatamente as aspas duplas.
 
-- Se um número par de barras invertidas for seguido por aspas duplas, então uma barra invertida (**\\**) será colocada na matriz `argv` para cada par de barras invertidas (**\\\\**); as aspas duplas (**"**) serão interpretadas como um delimitador de cadeia de caracteres.
+- Se um número par de barras invertidas for seguido por aspas duplas, então uma barra invertida ( **\\** ) será colocada na matriz `argv` para cada par de barras invertidas ( **\\\\** ); as aspas duplas ( **"** ) serão interpretadas como um delimitador de cadeia de caracteres.
 
-- Se um número ímpar de barras invertidas for seguido por aspas duplas, então uma barra invertida (**\\**) será colocada na matriz `argv` para cada par de barras invertidas (**\\\\**); as aspas duplas serão interpretadas como uma sequência de escape pela barra invertida restante, causando a colocação de aspas duplas literais (**"**) em `argv`.
+- Se um número ímpar de barras invertidas for seguido por aspas duplas, então uma barra invertida ( **\\** ) será colocada na matriz `argv` para cada par de barras invertidas ( **\\\\** ); as aspas duplas serão interpretadas como uma sequência de escape pela barra invertida restante, causando a colocação de aspas duplas literais ( **"** ) em `argv`.
 
 Esta lista ilustra as regras acima mostrando o resultado interpretado passado para `argv` por vários exemplos de argumentos de linha de comando. O resultado listado na segunda, terceira e quarta coluna são do programa de ARGS.C que segue a lista.
 
@@ -47,7 +47,7 @@ Esta lista ilustra as regras acima mostrando o resultado interpretado passado pa
 
 ### <a name="code"></a>Código
 
-```
+```c
 // Parsing_C_Commandline_args.c
 // ARGS.C illustrates the following variables used for accessing
 // command-line arguments and environment variables:
@@ -76,7 +76,7 @@ char **envp )      // Array of environment variable strings
 }
 ```
 
-## <a name="comments"></a>Comentários
+## <a name="comments"></a>Comments
 
 Um exemplo de resultado deste programa é:
 
@@ -97,6 +97,6 @@ Environment variables:
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Função main e execução do programa](../c-language/main-function-and-program-execution.md)

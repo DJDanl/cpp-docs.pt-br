@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - C2081
 ms.assetid: 7db9892d-364d-4178-a49d-f8398ece09a0
-ms.openlocfilehash: 2bccd15b8c2b6d1c5cd6c4b536bbdaf350eb0181
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e8e813d8162b9a191b6760366b52783e7c8609f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408648"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301984"
 ---
 # <a name="compiler-error-c2081"></a>Erro do compilador C2081
 
-'identifier': nome ilegal da lista de parâmetros formais
+' identifier ': nome inválido na lista de parâmetros formais
 
 O identificador causou um erro de sintaxe.
 
-Esse erro pode ser causado por usando o estilo antigo para a lista de parâmetros formais. Você deve especificar o tipo dos parâmetros formais na lista de parâmetros formais.
+Esse erro pode ser causado pelo uso do estilo antigo para a lista de parâmetros formais. Você deve especificar o tipo de parâmetros formais na lista de parâmetros formais.
 
 O exemplo a seguir gera C2081:
 
-```
+```c
 // C2081.c
 void func( int i, j ) {}  // C2081, no type specified for j
 ```
 
-Solução possível:
+Resolução possível:
 
-```
+```c
 // C2081b.c
 // compile with: /c
 void func( int i, int j ) {}

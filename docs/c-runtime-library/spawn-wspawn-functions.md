@@ -48,12 +48,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: c4a8b33c2233dc0c680ddbe5063ab6fe25a729b0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 81f4bf6c60a0c0e4011536e8d3bc104bbc33e04f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957270"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301698"
 ---
 # <a name="_spawn-_wspawn-functions"></a>Funções _spawn, _wspawn
 
@@ -130,7 +130,7 @@ As chamadas `_spawnv`, `_spawnve`, `_spawnvp` e `_spawnvpe` são úteis quando h
 
 ## <a name="environment-of-the-spawned-process"></a>Ambiente do processo gerado
 
-Os arquivos abertos quando uma chamada `_spawn` é feita continuam abertos no novo processo. Nas chamadas `_spawnl`, `_spawnlp`, `_spawnv` e `_spawnvp`, o novo processo herda o ambiente do processo de chamada. Você pode usar as chamadas `_spawnle`, `_spawnlpe`, `_spawnve` e `_spawnvpe` para alterar o ambiente do novo processo passando uma lista de configurações de ambiente por meio do argumento `envp`. O argumento `envp` é uma matriz de ponteiros de caractere e cada elemento (exceto o elemento final) dessa matriz aponta para uma cadeia de caracteres terminada em nulo que define uma variável de ambiente. Normalmente, uma cadeia de caracteres assim tem a forma `NAME`=`value`, em que `NAME` é o nome de uma variável de ambiente e `value` é o valor da cadeia de caracteres cuja variável está definida. (Observe que o `value` não está entre aspas duplas.) O elemento final da matriz `envp` deve ser **NULL**. Quando o próprio `envp` é **NULL**, o novo processo gerado herda as configurações de ambiente do processo pai.
+Os arquivos abertos quando uma chamada `_spawn` é feita continuam abertos no novo processo. Nas chamadas `_spawnl`, `_spawnlp`, `_spawnv` e `_spawnvp`, o novo processo herda o ambiente do processo de chamada. Você pode usar as chamadas `_spawnle`, `_spawnlpe`, `_spawnve` e `_spawnvpe` para alterar o ambiente do novo processo passando uma lista de configurações de ambiente por meio do argumento `envp`. O argumento `envp` é uma matriz de ponteiros de caractere e cada elemento (exceto o elemento final) dessa matriz aponta para uma cadeia de caracteres terminada em nulo que define uma variável de ambiente. Normalmente, uma cadeia de caracteres assim tem a forma `NAME`=`value`, em que `NAME` é o nome de uma variável de ambiente e `value` é o valor da cadeia de caracteres cuja variável está definida. (Observe que `value` não está entre aspas duplas.) O elemento final da matriz de `envp` deve ser **nulo**. Quando o próprio `envp` é **NULL**, o novo processo gerado herda as configurações de ambiente do processo pai.
 
 As funções `_spawn` podem passar todas as informações sobre arquivos abertos, incluindo o modo de tradução para o novo processo. Essas informações são passadas em modo real por meio da entrada `C_FILE_INFO` no ambiente. O código de inicialização normalmente processa essa entrada e, em seguida, a exclui do ambiente. No entanto, se uma função `_spawn` gerar um processo não C, essa entrada permanecerá no ambiente. O ambiente de impressão mostra os caracteres de gráfico na cadeia de caracteres definição para essa entrada, porque as informações de ambiente são passadas no formato binário em modo real. Isso não deve ter nenhum outro efeito em operações normais. No modo protegido, as informações de ambiente são transmitidas na forma de texto e, portanto, não contêm nenhum caractere de gráfico.
 
@@ -148,7 +148,7 @@ Se você estiver chamando `_spawn` de uma DLL ou um aplicativo GUI e desejar red
 
 ## <a name="example"></a>Exemplo
 
-```
+```c
 // crt_spawn.c
 // This program accepts a number in the range
 // 1-8 from the command line. Based on the number it receives,
@@ -229,7 +229,7 @@ child process output
 from SPAWN!
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Controle de processo e de ambiente](../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](../c-runtime-library/reference/abort.md)<br/>

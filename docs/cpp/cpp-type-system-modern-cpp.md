@@ -3,12 +3,12 @@ title: Sistema do tipo C++
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 1f12f7505438dc995aaf8a045fd903488e9ff092
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 5755c7818182c5e26c5b3df6407fbe259bfdbcf3
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246597"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301568"
 ---
 # <a name="c-type-system"></a>Sistema do tipo C++
 
@@ -24,9 +24,7 @@ O conceito do *tipo* é muito importante no C++. Cada variável, argumento de fu
 
 ## <a name="specifying-variable-and-function-types"></a>Especificando tipos de variável e de função
 
-C++é uma linguagem *fortemente tipada* e também é *digitada estaticamente*; cada objeto tem um tipo e esse tipo nunca é alterado (não deve ser confundido com objetos de dados estáticos).
-**Quando você declara uma variável** em seu código, deve especificar seu tipo explicitamente ou usar a palavra-chave **auto** para instruir o compilador a deduzir o tipo do inicializador.
-**Quando você declara uma função** em seu código, deve especificar o tipo de cada argumento e seu valor de retorno, ou **void** se nenhum valor for retornado pela função. A exceção se dá quando você está usando modelos de função, que permitem argumentos de tipos arbitrários.
+C++é uma linguagem *fortemente tipada* e também é *digitada estaticamente*; cada objeto tem um tipo e esse tipo nunca é alterado (não deve ser confundido com objetos de dados estáticos). Quando você declara uma variável em seu código, deve especificar seu tipo explicitamente ou usar a palavra-chave **auto** para instruir o compilador a deduzir o tipo do inicializador. Quando você declara uma função em seu código, deve especificar o tipo de cada argumento e seu valor de retorno, ou **void** se nenhum valor for retornado pela função. A exceção se dá quando você está usando modelos de função, que permitem argumentos de tipos arbitrários.
 
 Após a primeira declaração de uma variável, você não pode alterar seu tipo em um momento posterior. No entanto, você pode copiar o valor da variável ou o valor de retorno de uma função para outra variável de tipo diferente. Essas operações são chamadas de *conversões de tipo*, que às vezes são necessárias, mas também são fontes potenciais de perda ou incorreção de dados.
 
@@ -55,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 Ao contrário de algumas linguagens, C++ não tem tipo base universal do qual todos os outros tipos são derivados. O idioma inclui muitos *tipos fundamentais*, também conhecidos como *tipos internos*. Isso inclui tipos numéricos, como **int**, **Double**, **Long**, **bool**, mais os tipos **Char** e **wchar_t** para caracteres ASCII e Unicode, respectivamente. Todos os tipos fundamentais (exceto **bool**, **Double**, **wchar_t** e os tipos relacionados) têm todas as versões não assinadas, que modificam o intervalo de valores que a variável pode armazenar. Por exemplo, um **int**, que armazena um inteiro com sinal de 32 bits, pode representar um valor de-2.147.483.648 a 2.147.483.647. Um **int não assinado**, que também é armazenado como 32 bits, pode armazenar um valor de 0 a 4.294.967.295. O número total de valores possíveis em cada caso é o mesmo; somente o intervalo é diferente.
 
-Os tipos fundamentais são reconhecidos pelo compilador, que tem regras internas que controlam que operações você poderá executar neles e como eles serão convertidos em outros tipos fundamentais. Para obter uma lista completa de tipos internos e seus limites de tamanho e numérico, consulte [tipos fundamentais](../cpp/fundamental-types-cpp.md).
+Os tipos fundamentais são reconhecidos pelo compilador, que tem regras internas que controlam que operações você poderá executar neles e como eles serão convertidos em outros tipos fundamentais. Para obter uma lista completa de tipos internos e seus limites de tamanho e numérico, consulte [tipos internos](../cpp/fundamental-types-cpp.md).
 
 A ilustração a seguir mostra os tamanhos relativos dos tipos internos:
 
@@ -63,16 +61,16 @@ A ilustração a seguir mostra os tamanhos relativos dos tipos internos:
 
 A tabela a seguir lista os tipos fundamentais usados com mais frequência:
 
-|Tipo|Size|Comentário|
+|{1&gt;Tipo&lt;1}|Tamanho|Comentário|
 |----------|----------|-------------|
 |int|4 bytes|A opção padrão para valores integrais.|
 |double|8 bytes|A opção padrão para valores de ponto flutuante.|
 |{1&gt;bool&lt;1}|1 byte|Representa valores que podem ser true ou false.|
 |char|1 byte|Use os caracteres ASCII em cadeias de caracteres do estilo C mais antigo ou objetos std::string que nunca precisarão ser convertidos em UNICODE.|
 |wchar_t|2 bytes|Representa os valores de caractere "largos" que podem ser codificados no formato UNICODE (UTF-16 no Windows, outros sistemas operacionais podem ser diferentes). Esse é o tipo de caractere usado em cadeias de caracteres do tipo `std::wstring`.|
-|caractere de&nbsp;não assinado|1 byte|O C++ não tem o tipo `byte` interno.  Use unsigned char para representar um valor de bytes.|
+|unsigned&nbsp;char|1 byte|O C++ não tem o tipo `byte` interno.  Use unsigned char para representar um valor de bytes.|
 |unsigned int|4 bytes|Escolha padrão para sinalizadores de bit.|
-|long long|8 bytes|Representa valores inteiros muito grandes.|
+|{1&gt;{2&gt;long long&lt;2}&lt;1}|8 bytes|Representa valores inteiros muito grandes.|
 
 ## <a name="the-void-type"></a>O tipo void
 
@@ -157,7 +155,7 @@ Para obter mais informações sobre ponteiros em geral, consulte [ponteiros](../
 
 Na programação Win32 clássica para C e C++, a maioria das funções usa typedefs e macros #define específicas do Windows (definidas em `windef.h`) para especificar os tipos de parâmetros e valores de retorno. Esses tipos de dados do Windows são basicamente apenas nomes especiais (aliases) fornecidos para tiposC++ C/internos. Para obter uma lista completa desses TYPEDEFs e definições de pré-processador, consulte [tipos de dados do Windows](/windows/win32/WinProg/windows-data-types). Alguns desses typedefs, como HRESULT e LCID, são úteis e descritivos. Outros, como INT, não têm significado especial e são apenas aliases para tipos C++ fundamentais. Outros tipos de dados do Windows têm nomes que foram mantidos desde a época da programação em C e de processadores de 16 bits, e não têm finalidade ou significado em hardware ou sistemas operacionais modernos. Também há tipos de dados especiais associados à biblioteca de Windows Runtime, listados como [Windows Runtime tipos de dados base](/windows/win32/WinRT/base-data-types). Em C++ moderno, a orientação geral é dar preferência aos tipos C++ fundamentais, a menos que o tipo do Windows comunique qualquer significado adicional sobre como o valor deve ser interpretado.
 
-## <a name="more-information"></a>Mais informações
+## <a name="more-information"></a>Mais Informações
 
 Para obter mais informações sobre o sistema de tipos C++, consulte os tópicos a seguir.
 
@@ -166,8 +164,8 @@ Para obter mais informações sobre o sistema de tipos C++, consulte os tópicos
 |[Tipos de valor](../cpp/value-types-modern-cpp.md)|Descreve *tipos de valor* juntamente com problemas relacionados ao seu uso.|
 |[Conversões de tipo e segurança de tipo](../cpp/type-conversions-and-type-safety-modern-cpp.md)|Descreve problemas de conversão de tipos comuns e mostra como evitá-los.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Bem-vindo de volta paraC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
-[Biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+[Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)

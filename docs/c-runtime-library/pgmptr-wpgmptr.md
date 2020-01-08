@@ -12,14 +12,14 @@ helpviewer_keywords:
 - _pgmptr function
 - pgmptr function
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
-ms.openlocfilehash: 6991dfe90e58352b26d7c914e1601a68674b8a5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: beff0401d0aa2aa21819e58618ef4c02795d4393
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749861"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300151"
 ---
-# <a name="pgmptr-wpgmptr"></a>_pgmptr, _wpgmptr
+# <a name="_pgmptr-_wpgmptr"></a>_pgmptr, _wpgmptr
 
 O caminho do arquivo executável. Preterido; use [_get_pgmptr](../c-runtime-library/reference/get-pgmptr.md) e [_get_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md).
 
@@ -48,7 +48,7 @@ Quando um programa não é executado da linha de comando, o `_pgmptr` pode ser i
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_tpgmptr`|`_pgmptr`|`_pgmptr`|`_wpgmptr`|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 |Variável|Cabeçalho necessário|
 |--------------|---------------------|
@@ -58,7 +58,7 @@ Quando um programa não é executado da linha de comando, o `_pgmptr` pode ser i
 
 O programa a seguir demonstra o uso de `_pgmptr`.
 
-```
+```c
 // crt_pgmptr.c
 // compile with: /W3
 // The following program demonstrates the use of _pgmptr.
@@ -75,6 +75,6 @@ int main( void )
 
 É possível usar `_wpgmptr` alterando `%Fs` para `%S` e `main` para `wmain`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Variáveis globais](../c-runtime-library/global-variables.md)

@@ -1,17 +1,17 @@
 ---
 title: CATSTR
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - CATSTR
 helpviewer_keywords:
 - CATSTR directive
 ms.assetid: ae893190-8247-4435-a74e-de2f00db052f
-ms.openlocfilehash: 3dc888e29c8db173a7624e41ccb9904cd27552e9
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: ca2cee09f0fd109028178c4fbbc88ac15f859675
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398856"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315180"
 ---
 # <a name="catstr"></a>CATSTR
 
@@ -25,6 +25,7 @@ Concatena itens de texto.
 
 Cada item de texto pode ser uma cadeia de caracteres literal, uma constante precedida por um **%** ou a cadeia de caracteres retornada por uma função de macro. **CATSTR** é um sinônimo de [TEXTEQU](textequ.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)
+[Referência de diretivas](directives-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

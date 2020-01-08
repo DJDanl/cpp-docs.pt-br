@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: aa258eaba34feec8ea25d780ea6392f195e37508
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 97a8de0a7fd0f278e6b0e3730a52ca3d0be6e07a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944684"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298994"
 ---
 # <a name="_cgets-_cgetws"></a>_cgets, _cgetws
 
@@ -45,7 +45,7 @@ Obtém uma cadeia de caracteres do console. Estão disponíveis versões mais se
 >  Essas funções estão obsoletas. A partir do Visual Studio 2015, elas não estão disponíveis no CRT. As versões seguras dessas funções, _cgets_s e _cgetws_s, ainda estão disponíveis. Para obter informações sobre essas funções alternativas, consulte [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).
 
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+>  Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -89,18 +89,18 @@ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |`_cgets`|\<conio.h>|
 |`_cgetws`|\<conio.h> ou \<wchar.h>|
 
-Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md).
+Para obter informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
-```
+```c
 // crt_cgets.c
 // compile with: /c /W3
 // This program creates a buffer and initializes
@@ -142,7 +142,7 @@ Line Length = 16
 Text = A line of input.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [E/S de porta e console](../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch, _getwch](../c-runtime-library/reference/getch-getwch.md)

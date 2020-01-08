@@ -1,42 +1,35 @@
 ---
 title: Convenções lexicais
+description: Descreve elementos básicos de C++ programas como palavras-chave, identificadores, literais e conjuntos de caracteres.
 ms.custom: index-page
-ms.date: 11/04/2016
+ms.date: 12/10/2019
 helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 03f9efff-bb95-45ef-9157-0a3fac809ccf
-ms.openlocfilehash: 92ab9319ece7ed995cf8a2e49983e0ab92ef83cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a96878b2c1f3ca34ab69147d53b0108b3f8363aa
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216389"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301438"
 ---
 # <a name="lexical-conventions"></a>Convenções lexicais
 
 Esta seção apresenta os elementos fundamentais de um programa em C++. Você usa esses elementos, chamados de "elementos léxicos" ou "tokens", para construir instruções, definições, declarações etc. que são usadas para construir programas completos. Os elementos léxicos a seguir são abordados nesta seção:
 
-- [Visão geral da translação de arquivo](overview-of-file-translation.md)
-- [Conjuntos de caracteres](../cpp/character-sets.md)
-
-- [Tokens](../cpp/tokens-cpp.md)
-
+- [Tokens e conjuntos de caracteres](../cpp/character-sets.md)
 - [Comentários](../cpp/comments-cpp.md)
-
 - [Identificadores](../cpp/identifiers-cpp.md)
-
 - [Palavras-chave](../cpp/keywords-cpp.md)
-
 - [Pontuadores](../cpp/punctuators-cpp.md)
-
-- [Numérico, booliano e literais de ponteiro](../cpp/numeric-boolean-and-pointer-literals-cpp.md)
-
-- [Literais de cadeia de caracteres e de caracteres](../cpp/string-and-character-literals-cpp.md)
-
+- [Literais numéricos, Boolianos e de ponteiro](../cpp/numeric-boolean-and-pointer-literals-cpp.md)
+- [Cadeias de caracteres e literais de caracteres](../cpp/string-and-character-literals-cpp.md)
 - [Literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md)
 
-## <a name="see-also"></a>Consulte também
+Para obter mais informações sobre C++ como os arquivos de origem são analisados, consulte [fases de tradução](../preprocessor/phases-of-translation.md).
+
+## <a name="see-also"></a>Veja também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
-[Programa e ligação](program-and-linkage-cpp.md)
+[Unidades de tradução e vinculação](program-and-linkage-cpp.md)

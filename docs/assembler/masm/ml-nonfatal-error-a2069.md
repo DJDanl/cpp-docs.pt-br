@@ -1,18 +1,18 @@
 ---
 title: Erro não fatal A2069 (ML)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A2069
 helpviewer_keywords:
 - A2069
 ms.assetid: 57dbf072-da61-4306-8d41-a4d9c97fec1a
-ms.openlocfilehash: e4fb648f4bc7e9166eba8d1e537de5819f7dcd57
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 9c55057c9f69745c0e5791bd4e2c0743b1af52dd
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74855830"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316870"
 ---
 # <a name="ml-nonfatal-error-a2069"></a>Erro não fatal A2069 (ML)
 
@@ -20,6 +20,6 @@ ms.locfileid: "74855830"
 
 Um ou mais operandos foram especificados com uma instrução que não usa operandos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Mensagens de erro de ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Mensagens de erro de ML](ml-error-messages.md)

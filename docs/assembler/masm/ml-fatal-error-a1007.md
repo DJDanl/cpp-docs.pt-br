@@ -1,18 +1,18 @@
 ---
 title: Erro fatal A1007 (ML)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A1007
 helpviewer_keywords:
 - A1007
 ms.assetid: bcf9c826-beb3-4e93-91fe-1ffd34995fbf
-ms.openlocfilehash: 01633b4fa084b7d5e14af5a5c6e51e3dca684d2a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: c9527769e0d9397de90f49cbce98b2cca42bed50
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856911"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317117"
 ---
 # <a name="ml-fatal-error-a1007"></a>Erro fatal A1007 (ML)
 
@@ -22,7 +22,7 @@ O Assembler atingiu seu limite de aninhamento. O limite é de 20 níveis, exceto
 
 Um dos itens a seguir foi aninhado muito profundamente:
 
-- Uma diretiva de alto nível, como [. SE](../../assembler/masm/dot-if.md), [. Repita](../../assembler/masm/dot-repeat.md)ou [. TEMPO](../../assembler/masm/dot-while.md).
+- Uma diretiva de alto nível, como [. SE](dot-if.md), [. Repita](dot-repeat.md)ou [. TEMPO](dot-while.md).
 
 - Uma definição de estrutura.
 
@@ -30,7 +30,7 @@ Um dos itens a seguir foi aninhado muito profundamente:
 
 - Uma definição de procedimento.
 
-- Uma diretiva [PUSHCONTEXT](../../assembler/masm/pushcontext.md) (o limite é 10).
+- Uma diretiva [PUSHCONTEXT](pushcontext.md) (o limite é 10).
 
 - Uma definição de segmento.
 
@@ -38,6 +38,6 @@ Um dos itens a seguir foi aninhado muito profundamente:
 
 - Uma macro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Mensagens de erro de ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Mensagens de erro de ML](ml-error-messages.md)

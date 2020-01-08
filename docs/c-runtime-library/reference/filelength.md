@@ -1,6 +1,6 @@
 ---
 title: filelength
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - filelength
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - filelength function
 ms.assetid: 5fbc1912-7822-498d-bbf4-8bada87cf9b9
-ms.openlocfilehash: e9e74e42badb89d53e7c5b785762d02fa436bc1c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1ea5953e0ae7bc16987b16a70f11285ace18bd98
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957299"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299423"
 ---
 # <a name="filelength"></a>filelength
 
-Essa função POSIX foi preterida. Em vez disso, use [_filelength](filelength-filelengthi64.md) compatível com ISO C++.
+O nome da função específica da Microsoft `filelength` é um alias preterido para a função [_filelength](filelength-filelengthi64.md) . Por padrão, ele gera o [aviso do compilador (nível 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). O nome é preterido porque não segue as regras padrão do C para nomes específicos da implementação. No entanto, a função ainda tem suporte.
+
+É recomendável usar [_filelength](filelength-filelengthi64.md) em vez disso. Ou, você pode continuar a usar esse nome de função e desabilitar o aviso. Para obter mais informações, consulte desligar os nomes de [função](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [de aviso](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) e POSIX.

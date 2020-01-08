@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MMX directive
 ms.assetid: 69d360cb-b530-46e3-9cfe-204d71baa38d
-ms.openlocfilehash: 9385a66448f8e5896b34874b48fce9423579d006
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: b19f63643155357e75710f44d4090744ba3ed2fb
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398139"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317637"
 ---
 # <a name="mmx-32-bit-masm"></a>. MMX (MASM-bit de 32 bits)
 
@@ -21,6 +21,7 @@ Habilita o assembly de instruções MMX ou de instrução única (SIMD). (soment
 
 > **.MMX**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de diretivas](directives-reference.md)
+[Referência de diretivas](directives-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

@@ -1,17 +1,17 @@
 ---
 title: '@CatStr'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@CatStr'
 helpviewer_keywords:
 - '@CatStr symbol'
 ms.assetid: 01fcc590-1ec2-42f6-b868-ed0433297c26
-ms.openlocfilehash: 8c9995365b2fda16721b28805ece13102fed7505
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: d244cb678c082515713d83716f8752000f9ccdea
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74399228"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316454"
 ---
 # <a name="catstr"></a>\@CatStr
 
@@ -21,6 +21,7 @@ Função de macro que concatena uma ou mais cadeias de caracteres. Retorna uma c
 
 > **\@CatStr (** *seqüência1* ⟦ __,__ *seqüência2*... ⟧ **)**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de símbolos](symbols-reference.md)
+[Referência de símbolos](symbols-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

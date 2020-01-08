@@ -1,18 +1,19 @@
 ---
 title: /NXCOMPAT (compatível com Prevenção de Execução de Dados)
-ms.date: 12/29/2017
+description: Descreve a opção de vinculador/NXCOMPAT do Microsoft C/C++ (MSVC), que marca um executável como compatível com o DEP (prevenção de execução de dados).
+ms.date: 12/17/2019
 f1_keywords:
 - /NXCOMPAT
 helpviewer_keywords:
 - /NXCOMPAT linker option
 - -NXCOMPAT linker option
 - NXCOMPAT linker option
-ms.openlocfilehash: 7c788f5ec499f0edf0c44f1ff269af9767af6c08
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f3a0906a49e3524fff3e1ef1643d1eceee28f169
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492670"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298981"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (compatível com Prevenção de Execução de Dados)
 
@@ -30,8 +31,6 @@ Por padrão, **/NXCOMPAT** está on.
 
 Para obter mais informações sobre a prevenção de execução de dados, consulte estes artigos:
 
-- [Uma descrição detalhada do recurso DEP (prevenção de execução de dados)](https://support.microsoft.com/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
-
 - [Prevenção de execução de dados](/windows/win32/Memory/data-execution-prevention)
 
 - [Prevenção de execução de dados (Windows Embedded)](/previous-versions/windows/embedded/ms913190\(v=winembedded.5\))
@@ -40,7 +39,7 @@ Para obter mais informações sobre a prevenção de execução de dados, consul
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Escolha a página de propriedade da**linha de comando** do**vinculador** > de **Propriedades** > de configuração.
+1. Escolha as **Propriedades de configuração** > **vinculador** > página de propriedades de **linha de comando** .
 
 1. Insira a opção na caixa **Opções adicionais** . Escolha **OK** ou **aplicar** para aplicar a alteração.
 
@@ -48,7 +47,7 @@ Para obter mais informações sobre a prevenção de execução de dados, consul
 
 - Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Referência de vinculador MSVC](linking.md)<br/>
+[referência do vinculador MSVC](linking.md)\
 [Opções de vinculador MSVC](linker-options.md)
