@@ -1,6 +1,6 @@
 ---
 title: lfind
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - lfind
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - lfind function
 ms.assetid: 2528e787-94b6-4740-8a8d-6efc276d1f42
-ms.openlocfilehash: 7e2b79b67e14421e03fe8761a412de9ad4a5e1cc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7a1ac69bbebfea45345c7dae17b18f02b84228cd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950532"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300905"
 ---
 # <a name="lfind"></a>lfind
 
-Essa função POSIX foi preterida. Em vez disso, use [_lfind](lfind.md) compatível com ISO C++ ou [_lfind_s](lfind-s.md) de segurança avançada.
+O nome da função POSIX implementada pela Microsoft `lfind` é um alias preterido para a função [_lfind](lfind.md) . Por padrão, ele gera o [aviso do compilador (nível 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). O nome é preterido porque não segue as regras padrão do C para nomes específicos da implementação. No entanto, a função ainda tem suporte.
+
+É recomendável usar [_lfind](lfind.md) ou [_lfind_s](lfind-s.md) função com segurança avançada em vez disso. Ou, você pode continuar a usar esse nome de função e desabilitar o aviso. Para obter mais informações, consulte desligar os nomes de [função](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [de aviso](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) e POSIX.
