@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 978be97484a259d7ae8f3fd24fecf07d50c4c844
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5de4fc2305ef2ac6e523dcb02782455245b99429
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857964"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302335"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
@@ -57,9 +57,9 @@ A especialização explícita do modelo de classe `complex` a uma classe complex
 
 Para obter mais informações sobre o modelo de classe `complex` e seus membros, consulte [classe complexa](../standard-library/complex-class.md).
 
-**Específico da Microsoft**: os tipos **longos duplos** e **duplos** têm a mesma representação, mas são tipos distintos. Para obter mais informações, consulte [tipos fundamentais](../cpp/fundamental-types-cpp.md).
+**Específico da Microsoft**: os tipos **longos duplos** e **duplos** têm a mesma representação, mas são tipos distintos. Para obter mais informações, consulte [tipos internos](../cpp/fundamental-types-cpp.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // complex_comp_ld.cpp
@@ -115,7 +115,7 @@ Argument of c3 is recovered from c3 using:
 arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho**: \<complexo>
 
