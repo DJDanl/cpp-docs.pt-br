@@ -1,6 +1,7 @@
 ---
 title: strerror, _strerror, _wcserror, __wcserror
-ms.date: 11/04/2016
+description: Descreve as funções do Microsoft C Runtime Library (CRT) strerror, _strerror, _wcserror e __wcserror.
+ms.date: 01/07/2020
 api_name:
 - strerror
 - _strerror
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - __wcserror function
 - error messages, getting
 ms.assetid: 27b72255-f627-43c0-8836-bcda8b003e14
-ms.openlocfilehash: 0b4d70687bc2f428162d035c80d6bc8525a8fb9e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8c9c6850d6620407897b2a3a1dbf32e61f6719c0
+ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958140"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755030"
 ---
 # <a name="strerror-_strerror-_wcserror-__wcserror"></a>strerror, _strerror, _wcserror, __wcserror
 
@@ -60,58 +61,57 @@ Obtém uma cadeia de caracteres de mensagem de erro do sistema (**strerror**, **
 ## <a name="syntax"></a>Sintaxe
 
 ```C
-char *strerror(
-   int errnum
-);
-char *_strerror(
-   const char *strErrMsg
-);
+char * strerror(
+   int errnum );
+
+char * _strerror(
+   const char *strErrMsg );
+
 wchar_t * _wcserror(
-   int errnum
-);
+   int errnum );
+
 wchar_t * __wcserror(
-   const wchar_t *strErrMsg
-);
+   const wchar_t *strErrMsg );
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*errnum*<br/>
+\ *errnum*
 Número do erro.
 
-*strErrMsg*<br/>
+\ *strErrMsg*
 Mensagem fornecida pelo usuário.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Todas essas funções retornam um ponteiro para a cadeia de caracteres de mensagens de erro. Chamadas subsequentes podem substituir a cadeia de caracteres.
+Todas essas funções retornam um ponteiro para uma cadeia de caracteres de mensagem de erro, em um buffer de armazenamento local de thread de Propriedade do tempo de execução. Chamadas posteriores no mesmo thread podem substituir essa cadeia de caracteres.
 
 ## <a name="remarks"></a>Comentários
 
-A função **strerror** mapeia *errnum* para uma cadeia de caracteres de mensagem de erro e retorna um ponteiro para a cadeia de caracteres. Nem **strerror** nem **_strerror** realmente imprime a mensagem: Para isso, você precisa chamar uma função de saída, como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+A função **strerror** mapeia *errnum* para uma cadeia de caracteres de mensagem de erro e retorna um ponteiro para a cadeia de caracteres. As funções **strerror** e **_strerror** não imprimem realmente a mensagem. Para imprimir, chame uma função de saída como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
-if (( _access( "datafile",2 )) == -1 )
+if (( _access( "datafile", 2 )) == -1 )
    fprintf( stderr, _strerror(NULL) );
 ```
 
-Se *strErrMsg* for passado como **NULL**, **_strerror** retornará um ponteiro para uma cadeia de caracteres que contém a mensagem de erro do sistema para a última chamada de biblioteca que produziu um erro. A cadeia de caracteres de mensagens de erro é encerrada pelo caractere newline ('\n'). Se *strErrMsg* não for igual a **NULL**, **_strerror** retornará um ponteiro para uma cadeia de caracteres que contenha (em ordem) sua mensagem de cadeia de caracteres, dois-pontos, um espaço, a mensagem de erro do sistema para a última chamada da biblioteca que produz um erro e uma nova linha espaço. Sua mensagem da cadeia de caracteres pode ter, no máximo, 94 caracteres de comprimento.
+Se *strErrMsg* for passado como **NULL**, **_strerror** retornará um ponteiro para uma cadeia de caracteres. Ele contém a mensagem de erro do sistema para a última chamada de biblioteca que produziu um erro. A cadeia de caracteres de mensagens de erro é encerrada pelo caractere newline ('\n'). Quando *strErrMsg* não é **nulo**, a cadeia de caracteres contém, em ordem: sua cadeia de caracteres *strErrMsg* , dois-pontos, um espaço, a mensagem de erro do sistema e um caractere de nova linha. Sua mensagem de cadeia de caracteres pode ter, no máximo, 94 caracteres de comprimento, em caracteres estreitos ( **_strerror**) ou largos ( **__wcserror**).
 
-O número de erro real para **_strerror** é armazenado na variável [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Para produzir resultados precisos, chame **_strerror** imediatamente após uma rotina de biblioteca retornar com um erro. Caso contrário, as chamadas subsequentes para **strerror** ou **_strerror** podem substituir o valor **errno** .
+O número de erro real para **_strerror** é armazenado na variável [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Para produzir resultados precisos, chame **_strerror** imediatamente depois que uma rotina de biblioteca retornar um erro. Caso contrário, chamadas posteriores para rotinas de biblioteca podem substituir o valor **errno** .
 
 **_wcserror** e **__wcserror** são versões de caracteres largos de **strerror** e **_strerror**, respectivamente.
 
-**_strerror**, **_wcserror**e **__wcserror** não fazem parte da definição de ANSI; Elas são extensões da Microsoft e recomendamos que você não as use onde desejar código portátil. Para compatibilidade com ANSI, use **strerror** em vez disso.
+**_strerror**, **_wcserror**e **__wcserror** são específicos da Microsoft, não fazem parte da biblioteca C padrão. Não recomendamos que você os use onde desejar código portátil. Para compatibilidade com C padrão, use **strerror** em vez disso.
 
 Para obter cadeias de caracteres de erro, recomendamos **strerror** ou **_wcserror** em vez das macros preteridas [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) e [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) e as funções internas preteridas **__sys_errlist** e **__sys_nerr**.
 
-### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
+### <a name="generic-text-routine-mappings"></a>Mapeamentos de rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcserror**|**strerror**|**strerror**|**_wcserror**|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -119,15 +119,15 @@ Para obter cadeias de caracteres de erro, recomendamos **strerror** ou **_wcserr
 |**_strerror**|\<string.h>|
 |**_wcserror**, **__wcserror**|\<string.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
 Veja o exemplo de [perror](perror-wperror.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[clearerr](clearerr.md)<br/>
-[ferror](ferror.md)<br/>
-[perror, _wperror](perror-wperror.md)<br/>
+\ de [manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)
+[clearerr](clearerr.md)\
+[ferror](ferror.md)\
+[perror, _wperror](perror-wperror.md)
