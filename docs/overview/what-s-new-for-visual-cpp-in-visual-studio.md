@@ -3,14 +3,12 @@ title: Novidades do C++ no Visual Studio
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bde8b8e17c3186d22493f099a5f7d1b5a2646a67
-ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754141"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793965"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novidades do C++ no Visual Studio
 
@@ -184,7 +182,7 @@ O IntelliCode agora é fornecido como um componente opcional na carga de trabalh
 
 O IncrediBuild foi incluído como um componente opcional na carga de trabalho **Desenvolvimento para desktop com C++** . O Monitor de Compilação do IncrediBuild foi totalmente integrado no IDE do Visual Studio. Para saber mais, confira [Visualizar a compilação com o Monitor de Compilação do IncrediBuild e o Visual Studio 2019](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/).
 
-## <a name="debugging"></a>Depuração
+## <a name="debugging"></a>{1&gt;Depuração&lt;1}
 
 - Para aplicativos C++ em execução no Windows, os arquivos PDBs agora são carregados em um processo separado de 64 bits. Essa mudança trata de um intervalo de falhas causadas por memória insuficiente no depurador durante a depuração de aplicativos que contêm um grande número de módulos e arquivos PDBs.
 
@@ -312,7 +310,7 @@ A opção [/Zc:noexceptTypes-](../build/reference/zc-noexcepttypes.md) pode ser 
 
 ##### <a name="visual-studio-2017-rtm-version-150"></a>Visual Studio 2017 RTM (versão 15.0)
 
-- Pequenas melhorias de diagnóstico `basic_string` `_ITERATOR_DEBUG_LEVEL != 0`. Acionar uma verificação de IDL no mecanismo de cadeia de caracteres agora relatará o comportamento específico que acionou a verificação. Por exemplo, em vez de "não é possível desreferenciar o iterador de cadeia de caracteres", você verá "não é possível desreferenciar o iterador de cadeia de caracteres porque ele está fora do intervalo (por exemplo, um iterador de fim)".
+- Melhorias de diagnóstico de `_ITERATOR_DEBUG_LEVEL != 0` de `basic_string` menores. Acionar uma verificação de IDL no mecanismo de cadeia de caracteres agora relatará o comportamento específico que acionou a verificação. Por exemplo, em vez de "não é possível desreferenciar o iterador de cadeia de caracteres", você verá "não é possível desreferenciar o iterador de cadeia de caracteres porque ele está fora do intervalo (por exemplo, um iterador de fim)".
 - O operador de atribuição de mudança `std::promise` foi corrigido, pois anteriormente poderia causar bloqueio indefinido no código.
 - Erros de compilador corrigidos, com a conversão implícita de `atomic<T*>` em `T*`.
 - `pointer_traits<Ptr>` agora detecta `Ptr::rebind<U>` corretamente.

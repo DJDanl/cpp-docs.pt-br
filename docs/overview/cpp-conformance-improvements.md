@@ -3,14 +3,12 @@ title: Aprimoramentos de conformidade do C++
 ms.date: 12/04/2019
 description: O Microsoft C++ no Visual Studio está progredindo em direção à plena conformidade com o padrão de linguagem C++20.
 ms.technology: cpp-language
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: de31c2e61f0a10c785d610d3227a659c59b56d38
-ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
+ms.openlocfilehash: e9c2a69c8d33ea692a76a5642a15b581567c2c63
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75546426"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793837"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Aprimoramentos de conformidade do C++ no Visual Studio
 
@@ -95,7 +93,7 @@ int main()
 
 ### <a name="reinterpret_cast-from-an-overloaded-function"></a>`reinterpret_cast` de uma função sobrecarregada
 
-O argumento para `reinterpret_cast` não é um dos contextos em que o endereço de uma função sobrecarregada é permitido. O código a seguir é compilado sem erros no Visual Studio 2017, mas no Visual Studio 2019, ele gera *C2440: não é possível converter de 'overloaded-function' em 'fp'*:
+O argumento para `reinterpret_cast` não é um dos contextos em que o endereço de uma função sobrecarregada é permitido. O código a seguir é compilado sem erros no Visual Studio 2017, mas no Visual Studio 2019, ele gera *C2440: não é possível converter de 'overloaded-function' em 'fp'* :
 
 ```cpp
 int f(int) { return 1; }
@@ -166,7 +164,7 @@ Implementação das características de tipo `remove_cvref` e `remove_cvref_t` d
 
 ### <a name="char8_t"></a>char8_t
 
-[P0482r6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html). O C++20 adiciona um novo tipo de caractere usado para representar unidades de código UTF-8. Os literais de cadeia de caracteres `u8` no C++20 têm o tipo `const char8_t[N]`, em vez de `const char[N]`, que era o caso anteriormente. Alterações semelhantes foram propostas para o padrão C em [N2231](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2231.htm). Sugestões para correção de compatibilidade com versões anteriores do `char8_t` são dadas em [P1423r0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1423r0.html). O compilador do Microsoft C++ adiciona suporte ao `char8_t` no Visual Studio 2019 versão 16.1 quando você especifica a opção do compilador **/Zc:char8_t**. No futuro, haverá suporte a ele com [/std:c++latest](../build/reference/std-specify-language-standard-version.md), que poderá ser revertido para o comportamento do C++17 por meio de **/Zc:char8_t-**. O compilador do EDG que alimenta o IntelliSense ainda não dá suporte a ele; portanto, você verá apenas erros falsos do IntelliSense que não afetam a compilação real.
+[P0482r6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html). O C++20 adiciona um novo tipo de caractere usado para representar unidades de código UTF-8. Os literais de cadeia de caracteres `u8` no C++20 têm o tipo `const char8_t[N]`, em vez de `const char[N]`, que era o caso anteriormente. Alterações semelhantes foram propostas para o padrão C em [N2231](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2231.htm). Sugestões para correção de compatibilidade com versões anteriores do `char8_t` são dadas em [P1423r0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1423r0.html). O compilador do Microsoft C++ adiciona suporte ao `char8_t` no Visual Studio 2019 versão 16.1 quando você especifica a opção do compilador **/Zc:char8_t**. No futuro, haverá suporte a ele com [/std:c++latest](../build/reference/std-specify-language-standard-version.md), que poderá ser revertido para o comportamento do C++17 por meio de **/Zc:char8_t-** . O compilador do EDG que alimenta o IntelliSense ainda não dá suporte a ele; portanto, você verá apenas erros falsos do IntelliSense que não afetam a compilação real.
 
 #### <a name="example"></a>Exemplo
 
@@ -338,7 +336,7 @@ std::equal(std::begin(a), std::end(a), std::begin(b), std::end(b));
 
 ### <a name="effect-of-defining-spaceship-operator-on--and-"></a>Efeito da definição do operador de espaçamento em = = e! =
 
-Uma definição do operador Spaceship (**<=>**) sozinha não irá mais reescrever expressões que envolvam **==** ou **! =** a menos que o operador de espaço esteja marcado como `= default` ([P1185R2](https://wg21.link/p1185r2)). O exemplo a seguir é compilado no Visual Studio 2019 RTW e na versão 16,1, mas produz C2678 no Visual Studio 2019 versão 16,2:
+Uma definição do operador Spaceship ( **<=>** ) sozinha não irá mais reescrever expressões que envolvam **==** ou **! =** a menos que o operador de espaço esteja marcado como `= default` ([P1185R2](https://wg21.link/p1185r2)). O exemplo a seguir é compilado no Visual Studio 2019 RTW e na versão 16,1, mas produz C2678 no Visual Studio 2019 versão 16,2:
 
 ```cpp
 #include <compare>
@@ -392,7 +390,7 @@ bool neq(const S& lhs, const S& rhs) {
 
 ### <a name="stream-extraction-operators-for-char-removed"></a>Operadores de extração de fluxo para char * removidos
 
-Os operadores de extração de fluxo para ponteiro para caracteres foram removidos e substituídos pelos operadores de extração para a matriz de caracteres (por [P0487R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)). WG21 considera que as sobrecargas removidas não são seguras. Em [/std: c + + modo mais recente](../build/reference/std-specify-language-standard-version.md) , o exemplo a seguir agora produz *C2679: binary ' > > ': nenhum operador encontrado que usa um operando à direita do tipo ' Char\*' (ou não há uma conversão aceitável)*:
+Os operadores de extração de fluxo para ponteiro para caracteres foram removidos e substituídos pelos operadores de extração para a matriz de caracteres (por [P0487R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)). WG21 considera que as sobrecargas removidas não são seguras. Em [/std: c + + modo mais recente](../build/reference/std-specify-language-standard-version.md) , o exemplo a seguir agora produz *C2679: binary ' > > ': nenhum operador encontrado que usa um operando à direita do tipo ' Char\*' (ou não há uma conversão aceitável)* :
 
 ```cpp
    char x[42];
@@ -752,7 +750,7 @@ Para evitar o erro deste exemplo, use o operador com o método ToString (): `s +
 
 ### <a name="initializers-for-inline-static-data-members"></a>Inicializadores de membros de dados estáticos embutidos
 
-Acessos a membros inválidos em inicializadores constexpr **embutidos** e **estáticos** agora são detectados corretamente. O exemplo a seguir é compilado sem erro no Visual Studio 2017, mas, no Visual Studio 2019, no modo `/std:c++17`, gera o *erro C2248: não é possível acessar o membro privado declarado na classe 'X'*.
+Acessos a membros inválidos em inicializadores constexpr **embutidos** e **estáticos** agora são detectados corretamente. O exemplo a seguir é compilado sem erro no Visual Studio 2017, mas, no Visual Studio 2019, no modo `/std:c++17`, gera o *erro C2248: não é possível acessar o membro privado declarado na classe 'X'* .
 
 ```cpp
 struct X
@@ -2330,7 +2328,7 @@ Esse novo aviso C4768 é determinado em alguns cabeçalhos do SDK do Windows que
 
 ### <a name="extern_linkage"></a>Vinculação de constexpr externo
 
-Em versões anteriores do Visual Studio, o compilador sempre deu um vínculo interno de variável **constexpr** mesmo quando a variável estava marcada como **externa**. No Visual Studio 2017 versão 15.5, uma nova opção de compilador, (**/Zc:externConstexpr**), habilita o comportamento correto em conformidade com os padrões. No fim das contas, esse comportamento se tornará o padrão.
+Em versões anteriores do Visual Studio, o compilador sempre deu um vínculo interno de variável **constexpr** mesmo quando a variável estava marcada como **externa**. No Visual Studio 2017 versão 15.5, uma nova opção de compilador, ( **/Zc:externConstexpr**), habilita o comportamento correto em conformidade com os padrões. No fim das contas, esse comportamento se tornará o padrão.
 
 ```cpp
 extern constexpr int x = 10;
@@ -2485,7 +2483,7 @@ int main()
 
 Com o **noexcept** no sistema de tipos, as especializações parciais para correspondência de tipos "callable" específicos podem falhar na compilação ou escolha do modelo primário devido a uma especialização parcial ausente para as funções ponteiros para-para-noexcept.
 
-Nesses casos, talvez seja necessário adicionar mais especialidades parciais para manipular os ponteiros de função **noexcept** e os ponteiros **noexcept** para funções de membro. Essas sobrecargas só são válidas no modo **/std:c++17**. Se for necessário manter a compatibilidade com versões anteriores de C++14 e você estiver escrevendo código que outras pessoas consumirão, será necessário proteger essas novas sobrecargas dentro de diretivas `#ifdef`. Se você estiver trabalhando em um módulo independente, em vez de usar proteções `#ifdef`, será possível compilar apenas com a opção **/Zc:noexceptTypes-**.
+Nesses casos, talvez seja necessário adicionar mais especialidades parciais para manipular os ponteiros de função **noexcept** e os ponteiros **noexcept** para funções de membro. Essas sobrecargas só são válidas no modo **/std:c++17**. Se for necessário manter a compatibilidade com versões anteriores de C++14 e você estiver escrevendo código que outras pessoas consumirão, será necessário proteger essas novas sobrecargas dentro de diretivas `#ifdef`. Se você estiver trabalhando em um módulo independente, em vez de usar proteções `#ifdef`, será possível compilar apenas com a opção **/Zc:noexceptTypes-** .
 
 O código a seguir é compilado em **/std:c++14**, mas falha em **/std:c++17** com "erro C2027: uso do tipo indefinido 'A\<T>'":
 
@@ -2591,7 +2589,7 @@ struct D : B<T*> {
 };
 ```
 
-O Visual Studio 2017 versão 15,7, no modo **/std: c++ 17** , requer a palavra-chave**TypeName** na instrução **using** em D. Sem**TypeName**, o compilador gera o aviso C4346: *' B < T\*>:: Type ': o nome dependente não é um tipo* e erro C2061: *erro de sintaxe: identificador ' tipo '*:
+O Visual Studio 2017 versão 15,7, no modo **/std: c++ 17** , requer a palavra-chave**TypeName** na instrução **using** em D. Sem**TypeName**, o compilador gera o aviso C4346: *' B < T\*>:: Type ': o nome dependente não é um tipo* e erro C2061: *erro de sintaxe: identificador ' tipo '* :
 
 ```cpp
 template<typename T>
@@ -2698,7 +2696,7 @@ Para corrigir o erro, altere a segunda linha para `using  X = T;`.
 
 [__declspec](../cpp/declspec.md) não é mais permitido no lado direito de uma definição de modelo de alias. Esse código anteriormente era aceito, mas ignorado pelo compilador, e nunca resultava em um aviso de reprovação quando o alias era usado.
 
-O atributo [\[\[deprecated\]\]](../cpp/attributes.md) de C++ padrão pode ser usado nesse caso e é respeitado no Visual Studio 2017 versão 15.6. O código a seguir agora produz C2760 *erro de sintaxe: token inesperado '__declspec', era esperado 'type specifier'*:
+O atributo [\[\[deprecated\]\]](../cpp/attributes.md) de C++ padrão pode ser usado nesse caso e é respeitado no Visual Studio 2017 versão 15.6. O código a seguir agora produz C2760 *erro de sintaxe: token inesperado '__declspec', era esperado 'type specifier'* :
 
 ```cpp
 template <typename T>
@@ -2785,7 +2783,7 @@ public:
 
 ### <a name="offsetof-with-constant-expressions"></a>`offsetof` com expressões de constante
 
-[offsetof](../c-runtime-library/reference/offsetof-macro.md) normalmente tem sido implementado usando uma macro que requer um [reinterpret_cast](../cpp/reinterpret-cast-operator.md). Esse uso não é válido em contextos que requerem uma expressão de constante, mas usualmente o compilador C++ da Microsoft tem permitido isso. A macro `offsetof` que é fornecida como parte da biblioteca padrão usa corretamente um compilador intrínseco (**__builtin_offsetof**), mas muitas pessoas têm usado o truque da macro para definir seu próprio `offsetof`.
+[offsetof](../c-runtime-library/reference/offsetof-macro.md) normalmente tem sido implementado usando uma macro que requer um [reinterpret_cast](../cpp/reinterpret-cast-operator.md). Esse uso não é válido em contextos que requerem uma expressão de constante, mas usualmente o compilador C++ da Microsoft tem permitido isso. A macro `offsetof` que é fornecida como parte da biblioteca padrão usa corretamente um compilador intrínseco ( **__builtin_offsetof**), mas muitas pessoas têm usado o truque da macro para definir seu próprio `offsetof`.
 
 No Visual Studio 2017 versão 15.8, o compilador restringe as áreas em que esses operadores `reinterpret_cast` podem aparecer no modo padrão para ajudar o código a ficar em conformidade com o comportamento do C++ padrão. Em [/permissive-](../build/reference/permissive-standards-conformance.md), as restrições são ainda mais rígidas. O uso do resultado de um `offsetof` em locais que requerem expressões de constante pode resultar em um código que emite o aviso C4644 *uso do padrão offsetof baseado em macro em expressões de constantes não padrão; use offsetof definido na biblioteca padrão C++ em vez de* ou C2975 *argumento de modelo inválido, uma expressão de constante em tempo de compilação é esperada*.
 
@@ -2927,9 +2925,9 @@ cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-O compilador gera C5050 para ambos os casos: *aviso C5050: possível ambiente incompatível ao importar o módulo ' s': C++ versões incompatíveis.  Versão do módulo "201402" atual "201703"*.
+O compilador gera C5050 para ambos os casos: *aviso C5050: possível ambiente incompatível ao importar o módulo ' s': C++ versões incompatíveis.  Versão do módulo "201402" atual "201703"* .
 
-O compilador também gera C7536 sempre que o arquivo .ifc é adulterado. O cabeçalho da interface do módulo contém um hash SHA2 do conteúdo abaixo dele. Na importação, o arquivo .ifc é inserido em hash da mesma maneira e verificado em relação ao hash fornecido no cabeçalho. Se eles não corresponderem, o erro C7536 será gerado: *verificações de integridade com falha de IFC.  SHA2 esperado: ' 66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6 '*.
+O compilador também gera C7536 sempre que o arquivo .ifc é adulterado. O cabeçalho da interface do módulo contém um hash SHA2 do conteúdo abaixo dele. Na importação, o arquivo .ifc é inserido em hash da mesma maneira e verificado em relação ao hash fornecido no cabeçalho. Se eles não corresponderem, o erro C7536 será gerado: *verificações de integridade com falha de IFC.  SHA2 esperado: ' 66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6 '* .
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>Ordenação parcial envolvendo aliases e contextos não deduzidos
 

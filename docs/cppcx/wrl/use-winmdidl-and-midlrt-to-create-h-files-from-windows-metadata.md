@@ -1,16 +1,16 @@
 ---
-title: 'Como: usar winmdidl.exe e midlrt.exe para criar arquivos .h com metadados do Windows'
+title: Como usar winmdidl.exe e midlrt.exe para criar arquivos .h a partir de metadados do Windows
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: 8288fc11fd53fdef423a57d0faefbaa7c06326aa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3aa7cd28a37ec7187cc3c87927a83e45eeda2a4e
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500426"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791664"
 ---
-# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Como: usar winmdidl.exe e midlrt.exe para criar arquivos .h com metadados do Windows
+# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Como usar winmdidl.exe e midlrt.exe para criar arquivos .h a partir de metadados do Windows
 
 O Winmdidl. exe e o midlrt. exe permitem a interação de nível C++ com entre o código nativo e os componentes do Windows Runtime. O Winmdidl. exe usa como entrada um arquivo. winmd que contém metadados para um componente Windows Runtime e gera um arquivo IDL. Midlrt. exe converte esse arquivo IDL em arquivos de cabeçalho que C++ o código pode consumir. Ambas as ferramentas são executadas na linha de comando.
 
@@ -20,11 +20,11 @@ Você usa essas ferramentas em dois cenários principais:
 
 - Gerando arquivos de proxy e stub para tipos de eventos definidos pelo usuário em um componente Windows Runtime. Para obter mais informações, consulte [eventos personalizados e acessadores de eventos em componentes do Windows Runtime](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
 
-Essas ferramentas são necessárias apenas para a análise de arquivos. winmd personalizados. Os arquivos. idl e. h dos componentes do sistema operacional Windows já foram gerados para você. Por padrão, no Windows 8.1, eles estão localizados em \Program Files (x86)\\\Windows Kits\8.1\Include\winrt.
+Essas ferramentas são necessárias apenas para a análise de arquivos. winmd personalizados. Os arquivos. idl e. h dos componentes do sistema operacional Windows já foram gerados para você. Por padrão, no Windows 8.1, eles estão localizados em \Program Files (x86) \Windows Kits\8.1\Include\winrt\\.
 
 ## <a name="location-of-the-tools"></a>Local das ferramentas
 
-Por padrão, em [Windows 8.1, winmdidl. exe e midlrt. exe estão localizados em C:\Program Files (x86)\\\Windows Kits\8.1. As versões das ferramentas também estão disponíveis nas pastas \bin\x86\ e \bin\x64\.
+Por padrão, em [Windows 8.1, winmdidl. exe e midlrt. exe estão localizados em C:\Arquivos de programas (x86) \Windows Kits\8.1\\. As versões das ferramentas também estão disponíveis nas pastas \bin\x86\ e \bin\x64\.
 
 ## <a name="winmdidl-command-line-arguments"></a>Argumentos de linha de comando Winmdidl
 
@@ -42,7 +42,7 @@ Não usado.
 Exibe o tempo de execução total na saída do console.
 
 **/OutDir:** <em>dir</em><br/>
-Especifica um diretório de saída. Se o caminho contiver espaços, use aspas. O diretório de saída padrão é  *\<drive >* :\\\Users *\<username >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual\\Studio 12,0.
+Especifica um diretório de saída. Se o caminho contiver espaços, use aspas. O diretório de saída padrão é *\<unidade >* : \users\\ *\<nome de usuário >* arquivos \AppData\Local\VirtualStore\Program (x86) \microsoft Visual Studio 12,0\\.
 
 **/banner:** <em>file</em><br/>
 Especifica um arquivo que contém texto personalizado para preceder a mensagem de direitos autorais padrão e o número de versão winmdidl na parte superior do arquivo. idl gerado. Se o caminho contiver espaços, use aspas.
@@ -65,11 +65,11 @@ O exemplo a seguir mostra um comando winmdidl em um prompt de comando do Visual 
 
 O exemplo a seguir mostra a exibição do console de winmdidl que indica que a operação foi bem-sucedida.
 
-**Gerando\\c:\users\giraffe\documents \Test_for_winmdidl.idl**
+**Gerando c:\users\giraffe\documents\\\ Test_for_winmdidl. idl**
 
 Em seguida, midlrt é executado no arquivo IDL gerado. Observe que o argumento **metadata_dir** é especificado após o nome do arquivo. idl. O caminho de \WinMetadata\ é necessário — é o local para Windows. winmd.
 
-`C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\mblome\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
+`C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\username\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
 
 ## <a name="remarks"></a>Comentários
 

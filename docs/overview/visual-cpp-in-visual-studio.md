@@ -5,14 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: ea047aca90b03179c0a39cb653e0b9bc08306c64
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 74e1b34549a8e8d0f1e22e6f40aacbd4429b272f
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626212"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793781"
 ---
 # <a name="c-in-visual-studio"></a>C++ no Visual Studio
 
@@ -136,7 +134,7 @@ Saiba mais sobre como trabalhar com formatos e codificações diferentes de text
 
 As seções a seguir fornecem informações sobre as diferentes bibliotecas do C e C++ que estão incluídas no Visual Studio.
 
-[Referência da biblioteca em tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[Referência da biblioteca em tempo de execução do C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 Inclui alternativas aprimoradas de segurança a funções que são conhecidas por impor problemas de segurança.
 
 [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)<br/>
@@ -175,8 +173,8 @@ Saiba mais sobre os novos recursos e as informações mais recentes dos desenvol
 [Comunidade de Desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/)<br/>
 Saiba como obter ajuda, arquivar bugs e fazer sugestões para o Visual Studio.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência da linguagem C](../c-language/c-language-reference.md)
-- [Referência da biblioteca em tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)
+- [Referência da biblioteca em tempo de execução do C](../c-runtime-library/c-run-time-library-reference.md)
 - [Intrínsecos do compilador e linguagem assembly](../intrinsics/compiler-intrinsics-and-assembly-language.md)
