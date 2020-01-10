@@ -1,15 +1,14 @@
 ---
 title: Criar projetos multiplataforma do C++ no Visual Studio
 description: Como configurar, compilar e depurar um C++ projeto CMake de software livre no Visual Studio que tem como alvo o Linux e o Windows.
-author: mikeblome
 ms.topic: tutorial
-ms.date: 11/08/2019
-ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.date: 01/08/2020
+ms.openlocfilehash: 83d71d3078e892a51aef159b225fecec2b581f20
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303258"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791757"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Tutorial: criar C++ projetos de plataforma cruzada no Visual Studio
 
@@ -24,7 +23,7 @@ Neste tutorial, você aprenderá como:
 > * Adicionar uma conexão a um computador Linux
 > * compilar e depurar o mesmo destino no Linux
 
-## <a name="prerequisites"></a>{1&gt;Pré-requisitos&lt;1}
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 * Configurar o Visual Studio para Desenvolvimento em C++ Multiplataforma
   * Primeiro, [Instale o Visual Studio](https://visualstudio.microsoft.com/vs/) e escolha o **desenvolvimento de C++ desktop com** o e o **desenvolvimento do Linux C++ com cargas**de trabalho. Essa instalação mínima é de apenas 3 GB. Dependendo da velocidade de download, a instalação não deve levar mais de 10 minutos.
@@ -44,10 +43,10 @@ Neste tutorial, você aprenderá como:
     chmod +x cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh
     ```
 
-  * Você pode ver as opções para executar o script com `-–help`. Recomendamos que você use a opção `–prefix` para especificar a instalação no caminho **/usr/local** , pois esse é o local padrão onde o Visual Studio procura CMake. O exemplo a seguir mostra o script do Linux-x86_64. Altere-o conforme necessário se você estiver usando uma plataforma de destino diferente.
+  * Você pode ver as opções para executar o script com `-–help`. Recomendamos que você use a opção `–prefix` para especificar a instalação no caminho **/usr** , porque **/usr/bin** é o local padrão onde o Visual Studio procura CMake. O exemplo a seguir mostra o script do Linux-x86_64. Altere-o conforme necessário se você estiver usando uma plataforma de destino diferente.
 
     ```cmd
-    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr/local
+    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr
     ```
 
 * Git para Windows instalado em seu computador Windows.
