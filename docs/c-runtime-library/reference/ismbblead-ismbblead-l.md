@@ -1,6 +1,7 @@
 ---
 title: _ismbblead, _ismbblead_l
-ms.date: 11/04/2016
+description: Descreve as funções de _ismbblead e _ismbblead_l do Microsoft C Runtime Library (CRT).
+ms.date: 01/08/2020
 api_name:
 - _ismbblead_l
 - _ismbblead
@@ -35,16 +36,16 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-ms.openlocfilehash: c0f9ec748a86d5d1413cf4f881234d786c2a2d78
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6a7bb992eeeb9c66a7cbdea0ed34cf797d374617
+ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954061"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755048"
 ---
 # <a name="_ismbblead-_ismbblead_l"></a>_ismbblead, _ismbblead_l
 
-Testa um caractere para determinar se ele é um byte inicial ou um caractere multibyte.
+Testa um caractere para determinar se é um byte de Lead de um caractere multibyte.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -60,13 +61,13 @@ int _ismbblead_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+\ de *c*
 Inteiro a ser testado.
 
-*locale*<br/>
+\ de *localidade*
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna um valor diferente de zero se o inteiro *c* for o primeiro byte de um caractere multibyte.
 
@@ -74,15 +75,19 @@ Retorna um valor diferente de zero se o inteiro *c* for o primeiro byte de um ca
 
 Caracteres multibyte consistem em um byte inicial seguido de um byte à direita. Bytes iniciais são diferenciados por estarem em um intervalo específico de um determinado conjunto de caracteres. Por exemplo, na página de código 932 somente, os bytes de Lead variam de 0x81-0x9F e 0xE0-0xFC.
 
-**_ismbblead** usa a localidade atual para o comportamento dependente de localidade. **_ismbblead_l** é idêntico, exceto pelo fato de que ele usa a localidade transmitida em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_ismbblead** usa a localidade atual para o comportamento dependente de localidade. o **_ismbblead_l** é idêntico, exceto pelo fato de que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
+Quando a localidade é UTF-8, **_ismbblead** e **_ismbblead_l** sempre retorna 0 (false), se *c* é um byte de cliente potencial ou não.
+
+**_ismbblead** e **_ismbblead_l** são específicos da Microsoft, não fazem parte da biblioteca C padrão. Não recomendamos que você os use onde desejar código portátil. Para compatibilidade com C padrão, use **mbrlen** em vez disso.
+
+### <a name="generic-text-routine-mappings"></a>Mapeamentos de rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_istlead**|Sempre retorna falso|**_ismbblead**|Sempre retorna falso|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 |Rotina|Cabeçalho necessário|Cabeçalho opcional|
 |-------------|---------------------|---------------------|
@@ -93,7 +98,8 @@ Caracteres multibyte consistem em um byte inicial seguido de um byte à direita.
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Classificação de byte](../../c-runtime-library/byte-classification.md)<br/>
-[Rotinas _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+\ de [classificação de bytes](../../c-runtime-library/byte-classification.md)
+[rotinas de _ismbb](../../c-runtime-library/ismbb-routines.md)\
+[mbrlen](mbrlen.md)
