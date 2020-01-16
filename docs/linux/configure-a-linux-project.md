@@ -2,12 +2,12 @@
 title: Configurar um projeto do C++ Linux no Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
-ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960698"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031375"
 ---
 # <a name="configure-a-linux-project"></a>Configurar um projeto do Linux
 
@@ -51,13 +51,13 @@ Para alterar as configurações relacionadas ao computador Linux remoto, defina 
 
    ::: moniker range="vs-2019"
 
-   **Visual Studio 2019 versão 16.1**: Para ter o Subsistema do Windows para Linux como destino, clique na seta para baixo em **Conjunto de ferramentas da plataforma** e escolha **WSL_1_0**. As outras opções remotas desaparecerão e o caminho para o shell padrão do WSL será exibido em seu lugar:
+   **Visual Studio 2019 versão 16,1**: para direcionar o subsistema do Windows para Linux, clique na seta para baixo para o **conjunto de ferramentas de plataforma** e escolha **WSL_1_0**. As outras opções remotas desaparecerão e o caminho para o shell padrão do WSL será exibido em seu lugar:
 
    ![Computador de build do WSL](media/wsl-remote-vs2019.png)
 
    Se você tiver instalações do WSL lado a lado, especifique outro caminho aqui. Para obter mais informações sobre como gerenciar várias distribuições, confira [Gerenciar e configurar o Subsistema do Windows para Linux](/windows/wsl/wsl-config#set-a-default-distribution).
 
-   Especifique outro destino para depuração na página **Propriedades de Configuração** > **Depuração**.
+   Você pode especificar um destino diferente para depuração na página **Propriedades de configuração** > **depuração** .
 
    ::: moniker-end
 
@@ -96,6 +96,9 @@ Como toda a compilação está acontecendo em um computador remoto (ou no WSL), 
 
 Quando você adiciona uma nova conexão no **Gerenciador de Conexões**, o Visual Studio detecta automaticamente os diretórios de inclusão para o compilador no sistema remoto. Visual Studio compacta e copia os arquivos para um diretório no seu computador local do Windows. Depois disso, sempre que você usar essa conexão em um projeto do Visual Studio ou CMake, os cabeçalhos nesses diretórios serão usados para fornecer IntelliSense.
 
+> [!NOTE]
+> No Visual Studio 2019 versão 16,5 e posterior, a cópia de cabeçalho remoto foi otimizada. Os cabeçalhos agora são copiados sob demanda ao abrir um projeto do Linux ou configurar o CMake para um destino do Linux. A cópia ocorre em segundo plano em uma base por projeto, com base nos compiladores especificados do projeto. Para obter mais informações, consulte [melhorias na precisão e no desempenho do Linux IntelliSense](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/).
+
 Essa funcionalidade depende de o computador Linux ter zip instalado. Você pode instalar o zip usando este comando apt-get:
 
 ```cmd
@@ -120,7 +123,7 @@ Habilite o log ajudar a solucionar problemas:
 
 ::: moniker-end
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Defina propriedades de build e compilador](../build/working-with-project-properties.md)<br/>
 [Propriedades gerais de C++ (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
