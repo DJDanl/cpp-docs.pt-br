@@ -4,12 +4,12 @@ description: Descreve como usar o Visual Studio para definir as configurações 
 ms.date: 01/13/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: ff1de8241c2489e675f82f469f1cf697a72f5034
-ms.sourcegitcommit: 275b71219d2a8bd5d78f87e21dd909e9968c2f44
+ms.openlocfilehash: 5e627f02b5245baede6e92268cedfc43957f3abc
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75946808"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031331"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurar sessões de depuração do CMake
 
@@ -73,7 +73,7 @@ Há muitas propriedades *Launch. vs. JSON* para dar suporte a todos os seus cen�
 
 ## <a name="launchvsjson-reference-for-remote-linux-projects"></a>Iniciar a referência do. vs. JSON para projetos remotos do Linux
 
-As propriedades a seguir são específicas para **configurações de depuração remota**. Você também pode [enviar comandos diretamente para o gdb](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) e [habilitar o registro em log do MIEngine](https://github.com/microsoft/MIEngine/wiki/Logging). Essas propriedades permitem ver quais comandos são enviados ao gdb, qual saída o gdb retorna e quanto tempo cada comando leva.
+As propriedades a seguir são específicas para **configurações de depuração remota**. Você também pode [executar comandos do gdb personalizados](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) para enviar comandos diretamente para o depurador subjacente e [habilitar o registro em log do MIEngine](https://github.com/microsoft/MIEngine/wiki/Logging) para ver quais comandos são enviados ao gdb, qual saída o gdb retorna e quanto tempo cada comando leva.
 
 - `cwd`: diretório de trabalho atual para localizar dependências e outros arquivos no computador remoto. A macro `${debugInfo.defaultWorkingDirectory}` pode ser usada. O valor padrão é a raiz do espaço de trabalho remoto, a menos que seja substituído em *CMakeLists. txt*. Esta propriedade é usada somente para configurações remotas; `currentDir` é usado para definir o diretório atual do aplicativo de inicialização para um projeto local.
 
