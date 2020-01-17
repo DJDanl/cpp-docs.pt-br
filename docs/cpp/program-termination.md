@@ -1,44 +1,52 @@
 ---
 title: C++encerramento do programa
-ms.date: 12/10/2019
+description: Descreve as maneiras de exit um C++programa em idioma.
+ms.date: 01/15/2020
 helpviewer_keywords:
 - terminating execution
 - quitting applications
 - exiting applications
 - programs [C++], terminating
 ms.assetid: fa0ba9de-b5f1-4e7b-aa65-e7932068b48c
-ms.openlocfilehash: a0e86cacd951327d39296a183be5ee4fbc36fd15
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+no-loc:
+- exit
+- abort
+- return
+- main
+- atexit
+- void
+ms.openlocfilehash: f83c9d5da5b0a1127603a97fd7946e9cca43a7a5
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301334"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123949"
 ---
 # <a name="c-program-termination"></a>C++encerramento do programa
 
-No C++, você pode sair de um programa das seguintes maneiras:
+No C++, você pode exit um programa das seguintes maneiras:
 
-- Chame a função [Exit](exit-function.md) .
-- Chame a função [Abort](abort-function.md) .
-- Execute uma instrução [Return](return-statement-cpp.md) de `main`.
+- Chame a função [exit](exit-function.md) .
+- Chame a função [abort](abort-function.md) .
+- Execute uma instrução [return](return-statement-cpp.md) da `main`.
 
-## <a name="exit-function"></a>Função exit
+## <a name="opno-locexit-function"></a>Função exit
 
-A função [Exit](../c-runtime-library/reference/exit-exit-exit.md) , declarada em \<STDLIB. h >, encerra C++ um programa. O valor fornecido como um argumento para `exit` é retornado ao sistema operacional como código de retorno do programa ou código de saída. Por convenção, um código de retorno de zero indica que o programa foi encerrado com êxito. Você pode usar as constantes EXIT_FAILURE e EXIT_SUCCESS, também definidas em \<STDLIB. h >, para indicar o êxito ou a falha do seu programa.
+A função [exit](../c-runtime-library/reference/exit-exit-exit.md) , declarada em \<STDLIB. h >, encerra C++ um programa. O valor fornecido como um argumento para `exit` é retornado ao sistema operacional como código de return do programa ou código de exit. Por convenção, um código de return zero significa que o programa foi concluído com êxito. Você pode usar as constantes EXIT_FAILURE e EXIT_SUCCESS, também definidas em \<STDLIB. h >, para indicar o êxito ou a falha do seu programa.
 
-Emitir uma instrução **Return** da função `main` é equivalente a chamar a função `exit` com o valor de retorno como seu argumento.
+A emissão de uma instrução **return** da função `main` é equivalente a chamar a função `exit` com o valor return como seu argumento.
 
-## <a name="abort-function"></a>Função abort
+## <a name="opno-locabort-function"></a>Função abort
 
-A função [Abort](../c-runtime-library/reference/abort.md) , também declarada no arquivo de inclusão padrão \<STDLIB. h >, encerra C++ um programa. A diferença entre `exit` e `abort` é que `exit` permite que C++ o processamento de encerramento de tempo de execução ocorra (os destruidores de objeto global serão chamados), enquanto `abort` encerra o programa imediatamente. A função `abort` ignora o processo de destruição normal para objetos estáticos globais inicializados. Ele também ignora qualquer processamento especial que foi especificado usando a função [atexit](../c-runtime-library/reference/atexit.md) .
+A função [abort](../c-runtime-library/reference/abort.md) , também declarada no arquivo de inclusão padrão \<STDLIB. h >, encerra C++ um programa. A diferença entre `exit` e `abort` é que `exit` permite que C++ o processamento de encerramento de tempo de execução ocorra (os destruidores de objeto global serão chamados), enquanto `abort` encerra o programa imediatamente. A função `abort` ignora o processo de destruição normal para objetos estáticos globais inicializados. Ele também ignora qualquer processamento especial que foi especificado usando a função [atexit](../c-runtime-library/reference/atexit.md) .
 
-## <a name="atexit-function"></a>Função atexit
+## <a name="opno-locatexit-function"></a>Função atexit
 
-Use a função [atexit](../c-runtime-library/reference/atexit.md) para especificar ações que são executadas antes do encerramento do programa. Nenhum objeto estático global inicializado antes da chamada para **atexit** é destruído antes da execução da função de processamento de saída.
+Use a função [atexit](../c-runtime-library/reference/atexit.md) para especificar ações que são executadas antes do encerramento do programa. Nenhum objeto estático global inicializado antes da chamada para **atexit** é destruído antes da execução da função de processamento de exit.
 
-## <a name="return-statement-in-main"></a>instrução de retorno no principal
+## <a name="opno-locreturn-statement-in-opno-locmain"></a>return instrução em main
 
-Emitir uma instrução [Return](return-statement-cpp.md) de `main` é funcionalmente equivalente a chamar a função `exit`. Considere o exemplo a seguir:
+A emissão de uma instrução de [return](return-statement-cpp.md) de `main` é funcionalmente equivalente à chamada da função `exit`. Considere o exemplo a seguir:
 
 ```cpp
 // return_statement.cpp
@@ -50,15 +58,15 @@ int main()
 }
 ```
 
-As instruções `exit` e **Return** no exemplo anterior são funcionalmente idênticas. No entanto, C++ o requer que as funções que têm tipos de retorno diferentes de **void** retornem um valor. A instrução **Return** permite que você retorne um valor de `main`.
+As instruções `exit` e **return** no exemplo anterior são funcionalmente idênticas. No entanto, C++ o requer que as funções que têm tipos de return diferentes de **void** return um valor. A instrução **return** permite return um valor de `main`.
 
 ## <a name="destruction-of-static-objects"></a>Destruição de objetos estáticos
 
-Quando você chama `exit` ou executa uma instrução **Return** de `main`, os objetos estáticos são destruídos na ordem inversa de sua inicialização (após a chamada para `atexit`, se houver). O exemplo a seguir mostra como realizar essa inicialização e as tarefas de limpeza.
+Quando você chama `exit` ou executa uma instrução **return** da `main`, os objetos estáticos são destruídos na ordem inversa de sua inicialização (após a chamada para `atexit`, se houver). O exemplo a seguir mostra como realizar essa inicialização e as tarefas de limpeza.
 
 ### <a name="example"></a>Exemplo
 
-No exemplo a seguir, os objetos estáticos `sd1` e `sd2` são criados e inicializados antes da entrada para `main`. Depois que esse programa é encerrado usando a instrução **Return** , primeiro `sd2` é destruído e, em seguida, `sd1`. O destruidor da classe `ShowData` fecha os arquivos associados a esses objetos estáticos.
+No exemplo a seguir, os objetos estáticos `sd1` e `sd2` são criados e inicializados antes da entrada para `main`. Depois que este programa é encerrado usando a instrução **return** , o primeiro `sd2` é destruído e, em seguida, `sd1`. O destruidor da classe `ShowData` fecha os arquivos associados a esses objetos estáticos.
 
 ```cpp
 // using_exit_or_return1.cpp
@@ -107,7 +115,6 @@ int main() {
 }
 ```
 
-
 ## <a name="see-also"></a>Veja também
 
-[main: inicialização do programa](main-program-startup.md)
+[main de função e argumentos de linha de comando](main-function-command-line-args.md)

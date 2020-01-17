@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C++], array-element initializers
 - aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: fd926177dd7540d8dc1e8512e9f17e20a0b8238c
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661611"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123962"
 ---
 # <a name="initializers"></a>Inicializadores
 
@@ -173,7 +173,7 @@ int main() {
 }
 ```
 
-Para obter mais informações sobre a inicialização de objetos estáticos globais, consulte [considerações de inicialização adicionais](../cpp/additional-startup-considerations.md).
+Para obter mais informações sobre a inicialização de objetos estáticos globais, consulte [principal função e argumentos de linha de comando](main-function-command-line-args.md).
 
 ### <a name="value-initialization"></a>Inicialização de valor
 
@@ -224,7 +224,7 @@ A inicialização da cópia é a inicialização de um objeto usando um objeto d
 
 - um membro de dados não estático é inicializado usando um sinal de igual
 
-- Membros de classe, struct e Union são inicializados pela inicialização de cópia durante a inicialização de agregação. Consulte [inicialização](#agginit) de agregação para obter exemplos.
+- Membros de classe, struct e Union são inicializados pela inicialização de cópia durante a inicialização de agregação. Consulte [inicialização de agregação](#agginit) para obter exemplos.
 
 O código a seguir mostra vários exemplos de inicialização de cópia:
 
@@ -427,7 +427,7 @@ myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> Membros de matriz que são declarados, mas não explicitamente inicializados durante a inicialização de agregação, são inicializados com zero, como no `myArr3` acima.
+> Membros de matriz que são declarados, mas não explicitamente inicializados durante a inicialização de agregação, são inicializados com zero, como em `myArr3` acima.
 
 #### <a name="initializing-unions-and-structs"></a>Inicializando uniões e structs
 
@@ -534,10 +534,10 @@ Ao inicializar uma variável do tipo de referência, o compilador usa o gráfico
 ![Grafo de decisão para inicialização de tipos de referência](../cpp/media/vc38s71.gif "Grafo de decisão para inicialização de tipos de referência") <br/>
 Grafo de decisão para inicialização de tipos de referência
 
-Referências a tipos **voláteis** (declarados como *identificador*de *TypeName* <strong>&</strong> **volátil** ) podem ser inicializadas com objetos **voláteis** do mesmo tipo ou com objetos que não foram declarados como **voláteis** . No entanto, eles não podem ser inicializados com objetos **const** desse tipo. Da mesma forma, referências a tipos **const** (declarados como *identificador* **const** *TypeName* <strong>&</strong> ) podem ser inicializadas com objetos **const** do mesmo tipo (ou qualquer coisa que tenha uma conversão para esse tipo ou com objetos que não foram declarados como **const**). No entanto, eles não podem ser inicializados com objetos **voláteis** desse tipo.
+Referências a **tipos voláteis** (declarados como *TypeName* de<strong>&</strong> de *identificador* **volátil** ) podem ser inicializadas com objetos **voláteis** do mesmo tipo ou com objetos que não foram declarados como **voláteis**. No entanto, eles não podem ser inicializados com objetos **const** desse tipo. Da mesma forma, as referências a tipos **const** (declarados como identificador **const** <strong>&</strong> *Identifier*) podem ser inicializadas com objetos **const** do mesmo tipo (ou qualquer coisa que tenha uma conversão para esse tipo ou com objetos que não tenham sido declarados como **const**). No entanto, eles não podem ser inicializados com objetos **voláteis** desse tipo.
 
 As referências que não são qualificadas com a palavra-chave **const** ou **volatile** só podem ser inicializadas com objetos declarados como nem **const** nem **volátil**.
 
 ### <a name="initialization-of-external-variables"></a>Inicialização de variáveis externas
 
-As declarações de variáveis automáticas, estáticas e externas podem conter inicializadores. No entanto, as declarações de variáveis externas podem conter inicializadores somente se as variáveis nãoforem declaradas como extern.
+As declarações de variáveis automáticas, estáticas e externas podem conter inicializadores. No entanto, as declarações de variáveis externas podem conter inicializadores somente se as variáveis não forem declaradas como **extern**.

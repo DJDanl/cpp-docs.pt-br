@@ -1,6 +1,7 @@
 ---
 title: getenv, _wgetenv
-ms.date: 11/04/2016
+description: Descreve a biblioteca de tempo de execução do Microsoft C getenv e as funções de _wgetenv.
+ms.date: 01/15/2020
 api_name:
 - getenv
 - _wgetenv
@@ -33,19 +34,38 @@ helpviewer_keywords:
 - _tgetenv function
 - _wgetenv function
 ms.assetid: 3b9cb9ab-a126-4e0e-a44f-6c5a7134daf4
-ms.openlocfilehash: 7cacd8588bcc74c6d064da370ce6254aada56c12
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+no-loc:
+- getenv
+- _wgetenv
+- getenv_s
+- _wgetenv_s
+- _putenv_s
+- main
+- wmain
+- errno
+- EINVAL
+- ERANGE
+- _environ
+- _wenviron
+- _putenv
+- _wputenv
+- _tgetenv_s
+- _tzset
+- _dupenv_s
+- _wdupenv_s
+ms.openlocfilehash: 5e06e0c66d1ee60a067c2e27fedb5ca1dca7109a
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955050"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123988"
 ---
-# <a name="getenv-_wgetenv"></a>getenv, _wgetenv
+# <a name="opno-locgetenv-opno-loc_wgetenv"></a>getenv, _wgetenv
 
 Obtém um valor do ambiente atual. Versões mais seguras dessas funções estão disponíveis; consulte [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -63,29 +83,29 @@ wchar_t *_wgetenv(
 *varname*<br/>
 Nome da variável de ambiente.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna um ponteiro para a entrada da tabela de ambiente que contém *VarName*. Não é seguro modificar o valor da variável de ambiente usando o ponteiro retornado. Use a função [_putenv](putenv-wputenv.md) para modificar o valor de uma variável de ambiente. O valor de retorno será **nulo** se *VarName* não for encontrado na tabela de ambiente.
 
 ## <a name="remarks"></a>Comentários
 
-A função **getenv** pesquisa a lista de variáveis de ambiente para *VarName*. **getenv** não diferencia maiúsculas de minúsculas no sistema operacional Windows. **getenv** e **_putenv** usam a cópia do ambiente apontado pela variável global **_environ** para acessar o ambiente. o **getenv** funciona apenas nas estruturas de dados acessíveis para a biblioteca de tempo de execução e não no ambiente "segmento" criado para o processo pelo sistema operacional. Portanto, os programas que usam o argumento *envp* para [Main](../../cpp/main-program-startup.md) ou [wmain](../../cpp/main-program-startup.md) podem recuperar informações inválidas.
+A função **getenv** pesquisa a lista de variáveis de ambiente para *VarName*. **getenv** não diferencia maiúsculas de minúsculas no sistema operacional Windows. **getenv** e **_putenv** usar a cópia do ambiente apontado pela variável global **_environ** para acessar o ambiente. **getenv** funciona apenas nas estruturas de dados acessíveis para a biblioteca de tempo de execução e não no ambiente "segmento" criado para o processo pelo sistema operacional. Portanto, os programas que usam o argumento *envp* para [main](../../cpp/main-function-command-line-args.md) ou [wmain](../../cpp/main-function-command-line-args.md) podem recuperar informações inválidas.
 
 Se *VarName* for **NULL**, essa função invocará um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá **errno** como **EINVAL** e retornará **NULL**.
 
-**_wgetenv** é uma versão de caractere largo do **getenv**; o argumento e o valor de retorno de **_wgetenv** são cadeias de caracteres largos. A variável global **_wenviron** é uma versão de caractere largo de **_environ**.
+**_wgetenv** é uma versão de caractere largo do **getenv** ; o argumento e o valor de retorno de **_wgetenv** são cadeias de caracteres largos. A variável global **_wenviron** é uma versão de caractere largo do **_environ** .
 
-Em um programa MBCS (por exemplo, em um programa SBCS ASCII), **_wenviron** é inicialmente **nulo** porque o ambiente é composto por cadeias de caracteres multibyte. Em seguida, na primeira chamada para [_wputenv](putenv-wputenv.md), ou na primeira chamada para **_wgetenv** se um ambiente (MBCS) já existir, um ambiente de cadeia de caracteres largo correspondente será criado e, em seguida, apontado pelo **_wenviron**.
+Em um programa MBCS (por exemplo, em um programa SBCS ASCII), **_wenviron** é inicialmente **nulo** porque o ambiente é composto por cadeias de caracteres multibyte. Em seguida, na primeira chamada para [_wputenv](putenv-wputenv.md), ou na primeira chamada para **_wgetenv** se um ambiente (MBCS) já existir, um ambiente de cadeia de caracteres largo correspondente será criado e, em seguida, apontado por **_wenviron** .
 
-Da mesma forma em um programa Unicode ( **_wmain**), o **_Environ** é inicialmente **nulo** porque o ambiente é composto por cadeias de caracteres largos. Em seguida, na primeira chamada para **_putenv**, ou na primeira chamada para **getenv** se um ambiente (Unicode) já existir, um ambiente MBCS correspondente será criado e, em seguida, apontado pelo **_environ**.
+Da mesma forma em um programa Unicode ( **_wmain**), o **_environ** é inicialmente **nulo** porque o ambiente é composto por cadeias de caracteres largos. Em seguida, na primeira chamada para **_putenv** , ou na primeira chamada para **getenv** se um ambiente (Unicode) já existir, um ambiente MBCS correspondente será criado e, em seguida, apontado por **_environ** .
 
-Quando duas cópias do ambiente (MBCS e Unicode) existirem simultaneamente em um programa, o sistema de tempo de execução deverá manter as duas cópias, fazendo com que o tempo de execução fique mais lento. Por exemplo, sempre que você chamar **_putenv**, uma chamada para **_wputenv** também será executada automaticamente, para que as duas cadeias de caracteres de ambiente correspondam.
+Quando duas cópias do ambiente (MBCS e Unicode) existirem simultaneamente em um programa, o sistema de tempo de execução deverá manter as duas cópias, fazendo com que o tempo de execução fique mais lento. Por exemplo, sempre que você chama **_putenv** , uma chamada para **_wputenv** também é executada automaticamente, para que as duas cadeias de caracteres de ambiente correspondam.
 
 > [!CAUTION]
 > Em casos raros, quando o sistema de tempo de execução mantém uma versão Unicode e uma versão multibyte do ambiente, as duas versões de ambiente podem não corresponder exatamente. Isso acontece porque, embora qualquer cadeia de caracteres multibyte exclusiva seja mapeada para uma cadeia de caracteres Unicode exclusiva, o mapeamento de uma cadeia de caracteres Unicode exclusiva para uma cadeia de caracteres multibyte não é necessariamente exclusivo. Para obter mais informações, consulte [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
-> As famílias de funções **_putenv** e **_getenv** não são thread-safe. **_getenv** poderia retornar um ponteiro de cadeia de caracteres enquanto **_putenv** estiver modificando a cadeia de caracteres, causando falhas aleatórias. As chamadas para essas funções devem estar sincronizadas.
+> As famílias de **_putenv** e **_getenv** de funções não são thread-safe. **_getenv** poderia retornar um ponteiro de cadeia de caracteres enquanto **_putenv** está modificando a cadeia de caracteres, causando falhas aleatórias. As chamadas para essas funções devem estar sincronizadas.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -93,16 +113,16 @@ Quando duas cópias do ambiente (MBCS e Unicode) existirem simultaneamente em um
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tgetenv**|**getenv**|**getenv**|**_wgetenv**|
 
-Para verificar ou alterar o valor da variável de ambiente do **TZ** , use **getenv**, **_putenv** e **_tzset** conforme necessário. Para obter mais informações sobre o **TZ**, consulte [_tzset](tzset.md) e [_daylight, TimeZone e _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+Para verificar ou alterar o valor da variável de ambiente do **TZ** , use **getenv** , **_putenv** e **_tzset** conforme necessário. Para obter mais informações sobre o **TZ**, consulte [_tzset](tzset.md) e [_daylight, fuso horário e _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**getenv**|\<stdlib.h>|
 |**_wgetenv**|\<stdlib.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -146,8 +166,8 @@ Original LIB variable is: C:\progra~1\devstu~1\vc\lib
 New LIB variable is: c:\mylib;c:\yourlib
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Controle de processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_putenv, _wputenv](putenv-wputenv.md)<br/>
 [Constantes ambientais](../../c-runtime-library/environmental-constants.md)<br/>
