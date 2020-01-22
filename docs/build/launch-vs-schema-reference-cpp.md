@@ -3,16 +3,16 @@ title: Iniciar. referência de esquema do vs.C++JSON ()
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 49b4f4e6c4359837e820684c29b0e102a08c3fd5
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: 5d8f657dda58d581ccc3441a777fdf31470ef25f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556637"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518225"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>Iniciar. referência de esquema do vs.C++JSON ()
 
-Use o arquivo *Launch. vs. JSON* para configurar parâmetros de depuração. Para criar o arquivo. Clique com o botão direito do mouse em um arquivo executável em **Gerenciador de soluções** e escolha **depurar e iniciar configurações**. Escolha a opção que mais se aproximará do seu projeto e, em seguida, use as propriedades a seguir para modificar a configuração conforme necessário:
+Use o arquivo *Launch. vs. JSON* para configurar parâmetros de depuração. Para criar o arquivo. Clique com o botão direito do mouse em um arquivo executável em **Gerenciador de soluções** e escolha **depurar e iniciar configurações**. Escolha a opção que mais se aproximará do seu projeto e, em seguida, use as propriedades a seguir para modificar a configuração conforme necessário. Para obter mais informações sobre como depurar projetos do CMake, consulte [Configurar sessões de depuração do cmake](/cpp/build/configure-cmake-debugging-sessions).
 
 ## <a name="default-properties"></a>Propriedades padrão
 

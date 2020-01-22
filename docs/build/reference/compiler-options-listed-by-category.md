@@ -1,15 +1,15 @@
 ---
 title: Opções de compilador listadas por categoria
-ms.date: 08/08/2019
+ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 8c99b2dd60e6c2266d5095a477ee4a5b2e0c8bd0
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 0734cdc6fb7d8b543c6415bfd6b4f98469703586
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685192"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518407"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opções de compilador listadas por categoria
 
@@ -64,6 +64,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para uma li
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Gera transcendentais rápidos.|
 |[/QIfist](qifist-suppress-ftol.md)|Preterido. Suprime a chamada da função auxiliar `_ftol` quando é necessária uma conversão de um tipo de ponto flutuante para um tipo integral. (apenas x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Remove comandos `fwait` dentro de blocos `try`.|
+|[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|Atenua o impacto no desempenho da atualização do microcódigo da Errata do Intel JCC.|
 |[/Qpar](qpar-auto-parallelizer.md)|Habilita a paralelização automática de loops.|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|Habilita os níveis de relatório para paralelização automática.|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Usa instruções de movimento de inteiro para valores de ponto flutuante e desabilita determinadas otimizações de carregamento de ponto flutuante.|
@@ -105,7 +106,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para uma li
 |[/u](u-u-undefine-symbols.md)|Remove todas as macros predefinidas.|
 |[/X](x-ignore-standard-include-paths.md)|Ignora o diretório de inclusão padrão.|
 
-## <a name="language"></a>Idioma
+## <a name="language"></a>{1&gt;Idioma&lt;1}
 
 |Opção|Finalidade|
 |------------|-------------|
@@ -219,13 +220,13 @@ As opções experimentais só podem ser suportadas por determinadas versões do 
 |[/Og](og-global-optimizations.md)|Preterido. Usa otimizações globais.|
 |[/QIfist](qifist-suppress-ftol.md)|Preterido. Uma vez usado para especificar como converter de um tipo de ponto flutuante para um tipo integral.|
 |[/V](v-version-number.md)|Preterido. Define a cadeia de caracteres da versão do arquivo. obj.|
-|[/Wp64](wp64-detect-64-bit-portability-issues.md)|Obsoleto. Detecta problemas de portabilidade de 64 bits.|
+|[/Wp64](wp64-detect-64-bit-portability-issues.md)|{1&gt;{2&gt;Obsoleta. &lt;2}&lt;1} Detecta problemas de portabilidade de 64 bits.|
 |[/Yd](yd-place-debug-information-in-object-file.md)|Preterido. Coloca informações de depuração completas em todos os arquivos de objeto. Em vez disso, use [/Zi](z7-zi-zi-debug-information-format.md) .|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|Preterido. Desabilita a conformidade no escopo do loop for.|
 |[/Ze](za-ze-disable-language-extensions.md)|Preterido. Habilita extensões de linguagem.|
 |[/Zg](zg-generate-function-prototypes.md)|Removido no Visual Studio 2015. Gera protótipos de função.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Referência de build C/C++](c-cpp-building-reference.md)<br/>
 [Opções do compilador MSVC](compiler-options.md)<br/>

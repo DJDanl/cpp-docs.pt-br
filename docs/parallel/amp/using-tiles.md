@@ -2,34 +2,34 @@
 title: Usando blocos
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c935134e033d12fc140c8d377ef59d0b47265fc
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405360"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518251"
 ---
 # <a name="using-tiles"></a>Usando blocos
 
-Você pode usar tiling para maximizar a aceleração do seu aplicativo. Tiling divide threads em subconjuntos retangulares iguais ou *blocos*. Se você usar um tamanho de bloco apropriado e o algoritmo lado a lado, você pode obter aceleração ainda mais a partir do código C++ AMP. Os componentes básicos do tiling são:
+Você pode usar a divisão para maximizar a aceleração do seu aplicativo. A divisão divide threads em subconjuntos ou *blocos*iguais retangulares. Se você usar um tamanho de bloco apropriado e um algoritmo de lado, poderá obter ainda mais aceleração do seu C++ código de amp. Os componentes básicos de colocação em blocos são:
 
-- `tile_static` variáveis. O principal benefício do tiling é o ganho de desempenho `tile_static` acesso. Acesso a dados no `tile_static` memória pode ser significativamente mais rápida do que o acesso aos dados no espaço global (`array` ou `array_view` objetos). Uma instância de um `tile_static` variável é criada para cada bloco, e todos os threads no tile têm acesso à variável. Em um típico algoritmo lado a lado, os dados são copiados para `tile_static` memória uma vez da memória global e, em seguida, acessados muitas vezes a partir de `tile_static` memória.
+- variáveis de `tile_static`. O principal benefício de disposição em blocos é o lucro de desempenho do acesso `tile_static`. O acesso a dados na memória `tile_static` pode ser significativamente mais rápido do que o acesso aos dados no espaço global (`array` ou `array_view` objetos). Uma instância de uma variável de `tile_static` é criada para cada bloco e todos os threads no bloco têm acesso à variável. Em um algoritmo em ladrilho típico, os dados são copiados para `tile_static` memória uma vez da memória global e, em seguida, acessados muitas vezes da memória `tile_static`.
 
-- [tile_barrier:: wait método](reference/tile-barrier-class.md#wait). Uma chamada para `tile_barrier::wait` suspende a execução do thread atual até que todos os threads no mesmo tile atinjam a chamada para `tile_barrier::wait`. Você não pode garantir a ordem em que os threads serão executados, só que não há threads no tile serão executado após a chamada para `tile_barrier::wait` até que todos os threads tenham atingido a chamada. Isso significa que, ao usar o `tile_barrier::wait` método, você pode executar tarefas em uma base de tile-por-tile em vez de uma base de thread-por-thread. Um algoritmo típico de lado a lado tiver o código para inicializar o `tile_static` memória para o bloco inteiro seguido por uma chamada para `tile_barrer::wait`. Código que segue `tile_barrier::wait` contém cálculos que exigem acesso a todos os `tile_static` valores.
+- [método tile_barrier:: Wait](reference/tile-barrier-class.md#wait). Uma chamada para `tile_barrier::wait` suspende a execução do thread atual até que todos os threads no mesmo bloco alcancem a chamada para `tile_barrier::wait`. Você não pode garantir a ordem em que os threads serão executados, apenas que nenhum thread no bloco será executado após a chamada para `tile_barrier::wait` até que todos os threads tenham atingido a chamada. Isso significa que, usando o método `tile_barrier::wait`, você pode executar tarefas em uma base bloco por bloco, em vez de thread a thread. Um algoritmo de colocação em cascata típico tem código para inicializar a `tile_static` memória para o bloco inteiro seguido por uma chamada para `tile_barrer::wait`. O código a seguir `tile_barrier::wait` contém cálculos que exigem acesso a todos os valores de `tile_static`.
 
-- Indexação local e global. Você tem acesso ao índice do thread relativo a todo `array_view` ou `array` objeto e o índice relativo ao tile. Usando o índice local pode tornar seu código mais fácil de ler e depurar. Normalmente, você usa a indexação local para acessar `tile_static` variáveis e indexação global para acessar `array` e `array_view` variáveis.
+- Indexação local e global. Você tem acesso ao índice do thread em relação a todo o `array_view` ou `array` objeto e o índice em relação ao bloco. Usar o índice local pode tornar seu código mais fácil de ler e depurar. Normalmente, você usa a indexação local para acessar variáveis de `tile_static` e a indexação global para acessar `array` e `array_view` variáveis.
 
-- [Classe tiled_extent](../../parallel/amp/reference/tiled-extent-class.md) e [classe tiled_index](../../parallel/amp/reference/tiled-index-class.md). Você usa um `tiled_extent` do objeto, em vez de um `extent` do objeto no `parallel_for_each` chamar. Você usa um `tiled_index` do objeto, em vez de um `index` do objeto no `parallel_for_each` chamar.
+- classe de [tiled_extent](../../parallel/amp/reference/tiled-extent-class.md) e classe de [tiled_index](../../parallel/amp/reference/tiled-index-class.md). Você usa um objeto `tiled_extent` em vez de um objeto `extent` na chamada `parallel_for_each`. Você usa um objeto `tiled_index` em vez de um objeto `index` na chamada `parallel_for_each`.
 
-Para tirar proveito de lado a lado, seu algoritmo deve dividir o domínio de cálculo em blocos e, em seguida, copie os dados do bloco em `tile_static` variáveis para acesso mais rápido.
+Para aproveitar a divisão, o algoritmo deve particionar o domínio de computação em blocos e, em seguida, copiar os dados do bloco em variáveis `tile_static` para acesso mais rápido.
 
-## <a name="example-of-global-tile-and-local-indices"></a>Exemplo de Global, lado a lado, locais e de Tile
+## <a name="example-of-global-tile-and-local-indices"></a>Exemplo de índices globais, de bloco e locais
 
-O diagrama a seguir representa uma 8x9 matriz de dados organizados em 2x3 tiles.
+O diagrama a seguir representa uma matriz 8x9 de dados que é organizada em blocos do 2x3.
 
-![8&#45;por&#45;matriz 9 dividido em 2&#45;por&#45;3 blocos](../../parallel/amp/media/usingtilesmatrix.png "8&#45;por&#45;9 matriz dividida em 2&#45;por&#45;3 blocos")
+![8&#45;por&#45;9 matriz divididas em&#45;2&#45;por 3 blocos](../../parallel/amp/media/usingtilesmatrix.png "8&#45;por&#45;9 matriz divididas em&#45;2&#45;por 3 blocos")
 
-O exemplo a seguir exibe o bloco global, e lado a lado local Tile dessa matriz. Uma `array_view` objeto é criado usando elementos do tipo `Description`. O `Description` mantém global, lado a lado, locais e Tile do elemento na matriz. O código na chamada para `parallel_for_each` define os valores do global, lado a lado e índices de locais de cada elemento. A saída exibe os valores de `Description` estruturas.
+O exemplo a seguir exibe os índices global, de bloco e locais desta matriz lado-a-quadro. Um objeto `array_view` é criado usando elementos do tipo `Description`. A `Description` contém os índices global, bloco e local do elemento na matriz. O código na chamada para `parallel_for_each` define os valores dos índices global, bloco e local de cada elemento. A saída exibe os valores nas estruturas de `Description`.
 
 ```cpp
 #include <iostream>
@@ -134,42 +134,42 @@ void TilingDescription() {
     }
 }
 
-void main() {
+int main() {
     TilingDescription();
     char wait;
     std::cin >> wait;
 }
 ```
 
-O trabalho principal do exemplo é na definição do `array_view` objeto e a chamada para `parallel_for_each`.
+O trabalho principal do exemplo é a definição do objeto `array_view` e a chamada para `parallel_for_each`.
 
-1. O vetor dos `Description` estruturas é copiado para um 8x9 `array_view` objeto.
+1. O vetor de estruturas de `Description` é copiado em um objeto de `array_view` 8x9.
 
-2. O `parallel_for_each` método é chamado com um `tiled_extent` objeto como o domínio de cálculo. O `tiled_extent` objeto é criado chamando o `extent::tile()` método o `descriptions` variável. Os parâmetros de tipo da chamada para `extent::tile()`, `<2,3>`, especifica que 2x3 tiles são criados. Portanto, a 8x9 matriz é lado a lado em 12 tiles, quatro linhas e três colunas.
+2. O método `parallel_for_each` é chamado com um objeto `tiled_extent` como o domínio de computação. O objeto `tiled_extent` é criado chamando o método `extent::tile()` da variável `descriptions`. Os parâmetros de tipo da chamada para `extent::tile()`, `<2,3>`, especificam que os blocos 2x3 são criados. Assim, a matriz 8x9 é disposta lado a 12 blocos, quatro linhas e três colunas.
 
-3. O `parallel_for_each` método é chamado usando um `tiled_index<2,3>` objeto (`t_idx`) como o índice. Os parâmetros de tipo do índice (`t_idx`) deve corresponder aos parâmetros de tipo de domínio de cálculo (`descriptions.extent.tile< 2, 3>()`).
+3. O método `parallel_for_each` é chamado usando um objeto `tiled_index<2,3>` (`t_idx`) como o índice. Os parâmetros de tipo do índice (`t_idx`) devem corresponder aos parâmetros de tipo do domínio de computação (`descriptions.extent.tile< 2, 3>()`).
 
-4. Quando cada thread é executado, o índice `t_idx` retorna informações sobre em qual tile o thread está em (`tiled_index::tile` propriedade) e o local do thread dentro do bloco (`tiled_index::local` propriedade).
+4. Quando cada thread é executado, o índice `t_idx` retorna informações sobre o bloco em que o thread está (`tiled_index::tile` Propriedade) e o local do thread dentro do bloco (Propriedade`tiled_index::local`).
 
-## <a name="tile-synchronizationtilestatic-and-tilebarrierwait"></a>Sincronização de Tile — tile_static e tile_barrier:: wait
+## <a name="tile-synchronizationtile_static-and-tile_barrierwait"></a>Sincronização de bloco — tile_static e tile_barrier:: Wait
 
-O exemplo anterior ilustra o layout de bloco e índices, mas não é por si só muito útil.  Lado a lado se torna útil quando os tiles são essenciais para o algoritmo e exploram `tile_static` variáveis. Como todos os threads em um tile têm acesso aos `tile_static` variáveis, chamadas para `tile_barrier::wait` são usados para sincronizar o acesso ao `tile_static` variáveis. Embora todos os threads em um tile tenham acesso ao `tile_static` variáveis, não há nenhuma garantia de ordem de execução de threads no tile. O exemplo a seguir mostra como usar `tile_static` variáveis e o `tile_barrier::wait` método para calcular o valor médio de cada bloco. Aqui estão as chaves para entender o exemplo:
+O exemplo anterior ilustra o layout do bloco e os índices, mas não é muito útil.  O agrupamento se torna útil quando os blocos são integrais ao algoritmo e exploram `tile_static` variáveis. Como todos os threads em um bloco têm acesso a `tile_static` variáveis, chamadas para `tile_barrier::wait` são usadas para sincronizar o acesso às variáveis de `tile_static`. Embora todos os threads em um bloco tenham acesso às variáveis de `tile_static`, não há nenhuma ordem garantida de execução de threads no bloco. O exemplo a seguir mostra como usar variáveis de `tile_static` e o método `tile_barrier::wait` para calcular o valor médio de cada bloco. Aqui estão as chaves para entender o exemplo:
 
-1. Os rawData são armazenados em uma 8x8 matriz.
+1. O rawData é armazenado em uma matriz 8x8.
 
-2. O tamanho do bloco é 2 x 2. Isso cria uma 4x4 grade de blocos e as médias podem ser armazenadas em uma 4x4 matriz, usando um `array` objeto. Há apenas um número limitado de tipos que você pode capturar por referência em uma função restrita por AMP. O `array` classe é um deles.
+2. O tamanho do bloco é 2x2. Isso cria uma grade 4x4 de blocos e as médias podem ser armazenadas em uma matriz 4x4 usando um objeto `array`. Há apenas um número limitado de tipos que você pode capturar por referência em uma função restrita por AMP. A classe `array` é uma delas.
 
-3. O tamanho da matriz e o tamanho da amostra são definidos por meio `#define` instruções, porque os parâmetros de tipo para `array`, `array_view`, `extent`, e `tiled_index` devem ser valores constantes. Você também pode usar `const int static` declarações. Como um benefício adicional, é trivial alterar o tamanho da amostra para calcular a média mais de 4 x 4 blocos.
+3. O tamanho da matriz e o tamanho da amostra são definidos usando instruções `#define`, porque os parâmetros de tipo a serem `array`, `array_view`, `extent`e `tiled_index` devem ser valores constantes. Você também pode usar declarações de `const int static`. Como um benefício adicional, é trivial alterar o tamanho da amostra para calcular a média de blocos de 4x4.
 
-4. Um `tile_static` matriz 2 x 2 valores float de é declarada para cada peça. Embora a declaração esteja no caminho de código para cada thread, apenas uma matriz é criada para cada tile na matriz.
+4. Uma `tile_static` matriz 2x2 de valores float é declarada para cada bloco. Embora a declaração esteja no caminho do código para cada thread, apenas uma matriz é criada para cada bloco na matriz.
 
-5. Há uma linha de código para copiar os valores em cada lado a lado para o `tile_static` matriz. Para cada thread, depois que o valor é copiado para a matriz, a execução no thread para devido a chamada para `tile_barrier::wait`.
+5. Há uma linha de código para copiar os valores em cada bloco para a matriz de `tile_static`. Para cada thread, depois que o valor é copiado para a matriz, a execução no thread é interrompida devido à chamada para `tile_barrier::wait`.
 
-6. Quando todos os threads em um tile tiverem atingido a barreira, pode ser calculada a média. Como o código é executado para cada thread, há um `if` instrução apenas para calcular a média em um thread. A média é armazenada na variável médias. A barreira é, essencialmente, a construção que controla os cálculos pelos Tiles, tanto quanto você pode usar um `for` loop.
+6. Quando todos os threads em um bloco atingirem a barreira, a média poderá ser calculada. Como o código é executado para cada thread, há uma instrução `if` para calcular apenas a média em um thread. A média é armazenada na variável de médias. A barreira é essencialmente a construção que controla os cálculos por bloco, assim como você pode usar um loop de `for`.
 
-7. Os dados a `averages` variável, porque ele é um `array` de objeto, devem ser copiados para o host. Este exemplo usa o operador de conversão de vetor.
+7. Os dados na variável `averages`, porque é um objeto `array`, devem ser copiados de volta para o host. Este exemplo usa o operador de conversão de vetor.
 
-8. O exemplo completo, você pode alterar SAMPLESIZE para 4 e o código é executado corretamente sem outras alterações.
+8. No exemplo completo, você pode alterar SAMPLEs para 4 e o código é executado corretamente sem nenhuma outra alteração.
 
 ```cpp
 #include <iostream>
@@ -252,7 +252,7 @@ int main() {
 
 ## <a name="race-conditions"></a>Condições de corrida
 
-Pode ser tentador criar uma `tile_static` variável chamada `total` e incrementar essa variável para cada thread, como este:
+Pode ser tentador criar uma variável `tile_static` chamada `total` e incrementar essa variável para cada thread, da seguinte maneira:
 
 ```cpp
 // Do not do this.
@@ -263,7 +263,7 @@ t_idx.barrier.wait();
 averages(t_idx.tile[0],t_idx.tile[1]) /= (float) (SAMPLESIZE* SAMPLESIZE);
 ```
 
-O primeiro problema com essa abordagem é que `tile_static` variáveis não podem ter inicializadores. O segundo problema é que há uma condição de corrida na atribuição a `total`, porque todos os threads no tile têm acesso à variável sem nenhuma ordem específica. Você poderia programar um algoritmo para permitir que somente um thread acesse o total em cada barreira, como mostrado a seguir. No entanto, essa solução não é extensível.
+O primeiro problema dessa abordagem é que `tile_static` variáveis não podem ter inicializadores. O segundo problema é que há uma condição de corrida na atribuição para `total`, porque todos os threads no bloco têm acesso à variável em nenhuma ordem específica. Você pode programar um algoritmo para permitir que apenas um thread acesse o total em cada barreira, conforme mostrado a seguir. No entanto, essa solução não é extensível.
 
 ```cpp
 // Do not do this.
@@ -283,25 +283,25 @@ t_idx.barrier.wait();
 
 ## <a name="memory-fences"></a>Limites de memória
 
-Há dois tipos de acessos à memória que devem ser sincronizados — acesso de memória global e `tile_static` acesso à memória. Um `concurrency::array` objeto aloca somente memória global. Um `concurrency::array_view` pode fazer referência a memória global, `tile_static` memória, ou ambos, dependendo de como ele foi construído.  Há dois tipos de memória que devem ser sincronizados:
+Há dois tipos de acessos à memória que devem ser sincronizados — acesso de memória global e `tile_static` acesso à memória. Um objeto `concurrency::array` aloca apenas memória global. Um `concurrency::array_view` pode referenciar memória global, `tile_static` memória ou ambos, dependendo de como ele foi construído.  Há dois tipos de memória que devem ser sincronizados:
 
 - memória global
 
 - `tile_static`
 
-Um *limite de memória* garante que acessos à memória estejam disponíveis para outros threads no quadro de threads e que a memória acessos sejam executados de acordo com a ordem do programa. Para garantir isso, os compiladores e processadores não reordenam leituras e gravações entre o limite. No C++ AMP, um limite de memória é criado por uma chamada para um dos seguintes métodos:
+Um *limite de memória* garante que os acessos de memória estejam disponíveis para outros threads no bloco de threads e que os acessos de memória sejam executados de acordo com a ordem do programa. Para garantir isso, os compiladores e os processadores não reordenam as leituras e gravações na cerca. No C++ amp, um limite de memória é criado por uma chamada para um destes métodos:
 
-- [tile_barrier:: wait método](reference/tile-barrier-class.md#wait): Cria um limite em torno de ambos global e `tile_static` memória.
+- [método tile_barrier:: Wait](reference/tile-barrier-class.md#wait): cria uma cerca em uma memória global e `tile_static`.
 
-- [tile_barrier:: wait_with_all_memory_fence método](reference/tile-barrier-class.md#wait_with_all_memory_fence): Cria um limite em torno de ambos global e `tile_static` memória.
+- [método tile_barrier:: wait_with_all_memory_fence](reference/tile-barrier-class.md#wait_with_all_memory_fence): cria uma cerca em uma memória global e `tile_static`.
 
-- [tile_barrier:: wait_with_global_memory_fence método](reference/tile-barrier-class.md#wait_with_global_memory_fence): Cria um limite em torno de memória global apenas.
+- [método tile_barrier:: wait_with_global_memory_fence](reference/tile-barrier-class.md#wait_with_global_memory_fence): cria uma cerca em apenas memória global.
 
-- [tile_barrier:: wait_with_tile_static_memory_fence método](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): Cria um limite em torno de apenas `tile_static` memória.
+- [método tile_barrier:: wait_with_tile_static_memory_fence](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): cria uma cerca em apenas `tile_static` memória.
 
-Chamar o limite específico que você precisa pode melhorar o desempenho do seu aplicativo. O tipo de barreira afeta como o compilador e o hardware reordenam as instruções. Por exemplo, se você usar um limite de memória global, ele se aplica a acessos de memória global apenas como e por isso, o compilador e o hardware podem reordenar lê e grava `tile_static` variáveis nos dois lados do limite.
+Chamar o limite específico que você precisa pode melhorar o desempenho do seu aplicativo. O tipo de barreira afeta como o compilador e as instruções de reordenação de hardware. Por exemplo, se você usar um limite de memória global, ele se aplicará somente a acessos de memória global e, portanto, o compilador e o hardware poderão reordenar leituras e gravações `tile_static` variáveis nos dois lados da cerca.
 
-No exemplo a seguir, a barreira sincroniza as gravações `tileValues`, um `tile_static` variável. Neste exemplo, `tile_barrier::wait_with_tile_static_memory_fence` é chamado em vez de `tile_barrier::wait`.
+No próximo exemplo, a barreira sincroniza as gravações para `tileValues`, uma variável `tile_static`. Neste exemplo, `tile_barrier::wait_with_tile_static_memory_fence` é chamado em vez de `tile_barrier::wait`.
 
 ```cpp
 // Using a tile_static memory fence.
@@ -329,7 +329,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 });
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Palavra-chave tile_static](../../cpp/tile-static-keyword.md)

@@ -1,40 +1,42 @@
 ---
 title: /Q Opções (operações de nível baixo)
-ms.date: 01/23/2018
+ms.date: 01/08/2020
 f1_keywords:
 - /q
 helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: 6348226aa38d1f2eefdf9e19e27c4c87bd2f0812
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 9dd3675f200be4f0ec66620bcf3cf05706991b66
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927664"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518160"
 ---
 # <a name="q-options-low-level-operations"></a>/Q Opções (operações de nível baixo)
 
 Você pode usar as opções do compilador **/q** para executar as seguintes operações de compilador de nível baixo:
 
-- [/Qfast_transcendentals (Force Fast Transcendentals)](qfast-transcendentals-force-fast-transcendentals.md): Gera transcendentais rápidos.
+- [/Qfast_transcendentals (Force Fast Transcendentals)](qfast-transcendentals-force-fast-transcendentals.md): gera transcendentals rápido.
 
-- [/QIfist (suprimir _ftol)](qifist-suppress-ftol.md): Suprime `_ftol` quando uma conversão de um tipo de ponto flutuante para um tipo inteiro é necessária (somente x86).
+- [/QIfist (suprimir _ftol)](qifist-suppress-ftol.md): suprime `_ftol` quando uma conversão de um tipo de ponto flutuante para um tipo inteiro é necessária (somente x86).
 
-- [/Qimprecise_fwaits (remover fwaits dentro de blocos try)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): Remove comandos `fwait` dentro de blocos `try`.
+- [/Qimprecise_fwaits (remover fwaits dentro de blocos try)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): Remove `fwait` comandos dentro de blocos de `try`.
 
-- [/Qpar (auto-paralelizador automático)](qpar-auto-parallelizer.md): Habilita a paralelização automática de loops que são marcados com a diretiva [loop de #pragma ()](../../preprocessor/loop.md) .
+- [/QIntel-JCC-Erratum](qintel-jcc-erratum.md): reduz o impacto no desempenho causado pela atualização de microcódigo da Errata do código condicional do Intel (JCC).
 
-- [/Qpar-Report (nível de relatório do paralelizador automático automático)](qpar-report-auto-parallelizer-reporting-level.md): Habilita os níveis de relatório para paralelização automática.
+- [/Qpar (auto-paralelizador automático)](qpar-auto-parallelizer.md): habilita a paralelização automática de loops que são marcados com a diretiva [loop de #pragma ()](../../preprocessor/loop.md) .
 
-- [/Qsafe_fp_loads](qsafe-fp-loads.md): Suprime otimizações para cargas de registro de ponto flutuante e para movimentações entre os registros de memória e de MMX.
+- [/Qpar-Report (nível de relatório do paralelizador automático automático)](qpar-report-auto-parallelizer-reporting-level.md): habilita os níveis de relatório para a paralelização automática.
 
-- [/Qspectre](qspectre.md): Gera instruções para atenuar determinadas vulnerabilidades de segurança do Spectre.
+- [/Qsafe_fp_loads](qsafe-fp-loads.md): suprime otimizações para cargas de registro de ponto flutuante e para movimentações entre registros de memória e de MMX.
 
-- [/Qvec-Report (nível de relatório do Vetorizador automático automático)](qvec-report-auto-vectorizer-reporting-level.md): Habilita níveis de relatório para vetorização automática.
+- [/Qspectre](qspectre.md): gera instruções para atenuar determinadas vulnerabilidades de segurança do Spectre.
 
-## <a name="see-also"></a>Consulte também
+- [/Qvec-Report (nível de relatório do Vetorizador automático automático)](qvec-report-auto-vectorizer-reporting-level.md): habilita os níveis de relatório para a vetorização automática.
+
+## <a name="see-also"></a>Veja também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
 [Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

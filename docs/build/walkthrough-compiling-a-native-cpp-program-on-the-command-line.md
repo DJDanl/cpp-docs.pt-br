@@ -9,12 +9,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: daab00768f8140869a8db39c73f4fec3ab6304c7
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: d002fd4c4edc99775e62023dda7998fba2c6a44f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051519"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518161"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Instruções passo a passo: compilando um programa do C++ nativo na linha de comando
 
@@ -24,7 +24,7 @@ Neste tutorial, você cria um C++ programa básico, "Olá, mundo", usando um edi
 
 Neste passo a passo, é possível usar o próprio programa do Visual C++ em vez de digitar o programa mostrado, ou usar uma amostra de código do Visual C++ de outro artigo de ajuda.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Para concluir este passo a passos, você deve ter instalado o Visual Studio e o **desenvolvimento de C++ área de trabalho opcional com** a Workload ou as ferramentas de Build de linha de comando para o Visual Studio.
 
@@ -78,7 +78,7 @@ Antes de criar um C ou C++ programa na linha de comando, você deve verificar se
    ```cpp
    #include <iostream>
    using namespace std;
-   void main()
+   int main()
    {
        cout << "Hello, world, from Visual C++!" << endl;
    }
@@ -142,7 +142,7 @@ Antes de criar um C ou C++ programa na linha de comando, você deve verificar se
 
    Parabéns, você compilou e executou um C++ programa usando as ferramentas de linha de comando.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Esse exemplo de "Olá, mundo" é tão simples quanto um C++ programa pode obter. Os programas do mundo real têm arquivos de cabeçalho e mais arquivos de origem, link em bibliotecas e trabalho útil.
 
@@ -170,7 +170,7 @@ As linguagens C++ C e são semelhantes, mas não as mesmas. O compilador MSVC us
 
 O compilador do MSVC inclui uma biblioteca de tempo de execução C (CRT) que é compatível com o padrão ISO C99, mas não é estritamente compatível. Na maioria dos casos, o código portátil será compilado e executado conforme o esperado. O C++ Visual não dá suporte a algumas das alterações de CRT no C11 ISO. Certas funções de biblioteca e nomes de função POSIX são preteridos pelo compilador MSVC. As funções têm suporte, mas os nomes preferenciais foram alterados. Para obter mais informações, consulte [recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md) e [aviso do compilador (nível 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
 [Sistemas de Compilação e Projetos](projects-and-build-systems-cpp.md)<br/>

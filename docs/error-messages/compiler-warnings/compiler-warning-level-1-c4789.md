@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4789
+title: Aviso do compilador (nível 1) C4789
 ms.date: 03/25/2019
 f1_keywords:
 - C4789
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36278615631d017db1d1c2fc4eecf8c1612892de
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187225"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518394"
 ---
-# <a name="compiler-warning-level-1-c4789"></a>Compilador aviso (nível 1) C4789
+# <a name="compiler-warning-level-1-c4789"></a>Aviso do compilador (nível 1) C4789
 
-> buffer '*identificador*' de tamanho *N* bytes serão substituídos; *M* bytes serão escritos começando no deslocamento *L*
+> o buffer '*Identifier*' do tamanho de *N* bytes será saturado; *M* bytes serão gravados começando no deslocamento *L*
 
 ## <a name="remarks"></a>Comentários
 
-**C4789** avisa sobre estouros de buffer quando funções específicas de tempo de execução (CRT) de C são usadas. Ele também pode relatar incompatibilidade de tamanho quando os parâmetros são passados ou atribuições são feitas. O aviso é possível se os tamanhos de dados são conhecidos em tempo de compilação. Esse aviso é para situações em que talvez elude detecção de incompatibilidade de tamanho de dados típico.
+O **C4789** avisa sobre saturações de buffer quando funções CRT (tempo de execução) de C específicas são usadas. Ele também pode relatar incompatibilidades de tamanho quando os parâmetros são passados ou as atribuições são feitas. O aviso será possível se os tamanhos de dados forem conhecidos no momento da compilação. Esse aviso é para situações que podem elude a detecção de incompatibilidade de tamanho de dados típico.
 
-**C4789** avisa quando dados são copiados em um bloco de dados que tem conhecida por ser muito pequeno em tempo de compilação.
+O **C4789** avisa quando os dados são copiados em um bloco de dados que é conhecido como muito pequeno no momento da compilação.
 
-O aviso ocorre se a cópia usa a forma intrínseca de uma dessas funções de CRT:
+O aviso ocorrerá se a cópia usar a forma intrínseca de uma dessas funções CRT:
 
 - [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)
 
@@ -31,9 +31,9 @@ O aviso ocorre se a cópia usa a forma intrínseca de uma dessas funções de CR
 
 - [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md), [wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)
 
-O aviso também é exibida quando você converter um parâmetro para um tipo de dados maior e, em seguida, fazer uma atribuição de cópia de uma referência de lvalue.
+O aviso também aparece quando você converte um parâmetro para um tipo de dados maior e, em seguida, faz uma atribuição de cópia de uma referência lvalue.
 
-Visual C++ pode gerar esse aviso para um caminho de código que nunca será executado. Você pode desativar temporariamente o aviso usando `#pragma`, conforme mostrado neste exemplo:
+O C++ visual pode gerar esse aviso para um caminho de código que nunca é executado. Você pode desabilitar temporariamente o aviso usando `#pragma`, conforme mostrado neste exemplo:
 
 ```cpp
 #pragma warning( push )
@@ -42,7 +42,7 @@ Visual C++ pode gerar esse aviso para um caminho de código que nunca será exec
 #pragma warning( pop )
 ```
 
-Essa linguagem impede que o Visual C++ gerando o aviso para esse bloco específico de código. O `#pragma warning(push)` preserva o estado existente antes de `#pragma warning(disable: 4789)` altera-la. O `#pragma warning(pop)` restaura o estado pressionado e remove os efeitos da `#pragma warning(disable:4789)`. Para obter mais informações sobre o C++ diretiva de pré-processador `#pragma`, consulte [aviso](../../preprocessor/warning.md) e [diretivas Pragma e a palavra-chave pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Esse idioma impede que C++ o Visual gere o aviso para esse bloco específico de código. O `#pragma warning(push)` preserva o estado existente antes de `#pragma warning(disable: 4789)` alterá-lo. O `#pragma warning(pop)` restaura o estado enviado por push e remove os efeitos da `#pragma warning(disable:4789)`. Para obter mais informações sobre C++ a diretiva de pré-processador `#pragma`, consulte Diretivas de [aviso](../../preprocessor/warning.md) e [pragma e a palavra-chave __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -78,7 +78,7 @@ O exemplo a seguir também gera C4789.
 // processor: x86
 short G;
 
-void main()
+int main()
 {
    int * p = (int *)&G;
    *p = 3;   // C4789 - writes an int through a pointer to short

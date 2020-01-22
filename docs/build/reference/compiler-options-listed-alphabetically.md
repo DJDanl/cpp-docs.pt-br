@@ -1,14 +1,14 @@
 ---
 title: Opções do compilador listadas em ordem alfabética
-ms.date: 08/08/2019
+ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 39dd11245ef88d1d59d3eda8cbeaa5fc4494b9a8
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 72441692869dbed806474a7054fedff53b923d42
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685331"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518368"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opções do compilador listadas em ordem alfabética
 
@@ -109,6 +109,7 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para uma li
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Gera transcendentais rápidos.|
 |[/QIfist](qifist-suppress-ftol.md)|Preterido. Suprime `_ftol` quando é necessária uma conversão de um tipo de ponto flutuante em um tipo integral (somente x86).|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Remove comandos `fwait` dentro de blocos `try`.|
+|[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|Atenua o impacto no desempenho da atualização do microcódigo da Errata do Intel JCC.|
 |[/Qpar (paralelizador automático)](qpar-auto-parallelizer.md)|Habilita a paralelização automática de loops que são marcados com a diretiva [loop de #pragma ()](../../preprocessor/loop.md) .|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Usa instruções de movimento de inteiro para valores de ponto flutuante e desabilita determinadas otimizações de carregamento de ponto flutuante.|
 |[/Qspectre](qspectre.md)|Especifica a geração do compilador de instruções para atenuar algumas vulnerabilidades de segurança da variante 1 de Espectro.|
@@ -142,7 +143,7 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para uma li
 |[/we](compiler-option-warning-level.md)|Trata o aviso especificado como um erro.|
 |[/WL](wl-enable-one-line-diagnostics.md)|Habilita o diagnóstico em uma linha para mensagens de erro e aviso durante a compilação do código-fonte do C++ da linha de comando.|
 |[/wo](compiler-option-warning-level.md)|Exibe o aviso especificado apenas uma vez.|
-|[/Wp64](wp64-detect-64-bit-portability-issues.md)|Obsoleto. Detecta problemas de portabilidade de 64 bits.|
+|[/Wp64](wp64-detect-64-bit-portability-issues.md)|{1&gt;{2&gt;Obsoleta. &lt;2}&lt;1} Detecta problemas de portabilidade de 64 bits.|
 |[/Wv](compiler-option-warning-level.md)|Não exibe nenhum aviso introduzido após a versão especificada do compilador.|
 |[/WX](compiler-option-warning-level.md)|Trata todos os avisos como erros.|
 |[/X](x-ignore-standard-include-paths.md)|Ignora o diretório de inclusão padrão.|
@@ -167,7 +168,7 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para uma li
 |[/Zs](zs-syntax-check-only.md)|Verifica apenas a sintaxe.|
 |[/ZW](zw-windows-runtime-compilation.md)|Produz um arquivo de saída para ser executado no Windows Runtime.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
 [Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

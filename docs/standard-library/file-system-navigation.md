@@ -2,18 +2,18 @@
 title: Navegação no sistema de arquivos
 ms.date: 11/04/2016
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: cfdc789daab5b476566f2072109d23fb9310094f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea9bf44a11087180d3bd02c5dcd5d1acfa4b9e57
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405190"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518498"
 ---
 # <a name="file-system-navigation"></a>Navegação no sistema de arquivos
 
-O \<filesystem > cabeçalho implementa o C++ arquivo sistema técnico especificação ISO/IEC TS 18822:2015 (rascunho Final: [ISO/IEC JTC 1/SC/22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) e tem tipos e funções que permitem que você escreva código independente de plataforma para navegar no sistema de arquivos. Por ser de plataforma cruzada, ele contém APIs que não são relevantes para sistemas Windows. Por exemplo, isso significa que `is_fifo(const path&)` sempre retorna **falso** no Windows.
+O cabeçalho \<filesystem > implementa a Especificação técnica para o Sistema de arquivos C++ ISO/IEC TS 18822:2015 (rascunho final: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) e tem tipos e funções que permitem escrever código independente da plataforma para navegar no sistema de arquivos. Por ser de plataforma cruzada, ele contém APIs que não são relevantes para sistemas Windows. Por exemplo, isso significa que `is_fifo(const path&)` sempre retorna **false** no Windows.
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
 
 Use as APIs \<filesystem> para as seguintes tarefas:
 
@@ -88,7 +88,7 @@ wstring DisplayPathInfo()
     return wos.str();
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     wcout << DisplayPathInfo() << endl;
     // wcout << ComparePaths() << endl; // see following example
@@ -167,7 +167,7 @@ Um objeto `path` é conversível implicitamente para `std::wstring` ou `std::str
 using namespace std;
 using namespace std::experimental::filesystem;
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     wchar_t* p = L"C:/Users/Public/Documents";
     path filePath(p);
