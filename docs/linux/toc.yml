@@ -3,7 +3,14 @@
 - name: 'Baixar, instalar e configurar a carga de trabalho de Desenvolvimento do Linux'
   href: download-install-and-setup-the-linux-development-workload.md
 - name: Conectar-se ao computador Linux remoto
-  href: connect-to-your-remote-linux-computer.md
+  expanded: true
+  items:
+    - name: Conectar-se ao computador Linux remoto
+      href: connect-to-your-remote-linux-computer.md
+    - name: Configurar um desenvolvimento remoto seguro em Linux em conformidade com o FIPS
+      href: set-up-fips-compliant-secure-remote-linux-development.md
+    - name: Referência do ConnectionManager
+      href: connectionmanager-reference.md
 - name: Criar um novo projeto do Linux
   href: create-a-new-linux-project.md
 - name: Configurar um projeto do Linux
