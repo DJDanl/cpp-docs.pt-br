@@ -1,31 +1,34 @@
 ---
 title: Atualizar WINVER e _WIN32_WINNT
-ms.date: 09/04/2017
+description: Quando e como atualizar macros WINVER e _WIN32_WINNT em projetos do Visual C++ Studio atualizados.
+ms.date: 01/22/2020
 helpviewer_keywords:
 - WINVER in an upgraded Visual Studio C++ project
 - _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: 0cfdb3d065a85bd02ef21de9c4c5282cf54fcb2a
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: b81c7967732c7b0c23ff0eb73d2a866a9b33713b
+ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627253"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725690"
 ---
 # <a name="update-winver-and-_win32_winnt"></a>Atualizar WINVER e _WIN32_WINNT
 
-Visual C++ não oferece mais suporte ao direcionamento de Windows 95, Windows 98, Windows ME, Windows NT ou Windows 2000. Se suas macros **WINVER** ou **_WIN32_WINNT** forem atribuídas a uma dessas versões do Windows, você deverá modificar as macros. Quando você atualiza um projeto criado usando uma versão anterior do Visual C++, poderá ver erros de compilação relacionados às macros **WINVER** ou **_WIN32_WINNT** se elas forem atribuídas a uma versão do Windows que não tem mais suporte.
+Ao usar o SDK do Windows, você pode especificar em quais versões do Windows seu código pode ser executado. As macros de pré-processador **winver** e **_WIN32_WINNT** especificam a versão mínima do sistema operacional com suporte do seu código. O Visual Studio e o C++ suporte ao compilador da Microsoft visam o Windows 7 SP1 e posterior. Os conjuntos de ferramentas mais antigos incluem suporte para o Windows XP SP4, o Windows Server 2003 SP4, o Vista e o Windows Server 2008. Não há suporte para o Windows 95, Windows 98, Windows ME, Windows NT e Windows 2000.
+
+Ao atualizar um projeto mais antigo, talvez seja necessário atualizar suas macros **winver** ou **_WIN32_WINNT** . Se eles forem atribuídos a valores para uma versão sem suporte do Windows, você poderá ver erros de compilação relacionados a essas macros.
 
 ## <a name="remarks"></a>Comentários
 
-Para modificar as macros, em um arquivo de cabeçalho (por exemplo, targetver.h que é incluído quando você cria um projeto que tem como alvo Windows), adicione as seguintes linhas.
+Para modificar as macros, em um arquivo de cabeçalho (por exemplo, em *targetver. h*, que é incluído por alguns modelos de projeto que se destinam ao Windows), adicione as linhas a seguir.
 
 ```C
 #define WINVER 0x0A00
 #define _WIN32_WINNT 0x0A00
 ```
 
-Isso direciona o sistema operacional Windows 10. Esses valores são listados no arquivo de cabeçalho do Windows SDKDDKVer.h, que também define as macros para cada versão do Windows. Você deve adicionar a instrução #define antes de incluir SDKDDKVer.h. Aqui estão as linhas da versão do Windows 10 do SDKDDKVer.h que codificam os valores para cada versão do Windows:
+As macros no exemplo são definidas para direcionar todas as versões do sistema operacional Windows 10. Os valores possíveis são listados no arquivo de cabeçalho do Windows *sdkddkver. h*, que define as macros para cada versão principal do Windows. Para criar seu aplicativo para dar suporte a uma plataforma anterior do Windows, inclua *WinSDKVer. h*. Em seguida, defina as macros **winver** e **_WIN32_WINNT** para a plataforma com suporte mais antiga antes de incluir *sdkddkver. h*. Aqui estão as linhas da versão do SDK do Windows 10 do *sdkddkver. h* que codificam os valores para cada versão principal do Windows:
 
 ```C
 //
@@ -46,7 +49,45 @@ Isso direciona o sistema operacional Windows 10. Esses valores são listados no 
 #define _WIN32_WINNT_WIN10                  0x0A00 // Windows 10
 ```
 
-Se você não vir todas essas versões do Windows listadas em uma cópia do SDKDDKVer.h sendo visualizada, você provavelmente estará usando uma versão mais antiga do SDK do Windows. Por padrão, os projetos do Win32 no Visual Studio 2017 usam o SDK do Windows 10.
+Para obter uma abordagem mais refinada ao controle de versão, você pode usar as constantes da versão NTDDI em *sdkddkver. h*. Aqui estão algumas das macros definidas por *sdkddkver. h* no Windows 10 SDK versão 10.0.18362.0:
+
+```C
+//
+// NTDDI version constants
+//
+#define NTDDI_WIN7                          0x06010000
+#define NTDDI_WIN8                          0x06020000
+#define NTDDI_WINBLUE                       0x06030000
+#define NTDDI_WINTHRESHOLD                  0x0A000000  /* ABRACADABRA_THRESHOLD */
+#define NTDDI_WIN10                         0x0A000000  /* ABRACADABRA_THRESHOLD */
+#define NTDDI_WIN10_TH2                     0x0A000001  /* ABRACADABRA_WIN10_TH2 */
+#define NTDDI_WIN10_RS1                     0x0A000002  /* ABRACADABRA_WIN10_RS1 */
+#define NTDDI_WIN10_RS2                     0x0A000003  /* ABRACADABRA_WIN10_RS2 */
+#define NTDDI_WIN10_RS3                     0x0A000004  /* ABRACADABRA_WIN10_RS3 */
+#define NTDDI_WIN10_RS4                     0x0A000005  /* ABRACADABRA_WIN10_RS4 */
+#define NTDDI_WIN10_RS5                     0x0A000006  /* ABRACADABRA_WIN10_RS5 */
+#define NTDDI_WIN10_19H1                    0x0A000007  /* ABRACADABRA_WIN10_19H1*/
+
+#define WDK_NTDDI_VERSION                   NTDDI_WIN10_19H1 /* ABRACADABRA_WIN10_19H1 */
+
+//
+// masks for version macros
+//
+#define OSVERSION_MASK      0xFFFF0000
+#define SPVERSION_MASK      0x0000FF00
+#define SUBVERSION_MASK     0x000000FF
+
+//
+// macros to extract various version fields from the NTDDI version
+//
+#define OSVER(Version)  ((Version) & OSVERSION_MASK)
+#define SPVER(Version)  (((Version) & SPVERSION_MASK) >> 8)
+#define SUBVER(Version) (((Version) & SUBVERSION_MASK) )
+```
+
+As macros **OSVER**, **SPVER**e **SUBVER** podem ser usadas em seu código para controlar a compilação condicional para diferentes níveis de suporte de API.
+
+Talvez você não veja todas essas versões do Windows listadas no *sdkddkver. h* que você está vendo. Isso significa que você provavelmente está usando uma versão mais antiga do SDK do Windows. Por padrão, novos projetos do Windows no Visual Studio usam o SDK do Windows 10.
 
 > [!NOTE]
 > Os valores não têm garantia de funcionamento se você incluir cabeçalhos MFC internos em seu aplicativo.
@@ -55,6 +96,6 @@ Também é possível definir essa macro usando a opção de compilador `/D`. Par
 
 Para obter mais informações sobre os significados dessas macros, consulte [Using the Windows Headers](/windows/win32/WinProg/using-the-windows-headers) (Usando os cabeçalhos do Windows).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Histórico de alterações do Visual C++](../porting/visual-cpp-change-history-2003-2015.md)
