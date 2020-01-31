@@ -1,6 +1,7 @@
 ---
-title: externo (C++)
-ms.date: 04/12/2018
+title: extern (C++)
+description: Guia para o C++ idioma extern palavra-chave.
+ms.date: 01/28/2020
 f1_keywords:
 - extern
 - extern_CPP
@@ -9,27 +10,35 @@ helpviewer_keywords:
 - declarations, external
 - external linkage, extern modifier
 ms.assetid: 1e2f0ae3-ae98-4410-85b5-222d6abc865a
-ms.openlocfilehash: d42a32202f7fa67751ea36757c13b2c6af4953b2
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+no-loc:
+- extern
+- const
+- constexpr
+- permissive
+ms.openlocfilehash: 422b6960802c59f1c45e0c22a4a85988c808a5b3
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301529"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821760"
 ---
-# <a name="extern-c"></a>externo (C++)
+# <a name="opno-locextern-c"></a>extern (C++)
 
-A palavra-chave **extern** é aplicada a uma variável global, uma função ou uma declaração de modelo para especificar que o nome dessa coisa tem *vínculo externo*. Para obter informações básicas sobre vinculação e por que o uso de variáveis globais não é recomendado, consulte [unidades de tradução e vinculação](program-and-linkage-cpp.md).
+A palavra-chave **extern** pode ser aplicada a uma variável global, uma função ou uma declaração de modelo. Ele especifica que o símbolo tem *vínculo externo*. Para obter informações básicas sobre vinculação e por que o uso de variáveis globais não é recomendado, consulte [unidades de tradução e vinculação](program-and-linkage-cpp.md).
 
 A palavra-chave **extern** tem quatro significados dependendo do contexto:
 
-1. em uma declaração de variável global não const, **extern** especifica que a variável ou função é definida em outra unidade de tradução. O **externo** deve ser aplicado em todos os arquivos, exceto aquele em que a variável é definida.
-1. em uma declaração de variável const, ela especifica que a variável tem vínculo externo. O **externo** deve ser aplicado a todas as declarações em todos os arquivos. (As variáveis global const têm vínculo interno por padrão.)
-1. o **"C" externo** especifica que a função é definida em outro lugar e usa a Convenção de chamada de linguagem C. O modificador "C" externo também pode ser aplicado a várias declarações de função em um bloco.
-1. em uma declaração de modelo, ele especifica que o modelo já foi instanciado em outro lugar. Essa é uma otimização que informa ao compilador que ele pode reutilizar a outra instanciação em vez de criar uma nova no local atual. Para obter mais informações sobre esse uso de **externo**, consulte [modelos](templates-cpp.md).
+- Em uma declaração de variável global não **const** , **extern** especifica que a variável ou função é definida em outra unidade de tradução. O **extern** deve ser aplicado em todos os arquivos, exceto aquele em que a variável é definida.
 
-## <a name="extern-linkage-for-non-const-globals"></a>vínculo externo para globais não const
+- Em uma declaração de variável **const** , ele especifica que a variável tem vínculo externo. O **extern** deve ser aplicado a todas as declarações em todos os arquivos. (As variáveis de **const** global têm vínculo interno por padrão.)
 
-Quando o vinculador vê **externo** antes de uma declaração de variável global, ele procura a definição em outra unidade de tradução. Declarações de variáveis não const em escopo global são externas por padrão; aplica-se somente ao **extern** às declarações que não fornecem a definição.
+- **extern "C"** especifica que a função é definida em outro lugar e usa a Convenção de chamada de linguagem C. O modificador "C" extern também pode ser aplicado a várias declarações de função em um bloco.
+
+- Em uma declaração de modelo, **extern** especifica que o modelo já foi instanciado em outro lugar. **extern** informa ao compilador que ele pode reutilizar a outra instanciação, em vez de criar uma nova no local atual. Para obter mais informações sobre esse uso de **extern** , consulte [instanciação explícita](explicit-instantiation.md).
+
+## <a name="opno-locextern-linkage-for-non-opno-locconst-globals"></a>extern vínculo para globais nãoconst
+
+Quando o vinculador vê **extern** antes de uma declaração de variável global, ele procura a definição em outra unidade de tradução. Declarações de variáveis não **const** no escopo global são externas por padrão. Aplique apenas **extern** às declarações que não fornecem a definição.
 
 ```cpp
 //fileA.cpp
@@ -46,9 +55,9 @@ int i = 43; // LNK2005! 'i' already has a definition.
 extern int i = 43; // same error (extern is ignored on definitions)
 ```
 
-## <a name="extern-linkage-for-const-globals"></a>vínculo externo para const Globals
+## <a name="opno-locextern-linkage-for-opno-locconst-globals"></a>extern vínculo para const globais
 
-Uma variável global **const** tem vínculo interno por padrão. Se você quiser que a variável tenha vínculo externo, aplique a palavra-chave **extern** à definição, bem como a todas as outras declarações em outros arquivos:
+Um **const** variável global tem vínculo interno por padrão. Se você quiser que a variável tenha vínculo externo, aplique a palavra-chave **extern** à definição e a todas as outras declarações em outros arquivos:
 
 ```cpp
 //fileA.cpp
@@ -58,25 +67,25 @@ extern const int i = 42; // extern const definition
 extern const int i;  // declaration only. same as i in FileA
 ```
 
-## <a name="extern-constexpr-linkage"></a>vínculo constexpr externo
+## <a name="opno-locextern-opno-locconstexpr-linkage"></a>extern vinculação de constexpr
 
-No Visual Studio 2017 versão 15,3 e anterior, o compilador sempre deu um vínculo interno de variável constexpr mesmo quando a variável foi marcada como externa. No Visual Studio 2017 versão 15.5, uma nova opção de compilador, ([/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)), habilita o comportamento correto em conformidade com os padrões. Eventualmente, isso se tornará o padrão. A opção/permissive-não habilita/Zc: externConstexpr.
+No Visual Studio 2017 versão 15,3 e anteriores, o compilador sempre deu uma variável **constexpr** vinculação interna, mesmo quando a variável foi marcada **extern** . No Visual Studio 2017 versão 15,5 e posterior, a opção de compilador [/Zc: externConstexpr](../build/reference/zc-externconstexpr.md) habilita o comportamento correto de conformidade com padrões. Eventualmente, a opção se tornará o padrão. A opção [/permissive-](../build/reference/permissive-standards-conformance.md) não permite **/Zc: externConstexpr**.
 
 ```cpp
 extern constexpr int x = 10; //error LNK2005: "int const x" already defined
 ```
 
-Se um arquivo de cabeçalho contiver uma variável declarada como constexpr externa, ele precisará ser marcado como **__declspec (selectany)** para ter corretamente suas declarações duplicadas combinadas:
+Se um arquivo de cabeçalho contiver uma variável declarada **extern** **constexpr** , ele deverá ser marcado `__declspec(selectany)` para ter corretamente suas declarações duplicadas combinadas:
 
 ```cpp
 extern constexpr __declspec(selectany) int x = 10;
 ```
 
-## <a name="extern-c-and-extern-c-function-declarations"></a>declarações de função "C" eC++extern "" extern
+## <a name="opno-locextern-c-and-opno-locextern-c-function-declarations"></a>extern declarações de função "C"C++e extern ""
 
-No C++, quando usado com uma cadeia de caracteres, **extern** especifica que as convenções de vinculação de outro idioma estão sendo usadas para o declarador (es). As funções C e os dados podem ser acessados somente se forem declarados anteriormente como tendo vinculação C. No entanto, devem ser definidos em uma unidade de conversão compilada separadamente.
+No C++, quando usado com uma cadeia de caracteres, **extern** especifica que as convenções de vinculação de outro idioma estão sendo usadas para o declarador (es). As funções e os dados de C podem ser acessados somente se eles forem declarados anteriormente como tendo vínculo C. No entanto, devem ser definidos em uma unidade de conversão compilada separadamente.
 
-A C++ Microsoft dá suporte às cadeias de caracteres **"C"** e **C++""** no campo *String-literal* . Todos os arquivos de inclusão padrão usam a sintaxe "C" **externa** para permitir que as funções de biblioteca de tempo de execução sejam C++ usadas em programas.
+A C++ Microsoft dá suporte às cadeias de caracteres **"C"** e **C++""** no campo *String-literal* . Todos os arquivos de inclusão padrão usam a sintaxe **extern "C"** para permitir que as funções de biblioteca de tempo de execução sejam C++ usadas em programas.
 
 ## <a name="example"></a>Exemplo
 
@@ -117,7 +126,7 @@ extern "C" char GetChar(void) {
 extern "C" int errno;
 ```
 
-Se uma função tiver mais de uma especificação de vinculação, elas devem concordar; é errado declarar funções como tendo o vínculos de C e C++. Além disso, se duas declarações para uma função ocorrem em um programa — uma com uma especificação de vinculação e a outra sem — a declaração com a especificação de vinculação deve ser a primeira. Todas as declarações redundantes de funções que já têm a especificação de vinculação são atribuídas a uma vinculação especificada na primeira declaração. Por exemplo:
+Se uma função tiver mais de uma especificação de vinculação, ela deverá concordar. É um erro declarar funções como tendo C e C++ vinculação. Além disso, se duas declarações para uma função ocorrem em um programa — uma com uma especificação de vinculação e a outra sem — a declaração com a especificação de vinculação deve ser a primeira. Todas as declarações redundantes de funções que já têm a especificação de vinculação são atribuídas a uma vinculação especificada na primeira declaração. Por exemplo:
 
 ```cpp
 extern "C" int CFunc1();
@@ -134,8 +143,8 @@ extern "C" int CFunc2(); // Error: not the first declaration of
 
 ## <a name="see-also"></a>Veja também
 
-[Palavras-chave](../cpp/keywords-cpp.md)<br/>
-[Unidades de tradução e vinculação](program-and-linkage-cpp.md)<br/>
-[Especificador de classe de armazenamento externo em C](../c-language/extern-storage-class-specifier.md)<br/>
-[Comportamento de identificadores em C](../c-language/behavior-of-identifiers.md)<br/>
+\ [palavras-chave](../cpp/keywords-cpp.md)
+\ [de vínculo e unidades de tradução](program-and-linkage-cpp.md)
+[extern especificador de classe de armazenamento em C](../c-language/extern-storage-class-specifier.md)\
+[Comportamento de identificadores em C](../c-language/behavior-of-identifiers.md)\
 [Ligação em C](../c-language/linkage.md)

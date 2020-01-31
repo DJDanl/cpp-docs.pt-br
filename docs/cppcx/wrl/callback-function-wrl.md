@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10fb053ed97aaca0f4a31e3843d96aa194d8949d
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398895"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821682"
 ---
 # <a name="callback-function-wrl"></a>Função de retorno de chamada (WRL)
 
@@ -192,40 +192,40 @@ ComPtr<TDelegateInterface> Callback(
 ### <a name="parameters"></a>Parâmetros
 
 *TDelegateInterface*<br/>
-Um parâmetro de modelo que especifica a interface do representante a ser chamado quando ocorre um evento.
+Um parâmetro de modelo que especifica a interface do delegado a ser chamada quando um evento ocorre.
 
 *TCallback*<br/>
 Um parâmetro de modelo que especifica o tipo de um objeto que representa um objeto e sua função de membro de retorno de chamada.
 
 *TCallbackObject*<br/>
-Um parâmetro de modelo que especifica o objeto cuja função de membro é o método a ser chamado quando ocorre um evento.
+Um parâmetro de modelo que especifica o objeto cuja função de membro é o método a ser chamado quando um evento ocorre.
 
 *TArg1*<br/>
-Um parâmetro de modelo que especifica o tipo do primeiro argumento do método de retorno de chamada.
+Um parâmetro de modelo que especifica o tipo do primeiro argumento de método de retorno de chamada.
 
 *TArg2*<br/>
-Um parâmetro de modelo que especifica o tipo do segundo argumento do método de retorno de chamada.
+Um parâmetro de modelo que especifica o tipo do segundo argumento de método de retorno de chamada.
 
 *TArg3*<br/>
 Um parâmetro de modelo que especifica o tipo do terceiro argumento de método de retorno de chamada.
 
 *TArg4*<br/>
-Um parâmetro de modelo que especifica o tipo do quarto argumento do método de retorno de chamada.
+Um parâmetro de modelo que especifica o tipo do quarto argumento de método de retorno de chamada.
 
 *TArg5*<br/>
-Um parâmetro de modelo que especifica o tipo do quinto argumento do método de retorno de chamada.
+Um parâmetro de modelo que especifica o tipo do quinto argumento de método de retorno de chamada.
 
 *TArg6*<br/>
-Um parâmetro de modelo que especifica o tipo do sexto argumento do método de retorno de chamada.
+Um parâmetro de modelo que especifica o tipo do argumento do método sexto de retorno de chamada.
 
 *TArg7*<br/>
 Um parâmetro de modelo que especifica o tipo do sétimo argumento do método de retorno de chamada.
 
 *TArg8*<br/>
-Um parâmetro de modelo que especifica o tipo do argumento do método de retorno de chamada oitava.
+Um parâmetro de modelo que especifica o tipo do oitavo argumento do método de retorno de chamada.
 
 *TArg9*<br/>
-Um parâmetro de modelo que especifica o tipo do nono argumento do método de retorno de chamada.
+Um parâmetro de modelo que especifica o tipo do argumento do método nono callback.
 
 *callback*<br/>
 Um objeto que representa o objeto de retorno de chamada e sua função de membro.
@@ -233,23 +233,23 @@ Um objeto que representa o objeto de retorno de chamada e sua função de membro
 *object*<br/>
 O objeto cuja função de membro é chamada quando ocorre um evento.
 
-*Método*<br/>
-A função de membro ser chamada quando ocorre um evento.
+*forma*<br/>
+A função de membro a ser chamada quando um evento ocorrer.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Um objeto cuja função de membro é o método de retorno de chamada especificados.
+Um objeto cuja função de membro é o método de retorno de chamada especificado.
 
 ## <a name="remarks"></a>Comentários
 
-A base de um objeto delegado deve ser `IUnknown`, e não `IInspectable`.
+A base de um objeto delegado deve ser `IUnknown`, não `IInspectable`.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 **Cabeçalho:** Event. h
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Namespace Microsoft::WRL](microsoft-wrl-namespace.md)

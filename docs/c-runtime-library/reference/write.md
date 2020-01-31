@@ -26,12 +26,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: 2c483df8e07b9496a0a22c1a1ebccf2b40d129cb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5eaee64c1bf6ad4b4d59c3a7b1a1434741e74454
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944853"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821786"
 ---
 # <a name="_write"></a>_write
 
@@ -60,27 +60,27 @@ Quantidade de bytes.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, **_write** retornará o número de bytes gravados. Se o espaço real restante no disco for menor do que o tamanho do buffer que a função está tentando gravar no disco, o **_write** falhará e não liberará nenhum conteúdo do buffer para o disco. Um valor de retorno de-1 indica um erro. Se parâmetros inválidos forem passados, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará-1 e **errno** será definida como um dos três valores: **EBADF**, o que significa que o descritor de arquivo é inválido ou o arquivo não está aberto para gravação; **ENOSPC**, que significa que não há espaço suficiente restante no dispositivo para a operação; ou **EINVAL**, o que significa que o *buffer* era um ponteiro nulo ou que uma *contagem* ímpar de bytes foi passada para ser gravada em um arquivo no modo Unicode.
+Se for bem-sucedido, **_write** retornará o número de bytes gravados. Se o espaço real restante no disco for menor do que o tamanho do buffer que a função está tentando gravar no disco, **_write** falhará e não liberará o conteúdo do buffer para o disco. Um valor de retorno de-1 indica um erro. Se parâmetros inválidos forem passados, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará-1 e **errno** será definida como um dos três valores: **EBADF**, o que significa que o descritor de arquivo é inválido ou o arquivo não está aberto para gravação; **ENOSPC**, que significa que não há espaço suficiente restante no dispositivo para a operação; ou **EINVAL**, o que significa que o *buffer* era um ponteiro nulo ou que uma *contagem* ímpar de bytes foi passada para ser gravada em um arquivo no modo Unicode.
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Se o arquivo for aberto no modo de texto, cada caractere de alimentação de linha será substituído por um par de retorno de carro-alimentação de linha na saída. A substituição não afeta o valor de retorno.
 
-Quando o arquivo é aberto no modo de conversão Unicode — por exemplo, se *FD* for aberto usando **_open** ou **_sopen** e um parâmetro de modo que inclui **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**, ou se estiver aberto usando **fopen** e um parâmetro de modo que inclui **CCS = Unicode**, **CCS = UTF-16LE**ou **CCS = UTF-8**, ou se o modo for alterado para um modo de conversão Unicode usando **_setmode**— o*buffer* será interpretado como um ponteiro para um matriz de **wchar_t** que contém dados **UTF-16** . Tentar gravar uma quantidade ímpar de bytes nesse modo gera um erro de validação de parâmetro.
+Quando o arquivo é aberto no modo de conversão Unicode — por exemplo, se *FD* for aberto usando **_open** ou **_sopen** e um parâmetro de modo que inclui **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**, ou se for aberto usando **fopen** e um parâmetro de modo que inclui **CCS = Unicode**, **CCS = UTF-16LE**ou **ccs = UTF-8**, ou se o modo for alterado para um modo de conversão Unicode usando **_setmode**— o*buffer* será interpretado como um ponteiro para um matriz de **wchar_t** que contém dados **UTF-16** . Tentar gravar uma quantidade ímpar de bytes nesse modo gera um erro de validação de parâmetro.
 
 ## <a name="remarks"></a>Comentários
 
 A função **_write** grava bytes de *contagem* do *buffer* no arquivo associado ao *FD*. A operação de gravação começa na posição atual do ponteiro de arquivo (se houver) associado ao arquivo em questão. Se o arquivo estiver aberto para anexação, a operação começa no final do arquivo. Após a operação de gravação, o ponteiro do arquivo é aumentado pelo número de bytes gravados.
 
-Ao gravar em arquivos abertos no modo de texto, **_write** trata um caractere CTRL + Z como o final lógico do arquivo. Ao gravar em um dispositivo, o **_write** trata um caractere CTRL + Z no buffer como um terminador de saída.
+Ao gravar em arquivos abertos no modo de texto, **_write** trata um caractere CTRL + Z como o final lógico do arquivo. Ao gravar em um dispositivo, **_write** trata um caractere CTRL + Z no buffer como um terminador de saída.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**_write**|\<io.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -124,7 +124,7 @@ int main( void )
             perror("Invalid parameter: buffer was NULL!");
             break;
          default:
-            // An unrelated error occured
+            // An unrelated error occurred
             perror("Unexpected error!");
       }
    }
@@ -140,7 +140,7 @@ int main( void )
 Wrote 36 bytes to file.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [E/S de nível inferior](../../c-runtime-library/low-level-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>

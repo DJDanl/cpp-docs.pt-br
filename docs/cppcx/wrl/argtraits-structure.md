@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraits structure
 - Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
-ms.openlocfilehash: 17109508cf99888ccde79be39a41c5361da24c6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c13e7fec3289b66b40e44f91404a50cba7a473b1
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398804"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821708"
 ---
 # <a name="argtraits-structure"></a>Estrutura ArgTraits
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+O oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -130,77 +130,77 @@ struct ArgTraits<
 ### <a name="parameters"></a>Parâmetros
 
 *TMemberFunction*<br/>
-O parâmetro TypeName para uma estrutura ArgTraits que não pode corresponder a qualquer `Invoke` assinatura do método.
+Parâmetro TypeName para uma estrutura ArgTraits que não pode corresponder a nenhuma assinatura de método de `Invoke`.
 
 *TDelegateInterface*<br/>
-Uma interface de delegado.
+Uma interface de representante.
 
 *TArg1*<br/>
-O tipo do primeiro argumento do `Invoke` método.
+O tipo do primeiro argumento do método `Invoke`.
 
 *TArg2*<br/>
-O tipo do segundo argumento do `Invoke` método.
+O tipo do segundo argumento do método `Invoke`.
 
 *TArg3*<br/>
-O tipo do terceiro argumento do `Invoke` método.
+O tipo do terceiro argumento do método `Invoke`.
 
 *TArg4*<br/>
-O tipo do quarto argumento do `Invoke` método.
+O tipo do quarto argumento do método de `Invoke`.
 
 *TArg5*<br/>
-O tipo do quinto argumento do `Invoke` método.
+O tipo do quinto argumento do método `Invoke`.
 
 *TArg6*<br/>
-O tipo do sexto argumento do `Invoke` método.
+O tipo do sexto argumento do método de `Invoke`.
 
 *TArg7*<br/>
-O tipo do sétimo argumento do `Invoke` método.
+O tipo do sétimo argumento do método `Invoke`.
 
 *TArg8*<br/>
-O tipo do oitavo argumento do `Invoke` método.
+O tipo do oitavo argumento do método `Invoke`.
 
 *TArg9*<br/>
-O tipo do nono argumento do `Invoke` método.
+O tipo do nono argumento do método de `Invoke`.
 
 ## <a name="remarks"></a>Comentários
 
-O `ArgTraits` estrutura declara um delegado especificado de interface e uma função de membro anônimo que tem um número especificado de parâmetros.
+A estrutura de `ArgTraits` declara uma interface de delegado especificada e uma função de membro anônimo que tem um número especificado de parâmetros.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs públicos
+### <a name="public-typedefs"></a>Typedefs Públicos
 
-Nome       | Descrição
+Name       | Descrição
 ---------- | ----------------------
-`Arg1Type` | O typedef de DynamicSite<Targ1.
-`Arg2Type` | O typedef de TArg2.
-`Arg3Type` | O typedef de TArg3.
-`Arg4Type` | O typedef de TArg4.
-`Arg5Type` | O typedef de TArg5.
-`Arg6Type` | O typedef de TArg6.
-`Arg7Type` | O typedef de TArg7.
-`Arg8Type` | O typedef de TArg8.
-`Arg9Type` | O typedef de TArg9.
+`Arg1Type` | O typedef para TArg1.
+`Arg2Type` | O typedef para TArg2.
+`Arg3Type` | O typedef para TArg3.
+`Arg4Type` | O typedef para TArg4.
+`Arg5Type` | O typedef para TArg5.
+`Arg6Type` | O typedef para TArg6.
+`Arg7Type` | O typedef para TArg7.
+`Arg8Type` | O typedef para TArg8.
+`Arg9Type` | O typedef para TArg9.
 
-### <a name="public-constants"></a>Constantes públicas
+### <a name="public-constants"></a>Constantes Públicas
 
-Nome                     | Descrição
+Name                     | Descrição
 ------------------------ | ---------------------------------------------------------------------------------------
-[ArgTraits::args](#args) | Mantém uma contagem do número de parâmetros `Invoke` método da interface de um delegado.
+[ArgTraits::args](#args) | Mantém a contagem do número de parâmetros no método `Invoke` de uma interface de representante.
 
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+## <a name="inheritance-hierarchy"></a>Hierarquia de Herança
 
 `ArgTraits`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 **Cabeçalho:** Event. h
 
-**Namespace:** Microsoft::WRL::Details
+**Namespace:** Microsoft:: WRL::D etalhes
 
 ## <a name="args"></a>ArgTraits::args
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+O oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 static const int args = -1;
@@ -208,4 +208,4 @@ static const int args = -1;
 
 ### <a name="remarks"></a>Comentários
 
-Mantém uma contagem do número de parâmetros `Invoke` método da interface de um delegado. Quando `args` for igual a -1, não pode haver nenhuma correspondência para o `Invoke` assinatura do método.
+Mantém a contagem do número de parâmetros no método `Invoke` de uma interface de representante. Quando `args` é igual a-1, não pode haver nenhuma correspondência para a assinatura do método `Invoke`.

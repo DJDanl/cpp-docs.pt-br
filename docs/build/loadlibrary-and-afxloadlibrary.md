@@ -1,6 +1,7 @@
 ---
 title: LoadLibrary e AfxLoadLibrary
-ms.date: 05/24/2018
+description: Usando LoadLibrary e AfxLoadLibrary para carregamento explícito de DLLs em MSVC.
+ms.date: 01/28/2020
 f1_keywords:
 - LoadLibrary
 helpviewer_keywords:
@@ -10,27 +11,27 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-ms.openlocfilehash: c7700dd865e320686a2ad8bd036f207b9ecee6ac
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f803212c4485f7517dc42802f1ff581ffa4e609d
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493216"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821532"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary e AfxLoadLibrary
 
-Os processos chamam [LoadLibraryExA](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa) ou [LoadLibraryExW](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) (ou [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) para vincular explicitamente a uma dll. Se a função for bem sucedido, ela mapeará a DLL especificada para o espaço de endereço do processo de chamada e retornará um identificador para a DLL que pode ser usado com outras funções em vinculação explícita `GetProcAddress` — `FreeLibrary`por exemplo, e.
+Processa a chamada [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw) ou [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) para vincular explicitamente a uma dll. (Os aplicativos MFC usam [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary) ou [AfxLoadLibraryEx](../mfc/reference/application-information-and-management.md#afxloadlibraryex).) Se a função for bem sucedido, ela mapeará a DLL especificada para o espaço de endereço do processo de chamada e retornará um identificador para a DLL. O identificador é necessário em outras funções usadas para vinculação explícita — por exemplo, `GetProcAddress` e `FreeLibrary`. Para obter mais informações, consulte [vinculação explícita](linking-an-executable-to-a-dll.md#linking-explicitly).
 
-`LoadLibrary`tenta localizar a DLL usando a mesma sequência de pesquisa usada para vinculação implícita. Se o sistema não puder localizar a dll ou se a função de ponto de entrada retornar `LoadLibrary` false, retornará NULL. Se a chamada para `LoadLibrary` especificar um módulo DLL que já esteja mapeado no espaço de endereço do processo de chamada, a função retornará um identificador da dll e incrementará a contagem de referência do módulo.
+`LoadLibrary` tenta localizar a DLL usando a mesma sequência de pesquisa usada para vinculação implícita. `LoadLibraryEx` oferece mais controle sobre a ordem do caminho de pesquisa. Para obter mais informações, consulte [ordem de pesquisa da biblioteca de vínculo dinâmico](/windows/win32/dlls/dynamic-link-library-search-order). Se o sistema não conseguir localizar a DLL ou se a função de ponto de entrada retornar FALSE, `LoadLibrary` retornará NULL. Se a chamada para `LoadLibrary` especificar um módulo de DLL que já esteja mapeado no espaço de endereço do processo de chamada, a função retornará um identificador da DLL e incrementará a contagem de referência do módulo.
 
-Se a DLL tiver uma função de ponto de entrada, o sistema operacional chamará a função no contexto do thread que chamou `LoadLibrary`. A função de ponto de entrada não será chamada se a dll já estiver anexada ao processo devido a uma chamada anterior `LoadLibrary` a que não tem nenhuma chamada correspondente `FreeLibrary` à função.
+Se a DLL tiver uma função de ponto de entrada, o sistema operacional chamará a função no contexto do thread que chamou `LoadLibrary` ou `LoadLibraryEx`. A função de ponto de entrada não será chamada se a DLL já estiver anexada ao processo. Isso acontece quando uma chamada anterior para `LoadLibrary` ou `LoadLibraryEx` da DLL não tinha uma chamada correspondente à função `FreeLibrary`.
 
-Para aplicativos MFC que carregam DLLs de extensão do MFC, recomendamos `AfxLoadLibrary` que você `LoadLibrary`use em vez de. `AfxLoadLibrary`manipula a sincronização de threads `LoadLibrary`antes de você chamar. A interface (protótipo de função) `AfxLoadLibrary` é a mesma que `LoadLibrary`.
+Para aplicativos MFC que carregam DLLs de extensão MFC, recomendamos que você use `AfxLoadLibrary` ou `AfxLoadLibraryEx` em vez de `LoadLibrary` ou `LoadLibraryEx`. As funções do MFC lidam com a sincronização de thread antes de carregar a DLL explicitamente. As interfaces (protótipos de função) para `AfxLoadLibrary` e `AfxLoadLibraryEx` são as mesmas que `LoadLibrary` e `LoadLibraryEx`.
 
-Se o Windows não puder carregar a DLL, o processo poderá tentar se recuperar do erro. Por exemplo, o processo poderia notificar o usuário sobre o erro e pedir ao usuário para especificar outro caminho para a DLL.
+Se o Windows não puder carregar a DLL, seu processo poderá tentar se recuperar do erro. Por exemplo, ele poderia notificar o usuário sobre o erro e solicitar outro caminho para a DLL.
 
 > [!IMPORTANT]
-> Certifique-se de especificar o caminho completo de qualquer DLL. O diretório atual é pesquisado primeiro quando os arquivos são carregados. Se você não qualificar o caminho do arquivo, um arquivo que não seja o pretendido poderá ser carregado. Outra maneira de evitar isso é usando a opção de vinculador [/DEPENDENTLOADFLAG](reference/dependentloadflag.md) .
+> Certifique-se de especificar o caminho completo de qualquer DLL. O diretório atual pode ser pesquisado primeiro quando os arquivos são carregados por `LoadLibrary`. Se você não qualificar totalmente o caminho do arquivo, um arquivo que não seja o pretendido poderá ser carregado. Ao criar uma DLL, use a opção vinculador [/DEPENDENTLOADFLAG](reference/dependentloadflag.md) para especificar uma ordem de pesquisa para dependências de dll vinculadas estaticamente. Dentro de suas DLLs, use ambos os caminhos completos para dependências explicitamente carregadas e `LoadLibraryEx` ou `AfxLoadLibraryEx` parâmetros de chamada para especificar a ordem de pesquisa do módulo. Para obter mais informações, consulte [segurança da biblioteca de vínculo dinâmico](/windows/win32/dlls/dynamic-link-library-security) e [ordem de pesquisa da biblioteca de vínculo dinâmico](/windows/win32/dlls/dynamic-link-library-search-order).
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
 
@@ -46,6 +47,6 @@ Se o Windows não puder carregar a DLL, o processo poderá tentar se recuperar d
 
 - [GetProcAddress](getprocaddress.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Criar DLLs C /C++ no Visual Studio](dlls-in-visual-cpp.md)

@@ -5,18 +5,18 @@ ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: 7d36793e4467f9454aca1eb207f3c3dfbd483bff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b80e49489c0b0d26469ba9f8b77e80a962668e35
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516671"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821633"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>Substituições explícitas (C++/CLI e C++/CX)
 
 Este tópico discute como substituir explicitamente um membro de uma classe ou interface base. Uma substituição nomeada (explícita) deve ser usada apenas para substituir um método por um método derivado que tenha um nome diferente.
 
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
+## <a name="all-runtimes"></a>Todos os Runtimes
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -47,7 +47,7 @@ Saiba mais sobre como modificar o comportamento de tipos e membros de tipo herda
 
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>Requisitos do
 
 Opção do compilador: `/ZW`
 
@@ -57,7 +57,7 @@ Opção do compilador: `/ZW`
 
 Saiba mais sobre substituições explícitas em código nativo ou compilado com `/clr:oldSyntax` em [Substituições explícitas](../cpp/explicit-overrides-cpp.md).
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>Requisitos do
 
 Opção do compilador: `/clr`
 
@@ -172,6 +172,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
