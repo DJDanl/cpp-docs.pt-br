@@ -16,19 +16,19 @@ helpviewer_keywords:
 - apartments in ATL EXE modules
 - CComApartment class
 ms.assetid: dbc177d7-7ee4-45f2-b563-d578a467ca93
-ms.openlocfilehash: 92db42a45a0863f8b43f7c46da9624e424d1e488
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f4c7fc356e61210e9b99bf9989b1bb3f0abc98a
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246772"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821669"
 ---
 # <a name="ccomapartment-class"></a>Classe CComApartment
 
-Essa classe fornece suporte para gerenciar um apartamento em um módulo EXE em pool de thread.
+Essa classe fornece suporte para gerenciar um apartamento em um módulo EXE de pool de threads.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,38 +38,38 @@ class CComApartment
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores públicos
+### <a name="public-constructors"></a>Construtores Públicos
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[CComApartment::CComApartment](#ccomapartment)|O construtor.|
 
-### <a name="public-methods"></a>Métodos públicos
+### <a name="public-methods"></a>Métodos Públicos
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
-|[CComApartment::Apartment](#apartment)|Marca o endereço inicial do thread.|
-|[CComApartment::GetLockCount](#getlockcount)|Retorna a contagem de bloqueio do thread atual.|
-|[CComApartment::Lock](#lock)|Incrementa a contagem de bloqueio do thread.|
-|[CComApartment::Unlock](#unlock)|Diminui contagem de bloqueio do thread.|
+|[CComApartment:: Apartment](#apartment)|Marca o endereço inicial do thread.|
+|[CComApartment::GetLockCount](#getlockcount)|Retorna a contagem de bloqueios atual do thread.|
+|[CComApartment::Lock](#lock)|Incrementa a contagem de bloqueios do thread.|
+|[CComApartment::Unlock](#unlock)|Decrementa a contagem de bloqueios do thread.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[CComApartment::m_dwThreadID](#m_dwthreadid)|Contém o identificador do thread.|
 |[CComApartment::m_hThread](#m_hthread)|Contém o identificador do thread.|
-|[CComApartment::m_nLockCnt](#m_nlockcnt)|Contém a contagem de bloqueio do thread atual.|
+|[CComApartment::m_nLockCnt](#m_nlockcnt)|Contém a contagem de bloqueios atual do thread.|
 
 ## <a name="remarks"></a>Comentários
 
-`CComApartment` é usado pelo [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) para gerenciar um apartamento em um módulo EXE em pool de thread. `CComApartment` fornece métodos para incrementar e diminuir o bloqueio de contam com um thread.
+`CComApartment` é usado pelo [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) para gerenciar um apartamento em um módulo exe de pool de threads. `CComApartment` fornece métodos para incrementar e decrementar a contagem de bloqueios em um thread.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 **Cabeçalho:** atlbase. h
 
-##  <a name="apartment"></a>  CComApartment::Apartment
+##  <a name="apartment"></a>CComApartment:: Apartment
 
 Marca o endereço inicial do thread.
 
@@ -83,9 +83,9 @@ Sempre 0.
 
 ### <a name="remarks"></a>Comentários
 
-Definir automaticamente durante [CComAutoThreadModule::Init](../../atl/reference/ccomautothreadmodule-class.md#init).
+Definido automaticamente durante [CComAutoThreadModule:: init](../../atl/reference/ccomautothreadmodule-class.md#init).
 
-##  <a name="ccomapartment"></a>  CComApartment::CComApartment
+##  <a name="ccomapartment"></a>CComApartment::CComApartment
 
 O construtor.
 
@@ -95,11 +95,11 @@ CComApartment();
 
 ### <a name="remarks"></a>Comentários
 
-Inicializa o `CComApartment` membros de dados [m_nLockCnt](#m_nlockcnt) e [m_hThread](#m_hthread).
+Inicializa os membros de dados do `CComApartment` [m_nLockCnt](#m_nlockcnt) e [m_hThread](#m_hthread).
 
 ##  <a name="getlockcount"></a>  CComApartment::GetLockCount
 
-Retorna a contagem de bloqueio do thread atual.
+Retorna a contagem de bloqueios atual do thread.
 
 ```
 LONG GetLockCount();
@@ -107,11 +107,11 @@ LONG GetLockCount();
 
 ### <a name="return-value"></a>Valor de retorno
 
-A contagem de bloqueio no thread.
+A contagem de bloqueios no thread.
 
-##  <a name="lock"></a>  CComApartment::Lock
+##  <a name="lock"></a>CComApartment:: Lock
 
-Incrementa a contagem de bloqueio do thread.
+Incrementa a contagem de bloqueios do thread.
 
 ```
 LONG Lock();
@@ -123,9 +123,9 @@ Um valor que pode ser útil para diagnóstico ou teste.
 
 ### <a name="remarks"></a>Comentários
 
-Chamado pelo [CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock).
+Chamado por [CComAutoThreadModule:: Lock](../../atl/reference/ccomautothreadmodule-class.md#lock).
 
-A contagem de bloqueio no thread é usada para fins estatísticos.
+A contagem de bloqueios no thread é usada para fins estatísticos.
 
 ##  <a name="m_dwthreadid"></a>  CComApartment::m_dwThreadID
 
@@ -145,15 +145,15 @@ HANDLE m_hThread;
 
 ##  <a name="m_nlockcnt"></a>  CComApartment::m_nLockCnt
 
-Contém a contagem de bloqueio do thread atual.
+Contém a contagem de bloqueios atual do thread.
 
 ```
 LONG m_nLockCnt;
 ```
 
-##  <a name="unlock"></a>  CComApartment::Unlock
+##  <a name="unlock"></a>CComApartment:: desbloquear
 
-Diminui contagem de bloqueio do thread.
+Decrementa a contagem de bloqueios do thread.
 
 ```
 LONG Unlock();
@@ -165,10 +165,10 @@ Um valor que pode ser útil para diagnóstico ou teste.
 
 ### <a name="remarks"></a>Comentários
 
-Chamado pelo [CComAutoThreadModule::Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock).
+Chamado por [CComAutoThreadModule:: Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock).
 
-A contagem de bloqueio no thread é usada para fins estatísticos.
+A contagem de bloqueios no thread é usada para fins estatísticos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Visão geral da classe](../../atl/atl-class-overview.md)

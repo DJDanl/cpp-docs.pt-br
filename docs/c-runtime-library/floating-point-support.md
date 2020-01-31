@@ -8,16 +8,16 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
-ms.translationtype: HT
+ms.openlocfilehash: a0ee21378a6feb7ada39dc00f0e181672470e231
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703123"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821506"
 ---
 # <a name="math-and-floating-point-support"></a>Suporte matemático e de ponto flutuante
 
-A biblioteca em UCRT (Tempo de Execução C Universal) fornece muitas funções de biblioteca de matemática de ponto flutuante e integral, incluindo todas as que são exigidas pelo ISO C99. As funções de ponto flutuante são implementadas para equilibrar o desempenho com exatidão. Uma vez que produzir o resultado arredondado corretamente pode ter um custo proibitivo, essas funções foram criadas para produzir de forma eficiente um resultado próximo ao resultado arredondado corretamente. Na maioria dos casos, o resultado produzido está dentro de +/-1 ulp do resultado arredondado corretamente, embora possa haver casos em que a imprecisão é maior.
+A biblioteca em UCRT (Runtime C Universal) fornece muitas funções de biblioteca de matemática de ponto flutuante e integral, incluindo todas as que são exigidas pelo ISO C99. As funções de ponto flutuante são implementadas para equilibrar o desempenho com exatidão. Uma vez que produzir o resultado arredondado corretamente pode ter um custo proibitivo, essas funções foram criadas para produzir de forma eficiente um resultado próximo ao resultado arredondado corretamente. Na maioria dos casos, o resultado produzido está dentro de +/-1 ulp do resultado arredondado corretamente, embora possa haver casos em que a imprecisão é maior.
 
 Muitas das funções da biblioteca de matemática de ponto flutuante têm implementações diferentes para diferentes arquiteturas de CPU. Por exemplo, o CRT x86 de 32 bits pode ter uma implementação diferente do CRT x64 de 64 bits. Além disso, algumas das funções podem ter várias implementações para uma determinada arquitetura de CPU. A implementação mais eficiente é selecionada dinamicamente em tempo de execução dependendo dos conjuntos de instruções com suporte da CPU. Por exemplo, no CRT x86 de 32 bits, algumas funções têm uma implementação x87 e uma implementação SSE2. Quando executado em uma CPU com suporte para SSE2, é usada a implementação SSE2 mais rápida. Quando executado em uma CPU sem suporte para SSE2, é usada a implementação x87 mais lenta. Uma vez que diferentes implementações das funções da biblioteca de matemática podem usar diferentes instruções de CPU e diferentes algoritmos para produzir seus resultados, as funções podem produzir resultados diferentes entre as CPUs. Na maioria dos casos, os resultados são dentro de +/-1 ulp do resultado arredondado corretamente, mas os resultados reais podem variar entre CPUs.
 
@@ -25,7 +25,7 @@ Versões de 16 bits anteriores do Microsoft C/C++ e do Microsoft Visual C++ dava
 
 ## <a name="supported-math-and-floating-point-routines"></a>Rotinas matemáticas de ponto flutuante compatíveis
 
-|Rotina|Use|
+|Rotina|Uso|
 |-|-|
 [abs, labs, llabs, _abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Calcula o valor absoluto de um tipo inteiro
 [acos, acosf, acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|Calcula o arco cosseno
@@ -72,7 +72,7 @@ Versões de 16 bits anteriores do Microsoft C/C++ e do Microsoft Visual C++ dava
 [floor, floorf, floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|Calcula a base
 [fma, fmaf, fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|Calcula uma adição múltipla mesclada
 [fmax, fmaxf, fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|Calcula o máximo de argumentos
-[fmin, fminf, fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)|Calcula o mínimo de argumentos
+[fmin, fminf, fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)|Calcula o mínimo dos argumentos
 [fmod, fmodf, fmodl](../c-runtime-library/reference/fmod-fmodf.md)|Calcula o restante do ponto flutuante
 [_fpclass, _fpclassf](../c-runtime-library/reference/fpclass-fpclassf.md)|Retorna a classificação de um valor do ponto flutuante
 [fpclassify](../c-runtime-library/reference/fpclassify.md)|Retorna a classificação de um valor do ponto flutuante
@@ -127,7 +127,7 @@ Versões de 16 bits anteriores do Microsoft C/C++ e do Microsoft Visual C++ dava
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Calcula a raiz quadrada
 [_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|Define a palavra de status de ponto flutuante
 [strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Converte uma cadeia de caracteres em um **float**
-[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Converte uma cadeia de caracteres em um **long** **double**
+[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Converte uma cadeia de caracteres em um **longo** **dobro**
 [tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|Calcula a tangente
 [tanh, tanhf, tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Calcula a tangente hiperbólica
 [tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|Calcula a função gama
@@ -135,7 +135,7 @@ Versões de 16 bits anteriores do Microsoft C/C++ e do Microsoft Visual C++ dava
 [_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Converte uma cadeia de caracteres larga em um **double**
 [_y0, _y1, _yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Calcula a função Bessel
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [Primitivos de ponto flutuante](../c-runtime-library/reference/floating-point-primitives.md)<br/>
