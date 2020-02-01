@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-ms.openlocfilehash: 80aade53bf1d1c9aa30c4b8c8fe59c2247fe3cfb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 395f1443f4eef16d9eea44c23a6e3288daf03d14
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515781"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912837"
 ---
 # <a name="__identifier-ccli"></a>__identifier (C++/CLI)
 
@@ -33,7 +33,7 @@ O uso da palavra-chave **__identifier** para identificadores que não são palav
 
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>Requisitos do
 
 Opção do compilador: `/ZW`
 
@@ -43,7 +43,7 @@ Opção do compilador: `/ZW`
 
 No exemplo a seguir, uma classe chamada **template** é criada em C# e distribuída como uma DLL. No programa C++/CLI que usa a classe **template**, a palavra-chave **__identifier** esconde o fato de que **template** é uma palavra-chave padrão C++.
 
-```cs
+```csharp
 // identifier_template.cs
 // compile with: /target:library
 public class template {
@@ -67,7 +67,7 @@ int main() {
 
 A palavra-chave **__identifier** é válida com a opção do compilador `/clr`.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>Requisitos do
 
 Opção do compilador: `/clr`
 
@@ -75,7 +75,7 @@ Opção do compilador: `/clr`
 
 No exemplo a seguir, uma classe chamada **template** é criada em C# e distribuída como uma DLL. No programa C++/CLI que usa a classe **template**, a palavra-chave **__identifier** esconde o fato de que **template** é uma palavra-chave padrão C++.
 
-```cs
+```csharp
 // identifier_template.cs
 // compile with: /target:library
 public class template {
@@ -94,7 +94,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

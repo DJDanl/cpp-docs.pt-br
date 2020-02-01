@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3390
 ms.assetid: 84800a87-c8e6-45aa-82ae-02f816dc8d97
-ms.openlocfilehash: 3f1149d4584a0ea3d0061a3ec4e2b77830603ef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c624d3b0379d057b0ed566deffc2a0efcc324f88
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400312"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912868"
 ---
 # <a name="compiler-error-c3390"></a>Erro do compilador C3390
 
-'type_arg': argumento de tipo inválido para parâmetro de generic param de genérico 'generic_type' deve ser um tipo de referência
+' type_arg ': argumento de tipo inválido para parâmetro de Generic ' param ' de Generic ' generic_type ', deve ser um tipo de referência
 
 Um tipo genérico foi instanciado incorretamente.  Verifique a definição de tipo.  Para obter mais informações, consulte [Genéricos](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemplo
 
-O primeiro exemplo usa C# para criar um componente que contém um tipo genérico que tem certas restrições que não têm suporte durante a criação de tipos genéricos no C++/CLR. Para obter mais informações, consulte [Restrições a parâmetros de tipo](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+O primeiro exemplo usa C# para criar um componente que contém um tipo genérico que tem determinadas restrições que não têm suporte durante a criação de tipos genéricos C++em/CLR. Para obter mais informações, consulte [Restrições a parâmetros de tipo](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
-```cs
+```csharp
 // C3390.cs
 // Compile by using: csc /target:library C3390.cs
 // a C# program
@@ -33,7 +33,7 @@ where V : struct
 where N : new() {}
 ```
 
-Quando o componente C3390.dll estiver disponível, o exemplo a seguir gera C3390.
+Quando o componente C3390. dll está disponível, o exemplo a seguir gera C3390.
 
 ```cpp
 // C3390_b.cpp

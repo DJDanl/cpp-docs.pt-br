@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: c0de82d0d1d102f02ea79a4245f2e393439f2e0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d567f8270dcb8965ed2f882c9a0c005f295fc619
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515671"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912835"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal (C++/CLI e C++/CX)
 
@@ -23,7 +23,7 @@ Uma variável (membro de dados) marcada como **literal** em uma compilação **/
 
 ### <a name="remarks"></a>Comentários
 
-(Não há comentários para esse recurso de linguagem que se apliquem a todos os tempos de execução.)
+(Não há comentários para esse recurso de linguagem que se apliquem a todos os runtimes.)
 
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
 
@@ -31,7 +31,7 @@ Uma variável (membro de dados) marcada como **literal** em uma compilação **/
 
 (Não há comentários para esse recurso de linguagem que se apliquem somente ao Windows Runtime.)
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>Requisitos do
 
 Opção do compilador: `/ZW`
 
@@ -41,7 +41,7 @@ Opção do compilador: `/ZW`
 
 Um membro de dados marcado como **literal** deve ser inicializado quando declarado, e o valor deve ser um tipo de cadeia, enumeração ou integral constante. A conversão do tipo da expressão de inicialização no tipo do membro de dados const estático não deve exigir uma conversão definida pelo usuário.
 
-Nenhuma memória é alocada para o campo literal em tempo de execução. O compilador só insere seu valor nos metadados da classe.
+Nenhuma memória é alocada para o campo literal em runtime. O compilador só insere seu valor nos metadados da classe.
 
 Uma variável marcada como **static const** não estará disponível em metadados para outros compiladores.
 
@@ -92,7 +92,7 @@ Observe a diferença nos metadados para `sc` e `lit`: a diretiva `modopt` é apl
 
 A amostra a seguir, criada em C#, faz referência aos metadados criados na amostra anterior e mostra o efeito das variáveis **literal** e **static const**:
 
-```cs
+```csharp
 // mcppv2_literal3.cs
 // compile with: /reference:mcppv2_literal2.dll
 // A C# program
@@ -121,10 +121,10 @@ class B {
 }
 ```
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 Opção do compilador: `/clr`
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
