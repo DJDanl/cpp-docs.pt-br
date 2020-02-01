@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variable argument lists
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-ms.openlocfilehash: ec1e2cefa33bc9d749d0f05e170c2f2db9b25f02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 4db75653251a558d6f43f5be63098fbb26e1e6ff
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515951"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912846"
 ---
 # <a name="variable-argument-lists--ccli"></a>Listas de Argumentos Variáveis (...) (C++/CLI)
 
@@ -68,7 +68,7 @@ A função `f` pode ser chamada de C# ou Visual Basic, por exemplo, como se foss
 
 Em C#, um argumento que é passado para um parâmetro `ParamArray` pode ser chamado por um número variável de argumentos. O exemplo de código a seguir está em C#.
 
-```cs
+```csharp
 // mcppv2_paramarray3.cs
 // compile with: /r:mcppv2_paramarray2.dll
 // a C# program
@@ -101,6 +101,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Matrizes](arrays-cpp-component-extensions.md)
