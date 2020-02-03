@@ -1,13 +1,14 @@
 ---
 title: Eventos (C++/CX)
-ms.date: 07/15/2019
+description: Como usar C++o/CX para criar e usar manipuladores de eventos no Windows Runtime.
+ms.date: 02/03/2020
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: aab37353b1ea8d9f81a8e9a9ae489a4dd3542cc0
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 45f9a7bc17d9a695613ce551dae796b2cd2e0e6f
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740520"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972192"
 ---
 # <a name="events-ccx"></a>Eventos (C++/CX)
 
@@ -27,7 +28,7 @@ O exemplo de código a seguir mostra como declarar e disparar um evento. Observe
 
 [!code-cpp[cx_events#01](../cppcx/codesnippet/CPP/cx_events/class1.h#01)]
 
-### <a name="usage"></a>Uso
+### <a name="usage"></a>Medição de
 
 O exemplo a seguir mostra como uma classe assinante usa o operador `+=` para assinar o evento e fornecer um manipulador de eventos a ser invocado quando o evento for acionado. Observe que a função fornecida corresponde à assinatura do representante que é definido no lado do editor no namespace `EventTest` .
 
@@ -48,7 +49,7 @@ O exemplo a seguir mostra como adicionar métodos add, remove e raise personaliz
 
 ## <a name="removing-an-event-handler-from-the-subscriber-side"></a>Removendo um manipulador de eventos do lado do assinante
 
-Em alguns casos raros, talvez você queira remover um manipulador de eventos para um evento ao qual tenha assinado anteriormente. Por exemplo, você pode querer substituí-lo por outro manipulador de eventos ou pode querer excluir alguns recursos que são mantidos por ele. Para remover um manipulador, você deve armazenar o EventRegistrationToken que é retornado da operação `+=` . Em seguida, você pode usar o operador de `-=` no token para remover um manipulador de eventos.  No entanto, o manipulador original ainda pode ser invocado, mesmo depois de removido. Portanto, se você estiver pretendendo remover um manipulador de eventos, crie um sinalizador de membro e defina-o se o evento for removido e, no manipulador de eventos, verifique o sinalizador e retorne imediatamente se estiver definido. O exemplo a seguir mostra o padrão básico.
+Em alguns casos raros, talvez você queira remover um manipulador de eventos para um evento ao qual tenha assinado anteriormente. Por exemplo, você pode querer substituí-lo por outro manipulador de eventos ou pode querer excluir alguns recursos que são mantidos por ele. Para remover um manipulador, você deve armazenar o EventRegistrationToken que é retornado da operação `+=` . Em seguida, você pode usar o operador de `-=` no token para remover um manipulador de eventos.  No entanto, o manipulador original ainda pode ser invocado, mesmo depois de removido. Por exemplo, uma condição de corrida pode surgir quando a origem do evento obtiver uma lista de manipuladores e começar a chamá-los. Se um manipulador de eventos for removido enquanto isso acontecer, a lista ficará desatualizada. Portanto, se você pretende remover um manipulador de eventos, crie um sinalizador de membro. Defina-o se o evento for removido e, em seguida, no manipulador de eventos, verifique o sinalizador e retorne imediatamente se ele estiver definido. O exemplo a seguir mostra o padrão básico.
 
 [!code-cpp[cx_events#04](../cppcx/codesnippet/CPP/eventsupportinvs/eventclientclass.h#04)]
 
@@ -58,7 +59,7 @@ Vários manipuladores podem ser associados ao mesmo evento. A origem do evento �
 
 A ordem na qual a origem do evento invoca manipuladores de evento em receptores de evento não é garantida e pode ser diferente de uma chamada para outra.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Sistema de tipos](../cppcx/type-system-c-cx.md)<br/>
 [Delegados](../cppcx/delegates-c-cx.md)<br/>
