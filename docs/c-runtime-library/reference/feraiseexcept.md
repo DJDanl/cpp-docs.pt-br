@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 07c8a79e0a9569db80607e1ec1e16cd4b502783c
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e98c402169ed0f35ab1bdf0b8221a2248f252f21
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857821"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972205"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -46,7 +46,7 @@ int feraiseexcept(
 *exceções*<br/>
 As exceções de ponto flutuante que serão geradas.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor de retorno
 
 Se todas as exceções especificadas forem geradas com êxito, retornará 0.
 
@@ -61,7 +61,7 @@ A função **feraiseexcept** tenta gerar as exceções de ponto flutuante especi
 |FE_INVALID|Ocorreu um erro de domínio em uma operação de ponto flutuante anterior.|
 |FE_OVERFLOW|Ocorreu um erro de intervalo. O resultado de uma operação de ponto flutuante anterior era muito grande para ser representado.|
 |FE_UNDERFLOW|O resultado de uma operação de ponto flutuante anterior era muito pequeno para ser representado na precisão total. Um valor de denormal foi criado.|
-|FE_ALLEXCEPT|O OR bit a bit de todas as exceções de ponto flutuante com suporte.|
+|FE_ALL_EXCEPT|O OR bit a bit de todas as exceções de ponto flutuante com suporte.|
 
 O argumento *Except* pode ser zero, um dos valores da macro de exceção, ou o bit e de duas ou mais das macros de exceção com suporte. Se uma das macros de exceção especificadas for FE_OVERFLOW ou FE_UNDERFLOW, a exceção FE_INEXACT poderá ser gerada como um efeito colateral.
 
@@ -77,7 +77,7 @@ Para usar essa função, você deve desligar otimizações de ponto flutuante qu
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
 [fesetexceptflag](fesetexceptflag2.md)<br/>

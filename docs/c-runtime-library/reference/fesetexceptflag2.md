@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-ms.openlocfilehash: 29a6b36b0744bec30463fe55df05fe26180b93fe
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b16de7ea54b5f1df21b6626febe773c8cef556f5
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941087"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972141"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -48,7 +48,7 @@ int fesetexceptflag(
 ### <a name="parameters"></a>Parâmetros
 
 *pstatus*<br/>
-Ponteiro para um objeto **fexcept_t** que contém os valores para os quais definir os sinalizadores de status de exceção. O objeto pode ser definido por uma chamada anterior a [fegetexceptflag](fegetexceptflag2.md).
+Ponteiro para um objeto de **fexcept_t** que contém os valores para os quais definir os sinalizadores de status de exceção. O objeto pode ser definido por uma chamada anterior a [fegetexceptflag](fegetexceptflag2.md).
 
 *exceções*<br/>
 Os sinalizadores do status de exceção de ponto flutuante que serão definidos.
@@ -59,7 +59,7 @@ Se todos os sinalizadores de status de exceção especificados forem definidos c
 
 ## <a name="remarks"></a>Comentários
 
-A função **fesetexceptflag** define o estado dos sinalizadores de status de exceção de ponto flutuante especificados por *Except* para os valores correspondentes definidos no objeto **fexcept_t** apontado por *pStatus*.  Ela não gera exceções. O ponteiro *pStatus* deve apontar para um objeto **fexcept_t** válido, ou o comportamento subsequente é indefinido. A função **fesetexceptflag** dá suporte a esses valores de macro de exceção em *Except*, definidos em \<fenv. h >:
+A função **fesetexceptflag** define o estado dos sinalizadores de status de exceção de ponto flutuante especificados por *, exceto* para os valores correspondentes definidos no objeto de **fexcept_t** apontado por *pStatus*.  Ela não gera exceções. O ponteiro *pStatus* deve apontar para um objeto de **fexcept_t** válido, ou o comportamento subsequente é indefinido. A função **fesetexceptflag** dá suporte a esses valores de macro de exceção em *Except*, definidos em \<fenv. h >:
 
 |Macro de exceção|Descrição|
 |---------------------|-----------------|
@@ -68,21 +68,21 @@ A função **fesetexceptflag** define o estado dos sinalizadores de status de ex
 |FE_INVALID|Ocorreu um erro de domínio em uma operação de ponto flutuante anterior.|
 |FE_OVERFLOW|Ocorreu um erro de intervalo. O resultado de uma operação de ponto flutuante anterior era muito grande para ser representado.|
 |FE_UNDERFLOW|O resultado de uma operação de ponto flutuante anterior era muito pequeno para ser representado na precisão total. Um valor de denormal foi criado.|
-|FE_ALLEXCEPT|O OR bit a bit de todas as exceções de ponto flutuante com suporte.|
+|FE_ALL_EXCEPT|O OR bit a bit de todas as exceções de ponto flutuante com suporte.|
 
 O argumento *Except* pode ser zero, uma das macros de exceção de ponto flutuante com suporte, ou a bit e vírgula de duas ou mais macros. O efeito de qualquer outro valor de argumento é indefinido.
 
 Para usar essa função, você deve desligar otimizações de ponto flutuante que poderiam impedir o acesso usando a diretiva `#pragma fenv_access(on)` antes da chamada. Para obter mais informações, consulte [fenv_access](../../preprocessor/fenv-access.md).
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
 |**fesetexceptflag**|\<fenv.h>|\<cfenv>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Referência da Função Alfabética](crt-alphabetical-function-reference.md)<br/>
 [fegetexceptflag](fegetexceptflag2.md)<br/>
