@@ -428,17 +428,8 @@
               href: data-objects-and-data-sources-creation-and-destruction.md
             - name: 'Objetos e fontes de dados: manipulação'
               href: data-objects-and-data-sources-manipulation.md
-        - name: Arrastar e soltar (OLE)
-          expanded: false
-          items:
-            - name: Arrastar e soltar (OLE)
-              href: drag-and-drop-ole.md
-            - name: 'Arrastar e soltar: implementar uma fonte para soltar'
-              href: drag-and-drop-implementing-a-drop-source.md
-            - name: 'Arrastar e soltar: implementar um destino para soltar'
-              href: drag-and-drop-implementing-a-drop-target.md
-            - name: 'Arrastar e soltar: personalizar'
-              href: drag-and-drop-customizing.md
+        - name: Arrastar e soltar do OLE
+          href: drag-and-drop-ole.md
         - name: Menus e recursos (OLE)
           expanded: false
           items:
@@ -523,7 +514,7 @@
             - name: Controles ActiveX do MFC
               expanded: false
               items:
-                - name: Controles ActiveX do MFC
+                - name: Controles ActiveX MFC
                   href: mfc-activex-controls.md
                 - name: 'Controles ActiveX do MFC: Otimização'
                   expanded: false
