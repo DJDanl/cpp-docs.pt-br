@@ -4,16 +4,16 @@ ms.date: 10/19/2018
 helpviewer_keywords:
 - parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-ms.openlocfilehash: 1ac029d954fc6cefaae6349e01af7728ca0886fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4964d63846e14c0eaf4ff7c7fc80e14237673f69
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390653"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127633"
 ---
 # <a name="issuing-a-parameterized-query"></a>Emitindo uma consulta parametrizada
 
-O exemplo a seguir emite uma simple consulta parametrizada que recupera os registros com um campo de idade (que é maior que 30) de uma tabela em um banco de dados do Microsoft Access. Para dar suporte o parâmetro, o registro de usuário deve ter um mapa adicional. O código a seguir, em um projeto ATL, usa o `CCommand` classe, em vez do `CTable` classe usada no exemplo anterior, [percorrendo um conjunto de linhas simples](../../data/oledb/traversing-a-simple-rowset.md).
+O exemplo a seguir emite uma consulta parametrizada simples que recupera registros com um campo de idade (que é maior que 30) de uma tabela em um banco de dados do Microsoft Access. Para dar suporte ao parâmetro, o registro de usuário deve ter um mapa adicional. O código a seguir, em um projeto ATL, usa a classe `CCommand` em vez da classe `CTable` usada no exemplo anterior, [atravessando um conjunto de linhas simples](../../data/oledb/traversing-a-simple-rowset.md).
 
 ```cpp
 #include <atldbcli.h>
@@ -51,7 +51,7 @@ int main()
 }
 ```
 
-O registro do usuário, `CArtists`, se parece com este exemplo:
+O registro de usuário, `CArtists`, é semelhante a este exemplo:
 
 ```cpp
 class CArtists

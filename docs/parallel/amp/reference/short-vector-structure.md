@@ -6,20 +6,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/short_vector
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-ms.openlocfilehash: 012a70ae628a896c8202e46a5624f37f58b0781b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 531b8d53eac8d997b7e8ca4d29aad7d34ef90e22
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351541"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126429"
 ---
-# <a name="shortvector-structure"></a>Estrutura short_vector
+# <a name="short_vector-structure"></a>Estrutura short_vector
 
-short_vector fornece metaprogramação definições que são úteis para a programação de vetores curtos genericamente.
+o short_vector fornece definições de metaprogramação que são úteis para a programação de vetores curtos genericamente.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 template<
     typename _Scalar_type,
     int _Size
@@ -75,7 +75,7 @@ template<>
 struct short_vector<double, 4>;
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Scalar_type*<br/>
 
@@ -83,31 +83,31 @@ struct short_vector<double, 4>;
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs públicos
+### <a name="public-typedefs"></a>Typedefs Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |`type`||
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[short_vector:: short_vector construtor](#ctor)||
+|[Construtor short_vector:: short_vector](#ctor)||
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `short_vector`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Simultaneidade:: Graphics
 
-##  <a name="ctor"></a>  short_vector:: short_vector construtor
+## <a name="ctor"></a>Construtor short_vector:: short_vector
 
-```
+```cpp
 short_vector();
 ```
 

@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-ms.openlocfilehash: 63dbc38fd4c5c6d668dda525416ec4ff2f05b50f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efff4e2263704dab35e5c212f6ef5d906e3f7c72
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180271"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142176"
 ---
-# <a name="float4-class"></a>Classe float_4
+# <a name="float_4-class"></a>Classe float_4
 
-Representa um vetor curto de quatro floats.
+Representa um pequeno vetor de quatro floats.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class float_4;
 ```
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs públicos
+### <a name="public-typedefs"></a>Typedefs Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[Construtor float_4](#ctor)|Sobrecarregado. Padrão construtor, inicializa todos os elementos com 0.|
+|[Construtor de float_4](#ctor)|Sobrecarregado. O construtor padrão inicializa todos os elementos com 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |float_4::get_w||
 |float_4::get_wx||
@@ -442,26 +442,26 @@ class float_4;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |float_4::operator-||
 |float_4::operator--||
-|float_4::operator*=||
-|float_4::operator/=||
-|float_4::operator++||
-|float_4::operator+=||
+|float_4:: Operator * =||
+|float_4:: Operator/=||
+|float_4:: operador + +||
+|float_4:: Operator + =||
 |float_4::operator=||
 |float_4::operator-=||
 
-### <a name="public-constants"></a>Constantes públicas
+### <a name="public-constants"></a>Constantes Públicas
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[tamanho constante](#float_4__size)||
+|[Constante de tamanho](#float_4__size)||
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |float_4::a||
 |float_4::ab||
@@ -470,7 +470,7 @@ class float_4;
 |float_4::abr||
 |float_4::abrg||
 |float_4::ag||
-|float_4::agb||
+|float_4:: AGB||
 |float_4::agbr||
 |float_4::agr||
 |float_4::agrb||
@@ -515,8 +515,8 @@ class float_4;
 |float_4::ra||
 |float_4::rab||
 |float_4::rabg||
-|float_4::rag||
-|float_4::ragb||
+|float_4:: pano||
+|float_4:: ragb||
 |float_4::rb||
 |float_4::rba||
 |float_4::rbag||
@@ -527,25 +527,25 @@ class float_4;
 |float_4::rgab||
 |float_4::rgb||
 |float_4::rgba||
-|float_4::w||
-|float_4::wx||
-|float_4::wxy||
-|float_4::wxyz||
-|float_4::wxz||
-|float_4::wxzy||
-|float_4::wy||
+|float_4:: w||
+|float_4:: WX||
+|float_4:: wxy||
+|float_4:: WXYZ||
+|float_4:: wxz||
+|float_4:: wxzy||
+|float_4:: WY||
 |float_4::wyx||
 |float_4::wyxz||
-|float_4::WYZ||
-|float_4::wyzx||
+|float_4:: wyz||
+|float_4:: wyzx||
 |float_4::wz||
 |float_4::wzx||
 |float_4::wzxy||
 |float_4::wzy||
-|float_4::wzyx||
+|float_4:: wzyx||
 |float_4::x||
 |float_4::xw||
-|float_4::xwy||
+|float_4:: xwy||
 |float_4::xwyz||
 |float_4::xwz||
 |float_4::xwzy||
@@ -557,24 +557,24 @@ class float_4;
 |float_4::xz||
 |float_4::xzw||
 |float_4::xzwy||
-|float_4::xzy||
+|float_4:: XZY||
 |float_4::xzyw||
-|float_4::y||
-|float_4::yw||
-|float_4::ywx||
+|float_4:: y||
+|float_4:: YW||
+|float_4:: YWX||
 |float_4::ywxz||
 |float_4::ywz||
 |float_4::ywzx||
 |float_4::yx||
-|float_4::yxw||
+|float_4:: yxw||
 |float_4::yxwz||
 |float_4::yxz||
 |float_4::yxzw||
-|float_4::yz||
-|float_4::yzw||
-|float_4::yzwx||
-|float_4::yzx||
-|float_4::yzxw||
+|float_4:: YZ||
+|float_4:: yzw||
+|float_4:: yzwx||
+|float_4:: yzx||
+|float_4:: yzxw||
 |float_4::z||
 |float_4::zw||
 |float_4::zwx||
@@ -596,17 +596,17 @@ class float_4;
 
 `float_4`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Simultaneidade:: Graphics
 
-##  <a name="ctor"></a> float_4
+## <a name="ctor"></a>float_4
 
-Padrão construtor, inicializa todos os elementos com 0.
+O construtor padrão inicializa todos os elementos com 0.
 
-```
+```cpp
 float_4() restrict(amp,
     cpu);
 
@@ -661,14 +661,14 @@ O valor para inicializar o elemento 2.
 O valor para inicializar o elemento 3.
 
 *_V*<br/>
-O valor para a inicialização.
+O valor para inicialização.
 
 *_Other*<br/>
 O objeto usado para inicializar.
 
-##  <a name="float_4__size"></a> size
+## <a name="float_4__size"></a>tamanho
 
-```
+```cpp
 static const int size = 4;
 ```
 

@@ -12,34 +12,34 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-ms.openlocfilehash: 258f249aa178b73da2080cca888409dc07f63dbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4fb43a4223cad8cc63049d2a0f8345e48b90f17
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345507"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139972"
 ---
 # <a name="iumsthreadproxy-structure"></a>Estrutura IUMSThreadProxy
 
-Uma abstração para um thread de execução. Se você quiser que seu Agendador para ser concedida a threads agendáveis no modo de usuário (UMS), defina o valor para o elemento de política de Agendador `SchedulerKind` à `UmsThreadDefault`e implementar o `IUMSScheduler` interface. Threads UMS são apenas com suporte em sistemas operacionais de 64 bits com a versão do Windows 7 e superior.
+Uma abstração para um thread de execução. Se você quiser que o Agendador receba threads de agendáveis (UMS) no modo de usuário, defina o valor do elemento de política do Agendador `SchedulerKind` como `UmsThreadDefault`e implemente a interface `IUMSScheduler`. Os threads UMS têm suporte apenas em sistemas operacionais de 64 bits com versão Windows 7 e superior.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 struct IUMSThreadProxy : public IThreadProxy;
 ```
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|Chamado para inserir uma região crítica. Quando dentro de uma região crítica, o Agendador não obedecerão bloqueio de operações assíncrona que ocorrem durante a região. Isso significa que o Agendador não será ser reinserido para falhas de página, suspensões do thread, chamadas de procedimento assíncrono (APCs) do kernel e assim por diante, para um thread UMS.|
-|[IUMSThreadProxy::EnterHyperCriticalRegion](#enterhypercriticalregion)|Chamado para entrar em uma região de hyper-crítica. Quando dentro de uma região de hyper-crítica, o Agendador não obedecerão bloqueio de operações que ocorrem durante a região. Isso significa que o Agendador não será ser reinserido para bloqueio de chamadas de função, tentativas de aquisição de bloqueio qual bloco, falhas de página, suspensões, chamadas de procedimento assíncrono (APCs) do kernel do thread e assim por diante, para um UMS thread.|
+|[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|Chamado para inserir uma região crítica. Quando dentro de uma região crítica, o Agendador não observará operações de bloqueio assíncronas que ocorrem durante a região. Isso significa que o Agendador não será reinserido para falhas de página, suspensões de thread, chamadas de procedimento assíncrono de kernel (APCs) e assim por diante, para um thread UMS.|
+|[IUMSThreadProxy::EnterHyperCriticalRegion](#enterhypercriticalregion)|Chamado para inserir uma região do Hyper-Critical. Quando dentro de uma região do Hyper-Critical, o Agendador não observará nenhuma operação de bloqueio que ocorra durante a região. Isso significa que o Agendador não será reinserido para bloquear chamadas de função, bloquear tentativas de aquisição de bloqueio, falhas de página, suspensões de thread, chamadas de procedimento assíncrono de kernel (APCs) e assim por diante, para um thread UMS.|
 |[IUMSThreadProxy::ExitCriticalRegion](#exitcriticalregion)|Chamado para sair de uma região crítica.|
-|[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|Chamado para sair de uma região hyper crítica.|
-|[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|Retorna o tipo de região crítica, o proxy de thread está dentro do. Como regiões hyper críticas são um superconjunto de regiões críticas, se o código entrou em uma região crítica e, em seguida, uma região de hyper-crítica, `InsideHyperCriticalRegion` será retornado.|
+|[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|Chamado para sair de uma região do Hyper-Critical.|
+|[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|Retorna o tipo de região crítica em que o proxy de thread está. Como as regiões do Hyper-Critical são um superconjunto de regiões críticas, se o código tiver inserido uma região crítica e, em seguida, uma região do Hyper-Critical, `InsideHyperCriticalRegion` será retornado.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -47,75 +47,75 @@ struct IUMSThreadProxy : public IThreadProxy;
 
 `IUMSThreadProxy`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** concrtrm. h
 
 **Namespace:** simultaneidade
 
-##  <a name="entercriticalregion"></a>  Método iumsthreadproxy:: Entercriticalregion
+## <a name="entercriticalregion"></a>Método IUMSThreadProxy:: EnterCriticalRegion
 
-Chamado para inserir uma região crítica. Quando dentro de uma região crítica, o Agendador não obedecerão bloqueio de operações assíncrona que ocorrem durante a região. Isso significa que o Agendador não será ser reinserido para falhas de página, suspensões do thread, chamadas de procedimento assíncrono (APCs) do kernel e assim por diante, para um thread UMS.
+Chamado para inserir uma região crítica. Quando dentro de uma região crítica, o Agendador não observará operações de bloqueio assíncronas que ocorrem durante a região. Isso significa que o Agendador não será reinserido para falhas de página, suspensões de thread, chamadas de procedimento assíncrono de kernel (APCs) e assim por diante, para um thread UMS.
 
-```
+```cpp
 virtual int EnterCriticalRegion() = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A nova profundidade da região crítica. Regiões críticas são reentrantes.
+A nova profundidade da região crítica. Regiões críticas são reentrante.
 
-##  <a name="enterhypercriticalregion"></a>  Método iumsthreadproxy:: Enterhypercriticalregion
+## <a name="enterhypercriticalregion"></a>Método IUMSThreadProxy:: EnterHyperCriticalRegion
 
-Chamado para entrar em uma região de hyper-crítica. Quando dentro de uma região de hyper-crítica, o Agendador não obedecerão bloqueio de operações que ocorrem durante a região. Isso significa que o Agendador não será ser reinserido para bloqueio de chamadas de função, tentativas de aquisição de bloqueio qual bloco, falhas de página, suspensões, chamadas de procedimento assíncrono (APCs) do kernel do thread e assim por diante, para um UMS thread.
+Chamado para inserir uma região do Hyper-Critical. Quando dentro de uma região do Hyper-Critical, o Agendador não observará nenhuma operação de bloqueio que ocorra durante a região. Isso significa que o Agendador não será reinserido para bloquear chamadas de função, bloquear tentativas de aquisição de bloqueio, falhas de página, suspensões de thread, chamadas de procedimento assíncrono de kernel (APCs) e assim por diante, para um thread UMS.
 
-```
+```cpp
 virtual int EnterHyperCriticalRegion() = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A profundidade de novo da região hyper crítica. Regiões Hyper críticas são reentrantes.
+A nova profundidade da região do Hyper-Critical. As regiões do Hyper-Critical são reentrante.
 
 ### <a name="remarks"></a>Comentários
 
-O Agendador deve ser extraordinariamente cuidado em relação a quais métodos chamados por ele e o que bloqueia-adquire em tais regiões. Se o código em tal região bloqueia um bloqueio é mantido por algo que o Agendador é responsável por agendar, pode surgir deadlock.
+O Agendador deve ser bastante cuidadoso sobre os métodos que ele chama e quais bloqueios ele adquire em tais regiões. Se o código nesses blocos de região em um bloqueio for mantido por algo que o Agendador é responsável por agendar, o deadlock poderá acontecer.
 
-##  <a name="exitcriticalregion"></a>  Método iumsthreadproxy:: Exitcriticalregion
+## <a name="exitcriticalregion"></a>Método IUMSThreadProxy:: ExitCriticalRegion
 
 Chamado para sair de uma região crítica.
 
-```
+```cpp
 virtual int ExitCriticalRegion() = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A nova profundidade da região crítica. Regiões críticas são reentrantes.
+A nova profundidade da região crítica. Regiões críticas são reentrante.
 
-##  <a name="exithypercriticalregion"></a>  Método iumsthreadproxy:: Exithypercriticalregion
+## <a name="exithypercriticalregion"></a>Método IUMSThreadProxy:: ExitHyperCriticalRegion
 
-Chamado para sair de uma região hyper crítica.
+Chamado para sair de uma região do Hyper-Critical.
 
-```
+```cpp
 virtual int ExitHyperCriticalRegion() = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A profundidade de novo da região hyper crítica. Regiões Hyper críticas são reentrantes.
+A nova profundidade da região do Hyper-Critical. As regiões do Hyper-Critical são reentrante.
 
-##  <a name="getcriticalregiontype"></a>  Método iumsthreadproxy:: Getcriticalregiontype
+## <a name="getcriticalregiontype"></a>Método IUMSThreadProxy:: GetCriticalRegionType
 
-Retorna o tipo de região crítica, o proxy de thread está dentro do. Como regiões hyper críticas são um superconjunto de regiões críticas, se o código entrou em uma região crítica e, em seguida, uma região de hyper-crítica, `InsideHyperCriticalRegion` será retornado.
+Retorna o tipo de região crítica em que o proxy de thread está. Como as regiões do Hyper-Critical são um superconjunto de regiões críticas, se o código tiver inserido uma região crítica e, em seguida, uma região do Hyper-Critical, `InsideHyperCriticalRegion` será retornado.
 
-```
+```cpp
 virtual CriticalRegionType GetCriticalRegionType() const = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O tipo de região crítica, que o proxy de thread está dentro do.
+O tipo de região crítica em que o proxy de thread está.
 
 ## <a name="see-also"></a>Consulte também
 

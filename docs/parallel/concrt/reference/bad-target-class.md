@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - bad_target class
 ms.assetid: e6dcddbf-9217-4fac-ac7f-7b8b4781d2f5
-ms.openlocfilehash: 04489151cedf1a47aeebd883e76b8d26b51031ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 023607ff142b7fa39165cc9b5280a8e9345a3645
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337759"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142852"
 ---
-# <a name="badtarget-class"></a>Classe bad_target
+# <a name="bad_target-class"></a>Classe bad_target
 
-Esta classe descreve uma exceção gerada quando um bloco de mensagens é receber um ponteiro para um destino que é inválido para a operação que está sendo executada.
+Essa classe descreve uma exceção gerada quando um bloco de mensagens recebe um ponteiro para um destino que é inválido para a operação que está sendo executada.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class bad_target : public std::exception;
 ```
 
@@ -29,13 +29,13 @@ class bad_target : public std::exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[bad_target](#ctor)|Sobrecarregado. Constrói um objeto `bad_target`.|
 
 ## <a name="remarks"></a>Comentários
 
-Normalmente, essa exceção é lançada por motivos como um destino para tentar consumir uma mensagem que é reservada para um destino diferente ou liberar uma reserva de que ele não mantém.
+Essa exceção normalmente é lançada por motivos como um destino que tenta consumir uma mensagem que é reservada para um destino diferente ou liberando uma reserva que ela não tem.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -43,17 +43,17 @@ Normalmente, essa exceção é lançada por motivos como um destino para tentar 
 
 `bad_target`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** concrt. h
+**Cabeçalho:** ConcRT. h
 
 **Namespace:** simultaneidade
 
-##  <a name="ctor"></a> bad_target
+## <a name="ctor"></a>bad_target
 
 Constrói um objeto `bad_target`.
 
-```
+```cpp
 explicit _CRTIMP bad_target(_In_z_ const char* _Message) throw();
 
 bad_target() throw();

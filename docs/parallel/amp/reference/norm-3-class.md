@@ -72,40 +72,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-ms.openlocfilehash: cec778e6cdc53871b7987ef5a2faf529eea6d4f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7123f047a92c377dedefbc5be11e30f5d77db46
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351648"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142162"
 ---
-# <a name="norm3-class"></a>Classe norm_3
+# <a name="norm_3-class"></a>Classe norm_3
 
-Representa um vetor curto de três números normais.
+Representa um pequeno vetor de três números normais.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class norm_3;
 ```
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs públicos
+### <a name="public-typedefs"></a>Typedefs Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[Construtor norm_3](#ctor)|Sobrecarregado. Padrão construtor, inicializa todos os elementos com 0.|
+|[Construtor de norm_3](#ctor)|Sobrecarregado. O construtor padrão inicializa todos os elementos com 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |norm_3::get_x||
 |norm_3::get_xy||
@@ -146,7 +146,7 @@ class norm_3;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |norm_3::operator-||
 |norm_3::operator--||
@@ -157,15 +157,15 @@ class norm_3;
 |norm_3::operator=||
 |norm_3::operator-=||
 
-### <a name="public-constants"></a>Constantes públicas
+### <a name="public-constants"></a>Constantes Públicas
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[tamanho constante](#size)||
+|[Constante de tamanho](#size)||
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |norm_3::b||
 |norm_3::bg||
@@ -202,19 +202,19 @@ class norm_3;
 
 `norm_3`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Simultaneidade:: Graphics
 
-## <a name="ctor"></a> Construtor norm_3
+## <a name="ctor"></a>Construtor de norm_3
 
-Padrão construtor, inicializa todos os elementos com 0.
+O construtor padrão inicializa todos os elementos com 0.
 
-## <a name="syntax"></a>Sintaxe
+### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 norm_3() restrict(amp,cpu);
 norm_3(
    norm _V0,
@@ -257,7 +257,7 @@ explicit inline norm_3(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_V0*<br/>
 O valor para inicializar o elemento 0.
@@ -269,16 +269,16 @@ O valor para inicializar o elemento 1.
 O valor para inicializar o elemento 2.
 
 *_V*<br/>
-O valor para a inicialização.
+O valor para inicialização.
 
 *_Other*<br/>
 O objeto usado para inicializar.
 
-## <a name="a-namesize-size-constant"></a><a name="size"> tamanho constante
+## <a name="a-namesize-size-constant"></a>Constante de tamanho de <a name="size">
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 static const int size = 3;
 ```
 

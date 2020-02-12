@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - task_canceled class
 ms.assetid: c3f0b234-2cc1-435f-a48e-995f45b190be
-ms.openlocfilehash: caef1c62ff09ffb76f74d4a1453e9d59dcb7d45b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1436f921343843ee2b50888f00b6d470e513329
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385239"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142599"
 ---
-# <a name="taskcanceled-class"></a>Classe task_canceled
+# <a name="task_canceled-class"></a>Classe task_canceled
 
-Esta classe descreve uma exceção acionada pela camada de tarefas de PPL para forçar a cancelamento da tarefa atual. Ele também é gerado pela `get()` método no [tarefa](/visualstudio/extensibility/debugger/task-class-internal-members), para uma tarefa cancelada.
+Essa classe descreve uma exceção gerada pela camada de tarefas PPL para forçar a cancelamento da tarefa atual. Ele também é gerado pelo método `get()` na [tarefa](/visualstudio/extensibility/debugger/task-class-internal-members), para uma tarefa cancelada.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class task_canceled : public std::exception;
 ```
 
@@ -29,7 +29,7 @@ class task_canceled : public std::exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[task_canceled](#ctor)|Sobrecarregado. Constrói um objeto `task_canceled`.|
 
@@ -39,17 +39,17 @@ class task_canceled : public std::exception;
 
 `task_canceled`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** concrt. h
+**Cabeçalho:** ConcRT. h
 
 **Namespace:** simultaneidade
 
-##  <a name="ctor"></a> task_canceled
+## <a name="ctor"></a>task_canceled
 
 Constrói um objeto `task_canceled`.
 
-```
+```cpp
 explicit _CRTIMP task_canceled(_In_z_ const char* _Message) throw();
 
 task_canceled() throw();

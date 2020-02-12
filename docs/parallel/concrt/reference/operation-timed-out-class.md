@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - operation_timed_out class
 ms.assetid: 963efe1d-a6e0-477c-9a70-d93d8412c897
-ms.openlocfilehash: 2511be4669bc4abf75d5188e3aeabd7863f42dd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a2513d30aa68798707f3bb16318db9b594b9e16
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394397"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138872"
 ---
-# <a name="operationtimedout-class"></a>Classe operation_timed_out
+# <a name="operation_timed_out-class"></a>Classe operation_timed_out
 
-Esta classe descreve uma exceção gerada quando uma operação foi atingido.
+Essa classe descreve uma exceção lançada quando uma operação esgotou o tempo limite.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class operation_timed_out : public std::exception;
 ```
 
@@ -29,9 +29,9 @@ class operation_timed_out : public std::exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[operation_timed_out](#ctor)|Sobrecarregado. Constrói um `operation_timed_out` objeto.|
+|[operation_timed_out](#ctor)|Sobrecarregado. Constrói um objeto `operation_timed_out`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -39,17 +39,17 @@ class operation_timed_out : public std::exception;
 
 `operation_timed_out`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** concrt. h
+**Cabeçalho:** ConcRT. h
 
 **Namespace:** simultaneidade
 
-##  <a name="ctor"></a> operation_timed_out
+## <a name="ctor"></a>operation_timed_out
 
-Constrói um `operation_timed_out` objeto.
+Constrói um objeto `operation_timed_out`.
 
-```
+```cpp
 explicit _CRTIMP operation_timed_out(_In_z_ const char* _Message) throw();
 
 operation_timed_out() throw();

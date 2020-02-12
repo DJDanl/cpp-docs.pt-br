@@ -1,109 +1,109 @@
 ---
-title: 'Passo a passo: Criando um agente de fluxo de dados'
+title: 'Instruções passo a passo: criando um agente de fluxo de dados'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-ms.openlocfilehash: bd0aa1c2ca2263e469cd45a4af650fa9b3e8c508
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: fa19d965a35909dfefc5f586c772bc9b4565e814
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857425"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142964"
 ---
-# <a name="walkthrough-creating-a-dataflow-agent"></a>Passo a passo: Criando um agente de fluxo de dados
+# <a name="walkthrough-creating-a-dataflow-agent"></a>Instruções passo a passo: criando um agente de fluxo de dados
 
-Este documento demonstra como criar aplicativos baseados em agente que se baseiam no fluxo de dados, em vez de fluxo de controle.
+Este documento demonstra como criar aplicativos baseados em agente baseados em Dataflow, em vez de fluxo de controle.
 
-*Fluxo de controle* refere-se a ordem de execução de operações em um programa. Fluxo de controle é controlado por meio de estruturas de controle, como instruções condicionais, loops e assim por diante. Como alternativa, *fluxo de dados* refere-se a um modelo de programação em que computações são feitas somente quando todos os dados necessários está disponível. O modelo de programação de fluxo de dados está relacionado ao conceito de passagem, de mensagens em que componentes independentes de um programa se comunicam uns com os outros enviando mensagens.
+O *fluxo de controle* refere-se à ordem de execução das operações em um programa. O fluxo de controle é regulamentado usando estruturas de controle, como instruções condicionais, loops e assim por diante. Como alternativa, o *fluxo* de dados refere-se a um modelo de programação no qual os cálculos são feitos somente quando todos os dados necessários estão disponíveis. O modelo de programação de fluxo de arquivos está relacionado ao conceito de transmissão de mensagens, no qual os componentes independentes de um programa se comunicam entre si enviando mensagens.
 
-Agentes assíncronos dão suporte a fluxo de controle e modelos de programação de fluxo de dados. Embora o modelo de fluxo de controle é apropriado em muitos casos, o modelo de fluxo de dados é apropriado em outros, por exemplo, quando um agente recebe os dados e executa uma ação com base na carga desses dados.
+Os agentes assíncronos oferecem suporte aos modelos de programação de fluxo de controle e fluxo de fluxos. Apesar de o modelo de fluxo de controle ser apropriado em muitos casos, o modelo de fluxo de dados é apropriado em outros, por exemplo, quando um agente recebe dados e executa uma ação com base na carga desses dados.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
-Leia os documentos a seguir antes de começar este passo a passo:
+Leia os seguintes documentos antes de iniciar este passo a passos:
 
 - [Agentes assíncronos](../../parallel/concrt/asynchronous-agents.md)
 
 - [Blocos de mensagens assíncronos](../../parallel/concrt/asynchronous-message-blocks.md)
 
-- [Como: Usar um filtro de bloco de mensagens](../../parallel/concrt/how-to-use-a-message-block-filter.md)
+- [Como usar um filtro de bloco de mensagens](../../parallel/concrt/how-to-use-a-message-block-filter.md)
 
-##  <a name="top"></a> Seções
+## <a name="top"></a>As
 
 Este passo a passo contém as seguintes seções:
 
 - [Criando um agente de fluxo de controle básico](#control-flow)
 
-- [Criando um agente de fluxo de dados básico](#dataflow)
+- [Criando um agente de fluxo de os básico](#dataflow)
 
-- [Criando um agente de log de mensagem](#logging)
+- [Criando um agente de log de mensagens](#logging)
 
-##  <a name="control-flow"></a> Criando um agente de fluxo de controle básico
+## <a name="control-flow"></a>Criando um agente de fluxo de controle básico
 
-Considere o seguinte exemplo define o `control_flow_agent` classe. O `control_flow_agent` classe age em três buffers de mensagem: um buffer de entrada e dois buffers de saída. O `run` método lerá o buffer de mensagem de origem em um loop e usa uma instrução condicional para direcionar o fluxo de execução do programa. O agente incrementa um contador para diferente de zero, os valores negativos e incrementa o contador de outra para valores positivos diferente de zero. Depois que o agente recebe o valor de Sentinela de zero, ele envia os valores dos contadores para os buffers de mensagem de saída. O `negatives` e `positives` métodos permitem que o aplicativo leia as contagens de valores positivos e negativos do agente.
+Considere o exemplo a seguir que define a classe `control_flow_agent`. A classe `control_flow_agent` atua em três buffers de mensagens: um buffer de entrada e dois buffers de saída. O método `run` lê a partir do buffer de mensagem de origem em um loop e usa uma instrução condicional para direcionar o fluxo de execução do programa. O agente incrementa um contador para valores não zero, negativos e incrementa outro contador para valores não zero e positivos. Depois que o agente recebe o valor de sentinela de zero, ele envia os valores dos contadores para os buffers de mensagens de saída. Os métodos `negatives` e `positives` permitem que o aplicativo Leia as contagens de valores negativos e positivos do agente.
 
 [!code-cpp[concrt-dataflow-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_1.cpp)]
 
-Embora este exemplo faz uso básico do fluxo de controle em um agente, ele demonstra a natureza serial de programação baseado em fluxo de controle. Cada mensagem deve ser processada em sequência, mesmo que várias mensagens podem estar disponíveis no buffer de mensagem de entrada. O modelo de fluxo de dados permite que ambas as ramificações da instrução condicional ser avaliada simultaneamente. O modelo de fluxo de dados também permite que você crie redes mais complexas de mensagens que atuam em dados assim que estiverem disponíveis.
+Embora este exemplo faça uso básico do fluxo de controle em um agente, ele demonstra a natureza serial da programação baseada em fluxo de controle. Cada mensagem deve ser processada sequencialmente, mesmo que várias mensagens possam estar disponíveis no buffer de mensagens de entrada. O modelo de Dataflow permite que ambas as ramificações da instrução condicional sejam avaliadas simultaneamente. O modelo de fluxo de dados também permite que você crie redes de mensagens mais complexas que atuem nos dados conforme estiverem disponíveis.
 
-[[Top](#top)]
+[[Superior](#top)]
 
-##  <a name="dataflow"></a> Criando um agente de fluxo de dados básico
+## <a name="dataflow"></a>Criando um agente de fluxo de os básico
 
-Esta seção mostra como converter o `control_flow_agent` classe usar o modelo de fluxo de dados para executar a mesma tarefa.
+Esta seção mostra como converter a classe `control_flow_agent` para usar o modelo de fluxo de os para executar a mesma tarefa.
 
-O agente de fluxo de dados funciona com a criação de uma rede de buffers de mensagens, cada um deles serve a uma finalidade específica. Determinados blocos de mensagens usam uma função de filtro para aceitar ou rejeitar uma mensagem com base em sua carga. Uma função de filtro garante que um bloco de mensagem receba apenas determinados valores.
+O agente de fluxo de trabalhos funciona criando uma rede de buffers de mensagens, cada um deles atendendo a uma finalidade específica. Determinados blocos de mensagens usam uma função de filtro para aceitar ou rejeitar uma mensagem com base em sua carga. Uma função de filtro garante que um bloco de mensagem receba apenas determinados valores.
 
 #### <a name="to-convert-the-control-flow-agent-to-a-dataflow-agent"></a>Para converter o agente do fluxo de controle em um agente do fluxo de dados
 
-1. Copiar o corpo do `control_flow_agent` classe para outra classe, por exemplo, `dataflow_agent`. Como alternativa, você pode renomear o `control_flow_agent` classe.
+1. Copie o corpo da classe `control_flow_agent` para outra classe, por exemplo, `dataflow_agent`. Como alternativa, você pode renomear a classe `control_flow_agent`.
 
-1. Remova o corpo do loop que chama `receive` do `run` método.
+1. Remova o corpo do loop que chama `receive` do método `run`.
 
 [!code-cpp[concrt-dataflow-agent#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_2.cpp)]
 
-1. No `run` método, após a inicialização das variáveis `negative_count` e `positive_count`, adicione um `countdown_event` objeto que controla a contagem de operações do Active Directory.
+1. No método `run`, após a inicialização das variáveis `negative_count` e `positive_count`, adicione um objeto `countdown_event` que acompanha a contagem de operações ativas.
 
 [!code-cpp[concrt-dataflow-agent#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_3.cpp)]
 
-   O `countdown_event` classe é mostrado mais adiante neste tópico.
+   A classe `countdown_event` é mostrada mais adiante neste tópico.
 
-1. Crie a mensagem de objetos de buffer que participarão na rede de fluxo de dados.
+1. Crie os objetos de buffer de mensagem que participarão da rede de fluxo de mensagens.
 
 [!code-cpp[concrt-dataflow-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_4.cpp)]
 
-1. Conecte-se os buffers de mensagem para formar uma rede.
+1. Conecte os buffers de mensagens para formar uma rede.
 
 [!code-cpp[concrt-dataflow-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_5.cpp)]
 
-1. Aguarde até que o `event` e `countdown event` objetos a ser definido. Esses eventos sinalizam que o agente recebeu o valor de sentinela e que concluiu todas as operações.
+1. Aguarde até que os objetos `event` e `countdown event` sejam definidos. Esses eventos sinalizam que o agente recebeu o valor de sentinela e que todas as operações foram concluídas.
 
 [!code-cpp[concrt-dataflow-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_6.cpp)]
 
-O diagrama a seguir mostra a rede de fluxo de dados completo para o `dataflow_agent` classe:
+O diagrama a seguir mostra a rede de Dataflow completa para a classe `dataflow_agent`:
 
-![A rede de fluxo de dados](../../parallel/concrt/media/concrt_dataflow.png "a rede de fluxo de dados")
+![A rede de Dataflow](../../parallel/concrt/media/concrt_dataflow.png "A rede de Dataflow")
 
 A tabela a seguir descreve os membros da rede.
 
-|Membro|Descrição|
+|{1&gt;Membro&lt;1}|Descrição|
 |------------|-----------------|
-|`increment_active`|Um [Concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) objeto que incrementa o contador de eventos ativos e passa o valor de entrada para o restante da rede.|
-|`negatives`, `positives`|[Concurrency::Call](../../parallel/concrt/reference/call-class.md) objetos que incrementam a contagem de números e diminui o contador de eventos ativos. Os objetos usam um filtro para aceitar os números negativos ou números positivos.|
-|`sentinel`|Um [concurrency::call](../../parallel/concrt/reference/call-class.md) objeto que aceita apenas o valor de sentinela do zero e diminui o contador de eventos ativos.|
-|`connector`|Um [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) objeto que se conecta o buffer de mensagem de origem à rede interna.|
+|`increment_active`|Um objeto [Concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) que incrementa o contador de eventos ativo e passa o valor de entrada para o restante da rede.|
+|`negatives`, `positives`|[Concurrency:: chama](../../parallel/concrt/reference/call-class.md) objetos que incrementam a contagem de números e decrementa o contador de eventos ativo. Os objetos usam um filtro para aceitar números negativos ou números positivos.|
+|`sentinel`|Um objeto [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) que aceita apenas o valor de sentinela de zero e decrementa o contador de eventos ativo.|
+|`connector`|Um objeto [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) que conecta o buffer de mensagem de origem à rede interna.|
 
-Porque o `run` método é chamado em um thread separado, outros threads podem enviar mensagens para a rede antes da rede é totalmente conectada. O `_source` membro de dados é um `unbounded_buffer` objeto que armazena em buffer todas as entradas que é enviada do aplicativo para o agente. Para certificar-se de que a rede processa mensagens de entrada todos, o agente pela primeira vez vincula os nós internos da rede e, em seguida, vincula o início dessa rede, `connector`, para o `_source` membro de dados. Isso garante que as mensagens não serão processadas como a rede está sendo formada.
+Como o método `run` é chamado em um thread separado, outros threads podem enviar mensagens para a rede antes que a rede esteja totalmente conectada. O membro de dados `_source` é um objeto `unbounded_buffer` que armazena em buffer todas as entradas enviadas do aplicativo para o agente. Para garantir que a rede processe todas as mensagens de entrada, o agente primeiro vincula os nós internos da rede e, em seguida, vincula o início dessa rede, `connector`, ao membro de dados do `_source`. Isso garante que as mensagens não sejam processadas à medida que a rede está sendo formada.
 
-Porque a rede neste exemplo é baseada em fluxo de dados, em vez de no fluxo de controle, a rede deve se comunicar com o agente que terminou de processar cada valor de entrada e que o nó de sentinela tenha recebido o seu valor. Este exemplo usa uma `countdown_event` objeto para sinalizar que todos os valores de entrada foram processados e um [concurrency::event](../../parallel/concrt/reference/event-class.md) objeto para indicar que o nó de sentinela tenha recebido o seu valor. O `countdown_event` classe usa um `event` objeto para sinalizar quando um valor de contador chega a zero. O cabeçalho da rede de fluxo de dados incrementa o contador de cada vez que ele recebe um valor. Cada nó terminal de diminui a rede o contador Após processar o valor de entrada. Depois que o agente forma a rede de fluxo de dados, ele aguarda o nó de sentinela definir a `event` objeto e para o `countdown_event` objeto para sinalizar que o seu contador chegou a zero.
+Como a rede neste exemplo é baseada em fluxo de dados, e não no fluxo de controle, a rede deve se comunicar com o agente que concluiu o processamento de cada valor de entrada e que o nó sentinel recebeu seu valor. Este exemplo usa um objeto `countdown_event` para sinalizar que todos os valores de entrada foram processados e um objeto [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) para indicar que o nó sentinel recebeu seu valor. A classe `countdown_event` usa um objeto `event` para sinalizar quando um valor de contador chegar a zero. O cabeçalho da rede de Dataflow incrementa o contador toda vez que recebe um valor. Cada nó de terminal da rede diminui o contador depois de processar o valor de entrada. Depois que o agente forma a rede de Dataflow, ele aguarda que o nó Sentinel defina o objeto `event` e para o objeto `countdown_event` para sinalizar que seu contador atingiu o zero.
 
-A exemplo a seguir mostra a `control_flow_agent`, `dataflow_agent`, e `countdown_event` classes. O `wmain` função cria um `control_flow_agent` e uma `dataflow_agent` objeto e usa o `send_values` função para enviar uma série de valores aleatórios para os agentes.
+O exemplo a seguir mostra as classes `control_flow_agent`, `dataflow_agent`e `countdown_event`. A função `wmain` cria uma `control_flow_agent` e um objeto `dataflow_agent` e usa a função `send_values` para enviar uma série de valores aleatórios para os agentes.
 
 [!code-cpp[concrt-dataflow-agent#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_7.cpp)]
 
-Este exemplo produz a saída de exemplo a seguir:
+Este exemplo produz a seguinte saída de exemplo:
 
 ```Output
 Control-flow agent:
@@ -114,17 +114,17 @@ There are 500523 negative numbers.
 There are 499477 positive numbers.
 ```
 
-### <a name="compiling-the-code"></a>Compilando o código
+### <a name="compiling-the-code"></a>Compilando o Código
 
-Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `dataflow-agent.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.
+Copie o código de exemplo e cole-o em um projeto do Visual Studio ou cole-o em um arquivo chamado `dataflow-agent.cpp` e, em seguida, execute o comando a seguir em uma janela de prompt de comando do Visual Studio.
 
-**fluxo de dados de /EHsc cl.exe-agent.cpp**
+**CL. exe/EHsc Dataflow-Agent. cpp**
 
-[[Top](#top)]
+[[Superior](#top)]
 
-##  <a name="logging"></a> Criando um agente de log de mensagem
+## <a name="logging"></a>Criando um agente de log de mensagens
 
-A exemplo a seguir mostra a `log_agent` classe, que é semelhante a `dataflow_agent` classe. O `log_agent` classe implementa um agente de log assíncrono que grava no log mensagens para um arquivo e para o console. O `log_agent` classe permite que o aplicativo categorizar as mensagens como informativo, aviso ou erro. Ele também permite que o aplicativo especificar se cada categoria de log é gravada em um arquivo, o console ou ambos. Este exemplo grava todas as mensagens de log para um arquivo e somente mensagens de erro no console.
+O exemplo a seguir mostra a classe `log_agent`, que se assemelha à classe `dataflow_agent`. A classe `log_agent` implementa um agente de log assíncrono que grava mensagens de log em um arquivo e no console do. A classe `log_agent` permite ao aplicativo categorizar mensagens como informativas, aviso ou erro. Ele também permite que o aplicativo especifique se cada categoria de log é gravada em um arquivo, no console ou em ambos. Este exemplo grava todas as mensagens de log em um arquivo e apenas mensagens de erro no console.
 
 [!code-cpp[concrt-log-filter#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_8.cpp)]
 
@@ -134,7 +134,7 @@ Este exemplo grava a saída a seguir no console.
 error: This is a sample error message.
 ```
 
-Este exemplo também produz o arquivo de log. txt, que contém o texto a seguir.
+Este exemplo também produz o arquivo log. txt, que contém o texto a seguir.
 
 ```Output
 info: ===Logging started.===
@@ -143,14 +143,14 @@ error: This is a sample error message.
 info: ===Logging finished.===
 ```
 
-### <a name="compiling-the-code"></a>Compilando o código
+### <a name="compiling-the-code"></a>Compilando o Código
 
-Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `log-filter.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.
+Copie o código de exemplo e cole-o em um projeto do Visual Studio ou cole-o em um arquivo chamado `log-filter.cpp` e, em seguida, execute o comando a seguir em uma janela de prompt de comando do Visual Studio.
 
-**cl.exe /EHsc log-filter.cpp**
+**CL. exe/EHsc log-Filter. cpp**
 
-[[Top](#top)]
+[[Superior](#top)]
 
 ## <a name="see-also"></a>Consulte também
 
-[Instruções passo a passo do tempo de execução de simultaneidade](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
+[Instruções passo a passo do runtime de simultaneidade](../../parallel/concrt/concurrency-runtime-walkthroughs.md)

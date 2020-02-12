@@ -12,118 +12,118 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-ms.openlocfilehash: 867e0543d1b9f2810a3fe761f038947c4d88da4d
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 1b4cb6a856d6da7b8eee7f9cba1ad51e375c024d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346218"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140057"
 ---
 # <a name="itopologynode-structure"></a>Estrutura ITopologyNode
 
-Uma interface para um nó da topologia conforme definido pelo Gerenciador de recursos. Um nó contém um ou mais recursos de execução.
+Uma interface para um nó de topologia, conforme definido pelo Gerenciador de recursos. Um nó contém um ou mais recursos de execução.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 struct ITopologyNode;
 ```
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[ITopologyNode::GetExecutionResourceCount](#getexecutionresourcecount)|Retorna o número de recursos de execução agrupados sob este nó.|
-|[ITopologyNode::GetFirstExecutionResource](#getfirstexecutionresource)|Retorna o primeiro recurso de execução agrupado sob esse nó na ordem de enumeração.|
-|[ITopologyNode::GetId](#getid)|Retorna o identificador exclusivo do Resource Manager deste nó.|
-|[ITopologyNode::GetNext](#getnext)|Retorna uma interface para o próximo nó de topologia na ordem de enumeração.|
-|[ITopologyNode::GetNumaNode](#getnumanode)|Retorna o Windows atribuído o número do nó ao qual pertence esse nó do Gerenciador de recursos.|
+|[ITopologyNode::GetExecutionResourceCount](#getexecutionresourcecount)|Retorna o número de recursos de execução agrupados em conjunto neste nó.|
+|[ITopologyNode::GetFirstExecutionResource](#getfirstexecutionresource)|Retorna o primeiro recurso de execução agrupado sob este nó na ordem de enumeração.|
+|[ITopologyNode:: GetId](#getid)|Retorna o identificador exclusivo do Gerenciador de recursos para este nó.|
+|[ITopologyNode:: GetNext](#getnext)|Retorna uma interface para o próximo nó de topologia na ordem de enumeração.|
+|[ITopologyNode::GetNumaNode](#getnumanode)|Retorna o número de nó NUMA atribuído pelo Windows ao qual este nó maanger de recurso pertence.|
 
 ## <a name="remarks"></a>Comentários
 
-Essa interface é normalmente usada para percorrer a topologia do sistema, conforme observado pelo Gerenciador de recursos.
+Normalmente, essa interface é utilizada para percorrer a topologia do sistema, conforme observado pelo Gerenciador de recursos.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `ITopologyNode`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** concrtrm. h
 
 **Namespace:** simultaneidade
 
-##  <a name="getexecutionresourcecount"></a>  Método itopologynode:: Getexecutionresourcecount
+## <a name="getexecutionresourcecount"></a>Método ITopologyNode:: GetExecutionResourceCount
 
-Retorna o número de recursos de execução agrupados sob este nó.
+Retorna o número de recursos de execução agrupados em conjunto neste nó.
 
-```
+```cpp
 virtual unsigned int GetExecutionResourceCount() const = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O número de recursos de execução agrupados sob este nó.
+O número de recursos de execução agrupados em conjunto neste nó.
 
-##  <a name="getfirstexecutionresource"></a>  Método itopologynode:: Getfirstexecutionresource
+## <a name="getfirstexecutionresource"></a>Método ITopologyNode:: GetFirstExecutionResource
 
-Retorna o primeiro recurso de execução agrupado sob esse nó na ordem de enumeração.
+Retorna o primeiro recurso de execução agrupado sob este nó na ordem de enumeração.
 
-```
+```cpp
 virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O primeiro recurso de execução agrupados sob esse nó na ordem de enumeração.
+O primeiro recurso de execução agrupado sob este nó na ordem de enumeração.
 
-##  <a name="getid"></a>  Método itopologynode:: GetID
+## <a name="getid"></a>Método ITopologyNode:: GetId
 
-Retorna o identificador exclusivo do Resource Manager deste nó.
+Retorna o identificador exclusivo do Gerenciador de recursos para este nó.
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O Gerenciador de recursos do identificador exclusivo para este nó.
+O identificador exclusivo do Gerenciador de recursos para este nó.
 
 ### <a name="remarks"></a>Comentários
 
-O tempo de execução de simultaneidade representa threads de hardware no sistema em grupos de nós de processador. Nós geralmente são derivados da topologia do hardware do sistema. Por exemplo, todos os processadores em um soquete específico ou um nó NUMA específico podem pertencer ao mesmo nó de processador. O Gerenciador de recursos atribui identificadores exclusivos para esses nós começando com `0` até e incluindo `nodeCount - 1`, onde `nodeCount` representa o número total de nós de processador no sistema.
+A Tempo de Execução de Simultaneidade representa os threads de hardware no sistema em grupos de nós de processador. Normalmente, os nós são derivados da topologia de hardware do sistema. Por exemplo, todos os processadores em um soquete específico ou um nó NUMA específico podem pertencer ao mesmo nó de processador. O Gerenciador de recursos atribui identificadores exclusivos a esses nós, começando com `0` até e incluindo `nodeCount - 1`, em que `nodeCount` representa o número total de nós de processador no sistema.
 
-A contagem de nós pode ser obtida da função [GetProcessorNodeCount](concurrency-namespace-functions.md).
+A contagem de nós pode ser obtida na função [GetProcessorNodeCount](concurrency-namespace-functions.md).
 
-##  <a name="getnext"></a>  Método itopologynode:: GetNext
+## <a name="getnext"></a>Método ITopologyNode:: GetNext
 
 Retorna uma interface para o próximo nó de topologia na ordem de enumeração.
 
-```
+```cpp
 virtual ITopologyNode *GetNext() const = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma interface para o próximo nó na ordem de enumeração. Não se houver mais nenhum nó na ordem de enumeração da topologia do sistema, esse método retornará o valor `NULL`.
+Uma interface para o próximo nó na ordem de enumeração. Se não houver mais nós na ordem de enumeração da topologia do sistema, esse método retornará o valor `NULL`.
 
-##  <a name="getnumanode"></a>  Método itopologynode:: Getnumanode
+## <a name="getnumanode"></a>Método ITopologyNode:: GetNumaNode
 
-Retorna o Windows atribuído o número do nó ao qual pertence esse nó do Gerenciador de recursos.
+Retorna o número de nó NUMA atribuído pelo Windows ao qual este nó maanger de recurso pertence.
 
-```
+```cpp
 virtual unsigned long GetNumaNode() const = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O Windows atribuído o número do nó ao qual pertence este nó do Gerenciador de recursos.
+O número de nó NUMA atribuído pelo Windows ao qual este nó do Resource Manager pertence.
 
 ### <a name="remarks"></a>Comentários
 
-Um proxy de thread em execução em uma raiz de processador virtual que pertencem a esse nó terá afinidade com pelo menos o nível de nó para o nó NUMA retornado por esse método.
+Um proxy de thread em execução em uma raiz de processador virtual que pertence a esse nó terá afinidade com pelo menos o nível de nó NUMA para o nó NUMA retornado por esse método.
 
 ## <a name="see-also"></a>Consulte também
 

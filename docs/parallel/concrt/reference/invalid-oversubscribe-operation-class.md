@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_oversubscribe_operation class
 ms.assetid: 0a9c5f08-d5e6-4ad0-90a9-517472b3ac28
-ms.openlocfilehash: 200743d41c1c45f2a957dba0716dd7aa07e3de76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a879fc2da2f963cd4b5ea5fcd7e9506f86ce051
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405307"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140841"
 ---
-# <a name="invalidoversubscribeoperation-class"></a>Classe invalid_oversubscribe_operation
+# <a name="invalid_oversubscribe_operation-class"></a>Classe invalid_oversubscribe_operation
 
-Esta classe descreve uma exceção gerada quando o `Context::Oversubscribe` método for chamado com o `_BeginOversubscription` parâmetro definido como **falso** sem uma chamada anterior para o `Context::Oversubscribe` método com o `_BeginOversubscription` parâmetro definido como **verdadeira**.
+Essa classe descreve uma exceção gerada quando o método `Context::Oversubscribe` é chamado com o parâmetro `_BeginOversubscription` definido como **false** sem uma chamada anterior ao método `Context::Oversubscribe` com o parâmetro `_BeginOversubscription` definido como **true**.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class invalid_oversubscribe_operation : public std::exception;
 ```
 
@@ -29,9 +29,9 @@ class invalid_oversubscribe_operation : public std::exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[invalid_oversubscribe_operation](#ctor)|Sobrecarregado. Constrói um `invalid_oversubscribe_operation` objeto.|
+|[invalid_oversubscribe_operation](#ctor)|Sobrecarregado. Constrói um objeto `invalid_oversubscribe_operation`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -39,17 +39,17 @@ class invalid_oversubscribe_operation : public std::exception;
 
 `invalid_oversubscribe_operation`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** concrt. h
+**Cabeçalho:** ConcRT. h
 
 **Namespace:** simultaneidade
 
-##  <a name="ctor"></a> invalid_oversubscribe_operation
+## <a name="ctor"></a>invalid_oversubscribe_operation
 
-Constrói um `invalid_oversubscribe_operation` objeto.
+Constrói um objeto `invalid_oversubscribe_operation`.
 
-```
+```cpp
 explicit _CRTIMP invalid_oversubscribe_operation(_In_z_ const char* _Message) throw();
 
 invalid_oversubscribe_operation() throw();

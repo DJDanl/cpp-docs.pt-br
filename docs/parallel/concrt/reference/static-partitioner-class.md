@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - static_partitioner class
 ms.assetid: 2b3dbdf0-6eb9-49f6-8639-03df1d974143
-ms.openlocfilehash: 5120e3c53dc00ba9d5c3a4218efe1dcfb8f92e28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a58daa27bc7a2f51f78a3068a2f152979ffdd72
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337382"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142689"
 ---
-# <a name="staticpartitioner-class"></a>Classe static_partitioner
+# <a name="static_partitioner-class"></a>Classe static_partitioner
 
-O `static_partitioner` classe representa um particionamento estático do intervalo iterado pelo `parallel_for`. O particionador divide o intervalo em quantos blocos há trabalhadores disponíveis para o Agendador underyling.
+A classe `static_partitioner` representa um particionamento estático do intervalo iterado por `parallel_for`. O particionador divide o intervalo em tantas partes quanto há trabalhadores disponíveis para o Agendador subjacente.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class static_partitioner;
 ```
 
@@ -29,7 +29,7 @@ class static_partitioner;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[static_partitioner](#ctor)|Constrói um objeto `static_partitioner`.|
 |[~ static_partitioner destruidor](#dtor)|Destrói um objeto `static_partitioner`.|
@@ -38,25 +38,25 @@ class static_partitioner;
 
 `static_partitioner`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** ppl.h
+**Cabeçalho:** ppl. h
 
 **Namespace:** simultaneidade
 
-##  <a name="dtor"></a> ~static_partitioner
+## <a name="dtor"></a>~ static_partitioner
 
 Destrói um objeto `static_partitioner`.
 
-```
+```cpp
 ~static_partitioner();
 ```
 
-##  <a name="ctor"></a> static_partitioner
+## <a name="ctor"></a>static_partitioner
 
 Constrói um objeto `static_partitioner`.
 
-```
+```cpp
 static_partitioner();
 ```
 

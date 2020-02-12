@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 451318bfbcfb9c5e002677556944e3499c0ed5fb
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 561f0a258943f6d7e1c0f1b5cae716592c931fbc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525411"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127706"
 ---
-# <a name="unsupportedfeature-class"></a>Classe unsupported_feature
+# <a name="unsupported_feature-class"></a>Classe unsupported_feature
 
 A exceção que é lançada quando um recurso sem suporte é usado.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class unsupported_feature : public runtime_exception;
 ```
 
@@ -29,9 +29,9 @@ class unsupported_feature : public runtime_exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[Construtor de unsupported_feature](#unsupported_feature)|Constrói uma nova instância do `unsupported_feature` exceção.|
+|[Construtor de unsupported_feature](#unsupported_feature)|Constrói uma nova instância da exceção `unsupported_feature`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -41,13 +41,13 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupported_feature"></a> unsupported_feature
+## <a name="unsupported_feature"></a>unsupported_feature
 
-  Constrói uma nova instância do `unsupported_feature` exceção.
+  Constrói uma nova instância da exceção `unsupported_feature`.
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 explicit unsupported_feature(
     const char * _Message ) throw();
 
@@ -59,15 +59,15 @@ unsupported_feature() throw();
 *_Message*<br/>
 Uma descrição do erro.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O objeto `unsupported_feature`.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amprt. h
 
-**Namespace:** Concorrência
+**Namespace:** Simultaneidade
 
 ## <a name="see-also"></a>Consulte também
 

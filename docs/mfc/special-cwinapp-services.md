@@ -30,12 +30,12 @@ helpviewer_keywords:
 - MFC, file operations
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
-ms.openlocfilehash: e96753a5dbc77fdc7aab365439e997585e00f43b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 04c7357d67dc1a5daee4b8b8135c9a54eda8504a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511337"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127823"
 ---
 # <a name="special-cwinapp-services"></a>Serviços CWinApp especiais
 
@@ -43,17 +43,17 @@ Além de executar o loop de mensagem e dar a você uma oportunidade de inicializ
 
 ##  <a name="_core_shell_registration"></a>Registro do Shell
 
-Por padrão, o assistente de aplicativo do MFC possibilita que o usuário abra arquivos de dados que seu aplicativo criou clicando duas vezes neles no explorador de arquivos ou no Gerenciador de arquivos. Se seu aplicativo for um aplicativo MDI e você especificar uma extensão para os arquivos que seu aplicativo cria, o assistente de aplicativo do MFC adicionará chamadas às funções membro [RegisterShellFileTypes](../mfc/reference/cwinapp-class.md#registershellfiletypes) e [EnableShellOpen](../mfc/reference/cwinapp-class.md#enableshellopen) de [CWinApp](../mfc/reference/cwinapp-class.md) para a `InitInstance` substituição que grava para você.
+Por padrão, o assistente de aplicativo do MFC possibilita que o usuário abra arquivos de dados que seu aplicativo criou clicando duas vezes neles no explorador de arquivos ou no Gerenciador de arquivos. Se seu aplicativo for um aplicativo MDI e você especificar uma extensão para os arquivos que seu aplicativo cria, o assistente de aplicativo do MFC adicionará chamadas às funções membro [RegisterShellFileTypes](../mfc/reference/cwinapp-class.md#registershellfiletypes) e [EnableShellOpen](../mfc/reference/cwinapp-class.md#enableshellopen) de [CWinApp](../mfc/reference/cwinapp-class.md) para a substituição de `InitInstance` que grava para você.
 
-`RegisterShellFileTypes`registra os tipos de documento do aplicativo com o explorador de arquivos ou o Gerenciador de arquivos. A função adiciona entradas ao banco de dados de registro que o Windows mantém. As entradas registram cada tipo de documento, associam uma extensão de arquivo ao tipo de arquivo, especificam uma linha de comando para abrir o aplicativo e especificam um comando DDE (troca de dados dinâmicos) para abrir um documento desse tipo.
+`RegisterShellFileTypes` registra os tipos de documento do aplicativo com o explorador de arquivos ou o Gerenciador de arquivos. A função adiciona entradas ao banco de dados de registro que o Windows mantém. As entradas registram cada tipo de documento, associam uma extensão de arquivo ao tipo de arquivo, especificam uma linha de comando para abrir o aplicativo e especificam um comando DDE (troca de dados dinâmicos) para abrir um documento desse tipo.
 
-`EnableShellOpen`conclui o processo permitindo que seu aplicativo receba comandos DDE do explorador de arquivos ou do Gerenciador de arquivos para abrir o arquivo escolhido pelo usuário.
+`EnableShellOpen` conclui o processo permitindo que seu aplicativo receba comandos DDE do explorador de arquivos ou do Gerenciador de arquivos para abrir o arquivo escolhido pelo usuário.
 
-Esse suporte de registro automático `CWinApp` no elimina a necessidade de enviar um arquivo. reg com seu aplicativo ou para realizar um trabalho de instalação especial.
+Esse suporte de registro automático no `CWinApp` elimina a necessidade de enviar um arquivo. reg com seu aplicativo ou para realizar um trabalho de instalação especial.
 
 Se você quiser inicializar o GDI+ para seu aplicativo (chamando [GdiplusStartup](/windows/win32/api/gdiplusinit/nf-gdiplusinit-gdiplusstartup) em sua função [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) ), será necessário suprimir o thread em segundo plano GDI+.
 
-Você pode fazer isso definindo o `SuppressBackgroundThread` membro da estrutura [GdiplusStartupInput](/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupinput) como **true**. Ao suprimir o thread em segundo plano GDI+ `NotificationHook` , `NotificationUnhook` as chamadas e devem ser feitas antes de entrar e sair do loop de mensagem do aplicativo. Para obter mais informações sobre essas chamadas, consulte [GdiplusStartupOutput](/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupoutput). Portanto, um bom lugar para chamar `GdiplusStartup` e as funções de notificação de gancho estaria em uma substituição da função virtual [CWinApp:: Run](../mfc/reference/cwinapp-class.md#run), conforme mostrado abaixo:
+Você pode fazer isso definindo o membro `SuppressBackgroundThread` da estrutura [GdiplusStartupInput](/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupinput) como **true**. Ao suprimir o thread em segundo plano GDI+, as chamadas `NotificationHook` e `NotificationUnhook` devem ser feitas antes de entrar e sair do loop de mensagem do aplicativo. Para obter mais informações sobre essas chamadas, consulte [GdiplusStartupOutput](/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupoutput). Portanto, um bom lugar para chamar `GdiplusStartup` e as funções de notificação de Hook estaria em uma substituição da função virtual [CWinApp:: Run](../mfc/reference/cwinapp-class.md#run), conforme mostrado abaixo:
 
 [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]
 
@@ -63,14 +63,14 @@ Se você não suprimir o thread GDI+ em segundo plano, os comandos DDE poderão 
 
 Os arquivos podem ser arrastados da janela de exibição de arquivo no Gerenciador de arquivos ou do explorador de arquivos para uma janela em seu aplicativo. Você pode, por exemplo, permitir que um ou mais arquivos sejam arrastados para uma janela principal do aplicativo MDI, onde o aplicativo poderia recuperar os nomes de arquivo e abrir janelas filhas MDI para esses arquivos.
 
-Para habilitar o recurso arrastar e soltar em seu aplicativo, o assistente de aplicativo MFC grava uma chamada para a função de membro [CWnd](../mfc/reference/cwnd-class.md) [DragAcceptFiles](../mfc/reference/cwnd-class.md#dragacceptfiles) para sua janela de `InitInstance`quadro principal no seu. Você pode remover essa chamada se não quiser implementar o recurso de arrastar e soltar.
+Para habilitar o recurso arrastar e soltar em seu aplicativo, o assistente de aplicativo MFC grava uma chamada para a função de membro [CWnd](../mfc/reference/cwnd-class.md) [DragAcceptFiles](../mfc/reference/cwnd-class.md#dragacceptfiles) para sua janela de quadro principal em seu `InitInstance`. Você pode remover essa chamada se não quiser implementar o recurso de arrastar e soltar.
 
 > [!NOTE]
->  Você também pode implementar recursos mais gerais de arrastar e soltar, arrastando dados entre o ou dentro de documentos — com OLE. Para obter informações, consulte o artigo [arrastar e soltar (OLE)](../mfc/drag-and-drop-ole.md).
+>  Você também pode implementar recursos mais gerais de arrastar e soltar, arrastando dados entre o ou dentro de documentos — com OLE. Para obter informações, consulte o artigo [arrastar e soltar de OLE](../mfc/drag-and-drop-ole.md).
 
 ##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a>Controlando os documentos usados mais recentemente
 
-À medida que o usuário abre e fecha os arquivos, o objeto de aplicativo mantém o controle dos quatro arquivos usados mais recentemente. Os nomes desses arquivos são adicionados ao menu arquivo e atualizados quando eles são alterados. A estrutura armazena esses nomes de arquivo no registro ou no arquivo. ini, com o mesmo nome que o seu projeto e os lê do arquivo quando o aplicativo é iniciado. A `InitInstance` substituição que o assistente de aplicativo do MFC cria para você inclui uma chamada para a função membro [CWinApp](../mfc/reference/cwinapp-class.md) [LoadStdProfileSettings](../mfc/reference/cwinapp-class.md#loadstdprofilesettings), que carrega informações do registro ou do arquivo. ini, incluindo o arquivo usado mais recentemente nomes.
+À medida que o usuário abre e fecha os arquivos, o objeto de aplicativo mantém o controle dos quatro arquivos usados mais recentemente. Os nomes desses arquivos são adicionados ao menu arquivo e atualizados quando eles são alterados. A estrutura armazena esses nomes de arquivo no registro ou no arquivo. ini, com o mesmo nome que o seu projeto e os lê do arquivo quando o aplicativo é iniciado. O `InitInstance` substituição que o assistente de aplicativo do MFC cria para você inclui uma chamada para a função membro [CWinApp](../mfc/reference/cwinapp-class.md) [LoadStdProfileSettings](../mfc/reference/cwinapp-class.md#loadstdprofilesettings), que carrega informações do registro ou do arquivo. ini, incluindo os nomes de arquivo usados mais recentemente.
 
 Essas entradas são armazenadas da seguinte maneira:
 

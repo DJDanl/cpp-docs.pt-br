@@ -6,20 +6,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-ms.openlocfilehash: 56f879ef2fc0d3010ab4f64fedaf2570dac565d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 272ac3685539eb03f773c8bc60d5938ed6c53876
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351557"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126507"
 ---
 # <a name="norm-class"></a>Classe norm
 
-Representa um número de norma. Cada elemento é flutuante número de ponto no intervalo de [-1.0f, 1.0f].
+Representa um número normal. Cada elemento é um número de ponto flutuante no intervalo de [-1,0 f, 1,0 f].
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class norm;
 ```
 
@@ -27,20 +27,20 @@ class norm;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[NORM construtor](#ctor)|Sobrecarregado. Construtor padrão. Inicialize a 0.0f.|
+|[Construtor normal](#ctor)|Sobrecarregado. Construtor padrão. Inicialize para 0,0 f.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |norm::operator-||
 |norm::operator--||
-|NORM::operator float|Operador de conversão. Converter o número de norma para flutuante valor de ponto.|
-|norm::operator*=||
-|norm::operator/=||
-|norm::operator++||
+|o operador normal:: Operator|Operador de conversão. Converta o número da norma em um valor de ponto flutuante.|
+|normal:: Operator * =||
+|normal:: Operator/=||
+|normal:: operador + +||
 |norm::operator+=||
 |norm::operator=||
 |norm::operator-=||
@@ -49,17 +49,17 @@ class norm;
 
 `norm`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Simultaneidade:: Graphics
 
-##  <a name="ctor"></a> NORM
+## <a name="ctor"></a>regra
 
-Construtor padrão. Inicialize a 0.0f.
+Construtor padrão. Inicialize para 0,0 f.
 
-```
+```cpp
 norm(
     void) restrict(amp,
     cpu);

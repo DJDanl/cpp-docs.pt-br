@@ -6,38 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, reference
 ms.assetid: 372a8aed-8a53-48c9-996f-9c3cf09c9fa8
-ms.openlocfilehash: a334c7873675183dc06abfc2fe51472190996bf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff7c2b0894a2fa3de7674a72bc93dd3f781398b9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351164"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126403"
 ---
 # <a name="reference-c-amp"></a>Referência (C++ AMP)
 
-Esta seção contém informações de referência para o tempo de execução C++ Accelerated Massive Parallelism (C++ AMP).
+Esta seção contém informações de referência para C++ o tempo de execução aceleradaC++ de grande paralelismo (amp).
 
 > [!NOTE]
->  O padrão da linguagem C++ reserva o uso de identificadores que começam com um caractere de sublinhado (`_`) a implementações, como bibliotecas. Não use nomes que começam com um sublinhado no código. O comportamento de elementos de código cujos nomes seguem essa convenção não é garantido e está sujeito a alteração em versões futuras. Por esses motivos, esses elementos de código são omitidos desta documentação.
+> O padrão da linguagem C++ reserva o uso de identificadores que começam com um caractere de sublinhado (`_`) a implementações, como bibliotecas. Não use nomes que começam com um sublinhado no código. O comportamento de elementos de código cujos nomes seguem essa convenção não é garantido e está sujeito a alteração em versões futuras. Por esses motivos, esses elementos de código são omitidos desta documentação.
 
 ## <a name="in-this-section"></a>Nesta seção
 
 [Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)<br/>
-Fornece classes e funções que habilitam a aceleração de código C++ no hardware paralelo de dados.
+Fornece classes e funções que permitem a aceleração C++ do código em hardware paralelo de dados.
 
 [Namespace Concurrency::direct3d](concurrency-direct3d-namespace.md)<br/>
-Fornece funções que suportam a interoperabilidade D3D. Permite o uso contínuo de recursos de D3D para cálculos no código de AMP e o uso de recursos criados no AMP no código D3D, sem criar cópias intermediários redundantes. Você pode usar o C++ AMP acelerar de forma crescente as seções intensas de cálculo dos seus aplicativos DirectX e usar o D3D API em dados gerados pelos cálculos AMP.
+Fornece funções que dão suporte à interoperabilidade do D3D. Permite o uso contínuo de recursos do D3D para computação no código de AMP e o uso de recursos criados no código do AMP in D3D, sem a criação de cópias intermediárias redundantes. Você pode usar C++ o amp para acelerar de forma incremental as seções de computação intensiva de seus aplicativos do DirectX e usar a API do D3D em dados produzidos por meio de cálculos de amp.
 
 [Namespace Concurrency::fast_math](concurrency-fast-math-namespace.md)<br/>
-Funções no `fast_math` namespace não são compatíveis com C99. São fornecidas apenas versões de precisão simples de cada função. Essas funções usam as funções intrínsecas do DirectX, que são mais rápidas que as funções correspondentes no `precise_math` namespace e não exigem suporte de precisão dupla estendido no Acelerador, mas eles são menos precisos. Há duas versões de cada função para compatibilidade no nível de código-fonte com código C99; as duas versões adotam e retornam valores de precisão simples.
+As funções no namespace `fast_math` não são compatíveis com C99. Somente as versões de precisão única de cada função são fornecidas. Essas funções usam as funções intrínsecas do DirectX, que são mais rápidas do que as funções correspondentes no namespace `precise_math` e não exigem suporte estendido de precisão dupla no acelerador, mas elas são menos precisas. Há duas versões de cada função para compatibilidade em nível de origem com o código C99; ambas as versões levam e retornam valores de precisão única.
 
 [Namespace Concurrency::graphics](concurrency-graphics-namespace.md)<br/>
-Fornece tipos e funções projetadas para programação de elementos gráficos.
+Fornece tipos e funções que são projetados para programação de gráficos.
 
 [Namespace Concurrency::precise_math](concurrency-precise-math-namespace.md)<br/>
-Funções no `precise_math` namespace são compatíveis com C99. Versões de precisão simples e de precisão dupla de cada função são incluídas. Essas funções — isso inclui as funções de precisão simples — exigem suporte de precisão dupla estendido no acelerador.
+As funções no namespace `precise_math` são compatíveis com C99. As versões de precisão única e de precisão dupla de cada função são incluídas. Essas funções – isso inclui as funções de precisão única — exigem suporte estendido de precisão dupla no acelerador.
 
-## <a name="related-sections"></a>Seções relacionadas
+## <a name="related-sections"></a>Seções Relacionadas
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
-O C++ AMP acelera a execução do seu código C++, tirando proveito do hardware de dados paralelos comumente apresentado como uma unidade de processamento gráfico (GPU) em uma placa gráfica discreta.
+C++Acelera a execução do seu C++ código aproveitando o hardware de dados paralelos que normalmente está presente como uma GPU (unidade de processamento gráfico) em uma placa gráfica discreta.

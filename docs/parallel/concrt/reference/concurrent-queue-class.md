@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-ms.openlocfilehash: 7f87ead486d635c933ad356f9868c22344601eda
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 4e913af40b2218da5699da2659ec2e9189e32994
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75298606"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143200"
 ---
 # <a name="concurrent_queue-class"></a>Classe concurrent_queue
 
@@ -29,12 +29,12 @@ A classe `concurrent_queue` é uma classe de contêiner de sequência que permit
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 template<typename T, class _Ax>
 class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4;
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 O tipo de dados dos elementos a serem armazenados na fila.
@@ -46,7 +46,7 @@ O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre 
 
 ### <a name="public-typedefs"></a>Typedefs Públicos
 
-|Name|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |`allocator_type`|Um tipo que representa a classe de alocador para a fila simultânea.|
 |`const_iterator`|Um tipo que representa um iterador de `const` não seguro para thread sobre elementos em uma fila simultânea.|
@@ -57,16 +57,16 @@ O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre 
 |`size_type`|Um tipo que conta o número de elementos em uma fila simultânea.|
 |`value_type`|Um tipo que representa o tipo de dados armazenado em uma fila simultânea.|
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
-|Name|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[concurrent_queue](#ctor)|Sobrecarregado. Constrói uma fila simultânea.|
-|[~concurrent_queue Destructor](#dtor)|Destrói a fila simultânea.|
+|[~ concurrent_queue destruidor](#dtor)|Destrói a fila simultânea.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[clear](#clear)|Limpa a fila simultânea, destruindo todos os elementos atualmente enfileirados. Esse método não é seguro para simultaneidade.|
 |[empty](#empty)|Testa se a fila simultânea está vazia no momento em que esse método é chamado. Esse método é seguro para simultaneidade.|
@@ -81,29 +81,29 @@ O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre 
 
 Para obter mais informações, consulte [contêineres e objetos paralelos](../../../parallel/concrt/parallel-containers-and-objects.md).
 
-## <a name="inheritance-hierarchy"></a>Hierarquia de Herança
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `concurrent_queue`
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** concurrent_queue. h
 
 **Namespace:** simultaneidade
 
-##  <a name="clear"></a>formatação
+## <a name="clear"></a>formatação
 
 Limpa a fila simultânea, destruindo todos os elementos atualmente enfileirados. Esse método não é seguro para simultaneidade.
 
-```
+```cpp
 void clear();
 ```
 
-##  <a name="ctor"></a> concurrent_queue
+## <a name="ctor"></a>concurrent_queue
 
 Constrói uma fila simultânea.
 
-```
+```cpp
 explicit concurrent_queue(
     const allocator_type& _Al = allocator_type());
 
@@ -149,23 +149,23 @@ O terceiro construtor Especifica uma movimentação da fila simultânea `_OtherQ
 
 O quarto construtor Especifica valores fornecidos pelo intervalo do iterador [`_Begin`, `_End`).
 
-##  <a name="dtor"></a> ~concurrent_queue
+## <a name="dtor"></a>~ concurrent_queue
 
 Destrói a fila simultânea.
 
-```
+```cpp
 ~concurrent_queue();
 ```
 
-##  <a name="empty"></a>esvaziá
+## <a name="empty"></a>esvaziá
 
 Testa se a fila simultânea está vazia no momento em que esse método é chamado. Esse método é seguro para simultaneidade.
 
-```
+```cpp
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se a fila simultânea estava vazia no momento que olhamos; caso contrário, **false** .
 
@@ -173,23 +173,23 @@ bool empty() const;
 
 Embora esse método seja seguro para simultaneidade em relação a chamadas para os métodos `push`, `try_pop`e `empty`, o valor retornado pode estar incorreto no momento em que é inspecionado pelo thread de chamada.
 
-##  <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 Retorna uma cópia do alocador usado para construir a fila simultânea. Esse método é seguro para simultaneidade.
 
-```
+```cpp
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma cópia do alocador usado para construir a fila simultânea.
 
-##  <a name="push"></a>pressionado
+## <a name="push"></a>pressionado
 
 Enfileira um item na extremidade final da fila simultânea. Esse método é seguro para simultaneidade.
 
-```
+```cpp
 void push(const T& _Src);
 
 void push(T&& _Src);
@@ -204,11 +204,11 @@ O item a ser adicionado à fila.
 
 `push` é seguro à simultaneidade em relação a chamadas para os métodos `push`, `try_pop`e `empty`.
 
-##  <a name="try_pop"></a> try_pop
+## <a name="try_pop"></a>try_pop
 
 Removerá uma fila de um item da fila se houver um disponível. Esse método é seguro para simultaneidade.
 
-```
+```cpp
 bool try_pop(T& _Dest);
 ```
 
@@ -217,7 +217,7 @@ bool try_pop(T& _Dest);
 *_Dest*<br/>
 Uma referência a um local para armazenar o item removido da fila.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se um item tiver sido removido com êxito da fila; caso contrário, **false** .
 
@@ -227,17 +227,17 @@ Se um item foi removido com êxito da fila, o parâmetro `_Dest` receberá o val
 
 `try_pop` é seguro à simultaneidade em relação a chamadas para os métodos `push`, `try_pop`e `empty`.
 
-##  <a name="unsafe_begin"></a> unsafe_begin
+## <a name="unsafe_begin"></a>unsafe_begin
 
 Retorna um iterador do tipo `iterator` ou `const_iterator` ao início da fila simultânea. Esse método não é seguro para simultaneidade.
 
-```
+```cpp
 iterator unsafe_begin();
 
 const_iterator unsafe_begin() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador do tipo `iterator` ou `const_iterator` ao início do objeto de fila simultâneo.
 
@@ -245,17 +245,17 @@ Um iterador do tipo `iterator` ou `const_iterator` ao início do objeto de fila 
 
 Os iteradores para a classe `concurrent_queue` são destinados principalmente para depuração, pois são lentos e a iteração não é segura para simultaneidade em relação a outras operações de fila.
 
-##  <a name="unsafe_end"></a> unsafe_end
+## <a name="unsafe_end"></a>unsafe_end
 
 Retorna um iterador do tipo `iterator` ou `const_iterator` ao final da fila simultânea. Esse método não é seguro para simultaneidade.
 
-```
+```cpp
 iterator unsafe_end();
 
 const_iterator unsafe_end() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador do tipo `iterator` ou `const_iterator` ao final da fila simultânea.
 
@@ -263,15 +263,15 @@ Um iterador do tipo `iterator` ou `const_iterator` ao final da fila simultânea.
 
 Os iteradores para a classe `concurrent_queue` são destinados principalmente para depuração, pois são lentos e a iteração não é segura para simultaneidade em relação a outras operações de fila.
 
-##  <a name="unsafe_size"></a> unsafe_size
+## <a name="unsafe_size"></a>unsafe_size
 
 Retorna o número de itens na fila. Esse método não é seguro para simultaneidade.
 
-```
+```cpp
 size_type unsafe_size() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O tamanho da fila simultânea.
 
@@ -279,6 +279,6 @@ O tamanho da fila simultânea.
 
 `unsafe_size` não é segura para simultaneidade e pode produzir resultados incorretos se chamados simultaneamente com chamadas para os métodos `push`, `try_pop`e `empty`.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Namespace de simultaneidade](concurrency-namespace.md)

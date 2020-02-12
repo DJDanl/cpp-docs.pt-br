@@ -14,20 +14,20 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: 0f2b627afa216f03592fe913afece1a80f5bd5a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6bf4b9666d746199cea92fa2bd52b691c67e4a5b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351515"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126338"
 ---
-# <a name="textureview-class"></a>Classe texture_view
+# <a name="texture_view-class"></a>Classe texture_view
 
-Fornece acesso de leitura e gravação para uma textura. `texture_view` só pode ser usado para ler texturas cujo tipo de valor é `int`, `unsigned int`, ou `float` que têm o bpse de 32 bits do padrão. Para ler outros formatos de textura, use `texture_view<const value_type, _Rank>`.
+Fornece acesso de leitura e acesso de gravação a uma textura. `texture_view` só pode ser usada para ler texturas cujo tipo de valor é `int`, `unsigned int`ou `float` que têm bpse padrão de 32 bits. Para ler outros formatos de textura, use `texture_view<const value_type, _Rank>`.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 template<typename value_type,int _Rank>
 class texture_view;
 
@@ -40,46 +40,46 @@ class texture_view<const value_type, _Rank>
    : public details::_Texture_base<value_type, _Rank>;
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *value_type*<br/>
-O tipo dos elementos na textura de agrega.
+O tipo dos elementos na agregação de textura.
 
 *_Rank*<br/>
-A classificação do `texture_view`.
+A classificação da `texture_view`.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs públicos
+### <a name="public-typedefs"></a>Typedefs Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|`value_type`|O tipo dos elementos na textura agrega.|
-|`coordinates_type`|O tipo de coordenada usada para especificar um texel na `texture_view`— ou seja, uma `short_vector` que tem a mesma classificação que a textura associada que tem um tipo de valor de `float`.|
-|`gather_return_type`|O tipo de retorno usado para coletar operações — ou seja, uma classificação 4 `short_vector` que mantém os quatro componentes de cor homogêneos obtidos os quatro valores de Texel testados.|
+|`value_type`|O tipo dos elementos na textura é agregado.|
+|`coordinates_type`|O tipo da coordenada usada para especificar um Texel no `texture_view`— ou seja, uma `short_vector` que tem a mesma classificação que a textura associada que tem um tipo de valor de `float`.|
+|`gather_return_type`|O tipo de retorno usado para reunir operações – ou seja, uma `short_vector` de classificação 4 que contém os quatro componentes de cores homogêneos coletados dos quatro valores de Texel amostrados.|
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[Construtor de texture_view](#ctor)|Sobrecarregado. Constrói um `texture_view` instância.|
-|[~ texture_view destruidor](#ctor)|Destrói o `texture_view` instância.|
+|[Construtor de texture_view](#ctor)|Sobrecarregado. Constrói uma instância de `texture_view`.|
+|[~ texture_view destruidor](#ctor)|Destrói a instância de `texture_view`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[gather_alpha](#gather_alpha)|Sobrecarregado. Prova a textura nas coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes alfa (w) dos quatro texels provados.|
-|[gather_blue](#gather_blue)|Sobrecarregado. Prova a textura nas coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes de azul (z) dos quatro texels provados.|
-|[gather_green](#gather_green)|Sobrecarregado. Prova a textura nas coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes de verde (y) dos quatro texels provados.|
-|[gather_red](#gather_red)|Sobrecarregado. Prova a textura nas coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes vermelho (x) dos quatro texels provados.|
+|[gather_alpha](#gather_alpha)|Sobrecarregado. Amostra a textura nas coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes alfa (w) dos quatro exemplos de texels.|
+|[gather_blue](#gather_blue)|Sobrecarregado. Amostra a textura nas coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes azuis (z) dos quatro texels de amostra.|
+|[gather_green](#gather_green)|Sobrecarregado. Amostra a textura nas coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes verdes (y) dos quatro exemplos de texels.|
+|[gather_red](#gather_red)|Sobrecarregado. Amostra a textura nas coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes vermelhos (x) dos quatro texels de amostra.|
 |[get](#get)|Sobrecarregado. Obtém o valor do elemento por índice.|
-|[sample](#sample)|Sobrecarregado. Prova a textura nas coordenadas especificadas e do nível de detalhes usando a configuração de amostragem especificada.|
+|[sample](#sample)|Sobrecarregado. Amostra a textura nas coordenadas especificadas e o nível de detalhes usando a configuração de amostragem especificada.|
 |[set](#set)|Define o valor de um elemento por índice.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[operator()](#operator_call)|Sobrecarregado. Obtém o valor do elemento por índice.|
 |[operator\[\]](#operator_at)|Sobrecarregado. Obtém o valor do elemento por índice.|
@@ -87,7 +87,7 @@ A classificação do `texture_view`.
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[value_type](#value_type)|O tipo de valor dos elementos do `texture_view`.|
 
@@ -97,25 +97,25 @@ A classificação do `texture_view`.
 
 `texture_view`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amp_graphics. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** simultaneidade:: Graphics
 
-##  <a name="dtor"></a> ~texture_view
+## <a name="dtor"></a>~ texture_view
 
-Destrói o `texture_view` instância.
+Destrói a instância de `texture_view`.
 
-```
+```cpp
 ~texture_view() restrict(amp, cpu);
 ```
 
-##  <a name="ctor"></a> texture_view
+## <a name="ctor"></a>texture_view
 
-Constrói um `texture_view` instância.
+Constrói uma instância de `texture_view`.
 
-```
+```cpp
 texture_view(// [1] constructor
     texture<value_type, _Rank>& _Src) restrict(amp);
 
@@ -146,29 +146,29 @@ texture_view(// [7] copy constructor
 ### <a name="parameters"></a>Parâmetros
 
 *_Src*<br/>
-[1, 2] Construtor de `texture` no qual o gravável `texture_view` é criado.
+[1, 2] Construtor o `texture` no qual o `texture_view` gravável é criado.
 
-[3, 4] Construtor de `texture` em que o não gravável `texture_view` é criado.
+[3, 4] Construtor o `texture` no qual o `texture_view` não gravável é criado.
 
 *_Other*<br/>
-[5] o construtor de cópia o código-fonte gravável `texture_view`.
+[5] Construtor de cópia o `texture_view`gravável de origem.
 
-[6, 7] O código-fonte não gravável do construtor de cópia `texture_view`.
+[6, 7] Copiar construtor a `texture_view`de origem não gravável.
 
 *_Mipmap_level*<br/>
-O nível de mipmap específico na fonte de `texture` gravável ou nesse `texture_view` está associado. O valor padrão é 0, que representa o nível de mip (mais detalhado) de nível superior.
+O nível de mipmap específico no `texture` de origem ao qual este `texture_view` gravável é associado. O valor padrão é 0, que representa o nível de MIP de nível superior (mais detalhado).
 
 *_Most_detailed_mip*<br/>
-Nível de mip (mais detalhado) de nível para o modo de exibição, relativo ao especificado superior `texture_view` objeto.
+Nível de MIP de nível superior (mais detalhado) para a exibição, relativo ao objeto de `texture_view` especificado.
 
 *_Mip_levels*<br/>
-O número de níveis de mipmap acessíveis por meio de `texture_view`.
+O número de níveis de mipmap acessíveis por meio do `texture_view`.
 
-##  <a name="gather_red"></a> gather_red
+## <a name="gather_red"></a>gather_red
 
-Prova a textura nas coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes vermelho (x) dos quatro texels provados.
+Amostra a textura nas coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes vermelhos (x) dos quatro texels de amostra.
 
-```
+```cpp
 const gather_return_type gather_red(
     const sampler& _Sampler,
     const coordinates_type& _Coord) const restrict(amp);
@@ -183,23 +183,23 @@ const gather_return_type gather_red(
 ### <a name="parameters"></a>Parâmetros
 
 *_Address_mode*<br/>
-O modo de endereço para usar a amostra a `texture_view`. O modo de endereço é o mesmo para todas as dimensões.
+O modo de endereço a ser usado para exemplificar o `texture_view`. O modo de endereço é o mesmo para todas as dimensões.
 
 *_Sampler*<br/>
-A configuração de amostra para usar a amostra a `texture_view`.
+A configuração de amostra a ser usada para exemplificar o `texture_view`.
 
 *_Coord*<br/>
-As coordenadas de exemplo do. Valores de coordenadas fracionários são usados para interpolar entre exemplos texels.
+As coordenadas das quais obter o exemplo. Os valores de coordenadas fracionárias são usados para fazer a interpolação entre texels de exemplo.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um vetor curto de classificação 4 que contém o componente vermelho (x) de 4 valores de texel provados.
+Um vetor curto de classificação 4 que contém o componente vermelho (x) dos 4 valores de Texel amostrados.
 
-##  <a name="gather_green"></a> gather_green
+## <a name="gather_green"></a>gather_green
 
-Prova a textura nas coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes de verde (y) dos quatro texels provados.
+Amostra a textura nas coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes verdes (y) dos quatro exemplos de texels.
 
-```
+```cpp
 const gather_return_type gather_green(
     const sampler& _Sampler,
     const coordinates_type& _Coord) const restrict(amp);
@@ -214,23 +214,23 @@ const gather_return_type gather_green(
 ### <a name="parameters"></a>Parâmetros
 
 *_Address_mode*<br/>
-O modo de endereço para usar a amostra a `texture_view`. O modo de endereço é o mesmo para todas as dimensões.
+O modo de endereço a ser usado para exemplificar o `texture_view`. O modo de endereço é o mesmo para todas as dimensões.
 
 *_Sampler*<br/>
-A configuração de amostra para usar a amostra a `texture_view`.
+A configuração de amostra a ser usada para exemplificar o `texture_view`.
 
 *_Coord*<br/>
-As coordenadas de exemplo do. Valores de coordenadas fracionários são usados para interpolar entre exemplos texels.
+As coordenadas das quais obter o exemplo. Os valores de coordenadas fracionárias são usados para fazer a interpolação entre texels de exemplo.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um vetor curto de classificação 4 que contém o componente verde (y) de 4 valores de texel provados.
+Um vetor curto de classificação 4 que contém o componente verde (y) dos 4 valores de Texel amostrados.
 
-##  <a name="gather_blue"></a> gather_blue
+## <a name="gather_blue"></a>gather_blue
 
-Prova a textura nas coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes de azul (z) dos quatro texels provados.
+Amostra a textura nas coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes azuis (z) dos quatro texels de amostra.
 
-```
+```cpp
 const gather_return_type gather_blue(
     const sampler& _Sampler,
     const coordinates_type& _Coord) const restrict(amp);
@@ -245,23 +245,23 @@ const gather_return_type gather_blue(
 ### <a name="parameters"></a>Parâmetros
 
 *_Address_mode*<br/>
-O modo de endereço para usar a amostra a `texture_view`. O modo de endereço é o mesmo para todas as dimensões.
+O modo de endereço a ser usado para exemplificar o `texture_view`. O modo de endereço é o mesmo para todas as dimensões.
 
 *_Sampler*<br/>
-A configuração de amostra para usar a amostra a `texture_view`.
+A configuração de amostra a ser usada para exemplificar o `texture_view`.
 
 *_Coord*<br/>
-As coordenadas de exemplo do. Valores de coordenadas fracionários são usados para interpolar entre exemplos texels.
+As coordenadas das quais obter o exemplo. Os valores de coordenadas fracionárias são usados para fazer a interpolação entre texels de exemplo.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um vetor curto de classificação 4 que contém o componente vermelho (x) de 4 valores de texel provados.
+Um vetor curto de classificação 4 que contém o componente vermelho (x) dos 4 valores de Texel amostrados.
 
-##  <a name="gather_alpha"></a> gather_alpha
+## <a name="gather_alpha"></a>gather_alpha
 
-Prova a textura nas coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes alfa (w) dos quatro texels provados.
+Amostra a textura nas coordenadas especificadas usando a configuração de amostragem especificada e retorna os componentes alfa (w) dos quatro exemplos de texels.
 
-```
+```cpp
 const gather_return_type gather_alpha(
     const sampler& _Sampler,
     const coordinates_type& _Coord) const restrict(amp);
@@ -276,23 +276,23 @@ const gather_return_type gather_alpha(
 ### <a name="parameters"></a>Parâmetros
 
 *_Address_mode*<br/>
-O modo de endereço para usar a amostra a `texture_view`. O modo de endereço é o mesmo para todas as dimensões.
+O modo de endereço a ser usado para exemplificar o `texture_view`. O modo de endereço é o mesmo para todas as dimensões.
 
 *_Sampler*<br/>
-A configuração de amostra para usar a amostra a `texture_view`.
+A configuração de amostra a ser usada para exemplificar o `texture_view`.
 
 *_Coord*<br/>
-As coordenadas de exemplo do. Valores de coordenadas fracionários são usados para interpolar entre exemplos texels.
+As coordenadas das quais obter o exemplo. Os valores de coordenadas fracionárias são usados para fazer a interpolação entre texels de exemplo.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma classificação 4 curto de vetor que contém o alfa (w) valores de texel provados do componente de 4.
+Um vetor curto de classificação 4 que contém o componente alfa (w) dos 4 valores de Texel amostrados.
 
-##  <a name="get"></a> Obter
+## <a name="get"></a>Obter
 
 Obtém o valor do elemento no índice especificado.
 
-```
+```cpp
 const value_type get(
     const index<_Rank>& _Index) const restrict(amp);
 
@@ -304,20 +304,20 @@ value_type get(
 ### <a name="parameters"></a>Parâmetros
 
 *_Index*<br/>
-O índice do elemento a ser obtido, possivelmente, multidimensional.
+O índice do elemento a ser obtido, possivelmente multidimensional.
 
 *_Mip_level*<br/>
 O nível de mipmap do qual devemos obter o valor. O valor padrão 0 representa o nível de mipmap mais detalhado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O valor do elemento.
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>operador =
 
-Atribui um modo de exibição da mesma textura conforme o especificado `texture_view` a este `texture_view` instância.
+Atribui uma exibição da mesma textura que a `texture_view` especificada para essa instância de `texture_view`.
 
-```
+```cpp
 texture_view<value_type, _Rank>& operator= (// [1] copy constructor
     const texture_view<value_type, _Rank>& _Other) restrict(amp, cpu);
 
@@ -331,19 +331,19 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ### <a name="parameters"></a>Parâmetros
 
 *_Other*<br/>
-[1, 2] Construtor de cópia A gravável `texture_view` objeto.
+[1, 2] Copiar construtor um objeto de `texture_view` gravável.
 
-[3] construtor de cópia um não gravável `texture_view` objeto.
+[3] Construtor de cópia um objeto de `texture_view` não gravável.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma referência a este `texture_view` instância.
+Uma referência a esta instância de `texture_view`.
 
-##  <a name="operator_at"></a> operator[]
+## <a name="operator_at"></a>operador []
 
 Retorna o valor do elemento por índice.
 
-```
+```cpp
 const value_type operator[] (const index<_Rank>& _Index) const restrict(amp);
 
 const value_type operator[] (int _I0) const restrict(amp);
@@ -356,20 +356,20 @@ value_type operator[] (int _I0) const restrict(amp);
 ### <a name="parameters"></a>Parâmetros
 
 *_Index*<br/>
-O índice, possivelmente, multidimensional.
+O índice, possivelmente multidimensional.
 
 *_I0*<br/>
 O índice unidimensional.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O valor do elemento indexado por `_Index`.
 
-##  <a name="operator_call"></a> operator()
+## <a name="operator_call"></a>operador ()
 
 Retorna o valor do elemento por índice.
 
-```
+```cpp
 const value_type operator() (
     const index<_Rank>& _Index) const restrict(amp);
 
@@ -403,26 +403,26 @@ value_type operator() (
 ### <a name="parameters"></a>Parâmetros
 
 *_Index*<br/>
-O índice, possivelmente, multidimensional.
+O índice, possivelmente multidimensional.
 
 *_I0*<br/>
 O componente mais significativo do índice.
 
 *_I1*<br/>
-O componente next-para-mais significativo do índice.
+O componente de próximo a mais significativo do índice.
 
 *_I2*<br/>
 O componente menos significativo do índice.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O valor do elemento indexado por `_Index`.
 
-##  <a name="sample"></a> Exemplo
+## <a name="sample"></a>Nova
 
-Prova a textura nas coordenadas especificadas e do nível de detalhes usando a configuração de amostragem especificada.
+Amostra a textura nas coordenadas especificadas e o nível de detalhes usando a configuração de amostragem especificada.
 
-```
+```cpp
 value_type sample(
     const sampler& _Sampler,
     const coordinates_type& _Coord,
@@ -440,29 +440,29 @@ value_type sample(
 ### <a name="parameters"></a>Parâmetros
 
 *_Filter_mode*<br/>
-O modo de filtro a ser usado para a amostra do texture_view. O modo de filtro é o mesmo para os filtros de minimização, maximização e mipmap.
+O modo de filtro a ser usado para exemplificar o texture_view. O modo de filtro é o mesmo para os filtros de minimização, maximização e mipmap.
 
 *_Address_mode*<br/>
-O modo de endereço a ser usado para a amostra do texture_view. O modo de endereço é o mesmo para todas as dimensões.
+O modo de endereço a ser usado para exemplificar o texture_view. O modo de endereço é o mesmo para todas as dimensões.
 
 *_Sampler*<br/>
-A configuração de amostra a ser usada para a amostra do texture_view.
+A configuração de amostra a ser usada para exemplificar o texture_view.
 
 *_Coord*<br/>
-As coordenadas de exemplo do. Valores de coordenadas fracionários são usados para interpolar entre valores texel.
+As coordenadas das quais obter o exemplo. Os valores de coordenadas fracionárias são usados para fazer a interpolação entre os valores de Texel.
 
 *_Level_of_detail*<br/>
-O valor Especifica o nível de mipmap para obter um exemplo. Os valores fracionários são usados para interpolar entre dois níveis de mipmap. O nível de detalhes padrão é 0, que representa o nível de mip mais detalhado.
+O valor especifica o nível de mipmap para a amostra. Os valores fracionários são usados para interpolar entre dois níveis de mipmap. O nível padrão de detalhe é 0, que representa o nível de MIP mais detalhado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O valor interpolado de exemplo.
+O valor de amostra interpolado.
 
-##  <a name="set"></a> set
+## <a name="set"></a>Definição
 
-Define o valor do elemento no índice especificado para o valor especificado.
+Define o valor do elemento no índice especificado como o valor especificado.
 
-```
+```cpp
 void set(
     const index<_Rank>& _Index,
     const value_type& value) const restrict(amp);
@@ -471,16 +471,16 @@ void set(
 ### <a name="parameters"></a>Parâmetros
 
 *_Index*<br/>
-O índice do elemento a ser definido, possivelmente, multidimensional.
+O índice do elemento a ser definido, possivelmente multidimensional.
 
 *value*<br/>
-O valor para definir o elemento.
+O valor com o qual o elemento será definido.
 
-##  <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
-O tipo de valor dos elementos da texture_view.
+O tipo de valor dos elementos do texture_view.
 
-```
+```cpp
 typedef typename const value_type value_type;
 ```
 

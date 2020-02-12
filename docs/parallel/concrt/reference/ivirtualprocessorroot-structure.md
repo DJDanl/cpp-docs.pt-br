@@ -11,39 +11,39 @@ f1_keywords:
 helpviewer_keywords:
 - IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-ms.openlocfilehash: 25ede76a81a77d489d0f2316bd3ae4cb7f84d704
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 60757b0edea6b60d080c2175d4df4830ffec0cc3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344042"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139889"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>Estrutura IVirtualProcessorRoot
 
-Uma abstração para um thread de hardware no qual um proxy de thread pode executar.
+Uma abstração para um thread de hardware no qual um proxy de thread pode ser executado.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 struct IVirtualProcessorRoot : public IExecutionResource;
 ```
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[IVirtualProcessorRoot::Activate](#activate)|Faz com que o proxy de thread associado com a interface de contexto de execução `pContext` para iniciar a execução na raiz desse processador virtual.|
-|[IVirtualProcessorRoot::Deactivate](#deactivate)|Faz com que o proxy de thread em execução no momento na raiz desse processador virtual para interromper a expedir o contexto de execução. O proxy de thread continuará em execução em uma chamada para o `Activate` método.|
-|[IVirtualProcessorRoot::EnsureAllTasksVisible](#ensurealltasksvisible)|Faz com que os dados armazenados na hierarquia de memória de processadores individuais se torne visível para todos os processadores no sistema. Isso garante que um limite de memória completo foi executado em todos os processadores antes do método retorna.|
-|[IVirtualProcessorRoot::GetId](#getid)|Retorna um identificador exclusivo para a raiz do processador virtual.|
+|[IVirtualProcessorRoot:: ativar](#activate)|Faz com que o proxy de thread associado à interface de contexto de execução `pContext` iniciar a execução nessa raiz do processador virtual.|
+|[IVirtualProcessorRoot::D eactivate](#deactivate)|Faz com que o proxy de thread atualmente em execução nesta raiz do processador virtual pare de expedir o contexto de execução. O proxy de thread continuará executando em uma chamada para o método `Activate`.|
+|[IVirtualProcessorRoot::EnsureAllTasksVisible](#ensurealltasksvisible)|Faz com que os dados armazenados na hierarquia de memória de processadores individuais se tornem visíveis para todos os processadores no sistema. Ele garante que um limite de memória completa tenha sido executado em todos os processadores antes que o método seja retornado.|
+|[IVirtualProcessorRoot:: GetId](#getid)|Retorna um identificador exclusivo para a raiz do processador virtual.|
 
 ## <a name="remarks"></a>Comentários
 
-Cada raiz de processador virtual tem um recurso de execução associadas. O `IVirtualProcessorRoot` interface herda as [IExecutionResource](iexecutionresource-structure.md) interface. Várias raízes de processador virtual podem corresponder a mesmo thread de hardware subjacente.
+Cada raiz de processador virtual tem um recurso de execução associado. A interface de `IVirtualProcessorRoot` herda da interface [IExecutionResource](iexecutionresource-structure.md) . Várias raízes de processador virtual podem corresponder ao mesmo thread de hardware subjacente.
 
-O Gerenciador de recursos concede raízes de processador virtual para agendadores em resposta a solicitações de recursos. Um agendador pode usar uma raiz virtual do processador para executar o trabalho ativando-o com um contexto de execução.
+O Gerenciador de recursos concede raízes de processador virtual a agendadores em resposta a solicitações de recursos. Um Agendador pode usar uma raiz de processador virtual para executar o trabalho ativando-o com um contexto de execução.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -51,104 +51,104 @@ O Gerenciador de recursos concede raízes de processador virtual para agendadore
 
 `IVirtualProcessorRoot`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** concrtrm. h
 
 **Namespace:** simultaneidade
 
-##  <a name="activate"></a>  Método ivirtualprocessorroot:: Activate
+## <a name="activate"></a>Método IVirtualProcessorRoot:: Activate
 
-Faz com que o proxy de thread associado com a interface de contexto de execução `pContext` para iniciar a execução na raiz desse processador virtual.
+Faz com que o proxy de thread associado à interface de contexto de execução `pContext` iniciar a execução nessa raiz do processador virtual.
 
-```
+```cpp
 virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *pContext*<br/>
-Uma interface para o contexto de execução será enviado nessa raiz virtual do processador.
+Uma interface para o contexto de execução que será expedida nesta raiz do processador virtual.
 
 ### <a name="remarks"></a>Comentários
 
-O Gerenciador de recursos, forneça um proxy de thread se não houver um associado com a interface de contexto de execução `pContext`
+O Gerenciador de recursos fornecerá um proxy de thread se um não estiver associado à interface de contexto de execução `pContext`
 
-O `Activate` método pode ser usado para iniciar a execução de trabalho em uma nova raiz de processador virtual retornada pelo Gerenciador de recursos ou para retomar o proxy de thread em uma raiz de processador virtual que foi desativado ou está prestes a desativar. Ver [ivirtualprocessorroot:: Deactivate](#deactivate) para obter mais informações sobre a desativação. Quando você está retomando uma raiz de processador virtual desativado, o parâmetro `pContext` deve ser o mesmo que o parâmetro usado para desativar a raiz do processador virtual.
+O método `Activate` pode ser usado para iniciar a execução do trabalho em uma nova raiz de processador virtual retornada pelo Gerenciador de recursos ou para retomar o proxy de thread em uma raiz de processador virtual que tenha sido desativada ou que esteja prestes a ser desativada. Consulte [IVirtualProcessorRoot::D eactivate](#deactivate) para obter mais informações sobre a desativação. Quando você estiver retomando uma raiz do processador virtual desativado, o parâmetro `pContext` deverá ser o mesmo que o parâmetro usado para desativar a raiz do processador virtual.
 
-Depois que uma raiz virtual do processador foi ativada pela primeira vez, subsequentes pares de chamadas para `Deactivate` e `Activate` pode de corrida entre si. Isso significa que é aceitável para o Gerenciador de recursos para receber uma chamada para `Activate` antes de receber o `Deactivate` chamada foi criado.
+Depois que uma raiz do processador virtual tiver sido ativada pela primeira vez, pares subsequentes de chamadas para `Deactivate` e `Activate` poderão se comracer entre si. Isso significa que é aceitável que o Gerenciador de recursos receba uma chamada para `Activate` antes de receber a chamada de `Deactivate` para a qual foi destinada.
 
-Quando você ativa uma raiz virtual do processador, sinalizar para o Gerenciador de recursos que essa raiz virtual do processador está ocupado no momento com o trabalho. Se seu Agendador não é possível encontrar nenhum trabalho a ser executado na raiz desse, espera-se para invocar o `Deactivate` método informando que o Gerenciador de recursos que a raiz virtual do processador está ocioso. O Gerenciador de recursos usa esses dados para o sistema de balanceamento de carga.
+Ao ativar uma raiz de processador virtual, você sinaliza ao Gerenciador de recursos que essa raiz do processador virtual está ocupada atualmente com o trabalho. Se o Agendador não conseguir encontrar nenhum trabalho a ser executado nessa raiz, será esperado invocar o método `Deactivate` informando ao Gerenciador de recursos que a raiz do processador virtual está ociosa. O Gerenciador de recursos usa esses dados para balancear a carga do sistema.
 
-`invalid_argument` será gerada se o argumento `pContext` tem o valor `NULL`.
+`invalid_argument` será gerada se o argumento `pContext` tiver o valor `NULL`.
 
-`invalid_operation` será gerada se o argumento `pContext` não representa o contexto de execução foi mais recentemente enviado por essa raiz virtual do processador.
+`invalid_operation` será gerada se o argumento `pContext` não representar o contexto de execução que foi expedida mais recentemente por essa raiz do processador virtual.
 
-O ato de ativação de uma raiz virtual do processador aumenta o nível de assinatura do thread de hardware subjacentes por um. Para obter mais informações sobre os níveis de assinatura, consulte [iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel).
+O ato de ativar uma raiz de processador virtual aumenta o nível de assinatura do thread de hardware subjacente em um. Para obter mais informações sobre os níveis de assinatura, consulte [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-##  <a name="deactivate"></a>  Método ivirtualprocessorroot:: Deactivate
+## <a name="deactivate"></a>IVirtualProcessorRoot: método eactivate de:D
 
-Faz com que o proxy de thread em execução no momento na raiz desse processador virtual para interromper a expedir o contexto de execução. O proxy de thread continuará em execução em uma chamada para o `Activate` método.
+Faz com que o proxy de thread atualmente em execução nesta raiz do processador virtual pare de expedir o contexto de execução. O proxy de thread continuará executando em uma chamada para o método `Activate`.
 
-```
+```cpp
 virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *pContext*<br/>
-O contexto que atualmente está sendo enviado por essa raiz.
+O contexto que está sendo expedido atualmente por esta raiz.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um valor booliano. Um valor de **verdadeira** indica que o proxy de thread retornado do `Deactivate` método em resposta a uma chamada para o `Activate` método. Um valor de `false` indica que o proxy de thread retornado do método em resposta a um evento de notificação no Gerenciador de recursos. Em um modo de usuário agendáveis (UMS) Agendador de threads, isso indica que apareceram itens na lista de conclusão do Agendador e o Agendador é necessária para lidar com eles.
+Um valor booliano. Um valor **true** indica que o proxy de thread retornou do método `Deactivate` em resposta a uma chamada para o método `Activate`. Um valor de `false` indica que o proxy de thread retornou do método em resposta a um evento de notificação no Gerenciador de recursos. Em um Agendador de threads de modo de usuário agendáveis (UMS), isso indica que os itens apareciam na lista de conclusão do Agendador e o Agendador é necessário para tratá-los.
 
 ### <a name="remarks"></a>Comentários
 
-Use esse método para interromper temporariamente a execução de uma raiz virtual do processador quando você não pode localizar qualquer trabalho em seu Agendador. Uma chamada para o `Deactivate` método deve se originar de dentro de `Dispatch` método do contexto de execução que a raiz do processador virtual foi ativada pela última vez com. Em outras palavras, o proxy de thread invocando o `Deactivate` método deve ser aquele que está sendo executado na raiz do processador virtual. Chamar o método em uma raiz de processador virtual que não estão em execução no pode resultar em comportamento indefinido.
+Use esse método para interromper temporariamente a execução de uma raiz do processador virtual quando não for possível encontrar nenhum trabalho no Agendador. Uma chamada para o método `Deactivate` deve se originar de dentro do método `Dispatch` do contexto de execução no qual a raiz do processador virtual foi ativada pela última vez. Em outras palavras, o proxy de thread que invoca o método `Deactivate` deve ser aquele que está sendo executado atualmente na raiz do processador virtual. Chamar o método em uma raiz do processador virtual que você não está executando pode resultar em um comportamento indefinido.
 
-Uma raiz de processador virtual desativado pode ser ativada com uma chamada para o `Activate` método, com o mesmo argumento que foi passado para o `Deactivate` método. O Agendador é responsável por garantir que chamadas para o `Activate` e `Deactivate` métodos são emparelhados, mas eles não são necessários para ser recebida em uma ordem específica. O Gerenciador de recursos pode manipular o recebimento de uma chamada para o `Activate` método antes de receber uma chamada para o `Deactivate` método foi criado.
+Uma raiz de processador virtual desativada pode ser ativadosda com uma chamada para o método `Activate`, com o mesmo argumento que foi passado para o método `Deactivate`. O Agendador é responsável por garantir que as chamadas para os métodos `Activate` e `Deactivate` sejam emparelhadas, mas não precisam ser recebidas em uma ordem específica. O Gerenciador de recursos pode manipular o recebimento de uma chamada para o método `Activate` antes de receber uma chamada para o método de `Deactivate` para o qual ele foi destinado.
 
-Se uma raiz virtual do processador desperta e o valor de retorno a `Deactivate` método é o valor **false**, o Agendador deve consultar a lista de conclusão de UMS via o `IUMSCompletionList::GetUnblockNotifications` método, o act nessas informações e, em seguida, chamar subsequentemente o `Deactivate` método novamente. Isso deve ser repetido até que o `Deactivate` método retorna o valor `true`.
+Se uma raiz do processador virtual for ativada e o valor de retorno do método `Deactivate` for o valor **false**, o Agendador deverá consultar a lista de conclusão de ums por meio do método `IUMSCompletionList::GetUnblockNotifications`, agir nessas informações e depois chamar o método `Deactivate` novamente. Isso deve ser repetido até o momento em que o método `Deactivate` retorna o valor `true`.
 
-`invalid_argument` será gerada se o argumento `pContext` tem o valor NULL.
+`invalid_argument` será gerada se o argumento `pContext` tiver o valor NULL.
 
-`invalid_operation` será gerada se a raiz do processador virtual nunca tiver sido ativado, ou o argumento `pContext` não representa o contexto de execução foi mais recentemente enviado por essa raiz virtual do processador.
+`invalid_operation` será lançada se a raiz do processador virtual nunca tiver sido ativada ou o argumento `pContext` não representar o contexto de execução que foi expedida mais recentemente por essa raiz do processador virtual.
 
-O ato de desativar uma raiz virtual do processador diminui o nível de assinatura do thread de hardware subjacente. Para obter mais informações sobre os níveis de assinatura, consulte [iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel).
+O ato de desativar uma raiz de processador virtual diminui o nível de assinatura do thread de hardware subjacente em um. Para obter mais informações sobre os níveis de assinatura, consulte [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-##  <a name="ensurealltasksvisible"></a>  Método ivirtualprocessorroot:: Ensurealltasksvisible
+## <a name="ensurealltasksvisible"></a>Método IVirtualProcessorRoot:: EnsureAllTasksVisible
 
-Faz com que os dados armazenados na hierarquia de memória de processadores individuais se torne visível para todos os processadores no sistema. Isso garante que um limite de memória completo foi executado em todos os processadores antes do método retorna.
+Faz com que os dados armazenados na hierarquia de memória de processadores individuais se tornem visíveis para todos os processadores no sistema. Ele garante que um limite de memória completa tenha sido executado em todos os processadores antes que o método seja retornado.
 
-```
+```cpp
 virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *pContext*<br/>
-O contexto que está atualmente sendo enviado por essa raiz virtual do processador.
+O contexto que está sendo expedido atualmente por esta raiz do processador virtual.
 
 ### <a name="remarks"></a>Comentários
 
-Você pode ser útil quando você deseja sincronizar a desativação de uma raiz de processador virtual com a adição de novos trabalhos no Agendador. Por motivos de desempenho, você pode decidir adicionar itens de trabalho para seu Agendador sem executar uma barreira de memória, o que significa que os itens de trabalho adicionados por um thread em execução em um processador não ficam imediatamente visíveis para todos os outros processadores. Usando esse método em conjunto com o `Deactivate` raízes de método, você pode garantir que seu Agendador não desativar seu processador virtual enquanto os itens de trabalho existem nas coleções do seu Agendador.
+Esse método pode ser útil quando você deseja sincronizar a desativação de uma raiz do processador virtual com a adição de um novo trabalho no Agendador. Por motivos de desempenho, você pode decidir adicionar itens de trabalho ao seu Agendador sem executar uma barreira de memória, o que significa que os itens de trabalho adicionados por um thread em execução em um processador não ficam visíveis imediatamente para todos os outros processadores. Usando esse método em conjunto com o método `Deactivate`, você pode garantir que o Agendador não desative todas as suas raízes de processador virtual enquanto os itens de trabalho existem nas coleções do Agendador.
 
-Uma chamada para o `EnsureAllTasksVisibleThe` método deve se originar de dentro de `Dispatch` método do contexto de execução que a raiz do processador virtual foi ativada pela última vez com. Em outras palavras, o proxy de thread invocando o `EnsureAllTasksVisible` método deve ser aquele que está sendo executado na raiz do processador virtual. Chamar o método em uma raiz de processador virtual que não estão em execução no pode resultar em comportamento indefinido.
+Uma chamada para o método `EnsureAllTasksVisibleThe` deve se originar de dentro do método `Dispatch` do contexto de execução no qual a raiz do processador virtual foi ativada pela última vez. Em outras palavras, o proxy de thread que invoca o método `EnsureAllTasksVisible` deve ser aquele que está sendo executado atualmente na raiz do processador virtual. Chamar o método em uma raiz do processador virtual que você não está executando pode resultar em um comportamento indefinido.
 
-`invalid_argument` será gerada se o argumento `pContext` tem o valor `NULL`.
+`invalid_argument` será gerada se o argumento `pContext` tiver o valor `NULL`.
 
-`invalid_operation` será gerada se a raiz do processador virtual nunca tiver sido ativado, ou o argumento `pContext` não representa o contexto de execução foi mais recentemente enviado por essa raiz virtual do processador.
+`invalid_operation` será lançada se a raiz do processador virtual nunca tiver sido ativada ou o argumento `pContext` não representar o contexto de execução que foi expedida mais recentemente por essa raiz do processador virtual.
 
-##  <a name="getid"></a>  Método ivirtualprocessorroot:: GetID
+## <a name="getid"></a>Método IVirtualProcessorRoot:: GetId
 
 Retorna um identificador exclusivo para a raiz do processador virtual.
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um identificador de inteiro.
 

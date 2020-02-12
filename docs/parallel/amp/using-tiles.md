@@ -2,12 +2,12 @@
 title: Usando blocos
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 6c935134e033d12fc140c8d377ef59d0b47265fc
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: e5cedde255846f61ed0aaadacbd9966c00a03c9d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518251"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126247"
 ---
 # <a name="using-tiles"></a>Usando blocos
 
@@ -15,7 +15,7 @@ Você pode usar a divisão para maximizar a aceleração do seu aplicativo. A di
 
 - variáveis de `tile_static`. O principal benefício de disposição em blocos é o lucro de desempenho do acesso `tile_static`. O acesso a dados na memória `tile_static` pode ser significativamente mais rápido do que o acesso aos dados no espaço global (`array` ou `array_view` objetos). Uma instância de uma variável de `tile_static` é criada para cada bloco e todos os threads no bloco têm acesso à variável. Em um algoritmo em ladrilho típico, os dados são copiados para `tile_static` memória uma vez da memória global e, em seguida, acessados muitas vezes da memória `tile_static`.
 
-- [método tile_barrier:: Wait](reference/tile-barrier-class.md#wait). Uma chamada para `tile_barrier::wait` suspende a execução do thread atual até que todos os threads no mesmo bloco alcancem a chamada para `tile_barrier::wait`. Você não pode garantir a ordem em que os threads serão executados, apenas que nenhum thread no bloco será executado após a chamada para `tile_barrier::wait` até que todos os threads tenham atingido a chamada. Isso significa que, usando o método `tile_barrier::wait`, você pode executar tarefas em uma base bloco por bloco, em vez de thread a thread. Um algoritmo de colocação em cascata típico tem código para inicializar a `tile_static` memória para o bloco inteiro seguido por uma chamada para `tile_barrer::wait`. O código a seguir `tile_barrier::wait` contém cálculos que exigem acesso a todos os valores de `tile_static`.
+- [método tile_barrier:: Wait](reference/tile-barrier-class.md#wait). Uma chamada para `tile_barrier::wait` suspende a execução do thread atual até que todos os threads no mesmo bloco alcancem a chamada para `tile_barrier::wait`. Você não pode garantir a ordem em que os threads serão executados, apenas que nenhum thread no bloco será executado após a chamada para `tile_barrier::wait` até que todos os threads tenham atingido a chamada. Isso significa que, usando o método `tile_barrier::wait`, você pode executar tarefas em uma base bloco por bloco, em vez de thread a thread. Um algoritmo de colocação em cascata típico tem código para inicializar a `tile_static` memória para o bloco inteiro seguido por uma chamada para `tile_barrier::wait`. O código a seguir `tile_barrier::wait` contém cálculos que exigem acesso a todos os valores de `tile_static`.
 
 - Indexação local e global. Você tem acesso ao índice do thread em relação a todo o `array_view` ou `array` objeto e o índice em relação ao bloco. Usar o índice local pode tornar seu código mais fácil de ler e depurar. Normalmente, você usa a indexação local para acessar variáveis de `tile_static` e a indexação global para acessar `array` e `array_view` variáveis.
 
@@ -234,7 +234,7 @@ void SamplingExample() {
         }
         std::cout << "\n";
     }
-    // Output for SAMPLESSIZE = 2 is:
+    // Output for SAMPLESIZE = 2 is:
     //  4.5  6.5  8.5 10.5
     // 20.5 22.5 24.5 26.5
     // 36.5 38.5 40.5 42.5
@@ -329,7 +329,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 });
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Palavra-chave tile_static](../../cpp/tile-static-keyword.md)

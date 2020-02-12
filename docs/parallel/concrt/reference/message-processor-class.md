@@ -11,118 +11,118 @@ f1_keywords:
 helpviewer_keywords:
 - message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-ms.openlocfilehash: be6cb1c614a41919663a4cc063da66679556e498
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88944b2d935eebd0e031be1431c2a0f4efa3d760
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409936"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139478"
 ---
-# <a name="messageprocessor-class"></a>Classe message_processor
+# <a name="message_processor-class"></a>Classe message_processor
 
-O `message_processor` classe é a classe base abstrata para o processamento de `message` objetos. Não há nenhuma garantia sobre a ordenação das mensagens.
+A classe `message_processor` é a classe base abstrata para o processamento de objetos `message`. Não há nenhuma garantia na ordenação das mensagens.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 template<class T>
 class message_processor;
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
-O tipo de dados da carga mensagens manipuladas por este `message_processor` objeto.
+O tipo de dados da carga dentro das mensagens tratadas por este `message_processor` objeto.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs públicos
+### <a name="public-typedefs"></a>Typedefs Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |`type`|Um alias de tipo para `T`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[async_send](#async_send)|Quando substituído em uma classe derivada, coloca as mensagens no bloco de forma assíncrona.|
 |[sync_send](#sync_send)|Quando substituído em uma classe derivada, coloca as mensagens no bloco de forma síncrona.|
-|[wait](#wait)|Quando substituído em uma classe derivada, aguarda todas as operações assíncronas concluir.|
+|[esperado](#wait)|Quando substituído em uma classe derivada, aguarda a conclusão de todas as operações assíncronas.|
 
-### <a name="protected-methods"></a>Métodos Protegidos
+### <a name="protected-methods"></a>Métodos protegidos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[process_incoming_message](#process_incoming_message)|Quando substituído em uma classe derivada, executa o processamento de encaminhamento de mensagens em um bloco. Chamado uma vez sempre que uma nova mensagem for adicionada e a fila é encontrada para ficar vazio.|
+|[process_incoming_message](#process_incoming_message)|Quando substituído em uma classe derivada, executa o processamento progressivo de mensagens no bloco. Chamado uma vez toda vez que uma nova mensagem é adicionada e a fila é considerada vazia.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `message_processor`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** Agents. h
 
 **Namespace:** simultaneidade
 
-##  <a name="async_send"></a> async_send
+## <a name="async_send"></a>async_send
 
 Quando substituído em uma classe derivada, coloca as mensagens no bloco de forma assíncrona.
 
-```
+```cpp
 virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *_Msg*<br/>
-Um `message` objeto a ser enviado de forma assíncrona.
+Um objeto `message` para enviar de forma assíncrona.
 
 ### <a name="remarks"></a>Comentários
 
-Implementações do processador devem substituir este método.
+Implementações de processador devem substituir esse método.
 
-##  <a name="process_incoming_message"></a> process_incoming_message
+## <a name="process_incoming_message"></a>process_incoming_message
 
-Quando substituído em uma classe derivada, executa o processamento de encaminhamento de mensagens em um bloco. Chamado uma vez sempre que uma nova mensagem for adicionada e a fila é encontrada para ficar vazio.
+Quando substituído em uma classe derivada, executa o processamento progressivo de mensagens no bloco. Chamado uma vez toda vez que uma nova mensagem é adicionada e a fila é considerada vazia.
 
-```
+```cpp
 virtual void process_incoming_message() = 0;
 ```
 
 ### <a name="remarks"></a>Comentários
 
-Implementações de bloco de mensagens devem substituir este método.
+As implementações de bloco de mensagem devem substituir esse método.
 
-##  <a name="sync_send"></a> sync_send
+## <a name="sync_send"></a>sync_send
 
 Quando substituído em uma classe derivada, coloca as mensagens no bloco de forma síncrona.
 
-```
+```cpp
 virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *_Msg*<br/>
-Um `message` objeto a ser enviado de forma síncrona.
+Um objeto `message` para enviar de forma síncrona.
 
 ### <a name="remarks"></a>Comentários
 
-Implementações do processador devem substituir este método.
+Implementações de processador devem substituir esse método.
 
-##  <a name="wait"></a> Aguarde
+## <a name="wait"></a>esperado
 
-Quando substituído em uma classe derivada, aguarda todas as operações assíncronas concluir.
+Quando substituído em uma classe derivada, aguarda a conclusão de todas as operações assíncronas.
 
-```
+```cpp
 virtual void wait() = 0;
 ```
 
 ### <a name="remarks"></a>Comentários
 
-Implementações do processador devem substituir este método.
+Implementações de processador devem substituir esse método.
 
 ## <a name="see-also"></a>Consulte também
 

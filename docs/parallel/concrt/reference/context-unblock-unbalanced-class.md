@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - context_unblock_unbalanced class
 ms.assetid: a76066c8-19dd-44fa-959a-6941ec1b0d2d
-ms.openlocfilehash: f4f385cde2a27665afa5eb9869eb52bc42c70111
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 261ec96c1a83fbec423e6dbbfe403c4db53a2962
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296210"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143103"
 ---
-# <a name="contextunblockunbalanced-class"></a>Classe context_unblock_unbalanced
+# <a name="context_unblock_unbalanced-class"></a>Classe context_unblock_unbalanced
 
-Esta classe descreve uma exceção lançada quando chamadas para o `Block` e `Unblock` métodos de um `Context` objeto não são emparelhados corretamente.
+Essa classe descreve uma exceção gerada quando chamadas para os métodos `Block` e `Unblock` de um objeto `Context` não são emparelhadas corretamente.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class context_unblock_unbalanced : public std::exception;
 ```
 
@@ -29,13 +29,13 @@ class context_unblock_unbalanced : public std::exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[context_unblock_unbalanced](#ctor)|Sobrecarregado. Constrói um objeto `context_unblock_unbalanced`.|
 
 ## <a name="remarks"></a>Comentários
 
-Chamadas para o `Block` e `Unblock` métodos de um `Context` objeto sempre deve ser combinado corretamente. O tempo de execução de simultaneidade permite que as operações de acontecer em qualquer ordem. Por exemplo, uma chamada para `Block` pode ser seguido por uma chamada para `Unblock`, ou vice-versa. Essa exceção seria lançada se, por exemplo, duas chamadas para o `Unblock` método foram feitas em uma linha em um `Context` objeto que não foi bloqueado.
+Chamadas para os métodos `Block` e `Unblock` de um objeto `Context` devem ser sempre emparelhadas adequadamente. O Tempo de Execução de Simultaneidade permite que as operações ocorram em qualquer ordem. Por exemplo, uma chamada para `Block` pode ser seguida por uma chamada para `Unblock`ou vice-versa. Essa exceção seria lançada se, por exemplo, duas chamadas para o método `Unblock` fossem feitas em uma linha, em um objeto `Context` que não foi bloqueado.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -43,17 +43,17 @@ Chamadas para o `Block` e `Unblock` métodos de um `Context` objeto sempre deve 
 
 `context_unblock_unbalanced`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** concrt. h
+**Cabeçalho:** ConcRT. h
 
 **Namespace:** simultaneidade
 
-##  <a name="ctor"></a> context_unblock_unbalanced
+## <a name="ctor"></a>context_unblock_unbalanced
 
 Constrói um objeto `context_unblock_unbalanced`.
 
-```
+```cpp
 explicit _CRTIMP context_unblock_unbalanced(_In_z_ const char* _Message) throw();
 
 context_unblock_unbalanced() throw();

@@ -4,30 +4,30 @@ ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/stdx
 ms.assetid: 0e25b138-1dfa-4073-a0b6-14bed81c774c
-ms.openlocfilehash: 8058006f0acf96614450ec22b601756dc563df61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: caa4b50b731c37e58c652e6cd63a8edae29dd940
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337473"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142652"
 ---
 # <a name="stdx-namespace"></a>Namespace stdx
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 namespace stdx;
 ```
 
 ## <a name="members"></a>Membros
 
-### <a name="functions"></a>Funções
+### <a name="functions"></a>{1&gt;Funções&lt;1}
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[Função declval](declval-function.md)||
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** ppltasks. h
 

@@ -2,12 +2,12 @@
 title: Operadores do namespace de simultaneidade (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: e2957aa84ffbf420dcf2672359a442b754866649
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b536f75e4ef6405b60d45e89290a7d97a01707d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180408"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126910"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operadores do namespace de simultaneidade (AMP)
 
@@ -17,11 +17,11 @@ ms.locfileid: "62180408"
 |[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|
 |[operator==](#operator_eq_eq)|
 
-##  <a name="operator_eq_eq"></a>  operator==
+## <a name="operator_eq_eq"></a>  operator==
 
 Determina se os argumentos especificados são iguais.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -34,23 +34,23 @@ bool operator== (
 ### <a name="parameters"></a>Parâmetros
 
 *_Rank*<br/>
-A classificação dos argumentos de tuple.
+A classificação dos argumentos da tupla.
 
 *_Lhs*<br/>
-Um dos tuples para comparar.
+Uma das tuplas para comparar.
 
 *_Rhs*<br/>
-Um dos tuples para comparar.
+Uma das tuplas para comparar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**Verdadeiro** se os tuples forem iguais; caso contrário, **falso**.
+**true** se as tuplas forem iguais; caso contrário, **false**.
 
-##  <a name="operator_neq"></a>  operator!=
+## <a name="operator_neq"></a>  operator!=
 
 Determina se os argumentos especificados não são iguais.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -63,23 +63,23 @@ bool operator!= (
 ### <a name="parameters"></a>Parâmetros
 
 *_Rank*<br/>
-A classificação dos argumentos de tuple.
+A classificação dos argumentos da tupla.
 
 *_Lhs*<br/>
-Um dos tuples para comparar.
+Uma das tuplas para comparar.
 
 *_Rhs*<br/>
-Um dos tuples para comparar.
+Uma das tuplas para comparar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**Verdadeiro** se os tuples não forem iguais; caso contrário, **falso**.
+**true** se as tuplas não forem iguais; caso contrário, **false**.
 
-##  <a name="operator_add"></a>  operator+
+## <a name="operator_add"></a>  operator+
 
-Calcula a soma em todo componente dos argumentos especificados.
+Computa a soma de componentes dos argumentos especificados.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -108,7 +108,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="parameters"></a>Parâmetros
 
 *_Rank*<br/>
-A classificação dos argumentos de tuple.
+A classificação dos argumentos da tupla.
 
 *_Lhs*<br/>
 Um dos argumentos a serem adicionados.
@@ -116,15 +116,15 @@ Um dos argumentos a serem adicionados.
 *_Rhs*<br/>
 Um dos argumentos a serem adicionados.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A soma em todo componente dos argumentos especificados.
+A soma por componente dos argumentos especificados.
 
-##  <a name="operator-"></a>  operator-
+## <a name="operator-"></a>  operator-
 
-Calcula a diferença em entre os argumentos especificados.
+Computa a diferença de componente entre os argumentos especificados.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -153,7 +153,7 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="parameters"></a>Parâmetros
 
 *_Rank*<br/>
-A classificação dos argumentos de tuple.
+A classificação dos argumentos da tupla.
 
 *_Lhs*<br/>
 O argumento a ser subtraído.
@@ -161,15 +161,15 @@ O argumento a ser subtraído.
 *_Rhs*<br/>
 O argumento a ser subtraído.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A diferença em todo componente entre os argumentos especificados.
+A diferença de componente entre os argumentos especificados.
 
-##  <a name="operator_star"></a>  operator*
+## <a name="operator_star"></a>  operator*
 
-Calcula o produto em todo componente dos argumentos especificados.
+Computa o produto com componente dos argumentos especificados.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -190,23 +190,23 @@ _Tuple_type<_Rank>   operator*(
 ### <a name="parameters"></a>Parâmetros
 
 *_Rank*<br/>
-A classificação dos argumentos de tuple.
+A classificação dos argumentos da tupla.
 
 *_Lhs*<br/>
-Um dos tuples para multiplicar.
+Uma das tuplas para multiplicar.
 
 *_Rhs*<br/>
-Um dos tuples para multiplicar.
+Uma das tuplas para multiplicar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O produto em todo componente dos argumentos especificados.
+O produto por componente dos argumentos especificados.
 
-##  <a name="operator_div"></a>  operator/
+## <a name="operator_div"></a>  operator/
 
-Calcula o quociente em todo componente dos argumentos especificados.
+Computa o quociente de componente dos argumentos especificados.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -227,7 +227,7 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="parameters"></a>Parâmetros
 
 *_Rank*<br/>
-A classificação dos argumentos de tuple.
+A classificação dos argumentos da tupla.
 
 *_Lhs*<br/>
 A tupla a ser dividida.
@@ -235,15 +235,15 @@ A tupla a ser dividida.
 *_Rhs*<br/>
 A tupla pela qual dividir.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O quociente em todo componente dos argumentos especificados.
+O quociente de componente dos argumentos especificados.
 
-##  <a name="operator_mod"></a> operator%
+## <a name="operator_mod"></a> operator%
 
-Calcula o módulo do primeiro argumento especificado pelo segundo argumento especificado.
+Computa o módulo do primeiro argumento especificado pelo segundo argumento especificado.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -264,18 +264,18 @@ _Tuple_type<_Rank>   operator%(
 ### <a name="parameters"></a>Parâmetros
 
 *_Rank*<br/>
-A classificação dos argumentos de tuple.
+A classificação dos argumentos da tupla.
 
 *_Lhs*<br/>
-A tupla da qual o modulo é calculado.
+A tupla da qual o módulo é calculado.
 
 *_Rhs*<br/>
-A tupla a módulo por.
+A tupla pela qual o módulo será analisado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O resultado do primeiro argumento especificado modula o segundo argumento especificado.
+O resultado do primeiro módulo de argumento especificado é o segundo argumento especificado.
 
 ## <a name="see-also"></a>Consulte também
 
-[Namespace de simultaneidade ](concurrency-namespace-cpp-amp.md)
+[Namespace de simultaneidade](concurrency-namespace-cpp-amp.md)

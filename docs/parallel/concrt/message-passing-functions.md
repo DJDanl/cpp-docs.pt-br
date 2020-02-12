@@ -4,66 +4,66 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-ms.openlocfilehash: 1a1790a08403bcc1d016a39e27c7a121c288af4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e1052a59f355c4ad5a7c6b57724268c24a209b4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185991"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143292"
 ---
 # <a name="message-passing-functions"></a>Funções de transmissão de mensagem
 
-A biblioteca de agentes assíncronos fornece várias funções que permitem que você passar mensagens entre componentes.
+A biblioteca de agentes assíncronos fornece várias funções que permitem passar mensagens entre componentes.
 
-Essas funções de transmissão de mensagens são usadas com os vários tipos de bloco de mensagens. Para obter mais informações sobre os tipos de bloco de mensagens que são definidos pelo tempo de execução de simultaneidade, consulte [blocos de mensagens assíncronas](../../parallel/concrt/asynchronous-message-blocks.md).
+Essas funções de passagem de mensagens são usadas com vários tipos de bloco de mensagens. Para obter mais informações sobre os tipos de bloco de mensagens que são definidos pelo Tempo de Execução de Simultaneidade, consulte [blocos de mensagens assíncronas](../../parallel/concrt/asynchronous-message-blocks.md).
 
-##  <a name="top"></a> Seções
+## <a name="top"></a>As
 
-Este tópico descreve as funções de transmissão de mensagens a seguir:
+Este tópico descreve as seguintes funções de passagem de mensagens:
 
-- [Send e asend](#send)
+- [Enviar e asend](#send)
 
 - [receber e try_receive](#receive)
 
 - [Exemplos](#examples)
 
-##  <a name="send"></a> Send e asend
+## <a name="send"></a>Enviar e asend
 
-O [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) função envia uma mensagem para o destino especificado forma síncrona e o [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) função envia uma mensagem para o destino especificado de forma assíncrona. Tanto a `send` e `asend` funções Aguarde até que o destino indica que eventualmente irá aceitar ou recusar a mensagem.
+A função [Concurrency:: send](reference/concurrency-namespace-functions.md#send) envia uma mensagem para o destino especificado de forma síncrona e a função [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) envia uma mensagem para o destino especificado de maneira assíncrona. As funções `send` e `asend` esperam até que o destino indique que, eventualmente, aceitará ou recusará a mensagem.
 
-O `send` função aguarda até que o destino aceita ou rejeita a mensagem antes de retornar. O `send` retornos de função **verdadeira** se a mensagem foi entregue e **falso** caso contrário. Porque o `send` função funciona de forma síncrona, o `send` função aguarda o destino receber a mensagem antes de retornar.
+A função `send` aguarda até que o destino aceite ou recuse a mensagem antes de retornar. A função `send` retornará **true** se a mensagem tiver sido entregue e **false** caso contrário. Como a função `send` funciona de forma síncrona, a função `send` aguarda o destino receber a mensagem antes de retornar.
 
-Por outro lado, o `asend` função não espera até que o destino aceitar ou recusar a mensagem antes de retornar. Em vez disso, o `asend` retornos de função **verdadeiro** se o destino aceita a mensagem e, eventualmente, colocá-lo. Caso contrário, `asend` retorna **falso** para indicar que o destino recusou a mensagem ou adiada a decisão sobre se deve pegar a mensagem.
+Por outro lado, a função `asend` não aguarda o destino aceitar ou recusar a mensagem antes de retornar. Em vez disso, a função `asend` retornará **true** se o destino aceitar a mensagem e, eventualmente, a levará. Caso contrário, `asend` retorna **false** para indicar que o destino recusou a mensagem ou adiava a decisão sobre se deve pegar a mensagem.
 
-[[Top](#top)]
+[[Superior](#top)]
 
-##  <a name="receive"></a> receber e try_receive
+## <a name="receive"></a>receber e try_receive
 
-O [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) e [concurrency::try_receive](reference/concurrency-namespace-functions.md#try_receive) funções leem dados de uma origem específica. O `receive` função aguarda os dados fiquem disponíveis, enquanto o `try_receive` função retorna imediatamente.
+As funções [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) e [concurrency:: try_receive](reference/concurrency-namespace-functions.md#try_receive) lêem dados de uma determinada fonte. A função `receive` aguarda que os dados fiquem disponíveis, enquanto a função `try_receive` retorna imediatamente.
 
-Use o `receive` funcionar quando você deve ter os dados para continuar. Use o `try_receive` funcionar se você não deve bloquear o contexto atual ou você não precisa ter os dados para continuar.
+Use a função `receive` quando for necessário que os dados continuem. Use a função `try_receive` se você não precisar bloquear o contexto atual ou não precisar que os dados continuem.
 
-[[Top](#top)]
+[[Superior](#top)]
 
-##  <a name="examples"></a> Exemplos
+## <a name="examples"></a> Exemplos
 
-Para obter exemplos que usam o `send` e `asend`, e `receive` funções, consulte os seguintes tópicos:
+Para obter exemplos que usam as funções `send` e `asend`e `receive`, consulte os seguintes tópicos:
 
 - [Blocos de mensagens assíncronos](../../parallel/concrt/asynchronous-message-blocks.md)
 
-- [Como: Implementar vários padrões de produtor-consumidor](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)
+- [Como implementar vários padrões de produtor-consumidor](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)
 
-- [Como: Fornecer funções de trabalho para as classes call e transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)
+- [Como fornecer funções de trabalho para as classes call e transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)
 
-- [Como: Usar transformador em um pipeline de dados](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)
+- [Como usar transformador em um pipeline de dados](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)
 
-- [Como: Selecionar entre tarefas concluídas](../../parallel/concrt/how-to-select-among-completed-tasks.md)
+- [Como selecionar entre tarefas concluídas](../../parallel/concrt/how-to-select-among-completed-tasks.md)
 
-- [Como: Enviar uma mensagem a um intervalo regular](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)
+- [Como enviar uma mensagem a um intervalo regular](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)
 
-- [Como: Usar um filtro de bloco de mensagens](../../parallel/concrt/how-to-use-a-message-block-filter.md)
+- [Como usar um filtro de bloco de mensagens](../../parallel/concrt/how-to-use-a-message-block-filter.md)
 
-[[Top](#top)]
+[[Superior](#top)]
 
 ## <a name="see-also"></a>Consulte também
 
