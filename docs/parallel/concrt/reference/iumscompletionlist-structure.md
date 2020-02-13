@@ -8,60 +8,60 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSCompletionList structure
 ms.assetid: 81b5250e-3065-492c-b20d-2cdabf12271a
-ms.openlocfilehash: 567b8668934d81c49757660d1a60ca74eb033e68
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 02382ef4606a6e73804fcbd5ce7735ecf2f0dcc7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339513"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140042"
 ---
 # <a name="iumscompletionlist-structure"></a>Estrutura IUMSCompletionList
 
-Representa uma lista de conclusão UMS. Quando um thread seja bloqueado UMS, o Agendador designado de agendamento de contexto é enviado para tomar uma decisão do que agendar na raiz do processador virtual subjacente enquanto o thread original será bloqueado. Quando o thread original será desbloqueado, o sistema operacional coloca em fila-lo à lista de preenchimento que é acessível por meio dessa interface. O Agendador pode consultar a lista de conclusão no contexto de programação designado ou qualquer outro lugar, que ele procura por trabalho.
+Representa uma lista de conclusão de UMS. Quando um thread UMS é bloqueado, o contexto de agendamento designado do Agendador é expedido para tomar uma decisão do que deve ser agendado na raiz do processador virtual subjacente enquanto o thread original é bloqueado. Quando o thread original é desbloqueado, o sistema operacional o enfileira na lista de conclusão que é acessível por essa interface. O Agendador pode consultar a lista de conclusão no contexto de agendamento designado ou em qualquer outro lugar em que ele procura trabalho.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 struct IUMSCompletionList;
 ```
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[IUMSCompletionList::GetUnblockNotifications](#getunblocknotifications)|Recupera uma cadeia de `IUMSUnblockNotification` interfaces que representa os contextos de execução cujo thread associado proxies têm desbloqueado desde a última vez que esse método foi invocado.|
+|[IUMSCompletionList::GetUnblockNotifications](#getunblocknotifications)|Recupera uma cadeia de interfaces de `IUMSUnblockNotification` que representa contextos de execução cujos proxies de thread associados foram desbloqueados desde a última vez que esse método foi invocado.|
 
 ## <a name="remarks"></a>Comentários
 
-Um agendador deve ser extraordinariamente cuidado em relação a quais ações são executadas depois de utilizar essa interface para itens da lista de preenchimento de remoção da fila. Os itens devem ser colocados na lista do Agendador de contextos de executáveis e ser geralmente acessíveis assim que possível. Ele é totalmente possível que um dos itens da fila foi dada propriedade de um bloqueio arbitrário. O Agendador não pode fazer nenhuma chamada de função arbitrária que podem ser bloqueadas entre a chamada para itens de remoção da fila e o posicionamento desses itens em uma lista que pode ser geralmente acessados de dentro do Agendador.
+Um Agendador deve ser um pouco cuidadoso sobre quais ações são executadas após a utilização dessa interface para remover itens da lista de conclusão. Os itens devem ser colocados na lista de contextos executáveis do Agendador e estar geralmente acessíveis assim que possível. É totalmente possível que um dos itens da fila tenha recebido a propriedade de um bloqueio arbitrário. O Agendador pode não fazer chamadas de função arbitrárias que possam ser bloqueadas entre a chamada para itens de remoção da fila e o posicionamento desses itens em uma lista que pode ser geralmente acessada de dentro do Agendador.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `IUMSCompletionList`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** concrtrm. h
 
 **Namespace:** simultaneidade
 
-##  <a name="getunblocknotifications"></a>  Método iumscompletionlist:: Getunblocknotifications
+## <a name="getunblocknotifications"></a>Método IUMSCompletionList:: GetUnblockNotifications
 
-Recupera uma cadeia de `IUMSUnblockNotification` interfaces que representa os contextos de execução cujo thread associado proxies têm desbloqueado desde a última vez que esse método foi invocado.
+Recupera uma cadeia de interfaces de `IUMSUnblockNotification` que representa contextos de execução cujos proxies de thread associados foram desbloqueados desde a última vez que esse método foi invocado.
 
-```
+```cpp
 virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma cadeia de `IUMSUnblockNotification` interfaces.
+Uma cadeia de interfaces de `IUMSUnblockNotification`.
 
 ### <a name="remarks"></a>Comentários
 
-As notificações retornadas são inválidas depois que os contextos de execução sejam reagendados.
+As notificações retornadas são inválidas quando os contextos de execução são reagendados.
 
 ## <a name="see-also"></a>Consulte também
 

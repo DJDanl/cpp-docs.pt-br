@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-ms.openlocfilehash: 891b19112c8baf2efb088f064892e1ea19a7deab
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f5f101ca2c505e1b7c6b50b21af7d5aeef4ae625
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503971"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127875"
 ---
 # <a name="coledroptarget-class"></a>Classe COleDropTarget
 
@@ -45,30 +45,30 @@ class COleDropTarget : public CCmdTarget
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[COleDropTarget::COleDropTarget](#coledroptarget)|Constrói um objeto `COleDropTarget`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[COleDropTarget::OnDragEnter](#ondragenter)|Chamado quando o cursor entra pela primeira vez na janela.|
 |[COleDropTarget::OnDragLeave](#ondragleave)|Chamado quando o cursor é arrastado para fora da janela.|
 |[COleDropTarget::OnDragOver](#ondragover)|Chamado repetidamente quando o cursor é arrastado sobre a janela.|
 |[COleDropTarget::OnDragScroll](#ondragscroll)|Chamado para determinar se o cursor é arrastado para a região de rolagem da janela.|
-|[COleDropTarget::OnDrop](#ondrop)|Chamado quando os dados são retirados para a janela, manipulador padrão.|
+|[COleDropTarget:: OnDrop](#ondrop)|Chamado quando os dados são retirados para a janela, manipulador padrão.|
 |[COleDropTarget::OnDropEx](#ondropex)|Chamado quando os dados são retirados para a janela, manipulador inicial.|
-|[COleDropTarget::Register](#register)|Registra a janela como um destino de soltura válido.|
-|[COleDropTarget::Revoke](#revoke)|Faz com que a janela pare de ser um destino de soltura válido.|
+|[COleDropTarget:: Register](#register)|Registra a janela como um destino de soltura válido.|
+|[COleDropTarget:: REVOKE](#revoke)|Faz com que a janela pare de ser um destino de soltura válido.|
 
 ## <a name="remarks"></a>Comentários
 
 A criação de um objeto dessa classe permite que uma janela aceite dados por meio do mecanismo de arrastar e soltar OLE.
 
-Para obter uma janela para aceitar comandos drop, primeiro você deve criar um objeto da `COleDropTarget` classe e, em seguida, chamar a função [Register](#register) com um ponteiro para o `CWnd` objeto desejado como o único parâmetro.
+Para obter uma janela para aceitar comandos drop, primeiro você deve criar um objeto da classe `COleDropTarget` e, em seguida, chamar a função [Register](#register) com um ponteiro para o objeto `CWnd` desejado como o único parâmetro.
 
-Para obter mais informações sobre operações de arrastar e soltar usando OLE, consulte o artigo [arrastar e soltar (OLE)](../../mfc/drag-and-drop-ole.md).
+Para obter mais informações sobre operações de arrastar e soltar usando OLE, consulte o artigo [arrastar e soltar de OLE](../../mfc/drag-and-drop-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -78,11 +78,11 @@ Para obter mais informações sobre operações de arrastar e soltar usando OLE,
 
 `COleDropTarget`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** Afxole. h
 
-##  <a name="coledroptarget"></a>  COleDropTarget::COleDropTarget
+##  <a name="coledroptarget"></a>COleDropTarget::COleDropTarget
 
 Constrói um objeto da classe `COleDropTarget`.
 
@@ -94,7 +94,7 @@ COleDropTarget();
 
 Chame [o registro](#register) para associar esse objeto a uma janela.
 
-##  <a name="ondragenter"></a>  COleDropTarget::OnDragEnter
+##  <a name="ondragenter"></a>COleDropTarget::OnDragEnter
 
 Chamado pelo Framework quando o cursor é arrastado pela primeira vez para a janela.
 
@@ -115,12 +115,12 @@ Aponta para a janela que o cursor está inserindo.
 Aponta para o objeto de dados que contém os dados que podem ser descartados.
 
 *dwKeyState*<br/>
-Contém o estado das teclas modificadoras. Essa é uma combinação de qualquer número do seguinte: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
+Contém o estado das teclas modificadoras. Essa é uma combinação de qualquer número dos seguintes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*point*<br/>
+*empresas*<br/>
 Contém o local atual do cursor nas coordenadas do cliente.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O efeito que resultaria se houvesse uma tentativa de soltar no local especificado por *ponto*. Pode ser um ou mais dos seguintes:
 
@@ -140,7 +140,7 @@ Substitua essa função para permitir que as operações drop ocorram na janela.
 
 Para obter mais informações, consulte [IDropTarget::D ragenter](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragenter) no SDK do Windows.
 
-##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave
+##  <a name="ondragleave"></a>COleDropTarget::OnDragLeave
 
 Chamado pelo Framework quando o cursor sai da janela enquanto uma operação de arrastar está em vigor.
 
@@ -159,7 +159,7 @@ Substitua essa função se desejar um comportamento especial quando a operação
 
 Para obter mais informações, consulte [IDropTarget::D ragleave](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragleave) no SDK do Windows.
 
-##  <a name="ondragover"></a>  COleDropTarget::OnDragOver
+##  <a name="ondragover"></a>COleDropTarget::OnDragOver
 
 Chamado pelo Framework quando o cursor é arrastado sobre a janela.
 
@@ -180,12 +180,12 @@ Aponta para a janela que o cursor está sobre.
 Aponta para o objeto de dados que contém os dados a serem removidos.
 
 *dwKeyState*<br/>
-Contém o estado das teclas modificadoras. Essa é uma combinação de qualquer número do seguinte: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
+Contém o estado das teclas modificadoras. Essa é uma combinação de qualquer número dos seguintes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*point*<br/>
+*empresas*<br/>
 Contém o local atual do cursor nas coordenadas do cliente.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O efeito que resultaria se houvesse uma tentativa de soltar no local especificado por *ponto*. Pode ser um ou mais dos seguintes:
 
@@ -205,11 +205,11 @@ Essa função deve ser substituída para permitir que operações drop ocorram n
 
 Para obter mais informações, consulte [IDropTarget::D ragover](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragover) no SDK do Windows.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]
 
-##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll
+##  <a name="ondragscroll"></a>COleDropTarget::OnDragScroll
 
 Chamado pelo Framework antes de chamar [OnDragEnter](#ondragenter) ou [OnDragOver](#ondragover) para determinar se o *ponto* está na região de rolagem.
 
@@ -226,12 +226,12 @@ virtual DROPEFFECT OnDragScroll(
 Aponta para a janela em que o cursor está no momento.
 
 *dwKeyState*<br/>
-Contém o estado das teclas modificadoras. Essa é uma combinação de qualquer número do seguinte: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
+Contém o estado das teclas modificadoras. Essa é uma combinação de qualquer número dos seguintes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*point*<br/>
+*empresas*<br/>
 Contém o local do cursor, em pixels, em relação à tela.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O efeito que resultaria se houvesse uma tentativa de soltar no local especificado por *ponto*. Pode ser um ou mais dos seguintes:
 
@@ -249,7 +249,7 @@ O efeito que resultaria se houvesse uma tentativa de soltar no local especificad
 
 Substitua essa função quando desejar fornecer um comportamento especial para esse evento. A implementação padrão dessa função chama [cvisualização:: OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll), que retorna DROPEFFECT_NONE e rola a janela quando o cursor é arrastado para a região de rolagem padrão dentro da borda da janela.
 
-##  <a name="ondrop"></a>  COleDropTarget::OnDrop
+##  <a name="ondrop"></a>COleDropTarget:: OnDrop
 
 Chamado pelo Framework quando uma operação de soltar é executada.
 
@@ -278,22 +278,22 @@ O efeito que o usuário escolheu para a operação de soltar. Pode ser um ou mai
 
 - DROPEFFECT_LINK um link dos dados descartados para os dados originais seria estabelecido.
 
-*point*<br/>
+*empresas*<br/>
 Contém o local do cursor, em pixels, em relação à tela.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a remoção for bem-sucedida; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-A estrutura primeiro chama [OnDropEx](#ondropex). Se a `OnDropEx` função não tratar a queda, a estrutura chamará essa função de membro, `OnDrop`. Normalmente, o aplicativo substitui [OnDropEx](../../mfc/reference/cview-class.md#ondropex) na classe View para manipular o arrastar e soltar com o botão do mouse. Normalmente, a classe View [OnDrop](../../mfc/reference/cview-class.md#ondrop) é usada para manipular arrastar e soltar simples.
+A estrutura primeiro chama [OnDropEx](#ondropex). Se a função `OnDropEx` não tratar a queda, a estrutura chamará essa função de membro, `OnDrop`. Normalmente, o aplicativo substitui [OnDropEx](../../mfc/reference/cview-class.md#ondropex) na classe View para manipular o arrastar e soltar com o botão do mouse. Normalmente, a classe View [OnDrop](../../mfc/reference/cview-class.md#ondrop) é usada para manipular arrastar e soltar simples.
 
 A implementação padrão de `COleDropTarget::OnDrop` chama [cvisualização:: OnDrop](../../mfc/reference/cview-class.md#ondrop), que simplesmente retorna false por padrão.
 
 Para obter mais informações, consulte [IDropTarget::D ROP](/windows/win32/api/oleidl/nf-oleidl-idroptarget-drop) no SDK do Windows.
 
-##  <a name="ondropex"></a>  COleDropTarget::OnDropEx
+##  <a name="ondropex"></a>COleDropTarget::OnDropEx
 
 Chamado pelo Framework quando uma operação de soltar é executada.
 
@@ -317,13 +317,13 @@ Aponta para o objeto de dados que contém os dados a serem removidos.
 *dropDefault*<br/>
 O efeito que o usuário escolheu para a operação de soltar padrão com base no estado de chave atual. Pode ser DROPEFFECT_NONE. Os efeitos de soltar são discutidos na seção comentários.
 
-*dropList*<br/>
+*lista suspensa*<br/>
 Uma lista dos efeitos de soltar aos quais a fonte de soltar dá suporte. Os valores de queda de efeito podem ser combinados usando a **&#124;** operação OR () de OR bit. Os efeitos de soltar são discutidos na seção comentários.
 
-*point*<br/>
+*empresas*<br/>
 Contém o local do cursor, em pixels, em relação à tela.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O efeito de soltar que resultou da tentativa de soltar no local especificado por *ponto*. Os efeitos de soltar são discutidos na seção comentários.
 
@@ -347,7 +347,7 @@ Drop Effects descreve a ação associada a uma operação DROP. Consulte a segui
 
 Para obter mais informações, consulte [IDropTarget::D ROP](/windows/win32/api/oleidl/nf-oleidl-idroptarget-drop) no SDK do Windows.
 
-##  <a name="register"></a>  COleDropTarget::Register
+##  <a name="register"></a>COleDropTarget:: Register
 
 Chame essa função para registrar sua janela com as DLLs OLE como um destino de soltura válido.
 
@@ -360,7 +360,7 @@ BOOL Register(CWnd* pWnd);
 *pWnd*<br/>
 Aponta para a janela que deve ser registrada como um destino de soltar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se o registro for bem-sucedido; caso contrário, 0.
 
@@ -370,7 +370,7 @@ Essa função deve ser chamada para operações de remoção para serem aceitas.
 
 Para obter mais informações, consulte [RegisterDragDrop](/windows/win32/api/ole2/nf-ole2-registerdragdrop) no SDK do Windows.
 
-##  <a name="revoke"></a>  COleDropTarget::Revoke
+##  <a name="revoke"></a>COleDropTarget:: REVOKE
 
 Chame essa função antes de destruir qualquer janela que tenha sido registrada como uma interface "soltar" por meio de uma chamada de [registro](#register) para removê-la da lista de destinos de destino.
 

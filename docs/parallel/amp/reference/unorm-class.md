@@ -6,20 +6,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-ms.openlocfilehash: 059cd3a388d67e540a91146f2a287c375fb02bd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c9ec967be8be618e5f8ab3bad1bfd940bfeaef4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405424"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126299"
 ---
 # <a name="unorm-class"></a>Classe unorm
 
-Representa um número unorm. Cada elemento é flutuante número de ponto no intervalo de [0.0f, 1.0f].
+Representa um número de unorm. Cada elemento é um número de ponto flutuante no intervalo de [0,0 f, 1,0 f].
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class unorm;
 ```
 
@@ -27,19 +27,19 @@ class unorm;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[Construtor de unorm](#ctor)|Sobrecarregado. Construtor padrão. Inicialize a 0.0f.|
+|[Construtor unorm](#ctor)|Sobrecarregado. Construtor padrão. Inicialize para 0,0 f.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |unorm::operator--||
-|unorm::operator float|Operador de conversão. Converta o número de unorm em flutuante valor de ponto.|
-|unorm::operator*=||
+|float de unorm:: Operator|Operador de conversão. Converta o número unorm em um valor de ponto flutuante.|
+|unorm:: Operator * =||
 |unorm::operator/=||
-|unorm::operator++||
+|unorm:: operador + +||
 |unorm::operator+=||
 |unorm::operator=||
 |unorm::operator-=||
@@ -48,17 +48,17 @@ class unorm;
 
 `unorm`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Simultaneidade:: Graphics
 
-##  <a name="ctor"></a> unorm
+## <a name="ctor"></a>unorm
 
-Construtor padrão. Inicialize a 0.0f.
+Construtor padrão. Inicialize para 0,0 f.
 
-```
+```cpp
 unorm(
     void) restrict(amp,
     cpu);
@@ -94,7 +94,7 @@ inline explicit unorm(
 O valor usado para inicializar.
 
 *_Other*<br/>
-O objeto de norma usado para inicializar.
+O objeto de regra usado para inicializar.
 
 ## <a name="see-also"></a>Consulte também
 

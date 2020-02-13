@@ -72,40 +72,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-ms.openlocfilehash: 6423220d8203b0d0fba73a4888f967e159db26de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 981b3026e1efb6c3b4e06457a0eb1f986cdcaafa
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180344"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126689"
 ---
-# <a name="double3-class"></a>Classe double_3
+# <a name="double_3-class"></a>Classe double_3
 
-Representa um vetor curto de três doubles.
+Representa um pequeno vetor de três duplos.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class double_3;
 ```
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs públicos
+### <a name="public-typedefs"></a>Typedefs Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |value_type||
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[Construtor double_3](#ctor)|Sobrecarregado. Padrão construtor, inicializa todos os elementos com 0.|
+|[Construtor de double_3](#ctor)|Sobrecarregado. O construtor padrão inicializa todos os elementos com 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |double_3::get_x||
 |double_3::get_xy||
@@ -146,26 +146,26 @@ class double_3;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |double_3::operator-||
 |double_3::operator--||
-|double_3::operator*=||
-|double_3::operator/=||
-|double_3::operator++||
-|double_3::operator+=||
+|double_3:: Operator * =||
+|double_3:: Operator/=||
+|double_3:: operador + +||
+|double_3:: Operator + =||
 |double_3::operator=||
 |double_3::operator-=||
 
-### <a name="public-constants"></a>Constantes públicas
+### <a name="public-constants"></a>Constantes Públicas
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[tamanho constante](#double_3__size)||
+|[Constante de tamanho](#double_3__size)||
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |double_3::b||
 |double_3::bg||
@@ -183,36 +183,36 @@ class double_3;
 |double_3::rg||
 |double_3::rgb||
 |double_3::x||
-|double_3::xy||
+|double_3:: XY||
 |double_3::xyz||
 |double_3::xz||
-|double_3::xzy||
-|double_3::y||
-|double_3::yx||
+|double_3:: XZY||
+|double_3:: y||
+|double_3:: YX||
 |double_3::yxz||
-|double_3::yz||
+|double_3:: YZ||
 |double_3::yzx||
 |double_3::z||
 |double_3::zx||
 |double_3::zxy||
-|double_3::zy||
+|double_3:: ZY||
 |double_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `double_3`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Simultaneidade:: Graphics
 
-##  <a name="ctor"></a> double_3
+## <a name="ctor"></a>double_3
 
-Padrão construtor, inicializa todos os elementos com 0.
+O construtor padrão inicializa todos os elementos com 0.
 
-```
+```cpp
 double_3() restrict(amp,
     cpu);
 
@@ -263,14 +263,14 @@ O valor para inicializar o elemento 1.
 O valor para inicializar o elemento 2.
 
 *_V*<br/>
-O valor para a inicialização.
+O valor para inicialização.
 
 *_Other*<br/>
 O objeto usado para inicializar.
 
-##  <a name="double_3__size"></a> size
+## <a name="double_3__size"></a>tamanho
 
-```
+```cpp
 static const int size = 3;
 ```
 

@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_key class
 ms.assetid: 6a7c42fe-9bc4-4a02-bebb-99fe9ef9817d
-ms.openlocfilehash: 1bc2f1cffdeba5f81bd96932ecef23a563fac351
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 60d5a57ff9cb33a3d522c14514f5107844216852
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341106"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143019"
 ---
-# <a name="invalidschedulerpolicykey-class"></a>Classe invalid_scheduler_policy_key
+# <a name="invalid_scheduler_policy_key-class"></a>Classe invalid_scheduler_policy_key
 
-Esta classe descreve uma exceção gerada quando um inválido ou desconhecido de chave é passado para um `SchedulerPolicy` construtor de objeto, ou o `SetPolicyValue` método de um `SchedulerPolicy` objeto é passado a uma chave que deve ser alterada usando outros meios, como o `SetConcurrencyLimits` método.
+Essa classe descreve uma exceção lançada quando uma chave inválida ou desconhecida é passada para um construtor de objeto `SchedulerPolicy` ou o método `SetPolicyValue` de um objeto `SchedulerPolicy` é passado para uma chave que deve ser alterada usando outros meios, como o método `SetConcurrencyLimits`.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class invalid_scheduler_policy_key : public std::exception;
 ```
 
@@ -29,9 +29,9 @@ class invalid_scheduler_policy_key : public std::exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[invalid_scheduler_policy_key](#ctor)|Sobrecarregado. Constrói um `invalid_scheduler_policy_key` objeto.|
+|[invalid_scheduler_policy_key](#ctor)|Sobrecarregado. Constrói um objeto `invalid_scheduler_policy_key`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -39,17 +39,17 @@ class invalid_scheduler_policy_key : public std::exception;
 
 `invalid_scheduler_policy_key`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** concrt. h
+**Cabeçalho:** ConcRT. h
 
 **Namespace:** simultaneidade
 
-##  <a name="ctor"></a> invalid_scheduler_policy_key
+## <a name="ctor"></a>invalid_scheduler_policy_key
 
-Constrói um `invalid_scheduler_policy_key` objeto.
+Constrói um objeto `invalid_scheduler_policy_key`.
 
-```
+```cpp
 explicit _CRTIMP invalid_scheduler_policy_key(_In_z_ const char* _Message) throw();
 
 invalid_scheduler_policy_key() throw();

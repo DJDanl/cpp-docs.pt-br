@@ -12,57 +12,57 @@ f1_keywords:
 helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-ms.openlocfilehash: 83cfdb5807581f7092709691a1839052abdd657c
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 700d052b6f22c970387a3ab45d299538a5b74e1b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343847"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139537"
 ---
 # <a name="message-class"></a>Classe message
 
-O envelope de mensagem básica que contém o conteúdo dos dados que está sendo transmitido entre blocos de mensagens.
+O envelope de mensagem básico que contém a carga de dados que está sendo passada entre os blocos de mensagens.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 template<class T>
 class message : public ::Concurrency::details::_Runtime_object;
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
-O tipo de dados de carga dentro da mensagem.
+O tipo de dados da carga dentro da mensagem.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs públicos
+### <a name="public-typedefs"></a>Typedefs Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |`type`|Um alias de tipo para `T`.|
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[message](#ctor)|Sobrecarregado. Constrói um objeto `message`.|
-|[~ Destruidor da mensagem](#dtor)|Destrói o `message` objeto.|
+|[~ Destruidor de mensagem](#dtor)|Destrói o objeto `message`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[add_ref](#add_ref)|Adiciona a contagem de referência para o `message` objeto. Usado para blocos de mensagem que precisa determinar os tempos de vida da mensagem de contagem de referência.|
-|[msg_id](#msg_id)|Retorna a ID do `message` objeto.|
-|[remove_ref](#remove_ref)|Subtrai da contagem de referência para o `message` objeto. Usado para blocos de mensagem que precisa determinar os tempos de vida da mensagem de contagem de referência.|
+|[add_ref](#add_ref)|Adiciona à contagem de referência para o objeto `message`. Usado para blocos de mensagens que precisam de contagem de referência para determinar os tempos de vida da mensagem.|
+|[msg_id](#msg_id)|Retorna a ID do objeto de `message`.|
+|[remove_ref](#remove_ref)|Subtrai da contagem de referência para o objeto `message`. Usado para blocos de mensagens que precisam de contagem de referência para determinar os tempos de vida da mensagem.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[payload](#payload)|A carga do `message` objeto.|
+|[payload](#payload)|A carga do objeto de `message`.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -72,29 +72,29 @@ Para obter mais informações, consulte [blocos de mensagens assíncronas](../..
 
 `message`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** Agents. h
 
 **Namespace:** simultaneidade
 
-##  <a name="add_ref"></a> add_ref
+## <a name="add_ref"></a>add_ref
 
-Adiciona a contagem de referência para o `message` objeto. Usado para blocos de mensagem que precisa determinar os tempos de vida da mensagem de contagem de referência.
+Adiciona à contagem de referência para o objeto `message`. Usado para blocos de mensagens que precisam de contagem de referência para determinar os tempos de vida da mensagem.
 
-```
+```cpp
 long add_ref();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O novo valor da contagem de referência.
 
-##  <a name="ctor"></a> Mensagem
+## <a name="ctor"></a>Mensagem
 
 Constrói um objeto `message`.
 
-```
+```cpp
 message(
     T const& _P);
 
@@ -112,55 +112,55 @@ message(
 ### <a name="parameters"></a>Parâmetros
 
 *_P*<br/>
-A carga da mensagem.
+A carga desta mensagem.
 
 *_Id*<br/>
-A ID exclusiva dessa mensagem.
+A ID exclusiva desta mensagem.
 
 *_Msg*<br/>
-Uma referência ou ponteiro para um `message` objeto.
+Uma referência ou um ponteiro para um objeto `message`.
 
 ### <a name="remarks"></a>Comentários
 
-O construtor que usa um ponteiro para um `message` objeto como um argumento lança uma [invalid_argument](../../../standard-library/invalid-argument-class.md) exceção se o parâmetro `_Msg` é `NULL`.
+O construtor que usa um ponteiro para um objeto `message` como um argumento gera uma exceção [invalid_argument](../../../standard-library/invalid-argument-class.md) se o parâmetro `_Msg` for `NULL`.
 
-##  <a name="dtor"></a> ~message
+## <a name="dtor"></a>~ mensagem
 
-Destrói o `message` objeto.
+Destrói o objeto `message`.
 
-```
+```cpp
 virtual ~message();
 ```
 
-##  <a name="msg_id"></a> msg_id
+## <a name="msg_id"></a>msg_id
 
-Retorna a ID do `message` objeto.
+Retorna a ID do objeto de `message`.
 
-```
+```cpp
 runtime_object_identity msg_id() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O `runtime_object_identity` do `message` objeto.
+O `runtime_object_identity` do objeto `message`.
 
-##  <a name="payload"></a> carga
+## <a name="payload"></a>carga
 
-A carga do `message` objeto.
+A carga do objeto de `message`.
 
-```
+```cpp
 T const payload;
 ```
 
-##  <a name="remove_ref"></a> remove_ref
+## <a name="remove_ref"></a>remove_ref
 
-Subtrai da contagem de referência para o `message` objeto. Usado para blocos de mensagem que precisa determinar os tempos de vida da mensagem de contagem de referência.
+Subtrai da contagem de referência para o objeto `message`. Usado para blocos de mensagens que precisam de contagem de referência para determinar os tempos de vida da mensagem.
 
-```
+```cpp
 long remove_ref();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O novo valor da contagem de referência.
 

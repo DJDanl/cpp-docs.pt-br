@@ -4,23 +4,23 @@ ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/std::make_exception_ptr
 ms.assetid: 8d81cf7a-818e-4b27-8d49-440ec3088609
-ms.openlocfilehash: 3889973ccd9a91e9512ddee73c77b289a9591467
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68e29942498187970d7a157a8fbb86efe2aac635
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409974"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139661"
 ---
-# <a name="makeexceptionptr-function"></a>Função make_exception_ptr
+# <a name="make_exception_ptr-function"></a>Função make_exception_ptr
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 template<class _E>
 exception_ptr make_exception_ptr(_E _Except);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_E*<br/>
 Tipo de exceção.
@@ -28,9 +28,9 @@ Tipo de exceção.
 *_Except*<br/>
 Valor da exceção.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** ppltasks. h
 

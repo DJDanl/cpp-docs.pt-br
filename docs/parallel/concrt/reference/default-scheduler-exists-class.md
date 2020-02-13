@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - default_scheduler_exists class
 ms.assetid: f6e575e2-4e0f-455a-9e06-54f462ce0c1c
-ms.openlocfilehash: 326a2dfc6837665adb4d46a6aaa8780052ad2b22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eed5dd242beb4c4cd481f22635e0d5f71c28d7e6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296092"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139185"
 ---
-# <a name="defaultschedulerexists-class"></a>Classe default_scheduler_exists
+# <a name="default_scheduler_exists-class"></a>Classe default_scheduler_exists
 
-Esta classe descreve uma exceção gerada quando o `Scheduler::SetDefaultSchedulerPolicy` método é chamado quando um agendador padrão já existe dentro do processo.
+Essa classe descreve uma exceção gerada quando o método `Scheduler::SetDefaultSchedulerPolicy` é chamado quando um agendador padrão já existe dentro do processo.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class default_scheduler_exists : public std::exception;
 ```
 
@@ -29,7 +29,7 @@ class default_scheduler_exists : public std::exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[default_scheduler_exists](#ctor)|Sobrecarregado. Constrói um objeto `default_scheduler_exists`.|
 
@@ -39,17 +39,17 @@ class default_scheduler_exists : public std::exception;
 
 `default_scheduler_exists`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** concrt. h
+**Cabeçalho:** ConcRT. h
 
 **Namespace:** simultaneidade
 
-##  <a name="ctor"></a> default_scheduler_exists
+## <a name="ctor"></a>default_scheduler_exists
 
 Constrói um objeto `default_scheduler_exists`.
 
-```
+```cpp
 explicit _CRTIMP default_scheduler_exists(_In_z_ const char* _Message) throw();
 
 default_scheduler_exists() throw();

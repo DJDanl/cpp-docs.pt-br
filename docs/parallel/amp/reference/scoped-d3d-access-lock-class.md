@@ -6,20 +6,20 @@ f1_keywords:
 - AMPRT/scoped_d3d_access_lock
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-ms.openlocfilehash: e36c3c2cfa9d1b617e377a7e340f98875457bdf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5a2d9dab9cba7b19fa0d0b1627f653f2c7fdc57
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352865"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126390"
 ---
-# <a name="scopedd3daccesslock-class"></a>Classe scoped_d3d_access_lock
+# <a name="scoped_d3d_access_lock-class"></a>Classe scoped_d3d_access_lock
 
-Wrapper de RAII para um bloqueio de acesso de D3D em um objeto accelerator_view.
+RAII wrapper para um bloqueio de acesso do D3D em um objeto accelerator_view.
 
-### <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class scoped_d3d_access_lock;
 ```
 
@@ -27,32 +27,32 @@ class scoped_d3d_access_lock;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[Construtor scoped_d3d_access_lock](#ctor)|Sobrecarregado. Constrói um objeto `scoped_d3d_access_lock`. O bloqueio é liberado quando esse objeto sai do escopo.|
-|[~ scoped_d3d_access_lock destruidor](#dtor)|Libera o bloqueio de acesso de D3D de associado `accelerator_view` objeto.|
+|[Construtor de scoped_d3d_access_lock](#ctor)|Sobrecarregado. Constrói um objeto `scoped_d3d_access_lock`. O bloqueio é liberado quando esse objeto sai do escopo.|
+|[~ scoped_d3d_access_lock destruidor](#dtor)|Libera o bloqueio de acesso do D3D no objeto `accelerator_view` associado.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[operator=](#operator_eq)|Utiliza a propriedade de um bloqueio de outro `scoped_d3d_access_lock`.|
+|[operator=](#operator_eq)|Apropria-se de um bloqueio de outro `scoped_d3d_access_lock`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `scoped_d3d_access_lock`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amprt. h
 
-**Namespace:** concurrency::direct3d
+**Namespace:** concurrency::d irect3d
 
-##  <a name="ctor"></a> scoped_d3d_access_lock
+## <a name="ctor"></a>scoped_d3d_access_lock
 
 Constrói um objeto `scoped_d3d_access_lock`. O bloqueio é liberado quando esse objeto sai do escopo.
 
-```
+```cpp
 explicit scoped_d3d_access_lock(// [1] constructor
     accelerator_view& _Av);
 
@@ -67,44 +67,44 @@ scoped_d3d_access_lock(// [3] move constructor
 ### <a name="parameters"></a>Parâmetros
 
 *_Av*<br/>
-O `accelerator_view` para adotar o bloqueio.
+O `accelerator_view` para o bloqueio adotar.
 
 *_T*<br/>
 O objeto `adopt_d3d_access_lock_t`.
 
 *_Other*<br/>
-O `scoped_d3d_access_lock` objeto do qual mover um bloqueio existente.
+O objeto `scoped_d3d_access_lock` do qual mover um bloqueio existente.
 
 ## <a name="construction"></a>Construção
 
-[1] construtor adquire um bloqueio de acesso de D3D na determinada [accelerator_view](accelerator-view-class.md) objeto. Blocos de construção até o bloqueio é adquirido.
+[1] o construtor adquire um bloqueio de acesso do D3D no objeto [accelerator_view](accelerator-view-class.md) fornecido. Blocos de construção até que o bloqueio seja adquirido.
 
-[2] construtor adote um bloqueio de acesso de D3D da determinada [accelerator_view](accelerator-view-class.md) objeto.
+[2] o Construtor adota um bloqueio de acesso do D3D do objeto [accelerator_view](accelerator-view-class.md) fornecido.
 
-[3] construtor de movimento usa um bloqueio de acesso de D3D existente de outro `scoped_d3d_access_lock` objeto. Construção não é bloqueada.
+[3] o Construtor move usa um bloqueio de acesso do D3D existente de outro objeto `scoped_d3d_access_lock`. A construção não é bloqueada.
 
-##  <a name="dtor"></a> ~scoped_d3d_access_lock
+## <a name="dtor"></a>~ scoped_d3d_access_lock
 
-Libera o bloqueio de acesso de D3D de associado `accelerator_view` objeto.
+Libera o bloqueio de acesso do D3D no objeto `accelerator_view` associado.
 
-```
+```cpp
 ~scoped_d3d_access_lock();
 ```
 
-## <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>operador =
 
-Utiliza a propriedade de um bloqueio de acesso de D3D de outro `scoped_d3d_access_lock` objeto, liberando o bloqueio anterior.
+Apropria-se de um bloqueio de acesso do D3D de outro objeto `scoped_d3d_access_lock`, liberando o bloqueio anterior.
 
-```
+```cpp
 scoped_d3d_access_lock& operator= (scoped_d3d_access_lock&& _Other);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *_Other*<br/>
-O accelerator_view do qual mover o bloqueio de acesso D3D.
+O accelerator_view do qual mover o bloqueio de acesso do D3D.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma referência a este `scoped_accelerator_view_lock`.
 

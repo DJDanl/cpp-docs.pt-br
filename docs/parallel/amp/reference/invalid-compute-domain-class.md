@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_compute_domain class
 ms.assetid: ac7a7166-8bdb-4db1-8caf-ea129ab5117e
-ms.openlocfilehash: 51fcd9e42bc4497131da5adb3dff72efb46537b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b8179e8e92665fa6482bd092504af71aa0106f0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351713"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126455"
 ---
-# <a name="invalidcomputedomain-class"></a>Classe invalid_compute_domain
+# <a name="invalid_compute_domain-class"></a>Classe invalid_compute_domain
 
-A exceção que é lançada quando o tempo de execução não pode iniciar um kernel usando o domínio de cálculo especificado na [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) site de chamada.
+A exceção que é lançada quando o tempo de execução não pode iniciar um kernel usando o domínio de computação especificado no site de chamada [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) .
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class invalid_compute_domain : public runtime_exception;
 ```
 
@@ -29,7 +29,7 @@ class invalid_compute_domain : public runtime_exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[Construtor de invalid_compute_domain](#ctor)|Inicializa uma nova instância da classe `invalid_compute_domain`.|
 
@@ -41,19 +41,19 @@ class invalid_compute_domain : public runtime_exception;
 
 `invalid_compute_domain`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amprt. h
 
-**Namespace:** Concorrência
+**Namespace:** Simultaneidade
 
-## <a name="ctor"></a> invalid_compute_domain
+## <a name="ctor"></a>invalid_compute_domain
 
 Inicializa uma nova instância da classe.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 explicit invalid_compute_domain(
     const char * _Message ) throw();
 
@@ -65,9 +65,9 @@ invalid_compute_domain() throw();
 *_Message*<br/>
 Uma descrição do erro.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma instância da `invalid_compute_domain` classe
+Uma instância da classe `invalid_compute_domain`
 
 ## <a name="see-also"></a>Consulte também
 

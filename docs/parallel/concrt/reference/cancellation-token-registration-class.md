@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_registration class
 ms.assetid: 823d63f4-7233-4d65-8976-6152ccf12d0e
-ms.openlocfilehash: c6ca8061181ec057110282fa297666235e898ff6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9342841e207c93b66521c2fc742c1b1114682f78
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414185"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142244"
 ---
-# <a name="cancellationtokenregistration-class"></a>Classe cancellation_token_registration
+# <a name="cancellation_token_registration-class"></a>Classe cancellation_token_registration
 
-O `cancellation_token_registration` classe representa uma notificação de retorno de chamada de um `cancellation_token`. Quando o `register` método em um `cancellation_token` é usado para receber notificações de quando o cancelamento ocorre, um `cancellation_token_registration` objeto é retornado como um identificador para o retorno de chamada para que o chamador possa solicitar um retorno de chamada específico não precisa mais ser feitas por meio do uso da `deregister` método.
+A classe `cancellation_token_registration` representa uma notificação de retorno de chamada de um `cancellation_token`. Quando o método de `register` em um `cancellation_token` é usado para receber a notificação de quando o cancelamento ocorre, um objeto `cancellation_token_registration` é retornado como um identificador para o retorno de chamada para que o chamador possa solicitar que um retorno de chamada específico não seja mais feito pelo uso do método `deregister`.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class cancellation_token_registration;
 ```
 
@@ -29,14 +29,14 @@ class cancellation_token_registration;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[cancellation_token_registration](#ctor)||
 |[~ cancellation_token_registration destruidor](#dtor)||
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[operator!=](#operator_neq)||
 |[operator=](#operator_eq)||
@@ -46,21 +46,21 @@ class cancellation_token_registration;
 
 `cancellation_token_registration`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** pplcancellation_token. h
 
 **Namespace:** simultaneidade
 
-##  <a name="dtor"></a> ~cancellation_token_registration
+## <a name="dtor"></a>~ cancellation_token_registration
 
-```
+```cpp
 ~cancellation_token_registration();
 ```
 
-##  <a name="ctor"></a> cancellation_token_registration
+## <a name="ctor"></a>cancellation_token_registration
 
-```
+```cpp
 cancellation_token_registration();
 
 cancellation_token_registration(const cancellation_token_registration& _Src);
@@ -73,22 +73,22 @@ cancellation_token_registration(cancellation_token_registration&& _Src);
 *_Src*<br/>
 O `cancellation_token_registration` para copiar ou mover.
 
-##  <a name="operator_neq"></a> operador! =
+## <a name="operator_neq"></a>operador! =
 
-```
+```cpp
 bool operator!= (const cancellation_token_registration& _Rhs) const;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *_Rhs*<br/>
-O `cancellation_token_registration` de comparação.
+O `cancellation_token_registration` a ser comparado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>operador =
 
-```
+```cpp
 cancellation_token_registration& operator= (const cancellation_token_registration& _Src);
 
 cancellation_token_registration& operator= (cancellation_token_registration&& _Src);
@@ -97,22 +97,22 @@ cancellation_token_registration& operator= (cancellation_token_registration&& _S
 ### <a name="parameters"></a>Parâmetros
 
 *_Src*<br/>
-O `cancellation_token_registration` atribuir.
+O `cancellation_token_registration` a ser atribuído.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-##  <a name="operator_eq_eq"></a> operator==
+## <a name="operator_eq_eq"></a>operador = =
 
-```
+```cpp
 bool operator== (const cancellation_token_registration& _Rhs) const;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *_Rhs*<br/>
-O `cancellation_token_registration` de comparação.
+O `cancellation_token_registration` a ser comparado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 ## <a name="see-also"></a>Consulte também
 

@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: 5449362454c5899e544ed370f13d28471a59bd13
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 06134838494e38c182d7c8328497666862f40fd6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821838"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143235"
 ---
 # <a name="concurrency-namespace"></a>Namespace Concurrency
 
@@ -33,7 +33,7 @@ O namespace `Concurrency` oferece classes e funções que permitem que você ace
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 namespace concurrency;
 ```
 
@@ -41,7 +41,7 @@ namespace concurrency;
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |`runtime_object_identity`|Cada instância de mensagem tem uma identidade que a segue conforme é clonada e passada entre os componentes de mensagens. Esse não pode ser o endereço do objeto de mensagem.|
 |`task_status`|Um tipo que representa o estado terminal de uma tarefa. Os valores válidos são `completed` e `canceled`.|
@@ -50,7 +50,7 @@ namespace concurrency;
 
 ### <a name="classes"></a>Classes
 
-|Name|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[Classe affinity_partitioner](affinity-partitioner-class.md)|A classe `affinity_partitioner` é semelhante à classe `static_partitioner`, mas melhora a afinidade de cache por sua escolha de mapear subintervalos para threads de trabalho. Ele pode melhorar significativamente o desempenho quando um loop é executado novamente no mesmo conjunto de dados e os dados se ajustam ao cache. Observe que o mesmo objeto `affinity_partitioner` deve ser usado com iterações subsequentes de um loop paralelo executado em um conjunto de dados específico, para se beneficiar da localidade de dados.|
 |[Classe agent](agent-class.md)|Uma classe destinada a ser usada como classe base para todos os agentes independentes. Ele é usado para ocultar o estado de outros agentes e interagir com a passagem de mensagens.|
@@ -116,7 +116,7 @@ namespace concurrency;
 |[Classe single_link_registry](single-link-registry-class.md)|O objeto `single_link_registry` é um `network_link_registry` que gerencia apenas um único bloco de origem ou de destino.|
 |[Classe source_block](source-block-class.md)|A classe `source_block` é uma classe base abstrata para blocos somente de origem. A classe fornece a funcionalidade básica de gerenciamento de link, bem como verificações de erro comuns.|
 |[Classe source_link_manager](source-link-manager-class.md)|O objeto `source_link_manager` gerencia os links de rede do bloco de mensagens para blocos de `ISource`.|
-|[Classe static_partitioner](static-partitioner-class.md)|A classe `static_partitioner` representa um particionamento estático do intervalo iterado por `parallel_for`. O particionador divide o intervalo em tantas partes quanto há trabalhadores disponíveis para o Agendador underyling.|
+|[Classe static_partitioner](static-partitioner-class.md)|A classe `static_partitioner` representa um particionamento estático do intervalo iterado por `parallel_for`. O particionador divide o intervalo em tantas partes quanto há trabalhadores disponíveis para o Agendador subjacente.|
 |[Classe structured_task_group](structured-task-group-class.md)|A classe `structured_task_group` representa uma coleção altamente estruturada de trabalho paralelo. Você pode colocar tarefas paralelas individuais em uma `structured_task_group` usando `task_handle` objetos e esperar que elas sejam concluídas ou cancelar o grupo de tarefas antes de concluir a execução, o que anulará todas as tarefas que não começaram a execução.|
 |[Classe target_block](target-block-class.md)|A classe `target_block` é uma classe base abstrata que fornece funcionalidade básica de gerenciamento de link e verificação de erros para blocos somente de destino.|
 |[Classe task (Runtime de Simultaneidade)](task-class.md)|A classe `task` da Biblioteca de Padrões Paralelos (PPL). O objeto `task` representa o trabalho que pode ser executado de forma assíncrona e simultaneamente com outras tarefas e o trabalho paralelo produzido por algoritmos paralelos no Runtime de simultaneidade. Produz um resultado de tipo `_ResultType` após uma conclusão bem-sucedida. Tarefas do tipo `task<void>` não produzem resultados. Uma tarefa pode ser aguardada e cancelada independentemente de outras tarefas. Ela também pode ser composta por outras tarefas usando continuations(`then`) e os padrões join(`when_all`) e choice(`when_any`).|
@@ -133,7 +133,7 @@ namespace concurrency;
 
 ### <a name="structures"></a>Estruturas
 
-|Name|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[Estrutura DispatchState](dispatchstate-structure.md)|A estrutura de `DispatchState` é usada para transferir o estado para o método `IExecutionContext::Dispatch`. Ele descreve as circunstâncias sob as quais o método `Dispatch` é invocado em uma interface `IExecutionContext`.|
 |[Estrutura IExecutionContext](iexecutioncontext-structure.md)|Uma interface para um contexto de execução que pode ser executado em um determinado processador virtual e ser alternado por contexto de forma cooperativa.|
@@ -154,7 +154,7 @@ namespace concurrency;
 
 ### <a name="enumerations"></a>Enumerações
 
-|Name|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|Os Estados válidos para um `agent`.|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|Os tipos de eventos que podem ser rastreados usando a funcionalidade de rastreamento oferecida pela biblioteca de agentes|
@@ -173,7 +173,7 @@ namespace concurrency;
 
 ### <a name="functions"></a>{1&gt;Funções&lt;1}
 
-|Name|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[Função de alocação](concurrency-namespace-functions.md#alloc)|Aloca um bloco de memória do tamanho especificado no subalocador de cache Tempo de Execução de Simultaneidade.|
 |[Função asend](concurrency-namespace-functions.md#asend)|Sobrecarregado. Uma operação Send assíncrona, que agenda uma tarefa para propagar os dados para o bloco de destino.|
@@ -220,7 +220,7 @@ namespace concurrency;
 
 ### <a name="operators"></a>Operadores
 
-|Name|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[operator!=](concurrency-namespace-operators.md#operator_neq)|Testa se o objeto `concurrent_vector` no lado esquerdo do operador não é igual ao objeto `concurrent_vector` no lado direito.|
 |[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|Sobrecarregado. Cria uma tarefa que será concluída com êxito quando as duas tarefas fornecidas como argumentos forem concluídas com êxito.|
@@ -233,7 +233,7 @@ namespace concurrency;
 
 ### <a name="constants"></a>{1&gt;Constantes&lt;1}
 
-|Name|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[AgentEventGuid](concurrency-namespace-constants1.md#agenteventguid)|Um GUID de categoria ({B9B5B78C-0713-4898-A21A-C67949DCED07}) que descreve os eventos de ETW acionados pela biblioteca de agentes no Tempo de Execução de Simultaneidade.|
 |[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|Um GUID de categoria que descreve os eventos ETW disparados pelo Tempo de Execução de Simultaneidade que estão diretamente relacionados a tarefas.|
@@ -254,10 +254,10 @@ namespace concurrency;
 |[SchedulerEventGuid](concurrency-namespace-constants1.md#schedulereventguid)|Um GUID de categoria que descreve eventos ETW acionados pelo Tempo de Execução de Simultaneidade que estão diretamente relacionados à atividade do Agendador.|
 |[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|Um GUID de categoria que descreve eventos ETW acionados pelo Tempo de Execução de Simultaneidade que estão diretamente relacionados a processadores virtuais.|
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Header:** Agents. h, ConcRT. h, concrtrm. h, concurrent_priority_queue. h, concurrent_queue. h, concurrent_unordered_map. h, concurrent_unordered_set. h, concurrent_vector. h, internal_concurrent_hash. h, internal_split_ordered_list. h, ppl. h, pplcancellation_token. h, pplconcrt. h, pplinterface. h, ppltasks. h
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Referência](reference-concurrency-runtime.md)

@@ -9,25 +9,25 @@ f1_keywords:
 helpviewer_keywords:
 - progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
-ms.openlocfilehash: dac74085278418153ddec502f6257ce13885704d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd8f50a8c9829ff9de3e2412b89aa4de88d90db6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394371"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138766"
 ---
-# <a name="progressreporter-class"></a>Classe progress_reporter
+# <a name="progress_reporter-class"></a>Classe progress_reporter
 
 A classe de relator de andamento permite criar relatórios de notificações de andamento de um tipo específico. Cada objeto progress_reporter está associado a uma determinada ação ou operação assíncrona.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 template<typename _ProgressType>
 class progress_reporter;
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_ProgressType*<br/>
 O tipo de carga de cada notificação de andamento relatada pelo relator de andamento.
@@ -36,48 +36,48 @@ O tipo de carga de cada notificação de andamento relatada pelo relator de anda
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[progress_reporter](#ctor)||
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[report](#report)|Envia um relatório de andamento para a ação ou operação assíncrona à qual este relator de andamento está associado.|
+|[relatar](#report)|Envia um relatório de andamento para a ação ou operação assíncrona à qual este relator de andamento está associado.|
 
 ## <a name="remarks"></a>Comentários
 
-Esse tipo só está disponível para aplicativos do Windows Runtime.
+Esse tipo só está disponível para Windows Runtime aplicativos.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `progress_reporter`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** ppltasks. h
 
 **Namespace:** simultaneidade
 
-##  <a name="ctor"></a> progress_reporter
+## <a name="ctor"></a>progress_reporter
 
-```
+```cpp
 progress_reporter();
 ```
 
-##  <a name="report"></a> relatório
+## <a name="report"></a>relatar
 
 Envia um relatório de andamento para a ação ou operação assíncrona à qual este relator de andamento está associado.
 
-```
+```cpp
 void report(const _ProgressType& val) const;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *val*<br/>
-A carga de relatório por meio de uma notificação de progresso.
+A carga a ser relatada por meio de uma notificação de progresso.
 
 ## <a name="see-also"></a>Consulte também
 

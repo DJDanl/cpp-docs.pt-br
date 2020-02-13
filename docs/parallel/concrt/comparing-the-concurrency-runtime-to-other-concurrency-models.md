@@ -1,17 +1,17 @@
 ---
-title: Comparando o Tempo de Execução de Simultaneidade com outros modelos de simultaneidade
+title: Comparando o Runtime de Simultaneidade com outros modelos de simultaneidade
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 9cc48687eb083ea4fab53380f62856b747c9d86a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5bc6691f6d0b166bb3084091ee6af70474937568
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512820"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141327"
 ---
-# <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparando o Tempo de Execução de Simultaneidade com outros modelos de simultaneidade
+# <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparando o Runtime de Simultaneidade com outros modelos de simultaneidade
 
 Este documento descreve as diferenças entre os recursos e modelos de programação do Tempo de Execução de Simultaneidade e outras tecnologias. Ao compreender como os benefícios do Tempo de Execução de Simultaneidade se comparam aos benefícios de outros modelos de programação, você pode selecionar a tecnologia que melhor atenda aos requisitos de seus aplicativos.
 
@@ -19,7 +19,7 @@ Se você estiver usando outro modelo de programação, como o pool de threads do
 
 Você pode usar os recursos e os benefícios de produtividade do Tempo de Execução de Simultaneidade para complementar seu aplicativo existente que usa outro modelo de simultaneidade. O Tempo de Execução de Simultaneidade não pode garantir o balanceamento de carga quando vários agendadores de tarefas conpetem para os mesmos recursos de computação. No entanto, quando as cargas de trabalho não se sobrepõem, esse efeito é mínimo.
 
-##  <a name="top"></a>As
+## <a name="top"></a>As
 
 - [Comparando agendamento preventivo com agendamento cooperativo](#models)
 
@@ -27,7 +27,7 @@ Você pode usar os recursos e os benefícios de produtividade do Tempo de Execu�
 
 - [Comparando o Tempo de Execução de Simultaneidade ao OpenMP](#openmp)
 
-##  <a name="models"></a>Comparando agendamento preventivo com agendamento cooperativo
+## <a name="models"></a>Comparando agendamento preventivo com agendamento cooperativo
 
 O modelo preventivo e os modelos de agendamento cooperativos são duas maneiras comuns de habilitar várias tarefas para compartilhar recursos de computação, por exemplo, processadores ou threads de hardware.
 
@@ -51,13 +51,13 @@ O agendamento cooperativo não resolve todos os problemas de agendamento. Por ex
 
 [[Superior](#top)]
 
-##  <a name="winapi"></a>Comparando o Tempo de Execução de Simultaneidade à API do Windows
+## <a name="winapi"></a>Comparando o Tempo de Execução de Simultaneidade à API do Windows
 
 A interface de programação de aplicativos do Microsoft Windows, que normalmente é chamada de API do Windows (e anteriormente conhecida como Win32), fornece um modelo de programação que permite a simultaneidade em seus aplicativos. O Tempo de Execução de Simultaneidade se baseia na API do Windows para fornecer modelos de programação adicionais que não estão disponíveis no sistema operacional subjacente.
 
 O Tempo de Execução de Simultaneidade se baseia no modelo de thread da API do Windows para executar o trabalho paralelo. Ele também usa os mecanismos de gerenciamento de memória da API do Windows e armazenamento local de thread. No Windows 7 e no Windows Server 2008 R2, ele usa o suporte de API do Windows para threads agendáveis e computadores com mais de 64 threads de hardware. O Tempo de Execução de Simultaneidade estende o modelo da API do Windows fornecendo um Agendador de tarefas cooperativo e um algoritmo de roubo de trabalho para maximizar o uso de recursos de computação e habilitando várias instâncias simultâneas do Agendador.
 
-### <a name="programming-languages"></a>Linguagens de programação
+### <a name="programming-languages"></a>Linguagens de Programação
 
 A API do Windows usa a linguagem de programação C para expor o modelo de programação. O Tempo de Execução de Simultaneidade fornece uma C++ interface de programação que aproveita os recursos mais recentes do C++ idioma. Por exemplo, as funções lambda fornecem um mecanismo sucinto de tipo seguro para definir funções de trabalho paralelas. Para obter mais informações sobre os C++ recursos mais recentes que o tempo de execução de simultaneidade usa, consulte [visão geral](../../parallel/concrt/asynchronous-message-blocks.md).
 
@@ -77,11 +77,11 @@ No Windows XP e no Windows Vista, os aplicativos que usam o Tempo de Execução 
 
 No Windows 7 e no Windows Server 2008 R2, o sistema operacional dá suporte adicional à simultaneidade e escalabilidade. Por exemplo, esses sistemas operacionais dão suporte a computadores que têm mais de 64 threads de hardware. Um aplicativo existente que usa a API do Windows deve ser modificado para aproveitar esses novos recursos. No entanto, um aplicativo que usa o Tempo de Execução de Simultaneidade usa esses recursos automaticamente e não requer modificações.
 
-[base.user-mode_scheduling](/windows/win32/procthread/user-mode-scheduling)
+[base. usuário-mode_scheduling](/windows/win32/procthread/user-mode-scheduling)
 
 [[Superior](#top)]
 
-##  <a name="openmp"></a>Comparando o Tempo de Execução de Simultaneidade ao OpenMP
+## <a name="openmp"></a>Comparando o Tempo de Execução de Simultaneidade ao OpenMP
 
 O Tempo de Execução de Simultaneidade permite uma variedade de modelos de programação. Esses modelos podem sobrepor ou complementar os modelos de outras bibliotecas. Esta seção compara o Tempo de Execução de Simultaneidade com o [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp).
 
@@ -97,7 +97,7 @@ Para obter mais informações sobre como o Tempo de Execução de Simultaneidade
 
 ## <a name="see-also"></a>Consulte também
 
-[Tempo de Execução de Simultaneidade](../../parallel/concrt/concurrency-runtime.md)<br/>
+[Runtime de Simultaneidade](../../parallel/concrt/concurrency-runtime.md)<br/>
 [Visão geral](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [PPL (Biblioteca de Padrões Paralelos)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 [Biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)<br/>

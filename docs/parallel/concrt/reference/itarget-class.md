@@ -13,59 +13,59 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: 59a0f66a0ba3b10c3307a835ff6ccaa216596538
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: dc9eacad744536e640417a4ebf51b975bd05bcc7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339542"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142031"
 ---
 # <a name="itarget-class"></a>Classe ITarget
 
-O `ITarget` classe é a interface de todos os blocos de destino. Blocos de destino consumam mensagens oferecidas a eles por `ISource` blocos.
+A classe `ITarget` é a interface para todos os blocos de destino. Os blocos de destino consomem mensagens oferecidas por blocos de `ISource`.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 template<class T>
 class ITarget;
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
-O tipo de dados da carga de mensagens é aceito pelo bloco de destino.
+O tipo de dados da carga dentro das mensagens aceitas pelo bloco de destino.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs públicos
+### <a name="public-typedefs"></a>Typedefs Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|`filter_method`|A assinatura de qualquer método usado pelo bloco que retorna um `bool` valor para determinar se uma mensagem oferecida deve ser aceitas.|
+|`filter_method`|A assinatura de qualquer método usado pelo bloco que retorna um valor `bool` para determinar se uma mensagem oferecida deve ser aceita.|
 |`type`|Um alias de tipo para `T`.|
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[~ Destruidor ITarget](#dtor)|Destrói o `ITarget` objeto.|
+|[~ Destruidor ITarget](#dtor)|Destrói o objeto `ITarget`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[propagate](#propagate)|Quando substituído em uma classe derivada, assincronamente transmite uma mensagem de um bloco de código-fonte para este bloco de destino.|
-|[send](#send)|Quando substituído em uma classe derivada, passa forma síncrona uma mensagem para o bloco de destino.|
-|[supports_anonymous_source](#supports_anonymous_source)|Quando substituído em uma classe derivada, retorna true ou false dependendo se o bloco de mensagens aceite mensagens oferecidas por uma fonte que não está vinculada a ele. Se o método substituído retornar **verdadeira**, o destino não for possível adiar uma mensagem oferecida, como a origem a ser identificados no seu registro do link sourse requer o consumo de uma mensagem adiada em um momento posterior.|
+|[propagar](#propagate)|Quando substituído em uma classe derivada, o passa de forma assíncrona uma mensagem de um bloco de origem para esse bloco de destino.|
+|[send](#send)|Quando substituído em uma classe derivada, passa sincronamente uma mensagem para o bloco de destino.|
+|[supports_anonymous_source](#supports_anonymous_source)|Quando substituído em uma classe derivada, retorna true ou false dependendo se o bloco de mensagem aceita mensagens oferecidas por uma fonte que não está vinculada a ela. Se o método substituído retornar **true**, o destino não poderá adiar uma mensagem oferecida, pois o consumo de uma mensagem adiada em um momento posterior exigirá que a origem seja identificada em seu registro de link de origem.|
 
-### <a name="protected-methods"></a>Métodos Protegidos
+### <a name="protected-methods"></a>Métodos protegidos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[link_source](#link_source)|Quando substituído em uma classe derivada, vincula um bloco de origem especificado a este `ITarget` bloco.|
-|[unlink_source](#unlink_source)|Quando substituído em uma classe derivada, desvincula um bloco de origem especificado deste `ITarget` bloco.|
-|[unlink_sources](#unlink_sources)|Quando substituído em uma classe derivada, desvincula todos os blocos de código-fonte deste `ITarget` bloco.|
+|[link_source](#link_source)|Quando substituído em uma classe derivada, o vincula um bloco de origem especificado a esse bloco de `ITarget`.|
+|[unlink_source](#unlink_source)|Quando substituído em uma classe derivada, desvincula um bloco de origem especificado desse bloco de `ITarget`.|
+|[unlink_sources](#unlink_sources)|Quando substituído em uma classe derivada, Desvincula todos os blocos de origem desse bloco de `ITarget`.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -75,42 +75,42 @@ Para obter mais informações, consulte [blocos de mensagens assíncronas](../..
 
 `ITarget`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** Agents. h
 
 **Namespace:** simultaneidade
 
-##  <a name="dtor"></a> ~ITarget
+## <a name="dtor"></a>~ ITarget
 
-Destrói o `ITarget` objeto.
+Destrói o objeto `ITarget`.
 
-```
+```cpp
 virtual ~ITarget();
 ```
 
-##  <a name="link_source"></a> link_source
+## <a name="link_source"></a>link_source
 
-Quando substituído em uma classe derivada, vincula um bloco de origem especificado a este `ITarget` bloco.
+Quando substituído em uma classe derivada, o vincula um bloco de origem especificado a esse bloco de `ITarget`.
 
-```
+```cpp
 virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *_PSource*<br/>
-O `ISource` bloquear sendo vinculado a este `ITarget` bloco.
+O bloco de `ISource` que está sendo vinculado a este bloco de `ITarget`.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função não deve ser chamada diretamente em um `ITarget` bloco. Blocos devem ser conectados usando o `link_target` método no `ISource` blocos, que invocarão o `link_source` método no destino correspondente.
+Essa função não deve ser chamada diretamente em um bloco de `ITarget`. Os blocos devem ser conectados usando o método `link_target` em blocos de `ISource`, que invocarão o método `link_source` no destino correspondente.
 
-##  <a name="propagate"></a> propagate
+## <a name="propagate"></a>propagar
 
-Quando substituído em uma classe derivada, assincronamente transmite uma mensagem de um bloco de código-fonte para este bloco de destino.
+Quando substituído em uma classe derivada, o passa de forma assíncrona uma mensagem de um bloco de origem para esse bloco de destino.
 
-```
+```cpp
 virtual message_status propagate(
     _Inout_opt_ message<T>* _PMessage,
     _Inout_opt_ ISource<T>* _PSource) = 0;
@@ -119,24 +119,24 @@ virtual message_status propagate(
 ### <a name="parameters"></a>Parâmetros
 
 *_PMessage*<br/>
-Um ponteiro para o `message` objeto.
+Um ponteiro para o objeto `message`.
 
 *_PSource*<br/>
-Um ponteiro para o bloco de código-fonte, oferecendo a mensagem.
+Um ponteiro para o bloco de origem que oferece a mensagem.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.
+Uma indicação [message_status](concurrency-namespace-enums.md) do que o destino decidiu fazer com a mensagem.
 
 ### <a name="remarks"></a>Comentários
 
-O método lança um [invalid_argument](../../../standard-library/invalid-argument-class.md) exceção se o `_PMessage` ou `_PSource` parâmetro é `NULL`.
+O método gera uma exceção [invalid_argument](../../../standard-library/invalid-argument-class.md) se o parâmetro `_PMessage` ou `_PSource` for `NULL`.
 
-##  <a name="send"></a> send
+## <a name="send"></a>Enviar
 
-Quando substituído em uma classe derivada, passa forma síncrona uma mensagem para o bloco de destino.
+Quando substituído em uma classe derivada, passa sincronamente uma mensagem para o bloco de destino.
 
-```
+```cpp
 virtual message_status send(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource) = 0;
@@ -145,57 +145,57 @@ virtual message_status send(
 ### <a name="parameters"></a>Parâmetros
 
 *_PMessage*<br/>
-Um ponteiro para o `message` objeto.
+Um ponteiro para o objeto `message`.
 
 *_PSource*<br/>
-Um ponteiro para o bloco de código-fonte, oferecendo a mensagem.
+Um ponteiro para o bloco de origem que oferece a mensagem.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.
+Uma indicação [message_status](concurrency-namespace-enums.md) do que o destino decidiu fazer com a mensagem.
 
 ### <a name="remarks"></a>Comentários
 
-O método lança um [invalid_argument](../../../standard-library/invalid-argument-class.md) exceção se o `_PMessage` ou `_PSource` parâmetro é `NULL`.
+O método gera uma exceção [invalid_argument](../../../standard-library/invalid-argument-class.md) se o parâmetro `_PMessage` ou `_PSource` for `NULL`.
 
-Usando o `send` método fora de iniciação de mensagem e propagar as mensagens em uma rede é perigoso e pode resultar em deadlock.
+O uso do método `send` fora do início da mensagem e a propagação de mensagens em uma rede é perigoso e pode levar a deadlock.
 
-Quando `send` retorna, a mensagem seja já foi aceita e transferida para o bloco de destino, ou ele foi recusado pelo destino.
+Quando `send` retorna, a mensagem já foi aceita e transferida para o bloco de destino ou foi recusada pelo destino.
 
-##  <a name="supports_anonymous_source"></a> supports_anonymous_source
+## <a name="supports_anonymous_source"></a>supports_anonymous_source
 
-Quando substituído em uma classe derivada, retorna true ou false dependendo se o bloco de mensagens aceite mensagens oferecidas por uma fonte que não está vinculada a ele. Se o método substituído retornar **verdadeira**, o destino não for possível adiar uma mensagem oferecida, como a origem a ser identificados no seu registro do link sourse requer o consumo de uma mensagem adiada em um momento posterior.
+Quando substituído em uma classe derivada, retorna true ou false dependendo se o bloco de mensagem aceita mensagens oferecidas por uma fonte que não está vinculada a ela. Se o método substituído retornar **true**, o destino não poderá adiar uma mensagem oferecida, pois o consumo de uma mensagem adiada em um momento posterior exigirá que a origem seja identificada em seu registro de link sourse.
 
-```
+```cpp
 virtual bool supports_anonymous_source();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**Verdadeiro** se o bloco pode aceitar a mensagem de uma fonte que não está vinculada a ele **falso** caso contrário.
+**true** se o bloco puder aceitar a mensagem de uma fonte que não esteja vinculada a ela **false** caso contrário.
 
-##  <a name="unlink_source"></a> unlink_source
+## <a name="unlink_source"></a>unlink_source
 
-Quando substituído em uma classe derivada, desvincula um bloco de origem especificado deste `ITarget` bloco.
+Quando substituído em uma classe derivada, desvincula um bloco de origem especificado desse bloco de `ITarget`.
 
-```
+```cpp
 virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *_PSource*<br/>
-O `ISource` bloquear sendo desvinculado deste `ITarget` bloco.
+O bloco de `ISource` que está sendo desvinculado deste bloco de `ITarget`.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função não deve ser chamada diretamente em um `ITarget` bloco. Blocos devem ser desconectados usando o `unlink_target` ou `unlink_targets` métodos `ISource` blocos, que invocarão o `unlink_source` método no destino correspondente.
+Essa função não deve ser chamada diretamente em um bloco de `ITarget`. Os blocos devem ser desconectados usando os métodos `unlink_target` ou `unlink_targets` em blocos de `ISource`, o que invocará o método `unlink_source` no destino correspondente.
 
-##  <a name="unlink_sources"></a> unlink_sources
+## <a name="unlink_sources"></a>unlink_sources
 
-Quando substituído em uma classe derivada, desvincula todos os blocos de código-fonte deste `ITarget` bloco.
+Quando substituído em uma classe derivada, Desvincula todos os blocos de origem desse bloco de `ITarget`.
 
-```
+```cpp
 virtual void unlink_sources() = 0;
 ```
 

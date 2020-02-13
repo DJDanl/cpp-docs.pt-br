@@ -11,67 +11,67 @@ f1_keywords:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-ms.openlocfilehash: ce7734a1330f2d6e495565338879764482439d09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8686b5ef0906e3188a1e683d1190bbe6124cd19e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337538"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143264"
 ---
 # <a name="schedulegroup-class"></a>Classe ScheduleGroup
 
-Representa uma abstração para um grupo de agendas. Grupos de agendas organizam um conjunto de trabalho relacionados que se beneficiam de ser agendados em datas próximas temporariamente, por executando outra tarefa no mesmo grupo antes de passar para outro grupo ou espaçadamente, executando vários itens dentro do mesmo grupo no mesmo Nó NUMA ou soquete físico.
+Representa uma abstração para um grupo de agendamento. Os grupos de agendamento organizam um conjunto de trabalho relacionado que se beneficia de ser agendado de forma temporal, executando outra tarefa no mesmo grupo antes de passar para outro grupo, ou espacial, executando vários itens dentro do mesmo grupo na mesma Nó NUMA ou soquete físico.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class ScheduleGroup;
 ```
 
 ## <a name="members"></a>Membros
 
-### <a name="protected-constructors"></a>Construtores Protegidos
+### <a name="protected-constructors"></a>Construtores protegidos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[~ Destruidor ScheduleGroup](#dtor)||
+|[~ Destruidor de programador](#dtor)||
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[ID](#id)|Retorna um identificador para o grupo de agendas que é exclusivo dentro do Agendador ao qual pertence o grupo.|
+|[Id](#id)|Retorna um identificador para o grupo de agendamento que é exclusivo dentro do Agendador ao qual o grupo pertence.|
 |[Referência](#reference)|Incrementa a contagem de referência do grupo de agendamento.|
-|[Versão](#release)|Diminui a referência de grupo do Agendador contagem.|
-|[ScheduleTask](#scheduletask)|Agenda uma tarefa leve no grupo.|
+|[Versão](#release)|Decrementa a contagem de referência de grupo do Agendador.|
+|[ScheduleTask](#scheduletask)|Agenda uma tarefa leve dentro do grupo de agendamento.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `ScheduleGroup`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** concrt. h
+**Cabeçalho:** ConcRT. h
 
 **Namespace:** simultaneidade
 
-##  <a name="id"></a> Id
+## <a name="id"></a>Sessão
 
-Retorna um identificador para o grupo de agendas que é exclusivo dentro do Agendador ao qual pertence o grupo.
+Retorna um identificador para o grupo de agendamento que é exclusivo dentro do Agendador ao qual o grupo pertence.
 
-```
+```cpp
 virtual unsigned int Id() const = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um identificador para o grupo de agendas que é exclusivo dentro do Agendador ao qual pertence o grupo.
+Um identificador para o grupo de agendamento que é exclusivo dentro do Agendador ao qual o grupo pertence.
 
-##  <a name="operator_delete"></a> operador delete
+## <a name="operator_delete"></a>operador Delete
 
-Um `ScheduleGroup` objeto é destruído internamente pelo tempo de execução quando todas as referências externas a ele são liberadas. Ele não pode ser explicitamente excluído.
+Um objeto `ScheduleGroup` é destruído internamente pelo tempo de execução quando todas as referências externas a ele são liberadas. Ele não pode ser excluído explicitamente.
 
-```
+```cpp
 void operator delete(
     void* _PObject);
 
@@ -87,51 +87,51 @@ const char *,
 *_PObject*<br/>
 Um ponteiro para o objeto a ser excluído.
 
-##  <a name="reference"></a> Referência
+## <a name="reference"></a>Referência
 
 Incrementa a contagem de referência do grupo de agendamento.
 
-```
+```cpp
 virtual unsigned int Reference() = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A contagem de referência recentemente incrementado.
+A contagem de referência incrementada recentemente.
 
 ### <a name="remarks"></a>Comentários
 
-Isso normalmente é usado para gerenciar o tempo de vida do grupo de agendamento para a composição. Quando a contagem de referência de um grupo de agendas cai para zero, o grupo de agendas é excluído pelo tempo de execução. Um grupo de agendamento criado usando o [currentscheduler:: Createschedulegroup](currentscheduler-class.md#createschedulegroup) método, ou o [Scheduler:: createschedulegroup](scheduler-class.md#createschedulegroup) método começa com uma contagem de referência de um.
+Normalmente, isso é usado para gerenciar o tempo de vida do grupo de agendamento para composição. Quando a contagem de referência de um grupo de agendamento cai para zero, o grupo de agendamento é excluído pelo tempo de execução. Um grupo de agendamento criado usando o método [CurrentScheduler:: CreateSchedule](currentscheduler-class.md#createschedulegroup) Group ou o método [Scheduler:: CreateSchedule](scheduler-class.md#createschedulegroup) Group começa com uma contagem de referência de um.
 
-##  <a name="release"></a> versão
+## <a name="release"></a>Liberar
 
-Diminui a referência de grupo do Agendador contagem.
+Decrementa a contagem de referência de grupo do Agendador.
 
-```
+```cpp
 virtual unsigned int Release() = 0;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A contagem de referência recentemente decrementado.
+A contagem de referência recentemente decrementada.
 
 ### <a name="remarks"></a>Comentários
 
-Isso normalmente é usado para gerenciar o tempo de vida do grupo de agendamento para a composição. Quando a contagem de referência de um grupo de agendas cai para zero, o grupo de agendas é excluído pelo tempo de execução. Depois de ter chamado a `Release` o número específico de vezes para remover a criação de método referência contagem e todas as referências adicionais colocadas, usando o `Reference` método, não é possível utilizar o grupo de agendas. Isso resultará em um comportamento indefinido.
+Normalmente, isso é usado para gerenciar o tempo de vida do grupo de agendamento para composição. Quando a contagem de referência de um grupo de agendamento cai para zero, o grupo de agendamento é excluído pelo tempo de execução. Depois de ter chamado o método `Release` o número específico de vezes para remover a contagem de referência de criação e quaisquer referências adicionais feitas usando o método `Reference`, você não poderá utilizar o grupo de agendamento ainda mais. Isso resultará em um comportamento indefinido.
 
-Um grupo de agendamento está associado uma instância de Agendador específico. Você deve garantir que todas as referências para o grupo de agendas são liberadas antes de todas as referências para o Agendador são lançadas, porque a última opção pode resultar no Agendador que está sendo destruído. Fazendo caso contrário, resulta em um comportamento indefinido.
+Um grupo de agendamento é associado a uma instância específica do Agendador. Você deve garantir que todas as referências ao grupo de agendamento sejam liberadas antes que todas as referências ao agendador sejam liberadas, pois o último pode resultar na destruição do Agendador. Caso contrário, resulta em um comportamento indefinido.
 
-##  <a name="dtor"></a> ~ScheduleGroup
+## <a name="dtor"></a>~ Scheduler
 
-```
+```cpp
 virtual ~ScheduleGroup();
 ```
 
-##  <a name="scheduletask"></a> ScheduleTask
+## <a name="scheduletask"></a>ScheduleTask
 
-Agenda uma tarefa leve no grupo.
+Agenda uma tarefa leve dentro do grupo de agendamento.
 
-```
+```cpp
 virtual void ScheduleTask(
     TaskProc _Proc,
     _Inout_opt_ void* _Data) = 0;
@@ -140,18 +140,18 @@ virtual void ScheduleTask(
 ### <a name="parameters"></a>Parâmetros
 
 *_Proc*<br/>
-Um ponteiro para a função a ser executada para executar o corpo da tarefa leve.
+Um ponteiro para a função a ser executada para executar o corpo da tarefa de peso leve.
 
 *_Data*<br/>
-Um ponteiro nulo para os dados que serão passados como um parâmetro ao corpo da tarefa.
+Um ponteiro void para os dados que serão passados como um parâmetro para o corpo da tarefa.
 
 ### <a name="remarks"></a>Comentários
 
-Chamar o `ScheduleTask` implicitamente o método coloca uma contagem de referência no grupo de agenda que é removido pelo tempo de execução em um momento apropriado depois que a tarefa será executada.
+Chamar o método `ScheduleTask` coloca implicitamente uma contagem de referência no grupo de agendamento que é removido pelo tempo de execução em um momento apropriado após a execução da tarefa.
 
 ## <a name="see-also"></a>Consulte também
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Classe CurrentScheduler](currentscheduler-class.md)<br/>
 [Classe Scheduler](scheduler-class.md)<br/>
-[Agendador de tarefas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
+[Agendador de Tarefas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

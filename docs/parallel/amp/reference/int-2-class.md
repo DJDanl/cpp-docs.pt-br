@@ -28,40 +28,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::operator+=
 - amp_short_vectors/Concurrency::graphics::int_2::operator--
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-ms.openlocfilehash: 3c5aefbfd1a4b06274fac0f56c1e1e45ef9dc5bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 000bda3a6ecc5b1ebf9be4e07ce8d703b6cd9194
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180252"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126637"
 ---
-# <a name="int2-class"></a>Classe int_2
+# <a name="int_2-class"></a>Classe int_2
 
-Representa um vetor curto de dois inteiros.
+Representa um pequeno vetor de dois inteiros.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class int_2;
 ```
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs públicos
+### <a name="public-typedefs"></a>Typedefs Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[Construtor int_2](#ctor)|Sobrecarregado. Padrão construtor, inicializa todos os elementos com 0.|
+|[Construtor de int_2](#ctor)|Sobrecarregado. O construtor padrão inicializa todos os elementos com 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |int_2::get_x||
 |int_2::get_xy||
@@ -78,7 +78,7 @@ class int_2;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |int_2::operator-||
 |int_2::operator--||
@@ -91,20 +91,20 @@ class int_2;
 |int_2::operator~||
 |int_2::operator++||
 |int_2::operator+=||
-|int_2::operator<\<=||
+|int_2:: Operator <\<=||
 |int_2::operator=||
 |int_2::operator-=||
 |int_2::operator>>=||
 
-### <a name="public-constants"></a>Constantes públicas
+### <a name="public-constants"></a>Constantes Públicas
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[tamanho constante](#int_2__size)||
+|[Constante de tamanho](#int_2__size)||
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |int_2::g||
 |int_2::gr||
@@ -119,17 +119,17 @@ class int_2;
 
 `int_2`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Simultaneidade:: Graphics
 
-##  <a name="ctor"></a> int_2
+## <a name="ctor"></a>int_2
 
-Padrão construtor, inicializa todos os elementos com 0.
+O construtor padrão inicializa todos os elementos com 0.
 
-```
+```cpp
 int_2() restrict(amp,
     cpu);
 
@@ -176,14 +176,14 @@ O valor para inicializar o elemento 0.
 O valor para inicializar o elemento 1.
 
 *_V*<br/>
-O valor para a inicialização.
+O valor para inicialização.
 
 *_Other*<br/>
 O objeto usado para inicializar.
 
-##  <a name="int_2__size"></a> size
+## <a name="int_2__size"></a>tamanho
 
-```
+```cpp
 static const int size = 2;
 ```
 

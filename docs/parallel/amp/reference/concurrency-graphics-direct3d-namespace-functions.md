@@ -1,30 +1,30 @@
 ---
-title: Funções do namespace Concurrency::Graphics::Direct3D
+title: Funções do namespace Concurrency::graphics::direct3d
 ms.date: 11/04/2016
 f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::get_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-ms.openlocfilehash: 18fb409b033ea14c3a140ea6600fc43cf3a8d603
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 665732700ee6b85425f332a0eb96a5b75864a74e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405541"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126962"
 ---
-# <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Funções do namespace Concurrency::Graphics::Direct3D
+# <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Funções do namespace Concurrency::graphics::direct3d
 
 ||||
 |-|-|-|
 |[get_sampler](#get_sampler)|[get_texture](#get_texture)|[make_sampler](#make_sampler)|
 |[make_texture](#make_texture)|[msad4](#msad4)|
 
-##  <a name="get_sampler"></a>  get_sampler
+## <a name="get_sampler"></a>get_sampler
 
-Obter a interface de estado de amostra D3D no Acelerador determinada exibição que representa o objeto de demonstrador especificado.
+Obtenha a interface de estado de amostra do D3D no modo de exibição de acelerador fornecido que representa o objeto de amostra especificado.
 
-```
+```cpp
 IUnknown* get_sampler(
     const Concurrency::accelerator_view& _Av,
     const sampler& _Sampler) restrict(amp);
@@ -33,20 +33,20 @@ IUnknown* get_sampler(
 ### <a name="parameters"></a>Parâmetros
 
 *_Av*<br/>
-Uma exibição do acelerador D3D em que o estado de amostra D3D deverá ser criado.
+Uma exibição do acelerador D3D na qual o estado de amostra do D3D deve ser criado.
 
 *_Sampler*<br/>
 Um objeto de amostra para o qual a interface de estado de amostra D3D subjacente é criada.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O ponteiro de interface IUnknown correspondente para o estado de demonstrador de D3D que representa a amostra determinada.
+O ponteiro de interface IUnknown correspondente ao estado de amostra do D3D que representa a amostra fornecida.
 
-##  <a name="get_texture"></a>  get_texture
+## <a name="get_texture"></a>get_texture
 
-Obtém a interface de textura do Direct3D subjacente especificado [textura](texture-class.md) objeto.
+Obtém a interface de textura do Direct3D subjacente ao objeto de [textura](texture-class.md) especificado.
 
-```
+```cpp
 template<
     typename value_type,
     int _Rank
@@ -78,34 +78,34 @@ O tipo de elemento da textura.
 A classificação da textura.
 
 *_Texture*<br/>
-Uma textura ou o modo de exibição de textura associado ao accelerator_view para o qual a interface de textura do Direct3D subjacente é retornada.
+Uma exibição de textura ou textura associada ao accelerator_view para o qual a interface de textura do Direct3D subjacente é retornada.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O ponteiro de interface IUnknown correspondente a textura Direct3D subjacente à textura.
+O ponteiro de interface IUnknown que corresponde à textura do Direct3D subjacente à textura.
 
-##  <a name="make_sampler"></a>  make_sampler
+## <a name="make_sampler"></a>make_sampler
 
-Crie uma amostra de um ponteiro de interface de estado de amostra D3D.
+Crie uma amostra de um ponteiro de interface de estado de amostra do D3D.
 
-```
+```cpp
 sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *_D3D_sampler*<br/>
-Ponteiro de interface IUnknown o estado de amostra de D3D para criar a amostra do.
+Ponteiro de interface IUnknown do estado de amostra de D3D do qual criar a amostra.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma amostra representa o estado de amostra D3D fornecido.
+Um amostra representa o estado de amostra do D3D fornecido.
 
-##  <a name="make_texture"></a>  make_texture
+## <a name="make_texture"></a>make_texture
 
-Cria uma [textura](texture-class.md) objeto usando os parâmetros especificados.
+Cria um objeto de [textura](texture-class.md) usando os parâmetros especificados.
 
-```
+```cpp
 template<
     typename value_type,
     int _Rank
@@ -125,23 +125,23 @@ O tipo dos elementos na textura.
 A classificação da textura.
 
 *_Av*<br/>
-Uma exibição do acelerador D3D em que a textura deverá ser criado.
+Uma exibição de acelerador de D3D na qual a textura deve ser criada.
 
 *_D3D_texture*<br/>
-Ponteiro de interface IUnknown de textura para criar a textura do D3D.
+Ponteiro de interface IUnknown da textura D3D da qual criar a textura.
 
 *_View_format*<br/>
-O formato DXGI a ser usado para visualizações criadas a partir dessa textura. Passe DXGI_FORMAT_UNKNOWN (o padrão) para derivar o formato do formato subjacente de _D3D_texture e o value_type desse modelo. O formato fornecido deve ser compatível com o formato subjacente de _D3D_texture.
+O formato DXGI a ser usado para exibições criadas com base nessa textura. Passe DXGI_FORMAT_UNKNOWN (o padrão) para derivar o formato do formato subjacente de _D3D_texture e o value_type deste modelo. O formato fornecido deve ser compatível com o formato subjacente de _D3D_texture.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma textura usando a textura D3D fornecida.
+Uma textura que usa a textura D3D fornecida.
 
-##  <a name="msad4"></a>  msad4
+## <a name="msad4"></a>msad4
 
-Compara um valor de referência de 4 bytes e um valor de origem de 8 bytes e acumula um vetor de 4 somas. Cada soma corresponde à soma mascarada das diferenças absolutas de alinhamentos diferentes de bytes entre o valor de referência e o valor de origem.
+Compara um valor de referência de 4 bytes e um valor de origem de 8 bytes e acumula um vetor de quatro somas. Cada soma corresponde à soma mascarada de diferenças absolutas de diferentes alinhamentos de bytes entre o valor de referência e o valor de origem.
 
-```
+```cpp
 inline uint4 msad4(
     uint _Reference,
     uint2 _Source,
@@ -151,23 +151,23 @@ inline uint4 msad4(
 ### <a name="parameters"></a>Parâmetros
 
 *_Reference*<br/>
-A matriz de referência de 4 bytes em um valor de uint
+A matriz de referência de 4 bytes em um valor UINT
 
 *_Source*<br/>
-A matriz de origem de 8 bytes em um vetor de dois valores de uint.
+A matriz de origem de 8 bytes em um vetor de dois valores uint.
 
 *_Accum*<br/>
-Um vetor de 4 valores a serem adicionados à soma mascarada das diferenças absolutas de alinhamentos diferentes de bytes entre o valor de referência e o valor de origem.
+Um vetor de quatro valores a ser adicionado à soma mascarada de diferenças absolutas dos diferentes alinhamentos de bytes entre o valor de referência e o valor de origem.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna um vetor de 4 somas. Cada soma corresponde à soma mascarada das diferenças absolutas de alinhamentos diferentes de bytes entre o valor de referência e o valor de origem.
+Retorna um vetor de quatro somas. Cada soma corresponde à soma mascarada de diferenças absolutas de diferentes alinhamentos de bytes entre o valor de referência e o valor de origem.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amp_graphics. h
 
-**Namespace:** Concurrency::graphics::direct3d
+**Namespace:** Concurrency:: Graphics::d irect3d
 
 ## <a name="see-also"></a>Consulte também
 

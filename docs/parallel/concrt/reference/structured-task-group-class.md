@@ -13,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-ms.openlocfilehash: 27610539ab500a113ea41021744c55425fe9cd9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93dd79b755f79dcb4857c1b1c4856362b0bd45dd
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337187"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142628"
 ---
-# <a name="structuredtaskgroup-class"></a>Classe structured_task_group
+# <a name="structured_task_group-class"></a>Classe structured_task_group
 
-O `structured_task_group` classe representa uma coleção altamente estruturada de trabalho em paralelo. Você pode colocar na fila de tarefas individuais em paralelo para uma `structured_task_group` usando `task_handle` objetos e aguarde até que elas sejam concluídas ou cancele o grupo de tarefas antes que eles concluírem a execução, qual anulará todas as tarefas que não começaram a execução.
+A classe `structured_task_group` representa uma coleção altamente estruturada de trabalho paralelo. Você pode colocar tarefas paralelas individuais em uma `structured_task_group` usando `task_handle` objetos e esperar que elas sejam concluídas ou cancelar o grupo de tarefas antes de concluir a execução, o que anulará todas as tarefas que não começaram a execução.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class structured_task_group;
 ```
 
@@ -34,32 +34,32 @@ class structured_task_group;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[structured_task_group](#ctor)|Sobrecarregado. Constrói um novo objeto `structured_task_group`.|
-|[~ structured_task_group destruidor](#dtor)|Destrói um objeto `structured_task_group`. Você deve chamar o `wait` ou `run_and_wait` método no objeto antes de executar o destruidor, a menos que o destruidor está sendo executado como resultado de desenrolamento de pilha devido a uma exceção.|
+|[~ structured_task_group destruidor](#dtor)|Destrói um objeto `structured_task_group`. Você deve chamar o método `wait` ou `run_and_wait` no objeto antes da execução do destruidor, a menos que o destruidor esteja sendo executado como resultado do desenrolamento da pilha devido a uma exceção.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[cancel](#cancel)|Se esforça para tentativa de cancelar a subárvore enraizada nesse grupo de tarefas de trabalho. Cada tarefa agendada no grupo de tarefas será obter cancelada transitivamente se possível.|
-|[is_canceling](#is_canceling)|Informa ao chamador se o grupo de tarefas está atualmente em meio a um cancelamento. Isso não indica necessariamente que o `cancel` método foi chamado em de `structured_task_group` objeto (embora, certamente qualifica esse método para retornar **verdadeiro**). Ele pode ser o caso que a `structured_task_group` objeto está em execução em linha e um grupo de tarefas para cima na árvore de trabalho foi cancelado. Em casos como esses onde o tempo de execução pode determinar antecipadamente que cancelamento fluirá por meio deste `structured_task_group` objeto, **verdadeiro** também será retornado.|
-|[run](#run)|Sobrecarregado. Agenda uma tarefa no `structured_task_group` objeto. O chamador gerencia a vida útil do `task_handle` objeto passado a `_Task_handle` parâmetro. A versão que usa o parâmetro `_Placement` faz com que a tarefa ser mais adequado para a execução no local especificado por esse parâmetro.|
-|[run_and_wait](#run_and_wait)|Sobrecarregado. Agenda uma tarefa para ser executado embutido no contexto de chamada com o auxílio do `structured_task_group` objeto para suporte ao cancelamento completa. Se um `task_handle` objeto é passado como um parâmetro para `run_and_wait`, o chamador é responsável por gerenciar a vida útil do `task_handle` objeto. A função, em seguida, aguarda até que todo o trabalho no `structured_task_group` objeto foi concluída ou cancelado.|
-|[wait](#wait)|Aguarda até que todo o trabalho no `structured_task_group` foi concluída ou é cancelado.|
+|[cancel](#cancel)|Faz com que seja possível tentar cancelar a subárvore de trabalho com raiz nesse grupo de tarefas. Cada tarefa agendada no grupo de tarefas será cancelada transitivamente, se possível.|
+|[is_canceling](#is_canceling)|Informa ao chamador se o grupo de tarefas está ou não no meio de um cancelamento. Isso não indica necessariamente que o método `cancel` foi chamado no objeto `structured_task_group` (embora, certamente, qualifique esse método para retornar **true**). Pode ser o caso em que o objeto `structured_task_group` está sendo executado em linha e um grupo de tarefas mais adiante na árvore de trabalho foi cancelado. Em casos como esses, onde o tempo de execução pode determinar antecipadamente que o cancelamento fluirá por esse `structured_task_group` objeto, **verdadeiro** também será retornado.|
+|[run](#run)|Sobrecarregado. Agenda uma tarefa no objeto `structured_task_group`. O chamador gerencia o tempo de vida do objeto de `task_handle` passado no parâmetro `_Task_handle`. A versão que usa o parâmetro `_Placement` faz com que a tarefa seja ajustada em direção à execução no local especificado por esse parâmetro.|
+|[run_and_wait](#run_and_wait)|Sobrecarregado. Agenda uma tarefa a ser executada embutida no contexto de chamada com a assistência do objeto `structured_task_group` para obter suporte completo ao cancelamento. Se um objeto `task_handle` for passado como um parâmetro para `run_and_wait`, o chamador será responsável por gerenciar o tempo de vida do objeto `task_handle`. A função aguarda até que todo o trabalho no objeto de `structured_task_group` tenha sido concluído ou cancelado.|
+|[esperado](#wait)|Aguarda até que todo o trabalho na `structured_task_group` tenha sido concluído ou cancelado.|
 
 ## <a name="remarks"></a>Comentários
 
-Há um número de restrições severas colocado sobre o uso de um `structured_task_group` objeto para obter um melhor desempenho:
+Há várias restrições severas colocadas no uso de um objeto `structured_task_group` para obter o desempenho:
 
-- Um único `structured_task_group` objeto não pode ser usado por vários threads. Todas as operações em um `structured_task_group` objeto deve ser executado pelo thread que criou o objeto. As duas exceções a essa regra são as funções de membro `cancel` e `is_canceling`. O objeto não pode estar na lista de captura de uma expressão lambda e ser usado dentro de uma tarefa, a menos que a tarefa estiver usando uma das operações de cancelamento.
+- Um único objeto `structured_task_group` não pode ser usado por vários threads. Todas as operações em um objeto `structured_task_group` devem ser executadas pelo thread que criou o objeto. As duas exceções a essa regra são as funções de membro `cancel` e `is_canceling`. O objeto pode não estar na lista de captura de uma expressão lambda e ser usado dentro de uma tarefa, a menos que a tarefa esteja usando uma das operações de cancelamento.
 
-- Todas as tarefas agendadas para um `structured_task_group` objeto são agendados por meio do uso de `task_handle` objetos que é necessário gerenciar explicitamente a vida útil do.
+- Todas as tarefas agendadas para um objeto de `structured_task_group` são agendadas por meio do uso de `task_handle` objetos que você deve gerenciar explicitamente o tempo de vida de.
 
-- Vários grupos só podem ser usados na ordem absolutamente aninhado. Se duas `structured_task_group` objetos são declarados, o segundo é que está sendo declarado (aquele interna) deve destruir antes de qualquer método, exceto `cancel` ou `is_canceling` é chamado no primeiro (aquele externa). Essa condição se aplica no caso de simplesmente declarar vários `structured_task_group` objetos dentro os escopos aninhados funcionalmente ou mesmos, bem como no caso de uma tarefa que foi colocado na fila para o `structured_task_group` por meio de `run` ou `run_and_wait` métodos.
+- Vários grupos só podem ser usados em ordem absolutamente aninhada. Se dois objetos `structured_task_group` forem declarados, o segundo que está sendo declarado (o interno) deverá ser destruído antes de qualquer método, exceto `cancel` ou `is_canceling` for chamado na primeira (a externa). Essa condição se aplica em ambos os casos de simplesmente declarar vários objetos de `structured_task_group` dentro dos mesmos ou de escopos aninhados com funcionalidade, bem como o caso de uma tarefa que foi enfileirada para o `structured_task_group` por meio dos métodos `run` ou `run_and_wait`.
 
-- Ao contrário de gerais `task_group` classe, todos os estados no `structured_task_group` classe são finais. Depois de você ter tarefas em fila para o grupo e espera por eles devem concluir, você não poderá usar o mesmo grupo novamente.
+- Ao contrário da classe de `task_group` geral, todos os Estados na classe `structured_task_group` são finais. Depois de colocar as tarefas em fila no grupo e aguardar sua conclusão, você não poderá usar o mesmo grupo novamente.
 
 Para obter mais informações, consulte [paralelismo de tarefas](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
@@ -67,17 +67,17 @@ Para obter mais informações, consulte [paralelismo de tarefas](../../../parall
 
 `structured_task_group`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** ppl.h
+**Cabeçalho:** ppl. h
 
 **Namespace:** simultaneidade
 
-##  <a name="cancel"></a> Cancelar
+## <a name="cancel"></a>Cancelar
 
-Se esforça para tentativa de cancelar a subárvore enraizada nesse grupo de tarefas de trabalho. Cada tarefa agendada no grupo de tarefas será obter cancelada transitivamente se possível.
+Faz com que seja possível tentar cancelar a subárvore de trabalho com raiz nesse grupo de tarefas. Cada tarefa agendada no grupo de tarefas será cancelada transitivamente, se possível.
 
-```
+```cpp
 void cancel();
 ```
 
@@ -85,27 +85,27 @@ void cancel();
 
 Para obter mais informações, consulte [cancelamento](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
-##  <a name="is_canceling"></a> is_canceling
+## <a name="is_canceling"></a>is_canceling
 
-Informa ao chamador se o grupo de tarefas está atualmente em meio a um cancelamento. Isso não indica necessariamente que o `cancel` método foi chamado em de `structured_task_group` objeto (embora, certamente qualifica esse método para retornar **verdadeiro**). Ele pode ser o caso que a `structured_task_group` objeto está em execução em linha e um grupo de tarefas para cima na árvore de trabalho foi cancelado. Em casos como esses onde o tempo de execução pode determinar antecipadamente que cancelamento fluirá por meio deste `structured_task_group` objeto, **verdadeiro** também será retornado.
+Informa ao chamador se o grupo de tarefas está ou não no meio de um cancelamento. Isso não indica necessariamente que o método `cancel` foi chamado no objeto `structured_task_group` (embora, certamente, qualifique esse método para retornar **true**). Pode ser o caso em que o objeto `structured_task_group` está sendo executado em linha e um grupo de tarefas mais adiante na árvore de trabalho foi cancelado. Em casos como esses, onde o tempo de execução pode determinar antecipadamente que o cancelamento fluirá por esse `structured_task_group` objeto, **verdadeiro** também será retornado.
 
-```
+```cpp
 bool is_canceling();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Indica se o `structured_task_group` objeto está no meio de um cancelamento (ou é garantido que seja em breve).
+Uma indicação de se o objeto de `structured_task_group` está no meio de um cancelamento (ou se é garantido que esteja em breve).
 
 ### <a name="remarks"></a>Comentários
 
 Para obter mais informações, consulte [cancelamento](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
-##  <a name="run"></a> run
+## <a name="run"></a>funcionam
 
-Agenda uma tarefa no `structured_task_group` objeto. O chamador gerencia a vida útil do `task_handle` objeto passado a `_Task_handle` parâmetro. A versão que usa o parâmetro `_Placement` faz com que a tarefa ser mais adequado para a execução no local especificado por esse parâmetro.
+Agenda uma tarefa no objeto `structured_task_group`. O chamador gerencia o tempo de vida do objeto de `task_handle` passado no parâmetro `_Task_handle`. A versão que usa o parâmetro `_Placement` faz com que a tarefa seja ajustada em direção à execução no local especificado por esse parâmetro.
 
-```
+```cpp
 template<class _Function>
 void run(
     task_handle<_Function>& _Task_handle);
@@ -119,27 +119,27 @@ void run(
 ### <a name="parameters"></a>Parâmetros
 
 *_Function*<br/>
-O tipo do objeto de função que será chamado para executar o corpo do identificador de tarefa.
+O tipo do objeto de função que será invocado para executar o corpo do identificador de tarefa.
 
 *_Task_handle*<br/>
-Um identificador para o trabalho agendado. Observe que o chamador tem responsabilidade pelo tempo de vida deste objeto. O tempo de execução continuará esperá-lo útil até que o `wait` ou `run_and_wait` método foi chamado neste `structured_task_group` objeto.
+Um identificador para o trabalho que está sendo agendado. Observe que o chamador tem responsabilidade pelo tempo de vida desse objeto. O tempo de execução continuará esperando que ele fique ativo até que o método `wait` ou `run_and_wait` tenha sido chamado nesse objeto `structured_task_group`.
 
 *_Placement*<br/>
-Uma referência para o local em que a tarefa representada pelo `_Task_handle` parâmetro deve ser executada.
+Uma referência ao local onde a tarefa representada pelo parâmetro `_Task_handle` deve ser executada.
 
 ### <a name="remarks"></a>Comentários
 
-O tempo de execução cria uma cópia da função de trabalho que você passa para esse método. As alterações de estado que ocorrem em um objeto de função que você passa para esse método não aparecerão na sua cópia desse objeto de função.
+O tempo de execução cria uma cópia da função de trabalho que você passa para esse método. As alterações de estado que ocorrem em um objeto de função que você passa para esse método não aparecerão na sua cópia do objeto de função.
 
-Se o `structured_task_group` destructs como resultado de desenrolamento de uma exceção de pilha, não é necessário garantir que uma chamada foi feita para o `wait` ou `run_and_wait` método. Nesse caso, o destruidor adequadamente cancelará e aguarde até que a tarefa representada pelo `_Task_handle` parâmetro para ser concluída.
+Se o `structured_task_group` for destruido como resultado do desenrolamento da pilha de uma exceção, você não precisará garantir que uma chamada tenha sido feita para o método `wait` ou `run_and_wait`. Nesse caso, o destruidor irá cancelar adequadamente e aguardar a tarefa representada pelo parâmetro `_Task_handle` a ser concluída.
 
-Gera uma [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) exceção se a tarefa manipular determinado pelo `_Task_handle` parâmetro já foi agendado para um objeto de grupo de tarefas por meio do `run` método e não houve nenhuma chamada intermediária para tanto a `wait` ou `run_and_wait` método nesse grupo de tarefas.
+Gera uma exceção [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) se o identificador de tarefa fornecido pelo parâmetro `_Task_handle` já tiver sido agendado em um objeto de grupo de tarefas por meio do método `run` e não houver nenhuma chamada intermediária para o método `wait` ou `run_and_wait` nesse grupo de tarefas.
 
-##  <a name="run_and_wait"></a> run_and_wait
+## <a name="run_and_wait"></a>run_and_wait
 
-Agenda uma tarefa para ser executado embutido no contexto de chamada com o auxílio do `structured_task_group` objeto para suporte ao cancelamento completa. Se um `task_handle` objeto é passado como um parâmetro para `run_and_wait`, o chamador é responsável por gerenciar a vida útil do `task_handle` objeto. A função, em seguida, aguarda até que todo o trabalho no `structured_task_group` objeto foi concluída ou cancelado.
+Agenda uma tarefa a ser executada embutida no contexto de chamada com a assistência do objeto `structured_task_group` para obter suporte completo ao cancelamento. Se um objeto `task_handle` for passado como um parâmetro para `run_and_wait`, o chamador será responsável por gerenciar o tempo de vida do objeto `task_handle`. A função aguarda até que todo o trabalho no objeto de `structured_task_group` tenha sido concluído ou cancelado.
 
-```
+```cpp
 template<class _Function>
 task_group_status run_and_wait(task_handle<_Function>& _Task_handle);
 
@@ -150,33 +150,33 @@ task_group_status run_and_wait(const _Function& _Func);
 ### <a name="parameters"></a>Parâmetros
 
 *_Function*<br/>
-O tipo do objeto de função que será chamado para executar a tarefa.
+O tipo do objeto de função que será invocado para executar a tarefa.
 
 *_Task_handle*<br/>
-Um identificador para a tarefa que será executada embutida no contexto de chamada. Observe que o chamador tem responsabilidade pelo tempo de vida deste objeto. O tempo de execução continuará esperar que ele live até o `run_and_wait` método conclui a execução.
+Um identificador para a tarefa que será executada embutida no contexto de chamada. Observe que o chamador tem responsabilidade pelo tempo de vida desse objeto. O tempo de execução continuará esperando que ele fique ativo até que o método `run_and_wait` conclua a execução.
 
 *_Func*<br/>
 Uma função que será chamada para invocar o corpo do trabalho. Isso pode ser um lambda ou outro objeto que dá suporte a uma versão do operador de chamada de função com a assinatura `void operator()()`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma indicação de se a espera foi atendida ou o grupo de tarefas foi cancelado, devido a uma operação de cancelamento explícito ou uma exceção é lançada de uma das suas tarefas. Para obter mais informações, consulte [task_group_status](concurrency-namespace-enums.md)
+Uma indicação de se a espera foi satisfeita ou se o grupo de tarefas foi cancelado, devido a uma operação explícita de cancelamento ou à geração de uma exceção de uma de suas tarefas. Para obter mais informações, consulte [task_group_status](concurrency-namespace-enums.md)
 
 ### <a name="remarks"></a>Comentários
 
-Observe que uma ou mais das tarefas agendadas para isso `structured_task_group` objeto pode ser executada embutida no contexto de chamada.
+Observe que uma ou mais tarefas agendadas para esse objeto de `structured_task_group` podem ser executadas em linha no contexto de chamada.
 
-Se uma ou mais das tarefas agendadas para isso `structured_task_group` objeto gerou uma exceção, o tempo de execução selecionará um tal exceção de sua escolha e propagá-los de fora a chamada para o `run_and_wait` método.
+Se uma ou mais tarefas agendadas para este `structured_task_group` objeto gerar uma exceção, o tempo de execução selecionará uma exceção de sua escolha e a propagará da chamada para o método `run_and_wait`.
 
-Depois que essa função retornar, o `structured_task_group` objeto é considerado em um estado final e não deve ser usado. Observe que utilização após o `run_and_wait` método retorna resultará em um comportamento indefinido.
+Depois que essa função retorna, o objeto `structured_task_group` é considerado em um estado final e não deve ser usado. Observe que a utilização após o `run_and_wait` método retorna resultará em um comportamento indefinido.
 
-No caminho de execução não excepcional, você tem uma exigência para chamar esse método qualquer ou o `wait` método antes do destruidor do `structured_task_group` executa.
+No caminho não excepcional da execução, você tem um mandato para chamar esse método ou o método `wait` antes de o destruidor do `structured_task_group` ser executado.
 
-##  <a name="ctor"></a> structured_task_group
+## <a name="ctor"></a>structured_task_group
 
 Constrói um novo objeto `structured_task_group`.
 
-```
+```cpp
 structured_task_group();
 
 structured_task_group(cancellation_token _CancellationToken);
@@ -185,45 +185,45 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="parameters"></a>Parâmetros
 
 *_CancellationToken*<br/>
-Um token de cancelamento para associar a esse grupo de tarefas estruturados. O grupo de tarefas estruturados será cancelado quando o token é cancelado.
+Um token de cancelamento a ser associado a esse grupo de tarefas estruturado. O grupo de tarefas estruturado será cancelado quando o token for cancelado.
 
 ### <a name="remarks"></a>Comentários
 
-O construtor que usa um token de cancelamento cria um `structured_task_group` que serão canceladas quando o código-fonte associado ao token é cancelado. Fornecer um token de cancelamento explícito também isola a esse grupo de tarefas estruturados de participar de um cancelamento implícito de um grupo pai, com um token diferente ou nenhum.
+O construtor que usa um token de cancelamento cria um `structured_task_group` que será cancelado quando a origem associada ao token for cancelada. Fornecer um token de cancelamento explícito também isola esse grupo de tarefas estruturado de participar de um cancelamento implícito de um grupo pai com um token diferente ou nenhum token.
 
-##  <a name="dtor"></a> ~structured_task_group
+## <a name="dtor"></a>~ structured_task_group
 
-Destrói um objeto `structured_task_group`. Você deve chamar o `wait` ou `run_and_wait` método no objeto antes de executar o destruidor, a menos que o destruidor está sendo executado como resultado de desenrolamento de pilha devido a uma exceção.
+Destrói um objeto `structured_task_group`. Você deve chamar o método `wait` ou `run_and_wait` no objeto antes da execução do destruidor, a menos que o destruidor esteja sendo executado como resultado do desenrolamento da pilha devido a uma exceção.
 
-```
+```cpp
 ~structured_task_group();
 ```
 
 ### <a name="remarks"></a>Comentários
 
-Se o destruidor for executado como o resultado da execução normal (por exemplo, não desenrolamento de pilha devido a uma exceção) e nem o `wait` nem `run_and_wait` métodos tiveram sido chamados, o destruidor pode lançar uma [missing_wait](missing-wait-class.md) exceção.
+Se o destruidor for executado como resultado da execução normal (por exemplo, sem desenrolamento de pilha devido a uma exceção) e nem os métodos `wait` nem `run_and_wait` tiverem sido chamados, o destruidor poderá lançar uma exceção [missing_wait](missing-wait-class.md) .
 
-##  <a name="wait"></a> Aguarde
+## <a name="wait"></a>esperado
 
-Aguarda até que todo o trabalho no `structured_task_group` foi concluída ou é cancelado.
+Aguarda até que todo o trabalho na `structured_task_group` tenha sido concluído ou cancelado.
 
-```
+```cpp
 task_group_status wait();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma indicação de se a espera foi atendida ou o grupo de tarefas foi cancelado, devido a uma operação de cancelamento explícito ou uma exceção é lançada de uma das suas tarefas. Para obter mais informações, consulte [task_group_status](concurrency-namespace-enums.md)
+Uma indicação de se a espera foi satisfeita ou se o grupo de tarefas foi cancelado, devido a uma operação explícita de cancelamento ou à geração de uma exceção de uma de suas tarefas. Para obter mais informações, consulte [task_group_status](concurrency-namespace-enums.md)
 
 ### <a name="remarks"></a>Comentários
 
-Observe que uma ou mais das tarefas agendadas para isso `structured_task_group` objeto pode ser executada embutida no contexto de chamada.
+Observe que uma ou mais tarefas agendadas para esse objeto de `structured_task_group` podem ser executadas em linha no contexto de chamada.
 
-Se uma ou mais das tarefas agendadas para isso `structured_task_group` objeto gerou uma exceção, o tempo de execução selecionará um tal exceção de sua escolha e propagá-los de fora a chamada para o `wait` método.
+Se uma ou mais tarefas agendadas para este `structured_task_group` objeto gerar uma exceção, o tempo de execução selecionará uma exceção de sua escolha e a propagará da chamada para o método `wait`.
 
-Depois que essa função retornar, o `structured_task_group` objeto é considerado em um estado final e não deve ser usado. Observe que utilização após o `wait` método retorna resultará em um comportamento indefinido.
+Depois que essa função retorna, o objeto `structured_task_group` é considerado em um estado final e não deve ser usado. Observe que a utilização após o `wait` método retorna resultará em um comportamento indefinido.
 
-No caminho de execução não excepcional, você tem uma exigência para chamar esse método qualquer ou o `run_and_wait` método antes do destruidor do `structured_task_group` executa.
+No caminho não excepcional da execução, você tem um mandato para chamar esse método ou o método `run_and_wait` antes de o destruidor do `structured_task_group` ser executado.
 
 ## <a name="see-also"></a>Consulte também
 

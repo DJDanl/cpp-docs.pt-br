@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - context_self_unblock class
 ms.assetid: 9601cd28-4f40-4c2e-89ab-747068956331
-ms.openlocfilehash: 900dc68eac4441bd1db3818d3c1f30698b80a6e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 883d5630251a6ea13afba1164f221a0da1773c17
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296170"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143108"
 ---
-# <a name="contextselfunblock-class"></a>Classe context_self_unblock
+# <a name="context_self_unblock-class"></a>Classe context_self_unblock
 
-Esta classe descreve uma exceção gerada quando o `Unblock` método de um `Context` objeto é chamado no mesmo contexto. Isso poderia indicar uma tentativa por um determinado contexto para desbloquear em si.
+Essa classe descreve uma exceção gerada quando o método de `Unblock` de um objeto de `Context` é chamado do mesmo contexto. Isso indica uma tentativa por um determinado contexto para desbloquear a si mesmo.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class context_self_unblock : public std::exception;
 ```
 
@@ -29,7 +29,7 @@ class context_self_unblock : public std::exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[context_self_unblock](#ctor)|Sobrecarregado. Constrói um objeto `context_self_unblock`.|
 
@@ -39,17 +39,17 @@ class context_self_unblock : public std::exception;
 
 `context_self_unblock`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** concrt. h
+**Cabeçalho:** ConcRT. h
 
 **Namespace:** simultaneidade
 
-##  <a name="ctor"></a> context_self_unblock
+## <a name="ctor"></a>context_self_unblock
 
 Constrói um objeto `context_self_unblock`.
 
-```
+```cpp
 explicit _CRTIMP context_self_unblock(_In_z_ const char* _Message) throw();
 
 context_self_unblock() throw();

@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-ms.openlocfilehash: a977957fcb28a7f4c6c849c954026e2bda4e728c
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: ef7ded0bf925d3430b70064c4979b75e08f9cf45
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975151"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127693"
 ---
-# <a name="uninitializedobject-class"></a>Classe uninitialized_object
+# <a name="uninitialized_object-class"></a>Classe uninitialized_object
 
 A exceção que é lançada quando um objeto não inicializado é usado.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class uninitialized_object : public runtime_exception;
 ```
 
@@ -29,7 +29,7 @@ class uninitialized_object : public runtime_exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[Construtor de uninitialized_object](#uninitialized_object)|Inicializa uma nova instância da classe `uninitialized_object`.|
 
@@ -41,19 +41,19 @@ class uninitialized_object : public runtime_exception;
 
 `uninitialized_object`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amprt. h
 
-**Namespace:** Concorrência
+**Namespace:** Simultaneidade
 
-## <a name="uninitialized_object"></a> uninitialized_object
+## <a name="uninitialized_object"></a>uninitialized_object
 
-Constrói uma nova instância do `uninitialized_object` exceção.
+Constrói uma nova instância da exceção `uninitialized_object`.
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 explicit uninitialized_object(
     const char * _Message ) throw();
 
@@ -65,9 +65,9 @@ uninitialized_object() throw();
 *_Message*<br/>
 Uma descrição do erro.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O `uninitialized_object` objeto de exceção.
+O objeto de exceção `uninitialized_object`.
 
 ## <a name="see-also"></a>Consulte também
 

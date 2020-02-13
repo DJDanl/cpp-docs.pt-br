@@ -7,20 +7,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: c407c42e5c6a7035e911218ecb41c2da62967787
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7531a57dddcc85392380029afc6edd577bbc5cf3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351138"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126364"
 ---
-# <a name="shortvectortraits-structure"></a>Estrutura short_vector_traits
+# <a name="short_vector_traits-structure"></a>Estrutura short_vector_traits
 
-short_vector_traits permite a recuperação do comprimento do vetor subjacente e um tipo escalar de um tipo de vetor curto ou um tipo escalar
+short_vector_traits permite a recuperação do comprimento de vetor subjacente e do tipo escalar de um tipo de vetor curto ou um tipo escalar
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 template<
     typename T
 >
@@ -75,49 +75,49 @@ template<>
 struct short_vector_traits<double_4>;
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
 `T`
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs públicos
+### <a name="public-typedefs"></a>Typedefs Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[short_vector_traits:: short_vector_traits construtor](#ctor)||
+|[Construtor short_vector_traits:: short_vector_traits](#ctor)||
 
-### <a name="public-constants"></a>Constantes públicas
+### <a name="public-constants"></a>Constantes Públicas
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[short_vector_traits:: Size constante](#size)||
+|[Constante short_vector_traits:: Size](#size)||
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `short_vector_traits`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Simultaneidade:: Graphics
 
-##  <a name="ctor"></a>  short_vector_traits:: short_vector_traits construtor
+## <a name="ctor"></a>Construtor short_vector_traits:: short_vector_traits
 
-```
+```cpp
 short_vector_traits();
 ```
 
-##  <a name="size"></a>  short_vector_traits:: Size constante
+## <a name="size"></a>Constante short_vector_traits:: Size
 
-```
+```cpp
 static int const size = 1;
 ```
 

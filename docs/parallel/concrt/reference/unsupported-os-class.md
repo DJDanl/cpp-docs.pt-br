@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_os class
 ms.assetid: 6fa57636-341b-4b51-84cc-261d283ff736
-ms.openlocfilehash: 8277827aa8713ef57731a3e0da0898829b9fa9fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 253cd76182e1b6f85be3701663bd10c86c10e6ba
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186358"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142351"
 ---
-# <a name="unsupportedos-class"></a>Classe unsupported_os
+# <a name="unsupported_os-class"></a>Classe unsupported_os
 
-Esta classe descreve uma exceção lançada quando um sistema operacional sem suporte é usado.
+Essa classe descreve uma exceção lançada quando um sistema operacional sem suporte é usado.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class unsupported_os : public std::exception;
 ```
 
@@ -29,9 +29,9 @@ class unsupported_os : public std::exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[unsupported_os](#ctor)|Sobrecarregado. Constrói um `unsupported_os` objeto.|
+|[unsupported_os](#ctor)|Sobrecarregado. Constrói um objeto `unsupported_os`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -39,17 +39,19 @@ class unsupported_os : public std::exception;
 
 `unsupported_os`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** concrt. h
+**Cabeçalho:** ConcRT. h
 
 **Namespace:** simultaneidade
 
-##  <a name="ctor"></a> unsupported_os
+## <a name="ctor"></a>unsupported_os
 
-Constrói um `unsupported_os` objeto.
+Constrói um objeto `unsupported_os`.
 
-```
+### <a name="syntax"></a>Sintaxe
+
+```cpp
 explicit _CRTIMP unsupported_os(_In_z_ const char* _Message) throw();
 
 unsupported_os() throw();

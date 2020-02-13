@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-ms.openlocfilehash: 14e85a2c9ff21ed451cc6141ab7940f9c614c662
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9ca413573ebd741ea2a9a813a25ec2679aff5b7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180317"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139350"
 ---
-# <a name="double4-class"></a>Classe double_4
+# <a name="double_4-class"></a>Classe double_4
 
-Representa um vetor curto de quatro doubles.
+Representa um pequeno vetor de quatro duplos.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class double_4;
 ```
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs públicos
+### <a name="public-typedefs"></a>Typedefs Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[Construtor double_4](#ctor)|Sobrecarregado. Padrão construtor, inicializa todos os elementos com 0.|
+|[Construtor de double_4](#ctor)|Sobrecarregado. O construtor padrão inicializa todos os elementos com 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |double_4::get_w||
 |double_4::get_wx||
@@ -442,26 +442,26 @@ class double_4;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |double_4::operator-||
 |double_4::operator--||
-|double_4::Operator * =||
-|double_4::Operator =||
-|double_4::operator++||
-|double_4::operator+=||
-|double_4::operator=||
-|double_4::operator-=||
+|double_4:: Operator * =||
+|double_4:: Operator/=||
+|double_4:: operador + +||
+|double_4:: Operator + =||
+|double_4:: Operator =||
+|double_4:: Operator-=||
 
-### <a name="public-constants"></a>Constantes públicas
+### <a name="public-constants"></a>Constantes Públicas
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[tamanho constante](#double_4__size)||
+|[Constante de tamanho](#double_4__size)||
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |double_4::a||
 |double_4::ab||
@@ -470,30 +470,30 @@ class double_4;
 |double_4::abr||
 |double_4::abrg||
 |double_4::ag||
-|double_4::agb||
+|double_4:: AGB||
 |double_4::agbr||
-|double_4::agr||
-|double_4::agrb||
-|double_4::ar||
-|double_4::arb||
-|double_4::arbg||
-|double_4::arg||
+|double_4:: eito||
+|double_4:: agrb||
+|double_4:: ar||
+|double_4:: ARB||
+|double_4:: arbg||
+|double_4:: arg||
 |double_4::argb||
-|double_4::b||
-|double_4::ba||
-|double_4::bag||
-|double_4::bagr||
-|double_4::bar||
-|double_4::barg||
+|double_4:: b||
+|double_4:: BA||
+|double_4:: recipiente||
+|double_4:: bagr||
+|double_4:: bar||
+|double_4:: barg||
 |double_4::bg||
 |double_4::bga||
 |double_4::bgar||
 |double_4::bgr||
 |double_4::bgra||
-|double_4::br||
-|double_4::bra||
-|double_4::brag||
-|double_4::brg||
+|double_4:: br||
+|double_4:: Bra||
+|double_4:: gabamos||
+|double_4:: BRG||
 |double_4::brga||
 |double_4::g||
 |double_4::ga||
@@ -506,50 +506,50 @@ class double_4;
 |double_4::gbar||
 |double_4::gbr||
 |double_4::gbra||
-|double_4::gr||
+|double_4:: gr||
 |double_4::gra||
 |double_4::grab||
-|double_4::grb||
+|double_4:: GRB||
 |double_4::grba||
-|double_4::r||
-|double_4::ra||
+|double_4:: r||
+|double_4:: ra||
 |double_4::rab||
 |double_4::rabg||
-|double_4::rag||
-|double_4::ragb||
-|double_4::rb||
-|double_4::rba||
-|double_4::rbag||
-|double_4::rbg||
+|double_4:: pano||
+|double_4:: ragb||
+|double_4:: RB||
+|double_4:: RBA||
+|double_4:: rbag||
+|double_4:: RGB||
 |double_4::rbga||
-|double_4::rg||
+|double_4:: RG||
 |double_4::rga||
 |double_4::rgab||
 |double_4::rgb||
 |double_4::rgba||
-|double_4::w||
-|double_4::wx||
-|double_4::wxy||
-|double_4::wxyz||
-|double_4::wxz||
-|double_4::wxzy||
-|double_4::wy||
-|double_4::wyx||
-|double_4::wyxz||
-|double_4::WYZ||
-|double_4::wyzx||
-|double_4::wz||
+|double_4:: w||
+|double_4:: WX||
+|double_4:: wxy||
+|double_4:: WXYZ||
+|double_4:: wxz||
+|double_4:: wxzy||
+|double_4:: WY||
+|double_4:: wyx||
+|double_4:: wyxz||
+|double_4:: wyz||
+|double_4:: wyzx||
+|double_4:: WZ||
 |double_4::wzx||
 |double_4::wzxy||
-|double_4::wzy||
-|double_4::wzyx||
-|double_4::x||
+|double_4:: wzy||
+|double_4:: wzyx||
+|double_4:: x||
 |double_4::xw||
-|double_4::xwy||
-|double_4::xwyz||
+|double_4:: xwy||
+|double_4:: xwyz||
 |double_4::xwz||
 |double_4::xwzy||
-|double_4::xy||
+|double_4:: XY||
 |double_4::xyw||
 |double_4::xywz||
 |double_4::xyz||
@@ -557,20 +557,20 @@ class double_4;
 |double_4::xz||
 |double_4::xzw||
 |double_4::xzwy||
-|double_4::xzy||
-|double_4::xzyw||
-|double_4::y||
-|double_4::yw||
-|double_4::ywx||
+|double_4:: XZY||
+|double_4:: xzyw||
+|double_4:: y||
+|double_4:: YW||
+|double_4:: YWX||
 |double_4::ywxz||
-|double_4::ywz||
+|double_4:: ywz||
 |double_4::ywzx||
-|double_4::yx||
+|double_4:: YX||
 |double_4::yxw||
 |double_4::yxwz||
 |double_4::yxz||
 |double_4::yxzw||
-|double_4::yz||
+|double_4:: YZ||
 |double_4::yzw||
 |double_4::yzwx||
 |double_4::yzx||
@@ -579,34 +579,34 @@ class double_4;
 |double_4::zw||
 |double_4::zwx||
 |double_4::zwxy||
-|double_4::zwy||
+|double_4:: ZWY||
 |double_4::zwyx||
 |double_4::zx||
 |double_4::zxw||
 |double_4::zxwy||
 |double_4::zxy||
 |double_4::zxyw||
-|double_4::ZY||
+|double_4:: ZY||
 |double_4::zyw||
 |double_4::zywx||
-|double_4::zyx||
+|double_4:: ZYX||
 |double_4::zyxw||
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `double_4`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Simultaneidade:: Graphics
 
-##  <a name="ctor"></a> double_4
+## <a name="ctor"></a>double_4
 
-Padrão construtor, inicializa todos os elementos com 0.
+O construtor padrão inicializa todos os elementos com 0.
 
-```
+```cpp
 double_4() restrict(amp,
     cpu);
 
@@ -661,14 +661,14 @@ O valor para inicializar o elemento 2.
 O valor para inicializar o elemento 3.
 
 *_V*<br/>
-O valor para a inicialização.
+O valor para inicialização.
 
 *_Other*<br/>
 O objeto usado para inicializar.
 
-##  <a name="double_4__size"></a> size
+## <a name="double_4__size"></a>tamanho
 
-```
+```cpp
 static const int size = 4;
 ```
 

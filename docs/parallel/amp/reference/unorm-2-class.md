@@ -28,40 +28,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::g
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-ms.openlocfilehash: 33411511809fc9798f6fdf65f5331e2e587990ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 325a1532a079c8eff9c8dcdc5410dcbfe58fb914
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405489"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126195"
 ---
-# <a name="unorm2-class"></a>Classe unorm_2
+# <a name="unorm_2-class"></a>Classe unorm_2
 
-Representa um vetor curto de dois números normais sem sinal.
+Representa um pequeno vetor de dois números normais não assinados.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class unorm_2;
 ```
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs públicos
+### <a name="public-typedefs"></a>Typedefs Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[Construtor unorm_2](#ctor)|Sobrecarregado. Padrão construtor, inicializa todos os elementos com 0.|
+|[Construtor de unorm_2](#ctor)|Sobrecarregado. O construtor padrão inicializa todos os elementos com 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |unorm_2::get_x||
 |unorm_2::get_xy||
@@ -78,7 +78,7 @@ class unorm_2;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |unorm_2::operator--||
 |unorm_2::operator*=||
@@ -88,15 +88,15 @@ class unorm_2;
 |unorm_2::operator=||
 |unorm_2::operator-=||
 
-### <a name="public-constants"></a>Constantes públicas
+### <a name="public-constants"></a>Constantes Públicas
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |Constante unorm_2::size||
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |unorm_2::g||
 |unorm_2::gr||
@@ -111,17 +111,17 @@ class unorm_2;
 
 `unorm_2`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amp_short_vectors. h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** Simultaneidade:: Graphics
 
-##  <a name="ctor"></a> unorm_2
+## <a name="ctor"></a>unorm_2
 
-Padrão construtor, inicializa todos os elementos com 0.
+O construtor padrão inicializa todos os elementos com 0.
 
-```
+```cpp
 unorm_2() restrict(amp,
     cpu);
 
@@ -177,14 +177,14 @@ O valor para inicializar o elemento 0.
 O valor para inicializar o elemento 1.
 
 *_V*<br/>
-O valor para a inicialização.
+O valor para inicialização.
 
 *_Other*<br/>
 O objeto usado para inicializar.
 
-##  <a name="unorm_2__size"></a> size
+## <a name="unorm_2__size"></a>tamanho
 
-```
+```cpp
 static const int size = 2;
 ```
 

@@ -2,12 +2,12 @@
 title: 3. Funções da biblioteca em tempo de execução
 ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 553c9ff2ceff02dc7b72e9f11899dac9d1f0f612
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6155eb87bd7a1a0533caf99afb3db8417854df30
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857951"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142950"
 ---
 # <a name="3-run-time-library-functions"></a>3. funções de biblioteca de tempo de execução
 
@@ -96,13 +96,9 @@ int omp_get_max_threads(void);
 
 O seguinte expressa um limite inferior no valor de `omp_get_max_threads`:
 
-```
+> *threads-usados para <= da próxima equipe* `omp_get_max_threads`
 
-threads-used-for-next-team
-<= omp_get_max_threads
-```
-
-Observe que, se outra região paralela usar a cláusula `num_threads` para solicitar um número específico de threads, a garantia no limite inferior do resultado de `omp_get_max_threads` nenhuma retenção longa.
+Observe que, se outra região paralela usar a cláusula `num_threads` para solicitar um número específico de threads, a garantia no limite inferior do resultado de `omp_get_max_threads` não será mais mantida.
 
 O valor de retorno da função `omp_get_max_threads` pode ser usado para alocar dinamicamente o armazenamento suficiente para todos os threads na equipe formada na próxima região paralela.
 
@@ -171,7 +167,7 @@ O padrão para o ajuste dinâmico de threads é definido pela implementação. C
 
 #### <a name="microsoft-specific"></a>Específico da Microsoft
 
-O suporte atual de `omp_get_dynamic` e `omp_set_dynamic` é o seguinte: 
+O suporte atual de `omp_get_dynamic` e `omp_set_dynamic` é o seguinte:
 
 O parâmetro de entrada para `omp_set_dynamic` não afeta a política de threading e não altera o número de threads. `omp_get_num_threads` sempre retorna o número definido pelo usuário, se estiver definido, ou o número de thread padrão. Na implementação atual da Microsoft, `omp_set_dynamic(0)` desativa o encadeamento dinâmico para que o conjunto existente de threads possa ser reutilizado para a seguinte região paralela. `omp_set_dynamic(1)` ativa o Threading dinâmico descartando o conjunto existente de threads e criando um novo conjunto para a próxima região paralela. O número de threads no novo conjunto é o mesmo que o conjunto antigo e é baseado no valor de retorno de `omp_get_num_threads`. Portanto, para obter um melhor desempenho, use `omp_set_dynamic(0)` para reutilizar os threads existentes.
 

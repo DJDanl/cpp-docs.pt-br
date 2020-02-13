@@ -10,20 +10,20 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: 9d0ab271b20eb02c1dc4cb8e54cf2632eead4325
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3e3093cb76df507f8c707e497c9aec75a065057
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212879"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142591"
 ---
-# <a name="taskcompletionevent-class"></a>Classe task_completion_event
+# <a name="task_completion_event-class"></a>Classe task_completion_event
 
 A classe `task_completion_event` permite atrasar a execução de uma tarefa até que uma condição seja atendida, ou iniciar uma tarefa em resposta a um evento externo.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 template<typename _ResultType>
 class task_completion_event;
 
@@ -31,7 +31,7 @@ template<>
 class task_completion_event<void>;
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_ResultType*<br/>
 O tipo de resultado desta classe `task_completion_event`.
@@ -40,13 +40,13 @@ O tipo de resultado desta classe `task_completion_event`.
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[task_completion_event](#ctor)|Constrói um objeto `task_completion_event`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[set](#set)|Sobrecarregado. Define o evento de conclusão de tarefas.|
 |[set_exception](#set_exception)|Sobrecarregado. Propaga uma exceção para todas as tarefas associadas a esse evento.|
@@ -63,17 +63,17 @@ Se o evento de conclusão de tarefas nunca foi sinalizado, todas as tarefas cria
 
 `task_completion_event`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** ppltasks. h
 
 **Namespace:** simultaneidade
 
-##  <a name="set"></a> set
+## <a name="set"></a>Definição
 
 Define o evento de conclusão de tarefas.
 
-```
+```cpp
 bool set(_ResultType _Result) const ;
 
 bool set() const ;
@@ -82,21 +82,21 @@ bool set() const ;
 ### <a name="parameters"></a>Parâmetros
 
 *_Result*<br/>
-O resultado para definir este evento.
+O resultado para o qual definir esse evento.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O método retornará **verdadeira** se tiver sido bem-sucedido na configuração do evento. Ele retorna **falsos** se o evento já está definido.
+O método retornará **true** se tiver sido bem-sucedido ao definir o evento. Retornará **false** se o evento já estiver definido.
 
 ### <a name="remarks"></a>Comentários
 
-Na presença de vários ou chamadas simultâneas para `set`, somente a primeira chamada terá êxito e seu resultado (se houver) será armazenado no evento de conclusão de tarefa. Os conjuntos restantes são ignorados e o método retornará false. Quando você definir um evento de conclusão de tarefas, todas as tarefas criadas do que o evento serão concluídas imediatamente, e suas continuações, se houver, serão agendadas. Tarefa de objetos de conclusão que têm uma `_ResultType` diferente de **void** passará o valor para suas continuações.
+Na presença de chamadas múltiplas ou simultâneas para `set`, somente a primeira chamada terá sucesso e seu resultado (se houver) será armazenado no evento de conclusão de tarefa. Os conjuntos restantes são ignorados e o método retornará false. Quando você define um evento de conclusão de tarefa, todas as tarefas criadas a partir desse evento serão concluídas imediatamente e suas continuaçãos, se houver, serão agendadas. Objetos de conclusão de tarefas que têm um `_ResultType` diferente de **void** passarão o valor para suas continuações.
 
-##  <a name="set_exception"></a> set_exception
+## <a name="set_exception"></a>set_exception
 
 Propaga uma exceção para todas as tarefas associadas a esse evento.
 
-```
+```cpp
 template<typename _E>
 __declspec(noinline) bool set_exception(_E _Except) const;
 
@@ -109,18 +109,18 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 O tipo de exceção.
 
 *_Except*<br/>
-A exceção a ser definido.
+A exceção a ser definida.
 
 *_ExceptionPtr*<br/>
-O ponteiro de exceção definido.
+O ponteiro de exceção a ser definido.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-##  <a name="ctor"></a> task_completion_event
+## <a name="ctor"></a>task_completion_event
 
 Constrói um objeto `task_completion_event`.
 
-```
+```cpp
 task_completion_event();
 ```
 

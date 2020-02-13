@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_link_target class
 ms.assetid: 33b64885-34d8-4d4e-a893-02e9f19c958e
-ms.openlocfilehash: 3ef34ab7607c444044b6dde17f3db3f73d0d7086
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd3d82c06c174c69c60dec33592110f4de72ac99
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205649"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141043"
 ---
-# <a name="invalidlinktarget-class"></a>Classe invalid_link_target
+# <a name="invalid_link_target-class"></a>Classe invalid_link_target
 
-Esta classe descreve uma exceção gerada quando o `link_target` método de um bloco de mensagens é chamado e o bloco de mensagens é não foi possível vincular ao destino. Isso pode ser o resultado de exceder o número de links que o bloco de mensagens é permitido ou tentar vincular a um destino específico duas vezes para a mesma fonte.
+Essa classe descreve uma exceção gerada quando o método de `link_target` de um bloco de mensagens é chamado e o bloco de mensagens não é capaz de vincular ao destino. Isso pode ser o resultado de exceder o número de links que o bloco de mensagens é permitido ou tentar vincular um destino específico duas vezes à mesma fonte.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class invalid_link_target : public std::exception;
 ```
 
@@ -29,9 +29,9 @@ class invalid_link_target : public std::exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[invalid_link_target](#ctor)|Sobrecarregado. Constrói um `invalid_link_target` objeto.|
+|[invalid_link_target](#ctor)|Sobrecarregado. Constrói um objeto `invalid_link_target`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -39,17 +39,17 @@ class invalid_link_target : public std::exception;
 
 `invalid_link_target`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** concrt. h
+**Cabeçalho:** ConcRT. h
 
 **Namespace:** simultaneidade
 
-##  <a name="ctor"></a> invalid_link_target
+## <a name="ctor"></a>invalid_link_target
 
-Constrói um `invalid_link_target` objeto.
+Constrói um objeto `invalid_link_target`.
 
-```
+```cpp
 explicit _CRTIMP invalid_link_target(_In_z_ const char* _Message) throw();
 
 invalid_link_target() throw();

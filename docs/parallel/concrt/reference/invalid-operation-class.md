@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_operation class
 ms.assetid: 26ba07dc-fcdf-44cb-b748-a31d35205b52
-ms.openlocfilehash: 8b971a12ff83753546cfea7b90288d1bc43400c0
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e17d530569d16ba0084a58bf0be00d4a8423b7f6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341031"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140878"
 ---
-# <a name="invalidoperation-class"></a>Classe invalid_operation
+# <a name="invalid_operation-class"></a>Classe invalid_operation
 
-Esta classe descreve uma exceção gerada quando uma operação inválida é executada, o que não é descrita com mais precisão por outro tipo de exceção gerado pelo tempo de execução de simultaneidade.
+Essa classe descreve uma exceção lançada quando uma operação inválida é executada e não é mais precisamente descrita por outro tipo de exceção lançado pelo Tempo de Execução de Simultaneidade.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class invalid_operation : public std::exception;
 ```
 
@@ -29,13 +29,13 @@ class invalid_operation : public std::exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[invalid_operation](#ctor)|Sobrecarregado. Constrói um `invalid_operation` objeto.|
+|[invalid_operation](#ctor)|Sobrecarregado. Constrói um objeto `invalid_operation`.|
 
 ## <a name="remarks"></a>Comentários
 
-Os vários métodos que lançam essa exceção geralmente documentará sob quais circunstâncias eles a lançam.
+Os vários métodos que lançam essa exceção geralmente documentam em que circunstâncias eles vão jogá-la.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -43,17 +43,17 @@ Os vários métodos que lançam essa exceção geralmente documentará sob quais
 
 `invalid_operation`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** concrt. h
+**Cabeçalho:** ConcRT. h
 
 **Namespace:** simultaneidade
 
-##  <a name="ctor"></a> invalid_operation
+## <a name="ctor"></a>invalid_operation
 
-Constrói um `invalid_operation` objeto.
+Constrói um objeto `invalid_operation`.
 
-```
+```cpp
 explicit _CRTIMP invalid_operation(_In_z_ const char* _Message) throw();
 
 invalid_operation() throw();

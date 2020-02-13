@@ -1,20 +1,20 @@
 ---
-title: hash&lt;string_view&gt; especialização
+title: Especialização de&gt; de string_view hash&lt;
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::hash
 helpviewer_keywords:
 - std::basic_string_view::hash
-ms.openlocfilehash: 60b6fdecc371ee950532dee3f69cc8dd07b8b5eb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7a69473b6fe39655e7cf3154671017c39c453e29
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346954"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126169"
 ---
-# <a name="hashltstringviewgt-specialization"></a>hash&lt;string_view&gt; especialização
+# <a name="hashltstring_viewgt-specialization"></a>Especialização de&gt; de string_view hash&lt;
 
-Uma especialização de modelo que produz um valor de hash, dado uma string_view.
+Uma especialização de modelo que produz um valor de hash dado um string_view.
 
 ```cpp
 template <class CharType, class Traits>
@@ -31,7 +31,7 @@ struct hash<basic_string_view<CharType, Traits>>
 
 O hash de um string_view é igual ao hash do objeto de cadeia de caracteres subjacente.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 //compile with: /std:c++17

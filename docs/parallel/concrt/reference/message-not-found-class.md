@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - message_not_found class
 ms.assetid: a96b9995-5ad7-4600-83c8-c15e329ff10e
-ms.openlocfilehash: da0a44b90346959756c1ef7c685bef234fe6e46a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63b921e47b01e3be7dfc060cbb41e5fd9016d04f
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394410"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139580"
 ---
-# <a name="messagenotfound-class"></a>Classe message_not_found
+# <a name="message_not_found-class"></a>Classe message_not_found
 
-Esta classe descreve uma exceção gerada quando um bloco de mensagens não conseguir encontrar uma mensagem solicitada.
+Essa classe descreve uma exceção gerada quando um bloco de mensagens não consegue localizar uma mensagem solicitada.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class message_not_found : public std::exception;
 ```
 
@@ -29,7 +29,7 @@ class message_not_found : public std::exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[message_not_found](#ctor)|Sobrecarregado. Constrói um objeto `message_not_found`.|
 
@@ -39,17 +39,17 @@ class message_not_found : public std::exception;
 
 `message_not_found`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** concrt. h
+**Cabeçalho:** ConcRT. h
 
 **Namespace:** simultaneidade
 
-##  <a name="ctor"></a> message_not_found
+## <a name="ctor"></a>message_not_found
 
 Constrói um objeto `message_not_found`.
 
-```
+```cpp
 explicit _CRTIMP message_not_found(_In_z_ const char* _Message) throw();
 
 message_not_found() throw();

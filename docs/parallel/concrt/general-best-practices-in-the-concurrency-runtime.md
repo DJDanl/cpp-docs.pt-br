@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: bb00c3ddb9a50a159174deccf8954f1e3bf1689d
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 15bae5ba25da4987b076cf3de67cd8484fe47df8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302218"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141768"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Práticas recomendadas gerais no Runtime de Simultaneidade
 
 Este documento descreve as práticas recomendadas que se aplicam a várias áreas do Tempo de Execução de Simultaneidade.
 
-##  <a name="top"></a>As
+## <a name="top"></a>As
 
 Este documento contém as seguintes seções:
 
@@ -33,13 +33,13 @@ Este documento contém as seguintes seções:
 
 - [Não use objetos de simultaneidade em segmentos de dados compartilhados](#shared-data)
 
-##  <a name="synchronization"></a>Usar constructos de sincronização cooperativa quando possível
+## <a name="synchronization"></a>Usar constructos de sincronização cooperativa quando possível
 
 O Tempo de Execução de Simultaneidade fornece muitas construções com simultaneidade segura que não exigem um objeto de sincronização externo. Por exemplo, a classe [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) fornece operações de acesso de elemento e acréscimo com segurança de simultaneidade. Aqui, a simultaneidade segura significa que os ponteiros ou iteradores são sempre válidos. Não é uma garantia de inicialização de elemento ou de uma ordem de passagem específica. No entanto, para casos em que você precisa de acesso exclusivo a um recurso, o tempo de execução fornece as classes de evento [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), [concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)e [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) . Esses tipos se comportam de maneira cooperativa; Portanto, o Agendador de tarefas pode realocar recursos de processamento para outro contexto, uma vez que a primeira tarefa aguarda dados. Quando possível, use esses tipos de sincronização em vez de outros mecanismos de sincronização, como os fornecidos pela API do Windows, que não se comportam de maneira cooperativa. Para obter mais informações sobre esses tipos de sincronização e um exemplo de código, consulte [sincronização de estruturas de dados](../../parallel/concrt/synchronization-data-structures.md) e comparação de [estruturas de dados de sincronização com a API do Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md).
 
 [[Superior](#top)]
 
-##  <a name="yield"></a>Evite tarefas demoradas que não produzam
+## <a name="yield"></a>Evite tarefas demoradas que não produzam
 
 Como o Agendador de tarefas se comporta de cooperativa, ele não fornece nenhuma imparcialidade entre as tarefas. Portanto, uma tarefa pode impedir que outras tarefas sejam iniciadas. Embora isso seja aceitável em alguns casos, em outros casos isso pode causar deadlock ou privação.
 
@@ -47,7 +47,7 @@ O exemplo a seguir executa mais tarefas do que o número de recursos de processa
 
 [!code-cpp[concrt-cooperative-tasks#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_1.cpp)]
 
-Este exemplo gera a seguinte saída:
+Esse exemplo gera a saída a seguir:
 
 1: 250000000 1: 500000000 1: 750000000 1: 1000000000 2: 250000000 2: 500000000 2: 750000000 2: 1000000000
 
@@ -55,7 +55,7 @@ Há várias maneiras de habilitar a cooperação entre as duas tarefas. Uma dela
 
 [!code-cpp[concrt-cooperative-tasks#2](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_2.cpp)]
 
-Este exemplo gera a seguinte saída:
+Esse exemplo gera a saída a seguir:
 
 ```Output
 1: 250000000
@@ -74,7 +74,7 @@ Há outras maneiras de habilitar a cooperação entre tarefas de longa execuçã
 
 [[Superior](#top)]
 
-##  <a name="oversubscription"></a>Usar a assinatura excedente para operações de deslocamento que bloqueiam ou têm alta latência
+## <a name="oversubscription"></a>Usar a assinatura excedente para operações de deslocamento que bloqueiam ou têm alta latência
 
 O Tempo de Execução de Simultaneidade fornece primitivos de sincronização, como [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), que permitem que as tarefas sejam bloqueadas e geradas de forma cooperativa entre si. Quando uma tarefa bloqueia ou produz cooperativamente, o Agendador de tarefas pode realocar recursos de processamento para outro contexto, uma vez que a primeira tarefa aguarda dados.
 
@@ -88,7 +88,7 @@ Como a função `GetHttpFile` executa uma operação potencialmente latente, a a
 
 [[Superior](#top)]
 
-##  <a name="memory"></a>Usar funções de gerenciamento de memória simultâneas quando possível
+## <a name="memory"></a>Usar funções de gerenciamento de memória simultâneas quando possível
 
 Use as funções de gerenciamento de memória, [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) e [Concurrency:: Free](reference/concurrency-namespace-functions.md#free), quando você tiver tarefas refinadas que freqüentemente alocam pequenos objetos que têm um tempo de vida relativamente curto. O Tempo de Execução de Simultaneidade mantém um cache de memória separado para cada thread em execução. As funções `Alloc` e `Free` alocam e liberam memória desses caches sem o uso de bloqueios ou barreiras de memória.
 
@@ -96,7 +96,7 @@ Para obter mais informações sobre essas funções de gerenciamento de memória
 
 [[Superior](#top)]
 
-##  <a name="raii"></a>Use RAII para gerenciar o tempo de vida de objetos de simultaneidade
+## <a name="raii"></a>Use RAII para gerenciar o tempo de vida de objetos de simultaneidade
 
 O Tempo de Execução de Simultaneidade usa a manipulação de exceções para implementar recursos como cancelamento. Portanto, grave código de exceção segura ao chamar o tempo de execução ou chamar outra biblioteca que chama o tempo de execução.
 
@@ -128,7 +128,7 @@ Para obter exemplos adicionais que usam o padrão RAII para gerenciar o tempo de
 
 [[Superior](#top)]
 
-##  <a name="global-scope"></a>Não criar objetos de simultaneidade em escopo global
+## <a name="global-scope"></a>Não criar objetos de simultaneidade em escopo global
 
 Quando você cria um objeto de simultaneidade no escopo global, pode causar problemas como violações de acesso de memória ou deadlock para ocorrer em seu aplicativo.
 
@@ -142,13 +142,13 @@ Para obter exemplos da maneira correta de criar `Scheduler` objetos, consulte [A
 
 [[Superior](#top)]
 
-##  <a name="shared-data"></a>Não use objetos de simultaneidade em segmentos de dados compartilhados
+## <a name="shared-data"></a>Não use objetos de simultaneidade em segmentos de dados compartilhados
 
 O Tempo de Execução de Simultaneidade não dá suporte ao uso de objetos de simultaneidade em uma seção de dados compartilhados, por exemplo, uma seção de dados criada pela diretiva de`#pragma` de [data_seg](../../preprocessor/data-seg.md) . Um objeto de simultaneidade compartilhado entre limites de processo pode colocar o tempo de execução em um estado inconsistente ou inválido.
 
 [[Superior](#top)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Práticas recomendadas do runtime de simultaneidade](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [PPL (Biblioteca de Padrões Paralelos)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>

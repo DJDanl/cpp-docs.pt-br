@@ -40,20 +40,20 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-ms.openlocfilehash: 31008b398d17ac0c226f9359745067c4fefc08a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72a570ab28696730f835c42748a6ea12b865ca55
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180429"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127157"
 ---
 # <a name="accelerator-class"></a>Classe accelerator
 
-Um acelerador é um recurso de hardware que é otimizado para computação paralela de dados. Um acelerador pode ser um dispositivo conectado a um barramento PCIe (como um GPU), ou pode ser uma instrução estendida definida no CPU principal.
+Um acelerador é um recurso de hardware que é otimizado para computação em paralelo a dados. Um acelerador pode ser um dispositivo conectado a um barramento PCIe (como uma GPU) ou pode ser um conjunto de instruções estendidas na CPU principal.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class accelerator;
 ```
 
@@ -61,61 +61,61 @@ class accelerator;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[Acelerador de construtor](#ctor)|Inicializa uma nova instância da classe `accelerator`.|
-|[~ accelerator destruidor](#ctor)|Destrói o `accelerator` objeto.|
+|[Construtor de acelerador](#ctor)|Inicializa uma nova instância da classe `accelerator`.|
+|[~ Destruidor de acelerador](#ctor)|Destrói o objeto `accelerator`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[create_view](#create_view)|Cria e retorna um `accelerator_view` objeto neste acelerador.|
-|[get_all](#get_all)|Retorna um vetor de `accelerator` objetos que representam todos os Aceleradores disponíveis.|
+|[create_view](#create_view)|Cria e retorna um objeto `accelerator_view` neste acelerador.|
+|[get_all](#get_all)|Retorna um vetor de objetos `accelerator` que representam todos os Aceleradores disponíveis.|
 |[get_auto_selection_view](#get_auto_selection_view)|Retorna a seleção automática `accelerator_view`.|
-|[get_dedicated_memory](#get_dedicated_memory)|Retorna a memória dedicada para o `accelerator`, em quilobytes.|
-|[get_default_cpu_access_type](#get_default_cpu_access_type)|Retorna o padrão [access_type](concurrency-namespace-enums-amp.md#access_type) para os buffers criados neste acelerador.|
-|[get_default_view](#get_default_view)|Retorna o padrão `accelerator_view` objeto que está associado com o `accelerator`.|
-|[get_description](#get_description)|Retorna uma descrição breve do `accelerator` dispositivo.|
+|[get_dedicated_memory](#get_dedicated_memory)|Retorna a memória dedicada para o `accelerator`, em kilobytes.|
+|[get_default_cpu_access_type](#get_default_cpu_access_type)|Retorna o [access_type](concurrency-namespace-enums-amp.md#access_type) padrão para buffers criados neste acelerador.|
+|[get_default_view](#get_default_view)|Retorna o objeto de `accelerator_view` padrão que está associado ao `accelerator`.|
+|[get_description](#get_description)|Retorna uma breve descrição do dispositivo `accelerator`.|
 |[get_device_path](#get_device_path)|Retorna o caminho do dispositivo.|
-|[get_has_display](#get_has_display)|Determina se o `accelerator` é anexado a uma exibição.|
-|[get_is_debug](#get_is_debug)|Determina se o `accelerator` tem a camada DEBUG ativada para o relatório de erro extensos.|
-|[get_is_emulated](#get_is_emulated)|Determina se o `accelerator` é emulada.|
-|[get_supports_cpu_shared_memory](#get_supports_cpu_shared_memory)|Determina se o `accelerator` dá suporte a memória compartilhada|
-|[get_supports_double_precision](#get_supports_double_precision)|Determina se o `accelerator` é anexado a uma exibição.|
+|[get_has_display](#get_has_display)|Determina se a `accelerator` está anexada a uma exibição.|
+|[get_is_debug](#get_is_debug)|Determina se o `accelerator` tem a camada de depuração habilitada para relatórios de erro extensivos.|
+|[get_is_emulated](#get_is_emulated)|Determina se o `accelerator` é emulado.|
+|[get_supports_cpu_shared_memory](#get_supports_cpu_shared_memory)|Determina se o `accelerator` dá suporte à memória compartilhada|
+|[get_supports_double_precision](#get_supports_double_precision)|Determina se a `accelerator` está anexada a uma exibição.|
 |[get_supports_limited_double_precision](#get_supports_limited_double_precision)|Determina se o `accelerator` tem suporte limitado para matemática de precisão dupla.|
 |[get_version](#get_version)|Retorna a versão do `accelerator`.|
 |[set_default](#set_default)|Retorna o caminho do acelerador padrão.|
-|[set_default_cpu_access_type](#set_default_cpu_access_type)|Define a padrão CPU [access_type](concurrency-namespace-enums-amp.md#access_type)de matrizes e alocações de memória implícitas feitas nesse `accelerator`.|
+|[set_default_cpu_access_type](#set_default_cpu_access_type)|Define a [access_type](concurrency-namespace-enums-amp.md#access_type)de CPU padrão para matrizes e alocações de memória implícitas feitas neste `accelerator`.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Compara essa `accelerator` objeto com outro e retorna **falsos** se eles forem iguais; caso contrário, retornará **true**.|
-|[operator=](#operator_eq)|Copia o conteúdo especificado `accelerator` objeto para esse outro.|
-|[operator==](#operator_eq_eq)|Compara essa `accelerator` objeto com outro e retorna **verdadeira** se eles forem iguais; caso contrário, retornará **false**.|
+|[operator!=](#operator_neq)|Compara esse `accelerator` objeto com outro e retorna **false** se eles forem os mesmos; caso contrário, retornará **true**.|
+|[operator=](#operator_eq)|Copia o conteúdo do objeto de `accelerator` especificado para este.|
+|[operator==](#operator_eq_eq)|Compara esse `accelerator` objeto com outro e retorna **true** se eles forem os mesmos; caso contrário, retornará **false**.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[cpu_accelerator](#cpu_accelerator)|Obtém uma cadeia de caracteres constante da CPU `accelerator`.|
-|[dedicated_memory](#dedicated_memory)|Obtém a memória dedicada para o `accelerator`, em quilobytes.|
-|[default_accelerator](#default_accelerator)|Obtém uma cadeia de caracteres constante para o padrão `accelerator`.|
-|[default_cpu_access_type](#default_cpu_access_type)|Obtém ou define a padrão CPU [access_type](concurrency-namespace-enums-amp.md#access_type)de matrizes e alocações de memória implícitas feitas nesse `accelerator`.|
-|[default_view](#default_view)|Obtém o padrão `accelerator_view` objeto que está associado com o `accelerator`.|
-|[description](#description)|Obtém uma descrição breve do `accelerator` dispositivo.|
+|[cpu_accelerator](#cpu_accelerator)|Obtém uma constante de cadeia de caracteres para a `accelerator`de CPU.|
+|[dedicated_memory](#dedicated_memory)|Obtém a memória dedicada para o `accelerator`, em kilobytes.|
+|[default_accelerator](#default_accelerator)|Obtém uma constante de cadeia de caracteres para o `accelerator`padrão.|
+|[default_cpu_access_type](#default_cpu_access_type)|Obtém ou define a [access_type](concurrency-namespace-enums-amp.md#access_type)de CPU padrão para matrizes e alocações de memória implícitas feitas neste `accelerator`.|
+|[default_view](#default_view)|Obtém o objeto de `accelerator_view` padrão associado ao `accelerator`.|
+|[description](#description)|Obtém uma breve descrição do dispositivo `accelerator`.|
 |[device_path](#device_path)|Obtém o caminho do dispositivo.|
-|[direct3d_ref](#direct3d_ref)|Obtém uma cadeia de caracteres constante para obter uma referência de Direct3D `accelerator`.|
-|[direct3d_warp](#direct3d_warp)|Obtém a cadeia de caracteres constante para um `accelerator` objeto que você pode usar para executar o código C++ AMP em CPUs de vários núcleos que usam extensões de SIMD de Streaming (SSE).|
-|[has_display](#has_display)|Obtém um valor booliano que indica se o `accelerator` é anexado a uma exibição.|
-|[is_debug](#is_debug)|Indica se o `accelerator` tem a camada DEBUG ativada para o relatório de erro extensos.|
-|[is_emulated](#is_emulated)|Indica se o `accelerator` é emulada.|
-|[supports_cpu_shared_memory](#supports_cpu_shared_memory)|Indica se o `accelerator` dá suporte a memória compartilhada.|
+|[direct3d_ref](#direct3d_ref)|Obtém uma constante de cadeia de caracteres para uma referência do Direct3D `accelerator`.|
+|[direct3d_warp](#direct3d_warp)|Obtém a constante de cadeia de caracteres para um objeto de `accelerator` que você C++ pode usar para executar o código de amp em CPUs com vários núcleos que usam SSE (Streaming SIMD Extensions).|
+|[has_display](#has_display)|Obtém um valor booliano que indica se a `accelerator` está anexada a uma exibição.|
+|[is_debug](#is_debug)|Indica se o `accelerator` tem a camada de depuração habilitada para relatórios de erro extensivos.|
+|[is_emulated](#is_emulated)|Indica se o `accelerator` é emulado.|
+|[supports_cpu_shared_memory](#supports_cpu_shared_memory)|Indica se o `accelerator` dá suporte à memória compartilhada.|
 |[supports_double_precision](#supports_double_precision)|Indica se o acelerador dá suporte a matemática de precisão dupla.|
-|[supports_limited_double_precision](#supports_limited_double_precision)|Indica se o acelerador limitou suporte para matemática de precisão dupla.|
-|[version](#version)|Obtém a versão do `accelerator`.|
+|[supports_limited_double_precision](#supports_limited_double_precision)|Indica se o acelerador tem suporte limitado para matemática de precisão dupla.|
+|[version](#version)|Obtém a versão de `accelerator`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -123,31 +123,31 @@ class accelerator;
 
 ## <a name="remarks"></a>Comentários
 
-Um acelerador é um recurso de hardware que é otimizado para computação paralela de dados. Um acelerador é geralmente um GPU discreto, mas ele também pode ser uma entidade do lado do host virtual como um dispositivo de referência de DirectX, uma WARP (um dispositivo do lado do CPU é acelerado por meio das instruções SSE) ou o próprio CPU.
+Um acelerador é um recurso de hardware que é otimizado para computação em paralelo a dados. Um acelerador é geralmente uma GPU discreta, mas também pode ser uma entidade do lado do host virtual, como um dispositivo de referência do DirectX, uma detorção (um dispositivo do lado da CPU que é acelerado por meio de instruções SSE) ou a própria CPU.
 
-Você pode construir um `accelerator` objeto, enumerando os dispositivos disponíveis, ou obtendo o dispositivo padrão, o dispositivo de referência ou o dispositivo WARP.
+Você pode construir um objeto `accelerator` enumerando os dispositivos disponíveis ou obtendo o dispositivo padrão, o dispositivo de referência ou o dispositivo WARP.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amprt. h
 
-**Namespace:** Concorrência
+**Namespace:** Simultaneidade
 
-##  <a name="dtor"></a> </a> ~ accelerator
+## <a name="dtor"></a>acelerador de </a> ~
 
-Destrói o `accelerator` objeto.
+Destrói o objeto `accelerator`.
 
-```
+```cpp
 ~accelerator();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-##  <a name="ctor"></a> Acelerador
+## <a name="ctor"></a>Accelerator
 
-Inicializa uma nova instância dos [classe accelerator](accelerator-class.md).
+Inicializa uma nova instância da [classe do acelerador](accelerator-class.md).
 
-```
+```cpp
 accelerator();
 
 explicit accelerator(const std::wstring& _Device_path);
@@ -161,345 +161,345 @@ accelerator(const accelerator& _Other);
 O caminho do dispositivo físico.
 
 *_Other*<br/>
-O Acelerador a ser copiado.
+O acelerador a ser copiado.
 
-##  <a name="cpu_accelerator"></a> cpu_accelerator
+## <a name="cpu_accelerator"></a>cpu_accelerator
 
-Obtém uma cadeia de caracteres constante para o Acelerador de CPU.
+Obtém uma constante de cadeia de caracteres para o acelerador de CPU.
 
-```
+```cpp
 static const wchar_t cpu_accelerator[];
 ```
 
-##  <a name="create_view"></a> create_view
+## <a name="create_view"></a>create_view
 
-Cria e retorna um `accelerator_view` objeto neste acelerador, usando o modo de enfileiramento de mensagens especificado. Quando o modo de fila não for especificado, o novo `accelerator_view` usa o [queuing_mode::immediate](concurrency-namespace-enums-amp.md#queuing_mode) modo de fila.
+Cria e retorna um objeto `accelerator_view` neste acelerador, usando o modo de enfileiramento especificado. Quando o modo de enfileiramento não é especificado, o novo `accelerator_view` usa o modo de enfileiramento de [queuing_mode:: imediata](concurrency-namespace-enums-amp.md#queuing_mode) .
 
-```
+```cpp
 accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *qmode*<br/>
-O modo de fila.
+O modo de enfileiramento.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um novo `accelerator_view` objeto neste acelerador, usando o modo de enfileiramento de mensagens especificado.
+Um novo objeto `accelerator_view` neste acelerador, usando o modo de enfileiramento especificado.
 
-##  <a name="dedicated_memory"></a> dedicated_memory
+## <a name="dedicated_memory"></a>dedicated_memory
 
-Obtém a memória dedicada para o `accelerator`, em quilobytes.
+Obtém a memória dedicada para o `accelerator`, em kilobytes.
 
-```
+```cpp
 __declspec(property(get= get_dedicated_memory)) size_t dedicated_memory;
 ```
 
-##  <a name="default_accelerator"></a> default_accelerator
+## <a name="default_accelerator"></a>default_accelerator
 
-Obtém uma cadeia de caracteres constante para o padrão `accelerator`.
+Obtém uma constante de cadeia de caracteres para o `accelerator`padrão.
 
-```
+```cpp
 static const wchar_t default_accelerator[];
 ```
 
-##  <a name="default_cpu_access_type"></a> default_cpu_access_type
+## <a name="default_cpu_access_type"></a>default_cpu_access_type
 
-O padrão cpu [access_type](concurrency-namespace-enums-amp.md#access_type)de matrizes e alocações de memória implícitas feitas nesse `accelerator`.
+A [access_type](concurrency-namespace-enums-amp.md#access_type)de CPU padrão para matrizes e alocações de memória implícitas feitas neste `accelerator`.
 
-```
+```cpp
 __declspec(property(get= get_default_cpu_access_type)) access_type default_cpu_access_type;
 ```
 
-##  <a name="default_view"></a> default_view
+## <a name="default_view"></a>default_view
 
-Obtém a exibição do acelerador padrão que está associada com o `accelerator`.
+Obtém o modo de exibição de acelerador padrão associado ao `accelerator`.
 
-```
+```cpp
 __declspec(property(get= get_default_view)) accelerator_view default_view;
 ```
 
-##  <a name="description"></a> Descrição
+## <a name="description"></a>ndescrição
 
-Obtém uma descrição breve do `accelerator` dispositivo.
+Obtém uma breve descrição do dispositivo `accelerator`.
 
-```
+```cpp
 __declspec(property(get= get_description)) std::wstring description;
 ```
 
-##  <a name="device_path"></a> device_path
+## <a name="device_path"></a>device_path
 
 Obtém o caminho do acelerador. O caminho é exclusivo no sistema.
 
-```
+```cpp
 __declspec(property(get= get_device_path)) std::wstring device_path;
 ```
 
-##  <a name="direct3d_ref"></a> direct3d_ref
+## <a name="direct3d_ref"></a>direct3d_ref
 
-Obtém uma cadeia de caracteres constante para um acelerador de referência de Direct3D.
+Obtém uma constante de cadeia de caracteres para um acelerador de referência do Direct3D.
 
-```
+```cpp
 static const wchar_t direct3d_ref[];
 ```
 
-##  <a name="direct3d_warp"></a> direct3d_warp
+## <a name="direct3d_warp"></a>direct3d_warp
 
-Obtém a cadeia de caracteres constante para um `accelerator` objeto que você pode usar para executar seu código C++ AMP em CPUs de vários núcleos usando Streaming SIMD Extensions (SSE).
+Obtém a constante de cadeia de caracteres para um objeto de `accelerator` que você pode C++ usar para executar seu código de amp em CPUs com vários núcleos usando SSE (Streaming SIMD Extensions).
 
-```
+```cpp
 static const wchar_t direct3d_warp[];
 ```
 
-##  <a name="get_all"></a> get_all
+## <a name="get_all"></a>get_all
 
-Retorna um vetor de `accelerator` objetos que representam todos os Aceleradores disponíveis.
+Retorna um vetor de objetos `accelerator` que representam todos os Aceleradores disponíveis.
 
-```
+```cpp
 static inline std::vector<accelerator> get_all();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O vetor de Aceleradores disponíveis
 
-##  <a name="get_auto_selection_view"></a> get_auto_selection_view
+## <a name="get_auto_selection_view"></a>get_auto_selection_view
 
-Retorna o accelerator_view de seleção automática, que, quando especificado como o destino parallel_for_each resulta no accelerator_view de destino para a execução do kernel parallel_for_each seja selecionada automaticamente pelo tempo de execução. Para outras finalidades, o accelerator_view retornado por esse método é igual ao accelerator_view padrão do acelerador padrão
+Retorna a seleção automática accelerator_view, que quando especificado como o destino de parallel_for_each resulta na accelerator_view de destino para executar o kernel de parallel_for_each a ser selecionado automaticamente pelo tempo de execução. Para todas as outras finalidades, o accelerator_view retornado por esse método é o mesmo que o accelerator_view padrão do acelerador padrão
 
-```
+```cpp
 static accelerator_view __cdecl get_auto_selection_view();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O accelerator_view de seleção automática.
+A seleção automática accelerator_view.
 
-##  <a name="get_dedicated_memory"></a> get_dedicated_memory
+## <a name="get_dedicated_memory"></a>get_dedicated_memory
 
-Retorna a memória dedicada para o `accelerator`, em quilobytes.
+Retorna a memória dedicada para o `accelerator`, em kilobytes.
 
-```
+```cpp
 size_t get_dedicated_memory() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A memória dedicada para o `accelerator`, em quilobytes.
+A memória dedicada para o `accelerator`, em kilobytes.
 
-##  <a name="get_default_cpu_access_type"></a> get_default_cpu_access_type
+## <a name="get_default_cpu_access_type"></a>get_default_cpu_access_type
 
-Obtém o access_type da cpu padrão para os buffers criados neste acelerador
+Obter a access_type de CPU padrão para buffers criados neste acelerador
 
-```
+```cpp
 access_type get_default_cpu_access_type() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O access_type da cpu padrão para os buffers criados neste acelerador.
+A access_type de CPU padrão para buffers criados neste acelerador.
 
-##  <a name="get_default_view"></a> get_default_view
+## <a name="get_default_view"></a>get_default_view
 
-Retorna o padrão `accelerator_view` objeto que está associado com o `accelerator`.
+Retorna o objeto de `accelerator_view` padrão que está associado ao `accelerator`.
 
-```
+```cpp
 accelerator_view get_default_view() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O padrão `accelerator_view` objeto que está associado com o `accelerator`.
+O objeto de `accelerator_view` padrão que está associado ao `accelerator`.
 
-##  <a name="get_description"></a> get_description
+## <a name="get_description"></a>get_description
 
-Retorna uma descrição breve do `accelerator` dispositivo.
+Retorna uma breve descrição do dispositivo `accelerator`.
 
-```
+```cpp
 std::wstring get_description() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma breve descrição do `accelerator` dispositivo.
+Uma breve descrição do dispositivo `accelerator`.
 
-##  <a name="get_device_path"></a> get_device_path
+## <a name="get_device_path"></a>get_device_path
 
 Retorna o caminho do acelerador. O caminho é exclusivo no sistema.
 
-```
+```cpp
 std::wstring get_device_path() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O caminho de instância de dispositivo exclusivo de todo o sistema.
+O caminho de instância de dispositivo exclusivo em todo o sistema.
 
-##  <a name="get_has_display"></a> get_has_display
+## <a name="get_has_display"></a>get_has_display
 
-Retorna um valor booliano que indica se o `accelerator` pode gerar uma exibição.
+Retorna um valor booliano que indica se a `accelerator` pode gerar uma saída para uma exibição.
 
-```
+```cpp
 bool get_has_display() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**Verdadeiro** se o `accelerator` pode gerar uma exibição; caso contrário, **falso**.
+**true** se o `accelerator` puder gerar uma saída para uma exibição; caso contrário, **false**.
 
-##  <a name="get_is_debug"></a> get_is_debug
+## <a name="get_is_debug"></a>get_is_debug
 
-Determina se o `accelerator` tem a camada DEBUG ativada para o relatório de erro extensos.
+Determina se o `accelerator` tem a camada de depuração habilitada para relatórios de erro extensivos.
 
-```
+```cpp
 bool get_is_debug() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**Verdadeiro** se o `accelerator` tem a camada DEBUG ativada para o relatório de erro extensos. Caso contrário, **falsos**.
+**true** se o `accelerator` tiver a camada de depuração habilitada para relatórios de erro extensivos. Caso contrário, **false**.
 
-##  <a name="get_is_emulated"></a> get_is_emulated
+## <a name="get_is_emulated"></a>get_is_emulated
 
-Determina se o `accelerator` é emulada.
+Determina se o `accelerator` é emulado.
 
-```
+```cpp
 bool get_is_emulated() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**Verdadeiro** se o `accelerator` é emulada. Caso contrário, **falsos**.
+**true** se o `accelerator` for emulado. Caso contrário, **false**.
 
-##  <a name="get_supports_cpu_shared_memory"></a> get_supports_cpu_shared_memory
+## <a name="get_supports_cpu_shared_memory"></a>get_supports_cpu_shared_memory
 
-Retorna um valor booliano que indica se o acelerador dá suporte a memória acessível tanto pelo Acelerador e a CPU.
+Retorna um valor booliano que indica se o acelerador dá suporte à memória acessível pelo acelerador e pela CPU.
 
-```
+```cpp
 bool get_supports_cpu_shared_memory() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**Verdadeiro** se o oferece suporte ao acelerador CPU compartilhado memória; caso contrário, **falso**.
+**true** se o acelerador der suporte à memória compartilhada da CPU; caso contrário, **false**.
 
-##  <a name="get_supports_double_precision"></a> get_supports_double_precision
+## <a name="get_supports_double_precision"></a>get_supports_double_precision
 
-Retorna um valor booliano que indica se o Acelerador oferece suporte a matemática de precisão dupla, incluindo múltipla adição fundida multiplicar adicionar (FMA), divisão, recíproco e a conversão entre **int** e **duplo**
+Retorna um valor booliano que indica se o acelerador dá suporte a matemática de precisão dupla, incluindo FMA (adição de multiplicação) com fusível, divisão, recíproca e conversão entre **int** e **Double**
 
-```
+```cpp
 bool get_supports_double_precision() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**Verdadeiro** se o Acelerador oferece suporte a matemática de precisão dupla; caso contrário, **falso**.
+**true** se o acelerador der suporte a matemática de precisão dupla; caso contrário, **false**.
 
-##  <a name="get_supports_limited_double_precision"></a> get_supports_limited_double_precision
+## <a name="get_supports_limited_double_precision"></a>get_supports_limited_double_precision
 
-Retorna um valor booliano que indica se o acelerador limitou suporte para matemática de precisão dupla. Se o acelerador tem somente suporte limitado, em seguida, fundido multiply adicionar (FMA), divisão, recíproco e a conversão entre **int** e **duplo** não têm suporte.
+Retorna um valor booliano que indica se o acelerador tem suporte limitado para matemática de precisão dupla. Se o acelerador tiver apenas suporte limitado, a FMA (adição de multiplicação com fusível), divisão, recíproca e conversão entre **int** e **Double** não terá suporte.
 
-```
+```cpp
 bool get_supports_limited_double_precision() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**Verdadeiro** se o acelerador limitou suporte para matemática de precisão dupla; caso contrário, **falso**.
+**true** se o acelerador tiver suporte limitado para matemática de precisão dupla; caso contrário, **false**.
 
-##  <a name="get_version"></a> get_version
+## <a name="get_version"></a>get_version
 
 Retorna a versão do `accelerator`.
 
-```
+```cpp
 unsigned int get_version() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A versão do `accelerator`.
 
-##  <a name="has_display"></a> has_display
+## <a name="has_display"></a>has_display
 
-Obtém um valor booliano que indica se o `accelerator` pode gerar uma exibição.
+Obtém um valor booliano que indica se a `accelerator` pode gerar uma saída para uma exibição.
 
-```
+```cpp
 __declspec(property(get= get_has_display)) bool has_display;
 ```
 
-##  <a name="is_debug"></a> is_debug
+## <a name="is_debug"></a>is_debug
 
-Obtém um valor booliano que indica se o `accelerator` tem a camada DEBUG ativada para o relatório de erro extensos.
+Obtém um valor booliano que indica se o `accelerator` tem a camada de depuração habilitada para relatórios de erros extensos.
 
-```
+```cpp
 __declspec(property(get= get_is_debug)) bool is_debug;
 ```
 
-##  <a name="is_emulated"></a> is_emulated
+## <a name="is_emulated"></a>is_emulated
 
-Obtém um valor booliano que indica se o `accelerator` é emulada.
+Obtém um valor booliano que indica se o `accelerator` é emulado.
 
-```
+```cpp
 __declspec(property(get= get_is_emulated)) bool is_emulated;
 ```
 
-##  <a name="operator_neq"></a> operador! =
+## <a name="operator_neq"></a>operador! =
 
-Compara essa `accelerator` objeto com outro e retorna **falsos** se eles forem iguais; caso contrário, retornará **true**.
+Compara esse `accelerator` objeto com outro e retorna **false** se eles forem os mesmos; caso contrário, retornará **true**.
 
-```
+```cpp
 bool operator!= (const accelerator& _Other) const;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *_Other*<br/>
-O `accelerator` objeto a ser comparado com este.
+O objeto `accelerator` a ser comparado com este.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**False** se os dois `accelerator` objetos forem iguais; caso contrário, **verdadeiro**.
+**false** se os dois objetos de `accelerator` são os mesmos; caso contrário, **true**.
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>operador =
 
-Copia o conteúdo especificado `accelerator` objeto para esse outro.
+Copia o conteúdo do objeto de `accelerator` especificado para este.
 
-```
+```cpp
 accelerator& operator= (const accelerator& _Other);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *_Other*<br/>
-O `accelerator` objeto do qual copiar.
+O objeto `accelerator` do qual copiar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma referência a este `accelerator` objeto.
+Uma referência a este objeto de `accelerator`.
 
-##  <a name="operator_eq_eq"></a> operator==
+## <a name="operator_eq_eq"></a>operador = =
 
-Compara essa `accelerator` objeto com outro e retorna **verdadeira** se eles forem iguais; caso contrário, retornará **false**.
+Compara esse `accelerator` objeto com outro e retorna **true** se eles forem os mesmos; caso contrário, retornará **false**.
 
-```
+```cpp
 bool operator== (const accelerator& _Other) const;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *_Other*<br/>
-O `accelerator` objeto a ser comparado com este.
+O objeto `accelerator` a ser comparado com este.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**Verdadeiro** se a outra `accelerator` objeto é o mesmo que isso `accelerator` do objeto; caso contrário, **false**.
+**true** se o outro objeto de `accelerator` for o mesmo `accelerator` objeto; caso contrário, **false**.
 
-##  <a name="set_default"></a> set_default
+## <a name="set_default"></a>set_default
 
-Define o acelerador padrão a ser usado para qualquer operação que usa implicitamente o acelerador padrão. Esse método é bem-sucedido somente se o acelerador padrão selecionado em tempo de execução já não tiver sido usado em uma operação que usa implicitamente o acelerador padrão
+Define o acelerador padrão a ser usado para qualquer operação que usa implicitamente o acelerador padrão. Esse método só terá sucesso se o acelerador padrão selecionado pelo tempo de execução ainda não tiver sido usado em uma operação que usa implicitamente o acelerador padrão
 
-```
+```cpp
 static inline bool set_default(std::wstring _Path);
 ```
 
@@ -508,268 +508,58 @@ static inline bool set_default(std::wstring _Path);
 *_Path*<br/>
 O caminho para o acelerador.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**True** se a chamada tiver êxito na configuração do acelerador padrão. Caso contrário, **falsos**.
+**true** se a chamada tiver sucesso ao definir o acelerador padrão. Caso contrário, **false**.
 
-##  <a name="set_default_cpu_access_type"></a> set_default_cpu_access_type
+## <a name="set_default_cpu_access_type"></a>set_default_cpu_access_type
 
-Defina o access_type do cpu padrão para matrizes criadas neste acelerador ou para alocações de memória implícitas como parte de array_views acessados neste acelerador. Esse método é bem-sucedido somente se o default_cpu_access_type do acelerador ainda não tiver sido substituída por uma chamada anterior a esse método e o default_cpu_access_type selecionado em tempo de execução para este acelerador ainda não foi usado para alocar uma matriz ou para uma alocação de memória implícitas um array_view acessado nesse acelerador.
+Defina a access_type de CPU padrão para matrizes criadas neste acelerador ou para alocações de memória implícita como parte do array_views acessado neste acelerador. Esse método só terá sucesso se o default_cpu_access_type para o acelerador ainda não tiver sido substituído por uma chamada anterior para esse método e o tempo de execução selecionado default_cpu_access_type para esse acelerador ainda não tiver sido usado para alocar uma matriz ou para uma alocação de memória implícita fazendo backup de um array_view acessado neste acelerador.
 
-```
+```cpp
 bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *_Default_cpu_access_type*<br/>
-O access_type da cpu padrão a ser usada para alocações de memória de matriz/array_view neste acelerador.
+A access_type de CPU padrão a ser usada para alocações de memória de array_view/matriz neste acelerador.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um valor booliano que indica se o access_type da cpu padrão para o acelerador foi definido com êxito.
+Um valor booliano que indica se a access_type de CPU padrão para o acelerador foi definida com êxito.
 
-##  <a name="supports_cpu_shared_memory"></a> supports_cpu_shared_memory
+## <a name="supports_cpu_shared_memory"></a>supports_cpu_shared_memory
 
-Obtém um valor booliano que indica se o `accelerator` dá suporte a memória compartilhada.
+Obtém um valor booliano que indica se o `accelerator` dá suporte à memória compartilhada.
 
-```
+```cpp
 __declspec(property(get= get_supports_cpu_shared_memory)) bool supports_cpu_shared_memory;
 ```
 
-##  <a name="supports_double_precision"></a> supports_double_precision
+## <a name="supports_double_precision"></a>supports_double_precision
 
-Obtém um valor booliano que indica se o Acelerador oferece suporte a matemática de precisão dupla.
+Obtém um valor booliano que indica se o acelerador dá suporte a matemática de precisão dupla.
 
-```
+```cpp
 __declspec(property(get= get_supports_double_precision)) bool supports_double_precision;
 ```
 
-##  <a name="supports_limited_double_precision"></a> supports_limited_double_precision
+## <a name="supports_limited_double_precision"></a>supports_limited_double_precision
 
-Obtém um valor booliano que indica se o acelerador limitou suporte para matemática de precisão dupla. Se o acelerador tem somente suporte limitado, em seguida, fundido multiply adicionar (FMA), divisão, recíproco e a conversão entre `int` e `double` não têm suporte.
+Obtém um valor booliano que indica se o acelerador tem suporte limitado para matemática de precisão dupla. Se o acelerador tiver apenas suporte limitado, a FMA (adição de multiplicação com fusível), divisão, recíproca e conversão entre `int` e `double` não terá suporte.
 
-```
+```cpp
 __declspec(property(get= get_supports_limited_double_precision)) bool supports_limited_double_precision;
 ```
 
-##  <a name="version"></a> Versão
+## <a name="version"></a>Versão
 
-Obtém a versão do `accelerator`.
+Obtém a versão de `accelerator`.
 
-```
+```cpp
 __declspec(property(get= get_version)) unsigned int version;
 ```
-
-##  <a name="dtor"></a> </a> ~accelerator_view
-
-Destrói a [accelerator_view](accelerator-view-class.md) objeto.
-
-```
-~accelerator_view();
-```
-
-### <a name="return-value"></a>Valor de retorno
-
-##  <a name="accelerator"></a> Acelerador
-
-Obtém o `accelerator` do objeto para o [accelerator_view](accelerator-view-class.md) objeto.
-
-```
-__declspec(property(get= get_accelerator)) Concurrency::accelerator accelerator;
-```
-
-##  <a name="ctor"></a> accelerator_view
-
-Inicializa uma nova instância dos [accelerator_view](accelerator-view-class.md) classe copiando uma existente `accelerator_view` objeto.
-
-```
-accelerator_view(const accelerator_view& _Other);
-```
-
-### <a name="parameters"></a>Parâmetros
-
-*_Other*<br/>
-O `accelerator_view` objeto a ser copiado.
-
-##  <a name="create_marker"></a> create_marker
-
-Retorna um futuro para controlar a conclusão de todos os comandos enviados até agora a este `accelerator_view` objeto.
-
-```
-concurrency::completion_future create_marker();
-```
-
-### <a name="return-value"></a>Valor de retorno
-
-Um futuro para controlar a conclusão de todos os comandos enviados até agora a este `accelerator_view` objeto.
-
-##  <a name="flush"></a> liberar
-
-Envia todos os comandos pendentes na fila para o [accelerator_view](accelerator-view-class.md) objeto para o acelerador para execução.
-
-```
-void flush();
-```
-
-### <a name="return-value"></a>Valor de retorno
-
-Retorna `void`.
-
-##  <a name="get_accelerator"></a> get_accelerator
-
-Retorna o `accelerator` do objeto para o [accelerator_view](accelerator-view-class.md) objeto.
-
-```
-accelerator get_accelerator() const;
-```
-
-### <a name="return-value"></a>Valor de retorno
-
-O `accelerator` do objeto para o `accelerator_view` objeto.
-
-##  <a name="get_is_auto_selection"></a> get_is_auto_selection
-
-Retorna um valor booliano que indica se o tempo de execução selecionará automaticamente um acelerador apropriado quando accelerator_view for passado para um [parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each).
-
-```
-bool get_is_auto_selection() const;
-```
-
-### <a name="return-value"></a>Valor de retorno
-
-**Verdadeiro** se o tempo de execução selecionará automaticamente um acelerador apropriado; caso contrário, **falso**.
-
-##  <a name="get_is_debug"></a> get_is_debug
-
-Retorna um valor booliano que indica se o [accelerator_view](accelerator-view-class.md) objeto tem a camada DEBUG ativada para o relatório de erro extensos.
-
-```
-bool get_is_debug() const;
-```
-
-### <a name="return-value"></a>Valor de retorno
-
-Um valor booliano que indica se o `accelerator_view` objeto tem a camada DEBUG ativada para o relatório de erro extensos.
-
-##  <a name="get_queuing_mode"></a> get_queuing_mode
-
-Retorna o modo de fila para o [accelerator_view](accelerator-view-class.md) objeto.
-
-```
-queuing_mode get_queuing_mode() const;
-```
-
-### <a name="return-value"></a>Valor de retorno
-
-O modo de fila para o `accelerator_view` objeto.
-
-##  <a name="get_version"></a> get_version
-
-Retorna a versão dos [accelerator_view](accelerator-view-class.md).
-
-```
-unsigned int get_version() const;
-```
-
-### <a name="return-value"></a>Valor de retorno
-
-A versão do `accelerator_view`.
-
-##  <a name="is_auto_selection"></a> is_auto_selection
-
-Obtém um valor booliano que indica se o tempo de execução selecionará automaticamente um acelerador apropriado quando accelerator_view for passado para um [parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each).
-
-```
-__declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
-```
-
-##  <a name="is_debug"></a> is_debug
-
-Obtém um valor booliano que indica se o [accelerator_view](accelerator-view-class.md) objeto tem a camada DEBUG ativada para o relatório de erro extensos.
-
-```
-__declspec(property(get= get_is_debug)) bool is_debug;
-```
-
-##  <a name="operator_neq"></a> operador! =
-
-Compara essa [accelerator_view](accelerator-view-class.md) objeto com outro e retorna `false` se eles forem iguais; caso contrário, retornará `true`.
-
-```
-bool operator!= (const accelerator_view& _Other) const;
-```
-
-### <a name="parameters"></a>Parâmetros
-
-*_Other*<br/>
-O `accelerator_view` objeto a ser comparado com este.
-
-### <a name="return-value"></a>Valor de retorno
-
-**False** se os dois objetos forem iguais; caso contrário, **verdadeiro**.
-
-##  <a name="operator_eq"></a> operator=
-
-Copia o conteúdo do especificado [accelerator_view](accelerator-view-class.md) esse objeto.
-
-```
-accelerator_view& operator= (const accelerator_view& _Other);
-```
-
-### <a name="parameters"></a>Parâmetros
-
-*_Other*<br/>
-O `accelerator_view` objeto do qual copiar.
-
-### <a name="return-value"></a>Valor de retorno
-
-Uma referência ao modificado `accelerator_view` objeto.
-
-##  <a name="operator_eq_eq"></a> operator==
-
-Compara essa [accelerator_view](accelerator-view-class.md) objeto com outro e retorna **verdadeiro** se eles forem iguais; caso contrário, retornará **false**.
-
-```
-bool operator== (const accelerator_view& _Other) const;
-```
-
-### <a name="parameters"></a>Parâmetros
-
-*_Other*<br/>
-O `accelerator_view` objeto a ser comparado com este.
-
-### <a name="return-value"></a>Valor de retorno
-
-**Verdadeiro** se os dois objetos forem iguais; caso contrário, **falso**.
-
-##  <a name="queuing_mode"></a> queuing_mode
-
-Obtém o modo de fila para o [accelerator_view](accelerator-view-class.md) objeto.
-
-```
-__declspec(property(get= get_queuing_mode)) Concurrency::queuing_mode queuing_mode;
-```
-
-##  <a name="version"></a> Versão
-
-Obtém a versão dos [accelerator_view](accelerator-view-class.md).
-
-```
-__declspec(property(get= get_version)) unsigned int version;
-```
-
-##  <a name="wait"></a> Aguarde
-
-Aguarda todos os comandos enviados para o [accelerator_view](accelerator-view-class.md) objeto ao fim.
-
-```
-void wait();
-```
-
-### <a name="return-value"></a>Valor de retorno
-
-Retorna `void`.
 
 ## <a name="see-also"></a>Consulte também
 

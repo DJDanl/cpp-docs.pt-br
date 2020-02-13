@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_memory class
 ms.assetid: 3aa7e682-8f13-4ae6-9188-31fb423956e4
-ms.openlocfilehash: ab498935039fad584220a84c388e337ee090c57d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4edc1db3c1a70a41f9a0493bd3dc484e27f99b44
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351177"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126442"
 ---
-# <a name="outofmemory-class"></a>Classe out_of_memory
+# <a name="out_of_memory-class"></a>Classe out_of_memory
 
-A exceção que é lançada quando um método falhar devido à falta de memória do sistema ou do dispositivo.
+A exceção que é lançada quando um método falha devido à falta de memória do sistema ou do dispositivo.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class out_of_memory : public runtime_exception;
 ```
 
@@ -29,7 +29,7 @@ class out_of_memory : public runtime_exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[Construtor de out_of_memory](#ctor)|Inicializa uma nova instância da classe `out_of_memory`.|
 
@@ -41,18 +41,18 @@ class out_of_memory : public runtime_exception;
 
 `out_of_memory`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** amprt. h
 
-**Namespace:** Concorrência
-## <a name="ctor"></a> out_of_memory
+**Namespace:** Simultaneidade
+## <a name="ctor"></a>out_of_memory
 
 Inicializa uma nova instância da classe.
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 explicit out_of_memory(
     const char * _Message ) throw();
 
@@ -64,7 +64,7 @@ out_of_memory () throw();
 *_Message*<br/>
 Uma descrição do erro.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma nova instância da classe `out_of_memory`.
 
