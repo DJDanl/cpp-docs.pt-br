@@ -1,6 +1,7 @@
 ---
 title: /ERRORREPORT (erros de vinculador internos do relatório)
-ms.date: 12/28/2017
+description: Guia de referência para as opções de linha de comando do Microsoft NMAKE.
+ms.date: 02/09/2020
 f1_keywords:
 - /ERRORREPORT
 - VC.Project.VCLinkerTool.ErrorReporting
@@ -9,51 +10,38 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-ms.openlocfilehash: 26cc157cb7247a3a2ea7c10b415df1160540c9ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e919d4f7eb59524b9145c8e3e59613e60aef1d2
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271723"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257683"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (erros de vinculador internos do relatório)
 
-> **/errorreport:**[ **none** | **prompt** | **queue** | **send** ]
+A opção **/errorreport** é preterida. A partir do Windows Vista, o relatório de erros é controlado pelas configurações [do relatório de erros do Windows (WER)](/windows/win32/wer/windows-error-reporting) .
 
-## <a name="arguments"></a>Arguments
+## <a name="syntax"></a>Sintaxe
 
-**none**<br/>
-Relatórios sobre erros internos do compilador não serão coletados ou enviados à Microsoft.
-
-**prompt**<br/>
-Solicita que você envie um relatório quando um erro interno do compilador for recebido. **prompt** é o padrão quando um aplicativo é compilado no ambiente de desenvolvimento.
-
-**queue**<br/>
-Enfileira o relatório de erros. Quando você fazer logon com privilégios de administrador, uma janela é exibida para que você pode relatar falhas desde a última vez em que você estivesse conectado no (você não precisará enviar relatórios de falhas mais de uma vez a cada três dias). **fila** é o padrão quando um aplicativo é compilado em um prompt de comando.
-
-**send**<br/>
-Envia automaticamente relatórios de erros do compilador interno à Microsoft se o relatório é habilitado pelas configurações de serviço de relatório de erros do Windows.
+> **/Errorreport:** \[ **None** \| **prompt** de \| **fila** \| **Enviar** )
 
 ## <a name="remarks"></a>Comentários
 
-O **/ERRORREPORT** opção permite que você forneça informações de ICE (erro) interno do compilador diretamente à Microsoft.
-
-A opção **/errorreport: Send** envia automaticamente informações de erro à Microsoft, se habilitado pelas configurações do serviço de relatório de erros do Windows.
+Os argumentos **/errorreport** são substituídos pelas configurações do serviço relatório de erros do Windows. O vinculador envia automaticamente relatórios de erros internos à Microsoft, se os relatórios estiverem habilitados pelo Relatório de Erros do Windows. Nenhum relatório será enviado se for desabilitado pelo Relatório de Erros do Windows.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra o projeto **páginas de propriedade** caixa de diálogo. Para obter mais informações, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter mais informações, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Abra o **propriedades de configuração** > **vinculador** > **avançado** página de propriedades.
+1. Abra as **Propriedades de configuração** > **vinculador** > página de propriedades **avançada** .
 
-1. Modificar a **relatório de erros** propriedade.
+1. Modifique a propriedade **relatório de erros** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
 - Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ErrorReporting%2A>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[/errorReport (relatar erros internos do compilador)](errorreport-report-internal-compiler-errors.md)<br/>
-[Referência de vinculador MSVC](linking.md)<br/>
-[Opções de vinculador MSVC](linker-options.md)
+\ de [referência do vinculador MSVC](linking.md)
+[Opções do vinculador MSVC](linker-options.md)

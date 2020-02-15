@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - max_size method
 ms.assetid: 56754753-9911-48fd-b463-ac06b2fa1aab
-ms.openlocfilehash: 302cd5695c6c087dfd9f333c1a5583468b615f44
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e03311c0fb279c0f9fdb69b30d3631470ee5bd4a
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450806"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257878"
 ---
-# <a name="container-classmaxsize"></a>Classe de Contêiner::max_size
+# <a name="container-classmax_size"></a>Classe de Contêiner::max_size
 
 > [!NOTE]
 > Este tópico está na documentação da C++ Microsoft como um exemplo não funcional de contêineres usados na biblioteca C++ padrão. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
@@ -20,11 +20,10 @@ Retorna o tamanho da sequência mais longa que o objeto pode controlar, em tempo
 
 ## <a name="syntax"></a>Sintaxe
 
-```
-
+```cpp
 size_type max_size() const;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe de contêiner de amostra](../standard-library/sample-container-class.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 23c6abffe7e433a0550c45502a12e9adaf652a33
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890140"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257982"
 ---
 # <a name="ltbitsetgt-operators"></a>Operadores &lt;bitset&gt;
 
@@ -33,7 +33,7 @@ operator&(
     const bitset<size>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 O primeiro dos dois bitsets cujos respectivos elementos devem ser combinados com o `AND` bit a bit.
@@ -77,14 +77,14 @@ bitset 3: 0001
 
 Insere uma representação de texto da sequência de bits no fluxo de saída.
 
-```
+```cpp
 template <class CharType, class Traits, size_t N>
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,
     const bitset<N>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 Um objeto do tipo **bitset\<N>** que deve ser inserido no fluxo de saída como uma cadeia de caracteres.
@@ -134,16 +134,16 @@ int main( )
 
 Lê uma cadeia de caracteres de bit em um bitset.
 
-```
+```cpp
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
     basic_istream<CharType, Traits>& i_str,
     bitset<N>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-\ *i_str*
+*i_str*\
 A cadeia de caracteres que é inserida no fluxo de entrada a ser inserido no bitset.
 
 \ *à direita*
@@ -151,7 +151,7 @@ O bitset que está recebendo os bits do fluxo de entrada.
 
 ### <a name="return-value"></a>Valor retornado
 
-A função template retorna a cadeia de caracteres *i_str*.
+A função de modelo retorna a cadeia de caracteres *i_str*.
 
 ### <a name="remarks"></a>Comentários
 
@@ -226,7 +226,7 @@ operator^(
     const bitset<size>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 O primeiro dos dois bitsets cujos respectivos elementos devem ser combinados com o `EXCLUSIVE-OR` bit a bit.
@@ -278,7 +278,7 @@ operator|(
     const bitset<size>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 O primeiro dos dois bitsets cujos respectivos elementos devem ser combinados com o `OR` bit a bit.

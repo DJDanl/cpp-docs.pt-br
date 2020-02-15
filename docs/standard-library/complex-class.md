@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 687665d2ad8bf80f4f2db07ce11c4866ff1ee903
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688258"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257969"
 ---
 # <a name="complex-class"></a>Classe complex
 
@@ -73,8 +73,6 @@ Existem especializações explícitas de modelo de classe complexos para os trê
 |[operator/=](#op_div_eq)|Divide um número complexo de destino por um divisor, que pode ser complexo ou ser do mesmo tipo que as partes reais e imaginárias do número complexo.|
 |[operator=](#op_eq)|Atribui um número a um número complexo de destino, em que o número atribuído pode ser complexo ou do mesmo tipo que as partes reais e imaginárias do número complexo ao qual ele está sendo atribuído.|
 
-
-
 ## <a name="complex"></a>complexos
 
 Constrói um número complexo com partes reais e imaginárias especificadas ou como uma cópia de algum outro número complexo.
@@ -89,12 +87,12 @@ constexpr complex(
     const complex<Other>& complexNum);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 *_RealVal*
+*_RealVal*\
 O valor da parte real usada para inicializar o número complexo que está sendo construído.
 
-@No__t_1 *_ImagVal*
+*_ImagVal*\
 O valor da parte imaginária usada para inicializar o número complexo que está sendo construído.
 
 \ *complexNum*
@@ -113,7 +111,7 @@ complex(const complex<Other>& right);
 
 é substituído por:
 
-```
+```cpp
 complex(const complex& right);
 ```
 
@@ -169,7 +167,7 @@ T imag() const;
 T imag(const T& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 Um número complexo cujo valor imaginário deve ser extraído.
@@ -226,7 +224,7 @@ complex<Type>& operator*=(const Type& right);
 complex<Type>& operator*=(const complex<Type>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 Um número complexo ou um número que é do mesmo tipo que o parâmetro do número complexo de destino.
@@ -311,7 +309,7 @@ complex<Type>& operator+=(const Type& right);
 complex<Type>& operator+=(const complex<Type>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 Um número complexo ou um número que é do mesmo tipo que o parâmetro do número complexo de destino.
@@ -414,12 +412,12 @@ complex<Type>& operator-=(const Type& _RealPart);
 complex<Type>& operator-=(const complex<Type>& complexNum);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *complexNum*
 Um número complexo a ser subtraído do número complexo de destino.
 
-@No__t_1 *_RealPart*
+*_RealPart*\
 Um número real a ser subtraído do número complexo de destino.
 
 ### <a name="return-value"></a>Valor retornado
@@ -522,12 +520,12 @@ complex<Type>& operator/=(const Type& _RealPart);
 complex<Type>& operator/=(const complex<Type>& complexNum);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *complexNum*
 Um número complexo a ser subtraído do número complexo de destino.
 
-@No__t_1 *_RealPart*
+*_RealPart*\
 Um número real a ser subtraído do número complexo de destino.
 
 ### <a name="return-value"></a>Valor retornado
@@ -624,7 +622,7 @@ complex<Type>& operator=(const complex<Other>& right);
 complex<Type>& operator=(const Type& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 Um número complexo ou um número que é do mesmo tipo que o parâmetro do número complexo de destino.
@@ -701,7 +699,7 @@ constexpr T real() const;
 T real(const T& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 Um número complexo cujo valor real deve ser extraído.
@@ -749,7 +747,7 @@ The imaginary part of c1 is c1.imag() = 3.
 
 Um tipo que representa o tipo de dados usado para representar as partes reais e imaginárias de um número complexo.
 
-```
+```cpp
 typedef Type value_type;
 ```
 
@@ -782,6 +780,6 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

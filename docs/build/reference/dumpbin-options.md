@@ -1,17 +1,18 @@
 ---
 title: Opções de DUMPBIN
-ms.date: 10/24/2019
+description: Guia de referência para as opções de linha de comando do utilitário do Microsoft DUMPBIN.
+ms.date: 02/09/2020
 f1_keywords:
 - dumpbin
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 81c66f1971294531a2904a0b681819476bcc1eb2
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: 98a4fd221d66b93f945667deadaba3180f8d3e66
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144549"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257722"
 ---
 # <a name="dumpbin-options"></a>Opções de DUMPBIN
 
@@ -33,7 +34,7 @@ DUMPBIN tem as seguintes opções:
 
 - [\[/DISASM: {BYTES\|nobytes}\]](disasm.md)
 
-- [/ERRORREPORT: {NONE | PROMPT | FILA | NOVAMENTE](errorreport-dumpbin-exe.md)
+- [/errorreport: {None | PROMPT | FILA | Enviar}](errorreport-dumpbin-exe.md) (preterido)
 
 - [/EXPORTS](dash-exports.md)
 
@@ -71,9 +72,9 @@ DUMPBIN tem as seguintes opções:
 
 - [/TLS](tls.md)
 
-Para listar as opções com suporte do DUMPBIN na linha de comando, use a opção **/?** Option.
+Para listar as opções com suporte do DUMPBIN na linha de comando, use a opção **/?** opção.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Ferramentas de compilação MSVC adicionais](c-cpp-build-tools.md)\
 \ de [linha de comando DUMPBIN](dumpbin-command-line.md)

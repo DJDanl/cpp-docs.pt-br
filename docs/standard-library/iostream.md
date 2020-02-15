@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: 471b149eba32d163e6e3e54e1c2820bbe0b94133
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2906e802072c43a93c59ca40d15e032adeeeef97
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449039"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257800"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -32,7 +32,7 @@ Declara objetos que controlam a leitura e a gravação nos fluxos padrão. Essa 
 ```
 
 > [!NOTE]
-> A \<biblioteca de > iostream usa `#include <ios>`as `#include <streambuf>`instruções `#include <istream>`,, `#include <ostream>` e.
+> A biblioteca \<iostream > usa as instruções `#include <ios>`, `#include <streambuf>`, `#include <istream>`e `#include <ostream>`.
 
 ## <a name="remarks"></a>Comentários
 
@@ -44,7 +44,7 @@ Os objetos se encaixam em dois grupos:
 
 Depois de realizar determinadas operações em um fluxo, como a entrada padrão, não é possível realizar operações de uma orientação diferente no mesmo fluxo. Portanto, um programa não pode operar de maneira intercambiável em [CIN](#cin) e [wcin](#wcin), por exemplo.
 
-Todos os objetos declarados nesse cabeçalho compartilham uma propriedade peculiar — você pode presumir que eles são construídos antes de qualquer objeto estático que você definir, \<em uma unidade de tradução que inclua iostream >. Igualmente, você pode pressupor que esses objetos não sejam destruídos antes dos destruidores para esses objetos estáticos que você definir. (Os fluxos de saída são, no entanto, liberados durante o encerramento do programa.) Portanto, você pode, com segurança, ler ou gravar em fluxos padrão antes da inicialização do programa e após o encerramento do programa.
+Todos os objetos declarados nesse cabeçalho compartilham uma propriedade peculiar — você pode presumir que eles são construídos antes de qualquer objeto estático que você definir, em uma unidade de tradução que inclua \<iostream >. Igualmente, você pode pressupor que esses objetos não sejam destruídos antes dos destruidores para esses objetos estáticos que você definir. (No entanto, os fluxos de saída são liberados durante o encerramento do programa.) Portanto, você pode ler ou gravar com segurança nos fluxos padrão antes da inicialização do programa e após o encerramento do programa.
 
 No entanto, essa garantia não é universal. Um construtor estático pode chamar uma função em outra unidade de conversão. A função chamada não pode assumir que os objetos declarados neste cabeçalho foram construídos, considerando a ordem incerta em que as unidades de tradução participam da construção estática. Para usar esses objetos em tal contexto, primeiro você precisa criar um objeto da classe [ios_base::Init](../standard-library/ios-base-class.md#init).
 
@@ -69,13 +69,13 @@ O objeto `cerr` controla a saída para um buffer de fluxo associado ao objeto `s
 extern ostream cerr;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 Um objeto [ostream](../standard-library/ostream-typedefs.md#ostream).
 
 #### <a name="remarks"></a>Comentários
 
-O objeto controla inserções não armazenadas em buffer na saída de erro padrão como um fluxo de bytes. Após o objeto ser construído, a expressão `cerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) é diferente de zero e `cerr.tie() == &cout`.
+O objeto controla inserções não armazenadas em buffer na saída de erro padrão como um fluxo de bytes. Depois que o objeto é construído, a expressão `cerr.`[sinalizadores](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) é diferente de zero e `cerr.tie() == &cout`.
 
 #### <a name="example"></a>Exemplo
 
@@ -115,7 +115,7 @@ Especifica o fluxo global `cin`.
 extern istream cin;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 Um objeto [istream](../standard-library/istream-typedefs.md#istream).
 
@@ -166,7 +166,7 @@ Especifica o fluxo global `clog`.
 extern ostream clog;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 Um objeto [ostream](../standard-library/ostream-typedefs.md#ostream).
 
@@ -186,7 +186,7 @@ Especifica o fluxo global `cout`.
 extern ostream cout;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 Um objeto [ostream](../standard-library/ostream-typedefs.md#ostream).
 
@@ -206,13 +206,13 @@ Especifica o fluxo global `wcerr`.
 extern wostream wcerr;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 Um objeto [wostream](../standard-library/ostream-typedefs.md#wostream).
 
 #### <a name="remarks"></a>Comentários
 
-O objeto controla inserções não armazenadas em buffer na saída de erro padrão como um fluxo largo. Após o objeto ser construído, a expressão `wcerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) é diferente de zero.
+O objeto controla inserções não armazenadas em buffer na saída de erro padrão como um fluxo largo. Depois que o objeto é construído, a expressão `wcerr.`[sinalizadores](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) é diferente de zero.
 
 #### <a name="example"></a>Exemplo
 
@@ -226,7 +226,7 @@ Especifica o fluxo global `wcin`.
 extern wistream wcin;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 Um objeto [wistream](../standard-library/istream-typedefs.md#wistream).
 
@@ -246,7 +246,7 @@ Especifica o fluxo global `wclog`.
 extern wostream wclog;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 Um objeto [wostream](../standard-library/ostream-typedefs.md#wostream).
 
@@ -266,7 +266,7 @@ Especifica o fluxo global `wcout`.
 extern wostream wcout;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 Um objeto [wostream](../standard-library/ostream-typedefs.md#wostream).
 
@@ -280,7 +280,7 @@ Consulte [cerr](#cerr) para ver um exemplo de como usar `wcout`.
 
 Instâncias de `CString` em uma instrução `wcout` devem ser convertidas em `const wchar_t*`, conforme mostrado no exemplo a seguir.
 
-```
+```cpp
 CString cs("meow");
 
 wcout <<(const wchar_t*) cs <<endl;
@@ -288,7 +288,7 @@ wcout <<(const wchar_t*) cs <<endl;
 
 Para obter mais informações, consulte [Operações CString básicas](../atl-mfc-shared/basic-cstring-operations.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
