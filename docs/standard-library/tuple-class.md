@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 1727d3a12b7186d3cc868ef6bb78711774057407
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 9890a6a9dea1671f14b66897a80f4b49861dff2b
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688870"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257098"
 ---
 # <a name="tuple-class"></a>Classe tupla
 
@@ -20,7 +20,7 @@ Encapsula uma sequência de comprimento fixo de elementos.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 class tuple {
    tuple();
    explicit tuple(P1, P2, ..., PN); // 0 < N
@@ -39,9 +39,9 @@ class tuple {
 };
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 *TN*
+\ *TN*
 O tipo do enésimo elemento de tupla.
 
 ## <a name="remarks"></a>Comentários
@@ -135,9 +135,9 @@ template <class U1, class U2>
    tuple& operator=(pair<U1, U2>&& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*@No__t_1*
+*\*
 O tipo do enésimo elemento de tupla copiado.
 
 \ *à direita*
@@ -207,7 +207,7 @@ template <class... Types>
    void swap(tuple<Types...&> left, tuple<Types...&> right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Uma tupla cujos elementos devem ser trocados com os do *direito*de tupla.
@@ -244,9 +244,9 @@ template <class U1, class U2>
    constexpr tuple(pair<U1, U2>&&);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*@No__t_1*
+*\*
 O tipo do enésimo elemento de tupla copiado.
 
 \ *à direita*

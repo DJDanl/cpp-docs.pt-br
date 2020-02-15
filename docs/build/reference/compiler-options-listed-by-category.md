@@ -1,15 +1,16 @@
 ---
 title: Opções de compilador listadas por categoria
-ms.date: 01/08/2020
+description: Listagem de referência por categoria das opções de linhaC++ de comando do Microsoft C/Compiler.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 191ea3d5d6f4647f7130757a4657820483d212b5
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: d29076e6eae4bcbd15a4bc50bb48477e3f93152d
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034578"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257709"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opções de compilador listadas por categoria
 
@@ -17,7 +18,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para uma li
 
 ## <a name="optimization"></a>Optimization
 
-|{1&gt;Opção&lt;1}|Finalidade|
+|Opção|Finalidade|
 |------------|-------------|
 |[/O1](o1-o2-minimize-size-maximize-speed.md)|Cria um código pequeno.|
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|Cria um código rápido.|
@@ -33,7 +34,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para uma li
 
 ## <a name="code-generation"></a>Geração de código
 
-|{1&gt;Opção&lt;1}|Finalidade|
+|Opção|Finalidade|
 |------------|-------------|
 |[/Arch](arch-x86.md)|Usa instruções SSE ou SSE2 na geração do código. (apenas x86)|
 |[/clr](clr-common-language-runtime-compilation.md)|Produz um arquivo de saída a ser executado no Common Language Runtime.|
@@ -77,7 +78,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para uma li
 
 ## <a name="output-files"></a>Arquivos de saída
 
-|{1&gt;Opção&lt;1}|Finalidade|
+|Opção|Finalidade|
 |------------|-------------|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Processa comentários de documentação para um arquivo XML.|
 |[/FA](fa-fa-listing-file.md)|Configura um arquivo de listagem de assembly.|
@@ -88,11 +89,11 @@ Este artigo contém uma lista categórica de opções do compilador. Para uma li
 |[/FM](fm-name-mapfile.md)|Cria um arquivo de mapa.|
 |[/Fo](fo-object-file-name.md)|Cria um arquivo de objeto.|
 |[/FP](fp-name-dot-pch-file.md)|Especifica um nome de arquivo de cabeçalho pré-compilado.|
-|[/FR,/fr](fr-fr-create-dot-sbr-file.md)|Nome gerou arquivos de navegador. sbr.|
+|[/FR,/fr](fr-fr-create-dot-sbr-file.md)|Nome gerado *`.sbr`* arquivos de navegador.|
 
 ## <a name="preprocessor"></a>Pré-processador
 
-|{1&gt;Opção&lt;1}|Finalidade|
+|Opção|Finalidade|
 |------------|-------------|
 |[/AI](ai-specify-metadata-directories.md)|Especifica um diretório a ser pesquisado para resolver as referências de arquivo passadas para a diretiva [#using](../../preprocessor/hash-using-directive-cpp.md) .|
 |[/C](c-preserve-comments-during-preprocessing.md)|Preserva comentários durante o pré-processamento.|
@@ -108,11 +109,11 @@ Este artigo contém uma lista categórica de opções do compilador. Para uma li
 |[/u](u-u-undefine-symbols.md)|Remove todas as macros predefinidas.|
 |[/X](x-ignore-standard-include-paths.md)|Ignora o diretório de inclusão padrão.|
 
-## <a name="language"></a>Idioma
+## <a name="language"></a>Linguagem
 
-|{1&gt;Opção&lt;1}|Finalidade|
+|Opção|Finalidade|
 |------------|-------------|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|Controlar a avaliação de constexpr em tempo de compilação.|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|Controle a avaliação **constexpr** no momento da compilação.|
 |[/OpenMP](openmp-enable-openmp-2-0-support.md)|Habilita [#pragma OMP](../../preprocessor/omp.md) no código-fonte.|
 |[/vd](vd-disable-construction-displacements.md)|Suprime ou habilita membros da classe `vtordisp` ocultos.|
 |[/VMB](vmb-vmg-representation-method.md)|Usa a melhor base de ponteiros para membros.|
@@ -128,38 +129,38 @@ Este artigo contém uma lista categórica de opções do compilador. Para uma li
 |[/ZH](zh.md)|Especifica MD5, SHA-1 ou SHA-256 para somas de verificação nas informações de depuração.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Inclui informações de depuração em um banco de dados do programa compatível com Editar e Continuar. (apenas x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Gera informações completas de depuração.|
-|[/Zl](zl-omit-default-library-name.md)|Remove o nome da biblioteca padrão do arquivo .obj.|
+|[/Zl](zl-omit-default-library-name.md)|Remove o nome da biblioteca padrão do arquivo *`.obj`* .|
 |[/ZP](zp-struct-member-alignment.md) *n*|Empacota membros da estrutura.|
 |[/ZS](zs-syntax-check-only.md)|Verifica apenas a sintaxe.|
 |[/ZW](zw-windows-runtime-compilation.md)|Produz um arquivo de saída para ser executado no Windows Runtime.|
 
 ## <a name="linking"></a>Vinculação
 
-|{1&gt;Opção&lt;1}|Finalidade|
+|Opção|Finalidade|
 |------------|-------------|
 |[F](f-set-stack-size.md)|Define o tamanho da pilha.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Cria uma biblioteca de vínculo dinâmico.|
 |[/LDd](md-mt-ld-use-run-time-library.md)|Cria uma biblioteca de vínculo dinâmico de depuração.|
 |[/link](link-pass-options-to-linker.md)|Passa a opção especificada para LINK.|
 |[/LN](ln-create-msil-module.md)|Cria um módulo MSIL.|
-|[/MD](md-mt-ld-use-run-time-library.md)|Compila para criar DLL com multithread usando MSVCRT.lib.|
-|[/MDd](md-mt-ld-use-run-time-library.md)|Compila para criar DLL com multithread de depuração usando MSVCRTD.lib.|
-|[/MT](md-mt-ld-use-run-time-library.md)|Compila para criar um arquivo executável com multithread usando LIBCMT.lib.|
-|[/MTd](md-mt-ld-use-run-time-library.md)|Compila para criar um arquivo executável com multithread de depuração usando LIBCMTD.lib.|
+|[/MD](md-mt-ld-use-run-time-library.md)|Compila para criar uma DLL multithread, usando *msvcrt. lib*.|
+|[/MDd](md-mt-ld-use-run-time-library.md)|Compila para criar uma DLL de depuração multithread, usando *MSVCRTD. lib*.|
+|[/MT](md-mt-ld-use-run-time-library.md)|Compila para criar um arquivo executável multi-threaded, usando *LIBCMT. lib*.|
+|[/MTd](md-mt-ld-use-run-time-library.md)|Compila para criar um arquivo executável com vários threads de depuração, usando *LIBCMTD. lib*.|
 
 ## <a name="miscellaneous"></a>Diversos
 
-|{1&gt;Opção&lt;1}|Finalidade|
+|Opção|Finalidade|
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|Lista as opções do compilador.|
 |[@](at-specify-a-compiler-response-file.md)|Especifica um arquivo de resposta.|
 |[/Analyze](analyze-code-analysis.md)|Habilita a análise de código.|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Aumenta o número de seções endereçáveis em um arquivo .obj.|
 |[/c](c-compile-without-linking.md)|Compila sem vinculação.|
-|[/cgthreads](cgthreads-code-generation-threads.md)|Especifica o número de threads cl.exe a serem usados na otimização e na geração de código.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Permite que você forneça informações de erro interno do compilador (ICE) diretamente para C++ a equipe da Microsoft.|
-|[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Exibe o caminho completo dos arquivos de código-fonte passados para cl.exe em texto de diagnóstico.|
-|[/FS](fs-force-synchronous-pdb-writes.md)|Força a serialização de gravações no arquivo de PDB (banco de dados do programa) por meio de MSPDBSRV.EXE.|
+|[/cgthreads](cgthreads-code-generation-threads.md)|Especifica o número de threads *CL. exe* a serem usados para otimização e geração de código.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| Preterido. O relatório de erros é controlado pelas configurações [do relatório de erros do Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
+|[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Exibe o caminho completo dos arquivos de código-fonte passados para *CL. exe* no texto de diagnóstico.|
+|[/FS](fs-force-synchronous-pdb-writes.md)|Força as gravações no arquivo PDB a serem serializadas por meio de *MSPDBSRV. EXE*.|
 |[/H](h-restrict-length-of-external-names.md)|Preterido. Restringe o tamanho de nomes externos (públicos).|
 |[/HELP](help-compiler-command-line-help.md)|Lista as opções do compilador.|
 |[/J](j-default-char-type-is-unsigned.md)|Altera o tipo `char` padrão.|
@@ -184,7 +185,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para uma li
 |[/wo](compiler-option-warning-level.md)|Exibe o aviso especificado apenas uma vez.|
 |[/WV](compiler-option-warning-level.md)|Desabilita os avisos introduzidos pelas versões posteriores do compilador.|
 |[/WX](compiler-option-warning-level.md)|Trata avisos como erros.|
-|[/Yc](yc-create-precompiled-header-file.md)|Criada. Arquivo PCH.|
+|[/Yc](yc-create-precompiled-header-file.md)|Criar *`.PCH`* arquivo.|
 |[/YD](yd-place-debug-information-in-object-file.md)|Preterido. Coloca informações de depuração completas em todos os arquivos de objeto. Em vez disso, use [/Zi](z7-zi-zi-debug-information-format.md) .|
 |[/YL](yl-inject-pch-reference-for-debug-library.md)|Injeta uma referência PCH durante a criação de uma biblioteca de depuração.|
 |[/Yu](yu-use-precompiled-header-file.md)|Usa um arquivo de cabeçalho pré-compilado durante a compilação.|
@@ -201,18 +202,19 @@ Este artigo contém uma lista categórica de opções do compilador. Para uma li
 
 ## <a name="experimental-options"></a>Opções experimentais
 
-As opções experimentais só podem ser suportadas por determinadas versões do compilador e podem se comportar de forma diferente em versões diferentes do compilador. Geralmente, a melhor documentação, ou apenas, para opções experimentais está [no C++ blog da equipe da Microsoft](https://devblogs.microsoft.com/cppblog/).
+As opções experimentais só podem ser suportadas por determinadas versões do compilador. Eles também podem se comportar de forma diferente em versões diferentes do compilador. Geralmente, a melhor documentação, ou apenas, para opções experimentais está [no C++ blog da equipe da Microsoft](https://devblogs.microsoft.com/cppblog/).
 
-|{1&gt;Opção&lt;1}|Finalidade|
+|Opção|Finalidade|
 |------------|-------------|
 |[/experimental: módulo](experimental-module.md)|Habilita o suporte a módulo experimental.|
 |[/experimental: pré-processador](experimental-preprocessor.md)|Habilita o suporte a pré-processador de conformidade experimental.|
 
 ## <a name="deprecated-and-removed-compiler-options"></a>Opções de compilador preteridas e removidas
 
-|{1&gt;Opção&lt;1}|Finalidade|
+|Opção|Finalidade|
 |------------|-------------|
 |[/CLR: noAssembly](clr-common-language-runtime-compilation.md)|Preterido. Use [/LN (Criar módulo da MSIL)](ln-create-msil-module.md).|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| Preterido. O relatório de erros é controlado pelas configurações [do relatório de erros do Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
 |[/Fr](fr-fr-create-dot-sbr-file.md)|Preterido. Cria um arquivo de informações de procura sem variáveis locais.|
 |[/GE](ge-enable-stack-probes.md)|Preterido. Ativa investigações de pilha. Ativado por padrão.|
 |[/Gm](gm-enable-minimal-rebuild.md)|Preterido. Habilita recompilação mínima.|
@@ -221,15 +223,15 @@ As opções experimentais só podem ser suportadas por determinadas versões do 
 |[/H](h-restrict-length-of-external-names.md)|Preterido. Restringe o tamanho de nomes externos (públicos).|
 |[/Og](og-global-optimizations.md)|Preterido. Usa otimizações globais.|
 |[/QIfist](qifist-suppress-ftol.md)|Preterido. Uma vez usado para especificar como converter de um tipo de ponto flutuante para um tipo integral.|
-|[/V](v-version-number.md)|Preterido. Define a cadeia de caracteres da versão do arquivo. obj.|
+|[/V](v-version-number.md)|Preterido. Define a cadeia de caracteres de versão do arquivo *`.obj`* .|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|Obsoleto. Detecta problemas de portabilidade de 64 bits.|
 |[/YD](yd-place-debug-information-in-object-file.md)|Preterido. Coloca informações de depuração completas em todos os arquivos de objeto. Em vez disso, use [/Zi](z7-zi-zi-debug-information-format.md) .|
 |[/Zc: forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|Preterido. Desabilita a conformidade no escopo do loop for.|
 |[/Ze](za-ze-disable-language-extensions.md)|Preterido. Habilita extensões de linguagem.|
 |[/Zg](zg-generate-function-prototypes.md)|Removido no Visual Studio 2015. Gera protótipos de função.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência de compilação C/C++](c-cpp-building-reference.md)<br/>
-[Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
+[C/C++ compilando](c-cpp-building-reference.md)\ de referência
+[Opções do compilador MSVC](compiler-options.md)\
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

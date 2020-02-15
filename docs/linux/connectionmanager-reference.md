@@ -1,18 +1,18 @@
 ---
-title: Referência de ConnectionManager
+title: Referência do ConnectionManager
 ms.date: 01/17/2020
 f1_keywords:
 - ConnectionManager
 helpviewer_keywords:
 - ConnectionManager program
-ms.openlocfilehash: 2b01bfbcd81984e7ddf32cd5ab0485fff17b3d2b
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 1c6236cedba88714e9918dd2c096b5e78d2f08ce
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520896"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258027"
 ---
-# <a name="connectionmanager-reference"></a>Referência de ConnectionManager
+# <a name="connectionmanager-reference"></a>Referência do ConnectionManager
 
 ::: moniker range="<=vs-2017"
 
@@ -22,7 +22,7 @@ O ConnectionManager. exe está disponível no Visual Studio 2019 versão 16,5 e 
 
 ::: moniker range="vs-2019"
 
-O ConnectionManager. exe é um utilitário de linha de comando para gerenciar conexões de desenvolvimento remoto fora do Visual Studio. Ele é útil para tarefas como o provisionamento de uma nova máquina de desenvolvimento. Ou use-o para configurar o Visual Studio para integração contínua. Você pode usá-lo em uma janela de Prompt de Comando do Desenvolvedor. Para obter mais informações sobre o Prompt de Comando do Desenvolvedor, consulte [usar o C++ conjunto de ferramentas da Microsoft na linha de comando](..\build\building-on-the-command-line.md).
+O ConnectionManager. exe é um utilitário de linha de comando para gerenciar conexões de desenvolvimento remoto fora do Visual Studio. Ele é útil para tarefas como o provisionamento de uma nova máquina de desenvolvimento. Ou use-o para configurar o Visual Studio para integração contínua. Você pode usá-lo em uma janela de Prompt de Comando do Desenvolvedor. Para obter mais informações sobre o Prompt de Comando do Desenvolvedor, consulte [usar o C++ conjunto de ferramentas da Microsoft na linha de comando](../build/building-on-the-command-line.md).
 
 O ConnectionManager. exe está disponível no Visual Studio 2019 versão 16,5 e posterior. Faz parte do desenvolvimento do **Linux com C++**  carga de trabalho no instalador do Visual Studio. Ele também é instalado automaticamente quando você escolhe o componente do **Gerenciador de conexões** no instalador. Ele está instalado em *% VCIDEInstallDir%\\ConnectionManagerExe do Linux\\\\\\ConnectionManager. exe*.
 
@@ -106,7 +106,7 @@ Esse comando Remove a conexão com a ID 1975957870 da lista de conexões.
 ConnectionManager.exe remove 1975957870
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Conectar-se ao seu sistema Linux de destino no Visual Studio](connect-to-your-remote-linux-computer.md)
 

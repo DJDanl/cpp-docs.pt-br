@@ -5,45 +5,44 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: f34d818c1829baba1740bf2776b2d47a8808bf68
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6b6e764acc9fa3410a44a4a11760933328365852
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243423"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257761"
 ---
-# <a name="ltunorderedsetgt-functions"></a>Funções &lt;unordered_set&gt;
+# <a name="ltunordered_setgt-functions"></a>Funções &lt;unordered_set&gt;
 
-## <a name="swap"></a> swap (unordered_set)
+## <a name="swap"></a>trocar (unordered_set)
 
 Alterna o conteúdo de dois contêineres.
 
-```
-
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_set <Key, Hash, Pred, Alloc>& left,
    unordered_set <Key, Hash, Pred, Alloc>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Chave*\
+\ de *chave*
 O tipo principal.
 
-*hash*\
+\ de *hash*
 O tipo de objeto da função de hash.
 
-*Pred*\
+\ *Pred*
 O tipo de objeto da função de comparação de igualdade.
 
-*ALLOC*\
+\ de *alocação*
 A classe do alocador.
 
-*À esquerda*\
+\ *à esquerda*
 O primeiro contêiner para alternância.
 
-*Certo*\
+\ *à direita*
 O segundo contêiner para alternância.
 
 ### <a name="remarks"></a>Comentários
@@ -103,35 +102,35 @@ return (0);
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a> swap (unordered_multiset)
+## <a name="swap_unordered_multiset"></a>trocar (unordered_multiset)
 
 Alterna o conteúdo de dois contêineres.
 
-```
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_multiset <Key, Hash, Pred, Alloc>& left,
    unordered_multiset <Key, Hash, Pred, Alloc>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Chave*\
+\ de *chave*
 O tipo principal.
 
-*hash*\
+\ de *hash*
 O tipo de objeto da função de hash.
 
-*Pred*\
+\ *Pred*
 O tipo de objeto da função de comparação de igualdade.
 
-*ALLOC*\
+\ de *alocação*
 A classe do alocador.
 
-*À esquerda*\
+\ *à esquerda*
 O primeiro contêiner para alternância.
 
-*Certo*\
+\ *à direita*
 O segundo contêiner para alternância.
 
 ### <a name="remarks"></a>Comentários

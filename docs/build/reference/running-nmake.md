@@ -1,6 +1,7 @@
 ---
 title: Executando NMAKE
-ms.date: 10/29/2019
+description: Guia de referência para as opções de linha de comando do Microsoft NMAKE.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - targets, building
 - response files, NMAKE
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - NMAKE program, running
 - command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
-ms.openlocfilehash: ed56b7cd69b683caa84f184d9d72e70aac12add3
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: bfada33a89c04d25bf7444cbf3b1e7ef3ed44385
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144545"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257580"
 ---
 # <a name="running-nmake"></a>Executando NMAKE
 
@@ -40,7 +41,7 @@ As opções de NMAKE são descritas na tabela a seguir. As opções são precedi
 | **/C** | Suprime a saída padrão, incluindo erros ou avisos NMAKE não fatais, carimbos de data/hora e mensagem de direitos autorais do NMAKE. Suprime avisos emitidos por **/k**. |
 | **/D** | Exibe os carimbos de data/hora de cada destino avaliado e dependente e uma mensagem quando um destino não existe. Útil com **/p** para depurar um makefile. Use `!CMDSWITCHES` para definir ou limpar **/d** para parte de um makefile. |
 | **/E** | Faz com que as variáveis de ambiente substituam as definições de macro do makefile. |
-| **/errorreport** [ **nenhum** &#124; **Enviar** **prompt** &#124; da **fila** &#124; ] | Se NMAKE. exe falhar em tempo de execução, você poderá usar **/errorreport** para enviar informações à Microsoft sobre esses erros internos.<br /><br /> Para obter mais informações, consulte [/errorReport (relatório de erros internos do compilador)](errorreport-report-internal-compiler-errors.md). |
+| **/errorreport** [ **nenhum** &#124; **Enviar** **prompt** &#124; da **fila** &#124; ] | Preterido. Relatórios [de controle de configurações do relatório de erros do Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
 | **/F** *nome do arquivo* | Especifica o *nome de arquivo* como um makefile. Espaços ou tabulações podem preceder *nome de arquivo*. Especifique **/f** uma vez para cada makefile. Para fornecer um makefile da entrada padrão, especifique um traço (`-`) para *nome de arquivo*e a entrada de teclado final com **F6** ou **Ctrl + Z**. |
 | **/G** | Exibe os makefiles incluídos com a diretiva `!INCLUDE`. Para obter mais informações, consulte [diretivas de pré-processamento do makefile](makefile-preprocessing-directives.md). |
 | **/Help**, **/?** | Exibe um breve resumo da sintaxe de linha de comando NMAKE. |
@@ -49,7 +50,7 @@ As opções de NMAKE são descritas na tabela a seguir. As opções são precedi
 | **Opção** | Exibe, mas não executa comandos; comandos de pré-processamento são executados. Não exibe comandos em chamadas NMAKE recursivas. Útil para depurar makefiles e verificar carimbos de data/hora. Para definir ou limpar **/n** para parte de um makefile, use `!CMDSWITCHES`. |
 | **/NOLOGO** | Suprime a mensagem de direitos autorais NMAKE. |
 | **/P** | Exibe informações (definições de macro, regras de inferência, destinos, lista de [`.SUFFIXES`](dot-directives.md) ) para a saída padrão e, em seguida, executa a compilação. Se não existir nenhum destino de linha de comando ou Makefile, ele exibirá apenas informações. Use with **/d** para depurar um makefile. |
-| **/Q** | Verifica os carimbos de data/hora dos destinos; não executa a compilação. Retorna um código de saída zero se todos os destinos estiverem atualizados, e um código de saída diferente de zero se algum destino estiver desatualizado. Comandos de pré-processamento são executados. Útil ao executar NMAKE de um arquivo em lotes. |
+| **/Q** | Verifica os carimbos de data/hora dos destinos; não executa a compilação. Retornará um código de saída zero se todos os destinos estiverem atualizados e um código de saída diferente de zero se qualquer destino estiver desatualizado. Comandos de pré-processamento são executados. Útil ao executar NMAKE de um arquivo em lotes. |
 | **/R** | Limpa a lista de `.SUFFIXES` e ignora regras de inferência e macros que são definidas no arquivo Tools. ini ou que são predefinidas. |
 | **/S** | Suprime a exibição de comandos executados. Para suprimir a exibição em parte de um makefile, use o modificador de comando **\@** ou [`.SILENT`](dot-directives.md). Para definir ou limpar **/s** para parte de um makefile, use `!CMDSWITCHES`. |
 | **/T** | Atualiza os carimbos de data/hora dos destinos de linha de comando (ou primeiro destino de makefile) e executa comandos de pré-processamento, mas não executa a compilação. |
@@ -73,6 +74,6 @@ NMAKE retorna os seguintes códigos de saída:
 | 4 | Erro do sistema – memória insuficiente |
 | 255 | O destino não está atualizado (emitido somente quando **/q** é usado) |
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência a NMAKE](nmake-reference.md)
