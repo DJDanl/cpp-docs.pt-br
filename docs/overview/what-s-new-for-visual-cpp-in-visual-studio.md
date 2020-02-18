@@ -3,12 +3,12 @@ title: Novidades do C++ no Visual Studio
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: df7cf44831781086f1b36d32ea9ed773a5dff9a4
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793965"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415722"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novidades do C++ no Visual Studio
 
@@ -182,7 +182,7 @@ O IntelliCode agora é fornecido como um componente opcional na carga de trabalh
 
 O IncrediBuild foi incluído como um componente opcional na carga de trabalho **Desenvolvimento para desktop com C++** . O Monitor de Compilação do IncrediBuild foi totalmente integrado no IDE do Visual Studio. Para saber mais, confira [Visualizar a compilação com o Monitor de Compilação do IncrediBuild e o Visual Studio 2019](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/).
 
-## <a name="debugging"></a>{1&gt;Depuração&lt;1}
+## <a name="debugging"></a>Depuração
 
 - Para aplicativos C++ em execução no Windows, os arquivos PDBs agora são carregados em um processo separado de 64 bits. Essa mudança trata de um intervalo de falhas causadas por memória insuficiente no depurador durante a depuração de aplicativos que contêm um grande número de módulos e arquivos PDBs.
 
@@ -647,7 +647,7 @@ O conjunto de ferramentas Clang/C2 que acompanha o Visual Studio 2017 agora dá 
 
 ## <a name="c-code-analysis"></a>Análise de código C++
 
-Os verificadores principais do C++ para impor as [principais diretrizes do C++](https://github.com/isocpp/CppCoreGuidelines) agora são distribuídas com o Visual Studio. Basta habilitar os verificadores na página **Extensões de Análise de Código** nas páginas de propriedades do projeto e as extensões serão incluídas quando você executar a análise de código. Para saber mais, veja [Uso dos verificadores de diretrizes de núcleo do C++](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers).
+Os verificadores principais do C++ para impor as [principais diretrizes do C++](https://github.com/isocpp/CppCoreGuidelines) agora são distribuídas com o Visual Studio. Basta habilitar os verificadores na página **Extensões de Análise de Código** nas páginas de propriedades do projeto e as extensões serão incluídas quando você executar a análise de código. Para saber mais, veja [Uso dos verificadores de diretrizes de núcleo do C++](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
 
 ![CppCoreCheck](media/CppCoreCheck.png "Página de propriedades do CppCoreCheck")
 
@@ -668,7 +668,7 @@ Os verificadores principais do C++ para impor as [principais diretrizes do C++](
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 versão 15.7
 
 - Suporte adicionado para [/analyze:ruleset](../build/reference/analyze-code-analysis.md), com o qual é possível especificar quais regras de análise de código são executadas.
-- Suporte adicionado para regras de Diretrizes Principais do C++ adicionais.  Para saber mais, veja [Uso dos verificadores de diretrizes de núcleo do C++](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers).
+- Suporte adicionado para regras de Diretrizes Principais do C++ adicionais.  Para saber mais, veja [Uso dos verificadores de diretrizes de núcleo do C++](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
 
 ## <a name="unit-testing"></a>Teste de unidade
 
@@ -697,7 +697,7 @@ O Diagnóstico de Gráficos do Visual Studio é um conjunto de ferramentas de re
 
 - **Pesquisa e filtro na tabela de objetos:** fornece uma maneira rápida e fácil de localizar os recursos que você está procurando.
 
-  ![Pesquisar](media/search.png)
+  ![Search](media/search.png)
 
 - **Histórico de Recursos:** esse novo modo de exibição fornece uma maneira simplificada de ver todo o histórico de modificações de um recurso, enquanto ele foi usado durante a renderização de um quadro capturado. Para invocar o histórico de qualquer recurso, basta clicar no ícone de relógio ao lado de qualquer hiperlink de recurso.
 

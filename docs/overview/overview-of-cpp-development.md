@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d72ea2ab4fa83259152101b357c6b2b69e74c723
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 4e04e189b44fe61759a9422139d856ab8a09f201
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810630"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415704"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Visão geral do desenvolvimento em C++ no Visual Studio
 
@@ -47,7 +47,7 @@ O Visual Studio dá suporte a qualquer sistema de projeto ou ferramenta de build
 
 ## <a name="add-to-source-control"></a>Adicionar ao controle do código-fonte
 
-O controle do código-fonte permite coordenar o trabalho entre diversos desenvolvedores, isolar o trabalho em andamento do código de produção e fazer backup do código-fonte. O Visual Studio é compatível com o Git e o [TFVC \(Controle de Versão do Team Foundation\)](/azure/devops/repos/tfvc/) por meio da janela **Team Explorer**. 
+O controle do código-fonte permite coordenar o trabalho entre diversos desenvolvedores, isolar o trabalho em andamento do código de produção e fazer backup do código-fonte. O Visual Studio é compatível com o Git e o [TFVC \(Controle de Versão do Team Foundation\)](/azure/devops/repos/tfvc/) por meio da janela **Team Explorer**.
 
 ::: moniker range="vs-2019"
 
@@ -99,7 +99,7 @@ Para saber mais sobre como configurar builds, confira [Como trabalhar com Propri
 
 Use também o compilador (cl.exe) e muitas outras ferramentas autônomas relacionadas a build, como NMAKE e LIB, diretamente na linha de comando. Para obter mais informações, confira [Compilar o código C/C++ na linha de comando](../build/building-on-the-command-line.md) e [Referência de build do C/C++](../build/reference/c-cpp-building-reference.md).
 
-## <a name="debug"></a>Depuração
+## <a name="debug"></a>Depurar
 
 É possível iniciar a depuração pressionando **F5**. A execução pausa em todos os pontos de interrupção que você definiu (pressionando **F9**). Você também pode percorrer o código uma linha por vez (**F10**), exibir os valores das variáveis ou dos registros e, mesmo em alguns casos, fazer alterações no código e continuar a depuração sem precisar compilá-la novamente. A ilustração a seguir mostra uma sessão de depuração em que a execução é pausada no ponto de interrupção. Os valores dos membros da estrutura de dados são visíveis na **janela Inspeção**.
 
@@ -107,7 +107,7 @@ Use também o compilador (cl.exe) e muitas outras ferramentas autônomas relacio
 
 Para obter mais informações, consulte [Depuração no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
 
-## <a name="test"></a>{1&gt;Testar&lt;1}
+## <a name="test"></a>Teste
 
 O Visual Studio inclui o Microsoft Unit Test Framework para C++, além de suporte para Boost.Test, Google Test e CTest. Execute os testes na janela do **Gerenciador de Testes**:
 
@@ -117,7 +117,7 @@ Para saber mais, confira [Verificar código usando testes de unidade](/visualstu
 
 ## <a name="analyze"></a>Analisar
 
-O Visual Studio inclui ferramentas de análise de código estático que podem detectar possíveis problemas no código-fonte. Essas ferramentas incluem uma implementação dos verificadores de regras das [Diretrizes Principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Para obter mais informações, confira [Visão geral da análise de código do C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+O Visual Studio inclui ferramentas de análise de código estático que podem detectar possíveis problemas no código-fonte. Essas ferramentas incluem uma implementação dos verificadores de regras das [Diretrizes Principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Para obter mais informações, confira [Visão geral da análise de código do C/C++](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ## <a name="deploy-completed-applications"></a>Implantar aplicativos concluídos
 
@@ -127,7 +127,7 @@ Você também pode implantar uma área C++ de trabalho nativa em outro computado
 
 Para obter mais informações sobre como implantar um programa do C++/CLI, confira [Guia de Implantação para Desenvolvedores](/dotnet/framework/deployment/deployment-guide-for-developers).
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Explore ainda mais o Visual Studio seguindo um dos seguintes artigos introdutórios:
 

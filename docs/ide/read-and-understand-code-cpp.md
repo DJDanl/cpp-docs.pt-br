@@ -2,12 +2,12 @@
 title: Ler e entender o código C++ no Visual Studio
 description: Use o editor de código C++ no Visual Studio para formatar e entender o código.
 ms.date: 05/28/2019
-ms.openlocfilehash: d4af4c9bc747540bada49de305c45cffc5c44374
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303035"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416126"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Ler e entender o código C++ no Visual Studio
 
@@ -19,9 +19,9 @@ O Visual Studio colore elementos de sintaxe para diferenciar entre tipos de sím
 
 ![Colorização de código](../ide/media/code-outline-colorization.png "C++colorização")
 
- O código não utilizado (como o código em um #if 0) tem uma cor mais esmaecida.
+O código não utilizado (como o código em um #if 0) tem uma cor mais esmaecida.
 
- ![Código inativo](../ide/media/inactive-code-cpp.png "C++Código inativo")
+![Código inativo](../ide/media/inactive-code-cpp.png "C++Código inativo")
 
 Personalize as cores digitando "Fontes" em **Início Rápido** e, em seguida, escolhendo **Fontes e Cores**. Na caixa de diálogo **Fontes e Cores**, role a página para baixo até as opções do C/C++ e, em seguida, escolha uma fonte e/ou uma cor personalizada.
 
@@ -89,7 +89,7 @@ Passe o mouse sobre uma variável ou uma declaração da função, clique com o 
 
 ![Definição&#43; &#43; de Peek C](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
 
-##  <a name="f1-help"></a>F1 Ajuda
+##  <a name="f1-help"></a>Ajuda F1
 
 Posicione o cursor sobre qualquer tipo, palavra-chave ou função ou imediatamente após eles e pressione **F1** para ir diretamente para o tópico de referência relevante em docs.microsoft.com. **F1** também funciona em itens da Lista de Erros e em muitas caixas de diálogo.
 
@@ -111,7 +111,7 @@ Clique com o botão direito do mouse em qualquer chamada de função e exiba uma
 
 ![Hierarquia&#43; &#43; de chamada C](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Editar e refatorar o código (C++)](writing-and-refactoring-code-cpp.md)</br>
 [Navegar pela base de código C++ no Visual Studio](navigate-code-cpp.md)</br>

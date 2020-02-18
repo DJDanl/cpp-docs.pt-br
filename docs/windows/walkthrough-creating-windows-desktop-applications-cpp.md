@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 6f219a0c199971b563b1c0ff291f2f5d12803023
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: cebc748f207cb1283add4b494b422a13bdc17f8c
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627473"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416141"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Walkthrough: criar um aplicativo de área de trabalhoC++do Windows tradicional ()
 
@@ -29,7 +29,7 @@ A API do Windows (também conhecida como API do Win32, API de área de trabalho 
 
 - Uma cópia do Visual Studio. Para saber mais sobre como fazer o download e instalar o Visual Studio, consulte [Instalar o Visual Studio](/visualstudio/install/install-visual-studio). Quando executar o instalador, certifique-se de que a carga de trabalho de **Desenvolvimento para desktop com C++** esteja marcada. Não se preocupe se não tiver instalado essa carga de trabalho quando instalou o Visual Studio. Você pode executar o instalador novamente e instalá-la agora.
 
-   ![Desenvolvimento para desktop com C++](../build/media/desktop-development-with-cpp.png "Desenvolvimento de área de trabalho com o C++")
+   ![Desenvolvimento para desktop com C++](../build/media/desktop-development-with-cpp.png "Desenvolvimento para desktop com C++")
 
 - Um reconhecimento dos princípios básicos do uso do IDE do Visual Studio. Se já tiver usado aplicativos de desktop do Windows, você provavelmente não terá problemas. Para ver uma introdução, consulte [Tour pelos recursos do IDE do Visual Studio](/visualstudio/ide/visual-studio-ide).
 
@@ -43,7 +43,7 @@ Siga estas etapas para criar seu primeiro projeto de área de trabalho do Window
 
 ### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>Para criar um projeto de área de trabalho do Windows no Visual Studio 2019
 
-1. No menu principal, escolha **Arquivo** > **Novo** > **Projeto** para abrir a caixa de diálogo **Criar um projeto**.
+1. No menu principal, escolha **arquivo** > **novo** **projeto** de > para abrir a caixa de diálogo **criar um novo projeto** .
 
 1. Na parte superior da caixa de diálogo, defina idioma **C++** como, defina **plataforma** para **Windows**e defina **tipo de projeto** como **área de trabalho**.
 
@@ -71,9 +71,9 @@ Seu projeto agora é criado e o arquivo de origem é aberto no editor. Para cont
 
 1. No menu **Arquivo**, escolha **Novo** e, em seguida, clique em **Projeto**.
 
-1. Na caixa de diálogo **novo projeto** , no painel esquerdo, expanda **instalado**  > **Visual C++** e, em seguida, selecione **área de trabalho do Windows**. No painel central, selecione **Assistente de área de trabalho do Windows**.
+1. Na caixa de diálogo **novo projeto** , no painel esquerdo, expanda **instalado** > **Visual C++** e, em seguida, selecione **área de trabalho do Windows**. No painel central, selecione **Assistente de área de trabalho do Windows**.
 
-   Na caixa **nome** , digite um nome para o projeto, por exemplo, *DesktopApp*. Clique em **OK**.
+   Na caixa **nome** , digite um nome para o projeto, por exemplo, *DesktopApp*. Escolha **OK**.
 
    ![Nomeie o projeto DesktopApp](../build/media/desktop-app-new-project-name-153.png "Nomeie o projeto DesktopApp")
 
@@ -97,9 +97,9 @@ Seu projeto agora é criado e o arquivo de origem é aberto no editor. Para cont
 
 1. No menu **Arquivo**, escolha **Novo** e, em seguida, clique em **Projeto**.
 
-1. Na caixa de diálogo **novo projeto** , no painel esquerdo, expanda **instalado**  > **modelos**  > **Visual C++** e, em seguida, selecione **Win32**. No painel central, selecione **projeto Win32**.
+1. Na caixa de diálogo **novo projeto** , no painel esquerdo, expanda **instalado** > **modelos** > **Visual C++** e, em seguida, selecione **Win32**. No painel central, selecione **projeto Win32**.
 
-   Na caixa **nome** , digite um nome para o projeto, por exemplo, *DesktopApp*. Clique em **OK**.
+   Na caixa **nome** , digite um nome para o projeto, por exemplo, *DesktopApp*. Escolha **OK**.
 
    ![Nomeie o projeto DesktopApp](../build/media/desktop-app-new-project-name-150.png "Nomeie o projeto DesktopApp")
 
@@ -141,9 +141,9 @@ Em seguida, você aprenderá a criar o código para um aplicativo de área de tr
    Para obter informações sobre os parâmetros e o valor de retorno dessa função, consulte [ponto de entrada WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > Quais são as palavras adicionais, como `CALLBACK`, ou `HINSTANCE`ou `_In_`? A API tradicional do Windows usa TYPEDEFs e macros de pré-processador extensivamente para abstrair alguns dos detalhes dos tipos e do código específico da plataforma, como convenções de chamada, declarações **_ declspec** e pragmas do compilador. No Visual Studio, você pode usar o recurso de [informações rápidas](/visualstudio/ide/using-intellisense#quick-info) do IntelliSense para ver o que esses TYPEDEFs e macros definem. Passe o mouse sobre a palavra de interesse ou selecione-o e pressione **ctrl** +**K**, **Ctrl** +**I** para uma pequena janela pop-up que contém a definição. Para obter mais informações, veja [Usando o IntelliSense](/visualstudio/ide/using-intellisense). Os parâmetros e os tipos de retorno geralmente usam *anotações sal* para ajudá-lo a detectar erros de programação. Para obter mais informações, consulte [usando anotações de sal para reduzir osC++ defeitos de C/código](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Quais são as palavras adicionais, como `CALLBACK`, ou `HINSTANCE`ou `_In_`? A API tradicional do Windows usa TYPEDEFs e macros de pré-processador extensivamente para abstrair alguns dos detalhes dos tipos e do código específico da plataforma, como convenções de chamada, declarações de **__declspec** e pragmas do compilador. No Visual Studio, você pode usar o recurso de [informações rápidas](/visualstudio/ide/using-intellisense#quick-info) do IntelliSense para ver o que esses TYPEDEFs e macros definem. Passe o mouse sobre a palavra de interesse ou selecione-o e pressione **ctrl**+**K**, **Ctrl**+**I** para uma pequena janela pop-up que contém a definição. Para obter mais informações, veja [Usando o IntelliSense](/visualstudio/ide/using-intellisense). Os parâmetros e os tipos de retorno geralmente usam *anotações sal* para ajudá-lo a detectar erros de programação. Para obter mais informações, consulte [usando anotações de sal para reduzir osC++ defeitos de C/código](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
-1. Os programas da área de trabalho do Windows exigem > &lt;windows. h. &lt;TCHAR. h > define a macro `TCHAR`, que resolve, por fim, o **wchar_t** se o símbolo Unicode é definido em seu projeto, caso contrário, ele é resolvido para **Char**.  Se você sempre criar com UNICODE habilitado, não precisará de TCHAR e poderá simplesmente usar **wchar_t** diretamente.
+1. Os programas da área de trabalho do Windows exigem &lt;> Windows. h. &lt;TCHAR. h > define a macro `TCHAR`, que é resolvida por fim para **wchar_t** se o símbolo Unicode é definido em seu projeto, caso contrário, ele é resolvido para **Char**.  Se você sempre criar com UNICODE habilitado, não precisará de TCHAR e poderá usar apenas **wchar_t** diretamente.
 
    ```cpp
    #include <windows.h>
@@ -361,7 +361,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de área de tr
 
 1. Para habilitar a função `WndProc` para manipular as mensagens que o aplicativo recebe, implemente uma instrução switch.
 
-   Uma mensagem importante a ser tratada é a mensagem [WM_PAINT](/windows/win32/gdi/wm-paint) . O aplicativo recebe a `WM_PAINT` mensagem quando parte de sua janela exibida deve ser atualizada. O evento pode ocorrer quando um usuário move uma janela na frente da janela e, em seguida, move-a para fora novamente. Seu aplicativo não sabe quando esses eventos ocorrem. Somente o Windows sabe, portanto, ele notifica seu aplicativo com uma mensagem `WM_PAINT`. Quando a janela é exibida pela primeira vez, todas elas devem ser atualizadas.
+   Uma mensagem importante a ser tratada é a [WM_PAINT](/windows/win32/gdi/wm-paint) mensagem. O aplicativo recebe a `WM_PAINT` mensagem quando parte de sua janela exibida deve ser atualizada. O evento pode ocorrer quando um usuário move uma janela na frente da janela e, em seguida, move-a para fora novamente. Seu aplicativo não sabe quando esses eventos ocorrem. Somente o Windows sabe, portanto, ele notifica seu aplicativo com uma mensagem `WM_PAINT`. Quando a janela é exibida pela primeira vez, todas elas devem ser atualizadas.
 
    Para manipular uma mensagem de `WM_PAINT`, primeiro chame [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint)e, em seguida, manipule toda a lógica para dispor o texto, os botões e outros controles na janela e, em seguida, chame [EndPaint](/windows/win32/api/winuser/nf-winuser-endpaint). Para o aplicativo, a lógica entre a chamada inicial e a chamada final é exibir a cadeia de caracteres "Olá, Windows Desktop!" na janela. No código a seguir, observe que a função [TextOut](/windows/win32/api/wingdi/nf-wingdi-textoutw) é usada para exibir a cadeia de caracteres.
 
@@ -590,6 +590,6 @@ Como prometido, aqui está o código completo do aplicativo de trabalho.
 
 Parabéns! Você concluiu este passo a passo e criou um aplicativo de área de trabalho tradicional do Windows.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Aplicativos da área de trabalho do Windows](../windows/windows-desktop-applications-cpp.md)

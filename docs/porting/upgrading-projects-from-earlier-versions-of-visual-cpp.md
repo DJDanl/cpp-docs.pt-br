@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: a18d2dbabdeec0f283fb4eca7ed52e616f9d224a
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: bc9fb5628c1a628b91f306c346f2bbb1dea13de8
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725715"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416119"
 ---
 # <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>Atualizar C++ projetos de versões anteriores do Visual Studio
 
@@ -21,7 +21,7 @@ Se você escolher **não**, o projeto não será atualizado. Para projetos criad
 
 Se você escolher **Sim**, o projeto será atualizado no local. Ele não pode ser convertido de volta para a versão anterior. Em cenários de atualização, é por isso que é uma boa prática fazer uma cópia de backup do projeto existente e dos arquivos de solução.
 
-## <a name="upgrade-reports"></a>Relatórios de atualização
+## <a name="upgrade-reports"></a>Atualizar relatórios
 
 Ao atualizar um projeto, você obtém um relatório de atualização. O relatório também é salvo na pasta do projeto como UpgradeLog. htm. O relatório de atualização mostra um resumo dos problemas encontrados durante a conversão. Ele lista algumas informações sobre as alterações feitas, incluindo:
 
@@ -47,7 +47,7 @@ Alguns projetos e soluções atualizados podem ser compilados com êxito sem mod
 
 1. Defina o conjunto de ferramentas C++ de plataforma, o padrão de idioma e a versão SDK do Windows (se aplicável) para as versões preferenciais. (**Projeto** > **Propriedades** > **Propriedades de configuração** > **geral**)
 
-1. Se você tiver muitos erros, poderá desativar temporariamente algumas opções enquanto corrigi-las. Para desativar a opção [/permissive-](../build/reference/permissive-standards-conformance.md) , use as **Propriedades** de > do **projeto** > **Propriedades de configuração** > **linguagem** **C/C++**  > . Para desativar a opção [de análise de código](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) , use **Project** > **properties** > **Propriedades de configuração** > análise de **código**.
+1. Se você tiver muitos erros, poderá desativar temporariamente algumas opções enquanto corrigi-las. Para desativar a opção [/permissive-](../build/reference/permissive-standards-conformance.md) , use as **Propriedades** de > do **projeto** > **Propriedades de configuração** > **linguagem** **C/C++**  > . Para desativar a opção [de análise de código](/cpp/code-quality/code-analysis-for-c-cpp-overview) , use **Project** > **properties** > **Propriedades de configuração** > análise de **código**.
 
 1. Verifique se todas as dependências estão presentes e se os caminhos de inclusão ou os locais de biblioteca estão corretos. (**Projeto** > **Propriedades** > **Propriedades de configuração** > **diretórios vc + +** )
 
@@ -74,7 +74,7 @@ Para erros difíceis de corrigir, tente pesquisar ou postar uma pergunta em Stac
 \ de [VCBuild versus MSBuild](build-system-changes.md)
 [Bibliotecas de terceiros da porta](porting-third-party-libraries.md)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [O que há de novo C++ no Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)\
 [Histórico C++ de alterações visuais 2003-2015](../porting/visual-cpp-change-history-2003-2015.md)\
