@@ -11,16 +11,16 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450582"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416200"
 ---
 # <a name="debug-iterator-support"></a>Suporte a Iterador de Depuração
 
-A biblioteca em tempo de execução Visual C++ detecta o uso incorreto do iterador e declara e exibe uma caixa de diálogo em tempo de execução. Para habilitar o suporte do iterador de depuração, é necessário usar versões de depuração da Biblioteca Padrão C++ e da Biblioteca em Tempo de Execução C para compilar seu programa. Para obter mais informações, consulte [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md). Para obter informações sobre como usar iteradores verificados, consulte [Iteradores verificados](../standard-library/checked-iterators.md).
+A biblioteca em tempo de execução Visual C++ detecta o uso incorreto do iterador e declara e exibe uma caixa de diálogo em tempo de execução. Para habilitar o suporte do iterador de depuração, é necessário usar versões de depuração da Biblioteca Padrão C++ e da Biblioteca em Runtime C para compilar seu programa. Para obter mais informações, consulte [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md). Para obter informações sobre como usar iteradores verificados, consulte [Iteradores verificados](../standard-library/checked-iterators.md).
 
 O padrão C++ descreve como funções de membro podem fazer com que iteradores em um contêiner se tornem inválidos. Dois exemplos são:
 
@@ -165,7 +165,7 @@ struct derived : base {
    ~derived() {}
 };
 
- int main() {
+int main() {
    std::vector<int> vect( 10 );
    base * pb = new derived( vect.begin() );
    delete pb;  // doesn't call ~derived()

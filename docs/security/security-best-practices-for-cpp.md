@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 914498a79d3d3ddae08ae672aac35c6e913ef238
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: eaaa581ff622438c2e395c34b4b026aca693a845
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988080"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416163"
 ---
 # <a name="security-best-practices-for-c"></a>Práticas recomendadas de segurança para C++
 
@@ -35,7 +35,7 @@ Instrui o vinculador a incluir na imagem de saída uma tabela que contém o ende
 [/NXCOMPAT](../build/reference/nxcompat.md), [/NXCOMPAT (compatível com a prevenção de execução de dados)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md) essas opções de compilador e vinculador habilitam a compatibilidade de DEP (prevenção de execução de dados). A DEP protege a CPU contra a execução de páginas sem código.
 
 [/analyze (análise de código)](../build/reference/analyze-code-analysis.md)<br/>
-Essa opção do compilador ativa a análise de código que relata problemas potenciais de segurança, como excesso de buffer, memória não inicializada, remoção de referência do ponteiro nulo e vazamentos de memória. Por padrão, essa opção é desativada. Para obter mais informações, consulte [análise de código paraC++ C/visão geral](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+Essa opção do compilador ativa a análise de código que relata problemas potenciais de segurança, como excesso de buffer, memória não inicializada, remoção de referência do ponteiro nulo e vazamentos de memória. Por padrão, essa opção é desativada. Para obter mais informações, consulte [análise de código paraC++ C/visão geral](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 [/DYNAMICBASE (usar randomização do layout do espaço de endereço)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 Essa opção do vinculador habilita a criação de uma imagem executável que pode ser carregada em locais diferentes na memória no início da execução. Essa opção também torna o local da pilha na memória muito menos previsível.
@@ -92,8 +92,8 @@ O uso de contas de usuário do Windows que pertencem ao grupo Administradores ex
 
 Para obter informações sobre como facilitar e mitigar contra vulnerabilidades de hardware de canal lateral de C++ execução especulativa no software, consulte [ C++ diretrizes para desenvolvedores para canais laterais de execução especulativa](developer-guidance-speculative-execution.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 <xref:System.Security> <br/>
-[Security](/dotnet/standard/security/index)<br/>
+[Segurança](/dotnet/standard/security/index)<br/>
 [Como o UAC (Controle de Conta de Usuário) afeta o aplicativo](how-user-account-control-uac-affects-your-application.md)

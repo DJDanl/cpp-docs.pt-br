@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 74e1b34549a8e8d0f1e22e6f40aacbd4429b272f
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793781"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416096"
 ---
 # <a name="c-in-visual-studio"></a>C++ no Visual Studio
 
@@ -82,7 +82,7 @@ Como usar os recursos de produtividade no editor do C++ para refatorar, navegar,
 [Depurando código nativo](/visualstudio/debugger/debugging-native-code)<br/>
 Use o depurador do Visual Studio com projetos C++.
 
-[Análise de código para visão geral do C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Análise de código para visão geral do C/C++](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
 Use anotações de SAL ou os verificadores das Diretrizes Principais do C++ para executar análise estática.
 
 [Gravar testes de unidade para C/C++ no Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -134,7 +134,7 @@ Saiba mais sobre como trabalhar com formatos e codificações diferentes de text
 
 As seções a seguir fornecem informações sobre as diferentes bibliotecas do C e C++ que estão incluídas no Visual Studio.
 
-[Referência da biblioteca em tempo de execução do C](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[Referência da biblioteca em tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 Inclui alternativas aprimoradas de segurança a funções que são conhecidas por impor problemas de segurança.
 
 [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)<br/>
@@ -173,8 +173,8 @@ Saiba mais sobre os novos recursos e as informações mais recentes dos desenvol
 [Comunidade de Desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/)<br/>
 Saiba como obter ajuda, arquivar bugs e fazer sugestões para o Visual Studio.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência da linguagem C](../c-language/c-language-reference.md)
-- [Referência da biblioteca em tempo de execução do C](../c-runtime-library/c-run-time-library-reference.md)
+- [Referência da biblioteca em tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)
 - [Intrínsecos do compilador e linguagem assembly](../intrinsics/compiler-intrinsics-and-assembly-language.md)

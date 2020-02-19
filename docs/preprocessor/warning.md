@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: c6c9668f614f932b0a96f30ad3e0395e39ddc400
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: d8b110d459bba1e0b7e2fd6e2c95e7eed638fc99
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683338"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416187"
 ---
 # <a name="warning-pragma"></a>pragma de aviso
 
@@ -37,8 +37,8 @@ Os seguintes parâmetros de especificador de aviso estão disponíveis.
 |------------------------|-------------|
 |*1, 2, 3, 4*|Aplique o nível fornecido aos avisos especificados. Também ativa um aviso especificado que está desativado por padrão.|
 |*default*|Redefina o comportamento de aviso para seu valor padrão. Também ativa um aviso especificado que está desativado por padrão. O aviso será gerado em seu nível padrão e documentado.<br /><br /> Para obter mais informações, consulte [os avisos do compilador que estão desativados por padrão](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|*desativar*|Não emita as mensagens de aviso especificadas.|
-|*ao*|Relate os avisos especificados como erros.|
+|*disable*|Não emita as mensagens de aviso especificadas.|
+|*error*|Relate os avisos especificados como erros.|
 |*uma vez*|Exiba as mensagens especificadas somente uma vez.|
 |*eliminação*|Empurra o estado atual do pragma na pilha, desabilita o aviso especificado para a próxima linha e depois exibe a pilha de aviso para que o estado de pragma seja redefinido.|
 
@@ -54,10 +54,10 @@ Essa diretiva é funcionalmente equivalente ao seguinte código:
 // Disable warning messages 4507 and 4034.
 #pragma warning( disable : 4507 34 )
 
-// Issue warning 4385 only once.
+// Issue warning C4385 only once.
 #pragma warning( once : 4385 )
 
-// Report warning 4164 as an error.
+// Report warning C4164 as an error.
 #pragma warning( error : 164 )
 ```
 
@@ -116,6 +116,6 @@ Ao gravar arquivos de cabeçalho, você pode usar *Push* e *pop* para garantir q
 
 Para obter mais informações sobre opções de compilador que ajudam a suprimir avisos, consulte [/Fi](../build/reference/fi-name-forced-include-file.md) e [/w](../build/reference/compiler-option-warning-level.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Diretivas pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

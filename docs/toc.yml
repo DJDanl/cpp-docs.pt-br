@@ -375,6 +375,8 @@
           href: build/arm64-exception-handling.md
     - name: Como configurar programas para o Windows XP
       href: build/configuring-programs-for-windows-xp.md
+    - name: Análise de código para C/C++
+      href: code-quality/
     - name: Referência de ferramentas de build e compiladores
       expanded: false
       items:
