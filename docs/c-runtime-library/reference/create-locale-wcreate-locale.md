@@ -31,12 +31,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: a7098dc572ecdbefd891efc8443e977b01850fa4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 58274b63a09847fb8593247bd2777cfa19935510
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938851"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473840"
 ---
 # <a name="_create_locale-_wcreate_locale"></a>_create_locale, _wcreate_locale
 
@@ -55,7 +55,7 @@ _locale_t _wcreate_locale(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *category*<br/>
 Categoria.
@@ -63,19 +63,19 @@ Categoria.
 *locale*<br/>
 Especificador de localidade.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Se uma *localidade* e *categoria* válidas forem fornecidas, o retornará as configurações de localidade especificadas como um objeto **_locale_t** . As configurações de localidade atual do programa não são alteradas.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_create_locale** permite que você crie um objeto que representa determinadas configurações específicas de região, para uso em versões específicas de localidade de muitas funções de CRT (funções com o sufixo **_L** ). O comportamento é semelhante ao **setlocale**, exceto que, em vez de aplicar as configurações de localidade especificadas ao ambiente atual, as configurações são salvas em uma estrutura **_locale_t** retornada. A estrutura **_locale_t** deve ser liberada usando [_free_locale](free-locale.md) quando não for mais necessária.
+A função **_create_locale** permite que você crie um objeto que representa determinadas configurações específicas de região, para uso em versões específicas de localidade de muitas funções do CRT (funções com o sufixo **_L** ). O comportamento é semelhante ao **setlocale**, exceto que, em vez de aplicar as configurações de localidade especificadas ao ambiente atual, as configurações são salvas em uma estrutura de **_locale_t** retornada. A estrutura de **_locale_t** deve ser liberada usando [_free_locale](free-locale.md) quando não for mais necessária.
 
-**_wcreate_locale** é uma versão de caractere largo do **_create_locale**; o argumento de *localidade* para **_wcreate_locale** é uma cadeia de caracteres largos. **_wcreate_locale** e **_create_locale** se comportam de outra forma.
+**_wcreate_locale** é uma versão de caractere largo do **_create_locale**; o argumento de *localidade* para **_wcreate_locale** é uma cadeia de caracteres largos. **_wcreate_locale** e **_create_locale** se comportar de forma idêntica.
 
 O argumento *Category* especifica as partes do comportamento específico da localidade que são afetadas. Os sinalizadores usados para a *categoria* e as partes do programa que eles afetam são mostrados nesta tabela:
 
-| sinalizador de *categoria* | Prejudica |
+| sinalizador de *categoria* | Afeta |
 |-----------------|---------|
 | **LC_ALL** |Todas as categorias, conforme listado abaixo. |
 | **LC_COLLATE** |As funções **strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**e **wcsxfrm** . |
@@ -88,7 +88,7 @@ Essa função valida os parâmetros de *categoria* e *localidade* . Se o parâme
 
 O argumento de *localidade* é um ponteiro para uma cadeia de caracteres que especifica a localidade. Para obter informações sobre o formato do argumento de *localidade* , consulte [nomes de localidade, idiomas e cadeias de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).
 
-O argumento de *localidade* pode usar um nome de localidade, uma cadeia de caracteres de idioma, uma cadeia de caracteres de idioma e um código de país/região, uma página de código ou uma cadeia de caracteres de idioma, código de país/região e página de código. O conjunto de nomes de localidade, idiomas, códigos de país/região e páginas de código disponíveis inclui tudo o que tem suporte na API NLS do Windows, com exceção das páginas de código que exigem mais de dois bytes por caractere – por exemplo, UTF-7 e UTF-8. Se você fornecer uma página de código como UTF-7 ou UTF-8, **_create_locale** falhará e retornará **NULL**. O conjunto de nomes de localidade com suporte do **_create_locale** é descrito em [nomes de localidade, linguagens e cadeias de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). O conjunto de cadeias de caracteres de idioma e país/região com suporte do **_create_locale** está listado em cadeias de caracteres de [idioma](../../c-runtime-library/language-strings.md) e cadeias de [país/região](../../c-runtime-library/country-region-strings.md).
+O argumento de *localidade* pode usar um nome de localidade, uma cadeia de caracteres de idioma, uma cadeia de caracteres de idioma e um código de país/região, uma página de código ou uma cadeia de caracteres de idioma, código de país/região e página de código. O conjunto de nomes de localidade disponíveis, idiomas, códigos de país/região e páginas de código inclui tudo o que é suportado pela API NLS do Windows. O conjunto de nomes de localidade com suporte pelo **_create_locale** é descrito em [nomes de localidade, linguagens e cadeias de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). O conjunto de cadeias de caracteres de idioma e país/região com suporte do **_create_locale** está listado em cadeias de caracteres de [idioma](../../c-runtime-library/language-strings.md) e cadeias de [país/região](../../c-runtime-library/country-region-strings.md).
 
 Para obter mais informações sobre as configurações de localidade, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md).
 
@@ -165,7 +165,7 @@ In de-CH locale, _strftime_l returns 'Samstag, 9. Februar 2002'
 In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Nomes de localidades, idiomas e cadeias de caracteres de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Cadeias de caracteres de idioma](../../c-runtime-library/language-strings.md)<br/>
