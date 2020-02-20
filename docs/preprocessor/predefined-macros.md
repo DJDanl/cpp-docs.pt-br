@@ -226,12 +226,12 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: 7d019b527abea89ab8337270fbd22abc9dbecc4e
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: ff3945fa9476e090f26ce029c63b1813401082e0
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74305472"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473842"
 ---
 # <a name="predefined-macros"></a>Macros predefinidas
 
@@ -460,7 +460,7 @@ O MSVC dá suporte a essas macros predefinidas adicionais.
    |Visual Studio 6.0|1200|
    |Visual Studio .NET 2002 (7,0)|1300|
    |Visual Studio .NET 2003 (7,1)|1310|
-   |Visual Studio 2005 (8,0)|1400|
+   |Visual Studio 2005 (8,0)|1\.400|
    |Visual Studio 2008 (9,0)|1500|
    |Visual Studio 2010 (10,0)|1600|
    |Visual Studio 2012 (11,0)|1700|
@@ -477,6 +477,9 @@ O MSVC dá suporte a essas macros predefinidas adicionais.
    |Visual Studio 2019 versão 16.1|1921|
    |Visual Studio 2019 versão 16.2|1922|
    |Visual Studio 2019 versão 16,3|1923|
+   |Visual Studio 2019 versão 16,4|1924|
+   |Visual Studio 2019 versão 16,5|1925|
+   |Visual Studio 2019 versão 16,6|1926|
 
    Para testar as versões do compilador ou as atualizações em uma determinada versão do Visual Studio ou posterior, use o operador de `>=`. Você pode usá-lo em uma diretiva condicional para comparar `_MSC_VER` com essa versão conhecida. Se você tiver várias versões mutuamente exclusivas para comparar, ordene suas comparações em ordem decrescente de número de versão. Por exemplo, esse código verifica se há compiladores lançados no Visual Studio 2017 e posterior. Em seguida, ele verifica os compiladores lançados no ou após o Visual Studio 2015. Em seguida, ele verifica todos os compiladores lançados antes do Visual Studio 2015:
 
@@ -541,7 +544,7 @@ Nenhuma macro de pré-processador que identifique a versão da Biblioteca ATL ou
 
 - `_MFC_VER` definido em \<afxver_. h > como um literal inteiro que codifica o número de versão do MFC.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Macros (C/C++)](../preprocessor/macros-c-cpp.md)<br/>
 [Operadores de pré-processador](../preprocessor/preprocessor-operators.md)<br/>

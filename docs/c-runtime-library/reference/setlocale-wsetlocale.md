@@ -37,12 +37,12 @@ ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
 no-loc:
 - setlocale
 - _wsetlocale
-ms.openlocfilehash: 08684e17a801e660ae2771c9e717dfa28621d600
-ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
+ms.openlocfilehash: b1c7b739e671caebc51022945a369a632ecebb9e
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76894340"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473857"
 ---
 # <a name="setlocale-_wsetlocale"></a>setlocale, _wsetlocale
 
@@ -61,7 +61,7 @@ wchar_t *_wsetlocale(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *categoria*
 Categoria afetada pela localidade.
@@ -101,7 +101,7 @@ Use a função **setlocalize** para definir, alterar ou consultar algumas ou tod
 
 O argumento *Category* especifica as partes das informações de localidade de um programa que são afetadas. As macros usadas para a *categoria* e as partes do programa que elas afetam são as seguintes:
 
-|sinalizador de *categoria*|Prejudica|
+|sinalizador de *categoria*|Afeta|
 |-|-|
 | **LC_ALL** | Todas as categorias, conforme listado abaixo. |
 | **LC_COLLATE** | As funções **strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**e **wcsxfrm** . |
@@ -118,7 +118,7 @@ Na inicialização do programa, o equivalente da instrução a seguir é executa
 
 `setlocale( LC_ALL, "C" );`
 
-O argumento de *localidade* pode usar um nome de localidade, uma cadeia de caracteres de idioma, uma cadeia de caracteres de idioma e um código de país/região, uma página de código ou uma cadeia de caracteres de idioma, código de país/região e página de código. O conjunto disponível de nomes de localidade, idiomas, códigos de país/região e páginas de código inclui tudo o que é suportado pela API NLS do Windows, exceto as páginas de código que exigem mais de dois bytes por caractere, como UTF-7 e UTF-8. Se você fornecer um valor de página de código de UTF-7 ou UTF-8, **setlocalize** falhará, retornando **NULL**. O conjunto de nomes de localidade com suporte do **setlocaling** é descrito em [nomes de localidade, linguagens e cadeias de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). O conjunto de cadeias de caracteres de idioma e país/região com suporte no **setlocale** são listados em cadeias de caracteres de [idioma](../../c-runtime-library/language-strings.md) e de [país/região](../../c-runtime-library/country-region-strings.md). Recomendamos o formato do nome da localidade para o desempenho e a capacidade de manutenção de cadeias de caracteres de localidade inseridas no código ou serializadas para armazenamento. As cadeias de caracteres de nome da localidade são menos prováveis de ser alteradas por uma atualização do sistema operacional do que o formato de idioma e país/região.
+O argumento de *localidade* pode usar um nome de localidade, uma cadeia de caracteres de idioma, uma cadeia de caracteres de idioma e um código de país/região, uma página de código ou uma cadeia de caracteres de idioma, código de país/região e página de código. O conjunto de nomes de localidade disponíveis, idiomas, códigos de país/região e páginas de código inclui todos aqueles com suporte da API NLS do Windows. O conjunto de nomes de localidade com suporte do **setlocaling** é descrito em [nomes de localidade, linguagens e cadeias de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). O conjunto de cadeias de caracteres de idioma e país/região com suporte no **setlocale** são listados em cadeias de caracteres de [idioma](../../c-runtime-library/language-strings.md) e de [país/região](../../c-runtime-library/country-region-strings.md). Recomendamos o formato do nome da localidade para o desempenho e a capacidade de manutenção de cadeias de caracteres de localidade inseridas no código ou serializadas para armazenamento. As cadeias de caracteres de nome da localidade são menos prováveis de ser alteradas por uma atualização do sistema operacional do que o formato de idioma e país/região.
 
 Um ponteiro nulo que é passado como o argumento *locale* informa **setlocalize** para consultar em vez de para definir o ambiente internacional. Se o argumento de *localidade* for um ponteiro nulo, a configuração de localidade atual do programa não será alterada. Em vez disso, **setlocalize** retorna um ponteiro para a cadeia de caracteres associada à *categoria* da localidade atual do thread. Se o argumento *Category* for **LC_ALL**, a função retornará uma cadeia de caracteres que indica a configuração atual de cada categoria, separada por ponto e vírgula. Por exemplo, a sequência de chamadas
 
@@ -200,14 +200,14 @@ Para obter mais informações, consulte a diretiva de pragma [setlocale](../../p
 
 A função [_configthreadlocale](configthreadlocale.md) é usada para controlar se **setlocaling** afeta a localidade de todos os threads em um programa ou apenas a localidade do thread de chamada.
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**setlocale**|\<locale.h>|
 |**_wsetlocale**|\<locale.h> ou \<wchar.h>|
 
-Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -313,7 +313,7 @@ The thread locale is now set to de-DE.
 The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Nomes de localidade, idiomas e cadeias de caracteres de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
 [_configthreadlocale](configthreadlocale.md)\

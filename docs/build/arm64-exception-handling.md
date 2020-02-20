@@ -2,12 +2,12 @@
 title: Tratamento de exceção do ARM64
 description: Descreve as convenções de tratamento de exceção e os dados usados pelo Windows no ARM64.
 ms.date: 11/19/2018
-ms.openlocfilehash: 1ed147a27cfeb545e2a5fe265df8113a5befac73
-ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
+ms.openlocfilehash: 2304c04c5e9be31299e30bb48771f7c9777d1cd5
+ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72276840"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504485"
 ---
 # <a name="arm64-exception-handling"></a>Tratamento de exceção do ARM64
 
@@ -23,7 +23,7 @@ As convenções de desenrolamento de exceção, e esta descrição, são destina
 
    - A análise do código é complexa; o compilador deve ter cuidado para gerar apenas instruções que o desenrolador pode decodificar.
 
-   - Se o desenrolamento não puder ser totalmente descrito por meio do uso de códigos de liberação, em alguns casos ele deverá voltar à decodificação de instrução. Isso aumenta a complexidade geral e, idealmente, seria evitado.
+   - Se o desenrolamento não puder ser totalmente descrito por meio do uso de códigos de liberação, em alguns casos ele deverá voltar à decodificação de instrução. Isso aumenta a complexidade geral e, idealmente, deve ser evitado.
 
 1. Suporte ao desenrolamento em Mid-prólogo e mid-epílogo.
 
@@ -39,7 +39,7 @@ As convenções de desenrolamento de exceção, e esta descrição, são destina
 
 Essas suposições são feitas na descrição da manipulação de exceção:
 
-1. O Prologs e o epilogs tendem a espelhar outro. Aproveitando essa característica comum, o tamanho dos metadados necessários para descrever o desenrolamento pode ser bastante reduzido. No corpo da função, não importa se as operações do prólogo são desfeitas ou se as operações do epílogo são feitas de forma direta. Ambas devem produzir resultados idênticos.
+1. O Prologs e o epilogs tendem a ser espelhados. Aproveitando essa característica comum, o tamanho dos metadados necessários para descrever o desenrolamento pode ser bastante reduzido. No corpo da função, não importa se as operações do prólogo são desfeitas ou se as operações do epílogo são feitas de forma direta. Ambas devem produzir resultados idênticos.
 
 1. As funções tendem a ser relativamente pequenas. Várias otimizações de espaço dependem desse fato para alcançar o empacotamento mais eficiente de dados.
 
@@ -53,7 +53,7 @@ Essas suposições são feitas na descrição da manipulação de exceção:
 
 ## <a name="arm64-stack-frame-layout"></a>Layout de quadro de pilha ARM64
 
-(media/arm64-exception-handling-stack-frame.png "layout do quadro de pilhas") de layout do quadro de ![pilhas]
+![layout do quadro de pilhas](media/arm64-exception-handling-stack-frame.png "layout de registro de ativação")
 
 Para funções encadeadas de quadro, o par FP e LR pode ser salvo em qualquer posição na área variável local, dependendo das considerações de otimização. O objetivo é maximizar o número de locais que podem ser alcançados por uma única instrução com base no ponteiro do quadro (x29) ou no ponteiro de pilha (SP). No entanto, para funções `alloca`, ela deve ser encadeada e x29 deve apontar para a parte inferior da pilha. Para permitir uma melhor cobertura de modo de endereçamento de pares de registro, as áreas de salvamento de registro não volátil são posicionadas na parte superior da pilha de área local. Aqui estão exemplos que ilustram várias das sequências de prólogo mais eficientes. Para fins de clareza e melhor localidade de cache, a ordem de armazenamento de registros salvos por receptor em todos os Prologs canônicos está na ordem "crescente". `#framesz` abaixo representa o tamanho da pilha inteira (excluindo a área alloca). `#localsz` e `#outsz` indicam o tamanho da área local (incluindo a área de salvamento para o \<x29, a LR > pair) e o tamanho do parâmetro de saída, respectivamente.
 
@@ -188,7 +188,7 @@ Os registros. pData são uma matriz ordenada de itens de comprimento fixo que de
 
 Cada registro. pData para ARM64 tem 8 bytes de comprimento. O formato geral de cada registro coloca o RVA de 32 bits da função iniciar na primeira palavra, seguido por uma segunda palavra que contém um ponteiro para um bloco de comprimento variável. xdata ou uma palavra compactada que descreve uma sequência de desenrolamento de função canônica.
 
-![. pData do registro de layout](media/arm64-exception-handling-pdata-record.png ". pData layout de registro")
+![. pData layout de registro](media/arm64-exception-handling-pdata-record.png ". pData layout de registro")
 
 Os campos são os seguintes:
 
@@ -204,7 +204,7 @@ Os campos são os seguintes:
 
 Quando o formato de desenrolamento compactado for insuficiente para descrever o desenrolamento de uma função, um registro .xdata de comprimento variável deverá ser criado. O endereço desse registro é armazenado na segunda palavra do registro .pdata. O formato de. xdata é um conjunto de palavras de tamanho variável empacotado:
 
-![. xdata do registro de layout](media/arm64-exception-handling-xdata-record.png ". xdata layout de registro")
+![. xdata layout de registro](media/arm64-exception-handling-xdata-record.png ". xdata layout de registro")
 
 Esses dados são divididos em quatro seções:
 
@@ -336,7 +336,7 @@ Para funções cujos Prologs e epilogs seguem o formato canônico descrito abaix
 
 O formato de um registro. pData com dados de desenrolamento compactados tem esta aparência:
 
-![. pData registro com dados de desenrolação compactados](media/arm64-exception-handling-packed-unwind-data.png ". registro pData com dados de desenrolamento compactados")
+![. pData registro com dados de desenrolamento compactados](media/arm64-exception-handling-packed-unwind-data.png ". pData registro com dados de desenrolamento compactados")
 
 Os campos são os seguintes:
 
@@ -374,10 +374,10 @@ Etapa 5: alocar a pilha restante, incluindo a área local, \<x29, o > do par e a
 Etapa #|Valores de sinalizador|n º de instruções|Opcode|Código de desenrolamento
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **RegI** <= 10|RegIt/2 + **regi** %2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+1|0 < **RegI** < = 10|RegIt/2 + **regi** %2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
 2|**CR**= = 01 *|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
-3|0 < **RegF** <=7|(RegF + 1) / 2 +<br/>(RegF + 1) %2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
-4|**H** == 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
+3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) %2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
+4|**H** = = 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
 5a|**CR** = = 11 & & #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
 5b|**CR** = = 11 & &<br/>512 < #locsz < = 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
 5C|**CR** = = 11 & & #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
@@ -628,7 +628,7 @@ Epílogo Start index [0] aponta para a mesma sequência de código de desenrolam
 
 Epílogo Start index [4] aponta para o meio do código de desenrolamento de prólogo (parcialmente, reutiliza a matriz de desenrolamento).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral das convenções da ABI ARM64](arm64-windows-abi-conventions.md)<br/>
 [Tratamento de exceção do ARM](arm-exception-handling.md)
