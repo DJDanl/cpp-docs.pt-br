@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
+ms.sourcegitcommit: 9a63e9b36d5e7fb13eab15c2c35bedad4fb03ade
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518199"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600038"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Referência de esquema de CMakeSettings.json
 
@@ -31,7 +31,7 @@ A matriz de `configurations` contém todas as configurações para um projeto CM
 
 Um `configuration` tem estas propriedades:
 
-- `addressSDanitizerEnabled`: se `true` compilar o programa com o resolvedor de endereço (experimental no Windows). No Linux, compile com-fno-omita-frame-ponteiro e otimização do compilador Level-os ou-OO para obter os melhores resultados.
+- `addressSanitizerEnabled`: se `true` compilar o programa com o resolvedor de endereço (experimental no Windows). No Linux, compile com-fno-omita-frame-ponteiro e otimização do compilador Level-os ou-OO para obter os melhores resultados.
 - `addressSanitizerRuntimeFlags`: sinalizadores de tempo de execução passados para AddressSanitizer por meio da variável de ambiente ASAN_OPTIONS. Formato: sinalizador1 = valor: Flag2 = value2.
 - `buildCommandArgs`: especifica as opções de build nativas passadas para o CMake após --build --. Por exemplo, passar -v ao usar o gerador Ninja força o Ninja a emitir linhas de comando de saída. Confira [Argumentos de linha de comando do Ninja](#ninja) para obter mais informações sobre os comandos do Ninja.
 - `buildRoot`: especifica o diretório no qual o CMake gera scripts de build para o gerador escolhido.  Mapeia para a opção **-DCMAKE_BINARY_DIR** e especifica onde *CMakeCache. txt* será criado. Se a pasta não existir, ela será criada. Macros com suporte incluem `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
@@ -43,7 +43,7 @@ Um `configuration` tem estas propriedades:
 - `codeAnalysisRuleset`: especifica o conjunto de regras para usar ao executar a análise de código. Pode ser um caminho completo ou o nome do arquivo de um conjunto de regras instalado pelo Visual Studio.
 - `configurationType`: especifica a configuração do tipo de build para o gerador selecionado. Pode ser um destes:
 
-  - Depuração
+  - Depurar
   - Versão
   - MinSizeRel
   - RelWithDebInfo
@@ -279,7 +279,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|Opção|Descrição|
+|Opção|DESCRIÇÃO|
 |--------------|------------|
 | --version  | imprime a versão do Ninja ("1.7.1")|
 |   -C DIR   | altera para DIR antes de qualquer outra ação|
