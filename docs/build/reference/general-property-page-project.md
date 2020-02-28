@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: 0fb6e1289b44940cabaee02e62690c94ec5bf131
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: eb172e7bd76816458a0efff7b053d136f52076ab
+ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299767"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78166752"
 ---
 # <a name="general-property-page-project"></a>Página de propriedade geral (projeto)
 
 ::: moniker range=">=vs-2019"
 
-Este tópico aplica-se aos projetos do Visual Studio para Windows. Para projetos do Linux, [consulte C++ referência de página de propriedades do Linux](../../linux/prop-pages-linux.md). Para projetos do CMake, consulte [projetos do cmake no Visual Studio](../cmake-projects-in-visual-studio.md).
+Este tópico aplica-se aos projetos do Visual Studio para Windows. Para projetos do Linux, [consulte C++ referência de página de propriedades do Linux](../../linux/prop-pages-linux.md). Para projetos do CMake, consulte [projetos do cmake no Visual Studio](../cmake-projects-in-visual-studio.md). Para projetos do Android, consulte [Propriedades gerais do projeto C++(Android)](/cpp/cross-platform/general-android-prop-page). Para projetos do makefile do Android, consulte [Propriedades gerais do C++ projeto (Android makefile)](/cpp/cross-platform/general-makefile-android-prop-page)
 
 Quando você clica com o botão direito do mouse em um nó do projeto em Gerenciador de Soluções e seleciona **Propriedades**, a página de propriedades **geral** no nó **Propriedades de configuração** no painel esquerdo exibe estas propriedades:
 
@@ -52,7 +52,7 @@ Quando você clica com o botão direito do mouse em um nó do projeto em Gerenci
 
    Para acessar essa propriedade de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.IntermediateDirectory%2A>.
 
-- **Nome de Destino**
+- **Nome de destino**
 
    Especifica o nome de arquivo gerado por esse projeto. Por padrão, essa propriedade é o nome de arquivo especificado pela macro $(ProjectName).
 
@@ -76,7 +76,7 @@ Quando você clica com o botão direito do mouse em um nó do projeto em Gerenci
 
      Exibe o conjunto de ferramentas do bibliotecário (o mesmo que o conjunto de ferramentas do vinculador, exceto pela substituição do bibliotecário pelo vinculador e omissão do Gerador de Proxy de Serviço Web XML).
 
-  - **Utility**
+  - **Utilitário**
 
      Exibe o conjunto de ferramentas do utilitário (MIDL, build personalizado, eventos de pré-build e pós-build).
 
@@ -88,11 +88,11 @@ Quando você clica com o botão direito do mouse em um nó do projeto em Gerenci
 
    Para ter o Windows 7 ou o Windows Vista como destino, use o valor **8.1**, pois o SDK do Windows 8.1 é compatível com versões anteriores dessas plataformas. Além disso, você deve definir o valor apropriado como **_WIN32_WINNT** em targetver.h. Para o Windows 7, isso é 0x0601. Confira [Modificando WINVER e _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
-   Instale o conjunto de ferramentas da plataforma Windows XP incluído no Visual Studio para usar a versão atual das bibliotecas para compilar projetos do Windows XP e do Windows Server 2003. Para obter informações sobre como obter e usar esse conjunto de ferramentas da plataforma, confira [Configurando programas para o Windows XP](../configuring-programs-for-windows-xp.md). Para obter informações adicionais sobre como alterar o conjunto de ferramentas da plataforma, consulte [Como: Modificar a estrutura de destino e o conjunto de ferramentas da plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Instale o conjunto de ferramentas da plataforma Windows XP incluído no Visual Studio para usar a versão atual das bibliotecas para compilar projetos do Windows XP e do Windows Server 2003. Para obter informações sobre como obter e usar esse conjunto de ferramentas da plataforma, confira [Configurando programas para o Windows XP](../configuring-programs-for-windows-xp.md). Para obter mais informações sobre como alterar o conjunto de ferramentas da plataforma, consulte [Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Conjunto de Ferramentas da Plataforma**
 
-   Permite que o projeto seja direcionado a uma versão diferente do compilador e das bibliotecas do Visual C++. Os projetos C++ do Visual Studio podem ter como destino o conjunto de ferramentas padrão instalado pelo Visual Studio, ou um dos conjuntos de ferramentas instalados por várias versões anteriores do Visual Studio, incluindo conjuntos de ferramentas que criam executáveis que podem ser executados no windowx XP. Para obter informações sobre como alterar o conjunto de [ferramentas de plataforma, consulte Como: Modificar a estrutura de destino e o conjunto de ferramentas da plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Permite que o projeto seja direcionado a uma versão diferente do compilador e das bibliotecas do Visual C++. Os projetos C++ do Visual Studio podem ter como destino o conjunto de ferramentas padrão instalado pelo Visual Studio, ou um dos conjuntos de ferramentas instalados por várias versões anteriores do Visual Studio, incluindo conjuntos de ferramentas que criam executáveis que podem ser executados no Windows XP. Para obter informações sobre como alterar o conjunto de ferramentas da plataforma, confira [Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **C++Padrão de idioma**
 
@@ -116,7 +116,7 @@ No Visual Studio 2015 e no Visual Studio 2017, quando você clica com o botão d
 
 - **Versão da plataforma de destino (Visual Studio 2015)**
 
-   Especifica a versão mais antiga da plataforma na qual o projeto pode ser executado. Essa propriedade será exibida somente se o tipo de projeto oferecer suporte a ela. Se o aplicativo pode aproveitar as funcionalidades em uma versão mais recente do SDK do Windows, mas ainda pode ser executado em versões anteriores sem essas funcionalidades, talvez com alguma perda de funcionalidade, o valor dessas duas propriedades pode ser diferente. Nesse caso, o código deve verificar a versão da plataforma na qual ela está em execução em tempo de execução e não tentar usar as funcionalidades não disponíveis na versão mais antiga da plataforma.
+   Especifica a versão mais antiga da plataforma na qual o projeto pode ser executado. Essa propriedade será exibida somente se o tipo de projeto oferecer suporte a ela. Se o aplicativo pode aproveitar as funcionalidades em uma versão mais recente do SDK do Windows, mas ainda pode ser executado em versões anteriores sem essas funcionalidades, talvez com alguma perda de funcionalidade, o valor dessas duas propriedades pode ser diferente. Nesse caso, o código deve verificar a versão da plataforma na qual ela está em execução em runtime e não tentar usar as funcionalidades não disponíveis na versão mais antiga da plataforma.
 
    O C++ sistema do projeto não impõe essa opção. Ela é incluída para manter a consistência com outras linguagens, como C# e JavaScript, e como um guia para qualquer pessoa que usa o projeto. O Visual C++ não gerará um erro se você usar um recurso que não está disponível na versão mínima.
 
@@ -126,7 +126,7 @@ No Visual Studio 2015 e no Visual Studio 2017, quando você clica com o botão d
 
    Para ter o Windows 7 ou o Windows Vista como destino, use o valor **8.1**, pois o SDK do Windows 8.1 é compatível com versões anteriores dessas plataformas. Além disso, você deve definir o valor apropriado como **_WIN32_WINNT** em targetver.h. Para o Windows 7, isso é 0x0601. Confira [Modificando WINVER e _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
-   Instale o conjunto de ferramentas da plataforma Windows XP incluído no Visual Studio para usar a versão atual das bibliotecas para compilar projetos do Windows XP e do Windows Server 2003. Para obter informações sobre como obter e usar esse conjunto de ferramentas da plataforma, confira [Configurando programas para o Windows XP](../configuring-programs-for-windows-xp.md). Para obter informações adicionais sobre como alterar o conjunto de ferramentas da plataforma, consulte [Como: Modificar a estrutura de destino e o conjunto de ferramentas da plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Instale o conjunto de ferramentas da plataforma Windows XP incluído no Visual Studio para usar a versão atual das bibliotecas para compilar projetos do Windows XP e do Windows Server 2003. Para obter informações sobre como obter e usar esse conjunto de ferramentas da plataforma, confira [Configurando programas para o Windows XP](../configuring-programs-for-windows-xp.md). Para obter mais informações sobre como alterar o conjunto de ferramentas da plataforma, consulte [Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Diretório de Saída**
 
@@ -140,11 +140,11 @@ No Visual Studio 2015 e no Visual Studio 2017, quando você clica com o botão d
 
    Para acessar essa propriedade de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.IntermediateDirectory%2A>.
 
-- **Nome de Destino**
+- **Nome de destino**
 
    Especifica o nome de arquivo gerado por esse projeto. Por padrão, essa propriedade é o nome de arquivo especificado pela macro $(ProjectName).
 
-- **Extensão de Destino**
+- **Extensão de destino**
 
    Especifica a extensão de nome de arquivo gerada por esse projeto; por exemplo, .exe ou .dll.
 
@@ -162,14 +162,14 @@ No Visual Studio 2015 e no Visual Studio 2017, quando você clica com o botão d
 
 - **Conjunto de Ferramentas da Plataforma**
 
-   Permite que o projeto seja direcionado a uma versão diferente do compilador e das bibliotecas do Visual C++. Os projetos C++ do Visual Studio podem ter como destino o conjunto de ferramentas padrão instalado pelo Visual Studio, ou um dos conjuntos de ferramentas instalados por várias versões anteriores do Visual Studio, incluindo conjuntos de ferramentas que criam executáveis que podem ser executados no windowx XP. Para obter informações sobre como alterar o conjunto de [ferramentas de plataforma, consulte Como: Modificar a estrutura de destino e o conjunto de ferramentas da plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Permite que o projeto seja direcionado a uma versão diferente do compilador e das bibliotecas do Visual C++. Os projetos C++ do Visual Studio podem ter como destino o conjunto de ferramentas padrão instalado pelo Visual Studio, ou um dos conjuntos de ferramentas instalados por várias versões anteriores do Visual Studio, incluindo conjuntos de ferramentas que criam executáveis que podem ser executados no Windows XP. Para obter informações sobre como alterar o conjunto de ferramentas da plataforma, confira [Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Habilitar Build Incremental Gerenciado**
 
    Para projetos gerenciados, isso habilita a detecção de visibilidade externa quando você gera assemblies. Se uma alteração em um projeto gerenciado não está visível para outros projetos, os projetos dependentes não são recompilados. Isso pode melhorar de maneira significativa os tempos de build em soluções que incluem projetos gerenciados.
 
 ## <a name="project-defaults"></a>Padrões de Projeto
- 
+
 As propriedades na seção Padrão de Projeto representam as propriedades padrão que podem ser modificadas. A definição dessas propriedades pode ser encontrada nos arquivos .props no *Diretório de Instalação*\VC\VCProjectDefaults.
 
 - **Tipo de Configuração**
@@ -192,7 +192,7 @@ As propriedades na seção Padrão de Projeto representam as propriedades padrã
 
      Exibe o conjunto de ferramentas do bibliotecário (o mesmo que o conjunto de ferramentas do vinculador, exceto pela substituição do bibliotecário pelo vinculador e omissão do Gerador de Proxy de Serviço Web XML).
 
-  - **Utility**
+  - **Utilitário**
 
      Exibe o conjunto de ferramentas do utilitário (MIDL, build personalizado, eventos de pré-build e pós-build).
 
@@ -230,6 +230,6 @@ As propriedades na seção Padrão de Projeto representam as propriedades padrã
 
 ::: moniker-end
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [C++referência de página de propriedades do projeto](property-pages-visual-cpp.md)
