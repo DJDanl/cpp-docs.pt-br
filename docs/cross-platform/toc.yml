@@ -1,0 +1,36 @@
+- name: Desenvolvimento de tecnologia móvel multiplataforma com C++
+  items:
+    - name: Desenvolvimento de tecnologia móvel multiplataforma com C++
+      href: visual-cpp-for-cross-platform-mobile-development.md
+    - name: Instalar desenvolvimento de tecnologia móvel multiplataforma com C++
+      items:
+        - name: Instalar desenvolvimento de tecnologia móvel multiplataforma com C++
+          href: install-visual-cpp-for-cross-platform-mobile-development.md
+        - name: Instalar e configurar ferramentas de build usando o iOS
+          href: install-and-configure-tools-to-build-using-ios.md
+    - name: Criar um aplicativo de Atividade Nativa do Android
+      href: create-an-android-native-activity-app.md
+    - name: Criar um aplicativo OpenGL ES no Android e iOS
+      href: build-an-opengl-es-application-on-android-and-ios.md
+    - name: Importar um projeto do Xcode
+      href: import-an-xcode-project.md
+    - name: Sincronizar alterações entre o Xcode e o Visual Studio
+      href: sync-changes-between-xcode-and-visual-studio.md
+    - name: Exemplos de desenvolvimento móvel multiplataforma
+      href: cross-platform-mobile-development-examples.md
+    - name: Referência da página de propriedades multiplataforma C++
+      items:
+        - name: Referência da página de propriedades multiplataforma C++
+          href: cross-platform-prop-pages.md
+        - name: Propriedades gerais do projeto (Android C++)
+          href: general-android-prop-page.md
+        - name: Propriedades do depurador Android
+          href: android-debugger-prop-page.md
+        - name: Propriedades do projeto Clang (Android C++)
+          href: clang-android-prop-page.md
+        - name: Propriedades gerais do projeto (Makefile Android C++)
+          href: general-makefile-android-prop-page.md
+        - name: Propriedades do vinculador Clang (Android C++)
+          href: clanglink-prop-page.md
+        - name: Propriedades de NMake (Android C++)
+          href: nmake-android-prop-page.md
