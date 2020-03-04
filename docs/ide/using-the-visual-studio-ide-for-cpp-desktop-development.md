@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
 ms.openlocfilehash: 7a9559f1aac9f0bd26b35dd03729ab86ad695b04
 ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "66182766"
@@ -16,7 +16,7 @@ ms.locfileid: "66182766"
 
 O IDE (Ambiente de Desenvolvimento Integrado) do Visual Studio oferece um conjunto de funcionalidades que ajudam você gerenciar projetos de código grandes e pequenos, escrever e refatorar o código e detectar e corrigir erros usando a análise estática e ferramentas avançadas de depuração. Este conjunto de artigos visa orientá-lo em cada uma das etapas, nas quais você precisará gerenciar seus projetos, escrever, testar, depurar o código e, em seguida, implantá-lo em outro computador.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Caso ainda não tenha instalado o Visual Studio, agora é o momento. Para obter os links de download e um passo a passo rápido, confira [Instalar o suporte do C++ no Visual Studio](../build/vscpp-step-0-installation.md). Para obter mais informações de como instalar o Visual Studio em geral e dicas de solução de problemas se algo der errado, confira [Instalar o Visual Studio](/visualstudio/install/install-visual-studio). Escolha a carga de trabalho **Desenvolvimento para desktop com C++** para incluir os compiladores, as ferramentas e as bibliotecas C++ ao instalar o Visual Studio, pois eles não são instalados por padrão.
 

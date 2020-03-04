@@ -25,7 +25,7 @@ Esta explicação passo a passo ilustra as seguintes tarefas:
 
 - Usar o MSBuild para personalizar o projeto.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Você precisa dos seguintes itens para concluir esta explicação:
 

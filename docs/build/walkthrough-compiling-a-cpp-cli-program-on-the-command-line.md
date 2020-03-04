@@ -4,7 +4,7 @@ ms.date: 04/23/2019
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
 ms.openlocfilehash: 8a5c5659367350a80725b365ef9c431bbec209d1
 ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/29/2019
 ms.locfileid: "64877448"
@@ -15,7 +15,7 @@ ms.locfileid: "64877448"
 
 Neste passo a passo, você usa um editor de texto para criar um programa de C++/CLI básico e, em seguida, o compila na linha de comandos. (Você pode usar seu próprio programa de C++/CLI ao invés de digitar o que é mostrado ou, ainda, usar uma amostra de código de C++/CLI de outro artigo de ajuda. Essa técnica é útil para compilar e testar pequenos módulos que têm sem elementos de interface do usuário.)
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Você entender os conceitos básicos da linguagem C++.
 

@@ -15,7 +15,7 @@ ms.locfileid: "64877331"
 
 Descreve como implantar um aplicativo do Visual C++ copiando arquivos para sua pasta.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Um computador que tenha o Visual Studio instalado.
 

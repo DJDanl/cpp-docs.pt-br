@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
 ms.openlocfilehash: d23412bcc740cbbda4227e0271842b4d44b436af
 ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/26/2019
 ms.locfileid: "67400986"
@@ -17,7 +17,7 @@ ms.locfileid: "67400986"
 
 Neste passo a passo, você introduzirá um erro de sintaxe do C++ no código deliberadamente para saber o que é um erro de compilação e como corrigi-lo. Quando você compila o projeto, uma mensagem de erro indica qual é o problema e em que local ele ocorreu.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Este passo a passo pressupõe que você conheça os princípios básicos da linguagem C++.
 

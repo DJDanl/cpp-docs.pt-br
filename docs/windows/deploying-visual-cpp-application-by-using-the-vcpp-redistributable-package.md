@@ -15,7 +15,7 @@ ms.locfileid: "64877280"
 
 Este artigo passo a passo descreve como usar o Pacote Redistribuível do Visual C++ para implantar um aplicativo do Visual C++.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 É necessário ter estes componentes para concluir este passo a passo:
 

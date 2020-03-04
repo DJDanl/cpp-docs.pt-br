@@ -15,7 +15,7 @@ ms.locfileid: "71096011"
 
 Neste tutorial, você criará um aplicativo que se assemelha ao explorador de arquivos. Você criará uma janela que tem dois painéis. O painel esquerdo conterá um objeto [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) que exibe a área de trabalho em uma exibição hierárquica. O painel direito conterá um [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) que mostra os arquivos na pasta selecionada no painel esquerdo.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - No Visual Studio 2017 e posterior, o suporte do MFC é um componente opcional. Para instalá-lo, abra o Instalador do Visual Studio no menu Iniciar do Windows. Localize a versão do Visual Studio que você está usando e escolha o botão **Modificar** . Verifique se a opção **desenvolvimento de C++ área de trabalho com** bloco está marcada. Em **componentes opcionais**, verifique o botão **suporte do MFC** .
 

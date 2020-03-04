@@ -17,7 +17,7 @@ ms.locfileid: "62314852"
 
 O ponto de partida usual para um programador de C++ é um aplicativo "Olá, mundo!" executado na linha de comando. Que é o que você criará no Visual Studio nesta etapa.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Ter o Visual Studio com o desenvolvimento de Desktop com carga de trabalho do C++ instalada e em execução no seu computador. Se ele ainda não estiver instalado, confira [Instalar suporte para C++ no Visual Studio](vscpp-step-0-installation.md).
 
@@ -63,7 +63,7 @@ Visual Studio pode criar todos os tipos de aplicativos e componentes para Window
 
 1. No Visual Studio, abra o **Project** menu e escolha **propriedades** para abrir o **páginas de propriedades de HelloWorld** caixa de diálogo.
 
-1. No **páginas de propriedades** caixa de diálogo, em **propriedades de configuração**, selecione **vinculador**, **sistema**e, em seguida, escolha a caixa de edição em o **subsistema** propriedade. No menu suspenso que aparece, selecione **Console (/ subsistema: CONSOLE)**. Escolha **OK** para salvar suas alterações.
+1. No **páginas de propriedades** caixa de diálogo, em **propriedades de configuração**, selecione **vinculador**, **sistema**e, em seguida, escolha a caixa de edição em o **subsistema** propriedade. No menu suspenso que aparece, selecione **Console (/ subsistema: CONSOLE)** . Escolha **OK** para salvar suas alterações.
 
    ![Abra a caixa de diálogo Property Pages](media/vscpp-properties-linker-subsystem.gif "abrir a caixa de diálogo páginas de propriedades")
 
@@ -75,7 +75,7 @@ Agora, o Visual Studio sabe para compilar seu projeto para ser executado em uma 
 
 1. Na **Gerenciador de soluções**, selecione o projeto HelloWorld. Na barra de menus, escolha **Project**, **Adicionar Novo Item** para abrir o **Add New Item** caixa de diálogo.
 
-1. No **Adicionar Novo Item** caixa de diálogo, selecione **Visual C++** sob **instalado** se ainda não estiver selecionado. No painel central, selecione **arquivo C++ (. cpp)**. Alterar o **nome** à *HelloWorld*. Escolher **adicionar** para fechar a caixa de diálogo e criar o arquivo.
+1. No **Adicionar Novo Item** caixa de diálogo, selecione **Visual C++** sob **instalado** se ainda não estiver selecionado. No painel central, selecione **arquivo C++ (. cpp)** . Alterar o **nome** à *HelloWorld*. Escolher **adicionar** para fechar a caixa de diálogo e criar o arquivo.
 
    ![Adicionar um arquivo de origem para HelloWorld](media/vscpp-add-new-item.gif "adicionar um arquivo de origem para HelloWorld")
 

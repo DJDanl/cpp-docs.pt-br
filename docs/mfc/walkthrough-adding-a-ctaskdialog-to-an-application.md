@@ -23,7 +23,7 @@ A `CTaskDialog` é uma caixa de diálogo de tarefa que substitui a caixa de mens
 
 O `CTaskDialog` oferece suporte a vários elementos opcionais para coletar e exibir informações. Por exemplo, um `CTaskDialog` pode exibir links de comando, botões personalizados, ícones personalizados e um rodapé. O `CTaskDialog` também tem vários métodos que permitem consultar o estado da caixa de diálogo da tarefa para determinar quais elementos opcionais o usuário selecionou.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
 
