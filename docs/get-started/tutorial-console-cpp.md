@@ -8,7 +8,7 @@ ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: ff1b5295f9fefd681ea76d09349415b59ceac1f2
 ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69631307"
@@ -19,7 +19,7 @@ ms.locfileid: "69631307"
 
 O ponto de partida usual para um programador de C++ é um aplicativo "Olá, mundo!" executado na linha de comando. É isso que você criará no Visual Studio neste artigo e, em seguida, passaremos para algo mais desafiador: um aplicativo de calculadora.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Ter o Visual Studio com a carga de trabalho **Desenvolvimento para desktop com C++** instalada e em execução no seu computador. Se ele ainda não estiver instalado, confira [Instalar suporte para C++ no Visual Studio](../build/vscpp-step-0-installation.md).
 
@@ -389,7 +389,7 @@ Parabéns! Você concluiu o código para o aplicativo de calculadora e o compilo
 
 O ponto de partida usual para um programador de C++ é um aplicativo "Olá, mundo!" executado na linha de comando. É isso que você criará no Visual Studio neste artigo e, em seguida, passaremos para algo mais desafiador: um aplicativo de calculadora.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Ter o Visual Studio com a carga de trabalho **Desenvolvimento para desktop com C++** instalada e em execução no seu computador. Se ele ainda não estiver instalado, confira [Instalar suporte para C++ no Visual Studio](../build/vscpp-step-0-installation.md).
 

@@ -15,7 +15,7 @@ ms.locfileid: "64558166"
 
 [Parte 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) deste passo a passo mostrado como adicionar uma faixa de opções Fluent do Office para o clássico Scribble do aplicativo. Esta parte mostra como adicionar painéis de faixa de opções e controles que os usuários podem usar em vez de menus e comandos.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 [Exemplos do Visual C++](../overview/visual-cpp-samples.md)
 
@@ -57,7 +57,7 @@ Estas etapas mostram como adicionar um **modo de exibição** painel que contém
 
    1. Clique no painel para modificar suas propriedades. Alteração **legenda** para `Window`.
 
-   1. Clique no botão. Alteração **legenda** à `Windows`, **chaves** para `w`, **índice de imagem grandes** para `1`, e **modo de divisão** para `False`. Em seguida, clique no botão de reticências (**...** ) ao lado **itens de Menu** para abrir o **Editor itens** caixa de diálogo.
+   1. Clique no botão. Alteração **legenda** à `Windows`, **chaves** para `w`, **índice de imagem grandes** para `1`, e **modo de divisão** para `False`. Em seguida, clique no botão de reticências ( **...** ) ao lado **itens de Menu** para abrir o **Editor itens** caixa de diálogo.
 
    1. Clique em **adicionar** três vezes para adicionar três botões.
 

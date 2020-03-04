@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
 ms.openlocfilehash: ce792345b045a1e647de6363ca094fb3f3826b73
 ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/26/2019
 ms.locfileid: "67400973"
@@ -17,7 +17,7 @@ ms.locfileid: "67400973"
 
 Neste passo a passo, você modificará o programa para corrigir o problema encontrado durante o teste do projeto.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Este passo a passo pressupõe que você conheça os princípios básicos da linguagem C++.
 

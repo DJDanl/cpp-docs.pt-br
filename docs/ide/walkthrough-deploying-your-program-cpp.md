@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
 ms.openlocfilehash: 5cc4ead7aaef2ffa56870a374b0b73d16eb31521
 ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/26/2019
 ms.locfileid: "67400967"
@@ -22,7 +22,7 @@ Agora que você criou seu aplicativo concluindo os passos a passos anteriormente
 
 Este passo a passo mostra como usar o Windows Installer para implantar seu aplicativo. Use também o ClickOnce para implantar um aplicativo. Para obter mais informações, confira [Implantação do ClickOnce para aplicativos do Visual C++](../windows/clickonce-deployment-for-visual-cpp-applications.md). Para obter mais informações sobre a implantação em geral, confira [Implantando aplicativos, serviços e componentes](/visualstudio/deployment/deploying-applications-services-and-components).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Este passo a passo pressupõe que você conhece os princípios básicos da linguagem C++.
 

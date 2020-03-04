@@ -17,7 +17,7 @@ ms.locfileid: "62314220"
 
 Quando você criou um projeto de aplicativo de console C++ e inseriu seu código, compilação e executá-lo dentro do Visual Studio e, em seguida, executá-lo como um aplicativo autônomo da linha de comando.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Ter o Visual Studio com o desenvolvimento de Desktop com carga de trabalho do C++ instalada e em execução no seu computador. Se ele ainda não estiver instalado, siga as etapas em [suporte de instalar o C++ no Visual Studio](vscpp-step-0-installation.md).
 

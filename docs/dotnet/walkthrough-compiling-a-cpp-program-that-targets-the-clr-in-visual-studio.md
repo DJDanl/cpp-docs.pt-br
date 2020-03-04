@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
 ms.openlocfilehash: 8462b2b031bdcdebf65d58974c521d80e57d856d
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65221814"
@@ -21,7 +21,7 @@ Usando C++/CLI, você pode criar C++ programas que usam classes do .NET, bem com
 
 Para este procedimento, você pode digitar seu próprio programa C++ ou use um dos programas de exemplo. O programa de exemplo que usamos neste procedimento cria um arquivo de texto chamado textfile.txt e salva-o no diretório do projeto.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Um entendimento dos fundamentos da linguagem C++.
 - No Visual Studio 2017 e posterior, C++suporte da CLI é um componente opcional. Para instalá-lo, abra o **instalador do Visual Studio** no menu Iniciar do Windows. Certifique-se de que o **desenvolvimento para Desktop com C++**  lado a lado é marcada e, na **opcional** seção componentes, também Verifique se há  **C++suporte à CLI**.
@@ -78,7 +78,7 @@ As seguintes etapas variam, dependendo de qual versão do Visual Studio que voc�
 
    - Clique com o botão direito do mouse na pasta **Arquivos de origem** no **Gerenciador de Soluções**, aponte para **Adicionar** e clique em **Novo Item**.
 
-   - Clique em **Arquivo C++ (.cpp)**, digite um nome de arquivo e, em seguida, clique em **Adicionar**.
+   - Clique em **Arquivo C++ (.cpp)** , digite um nome de arquivo e, em seguida, clique em **Adicionar**.
 
    O arquivo **.cpp** é exibido na pasta **Arquivos de Origem** do **Gerenciador de Soluções** e uma janela com guias é exibida no campo no qual você digita o código que deseja inserir nesse arquivo.
 

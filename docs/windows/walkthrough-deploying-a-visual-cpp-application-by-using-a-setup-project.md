@@ -15,7 +15,7 @@ ms.locfileid: "64877376"
 
 Descreve como usar um projeto de instalação para implantar um aplicativo do Visual C++.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
 
@@ -63,7 +63,7 @@ Instruções para criar um projeto de instalação variam, dependendo de qual ve
 
 1. Crie um novo projeto. No menu **Arquivo**, aponte para **Novo** e clique em **Projeto**.
 
-1. Use o **Assistente de aplicativo MFC** para criar uma nova solução do Visual Studio. Para encontrar o assistente, na caixa de diálogo **Novo Projeto**, expanda o nó **Visual C++**, selecione **MFC**, selecione **Aplicativo MFC**, insira um nome para o projeto e, em seguida, clique em **OK**. Clique em **Finalizar**.
+1. Use o **Assistente de aplicativo MFC** para criar uma nova solução do Visual Studio. Para encontrar o assistente, na caixa de diálogo **Novo Projeto**, expanda o nó **Visual C++** , selecione **MFC**, selecione **Aplicativo MFC**, insira um nome para o projeto e, em seguida, clique em **OK**. Clique em **Finalizar**.
 
    > [!NOTE]
    > Se o **aplicativo do MFC** tipo está ausente, selecione **abrir instalador do Visual Studio** no painel esquerdo do **novo projeto** caixa de diálogo. Instale a opção localizada embaixo de **Desenvolvimento para desktop com C++** na seção de componentes **Opcional**, denominada **Visual C++ MFC for x86 e x64**.
@@ -88,10 +88,10 @@ Instruções para criar um projeto de instalação variam, dependendo de qual ve
 
 1. Crie um novo projeto. No menu **Arquivo**, aponte para **Novo** e clique em **Projeto**.
 
-1. Use o **Assistente de aplicativo MFC** para criar uma nova solução do Visual Studio. Para encontrar o assistente, na caixa de diálogo **Novo Projeto**, expanda o nó **Visual C++**, selecione **MFC**, selecione **Aplicativo MFC**, insira um nome para o projeto e, em seguida, clique em **OK**. Clique em **Finalizar**.
+1. Use o **Assistente de aplicativo MFC** para criar uma nova solução do Visual Studio. Para encontrar o assistente, na caixa de diálogo **Novo Projeto**, expanda o nó **Visual C++** , selecione **MFC**, selecione **Aplicativo MFC**, insira um nome para o projeto e, em seguida, clique em **OK**. Clique em **Finalizar**.
 
    > [!NOTE]
-   > Se o **aplicativo do MFC** tipo está ausente, clique no botão Iniciar do Windows e digite **adicionar ou remover programas**. Abra o programa na lista de resultados e, em seguida, localize a instalação do Microsoft Visual Studio 2015 na lista de programas instalados. Clique duas vezes nele e, em seguida, escolha **Modificar** e selecione o componente **MFC** embaixo de **Visual C++**.
+   > Se o **aplicativo do MFC** tipo está ausente, clique no botão Iniciar do Windows e digite **adicionar ou remover programas**. Abra o programa na lista de resultados e, em seguida, localize a instalação do Microsoft Visual Studio 2015 na lista de programas instalados. Clique duas vezes nele e, em seguida, escolha **Modificar** e selecione o componente **MFC** embaixo de **Visual C++** .
 
 1. Altere a configuração da solução ativa para **Versão**. Dos **construir** menu, selecione **Configuration Manager**. Na caixa de diálogo **Configuration Manager**, selecione **Versão** na caixa suspensa **Configuração da solução ativa**. Clique em **Fechar**.
 
@@ -113,7 +113,7 @@ Instruções para criar um projeto de instalação variam, dependendo de qual ve
 
 1. Clique com o botão direito do mouse no nó **Pasta do Aplicativo** e selecione **Adicionar** > **Assembly** para abrir a caixa de diálogo **Selecionar componente**. Selecione e adicione quaisquer DLLs obrigatórias exigidas pelo programa, conforme descrito pelo artigo [Determinando quais DLLs devem ser redistribuídas](determining-which-dlls-to-redistribute.md).
 
-1. Selecione o item **Saída Primária do ProjectName (Ativa)**, clique com o botão direito do mouse em **Criar Atalho para a Saída Primária de ProjectName (Ativa)**. Um novo item chamado **Atalho para a Saída Primária de ProjectName (Ativa)** é exibido. É possível renomear item de atalho, em seguida, arrastar e soltar o item no nó **Menu de Programas do Usuário** à esquerda da janela.
+1. Selecione o item **Saída Primária do ProjectName (Ativa)** , clique com o botão direito do mouse em **Criar Atalho para a Saída Primária de ProjectName (Ativa)** . Um novo item chamado **Atalho para a Saída Primária de ProjectName (Ativa)** é exibido. É possível renomear item de atalho, em seguida, arrastar e soltar o item no nó **Menu de Programas do Usuário** à esquerda da janela.
 
 1. Na barra de menus, escolha **Build** > **Gerenciador de Configurações**. Na tabela **Projeto**, na coluna **Build**, marque a caixa de seleção para o projeto de implantação. Clique em **Fechar**.
 
