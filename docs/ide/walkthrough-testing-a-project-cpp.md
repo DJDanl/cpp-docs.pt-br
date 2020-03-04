@@ -19,7 +19,7 @@ Ao executar um programa no modo de Depuração, você pode usar pontos de interr
 
 Neste passo a passo, você observará o valor de uma variável durante a execução do programa e deduzirá o motivo pelo qual o valor não é o esperado.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Este passo a passo pressupõe que você conheça os princípios básicos da linguagem C++.
 

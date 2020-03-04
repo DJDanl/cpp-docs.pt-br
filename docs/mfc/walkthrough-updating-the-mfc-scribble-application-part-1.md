@@ -22,7 +22,7 @@ Este tutorial demonstra como modificar um aplicativo MFC existente para usar a i
 
 Este passo a passos modifica o exemplo do MFC de rabisco 1,0 do Classic que permite usar o mouse para criar desenhos de linha. Esta parte do guia de explicação mostra como modificar o exemplo de rabisco para que ele exiba uma barra de faixa de uma. A [parte 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) adiciona mais botões à barra da faixa de faixas.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 O [exemplo do MFC do rabisco 1,0](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Para obter ajuda sobre como converter para o Visual Studio 2017 ou [posterior, consulte Guia de portabilidade: Rabisco](../porting/porting-guide-mfc-scribble.md)do MFC.
 
