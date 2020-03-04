@@ -32,7 +32,7 @@ O passo a passo mostra como realizar essas tarefas:
 
 [!INCLUDE[note_settings_general](../mfc/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para concluir este passo a passo, você deve ter o Visual Studio.
 

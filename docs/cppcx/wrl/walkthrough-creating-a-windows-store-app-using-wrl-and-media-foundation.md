@@ -27,7 +27,7 @@ Na maioria dos casos, você pode C++usar o/CX para criar Windows Runtime. No ent
 > [!NOTE]
 > Embora esse exemplo de código seja longo, ele demonstra o mínimo necessário para criar uma transformação Media Foundation útil. Você pode usá-lo como um ponto de partida para sua própria transformação personalizada. Este exemplo é adaptado do [exemplo de extensões de mídia](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), que usa extensões de mídia para aplicar efeitos a vídeo, decodificar vídeo e criar manipuladores de esquema que produzem fluxos de mídia.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - No Visual Studio 2017 e posterior, o suporte a UWP é um componente opcional. Para instalá-lo, abra o Instalador do Visual Studio no menu Iniciar do Windows e localize sua versão do Visual Studio. Escolha **Modificar** e, em seguida, verifique se o bloco de **desenvolvimento de plataforma universal do Windows** está marcado. Em **componentes opcionais** , consulte  **C++ ferramentas para UWP (v141)** para Visual Studio 2017 ou  **C++ ferramentas para UWP (v142)** para Visual Studio 2019. Em seguida, verifique a versão do SDK do Windows que você deseja usar. 
 

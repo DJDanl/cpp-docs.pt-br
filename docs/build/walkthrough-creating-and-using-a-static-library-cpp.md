@@ -10,7 +10,7 @@ ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
 ms.author: corob
 ms.openlocfilehash: afb12cc38dbaf0af88e93a9b329a59f3b54c8557
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65217569"
@@ -31,7 +31,7 @@ Este passo a passo apresenta estas tarefas:
 
 - [Executando o aplicativo](#RunApp)
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Um entendimento dos fundamentos da linguagem C++.
 
@@ -45,7 +45,7 @@ As instruções de como criar o projeto variam dependendo se você estiver usand
 
 1. Na barra de menus, escolha **arquivo** > **New** > **projeto** para abrir o **criar um novo projeto** caixa de diálogo.
 
-1. Na parte superior da caixa de diálogo, defina **linguagem** à **C++**, defina **plataforma** para **Windows**e defina **tipodeprojeto** ao **biblioteca**. 
+1. Na parte superior da caixa de diálogo, defina **linguagem** à **C++** , defina **plataforma** para **Windows**e defina **tipodeprojeto** ao **biblioteca**. 
 
 1. Na lista filtrada de tipos de projeto, escolha **biblioteca estática** , em seguida, escolha **próxima**. Na próxima página, insira *MathFuncsLib* na **nome** caixa para especificar um nome para o projeto e especifique o local do projeto, se desejado.
 
@@ -63,7 +63,7 @@ As instruções de como criar o projeto variam dependendo se você estiver usand
 
 1. Especifique um nome para o projeto — por exemplo, *MathFuncsLib*— na **nome** caixa. Especifique um nome para a solução — por exemplo, *StaticLibrary*— na **nome da solução** caixa. Escolha o botão **OK**.
 
-1. Sob **tipo de aplicativo**, selecione **biblioteca estática (. lib)**.
+1. Sob **tipo de aplicativo**, selecione **biblioteca estática (. lib)** .
 
 1. Sob **opções adicionais**, desmarque as **cabeçalho pré-compilado** caixa de seleção.
 
@@ -91,13 +91,13 @@ As instruções de como criar o projeto variam dependendo se você estiver usand
 
 ### <a name="to-add-a-class-to-the-static-library"></a>Para adicionar uma classe à biblioteca estática
 
-1. Para criar um arquivo de cabeçalho para uma nova classe, abra o menu de atalho para o **MathFuncsLib** project no **Gerenciador de soluções**e, em seguida, escolha **Add**  >   **Novo Item**. No **Adicionar Novo Item** caixa de diálogo, no painel esquerdo, em **Visual C++**, selecione **código**. No painel central, selecione **arquivo de cabeçalho (. h)**. Especifique um nome para o arquivo de cabeçalho — por exemplo, *Mathfuncslib*— e, em seguida, escolha o **Add** botão. Um arquivo de cabeçalho em branco é exibido.
+1. Para criar um arquivo de cabeçalho para uma nova classe, abra o menu de atalho para o **MathFuncsLib** project no **Gerenciador de soluções**e, em seguida, escolha **Add**  >   **Novo Item**. No **Adicionar Novo Item** caixa de diálogo, no painel esquerdo, em **Visual C++** , selecione **código**. No painel central, selecione **arquivo de cabeçalho (. h)** . Especifique um nome para o arquivo de cabeçalho — por exemplo, *Mathfuncslib*— e, em seguida, escolha o **Add** botão. Um arquivo de cabeçalho em branco é exibido.
 
 1. Adicione uma classe chamada `MyMathFuncs` para executar operações matemáticas comuns, como adição, subtração, multiplicação e divisão. O código deve se parecer com:
 
    [!code-cpp[NVC_Walkthrough_Create_Static_Lib#100](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_1.h)]
 
-1. Para criar um arquivo de origem para a nova classe, abra o menu de atalho para o **MathFuncsLib** project no **Gerenciador de soluções**e, em seguida, escolha **Add**  >   **Novo Item**. No **Adicionar Novo Item** caixa de diálogo, no painel esquerdo, em **Visual C++**, selecione **código**. No painel central, selecione **arquivo C++ (. cpp)**. Especifique um nome para o arquivo de origem — por exemplo, *MathFuncsLib.cpp*— e, em seguida, escolha o **Add** botão. Um arquivo de origem em branco é exibido.
+1. Para criar um arquivo de origem para a nova classe, abra o menu de atalho para o **MathFuncsLib** project no **Gerenciador de soluções**e, em seguida, escolha **Add**  >   **Novo Item**. No **Adicionar Novo Item** caixa de diálogo, no painel esquerdo, em **Visual C++** , selecione **código**. No painel central, selecione **arquivo C++ (. cpp)** . Especifique um nome para o arquivo de origem — por exemplo, *MathFuncsLib.cpp*— e, em seguida, escolha o **Add** botão. Um arquivo de origem em branco é exibido.
 
 1. Use esse arquivo de origem para implementar a funcionalidade para **MyMathFuncs**. O código deve se parecer com:
 
@@ -116,7 +116,7 @@ As instruções de como criar o projeto variam dependendo se você estiver usand
 
 1. Na **Gerenciador de soluções**, clique com botão direito no nó superior para a solução e escolha **Add** > **novo projeto** para abrir o **adicionar um novo projeto**  caixa de diálogo.
 
-1. Na parte superior da caixa de diálogo, defina **linguagem** à **C++**, defina **plataforma** para **Windows**e defina **tipodeprojeto** ao **Console**. 
+1. Na parte superior da caixa de diálogo, defina **linguagem** à **C++** , defina **plataforma** para **Windows**e defina **tipodeprojeto** ao **Console**. 
 
 1. Na lista filtrada de tipos de projeto, escolha **aplicativo de Console** , em seguida, escolha **próxima**. Na próxima página, insira *MyExecRefsLib* na **nome** caixa para especificar um nome para o projeto e especifique o local do projeto, se desejado.
 
@@ -134,7 +134,7 @@ As instruções de como criar o projeto variam dependendo se você estiver usand
 
 1. Especifique um nome para o projeto — por exemplo, *MyExecRefsLib*— na **nome** caixa. Na lista suspensa lista ao lado **Solution**, selecione **adicionar à solução**. O comando adiciona o novo projeto à solução que contém a biblioteca estática. Escolha o botão **OK**.
 
-1. Sob **tipo de aplicativo**, selecione **aplicativo de Console (.exe)**.
+1. Sob **tipo de aplicativo**, selecione **aplicativo de Console (.exe)** .
 
 1. Sob **opções adicionais**, desmarque as **cabeçalho pré-compilado** caixa de seleção.
 
@@ -170,7 +170,7 @@ As instruções de como criar o projeto variam dependendo se você estiver usand
 
 1. A referência a `MathFuncsLib.h` arquivo de cabeçalho, você deve modificar o caminho de diretório incluído. No **páginas de propriedades** caixa de diálogo **MyExecRefsLib**, expanda o **propriedades de configuração** nó, expanda o **C/C++** nó, e em seguida, selecione **geral**. Lado **diretórios de inclusão adicionais**, especifique o caminho da **MathFuncsLib** diretório ou procurá-lo.
 
-   Para procurar o caminho do diretório, abra a lista de lista suspensa de valores de propriedade e, em seguida, escolha **editar**. No **diretórios de inclusão adicionais** caixa de diálogo, na caixa de texto, selecione uma linha em branco e, em seguida, escolha o botão de reticências (**...** ) no final da linha. No **Selecionar diretório** caixa de diálogo, selecione o **MathFuncsLib** diretório e, em seguida, escolha **Selecionar pasta** botão para salvar sua seleção e fechar a caixa de diálogo. No **diretórios de inclusão adicionais** caixa de diálogo, escolha o **Okey** botão e, em seguida, no **páginas de propriedades** caixa de diálogo, escolha o **Okey**botão para salvar suas alterações ao projeto.
+   Para procurar o caminho do diretório, abra a lista de lista suspensa de valores de propriedade e, em seguida, escolha **editar**. No **diretórios de inclusão adicionais** caixa de diálogo, na caixa de texto, selecione uma linha em branco e, em seguida, escolha o botão de reticências ( **...** ) no final da linha. No **Selecionar diretório** caixa de diálogo, selecione o **MathFuncsLib** diretório e, em seguida, escolha **Selecionar pasta** botão para salvar sua seleção e fechar a caixa de diálogo. No **diretórios de inclusão adicionais** caixa de diálogo, escolha o **Okey** botão e, em seguida, no **páginas de propriedades** caixa de diálogo, escolha o **Okey**botão para salvar suas alterações ao projeto.
 
 1. Agora você pode usar o `MyMathFuncs` classe neste aplicativo, incluindo o `#include "MathFuncsLib.h"` cabeçalho no seu código. Substitua o conteúdo do `MyExecRefsLib.cpp` com este código:
 
