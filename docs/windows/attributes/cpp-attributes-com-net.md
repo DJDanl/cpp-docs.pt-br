@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491051"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856436"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributos C++ para COM e .NET
 
@@ -34,7 +34,7 @@ Os atributos C++ se estendem em direções que não são possíveis no momento s
 
 - Substitui a grande quantidade de código de IDL exigida por um componente com com alguns atributos concisos.
 
-Por exemplo, para implementar um coletor de eventos simples para uma classe ATL genérica, você pode aplicar o atributo [event_receiver](event-receiver.md) a uma classe específica, `CMyReceiver`como. O `event_receiver` atributo é então compilado pelo compilador da C++ Microsoft, que insere o código adequado no arquivo de objeto.
+Por exemplo, para implementar um coletor de eventos simples para uma classe ATL genérica, você pode aplicar o atributo [event_receiver](event-receiver.md) a uma classe específica, como `CMyReceiver`. O atributo `event_receiver` é então compilado pelo compilador da C++ Microsoft, que insere o código adequado no arquivo de objeto.
 
 ```cpp
 [event_receiver(com)]
@@ -45,7 +45,7 @@ class CMyReceiver
 }
 ```
 
-Em seguida, você pode configurar `CMyReceiver` os `handler1` métodos `handler2` e manipular eventos (usando a função intrínseca [Hook](../../cpp/hook.md)) de uma origem de evento, que você pode criar usando [EVENT_SOURCE](event-source.md).
+Em seguida, você pode configurar os métodos de `CMyReceiver` `handler1` e `handler2` para manipular eventos (usando a função intrínseca [__hook](../../cpp/hook.md)) de uma origem de evento, que você pode criar usando [EVENT_SOURCE](event-source.md).
 
 ## <a name="basic-mechanics-of-attributes"></a>Mecânica básica de atributos
 
@@ -80,7 +80,7 @@ Além disso, o vinculador Visual C++ produzirá todas as informações de atribu
 
 ## <a name="contexts"></a>Contextos de atributo
 
-C++os atributos podem ser descritos usando quatro campos básicos: o destino ao qual eles podem ser aplicados (**aplica-se a**), se eles forem repetíveis ou não (**repetíveis**), a presença necessária de outros atributos (**atributos obrigatórios**) e incompatibilidades com outros atributos (**atributos inválidos**). Esses campos são listados em uma tabela que acompanha o tópico de referência de cada atributo. Cada um desses campos é descrito abaixo.
+C++os atributos podem ser descritos usando quatro campos básicos: o destino ao qual eles podem ser aplicados (**aplica-se a**), se eles forem repetíveis ou não (**repetíveis**), a presença necessária de outros atributos (**atributos obrigatórios**) e incompatibilidade com outros atributos (**atributos inválidos**). Esses campos são listados em uma tabela que acompanha o tópico de referência de cada atributo. Cada um desses campos é descrito abaixo.
 
 ### <a name="applies-to"></a>Aplica-se a
 
@@ -92,7 +92,7 @@ Para obter mais informações, consulte [atributos por uso](attributes-by-usage.
 
 Este campo informa se o atributo pode ser aplicado repetidamente ao mesmo destino. A maioria dos atributos não é repetível.
 
-### <a name="required-attributes"></a>Atributos necessários
+### <a name="required-attributes"></a>Atributos Necessários
 
 Este campo lista outros atributos que precisam estar presentes (ou seja, aplicados ao mesmo destino) para que o atributo especificado funcione corretamente. Não é comum que um atributo tenha qualquer entrada para esse campo.
 

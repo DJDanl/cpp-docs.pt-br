@@ -6,17 +6,17 @@ f1_keywords:
 - any/std::make_any
 - any/std::swap
 ms.openlocfilehash: bb5f8b4411477cfcd33613ee0395227dced784f6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268738"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875902"
 ---
 # <a name="ltanygt-functions"></a>&lt;qualquer&gt; funções
 
-## <a name="any_cast"></a> any_cast
+## <a name="any_cast"></a>any_cast
 
-Transforma um objeto em algum.
+Cria um objeto em um.
 
 ```cpp
 template<class T>
@@ -31,9 +31,9 @@ template<class T>
     T* any_cast(any* operand) noexcept;
 ```
 
-## <a name="make_any"></a> make_any
+## <a name="make_any"></a>make_any
 
-Usa os valores e cria um objeto de qualquer.
+Usa valores e cria um objeto any.
 
 ```cpp
 template <class T, class... Args>
@@ -42,9 +42,9 @@ template <class T, class U, class... Args>
     any make_any(initializer_list<U> il, Args&& ...args);
 ```
 
-## <a name="swap"></a> troca
+## <a name="swap"></a>permuta
 
-Troca os elementos de dois objetos de qualquer.
+Troca os elementos de dois objetos.
 
 ```cpp
 void swap(any& left, any& right) noexcept;
@@ -52,8 +52,8 @@ void swap(any& left, any& right) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*À esquerda*\
+\ *à esquerda*
 Um objeto do tipo `any`.
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo `any`.
