@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
 ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685991"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890896"
 ---
 # <a name="ltstringgt-operators"></a>Operadores de &lt;cadeia de caracteres&gt;
 
@@ -115,9 +115,9 @@ A cadeia de caracteres que é a concatenação de cadeias de caracteres de entra
 
 ### <a name="remarks"></a>Comentários
 
-As funções que cada sobrecarga `operator+` para concatenar dois objetos da [classe basic_string](../standard-library/basic-string-class.md)do modelo de classe. Todos efetivamente retornam `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Para obter mais informações, consulte [Append](../standard-library/basic-string-class.md#append).
+As funções que cada sobrecarga `operator+` para concatenar dois objetos do modelo de classe [Basic_string classe](../standard-library/basic-string-class.md). Todos efetivamente retornam `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Para obter mais informações, consulte [Append](../standard-library/basic-string-class.md#append).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // string_op_con.cpp
@@ -206,7 +206,7 @@ Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser c
 
 A comparação entre os objetos da cadeia de caracteres baseia-se em uma comparação de pares lexicográficos de seus caracteres. Duas cadeias de caracteres são iguais se tiverem o mesmo número de caracteres e seus valores de caractere respectivos são os mesmos. Caso contrário, são diferentes.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // string_op_ne.cpp
@@ -297,7 +297,7 @@ Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser c
 
 A comparação entre os objetos da cadeia de caracteres baseia-se em uma comparação de pares lexicográficos de seus caracteres. Duas cadeias de caracteres são iguais se tiverem o mesmo número de caracteres e seus valores de caractere respectivos são os mesmos. Caso contrário, são diferentes.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // string_op_eq.cpp
@@ -394,7 +394,7 @@ Uma comparação entre cadeias de caracteres lexicográficos compara-as por cara
 
 - Não encontra nenhuma desigualdade e percebe que as cadeias de caracteres têm o mesmo número de caracteres e então as cadeias de caracteres são iguais.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // string_op_lt.cpp
@@ -490,7 +490,7 @@ Uma comparação entre cadeias de caracteres lexicográficos compara-as por cara
 
 - Não encontra nenhuma desigualdade e percebe que as cadeias de caracteres têm o mesmo número de caracteres, então as cadeias de caracteres são iguais.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // string_op_le.cpp
@@ -563,7 +563,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parâmetros
 
-@No__t_1 *_Ostr*
+*_Ostr*\
 O fluxo de saída que está sendo gravado.
 
 \ de *Str*
@@ -575,7 +575,7 @@ Grava o valor da cadeia de caracteres especificada no fluxo de saída *_Ostr*.
 
 ### <a name="remarks"></a>Comentários
 
-O operador função de modelo sobrecarrega **< <** para inserir um objeto *Str* do modelo de classe [basic_string](../standard-library/basic-string-class.md) no *\_Ostr*de fluxo. A função retorna efetivamente `_Ostr.write( str.c_str, str.size )`.
+A função de modelo sobrecarrega o **operador < <** para inserir um objeto *Str* do modelo de classe [basic_string](../standard-library/basic-string-class.md) no fluxo *\_OSTR*. A função retorna efetivamente `_Ostr.write( str.c_str, str.size )`.
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -620,7 +620,7 @@ Uma comparação entre cadeias de caracteres lexicográficos compara-as por cara
 
 - Não encontra nenhuma desigualdade e percebe que as cadeias de caracteres têm o mesmo número de caracteres e então as cadeias de caracteres são iguais.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // string_op_gt.cpp
@@ -723,7 +723,7 @@ Uma comparação entre cadeias de caracteres lexicográficos compara-as por cara
 
 - Não encontra nenhuma desigualdade e percebe que as cadeias de caracteres têm o mesmo número de caracteres e então as cadeias de caracteres são iguais.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // string_op_ge.cpp
@@ -796,7 +796,7 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parâmetros
 
-@No__t_1 *_Istr*
+*_Istr*\
 O fluxo de entrada usado para extrair a sequência
 
 \ *à direita*
@@ -804,13 +804,13 @@ A cadeia de caracteres que está sendo extraída do fluxo de entrada.
 
 ### <a name="return-value"></a>Valor retornado
 
-Lê o valor da cadeia de caracteres especificada de *_Istr* e retorna-o à *direita*.
+Lê o valor da cadeia de caracteres especificada de *_Istr* e a retorna à *direita*.
 
 ### <a name="remarks"></a>Comentários
 
 O operador ignora os espaços em branco à esquerda, a menos que o sinalizador `skipws` é definido. Ele lê todos os caracteres seguintes até o próximo caractere ser um espaço em branco ou o final do arquivo for atingido.
 
-A função de modelo sobrecarrega o **operador > >** para substituir a sequência controlada por *direita* por uma sequência de elementos extraídos do fluxo *_Istr*. Extração para:
+A função de modelo sobrecarrega o **operador > >** para substituir a sequência controlada pela *direita* por uma sequência de elementos extraídos do fluxo *_Istr*. Extração para:
 
 - Ao final do arquivo.
 
@@ -818,11 +818,11 @@ A função de modelo sobrecarrega o **operador > >** para substituir a sequênci
 
 Depois que a função extrai `_Istr`. [max_size](../standard-library/basic-string-class.md#max_size) elementos.
 
-- Depois que a função extrai um elemento *ch* para o qual [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **CharType**> > ( `getloc`). **é**( **ctype** \< **CharType**>:: **space**, *ch*) é verdadeiro, caso em que o caractere é colocado de volta.
+- Depois que a função extrai um elemento *ch* para o qual [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> > (`getloc`). **é**( **CType**\< **CharType**>:: **Space**, *ch*) é true; nesse caso, o caractere é colocado de volta.
 
 Se a função extrair nenhum elemento, ela chamará [SetState](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). Em qualquer caso, chama **istr**. **largura**(0) e retorna \* **isso**.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // string_op_read_.cpp

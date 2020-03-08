@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::BoolStruct::Member data member
 ms.assetid: 666eae78-e81d-4fb7-a9e4-1ba617d6d4cd
 ms.openlocfilehash: cdec425e317585abbd9730447e2c4fbb19b8250a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398765"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865698"
 ---
 # <a name="boolstruct-structure"></a>Estrutura BoolStruct
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+O oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,29 +28,29 @@ struct BoolStruct;
 
 ## <a name="remarks"></a>Comentários
 
-O `BoolStruct` estrutura define se um `ComPtr` está gerenciando o tempo de vida do objeto de uma interface. `BoolStruct` é usado internamente pelo [BoolType()](comptr-class.md#operator-microsoft-wrl-details-booltype) operador.
+A estrutura de `BoolStruct` define se um `ComPtr` está gerenciando o tempo de vida do objeto de uma interface. `BoolStruct` é usado internamente pelo operador [booltype ()](comptr-class.md#operator-microsoft-wrl-details-booltype) .
 
 ## <a name="members"></a>Membros
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-Nome                          | Descrição
+{1&gt;Nome&lt;1}                          | Descrição
 ----------------------------- | ------------------------------------------------------------------------------------------------------------------
-[Boolstruct::](#member) | Especifica que um [ComPtr](comptr-class.md) é ou não, é gerenciar o tempo de vida do objeto de uma interface.
+[BoolStruct:: member](#member) | Especifica que um [ComPtr](comptr-class.md) é ou não, gerenciando o tempo de vida do objeto de uma interface.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `BoolStruct`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** internal.h
+**Cabeçalho:** Internal. h
 
-**Namespace:** Microsoft::WRL::Details
+**Namespace:** Microsoft:: WRL::D etalhes
 
-## <a name="member"></a>Boolstruct::
+## <a name="member"></a>BoolStruct:: member
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+O oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ```cpp
 int Member;
@@ -58,4 +58,4 @@ int Member;
 
 ### <a name="remarks"></a>Comentários
 
-Especifica que um [ComPtr](comptr-class.md) é ou não, é gerenciar o tempo de vida do objeto de uma interface.
+Especifica que um [ComPtr](comptr-class.md) é ou não, gerenciando o tempo de vida do objeto de uma interface.

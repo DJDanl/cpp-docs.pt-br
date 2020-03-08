@@ -32,15 +32,15 @@ helpviewer_keywords:
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
 ms.openlocfilehash: 482f29bae28841ab40ca8a8f80ab7f0df42ddc8b
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630653"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78863149"
 ---
 # <a name="ccommodule-class"></a>Classe CComModule
 
-A partir do ATL 7,0 `CComModule` , é preterido: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é preterido: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 > [!IMPORTANT]
 >  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
@@ -53,47 +53,47 @@ class CComModule : public _ATL_MODULE
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[CComModule::GetClassObject](#getclassobject)|Cria um objeto de um CLSID especificado. Somente para DLLs.|
-|[CComModule::GetModuleInstance](#getmoduleinstance)|Retorna `m_hInst`.|
-|[CComModule::GetResourceInstance](#getresourceinstance)|Retorna `m_hInstResource`.|
-|[CComModule::GetTypeLibInstance](#gettypelibinstance)|Retorna `m_hInstTypeLib`.|
-|[CComModule::Init](#init)|Inicializa membros de dados.|
-|[CComModule::RegisterClassHelper](#registerclasshelper)|Insere o registro de classe padrão de um objeto no registro do sistema.|
-|[CComModule::RegisterClassObjects](#registerclassobjects)|Registra o objeto de classe. Somente para EXEs.|
-|[CComModule::RegisterServer](#registerserver)|Atualiza o registro do sistema para cada objeto no mapa de objetos.|
-|[CComModule::RegisterTypeLib](#registertypelib)|Registra uma biblioteca de tipos.|
-|[CComModule::RevokeClassObjects](#revokeclassobjects)|Revoga o objeto de classe. Somente para EXEs.|
-|[CComModule::Term](#term)|Libera membros de dados.|
-|[CComModule::UnregisterClassHelper](#unregisterclasshelper)|Remove o registro de classe padrão de um objeto do registro do sistema.|
-|[CComModule::UnregisterServer](#unregisterserver)|Cancela o registro de cada objeto no mapa de objetos.|
-|[CComModule::UpdateRegistryClass](#updateregistryclass)|Registra ou cancela o registro da classe padrão de um objeto.|
-|[CComModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|Executa o script contido em um recurso especificado para registrar ou cancelar o registro de um objeto.|
-|[CComModule::UpdateRegistryFromResourceS](#updateregistryfromresources)|Links estaticamente para o componente do registro ATL. Executa o script contido em um recurso especificado para registrar ou cancelar o registro de um objeto.|
+|[CComModule:: GetClassObject](#getclassobject)|Cria um objeto de um CLSID especificado. Somente para DLLs.|
+|[CComModule:: GetModuleInstance](#getmoduleinstance)|Retorna `m_hInst`.|
+|[CComModule:: GetResourceInstance](#getresourceinstance)|Retorna `m_hInstResource`.|
+|[CComModule:: GetTypeLibInstance](#gettypelibinstance)|Retorna `m_hInstTypeLib`.|
+|[CComModule:: init](#init)|Inicializa membros de dados.|
+|[CComModule:: RegisterClassHelper](#registerclasshelper)|Insere o registro de classe padrão de um objeto no registro do sistema.|
+|[CComModule:: RegisterClassObjects](#registerclassobjects)|Registra o objeto de classe. Somente para EXEs.|
+|[CComModule:: RegisterServer](#registerserver)|Atualiza o registro do sistema para cada objeto no mapa de objetos.|
+|[CComModule:: RegisterTypeLib](#registertypelib)|Registra uma biblioteca de tipos.|
+|[CComModule:: RevokeClassObjects](#revokeclassobjects)|Revoga o objeto de classe. Somente para EXEs.|
+|[CComModule:: termo](#term)|Libera membros de dados.|
+|[CComModule:: UnregisterClassHelper](#unregisterclasshelper)|Remove o registro de classe padrão de um objeto do registro do sistema.|
+|[CComModule:: UnregisterServer](#unregisterserver)|Cancela o registro de cada objeto no mapa de objetos.|
+|[CComModule:: UpdateRegistryClass](#updateregistryclass)|Registra ou cancela o registro da classe padrão de um objeto.|
+|[CComModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced)|Executa o script contido em um recurso especificado para registrar ou cancelar o registro de um objeto.|
+|[CComModule:: UpdateRegistryFromResourceS](#updateregistryfromresources)|Links estaticamente para o componente do registro ATL. Executa o script contido em um recurso especificado para registrar ou cancelar o registro de um objeto.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[CComModule::m_csObjMap](#m_csobjmap)|Garante o acesso sincronizado às informações de mapa do objeto.|
-|[CComModule::m_csTypeInfoHolder](#m_cstypeinfoholder)|Garante o acesso sincronizado às informações da biblioteca de tipos.|
-|[CComModule::m_csWindowCreate](#m_cswindowcreate)|Garante o acesso sincronizado às informações de classe de janela e aos dados estáticos usados durante a criação da janela.|
-|[CComModule::m_hInst](#m_hinst)|Contém o identificador para a instância do módulo.|
-|[CComModule::m_hInstResource](#m_hinstresource)|Por padrão, o contém o identificador para a instância do módulo.|
-|[CComModule::m_hInstTypeLib](#m_hinsttypelib)|Por padrão, o contém o identificador para a instância do módulo.|
-|[CComModule::m_pObjMap](#m_pobjmap)|Aponta para o mapa de objeto mantido pela instância do módulo.|
+|[CComModule:: m_csObjMap](#m_csobjmap)|Garante o acesso sincronizado às informações de mapa do objeto.|
+|[CComModule:: m_csTypeInfoHolder](#m_cstypeinfoholder)|Garante o acesso sincronizado às informações da biblioteca de tipos.|
+|[CComModule:: m_csWindowCreate](#m_cswindowcreate)|Garante o acesso sincronizado às informações de classe de janela e aos dados estáticos usados durante a criação da janela.|
+|[CComModule:: m_hInst](#m_hinst)|Contém o identificador para a instância do módulo.|
+|[CComModule:: m_hInstResource](#m_hinstresource)|Por padrão, o contém o identificador para a instância do módulo.|
+|[CComModule:: m_hInstTypeLib](#m_hinsttypelib)|Por padrão, o contém o identificador para a instância do módulo.|
+|[CComModule:: m_pObjMap](#m_pobjmap)|Aponta para o mapa de objeto mantido pela instância do módulo.|
 
 ## <a name="remarks"></a>Comentários
 
 > [!NOTE]
->  Essa classe foi preterida e os assistentes de geração de código ATL agora usam as classes derivadas [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) e [CAtlModule](../../atl/reference/catlmodule-class.md) . Consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais informações. As informações a seguir são para uso com aplicativos criados com versões mais antigas do ATL. `CComModule`ainda é parte da ATL para a funcionalidade inversa.
+>  Essa classe foi preterida e os assistentes de geração de código ATL agora usam as classes derivadas [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) e [CAtlModule](../../atl/reference/catlmodule-class.md) . Consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais informações. As informações a seguir são para uso com aplicativos criados com versões mais antigas do ATL. `CComModule` ainda faz parte da ATL para a funcionalidade para trás.
 
-`CComModule`implementa um módulo de servidor COM, permitindo que um cliente acesse os componentes do módulo. `CComModule`dá suporte a módulos DLL (em processo) e EXE (local).
+`CComModule` implementa um módulo de servidor COM, permitindo que um cliente acesse os componentes do módulo. o `CComModule` dá suporte a módulos DLL (em processo) e EXE (local).
 
-Uma `CComModule` instância usa um mapa de objeto para manter um conjunto de definições de objeto de classe. Esse mapa de objeto é implementado como uma matriz `_ATL_OBJMAP_ENTRY` de estruturas e contém informações para:
+Uma instância de `CComModule` usa um mapa de objeto para manter um conjunto de definições de objeto de classe. Esse mapa de objeto é implementado como uma matriz de estruturas de `_ATL_OBJMAP_ENTRY` e contém informações para:
 
 - Inserindo e removendo descrições de objeto no registro do sistema.
 
@@ -103,9 +103,9 @@ Uma `CComModule` instância usa um mapa de objeto para manter um conjunto de def
 
 - Executando o gerenciamento de tempo de vida de objetos de classe.
 
-Quando você executa o ATL com AppWizard, o assistente gera `_Module`automaticamente uma instância global do `CComModule` ou uma classe derivada dela. Para obter mais informações sobre o assistente de projeto do ATL, consulte o artigo [criando um projeto do ATL](../../atl/reference/creating-an-atl-project.md).
+Quando você executa o AppWizard COM ATL, o assistente gera automaticamente `_Module`, uma instância global do `CComModule` ou uma classe derivada dele. Para obter mais informações sobre o assistente de projeto do ATL, consulte o artigo [criando um projeto do ATL](../../atl/reference/creating-an-atl-project.md).
 
-Além disso, `CComModule`a ATL fornece [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), que implementa um módulo de modelo de apartamento para EXEs e serviços do Windows. Derive seu módulo `CComAutoThreadModule` de quando desejar criar objetos em vários Apartments.
+Além de `CComModule`, a ATL fornece [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), que implementa um módulo de modelo de apartamento para EXEs e serviços do Windows. Derive seu módulo de `CComAutoThreadModule` quando desejar criar objetos em vários Apartments.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -117,13 +117,13 @@ Além disso, `CComModule`a ATL fornece [CComAutoThreadModule](../../atl/referenc
 
 `CComModule`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** atlbase. h
 
-##  <a name="getclassobject"></a>  CComModule::GetClassObject
+##  <a name="getclassobject"></a>CComModule:: GetClassObject
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 HRESULT GetClassObject(
@@ -143,7 +143,7 @@ no O IID da interface solicitada.
 *ppv*<br/>
 fora Um ponteiro para o ponteiro de interface identificado por *riid*. Se o objeto não oferecer suporte a essa interface, *PPV* será definido como NULL.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -151,17 +151,17 @@ Um valor HRESULT padrão.
 
 Cria um objeto do CLSID especificado e recupera um ponteiro de interface para esse objeto.
 
-`GetClassObject`Só está disponível para DLLs.
+`GetClassObject` só está disponível para DLLs.
 
-##  <a name="getmoduleinstance"></a>  CComModule::GetModuleInstance
+##  <a name="getmoduleinstance"></a>CComModule:: GetModuleInstance
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 HINSTANCE GetModuleInstance() throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O HINSTANCE que identifica este módulo.
 
@@ -169,15 +169,15 @@ O HINSTANCE que identifica este módulo.
 
 Retorna o membro de dados [m_hInst](#m_hinst) .
 
-##  <a name="getresourceinstance"></a>  CComModule::GetResourceInstance
+##  <a name="getresourceinstance"></a>CComModule:: GetResourceInstance
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 HINSTANCE GetResourceInstance() throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um HINSTANCE.
 
@@ -185,15 +185,15 @@ Um HINSTANCE.
 
 Retorna o membro de dados [m_hInstResource](#m_hinstresource) .
 
-##  <a name="gettypelibinstance"></a>  CComModule::GetTypeLibInstance
+##  <a name="gettypelibinstance"></a>CComModule:: GetTypeLibInstance
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 HINSTANCE GetTypeLibInstance() const throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um HINSTANCE.
 
@@ -201,9 +201,9 @@ Um HINSTANCE.
 
 Retorna o membro de dados [m_hInstTypeLib](#m_hinsttypelib) .
 
-##  <a name="init"></a>  CComModule::Init
+##  <a name="init"></a>CComModule:: init
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 HRESULT Init(
@@ -223,7 +223,7 @@ no O HINSTANCE passado para `DLLMain` ou `WinMain`.
 *plibid*<br/>
 no Um ponteiro para o LIBID da biblioteca de tipos associada ao projeto.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -231,9 +231,9 @@ Um valor HRESULT padrão.
 
 Inicializa todos os membros de dados.
 
-##  <a name="m_csobjmap"></a>  CComModule::m_csObjMap
+##  <a name="m_csobjmap"></a>CComModule:: m_csObjMap
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 CRITICAL_SECTION m_csObjMap;
@@ -243,9 +243,9 @@ CRITICAL_SECTION m_csObjMap;
 
 Garante o acesso sincronizado ao mapa de objetos.
 
-##  <a name="m_cstypeinfoholder"></a>  CComModule::m_csTypeInfoHolder
+##  <a name="m_cstypeinfoholder"></a>CComModule:: m_csTypeInfoHolder
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 CRITICAL_SECTION m_csTypeInfoHolder;
@@ -255,9 +255,9 @@ CRITICAL_SECTION m_csTypeInfoHolder;
 
 Garante o acesso sincronizado à biblioteca de tipos.
 
-##  <a name="m_cswindowcreate"></a>  CComModule::m_csWindowCreate
+##  <a name="m_cswindowcreate"></a>CComModule:: m_csWindowCreate
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 CRITICAL_SECTION m_csWindowCreate;
@@ -267,9 +267,9 @@ CRITICAL_SECTION m_csWindowCreate;
 
 Garante o acesso sincronizado às informações de classe de janela e aos dados estáticos usados durante a criação da janela.
 
-##  <a name="m_hinst"></a>  CComModule::m_hInst
+##  <a name="m_hinst"></a>CComModule:: m_hInst
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 HINSTANCE m_hInst;
@@ -281,9 +281,9 @@ Contém o identificador para a instância do módulo.
 
 O método [init](#init) define `m_hInst` para o identificador passado para `DLLMain` ou `WinMain`.
 
-##  <a name="m_hinstresource"></a>  CComModule::m_hInstResource
+##  <a name="m_hinstresource"></a>CComModule:: m_hInstResource
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 HINSTANCE m_hInstResource;
@@ -297,9 +297,9 @@ O método [init](#init) define `m_hInstResource` para o identificador passado pa
 
 O método [GetResourceInstance](#getresourceinstance) retorna o identificador armazenado em `m_hInstResource`.
 
-##  <a name="m_hinsttypelib"></a>  CComModule::m_hInstTypeLib
+##  <a name="m_hinsttypelib"></a>CComModule:: m_hInstTypeLib
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 HINSTANCE m_hInstTypeLib;
@@ -313,9 +313,9 @@ O método [init](#init) define `m_hInstTypeLib` para o identificador passado par
 
 O método [GetTypeLibInstance](#gettypelibinstance) retorna o identificador armazenado em `m_hInstTypeLib`.
 
-##  <a name="m_pobjmap"></a>  CComModule::m_pObjMap
+##  <a name="m_pobjmap"></a>CComModule:: m_pObjMap
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 _ATL_OBJMAP_ENTRY* m_pObjMap;
@@ -325,9 +325,9 @@ _ATL_OBJMAP_ENTRY* m_pObjMap;
 
 Aponta para o mapa de objeto mantido pela instância do módulo.
 
-##  <a name="registerclasshelper"></a>  CComModule::RegisterClassHelper
+##  <a name="registerclasshelper"></a>CComModule:: RegisterClassHelper
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 ATL_DEPRECATED HRESULT RegisterClassHelper(
@@ -340,7 +340,7 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 
 ### <a name="parameters"></a>Parâmetros
 
-*clsid*<br/>
+*CLSID*<br/>
 no O CLSID do objeto a ser registrado.
 
 *lpszProgID*<br/>
@@ -355,7 +355,7 @@ no O identificador de um recurso de cadeia de caracteres para a descrição do o
 *dwFlags*<br/>
 no Especifica o modelo de Threading a ser inserido no registro. Os valores possíveis são THREADFLAGS_APARTMENT, THREADFLAGS_BOTH ou AUTPRXFLAG.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -365,9 +365,9 @@ Insere o registro de classe padrão de um objeto no registro do sistema.
 
 O método [UpdateRegistryClass](#updateregistryclass) chama `RegisterClassHelper`.
 
-##  <a name="registerclassobjects"></a>  CComModule::RegisterClassObjects
+##  <a name="registerclassobjects"></a>CComModule:: RegisterClassObjects
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
@@ -381,7 +381,7 @@ no Especifica o contexto no qual o objeto de classe deve ser executado. Os valor
 *dwFlags*<br/>
 no Determina os tipos de conexão para o objeto de classe. Os valores possíveis são REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE ou REGCLS_MULTI_SEPARATE. Para obter uma descrição desses valores, consulte [REGCLS](/windows/win32/api/combaseapi/ne-combaseapi-regcls) no SDK do Windows.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -389,9 +389,9 @@ Um valor HRESULT padrão.
 
 Registra um objeto de classe EXE com OLE para que outros aplicativos possam se conectar a ele. Esse método só está disponível para EXEs.
 
-##  <a name="registerserver"></a>  CComModule::RegisterServer
+##  <a name="registerserver"></a>CComModule:: RegisterServer
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 HRESULT RegisterServer(
@@ -407,7 +407,7 @@ no Indica se a biblioteca de tipos será registrada. O valor padrão é FALSE.
 *pCLSID*<br/>
 no Aponta para o CLSID do objeto a ser registrado. Se for NULL (o valor padrão), todos os objetos no mapa de objetos serão registrados.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -419,11 +419,11 @@ Se *bRegTypeLib* for true, as informações da biblioteca de tipos também serã
 
 Consulte [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) para obter informações sobre como adicionar uma entrada ao mapa de objetos.
 
-`RegisterServer`será chamado automaticamente por `DLLRegisterServer` para uma DLL ou por `WinMain` para um exe executado com a opção `/RegServer` de linha de comando.
+`RegisterServer` será chamado automaticamente pelo `DLLRegisterServer` para uma DLL ou por `WinMain` para um EXE executado com a opção de linha de comando `/RegServer`.
 
-##  <a name="registertypelib"></a>  CComModule::RegisterTypeLib
+##  <a name="registertypelib"></a>CComModule:: RegisterTypeLib
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 HRESULT RegisterTypeLib() throw();
@@ -433,9 +433,9 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 ### <a name="parameters"></a>Parâmetros
 
 *lpszIndex*<br/>
-no Cadeia de caracteres no `"\\N"`formato, `N` em que é o índice de inteiro do recurso TypeLib.
+no Cadeia de caracteres no formato `"\\N"`, em que `N` é o índice de inteiro do recurso TYPELIB.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -445,15 +445,15 @@ Adiciona informações sobre uma biblioteca de tipos ao registro do sistema.
 
 Se a instância do módulo contiver várias bibliotecas de tipos, use a segunda versão desse método para especificar qual biblioteca de tipos deve ser usada.
 
-##  <a name="revokeclassobjects"></a>  CComModule::RevokeClassObjects
+##  <a name="revokeclassobjects"></a>CComModule:: RevokeClassObjects
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 HRESULT RevokeClassObjects() throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -463,7 +463,7 @@ Remove o objeto de classe. Esse método só está disponível para EXEs.
 
 ##  <a name="term"></a>CComModule:: termo
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 void Term() throw();
@@ -473,9 +473,9 @@ void Term() throw();
 
 Libera todos os membros de dados.
 
-##  <a name="unregisterclasshelper"></a>  CComModule::UnregisterClassHelper
+##  <a name="unregisterclasshelper"></a>CComModule:: UnregisterClassHelper
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 ATL_DEPRECATED HRESULT UnregisterClassHelper(
@@ -486,7 +486,7 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
 
 ### <a name="parameters"></a>Parâmetros
 
-*clsid*<br/>
+*CLSID*<br/>
 no O CLSID do registro do objeto a ser cancelado.
 
 *lpszProgID*<br/>
@@ -495,7 +495,7 @@ no O ProgID associado ao objeto.
 *lpszVerIndProgID*<br/>
 no O ProgID independente de versão associado ao objeto.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -505,9 +505,9 @@ Remove o registro de classe padrão de um objeto do registro do sistema.
 
 O método [UpdateRegistryClass](#updateregistryclass) chama `UnregisterClassHelper`.
 
-##  <a name="unregisterserver"></a>  CComModule::UnregisterServer
+##  <a name="unregisterserver"></a>CComModule:: UnregisterServer
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 HRESULT UnregisterServer(const CLSID* pCLSID = NULL) throw ();
@@ -522,7 +522,7 @@ Se for TRUE, a biblioteca de tipos também será cancelada.
 *pCLSID*<br/>
 Aponta para o CLSID do objeto a ser cancelado. Se NULL (o valor padrão), todos os objetos no mapa de objeto terão o registro cancelado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -530,13 +530,13 @@ Um valor HRESULT padrão.
 
 Dependendo do parâmetro *pCLSID* , o cancela o registro de um único objeto de classe ou de todos os objetos no mapa de objetos.
 
-`UnregisterServer`será chamado automaticamente por `DLLUnregisterServer` para uma DLL ou por `WinMain` para um exe executado com a opção `/UnregServer` de linha de comando.
+`UnregisterServer` será chamado automaticamente pelo `DLLUnregisterServer` para uma DLL ou por `WinMain` para um EXE executado com a opção de linha de comando `/UnregServer`.
 
 Consulte [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) para obter informações sobre como adicionar uma entrada ao mapa de objetos.
 
-##  <a name="updateregistryclass"></a>  CComModule::UpdateRegistryClass
+##  <a name="updateregistryclass"></a>CComModule:: UpdateRegistryClass
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 ATL_DEPRECATED HRESULT UpdateRegistryClass(
@@ -558,7 +558,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
 
 ### <a name="parameters"></a>Parâmetros
 
-*clsid*<br/>
+*CLSID*<br/>
 O CLSID do objeto a ser registrado ou cancelado.
 
 *lpszProgID*<br/>
@@ -579,7 +579,7 @@ Especifica o modelo de Threading a ser inserido no registro. Os valores possíve
 *bRegister*<br/>
 Indica se o objeto deve ser registrado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -589,13 +589,13 @@ Se *bRegister* for true, esse método inserirá o registro de classe padrão do 
 
 Se *bRegister* for false, ele removerá o registro do objeto.
 
-Dependendo do valor de *bRegister*, `UpdateRegistryClass` o chama [RegisterClassHelper](#registerclasshelper) ou [UnregisterClassHelper](#unregisterclasshelper).
+Dependendo do valor de *bRegister*, o `UpdateRegistryClass` chama [RegisterClassHelper](#registerclasshelper) ou [UnregisterClassHelper](#unregisterclasshelper).
 
-Ao especificar a macro [DECLARE_REGISTRY](registry-macros.md#declare_registry) , `UpdateRegistryClass` será invocada automaticamente quando o mapa de objetos for processado.
+Ao especificar a macro [DECLARE_REGISTRY](registry-macros.md#declare_registry) , `UpdateRegistryClass` será invocado automaticamente quando o mapa de objetos for processado.
 
-##  <a name="updateregistryfromresourced"></a>  CComModule::UpdateRegistryFromResourceD
+##  <a name="updateregistryfromresourced"></a>CComModule:: UpdateRegistryFromResourceD
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 virtual HRESULT UpdateRegistryFromResourceD(
@@ -621,9 +621,9 @@ no Uma ID de recurso.
 no Indica se o objeto deve ser registrado.
 
 *pMapEntries*<br/>
-no Um ponteiro para o mapa de substituição que armazena valores associados aos parâmetros substituíveis do script. O ATL usa `%MODULE%`automaticamente. Para usar parâmetros substituíveis adicionais, consulte os comentários para obter detalhes. Caso contrário, use o valor padrão nulo.
+no Um ponteiro para o mapa de substituição que armazena valores associados aos parâmetros substituíveis do script. A ATL usa automaticamente `%MODULE%`. Para usar parâmetros substituíveis adicionais, consulte os comentários para obter detalhes. Caso contrário, use o valor padrão nulo.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -633,19 +633,19 @@ Executa o script contido no recurso especificado por *lpszRes* ou *nResID*.
 
 Se *bRegister* for true, esse método registrará o objeto no registro do sistema; caso contrário, ele cancelará o registro do objeto.
 
-Ao especificar a macro [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) ou [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) , `UpdateRegistryFromResourceD` será invocada automaticamente quando o mapa do objeto for processado.
+Ao especificar a macro [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) ou [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) , `UpdateRegistryFromResourceD` será invocado automaticamente quando o mapa de objetos for processado.
 
 > [!NOTE]
->  Para substituir valores de substituição em tempo de execução, não especifique a macro DECLARE_REGISTRY_RESOURCE ou DECLARE_REGISTRY_RESOURCEID. Em vez disso, crie uma `_ATL_REGMAP_ENTRIES` matriz de estruturas, em que cada entrada contém um espaço reservado variável emparelhado com um valor para substituir o espaço reservado em tempo de execução. Em seguida `UpdateRegistryFromResourceD`, chame, passando a matriz para o parâmetro *pMapEntries* . Isso adiciona todos os valores de substituição nas `_ATL_REGMAP_ENTRIES` estruturas ao mapa de substituição do registrador.
+>  Para substituir valores de substituição em tempo de execução, não especifique o DECLARE_REGISTRY_RESOURCE ou DECLARE_REGISTRY_RESOURCEID Macro. Em vez disso, crie uma matriz de estruturas `_ATL_REGMAP_ENTRIES`, em que cada entrada contém um espaço reservado variável emparelhado com um valor para substituir o espaço reservado em tempo de execução. Em seguida, chame `UpdateRegistryFromResourceD`, passando a matriz para o parâmetro *pMapEntries* . Isso adiciona todos os valores de substituição nas estruturas de `_ATL_REGMAP_ENTRIES` ao mapa de substituição do registrador.
 
 > [!NOTE]
 >  Para vincular estaticamente ao componente do registro ATL (registrador), consulte [UpdateRegistryFromResourceS](#updateregistryfromresources).
 
 Para obter mais informações sobre parâmetros e scripts substituíveis, consulte o artigo [o componente do registro do ATL (registrador)](../../atl/atl-registry-component-registrar.md).
 
-##  <a name="updateregistryfromresources"></a>  CComModule::UpdateRegistryFromResourceS
+##  <a name="updateregistryfromresources"></a>CComModule:: UpdateRegistryFromResourceS
 
-A partir do ATL 7,0 `CComModule` , é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
 virtual HRESULT UpdateRegistryFromResourceS(
@@ -671,20 +671,20 @@ no Uma ID de recurso.
 no Indica se o script de recurso deve ser registrado.
 
 *pMapEntries*<br/>
-no Um ponteiro para o mapa de substituição que armazena valores associados aos parâmetros substituíveis do script. O ATL usa `%MODULE%`automaticamente. Para usar parâmetros substituíveis adicionais, consulte os comentários para obter detalhes. Caso contrário, use o valor padrão nulo.
+no Um ponteiro para o mapa de substituição que armazena valores associados aos parâmetros substituíveis do script. A ATL usa automaticamente `%MODULE%`. Para usar parâmetros substituíveis adicionais, consulte os comentários para obter detalhes. Caso contrário, use o valor padrão nulo.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Semelhante a [UpdateRegistryFromResourceD](#updateregistryfromresourced) , `UpdateRegistryFromResourceS` exceto cria um link estático para o componente de registro do ATL (registrador).
+Semelhante a [UpdateRegistryFromResourceD](#updateregistryfromresourced) , exceto `UpdateRegistryFromResourceS` cria um link estático para o componente do registro ATL (registrador).
 
-`UpdateRegistryFromResourceS`será invocado automaticamente quando o mapa de objetos for processado, desde que `#define _ATL_STATIC_REGISTRY` você adicione ao *PCH. h* (*stdafx. h* no Visual Studio 2017 e anteriores).
+`UpdateRegistryFromResourceS` será invocado automaticamente quando o mapa do objeto for processado, desde que você adicione `#define _ATL_STATIC_REGISTRY` ao *PCH. h* (*stdafx. h* no Visual Studio 2017 e anteriores).
 
 > [!NOTE]
->  Para substituir valores de substituição em tempo de execução, não especifique a macro [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) ou [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) . Em vez disso, crie uma `_ATL_REGMAP_ENTRIES` matriz de estruturas, em que cada entrada contém um espaço reservado variável emparelhado com um valor para substituir o espaço reservado em tempo de execução. Em seguida `UpdateRegistryFromResourceS`, chame, passando a matriz para o parâmetro *pMapEntries* . Isso adiciona todos os valores de substituição nas `_ATL_REGMAP_ENTRIES` estruturas ao mapa de substituição do registrador.
+>  Para substituir valores de substituição em tempo de execução, não especifique o [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) ou [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) macro. Em vez disso, crie uma matriz de estruturas `_ATL_REGMAP_ENTRIES`, em que cada entrada contém um espaço reservado variável emparelhado com um valor para substituir o espaço reservado em tempo de execução. Em seguida, chame `UpdateRegistryFromResourceS`, passando a matriz para o parâmetro *pMapEntries* . Isso adiciona todos os valores de substituição nas estruturas de `_ATL_REGMAP_ENTRIES` ao mapa de substituição do registrador.
 
 Para obter mais informações sobre parâmetros e scripts substituíveis, consulte o artigo [o componente do registro do ATL (registrador)](../../atl/atl-registry-component-registrar.md).
 

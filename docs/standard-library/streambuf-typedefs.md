@@ -6,11 +6,11 @@ f1_keywords:
 - iosfwd/std::wstreambuf
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
 ms.openlocfilehash: 1c9850ad7d7ec9b9c3554e6806f4790ef3613b08
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688932"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866206"
 ---
 # <a name="ltstreambufgt-typedefs"></a>Typedefs &lt;streambuf&gt;
 
@@ -32,7 +32,7 @@ O tipo é um sinônimo para o modelo de classe [basic_streambuf](../standard-lib
 
 ## <a name="wstreambuf"></a>  wstreambuf
 
-Uma especialização de `basic_streambuf` que usa **wchar_t** como os parâmetros de modelo.
+Uma especialização de `basic_streambuf` que usa **wchar_t** como parâmetros de modelo.
 
 ```cpp
 typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;

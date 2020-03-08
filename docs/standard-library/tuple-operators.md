@@ -10,15 +10,15 @@ f1_keywords:
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241658"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866181"
 ---
 # <a name="lttuplegt-operators"></a>Operadores &lt;tuple&gt;
 
-## <a name="op_neq"></a> operador! =
+## <a name="op_neq"></a>operador! =
 
 Compare objetos `tuple` quanto a desigualdade.
 
@@ -31,14 +31,14 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parâmetros
 
-*TN*\
+\ *TN*
 O tipo do enésimo elemento de tupla.
 
 ### <a name="remarks"></a>Comentários
 
 A função retorna falso quando `N` é 0, caso contrário `get<0>(tpl1) != get<0>(tpl2) || get<1>(tpl1) != get<1>(tpl2) || ... || get<N - 1>(tpl1) == get<N - 1>(tpl2)`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // std__tuple__operator_ne.cpp
@@ -83,7 +83,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a> Operador&lt;
+## <a name="op_lt">Operador </a>&lt;
 
 Compare objetos `tuple` quanto a menor que.
 
@@ -96,14 +96,14 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parâmetros
 
-*TN*\
+\ *TN*
 O tipo do enésimo elemento de tupla.
 
 ### <a name="remarks"></a>Comentários
 
 A função retorna verdadeiro quando `N` é maior que 0 e o primeiro valor divergente em `tpl1` é comparado como menor que o valor correspondente em `tpl2`, caso contrário, retorna falso.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // std__tuple__operator_lt.cpp
@@ -148,7 +148,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a> operador&lt;=
+## <a name="op_lt_eq"></a>= de&lt;do operador
 
 Compare objetos `tuple` quanto a menor que ou igual a.
 
@@ -161,14 +161,14 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parâmetros
 
-*TN*\
+\ *TN*
 O tipo do enésimo elemento de tupla.
 
 ### <a name="remarks"></a>Comentários
 
 A função retorna `!(tpl2 < tpl1)`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // std__tuple__operator_le.cpp
@@ -213,7 +213,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a> operador = =
+## <a name="op_eq_eq"></a>operador = =
 
 Compare objetos `tuple` quanto a igualdade.
 
@@ -226,14 +226,14 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parâmetros
 
-*TN*\
+\ *TN*
 O tipo do enésimo elemento de tupla.
 
 ### <a name="remarks"></a>Comentários
 
 A função retorna verdadeiro quando `N` é 0, caso contrário `get<0>(tpl1) == get<0>(tpl2) && get<1>(tpl1) == get<1>(tpl2) && ... && get<N - 1>(tpl1) == get<N - 1>(tpl2)`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // std__tuple__operator_eq.cpp
@@ -278,7 +278,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a> Operador&gt;
+## <a name="op_gt">Operador </a>&gt;
 
 Compare objetos `tuple` quanto a maior que.
 
@@ -291,14 +291,14 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parâmetros
 
-*TN*\
+\ *TN*
 O tipo do enésimo elemento de tupla.
 
 ### <a name="remarks"></a>Comentários
 
 A função retorna `tpl2 < tpl1`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // std__tuple__operator_gt.cpp
@@ -343,7 +343,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a> operador&gt;=
+## <a name="op_gt_eq"></a>= de&gt;do operador
 
 Compare objetos `tuple` quanto a maior que ou igual a.
 
@@ -356,14 +356,14 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parâmetros
 
-*TN*\
+\ *TN*
 O tipo do enésimo elemento de tupla.
 
 ### <a name="remarks"></a>Comentários
 
 A função retorna `!(tpl1 < tpl2)`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // std__tuple__operator_ge.cpp

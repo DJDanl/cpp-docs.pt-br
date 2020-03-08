@@ -5,28 +5,28 @@ helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
 ms.openlocfilehash: 23d4675bd3638d2effd1b967f0729f9e70dac6de
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611537"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867021"
 ---
 # <a name="type-library-access"></a>Acesso à biblioteca de tipos
 
-Bibliotecas de tipos expõem as interfaces de um controle OLE para outros aplicativos com reconhecimento de OLE. Cada controle OLE deve ter uma biblioteca de tipos, se uma ou mais interfaces devem ser expostos.
+Bibliotecas de tipos expõem as interfaces de um controle OLE para outros aplicativos que reconhecem OLE. Cada controle OLE deve ter uma biblioteca de tipos se uma ou mais interfaces devem ser expostas.
 
-As macros a seguir permitem que um controle OLE fornecer acesso a sua própria biblioteca de tipos:
+As macros a seguir permitem que um controle OLE forneça acesso à sua própria biblioteca de tipos:
 
 ### <a name="type-library-access"></a>Acesso à biblioteca de tipos
 
 |||
 |-|-|
-|[DECLARE_OLETYPELIB](#declare_oletypelib)|Declara um `GetTypeLib` função de membro de um controle OLE (deve ser usado na declaração de classe).|
-|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implementa um `GetTypeLib` função de membro de um controle OLE (deve ser usada na implementação da classe).|
+|[DECLARE_OLETYPELIB](#declare_oletypelib)|Declara uma função membro `GetTypeLib` de um controle OLE (deve ser usada na declaração de classe).|
+|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implementa uma função membro `GetTypeLib` de um controle OLE (deve ser usada na implementação de classe).|
 
-##  <a name="declare_oletypelib"></a>  DECLARE_OLETYPELIB
+##  <a name="declare_oletypelib"></a>DECLARE_OLETYPELIB
 
-Declara o `GetTypeLib` função de membro de sua classe de controle.
+Declara a função membro `GetTypeLib` da classe de controle.
 
 ```
 DECLARE_OLETYPELIB(class_name)
@@ -39,15 +39,15 @@ O nome da classe de controle relacionada à biblioteca de tipos.
 
 ### <a name="remarks"></a>Comentários
 
-Use esta macro no arquivo de cabeçalho de classe de controle.
+Use essa macro no arquivo de cabeçalho de classe de controle.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Header:** afxdisp.h
+**Cabeçalho:** AFXDISP. h
 
-##  <a name="implement_oletypelib"></a>  IMPLEMENT_OLETYPELIB
+##  <a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB
 
-Implementa o controle `GetTypeLib` função de membro.
+Implementa a função de membro `GetTypeLib` do controle.
 
 ```
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
@@ -59,21 +59,21 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
 O nome da classe de controle relacionada à biblioteca de tipos.
 
 *tlid*<br/>
-O número de identificação da biblioteca de tipos.
+O número de ID da biblioteca de tipos.
 
 *wVerMajor*<br/>
-O número de versão principal da biblioteca de tipo.
+O número de versão principal da biblioteca de tipos.
 
 *wVerMinor*<br/>
-O número de versão secundária da biblioteca de tipo.
+O número de versão secundária da biblioteca de tipos.
 
 ### <a name="remarks"></a>Comentários
 
-Essa macro deve aparecer no arquivo de implementação para qualquer classe de controle que usa a macro DECLARE_OLETYPELIB.
+Essa macro deve aparecer no arquivo de implementação para qualquer classe de controle que use a macro DECLARE_OLETYPELIB.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Header:** afxdisp.h
+**Cabeçalho:** AFXDISP. h
 
 ## <a name="see-also"></a>Consulte também
 

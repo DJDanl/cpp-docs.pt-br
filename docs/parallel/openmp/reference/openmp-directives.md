@@ -30,11 +30,11 @@ helpviewer_keywords:
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
 ms.openlocfilehash: 4db341cf58884263e414e24aacf888c8c88e57cc
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142024"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882883"
 ---
 # <a name="openmp-directives"></a>Diretivas (OpenMP)
 
@@ -55,8 +55,8 @@ Para mestre e sincronização:
 
 |Directive|Descrição|
 |---------|-----------|
-|[mestre](#master)|Especifica que somente o thread mestre deve executar uma seção do programa.|
-|[crítico](#critical)|Especifica que o código é executado somente em um thread por vez.|
+|[master](#master)|Especifica que somente o thread mestre deve executar uma seção do programa.|
+|[critical](#critical)|Especifica que o código é executado somente em um thread por vez.|
 |[barrier](#barrier)|Sincroniza todos os threads em uma equipe; todos os threads são pausados na barreira, até que todos os threads executem a barreira.|
 |[atomic](#atomic)|Especifica que um local de memória que será atualizado atomicamente.|
 |[flush](#flush-openmp)|Especifica que todos os threads têm a mesma exibição de memória para todos os objetos compartilhados.|
@@ -79,7 +79,7 @@ Especifica que um local de memória que será atualizado atomicamente.
 
 ### <a name="parameters"></a>Parâmetros
 
-*expressão*<br/>
+*expression*<br/>
 A instrução que tem o *lvalue*, cujo local de memória você deseja proteger contra mais de uma gravação.
 
 ### <a name="remarks"></a>Comentários
