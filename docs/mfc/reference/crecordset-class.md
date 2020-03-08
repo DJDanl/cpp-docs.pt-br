@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
 ms.openlocfilehash: 1ebdb18254171d28b5d5e02367596b79142df284
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626186"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854026"
 ---
 # <a name="crecordset-class"></a>Classe CRecordset
 
@@ -151,13 +151,13 @@ class CRecordset : public CObject
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Name|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CRecordset::CRecordset](#crecordset)|Constrói um objeto `CRecordset`. Sua classe derivada deve fornecer um construtor que chame este.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CRecordset:: AddNew](#addnew)|Prepara para adicionar um novo registro. Chame `Update` para concluir a adição.|
 |[CRecordset:: CanAppend](#canappend)|Retornará zero se novos registros puderem ser adicionados ao conjunto de registros por meio da função membro `AddNew`.|
@@ -217,14 +217,14 @@ class CRecordset : public CObject
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Name|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|[CRecordset::m_hstmt](#m_hstmt)|Contém o identificador da instrução ODBC para o conjunto de registros. Digite `HSTMT`.|
-|[CRecordset::m_nFields](#m_nfields)|Contém o número de membros de dados de campo no conjunto de registros. Digite `UINT`.|
-|[CRecordset::m_nParams](#m_nparams)|Contém o número de membros de dados de parâmetro no conjunto de registros. Digite `UINT`.|
-|[CRecordset::m_pDatabase](#m_pdatabase)|Contém um ponteiro para o objeto `CDatabase` por meio do qual o conjunto de registros está conectado a uma fonte de dados.|
-|[CRecordset::m_strFilter](#m_strfilter)|Contém um `CString` que especifica uma cláusula de `WHERE` de linguagem SQL (SQL). Usado como um filtro para selecionar apenas os registros que atendem a determinados critérios.|
-|[CRecordset::m_strSort](#m_strsort)|Contém um `CString` que especifica uma cláusula SQL `ORDER BY`. Usado para controlar como os registros são classificados.|
+|[CRecordset:: m_hstmt](#m_hstmt)|Contém o identificador da instrução ODBC para o conjunto de registros. Digite `HSTMT`.|
+|[CRecordset:: m_nFields](#m_nfields)|Contém o número de membros de dados de campo no conjunto de registros. Digite `UINT`.|
+|[CRecordset:: m_nParams](#m_nparams)|Contém o número de membros de dados de parâmetro no conjunto de registros. Digite `UINT`.|
+|[CRecordset:: m_pDatabase](#m_pdatabase)|Contém um ponteiro para o objeto `CDatabase` por meio do qual o conjunto de registros está conectado a uma fonte de dados.|
+|[CRecordset:: m_strFilter](#m_strfilter)|Contém um `CString` que especifica uma cláusula de `WHERE` de linguagem SQL (SQL). Usado como um filtro para selecionar apenas os registros que atendem a determinados critérios.|
+|[CRecordset:: m_strSort](#m_strsort)|Contém um `CString` que especifica uma cláusula SQL `ORDER BY`. Usado para controlar como os registros são classificados.|
 
 ## <a name="remarks"></a> Comentários
 
@@ -424,7 +424,7 @@ Chamado para tratar erros gerados durante a busca de registro.
 virtual void CheckRowsetError(RETCODE nRetCode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nRetCode*<br/>
 Um código de retorno de função da API ODBC. Para obter detalhes, consulte Observações.
@@ -435,7 +435,7 @@ Essa função de membro virtual manipula os erros que ocorrem quando os registro
 
 `CheckRowsetError` é chamado automaticamente em uma operação de navegação de cursor, como `Open`, `Requery`ou qualquer operação de `Move`. É passado o valor de retorno da função da API do ODBC `SQLExtendedFetch`. A tabela a seguir lista os possíveis valores para o parâmetro *nRetCode* .
 
-|nRetCode|Descrição|
+|nRetCode|DESCRIÇÃO|
 |--------------|-----------------|
 |SQL_SUCCESS|Função concluída com êxito; Não há informações adicionais disponíveis.|
 |SQL_SUCCESS_WITH_INFO|A função foi concluída com êxito, possivelmente com um erro não fatal. Informações adicionais podem ser obtidas chamando `SQLError`.|
@@ -472,7 +472,7 @@ Constrói um objeto `CRecordset`.
 CRecordset(CDatabase* pDatabase = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDatabase*<br/>
 Contém um ponteiro para um objeto `CDatabase` ou o valor NULL. Se não for nulo e a função de membro `Open` do objeto de `CDatabase` não tiver sido chamada para conectá-lo à fonte de dados, o conjunto de registros tentará abri-lo para você durante sua própria chamada de `Open`. Se você passar NULL, um objeto `CDatabase` será construído e conectado para você usando as informações da fonte de dados que você especificou quando derivou a classe recordset com ClassWizard.
@@ -524,7 +524,7 @@ Chamado para trocar linhas de dados em massa da fonte de dados para o conjunto d
 virtual void DoBulkFieldExchange(CFieldExchange* pFX);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFX*<br/>
 Um ponteiro para um objeto [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) . A estrutura já terá configurado esse objeto para especificar um contexto para a operação de troca de campo.
@@ -552,7 +552,7 @@ Chamado para trocar dados (em ambas as direções) entre os membros de dados de 
 virtual void DoFieldExchange(CFieldExchange* pFX);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFX*<br/>
 Um ponteiro para um objeto [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) . A estrutura já terá configurado esse objeto para especificar um contexto para a operação de troca de campo.
@@ -647,7 +647,7 @@ Obtém o valor do indicador para o registro atual.
 void GetBookmark(CDBVariant& varBookmark);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *varBookmark*<br/>
 Uma referência a um objeto [CDBVariant](../../mfc/reference/cdbvariant-class.md) que representa o indicador no registro atual.
@@ -731,7 +731,7 @@ void GetFieldValue(
     CStringW& strValue);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 O nome de um campo.
@@ -741,7 +741,7 @@ O nome de um campo.
 *nFieldType*<br/>
 O tipo de dados ODBC C do campo. Usando o valor padrão, DEFAULT_FIELD_TYPE, força `GetFieldValue` a determinar o tipo de dados C do tipo de dados SQL, com base na tabela a seguir. Caso contrário, você pode especificar o tipo de dados diretamente ou escolher um tipo de dados compatível; por exemplo, você pode armazenar qualquer tipo de dados em SQL_C_CHAR.
 
-|Tipo de dados C|Tipo de dados SQL|
+|Tipos de dados do C|Tipo de dados SQL|
 |-----------------|-------------------|
 |SQL_C_BIT|SQL_BIT|
 |SQL_C_UTINYINT|SQL_TINYINT|
@@ -815,7 +815,7 @@ void GetODBCFieldInfo(
     CODBCFieldInfo& fieldinfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 O nome de um campo.
@@ -903,7 +903,7 @@ Obtém o status de uma linha no conjunto de linhas atual.
 WORD GetRowStatus(WORD wRow) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *wRow*<br/>
 A posição de uma linha baseada em um no conjunto de linhas atual. Esse valor pode variar de 1 até o tamanho do conjunto de linhas.
@@ -916,7 +916,7 @@ Um valor de status para a linha. Para obter detalhes, consulte Observações.
 
 `GetRowStatus` retorna um valor que indica qualquer alteração no status para a linha desde que ela foi recuperada pela última vez da fonte de dados ou que nenhuma linha correspondente a *wRow* foi buscada. A tabela a seguir lista os possíveis valores de retorno.
 
-|Valor de status|Descrição|
+|Valor de status|DESCRIÇÃO|
 |------------------|-----------------|
 |SQL_ROW_SUCCESS|A linha está inalterada.|
 |SQL_ROW_UPDATED|A linha foi atualizada.|
@@ -935,10 +935,10 @@ Determina o índice do registro atual no conjunto de registros e se o último re
 void GetStatus(CRecordsetStatus& rStatus) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rStatus*<br/>
-Uma referência a um objeto `CRecordsetStatus`. Consulte a seção Comentários para obter mais informações.
+Uma referência a um objeto `CRecordsetStatus`. Para obter mais informações, consulte a seção Comentários.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1040,7 +1040,7 @@ Diferente de zero se o conjunto de registros estiver posicionado em um registro 
 
 Se você rolar para um registro e `IsDeleted` retornar TRUE (diferente de zero), você deverá rolar para outro registro antes de executar qualquer outra operação de conjunto de registros.
 
-O resultado de `IsDeleted` depende de muitos fatores, como o tipo do conjunto de registros, se o conjunto de registros é atualizável, se você especificou a opção `CRecordset::skipDeletedRecords` ao abrir o conjunto de registros, se os pacotes de driver excluíram registros e se há vários podem.
+O resultado de `IsDeleted` depende de muitos fatores, como o tipo do conjunto de registros, se o conjunto de registros é atualizável, se você especificou a opção `CRecordset::skipDeletedRecords` ao abrir o conjunto de registros, se os pacotes de driver excluíram registros e se há vários usuários.
 
 Para obter mais informações sobre `CRecordset::skipDeletedRecords` e empacotamento de driver, consulte a função de membro [Open](#open) .
 
@@ -1077,7 +1077,7 @@ Determina se o membro de dados do campo especificado foi alterado desde que [Edi
 BOOL IsFieldDirty(void* pv);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *PV*<br/>
 Um ponteiro para o membro de dados de campo cujo status você deseja verificar, ou NULL para determinar se algum dos campos está sujo.
@@ -1107,7 +1107,7 @@ Retornará zero se o campo especificado no registro atual for nulo (não tem val
 BOOL IsFieldNull(void* pv);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *PV*<br/>
 Um ponteiro para o membro de dados de campo cujo status você deseja verificar, ou NULL para determinar se algum dos campos é nulo.
@@ -1133,7 +1133,7 @@ Retornará zero se o campo especificado no registro atual puder ser definido com
 BOOL IsFieldNullable(void* pv);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *PV*<br/>
 Um ponteiro para o membro de dados de campo cujo status você deseja verificar, ou NULL para determinar se qualquer um dos campos pode ser definido como um valor nulo.
@@ -1173,7 +1173,7 @@ BOOL IsOpen() const;
 
 Diferente de zero se a função de membro [Open](#open) ou [Requery](#requery) do objeto Recordset tiver sido chamada anteriormente e o conjunto de registros não tiver sido fechado; caso contrário, 0.
 
-##  <a name="m_hstmt"></a>CRecordset::m_hstmt
+##  <a name="m_hstmt"></a>CRecordset:: m_hstmt
 
 Contém um identificador para a estrutura de dados da instrução ODBC, do tipo HSTMT, associado ao conjunto de registros.
 
@@ -1186,7 +1186,7 @@ Cada consulta a uma fonte de dados ODBC é associada a um HSTMT.
 
 Normalmente, você não precisa acessar o HSTMT diretamente, mas pode precisar dele para a execução direta de instruções SQL. A função membro `ExecuteSQL` da classe `CDatabase` fornece um exemplo de como usar `m_hstmt`.
 
-##  <a name="m_nfields"></a>CRecordset::m_nFields
+##  <a name="m_nfields"></a>CRecordset:: m_nFields
 
 Contém o número de membros de dados de campo na classe recordset; ou seja, o número de colunas selecionadas pelo conjunto de registros da fonte de dados.
 
@@ -1207,13 +1207,13 @@ Para obter mais informações, consulte o [conjunto de registros de artigos: vin
 
 Consulte o artigo [registro de campo Exchange: usando suporte RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
-##  <a name="m_nparams"></a>CRecordset::m_nParams
+##  <a name="m_nparams"></a>CRecordset:: m_nParams
 
 Contém o número de membros de dados de parâmetro na classe recordset; ou seja, o número de parâmetros passados com a consulta do conjunto de registros.
 
 ### <a name="remarks"></a>Comentários
 
-Se a classe do conjunto de registros tiver quaisquer membros de dados de parâmetro, o construtor para a classe deverá inicializar `m_nParams` com o número correto. O valor de `m_nParams` usa como padrão 0. Se você adicionar membros de dados de parâmetro (que você deve fazer manualmente), também deverá adicionar manualmente uma inicialização no construtor de classe para refletir o número de parâmetros (que deve ser pelo menos tão grande quanto o número de espaços reservados ' ' no `m_strFilter` ou `m_strSort` Cadeia de caracteres).
+Se a classe do conjunto de registros tiver quaisquer membros de dados de parâmetro, o construtor para a classe deverá inicializar `m_nParams` com o número correto. O valor de `m_nParams` usa como padrão 0. Se você adicionar membros de dados de parâmetro (que você deve fazer manualmente), também deverá adicionar manualmente uma inicialização no construtor de classe para refletir o número de parâmetros (que deve ser pelo menos tão grande quanto o número de ' ' espaços reservados em sua `m_strFilter` ou `m_strSort` cadeia de caracteres).
 
 A estrutura usa esse número quando parametriza a consulta do conjunto de registros.
 
@@ -1224,7 +1224,7 @@ A estrutura usa esse número quando parametriza a consulta do conjunto de regist
 
   Consulte o conjunto de registros de artigos [: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) e [gravar campo Exchange: usando suporte RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
-##  <a name="m_pdatabase"></a>CRecordset::m_pDatabase
+##  <a name="m_pdatabase"></a>CRecordset:: m_pDatabase
 
 Contém um ponteiro para o objeto `CDatabase` por meio do qual o conjunto de registros está conectado a uma fonte de dados.
 
@@ -1234,7 +1234,7 @@ Essa variável é definida de duas maneiras. Normalmente, você passa um ponteir
 
 Normalmente, você não precisará usar diretamente o ponteiro armazenado em `m_pDatabase`. No entanto, se você escrever suas próprias extensões para `CRecordset`, talvez seja necessário usar o ponteiro. Por exemplo, talvez você precise do ponteiro se lançar seus próprios `CDBException`s. Ou talvez seja necessário se você precisar fazer algo usando o mesmo objeto `CDatabase`, como executar transações, definir tempos limite ou chamar a função membro `ExecuteSQL` da classe `CDatabase` para executar instruções SQL diretamente.
 
-##  <a name="m_strfilter"></a>CRecordset::m_strFilter
+##  <a name="m_strfilter"></a>CRecordset:: m_strFilter
 
 Depois de construir o objeto recordset, mas antes de chamar sua função de membro `Open`, use esse membro de dados para armazenar um `CString` contendo uma cláusula SQL **Where** .
 
@@ -1254,7 +1254,7 @@ Para obter mais informações sobre as cláusulas do SQL **Where** , consulte o 
 
 [!code-cpp[NVC_MFCDatabase#30](../../mfc/codesnippet/cpp/crecordset-class_12.cpp)]
 
-##  <a name="m_strsort"></a>CRecordset::m_strSort
+##  <a name="m_strsort"></a>CRecordset:: m_strSort
 
 Depois de construir o objeto recordset, mas antes de chamar sua função de membro `Open`, use esse membro de dados para armazenar um `CString` que contém uma cláusula **order by** SQL.
 
@@ -1284,7 +1284,7 @@ virtual void Move(
     WORD wFetchType = SQL_FETCH_RELATIVE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nRows*<br/>
 O número de linhas a serem passadas para frente ou para trás. Os valores positivos avançam para o final do conjunto de registros. Valores negativos se movem para trás, em direção ao início.
@@ -1466,7 +1466,7 @@ Chamado para definir opções (usadas na seleção) para a instrução ODBC espe
 virtual void OnSetOptions(HSTMT hstmt);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hstmt*<br/>
 O HSTMT da instrução ODBC cujas opções devem ser definidas.
@@ -1487,7 +1487,7 @@ Chamado para definir opções (usadas na atualização) para a instrução ODBC 
 virtual void OnSetUpdateOptions(HSTMT hstmt);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hstmt*<br/>
 O HSTMT da instrução ODBC cujas opções devem ser definidas.
@@ -1511,10 +1511,10 @@ virtual BOOL Open(
     DWORD dwOptions = none);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nOpenType*<br/>
-Aceite o valor padrão, AFX_DB_USE_DEFAULT_TYPE, ou use um dos seguintes valores do `enum OpenType`:
+Aceite o valor padrão, AFX_DB_USE_DEFAULT_TYPE ou use um dos seguintes valores da `enum OpenType`:
 
 - `CRecordset::dynaset` um conjunto de registros com rolagem bidirecional. A associação e a ordenação dos registros são determinadas quando o conjunto de registros é aberto, mas as alterações feitas por outros usuários nos valores de dados são visíveis após uma operação de busca. Os dynasets também são conhecidos como conjuntos de registros controlados por conjunto de chaves.
 
@@ -1589,7 +1589,7 @@ Quando você chama `Open`, uma consulta, geralmente uma instrução SQL **Select
 
 |Valor do parâmetro lpszSQL|Os registros selecionados são determinados por|Exemplo|
 |------------------------------------|----------------------------------------|-------------|
-|NULL|A cadeia de caracteres retornada por `GetDefaultSQL`.||
+|NULO|A cadeia de caracteres retornada por `GetDefaultSQL`.||
 |Nome da tabela SQL|Todas as colunas da tabela-List em `DoFieldExchange` ou `DoBulkFieldExchange`.|`"Customer"`|
 |Nome da consulta predefinida (procedimento armazenado)|As colunas que a consulta está definida para retornar.|`"{call OverDueAccts}"`|
 |**Selecione** a lista **de colunas na lista de** tabelas|As colunas especificadas das tabelas especificadas.|`"SELECT CustId, CustName FROM`<br /><br /> `Customer"`|
@@ -1623,7 +1623,7 @@ void RefreshRowset(
     WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *wRow*<br/>
 A posição de uma linha baseada em um no conjunto de linhas atual. Esse valor pode variar de zero até o tamanho do conjunto de linhas.
@@ -1639,7 +1639,7 @@ Para usar `RefreshRowset`, você deve ter implementado a busca de linha em massa
 
 `RefreshRowset` chama a função de API do ODBC `SQLSetPos`. O parâmetro *wLockType* especifica o estado de bloqueio da linha depois que `SQLSetPos` foi executado. A tabela a seguir descreve os valores possíveis para *wLockType*.
 
-|wLockType|Descrição|
+|wLockType|DESCRIÇÃO|
 |---------------|-----------------|
 |SQL_LOCK_NO_CHANGE (o valor padrão)|O driver ou a fonte de dados garante que a linha esteja no mesmo estado bloqueado ou desbloqueado, uma vez que o `RefreshRowset` foi chamado.|
 |SQL_LOCK_EXCLUSIVE|O driver ou a fonte de dados bloqueia a linha exclusivamente. Nem todas as fontes de dados dão suporte a esse tipo de bloqueio.|
@@ -1686,7 +1686,7 @@ Posiciona o conjunto de registros no registro correspondente ao número de regis
 void SetAbsolutePosition(long nRows);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nRows*<br/>
 A posição ordinal com base em um para o registro atual no conjunto de registros.
@@ -1703,7 +1703,7 @@ Para conjuntos de registros ODBC, uma configuração de posição absoluta de 1 
 Você também pode passar valores negativos para `SetAbsolutePosition`. Nesse caso, a posição do conjunto de registros é avaliada a partir do final do conjunto de registros. Por exemplo, `SetAbsolutePosition( -1 )` move o ponteiro de registro atual para o último registro no conjunto de registros.
 
 > [!NOTE]
->  A posição absoluta não deve ser usada como um número de registro substituto. Os indicadores ainda são a maneira recomendada de reter e retornar a uma determinada posição, já que a posição de um registro é alterada quando registros anteriores são excluídos. Além disso, você não pode ter certeza de que um determinado registro terá a mesma posição absoluta se o conjunto de registros for recriado novamente porque a ordem dos registros individuais em um conjunto de registros não é garantida, a menos que ele seja criado com uma instrução SQL usando um **order by** cláusula.
+>  A posição absoluta não deve ser usada como um número de registro substituto. Os indicadores ainda são a maneira recomendada de reter e retornar a uma determinada posição, já que a posição de um registro é alterada quando registros anteriores são excluídos. Além disso, você não pode ter certeza de que um determinado registro terá a mesma posição absoluta se o conjunto de registros for recriado novamente porque a ordem dos registros individuais em um conjunto de registros não é garantida, a menos que ele seja criado com uma instrução SQL usando uma cláusula **order by** .
 
 Para obter mais informações sobre a navegação do conjunto de registros e indicadores, consulte os artigos [conjunto de registros: rolagem (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) e [conjunto de registros: indicadores e posições absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
@@ -1715,7 +1715,7 @@ Posiciona o conjunto de registros no registro que contém o indicador especifica
 void SetBookmark(const CDBVariant& varBookmark);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *varBookmark*<br/>
 Uma referência a um objeto [CDBVariant](../../mfc/reference/cdbvariant-class.md) que contém o valor de indicador para um registro específico.
@@ -1742,7 +1742,7 @@ Sinaliza um membro de dados de campo do conjunto de registros como alterado ou i
 void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *PV*<br/>
 Contém o endereço de um membro de dados de campo no conjunto de registros ou nulo. Se for NULL, todos os membros de dados de campo no conjunto de registros serão sinalizados. (C++ NULL não é o mesmo que NULL na terminologia do banco de dados, o que significa "sem valor".)
@@ -1757,7 +1757,7 @@ Marcar campos como inalterados garante que o campo não seja atualizado e result
 > [!NOTE]
 >  Essa função de membro não é aplicável em conjuntos de registros que estão usando a busca de linha em massa. Se você tiver implementado a busca de linha em massa, `SetFieldDirty` resultará em uma asserção com falha. Para obter mais informações sobre a busca de linha em massa, consulte o artigo conjunto de registros [: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-A estrutura marca os membros de dados de campo alterados para garantir que eles serão gravados no registro na fonte de dados pelo mecanismo de troca de campo de registro (suporte RFX). A alteração do valor de um campo geralmente define o campo sujo automaticamente, portanto, raramente será necessário chamar `SetFieldDirty` você mesmo, mas às vezes você desejará garantir que as colunas sejam explicitamente atualizadas ou inseridas, independentemente de qual valor está nos dados do campo associado.
+A estrutura marca os membros de dados de campo alterados para garantir que eles serão gravados no registro na fonte de dados pelo mecanismo de troca de campo de registro (suporte RFX). A alteração do valor de um campo geralmente define o campo sujo automaticamente, portanto, raramente será necessário chamar `SetFieldDirty` você mesmo, mas às vezes você desejará garantir que as colunas sejam explicitamente atualizadas ou inseridas, independentemente de qual valor está no membro de dados do campo.
 
 > [!CAUTION]
 >  Chame essa função de membro somente depois de ter chamado [Editar](#edit) ou [AddNew](#addnew).
@@ -1782,7 +1782,7 @@ Sinaliza um membro de dados de campo do conjunto de registros como nulo (especif
 void SetFieldNull(void* pv, BOOL bNull = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *PV*<br/>
 Contém o endereço de um membro de dados de campo no conjunto de registros ou nulo. Se for NULL, todos os membros de dados de campo no conjunto de registros serão sinalizados. (C++ NULL não é o mesmo que NULL na terminologia do banco de dados, o que significa "sem valor".)
@@ -1827,7 +1827,7 @@ Define o modo de bloqueio como bloqueio "otimista" (o padrão) ou o bloqueio "pe
 void SetLockingMode(UINT nMode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nMode*<br/>
 Contém um dos seguintes valores do `enum LockMode`:
@@ -1850,7 +1850,7 @@ void SetParamNull(
     BOOL bNull = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 O índice baseado em zero do parâmetro.
@@ -1872,7 +1872,7 @@ Move o cursor para uma linha dentro do conjunto de linhas atual.
 void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *wRow*<br/>
 A posição de uma linha baseada em um no conjunto de linhas atual. Esse valor pode variar de 1 até o tamanho do conjunto de linhas.
@@ -1888,7 +1888,7 @@ Para usar `SetRowsetCursorPosition`, você deve ter implementado a busca de linh
 
 `SetRowsetCursorPosition` chama a função de API do ODBC `SQLSetPos`. O parâmetro *wLockType* especifica o estado de bloqueio da linha depois que `SQLSetPos` foi executado. A tabela a seguir descreve os valores possíveis para *wLockType*.
 
-|wLockType|Descrição|
+|wLockType|DESCRIÇÃO|
 |---------------|-----------------|
 |SQL_LOCK_NO_CHANGE (o valor padrão)|O driver ou a fonte de dados garante que a linha esteja no mesmo estado bloqueado ou desbloqueado, uma vez que o `SetRowsetCursorPosition` foi chamado.|
 |SQL_LOCK_EXCLUSIVE|O driver ou a fonte de dados bloqueia a linha exclusivamente. Nem todas as fontes de dados dão suporte a esse tipo de bloqueio.|
@@ -1904,7 +1904,7 @@ Especifica o número de registros que você deseja recuperar durante uma busca.
 virtual void SetRowsetSize(DWORD dwNewRowsetSize);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwNewRowsetSize*<br/>
 O número de linhas a serem recuperadas durante uma determinada busca.
@@ -1919,7 +1919,7 @@ Essa função de membro virtual especifica quantas linhas você deseja recuperar
 Chame `SetRowsetSize` antes de chamar `Open` para definir inicialmente o tamanho do conjunto de linhas para o conjunto de registros. O tamanho do conjunto de linhas padrão ao implementar a busca de linha em massa é 25.
 
 > [!NOTE]
->  Tenha cuidado ao chamar `SetRowsetSize`. Se você estiver alocando manualmente o armazenamento para os dados (conforme especificado pela opção `CRecordset::userAllocMultiRowBuffers` do parâmetro dwOptions no `Open`), verifique se você precisa realocar esses buffers de armazenamento depois de chamar `SetRowsetSize`, mas antes de executar qualquer cursor operação de navegação.
+>  Tenha cuidado ao chamar `SetRowsetSize`. Se você estiver alocando manualmente o armazenamento para os dados (conforme especificado pela opção `CRecordset::userAllocMultiRowBuffers` do parâmetro dwOptions no `Open`), verifique se você precisa realocar esses buffers de armazenamento depois de chamar `SetRowsetSize`, mas antes de executar qualquer operação de navegação do cursor.
 
 Para obter a configuração atual para o tamanho do conjunto de linhas, chame [GetRowsetSize](#getrowsetsize).
 
@@ -1957,7 +1957,7 @@ Para obter detalhes sobre como lidar com falhas de `Update`, consulte o artigo c
 
 Consulte o artigo [transação: executando uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
