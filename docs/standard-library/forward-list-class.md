@@ -80,11 +80,11 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890199"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890834"
 ---
 # <a name="forward_list-class"></a>Classe forward_list
 
@@ -104,7 +104,7 @@ Tipo * \
 O tipo de dados do elemento a ser armazenado na forward_list.
 
 \ de *alocador*
-O objeto alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória na forward_list. Esse parâmetro é opcional. O valor padrão é alocador < `Type` >.
+O objeto alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória na forward_list. Esse parâmetro é opcional. O valor padrão é alocador <`Type`>.
 
 ## <a name="remarks"></a>Comentários
 
@@ -119,7 +119,7 @@ Adições à sequência controlada podem ocorrer por chamadas para [forward_list
 
 ## <a name="members"></a>Membros
 
-### <a name="constructors"></a>Construtores
+### <a name="constructors"></a>{1&gt;Construtores&lt;1}
 
 |||
 |-|-|
@@ -140,7 +140,7 @@ Adições à sequência controlada podem ocorrer por chamadas para [forward_list
 |[size_type](#size_type)|Um tipo que representa a distância sem sinal entre dois elementos.|
 |[value_type](#value_type)|Um tipo que representa o tipo de elemento armazenado em uma lista de encaminhamento.|
 
-### <a name="functions"></a>Funções
+### <a name="functions"></a>{1&gt;Funções&lt;1}
 
 |||
 |-|-|
@@ -208,22 +208,22 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* \
+*primeiro*\
 O início do intervalo de substituição.
 
-*última* \
+*última*\
 O final do intervalo de substituição.
 
-*contagem* \
+*contagem*\
 O número de elementos a serem atribuídos.
 
-*valor* \
+*valor*\
 O valor a atribuir a cada elemento.
 
-*Tipo* \
-Tipo do valor.
+*Tipo*\
+O tipo do valor.
 
-*IList* \
+*IList*\
 A initializer_list a ser copiada.
 
 ### <a name="remarks"></a>Comentários
@@ -399,10 +399,10 @@ iterator emplace_after(const_iterator Where, Type&& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Onde* \
+*Onde*\
 A posição na lista de encaminhamento de destino em que o novo elemento é criado.
 
-*valor* \
+*valor*\
 O argumento do construtor.
 
 ### <a name="return-value"></a>Valor retornado
@@ -424,7 +424,7 @@ template <class Type>
 
 ### <a name="parameters"></a>Parâmetros
 
-*valor* \
+*valor*\
 O elemento adicionado ao início da lista de encaminhamento.
 
 ### <a name="remarks"></a>Comentários
@@ -469,13 +469,13 @@ iterator erase_after(const_iterator first, const_iterator last);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Onde* \
+*Onde*\
 A posição na lista de encaminhamento de destino em que o novo elemento é apagado.
 
-*primeiro* \
+*primeiro*\
 O início do intervalo a ser apagado.
 
-*última* \
+*última*\
 O final do intervalo a ser apagado.
 
 ### <a name="return-value"></a>Valor retornado
@@ -515,25 +515,25 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Al* \
+*Al*\
 A classe de alocador a ser usada com esse objeto.
 
-*Contagem* \
+*Contagem*\
 O número de elementos na lista construída.
 
-*Valor* \
+*Valor*\
 O valor dos elementos na lista construída.
 
 \ *à direita*
 A lista da qual a lista construída é uma cópia.
 
-*Primeiro* \
+*Primeiro*\
 A posição do primeiro elemento no intervalo de elementos a serem copiados.
 
-*Última* \
+*Última*\
 A posição do primeiro elemento além do intervalo de elementos a serem copiados.
 
-*IList* \
+*IList*\
 A initializer_list a ser copiada.
 
 ### <a name="remarks"></a>Comentários
@@ -592,22 +592,22 @@ template <class InputIterator>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Onde* \
+*Onde*\
 A posição na lista de encaminhamento de destino em que o primeiro elemento é inserido.
 
-*Contagem* \
+*Contagem*\
 O número de elementos a serem inseridos.
 
-*Primeiro* \
+*Primeiro*\
 O início do intervalo de inserção.
 
-*Última* \
+*Última*\
 O final do intervalo de inserção.
 
-*Valor* \
+*Valor*\
 O elemento adicionado à lista de encaminhamento.
 
-*IList* \
+*IList*\
 A initializer_list a ser inserida.
 
 ### <a name="return-value"></a>Valor retornado
@@ -673,7 +673,7 @@ template <class Predicate>
 \ *à direita*
 A lista de encaminhamento a ser mesclada.
 
-*comp* \
+*comp*\
 O objeto de função compare que é usado para classificar elementos.
 
 ### <a name="remarks"></a>Comentários
@@ -701,7 +701,7 @@ forward_list& operator=(forward_list&& right);
 \ *à direita*
 A lista de encaminhamento que está sendo copiada para a lista de encaminhamento.
 
-*IList* \
+*IList*\
 Uma lista de inicializadores entre chaves, que se comporta exatamente como uma sequência de elementos do tipo `Type`.
 
 ### <a name="remarks"></a>Comentários
@@ -745,7 +745,7 @@ void push_front(Type&& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*valor* \
+*valor*\
 O elemento adicionado ao início da lista de encaminhamento.
 
 ### <a name="remarks"></a>Comentários
@@ -770,7 +770,7 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*valor* \
+*valor*\
 O valor que, se mantido por um elemento, resultará na remoção de tal elemento da lista.
 
 ### <a name="remarks"></a>Comentários
@@ -810,10 +810,10 @@ void resize(size_type _Newsize, const Type& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *_Newsize*
+*_Newsize*\
 O número de elementos na lista de encaminhamento redimensionada.
 
-*valor* \
+*valor*\
 O valor a ser usado para preenchimento.
 
 ### <a name="remarks"></a>Comentários
@@ -892,7 +892,7 @@ void splice_after(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Onde* \
+*Onde*\
 A posição na forward_list de destino após a qual o elemento deve ser inserido.
 
 *Source*\
@@ -901,10 +901,10 @@ A forward_list de origem que deve ser inserida na forward_list de destino.
 \ *ITER*
 O elemento a ser inserido da forward_list de origem.
 
-*Primeiro* \
+*Primeiro*\
 O primeiro elemento no intervalo a ser inserido da forward_list de origem.
 
-*Última* \
+*Última*\
 A primeira posição além do intervalo a ser inserida da forward_list de origem.
 
 ### <a name="remarks"></a>Comentários
@@ -919,7 +919,7 @@ Se a união no intervalo inserir elementos `N` e `&Source != this`, um objeto da
 
 Nenhum iterador, ponteiro ou referência que designa elementos unidos se torna inválido.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // forward_list_splice_after.cpp
@@ -1021,7 +1021,7 @@ void unique(BinaryPredicate comp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*comp* \
+*comp*\
 O predicado binário usado para comparar elementos sucessivos.
 
 ### <a name="remarks"></a>Comentários

@@ -6,11 +6,11 @@ f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
 ms.openlocfilehash: 46b8a171acd3b125749b4e2c519909b82c76dc39
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126975"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883740"
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Funções do namespace Concurrency::graphics
 
@@ -122,7 +122,7 @@ void copy (
 A extensão da seção de textura a ser copiada.
 
 *_Dst*<br/>
-O objeto para o qual copiar.
+O objeto ao qual será copiado.
 
 *_Dst_byte_size*<br/>
 O número de bytes no destino.
@@ -257,7 +257,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 A extensão da seção de textura a ser copiada.
 
 *_Dst*<br/>
-O objeto para o qual copiar.
+O objeto ao qual será copiado.
 
 *_Dst_byte_size*<br/>
 O número de bytes no destino.

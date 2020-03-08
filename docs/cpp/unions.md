@@ -8,11 +8,11 @@ helpviewer_keywords:
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
 ms.openlocfilehash: 8a4ea3ae325eb5882c2f8b2524bbc156d12ffcc6
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062050"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875728"
 ---
 # <a name="unions"></a>Uniões
 
@@ -34,7 +34,7 @@ union [name]  { member-list };
 *name*<br/>
 O nome do tipo dado à união.
 
-*member-list*<br/>
+*lista de membros*<br/>
 Membros que a União pode conter. Consulte Observações.
 
 ## <a name="remarks"></a>Comentários
@@ -151,7 +151,7 @@ No exemplo anterior, observe que a União no struct de entrada não tem nenhum n
 
 É claro que o exemplo anterior mostra um problema que também pode ser resolvido usando classes que derivam de uma classe base comum e ramificando seu código com base no tipo de tempo de execução de cada objeto no contêiner. Isso pode resultar em um código mais fácil de manter e entender, mas também pode ser mais lento do que o uso de uniões. Além disso, com uma União, você pode armazenar tipos completamente não relacionados e alterar dinamicamente o tipo do valor que é armazenado sem alterar o tipo da própria variável Union. Assim, você pode criar uma matriz heterogênea de myuniontype cujos elementos armazenam diferentes valores de tipos diferentes.
 
-Observe que a `Input` estrutura no exemplo anterior pode ser facilmente usada com facilidade. É completamente possível que o usuário use o discriminador corretamente para acessar o membro que contém os dados. Você pode se proteger contra uso indevido, tornando a União privada e fornecendo funções de acesso especiais, conforme mostrado no exemplo a seguir.
+Observe que o `Input` struct no exemplo anterior pode ser facilmente usado com facilidade. É completamente possível que o usuário use o discriminador corretamente para acessar o membro que contém os dados. Você pode se proteger contra uso indevido, tornando a União privada e fornecendo funções de acesso especiais, conforme mostrado no exemplo a seguir.
 
 ## <a name="unrestricted-unions-c11"></a>Uniões irrestritas (C++ 11)
 

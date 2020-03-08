@@ -15,11 +15,11 @@ helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
 ms.openlocfilehash: 2906e802072c43a93c59ca40d15e032adeeeef97
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257800"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856449"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -77,7 +77,7 @@ Um objeto [ostream](../standard-library/ostream-typedefs.md#ostream).
 
 O objeto controla inserções não armazenadas em buffer na saída de erro padrão como um fluxo de bytes. Depois que o objeto é construído, a expressão `cerr.`[sinalizadores](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) é diferente de zero e `cerr.tie() == &cout`.
 
-#### <a name="example"></a>Exemplo
+#### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // iostream_cerr.cpp
@@ -123,7 +123,7 @@ Um objeto [istream](../standard-library/istream-typedefs.md#istream).
 
 O objeto controla extrações da entrada padrão como um fluxo de bytes. Após o objeto ser criado, a chamada `cin.`[tie](../standard-library/basic-ios-class.md#tie) retorna `&`[cout](#cout).
 
-#### <a name="example"></a>Exemplo
+#### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Neste exemplo, `cin` define o bit de falha no fluxo quando ele é fornecido entre caracteres não numéricos. O programa limpa o bit de falha e remove o caractere inválido do fluxo para continuar.
 
@@ -174,7 +174,7 @@ Um objeto [ostream](../standard-library/ostream-typedefs.md#ostream).
 
 O objeto controla inserções armazenadas em buffer na saída de erro padrão como um fluxo de bytes.
 
-#### <a name="example"></a>Exemplo
+#### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [cerr](#cerr) para ver um exemplo de como usar `clog`.
 
@@ -194,7 +194,7 @@ Um objeto [ostream](../standard-library/ostream-typedefs.md#ostream).
 
 O objeto controla inserções na saída padrão como um fluxo de bytes.
 
-#### <a name="example"></a>Exemplo
+#### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [cerr](#cerr) para ver um exemplo de como usar `cout`.
 
@@ -214,7 +214,7 @@ Um objeto [wostream](../standard-library/ostream-typedefs.md#wostream).
 
 O objeto controla inserções não armazenadas em buffer na saída de erro padrão como um fluxo largo. Depois que o objeto é construído, a expressão `wcerr.`[sinalizadores](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) é diferente de zero.
 
-#### <a name="example"></a>Exemplo
+#### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [cerr](#cerr) para ver um exemplo de como usar `wcerr`.
 
@@ -234,7 +234,7 @@ Um objeto [wistream](../standard-library/istream-typedefs.md#wistream).
 
 O objeto controla extrações da entrada padrão como um fluxo largo. Após o objeto ser criado, a chamada `wcin.`[tie](../standard-library/basic-ios-class.md#tie) retorna `&`[wcout](#wcout).
 
-#### <a name="example"></a>Exemplo
+#### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [cerr](#cerr) para ver um exemplo de como usar `wcin`.
 
@@ -254,7 +254,7 @@ Um objeto [wostream](../standard-library/ostream-typedefs.md#wostream).
 
 O objeto controla inserções armazenadas em buffer na saída de erro padrão como um fluxo largo.
 
-#### <a name="example"></a>Exemplo
+#### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [cerr](#cerr) para ver um exemplo de como usar `wclog`.
 
@@ -274,7 +274,7 @@ Um objeto [wostream](../standard-library/ostream-typedefs.md#wostream).
 
 O objeto controla inserções na saída padrão como um fluxo largo.
 
-#### <a name="example"></a>Exemplo
+#### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [cerr](#cerr) para ver um exemplo de como usar `wcout`.
 
@@ -288,7 +288,7 @@ wcout <<(const wchar_t*) cs <<endl;
 
 Para obter mais informações, consulte [Operações CString básicas](../atl-mfc-shared/basic-cstring-operations.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

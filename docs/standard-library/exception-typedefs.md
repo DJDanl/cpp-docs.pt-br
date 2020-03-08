@@ -7,11 +7,11 @@ f1_keywords:
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
 ms.openlocfilehash: aba17b7bf052b6974bf849f60ff895b8e84a1092
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501956"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854895"
 ---
 # <a name="ltexceptiongt-typedefs"></a>Typedefs &lt;exception&gt;
 
@@ -31,7 +31,7 @@ Use um objeto `exception_ptr` para fazer referência à exceção atual ou a uma
 
 Quando você declara uma variável `exception_ptr`, ela não é associada a nenhuma exceção. Isto é, o campo de referência de exceção é NULL. Esse objeto `exception_ptr` é chamado de *null exception_ptr*.
 
-Use a função `current_exception` ou `make_exception_ptr` para atribuir uma exceção a um objeto `exception_ptr`. Quando você atribui uma exceção a uma variável `exception_ptr`, o campo de referência de exceção da variável aponta para uma cópia da exceção. Se não houver memória suficiente para copiar a exceção, o campo de referência de exceção apontará para uma cópia de uma exceção [std::bad_alloc](../standard-library/bad-alloc-class.md). Se a `current_exception` função `make_exception_ptr` ou não puder copiar a exceção por qualquer outro motivo, a função chamará a `terminate` função CRT para sair do processo atual.
+Use a função `current_exception` ou `make_exception_ptr` para atribuir uma exceção a um objeto `exception_ptr`. Quando você atribui uma exceção a uma variável `exception_ptr`, o campo de referência de exceção da variável aponta para uma cópia da exceção. Se não houver memória suficiente para copiar a exceção, o campo de referência de exceção apontará para uma cópia de uma exceção [std::bad_alloc](../standard-library/bad-alloc-class.md). Se a função `current_exception` ou `make_exception_ptr` não puder copiar a exceção por qualquer outro motivo, a função chamará a função de `terminate` CRT para sair do processo atual.
 
 Apesar do nome, um objeto `exception_ptr` não é, em si, um ponteiro. Ele não obedece à semântica do ponteiro e não pode ser usado com o acesso do membro do ponteiro (`->`) ou operadores (*) de indireção. O objeto `exception_ptr` não tem membros de dados públicos ou funções de membro.
 
@@ -51,7 +51,7 @@ typedef void (*terminate_handler)();
 
 O tipo descreve um ponteiro para uma função adequada para uso como um manipulador de finalização.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [set_terminate](../standard-library/exception-functions.md#set_terminate) para obter um exemplo do uso de `terminate_handler`.
 
@@ -63,6 +63,6 @@ O tipo descreve um ponteiro para uma função adequada para uso como um `unexpec
 typedef void (*unexpected_handler)();
 ```
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [set_unexpected](../standard-library/exception-functions.md#set_unexpected) para obter um exemplo do uso de `unexpected_handler`.

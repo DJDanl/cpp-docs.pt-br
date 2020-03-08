@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
 ms.openlocfilehash: 1350e51ff609a888b6a8ad6841be6856b68c7994
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821825"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865724"
 ---
 # <a name="eventsource-class"></a>Classe EventSource
 
@@ -48,40 +48,40 @@ A interface para um delegado que representa um manipulador de eventos.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-constructors"></a>Construtores Públicos
+### <a name="public-constructors"></a>Construtores públicos
 
-| Name                                     | Descrição                                            |
+| {1&gt;Nome&lt;1}                                     | Descrição                                            |
 | ---------------------------------------- | ------------------------------------------------------ |
-| [EventSource::EventSource](#eventsource) | Inicializa uma nova instância da classe `EventSource` . |
+| [EventSource:: EventSource](#eventsource) | Inicializa uma nova instância da classe `EventSource`. |
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
-| Name                                 | Descrição                                                                                                                                                      |
+| {1&gt;Nome&lt;1}                                 | Descrição                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::Add](#add)             | Acrescenta o manipulador de eventos representado pela interface de representante especificada ao conjunto de manipuladores de eventos para o objeto de `EventSource` atual.                     |
-| [EventSource::GetSize](#getsize)     | Recupera o número de manipuladores de eventos associados ao objeto de `EventSource` atual.                                                                         |
-| [EventSource::InvokeAll](#invokeall) | Chama cada manipulador de eventos associado ao objeto de `EventSource` atual usando os argumentos e tipos de argumento especificados.                                      |
-| [EventSource::Remove](#remove)       | Exclui o manipulador de eventos representado pelo token de registro de evento especificado do conjunto de manipuladores de eventos associados ao objeto de `EventSource` atual. |
+| [EventSource:: Adicionar](#add)             | Acrescenta o manipulador de eventos representado pela interface de representante especificada ao conjunto de manipuladores de eventos para o objeto de `EventSource` atual.                     |
+| [EventSource:: GetSize](#getsize)     | Recupera o número de manipuladores de eventos associados ao objeto de `EventSource` atual.                                                                         |
+| [EventSource:: InvokeAll](#invokeall) | Chama cada manipulador de eventos associado ao objeto de `EventSource` atual usando os argumentos e tipos de argumento especificados.                                      |
+| [EventSource:: remover](#remove)       | Exclui o manipulador de eventos representado pelo token de registro de evento especificado do conjunto de manipuladores de eventos associados ao objeto de `EventSource` atual. |
 
 ### <a name="protected-data-members"></a>Membros de Dados Protegidos
 
-| Name                                                    | Descrição                                                                                                                       |
+| {1&gt;Nome&lt;1}                                                    | Descrição                                                                                                                       |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::addRemoveLock_](#addremovelock)           | Sincroniza o acesso à matriz de [targets_](#targets) ao adicionar, remover ou invocar manipuladores de eventos.                          |
-| [EventSource::targets_](#targets)                       | Uma matriz de um ou mais manipuladores de eventos.                                                                                           |
-| [EventSource::targetsPointerLock_](#targetspointerlock) | Sincroniza o acesso a membros de dados internos mesmo que os manipuladores de eventos para essa EventSource estejam sendo adicionados, removidos ou invocados. |
+| [EventSource:: addRemoveLock_](#addremovelock)           | Sincroniza o acesso à matriz de [targets_](#targets) ao adicionar, remover ou invocar manipuladores de eventos.                          |
+| [EventSource:: targets_](#targets)                       | Uma matriz de um ou mais manipuladores de eventos.                                                                                           |
+| [EventSource:: targetsPointerLock_](#targetspointerlock) | Sincroniza o acesso a membros de dados internos mesmo que os manipuladores de eventos para essa EventSource estejam sendo adicionados, removidos ou invocados. |
 
-## <a name="inheritance-hierarchy"></a>Hierarquia de Herança
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `EventSource`
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** Event. h
 
-**Namespace:** Microsoft::WRL
+**Namespace:** Microsoft:: WRL
 
-## <a name="add"></a>EventSource::Add
+## <a name="add"></a>EventSource:: Adicionar
 
 Acrescenta o manipulador de eventos representado pela interface de representante especificada ao conjunto de manipuladores de eventos para o objeto de `EventSource` atual.
 
@@ -100,11 +100,11 @@ A interface para um objeto delegado, que representa um manipulador de eventos.
 *token*<br/>
 Quando essa operação for concluída, um identificador que representa o evento. Use esse token como o parâmetro para o método [Remove ()](#remove) para descartar o manipulador de eventos.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
-## <a name="addremovelock"></a>EventSource::addRemoveLock_
+## <a name="addremovelock"></a>EventSource:: addRemoveLock_
 
 Sincroniza o acesso à matriz de [targets_](#targets) ao adicionar, remover ou invocar manipuladores de eventos.
 
@@ -114,13 +114,13 @@ Wrappers::SRWLock addRemoveLock_;
 
 ## <a name="eventsource"></a>EventSource:: EventSource
 
-Inicializa uma nova instância da classe `EventSource` .
+Inicializa uma nova instância da classe `EventSource`.
 
 ```cpp
 EventSource();
 ```
 
-## <a name="getsize"></a>EventSource::GetSize
+## <a name="getsize"></a>EventSource:: GetSize
 
 Recupera o número de manipuladores de eventos associados ao objeto de `EventSource` atual.
 
@@ -128,11 +128,11 @@ Recupera o número de manipuladores de eventos associados ao objeto de `EventSou
 size_t GetSize() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O número de manipuladores de eventos no [targets_](#targets).
 
-## <a name="invokeall"></a>EventSource::InvokeAll
+## <a name="invokeall"></a>EventSource:: InvokeAll
 
 Chama cada manipulador de eventos associado ao objeto de `EventSource` atual usando os argumentos e tipos de argumento especificados.
 
@@ -331,7 +331,7 @@ O primeiro argumento do manipulador de eventos.
 *arg2*<br/>
 O segundo argumento do manipulador de eventos.
 
-*arg3*<br/>
+*Arg3*<br/>
 O terceiro argumento do manipulador de eventos.
 
 *arg4*<br/>
@@ -352,7 +352,7 @@ O oitavo argumento do manipulador de eventos.
 *arg9*<br/>
 O nono argumento do manipulador de eventos.
 
-## <a name="remove"></a>EventSource::Remove
+## <a name="remove"></a>EventSource:: remover
 
 Exclui o manipulador de eventos representado pelo token de registro de evento especificado do conjunto de manipuladores de eventos associados ao objeto de `EventSource` atual.
 
@@ -367,7 +367,7 @@ HRESULT Remove(
 *token*<br/>
 Um identificador que representa um manipulador de eventos. Esse token foi retornado quando o manipulador de eventos foi registrado pelo método [Add ()](#add) .
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 

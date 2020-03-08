@@ -47,11 +47,11 @@ helpviewer_keywords:
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689292"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884000"
 ---
 # <a name="moneypunct-class"></a>Classe moneypunct
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parâmetros
 
-@No__t_1 *CharType*
+\ *CharType*
 O tipo usado em um programa para codificar caracteres.
 
-@No__t_1 *intl*
+\ *intl*
 Um sinalizador que especifica se as convenções internacionais devem ser observadas.
 
 ## <a name="remarks"></a>Comentários
@@ -78,7 +78,7 @@ Como qualquer faceta de localidade, a ID de objeto estático tem um valor armaze
 
 O objeto estático const intl armazena o valor do parâmetro de modelo *Intl*.
 
-### <a name="constructors"></a>Construtores
+### <a name="constructors"></a>{1&gt;Construtores&lt;1}
 
 |Construtor|Descrição|
 |-|-|
@@ -114,9 +114,9 @@ O objeto estático const intl armazena o valor do parâmetro de modelo *Intl*.
 |[positive_sign](#positive_sign)|Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de sinal positivo.|
 |[thousands_sep](#thousands_sep)|Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de separador de milhares.|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** \<locale>
+**Cabeçalho:** \<localidade >
 
 **Namespace:** std
 
@@ -148,7 +148,7 @@ Uma cadeia de caracteres que contém o símbolo de moeda.
 
 A função membro retorna [do_curr_symbol](#do_curr_symbol).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // moneypunct_curr_symbol.cpp
@@ -185,7 +185,7 @@ Uma sequência de elementos específica de localidade a ser usada como um símbo
 
 A função membro retorna [do_decimal_point](#do_decimal_point).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // moneypunct_decimal_pt.cpp
@@ -227,7 +227,7 @@ virtual string_type do_curr_symbol() const;
 
 Uma sequência de elementos específica de localidade a ser usada como um símbolo de vírgula decimal.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Veja o exemplo de [curr_symbol](#curr_symbol), em que a função membro virtual é chamada por `curr_symbol`.
 
@@ -243,7 +243,7 @@ virtual CharType do_decimal_point() const;
 
 Uma sequência de elementos específica de localidade a ser usada como um símbolo de vírgula decimal.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Veja o exemplo de [decimal_point](#decimal_point), em que a função membro virtual é chamada por `decimal_point`.
 
@@ -259,7 +259,7 @@ virtual int do_frac_digits() const;
 
 Uma contagem do número de dígitos específica de localidade a ser exibida à direita de qualquer vírgula decimal.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Veja o exemplo de [frac_digits](#frac_digits), em que a função membro virtual é chamada por `frac_digits`.
 
@@ -275,7 +275,7 @@ virtual string do_grouping() const;
 
 Uma regra específica de localidade para determinar como os dígitos são agrupados à esquerda de qualquer vírgula decimal.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte o exemplo de [agrupamento](#grouping), em que a função membro virtual é chamada por `grouping`.
 
@@ -301,11 +301,11 @@ A função membro virtual protegida retorna uma regra específica de localidade 
 
 - `value` para corresponder ou gerar um valor monetário.
 
-Os componentes de um campo de saída monetária são gerados e os componentes de um campo de entrada monetária são correspondidos na ordem em que esses elementos aparecem em `pattern::field`. Cada um dos valores `sign`, `symbol`, `value` e `none` ou `space` deve aparecer exatamente uma vez. O valor `none` não deve aparecer primeiro. O valor space não **deve** não devem aparecer primeiro ou por último. Se `Intl` for true, a ordem será `symbol`, `sign`, `none` e `value`.
+Os componentes de um campo de saída monetária são gerados e os componentes de um campo de entrada monetária são correspondidos na ordem em que esses elementos aparecem em `pattern::field`. Cada um dos valores `sign`, `symbol`, `value`e `none` ou `space` deve aparecer exatamente uma vez. O valor `none` não deve aparecer primeiro. O valor space não **deve** não devem aparecer primeiro ou por último. Se `Intl` for true, a ordem será `symbol`, `sign`, `none`e `value`.
 
-A versão de modelo `moneypunct`\< **CharType**, **Intl**> retorna `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
+A versão de modelo do `moneypunct` **\< CharType**, **Intl**> retorna `{`**money_base:: Symbol**, **money_base:: sign**, **money_base:: Value**, **money_base:: None**`}`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Veja o exemplo de [net_format](#neg_format), em que a função membro virtual é chamada por `neg_format`.
 
@@ -321,7 +321,7 @@ virtual string_type do_negative_sign() const;
 
 Uma sequência de elementos específica de localidade a ser usada como um sinal negativo.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Veja o exemplo de [negative_sign](#negative_sign), em que a função membro virtual é chamada por `negative_sign`.
 
@@ -335,11 +335,11 @@ virtual pattern do_pos_format() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-A função membro virtual protegida retorna uma regra específica de localidade para determinar como gerar o campo de saída monetário para um valor positivo. (Ele também determina como corresponder os componentes de um campo de entrada monetária.) A codificação é a mesma para [do_neg_format](#do_neg_format).
+A função membro virtual protegida retorna uma regra específica de localidade para determinar como gerar o campo de saída monetário para um valor positivo. (Ele também determina como corresponder os componentes de um campo de entrada monetária.) A codificação é a mesma do [do_neg_format](#do_neg_format).
 
-A versão do modelo de moneypunct\< **CharType**, **Inputlterator**> retorna `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
+A versão de modelo de moneypunct **\< CharType**, **Inputlterator**> retorna `{`**money_base:: Symbol**, **money_base:: sign**, **money_base:: Value**, **money_base:: None**`}`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Veja o exemplo de [pos_format](#pos_format), em que a função membro virtual é chamada por `pos_format`.
 
@@ -355,7 +355,7 @@ virtual string_type do_positive_sign() const;
 
 Uma sequência de elementos específica de localidade a ser usada como um sinal positivo.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Veja o exemplo de [positive_sign](#positive_sign), em que a função membro virtual é chamada por `positive_sign`.
 
@@ -371,7 +371,7 @@ virtual CharType do_thousands_sep() const;
 
 Um elemento específico de localidade a ser usado como um separador de grupo à esquerda de qualquer vírgula decimal.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Veja o exemplo de [thousands_sep](#thousands_sep), em que a função membro virtual é chamada por `thousands_sep`.
 
@@ -391,7 +391,7 @@ Uma contagem do número de dígitos específica de localidade a ser exibida à d
 
 A função membro retorna [do_frac_digits](#do_frac_digits).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // moneypunct_frac_digits.cpp
@@ -460,7 +460,7 @@ Uma regra específica de localidade para determinar como os dígitos são agrupa
 
 A função membro retorna [do_grouping](#do_grouping).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // moneypunct_grouping.cpp
@@ -523,7 +523,7 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parâmetros
 
-@No__t_1 *_Refs*
+*_Refs*\
 Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
 ### <a name="remarks"></a>Comentários
@@ -556,7 +556,7 @@ Uma regra específica de localidade para formatação de saídas com valores neg
 
 A função membro retorna [do_neg_format](#do_neg_format).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // moneypunct_neg_format.cpp
@@ -604,7 +604,7 @@ Retorna uma sequência de elementos específica de localidade a ser usada como u
 
 A função membro retorna [do_negative_sign](#do_negative_sign).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // moneypunct_neg_sign.cpp
@@ -666,7 +666,7 @@ Uma regra específica de localidade para formatação de saídas com valores pos
 
 A função membro retorna [do_pos_format](#do_pos_format).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // moneypunct_pos_format.cpp
@@ -714,7 +714,7 @@ Uma sequência de elementos específica de localidade a ser usada como um símbo
 
 -A função membro retorna [do_positive_sign](#do_positive_sign).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // moneypunct_pos_sign.cpp
@@ -788,7 +788,7 @@ Uma sequência de elementos específica de localidade a ser usada como separador
 
 A função membro retorna [do_thousands_sep](#do_thousands_sep).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // moneypunct_thou_sep.cpp

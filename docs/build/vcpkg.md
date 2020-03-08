@@ -5,11 +5,11 @@ ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
-ms.sourcegitcommit: ba129dc55dc3ff638f3af5ac0e87ec2ca1cb2674
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75869705"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857004"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: um C++ Gerenciador de pacotes para Windows, Linux e MacOS
 
@@ -224,9 +224,9 @@ O conteúdo de uma instância de vcpkg é:
 |**vcpkg version**|Exibir informações de versão|
 |**vcpkg contact --survey**|Exibir informações de contato para enviar comentários.|
 
-### <a name="options"></a>Opções
+### <a name="options"></a>{1&gt;Opções&lt;1}
 
-|Opção|Descrição|
+|{1&gt;Opção&lt;1}|Descrição|
 |---------|---------|
 |**--triplet \<t>**|Especificar o tripleto da arquitetura de destino. (padrão: `%VCPKG_DEFAULT_TRIPLET%`, veja também **vcpkg help triplet**)|
 |**--vcpkg-root \<path>**|Especificar o diretório raiz do vcpkg (padrão: `%VCPKG_ROOT%`)|

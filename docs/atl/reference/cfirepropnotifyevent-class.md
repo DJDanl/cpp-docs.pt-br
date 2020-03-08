@@ -12,11 +12,11 @@ helpviewer_keywords:
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
 ms.openlocfilehash: 694127ceccc1d1b55e5da9abca799dff77dcfc60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496946"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864912"
 ---
 # <a name="cfirepropnotifyevent-class"></a>Classe CFirePropNotifyEvent
 
@@ -33,26 +33,26 @@ class CFirePropNotifyEvent
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|Auto-estática Notifica o coletor do contêiner de que uma propriedade de controle foi alterada.|
 |[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|Auto-estática Notifica o coletor do contêiner que uma propriedade de controle está prestes a ser alterada.|
 
 ## <a name="remarks"></a>Comentários
 
-`CFirePropNotifyEvent`tem dois métodos que notificam o coletor do contêiner de que uma propriedade de controle foi alterada ou está prestes a ser alterada.
+`CFirePropNotifyEvent` tem dois métodos que notificam o coletor do contêiner de que uma propriedade de controle foi alterada ou está prestes a ser alterada.
 
-Se a classe que implementa seu controle for derivada `IPropertyNotifySink`de, `CFirePropNotifyEvent` os métodos serão invocados quando `FireOnRequestEdit` você `FireOnChanged`chamar ou. Se a classe de controle não for derivada `IPropertyNotifySink`de, as chamadas para essas funções retornam S_OK.
+Se a classe que implementa seu controle for derivada de `IPropertyNotifySink`, os métodos `CFirePropNotifyEvent` serão invocados quando você chamar `FireOnRequestEdit` ou `FireOnChanged`. Se a classe de controle não for derivada de `IPropertyNotifySink`, as chamadas para essas funções retornarão S_OK.
 
 Para obter mais informações sobre como criar controles, consulte o [tutorial do ATL](../../atl/active-template-library-atl-tutorial.md).
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** atlctl. h
 
-##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged
+##  <a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged
 
 Notifica todas as interfaces de [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) conectadas (em cada ponto de conexão do objeto) que a propriedade de objeto especificada alterou.
 
@@ -63,12 +63,12 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 ### <a name="parameters"></a>Parâmetros
 
 *pUnk*<br/>
-no Ponteiro para o `IUnknown` do objeto que envia a notificação.
+no Ponteiro para a `IUnknown` do objeto que envia a notificação.
 
 *dispID*<br/>
 no Identificador da propriedade que foi alterada.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um dos valores de HRESULT padrão.
 
@@ -76,7 +76,7 @@ Um dos valores de HRESULT padrão.
 
 Essa função é segura para chamar mesmo que o controle não dê suporte a pontos de conexão.
 
-##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit
+##  <a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit
 
 Notifica todas as interfaces de [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) conectadas (em cada ponto de conexão do objeto) que a propriedade de objeto especificada está prestes a ser alterada.
 
@@ -87,12 +87,12 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 ### <a name="parameters"></a>Parâmetros
 
 *pUnk*<br/>
-no Ponteiro para o `IUnknown` do objeto que envia a notificação.
+no Ponteiro para a `IUnknown` do objeto que envia a notificação.
 
 *dispID*<br/>
 no Identificador da propriedade prestes a ser alterado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um dos valores de HRESULT padrão.
 

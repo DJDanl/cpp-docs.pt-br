@@ -11,11 +11,11 @@ helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
 ms.openlocfilehash: ab00a5c64a32dc1dab5fef4bc15b722587bc2d6b
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301308"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856892"
 ---
 # <a name="storage-classes"></a>Classes de armazenamento
 
@@ -286,6 +286,6 @@ Há vários pontos a serem observados sobre o programa:
 
 - Por fim, as variáveis locais estáticas, como `I3`, retêm seus valores enquanto o programa dura, mas são destruídas quando o programa é encerrado.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Declarações e definições](../cpp/declarations-and-definitions-cpp.md)

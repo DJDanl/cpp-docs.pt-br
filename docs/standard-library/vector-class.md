@@ -88,11 +88,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 ms.openlocfilehash: ed987409dc99ea9b1dade632a5fa5deeb322347a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126221"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890835"
 ---
 # <a name="vector-class"></a>Classe vector
 
@@ -156,7 +156,7 @@ O [vetor\<bool > classe de referência](../standard-library/vector-bool-class.md
 |[at](#at)|Retorna uma referência ao elemento em um local especificado no vetor.|
 |[back](#back)|Retorna uma referência ao último elemento do vetor.|
 |[begin](#begin)|Retorna um iterador de acesso aleatório para o primeiro elemento no vetor.|
-|[capacidade](#capacity)|Retorna o número de elementos que o vetor pode conter sem alocar mais armazenamento.|
+|[capacity](#capacity)|Retorna o número de elementos que o vetor pode conter sem alocar mais armazenamento.|
 |[cbegin](#cbegin)|Retorna um iterador de acesso aleatório const para o primeiro elemento no vetor.|
 |[cend](#cend)|Retorna um iterador de acesso aleatório const que aponta para imediatamente após o fim do vetor.|
 |[crbegin](#crbegin)|Retorna um iterador const para o primeiro elemento em um vetor invertido.|

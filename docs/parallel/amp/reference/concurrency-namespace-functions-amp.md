@@ -14,11 +14,11 @@ f1_keywords:
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
 ms.openlocfilehash: 90a23ce111f7307610de3f0ad4bcec05d8de27df
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126885"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855715"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funções do namespace de simultaneidade (AMP)
 
@@ -425,7 +425,7 @@ void copy(
 ### <a name="parameters"></a>Parâmetros
 
 *_Dest*<br/>
-O objeto para o qual copiar.
+O objeto ao qual será copiado.
 
 *_DestIter*<br/>
 Um iterador de saída para a posição inicial no destino.
@@ -514,7 +514,7 @@ concurrency::completion_future copy_async(
 ### <a name="parameters"></a>Parâmetros
 
 *_Dest*<br/>
-O objeto para o qual copiar.
+O objeto ao qual será copiado.
 
 *_DestIter*<br/>
 Um iterador de saída para a posição inicial no destino.
