@@ -13,15 +13,15 @@ helpviewer_keywords:
 - std::ends [C++]
 - std::flush [C++]
 ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447188"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874780"
 ---
 # <a name="ltostreamgt-functions"></a>Funções &lt;ostream&gt;
 
-Essas são as funções de modelo globais definidas &lt;em&gt;ostream. Para funções de membro, consulte a documentação da [classe basic_ostream](basic-ostream-class.md) .
+Essas são as funções de modelo globais definidas em &lt;ostream&gt;. Para funções de membro, consulte a documentação da [classe basic_ostream](basic-ostream-class.md) .
 
 ||||
 |-|-|-|
@@ -40,24 +40,24 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem*\
+\ *elem*
 O tipo de elemento.
 
-*Ostr*\
+\ *OSTR*
 Um objeto do tipo **basic_ostream**.
 
-*TR*\
+*Tr*\
 Características de caractere.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um objeto do tipo **basic_ostream**.
 
 ### <a name="remarks"></a>Comentários
 
-O manipulador chama *OSTR*. [Put](../standard-library/basic-ostream-class.md#put) (*OSTR*. [ampliar](../standard-library/basic-ios-class.md#widen) (' \n ')) e, em seguida, chama *OSTR*. [liberar](../standard-library/basic-ostream-class.md#flush). Ele retorna *OSTR*.
+O manipulador chama *OSTR*. [Put](../standard-library/basic-ostream-class.md#put)(*OSTR*.[ Amplie](../standard-library/basic-ios-class.md#widen)(' \n ')) e, em seguida, chama *OSTR*. [liberar](../standard-library/basic-ostream-class.md#flush). Ele retorna *OSTR*.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // ostream_endl.cpp
@@ -87,24 +87,24 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem*\
+\ *elem*
 O tipo de elemento.
 
-*Ostr*\
+\ *OSTR*
 Um objeto do tipo `basic_ostream`.
 
-*TR*\
+*Tr*\
 Características de caractere.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um objeto do tipo `basic_ostream`.
 
 ### <a name="remarks"></a>Comentários
 
-O manipulador chama *OSTR*. [Put](../standard-library/basic-ostream-class.md#put) (*Elem*(' \ 0 ')). Ele retorna *OSTR*.
+O manipulador chama *OSTR*. [Put](../standard-library/basic-ostream-class.md#put)(*elem*(' \ 0 ')). Ele retorna *OSTR*.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // ostream_ends.cpp
@@ -136,16 +136,16 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem*\
+\ *elem*
 O tipo de elemento.
 
-*Ostr*\
+\ *OSTR*
 Um objeto do tipo `basic_ostream`.
 
-*TR*\
+*Tr*\
 Características de caractere.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um objeto do tipo `basic_ostream`.
 
@@ -153,7 +153,7 @@ Um objeto do tipo `basic_ostream`.
 
 O manipulador chama *OSTR*. [liberar](../standard-library/basic-ostream-class.md#flush). Ele retorna *OSTR*.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // ostream_flush.cpp
@@ -184,16 +184,16 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem*\
+\ *elem*
 O tipo de elemento.
 
-*TR*\
+*Tr*\
 Características de caractere.
 
-*mantida*\
+\ *à esquerda*
 Uma referência lvalue a um objeto `basic_ostream`.
 
-*Certo*\
+\ *à direita*
 Uma referência lvalue a um objeto `basic_ostream`.
 
 ### <a name="remarks"></a>Comentários

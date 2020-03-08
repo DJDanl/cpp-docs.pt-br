@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::make_error_condition [C++]
 - std::swap [C++]
 ms.openlocfilehash: 5435c3b9e10f151fc77c72b58c93510b6a867ce1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447321"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865162"
 ---
 # <a name="ltfuturegt-functions"></a>Funções &lt;future&gt;
 
@@ -44,7 +44,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>Parâmetros
 
-*regras*\
+\ de *política*
 Um valor [launch](../standard-library/future-enums.md#launch).
 
 ### <a name="remarks"></a>Comentários
@@ -63,9 +63,9 @@ A segunda função retorna um objeto `future<Ty>` cujo *estado assíncrono assoc
 
 A menos que `decay<Fn>::type` não seja do tipo launch, a segunda função não participará da resolução da sobrecarga.
 
-Os C++ Estados padrão que se a política é iniciar:: Async, a função cria um novo thread. No entanto, a implementação da Microsoft não está em conformidade no momento. Ele obtém seus threads do ThreadPool do Windows, que, em alguns casos, pode fornecer um thread reciclado em vez de um novo. Isso significa que a `launch::async` política é realmente implementada `launch::async|launch::deferred`como.  Outra implicação da implementação baseada em ThreadPool é que não há nenhuma garantia de que as variáveis locais de thread serão destruídas quando o thread for concluído. Se o thread for reciclado e fornecido para uma nova chamada `async`para, as variáveis antigas ainda existirão. Portanto, recomendamos que você não use variáveis de local de thread `async`com.
+Os C++ Estados padrão que se a política é iniciar:: Async, a função cria um novo thread. No entanto, a implementação da Microsoft não está em conformidade no momento. Ele obtém seus threads do ThreadPool do Windows, que, em alguns casos, pode fornecer um thread reciclado em vez de um novo. Isso significa que a política de `launch::async`, na verdade, é implementada como `launch::async|launch::deferred`.  Outra implicação da implementação baseada em ThreadPool é que não há nenhuma garantia de que as variáveis locais de thread serão destruídas quando o thread for concluído. Se o thread for reciclado e fornecido para uma nova chamada para `async`, as variáveis antigas ainda existirão. Portanto, recomendamos que você não use variáveis de local de thread com `async`.
 
-Se  a política `launch::deferred`for, a função marca seu estado assíncrono associado como mantendo uma *função adiada* e retorna. A primeira chamada para qualquer função não temporizada que aguarda que o estado assíncrono associado fique pronto chama a função adiada avaliando `INVOKE(dfn, dargs..., Ty)`.
+Se a *política* for `launch::deferred`, a função marca seu estado assíncrono associado como mantendo uma *função adiada* e retorna. A primeira chamada para qualquer função não temporizada que aguarda que o estado assíncrono associado fique pronto chama a função adiada avaliando `INVOKE(dfn, dargs..., Ty)`.
 
 Em todos caso, o estado assíncrono associado do objeto `future` não é definido como *ready* até que a avaliação de `INVOKE(dfn, dargs..., Ty)` seja concluída, seja lançando uma exceção ou retornando normalmente. O resultado do estado assíncrono associado é uma exceção se uma tiver sido gerada ou qualquer valor que for retornado pela avaliação.
 
@@ -95,7 +95,7 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 *Errno*\
 Um valor de [future_errc](../standard-library/future-enums.md#future_errc) que identifica o erro relatado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 `error_code(static_cast<int>(Errno), future_category());`
 
@@ -112,7 +112,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 *Errno*\
 Um valor de [future_errc](../standard-library/future-enums.md#future_errc) que identifica o erro relatado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 `error_condition(static_cast<int>(Errno), future_category());`
 
@@ -130,10 +130,10 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mantida*\
+\ *à esquerda*
 O objeto `promise` à esquerda.
 
-*Certo*\
+\ *à direita*
 O objeto `promise` à direita.
 
 ## <a name="see-also"></a>Consulte também

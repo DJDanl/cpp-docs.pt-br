@@ -21,13 +21,13 @@ helpviewer_keywords:
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
 ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449455"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78872409"
 ---
-# <a name="conditionvariable-class"></a>Classe condition_variable
+# <a name="condition_variable-class"></a>Classe condition_variable
 
 Use a classe `condition_variable` para aguardar um evento quando você tem um `mutex` do tipo `unique_lock<mutex>`. Os objetos desse tipo talvez tenham um desempenho melhor do que os objetos do tipo [condition_variable_any<unique_lock\<mutex>>](../standard-library/condition-variable-any-class.md).
 
@@ -39,20 +39,20 @@ class condition_variable;
 
 ## <a name="members"></a>Membros
 
-### <a name="constructors"></a>Construtores
+### <a name="constructors"></a>{1&gt;Construtores&lt;1}
 
 |||
 |-|-|
 |[condition_variable](#condition_variable)|Constrói um objeto `condition_variable`.|
 
-### <a name="functions"></a>Funções
+### <a name="functions"></a>{1&gt;Funções&lt;1}
 
 |||
 |-|-|
 |[native_handle](#native_handle)|Retorna o tipo específico da implementação que representa o identificador condition_variable.|
 |[notify_all](#notify_all)|Desbloqueia todos os threads que estão aguardando o objeto `condition_variable`.|
 |[notify_one](#notify_one)|Desbloqueia um dos threads que estão aguardando o objeto `condition_variable`.|
-|[wait](#wait)|Bloqueia um thread.|
+|[esperado](#wait)|Bloqueia um thread.|
 |[wait_for](#wait_for)|Bloqueia um thread e define um intervalo de tempo após o qual o thread será desbloqueado.|
 |[wait_until](#wait_until)|Bloqueia um thread e define um ponto máximo no tempo no qual o thread será desbloqueado.|
 
@@ -76,9 +76,9 @@ Retorna o tipo específico da implementação que representa o identificador con
 native_handle_type native_handle();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-`native_handle_type` é definido como um ponteiro para estruturas de dados internas do Tempo de Execução de Simultaneidade.
+`native_handle_type` é definido como um ponteiro para estruturas de dados internas do Runtime de Simultaneidade.
 
 ## <a name="notify_all"></a>notify_all
 
@@ -112,7 +112,7 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 *Lck*\
 Um objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-*Pred*\
+\ *Pred*
 Qualquer expressão que retorna **true** ou **false**.
 
 ### <a name="remarks"></a>Comentários
@@ -151,10 +151,10 @@ Um objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 *Rel_time*\
 Um objeto `chrono::duration` que especifica a quantidade de tempo antes que o thread seja ativado.
 
-*Pred*\
+\ *Pred*
 Qualquer expressão que retorna **true** ou **false**.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O primeiro método retornará `cv_status::timeout` se a espera for encerrada quando *Rel_time* tiver decorrido. Do contrário, o método retorna `cv_status::no_timeout`.
 
@@ -162,7 +162,7 @@ O segundo método retorna o valor de *Pred*.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro método é bloqueado até `condition_variable` que o objeto seja sinalizado por uma chamada para [notify_one](#notify_one) ou [notify_all](#notify_all) ou até que o intervalo de tempo *Rel_time* tenha decorrido. Ela também pode ser ativada falsamente.
+O primeiro método é bloqueado até que o objeto `condition_variable` seja sinalizado por uma chamada para [notify_one](#notify_one) ou [notify_all](#notify_all) ou até que o intervalo de tempo *Rel_time* tenha decorrido. Ela também pode ser ativada falsamente.
 
 Na verdade, o segundo método executa o código a seguir.
 
@@ -209,12 +209,12 @@ Um objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 *Abs_time*\
 Um objeto [chrono::time_point](../standard-library/time-point-class.md).
 
-*Pred*\
+\ *Pred*
 Qualquer expressão que retorna **true** ou **false**.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Métodos que retornam `cv_status` um tipo `cv_status::timeout` retornam se a espera termina quando *Abs_time* decorre. Caso contrário, os métodos retornarão `cv_status::no_timeout`.
+Métodos que retornam um tipo de `cv_status` retornam `cv_status::timeout` se a espera termina quando *Abs_time* decorre. Caso contrário, os métodos retornarão `cv_status::no_timeout`.
 
 Métodos que retornam um **bool** retornam o valor de *Pred*.
 

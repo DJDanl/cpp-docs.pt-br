@@ -9,17 +9,17 @@ helpviewer_keywords:
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
 ms.openlocfilehash: 4c7fee363da023b9252471a35aaecd262a55f17c
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141784"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854105"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Tratamento de exceções no runtime de simultaneidade
 
 O Tempo de Execução de Simultaneidade usa C++ o tratamento de exceções para comunicar muitos tipos de erros. Esses erros incluem uso inválido do tempo de execução, erros de tempo de execução como falha ao adquirir um recurso e erros que ocorrem em funções de trabalho que você fornece a tarefas e grupos de tarefas. Quando uma tarefa ou grupo de tarefas gera uma exceção, o tempo de execução mantém essa exceção e a empacota para o contexto que aguarda a conclusão da tarefa ou do grupo de tarefas. Para componentes como tarefas leves e agentes, o tempo de execução não gerencia exceções para você. Nesses casos, você deve implementar seu próprio mecanismo de tratamento de exceção. Este tópico descreve como o tempo de execução manipula exceções que são geradas por tarefas, grupos de tarefas, tarefas leves e agentes assíncronos e como responder a exceções em seus aplicativos.
 
-## <a name="key-points"></a>Pontos Principais
+## <a name="key-points"></a>Pontos-chave
 
 - Quando uma tarefa ou grupo de tarefas gera uma exceção, o tempo de execução mantém essa exceção e a empacota para o contexto que aguarda a conclusão da tarefa ou do grupo de tarefas.
 

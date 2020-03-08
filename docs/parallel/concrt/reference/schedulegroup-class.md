@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
 ms.openlocfilehash: 8686b5ef0906e3188a1e683d1190bbe6124cd19e
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143264"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867113"
 ---
 # <a name="schedulegroup-class"></a>Classe ScheduleGroup
 
@@ -40,7 +40,7 @@ class ScheduleGroup;
 
 |{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[Id](#id)|Retorna um identificador para o grupo de agendamento que é exclusivo dentro do Agendador ao qual o grupo pertence.|
+|[ID](#id)|Retorna um identificador para o grupo de agendamento que é exclusivo dentro do Agendador ao qual o grupo pertence.|
 |[Referência](#reference)|Incrementa a contagem de referência do grupo de agendamento.|
 |[Versão](#release)|Decrementa a contagem de referência de grupo do Agendador.|
 |[ScheduleTask](#scheduletask)|Agenda uma tarefa leve dentro do grupo de agendamento.|
