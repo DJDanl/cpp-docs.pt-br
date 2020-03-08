@@ -6,11 +6,11 @@ f1_keywords:
 - iosfwd/std::wostream
 ms.assetid: 2ec4dc52-a01f-4654-bd65-dd5288777c48
 ms.openlocfilehash: d0ceae12069712c7a124990d0f81968c21bc683a
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687225"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856459"
 ---
 # <a name="ltostreamgt-typedefs"></a>Typedefs &lt;ostream&gt;
 
@@ -32,7 +32,7 @@ O tipo é um sinônimo para o modelo de classe [basic_ostream](../standard-libra
 
 ## <a name="wostream"></a>  wostream
 
-Cria um tipo de basic_ostream que é especializado em **wchar_t** e `char_traits` especializado em **wchar_t**.
+Cria um tipo de basic_ostream que é especializado em **wchar_t** e `char_traits` especializado no **wchar_t**.
 
 ```cpp
 typedef basic_ostream<wchar_t, char_traits<wchar_t>> wostream;
@@ -42,6 +42,6 @@ typedef basic_ostream<wchar_t, char_traits<wchar_t>> wostream;
 
 O tipo é um sinônimo para o modelo de classe [basic_ostream](../standard-library/basic-ostream-class.md), especializado para elementos do tipo **wchar_t** com características de caractere padrão.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<ostream>](../standard-library/ostream.md)
