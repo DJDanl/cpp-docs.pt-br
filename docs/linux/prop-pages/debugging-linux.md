@@ -2,12 +2,12 @@
 title: Propriedades do depurador (Linux C++) | Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
-ms.openlocfilehash: d76e398d648db7c5cf65e4ca2bb1665aef4359ad
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
-ms.translationtype: HT
+ms.openlocfilehash: 8a57e983a32e1ef1eca2bf2452df2cd39d453467
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821404"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883701"
 ---
 # <a name="c-debugging-properties-linux-c"></a>Propriedades do depurador C++ (Linux C++)
 
@@ -21,11 +21,11 @@ O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 
 Propriedade | Descrição | Opções
 --- | ---| ---
-Computador de depuração remoto | **Visual Studio 2019 versão 16.1**: Especifica o computador no qual o programa será depurado. Pode ser diferente do computador de build remoto especificado na página [Geral](general-linux.md).
+Computador de depuração remoto | **Visual Studio 2019 versão 16,1**: especifica a máquina na qual o programa será depurado. Pode ser diferente do computador de build remoto especificado na página [Geral](general-linux.md). Você pode adicionar ou editar uma conexão de computador de destino usando **ferramentas** > **Opções** > Gerenciador de **conexões** > **plataforma cruzada** .
 Comando de pré-inicialização | Um comando que é executado no shell antes do depurador ser iniciado, que possa ser usado para afetar o ambiente de depuração.
-Programa | O caminho completo no sistema remoto para programa a ser depurado. Se ele for deixado em branco ou inalterado, usará como padrão a saída do projeto atual.
+Program | O caminho completo no sistema remoto para programa a ser depurado. Se ele for deixado em branco ou inalterado, usará como padrão a saída do projeto atual.
 Argumentos do Programa | Os argumentos de linha de comando a serem passados ao programa que está sendo depurado.
-Diretório de trabalho | O diretório de trabalho do aplicativo remoto. Por padrão, o diretório base do usuário.
+Diretório de Trabalho | O diretório de trabalho do aplicativo remoto. Por padrão, o diretório base do usuário.
 Comandos adicionais do depurador | Comandos `gdb` adicionais para o depurador executar antes de iniciar a depuração.
 Número da porta do depurador | O número da porta para a comunicação do depurador com o depurador remoto. A porta não deve estar em uso localmente. Esse valor precisa ser positivo e estar entre 1 e 65535. Se ele não for fornecido, um número de porta disponível será usado.
 Número da porta do depurador remoto | O número da porta no qual o servidor do depurador remoto `gdbserver` está escutando no sistema remoto. A porta não deve estar em uso no sistema remoto. Esse valor precisa ser positivo e estar entre 1 e 65535. Se ele não for fornecido, um número de porta disponível começando com 4444 será usado.
