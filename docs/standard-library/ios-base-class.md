@@ -109,11 +109,11 @@ helpviewer_keywords:
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
 ms.openlocfilehash: 17fb83cdbf882467f0ec330e05a6506b13051cab
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890120"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856454"
 ---
 # <a name="ios_base-class"></a>Classe ios_base
 
@@ -137,7 +137,7 @@ Um objeto da classe ios_base também armazena informações de estado do fluxo, 
 
 ## <a name="members"></a>Membros
 
-### <a name="constructors"></a>Construtores
+### <a name="constructors"></a>{1&gt;Construtores&lt;1}
 
 |||
 |-|-|
@@ -159,7 +159,7 @@ Um objeto da classe ios_base também armazena informações de estado do fluxo, 
 |-|-|
 |[event](#event)|Especifica tipos de evento.|
 
-### <a name="constants"></a>Constantes
+### <a name="constants"></a>{1&gt;Constantes&lt;1}
 
 |||
 |-|-|
@@ -195,7 +195,7 @@ Um objeto da classe ios_base também armazena informações de estado do fluxo, 
 |[unitbuf](#fmtflags)|Faz com que a saída seja liberada após cada inserção.|
 |[uppercase](#fmtflags)|Especifica a inserção de equivalentes maiúsculas de letras minúsculas em determinadas inserções.|
 
-### <a name="functions"></a>Funções
+### <a name="functions"></a>{1&gt;Funções&lt;1}
 
 |||
 |-|-|
@@ -220,9 +220,9 @@ Um objeto da classe ios_base também armazena informações de estado do fluxo, 
 |-|-|
 |[operator=](#op_eq)|O operador de atribuição para objetos `ios_base`.|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** \<ios>
+**Cabeçalho:** \<Ios >
 
 **Namespace:** std
 
@@ -247,7 +247,7 @@ O tipo é um tipo enumerado que descreve um objeto que pode armazenar o evento d
 
 - `imbue_event`, para identificar um retorno de chamada que ocorre no final de uma chamada para [imbue](#imbue), logo antes da função retornar.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [register_callback](#register_callback) para ver um exemplo.
 
@@ -264,20 +264,20 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *_E*
+*_E*\
 O [evento](#event).
 
-\ *_Base*
+*_Base*\
 O fluxo no qual o evento foi chamado.
 
-\ *_i*
+*_I*\
 Um número definido pelo usuário.
 
 ### <a name="remarks"></a>Comentários
 
 O tipo descreve um ponteiro para uma função que pode ser registrada com [register_callback](#register_callback). Esse tipo de função não deve gerar uma exceção.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [register_call](#register_callback) para ver um exemplo que usa `event_callback`.
 
@@ -304,7 +304,7 @@ namespace std {
 
 O valor retornado por `what()` é uma cópia de `_Message`, possivelmente aumentada com um teste baseado em `_Code`. Se `_Code` não for especificado, o valor padrão será `make_error_code(io_errc::stream)`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // ios_base_failure.cpp
@@ -357,7 +357,7 @@ Consulte [ios_base::fmtflags](#fmtflags) para obter uma lista dos sinalizadores.
 
 A primeira função membro retorna os sinalizadores de formato armazenados. A segunda função de membro armazena *fmtfl* nos sinalizadores de formato e retorna seu valor armazenado anterior.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // ios_base_flags.cpp
@@ -467,7 +467,7 @@ locale getloc() const;
 
 O objeto de localidade armazenado.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // ios_base_getlock.cpp
@@ -495,7 +495,7 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *_Loc*
+*_Loc*\
 A nova configuração de localidade.
 
 ### <a name="return-value"></a>Valor retornado
@@ -506,7 +506,7 @@ A localidade anterior.
 
 A função membro armazena *_Loc* no objeto locale e, em seguida, relata o evento de retorno de chamada e `imbue_event`. Ela retorna o valor armazenado anterior.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue) para ver um exemplo.
 
@@ -572,7 +572,7 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>Parâmetros
 
-*índ* \
+*índ*\
 O índice do valor a ser armazenado como um `iword`.
 
 ### <a name="remarks"></a>Comentários
@@ -583,7 +583,7 @@ Se *IDX* for negativo ou se o armazenamento exclusivo não estiver disponível p
 
 Para obter um índice exclusivo, para uso em todos os objetos do tipo `ios_base`, chame [`xalloc`](#xalloc).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [`xalloc`](#xalloc) para obter um exemplo de como usar `iword`.
 
@@ -619,7 +619,7 @@ O tipo é um `bitmask type` que descreve um objeto que pode armazenar o modo de 
 
 - `trunc`, para excluir o conteúdo de um arquivo existente quando seu objeto de controle é criado.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // ios_base_openmode.cpp
@@ -671,7 +671,7 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *_Prec*
+*_Prec*\
 O número de dígitos significativos a serem exibidos, ou o número de dígitos após o ponto decimal em notação fixa.
 
 ### <a name="return-value"></a>Valor retornado
@@ -682,7 +682,7 @@ A primeira função membro retorna a [precisão de exibição](../standard-libra
 
 Números de ponto flutuante são exibidos em notação fixa com [fixed](../standard-library/ios-functions.md#fixed).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // ios_base_precision.cpp
@@ -727,7 +727,7 @@ Se o *índice* for negativo ou se o armazenamento exclusivo não estiver dispon�
 
 Para obter um índice exclusivo, para uso em todos os objetos do tipo `ios_base`, chame [`xalloc`](#xalloc).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [`xalloc`](#xalloc) para obter um exemplo de como usar `pword`.
 
@@ -745,14 +745,14 @@ void register_callback(
 \ *PFN*
 Ponteiro para a função de retorno.
 
-*índ* \
+*índ*\
 Um número definido pelo usuário.
 
 ### <a name="remarks"></a>Comentários
 
 A função de membro envia o par `{pfn, idx}` para a [pilha de retorno de chamada](../standard-library/ios-base-class.md)da pilha de retorno de chamada armazenada. Quando um evento de retorno de chamada **EV** é relatado, as funções são chamadas, na ordem inversa do registro, pela expressão `(*pfn)(ev, *this, idx)`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // ios_base_register_callback.cpp
@@ -866,7 +866,7 @@ O tipo é um tipo enumerado que descreve um objeto que pode armazenar o modo de 
 
 - `end`, para buscar em relação ao final de uma sequência.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // ios_base_seekdir.cpp
@@ -904,10 +904,10 @@ fmtflags setf(
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *_Mask*
+*_Mask*\
 Os sinalizadores a serem ativados.
 
-\ *_Unset*
+*_Unset*\
 Os sinalizadores a serem desligados.
 
 ### <a name="return-value"></a>Valor retornado
@@ -918,7 +918,7 @@ Os sinalizadores de formato anteriores
 
 A primeira função de membro efetivamente chama [sinalizadores](#flags)`(_Mask | _Flags)` (definir bits selecionados) e, em seguida, retorna os sinalizadores de formato anteriores. A segunda função de membro efetivamente chama `flags(_Mask & fmtfl, flags & ~_Mask)` (substituir os bits selecionados em uma máscara) e retorna os sinalizadores de formato anteriores.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // ios_base_setf.cpp
@@ -954,7 +954,7 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *_Sync*
+*_Sync*\
 Se todos os fluxos estão em sincronia com `stdio`.
 
 ### <a name="return-value"></a>Valor retornado
@@ -963,7 +963,7 @@ Configuração anterior para esta função.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro estático armazena um sinalizador de sincronização `stdio`, que é inicialmente **verdadeiro**. Quando **true**, esse sinalizador garante que as operações no mesmo arquivo sejam sincronizadas corretamente entre as funções [`iostreams`](../standard-library/iostreams-conventions.md) e aquelas definidas na C++ biblioteca padrão. Caso contrário, a sincronização pode ou não ser garantida, mas o desempenho pode ser melhorado. A função armazena *_Sync* no sinalizador de sincronização `stdio` e retorna seu valor armazenado anterior. Você pode chamá-la de forma confiável somente antes de executar qualquer operação nos fluxos padrão.
+A função de membro estático armazena um sinalizador de sincronização `stdio`, que é inicialmente **verdadeiro**. Quando **true**, esse sinalizador garante que as operações no mesmo arquivo sejam sincronizadas corretamente entre as funções [`iostreams`](../standard-library/iostreams-conventions.md) e aquelas definidas na C++ biblioteca padrão. Caso contrário, a sincronização pode ou não ser garantida, mas o desempenho pode ser melhorado. A função armazena *_Sync* no sinalizador de sincronização de `stdio` e retorna seu valor armazenado anterior. Você pode chamá-la de forma confiável somente antes de executar qualquer operação nos fluxos padrão.
 
 ## <a name="unsetf"></a>unsetf
 
@@ -977,14 +977,14 @@ void unsetf(
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *_Mask*
+*_Mask*\
 Os sinalizadores que você deseja desativar.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro efetivamente chama [sinalizadores](#flags)(`~` *_Mask* **& sinalizadores**) (limpar bits selecionados).
+A função de membro efetivamente chama [sinalizadores](#flags)(`~` *_Mask* **sinalizadores de &** ) (limpar bits selecionados).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [ios_base:: setf](#setf) para obter uma amostra de como usar `unsetf`.
 
@@ -1001,7 +1001,7 @@ streamsize width(
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *_Wide*
+*_Wide*\
 O tamanho desejado do fluxo de saída.
 
 ### <a name="return-value"></a>Valor retornado
@@ -1012,7 +1012,7 @@ A configuração de largura atual.
 
 A primeira função de membro retorna a largura do campo armazenado. A segunda função de membro armazena *_Wide* na largura do campo e retorna seu valor armazenado anterior.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // ios_base_width.cpp
@@ -1049,7 +1049,7 @@ A função membro static retorna um valor estático armazenado, que é increment
 
 Você pode usar o valor de retorno como um argumento de índice exclusivo ao chamar as funções de membro [`iword`](#iword) ou [`pword`](#pword).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // ios_base_xalloc.cpp

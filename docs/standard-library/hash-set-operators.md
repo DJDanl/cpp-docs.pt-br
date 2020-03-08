@@ -6,13 +6,13 @@ f1_keywords:
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
 ms.openlocfilehash: 3900e9c6e4fb7f5a163279165a51b440d138a8e5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452026"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883832"
 ---
-# <a name="lthashsetgt-operators"></a>Operadores &lt;hash_set&gt;
+# <a name="lthash_setgt-operators"></a>Operadores &lt;hash_set&gt;
 
 ||||
 |-|-|-|
@@ -22,7 +22,7 @@ ms.locfileid: "68452026"
 ## <a name="op_neq"></a>  operator!=
 
 > [!NOTE]
-> Esta API está obsoleta. A alternativa é a [Classe unordered_set](../standard-library/unordered-set-class.md).
+> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_set](../standard-library/unordered-set-class.md).
 
 Testa se o objeto hash_set no lado esquerdo do operador não é igual ao objeto hash_set no lado direito.
 
@@ -32,13 +32,13 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>Parâmetros
 
-*mantida*\
+\ *à esquerda*
 Um objeto do tipo `hash_set`.
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo `hash_set`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se os hash_sets não forem iguais; **false** se os hash_sets forem iguais.
 
@@ -46,9 +46,9 @@ Um objeto do tipo `hash_set`.
 
 A comparação entre os objetos hash_set é baseada em uma comparação de paridade de seus elementos. Dois hash_sets serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.
 
-Os membros dos arquivos de cabeçalho [< hash_map >](../standard-library/hash-map.md) e [< hash_set >](../standard-library/hash-set.md) estão no [namespace stdext](../standard-library/stdext-namespace.md).
+Os membros dos arquivos de cabeçalho [< hash_map >](../standard-library/hash-map.md) e [< hash_set](../standard-library/hash-set.md) > estão no [namespace stdext](../standard-library/stdext-namespace.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // hash_set_op_ne.cpp
@@ -90,7 +90,7 @@ The hash_sets hs1 and hs3 are equal.
 ## <a name="op_eq_eq"></a>  operator==
 
 > [!NOTE]
-> Esta API está obsoleta. A alternativa é a [Classe unordered_set](../standard-library/unordered-set-class.md).
+> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_set](../standard-library/unordered-set-class.md).
 
 Testa se o objeto hash_set no lado esquerdo do operador é igual ao objeto hash_set no lado direito.
 
@@ -100,13 +100,13 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>Parâmetros
 
-*mantida*\
+\ *à esquerda*
 Um objeto do tipo `hash_set`.
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo `hash_set`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se o hash_set no lado esquerdo do operador for igual ao hash_set no lado direito do operador; caso contrário, **false**.
 
@@ -114,7 +114,7 @@ Um objeto do tipo `hash_set`.
 
 A comparação entre objetos hash_set é baseada em uma comparação de paridade de seus elementos. Dois hash_sets serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // hash_set_op_eq.cpp
@@ -156,7 +156,7 @@ The hash_sets s1 and s3 are equal.
 ## <a name="op_neq_hash_multiset"></a>  operator!= (hash_multiset)
 
 > [!NOTE]
-> Esta API está obsoleta. A alternativa é a [Classe unordered_set](../standard-library/unordered-set-class.md).
+> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_set](../standard-library/unordered-set-class.md).
 
 Testa se o objeto hash_multiset no lado esquerdo do operador não é igual ao objeto hash_multiset no lado direito.
 
@@ -166,13 +166,13 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>Parâmetros
 
-*mantida*\
+\ *à esquerda*
 Um objeto do tipo `hash_multiset`.
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo `hash_multiset`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se os hash_multisets não forem iguais; **false** se os hash_multisets forem iguais.
 
@@ -180,7 +180,7 @@ Um objeto do tipo `hash_multiset`.
 
 A comparação entre os objetos hash_multiset é baseada em uma comparação de paridade de seus elementos. Dois hash_multisets serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // hashset_op_ne.cpp
@@ -222,7 +222,7 @@ The hash_multisets hs1 and hs3 are equal.
 ## <a name="op_eq_eq_hash_multiset"></a>  operator== (hash_multiset)
 
 > [!NOTE]
-> Esta API está obsoleta. A alternativa é a [Classe unordered_set](../standard-library/unordered-set-class.md).
+> {1&gt;Esta API está obsoleta.&lt;1} A alternativa é a [Classe unordered_set](../standard-library/unordered-set-class.md).
 
 Testa se o objeto hash_multiset no lado esquerdo do operador é igual ao objeto hash_multiset no lado direito.
 
@@ -232,13 +232,13 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parâmetros
 
-*mantida*\
+\ *à esquerda*
 Um objeto do tipo `hash_multiset`.
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo `hash_multiset`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se o hash_multiset no lado esquerdo do operador for igual ao hash_multiset no lado direito do operador; caso contrário, **false**.
 
@@ -246,7 +246,7 @@ Um objeto do tipo `hash_multiset`.
 
 A comparação entre os objetos hash_multiset é baseada em uma comparação de paridade de seus elementos. Dois hash_multisets serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // hash_multiset_op_eq.cpp

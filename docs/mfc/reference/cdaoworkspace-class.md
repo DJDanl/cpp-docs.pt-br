@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303479"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883858"
 ---
 # <a name="cdaoworkspace-class"></a>Classe CDaoWorkspace
 
@@ -131,7 +131,7 @@ Na maioria dos casos, você não precisará de vários espaços de trabalho, e n
 > [!NOTE]
 >  As classes de banco de dados DAO são diferentes das classes de banco de dados MFC baseadas em ODBC (Open Database Connectivity). Todos os nomes de classe de banco de dados DAO têm um prefixo "CDao". Em geral, as classes do MFC baseadas no DAO são mais compatíveis do que as classes do MFC baseadas no ODBC. As classes baseadas em DAO acessam dados por meio do mecanismo de banco de dados Microsoft Jet, incluindo drivers ODBC. Eles também oferecem suporte a operações DDL (linguagem de definição de dados), como a criação de bancos de dado e a adição de tabelas e campos por meio das classes, sem precisar chamar o DAO diretamente.
 
-## <a name="capabilities"></a>{1&gt;{2&gt;Funcionalidades&lt;2}&lt;1}
+## <a name="capabilities"></a>{1&gt;Capabilities&lt;1}
 
 A classe `CDaoWorkspace` fornece o seguinte:
 
@@ -722,7 +722,7 @@ Embora muitas `CDaoWorkspace` funções membro só possam ser chamadas depois qu
 
 ||||
 |-|-|-|
-|[Criada](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
+|[Criar](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
 |[GetIniPath](#getinipath)|[Idle](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 

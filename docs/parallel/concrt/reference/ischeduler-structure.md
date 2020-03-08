@@ -15,11 +15,11 @@ helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
 ms.openlocfilehash: cd7b04b0dc5ca1bc496ce87a6459d00ed5813bf7
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142317"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854107"
 ---
 # <a name="ischeduler-structure"></a>Estrutura IScheduler
 
@@ -74,7 +74,7 @@ virtual void AddVirtualProcessors(
 *ppVirtualProcessorRoots*<br/>
 Uma matriz de interfaces de `IVirtualProcessorRoot` que representa as raízes do processador virtual que estão sendo adicionadas ao agendador.
 
-*contagem*<br/>
+*count*<br/>
 O número de interfaces `IVirtualProcessorRoot` na matriz.
 
 ### <a name="remarks"></a>Comentários
@@ -126,7 +126,7 @@ virtual void NotifyResourcesExternallyBusy(
 *ppVirtualProcessorRoots*<br/>
 Uma matriz de interfaces `IVirtualProcessorRoot` associadas aos threads de hardware nos quais outros agendadores se tornaram ocupados.
 
-*contagem*<br/>
+*count*<br/>
 O número de interfaces `IVirtualProcessorRoot` na matriz.
 
 ### <a name="remarks"></a>Comentários
@@ -154,7 +154,7 @@ virtual void NotifyResourcesExternallyIdle(
 *ppVirtualProcessorRoots*<br/>
 Uma matriz de interfaces `IVirtualProcessorRoot` associadas a threads de hardware nos quais outros agendadores se tornaram ociosos.
 
-*contagem*<br/>
+*count*<br/>
 O número de interfaces `IVirtualProcessorRoot` na matriz.
 
 ### <a name="remarks"></a>Comentários
@@ -182,7 +182,7 @@ virtual void RemoveVirtualProcessors(
 *ppVirtualProcessorRoots*<br/>
 Uma matriz de interfaces de `IVirtualProcessorRoot` que representa as raízes do processador virtual a serem removidas.
 
-*contagem*<br/>
+*count*<br/>
 O número de interfaces `IVirtualProcessorRoot` na matriz.
 
 ### <a name="remarks"></a>Comentários
