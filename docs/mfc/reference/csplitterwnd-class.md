@@ -73,15 +73,15 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
 ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323811"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890948"
 ---
 # <a name="csplitterwnd-class"></a>Classe CSplitterWnd
 
-Fornece a funcionalidade de uma janela separadora, que é uma janela que contém vários painéis.
+Fornece a funcionalidade de uma janela divisora, que é uma janela que contém vários painéis.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -93,91 +93,91 @@ class CSplitterWnd : public CWnd
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[CSplitterWnd::CSplitterWnd](#csplitterwnd)|Chamada para construir um `CSplitterWnd` objeto.|
+|[CSplitterWnd:: CSplitterWnd](#csplitterwnd)|Chamada para construir um objeto de `CSplitterWnd`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[CSplitterWnd::ActivateNext](#activatenext)|Executa o comando próximo painel ou painel anterior.|
-|[CSplitterWnd::CanActivateNext](#canactivatenext)|Verifica se o comando próximo painel ou painel anterior é possível no momento.|
-|[CSplitterWnd::Create](#create)|Chamada para criar uma janela divisora dinâmica e anexá-lo para o `CSplitterWnd` objeto.|
-|[CSplitterWnd::CreateScrollBarCtrl](#createscrollbarctrl)|Cria um controle de barra de rolagem compartilhado.|
-|[CSplitterWnd::CreateStatic](#createstatic)|Chamada para criar uma janela separadora estático e anexá-lo para o `CSplitterWnd` objeto.|
-|[CSplitterWnd::CreateView](#createview)|Chamada para criar um painel em uma janela separadora.|
-|[CSplitterWnd::DeleteColumn](#deletecolumn)|Exclui uma coluna da janela separadora.|
-|[CSplitterWnd::DeleteRow](#deleterow)|Exclui uma linha da janela separadora.|
-|[CSplitterWnd::DeleteView](#deleteview)|Exclui uma exibição da janela separadora.|
-|[CSplitterWnd::DoKeyboardSplit](#dokeyboardsplit)|Executa o comando, geralmente "divisão da janela". de divisão do teclado|
-|[CSplitterWnd::DoScroll](#doscroll)|Executa a rolagem sincronizada de janelas separadoras.|
-|[CSplitterWnd::DoScrollBy](#doscrollby)|Rola pelas janelas separadoras por um determinado número de pixels.|
-|[CSplitterWnd::GetActivePane](#getactivepane)|Determina o painel ativo do foco ou da exibição ativa no quadro.|
-|[CSplitterWnd::GetColumnCount](#getcolumncount)|Retorna a contagem de colunas do painel atual.|
-|[CSplitterWnd::GetColumnInfo](#getcolumninfo)|Retorna informações sobre a coluna especificada.|
-|[CSplitterWnd::GetPane](#getpane)|Retorna o painel na linha especificada e na coluna.|
-|[CSplitterWnd::GetRowCount](#getrowcount)|Retorna a contagem de linhas do painel atual.|
-|[CSplitterWnd::GetRowInfo](#getrowinfo)|Retorna informações sobre a linha especificada.|
-|[CSplitterWnd::GetScrollStyle](#getscrollstyle)|Retorna o estilo de barra de rolagem compartilhado.|
-|[CSplitterWnd::IdFromRowCol](#idfromrowcol)|Retorna o filho do painel na linha especificada e na coluna de ID da janela.|
-|[CSplitterWnd::IsChildPane](#ischildpane)|Chamada para determinar se a janela é atualmente um painel filho dessa janela divisor.|
-|[CSplitterWnd::IsTracking](#istracking)|Determina se barra divisória atualmente está sendo movida.|
-|[CSplitterWnd::RecalcLayout](#recalclayout)|Chamada para exibir novamente a janela divisora depois de ajustar o tamanho de linha ou coluna.|
-|[CSplitterWnd::SetActivePane](#setactivepane)|Define um painel para ser o Active Directory no quadro.|
-|[CSplitterWnd::SetColumnInfo](#setcolumninfo)|Chamada para definir as informações da coluna especificada.|
-|[CSplitterWnd::SetRowInfo](#setrowinfo)|Chamada para definir as informações da linha especificada.|
-|[CSplitterWnd::SetScrollStyle](#setscrollstyle)|Especifica que o novo estilo de barra de rolagem da janela de divisor compartilhada suporte a barra de rolagem.|
-|[CSplitterWnd::SplitColumn](#splitcolumn)|Indica onde uma janela do quadro se divide verticalmente.|
-|[CSplitterWnd::SplitRow](#splitrow)|Indica onde uma janela do quadro se divide horizontalmente.|
+|[CSplitterWnd:: ActivateNext](#activatenext)|Executa o próximo painel ou comando do painel anterior.|
+|[CSplitterWnd:: CanActivateNext](#canactivatenext)|Verifica se o comando próximo painel ou painel anterior é possível no momento.|
+|[CSplitterWnd:: criar](#create)|Chame para criar uma janela de divisão dinâmica e anexe-a ao objeto `CSplitterWnd`.|
+|[CSplitterWnd:: CreateScrollBarCtrl](#createscrollbarctrl)|Cria um controle de barra de rolagem compartilhado.|
+|[CSplitterWnd:: CreateStatic](#createstatic)|Chame para criar uma janela divisora estática e anexe-a ao objeto `CSplitterWnd`.|
+|[CSplitterWnd:: CreateView](#createview)|Chame para criar um painel em uma janela divisora.|
+|[CSplitterWnd::D eleteColumn](#deletecolumn)|Exclui uma coluna da janela divisora.|
+|[CSplitterWnd::D eleteRow](#deleterow)|Exclui uma linha da janela divisora.|
+|[CSplitterWnd::D eleteView](#deleteview)|Exclui uma exibição da janela divisora.|
+|[CSplitterWnd::D oKeyboardSplit](#dokeyboardsplit)|Executa o comando de divisão do teclado, geralmente "divisão da janela".|
+|[CSplitterWnd::D oScroll](#doscroll)|Executa a rolagem sincronizada de janelas divididas.|
+|[CSplitterWnd::D oScrollBy](#doscrollby)|Rola as janelas divididas por um determinado número de pixels.|
+|[CSplitterWnd:: GetActivePane](#getactivepane)|Determina o painel ativo do foco ou da exibição ativa no quadro.|
+|[CSplitterWnd:: GetColumnCount](#getcolumncount)|Retorna a contagem de colunas do painel atual.|
+|[CSplitterWnd:: GetColumnInfo](#getcolumninfo)|Retorna informações sobre a coluna especificada.|
+|[CSplitterWnd:: GetPane](#getpane)|Retorna o painel na linha e coluna especificadas.|
+|[CSplitterWnd:: GetRowCount](#getrowcount)|Retorna a contagem de linhas do painel atual.|
+|[CSplitterWnd:: GetRowInfo](#getrowinfo)|Retorna informações sobre a linha especificada.|
+|[CSplitterWnd:: getscrollstyle](#getscrollstyle)|Retorna o estilo de barra de rolagem compartilhada.|
+|[CSplitterWnd:: IdFromRowCol](#idfromrowcol)|Retorna a ID da janela filho do painel na linha e coluna especificadas.|
+|[CSplitterWnd:: IsChildPane](#ischildpane)|Chame para determinar se a janela é atualmente um painel filho desta janela de divisão.|
+|[CSplitterWnd:: istracking](#istracking)|Determina se a barra de divisão está sendo movida no momento.|
+|[CSplitterWnd:: RecalcLayout](#recalclayout)|Chame para reexibir a janela do separador depois de ajustar o tamanho da linha ou da coluna.|
+|[CSplitterWnd:: SetActivePane](#setactivepane)|Define um painel para ser o ativo no quadro.|
+|[CSplitterWnd:: SetColumnInfo](#setcolumninfo)|Chame para definir as informações de coluna especificadas.|
+|[CSplitterWnd:: SetRowInfo](#setrowinfo)|Chame para definir as informações de linha especificadas.|
+|[CSplitterWnd:: SetScrollStyle](#setscrollstyle)|Especifica o novo estilo de barra de rolagem para o suporte à barra de rolagem compartilhada da janela do Splitter.|
+|[CSplitterWnd:: SplitColumn](#splitcolumn)|Indica onde uma janela do quadro se divide verticalmente.|
+|[CSplitterWnd:: SplitRow](#splitrow)|Indica onde uma janela do quadro se divide horizontalmente.|
 
-### <a name="protected-methods"></a>Métodos Protegidos
+### <a name="protected-methods"></a>Métodos protegidos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[CSplitterWnd::OnDraw](#ondraw)|Chamado pelo framework para desenhar a janela separadora.|
-|[CSplitterWnd::OnDrawSplitter](#ondrawsplitter)|Renderiza uma imagem de uma janela separadora.|
-|[CSplitterWnd::OnInvertTracker](#oninverttracker)|Processa a imagem de uma janela separadora para ser o mesmo tamanho e a forma como a janela do quadro.|
+|[CSplitterWnd:: OnDraw](#ondraw)|Chamado pelo Framework para desenhar a janela separadora.|
+|[CSplitterWnd:: OnDrawSplitter](#ondrawsplitter)|Renderiza uma imagem de uma janela de divisão.|
+|[CSplitterWnd:: OnInvertTracker](#oninverttracker)|Renderiza a imagem de uma janela de divisão para ter o mesmo tamanho e forma que a janela do quadro.|
 
 ## <a name="remarks"></a>Comentários
 
-Um painel geralmente é um objeto específico do aplicativo derivado [CView](../../mfc/reference/cview-class.md), mas pode ser qualquer [CWnd](../../mfc/reference/cwnd-class.md) objeto que tem a ID da janela filho apropriados.
+Um painel é geralmente um objeto específico do aplicativo derivado de [cvisualização](../../mfc/reference/cview-class.md), mas pode ser qualquer objeto [CWnd](../../mfc/reference/cwnd-class.md) que tenha a ID da janela filho apropriada.
 
-Um `CSplitterWnd` objeto geralmente é inserido em um pai [CFrameWnd](../../mfc/reference/cframewnd-class.md) ou [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) objeto. Criar um `CSplitterWnd` objeto usando as seguintes etapas:
+Um objeto `CSplitterWnd` geralmente é inserido em um objeto pai [CFrameWnd](../../mfc/reference/cframewnd-class.md) ou [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) . Crie um objeto `CSplitterWnd` usando as seguintes etapas:
 
-1. Incorporar um `CSplitterWnd` variável de membro no quadro principal.
+1. Insira uma variável de membro `CSplitterWnd` no quadro pai.
 
-2. Substituição do quadro pai [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient) função de membro.
+2. Substitua a função de membro [CFrameWnd:: OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient) do quadro pai.
 
-3. De dentro do substituído `OnCreateClient`, chamar o [Create](#create) ou [CreateStatic](#createstatic) função de membro de `CSplitterWnd`.
+3. De dentro do `OnCreateClient`substituído, chame a função de membro [Create](#create) ou [createstatic](#createstatic) de `CSplitterWnd`.
 
-Chamar o `Create` a função de membro para criar uma janela divisora dinâmica. Uma janela divisora dinâmica normalmente é usada para criar e rolar um número de painéis individuais ou exibições do mesmo documento. O framework cria automaticamente um painel inicial para o divisor; em seguida, a estrutura cria, redimensiona e descarta os painéis adicionais conforme o usuário opere controles da janela divisora.
+Chame a função de membro `Create` para criar uma janela de divisão dinâmica. Uma janela separadora dinâmica normalmente é usada para criar e rolar vários painéis ou exibições individuais do mesmo documento. A estrutura cria automaticamente um painel inicial para o divisor; em seguida, a estrutura cria, redimensiona e descarta painéis adicionais à medida que o usuário opera os controles da janela do divisor.
 
-Quando você chama `Create`, você especificar uma largura mínima de linha altura e a coluna que determinam quando os painéis são pequenos demais para ser exibido. Depois de chamar `Create`, você pode ajustar esses valores mínimos por meio da chamada a [SetColumnInfo](#setcolumninfo) e [SetRowInfo](#setrowinfo) funções de membro.
+Ao chamar `Create`, você especifica uma altura mínima de linha e largura de coluna que determinam quando os painéis são muito pequenos para serem totalmente exibidos. Depois de chamar `Create`, você pode ajustar esses mínimos chamando as funções de membro [SetColumnInfo](#setcolumninfo) e [SetRowInfo](#setrowinfo) .
 
-Use também o `SetColumnInfo` e `SetRowInfo` funções de membro para definir uma largura "ideal" para uma coluna e a altura "ideal" para uma linha. Quando o framework exibe uma janela separadora, ele exibe primeiro quadro principal, em seguida, a janela separadora. A estrutura, em seguida, apresenta os painéis em colunas e linhas de acordo com suas dimensões ideais, trabalhando no canto superior esquerdo para o canto inferior direito da área de cliente da janela separadora.
+Use também as funções de membro `SetColumnInfo` e `SetRowInfo` para definir uma largura "ideal" para uma coluna e a altura "ideal" para uma linha. Quando a estrutura exibe uma janela divisor, ela primeiro exibe o quadro pai e, em seguida, a janela separadora. Em seguida, a estrutura apresenta os painéis em colunas e linhas de acordo com suas dimensões ideais, trabalhando do canto superior esquerdo para o inferior direito da área do cliente da janela do divisor.
 
-Todos os painéis em uma janela divisora dinâmica devem ser da mesma classe. Aplicativos familiares que dão suporte a janelas separadoras dinâmicas incluem o Microsoft Word e Microsoft Excel.
+Todos os painéis em uma janela de divisor dinâmico devem ser da mesma classe. Aplicativos conhecidos que dão suporte a janelas de divisor dinâmico incluem o Microsoft Word e o Microsoft Excel.
 
-Use o `CreateStatic` a função de membro para criar uma janela separadora estático. O usuário pode alterar apenas o tamanho dos painéis em um divisor estático de janela, e não seu número ou ordem.
+Use a função membro `CreateStatic` para criar uma janela divisora estática. O usuário pode alterar apenas o tamanho dos painéis em uma janela divisora estática, e não seu número ou ordem.
 
-Especificamente, você deve criar painéis do todos os o separador estático quando você cria o divisor estático. Verifique se você criou todos os painéis antes do quadro pai `OnCreateClient` retorna da função de membro, ou ocorrerá na estrutura não exibir a janela corretamente.
+Você deve criar especificamente todos os painéis do divisor estático ao criar o divisor estático. Certifique-se de criar todos os painéis antes de o quadro pai `OnCreateClient` função membro retornar, ou a estrutura não exibirá a janela corretamente.
 
-O `CreateStatic` função membro inicializa automaticamente um separador estático com uma largura mínimo da linha de altura e a coluna 0. Depois de chamar `Create`, ajustar esses valores mínimos por meio da chamada a [SetColumnInfo](#setcolumninfo) e [SetRowInfo](#setrowinfo) funções de membro. Use também `SetColumnInfo` e `SetRowInfo` depois de chamar `CreateStatic` indicar desejado dimensões ideais de painel.
+A função de membro `CreateStatic` inicializa automaticamente um divisor estático com uma altura mínima de linha e largura de coluna 0. Depois de chamar `Create`, ajuste esses mínimos chamando as funções de membro [SetColumnInfo](#setcolumninfo) e [SetRowInfo](#setrowinfo) . Além disso, use `SetColumnInfo` e `SetRowInfo` depois de chamar `CreateStatic` para indicar as dimensões do painel ideal desejado.
 
-Os painéis individuais de um separador estático geralmente pertencem às classes diferentes. Para obter exemplos de janelas separadoras estáticas, consulte o editor de gráficos e o Gerenciador de arquivos do Windows.
+Os painéis individuais de um divisor estático geralmente pertencem a classes diferentes. Para obter exemplos de janelas de divisores estáticos, consulte o editor de gráficos e o Gerenciador de arquivos do Windows.
 
-Uma janela separadora dá suporte a barras de rolagem especial (além das barras de rolagem que podem ter a painéis). Essas barras de rolagem são filhos do `CSplitterWnd` do objeto e são compartilhadas com os painéis.
+Uma janela divisor dá suporte a barras de rolagem especiais (além das barras de rolagem que os painéis podem ter). Essas barras de rolagem são filhos do objeto `CSplitterWnd` e são compartilhadas com os painéis.
 
-Você cria essas barras de rolagem especial ao criar janela separadora. Por exemplo, um `CSplitterWnd` que tem uma linha, duas colunas e o estilo WS_VSCROLL exibirá uma barra de rolagem vertical é compartilhada por dois painéis. Quando o usuário move a barra de rolagem, mensagens WM_VSCROLL são enviadas para os dois painéis. Quando os painéis de definir a posição da barra de rolagem, a barra de rolagem compartilhado é definida.
+Você cria essas barras de rolagem especiais ao criar a janela separadora. Por exemplo, um `CSplitterWnd` que tem uma linha, duas colunas e o estilo de WS_VSCROLL exibirá uma barra de rolagem vertical que é compartilhada por dois painéis. Quando o usuário move a barra de rolagem, WM_VSCROLL mensagens são enviadas para ambos os painéis. Quando os painéis definem a posição da barra de rolagem, a barra de rolagem compartilhada é definida.
 
-Para obter mais informações sobre janelas separadoras, consulte [29 de observação técnica](../../mfc/tn029-splitter-windows.md).
+Para obter mais informações sobre janelas de Splitter, consulte a [Nota técnica 29](../../mfc/tn029-splitter-windows.md).
 
-Para obter mais informações sobre como criar janelas separadoras dinâmicas, consulte:
+Para obter mais informações sobre como criar janelas de divisão dinâmica, consulte:
 
-- Exemplo MFC [Rabisco](../../overview/visual-cpp-samples.md)
+- [Rabisco](../../overview/visual-cpp-samples.md) de exemplo do MFC
 
-- Exemplo MFC [VIEWEX](../../overview/visual-cpp-samples.md).
+- Exemplo de [VIEWEX](../../overview/visual-cpp-samples.md)do MFC.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -189,13 +189,13 @@ Para obter mais informações sobre como criar janelas separadoras dinâmicas, c
 
 `CSplitterWnd`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** afxext.h
+**Cabeçalho:** afxext. h
 
-##  <a name="activatenext"></a>  CSplitterWnd::ActivateNext
+##  <a name="activatenext"></a>CSplitterWnd:: ActivateNext
 
-Chamado pelo framework para executar o comando próximo painel ou painel anterior.
+Chamado pelo Framework para executar o próximo painel ou comando de painel anterior.
 
 ```
 virtual void ActivateNext(BOOL bPrev = FALSE);
@@ -204,15 +204,15 @@ virtual void ActivateNext(BOOL bPrev = FALSE);
 ### <a name="parameters"></a>Parâmetros
 
 *bPrev*<br/>
-Indica qual janela para ativar. **TRUE** para anterior; **Falsos** para Avançar.
+Indica qual janela deve ser ativada. **Verdadeiro** para anterior; **False** para avançar.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro é um comando de alto nível que é usado pelas [CView](../../mfc/reference/cview-class.md) classe delegar para o `CSplitterWnd` implementação.
+Essa função de membro é um comando de alto nível que é usado pela classe [cvisualização](../../mfc/reference/cview-class.md) para delegar à implementação de `CSplitterWnd`.
 
-##  <a name="canactivatenext"></a>  CSplitterWnd::CanActivateNext
+##  <a name="canactivatenext"></a>CSplitterWnd:: CanActivateNext
 
-Chamado pelo framework para verificar se o comando próximo painel ou painel anterior é possível no momento.
+Chamado pelo Framework para verificar se o comando próximo painel ou painel anterior é possível no momento.
 
 ```
 virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
@@ -221,19 +221,19 @@ virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 ### <a name="parameters"></a>Parâmetros
 
 *bPrev*<br/>
-Indica qual janela para ativar. **TRUE** para anterior; **Falsos** para Avançar.
+Indica qual janela deve ser ativada. **Verdadeiro** para anterior; **False** para avançar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro é um comando de alto nível que é usado pelas [CView](../../mfc/reference/cview-class.md) classe delegar para o `CSplitterWnd` implementação.
+Essa função de membro é um comando de alto nível que é usado pela classe [cvisualização](../../mfc/reference/cview-class.md) para delegar à implementação de `CSplitterWnd`.
 
-##  <a name="create"></a>  CSplitterWnd::Create
+##  <a name="create"></a>CSplitterWnd:: criar
 
-Para criar uma janela divisora dinâmica, chame o `Create` função de membro.
+Para criar uma janela divisora dinâmica, chame a função membro `Create`.
 
 ```
 virtual BOOL Create(
@@ -249,53 +249,53 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parâmetros
 
 *pParentWnd*<br/>
-A janela pai do quadro de janela separadora.
+A janela do quadro pai da janela do separador.
 
 *nMaxRows*<br/>
-O número máximo de linhas na janela do divisor. Esse valor não deve exceder 2.
+O número máximo de linhas na janela divisora. Este valor não deve exceder 2.
 
 *nMaxCols*<br/>
-O número máximo de colunas na janela separadora. Esse valor não deve exceder 2.
+O número máximo de colunas na janela do separador. Este valor não deve exceder 2.
 
 *sizeMin*<br/>
-Especifica o tamanho mínimo em que um painel pode ser exibido.
+Especifica o tamanho mínimo no qual um painel pode ser exibido.
 
 *pContext*<br/>
-Um ponteiro para um [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) estrutura. Na maioria dos casos, isso pode ser o *pContext* passado para a janela do quadro pai.
+Um ponteiro para uma estrutura [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) . Na maioria dos casos, isso pode ser o *pContext* passado para a janela do quadro pai.
 
 *dwStyle*<br/>
 Especifica o estilo da janela.
 
 *nID*<br/>
-A ID de janela filho da janela. A ID pode ser AFX_IDW_PANE_FIRST, a menos que a janela divisora está aninhada em outra janela do divisor.
+A ID da janela filho da janela. A ID pode ser AFX_IDW_PANE_FIRST, a menos que a janela do separador seja aninhada dentro de outra janela do Splitter.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Você pode inserir uma `CSplitterWnd` em uma pasta pai [CFrameWnd](../../mfc/reference/cframewnd-class.md) ou [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) objeto por meio das seguintes etapas:
+Você pode inserir um `CSplitterWnd` em um objeto pai [CFrameWnd](../../mfc/reference/cframewnd-class.md) ou [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) realizando as seguintes etapas:
 
-1. Incorporar um `CSplitterWnd` variável de membro no quadro principal.
+1. Insira uma variável de membro `CSplitterWnd` no quadro pai.
 
-1. Substituição do quadro pai [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient) função de membro.
+1. Substitua a função de membro [CFrameWnd:: OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient) do quadro pai.
 
-1. Chame o `Create` função de membro de dentro do substituído `OnCreateClient`.
+1. Chame a função membro `Create` de dentro do `OnCreateClient`substituído.
 
-Quando você cria uma janela separadora de dentro de um quadro pai, passar o quadro de pai *pContext* parâmetro para a janela do divisor. Caso contrário, esse parâmetro pode ser NULL.
+Quando você cria uma janela de Splitter de dentro de um quadro pai, passe o parâmetro *pContext* do quadro pai para a janela separadora. Caso contrário, esse parâmetro pode ser nulo.
 
-A largura inicial mínimo da linha de altura e a coluna de uma janela divisora dinâmica são definidas pela *sizeMin* parâmetro. Esses valores mínimos, que determinam se um painel é muito pequeno para ser mostrado em sua totalidade, podem ser alterados com o [SetRowInfo](#setrowinfo) e [SetColumnInfo](#setcolumninfo) funções de membro.
+A altura mínima inicial da linha e a largura da coluna de uma janela de divisão dinâmica são definidas pelo parâmetro *sizeMin* . Esses mínimos, que determinam se um painel é muito pequeno para ser mostrado em sua totalidade, pode ser alterado com as funções de membro [SetRowInfo](#setrowinfo) e [SetColumnInfo](#setcolumninfo) .
 
-Para obter mais informações sobre janelas separadoras dinâmicas, consulte "Divisor Windows" no artigo [vários tipos de documentos, exibições e Windows de quadro](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 de observação técnica](../../mfc/tn029-splitter-windows.md)e o `CSplitterWnd` visão geral da classe.
+Para obter mais informações sobre janelas de divisores dinâmicos, consulte "janelas de divisão" no artigo [vários tipos de documento, exibições e janelas de quadros](../../mfc/multiple-document-types-views-and-frame-windows.md), [Nota técnica 29](../../mfc/tn029-splitter-windows.md)e a visão geral da classe `CSplitterWnd`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 [!code-cpp[NVC_MFCWindowing#125](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_1.cpp)]
 
-##  <a name="createscrollbarctrl"></a>  CSplitterWnd::CreateScrollBarCtrl
+##  <a name="createscrollbarctrl"></a>CSplitterWnd:: CreateScrollBarCtrl
 
-Chamado pelo framework para criar um controle de barra de rolagem compartilhado.
+Chamado pelo Framework para criar um controle de barra de rolagem compartilhado.
 
 ```
 virtual BOOL CreateScrollBarCtrl(
@@ -309,19 +309,19 @@ virtual BOOL CreateScrollBarCtrl(
 Especifica o estilo da janela.
 
 *nID*<br/>
-A ID de janela filho da janela. A ID pode ser AFX_IDW_PANE_FIRST, a menos que a janela divisora está aninhada em outra janela do divisor.
+A ID da janela filho da janela. A ID pode ser AFX_IDW_PANE_FIRST, a menos que a janela do separador seja aninhada dentro de outra janela do Splitter.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Substituir `CreateScrollBarCtrl` para incluir controles extras ao lado de uma barra de rolagem. O comportamento padrão é criar controles da barra de rolagem Windows normais.
+Substitua `CreateScrollBarCtrl` para incluir controles adicionais ao lado de uma barra de rolagem. O comportamento padrão é criar controles normais de barra de rolagem do Windows.
 
-##  <a name="createstatic"></a>  CSplitterWnd::CreateStatic
+##  <a name="createstatic"></a>CSplitterWnd:: CreateStatic
 
-Para criar uma janela separadora estático, chame o `CreateStatic` função de membro.
+Para criar uma janela divisora estática, chame a função membro `CreateStatic`.
 
 ```
 virtual BOOL CreateStatic(
@@ -335,7 +335,7 @@ virtual BOOL CreateStatic(
 ### <a name="parameters"></a>Parâmetros
 
 *pParentWnd*<br/>
-A janela pai do quadro de janela separadora.
+A janela do quadro pai da janela do separador.
 
 *nRows*<br/>
 O número de linhas. Esse valor não deve exceder 16.
@@ -347,35 +347,35 @@ O número de colunas. Esse valor não deve exceder 16.
 Especifica o estilo da janela.
 
 *nID*<br/>
-A ID de janela filho da janela. A ID pode ser AFX_IDW_PANE_FIRST, a menos que a janela divisora está aninhada em outra janela do divisor.
+A ID da janela filho da janela. A ID pode ser AFX_IDW_PANE_FIRST, a menos que a janela do separador seja aninhada dentro de outra janela do Splitter.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Um `CSplitterWnd` geralmente é inserido em um pai `CFrameWnd` ou [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) objeto por meio das seguintes etapas:
+Uma `CSplitterWnd` geralmente é inserida em um objeto `CFrameWnd` ou [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) pai, realizando as seguintes etapas:
 
-1. Incorporar um `CSplitterWnd` variável de membro no quadro principal.
+1. Insira uma variável de membro `CSplitterWnd` no quadro pai.
 
-1. Substituição do quadro pai `OnCreateClient` função de membro.
+1. Substitua a função membro `OnCreateClient` do quadro pai.
 
-1. Chame o `CreateStatic` função de membro de dentro do substituído [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient).
+1. Chame a função membro `CreateStatic` de dentro do [CFrameWnd:: OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)substituído.
 
-Uma janela separadora estático contém um número fixo de painéis, geralmente a partir de classes diferentes.
+Uma janela divisora estática contém um número fixo de painéis, geralmente de classes diferentes.
 
-Quando você cria uma janela separadora estático, ao mesmo tempo crie todos os seus painéis. O [CreateView](#createview) função de membro normalmente é usada para essa finalidade, mas você pode criar outras classes nonview também.
+Ao criar uma janela divisora estática, você deve ao mesmo tempo criar todos os seus painéis. A função de membro [CreateView](#createview) geralmente é usada para essa finalidade, mas você também pode criar outras classes não de exibição.
 
-A mínimo da linha inicial altura e largura de coluna para uma janela separadora estático é 0. Esses valores mínimos, que determinam quando um painel é muito pequeno para ser mostrado em sua totalidade, podem ser alterados com o [SetRowInfo](#setrowinfo) e [SetColumnInfo](#setcolumninfo) funções de membro.
+A altura mínima inicial da linha e a largura da coluna para uma janela divisora estática é 0. Esses mínimos, que determinam quando um painel é muito pequeno para serem mostrados em sua totalidade, podem ser alterados com as funções de membro [SetRowInfo](#setrowinfo) e [SetColumnInfo](#setcolumninfo) .
 
-Para adicionar barras de rolagem para uma janela separadora estáticos, adicionar os estilos WS_HSCROLL e WS_VSCROLL *dwStyle*.
+Para adicionar barras de rolagem a uma janela separadora estática, adicione os estilos de WS_HSCROLL e de WS_VSCROLL a *dwStyle*.
 
-Consulte "Divisor Windows" no artigo [vários tipos de documentos, exibições e Windows de quadro](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 de observação técnica](../../mfc/tn029-splitter-windows.md)e o `CSplitterWnd` visão geral da classe para obter mais informações sobre janelas separadoras estáticas.
+Consulte "janelas de divisão" no artigo [vários tipos de documento, exibições e janelas de quadro](../../mfc/multiple-document-types-views-and-frame-windows.md), [Nota técnica 29](../../mfc/tn029-splitter-windows.md)e a visão geral da classe `CSplitterWnd` para obter mais informações sobre janelas separadoras estáticas.
 
-##  <a name="createview"></a>  CSplitterWnd::CreateView
+##  <a name="createview"></a>CSplitterWnd:: CreateView
 
-Cria painéis para uma janela separadora estático.
+Cria os painéis para uma janela divisora estática.
 
 ```
 virtual BOOL CreateView(
@@ -389,10 +389,10 @@ virtual BOOL CreateView(
 ### <a name="parameters"></a>Parâmetros
 
 *row*<br/>
-Especifica a linha da janela separador no qual colocar a nova exibição.
+Especifica a linha de janela do separador na qual posicionar a nova exibição.
 
 *col*<br/>
-Especifica a coluna de janela separador no qual colocar a nova exibição.
+Especifica a coluna de janela do separador na qual posicionar a nova exibição.
 
 *pViewClass*<br/>
 Especifica o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) da nova exibição.
@@ -401,25 +401,25 @@ Especifica o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) da 
 Especifica o tamanho inicial da nova exibição.
 
 *pContext*<br/>
-Um ponteiro para um contexto de criação usado para criar o modo de exibição (normalmente, o *pContext* passado para o quadro de pai substituído [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient) a função de membro no qual é a janela divisora que está sendo criado).
+Um ponteiro para um contexto de criação usado para criar a exibição (geralmente o *pContext* passado para a função de membro [CFrameWnd:: OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient) do quadro pai na qual a janela do separador está sendo criada).
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Todos os painéis de uma janela separadora estático devem ser criados antes que o framework exibe o divisor.
+Todos os painéis de uma janela separadora estática devem ser criados antes de a estrutura exibir o divisor.
 
-A estrutura também chama essa função de membro para criar novos painéis, quando o usuário de uma janela divisora dinâmica divide um painel, linha ou coluna.
+A estrutura também chama essa função de membro para criar novos painéis quando o usuário de uma janela de divisão dinâmica divide um painel, linha ou coluna.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 [!code-cpp[NVC_MFCWindowing#4](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_2.cpp)]
 
-##  <a name="csplitterwnd"></a>  CSplitterWnd::CSplitterWnd
+##  <a name="csplitterwnd"></a>CSplitterWnd:: CSplitterWnd
 
-Chamada para construir um `CSplitterWnd` objeto.
+Chamada para construir um objeto de `CSplitterWnd`.
 
 ```
 CSplitterWnd();
@@ -427,11 +427,11 @@ CSplitterWnd();
 
 ### <a name="remarks"></a>Comentários
 
-Construir um `CSplitterWnd` objeto em duas etapas. Primeiro, chame o construtor, que cria o `CSplitterWnd` do objeto e, em seguida, chame o [Create](#create) a função de membro, que cria a janela de divisor e anexa-o para o `CSplitterWnd` objeto.
+Construa um objeto `CSplitterWnd` em duas etapas. Primeiro, chame o construtor, que cria o objeto `CSplitterWnd` e, em seguida, chame a função [criar](#create) membro, que cria a janela separadora e a anexa ao objeto `CSplitterWnd`.
 
-##  <a name="deletecolumn"></a>  CSplitterWnd::DeleteColumn
+##  <a name="deletecolumn"></a>CSplitterWnd::D eleteColumn
 
-Exclui uma coluna da janela separadora.
+Exclui uma coluna da janela divisora.
 
 ```
 virtual void DeleteColumn(int colDelete);
@@ -440,15 +440,15 @@ virtual void DeleteColumn(int colDelete);
 ### <a name="parameters"></a>Parâmetros
 
 *colDelete*<br/>
-Especifica a coluna a ser excluído.
+Especifica a coluna a ser excluída.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro é chamada pelo framework para implementar a lógica da janela divisora dinâmica (ou seja, se a janela divisora tem o estilo SPLS_DYNAMIC_SPLIT). Ele pode ser personalizado, junto com a função virtual [CreateView](#createview), para implementar divisores dinâmicos mais avançados.
+Essa função de membro é chamada pelo Framework para implementar a lógica da janela separadora dinâmica (ou seja, se a janela do separador tiver o estilo de SPLS_DYNAMIC_SPLIT). Ele pode ser personalizado, juntamente com a função virtual [CreateView](#createview), para implementar divisores dinâmicos mais avançados.
 
-##  <a name="deleterow"></a>  CSplitterWnd::DeleteRow
+##  <a name="deleterow"></a>CSplitterWnd::D eleteRow
 
-Exclui uma linha da janela separadora.
+Exclui uma linha da janela divisora.
 
 ```
 virtual void DeleteRow(int rowDelete);
@@ -456,16 +456,16 @@ virtual void DeleteRow(int rowDelete);
 
 ### <a name="parameters"></a>Parâmetros
 
-*rowDelete*<br/>
+*Excluir*<br/>
 Especifica a linha a ser excluída.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro é chamada pelo framework para implementar a lógica da janela divisora dinâmica (ou seja, se a janela divisora tem o estilo SPLS_DYNAMIC_SPLIT). Ele pode ser personalizado, junto com a função virtual [CreateView](#createview), para implementar divisores dinâmicos mais avançados.
+Essa função de membro é chamada pelo Framework para implementar a lógica da janela separadora dinâmica (ou seja, se a janela do separador tiver o estilo de SPLS_DYNAMIC_SPLIT). Ele pode ser personalizado, juntamente com a função virtual [CreateView](#createview), para implementar divisores dinâmicos mais avançados.
 
-##  <a name="deleteview"></a>  CSplitterWnd::DeleteView
+##  <a name="deleteview"></a>CSplitterWnd::D eleteView
 
-Exclui uma exibição da janela separadora.
+Exclui uma exibição da janela divisora.
 
 ```
 virtual void DeleteView(
@@ -476,36 +476,36 @@ virtual void DeleteView(
 ### <a name="parameters"></a>Parâmetros
 
 *row*<br/>
-Especifica a linha da janela de divisor na qual se deseja excluir o modo de exibição.
+Especifica a linha de janela do separador na qual excluir a exibição.
 
 *col*<br/>
-Especifica a coluna de janela divisora na qual se deseja excluir o modo de exibição.
+Especifica a coluna de janela do separador na qual excluir a exibição.
 
 ### <a name="remarks"></a>Comentários
 
-Se a exibição ativa está sendo excluída, a próxima exibição se tornará ativa. A implementação padrão supõe que o modo de exibição serão automaticamente excluir na [PostNcDestroy](../../mfc/reference/cwnd-class.md#postncdestroy).
+Se o modo de exibição ativo estiver sendo excluído, a próxima exibição ficará ativa. A implementação padrão pressupõe que a exibição será excluída automaticamente no [PostNcDestroy](../../mfc/reference/cwnd-class.md#postncdestroy).
 
-Essa função membro é chamada pelo framework para implementar a lógica da janela divisora dinâmica (ou seja, se a janela divisora tem o estilo SPLS_DYNAMIC_SPLIT). Ele pode ser personalizado, junto com a função virtual [CreateView](#createview), para implementar divisores dinâmicos mais avançados.
+Essa função de membro é chamada pelo Framework para implementar a lógica da janela separadora dinâmica (ou seja, se a janela do separador tiver o estilo de SPLS_DYNAMIC_SPLIT). Ele pode ser personalizado, juntamente com a função virtual [CreateView](#createview), para implementar divisores dinâmicos mais avançados.
 
-##  <a name="dokeyboardsplit"></a>  CSplitterWnd::DoKeyboardSplit
+##  <a name="dokeyboardsplit"></a>CSplitterWnd::D oKeyboardSplit
 
-Executa o comando, geralmente "divisão da janela". de divisão do teclado
+Executa o comando de divisão do teclado, geralmente "divisão da janela".
 
 ```
 virtual BOOL DoKeyboardSplit();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro é um comando de alto nível que é usado pelas [CView](../../mfc/reference/cview-class.md) classe delegar para o `CSplitterWnd` implementação.
+Essa função de membro é um comando de alto nível que é usado pela classe [cvisualização](../../mfc/reference/cview-class.md) para delegar à implementação de `CSplitterWnd`.
 
-##  <a name="doscroll"></a>  CSplitterWnd::DoScroll
+##  <a name="doscroll"></a>CSplitterWnd::D oScroll
 
-Executa a rolagem sincronizada de janelas separadoras.
+Executa a rolagem sincronizada de janelas divididas.
 
 ```
 virtual BOOL DoScroll(
@@ -517,37 +517,37 @@ virtual BOOL DoScroll(
 ### <a name="parameters"></a>Parâmetros
 
 *pViewFrom*<br/>
-Um ponteiro para o modo de exibição da qual se origina a mensagem de rolagem.
+Um ponteiro para a exibição da qual a mensagem de rolagem se origina.
 
 *nScrollCode*<br/>
-Um código de barras de rolagem que indica que o usuário da solicitação de rolagem. Esse parâmetro é composto de duas partes: um byte de ordem inferior, que determina o tipo de rolagem horizontal ocorrendo, e um byte de ordem superior, que determina o tipo de rolagem vertical ocorrendo:
+Um código de barra de rolagem que indica a solicitação de rolagem do usuário. Esse parâmetro é composto por duas partes: um byte de ordem inferior, que determina o tipo de rolagem que ocorre horizontalmente e um byte de ordem superior, que determina o tipo de rolagem que ocorre verticalmente:
 
-    - SB_BOTTOM rola para baixo.
+    - SB_BOTTOM Rola para a parte inferior.
 
-    - Uma linha para baixo SB_LINEDOWN rola.
+    - SB_LINEDOWN rola uma linha para baixo.
 
-    - Uma linha para cima SB_LINEUP rola.
+    - SB_LINEUP rola uma linha para cima.
 
-    - Uma página para baixo SB_PAGEDOWN rola.
+    - SB_PAGEDOWN rola uma página para baixo.
 
-    - Uma página para cima SB_PAGEUP rola.
+    - SB_PAGEUP Rola uma página para cima.
 
-    - SB_TOP rola para cima.
+    - SB_TOP rola para a parte superior.
 
 *bDoScroll*<br/>
-Determina se a ação de rolagem especificada ocorre. Se *bDoScroll* é TRUE (ou seja, se uma janela filho existe e se as janelas de divisão tem um intervalo de rolagem), em seguida, a ação de rolagem especificada podem ocorrer; se *bDoScroll* for FALSE (ou seja, se nenhuma janela filho existe, ou os modos de exibição de divisão não tem nenhum intervalo de rolagem), em seguida, a rolagem não ocorrerá.
+Determina se a ação de rolagem especificada ocorre. Se *bDoScroll* for verdadeiro (ou seja, se uma janela filho existir e se as janelas divididas tiverem um intervalo de rolagem), a ação de rolagem especificada poderá ocorrer; Se *bDoScroll* for false (ou seja, se não existir nenhuma janela filho ou se as exibições divididas não tiverem nenhum intervalo de rolagem), a rolagem não ocorrerá.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se a rolagem sincronizada ocorre; Caso contrário, 0.
+Diferente de zero se a rolagem sincronizada ocorrer; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro é chamada pelo framework para executar a rolagem sincronizada de janelas separadoras quando o modo de exibição recebe uma mensagem de rolagem. Substituição para exigir uma ação do usuário antes que a rolagem sincronizada é permitida.
+Essa função de membro é chamada pelo Framework para executar a rolagem sincronizada de janelas divididas quando a exibição recebe uma mensagem de rolagem. Substitua para exigir uma ação do usuário antes que a rolagem sincronizada seja permitida.
 
-##  <a name="doscrollby"></a>  CSplitterWnd::DoScrollBy
+##  <a name="doscrollby"></a>CSplitterWnd::D oScrollBy
 
-Rola pelas janelas separadoras por um determinado número de pixels.
+Rola as janelas divididas por um determinado número de pixels.
 
 ```
 virtual BOOL DoScrollBy(
@@ -559,25 +559,25 @@ virtual BOOL DoScrollBy(
 ### <a name="parameters"></a>Parâmetros
 
 *pViewFrom*<br/>
-Um ponteiro para o modo de exibição da qual se origina a mensagem de rolagem.
+Um ponteiro para a exibição da qual a mensagem de rolagem se origina.
 
 *sizeScroll*<br/>
-Número de pixels a ser rolada horizontalmente e verticalmente.
+Número de pixels a serem rolados horizontal e verticalmente.
 
 *bDoScroll*<br/>
-Determina se a ação de rolagem especificada ocorre. Se *bDoScroll* é TRUE (ou seja, se uma janela filho existe e se as janelas de divisão tem um intervalo de rolagem), em seguida, a ação de rolagem especificada podem ocorrer; se *bDoScroll* for FALSE (ou seja, se nenhuma janela filho existe, ou os modos de exibição de divisão não tem nenhum intervalo de rolagem), em seguida, a rolagem não ocorrerá.
+Determina se a ação de rolagem especificada ocorre. Se *bDoScroll* for verdadeiro (ou seja, se uma janela filho existir e se as janelas divididas tiverem um intervalo de rolagem), a ação de rolagem especificada poderá ocorrer; Se *bDoScroll* for false (ou seja, se não existir nenhuma janela filho ou se as exibições divididas não tiverem nenhum intervalo de rolagem), a rolagem não ocorrerá.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se a rolagem sincronizada ocorre; Caso contrário, 0.
+Diferente de zero se a rolagem sincronizada ocorrer; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro é chamada pelo framework em resposta a uma mensagem de rolagem executar sincronizados rolagem das janelas de divisão por quantidade, em pixels, indicado por *sizeScroll*. Valores positivos indicam rolando para baixo e para a direita; valores negativos indicam rolar para cima e para a esquerda.
+Essa função de membro é chamada pela estrutura em resposta a uma mensagem de rolagem, para executar a rolagem sincronizada das janelas divididas pela quantidade, em pixels, indicada por *sizeScroll*. Valores positivos indicam a rolagem para baixo e para a direita; valores negativos indicam rolar para cima e para a esquerda.
 
-Substituição para exigir uma ação do usuário antes de permitir a rolagem.
+Substitua para exigir uma ação do usuário antes de permitir a rolagem.
 
-##  <a name="getactivepane"></a>  CSplitterWnd::GetActivePane
+##  <a name="getactivepane"></a>CSplitterWnd:: GetActivePane
 
 Determina o painel ativo do foco ou da exibição ativa no quadro.
 
@@ -595,15 +595,15 @@ Um ponteiro para um **int** para recuperar o número de linha do painel ativo.
 *pCol*<br/>
 Um ponteiro para um **int** para recuperar o número da coluna do painel ativo.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Ponteiro para o painel ativo. NULL se não existir nenhum painel ativo.
+Ponteiro para o painel ativo. NULL se não houver painel ativo.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro é chamada pelo framework para determinar o painel ativo em uma janela separadora. Substituição para exigir uma ação do usuário antes de acessar o painel ativo.
+Essa função de membro é chamada pelo Framework para determinar o painel ativo em uma janela divisora. Substitua para exigir uma ação do usuário antes de obter o painel ativo.
 
-##  <a name="getcolumncount"></a>  CSplitterWnd::GetColumnCount
+##  <a name="getcolumncount"></a>CSplitterWnd:: GetColumnCount
 
 Retorna a contagem de colunas do painel atual.
 
@@ -611,11 +611,11 @@ Retorna a contagem de colunas do painel atual.
 int GetColumnCount() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna o número atual de colunas no divisor de. Para um separador estático, isso também será o número máximo de colunas.
+Retorna o número atual de colunas no divisor. Para um divisor estático, esse também será o número máximo de colunas.
 
-##  <a name="getcolumninfo"></a>  CSplitterWnd::GetColumnInfo
+##  <a name="getcolumninfo"></a>CSplitterWnd:: GetColumnInfo
 
 Retorna informações sobre a coluna especificada.
 
@@ -632,14 +632,14 @@ void GetColumnInfo(
 Especifica uma coluna.
 
 *cxCur*<br/>
-Uma referência a um **int** seja definida como a largura atual da coluna.
+Uma referência a um **int** a ser definida como a largura atual da coluna.
 
 *cxMin*<br/>
-Uma referência a um **int** seja definida como a largura mínima atual da coluna.
+Uma referência a um **int** a ser definida como a largura mínima atual da coluna.
 
-##  <a name="getpane"></a>  CSplitterWnd::GetPane
+##  <a name="getpane"></a>CSplitterWnd:: GetPane
 
-Retorna o painel na linha especificada e na coluna.
+Retorna o painel na linha e coluna especificadas.
 
 ```
 CWnd* GetPane(
@@ -655,11 +655,11 @@ Especifica uma linha.
 *col*<br/>
 Especifica uma coluna.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna o painel na linha especificada e na coluna. O painel retornado é geralmente um [CView](../../mfc/reference/cview-class.md)-classe derivada.
+Retorna o painel na linha e coluna especificadas. O painel retornado geralmente é uma classe derivada de [cvisualização](../../mfc/reference/cview-class.md).
 
-##  <a name="getrowcount"></a>  CSplitterWnd::GetRowCount
+##  <a name="getrowcount"></a>CSplitterWnd:: GetRowCount
 
 Retorna a contagem de linhas do painel atual.
 
@@ -667,11 +667,11 @@ Retorna a contagem de linhas do painel atual.
 int GetRowCount() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna o número atual de linhas na janela do divisor. Para uma janela separadora estático, isso também será o número máximo de linhas.
+Retorna o número atual de linhas na janela do separador. Para uma janela divisora estática, esse também será o número máximo de linhas.
 
-##  <a name="getrowinfo"></a>  CSplitterWnd::GetRowInfo
+##  <a name="getrowinfo"></a>CSplitterWnd:: GetRowInfo
 
 Retorna informações sobre a linha especificada.
 
@@ -688,36 +688,36 @@ void GetRowInfo(
 Especifica uma linha.
 
 *cyCur*<br/>
-Referência a **int** seja definida como a altura atual da linha em pixels.
+Referência a **int** a ser definida como a altura atual da linha em pixels.
 
 *cyMin*<br/>
-Referência a **int** seja definida como a altura mínima atual da linha em pixels.
+Referência a **int** a ser definida como a altura mínima atual da linha em pixels.
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função de membro para obter informações sobre a linha especificada. O *cyCur* parâmetro é preenchido com a altura atual da linha especificada, e *cyMin* é preenchida com a altura mínima da linha.
+Chame essa função de membro para obter informações sobre a linha especificada. O parâmetro *cyCur* é preenchido com a altura atual da linha especificada e *cyMin* é preenchido com a altura mínima da linha.
 
-##  <a name="getscrollstyle"></a>  CSplitterWnd::GetScrollStyle
+##  <a name="getscrollstyle"></a>CSplitterWnd:: getscrollstyle
 
-Retorna o estilo de barra de rolagem compartilhado para a janela do divisor.
+Retorna o estilo de barra de rolagem compartilhada para a janela separadora.
 
 ```
 DWORD GetScrollStyle() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ou mais dos seguintes janelas de estilo sinalizadores, se for bem-sucedido:
+Um ou mais dos seguintes sinalizadores de estilo do Windows, se for bem-sucedido:
 
-    - WS_HSCROLL se que o divisor atualmente gerencia compartilhada barras de rolagem horizontal.
+    - WS_HSCROLL se o divisor atualmente gerencia as barras de rolagem horizontal compartilhadas.
 
-    - WS_VSCROLL se que o divisor atualmente gerencia compartilhada barras de rolagem vertical.
+    - WS_VSCROLL se o divisor atualmente gerencia as barras de rolagem vertical compartilhadas.
 
-Se for zero, a janela separadora não gerencia atualmente barras de rolagem compartilhado.
+Se for zero, a janela separadora não gerenciará nenhuma barra de rolagem compartilhada no momento.
 
-##  <a name="idfromrowcol"></a>  CSplitterWnd::IdFromRowCol
+##  <a name="idfromrowcol"></a>CSplitterWnd:: IdFromRowCol
 
-Obtém o filho para o painel na linha especificada e na coluna ID da janela.
+Obtém a ID da janela filho do painel na linha e coluna especificadas.
 
 ```
 int IdFromRowCol(
@@ -728,26 +728,26 @@ int IdFromRowCol(
 ### <a name="parameters"></a>Parâmetros
 
 *row*<br/>
-Especifica a linha de janela do divisor.
+Especifica a linha da janela do separador.
 
 *col*<br/>
-Especifica a coluna de janela do divisor.
+Especifica a coluna de janela do separador.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A ID de janela filho para o painel.
+A ID da janela filho do painel.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro é usada para a criação de nonviews como painéis e pode ser chamada antes que o painel existe.
+Essa função de membro é usada para criar não exibições como painéis e pode ser chamada antes que o painel exista.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 [!code-cpp[NVC_MFCWindowing#5](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_3.cpp)]
 
-##  <a name="ischildpane"></a>  CSplitterWnd::IsChildPane
+##  <a name="ischildpane"></a>CSplitterWnd:: IsChildPane
 
-Determina se *Apropriei* atualmente é um painel filho dessa janela divisor.
+Determina se *pWnd* é atualmente um painel filho desta janela de divisão.
 
 ```
 BOOL IsChildPane(
@@ -759,27 +759,27 @@ BOOL IsChildPane(
 ### <a name="parameters"></a>Parâmetros
 
 *pWnd*<br/>
-Um ponteiro para um [CWnd](../../mfc/reference/cwnd-class.md) objeto a ser testado.
+Um ponteiro para um objeto [CWnd](../../mfc/reference/cwnd-class.md) a ser testado.
 
 *pRow*<br/>
 Um ponteiro para um **int** no qual armazenar o número da linha.
 
 *pCol*<br/>
-Um ponteiro para um **int** para armazenar um número de coluna.
+Um ponteiro para um **int** no qual armazenar um número de coluna.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Se for diferente de zero, *Apropriei* atualmente é um painel filho dessa janela splitter, e *pRow* e *pCol* são preenchidas com a posição do painel na janela separadora. Se *Apropriei* não é um painel filho dessa janela divisora, 0 será retornado.
+Se for diferente de zero, *pWnd* é atualmente um painel filho desta janela separadora, e *Prow* e *pCol* são preenchidos com a posição do painel na janela separadora. Se *pWnd* não for um painel filho desta janela de divisão, 0 será retornado.
 
 ### <a name="remarks"></a>Comentários
 
-Nas versões de Visual C++ anteriores à 6.0, essa função foi definida como
+Em versões C++ visuais anteriores a 6,0, essa função foi definida como
 
 `BOOL IsChildPane(CWnd* pWnd, int& row, int& col);`
 
-Esta versão agora é obsoleto e não deve ser usado.
+Esta versão agora é obsoleta e não deve ser usada.
 
-##  <a name="istracking"></a>  CSplitterWnd::IsTracking
+##  <a name="istracking"></a>CSplitterWnd:: istracking
 
 Chame essa função de membro para determinar se a barra de divisão na janela está sendo movida no momento.
 
@@ -787,13 +787,13 @@ Chame essa função de membro para determinar se a barra de divisão na janela e
 BOOL IsTracking();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se uma operação de divisão está em andamento. Caso contrário, 0.
+Diferente de zero se uma operação de divisor estiver em andamento; caso contrário, 0.
 
-##  <a name="ondrawsplitter"></a>  CSplitterWnd::OnDrawSplitter
+##  <a name="ondrawsplitter"></a>CSplitterWnd:: OnDrawSplitter
 
-Renderiza uma imagem de uma janela separadora.
+Renderiza uma imagem de uma janela de divisão.
 
 ```
 virtual void OnDrawSplitter(
@@ -805,31 +805,31 @@ virtual void OnDrawSplitter(
 ### <a name="parameters"></a>Parâmetros
 
 *pDC*<br/>
-Um ponteiro para o contexto de dispositivo no qual desenhar. Se *pDC* for NULL, em seguida, [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) é chamado pelo framework e nenhuma divisão janela é desenhada.
+Um ponteiro para o contexto do dispositivo no qual desenhar. Se o *PDC* for nulo, [CWnd:: RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) será chamado pela estrutura e nenhuma janela de divisão será desenhada.
 
 *nType*<br/>
-Um valor da `enum ESplitType`, que pode ser um dos seguintes:
+Um valor do `enum ESplitType`, que pode ser um dos seguintes:
 
-    - `splitBox` Caixa de arrastar o divisor.
+    - `splitBox` a caixa de arrastar divisor.
 
-    - `splitBar` A barra que aparece entre as janelas de divisão de dois.
+    - `splitBar` a barra que aparece entre as duas janelas de divisão.
 
-    - `splitIntersection` A interseção das janelas de divisão. Esse elemento não será chamado quando em execução no Windows 95/98.
+    - `splitIntersection` a interseção das janelas de divisão. Este elemento não será chamado durante a execução no Windows 95/98.
 
-    - `splitBorder` Os limites da janela de divisão.
+    - `splitBorder` as bordas da janela de divisão.
 
-*rect*<br/>
-Uma referência a um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica o tamanho e a forma das janelas de divisão.
+*Rect*<br/>
+Uma referência a um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) especificando o tamanho e a forma das janelas de divisão.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro é chamada pelo framework para desenhar e especifique as características exatas de uma janela separadora. Substituir `OnDrawSplitter` para a personalização avançada das imagens para os vários componentes gráficas de uma janela separadora. As imagens padrão é semelhante ao divisor na Microsoft Works para Windows ou o Microsoft Windows 95/98, em que as interseções das barras de divisor são mescladas em conjunto.
+Essa função de membro é chamada pelo Framework para desenhar e especificar as características exatas de uma janela divisora. Substitua `OnDrawSplitter` para personalização avançada das imagens para os vários componentes gráficos de uma janela separadora. A imagem padrão é semelhante ao divisor no Microsoft Works para Windows ou no Microsoft Windows 95/98, pois as interseções das barras do separador são mescladas juntas.
 
-Para obter mais informações sobre janelas separadoras dinâmicas, consulte "Divisor Windows" no artigo [vários tipos de documentos, exibições e Windows de quadro](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 de observação técnica](../../mfc/tn029-splitter-windows.md)e o `CSplitterWnd` visão geral da classe.
+Para obter mais informações sobre janelas de divisores dinâmicos, consulte "janelas de divisão" no artigo [vários tipos de documento, exibições e janelas de quadros](../../mfc/multiple-document-types-views-and-frame-windows.md), [Nota técnica 29](../../mfc/tn029-splitter-windows.md)e a visão geral da classe `CSplitterWnd`.
 
-##  <a name="oninverttracker"></a>  CSplitterWnd::OnInvertTracker
+##  <a name="oninverttracker"></a>CSplitterWnd:: OnInvertTracker
 
-Processa a imagem de uma janela separadora para ser o mesmo tamanho e a forma como a janela do quadro.
+Renderiza a imagem de uma janela de divisão para ter o mesmo tamanho e forma que a janela do quadro.
 
 ```
 virtual void OnInvertTracker(const CRect& rect);
@@ -837,18 +837,18 @@ virtual void OnInvertTracker(const CRect& rect);
 
 ### <a name="parameters"></a>Parâmetros
 
-*rect*<br/>
-Referência a um `CRect` objeto que especifica o retângulo de controle.
+*Rect*<br/>
+Referência a um objeto `CRect` especificando o retângulo de controle.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro é chamada pelo framework durante o redimensionamento de divisores. Substituir `OnInvertTracker` para a personalização avançada das imagens de janela separadora. As imagens padrão é semelhante ao divisor na Microsoft Works para Windows ou o Microsoft Windows 95/98, em que as interseções das barras de divisor são mescladas em conjunto.
+Essa função de membro é chamada pela estrutura durante o redimensionamento de divisores. Substitua `OnInvertTracker` para personalização avançada das imagens da janela do separador. A imagem padrão é semelhante ao divisor no Microsoft Works para Windows ou no Microsoft Windows 95/98, pois as interseções das barras do separador são mescladas juntas.
 
-Para obter mais informações sobre janelas separadoras dinâmicas, consulte "Divisor Windows" no artigo [vários tipos de documentos, exibições e Windows de quadro](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 de observação técnica](../../mfc/tn029-splitter-windows.md)e o `CSplitterWnd` visão geral da classe.
+Para obter mais informações sobre janelas de divisores dinâmicos, consulte "janelas de divisão" no artigo [vários tipos de documento, exibições e janelas de quadros](../../mfc/multiple-document-types-views-and-frame-windows.md), [Nota técnica 29](../../mfc/tn029-splitter-windows.md)e a visão geral da classe `CSplitterWnd`.
 
-##  <a name="recalclayout"></a>  CSplitterWnd::RecalcLayout
+##  <a name="recalclayout"></a>CSplitterWnd:: RecalcLayout
 
-Chamada para exibir novamente a janela divisora depois de ajustar o tamanho de linha ou coluna.
+Chame para reexibir a janela do separador depois de ajustar o tamanho da linha ou da coluna.
 
 ```
 virtual void RecalcLayout();
@@ -856,17 +856,17 @@ virtual void RecalcLayout();
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função de membro para exibir corretamente novamente a janela divisora após você ter ajustado os tamanhos de linha e coluna com o [SetRowInfo](#setrowinfo) e [SetColumnInfo](#setcolumninfo) funções de membro. Se você alterar os tamanhos de linha e coluna como parte do processo de criação antes da janela do divisor está visível, não é necessário chamar essa função de membro.
+Chame essa função de membro para reexibir corretamente a janela separadora depois de ajustar os tamanhos de linha e coluna com as funções de membro [SetRowInfo](#setrowinfo) e [SetColumnInfo](#setcolumninfo) . Se você alterar os tamanhos de linha e coluna como parte do processo de criação antes que a janela do separador fique visível, não será necessário chamar essa função de membro.
 
-O framework chama essa função membro sempre que o usuário redimensiona a janela do divisor ou mover uma divisão.
+A estrutura chama essa função de membro sempre que o usuário redimensiona a janela divisora ou move uma divisão.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
-  Veja o exemplo de [CSplitterWnd::SetColumnInfo](#setcolumninfo).
+  Consulte o exemplo de [CSplitterWnd:: SetColumnInfo](#setcolumninfo).
 
-##  <a name="setactivepane"></a>  CSplitterWnd::SetActivePane
+##  <a name="setactivepane"></a>CSplitterWnd:: SetActivePane
 
-Define um painel para ser o Active Directory no quadro.
+Define um painel para ser o ativo no quadro.
 
 ```
 virtual void SetActivePane(
@@ -878,23 +878,23 @@ virtual void SetActivePane(
 ### <a name="parameters"></a>Parâmetros
 
 *row*<br/>
-Se *Apropriei* for NULL, que especifica a linha no painel de ativos.
+Se *pWnd* for NULL, especificará a linha no painel que estará ativo.
 
 *col*<br/>
-Se *Apropriei* for NULL, que especifica a coluna no painel de ativos.
+Se *pWnd* for NULL, especificará a coluna no painel que estará ativa.
 
 *pWnd*<br/>
-Um ponteiro para um `CWnd` objeto. Se for NULL, o painel especificado por *linha* e *col* seja definida como ativa. Se não for NULL, especifica o painel que seja definido como ativo.
+Um ponteiro para um objeto `CWnd`. Se for NULL, o painel especificado por *Row* e *Col* será definido como ativo. Se não for NULL, especifica o painel definido como ativo.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro é chamada pelo framework para definir um painel como ativa quando o usuário altera o foco para um painel dentro da janela de quadro. Você pode chamar explicitamente `SetActivePane` para alterar o foco para a exibição especificada.
+Essa função de membro é chamada pela estrutura para definir um painel como ativo quando o usuário altera o foco para um painel dentro da janela do quadro. Você pode chamar `SetActivePane` explicitamente para alterar o foco para a exibição especificada.
 
-Especifique o painel, fornecendo linha e coluna, **ou** fornecendo *Apropriei*.
+Especifique o painel fornecendo a linha e a coluna **ou** fornecendo *pWnd*.
 
-##  <a name="setcolumninfo"></a>  CSplitterWnd::SetColumnInfo
+##  <a name="setcolumninfo"></a>CSplitterWnd:: SetColumnInfo
 
-Chamada para definir as informações da coluna especificada.
+Chame para definir as informações de coluna especificadas.
 
 ```
 void SetColumnInfo(
@@ -906,27 +906,27 @@ void SetColumnInfo(
 ### <a name="parameters"></a>Parâmetros
 
 *col*<br/>
-Especifica uma coluna de janela do divisor.
+Especifica uma coluna de janela de Splitter.
 
 *cxIdeal*<br/>
-Especifica uma largura ideal da coluna da janela de divisor em pixels.
+Especifica uma largura ideal para a coluna de janela de Splitter em pixels.
 
 *cxMin*<br/>
-Especifica uma largura mínima da coluna da janela de divisor em pixels.
+Especifica uma largura mínima para a coluna de janela do separador em pixels.
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função de membro para definir uma nova largura mínima e a largura ideal para uma coluna. O valor mínimo da coluna determina quando a coluna será muito pequena para ser exibido.
+Chame essa função de membro para definir uma nova largura mínima e uma largura ideal para uma coluna. O valor mínimo da coluna determina quando a coluna será muito pequena para ser totalmente exibida.
 
-Quando o framework exibe a janela do divisor, ele apresenta os painéis em colunas e linhas de acordo com suas dimensões ideais, trabalhando no canto superior esquerdo para o canto inferior direito da área de cliente da janela separadora.
+Quando a estrutura exibe a janela separadora, ela apresenta os painéis em colunas e linhas de acordo com suas dimensões ideais, trabalhando do canto superior esquerdo para o lado inferior direito da área do cliente da janela do divisor.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 [!code-cpp[NVC_MFCWindowing#6](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_4.cpp)]
 
-##  <a name="setrowinfo"></a>  CSplitterWnd::SetRowInfo
+##  <a name="setrowinfo"></a>CSplitterWnd:: SetRowInfo
 
-Chamada para definir as informações da linha especificada.
+Chame para definir as informações de linha especificadas.
 
 ```
 void SetRowInfo(
@@ -938,23 +938,23 @@ void SetRowInfo(
 ### <a name="parameters"></a>Parâmetros
 
 *row*<br/>
-Especifica uma linha da janela de divisor.
+Especifica uma linha de janela de Splitter.
 
 *cyIdeal*<br/>
-Especifica uma altura ideal da linha da janela de divisor em pixels.
+Especifica uma altura ideal para a linha da janela do separador em pixels.
 
 *cyMin*<br/>
-Especifica uma altura mínima da linha da janela de divisor em pixels.
+Especifica uma altura mínima para a linha de janela do separador em pixels.
 
 ### <a name="remarks"></a>Comentários
 
-Chame essa função de membro para definir uma nova altura mínima e a altura ideal para uma linha. O valor mínimo da linha determina quando uma linha será muito pequena para ser exibido.
+Chame essa função de membro para definir uma nova altura mínima e uma altura ideal para uma linha. O valor mínimo da linha determina quando a linha será muito pequena para ser totalmente exibida.
 
-Quando o framework exibe a janela do divisor, ele apresenta os painéis em colunas e linhas de acordo com suas dimensões ideais, trabalhando no canto superior esquerdo para o canto inferior direito da área de cliente da janela separadora.
+Quando a estrutura exibe a janela separadora, ela apresenta os painéis em colunas e linhas de acordo com suas dimensões ideais, trabalhando do canto superior esquerdo para o lado inferior direito da área do cliente da janela do divisor.
 
-##  <a name="setscrollstyle"></a>  CSplitterWnd::SetScrollStyle
+##  <a name="setscrollstyle"></a>CSplitterWnd:: SetScrollStyle
 
-Especifica que o novo estilo de rolagem da janela de divisor compartilhada suporte a barra de rolagem.
+Especifica o novo estilo de rolagem para o suporte à barra de rolagem compartilhada da janela de divisão.
 
 ```
 void SetScrollStyle(DWORD dwStyle);
@@ -963,17 +963,17 @@ void SetScrollStyle(DWORD dwStyle);
 ### <a name="parameters"></a>Parâmetros
 
 *dwStyle*<br/>
-O novo estilo de rolagem da janela de divisor compartilhado suporte a barra de rolagem, que pode ser um dos seguintes valores:
+O novo estilo de rolagem para o suporte à barra de rolagem compartilhada da janela de divisão, que pode ser um dos seguintes valores:
 
-- WS_HSCROLL criar/Mostrar horizontal compartilhado barras de rolagem.
+- WS_HSCROLL criar/Mostrar barras de rolagem compartilhadas horizontais.
 
-- WS_VSCROLL criar/Mostrar vertical compartilhado barras de rolagem.
+- WS_VSCROLL criar/Mostrar barras de rolagem compartilhada vertical.
 
 ### <a name="remarks"></a>Comentários
 
-Depois que uma barra de rolagem é criada ele não será destruído, mesmo se `SetScrollStyle` for chamado sem esse estilo; em vez disso, essas barras de rolagem estão ocultos. Isso permite que as barras de rolagem manter seu estado, mesmo que eles estejam ocultos. Depois de chamar `SetScrollStyle` é necessário chamar [RecalcLayout](#recalclayout) para todas as alterações entrem em vigor.
+Depois que uma barra de rolagem é criada, ela não será destruída mesmo se `SetScrollStyle` for chamado sem esse estilo; em vez disso, essas barras de rolagem ficam ocultas. Isso permite que as barras de rolagem retenham seu estado, mesmo que estejam ocultas. Depois de chamar `SetScrollStyle` é necessário chamar [RecalcLayout](#recalclayout) para que todas as alterações entrem em vigor.
 
-##  <a name="splitcolumn"></a>  CSplitterWnd::SplitColumn
+##  <a name="splitcolumn"></a>CSplitterWnd:: SplitColumn
 
 Indica onde uma janela do quadro se divide verticalmente.
 
@@ -984,19 +984,19 @@ virtual BOOL SplitColumn(int cxBefore);
 ### <a name="parameters"></a>Parâmetros
 
 *cxBefore*<br/>
-A posição, em pixels, antes que a divisão ocorre.
+A posição, em pixels, antes da qual a divisão ocorre.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro é chamada quando uma janela divisora vertical é criada. `SplitColumn` indica o local padrão onde a divisão ocorre.
+Essa função de membro é chamada quando uma janela de divisor vertical é criada. `SplitColumn` indica o local padrão onde a divisão ocorre.
 
-`SplitColumn` é chamado pelo framework para implementar a lógica da janela divisora dinâmica (ou seja, se a janela divisora tem o estilo SPLS_DYNAMIC_SPLIT). Ele pode ser personalizado, junto com a função virtual [CreateView](#createview), para implementar divisores dinâmicos mais avançados.
+`SplitColumn` é chamado pelo Framework para implementar a lógica da janela separadora dinâmica (ou seja, se a janela do separador tiver o estilo de SPLS_DYNAMIC_SPLIT). Ele pode ser personalizado, juntamente com a função virtual [CreateView](#createview), para implementar divisores dinâmicos mais avançados.
 
-##  <a name="splitrow"></a>  CSplitterWnd::SplitRow
+##  <a name="splitrow"></a>CSplitterWnd:: SplitRow
 
 Indica onde uma janela do quadro se divide horizontalmente.
 
@@ -1007,21 +1007,21 @@ virtual BOOL SplitRow(int cyBefore);
 ### <a name="parameters"></a>Parâmetros
 
 *cyBefore*<br/>
-A posição, em pixels, antes que a divisão ocorre.
+A posição, em pixels, antes da qual a divisão ocorre.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro é chamada quando uma janela divisora horizontal é criada. `SplitRow` indica o local padrão onde a divisão ocorre.
+Essa função de membro é chamada quando uma janela divisória horizontal é criada. `SplitRow` indica o local padrão onde a divisão ocorre.
 
-`SplitRow` é chamado pelo framework para implementar a lógica da janela divisora dinâmica (ou seja, se a janela divisora tem o estilo SPLS_DYNAMIC_SPLIT). Ele pode ser personalizado, junto com a função virtual [CreateView](#createview), para implementar divisores dinâmicos mais avançados.
+`SplitRow` é chamado pelo Framework para implementar a lógica da janela separadora dinâmica (ou seja, se a janela do separador tiver o estilo de SPLS_DYNAMIC_SPLIT). Ele pode ser personalizado, juntamente com a função virtual [CreateView](#createview), para implementar divisores dinâmicos mais avançados.
 
-##  <a name="ondraw"></a>  CSplitterWnd::OnDraw
+##  <a name="ondraw"></a>CSplitterWnd:: OnDraw
 
-Chamado pelo framework para desenhar a janela separadora.
+Chamado pelo Framework para desenhar a janela separadora.
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -1036,7 +1036,7 @@ Um ponteiro para um contexto de dispositivo.
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC VIEWEX](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo de VIEWEX do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CView](../../mfc/reference/cview-class.md)<br/>

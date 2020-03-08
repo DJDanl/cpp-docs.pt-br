@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 ms.openlocfilehash: e347bdba1656a53cd705123a26650dad50d3892f
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927765"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857126"
 ---
 # <a name="iregistrar-interface"></a>Interface IRegistrar
 
@@ -38,24 +38,24 @@ Consulte o tópico [usando parâmetros substituíveis (o pré-processador do reg
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Registra o recurso. |
-|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Cancela o registro do recurso.|
-|[IRegistrar::FileRegister](#fileregister)|Registra o arquivo.|
-|[IRegistrar::FileUnregister](#fileunregister)|Cancela o registro do arquivo.|
-|[IRegistrar::StringRegister](#stringregister)|Registra a cadeia de caracteres.|
-|[IRegistrar::StringUnregister](#stringunregister)|Cancela o registro da cadeia de caracteres|
-|[IRegistrar::ResourceRegister](#resourceregister)|Registra o recurso.|
-|[IRegistrar::ResourceUnregister](#resourceunregister)|Cancela o registro do recurso.|
+|[IRegistrar:: ResourceRegisterSz](#resourceregistersz)|Registra o recurso. |
+|[IRegistrar:: ResourceUnregisterSz](#resourceunregistersz)| Cancela o registro do recurso.|
+|[IRegistrar:: FileRegister](#fileregister)|Registra o arquivo.|
+|[IRegistrar:: FileUnregister](#fileunregister)|Cancela o registro do arquivo.|
+|[IRegistrar:: StringRegister](#stringregister)|Registra a cadeia de caracteres.|
+|[IRegistrar:: StringUnregister](#stringunregister)|Cancela o registro da cadeia de caracteres|
+|[IRegistrar:: ResourceRegister](#resourceregister)|Registra o recurso.|
+|[IRegistrar:: ResourceUnregister](#resourceunregister)|Cancela o registro do recurso.|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** atlifase. h
 
-##  <a name="resourceregistersz"></a>  IRegistrar::ResourceRegisterSz
+##  <a name="resourceregistersz"></a>IRegistrar:: ResourceRegisterSz
 
 Registra o recurso.
 
@@ -66,7 +66,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="resourceunregistersz"></a>  IRegistrar::ResourceUnregisterSz
+##  <a name="resourceunregistersz"></a>IRegistrar:: ResourceUnregisterSz
 
 Cancela o registro do recurso.
 
@@ -77,7 +77,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="fileregister"></a>  IRegistrar::FileRegister
+##  <a name="fileregister"></a>IRegistrar:: FileRegister
 
 Registra o arquivo.
 
@@ -86,7 +86,7 @@ virtual HRESULT STDMETHODCALLTYPE FileRegister(
     /* [in] */ _In_z_ LPCOLESTR fileName) = 0;
 ```
 
-##  <a name="fileunregister"></a>  IRegistrar::FileUnregister
+##  <a name="fileunregister"></a>IRegistrar:: FileUnregister
 
 Cancela o registro do arquivo.
 
@@ -95,7 +95,7 @@ virtual HRESULT STDMETHODCALLTYPE FileUnregister(
     /* [in] */ _In_z_ LPCOLESTR fileName) = 0;
 ```
 
-##  <a name="stringregister"></a>  IRegistrar::StringRegister
+##  <a name="stringregister"></a>IRegistrar:: StringRegister
 
 Registra os dados de cadeia de caracteres especificados.
 
@@ -113,7 +113,7 @@ virtualHRESULT STDMETHODCALLTYPE StringUnregister(
     /* [in] */ _In_z_ LPCOLESTR data) = 0;
 ```
 
-##  <a name="resourceregister"></a>  IRegistrar::ResourceRegister
+##  <a name="resourceregister"></a>IRegistrar:: ResourceRegister
 
 Registra o recurso.
 
@@ -124,7 +124,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="resourceunregister"></a>  IRegistrar::ResourceUnregister
+##  <a name="resourceunregister"></a>IRegistrar:: ResourceUnregister
 
 Cancela o registro do recurso.
 

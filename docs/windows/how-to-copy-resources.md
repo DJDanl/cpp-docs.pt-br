@@ -1,5 +1,5 @@
 ---
-title: 'Como: Gerenciar recursos (C++)'
+title: 'Como: gerenciar recursos (C++)'
 ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
@@ -31,13 +31,13 @@ helpviewer_keywords:
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
 ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740660"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890922"
 ---
-# <a name="how-to-manage-resources-c"></a>Como: Gerenciar recursos (C++)
+# <a name="how-to-manage-resources-c"></a>Como: gerenciar recursos (C++)
 
 ## <a name="copy-and-edit-resources"></a>Copiar e editar recursos
 
@@ -46,7 +46,7 @@ Você pode copiar recursos de um arquivo para outro sem alterá-los ou alterar o
 Você pode copiar facilmente recursos de um arquivo executável ou recurso existente para o arquivo de recurso atual. Para copiar recursos, abra os dois arquivos que contêm recursos ao mesmo tempo e arraste os itens de um arquivo para outro ou copie e cole entre os dois arquivos. Esse método funciona para arquivos de script de recurso (. rc) e de modelo de recurso (. rct) e como arquivos executáveis (. exe).
 
 > [!NOTE]
-> O C++ Visual inclui arquivos de recurso de exemplo que você pode usar em seu próprio aplicativo. Para obter mais informações, [consulte clipart: Recursos](https://github.com/Microsoft/VCSamples)comuns.
+> O C++ Visual inclui arquivos de recurso de exemplo que você pode usar em seu próprio aplicativo. Para obter mais informações, consulte [ClipArt: recursos comuns](https://github.com/Microsoft/VCSamples).
 
 Você não pode arrastar e soltar, copiar, recortar ou colar entre arquivos de recursos no projeto (**modo de exibição de recursos**) e arquivos autônomos. rc abertos em janelas de documentos. Você pode fazer isso em versões anteriores do produto. Use apenas o método arrastar e soltar entre arquivos. RC que estão abertos fora do projeto.
 
@@ -80,7 +80,7 @@ Ao copiar em um recurso, você pode alterar sua propriedade de linguagem ou prop
 
 - A condição de um recurso é um símbolo definido que identifica uma condição sob a qual essa cópia específica do recurso deve ser usada.
 
-O idioma e a condição de um recurso são mostrados entre parênteses após o nome do recurso na janela do **espaço de trabalho** . Aqui, o recurso `IDD_AboutBox` nomeado está `Finnish` usando como seu idioma e sua condição `XX33`é:
+O idioma e a condição de um recurso são mostrados entre parênteses após o nome do recurso na janela do **espaço de trabalho** . Aqui, o recurso chamado `IDD_AboutBox` está usando `Finnish` como seu idioma e sua condição é `XX33`:
 
 ```cpp
 IDD_AboutBox (Finnish - XX33)
@@ -122,12 +122,12 @@ Você pode importar recursos gráficos (bitmaps, ícones, cursores e barras de f
 
 1. Navegue até a pasta onde você deseja salvar o arquivo e selecione **Exportar**.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 Win32
 
 ## <a name="see-also"></a>Consulte também
 
 [Arquivos de recurso](../windows/resource-files-visual-studio.md)<br/>
-[Como: Criar recursos](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Como: incluir recursos em tempo de compilação](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[Como: criar recursos](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Como incluir recursos em tempo de compilação](../windows/how-to-include-resources-at-compile-time.md)<br/>

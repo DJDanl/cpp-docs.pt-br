@@ -4,11 +4,11 @@ description: Como criar, configurar, editar e compilar um projeto CMake do Linux
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
 ms.openlocfilehash: 9c6a60162c2dbbab8e348b27d1987d7f1001bee0
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416084"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865613"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Criar e configurar um projeto do Linux CMake
 
@@ -223,7 +223,7 @@ Essas opções permitem que você execute comandos no sistema Linux antes e depo
 
 
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Trabalhando com Propriedades do Projeto](../build/working-with-project-properties.md)<br/>
 [Projetos do CMake no Visual Studio](../build/cmake-projects-in-visual-studio.md)<br/>

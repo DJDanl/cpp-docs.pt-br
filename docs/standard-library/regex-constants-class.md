@@ -83,13 +83,13 @@ helpviewer_keywords:
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
 ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451663"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876121"
 ---
-# <a name="regexconstants-namespace"></a>regex_constants namespace
+# <a name="regex_constants-namespace"></a>regex_constants namespace
 
 Namespace para sinalizadores de expressão regular.
 
@@ -113,9 +113,9 @@ O namespace `regex_constants` encapsula vários tipos de sinalizador e seus valo
 |[match_flag_type](#match_flag_type)|Sinalizadores para opções de correspondência de expressões regulares.|
 |[syntax_option_type](#syntax_option_type)|Sinalizadores para a seleção de opções de sintaxe.|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** \<regex>
+**Cabeçalho:** \<Regex >
 
 **Namespace:** std
 
@@ -291,10 +291,10 @@ Os modificadores de sintaxe são:
 ## <a name="see-also"></a>Consulte também
 
 [\<regex>](../standard-library/regex.md)\
-[Classe regex_error](../standard-library/regex-error-class.md)\
-[\<funções > Regex](../standard-library/regex-functions.md)\
-[Classe regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<operadores de > Regex](../standard-library/regex-operators.md)\
-[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
-[Classe regex_traits](../standard-library/regex-traits-class.md)\
+[classe de regex_error](../standard-library/regex-error-class.md)\
+[\<funções > regex](../standard-library/regex-functions.md)\
+[classe de regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<> de operadores regex](../standard-library/regex-operators.md)\
+[classe de regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[classe de regex_traits](../standard-library/regex-traits-class.md)\
 [\<Typedef regex>](../standard-library/regex-typedefs.md)

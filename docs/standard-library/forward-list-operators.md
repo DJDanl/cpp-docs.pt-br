@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
 ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689681"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874750"
 ---
 # <a name="ltforward_listgt-operators"></a>Operadores &lt;forward_list&gt;
 
@@ -99,7 +99,7 @@ Um objeto do tipo `forward_list`.
 
 Essa função de modelo sobrecarrega `operator<` para comparar dois objetos do modelo de classe `forward_list`. A função retorna `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
 
-## <a name="op_lt_eq"></a>= de &lt; do operador
+## <a name="op_lt_eq"></a>= de&lt;do operador
 
 Testa se o objeto da lista de encaminhamento à esquerda do operador é menor ou igual ao objeto da lista de encaminhamento à direita.
 
@@ -151,7 +151,7 @@ Um objeto do tipo `forward_list`.
 
 Esta função do modelo retorna `right < left`.
 
-## <a name="op_gt_eq"></a>= de &gt; do operador
+## <a name="op_gt_eq"></a>= de&gt;do operador
 
 Testa se o objeto da lista de encaminhamento à esquerda do operador é maior ou igual ao objeto da lista de encaminhamento à direita.
 

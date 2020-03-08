@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
 ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142006"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867114"
 ---
 # <a name="scheduler-class"></a>Classe Scheduler
 
@@ -56,7 +56,7 @@ class Scheduler;
 |[CreateSchedule](#createschedulegroup)|Sobrecarregado. Cria um novo grupo de agendamento dentro do Agendador. A versão que usa o parâmetro `_Placement` faz com que as tarefas dentro do grupo de agendamento recém-criado sejam ajustadas em direção à execução no local especificado por esse parâmetro.|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Retorna o número atual de processadores virtuais para o Agendador.|
 |[GetPolicy](#getpolicy)|Retorna uma cópia da política com a qual o Agendador foi criado.|
-|[Id](#id)|Retorna um identificador exclusivo para o Agendador.|
+|[ID](#id)|Retorna um identificador exclusivo para o Agendador.|
 |[IsAvailableLocation](#isavailablelocation)|Determina se um determinado local está disponível no Agendador.|
 |[Referência](#reference)|Incrementa a contagem de referência do Agendador.|
 |[RegisterShutdownEvent](#registershutdownevent)|Faz com que o identificador de evento do Windows passado no parâmetro `_Event` seja sinalizado quando o Agendador é desligado e se destrói. No momento em que o evento é sinalizado, todo o trabalho que foi agendado para o Agendador é concluído. Vários eventos de desligamento podem ser registrados por meio desse método.|

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - else keyword [C++]
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 ms.openlocfilehash: 0e9de2d39e09e148c7e4f3ea82c3dadb173c2d0c
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661633"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884138"
 ---
 # <a name="if-else-statement-c"></a>Instrução if-else (C++)
 
@@ -64,7 +64,7 @@ else  // optional
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // if_else_statement.cpp
@@ -113,9 +113,9 @@ int main()
 
 ## <a name="if_with_init"></a>instrução If com um inicializador
 
-**Visual Studio 2017 versão 15,3 e posterior** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Uma instrução **If** também pode conter uma expressão que declara e Inicializa uma variável nomeada. Use essa forma da instrução If-quando a variável só for necessária dentro do escopo do bloco If.
+**Visual Studio 2017 versão 15,3 e posterior** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): uma instrução **If** também pode conter uma expressão que declara e Inicializa uma variável nomeada. Use essa forma da instrução If-quando a variável só for necessária dentro do escopo do bloco If.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 #include <iostream>
@@ -161,11 +161,11 @@ int main()
 
 Em todas as formas da instrução **If** , a *expressão*, que pode ter qualquer valor, exceto uma estrutura, é avaliada, incluindo todos os efeitos colaterais. O controle passa da instrução **If** para a próxima instrução no programa, a menos que um dos s da *instrução*contenha um [Break](../cpp/break-statement-cpp.md), [continue](../cpp/continue-statement-cpp.md)ou [goto](../cpp/goto-statement-cpp.md).
 
-A cláusula **else** de uma `if...else` instrução é associada à instrução **If** anterior mais próxima no mesmo escopo que não tem uma instrução **else** correspondente.
+A cláusula **else** de uma instrução `if...else` é associada à instrução **If** anterior mais próxima no mesmo escopo que não tem uma instrução **else** correspondente.
 
-## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr">instruções constexpr If
+## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr"> se as instruções constexpr
 
-**Visual Studio 2017 versão 15,3 e posterior** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Nos modelos de função, você pode usar uma instrução **If constexpr** para tomar decisões de ramificação em tempo de compilação sem a necessidade de recorrer a várias sobrecargas de função. Por exemplo, você pode escrever uma única função que manipula o desempacotamento de parâmetro (nenhuma sobrecarga de parâmetro zero é necessária):
+**Visual Studio 2017 versão 15,3 e posterior** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): em modelos de função, você pode usar uma instrução **If constexpr** para tomar decisões de ramificação em tempo de compilação sem a necessidade de recorrer a várias sobrecargas de função. Por exemplo, você pode escrever uma única função que manipula o desempacotamento de parâmetro (nenhuma sobrecarga de parâmetro zero é necessária):
 
 ```cpp
 template <class T, class... Rest>
