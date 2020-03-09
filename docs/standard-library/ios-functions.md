@@ -57,11 +57,11 @@ helpviewer_keywords:
 - std::unitbuf [C++]
 - std::uppercase [C++]
 ms.openlocfilehash: c3b1e2350d0923cbfddf95492842ae126859e29f
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890066"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856450"
 ---
 # <a name="ltiosgt-functions"></a>Funções &lt;ios&gt;
 
@@ -180,12 +180,12 @@ ios_base& defaultfloat(ios_base& iosbase);
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *_Iosbase*
+*_Iosbase*\
 Um objeto `ios_base`.
 
 ### <a name="remarks"></a>Comentários
 
-O manipulador chama efetivamente `iosbase.`[ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`e, em seguida, retorna *iosbase*.
+O manipulador chama efetivamente `iosbase.`[ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`, em seguida, retorna *iosbase*.
 
 ## <a name="fixed"></a>fixado
 
@@ -962,7 +962,7 @@ Uma referência ao objeto do qual o *Str* é derivado.
 
 Por padrão, [nouppercase](../standard-library/ios-functions.md#nouppercase) está em vigor.
 
-O manipulador chama efetivamente `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: maiúsculo](../standard-library/ios-base-class.md#fmtflags)`)`e, em seguida, retorna *Str*.
+O manipulador chama efetivamente `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: maiúscula](../standard-library/ios-base-class.md#fmtflags)`)`e, em seguida, retorna *Str*.
 
 ### <a name="example"></a>Exemplo
 

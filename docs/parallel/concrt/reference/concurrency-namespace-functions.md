@@ -34,11 +34,11 @@ f1_keywords:
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
 ms.openlocfilehash: 4005ae888511ec987fe83ab3d616aa0fc3675a22
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143252"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854114"
 ---
 # <a name="concurrency-namespace-functions"></a>Funções do namespace de simultaneidade
 
@@ -1491,7 +1491,7 @@ void __cdecl set_task_execution_resources(
 *_ProcessAffinityMask*<br/>
 A máscara de afinidade à qual o Tempo de Execução de Simultaneidade threads de trabalho deve ser restringido. Use esse método em um sistema com mais de 64 threads de hardware somente se você quiser limitar o Tempo de Execução de Simultaneidade a um subconjunto do grupo de processadores atual. Em geral, você deve usar a versão do método que aceita uma matriz de afinidades de grupo como um parâmetro, para restringir a afinidade em máquinas com mais de 64 threads de hardware.
 
-*contagem*<br/>
+*count*<br/>
 O número de entradas de `GROUP_AFFINITY` na matriz especificada pelo parâmetro `_PGroupAffinity`.
 
 *_PGroupAffinity*<br/>

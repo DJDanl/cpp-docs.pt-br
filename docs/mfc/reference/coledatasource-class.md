@@ -37,11 +37,11 @@ helpviewer_keywords:
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
 ms.openlocfilehash: 5cd573590bc1adb303e0b4c5cd600b9fa6c685b2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127849"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855704"
 ---
 # <a name="coledatasource-class"></a>Classe COleDataSource
 
@@ -57,13 +57,13 @@ class COleDataSource : public CCmdTarget
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[COleDataSource:: COleDataSource](#coledatasource)|Constrói um objeto `COleDataSource`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[COleDataSource:: CacheData](#cachedata)|Oferece dados em um formato especificado usando uma estrutura de `STGMEDIUM`.|
 |[COleDataSource:: CacheGlobalData](#cacheglobaldata)|Oferece dados em um formato especificado usando um HGLOBAL.|
@@ -96,7 +96,7 @@ Para obter mais informações sobre fontes de dados e transferência de dados, c
 
 `COleDataSource`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Afxole. h
 
@@ -486,7 +486,7 @@ Coloca os dados contidos no objeto `COleDataSource` na área de transferência d
 void SetClipboard();
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Exemplo de HIERSVR do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Exemplo de OCLIENT do MFC](../../overview/visual-cpp-samples.md)<br/>
