@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
 ms.openlocfilehash: f6be846e80209ce94c84222d61c37a7964baad03
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127503"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855417"
 ---
 # <a name="cview-class"></a>Classe Cvisualização
 
@@ -71,15 +71,15 @@ class AFX_NOVTABLE CView : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="protected-constructors"></a>Construtores protegidos
+### <a name="protected-constructors"></a>Construtores Protegidos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[Cvisualização:: Cvisualização](#cview)|Constrói um objeto `CView`.|
 
-### <a name="public-methods"></a>Métodos públicos
+### <a name="public-methods"></a>Métodos Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[Cvisualização::D oPreparePrinting](#doprepareprinting)|Exibe a caixa de diálogo Imprimir e cria o contexto do dispositivo de impressora; Chame ao substituir a função membro `OnPreparePrinting`.|
 |[Cvisualização:: GetDocument](#getdocument)|Retorna o documento associado à exibição.|
@@ -95,9 +95,9 @@ class AFX_NOVTABLE CView : public CWnd
 |[Cvisualização:: OnScroll](#onscroll)|Chamado quando itens OLE são arrastados além das bordas da exibição.|
 |[Cvisualização:: OnScrollBy](#onscrollby)|Chamado quando uma exibição que contém itens OLE no local ativo é rolada.|
 
-### <a name="protected-methods"></a>Métodos protegidos
+### <a name="protected-methods"></a>Métodos Protegidos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[Cvisualização:: OnActivateFrame](#onactivateframe)|Chamado quando a janela do quadro que contém a exibição é ativada ou desativada.|
 |[Cvisualização:: OnActivateView](#onactivateview)|Chamado quando uma exibição é ativada.|
@@ -159,7 +159,7 @@ A classe `CView` também tem uma classe de implementação derivada chamada `CPr
 
 `CView`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Afxwin. h
 
@@ -676,7 +676,7 @@ Substitua `OnPrepareDC` por qualquer um dos seguintes motivos:
 
 Chame a versão da classe base do `OnPrepareDC` no início da sua substituição.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#183](../../mfc/codesnippet/cpp/cview-class_1.cpp)]
 
@@ -709,7 +709,7 @@ Se você precisar executar inicializações que exigem acesso ao objeto `CDC` qu
 
 Se você quiser definir o valor do `m_nNumPreviewPages` ou `m_strPageDesc` membros do parâmetro *pInfo* , faça isso depois de chamar `DoPreparePrinting`. A função membro `DoPreparePrinting` define `m_nNumPreviewPages` para o valor encontrado no aplicativo. Arquivo INI e define `m_strPageDesc` para o valor padrão.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Substitua `OnPreparePrinting` e chame `DoPreparePrinting` da substituição para que a estrutura exiba uma caixa de diálogo de impressão e crie um DC de impressora para você.
 
@@ -755,7 +755,7 @@ Observe que o membro `m_rectDraw` do parâmetro *pInfo* descreve a área imprim�
 
 Não chame `OnPrepareDC` em sua substituição de `OnPrint`; a estrutura chama `OnPrepareDC` automaticamente antes de chamar `OnPrint`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Este é um esqueleto para uma função de `OnPrint` substituída:
 
@@ -869,7 +869,7 @@ Normalmente, você não deve executar nenhum desenho diretamente do `OnUpdate`. 
 
 Se *lHint* for 0 e *pHint* for NULL, o documento enviará uma notificação de atualização genérica. Se uma exibição receber uma notificação de atualização genérica ou se não puder decodificar as dicas, ela deverá invalidar a área inteira do cliente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Exemplo de MDIDOCVW do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>

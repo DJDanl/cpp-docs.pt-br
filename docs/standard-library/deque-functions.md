@@ -5,15 +5,15 @@ f1_keywords:
 - deque/std::swap
 ms.assetid: 1d14be53-b0b7-4f66-90cc-65bdeac563fd
 ms.openlocfilehash: e1bbdb864aabf892ca34860911412e4cf737e8cd
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245670"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883779"
 ---
 # <a name="ltdequegt-functions"></a>Funções &lt;deque&gt;
 
-## <a name="swap"></a> troca
+## <a name="swap"></a>permuta
 
 Troca os elementos dos dois deques.
 
@@ -25,10 +25,10 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*À esquerda*\
+\ *à esquerda*
 Um objeto do tipo `deque`.
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo `deque`.
 
 ### <a name="example"></a>Exemplo

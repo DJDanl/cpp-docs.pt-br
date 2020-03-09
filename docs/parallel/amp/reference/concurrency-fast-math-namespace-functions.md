@@ -47,11 +47,11 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::trunc
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
 ms.openlocfilehash: 3652e02d9f3ff7b09ee7334dba20188e40344cb5
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127001"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865464"
 ---
 # <a name="concurrencyfast_math-namespace-functions"></a>Funções do namespace Concurrency::fast_math
 
@@ -1273,10 +1273,10 @@ Valor de ponto flutuante
 
 Retorna o componente de inteiro do argumento
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** namespace amp_math. h **:** Concurrency:: fast_math
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Namespace Concurrency::fast_math](concurrency-fast-math-namespace.md)

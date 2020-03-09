@@ -3,11 +3,11 @@ title: Tipos literal, POD, layout padrão e trivial
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
 ms.openlocfilehash: 2745302b3ebd7927e9d839e4661e884a2bd91042
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
-ms.translationtype: HT
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934205"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865763"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Tipos literal, POD, layout padrão e trivial
 
@@ -193,6 +193,6 @@ Um tipo literal é aquele cujo layout pode ser determinado no tempo de compilaç
 - Matrizes de void, tipos escalares ou referências
 - Uma classe que tem um destruidor trivial e um ou mais construtores constexpr que não são construtores de cópia ou movimento. Além disso, todos os seus membros de dados não estáticos e classes base devem ser tipos literais e não voláteis.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Conceitos básicos](../cpp/basic-concepts-cpp.md)
