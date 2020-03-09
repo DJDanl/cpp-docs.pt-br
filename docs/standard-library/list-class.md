@@ -99,11 +99,11 @@ helpviewer_keywords:
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 ms.openlocfilehash: d5f64f44ec62a8bd1862af2b8f9cb72b2d0210e4
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687833"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890831"
 ---
 # <a name="list-class"></a>Classe list
 
@@ -118,11 +118,11 @@ class list
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo* \
+*Tipo*\
 O tipo de dados do elemento a ser armazenado na lista.
 
-@No__t_1 de *alocador*
-O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória da lista. Esse argumento é opcional e o valor padrão é **alocador** \<*tipo*>.
+\ de *alocador*
+O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória da lista. Esse argumento é opcional e o valor padrão é **alocador**\<*tipo*>.
 
 ## <a name="remarks"></a>Comentários
 
@@ -132,7 +132,7 @@ As funções de membro da lista [mesclar](#merge), [inverter](#reverse), [exclus
 
 A realocação da lista ocorre quando uma função de membro deve inserir ou apagar elementos da lista. Nesses casos, somente iteradores ou referências que apontem para partes apagadas da sequência controladas tornam-se inválidos.
 
-Inclua o C++ cabeçalho Standard da biblioteca padrão \<list > para definir a lista de modelos da classe de [contêiner](../standard-library/stl-containers.md) e vários modelos de suporte.
+Inclua o C++ cabeçalho Standard de biblioteca padrão \<lista > para definir a lista de modelos de classe de [contêiner](../standard-library/stl-containers.md) e vários modelos de suporte.
 
 ## <a name="members"></a>Membros
 
@@ -244,19 +244,19 @@ void assign(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Primeiro* \
+*Primeiro*\
 Posição do elemento primeiro no intervalo de elementos ser copiado da lista de argumentos.
 
-*Última* \
+*Última*\
 Posição do primeiro elemento além do intervalo de elementos a ser copiado da lista de argumentos.
 
-*Contagem* \
+*Contagem*\
 O número de cópias de um elemento sendo inseridos na lista.
 
-*Valor* \
+*Valor*\
 O valor do elemento sendo inserido na lista.
 
-*IList* \
+*IList*\
 O initializer_list que contém os elementos a serem inseridos.
 
 ### <a name="remarks"></a>Comentários
@@ -331,7 +331,7 @@ O último elemento da lista. Se a lista estiver vazia, o valor de retorno será 
 
 Se o valor de retorno de `back` for atribuído a `const_reference`, o objeto de lista não poderá ser modificado. Se o valor retornado de `back` for atribuído à `reference`, o objeto de lista poderá ser modificado.
 
-Quando compilado usando [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 ou 2, um erro em tempo de execução ocorrerá se você tentar acessar um elemento em uma lista vazia.  Consulte [Iteradores Verificados](../standard-library/checked-iterators.md) para obter mais informações.
+Quando compilado usando [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 ou 2, um erro de runtime ocorrerá se você tentar acessar um elemento em uma lista vazia.  Consulte [Iteradores Verificados](../standard-library/checked-iterators.md) para obter mais informações.
 
 ### <a name="example"></a>Exemplo
 
@@ -757,10 +757,10 @@ void emplace(iterator Where, Type&& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Onde* \
+*Onde*\
 A posição na [lista](../standard-library/list-class.md) de destino em que o primeiro elemento é inserido.
 
-*valor* \
+*valor*\
 O elemento adicionado ao final da `list`.
 
 ### <a name="remarks"></a>Comentários
@@ -801,7 +801,7 @@ void emplace_back(Type&& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*valor* \
+*valor*\
 O elemento adicionado ao final da [lista](../standard-library/list-class.md).
 
 ### <a name="remarks"></a>Comentários
@@ -842,7 +842,7 @@ void emplace_front(Type&& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*valor* \
+*valor*\
 O elemento adicionado ao início da [lista](../standard-library/list-class.md).
 
 ### <a name="remarks"></a>Comentários
@@ -981,13 +981,13 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Onde* \
+*Onde*\
 Posição do elemento a ser removido da lista.
 
-*primeiro* \
+*primeiro*\
 Posição do primeiro elemento removido da lista.
 
-*última* \
+*última*\
 Posição além do último elemento removido da lista.
 
 ### <a name="return-value"></a>Valor retornado
@@ -1062,7 +1062,7 @@ Se a lista estiver vazia, o retorno será indefinido.
 
 Se o valor de retorno de `front` for atribuído a `const_reference`, o objeto de lista não poderá ser modificado. Se o valor retornado de `front` for atribuído à `reference`, o objeto de lista poderá ser modificado.
 
-Quando compilado usando [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 ou 2, um erro em tempo de execução ocorrerá se você tentar acessar um elemento em uma lista vazia.  Consulte [Iteradores Verificados](../standard-library/checked-iterators.md) para obter mais informações.
+Quando compilado usando [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 ou 2, um erro de runtime ocorrerá se você tentar acessar um elemento em uma lista vazia.  Consulte [Iteradores Verificados](../standard-library/checked-iterators.md) para obter mais informações.
 
 ### <a name="example"></a>Exemplo
 
@@ -1149,19 +1149,19 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Onde* \
+*Onde*\
 A posição na lista de destino em que o primeiro elemento é inserido.
 
-*Valor* \
+*Valor*\
 O valor do elemento sendo inserido na lista.
 
-*Contagem* \
+*Contagem*\
 O número de elementos sendo inseridos na lista.
 
-*Primeiro* \
+*Primeiro*\
 A posição do primeiro elemento no intervalo de elementos na lista de argumentos a ser copiada.
 
-*Última* \
+*Última*\
 A posição do primeiro elemento além do intervalo de elementos na lista de argumentos a ser copiada.
 
 ### <a name="return-value"></a>Valor retornado
@@ -1278,25 +1278,25 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Al* \
+*Al*\
 A classe de alocador a ser usada com esse objeto.
 
-*Contagem* \
+*Contagem*\
 O número de elementos na lista construída.
 
-*Valor* \
+*Valor*\
 O valor dos elementos na lista.
 
-@No__t_1 *à direita*
+\ *à direita*
 A lista da qual a lista construída é uma cópia.
 
-*Primeiro* \
+*Primeiro*\
 A posição do primeiro elemento no intervalo de elementos a serem copiados.
 
-*Última* \
+*Última*\
 A posição do primeiro elemento além do intervalo de elementos a serem copiados.
 
-*IList* \
+*IList*\
 O initializer_list que contém os elementos a serem copiados.
 
 ### <a name="remarks"></a>Comentários
@@ -1459,7 +1459,7 @@ void merge(list<Type, Allocator>& right, Traits comp);
 \ *à direita*
 A lista de argumentos a ser mesclada com a lista de destino.
 
-*comp* \
+*comp*\
 O operador de comparação usado para ordenar os elementos da lista de destino.
 
 ### <a name="remarks"></a>Comentários
@@ -1694,7 +1694,7 @@ void push_back(void push_back(Type&& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*valor* \
+*valor*\
 O elemento adicionado ao final da lista.
 
 ### <a name="remarks"></a>Comentários
@@ -1749,7 +1749,7 @@ void push_front(Type&& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*valor* \
+*valor*\
 O elemento adicionado ao início da lista.
 
 ### <a name="remarks"></a>Comentários
@@ -1910,7 +1910,7 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*valor* \
+*valor*\
 O valor que, se mantido por um elemento, resultará na remoção de tal elemento da lista.
 
 ### <a name="remarks"></a>Comentários
@@ -2119,10 +2119,10 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Parâmetros
 
-@No__t_1 *_Newsize*
+*_Newsize*\
 O novo tamanho da lista.
 
-*valor* \
+*valor*\
 O valor dos novos elementos a serem adicionados à lista, caso o novo tamanho seja maior que o tamanho original. Se o valor for omitido, os novos elementos receberão o valor padrão para a classe.
 
 ### <a name="remarks"></a>Comentários
@@ -2301,7 +2301,7 @@ template <class Traits>
 
 ### <a name="parameters"></a>Parâmetros
 
-*comp* \
+*comp*\
 O operador de comparação usado para ordenar elementos sucessivos.
 
 ### <a name="remarks"></a>Comentários
@@ -2373,19 +2373,19 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="parameters"></a>Parâmetros
 
-*Onde* \
+*Onde*\
 A posição na lista de destino antes da inserção.
 
 *Source*\
 A lista de origem a ser inserida na lista de destino.
 
-@No__t_1 *ITER*
+\ *ITER*
 O elemento a ser inserido da lista de origem.
 
-*Primeiro* \
+*Primeiro*\
 O primeiro elemento no intervalo a ser inserido da lista de origem.
 
-*Última* \
+*Última*\
 A primeira posição além do último elemento no intervalo a ser inserido da lista de origem.
 
 ### <a name="remarks"></a>Comentários
@@ -2563,7 +2563,7 @@ Essa função pressupõe que a lista é classificada, para que todos os elemento
 
 A primeira função de membro remove todos os elementos que compara igual ao seu elemento anterior.
 
-A segunda função de membro remove todos os elementos que satisfaçam a função de predicado *Pred* quando comparados com seu elemento anterior. Você pode usar qualquer um dos objetos de função binária declarados no cabeçalho \<functional > para o argumento *Pred* ou você pode criar o seu próprio.
+A segunda função de membro remove todos os elementos que satisfaçam a função de predicado *Pred* quando comparados com seu elemento anterior. Você pode usar qualquer um dos objetos de função binária declarados no cabeçalho \<funcional > para o argumento *Pred* ou você pode criar o seu próprio.
 
 ### <a name="example"></a>Exemplo
 
