@@ -10,15 +10,15 @@ f1_keywords:
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
 ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688466"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875879"
 ---
 # <a name="ltarraygt-operators"></a>Operadores &lt;array&gt;
 
-O cabeçalho de > de \<array inclui essas funções de modelo de comparação de não membros de **matriz** .
+O cabeçalho de > de matriz de \<inclui essas funções de modelo de comparação de não membros de **matriz** .
 
 ||||
 |-|-|-|
@@ -38,10 +38,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty* \
+*Ty*\
 O tipo de um elemento.
 
-*N* \
+*N*\
 O tamanho da matriz.
 
 \ *à esquerda*
@@ -54,7 +54,7 @@ Contêiner direito a comparar.
 
 A função do modelo retorna `!(left == right)`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // std__array__operator_ne.cpp
@@ -111,10 +111,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty* \
+*Ty*\
 O tipo de um elemento.
 
-*N* \
+*N*\
 O tamanho da matriz.
 
 \ *à esquerda*
@@ -127,7 +127,7 @@ Contêiner direito a comparar.
 
 A função de modelo sobrecarrega `operator<` para comparar dois objetos da [classe de matriz](../standard-library/array-class-stl.md)de modelo de classe. A função retorna `lexicographical_compare(left.begin(), left.end(), right.begin())`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // std__array__operator_lt.cpp
@@ -184,10 +184,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty* \
+*Ty*\
 O tipo de um elemento.
 
-*N* \
+*N*\
 O tamanho da matriz.
 
 \ *à esquerda*
@@ -200,7 +200,7 @@ Contêiner direito a comparar.
 
 A função do modelo retorna `!(right < left)`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // std__array__operator_le.cpp
@@ -257,10 +257,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty* \
+*Ty*\
 O tipo de um elemento.
 
-*N* \
+*N*\
 O tamanho da matriz.
 
 \ *à esquerda*
@@ -273,7 +273,7 @@ Contêiner direito a comparar.
 
 A função de modelo sobrecarrega `operator==` para comparar dois objetos da [classe de matriz](../standard-library/array-class-stl.md)de modelo de classe. A função retorna `equal(left.begin(), left.end(), right.begin())`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // std__array__operator_eq.cpp
@@ -330,10 +330,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty* \
+*Ty*\
 O tipo de um elemento.
 
-*N* \
+*N*\
 O tamanho da matriz.
 
 \ *à esquerda*
@@ -346,7 +346,7 @@ Contêiner direito a comparar.
 
 A função do modelo retorna `(right < left)`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // std__array__operator_gt.cpp
@@ -403,10 +403,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty* \
+*Ty*\
 O tipo de um elemento.
 
-*N* \
+*N*\
 O tamanho da matriz.
 
 \ *à esquerda*
@@ -419,7 +419,7 @@ Contêiner direito a comparar.
 
 A função do modelo retorna `!(left < right)`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // std__array__operator_ge.cpp
