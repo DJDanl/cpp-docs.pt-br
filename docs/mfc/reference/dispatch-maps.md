@@ -7,17 +7,17 @@ helpviewer_keywords:
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 ms.openlocfilehash: f1afa95d7c20d54f2015255a7e4e0d7ad9ae9c2b
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916520"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856644"
 ---
 # <a name="dispatch-maps"></a>Mapas de expedição
 
 A automação OLE fornece maneiras de chamar métodos e acessar propriedades entre aplicativos. O mecanismo fornecido pelo biblioteca MFC para expedir essas solicitações é o "mapa de expedição", que designa os nomes interno e externo das funções e propriedades do objeto, bem como os tipos de dados das próprias propriedades e de argumentos da função.
 
-|Macro do mapa de expedição|Descrição|
+|Macro do mapa de expedição|DESCRIÇÃO|
 |-|-|
 |[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|Declara que um mapa de expedição será usado para expor os métodos e as propriedades de uma classe (deve ser usado na declaração de classe).|
 |[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|Inicia a definição de um mapa de expedição.|
@@ -29,9 +29,9 @@ A automação OLE fornece maneiras de chamar métodos e acessar propriedades ent
 |[DISP_PROPERTY_PARAM](#disp_property_param)|Define uma propriedade de automação OLE que usa parâmetros e nomeia as funções Get e Set.|
 |[DISP_DEFVALUE](#disp_defvalue)|Torna uma propriedade existente o valor padrão de um objeto.|
 
-## <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP
+## <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP
 
-Se uma `CCmdTarget`classe derivada em seu programa oferecer suporte à automação OLE, essa classe deverá fornecer um mapa de expedição para expor seus métodos e propriedades.
+Se uma classe derivada de `CCmdTarget`em seu programa oferecer suporte à automação OLE, essa classe deverá fornecer um mapa de expedição para expor seus métodos e propriedades.
 
 ```cpp
 DECLARE_DISPATCH_MAP()
@@ -42,7 +42,7 @@ DECLARE_DISPATCH_MAP()
 Use a macro DECLARE_DISPATCH_MAP no final da declaração de sua classe. Em seguida, no. Arquivo CPP que define as funções de membro para a classe, use a macro BEGIN_DISPATCH_MAP. Em seguida, inclua entradas de macro para cada um dos métodos e propriedades expostos de sua classe (DISP_FUNCTION, DISP_PROPERTY e assim por diante). Por fim, use a macro END_DISPATCH_MAP.
 
 > [!NOTE]
-> Se você declarar todos os membros após DECLARE_DISPATCH_MAP, deverá especificar um novo tipo de acesso ( **público**, **privado**ou **protegido**) para eles.
+> Se você declarar quaisquer membros após DECLARE_DISPATCH_MAP, deverá especificar um novo tipo de acesso ( **público**, **privado**ou **protegido**) para eles.
 
 O assistente de aplicativo e os assistentes de código auxiliam na criação de classes de automação e na manutenção de mapas de expedição. Para obter mais informações sobre mapas de expedição, consulte [servidores de automação](../../mfc/automation-servers.md).
 
@@ -54,7 +54,7 @@ O assistente de aplicativo e os assistentes de código auxiliam na criação de 
 
 **Cabeçalho:** Afxwin. h
 
-## <a name="begin_dispatch_map"></a>  BEGIN_DISPATCH_MAP
+## <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP
 
 Declara a definição de seu mapa de expedição.
 
@@ -62,9 +62,9 @@ Declara a definição de seu mapa de expedição.
 BEGIN_DISPATCH_MAP(theClass, baseClass)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*theClass*<br/>
+*Classe*<br/>
 Especifica o nome da classe que possui este mapa de expedição.
 
 *baseClass*<br/>
@@ -78,7 +78,7 @@ No arquivo de implementação (. cpp) que define as funções de membro para sua
 
 **Cabeçalho:** AFXDISP. h
 
-## <a name="end_dispatch_map"></a>  END_DISPATCH_MAP
+## <a name="end_dispatch_map"></a>END_DISPATCH_MAP
 
 Termina a definição de seu mapa de expedição.
 
@@ -94,7 +94,7 @@ Ele deve ser usado em conjunto com BEGIN_DISPATCH_MAP.
 
 **Cabeçalho:** AFXDISP. h
 
-## <a name="disp_function"></a>  DISP_FUNCTION
+## <a name="disp_function"></a>DISP_FUNCTION
 
 Define uma função de automação OLE em um mapa de expedição.
 
@@ -107,9 +107,9 @@ DISP_FUNCTION(
     vtsParams)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*theClass*<br/>
+*Classe*<br/>
 Nome da classe.
 
 *pszName*<br/>
@@ -126,7 +126,7 @@ Uma lista separada por espaços de uma ou mais constantes que especificam a list
 
 ### <a name="remarks"></a>Comentários
 
-O argumento *vtRetVal* é do tipo VarType. Os seguintes valores possíveis para esse argumento são obtidos da `VARENUM` enumeração:
+O argumento *vtRetVal* é do tipo VarType. Os seguintes valores possíveis para esse argumento são obtidos da enumeração de `VARENUM`:
 
 |Símbolo|Tipo de retorno|
 |------------|-----------------|
@@ -144,13 +144,13 @@ O argumento *vtRetVal* é do tipo VarType. Os seguintes valores possíveis para 
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-O argumento *vtsParams* é uma lista de valores separados por espaços das `VTS_*` constantes. Um ou mais desses valores separados por espaços (e não por vírgulas) especifica a lista de parâmetros da função. Por exemplo,
+O argumento *vtsParams* é uma lista de valores separados por espaços das constantes `VTS_*`. Um ou mais desses valores separados por espaços (e não por vírgulas) especifica a lista de parâmetros da função. Por exemplo,
 
 [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]
 
 Especifica uma lista que contém um inteiro curto seguido por um ponteiro para um inteiro curto.
 
-As `VTS_` constantes e seus significados são os seguintes:
+As constantes `VTS_` e seus significados são os seguintes:
 
 |Símbolo|Tipo de parâmetro|
 |------------|--------------------|
@@ -166,10 +166,10 @@ As `VTS_` constantes e seus significados são os seguintes:
 |VTS_BOOL|BOOL|
 |VTS_VARIANT|`const VARIANT*` ou `VARIANT&`|
 |VTS_UNKNOWN|LPUNKNOWN|
-|VTS_PI2|__short\*__|
-|VTS_PI4|__long\*__|
-|VTS_PR4|__float\*__|
-|VTS_PR8|__Clique\*__|
+|VTS_PI2|__\* curto__|
+|VTS_PI4|__\* longo__|
+|VTS_PR4|__\* flutuante__|
+|VTS_PR8|__\* duplo__|
 |VTS_PCY|`CY*`|
 |VTS_PDATE|`DATE*`|
 |VTS_PBSTR|`BSTR*`|
@@ -196,9 +196,9 @@ DISP_PROPERTY(
     vtPropType)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*theClass*<br/>
+*Classe*<br/>
 Nome da classe.
 
 *pszName*<br/>
@@ -235,7 +235,7 @@ Quando um cliente externo altera a propriedade, o valor da variável de membro e
 
 **Cabeçalho:** AFXDISP. h
 
-## <a name="disp_property_ex"></a>  DISP_PROPERTY_EX
+## <a name="disp_property_ex"></a>DISP_PROPERTY_EX
 
 Define uma propriedade de automação OLE e nomear as funções usadas para obter e definir o valor da propriedade em um mapa de expedição.
 
@@ -248,9 +248,9 @@ DISP_PROPERTY_EX(
     vtPropType)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*theClass*<br/>
+*Classe*<br/>
 Nome da classe.
 
 *pszName*<br/>
@@ -267,15 +267,15 @@ Um valor que especifica o tipo da propriedade.
 
 ### <a name="remarks"></a>Comentários
 
-As funções *memberGet* e *MemberSet* têm assinaturas determinadas pelo argumento *vtPropType* . A função *memberGet* não usa argumentos e retorna um valor do tipo especificado por *vtPropType*. A função MemberSet usa um argumento do tipo especificado por *vtPropType* e não retorna nada.
+As funções *memberGet* e *MemberSet* têm assinaturas determinadas pelo argumento *vtPropType* . A função *memberGet* não usa argumentos e retorna um valor do tipo especificado por *vtPropType*. A função *MemberSet* usa um argumento do tipo especificado por *vtPropType* e não retorna nada.
 
-O argumento *vtPropType* é do tipo VarType. Os valores possíveis para esse argumento são obtidos da enumeração VARENUM. Para obter uma lista desses valores, consulte os comentários para o parâmetro *vtRetVal* em [DISP_FUNCTION](#disp_function). Observe que VT_EMPTY, listado em DISP_FUNCTION comentários, não é permitido como um tipo de dados de propriedade.
+O argumento *vtPropType* é do tipo VarType. Os valores possíveis para esse argumento são obtidos da enumeração VARENUM. Para obter uma lista desses valores, consulte os comentários para o parâmetro *vtRetVal* em [DISP_FUNCTION](#disp_function). Observe que VT_EMPTY, listados na DISP_FUNCTION comentários, não são permitidos como um tipo de dados de propriedade.
 
 ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFXDISP. h
 
-## <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY
+## <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY
 
 Define uma propriedade de automação OLE com notificação em um mapa de expedição.
 
@@ -288,9 +288,9 @@ DISP_PROPERTY_NOTIFY(
     vtPropType)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*theClass*<br/>
+*Classe*<br/>
 Nome da classe.
 
 *szExternalName*<br/>
@@ -332,7 +332,7 @@ O argumento *vtPropType* é do tipo VarType. Os valores possíveis para esse arg
 
 ## <a name="disp_property_param"></a>DISP_PROPERTY_PARAM
 
-Define uma propriedade acessada `Get` com `Set` funções separadas e membros.
+Define uma propriedade acessada com `Get` separadas e funções de membro de `Set`.
 
 ```cpp
 DISP_PROPERTY_PARAM(
@@ -344,9 +344,9 @@ DISP_PROPERTY_PARAM(
     vtsParams)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*theClass*<br/>
+*Classe*<br/>
 Nome da classe.
 
 *pszExternalName*<br/>
@@ -362,7 +362,7 @@ Nome da função de membro usada para definir a propriedade.
 Um valor que especifica o tipo da propriedade.
 
 *vtsParams*<br/>
-Uma cadeia de caracteres de tipos `VTS_*` de parâmetro variados separados por espaços, um para cada parâmetro.
+Uma cadeia de caracteres de `VTS_*` tipos de parâmetro variados separados por espaços, um para cada parâmetro.
 
 ### <a name="remarks"></a>Comentários
 
@@ -390,7 +390,7 @@ Eles correspondem à seguinte macro DISP_PROPERTY_PARAM no mapa de expedição d
 
 **Cabeçalho:** AFXDISP. h
 
-## <a name="disp_defvalue"></a>  DISP_DEFVALUE
+## <a name="disp_defvalue"></a>DISP_DEFVALUE
 
 Torna uma propriedade existente o valor padrão de um objeto.
 
@@ -398,9 +398,9 @@ Torna uma propriedade existente o valor padrão de um objeto.
 DISP_DEFVALUE(theClass, pszName)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*theClass*<br/>
+*Classe*<br/>
 Nome da classe.
 
 *pszName*<br/>
@@ -416,6 +416,6 @@ O "valor padrão" do seu objeto é a propriedade que é recuperada ou definida q
 
 **Cabeçalho:** AFXDISP. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)
