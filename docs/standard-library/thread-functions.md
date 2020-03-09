@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::yield [C++]
 ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458508"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876160"
 ---
 # <a name="ltthreadgt-functions"></a>Funções &lt;thread&gt;
 
@@ -36,7 +36,7 @@ Identifica exclusivamente o thread atual de execução.
 thread::id this_thread::get_id() noexcept;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um objeto do tipo [thread::id](../standard-library/thread-class.md) que identifica exclusivamente o thread de execução atual.
 
@@ -89,10 +89,10 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mantida*\
+\ *à esquerda*
 O objeto de **thread** à esquerda.
 
-*Certo*\
+\ *à direita*
 O objeto de **thread** certo.
 
 ### <a name="remarks"></a>Comentários
