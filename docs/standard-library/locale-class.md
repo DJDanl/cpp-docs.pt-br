@@ -22,11 +22,11 @@ helpviewer_keywords:
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
 ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898838"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856451"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -180,9 +180,9 @@ As regras de formatação numérica para inserções subsequentes em `cout` perm
 |[facet](#facet_class)|Uma classe que serve como a classe base para todas as facetas de localidade.|
 |[`id`](#id_class)|A classe do membro fornece uma identificação exclusiva da faceta usada como um índice para procurar facetas em uma localidade.|
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** \<locale>
+**Cabeçalho:** \<localidade >
 
 **Namespace:** std
 
@@ -242,7 +242,7 @@ Uma referência à localidade C.
 
 A localidade C clássica é a localidade ASCII em inglês dos EUA dentro da biblioteca C padrão. É a localidade que é usada implicitamente em programas que não são internacionalizados.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // locale_classic.cpp
@@ -299,7 +299,7 @@ A localidade que contém a faceta a ser inserida na localidade de destino.
 
 A função membro retorna um objeto Locale que substitui ou adiciona a **\*essa** faceta `Facet` listada em *source_locale*.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // locale_combine.cpp
@@ -371,7 +371,7 @@ A localidade anterior antes da redefinição da localidade padrão.
 
 Na inicialização do programa, a localidade global será a mesma que a localidade clássica. A função `global()` chama `setlocale( LC_ALL, loc.name. c_str())` para estabelecer uma localidade correspondente na biblioteca C padrão.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // locale_global.cpp
@@ -472,7 +472,7 @@ Substitui (ou adiciona) à *from_locale* da faceta *new_facet*, se *new_facet* n
 
 Se o nome da localidade *locale_name* for um ponteiro nulo ou for inválido, a função lançará [runtime_error](../standard-library/runtime-error-class.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // locale_locale.cpp
@@ -524,7 +524,7 @@ string name() const;
 
 Uma cadeia de caracteres que fornece o nome da localidade.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // locale_name.cpp
@@ -580,7 +580,7 @@ Um valor booliano que será **verdadeiro** se as localidades não forem cópias 
 
 Duas localidades são iguais se forem a mesma localidade, se uma for uma cópia do outro, ou se tiverem nomes idênticos.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // locale_op_ne.cpp
@@ -661,7 +661,7 @@ return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 
 Isso significa que você pode usar um objeto de localidade como um objeto de função.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // locale_op_compare.cpp
@@ -713,7 +713,7 @@ Um valor booliano que será **verdadeiro** se as localidades forem cópias da me
 
 Duas localidades são iguais se forem a mesma localidade, se uma for uma cópia do outro, ou se tiverem nomes idênticos.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // locale_op_eq.cpp
