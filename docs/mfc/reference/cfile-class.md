@@ -61,11 +61,11 @@ helpviewer_keywords:
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
 ms.openlocfilehash: a9161764f6c8646766a73add01c25cce5619ad19
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506582"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855245"
 ---
 # <a name="cfile-class"></a>Classe de testcfile
 
@@ -81,68 +81,68 @@ class CFile : public CObject
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|[Testcfile:: RecFile](#cfile)|Constrói um `CFile` objeto a partir de um caminho ou identificador de arquivo.|
+|[Testcfile:: RecFile](#cfile)|Constrói um objeto `CFile` a partir de um caminho ou identificador de arquivo.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[Testcfile:: Abort](#abort)|Fecha um arquivo ignorando todos os avisos e erros.|
 |[Testcfile:: fechar](#close)|Fecha um arquivo e exclui o objeto.|
 |[Testcfile::D uplicar](#duplicate)|Constrói um objeto duplicado com base neste arquivo.|
 |[Testcfile:: flush](#flush)|Libera todos os dados que ainda serão gravados.|
-|[CFile::GetFileName](#getfilename)|Recupera o nome do arquivo selecionado.|
-|[CFile::GetFilePath](#getfilepath)|Recupera o caminho completo do arquivo selecionado.|
-|[CFile::GetFileTitle](#getfiletitle)|Recupera o título do arquivo selecionado.|
-|[CFile::GetLength](#getlength)|Recupera o comprimento do arquivo.|
+|[Testcfile:: GetFileName](#getfilename)|Recupera o nome do arquivo selecionado.|
+|[RecFile:: GetFilePath](#getfilepath)|Recupera o caminho completo do arquivo selecionado.|
+|[Testcfile:: GetFileTitle](#getfiletitle)|Recupera o título do arquivo selecionado.|
+|[Testcfile:: GetLength](#getlength)|Recupera o comprimento do arquivo.|
 |[Testcfile:: GetPosition](#getposition)|Recupera o ponteiro do arquivo atual.|
-|[CFile::GetStatus](#getstatus)|Recupera o status do arquivo aberto, ou na versão estática, recupera o status do arquivo especificado (função estática, virtual).|
-|[CFile::LockRange](#lockrange)|Bloqueia um intervalo de bytes em um arquivo.|
+|[RecFile:: GetStatus](#getstatus)|Recupera o status do arquivo aberto, ou na versão estática, recupera o status do arquivo especificado (função estática, virtual).|
+|[Testcfile:: LockRange](#lockrange)|Bloqueia um intervalo de bytes em um arquivo.|
 |[Testcfile:: abrir](#open)|Abre com segurança um arquivo com uma opção de teste de erro.|
 |[Testcfile:: ler](#read)|Lê (sem buffer) dados de um arquivo na posição atual do arquivo.|
-|[CFile::Remove](#remove)|Exclui o arquivo especificado (função estática).|
+|[Testcfile:: remover](#remove)|Exclui o arquivo especificado (função estática).|
 |[Testcfile:: renomear](#rename)|Renomeia o arquivo especificado (função estática).|
 |[Testcfile:: Seek](#seek)|Posiciona o ponteiro do arquivo atual.|
-|[CFile::SeekToBegin](#seektobegin)|Posiciona o ponteiro do arquivo atual no início do arquivo.|
-|[CFile::SeekToEnd](#seektoend)|Posiciona o ponteiro do arquivo atual no final do arquivo.|
-|[CFile::SetFilePath](#setfilepath)|Define o caminho de arquivo completo do arquivo selecionado.|
-|[CFile::SetLength](#setlength)|Altera o comprimento do arquivo.|
-|[CFile::SetStatus](#setstatus)|Define o status do arquivo especificado (estático, função virtual).|
-|[CFile::UnlockRange](#unlockrange)|Desbloqueia um intervalo de bytes em um arquivo.|
+|[Testcfile:: SeekToBegin](#seektobegin)|Posiciona o ponteiro do arquivo atual no início do arquivo.|
+|[Testcfile:: SeekToEnd](#seektoend)|Posiciona o ponteiro do arquivo atual no final do arquivo.|
+|[RecFile:: SetFilePath](#setfilepath)|Define o caminho de arquivo completo do arquivo selecionado.|
+|[Testcfile:: SetLength](#setlength)|Altera o comprimento do arquivo.|
+|[RecFile:: SetStatus](#setstatus)|Define o status do arquivo especificado (estático, função virtual).|
+|[Testcfile:: UnlockRange](#unlockrange)|Desbloqueia um intervalo de bytes em um arquivo.|
 |[Testcfile:: gravar](#write)|Grava (não buffer) dados em um arquivo na posição atual do arquivo.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|[MANIPULADOR de testcfile:: Operator](#operator_handle)|Um identificador para um `CFile` objeto.|
+|[MANIPULADOR de testcfile:: Operator](#operator_handle)|Um identificador para um objeto de `CFile`.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|[CFile::hFileNull](#hfilenull)|Determina se o `CFile` objeto tem um identificador válido.|
-|[CFile::m_hFile](#m_hfile)|Geralmente contém o identificador de arquivo do sistema operacional.|
+|[Testcfile:: hFileNull](#hfilenull)|Determina se o objeto de `CFile` tem um identificador válido.|
+|[Testcfile:: m_hFile](#m_hfile)|Geralmente contém o identificador de arquivo do sistema operacional.|
 
-### <a name="protected-data-members"></a>Membros de dados protegidos
+### <a name="protected-data-members"></a>Membros de Dados Protegidos
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|[CFile::m_pTM](#m_ptm)|Ponteiro para `CAtlTransactionManager` objeto.|
+|[Testcfile:: m_pTM](#m_ptm)|Ponteiro para o objeto `CAtlTransactionManager`.|
 
 ## <a name="remarks"></a>Comentários
 
-Ele fornece diretamente serviços de entrada/saída de disco binários e não armazenados em buffer, além de dar suporte indiretamente a arquivos de texto e arquivos de memória por meio de suas classes derivadas. `CFile`funciona em conjunto com a `CArchive` classe para dar suporte à serialização de objetos Microsoft Foundation Class.
+Ele fornece diretamente serviços de entrada/saída de disco binários e não armazenados em buffer, além de dar suporte indiretamente a arquivos de texto e arquivos de memória por meio de suas classes derivadas. `CFile` trabalha em conjunto com a classe `CArchive` para dar suporte à serialização de objetos Microsoft Foundation Class.
 
-A relação hierárquica entre essa classe e suas classes derivadas permite que seu programa opere em todos os objetos de arquivo por meio da `CFile` interface polimórfica. Um arquivo de memória, por exemplo, se comporta como um arquivo de disco.
+A relação hierárquica entre essa classe e suas classes derivadas permite que seu programa opere em todos os objetos de arquivo por meio da interface de `CFile` polimórfico. Um arquivo de memória, por exemplo, se comporta como um arquivo de disco.
 
-Use `CFile` e suas classes derivadas para e/s de disco de uso geral. Use `ofstream` ou outras classes `iostream` da Microsoft para texto formatado enviado a um arquivo de disco.
+Use `CFile` e suas classes derivadas para e/s de disco de uso geral. Use `ofstream` ou outras classes do Microsoft `iostream` para texto formatado enviado para um arquivo de disco.
 
-Normalmente, um arquivo de disco é aberto automaticamente `CFile` na construção e fechado na destruição. As funções de membro estático permitem interrogar o status de um arquivo sem abrir o arquivo.
+Normalmente, um arquivo de disco é aberto automaticamente em `CFile` construção e fechado na destruição. As funções de membro estático permitem interrogar o status de um arquivo sem abrir o arquivo.
 
-Para obter mais informações sobre `CFile`como usar o, consulte os artigos [arquivos em MFC](../../mfc/files-in-mfc.md) e [manipulação de arquivos](../../c-runtime-library/file-handling.md) na *referência da biblioteca de tempo de execução*.
+Para obter mais informações sobre como usar `CFile`, consulte os arquivos de artigos [em MFC](../../mfc/files-in-mfc.md) e [manipulação de arquivos](../../c-runtime-library/file-handling.md) na *referência da biblioteca de tempo de execução*.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -166,9 +166,9 @@ virtual void Abort();
 
 Se você não tiver fechado o arquivo antes de destruir o objeto, o destruidor o fechará para você.
 
-Ao lidar com exceções `CFile::Abort` , o difere de `CFile::Close` duas maneiras importantes. Primeiro, a `Abort` função não lançará uma exceção em caso de falhas, porque as `Abort`falhas são ignoradas pelo. Em segundo `Abort` lugar, não irá **afirmar** se o arquivo não foi aberto ou foi fechado anteriormente.
+Ao lidar com exceções, `CFile::Abort` difere de `CFile::Close` de duas maneiras importantes. Primeiro, a função `Abort` não lançará uma exceção em caso de falhas, pois as falhas são ignoradas por `Abort`. Em segundo lugar, `Abort` não será **afirmado** se o arquivo não tiver sido aberto ou se tiver sido fechado anteriormente.
 
-Se você usou **novo** para alocar `CFile` o objeto no heap, deverá excluí-lo após fechar o arquivo. `Abort`define `m_hFile` como `CFile::hFileNull`.
+Se você usou **novo** para alocar o objeto `CFile` no heap, deverá excluí-lo após fechar o arquivo. `Abort` define `m_hFile` como `CFile::hFileNull`.
 
 ### <a name="example"></a>Exemplo
 
@@ -213,7 +213,7 @@ As cinco tabelas a seguir listam as possíveis opções para o parâmetro *nOpen
 
 Escolha apenas uma das opções de modo de acesso de arquivo a seguir. O modo de acesso de arquivo padrão é `CFile::modeRead`, que é somente leitura.
 
-|Valor|Descrição|
+|Valor|DESCRIÇÃO|
 |-----------|-----------------|
 |`CFile::modeRead`|Solicita acesso somente leitura.|
 |`CFile::modeWrite`|Solicita acesso somente gravação.|
@@ -221,7 +221,7 @@ Escolha apenas uma das opções de modo de acesso de arquivo a seguir. O modo de
 
 Escolha uma das opções de modo de caractere a seguir.
 
-|Valor|Descrição|
+|Valor|DESCRIÇÃO|
 |-----------|-----------------|
 |`CFile::typeBinary`|Define modo binário (usado apenas em classes derivadas).|
 |`CFile::typeText`|Define o modo de texto com processamento especial para pares de retorno de carro-alimentação de linha (usados somente em classes derivadas).|
@@ -229,7 +229,7 @@ Escolha uma das opções de modo de caractere a seguir.
 
 Escolha apenas uma das opções de modo de compartilhamento de arquivo a seguir. O modo de compartilhamento de arquivo padrão é `CFile::shareExclusive`, que é exclusivo.
 
-|Valor|Descrição|
+|Valor|DESCRIÇÃO|
 |-----------|-----------------|
 |`CFile::shareDenyNone`|Sem restrições de compartilhamento.|
 |`CFile::shareDenyRead`|Nega acesso de leitura a todos os outros.|
@@ -238,14 +238,14 @@ Escolha apenas uma das opções de modo de compartilhamento de arquivo a seguir.
 
 Escolha a primeira ou as duas opções de modo de criação de arquivo a seguir. O modo de criação padrão é `CFile::modeNoTruncate`, que é abrir existente.
 
-|Valor|Descrição|
+|Valor|DESCRIÇÃO|
 |-----------|-----------------|
 |`CFile::modeCreate`|Cria um novo arquivo se não houver nenhum arquivo. Se o arquivo já existir, ele será substituído e definido inicialmente como comprimento zero.|
-|`CFile::modeNoTruncate`|Cria um novo arquivo se não houver nenhum arquivo; caso contrário, se o arquivo já existir, ele será anexado ao `CFile` objeto.|
+|`CFile::modeNoTruncate`|Cria um novo arquivo se não houver nenhum arquivo; caso contrário, se o arquivo já existir, ele será anexado ao objeto `CFile`.|
 
 Escolha as opções de cache de arquivo conforme descritas a seguir. Por padrão, o sistema usa um esquema de cache de uso geral que não está disponível como uma opção.
 
-|Valor|Descrição|
+|Valor|DESCRIÇÃO|
 |-----------|-----------------|
 |`CFile::osNoBuffer`|O sistema não usa um cache intermediário para o arquivo. Esta opção cancela as duas opções a seguir.|
 |`CFile::osRandomAccess`|O cache do arquivo é otimizado para acesso aleatório. Não use essa opção e a opção de verificação sequencial.|
@@ -254,17 +254,17 @@ Escolha as opções de cache de arquivo conforme descritas a seguir. Por padrão
 
 Escolha a opção de segurança a seguir para impedir que o handle do arquivo seja herdado. Por padrão, qualquer novo processo filho pode usar o handle do arquivo.
 
-|Valor|Descrição|
+|Valor|DESCRIÇÃO|
 |-----------|-----------------|
 |`CFile::modeNoInherit`|Impede qualquer processo filho de usar o handle do arquivo.|
 
-O construtor padrão Inicializa membros, mas não anexa um arquivo ao `CFile` objeto. Depois de usar esse construtor, use o método [testcfile:: Open](#open) para abrir um arquivo e anexá- `CFile` lo ao objeto.
+O construtor padrão Inicializa membros, mas não anexa um arquivo ao objeto `CFile`. Depois de usar esse construtor, use o método [testcfile:: Open](#open) para abrir um arquivo e anexá-lo ao objeto `CFile`.
 
 O construtor com um parâmetro inicializa membros e anexa um arquivo existente ao objeto `CFile`.
 
 O construtor com dois parâmetros inicializa membros e tenta abrir o arquivo especificado. Se o construtor abrir o arquivo especificado com sucesso, o arquivo será anexado ao objeto `CFile`; caso contrário, o construtor lança um ponteiro para um objeto `CInvalidArgException`. Para obter mais informações sobre como lidar com exceções, consulte [exceções](../../mfc/exception-handling-in-mfc.md).
 
-Se um `CFile` objeto abrir um arquivo especificado com êxito, ele fechará esse arquivo automaticamente quando o `CFile` objeto for destruído; caso contrário, você deverá fechar o arquivo explicitamente depois que ele `CFile` não estiver mais anexado ao objeto.
+Se um objeto `CFile` abrir com êxito um arquivo especificado, ele fechará esse arquivo automaticamente quando o objeto `CFile` for destruído; caso contrário, você deve fechar o arquivo explicitamente depois que ele não estiver mais anexado ao objeto `CFile`.
 
 ### <a name="example"></a>Exemplo
 
@@ -284,27 +284,27 @@ virtual void Close();
 
 Se você não tiver fechado o arquivo antes de destruir o objeto, o destruidor o fechará para você.
 
-Se você usou **novo** para alocar `CFile` o objeto no heap, deverá excluí-lo após fechar o arquivo. `Close`define `m_hFile` como `CFile::hFileNull`.
+Se você usou **novo** para alocar o objeto `CFile` no heap, deverá excluí-lo após fechar o arquivo. `Close` define `m_hFile` como `CFile::hFileNull`.
 
 ### <a name="example"></a>Exemplo
 
 Consulte o exemplo de [testcfile:: RecFile](#cfile).
 
-##  <a name="duplicate"></a>  CFile::Duplicate
+##  <a name="duplicate"></a>Testcfile::D uplicar
 
-Constrói um objeto duplicado `CFile` para um determinado arquivo.
+Constrói um objeto `CFile` duplicado para um determinado arquivo.
 
 ```
 virtual CFile* Duplicate() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para um objeto `CFile` duplicado.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função é equivalente à função `_dup`de tempo de execução C.
+Essa função é equivalente à `_dup`de função de tempo de execução do C.
 
 ##  <a name="flush"></a>Testcfile:: flush
 
@@ -316,13 +316,13 @@ virtual void Flush();
 
 ### <a name="remarks"></a>Comentários
 
-O uso de `Flush` não garante a liberação de `CArchive` buffers. Se você estiver usando um arquivo morto, chame [CArchive:: flush](../../mfc/reference/carchive-class.md#flush) primeiro.
+O uso de `Flush` não garante a liberação de buffers de `CArchive`. Se você estiver usando um arquivo morto, chame [CArchive:: flush](../../mfc/reference/carchive-class.md#flush) primeiro.
 
 ### <a name="example"></a>Exemplo
 
 Consulte o exemplo de [testcfile:: SetFilePath](#setfilepath).
 
-##  <a name="getfilename"></a>  CFile::GetFileName
+##  <a name="getfilename"></a>Testcfile:: GetFileName
 
 Chame essa função de membro para recuperar o nome de um arquivo especificado.
 
@@ -330,15 +330,15 @@ Chame essa função de membro para recuperar o nome de um arquivo especificado.
 virtual CString GetFileName() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O nome do arquivo.
 
 ### <a name="remarks"></a>Comentários
 
-Por exemplo, quando você chama `GetFileName` para gerar uma mensagem para o usuário sobre o arquivo `c:\windows\write\myfile.wri`, o nome `myfile.wri`de arquivo,, é retornado.
+Por exemplo, quando você chama `GetFileName` para gerar uma mensagem para o usuário sobre o `c:\windows\write\myfile.wri`de arquivos, o nome de arquivo, `myfile.wri`, é retornado.
 
-Para retornar o caminho inteiro do arquivo, incluindo o nome, chame [GetFilePath](#getfilepath). Para retornar o título do arquivo ( `myfile`), chame [GetFileTitle](#getfiletitle).
+Para retornar o caminho inteiro do arquivo, incluindo o nome, chame [GetFilePath](#getfilepath). Para retornar o título do arquivo (`myfile`), chame [GetFileTitle](#getfiletitle).
 
 ### <a name="example"></a>Exemplo
 
@@ -346,7 +346,7 @@ Esse fragmento de código abre o sistema. Arquivo INI no seu diretório do WINDO
 
 [!code-cpp[NVC_MFCFiles#6](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_3.cpp)]
 
-##  <a name="getfilepath"></a>  CFile::GetFilePath
+##  <a name="getfilepath"></a>RecFile:: GetFilePath
 
 Chame essa função de membro para recuperar o caminho completo de um arquivo especificado.
 
@@ -354,13 +354,13 @@ Chame essa função de membro para recuperar o caminho completo de um arquivo es
 virtual CString GetFilePath() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O caminho completo do arquivo especificado.
 
 ### <a name="remarks"></a>Comentários
 
-Por exemplo, quando você chama `GetFilePath` para gerar uma mensagem para o usuário sobre o arquivo `c:\windows\write\myfile.wri`, o caminho do arquivo `c:\windows\write\myfile.wri`,, é retornado.
+Por exemplo, quando você chama `GetFilePath` para gerar uma mensagem para o usuário sobre o arquivo `c:\windows\write\myfile.wri`, o caminho do arquivo, `c:\windows\write\myfile.wri`, é retornado.
 
 Para retornar apenas o nome do arquivo (`myfile.wri`), chame [GetFileName](#getfilename). Para retornar o título do arquivo (`myfile`), chame [GetFileTitle](#getfiletitle).
 
@@ -368,7 +368,7 @@ Para retornar apenas o nome do arquivo (`myfile.wri`), chame [GetFileName](#getf
 
 Consulte o exemplo de [GetFileName](#getfilename).
 
-##  <a name="getfiletitle"></a>  CFile::GetFileTitle
+##  <a name="getfiletitle"></a>Testcfile:: GetFileTitle
 
 Chame essa função de membro para recuperar o título do arquivo (o nome de exibição) do arquivo.
 
@@ -376,7 +376,7 @@ Chame essa função de membro para recuperar o título do arquivo (o nome de exi
 virtual CString GetFileTitle() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O título do arquivo subjacente.
 
@@ -390,7 +390,7 @@ Para retornar o caminho inteiro do arquivo, incluindo o nome, chame [GetFilePath
 
 Consulte o exemplo de [GetFileName](#getfilename).
 
-##  <a name="getlength"></a>  CFile::GetLength
+##  <a name="getlength"></a>Testcfile:: GetLength
 
 Obtém o comprimento lógico atual do arquivo em bytes.
 
@@ -398,7 +398,7 @@ Obtém o comprimento lógico atual do arquivo em bytes.
 virtual ULONGLONG GetLength() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O comprimento do arquivo.
 
@@ -414,7 +414,7 @@ Obtém o valor atual do ponteiro do arquivo, que pode ser usado em chamadas post
 virtual ULONGLONG GetPosition() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O ponteiro do arquivo.
 
@@ -422,9 +422,9 @@ O ponteiro do arquivo.
 
 [!code-cpp[NVC_MFCFiles#8](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_5.cpp)]
 
-##  <a name="getstatus"></a>  CFile::GetStatus
+##  <a name="getstatus"></a>RecFile:: GetStatus
 
-Esse método recupera informações de status relacionadas a uma `CFile` determinada instância de objeto ou a um determinado caminho de arquivo.
+Esse método recupera informações de status relacionadas a determinada instância de objeto `CFile` ou a um determinado caminho de arquivo.
 
 ```
 BOOL GetStatus(CFileStatus& rStatus) const;
@@ -438,19 +438,19 @@ static BOOL PASCAL GetStatus(
 ### <a name="parameters"></a>Parâmetros
 
 *rStatus*<br/>
-Uma referência a uma estrutura fornecida `CFileStatus` pelo usuário que receberá as informações de status. A `CFileStatus` estrutura tem os seguintes campos:
+Uma referência a uma estrutura de `CFileStatus` fornecida pelo usuário que receberá as informações de status. A estrutura de `CFileStatus` tem os seguintes campos:
 
-- `CTime m_ctime`A data e a hora em que o arquivo foi criado.
+- `CTime m_ctime` a data e a hora em que o arquivo foi criado.
 
-- `CTime m_mtime`A data e a hora da última modificação do arquivo.
+- `CTime m_mtime` a data e a hora da última modificação do arquivo.
 
-- `CTime m_atime`A data e a hora em que o arquivo foi acessado pela última vez para leitura.
+- `CTime m_atime` a data e a hora em que o arquivo foi acessado pela última vez para leitura.
 
-- `ULONGLONG m_size`O tamanho lógico do arquivo em bytes, conforme relatado pelo comando DIR.
+- `ULONGLONG m_size` o tamanho lógico do arquivo em bytes, conforme relatado pelo comando DIR.
 
-- `BYTE m_attribute`O byte do atributo do arquivo.
+- `BYTE m_attribute` o byte do atributo do arquivo.
 
-- `char m_szFullName[_MAX_PATH]`O nome de arquivo absoluto no conjunto de caracteres do Windows.
+- `char m_szFullName[_MAX_PATH]` o nome de arquivo absoluto no conjunto de caracteres do Windows.
 
 *lpszFileName*<br/>
 Uma cadeia de caracteres no conjunto de caracteres do Windows que é o caminho para o arquivo desejado. O caminho pode ser relativo ou absoluto, ou pode conter um nome de caminho de rede.
@@ -458,15 +458,15 @@ Uma cadeia de caracteres no conjunto de caracteres do Windows que é o caminho p
 *pTM*<br/>
 Ponteiro para objeto CAtlTransactionManager
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 TRUE se as informações de status do arquivo especificado forem obtidas com êxito; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-A versão não estática do `GetStatus` recupera informações de status do arquivo aberto associado ao objeto fornecido. `CFile`  A versão estática do `GetStatus` Obtém o status do arquivo de um determinado caminho de arquivo sem realmente abrir o arquivo. Essa versão é útil para testar a existência e os direitos de acesso de um arquivo.
+A versão não estática do `GetStatus` recupera informações de status do arquivo aberto associado ao objeto `CFile` fornecido.  A versão estática do `GetStatus` Obtém o status do arquivo de um determinado caminho de arquivo sem realmente abrir o arquivo. Essa versão é útil para testar a existência e os direitos de acesso de um arquivo.
 
-O `m_attribute` membro`CFileStatus` da estrutura refere-se ao conjunto de atributos de arquivo. A `CFile` classe fornece o tipo de enumeração de **atributo** para que os atributos de arquivo possam ser especificados de forma simbólica:
+O membro de `m_attribute` da estrutura de `CFileStatus` refere-se ao conjunto de atributos de arquivo. A classe `CFile` fornece o tipo de enumeração de **atributo** para que os atributos de arquivo possam ser especificados de forma simbólica:
 
 ```
 enum Attribute {
@@ -484,9 +484,9 @@ enum Attribute {
 
 [!code-cpp[NVC_MFCFiles#10](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_6.cpp)]
 
-##  <a name="hfilenull"></a>  CFile::hFileNull
+##  <a name="hfilenull"></a>Testcfile:: hFileNull
 
-Determina a presença de um identificador de arquivo válido para `CFile` o objeto.
+Determina a presença de um identificador de arquivo válido para o objeto `CFile`.
 
 ```
 static AFX_DATA const HANDLE hFileNull;
@@ -494,13 +494,13 @@ static AFX_DATA const HANDLE hFileNull;
 
 ### <a name="remarks"></a>Comentários
 
-Essa constante é usada para determinar se o `CFile` objeto tem um identificador de arquivo válido.
+Essa constante é usada para determinar se o objeto de `CFile` tem um identificador de arquivo válido.
 
 O exemplo a seguir demonstra essa operação:
 
 [!code-cpp[NVC_MFCFiles#22](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_7.cpp)]
 
-##  <a name="lockrange"></a>  CFile::LockRange
+##  <a name="lockrange"></a>Testcfile:: LockRange
 
 Bloqueia um intervalo de bytes em um arquivo aberto, lançando uma exceção se o arquivo já estiver bloqueado.
 
@@ -522,16 +522,16 @@ O número de bytes no intervalo a ser bloqueado.
 
 Os bytes bloqueados em um arquivo impedem o acesso a esses bytes por outros processos. Você pode bloquear mais de uma região de um arquivo, mas não são permitidas regiões sobrepostas.
 
-Quando você desbloqueia a região usando `UnlockRange` a função de membro, o intervalo de bytes deve corresponder exatamente à região que foi bloqueada anteriormente. A `LockRange` função não mescla regiões adjacentes. Se duas regiões bloqueadas estiverem adjacentes, você deverá desbloquear cada região separadamente.
+Quando você desbloqueia a região usando a função de membro `UnlockRange`, o intervalo de bytes deve corresponder exatamente à região que foi bloqueada anteriormente. A função `LockRange` não mescla regiões adjacentes. Se duas regiões bloqueadas estiverem adjacentes, você deverá desbloquear cada região separadamente.
 
 > [!NOTE]
->  Essa função não está disponível para `CMemFile`a classe derivada.
+>  Essa função não está disponível para a classe derivada de `CMemFile`.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCFiles#12](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]
 
-##  <a name="m_hfile"></a>  CFile::m_hFile
+##  <a name="m_hfile"></a>Testcfile:: m_hFile
 
 Contém o identificador de arquivo do sistema operacional para um arquivo aberto.
 
@@ -541,13 +541,13 @@ HANDLE m_hFile;
 
 ### <a name="remarks"></a>Comentários
 
-`m_hFile`é uma variável pública do tipo UINT. Ele contém `CFile::hFileNull`um indicador de arquivo vazio independente do sistema operacional, se o identificador não tiver sido atribuído.
+`m_hFile` é uma variável pública do tipo UINT. Ele contém `CFile::hFileNull`, um indicador de arquivo vazio independente do sistema operacional, se o identificador não tiver sido atribuído.
 
-O uso `m_hFile` de não é recomendado, pois o significado do membro depende da classe derivada. `m_hFile`torna-se um membro público para conveniência no suporte ao uso nonpolymorphic da classe.
+O uso de `m_hFile` não é recomendado, pois o significado do membro depende da classe derivada. `m_hFile` torna-se um membro público para sua conveniência no suporte ao uso nonpolymorphic da classe.
 
-##  <a name="m_ptm"></a>  CFile::m_pTM
+##  <a name="m_ptm"></a>Testcfile:: m_pTM
 
-Ponteiro para um `CAtlTransactionManager` objeto.
+Ponteiro para um objeto `CAtlTransactionManager`.
 
 ```
 CAtlTransactionManager* m_pTM;
@@ -557,7 +557,7 @@ CAtlTransactionManager* m_pTM;
 
 ##  <a name="open"></a>Testcfile:: abrir
 
-Sobrecarregado. `Open`o é projetado para ser usado com `CFile` o construtor padrão.
+Sobrecarregado. `Open` é projetado para uso com o construtor de `CFile` padrão.
 
 ```
 virtual BOOL Open(
@@ -578,7 +578,7 @@ virtual BOOL Open(
 Uma cadeia de caracteres que contém o caminho para o arquivo desejado. O caminho pode ser relativo, absoluto ou um nome de rede (UNC).
 
 *nOpenFlags*<br/>
-Um UINT que define o modo de compartilhamento e acesso do arquivo. Especifica a ação a ser tomada ao abrir o arquivo. Você pode combinar as opções usando o operador bit-a **&#124;** -or (). Uma permissão de acesso e uma opção de compartilhamento são necessárias; os `modeCreate` modos `modeNoInherit` e são opcionais. Consulte o construtor de [testcfile](#cfile) para obter uma lista de opções de modo.
+Um UINT que define o modo de compartilhamento e acesso do arquivo. Especifica a ação a ser tomada ao abrir o arquivo. Você pode combinar as opções usando o operador bit-a **&#124;** -or (). Uma permissão de acesso e uma opção de compartilhamento são necessárias; os modos `modeCreate` e `modeNoInherit` são opcionais. Consulte o construtor de [testcfile](#cfile) para obter uma lista de opções de modo.
 
 *pError*<br/>
 Um ponteiro para um objeto de exceção de arquivo existente que receberá o status de uma operação com falha.
@@ -586,24 +586,24 @@ Um ponteiro para um objeto de exceção de arquivo existente que receberá o sta
 *pTM*<br/>
 Ponteiro para objeto CAtlTransactionManager
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a abertura tiver sido bem-sucedida; caso contrário, 0. O parâmetro *perror* será significativo somente se 0 for retornado.
 
 ### <a name="remarks"></a>Comentários
 
-As duas `Open` funções são métodos "seguros" para abrir um arquivo, em que uma falha é uma condição normal e esperada.
+As duas funções `Open` são métodos "seguros" para abrir um arquivo, em que uma falha é uma condição normal e esperada.
 
-Enquanto o `CFile` Construtor gera uma exceção em uma condição de erro `Open` , retorna false para condições de erro. `Open`ainda pode inicializar um objeto [CFileException](../../mfc/reference/cfileexception-class.md) para descrever o erro. no entanto. Se você não fornecer o parâmetro *perror* ou se passar NULL para *perror*, `Open` retornará false e não lançará um. `CFileException` Se você passar um ponteiro para um existente `CFileException`e `Open` encontrar um erro, a função o preencherá com informações que descrevem esse erro. `Open`não gera uma exceção em nenhum caso.
+Enquanto o construtor de `CFile` gera uma exceção em uma condição de erro, `Open` retorna FALSE para condições de erro. o `Open` ainda pode inicializar um objeto [CFileException](../../mfc/reference/cfileexception-class.md) para descrever o erro. no entanto. Se você não fornecer o parâmetro *perror* ou se passar NULL para *perror*, `Open` retornará false e não lançará um `CFileException`. Se você passar um ponteiro para um `CFileException`existente e `Open` encontrar um erro, a função o preencherá com informações que descrevem esse erro. `Open` não lança uma exceção em nenhum dos casos.
 
-A tabela a seguir descreve os possíveis resultados `Open`de.
+A tabela a seguir descreve os possíveis resultados de `Open`.
 
 |`pError`|Erro encontrado|Valor retornado|Conteúdo do CFileException|
 |--------------|------------------------|------------------|----------------------------|
-|NULL|Não|TRUE|N/D|
-|PTR a`CFileException`|Não|TRUE|inalterado|
-|NULL|Sim|FALSE|N/D|
-|PTR a`CFileException`|Sim|FALSE|inicializado para descrever o erro|
+|NULL|Não|TRUE|n/d|
+|PTR a `CFileException`|Não|TRUE|inalterado|
+|NULL|Sim|FALSE|n/d|
+|PTR a `CFileException`|Sim|FALSE|inicializado para descrever o erro|
 
 ### <a name="example"></a>Exemplo
 
@@ -613,7 +613,7 @@ A tabela a seguir descreve os possíveis resultados `Open`de.
 
 ##  <a name="operator_handle"></a>MANIPULADOR de testcfile:: Operator
 
-Use esse operador para passar um identificador para um `CFile` objeto para funções como [ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex) e [GetFileTime](/windows/win32/api/fileapi/nf-fileapi-getfiletime) que esperam um `HANDLE`.
+Use esse operador para passar um identificador para um objeto `CFile` para funções como [ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex) e [GetFileTime](/windows/win32/api/fileapi/nf-fileapi-getfiletime) que esperam um `HANDLE`.
 
 ```
 operator HANDLE() const;
@@ -621,7 +621,7 @@ operator HANDLE() const;
 
 ##  <a name="read"></a>Testcfile:: ler
 
-Lê dados em um buffer do arquivo associado `CFile` ao objeto.
+Lê dados em um buffer do arquivo associado ao objeto `CFile`.
 
 ```
 virtual UINT Read(
@@ -637,9 +637,9 @@ Ponteiro para o buffer fornecido pelo usuário que deve receber os dados lidos d
 *nCount*<br/>
 O número máximo de bytes a serem lidos do arquivo. Para arquivos de modo de texto, os pares de retorno de carro-alimentação de linha são contados como caracteres únicos.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O número de bytes transferidos para o buffer. Para todas `CFile` as classes, o valor de retorno pode ser menor que *nCount* se o final do arquivo foi atingido.
+O número de bytes transferidos para o buffer. Para todas as classes de `CFile`, o valor de retorno pode ser menor que *nCount* se o final do arquivo foi atingido.
 
 ### <a name="example"></a>Exemplo
 
@@ -647,7 +647,7 @@ O número de bytes transferidos para o buffer. Para todas `CFile` as classes, o 
 
 Para obter outro exemplo, consulte [testcfile:: Open](#open).
 
-##  <a name="remove"></a>  CFile::Remove
+##  <a name="remove"></a>Testcfile:: remover
 
 Essa função estática exclui o arquivo especificado pelo caminho.
 
@@ -667,9 +667,9 @@ Ponteiro para objeto CAtlTransactionManager
 
 ### <a name="remarks"></a>Comentários
 
-`Remove`não removerá um diretório.
+`Remove` não removerá um diretório.
 
-A `Remove` função membro gera uma exceção se o arquivo conectado estiver aberto ou se o arquivo não puder ser removido. Essa função é equivalente ao comando DEL.
+A função membro `Remove` gera uma exceção se o arquivo conectado estiver aberto ou se o arquivo não puder ser removido. Essa função é equivalente ao comando DEL.
 
 ### <a name="example"></a>Exemplo
 
@@ -720,18 +720,18 @@ UINT nFrom);
 *lOff*<br/>
 Número de bytes para mover o ponteiro do arquivo. Valores positivos movem o ponteiro do arquivo para o final do arquivo; valores negativos movem o ponteiro do arquivo para o início do arquivo.
 
-*nFrom*<br/>
+*Nde*<br/>
 Posição da qual buscar. Consulte a seção comentários para obter os valores possíveis.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A posição do ponteiro do arquivo se o método foi bem-sucedido; caso contrário, o valor de retorno será indefinido e um ponteiro `CFileException` para uma exceção será gerado.
+A posição do ponteiro do arquivo se o método foi bem-sucedido; caso contrário, o valor de retorno será indefinido e um ponteiro para uma `CFileException` exceção será gerado.
 
 ### <a name="remarks"></a>Comentários
 
 A tabela a seguir lista os possíveis valores para o parâmetro *Nde* .
 
-|Valor|Descrição|
+|Valor|DESCRIÇÃO|
 |-----------|-----------------|
 |`CFile::begin`|Busque desde o início do arquivo.|
 |`CFile::current`|Procure o local atual do ponteiro do arquivo.|
@@ -747,7 +747,7 @@ O manipulador de exceção para esse método deve excluir o objeto de exceção 
 
 [!code-cpp[NVC_MFCFiles#9](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_14.cpp)]
 
-##  <a name="seektobegin"></a>  CFile::SeekToBegin
+##  <a name="seektobegin"></a>Testcfile:: SeekToBegin
 
 Define o valor do ponteiro do arquivo para o início do arquivo.
 
@@ -763,7 +763,7 @@ void SeekToBegin();
 
 [!code-cpp[NVC_MFCFiles#19](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]
 
-##  <a name="seektoend"></a>  CFile::SeekToEnd
+##  <a name="seektoend"></a>Testcfile:: SeekToEnd
 
 Define o valor do ponteiro do arquivo para a extremidade lógica do arquivo.
 
@@ -771,7 +771,7 @@ Define o valor do ponteiro do arquivo para a extremidade lógica do arquivo.
 ULONGLONG SeekToEnd();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O comprimento do arquivo em bytes.
 
@@ -783,9 +783,9 @@ O comprimento do arquivo em bytes.
 
 [!code-cpp[NVC_MFCFiles#19](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]
 
-##  <a name="setfilepath"></a>  CFile::SetFilePath
+##  <a name="setfilepath"></a>RecFile:: SetFilePath
 
-Chame essa função para especificar o caminho do arquivo. Por exemplo, se o caminho de um arquivo não estiver disponível quando um objeto [testcfile](../../mfc/reference/cfile-class.md) for construído `SetFilePath` , chame para fornecê-lo.
+Chame essa função para especificar o caminho do arquivo. Por exemplo, se o caminho de um arquivo não estiver disponível quando um objeto [testcfile](../../mfc/reference/cfile-class.md) for construído, chame `SetFilePath` para fornecê-lo.
 
 ```
 virtual void SetFilePath(LPCTSTR lpszNewName);
@@ -799,13 +799,13 @@ Ponteiro para uma cadeia de caracteres que especifica o novo caminho.
 ### <a name="remarks"></a>Comentários
 
 > [!NOTE]
-> `SetFilePath`Não abre o arquivo ou cria o arquivo; Ele simplesmente associa o `CFile` objeto com um nome de caminho, que pode ser usado.
+> `SetFilePath` não abre o arquivo ou cria o arquivo; Ele simplesmente associa o objeto `CFile` com um nome de caminho, que pode ser usado.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCFiles#20](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_16.cpp)]
 
-##  <a name="setlength"></a>  CFile::SetLength
+##  <a name="setlength"></a>Testcfile:: SetLength
 
 Chame essa função para alterar o comprimento do arquivo.
 
@@ -821,13 +821,13 @@ Comprimento desejado do arquivo em bytes. Esse valor pode ser maior ou menor que
 ### <a name="remarks"></a>Comentários
 
 > [!NOTE]
->  Com `CMemFile`o, essa função pode gerar `CMemoryException` um objeto.
+>  Com `CMemFile`, essa função pode gerar um objeto de `CMemoryException`.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCFiles#11](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_17.cpp)]
 
-##  <a name="setstatus"></a>  CFile::SetStatus
+##  <a name="setstatus"></a>RecFile:: SetStatus
 
 Define o status do arquivo associado a esse local de arquivo.
 
@@ -844,7 +844,7 @@ static void PASCAL SetStatus(
 Uma cadeia de caracteres que é o caminho para o arquivo desejado. O caminho pode ser relativo ou absoluto e pode conter um nome de rede.
 
 *status*<br/>
-O buffer que contém as novas informações de status. Chame a `GetStatus` função de membro para preencher previamente `CFileStatus` a estrutura com valores atuais e, em seguida, faça as alterações necessárias. Se um valor for 0, o item de status correspondente não será atualizado. Consulte a função de membro [GetStatus](#getstatus) para obter uma descrição `CFileStatus` da estrutura.
+O buffer que contém as novas informações de status. Chame a função de membro `GetStatus` para preencher previamente a estrutura de `CFileStatus` com valores atuais e, em seguida, faça as alterações necessárias. Se um valor for 0, o item de status correspondente não será atualizado. Consulte a função de membro [GetStatus](#getstatus) para obter uma descrição da estrutura de `CFileStatus`.
 
 *pTM*<br/>
 Ponteiro para objeto CAtlTransactionManager
@@ -853,7 +853,7 @@ Ponteiro para objeto CAtlTransactionManager
 
 Para definir a hora, modifique o `m_mtime` campo de *status*.
 
-Quando você faz uma chamada para `SetStatus` em uma tentativa de alterar apenas os atributos do arquivo e o `m_mtime` membro da estrutura de status do arquivo é diferente de zero, os atributos também podem ser afetados (alterar o carimbo de data/hora pode ter efeitos colaterais nos atributos). Se você quiser alterar apenas os atributos do arquivo, primeiro defina o `m_mtime` membro da estrutura de status do arquivo como zero e, em seguida, faça uma chamada para. `SetStatus`
+Quando você faz uma chamada para `SetStatus` em uma tentativa de alterar apenas os atributos do arquivo e o membro de `m_mtime` da estrutura de status do arquivo é diferente de zero, os atributos também podem ser afetados (alterar o carimbo de data/hora pode ter efeitos colaterais nos atributos). Se você quiser alterar apenas os atributos do arquivo, primeiro defina o membro `m_mtime` da estrutura de status do arquivo como zero e, em seguida, faça uma chamada para `SetStatus`.
 
 ### <a name="example"></a>Exemplo
 
@@ -882,7 +882,7 @@ O número de bytes no intervalo a ser desbloqueado.
 Consulte a descrição da função membro [LockRange](#lockrange) para obter detalhes.
 
 > [!NOTE]
->  Esta função não está disponível para a `CMemFile`classe derivada.
+>  Esta função não está disponível para a classe derivada de `CMemFile`.
 
 ### <a name="example"></a>Exemplo
 
@@ -890,7 +890,7 @@ Consulte a descrição da função membro [LockRange](#lockrange) para obter det
 
 ##  <a name="write"></a>Testcfile:: gravar
 
-Grava dados de um buffer para o arquivo associado `CFile` ao objeto.
+Grava dados de um buffer para o arquivo associado ao objeto `CFile`.
 
 ```
 virtual void Write(
@@ -908,7 +908,7 @@ O número de bytes a serem transferidos do buffer. Para arquivos de modo de text
 
 ### <a name="remarks"></a>Comentários
 
-`Write`gera uma exceção em resposta a várias condições, incluindo a condição de disco cheio.
+`Write` gera uma exceção em resposta a várias condições, incluindo a condição de disco cheio.
 
 ### <a name="example"></a>Exemplo
 
@@ -916,7 +916,7 @@ O número de bytes a serem transferidos do buffer. Para arquivos de modo de text
 
 Consulte também os exemplos de [testcfile:: RecFile](#cfile) e [testcfile:: Open](#open).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Exemplo de DRAWCLI do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
