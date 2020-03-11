@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (list)
 - std::operator== (list)
 ms.openlocfilehash: 7b0b7540c1b9a55140405a55e8e034f9c6ec646c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246457"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874407"
 ---
 # <a name="ltlistgt-operators"></a>Operadores &lt;lista&gt;
 
-## <a name="op_neq"></a> operador! =
+## <a name="op_neq"></a>operador! =
 
 Testa se o objeto da lista à esquerda do operador é diferente do objeto da lista à direita.
 
@@ -35,15 +35,15 @@ bool operator!=(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*À esquerda*\
+\ *à esquerda*
 Um objeto do tipo `list`.
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo `list`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se as listas não forem iguais; **false** se as listas forem iguais.
 
@@ -76,7 +76,7 @@ Lists not equal.
 */
 ```
 
-## <a name="op_lt"></a> Operador&lt;
+## <a name="op_lt">Operador </a>&lt;
 
 Testa se o objeto da lista à esquerda do operador é menor que o objeto da lista à direita.
 
@@ -86,15 +86,15 @@ bool operator<(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*À esquerda*\
+\ *à esquerda*
 Um objeto do tipo `list`.
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo `list`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se a lista no lado esquerdo do operador for menor que ou diferente da lista à direita do operador; caso contrário, **false**.
 
@@ -131,7 +131,7 @@ List c1 is less than list c2.
 */
 ```
 
-## <a name="op_lt_eq"></a> operador&lt;=
+## <a name="op_lt_eq"></a>= de&lt;do operador
 
 Testa se o objeto da lista à esquerda do operador é menor que ou igual ao objeto da lista à direita.
 
@@ -141,15 +141,15 @@ bool operator<=(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*À esquerda*\
+\ *à esquerda*
 Um objeto do tipo `list`.
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo `list`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se a lista no lado esquerdo do operador for menor que ou igual à lista à direita do operador; caso contrário, **false**.
 
@@ -186,7 +186,7 @@ List c1 is less than or equal to list c2.
 */
 ```
 
-## <a name="op_eq_eq"></a> operador = =
+## <a name="op_eq_eq"></a>operador = =
 
 Testa se o objeto da lista à esquerda do operador é igual ao objeto da lista à direita.
 
@@ -196,15 +196,15 @@ bool operator==(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*À esquerda*\
+\ *à esquerda*
 Um objeto do tipo `list`.
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo `list`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se a lista no lado esquerdo do operador for igual à lista à direita do operador; caso contrário, **false**.
 
@@ -237,7 +237,7 @@ The lists are equal.
 */
 ```
 
-## <a name="op_gt"></a> Operador&gt;
+## <a name="op_gt">Operador </a>&gt;
 
 Testa se o objeto da lista à esquerda do operador é maior que o objeto da lista à direita.
 
@@ -247,15 +247,15 @@ bool operator>(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*À esquerda*\
+\ *à esquerda*
 Um objeto do tipo `list`.
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo `list`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se a lista no lado esquerdo do operador for maior que a lista à direita do operador; caso contrário, **false**.
 
@@ -292,7 +292,7 @@ List c1 is greater than list c2.
 */
 ```
 
-## <a name="op_gt_eq"></a> operador&gt;=
+## <a name="op_gt_eq"></a>= de&gt;do operador
 
 Testa se o objeto da lista à esquerda do operador é maior que ou igual ao objeto da lista à direita.
 
@@ -302,15 +302,15 @@ bool operator>=(
     const list<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*À esquerda*\
+\ *à esquerda*
 Um objeto do tipo `list`.
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo `list`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se a lista no lado esquerdo do operador for maior que ou igual à lista à direita do operador; caso contrário, **false**.
 

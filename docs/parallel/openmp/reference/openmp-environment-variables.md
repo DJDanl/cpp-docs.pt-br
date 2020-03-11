@@ -15,11 +15,11 @@ helpviewer_keywords:
 - OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
 ms.openlocfilehash: 838427320fcb68cedb97b36156fc18002ed962d8
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143285"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882880"
 ---
 # <a name="openmp-environment-variables"></a>OpenMP Variáveis de ambiente
 
@@ -27,7 +27,7 @@ Fornece links para variáveis de ambiente usadas na API de OpenMP.
 
 A implementação C++ visual do padrão de OpenMP inclui as seguintes variáveis de ambiente. Essas variáveis de ambiente são lidas na inicialização do programa e as modificações em seus valores são ignoradas no tempo de execução (por exemplo, usando [_putenv, _wputenv](../../../c-runtime-library/reference/putenv-wputenv.md)).
 
-|Variável de ambiente|Descrição|
+|Variável de ambiente|DESCRIÇÃO|
 |--------------------|-----------|
 |[OMP_SCHEDULE](#omp-schedule)|Modifica o comportamento da cláusula [Schedule](openmp-clauses.md#schedule) quando `schedule(runtime)` é especificado em uma diretiva `for` ou `parallel for`.|
 |[OMP_NUM_THREADS](#omp-num-threads)|Define o número máximo de threads na região paralela, a menos que seja substituído por [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) ou [num_threads](openmp-clauses.md#num-threads).|
@@ -50,7 +50,7 @@ O valor padrão na implementação Visual C++ do padrão de OpenMP é `OMP_DYNAM
 
 Para obter mais informações, consulte [4,3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O comando a seguir define a variável de ambiente `OMP_DYNAMIC` como TRUE:
 
@@ -80,7 +80,7 @@ O valor padrão na implementação Visual C++ do padrão de OpenMP é `OMP_DYNAM
 
 Para obter mais informações, consulte [4,4 OMP_NESTED](../../../parallel/openmp/4-4-omp-nested.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O comando a seguir define a variável de ambiente `OMP_NESTED` como TRUE:
 
@@ -102,7 +102,7 @@ Define o número máximo de threads na região paralela, a menos que seja substi
 set OMP_NUM_THREADS[=num]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *teclas*<br/>
 O número máximo de threads que você deseja na região paralela, até 64 na implementação Visual C++ .
@@ -115,7 +115,7 @@ O valor padrão de `num` na implementação Visual C++ do padrão de OpenMP é o
 
 Para obter mais informações, consulte [4,2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O comando a seguir define a variável de ambiente `OMP_NUM_THREADS` como `16`:
 
@@ -137,7 +137,7 @@ Modifica o comportamento da cláusula [Schedule](openmp-clauses.md#schedule) qua
 set OMP_SCHEDULE[=type[,size]]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *size*<br/>
 Adicional Especifica o tamanho das iterações. o *tamanho* deve ser um inteiro positivo. O padrão é `1`, exceto quando o *tipo* é estático. Não é válido quando o *tipo* é `runtime`.
@@ -151,7 +151,7 @@ O valor padrão na implementação Visual C++ do padrão de OpenMP é `OMP_SCHED
 
 Para obter mais informações, consulte [4,1 OMP_SCHEDULE](../../../parallel/openmp/4-1-omp-schedule.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O comando a seguir define a variável de ambiente `OMP_SCHEDULE`:
 

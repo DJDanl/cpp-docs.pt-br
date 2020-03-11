@@ -12,11 +12,11 @@ f1_keywords:
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
 ms.openlocfilehash: e8f5a20b976d196090ac9300510044e84470c462
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686275"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865907"
 ---
 # <a name="ltsstreamgt-typedefs"></a>Typedefs &lt;sstream&gt;
 
@@ -76,7 +76,7 @@ O tipo é um sinônimo para o modelo de classe [basic_stringstream](../standard-
 
 ## <a name="wistringstream"></a>  wistringstream
 
-Cria um tipo `basic_istringstream` especializado em um parâmetro de modelo **wchar_t** .
+Cria um tipo `basic_istringstream` especializado em um parâmetro de modelo de **wchar_t** .
 
 ```cpp
 typedef basic_istringstream<wchar_t> wistringstream;
@@ -88,7 +88,7 @@ O tipo é um sinônimo para o modelo de classe [basic_istringstream](../standard
 
 ## <a name="wostringstream"></a>  wostringstream
 
-Cria um tipo `basic_ostringstream` especializado em um parâmetro de modelo **wchar_t** .
+Cria um tipo `basic_ostringstream` especializado em um parâmetro de modelo de **wchar_t** .
 
 ```cpp
 typedef basic_ostringstream<wchar_t> wostringstream;
@@ -100,7 +100,7 @@ O tipo é um sinônimo para o modelo de classe [basic_ostringstream](../standard
 
 ## <a name="wstringbuf"></a>  wstringbuf
 
-Cria um tipo `basic_stringbuf` especializado em um parâmetro de modelo **wchar_t** .
+Cria um tipo `basic_stringbuf` especializado em um parâmetro de modelo de **wchar_t** .
 
 ```cpp
 typedef basic_stringbuf<wchar_t> wstringbuf;
@@ -112,7 +112,7 @@ O tipo é um sinônimo para o modelo de classe [basic_stringbuf](../standard-lib
 
 ## <a name="wstringstream"></a>  wstringstream
 
-Cria um tipo `basic_stringstream` especializado em um parâmetro de modelo **wchar_t** .
+Cria um tipo `basic_stringstream` especializado em um parâmetro de modelo de **wchar_t** .
 
 ```cpp
 typedef basic_stringstream<wchar_t> wstringstream;
@@ -122,6 +122,6 @@ typedef basic_stringstream<wchar_t> wstringstream;
 
 O tipo é um sinônimo para o modelo de classe [basic_stringstream](../standard-library/basic-stringstream-class.md), especializado para elementos do tipo **wchar_t**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<sstream>](../standard-library/sstream.md)

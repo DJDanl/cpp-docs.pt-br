@@ -13,11 +13,11 @@ f1_keywords:
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
 ms.openlocfilehash: 716c2d03e6d1ff67566bd28e5931996ea2d400af
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141317"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854110"
 ---
 # <a name="concurrency-namespace-enums"></a>Enums do namespace de simultaneidade
 
@@ -39,7 +39,7 @@ enum agent_status;
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`agent_canceled`|O `agent` foi cancelado.|
 |`agent_created`|O `agent` foi criado, mas não foi iniciado.|
@@ -51,7 +51,7 @@ enum agent_status;
 
 Para obter mais informações, consulte [agentes assíncronos](../../../parallel/concrt/asynchronous-agents.md).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ConcRT. h
 
@@ -65,7 +65,7 @@ enum Agents_EventType;
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`AGENTS_EVENT_CREATE`|Um tipo de evento que representa a criação de um objeto|
 |`AGENTS_EVENT_DESTROY`|Um tipo de evento que representa a exclusão de um objeto|
@@ -76,7 +76,7 @@ enum Agents_EventType;
 |`AGENTS_EVENT_START`|Um tipo de evento que representa a inicialização de algum processamento|
 |`AGENTS_EVENT_UNLINK`|Um tipo de evento que representa a desvinculação de blocos de mensagem|
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ConcRT. h
 
@@ -90,7 +90,7 @@ enum ConcRT_EventType;
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`CONCRT_EVENT_ATTACH`|Um tipo de evento que representa o ato de uma anexação a um Agendador.|
 |`CONCRT_EVENT_BLOCK`|Um tipo de evento que representa o ato de um bloqueio de contexto.|
@@ -102,7 +102,7 @@ enum ConcRT_EventType;
 |`CONCRT_EVENT_UNBLOCK`|Um tipo de evento que representa o ato de desbloquear um contexto.|
 |`CONCRT_EVENT_YIELD`|Um tipo de evento que representa o ato de um contexto que produz.|
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** namespace ConcRT. h **:** simultaneidade
 
@@ -116,7 +116,7 @@ enum Concrt_TraceFlags;
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`AgentEventFlag`||
 |`AllEventsFlag`||
@@ -126,7 +126,7 @@ enum Concrt_TraceFlags;
 |`SchedulerEventFlag`||
 |`VirtualProcessorEventFlag`||
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ConcRT. h
 
@@ -140,13 +140,13 @@ enum CriticalRegionType;
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`InsideCriticalRegion`|Indica que o contexto está dentro de uma região crítica. Quando dentro de uma região crítica, as suspensões assíncronas ficam ocultas do Agendador. Se tal suspensão ocorrer, o Gerenciador de recursos aguardará que o thread se torne executável e simplesmente o retomará em vez de invocar o Agendador novamente. Os bloqueios feitos dentro dessa região devem ser feitos com extrema atenção.|
 |`InsideHyperCriticalRegion`|Indica que o contexto está dentro de uma região do Hyper-Critical. Quando dentro de uma região do Hyper-Critical, as suspensões síncrona e assíncrona ficam ocultas do Agendador. Caso tal suspensão ou bloqueio aconteça, o Gerenciador de recursos aguardará que o thread se torne executável e simplesmente o retomará em vez de invocar o Agendador novamente. Os bloqueios feitos dentro de uma região desse tipo nunca devem ser compartilhados com código em execução fora dessa região. Isso causará um deadlock imprevisível.|
 |`OutsideCriticalRegion`|Indica que o contexto está fora de qualquer região crítica.|
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** concrtrm. h
 
@@ -160,7 +160,7 @@ enum DynamicProgressFeedbackType;
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`ProgressFeedbackDisabled`|O Agendador não coleta informações de progresso. O rebalanceamento é feito com base apenas no nível de assinatura do thread de hardware subjacente. Para obter mais informações sobre os níveis de assinatura, consulte [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Esse valor é reservado para uso pelo tempo de execução.|
 |`ProgressFeedbackEnabled`|O Agendador reúne informações de progresso e as transmite para o Gerenciador de recursos. O Gerenciador de recursos utilizará essas informações estatísticas para reequilibrar recursos em nome do Agendador, além do nível de assinatura do thread de hardware subjacente. Para obter mais informações sobre os níveis de assinatura, consulte [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).|
@@ -175,12 +175,12 @@ enum join_type;
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`greedy`|A ávido `join` blocos de mensagens aceitam imediatamente uma mensagem após a propagação. Isso é mais eficiente, mas tem a possibilidade de bloqueio ao vivo, dependendo da configuração de rede.|
 |`non_greedy`|Os blocos de mensagens `join`s não-ávidos adiam mensagens e as tentam e as utilizam depois que todas chegaram. Isso tem a garantia de funcionar, mas mais lento.|
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Agents. h
 
@@ -194,14 +194,14 @@ enum message_status;
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`accepted`|O destino aceitou a mensagem.|
 |`declined`|O destino não aceitou a mensagem.|
 |`missed`|O destino tentou aceitar a mensagem, mas ela não estava mais disponível.|
 |`postponed`|O destino adie a mensagem.|
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Agents. h
 
@@ -215,7 +215,7 @@ enum PolicyElementKey;
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`ContextPriority`|A prioridade de thread do sistema operacional de cada contexto no Agendador. Se essa chave for definida com o valor `INHERIT_THREAD_PRIORITY` os contextos no Agendador irão herdar a prioridade do thread que criou o Agendador.<br /><br /> Valores válidos: qualquer um dos valores válidos para a função `SetThreadPriority` do Windows e o valor especial `INHERIT_THREAD_PRIORITY`<br /><br /> Valor padrão: `THREAD_PRIORITY_NORMAL`|
 |`ContextStackSize`|O tamanho da pilha reservada de cada contexto no Agendador em kilobytes.<br /><br /> Valores válidos: inteiros positivos<br /><br /> Valor padrão: `0`, indicando que o valor padrão do processo para o tamanho da pilha será usado.|
@@ -229,7 +229,7 @@ enum PolicyElementKey;
 |`TargetOversubscriptionFactor`|Número provisório de processadores virtuais por thread de hardware. O fator de desassinatura de destino pode ser aumentado pelo Gerenciador de recursos, se necessário, para atender `MaxConcurrency` com os threads de hardware no computador.<br /><br /> Valores válidos: inteiros positivos<br /><br /> Valor padrão: `1`|
 |`WinRTInitialization`||
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ConcRT. h
 
@@ -243,12 +243,12 @@ enum SchedulerType;
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`ThreadScheduler`|Indica uma solicitação explícita de threads Win32 regulares.|
 |`UmsThreadDefault`|Não há suporte para threads de modo de usuário agendáveis (UMS) no Tempo de Execução de Simultaneidade no Visual Studio 2013. Usar `UmsThreadDefault` como um valor para a política de `SchedulerType` não resultará em um erro. No entanto, um Agendador criado com essa política usará como padrão threads Win32.|
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ConcRT. h
 
@@ -262,12 +262,12 @@ enum SchedulingProtocolType;
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`EnhanceForwardProgress`|O Agendador prefere fazer Round-Robin por meio de grupos de agendamento depois de executar cada tarefa. Contextos desbloqueados normalmente são agendados de forma FIFO (primeiro a entrar, primeiro a sair). Os processadores virtuais não armazenam em cache contextos desbloqueados.|
 |`EnhanceScheduleGroupLocality`|O Agendador prefere continuar a trabalhar nas tarefas do grupo de agendamento atual antes de passar para outro grupo de agendamento. Contextos desbloqueados são armazenados em cache por processador virtual e normalmente são agendados em uma maneira UEPS (último a entrar, primeiro a sair) pelo processador virtual que os desbloqueiam.|
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ConcRT. h
 
@@ -281,7 +281,7 @@ enum SwitchingProxyState;
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`Blocking`|Indica que o thread de chamada é um bloqueio cooperativo e deve ser exclusivamente de Propriedade do chamador até que subsequentemente seja executado novamente e executando outra ação.|
 |`Idle`|Indica que o thread de chamada não é mais necessário para o Agendador e está sendo retornado para o Gerenciador de recursos. O contexto que estava sendo expedido não pode mais ser utilizado pelo Gerenciador de recursos.|
@@ -303,13 +303,13 @@ enum task_group_status;
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`canceled`|O objeto `task_group` ou `structured_task_group` foi cancelado. Uma ou mais tarefas podem não ter sido executadas.|
 |`completed`|As tarefas enfileiradas no objeto de `task_group` ou `structured_task_group` foram concluídas com êxito.|
 |`not_complete`|As tarefas enfileiradas para o objeto `task_group` não foram concluídas. Observe que esse valor não é retornado atualmente pelo Tempo de Execução de Simultaneidade.|
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** pplinterface. h
 
@@ -323,15 +323,15 @@ enum WinRTInitializationType;
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`DoNotInitializeWinRT`|Quando o aplicativo é executado em sistemas operacionais com a versão Windows 8 ou superior, os threads no Agendador não inicializarão o Windows Runtime.|
 |`InitializeWinRTAsMTA`|Quando o aplicativo é executado em sistemas operacionais com a versão Windows 8 ou superior, cada thread dentro do Agendador inicializará o Windows Runtime e declarará que ele faz parte do apartamento multi-threaded.|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ConcRT. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)

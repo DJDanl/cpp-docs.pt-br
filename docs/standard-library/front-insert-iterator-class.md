@@ -11,13 +11,13 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
 ms.openlocfilehash: 176fac8053d352d6a7a72ce62d5a8ee7a64b9811
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454129"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874029"
 ---
-# <a name="frontinsertiterator-class"></a>Classe front_insert_iterator
+# <a name="front_insert_iterator-class"></a>Classe front_insert_iterator
 
 Descreve um adaptador de iterador que atende aos requisitos de um iterador de saída. Insere, em vez de substituições, elementos na frente de uma sequência e, dessa forma, fornece semânticas que são diferentes da semântica de substituição fornecida pelos iteradores dos contêineres de sequência do C++. A classe `front_insert_iterator` é modelada no tipo do contêiner.
 
@@ -28,9 +28,9 @@ template <class Container>
 class front_insert_iterator;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Container*\
+\ de *contêiner*
 O tipo de contêiner na parte da frente dos elementos a serem inseridos por um `front_insert_iterator`.
 
 ## <a name="remarks"></a>Comentários
@@ -39,24 +39,24 @@ O contêiner deve atender aos requisitos de uma sequência de inserção anterio
 
 ### <a name="constructors"></a>Construtores
 
-|Construtor|Descrição|
+|Construtor|DESCRIÇÃO|
 |-|-|
 |[front_insert_iterator](#front_insert_iterator)|Cria um iterador que pode inserir elementos na frente de um objeto de contêiner especificado.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome de tipo|Descrição|
+|Nome do tipo|DESCRIÇÃO|
 |-|-|
 |[container_type](#container_type)|Um tipo que representa o contêiner no qual uma inserção anterior deve ser feita.|
 |[reference](#reference)|Um tipo que fornece uma referência a um elemento em uma sequência controlada pelo contêiner associado.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|Operador|DESCRIÇÃO|
 |-|-|
-|[operator*](#op_star)|Operador de desreferenciação usado para implementar a expressão \* `i`  =  `x` de iterador de saída para uma inserção frontal.|
+|[operator*](#op_star)|Operador de desreferenciação usado para implementar a expressão do iterador de saída \* `i` = `x` para uma inserção frontal.|
 |[operator++](#op_add_add)|Incrementa o `front_insert_iterator` para o próximo local no qual um valor pode ser armazenado.|
-|[operator=](#op_eq)|Operador de atribuição usado \* para implementar a expressão `i`  =  `x` de iterador de saída para uma inserção frontal.|
+|[operator=](#op_eq)|Operador de atribuição usado para implementar a expressão de iterador de saída \* `i` = `x` para uma inserção frontal.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -114,12 +114,12 @@ Cria um iterador que pode inserir elementos na frente de um objeto de contêiner
 explicit front_insert_iterator(Container& _Cont);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Cont*\
 O objeto de contêiner no qual o `front_insert_iterator` deve inserir elementos.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um `front_insert_iterator` para o objeto de contêiner do parâmetro.
 
@@ -169,7 +169,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="op_star"></a>  front_insert_iterator::operator\*
+## <a name="op_star"></a>operador front_insert_iterator:: Operator\*
 
 Cancela a referência do iterador de inserção, retornando o elemento que é seu alvo.
 
@@ -177,13 +177,13 @@ Cancela a referência do iterador de inserção, retornando o elemento que é se
 front_insert_iterator<Container>& operator*();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A função membro retorna o valor do elemento de destino.
 
 ### <a name="remarks"></a>Comentários
 
-Usado para implementar a expressão do iterador de saída **\*Iter** = **value**. Se `Iter` for um iterador que resolve um elemento em uma sequência  **\*** , o**valor** iter = substituirá esse elemento por um valor e não alterará o número total de elementos na sequência.
+Usado para implementar a expressão do iterador de saída **\*Iter** = **value**. Se `Iter` for um iterador que resolve um elemento em uma sequência, **\*** **valor** = ITER substituirá esse elemento por um valor e não alterará o número total de elementos na sequência.
 
 ### <a name="example"></a>Exemplo
 
@@ -240,7 +240,7 @@ front_insert_iterator<Container>& operator++();
 front_insert_iterator<Container> operator++(int);
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um `front_insert_iterator` que trata do próximo local no qual um valor pode ser armazenado.
 
@@ -291,12 +291,12 @@ front_insert_iterator<Container>& operator=(typename Container::const_reference 
 front_insert_iterator<Container>& operator=(typename Container::value_type&& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Val*\
+*valor*\
 O valor a ser atribuído ao contêiner.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma referência ao último elemento inserido na frente do contêiner.
 
@@ -387,7 +387,7 @@ The first element in the list L is: 30.
 */
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<iterator>](../standard-library/iterator.md)\
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
 ms.openlocfilehash: 7c47d9db64b0af7d5413abed3f85e9d41a591fa2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143124"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865477"
 ---
 # <a name="context-class"></a>Classe Context
 
@@ -39,15 +39,15 @@ class Context;
 
 ## <a name="members"></a>Membros
 
-### <a name="protected-constructors"></a>Construtores protegidos
+### <a name="protected-constructors"></a>Construtores Protegidos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[~ Destruidor de contexto](#dtor)||
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[Bloco](#block)|Bloqueia o contexto atual.|
 |[CurrentContext](#currentcontext)|Retorna um ponteiro para o contexto atual.|
@@ -75,7 +75,7 @@ O Agendador é cooperativa por natureza e um contexto em execução pode gerar s
 
 `Context`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ConcRT. h
 
@@ -215,7 +215,7 @@ Um objeto `Context` é destruído internamente pelo tempo de execução. Ele nã
 void operator delete(void* _PObject);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_PObject*<br/>
 Um ponteiro para o objeto a ser excluído.
@@ -228,7 +228,7 @@ Injeta um processador virtual adicional em um Agendador pela duração de um blo
 static void __cdecl Oversubscribe(bool _BeginOversubscription);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_BeginOversubscription*<br/>
 Se **for true**, uma indicação de que um processador virtual extra deve ser adicionado durante a assinatura em excesso. Se **for false**, uma indicação de que a assinatura deve terminar e o processador virtual adicionado anteriormente deve ser removido.
@@ -303,7 +303,7 @@ Esse método fará com que o agendador padrão do processo seja criado e/ou anex
 
 Essa função é nova no Visual Studio 2015 e é idêntica à função [yield](#yield) , mas não entra em conflito com a macro yield em Windows. h.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Classe Scheduler](scheduler-class.md)<br/>

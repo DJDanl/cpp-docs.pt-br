@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
 ms.openlocfilehash: 09adcb33ca9e6f8524063130d6aedca044d6ecb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247185"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78863143"
 ---
 # <a name="catlcommodule-class"></a>Classe CAtlComModule
 
@@ -33,14 +33,14 @@ class CAtlComModule : public _ATL_COM_MODULE
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CAtlComModule::CAtlComModule](#catlcommodule)|O construtor.|
-|[CAtlComModule::~CAtlComModule](#dtor)|O destruidor.|
+|[CAtlComModule:: ~ CAtlComModule](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CAtlComModule::RegisterServer](#registerserver)|Chame esse método para atualizar o registro do sistema para cada objeto no mapa de objetos.|
 |[CAtlComModule::RegisterTypeLib](#registertypelib)|Chame esse método para registrar uma biblioteca de tipos.|
@@ -49,9 +49,9 @@ class CAtlComModule : public _ATL_COM_MODULE
 
 ## <a name="remarks"></a>Comentários
 
-`CAtlComModule` implementa um módulo de servidor COM, permitindo que um cliente acessar os componentes do módulo.
+`CAtlComModule` implementa um módulo de servidor COM, permitindo que um cliente acesse os componentes do módulo.
 
-Essa classe substitui o obsoletos [CComModule](../../atl/reference/ccommodule-class.md) classe usado em versões anteriores do ATL. Ver [Classes de módulo ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
+Essa classe substitui a classe [CComModule](../../atl/reference/ccommodule-class.md) obsoleta usada em versões anteriores do ATL. Consulte [classes de módulo do ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -63,7 +63,7 @@ Essa classe substitui o obsoletos [CComModule](../../atl/reference/ccommodule-cl
 
 **Cabeçalho:** atlbase. h
 
-##  <a name="catlcommodule"></a>  CAtlComModule::CAtlComModule
+##  <a name="catlcommodule"></a>CAtlComModule::CAtlComModule
 
 O construtor.
 
@@ -75,7 +75,7 @@ CAtlComModule() throw();
 
 Inicializa o módulo.
 
-##  <a name="dtor"></a>  CAtlComModule::~CAtlComModule
+##  <a name="dtor"></a>CAtlComModule:: ~ CAtlComModule
 
 O destruidor.
 
@@ -85,9 +85,9 @@ O destruidor.
 
 ### <a name="remarks"></a>Comentários
 
-Libera todas as fábricas de classe.
+Libera Todas as fábricas de classe.
 
-##  <a name="registerserver"></a>  CAtlComModule::RegisterServer
+##  <a name="registerserver"></a>CAtlComModule::RegisterServer
 
 Chame esse método para atualizar o registro do sistema para cada objeto no mapa de objetos.
 
@@ -95,23 +95,23 @@ Chame esse método para atualizar o registro do sistema para cada objeto no mapa
 HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bRegTypeLib*<br/>
-TRUE se a biblioteca de tipos deve ser registrado. O valor padrão é FALSE.
+TRUE se a biblioteca de tipos for registrada. O valor padrão é FALSE.
 
 *pCLSID*<br/>
-Aponta para o CLSID do objeto a ser registrado. Se NULL (o valor padrão), todos os objetos no mapa de objetos será registrado.
+Aponta para o CLSID do objeto a ser registrado. Se for NULL (o valor padrão), todos os objetos no mapa de objetos serão registrados.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
+Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
 Chama a função global [AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver).
 
-##  <a name="registertypelib"></a>  CAtlComModule::RegisterTypeLib
+##  <a name="registertypelib"></a>CAtlComModule::RegisterTypeLib
 
 Chame esse método para registrar uma biblioteca de tipos.
 
@@ -120,20 +120,20 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex);
 HRESULT RegisterTypeLib();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszIndex*<br/>
-Cadeia de caracteres no formato "\\\N", onde N é o índice de inteiro do recurso TYPELIB.
+Cadeia de caracteres no formato "\\\n", em que N é o índice de inteiro do recurso TYPELIB.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
+Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Adiciona informações sobre uma biblioteca de tipos para o registro do sistema. Se a instância de módulo contém várias bibliotecas de tipos, use a primeira versão desse método para especificar qual biblioteca de tipo deve ser usada.
+Adiciona informações sobre uma biblioteca de tipos ao registro do sistema. Se a instância do módulo contiver várias bibliotecas de tipos, use a primeira versão desse método para especificar qual biblioteca de tipos deve ser usada.
 
-##  <a name="unregisterserver"></a>  CAtlComModule::UnregisterServer
+##  <a name="unregisterserver"></a>CAtlComModule::UnregisterServer
 
 Chame esse método para cancelar o registro de cada objeto no mapa de objetos.
 
@@ -143,23 +143,23 @@ HRESULT UnregisterServer(
     const CLSID* pCLSID = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bRegTypeLib*<br/>
-TRUE se a biblioteca de tipos deve ser cancelado. O valor padrão é FALSE.
+TRUE se a biblioteca de tipos tiver que ter o registro cancelado. O valor padrão é FALSE.
 
 *pCLSID*<br/>
-Aponta para o CLSID do objeto a ser cancelado. Se NULL (o valor padrão), todos os objetos no mapa de objetos será cancelado.
+Aponta para o CLSID do objeto a ser cancelado. Se NULL (o valor padrão), todos os objetos no mapa de objeto terão o registro cancelado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
+Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
 Chama a função global [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).
 
-##  <a name="unregistertypelib"></a>  CAtlComModule::UnRegisterTypeLib
+##  <a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib
 
 Chame esse método para cancelar o registro de uma biblioteca de tipos.
 
@@ -168,20 +168,20 @@ HRESULT UnRegisterTypeLib(LPCTSTR lpszIndex);
 HRESULT UnRegisterTypeLib();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszIndex*<br/>
-Cadeia de caracteres no formato "\\\N", onde N é o índice de inteiro do recurso TYPELIB.
+Cadeia de caracteres no formato "\\\n", em que N é o índice de inteiro do recurso TYPELIB.
 
 ### <a name="remarks"></a>Comentários
 
-Remove informações sobre uma biblioteca de tipos do registro do sistema. Se a instância de módulo contém várias bibliotecas de tipos, use a primeira versão desse método para especificar qual biblioteca de tipo deve ser usada.
+Remove informações sobre uma biblioteca de tipos do registro do sistema. Se a instância do módulo contiver várias bibliotecas de tipos, use a primeira versão desse método para especificar qual biblioteca de tipos deve ser usada.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
+Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

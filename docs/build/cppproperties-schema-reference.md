@@ -4,11 +4,11 @@ ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
 ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556663"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856807"
 ---
 # <a name="cpppropertiesjson-reference"></a>Referência de CppProperties. JSON
 
@@ -64,7 +64,7 @@ Observação: os valores `msvc-x86` e `msvc-x64` têm suporte apenas por motivos
 
 O Visual Studio fornece os seguintes ambientes predefinidos para a Microsoft C++ que são mapeados para o prompt de comando do desenvolvedor correspondente. Ao herdar um desses ambientes, você pode consultar qualquer uma das variáveis de ambiente usando a propriedade global `env` com esta sintaxe de macro: $ {env.\<variável >}.
 
-|Nome da Variável|Descrição|
+|Nome de variável|DESCRIÇÃO|
 |-----------|-----------------|
 |vsdev|O ambiente padrão do Visual Studio|
 |msvc_x86|Compilar para x86 usando ferramentas x86|
@@ -77,7 +77,7 @@ O Visual Studio fornece os seguintes ambientes predefinidos para a Microsoft C++
 
 Quando a carga de trabalho do Linux é instalada, os seguintes ambientes ficam disponíveis para o direcionamento remoto do Linux e do WSL:
 
-|Nome da Variável|Descrição|
+|Nome de variável|DESCRIÇÃO|
 |-----------|-----------------|
 |linux_x86|Direcionar ao Linux x86 remotamente|
 |linux_x64|Direcionar ao Linux x64 remotamente|
@@ -162,7 +162,7 @@ Se o seu projeto tiver uma pasta include e também incluir o *Windows. h* e outr
 
 Se você não estiver vendo o IntelliSense que espera, poderá solucionar problemas acessando **ferramentas** > **Opções** > **Editor de texto** > **CC++ /**  > **avançado** e definindo **habilitar registro em log** como **true**. Para começar, tente definir o **nível de log** para 5 e **registrar filtros em log** como 8.
 
-![Diagnostic logging](media/diagnostic-logging.png)
+![Registro de diagnóstico](media/diagnostic-logging.png)
 
 A saída é canalizada para o **janela de saída** e fica visível quando você escolhe **Mostrar saída de: C++ log Visual**. A saída contém, entre outras coisas, a lista de caminhos de inclusão reais que o IntelliSense está tentando usar. Se os caminhos não corresponderem àqueles em *CppProperties. JSON*, tente fechar a pasta e excluir a subpasta *. vs* que contém dados de navegação armazenados em cache.
 

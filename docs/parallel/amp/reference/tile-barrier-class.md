@@ -13,11 +13,11 @@ helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
 ms.openlocfilehash: 757309a10da3e6d1c9c053430cce2cf603380b1f
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127758"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855905"
 ---
 # <a name="tile_barrier-class"></a>Classe tile_barrier
 
@@ -33,13 +33,13 @@ class tile_barrier;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|[Construtor de tile_barrier](#ctor)|Inicializa uma nova instância da classe `tile_barrier`.|
+|[Construtor de tile_barrier](#ctor)|Inicia uma nova instância da classe `tile_barrier`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[esperado](#wait)|Instrui todos os threads no grupo de threads (bloco) para interromper a execução até que todos os threads no bloco terminem de esperar.|
 |[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Bloqueia a execução de todos os threads em um bloco até que todos os acessos à memória tenham sido concluídos e que todos os threads no bloco tenham atingido essa chamada.|
@@ -50,7 +50,7 @@ class tile_barrier;
 
 `tile_barrier`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** amp. h
 
@@ -67,7 +67,7 @@ tile_barrier(
     const tile_barrier& _Other ) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Other*<br/>
 O objeto `tile_barrier` a ser copiado.
@@ -112,6 +112,6 @@ Bloqueia a execução de todos os threads em um bloco até que todos os threads 
 void wait_with_tile_static_memory_fence() const restrict(amp);
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)

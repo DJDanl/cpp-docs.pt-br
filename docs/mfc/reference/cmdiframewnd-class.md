@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
 ms.openlocfilehash: 20d74030cdc90ed2e1a7809c121967e74db21b4a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505569"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866549"
 ---
 # <a name="cmdiframewnd-class"></a>Classe CMDIFrameWnd
 
@@ -55,45 +55,45 @@ class CMDIFrameWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|[CMDIFrameWnd::CMDIFrameWnd](#cmdiframewnd)|Constrói um `CMDIFrameWnd`.|
+|[CMDIFrameWnd:: CMDIFrameWnd](#cmdiframewnd)|Constrói um `CMDIFrameWnd`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|[CMDIFrameWnd::CreateClient](#createclient)|Cria uma janela do Windows MDICLIENT para `CMDIFrameWnd`isso. Chamado pela `OnCreate` função membro do `CWnd`.|
-|[CMDIFrameWnd::CreateNewChild](#createnewchild)|Cria uma nova janela filho.|
-|[CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup)|Retorna o menu pop-up da janela.|
+|[CMDIFrameWnd:: CreateClient](#createclient)|Cria uma janela MDICLIENT do Windows para este `CMDIFrameWnd`. Chamado pelo `OnCreate` função membro de `CWnd`.|
+|[CMDIFrameWnd:: CreateNewChild](#createnewchild)|Cria uma nova janela filho.|
+|[CMDIFrameWnd:: GetWindowMenuPopup](#getwindowmenupopup)|Retorna o menu pop-up da janela.|
 |[CMDIFrameWnd:: MDIActivate](#mdiactivate)|Ativa uma janela filho MDI diferente.|
-|[CMDIFrameWnd::MDICascade](#mdicascade)|Organiza todas as janelas filhas em um formato em cascata.|
-|[CMDIFrameWnd::MDIGetActive](#mdigetactive)|Recupera a janela filho MDI ativa no momento, juntamente com um sinalizador que indica se o filho está ou não maximizado.|
+|[CMDIFrameWnd:: MDICascade](#mdicascade)|Organiza todas as janelas filhas em um formato em cascata.|
+|[CMDIFrameWnd:: MDIGetActive](#mdigetactive)|Recupera a janela filho MDI ativa no momento, juntamente com um sinalizador que indica se o filho está ou não maximizado.|
 |[CMDIFrameWnd:: MDIIconArrange](#mdiiconarrange)|Organiza todas as janelas filhas do documento minimizadas.|
-|[CMDIFrameWnd::MDIMaximize](#mdimaximize)|Maximiza uma janela filho MDI.|
-|[CMDIFrameWnd::MDINext](#mdinext)|Ativa a janela filho imediatamente atrás da janela filho ativa no momento e coloca a janela filho ativa no momento por trás de todas as outras janelas filhas.|
-|[CMDIFrameWnd::MDIPrev](#mdiprev)|Ativa a janela filho anterior e coloca a janela filho ativa no momento imediatamente atrás dela.|
-|[CMDIFrameWnd::MDIRestore](#mdirestore)|Restaura uma janela filho MDI do tamanho maximizado ou minimizado.|
-|[CMDIFrameWnd::MDISetMenu](#mdisetmenu)|Substitui o menu de uma janela de quadro MDI, o menu pop-up da janela ou ambos.|
+|[CMDIFrameWnd:: MDIMaximize](#mdimaximize)|Maximiza uma janela filho MDI.|
+|[CMDIFrameWnd:: MDINext](#mdinext)|Ativa a janela filho imediatamente atrás da janela filho ativa no momento e coloca a janela filho ativa no momento por trás de todas as outras janelas filhas.|
+|[CMDIFrameWnd:: MDIPrev](#mdiprev)|Ativa a janela filho anterior e coloca a janela filho ativa no momento imediatamente atrás dela.|
+|[CMDIFrameWnd:: MDIRestore](#mdirestore)|Restaura uma janela filho MDI do tamanho maximizado ou minimizado.|
+|[CMDIFrameWnd:: MDISetMenu](#mdisetmenu)|Substitui o menu de uma janela de quadro MDI, o menu pop-up da janela ou ambos.|
 |[CMDIFrameWnd:: MDITile](#mditile)|Organiza todas as janelas filhas em um formato de lado.|
 
 ## <a name="remarks"></a>Comentários
 
-Para criar uma janela de quadro MDI útil para seu aplicativo, derive uma `CMDIFrameWnd`classe de. Adicione variáveis de membro à classe derivada para armazenar dados específicos ao seu aplicativo. Implemente funções de membro do manipulador de mensagens e um mapa de mensagens na classe derivada para especificar o que acontece quando as mensagens são direcionadas para a janela.
+Para criar uma janela de quadro MDI útil para seu aplicativo, derive uma classe de `CMDIFrameWnd`. Adicione variáveis de membro à classe derivada para armazenar dados específicos ao seu aplicativo. Implemente funções de membro do manipulador de mensagens e um mapa de mensagens na classe derivada para especificar o que acontece quando as mensagens são direcionadas para a janela.
 
-Você pode construir uma janela de quadro MDI chamando a função de membro [Create](../../mfc/reference/cframewnd-class.md#create) ou [LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe) de `CFrameWnd`.
+Você pode construir uma janela de quadro MDI chamando a função de membro [Create](../../mfc/reference/cframewnd-class.md#create) ou [loadframe](../../mfc/reference/cframewnd-class.md#loadframe) de `CFrameWnd`.
 
-Antes de chamar `Create` ou `LoadFrame`, você deve construir o objeto de janela do quadro no heap usando C++ o operador **New** . Antes de `Create` chamar, você também pode registrar uma classe de janela com a função global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) para definir os estilos de ícone e classe para o quadro.
+Antes de chamar `Create` ou `LoadFrame`, você deve construir o objeto janela do quadro no heap usando o C++ operador **New** . Antes de chamar `Create` você também pode registrar uma classe de janela com a função global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) para definir os estilos de ícone e classe para o quadro.
 
-Use a `Create` função membro para passar os parâmetros de criação do quadro como argumentos imediatos.
+Use a função de membro `Create` para passar os parâmetros de criação do quadro como argumentos imediatos.
 
-`LoadFrame`requer menos argumentos que `Create`e, em vez disso, recupera a maioria de seus valores padrão de recursos, incluindo a legenda, o ícone, a tabela de acelerador e o menu do quadro. Para ser acessado pelo `LoadFrame`, todos esses recursos devem ter a mesma ID de recurso (por exemplo, IDR_MAINFRAME).
+`LoadFrame` requer menos argumentos que `Create`e, em vez disso, recupera a maioria de seus valores padrão de recursos, incluindo a legenda, o ícone, a tabela de acelerador e o menu do quadro. Para ser acessado pelo `LoadFrame`, todos esses recursos devem ter a mesma ID de recurso (por exemplo, IDR_MAINFRAME).
 
-Embora `MDIFrameWnd` seja derivado de `CFrameWnd`, uma classe de janela de quadro `CMDIFrameWnd` derivada de não precisa ser `DECLARE_DYNCREATE`declarada com.
+Embora `MDIFrameWnd` seja derivado de `CFrameWnd`, uma classe de janela de quadro derivada de `CMDIFrameWnd` não precisa ser declarada com `DECLARE_DYNCREATE`.
 
-A `CMDIFrameWnd` classe herda grande parte de sua implementação padrão `CFrameWnd`do. Para obter uma lista detalhada desses recursos, consulte a descrição da classe [CFrameWnd](../../mfc/reference/cframewnd-class.md) . A `CMDIFrameWnd` classe tem os seguintes recursos adicionais:
+A classe `CMDIFrameWnd` herda grande parte de sua implementação padrão do `CFrameWnd`. Para obter uma lista detalhada desses recursos, consulte a descrição da classe [CFrameWnd](../../mfc/reference/cframewnd-class.md) . A classe `CMDIFrameWnd` tem os seguintes recursos adicionais:
 
-- Uma janela de quadro MDI gerencia a janela MDICLIENT, reposicionando-a em conjunto com barras de controle. A janela do cliente MDI é o pai direto de janelas de quadros filho MDI. Os estilos de janela WS_HSCROLL e WS_VSCROLL especificados em `CMDIFrameWnd` um aplicam-se à janela do cliente MDI em vez da janela do quadro principal para que o usuário possa rolar a área do cliente MDI (como no Gerenciador de programas do Windows, por exemplo).
+- Uma janela de quadro MDI gerencia a janela MDICLIENT, reposicionando-a em conjunto com barras de controle. A janela do cliente MDI é o pai direto de janelas de quadros filho MDI. Os estilos de janela WS_HSCROLL e WS_VSCROLL especificados em um `CMDIFrameWnd` se aplicam à janela do cliente MDI em vez da janela do quadro principal para que o usuário possa rolar a área do cliente MDI (como no Gerenciador de programas do Windows, por exemplo).
 
 - Uma janela de quadro MDI possui um menu padrão que é usado como a barra de menus quando não há nenhuma janela filho MDI ativa. Quando há um filho MDI ativo, a barra de menus da janela de quadro MDI é substituída automaticamente pelo menu da janela filho MDI.
 
@@ -111,9 +111,9 @@ A `CMDIFrameWnd` classe herda grande parte de sua implementação padrão `CFram
 
 - Uma janela de quadro MDI também tem uma implementação de ID_WINDOW_NEW, que cria um novo quadro e uma exibição no documento atual. Um aplicativo pode substituir essas implementações de comando padrão para personalizar a manipulação de janelas MDI.
 
-Não use o C++ operador **delete** para destruir uma janela de quadro. Use `CWnd::DestroyWindow` em seu lugar. A `CFrameWnd` implementação do `PostNcDestroy` irá excluir o C++ objeto quando a janela for destruída. Quando o usuário fechar a janela do quadro, o `OnClose` manipulador padrão chamará. `DestroyWindow`
+Não use o C++ operador **delete** para destruir uma janela de quadro. Use `CWnd::DestroyWindow` em vez disso. A implementação `CFrameWnd` do `PostNcDestroy` excluirá o C++ objeto quando a janela for destruída. Quando o usuário fechar a janela do quadro, o manipulador de `OnClose` padrão chamará `DestroyWindow`.
 
-Para obter mais informações `CMDIFrameWnd`sobre o, consulte [janelas de quadros](../../mfc/frame-windows.md).
+Para obter mais informações sobre `CMDIFrameWnd`, consulte [janelas de quadros](../../mfc/frame-windows.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -141,15 +141,15 @@ CMDIFrameWnd();
 
 ### <a name="remarks"></a>Comentários
 
-Chame a `Create` função `LoadFrame` de membro ou para criar a janela de quadro MDI visível.
+Chame a função de membro `Create` ou `LoadFrame` para criar a janela de quadro MDI visível.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCWindowing#13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]
 
-##  <a name="createclient"></a>  CMDIFrameWnd::CreateClient
+##  <a name="createclient"></a>CMDIFrameWnd:: CreateClient
 
-Cria a janela do cliente MDI que gerencia `CMDIChildWnd` os objetos.
+Cria a janela do cliente MDI que gerencia os objetos `CMDIChildWnd`.
 
 ```
 virtual BOOL CreateClient(
@@ -157,7 +157,7 @@ virtual BOOL CreateClient(
     CMenu* pWindowMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpCreateStruct*<br/>
 Um ponteiro longo para uma estrutura [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) .
@@ -165,19 +165,19 @@ Um ponteiro longo para uma estrutura [CREATESTRUCT](/windows/win32/api/winuser/n
 *pWindowMenu*<br/>
 Um ponteiro para o menu pop-up da janela.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro deve ser chamada se você substituir `OnCreate` a função de membro diretamente.
+Essa função de membro deve ser chamada se você substituir a função membro `OnCreate` diretamente.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCWindowing#14](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_2.cpp)]
 
-##  <a name="createnewchild"></a>  CMDIFrameWnd::CreateNewChild
+##  <a name="createnewchild"></a>CMDIFrameWnd:: CreateNewChild
 
 Cria uma nova janela filho.
 
@@ -189,7 +189,7 @@ CMDIChildWnd* CreateNewChild(
     HACCEL hAccel = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pClass*<br/>
 A classe de tempo de execução da janela filho a ser criada.
@@ -211,7 +211,7 @@ Use essa função para criar janelas filhas de uma janela de quadro MDI.
 
 [!code-cpp[NVC_MFCWindowing#15](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_3.cpp)]
 
-##  <a name="getwindowmenupopup"></a>  CMDIFrameWnd::GetWindowMenuPopup
+##  <a name="getwindowmenupopup"></a>CMDIFrameWnd:: GetWindowMenuPopup
 
 Chame essa função de membro para obter um identificador para o menu pop-up atual chamado "Window" (o menu pop-up com itens de menu para o gerenciamento de janelas MDI).
 
@@ -219,18 +219,18 @@ Chame essa função de membro para obter um identificador para o menu pop-up atu
 virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hMenuBar*<br/>
 A barra de menus atual.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O menu pop-up da janela, se houver; caso contrário, NULL.
 
 ### <a name="remarks"></a>Comentários
 
-A implementação padrão procura um menu pop-up contendo comandos de menu de janela padrão, como ID_WINDOW_NEW e ID_WINDOW_TILE_HORZ.
+A implementação padrão procura um menu pop-up que contém comandos de menu de janela padrão, como ID_WINDOW_NEW e ID_WINDOW_TILE_HORZ.
 
 Substitua essa função de membro se você tiver um menu de janela que não use as IDs de comando de menu padrão.
 
@@ -246,25 +246,25 @@ Ativa uma janela filho MDI diferente.
 void MDIActivate(CWnd* pWndActivate);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWndActivate*<br/>
 Aponta para a janela filho MDI a ser ativada.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função de membro envia a mensagem [WM_MDIACTIVATE](../../mfc/reference/cwnd-class.md#onmdiactivate) para a janela filho que está sendo ativada e a janela filho sendo desativada.
+Essa função de membro envia a mensagem de [WM_MDIACTIVATE](../../mfc/reference/cwnd-class.md#onmdiactivate) para a janela filho que está sendo ativada e a janela filho sendo desativada.
 
 Essa é a mesma mensagem que será enviada se o usuário alterar o foco para uma janela filho MDI usando o mouse ou o teclado.
 
 > [!NOTE]
->  Uma janela filho MDI é ativada independentemente da janela do quadro MDI. Quando o quadro se torna ativo, a janela filho que foi ativada pela última vez é enviada uma mensagem [WM_NCACTIVATE](../../mfc/reference/cwnd-class.md#onncactivate) para desenhar um quadro de janela e uma barra de legenda ativas, mas não recebe outra mensagem WM_MDIACTIVATE.
+>  Uma janela filho MDI é ativada independentemente da janela do quadro MDI. Quando o quadro se torna ativo, a janela filho que foi ativada pela última vez é enviada uma mensagem de [WM_NCACTIVATE](../../mfc/reference/cwnd-class.md#onncactivate) para desenhar um quadro de janela e uma barra de legenda ativas, mas não recebe outra mensagem de WM_MDIACTIVATE.
 
 ### <a name="example"></a>Exemplo
 
 Consulte o exemplo de [CMDIFrameWnd:: GetWindowMenuPopup](#getwindowmenupopup).
 
-##  <a name="mdicascade"></a>  CMDIFrameWnd::MDICascade
+##  <a name="mdicascade"></a>CMDIFrameWnd:: MDICascade
 
 Organiza todas as janelas filhas MDI em um formato em cascata.
 
@@ -273,20 +273,20 @@ void MDICascade();
 void MDICascade(int nType);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nType*<br/>
 Especifica um sinalizador em cascata. Somente o sinalizador a seguir pode ser especificado: MDITILE_SKIPDISABLED, que impede que janelas filho MDI desabilitadas sejam colocadas em cascata.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira versão do `MDICascade`, sem parâmetros, propaga todas as janelas filho MDI, incluindo aquelas desabilitadas. A segunda versão, opcionalmente, não desabilita as janelas filho MDI desativadas se você especificar MDITILE_SKIPDISABLED para o parâmetro *ndeclarações* .
+A primeira versão do `MDICascade`, sem parâmetros, em cascata todas as janelas filho MDI, incluindo aquelas desabilitadas. A segunda versão, opcionalmente, não desabilita as janelas filho MDI desativadas se você especificar MDITILE_SKIPDISABLED para o parâmetro *ndeclarações* .
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCWindowing#17](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_5.cpp)]
 
-##  <a name="mdigetactive"></a>  CMDIFrameWnd::MDIGetActive
+##  <a name="mdigetactive"></a>CMDIFrameWnd:: MDIGetActive
 
 Recupera a janela filho MDI ativo atual, junto com um sinalizador que indica se a janela filho está maximizada.
 
@@ -294,12 +294,12 @@ Recupera a janela filho MDI ativo atual, junto com um sinalizador que indica se 
 CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pbMaximized*<br/>
 Um ponteiro para um valor de retorno BOOL. Definir como TRUE no retorno se a janela for maximizada; caso contrário, FALSE.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para a janela filho MDI ativa.
 
@@ -323,7 +323,7 @@ Ele não afeta as janelas filhas que não são minimizadas.
 
 Consulte o exemplo de [CMDIFrameWnd:: MDICascade](#mdicascade).
 
-##  <a name="mdimaximize"></a>  CMDIFrameWnd::MDIMaximize
+##  <a name="mdimaximize"></a>CMDIFrameWnd:: MDIMaximize
 
 Maximiza a janela filho MDI especificada.
 
@@ -331,7 +331,7 @@ Maximiza a janela filho MDI especificada.
 void MDIMaximize(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 Aponta para a janela a ser maximizada.
@@ -362,7 +362,7 @@ Se a janela filho MDI ativa no momento for maximizada, a função de membro rest
 
 [!code-cpp[NVC_MFCWindowing#18](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_6.cpp)]
 
-##  <a name="mdiprev"></a>  CMDIFrameWnd::MDIPrev
+##  <a name="mdiprev"></a>CMDIFrameWnd:: MDIPrev
 
 Ativa a janela filho anterior e coloca a janela filho ativa no momento imediatamente atrás dela.
 
@@ -374,7 +374,7 @@ void MDIPrev();
 
 Se a janela filho MDI ativa no momento for maximizada, a função de membro restaurará o filho ativo no momento e maximizará o filho que acabou de ser ativado.
 
-##  <a name="mdirestore"></a>  CMDIFrameWnd::MDIRestore
+##  <a name="mdirestore"></a>CMDIFrameWnd:: MDIRestore
 
 Restaura uma janela filho MDI do tamanho maximizado ou minimizado.
 
@@ -382,7 +382,7 @@ Restaura uma janela filho MDI do tamanho maximizado ou minimizado.
 void MDIRestore(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 Aponta para a janela a ser restaurada.
@@ -391,7 +391,7 @@ Aponta para a janela a ser restaurada.
 
 Consulte o exemplo de [CMDIChildWnd:: MDIRestore](../../mfc/reference/cmdichildwnd-class.md#mdirestore).
 
-##  <a name="mdisetmenu"></a>  CMDIFrameWnd::MDISetMenu
+##  <a name="mdisetmenu"></a>CMDIFrameWnd:: MDISetMenu
 
 Substitui o menu de uma janela de quadro MDI, o menu pop-up da janela ou ambos.
 
@@ -401,7 +401,7 @@ CMenu* MDISetMenu(
     CMenu* pWindowMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFrameMenu*<br/>
 Especifica o menu do novo menu de janela de quadro. Se for NULL, o menu não será alterado.
@@ -409,13 +409,13 @@ Especifica o menu do novo menu de janela de quadro. Se for NULL, o menu não ser
 *pWindowMenu*<br/>
 Especifica o menu do menu pop-up de nova janela. Se for NULL, o menu não será alterado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o menu de janela de quadro substituído por esta mensagem. O ponteiro pode ser temporário e não deve ser armazenado para uso posterior.
 
 ### <a name="remarks"></a>Comentários
 
-Depois de `MDISetMenu`chamar, um aplicativo deve chamar a função membro [DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar) do `CWnd` para atualizar a barra de menus.
+Depois de chamar `MDISetMenu`, um aplicativo deve chamar a função membro [DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar) de `CWnd` para atualizar a barra de menus.
 
 Se essa chamada substituir o menu pop-up da janela, os itens do menu de janela filho MDI serão removidos do menu da janela anterior e adicionados ao menu pop-up da nova janela.
 
@@ -438,26 +438,26 @@ void MDITile();
 void MDITile(int nType);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nType*<br/>
 Especifica um sinalizador de divisão. Esse parâmetro pode ser qualquer um dos seguintes sinalizadores:
 
-- Janelas filho MDI do MDITILE_HORIZONTAL Tiles para que uma janela seja exibida acima de outra.
+- MDITILE_HORIZONTAL organiza as janelas filho MDI para que uma janela seja exibida acima de outra.
 
-- O MDITILE_SKIPDISABLED Impede que janelas filho MDI desativadas sejam colocadas em ladrilho.
+- MDITILE_SKIPDISABLED Impede que janelas filho MDI desativadas sejam colocadas lado a lado.
 
-- Janelas filho MDI do MDITILE_VERTICAL Tiles para que uma janela seja exibida ao lado de outra.
+- MDITILE_VERTICAL organiza as janelas filho MDI para que uma janela seja exibida ao lado de outra.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira versão do `MDITile`, sem parâmetros, organiza as janelas verticalmente nas versões 3,1 e posteriores do Windows. A segunda versão organiza as janelas vertical ou horizontalmente, dependendo do valor do parâmetro *ndeclarações* .
+A primeira versão do `MDITile`, sem parâmetros, organiza as janelas verticalmente no Windows versões 3,1 e posteriores. A segunda versão organiza as janelas vertical ou horizontalmente, dependendo do valor do parâmetro *ndeclarações* .
 
 ### <a name="example"></a>Exemplo
 
 Consulte o exemplo de [CMDIFrameWnd:: MDICascade](#mdicascade).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [MDI de exemplo do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Exemplo de MDIDOCVW do MFC](../../overview/visual-cpp-samples.md)<br/>

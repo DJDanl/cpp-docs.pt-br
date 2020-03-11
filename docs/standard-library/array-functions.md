@@ -11,15 +11,15 @@ helpviewer_keywords:
 - std::get [C++]
 - std::swap [C++]
 ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456781"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875878"
 ---
 # <a name="ltarraygt-functions"></a>Funções &lt;array&gt;
 
-O \<cabeçalho de > de matriz inclui duas `get` funções não membro e `swap`, que operam em objetos de **matriz** .
+O cabeçalho de > de matriz de \<inclui duas funções não-membro, `get` e `swap`, que operam em objetos de **matriz** .
 
 |||
 |-|-|
@@ -40,7 +40,7 @@ template <int Index, class T, size_t N>
 constexpr T&& get(array<T, N>&& arr) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Index*\
 O deslocamento do elemento.
@@ -48,10 +48,10 @@ O deslocamento do elemento.
 *T*\
 O tipo de um elemento.
 
-*P*\
+*N*\
 O número de elementos na matriz.
 
-*arr*\
+\ *arr*
 A matriz da qual selecionar.
 
 ### <a name="example"></a>Exemplo
@@ -88,25 +88,25 @@ int main()
 
 ## <a name="swap"></a>  swap
 
-Uma especialização de modelo não membro `std::swap` do que permuta dois objetos de **matriz** .
+Uma especialização de modelo não membro de `std::swap` que permuta dois objetos de **matriz** .
 
 ```cpp
 template <class Ty, std::size_t N>
 void swap(array<Ty, N>& left, array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ty*\
 O tipo de um elemento.
 
-*P*\
+*N*\
 O tamanho da matriz.
 
-*mantida*\
+\ *à esquerda*
 A primeira matriz a trocar.
 
-*Certo*\
+\ *à direita*
 A segunda matriz a trocar.
 
 ### <a name="remarks"></a>Comentários
@@ -159,6 +159,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<array>](../standard-library/array.md)

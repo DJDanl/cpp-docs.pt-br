@@ -5,11 +5,11 @@ helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
 ms.openlocfilehash: 47586f9cff0fcbe2cd7bad31f3d93fed08190830
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511575"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865154"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Rotinas de troca dos dados da caixa de diálogo padrão
 
@@ -39,9 +39,9 @@ Este tópico lista as rotinas de troca de dados de caixa de diálogo padrão (ca
 |[DDX_Slider](#ddx_slider)|Inicializa ou recupera a posição atual do Thumb de um controle deslizante.|
 |[DDX_Text](#ddx_text)|Inicializa ou recupera o valor atual de um controle de edição.|
 
-##  <a name="ddx_cbindex"></a>  DDX_CBIndex
+##  <a name="ddx_cbindex"></a>DDX_CBIndex
 
-A `DDX_CBIndex` função gerencia a transferência de dados **int** entre um controle de caixa de combinação em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados **int** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A função `DDX_CBIndex` gerencia a transferência de dados **int** entre um controle de caixa de combinação em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados **int** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```
 void AFXAPI DDX_CBIndex(
@@ -50,10 +50,10 @@ void AFXAPI DDX_CBIndex(
     int& index);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
-Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
+Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
 A ID de recurso do controle de caixa de combinação associada à propriedade de controle.
@@ -69,11 +69,11 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdd_. h
+  Afxdd_ de **cabeçalho** . h
 
-##  <a name="ddx_cbstring"></a>  DDX_CBString
+##  <a name="ddx_cbstring"></a>DDX_CBString
 
-A `DDX_CBString` função gerencia a transferência de `CString` dados entre o controle de edição de um controle de caixa de combinação em uma caixa de diálogo, modo de exibição de formulário `CString` ou objeto de exibição de controle e um membro de dados da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A função `DDX_CBString` gerencia a transferência de `CString` dados entre o controle de edição de um controle de caixa de combinação em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados `CString` da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```
 void AFXAPI DDX_CBString(
@@ -82,10 +82,10 @@ void AFXAPI DDX_CBString(
     CString& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
-Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
+Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
 A ID de recurso do controle de caixa de combinação associada à propriedade de controle.
@@ -95,7 +95,7 @@ Uma referência a uma variável de membro da caixa de diálogo, exibição de fo
 
 ### <a name="remarks"></a>Comentários
 
-Quando `DDX_CBString` é chamado, o *valor* é definido como a seleção atual da caixa de combinação. Se nenhum item for selecionado, *valor* será definido como uma cadeia de caracteres de comprimento zero.
+Quando `DDX_CBString` é chamado, o *valor* é definido como a seleção da caixa de combinação atual. Se nenhum item for selecionado, *valor* será definido como uma cadeia de caracteres de comprimento zero.
 
 > [!NOTE]
 >  Se a caixa de combinação for uma caixa de listagem suspensa, o valor trocado será limitado a 255 caracteres.
@@ -104,11 +104,11 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdd_. h
+  Afxdd_ de **cabeçalho** . h
 
-##  <a name="ddx_cbstringexact"></a>  DDX_CBStringExact
+##  <a name="ddx_cbstringexact"></a>DDX_CBStringExact
 
-A `DDX_CBStringExact` função gerencia a transferência de `CString` dados entre o controle de edição de um controle de caixa de combinação em uma caixa de diálogo, modo de exibição de formulário `CString` ou objeto de exibição de controle e um membro de dados da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A função `DDX_CBStringExact` gerencia a transferência de `CString` dados entre o controle de edição de um controle de caixa de combinação em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados `CString` da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```
 void AFXAPI DDX_CBStringExact(
@@ -117,10 +117,10 @@ void AFXAPI DDX_CBStringExact(
     CString& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
-Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
+Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
 A ID de recurso do controle de caixa de combinação associada à propriedade de controle.
@@ -130,7 +130,7 @@ Uma referência a uma variável de membro da caixa de diálogo, exibição de fo
 
 ### <a name="remarks"></a>Comentários
 
-Quando `DDX_CBStringExact` é chamado, o *valor* é definido como a seleção atual da caixa de combinação. Se nenhum item for selecionado, *valor* será definido como uma cadeia de caracteres de comprimento zero.
+Quando `DDX_CBStringExact` é chamado, o *valor* é definido como a seleção da caixa de combinação atual. Se nenhum item for selecionado, *valor* será definido como uma cadeia de caracteres de comprimento zero.
 
 > [!NOTE]
 >  Se a caixa de combinação for uma caixa de listagem suspensa, o valor trocado será limitado a 255 caracteres.
@@ -139,11 +139,11 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdd_. h
+  Afxdd_ de **cabeçalho** . h
 
-##  <a name="ddx_check"></a>  DDX_Check
+##  <a name="ddx_check"></a>DDX_Check
 
-A `DDX_Check` função gerencia a transferência de dados **int** entre um controle de caixa de seleção em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados **int** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A função `DDX_Check` gerencia a transferência de dados **int** entre um controle de caixa de seleção em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados **int** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```
 void AFXAPI DDX_Check(
@@ -152,10 +152,10 @@ void AFXAPI DDX_Check(
     int& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
-Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
+Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
 A ID de recurso do controle de caixa de seleção associada à propriedade de controle.
@@ -165,17 +165,17 @@ Uma referência a uma variável de membro da caixa de diálogo, exibição de fo
 
 ### <a name="remarks"></a>Comentários
 
-Quando `DDX_Check` é chamado, o *valor* é definido como o estado atual do controle da caixa de seleção. Para obter uma lista dos possíveis valores de estado, consulte [BM_GETCHECK](/windows/win32/Controls/bm-getcheck) no SDK do Windows.
+Quando `DDX_Check` é chamado, o *valor* é definido como o estado atual do controle caixa de seleção. Para obter uma lista dos possíveis valores de estado, consulte [BM_GETCHECK](/windows/win32/Controls/bm-getcheck) no SDK do Windows.
 
 Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdd_. h
+  Afxdd_ de **cabeçalho** . h
 
-##  <a name="ddx_control"></a>  DDX_Control
+##  <a name="ddx_control"></a>DDX_Control
 
-A `DDX_Control` função subclasses o controle, especificado por *nIDC*, da caixa de diálogo, da exibição de formulário ou do objeto de exibição de controle.
+A função `DDX_Control` subclasses o controle, especificado por *nIDC*, da caixa de diálogo, da exibição de formulário ou do objeto de exibição de controle.
 
 ```
 void AFXAPI DDX_Control(
@@ -184,7 +184,7 @@ void AFXAPI DDX_Control(
     CWnd& rControl);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
@@ -197,17 +197,17 @@ Uma referência a uma variável de membro da caixa de diálogo, exibição de fo
 
 ### <a name="remarks"></a>Comentários
 
-O objeto *PDX* é fornecido pela estrutura quando a `DoDataExchange` função é chamada. Portanto, `DDX_Control` só deve ser chamado dentro de sua substituição `DoDataExchange`de.
+O objeto *PDX* é fornecido pela estrutura quando a função `DoDataExchange` é chamada. Portanto, `DDX_Control` só deve ser chamado dentro de sua substituição de `DoDataExchange`.
 
 Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdd_. h
+  Afxdd_ de **cabeçalho** . h
 
-##  <a name="ddx_datetimectrl"></a>  DDX_DateTimeCtrl
+##  <a name="ddx_datetimectrl"></a>DDX_DateTimeCtrl
 
-A `DDX_DateTimeCtrl` função gerencia a transferência de dados de data e/ou hora entre um controle seletor de data e hora ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) em uma caixa de diálogo ou objeto de exibição de formulário e um membro de dados [CTime](../../atl-mfc-shared/reference/ctime-class.md) ou [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) da caixa de diálogo ou do formulário Exibir objeto.
+A função `DDX_DateTimeCtrl` gerencia a transferência de dados de data e/ou hora entre um controle seletor de data e hora ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) em uma caixa de diálogo ou objeto de exibição de formulário e um membro de dados [CTime](../../atl-mfc-shared/reference/ctime-class.md) ou [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) da caixa de diálogo ou do objeto de exibição de formulário.
 
 ```
 void AFXAPI DDX_DateTimeCtrl(
@@ -226,7 +226,7 @@ void AFXAPI DDX_DateTimeCtrl(
     CString& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção. Você não precisa excluir este objeto.
@@ -235,19 +235,19 @@ Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-cla
 A ID de recurso do controle de seletor de data e hora associado à variável de membro.
 
 *value*<br/>
-Nas duas primeiras versões, uma referência a uma `CTime` `COleDateTime` variável de membro, caixa de diálogo, exibição de formulário ou objeto de exibição de controle com os quais os dados são trocados. Na terceira versão, uma referência a um objeto `CString` de exibição de controle de membro de dados.
+Nas duas primeiras versões, uma referência a uma `CTime` ou `COleDateTime` variável de membro, caixa de diálogo, exibição de formulário ou objeto de exibição de controle com os quais os dados são trocados. Na terceira versão, uma referência a um objeto de exibição de controle de membro de dados `CString`.
 
 ### <a name="remarks"></a>Comentários
 
 Quando `DDX_DateTimeCtrl` é chamado, o *valor* é definido como o estado atual do controle do seletor de data e hora ou o controle é definido como *valor*, dependendo da direção da troca.
 
-Na terceira versão acima, `DDX_DateTimeCtrl` o gerencia a transferência de `CString` dados entre um controle de data e hora e um membro de dados [CString](../../atl-mfc-shared/reference/cstringt-class.md) do objeto de exibição de controle. A cadeia de caracteres é formatada usando as regras da localidade atual para formatar datas e horas.
+Na terceira versão acima, `DDX_DateTimeCtrl` gerencia a transferência de `CString` dados entre um controle de data e hora e um membro de dados [CString](../../atl-mfc-shared/reference/cstringt-class.md) do objeto de exibição de controle. A cadeia de caracteres é formatada usando as regras da localidade atual para formatar datas e horas.
 
 Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdd_. h
+  Afxdd_ de **cabeçalho** . h
 
 ## <a name="ddx_managedcontrol"></a>DDX_ManagedControl
 
@@ -263,7 +263,7 @@ void DDX_ManagedControl(
    CWinFormsControl<T>& control );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto de [classe CDataExchange](cdataexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
@@ -276,17 +276,17 @@ Uma referência a um objeto de [classe CWinFormsControl](cwinformscontrol-class.
 
 ### <a name="remarks"></a>Comentários
 
-`DDX_ManagedControl`chama [CWinFormsControl:: CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) para criar um controle que corresponda à ID de controle do recurso. Use `DDX_ManagedControl` para criar controles de IDs de recurso em [CDialog:: OnInitDialog](cdialog-class.md#oninitdialog). Para a troca de dados, você não precisa usar as funções campo DDX/DDV com controles Windows Forms.
+`DDX_ManagedControl` chama [CWinFormsControl:: CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) para criar um controle que corresponda à ID de controle de recursos. Use `DDX_ManagedControl` para criar controles de IDs de recurso em [CDialog:: OnInitDialog](cdialog-class.md#oninitdialog). Para a troca de dados, você não precisa usar as funções campo DDX/DDV com controles Windows Forms.
 
-Para obter mais informações, confira [Como: Fazer associação de dados campo DDX/DDV com](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)Windows Forms.
+Para obter mais informações, consulte [como: fazer a associação de dados campo DDX/DDV com Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
 
 ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxwinforms. h
 
-##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
+##  <a name="ddx_ipaddress"></a>DDX_IPAddress
 
-A `DDX_IPAddress` função gerencia a transferência de dados entre um controle de endereço IP e um membro de dados do objeto de exibição de controle.
+A função `DDX_IPAddress` gerencia a transferência de dados entre um controle de endereço IP e um membro de dados do objeto de exibição de controle.
 
 ```
 void AFXAPI DDX_IPAddress(
@@ -295,10 +295,10 @@ void AFXAPI DDX_IPAddress(
     DWORD& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
-Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
+Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
 A ID de recurso do controle de endereço IP associado à propriedade de controle.
@@ -323,11 +323,11 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdd_. h
+  Afxdd_ de **cabeçalho** . h
 
-##  <a name="ddx_lbindex"></a>  DDX_LBIndex
+##  <a name="ddx_lbindex"></a>DDX_LBIndex
 
-A `DDX_LBIndex` função gerencia a transferência de dados **int** entre um controle de caixa de listagem em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados **int** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A função `DDX_LBIndex` gerencia a transferência de dados **int** entre um controle de caixa de listagem em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados **int** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```
 void AFXAPI DDX_LBIndex(
@@ -336,10 +336,10 @@ void AFXAPI DDX_LBIndex(
     int& index);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
-Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
+Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
 A ID de recurso do controle de caixa de listagem associada à propriedade de controle.
@@ -355,11 +355,11 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdd_. h
+  Afxdd_ de **cabeçalho** . h
 
-##  <a name="ddx_lbstring"></a>  DDX_LBString
+##  <a name="ddx_lbstring"></a>DDX_LBString
 
-A `DDX_LBString` função gerencia a transferência de `CString` dados entre um controle de caixa de listagem em uma caixa de diálogo, modo de exibição de formulário ou `CString` objeto de exibição de controle e um membro de dados da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A função `DDX_LBString` gerencia a transferência de `CString` dados entre um controle de caixa de listagem em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados `CString` da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```
 void AFXAPI DDX_LBString(
@@ -368,10 +368,10 @@ void AFXAPI DDX_LBString(
     CString& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
-Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
+Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
 A ID de recurso do controle de caixa de listagem associada à propriedade de controle.
@@ -392,11 +392,11 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdd_. h
+  Afxdd_ de **cabeçalho** . h
 
-##  <a name="ddx_lbstringexact"></a>  DDX_LBStringExact
+##  <a name="ddx_lbstringexact"></a>DDX_LBStringExact
 
-A `DDX_CBStringExact` função gerencia a transferência de `CString` dados entre o controle de edição de um controle de caixa de listagem em uma caixa de diálogo, modo de exibição de formulário `CString` ou objeto de exibição de controle e um membro de dados da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A função `DDX_CBStringExact` gerencia a transferência de `CString` dados entre o controle de edição de um controle de caixa de listagem em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados `CString` da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```
 void AFXAPI DDX_LBStringExact(
@@ -405,10 +405,10 @@ void AFXAPI DDX_LBStringExact(
     CString& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
-Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
+Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
 A ID de recurso do controle de caixa de listagem associada à propriedade de controle.
@@ -418,7 +418,7 @@ Uma referência a uma variável de membro da caixa de diálogo, exibição de fo
 
 ### <a name="remarks"></a>Comentários
 
-Quando `DDX_LBStringExact` é chamado para transferir dados para um controle de caixa de listagem, o primeiro item do controle que corresponde ao *valor* é selecionado. (Para corresponder apenas um prefixo em vez de todo o item, use [DDX_LBString](#ddx_lbstring).) Se não houver nenhuma correspondência, nenhum item será selecionado. A correspondência não diferencia maiúsculas de minúsculas.
+Quando `DDX_LBStringExact` é chamado para transferir dados para um controle de caixa de listagem, o primeiro item no controle que corresponde ao *valor* é selecionado. (Para corresponder apenas a um prefixo em vez de ao item inteiro, use [DDX_LBString](#ddx_lbstring).) Se não houver nenhuma correspondência, nenhum item será selecionado. A correspondência não diferencia maiúsculas de minúsculas.
 
 Quando `DDX_CBStringExact` é chamado para transferir dados de um controle de caixa de listagem, *Value* é definido como a seleção da caixa de listagem atual. Se nenhum item for selecionado, *valor* será definido como uma cadeia de caracteres de comprimento zero.
 
@@ -429,11 +429,11 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdd_. h
+  Afxdd_ de **cabeçalho** . h
 
 ##  <a name="ddx_monthcalctrl"></a>DDX_MonthCalCtrl
 
-A `DDX_MonthCalCtrl` função gerencia a transferência de dados de data entre um controle de calendário mensal ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) em uma caixa de diálogo, exibição de formulário ou objeto de exibição de controle e um membro de dados [CTime](../../atl-mfc-shared/reference/ctime-class.md) ou [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) da caixa de diálogo, formulário objeto de exibição de exibição ou controle.
+A função `DDX_MonthCalCtrl` gerencia a transferência de dados de data entre um controle de calendário mensal ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados [CTime](../../atl-mfc-shared/reference/ctime-class.md) ou [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```
 void AFXAPI DDX_MonthCalCtrl(
@@ -447,7 +447,7 @@ void AFXAPI DDX_MonthCalCtrl(
     COleDateTime& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção. Você não precisa excluir este objeto.
@@ -456,7 +456,7 @@ Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-cla
 A ID de recurso do controle de calendário de mês associada à variável de membro.
 
 *value*<br/>
-Uma referência a uma `CTime` variável `COleDateTime` de membro ou da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com os quais os dados são trocados.
+Uma referência a uma variável de membro `CTime` ou `COleDateTime` da caixa de diálogo, exibição de formulário ou objeto de exibição de controle com os quais os dados são trocados.
 
 ### <a name="remarks"></a>Comentários
 
@@ -469,11 +469,11 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdd_. h
+  Afxdd_ de **cabeçalho** . h
 
-##  <a name="ddx_radio"></a>  DDX_Radio
+##  <a name="ddx_radio"></a>DDX_Radio
 
-A `DDX_Radio` função gerencia a transferência de dados **int** entre um grupo de controle de rádio em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados **int** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle. O valor do membro de dados **int** é determinado de acordo com o qual botão de opção dentro do grupo está selecionado.
+A função `DDX_Radio` gerencia a transferência de dados **int** entre um grupo de controle de rádio em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados **int** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle. O valor do membro de dados **int** é determinado de acordo com o qual botão de opção dentro do grupo está selecionado.
 
 ```
 void AFXAPI DDX_Radio(
@@ -482,10 +482,10 @@ void AFXAPI DDX_Radio(
     int& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
-Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
+Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
 A ID de recurso do primeiro controle de opção no grupo.
@@ -497,17 +497,17 @@ Uma referência a uma variável de membro da caixa de diálogo, exibição de fo
 
 Quando `DDX_Radio` é chamado, o *valor* é definido como o estado atual do grupo de controle de rádio. O valor é definido como um índice baseado em 0 do controle de rádio selecionado no momento, ou-1 se nenhum controle de rádio estiver marcado.
 
-Por exemplo, caso o primeiro botão de opção no grupo esteja marcado (o botão com o estilo WS_GROUP), o valor do membro **int** é 0 e assim por diante.
+Por exemplo, caso o primeiro botão de opção no grupo esteja marcado (o botão com WS_GROUP estilo) o valor do membro **int** é 0 e assim por diante.
 
 Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdd_. h
+  Afxdd_ de **cabeçalho** . h
 
-##  <a name="ddx_scroll"></a>  DDX_Scroll
+##  <a name="ddx_scroll"></a>DDX_Scroll
 
-A `DDX_Scroll` função gerencia a transferência de dados **int** entre um controle de barra de rolagem em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados **int** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A função `DDX_Scroll` gerencia a transferência de dados **int** entre um controle de barra de rolagem em uma caixa de diálogo, modo de exibição de formulário ou objeto de exibição de controle e um membro de dados **int** da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```
 void AFXAPI DDX_Scroll(
@@ -516,10 +516,10 @@ void AFXAPI DDX_Scroll(
     int& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
-Um ponteiro para um `CDataExchange` objeto. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
+Um ponteiro para um objeto `CDataExchange`. A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
 
 *nIDC*<br/>
 A ID de recurso do controle de barra de rolagem associado à propriedade de controle.
@@ -535,11 +535,11 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdd_. h
+  Afxdd_ de **cabeçalho** . h
 
-##  <a name="ddx_slider"></a>  DDX_Slider
+##  <a name="ddx_slider"></a>DDX_Slider
 
-A `DDX_Slider` função gerencia a transferência de dados **int** entre um controle deslizante em uma caixa de diálogo ou modo de exibição de formulário e um membro de dados **int** da caixa de diálogo ou do objeto de exibição de formulário.
+A função `DDX_Slider` gerencia a transferência de dados **int** entre um controle deslizante em uma caixa de diálogo ou modo de exibição de formulário e um membro de dados **int** da caixa de diálogo ou do objeto de exibição de formulário.
 
 ```
 void AFXAPI DDX_Slider(
@@ -548,7 +548,7 @@ void AFXAPI DDX_Slider(
     int& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
@@ -567,11 +567,11 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdd_. h
+  Afxdd_ de **cabeçalho** . h
 
-##  <a name="ddx_text"></a>  DDX_Text
+##  <a name="ddx_text"></a>DDX_Text
 
-A `DDX_Text` função gerencia a transferência de dados **int**, **uint**, **Long**, DWORD `CString`,, **float**ou **Double** entre um controle de edição em uma caixa de diálogo, exibição de formulário ou modo de exibição de controle e dados [CString](../../atl-mfc-shared/reference/cstringt-class.md) membro da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
+A função `DDX_Text` gerencia a transferência de dados **int**, **uint**, **Long**, DWORD, `CString`, **float**ou **Double** entre um controle de edição em uma caixa de diálogo, modo de exibição de formulário ou modo de exibição de controle e um membro de dados [CString](../../atl-mfc-shared/reference/cstringt-class.md) da caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 ```
 void AFXAPI DDX_Text(
@@ -630,7 +630,7 @@ void AFXAPI DDX_Text(
     COleDateTime& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
@@ -639,7 +639,7 @@ Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-cla
 A ID de um controle de edição na caixa de diálogo, exibição de formulário ou objeto de exibição de controle.
 
 *value*<br/>
-Uma referência a um membro de dados na caixa de diálogo, exibição de formulário ou objeto de exibição de controle. O tipo de dados de *valor* depende de qual das versões sobrecarregadas do `DDX_Text` você usa.
+Uma referência a um membro de dados na caixa de diálogo, exibição de formulário ou objeto de exibição de controle. O tipo de dados de *valor* depende de qual das versões sobrecarregadas do `DDX_Text` que você usa.
 
 ### <a name="remarks"></a>Comentários
 
@@ -647,11 +647,11 @@ Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo t
 
 ### <a name="requirements"></a>Requisitos
 
-  **Cabeçalho** afxdd_. h
+  Afxdd_ de **cabeçalho** . h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Rotinas de validação dos dados da caixa de diálogo padrão](standard-dialog-data-validation-routines.md)<br/>
 [Macros e globais](mfc-macros-and-globals.md)<br/>
 [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
-[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
+[CDialog:: OnInitDialog](cdialog-class.md#oninitdialog)

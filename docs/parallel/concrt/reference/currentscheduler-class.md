@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
 ms.openlocfilehash: 6bf61af9ff55722553353a045c87501dbd27fad9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143074"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867115"
 ---
 # <a name="currentscheduler-class"></a>Classe CurrentScheduler
 
@@ -38,7 +38,7 @@ class CurrentScheduler;
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[Criar](#create)|Cria um novo agendador cujo comportamento é descrito pelo parâmetro `_Policy` e o anexa ao contexto de chamada. O Agendador recém-criado se tornará o Agendador atual para o contexto de chamada.|
 |[CreateSchedule](#createschedulegroup)|Sobrecarregado. Cria um novo grupo de agendamento dentro do Agendador associado ao contexto de chamada. A versão que usa o parâmetro `_Placement` faz com que as tarefas dentro do grupo de agendamento recém-criado sejam ajustadas em direção à execução no local especificado por esse parâmetro.|
@@ -59,7 +59,7 @@ Se não houver um Agendador (consulte o [Agendador](scheduler-class.md)) associa
 
 `CurrentScheduler`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ConcRT. h
 
@@ -73,7 +73,7 @@ Cria um novo agendador cujo comportamento é descrito pelo parâmetro `_Policy` 
 static void __cdecl Create(const SchedulerPolicy& _Policy);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Policy*<br/>
 A política do Agendador que descreve o comportamento do Agendador recém-criado.
@@ -98,7 +98,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup();
 static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Placement*<br/>
 Uma referência a um local em que as tarefas dentro do grupo de agendamento serão inclinadas em direção à execução em.
@@ -205,7 +205,7 @@ Determina se um determinado local está disponível no Agendador atual.
 static bool __cdecl IsAvailableLocation(const location& _Placement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Placement*<br/>
 Uma referência ao local para o qual consultar o Agendador atual.
@@ -228,7 +228,7 @@ Faz com que o identificador de evento do Windows passado no parâmetro `_Shutdow
 static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_ShutdownEvent*<br/>
 Um identificador para um objeto de evento do Windows que será sinalizado pelo tempo de execução quando o Agendador associado ao contexto atual for desligado e se destruirá.
@@ -252,7 +252,7 @@ static void __cdecl ScheduleTask(
     location& _Placement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Proc*<br/>
 Um ponteiro para a função a ser executada para executar o corpo da tarefa de peso leve.
@@ -267,7 +267,7 @@ Uma referência a um local onde a tarefa de peso leve será ajustada em direçã
 
 Esse método fará com que o agendador padrão do processo seja criado e/ou anexado ao contexto de chamada se não houver um Agendador associado ao contexto de chamada no momento.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Classe Scheduler](scheduler-class.md)<br/>

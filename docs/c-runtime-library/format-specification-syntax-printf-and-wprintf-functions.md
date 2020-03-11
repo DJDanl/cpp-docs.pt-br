@@ -10,11 +10,11 @@ helpviewer_keywords:
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
 ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857860"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865478"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxe de especificação de formato: funções printf e wprintf
 
@@ -55,16 +55,16 @@ Tipos inteiros, como `short`, `int`, `long`, `long long`e suas variantes de `uns
 
 ### <a name="type-field-characters"></a>Caracteres de campo de tipo
 
-|Caractere de tipo|Argument|Formato de saída|
+|Caractere de tipo|Argumento|Formato da saída|
 |--------------------|--------------|-------------------|
 |**c**|Caractere|Quando usado com funções `printf`, especifica um caractere de byte único; quando usado com funções `wprintf`, especifica um caractere largo.|
 |**C**|Caractere|Quando usado com funções `printf`, especifica um caractere largo; quando usado com funções `wprintf`, especifica um caractere de byte único.|
-|**d**|Inteiro|Inteiro decimal assinado.|
-|**i**|Inteiro|Inteiro decimal assinado.|
-|**o**|Inteiro|inteiro octal não assinado.|
-|**u**|Inteiro|Inteiro decimal sem sinal.|
-|**x**|Inteiro|Inteiro hexadecimal não assinado; usa "abcdef".|
-|**X**|Inteiro|Inteiro hexadecimal não assinado; usa "ABCDEF".|
+|**d**|Integer|Inteiro decimal assinado.|
+|**i**|Integer|Inteiro decimal assinado.|
+|**o**|Integer|inteiro octal não assinado.|
+|**u**|Integer|Inteiro decimal sem sinal.|
+|**x**|Integer|Inteiro hexadecimal não assinado; usa "abcdef".|
+|**X**|Integer|Inteiro hexadecimal não assinado; usa "ABCDEF".|
 |**e**|Ponto flutuante|O valor assinado que tem a forma [-]*d.dddd*__e±__*dd*\[*d*], em que *d* é um dígito decimal, *dddd* é um ou mais dígitos decimais dependendo da precisão especificada ou seis por padrão e *dd*\[*d*] é dois ou três dígitos decimais, dependendo do [formato de saída](../c-runtime-library/set-output-format.md) e do tamanho do expoente.|
 |**E**|Ponto flutuante|Idêntico ao formato **e**, exceto pelo fato de que **E** em vez de **e** apresenta o expoente.|
 |**f**|Ponto flutuante|Valor assinado que tem a forma [-]*dddd* __.__ *dddd*, em que *dddd* é um ou mais dígitos decimais. O número de dígitos antes do ponto decimal depende da magnitude do número e o número de dígitos após o ponto decimal depende da precisão solicitada ou é seis, por padrão.|
@@ -75,15 +75,15 @@ Tipos inteiros, como `short`, `int`, `long`, `long long`e suas variantes de `uns
 |**A**|Ponto flutuante|Valor hexadecimal de ponto flutuante de precisão dupla e assinado que tem o formato [-]0X*h.hhhh*__P±__*dd*, em que *h.hhhh* são os dígitos hexadecimais (usando letras maiúsculas) da mantissa e *dd* são um ou mais dígitos para o expoente. A precisão especifica o número de dígitos após a vírgula.|
 |**n**|Ponteiro para o inteiro|Número de caracteres gravados com êxito até o momento no fluxo ou no buffer. Esse valor é armazenado no inteiro cujo endereço é fornecido como o argumento. O tamanho do número inteiro apontado pode ser controlado por um prefixo de especificação de tamanho de argumento. O especificador **n** é desabilitado por padrão; para obter mais informações, consulte a observação de segurança importante.|
 |**p**|Tipo de ponteiro|Exibe o argumento como um endereço usando dígitos hexadecimais.|
-|**s**|Cadeia de Caracteres|Quando usado com funções `printf`, especifica uma cadeia de caracteres de byte único ou uma cadeia de caracteres de bytes múltiplos; quando usado com funções `wprintf`, especifica uma cadeia de caracteres largos. Os caracteres são exibidos até o primeiro caractere nulo ou até que o valor de *precisão* seja atingido.|
-|**S**|Cadeia de Caracteres|Quando usado com funções `printf`, especifica uma cadeia de caracteres largos; quando usado com funções `wprintf`, especifica uma cadeia de caracteres de byte único ou uma cadeia de caracteres de bytes múltiplos. Os caracteres são exibidos até o primeiro caractere nulo ou até que o valor de *precisão* seja atingido.|
+|**s**|String|Quando usado com funções `printf`, especifica uma cadeia de caracteres de byte único ou uma cadeia de caracteres de bytes múltiplos; quando usado com funções `wprintf`, especifica uma cadeia de caracteres largos. Os caracteres são exibidos até o primeiro caractere nulo ou até que o valor de *precisão* seja atingido.|
+|**S**|String|Quando usado com funções `printf`, especifica uma cadeia de caracteres largos; quando usado com funções `wprintf`, especifica uma cadeia de caracteres de byte único ou uma cadeia de caracteres de bytes múltiplos. Os caracteres são exibidos até o primeiro caractere nulo ou até que o valor de *precisão* seja atingido.|
 |**Z**|Estrutura `ANSI_STRING` ou `UNICODE_STRING`|Quando o endereço de uma estrutura [ANSI_STRING](/windows/win32/api/ntdef/ns-ntdef-string) ou [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) é passado como o argumento, exibe a cadeia de caracteres contida no buffer apontado pelo campo `Buffer` da estrutura. Use um prefixo modificador de *tamanho* de **w** para especificar um argumento `UNICODE_STRING` – por exemplo, `%wZ`. O campo `Length` da estrutura deve ser definido como a duração, em bytes, da cadeia de caracteres. O campo `MaximumLength` da estrutura deve ser definido como a duração, em bytes, do buffer.<br /><br /> Normalmente, o caractere de tipo **Z** é usado somente em funções de depuração de driver que usam uma especificação de conversão, como `dbgPrint` e `kdPrint`.|
 
 A partir do Visual Studio 2015, se o argumento que corresponde a um especificador de conversão de ponto flutuante (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) for infinito, indefinido ou NaN, a saída formatada estará em conformidade com o padrão C99. Esta tabela lista a saída formatada:
 
-|Value|Saída|
+|Valor|Saída|
 |-----------|------------|
-|{1&gt;infinity&lt;1}|`inf`|
+|infinity|`inf`|
 |NaN silencioso|`nan`|
 |Sinalização de NaN|`nan(snan)`|
 |NaN indefinido|`nan(ind)`|
@@ -92,12 +92,12 @@ Qualquer um desses valores pode ser ter um sinal como prefixo. Se um caractere e
 
 Antes do Visual Studio 2015, o CRT usava um formato diferente não padrão para saída de valores infinitos, indefinidos e NaN:
 
-|Value|Saída|
+|Valor|Saída|
 |-----------|------------|
-|+ infinity|`1.#INF` *random-digits*|
-|- infinity|`-1.#INF` *random-digits*|
-|Indefinite (mesmo que NaN silencioso)|*dígito* `.#IND` *random-digits*|
-|{1&gt;NaN&lt;1}|*dígito* `.#NAN` *random-digits*|
+|+ infinity|`1.#INF` *dígitos aleatórios*|
+|- infinity|`-1.#INF` *dígitos aleatórios*|
+|Indefinite (mesmo que NaN silencioso)|*dígito* `.#IND` *dígitos aleatórios*|
+|NaN|*dígito* `.#NAN` *dígitos aleatórios*|
 
 Qualquer um desses poderia ter um sinal como prefixo e poderia ser formatado de forma ligeiramente diferente, dependendo da largura do campo e da precisão, às vezes com efeitos incomuns. Por exemplo, `printf("%.2f\n", INFINITY)` imprimiria `1.#J` porque o #INF poderia ser "arredondado" para uma precisão de 2 dígitos.
 
@@ -160,7 +160,7 @@ O caractere de *tipo* determina a interpretação de *precisão* ou a precisão 
 
 ### <a name="how-precision-values-affect-type"></a>Como os valores de precisão afetam o tipo
 
-|{1&gt;Tipo&lt;1}|Significado|Padrão|
+|Type|Significado|Padrão|
 |----------|-------------|-------------|
 |**a**, **A**|A precisão especifica o número de dígitos após a vírgula.|A precisão padrão é 13. Se a precisão for 0, nenhum ponto decimal será impresso, a menos que o sinalizador **#** seja usado.|
 |**c**, **C**|A precisão não tem nenhum efeito.|O caractere foi impresso.|
@@ -206,7 +206,7 @@ Um especificador de tipo **hc** ou **hC** é sinônimo de **c** em funções `pr
 > [!NOTE]
 > **Específico da Microsoft:** Os prefixos do modificador de tamanho de argumento **i** (maiúsculo), **i32**, **i64**e **w** são extensões da Microsoft e não são compatíveis com ISO C. O prefixo **h** quando é usado com o tipo de dados `char` e o prefixo **l** (L minúsculo) quando usado com o tipo de dados `double` são extensões da Microsoft.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
 [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>

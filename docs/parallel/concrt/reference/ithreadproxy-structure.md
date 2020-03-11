@@ -12,11 +12,11 @@ helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
 ms.openlocfilehash: b87694393af4634ec97d05070aa5513cd132098a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140078"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854112"
 ---
 # <a name="ithreadproxy-structure"></a>Estrutura IThreadProxy
 
@@ -32,7 +32,7 @@ struct IThreadProxy;
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[IThreadProxy:: GetId](#getid)|Retorna um identificador exclusivo para o proxy de thread.|
 |[IThreadProxy:: opção de desativação](#switchout)|Desassocia o contexto da raiz do processador virtual subjacente.|
@@ -47,7 +47,7 @@ Os proxies de thread são acoplados aos contextos de execução representados pe
 
 `IThreadProxy`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** concrtrm. h
 
@@ -73,7 +73,7 @@ Desassocia o contexto da raiz do processador virtual subjacente.
 virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *switchState*<br/>
 Indica o estado do proxy de thread que está executando a opção. O parâmetro é do tipo `SwitchingProxyState`.
@@ -102,7 +102,7 @@ virtual void SwitchTo(
     SwitchingProxyState switchState) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pContext*<br/>
 O contexto de execução para alternar para o.
@@ -136,7 +136,7 @@ Quando chamado por um proxy de thread apoiado por um thread normal do Windows, `
 
 `YieldToSystem` deve ser chamado na interface `IThreadProxy` que representa o thread em execução no momento ou os resultados são indefinidos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Estrutura IExecutionContext](iexecutioncontext-structure.md)<br/>

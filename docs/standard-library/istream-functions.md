@@ -6,11 +6,11 @@ f1_keywords:
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
 ms.openlocfilehash: fc512558969bc25d2b16afa2b93219e13d0b28ca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458758"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874782"
 ---
 # <a name="ltistreamgt-functions"></a>Função &lt;istream&gt;
 
@@ -34,12 +34,12 @@ void swap(
     basic_iostream<Elem, Tr>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*mantida*\
+\ *à esquerda*
 Um fluxo.
 
-*Certo*\
+\ *à direita*
 Um fluxo.
 
 ## <a name="ws"></a>  ws
@@ -50,18 +50,18 @@ Ignora o espaço em branco no fluxo.
 template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _Istr);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Istr*\
 Um fluxo.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O fluxo.
 
 ### <a name="remarks"></a>Comentários
 
-O manipulador extrai e descarta quaisquer elementos `ch` para os quais [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) for verdadeiro.
+O manipulador extrai e descarta quaisquer elementos `ch` para os quais [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc)). **é**( **ctype**\< **elem**>:: **Space**, **ch**) é true.
 
 A função chamará [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) se encontrar o fim do arquivo enquanto extrai os elementos. Ele retorna *_Istr*.
 
@@ -69,6 +69,6 @@ A função chamará [setstate](../standard-library/basic-ios-class.md#setstate)(
 
 Consulte [operator>>](../standard-library/istream-operators.md#op_gt_gt) para ver um exemplo de como usar `ws`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<istream>](../standard-library/istream.md)

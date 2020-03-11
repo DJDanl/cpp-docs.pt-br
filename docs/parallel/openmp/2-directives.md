@@ -3,38 +3,38 @@ title: 2. Diretivas
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
 ms.openlocfilehash: 125d2d83b277e62d007e3a208e426ea717d52790
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363707"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882841"
 ---
 # <a name="2-directives"></a>2. Diretivas
 
-As diretivas se baseiam no `#pragma` diretivas definidas nos padrões de C e C++.  Compiladores que dão suporte a OpenMP C e C++ API inclui uma opção de linha de comando que ativa e permite que a interpretação de todas as diretivas de compilador OpenMP.
+As diretivas são baseadas em diretivas de `#pragma` definidas nos padrões C++ C e.  Os compiladores que dão suporte a OpenMP C++ C e API incluirão uma opção de linha de comando que ativa e permite a interpretação de todas as diretivas de compilação de OpenMP.
 
-## <a name="21-directive-format"></a>2.1 formato de diretiva
+## <a name="21-directive-format"></a>formato de diretiva 2,1
 
-A sintaxe de uma diretiva de OpenMP formalmente é especificada pela gramática em [Apêndice C](c-openmp-c-and-cpp-grammar.md)e informalmente da seguinte maneira:
+A sintaxe de uma diretiva de OpenMP é formalmente especificada pela gramática no [Apêndice C](c-openmp-c-and-cpp-grammar.md)e informalmente da seguinte maneira:
 
 ```cpp
 #pragma omp directive-name  [clause[ [,] clause]...] new-line
 ```
 
-Cada diretiva começa com `#pragma omp`, para reduzir o potencial de conflito com outras políticas de pragma (não-OpenMP ou fornecedor de extensões OpenMP) com os mesmos nomes. O restante da diretiva segue as convenções dos padrões de diretivas de compilador C e C++. Em particular, o espaço em branco pode ser usado antes e depois o `#`, e, às vezes, o espaço em branco devem ser usado para separar as palavras em uma diretiva. A seguir de tokens de pré-processamento a `#pragma omp` estão sujeitos a substituição de macro.
+Cada diretiva começa com `#pragma omp`, para reduzir o potencial de conflito com outras diretivas de pragma (extensões não OpenMP ou de fornecedor para OpenMP) com os mesmos nomes. O restante da diretiva segue as convenções de C e C++ padrões para diretivas de compilador. Em particular, o espaço em branco pode ser usado antes e depois da `#`e, às vezes, o espaço em branco deve ser usado para separar as palavras em uma diretiva. Os tokens de pré-processamento seguindo as `#pragma omp` estão sujeitos à substituição de macro.
 
-As diretivas são diferencia maiusculas de minúsculas. A ordem na qual as cláusulas aparecem nas diretivas não é significativa. Cláusulas sobre as diretivas podem ser repetidas, conforme necessário, de acordo com as restrições listadas na descrição de cada cláusula. Se *lista variável* aparece em uma cláusula, ele deve especificar somente as variáveis. Somente um *nome da diretiva* pode ser especificado por diretiva.  Por exemplo, não é permitida a seguinte diretiva:
+As diretivas diferenciam maiúsculas de minúsculas. A ordem na qual as cláusulas aparecem nas diretivas não é significativa. As cláusulas nas diretivas podem ser repetidas conforme necessário, sujeitas às restrições listadas na descrição de cada cláusula. Se *a lista de variáveis* for exibida em uma cláusula, ela deverá especificar apenas variáveis. Somente um *nome de diretiva* pode ser especificado por diretiva.  Por exemplo, a diretiva a seguir não é permitida:
 
 ```cpp
 /* ERROR - multiple directive names not allowed */
 #pragma omp parallel barrier
 ```
 
-Uma diretiva de OpenMP aplica-se a no máximo uma subsequente instrução, que deve ser um bloco estruturado.
+Uma diretiva de OpenMP aplica-se a, no máximo, uma instrução com sucesso, que deve ser um bloco estruturado.
 
-## <a name="22-conditional-compilation"></a>2.2 compilação condicional
+## <a name="22-conditional-compilation"></a>compilação condicional 2,2
 
-O `_OPENMP` nome da macro é definida por implementações em conformidade com o OpenMP, como a constante decimal *yyyymm*, que será o ano e mês da especificação de aprovados. Essa macro não deve ser o assunto de um `#define` ou um `#undef` diretiva de pré-processamento.
+O nome da macro `_OPENMP` é definido por implementações compatíveis com OpenMP como a constante *yyyymm*decimal, que será o ano e o mês da especificação aprovada. Essa macro não deve ser a entidade de um `#define` ou uma diretiva de pré-processamento de `#undef`.
 
 ```cpp
 #ifdef _OPENMP
@@ -42,128 +42,128 @@ iam = omp_get_thread_num() + index;
 #endif
 ```
 
-Se fornecedores definam ampliações OpenMP, eles podem especificar outras macros predefinidas.
+Se os fornecedores definirem extensões para OpenMP, eles poderão especificar macros predefinidas adicionais.
 
-## <a name="23-parallel-construct"></a>2.3 construto parallel
+## <a name="23-parallel-construct"></a>construção paralela 2,3
 
-A diretiva a seguir define uma região paralela, o que é uma região do programa que deve ser executado por muitos threads em paralelo. Essa diretiva é a construção fundamental que inicia a execução paralela.
+A diretiva a seguir define uma região paralela, que é uma região do programa que deve ser executada por vários threads em paralelo. Essa diretiva é a construção fundamental que inicia a execução paralela.
 
 ```cpp
 #pragma omp parallel [clause[ [, ]clause] ...] new-line   structured-block
 ```
 
-O *cláusula* é um dos seguintes:
+A *cláusula* é uma das seguintes:
 
-- `if(` *scalar-expression* `)`
-- `private(` *variable-list* `)`
-- `firstprivate(` *variable-list* `)`
+- `if(` `)` *de expressão escalar*
+- `private(` *de lista de variáveis* `)`
+- `firstprivate(` *de lista de variáveis* `)`
 - `default(shared | none)`
-- `shared(` *variable-list* `)`
-- `copyin(` *variable-list* `)`
-- `reduction(` *operator* `:`  *variable-list* `)`
-- `num_threads(` *integer-expression* `)`
+- `shared(` *de lista de variáveis* `)`
+- `copyin(` *de lista de variáveis* `)`
+- *operador* de `reduction(` `:`*a lista de variáveis* `)`
+- `)` `num_threads(` *expressão de inteiro*
 
-Quando um thread atinge uma construção paralela, uma equipe de threads é criada, se um dos casos a seguir for verdadeiro:
+Quando um thread chegar a uma construção paralela, uma equipe de threads será criada se um dos seguintes casos for verdadeiro:
 
-- Não `if` cláusula estiver presente.
-- O `if` expressão é avaliada como um valor diferente de zero.
+- Nenhuma cláusula `if` está presente.
+- A expressão de `if` é avaliada como um valor diferente de zero.
 
-Esse thread torna-se o thread mestre da equipe, com um número de threads de 0, e todos os threads da equipe, incluindo o thread mestre, executem a região em paralelo. Se o valor da `if` expressão for zero, a região é serializada.
+Esse thread se torna o thread mestre da equipe, com um número de thread 0 e todos os threads da equipe, incluindo o thread mestre, executa a região em paralelo. Se o valor da expressão de `if` for zero, a região será serializada.
 
-Para determinar o número de threads que são solicitados, as regras a seguir serão consideradas na ordem. A primeira regra cuja condição é atendida será aplicada:
+Para determinar o número de threads solicitados, as regras a seguir serão consideradas na ordem. A primeira regra cuja condição é atendida será aplicada:
 
-1. Se o `num_threads` cláusula estiver presente, então o valor da expressão de inteiro é o número de threads solicitado.
+1. Se a cláusula `num_threads` estiver presente, o valor da expressão de inteiro será o número de threads solicitados.
 
-1. Se o `omp_set_num_threads` biblioteca a função foi chamada e, em seguida, o valor do argumento na chamada executada mais recentemente é o número de threads solicitado.
+1. Se a função de biblioteca de `omp_set_num_threads` tiver sido chamada, o valor do argumento na chamada executada mais recentemente será o número de threads solicitados.
 
-1. Se a variável de ambiente `OMP_NUM_THREADS` for definida, o valor dessa variável de ambiente é o número de threads solicitado.
+1. Se a variável de ambiente `OMP_NUM_THREADS` for definida, o valor dessa variável de ambiente será o número de threads solicitados.
 
-1. Se nenhum dos métodos acima for usado, o número de threads solicitado é definido pela implementação.
+1. Se nenhum dos métodos acima for usado, o número de threads solicitados será definido pela implementação.
 
-Se o `num_threads` cláusula estiver presente e em seguida, ele substitui o número de threads solicitado pelo `omp_set_num_threads` função de biblioteca ou o `OMP_NUM_THREADS` variável de ambiente somente para a região paralela, ela é aplicada ao. Mais tarde regiões em paralelo não é afetado por ela.
+Se a cláusula `num_threads` estiver presente, ela substituirá o número de threads solicitados pela função de biblioteca de `omp_set_num_threads` ou a variável de ambiente `OMP_NUM_THREADS` somente para a região paralela à qual ele é aplicado. As regiões paralelas posteriores não são afetadas por ela.
 
-O número de threads que executam a região paralela também depende se o ajuste dinâmico do número de threads está habilitado. Se o ajuste dinâmico for desabilitado, o número solicitado de threads executará a região paralela. Se o ajuste dinâmico estiver habilitado, em seguida, o número solicitado de threads é o número máximo de threads que podem ser executadas a região paralela.
+O número de threads que executam a região paralela também depende de se o ajuste dinâmico do número de threads está habilitado. Se o ajuste dinâmico estiver desabilitado, o número solicitado de threads executará a região paralela. Se o ajuste dinâmico estiver habilitado, o número solicitado de threads será o número máximo de threads que podem executar a região paralela.
 
-Se uma região parallel for encontrada enquanto o ajuste dinâmico do número de threads está desabilitado e o número de threads solicitada para a região paralela é mais do que o número que o sistema de tempo de execução pode fornecer, o comportamento do programa é definido pela implementação. Uma implementação pode, por exemplo, interromper a execução do programa, ou ele pode serializar a região paralela.
+Se uma região paralela for encontrada enquanto o ajuste dinâmico do número de threads estiver desabilitado e o número de threads solicitados para a região paralela for maior que o número que o sistema de tempo de execução pode fornecer, o comportamento do programa será definido pela implementação. Uma implementação pode, por exemplo, interromper a execução do programa ou pode serializar a região paralela.
 
-O `omp_set_dynamic` função de biblioteca e o `OMP_DYNAMIC` variável de ambiente pode ser usada para ativar e desativar o ajuste dinâmico do número de threads.
+A função `omp_set_dynamic` Library e a variável de ambiente `OMP_DYNAMIC` podem ser usadas para habilitar e desabilitar o ajuste dinâmico do número de threads.
 
-O número de processadores físicos, hospedagem, na verdade, os threads em um determinado momento é definido pela implementação. Depois de criado, o número de threads na equipe permanece constante durante essa região paralela. Ele pode ser alterado explicitamente pelo usuário ou automaticamente pelo sistema de tempo de execução de uma região paralela para outro.
+O número de processadores físicos que hospedam os threads em um determinado momento é definido pela implementação. Depois de criada, o número de threads na equipe permanece constante durante a região paralela. Ele pode ser alterado explicitamente pelo usuário ou automaticamente pelo sistema de tempo de execução de uma região paralela para outra.
 
-As instruções contidas em extensão dinâmico da região paralela são executadas por cada thread, e cada thread pode executar um caminho de instruções que é diferente de outros threads. Diretivas encontradas fora a extensão de léxica de uma região paralela são chamadas de diretivas de órfãos.
+As instruções contidas na extensão dinâmica da região paralela são executadas por cada thread, e cada thread pode executar um caminho de instruções que é diferente dos outros threads. As diretivas encontradas fora da extensão lexical de uma região paralela são chamadas de diretivas órfãs.
 
 Há uma barreira implícita no final de uma região paralela. Somente o thread mestre da equipe continua a execução no final de uma região paralela.
 
-Se um thread em uma equipe de execução de uma região parallel encontrar outro constructo parallel, ele cria uma nova equipe, e ele se torna o mestre da nova equipe. Regiões em paralelo aninhadas são serializadas por padrão. Como resultado, por padrão, uma região paralela aninhada é executada por uma equipe composta de um thread. O comportamento padrão pode ser alterado usando a função de biblioteca de tempo de execução `omp_set_nested` ou a variável de ambiente `OMP_NESTED`. No entanto, o número de threads que executam uma região paralela aninhada em uma equipe é definido pela implementação.
+Se um thread em uma equipe que executa uma região paralela encontrar outra construção paralela, ele criará uma nova equipe e se tornará o mestre dessa nova equipe. Regiões paralelas aninhadas são serializadas por padrão. Como resultado, por padrão, uma região paralela aninhada é executada por uma equipe composta de um thread. O comportamento padrão pode ser alterado usando a função de biblioteca de tempo de execução `omp_set_nested` ou a variável de ambiente `OMP_NESTED`. No entanto, o número de threads em uma equipe que executa uma região paralela aninhada é definido pela implementação.
 
-Restrições para o `parallel` diretiva são da seguinte maneira:
+As restrições à diretiva de `parallel` são as seguintes:
 
-- No máximo, um `if` cláusula pode aparecer na diretiva.
+- No máximo, uma cláusula `if` pode aparecer na diretiva.
 
-- Ele tem não especificado se qualquer lado efeitos dentro do if expressão ou `num_threads` expressão ocorrer.
+- Não é especificado se houver efeitos colaterais dentro da expressão If ou `num_threads` expressão ocorrer.
 
-- Um `throw` executado dentro de uma região parallel deve causar a execução de retomar dentro a extensão dinâmica do mesmo bloco estruturado, e ela deve ser capturada pelo mesmo thread que gerou a exceção.
+- Um `throw` executado dentro de uma região paralela deve fazer com que a execução continue dentro da extensão dinâmica do mesmo bloco estruturado e deve ser detectada pelo mesmo thread que gerou a exceção.
 
-- Um único `num_threads` cláusula pode aparecer na diretiva. O `num_threads` expressão é avaliada fora do contexto da região paralela e deve ser avaliada como um valor inteiro positivo.
+- Apenas uma única cláusula `num_threads` pode aparecer na diretiva. A expressão `num_threads` é avaliada fora do contexto da região paralela e deve ser avaliada como um valor inteiro positivo.
 
-- A ordem de avaliação do `if` e `num_threads` cláusulas não está especificado.
+- A ordem de avaliação das cláusulas `if` e `num_threads` não está especificada.
 
 ### <a name="cross-references"></a>Referências cruzadas
 
-- `private`, `firstprivate`, `default`, `shared`, `copyin`, e `reduction` cláusulas ([seção 2.7.2](#272-data-sharing-attribute-clauses))
+- cláusulas `private`, `firstprivate`, `default`, `shared`, `copyin`e `reduction` ([seção 2.7.2](#272-data-sharing-attribute-clauses))
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) variável de ambiente
 - [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) função de biblioteca
 - [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) variável de ambiente
-- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) function
+- função [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function)
 - [OMP_NESTED](4-environment-variables.md#44-omp_nested) variável de ambiente
 - [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function) função de biblioteca
 
-## <a name="24-work-sharing-constructs"></a>2.4 construtos work-sharing
+## <a name="24-work-sharing-constructs"></a>2,4 constructos de compartilhamento de trabalho
 
-Uma construção de compartilhamento de trabalho distribui a execução da instrução associada entre os membros da equipe que encontrá-lo. As diretivas de compartilhamento de trabalho não iniciar novos threads e não há nenhum barreira implícita na entrada para uma construção de compartilhamento de trabalho.
+Um constructo de compartilhamento de trabalho distribui a execução da instrução associada entre os membros da equipe que o encontram. As diretivas de compartilhamento de trabalho não iniciam novos threads e não há nenhuma barreira implícita na entrada para um constructo de compartilhamento de trabalho.
 
-Constrói a sequência de compartilhamento de trabalho e `barrier` diretivas encontradas devem ser o mesmo para cada thread em uma equipe.
+A sequência de construções de compartilhamento de trabalho e diretivas de `barrier` encontradas deve ser a mesma para cada thread em uma equipe.
 
-OpenMP define as seguintes construções de compartilhamento de trabalho, e essas construções são descritas nas seções a seguir:
+O OpenMP define as seguintes construções de compartilhamento de trabalho, e essas construções são descritas nas seções a seguir:
 
-- [para](#241-for-construct) diretiva
-- [seções](#242-sections-construct) diretiva
-- [único](#243-single-construct) diretiva
+- diretiva [for](#241-for-construct)
+- diretiva [Sections](#242-sections-construct)
+- diretiva [única](#243-single-construct)
 
-### <a name="241-for-construct"></a>2.4.1 constructo for
+### <a name="241-for-construct"></a>2.4.1 para construção
 
-O `for` diretiva identifica uma construção de compartilhamento de trabalho iterativa que especifica que as iterações do loop associado serão executadas em paralelo. As iterações do `for` loop são distribuídas entre os threads que já existem na equipe que está executando o constructo paralelo ao qual ele se associa. A sintaxe do `for` construção é da seguinte maneira:
+A diretiva `for` identifica um constructo de compartilhamento de trabalho iterativo que especifica que as iterações do loop associado serão executadas em paralelo. As iterações do loop de `for` são distribuídas entre threads que já existem na equipe que executa a construção paralela à qual ele se associa. A sintaxe da construção `for` é a seguinte:
 
 ```cpp
 #pragma omp for [clause[[,] clause] ... ] new-line for-loop
 ```
 
-A cláusula é um dos seguintes:
+A cláusula é uma das seguintes:
 
-- `private(` *variable-list* `)`
-- `firstprivate(` *variable-list* `)`
-- `lastprivate(` *variable-list* `)`
-- `reduction(` *operator* `:` *variable-list* `)`
+- `private(` *de lista de variáveis* `)`
+- `firstprivate(` *de lista de variáveis* `)`
+- `lastprivate(` *de lista de variáveis* `)`
+- *operador* de `reduction(` `:` *a lista de variáveis* `)`
 - `ordered`
-- `schedule(` *kind* [`,` *chunk_size*] `)`
+- *tipo* de `schedule(` [`,` *chunk_size*] `)`
 - `nowait`
 
-O `for` diretiva impõe restrições na estrutura da correspondente `for` loop. Especificamente, o correspondente `for` loop deve ter a forma canônica:
+A diretiva `for` impõe restrições na estrutura do loop `for` correspondente. Especificamente, o loop de `for` correspondente deve ter uma forma canônica:
 
-`for (` *init-expr* `;` *var  logical-op  b* `;` *incr-expr* `)`
+`for (` *init-expr* `;` *var Logical-op b* `;` *incr-expr* `)`
 
-*init-expr*<br/>
+*expressão de inicialização*<br/>
 Um dos seguintes:
 
 - *var* = *lb*
-- *integer-type var* = *lb*
+- *var de tipo de inteiro* = *lb*
 
-*incr-expr*<br/>
+*INCR-expr*<br/>
 Um dos seguintes:
 
-- `++` *var*
 - *var* `++`
-- `--` *var*
+- *var* `++`
+- *var* `--`
 - *var* `--`
 - *var* `+=` *incr*
 - *var* `-=` *incr*
@@ -172,9 +172,9 @@ Um dos seguintes:
 - *var* `=` *var* `-` *incr*
 
 *var*<br/>
-Uma variável de inteiro com sinal. Se essa variável deve ser compartilhada, ele será implicitamente feito privada para a duração da `for`. Não modifique essa variável dentro do corpo do `for` instrução. A menos que a variável é especificada `lastprivate`, seu valor depois que o loop é indeterminado.
+Uma variável de inteiro assinada. Se essa variável, de outra forma, fosse compartilhada, ela é implicitamente criada durante o período de `for`. Não modifique essa variável dentro do corpo da instrução `for`. A menos que a variável seja especificada `lastprivate`, seu valor após o loop é indeterminado.
 
-*logical-op*<br/>
+*operação lógica*<br/>
 Um dos seguintes:
 
 - `<`
@@ -182,58 +182,58 @@ Um dos seguintes:
 - `>`
 - `>=`
 
-*balanceamento de carga*, *b*, e *incr*<br>
-Expressões de inteiro de invariável de loop. Não há nenhuma sincronização durante a avaliação dessas expressões, para que os efeitos colaterais avaliados produzir resultados indeterminados.
+*lb*, *b*e *incr*<br>
+Expressões de inteiro invariável de loop. Não há sincronização durante a avaliação dessas expressões, portanto, quaisquer efeitos colaterais avaliados produzem resultados indeterminados.
 
-A forma canônica permite que o número de iterações de loop para ser computada na entrada para o loop. Esse cálculo é feito com os valores no tipo de *var*, após as promoções de integral. Em particular, se o valor de *b* `-` *lb* `+` *incr* não pode ser representado nesse tipo, o resultado é indeterminado. Além disso, se *lógico op* é `<` ou `<=`, em seguida, *incr expr* deve fazer com que *var* aumentar em cada iteração do loop.   Se *lógico op* é `>` ou `>=`, em seguida, *incr expr* deve fazer com que *var* a ficar menores em cada iteração do loop.
+O formulário canônico permite que o número de iterações de loop seja computado na entrada para o loop. Esse cálculo é feito com valores no tipo de *var*, após as promoções integrais. Em particular, se o valor de *b* `-` *lb* `+` *incr* não puder ser representado nesse tipo, o resultado será indeterminado. Além disso, se *a operação lógica* for `<` ou `<=`, *incr-expr* deverá fazer com que *var* aumente em cada iteração do loop.   Se *a operação lógica* for `>` ou `>=`, *incr-expr* deverá fazer com que *var* seja menor em cada iteração do loop.
 
-O `schedule` cláusula Especifica como as iterações do `for` loop são divididas entre os threads da equipe. A correção de um programa não deve depender de qual thread executa uma iteração específica. O valor de *chunk_size*, se especificado, deve ser uma expressão de inteiro de invariável de loop com um valor positivo. Não há nenhuma sincronização durante a avaliação desta expressão, para que os efeitos colaterais avaliados produzir resultados indeterminados. A agenda *tipo* pode ser um dos seguintes valores:
+A cláusula `schedule` especifica como as iterações do loop de `for` são divididas entre threads da equipe. A exatidão de um programa não deve depender de qual thread executa uma iteração específica. O valor de *chunk_size*, se especificado, deve ser uma expressão de inteiro invariável de loop com um valor positivo. Não há sincronização durante a avaliação desta expressão, portanto, quaisquer efeitos colaterais avaliados produzem resultados indeterminados. O *tipo* de agenda pode ser um dos seguintes valores:
 
-Tabela 2-1: `schedule` cláusula *tipo* valores
+Tabela 2-1: valores de *tipo* de cláusula de `schedule`
 
 |||
 |-|-|
-|static|Quando `schedule(static,` *chunk_size* `)` for especificado, as iterações são divididas em partes de um tamanho especificado por *chunk_size*. As partes são atribuídas estaticamente a threads da equipe em um estilo round-robin na ordem o número de threads. Quando nenhum *chunk_size* for especificado, o espaço de iteração é dividido em partes que são aproximadamente iguais em tamanho, com uma parte atribuída a cada thread.|
-|dinâmica|Quando `schedule(dynamic,` *chunk_size* `)` for especificado, as iterações são divididas em uma série de blocos, cada uma contendo *chunk_size* iterações. Cada parte é atribuído a um thread que está aguardando uma atribuição. O thread executa o fragmento de iterações e, em seguida, aguarda sua atribuição de Avançar, até que nenhum partes permaneçam para ser atribuído. A última parte a ser atribuído pode ter um número menor de iterações. Quando nenhum *chunk_size* for especificado, o padrão será 1.|
-|interativa|Quando `schedule(guided,` *chunk_size* `)` for especificado, as iterações são atribuídas aos threads em partes com tamanhos de diminuir. Quando um thread termina seu bloco atribuído de iterações, ela tem atribuído dinamicamente outro bloco, até que nenhum é deixado. Para um *chunk_size* de 1, o tamanho de cada parte é aproximadamente igual ao número de iterações não atribuídos, dividido pelo número de threads. Esses tamanhos diminuem exponencialmente quase como 1. Para um *chunk_size* com o valor *k* maior que 1, os tamanhos de quase exponencialmente para diminuir *k*, exceto que a última parte pode ter menos de *k* iterações. Quando nenhum *chunk_size* for especificado, o padrão será 1.|
-|tempo de execução|Quando `schedule(runtime)` for especificado, a decisão sobre agendamento é adiada até o tempo de execução. A agenda *tipo* e o tamanho das partes pode ser escolhido no tempo de execução, definindo a variável de ambiente `OMP_SCHEDULE`. Se essa variável de ambiente não for definido, o agendamento resultante é definido pela implementação. Quando `schedule(runtime)` for especificado, *chunk_size* não deve ser especificado.|
+|estático|Quando `schedule(static,` *chunk_size* `)` é especificado, as iterações são divididas em partes de um tamanho especificado por *chunk_size*. As partes são atribuídas estaticamente a threads na equipe em um modo Round Robin na ordem do número do thread. Quando nenhum *chunk_size* é especificado, o espaço de iteração é dividido em partes que são aproximadamente iguais em tamanho, com uma parte atribuída a cada thread.|
+|dinâmico|Quando `schedule(dynamic,` *chunk_size* `)` é especificado, as iterações são divididas em uma série de partes, cada uma contendo *chunk_size* iterações. Cada parte é atribuída a um thread que está aguardando uma atribuição. O thread executa o bloco de iterações e aguarda sua próxima atribuição, até que nenhuma parte permaneça atribuída. A última parte a ser atribuída pode ter um número menor de iterações. Quando nenhum *chunk_size* é especificado, o padrão é 1.|
+|conduzi|Quando `schedule(guided,` *chunk_size* `)` é especificado, as iterações são atribuídas a threads em partes com tamanhos decrescentes. Quando um thread conclui sua parte atribuída de iterações, ele é atribuído dinamicamente a outra parte, até que None seja deixado. Para um *chunk_size* de 1, o tamanho de cada parte é aproximadamente o número de iterações não atribuídas dividida pelo número de threads. Esses tamanhos diminuem de maneira quase exponencial para 1. Para um *chunk_size* com valor *k* maior que 1, os tamanhos diminuem quase exponencialmente para *k*, exceto que a última parte pode ter menos de *k* iterações. Quando nenhum *chunk_size* é especificado, o padrão é 1.|
+|runtime|Quando `schedule(runtime)` é especificado, a decisão sobre o agendamento é adiada até o tempo de execução. O *tipo* e o tamanho da agenda das partes podem ser escolhidos em tempo de execução, definindo a variável de ambiente `OMP_SCHEDULE`. Se essa variável de ambiente não estiver definida, a agenda resultante será definida como implementação. Quando `schedule(runtime)` é especificado, *chunk_size* não deve ser especificado.|
 
-Na ausência de explicitamente definidas `schedule` cláusula, o padrão `schedule` é definido pela implementação.
+Na ausência de uma cláusula de `schedule` definida explicitamente, o `schedule` padrão é definido pela implementação.
 
-Um programa de conformidade de OpenMP não deve confiar em um agendamento específico para execução correta. Um programa não deve confiar em um agendamento *tipo* em conformidade com precisão a descrição fornecida acima, porque é possível ter variações nas implementações do mesmo agendamento *tipo* entre compiladores diferentes. As descrições de podem ser usadas para selecionar a agenda que é apropriada para uma determinada situação.
+Um programa compatível com OpenMP não deve depender de um cronograma específico para a execução correta. Um programa não deve depender de um *tipo* de agenda em conformidade com precisão à descrição fornecida acima, porque é possível ter variações nas implementações do mesmo *tipo* de agenda em diferentes compiladores. As descrições podem ser usadas para selecionar o agendamento apropriado para uma situação específica.
 
-O `ordered` cláusula deve estar presente quando `ordered` diretivas de associar o `for` construir.
+A cláusula `ordered` deve estar presente quando `ordered` diretivas se associam à construção `for`.
 
-Há uma barreira implícita no final de uma `for` construir, a menos que um `nowait` cláusula for especificada.
+Há uma barreira implícita no final de um `for` construção, a menos que uma cláusula `nowait` seja especificada.
 
-Restrições para o `for` diretiva são da seguinte maneira:
+As restrições à diretiva de `for` são as seguintes:
 
-- O `for` loop deve ser um bloco estruturado e, além disso, sua execução não deve ser terminada por um `break` instrução.
+- O loop de `for` deve ser um bloco estruturado e, além disso, sua execução não deve ser encerrada por uma instrução `break`.
 
-- Os valores do loop de expressões de controlam a `for` loop associado com um `for` diretiva deve ser o mesmo para todos os threads da equipe.
+- Os valores das expressões de controle de loop do loop de `for` associado a uma diretiva `for` devem ser os mesmos para todos os threads da equipe.
 
-- O `for` variável de iteração do loop deve ter um tipo de inteiro com sinal.
+- A variável de iteração de loop de `for` deve ter um tipo de inteiro assinado.
 
-- Um único `schedule` cláusula pode aparecer em um `for` diretiva.
+- Apenas uma única cláusula `schedule` pode aparecer em uma diretiva `for`.
 
-- Um único `ordered` cláusula pode aparecer em um `for` diretiva.
+- Apenas uma única cláusula `ordered` pode aparecer em uma diretiva `for`.
 
-- Um único `nowait` cláusula pode aparecer em um `for` diretiva.
+- Apenas uma única cláusula `nowait` pode aparecer em uma diretiva `for`.
 
-- É se não especificado ou a frequência com que os efeitos de qualquer lado dentro de *chunk_size*, *lb*, *b*, ou *incr* expressões ocorrem.
+- Não será especificado se ou com que frequência quaisquer efeitos colaterais dentro das expressões *chunk_size*, *lb*, *b*ou *incr* ocorrerem.
 
-- O valor de *chunk_size* expressão deve ser o mesmo para todos os threads da equipe.
+- O valor da expressão de *chunk_size* deve ser o mesmo para todos os threads na equipe.
 
 #### <a name="cross-references"></a>Referências cruzadas
 
-- `private`, `firstprivate`, `lastprivate`, e `reduction` cláusulas ([seção 2.7.2](#272-data-sharing-attribute-clauses))
+- cláusulas `private`, `firstprivate`, `lastprivate`e `reduction` ([seção 2.7.2](#272-data-sharing-attribute-clauses))
 - [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule) variável de ambiente
-- [ordenado](#266-ordered-construct) construir
-- [agenda](d-using-the-schedule-clause.md) cláusula
+- construção [ordenada](#266-ordered-construct)
+- cláusula de [agendamento](d-using-the-schedule-clause.md)
 
-### <a name="242-sections-construct"></a>2.4.2 seções constructo
+### <a name="242-sections-construct"></a>construção de seções 2.4.2
 
-O `sections` diretiva identifica uma construção de compartilhamento de trabalho noniterative que especifica um conjunto de construções que devem ser divididos entre os threads em uma equipe. Cada seção é executada uma vez por um thread em que a equipe. A sintaxe do `sections` diretiva é da seguinte maneira:
+A diretiva `sections` identifica um constructo de compartilhamento de trabalho não iterativo que especifica um conjunto de construções que devem ser divididas entre threads em uma equipe. Cada seção é executada uma vez por um thread na equipe. A sintaxe da diretiva `sections` é a seguinte:
 
 ```cpp
 #pragma omp sections [clause[[,] clause] ...] new-line
@@ -245,80 +245,80 @@ O `sections` diretiva identifica uma construção de compartilhamento de trabalh
 }
 ```
 
-A cláusula é um dos seguintes:
+A cláusula é uma das seguintes:
 
-- `private(` *variable-list* `)`
-- `firstprivate(` *variable-list* `)`
-- `lastprivate(` *variable-list* `)`
-- `reduction(` *operator* `:`  *variable-list* `)`
+- `private(` *de lista de variáveis* `)`
+- `firstprivate(` *de lista de variáveis* `)`
+- `lastprivate(` *de lista de variáveis* `)`
+- *operador* de `reduction(` `:`*a lista de variáveis* `)`
 - `nowait`
 
-Cada seção é precedida por um `section` diretiva, embora o `section` diretiva é opcional para a primeira seção. O `section` diretivas devem ser exibido entre a extensão léxica do `sections` diretiva. Há uma barreira implícita no final de uma `sections` construir, a menos que um `nowait` é especificado.
+Cada seção é precedida por uma diretiva `section`, embora a diretiva `section` seja opcional para a primeira seção. As diretivas de `section` devem aparecer dentro da extensão lexical da diretiva `sections`. Há uma barreira implícita no final de uma construção de `sections`, a menos que uma `nowait` seja especificada.
 
-Restrições para o `sections` diretiva são da seguinte maneira:
+As restrições à diretiva de `sections` são as seguintes:
 
-- Um `section` diretiva não pode aparecer fora a extensão léxica do `sections` diretiva.
+- Uma diretiva de `section` não deve aparecer fora da extensão lexical da diretiva `sections`.
 
-- Um único `nowait` cláusula pode aparecer em um `sections` diretiva.
+- Apenas uma única cláusula `nowait` pode aparecer em uma diretiva `sections`.
 
 #### <a name="cross-references"></a>Referências cruzadas
 
-- `private`, `firstprivate`, `lastprivate`, e `reduction` cláusulas ([seção 2.7.2](#272-data-sharing-attribute-clauses))
+- cláusulas `private`, `firstprivate`, `lastprivate`e `reduction` ([seção 2.7.2](#272-data-sharing-attribute-clauses))
 
-### <a name="243-single-construct"></a>2.4.3 constructo single
+### <a name="243-single-construct"></a>2.4.3 construção única
 
-O `single` diretiva identifica uma construção que especifica que o bloco estruturado associado é executado por apenas um thread na equipe (não necessariamente o thread mestre). A sintaxe do `single` diretiva é da seguinte maneira:
+A diretiva `single` identifica uma construção que especifica que o bloco estruturado associado é executado por apenas um thread na equipe (não necessariamente o thread mestre). A sintaxe da diretiva `single` é a seguinte:
 
 ```cpp
 #pragma omp single [clause[[,] clause] ...] new-linestructured-block
 ```
 
-A cláusula é um dos seguintes:
+A cláusula é uma das seguintes:
 
-- `private(` *variable-list* `)`
-- `firstprivate(` *variable-list* `)`
-- `copyprivate(` *variable-list* `)`
+- `private(` *de lista de variáveis* `)`
+- `firstprivate(` *de lista de variáveis* `)`
+- `copyprivate(` *de lista de variáveis* `)`
 - `nowait`
 
-Há uma barreira implícita após o `single` construir, a menos que um `nowait` cláusula for especificada.
+Há uma barreira implícita após a construção de `single`, a menos que uma cláusula `nowait` seja especificada.
 
-Restrições para o `single` diretiva são da seguinte maneira:
+As restrições à diretiva de `single` são as seguintes:
 
-- Um único `nowait` cláusula pode aparecer em um `single` diretiva.
-- O `copyprivate` cláusula não deve ser usada com o `nowait` cláusula.
+- Apenas uma única cláusula `nowait` pode aparecer em uma diretiva `single`.
+- A cláusula `copyprivate` não deve ser usada com a cláusula `nowait`.
 
 #### <a name="cross-references"></a>Referências cruzadas
 
-- `private`, `firstprivate`, e `copyprivate` cláusulas ([seção 2.7.2](#272-data-sharing-attribute-clauses))
+- cláusulas `private`, `firstprivate`e `copyprivate` ([seção 2.7.2](#272-data-sharing-attribute-clauses))
 
-## <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 combinado constructos de compartilhamento de trabalho paralelo
+## <a name="25-combined-parallel-work-sharing-constructs"></a>2,5 constructos de compartilhamento de trabalho paralelo combinado
 
-Constructos de compartilhamento de trabalho combinados em paralelo são atalhos para especificar uma região paralela que tem apenas um constructo de compartilhamento de trabalho. A semântica dessas diretivas é o mesmo que especificar explicitamente um `parallel` diretiva seguido por um único constructo de compartilhamento de trabalho.
+As construções de compartilhamento de trabalho paralela combinadas são atalhos para especificar uma região paralela que tenha apenas uma construção de compartilhamento de trabalho. A semântica dessas diretivas é a mesma de especificar explicitamente uma diretiva de `parallel` seguida de um único constructo de compartilhamento de trabalho.
 
-As seções a seguir descrevem as construções de compartilhamento de trabalho paralelas combinadas:
+As seções a seguir descrevem as construções de compartilhamento de trabalho paralelos combinadas:
 
 - [paralelo para](#251-parallel-for-construct) diretiva
-- [seções em paralelo](#252-parallel-sections-construct) diretiva
+- Diretiva de [seções paralelas](#252-parallel-sections-construct)
 
-### <a name="251-parallel-for-construct"></a>2.5.1 construto parallel for
+### <a name="251-parallel-for-construct"></a>2.5.1 paralelo para construção
 
-O `parallel for` diretiva é um atalho para um `parallel` região que contém um único `for` diretiva. A sintaxe do `parallel for` diretiva é da seguinte maneira:
+A diretiva `parallel for` é um atalho para uma região `parallel` que contém apenas uma única diretiva de `for`. A sintaxe da diretiva `parallel for` é a seguinte:
 
 ```cpp
 #pragma omp parallel for [clause[[,] clause] ...] new-linefor-loop
 ```
 
-Essa diretiva permite que todas as cláusulas do `parallel` diretiva e a `for` diretiva, exceto o `nowait` cláusula com significados idênticos e restrições. A semântica é o mesmo que especificar explicitamente uma `parallel` diretiva seguida imediatamente por um `for` diretiva.
+Essa diretiva permite todas as cláusulas da diretiva `parallel` e a diretiva `for`, exceto a cláusula `nowait`, com significações e restrições idênticas. A semântica é a mesma que especificar explicitamente uma diretiva `parallel` seguida imediatamente por uma diretiva `for`.
 
 #### <a name="cross-references"></a>Referências cruzadas
 
-- [paralelo](#23-parallel-construct) diretiva
-- [para](#241-for-construct) diretiva
+- diretiva [Parallel](#23-parallel-construct)
+- diretiva [for](#241-for-construct)
 - [Cláusulas de atributo de dados](#272-data-sharing-attribute-clauses)
 
-### <a name="252-parallel-sections-construct"></a>2.5.2 seções paralela constructo
+### <a name="252-parallel-sections-construct"></a>construção de seções paralelas 2.5.2
 
-O `parallel sections` diretiva fornece um formulário de atalho para especificar um `parallel` que tem uma única região `sections` diretiva. A semântica é o mesmo que especificar explicitamente uma `parallel` diretiva seguida imediatamente por um `sections` diretiva. A sintaxe do `parallel sections` diretiva é da seguinte maneira:
+A diretiva `parallel sections` fornece um formulário de atalho para especificar uma região de `parallel` que tenha apenas uma única diretiva de `sections`. A semântica é a mesma que especificar explicitamente uma diretiva `parallel` seguida imediatamente por uma diretiva `sections`. A sintaxe da diretiva `parallel sections` é a seguinte:
 
 ```cpp
 #pragma omp parallel sections  [clause[[,] clause] ...] new-line
@@ -330,55 +330,55 @@ O `parallel sections` diretiva fornece um formulário de atalho para especificar
 }
 ```
 
-O *cláusula* pode ser uma das cláusulas aceitas pela `parallel` e `sections` diretivas, exceto o `nowait` cláusula.
+A *cláusula* pode ser uma das cláusulas aceitas pelas diretivas `parallel` e `sections`, exceto a cláusula `nowait`.
 
 #### <a name="cross-references"></a>Referências cruzadas
 
-- [paralelo](#23-parallel-construct) diretiva
-- [seções](#242-sections-construct) diretiva
+- diretiva [Parallel](#23-parallel-construct)
+- diretiva [Sections](#242-sections-construct)
 
-## <a name="26-master-and-synchronization-directives"></a>2.6 diretivas mestre e sincronização
+## <a name="26-master-and-synchronization-directives"></a>diretivas mestre e de sincronização 2,6
 
 As seções a seguir descrevem:
 
-- [mestre](#261-master-construct) construir
-- [crítico](#262-critical-construct) construir
-- [barrier](#263-barrier-directive) directive
-- [Atomic](#264-atomic-construct) construir
-- [liberar](#265-flush-directive) diretiva
-- [ordenado](#266-ordered-construct) construir
+- construção [mestre](#261-master-construct)
+- construção [crítica](#262-critical-construct)
+- Diretiva de [barreira](#263-barrier-directive)
+- construção [atômica](#264-atomic-construct)
+- diretiva [flush](#265-flush-directive)
+- construção [ordenada](#266-ordered-construct)
 
-### <a name="261-master-construct"></a>2.6.1 constructo master
+### <a name="261-master-construct"></a>construção mestre 2.6.1
 
-O `master` diretiva identifica uma construção que especifica um bloco estruturado que é executado pelo thread principal da equipe. A sintaxe do `master` diretiva é da seguinte maneira:
+A diretiva `master` identifica um constructo que especifica um bloco estruturado que é executado pelo thread mestre da equipe. A sintaxe da diretiva `master` é a seguinte:
 
 ```cpp
 #pragma omp master new-linestructured-block
 ```
 
-Outros threads da equipe não executem o bloco estruturado associado. Não há nenhum barreira implícita tanto na entrada ou saída da construção de mestre.
+Outros threads na equipe não executam o bloco estruturado associado. Não há uma barreira implícita na entrada ou saída da construção mestre.
 
-### <a name="262-critical-construct"></a>2.6.2 construto critical
+### <a name="262-critical-construct"></a>construção crítica 2.6.2
 
-O `critical` diretiva identifica uma construção que restringe a execução do bloco estruturado associado a um único thread por vez. A sintaxe do `critical` diretiva é da seguinte maneira:
+A diretiva `critical` identifica uma construção que restringe a execução do bloco estruturado associado a um único thread de cada vez. A sintaxe da diretiva `critical` é a seguinte:
 
 ```cpp
 #pragma omp critical [(name)]  new-linestructured-block
 ```
 
-Um recurso opcional *nome* pode ser usado para identificar a região crítica. Usado para identificar uma região crítica de identificadores têm vinculação externa e estão em um espaço para nome que é separado dos name spaces usados por rótulos, marcas, membros e identificadores comuns.
+Um *nome* opcional pode ser usado para identificar a região crítica. Os identificadores usados para identificar uma região crítica têm vínculo externo e estão em um espaço de nome separado dos espaços de nome usados por rótulos, marcas, membros e identificadores comuns.
 
-Um thread aguarda no início de uma região crítica, até que nenhum outro thread está em execução em uma região crítica (em qualquer lugar no programa) com o mesmo nome. Tudo sem nome `critical` diretivas mapeiam para o mesmo nome não especificado.
+Um thread aguarda no início de uma região crítica até que nenhum outro thread esteja executando uma região crítica (em qualquer lugar do programa) com o mesmo nome. Todas as diretivas de `critical` sem nome são mapeadas para o mesmo nome não especificado.
 
-### <a name="263-barrier-directive"></a>2.6.3 diretiva de barreira
+### <a name="263-barrier-directive"></a>Diretiva de barreira 2.6.3
 
-O `barrier` diretiva sincroniza todos os threads em uma equipe. Quando encontrados, cada thread em que a equipe espera até que todos os outros tenham atingido neste ponto. A sintaxe do `barrier` diretiva é da seguinte maneira:
+A diretiva `barrier` sincroniza todos os threads em uma equipe. Quando encontrado, cada thread da equipe aguarda até que todos os outros cheguem a esse ponto. A sintaxe da diretiva `barrier` é a seguinte:
 
 ```cpp
 #pragma omp barrier new-line
 ```
 
-Depois que todos os threads da equipe tiveram encontrado a barreira, cada thread em que a equipe começa a executar as instruções após a diretiva de barreira em paralelo. Porque o `barrier` diretiva não tem uma instrução de linguagem C como parte de sua sintaxe, há algumas restrições sobre seu posicionamento dentro de um programa. Para obter mais informações sobre a gramática formal, consulte [Apêndice C](c-openmp-c-and-cpp-grammar.md). O exemplo a seguir ilustra essas restrições.
+Depois que todos os threads da equipe tiverem encontrado a barreira, cada thread na equipe começará a executar as instruções depois da diretiva de barreira em paralelo. Como a diretiva de `barrier` não tem uma instrução de linguagem C como parte de sua sintaxe, há algumas restrições em seu posicionamento dentro de um programa. Para obter mais informações sobre a gramática formal, consulte o [Apêndice C](c-openmp-c-and-cpp-grammar.md). O exemplo a seguir ilustra essas restrições.
 
 ```cpp
 /* ERROR - The barrier directive cannot be the immediate
@@ -396,17 +396,17 @@ if (x!=0) {
 }
 ```
 
-### <a name="264-atomic-construct"></a>2.6.4 constructo atomic
+### <a name="264-atomic-construct"></a>construção atômica 2.6.4
 
-O `atomic` diretiva garante que um local específico da memória é atualizado atomicamente, em vez de expô-lo para a possibilidade de várias simultâneas gravando segmentos. A sintaxe do `atomic` diretiva é da seguinte maneira:
+A diretiva `atomic` garante que um local de memória específico seja atualizado atomicamente, em vez de expô-lo à possibilidade de vários threads de gravação simultâneas. A sintaxe da diretiva `atomic` é a seguinte:
 
 ```cpp
 #pragma omp atomic new-lineexpression-stmt
 ```
 
-A instrução da expressão deve ter uma das seguintes formas:
+A instrução de expressão deve ter um dos seguintes formatos:
 
-- *x binop* `=` *expr*
+- `=` *expr* *x binop*
 - *x* `++`
 - `++` *x*
 - *x* `--`
@@ -414,19 +414,19 @@ A instrução da expressão deve ter uma das seguintes formas:
 
 Nas expressões anteriores:
 
-- *x* é uma expressão de lvalue com tipo escalar.
+- *x* é uma expressão lvalue com tipo escalar.
 
-- *Expr* é uma expressão com um tipo escalar, e ele não faz referência a objeto designado pelo *x*.
+- *expr* é uma expressão com tipo escalar e não faz referência ao objeto designado por *x*.
 
-- *binop* não é um operador sobrecarregado e é uma das `+`, `*`, `-`, `/`, `&`, `^`, `|`, `<<`, ou `>>`.
+- *binop* não é um operador sobrecarregado e é um dos `+`, `*`, `-`, `/`, `&`, `^`, `|`, `<<`ou `>>`.
 
-Embora seja definido pela implementação se uma implementação substitui todos os `atomic` diretivas com `critical` diretivas que têm o mesmo exclusivo *nome*, o `atomic` diretiva permite uma melhor otimização . Instruções de hardware geralmente estão disponíveis que podem executar a atualização atômica com menos sobrecarga.
+Embora seja definido em implementação se uma implementação substitui todas as diretivas de `atomic` com `critical` diretivas que têm o mesmo *nome*exclusivo, a diretiva de `atomic` permite uma melhor otimização. Muitas vezes, há instruções de hardware disponíveis que podem executar a atualização atômica com a menor sobrecarga.
 
-Somente o carregamento e o armazenamento de objeto designado pelo *x* são atômicas; avaliação de *expr* não é atômica. Para evitar condições de corrida, todas as atualizações do local em paralelo devem ser protegidas com o `atomic` diretiva, exceto aqueles que são conhecidos por estar livres de condições de corrida.
+Somente a carga e o repositório do objeto designado por *x* são atômicos; a avaliação de *expr* não é atômica. Para evitar condições de corrida, todas as atualizações do local em paralelo devem ser protegidas com a diretiva `atomic`, exceto aquelas que são conhecidas por serem gratuitas das condições de corrida.
 
-Restrições para o `atomic` diretiva são da seguinte maneira:
+As restrições à diretiva de `atomic` são as seguintes:
 
-- Todas as referências atômicas para o local de armazenamento em todo o programa x devem ter um tipo compatível.
+- Todas as referências atômicas para o local de armazenamento x em todo o programa precisam ter um tipo compatível.
 
 #### <a name="examples"></a>Exemplos
 
@@ -447,19 +447,19 @@ u.n++;
 u.x -= 1.0f;
 ```
 
-### <a name="265-flush-directive"></a>2.6.5 diretiva flush
+### <a name="265-flush-directive"></a>Diretiva de liberação do 2.6.5
 
-O `flush` diretiva, explícita ou implícita, especifica um ponto de sequência de "thread cruzado" em que a implementação é necessário para garantir que todos os threads em uma equipe tenham uma exibição consistente de determinados objetos (especificados abaixo) na memória. Isso significa que avaliações anteriores das expressões que referenciam esses objetos forem concluídas e as avaliações subsequentes ainda não tenham começaram. Por exemplo, os compiladores devem restaurar os valores dos objetos de registros para a memória e hardware talvez seja necessário liberar os buffers de gravação para a memória e recarregar os valores dos objetos da memória.
+A diretiva `flush`, explícita ou implícita, especifica um ponto de sequência de "thread cruzado" no qual a implementação é necessária para garantir que todos os threads de uma equipe tenham uma exibição consistente de determinados objetos (especificados abaixo) na memória. Isso significa que as avaliações anteriores de expressões que fazem referência a esses objetos são concluídas e as avaliações subsequentes ainda não foram iniciadas. Por exemplo, os compiladores devem restaurar os valores dos objetos de registros para a memória e o hardware pode precisar liberar buffers de gravação para a memória e recarregar os valores dos objetos da memória.
 
-A sintaxe do `flush` diretiva é da seguinte maneira:
+A sintaxe da diretiva `flush` é a seguinte:
 
 ```cpp
 #pragma omp flush [(variable-list)]  new-line
 ```
 
-Se os objetos que requerem sincronização podem ser designados por variáveis, essas variáveis podem ser especificadas na opcional *lista variável*. Se um ponteiro estiver presente na *lista variável*, o ponteiro em si é liberado, não o objeto que o ponteiro se refere a.
+Se os objetos que exigem sincronização puderem ser designados por variáveis, essas variáveis poderão ser especificadas na *lista variável*opcional. Se um ponteiro estiver presente na *lista de variáveis*, o próprio ponteiro será liberado, não o objeto ao qual o ponteiro se refere.
 
-Um `flush` diretiva sem uma *lista variável* sincroniza objetos todos compartilhados, exceto objetos inacessíveis com duração automática de armazenamento. (Isso é provavelmente terá mais sobrecarga do que um `flush` com um *lista variável*.) Um `flush` diretiva sem uma *lista variável* é implícita para as seguintes diretivas:
+Uma diretiva de `flush` sem uma *lista de variáveis* sincroniza todos os objetos compartilhados, exceto objetos inacessíveis com duração de armazenamento automática. (É provável que isso tenha mais sobrecarga do que um `flush` com uma *lista de variáveis*.) Uma diretiva de `flush` sem uma *lista de variáveis* é implícita para as seguintes diretivas:
 
 - `barrier`
 - Na entrada e saída de `critical`
@@ -471,16 +471,16 @@ Um `flush` diretiva sem uma *lista variável* sincroniza objetos todos compartil
 - Na entrada e saída de `parallel for`
 - Na entrada e saída de `parallel sections`
 
-A diretiva não é implícito, se um `nowait` cláusula estiver presente. É importante observar que o `flush` diretiva não está implícito para qualquer um dos seguintes:
+A diretiva não estará implícita se uma cláusula `nowait` estiver presente. Deve-se observar que a diretiva `flush` não está implícita para qualquer um dos seguintes:
 
 - Na entrada para `for`
 - Na entrada ou saída de `master`
 - Na entrada para `sections`
 - Na entrada para `single`
 
-Uma referência que acessa o valor de um objeto com um tipo qualificado como volátil se comporta como se houvesse um `flush` diretiva especificando o objeto no ponto de sequência anterior. Uma referência que modifica o valor de um objeto com um tipo qualificado como volátil se comporta como se houvesse um `flush` diretiva especificando o objeto no ponto de sequência subsequente.
+Uma referência que acessa o valor de um objeto com um tipo qualificado como volátil se comporta como se houvesse uma diretiva de `flush` especificando esse objeto no ponto de sequência anterior. Uma referência que modifica o valor de um objeto com um tipo qualificado como volátil se comporta como se houvesse uma diretiva de `flush` especificando esse objeto no ponto de sequência subsequente.
 
-Porque o `flush` diretiva não tem uma instrução de linguagem C como parte de sua sintaxe, há algumas restrições sobre seu posicionamento dentro de um programa. Para obter mais informações sobre a gramática formal, consulte [Apêndice C](c-openmp-c-and-cpp-grammar.md). O exemplo a seguir ilustra essas restrições.
+Como a diretiva de `flush` não tem uma instrução de linguagem C como parte de sua sintaxe, há algumas restrições em seu posicionamento dentro de um programa. Para obter mais informações sobre a gramática formal, consulte o [Apêndice C](c-openmp-c-and-cpp-grammar.md). O exemplo a seguir ilustra essas restrições.
 
 ```cpp
 /* ERROR - The flush directive cannot be the immediate
@@ -498,67 +498,67 @@ if (x!=0) {
 }
 ```
 
-Restrições para o `flush` diretiva são da seguinte maneira:
+As restrições à diretiva de `flush` são as seguintes:
 
-- Uma variável especificada em um `flush` diretiva não deve ter um tipo de referência.
+- Uma variável especificada em uma diretiva de `flush` não deve ter um tipo de referência.
 
-### <a name="266-ordered-construct"></a>2.6.6 construção ordenada
+### <a name="266-ordered-construct"></a>construção ordenada 2.6.6
 
-O seguinte bloco estruturado um `ordered` diretiva é executada na ordem em que iterações seriam executadas em um loop sequencial. A sintaxe do `ordered` diretiva é da seguinte maneira:
+O bloco estruturado após uma diretiva de `ordered` é executado na ordem em que as iterações seriam executadas em um loop sequencial. A sintaxe da diretiva `ordered` é a seguinte:
 
 ```cpp
 #pragma omp ordered new-linestructured-block
 ```
 
-Uma `ordered` diretiva deve estar dentro do extensão dinâmico de um `for` ou `parallel for` construir. O `for` ou `parallel for` diretiva para o qual o `ordered` associa constructo deve ter uma `ordered` cláusula especificada conforme descrito na [seção 2.4.1](#241-for-construct). Na execução de um `for` ou `parallel for` construir com um `ordered` cláusula, `ordered` construções são executadas estritamente na ordem em que eles fossem executados em uma execução sequencial do loop.
+Uma diretiva de `ordered` deve estar dentro da extensão dinâmica de um `for` ou `parallel for` construção. A diretiva `for` ou `parallel for` à qual as associações de construção de `ordered` devem ter uma cláusula `ordered` especificada, conforme descrito na [seção 2.4.1](#241-for-construct). Na execução de uma construção `for` ou `parallel for` com uma cláusula `ordered`, as construções `ordered` são executadas estritamente na ordem em que seriam executadas em uma execução sequencial do loop.
 
-Restrições para o `ordered` diretiva são da seguinte maneira:
+As restrições à diretiva de `ordered` são as seguintes:
 
-- Uma iteração de um loop com um `for` constructo não deve executar a mesma diretiva ordenada mais de uma vez e não devem executar mais de um `ordered` diretiva.
+- Uma iteração de um loop com uma construção `for` não deve executar a mesma diretiva ordenada mais de uma vez e não deve executar mais de uma diretiva de `ordered`.
 
-## <a name="27-data-environment"></a>2.7 ambiente de dados
+## <a name="27-data-environment"></a>ambiente de dados 2,7
 
-Esta seção apresenta uma diretiva e várias cláusulas para controlar o ambiente de dados durante a execução de regiões em paralelo, da seguinte maneira:
+Esta seção apresenta uma diretiva e várias cláusulas para controlar o ambiente de dados durante a execução de regiões paralelas, da seguinte maneira:
 
-- Um [threadprivate](#271-threadprivate-directive) diretiva é fornecida para tornar o escopo de arquivo, escopo de namespace ou variáveis estáticas de escopo de bloco local para um thread.
+- Uma diretiva [threadprivate](#271-threadprivate-directive) é fornecida para tornar as variáveis de escopo de arquivo, Namespace-escopo ou estáticas de escopo de bloco locais para um thread.
 
-- As cláusulas que podem ser especificadas em que as diretivas para controlar os atributos de compartilhamento de variáveis para a duração das construções paralelas ou compartilhamento de trabalho são descritas em [seção 2.7.2](#272-data-sharing-attribute-clauses).
+- As cláusulas que podem ser especificadas nas diretivas para controlar os atributos de compartilhamento de variáveis para a duração das construções paralelas ou de compartilhamento de trabalho são descritas na [seção 2.7.2](#272-data-sharing-attribute-clauses).
 
-### <a name="271-threadprivate-directive"></a>2.7.1 diretiva threadprivate
+### <a name="271-threadprivate-directive"></a>diretiva 2.7.1 threadprivate
 
-O `threadprivate` diretiva torna o escopo de arquivo nomeado, escopo de namespace ou variáveis estáticas de escopo de bloco especificadas na *lista variável* privada para um thread. *lista de variável* é uma lista separada por vírgulas de variáveis que não têm um tipo incompleto. A sintaxe do `threadprivate` diretiva é da seguinte maneira:
+A diretiva `threadprivate` torna as variáveis de escopo de arquivo, escopo de namespace ou de escopo de bloco estáticos especificadas na *lista de variáveis* privada para um thread. a *lista variável* é uma lista separada por vírgulas de variáveis que não têm um tipo incompleto. A sintaxe da diretiva `threadprivate` é a seguinte:
 
 ```cpp
 #pragma omp threadprivate(variable-list) new-line
 ```
 
-Cada cópia de um `threadprivate` variável é inicializada uma vez, em um ponto especificado no programa antes da primeira referência para a cópia e da maneira usual (ou seja, como a cópia mestra deve ser inicializada em uma execução serial do programa). Observe que, se um objeto é referenciado no inicializador explícito de um `threadprivate` variável e o valor do objeto é modificado antes da primeira referência a uma cópia da variável e, em seguida, o comportamento é especificado.
+Cada cópia de uma variável de `threadprivate` é inicializada uma vez, em um ponto não especificado no programa antes da primeira referência a essa cópia, e da maneira usual (ou seja, como a cópia mestra seria inicializada em uma execução serial do programa). Observe que, se um objeto for referenciado em um inicializador explícito de uma variável `threadprivate`, e o valor do objeto for modificado antes da primeira referência a uma cópia da variável, o comportamento será não especificado.
 
-Como com qualquer variável particular, um thread não deve fazer referência a cópia do outro thread de um `threadprivate` objeto. Durante a regiões seriais e mestre do programa, referências será a cópia mestre do segmento do objeto.
+Assim como acontece com qualquer variável particular, um thread não deve fazer referência a uma cópia de outra thread de um objeto de `threadprivate`. Durante as regiões de série e regiões mestras do programa, as referências serão a cópia do objeto mestre do thread.
 
-Depois que a primeira região paralela é executada, os dados no `threadprivate` objetos é garantido para manter somente se o mecanismo de threads de dinâmica foi desabilitada e, se o número de threads permanece inalterado para todas as regiões em paralelo.
+Depois que a primeira região paralela for executada, os dados na `threadprivate` objetos terão a garantia de persistir somente se o mecanismo de threads dinâmicos tiver sido desabilitado e se o número de threads permanecer inalterado para todas as regiões paralelas.
 
-As restrições para o `threadprivate` diretiva são da seguinte maneira:
+As restrições para a diretiva de `threadprivate` são as seguintes:
 
-- Um `threadprivate` diretiva para variáveis de escopo de arquivo ou o escopo de namespace deve aparecer fora de qualquer definição ou declaração e deve preceder lexicalmente todas as referências a qualquer uma das variáveis em sua lista.
+- Uma diretiva de `threadprivate` para variáveis de escopo de arquivo ou de namespace deve aparecer fora de qualquer definição ou declaração e deve preceder lexicalmente todas as referências a qualquer uma das variáveis em sua lista.
 
-- Cada variável na *variável-list* de um `threadprivate` diretiva no escopo de namespace ou arquivo deve se referir a uma declaração de variável no escopo de namespace ou arquivo que precede lexicalmente a diretiva.
+- Cada variável na *lista de variáveis* de uma diretiva `threadprivate` no escopo de arquivo ou de namespace deve se referir a uma declaração de variável no escopo de arquivo ou de namespace que precede lexicalmente a diretiva.
 
-- Um `threadprivate` diretiva para variáveis estáticas de escopo de bloco deve aparecer no escopo da variável e não em um escopo aninhado. A diretiva deve preceder lexicalmente todas as referências a qualquer uma das variáveis em sua lista.
+- Uma diretiva de `threadprivate` para variáveis de escopo de bloco estáticos deve aparecer no escopo da variável e não em um escopo aninhado. A diretiva deve preceder lexicalmente todas as referências a qualquer uma das variáveis em sua lista.
 
-- Cada variável na *variável-list* de um `threadprivate` diretiva no escopo de bloco deve se referir a uma declaração de variável no mesmo escopo que precede lexicalmente a diretiva. A declaração de variável deve usar o especificador de classe de armazenamento estático.
+- Cada variável na *lista de variáveis* de uma diretiva `threadprivate` no escopo de bloco deve se referir a uma declaração de variável no mesmo escopo que precede lexicalmente a diretiva. A declaração de variável deve usar o especificador de classe de armazenamento estático.
 
-- Se uma variável for especificada em uma `threadprivate` diretiva em uma unidade de conversão, ele deve ser especificado em um `threadprivate` diretiva em cada unidade de tradução na qual ela é declarada.
+- Se uma variável for especificada em uma diretiva de `threadprivate` em uma unidade de tradução, ela deverá ser especificada em uma diretiva de `threadprivate` em cada unidade de tradução em que for declarada.
 
-- Um `threadprivate` variável não deve aparecer em qualquer cláusula, exceto o `copyin`, `copyprivate`, `schedule`, `num_threads`, ou o `if` cláusula.
+- Uma variável `threadprivate` não deve aparecer em nenhuma cláusula, exceto o `copyin`, `copyprivate`, `schedule`, `num_threads`ou a cláusula `if`.
 
-- O endereço de um `threadprivate` variável não for uma constante de endereço.
+- O endereço de uma variável de `threadprivate` não é uma constante de endereço.
 
-- Um `threadprivate` variável não deve ter um tipo incompleto ou um tipo de referência.
+- Uma variável `threadprivate` não deve ter um tipo incompleto ou um tipo de referência.
 
-- Um `threadprivate` variável com tipo de classe não POD deve ter um construtor de cópia acessível e não ambígua, se ela for declarada com um inicializador explícito.
+- Uma variável `threadprivate` com tipo de classe não POD deve ter um construtor de cópia acessível e não ambíguo se ela for declarada com um inicializador explícito.
 
-O exemplo a seguir ilustra como modificar uma variável que é exibido em um inicializador que pode causar um comportamento não especificado e também como evitar esse problema usando um objeto auxiliar e um construtor de cópia.
+O exemplo a seguir ilustra como a modificação de uma variável que aparece em um inicializador pode causar um comportamento não especificado e também como evitar esse problema usando um objeto auxiliar e um construtor de cópia.
 
 ```cpp
 int x = 1;
@@ -585,22 +585,22 @@ void f(int n) {
 - [threads dinâmicos](3-run-time-library-functions.md#317-omp_set_dynamic-function)
 - [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) variável de ambiente
 
-### <a name="272-data-sharing-attribute-clauses"></a>2.7.2 cláusulas de atributo de compartilhamento de dados
+### <a name="272-data-sharing-attribute-clauses"></a>cláusulas de atributo de compartilhamento de dados 2.7.2
 
-Várias diretivas aceitam as cláusulas que permitem que um usuário controlar os atributos de compartilhamento de variáveis para a duração da região. Cláusulas de atributo de compartilhamento se aplicam somente a variáveis na extensão de léxico da diretiva na qual a cláusula é exibida. Nem todas as cláusulas a seguir são permitidas em todas as diretivas. A lista de cláusulas que são válidos em uma determinada diretiva são descritas com a diretiva.
+Várias diretivas aceitam cláusulas que permitem que um usuário controle os atributos de compartilhamento de variáveis para a duração da região. As cláusulas de atributo de compartilhamento se aplicam somente a variáveis na extensão lexical da diretiva na qual a cláusula é exibida. Nem todas as cláusulas a seguir são permitidas em todas as diretivas. A lista de cláusulas que são válidas em uma determinada diretiva são descritas com a diretiva.
 
-Se uma variável é visível quando um paralelo ou construção de compartilhamento de trabalho for encontrada e a variável não for especificada em uma cláusula de atributo de compartilhamento ou `threadprivate` diretiva, em seguida, a variável é compartilhada. Variáveis estáticas declaradas dentro de extensão dinâmica de uma região paralela são compartilhadas. A memória alocado do heap (por exemplo, usando `malloc()` em C ou C++ ou o `new` operador em C++) é compartilhado. (O ponteiro para essa memória, no entanto, pode ser particulares ou compartilhados.) Variáveis com duração de armazenamento automático declarada dentro de extensão dinâmica de uma região paralela são privadas.
+Se uma variável estiver visível quando um constructo paralelo ou de compartilhamento de trabalho for encontrado e a variável não for especificada em uma cláusula de atributo de compartilhamento ou diretiva de `threadprivate`, a variável será compartilhada. Variáveis estáticas declaradas na extensão dinâmica de uma região paralela são compartilhadas. A memória alocada de heap (por exemplo, usando `malloc()` C++ em C ou ou o C++operador de `new` em) é compartilhada. (No entanto, o ponteiro para essa memória pode ser privado ou compartilhado.) Variáveis com duração de armazenamento automática declaradas dentro da extensão dinâmica de uma região paralela são privadas.
 
-A maioria das cláusulas de aceita um *lista variável* argumento, que é uma lista separada por vírgulas de variáveis que são visíveis. Se uma variável é referenciada em uma cláusula de compartilhamento de dados de atributo tem um tipo derivado de um modelo e existem outras referências a essa variável no programa, o comportamento será indefinido.
+A maioria das cláusulas aceita um argumento de *lista* de variáveis, que é uma lista separada por vírgulas de variáveis que são visíveis. Se uma variável referenciada em uma cláusula de atributo de compartilhamento de dados tiver um tipo derivado de um modelo e não houver nenhuma outra referência a essa variável no programa, o comportamento será indefinido.
 
-Todas as variáveis que aparecem em cláusulas de diretiva devem estar visíveis. As cláusulas podem ser repetidas, conforme necessário, mas nenhuma variável pode ser especificado mais de uma cláusula, exceto pelo fato de uma variável pode ser especificada em ambos um `firstprivate` e um `lastprivate` cláusula.
+Todas as variáveis que aparecem dentro de cláusulas de diretiva devem estar visíveis. As cláusulas podem ser repetidas conforme necessário, mas nenhuma variável pode ser especificada em mais de uma cláusula, exceto que uma variável pode ser especificada tanto em uma `firstprivate` quanto em uma cláusula `lastprivate`.
 
 As seções a seguir descrevem as cláusulas de atributo de compartilhamento de dados:
 
 - [private](#2721-private)
 - [firstprivate](#2722-firstprivate)
 - [lastprivate](#2723-lastprivate)
-- [shared](#2724-shared)
+- [compartilhado](#2724-shared)
 - [default](#2725-default)
 - [reduction](#2726-reduction)
 - [copyin](#2727-copyin)
@@ -608,67 +608,67 @@ As seções a seguir descrevem as cláusulas de atributo de compartilhamento de 
 
 #### <a name="2721-private"></a>2.7.2.1 private
 
-O `private` cláusula declara as variáveis na lista de variável a ser privadas para cada thread em uma equipe. A sintaxe do `private` cláusula é da seguinte maneira:
+A cláusula `private` declara que as variáveis na lista de variáveis são privadas para cada thread em uma equipe. A sintaxe da cláusula `private` é a seguinte:
 
 ```cpp
 private(variable-list)
 ```
 
-O comportamento de uma variável especificada em um `private` cláusula é da seguinte maneira. Um novo objeto com duração automática de armazenamento é alocado para a construção. O tamanho e o alinhamento do novo objeto são determinados pelo tipo da variável. Essa alocação ocorre uma vez para cada thread na equipe, e um construtor padrão é invocado para um objeto de classe, se necessário; Caso contrário, o valor inicial é indeterminado.  O objeto original referenciado pela variável de tem um valor indeterminado durante a entrada para a construção, não deve ser modificado na extensão dinâmico da construção e tem um valor indeterminado após a saída da construção.
+O comportamento de uma variável especificada em uma cláusula `private` é o seguinte. Um novo objeto com duração de armazenamento automática é alocado para a construção. O tamanho e o alinhamento do novo objeto são determinados pelo tipo da variável. Essa alocação ocorre uma vez para cada thread na equipe, e um construtor padrão é invocado para um objeto de classe, se necessário; caso contrário, o valor inicial será indeterminado.  O objeto original referenciado pela variável tem um valor indeterminado na entrada para a construção, não deve ser modificado dentro da extensão dinâmica da construção e tem um valor indeterminado após a saída da construção.
 
-Na extensão de léxica da construção de diretiva, a variável referenciar o novo objeto privado alocado pelo thread.
+Na extensão lexical do constructo de diretiva, a variável faz referência ao novo objeto privado alocado pelo thread.
 
-As restrições para o `private` cláusula são da seguinte maneira:
+As restrições para a cláusula `private` são as seguintes:
 
-- Uma variável com um tipo de classe que é especificado em um `private` cláusula deve ter um construtor padrão acessível, não ambígua.
+- Uma variável com um tipo de classe especificado em uma cláusula `private` deve ter um construtor padrão acessível e não ambíguo.
 
-- Uma variável especificada em uma `private` cláusula não deve ter um `const`-qualificado tipo, a menos que ele tem uma classe de tipo com um `mutable` membro.
+- Uma variável especificada em uma cláusula `private` não deve ter um tipo qualificado `const`, a menos que tenha um tipo de classe com um membro `mutable`.
 
-- Uma variável especificada em um `private` cláusula não deve ter um tipo incompleto ou um tipo de referência.
+- Uma variável especificada em uma cláusula `private` não deve ter um tipo incompleto ou um tipo de referência.
 
-- Variáveis que aparecem o `reduction` cláusula de uma `parallel` diretiva não pode ser especificada em uma `private` cláusula em uma diretiva de compartilhamento de trabalho que está associado a construção parallel.
+- Variáveis que aparecem na cláusula `reduction` de uma diretiva `parallel` não podem ser especificadas em uma cláusula `private` em uma diretiva de compartilhamento de trabalho que se associa à construção paralela.
 
 #### <a name="2722-firstprivate"></a>2.7.2.2 firstprivate
 
-O `firstprivate` cláusula fornece um superconjunto da funcionalidade fornecida pelo `private` cláusula. A sintaxe do `firstprivate` cláusula é da seguinte maneira:
+A cláusula `firstprivate` fornece um superconjunto da funcionalidade fornecida pela cláusula `private`. A sintaxe da cláusula `firstprivate` é a seguinte:
 
 ```cpp
 firstprivate(variable-list)
 ```
 
-As variáveis especificadas no *variável-list* ter `private` semântica de cláusula, conforme descrito em [seção 2.7.2.1](#2721-private). A inicialização ou na construção ocorre como se ele foi feito uma vez por thread, antes da execução do thread da construção. Para um `firstprivate` cláusula em uma construção paralela, o valor inicial do novo objeto privado é o valor do objeto original que existe imediatamente antes da construção paralela para o thread que encontra. Para um `firstprivate` cláusula em uma construção de compartilhamento de trabalho, o valor inicial do novo objeto privado para cada thread que executa a construção de compartilhamento de trabalho é o valor do objeto original que existe antes do ponto no tempo que o mesmo thread encontra o construção de compartilhamento de trabalho. Além disso, para objetos de C++, o novo objeto privado para cada thread é cópia criada do objeto original.
+As variáveis especificadas na *lista de variáveis* têm `private` semântica de cláusula, conforme descrito na [seção 2.7.2.1](#2721-private). A inicialização ou construção ocorre como se fosse feita uma vez por thread, antes da execução do thread da construção. Para uma cláusula `firstprivate` em uma construção paralela, o valor inicial do novo objeto particular é o valor do objeto original que existe imediatamente antes da construção paralela para o thread que o encontra. Para uma cláusula `firstprivate` em uma construção de compartilhamento de trabalho, o valor inicial do novo objeto particular para cada thread que executa a construção de compartilhamento de trabalho é o valor do objeto original que existe antes do momento em que o mesmo thread encontra o constructo de compartilhamento de trabalho. Além disso, para C++ objetos, o novo objeto particular para cada thread é a cópia criada a partir do objeto original.
 
-As restrições para o `firstprivate` cláusula são da seguinte maneira:
+As restrições para a cláusula `firstprivate` são as seguintes:
 
-- Uma variável especificada em um `firstprivate` cláusula não deve ter um tipo incompleto ou um tipo de referência.
+- Uma variável especificada em uma cláusula `firstprivate` não deve ter um tipo incompleto ou um tipo de referência.
 
-- Uma variável com um tipo de classe que é especificado como `firstprivate` devem ter um construtor de cópia acessível inequívoca.
+- Uma variável com um tipo de classe que é especificada como `firstprivate` deve ter um construtor de cópia acessível e não ambíguo.
 
-- Variáveis que são particulares dentro de uma região paralela ou que aparecem na `reduction` cláusula de uma `parallel` diretiva não pode ser especificada em uma `firstprivate` cláusula em uma diretiva de compartilhamento de trabalho que está associado a construção parallel.
+- Variáveis que são privadas em uma região paralela ou que aparecem na cláusula `reduction` de uma diretiva de `parallel` não podem ser especificadas em uma cláusula `firstprivate` em uma diretiva de compartilhamento de trabalho que se associa à construção paralela.
 
 #### <a name="2723-lastprivate"></a>2.7.2.3 lastprivate
 
-O `lastprivate` cláusula fornece um superconjunto da funcionalidade fornecida pelo `private` cláusula. A sintaxe do `lastprivate` cláusula é da seguinte maneira:
+A cláusula `lastprivate` fornece um superconjunto da funcionalidade fornecida pela cláusula `private`. A sintaxe da cláusula `lastprivate` é a seguinte:
 
 ```cpp
 lastprivate(variable-list)
 ```
 
-As variáveis especificadas na *variável-list* ter `private` semântica de cláusula. Quando um `lastprivate` cláusula é exibida sobre a diretiva que identifica uma construção de compartilhamento de trabalho, o valor de cada `lastprivate` variável de sequencialmente última iteração de loop associado ou lexicalmente última diretiva de seção, é atribuído à objeto de original da variável. Variáveis que não são atribuídas a um valor, a última iteração do `for` ou `parallel for`, ou por lexicalmente última seção de `sections` ou `parallel sections` diretiva, têm valores indeterminados após a construção. Não atribuídos subobjetos também tem um valor de indeterminado após a construção.
+As variáveis especificadas na *lista de variáveis* têm `private` semântica de cláusula. Quando uma cláusula `lastprivate` é exibida na diretiva que identifica uma construção de compartilhamento de trabalho, o valor de cada variável de `lastprivate` da última iteração sequencial do loop associado ou a diretiva de seção lexicalmente última, é atribuído ao objeto original da variável. Variáveis que não são atribuídas a um valor pela última iteração do `for` ou `parallel for`, ou pela última seção da diretiva `sections` ou `parallel sections`, têm valores indeterminados após a construção. Subobjetos não atribuídos também têm um valor indeterminado após a construção.
 
-As restrições para o `lastprivate` cláusula são da seguinte maneira:
+As restrições para a cláusula `lastprivate` são as seguintes:
 
 - Todas as restrições para `private` se aplicam.
 
-- Uma variável com um tipo de classe que é especificado como `lastprivate` deve ter um operador de atribuição de cópia acessível inequívoca.
+- Uma variável com um tipo de classe que é especificada como `lastprivate` deve ter um operador de atribuição de cópia acessível e não ambíguo.
 
-- Variáveis que são particulares dentro de uma região paralela ou que aparecem na `reduction` cláusula de uma `parallel` diretiva não pode ser especificada em uma `lastprivate` cláusula em uma diretiva de compartilhamento de trabalho que está associado a construção parallel.
+- Variáveis que são privadas em uma região paralela ou que aparecem na cláusula `reduction` de uma diretiva de `parallel` não podem ser especificadas em uma cláusula `lastprivate` em uma diretiva de compartilhamento de trabalho que se associa à construção paralela.
 
 #### <a name="2724-shared"></a>2.7.2.4 shared
 
-Essa cláusula compartilha as variáveis que aparecem na *lista variável* entre todos os threads em uma equipe. Todos os threads em uma equipe de acessem a área de armazenamento para `shared` variáveis.
+Essa cláusula compartilha variáveis que aparecem na *lista de variáveis* entre todos os threads em uma equipe. Todos os threads em uma equipe acessam a mesma área de armazenamento para variáveis de `shared`.
 
-A sintaxe do `shared` cláusula é da seguinte maneira:
+A sintaxe da cláusula `shared` é a seguinte:
 
 ```cpp
 shared(variable-list)
@@ -676,31 +676,31 @@ shared(variable-list)
 
 #### <a name="2725-default"></a>2.7.2.5 default
 
-O `default` cláusula permite que o usuário afetar os atributos de compartilhamento de dados de variáveis. A sintaxe do `default` cláusula é da seguinte maneira:
+A cláusula `default` permite que o usuário afete os atributos de compartilhamento de dados de variáveis. A sintaxe da cláusula `default` é a seguinte:
 
 ```cpp
 default(shared | none)
 ```
 
-Especificando `default(shared)` é equivalente a listando explicitamente cada variável visível no momento em um `shared` cláusula, a menos que ele seja `threadprivate` ou `const`-qualificado. Na ausência de um explícito `default` cláusula, o comportamento padrão é o mesmo que se `default(shared)` foram especificadas.
+Especificar `default(shared)` é equivalente a listar explicitamente cada variável visível no momento em uma cláusula `shared`, a menos que seja `threadprivate` ou `const`qualificado. Na ausência de uma cláusula de `default` explícita, o comportamento padrão é o mesmo que se `default(shared)` foi especificado.
 
-Especificando `default(none)` requer que pelo menos um dos seguintes deve ser verdadeiro para todas as referências a uma variável na extensão de léxico da construção paralela:
+A especificação de `default(none)` exige que pelo menos um dos seguintes deve ser verdadeiro para cada referência a uma variável na extensão lexical da construção paralela:
 
-- A variável é listada explicitamente em uma cláusula de atributo de compartilhamento de dados de uma construção que contém a referência.
+- A variável é explicitamente listada em uma cláusula de atributo de compartilhamento de dados de um constructo que contém a referência.
 
-- A variável é declarada dentro a construção parallel.
+- A variável é declarada dentro da construção paralela.
 
 - A variável é `threadprivate`.
 
-- A variável tem um `const`-qualificado do tipo.
+- A variável tem um tipo qualificado `const`.
 
-- A variável é a variável de controle de loop para um `for` loop que segue imediatamente uma `for` ou `parallel for` diretiva e a referência de variável é exibida dentro do loop.
+- A variável é a variável de controle de loop para um loop de `for` que segue imediatamente uma diretiva `for` ou `parallel for` e a referência de variável aparece dentro do loop.
 
-Especificando uma variável em uma `firstprivate`, `lastprivate`, ou `reduction` cláusula de uma diretiva incluída faz com que uma referência implícita a variável no contexto do delimitador. Essas referências implícitas também estão sujeitos aos requisitos listados acima.
+A especificação de uma variável em uma cláusula `firstprivate`, `lastprivate`ou `reduction` de uma diretiva inclusa causa uma referência implícita à variável no contexto delimitador. Essas referências implícitas também estão sujeitas aos requisitos listados acima.
 
-Um único `default` cláusula pode ser especificada em um `parallel` diretiva.
+Apenas uma única cláusula `default` pode ser especificada em uma diretiva `parallel`.
 
-Padrão de uma variável atributo de compartilhamento de dados pode ser substituído usando o `private`, `firstprivate`, `lastprivate`, `reduction`, e `shared` cláusulas, como demonstrado pelo exemplo a seguir:
+O atributo de compartilhamento de dados padrão de uma variável pode ser substituído usando as cláusulas `private`, `firstprivate`, `lastprivate`, `reduction`e `shared`, conforme demonstrado pelo exemplo a seguir:
 
 ```cpp
 #pragma  omp  parallel  for  default(shared)  firstprivate(i)\
@@ -709,38 +709,38 @@ Padrão de uma variável atributo de compartilhamento de dados pode ser substitu
 
 #### <a name="2726-reduction"></a>2.7.2.6 reduction
 
-Essa cláusula executa uma redução nas variáveis escalares que aparecem no *variável-list*, com o operador *op*. A sintaxe do `reduction` cláusula é da seguinte maneira:
+Essa cláusula executa uma redução nas variáveis escalares que aparecem na *lista de variáveis*, com o operador *op*. A sintaxe da cláusula `reduction` é a seguinte:
 
-`reduction(` *op* `:` *variable-list* `)`
+`reduction(` *op* `:` *lista de variáveis* `)`
 
-Uma redução geralmente é especificada para uma instrução com uma das seguintes formas:
+Uma redução normalmente é especificada para uma instrução com uma das seguintes formas:
 
-- *x* `=` *x* *op* *expr*
-- *x* *binop* `=` *expr*
-- *x* `=` *expr* *op* *x* (com exceção de subtração)
+- *expr* *x* `=` *x* *op*
+- `=` *expr* *x* *binop*
+- *x* `=` *expr* *op* *x* (exceto para subtração)
 - *x* `++`
 - `++` *x*
 - *x* `--`
 - `--` *x*
 
-em que:
+onde:
 
 *x*<br/>
 Uma das variáveis de redução especificadas na lista.
 
-*variable-list*<br/>
+*lista de variáveis*<br/>
 Uma lista separada por vírgulas de variáveis de redução escalar.
 
 *expr*<br/>
-Uma expressão com um tipo escalar que não faz referência a *x*.
+Uma expressão com tipo escalar que não faz referência a *x*.
 
-*op*<br/>
-Não é um operador sobrecarregado, mas um dos `+`, `*`, `-`, `&`, `^`, `|`, `&&`, ou `||`.
+*parar*<br/>
+Não é um operador sobrecarregado, mas um dos `+`, `*`, `-`, `&`, `^`, `|`, `&&`ou `||`.
 
 *binop*<br/>
-Não é um operador sobrecarregado, mas um dos `+`, `*`, `-`, `&`, `^`, ou `|`.
+Não é um operador sobrecarregado, mas um dos `+`, `*`, `-`, `&`, `^`ou `|`.
 
-A seguir está um exemplo de como o `reduction` cláusula:
+Veja a seguir um exemplo da cláusula `reduction`:
 
 ```cpp
 #pragma omp parallel for reduction(+: a, y) reduction(||: am)
@@ -751,19 +751,19 @@ for (i=0; i<n; i++) {
 }
 ```
 
-Conforme mostrado no exemplo, um operador pode estar oculto dentro de uma chamada de função. O usuário deve ter cuidado que o operador especificado no `reduction` cláusula coincide com a operação de redução.
+Conforme mostrado no exemplo, um operador pode estar oculto dentro de uma chamada de função. O usuário deve ter cuidado para que o operador especificado na cláusula `reduction` corresponda à operação de redução.
 
-Embora o operando direito do `||` operador não tem efeitos colaterais neste exemplo, eles são permitidos, mas devem ser usados com cuidado. Nesse contexto, um efeito colateral que tem garantia de não ocorrem durante a execução sequencial do loop pode ocorrer durante a execução paralela. Essa diferença pode ocorrer porque a ordem de execução das iterações é indeterminada.
+Embora o operando direito do operador de `||` não tenha efeitos colaterais neste exemplo, eles são permitidos, mas devem ser usados com cuidado. Nesse contexto, um efeito colateral que não ocorrerá durante a execução sequencial do loop pode ocorrer durante a execução paralela. Essa diferença pode ocorrer porque a ordem de execução das iterações é indeterminada.
 
-O operador é usado para determinar o valor inicial de quaisquer variáveis privadas usadas pelo compilador para a redução de e para determinar o operador de finalização. Especificar explicitamente o operador permite que a instrução de redução para estar fora a extensão de léxica da construção. Qualquer número de `reduction` cláusulas podem ser especificadas na diretiva, mas uma variável pode aparecer no máximo um `reduction` cláusula para essa diretiva.
+O operador é usado para determinar o valor inicial de quaisquer variáveis privadas usadas pelo compilador para a redução e para determinar o operador de finalização. Especificar o operador explicitamente permite que a instrução de redução esteja fora da extensão lexical da construção. Qualquer número de cláusulas `reduction` pode ser especificado na diretiva, mas uma variável pode aparecer em no máximo uma cláusula `reduction` para essa diretiva.
 
-Uma cópia privada de cada variável *variável-list* é criado, um para cada thread, como se o `private` cláusula tivesse sido usada. A cópia particular é inicializada de acordo com o operador (consulte a tabela a seguir).
+Uma cópia privada de cada variável na *lista de variáveis* é criada, uma para cada thread, como se a cláusula de `private` tivesse sido usada. A cópia privada é inicializada de acordo com o operador (consulte a tabela a seguir).
 
-No final da região para o qual o `reduction` cláusula foi especificada, o objeto original é atualizado para refletir o resultado da combinação de seu valor original com o valor final de cada uma das cópias privadas usando o operador especificado. Os operadores de redução são associativos tudo (exceto para subtração) e o compilador pode livremente reassociar o cálculo do valor final. (Os resultados parciais de uma redução de subtração são adicionados para formar o valor final).
+No final da região para a qual a cláusula de `reduction` foi especificada, o objeto original é atualizado para refletir o resultado da combinação de seu valor original com o valor final de cada uma das cópias privadas usando o operador especificado. Os operadores de redução são todos associativos (exceto para subtração), e o compilador pode reassociar livremente a computação do valor final. (Os resultados parciais de uma redução de subtração são adicionados para formar o valor final.)
 
-O valor do objeto original se torna indeterminado quando o primeiro thread atinge a cláusula recipiente e permanece isso até que o cálculo de redução for concluído.  Normalmente, o cálculo será concluído no final da construção; No entanto, se o `reduction` cláusula é usada em uma construção que `nowait` é também é aplicado, o valor do objeto original permanece indeterminado até que uma sincronização de barreira foi executada para garantir que todos os threads concluiu a `reduction`cláusula.
+O valor do objeto original torna-se indeterminado quando o primeiro thread atinge a cláusula de contenção e permanece assim até que a computação de redução seja concluída.  Normalmente, a computação será concluída no final da construção; no entanto, se a cláusula `reduction` for usada em um constructo ao qual `nowait` também é aplicada, o valor do objeto original permanecerá indeterminado até que uma sincronização de barreira tenha sido executada para garantir que todos os threads concluíram a cláusula `reduction`.
 
-A tabela a seguir lista os operadores que são válidos e seus valores de inicialização canônico. O valor de inicialização real será consistente com o tipo de dados da variável de redução.
+A tabela a seguir lista os operadores que são válidos e seus valores de inicialização canônicas. O valor de inicialização real será consistente com o tipo de dados da variável de redução.
 
 |Operador|Inicialização|
 |--------------|--------------------|
@@ -776,13 +776,13 @@ A tabela a seguir lista os operadores que são válidos e seus valores de inicia
 |`&&`|1|
 |`||`|0|
 
-As restrições para o `reduction` cláusula são da seguinte maneira:
+As restrições para a cláusula `reduction` são as seguintes:
 
-- O tipo das variáveis de `reduction` cláusula deve ser válida para o operador de redução, exceto que os tipos de ponteiro e tipos de referência nunca são permitidos.
+- O tipo das variáveis na cláusula `reduction` deve ser válido para o operador de redução, exceto que tipos de ponteiro e tipos de referência nunca são permitidos.
 
-- Uma variável que é especificada na `reduction` cláusula não deve ser `const`-qualificado.
+- Uma variável especificada na cláusula `reduction` não deve ser qualificada `const`.
 
-- Variáveis que são particulares dentro de uma região paralela ou que aparecem na `reduction` cláusula de uma `parallel` diretiva não pode ser especificada em uma `reduction` cláusula em uma diretiva de compartilhamento de trabalho que está associado a construção parallel.
+- Variáveis que são privadas em uma região paralela ou que aparecem na cláusula `reduction` de uma diretiva de `parallel` não podem ser especificadas em uma cláusula `reduction` em uma diretiva de compartilhamento de trabalho que se associa à construção paralela.
 
    ```cpp
    #pragma omp parallel private(y)
@@ -800,7 +800,7 @@ As restrições para o `reduction` cláusula são da seguinte maneira:
 
 #### <a name="2727-copyin"></a>2.7.2.7 copyin
 
-O `copyin` cláusula fornece um mecanismo para atribuir o mesmo valor para `threadprivate` variáveis para cada thread em que a equipe a região paralela em execução. Para cada variável especificada em um `copyin` cláusula, o valor da variável no thread principal da equipe é copiada, como se por atribuição às cópias privadas de thread no início da região paralela. A sintaxe do `copyin` cláusula é da seguinte maneira:
+A cláusula `copyin` fornece um mecanismo para atribuir o mesmo valor a `threadprivate` variáveis para cada thread na equipe que executa a região paralela. Para cada variável especificada em uma cláusula `copyin`, o valor da variável no thread mestre da equipe é copiado, como se fosse por atribuição, para as cópias de thread privado no início da região paralela. A sintaxe da cláusula `copyin` é a seguinte:
 
 ```cpp
 
@@ -809,17 +809,17 @@ variable-list
 )
 ```
 
-As restrições para o `copyin` cláusula são da seguinte maneira:
+As restrições para a cláusula `copyin` são as seguintes:
 
-- Uma variável que é especificada no `copyin` cláusula deve ter um operador de atribuição de cópia acessível inequívoca.
+- Uma variável especificada na cláusula `copyin` deve ter um operador de atribuição de cópia acessível e não ambíguo.
 
-- Uma variável que é especificada na `copyin` cláusula deve ser um `threadprivate` variável.
+- Uma variável especificada na cláusula `copyin` deve ser uma variável `threadprivate`.
 
 #### <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
 
-O `copyprivate` cláusula fornece um mecanismo para usar uma variável particular para transmitir um valor de um membro de uma equipe para os outros membros. É uma alternativa ao uso de uma variável compartilhada para o valor ao fornecimento de uma variável compartilhada como seria difícil (por exemplo, em uma necessidade de uma variável diferente em cada nível de recursão). O `copyprivate` cláusula só pode aparecer no `single` diretiva.
+A cláusula `copyprivate` fornece um mecanismo para usar uma variável privada para transmitir um valor de um membro de uma equipe para os outros membros. É uma alternativa ao uso de uma variável compartilhada para o valor ao fornecer uma variável compartilhada como essa seria difícil (por exemplo, em uma recursão que requer uma variável diferente em cada nível). A cláusula `copyprivate` só pode aparecer na diretiva `single`.
 
-A sintaxe do `copyprivate` cláusula é da seguinte maneira:
+A sintaxe da cláusula `copyprivate` é a seguinte:
 
 ```cpp
 
@@ -828,46 +828,46 @@ variable-list
 )
 ```
 
-O efeito do `copyprivate` cláusula nas variáveis em sua lista de variável ocorre após a execução do bloco estruturado associado com o `single` construir, e antes de qualquer um dos threads na equipe tenha deixado a barreira no final da construção. Em seguida, em todos os outros threads da equipe, para cada variável na *lista variável*, essa variável se torna definida (como se por atribuição) com o valor da variável no thread que executou a construção do estruturado bloco.
+O efeito da cláusula `copyprivate` nas variáveis em sua lista de variáveis ocorre após a execução do bloco estruturado associado à construção de `single` e antes que qualquer um dos threads da equipe tenha deixado a barreira no final da construção. Em seguida, em todos os outros threads da equipe, para cada variável na *lista de variáveis*, essa variável torna-se definida (como se por atribuição) com o valor da variável correspondente no thread que executou o bloco estruturado da construção.
 
-Restrições para o `copyprivate` cláusula são da seguinte maneira:
+As restrições à cláusula `copyprivate` são as seguintes:
 
-- Uma variável que é especificada na `copyprivate` cláusula não pode aparecer em uma `private` ou `firstprivate` cláusula para o mesmo `single` diretiva.
+- Uma variável especificada na cláusula `copyprivate` não deve aparecer em uma cláusula `private` ou `firstprivate` para a mesma diretiva `single`.
 
-- Se um `single` diretiva com um `copyprivate` cláusula for encontrada na extensão dinâmica de uma região paralela, todas as variáveis especificadas no `copyprivate` cláusula deve ser private em contexto delimitador.
+- Se uma diretiva de `single` com uma cláusula `copyprivate` for encontrada na extensão dinâmica de uma região paralela, todas as variáveis especificadas na cláusula `copyprivate` deverão ser privadas no contexto delimitador.
 
-- Uma variável que é especificada no `copyprivate` cláusula deve ter um operador de atribuição de cópia não ambígua acessível.
+- Uma variável especificada na cláusula `copyprivate` deve ter um operador de atribuição de cópia não ambíguo acessível.
 
-## <a name="28-directive-binding"></a>2.8 associação de diretiva
+## <a name="28-directive-binding"></a>Associação de diretiva 2,8
 
-Associação dinâmica de diretivas deve cumprir as regras a seguir:
+A vinculação dinâmica de diretivas deve aderir às seguintes regras:
 
-- O `for`, `sections`, `single`, `master`, e `barrier` diretivas associar dinamicamente delimitador `parallel`, se houver, independentemente do valor de qualquer `if` cláusula que pode estar presente em que diretiva. Se nenhuma região paralela está sendo executada no momento, as diretivas são executadas por uma equipe composta de apenas o thread mestre.
+- As diretivas `for`, `sections`, `single`, `master`e `barrier` se associam ao `parallel`de fechamento dinâmico, se houver, independentemente do valor de qualquer cláusula `if` que possa estar presente nessa diretiva. Se nenhuma região paralela estiver sendo executada no momento, as diretivas serão executadas por uma equipe composta apenas pelo thread mestre.
 
-- O `ordered` diretiva vincula a dinamicamente delimitador `for`.
+- A diretiva de `ordered` vincula-se ao `for`de fechamento dinâmico.
 
-- O `atomic` diretiva garante o acesso exclusivo com relação ao `atomic` diretivas em todos os threads, não apenas a equipe atual.
+- A diretiva `atomic` impõe acesso exclusivo em relação às diretivas `atomic` em todos os threads, não apenas à equipe atual.
 
-- O `critical` diretiva garante o acesso exclusivo com relação ao `critical` diretivas em todos os threads, não apenas a equipe atual.
+- A diretiva `critical` impõe acesso exclusivo em relação às diretivas `critical` em todos os threads, não apenas à equipe atual.
 
-- Uma diretiva nunca pode vincular dinamicamente para qualquer uma das diretivas fora o mais próximo circunscrição `parallel`.
+- Uma diretiva nunca pode ser vinculada a qualquer diretiva fora do `parallel`de fechamento mais próximo dinamicamente.
 
-## <a name="29-directive-nesting"></a>2.9 aninhamento de diretiva
+## <a name="29-directive-nesting"></a>aninhamento de diretiva 2,9
 
-Aninhamento dinâmico das diretivas deve cumprir as regras a seguir:
+O aninhamento dinâmico de diretivas deve aderir às seguintes regras:
 
-- Um `parallel` diretiva dinamicamente dentro de outro `parallel` logicamente estabelece uma nova equipe é composta de apenas o thread atual, exceto se aninhados paralelismo está habilitada.
+- Uma diretiva `parallel` dinamicamente dentro de outra `parallel` estabelece logicamente uma nova equipe, que é composta apenas pelo thread atual, a menos que o paralelismo aninhado esteja habilitado.
 
-- `for`, `sections`, e `single` diretivas que se associam à mesma `parallel` não podem ser aninhados dentro uns aos outros.
+- as diretivas `for`, `sections`e `single` que se associam ao mesmo `parallel` não têm permissão para serem aninhadas umas nas outras.
 
-- `critical` diretivas com o mesmo nome não podem ser aninhados dentro uns aos outros. Observe que essa restrição não é suficiente para evitar o deadlock.
+- `critical` diretivas com o mesmo nome não podem ser aninhadas umas nas outras. Observe que essa restrição não é suficiente para impedir o deadlock.
 
-- `for`, `sections`, e `single` diretivas não são permitidas na extensão de dinâmico `critical`, `ordered`, e `master` regiões se as diretivas que se associar à mesma `parallel` como as regiões.
+- as diretivas `for`, `sections`e `single` não são permitidas na extensão dinâmica das regiões `critical`, `ordered`e `master` se as diretivas se associarem ao mesmo `parallel` que as regiões.
 
-- `barrier` diretivas não são permitidas na extensão do dynamic `for`, `ordered`, `sections`, `single`, `master`, e `critical` regiões se as diretivas que se associar à mesma `parallel` como as regiões.
+- `barrier` diretivas não são permitidas na extensão dinâmica das regiões `for`, `ordered`, `sections`, `single`, `master`e `critical` se as diretivas se associarem ao mesmo `parallel` que as regiões.
 
-- `master` diretivas não são permitidas na extensão de dinâmico `for`, `sections`, e `single` diretivas se o `master` diretivas associar ao mesmo `parallel` como as diretivas de compartilhamento de trabalho.
+- `master` diretivas não são permitidas na extensão dinâmica das diretivas `for`, `sections`e `single` se as diretivas de `master` se associarem à mesma `parallel` que as diretivas de compartilhamento de trabalho.
 
-- `ordered` diretivas não são permitidas na extensão do dynamic `critical` regiões se as diretivas que se associar à mesma `parallel` como as regiões.
+- `ordered` diretivas não são permitidas na extensão dinâmica de regiões de `critical` se as diretivas se associarem ao mesmo `parallel` que as regiões.
 
-- Qualquer uma das diretivas que é permitida quando executado dinamicamente dentro de uma região parallel também é permitida quando executado fora de uma região paralela. Quando executado dinamicamente fora de uma região paralela especificada pelo usuário, a diretiva é executada por uma equipe composta de apenas o thread mestre.
+- Qualquer diretiva permitida quando executada dinamicamente dentro de uma região paralela também é permitida quando executada fora de uma região paralela. Quando executado dinamicamente fora de uma região paralela especificada pelo usuário, a diretiva é executada por uma equipe composta apenas pelo thread mestre.

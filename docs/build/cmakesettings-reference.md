@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
-ms.sourcegitcommit: 9a63e9b36d5e7fb13eab15c2c35bedad4fb03ade
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77600038"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865568"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Referência de esquema de CMakeSettings.json
 
@@ -281,7 +281,7 @@ usage: ninja [options] [targets...]
 
 |Opção|DESCRIÇÃO|
 |--------------|------------|
-| --version  | imprime a versão do Ninja ("1.7.1")|
+| --versão  | imprime a versão do Ninja ("1.7.1")|
 |   -C DIR   | altera para DIR antes de qualquer outra ação|
 |   -f FILE  | especifica o arquivo de entrada de build (padrão= build.ninja)|
 |   -j N     | executa N trabalhos em paralelo (padrão= 14, derivado das CPUs disponíveis)|

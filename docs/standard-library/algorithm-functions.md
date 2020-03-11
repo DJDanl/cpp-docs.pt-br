@@ -201,11 +201,11 @@ helpviewer_keywords:
 - std::partition_copy [C++]
 - std::swap [C++]
 ms.openlocfilehash: 199634997397cca0008c60843b5d977633277331
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821877"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854092"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funções &lt;algorithm&gt;
 
@@ -239,7 +239,7 @@ ForwardIterator adjacent_find(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -346,7 +346,7 @@ bool all_of(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -422,7 +422,7 @@ bool any_of(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -499,7 +499,7 @@ bool binary_search(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador de avanço que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
@@ -638,7 +638,7 @@ constexpr const Type& clamp(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *value*\
 O valor a ser comparado com *maiúsculas* e *minúsculas*.
@@ -679,7 +679,7 @@ ForwardIterator2 copy(
     ForwardIterator2 result);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -775,7 +775,7 @@ BidirectionalIterator2 copy_backward(
     BidirectionalIterator2 destEnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador bidirecional que trata da posição do primeiro elemento no intervalo de origem.
@@ -881,7 +881,7 @@ ForwardIterator2 copy_if(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -984,7 +984,7 @@ ForwardIterator2 copy_n(
     ForwardIterator2 dest);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -1055,7 +1055,7 @@ count(
     const Type& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -1136,7 +1136,7 @@ count_if(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -1271,7 +1271,7 @@ bool equal(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -1336,7 +1336,7 @@ int main()
 }
 ```
 
-## <a name="equal_range"></a> equal_range
+## <a name="equal_range"></a>equal_range
 
 Dado um intervalo ordenado, localiza o subintervalo no qual todos os elementos são equivalentes a um determinado valor.
 
@@ -1355,7 +1355,7 @@ pair<ForwardIterator, ForwardIterator> equal_range(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador de avanço que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
@@ -1521,7 +1521,7 @@ void fill(
     const Type& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -1599,7 +1599,7 @@ ForwardIterator fill_n(
     const Type& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -1688,7 +1688,7 @@ ForwardIterator find(
     const Type& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -1753,7 +1753,7 @@ find_end(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *first1*
 Um iterador de avanço que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
@@ -1917,7 +1917,7 @@ find_first_of(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *first1*
 Um iterador de avanço que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
@@ -2061,7 +2061,7 @@ ForwardIterator find_if(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador de entrada que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
@@ -2183,7 +2183,7 @@ ForwardIterator find_if_not(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador de entrada que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
@@ -2223,7 +2223,7 @@ void for_each(
     Function func);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador de entrada que trata da posição do primeiro elemento no intervalo no qual a operação ocorrerá.
@@ -2394,7 +2394,7 @@ void generate(
     Generator gen);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador de avanço que trata da posição do primeiro elemento no intervalo ao qual os valores devem ser atribuídos.
@@ -2475,7 +2475,7 @@ ForwardIterator generate_n(
     Generator gen);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -2580,7 +2580,7 @@ bool includes(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -2801,7 +2801,7 @@ void inplace_merge(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -2967,7 +2967,7 @@ bool is_heap(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -3023,7 +3023,7 @@ RandomAccessIterator is_heap_until(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -3066,7 +3066,7 @@ bool is_partitioned(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -3123,7 +3123,7 @@ bool is_permutation(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *first1*
 Um iterador de avanço que se refere ao primeiro elemento do intervalo.
@@ -3238,7 +3238,7 @@ bool is_sorted(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -3290,7 +3290,7 @@ ForwardIterator is_sorted_until(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -3323,7 +3323,7 @@ template<class ForwardIterator1, class ForwardIterator2>
 void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um dos iteradores de avanço cujo valor deverá ser trocado.
@@ -3508,7 +3508,7 @@ bool lexicographical_compare(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -3656,7 +3656,7 @@ ForwardIterator lower_bound(
     BinaryPredicate pred );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador de avanço que aborda a posição do primeiro elemento do intervalo a ser pesquisado.
@@ -3793,7 +3793,7 @@ void make_heap(
     BinaryPredicate pred );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador de acesso aleatório que trata da posição do primeiro elemento no intervalo a ser convertido em um heap.
@@ -3881,7 +3881,7 @@ constexpr Type& max(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 O primeiro dos dois objetos que estão sendo comparados.
@@ -4101,7 +4101,7 @@ ForwardIterator max_element(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -4267,7 +4267,7 @@ ForwardIterator merge(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -4446,7 +4446,7 @@ constexpr Type min(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 O primeiro dos dois objetos que estão sendo comparados.
@@ -4466,7 +4466,7 @@ O menor entre os dois objetos, a menos que nenhum seja menor e, nesse caso, reto
 
 ### <a name="remarks"></a>Comentários
 
-O algoritmo `min` não costuma ter objetos passados como parâmetros. A maioria dos algoritmos da Biblioteca Padrão do C++ opera em um intervalo de elementos cujas posições são especificadas por iteradores passados como parâmetros. Se você precisar de uma função que use um intervalo de elementos, use [min_element](../standard-library/algorithm-functions.md#min_element). o [constexpr](../cpp/constexpr-cpp.md) foi habilitado nas sobrecargas `initializer_list` no Visual Studio 2017.
+O algoritmo `min` não costuma ter objetos passados como parâmetros. A maioria dos algoritmos da Biblioteca Padrão do C++ opera em um intervalo de elementos cujas posições são especificadas por iteradores passados como parâmetros. Se você precisar de uma função que use um intervalo de elementos, use [min_element](../standard-library/algorithm-functions.md#min_element). o [constexpr](../cpp/constexpr-cpp.md) foi habilitado nas sobrecargas de `initializer_list` no Visual Studio 2017.
 
 ### <a name="example"></a>Exemplo
 
@@ -4665,7 +4665,7 @@ ForwardIterator min_element(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -4829,7 +4829,7 @@ pair<ForwardIterator, ForwardIterator> minmax_element(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -4845,7 +4845,7 @@ Um objeto de função de predicado definido pelo usuário que define o sentido n
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna
+Retornos
 
 `pair<ForwardIterator, ForwardIterator>( min_element(first, last), max_element(first, last))`.
 
@@ -4885,7 +4885,7 @@ constexpr pair<Type&, Type&> minmax(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 O primeiro dos dois objetos que estão sendo comparados.
@@ -4901,7 +4901,7 @@ O `initializer_list` que contém os membros a serem comparados.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função de modelo retorna `pair<const Type&, const Type&>( right, left )` se *Right* for menor que *Left*. Caso contrário, retornará `pair<const Type&, const Type&>( left, right )`.
+A primeira função de modelo retorna `pair<const Type&, const Type&>( right, left )` se *Right* for menor que *Left*. Caso contrário, ele retornará `pair<const Type&, const Type&>( left, right )`.
 
 A segunda função de membro retorna um par em que o primeiro elemento é menor e o segundo é o maior quando comparado pelo predicado *Pred*.
 
@@ -4985,7 +4985,7 @@ mismatch(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -5133,7 +5133,7 @@ ForwardIterator2 move(
     ForwardIterator2 result);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -5163,7 +5163,7 @@ BidirectionalIterator2 move_backward(
     BidirectionalIterator2 destEnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador que indica o início de um intervalo do qual elementos serão movidos.
@@ -5197,7 +5197,7 @@ bool next_permutation(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador bidirecional que aponta para a posição do primeiro elemento no intervalo a ser permutado.
@@ -5393,7 +5393,7 @@ void nth_element(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -5505,7 +5505,7 @@ bool none_of(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -5561,7 +5561,7 @@ void partial_sort(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -5696,7 +5696,7 @@ RandomAccessIterator partial_sort_copy(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -5821,7 +5821,7 @@ ForwardIterator partition(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -5911,7 +5911,7 @@ pair<ForwardIterator1, ForwardIterator2> partition_copy(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -5947,7 +5947,7 @@ ForwardIterator partition_point(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um `ForwardIterator` que indica o início de um intervalo no qual uma condição será verificada.
@@ -5983,7 +5983,7 @@ void pop_heap(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador de acesso aleatório que trata da posição do primeiro elemento no heap.
@@ -6092,7 +6092,7 @@ bool prev_permutation(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador bidirecional que aponta para a posição do primeiro elemento no intervalo a ser permutado.
@@ -6267,7 +6267,7 @@ void push_heap(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador de acesso aleatório que trata da posição do primeiro elemento no heap.
@@ -6386,7 +6386,7 @@ ForwardIterator remove(
     const Type& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -6484,7 +6484,7 @@ ForwardIterator2 remove_copy(
     const Type& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -6582,7 +6582,7 @@ ForwardIterator2 remove_copy_if(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -6687,7 +6687,7 @@ ForwardIterator remove_if(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -6790,7 +6790,7 @@ void replace(
     const Type& newVal);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -6879,7 +6879,7 @@ ForwardIterator2 replace_copy(
     const Type& newVal);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -6994,7 +6994,7 @@ ForwardIterator2 replace_copy_if(
     const Type& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -7115,7 +7115,7 @@ void replace_if(
     const Type& value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -7207,7 +7207,7 @@ void reverse(
     BidirectionalIterator last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -7284,7 +7284,7 @@ ForwardIterator reverse_copy(
     ForwardIterator result);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -7366,7 +7366,7 @@ ForwardIterator rotate(
     ForwardIterator last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -7482,7 +7482,7 @@ ForwardIterator2 rotate_copy(
     ForwardIterator2 result);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -7625,7 +7625,7 @@ ForwardIterator search(
     const Searcher& searcher);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -7797,7 +7797,7 @@ ForwardIterator search_n(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -7954,7 +7954,7 @@ ForwardIterator set_difference(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -8156,7 +8156,7 @@ ForwardIterator set_intersection(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -8354,7 +8354,7 @@ ForwardIterator set_symmetric_difference(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -8556,7 +8556,7 @@ ForwardIterator set_union(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -8728,7 +8728,7 @@ void shuffle(
     UniformRandomNumberGenerator&& gen);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador para o primeiro elemento no intervalo a ser embaralhado, incluindo-o. Deve atender os requisitos de `RandomAccessIterator` e `ValueSwappable`.
@@ -8773,7 +8773,7 @@ void sort(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -8880,7 +8880,7 @@ void sort_heap(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador de acesso aleatório que trata da posição do primeiro elemento no heap de destino.
@@ -8982,7 +8982,7 @@ BidirectionalIterator stable_partition(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -9083,7 +9083,7 @@ void stable_sort(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -9187,7 +9187,7 @@ void swap(
     Type (& right)[N]);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Para a primeira substituição, o primeiro objeto a ter seu conteúdo trocado. Para a segunda substituição, a primeira matriz de objetos a ter seu conteúdo trocado.
@@ -9274,7 +9274,7 @@ ForwardIterator2 swap_ranges(
     ForwardIterator2 first2);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -9397,7 +9397,7 @@ ForwardIterator transform(
     BinaryOperation binary_op);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -9545,7 +9545,7 @@ ForwardIterator unique(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -9698,7 +9698,7 @@ ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 A política de execução a ser usada.
@@ -9820,7 +9820,7 @@ ForwardIterator upper_bound(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 A posição do primeiro elemento no intervalo a ser pesquisado.

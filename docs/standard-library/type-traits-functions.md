@@ -25,13 +25,13 @@ helpviewer_keywords:
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
 ms.openlocfilehash: 48ca51d56994f3d487af6744801acedf5c6cc79c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447037"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874188"
 ---
-# <a name="lttypetraitsgt-functions"></a>Funções &lt;type_traits&gt;
+# <a name="lttype_traitsgt-functions"></a>Funções &lt;type_traits&gt;
 
 ||||
 |-|-|-|
@@ -50,7 +50,7 @@ template <class To, class From>
 struct is_assignable;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Para*\
 O tipo do objeto que recebe a atribuição.
@@ -71,7 +71,7 @@ template <class Ty>
 struct is_copy_assignable;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ty*\
 O tipo a ser consultado.
@@ -89,7 +89,7 @@ template <class Ty>
 struct is_copy_constructible;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ty*\
 O tipo a ser consultado.
@@ -141,7 +141,7 @@ template <class Ty>
 struct is_default_constructible;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*\
 O tipo a ser consultado.
@@ -193,7 +193,7 @@ template <class T>
 struct is_move_assignable;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*\
 O tipo a ser consultado.
@@ -211,7 +211,7 @@ template <class T>
 struct is_move_constructible;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*\
 O tipo a ser avaliado
@@ -229,7 +229,7 @@ template <class Ty>
 struct is_nothrow_move_assignable;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ty*\
 O tipo a ser consultado.
@@ -271,7 +271,7 @@ template <class Ty>
 struct is_trivially_copy_assignable;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*\
 O tipo a ser consultado.
@@ -280,7 +280,7 @@ O tipo a ser consultado.
 
 Uma instância do predicado de tipo fica true se o tipo *T* é uma classe que tem um operador de atribuição de cópia trivial, caso contrário, ela mantém false.
 
-Um construtor de atribuição para uma classe *t* é trivial se for fornecido implicitamente, a classe *t* não tem nenhuma função virtual, a classe *t* não tem bases virtuais, as classes de todos os membros de dados não estáticos do tipo de classe têm atribuição trivial os operadores e as classes de todos os membros de dados não estáticos do tipo matriz de classe têm operadores de atribuição triviais.
+Um construtor de atribuição para uma classe *t* é trivial se for fornecido implicitamente, a classe *t* não tem nenhuma função virtual, a classe *t* não tem bases virtuais, as classes de todos os membros de dados não estáticos do tipo de classe têm operadores de atribuição triviais, e as classes de todos os membros de dados não estáticos do tipo matriz de classe têm operadores de atribuição trivial.
 
 ## <a name="is_trivially_move_assignable"></a> is_trivially_move_assignable
 
@@ -291,7 +291,7 @@ template <class Ty>
 struct is_trivially_move_assignable;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ty*\
 O tipo a ser consultado.
@@ -321,7 +321,7 @@ template <class Ty>
 struct is_trivially_move_constructible;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ty*\
 O tipo a ser consultado.
@@ -348,6 +348,6 @@ as classes de todos os membros de dados não estáticos do tipo de classe tivere
 
 as classes de todos os membros de dados não estáticos da matriz de tipo de classe tiverem construtores de movimentação trivial
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [<type_traits>](../standard-library/type-traits.md)

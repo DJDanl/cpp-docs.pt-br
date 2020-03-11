@@ -22,11 +22,11 @@ f1_keywords:
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 ms.openlocfilehash: 438d211ac2f15bf781b704a7d0d7484d1542f131
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127040"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866305"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funções de namespace Concurrency::direct3d (AMP)
 
@@ -42,7 +42,7 @@ ms.locfileid: "77127040"
 |[remover](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|
 |[etapa](#step)|[scanner](#umax)|[umin](#umin)|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** namespace amp. h **:** simultaneidade
 
@@ -54,7 +54,7 @@ Retorna o valor absoluto do argumento
 inline int abs(int _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor inteiro
@@ -79,7 +79,7 @@ inline int clamp(
     int _Max) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 O valor a ser clampeddo
@@ -102,7 +102,7 @@ Conta o número de conjuntos de bits em _X
 inline unsigned int countbits(unsigned int _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor inteiro sem sinal
@@ -128,7 +128,7 @@ accelerator_view create_accelerator_view(
     queuing_mode _Qmode = queuing_mode_automatic);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Accelerator*<br/>
 O acelerador no qual o novo accelerator_view será criado.
@@ -162,7 +162,7 @@ Adquira um bloqueio em um accelerator_view para a finalidade de executar operaç
 void __cdecl d3d_access_lock(accelerator_view& _Av);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Av*<br/>
 O accelerator_view a ser bloqueado.
@@ -175,7 +175,7 @@ Tentativa de adquirir o bloqueio de acesso do D3D em um accelerator_view sem blo
 bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Av*<br/>
 O accelerator_view a ser bloqueado.
@@ -192,7 +192,7 @@ Libere o bloqueio de acesso do D3D no accelerator_view fornecido. Se o thread de
 void __cdecl d3d_access_unlock(accelerator_view& _Av);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Av*<br/>
 O accelerator_view para o qual o bloqueio deve ser liberado.
@@ -205,7 +205,7 @@ Obtém o local do primeiro bit definido em _X, começando com o bit de ordem mai
 inline int firstbithigh(int _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor inteiro
@@ -222,7 +222,7 @@ Obtém o local do primeiro bit definido em _X, começando com o bit de ordem mai
 inline int firstbitlow(int _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor inteiro
@@ -244,7 +244,7 @@ IUnknown *get_buffer(
     const array<value_type, _Rank>& _Array)  ;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *value_type*<br/>
 O tipo dos elementos na matriz.
@@ -267,7 +267,7 @@ Obtenha a interface do dispositivo D3D subjacente a uma accelerator_view.
 IUnknown* get_device(const accelerator_view Av);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *AV*<br/>
 O accelerator_view D3D para o qual a interface de dispositivo D3D subjacente é retornada.
@@ -286,7 +286,7 @@ inline int imax(
     int _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor inteiro
@@ -308,7 +308,7 @@ inline int imin(
     int _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor inteiro
@@ -328,7 +328,7 @@ Retorna um sinalizador booliano indicando se o tempo limite está desabilitado p
 bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Accelerator_view*<br/>
 O accelerator_view para o qual a configuração de tempo limite desabilitado deve ser consultada.
@@ -363,7 +363,7 @@ inline unsigned int mad(
     unsigned int _Z) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 O primeiro argumento especificado.
@@ -393,7 +393,7 @@ array<value_type, _Rank> make_array(
     IUnknown* _D3D_buffer)  ;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *value_type*<br/>
 O tipo de elemento da matriz a ser criada.
@@ -422,7 +422,7 @@ Gera um valor aleatório usando o algoritmo de ruído do Perlm
 inline float noise(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante do qual gerar ruído de Perl
@@ -439,7 +439,7 @@ Converte _X de graus em radianos
 inline float radians(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -458,7 +458,7 @@ inline float rcp(float _X) restrict(amp);
 inline double rcp(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 O valor para o qual computar o recíproco.
@@ -475,7 +475,7 @@ Inverte a ordem dos bits em _X
 inline unsigned int reversebits(unsigned int _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor inteiro sem sinal
@@ -492,7 +492,7 @@ Coloca _X dentro do intervalo de 0 a 1
 inline float saturate(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -509,7 +509,7 @@ Determina o sinal do argumento especificado.
 inline int sign(int _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor inteiro
@@ -529,7 +529,7 @@ inline float smoothstep(
     float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Min*<br/>
 Valor de ponto flutuante
@@ -554,7 +554,7 @@ inline float step(
     float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Y*<br/>
 Valor de ponto flutuante
@@ -576,7 +576,7 @@ inline unsigned int umax(
     unsigned int _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor inteiro
@@ -598,7 +598,7 @@ inline unsigned int umin(
     unsigned int _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor inteiro
@@ -610,6 +610,6 @@ Valor inteiro
 
 Retornar o valor numérico mínimo dos argumentos
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Concurrency::direct3d](concurrency-direct3d-namespace.md)

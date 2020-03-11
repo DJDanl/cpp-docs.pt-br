@@ -3,11 +3,11 @@ title: Operadores do namespace de simultaneidade (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
 ms.openlocfilehash: 3b536f75e4ef6405b60d45e89290a7d97a01707d
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126910"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883715"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operadores do namespace de simultaneidade (AMP)
 
@@ -31,7 +31,7 @@ bool operator== (
     const _Tuple_type<_Rank>& _Rhs) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Rank*<br/>
 A classificação dos argumentos da tupla.
@@ -60,7 +60,7 @@ bool operator!= (
     const _Tuple_type<_Rank>& _Rhs) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Rank*<br/>
 A classificação dos argumentos da tupla.
@@ -105,7 +105,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
     const _Tuple_type<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Rank*<br/>
 A classificação dos argumentos da tupla.
@@ -150,7 +150,7 @@ _Tuple_type<_Rank>   operator-(
     const _Tuple_type<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Rank*<br/>
 A classificação dos argumentos da tupla.
@@ -187,7 +187,7 @@ _Tuple_type<_Rank>   operator*(
     const _Tuple_type<_Rank>& _Rhs) restrict(amp, cpu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Rank*<br/>
 A classificação dos argumentos da tupla.
@@ -224,7 +224,7 @@ _Tuple_type<_Rank>   operator/(
     const _Tuple_type<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Rank*<br/>
 A classificação dos argumentos da tupla.
@@ -261,7 +261,7 @@ _Tuple_type<_Rank>   operator%(
     const _Tuple_type<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Rank*<br/>
 A classificação dos argumentos da tupla.
@@ -276,6 +276,6 @@ A tupla pela qual o módulo será analisado.
 
 O resultado do primeiro módulo de argumento especificado é o segundo argumento especificado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace-cpp-amp.md)

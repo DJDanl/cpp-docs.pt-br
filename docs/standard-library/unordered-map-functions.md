@@ -9,13 +9,13 @@ ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
 ms.openlocfilehash: 8ad81157d12de017198afeeb48f3b329ef20dbde
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454831"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873943"
 ---
-# <a name="ltunorderedmapgt-functions"></a>Funções &lt;unordered_map&gt;
+# <a name="ltunordered_mapgt-functions"></a>Funções &lt;unordered_map&gt;
 
 |||
 |-|-|
@@ -32,27 +32,27 @@ void swap(
     unordered_map <Key, Ty, Hash, Pred, Alloc>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Chaves*\
+\ de *chave*
 O tipo principal.
 
 *Ty*\
 O tipo mapeado.
 
-*Tralha*\
+\ de *hash*
 O tipo de objeto da função de hash.
 
-*Pred*\
+\ *Pred*
 O tipo de objeto da função de comparação de igualdade.
 
-*Alocação*\
+\ de *alocação*
 A classe do alocador.
 
-*mantida*\
+\ *à esquerda*
 O primeiro contêiner para alternância.
 
-*Certo*\
+\ *à direita*
 O segundo contêiner para alternância.
 
 ### <a name="remarks"></a>Comentários
@@ -125,27 +125,27 @@ void swap(
     unordered_multimap <Key, Ty, Hash, Pred, Alloc>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Chaves*\
+\ de *chave*
 O tipo principal.
 
 *Ty*\
 O tipo mapeado.
 
-*Tralha*\
+\ de *hash*
 O tipo de objeto da função de hash.
 
-*Pred*\
+\ *Pred*
 O tipo de objeto da função de comparação de igualdade.
 
-*Alocação*\
+\ de *alocação*
 A classe do alocador.
 
-*mantida*\
+\ *à esquerda*
 O primeiro contêiner para alternância.
 
-*Certo*\
+\ *à direita*
 O segundo contêiner para alternância.
 
 ### <a name="remarks"></a>Comentários
@@ -207,6 +207,6 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [<unordered_map>](../standard-library/unordered-map.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
 ms.openlocfilehash: b396e5c692129821c0deb9aef9469a5c54e600b0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243767"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876342"
 ---
 # <a name="ltfunctionalgt-operators"></a>Operadores &lt;functional&gt;
 
-## <a name="op_eq_eq"></a> operador = =
+## <a name="op_eq_eq"></a>operador = =
 
 Testa se o objeto que pode ser chamado está vazio.
 
@@ -28,15 +28,15 @@ template <class Fty>
     bool operator==(null_ptr_type npc, const function<Fty>& f);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Fty*\
+\ *Fty*
 O tipo de função a ser encapsulada.
 
-*f*\
+\ de *f*
 O objeto de função
 
-*npc*\
+\ *NPC*
 Um ponteiro nulo.
 
 ### <a name="remarks"></a>Comentários
@@ -75,7 +75,7 @@ empty == true
 empty == false
 ```
 
-## <a name="op_neq"></a> operador! =
+## <a name="op_neq"></a>operador! =
 
 Testa se o objeto que pode ser chamado não está vazio.
 
@@ -87,15 +87,15 @@ template <class Fty>
     bool operator!=(null_ptr_type npc, const function<Fty>& f);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Fty*\
+\ *Fty*
 O tipo de função a ser encapsulada.
 
-*f*\
+\ de *f*
 O objeto de função
 
-*npc*\
+\ *NPC*
 Um ponteiro nulo.
 
 ### <a name="remarks"></a>Comentários
