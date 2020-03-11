@@ -91,11 +91,11 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::truncf
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
 ms.openlocfilehash: 53ebaf8d9cc1bca53b1fe51464668d6df8e08424
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126936"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890688"
 ---
 # <a name="concurrencyprecise_math-namespace-functions"></a>Funções do namespace Concurrency::precise_math
 
@@ -157,7 +157,7 @@ inline float acos(float _X) restrict(amp);
 inline double acos(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -174,7 +174,7 @@ Calcula o arco cosseno do argumento
 inline float acosf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -193,7 +193,7 @@ inline float acosh(float _X) restrict(amp);
 inline double acosh(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -210,7 +210,7 @@ Calcula o cosseno hiperbólico inverso do argumento
 inline float acoshf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -229,7 +229,7 @@ inline float asin(float _X) restrict(amp);
 inline double asin(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -246,7 +246,7 @@ Calcula o arco seno do argumento
 inline float asinf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -265,7 +265,7 @@ inline float asinh(float _X) restrict(amp);
 inline double asinh(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -282,7 +282,7 @@ Calcula o seno hiperbólico inverso do argumento
 inline float asinhf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -301,7 +301,7 @@ inline float atan(float _X) restrict(amp);
 inline double atan(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -324,7 +324,7 @@ inline double atan2(
     double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Y*<br/>
 Valor de ponto flutuante
@@ -346,7 +346,7 @@ inline float atan2f(
     float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Y*<br/>
 Valor de ponto flutuante
@@ -366,7 +366,7 @@ Calcula o tangente do arco do argumento
 inline float atanf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -385,7 +385,7 @@ inline float atanh(float _X) restrict(amp);
 inline double atanh(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -402,7 +402,7 @@ Calcula a tangente hiperbólica inversa do argumento
 inline float atanhf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -421,7 +421,7 @@ inline float cbrt(float _X) restrict(amp);
 inline double cbrt(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -438,7 +438,7 @@ Computa a raiz do cubo real do argumento
 inline float cbrtf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -457,7 +457,7 @@ inline float ceil(float _X) restrict(amp);
 inline double ceil(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -474,7 +474,7 @@ Calcula o teto do argumento
 inline float ceilf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -497,7 +497,7 @@ inline double copysign(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -519,7 +519,7 @@ inline float copysignf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -541,7 +541,7 @@ inline float cos(float _X) restrict(amp);
 inline double cos(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -558,7 +558,7 @@ Calcula o cosseno do argumento
 inline float cosf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -577,7 +577,7 @@ inline float cosh(float _X) restrict(amp);
 inline double cosh(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -594,7 +594,7 @@ Calcula o valor cosseno hiperbólico do argumento
 inline float coshf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -613,7 +613,7 @@ inline float cospi(float _X) restrict(amp);
 inline double cospi(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -630,7 +630,7 @@ Calcula o valor do cosseno de PI \* _X
 inline float cospif(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -649,7 +649,7 @@ inline float erf(float _X) restrict(amp);
 inline double erf(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -668,7 +668,7 @@ inline float erfc(float _X) restrict(amp);
 inline double erfc(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -685,7 +685,7 @@ Computa a função de erro complementar do _X
 inline float erfcf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -704,7 +704,7 @@ inline float erfcinv(float _X) restrict(amp);
 inline double erfcinv(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -721,7 +721,7 @@ Computa a função de erro complementar inverso de _X
 inline float erfcinvf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -738,7 +738,7 @@ Computa a função Error de _X
 inline float erff(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -757,7 +757,7 @@ inline float erfinv(float _X) restrict(amp);
 inline double erfinv(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -774,7 +774,7 @@ Calcula a função de erro inverso de _X
 inline float erfinvf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -793,7 +793,7 @@ inline float exp10(float _X) restrict(amp);
 inline double exp10(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -810,7 +810,7 @@ Calcula o exponencial de base 10 do argumento
 inline float exp10f(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -829,7 +829,7 @@ inline float expm1(float exponent) restrict(amp);
 inline double expm1(double exponent) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lado*<br/>
 O termo exponencial *n* da expressão matemática `e`<sup>n</sup>, em que `e` é a base do logaritmo natural.
@@ -846,7 +846,7 @@ Calcula a exponencial de base e do argumento, menos 1
 inline float expm1f(float exponent) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lado*<br/>
 O termo exponencial *n* da expressão matemática `e`<sup>n</sup>, em que `e` é a base do logaritmo natural.
@@ -865,7 +865,7 @@ inline float exp(float _X) restrict(amp);
 inline double exp(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -882,7 +882,7 @@ Calcula o exponencial de base e do argumento
 inline float expf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -901,7 +901,7 @@ inline float exp2(float _X) restrict(amp);
 inline double exp2(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -918,7 +918,7 @@ Calcula o exponencial de base 2 do argumento
 inline float exp2f(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -937,7 +937,7 @@ inline float fabs(float _X) restrict(amp);
 inline double fabs(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -954,7 +954,7 @@ Retorna o valor absoluto do argumento
 inline float fabsf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -978,7 +978,7 @@ inline double fdim(
 ) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 *_Y* de valor de ponto flutuante<br/>
@@ -999,7 +999,7 @@ inline float fdimf(
 ) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 *_Y* de valor de ponto flutuante<br/>
@@ -1019,7 +1019,7 @@ inline float floor(float _X) restrict(amp);
 inline double floor(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1036,7 +1036,7 @@ Calcula o piso do argumento
 inline float floorf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1063,7 +1063,7 @@ inline double fma(
 ) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 O primeiro argumento de ponto flutuante.
@@ -1088,7 +1088,7 @@ inline float fmaf(
 ) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 O primeiro argumento de ponto flutuante.
@@ -1115,7 +1115,7 @@ inline double fmax(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1137,7 +1137,7 @@ inline float fmaxf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1163,7 +1163,7 @@ inline double fmin(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1185,7 +1185,7 @@ inline float fminf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1211,7 +1211,7 @@ inline double fmod(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 O primeiro argumento de ponto flutuante.
@@ -1233,7 +1233,7 @@ inline float fmodf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 O primeiro argumento de ponto flutuante.
@@ -1255,7 +1255,7 @@ inline int fpclassify(float _X) restrict(amp);
 inline int fpclassify(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1278,7 +1278,7 @@ inline double frexp(
     _Out_ int* _Exp) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1300,7 +1300,7 @@ inline float frexpf(
     _Out_ int* _Exp) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1326,7 +1326,7 @@ inline double hypot(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1348,7 +1348,7 @@ inline float hypotf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1370,7 +1370,7 @@ inline int ilogb(float _X) restrict(amp);
 inline int ilogb(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1387,7 +1387,7 @@ Extrair o expoente de _X como um valor int assinado
 inline int ilogbf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1406,7 +1406,7 @@ inline int isfinite(float _X) restrict(amp);
 inline int isfinite(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1425,7 +1425,7 @@ inline int isinf(float _X) restrict(amp);
 inline int isinf(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1444,7 +1444,7 @@ inline int isnan(float _X) restrict(amp);
 inline int isnan(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1463,7 +1463,7 @@ inline int isnormal(float _X) restrict(amp);
 inline int isnormal(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1486,7 +1486,7 @@ inline double ldexp(
     double _Exp) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante, mantissa
@@ -1508,7 +1508,7 @@ inline float ldexpf(
     int _Exp) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante, mantissa
@@ -1534,7 +1534,7 @@ inline double lgamma(
     _Out_ int* _Sign) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1556,7 +1556,7 @@ inline float lgammaf(
     _Out_ int* _Sign) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1578,7 +1578,7 @@ inline float log(float _X) restrict(amp);
 inline double log(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1597,7 +1597,7 @@ inline float log10(float _X) restrict(amp);
 inline double log10(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1614,7 +1614,7 @@ Calcula o logaritmo de base 10 do argumento
 inline float log10f(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1633,7 +1633,7 @@ inline float log1p(float _X) restrict(amp);
 inline double log1p(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1650,7 +1650,7 @@ Calcula o logaritmo de base e de 1 mais o argumento
 inline float log1pf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1669,7 +1669,7 @@ inline float log2(float _X) restrict(amp);
 inline double log2(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1686,7 +1686,7 @@ Calcula o logaritmo de base 2 do argumento
 inline float log2f(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1705,7 +1705,7 @@ inline float logb(float _X) restrict(amp);
 inline double logb(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1722,7 +1722,7 @@ Extrai o expoente de _X, como um valor inteiro assinado no formato de ponto flut
 inline float logbf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1739,7 +1739,7 @@ Calcula o logaritmo de base-e do argumento
 inline float logf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1762,7 +1762,7 @@ inline double modf(
     _Out_ double* _Iptr) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1784,7 +1784,7 @@ inline float modff(
     _Out_ float* _Iptr) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1804,7 +1804,7 @@ Retorna um NaN silencioso
 inline double nan(int _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor inteiro
@@ -1821,7 +1821,7 @@ Retorna um NaN silencioso
 inline float nanf(int _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor inteiro
@@ -1840,7 +1840,7 @@ inline float nearbyint(float _X) restrict(amp);
 inline double nearbyint(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1857,7 +1857,7 @@ Arredonda o argumento para um valor inteiro no formato de ponto flutuante, usand
 inline float nearbyintf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1880,7 +1880,7 @@ inline double nextafter(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1902,7 +1902,7 @@ inline float nextafterf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1924,7 +1924,7 @@ inline float phi(float _X) restrict(amp);
 inline double phi(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1941,7 +1941,7 @@ Retorna a função de distribuição cumulativa do argumento
 inline float phif(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -1964,7 +1964,7 @@ inline double pow(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante, base
@@ -1984,7 +1984,7 @@ inline float powf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante, base
@@ -2004,7 +2004,7 @@ inline float probit(float _X) restrict(amp);
 inline double probit(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2021,7 +2021,7 @@ Retorna a função de distribuição cumulativa inversa do argumento
 inline float probitf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2040,7 +2040,7 @@ inline float rcbrt(float _X) restrict(amp);
 inline double rcbrt(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2057,7 +2057,7 @@ Retorna o recíproco da raiz do cubo do argumento
 inline float rcbrtf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2080,7 +2080,7 @@ inline double remainder(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2102,7 +2102,7 @@ inline float remainderf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2130,7 +2130,7 @@ inline double remquo(
     _Out_ int* _Quo) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 O primeiro argumento de ponto flutuante.
@@ -2156,7 +2156,7 @@ inline float remquof(
     _Out_ int* _Quo) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 O primeiro argumento de ponto flutuante.
@@ -2181,7 +2181,7 @@ inline float round(float _X) restrict(amp);
 inline double round(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2198,7 +2198,7 @@ Arredonda _X para o número inteiro mais próximo
 inline float roundf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2217,7 +2217,7 @@ inline float rsqrt(float _X) restrict(amp);
 inline double rsqrt(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2234,7 +2234,7 @@ Retorna o recíproco da raiz quadrada do argumento
 inline float rsqrtf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2257,7 +2257,7 @@ inline double scalb(
     double _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2279,7 +2279,7 @@ inline float scalbf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2305,7 +2305,7 @@ inline double scalbn(
     int _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2327,7 +2327,7 @@ inline float scalbnf(
     int _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2349,7 +2349,7 @@ inline int signbit(float _X) restrict(amp);
 inline int signbit(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2366,7 +2366,7 @@ Determina se o sinal de _X é negativo
 inline int signbitf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2385,7 +2385,7 @@ inline float sin(float _X) restrict(amp);
 inline double sin(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2402,7 +2402,7 @@ Calcula o valor do seno do argumento
 inline float sinf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2427,7 +2427,7 @@ inline void sincos(
     _Out_ double* _C) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2449,7 +2449,7 @@ inline void sincosf(
     _Out_ float* _C) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2470,7 +2470,7 @@ inline float sinh(float _X) restrict(amp);
 inline double sinh(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2487,7 +2487,7 @@ Calcula o valor seno hiperbólico do argumento
 inline float sinhf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2506,7 +2506,7 @@ inline float sinpi(float _X) restrict(amp);
 inline double sinpi(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2523,7 +2523,7 @@ Calcula o valor do seno de PI \* _X
 inline float sinpif(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2542,7 +2542,7 @@ inline float sqrt(float _X) restrict(amp);
 inline double sqrt(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2559,7 +2559,7 @@ Calcula a raiz squre do argumento
 inline float sqrtf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2578,7 +2578,7 @@ inline float tan(float _X) restrict(amp);
 inline double tan(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2595,7 +2595,7 @@ Calcula o valor da tangente do argumento
 inline float tanf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2614,7 +2614,7 @@ inline float tanh(float _X) restrict(amp);
 inline double tanh(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2631,7 +2631,7 @@ Calcula o valor tangente hiperbólico do argumento
 inline float tanhf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2650,7 +2650,7 @@ inline float tanpi(float _X) restrict(amp);
 inline double tanpi(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2667,7 +2667,7 @@ Calcula o valor da tangente de PI \* _X
 inline float tanpif(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2686,7 +2686,7 @@ inline float tgamma(float _X) restrict(amp);
 inline double tgamma(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2703,7 +2703,7 @@ Computa a função gama do _X
 inline float tgammaf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2722,7 +2722,7 @@ inline float trunc(float _X) restrict(amp);
 inline double trunc(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2739,7 +2739,7 @@ Trunca o argumento para o componente de inteiro
 inline float truncf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_X*<br/>
 Valor de ponto flutuante
@@ -2748,6 +2748,6 @@ Valor de ponto flutuante
 
 Retorna o componente de inteiro do argumento
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Concurrency::precise_math](concurrency-precise-math-namespace.md)

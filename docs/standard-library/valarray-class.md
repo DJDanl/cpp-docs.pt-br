@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
 ms.openlocfilehash: f116758591461614acfa7c171bff2b1675f453e4
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 49cf365176557456f56c994e06ea1a38f73e938b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684089"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937416"
 ---
 # <a name="valarray-class"></a>Classe valarray
 
@@ -75,7 +75,7 @@ Em particular, talvez não exista nenhuma diferença sutil entre a construção 
 |-|-|
 |[apply](#apply)|Aplica uma função especificada a cada elemento de um `valarray`.|
 |[cshift](#cshift)|De forma cíclica, desloca todos os elementos em um `valarray` por meio de um número especificado de posições.|
-|[free](#free)|Libera a memória usada pelo `valarray`.|
+|[gratuito](#free)|Libera a memória usada pelo `valarray`.|
 |[max](#max)|Localiza o maior elemento em um `valarray`.|
 |[min](#min)|Localiza o menor elemento em um `valarray`.|
 |[resize](#resize)|Altera o número de elementos em um `valarray` para um número especificado, adicionando ou removendo elementos conforme necessário.|
@@ -115,12 +115,12 @@ valarray<Type> apply(Type _Func(Type)) const;
 valarray<Type> apply(Type _Func(constType&)) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Func (tipo)* \
 O objeto de função a ser aplicado a cada elemento da valarray operando.
 
-*_Func (tipo const &)* \
+*_Func (& de tipo const)* \
 O objeto de função de const a ser aplicado a cada elemento da valarray operando.
 
 ### <a name="return-value"></a>Valor retornado
@@ -129,7 +129,7 @@ Uma valarray na qual houve aplicação de `_Func`, elemento a elemento, aos elem
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um objeto da classe [valarray](../standard-library/valarray-class.md)  **\<Type >** , de [tamanho](#size), cada um dos elementos dos quais *estou* `_Func((*this)[I])`.
+A função membro retorna um objeto da classe [valarray](../standard-library/valarray-class.md) **\<tipo >** , de [tamanho](#size), cada um dos elementos dos quais *estou* `_Func((*this)[I])`.
 
 ### <a name="example"></a>Exemplo
 
@@ -189,9 +189,9 @@ De forma cíclica, desloca todos os elementos em uma valarray por meio de um nú
 valarray<Type> cshift(int count) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*contagem* \
+*contagem*\
 O número de locais para os quais os elementos serão deslocados para frente.
 
 ### <a name="return-value"></a>Valor retornado
@@ -452,7 +452,7 @@ valarray<Type>& operator%=(const valarray<Type>& right);
 valarray<Type>& operator%=(const Type& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 A valarray ou valor de um tipo de elemento idêntico ao da valarray operando que dividirá, elemento a elemento, a valarray operando.
@@ -509,7 +509,7 @@ The remainders from the element-by-element division is the
 valarray: ( 0 -3 4 -7 1 -3 ).
 ```
 
-## <a name="op_and_eq"></a>= de &amp; do operador
+## <a name="op_and_eq"></a>= de&amp;do operador
 
 Obtém o **AND** bit a bit de elementos em uma matriz com os elementos correspondentes em uma valarray especificada ou com um valor do tipo de elemento.
 
@@ -519,7 +519,7 @@ valarray<Type>& operator&=(const valarray<Type>& right);
 valarray<Type>& operator&=(const Type& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 O valarray ou o valor de um tipo de elemento idêntico ao do operando valarray que deve ser combinado, elemento-Wise, pelo `AND` lógico com o operando valarray.
@@ -582,7 +582,7 @@ The element-by-element result of the logical AND operator&= is the
 valarray: ( 0 0 0 2 0 4 0 6 0 8 ).
 ```
 
-## <a name="op_gt_gt_eq"></a>&gt; de &gt; do operador =
+## <a name="op_gt_gt_eq"></a>&gt;de&gt;do operador =
 
 Desloca para a direita os bits de cada elemento de uma valarray operando por um número especificado de posições ou por um valor elemento a elemento especificado por uma segunda valarray.
 
@@ -592,7 +592,7 @@ valarray<Type>& operator>>=(const valarray<Type>& right);
 valarray<Type>& operator>>=(const Type& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 O valor que indica a quantidade de deslocamentos para a direita ou a valarray cujos elementos indicam a quantidade elemento a elemento dos deslocamentos para a direita.
@@ -653,7 +653,7 @@ The element-by-element result of the right shift is the
 valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
 ```
 
-## <a name="op_lt_lt_eq"></a>&lt; de &lt; do operador =
+## <a name="op_lt_lt_eq"></a>&lt;de&lt;do operador =
 
 Desloca para a esquerda os bits de cada elemento de uma valarray operando por um número especificado de posições ou por um valor elemento a elemento especificado por uma segunda valarray.
 
@@ -663,7 +663,7 @@ valarray<Type>& operator<<=(const valarray<Type>& right);
 valarray<Type>& operator<<=(const Type& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 O valor que indica a quantidade de deslocamentos para a esquerda ou a valarray cujos elementos indicam a quantidade elemento a elemento dos deslocamentos para a esquerda.
@@ -736,7 +736,7 @@ valarray<Type>& operator*=(const valarray<Type>& right);
 valarray<Type>& operator*=(const Type& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 A valarray ou valor de um tipo de elemento idêntico ao da valarray operando que multiplicará, elemento a elemento, a valarray operando.
@@ -855,7 +855,7 @@ valarray<Type>& operator+=(const valarray<Type>& right);
 valarray<Type>& operator+=(const Type& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 A valarray ou valor de um tipo de elemento idêntico ao da valarray operando que será adicionado, elemento a elemento, ao valarray operando.
@@ -975,7 +975,7 @@ valarray<Type>& operator-=(const valarray<Type>& right);
 valarray<Type>& operator-=(const Type& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 A valarray ou valor de um tipo de elemento idêntico ao da valarray operando que será subtraído, elemento a elemento, da valarray operando.
@@ -1042,7 +1042,7 @@ valarray<Type>& operator/=(const valarray<Type>& right);
 valarray<Type>& operator/=(const Type& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 A valarray ou valor de um tipo de elemento idêntico ao da valarray operando que será dividido, elemento a elemento, no valarray operando.
@@ -1119,24 +1119,24 @@ valarray<Type>& operator=(const mask_array<Type>& _Maskarray);
 valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 A valarray a ser copiada para a valarray operando.
 
-*valor* \
+*valor*\
 O valor a ser atribuído aos elementos da valarray operando.
 
-@No__t_1 *_Slicearray*
+*_Slicearray*\
 A slice_array a ser copiada para a valarray operando.
 
-@No__t_1 *_Gslicearray*
+*_Gslicearray*\
 A gslice_array a ser copiada para a valarray operando.
 
-@No__t_1 *_Maskarray*
+*_Maskarray*\
 A mask_array a ser copiada para a valarray operando.
 
-@No__t_1 *_Indarray*
+*_Indarray*\
 A indirect_array a ser copiada para a valarray operando.
 
 ### <a name="return-value"></a>Valor retornado
@@ -1235,21 +1235,21 @@ valarray<Type> operator[](const valarray<bool>& _Boolarray) const;
 valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 *_Off*
+*_Off*\
 O índice do elemento que terá um valor atribuído.
 
-@No__t_1 *_Slicearray*
+*_Slicearray*\
 Uma slice_array de uma valarray que especifica um subconjunto a ser selecionado ou retornado para uma nova valarray.
 
-@No__t_1 *_Gslicearray*
+*_Gslicearray*\
 Uma gslice_array de uma valarray que especifica um subconjunto a ser selecionado ou retornado para uma nova valarray.
 
-@No__t_1 *_Boolarray*
+*_Boolarray*\
 Uma bool_array de uma valarray que especifica um subconjunto a ser selecionado ou retornado para uma nova valarray.
 
-@No__t_1 *_Indarray*
+*_Indarray*\
 Uma indirect_array de uma valarray que especifica um subconjunto a ser selecionado ou retornado para uma nova valarray.
 
 ### <a name="return-value"></a>Valor retornado
@@ -1258,9 +1258,9 @@ Uma referência a um elemento ou seu valor no índice ou subconjunto especificad
 
 ### <a name="remarks"></a>Comentários
 
-O operador de membro é sobrecarregado para fornecer várias maneiras de selecionar sequências de elementos entre aqueles controlados por <strong>\*this</strong>. O primeiro grupo de cinco operadores de membro funciona em conjunto com várias sobrecargas de [operator=](#op_eq) (e outros operadores de atribuição) para permitir a substituição seletiva (divisão) da sequência controlada. Os elementos selecionados devem existir.
+O operador de membro é sobrecarregado para fornecer várias maneiras de selecionar sequências de elementos entre aqueles controlados por <strong>\*isso</strong>. O primeiro grupo de cinco operadores de membro funciona em conjunto com várias sobrecargas de [operator=](#op_eq) (e outros operadores de atribuição) para permitir a substituição seletiva (divisão) da sequência controlada. Os elementos selecionados devem existir.
 
-Quando compilado usando [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 ou 2, um erro em tempo de execução ocorrerá se você tentar acessar um elemento fora dos limites da valarray.  Consulte [Iteradores Verificados](../standard-library/checked-iterators.md) para obter mais informações.
+Quando compilado usando [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 ou 2, um erro de runtime ocorrerá se você tentar acessar um elemento fora dos limites da valarray.  Consulte [Iteradores Verificados](../standard-library/checked-iterators.md) para obter mais informações.
 
 ### <a name="example"></a>Exemplo
 
@@ -1276,7 +1276,7 @@ valarray<Type>& operator|=(const valarray<Type>& right);
 valarray<Type>& operator|=(const Type& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 A valarray ou valor de um tipo de elemento idêntico ao da valarray operando que será combinado, elemento a elemento, pelo lógico exclusivo **XOR** com a valarray operando.
@@ -1287,7 +1287,7 @@ Um valarray cujos elementos são o **XOR** lógico exclusivo de elemento, do ope
 
 ### <a name="remarks"></a>Comentários
 
-O exclusivo lógico ou **XOR**, tem a seguinte semântica: determinados elementos *e*1 e *e*2, *e*1 **XOR** *e*2 serão **true** se exatamente um dos elementos for true; **false** se ambos os elementos forem false ou ambos os elementos forem true.
+O OR lógico exclusivo, chamado de **XOR**, tem a seguinte semântica: dados especificados, e *1 e*2 *,* *e*1 **XOR** *e*2 serão **verdadeiros** se exatamente um dos elementos for verdadeiro; **false** se ambos os elementos forem false ou se ambos os elementos forem verdadeiros.
 
 ### <a name="example"></a>Exemplo
 
@@ -1351,7 +1351,7 @@ valarray<Type>& operator|=(const valarray<Type>& right);
 valarray<Type>& operator|=(const Type& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 A valarray ou valor de um tipo de elemento idêntico ao da valarray operando será combinado, elemento a elemento, pelo bit a bit `OR` com a valarray operando.
@@ -1364,7 +1364,7 @@ Um valarray cujos elementos são os `OR` bit a passo de um elemento do operando 
 
 Uma operação bit a ponto pode ser usada apenas para manipular bits em tipos de dados **Char** e **int** e variantes, e não em **float**, **Double**, **longdouble**, **void**, **bool**ou outros tipos de dados mais complexos.
 
-O bit a bit `OR` tem a mesma tabela de verdade que o lógico `OR`, mas se aplica ao tipo de dados em nível de bits individuais. Considerando os bits *b*1 e *b*2, *b*1 `OR` *b*2 será **true** se pelo menos um dos bits for true; **false** se ambos os bits forem false.
+O bit a bit `OR` tem a mesma tabela de verdade que o lógico `OR`, mas se aplica ao tipo de dados em nível de bits individuais. Determinados bits *b*1 e *b*2, *b*1 `OR` *b*2 será **verdadeiro** se pelo menos um dos bits for verdadeiro; **false** se ambos os bits forem falsos.
 
 ### <a name="example"></a>Exemplo
 
@@ -1440,7 +1440,7 @@ O valarray de valores Boolianos que são o `NOT` bit a bit dos valores de elemen
 
 Uma operação bit a ponto pode ser usada apenas para manipular bits em tipos de dados **Char** e **int** e variantes e não em **float**, **Double**, **longdouble**, **void**, **bool** ou outros tipos de dados mais complexos.
 
-O bit a bit `NOT` tem a mesma tabela de verdade que o lógico `NOT`, mas se aplica ao tipo de dados em nível de bits individuais. Considerando o bit *b*, ~ *b* será true se *b* for false e false se *b* for true. O **NOT**[operator!](#op_not) lógico se aplica no nível de elemento contando todos os valores diferentes de zero como **true** e o resultado é uma valarray de valores boolianos. Por outro lado, a `NOToperator~` bit a bit pode resultar em um valarray de valores diferentes de 0 ou 1, dependendo do resultado da operação bit a bit.
+O bit a bit `NOT` tem a mesma tabela de verdade que o lógico `NOT`, mas se aplica ao tipo de dados em nível de bits individuais. Considerando o bit *b*, ~ *b* será true se *b* for false e false se *b* for true. O **NOT**[operator!](#op_not) lógico se aplica no nível de elemento contando todos os valores diferentes de zero como **true** e o resultado é uma valarray de valores boolianos. Por outro lado, a `NOToperator~`bit a bit pode resultar em um valarray de valores diferentes de 0 ou 1, dependendo do resultado da operação bit a bit.
 
 ### <a name="example"></a>Exemplo
 
@@ -1536,12 +1536,12 @@ void resize(
     const Type val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 *_Newsize*
+*_Newsize*\
 O número de elementos na valarray redimensionada.
 
-*valor* \
+*valor*\
 O valor a ser atribuído aos elementos da valarray redimensionada.
 
 ### <a name="remarks"></a>Comentários
@@ -1607,9 +1607,9 @@ Desloca todos os elementos em uma valarray por meio de um número especificado d
 valarray<Type> shift(int count) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*contagem* \
+*contagem*\
 O número de locais para os quais os elementos serão deslocados para frente.
 
 ### <a name="return-value"></a>Valor retornado
@@ -1809,7 +1809,7 @@ Troca os elementos de dois `valarray`s.
 void swap(valarray& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 Um `valarray` que fornece os elementos a serem trocados.
@@ -1858,33 +1858,33 @@ valarray(
     initializer_list<Type> IList);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Contagem* \
+*Contagem*\
 O número de elementos que estarão na valarray.
 
-*Valor* \
+*Valor*\
 O valor a ser usado ao inicializar os elementos na valarray.
 
-@No__t_1 *PTR*
+\ *PTR*
 Ponteiro para os valores a serem usados ao inicializar os elementos na valarray.
 
-@No__t_1 *à direita*
+\ *à direita*
 Uma valarray existente para inicializar a nova valarray.
 
-@No__t_1 *SliceArray*
+\ *SliceArray*
 Uma slice_array cujos valores de elemento serão usados ao inicializar os elementos da valarray em construção.
 
-@No__t_1 *GsliceArray*
+\ *GsliceArray*
 Uma gslice_array cujos valores de elemento serão usados ao inicializar os elementos da valarray em construção.
 
-@No__t_1 *MaskArray*
+\ *MaskArray*
 Uma mask_array cujos valores de elemento serão usados ao inicializar os elementos da valarray em construção.
 
-@No__t_1 *IndArray*
+\ *IndArray*
 Uma indirect_array cujos valores de elemento serão usados ao inicializar os elementos da valarray em construção.
 
-*IList* \
+*IList*\
 A initializer_list que contém os elementos a serem copiados.
 
 ### <a name="remarks"></a>Comentários
@@ -2008,6 +2008,6 @@ The decalared value_type Right is: 10
 The resulting valarray is:  ( 0 -10 20 -10 40 -10 60 -10 80 -10 ).
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
 ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 49cf365176557456f56c994e06ea1a38f73e938b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450352"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937430"
 ---
 # <a name="slice-class"></a>Classe slice
 
@@ -39,13 +39,13 @@ Operações em valarrays são asseguradas somente se os subconjuntos de origem e
 
 ### <a name="constructors"></a>Construtores
 
-|Construtor|Descrição|
+|Construtor|DESCRIÇÃO|
 |-|-|
 |[slice](#slice)|Define um subconjunto de um `valarray` que consiste em um número de elementos que estão separados por uma distância igual entre eles e que começam em um elemento especificado.|
 
 ### <a name="member-functions"></a>Funções de membro
 
-|Função de membro|Descrição|
+|Função de membro|DESCRIÇÃO|
 |-|-|
 |[size](#size)|Localiza o número de elementos em uma slice de um `valarray`.|
 |[start](#start)|Localiza o índice inicial de uma slice de um `valarray`.|
@@ -53,7 +53,7 @@ Operações em valarrays são asseguradas somente se os subconjuntos de origem e
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<valarray>
+**Cabeçalho:** \<valarray >
 
 **Namespace:** std
 
@@ -65,7 +65,7 @@ Localiza o número de elementos em uma slice de um valarray.
 size_t size() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O número de elementos em uma slice de um valarray.
 
@@ -134,7 +134,7 @@ slice(
     size_t stride);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_StartIndex*\
 O índice de valarray do primeiro elemento no subconjunto.
@@ -142,10 +142,10 @@ O índice de valarray do primeiro elemento no subconjunto.
 *_Len*\
 O número de elementos no subconjunto.
 
-*Stride*\
+\ *Stride*
 A distância entre elementos no subconjunto.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O construtor padrão armazena zeros para o índice inicial, o comprimento total e o stride. O segundo Construtor armazena *_StartIndex* para o índice inicial, *_Len* para o comprimento total e *Stride* para o Stride.
 
@@ -202,7 +202,7 @@ Localiza o índice inicial de uma slice de um valarray.
 size_t start() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O índice inicial de uma slice de um valarray.
 
@@ -260,7 +260,7 @@ Encontra a distância entre os elementos em uma slice de um valarray.
 size_t stride() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A distância entre os elementos em uma slice de um valarray.
 
@@ -310,6 +310,6 @@ The slice of valarray va is vaResult = va[slice( 4, 5, 3)] =
 The stride of slice vaSlice is: 3.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

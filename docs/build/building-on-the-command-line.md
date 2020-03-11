@@ -11,11 +11,11 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051489"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856781"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Usar o conjunto C++ de ferramentas da Microsoft na linha de comando
 
@@ -135,13 +135,13 @@ Esse argumento opcional especifica a arquitetura de host e de destino a ser usad
 |*architecture*|Compilador|Arquitetura do computador host|Arquitetura da saída do build (destino)|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|Nativa de 32 bits x86|x86, x64|x86|
-|**x86\_amd64** ou **x86\_x64**|Cruzada do x64 no x86|x86, x64|X64|
+|**x86\_amd64** ou **x86\_x64**|Cruzada do x64 no x86|x86, x64|x64|
 |**x86_arm**|ARM em x86 cruzado|x86, x64|ARM|
 |**x86_arm64**|Cruzada do ARM64 no x86|x86, x64|ARM64|
-|**amd64** ou **x64**|Nativa do x64 de 64 bits|X64|X64|
-|**amd64\_x86** ou **x64\_x86**|Cruzada do x86 no x64|X64|x86|
-|**amd64\_arm** ou **x64\_arm**|Cruzada do ARM no x64|X64|ARM|
-|**amd64\_arm64** ou **x64\_arm64**|Cruzada do ARM64 no x64|X64|ARM64|
+|**amd64** ou **x64**|Nativa do x64 de 64 bits|x64|x64|
+|**amd64\_x86** ou **x64\_x86**|Cruzada do x86 no x64|x64|x86|
+|**amd64\_arm** ou **x64\_arm**|Cruzada do ARM no x64|x64|ARM|
+|**amd64\_arm64** ou **x64\_arm64**|Cruzada do ARM64 no x64|x64|ARM64|
 
 *platform_type*<br/>
 Esse argumento opcional permite especificar **store** ou **uwp** como o tipo de plataforma. Por padrão, o ambiente está definido para compilar aplicativos da área de trabalho ou de console.
@@ -221,7 +221,7 @@ Os arquivos em lotes específicos da arquitetura definem o parâmetro *architect
 
 Ajuste o caminho para refletir o diretório de instalação do Visual Studio. O arquivo vcvarsall.bat traz mais informações sobre os números de versão específicos.
 
-## <a name="command-line-tools"></a>Ferramentas de linha de comando
+## <a name="command-line-tools"></a>Ferramentas da linha de comando
 
 Para criar um C/C++ Project em um prompt de comando, o Visual Studio fornece essas ferramentas de linha de comando:
 
@@ -281,6 +281,6 @@ Fornece links a artigos que falam sobre as opções do vinculador e sobre o LINK
 [Ferramentas de compilação adicionais MSVC](reference/c-cpp-build-tools.md)<br/>
 Fornece links para as ferramentas de build do C/C++ incluídas no Visual Studio.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Sistemas de Compilação e Projetos](projects-and-build-systems-cpp.md)

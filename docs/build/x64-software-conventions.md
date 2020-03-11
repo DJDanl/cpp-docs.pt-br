@@ -1,116 +1,116 @@
 ---
-title: x64 convenções de software
+title: Convenções de software x64
 ms.date: 12/17/2018
 helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
 ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313804"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865594"
 ---
-# <a name="x64-software-conventions"></a>x64 convenções de software
+# <a name="x64-software-conventions"></a>Convenções de software x64
 
-Esta seção descreve a metodologia de convenção de chamada para x64, a extensão de 64 bits para x86 de C++ arquitetura.
+Esta seção descreve a C++ metodologia de Convenção de chamada para x64, a extensão de 64 bits para a arquitetura x86.
 
 ## <a name="overview-of-x64-calling-conventions"></a>Visão geral das convenções de chamada x64
 
-Duas diferenças importantes entre o x86 e x64 são a capacidade de endereçamento de 64 bits e um conjunto simples de 16 a 64-bit registra para uso geral. Dado o conjunto de registro expandida, x64 usa o [fastcall](../cpp/fastcall.md) convenção de chamada e um modelo de tratamento de exceções com base em RISC. O `__fastcall` convenção usa registros para os primeiros quatro argumentos e o quadro de pilha para passar argumentos adicionais. Para obter detalhes sobre o x64 convenção de chamada, incluindo o uso de registro de pilha de parâmetros, retornar valores e o desenrolamento de pilha, consulte [convenção de chamada de x64](x64-calling-convention.md).
+Duas diferenças importantes entre x86 e x64 são o recurso de endereçamento de 64 bits e um conjunto simples de registros de 16 64 bits para uso geral. Considerando o conjunto de registros expandido, o x64 usa a Convenção de chamada [__fastcall](../cpp/fastcall.md) e um modelo de tratamento de exceção baseado em RISC. A Convenção de `__fastcall` usa registros para os primeiros quatro argumentos e o quadro de pilha para passar argumentos adicionais. Para obter detalhes sobre a Convenção de chamada x64, incluindo o uso de registro, parâmetros de pilha, valores de retorno e desenrolamento de pilha, consulte [Convenção de chamada x64](x64-calling-convention.md).
 
 ## <a name="enable-optimization-for-x64"></a>Habilitar a otimização para x64
 
-A opção de compilador a seguir ajuda a otimizar o aplicativo para x64:
+A opção de compilador a seguir ajuda a otimizar seu aplicativo para x64:
 
 - [/favor (otimizar para especificações da arquitetura)](../build/reference/favor-optimize-for-architecture-specifics.md)
 
 ## <a name="types-and-storage"></a>Tipos e armazenamento
 
-Esta seção descreve a enumeração e o armazenamento de tipos de dados para o x64 de arquitetura.
+Esta seção descreve a enumeração e o armazenamento de tipos de dados para a arquitetura x64.
 
-### <a name="scalar-types"></a>tipos escalares
+### <a name="scalar-types"></a>Tipos escalares
 
-Embora seja possível acessar os dados com nenhum alinhamento, é recomendável para alinhar os dados em seu limite natural ou um múltiplo, para evitar a perda de desempenho. Enums são inteiros constantes e são tratados como inteiros de 32 bits. A tabela a seguir descreve a definição de tipo e o armazenamento recomendado para os dados, pois pertence ao alinhamento usando os seguintes valores de alinhamento:
+Embora seja possível acessar dados com qualquer alinhamento, é recomendável alinhar os dados em seu limite natural ou alguns vários para evitar a perda de desempenho. Enums são inteiros constantes e são tratados como inteiros de 32 bits. A tabela a seguir descreve a definição de tipo e o armazenamento recomendado para dados, pois ele pertence ao alinhamento usando os seguintes valores de alinhamento:
 
-- Byte - 8 bits
+- Bits de byte 8
 
-- Palavra - 16 bits
+- Palavras-16 bits
 
-- Palavras duplas - 32 bits
+- Doubleword-32 bits
 
-- Quadword - 64 bits
+- Quadword-64 bits
 
-- Octaword - 128 bits
+- Octaword-128 bits
 
 |||||
 |-|-|-|-|
-|Tipo escalar|Tipo de dados C|Tamanho de armazenamento (em bytes)|Alinhamento recomendado|
+|Tipo escalar|Tipo de dados C|Tamanho do armazenamento (em bytes)|Alinhamento recomendado|
 |**INT8**|**char**|1|Byte|
 |**UINT8**|**unsigned char**|1|Byte|
-|**INT16**|**short**|2|Palavra|
-|**UINT16**|**unsigned short**|2|Palavra|
-|**INT32**|**int**, **long**|4|Palavras duplas|
-|**UINT32**|**unsigned int, unsigned long**|4|Palavras duplas|
+|**INT16**|**short**|2|Word|
+|**UINT16**|**unsigned short**|2|Word|
+|**INT32**|**int**, **Long**|4|Doubleword|
+|**UINT32**|**int não assinado, longo sem sinal**|4|Doubleword|
 |**INT64**|**__int64**|8|Quadword|
 |**UINT64**|**unsigned __int64**|8|Quadword|
-|**FP32 (único precisão)**|**float**|4|Palavras duplas|
-|**FP64 (duplas precisão)**|**double**|8|Quadword|
-|**PONTEIRO**|__\*__|8|Quadword|
-|**__m64**|**struct __m64**|8|Quadword|
-|**__m128**|**struct __m128**|16|Octaword|
+|**FP32 (precisão única)**|**float**|4|Doubleword|
+|**FP64 (precisão dupla)**|**double**|8|Quadword|
+|**REFERE**|__\*__|8|Quadword|
+|**__m64**|**__m64 de struct**|8|Quadword|
+|**__m128**|**__m128 de struct**|16|Octaword|
 
 ### <a name="aggregates-and-unions"></a>Agregações e uniões
 
-Outros tipos, como matrizes, estruturas e uniões, têm requisitos de alinhamento mais rígidos que garantem consistente agregada e união armazenamento e recuperação de dados. Aqui estão as definições de matriz, a estrutura e união:
+Outros tipos, como matrizes, structs e uniões, têm requisitos de alinhamento mais estritos que garantem a agregação consistente e o armazenamento de União e a recuperação de dados. Aqui estão as definições para matriz, estrutura e União:
 
-- Matriz
+- Array
 
-   Contém um grupo ordenado de objetos de dados adjacentes. Cada objeto é chamado de um *elemento*. Todos os elementos dentro de uma matriz tem o mesmo tamanho e tipo de dados.
+   Contém um grupo ordenado de objetos de dados adjacentes. Cada objeto é chamado de *elemento*. Todos os elementos dentro de uma matriz têm o mesmo tamanho e tipo de dados.
 
 - Estrutura
 
-   Contém um grupo ordenado de objetos de dados. Diferentemente dos elementos de uma matriz, os objetos dentro de uma estrutura de dados podem ter tamanhos e tipos de dados diferentes. Cada objeto de dados em uma estrutura é chamada uma *membro*.
+   Contém um grupo ordenado de objetos de dados. Ao contrário dos elementos de uma matriz, os objetos de dados dentro de uma estrutura podem ter tipos e tamanhos de dados diferentes. Cada objeto de dados em uma estrutura é chamado de *membro*.
 
-- União
+- Union
 
-   Um objeto que contém qualquer um de um conjunto de membros nomeados. Os membros do conjunto nomeado podem ser de qualquer tipo. O armazenamento alocado para uma união é igual para o armazenamento necessário para o maior membro dessa união, além de qualquer preenchimento necessários para o alinhamento.
+   Um objeto que contém qualquer um de um conjunto de membros nomeados. Os membros do conjunto nomeado podem ser de qualquer tipo. O armazenamento alocado para uma União é igual ao armazenamento necessário para o maior membro dessa União, além de qualquer preenchimento necessário para alinhamento.
 
-A tabela a seguir mostra o alinhamento fortemente sugerido para os membros de escalares de uniões e estruturas.
+A tabela a seguir mostra o alinhamento altamente sugerido para os membros escalares de uniões e estruturas.
 
 ||||
 |-|-|-|
 |Tipo escalar|Tipo de dados C|Alinhamento necessário|
 |**INT8**|**char**|Byte|
 |**UINT8**|**unsigned char**|Byte|
-|**INT16**|**short**|Palavra|
-|**UINT16**|**unsigned short**|Palavra|
-|**INT32**|**int**, **long**|Palavras duplas|
-|**UINT32**|**unsigned int, unsigned long**|Palavras duplas|
+|**INT16**|**short**|Word|
+|**UINT16**|**unsigned short**|Word|
+|**INT32**|**int**, **Long**|Doubleword|
+|**UINT32**|**int não assinado, longo sem sinal**|Doubleword|
 |**INT64**|**__int64**|Quadword|
 |**UINT64**|**unsigned __int64**|Quadword|
-|**FP32 (único precisão)**|**float**|Palavras duplas|
-|**FP64 (duplas precisão)**|**double**|Quadword|
-|**PONTEIRO**|<strong>\*</strong>|Quadword|
-|**__m64**|**struct __m64**|Quadword|
-|**__m128**|**struct __m128**|Octaword|
+|**FP32 (precisão única)**|**float**|Doubleword|
+|**FP64 (precisão dupla)**|**double**|Quadword|
+|**REFERE**|<strong>\*</strong>|Quadword|
+|**__m64**|**__m64 de struct**|Quadword|
+|**__m128**|**__m128 de struct**|Octaword|
 
-As seguintes regras de alinhamento de agregação se aplicam:
+As regras de alinhamento agregado a seguir se aplicam:
 
 - O alinhamento de uma matriz é o mesmo que o alinhamento de um dos elementos da matriz.
 
-- O alinhamento de início de uma estrutura ou uma união é o alinhamento máximo de qualquer membro individual. Cada membro dentro da estrutura ou união deve ser colocado em seu alinhamento adequado, conforme definido na tabela anterior, que pode exigir o preenchimento interno implícito, dependendo do membro anterior.
+- O alinhamento do início de uma estrutura ou de uma União é o alinhamento máximo de qualquer membro individual. Cada membro dentro da estrutura ou União deve ser colocado em seu alinhamento adequado, conforme definido na tabela anterior, que pode exigir preenchimento interno implícito, dependendo do membro anterior.
 
-- Tamanho da estrutura deve ser um múltiplo inteiro de seu alinhamento, que pode exigir o preenchimento após o último membro. Já que estruturas e uniões podem ser agrupadas em matrizes, cada elemento da matriz de uma estrutura ou união deve começar e terminar no alinhamento adequado previamente determinado.
+- O tamanho da estrutura deve ser um múltiplo integral de seu alinhamento, o que pode exigir preenchimento posterior ao último membro. Como as estruturas e as uniões podem ser agrupadas em matrizes, cada elemento da matriz de uma estrutura ou União deve começar e terminar no alinhamento adequado determinado anteriormente.
 
-- É possível alinhar dados de maneira a ser maior do que os requisitos de alinhamento, desde que as regras anteriores são mantidas.
+- É possível alinhar os dados de forma que eles sejam maiores que os requisitos de alinhamento, desde que as regras anteriores sejam mantidas.
 
-- Um compilador individual pode ajustar o empacotamento de uma estrutura por motivos de tamanho. Por exemplo [/Zp (alinhamento de membro de Struct)](../build/reference/zp-struct-member-alignment.md) permite ajustar o empacotamento de estruturas.
+- Um compilador individual pode ajustar a embalagem de uma estrutura por motivos de tamanho. Por exemplo, [/ZP (alinhamento de Membro struct)](../build/reference/zp-struct-member-alignment.md) permite ajustar a embalagem de estruturas.
 
 ### <a name="examples-of-structure-alignment"></a>Exemplos de alinhamento da estrutura
 
-Os quatro exemplos a seguir cada declaram que uma estrutura alinhada ou união e os números correspondentes ilustram o layout da estrutura ou união na memória. Cada coluna em uma figura representa um byte de memória, e o número na coluna indica o deslocamento do que bytes. O nome da segunda linha de cada figura corresponde ao nome de uma variável na declaração. Colunas sombreadas indicam o preenchimento que é necessário para alcançar o alinhamento especificado.
+Os quatro exemplos a seguir declaram uma estrutura alinhada ou União, e os valores correspondentes ilustram o layout dessa estrutura ou União na memória. Cada coluna em uma figura representa um byte de memória e o número na coluna indica o deslocamento desse byte. O nome na segunda linha de cada figura corresponde ao nome de uma variável na declaração. As colunas sombreadas indicam o preenchimento necessário para alcançar o alinhamento especificado.
 
 #### <a name="example-1"></a>Exemplo 1
 
@@ -122,7 +122,7 @@ _declspec(align(2)) struct {
 }
 ```
 
-![Layout de estrutura de exemplo 1 de conversão AMD](../build/media/vcamd_conv_ex_1_block.png "layout da estrutura AMD conversão exemplo 1")
+![Layout de estrutura do exemplo de conversão AMD 1](../build/media/vcamd_conv_ex_1_block.png "Layout de estrutura do exemplo de conversão AMD 1")
 
 #### <a name="example-2"></a>Exemplo 2
 
@@ -136,9 +136,9 @@ _declspec(align(8)) struct {
 }
 ```
 
-![Layout de estrutura de exemplo 2 de conversão AMD](../build/media/vcamd_conv_ex_2_block.png "layout da estrutura AMD conversão exemplo 2")
+![Layout da estrutura do exemplo de conversão AMD 2](../build/media/vcamd_conv_ex_2_block.png "Layout da estrutura do exemplo de conversão AMD 2")
 
-#### <a name="example-3"></a>Exemplo 3:
+#### <a name="example-3"></a>Exemplo 3
 
 ```C
 // Total size = 12 bytes, alignment = 4 bytes (doubleword).
@@ -151,7 +151,7 @@ _declspec(align(4)) struct {
 }
 ```
 
-![Layout de estrutura de exemplo 2 de conversão AMD](../build/media/vcamd_conv_ex_3_block.png "layout da estrutura AMD conversão exemplo 2")
+![Layout da estrutura do exemplo de conversão AMD 2](../build/media/vcamd_conv_ex_3_block.png "Layout da estrutura do exemplo de conversão AMD 2")
 
 #### <a name="example-4"></a>Exemplo 4
 
@@ -165,79 +165,79 @@ _declspec(align(8)) union {
 }
 ```
 
-![AMD conversão exemplo 4 união layouit](../build/media/vcamd_conv_ex_4_block.png "layouit union do AMD conversão exemplo 4")
+![Exemplo de conversão AMD 4 Union layouit](../build/media/vcamd_conv_ex_4_block.png "Exemplo de conversão AMD 4 Union layouit")
 
 ### <a name="bitfields"></a>Campos de bits
 
-Campos de bits da estrutura são limitados a 64 bits e pode ser do tipo assinado int, int sem sinal, int64 ou int64 sem sinal. Os campos de bits que cruzam o limite de tipo ignorará o bits para alinhar o campo de bits para o alinhamento do tipo Avançar. Por exemplo, os campos de bits de inteiro não podem cruzar um limite de 32 bits.
+Os campos de bits de estrutura são limitados a 64 bits e podem ser do tipo assinado int, não assinado int, Int64 ou Int64 não assinado. Os campos de bits que cruzam o limite de tipo irão ignorar bits para alinhar o campo de teletexto ao alinhamento de tipo seguinte. Por exemplo, Integer bitfields pode não cruzar um limite de 32 bits.
 
-### <a name="conflicts-with-the-x86-compiler"></a>Está em conflito com o x86 compilador
+### <a name="conflicts-with-the-x86-compiler"></a>Conflitos com o compilador x86
 
-Tipos de dados que são maiores do que 4 bytes não são alinhadas automaticamente na pilha quando você usa o x86 compilador para compilar um aplicativo. Porque a arquitetura para x86 de compilador é uma pilha alinhado de 4 bytes, algo maior do que 4 bytes, por exemplo, um inteiro de 64 bits, não pode ser alinhada automaticamente para um endereço de 8 bytes.
+Os tipos de dados maiores que 4 bytes não são alinhados automaticamente na pilha quando você usa o compilador x86 para compilar um aplicativo. Como a arquitetura do compilador x86 é uma pilha alinhada de 4 bytes, qualquer item maior que 4 bytes, por exemplo, um inteiro de 64 bits, não pode ser alinhado automaticamente a um endereço de 8 bytes.
 
-Trabalhar com dados não alinhados tem implicações de dois.
+Trabalhar com dados não alinhados tem duas implicações.
 
-- Pode levar mais tempo para acessar locais não alinhados, que é necessário para acessar locais alinhados.
+- Pode levar mais tempo para acessar locais não alinhados do que é necessário para acessar locais alinhados.
 
-- Locais não alinhados não podem ser usados em operações interconectadas.
+- Os locais não alinhados não podem ser usados em operações interbloqueadas.
 
-Se você precisar de mais de alinhamento estrito, use `__declspec(align(N))` em suas declarações de variável. Isso faz com que o compilador alinhar dinamicamente a pilha para atender às suas especificações. No entanto, ajustar dinamicamente a pilha em tempo de execução pode causar a execução mais lenta do seu aplicativo.
+Se você precisar de um alinhamento mais estrito, use `__declspec(align(N))` em suas declarações de variável. Isso faz com que o compilador alinhe dinamicamente a pilha para atender às suas especificações. No entanto, o ajuste dinâmico da pilha em tempo de execução pode causar uma execução mais lenta do seu aplicativo.
 
-## <a name="register-usage"></a>Uso do registro
+## <a name="register-usage"></a>Registrar uso
 
-X64 arquitetura fornece para 16 registros de uso geral (citados como registros de inteiros), bem como para 16 registros XMM/YMM registra disponíveis para uso de ponto flutuante. Os registros voláteis são registros a partir do zero presumidos pelo chamador para serem destruídos em uma chamada. Os registros não voláteis são obrigados a manter seus valores em uma chamada de função e devem ser salvos pelo receptor da chamada se usados.
+A arquitetura x64 fornece para 16 registros de uso geral (em seguida chamados de registros inteiros), bem como 16 registros XMM/YMM disponíveis para uso de ponto flutuante. Os registros voláteis são registros a partir do zero presumidos pelo chamador para serem destruídos em uma chamada. Os registros não voláteis são obrigados a manter seus valores em uma chamada de função e devem ser salvos pelo receptor da chamada se usados.
 
-### <a name="register-volatility-and-preservation"></a>Registrar a volatilidade e preservação
+### <a name="register-volatility-and-preservation"></a>Registrar volatilidade e preservação
 
 A tabela a seguir descreve como cada registro é usado nas chamadas de função:
 
 ||||
 |-|-|-|
-|Registro|Status|Use|
-|RAX|Volátil|Registro de valores retornados|
-|RCX|Volátil|Primeiro argumento inteiro|
-|RDX|Volátil|Segundo argumento inteiro|
-|R8|Volátil|Terceiro argumento inteiro|
-|R9|Volátil|Quarto argumento inteiro|
-|R10, R11|Volátil|Deve ser preservado, conforme a necessidade do chamador; usado em instruções syscall/sysret|
+|Registrar|Status|Use|
+|RAX|Volatile|Registro de valores retornados|
+|RCX|Volatile|Primeiro argumento inteiro|
+|RDX|Volatile|Segundo argumento inteiro|
+|R8|Volatile|Terceiro argumento inteiro|
+|R9|Volatile|Quarto argumento inteiro|
+|R10, R11|Volatile|Deve ser preservado, conforme a necessidade do chamador; usado em instruções syscall/sysret|
 |R12, R15|Não volátil|Deve ser preservado pelo receptor da chamada|
 |RDI|Não volátil|Deve ser preservado pelo receptor da chamada|
 |RSI|Não volátil|Deve ser preservado pelo receptor da chamada|
 |RBX|Não volátil|Deve ser preservado pelo receptor da chamada|
 |RBP|Não volátil|Pode ser usado como um ponteiro de quadro; deve ser preservado pelo receptor da chamada|
 |RSP|Não volátil|Ponteiro de pilha|
-|XMM0, YMM0|Volátil|Primeiro argumento FP; primeiro argumento de tipo vetorial quando `__vectorcall` for usado|
-|XMM1, YMM1|Volátil|Segundo argumento FP; segundo argumento de tipo vetorial quando `__vectorcall` for usado|
-|XMM2, YMM2|Volátil|Terceiro argumento FP; terceiro argumento de tipo vetorial quando `__vectorcall` for usado|
-|XMM3, YMM3|Volátil|Quarto argumento FP; quarto argumento de tipo vetorial quando `__vectorcall` for usado|
-|XMM4, YMM4|Volátil|Deve ser preservado conforme necessário pelo chamador; quinto argumento de tipo vetorial quando `__vectorcall` for usado|
-|XMM5, YMM5|Volátil|Deve ser preservado conforme necessário pelo chamador; sexto argumento de tipo vetorial quando `__vectorcall` for usado|
-|XMM6:XMM15, YMM6:YMM15|Não volátil (XMM), Volátil (metade superior de YMM)|Deve ser preservado pelo receptor da chamada. Os registros YMM devem ser preservados conforme necessário pelo chamador.|
+|XMM0, YMM0|Volatile|Primeiro argumento FP; primeiro argumento de tipo vetorial quando `__vectorcall` for usado|
+|XMM1, YMM1|Volatile|Segundo argumento FP; segundo argumento de tipo vetorial quando `__vectorcall` for usado|
+|XMM2, YMM2|Volatile|Terceiro argumento FP; terceiro argumento de tipo vetorial quando `__vectorcall` for usado|
+|XMM3, YMM3|Volatile|Quarto argumento FP; quarto argumento de tipo vetorial quando `__vectorcall` for usado|
+|XMM4, YMM4|Volatile|Deve ser preservado conforme necessário pelo chamador; quinto argumento de tipo vetorial quando `__vectorcall` for usado|
+|XMM5, YMM5|Volatile|Deve ser preservado conforme necessário pelo chamador; sexto argumento de tipo vetorial quando `__vectorcall` for usado|
+|XMM6:XMM15, YMM6:YMM15|Não volátil (XMM), Volátil (metade superior de YMM)|Deve ser preservado pelo receptor. Os registros YMM devem ser preservados conforme necessário pelo chamador.|
 
-Na saída da função e na entrada da função de biblioteca em tempo de execução C chamadas e chamadas do sistema Windows, o sinalizador de direção do CPU register sinalizadores é esperado a ser apagado.
+Na função Exit e na entrada de função para chamadas da biblioteca de tempo de execução C e chamadas de sistema do Windows, o sinalizador de direção no registro de sinalizadores de CPU deve ser limpo.
 
 ## <a name="stack-usage"></a>Uso da pilha
 
-Para obter detalhes sobre a alocação da pilha, alinhamento, tipos de função e quadros de pilha em x64, consulte [uso de pilha x64](stack-usage.md).
+Para obter detalhes sobre alocação de pilha, alinhamento, tipos de função e quadros de pilha em x64, consulte [uso de pilha x64](stack-usage.md).
 
 ## <a name="prolog-and-epilog"></a>Prólogo e epílogo
 
-Cada função que aloca espaço em pilha, chama outras funções, salva os registros não voláteis ou usa o tratamento de exceção deve ter um prólogo cujos limites de endereço são descritos nos dados de desenrolamento associados com a entrada da tabela de função respectiva e epílogos em cada saída para uma função. Para obter detalhes sobre o prólogo necessário e o código de epílogo em x64, consulte [x64 prólogo e epílogo](prolog-and-epilog.md).
+Cada função que aloca espaço de pilha, chama outras funções, salva registros não-voláteis ou usa tratamento de exceção deve ter um prólogo cujos limites de endereço sejam descritos nos dados de desenrolamento associados à entrada da respectiva tabela de funções e epilogs em cada saída para uma função. Para obter detalhes sobre o prólogo necessário e o código epílogo em x64, consulte [prólogo e epílogo de x64](prolog-and-epilog.md).
 
-## <a name="x64-exception-handling"></a>x64 tratamento de exceção
+## <a name="x64-exception-handling"></a>Tratamento de exceções x64
 
-Para obter informações sobre as convenções e estruturas de dados usadas para implementar o tratamento de exceções estruturado e comportamento em x64 de tratamento de exceções C++, consulte [x64 tratamento de exceção](exception-handling-x64.md).
+Para obter informações sobre as convenções e estruturas de dados usadas para implementar o tratamento C++ de exceção estruturado e o comportamento de manipulação de exceção no x64, consulte [manipulação de exceção de x64](exception-handling-x64.md).
 
-## <a name="intrinsics-and-inline-assembly"></a>Intrínsecos e embutida de assembly
+## <a name="intrinsics-and-inline-assembly"></a>Intrínsecos e assembly embutido
 
-Uma das restrições para o x64 compilador é fazer com que não há suporte de assembler embutido. Isso significa que funções que não pode ser gravada em C ou C++ será terá que ser escrito como sub-rotinas ou funções intrínsecas suportadas pelo compilador. Determinadas funções são dependentes do desempenho, enquanto outros não são. Funções de diferenciação de desempenho devem ser implementadas como funções intrínsecas.
+Uma das restrições para o compilador x64 é não ter suporte embutido para Assembler. Isso significa que as funções que não podem ser escritas em C++ C ou precisarão ser gravadas como sub-rotinas ou como funções intrínsecas com suporte pelo compilador. Determinadas funções são sensíveis ao desempenho, enquanto outras não. Funções sensíveis ao desempenho devem ser implementadas como funções intrínsecas.
 
-Os intrínsecos suportados pelo compilador são descritos em [intrínsecos do compilador](../intrinsics/compiler-intrinsics.md).
+Os intrínsecores suportados pelo compilador são descritos em [intrínsecos do compilador](../intrinsics/compiler-intrinsics.md).
 
-## <a name="image-format"></a>Formato de imagem
+## <a name="image-format"></a>Formato da imagem
 
-X64 é o formato de imagem executável PE32 +. Imagens executáveis (DLLs e EXEs) são restritas a um tamanho máximo de 2 gigabytes, para que o endereçamento relativo com um deslocamento de 32 bits pode ser usado para tratar dados de imagem estática. Esses dados incluem a tabela de endereços de importação, constantes de cadeia de caracteres, os dados globais estáticos e assim por diante.
+O formato de imagem executável x64 é PE32 +. Imagens executáveis (DLLs e EXEs) são restritas a um tamanho máximo de 2 gigabytes, portanto, o endereçamento relativo com uma substituição de 32 bits pode ser usado para endereçar dados de imagem estáticos. Esses dados incluem a tabela de endereços de importação, constantes de cadeia de caracteres, dados globais estáticos e assim por diante.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Convenções de chamada](../cpp/calling-conventions.md)

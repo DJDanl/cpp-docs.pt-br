@@ -18,11 +18,11 @@ helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
 ms.openlocfilehash: f0092f5f90bbdf253c09dbdc80849c3db472212f
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142889"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882932"
 ---
 # <a name="agent-class"></a>Classe agente
 
@@ -38,14 +38,14 @@ class agent;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[Agente](#ctor)|Sobrecarregado. Constrói um agente.|
 |[~ Destruidor de agente](#dtor)|Destrói o agente.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[cancel](#cancel)|Move um agente do `agent_created` ou `agent_runnable` Estados para o estado de `agent_canceled`.|
 |[start](#start)|Move um agente do estado de `agent_created` para o estado de `agent_runnable` e o agenda para execução.|
@@ -57,7 +57,7 @@ class agent;
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[done](#done)|Move um agente para o estado de `agent_done`, indicando que o agente foi concluído.|
 |[run](#run)|Representa a tarefa principal de um agente. `run` deve ser substituído em uma classe derivada e especifica o que o agente deve fazer depois de ser iniciado.|
@@ -70,7 +70,7 @@ Para obter mais informações, consulte [agentes assíncronos](../../../parallel
 
 `agent`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Agents. h
 
@@ -88,7 +88,7 @@ agent(Scheduler& _PScheduler);
 agent(ScheduleGroup& _PGroup);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_PScheduler*<br/>
 O objeto `Scheduler` no qual a tarefa de execução do agente está agendada.
@@ -198,7 +198,7 @@ static agent_status __cdecl wait(
     unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_PAgent*<br/>
 Um ponteiro para o agente aguardar.
@@ -228,7 +228,7 @@ static void __cdecl wait_for_all(
     unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *contagem*<br/>
 O número de ponteiros de agente presentes na matriz `_PAgents`.
@@ -261,7 +261,7 @@ static void __cdecl wait_for_one(
     unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *contagem*<br/>
 O número de ponteiros de agente presentes na matriz `_PAgents`.
@@ -284,6 +284,6 @@ Uma tarefa de agente é concluída quando o agente entra no `agent_canceled` ou 
 
 Se o parâmetro `_Timeout` tiver um valor diferente da constante `COOPERATIVE_TIMEOUT_INFINITE`, a exceção [operation_timed_out](operation-timed-out-class.md) será gerada se a quantidade de tempo especificada expirar antes que o agente tenha concluído sua tarefa.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)

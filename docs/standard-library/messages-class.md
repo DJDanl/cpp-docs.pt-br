@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687682"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884014"
 ---
 # <a name="messages-class"></a>Classe messages
 
@@ -42,9 +42,9 @@ template <class CharType>
 class messages : public messages_base;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 *CharType*
+\ *CharType*
 O tipo usado em um programa para codificar caracteres em uma localidade.
 
 ## <a name="remarks"></a>Comentários
@@ -55,31 +55,31 @@ Essa faceta, basicamente, abre um catálogo de mensagens definido na classe base
 
 ### <a name="constructors"></a>Construtores
 
-|Construtor|Descrição|
+|Construtor|DESCRIÇÃO|
 |-|-|
 |[messages](#messages)|A função de construtor de faceta de mensagem.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome de tipo|Descrição|
+|Nome do tipo|DESCRIÇÃO|
 |-|-|
 |[char_type](#char_type)|Um tipo de caractere usado para exibir mensagens.|
 |[string_type](#string_type)|Um tipo que descreve uma cadeia de caracteres do tipo `basic_string` que contém caracteres do tipo `CharType`.|
 
 ### <a name="member-functions"></a>Funções de membro
 
-|Função de membro|Descrição|
+|Função de membro|DESCRIÇÃO|
 |-|-|
 |[close](#close)|Fecha o catálogo de mensagens.|
 |[do_close](#do_close)|Uma função virtual chamada para perder o catálogo de mensagens.|
 |[do_get](#do_get)|Uma função virtual chamada para recuperar o catálogo de mensagens.|
 |[do_open](#do_open)|Uma função virtual chamada para abrir o catálogo de mensagens.|
 |[get](#get)|Recupera o catálogo de mensagens.|
-|[open](#open)|Abre o catálogo de mensagens.|
+|[abrir](#open)|Abre o catálogo de mensagens.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<locale>
+**Cabeçalho:** \<localidade >
 
 **Namespace:** std
 
@@ -103,9 +103,9 @@ Fecha o catálogo de mensagens.
 void close(catalog _Catval) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 *_Catval*
+*_Catval*\
 O catálogo a ser fechado.
 
 ### <a name="remarks"></a>Comentários
@@ -120,9 +120,9 @@ Uma função virtual chamada para perder o catálogo de mensagens.
 virtual void do_close(catalog _Catval) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 *_Catval*
+*_Catval*\
 O catálogo a ser fechado.
 
 ### <a name="remarks"></a>Comentários
@@ -147,18 +147,18 @@ virtual string_type do_get(
     const string_type& _Dfault) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 *_Catval*
+*_Catval*\
 O valor de identificação que especifica o catálogo de mensagens a ser pesquisado.
 
-*_ Definir* \
+*_Set*\
 O primeiro identificado usado para localizar uma mensagem em um catálogo de mensagens.
 
-@No__t_1 *_Message*
+*_Message*\
 O segundo identificado usado para localizar uma mensagem em um catálogo de mensagens.
 
-@No__t_1 *_Dfault*
+*_Dfault*\
 A cadeia de caracteres a ser retornada em caso de falha.
 
 ### <a name="return-value"></a>Valor retornado
@@ -167,7 +167,7 @@ Ele retorna uma cópia de *_Dfault* em caso de falha. Caso contrário, ela retor
 
 ### <a name="remarks"></a>Comentários
 
-A função membro protegido tenta obter uma sequência de mensagens do catálogo de mensagens *_Catval*. Ele pode fazer uso de *_ definir*, *_Message*e *_Dfault* ao fazer isso.
+A função membro protegido tenta obter uma sequência de mensagens do catálogo de mensagens *_Catval*. Ele pode fazer uso de *_Set*, *_Message*e *_Dfault* ao fazer isso.
 
 ### <a name="example"></a>Exemplo
 
@@ -183,12 +183,12 @@ virtual catalog do_open(
     const locale& _Loc) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 *_Catname*
+*_Catname*\
 O nome do catálogo a ser pesquisado.
 
-@No__t_1 *_Loc*
+*_Loc*\
 A localidade que está sendo pesquisada no catálogo.
 
 ### <a name="return-value"></a>Valor retornado
@@ -217,18 +217,18 @@ string_type get(
     const string_type& _Dfault) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 *_Catval*
+*_Catval*\
 O valor de identificação que especifica o catálogo de mensagens a ser pesquisado.
 
-*_ Definir* \
+*_Set*\
 O primeiro identificado usado para localizar uma mensagem em um catálogo de mensagens.
 
-@No__t_1 *_Message*
+*_Message*\
 O segundo identificado usado para localizar uma mensagem em um catálogo de mensagens.
 
-@No__t_1 *_Dfault*
+*_Dfault*\
 A cadeia de caracteres a ser retornada em caso de falha.
 
 ### <a name="return-value"></a>Valor retornado
@@ -252,12 +252,12 @@ protected: messages(
     size_t _Refs = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 *_Refs*
+*_Refs*\
 Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
-@No__t_1 *_Locname*
+*_Locname*\
 O nome da localidade.
 
 ### <a name="remarks"></a>Comentários
@@ -284,12 +284,12 @@ catalog open(
     const locale& _Loc) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 *_Catname*
+*_Catname*\
 O nome do catálogo a ser pesquisado.
 
-@No__t_1 *_Loc*
+*_Loc*\
 A localidade que está sendo pesquisada no catálogo.
 
 ### <a name="return-value"></a>Valor retornado
@@ -312,7 +312,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 O tipo descreve uma especialização do modelo de classe [basic_string](../standard-library/basic-string-class.md) cujos objetos podem armazenar cópias das sequências de mensagens.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<locale>](../standard-library/locale.md)\
 [Classe messages_base](../standard-library/messages-base-class.md)\

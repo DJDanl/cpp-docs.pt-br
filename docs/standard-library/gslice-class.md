@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
 ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448894"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866239"
 ---
 # <a name="gslice-class"></a>Classe gslice
 
@@ -29,9 +29,9 @@ A classe armazena os parâmetros que caracterizam a um objeto do tipo [gslice_ar
 
 - Um índice inicial.
 
-- Um vetor de comprimento de `valarray<size_t>`classe.
+- Um vetor de comprimento da classe `valarray<size_t>`.
 
-- Um vetor Stride da classe `valarray<size_t>`.
+- Um vetor Stride de classe `valarray<size_t>`.
 
 Os dois vetores devem ter o mesmo tamanho.
 
@@ -41,13 +41,13 @@ Operações em valarrays são garantidas somente se os subconjuntos de origem e 
 
 ### <a name="constructors"></a>Construtores
 
-|Construtor|Descrição|
+|Construtor|DESCRIÇÃO|
 |-|-|
 |[gslice](#gslice)|Define um subconjunto de um `valarray` que consiste em várias fatias do `valarray` que são iniciados todos em um elemento especificado.|
 
 ### <a name="member-functions"></a>Funções de membro
 
-|Função de membro|Descrição|
+|Função de membro|DESCRIÇÃO|
 |-|-|
 |[size](#size)|Encontra os valores da matriz especificando os números dos elementos em uma fatia geral de um `valarray`.|
 |[start](#start)|Localiza o índice inicial de uma fatia geral de um `valarray`.|
@@ -55,7 +55,7 @@ Operações em valarrays são garantidas somente se os subconjuntos de origem e 
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<valarray>
+**Cabeçalho:** \<valarray >
 
 **Namespace:** std
 
@@ -72,7 +72,7 @@ gslice(
     const valarray<size_t>& _IncArray);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_StartIndex*\
 O índice de valarray do primeiro elemento no subconjunto.
@@ -83,7 +83,7 @@ Uma matriz que especifica o número de elementos em cada fatia.
 *_IncArray*\
 Uma matriz que especifica a distância em cada fatia.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O construtor padrão armazena zero para o índice inicial e vetores de comprimento zero para os vetores de comprimento e distância. O segundo Construtor armazena *_StartIndex* para o índice inicial, *_LenArray* para a matriz de comprimento e *_IncArray* para a matriz Stride.
 
@@ -146,7 +146,7 @@ Encontra os valores da matriz especificando os números dos elementos em uma fat
 valarray<size_t> size() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valarray que especifica o número de elementos em cada fatia de uma fatia geral de um valarray.
 
@@ -224,7 +224,7 @@ Localiza o índice inicial de uma fatia geral de um valarray.
 size_t start() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O índice inicial de uma fatia geral de um valarray.
 
@@ -287,7 +287,7 @@ Encontra a distância entre os elementos em uma fatia geral de um valarray.
 valarray<size_t> stride() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valarray que especifica as distâncias entre os elementos em cada fatia de uma fatia geral de um valarray.
 
@@ -347,6 +347,6 @@ The strides of vaResult are:
 vaGSlice.stride ( ) = ( 7 4 ).
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

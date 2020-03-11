@@ -97,11 +97,11 @@ helpviewer_keywords:
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 ms.openlocfilehash: e93f5089e62956e7473c95eb6835046b5fe992bf
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189416"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883782"
 ---
 # <a name="array-class-c-standard-library"></a>Classe array (Biblioteca padrão C++)
 
@@ -114,16 +114,16 @@ template <class Ty, std::size_t N>
 class array;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |-|-|
 |`Ty`|O tipo de um elemento.|
 |`N`|O número de elementos.|
 
 ## <a name="members"></a>Membros
 
-|Definição do tipo|Descrição|
+|Definição do tipo|DESCRIÇÃO|
 |-|-|
 |[const_iterator](#const_iterator)|O tipo de um iterador de constante para a sequência controlada.|
 |[const_pointer](#const_pointer)|O tipo de um ponteiro de constante para um elemento.|
@@ -137,7 +137,7 @@ class array;
 |[size_type](#size_type)|O tipo de uma distância sem sinal entre dois elementos.|
 |[value_type](#value_type)|O tipo de um elemento.|
 
-|Função membro|Descrição|
+|Função membro|DESCRIÇÃO|
 |-|-|
 |[array](#array)|Constrói um objeto de matriz.|
 |[assign](#assign)|Substituí. Use `fill`.) Substitui todos os elementos.|
@@ -159,7 +159,7 @@ class array;
 |[size](#size)|Conta o número de elementos.|
 |[swap](#swap)|Alterna o conteúdo de dois contêineres.|
 
-|Operador|Descrição|
+|Operador|DESCRIÇÃO|
 |-|-|
 |[array::operator=](#op_eq)|Substitui a sequência controlada.|
 |[\] de array:: Operator\[](#op_at)|Acessa um elemento em uma posição especificada.|
@@ -174,9 +174,9 @@ array<int, 4> ai = { 1, 2, 3 };
 
 cria o objeto `ai` que contém quatro valores inteiros, inicializa os três primeiros elementos para os valores 1, 2 e 3, respectivamente, e inicializa o quarto elemento para 0.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<array>
+**Cabeçalho:** matriz de \<>
 
 **Namespace:** std
 
@@ -190,7 +190,7 @@ array();
 array(const array& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 Objeto ou intervalo a inserir.
@@ -253,7 +253,7 @@ reference at(size_type off);
 constexpr const_reference at(size_type off) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *desativar*\
 Posição do elemento a acessar.
@@ -895,9 +895,9 @@ Apaga uma matriz e copia os elementos especificados para a matriz vazia.
 void fill(const Type& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |-|-|
 |*val*|O valor do elemento sendo inserido na matriz.|
 
@@ -1080,7 +1080,7 @@ reference operator[](size_type off);
 constexpr const_reference operator[](size_type off) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *desativar*\
 Posição do elemento a acessar.
@@ -1131,7 +1131,7 @@ Substitui a sequência controlada.
 array<Value> operator=(array<Value> right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 O contêiner a ser copiado.
@@ -1495,7 +1495,7 @@ Troca o conteúdo dessa matriz com outra matriz.
 void swap(array& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 Matriz com a qual trocar conteúdo.
@@ -1600,6 +1600,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<array>](../standard-library/array.md)

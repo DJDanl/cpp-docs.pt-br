@@ -85,11 +85,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
 ms.openlocfilehash: 1ab57a6fc13a03d02963f3d7ecc80f63decb9487
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898706"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875813"
 ---
 # <a name="ltfilesystemgt-functions"></a>Funções &lt;filesystem&gt;
 
@@ -105,7 +105,7 @@ A função retorna o nome de caminho absoluto correspondente a *PVal* relativo a
 
 1. Se `pval.has_root_name() && pval.has_root_directory()` a função retornar *PVal*.
 
-1. Se `pval.has_root_name() && !pval.has_root_directory()` a função retornar `pval.root_name()` / `absolute(base).root_directory()` / `absolute(base).relative_path()` / .
+1. Se `pval.has_root_name() && !pval.has_root_directory()` a função retornar `pval.root_name()` / `absolute(base).root_directory()` / `absolute(base).relative_path()` / .`pval.relative_path()`
 
 1. Se `!pval.has_root_name() && pval.has_root_directory()` a função retornar `absolute(base).root_name()` / *PVal*.
 
@@ -323,26 +323,26 @@ uintmax_t file_size(const path& pval);
 uintmax_t file_size(const path& pval, error_code& ec) noexcept;
 ```
 
-The functions return the size in bytes of the file chosen by *pval*, if `exists(pval) && is_regular_file(pval)` and the file size can be determined. Otherwise they report an error and return `uintmax_t(-1)`.
+As funções retornam o tamanho em bytes do arquivo escolhido por *PVal*, se `exists(pval) && is_regular_file(pval)` e o tamanho do arquivo puder ser determinado. Caso contrário, eles relatarão um erro e retornarão `uintmax_t(-1)`.
 
-## <a name="hard_link_count"></a> hard_link_count
+## <a name="hard_link_count"></a>hard_link_count
 
 ```cpp
 uintmax_t hard_link_count(const path& pval);
 uintmax_t hard_link_count(const path& pval, error_code& ec) noexcept;
 ```
 
-The function returns the number of hard links for *pval*, or \-1 if an error occurs.
+A função retornará o número de links físicos para *PVal*, ou \-1 se ocorrer um erro.
 
-## <a name="hash_value"></a> hash_value
+## <a name="hash_value"></a>hash_value
 
 ```cpp
 size_t hash_value(const path& pval) noexcept;
 ```
 
-The function returns a hash value for `pval.native()`.
+A função retorna um valor de hash para `pval.native()`.
 
-## <a name="is_block_file"></a> is_block_file
+## <a name="is_block_file"></a>is_block_file
 
 ```cpp
 bool is_block_file(file_status stat) noexcept;
@@ -350,9 +350,9 @@ bool is_block_file(const path& pval);
 bool is_block_file(const path& pval, error_code& ec) noexcept;
 ```
 
-A primeira função retorna `stat.type() == file_type::block`. The remaining functions return `is_block_file(status(pval))`.
+A primeira função retorna `stat.type() == file_type::block`. As funções restantes retornam `is_block_file(status(pval))`.
 
-## <a name="is_character_file"></a> is_character_file
+## <a name="is_character_file"></a>is_character_file
 
 ```cpp
 bool is_character_file(file_status stat) noexcept;
@@ -360,9 +360,9 @@ bool is_character_file(const path& pval);
 bool is_character_file(const path& pval, error_code& ec) noexcept;
 ```
 
-A primeira função retorna `stat.type() == file_type::character`. The remaining functions return `is_character_file(status(pval))`.
+A primeira função retorna `stat.type() == file_type::character`. As funções restantes retornam `is_character_file(status(pval))`.
 
-## <a name="is_directory"></a> is_directory
+## <a name="is_directory"></a>is_directory
 
 ```cpp
 bool is_directory(file_status stat) noexcept;
@@ -370,9 +370,9 @@ bool is_directory(const path& pval);
 bool is_directory(const path& pval, error_code& ec) noexcept;
 ```
 
-A primeira função retorna `stat.type() == file_type::directory`. The remaining functions return `is_directory_file(status(pval))`.
+A primeira função retorna `stat.type() == file_type::directory`. As funções restantes retornam `is_directory_file(status(pval))`.
 
-## <a name="is_empty"></a> is_empty
+## <a name="is_empty"></a>is_empty
 
 ```cpp
 bool is_empty(file_status stat) noexcept;
@@ -380,9 +380,9 @@ bool is_empty(const path& pval);
 bool is_empty(const path& pval, error_code& ec) noexcept;
 ```
 
-If `is_directory(pval)`, then the function returns `directory_iterator(pval) == directory_iterator()`; otherwise it returns `file_size(pval) == 0`.
+Se `is_directory(pval)`, a função retornará `directory_iterator(pval) == directory_iterator()`; caso contrário, ele retornará `file_size(pval) == 0`.
 
-## <a name="is_fifo"></a> is_fifo
+## <a name="is_fifo"></a>is_fifo
 
 ```cpp
 bool is_fifo(file_status stat) noexcept;
@@ -390,9 +390,9 @@ bool is_fifo(const path& pval);
 bool is_fifo(const path& pval, error_code& ec) noexcept;
 ```
 
-A primeira função retorna `stat.type() == file_type::fifo`. The remaining functions return `is_fifo(status(pval))`.
+A primeira função retorna `stat.type() == file_type::fifo`. As funções restantes retornam `is_fifo(status(pval))`.
 
-## <a name="is_other"></a> is_other
+## <a name="is_other"></a>is_other
 
 ```cpp
 bool is_other(file_status stat) noexcept;
@@ -400,9 +400,9 @@ bool is_other(const path& pval);
 bool is_other(const path& pval, error_code& ec) noexcept;
 ```
 
-A primeira função retorna `stat.type() == file_type::other`. The remaining functions return `is_other(status(pval))`.
+A primeira função retorna `stat.type() == file_type::other`. As funções restantes retornam `is_other(status(pval))`.
 
-## <a name="is_regular_file"></a> is_regular_file
+## <a name="is_regular_file"></a>is_regular_file
 
 ```cpp
 bool is_regular_file(file_status stat) noexcept;
@@ -410,9 +410,9 @@ bool is_regular_file(const path& pval);
 bool is_regular_file(const path& pval, error_code& ec) noexcept;
 ```
 
-A primeira função retorna `stat.type() == file_type::regular`. The remaining functions return `is_regular_file(status(pval))`.
+A primeira função retorna `stat.type() == file_type::regular`. As funções restantes retornam `is_regular_file(status(pval))`.
 
-## <a name="is_socket"></a> is_socket
+## <a name="is_socket"></a>is_socket
 
 ```cpp
 bool is_socket(file_status stat) noexcept;
@@ -420,9 +420,9 @@ bool is_socket(const path& pval);
 bool is_socket(const path& pval, error_code& ec) noexcept;
 ```
 
-A primeira função retorna `stat.type() == file_type::socket`. The remaining functions return `is_socket(status(pval))`.
+A primeira função retorna `stat.type() == file_type::socket`. As funções restantes retornam `is_socket(status(pval))`.
 
-## <a name="is_symlink"></a> is_symlink
+## <a name="is_symlink"></a>is_symlink
 
 ```cpp
 bool is_symlink(file_status stat) noexcept;
@@ -430,9 +430,9 @@ bool is_symlink(const path& pval);
 bool is_symlink(const path& pval, error_code& ec) noexcept;
 ```
 
-A primeira função retorna `stat.type() == file_type::symlink`. The remaining functions return `is_symlink(status(pval))`.
+A primeira função retorna `stat.type() == file_type::symlink`. As funções restantes retornam `is_symlink(status(pval))`.
 
-## <a name="last_write_time"></a> last_write_time
+## <a name="last_write_time"></a>last_write_time
 
 ```cpp
 file_time_type last_write_time(const path& pval);
@@ -441,20 +441,20 @@ void last_write_time(const path& pval, file_time_type new_time);
 void last_write_time(const path& pval, file_time_type new_time, error_code& ec) noexcept;
 ```
 
-The first two functions return the time of last data modification for *pval*, or `file_time_type(-1)` if an error occurs. The last two functions set the time of last data modification for *pval* to *new_time*.
+As duas primeiras funções retornam a hora da última modificação de dados para *PVal*ou `file_time_type(-1)` se ocorrer um erro. As duas últimas funções definem a hora da última modificação de dados para *PVal* para *NEW_TIME*.
 
-## <a name="permissions"></a> permissions
+## <a name="permissions"></a>permissões
 
 ```cpp
 void permissions(const path& pval, perms mask);
 void permissions(const path& pval, perms mask, error_code& ec) noexcept;
 ```
 
-The functions set the permissions for the pathname chosen by *pval* to `mask & perms::mask` under control of `perms & (perms::add_perms | perms::remove_perms)`. *mask* shall contain at most one of `perms::add_perms` and `perms::remove_perms`.
+As funções definem as permissões para o nome de caminho escolhido por *PVal* para `mask & perms::mask` sob o controle de `perms & (perms::add_perms | perms::remove_perms)`. a *máscara* deve conter no máximo um dos `perms::add_perms` e `perms::remove_perms`.
 
-If `mask & perms::add_perms`, the functions set the permissions to `status(pval).permissions() | mask & perms::mask`. Otherwise, if `mask & perms::remove_perms`, the functions set the permissions to `status(pval).permissions() & ~(mask & perms::mask)`. Otherwise, the functions set the permissions to `mask & perms::mask`.
+Se `mask & perms::add_perms`, as funções definirão as permissões como `status(pval).permissions() | mask & perms::mask`. Caso contrário, se `mask & perms::remove_perms`, as funções definirão as permissões como `status(pval).permissions() & ~(mask & perms::mask)`. Caso contrário, as funções definem as permissões para `mask & perms::mask`.
 
-## <a name="proximate"></a> proximate
+## <a name="proximate"></a>proximate
 
 ```cpp
 path proximate(const path& p, error_code& ec);
@@ -462,16 +462,16 @@ path proximate(const path& p, const path& base = current_path());
 path proximate(const path& p, const path& base, error_code& ec);
 ```
 
-## <a name="read_symlink"></a> read_symlink
+## <a name="read_symlink"></a>read_symlink
 
 ```cpp
 path read_symlink(const path& pval);
 path read_symlink(const path& pval, error_code& ec);
 ```
 
-The functions report an error and return `path()` if `!is_symlink(pval)`. Caso contrário, as funções retornam um objeto do tipo `path` contendo o link simbólico.
+As funções relatam um erro e retornam `path()` se `!is_symlink(pval)`. Caso contrário, as funções retornam um objeto do tipo `path` contendo o link simbólico.
 
-## <a name="relative"></a> relative
+## <a name="relative"></a>acordo
 
 ```cpp
 path relative(const path& p, error_code& ec);
@@ -479,43 +479,43 @@ path relative(const path& p, const path& base = current_path());
 path relative(const path& p, const path& base, error_code& ec);
 ```
 
-## <a name="remove"></a> remove
+## <a name="remove"></a>exclu
 
 ```cpp
 bool remove(const path& pval);
 bool remove(const path& pval, error_code& ec) noexcept;
 ```
 
-The functions return **true** only if `exists(symlink_status(pval))` and the file is successfully removed. A symlink is itself removed, not the file it chooses.
+As funções retornarão **true** somente se `exists(symlink_status(pval))` e o arquivo for removido com êxito. Um symlink é removido, não o arquivo que ele escolhe.
 
-## <a name="remove_all"></a> remove_all
+## <a name="remove_all"></a>remove_all
 
 ```cpp
 uintmax_t remove_all(const path& pval);
 uintmax_t remove_all(const path& pval, error_code& ec) noexcept;
 ```
 
-If *pval* is a directory, the functions recursively remove all directory entries, then the entry itself. Otherwise, the functions call `remove`. Elas retornam uma contagem de todos os elementos removidos com êxito.
+Se *PVal* for um diretório, as funções removerão recursivamente todas as entradas de diretório e, em seguida, a própria entrada. Caso contrário, as funções chamarão `remove`. Elas retornam uma contagem de todos os elementos removidos com êxito.
 
-## <a name="rename"></a> rename
+## <a name="rename"></a>nome
 
 ```cpp
 void rename(const path& from, const path& to);
 void rename(const path& from, const path& to, error_code& ec) noexcept;
 ```
 
-The functions rename *from* to *to*. A symlink is itself renamed, not the file it chooses.
+As funções são renomeadas *de* *para.* Um symlink é renomeado, não o arquivo que ele escolhe.
 
-## <a name="resize_file"></a> resize_file
+## <a name="resize_file"></a>resize_file
 
 ```cpp
 void resize(const path& pval, uintmax_t size);
 void resize(const path& pval, uintmax_t size, error_code& ec) noexcept;
 ```
 
-The functions alter the size of a file such that `file_size(pval) == size`
+As funções alteram o tamanho de um arquivo de forma que `file_size(pval) == size`
 
-## <a name="space"></a> space
+## <a name="space"></a>disco
 
 ```cpp
 space_info space(const path& pval);

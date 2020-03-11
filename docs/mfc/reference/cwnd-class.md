@@ -819,11 +819,11 @@ helpviewer_keywords:
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
 ms.openlocfilehash: 1f0338d827a9ec92747169ff2682e6d47485e4c2
-ms.sourcegitcommit: 21e168731b8fe0eaff18f070cee5d54aa5782c2d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "77567880"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855423"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -843,7 +843,7 @@ class CWnd : public CCmdTarget
 |----------|-----------------|
 |[CWnd:: CWnd](#cwnd)|Constrói um objeto `CWnd`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|DESCRIÇÃO|
 |----------|-----------------|
@@ -1086,7 +1086,7 @@ class CWnd : public CCmdTarget
 |[CWnd:: WindowFromPoint](#windowfrompoint)|Identifica a janela que contém o ponto determinado.|
 |[CWnd:: WinHelp](#winhelp)|Chamado para iniciar o aplicativo WinHelp.|
 
-### <a name="protected-methods"></a>Métodos Protegidos
+### <a name="protected-methods"></a>Métodos protegidos
 
 |Nome|DESCRIÇÃO|
 |----------|-----------------|
@@ -1307,7 +1307,7 @@ Chamado pelo Framework para executar a ação padrão do objeto.
 virtual HRESULT accDoDefaultAction(VARIANT varChild);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *varChild*<br/>
 Especifica se a ação padrão a ser invocada é a do objeto ou um dos elementos filho do objeto. Esse parâmetro pode ser CHILDID_SELF (para executar a ação padrão do objeto) ou uma ID filho (para executar a ação padrão de um dos elementos filho do objeto).
@@ -1333,7 +1333,7 @@ virtual HRESULT accHitTest(
     VARIANT* pvarChild);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *xLeft*<br/>
 Coordenada X do ponto a ser testado (em unidades de tela).
@@ -1369,7 +1369,7 @@ virtual HRESULT accLocation(
     VARIANT varChild);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pxLeft*<br/>
 Recebe a coordenada x do canto superior esquerdo do objeto (em unidades de tela).
@@ -1407,7 +1407,7 @@ virtual HRESULT accNavigate(
     VARIANT* pvarEndUpAt);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *navDir*<br/>
 Especifica a direção da navegação. Consulte *navdir* em [IAccessible:: accNavigate](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accnavigate) na SDK do Windows.
@@ -1440,7 +1440,7 @@ virtual HRESULT accSelect(
     VARIANT varChild);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *flagsSelect*<br/>
 Especifica como alterar a seleção ou o foco atual. Consulte *flagsSelect* em [IAccessible:: accSelect](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accselect) na SDK do Windows.
@@ -1470,7 +1470,7 @@ BOOL AnimateWindow(
     DWORD dwFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwTime*<br/>
 Especifica quanto tempo leva para reproduzir a animação, em milissegundos. Normalmente, uma animação leva de 200 milissegundos para ser reproduzida.
@@ -1516,7 +1516,7 @@ Anexa uma janela do Windows a um objeto `CWnd`.
 BOOL Attach(HWND hWndNew);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWndNew*<br/>
 Especifica um identificador para uma janela do Windows.
@@ -1551,7 +1551,7 @@ Prepara `CWnd` para pintar e preencher uma estrutura de dados de `PAINTSTRUCT` c
 CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpPaint*<br/>
 Aponta para a estrutura [PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct) que deve receber informações de pintura.
@@ -1584,7 +1584,7 @@ void BindDefaultProperty(
     CWnd* pDSCWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDispID*<br/>
 Especifica o DISPID de uma propriedade em um controle de associação de dados que deve ser associado a um controle de fonte de dados.
@@ -1618,7 +1618,7 @@ void BindProperty(
     CWnd* pWndDSC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDispId*<br/>
 Especifica o DISPID de uma propriedade em um controle de associação de dados que deve ser associado a um controle de fonte de dados.
@@ -1664,7 +1664,7 @@ virtual void CalcWindowRect(
     UINT nAdjustType = adjustBorder);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpClientRect*<br/>
 [entrada, saída] Ponteiro para uma estrutura de retângulo. Na entrada, essa estrutura contém o retângulo do cliente. Depois que o método for concluído, essa estrutura conterá o retângulo de janela que pode conter o retângulo de cliente especificado.
@@ -1690,7 +1690,7 @@ Chame essa função de membro para remover uma dica de ferramenta da tela se uma
 static void PASCAL CancelToolTips(BOOL bKeys = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bKeys*<br/>
 TRUE para cancelar as dicas de ferramenta quando uma tecla for pressionada e definir o texto da barra de status para o padrão; caso contrário, FALSE.
@@ -1712,7 +1712,7 @@ Centraliza uma janela relativa ao seu pai.
 void CenterWindow(CWnd* pAlternateOwner = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pAlternateOwner*<br/>
 Ponteiro para uma janela alternativa relativa à qual ele será centralizado (diferente da janela pai).
@@ -1733,7 +1733,7 @@ Remove `CWnd` da cadeia de visualizadores da área de transferência e torna a j
 BOOL ChangeClipboardChain(HWND hWndNext);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWndNext*<br/>
 Identifica a janela a seguir `CWnd` na cadeia de visualizador da área de transferência.
@@ -1752,7 +1752,7 @@ void CheckDlgButton(
     UINT nCheck);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDButton*<br/>
 Especifica o botão a ser modificado.
@@ -1779,7 +1779,7 @@ void CheckRadioButton(
     int nIDCheckButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDFirstButton*<br/>
 Especifica o identificador de inteiro do primeiro botão de opção no grupo.
@@ -1810,7 +1810,7 @@ CWnd* ChildWindowFromPoint(
     UINT nFlags) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *empresas*<br/>
 Especifica as coordenadas do cliente do ponto a ser testado.
@@ -1847,7 +1847,7 @@ Converte as coordenadas do cliente de um determinado ponto ou retângulo na exib
 void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpPoint*<br/>
 Aponta para uma [estrutura de ponto](/windows/win32/api/windef/ns-windef-point) ou um objeto de `CPoint` que contém as coordenadas do cliente a serem convertidas.
@@ -1908,7 +1908,7 @@ virtual BOOL Create(
     CCreateContext* pContext = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszClassName*<br/>
 no Ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome de uma classe de janela do sistema registrada; ou o nome de uma classe de janela do sistema predefinida.
@@ -1961,7 +1961,7 @@ virtual HRESULT CreateAccessibleProxy(
     LRESULT* pResult);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *wParam*<br/>
 Identifica o objeto acessado pelo proxy de Acessibilidade Ativa. Pode ser um dos valores a seguir
@@ -1988,7 +1988,7 @@ Cria uma nova forma para o cursor do sistema e a propriedade de declarações do
 void CreateCaret(CBitmap* pBitmap);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBitmap*<br/>
 Identifica o bitmap que define a forma do cursor.
@@ -2045,7 +2045,7 @@ BOOL CreateControl(
     BSTR bstrLicKey = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pszClass*<br/>
 Essa cadeia de caracteres pode conter o "nome curto" (ProgID) do OLE para a classe, por exemplo, "CIRC3. Circ3Ctrl. 1 ". O nome precisa corresponder ao mesmo nome registrado pelo controle. Como alternativa, a cadeia de caracteres pode conter a forma de cadeia de caracteres de um CLSID, contido em chaves, por exemplo, "{9DBAFCCF-592F-101B-85CE-00608CEC297B}". Em ambos os casos, `CreateControl` converte a cadeia de caracteres para a ID de classe correspondente.
@@ -2136,7 +2136,7 @@ virtual BOOL CreateEx(
     LPVOID lpParam = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwExStyle*<br/>
 Combinação de bits bit (ou) de [estilos de janela estendida](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles); caso contrário, NULL para o estilo de janela estendido padrão.
@@ -2213,7 +2213,7 @@ void CreateGrayCaret(
     int nHeight);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nWidth*<br/>
 Especifica a largura do cursor (em unidades lógicas). Se esse parâmetro for 0, a largura será definida como a largura da borda da janela definida pelo sistema.
@@ -2247,7 +2247,7 @@ void CreateSolidCaret(
     int nHeight);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nWidth*<br/>
 Especifica a largura do cursor (em unidades lógicas). Se esse parâmetro for 0, a largura será definida como a largura da borda da janela definida pelo sistema.
@@ -2314,7 +2314,7 @@ virtual LRESULT DefWindowProc(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *message*<br/>
 Especifica a mensagem do Windows a ser processada.
@@ -2407,7 +2407,7 @@ int DlgDirList(
     UINT nFileType);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpPathSpec*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que contém o caminho ou o nome do arquivo. `DlgDirList` modifica essa cadeia de caracteres, que deve ser longa o suficiente para conter as modificações. Para obter mais informações, consulte a seguinte seção "Comentários".
@@ -2475,7 +2475,7 @@ int DlgDirListComboBox(
     UINT nFileType);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpPathSpec*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que contém o caminho ou o nome do arquivo. `DlgDirListComboBox` modifica essa cadeia de caracteres, portanto, esses dados não devem estar na forma de um literal de cadeia de caracteres. Consulte a seção "Comentários" a seguir.
@@ -2541,7 +2541,7 @@ BOOL DlgDirSelect(
     int nIDListBox);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpStr*<br/>
 Aponta para um buffer que deve receber a seleção atual na caixa de listagem.
@@ -2573,7 +2573,7 @@ BOOL DlgDirSelectComboBox(
     int nIDComboBox);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpStr*<br/>
 Aponta para um buffer que deve receber o caminho selecionado.
@@ -2603,7 +2603,7 @@ Chamado pelo Framework para trocar e validar dados de diálogo.
 virtual void DoDataExchange(CDataExchange* pDX);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto `CDataExchange`.
@@ -2630,7 +2630,7 @@ Chame essa função de membro de dentro de uma janela, usando um ponteiro `CWnd`
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *BAccept*<br/>
 Sinalizador que indica se os arquivos arrastados são aceitos.
@@ -2649,7 +2649,7 @@ Captura o mouse e controla seu movimento até que o usuário libere o botão esq
 BOOL DragDetect(POINT pt) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pt*<br/>
 Posição inicial do mouse, em coordenadas da tela. A função determina as coordenadas do retângulo de arrastar usando esse ponto.
@@ -2675,7 +2675,7 @@ BOOL DrawAnimatedRects(
     CONST RECT* lprcTo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *idAni*<br/>
 Especifica o tipo de animação. Se você especificar IDANI_CAPTION, a legenda da janela será animada da posição especificada por *lprcFrom* para a posição especificada por *lprcTo*. O efeito é semelhante à minimização ou à maximização de uma janela.
@@ -2705,7 +2705,7 @@ BOOL DrawCaption(
     UINT uFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Um ponteiro para um contexto de dispositivo. A função desenha a legenda da janela nesse contexto de dispositivo.
@@ -2760,7 +2760,7 @@ Habilita ou desabilita o Gerenciador de layout dinâmico. Quando o layout dinâm
 void EnableDynamicLayout(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 TRUE para habilitar o layout dinâmico; FALSE para desabilitar o layout dinâmico.
@@ -2779,7 +2779,7 @@ void EnableD2DSupport(
     BOOL bUseDCRenderTarget = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 Especifica se o suporte do D2D deve ser ativado ou desativado.
@@ -2797,7 +2797,7 @@ BOOL EnableScrollBar(
     UINT nArrowFlags = ESB_ENABLE_BOTH);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nSBFlags*<br/>
 Especifica o tipo de barra de rolagem. Pode ter um dos seguintes valores:
@@ -2833,7 +2833,7 @@ void EnableScrollBarCtrl(
     BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nBar*<br/>
 O identificador da barra de rolagem.
@@ -2853,7 +2853,7 @@ Habilita dicas de ferramenta para a janela especificada.
 BOOL EnableToolTips(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 Especifica se o controle de dica de ferramenta está habilitado ou desabilitado. VERDADEIRO habilita o controle; FALSE desabilita o controle.
@@ -2889,7 +2889,7 @@ Habilita ou desabilita as dicas de ferramentas de rastreamento.
 BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 Especifica se as dicas de ferramenta de rastreamento estão habilitadas ou desabilitadas. Se esse parâmetro for TRUE, as dicas da ferramenta de rastreamento serão habilitadas. Se esse parâmetro for FALSE, as dicas da ferramenta de rastreamento serão desabilitadas.
@@ -2910,7 +2910,7 @@ Habilita ou desabilita a entrada do mouse e do teclado.
 BOOL EnableWindow(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 Especifica se a janela especificada deve ser habilitada ou desabilitada. Se esse parâmetro for TRUE, a janela será habilitada. Se esse parâmetro for FALSE, a janela será desabilitada.
@@ -2945,7 +2945,7 @@ Encerra uma chamada para `RunModalLoop`.
 virtual void EndModalLoop(int nResult);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Nresultado*<br/>
 Contém o valor a ser retornado para o chamador de [RunModalLoop](#runmodalloop).
@@ -2970,7 +2970,7 @@ Marca o fim da pintura na janela especificada.
 void EndPaint(LPPAINTSTRUCT lpPaint);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpPaint*<br/>
 Aponta para uma estrutura [PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct) que contém as informações de pintura recuperadas pela função membro [BeginPaint](#beginpaint) .
@@ -2994,7 +2994,7 @@ BOOL ExecuteDlgInit(LPCTSTR lpszResourceName);
 BOOL ExecuteDlgInit(LPVOID lpResource);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszResourceName*<br/>
 Um ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do recurso.
@@ -3018,7 +3018,7 @@ Chamado pelo Framework para exibir mensagens de dica de ferramenta.
 void FilterToolTipMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMsg*<br/>
 Um ponteiro para a mensagem da dica de ferramenta.
@@ -3039,7 +3039,7 @@ static CWnd* PASCAL FindWindow(
     LPCTSTR lpszWindowName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszClassName*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que especifica o nome da classe da janela (uma estrutura de `WNDCLASS`). Se *lpClassName* for NULL, todos os nomes de classe serão correspondentes.
@@ -3073,7 +3073,7 @@ static CWnd* FindWindowEx(
     LPCTSTR lpszWindow);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hwndParent*<br/>
 Identificador para a janela pai cujas janelas filhas devem ser pesquisadas.
@@ -3103,7 +3103,7 @@ Pisca a determinada janela uma vez.
 BOOL FlashWindow(BOOL bInvert);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bInvert*<br/>
 Especifica se o `CWnd` deve ser atualizado ou retornado ao seu estado original. O `CWnd` será atualizado de um estado para outro se *bInvert* for verdadeiro. Se *bInvert* for false, a janela será retornada ao seu estado original (ativo ou inativo).
@@ -3137,7 +3137,7 @@ BOOL FlashWindowEx(
     DWORD dwTimeout);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwFlags*<br/>
 Especifica o status do flash. Para obter uma lista completa de valores, consulte a estrutura [FLASHWINFO](/windows/win32/api/winuser/ns-winuser-flashwinfo) .
@@ -3164,7 +3164,7 @@ Retorna um ponteiro para um objeto `CWnd` quando um identificador é fornecido a
 static CWnd* PASCAL FromHandle(HWND hWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWnd*<br/>
 Um HWND de uma janela do Windows.
@@ -3183,7 +3183,7 @@ Retorna um ponteiro para um objeto `CWnd` quando um identificador é fornecido a
 static CWnd* PASCAL FromHandlePermanent(HWND hWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWnd*<br/>
 Um HWND de uma janela do Windows.
@@ -3208,7 +3208,7 @@ virtual HRESULT get_accChild(
     IDispatch** ppdispChild);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *varChild*<br/>
 Identifica o filho cuja interface de `IDispatch` deve ser recuperada.
@@ -3236,7 +3236,7 @@ Chamado pelo Framework para recuperar o número de filhos pertencentes a este ob
 virtual HRESULT get_accChildCount(long* pcountChildren);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pcountChildren*<br/>
 Recebe o número de filhos.
@@ -3263,7 +3263,7 @@ virtual HRESULT get_accDefaultAction(
     BSTR* pszDefaultAction);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *varChild*<br/>
 Especifica se a ação padrão a ser recuperada é a do objeto ou um dos elementos filho do objeto. Esse parâmetro pode ser CHILDID_SELF (para obter informações sobre o objeto) ou uma ID filho (para obter informações sobre o elemento filho do objeto).
@@ -3293,7 +3293,7 @@ virtual HRESULT get_accDescription(
     BSTR* pszDescription);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *varChild*<br/>
 Especifica se a descrição a ser recuperada é a do objeto ou um dos elementos filho do objeto. Esse parâmetro pode ser CHILDID_SELF (para obter informações sobre o objeto) ou uma ID filho (para obter informações sobre o elemento filho do objeto).
@@ -3321,7 +3321,7 @@ Chamado pelo Framework para recuperar o objeto que tem o foco do teclado.
 virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pvarChild*<br/>
 Recebe informações sobre o objeto que tem o foco. Consulte *pvarID* em [IAccessible:: get_accFocus](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accfocus) no SDK do Windows.
@@ -3348,7 +3348,7 @@ virtual HRESULT get_accHelp(
     BSTR* pszHelp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *varChild*<br/>
 Especifica se as informações de ajuda a serem recuperadas são do objeto ou de um dos elementos filho do objeto. Esse parâmetro pode ser CHILDID_SELF (para obter informações sobre o objeto) ou uma ID filho (para obter informações sobre o elemento filho do objeto).
@@ -3379,7 +3379,7 @@ virtual HRESULT get_accHelpTopic(
     long* pidTopic);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pszHelpFile*<br/>
 Endereço de um BSTR que recebe o caminho completo do arquivo de `WinHelp` associado ao objeto especificado, se houver.
@@ -3412,7 +3412,7 @@ virtual HRESULT get_accKeyboardShortcut(
     BSTR* pszKeyboardShortcut);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *varChild*<br/>
 Especifica se o atalho de teclado a ser recuperado é o do objeto ou um dos elementos filho do objeto. Esse parâmetro pode ser CHILDID_SELF (para obter informações sobre o objeto) ou uma ID filho (para obter informações sobre o elemento filho do objeto).
@@ -3442,7 +3442,7 @@ virtual HRESULT get_accName(
     BSTR* pszName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *varChild*<br/>
 Especifica se o nome a ser recuperado é o do objeto ou um dos elementos filho do objeto. Esse parâmetro pode ser CHILDID_SELF (para obter informações sobre o objeto) ou uma ID filho (para obter informações sobre o elemento filho do objeto).
@@ -3470,7 +3470,7 @@ Chamado pelo Framework para recuperar a interface de `IDispatch` do pai do objet
 virtual HRESULT get_accParent(IDispatch** ppdispParent);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ppdispParent*<br/>
 Recebe o endereço da interface de `IDispatch` do objeto pai. A variável será definida como NULL se não existir nenhum pai ou se o filho não puder acessar seu pai.
@@ -3497,7 +3497,7 @@ virtual HRESULT get_accRole(
     VARIANT* pvarRole);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *varChild*<br/>
 Especifica se as informações de função a serem recuperadas são do objeto ou de um dos elementos filho do objeto. Esse parâmetro pode ser CHILDID_SELF (para obter informações sobre o objeto) ou uma ID filho (para obter informações sobre o elemento filho do objeto).
@@ -3525,7 +3525,7 @@ Chamado pelo Framework para recuperar os filhos selecionados deste objeto.
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pvarChildren*<br/>
 Recebe informações sobre quais filhos são selecionados. Consulte *pvarChildren* em [IAccessible:: get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) no SDK do Windows.
@@ -3552,7 +3552,7 @@ virtual HRESULT get_accState(
     VARIANT* pvarState);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *varChild*<br/>
 Especifica se as informações de estado a serem recuperadas são do objeto ou de um dos elementos filho do objeto. Esse parâmetro pode ser CHILDID_SELF (para obter informações sobre o objeto) ou uma ID filho (para obter informações sobre o elemento filho do objeto).
@@ -3582,7 +3582,7 @@ virtual HRESULT get_accValue(
     BSTR* pszValue);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *varChild*<br/>
 Especifica se as informações de valor a serem recuperadas são do objeto ou de um dos elementos filho do objeto. Esse parâmetro pode ser CHILDID_SELF (para obter informações sobre o objeto) ou uma ID filho (para obter informações sobre o elemento filho do objeto).
@@ -3626,7 +3626,7 @@ Recupera o objeto de janela ancestral da janela especificada.
 CWnd* GetAncestor(UINT gaFlags) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *gaFlags*<br/>
 Especifica o ancestral a ser recuperado. Para obter uma lista completa de valores possíveis, consulte [GetAncestor](/windows/win32/api/winuser/nf-winuser-getancestor).
@@ -3683,7 +3683,7 @@ int GetCheckedRadioButton(
     int nIDLastButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDFirstButton*<br/>
 Especifica o identificador de inteiro do primeiro botão de opção no grupo.
@@ -3703,7 +3703,7 @@ Copia as coordenadas do cliente da área `CWnd` cliente na estrutura apontada po
 void GetClientRect(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpRect*<br/>
 Aponta para uma [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) ou um objeto `CRect` para receber as coordenadas do cliente. Os membros `left` e `top` serão 0. Os membros `right` e `bottom` conterão a largura e a altura da janela.
@@ -3816,12 +3816,12 @@ CDC* GetDCEx(
     DWORD flags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *prgnClip*<br/>
 Identifica uma região de recorte que pode ser combinada com a região visível da janela do cliente.
 
-*flags*<br/>
+*sinalizadores*<br/>
 Pode ter um dos seguintes valores predefinidos:
 
 - DCX_CACHE retorna um contexto de dispositivo do cache em vez da janela OWNDC ou CLASSDC. Substitui CS_OWNDC e CS_CLASSDC.
@@ -3882,7 +3882,7 @@ CWnd* GetDescendantWindow(
     BOOL bOnlyPerm = FALSE) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Especifica o identificador do controle ou da janela filho a ser recuperada.
@@ -3946,7 +3946,7 @@ void GetDlgItem(
     HWND* phWnd) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Especifica o identificador do controle ou da janela filho a ser recuperada.
@@ -3979,7 +3979,7 @@ UINT GetDlgItemInt(
     BOOL bSigned = TRUE) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Especifica o identificador inteiro do controle da caixa de diálogo a ser traduzido.
@@ -4021,7 +4021,7 @@ int GetDlgItemText(
     CString& rString) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Especifica o identificador de inteiro do controle cujo título deve ser recuperado.
@@ -4145,7 +4145,7 @@ Chame essa função de membro para obter o identificador para um Big (32x32) ou 
 HICON GetIcon(BOOL bBigIcon) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bBigIcon*<br/>
 Especifica um ícone de 32 pixels por 32 pixels, se verdadeiro; Especifica um ícone de 16 pixels por 16 pixels, se for falso.
@@ -4189,7 +4189,7 @@ BOOL GetLayeredWindowAttributes(
     DWORD* pdwFlags) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pcrKey*<br/>
 Ponteiro para um valor de COLORREF que recebe a chave de cor de transparência a ser usada ao compor a janela em camadas. Todos os pixels pintados pela janela nessa cor serão transparentes. Isso pode ser nulo se o argumento não for necessário.
@@ -4241,7 +4241,7 @@ BOOL GetMenuBarInfo(
     PMENUBARINFO pmbi) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *idObject*<br/>
 Especifica o objeto de menu. Para obter uma lista de valores possíveis, consulte [GetMenuBarInfo](/windows/win32/api/winuser/nf-winuser-getmenubarinfo).
@@ -4273,7 +4273,7 @@ COleControlSiteOrWnd* GetNextDlgGroupItem(
     COleControlSiteOrWnd* pCurSiteOrWnd = NULL) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWndCtl*<br/>
 Identifica o controle a ser usado como ponto de partida para a pesquisa.
@@ -4319,7 +4319,7 @@ COleControlSiteOrWnd* GetNextDlgTabItem(
     BOOL bPrevious) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWndCtl*<br/>
 Identifica o controle a ser usado como ponto de partida para a pesquisa.
@@ -4346,7 +4346,7 @@ Pesquisa a próxima janela (ou anterior) na lista do Gerenciador de janelas.
 CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nalização*<br/>
 Especifica se a função retorna um ponteiro para a próxima janela ou para a janela anterior. Pode ser GW_HWNDNEXT, que retorna a janela que segue o objeto `CWnd` na lista do Gerenciador de janelas, ou GW_HWNDPREV, que retorna a janela anterior na lista do Gerenciador de janelas.
@@ -4371,7 +4371,7 @@ Recupera o site personalizado para o controle ActiveX especificado.
 COleControlSite* GetOleControlSite(UINT idControl) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *idControl*<br/>
 A ID do controle ActiveX.
@@ -4467,7 +4467,7 @@ void GetProperty(
     void* pvProp)const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDispID*<br/>
 Identifica a propriedade a ser recuperada.
@@ -4525,7 +4525,7 @@ static CWnd* GetSafeOwner(
     HWND* pWndTop = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParent*<br/>
 Um ponteiro para uma janela de `CWnd` pai. Pode ser NULL.
@@ -4552,7 +4552,7 @@ Chame essa função de membro para obter um ponteiro para a barra de rolagem irm
 virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nBar*<br/>
 Especifica o tipo de barra de rolagem. O parâmetro pode ter um dos seguintes valores:
@@ -4579,7 +4579,7 @@ BOOL GetScrollBarInfo(
     PSCROLLBARINFO psbi) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *idObject*<br/>
 Especifica o objeto de menu. Para obter uma lista de valores possíveis, consulte [GetScrollBarInfo](/windows/win32/api/winuser/nf-winuser-getscrollbarinfo).
@@ -4606,7 +4606,7 @@ BOOL GetScrollInfo(
     UINT nMask = SIF_ALL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nBar*<br/>
 Especifica se a barra de rolagem é um controle ou parte da área não cliente de uma janela. Se ele fizer parte da área não cliente, *NBAR* também indicará se a barra de rolagem está posicionada horizontalmente, verticalmente ou ambas. Ele deve ser um dos seguintes:
@@ -4643,7 +4643,7 @@ Chame essa função de membro para recuperar a posição máxima de rolagem da b
 int GetScrollLimit(int nBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nBar*<br/>
 Especifica o tipo de barra de rolagem. O parâmetro pode ter um dos seguintes valores:
@@ -4664,7 +4664,7 @@ Recupera a posição atual da caixa de rolagem de uma barra de rolagem.
 int GetScrollPos(int nBar) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nBar*<br/>
 Especifica a barra de rolagem a ser examinada. O parâmetro pode ter um dos seguintes valores:
@@ -4692,7 +4692,7 @@ void GetScrollRange(
     LPINT lpMaxPos) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nBar*<br/>
 Especifica a barra de rolagem a ser examinada. O parâmetro pode ter um dos seguintes valores:
@@ -4733,7 +4733,7 @@ Permite que o aplicativo acesse o menu de controle para cópia e modificação.
 CMenu* GetSystemMenu(BOOL bRevert) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bRevert*<br/>
 Especifica a ação a ser executada. Se *bRevert* for FALSE, `GetSystemMenu` retornará um identificador para uma cópia do menu de controle em uso no momento. Essa cópia é inicialmente idêntica ao menu de controle, mas pode ser modificada. Se *bRevert* for TRUE, `GetSystemMenu` redefinirá o menu Control de volta para o estado padrão. O menu de controle anterior, possivelmente modificado,, se houver, é destruído. O valor de retorno é indefinido nesse caso.
@@ -4766,7 +4766,7 @@ Recupera informações sobre a barra de título especificada.
 BOOL GetTitleBarInfo(PTITLEBARINFO pti) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pti*<br/>
 Ponteiro para uma estrutura [TITLEBARINFO](/windows/win32/api/winuser/ns-winuser-titlebarinfo) que recebe as informações.
@@ -4855,7 +4855,7 @@ BOOL GetUpdateRect(
     BOOL bErase = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpRect*<br/>
 Aponta para uma `CRect` objeto ou [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) que deve receber as coordenadas do cliente da atualização que inclui a região de atualização.
@@ -4891,7 +4891,7 @@ int GetUpdateRgn(
     BOOL bErase = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pRgn*<br/>
 Identifica a região de atualização.
@@ -4925,7 +4925,7 @@ Retorna um ponteiro para a janela solicitada ou NULL se None.
 CWnd* GetWindow(UINT nCmd) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nCmd*<br/>
 Especifica a relação entre `CWnd` e a janela retornada. Ele pode ter um dos seguintes valores:
@@ -5004,7 +5004,7 @@ Recupera informações sobre a janela.
 BOOL GetWindowInfo(PWINDOWINFO pwi) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *PWI*<br/>
 Um ponteiro para uma estrutura [WINDOWINFO](/windows/win32/api/winuser/ns-winuser-windowinfo) .
@@ -5033,7 +5033,7 @@ Recupera o estado de exibição e as posições normais (restauradas), minimizad
 BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpwndpl*<br/>
 Aponta para a estrutura de `WINDOWPLACEMENT` que recebe as informações de estado e posição de exibição.
@@ -5054,7 +5054,7 @@ Copia as dimensões do retângulo delimitador do objeto `CWnd` para a estrutura 
 void GetWindowRect(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpRect*<br/>
 Aponta para um objeto `CRect` ou uma [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) que receberá as coordenadas de tela dos cantos superior esquerdo e inferior direito.
@@ -5071,7 +5071,7 @@ Chame essa função de membro para obter a região da janela de uma janela.
 int GetWindowRgn(HRGN hRgn)const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hRgn*<br/>
 Um identificador para uma região de janela.
@@ -5109,7 +5109,7 @@ void GetWindowText(
     CString& rString) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszStringBuf*<br/>
 Aponta para o buffer que deve receber a cadeia de caracteres copiada do título da janela.
@@ -5181,7 +5181,7 @@ BOOL HiliteMenuItem(
     UINT nHilite);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMenu*<br/>
 Identifica o menu de nível superior que contém o item a ser realçado.
@@ -5218,7 +5218,7 @@ virtual void HtmlHelp(
     UINT nCmd = 0x000F);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwData*<br/>
 Especifica dados adicionais. O valor usado depende do valor do parâmetro *nCmd* .
@@ -5250,7 +5250,7 @@ Invalida toda a área do cliente de `CWnd`.
 void Invalidate(BOOL bErase = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bErase*<br/>
 Especifica se o plano de fundo dentro da região de atualização deve ser apagado.
@@ -5277,7 +5277,7 @@ void InvalidateRect(
     BOOL bErase = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpRect*<br/>
 Aponta para um objeto `CRect` ou uma [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) que contém o retângulo (em coordenadas do cliente) a ser adicionado à região de atualização. Se *lpRect* for NULL, toda a área do cliente será adicionada à região.
@@ -5303,7 +5303,7 @@ void InvalidateRgn(
     BOOL bErase = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pRgn*<br/>
 Um ponteiro para um objeto [CRgn](../../mfc/reference/crgn-class.md) que identifica a região a ser adicionada à região de atualização. Pressupõe-se que a região tenha coordenadas de cliente. Se esse parâmetro for nulo, toda a área do cliente será adicionada à região de atualização.
@@ -5335,7 +5335,7 @@ void AFX_CDECL InvokeHelper(
     ... );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDispID*<br/>
 Identifica o método ou a propriedade a ser invocada.
@@ -5374,7 +5374,7 @@ Indica se a janela especificada por *pWnd* é uma janela filho ou outro descende
 BOOL IsChild(const CWnd* pWnd) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 Identifica a janela a ser testada.
@@ -5407,7 +5407,7 @@ Chamar essa função de membro para determinar se a mensagem fornecida é destin
 BOOL IsDialogMessage(LPMSG lpMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpMsg*<br/>
 Aponta para uma estrutura de [msg](/windows/win32/api/winuser/ns-winuser-msg) que contém a mensagem a ser verificada.
@@ -5432,7 +5432,7 @@ Determina se um controle de botão tem uma marca de seleção ao lado dele.
 UINT IsDlgButtonChecked(int nIDButton) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDButton*<br/>
 Especifica o identificador de inteiro do controle de botão.
@@ -5547,7 +5547,7 @@ Elimina o evento de timer identificado por *nIDEvent* da chamada anterior para `
 BOOL KillTimer(UINT_PTR nIDEvent);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDEvent*<br/>
 O valor do evento de timer passado para [SetTimer](#settimer).
@@ -5572,7 +5572,7 @@ Chamado pelo Framework para carregar informações de layout dinâmico do arquiv
 BOOL LoadDynamicLayoutResource(LPCTSTR lpszResourceName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszResourceName*<br/>
 O nome do recurso que contém as informações de layout dinâmico desejadas para esta janela.
@@ -5634,7 +5634,7 @@ void MapWindowPoints(
     UINT nCount) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pwndTo*<br/>
 Identifica a janela para a qual os pontos são convertidos. Se esse parâmetro for nulo, os pontos serão convertidos em coordenadas da tela.
@@ -5659,7 +5659,7 @@ int MessageBox(
     UINT nType = MB_OK);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszText*<br/>
 Aponta para um objeto `CString` ou uma cadeia de caracteres terminada em nulo que contém a mensagem a ser exibida.
@@ -5702,7 +5702,7 @@ BOOL ModifyStyle(
     UINT nFlags = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwRemove*<br/>
 Especifica os estilos de janela a serem removidos durante a modificação do estilo.
@@ -5751,7 +5751,7 @@ BOOL ModifyStyleEx(
     UINT nFlags = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwRemove*<br/>
 Especifica os estilos estendidos a serem removidos durante a modificação do estilo.
@@ -5803,7 +5803,7 @@ void MoveWindow(
     BOOL bRepaint = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Especifica a nova posição do lado esquerdo do `CWnd`.
@@ -5844,7 +5844,7 @@ void NotifyWinEvent(
     LONG idObject);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *event*<br/>
 Especifica o evento que ocorreu. Esse valor deve ser uma das [constantes de evento](/windows/win32/WinAuto/event-constants).
@@ -5870,7 +5870,7 @@ afx_msg void OnActivate(
     BOOL bMinimized);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nState*<br/>
 Especifica se a `CWnd` está sendo ativada ou desativada. Pode ser um dos seguintes valores:
@@ -5906,7 +5906,7 @@ afx_msg void OnActivateApp(
     DWORD dwThreadID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bActive*<br/>
 Especifica se a `CWnd` está sendo ativada ou desativada. VERDADEIRO significa que o `CWnd` está sendo ativado. FALSE significa que a `CWnd` está sendo desativada.
@@ -5930,7 +5930,7 @@ virtual BOOL OnAmbientProperty(
     VARIANT* pvar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pSite*<br/>
 Ponteiro para o site do controle que solicitou a propriedade de ambiente.
@@ -5961,7 +5961,7 @@ afx_msg void OnAppCommand(
     UINT nKey);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -5987,7 +5987,7 @@ afx_msg void OnAskCbFormatName(
     LPTSTR lpszString);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nMaxCount*<br/>
 Especifica o número máximo de bytes a serem copiados.
@@ -6026,7 +6026,7 @@ A estrutura chama essa função de membro para notificar a janela que está perd
 afx_msg void OnCaptureChanged(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 Um ponteiro para a janela para obter captura do mouse
@@ -6050,7 +6050,7 @@ afx_msg void OnChangeCbChain(
     HWND hWndAfter);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWndRemove*<br/>
 Especifica o identificador de janela que está sendo removido da cadeia de visualizador da área de transferência.
@@ -6075,7 +6075,7 @@ afx_msg void OnChangeUIState(
     UINT nUIElement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nAction*<br/>
 Especifica a ação a ser executada. Pode ser um dos seguintes valores:
@@ -6110,7 +6110,7 @@ afx_msg void OnChar(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nChar*<br/>
 Contém o valor do código de caractere da chave.
@@ -6153,7 +6153,7 @@ afx_msg int OnCharToItem(
     UINT nIndex);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nChar*<br/>
 Especifica o valor da chave pressionada pelo usuário.
@@ -6193,7 +6193,7 @@ virtual BOOL OnChildNotify(
     LRESULT* pResult);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *message*<br/>
 Um número de mensagem do Windows enviado a uma janela pai.
@@ -6249,7 +6249,7 @@ afx_msg void OnColorizationColorChanged(
     BOOL bOpacity);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -6273,7 +6273,7 @@ virtual BOOL OnCommand(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *wParam*<br/>
 A palavra de ordem inferior de *wParam* identifica a ID de comando do item de menu, controle ou acelerador. A palavra de ordem superior de *wParam* especifica a mensagem de notificação se a mensagem for de um controle. Se a mensagem for de um acelerador, a palavra de ordem superior será 1. Se a mensagem for de um menu, a palavra de ordem superior será 0.
@@ -6302,7 +6302,7 @@ A estrutura chama essa função de membro para todas as janelas de nível superi
 afx_msg void OnCompacting(UINT nCpuTime);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nCpuTime*<br/>
 Especifica a taxa de tempo de CPU atualmente gasto pela memória de compactação do Windows para o tempo de CPU gasto na execução de outras operações. Por exemplo, 8000h representa 50% do tempo de CPU gasto na compactação da memória.
@@ -6326,7 +6326,7 @@ afx_msg int OnCompareItem(
     LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDCtl*<br/>
 O identificador do controle que enviou a mensagem de WM_COMPAREITEM.
@@ -6380,7 +6380,7 @@ afx_msg void OnContextMenu(
     CPoint pos);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 Manipule a janela na qual o usuário clicou com o botão direito do mouse. Essa pode ser uma janela filho da janela que recebe a mensagem. Para obter mais informações sobre como processar essa mensagem, consulte a seção comentários.
@@ -6404,7 +6404,7 @@ afx_msg BOOL OnCopyData(
     COPYDATASTRUCT* pCopyDataStruct);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 Um ponteiro para um objeto `CWnd` que está enviando os dados.
@@ -6437,7 +6437,7 @@ A estrutura chama essa função de membro quando um aplicativo solicita que a ja
 afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpCreateStruct*<br/>
 Aponta para uma estrutura [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) que contém informações sobre o objeto `CWnd` que está sendo criado.
@@ -6468,7 +6468,7 @@ afx_msg HBRUSH OnCtlColor(
     UINT nCtlColor);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Contém um ponteiro para o contexto de exibição da janela filho. Pode ser temporário.
@@ -6525,7 +6525,7 @@ afx_msg void OnDeadChar(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nChar*<br/>
 Especifica o valor de caractere de chave inativa.
@@ -6569,7 +6569,7 @@ afx_msg void OnDeleteItem(
     LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDCtl*<br/>
 O identificador do controle que enviou a mensagem de WM_DELETEITEM.
@@ -6618,7 +6618,7 @@ afx_msg BOOL OnDeviceChange(
     DWORD_PTR dwData);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nEventType*<br/>
 Um tipo de evento. Consulte a seção comentários para obter uma descrição dos valores disponíveis
@@ -6661,7 +6661,7 @@ A estrutura chama essa função de membro para todos os objetos de `CWnd` de ní
 afx_msg void OnDevModeChange(LPTSTR lpDeviceName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpDeviceName*<br/>
 Aponta para o nome do dispositivo especificado no arquivo de inicialização do Windows, WIN. Personalizado.
@@ -6702,7 +6702,7 @@ virtual void OnDrawIconicThumbnailOrLivePreview(
     BOOL& bAlphaChannelSet);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dc*<br/>
 Especifica o contexto do dispositivo.
@@ -6733,7 +6733,7 @@ afx_msg void OnDrawItem(
     LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDCtl*<br/>
 Contém o identificador do controle que enviou a mensagem de WM_DRAWITEM. Se um menu enviou a mensagem, *nIDCtl* conterá 0.
@@ -6760,7 +6760,7 @@ A estrutura chama essa função de membro quando o usuário libera o botão esqu
 afx_msg void OnDropFiles(HDROP hDropInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hDropInfo*<br/>
 Um ponteiro para uma estrutura de dados interna que descreve os arquivos descartados. Esse identificador é usado pelas funções `DragFinish`, `DragQueryFile`e `DragQueryPoint` do Windows para recuperar informações sobre os arquivos ignorados.
@@ -6780,7 +6780,7 @@ A estrutura chama essa função de membro quando um aplicativo altera o estado h
 afx_msg void OnEnable(BOOL bEnable);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 Especifica se o objeto de `CWnd` foi habilitado ou desabilitado. Esse parâmetro será TRUE se o `CWnd` tiver sido habilitado; será FALSE se o `CWnd` tiver sido desabilitado.
@@ -6800,7 +6800,7 @@ A estrutura chama essa função de membro depois que o objeto `CWnd` retornou um
 afx_msg void OnEndSession(BOOL bEnding);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Curvatura*<br/>
 Especifica se a sessão está sendo encerrada ou não. Será verdadeiro se a sessão estiver sendo encerrada; caso contrário, FALSE.
@@ -6826,7 +6826,7 @@ afx_msg void OnEnterIdle(
     CWnd* pWho);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nWhy*<br/>
 Especifica se a mensagem é o resultado de uma caixa de diálogo ou de um menu que está sendo exibido. Esse parâmetro pode ser um dos seguintes valores:
@@ -6853,7 +6853,7 @@ A estrutura chama essa função de membro quando um loop modal de menu é inseri
 afx_msg void OnEnterMenuLoop(BOOL bIsTrackPopupMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bIsTrackPopupMenu*<br/>
 Especifica se o menu envolvido é um menu pop-up. Tem um valor diferente de zero se a função for bem-sucedida; caso contrário, 0.
@@ -6888,7 +6888,7 @@ A estrutura chama essa função de membro quando o plano de fundo do objeto de `
 afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Especifica o objeto do contexto do dispositivo.
@@ -6920,7 +6920,7 @@ A estrutura chama essa função de membro quando um loop modal de menu é encerr
 afx_msg void OnExitMenuLoop(BOOL bIsTrackPopupMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bIsTrackPopupMenu*<br/>
 Especifica se o menu envolvido é um menu pop-up. Tem um valor diferente de zero se a função for bem-sucedida; caso contrário, 0.
@@ -7009,7 +7009,7 @@ A estrutura chama essa função de membro sempre que o Windows precisa saber a p
 afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpMMI*<br/>
 Aponta para uma estrutura de `MINMAXINFO` que contém informações sobre o tamanho e a posição maximizados de uma janela e seu tamanho mínimo e máximo de rastreamento. Para obter mais informações sobre essa estrutura, consulte a estrutura [MINMAXINFO](/windows/win32/api/winuser/ns-winuser-minmaxinfo) .
@@ -7067,7 +7067,7 @@ Chamado pelo Framework quando o usuário pressiona a tecla F1.
 afx_msg BOOL OnHelpInfo(HELPINFO* lpHelpInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpHelpInfo*<br/>
 Ponteiro para uma estrutura [HELPINFO](/windows/win32/api/winuser/ns-winuser-helpinfo) que contém informações sobre o item de menu, controle, caixa de diálogo ou janela para a qual a ajuda é solicitada.
@@ -7103,7 +7103,7 @@ afx_msg void OnHotKey(
     UINT nKey2);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -7129,7 +7129,7 @@ afx_msg void OnHScroll(
     CScrollBar* pScrollBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nSBCode*<br/>
 Especifica um código de barra de rolagem que indica a solicitação de rolagem do usuário. Esse parâmetro pode ser um dos seguintes:
@@ -7182,7 +7182,7 @@ afx_msg void OnHScrollClipboard(
     UINT nPos);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pClipAppWnd*<br/>
 Especifica um ponteiro para uma janela do Visualizador da área de transferência. O ponteiro pode ser temporário e não deve ser armazenado para uso posterior.
@@ -7224,7 +7224,7 @@ A estrutura chama essa função de membro para um objeto de `CWnd` minimizado (i
 afx_msg void OnIconEraseBkgnd(CDC* pDC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Especifica o objeto de contexto de dispositivo do ícone. Pode ser temporário e não deve ser armazenado para uso posterior.
@@ -7246,7 +7246,7 @@ A estrutura chama essa função de membro quando um menu está prestes a se torn
 afx_msg void OnInitMenu(CMenu* pMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMenu*<br/>
 Especifica o menu a ser inicializado. Pode ser temporário e não deve ser armazenado para uso posterior.
@@ -7271,7 +7271,7 @@ afx_msg void OnInitMenuPopup(
     BOOL bSysMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pPopupMenu*<br/>
 Especifica o objeto de menu do menu pop-up. Pode ser temporário e não deve ser armazenado para uso posterior.
@@ -7297,7 +7297,7 @@ A estrutura chama essa função de membro quando um dispositivo de e/s é adicio
 afx_msg void OnInputDeviceChange(unsigned short uFlag);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -7320,7 +7320,7 @@ afx_msg void OnInputLangChange(
     UINT nLocaleId);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -7344,7 +7344,7 @@ afx_msg void OnInputLangChangeRequest(
     UINT nLocaleId);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -7369,7 +7369,7 @@ afx_msg void OnKeyDown(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nChar*<br/>
 Especifica o código de chave virtual da chave fornecida. Para obter uma lista de códigos de chaves virtuais padrão, consulte WinUser. h
@@ -7414,7 +7414,7 @@ afx_msg void OnKeyUp(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nChar*<br/>
 Especifica o código de chave virtual da chave fornecida. Para obter uma lista de códigos de chaves virtuais padrão, consulte WinUser. h
@@ -7454,7 +7454,7 @@ A estrutura chama essa função de membro imediatamente antes de perder o foco d
 afx_msg void OnKillFocus(CWnd* pNewWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pNewWnd*<br/>
 Especifica um ponteiro para a janela que recebe o foco de entrada (pode ser nulo ou pode ser temporário).
@@ -7476,7 +7476,7 @@ afx_msg void OnLButtonDblClk(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFlags*<br/>
 Indica se várias chaves virtuais estão inativas. Esse parâmetro pode ser qualquer combinação dos seguintes valores:
@@ -7511,7 +7511,7 @@ afx_msg void OnLButtonDown(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFlags*<br/>
 Indica se várias chaves virtuais estão inativas. Esse parâmetro pode ser qualquer combinação dos seguintes valores:
@@ -7544,7 +7544,7 @@ afx_msg void OnLButtonUp(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFlags*<br/>
 Indica se várias chaves virtuais estão inativas. Esse parâmetro pode ser qualquer combinação dos seguintes valores:
@@ -7575,7 +7575,7 @@ afx_msg void OnMButtonDblClk(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFlags*<br/>
 Indica se várias chaves virtuais estão inativas. Esse parâmetro pode ser qualquer combinação dos seguintes valores:
@@ -7610,7 +7610,7 @@ afx_msg void OnMButtonDown(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFlags*<br/>
 Indica se várias chaves virtuais estão inativas. Esse parâmetro pode ser qualquer combinação dos seguintes valores:
@@ -7643,7 +7643,7 @@ afx_msg void OnMButtonUp(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFlags*<br/>
 Indica se várias chaves virtuais estão inativas. Esse parâmetro pode ser qualquer combinação dos seguintes valores:
@@ -7675,7 +7675,7 @@ afx_msg void OnMDIActivate(
     CWnd* pDeactivateWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bActivate*<br/>
 TRUE se o filho estiver sendo ativado e FALSE se estiver sendo desativado.
@@ -7702,7 +7702,7 @@ afx_msg void OnMeasureItem(
     int nIDCtl, LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDCtl*<br/>
 A ID do controle.
@@ -7736,7 +7736,7 @@ afx_msg LRESULT OnMenuChar(
     CMenu* pMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nChar*<br/>
 Dependendo das configurações de compilação, especifica o caractere ANSI ou Unicode que o usuário pressionou.
@@ -7776,7 +7776,7 @@ afx_msg UINT OnMenuDrag(
     CMenu* pMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -7805,7 +7805,7 @@ A estrutura chama essa função de membro do menu "arrastar e soltar" atual quan
 afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -7835,7 +7835,7 @@ afx_msg void OnMenuRButtonUp(
     CMenu* pMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -7860,7 +7860,7 @@ afx_msg void OnMenuSelect(
     HMENU hSysMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nItemID*<br/>
 Identifica o item selecionado. Se o item selecionado for um item de menu, *nItemID* conterá a ID do item de menu. Se o item selecionado contiver um menu pop-up, *nItemID* conterá o índice de menu pop-up e *hSysMenu* conterá o identificador do menu principal (clicado).
@@ -7907,7 +7907,7 @@ afx_msg int OnMouseActivate(
     UINT message);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDesktopWnd*<br/>
 Especifica um ponteiro para a janela pai de nível superior da janela que está sendo ativada. O ponteiro pode ser temporário e não deve ser armazenado.
@@ -7953,7 +7953,7 @@ afx_msg void OnMouseHover(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -7990,7 +7990,7 @@ afx_msg void OnMouseHWheel(
     CPoint pt);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -8030,7 +8030,7 @@ afx_msg void OnMouseMove(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFlags*<br/>
 Indica se várias chaves virtuais estão inativas. Esse parâmetro pode ser qualquer combinação dos seguintes valores:
@@ -8066,7 +8066,7 @@ afx_msg BOOL OnMouseWheel(
     CPoint pt);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFlags*<br/>
 Indica se várias chaves virtuais estão inativas. Esse parâmetro pode ser qualquer combinação dos seguintes valores:
@@ -8114,7 +8114,7 @@ afx_msg void OnMove(
     int y);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Especifica o novo local de coordenada x do canto superior esquerdo da área do cliente. Esse novo local é fornecido em coordenadas de tela para janelas sobrepostas e pop-up e coordenadas de cliente pai para janelas filhas.
@@ -8137,7 +8137,7 @@ afx_msg void OnMoving(
     LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nSide*<br/>
 A borda da janela a ser movida.
@@ -8158,7 +8158,7 @@ A estrutura chama essa função de membro quando a área não cliente precisa se
 afx_msg BOOL OnNcActivate(BOOL bActive);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bActive*<br/>
 Especifica quando uma barra de legenda ou ícone precisa ser alterado para indicar um estado ativo ou inativo. O parâmetro *bActive* será true se uma legenda ou um ícone ativo for ser desenhado. É falso para uma legenda ou ícone inativo.
@@ -8184,7 +8184,7 @@ afx_msg void OnNcCalcSize(
     NCCALCSIZE_PARAMS* lpncsp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bCalcValidRects*<br/>
 Especifica se o aplicativo deve especificar qual parte da área do cliente contém informações válidas. O Windows copiará as informações válidas para a área especificada dentro da nova área de cliente. Se esse parâmetro for TRUE, o aplicativo deverá especificar qual parte da área do cliente é válida.
@@ -8213,7 +8213,7 @@ A estrutura chama essa função de membro antes da mensagem de [WM_CREATE](#oncr
 afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpCreateStruct*<br/>
 Aponta para a estrutura de dados [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) para `CWnd`.
@@ -8249,7 +8249,7 @@ A estrutura chama essa função de membro para o objeto `CWnd` que contém o cur
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *empresas*<br/>
 Contém as coordenadas x e y do cursor. Essas coordenadas são sempre coordenadas da tela.
@@ -8273,7 +8273,7 @@ afx_msg void OnNcLButtonDblClk(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor. Consulte [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) para obter a lista de valores.
@@ -8298,7 +8298,7 @@ afx_msg void OnNcLButtonDown(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor. Consulte [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) para obter a lista de valores.
@@ -8323,7 +8323,7 @@ afx_msg void OnNcLButtonUp(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor. Consulte [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) para obter a lista de valores.
@@ -8348,7 +8348,7 @@ afx_msg void OnNcMButtonDblClk(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor.
@@ -8371,7 +8371,7 @@ afx_msg void OnNcMButtonDown(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor.
@@ -8394,7 +8394,7 @@ afx_msg void OnNcMButtonUp(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor.
@@ -8417,7 +8417,7 @@ afx_msg void OnNcMouseHover(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -8456,7 +8456,7 @@ afx_msg void OnNcMouseMove(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor.
@@ -8495,7 +8495,7 @@ afx_msg void OnNcRButtonDblClk(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor.
@@ -8518,7 +8518,7 @@ afx_msg void OnNcRButtonDown(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor.
@@ -8541,7 +8541,7 @@ afx_msg void OnNcRButtonUp(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nHitTest*<br/>
 Especifica o [código de teste de clique](#onnchittest). Um teste de clique é um teste que determina o local do cursor.
@@ -8562,7 +8562,7 @@ A estrutura chama esse membro quando a política de renderização para a área 
 afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -8586,7 +8586,7 @@ void OnNcXButtonDblClk(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -8612,7 +8612,7 @@ afx_msg void OnNcXButtonDown(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -8638,7 +8638,7 @@ afx_msg void OnNcXButtonUp(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -8663,7 +8663,7 @@ afx_msg void OnNextMenu(
     LPMDINEXTMENU lpMdiNextMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -8688,7 +8688,7 @@ virtual BOOL OnNotify(
     LRESULT* pResult);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *wParam*<br/>
 Identifica o controle que envia a mensagem se a mensagem for de um controle. Caso contrário, *wParam* é 0.
@@ -8721,7 +8721,7 @@ afx_msg UINT OnNotifyFormat(
     UINT nCommand);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -8779,7 +8779,7 @@ afx_msg void OnPaintClipboard(
     HGLOBAL hPaintStruct);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pClipAppWnd*<br/>
 Especifica um ponteiro para a janela de aplicativo da área de transferência. O ponteiro pode ser temporário e não deve ser armazenado para uso posterior.
@@ -8804,7 +8804,7 @@ A estrutura chama essa função de membro para todas as janelas de nível superi
 afx_msg void OnPaletteChanged(CWnd* pFocusWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFocusWnd*<br/>
 Especifica um ponteiro para a janela que fez com que a paleta do sistema fosse alterada. O ponteiro pode ser temporário e não deve ser armazenado.
@@ -8828,7 +8828,7 @@ A estrutura chama essa função de membro para informar aos aplicativos que um a
 afx_msg void OnPaletteIsChanging(CWnd* pRealizeWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pRealizeWnd*<br/>
 Especifica a janela que está prestes a reconhecer sua paleta lógica.
@@ -8847,7 +8847,7 @@ afx_msg void OnParentNotify(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *message*<br/>
 Especifica o evento para o qual o pai está sendo notificado e o identificador da janela filho. O evento é a palavra de ordem inferior da *mensagem*. Se o evento for WM_CREATE ou WM_DESTROY, a palavra de ordem superior da *mensagem* será o identificador da janela filho; caso contrário, a palavra de ordem superior será indefinida. O evento (palavra de ordem baixa da *mensagem*) pode ser qualquer um destes valores:
@@ -8886,7 +8886,7 @@ afx_msg UINT OnPowerBroadcast(
     UINT nEventData);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -8998,7 +8998,7 @@ afx_msg void OnRawInput(
     HRAWINPUT hRawInput);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -9022,7 +9022,7 @@ afx_msg void OnRButtonDblClk(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFlags*<br/>
 Indica se várias chaves virtuais estão inativas. Esse parâmetro pode ser qualquer combinação dos seguintes valores:
@@ -9057,7 +9057,7 @@ afx_msg void OnRButtonDown(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFlags*<br/>
 Indica se várias chaves virtuais estão inativas. Esse parâmetro pode ser qualquer combinação dos seguintes valores:
@@ -9089,7 +9089,7 @@ afx_msg void OnRButtonUp(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFlags*<br/>
 Indica se várias chaves virtuais estão inativas. Esse parâmetro pode ser qualquer combinação dos seguintes valores:
@@ -9119,7 +9119,7 @@ afx_msg LRESULT OnRegisteredMouseWheel(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *wParam*<br/>
 Posição horizontal do ponteiro.
@@ -9160,7 +9160,7 @@ A função de membro `OnRenderFormat` do proprietário da área de transferênci
 afx_msg void OnRenderFormat(UINT nFormat);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFormat*<br/>
 Especifica o formato da área de transferência.
@@ -9184,7 +9184,7 @@ afx_msg void OnSessionChange(
     UINT nId);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -9211,7 +9211,7 @@ afx_msg BOOL OnSetCursor(
     UINT message);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 Especifica um ponteiro para a janela que contém o cursor. O ponteiro pode ser temporário e não deve ser armazenado para uso posterior.
@@ -9247,7 +9247,7 @@ A estrutura chama essa função de membro depois de obter o foco de entrada.
 afx_msg void OnSetFocus(CWnd* pOldWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pOldWnd*<br/>
 Contém o objeto `CWnd` que perde o foco de entrada (pode ser nulo). O ponteiro pode ser temporário e não deve ser armazenado para uso posterior.
@@ -9269,7 +9269,7 @@ afx_msg void OnSettingChange(
     LPCTSTR lpszSection);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uFlags*<br/>
 Quando o sistema envia a mensagem como resultado de uma chamada de `SystemParametersInfo`, esse parâmetro é um sinalizador que indica o parâmetro do sistema que foi alterado. Para obter uma lista de valores, consulte [SystemParametersInfo](/windows/win32/api/winuser/nf-winuser-systemparametersinfow) no SDK do Windows. Quando um aplicativo envia a mensagem, esse parâmetro deve ser 0.
@@ -9299,7 +9299,7 @@ afx_msg void OnShowWindow(
     UINT nStatus);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bShow*<br/>
 Especifica se uma janela está sendo mostrada. Será verdade se a janela estiver sendo mostrada; será FALSE se a janela estiver sendo ocultada.
@@ -9329,7 +9329,7 @@ afx_msg void OnSize(
     int cy);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nType*<br/>
 Especifica o tipo de redimensionamento solicitado. Esse parâmetro pode ser um dos seguintes valores:
@@ -9371,7 +9371,7 @@ afx_msg void OnSizeClipboard(
     HGLOBAL hRect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pClipAppWnd*<br/>
 Identifica a janela de aplicativo da área de transferência. O ponteiro pode ser temporário e não deve ser armazenado.
@@ -9398,7 +9398,7 @@ afx_msg void OnSizing(
     LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nSide*<br/>
 A borda da janela a ser movida.
@@ -9427,7 +9427,7 @@ afx_msg void OnSpoolerStatus(
     UINT nJobs);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nStatus*<br/>
 Especifica o sinalizador de SP_JOBSTATUS.
@@ -9452,7 +9452,7 @@ afx_msg void OnStyleChanged(
     LPSTYLESTRUCT lpStyleStruct);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nStyleType*<br/>
 Especifica se os estilos estendidos ou não estendidos da janela foram alterados. Esse parâmetro pode ser uma combinação dos seguintes valores:
@@ -9479,7 +9479,7 @@ afx_msg void OnStyleChanging(
     LPSTYLESTRUCT lpStyleStruct);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nStyleType*<br/>
 Especifica se os estilos estendidos ou não estendidos da janela foram alterados. Esse parâmetro pode ser uma combinação dos seguintes valores:
@@ -9507,7 +9507,7 @@ afx_msg void OnSysChar(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nChar*<br/>
 Especifica o código de chave de caractere ASCII de uma chave de menu de controle.
@@ -9563,7 +9563,7 @@ afx_msg void OnSysCommand(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Especifica o tipo de comando do sistema solicitado. Esse parâmetro pode ser qualquer um dos seguintes valores:
@@ -9631,7 +9631,7 @@ afx_msg void OnSysDeadChar(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nChar*<br/>
 Especifica o valor de caractere de chave inativa.
@@ -9670,7 +9670,7 @@ afx_msg void OnSysKeyDown(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nChar*<br/>
 Especifica o código da tecla virtual que está sendo pressionada. Para obter uma lista de códigos de chaves virtuais padrão, consulte WinUser. h
@@ -9717,7 +9717,7 @@ afx_msg void OnSysKeyUp(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nChar*<br/>
 Especifica o código da tecla virtual que está sendo pressionada. Para obter uma lista de códigos de chaves virtuais padrão, consulte WinUser. h
@@ -9770,7 +9770,7 @@ afx_msg void OnTCard(
     DWORD dwActionData);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *idAction*<br/>
 Indica a ação que o usuário executou. Esse parâmetro pode ser um destes valores:
@@ -9826,7 +9826,7 @@ A estrutura chama essa função de membro após cada intervalo especificado na f
 afx_msg void OnTimer(UINT_PTR nIDEvent);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDEvent*<br/>
 Especifica o identificador do temporizador.
@@ -9852,7 +9852,7 @@ virtual INT_PTR OnToolHitTest(
     TOOLINFO* pTI) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *empresas*<br/>
 Especifica a coordenada x e y do cursor. Essas coordenadas são sempre relativas ao canto superior esquerdo da janela
@@ -9894,7 +9894,7 @@ virtual BOOL OnTouchInput(
     PTOUCHINPUT pInput);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pt*<br/>
 Ponto em que a tela foi tocada (nas coordenadas do cliente).
@@ -9924,7 +9924,7 @@ virtual BOOL OnTouchInputs(
     PTOUCHINPUT pInputs);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nInputsCount*<br/>
 Número total de entradas de toque do Windows.
@@ -9949,7 +9949,7 @@ afx_msg void OnUniChar(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -9974,7 +9974,7 @@ afx_msg void OnUnInitMenuPopup(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -9998,7 +9998,7 @@ afx_msg void OnUpdateUIState(
     UINT nUIElement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nAction*<br/>
 Especifica a ação a ser executada. Pode ser um dos seguintes valores:
@@ -10048,7 +10048,7 @@ afx_msg int OnVKeyToItem(
     UINT nIndex);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nKey*<br/>
 Especifica o código de chave virtual da chave que o usuário pressionou. Para obter uma lista de códigos de chaves virtuais padrão, consulte WinUser. h
@@ -10081,7 +10081,7 @@ afx_msg void OnVScroll(
     CScrollBar* pScrollBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nSBCode*<br/>
 Especifica um código de barra de rolagem que indica a solicitação de rolagem do usuário. Esse parâmetro pode ser um dos seguintes:
@@ -10130,7 +10130,7 @@ afx_msg void OnVScrollClipboard(
     UINT nPos);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pClipAppWnd*<br/>
 Especifica um ponteiro para uma janela do Visualizador da área de transferência. O ponteiro pode ser temporário e não deve ser armazenado para uso posterior.
@@ -10172,7 +10172,7 @@ A estrutura chama esse membro quando a janela atual é maximizada e a janela é 
 afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -10193,7 +10193,7 @@ A estrutura chama essa função de membro quando o tamanho, a posição ou a ord
 afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpwndpos*<br/>
 Aponta para uma estrutura de dados [WINDOWPOS](/windows/win32/api/winuser/ns-winuser-windowpos) que contém informações sobre o novo tamanho e a posição da janela.
@@ -10213,7 +10213,7 @@ A estrutura chama essa função de membro quando o tamanho, a posição ou a ord
 afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpwndpos*<br/>
 Aponta para uma estrutura de dados `WINDOWPOS` que contém informações sobre o novo tamanho e a posição da janela.
@@ -10235,7 +10235,7 @@ A estrutura chama essa função de membro depois que uma alteração é feita no
 afx_msg void OnWinIniChange(LPCTSTR lpszSection);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSection*<br/>
 Aponta para uma cadeia de caracteres que especifica o nome da seção que foi alterada. (A cadeia de caracteres não inclui os colchetes que contêm o nome da seção.)
@@ -10265,7 +10265,7 @@ virtual BOOL OnWndMsg(
     LRESULT* pResult);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *message*<br/>
 Especifica a mensagem a ser enviada.
@@ -10300,7 +10300,7 @@ afx_msg void OnXButtonDblClk(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -10338,7 +10338,7 @@ afx_msg void OnXButtonDown(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -10376,7 +10376,7 @@ afx_msg void OnXButtonUp(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -10441,7 +10441,7 @@ Compara dois objetos `CWnd` para determinar se eles não têm o mesmo [m_hWnd](#
 BOOL operator!=(const CWnd& wnd) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *wnd*<br/>
 Uma referência a um objeto `CWnd`.
@@ -10458,7 +10458,7 @@ Compara dois objetos `CWnd` para determinar se eles têm o mesmo [m_hWnd](#m_hwn
 BOOL operator==(const CWnd& wnd) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *wnd*<br/>
 Uma referência a um objeto `CWnd`.
@@ -10475,7 +10475,7 @@ Desenha controles sem janela no contêiner de controle.
 BOOL PaintWindowlessControls(CDC* pDC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 O contexto do dispositivo no qual desenhar os controles sem janela.
@@ -10495,7 +10495,7 @@ BOOL PostMessage(
     LPARAM lParam = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *message*<br/>
 Especifica a mensagem a ser postada.
@@ -10540,7 +10540,7 @@ Chamado pelo Framework antes da criação da janela do Windows anexada a este `C
 virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *CS*<br/>
 Uma estrutura [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) .
@@ -10588,7 +10588,7 @@ Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para traduzir 
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMsg*<br/>
 Aponta para uma estrutura [msg](/windows/win32/api/winuser/ns-winuser-msg) que contém a mensagem a ser processada.
@@ -10607,7 +10607,7 @@ void Print(
     DWORD dwFlags) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Um ponteiro para um contexto de dispositivo.
@@ -10653,7 +10653,7 @@ void PrintClient(
     DWORD dwFlags) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Um ponteiro para um contexto de dispositivo.
@@ -10683,7 +10683,7 @@ BOOL PrintWindow(
     UINT nFlags) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Um ponteiro para o contexto do dispositivo a ser impresso.
@@ -10710,7 +10710,7 @@ BOOL RedrawWindow(
     UINT flags = RDW_INVALIDATE | RDW_UPDATENOW | RDW_ERASE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpRectUpdate*<br/>
 Aponta para uma [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) que contém as coordenadas do retângulo de atualização. Esse parâmetro será ignorado se *prgnUpdate* contiver um identificador de região válido.
@@ -10718,7 +10718,7 @@ Aponta para uma [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) que c
 *prgnUpdate*<br/>
 Identifica a região de atualização. Se *prgnUpdate* e *lpRectUpdate* forem nulos, toda a área do cliente será adicionada à região de atualização.
 
-*flags*<br/>
+*sinalizadores*<br/>
 Os seguintes sinalizadores são usados para invalidar a janela:
 
 - RDW_ERASE faz com que a janela receba uma mensagem de [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) quando a janela é redesenhada. O sinalizador de RDW_INVALIDATE também deve ser especificado; caso contrário, RDW_ERASE não terá nenhum efeito.
@@ -10771,7 +10771,7 @@ BOOL ReflectChildNotify(
     LRESULT* pResult);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *message*<br/>
 Especifica a mensagem a ser refletida.
@@ -10807,7 +10807,7 @@ static BOOL PASCAL ReflectLastMsg(
     LRESULT* pResult = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWndChild*<br/>
 Um identificador para uma janela filho.
@@ -10833,7 +10833,7 @@ Libera um contexto de dispositivo, liberando-o para uso por outros aplicativos.
 int ReleaseDC(CDC* pDC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Identifica o contexto do dispositivo a ser liberado.
@@ -10862,7 +10862,7 @@ void RepositionBars(UINT nIDFirst,
     BOOL bStretch = TRUE) ;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDFirst*<br/>
 A ID do primeiro em um intervalo de barras de controle para reposicionar e redimensionar.
@@ -10903,7 +10903,7 @@ Chame essa função de membro para recuperar, traduzir ou enviar mensagens até 
 int RunModalLoop(DWORD dwFlags = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwFlags*<br/>
 Especifica a mensagem do Windows a ser enviada. Pode ser um dos seguintes valores:
@@ -10930,7 +10930,7 @@ Converte as coordenadas de tela de um determinado ponto ou retângulo na exibiç
 void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpPoint*<br/>
 Aponta para um objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) ou [estrutura de ponto](/windows/win32/api/windef/ns-windef-point) que contém as coordenadas de tela a serem convertidas.
@@ -10958,7 +10958,7 @@ void ScrollWindow(
     LPCRECT lpClipRect = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *xAmount*<br/>
 Especifica a quantidade, em unidades de dispositivo, de rolagem horizontal. Esse parâmetro deve ser um valor negativo para rolar para a esquerda.
@@ -10997,7 +10997,7 @@ int ScrollWindowEx(
     UINT flags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *DX*<br/>
 Especifica a quantidade, em unidades de dispositivo, de rolagem horizontal. Esse parâmetro deve ter um valor negativo para rolar para a esquerda.
@@ -11017,7 +11017,7 @@ Identifica a região que é modificada para manter a região invalidada por rola
 *lpRectUpdate*<br/>
 Aponta para uma estrutura de `RECT` que receberá os limites do retângulo invalidado por rolagem. Esse parâmetro pode ser nulo.
 
-*flags*<br/>
+*sinalizadores*<br/>
 Pode ter um dos seguintes valores:
 
 - SW_ERASE quando especificado com SW_INVALIDATE, apaga a região recém invalidada enviando uma mensagem de [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) para a janela.
@@ -11050,7 +11050,7 @@ Essa função de membro é chamada pelo Framework para fornecer uma mensagem de 
 BOOL SendChildNotifyLastMsg(LRESULT* pResult = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pResult*<br/>
 O resultado gerado pela janela filho a ser retornado pela janela pai.
@@ -11077,7 +11077,7 @@ LRESULT SendDlgItemMessage(
     LPARAM lParam = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Especifica o identificador do controle de caixa de diálogo que receberá a mensagem.
@@ -11116,7 +11116,7 @@ LRESULT SendMessage(
     LPARAM lParam = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *message*<br/>
 Especifica a mensagem a ser enviada.
@@ -11152,7 +11152,7 @@ void SendMessageToDescendants(
     BOOL bOnlyPerm = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *message*<br/>
 Especifica a mensagem a ser enviada.
@@ -11190,7 +11190,7 @@ BOOL SendNotifyMessage(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *message*<br/>
 Especifica a mensagem a ser enviada.
@@ -11253,7 +11253,7 @@ Define a posição do cursor.
 static void PASCAL SetCaretPos(POINT point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *empresas*<br/>
 Especifica as novas coordenadas x e y (nas coordenadas do cliente) do cursor.
@@ -11296,7 +11296,7 @@ Define a ID da janela ou a ID de controle da janela como um novo valor.
 int SetDlgCtrlID(int nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 O novo valor a ser definido para o identificador do controle.
@@ -11320,7 +11320,7 @@ void SetDlgItemInt(
     BOOL bSigned = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Especifica a ID de inteiro do controle a ser alterado.
@@ -11349,7 +11349,7 @@ void SetDlgItemText(
     LPCTSTR lpszString);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Identifica o controle cujo texto deve ser definido.
@@ -11415,7 +11415,7 @@ void SetFont(
     BOOL bRedraw = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFont*<br/>
 Ponteiro para um objeto `CFont`.
@@ -11437,7 +11437,7 @@ HICON SetIcon(
     BOOL bBigIcon);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hIcon*<br/>
 Um identificador para um ícone anterior.
@@ -11468,7 +11468,7 @@ BOOL SetLayeredWindowAttributes(
     DWORD dwFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *crKey*<br/>
 Ponteiro para um valor de COLORREF que especifica a chave de cor de transparência a ser usada ao compor a janela em camadas. Todos os pixels pintados pela janela nessa cor serão transparentes. Para gerar um COLORREF, use a macro RGB.
@@ -11495,7 +11495,7 @@ Define o menu atual para o menu especificado.
 BOOL SetMenu(CMenu* pMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMenu*<br/>
 Identifica o novo menu. Se esse parâmetro for nulo, o menu atual será removido.
@@ -11522,7 +11522,7 @@ Define o proprietário da janela atual para o objeto de janela especificado.
 void SetOwner(CWnd* pOwnerWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pOwnerWnd*<br/>
 Identifica o novo proprietário do objeto de janela. Se esse parâmetro for NULL, o objeto Window não terá nenhum proprietário.
@@ -11543,7 +11543,7 @@ Altera a janela pai de uma janela filho.
 CWnd* SetParent(CWnd* pWndNewParent);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWndNewParent*<br/>
 Identifica a nova janela pai.
@@ -11566,7 +11566,7 @@ void AFX_CDECL SetProperty(
     VARTYPE vtProp, ...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDispID*<br/>
 Identifica a propriedade a ser definida.
@@ -11592,7 +11592,7 @@ Um aplicativo chama `SetRedraw` para permitir que as alterações sejam redesenh
 void SetRedraw(BOOL bRedraw = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bRedraw*<br/>
 Especifica o estado do sinalizador de redesenho. Se esse parâmetro for TRUE, o sinalizador de redesenho será definido; Se for FALSE, o sinalizador será limpo.
@@ -11616,7 +11616,7 @@ BOOL SetScrollInfo(
     BOOL bRedraw = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nBar*<br/>
 Especifica se a barra de rolagem é um controle ou parte da área não cliente de uma janela. Se ele fizer parte da área não cliente, nBar também indicará se a barra de rolagem está posicionada horizontalmente, verticalmente ou ambas. Ele deve ser um dos seguintes:
@@ -11657,7 +11657,7 @@ int SetScrollPos(
     BOOL bRedraw = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nBar*<br/>
 Especifica a barra de rolagem a ser definida. Esse parâmetro pode ser um dos seguintes:
@@ -11692,7 +11692,7 @@ void SetScrollRange(
     BOOL bRedraw = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nBar*<br/>
 Especifica a barra de rolagem a ser definida. Esse parâmetro pode ser um dos seguintes valores:
@@ -11734,7 +11734,7 @@ UINT_PTR SetTimer(
     DWORD));
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDEvent*<br/>
 Especifica um identificador de temporizador diferente de zero. Se o identificador do temporizador for exclusivo, esse mesmo valor será retornado por `SetTimer`. Caso contrário, `SetTimer` determina um novo valor exclusivo e retorna isso. Para um temporizador de janela (que tem uma função de retorno de chamada nula), o valor deve ser exclusivo somente para outros temporizadores do Windows que estejam associados à janela atual. Para um temporizador de retorno de chamada, o valor deve ser exclusivo para todos os temporizadores em todos os processos. Portanto, quando você cria um temporizador de retorno de chamada, é mais provável que o valor retornado seja diferente do valor especificado.
@@ -11777,7 +11777,7 @@ Chame essa função de membro para associar um identificador de contexto de ajud
 BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwContextHelpId*<br/>
 O identificador de contexto da ajuda.
@@ -11802,7 +11802,7 @@ Define as posições de estado de exibição e normal (restauradas), minimizadas
 BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpwndpl*<br/>
 Aponta para uma estrutura [WINDOWPLACEMENT](/windows/win32/api/winuser/ns-winuser-windowplacement) que especifica o novo estado e as posições da nova exibição.
@@ -11825,7 +11825,7 @@ BOOL SetWindowPos(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWndInsertAfter*<br/>
 Identifica o objeto `CWnd` que precederá (maior que) esse objeto `CWnd` na ordem Z. Esse parâmetro pode ser um ponteiro para um `CWnd` ou um ponteiro para um dos seguintes valores:
@@ -11927,7 +11927,7 @@ int SetWindowRgn(
     BOOL bRedraw);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hRgn*<br/>
 Um identificador para uma região.
@@ -11953,7 +11953,7 @@ Define o título da janela para o texto especificado.
 void SetWindowText(LPCTSTR lpszString);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszString*<br/>
 Aponta para um objeto [CString](../../atl-mfc-shared/reference/cstringt-class.md) ou uma cadeia de caracteres terminada em nulo a ser usada como o novo título ou texto de controle.
@@ -11998,7 +11998,7 @@ Mostra ou oculta todas as janelas pop-up pertencentes a esta janela.
 void ShowOwnedPopups(BOOL bShow = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bShow*<br/>
 Especifica se as janelas pop-up devem ser mostradas ou ocultas. Se esse parâmetro for TRUE, todas as janelas pop-up ocultas serão mostradas. Se esse parâmetro for FALSE, todas as janelas pop-up visíveis ficarão ocultas.
@@ -12017,7 +12017,7 @@ void ShowScrollBar(
     BOOL bShow = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nBar*<br/>
 Especifica se a barra de rolagem é um controle ou parte da área não cliente de uma janela. Se ele fizer parte da área não cliente, *NBAR* também indicará se a barra de rolagem está posicionada horizontalmente, verticalmente ou ambas. Ele deve ser um dos seguintes:
@@ -12043,7 +12043,7 @@ Define o estado de visibilidade da janela.
 BOOL ShowWindow(int nCmdShow);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nCmdShow*<br/>
 Especifica como o `CWnd` deve ser mostrado. Deve ser um dos seguintes valores:
@@ -12090,7 +12090,7 @@ BOOL SubclassDlgItem(
     CWnd* pParent);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 A ID do controle.
@@ -12120,7 +12120,7 @@ Chame essa função de membro para "subclasse dinamicamente" uma janela e anexe-
 BOOL SubclassWindow(HWND hWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWnd*<br/>
 Um identificador para a janela.
@@ -12178,7 +12178,7 @@ Chame essa função de membro para inicializar dados em uma caixa de diálogo ou
 BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bSaveAndValidate*<br/>
 Sinalizador que indica se a caixa de diálogo está sendo inicializada (FALSE) ou se os dados estão sendo recuperados (TRUE).
@@ -12201,7 +12201,7 @@ void UpdateDialogControls(
     BOOL bDisableIfNoHndler);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pTarget*<br/>
 Aponta para a janela de quadro principal do aplicativo e é usado para roteamento de mensagens de atualização.
@@ -12231,7 +12231,7 @@ BOOL UpdateLayeredWindow(
     DWORD dwFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDCDst*<br/>
 Um ponteiro para um contexto de dispositivo para a tela. Ele é usado para correspondência de cores da paleta quando o conteúdo da janela é atualizado. Se *pDCDst* for NULL, a paleta padrão será usada.
@@ -12295,7 +12295,7 @@ Valida a área do cliente dentro do retângulo fornecido removendo o retângulo 
 void ValidateRect(LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpRect*<br/>
 Aponta para um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [estrutura RECT](/windows/win32/api/windef/ns-windef-rect) que contém coordenadas de cliente do retângulo a ser removido da região de atualização. Se *lpRect* for nulo, a janela inteira será validada.
@@ -12314,7 +12314,7 @@ Valida a área do cliente dentro da região especificada removendo a região da 
 void ValidateRgn(CRgn* pRgn);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pRgn*<br/>
 Um ponteiro para um objeto [CRgn](../../mfc/reference/crgn-class.md) que identifica uma região que define a área a ser removida da região de atualização. Se esse parâmetro for nulo, toda a área do cliente será removida.
@@ -12333,7 +12333,7 @@ Recupera a janela que contém o ponto especificado; o *ponto* deve especificar a
 static CWnd* PASCAL WindowFromPoint(POINT point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *empresas*<br/>
 Especifica um objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) ou uma estrutura de dados de [ponto](/windows/win32/api/windef/ns-windef-point) que define o ponto a ser verificado.
@@ -12357,7 +12357,7 @@ virtual LRESULT WindowProc(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *message*<br/>
 Especifica a mensagem do Windows a ser processada.
@@ -12386,7 +12386,7 @@ virtual void WinHelp(
     UINT nCmd = HELP_CONTEXT);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwData*<br/>
 Especifica dados adicionais. O valor usado depende do valor do parâmetro *nCmd* .
@@ -12408,7 +12408,7 @@ BOOL RegisterTouchWindow(
     ULONG ulFlags = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bRegister*<br/>
 VERDADEIRO indica registrar o suporte ao Windows Touch; Caso contrário, FALSE.
@@ -12432,7 +12432,7 @@ virtual void ResizeDynamicLayout();
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
 ms.openlocfilehash: 1119947534c030afaad64e4905e58365ffffd05e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686097"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856703"
 ---
 # <a name="c-standard-library-containers"></a>Contêineres da biblioteca padrão C++
 
@@ -121,7 +121,7 @@ int main()
 
 As funções membro a seguir em map, multimap, set e multiset foram sobrecarregadas para dar suporte à pesquisa heterogênea:
 
-1. find
+1. localizar
 
 1. count
 
@@ -166,9 +166,9 @@ Todos os contêineres sobrecarregam o operator== para comparar dois contêineres
 
 ### <a name="comparing-dissimilar-containers-c14"></a>Comparando tipos diferentes de contêineres (C++14)
 
-No C++ 14 e posteriores, você pode comparar contêineres diferentes e/ou tipos de elementos não semelhantes usando uma das sobrecargas de função `std::equal`, `std::mismatch` ou `std::is_permutation` que usam dois intervalos completos. Essas sobrecargas permitem que você compare contêineres com comprimentos diferentes. Essas sobrecargas são muito menos suscetíveis a erros de usuário e são otimizadas para retornar false em tempo constante quando contêineres de comprimentos diferentes são comparados. Portanto, recomendamos que você use essas sobrecargas, a menos que (1) você tenha um motivo muito claro para não fazê-lo ou (2) você esteja usando um contêiner [std::list](../standard-library/list-class.md), que não se beneficia de otimizações de intervalo duplo.
+No C++ 14 e posteriores, você pode comparar contêineres diferentes e/ou tipos de elementos não semelhantes usando uma das sobrecargas de função `std::equal`, `std::mismatch`ou `std::is_permutation` que usam dois intervalos completos. Essas sobrecargas permitem que você compare contêineres com comprimentos diferentes. Essas sobrecargas são muito menos suscetíveis a erros de usuário e são otimizadas para retornar false em tempo constante quando contêineres de comprimentos diferentes são comparados. Portanto, recomendamos que você use essas sobrecargas, a menos que (1) você tenha um motivo muito claro para não fazê-lo ou (2) você esteja usando um contêiner [std::list](../standard-library/list-class.md), que não se beneficia de otimizações de intervalo duplo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Contêineres](../cpp/containers-modern-cpp.md)\
 [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)\

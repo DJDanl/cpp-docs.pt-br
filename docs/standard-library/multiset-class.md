@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
 ms.openlocfilehash: 83980094562e1c0083a879d1dc9aab591dc52d02
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689263"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873946"
 ---
 # <a name="multiset-class"></a>Classe multiset
 
@@ -104,17 +104,17 @@ template <class Key, class Compare =less <Key>, class Allocator =allocator <Key>
 class multiset
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 de *chave*
+\ de *chave*
 O tipo de dados do elemento a ser armazenado no multiset.
 
-*Comparar* \
+*Comparar*\
 O tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no multiset. O predicado binário **less**\<Key> é o valor padrão.
 
 No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predicado `std::less<>` ou o `std::greater<>`, que não tem nenhum parâmetro de tipo. Para obter mais informações, consulte [Pesquisa heterogênea em contêineres associativos](../standard-library/stl-containers.md#sequence_containers)
 
-@No__t_1 de *alocador*
+\ de *alocador*
 O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação do multiset da memória. O valor padrão é `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentários
@@ -145,13 +145,13 @@ No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predica
 
 ### <a name="constructors"></a>Construtores
 
-|Construtor|Descrição|
+|Construtor|DESCRIÇÃO|
 |-|-|
 |[multiset](#multiset)|Constrói um `multiset` que está vazio ou que é uma cópia de todo ou parte de um `multiset` especificado.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome de tipo|Descrição|
+|Nome do tipo|DESCRIÇÃO|
 |-|-|
 |[allocator_type](#allocator_type)|Um typedef para a classe `allocator` do objeto `multiset`.|
 |[const_iterator](#const_iterator)|Um typedef para um iterador bidirecional que pode ler um elemento **const** no `multiset`.|
@@ -171,13 +171,13 @@ No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predica
 
 ### <a name="member-functions"></a>Funções de membro
 
-|Função de membro|Descrição|
+|Função de membro|DESCRIÇÃO|
 |-|-|
 |[begin](#begin)|Retorna um iterador que aponta para o primeiro elemento no `multiset`.|
 |[cbegin](#cbegin)|Retorna um iterador const que trata o primeiro elemento no `multiset`.|
 |[cend](#cend)|Retorna um iterador const que trata o local após o último elemento em um `multiset`.|
 |[clear](#clear)|Apaga todos os elementos de um `multiset`.|
-|[count](#count)|Retorna o número de elementos em um `multiset` cuja chave corresponde à chave especificada como um parâmetro.|
+|[contagem](#count)|Retorna o número de elementos em um `multiset` cuja chave corresponde à chave especificada como um parâmetro.|
 |[crbegin](#crbegin)|Retorna um iterador const que trata o primeiro elemento em um conjunto invertido.|
 |[crend](#crend)|Retorna um iterador const que trata o local após o último elemento em um conjunto invertido.|
 |[emplace](#emplace)|Insere um elemento construído adequadamente em um `multiset`.|
@@ -201,13 +201,13 @@ No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predica
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|Operador|DESCRIÇÃO|
 |-|-|
 |[operator=](#op_eq)|Substitui os elementos de um `multiset` por uma cópia de outro `multiset`.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<set>
+**Cabeçalho:** conjunto de \<>
 
 **Namespace:** std
 
@@ -469,7 +469,7 @@ Retorna o número de elementos em um multiset cuja chave corresponde a uma chave
 size_type count(const Key& key) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *chave*
 A chave dos elementos a serem correspondidos do multiset.
@@ -701,11 +701,11 @@ template <class... Args>
 iterator emplace(Args&&... args);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |-|-|
-|*argumento*|Os argumentos encaminhados para construir um elemento a ser inserido no multiset.|
+|*args*|Os argumentos encaminhados para construir um elemento a ser inserido no multiset.|
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -769,11 +769,11 @@ iterator emplace_hint(
     Args&&... args);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |-|-|
-|*argumento*|Os argumentos encaminhados para construir um elemento a ser inserido no multiset.|
+|*args*|Os argumentos encaminhados para construir um elemento a ser inserido no multiset.|
 |*where*|O local a partir do qual se começa a procurar pelo ponto de inserção correto. (Se esse ponto precede imediatamente *onde*, a inserção pode ocorrer no tempo constante amortizado em vez da hora logarítmica.)|
 
 ### <a name="return-value"></a>Valor retornado
@@ -863,7 +863,7 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *chave*
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
@@ -948,18 +948,18 @@ size_type erase(
     const key_type& Key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Onde* \
+*Onde*\
 A posição do elemento a ser removido.
 
-*Primeiro* \
+*Primeiro*\
 A posição do primeiro elemento a ser removido.
 
-*Última* \
+*Última*\
 A posição logo após o último elemento a ser removido.
 
-@No__t_1 de *chave*
+\ de *chave*
 O valor de chave dos elementos a serem removidos.
 
 ### <a name="return-value"></a>Valor retornado
@@ -982,7 +982,7 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *chave*
 O valor da chave a ser comparado pela chave de classificação de um elemento do multiconjunto que está sendo pesquisado.
@@ -1164,15 +1164,15 @@ void insert(
 IList);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |-|-|
 |*Val*|O valor de um elemento a ser inserido no multiset.|
-|*Where*|O local a partir do qual se começa a procurar pelo ponto de inserção correto. (Se esse ponto precede imediatamente *onde*, a inserção pode ocorrer no tempo constante amortizado em vez da hora logarítmica.)|
-|*ValTy*|Parâmetro de modelo que especifica o tipo de argumento que o multiconjunto pode usar para construir um elemento de [value_type](../standard-library/map-class.md#value_type)e o *Val* de encaminhamentos perfeitos como um argumento.|
-|*Primeiro*|A posição do primeiro elemento a ser copiado.|
-|*Última*|A posição imediatamente após o último elemento a ser copiado.|
+|*Onde*|O local a partir do qual se começa a procurar pelo ponto de inserção correto. (Se esse ponto precede imediatamente *onde*, a inserção pode ocorrer no tempo constante amortizado em vez da hora logarítmica.)|
+|*ValTy*|Parâmetro de modelo que especifica o tipo de argumento que o multiconjunto pode usar para construir um elemento de [value_type](../standard-library/map-class.md#value_type)e o *valor* de encaminhamentos perfeitos como um argumento.|
+|*First*|A posição do primeiro elemento a ser copiado.|
+|*Last*|A posição imediatamente após o último elemento a ser copiado.|
 |*InputIterator*|Argumento da função de modelo que atende aos requisitos de um [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que aponta para elementos de um tipo que pode ser usado para construir objetos [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|O [initializer_list](../standard-library/initializer-list.md) do qual os elementos serão copiados.|
 
@@ -1316,7 +1316,7 @@ Para obter mais informações sobre `Compare`, consulte a seção Comentários d
 
 O objeto armazenado define a função membro:
 
-**operador booliano**( **const Key&** *x*, **const Key&** *y*);
+**operador bool**( **chave const &** *x*, **chave const &** *y*);
 
 que retornará true se *x* preceder estritamente *y* na ordem de classificação.
 
@@ -1419,7 +1419,7 @@ const_iterator lower_bound(const Key& key) const;
 iterator lower_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *chave*
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
@@ -1560,16 +1560,16 @@ multiset (
     const Allocator& Al);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |-|-|
 |*&*|A classe do alocador de armazenamento a ser usado neste objeto multiset, cujo padrão é `Allocator`.|
 |*Às*|A função de comparação do tipo `const Compare` usada para ordenar os elementos no multiset, cujo padrão é `Compare`.|
-|*Direita*|O multiset da qual o multiset criado é uma cópia.|
-|*Primeiro*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
-|*Última*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
-|*IList*|O initializer_list do qual copiar os elementos.|
+|*Right*|O multiset da qual o multiset criado é uma cópia.|
+|*First*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
+|*Last*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
+|*IList*|A initializer_list da qual os elementos serão copiados.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -1579,7 +1579,7 @@ Todos os construtores inicializam seu multiset.
 
 Todos os construtores armazenam um objeto de função do tipo Compare, que é usado para estabelecer uma ordem entre as chaves do multiset e que posteriormente pode ser retornado ao chamar [key_comp](#key_comp).
 
-Os três primeiros construtores especificam um multiconjunto inicial vazio, o segundo que especifica o tipo de função de comparação (*comp*) a ser usado no estabelecimento da ordem dos elementos e o terceiro que especifica explicitamente o tipo de alocador (*Al*) a ser utiliza. A palavra-chave **explicit** suprime determinados tipos de conversão automática de tipo.
+Os três primeiros construtores especificam um multiconjunto inicial vazio, o segundo que especifica o tipo de função de comparação (*comp*) a ser usado no estabelecimento da ordem dos elementos e o terceiro que especifica explicitamente o tipo de alocador (*Al*) a ser usado. A palavra-chave **explicit** suprime determinados tipos de conversão automática de tipo.
 
 O quarto construtor Especifica uma cópia do *direito*de multiconjunto.
 
@@ -1700,9 +1700,9 @@ multiset& operator=(const multiset& right);
 multiset& operator=(multiset&& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |-|-|
 |*right*|O `multiset` do qual os elementos são copiados ou movidos.|
 
@@ -2025,7 +2025,7 @@ void swap(
     multiset<Key, Compare, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 O multiset do argumento que fornece os elementos a serem trocados com o multiset de destino.
@@ -2094,7 +2094,7 @@ const_iterator upper_bound(const Key& key) const;
 iterator upper_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *chave*
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
@@ -2239,7 +2239,7 @@ typedef key_compare value_compare;
 
 `value_compare` é um sinônimo do parâmetro de modelo `Compare`.
 
-Observe que [key_compare](#key_compare) e `value_compare` são sinônimos para o parâmetro de modelo `Compare`. Os dois tipos são fornecidos para as classes set e multiset, em que são idênticos, para compatibilidade com as classes map e multimap, em que são diferentes.
+Observe que tanto [key_compare](#key_compare) quanto `value_compare` são sinônimos para o parâmetro de modelo `Compare`. Os dois tipos são fornecidos para as classes set e multiset, em que são idênticos, para compatibilidade com as classes map e multimap, em que são diferentes.
 
 Para obter mais informações sobre `Compare`, consulte a seção Comentários do tópico [Classe multiset](../standard-library/multiset-class.md).
 
@@ -2259,7 +2259,7 @@ typedef Key value_type;
 
 `value_type` é um sinônimo do parâmetro de modelo `Key`.
 
-Observe que [KEY_TYPE](#key_type) e `value_type` são sinônimos para o parâmetro de modelo `Key`. Os dois tipos são fornecidos para as classes set e multiset, em que são idênticos, para compatibilidade com as classes map e multimap, em que são diferentes.
+Observe que tanto [KEY_TYPE](#key_type) quanto `value_type` são sinônimos para o parâmetro de modelo `Key`. Os dois tipos são fornecidos para as classes set e multiset, em que são idênticos, para compatibilidade com as classes map e multimap, em que são diferentes.
 
 Para obter mais informações sobre `Key`, consulte a seção Comentários do tópico.
 
@@ -2298,7 +2298,7 @@ int main( )
 The multiset has elements: 10 20.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Contêineres](../cpp/containers-modern-cpp.md)\
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

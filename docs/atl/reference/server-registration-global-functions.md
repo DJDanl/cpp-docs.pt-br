@@ -9,11 +9,11 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
 ms.openlocfilehash: f9c3697259e1cee2b1107ded785ca583d730b55e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495456"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78863146"
 ---
 # <a name="server-registration-global-functions"></a>Funções globais de registro de servidor
 
@@ -34,7 +34,7 @@ Essas funções fornecem suporte para registrar e cancelar o registro de objetos
 
 **Cabeçalho:** atlbase. h
 
-##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer
+##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer
 
 Essa função é chamada para registrar cada objeto no mapa de objetos.
 
@@ -45,7 +45,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
     const CLSID* pCLSID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pComModule*<br/>
 Ponteiro para o módulo COM.
@@ -56,17 +56,17 @@ TRUE se a biblioteca de tipos for registrada.
 *pCLSID*<br/>
 Aponta para o CLSID do objeto a ser registrado. Se for NULL, todos os objetos no mapa de objetos serão registrados.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-`AtlComModuleRegisterServer`percorre o mapa de objetos do ATL gerado automaticamente e registra cada objeto no mapa. Se *pCLSID* não for nulo, somente o objeto referido por *pCLSID* será registrado; caso contrário, todos os objetos serão registrados.
+`AtlComModuleRegisterServer` percorre o mapa de objetos do ATL gerado automaticamente e registra cada objeto no mapa. Se *pCLSID* não for nulo, somente o objeto referido por *pCLSID* será registrado; caso contrário, todos os objetos serão registrados.
 
 Essa função é chamada por [CAtlComModule:: RegisterServer](catlcommodule-class.md#registerserver).
 
-##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer
+##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer
 
 Essa função é chamada para cancelar o registro de cada objeto no mapa de objetos.
 
@@ -77,7 +77,7 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
     const CLSID* pCLSID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pComModule*<br/>
 Ponteiro para o módulo COM.
@@ -88,17 +88,17 @@ TRUE se a biblioteca de tipos for registrada.
 *pCLSID*<br/>
 Aponta para o CLSID do objeto a ser cancelado. Se NULL, todos os objetos no mapa de objetos terão o registro cancelado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-`AtlComModuleUnregisterServer`percorre o mapa do objeto ATL e cancela o registro de cada objeto no mapa. Se *pCLSID* não for nulo, somente o objeto referido por *pCLSID* será cancelado. caso contrário, todos os objetos têm o registro cancelado.
+`AtlComModuleUnregisterServer` percorre o mapa do objeto ATL e cancela o registro de cada objeto no mapa. Se *pCLSID* não for nulo, somente o objeto referido por *pCLSID* será cancelado. caso contrário, todos os objetos têm o registro cancelado.
 
 Essa função é chamada por [CAtlComModule:: UnregisterServer](catlcommodule-class.md#unregisterserver).
 
-##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects
+##  <a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects
 
 Essa função é chamada para registrar objetos da classe.
 
@@ -109,7 +109,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
     DWORD dwFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pComModule*<br/>
 Ponteiro para o módulo COM.
@@ -120,7 +120,7 @@ Especifica o contexto no qual o objeto de classe deve ser executado. Os valores 
 *dwFlags*<br/>
 Determina os tipos de conexão para o objeto de classe. Os valores possíveis são REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE ou REGCLS_MULTI_SEPARATE. Consulte [REGCLS](/windows/win32/api/combaseapi/ne-combaseapi-regcls) para obter mais detalhes.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
@@ -128,7 +128,7 @@ Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 Essa função auxiliar é utilizada por [CComModule:: RegisterClassObjects](ccommodule-class.md#registerclassobjects) (obsoleto no ATL 7,0) e [CAtlExeModuleT:: RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).
 
-##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects
+##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects
 
 Essa função é chamada para remover a fábrica/as fábricas da classe da Tabela de Objetos em Execução.
 
@@ -136,12 +136,12 @@ Essa função é chamada para remover a fábrica/as fábricas da classe da Tabel
 ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pComModule*<br/>
 Ponteiro para o módulo COM.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
@@ -149,7 +149,7 @@ Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 Essa função auxiliar é utilizada por [CComModule:: RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (obsoleto no ATL 7,0) e [CAtlExeModuleT:: RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).
 
-##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject
+##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject
 
 Essa função é chamada para retornar a fábrica da classe.
 
@@ -161,7 +161,7 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
     LPVOID* ppv);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pComModule*<br/>
 Ponteiro para o módulo COM.
@@ -175,14 +175,14 @@ O IID da interface solicitada.
 *ppv*<br/>
 Um ponteiro para o ponteiro de interface identificado por *riid*. Se o objeto não oferecer suporte a essa interface, *PPV* será definido como NULL.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função auxiliar é utilizada por [CComModule::](ccommodule-class.md#getclassobject) GetClassObject (obsoleto em ATL 7,0) e [CAtlDllModuleT::](catldllmodulet-class.md#getclassobject)GetClassObject.
+Essa função auxiliar é utilizada por [CComModule:: GetClassObject](ccommodule-class.md#getclassobject) (obsoleto em ATL 7,0) e [CAtlDllModuleT:: GetClassObject](catldllmodulet-class.md#getclassobject).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Funções](../../atl/reference/atl-functions.md)

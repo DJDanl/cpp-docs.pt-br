@@ -34,11 +34,11 @@ helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
 ms.openlocfilehash: 3a0d69bc2e2904b1dcf37a7e9891d95bd869a610
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142712"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866128"
 ---
 # <a name="source_block-class"></a>Classe source_block
 
@@ -51,7 +51,7 @@ template<class _TargetLinkRegistry, class _MessageProcessorType = ordered_messag
 class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_TargetLinkRegistry*<br/>
 Registro de link a ser usado para conter os links de destino.
@@ -61,22 +61,22 @@ Tipo de processador para processamento de mensagens.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs Públicos
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`target_iterator`|O iterador para percorrer os destinos conectados.|
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[source_block](#ctor)|Constrói um objeto `source_block`.|
 |[~ source_block destruidor](#dtor)|Destrói o objeto `source_block`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[aceitar](#accept)|Aceita uma mensagem que foi oferecida por este `source_block` objeto, transferindo a propriedade para o chamador.|
 |[acquire_ref](#acquire_ref)|Adquire uma contagem de referência neste `source_block` objeto para evitar a exclusão.|
@@ -90,7 +90,7 @@ Tipo de processador para processamento de mensagens.
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[accept_message](#accept_message)|Quando substituído em uma classe derivada, o aceita uma mensagem oferecida pela origem. Os blocos de mensagens devem substituir esse método para validar o `_MsgId` e retornar uma mensagem.|
 |[async_send](#async_send)|Enfileira mensagens de forma assíncrona e inicia uma tarefa de propagação, se isso ainda não tiver sido feito|
@@ -119,7 +119,7 @@ Os blocos de mensagens devem derivar desse bloco para aproveitar o gerenciamento
 
 `source_block`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Agents. h
 
@@ -135,7 +135,7 @@ virtual message<_Target_type>* accept(
     _Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_MsgId*<br/>
 O `runtime_object_identity` do objeto `message` oferecido.
@@ -161,7 +161,7 @@ Quando substituído em uma classe derivada, o aceita uma mensagem oferecida pela
 virtual message<_Target_type>* accept_message(runtime_object_identity _MsgId) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_MsgId*<br/>
 A identidade do objeto de tempo de execução do objeto `message`.
@@ -194,7 +194,7 @@ Enfileira mensagens de forma assíncrona e inicia uma tarefa de propagação, se
 virtual void async_send(_Inout_opt_ message<_Target_type>* _Msg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Msg*<br/>
 Um ponteiro para um objeto `message` para enviar de forma assíncrona.
@@ -209,7 +209,7 @@ virtual message<_Target_type>* consume(
     _Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_MsgId*<br/>
 O `runtime_object_identity` do objeto `message` reservado.
@@ -237,7 +237,7 @@ Quando substituído em uma classe derivada, consome uma mensagem que foi reserva
 virtual message<_Target_type>* consume_message(runtime_object_identity _MsgId) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_MsgId*<br/>
 A `runtime_object_identity` do objeto `message` que está sendo consumido.
@@ -268,7 +268,7 @@ void initialize_source(
     _Inout_opt_ ScheduleGroup* _PScheduleGroup = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_PScheduler*<br/>
 O Agendador a ser usado para agendar tarefas.
@@ -284,7 +284,7 @@ Vincula um bloco de destino a este objeto de `source_block`.
 virtual void link_target(_Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_PTarget*<br/>
 Um ponteiro para um bloco de `ITarget` para vincular a este objeto de `source_block`.
@@ -309,7 +309,7 @@ Processar mensagens de entrada. Isso só é útil para blocos de propagadores, q
 virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_PMessage*<br/>
 Um ponteiro para a mensagem a ser processada.
@@ -330,7 +330,7 @@ Quando substituído em uma classe derivada, o propaga a mensagem determinada par
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Target_type>* _PMessage);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_PMessage*<br/>
 Um ponteiro para a mensagem a ser propagada.
@@ -345,7 +345,7 @@ virtual void release(
     _Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_MsgId*<br/>
 O `runtime_object_identity` do objeto `message` reservado.
@@ -367,7 +367,7 @@ Quando substituído em uma classe derivada, libera uma reserva de mensagem anter
 virtual void release_message(runtime_object_identity _MsgId) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_MsgId*<br/>
 O `runtime_object_identity` do objeto de `message` que está sendo liberado.
@@ -380,7 +380,7 @@ Libera uma contagem de referência neste objeto `source_block`.
 virtual void release_ref(_Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_PTarget*<br/>
 Um ponteiro para o bloco de destino que está chamando esse método.
@@ -407,7 +407,7 @@ virtual bool reserve(
     _Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_MsgId*<br/>
 O `runtime_object_identity` do objeto `message` oferecido.
@@ -433,7 +433,7 @@ Quando substituído em uma classe derivada, o reserva uma mensagem oferecida ant
 virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_MsgId*<br/>
 O `runtime_object_identity` do objeto de `message` que está sendo reservado.
@@ -478,7 +478,7 @@ O enfileira as mensagens de forma síncrona e inicia uma tarefa de propagação,
 virtual void sync_send(_Inout_opt_ message<_Target_type>* _Msg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Msg*<br/>
 Um ponteiro para um objeto `message` para enviar de forma síncrona.
@@ -491,7 +491,7 @@ Desvincula um bloco de destino deste `source_block` objeto.
 virtual void unlink_target(_Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_PTarget*<br/>
 Um ponteiro para um bloco de `ITarget` para desvincular deste objeto `source_block`.
@@ -508,7 +508,7 @@ Um retorno de chamada que notifica que um destino foi desvinculado desse objeto 
 virtual void unlink_target_notification(_Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_PTarget*<br/>
 O bloco de `ITarget` que foi desvinculado.
@@ -529,7 +529,7 @@ Aguarda a conclusão de todas as propagações assíncronas. Essa espera de rota
 void wait_for_outstanding_async_sends();
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Classe ISource](isource-class.md)

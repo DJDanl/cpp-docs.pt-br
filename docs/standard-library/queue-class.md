@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
 ms.openlocfilehash: 512b9499e63933a71a27a87f91a3bef8a65339e1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458351"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890832"
 ---
 # <a name="queue-class"></a>Classe queue
 
@@ -40,21 +40,21 @@ template <class Type, class Container = deque <Type>>
 class queue
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Escreva*\
+*Tipo*\
 O tipo de dados do elemento a ser armazenado na fila
 
-*Container*\
+\ de *contêiner*
 O tipo do contêiner subjacente usado para implementar a fila.
 
 ## <a name="remarks"></a>Comentários
 
-Os elementos da classe `Type` estipulados no primeiro parâmetro de modelo de um objeto de fila são sinônimos de [value_type](#value_type) e devem corresponder ao tipo de elemento na classe `Container` de contêiner subjacente estipulada pelo segundo modelo meter. O `Type` deve ser atribuível, para que seja possível copiar objetos desse tipo e atribuir valores a variáveis desse tipo.
+Os elementos da classe `Type` estipulados no primeiro parâmetro de modelo de um objeto de fila são sinônimos de [value_type](#value_type) e devem corresponder ao tipo de elemento na classe de contêiner subjacente `Container` estipulado pelo segundo parâmetro de modelo. O `Type` deve ser atribuível, para que seja possível copiar objetos desse tipo e atribuir valores a variáveis desse tipo.
 
-As classes de contêiner subjacentes adequadas para a fila incluem [deque](../standard-library/deque-class.md) e [list](../standard-library/list-class.md), ou qualquer outro contêiner de sequência `front`que `back`ofereça suporte às `pop_front`operações do,, `push_back`e. A classe de contêiner subjacente é encapsulada dentro do adaptador do contêiner, que expõe apenas o conjunto limitado de funções membro de contêiner de sequência como uma interface pública.
+As classes de contêiner subjacentes adequadas para a fila incluem [deque](../standard-library/deque-class.md) e [list](../standard-library/list-class.md), ou qualquer outro contêiner de sequência que ofereça suporte às operações de `front`, `back`, `push_back`e `pop_front`. A classe de contêiner subjacente é encapsulada dentro do adaptador do contêiner, que expõe apenas o conjunto limitado de funções membro de contêiner de sequência como uma interface pública.
 
-Os objetos de fila são comparáveis de igualdade se e somente se os elementos `Type` da classe forem comparáveis de igualdade e forem menores que o comparável se e somente se os elementos `Type` da classe forem menores que o comparável.
+Os objetos de fila são comparáveis de igualdade se e somente se os elementos da classe `Type` forem comparáveis de igualdade e forem menores do que o comparável se e somente se os elementos da classe `Type` forem menores-que o comparável.
 
 Há três tipos de adaptadores de contêiner definidos pela Biblioteca Padrão C++: stack, queue e priority_queue. Cada um deles restringe a funcionalidade de uma classe de contêiner subjacente para fornecer uma interface com precisão controlada a uma estrutura de dados padrão.
 
@@ -101,15 +101,15 @@ reference back();
 const_reference back() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O último elemento da fila. Se a fila estiver vazia, o valor retornado será indefinido.
 
 ### <a name="remarks"></a>Comentários
 
-Se o valor retornado de `back` for atribuído a um `const_reference`, o objeto da fila não poderá ser modificado. Se o valor de retorno `back` de for atribuído a `reference`um, o objeto de fila poderá ser modificado.
+Se o valor retornado de `back` for atribuído a um `const_reference`, o objeto da fila não poderá ser modificado. Se o valor de retorno de `back` for atribuído a uma `reference`, o objeto de fila poderá ser modificado.
 
-Quando compilado usando [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 ou 2, um erro em tempo de execução ocorrerá se você tentar acessar um elemento em uma fila vazia.  Consulte [Iteradores Verificados](../standard-library/checked-iterators.md) para obter mais informações.
+Quando compilado usando [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 ou 2, um erro de runtime ocorrerá se você tentar acessar um elemento em uma fila vazia.  Consulte [Iteradores Verificados](../standard-library/checked-iterators.md) para obter mais informações.
 
 ### <a name="example"></a>Exemplo
 
@@ -163,7 +163,7 @@ Testa se uma fila está vazia.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true**, se a fila estiver vazia, **false** se não estiver.
 
@@ -211,17 +211,17 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O primeiro elemento da fila. Se a fila estiver vazia, o valor retornado será indefinido.
 
 ### <a name="remarks"></a>Comentários
 
-Se o valor retornado de `front` for atribuído a um `const_reference`, o objeto da fila não poderá ser modificado. Se o valor de retorno `front` de for atribuído a `reference`um, o objeto de fila poderá ser modificado.
+Se o valor retornado de `front` for atribuído a um `const_reference`, o objeto da fila não poderá ser modificado. Se o valor de retorno de `front` for atribuído a uma `reference`, o objeto de fila poderá ser modificado.
 
-A função membro retorna um `reference` para o primeiro elemento da sequência controlada, que deve ser não vazio.
+A função membro retorna um `reference` ao primeiro elemento da sequência controlada, que deve ser não vazio.
 
-Quando compilado usando [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 ou 2, um erro em tempo de execução ocorrerá se você tentar acessar um elemento em uma fila vazia.  Consulte [Iteradores Verificados](../standard-library/checked-iterators.md) para obter mais informações.
+Quando compilado usando [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 ou 2, um erro de runtime ocorrerá se você tentar acessar um elemento em uma fila vazia.  Consulte [Iteradores Verificados](../standard-library/checked-iterators.md) para obter mais informações.
 
 ### <a name="example"></a>Exemplo
 
@@ -317,9 +317,9 @@ Adiciona um elemento na parte final da fila.
 void push(const Type& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Val*\
+*valor*\
 O elemento adicionado na parte final da fila.
 
 ### <a name="remarks"></a>Comentários
@@ -368,9 +368,9 @@ queue();
 explicit queue(const container_type& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Certo*\
+\ *à direita*
 O contêiner **const** do qual a fila construída será uma cópia.
 
 ### <a name="remarks"></a>Comentários
@@ -433,7 +433,7 @@ Retorna o número de elementos na fila.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O tamanho atual da fila.
 
@@ -482,7 +482,7 @@ O tipo é um sinônimo do `size_type` do contêiner base adaptado pela fila.
 
 Veja o exemplo de [queue::front](#front) para saber como declarar e usar `size_type`.
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 Um tipo que representa o tipo de objeto armazenado como um elemento em uma fila.
 
@@ -524,7 +524,7 @@ The value_type is AnInt = 69
 The element at the front of the queue is 69.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
 ms.openlocfilehash: 34743ce48510eec9d8f7862e5ed951a722932962
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142254"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876068"
 ---
 # <a name="cancellation_token-class"></a>Classe cancellation_token
 
@@ -34,14 +34,14 @@ class cancellation_token;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[cancellation_token](#ctor)||
 |[~ cancellation_token destruidor](#dtor)||
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[deregister_callback](#deregister_callback)|Remove um retorno de chamada registrado anteriormente por meio do método `register` com base no objeto `cancellation_token_registration` retornado no momento do registro.|
 |[is_cancelable](#is_cancelable)|Retorna uma indicação de se esse token pode ser cancelado ou não.|
@@ -51,7 +51,7 @@ class cancellation_token;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[operator!=](#operator_neq)||
 |[operator=](#operator_eq)||
@@ -61,7 +61,7 @@ class cancellation_token;
 
 `cancellation_token`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** pplcancellation_token. h
 
@@ -81,7 +81,7 @@ cancellation_token(const cancellation_token& _Src);
 cancellation_token(cancellation_token&& _Src);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Src*<br/>
 O cancellation_token a ser copiado ou movido.
@@ -94,7 +94,7 @@ Remove um retorno de chamada registrado anteriormente por meio do método `regis
 void deregister_callback(const cancellation_token_registration& _Registration) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Registration*<br/>
 O objeto `cancellation_token_registration` correspondente ao retorno de chamada a ser cancelado. Esse token deve ter sido retornado anteriormente de uma chamada para o método `register`.
@@ -141,7 +141,7 @@ Um token de cancelamento que não pode ser cancelado.
 bool operator!= (const cancellation_token& _Src) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Src*<br/>
 O `cancellation_token` a ser comparado.
@@ -156,7 +156,7 @@ cancellation_token& operator= (const cancellation_token& _Src);
 cancellation_token& operator= (cancellation_token&& _Src);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Src*<br/>
 O `cancellation_token` a ser atribuído.
@@ -169,7 +169,7 @@ O `cancellation_token` a ser atribuído.
 bool operator== (const cancellation_token& _Src) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Src*<br/>
 O `cancellation_token` a ser comparado.
@@ -185,7 +185,7 @@ template<typename _Function>
 ::Concurrency::cancellation_token_registration register_callback(const _Function& _Func) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Function*<br/>
 O tipo do objeto de função que será chamado novamente quando este `cancellation_token` for cancelado.
@@ -197,6 +197,6 @@ O objeto de função que será chamado de volta quando este `cancellation_token`
 
 Um objeto `cancellation_token_registration` que pode ser utilizado no método `deregister` para cancelar o registro de um retorno de chamada previamente registrado e impedir que ele seja feito. O método gerará uma exceção [invalid_operation](invalid-operation-class.md) se for chamado em um objeto `cancellation_token` que foi criado usando o método [cancellation_token:: None](#none) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)

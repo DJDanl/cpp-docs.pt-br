@@ -8,15 +8,15 @@ helpviewer_keywords:
 - namespaces [C++]
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
 ms.openlocfilehash: ae3006dd1b17ec38240a318af6cfcac5c7d6bf49
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866035"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856664"
 ---
 # <a name="namespaces-c"></a>Namespaces (C++)
 
-Um namespace é uma região declarativa que fornece um escopo para os identificadores (os nomes de tipos, funções, variáveis, etc) dentro dele. Os namespaces são usados para organizar o código em grupos lógicos e para evitar colisões de nomes que podem ocorrer especialmente quando sua base de código inclui várias bibliotecas. Todos os identificadores no escopo do namespace são visíveis entre si sem qualificação. Os identificadores fora do namespace podem acessar os membros usando o nome totalmente qualificado para cada identificador, por exemplo `std::vector<std::string> vec;`, ou mais por uma [declaração using](../cpp/using-declaration.md) para um único identificador (`using std::string`) ou uma [diretiva using](../cpp/namespaces-cpp.md#using_directives) para todos os identificadores no namespace (`using namespace std;`). O código nos arquivos de cabeçalho sempre deve usar o nome totalmente qualificado do namespace.
+Um namespace é uma região declarativa que fornece um escopo para os identificadores (os nomes de tipos, funções, variáveis, etc) dentro dele. Os namespaces são usados para organizar o código em grupos lógicos e para evitar colisões de nomes que podem ocorrer especialmente quando sua base de código inclui várias bibliotecas. Todos os identificadores no escopo do namespace são visíveis entre si sem qualificação. Os identificadores fora do namespace podem acessar os membros usando o nome totalmente qualificado para cada identificador, por exemplo `std::vector<std::string> vec;`, ou mais, por uma [declaração using](../cpp/using-declaration.md) para um único identificador (`using std::string`) ou uma [diretiva using](../cpp/namespaces-cpp.md#using_directives) para todos os identificadores no namespace (`using namespace std;`). O código nos arquivos de cabeçalho sempre deve usar o nome totalmente qualificado do namespace.
 
 O exemplo a seguir mostra uma declaração de namespace e três maneiras que o código fora do namespace pode acessar seus membros.
 
@@ -98,7 +98,7 @@ int ContosoDataServer::Bar(){return 0;}
 
 Um namespace pode ser declarado em vários blocos em um único arquivo e em vários arquivos. O compilador une as partes durante o pré-processamento e o namespace resultante contém todos os membros declarados em todas as partes. Um exemplo disso é o namespace padrão que é declarado em cada um dos arquivos de cabeçalho na biblioteca padrão.
 
-Membros de um namespace nomeado podem ser definidos fora do namespace no qual eles são declarados pela qualificação explícita do nome que está sendo definido. No entanto, a definição deve aparecer após o ponto de declaração em um namespace que inclui o namespace da declaração. Por exemplo:
+Os membros de um namespace nomeado podem ser definidos fora do namespace em que são declarados pela qualificação explícita de nome que está sendo definido. No entanto, a definição deve aparecer após o ponto de declaração em um namespace que inclui o namespace da declaração. Por exemplo:
 
 ```cpp
 // defining_namespace_members.cpp
@@ -119,11 +119,11 @@ Esse erro pode ocorrer quando os membros do namespace são declarados em vários
 
 ## <a name="the-global-namespace"></a>O namespace global
 
-Se um identificador não for declarado em um namespace explícito, ele será parte do namespace global implícito. Em geral, tente evitar fazer declarações no escopo global quando possível, exceto para a [função principal](../c-language/main-function-and-program-execution.md)do ponto de entrada, que deve estar no namespace global. Para qualificar explicitamente um identificador global, use o operador de resolução de escopo sem nome, `::SomeFunction(x);`como em. Isso diferenciará o identificador de qualquer coisa com o mesmo nome em qualquer outro namespace e também ajudará a facilitar o seu código para outras pessoas entenderem.
+Se um identificador não for declarado em um namespace explícito, ele será parte do namespace global implícito. Em geral, tente evitar fazer declarações no escopo global quando possível, exceto para a [função principal](../c-language/main-function-and-program-execution.md)do ponto de entrada, que deve estar no namespace global. Para qualificar explicitamente um identificador global, use o operador de resolução de escopo sem nome, como em `::SomeFunction(x);`. Isso diferenciará o identificador de qualquer coisa com o mesmo nome em qualquer outro namespace e também ajudará a facilitar o seu código para outras pessoas entenderem.
 
 ## <a name="the-std-namespace"></a>O namespace std
 
-Todas C++ as funções e tipos de biblioteca padrão são declarados no namespace ou namespaces aninhados dentro `std` `std`de.
+Todas C++ as funções e tipos de biblioteca padrão são declarados no namespace `std` ou em namespaces aninhados dentro de `std`.
 
 ## <a name="nested-namespaces"></a>Namespaces aninhados
 
@@ -205,7 +205,7 @@ Você pode usar namespaces embutidos como um mecanismo de controle de versão pa
 
 A palavra-chave inline deve ser aplicada à primeira declaração do namespace em uma unidade de compilação.
 
-O exemplo a seguir mostra duas versões de uma interface, cada uma em um namespace aninhado. O `v_20` namespace tem alguma modificação `v_10` da interface e está marcado como embutido. O código do cliente que usa a nova biblioteca `Contoso::Funcs::Add` e as chamadas invocará a versão v_20. O código que tenta chamar `Contoso::Funcs::Divide` agora receberá um erro de tempo de compilação. Se eles realmente precisarem dessa função, eles ainda poderão acessar `v_10` a versão chamando `Contoso::v_10::Funcs::Divide`explicitamente.
+O exemplo a seguir mostra duas versões de uma interface, cada uma em um namespace aninhado. O namespace `v_20` tem alguma modificação da interface `v_10` e está marcado como embutido. O código do cliente que usa a nova biblioteca e chama `Contoso::Funcs::Add` invocará a versão v_20. O código que tenta chamar `Contoso::Funcs::Divide` agora receberá um erro de tempo de compilação. Se eles realmente precisarem dessa função, eles ainda poderão acessar a versão do `v_10` chamando explicitamente `Contoso::v_10::Funcs::Divide`.
 
 ```cpp
 namespace Contoso
@@ -264,6 +264,6 @@ namespace
 
 Isso é chamado de namespace não nomeado ou anônimo e é útil quando você deseja tornar declarações de variáveis invisíveis para código em outros arquivos (ou seja, dar a elas vínculos internos) sem precisar criar um namespace nomeado. Todo o código no mesmo arquivo pode ver os identificadores em um namespace sem nome, mas os identificadores, juntamente com o próprio namespace, não são visíveis fora desse arquivo — ou mais precisamente fora da unidade de tradução.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Declarações e definições](declarations-and-definitions-cpp.md)

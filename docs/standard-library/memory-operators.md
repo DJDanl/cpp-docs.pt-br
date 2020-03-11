@@ -11,15 +11,15 @@ f1_keywords:
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
 ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243828"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884061"
 ---
 # <a name="ltmemorygt-operators"></a>Operadores &lt;memory&gt;
 
-## <a name="op_neq"></a> operador! =
+## <a name="op_neq"></a>operador! =
 
 Testa a desigualdade entre objetos.
 
@@ -40,21 +40,21 @@ bool operator!=(
     const shared_ptr<Ty2>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*À esquerda*\
+\ *à esquerda*
 Um dos objetos a ser testado quanto à desigualdade.
 
-*Certo*\
+\ *à direita*
 Um dos objetos a ser testado quanto à desigualdade.
 
-*Ty1*\
+\ *Ty1*
 O tipo controlado pelo ponteiro compartilhado esquerdo.
 
-*Ty2*\
+\ *Ty2*
 O tipo controlado pelo ponteiro compartilhado direito.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se os objetos não forem iguais, **false** se os objetos forem iguais.
 
@@ -120,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a> operador = =
+## <a name="op_eq_eq"></a>operador = =
 
 Testa a igualdade entre objetos.
 
@@ -141,23 +141,23 @@ bool operator==(
     const shared_ptr<Ty2>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*À esquerda*\
+\ *à esquerda*
 Um dos objetos a ser testado quanto à igualdade.
 
-*Certo*\
+\ *à direita*
 Um dos objetos a ser testado quanto à igualdade.
 
-*Ty1*\
+\ *Ty1*
 O tipo controlado pelo ponteiro compartilhado esquerdo.
 
-*Ty2*\
+\ *Ty2*
 O tipo controlado pelo ponteiro compartilhado direito.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**Verdadeiro** se os objetos forem iguais; **falso** se objetos não forem iguais.
+**true** se os objetos forem iguais, **false** se os objetos não forem iguais.
 
 ### <a name="remarks"></a>Comentários
 
@@ -232,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a> operador&gt;=
+## <a name="op_gt_eq"></a>= de&gt;do operador
 
 Testa um objeto que é maior que ou igual a um segundo objeto.
 
@@ -248,25 +248,25 @@ bool operator>=(
     const shared_ptr<Ty2>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*À esquerda*\
+\ *à esquerda*
 Um dos objetos a ser comparado.
 
-*Certo*\
+\ *à direita*
 Um dos objetos a ser comparado.
 
-*Ty1*\
+\ *Ty1*
 O tipo controlado pelo ponteiro compartilhado esquerdo.
 
-*Ty2*\
+\ *Ty2*
 O tipo controlado pelo ponteiro compartilhado direito.
 
 ### <a name="remarks"></a>Comentários
 
 Os operadores de modelo retornam `left.get() >= right.get()`.
 
-## <a name="op_lt"></a> Operador&lt;
+## <a name="op_lt">Operador </a>&lt;
 
 Testa um objeto que é menor que um segundo objeto.
 
@@ -282,21 +282,21 @@ bool operator<(
     const shared_ptr<Ty2>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*À esquerda*\
+\ *à esquerda*
 Um dos objetos a ser comparado.
 
-*Certo*\
+\ *à direita*
 Um dos objetos a ser comparado.
 
-*Ty1*\
+\ *Ty1*
 O tipo controlado pelo ponteiro esquerdo.
 
-*Ty2*\
+\ *Ty2*
 O tipo controlado pelo ponteiro direito.
 
-## <a name="op_lt_eq"></a> operador&lt;=
+## <a name="op_lt_eq"></a>= de&lt;do operador
 
 Testa um objeto que é maior ou igual a um segundo objeto de uma classe especificada.
 
@@ -312,25 +312,25 @@ bool operator<=(
     const shared_ptr<Ty2>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*À esquerda*\
+\ *à esquerda*
 Um dos objetos a ser comparado.
 
-*Certo*\
+\ *à direita*
 Um dos objetos a ser comparado.
 
-*Ty1*\
+\ *Ty1*
 O tipo controlado pelo ponteiro compartilhado esquerdo.
 
-*Ty2*\
+\ *Ty2*
 O tipo controlado pelo ponteiro compartilhado direito.
 
 ### <a name="remarks"></a>Comentários
 
-O operador de modelo retorna `left.get() <= right.get()`
+Os operadores de modelo retornam `left.get() <= right.get()`
 
-## <a name="op_gt"></a> Operador&gt;
+## <a name="op_gt">Operador </a>&gt;
 
 Testa um objeto que é maior que um segundo objeto.
 
@@ -346,21 +346,21 @@ bool operator>(
     const shared_ptr<Ty2>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*À esquerda*\
+\ *à esquerda*
 Um dos objetos a ser comparado.
 
-*Certo*\
+\ *à direita*
 Um dos objetos a ser comparado.
 
-*Ty1*\
+\ *Ty1*
 O tipo controlado pelo ponteiro compartilhado esquerdo.
 
-*Ty2*\
+\ *Ty2*
 O tipo controlado pelo ponteiro compartilhado direito.
 
-## <a name="op_lt_lt"></a> operador&lt;&lt;
+## <a name="op_lt_lt"></a>&lt; de&lt;do operador
 
 Grava o ponteiro compartilhado no fluxo.
 
@@ -370,12 +370,12 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
     shared_ptr<Ty>& sp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Elem*\
+\ *elem*
 O tipo do elemento de fluxo.
 
-*TR*\
+*Tr*\
 O tipo de características do elemento de fluxo.
 
 *Ty*\
@@ -384,7 +384,7 @@ O tipo controlado pelo ponteiro compartilhado.
 *out*\
 O fluxo de saída.
 
-*SP*\
+\ *SP*
 O ponteiro compartilhado.
 
 ### <a name="remarks"></a>Comentários

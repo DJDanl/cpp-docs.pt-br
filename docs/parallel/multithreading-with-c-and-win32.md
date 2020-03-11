@@ -11,11 +11,11 @@ helpviewer_keywords:
 - threading [C]
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
 ms.openlocfilehash: 1764561e0b2b43b8a89d8a1eb2e85d84ce33c4fc
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141962"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867047"
 ---
 # <a name="multithreading-with-c-and-win32"></a>Multithread com C e Win32
 
@@ -115,7 +115,7 @@ Há vários problemas que você pode encontrar ao criar, vincular ou executar um
 |Você recebe uma caixa de mensagem mostrando que seu programa causou uma violação de proteção.|Muitos erros de programação do Win32 causam violações de proteção. Uma causa comum de violações de proteção é a atribuição indireta de dados a ponteiros nulos. Como isso resulta em seu programa tentando acessar a memória que não pertence a ele, uma violação de proteção é emitida.<br /><br /> Uma maneira fácil de detectar a causa de uma violação de proteção é compilar seu programa com informações de depuração e, em seguida, executá-lo por meio do depurador no ambiente do Visual Studio. Quando ocorre a falha de proteção, o Windows transfere o controle para o depurador e o cursor é posicionado na linha que causou o problema.|
 |Seu programa gera vários erros de compilação e vinculação.|Você pode eliminar muitos problemas potenciais definindo o nível de aviso do compilador como um de seus valores mais altos e contratando as mensagens de aviso. Usando as opções de nível de aviso nível 3 ou nível 4, você pode detectar conversões de dados não intencionais, protótipos de função ausentes e uso de recursos não-ANSI.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte multithread para código mais antigo (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)\
 [Exemplo de programa multithread em C](sample-multithread-c-program.md)\

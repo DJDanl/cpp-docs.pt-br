@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
 ms.openlocfilehash: af84c5239a9cb3cbddb1ab4f0230e5b1a3373573
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400715"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883611"
 ---
 # <a name="cdialogbar-class"></a>Classe CDialogBar
 
@@ -31,26 +31,26 @@ class CDialogBar : public CControlBar
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|[CDialogBar::CDialogBar](#cdialogbar)|Constrói um objeto `CDialogBar`.|
+|[CDialogBar:: CDialogBar](#cdialogbar)|Constrói um objeto `CDialogBar`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|[CDialogBar::Create](#create)|Cria uma barra de diálogo do Windows e anexa-o para o `CDialogBar` objeto.|
+|[CDialogBar:: criar](#create)|Cria uma barra de diálogo do Windows e a anexa ao objeto `CDialogBar`.|
 
 ## <a name="remarks"></a>Comentários
 
-Uma barra da caixa de diálogo é semelhante a uma caixa de diálogo que contém os controles padrão do Windows que o usuário pode pressionar tab entre. Similaridade de outra é que você crie um modelo de caixa de diálogo para representar a barra da caixa de diálogo.
+Uma barra de diálogo é semelhante a uma caixa de diálogo na qual ela contém controles padrão do Windows que o usuário pode Tab. Outra similaridade é que você crie um modelo de caixa de diálogo para representar a barra de diálogo.
 
-Criando e usando uma caixa de diálogo são semelhante à criação e uso uma `CFormView` objeto. Primeiro, use o [editor de caixa de diálogo](../../windows/dialog-editor.md) para definir um modelo de caixa de diálogo com os estilos WS_CHILD e nenhum outro estilo. O modelo não deve ter o estilo WS_VISIBLE. No código do aplicativo, chame o construtor para construir o `CDialogBar` do objeto, em seguida, chame `Create` para criar a janela da barra da caixa de diálogo e anexá-lo para o `CDialogBar` objeto.
+Criar e usar uma barra de diálogo é semelhante a criar e usar um objeto `CFormView`. Primeiro, use o [Editor de caixa de diálogo](../../windows/dialog-editor.md) para definir um modelo de caixa de diálogo com o estilo WS_CHILD e nenhum outro estilo. O modelo não deve ter o estilo WS_VISIBLE. No código do aplicativo, chame o construtor para construir o objeto `CDialogBar`, em seguida, chame `Create` para criar a janela da barra de caixas de diálogo e anexe-a ao objeto `CDialogBar`.
 
-Para obter mais informações sobre `CDialogBar`, consulte o artigo [barras da caixa de diálogo](../../mfc/dialog-bars.md) e [31 de observação técnica](../../mfc/tn031-control-bars.md), barras de controle.
+Para obter mais informações sobre `CDialogBar`, consulte as [barras de diálogo](../../mfc/dialog-bars.md) do artigo e a [Nota técnica 31](../../mfc/tn031-control-bars.md), barras de controle.
 
 > [!NOTE]
->  Na versão atual, um `CDialogBar` objeto não é possível hospedar controles dos Windows Forms. Para obter mais informações sobre controles de Windows Forms no Visual C++, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+>  Na versão atual, um objeto `CDialogBar` não pode hospedar Windows Forms controles. Para obter mais informações sobre controles de Windows Forms C++no Visual, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -66,9 +66,9 @@ Para obter mais informações sobre `CDialogBar`, consulte o artigo [barras da c
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxext.h
+**Cabeçalho:** afxext. h
 
-##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar
+##  <a name="cdialogbar"></a>CDialogBar:: CDialogBar
 
 Constrói um objeto `CDialogBar`.
 
@@ -76,9 +76,9 @@ Constrói um objeto `CDialogBar`.
 CDialogBar();
 ```
 
-##  <a name="create"></a>  CDialogBar::Create
+##  <a name="create"></a>CDialogBar:: criar
 
-Carrega o modelo de recursos de caixa de diálogo especificado por `lpszTemplateName` ou `nIDTemplate`, cria a janela da barra da caixa de diálogo, define seu estilo e associa-o com o `CDialogBar` objeto.
+Carrega o modelo de recurso de caixa de diálogo especificado por `lpszTemplateName` ou `nIDTemplate`, cria a janela de barras de diálogo, define seu estilo e o associa ao objeto `CDialogBar`.
 
 ```
 virtual BOOL Create(
@@ -94,56 +94,56 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParentWnd*<br/>
-Um ponteiro para o pai `CWnd` objeto.
+Um ponteiro para o objeto de `CWnd` pai.
 
 *lpszTemplateName*<br/>
-Um ponteiro para o nome da `CDialogBar` modelo de recursos de caixa de diálogo do objeto.
+Um ponteiro para o nome do modelo de recurso de caixa de diálogo do objeto de `CDialogBar`.
 
 *nStyle*<br/>
-O estilo de barra de ferramentas. Estilos de barra de ferramentas adicionais com suporte são:
+O estilo da barra de ferramentas. Os estilos de barra de ferramentas adicionais com suporte são:
 
-- Barra de controle de CBRS_TOP está na parte superior da janela do quadro.
+- CBRS_TOP Barra de controle está na parte superior da janela do quadro.
 
-- Barra de controle CBRS_BOTTOM é na parte inferior da janela do quadro.
+- CBRS_BOTTOM barra de controle está na parte inferior da janela do quadro.
 
-- Barra de controle de CBRS_NOALIGN não é reposicionada quando o pai for redimensionado.
+- CBRS_NOALIGN Barra de controle não é reposicionada quando o pai é redimensionado.
 
-- Barra de controle CBRS_TOOLTIPS exibe dicas de ferramenta.
+- CBRS_TOOLTIPS barra de controle exibe dicas de ferramenta.
 
-- Barra de controle CBRS_SIZE_DYNAMIC é dinâmica.
+- CBRS_SIZE_DYNAMIC barra de controle é dinâmica.
 
-- Barra de controle CBRS_SIZE_FIXED é fixo.
+- CBRS_SIZE_FIXED barra de controle é fixa.
 
-- Barra de controle CBRS_FLOATING é flutuante.
+- CBRS_FLOATING barra de controle está flutuante.
 
-- Barra de Status de CBRS_FLYBY exibe informações sobre o botão.
+- CBRS_FLYBY Barra de status exibe informações sobre o botão.
 
-- Barra de controle de CBRS_HIDE_INPLACE não é exibida ao usuário.
+- CBRS_HIDE_INPLACE barra de controle não é exibida para o usuário.
 
 *nID*<br/>
-A ID do controle da barra de diálogo.
+A ID de controle da barra de diálogo.
 
 *nIDTemplate*<br/>
-A ID de recurso a `CDialogBar` modelo de caixa de diálogo do objeto.
+A ID de recurso do modelo de caixa de diálogo do objeto de `CDialogBar`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se bem-sucedido; Caso contrário, 0.
+Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-Se você especificar o estilo de alinhamento CBRS_TOP ou CBRS_BOTTOM, largura da barra de diálogo é que da janela do quadro e sua altura é que um recurso especificado pela *nIDTemplate*. Se você especificar o estilo de alinhamento CBRS_LEFT ou CBRS_RIGHT, altura da barra de diálogo é que da janela do quadro e sua largura seja do recurso especificado pela *nIDTemplate*.
+Se você especificar o estilo de alinhamento CBRS_TOP ou CBRS_BOTTOM, a largura da barra de diálogo será a da janela do quadro e sua altura será a do recurso especificado por *nIDTemplate*. Se você especificar o CBRS_LEFT ou o estilo de alinhamento de CBRS_RIGHT, a altura da barra de diálogo será aquela da janela do quadro e sua largura será a do recurso especificado por *nIDTemplate*.
 
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Exemplo MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
+[Exemplo de CTRLBARS do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CFormView](../../mfc/reference/cformview-class.md)<br/>

@@ -6,13 +6,13 @@ f1_keywords:
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
 ms.openlocfilehash: fe4877bc5b371a2570c18950bac36a003078ccc7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454778"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873942"
 ---
-# <a name="ltunorderedmapgt-operators"></a>Operadores &lt;unordered_map&gt;
+# <a name="ltunordered_mapgt-operators"></a>Operadores &lt;unordered_map&gt;
 
 |||||
 |-|-|-|-|
@@ -26,15 +26,15 @@ Testa se o objeto [unordered_map](../standard-library/unordered-map-class.md) à
 bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, const unordered_map <Key, Type, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*mantida*\
+\ *à esquerda*
 Um objeto do tipo `unordered_map`.
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo `unordered_map`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se os unordered_maps não forem iguais; **false** se forem iguais.
 
@@ -90,15 +90,15 @@ Testa se o objeto [unordered_map](../standard-library/unordered-map-class.md) à
 bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, const unordered_map <Key, Type, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*mantida*\
+\ *à esquerda*
 Um objeto do tipo `unordered_map`.
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo `unordered_map`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se os unordered_maps forem iguais; **false** se eles não forem iguais.
 
@@ -154,15 +154,15 @@ Testa se o objeto [unordered_multimap](../standard-library/unordered-multimap-cl
 bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& left, const unordered_multimap <Key, Type, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*mantida*\
+\ *à esquerda*
 Um objeto do tipo `unordered_multimap`.
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo `unordered_multimap`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se os unordered_multimaps não forem iguais; **false** se forem iguais.
 
@@ -219,15 +219,15 @@ Testa se o objeto [unordered_multimap](../standard-library/unordered-multimap-cl
 bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& left, const unordered_multimap <Key, Type, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*mantida*\
+\ *à esquerda*
 Um objeto do tipo `unordered_multimap`.
 
-*Certo*\
+\ *à direita*
 Um objeto do tipo `unordered_multimap`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se os unordered_multimaps forem iguais; **false** se eles não forem iguais.
 
@@ -276,6 +276,6 @@ int main( )
 
 `um2 == um3: false`
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [<unordered_map>](../standard-library/unordered-map.md)

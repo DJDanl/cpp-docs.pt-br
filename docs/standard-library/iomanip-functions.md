@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518459"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856456"
 ---
 # <a name="ltiomanipgt-functions"></a>Funções &lt;iomanip&gt;
 
@@ -51,7 +51,7 @@ template <class Money>
 T7 get_money(Money& amount, bool use_intl);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor*\
 O valor monetário extraído.
@@ -74,7 +74,7 @@ template <class Elem>
 T10 put_time(struct tm *time_ptr, const Elem *time_format);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *time_ptr*\
 O tempo na forma de uma estrutura de tempo.
@@ -95,7 +95,7 @@ template <class Money>
 T8 put_money(const Money& amount, bool use_intl);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor*\
 O valor monetário a ser inserido no fluxo.
@@ -103,7 +103,7 @@ O valor monetário a ser inserido no fluxo.
 *use_intl*\
 Defina como **true** se manipulador deve usar o formato internacional; **false** se não deveria.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna `str`.
 
@@ -122,7 +122,7 @@ template <class Elem>
 T10 put_time(struct tm* time_ptr, const Elem* time_format);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *time_ptr*\
 O valor temporal a ser gravado no fluxo, fornecido em uma estrutura de tempo.
@@ -145,7 +145,7 @@ quoted(std::string str, char delimiter, char escape) // or wide versions
 quoted(const char* str, char delimiter, char escape) // or wide versions
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Um valor std:: String, Char\*, literal de cadeia de caracteres ou literal de cadeia de caracteres bruto ou uma versão ampla de qualquer um deles (por exemplo, std:: wstring, wchar_t\*).
@@ -309,12 +309,12 @@ Limpa os sinalizadores especificados.
 T1 resetiosflags(ios_base::fmtflags mask);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *máscara*
 Os sinalizadores a limpar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O manipulador retorna um objeto que, quando extraído ou inserido no fluxo `str`, chama `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`, mask)`e, em seguida, retorna `str`.
 
@@ -330,12 +330,12 @@ Define a base para inteiros.
 T3 setbase(int base);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *base*\
 A base numérica.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O manipulador retorna um objeto que, quando extraído ou inserido no fluxo `str`, chama `str.setf(mask, `[ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)`)`e, em seguida, retorna `str`. Aqui, `mask` é determinado da seguinte maneira:
 
@@ -360,12 +360,12 @@ template <class Elem>
 T4 setfill(Elem Ch);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ch*\
 O caractere que será usado para preencher espaços em uma exibição justificada à direita.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O modelo manipulador retorna um objeto que, quando extraído ou inserido no fluxo `str`, chama `str.`[fill](../standard-library/basic-ios-class.md#fill)`(Ch)`e, em seguida, retorna `str`. O tipo `Elem` deve ser o mesmo que o tipo de elemento para o fluxo `str`.
 
@@ -381,12 +381,12 @@ Define os sinalizadores especificados.
 T2 setiosflags(ios_base::fmtflags mask);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *máscara*
 Os sinalizadores a serem definidos.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O manipulador retorna um objeto que, quando extraído ou inserido no fluxo `str`, chama `str.``(mask)`[setf](../standard-library/ios-base-class.md#setf) e, em seguida, retorna `str`.
 
@@ -402,12 +402,12 @@ Define a precisão dos valores de ponto flutuante.
 T5 setprecision(streamsize Prec);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *prec*
 A precisão dos valores de ponto flutuante.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O manipulador retorna um objeto que, quando extraído ou inserido no fluxo `str`, chama `str.`[precision](../standard-library/ios-base-class.md#precision)`(Prec)`e, em seguida, retorna `str`.
 
@@ -423,12 +423,12 @@ Especifica a largura do campo de exibição para o elemento seguinte no fluxo.
 T6 setw(streamsize Wide);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *largo*
 A largura do campo de exibição.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O manipulador retorna um objeto que, quando extraído ou inserido no fluxo `str`, chama `str.`[largura](../standard-library/ios-base-class.md#width)`(Wide)`e, em seguida, retorna `str`.
 
@@ -651,6 +651,6 @@ l4 = 4096
 l5 = 65536
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [\<iomanip>](../standard-library/iomanip.md)

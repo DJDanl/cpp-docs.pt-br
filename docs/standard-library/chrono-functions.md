@@ -6,15 +6,15 @@ f1_keywords:
 - chrono/std::time_point_cast
 ms.assetid: d6800e15-77a1-4df3-900e-d8b2fee190c7
 ms.openlocfilehash: 85fdd413354b3f310d3315a80cf7da983cf6621d
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244912"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865187"
 ---
 # <a name="ltchronogt-functions"></a>Funções &lt;chrono&gt;
 
-## <a name="duration_cast"></a> duration_cast
+## <a name="duration_cast"></a>duration_cast
 
 Converte um objeto `duration` em um tipo especificado.
 
@@ -30,7 +30,7 @@ template <class ToDuration, class Rep, class Period>
 constexpr ToDuration round(const duration<Rep, Period>& d);
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um objeto `duration` do tipo `To` que representa o intervalo de tempo `Dur`, que será truncado se precisar caber no tipo de destino.
 
@@ -38,7 +38,7 @@ Um objeto `duration` do tipo `To` que representa o intervalo de tempo `Dur`, que
 
 Se `To` for uma instanciação de `duration`, essa função não participará na resolução de sobrecarga.
 
-## <a name="time_point_cast"></a> time_point_cast
+## <a name="time_point_cast"></a>time_point_cast
 
 Converte um objeto [time_point](../standard-library/time-point-class.md) para um tipo especificado.
 
@@ -57,7 +57,7 @@ constexpr time_point<Clock, ToDuration>
 round(const time_point<Clock, Duration>& tp);
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um objeto `time_point` que tem uma duração do tipo `To`.
 

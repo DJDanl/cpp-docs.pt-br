@@ -1,5 +1,5 @@
 ---
-title: arrastar e soltar OLE
+title: Arrastar e soltar do OLE
 description: Visão geral de arrastar e soltar de MFC (MFC), como implementar uma fonte de soltar, um destino de soltar e como personalizar o recurso de arrastar e soltar.
 ms.date: 02/09/2020
 helpviewer_keywords:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
 ms.openlocfilehash: c601e8f0324510346513dc8da48dd1a83c95bceb
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127862"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855674"
 ---
-# <a name="ole-drag-and-drop"></a>arrastar e soltar OLE
+# <a name="ole-drag-and-drop"></a>Arrastar e soltar do OLE
 
 O recurso de arrastar e soltar do OLE é, principalmente, um atalho para copiar e colar dados. Quando você usa a área de transferência para copiar ou colar dados, várias etapas são necessárias. Você seleciona os dados e escolhe **recortar** ou **copiar** no menu **Editar** . Em seguida, você passa para o aplicativo ou a janela de destino e coloca o cursor no local de destino. Por fim, escolha **editar** > **colar** no menu.
 
@@ -81,7 +81,7 @@ Você pode substituir as seguintes funções para personalizar as operações de
 | `GiveFeedback` | Comentários visuais, como a aparência do cursor, para resultados de drop diferentes. |
 | `QueryContinueDrag` | O encerramento de uma operação de arrastar e soltar. Essa função permite que você verifique os Estados de chave do modificador durante a operação de arrastar. |
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 \ [OLE](../mfc/ole-in-mfc.md)
 [Objetos de dados OLE e fontes de dados](../mfc/data-objects-and-data-sources-ole.md)\

@@ -13,8 +13,8 @@ ms.openlocfilehash: 572cbdaba346ddb77b665b5677b978c83a80aa3d
 ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333772"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857087"
 ---
 # <a name="event_data-structure"></a>Estrutura de EVENT_DATA
 
@@ -83,7 +83,7 @@ Muitos campos em `EVENT_DATA` contêm contagens em escala. C++As informações d
 
 O valor do campo `EVENT_DATA` `Data` depende do valor de seu campo `EventId`. O valor de `Data` é descrito na tabela a seguir. Alguns identificadores de entidade podem estar ausentes na tabela a seguir. Nesse caso, o campo `Data` é definido como `nullptr` ou zero.
 
-| Valor `EventId` | Tipo apontado por `Data` |
+| `EventId` valor | Tipo apontado por `Data` |
 |--|--|
 | `EVENT_ID_BACK_END_PASS` | [CL_PASS_DATA](cl-pass-data-struct.md) |
 | `EVENT_ID_COMMAND_LINE` | `const wchar_t` |

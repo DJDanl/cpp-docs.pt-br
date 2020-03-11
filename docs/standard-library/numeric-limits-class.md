@@ -71,11 +71,11 @@ helpviewer_keywords:
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 ms.openlocfilehash: 5373bd6a99605f5a63fb6aa2ed6de50c12b1c8f1
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687616"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876017"
 ---
 # <a name="numeric_limits-class"></a>Classe numeric_limits
 
@@ -88,14 +88,14 @@ template <class Type>
     class numeric_limits
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Tipo* \
+*Tipo*\
 O tipo de dados do elemento fundamental cujas propriedades estão sendo testadas ou consultadas ou definidas. O *tipo* também pode ser declarado **const**, **volatile**ou **const volatile**.
 
 ## <a name="remarks"></a>Comentários
 
-O cabeçalho define especializações explícitas para os tipos **wchar_t**, **bool**, **Char**, **sinal assinado**, **não**assinado, **curto**, **não assinado curto**, **int**, n **sinal int**, **Long**, **longo não assinado**, **flutuante**, **duplo**, **longo Duplo**, longo **, demorado**, longo, **char16_t**e **char32_t**. Para essas especializações explícitas, o membro [numeric_limits:: is_specialized](#is_specialized) é **verdadeiro**e todos os membros relevantes têm valores significativos. O programa pode fornecer especializações explícitas adicionais. A maioria das funções de membro da classe descreve ou testa possíveis implementações de **float**.
+O cabeçalho define especializações explícitas para os **tipos wchar_t**, **bool**, **Char**, **sinal assinado**, **caractere não**assinado, **curto**, **não assinado curto**, **int**, **não assinado int**, **longo**, **não assinado**, **flutuante**, **duplo**, **longo Duplo** **, longo**, **sem sinal**, longo, **char16_t**e **char32_t**. Para essas especializações explícitas, o membro [numeric_limits:: is_specialized](#is_specialized) é **true**e todos os membros relevantes têm valores significativos. O programa pode fornecer especializações explícitas adicionais. A maioria das funções de membro da classe descreve ou testa possíveis implementações de **float**.
 
 Para uma especialização arbitrária, nenhum membro tem valores significativos. Um objeto de membro que não tem um valor significativo armazena zero (ou **false**) e uma função de membro que não retorna um valor significativo retorna `Type(0)`.
 
@@ -152,7 +152,7 @@ O menor valor desnormalizado diferente de zero.
 
 **Long double** é o mesmo que **Double** para o C++ compilador.
 
-A função retorna o valor mínimo para o tipo, que é o mesmo que [min](#min) se [has_denorm](#has_denorm) não for igual a `denorm_present`.
+A função retorna o valor mínimo para o tipo, que é o mesmo que [mín](#min) se [has_denorm](#has_denorm) não for igual a `denorm_present`.
 
 #### <a name="example"></a>Exemplo
 

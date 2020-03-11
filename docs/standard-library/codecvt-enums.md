@@ -7,11 +7,11 @@ ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 helpviewer_keywords:
 - std::codecvt_mode
 ms.openlocfilehash: bbef1fe28c3321f06c0cc586062cd017168f8e73
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459787"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866141"
 ---
 # <a name="ltcodecvtgt-enums"></a>Enumerações &lt;codecvt&gt;
 
@@ -39,6 +39,6 @@ A enumeração define três constantes que fornecem informações de configuraç
 
 Essas constantes podem estar ORed juntas em combinações arbitrárias.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<codecvt>](../standard-library/codecvt.md)
