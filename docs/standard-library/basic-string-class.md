@@ -117,11 +117,11 @@ helpviewer_keywords:
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
 ms.openlocfilehash: 08620e0ae6b54b106daba8e0b0a392ceb1a6577d
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821903"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856463"
 ---
 # <a name="basic_string-class"></a>Classe basic_string
 
@@ -134,7 +134,7 @@ template <class CharType, class Traits = char_traits<CharType>, class Allocator 
 class basic_string;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *CharType*
 O tipo de dados de um único caractere a ser armazenado na cadeia de caracteres. A C++ biblioteca padrão fornece especializações desse modelo de classe, com a cadeia de [caracteres](../standard-library/string-typedefs.md#string) de definições de tipo para elementos do tipo **char**, [wstring](../standard-library/string-typedefs.md#wstring), para **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) para `char16_t`e [u32string](../standard-library/string-typedefs.md#u32string) para `char32_t`.
@@ -145,15 +145,15 @@ Várias propriedades importantes dos elementos de `CharType` em uma especializa�
 \ de *alocador*
 O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória da cadeia de caracteres. O valor padrão é **allocator**< `CharType`>.
 
-### <a name="constructors"></a>{1&gt;Construtores&lt;1}
+### <a name="constructors"></a>Construtores
 
-|Construtor|Descrição|
+|Construtor|DESCRIÇÃO|
 |-|-|
 |[basic_string](#basic_string)|Cria uma cadeia de caracteres vazia ou iniciada por caracteres específicos ou que seja uma cópia de todos ou parte de algum outro objeto da cadeia de caracteres ou da cadeia de caracteres C.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome de tipo|Descrição|
+|Nome do tipo|DESCRIÇÃO|
 |-|-|
 |[allocator_type](#allocator_type)|Um tipo que representa a classe `allocator` para um objeto da cadeia de caracteres.|
 |[const_iterator](#const_iterator)|Um tipo que fornece um iterador de acesso aleatório que pode acessar e ler um elemento **const** na cadeia de caracteres.|
@@ -172,7 +172,7 @@ O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre 
 
 ### <a name="member-functions"></a>Funções de membro
 
-|Função de membro|Descrição|
+|Função de membro|DESCRIÇÃO|
 |-|-|
 |[append](#append)|Acrescenta caracteres ao final de uma cadeia de caracteres.|
 |[assign](#assign)|Atribui novos valores de caracteres ao conteúdo de uma cadeia de caracteres.|
@@ -180,7 +180,7 @@ O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre 
 |[back](#back)||
 |[begin](#begin)|Retorna um iterador que trata o primeiro elemento na cadeia de caracteres.|
 |[c_str](#c_str)|Converte o conteúdo de uma cadeia de caracteres em uma cadeia de estilo C, com terminação nula.|
-|[capacity](#capacity)|Retorna o maior número de elementos que podem ser armazenados em uma cadeia de caracteres sem aumentar a alocação de memória da cadeia.|
+|[capacidade](#capacity)|Retorna o maior número de elementos que podem ser armazenados em uma cadeia de caracteres sem aumentar a alocação de memória da cadeia.|
 |[cbegin](#cbegin)|Retorna um iterador const que trata o primeiro elemento na cadeia.|
 |[cend](#cend)|Retorna um iterador const que trata o local após o último elemento em uma cadeia.|
 |[clear](#clear)|Apaga todos os elementos de uma cadeia de caracteres.|
@@ -207,7 +207,7 @@ O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre 
 |[push_back](#push_back)|Adiciona um elemento ao final de uma cadeia de caracteres.|
 |[rbegin](#rbegin)|Retorna um iterador ao primeiro elemento em uma cadeia invertida.|
 |[rend](#rend)|Retorna um iterador que aponta além do último elemento em uma cadeia de caracteres invertida.|
-|[replace](#replace)|Substitui elementos em uma cadeia de caractere em uma posição especificada por caracteres especificados ou copiados de outros intervalos de cadeia de caracteres ou cadeias C.|
+|[substitui](#replace)|Substitui elementos em uma cadeia de caractere em uma posição especificada por caracteres especificados ou copiados de outros intervalos de cadeia de caracteres ou cadeias C.|
 |[reserve](#reserve)|Define a capacidade da cadeia de caracteres para um número pelo menos tão grande quanto um número especificado.|
 |[resize](#resize)|Especifica um novo tamanho para uma cadeia de caracteres, acrescentando ou apagando elementos conforme necessário.|
 |[rfind](#rfind)|Pesquisa, para trás, em uma cadeia de caracteres, a primeira ocorrência de uma subcadeia que corresponde a uma sequência de caracteres especificada.|
@@ -218,7 +218,7 @@ O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre 
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|Operador|DESCRIÇÃO|
 |-|-|
 |[operator+=](#op_add_eq)|Acrescenta caracteres a uma cadeia de caracteres.|
 |[operator=](#op_eq)|Atribui novos valores de caracteres ao conteúdo de uma cadeia de caracteres.|
@@ -230,9 +230,9 @@ Se for solicitado que uma função gere uma sequência mais longa que os element
 
 As referências, os ponteiros e os iteradores que designam elementos da sequência controlada podem tornar-se inválidos após qualquer chamada para uma função que altere a sequência controlada ou após a primeira chamada para uma função membro que não seja **const**.
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** cadeia de caracteres de \<
+**Cabeçalho:** cadeia de caracteres de \<>
 
 **Namespace:** std
 
@@ -305,7 +305,7 @@ basic_string<CharType, Traits, Allocator>& append(
     const_iterator last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *PTR*
 A cadeia de caracteres do C a ser acrescentada.
@@ -328,7 +328,7 @@ Um iterador de entrada que trata do primeiro elemento no intervalo a ser acresce
 *última*\
 Um iterador de entrada, const_pointer ou const_iterator, que trata da posição logo após o último elemento no intervalo a ser acrescentados.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma referência ao objeto de cadeia de caracteres que está sendo acrescentado com os caracteres passados pela função membro.
 
@@ -466,7 +466,7 @@ basic_string<CharType, Traits, Allocator>& assign(
     const_iterator last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *PTR*
 Um ponteiro para os caracteres da cadeia de caracteres do C a serem atribuídos à cadeia de caracteres de destino.
@@ -489,7 +489,7 @@ Um iterador de entrada, const_pointer ou const_iterator, que trata do caractere 
 *desativar*\
 A posição em que novos caracteres começarão a ser atribuídos.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma referência ao objeto de cadeia de caracteres ao qual estão sendo atribuídos novos caracteres pela função membro.
 
@@ -599,12 +599,12 @@ const_reference at(size_type offset) const;
 reference at(size_type offset);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *deslocamento*
 O índice da posição do elemento a ser referenciado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma referência ao caractere da cadeia de caracteres na posição especificada pelo índice de parâmetro.
 
@@ -667,7 +667,7 @@ const_reference back() const;
 reference back();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma referência ao último elemento da cadeia de caracteres, que não deve ser vazio.
 
@@ -745,7 +745,7 @@ basic_string(
     const_iterator last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *PTR*
 A cadeia de caracteres do C cujos caracteres devem ser usados para inicializar a `string` que está sendo construída. Esse valor não pode ser um ponteiro nulo.
@@ -771,7 +771,7 @@ Um iterador de entrada, const_pointer ou const_iterator, que trata do primeiro e
 *última*\
 Um iterador de entrada, const_pointer ou const_iterator, que trata da posição logo após o último elemento no intervalo de origem a ser inserido.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma referência ao objeto de cadeia de caracteres que está sendo construído pelos construtores.
 
@@ -840,7 +840,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de acesso aleatório que trata do primeiro elemento da sequência ou logo após o fim de uma sequência vazia.
 
@@ -888,7 +888,7 @@ Converte o conteúdo de uma cadeia de caracteres em uma cadeia de caracteres do 
 const value_type *c_str() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para a versão do estilo C da cadeia de caracteres de invocação.  O valor do ponteiro não é válido após chamar uma função não const, incluindo o destruidor, na classe basic_string no objeto.
 
@@ -952,7 +952,7 @@ Retorna o maior número de elementos que podem ser armazenados em uma cadeia de 
 size_type capacity() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O tamanho de armazenamento alocado atualmente na memória para manter a cadeia de caracteres.
 
@@ -1022,7 +1022,7 @@ Retorna um iterador **const** que aborda o primeiro elemento no intervalo.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de acesso aleatório **const** que aponta para o primeiro elemento do intervalo ou o local logo após o final de um intervalo vazio (para um intervalo vazio, `cbegin() == cend()`).
 
@@ -1048,7 +1048,7 @@ Retorna um iterador **const** que aborda o local logo após o último elemento e
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de acesso aleatório **const** que aponta muito além do fim do intervalo.
 
@@ -1154,7 +1154,7 @@ int compare(
     size_type number_2) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 A cadeia de caracteres que deve ser comparada com a cadeia de caracteres do operando.
@@ -1177,7 +1177,7 @@ O número máximo de caracteres da cadeia de caracteres do parâmetro a serem co
 \ *PTR*
 A cadeia de caracteres do C a ser comparada com a cadeia de caracteres do operando.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um valor negativo, se a cadeia de caracteres do operando for menor que a cadeia de caracteres do parâmetro, zero, se as duas cadeias de caracteres forem iguais ou um valor positivo se a cadeia de caracteres do operando for maior que a cadeia de caracteres do parâmetro.
 
@@ -1483,7 +1483,7 @@ size_type copy(
     size_type offset = 0) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *PTR*
 A matriz de caracteres de destino à qual os elementos devem ser copiados.
@@ -1493,7 +1493,7 @@ A matriz de caracteres de destino à qual os elementos devem ser copiados.
 \ de *deslocamento*
 A posição inicial na cadeia de caracteres de origem da qual as cópias devem ser feitas.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O número de caracteres realmente copiados.
 
@@ -1558,7 +1558,7 @@ Retorna um iterador const que trata o primeiro elemento em uma cadeia de caracte
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador inverso que aponta para logo após o fim da cadeia de caracteres. A posição designa o início da cadeia de caracteres inversa.
 
@@ -1570,7 +1570,7 @@ Retorna um iterador const que trata o local após o último elemento em uma cade
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador const inverso que trata do local logo após o último elemento em uma cadeia de caracteres invertida (o local que precedia o primeiro elemento na cadeia de caracteres não invertida).
 
@@ -1588,7 +1588,7 @@ size_type _Copy_s(
     size_type offset = 0) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *dest*
 A matriz de caracteres de destino à qual os elementos devem ser copiados.
@@ -1601,7 +1601,7 @@ O tamanho do *dest*.
 \ de *deslocamento*
 A posição inicial na cadeia de caracteres de origem da qual as cópias devem ser feitas.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O número de caracteres realmente copiados.
 
@@ -1665,7 +1665,7 @@ const value_type *data() const noexcept;
 value_type *data() noexcept;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para o primeiro elemento da matriz terminada em nulo que contém o conteúdo da cadeia de caracteres. Para uma cadeia de caracteres vazia, o ponteiro aponta para um único caractere nulo igual a `value_type()`.
 
@@ -1781,7 +1781,7 @@ Testa se a cadeia de caracteres contém caracteres ou não.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se o objeto de cadeia de caracteres não contiver nenhum caractere, **false** se ele tiver pelo menos um caractere.
 
@@ -1831,7 +1831,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna um iterador de acesso aleatório que trata do local após o último elemento em uma cadeia de caracteres.
 
@@ -1911,7 +1911,7 @@ basic_string<CharType, Traits, Allocator>& erase(
     size_type count = npos);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador que trata da posição do primeiro elemento no intervalo a ser apagado.
@@ -1928,7 +1928,7 @@ O índice do primeiro caractere na cadeia de caracteres a ser removido.
 *contagem*\
 O número de elementos que serão removidos se houver tantos no intervalo da cadeia de caracteres começando com *offset*.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Para as duas primeiras funções membro, um iterador que trata do primeiro caractere após o último caractere removido pela função membro. Para a terceira função membro, uma referência ao objeto de cadeia de caracteres do qual os elementos foram apagados.
 
@@ -2020,7 +2020,7 @@ size_type find(
     size_type offset = 0) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *char_value*\
 O valor de caractere que a função membro deve pesquisar.
@@ -2037,7 +2037,7 @@ O número de caracteres, contando a partir do primeiro caractere, na cadeia de c
 \ de *Str*
 A cadeia de caracteres que a função membro deve pesquisar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O índice do primeiro caractere da subsequência pesquisada quando for houver êxito, caso contrário, `npos`.
 
@@ -2195,7 +2195,7 @@ size_type find_first_not_of(
     size_type offset = 0) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *char_value*\
 O valor de caractere que a função membro deve pesquisar.
@@ -2212,7 +2212,7 @@ O número de caracteres, contando a partir do primeiro caractere, na cadeia de c
 \ de *Str*
 A cadeia de caracteres que a função membro deve pesquisar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O índice do primeiro caractere da subsequência pesquisada quando for houver êxito, caso contrário, `npos`.
 
@@ -2383,7 +2383,7 @@ size_type find_first_of(
     size_type offset = 0) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *char_value*\
 O valor de caractere que a função membro deve pesquisar.
@@ -2400,7 +2400,7 @@ O número de caracteres, contando a partir do primeiro caractere, na cadeia de c
 \ de *Str*
 A cadeia de caracteres que a função membro deve pesquisar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O índice do primeiro caractere da subsequência pesquisada quando for houver êxito, caso contrário, `npos`.
 
@@ -2570,7 +2570,7 @@ size_type find_last_not_of(
     size_type offset = npos) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *char_value*\
 O valor de caractere que a função membro deve pesquisar.
@@ -2587,7 +2587,7 @@ O número de caracteres, contando a partir do primeiro caractere, na cadeia de c
 \ de *Str*
 A cadeia de caracteres que a função membro deve pesquisar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O índice do primeiro caractere da subsequência pesquisada quando for houver êxito, caso contrário, `npos`.
 
@@ -2759,7 +2759,7 @@ size_type find_last_of(
     size_type offset = npos) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *char_value*\
 O valor de caractere que a função membro deve pesquisar.
@@ -2776,7 +2776,7 @@ O número de caracteres, contando a partir do primeiro caractere, na cadeia de c
 \ de *Str*
 A cadeia de caracteres que a função membro deve pesquisar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O índice do último caractere da subsequência pesquisada quando houver êxito, caso contrário, `npos`.
 
@@ -2920,7 +2920,7 @@ const_reference front() const;
 reference front();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma referência ao primeiro elemento da cadeia de caracteres, que não deve ser vazio.
 
@@ -2934,7 +2934,7 @@ Retorna uma cópia do objeto alocador usado para construir a cadeia de caractere
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O alocador usado pela cadeia de caracteres.
 
@@ -3026,7 +3026,7 @@ void insert(
     const_iterator last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *posição*
 O índice da posição atrás do ponto de inserção de novos caracteres.
@@ -3055,7 +3055,7 @@ Um iterador de entrada, const_pointer ou const_iterator, que trata do primeiro e
 *última*\
 Um iterador de entrada, const_pointer ou const_iterator, que trata da posição logo após o último elemento no intervalo de origem a ser inserido.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma referência ao objeto de cadeia de caracteres ao qual estão sendo atribuídos novos caracteres pela função membro ou, no caso de inserções de caractere individual, um iterador que trata da posição do caractere inserido ou nenhum, dependendo da função membro específica.
 
@@ -3238,7 +3238,7 @@ Retorna o número máximo de caracteres que uma cadeia de caracteres pode conter
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O número máximo de caracteres que uma cadeia de caracteres pode conter.
 
@@ -3331,7 +3331,7 @@ basic_string<CharType, Traits, Allocator>& operator+=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *char_value*\
 O caractere a ser acrescentado.
@@ -3342,7 +3342,7 @@ Os caracteres da cadeia de caracteres do C a serem acrescentados.
 \ *à direita*
 Os caracteres da cadeia de caracteres a serem acrescentados.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma referência ao objeto de cadeia de caracteres que está sendo acrescentado com os caracteres passados pela função membro.
 
@@ -3423,7 +3423,7 @@ basic_string<CharType, Traits, Allocator>& operator=(
     const basic_string<CharType, Traits, Allocator>&& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *char_value*\
 O valor do caractere a ser atribuído.
@@ -3434,7 +3434,7 @@ Um ponteiro para os caracteres da cadeia de caracteres do C a serem atribuídos 
 \ *à direita*
 A cadeia de caracteres de origem cujos caracteres devem ser atribuídos à cadeia de caracteres de destino.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma referência ao objeto de cadeia de caracteres ao qual estão sendo atribuídos novos caracteres pela função membro.
 
@@ -3508,12 +3508,12 @@ const_reference operator[](size_type offset) const;
 reference operator[](size_type offset);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *deslocamento*
 O índice da posição do elemento a ser referenciado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Uma referência ao caractere da cadeia de caracteres na posição especificada pelo índice de parâmetro.
 
@@ -3625,7 +3625,7 @@ Adiciona um elemento ao final de uma cadeia de caracteres.
 void push_back(value_type char_value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *char_value*\
 O caractere a ser adicionado ao final da cadeia de caracteres.
@@ -3682,7 +3682,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna um iterador de acesso aleatório para o primeiro elemento em uma cadeia de caracteres invertida, indicando qual seria o último elemento na cadeia de caracteres não invertida correspondente.
 
@@ -3778,7 +3778,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador de acesso aleatório inverso que trata do local após o último elemento em uma cadeia de caracteres invertida.
 
@@ -3922,7 +3922,7 @@ basic_string<CharType, Traits, Allocator>& replace(
     const_iterator last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 A cadeia de caracteres que deve ser uma fonte de caracteres para a cadeia de caracteres do operando.
@@ -3960,7 +3960,7 @@ Um iterador, const_pointer ou const_iterator, que trata do último caractere a s
 *contagem*\
 O número de vezes que *char_value* é copiado para a cadeia de caracteres do operando.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A cadeia de caracteres do operando com a substituição feita.
 
@@ -4151,7 +4151,7 @@ Define a capacidade da cadeia de caracteres para um número pelo menos tão gran
 void reserve(size_type count = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *contagem*\
 O número de caracteres para os quais a memória está sendo reservada.
@@ -4246,7 +4246,7 @@ void resize(
     value_type char_value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *contagem*\
 O novo tamanho da cadeia de caracteres.
@@ -4382,7 +4382,7 @@ size_type rfind(
     size_type offset = npos) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *char_value*\
 O valor de caractere que a função membro deve pesquisar.
@@ -4399,7 +4399,7 @@ O número de caracteres, contando a partir do primeiro caractere, na cadeia de c
 \ de *Str*
 A cadeia de caracteres que a função membro deve pesquisar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O índice da última ocorrência, quando pesquisado no sentido inverso, do primeiro caractere da subsequência quando houver êxito, caso contrário, `npos`.
 
@@ -4554,7 +4554,7 @@ Retorna o número de elementos em uma cadeia de caracteres.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O comprimento da cadeia de caracteres.
 
@@ -4665,7 +4665,7 @@ basic_string<CharType, Traits, Allocator> substr(
     size_type count = npos) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *deslocamento*
 Um índice que localiza o elemento na posição da qual é feita a cópia da cadeia de caracteres, com um valor padrão igual a 0.
@@ -4673,7 +4673,7 @@ Um índice que localiza o elemento na posição da qual é feita a cópia da cad
 *contagem*\
 O número de caracteres que devem ser copiados se estiverem presentes.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um objeto de subcadeia de caracteres que é uma cópia dos elementos do operando da cadeia de caracteres, começando na posição especificada pelo primeiro argumento.
 
@@ -4723,7 +4723,7 @@ void swap(
     basic_string<CharType, Traits, Allocator>& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 A cadeia de caracteres de origem cujos elementos devem ser trocados com os da cadeia de caracteres de destino.
@@ -4831,7 +4831,7 @@ The character ch1 is: G.
 The character ch2 is: H.
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [\<string>](../standard-library/string.md)\
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
