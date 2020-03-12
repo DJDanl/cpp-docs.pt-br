@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: 16d485320eb3970bd5c1e4a7a7fabb0602149e6f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: ec6fced70a53d27fdb3312a5b349e9e653ccbd24
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856455"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79128850"
 ---
 # <a name="basic_filebuf-class"></a>Classe basic_filebuf
 
@@ -342,7 +342,7 @@ bool is_open() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-**true** se o ponteiro do arquivo não for um ponteiro nulo.
+**true** se o ponteiro do arquivo não for nulo.
 
 ### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
@@ -413,7 +413,7 @@ O arquivo padrão que abre a proteção, equivalente ao parâmetro *shflag* no [
 
 ### <a name="return-value"></a>Valor retornado
 
-Se o ponteiro do arquivo for um ponteiro nulo, a função retornará um ponteiro nulo. Caso contrário, retornará **this**.
+Se o buffer já estiver aberto ou se o ponteiro do arquivo for um ponteiro nulo, a função retornará um ponteiro nulo. Caso contrário, retornará **this**.
 
 ### <a name="remarks"></a>Comentários
 
