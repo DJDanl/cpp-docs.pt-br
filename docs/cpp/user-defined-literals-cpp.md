@@ -1,17 +1,18 @@
 ---
 title: Literais definidos pelo usuário (C++)
-ms.date: 12/10/2019
+description: Descreve a finalidade e o uso de literais definidos pelo usuário no C++Standard.
+ms.date: 02/10/2020
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
-ms.openlocfilehash: 31b8f1dfb261839c04a6829132975ada9c09d619
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a6636be414fa4dc199ce10fca1b33f092492575f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301295"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090561"
 ---
 # <a name="user-defined-literals"></a>Literais definidos pelo usuário
 
-Há cinco categorias principais de literais em C++: inteiro, caractere, ponto flutuante, Cadeia de caracteres, booliano e ponteiro.  A partir C++ de 11, você pode definir seus próprios literais com base nessas categorias para fornecer atalhos sintáticos para linguagens comuns e aumentar a segurança do tipo. Por exemplo, digamos que você tenha uma classe Distance. Você pode definir um literal para quilômetros e outro para milhas e encorajar o usuário a ser explícito sobre as unidades de medida simplesmente escrevendo: auto d = 42.0_km ou auto d = 42.0_mi. Não há nenhuma vantagem de desempenho ou desvantagem de literais definidos pelo usuário; Eles são principalmente para conveniência ou para dedução de tipo em tempo de compilação. A biblioteca padrão tem literais definidos pelo usuário para o std: String, para as unidades std:: Complex e para as operações em tempo e duração no cabeçalho \<Chrono >:
+Há seis categorias principais de literais em C++: inteiro, caractere, ponto flutuante, Cadeia de caracteres, booliano e ponteiro. A partir C++ de 11, você pode definir seus próprios literais com base nessas categorias, para fornecer atalhos sintáticos para linguagens comuns e aumentar a segurança do tipo. Por exemplo, digamos que você tenha uma classe de `Distance`. Você pode definir um literal para quilômetros e outro para milhas e encorajar o usuário a ser explícito sobre as unidades de medida escrevendo: `auto d = 42.0_km` ou `auto d = 42.0_mi`. Não há vantagem de desempenho ou desvantagem de literais definidos pelo usuário; Eles são principalmente para conveniência ou para dedução de tipo em tempo de compilação. A biblioteca padrão tem literais definidos pelo usuário para `std::string`, para `std::complex`e para unidades nas operações de tempo e duração no cabeçalho \<Chrono >:
 
 ```cpp
 Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)
@@ -40,74 +41,85 @@ ReturnType operator "" _r(const char*);              // Raw literal operator
 template<char...> ReturnType operator "" _t();       // Literal operator template
 ```
 
-Os nomes de operador no exemplo anterior são espaços reservados para qualquer nome que você fornecer; no entanto, o sublinhado à esquerda é necessário. (Somente a biblioteca padrão tem permissão para definir literais sem o sublinhado.) O tipo de retorno é onde você personaliza a conversão ou outra operação que o literal executa. Além disso, qualquer um desses operadores pode ser definido como `constexpr`.
+Os nomes de operador no exemplo anterior são espaços reservados para qualquer nome que você fornecer; no entanto, o sublinhado à esquerda é necessário. (Somente a biblioteca padrão tem permissão para definir literais sem o sublinhado.) O tipo de retorno é onde você personaliza a conversão ou outras operações feitas pelo literal. Além disso, qualquer um desses operadores pode ser definido como `constexpr`.
 
 ## <a name="cooked-literals"></a>Literais cooked
 
-No código-fonte, qualquer literal se definido pelo usuário ou não é essencialmente uma sequência de caracteres alfanuméricos, como `101`, ou `54.7`, ou `"hello"` ou `true`. O compilador interpreta a sequência como um inteiro, float, const char\* cadeia de caracteres e assim por diante. Um literal definido pelo usuário que aceita como entrada, qualquer tipo que o compilador atribuído ao valor literal é informalmente conhecido como um *literal cooked*. Todos os operadores acima, exceto `_r` e `_t`, são literais cooked. Por exemplo, um `42.0_km` literal seria associado a um operador chamado _km que tinha uma assinatura semelhante a _b e o `42_km` literal seria associado a um operador com uma assinatura semelhante a _a.
+No código-fonte, qualquer literal, seja definido pelo usuário ou não, é essencialmente uma sequência de caracteres alfanuméricos, como `101`, ou `54.7`, ou `"hello"` ou `true`. O compilador interpreta a sequência como um inteiro, float, const char\* cadeia de caracteres e assim por diante. Um literal definido pelo usuário que aceita como entrada, qualquer tipo que o compilador atribuído ao valor literal é informalmente conhecido como um *literal cooked*. Todos os operadores acima, exceto `_r` e `_t`, são literais cooked. Por exemplo, um `42.0_km` literal seria associado a um operador chamado _km que tinha uma assinatura semelhante a _b e o `42_km` literal seria associado a um operador com uma assinatura semelhante a _a.
 
-O exemplo a seguir mostra como os literais definidos pelo usuário podem encorajar os chamadores a serem explícitos sobre sua entrada. Para construir um `Distance`, o usuário deve especificar explicitamente quilômetros ou milhas usando o literal definido pelo usuário apropriado. É claro que você também pode obter o mesmo resultado de outras maneiras, mas os literais definidos pelo usuário são menos detalhados do que as alternativas.
+O exemplo a seguir mostra como os literais definidos pelo usuário podem encorajar os chamadores a serem explícitos sobre sua entrada. Para construir um `Distance`, o usuário deve especificar explicitamente quilômetros ou milhas usando o literal definido pelo usuário apropriado. Você pode obter o mesmo resultado de outras maneiras, mas os literais definidos pelo usuário são menos detalhados do que as alternativas.
 
 ```cpp
+// UDL_Distance.cpp
+
+#include <iostream>
+#include <string>
+
 struct Distance
 {
 private:
     explicit Distance(long double val) : kilometers(val)
     {}
 
-    friend Distance operator"" _km(long double  val);
+    friend Distance operator"" _km(long double val);
     friend Distance operator"" _mi(long double val);
+
     long double kilometers{ 0 };
 public:
+    const static long double km_per_mile;
     long double get_kilometers() { return kilometers; }
-    Distance operator+(Distance& other)
+
+    Distance operator+(Distance other)
     {
         return Distance(get_kilometers() + other.get_kilometers());
     }
 };
 
-Distance operator"" _km(long double  val)
+const long double Distance::km_per_mile = 1.609344L;
+
+Distance operator"" _km(long double val)
 {
     return Distance(val);
 }
 
 Distance operator"" _mi(long double val)
 {
-    return Distance(val * 1.6);
+    return Distance(val * Distance::km_per_mile);
 }
-int main(int argc, char* argv[])
+
+int main()
 {
     // Must have a decimal point to bind to the operator we defined!
     Distance d{ 402.0_km }; // construct using kilometers
-    cout << "Kilometers in d: " << d.get_kilometers() << endl; // 402
+    std::cout << "Kilometers in d: " << d.get_kilometers() << std::endl; // 402
 
     Distance d2{ 402.0_mi }; // construct using miles
-    cout << "Kilometers in d2: " << d2.get_kilometers() << endl;  //643.2
+    std::cout << "Kilometers in d2: " << d2.get_kilometers() << std::endl;  //646.956
 
     // add distances constructed with different units
     Distance d3 = 36.0_mi + 42.0_km;
-    cout << "d3 value = " << d3.get_kilometers() << endl; // 99.6
+    std::cout << "d3 value = " << d3.get_kilometers() << std::endl; // 99.9364
 
     // Distance d4(90.0); // error constructor not accessible
 
-    string s;
-    getline(cin, s);
+    std::string s;
+    std::getline(std::cin, s);
     return 0;
 }
 ```
 
-Observe que o número literal deve usar um decimal, caso contrário, o número seria interpretado como um inteiro e o tipo não seria compatível com o operador. Observe também que, para entrada de ponto flutuante, o tipo deve ser **longo Duplo**e para tipos integrais, ele deve ser **longo**demais.
+O número literal deve usar um decimal. Caso contrário, o número seria interpretado como um inteiro e o tipo não seria compatível com o operador. Para entrada de ponto flutuante, o tipo deve ser **longo Duplo**e para tipos integrais, ele deve ser **longo**demais.
 
 ## <a name="raw-literals"></a>Literais brutos
 
-Em um literal definido pelo usuário bruto, o operador que você define aceita o literal como uma sequência de valores char e cabe a você interpretar essa sequência como um número ou uma cadeia de caracteres ou outro tipo. Na lista de operadores mostrados anteriormente nesta página, `_r` e `_t` podem ser usados para definir literais brutos:
+Em um literal definido pelo usuário bruto, o operador que você define aceita o literal como uma sequência de valores char. Cabe a você interpretar essa sequência como um número ou uma cadeia de caracteres ou outro tipo. Na lista de operadores mostrados anteriormente nesta página, `_r` e `_t` podem ser usados para definir literais brutos:
 
 ```cpp
 ReturnType operator "" _r(const char*);              // Raw literal operator
 template<char...> ReturnType operator "" _t();       // Literal operator template
 ```
 
-Você pode usar literais brutos para fornecer uma interpretação personalizada de uma sequência de entrada diferente do que o compilador executaria. Por exemplo, você pode definir um literal que converta a sequência `4.75987` em um tipo decimal personalizado em vez de um tipo de ponto flutuante de IEEE 754. Literais brutos, como literais cooked, também podem ser usados para executar a validação de tempo de compilação de sequências de entrada.
+Você pode usar literais brutos para fornecer uma interpretação personalizada de uma sequência de entrada diferente do comportamento normal do compilador. Por exemplo, você pode definir um literal que converta a sequência `4.75987` em um tipo decimal personalizado em vez de um tipo de ponto flutuante de IEEE 754. Literais brutos, como literais cooked, também podem ser usados para a validação de tempo de compilação de sequências de entrada.
 
 ### <a name="example-limitations-of-raw-literals"></a>Exemplo: limitações de literais brutos
 

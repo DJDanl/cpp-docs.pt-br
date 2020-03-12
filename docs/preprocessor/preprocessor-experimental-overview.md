@@ -1,33 +1,35 @@
 ---
 title: Visão geral do pré-processador do MSVC experimental
 description: O pré-processador MSVC está sendo atualizado para conformidade com C/C++ standards.
-ms.date: 11/06/2019
+ms.date: 02/09/2020
 helpviewer_keywords:
 - preprocessor, experimental
-ms.openlocfilehash: 446603b34d9309c256afba9abd7234ae2ab16f5c
-ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.openlocfilehash: eb861b18a8d42c73429f6d00a3f47b35c9b198ca
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73797172"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090547"
 ---
 # <a name="msvc-experimental-preprocessor-overview"></a>Visão geral do pré-processador do MSVC experimental
 
-O pré-processador C++ da Microsoft está sendo atualizado no momento para melhorar a conformidade dos padrões, corrigir bugs permanentes e alterar alguns comportamentos que são oficialmente indefinidos. Além disso, foram adicionados novos diagnósticos para avisar sobre erros em definições de macro.
+::: moniker range="vs-2015"
 
-Essas alterações em seu estado atual estão disponíveis usando a opção de compilador [/experimental: pré-processador](../build/reference/experimental-preprocessor.md) no visual Studio 2017 ou no visual Studio 2019. O comportamento padrão do pré-processador permanece o mesmo que nas versões anteriores.
+O Visual Studio 2015 usa o pré-processador tradicional, que não está de acordo com C++o padrão. Um pré-processador experimental está disponível no Visual Studio 2017 e no Visual Studio 2019 usando a opção de compilador [/experimental: pré-processador](../build/reference/experimental-preprocessor.md) . Mais informações sobre como usar o novo pré-processador no Visual Studio 2017 e no Visual Studio 2019 estão disponíveis. Para vê-lo, use o seletor de versão da documentação para selecionar uma dessas versões.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+Estamos atualizando o pré-processador C++ da Microsoft para melhorar a conformidade dos padrões, corrigir bugs permanentes e alterar alguns comportamentos oficialmente indefinidos. Também adicionamos novos diagnósticos para avisar sobre erros em definições de macro.
+
+Essas alterações estão disponíveis usando a opção de compilador [/experimental: pré-processador](../build/reference/experimental-preprocessor.md) no visual Studio 2017 ou no visual Studio 2019. O comportamento padrão do pré-processador permanece o mesmo que nas versões anteriores.
+
+A partir do Visual Studio 2019 versão 16,5, o suporte a pré-processador experimental para o padrão C++ 20 é o recurso completo.
 
 ## <a name="new-predefined-macro"></a>Nova macro predefinida
 
-Você pode detectar qual pré-processador está em uso no momento da compilação. Verifique o valor da macro predefinida [\_MSVC\_tradicional](predefined-macros.md) para saber se o pré-processador tradicional está em uso. Essa macro é definida incondicionalmente por versões do compilador que dão suporte a ela, independentemente de qual pré-processador é invocado. Seu valor é 1 para o pré-processador tradicional. É 0 para o pré-processador experimental compatível:
-
-```cpp
-#if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
-// Logic using the traditional preprocessor
-#else
-// Logic using cross-platform compatible preprocessor
-#endif
-```
+Você pode detectar qual pré-processador está em uso no momento da compilação. Verifique o valor da macro predefinida [\_MSVC\_tradicional](predefined-macros.md) para saber se o pré-processador tradicional está em uso. Essa macro é definida incondicionalmente por versões do compilador que dão suporte a ela, independentemente de qual pré-processador é invocado. Seu valor é 1 para o pré-processador tradicional. É 0 para o pré-processador de conformidade.
 
 ```cpp
 #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
@@ -39,11 +41,11 @@ Você pode detectar qual pré-processador está em uso no momento da compilaçã
 
 ## <a name="behavior-changes-in-the-experimental-preprocessor"></a>Alterações de comportamento no pré-processador experimental
 
-O trabalho inicial no pré-processador experimental tem se concentrado em fazer todas as expansões de macros em conformidade para habilitar o uso do compilador MSVC com bibliotecas que estão bloqueadas no momento devido a comportamentos tradicionais. Abaixo está uma lista de algumas das últimas alterações mais comuns que foram executadas ao testar o pré-processador atualizado com projetos reais.
+O trabalho inicial no pré-processador experimental tem se concentrado em fazer com que todas as expansões de macros estejam em conformidade com o padrão. Ele permite que você use o compilador MSVC com bibliotecas atualmente bloqueadas pelos comportamentos tradicionais. Testamos o pré-processador atualizado em projetos do mundo real. Aqui estão algumas das últimas alterações mais comuns que encontramos:
 
 ### <a name="macro-comments"></a>Comentários da macro
 
-O pré-processador tradicional baseia-se em buffers de caracteres em vez de tokens de pré-processador. Isso permite um comportamento incomum, como o truque de comentário do pré-processador a seguir, que não funcionará no pré-processador de conformidade:
+O pré-processador tradicional baseia-se em buffers de caracteres em vez de tokens de pré-processador. Ele permite um comportamento incomum, como o seguinte truque de comentário de pré-processador, que não funciona no pré-processador de conformidade:
 
 ```cpp
 #if DISAPPEAR
@@ -56,7 +58,7 @@ O pré-processador tradicional baseia-se em buffers de caracteres em vez de toke
 DISAPPEARING_TYPE myVal;
 ```
 
-A correção de conformidade com os padrões é declarar `int myVal` dentro das diretivas de `#ifdef/#endif` apropriadas:
+A correção de conformidade com padrões é declarar `int myVal` dentro das diretivas de `#ifdef/#endif` apropriadas:
 
 ```cpp
 #define MYVAL 1
@@ -78,7 +80,7 @@ O pré-processador tradicional combina incorretamente um prefixo de cadeia de ca
 const wchar_t *info = DEBUG_INFO(hello world);
 ```
 
-Nesse caso, o prefixo de `L` é desnecessário porque os literais de cadeia de caracteres adjacentes são combinados após a expansão da macro mesmo assim. A correção compatível com versões anteriores é alterar a definição para o seguinte:
+Nesse caso, o prefixo de `L` é desnecessário porque os literais de cadeia de caracteres adjacentes são combinados após a expansão da macro mesmo assim. A correção compatível com versões anteriores é alterar a definição:
 
 ```cpp
 #define DEBUG_INFO(val) L"debug prefix:" #val
@@ -95,7 +97,7 @@ O mesmo problema também é encontrado em macros de conveniência que "stringize
 
 Você pode corrigir o problema de várias maneiras:
 
-- Use a concatenação de cadeia de caracteres de `L""` e `#str` para adicionar o prefixo. Isso funciona porque literais de cadeia de caracteres adjacentes são combinados após a expansão de macro:
+- Use a concatenação de cadeia de caracteres de `L""` e `#str` para adicionar o prefixo. Literais de cadeia de caracteres adjacentes são combinados após a expansão de macro:
 
    ```cpp
    #define STRING1(str) L""#str
@@ -116,7 +118,7 @@ Você pode corrigir o problema de várias maneiras:
 
 ### <a name="warning-on-invalid-"></a>Aviso sobre \#inválidos \#
 
-Quando o [operador de colagem de tokens (# #)](token-pasting-operator-hash-hash.md) não resulta em um único token de pré-processamento válido, o comportamento é indefinido. O pré-processador tradicional falhará ao combinar os tokens de forma silenciosa. O novo pré-processador corresponderá ao comportamento da maioria dos outros compiladores e emitirá um diagnóstico.
+Quando o [operador de colagem de tokens (# #)](token-pasting-operator-hash-hash.md) não resulta em um único token de pré-processamento válido, o comportamento é indefinido. O pré-processador tradicional falha silenciosamente ao combinar os tokens. O novo pré-processador corresponde ao comportamento da maioria dos outros compiladores e emite um diagnóstico.
 
 ```cpp
 // The ## is unnecessary and does not result in a single preprocessing token.
@@ -135,16 +137,19 @@ void func(int, int = 2, int = 3);
 #define FUNC(a, ...) func(a, __VA_ARGS__)
 int main()
 {
-    // In the traditional preprocessor, the following macro is replaced with:
+    // In the traditional preprocessor, the
+    // following macro is replaced with:
     // func(10,20,30)
     FUNC(10, 20, 30);
 
-    // A conforming preprocessor will replace the following macro with: func(1, ), which will result in a syntax error.
+    // A conforming preprocessor replaces the
+    // following macro with: func(1, ), which
+    // results in a syntax error.
     FUNC(1, );
 }
 ```
 
-No exemplo a seguir, na chamada para `FUNC2(1)` o argumento Variadic está ausente na macro sendo evoked. Na chamada para `FUNC2(1, )` o argumento Variadic está vazio, mas não está ausente (Observe a vírgula na lista de argumentos).
+No exemplo a seguir, na chamada para `FUNC2(1)` o argumento Variadic está ausente na macro que está sendo invocada. Na chamada para `FUNC2(1, )` o argumento Variadic está vazio, mas não está ausente (Observe a vírgula na lista de argumentos).
 
 ```cpp
 #define FUNC2(a, ...) func(a , ## __VA_ARGS__)
@@ -158,11 +163,26 @@ int main()
 }
 ```
 
-No próximo C + + 2a padrão, esse problema foi resolvido com a adição de `__VA_OPT__`, que ainda não foi implementado.
+No próximo padrão de C++ 20, esse problema foi resolvido pela adição de `__VA_OPT__`. O suporte de pré-processador experimental para `__VA_OPT__` está disponível a partir do Visual Studio 2019 versão 16,5.
+
+### <a name="c20-variadic-macro-extension"></a>Extensão de macro do c++ 20 Variadic
+
+O pré-processador experimental dá suporte ao argumento de macro do C++ 20 Variadic corrotina:
+
+```cpp
+#define FUNC(a, ...) __VA_ARGS__ + a
+int main()
+  {
+  int ret = FUNC(0);
+  return ret;
+  }
+```
+
+Esse código não está em conformidade antes do padrão C++ 20. No MSVC, o pré-processador experimental estende esse comportamento de C++ 20 para os modos padrão de linguagem inferior ( **`/std:c++14`** , **`/std:c++17`** ). Essa extensão corresponde ao comportamento de outros principais compiladores de C++ plataforma cruzada.
 
 ### <a name="macro-arguments-are-unpacked"></a>Os argumentos da macro são "desempacotados"
 
-No pré-processador tradicional, se uma macro encaminhar um de seus argumentos para outra macro dependente, o argumento não obterá "desempacotado" quando ele for substituído. Normalmente, essa otimização passa despercebida, mas pode levar a um comportamento incomum:
+No pré-processador tradicional, se uma macro encaminhar um de seus argumentos para outra macro dependente, o argumento não obterá "desempacotado" quando for inserido. Normalmente, essa otimização passa despercebida, mas pode levar a um comportamento incomum:
 
 ```cpp
 // Create a string out of the first argument, and the rest of the arguments.
@@ -170,18 +190,18 @@ No pré-processador tradicional, se uma macro encaminhar um de seus argumentos p
 #define A( ... ) TWO_STRINGS(__VA_ARGS__)
 const char* c[2] = { A(1, 2) };
 
-// Conformant preprocessor results:
+// Conforming preprocessor results:
 // const char c[2] = { "1", "2" };
 
 // Traditional preprocessor results, all arguments are in the first string:
 // const char c[2] = { "1, 2", };
 ```
 
-Ao expandir `A()`, o pré-processador tradicional encaminha todos os argumentos empacotados em `__VA_ARGS__` para o primeiro argumento de TWO_STRINGS, o que deixa o argumento Variadic de `TWO_STRINGS` vazio. Isso faz com que o resultado de `#first` seja "1, 2" em vez de apenas "1". Se você estiver acompanhando com mais detalhes, talvez esteja se perguntando o que aconteceu com o resultado de `#__VA_ARGS__` na expansão tradicional do pré-processador: se o parâmetro Variadic estiver vazio, ele deverá resultar em uma cadeia de caracteres literal `""`. Devido a um problema separado, o token literal da cadeia de caracteres vazia não foi gerado.
+Ao expandir `A()`, o pré-processador tradicional encaminha todos os argumentos empacotados em `__VA_ARGS__` para o primeiro argumento de TWO_STRINGS, o que deixa o argumento Variadic de `TWO_STRINGS` vazio. Isso faz com que o resultado de `#first` seja "1, 2" em vez de apenas "1". Se estiver acompanhando com mais detalhes, você deve estar se perguntando o que aconteceu com o resultado de `#__VA_ARGS__` na expansão tradicional do pré-processador: se o parâmetro Variadic estiver vazio, ele deverá resultar em uma cadeia de caracteres literal `""`. Um problema separado manteve o token literal da cadeia de caracteres vazia de ser gerado.
 
 ### <a name="rescanning-replacement-list-for-macros"></a>Examinando novamente a lista de substituição de macros
 
-Depois que uma macro é substituída, os tokens resultantes são verificados novamente em busca de identificadores de macro adicionais que precisam ser substituídos. O algoritmo usado pelo pré-processador tradicional para fazer o novo exame não está em conformidade, conforme mostrado neste exemplo com base no código real:
+Depois que uma macro é substituída, os tokens resultantes são examinados novamente para que os identificadores de macro adicionais sejam substituídos. O algoritmo usado pelo pré-processador tradicional para fazer o novo exame não é compatível, conforme mostrado neste exemplo com base no código real:
 
 ```cpp
 #define CAT(a,b) a ## b
@@ -196,20 +216,20 @@ DO_THING(1, "World");
 
 // Traditional preprocessor:
 // do_thing_one( "Hello", "World");
-// Conformant preprocessor:
+// Conforming preprocessor:
 // IMPL1 ( "Hello","World");
 ```
 
-Embora este exemplo pareça um pouco forçado, ele foi encontrado para ocorrer código do mundo real. Para ver o que está acontecendo, podemos dividir a expansão começando com `DO_THING`:
+Embora este exemplo possa parecer um pouco forçado, nós o vimos no código do mundo real. Para ver o que está acontecendo, podemos dividir a expansão começando com `DO_THING`:
 
 1. `DO_THING(1, "World")` se expande para `CAT(IMPL, 1) ECHO(("Hello", "World"))`
-1. `CAT(IMPL, 1)` expande para `IMPL ## 1` que se expande para `IMPL1`
+1. `CAT(IMPL, 1)` expande para `IMPL ## 1`, que se expande para `IMPL1`
 1. Agora, os tokens estão nesse Estado: `IMPL1 ECHO(("Hello", "World"))`
-1. O pré-processador localiza o identificador de macro como função `IMPL1`, mas não é seguido por um `(`, portanto, não é considerado uma invocação de macro como função. 
-1. Ele passa para os seguintes tokens e localiza a macro do tipo função `ECHO` invocada: `ECHO(("Hello", "World"))`, que se expande para `("Hello", "World")`
+1. O pré-processador localiza o identificador de macro do tipo função `IMPL1`. Como não é seguido por um `(`, ele não é considerado uma invocação de macro como função.
+1. O pré-processador passa para os tokens a seguir. Ele encontra a macro do tipo função `ECHO` é invocada: `ECHO(("Hello", "World"))`, que se expande para `("Hello", "World")`
 1. `IMPL1` nunca é considerado novamente para expansão, portanto, o resultado total das expansões é: `IMPL1("Hello", "World");`
 
-A macro pode ser modificada para se comportar da mesma forma sob o pré-processador experimental e o pré-processador tradicional adicionando em outra camada de indireção:
+Para modificar a macro para se comportar da mesma forma sob o pré-processador experimental e o pré-processador tradicional, adicione outra camada de indireção:
 
 ```cpp
 #define CAT(a,b) a##b
@@ -227,8 +247,10 @@ DO_THING_FIXED(1, "World");
 
 ## <a name="incomplete-features"></a>Recursos incompletos
 
-O pré-processador experimental está quase sempre concluído, embora alguma lógica de diretiva de pré-processador ainda volte ao comportamento tradicional. Aqui está uma lista parcial de recursos incompletos:
+A partir do Visual Studio 2019 versão 16,5, o pré-processador experimental é o recurso completo para o C++ 20. Nas versões anteriores do Visual Studio, o pré-processador experimental está quase sempre concluído, embora alguma lógica de diretiva de pré-processador ainda volte ao comportamento tradicional. Aqui está uma lista parcial de recursos incompletos do Visual Studio versões anteriores a 16,5:
 
-- Suporte para `_Pragma`
+- Suporte ao `_Pragma`
 - Recursos do c++ 20
-- Aumento do bug de bloqueio: os operadores lógicos em expressões constantes de pré-processador não são totalmente implementados no novo pré-processador. Em algumas diretivas de `#if`, o novo pré-processador pode retornar ao pré-processador tradicional. O efeito é perceptível apenas quando as macros que são incompatíveis com o pré-processador tradicional são expandidas, o que pode ocorrer ao criar um aumento dos slots de pré-processador.
+- Aumento do bug de bloqueio: os operadores lógicos em expressões constantes de pré-processador não são totalmente implementados no novo pré-processador antes da versão 16,5. Em algumas diretivas de `#if`, o novo pré-processador pode retornar ao pré-processador tradicional. O efeito é perceptível apenas quando as macros incompatíveis com o pré-processador tradicional são expandidas. Isso pode acontecer quando se cria um aumento dos slots de pré-processador.
+
+::: moniker-end
