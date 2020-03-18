@@ -37,11 +37,11 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
 ms.openlocfilehash: 7d46f175a62cda7f1ff08327830f1dffe2967727
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865542"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420508"
 ---
 # <a name="ccomboboxex-class"></a>Classe CComboBoxEx
 
@@ -57,13 +57,13 @@ class CComboBoxEx : public CComboBox
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CComboBoxEx::CComboBoxEx](#ccomboboxex)|Constrói um objeto `CComboBoxEx`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CComboBoxEx:: criar](#create)|Cria a caixa de combinação e a anexa ao objeto `CComboBoxEx`.|
 |[CComboBoxEx::CreateEx](#createex)|Cria uma caixa de combinação com os estilos estendidos do Windows especificados e anexa-o a um objeto `ComboBoxEx`.|
@@ -120,7 +120,7 @@ Para obter uma discussão conceitual e detalhada, consulte [usando CComboBoxEx](
 
 `CComboBoxEx`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxcmn. h
 
@@ -144,7 +144,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwStyle*<br/>
 Especifica a combinação de estilos de caixa de combinação aplicada à caixa de combinação. Consulte os **comentários** abaixo para obter mais informações sobre estilos.
@@ -201,7 +201,7 @@ virtual BOOL CreateEx(
     UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwExStyle*<br/>
 Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista de estilos estendidos do Windows, consulte o parâmetro *dwExStyle* para [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) no SDK do Windows.
@@ -236,7 +236,7 @@ Remove um item de um controle `ComboBoxEx`.
 int DeleteItem(int iIndex);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *iIndex*<br/>
 Índice de base zero do item a ser removido.
@@ -325,7 +325,7 @@ Recupera informações de item para um determinado item de `ComboBoxEx`.
 BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pCBItem*<br/>
 Um ponteiro para uma estrutura [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) que receberá as informações do item.
@@ -362,7 +362,7 @@ Insere um novo item em um controle de `ComboBoxEx`.
 int InsertItem(const COMBOBOXEXITEM* pCBItem);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pCBItem*<br/>
 Um ponteiro para uma estrutura [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) que receberá as informações do item. Esta estrutura contém valores de sinalizador de retorno de chamada para o item.
@@ -385,7 +385,7 @@ DWORD SetExtendedStyle(
     DWORD dwExStyles);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwExMask*<br/>
 Um valor DWORD que indica quais estilos em *dwExStyles* devem ser afetados. Somente os estilos estendidos em *dwExMask* serão alterados. Todos os outros estilos serão mantidos como estão. Se esse parâmetro for zero, todos os estilos em *dwExStyles* serão afetados.
@@ -411,7 +411,7 @@ Define uma lista de imagens para um controle de `ComboBoxEx`.
 CImageList* SetImageList(CImageList* pImageList);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pImageList*<br/>
 Um ponteiro para um objeto de `CImageList` que contém as imagens a serem usadas com o controle de `CComboBoxEx`.
@@ -434,7 +434,7 @@ Define os atributos de um item em um controle de `ComboBoxEx`.
 BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pCBItem*<br/>
 Um ponteiro para uma estrutura [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) que receberá as informações do item.
@@ -455,7 +455,7 @@ Define o estilo visual do controle da caixa de combinação estendida.
 HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pszSubAppName*<br/>
 Um ponteiro para uma cadeia de caracteres Unicode que contém o estilo visual da caixa de combinação estendida a ser definido.
@@ -468,7 +468,7 @@ O valor de retorno não é usado.
 
 Essa função de membro emula a funcionalidade da [CBEM_SETWINDOWTHEME](/windows/win32/Controls/cbem-setwindowtheme) mensagem, conforme descrito na SDK do Windows.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de MFCIE do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CComboBox](../../mfc/reference/ccombobox-class.md)<br/>

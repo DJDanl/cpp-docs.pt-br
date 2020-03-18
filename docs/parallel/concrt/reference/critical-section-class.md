@@ -15,11 +15,11 @@ helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
 ms.openlocfilehash: aef3ae6100133374cb89098f118c447effafd840
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867154"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417148"
 ---
 # <a name="critical_section-class"></a>Classe critical_section
 
@@ -35,26 +35,26 @@ class critical_section;
 
 ### <a name="public-typedefs"></a>Typedefs Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`native_handle_type`|Uma referência a um objeto `critical_section`.|
 
 ### <a name="public-classes"></a>Classes Públicas
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[Classe critical_section:: scoped_lock](#critical_section__scoped_lock_class)|Um wrapper RAII de exceção seguro para um objeto `critical_section`.|
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[critical_section](#ctor)|Constrói uma nova seção crítica.|
 |[~ critical_section destruidor](#dtor)|Destrói uma seção crítica.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[lock](#lock)|Adquire essa seção crítica.|
 |[native_handle](#native_handle)|Retorna um identificador nativo específico da plataforma, se houver.|
@@ -70,7 +70,7 @@ Para obter mais informações, consulte [Synchronization data structures](../../
 
 `critical_section`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ConcRT. h
 
@@ -142,7 +142,7 @@ Constrói um objeto `scoped_lock` e adquire o objeto `critical_section` passado 
 explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Critical_section*<br/>
 A seção crítica a ser bloqueada.
@@ -175,7 +175,7 @@ Tenta adquirir o bloqueio sem bloqueio para um número específico de milissegun
 bool try_lock_for(unsigned int _Timeout);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Timeout*<br/>
 O número de milissegundos a aguardar antes de atingir o tempo limite.
@@ -192,7 +192,7 @@ Desbloqueia a seção crítica.
 void unlock();
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Classe reader_writer_lock](reader-writer-lock-class.md)

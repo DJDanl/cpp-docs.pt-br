@@ -32,11 +32,11 @@ helpviewer_keywords:
 - IPropertyPageImpl class
 ms.assetid: f9b7c8b1-7a04-4eab-aa63-63efddb740fa
 ms.openlocfilehash: 69842e77aecaa94be66432e5fbba437a6fa3c5a4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864977"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417631"
 ---
 # <a name="ipropertypageimpl-class"></a>Classe IPropertyPageImpl
 
@@ -52,7 +52,7 @@ template<class T>
 class IPropertyPageImpl
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 Sua classe, derivada de `IPropertyPageImpl`.
@@ -61,13 +61,13 @@ Sua classe, derivada de `IPropertyPageImpl`.
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[IPropertyPageImpl::IPropertyPageImpl](#ipropertypageimpl)|Construtor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[IPropertyPageImpl:: ativar](#activate)|Cria a janela da caixa de diálogo da página de propriedades.|
 |[IPropertyPageImpl:: aplicar](#apply)|Aplica valores da página de propriedades atual aos objetos subjacentes especificados por meio de `SetObjects`. A implementação da ATL retorna S_OK.|
@@ -84,7 +84,7 @@ Sua classe, derivada de `IPropertyPageImpl`.
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[IPropertyPageImpl:: m_bDirty](#m_bdirty)|Especifica se o estado da página de propriedades foi alterado.|
 |[IPropertyPageImpl:: m_dwDocString](#m_dwdocstring)|Armazena o identificador de recurso associado à cadeia de texto que descreve a página de propriedades.|
@@ -108,7 +108,7 @@ A interface [IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage) per
 
 `IPropertyPageImpl`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlctl. h
 
@@ -299,7 +299,7 @@ Sinaliza o estado da página de propriedades como alterado ou inalterado, depend
 void SetDirty(BOOL bDirty);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bDirty*<br/>
 no Se for TRUE, o estado da página de propriedades será marcado como alterado. Caso contrário, ele será marcado como inalterado.
@@ -356,7 +356,7 @@ HRESULT TranslateAccelerator(MSG* pMsg);
 
 Consulte [IPropertyPage:: TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator) na SDK do Windows.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe IPropertyPage2Impl](../../atl/reference/ipropertypage2impl-class.md)<br/>
 [Classe IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>

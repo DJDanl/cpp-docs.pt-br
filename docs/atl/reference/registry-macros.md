@@ -13,11 +13,11 @@ helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
 ms.openlocfilehash: c2a70c15473798ba6eb2ef35e0b7ded395708586
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857127"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417498"
 ---
 # <a name="registry-macros"></a>Macros do registro
 
@@ -33,7 +33,7 @@ Essas macros definem recursos de registro e biblioteca de tipos úteis.
 |[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Localiza o recurso nomeado e executa o script de registro dentro dele.|
 |[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Localiza o recurso identificado por um número de ID e executa o script de registro dentro dele.|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlcom. h
 
@@ -59,7 +59,7 @@ Fornece uma maneira para a ATL obter o *LIBID* da biblioteca de tipos.
 DECLARE_LIBID( libid )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *LIBID*<br/>
 O GUID da biblioteca de tipos.
@@ -68,7 +68,7 @@ O GUID da biblioteca de tipos.
 
 Use DECLARE_LIBID em uma classe derivada de `CAtlModuleT`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Os projetos ATL gerados pelo assistente não atribuído terão um exemplo de como usar essa macro.
 
@@ -93,7 +93,7 @@ DECLARE_REGISTRY(
     flags )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *class*<br/>
 no Incluído para compatibilidade com versões anteriores.
@@ -107,7 +107,7 @@ no Um LPCTSTR que é um identificador de programa independente de versão.
 *NID*<br/>
 no Um UINT que é um índice da cadeia de caracteres do recurso no registro a ser usado como a descrição do programa.
 
-*flags*<br/>
+*sinalizadores*<br/>
 no Um DWORD que contém o modelo de Threading do programa no registro. Deve ser um dos seguintes valores: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH ou AUTPRXFLAG.
 
 ### <a name="remarks"></a>Comentários
@@ -126,7 +126,7 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
     appid )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Resid*<br/>
 A ID de recurso do arquivo. rgs que contém informações sobre o *AppID*.
@@ -138,7 +138,7 @@ Uma GUID.
 
 Use DECLARE_REGISTRY_APPID_RESOURCEID em uma classe derivada de `CAtlModuleT`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Classes adicionadas a projetos ATL com o assistente para adicionar código de classe terão um exemplo de como usar essa macro.
 
@@ -150,7 +150,7 @@ Obtém o recurso nomeado que contém o arquivo do registro e executa o script pa
 DECLARE_REGISTRY_RESOURCE( x )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 no Identificador de cadeia de caracteres do seu recurso.
@@ -175,7 +175,7 @@ O mesmo que [DECLARE_REGISTRY_RESOURCE](#declare_registry_resource) , exceto que
 DECLARE_REGISTRY_RESOURCEID( x )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 no Identificador gerado pelo assistente de seu recurso.
@@ -192,6 +192,6 @@ Se você quiser que a ATL substitua valores de substituição em tempo de execu�
 
 Para obter mais informações sobre parâmetros e scripts substituíveis, consulte o artigo [o componente do registro do ATL (registrador)](../../atl/atl-registry-component-registrar.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Macros](../../atl/reference/atl-macros.md)

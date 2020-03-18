@@ -6,11 +6,11 @@ f1_keywords:
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 ms.openlocfilehash: a3fd5b825fe1eaf3a07d9d001f03b9d0c64ffa31
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854922"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419787"
 ---
 # <a name="ltnewgt-operators-and-enums"></a>&lt;novos operadores de&gt; e enumerações
 
@@ -30,7 +30,7 @@ void operator delete(void *, void*) throw();
 void operator delete(void* ptr, const std::nothrow_t&) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *PTR*
 O ponteiro cujo valor será renderizado como inválido pela exclusão.
@@ -45,7 +45,7 @@ A segunda função será chamada por uma expressão delete de posicionamento cor
 
 A terceira função é chamada por uma expressão delete de posicionamento correspondente a uma nova expressão do formulário **new**( **std::size_t**, **conststd::nothrow_t&** ). O programa pode definir uma função com essa assinatura de função que substitui a versão padrão definida pela biblioteca padrão C++. O comportamento necessário é aceitar um valor de `ptr` que é nulo ou que foi retornado por uma chamada anterior para `operator new`( **size_t**). O comportamento padrão é avaliar **delete**(`ptr`).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte o [operador novo](../standard-library/new-operators.md#op_new) para obter um exemplo que usa o **operador Delete**.
 
@@ -59,7 +59,7 @@ void operator delete[](void *, void*) throw();
 void operator delete[](void* ptr, const std::nothrow_t&) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *PTR*
 O ponteiro cujo valor será renderizado como inválido pela exclusão.
@@ -72,7 +72,7 @@ A segunda função é chamada por uma expressão de `delete[]` de posicionamento
 
 A terceira função é chamada por uma expressão delete de posicionamento correspondente a uma expressão `new[]` do formulário `new[]`( **std::size_t**, **const std::nothrow_t&** ). O programa pode definir uma função com essa assinatura de função que substitui a versão padrão definida pela biblioteca padrão C++. O comportamento necessário é aceitar um valor de *PTR* que seja nulo ou que tenha sido retornado por uma chamada anterior para o operador `new[]`(**size_t**). O comportamento padrão é avaliar `delete[]`( `ptr`).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [operador new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) para obter exemplos do uso de `operator delete[]`.
 
@@ -86,7 +86,7 @@ void* operator new(std::size_t count, const std::nothrow_t&) throw();
 void* operator new(std::size_t count, void* ptr) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *contagem*\
 O número de bytes de armazenamento a ser alocado.
@@ -128,7 +128,7 @@ Para liberar o armazenamento alocado pelo **operador New**, chame [Operator Dele
 
 Para obter informações sobre o lançamento ou o comportamento de não-lançamento de novo, consulte [os operadores novo e excluir](../cpp/new-and-delete-operators.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // new_op_new.cpp
@@ -181,7 +181,7 @@ void* operator new[](std::size_t count, const std::nothrow_t&) throw();
 void* operator new[](std::size_t count, void* ptr) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *contagem*\
 O número de bytes de armazenamento a ser alocado para o objeto de matriz.
@@ -205,7 +205,7 @@ Para liberar o armazenamento alocado por `operator new[]`, chame o [operador del
 
 Para obter informações sobre o comportamento de lançamento ou não lançamento de new, consulte [Operadores new e delete](../cpp/new-and-delete-operators.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // new_op_alloc.cpp

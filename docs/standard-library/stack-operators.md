@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (stack)
 - std::operator== (stack)
 ms.openlocfilehash: 169698d30edd4a7995cb05e1909c1ffc38b0b6ef
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865893"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419430"
 ---
 # <a name="ltstackgt-operators"></a>Operadores &lt;stack&gt;
 
@@ -33,7 +33,7 @@ Testa se o objeto stack do lado esquerdo do operador não é igual ao objeto sta
 bool operator!=(const stack <Type, Container>& left, const stack <Type, Container>& right,);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `stack`.
@@ -49,7 +49,7 @@ Um objeto do tipo `stack`.
 
 A comparação entre os objetos stack baseia-se em uma comparação par de seus elementos. Duas stacks serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // stack_op_me.cpp
@@ -98,7 +98,7 @@ Testa se o objeto stack do lado esquerdo do operador é menor que o objeto stack
 bool operator<(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `stack`.
@@ -114,7 +114,7 @@ Um objeto do tipo `stack`.
 
 A comparação entre os objetos stack baseia-se em uma comparação par de seus elementos. A relação menor que entre dois objetos stack é baseada em uma comparação do primeiro par de elementos desiguais.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // stack_op_lt.cpp
@@ -182,7 +182,7 @@ Testa se o objeto stack do lado esquerdo do operador é menor ou igual ao objeto
 bool operator<=(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `stack`.
@@ -198,7 +198,7 @@ Um objeto do tipo `stack`.
 
 A comparação entre os objetos stack baseia-se em uma comparação par de seus elementos. A relação menor que ou igual a entre dois objetos stack é baseada em uma comparação entre o primeiro par de elementos desiguais.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // stack_op_le.cpp
@@ -249,7 +249,7 @@ Testa se o objeto stack do lado esquerdo do operador é igual ao objeto stack do
 bool operator==(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `stack`.
@@ -265,7 +265,7 @@ Um objeto do tipo `stack`.
 
 A comparação entre os objetos stack baseia-se em uma comparação par de seus elementos. Duas stacks serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // stack_op_eq.cpp
@@ -314,7 +314,7 @@ Testa se o objeto stack do lado esquerdo do operador é maior que o objeto stack
 bool operator>(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `stack`.
@@ -330,7 +330,7 @@ Um objeto do tipo `stack`.
 
 A comparação entre os objetos stack baseia-se em uma comparação par de seus elementos. A relação maior que entre dois objetos stack é baseada em uma comparação entre o primeiro par de elementos desiguais.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // stack_op_gt.cpp
@@ -383,7 +383,7 @@ Testa se o objeto stack do lado esquerdo do operador é maior ou igual ao objeto
 bool operator>=(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `stack`.
@@ -399,7 +399,7 @@ Um objeto do tipo `stack`.
 
 A comparação entre os objetos stack baseia-se em uma comparação par de seus elementos. A relação maior que ou igual entre dois objetos stack é baseada em uma comparação entre o primeiro par de elementos diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // stack_op_ge.cpp

@@ -95,11 +95,11 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 5ad8784f3bff999eec046aa91f52b1cd164764e5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876355"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420382"
 ---
 # <a name="cedit-class"></a>Classe CEdit
 
@@ -115,13 +115,13 @@ class CEdit : public CWnd
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CEdit::CEdit](#cedit)|Constrói um objeto de controle de `CEdit`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CEdit:: CanUndo](#canundo)|Determina se uma operação de controle de edição pode ser desfeita.|
 |[CEdit::CharFromPos](#charfrompos)|Recupera os índices de linha e de caractere para o caractere mais próximo de uma posição especificada.|
@@ -181,7 +181,7 @@ Se você quiser manipular mensagens de notificação do Windows enviadas por um 
 
 Cada entrada de mapa de mensagem usa o seguinte formato:
 
-  _Notificação_**de ON_ (** _ID_ **,** _memberFxn_ **)**
+  **ON_** _Notificação_**de ON_ (** _ID_ **,** _memberFxn_ **)**
 
 em que `id` especifica a ID da janela filho do controle de edição que envia a notificação e `memberFxn` é o nome da função de membro pai que você escreveu para manipular a notificação.
 
@@ -227,7 +227,7 @@ Para obter mais informações sobre `CEdit`, consulte [controles](../../mfc/cont
 
 `CEdit`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Afxwin. h
 
@@ -247,7 +247,7 @@ Diferente de zero se a última operação de edição puder ser desfeita por uma
 
 Para obter mais informações, consulte [EM_CANUNDO](/windows/win32/Controls/em-canundo) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CEdit:: Undo](#undo).
 
@@ -263,7 +263,7 @@ CEdit();
 
 Use [Create](#create) para construir o controle de edição do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#1](../../mfc/reference/codesnippet/cpp/cedit-class_1.cpp)]
 
@@ -275,7 +275,7 @@ Chame essa função para recuperar a linha de base zero e os índices de caracte
 int CharFromPos(CPoint pt) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pt*<br/>
 As coordenadas de um ponto na área do cliente deste `CEdit` objeto.
@@ -291,7 +291,7 @@ O índice de caracteres na palavra de ordem inferior e o índice de linha na pal
 
 Para obter mais informações, consulte [EM_CHARFROMPOS](/windows/win32/Controls/em-charfrompos) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#3](../../mfc/reference/codesnippet/cpp/cedit-class_2.cpp)]
 
@@ -311,7 +311,7 @@ Para excluir a seleção atual e inserir o conteúdo excluído na área de trans
 
 Para obter mais informações, consulte [WM_CLEAR](/windows/win32/dataxchg/wm-clear) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#4](../../mfc/reference/codesnippet/cpp/cedit-class_3.cpp)]
 
@@ -327,7 +327,7 @@ void Copy();
 
 Para obter mais informações, consulte [WM_COPY](/windows/win32/dataxchg/wm-copy) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#5](../../mfc/reference/codesnippet/cpp/cedit-class_4.cpp)]
 
@@ -343,7 +343,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwStyle*<br/>
 Especifica o estilo do controle de edição. Aplicar qualquer combinação de [estilos de edição](styles-used-by-mfc.md#edit-styles) ao controle.
@@ -381,7 +381,7 @@ Aplique os seguintes [estilos de janela](styles-used-by-mfc.md#window-styles) a 
 
 - WS_TABSTOP para incluir o controle de edição na ordem de tabulação
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#2](../../mfc/reference/codesnippet/cpp/cedit-class_5.cpp)]
 
@@ -401,7 +401,7 @@ Para excluir a seleção atual sem colocar o texto excluído na área de transfe
 
 Para obter mais informações, consulte [WM_CUT](/windows/win32/dataxchg/wm-cut) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#6](../../mfc/reference/codesnippet/cpp/cedit-class_6.cpp)]
 
@@ -421,7 +421,7 @@ O sinalizador de desfazer é limpo automaticamente sempre que o [SetWindowText](
 
 Para obter mais informações, consulte [EM_EMPTYUNDOBUFFER](/windows/win32/Controls/em-emptyundobuffer) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#7](../../mfc/reference/codesnippet/cpp/cedit-class_7.cpp)]
 
@@ -433,7 +433,7 @@ Chame essa função para definir a inclusão de caracteres de quebra de linha fl
 BOOL FmtLines(BOOL bAddEOL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bAddEOL*<br/>
 Especifica se os caracteres de quebra de linha flexível devem ser inseridos. Um valor TRUE insere os caracteres; um valor FALSE remove-os.
@@ -452,7 +452,7 @@ O Windows só responderá se o objeto de `CEdit` for um controle de edição de 
 
 Para obter mais informações, consulte [EM_FMTLINES](/windows/win32/Controls/em-fmtlines) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#8](../../mfc/reference/codesnippet/cpp/cedit-class_8.cpp)]
 
@@ -468,7 +468,7 @@ BOOL GetCueBanner(
 CString GetCueBanner() const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszText*<br/>
 fora Um ponteiro para uma cadeia de caracteres que contém o texto de indicação.
@@ -502,7 +502,7 @@ O índice de base zero da linha visível superior. Para controles de edição de
 
 Para obter mais informações, consulte [EM_GETFIRSTVISIBLELINE](/windows/win32/Controls/em-getfirstvisibleline) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#9](../../mfc/reference/codesnippet/cpp/cedit-class_9.cpp)]
 
@@ -531,7 +531,7 @@ Chame `GetHandle` para um controle de edição de várias linhas em uma caixa de
 
 Para obter mais informações, consulte [EM_GETHANDLE](/windows/win32/Controls/em-gethandle) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#10](../../mfc/reference/codesnippet/cpp/cedit-class_10.cpp)]
 
@@ -545,9 +545,9 @@ BOOL GetHighlight(
     int* pichEnd) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*pichStart*|fora Índice de base zero do primeiro caractere no intervalo de texto que é realçado.|
 |*pichEnd*|fora Índice de base zero do último caractere no intervalo de texto que é realçado.|
@@ -581,7 +581,7 @@ O limite de texto é a quantidade máxima de texto, em TCHARs, que o controle de
 
 Para obter mais informações, consulte [EM_GETLIMITTEXT](/windows/win32/Controls/em-getlimittext) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#11](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]
 
@@ -600,7 +600,7 @@ int GetLine(
     int nMaxLength) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Especifica o número de linha a ser recuperado de um controle de edição de várias linhas. Os números de linha são baseados em zero; um valor de 0 especifica a primeira linha. Esse parâmetro é ignorado por um controle de edição de linha única.
@@ -621,7 +621,7 @@ A linha copiada não contém um caractere de terminação nula.
 
 Para obter mais informações, consulte [EM_GETLINE](/windows/win32/Controls/em-getline) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CEdit:: GetLineCount](#getlinecount).
 
@@ -643,7 +643,7 @@ Um inteiro que contém o número de linhas no controle de edição de várias li
 
 Para obter mais informações, consulte [EM_GETLINECOUNT](/windows/win32/Controls/em-getlinecount) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#12](../../mfc/reference/codesnippet/cpp/cedit-class_12.cpp)]
 
@@ -668,7 +668,7 @@ As margens são medidas em pixels.
 
 Para obter mais informações, consulte [EM_GETMARGINS](/windows/win32/Controls/em-getmargins) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CEditView:: GetEditCtrl](ceditview-class.md#geteditctrl).
 
@@ -690,7 +690,7 @@ O Windows mantém um sinalizador interno que indica se o conteúdo do controle d
 
 Para obter mais informações, consulte [EM_GETMODIFY](/windows/win32/Controls/em-getmodify) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#13](../../mfc/reference/codesnippet/cpp/cedit-class_13.cpp)]
 
@@ -712,7 +712,7 @@ Se você criar o controle de edição com o estilo de ES_PASSWORD, a DLL que dá
 
 Esse método envia a mensagem de [EM_GETPASSWORDCHAR](/windows/win32/Controls/em-getpasswordchar) , que é descrita na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#14](../../mfc/reference/codesnippet/cpp/cedit-class_14.cpp)]
 
@@ -724,7 +724,7 @@ Chame essa função para obter o retângulo de formatação de um controle de ed
 void GetRect(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpRect*<br/>
 Aponta para a estrutura de `RECT` que recebe o retângulo de formatação.
@@ -737,7 +737,7 @@ O retângulo de formatação de um controle de edição de várias linhas pode s
 
 Para obter mais informações, consulte [EM_GETRECT](/windows/win32/Controls/em-getrect) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CEdit:: LimitText](#limittext).
 
@@ -753,7 +753,7 @@ void GetSel(
     int& nEndChar) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nStartChar*<br/>
 Referência a um inteiro que receberá a posição do primeiro caractere na seleção atual.
@@ -769,7 +769,7 @@ A versão que retorna um DWORD retorna um valor que contém a posição inicial 
 
 Para obter mais informações, consulte [EM_GETSEL](/windows/win32/Controls/em-getsel) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#15](../../mfc/reference/codesnippet/cpp/cedit-class_15.cpp)]
 
@@ -797,10 +797,10 @@ Chame essa função para limitar o comprimento do texto que o usuário pode inse
 void LimitText(int nChars = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nChars*<br/>
-Especifica o comprimento (em TCHARs) do texto que o usuário pode inserir. Se esse parâmetro for 0, o tamanho do texto será definido como UINT_MAX bytes. Este é o comportamento padrão.
+Especifica o comprimento (em TCHARs) do texto que o usuário pode inserir. Se esse parâmetro for 0, o tamanho do texto será definido como UINT_MAX bytes. Esse é o comportamento padrão.
 
 ### <a name="remarks"></a>Comentários
 
@@ -811,7 +811,7 @@ Alterar o limite de texto restringe apenas o texto que o usuário pode inserir. 
 
 Para obter mais informações, consulte [EM_LIMITTEXT](/windows/win32/Controls/em-limittext) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#17](../../mfc/reference/codesnippet/cpp/cedit-class_16.cpp)]
 
@@ -823,7 +823,7 @@ Chame essa função para recuperar o número de linha da linha que contém o ín
 int LineFromChar(int nIndex = -1) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Contém o valor de índice baseado em zero para o caractere desejado no texto do controle de edição ou contém-1. Se *nIndex* for-1, ele especificará a linha atual, ou seja, a linha que contém o cursor.
@@ -840,7 +840,7 @@ Essa função de membro é usada apenas por controles de edição de várias lin
 
 Para obter mais informações, consulte [EM_LINEFROMCHAR](/windows/win32/Controls/em-linefromchar) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#18](../../mfc/reference/codesnippet/cpp/cedit-class_17.cpp)]
 
@@ -852,7 +852,7 @@ Chame essa função para recuperar o índice de caracteres de uma linha em um co
 int LineIndex(int nLine = -1) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nLinha*<br/>
 Contém o valor de índice para a linha desejada no texto do controle de edição ou contém-1. Se *nLinha* for-1, ele especificará a linha atual, ou seja, a linha que contém o cursor.
@@ -869,7 +869,7 @@ Essa função de membro só é processada por controles de edição de várias l
 
 Para obter mais informações, consulte [EM_LINEINDEX](/windows/win32/controls/em-lineindex) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#19](../../mfc/reference/codesnippet/cpp/cedit-class_18.cpp)]
 
@@ -881,7 +881,7 @@ Recupera o comprimento de uma linha em um controle de edição.
 int LineLength(int nLine = -1) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nLinha*<br/>
 O índice de base zero de um caractere na linha cujo comprimento deve ser recuperado. O valor padrão é -1.
@@ -902,7 +902,7 @@ Para obter mais informações sobre o tipo TCHAR, consulte a linha TCHAR na tabe
 
 Esse método é suportado pela mensagem [EM_LINELENGTH](/windows/win32/Controls/em-linelength) , que é descrita na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CEdit:: LineIndex](#lineindex).
 
@@ -916,7 +916,7 @@ void LineScroll(
     int nChars = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nLines*<br/>
 Especifica o número de linhas a rolar verticalmente.
@@ -934,7 +934,7 @@ O controle de edição não rola verticalmente após a última linha de texto no
 
 Para obter mais informações, consulte [EM_LINESCROLL](/windows/win32/Controls/em-linescroll) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CEdit:: GetFirstVisibleLine](#getfirstvisibleline).
 
@@ -952,7 +952,7 @@ Os dados só serão inseridos se a área de transferência contiver dados no for
 
 Para obter mais informações, consulte [WM_PASTE](/windows/win32/dataxchg/wm-paste) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#20](../../mfc/reference/codesnippet/cpp/cedit-class_19.cpp)]
 
@@ -964,7 +964,7 @@ Chame essa função para obter a posição (canto superior esquerdo) de um deter
 CPoint PosFromChar(UINT nChar) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nChar*<br/>
 O índice de base zero do caractere especificado.
@@ -982,7 +982,7 @@ O caractere é especificado fornecendo seu valor de índice baseado em zero. Se 
 
 Para obter mais informações, consulte [EM_POSFROMCHAR](/windows/win32/Controls/em-posfromchar) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CEdit:: LineFromChar](#linefromchar).
 
@@ -994,7 +994,7 @@ Chame essa função para substituir a seleção atual em um controle de edição
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszNewText*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que contém o texto de substituição.
@@ -1010,7 +1010,7 @@ Se não houver seleção atual, o texto de substituição será inserido no loca
 
 Para obter mais informações, consulte [EM_REPLACESEL](/windows/win32/Controls/em-replacesel) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CEdit:: LineIndex](#lineindex).
 
@@ -1026,7 +1026,7 @@ BOOL SetCueBanner(
     BOOL fDrawWhenFocused = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszText*<br/>
 no Ponteiro para uma cadeia de caracteres que contém a indicação a ser exibida no controle de edição.
@@ -1046,7 +1046,7 @@ TRUE se o método for bem-sucedido; caso contrário, FALSE.
 
 Esse método envia a mensagem de [EM_SETCUEBANNER](/windows/win32/Controls/em-setcuebanner) , que é descrita na SDK do Windows. Para obter mais informações, consulte a macro [Edit_SetCueBannerTextFocused](/windows/win32/api/commctrl/nf-commctrl-edit_setcuebannertextfocused) .
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra o método [CEdit:: SetCueBanner](#setcuebanner) .
 
@@ -1060,7 +1060,7 @@ Chame essa função para definir o identificador para a memória local que será
 void SetHandle(HLOCAL hBuffer);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hBuffer*<br/>
 Contém um identificador para a memória local. Esse identificador deve ter sido criado por uma chamada anterior à função [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc) do Windows usando o sinalizador LMEM_MOVEABLE. Pressupõe-se que a memória contenha uma cadeia de caracteres terminada em nulo. Se esse não for o caso, o primeiro byte da memória alocada deverá ser definido como 0.
@@ -1082,7 +1082,7 @@ Você pode usar essa função de membro em um controle de edição de várias li
 
 Para obter mais informações, consulte [EM_SETHANDLE](/windows/win32/Controls/em-sethandle), [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc)e [LocalFree](/windows/win32/api/winbase/nf-winbase-localfree) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#22](../../mfc/reference/codesnippet/cpp/cedit-class_21.cpp)]
 
@@ -1096,9 +1096,9 @@ void SetHighlight(
     int ichEnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*ichStart*|no Índice de base zero do primeiro caractere no intervalo de texto a ser realçado.|
 |*ichEnd*|no Índice de base zero do último caractere no intervalo de texto a ser realçado.|
@@ -1115,7 +1115,7 @@ Chame essa função de membro para definir o limite de texto para este `CEdit` o
 void SetLimitText(UINT nMax);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Nmáx*<br/>
 O novo limite de texto, em caracteres.
@@ -1130,7 +1130,7 @@ Essa função substitui [LimitText](#limittext) no Win32.
 
 Para obter mais informações, consulte [EM_SETLIMITTEXT](/windows/win32/Controls/em-setlimittext) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CEditView:: GetEditCtrl](ceditview-class.md#geteditctrl).
 
@@ -1144,7 +1144,7 @@ void SetMargins(
     UINT nRight);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nLeft*<br/>
 A largura da nova margem esquerda, em pixels.
@@ -1159,7 +1159,7 @@ A largura da nova margem direita, em pixels.
 
 Para obter mais informações, consulte [EM_SETMARGINS](/windows/win32/Controls/em-setmargins) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CEditView:: GetEditCtrl](ceditview-class.md#geteditctrl).
 
@@ -1171,7 +1171,7 @@ Chame essa função para definir ou limpar o sinalizador modificado para um cont
 void SetModify(BOOL bModified = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bModified*<br/>
 Um valor TRUE indica que o texto foi modificado e um valor FALSE indica que ele não é modificado. Por padrão, o sinalizador modificado é definido.
@@ -1182,7 +1182,7 @@ O sinalizador modificado indica se o texto dentro do controle de edição foi mo
 
 Para obter mais informações, consulte [EM_SETMODIFY](/windows/win32/Controls/em-setmodify) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo para [CEdit:: GetModify](#getmodify).
 
@@ -1194,7 +1194,7 @@ Chame essa função para definir ou remover um caractere de senha exibido em um 
 void SetPasswordChar(TCHAR ch);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *CH*<br/>
 Especifica o caractere a ser exibido no lugar do caractere digitado pelo usuário. Se *ch* for 0, os caracteres reais digitados pelo usuário serão exibidos.
@@ -1211,7 +1211,7 @@ Se o controle de edição for criado com o estilo de [ES_PASSWORD](styles-used-b
 
 Para obter mais informações, consulte [EM_SETPASSWORDCHAR](/windows/win32/Controls/em-setpasswordchar) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#16](../../mfc/reference/codesnippet/cpp/cedit-class_22.cpp)]
 
@@ -1223,7 +1223,7 @@ Chama essa função para definir o estado somente leitura de um controle de edi�
 BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bReadOnly*<br/>
 Especifica se deve ser definido ou removido o estado somente leitura do controle de edição. Um valor TRUE define o estado como somente leitura; um valor FALSE define o estado como leitura/gravação.
@@ -1238,7 +1238,7 @@ A configuração atual pode ser encontrada testando o sinalizador [ES_READONLY](
 
 Para obter mais informações, consulte [EM_SETREADONLY](/windows/win32/Controls/em-setreadonly) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#23](../../mfc/reference/codesnippet/cpp/cedit-class_23.cpp)]
 
@@ -1250,7 +1250,7 @@ Chame essa função para definir as dimensões de um retângulo usando as coorde
 void SetRect(LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpRect*<br/>
 Aponta para a estrutura de `RECT` ou `CRect` objeto que especifica as novas dimensões do retângulo de formatação.
@@ -1267,7 +1267,7 @@ Quando `SetRect` é chamado, o texto do controle de edição também é reformat
 
 Para obter mais informações, consulte [EM_SETRECT](/windows/win32/Controls/em-setrect) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#24](../../mfc/reference/codesnippet/cpp/cedit-class_24.cpp)]
 
@@ -1279,7 +1279,7 @@ Chame essa função para definir o retângulo de formatação de um controle de 
 void SetRectNP(LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpRect*<br/>
 Aponta para uma estrutura de `RECT` ou `CRect` objeto que especifica as novas dimensões do retângulo.
@@ -1298,7 +1298,7 @@ Esse membro é processado somente por controles de edição de várias linhas.
 
 Para obter mais informações, consulte [EM_SETRECTNP](/windows/win32/Controls/em-setrectnp) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CEdit:: SetRect](#setrect).
 
@@ -1317,7 +1317,7 @@ void SetSel(
     BOOL bNoScroll = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwSelection*<br/>
 Especifica a posição inicial na palavra de ordem inferior e a posição final na palavra de ordem superior. Se a palavra de ordem inferior for 0 e a palavra de ordem superior for-1, todo o texto no controle de edição será selecionado. Se a palavra de ordem inferior for-1, qualquer seleção atual será removida.
@@ -1335,7 +1335,7 @@ Especifica a posição final.
 
 Para obter mais informações, consulte [EM_SETSEL](/windows/win32/Controls/em-setsel) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CEdit:: GetSel](#getsel).
 
@@ -1352,7 +1352,7 @@ BOOL SetTabStops(
     LPINT rgTabStops);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *cxEachStop*<br/>
 Especifica que as paradas de tabulação devem ser definidas em todas as unidades de diálogo *cxEachStop* .
@@ -1379,7 +1379,7 @@ Essa função de membro só é processada por controles de edição de várias l
 
 Para obter mais informações, consulte [EM_SETTABSTOPS](/windows/win32/Controls/em-settabstops) e [GetDialogBaseUnits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CEditView:: SetTabStops](ceditview-class.md#settabstops).
 
@@ -1396,9 +1396,9 @@ BOOL ShowBalloonTip(
     INT ttiIcon = TTI_NONE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*pEditBalloonTip*|no Ponteiro para uma estrutura [EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip) que descreve a dica de balão.|
 |*lpszTitle*|no Ponteiro para uma cadeia de caracteres Unicode que contém o título da dica de balão.|
@@ -1413,13 +1413,13 @@ TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
 Essa função envia a mensagem de [EM_SHOWBALLOONTIP](/windows/win32/Controls/em-showballoontip) , que é descrita na SDK do Windows. Para obter mais informações, consulte a macro [Edit_ShowBalloonTip](/windows/win32/api/commctrl/nf-commctrl-edit_showballoontip) .
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir define uma variável, `m_cedit`, que é usada para acessar o controle de edição atual. Essa variável é usada no exemplo a seguir.
 
 [!code-cpp[NVC_MFC_CEdit_s1#1](../../mfc/reference/codesnippet/cpp/cedit-class_25.h)]
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir exibe uma dica de balão para um controle de edição. O método [CEdit:: ShowBalloonTip](#showballoontip) especifica um título e um texto de dica de balão.
 
@@ -1443,11 +1443,11 @@ Uma operação de desfazer também pode ser desfeita. Por exemplo, você pode re
 
 Para obter mais informações, consulte [EM_UNDO](/windows/win32/Controls/em-undo) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CEdit#25](../../mfc/reference/codesnippet/cpp/cedit-class_27.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de CALCDRIV do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Exemplo de CMNCTRL2 do MFC](../../overview/visual-cpp-samples.md)<br/>

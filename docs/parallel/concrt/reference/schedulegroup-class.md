@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
 ms.openlocfilehash: 8686b5ef0906e3188a1e683d1190bbe6124cd19e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867113"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417127"
 ---
 # <a name="schedulegroup-class"></a>Classe ScheduleGroup
 
@@ -32,15 +32,15 @@ class ScheduleGroup;
 
 ### <a name="protected-constructors"></a>Construtores protegidos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[~ Destruidor de programador](#dtor)||
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|[ID](#id)|Retorna um identificador para o grupo de agendamento que é exclusivo dentro do Agendador ao qual o grupo pertence.|
+|[Id](#id)|Retorna um identificador para o grupo de agendamento que é exclusivo dentro do Agendador ao qual o grupo pertence.|
 |[Referência](#reference)|Incrementa a contagem de referência do grupo de agendamento.|
 |[Versão](#release)|Decrementa a contagem de referência de grupo do Agendador.|
 |[ScheduleTask](#scheduletask)|Agenda uma tarefa leve dentro do grupo de agendamento.|
@@ -49,7 +49,7 @@ class ScheduleGroup;
 
 `ScheduleGroup`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ConcRT. h
 
@@ -82,7 +82,7 @@ const char *,
     int);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_PObject*<br/>
 Um ponteiro para o objeto a ser excluído.
@@ -137,7 +137,7 @@ virtual void ScheduleTask(
     _Inout_opt_ void* _Data) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Proc*<br/>
 Um ponteiro para a função a ser executada para executar o corpo da tarefa de peso leve.
@@ -149,7 +149,7 @@ Um ponteiro void para os dados que serão passados como um parâmetro para o cor
 
 Chamar o método `ScheduleTask` coloca implicitamente uma contagem de referência no grupo de agendamento que é removido pelo tempo de execução em um momento apropriado após a execução da tarefa.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Classe CurrentScheduler](currentscheduler-class.md)<br/>

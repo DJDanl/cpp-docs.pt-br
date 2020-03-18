@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
 ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883857"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418758"
 ---
 # <a name="cdaotabledef-class"></a>Classe CDaoTableDef
 
@@ -97,7 +97,7 @@ class CDaoTableDef : public CObject
 |----------|-----------------|
 |[CDaoTableDef::CDaoTableDef](#cdaotabledef)|Constrói um objeto `CDaoTableDef`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|DESCRIÇÃO|
 |----------|-----------------|
@@ -232,7 +232,7 @@ Constrói um objeto `CDaoTableDef`.
 CDaoTableDef(CDaoDatabase* pDatabase);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDatabase*<br/>
 Um ponteiro para um objeto [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) .
@@ -269,7 +269,7 @@ virtual void Create(
     LPCTSTR lpszConnect = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 Um ponteiro para uma cadeia de caracteres que contém o nome da tabela.
@@ -310,7 +310,7 @@ void CreateField(
 void CreateField(CDaoFieldInfo& fieldinfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 Um ponteiro para uma expressão de cadeia de caracteres especificando o nome desse campo.
@@ -318,14 +318,14 @@ Um ponteiro para uma expressão de cadeia de caracteres especificando o nome des
 *nType*<br/>
 Um valor que indica o tipo de dados do campo. A configuração pode ser um destes valores:
 
-|Tipo|Tamanho (bytes)|DESCRIÇÃO|
+|Type|Tamanho (bytes)|DESCRIÇÃO|
 |----------|--------------------|-----------------|
 |`dbBoolean`|1 byte|BOOL|
 |`dbByte`|BYTE|
-|`dbInteger`|2|int|
+|`dbInteger`|2|INT|
 |`dbLong`|4|long|
 |`dbCurrency`|8|Moeda ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|
-|`dbSingle`|4|float|
+|`dbSingle`|4|FLOAT|
 |`dbDouble`|8|double|
 |`dbDate`|8|Data/hora ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
 |`dbText`|1 - 255|Texto ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
@@ -377,7 +377,7 @@ Chame essa função para adicionar um índice a uma tabela.
 void CreateIndex(CDaoIndexInfo& indexinfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *indexinfo*<br/>
 Uma referência a uma estrutura [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) .
@@ -407,7 +407,7 @@ void DeleteField(LPCTSTR lpszName);
 void DeleteField(int nIndex);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 Um ponteiro para uma expressão de cadeia de caracteres que é o nome de um campo existente.
@@ -430,7 +430,7 @@ void DeleteIndex(LPCTSTR lpszName);
 void DeleteIndex(int nIndex);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 Um ponteiro para uma expressão de cadeia de caracteres que é o nome de um índice existente.
@@ -569,7 +569,7 @@ void GetFieldInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 O índice do objeto de campo na coleção de campos com base em zero da tabela, para pesquisa por índice.
@@ -631,7 +631,7 @@ void GetIndexInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 O índice numérico do objeto de índice na coleção de índices com base em zero da tabela, para pesquisa por sua posição na coleção.
@@ -785,7 +785,7 @@ Chame essa função de membro para abrir um TableDef salvo anteriormente na cole
 virtual void Open(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 Um ponteiro para uma cadeia de caracteres que especifica um nome de tabela.
@@ -816,7 +816,7 @@ Define um valor que indica uma ou mais características de um objeto `CDaoTableD
 void SetAttributes(long lAttributes);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lAttributes*<br/>
 Características da tabela representada pelo objeto `CDaoTableDef` e podem ser uma soma dessas constantes:
@@ -846,7 +846,7 @@ Para um objeto `CDaoTableDef` que representa uma tabela anexada, o objeto String
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszConnect*<br/>
 Um ponteiro para uma expressão de cadeia de caracteres que especifica parâmetros adicionais a serem passados para drivers ISAM instaláveis ou ODBC.
@@ -876,7 +876,7 @@ A tabela a seguir mostra os tipos de banco de dados possíveis e seus caminhos e
 |Importação de HTML|"Importação de HTML;"|"`drive`:\\*caminho* do \ \ *nome do arquivo*"|
 |Exportação de HTML|"Exportação de HTML;"|"`drive`:\\*caminho*de \ "|
 |Texto|"Texto;"|"unidade:\\\path"|
-|ODBC|Class BANCO de dados = `database`; UID = *usuário*; PWD = *senha*; DSN = *DataSourceName;* LOGINTIMEOUT = *segundos;* " (Essa não pode ser uma cadeia de conexão completa para todos os servidores; é apenas um exemplo. É muito importante não ter espaços entre os parâmetros.)|Nenhum|
+|ODBCODBC|Class BANCO de dados = `database`; UID = *usuário*; PWD = *senha*; DSN = *DataSourceName;* LOGINTIMEOUT = *segundos;* " (Essa não pode ser uma cadeia de conexão completa para todos os servidores; é apenas um exemplo. É muito importante não ter espaços entre os parâmetros.)|Nenhum|
 |Exchange|Transferência<br /><br /> MAPILEVEL = *FolderPath*;<br /><br /> [TABLETYPE={ 0 &#124; 1 };]<br /><br /> [Perfil = *perfil*;]<br /><br /> [PWD = *senha*;]<br /><br /> [DATABASE = `database`;] "|*"drive*:\\\ *caminho*\\\ *nome do arquivo*. MDB|
 
 > [!NOTE]
@@ -898,7 +898,7 @@ Chame essa função de membro para definir um nome definido pelo usuário para u
 void SetName(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 Um ponteiro para uma expressão de cadeia de caracteres que especifica um nome para uma tabela.
@@ -917,7 +917,7 @@ Chame essa função de membro para especificar o nome de uma tabela anexada ou o
 void SetSourceTableName(LPCTSTR lpszSrcTableName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSrcTableName*<br/>
 Um ponteiro para uma expressão de cadeia de caracteres que especifica um nome de tabela no banco de dados externo. Para uma tabela base, a configuração é uma cadeia de caracteres vazia ("").
@@ -936,7 +936,7 @@ Chame essa função de membro para definir uma regra de validação para um Tabl
 void SetValidationRule(LPCTSTR lpszValidationRule);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszValidationRule*<br/>
 Um ponteiro para uma expressão de cadeia de caracteres que valida uma operação.
@@ -961,7 +961,7 @@ Chame essa função de membro para definir o texto de exceção de uma regra de 
 void SetValidationText(LPCTSTR lpszValidationText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszValidationText*<br/>
 Um ponteiro para uma expressão de cadeia de caracteres que especifica o texto exibido se os dados inseridos forem inválidos.
@@ -972,7 +972,7 @@ Não é possível definir o texto de validação de uma tabela anexada.
 
 Para obter informações relacionadas, consulte o tópico "Propriedade do TextoDeValidação" na ajuda do DAO.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

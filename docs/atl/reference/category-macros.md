@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
 ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864440"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418128"
 ---
 # <a name="category-macros"></a>Macros de categoria
 
@@ -37,7 +37,7 @@ Marca o início do mapa de categoria.
 BEGIN_CATEGORY_MAP(theClass)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Classe*<br/>
 no O nome da classe que contém o mapa de categoria.
@@ -79,7 +79,7 @@ Adicione uma macro IMPLEMENTED_CATEGORY ao [mapa de categoria](#begin_category_m
 IMPLEMENTED_CATEGORY(catID)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *catID*<br/>
 no Uma constante de CATID ou variável que contém o GUID (identificador global exclusivo) da categoria implementada. O endereço do *CATID* será obtido e adicionado ao mapa. Consulte a tabela abaixo para obter uma seleção de categorias de estoque.
@@ -116,7 +116,7 @@ Adicione uma macro REQUIRED_CATEGORY ao [mapa de categoria](#begin_category_map)
 REQUIRED_CATEGORY( catID )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *catID*<br/>
 no Uma constante de CATID ou variável que contém o GUID (identificador global exclusivo) da categoria necessária. O endereço do *CATID* será obtido e adicionado ao mapa. Consulte a tabela abaixo para obter uma seleção de categorias de estoque.
@@ -145,6 +145,6 @@ Para obter mais informações sobre categorias de componentes, incluindo uma lis
 
 [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Macros](../../atl/reference/atl-macros.md)

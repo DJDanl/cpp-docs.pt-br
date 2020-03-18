@@ -32,11 +32,11 @@ helpviewer_keywords:
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
 ms.openlocfilehash: 482f29bae28841ab40ca8a8f80ab7f0df42ddc8b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863149"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417911"
 ---
 # <a name="ccommodule-class"></a>Classe CComModule
 
@@ -55,7 +55,7 @@ class CComModule : public _ATL_MODULE
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CComModule:: GetClassObject](#getclassobject)|Cria um objeto de um CLSID especificado. Somente para DLLs.|
 |[CComModule:: GetModuleInstance](#getmoduleinstance)|Retorna `m_hInst`.|
@@ -76,7 +76,7 @@ class CComModule : public _ATL_MODULE
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CComModule:: m_csObjMap](#m_csobjmap)|Garante o acesso sincronizado às informações de mapa do objeto.|
 |[CComModule:: m_csTypeInfoHolder](#m_cstypeinfoholder)|Garante o acesso sincronizado às informações da biblioteca de tipos.|
@@ -117,7 +117,7 @@ Além de `CComModule`, a ATL fornece [CComAutoThreadModule](../../atl/reference/
 
 `CComModule`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlbase. h
 
@@ -132,7 +132,7 @@ HRESULT GetClassObject(
     LPVOID* ppv) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rclsid*<br/>
 no O CLSID do objeto a ser criado.
@@ -212,7 +212,7 @@ HRESULT Init(
     const GUID* plibid = NULL) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *p*<br/>
 no Um ponteiro para uma matriz de entradas de mapa de objeto.
@@ -338,7 +338,7 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
     DWORD dwFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *CLSID*<br/>
 no O CLSID do objeto a ser registrado.
@@ -373,7 +373,7 @@ A partir do ATL 7,0, o `CComModule` é obsoleto: consulte [classes de módulo do
 HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwClsContext*<br/>
 no Especifica o contexto no qual o objeto de classe deve ser executado. Os valores possíveis são CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER ou CLSCTX_LOCAL_SERVER. Para obter uma descrição desses valores, consulte [CLSCTX](/windows/win32/api/wtypesbase/ne-wtypesbase-clsctx) no SDK do Windows.
@@ -399,7 +399,7 @@ HRESULT RegisterServer(
     const CLSID* pCLSID = NULL) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bRegTypeLib*<br/>
 no Indica se a biblioteca de tipos será registrada. O valor padrão é FALSE.
@@ -430,7 +430,7 @@ HRESULT RegisterTypeLib() throw();
 HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszIndex*<br/>
 no Cadeia de caracteres no formato `"\\N"`, em que `N` é o índice de inteiro do recurso TYPELIB.
@@ -484,7 +484,7 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
     LPCTSTR lpszVerIndProgID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *CLSID*<br/>
 no O CLSID do registro do objeto a ser cancelado.
@@ -514,7 +514,7 @@ HRESULT UnregisterServer(const CLSID* pCLSID = NULL) throw ();
 inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) throw ();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bUnRegTypeLib*<br/>
 Se for TRUE, a biblioteca de tipos também será cancelada.
@@ -556,7 +556,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
     BOOL bRegister);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *CLSID*<br/>
 O CLSID do objeto a ser registrado ou cancelado.
@@ -609,7 +609,7 @@ virtual HRESULT UpdateRegistryFromResourceD(
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw ();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszRes*<br/>
 no Um nome de recurso.
@@ -659,7 +659,7 @@ virtual HRESULT UpdateRegistryFromResourceS(
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszRes*<br/>
 no Um nome de recurso.
@@ -688,6 +688,6 @@ Semelhante a [UpdateRegistryFromResourceD](#updateregistryfromresourced) , excet
 
 Para obter mais informações sobre parâmetros e scripts substituíveis, consulte o artigo [o componente do registro do ATL (registrador)](../../atl/atl-registry-component-registrar.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral da classe](../../atl/atl-class-overview.md)

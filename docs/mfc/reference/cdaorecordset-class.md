@@ -167,11 +167,11 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
 ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867294"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418786"
 ---
 # <a name="cdaorecordset-class"></a>Classe CDaoRecordset
 
@@ -187,13 +187,13 @@ class CDaoRecordset : public CObject
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDaoRecordset::CDaoRecordset](#cdaorecordset)|Constrói um objeto `CDaoRecordset`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDaoRecordset:: AddNew](#addnew)|Prepara para adicionar um novo registro. Chame [Update](#update) para concluir a adição.|
 |[CDaoRecordset:: CanAppend](#canappend)|Retornará zero se novos registros puderem ser adicionados ao conjunto de registros por meio da função de membro [AddNew](#addnew) .|
@@ -270,7 +270,7 @@ class CDaoRecordset : public CObject
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDaoRecordset:: m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|Contém um sinalizador que indica se os campos são marcados automaticamente como alterados.|
 |[CDaoRecordset:: m_nFields](#m_nfields)|Contém o número de membros de dados de campo na classe recordset e o número de colunas selecionadas pelo conjunto de registros da fonte de dados.|
@@ -325,7 +325,7 @@ Para obter informações relacionadas, consulte o tópico "objeto recordset" na 
 
 `CDaoRecordset`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFXDAO. h
 
@@ -502,7 +502,7 @@ Constrói um objeto `CDaoRecordset`.
 CDaoRecordset(CDaoDatabase* pDatabase = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDatabase*<br/>
 Contém um ponteiro para um objeto [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) ou o valor NULL. Se não for nulo e a função de membro `Open` do objeto de `CDaoDatabase` não tiver sido chamada para conectá-lo à fonte de dados, o conjunto de registros tentará abri-lo para você durante sua própria chamada [aberta](#open) . Se você passar NULL, um objeto `CDaoDatabase` será construído e conectado para você usando as informações da fonte de dados que você especificou se tiver derivado a classe recordset de `CDaoRecordset`.
@@ -565,7 +565,7 @@ A estrutura chama essa função de membro para trocar dados automaticamente entr
 virtual void DoFieldExchange(CDaoFieldExchange* pFX);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFX*<br/>
 Contém um ponteiro para um objeto `CDaoFieldExchange`. A estrutura já terá configurado esse objeto para especificar um contexto para a operação de troca de campo.
@@ -632,7 +632,7 @@ void FillCache(
     COleVariant* pBookmark = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pSize*<br/>
 Especifica o número de linhas para preencher o cache. Se você omitir esse parâmetro, o valor será determinado pela configuração da propriedade CacheSize do objeto DAO subjacente.
@@ -664,7 +664,7 @@ virtual BOOL Find(
     LPCTSTR lpszFilter);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lFindType*<br/>
 Um valor que indica o tipo de operação de localização desejado. Os valores possíveis são:
@@ -705,7 +705,7 @@ Chame essa função de membro para localizar o primeiro registro que corresponde
 BOOL FindFirst(LPCTSTR lpszFilter);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFilter*<br/>
 Uma expressão de cadeia de caracteres (como a cláusula **Where** em uma instrução SQL sem a palavra **Where**) usada para localizar o registro.
@@ -727,7 +727,7 @@ Se um registro correspondente aos critérios não estiver localizado, o ponteiro
 
 O `Find` funções membro pesquisa a partir do local e na direção especificada na tabela a seguir:
 
-|Operações de localização|Começar|Direção da pesquisa|
+|Operações de localização|Begin|Direção da pesquisa|
 |---------------------|-----------|----------------------|
 |`FindFirst`|Início do conjunto de registros|Fim do conjunto de registros|
 |`FindLast`|Fim do conjunto de registros|Início do conjunto de registros|
@@ -759,7 +759,7 @@ Chame essa função de membro para localizar o último registro que corresponde 
 BOOL FindLast(LPCTSTR lpszFilter);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFilter*<br/>
 Uma expressão de cadeia de caracteres (como a cláusula **Where** em uma instrução SQL sem a palavra **Where**) usada para localizar o registro.
@@ -801,7 +801,7 @@ Chame essa função de membro para localizar o próximo registro que corresponde
 BOOL FindNext(LPCTSTR lpszFilter);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFilter*<br/>
 Uma expressão de cadeia de caracteres (como a cláusula **Where** em uma instrução SQL sem a palavra **Where**) usada para localizar o registro.
@@ -843,7 +843,7 @@ Chame essa função de membro para localizar o registro anterior que corresponde
 BOOL FindPrev(LPCTSTR lpszFilter);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFilter*<br/>
 Uma expressão de cadeia de caracteres (como a cláusula **Where** em uma instrução SQL sem a palavra **Where**) usada para localizar o registro.
@@ -1077,7 +1077,7 @@ Retorna um valor que indica o estado de edição para o registro atual.
 
 ### <a name="remarks"></a>Comentários
 
-|{1&gt;Valor&lt;1}|Descrição|
+|Valor|DESCRIÇÃO|
 |-----------|-----------------|
 |`dbEditNone`|Nenhuma operação de edição está em andamento.|
 |`dbEditInProgress`|O `Edit` foi chamado.|
@@ -1117,7 +1117,7 @@ void GetFieldInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 O índice de base zero do campo predefinido na coleção Fields do conjunto de registros, para pesquisa por índice.
@@ -1162,7 +1162,7 @@ virtual COleVariant GetFieldValue(LPCTSTR lpszName);
 virtual COleVariant GetFieldValue(int nIndex);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 Um ponteiro para uma cadeia de caracteres que contém o nome de um campo.
@@ -1224,7 +1224,7 @@ void GetIndexInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 O índice de base zero na coleção de índices da tabela, para pesquisa por posição numérica.
@@ -1321,7 +1321,7 @@ virtual COleVariant GetParamValue(int nIndex);
 virtual COleVariant GetParamValue(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 A posição numérica do parâmetro no objeto DAOParameter subjacente.
@@ -1599,7 +1599,7 @@ Chame essa função de membro para determinar se o membro de dados de campo espe
 BOOL IsFieldDirty(void* pv);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *PV*<br/>
 Um ponteiro para o membro de dados de campo cujo status você deseja verificar, ou NULL para determinar se algum dos campos está sujo.
@@ -1622,7 +1622,7 @@ Chame essa função de membro para determinar se o membro de dados de campo espe
 BOOL IsFieldNull(void* pv);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *PV*<br/>
 Um ponteiro para o membro de dados de campo cujo status você deseja verificar, ou NULL para determinar se algum dos campos é nulo.
@@ -1651,7 +1651,7 @@ Chame essa função de membro para determinar se o membro de dados de campo espe
 BOOL IsFieldNullable(void* pv);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *PV*<br/>
 Um ponteiro para o membro de dados de campo cujo status você deseja verificar, ou NULL para determinar se algum dos campos é nulo.
@@ -1774,7 +1774,7 @@ Chame essa função de membro para posicionar os registros do conjunto de *lRows
 virtual void Move(long lRows);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lRows*<br/>
 O número de registros a serem movidos para frente ou para trás. Os valores positivos avançam para o final do conjunto de registros. Valores negativos se movem para trás, em direção ao início.
@@ -1929,7 +1929,7 @@ virtual void Open(
     int nOptions = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nOpenType*<br/>
 Um dos seguintes valores:
@@ -2006,9 +2006,9 @@ Ao usar a terceira versão do `Open` em que você passa um objeto `CDaoQueryDef`
 
 Para a primeira versão do `Open` que usa o parâmetro `lpszSQL`, os registros são selecionados com base nos critérios mostrados na tabela a seguir.
 
-|Valor do parâmetro `lpszSQL`|Os registros selecionados são determinados por|{1&gt;Exemplo&lt;1}|
+|Valor do parâmetro `lpszSQL`|Os registros selecionados são determinados por|Exemplo|
 |--------------------------------------|----------------------------------------|-------------|
-|NULL|A cadeia de caracteres retornada por `GetDefaultSQL`.||
+|NULO|A cadeia de caracteres retornada por `GetDefaultSQL`.||
 |Uma lista separada por vírgulas de um ou mais nomes de TableDefs e/ou de QueryDef.|Todas as colunas representadas no `DoFieldExchange`.|`"Customer"`|
 |**Selecione** a lista **de colunas na lista de** tabelas|As colunas especificadas dos TableDef (s) especificados e/ou querydef (s).|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|
 
@@ -2078,13 +2078,13 @@ BOOL Seek(
     WORD nKeys);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszComparison*<br/>
 Uma das seguintes expressões de cadeia de caracteres: "<", "\<=", "=", "> =" ou ">".
 
 *pKey1*<br/>
-Um ponteiro para um [COleVariant](../../mfc/reference/colevariant-class.md) cujo valor corresponde ao primeiro campo no índice. Obrigatório.
+Um ponteiro para um [COleVariant](../../mfc/reference/colevariant-class.md) cujo valor corresponde ao primeiro campo no índice. Obrigatórios.
 
 *pKey2*<br/>
 Um ponteiro para um `COleVariant` cujo valor corresponde ao segundo campo no índice, se houver. O padrão é NULL.
@@ -2133,7 +2133,7 @@ Define o número de registro relativo do registro atual de um objeto Recordset.
 void SetAbsolutePosition(long lPosition);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lPosition*<br/>
 Corresponde à posição ordinal do registro atual no conjunto de registros.
@@ -2162,7 +2162,7 @@ Chame essa função de membro para posicionar o conjunto de registros no registr
 void SetBookmark(COleVariant varBookmark);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *varBookmark*<br/>
 Um objeto [COleVariant](../../mfc/reference/colevariant-class.md) que contém o valor de indicador para um registro específico.
@@ -2186,7 +2186,7 @@ Chame essa função de membro para definir o número de registros a serem armaze
 void SetCacheSize(long lSize);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lSize*<br/>
 Especifica o número de registros. Um valor típico é 100. Uma configuração de 0 desativa o cache. A configuração deve ter entre 5 e 1200 registros. O cache pode usar uma quantidade considerável de memória.
@@ -2207,7 +2207,7 @@ Chame essa função de membro para especificar o indicador do primeiro registro 
 void SetCacheStart(COleVariant varBookmark);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *varBookmark*<br/>
 Um [COleVariant](../../mfc/reference/colevariant-class.md) que especifica o indicador do primeiro registro no conjunto de registros a ser armazenado em cache.
@@ -2234,7 +2234,7 @@ Chame essa função de membro para definir um índice em um conjunto de registro
 void SetCurrentIndex(LPCTSTR lpszIndex);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszIndex*<br/>
 Um ponteiro que contém o nome do índice a ser definido.
@@ -2259,7 +2259,7 @@ void SetFieldDirty(
     BOOL bDirty = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *PV*<br/>
 Contém o endereço de um membro de dados de campo no conjunto de registros ou nulo. Se for NULL, todos os membros de dados de campo no conjunto de registros serão sinalizados. (C++ NULL não é o mesmo que NULL na terminologia do banco de dados, o que significa "sem valor".)
@@ -2302,7 +2302,7 @@ void SetFieldNull(
     BOOL bNull = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *PV*<br/>
 Contém o endereço de um membro de dados de campo no conjunto de registros ou nulo. Se for NULL, todos os membros de dados de campo no conjunto de registros serão sinalizados. (C++ NULL não é o mesmo que NULL na terminologia do banco de dados, o que significa "sem valor".)
@@ -2353,7 +2353,7 @@ void SetFieldValue(
     LPCTSTR lpszValue);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 Um ponteiro para uma cadeia de caracteres que contém o nome de um campo.
@@ -2384,7 +2384,7 @@ void SetFieldValueNull(int nIndex);
 void SetFieldValueNull(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 O índice do campo no conjunto de registros, para pesquisa por índice baseado em zero.
@@ -2406,7 +2406,7 @@ Chame essa função de membro para definir o tipo de bloqueio para o conjunto de
 void SetLockingMode(BOOL bPessimistic);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bPessimistic*<br/>
 Um sinalizador que indica o tipo de bloqueio.
@@ -2437,7 +2437,7 @@ virtual void SetParamValue(
     const COleVariant& varValue);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 A posição numérica do parâmetro na coleção de parâmetros do QueryDef.
@@ -2463,7 +2463,7 @@ void SetParamValueNull(int nIndex);
 void SetParamValueNull(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 O índice do campo no conjunto de registros, para pesquisa por índice baseado em zero.
@@ -2483,7 +2483,7 @@ Chame essa função de membro para definir um valor que altere o local aproximad
 void SetPercentPosition(float fPosition);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *fPosition*<br/>
 Um número entre 0 e 100.
@@ -2525,7 +2525,7 @@ Quando o objeto Recordset é pessimistically bloqueado em um ambiente multiusuá
 
 Para obter informações relacionadas, consulte os tópicos "método AddNew", "método CancelUpdate", "Excluir método", "propriedade LastModified", "método de atualização" e "Propriedade EditMode" na ajuda do DAO.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

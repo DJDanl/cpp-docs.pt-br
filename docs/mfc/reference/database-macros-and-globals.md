@@ -14,11 +14,11 @@ helpviewer_keywords:
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
 ms.openlocfilehash: 47a1bb434801c24ab8eee048d9ef8f93793101cc
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866644"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420837"
 ---
 # <a name="database-macros-and-globals"></a>Macros e globais de banco de dados
 
@@ -55,7 +55,7 @@ void AFXAPI AfxDbInitModule( );
 
 Certifique-se de que essa chamada ocorra antes de qualquer chamada de classe base ou qualquer código adicionado que acesse a DLL do banco de dados MFC. A DLL do banco de dados do MFC é uma DLL de extensão do MFC; para que uma DLL de extensão do MFC seja conectada a uma cadeia de `CDynLinkLibrary`, ela deve criar um objeto `CDynLinkLibrary` no contexto de cada módulo que a utilizará. `AfxDbInitModule` cria o objeto de `CDynLinkLibrary` no contexto da DLL do MFC regular para que ele seja conectado à cadeia de objetos `CDynLinkLibrary` da DLL do MFC regular.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** \<afxdll_. h >
 
@@ -67,7 +67,7 @@ Use esta macro para chamar qualquer função da API ODBC que possa retornar `SQL
 AFX_ODBC_CALL(SQLFunc)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *SQLFunc*<br/>
 Uma função de API ODBC. Para obter mais informações sobre funções de API ODBC, consulte a SDK do Windows.
@@ -80,13 +80,13 @@ Antes de invocar `AFX_ODBC_CALL`, você deve declarar uma variável, `nRetCode`,
 
 Observe que as classes ODBC do MFC agora usam apenas o processamento síncrono. Para executar uma operação assíncrona, você deve chamar a função da API do ODBC `SQLSetConnectOption`. Para obter mais informações, consulte o tópico "executando funções de forma assíncrona" no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Este exemplo usa `AFX_ODBC_CALL` para chamar a função de API `SQLColumns` ODBC, que retorna uma lista das colunas na tabela nomeada por `strTableName`. Observe a declaração de `nRetCode` e o uso de membros de dados do conjunto de registros para passar parâmetros para a função. O exemplo também ilustra a verificação dos resultados da chamada com `Check`, uma função de membro da classe `CRecordset`. A variável `prs` é um ponteiro para um objeto `CRecordset`, declarado em outro lugar.
 
 [!code-cpp[NVC_MFCDatabase#39](../../mfc/codesnippet/cpp/database-macros-and-globals_1.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFXDB. h
 
@@ -98,7 +98,7 @@ A implementação dessa macro foi alterada no MFC 4,2.
 AFX_SQL_ASYNC(prs, SQLFunc)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *PRS*<br/>
 Um ponteiro para um objeto `CRecordset` ou um objeto `CDatabase`. A partir do MFC 4,2, esse valor de parâmetro é ignorado.
@@ -113,7 +113,7 @@ Uma função de API ODBC. Para obter mais informações sobre funções de API O
 > [!NOTE]
 >  As classes ODBC do MFC agora usam apenas o processamento síncrono. Para executar uma operação assíncrona, você deve chamar a função da API do ODBC `SQLSetConnectOption`. Para obter mais informações, consulte o tópico "executando funções de forma assíncrona" no SDK do Windows.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFXDB. h
 
@@ -125,7 +125,7 @@ A macro `AFX_SQL_SYNC` simplesmente chama a função `SQLFunc`.
 AFX_SQL_SYNC(SQLFunc)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *SQLFunc*<br/>
 Uma função de API ODBC. Para obter mais informações sobre essas funções, consulte a SDK do Windows.
@@ -144,7 +144,7 @@ Você pode simplesmente fazer a atribuição
 
 [!code-cpp[NVC_MFCDatabase#41](../../mfc/codesnippet/cpp/database-macros-and-globals_3.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFXDB. h
 
@@ -160,10 +160,10 @@ HENV AFXAPI AfxGetHENV();
 
 O identificador para o ambiente ODBC atualmente em uso pelo MFC. Pode ser `SQL_HENV_NULL` se não houver nenhum objeto [CDatabase](../../mfc/reference/cdatabase-class.md) e nenhum objeto [CRecordset](../../mfc/reference/crecordset-class.md) em uso.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFXDB. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)

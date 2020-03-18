@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
 ms.openlocfilehash: df4e2aa1ce650fd5b1f04baf2f7c4cd2fb4cff93
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865815"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418310"
 ---
 # <a name="comptrrefbase-class"></a>Classe ComPtrRefBase
 
@@ -31,7 +31,7 @@ template <typename T>
 class ComPtrRefBase;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 Um tipo [ComPtr\<t >](comptr-class.md) ou um tipo derivado dele, não meramente a interface representada pelo `ComPtr`.
@@ -44,20 +44,20 @@ Representa a classe base para a classe [ComPtrRef](comptrref-class.md) .
 
 ### <a name="public-typedefs"></a>Typedefs Públicos
 
-{1&gt;Nome&lt;1}            | Descrição
+Nome            | DESCRIÇÃO
 --------------- | -------------------------------------------------
 `InterfaceType` | Um sinônimo para o tipo de parâmetro de modelo *T*.
 
 ### <a name="public-operators"></a>Operadores públicos
 
-{1&gt;Nome&lt;1}                                                                       | Descrição
+Nome                                                                       | DESCRIÇÃO
 -------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------
 [ComPtrRefBase:: Operator IInspectable * *](#operator-iinspectable-star-star) | Converte o membro de dados de [ptr_](#ptr) atual em um ponteiro para ponteiro para a interface `IInspectable`.
 [ComPtrRefBase:: Operator IUnknown * *](#operator-iunknown-star-star)         | Converte o membro de dados de [ptr_](#ptr) atual em um ponteiro para ponteiro para a interface `IUnknown`.
 
 ### <a name="protected-data-members"></a>Membros de Dados Protegidos
 
-{1&gt;Nome&lt;1}                        | Descrição
+Nome                        | DESCRIÇÃO
 --------------------------- | ----------------------------------------------------------------
 [ComPtrRefBase::p tr_](#ptr) | Ponteiro para o tipo especificado pelo parâmetro de modelo atual.
 
@@ -65,7 +65,7 @@ Representa a classe base para a classe [ComPtrRef](comptrref-class.md) .
 
 `ComPtrRefBase`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Client. h
 

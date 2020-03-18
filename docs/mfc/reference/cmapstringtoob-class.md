@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
 ms.openlocfilehash: b56e9052533269ba62d248312f07ac16db71bf4a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876368"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418534"
 ---
 # <a name="cmapstringtoob-class"></a>Classe CMapStringToOb
 
@@ -59,7 +59,7 @@ class CMapStringToOb : public CObject
 |----------|-----------------|
 |[CMapStringToOb::CMapStringToOb](#cmapstringtoob)|Construtor.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|DESCRIÇÃO|
 |----------|-----------------|
@@ -115,7 +115,7 @@ Constrói um mapa `CString`para `CObject*` vazio.
 CMapStringToOb(INT_PTR nBlockSize = 10);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nBlockSize*<br/>
 Especifica a granularidade de alocação de memória para estender o mapa.
@@ -208,7 +208,7 @@ void GetNextAssoc(
     CObject*& rValue) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rNextPosition*<br/>
 Especifica uma referência a um valor de posição retornado por uma chamada anterior `GetNextAssoc` ou `GetStartPosition`.
@@ -327,9 +327,9 @@ Calcula o valor de hash de uma chave especificada.
 UINT HashKey(LPCTSTR key) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*key*<br/>
+*chave*<br/>
 A chave cujo valor de hash deve ser calculado.
 
 ### <a name="return-value"></a>Valor retornado
@@ -359,7 +359,7 @@ void InitHashTable(
     BOOL bAllocNow = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hashSize*<br/>
 Número de entradas na tabela de hash.
@@ -421,9 +421,9 @@ BOOL Lookup(
     CObject*& rValue) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*key*<br/>
+*chave*<br/>
 Especifica a chave de cadeia de caracteres que identifica o elemento a ser pesquisado.
 
 *rValue*<br/>
@@ -464,9 +464,9 @@ BOOL LookupKey(
     LPCTSTR& rKey) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*key*<br/>
+*chave*<br/>
 Especifica a chave de cadeia de caracteres que identifica o elemento a ser pesquisado.
 
 *rKey*<br/>
@@ -569,9 +569,9 @@ Pesquisa a entrada do mapa correspondente à chave fornecida; em seguida, se a c
 BOOL RemoveKey(LPCTSTR key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*key*<br/>
+*chave*<br/>
 Especifica a cadeia de caracteres usada para pesquisa de mapa.
 
 ### <a name="return-value"></a>Valor retornado
@@ -618,9 +618,9 @@ void SetAt(
     CObject* newValue);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*key*<br/>
+*chave*<br/>
 Especifica a cadeia de caracteres que é a chave do novo elemento.
 
 *newValue*<br/>
@@ -658,7 +658,7 @@ after Lisa's birthday: A CMapStringToOb with 2 elements
 [Bart] = a CAge at $4654 13
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

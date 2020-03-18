@@ -119,11 +119,11 @@ helpviewer_keywords:
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
 ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869923"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420879"
 ---
 # <a name="cwinappex-class"></a>Classe CWinAppEx
 
@@ -140,13 +140,13 @@ class CWinAppEx : public CWinApp
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CWinAppEx::CWinAppEx](#cwinappex)|Constrói um objeto `CWinAppEx`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CWinAppEx:: Cleanstate](#cleanstate)|Remove informações sobre o aplicativo do registro do Windows.|
 |[CWinAppEx::EnableLoadWindowPlacement](#enableloadwindowplacement)|Especifica se o aplicativo carregará o tamanho inicial e o local da janela do quadro principal do registro.|
@@ -197,7 +197,7 @@ class CWinAppEx : public CWinApp
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CWinAppEx:: loadcustomstate](#loadcustomstate)|Chamado pelo Framework quando o estado do aplicativo é carregado.|
 |[CWinAppEx::LoadWindowPlacement](#loadwindowplacement)|Chamado pelo Framework quando ele carrega o tamanho e o local do seu aplicativo do registro. Os dados carregados incluem o tamanho e o local do quadro principal no momento em que o aplicativo foi fechado pela última vez.|
@@ -208,9 +208,9 @@ class CWinAppEx : public CWinApp
 |[CWinAppEx::SaveCustomState](#savecustomstate)|Chamado pelo Framework depois de gravar o estado do aplicativo no registro.|
 |[CWinAppEx::StoreWindowPlacement](#storewindowplacement)|Chamado pelo Framework para gravar o tamanho e o local do quadro principal no registro.|
 
-### <a name="data-members"></a>Membros de Dados
+### <a name="data-members"></a>Membros de dados
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CWinAppEx:: m_bForceImageReset](#m_bforceimagereset)|Especifica se a estrutura redefinirá todas as imagens da barra de ferramentas quando a janela do quadro que contém a barra de ferramentas for carregada.|
 
@@ -236,7 +236,7 @@ Depois de incorporar `CWinAppEx` ao seu aplicativo, você pode inicializar qualq
 
 [CWinAppEx](../../mfc/reference/cwinappex-class.md)
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxwinappex. h
 
@@ -248,7 +248,7 @@ Remove todas as informações sobre o aplicativo do registro do Windows.
 virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSectionName*<br/>
 no Uma cadeia de caracteres que contém um caminho de uma chave do registro.
@@ -269,7 +269,7 @@ Constrói um objeto `CWinAppEx`.
 CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bResourceSmartUpdate*<br/>
 no Um parâmetro booliano que especifica se o objeto de espaço de trabalho deve detectar e manipular atualizações de recursos.
@@ -286,7 +286,7 @@ Especifica se o aplicativo carregará o tamanho inicial e o local da janela do q
 void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 no Especifica se o aplicativo carrega o tamanho inicial e o local da janela do quadro principal do registro.
@@ -306,7 +306,7 @@ BOOL EnableTearOffMenus(
     const UINT uiCmdLast);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszRegEntry*<br/>
 no Uma cadeia de caracteres que contém o caminho de uma chave do registro. O aplicativo usa essa chave do registro para armazenar informações para os menus destacáveis.
@@ -339,7 +339,7 @@ BOOL EnableUserTools(
     UINT uInitDirMenuID = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiCmdToolsDummy*<br/>
 no Um inteiro sem sinal que a estrutura usa como um espaço reservado para a ID de comando do menu de ferramentas do usuário.
@@ -392,7 +392,7 @@ BOOL GetBinary(
     UINT* pBytes);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszEntry*<br/>
 no Uma cadeia de caracteres que contém o nome de uma chave do registro.
@@ -473,7 +473,7 @@ int GetInt(
     int nDefault = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszEntry*<br/>
 no Uma cadeia de caracteres que contém o nome de uma entrada de registro.
@@ -533,7 +533,7 @@ BOOL GetObject(
     CObject& obj);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszEntry*<br/>
 no Uma cadeia de caracteres que contém o caminho relativo de uma entrada de registro.
@@ -575,7 +575,7 @@ Cria e retorna o caminho absoluto de uma chave do registro.
 CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *szSectionAdd*<br/>
 no Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.
@@ -600,7 +600,7 @@ BOOL GetSectionBinary(
     UINT* pBytes);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSubSection*<br/>
 no Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.
@@ -635,7 +635,7 @@ int GetSectionInt(
     int nDefault = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSubSection*<br/>
 no Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.
@@ -667,7 +667,7 @@ BOOL GetSectionObject(
     CObject& obj);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSubSection*<br/>
 no Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.
@@ -699,7 +699,7 @@ CString GetSectionString(
     LPCTSTR lpszDefault = _T(""));
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSubSection*<br/>
 no Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.
@@ -746,7 +746,7 @@ CString GetString(
     LPCTSTR lpzDefault= _T(""));
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszEntry*<br/>
 no Uma cadeia de caracteres que contém o nome de uma chave do registro
@@ -904,7 +904,7 @@ Indica se a chave especificada está no registro.
 BOOL IsStateExists(LPCTSTR lpszSectionName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSectionName*<br/>
 no Uma cadeia de caracteres que contém um caminho de uma chave do registro.
@@ -949,7 +949,7 @@ virtual BOOL LoadState(
     CFrameImpl* pFrameImpl = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFrame*<br/>
 no Um ponteiro para um objeto de janela de quadro. O método aplica as informações de estado no registro a esta janela do quadro.
@@ -983,7 +983,7 @@ virtual BOOL LoadWindowPlacement(
     int& nShowCmd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rectNormalPosition*<br/>
 fora Um retângulo que contém as coordenadas da janela do quadro principal quando ela está na posição restaurada.
@@ -1026,7 +1026,7 @@ virtual void OnAppContextHelp(
     const DWORD dwHelpIDArray[]);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWndControl*<br/>
 no Um ponteiro para um objeto Window para o qual o usuário chamou a ajuda de contexto.
@@ -1046,7 +1046,7 @@ A estrutura chama esse método quando uma janela do quadro está processando WM_
 virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFrameImpl*<br/>
 no Um ponteiro para um objeto `CFrameImpl`.
@@ -1065,7 +1065,7 @@ virtual BOOL OnViewDoubleClick(
     int iViewId);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 no Um ponteiro para um objeto derivado da [classe cvisualização](../../mfc/reference/cview-class.md).
@@ -1087,7 +1087,7 @@ Para dar suporte ao comportamento personalizado do mouse, você deve chamar essa
 virtual BOOL OnWorkspaceIdle(CWnd*);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *CWnd&#38;*<br/>
 
@@ -1127,7 +1127,7 @@ Recarrega o tamanho e o local de uma janela do registro.
 virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFrame*<br/>
 no Um ponteiro para uma janela de quadro.
@@ -1174,7 +1174,7 @@ BOOL SaveState(
     LPCTSTR lpszSectionName = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSectionName*<br/>
 no Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.
@@ -1203,7 +1203,7 @@ Define o caminho do registro padrão para o aplicativo.
 LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSectionName*<br/>
 no Uma cadeia de caracteres que contém o caminho de uma chave do registro.
@@ -1227,7 +1227,7 @@ virtual BOOL ShowPopupMenu(
     CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiMenuResId*<br/>
 no Uma ID de recurso de menu.
@@ -1259,7 +1259,7 @@ virtual BOOL StoreWindowPlacement(
     int nShowCmd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFlags*<br/>
 no Sinalizadores que controlam a posição da janela minimizada e como o sistema operacional alterna entre uma janela minimizada e uma janela restaurada.
@@ -1291,7 +1291,7 @@ BOOL WriteBinary(
     UINT nBytes);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszEntry*<br/>
 no Uma cadeia de caracteres que contém o nome de uma chave do registro.
@@ -1322,7 +1322,7 @@ BOOL WriteInt(
     int nValue);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszEntry*<br/>
 no Uma cadeia de caracteres que contém o nome de uma chave do registro.
@@ -1350,7 +1350,7 @@ BOOL WriteObject(
     CObject& obj);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszEntry*<br/>
 no Uma cadeia de caracteres que contém o valor a ser definido.
@@ -1378,7 +1378,7 @@ BOOL WriteSectionBinary(
     UINT nBytes);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSubSection*<br/>
 no Uma cadeia de caracteres que contém o nome de uma chave do registro
@@ -1413,7 +1413,7 @@ BOOL WriteSectionInt(
     int nValue);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSubSection*<br/>
 no Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.
@@ -1445,7 +1445,7 @@ BOOL WriteSectionObject(
     CObject& obj);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSubSection*<br/>
 no Uma cadeia de caracteres que contém o nome de uma chave do registro.
@@ -1477,7 +1477,7 @@ BOOL WriteSectionString(
     LPCTSTR lpszValue);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSubSection*<br/>
 no Uma cadeia de caracteres que contém o nome de uma chave do registro.
@@ -1508,7 +1508,7 @@ BOOL WriteString(
     LPCTSTR lpszValue);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszEntry*<br/>
 no Uma cadeia de caracteres que contém o nome de uma chave do registro.
@@ -1526,7 +1526,7 @@ O parâmetro *lpszEntry* é o nome de uma entrada de registro localizada sob a c
 
 Se a chave especificada por *lspzEntry* não existir, esse método irá criá-la.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

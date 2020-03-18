@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
 ms.openlocfilehash: 776f70f9b93eb2e38151ceb5e84b4664420cf954
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854109"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419143"
 ---
 # <a name="ischedulerproxy-structure"></a>Estrutura ISchedulerProxy
 
@@ -34,7 +34,7 @@ struct ISchedulerProxy;
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[ISchedulerProxy::BindContext](#bindcontext)|Associa um contexto de execução a um proxy de thread, se ele ainda não estiver associado a um.|
 |[ISchedulerProxy::CreateOversubscriber](#createoversubscriber)|Cria uma nova raiz de processador virtual no thread de hardware associado a um recurso de execução existente.|
@@ -51,7 +51,7 @@ O Gerenciador de recursos passa uma interface `ISchedulerProxy` para cada Agenda
 
 `ISchedulerProxy`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** concrtrm. h
 
@@ -65,7 +65,7 @@ Associa um contexto de execução a um proxy de thread, se ele ainda não estive
 virtual void BindContext(_Inout_ IExecutionContext* pContext) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pContext*<br/>
 Uma interface para o contexto de execução a ser associada a um proxy de thread.
@@ -84,7 +84,7 @@ Cria uma nova raiz de processador virtual no thread de hardware associado a um r
 virtual IVirtualProcessorRoot* CreateOversubscriber(_Inout_ IExecutionResource* pExecutionResource) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pExecutionResource*<br/>
 Uma interface `IExecutionResource` que representa o thread de hardware que você deseja assinar.
@@ -107,7 +107,7 @@ Solicita uma alocação inicial de raízes de processador virtual. Cada raiz de 
 virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurrentThread) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *doSubscribeCurrentThread*<br/>
 Se deseja assinar o thread atual e conta para ele durante a alocação de recursos.
@@ -172,12 +172,12 @@ Desassocia um proxy de thread do contexto de execução especificado pelo parâm
 virtual void UnbindContext(_Inout_ IExecutionContext* pContext) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pContext*<br/>
 O contexto de execução para desassociar de seu proxy de thread.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Estrutura IScheduler](ischeduler-structure.md)<br/>
