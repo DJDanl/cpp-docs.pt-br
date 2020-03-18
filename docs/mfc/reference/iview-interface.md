@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IView class [MFC]
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
-ms.openlocfilehash: 22e08a70ff4cc742406a1489899c0ba1df7eb664
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: e8afa7a5f5a7692f88ace4da08209b80f902b603
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420816"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445670"
 ---
 # <a name="iview-interface"></a>Interface do IView
 
@@ -33,7 +33,7 @@ interface class IView
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|DESCRIÇÃO|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[IView:: OnActivateView](#onactivateview)|Chamado pelo MFC quando uma exibição é ativada ou desativada.|
 |[IView:: OnInitialUpdate](#oninitialupdate)|Chamado pelo Framework depois que a exibição é anexada primeiro ao documento, mas antes de a exibição ser inicialmente exibida.|
@@ -47,18 +47,19 @@ interface class IView
 
 Para obter mais informações sobre como usar Windows Forms, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 Header: afxwinforms. h (definido no assembly atlmfc\lib\mfcmifc80.dll)
 
 ## <a name="onactivateview"></a>IView:: OnActivateView
 
 Chamado pelo MFC quando uma exibição é ativada ou desativada.
+
 ```
 void OnActivateView(bool activate);
 ```
 
-## <a name="parameters"></a>parâmetros
+## <a name="parameters"></a>Parâmetros
 
 *ativar*<br/>
 Indica se a exibição está sendo ativada ou desativada.
@@ -66,6 +67,7 @@ Indica se a exibição está sendo ativada ou desativada.
 ## <a name="oninitialupdate"></a>IView:: OnInitialUpdate
 
 Chamado pelo Framework depois que a exibição é anexada primeiro ao documento, mas antes de a exibição ser inicialmente exibida.
+
 ```
 void OnInitialUpdate();
 ```
@@ -73,6 +75,7 @@ void OnInitialUpdate();
 ## <a name="onupdate"></a>IView:: OnUpdate
 
 Chamado pelo MFC após a modificação do documento da exibição.
+
 ```
 void OnUpdate();
 ```
@@ -81,7 +84,7 @@ void OnUpdate();
 
 Essa função permite que a exibição Atualize sua exibição para refletir as modificações.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Classe CWinFormsView](../../mfc/reference/cwinformsview-class.md)<br/>
 [Classe CView](../../mfc/reference/cview-class.md)

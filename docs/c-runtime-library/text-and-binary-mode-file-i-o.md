@@ -1,8 +1,6 @@
 ---
 title: E/S de texto e arquivo de modo binário
 ms.date: 04/11/2018
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - files [C++], open functions
 - I/O [CRT], text files
@@ -15,12 +13,12 @@ helpviewer_keywords:
 - translation modes (file I/O)
 - binary access
 ms.assetid: 3196e321-8b87-4609-b302-cd6f3c516051
-ms.openlocfilehash: 2c875350aedadb55d8f96fb682d6215030be2198
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 75d302e625747d6e02e1d904c21542530d70d02f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738587"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444634"
 ---
 # <a name="text-and-binary-mode-file-io"></a>E/S de texto e arquivo de modo binário
 
@@ -28,7 +26,7 @@ As operações de E/S de arquivo ocorrem em um de dois modos de translação, *t
 
 - Manter a configuração padrão atual e especificar o modo alternativo somente quando você abre arquivos selecionados.
 
-- Usar a função [set_fmode](../c-runtime-library/reference/set-fmode.md) para alterar o modo padrão para arquivos abertos recentemente. Usar [get_fmode](../c-runtime-library/reference/get-fmode.md) para localizar o modo padrão atual. A configuração padrão inicial é o modo de texto (**_O_TEXT**).
+- Usar a função [set_fmode](../c-runtime-library/reference/set-fmode.md) para alterar o modo padrão para arquivos abertos recentemente. Usar [get_fmode](../c-runtime-library/reference/get-fmode.md) para localizar o modo padrão atual. A configuração padrão inicial é o modo de texto ( **_O_TEXT**).
 
 - Altere o modo de translação padrão diretamente configurando a variável global [_fmode](../c-runtime-library/fmode.md) no seu programa. A função **_set_fmode** define o valor dessa variável, mas ele também pode ser definido diretamente.
 
@@ -37,4 +35,4 @@ Quando você chama uma função de abertura de arquivo, como [_open](../c-runtim
 ## <a name="see-also"></a>Consulte também
 
 [Entrada e saída](../c-runtime-library/input-and-output.md)<br/>
-[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

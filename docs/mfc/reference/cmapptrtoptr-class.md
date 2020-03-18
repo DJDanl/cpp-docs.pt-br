@@ -4,46 +4,46 @@ ms.date: 11/04/2016
 f1_keywords:
 - CMapPtrToPtr
 - AFXCOLL/CMapPtrToPtr
-- AFXCOLL/CMapStringToOb::CMapStringToOb
-- AFXCOLL/CMapStringToOb::GetCount
-- AFXCOLL/CMapStringToOb::GetHashTableSize
-- AFXCOLL/CMapStringToOb::GetNextAssoc
-- AFXCOLL/CMapStringToOb::GetSize
-- AFXCOLL/CMapStringToOb::GetStartPosition
-- AFXCOLL/CMapStringToOb::HashKey
-- AFXCOLL/CMapStringToOb::InitHashTable
-- AFXCOLL/CMapStringToOb::IsEmpty
-- AFXCOLL/CMapStringToOb::Lookup
-- AFXCOLL/CMapStringToOb::LookupKey
-- AFXCOLL/CMapStringToOb::RemoveAll
-- AFXCOLL/CMapStringToOb::RemoveKey
-- AFXCOLL/CMapStringToOb::SetAt
+- AFXCOLL/CMapPtrToPtr::CMapPtrToPtr
+- AFXCOLL/CMapPtrToPtr::GetCount
+- AFXCOLL/CMapPtrToPtr::GetHashTableSize
+- AFXCOLL/CMapPtrToPtr::GetNextAssoc
+- AFXCOLL/CMapPtrToPtr::GetSize
+- AFXCOLL/CMapPtrToPtr::GetStartPosition
+- AFXCOLL/CMapPtrToPtr::HashKey
+- AFXCOLL/CMapPtrToPtr::InitHashTable
+- AFXCOLL/CMapPtrToPtr::IsEmpty
+- AFXCOLL/CMapPtrToPtr::Lookup
+- AFXCOLL/CMapPtrToPtr::LookupKey
+- AFXCOLL/CMapPtrToPtr::RemoveAll
+- AFXCOLL/CMapPtrToPtr::RemoveKey
+- AFXCOLL/CMapPtrToPtr::SetAt
 helpviewer_keywords:
-- CMapStringToOb [MFC], CMapStringToOb
-- CMapStringToOb [MFC], GetCount
-- CMapStringToOb [MFC], GetHashTableSize
-- CMapStringToOb [MFC], GetNextAssoc
-- CMapStringToOb [MFC], GetSize
-- CMapStringToOb [MFC], GetStartPosition
-- CMapStringToOb [MFC], HashKey
-- CMapStringToOb [MFC], InitHashTable
-- CMapStringToOb [MFC], IsEmpty
-- CMapStringToOb [MFC], Lookup
-- CMapStringToOb [MFC], LookupKey
-- CMapStringToOb [MFC], RemoveAll
-- CMapStringToOb [MFC], RemoveKey
-- CMapStringToOb [MFC], SetAt
+- CMapPtrToPtr [MFC], CMapPtrToPtr
+- CMapPtrToPtr [MFC], GetCount
+- CMapPtrToPtr [MFC], GetHashTableSize
+- CMapPtrToPtr [MFC], GetNextAssoc
+- CMapPtrToPtr [MFC], GetSize
+- CMapPtrToPtr [MFC], GetStartPosition
+- CMapPtrToPtr [MFC], HashKey
+- CMapPtrToPtr [MFC], InitHashTable
+- CMapPtrToPtr [MFC], IsEmpty
+- CMapPtrToPtr [MFC], Lookup
+- CMapPtrToPtr [MFC], LookupKey
+- CMapPtrToPtr [MFC], RemoveAll
+- CMapPtrToPtr [MFC], RemoveKey
+- CMapPtrToPtr [MFC], SetAt
 ms.assetid: 23cbbaec-9d64-48f2-92ae-5e24fa64b926
-ms.openlocfilehash: a44b9524324065581583bad13018b2c4479fc9f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4ae511caab8278daf723bbcb8ffc5d57f5a1cd0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237739"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442674"
 ---
 # <a name="cmapptrtoptr-class"></a>Classe CMapPtrToPtr
 
-Dá suporte a mapas de ponteiros nulos fechados por ponteiros nulos.
+Dá suporte a mapas de ponteiros void codificados por ponteiros void.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -53,51 +53,51 @@ class CMapPtrToPtr : public CObject
 
 ## <a name="members"></a>Membros
 
-As funções membro da `CMapPtrToPtr` são semelhantes às funções de membro da classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CMapStringToOb` para obter a função específica de membro. Onde quer que você vê uma `CObject` ponteiro como um parâmetro de função ou um valor de retorno, substitua um ponteiro para **void**. Onde quer que você vê uma `CString` ou um **const** ponteiro para **char** como um parâmetro de função ou um valor de retorno, substitua um ponteiro para **void**.
-
-`BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`
-
-por exemplo, traduz para
+As funções de membro de `CMapPtrToPtr` são semelhantes às funções de membro da classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CMapStringToOb` para obter a função específica de membro. Sempre que você vir um ponteiro de `CObject` como um parâmetro de função ou valor de retorno, substitua um ponteiro para **void**. Sempre que você vir uma `CString` ou um ponteiro **const** para **Char** como um parâmetro de função ou valor de retorno, substitua um ponteiro para **void**.
 
 `BOOL CMapPtrToPtr::Lookup( void* <key>, void*& <rValue> ) const;`
 
+por exemplo, traduz para
+
+`BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`
+
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Construtor.|
+|[CMapPtrToPtr::CMapPtrToPtr](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Construtor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Retorna o número de elementos neste mapa.|
-|[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Determina o número atual de elementos na tabela de hash.|
-|[CMapStringToOb::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Obtém o próximo elemento para a iteração.|
-|[CMapStringToOb::GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|Retorna o número de elementos neste mapa.|
-|[CMapStringToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Retorna a posição do primeiro elemento.|
-|[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Calcula o valor de hash de uma chave especificada.|
-|[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Inicializa a tabela de hash.|
-|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Testa a condição de mapa vazio (sem elementos).|
-|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Procura um ponteiro nulo na chave de ponteiro nulo. O valor do ponteiro, não a entidade a qual ele aponta, é usado para a comparação de chave.|
-|[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Retorna uma referência para a chave associada com o valor de chave especificado.|
-|[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Remove todos os elementos a partir desse mapa.|
-|[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Remove um elemento especificado por uma chave.|
-|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Insere um elemento no mapa; substitui um elemento existente, se uma chave correspondente for encontrada.|
+|[CMapPtrToPtr:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Retorna o número de elementos neste mapa.|
+|[CMapPtrToPtr::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Determina o número atual de elementos na tabela de hash.|
+|[CMapPtrToPtr::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Obtém o próximo elemento para iteração.|
+|[CMapPtrToPtr::GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|Retorna o número de elementos neste mapa.|
+|[CMapPtrToPtr:: GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Retorna a posição do primeiro elemento.|
+|[CMapPtrToPtr::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Calcula o valor de hash de uma chave especificada.|
+|[CMapPtrToPtr::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Inicializa a tabela de hash.|
+|[CMapPtrToPtr:: IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Testes para a condição de mapa vazio (sem elementos).|
+|[CMapPtrToPtr:: Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Pesquisa um ponteiro void com base na tecla de ponteiro void. O valor do ponteiro, não a entidade para a qual ele aponta, é usado para a comparação de teclas.|
+|[CMapPtrToPtr:: LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Retorna uma referência à chave associada ao valor de chave especificado.|
+|[CMapPtrToPtr:: RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Remove todos os elementos deste mapa.|
+|[CMapPtrToPtr::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Remove um elemento especificado por uma chave.|
+|[CMapPtrToPtr::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Insere um elemento no mapa; Substitui um elemento existente se uma chave correspondente for encontrada.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
-|[CMapStringToOb::operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insere um elemento no mapa — substituição do operador para `SetAt`.|
+|[CMapPtrToPtr:: Operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insere um elemento no mapa — substituição de operador para `SetAt`.|
 
 ## <a name="remarks"></a>Comentários
 
-`CMapPtrToPtr` incorpora a macro IMPLEMENT_DYNAMIC para dar suporte a acesso de tipo de tempo de execução e despejo para um `CDumpContext` objeto. Se você precisar de um despejo de elementos do mapa individuais (valores de ponteiro), você deve definir a profundidade do contexto de despejo para 1 ou maior.
+`CMapPtrToPtr` incorpora a macro IMPLEMENT_DYNAMIC para dar suporte ao tipo de tempo de execução e ao despejo para um objeto `CDumpContext`. Se você precisar de um despejo de elementos de mapa individuais (valores de ponteiro), deverá definir a profundidade do contexto de despejo como 1 ou maior.
 
 Mapas de ponteiro para ponteiro não podem ser serializados.
 
-Quando um `CMapPtrToPtr` objeto é excluído, ou quando seus elementos são removidos, somente os ponteiros são removidos, não as entidades que fazem referência.
+Quando um objeto de `CMapPtrToPtr` é excluído ou quando seus elementos são removidos, somente os ponteiros são removidos, não as entidades que eles referenciam.
 
 Para obter mais informações sobre `CMapPtrToPtr`, consulte o artigo [coleções](../../mfc/collections.md).
 
@@ -107,9 +107,9 @@ Para obter mais informações sobre `CMapPtrToPtr`, consulte o artigo [coleçõe
 
 `CMapPtrToPtr`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** & amp;lt;1}afxcoll.h
+**Cabeçalho:** afxcoll. h
 
 ## <a name="see-also"></a>Consulte também
 

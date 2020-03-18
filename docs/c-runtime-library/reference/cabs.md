@@ -20,23 +20,19 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- cabsl
 - _cabs
-- _cabsl
 helpviewer_keywords:
 - cabs function
-- cabsl function
 - absolute values
-- _cabsl function
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 5e2536fbeed2f466d3795e2ed26e643279e8bc67
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ba24b10fb267c9b54ec4944704de988128b4b419
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943418"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443055"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -55,23 +51,23 @@ double _cabs(
 *z*<br/>
 Número complexo.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**_cabs** retorna o valor absoluto de seu argumento, se for bem-sucedido. Em Overflow, **_cabs** retorna **HUGE_VAL** e define **errno** como **ERANGE**. Você pode alterar o tratamento de erro com [_matherr](matherr.md).
+**_cabs** retornará o valor absoluto de seu argumento se for bem-sucedido. Em Overflow, **_cabs** retorna **HUGE_VAL** e define **errno** como **ERANGE**. Você pode alterar o tratamento de erro com [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
 A função **_cabs** calcula o valor absoluto de um número complexo, que deve ser uma estrutura do tipo [_complex](../../c-runtime-library/standard-types.md). A estrutura *z* é composta por um componente real *x* e um componente imaginário de *y*. Uma chamada para **_cabs** produz um valor equivalente ao da expressão `sqrt( z.x * z.x + z.y * z.y )`.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 
-Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```C
 // crt_cabs.c

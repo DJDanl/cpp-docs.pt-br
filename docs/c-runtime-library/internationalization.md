@@ -1,20 +1,18 @@
 ---
 title: Internacionalização
 ms.date: 11/04/2016
-f1_keywords:
-- c.international
 helpviewer_keywords:
 - localization, routines for
 - locale-dependent routines
 - internationalization routines
 - international applications, run-time routines for
 ms.assetid: ee536a04-3558-4729-8e10-6dabcde055fd
-ms.openlocfilehash: 0066fe2b17425695cefc648acc7479172067e885
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 215caf2051458bda4597713cf7b22c03b416f5c7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57737990"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443158"
 ---
 # <a name="internationalization"></a>Internacionalização
 
@@ -24,4 +22,4 @@ Também são incluídas as alternativas do operador ISO646.
 
 ## <a name="see-also"></a>Consulte também
 
-[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

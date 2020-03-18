@@ -3,12 +3,12 @@ title: Implantar, executar e depurar seu projeto Linux em C++ no Visual Studio
 description: Descreve como compilar, executar e depurar o código no destino remoto de dentro de um projeto do Linux em C++ no Visual Studio.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 70770385bde859d47532b130463a1cc54e32a570
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
-ms.translationtype: HT
+ms.openlocfilehash: 183554814ef48a93c11d782a89e04c43fcce5e9f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042756"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441662"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Implantar, executar e depurar o projeto do Linux
 
@@ -191,11 +191,12 @@ Se quiser controle completo sobre a implantação, você poderá acrescentar os 
 ]
 
 ```
+
 ::: moniker-end
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
-- Para depurar dispositivos ARM no Linux, leia esta postagem no blog: [Depurando um dispositivo ARM inserido no Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
+- Para depurar dispositivos ARM no Linux, consulte esta postagem no blog: [Debugging an embedded ARM device in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/) (Depurando um dispositivo ARM inserido no Visual Studio).
 
 ## <a name="see-also"></a>Consulte também
 

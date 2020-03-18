@@ -25,7 +25,6 @@ f1_keywords:
 - _fputwchar
 - fputwchar
 - _fputtchar
-- fputchar
 - _fputchar
 helpviewer_keywords:
 - fputchar function
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 39642be871c1c5b5c2deaf35b7c26d19c188b440
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b78c59b937a8854d7a36355173a1ccf4f219d541
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956931"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442979"
 ---
 # <a name="_fputchar-_fputwchar"></a>_fputchar, _fputwchar
 
@@ -63,9 +62,9 @@ wint_t _fputwchar(
 *c*<br/>
 O caractere a ser gravado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas funções retorna o caractere gravado. Para **_fputchar**, um valor de retorno de **EOF** indica um erro. Para **_fputwchar**, um valor de retorno de **WEOF** indica um erro. Se c for **NULL**, essas funções gerarão uma exceção de parâmetro inválida, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, elas retornam **EOF** (ou **WEOF**) e definem **errno** como **EINVAL**.
+Cada uma dessas funções retorna o caractere gravado. Por **_fputchar**, um valor de retorno de **EOF** indica um erro. Por **_fputwchar**, um valor de retorno de **WEOF** indica um erro. Se c for **NULL**, essas funções gerarão uma exceção de parâmetro inválida, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, elas retornam **EOF** (ou **WEOF**) e definem **errno** como **EINVAL**.
 
 Para obter mais informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -79,7 +78,7 @@ Ambas as funções gravam o único caractere *c* em **stdout** e avançam o indi
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_fputtchar**|**_fputchar**|**_fputchar**|**_fputwchar**|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 |Função|Cabeçalho necessário|
 |--------------|---------------------|
@@ -88,7 +87,7 @@ Ambas as funções gravam o único caractere *c* em **stdout** e avançam o indi
 
 Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console do —**stdin**, **stdout**e **stderr**— devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```C
 // crt_fputchar.c

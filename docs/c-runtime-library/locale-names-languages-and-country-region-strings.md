@@ -1,8 +1,6 @@
 ---
 title: Nomes de localidades, idiomas e cadeias de caracteres de país–região
 ms.date: 12/10/2018
-f1_keywords:
-- c.strings
 helpviewer_keywords:
 - country/region strings
 - localization, locale
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 512eb589d964da9ef8e87f4193362c739b39b4b0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: d9baf3622064a7f035d0eb2b096916ae81a3bd50
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500054"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443117"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>Nomes de localidades, idiomas e cadeias de caracteres de país–região do UCRT
 
@@ -28,7 +26,7 @@ O argumento *locale* para as funções [setlocale, \_wsetlocale](../c-runtime-li
 &nbsp;&nbsp;&nbsp;&nbsp;\| ""<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;\| NULL
 
-O formato *locale-name* é uma cadeia de caracteres curta padronizada pelo IETF; por exemplo, `en-US` para inglês (Estados Unidos) ou `bs-Cyrl-BA` para bósnio (cirílico, Bósnia e Herzegovina). Esses formatos são preferenciais. Para obter uma lista de nomes de localidade com suporte por versão do sistema operacional Windows, confira a coluna da tabela **Marca de idioma** no [apêndice A: Comportamento do produto](https://msdn.microsoft.com/library/cc233982.aspx) no [MS-LCID]: Referência do Windows Language Code Identifier (LCID). Esse recurso lista o idioma, o script e as partes da região com suporte dos nomes de localidade. Para obter informações sobre os nomes de localidades com suporte que têm ordens de classificação não padrão, consulte a coluna **Nome da localidade** em [Identificadores da ordem de classificação](/windows/win32/Intl/sort-order-identifiers). Com o Windows 10 ou posterior, são permitidos nomes de localidade que correspondem às marcas de idioma [BCP-47](https://tools.ietf.org/html/bcp47) válidas. Por exemplo, `jp-US` é uma marca BCP-47 válida, mas é eficaz somente `US` para a funcionalidade de localidade.
+O formato *locale-name* é uma cadeia de caracteres curta padronizada pelo IETF; por exemplo, `en-US` para inglês (Estados Unidos) ou `bs-Cyrl-BA` para bósnio (cirílico, Bósnia e Herzegovina). Esses formatos são preferenciais. Para obter uma lista de nomes de locais com suporte pela versão do sistema operacional Windows, veja a coluna **Marca de idioma** da tabela no [Apêndice A: comportamento de produto](https://msdn.microsoft.com/library/cc233982.aspx) no [MS-LCID]: referência do identificador de código de idioma (LCID) do Windows. Esse recurso lista o idioma, o script e as partes da região com suporte dos nomes de localidade. Para obter informações sobre os nomes de localidades com suporte que têm ordens de classificação não padrão, consulte a coluna **Nome da localidade** em [Identificadores da ordem de classificação](/windows/win32/Intl/sort-order-identifiers). Com o Windows 10 ou posterior, são permitidos nomes de localidade que correspondem às marcas de idioma [BCP-47](https://tools.ietf.org/html/bcp47) válidas. Por exemplo, `jp-US` é uma marca BCP-47 válida, mas é eficaz somente `US` para a funcionalidade de localidade.
 
 O formato *language*\[ **\_** _country-region_\[ __.__ *code-page*]] é armazenado na configuração de localidade da categoria quando uma cadeia de caracteres de idioma ou uma cadeia de caracteres de idioma e de país ou região é usada para criar a localidade. O conjunto de cadeias de caracteres de idioma com suporte é descrito em [Cadeias de caracteres de idioma](../c-runtime-library/language-strings.md), enquanto a lista de cadeias de caracteres de paí e região com suporte é listada em [Cadeias de caracteres de país/região](../c-runtime-library/country-region-strings.md). Se o idioma especificado não for associado ao país ou região especificado, o idioma padrão do país ou região especificado será armazenado na configuração de localidade. Não recomendamos esse formato para cadeias de caracteres de localidade inseridas no código ou serializadas para armazenamento, pois essas cadeias de caracteres são mais prováveis de serem modificadas por uma atualização do sistema operacional do que o formato do nome da localidade.
 
@@ -41,7 +39,7 @@ Um valor do argumento *locale* de `C` especifica o ambiente em conformidade mín
 Você pode especificar todas as categorias de localidade ao mesmo tempo para as funções `setlocale` e `_wsetlocale` usando a categoria `LC_ALL`. Todas as categorias podem ser definidas para a mesma localidade, ou você pode definir cada categoria individualmente usando um argumento de localidade que tenha esta forma:
 
 > *LC-ALL-specifier* :: *locale*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\| \[**LC_COLLATE=** _locale_]\[ **;LC_CTYPE=** _locale_]\[ **;LC_MONETARY=** _locale_]\[ **;LC_NUMERIC=** _locale_]\[ **;LC_TIME=** _locale_]
+&nbsp;&nbsp;&nbsp;&nbsp;\| \[LC_COLLATE **=** _locale_]\[ **; LC_CTYPE =** _locale_]\[ **; LC_MONETARY =** _locale_]\[ **; LC_NUMERIC =** _locale_]\[ **; LC_TIME =** _localidade_]
 
 Você pode especificar vários tipos de categoria, separados por ponto-e-vírgula. Os tipos da categoria que não especificados usam a definição de localidade atual. Por exemplo, este snippet de código define a localidade atual para todas as categorias como `de-DE` e, em seguida, define as categorias `LC_MONETARY` como `en-GB` e `LC_TIME` como `es-ES`:
 

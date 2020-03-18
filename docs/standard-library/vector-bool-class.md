@@ -3,11 +3,7 @@ title: Classe vector&lt;bool&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - vector<bool>
-- vector/std::vector::const_pointer
-- vector/std::vector::const_reference
-- vector/std::vector::pointer
 - vector/std::vector::flip
-- vector/std::vector::swap
 helpviewer_keywords:
 - std::vector [C++], const_pointer
 - std::vector [C++], const_reference
@@ -15,16 +11,16 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: d4ae53f9a14f04d5656a13c32e75494688c5cdd0
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4043b46bf2f93b362de029577fe9ac3c11dbcaa2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452262"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443931"
 ---
 # <a name="vectorltboolgt-class"></a>Classe vector&lt;bool&gt;
 
-A `vector<bool>` classe é uma especialização parcial do [vetor](../standard-library/vector-class.md) para elementos do tipo **bool**. Ele tem um alocador para o tipo subjacente que é usado pela especialização, que fornece otimização de espaço,  armazenando um valor booliano por bit.
+A classe `vector<bool>` é uma especialização parcial do [vetor](../standard-library/vector-class.md) para elementos do tipo **bool**. Ele tem um alocador para o tipo subjacente que é usado pela especialização, que fornece otimização de espaço, armazenando um valor **booliano** por bit.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -64,7 +60,7 @@ As operações que lidam com o tipo **bool** correspondem aos valores no armazen
 |-|-|
 |[Classe vector\<bool> reference](#reference_class)|Uma classe que atua como um proxy para simular o comportamento de `bool&` e cujos objetos podem fornecer referências a elementos (bits únicos) em um objeto `vector<bool>`.|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho**: \<vector>
 
@@ -98,7 +94,7 @@ Inverte todos os bits em um `vector<bool>`.
 void flip();
 ```
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // vector_bool_flip.cpp
@@ -144,7 +140,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 |-|-|
 |*Pos*|A posição do elemento `vector<bool>`.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um objeto [vector\<bool>::reference](#reference_class) ou [vector\<bool>::const_reference](#const_reference) que contém o valor do elemento indexado.
 
@@ -154,9 +150,9 @@ Se a posição especificada for maior ou igual ao tamanho do contêiner, o resul
 
 Se você compilar com _ITERATOR_DEBUG_LEVEL definido, ocorrerá um erro em tempo de execução se você tentar acessar um elemento fora dos limites do vetor.  Para obter mais informações, consulte [Iteradores verificados](../standard-library/checked-iterators.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
-Este exemplo de código mostra o uso correto de `vector<bool>::operator[]` e dois enganos comuns de codificação, que são comentados. Esses enganos causam erros porque o endereço do objeto `vector<bool>::reference` que `vector<bool>::operator[]` retorna não pode ser usado.
+Este exemplo de código mostra o uso correto de `vector<bool>::operator[]` e dois erros comuns de codificação, que são comentados. Esses erros causam erros porque o endereço do objeto de `vector<bool>::reference` que `vector<bool>::operator[]` retorna não pode ser obtido.
 
 ```cpp
 // cl.exe /EHsc /nologo /W4 /MTd
@@ -216,7 +212,7 @@ Inverte o valor booliano de um elemento [vector\<bool>](../standard-library/vect
 void flip();
 ```
 
-#### <a name="example"></a>Exemplo
+#### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // vector_bool_ref_flip.cpp
@@ -263,7 +259,7 @@ Fornece uma conversão implícita de `vector<bool>::reference` para **bool**.
 operator bool() const;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
 O valor booliano do elemento do objeto vector\<bool>.
 
@@ -282,13 +278,13 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Certo*\
+\ *à direita*
 A referência de elemento cujo valor deve ser atribuído ao bit.
 
-*Val*\
+*Valor*\
 O valor booliano a ser atribuído ao bit.
 
-#### <a name="example"></a>Exemplo
+#### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // vector_bool_ref_op_assign.cpp
@@ -371,10 +367,10 @@ static void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mantida*\
+\ *à esquerda*
 O elemento a ser trocado pelo elemento *à direita* .
 
-*Certo*\
+\ *à direita*
 O elemento a ser trocado pelo elemento *à esquerda* .
 
 ### <a name="remarks"></a>Comentários

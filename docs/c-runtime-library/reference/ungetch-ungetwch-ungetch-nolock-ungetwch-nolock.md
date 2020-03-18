@@ -27,7 +27,6 @@ f1_keywords:
 - ungetwch
 - ungetch_nolock
 - _ungetwch
-- ungetch
 - ungetwch_nolock
 - _ungetch
 - _ungettch_nolock
@@ -47,19 +46,19 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 2f6b782334df710ac9fe6359fda77b40a31e060c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5fd34d0c975ee49bce688cd902a6df856b5d6963
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945914"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443754"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
 Envia de volta o último caractere que é lido do console.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -83,13 +82,13 @@ wint_t _ungetwch_nolock(
 *c*<br/>
 O caractere a ser enviado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Ambas as funções retornam o caractere *c* se bem-sucedidas. Se houver um erro, **_ungetch** retornará um valor de **EOF** e **_ungetwch** retornará **WEOF**.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções enviam o caractere *c* de volta para o console, fazendo com que *c* seja o próximo caractere lido por **_getch** ou **_getche** (ou **_getwch** ou **_getwche**). **_ungetch** e **_ungetwch** falharão se forem chamados mais de uma vez antes da próxima leitura. O argumento *c* não pode ser **EOF** (ou **WEOF**).
+Essas funções enviam o caractere *c* de volta para o console, fazendo com que *c* seja o próximo caractere lido por **_getch** ou **_getche** (ou **_getwch** ou **_getwche**). **_ungetch** e **_ungetwch** falham se forem chamados mais de uma vez antes da próxima leitura. O argumento *c* não pode ser **EOF** (ou **WEOF**).
 
 As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não serem protegidas contra interferência de outros threads. Elas pode ser mais rápidas, pois não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
@@ -100,7 +99,7 @@ As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não s
 |**_ungettch**|**_ungetch**|**_ungetch**|**_ungetwch**|
 |**_ungettch_nolock**|**_ungetch_nolock**|**_ungetch_nolock**|**_ungetwch_nolock**|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -109,7 +108,7 @@ As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não s
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```C
 // crt_ungetch.c

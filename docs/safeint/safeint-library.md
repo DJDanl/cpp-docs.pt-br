@@ -2,18 +2,16 @@
 title: Biblioteca de SafeInt
 ms.custom: index-page
 ms.date: 03/19/2019
-f1_keywords:
-- SafeInt
 helpviewer_keywords:
 - libraries, SafeInt
 - SafeInt library
 ms.assetid: 5321e875-67c5-49d7-9650-85a876552d14
-ms.openlocfilehash: 67aafdb978d5574c5031ea6911b464555094ad5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 39f50fc9076b033ecb20a585ec139ec240145252
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515581"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443936"
 ---
 # <a name="safeint-library"></a>Biblioteca de SafeInt
 
@@ -27,7 +25,7 @@ ms.locfileid: "65515581"
 |[Funções SafeInt](../safeint/safeint-functions.md)|Funções que podem ser usadas sem a criação de um objeto **SafeInt**.|
 |[Classe SafeIntException](../safeint/safeintexception-class.md)|Uma classe de exceções relacionadas à classe **SafeInt**.|
 
-## <a name="related-sections"></a>Seções relacionadas
+## <a name="related-sections"></a>Seções Relacionadas
 
 |Seção|Descrição|
 |-------------|-----------------|

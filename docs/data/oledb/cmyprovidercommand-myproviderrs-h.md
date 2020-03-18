@@ -3,24 +3,22 @@ title: CCustomCommand (CustomRS.H)
 ms.date: 10/22/2018
 f1_keywords:
 - cmyprovidercommand
-- myproviderrs.h
 - ccustomcommand
-- customrs.h
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderCommand class in MyProviderRS.H
 - CCustomCommand class in CustomRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
-ms.openlocfilehash: b10d7bccae6fa9b86d072b8e13791f23516b2c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61bd60b63490303c65729843c3c0351a570a8056
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230713"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444153"
 ---
 # <a name="ccustomcommand-customrsh"></a>CCustomCommand (CustomRS.H)
 
-O `CCustomCommand` classe é a implementação para o objeto de comando do provedor. Ele fornece a implementação para o `IAccessor`, `ICommandText`, e `ICommandProperties` interfaces. O `IAccessor` interface é o mesmo que o conjunto de linhas. O objeto de comando usa o acessador para especificar associações de parâmetros. O objeto de conjunto de linhas usa-os para especificar associações para colunas de saída. O `ICommandText` interface é uma maneira útil para especificar um comando textualmente. Este exemplo usa o `ICommandText` interface mais tarde, quando ele adiciona o código personalizado; ele também substitui o `ICommand::Execute` método. O `ICommandProperties` interface manipula todas as propriedades dos objetos de comando e o conjunto de linhas.
+A classe `CCustomCommand` é a implementação do objeto de comando do provedor. Ele fornece a implementação para as interfaces `IAccessor`, `ICommandText`e `ICommandProperties`. A interface `IAccessor` é a mesma do conjunto de linhas. O objeto Command usa o acessador para especificar associações para parâmetros. O objeto Rowset os usa para especificar associações para colunas de saída. A interface `ICommandText` é uma maneira útil de especificar um comando textualmente. Este exemplo usa a interface `ICommandText` mais tarde quando adiciona código personalizado; Ele também substitui o método `ICommand::Execute`. A interface `ICommandProperties` manipula todas as propriedades dos objetos Command e Rowset.
 
 ```cpp
 // CCustomCommand
@@ -35,11 +33,11 @@ class ATL_NO_VTABLE CCustomCommand :
    public IColumnsInfoImpl<CCustomCommand>
 ```
 
-O `IAccessor` interface gerencia todas as associações usadas em comandos e conjuntos de linhas. O consumidor chama `IAccessor::CreateAccessor` com uma matriz de `DBBINDING` estruturas. Cada `DBBINDING` estrutura contém informações sobre como as associações de coluna devem ser tratadas (como o tipo e comprimento). O provedor recebe as estruturas e, em seguida, determina como os dados devem ser transferidos e se todas as conversões são necessárias. O `IAccessor` no objeto de comando, a interface é usada para lidar com quaisquer parâmetros no comando.
+A interface `IAccessor` gerencia todas as associações usadas em comandos e conjuntos de linhas. O consumidor chama `IAccessor::CreateAccessor` com uma matriz de estruturas de `DBBINDING`. Cada estrutura de `DBBINDING` contém as informações sobre como as associações de coluna devem ser tratadas (como tipo e comprimento). O provedor recebe as estruturas e, em seguida, determina como os dados devem ser transferidos e se qualquer conversões é necessária. A interface `IAccessor` é usada no objeto Command para lidar com qualquer parâmetro no comando.
 
-O objeto de comando também fornece uma implementação de `IColumnsInfo`. OLE DB exige o `IColumnsInfo` interface. A interface permite que o consumidor recuperar informações sobre os parâmetros do comando. O objeto de conjunto de linhas usa o `IColumnsInfo` interface para retornar informações sobre as colunas de saída para o provedor.
+O objeto Command também fornece uma implementação de `IColumnsInfo`. OLE DB requer a interface `IColumnsInfo`. A interface permite que o consumidor recupere informações sobre parâmetros do comando. O objeto Rowset usa a interface `IColumnsInfo` para retornar informações sobre as colunas de saída para o provedor.
 
-O provedor também contém uma interface chamada `IObjectWithSite`. O `IObjectWithSite` interface foi implementada no ATL 2.0 e permite que o implementador passar informações sobre si mesmo para seu filho. O objeto de comando usa o `IObjectWithSite` informações dizer qualquer geradas objetos de conjunto de linhas sobre quem o criou.
+O provedor também contém uma interface chamada `IObjectWithSite`. A interface `IObjectWithSite` foi implementada no ATL 2,0 e permite que o implementador Transmita informações sobre si mesmo para seu filho. O objeto Command usa as informações de `IObjectWithSite` para informar qualquer objeto de conjunto de linhas gerado sobre quem os criou.
 
 ## <a name="see-also"></a>Consulte também
 

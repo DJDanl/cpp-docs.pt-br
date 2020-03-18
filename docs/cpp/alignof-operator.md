@@ -2,7 +2,6 @@
 title: Operador __alignof
 ms.date: 12/17/2018
 f1_keywords:
-- alignas_cpp
 - __alignof_cpp
 - alignof_cpp
 - __alignof
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-ms.openlocfilehash: 96c85db83c133af6f1712baa8597ed3360277854
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3764e95846d48d293991d69d04bc71c6b3aed90
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258246"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443608"
 ---
-# <a name="alignof-operator"></a>Operador __alignof
+# <a name="__alignof-operator"></a>Operador __alignof
 
-C++11 introduz o **alignof** operador que retorna o alinhamento, em bytes, do tipo especificado. Para fins de portabilidade máxima, você deve usar o operador alignof em vez do operador de alignof específico da Microsoft.
+O c++ 11 apresenta o operador **alignof** que retorna o alinhamento, em bytes, do tipo especificado. Para portabilidade máxima, você deve usar o operador alignof em vez do operador de __alignof específico da Microsoft.
 
 **Seção específica da Microsoft**
 
@@ -39,24 +38,24 @@ Retorna um valor do tipo `size_t` que é o requisito de alinhamento do tipo.
 
 Por exemplo:
 
-|Expressão|Valor|
+|Expressão|{1&gt;Valor&lt;1}|
 |----------------|-----------|
-|**__alignof( char )**|1|
-|**__alignof( short )**|2|
-|**__alignof( int )**|4|
-|**__alignof( \__int64 )**|8|
-|**__alignof( float )**|4|
-|**__alignof( double )**|8|
-|**__alignof( char\* )**|4|
+|**__alignof (Char)**|1|
+|**__alignof (curto)**|2|
+|**__alignof (int)**|4|
+|**__alignof (\__int64)**|8|
+|**__alignof (float)**|4|
+|**__alignof (duplo)**|8|
+|**__alignof (Char\*)**|4|
 
-O **alignof** valor é igual ao valor de `sizeof` para tipos básicos. Considere, no entanto, este exemplo:
+O valor de **__alignof** é o mesmo que o valor de `sizeof` para tipos básicos. Considere, no entanto, este exemplo:
 
 ```cpp
 typedef struct { int a; double b; } S;
 // __alignof(S) == 8
 ```
 
-Nesse caso, o **alignof** valor é o requisito de alinhamento do maior elemento na estrutura.
+Nesse caso, o valor de **__alignof** é o requisito de alinhamento do maior elemento na estrutura.
 
 De maneira semelhante, para
 
@@ -66,7 +65,7 @@ typedef __declspec(align(32)) struct { int a; } S;
 
 `__alignof(S)` é igual a `32`.
 
-Um uso para **alignof** seria como um parâmetro para uma das suas próprias rotinas de alocação de memória. Por exemplo, dada a seguinte estrutura definida `S`, você poderia chamar uma rotina de alocação de memória de nome `aligned_malloc` para alocar memória em um limite de alinhamento específico.
+Um uso para **__alignof** seria como um parâmetro para uma de suas próprias rotinas de alocação de memória. Por exemplo, dada a seguinte estrutura definida `S`, você poderia chamar uma rotina de alocação de memória de nome `aligned_malloc` para alocar memória em um limite de alinhamento específico.
 
 ```cpp
 typedef __declspec(align(32)) struct { int a; double b; } S;
@@ -74,7 +73,7 @@ int n = 50; // array size
 S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
 ```
 
-Para compatibilidade com versões anteriores, **_alignof** é um sinônimo de **alignof** , a menos que a opção de compilador [/Za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) é especificado.
+Para compatibilidade com versões anteriores, **_alignof** é um sinônimo para **__alignof** , a menos que a opção de compilador [/za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
 
 Para obter mais informações sobre como modificar o alinhamento, consulte:
 
@@ -86,7 +85,7 @@ Para obter mais informações sobre como modificar o alinhamento, consulte:
 
 - [/Zp (alinhamento de membro do struct)](../build/reference/zp-struct-member-alignment.md)
 
-- [Exemplos de alinhamento da estrutura](../build/x64-software-conventions.md#examples-of-structure-alignment) (específico para x64)
+- [Exemplos de alinhamento de estrutura](../build/x64-software-conventions.md#examples-of-structure-alignment) (específico para x64)
 
 Para obter mais informações sobre as diferenças no alinhamento no código para x86 e x64, consulte:
 

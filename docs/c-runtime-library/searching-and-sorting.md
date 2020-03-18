@@ -1,20 +1,18 @@
 ---
 title: Pesquisando e classificando
 ms.date: 11/04/2016
-f1_keywords:
-- c.programs
 helpviewer_keywords:
 - sorting data
 - data [CRT], searching
 - searching [C++], CRT search functions
 - searching [C++]
 ms.assetid: 15e984f0-e155-46f5-8542-51c458792f54
-ms.openlocfilehash: a58526f65be4951b57804c08359c349e78d622fc
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 92fe4c43f076a7cb0df5bc94521cfc8fb77b5da6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741765"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444687"
 ---
 # <a name="searching-and-sorting"></a>Pesquisando e classificando
 
@@ -35,4 +33,4 @@ Use as seguintes funções de pesquisa e classificação.
 
 ## <a name="see-also"></a>Consulte também
 
-[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

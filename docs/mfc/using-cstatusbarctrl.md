@@ -1,24 +1,22 @@
 ---
 title: Usando CStatusBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CStatusBarCtrl
 helpviewer_keywords:
 - CStatusBarCtrl class [MFC], using
 - status bar controls [MFC], about status bar controls
 ms.assetid: 08b39f83-580d-439a-b93e-7ef9e2a5702a
-ms.openlocfilehash: b02b37cee930c0fa2522583c5c331bb4e0563ef4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee691d013d578f4c16fa9eadabd05f8710f32d8e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411689"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442338"
 ---
 # <a name="using-cstatusbarctrl"></a>Usando CStatusBarCtrl
 
-Você pode usar o controle de barra de status ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) para criar uma janela de controle que reflete a vários tipos de informações de status sobre o aplicativo. A janela de status pode ser dividida em partes que exibem mais de um tipo de informação.
+Você pode usar o controle de barra de status ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) para criar uma janela de controle que reflita vários tipos de informações de status sobre o aplicativo. A janela de status pode ser dividida em partes que exibem mais de um tipo de informação.
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
 - [Métodos de criação de uma barra de status](../mfc/methods-of-creating-a-status-bar.md)
 

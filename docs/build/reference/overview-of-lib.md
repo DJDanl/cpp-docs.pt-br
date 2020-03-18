@@ -2,17 +2,15 @@
 title: Visão geral de LIB
 description: Visão geral do uso e das opções da ferramenta de biblioteca, lib. exe.
 ms.date: 02/09/2020
-f1_keywords:
-- Lib
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-ms.openlocfilehash: 5829a65ab0dc4ef193236c9ae480856a17c5874c
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 4ed725f383d956adf7abcf1c68002dee51703013
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257606"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439007"
 ---
 # <a name="overview-of-lib"></a>Visão geral de LIB
 
@@ -32,7 +30,7 @@ Esses modos são mutuamente exclusivos; Você pode usar a LIB em apenas um modo 
 
 A tabela a seguir lista as opções de lib. exe, com um link para mais informações.
 
-|Opção|DESCRIÇÃO|
+|{1&gt;Opção&lt;1}|Descrição|
 |-|-|
 |**/DEF**|Crie uma biblioteca de importação e um arquivo de exportação.<br/><br/>Para obter mais informações, consulte [criando uma biblioteca de importação e um arquivo de exportação](building-an-import-library-and-export-file.md).|
 |**/ERRORREPORT**| Preterido. Para obter mais informações, consulte [Executando LIB](running-lib.md).|
@@ -54,7 +52,7 @@ A tabela a seguir lista as opções de lib. exe, com um link para mais informaç
 |**/VERBOSE**|   Exibe detalhes sobre o progresso da sessão, incluindo nomes dos arquivos. obj que estão sendo adicionados.<br/><br/>Para obter mais informações, consulte [Executando LIB](running-lib.md).|
 |**/WX**|   Tratar avisos como erros.<br/><br/>Para obter mais informações, consulte [Executando LIB](running-lib.md).|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 \ de [referência lib](lib-reference.md)
 \ de [arquivos de entrada lib](lib-input-files.md)

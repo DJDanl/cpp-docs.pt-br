@@ -21,7 +21,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- spawnl
 - wspawnl
 - _wspawnl
 - _spawnl
@@ -34,19 +33,19 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-ms.openlocfilehash: b39e76b010fd0d3b9ae3dc8d0104c69ce97ac87e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3ee169aac300aab6aabeeb05138d63cdbcabb580
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947820"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442770"
 ---
 # <a name="_spawnl-_wspawnl"></a>_spawnl, _wspawnl
 
 Cria e executa um novo processo.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -80,9 +79,9 @@ Caminho do arquivo a ser executado.
 *arg0*, *arg1*,... *argN*<br/>
 Lista de ponteiros para os argumentos. O argumento *arg0* geralmente é um ponteiro para *cmdname*. Os argumentos *arg1* a *argN* são ponteiros para as cadeias de caracteres que formam a nova lista de argumentos. Após *argN*, deve haver um ponteiro **nulo** para marcar o final da lista de argumentos.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-O valor de retorno de um **_spawnl** síncrono ou **_wspawnl** ( **_P_WAIT** especificado para o *modo*) é o status de saída do novo processo. O valor de retorno de um **_spawnl** ou **_wspawnl** assíncrono ( **_P_NOWAIT** ou **_P_NOWAITO** especificado para o *modo*) é o identificador de processo. O status de saída é 0 se o processo foi encerrado normalmente. Você pode definir o status de saída como um valor diferente de zero se o processo gerado chamar especificamente a rotina de **saída** com um argumento diferente de zero. Se o novo processo não definir explicitamente um status de saída positivo, um status de saída positivo indicará uma saída anormal com uma anulação ou uma interrupção. Um valor de retorno de-1 indica um erro (o novo processo não é iniciado). Nesse caso, **errno** é definido como um dos valores a seguir.
+O valor de retorno de um **_spawnl** síncrono ou **_wspawnl** ( **_P_WAIT** especificado para o *modo*) é o status de saída do novo processo. O valor de retorno de um **_spawnl** assíncrono ou **_wspawnl** ( **_P_NOWAIT** ou **_P_NOWAITO** especificado para o *modo*) é o identificador de processo. O status de saída é 0 se o processo foi encerrado normalmente. Você pode definir o status de saída como um valor diferente de zero se o processo gerado chamar especificamente a rotina de **saída** com um argumento diferente de zero. Se o novo processo não definir explicitamente um status de saída positivo, um status de saída positivo indicará uma saída anormal com uma anulação ou uma interrupção. Um valor de retorno de-1 indica um erro (o novo processo não é iniciado). Nesse caso, **errno** é definido como um dos valores a seguir.
 
 |||
 |-|-|
@@ -100,7 +99,7 @@ Essas funções validam seus parâmetros. Se *cmdname* ou *arg0* for uma cadeia 
 
 Cada uma dessas funções cria e executa um novo processo, passando cada argumento de linha de comando como um parâmetro separado.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -109,7 +108,7 @@ Cada uma dessas funções cria e executa um novo processo, passando cada argumen
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Veja o exemplo em [Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).
 

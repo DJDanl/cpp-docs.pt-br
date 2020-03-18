@@ -1,9 +1,6 @@
 ---
 title: Diretivas EVEN e ALIGN
 ms.date: 08/30/2018
-f1_keywords:
-- align
-- EVEN
 helpviewer_keywords:
 - EVEN directive
 - directives, MASM
@@ -11,18 +8,18 @@ helpviewer_keywords:
 - NOP (no operation instruction)
 - ALIGN directive
 ms.assetid: 7357ab2d-4a5c-43ca-accb-a5f21cdfcde5
-ms.openlocfilehash: 522d5689d680d0fc334743d2802abe21570dd6f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63fa73988b9b9433a988035789a923ac73936214
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167313"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441582"
 ---
 # <a name="even-and-align-directives"></a>Diretivas EVEN e ALIGN
 
 **Seção específica da Microsoft**
 
-Embora o assembler embutido não oferece suporte a maioria das diretivas MASM, ele suporta `EVEN` e **ALINHAR**. Coloque essas diretivas **NOP** (nenhuma operação) instruções no código de assembly, conforme necessário para alinhar os rótulos para os limites específicos. Isso torna as operações de busca de instrução mais eficiente para alguns processadores.
+Embora o Assembler embutido não dê suporte à maioria das diretivas MASM, ele dá suporte a `EVEN` e **alinhar**. Essas diretivas colocam instruções **Nop** (sem operação) no código do assembly, conforme necessário, para alinhar os rótulos a limites específicos. Isso torna as operações de busca de instrução mais eficientes para alguns processadores.
 
 **Fim da seção específica da Microsoft**
 

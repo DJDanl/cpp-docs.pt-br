@@ -1,20 +1,18 @@
 ---
-title: 'Unicode: O conjunto de caracteres largos'
+title: 'Unicode: o conjunto de caracteres amplo'
 ms.date: 11/04/2016
-f1_keywords:
-- c.international
 helpviewer_keywords:
 - Unicode [C++], wide character set
 - wide characters [C++], Unicode
 ms.assetid: b6a05a21-59a5-4d30-8c85-2dbe185f7a74
-ms.openlocfilehash: dc9028be85870766af0274ede091d74a9b4d5130
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 3a0c5698544c72e19feea8f35b7f5a516d95d561
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745433"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444494"
 ---
-# <a name="unicode-the-wide-character-set"></a>Unicode: O conjunto de caracteres largos
+# <a name="unicode-the-wide-character-set"></a>Unicode: o conjunto de caracteres amplo
 
 Um caractere largo é um código de caractere multilíngue de 2 bytes. Qualquer caractere utilizado na computação moderna em todo o mundo, incluindo símbolos técnicos e caracteres de publicação especiais, pode ser representado de acordo com a especificação Unicode como caractere largo. Desenvolvido e mantido por um consórcio grande que inclui a Microsoft, o padrão Unicode agora é amplamente aceito.
 
@@ -25,4 +23,4 @@ Em geral, caracteres largos ocupam mais espaço na memória do que caracteres mu
 ## <a name="see-also"></a>Consulte também
 
 [Internacionalização](../c-runtime-library/internationalization.md)<br/>
-[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

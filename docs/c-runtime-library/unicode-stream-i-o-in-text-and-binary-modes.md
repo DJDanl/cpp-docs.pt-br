@@ -1,20 +1,18 @@
 ---
 title: E/S de fluxo Unicode em modos de texto e binários
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - stream I/O routines
 - I/O [CRT], unicode stream
 - Unicode, stream I/O routines
 - Unicode stream I/O
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
-ms.openlocfilehash: 10f77c7142c707d4df841899b50be2807b1b9c7f
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: HT
+ms.openlocfilehash: b41818bbb625a8c875771e86e3d82b74f4291e9f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376264"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444508"
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>E/S de fluxo Unicode em modos de texto e binários
 
@@ -28,5 +26,5 @@ No entanto, quando uma função de E/S de fluxo Unicode opera no modo binário, 
 
 ## <a name="see-also"></a>Consulte também
 
-[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [Entrada e saída](../c-runtime-library/input-and-output.md)<br/>

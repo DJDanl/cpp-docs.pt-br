@@ -1,10 +1,6 @@
 ---
 title: Gerenciamento de memória com CStringT
 ms.date: 11/04/2016
-f1_keywords:
-- CStringT
-- ATL::CStringT
-- ATL.CStringT
 helpviewer_keywords:
 - CString objects, memory management
 - memory [C++], usage
@@ -14,16 +10,16 @@ helpviewer_keywords:
 - strings [C++], memory management
 - CStringT class, memory management
 ms.assetid: 88b8342d-19b5-48c4-9cf6-e4c44cece21e
-ms.openlocfilehash: 8f83b088becf97ca3d8779a537e42369b4a8c832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af042c80b9e3e0de872261f89255a26728b218cd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235192"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440509"
 ---
 # <a name="memory-management-with-cstringt"></a>Gerenciamento de memória com CStringT
 
-Classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) é uma classe de modelo usada para manipular cadeias de caracteres de comprimento variável. A memória para manter essas cadeias de caracteres é alocada e liberada por meio de um objeto do Gerenciador de cadeia de caracteres, associado a cada instância de `CStringT`. MFC e ATL fornecem instanciações de padrão de `CStringT`, chamado `CString`, `CStringA`, e `CStringW`, que manipulam cadeias de caracteres de diferentes tipos de caracteres. Esses tipos de caractere são do tipo TCHAR, **char**, e `wchar_t`, respectivamente. Esses tipos de cadeia de caracteres padrão usam um Gerenciador de cadeia de caracteres que aloca memória do heap de processo (em ATL) ou o heap de CRT (em MFC). Para aplicativos típicos, esse esquema de alocação de memória é suficiente. No entanto, para fazer com uso intensivo de código use cadeias de caracteres (ou um código multithread) os gerenciadores de memória padrão não podem executar de forma ideal. Este tópico descreve como substituir o comportamento de gerenciamento de memória padrão do `CStringT`, criar alocadores especificamente otimizada para a tarefa em questão.
+A classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) é uma classe de modelo usada para manipular cadeias de caracteres de comprimento variável. A memória para armazenar essas cadeias de caracteres é alocada e liberada por meio de um objeto do Gerenciador de cadeia de caracteres associado a cada instância do `CStringT`. MFC e ATL fornecem instanciações padrão de `CStringT`, chamadas `CString`, `CStringA`e `CStringW`, que manipulam cadeias de caracteres de tipos de caractere diferentes. Esses tipos de caracteres são do tipo TCHAR, **Char**e `wchar_t`, respectivamente. Esses tipos de cadeia de caracteres padrão usam um Gerenciador de cadeia de caracteres que aloca memória do heap de processo (na ATL) ou o heap de CRT (no MFC). Para aplicativos típicos, esse esquema de alocação de memória é suficiente. No entanto, para o código que faz uso intensivo de cadeias de caracteres (ou código multi-threaded), os gerenciadores de memória padrão podem não ser executados de forma ideal. Este tópico descreve como substituir o comportamento de gerenciamento de memória padrão de `CStringT`, criando alocadores especificamente otimizados para a tarefa em questão.
 
 - [Implementação de um gerenciador de cadeia de caracteres personalizada (método básico)](../atl-mfc-shared/implementation-of-a-custom-string-manager-basic-method.md)
 
@@ -31,7 +27,7 @@ Classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) é uma classe d
 
 - [Implementação de um gerenciador de cadeia de caracteres personalizada (método avançado)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)
 
-- [CFixedStringT: Um exemplo de um Gerenciador de cadeia de caracteres personalizada](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)
+- [CFixedStringT: um exemplo de um Gerenciador de cadeia de caracteres personalizado](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)
 
 ## <a name="see-also"></a>Consulte também
 
