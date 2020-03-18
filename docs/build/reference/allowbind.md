@@ -2,18 +2,18 @@
 title: /ALLOWBIND
 ms.date: 11/04/2016
 f1_keywords:
-- /allowbind
+- /allowbind_bind
 helpviewer_keywords:
 - ALLOWBIND editbin option
 - /ALLOWBIND editbin option
 - -ALLOWBIND editbin option
 ms.assetid: eaadbb8c-4339-4281-9a75-3a1ce2352ff8
-ms.openlocfilehash: 4cb7e5a3627d865e2f2193dee096c72cced75f5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f5b662223914cbb4970188595afb52cc2500cd4
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273190"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440380"
 ---
 # <a name="allowbind"></a>/ALLOWBIND
 
@@ -26,11 +26,11 @@ Especifica se uma DLL pode ser associada.
 
 ## <a name="remarks"></a>Comentários
 
-O **/ALLOWBIND** opção define um bit no cabeçalho de uma DLL que indica a Bind.exe que a imagem tem permissão para ser associado. Associação pode permitir que uma imagem a ser carregado mais rapidamente quando o carregador não precisa trocar base e realizar o ajuste de endereço para cada DLL referenciada. Talvez você não queira uma DLL seja vinculada caso ela tenha sido assinada digitalmente — associação invalida a assinatura. Associação não tem nenhum efeito se randomização de layout de espaço de endereço (ASLR) estiver habilitada para a imagem por meio **/DYNAMICBASE** em versões do Windows que dão suporte a ASLR.
+A opção **/ALLOWBIND** define um bit no cabeçalho de uma DLL que indica ao BIND. exe que a imagem pode ser associada. A associação pode permitir que uma imagem seja carregada mais rapidamente quando o carregador não precisa trocar de base e executar a correção de endereço para cada DLL referenciada. Talvez você não queira que uma DLL seja associada se tiver sido assinada digitalmente – a associação invalida a assinatura. A associação não tem efeito se a ASLR (Address Space layout Randomization) estiver habilitada para a imagem usando **/DynamicBase** em versões do Windows que dão suporte a ASLR.
 
-Use **/allowbind: no** para impedir que Bind.exe a DLL de associação.
+Use **/ALLOWBIND: no** para impedir que o BIND. exe VINCULE a dll.
 
-Para obter mais informações, consulte o [/ALLOWBIND](allowbind-prevent-dll-binding.md) a opção de vinculador.
+Para obter mais informações, consulte a opção vinculador [/ALLOWBIND](allowbind-prevent-dll-binding.md) .
 
 ## <a name="see-also"></a>Consulte também
 

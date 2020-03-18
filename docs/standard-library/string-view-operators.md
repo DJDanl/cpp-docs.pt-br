@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 699b1f1bddeb71ecbf03297d162a7e45ebd39609
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 871b7dc93f5d548897cf77e55dbacf5a104cbee9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419416"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446757"
 ---
 # <a name="ltstring_viewgt-operators"></a>operadores de&gt; de string_view &lt;
 
@@ -55,7 +55,7 @@ bool operator!=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 \ *à esquerda*
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
@@ -94,7 +94,7 @@ bool operator==(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 \ *à esquerda*
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
@@ -116,6 +116,7 @@ A comparação é baseada em uma comparação de lexicográfica emparelhada das 
 ## <a name="op_lt">Operador </a>&lt;
 
 Testa se o objeto no lado esquerdo do operador é menor que o objeto à direita sidestring_view
+
 ```cpp
 template <class CharType, class Traits>
 bool operator<(
@@ -133,7 +134,7 @@ bool operator<(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 \ *à esquerda*
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
@@ -151,7 +152,7 @@ Uma conversão implícita deve existir de *convertible_string_type* para a strin
 
 A comparação é baseada em uma comparação de lexicográfica emparelhada das sequências de caracteres. Quando o primeiro par de caracteres desiguals é encontrado, o resultado dessa comparação é retornado. Se nenhum caractere diferente for encontrado, mas uma sequência for menor, a sequência mais curta será menor do que a mais longa. Em outras palavras, "Cat" é menor que "gatos".
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 #include <string>
@@ -194,7 +195,7 @@ bool operator<=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 \ *à esquerda*
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
@@ -220,7 +221,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& Ostr, const basic_string_view<CharType, Traits> Str);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 \ *OSTR*
 um fluxo de saída no qual está sendo gravado.
@@ -257,7 +258,7 @@ bool operator>(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 \ *à esquerda*
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
@@ -294,7 +295,7 @@ bool operator>=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 \ *à esquerda*
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
@@ -314,7 +315,7 @@ Consulte [&lt;do operador ](#op_lt).
 
 Constrói um string_view a partir de um literal de cadeia de caracteres. Requer `std::literals::string_view_literals`de namespace. 
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 
@@ -327,6 +328,6 @@ using namespace literals::string_view_literals;
     u32string_view sv32{ U"Hello"sv };
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [\<string_view >](../standard-library/string-view.md)

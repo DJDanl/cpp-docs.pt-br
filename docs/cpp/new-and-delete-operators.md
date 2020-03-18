@@ -1,19 +1,16 @@
 ---
 title: Operadores new e delete
 ms.date: 11/19/2019
-f1_keywords:
-- delete_cpp
-- new
 helpviewer_keywords:
 - new keyword [C++]
 - delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: c64b15f1e1e63b1e743743883429ffd11007de0a
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2fd665ce2570bbe7750684057cdf7f517f6f64f3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246442"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445450"
 ---
 # <a name="new-and-delete-operators"></a>Operadores new e delete
 
@@ -23,7 +20,7 @@ A **nova** função na biblioteca C++ padrão dá suporte ao comportamento espec
 
 Para obter uma lista dos arquivos de biblioteca que compõem a biblioteca de tempo de C++ execução C e a biblioteca padrão, consulte [recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md).
 
-##  <a id="new_operator"></a> O novo operador
+##  <a id="new_operator"> </a> O novo operador
 
 Quando uma instrução como a seguinte é encontrada em um programa, ela se traduz em uma chamada para o operador de função **novo**:
 
@@ -124,7 +121,7 @@ int main() {
 
 Há outra maneira de lidar com falhas nas solicitações de alocação de memória. Escreva uma rotina de recuperação personalizada para lidar com essa falha e, em seguida, registre sua função chamando o [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) função de tempo de execução.
 
-##  <a id="delete_operator"></a> O operador Delete
+##  <a id="delete_operator"> </a> O operador Delete
 
 A memória que é alocada dinamicamente usando o operador **New** pode ser liberada usando o operador **delete** . O operador Delete chama a função **Operator Delete** , que libera a memória de volta para o pool disponível. O uso do operador **delete** também faz com que o destruidor de classe (se houver) seja chamado.
 

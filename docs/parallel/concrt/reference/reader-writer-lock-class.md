@@ -16,11 +16,11 @@ helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
 ms.openlocfilehash: 1a7386e527b5327d928bfdcb3281c88666f1b106
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867152"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417120"
 ---
 # <a name="reader_writer_lock-class"></a>Classe reader_writer_lock
 
@@ -36,21 +36,21 @@ class reader_writer_lock;
 
 ### <a name="public-classes"></a>Classes Públicas
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[Classe reader_writer_lock:: scoped_lock](#scoped_lock_class)|Um wrapper RAII de exceção seguro que pode ser usado para adquirir `reader_writer_lock` bloquear objetos como um gravador.|
 |[Classe reader_writer_lock:: scoped_lock_read](#scoped_lock_read_class)|Um wrapper RAII de exceção seguro que pode ser usado para adquirir `reader_writer_lock` bloquear objetos como um leitor.|
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[reader_writer_lock](#ctor)|Constrói um novo objeto `reader_writer_lock`.|
 |[~ reader_writer_lock destruidor](#dtor)|Destrói o objeto `reader_writer_lock`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[lock](#lock)|Adquire o bloqueio do gravador de leitor como um gravador.|
 |[lock_read](#lock_read)|Adquire o bloqueio do gravador de leitor como um leitor. Se houver gravadores, os leitores ativos deverão aguardar até que sejam concluídos. O leitor simplesmente registra um interesse no bloqueio e aguarda que os gravadores o liberem.|
@@ -66,7 +66,7 @@ Para obter mais informações, consulte [Synchronization data structures](../../
 
 `reader_writer_lock`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ConcRT. h
 
@@ -140,7 +140,7 @@ Constrói um objeto `scoped_lock` e adquire o objeto `reader_writer_lock` passad
 explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Reader_writer_lock*<br/>
 O objeto `reader_writer_lock` a ser adquirido como um gravador.
@@ -169,7 +169,7 @@ Constrói um objeto `scoped_lock_read` e adquire o objeto `reader_writer_lock` p
 explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Reader_writer_lock*<br/>
 O objeto `reader_writer_lock` a ser adquirido como um leitor.
@@ -220,7 +220,7 @@ void unlock();
 
 Se houver gravadores aguardando o bloqueio, o lançamento do bloqueio sempre vai para o próximo gravador na ordem FIFO. Esse bloqueio é polarizado em relação a gravadores e pode privar os leitores sob uma carga contínua de gravadores.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Classe critical_section](critical-section-class.md)

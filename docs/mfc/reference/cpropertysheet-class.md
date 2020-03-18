@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
 ms.openlocfilehash: 23d17aee2aacbc1484c0f3e181bc824546ab49a2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865439"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421005"
 ---
 # <a name="cpropertysheet-class"></a>Classe CPropertySheet
 
@@ -169,7 +169,7 @@ Adiciona a página fornecida com a guia mais à direita na folha de propriedades
 void AddPage(CPropertyPage* pPage);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pPage*<br/>
 Aponta para a página a ser adicionada à folha de propriedades. Não pode ser NULL.
@@ -222,7 +222,7 @@ void Construct(
     HBITMAP hbmHeader = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDCaption*<br/>
 ID da legenda a ser usada para a folha de propriedades.
@@ -293,7 +293,7 @@ CPropertySheet(
     HBITMAP hbmHeader = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDCaption*<br/>
 ID da legenda a ser usada para a folha de propriedades.
@@ -338,7 +338,7 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
     DWORD dwExStyle = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParentWnd*<br/>
 Aponta para a janela pai. Se for NULL, o pai será a área de trabalho.
@@ -426,7 +426,7 @@ Indica se as linhas das guias devem ser empilhadas em uma folha de propriedades.
 void EnableStackedTabs(BOOL bStacked);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bStacked*<br/>
 Indica se as guias empilhadas estão habilitadas na folha de propriedades. Desabilite linhas empilhadas de marcas definindo *bStacked* como false.
@@ -449,7 +449,7 @@ Encerra a folha de propriedades.
 void EndDialog(int nEndID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nEndID*<br/>
 Identificador a ser usado como valor de retorno da folha de propriedades.
@@ -508,7 +508,7 @@ Retorna um ponteiro para a página especificada nesta folha de propriedades.
 CPropertyPage* GetPage(int nPage) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Nconfiguração*<br/>
 Índice da página desejada, começando em 0. Deve estar entre 0 e um menor que o número de páginas na folha de propriedades, inclusive.
@@ -545,7 +545,7 @@ Recupera o número de índice da página especificada na folha de propriedades.
 int GetPageIndex(CPropertyPage* pPage);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pPage*<br/>
 Aponta para a página com o índice a ser encontrado. Não pode ser NULL.
@@ -604,7 +604,7 @@ Converte as unidades de caixa de diálogo de um retângulo em unidades de tela.
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpRect*<br/>
 Aponta para uma estrutura [Rect](/previous-versions/dd162897\(v=vs.85\)) ou um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que contém as coordenadas da caixa de diálogo a serem convertidas.
@@ -645,7 +645,7 @@ Simula a escolha do botão especificado em uma folha de propriedades.
 void PressButton(int nButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Nnovo*<br/>
 Nnovo: identifica o botão a ser pressionado. Esse parâmetro pode ser um dos seguintes valores:
@@ -683,7 +683,7 @@ void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pPage*<br/>
 Aponta para a página a ser removida da folha de propriedades. Não pode ser NULL.
@@ -704,7 +704,7 @@ BOOL SetActivePage(int nPage);
 BOOL SetActivePage(CPropertyPage* pPage);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Nconfiguração*<br/>
 Índice da página a ser definida. Ele deve estar entre 0 e um menor que o número de páginas na folha de propriedades, inclusive.
@@ -732,7 +732,7 @@ Define o texto no botão de comando concluir.
 void SetFinishText(LPCTSTR lpszText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszText*<br/>
 Aponta para o texto a ser exibido no botão de comando concluir.
@@ -755,7 +755,7 @@ void SetTitle(
     UINT nStyle = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nStyle*<br/>
 Especifica o estilo do título da folha de propriedades. O estilo deve ser especificado em 0 ou como PSH_PROPTITLE. Se o estilo for definido como PSH_PROPTITLE, a palavra "Propriedades" será exibida após o texto especificado como a legenda. Por exemplo, chamar `SetTitle`("simples", PSH_PROPTITLE) resultará em uma legenda de folha de propriedades de "Propriedades simples".
@@ -779,7 +779,7 @@ Habilita ou desabilita o botão voltar, avançar ou concluir em uma folha de pro
 void SetWizardButtons(DWORD dwFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwFlags*<br/>
 Um conjunto de sinalizadores que personalizam a função e a aparência dos botões do assistente. Esse parâmetro pode ser uma combinação dos seguintes valores:
@@ -828,7 +828,7 @@ Chame `SetWizardMode` antes de chamar [DoModal](#domodal). Depois de chamar `Set
 
 [!code-cpp[NVC_MFCDocView#142](../../mfc/codesnippet/cpp/cpropertysheet-class_15.cpp)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de CMNCTRL1 do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Exemplo de CMNCTRL2 do MFC](../../overview/visual-cpp-samples.md)<br/>

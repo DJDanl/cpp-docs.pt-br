@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: a7bb3ab5ed292cef8108e937e67bc9e2ccc1ebce
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 0740ad024e0ca7fd56ecf9178ca57b22dc66b79e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866575"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445699"
 ---
 # <a name="icommandui-interface"></a>Interface ICommandUI
 
@@ -35,7 +35,7 @@ interface class ICommandUI
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|DESCRIÇÃO|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[icommandui__Check](#check)|Define o item de interface do usuário para esse comando para o estado de verificação apropriado.|
 |[ICommandUI::ContinueRouting](#continuerouting)|Informa ao mecanismo de roteamento de comandos para continuar a rotear a mensagem atual para baixo na cadeia de manipuladores.|
@@ -60,6 +60,7 @@ Para obter mais informações sobre como os comandos da interface do usuário s�
 ## <a name="check"></a>ICommandUI:: verificar
 
 Define o item de interface do usuário para esse comando para o estado de verificação apropriado.
+
 ```
 property UICheckState Check;
 ```
@@ -74,6 +75,7 @@ Essa propriedade define o item de interface do usuário para esse comando para o
 ## <a name="continuerouting"></a>ICommandUI::ContinueRouting
 
 Informa ao mecanismo de roteamento de comando para continuar a rotear a mensagem atual para baixo na cadeia de manipuladores.
+
 ```
 void ContinueRouting();
 ```
@@ -85,6 +87,7 @@ Essa é uma função de membro avançada que deve ser usada em conjunto com um m
 ## <a name="enabled"></a>ICommandUI:: habilitado
 
 Habilita ou desabilita o item de interface do usuário para este comando.
+
 ```
 property bool Enabled;
 ```
@@ -96,6 +99,7 @@ Essa propriedade habilita ou desabilita o item de interface do usuário para est
 ## <a name="id"></a>ICommandUI:: ID
 
 Obtém a ID do objeto da interface do usuário representado pelo objeto ICommandUI.
+
 ```
 property unsigned int ID;
 ```
@@ -107,6 +111,7 @@ Essa propriedade Obtém a ID (um identificador) do item de menu, botão da barra
 ## <a name="index"></a>ICommandUI:: index
 
 Obtém o índice do objeto da interface do usuário representado pelo objeto ICommandUI.
+
 ```
 property unsigned int Index;
 ```
@@ -118,6 +123,7 @@ Essa propriedade Obtém o índice (um identificador) do item de menu, botão da 
 ## <a name="radio"></a>ICommandUI:: Radio
 
 Define o item de interface do usuário para esse comando para o estado de verificação apropriado.
+
 ```
 property bool Radio;
 ```
@@ -129,6 +135,7 @@ Essa propriedade define o item de interface do usuário para esse comando para o
 ## <a name="text"></a>ICommandUI:: texto
 
 Define o texto do item de interface do usuário para este comando.
+
 ```
 property String^ Text;
 ```
@@ -137,10 +144,10 @@ property String^ Text;
 
 Essa propriedade define o texto do item de interface do usuário para este comando. Defina texto como um identificador de cadeia de caracteres de texto.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Header:** afxwinforms. h (definido no assembly atlmfc\lib\mfcmifc80.dll)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Classe CCmdUI](../../mfc/reference/ccmdui-class.md)

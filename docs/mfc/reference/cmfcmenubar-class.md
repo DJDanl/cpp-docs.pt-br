@@ -107,11 +107,11 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
 ms.openlocfilehash: 278feca6b64915d0cf789e8f68af3c3fdf9b3129
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869924"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420263"
 ---
 # <a name="cmfcmenubar-class"></a>Classe CMFCMenuBar
 
@@ -260,7 +260,7 @@ virtual CSize CalcFixedLayout(
     BOOL bHorz);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *bStretch*<br/>
 
@@ -278,7 +278,7 @@ virtual CSize CalcLayout(
     int nLength = -1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *dwMode*<br/>
 
@@ -329,7 +329,7 @@ virtual BOOL Create(
     UINT nID = AFX_IDW_MENUBAR);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParentWnd*<br/>
 no Ponteiro para a janela pai do novo objeto `CMFCMenuBar`.
@@ -366,7 +366,7 @@ virtual BOOL CreateEx(
     UINT nID =AFX_IDW_MENUBAR);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParentWnd*<br/>
 no Ponteiro para a janela pai do novo objeto de `CMFCMenuBar`.
@@ -411,7 +411,7 @@ virtual void CreateFromMenu(
     BOOL bForceUpdate = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hMenu*<br/>
 no Um identificador para um recurso de menu. `CreateFromMenu` usa esse recurso como um modelo para o `CMFCMenuBar`.
@@ -437,7 +437,7 @@ void EnableHelpCombobox(
     int nComboBoxWidth = 150);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiID*<br/>
 no A ID de comando para o botão da caixa de combinação de **ajuda** .
@@ -462,7 +462,7 @@ Habilita sombras para menus pop-up.
 static void EnableMenuShadows(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 no Um parâmetro booliano que indica se as sombras devem ser habilitadas para menus pop-up.
@@ -529,7 +529,7 @@ A estrutura carrega o menu padrão para o objeto de `CMFCMenuBar` do arquivo de 
 int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *pButton*<br/>
 
@@ -579,7 +579,7 @@ Recupera a fonte do menu atual.
 static const CFont& GetMenuFont(BOOL bHorz = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bHorz*<br/>
 no Um parâmetro booliano que especifica se a fonte horizontal ou vertical deve ser retornada. VERDADEIRO indica a fonte horizontal.
@@ -600,7 +600,7 @@ Recupera um objeto [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-cla
 CMFCToolBarButton* GetMenuItem(int iItem) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *iItem*<br/>
 no O índice do item de menu a ser retornado.
@@ -627,7 +627,7 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
     BOOL bByCommand = TRUE) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *uiBtn*<br/>
 
@@ -665,7 +665,7 @@ Controla se a estrutura realça os itens de menu desabilitados.
 static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bHighlight*<br/>
 no Um parâmetro booliano que indica se a estrutura realça itens de menu indisponíveis.
@@ -783,7 +783,7 @@ virtual BOOL LoadState(
     UINT uiID = (UINT)-1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszProfileName*<br/>
 no Uma cadeia de caracteres que contém o caminho de uma chave do registro do Windows.
@@ -810,7 +810,7 @@ Na maioria dos casos, seu aplicativo não chama `LoadState`. A estrutura chama e
 virtual void OnChangeHot(int iHot);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *iHot*<br/>
 
@@ -824,7 +824,7 @@ A estrutura chama esse método quando ele carrega o recurso de menu do arquivo d
 virtual void OnDefaultMenuLoaded(HMENU hMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hMenu*<br/>
 no O identificador do menu anexado ao objeto `CMFCMenuBar`.
@@ -839,7 +839,7 @@ A implementação padrão dessa função não faz nada. Substitua essa função 
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *pButton*<br/>
 
@@ -855,7 +855,7 @@ A estrutura chama esse método quando o usuário altera o texto de um item na ba
 virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pButton*<br/>
 no Um ponteiro para o objeto [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) que o usuário deseja personalizar.
@@ -876,7 +876,7 @@ virtual INT_PTR OnToolHitTest(
     TOOLINFO* pTI) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *ponto*<br/>
 
@@ -892,7 +892,7 @@ no *PTI*<br/>
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *pMsg*<br/>
 
@@ -929,7 +929,7 @@ virtual BOOL SaveState (
     UINT uiID = (UINT)-1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszProfileName*<br/>
 no Uma cadeia de caracteres que contém o caminho de uma chave do registro do Windows.
@@ -958,7 +958,7 @@ Define o menu padrão para um objeto [CMFCMenuBar](../../mfc/reference/cmfcmenub
 void SetDefaultMenuResId(UINT uiResId);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiResId*<br/>
 no A ID do recurso para o novo menu padrão.
@@ -975,7 +975,7 @@ Use o método [CMFCMenuBar:: GetDefaultMenuResId](#getdefaultmenuresid) para rec
 void SetForceDownArrows(BOOL bValue);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *bValue*<br/>
 
@@ -992,10 +992,10 @@ void SetMaximizeMode(
     BOOL bRecalcLayout = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bMax*<br/>
-no Um booliano que especifica o modo. Consulte a seção Comentários para obter mais informações.
+no Um booliano que especifica o modo. Para obter mais informações, consulte a seção Comentários.
 
 *pWnd*<br/>
 no Um ponteiro para a janela filho MDI que está sendo alterada.
@@ -1015,7 +1015,7 @@ Define as informações de classe de tempo de execução que a estrutura usa qua
 void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMenuButtonRTC*<br/>
 no As informações de [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) para uma classe derivada da [Classe CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md).
@@ -1034,7 +1034,7 @@ static BOOL SetMenuFont(
     BOOL bHorz = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpLogFont*<br/>
 no Um ponteiro para uma estrutura [LOGFONT](/windows/win32/api/dimm/ns-dimm-logfonta) que define a fonte a ser definida.
@@ -1060,7 +1060,7 @@ Controla se uma barra de menus exibe comandos de menu usados recentemente.
 static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Bno*<br/>
 no Um booliano que controla se os comandos de menu usados recentemente são exibidos.
@@ -1073,7 +1073,7 @@ Controla se um menu mostra todos os comandos disponíveis.
 static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bShowAllCommands*<br/>
 no Um parâmetro booliano que especifica se o menu pop-up mostra todos os comandos de menu.
@@ -1082,7 +1082,7 @@ no Um parâmetro booliano que especifica se o menu pop-up mostra todos os comand
 
 Se um menu não exibir todos os comandos de menu, ele ocultará os comandos que raramente são usados. Para obter mais informações sobre como exibir comandos de menu, consulte [Classe CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

@@ -16,11 +16,11 @@ f1_keywords:
 - concrt/concurrency::VirtualProcessorEventGuid
 ms.assetid: 6f81fc4c-b10c-479e-8717-9c292360d5a0
 ms.openlocfilehash: 883e0a995605be3e2ac73495250f96815013df06
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854108"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419150"
 ---
 # <a name="concurrency-namespace-constants"></a>constantes de namespace de simultaneidade
 
@@ -209,6 +209,6 @@ const __declspec(selectany) GUID VirtualProcessorEventGuid =
     { 0x2f27805f, 0x1676, 0x4ecc, { 0x96, 0xfa, 0x7e, 0xb0, 0x9d, 0x44, 0x30, 0x2f } };
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)

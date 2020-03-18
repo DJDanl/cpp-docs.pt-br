@@ -3,18 +3,18 @@ title: /ERRORREPORT (editbin.exe)
 description: Referência para a opção de linha de comando/ERRORREPORT do utilitário EDITBIN da Microsoft.
 ms.date: 02/09/2020
 f1_keywords:
-- /ERRORREPORT
+- /ERRORREPORT_editbin
 helpviewer_keywords:
 - -ERRORREPORT editbin option
 - ERRORREPORT editbin option
 - /ERRORREPORT editbin option
 ms.assetid: eca66ac3-b754-4bd7-9dd4-e04fc79a71b6
-ms.openlocfilehash: 6c2ec8b6cda7b794114ed38cfb72b885bf2e38a1
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 4456a49cc53b21bd24c616852159ca299181071b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257581"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439903"
 ---
 # <a name="errorreport-editbinexe"></a>/ERRORREPORT (editbin.exe)
 
@@ -29,6 +29,6 @@ ms.locfileid: "77257581"
 
 Os argumentos **/errorreport** são substituídos pelas configurações do serviço relatório de erros do Windows. O EDITBIN envia automaticamente relatórios de erros internos à Microsoft, se os relatórios estiverem habilitados pelo Relatório de Erros do Windows. Nenhum relatório será enviado se for desabilitado pelo Relatório de Erros do Windows.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Opções de EDITBIN](editbin-options.md)

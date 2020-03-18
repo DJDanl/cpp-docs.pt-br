@@ -5,11 +5,11 @@ helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
 ms.openlocfilehash: 23d4675bd3638d2effd1b967f0729f9e70dac6de
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867021"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420746"
 ---
 # <a name="type-library-access"></a>Acesso à biblioteca de tipos
 
@@ -32,7 +32,7 @@ Declara a função membro `GetTypeLib` da classe de controle.
 DECLARE_OLETYPELIB(class_name)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *class_name*<br/>
 O nome da classe de controle relacionada à biblioteca de tipos.
@@ -41,7 +41,7 @@ O nome da classe de controle relacionada à biblioteca de tipos.
 
 Use essa macro no arquivo de cabeçalho de classe de controle.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFXDISP. h
 
@@ -53,7 +53,7 @@ Implementa a função de membro `GetTypeLib` do controle.
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *class_name*<br/>
 O nome da classe de controle relacionada à biblioteca de tipos.
@@ -71,10 +71,10 @@ O número de versão secundária da biblioteca de tipos.
 
 Essa macro deve aparecer no arquivo de implementação para qualquer classe de controle que use a macro DECLARE_OLETYPELIB.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFXDISP. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)

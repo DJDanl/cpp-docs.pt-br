@@ -1,8 +1,6 @@
 ---
 title: Classes de matriz, lista e mapa
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.mfc
 helpviewer_keywords:
 - arrays [MFC], classes
 - list classes [MFC]
@@ -10,22 +8,22 @@ helpviewer_keywords:
 - map classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: 81a13a7f-0c2c-4efd-b6bb-b4e624a0743d
-ms.openlocfilehash: b89b99abb79fe689274f9e0b89a85bb33643d324
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5fe4acb35074e924555029d715ccbc23b55f49a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394618"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446503"
 ---
 # <a name="array-list-and-map-classes"></a>Classes de matriz, lista e mapa
 
-Para manipular agregações de dados, a biblioteca de classes fornece um grupo de classes de coleção – matrizes, listas e mapas — que pode conter uma variedade de tipos predefinidos e objeto. As coleções são dimensionadas dinamicamente. Essas classes podem ser usadas em qualquer programa, independentemente se escritos para Windows ou não. No entanto, eles são mais úteis para implementar as estruturas de dados que definem suas classes de documento em que a estrutura de aplicativo. Você prontamente pode derivar classes de coleção especializada desses, ou você pode criá-los com base em classes de modelo. Para obter mais informações sobre essas abordagens, consulte o artigo [coleções](../mfc/collections.md). Para obter uma lista das classes de coleção de modelo, consulte o artigo [Classes de modelo para matrizes, listas e mapas](../mfc/template-classes-for-arrays-lists-and-maps.md).
+Para lidar com agregações de dados, a biblioteca de classes fornece um grupo de classes de coleção (matrizes, listas e mapas) que pode conter uma variedade de objetos e tipos predefinidos. As coleções são dimensionadas dinamicamente. Essas classes podem ser usadas em qualquer programa, sejam elas escritas para Windows ou não. No entanto, elas são mais úteis para implementar as estruturas de dados que definem suas classes de documento na estrutura do aplicativo. Você pode rapidamente derivar classes de coleção especializadas desses ou pode criá-las com base nas classes de modelo. Para obter mais informações sobre essas abordagens, consulte o artigo [coleções](../mfc/collections.md). Para obter uma lista das classes de coleção de modelos, consulte o artigo [classes de modelo para matrizes, listas e mapas](../mfc/template-classes-for-arrays-lists-and-maps.md).
 
-Matrizes são estruturas de dados unidimensional que são armazenadas contiguamente na memória. Eles oferecem suporte acesso aleatório muito rápido, pois o endereço de memória de qualquer determinado elemento pode ser calculado multiplicando o índice do elemento pelo tamanho de um elemento e adicionar o resultado para o endereço básico da matriz. Mas matrizes são muito caras, se você tiver que inserir elementos na matriz, desde a últimos toda a matriz elemento inserido deve ser movida para liberar espaço para o elemento a ser inserido. Matrizes podem aumentar e reduzir conforme necessário.
+As matrizes são estruturas de dados unidimensionais que são armazenadas de forma contígua na memória. Eles dão suporte a acesso aleatório muito rápido, pois o endereço de memória de qualquer elemento pode ser calculado multiplicando o índice do elemento pelo tamanho de um elemento e adicionando o resultado ao endereço base da matriz. Mas as matrizes são muito caras se você precisa inserir elementos na matriz, já que a matriz inteira após o elemento inserido precisa ser movida para liberar espaço para o elemento a ser inserido. As matrizes podem aumentar e reduzir conforme necessário.
 
-Listas são semelhantes a matrizes, mas são armazenadas de forma muito diferente. Cada elemento em uma lista também inclui um ponteiro para os elementos anteriores e seguintes, tornando-a como uma lista duplamente vinculada. É muito rápido para adicionar ou excluir itens, porque isso envolve apenas alterando alguns ponteiros. No entanto, a pesquisa em uma lista pode ser caro, pois todas as pesquisas precisam iniciar em uma das extremidades da lista.
+As listas são semelhantes às matrizes, mas são armazenadas de forma muito diferente. Cada elemento em uma lista também inclui um ponteiro para os elementos anteriores e seguintes, tornando-o uma lista de links duplas. É muito rápido adicionar ou excluir itens, pois fazer isso envolve apenas a alteração de algumas ponteiros. No entanto, a pesquisa de uma lista pode ser cara, já que todas as pesquisas precisam ser iniciadas em uma das extremidades da lista.
 
-Mapas se relacionam a um valor de chave com um valor de dados. Por exemplo, a chave de um mapa pode ser uma cadeia de caracteres e os dados de um ponteiro para uma lista. Você deve pedir o mapa para lhe dar o ponteiro associado a uma determinada cadeia de caracteres. Pesquisas de mapa são rápidas porque os mapas usam tabelas de hash para pesquisas de chave. Adicionar e excluir itens também são rápida. Mapas geralmente são usados com outras estruturas de dados, como índices auxiliares. Um tipo especial de mapa chamado o MFC usa um [mapa de mensagem](../mfc/mapping-messages.md) para mapear as mensagens do Windows para um ponteiro para a função do manipulador para a mensagem.
+Os mapas relacionam um valor de chave a um valor de dados. Por exemplo, a chave de um mapa pode ser uma cadeia de caracteres e os dados de um ponteiro em uma lista. Você pediria ao mapa que lhe dê o ponteiro associado a uma cadeia de caracteres específica. As pesquisas de mapa são rápidas porque os mapas usam tabelas de hash para pesquisas de chave. Adicionar e excluir itens também é rápido. Os mapas são frequentemente usados com outras estruturas de dados como índices auxiliares. O MFC usa um tipo especial de mapa chamado de [mapa de mensagens](../mfc/mapping-messages.md) para mapear mensagens do Windows para um ponteiro para a função de manipulador para essa mensagem.
 
 ## <a name="see-also"></a>Consulte também
 

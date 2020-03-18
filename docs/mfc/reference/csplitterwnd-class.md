@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: bee6deed3052d6cc923e432e97ad9a7904060cb6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890948"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447444"
 ---
 # <a name="csplitterwnd-class"></a>Classe CSplitterWnd
 
@@ -522,17 +522,17 @@ Um ponteiro para a exibição da qual a mensagem de rolagem se origina.
 *nScrollCode*<br/>
 Um código de barra de rolagem que indica a solicitação de rolagem do usuário. Esse parâmetro é composto por duas partes: um byte de ordem inferior, que determina o tipo de rolagem que ocorre horizontalmente e um byte de ordem superior, que determina o tipo de rolagem que ocorre verticalmente:
 
-    - SB_BOTTOM Rola para a parte inferior.
+- SB_BOTTOM Rola para a parte inferior.
 
-    - SB_LINEDOWN rola uma linha para baixo.
+- SB_LINEDOWN rola uma linha para baixo.
 
-    - SB_LINEUP rola uma linha para cima.
+- SB_LINEUP rola uma linha para cima.
 
-    - SB_PAGEDOWN rola uma página para baixo.
+- SB_PAGEDOWN rola uma página para baixo.
 
-    - SB_PAGEUP Rola uma página para cima.
+- SB_PAGEUP Rola uma página para cima.
 
-    - SB_TOP rola para a parte superior.
+- SB_TOP rola para a parte superior.
 
 *bDoScroll*<br/>
 Determina se a ação de rolagem especificada ocorre. Se *bDoScroll* for verdadeiro (ou seja, se uma janela filho existir e se as janelas divididas tiverem um intervalo de rolagem), a ação de rolagem especificada poderá ocorrer; Se *bDoScroll* for false (ou seja, se não existir nenhuma janela filho ou se as exibições divididas não tiverem nenhum intervalo de rolagem), a rolagem não ocorrerá.
@@ -709,9 +709,9 @@ DWORD GetScrollStyle() const;
 
 Um ou mais dos seguintes sinalizadores de estilo do Windows, se for bem-sucedido:
 
-    - WS_HSCROLL se o divisor atualmente gerencia as barras de rolagem horizontal compartilhadas.
+- WS_HSCROLL se o divisor atualmente gerencia as barras de rolagem horizontal compartilhadas.
 
-    - WS_VSCROLL se o divisor atualmente gerencia as barras de rolagem vertical compartilhadas.
+- WS_VSCROLL se o divisor atualmente gerencia as barras de rolagem vertical compartilhadas.
 
 Se for zero, a janela separadora não gerenciará nenhuma barra de rolagem compartilhada no momento.
 
@@ -810,13 +810,13 @@ Um ponteiro para o contexto do dispositivo no qual desenhar. Se o *PDC* for nulo
 *nType*<br/>
 Um valor do `enum ESplitType`, que pode ser um dos seguintes:
 
-    - `splitBox` a caixa de arrastar divisor.
+- `splitBox` a caixa de arrastar divisor.
 
-    - `splitBar` a barra que aparece entre as duas janelas de divisão.
+- `splitBar` a barra que aparece entre as duas janelas de divisão.
 
-    - `splitIntersection` a interseção das janelas de divisão. Este elemento não será chamado durante a execução no Windows 95/98.
+- `splitIntersection` a interseção das janelas de divisão. Este elemento não será chamado durante a execução no Windows 95/98.
 
-    - `splitBorder` as bordas da janela de divisão.
+- `splitBorder` as bordas da janela de divisão.
 
 *Rect*<br/>
 Uma referência a um objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) especificando o tamanho e a forma das janelas de divisão.

@@ -3,11 +3,11 @@ title: Configurar um projeto do C++ Linux no Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
 ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865612"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419381"
 ---
 # <a name="configure-a-linux-project"></a>Configurar um projeto do Linux
 
@@ -90,7 +90,7 @@ Durante o build em sistemas remotos, os arquivos de origem no computador de dese
 
 Como toda a compilação está acontecendo em um computador remoto (ou no WSL), vários outros eventos de build foram adicionados à seção Eventos de Build em Propriedades do Projeto. Eles são os **Evento de pré-build remoto**, **Evento de pré-link remoto** e **Evento de pós-build remoto**, que ocorrerão no computador remoto antes ou após as etapas individuais no processo.
 
-![Compilar Eventos](media/settings_buildevents.png)
+![Eventos de compilação](media/settings_buildevents.png)
 
 ## <a name="remote_intellisense"></a> IntelliSense para cabeçalhos em sistemas remotos
 
@@ -123,7 +123,7 @@ Habilite o log ajudar a solucionar problemas:
 
 ::: moniker-end
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Defina propriedades de build e compilador](../build/working-with-project-properties.md)<br/>
 [Propriedades gerais de C++ (Linux C++)](../linux/prop-pages/general-linux.md)<br/>

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
 ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890922"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421194"
 ---
 # <a name="how-to-manage-resources-c"></a>Como: gerenciar recursos (C++)
 
@@ -122,11 +122,11 @@ Você pode importar recursos gráficos (bitmaps, ícones, cursores e barras de f
 
 1. Navegue até a pasta onde você deseja salvar o arquivo e selecione **Exportar**.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 Win32
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Arquivos de recurso](../windows/resource-files-visual-studio.md)<br/>
 [Como: criar recursos](../windows/how-to-create-a-resource-script-file.md)<br/>

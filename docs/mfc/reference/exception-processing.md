@@ -12,11 +12,11 @@ helpviewer_keywords:
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
 ms.openlocfilehash: d33da7a9bc81f9733df840a87fbbbeca1e02cc04
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855243"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420844"
 ---
 # <a name="exception-processing"></a>Processamento de exceção
 
@@ -100,11 +100,11 @@ Um bloco **try** identifica um bloco de código que pode gerar exceções. Essas
 
 Para obter mais informações, consulte o artigo [exceções](../../mfc/exception-handling-in-mfc.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte o exemplo de [Catch](#catch).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 Cabeçalho: afx.h
 
@@ -116,7 +116,7 @@ Define um bloco de código que captura o primeiro tipo de exceção lançado no 
 CATCH(exception_class, exception_object_pointer_name)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *exception_class*<br/>
 Especifica o tipo de exceção para o qual testar. Para obter uma lista de classes de exceção padrão, consulte Class [CException](../../mfc/reference/cexception-class.md).
@@ -137,7 +137,7 @@ O ponteiro de objeto de exceção é criado pela macro. Você não precisa decla
 
 Para obter mais informações sobre exceções e a macro CATCH, consulte o artigo [Exceptions](../../mfc/exception-handling-in-mfc.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCExceptions#26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]
 
@@ -149,7 +149,7 @@ Define um bloco de código que captura todos os tipos de exceção lançados no 
 CATCH_ALL(exception_object_pointer_name)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *exception_object_pointer_name*<br/>
 Especifica um nome para um ponteiro de objeto de exceção que será criado pela macro. Você pode usar o nome do ponteiro para acessar o objeto de exceção dentro do bloco de `CATCH_ALL`. Essa variável é declarada para você.
@@ -163,11 +163,11 @@ O código de processamento de exceção pode interrogar o objeto de exceção, s
 
 Para obter mais informações sobre exceções, consulte o artigo [exceções](../../mfc/exception-handling-in-mfc.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte o exemplo de [testcfile:: Abort](../../mfc/reference/cfile-class.md#abort).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFX. h
 
@@ -179,7 +179,7 @@ Define um bloco de código para capturar tipos de exceção adicionais lançados
 AND_CATCH(exception_class, exception_object_pointer_name)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *exception_class*<br/>
 Especifica o tipo de exceção para o qual testar. Para obter uma lista de classes de exceção padrão, consulte Class [CException](../../mfc/reference/cexception-class.md).
@@ -196,11 +196,11 @@ O código de processamento de exceção pode interrogar o objeto de exceção, s
 > [!NOTE]
 >  O bloco de **AND_CATCH** é definido como C++ um escopo (delimitado por chaves). Se você declarar variáveis nesse escopo, lembre-se de que elas são acessíveis somente dentro desse escopo. Isso também se aplica à variável *exception_object_pointer_name* .
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte o exemplo de [Catch](#catch).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFX. h
 ##  <a name="and_catch_all"></a>AND_CATCH_ALL
@@ -211,7 +211,7 @@ Define um bloco de código para capturar tipos de exceção adicionais lançados
 AND_CATCH_ALL(exception_object_pointer_name)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *exception_object_pointer_name*<br/>
 Um nome para um ponteiro de objeto de exceção que será criado pela macro. Você pode usar o nome do ponteiro para acessar o objeto de exceção dentro do bloco de **AND_CATCH_ALL** . Essa variável é declarada para você.
@@ -225,7 +225,7 @@ O código de processamento de exceção pode interrogar o objeto de exceção, s
 > [!NOTE]
 >  O bloco de **AND_CATCH_ALL** é definido como C++ um escopo (delimitado por chaves). Se você declarar variáveis nesse escopo, lembre-se de que elas são acessíveis somente dentro desse escopo.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFX. h
 
@@ -241,7 +241,7 @@ END_CATCH
 
 Para obter mais informações sobre a macro END_CATCH, consulte o artigo [exceções](../../mfc/exception-handling-in-mfc.md).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFX. h
 
@@ -253,7 +253,7 @@ Marca o final do último **CATCH_ALL88** ou bloco de **AND_CATCH_ALL** .
 END_CATCH_ALL
 ```
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFX. h
 
@@ -265,7 +265,7 @@ Gera a exceção especificada.
 THROW(exception_object_pointer)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *exception_object_pointer*<br/>
 Aponta para um objeto de exceção derivado de `CException`.
@@ -276,7 +276,7 @@ Aponta para um objeto de exceção derivado de `CException`.
 
 Para obter mais informações, consulte o artigo [exceções](../../mfc/exception-handling-in-mfc.md).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFX. h
 
@@ -294,11 +294,11 @@ Essa macro permite que você gere uma exceção criada localmente. Se você tent
 
 Para obter mais informações, consulte o artigo [exceções](../../mfc/exception-handling-in-mfc.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte o exemplo de [testcfile:: Abort](../../mfc/reference/cfile-class.md#abort).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFX. h
 
@@ -310,7 +310,7 @@ Gera uma exceção de arquivo morto.
 void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *causa*<br/>
 Especifica um inteiro que indica o motivo da exceção. Para obter uma lista dos valores possíveis, consulte [CArchiveException:: m_cause](../../mfc/reference/carchiveexception-class.md#m_cause).
@@ -318,7 +318,7 @@ Especifica um inteiro que indica o motivo da exceção. Para obter uma lista dos
 *lpszArchiveName*<br/>
 Aponta para uma cadeia de caracteres que contém o nome do objeto `CArchive` que causou a exceção (se disponível).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFX. h
 
@@ -333,7 +333,7 @@ void AfxThrowFileException(
     LPCTSTR lpszFileName = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *causa*<br/>
 Especifica um inteiro que indica o motivo da exceção. Para obter uma lista dos valores possíveis, consulte [CFileException:: m_cause](../../mfc/reference/cfileexception-class.md#m_cause).
@@ -348,7 +348,7 @@ Aponta para uma cadeia de caracteres que contém o nome do arquivo que causou a 
 
 Você é responsável por determinar a causa com base no código de erro do sistema operacional.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFX. h
 
@@ -366,7 +366,7 @@ void AfxThrowInvalidArgException( );
 
 Essa função é chamada quando argumentos inválidos são usados.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -382,7 +382,7 @@ void AfxThrowMemoryException();
 
 Chame essa função se as chamadas para alocadores de memória do sistema subjacentes (como **malloc** e a função [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) do Windows) falharem. Você não precisa chamá-lo para **novo** porque **New** gerará uma exceção de memória automaticamente se a alocação de memória falhar.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFX. h
 
@@ -394,7 +394,7 @@ Gera uma exceção que é o resultado de uma solicitação para um recurso sem s
 void AfxThrowNotSupportedException();
 ```
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFX. h
 
@@ -410,7 +410,7 @@ void  AfxThrowResourceException();
 
 Essa função é normalmente chamada quando um recurso do Windows não pode ser carregado.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFX. h
 
@@ -426,7 +426,7 @@ void AfxThrowUserException();
 
 Essa função é normalmente chamada imediatamente depois que `AfxMessageBox` relatou um erro para o usuário.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFX. h
 
@@ -446,7 +446,7 @@ void AFXAPI AfxThrowOleDispatchException(
     UINT nHelpID = -1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *wCode*<br/>
 Um código de erro específico para seu aplicativo.
@@ -464,11 +464,11 @@ Um contexto de ajuda para a ajuda do seu aplicativo (. HLP).
 
 As informações fornecidas para essa função podem ser exibidas pelo aplicativo de condução (Microsoft Visual Basic ou outro aplicativo cliente de automação OLE).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCExceptions#25](../../mfc/codesnippet/cpp/exception-processing_2.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFX. h
 
@@ -481,7 +481,7 @@ void AFXAPI AfxThrowOleException(SCODE sc);
 void AFXAPI AfxThrowOleException(HRESULT hr);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *SC*<br/>
 Um código de status OLE que indica o motivo da exceção.
@@ -493,7 +493,7 @@ Identificador para um código de resultado que indica o motivo da exceção.
 
 A versão que recebe um HRESULT como um argumento converte esse código de resultado no SCODE correspondente. Para obter mais informações sobre HRESULT e SCODE, consulte [estrutura de códigos de erro com](/windows/win32/com/structure-of-com-error-codes) no SDK do Windows.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFXDAO. h
 
@@ -507,7 +507,7 @@ void AFXAPI AfxThrowDaoException(
     SCODE scode = S_OK);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nAfxDaoError*<br/>
 Um valor inteiro que representa um código de erro estendido do DAO, que pode ser um dos valores listados em [CDaoException:: m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror).
@@ -521,7 +521,7 @@ A estrutura também chama `AfxThrowDaoException`. Em sua chamada, você pode pas
 
 Para obter informações sobre exceções relacionadas às classes do MFC DAO, consulte Class `CDaoException` neste livro e o artigo [Exceptions: Database Exceptions](../../mfc/exceptions-database-exceptions.md).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFXDB. h
 
@@ -536,7 +536,7 @@ void AfxThrowDBException(
     HSTMT hstmt);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nRetCode*<br/>
 Um valor do tipo RETCODE, definindo o tipo de erro que causou a geração da exceção.
@@ -553,7 +553,7 @@ A estrutura chama `AfxThrowDBException` quando recebe um RETCODE ODBC de uma cha
 
 Para obter informações sobre os valores de RETCODE definidos pelo ODBC, consulte o capítulo 8, "recuperando status e informações de erro" na SDK do Windows. Para obter informações sobre extensões MFC para esses códigos, consulte Class [CDBException](../../mfc/reference/cdbexception-class.md).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFX. h
 
@@ -569,15 +569,15 @@ void  AfxAbort();
 
 `AfxAbort` é chamado internamente pelas funções de membro do MFC quando há um erro fatal, como uma exceção não percebida que não pode ser tratada. Você pode chamar `AfxAbort` no caso raro, quando encontrar um erro catastrófico do qual não é possível recuperar.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte o exemplo de [Catch](#catch).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFX. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Macros e globais](mfc-macros-and-globals.md)<br/>
 [Classe CException](cexception-class.md)<br/>

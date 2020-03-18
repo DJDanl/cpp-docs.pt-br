@@ -1,21 +1,19 @@
 ---
-title: 'TN036: Usando CFormView com AppWizard e ClassWizard'
+title: 'TN036: usando CFormView com AppWizard e ClassWizard'
 ms.date: 11/04/2016
-f1_keywords:
-- CFormView
 helpviewer_keywords:
 - TN036
 ms.assetid: dd54053f-ae80-4d23-9180-c7d07ddf2290
-ms.openlocfilehash: 698070340e2f44b908a564bdda2c69ecda227386
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a339ba7b4a3837d4712174dbb5b749131435617
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305522"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447416"
 ---
-# <a name="tn036-using-cformview-with-appwizard-and-classwizard"></a>TN036: Usando CFormView com AppWizard e ClassWizard
+# <a name="tn036-using-cformview-with-appwizard-and-classwizard"></a>TN036: usando CFormView com AppWizard e ClassWizard
 
-Essa observação técnica descreveu como modificar um aplicativo de AppWizard gerado para que ele usado uma `CFormView` em vez do padrão `CView` como sua classe de exibição principal. Isso é suportado diretamente com esta versão do Visual C++.
+Esta observação técnica descreveu como modificar um aplicativo AppWizard gerado para que ele tenha usado um `CFormView` em vez do `CView` padrão como sua classe de exibição principal. Isso é suportado diretamente com esta versão do Visual C++.
 
 ## <a name="see-also"></a>Consulte também
 

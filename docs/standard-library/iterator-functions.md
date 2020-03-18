@@ -33,11 +33,11 @@ helpviewer_keywords:
 - std::next [C++]
 - std::prev [C++]
 ms.openlocfilehash: 69f1007f0c7f587e81313f5de97947410bf243df
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874027"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420109"
 ---
 # <a name="ltiteratorgt-functions"></a>Funções &lt;iterador&gt;
 
@@ -50,7 +50,7 @@ template <class InputIterator, class Distance>
     void advance(InputIterator& InIt, Distance Off);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *inicialização*
 O iterador que deverá ser incrementado e atender aos requisitos de um iterador de entrada.
@@ -66,7 +66,7 @@ Se o `InputIterator` atender aos requisitos de um tipo de iterador bidirecional,
 
 A função antecipada tem complexidade constante quando `InputIterator` atende aos requisitos de um iterador de acesso aleatório; caso contrário, ele tem complexidade linear e, portanto, é potencialmente caro.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // iterator_advance.cpp
@@ -122,7 +122,7 @@ template <class Container>
 back_insert_iterator<Container> back_inserter(Container& _Cont);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Cont*\
 O contêiner no qual a inserção no final deve ser executada.
@@ -135,7 +135,7 @@ Um `back_insert_iterator` associado ao objeto de contêiner *_Cont*.
 
 Dentro da Biblioteca Padrão do C++, o argumento deve se referir a um dos três contêineres de sequência que têm a função membro `push_back`: [Classe deque](../standard-library/deque-class.md), [Classe list](../standard-library/list-class.md) ou [Classe vector](../standard-library/vector-class.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // iterator_back_inserter.cpp
@@ -201,7 +201,7 @@ template <class Ty, class Size>
 Ty *begin(Ty (& array)[Size]);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *cont*
 Um contêiner.
@@ -215,7 +215,7 @@ As duas primeiras funções de modelo retornam `cont.begin()`. A primeira funç�
 
 A terceira função de modelo retorna *matriz*.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 É recomendável usar essa função de modelo no lugar do membro de contêiner `begin()` quando comportamento mais genérico for exigido.
 
@@ -296,7 +296,7 @@ auto cbegin(const Container& cont)
    -> decltype(cont.begin());
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *cont*
 Um contêiner ou initializer_list.
@@ -329,7 +329,7 @@ auto cend(const Container& cont)
    -> decltype(cont.end());
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *cont*
 Um contêiner ou initializer_list.
@@ -382,7 +382,7 @@ template <class InputIterator>
 typename iterator_traits<InputIterator>::difference_type distance(InputIterator first, InputIterator last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 O primeiro iterador cuja distância do segundo deve ser determinada.
@@ -398,7 +398,7 @@ O número de vezes que *primeiro* deve ser incrementado até que seja igual a *L
 
 A função Distance tem complexidade constante quando `InputIterator` atende aos requisitos de um iterador de acesso aleatório; caso contrário, ele tem complexidade linear e, portanto, é potencialmente caro.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // iterator_distance.cpp
@@ -471,7 +471,7 @@ template <class Ty, class Size>
 Ty *end(Ty (& array)[Size]);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *cont*
 Um contêiner.
@@ -498,7 +498,7 @@ template <class Container>
 front_insert_iterator<Container> front_inserter(Container& _Cont);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Cont*\
 O objeto de contêiner na frente do qual um elemento será inserido.
@@ -513,7 +513,7 @@ A função de membro [front_insert_iterator](../standard-library/front-insert-it
 
 Dentro da Biblioteca Padrão do C++, o argumento deve se referir a um dos dois contêineres de sequência que têm a função membro `push_back`: [Classe deque](../standard-library/deque-class.md) ou "Classe list".
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // iterator_front_inserter.cpp
@@ -572,7 +572,7 @@ inserter(
     typename Container::iterator _Where);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Cont*\
 O contêiner ao qual novos elementos serão adicionados.
@@ -584,7 +584,7 @@ Um iterador que localiza o ponto de inserção.
 
 A função de modelo retorna [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // iterator_inserter.cpp
@@ -647,7 +647,7 @@ Iter Ptr,
     size_t Index = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *PTR*
 Um ponteiro para a matriz de destino.
@@ -668,7 +668,7 @@ A função `make_checked_array_iterator` é definida no namespace `stdext`.
 
 Essa função usa um ponteiro bruto – que normalmente geraria preocupação sobre estouro de limites – e o encapsula em uma classe [checked_array_iterator](../standard-library/checked-array-iterator-class.md) que faz a verificação. Como essa classe é marcada como verificada, a Biblioteca Padrão do C++ não avisa sobre isso. Para obter mais informações e exemplos de código, consulte [Iteradores verificados](../standard-library/checked-iterators.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 No exemplo a seguir, um [vetor](../standard-library/vector-class.md) é criado e populado com 10 itens. O conteúdo do vetor é copiado em uma matriz usando o algoritmo de cópia e, em seguida, `make_checked_array_iterator` é usado para especificar o destino. Isso é seguido por uma violação intencional da verificação dos limites, de modo que uma falha de asserção de depuração é acionada.
 
@@ -735,7 +735,7 @@ move_iterator<Iterator>
 make_move_iterator(const Iterator& _It);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_It*\
 O iterador armazenado no novo iterador de movimentação.
@@ -757,7 +757,7 @@ unchecked_array_iterator<Iter>
     make_unchecked_array_iterator(Iter Ptr);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *PTR*
 Um ponteiro para a matriz de destino.
@@ -772,7 +772,7 @@ A função `make_unchecked_array_iterator` é definida no namespace `stdext`.
 
 Essa função usa um ponteiro bruto e o encapsula em uma classe que não executa verificação e, portanto, a otimização não serve para nada, mas ela também silencia os avisos do compilador, como o [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Desse modo, essa é uma maneira direcionada de lidar com avisos de ponteiro não verificado, sem silenciá-los globalmente ou incorrer no custo da verificação. Para obter mais informações e exemplos de código, consulte [Iteradores verificados](../standard-library/checked-iterators.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 No exemplo a seguir, um [vetor](../standard-library/vector-class.md) é criado e populado com 10 itens. O conteúdo do vetor é copiado em uma matriz usando o algoritmo de cópia e, em seguida, `make_unchecked_array_iterator` é usado para especificar o destino.
 
@@ -834,7 +834,7 @@ InputIterator next(
     typename iterator_traits<InputIterator>::difference_type _Off = 1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 A posição atual.
@@ -861,7 +861,7 @@ BidirectionalIterator prev(
     typename iterator_traits<BidirectionalIterator>::difference_type _Off = 1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 A posição atual.

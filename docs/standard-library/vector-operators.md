@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (vector)
 - std::operator== (vector)
 ms.openlocfilehash: f6717add93c489f536bd0c0b0f82b74bbd915985
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876055"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422370"
 ---
 # <a name="ltvectorgt-operators"></a>Operadores &lt;vector&gt;
 
@@ -33,7 +33,7 @@ Testa se o objeto à esquerda do operador é diferente do objeto à direita.
 bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `vector`.
@@ -49,7 +49,7 @@ Um objeto do tipo `vector`.
 
 Dois vetores serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // vector_op_ne.cpp
@@ -84,7 +84,7 @@ Testa se o objeto à esquerda do operador é menor do que o objeto à direita.
 bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `vector`.
@@ -96,7 +96,7 @@ Um objeto do tipo `vector`.
 
 **true**, se o vetor no lado esquerdo do operador for menor que o vetor à direita do operador; caso contrário, **false**.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // vector_op_lt.cpp
@@ -135,7 +135,7 @@ Testa se o objeto à esquerda do operador é menor que ou igual ao objeto à dir
 bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `vector`.
@@ -147,7 +147,7 @@ Um objeto do tipo `vector`.
 
 **true** se o vetor à esquerda do operador for menor que ou igual ao vetor à direita do operador; caso contrário, **false**.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // vector_op_le.cpp
@@ -186,7 +186,7 @@ Testa se o objeto à esquerda do operador é igual ao objeto à direita.
 bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `vector`.
@@ -202,7 +202,7 @@ Um objeto do tipo `vector`.
 
 Dois vetores serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // vector_op_eq.cpp
@@ -237,7 +237,7 @@ Testa se o objeto à esquerda do operador é maior do que o objeto à direita.
 bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `vector`.
@@ -249,7 +249,7 @@ Um objeto do tipo `vector`.
 
 **true** se o vetor à esquerda do operador for maior que o vetor à direita do operador; caso contrário, **false**.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // vector_op_gt.cpp
@@ -289,7 +289,7 @@ Testa se o objeto à esquerda do operador é maior que ou igual ao objeto à dir
 bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `vector`.
@@ -301,7 +301,7 @@ Um objeto do tipo `vector`.
 
 **true** se o vetor à esquerda do operador for maior que ou igual ao vetor à direita do vetor; caso contrário, **false**.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // vector_op_ge.cpp

@@ -7,25 +7,23 @@ f1_keywords:
 - ATL::ICommandPropertiesImpl
 - ICommandPropertiesImpl::GetProperties
 - ICommandPropertiesImpl.GetProperties
-- GetProperties
 - ICommandPropertiesImpl.SetProperties
 - ICommandPropertiesImpl::SetProperties
-- SetProperties
 helpviewer_keywords:
 - ICommandPropertiesImpl class
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: 1250f1c5c5094a0ca8348f325260e6079afe2baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 165f7124657cbaf0c0f94171eaf9394011796aea
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408947"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447050"
 ---
 # <a name="icommandpropertiesimpl-class"></a>Classe ICommandPropertiesImpl
 
-Fornece uma implementação de [ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85)) interface.
+Fornece uma implementação da interface [ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85)) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -41,11 +39,11 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 Sua classe, derivada de
 
 *PropClass*<br/>
-Sua classe de propriedades.
+Sua classe Properties.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** atldb.h
+**Cabeçalho:** Atldb. h
 
 ## <a name="members"></a>Membros
 
@@ -53,16 +51,16 @@ Sua classe de propriedades.
 
 |||
 |-|-|
-|[GetProperties](#getproperties)|Retorna a lista de propriedades no grupo de propriedades do conjunto de linhas que atualmente são solicitadas para o conjunto de linhas.|
-|[SetProperties](#setproperties)|Define propriedades no grupo de propriedades do conjunto de linhas.|
+|[GetProperties](#getproperties)|Retorna a lista de propriedades no grupo de propriedades de conjunto de linhas que são solicitadas no momento para o conjunto de linhas.|
+|[SetProperties](#setproperties)|Define propriedades no grupo de propriedades Rowset.|
 
 ## <a name="remarks"></a>Comentários
 
-Isso é obrigatório em comandos. A implementação é fornecida por uma função estática definida pela [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) macro.
+Isso é obrigatório em comandos. A implementação é fornecida por uma função estática definida pela macro [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) .
 
-## <a name="getproperties"></a> Icommandpropertiesimpl:: GetProperties
+## <a name="getproperties"></a>ICommandPropertiesImpl:: GetProperties
 
-Retorna todos os conjuntos de propriedade solicitada usando o mapa de propriedade do comando.
+Retorna todos os conjuntos de propriedades solicitados usando o mapa de propriedades do comando.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -75,13 +73,13 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [icommandproperties:: GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) na *referência do programador do OLE DB*.
+Consulte [ICommandProperties:: GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) na *referência do programador de OLE DB*.
 
 ### <a name="remarks"></a>Comentários
 
-Ver [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Consulte [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="setproperties"></a> Icommandpropertiesimpl:: SetProperties
+## <a name="setproperties"></a>ICommandPropertiesImpl:: SetProperties
 
 Define propriedades para o objeto de comando.
 
@@ -94,9 +92,9 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [icommandproperties:: SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) na *referência do programador do OLE DB*.
+Consulte [ICommandProperties:: SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) na *referência do programador de OLE DB*.
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

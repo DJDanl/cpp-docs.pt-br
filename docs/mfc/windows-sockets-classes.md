@@ -1,31 +1,29 @@
 ---
 title: Classes de Windows Sockets
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.net
 helpviewer_keywords:
 - sockets classes [MFC]
 - Windows Sockets [MFC], classes
 ms.assetid: 58b9ab8d-9e44-4db3-8265-e04e713d2e9a
-ms.openlocfilehash: 4abdd8f8fbfc115b5014ffd0b3a37df357852b16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f1b7b2b6674b4a5f8c8f7bff6c5fa239715f459
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371796"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445986"
 ---
 # <a name="windows-sockets-classes"></a>Classes de Windows Sockets
 
-Windows Sockets fornecem uma maneira independente de protocolo de rede para comunicação entre dois computadores. Esses soquetes podem ser síncronas (o programa aguarda até que a comunicação é feita) ou assíncrona (o programa continua em execução enquanto a comunicação está em andamento).
+O Windows Sockets fornece uma maneira independente de protocolo de rede para se comunicar entre dois computadores. Esses soquetes podem ser síncronos (o programa aguarda até que a comunicação seja feita) ou assíncrono (seu programa continua em execução enquanto a comunicação está em andamento).
 
 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)<br/>
-Encapsula a API de soquetes do Windows em um wrapper estreito.
+Encapsula a API do Windows Sockets em um wrapper fino.
 
 [CSocket](../mfc/reference/csocket-class.md)<br/>
-Abstração de nível superior é derivado de `CAsyncSocket`. Ele opera de forma síncrona.
+Abstração de nível superior derivada de `CAsyncSocket`. Ele funciona de forma síncrona.
 
 [CSocketFile](../mfc/reference/csocketfile-class.md)<br/>
-Fornece um `CFile` interface para um soquete do Windows.
+Fornece uma interface `CFile` para um soquete do Windows.
 
 ## <a name="see-also"></a>Consulte também
 

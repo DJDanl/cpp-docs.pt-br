@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
 ms.openlocfilehash: f6be846e80209ce94c84222d61c37a7964baad03
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855417"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421565"
 ---
 # <a name="cview-class"></a>Classe Cvisualização
 
@@ -71,13 +71,13 @@ class AFX_NOVTABLE CView : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="protected-constructors"></a>Construtores Protegidos
+### <a name="protected-constructors"></a>Construtores protegidos
 
 |Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[Cvisualização:: Cvisualização](#cview)|Constrói um objeto `CView`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|DESCRIÇÃO|
 |----------|-----------------|
@@ -95,7 +95,7 @@ class AFX_NOVTABLE CView : public CWnd
 |[Cvisualização:: OnScroll](#onscroll)|Chamado quando itens OLE são arrastados além das bordas da exibição.|
 |[Cvisualização:: OnScrollBy](#onscrollby)|Chamado quando uma exibição que contém itens OLE no local ativo é rolada.|
 
-### <a name="protected-methods"></a>Métodos Protegidos
+### <a name="protected-methods"></a>Métodos protegidos
 
 |Nome|DESCRIÇÃO|
 |----------|-----------------|
@@ -183,7 +183,7 @@ Chame essa função de sua substituição de [OnPreparePrinting](#onprepareprint
 BOOL DoPreparePrinting(CPrintInfo* pInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pInfo*<br/>
 Aponta para uma estrutura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) que descreve o trabalho de impressão atual.
@@ -222,7 +222,7 @@ Chamado pelo Framework para verificar se o item de documento especificado está 
 virtual BOOL IsSelected(const CObject* pDocItem) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDocItem*<br/>
 Aponta para o item de documento que está sendo testado.
@@ -245,7 +245,7 @@ virtual void OnActivateFrame(
     CFrameWnd* pFrameWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nState*<br/>
 Especifica se a janela do quadro está sendo ativada ou desativada. Pode ser um dos seguintes valores:
@@ -274,7 +274,7 @@ virtual void OnActivateView(
     CView* pDeactiveView);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bActivate*<br/>
 Indica se a exibição está sendo ativada ou desativada.
@@ -303,7 +303,7 @@ virtual void OnBeginPrinting(
     CPrintInfo* pInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Aponta para o contexto do dispositivo de impressora.
@@ -328,7 +328,7 @@ virtual DROPEFFECT OnDragEnter(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDataObject*<br/>
 Aponta para o [COleDataObject](../../mfc/reference/coledataobject-class.md) que está sendo arrastado para a área de soltar da exibição.
@@ -382,7 +382,7 @@ virtual DROPEFFECT OnDragOver(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDataObject*<br/>
 Aponta para o [COleDataObject](../../mfc/reference/coledataobject-class.md) que está sendo arrastado sobre o destino de soltura.
@@ -423,7 +423,7 @@ virtual DROPEFFECT OnDragScroll(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwKeyState*<br/>
 Contém o estado das teclas modificadoras. Essa é uma combinação de qualquer número dos seguintes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
@@ -459,7 +459,7 @@ Chamado pelo Framework para renderizar uma imagem do documento.
 virtual void OnDraw(CDC* pDC) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Aponta para o contexto do dispositivo a ser usado para renderizar uma imagem do documento.
@@ -483,7 +483,7 @@ virtual BOOL OnDrop(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 ' pDataObject * aponta para o [COleDataObject](../../mfc/reference/coledataobject-class.md) que é Descartado para o destino de soltura.
 
@@ -524,7 +524,7 @@ virtual DROPEFFECT OnDropEx(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDataObject*<br/>
 Aponta para o [COleDataObject](../../mfc/reference/coledataobject-class.md) que é Descartado para o destino de soltar.
@@ -586,7 +586,7 @@ virtual void OnEndPrinting(
     CPrintInfo* pInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Aponta para o contexto do dispositivo de impressora.
@@ -610,7 +610,7 @@ virtual void OnEndPrintPreview(
     CPreviewView* pView);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Aponta para o contexto do dispositivo de impressora.
@@ -652,7 +652,7 @@ virtual void OnPrepareDC(
     CPrintInfo* pInfo = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Aponta para o contexto do dispositivo a ser usado para renderizar uma imagem do documento.
@@ -688,7 +688,7 @@ Chamado pelo Framework antes de um documento ser impresso ou visualizado.
 virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pInfo*<br/>
 Aponta para uma estrutura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) que descreve o trabalho de impressão atual.
@@ -729,7 +729,7 @@ virtual void OnPrint(
     CPrintInfo* pInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Aponta para o contexto do dispositivo de impressora.
@@ -774,7 +774,7 @@ virtual BOOL OnScroll(
     BOOL bDoScroll = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nScrollCode*<br/>
 Um código de barra de rolagem que indica a solicitação de rolagem do usuário. Esse parâmetro é composto por duas partes: um byte de ordem inferior, que determina o tipo de rolagem que ocorre horizontalmente e um byte de ordem superior, que determina o tipo de rolagem que ocorre verticalmente:
@@ -817,7 +817,7 @@ virtual BOOL OnScrollBy(
     BOOL bDoScroll = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *sizeScroll*<br/>
 Número de pixels rolados horizontal e verticalmente.
@@ -848,7 +848,7 @@ virtual void OnUpdate(
     CObject* pHint);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pSender*<br/>
 Aponta para a exibição que modificou o documento, ou NULL se todas as exibições forem atualizadas.
@@ -869,7 +869,7 @@ Normalmente, você não deve executar nenhum desenho diretamente do `OnUpdate`. 
 
 Se *lHint* for 0 e *pHint* for NULL, o documento enviará uma notificação de atualização genérica. Se uma exibição receber uma notificação de atualização genérica ou se não puder decodificar as dicas, ela deverá invalidar a área inteira do cliente.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de MDIDOCVW do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
 ms.openlocfilehash: 6860697dd3adbe26197dd9075e84f402029e00a5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855678"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420774"
 ---
 # <a name="ole-initialization"></a>Inicialização OLE
 
@@ -39,7 +39,7 @@ void AfxEnableControlContainer( );
 
 Para obter mais informações sobre controles OLE (agora chamados de controles ActiveX), consulte [Tópicos do controle ActiveX](../mfc-activex-controls.md).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFXDISP. h
 
@@ -69,10 +69,10 @@ Chame essa função para inicializar o suporte a OLE para um aplicativo MFC. Qua
 > [!NOTE]
 >  Os aplicativos MFC devem ser inicializados como STA (single-threaded apartment). Se você chamar [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) em sua substituição de `InitInstance`, especifique COINIT_APARTMENTTHREADED (em vez de COINIT_MULTITHREADED).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFXDISP. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)

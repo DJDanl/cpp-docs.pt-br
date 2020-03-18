@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
 ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874750"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421789"
 ---
 # <a name="ltforward_listgt-operators"></a>Operadores &lt;forward_list&gt;
 
@@ -35,7 +35,7 @@ bool operator==(
     const forward_list <Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `forward_list`.
@@ -57,7 +57,7 @@ bool operator!=(
     const forward_list <Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `forward_list`.
@@ -83,7 +83,7 @@ bool operator<(
     const forward_list <Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `forward_list`.
@@ -109,7 +109,7 @@ bool operator<=(
     const forward_list <Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `forward_list`.
@@ -135,7 +135,7 @@ bool operator>(
     const forward_list <Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `forward_list`.
@@ -161,7 +161,7 @@ bool operator>=(
     const forward_list <Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `forward_list`.

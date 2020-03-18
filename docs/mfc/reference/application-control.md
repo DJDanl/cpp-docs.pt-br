@@ -5,11 +5,11 @@ helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
 ms.openlocfilehash: cb4ad19dfad06b793f226324d8e28c37c084ad67
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855677"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418898"
 ---
 # <a name="application-control"></a>Controle do aplicativo
 
@@ -108,7 +108,7 @@ Define ou limpa o sinalizador de controle de usuário, que é explicado na refer
 void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bUserCtrl*<br/>
 Especifica se o sinalizador de controle de usuário deve ser definido ou limpo.
@@ -180,7 +180,7 @@ BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *CLSID*<br/>
 A ID de classe exclusiva do controle.
@@ -225,7 +225,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
     LPCTSTR* rglpszOverwrite = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *CLSID*<br/>
 Referência à ID de classe OLE do servidor.
@@ -294,7 +294,7 @@ void AFXAPI AfxOleSetEditMenu(
     UINT nIDConvert = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pClient*<br/>
 Um ponteiro para o item OLE do cliente.
@@ -337,7 +337,7 @@ BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *CLSID*<br/>
 A ID de classe exclusiva do controle.
@@ -365,6 +365,6 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 **Cabeçalho:** Afxwin. h
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Macros e globais](mfc-macros-and-globals.md)<br/>

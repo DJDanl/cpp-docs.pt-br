@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: f8b891467d91d0c945b6c59c90dbc49fd7cbcb30
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: a4e471decd07cb2025b833513403b64f43105d0c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855241"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446445"
 ---
 # <a name="run-time-object-model-services"></a>Serviços do modelo de objeto de tempo de execução
 
@@ -340,11 +340,11 @@ O nome do objeto exposto a outros aplicativos (colocados entre aspas).
 *nFlags*<br/>
 Contém um ou mais dos seguintes sinalizadores:
 
-   - `afxRegInsertable` permite que o controle apareça na caixa de diálogo Inserir objeto para objetos OLE.
-   - `afxRegApartmentThreading` define o modelo de threading no registro como ThreadingModel = Apartment.
-   - `afxRegFreeThreading` define o modelo de threading no registro como ThreadingModel = Free.
+- `afxRegInsertable` permite que o controle apareça na caixa de diálogo Inserir objeto para objetos OLE.
+- `afxRegApartmentThreading` define o modelo de threading no registro como ThreadingModel = Apartment.
+- `afxRegFreeThreading` define o modelo de threading no registro como ThreadingModel = Free.
 
-         You can combine the two flags `afxRegApartmentThreading` and `afxRegFreeThreading` to set ThreadingModel=Both. See [InprocServer32](/windows/win32/com/inprocserver32) in the Windows SDK for more information on threading model registration.
+Você pode combinar os dois sinalizadores `afxRegApartmentThreading` e `afxRegFreeThreading` para definir ThreadingModel = both. Consulte [InprocServer32](/windows/win32/com/inprocserver32) no SDK do Windows para obter mais informações sobre o registro do modelo de Threading.
 
 os componentes *l*, *W1*, *W2*, *B1*, *B2*, *B3*, *B4*, *B5*, *B6*, *B7*e *B8* do CLSID da classe.
 

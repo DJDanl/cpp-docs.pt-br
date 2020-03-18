@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
 ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78872409"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421880"
 ---
 # <a name="condition_variable-class"></a>Classe condition_variable
 
@@ -39,13 +39,13 @@ class condition_variable;
 
 ## <a name="members"></a>Membros
 
-### <a name="constructors"></a>{1&gt;Construtores&lt;1}
+### <a name="constructors"></a>Construtores
 
 |||
 |-|-|
 |[condition_variable](#condition_variable)|Constrói um objeto `condition_variable`.|
 
-### <a name="functions"></a>{1&gt;Funções&lt;1}
+### <a name="functions"></a>Funções
 
 |||
 |-|-|
@@ -107,7 +107,7 @@ template <class Predicate>
 void wait(unique_lock<mutex>& Lck, Predicate Pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Lck*\
 Um objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
@@ -143,7 +143,7 @@ bool wait_for(
     Predicate Pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Lck*\
 Um objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
@@ -201,7 +201,7 @@ bool wait_until(
     Predicate Pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Lck*\
 Um objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
@@ -234,7 +234,7 @@ return true;
 
 O terceiro e o quarto métodos usam um ponteiro para um objeto do tipo `xtime` para substituir o objeto `chrono::time_point`. O objeto `xtime` especifica a quantidade máxima de tempo para esperar um sinal.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
 [<condition_variable>](../standard-library/condition-variable.md)

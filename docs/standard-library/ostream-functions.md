@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::ends [C++]
 - std::flush [C++]
 ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874780"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419703"
 ---
 # <a name="ltostreamgt-functions"></a>Funções &lt;ostream&gt;
 
@@ -38,7 +38,7 @@ basic_ostream<Elem, Tr>& endl(
    basic_ostream<Elem, Tr>& Ostr);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *elem*
 O tipo de elemento.
@@ -57,7 +57,7 @@ Um objeto do tipo **basic_ostream**.
 
 O manipulador chama *OSTR*. [Put](../standard-library/basic-ostream-class.md#put)(*OSTR*.[ Amplie](../standard-library/basic-ios-class.md#widen)(' \n ')) e, em seguida, chama *OSTR*. [liberar](../standard-library/basic-ostream-class.md#flush). Ele retorna *OSTR*.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // ostream_endl.cpp
@@ -85,7 +85,7 @@ basic_ostream<Elem, Tr>& ends(
    basic_ostream<Elem, Tr>& Ostr);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *elem*
 O tipo de elemento.
@@ -104,7 +104,7 @@ Um objeto do tipo `basic_ostream`.
 
 O manipulador chama *OSTR*. [Put](../standard-library/basic-ostream-class.md#put)(*elem*(' \ 0 ')). Ele retorna *OSTR*.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // ostream_ends.cpp
@@ -134,7 +134,7 @@ basic_ostream<Elem, Tr>& flush(
    basic_ostream<Elem, Tr>& Ostr);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *elem*
 O tipo de elemento.
@@ -153,7 +153,7 @@ Um objeto do tipo `basic_ostream`.
 
 O manipulador chama *OSTR*. [liberar](../standard-library/basic-ostream-class.md#flush). Ele retorna *OSTR*.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // ostream_flush.cpp
@@ -182,7 +182,7 @@ void swap(
    basic_ostream<Elem, Tr>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *elem*
 O tipo de elemento.
@@ -200,6 +200,6 @@ Uma referência lvalue a um objeto `basic_ostream`.
 
 A função de modelo `swap` executa `left.swap(right)`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<ostream>](../standard-library/ostream.md)

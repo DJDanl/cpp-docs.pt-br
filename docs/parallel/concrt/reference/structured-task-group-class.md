@@ -14,11 +14,11 @@ helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
 ms.openlocfilehash: 93dd79b755f79dcb4857c1b1c4856362b0bd45dd
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78884112"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422125"
 ---
 # <a name="structured_task_group-class"></a>Classe structured_task_group
 
@@ -34,14 +34,14 @@ class structured_task_group;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[structured_task_group](#ctor)|Sobrecarregado. Constrói um novo objeto `structured_task_group`.|
 |[~ structured_task_group destruidor](#dtor)|Destrói um objeto `structured_task_group`. Você deve chamar o método `wait` ou `run_and_wait` no objeto antes da execução do destruidor, a menos que o destruidor esteja sendo executado como resultado do desenrolamento da pilha devido a uma exceção.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[cancel](#cancel)|Faz com que seja possível tentar cancelar a subárvore de trabalho com raiz nesse grupo de tarefas. Cada tarefa agendada no grupo de tarefas será cancelada transitivamente, se possível.|
 |[is_canceling](#is_canceling)|Informa ao chamador se o grupo de tarefas está ou não no meio de um cancelamento. Isso não indica necessariamente que o método `cancel` foi chamado no objeto `structured_task_group` (embora, certamente, qualifique esse método para retornar **true**). Pode ser o caso em que o objeto `structured_task_group` está sendo executado em linha e um grupo de tarefas mais adiante na árvore de trabalho foi cancelado. Em casos como esses, onde o tempo de execução pode determinar antecipadamente que o cancelamento fluirá por esse `structured_task_group` objeto, **verdadeiro** também será retornado.|
@@ -67,7 +67,7 @@ Para obter mais informações, consulte [paralelismo de tarefas](../../../parall
 
 `structured_task_group`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ppl. h
 
@@ -116,7 +116,7 @@ void run(
     location& _Placement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Function*<br/>
 O tipo do objeto de função que será invocado para executar o corpo do identificador de tarefa.
@@ -147,7 +147,7 @@ template<class _Function>
 task_group_status run_and_wait(const _Function& _Func);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Function*<br/>
 O tipo do objeto de função que será invocado para executar a tarefa.
@@ -182,7 +182,7 @@ structured_task_group();
 structured_task_group(cancellation_token _CancellationToken);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_CancellationToken*<br/>
 Um token de cancelamento a ser associado a esse grupo de tarefas estruturado. O grupo de tarefas estruturado será cancelado quando o token for cancelado.
@@ -225,7 +225,7 @@ Depois que essa função retorna, o objeto `structured_task_group` é considerad
 
 No caminho não excepcional da execução, você tem um mandato para chamar esse método ou o método `run_and_wait` antes de o destruidor do `structured_task_group` ser executado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Classe task_group](task-group-class.md)<br/>

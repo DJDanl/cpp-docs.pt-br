@@ -8,23 +8,23 @@ helpviewer_keywords:
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
 ms.openlocfilehash: 9e51774b2158a81fce05dc0bd27e296e4ad94faa
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855676"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419045"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funções de Retorno de Chamada Usadas pelo MFC
 
 Três funções de retorno de chamada aparecem na biblioteca MFC. Essas funções de retorno de chamada são passadas para [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: GrayString](../../mfc/reference/cdc-class.md#graystring)e [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Observe que todas as funções de retorno de chamada devem interceptar exceções do MFC antes de retornar ao Windows, já que as exceções não podem ser lançadas em limites de retorno Para obter mais informações sobre exceções, consulte o artigo [exceções](../../mfc/exception-handling-in-mfc.md).
 
-|{1&gt;Nome&lt;1}||
+|Nome||
 |----------|-----------------|
 |[Função de retorno de chamada para CDC::EnumObjects](#enum_objects)||
 |[Função de retorno de chamada para CDC::GrayString](#graystring)||
 |[Função de retorno de chamada para CDC::SetAbortProc](#setabortproc)||
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Afxwin. h
 
@@ -40,7 +40,7 @@ int CALLBACK EXPORT ObjectFunc(
     LPSTR* lpData);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszLogObject*<br/>
 Aponta para uma estrutura de dados [LOGPEN](/windows/win32/api/Wingdi/ns-wingdi-logpen) ou [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) que contém informações sobre os atributos lógicos do objeto.
@@ -69,7 +69,7 @@ BOOL CALLBACK EXPORT OutputFunc(
     int nCount);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hDC*<br/>
 Identifica um contexto de dispositivo de memória com um bitmap de pelo menos a largura e a altura especificadas por `nWidth` e `nHeight` para `GrayString`.
@@ -100,12 +100,12 @@ BOOL CALLBACK EXPORT AbortFunc(
     int code);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hPr*<br/>
 Identifica o contexto do dispositivo.
 
-*código*<br/>
+*code*<br/>
 Especifica se ocorreu um erro. Será 0 se nenhum erro tiver ocorrido. É SP_OUTOFDISK se o Gerenciador de impressão estiver sem espaço em disco no momento e mais espaço em disco ficará disponível se o aplicativo aguardar. Se o *código* for SP_OUTOFDISK, o aplicativo não precisará abortar o trabalho de impressão. Caso contrário, ele deve produzir o Gerenciador de impressão chamando o `PeekMessage` ou `GetMessage` função do Windows.
 
 ### <a name="return-value"></a>Valor retornado
@@ -116,7 +116,7 @@ O valor de retorno da função de identificador de anulação será diferente de
 
 O nome real deve ser exportado conforme descrito na seção comentários de [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Estruturas, estilos, retornos de chamada e mapas de mensagem](structures-styles-callbacks-and-message-maps.md)<br/>
 [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>

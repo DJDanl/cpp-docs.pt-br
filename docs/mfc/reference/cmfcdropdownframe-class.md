@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
 ms.openlocfilehash: 534dc90443371c8440e0cb317540f2cf80f6eacc
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869058"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420326"
 ---
 # <a name="cmfcdropdownframe-class"></a>Classe CMFCDropDownFrame
 
@@ -39,7 +39,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 |||
 |-|-|
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |`CMFCDropDownFrame::CMFCDropDownFrame`|Construtor padrão.|
 |`CMFCDropDownFrame::~CMFCDropDownFrame`|Destruidor.|
 
@@ -47,7 +47,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 |||
 |-|-|
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |[CMFCDropDownFrame:: criar](#create)|Cria um objeto `CMFCDropDownFrame`.|
 |`CMFCDropDownFrame::CreateObject`|Usado pela estrutura para criar uma instância dinâmica desse tipo de classe.|
 |[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|Recupera a barra de menus pai do quadro suspenso.|
@@ -62,7 +62,7 @@ Essa classe não se destina a ser usada diretamente do seu código.
 
 A estrutura usa essa classe para fornecer o comportamento de quadro para as classes `CMFCDropDownToolbar` e `CMFCDropDownToolbarButton`. Para obter mais informações sobre essas classes, consulte [Classe CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md) e [classe CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra como recuperar um ponteiro para um objeto `CMFCDropDownFrame` de uma classe `CFrameWnd` e como definir a janela da barra de ferramentas suspensa filho para ser destruída automaticamente.
 
@@ -82,7 +82,7 @@ O exemplo a seguir demonstra como recuperar um ponteiro para um objeto `CMFCDrop
 
 [CMFCDropDownFrame](../../mfc/reference/cmfcdropdownframe-class.md)
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxdropdowntoolbar. h
 
@@ -98,11 +98,11 @@ virtual BOOL Create(
     CMFCDropDownToolBar* pWndOriginToolbar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |||
 |-|-|
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |*pWndParent*|no A janela pai do quadro suspenso.|
 |*x*|no A coordenada de tela horizontal para o local do quadro abaixo.|
 |*y*|no A tela vertical coordenada para o local do quadro abaixo.|
@@ -158,11 +158,11 @@ Reposiciona o quadro suspenso.
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |||
 |-|-|
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |*bNotify*|no Não utilizado.|
 
 ### <a name="remarks"></a>Comentários
@@ -177,7 +177,7 @@ Define se a janela da barra de ferramentas suspensa filho é destruída automati
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bAutoDestroy*<br/>
 no TRUE para destruir automaticamente a janela da barra de ferramentas suspensa associada; caso contrário, FALSE.
@@ -186,7 +186,7 @@ no TRUE para destruir automaticamente a janela da barra de ferramentas suspensa 
 
 Se *bAutoDestroy* for true, o destruidor `CMFCDropDownFrame` destruirá a janela da barra de ferramentas suspensa associada. O valor padrão é TRUE.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

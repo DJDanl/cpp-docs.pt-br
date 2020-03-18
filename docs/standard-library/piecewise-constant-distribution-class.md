@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 62cfba1fda3d9a42788e8dd47144705fb05c6787
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: db537e7cfab70c2ac4e235a752216b892882f8cf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455238"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446203"
 ---
-# <a name="piecewiseconstantdistribution-class"></a>Classe piecewise_constant_distribution
+# <a name="piecewise_constant_distribution-class"></a>Classe piecewise_constant_distribution
 
 Gera uma distribuição em trechos que tem intervalos com largura variável e probabilidade uniforme em cada intervalo.
 
@@ -80,7 +80,7 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType*\
+\ *RealType*
 O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
@@ -108,7 +108,7 @@ As funções membro `operator()` retornam o próximo valor gerado com base no me
 
 Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // compile with: /EHsc /W4
@@ -212,9 +212,9 @@ Distribution for 100 samples:
     14-15 ::::::::
 ```
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** \<random>
+**Cabeçalho:** \<> aleatório
 
 **Namespace:** std
 
@@ -248,19 +248,19 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Primeiro,* \
+*primeiro* ,\
 Um iterador de entrada do primeiro elemento no intervalo de distribuição.
 
-*último*\
+*último* ,\
 Um iterador de entrada do último elemento no intervalo de distribuição.
 
-*firstW*\
+\ *firstW*
 Um iterador de entrada do primeiro elemento no intervalo de pesos.
 
-*específicos*\
+*intervalos*\
 Uma [initializer_list](../cpp/initializers.md) com os intervalos da distribuição.
 
-*contar*\
+*contagem*\
 O número de elementos no intervalo de distribuição.
 
 *xmin*\
@@ -269,10 +269,10 @@ O valor mais baixo no intervalo de distribuição.
 *xmax*\
 O valor mais alto no intervalo de distribuição. Deve ser maior que *xmin*.
 
-*weightfunc*\
+\ *weightfunc*
 O objeto que representa a função de probabilidade para a distribuição. O parâmetro e o valor de retorno devem ser conversíveis em **Double**.
 
-*Parm*\
+\ de *parâmetros*
 A estrutura do parâmetro usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
@@ -280,6 +280,7 @@ A estrutura do parâmetro usada para construir a distribuição.
 O construtor padrão define os parâmetros armazenados de modo que haja um intervalo, 0 a 1, com uma densidade de probabilidade de 1.
 
 O construtor do intervalo do iterador
+
 ```cpp
 template <class InputIteratorI, class InputIteratorW>
 piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
@@ -289,6 +290,7 @@ piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
 constrói um objeto de distribuição com intervalos de iteradores sobre a sequência [`firstI`, `lastI`) e uma sequência de peso correspondente começando em `firstW`.
 
 O construtor da lista do inicializador
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(initializer_list<result_type>
@@ -299,15 +301,17 @@ intervals,
 Constrói um objeto de distribuição com intervalos de *intervalos* de lista de inicializadores e pesos gerados da função *weightfunc*.
 
 O construtor definido como
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax,
     UnaryOperation weightfunc);
 ```
 
-Constrói um objeto de distribuição com intervalos de *contagem* distribuídos uniformemente sobre `xmin,xmax`[], atribuindo cada peso de intervalo de acordo com a função *weightfunc*e *weightfunc* deve aceitar um parâmetro e ter um retorno o valor, ambos, são conversíveis `double`para. **Pré-condição:** `xmin < xmax`
+Constrói um objeto de distribuição com intervalos de *contagem* distribuídos uniformemente sobre [`xmin,xmax`], atribuindo cada peso de intervalo de acordo com a função *weightfunc*e *weightfunc* deve aceitar um parâmetro e ter um valor de retorno, ambos conversíveis para `double`. **Pré-condição:** `xmin < xmax`
 
 O construtor definido como
+
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```

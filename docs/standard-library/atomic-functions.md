@@ -63,11 +63,11 @@ helpviewer_keywords:
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
 ms.openlocfilehash: 5314db43bed913e801846341309513c239216887
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867071"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421992"
 ---
 # <a name="ltatomicgt-functions"></a>Funções &lt;atomic&gt;
 
@@ -102,7 +102,7 @@ inline bool atomic_compare_exchange_strong(
     Ty Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto *atômico* que armazena um valor do tipo `Ty`.
@@ -143,7 +143,7 @@ inline bool atomic_compare_exchange_strong_explicit(
     memory_order Order2) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
@@ -186,7 +186,7 @@ inline bool atomic_compare_exchange_strong(
     Ty Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
@@ -227,7 +227,7 @@ inline bool atomic_compare_exchange_weak_explicit(
     memory_order Order2) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
@@ -264,7 +264,7 @@ template <class Ty>
 inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
@@ -298,7 +298,7 @@ inline Ty atomic_exchange_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
@@ -328,7 +328,7 @@ template <class T>
 T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que armazena um ponteiro para o tipo `T`.
@@ -372,7 +372,7 @@ T* atomic_fetch_add_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que armazena um ponteiro para o tipo `T`.
@@ -415,7 +415,7 @@ template <class T>
 inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
@@ -449,7 +449,7 @@ inline T atomic_fetch_and_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
@@ -479,7 +479,7 @@ template <class T>
 inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
@@ -513,7 +513,7 @@ inline T atomic_fetch_or_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
@@ -548,7 +548,7 @@ T* atomic_fetch_sub(
     ptrdiff_t Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que armazena um ponteiro para o tipo `T`.
@@ -590,7 +590,7 @@ T* atomic_fetch_sub_explicit(
     ptrdiff_t Value, memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que armazena um ponteiro para o tipo `T`.
@@ -634,7 +634,7 @@ template <class T>
 inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
@@ -668,7 +668,7 @@ inline T atomic_fetch_xor_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
@@ -696,7 +696,7 @@ inline void atomic_flag_clear(volatile atomic_flag* Flag) noexcept;
 inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Sinalizador*\
 Um ponteiro para um objeto `atomic_flag`.
@@ -710,7 +710,7 @@ inline void atomic_flag_clear_explicit(volatile atomic_flag* Flag, memory_order 
 inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Sinalizador*\
 Um ponteiro para um objeto `atomic_flag`.
@@ -727,7 +727,7 @@ inline bool atomic_flag_test_and_set(volatile atomic_flag* Flag,) noexcept;
 inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Sinalizador*\
 Um ponteiro para um objeto `atomic_flag`.
@@ -745,7 +745,7 @@ inline bool atomic_flag_test_and_set_explicit(volatile atomic_flag* Flag, memory
 inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Sinalizador*\
 Um ponteiro para um objeto `atomic_flag`.
@@ -768,7 +768,7 @@ template <class Ty>
 inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
@@ -791,7 +791,7 @@ template <class T>
 inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
@@ -815,7 +815,7 @@ template <class Ty>
 inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que contém um valor do tipo `Ty`.
@@ -839,7 +839,7 @@ template <class Ty>
 inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que contém um valor do tipo `Ty`.
@@ -859,7 +859,7 @@ Atua como um *limite* (uma primitiva de sincronização de memória que impõe o
 inline void atomic_signal_fence(memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ordem*\
 Uma restrição de ordenação de memória que determina o tipo de limite.
@@ -888,7 +888,7 @@ template <class Ty>
 inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto atômico que contém um valor do tipo `Ty`.
@@ -918,7 +918,7 @@ inline Ty atomic_store_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Atom*
 Um ponteiro para um objeto `atomic` que contém um valor do tipo `Ty`.
@@ -941,7 +941,7 @@ Atua como um *limite* (uma primitiva de sincronização de memória que impõe a
 inline void atomic_thread_fence(memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ordem*\
 Uma restrição de ordenação de memória que determina o tipo de limite.
@@ -968,7 +968,7 @@ template <class Ty>
 Ty kill_dependency(Ty Arg) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Arg*\
 Um valor do tipo `Ty`.
@@ -977,6 +977,6 @@ Um valor do tipo `Ty`.
 
 O valor de retorno é *ARG*. A avaliação de *ARG* não carrega uma dependência para a chamada de função. Dividindo uma cadeia de dependências possível, a função pode permitir que o compilador gere código mais eficiente.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [\<atomic>](../standard-library/atomic.md)

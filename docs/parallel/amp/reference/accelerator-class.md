@@ -41,11 +41,11 @@ helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
 ms.openlocfilehash: 72a570ab28696730f835c42748a6ea12b865ca55
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855906"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422265"
 ---
 # <a name="accelerator-class"></a>Classe accelerator
 
@@ -61,14 +61,14 @@ class accelerator;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|[Construtor de acelerador](#ctor)|Inicializa uma nova instância da classe `accelerator`.|
+|[Construtor de acelerador](#ctor)|Inicia uma nova instância da classe `accelerator`.|
 |[~ Destruidor de acelerador](#ctor)|Destrói o objeto `accelerator`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[create_view](#create_view)|Cria e retorna um objeto `accelerator_view` neste acelerador.|
 |[get_all](#get_all)|Retorna um vetor de objetos `accelerator` que representam todos os Aceleradores disponíveis.|
@@ -90,7 +90,7 @@ class accelerator;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[operator!=](#operator_neq)|Compara esse `accelerator` objeto com outro e retorna **false** se eles forem os mesmos; caso contrário, retornará **true**.|
 |[operator=](#operator_eq)|Copia o conteúdo do objeto de `accelerator` especificado para este.|
@@ -98,7 +98,7 @@ class accelerator;
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[cpu_accelerator](#cpu_accelerator)|Obtém uma constante de cadeia de caracteres para a `accelerator`de CPU.|
 |[dedicated_memory](#dedicated_memory)|Obtém a memória dedicada para o `accelerator`, em kilobytes.|
@@ -127,7 +127,7 @@ Um acelerador é um recurso de hardware que é otimizado para computação em pa
 
 Você pode construir um objeto `accelerator` enumerando os dispositivos disponíveis ou obtendo o dispositivo padrão, o dispositivo de referência ou o dispositivo WARP.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** amprt. h
 
@@ -155,7 +155,7 @@ explicit accelerator(const std::wstring& _Device_path);
 accelerator(const accelerator& _Other);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Device_path*<br/>
 O caminho do dispositivo físico.
@@ -179,7 +179,7 @@ Cria e retorna um objeto `accelerator_view` neste acelerador, usando o modo de e
 accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *qmode*<br/>
 O modo de enfileiramento.
@@ -452,7 +452,7 @@ Compara esse `accelerator` objeto com outro e retorna **false** se eles forem os
 bool operator!= (const accelerator& _Other) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Other*<br/>
 O objeto `accelerator` a ser comparado com este.
@@ -469,7 +469,7 @@ Copia o conteúdo do objeto de `accelerator` especificado para este.
 accelerator& operator= (const accelerator& _Other);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Other*<br/>
 O objeto `accelerator` do qual copiar.
@@ -486,7 +486,7 @@ Compara esse `accelerator` objeto com outro e retorna **true** se eles forem os 
 bool operator== (const accelerator& _Other) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Other*<br/>
 O objeto `accelerator` a ser comparado com este.
@@ -503,7 +503,7 @@ Define o acelerador padrão a ser usado para qualquer operação que usa implici
 static inline bool set_default(std::wstring _Path);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Path*<br/>
 O caminho para o acelerador.
@@ -520,7 +520,7 @@ Defina a access_type de CPU padrão para matrizes criadas neste acelerador ou pa
 bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Default_cpu_access_type*<br/>
 A access_type de CPU padrão a ser usada para alocações de memória de array_view/matriz neste acelerador.
@@ -561,6 +561,6 @@ Obtém a versão de `accelerator`.
 __declspec(property(get= get_version)) unsigned int version;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)

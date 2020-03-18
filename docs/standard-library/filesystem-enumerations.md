@@ -12,17 +12,17 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
 ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875814"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421831"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Enumerações de &lt;filesystem&gt;
 
 Este tópico documenta as enumerações no cabeçalho filesystem.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** \<experimental/FileSystem >
 
@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>Valores
 
-|`Name`|Descrição|
+|`Name`|DESCRIÇÃO|
 |------------|-----------------|
 |`none`|Executa o comportamento padrão da operação.|
 |`skip_existing`|Não copia se o arquivo já existir, não relata um erro.|
@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`none`|Comportamento padrão: ignorar links simbólicos para diretórios. A permissão negada é um erro.|
 |`follow_directory_symlink`|Tratar links simbólicos para diretórios como diretórios reais.|
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|{1&gt;Valor&lt;1}|Descrição|
+|Nome|Valor|DESCRIÇÃO|
 |----------|-----------|-----------------|
 |`not_found`|-1|Representa um arquivo que não existe.|
 |`none`|0|Representa um arquivo que não tem um atributo de tipo. (Sem suporte.)|
@@ -161,7 +161,7 @@ enum class perms {// names for permissions
 };
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)

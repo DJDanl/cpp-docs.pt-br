@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
 ms.openlocfilehash: 9fcbc002913cc6cce86276796a371231ef0f32e1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856372"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420753"
 ---
 # <a name="registering-ole-controls"></a>Registrando controles OLE
 
@@ -48,7 +48,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
     WORD wVerMinor);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hInstance*<br/>
 O identificador de instância do módulo associado à classe de controle.
@@ -137,7 +137,7 @@ Diferente de zero se a classe de controle foi registrada; caso contrário, 0.
 
 Isso permite que o controle seja usado por contêineres que reconhecem o controle OLE. `AfxOleRegisterControlClass` atualiza o registro com o nome e o local do controle no sistema e também define o modelo de Threading ao qual o controle dá suporte no registro. Para obter mais informações, consulte a [Observação técnica 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Threading de modelo de apartamento em controles OLE" e [sobre processos e threads](/windows/win32/ProcThread/about-processes-and-threads) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]
 
@@ -147,7 +147,7 @@ O exemplo acima demonstra como `AfxOleRegisterControlClass` é chamado com o sin
 
 O controle será exibido na caixa de diálogo Inserir objeto para contêineres habilitados e será compatível com modelos de apartamento. Os controles de reconhecimento de modelos de apartamento devem garantir que os dados de classe estática sejam protegidos por bloqueios, de modo que, embora um controle em um apartamento esteja acessando os dados estáticos, ele não é desabilitado pelo Agendador antes de ser concluído e outra instância da mesma classe começa a usar os mesmos dados estáticos. Todos os acessos aos dados estáticos serão circundados pelo código de seção crítica.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** afxctl. h
 
@@ -163,7 +163,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
    int nRegFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hInstance*<br/>
 O identificador de instância do módulo associado à classe de página de propriedades.
@@ -190,7 +190,7 @@ Diferente de zero se a classe de controle foi registrada; caso contrário, 0.
 
 Isso permite que a página de propriedades seja usada por contêineres que reconhecem o controle OLE. `AfxOleRegisterPropertyPageClass` atualiza o registro com o nome da página de propriedades e sua localização no sistema e também define o modelo de Threading ao qual o controle dá suporte no registro. Para obter mais informações, consulte a [Observação técnica 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Threading de modelo de apartamento em controles OLE" e [sobre processos e threads](/windows/win32/ProcThread/about-processes-and-threads) no SDK do Windows.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** afxctl. h
 
@@ -206,7 +206,7 @@ BOOL AfxOleRegisterTypeLib(
     LPCTSTR pszHelpDir  = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hInstance*<br/>
 O identificador de instância do aplicativo associado à biblioteca de tipos.
@@ -228,13 +228,13 @@ Diferente de zero se a biblioteca de tipos foi registrada; caso contrário, 0.
 
 Essa função atualiza o registro com o nome da biblioteca de tipos e sua localização no sistema.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCAutomation#7](../../mfc/codesnippet/cpp/registering-ole-controls_3.cpp)]
 
 [!code-cpp[NVC_MFCAutomation#8](../../mfc/codesnippet/cpp/registering-ole-controls_4.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFXDISP. h
 
@@ -246,7 +246,7 @@ Remove a entrada de classe de página de controle ou de Propriedade do banco de 
 BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *clsID*<br/>
 A ID de classe exclusiva da página de controle ou de propriedade.
@@ -258,7 +258,7 @@ A ID de programa exclusiva da página de controle ou de propriedade.
 
 Diferente de zero se a classe do controle ou da página de propriedades tiver sido cancelada com êxito; caso contrário, 0.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** afxctl. h
 
@@ -270,7 +270,7 @@ Chame essa função para remover a entrada da biblioteca de tipos do banco de da
 BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *tlID*<br/>
 A ID exclusiva da biblioteca de tipos.
@@ -279,14 +279,14 @@ A ID exclusiva da biblioteca de tipos.
 
 Diferente de zero se a biblioteca de tipos tiver sido desregistrada com êxito; caso contrário, 0.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCAxCtl#13](../../mfc/reference/codesnippet/cpp/registering-ole-controls_5.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
   **Cabeçalho** AFXDISP. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)

@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
 ms.openlocfilehash: becf038678f4abbe285e719e4d1cc1f3f12de982
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865115"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421649"
 ---
 # <a name="hash_set-class"></a>Classe hash_set
 
@@ -109,7 +109,7 @@ template <class Key,
 class hash_set
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *chave*
 O tipo de dados do elemento a ser armazenado no hash_set.
@@ -148,15 +148,15 @@ A ordem real dos elementos na sequência controlada depende da função de hash,
 
 O iterador fornecido pela classe hash_set é um iterador bidirecional, mas as funções membro de classe [insert](#insert) e [hash_set](#hash_set) têm versões que usam como parâmetros de modelo um iterador de entrada mais fraco, cujos requisitos de funcionalidade são mais minimalistas do que os garantidos pela classe de iteradores bidirecionais. Os conceitos de iterador diferente formam uma família relacionada por refinamentos em sua funcionalidade. Cada conceito de iterador tem seu próprio conjunto de requisitos e os algoritmos que funcionam com eles devem limitar suas suposições para os requisitos fornecidos por esse tipo de iterador. Pode ser pressuposto que um iterador de entrada possa ser desreferenciado para fazer referência a algum objeto e que possa ser incrementado para o próximo iterador na sequência. Esse é um conjunto mínimo de funcionalidade, mas é suficiente para poder expressar de forma significativa um intervalo de iteradores [`first`, `last`) no contexto de funções membro da classe.
 
-### <a name="constructors"></a>{1&gt;Construtores&lt;1}
+### <a name="constructors"></a>Construtores
 
-|Construtor|Descrição|
+|Construtor|DESCRIÇÃO|
 |-|-|
 |[hash_set](#hash_set)|Constrói um `hash_set` que está vazio ou que é uma cópia de todo ou parte de algum outro `hash_set`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome de tipo|Descrição|
+|Nome do tipo|DESCRIÇÃO|
 |-|-|
 |[allocator_type](#allocator_type)|Um tipo que representa a classe `allocator` para o objeto `hash_set`.|
 |[const_iterator](#const_iterator)|Um tipo que fornece um iterador bidirecional que pode ler um elemento `const` no `hash_set`.|
@@ -176,13 +176,13 @@ O iterador fornecido pela classe hash_set é um iterador bidirecional, mas as fu
 
 ### <a name="member-functions"></a>Funções de membro
 
-|Função de membro|Descrição|
+|Função de membro|DESCRIÇÃO|
 |-|-|
 |[begin](#begin)|Retorna um iterador que trata do primeiro elemento no `hash_set`.|
 |[cbegin](#cbegin)|Retorna um iterador const que trata o primeiro elemento no `hash_set`.|
 |[cend](#cend)|Retorna um iterador const que trata o local após o último elemento em um `hash_set`.|
 |[clear](#clear)|Apaga todos os elementos de um `hash_set`.|
-|[count](#count)|Retorna o número de elementos em um `hash_set` cuja chave corresponde a uma chave especificada pelo parâmetro.|
+|[contagem](#count)|Retorna o número de elementos em um `hash_set` cuja chave corresponde a uma chave especificada pelo parâmetro.|
 |[crbegin](#crbegin)|Retorna um iterador const que trata o primeiro elemento em um `hash_set` invertido.|
 |[crend](#crend)|Retorna um iterador const que trata o local após o último elemento em um `hash_set` invertido.|
 |[emplace](#emplace)|Insere um elemento construído adequadamente em um `hash_set`.|
@@ -206,11 +206,11 @@ O iterador fornecido pela classe hash_set é um iterador bidirecional, mas as fu
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|Operador|DESCRIÇÃO|
 |-|-|
 |[hash_set::operator=](#op_eq)|Substitui os elementos de um `hash_set` por uma cópia de outro `hash_set`.|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** \<hash_set >
 
@@ -233,7 +233,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 Para obter mais informações sobre o *alocador*, consulte a seção comentários do tópico [hash_set classe](../standard-library/hash-set-class.md) .
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte o exemplo para [get_allocator](#get_allocator) para obter um exemplo que usa `allocator_type`.
 
@@ -258,7 +258,7 @@ Um iterador bidirecional que trata do primeiro elemento no hash_set ou no local 
 
 Se o valor de retorno de `begin` for atribuído a uma `const_iterator`, os elementos no objeto hash_set não poderão ser modificados. Se o valor de retorno de `begin` for atribuído a um `iterator`, os elementos no objeto hash_set poderão ser modificados.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_begin.cpp
@@ -317,7 +317,7 @@ Um iterador bidirecional const que trata do primeiro elemento no [hash_set](../s
 
 Com o valor retornado de `cbegin`, os elementos no objeto `hash_set` não podem ser modificados.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_cbegin.cpp
@@ -364,7 +364,7 @@ Um iterador bidirecional const que trata do local após o último elemento em um
 
 `cend` é usado para testar se um iterador atingiu o fim de seu `hash_set`. O valor retornado por `cend` não deve ser desreferenciado.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_cend.cpp
@@ -406,7 +406,7 @@ void clear();
 
 ### <a name="remarks"></a>Comentários
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_clear.cpp
@@ -452,7 +452,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Um tipo de `const_iterator` não pode ser usado para modificar o valor de um elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte o exemplo para [begin](#begin) para obter um exemplo que usa `const_iterator`.
 
@@ -486,7 +486,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 ### <a name="remarks"></a>Comentários
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_const_ref.cpp
@@ -535,7 +535,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Um tipo `const_reverse_iterator` não pode modificar o valor de um elemento e é usado para iterar no hash_set em ordem inversa.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Veja o exemplo de [rend](#rend) para obter um exemplo de como declarar e usar o `const_reverse_iterator`
 
@@ -550,7 +550,7 @@ Retorna o número de elementos em um hash_set cuja chave corresponde a uma chave
 size_type count(const Key& key) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *chave*
 O valor dos elementos a serem correspondidos do hash_set.
@@ -567,7 +567,7 @@ A função membro retorna o número de elementos no seguinte intervalo:
 
 \[ lower_bound (*chave*), upper_bound (*chave*)).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra o uso da função membro hash_set::count.
 
@@ -626,7 +626,7 @@ Com o valor de retorno `crbegin`, o objeto `hash_set` não pode ser modificado.
 
 `crbegin` pode ser usado para iterar em um `hash_set` no sentido inverso.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_crbegin.cpp
@@ -678,7 +678,7 @@ Com o valor de retorno `crend`, o objeto `hash_set` não pode ser modificado.
 
 `crend` pode ser usado para testar se um iterador inverso alcançou o final de sua `hash_set`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_crend.cpp
@@ -725,7 +725,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::diff
 
 Observe que, embora `difference_type` esteja disponível para todos os iteradores que atendem aos requisitos de um iterador de entrada, que inclui a classe de iteradores bidirecionais com suporte por contêineres reversíveis como conjunto, subtração entre iteradores só tem suporte por iteradores de acesso aleatório fornecidos por um contêiner de acesso aleatório, como vetor ou deque.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_diff_type.cpp
@@ -799,9 +799,9 @@ emplace(
     ValTy&& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |-|-|
 |*val*|O valor de um elemento a ser inserido no [hash_set](../standard-library/hash-set-class.md), a menos que o `hash_set` já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.|
 
@@ -811,7 +811,7 @@ A função membro `emplace` retorna um par cujo componente **bool** retorna **tr
 
 ### <a name="remarks"></a>Comentários
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_emplace.cpp
@@ -851,9 +851,9 @@ iterator emplace(
     ValTy&& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |-|-|
 |*val*|O valor de um elemento a ser inserido no [hash_set](../standard-library/hash-set-class.md), a menos que o `hash_set` já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.|
 |*_Where*|O local a partir do qual se começa a procurar pelo ponto de inserção correto. (A inserção pode ocorrer em tempo constante amortizado, em vez de tempo logarítmica, se o ponto de inserção imediatamente seguir *_Where*.)|
@@ -866,7 +866,7 @@ A função membro [hash_multiset::emplace](#emplace) retorna um iterador que apo
 
 A inserção pode ocorrer em tempo constante amortizado, em vez de tempo logarítmica, se o ponto de inserção imediatamente seguir *_Where*.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_emplace_hint.cpp
@@ -909,7 +909,7 @@ bool empty() const;
 
 ### <a name="remarks"></a>Comentários
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_empty.cpp
@@ -962,7 +962,7 @@ Um iterador bidirecional que trata do local após o último elemento em um hash_
 
 `end` é usado para testar se um iterador atingiu o final de seu hash_set. O valor retornado por `end` não deve ser desreferenciado.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_end.cpp
@@ -1017,7 +1017,7 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *chave*
 A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_set que está sendo pesquisado.
@@ -1030,7 +1030,7 @@ Para acessar o primeiro iterador de um par pr retornado pela função membro, us
 
 ### <a name="remarks"></a>Comentários
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_equal_range.cpp
@@ -1104,7 +1104,7 @@ iterator erase(iterator first, iterator last);
 size_type erase(const key_type& key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Where*\
 Posição do elemento a ser removido do hash_set.
@@ -1126,7 +1126,7 @@ Para as duas primeiras funções membro, um iterador bidirecional que designa o 
 
 As funções membro nunca geram uma exceção.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra o uso da função membro hash_set::erase.
 
@@ -1222,7 +1222,7 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *chave*
 A chave do argumento que deve corresponder à chave de classificação de um elemento do hash_set que está sendo pesquisado.
@@ -1237,7 +1237,7 @@ A função member retorna um iterador que aborda um elemento no hash_set cuja ch
 
 Se o valor de retorno de `find` for atribuído a uma `const_iterator`, o objeto hash_set não poderá ser modificado. Se o valor de retorno de `find` for atribuído a um `iterator`, o objeto hash_set poderá ser modificado.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_find.cpp
@@ -1308,7 +1308,7 @@ Para obter mais informações sobre o *alocador*, consulte a seção comentário
 
 Alocadores para a classe hash_set especificam como a classe gerencia o armazenamento. Os alocadores padrão fornecidos com as classes de contêiner da Biblioteca Padrão C++ são suficientes para a maioria das necessidades de programação. Gravando e usando sua própria classe de alocador é um tópico avançado do C++.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_get_allocator.cpp
@@ -1417,13 +1417,13 @@ hash_set(
     const Allocator& Al);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |-|-|
 |*&*|A classe do alocador de armazenamento a ser usado para este objeto `hash_set`, cujo padrão é `Allocator`.|
 |*Às*|A função de comparação do tipo `const Traits` usada para ordenar os elementos no `hash_set`, cujo padrão é `hash_compare`.|
-|*Direita*|O `hash_set` do qual o `hash_set` construído é uma cópia.|
+|*Right*|O `hash_set` do qual o `hash_set` construído é uma cópia.|
 |*First*|A posição do primeiro elemento no intervalo de elementos a serem copiados.|
 |*Last*|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|
 
@@ -1470,12 +1470,12 @@ void insert(
     InputIterator Last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |-|-|
 |*Val*|O valor de um elemento a ser inserido no `hash_set`, a menos que o `hash_set` já contenha o elemento ou, de modo geral, um elemento cuja chave seja ordenada de maneira equivalente.|
-|*Where*|O local a partir do qual se começa a procurar pelo ponto de inserção correto. (A inserção poderá ocorrer em um tempo constante amortizado, em vez de no tempo logarítmico, se o ponto de inserção seguir `_Where` imediatamente.)|
+|*Onde*|O local a partir do qual se começa a procurar pelo ponto de inserção correto. (A inserção poderá ocorrer em um tempo constante amortizado, em vez de no tempo logarítmico, se o ponto de inserção seguir `_Where` imediatamente.)|
 |*First*|A posição do primeiro elemento a ser copiado de um `hash_set`.|
 |*Last*|A posição logo após o último elemento a ser copiado de um `hash_set`.|
 |*IList*|A initializer_list da qual os elementos serão copiados.|
@@ -1509,7 +1509,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 Um tipo `iterator` pode ser usado para modificar o valor de um elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Veja o exemplo de [begin](#begin) para obter um exemplo de como declarar e usar `iterator`.
 
@@ -1540,7 +1540,7 @@ que retornará **true** se `_xVal` preceder e não for igual a `_yVal` na ordem 
 
 Observe que [key_compare](#key_compare) e [value_compare](#value_compare) são sinônimos do parâmetro de modelo *Traits*. Os dois tipos são fornecidos para as classes hash_set e hash_multiset, em que são idênticos, para compatibilidade com as classes hash_map e hash_multimap, em que são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_key_comp.cpp
@@ -1608,7 +1608,7 @@ Para obter mais informações sobre *características* , consulte o tópico [has
 
 Observe que `key_compare` e [value_compare](#value_compare) são sinônimos do parâmetro de modelo *Traits*. Os dois tipos são fornecidos para as classes set e multiset, em que são idênticos, para compatibilidade com as classes map e multimap, em que são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Veja o exemplo de [key_comp](#key_comp) que demonstra como declarar e usar `key_compare`.
 
@@ -1631,7 +1631,7 @@ Para obter mais informações sobre a *chave*, consulte a seção comentários d
 
 Observe que `key_type` e [value_type](#value_type) são sinônimos do parâmetro de modelo *Key*. Os dois tipos são fornecidos para as classes hash_set e hash_multiset, em que são idênticos, para compatibilidade com as classes hash_map e hash_multimap, em que são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte o exemplo para [value_type](#value_type) para obter uma amostra de como declarar e usar `key_type`.
 
@@ -1648,7 +1648,7 @@ const_iterator lower_bound(const Key& key) const;
 iterator lower_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *chave*
 A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_set que está sendo pesquisado.
@@ -1659,7 +1659,7 @@ Um `iterator` ou `const_iterator` que resolve o local de um elemento em uma hash
 
 ### <a name="remarks"></a>Comentários
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_lower_bound.cpp
@@ -1726,7 +1726,7 @@ O tamanho máximo possível do hash_set.
 
 ### <a name="remarks"></a>Comentários
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_max_size.cpp
@@ -1760,9 +1760,9 @@ hash_set& operator=(const hash_set& right);
 hash_set& operator=(hash_set&& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |-|-|
 |*right*|O [hash_set](../standard-library/hash-set-class.md) que está sendo copiado para o `hash_set`.|
 
@@ -1770,7 +1770,7 @@ hash_set& operator=(hash_set&& right);
 
 Depois de apagar todos os elementos existentes em uma `hash_set`, `operator=` copia ou move o conteúdo do *lado* para o `hash_set`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_operator_as.cpp
@@ -1850,7 +1850,7 @@ Se o valor retornado de `rbegin` for atribuído a `const_reverse_iterator`, o ob
 
 `rbegin` pode ser usado para iterar em um hash_set no sentido reverso.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_rbegin.cpp
@@ -1921,7 +1921,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::refe
 
 ### <a name="remarks"></a>Comentários
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_reference.cpp
@@ -1983,7 +1983,7 @@ Se o valor retornado de `rend` for atribuído a `const_reverse_iterator`, o obje
 
 `rend` pode ser usado para testar se um iterador inverso alcançou o final de seu hash_set.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_rend.cpp
@@ -2059,7 +2059,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 Um tipo `reverse_iterator` é usado para iterar pelo hash_set em ordem inversa.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Veja o exemplo de [rbegin](#rbegin) que demonstra como declarar e usar `reverse_iterator`.
 
@@ -2080,7 +2080,7 @@ O tamanho atual do hash_set.
 
 ### <a name="remarks"></a>Comentários
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_size.cpp
@@ -2123,7 +2123,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::size
 
 ### <a name="remarks"></a>Comentários
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Veja o exemplo de [size](#size) que demonstra como declarar e usar `size_type`
 
@@ -2138,7 +2138,7 @@ Troca os elementos de dois hash_sets.
 void swap(hash_set& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 O hash_set do argumento que fornece os elementos a serem trocados com o hash_set de destino.
@@ -2147,7 +2147,7 @@ O hash_set do argumento que fornece os elementos a serem trocados com o hash_set
 
 A função membro não invalida referências, ponteiros ou iteradores que designam elementos nos dois hash_set cujos elementos são trocados.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_swap.cpp
@@ -2214,7 +2214,7 @@ const_iterator upper_bound(const Key& key) const;
 iterator upper_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *chave*
 A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_set que está sendo pesquisado.
@@ -2225,7 +2225,7 @@ Um `iterator` ou `const_iterator` que resolve o local de um elemento em uma hash
 
 ### <a name="remarks"></a>Comentários
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_upper_bound.cpp
@@ -2302,7 +2302,7 @@ que retornará **true** se `_xVal` preceder e não for igual a `_yVal` na ordem 
 
 Observe que tanto [value_compare](../standard-library/set-class.md#value_compare) quanto [key_compare](../standard-library/set-class.md#key_compare) são sinônimos para o parâmetro de modelo *Compare*. Os dois tipos são fornecidos para as classes hash_set e hash_multiset, em que são idênticos, para compatibilidade com as classes hash_map e hash_multimap, em que são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_value_comp.cpp
@@ -2370,7 +2370,7 @@ Para obter mais informações sobre *características* , consulte o tópico [has
 
 Observe que tanto [key_compare](#key_compare) quanto `value_compare` são sinônimos para as *características*do parâmetro de modelo. Os dois tipos são fornecidos para as classes hash_set e hash_multiset, em que são idênticos, para compatibilidade com as classes hash_map e hash_multimap, em que são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte o exemplo de [value_comp](#value_comp) para obter um exemplo de como declarar e usar `value_compare`.
 
@@ -2385,7 +2385,7 @@ Um tipo que descreve um objeto armazenado como um elemento de um hash_set em sua
 typedef Key value_type;
 ```
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_value_type.cpp
@@ -2421,7 +2421,7 @@ int main( )
 The hash_set has elements: 10 20.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

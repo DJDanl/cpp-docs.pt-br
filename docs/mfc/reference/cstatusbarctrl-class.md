@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
 ms.openlocfilehash: 8c33aa4d77eeeeca69e50dc63982ff4d7e8bd505
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865529"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420935"
 ---
 # <a name="cstatusbarctrl-class"></a>Classe CStatusBarCtrl
 
@@ -65,13 +65,13 @@ class CStatusBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CStatusBarCtrl::CStatusBarCtrl](#cstatusbarctrl)|Constrói um objeto `CStatusBarCtrl`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CStatusBarCtrl:: criar](#create)|Cria um controle de barra de status e o anexa a um objeto `CStatusBarCtrl`.|
 |[CStatusBarCtrl::CreateEx](#createex)|Cria um controle de barra de status com os estilos estendidos do Windows especificados e o anexa a um objeto `CStatusBarCtrl`.|
@@ -110,7 +110,7 @@ Para obter mais informações sobre como usar `CStatusBarCtrl`, consulte [contro
 
 `CStatusBarCtrl`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxcmn. h
 
@@ -126,7 +126,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwStyle*<br/>
 Especifica o estilo do controle da barra de status. Aplique qualquer combinação de estilos de controle da barra de status listada em [estilos de controle comuns](/windows/win32/Controls/common-control-styles) na SDK do Windows. Esse parâmetro deve incluir o estilo de WS_CHILD. Ele também deve incluir o estilo de WS_VISIBLE.
@@ -152,7 +152,7 @@ A posição padrão de uma janela de status é ao longo da parte inferior da jan
 
 Para criar uma barra de status com estilos de janela estendidos, chame [CStatusBarCtrl:: CreateEx](#createex) em vez de `Create`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_1.cpp)]
 
@@ -169,7 +169,7 @@ virtual BOOL CreateEx(
     UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwExStyle*<br/>
 Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista de estilos estendidos do Windows, consulte o parâmetro *dwExStyle* para [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) no SDK do Windows.
@@ -210,7 +210,7 @@ Chamado pelo Framework quando um aspecto visual de um controle de barra de statu
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpDrawItemStruct*<br/>
 Um ponteiro longo para uma estrutura [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) que contém informações sobre o tipo de desenho necessário.
@@ -236,7 +236,7 @@ BOOL GetBorders(
     int& nSpacing) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBorders*<br/>
 Endereço de uma matriz de inteiros com três elementos. O primeiro elemento recebe a largura da borda horizontal, a segunda recebe a largura da borda vertical e a terceira recebe a largura da borda entre retângulos.
@@ -258,7 +258,7 @@ Diferente de zero, se for bem-sucedido; caso contrário, zero.
 
 Essas bordas determinam o espaçamento entre a borda externa do controle e os retângulos dentro do controle que contêm texto.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_2.cpp)]
 
@@ -270,9 +270,9 @@ Recupera o ícone de uma parte (também conhecido como painel) no controle da ba
 HICON GetIcon(int iPart) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*iPart*|no O índice de base zero da parte que contém o ícone a ser recuperado. Se esse parâmetro for-1, a barra de status será considerada uma barra de status de modo simples.|
 
@@ -286,13 +286,13 @@ Esse método envia a mensagem de [SB_GETICON](/windows/win32/Controls/sb-geticon
 
 Um controle de barra de status consiste em uma linha de painéis de saída de texto, que também são conhecidos como partes. Para obter mais informações sobre a barra de status, consulte a [implementação da barra de status no MFC](../../mfc/status-bar-implementation-in-mfc.md) e [definindo o modo de um objeto CStatusBarCtrl](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir define uma variável, `m_statusBar`, que é usada para acessar o controle da barra de status atual. Essa variável é usada no exemplo a seguir.
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_3.h)]
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir copia um ícone para dois painéis do controle da barra de status atual. Em uma seção anterior do exemplo de código, criamos um controle de barra de status com três painéis e adicionamos um ícone ao primeiro painel. Este exemplo recupera o ícone do primeiro painel e, em seguida, o adiciona ao segundo e terceiro painel.
 
@@ -308,7 +308,7 @@ int GetParts(
     int* pParts) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nParts*<br/>
 Número de partes para as quais recuperar as coordenadas. Se esse parâmetro for maior que o número de partes no controle, a mensagem recuperará coordenadas somente para partes existentes.
@@ -324,7 +324,7 @@ O número de partes no controle se for bem-sucedido ou nenhum outro valor será 
 
 Essa função de membro também recupera a coordenada da borda direita do número determinado de partes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#3](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_5.cpp)]
 
@@ -338,7 +338,7 @@ BOOL GetRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nPane*<br/>
 Índice de base zero da parte cujo retângulo delimitador deve ser recuperado.
@@ -350,7 +350,7 @@ Endereço de uma estrutura [Rect](/previous-versions/dd162897\(v=vs.85\)) que re
 
 Diferente de zero, se for bem-sucedido; caso contrário, zero.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#4](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_6.cpp)]
 
@@ -369,7 +369,7 @@ int GetText(
     int* pType = NULL) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszText*<br/>
 Endereço do buffer que recebe o texto. Esse parâmetro é uma cadeia de caracteres terminada em nulo.
@@ -392,7 +392,7 @@ Ponteiro para um inteiro que recebe as informações de tipo. O tipo pode ser um
 
 O comprimento, em caracteres, do texto ou de uma [CString](../../atl-mfc-shared/reference/cstringt-class.md) que contém o texto atual.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#5](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_7.cpp)]
 
@@ -406,7 +406,7 @@ int GetTextLength(
     int* pType = NULL) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nPane*<br/>
 Índice de base zero da parte da qual recuperar o texto.
@@ -426,7 +426,7 @@ Ponteiro para um inteiro que recebe as informações de tipo. O tipo pode ser um
 
 O comprimento, em caracteres, do texto.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#6](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_8.cpp)]
 
@@ -438,7 +438,7 @@ Recupera o texto da dica de ferramenta de um painel em uma barra de status.
 CString GetTipText(int nPane) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nPane*<br/>
 O índice de base zero do painel de barra de status para receber o texto da dica de ferramenta.
@@ -451,7 +451,7 @@ Um objeto [CString](../../atl-mfc-shared/reference/cstringt-class.md) que conté
 
 Essa função de membro implementa o comportamento do [SB_GETTIPTEXT](/windows/win32/Controls/sb-gettiptext)de mensagens Win32, conforme descrito no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]
 
@@ -479,7 +479,7 @@ Define a cor do plano de fundo em uma barra de status.
 COLORREF SetBkColor(COLORREF cr);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *CD*<br/>
 Valor COLORREF que especifica a nova cor do plano de fundo. Especifique o valor de CLR_DEFAULT para fazer com que a barra de status Use sua cor de plano de fundo padrão.
@@ -492,7 +492,7 @@ Um valor [COLORREF](/windows/win32/gdi/colorref) que representa a cor do plano d
 
 Essa função de membro implementa o comportamento do [SB_SETBKCOLOR](/windows/win32/Controls/sb-setbkcolor)de mensagens Win32, conforme descrito no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#8](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]
 
@@ -506,7 +506,7 @@ BOOL SetIcon(
     HICON hIcon);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nPane*<br/>
 O índice de base zero do painel que receberá o ícone. Se esse parâmetro for-1, a barra de status será considerada uma barra de status simples.
@@ -522,7 +522,7 @@ Diferente de zero, se for bem-sucedido; caso contrário, zero.
 
 Essa função de membro implementa o comportamento do [SB_SETICON](/windows/win32/Controls/sb-seticon)de mensagens Win32, conforme descrito no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CStatusBarCtrl:: SetBkColor](#setbkcolor).
 
@@ -534,7 +534,7 @@ Define a altura mínima da área de desenho de um controle de barra de status.
 void SetMinHeight(int nMin);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Nmín*<br/>
 Altura mínima, em pixels, do controle.
@@ -543,7 +543,7 @@ Altura mínima, em pixels, do controle.
 
 A altura mínima é a soma de *nmín* e o dobro da largura, em pixels, da borda vertical do controle da barra de status.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#9](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_11.cpp)]
 
@@ -557,7 +557,7 @@ BOOL SetParts(
     int* pWidths);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nParts*<br/>
 Número de partes a serem definidas. O número de partes não pode ser maior que 255.
@@ -569,7 +569,7 @@ Endereço de uma matriz de inteiros com o mesmo número de elementos que as part
 
 Diferente de zero, se for bem-sucedido; caso contrário, zero.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#10](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_12.cpp)]
 
@@ -581,7 +581,7 @@ Especifica se um controle de barra de status exibe texto simples ou exibe todas 
 BOOL SetSimple(BOOL bSimple = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bSimple*<br/>
 no Sinalizador de tipo de exibição. Se esse parâmetro for TRUE, o controle exibirá texto simples; Se for FALSE, exibirá várias partes.
@@ -605,7 +605,7 @@ BOOL SetText(
     int nType);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszText*<br/>
 Endereço de uma cadeia de caracteres terminada em nulo que especifica o texto a ser definido. Se *ndeclarações* for SBT_OWNERDRAW, *lpszText* representará 32 bits de dados.
@@ -624,7 +624,7 @@ Diferente de zero, se for bem-sucedido; caso contrário, zero.
 
 A mensagem invalida a parte do controle que foi alterada, fazendo com que ela exiba o novo texto quando o próximo controle receber a mensagem de WM_PAINT.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#11](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]
 
@@ -638,7 +638,7 @@ void SetTipText(
     LPCTSTR pszTipText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nPane*<br/>
 O índice de base zero do painel de barra de status para receber o texto da dica de ferramenta.
@@ -650,11 +650,11 @@ Um ponteiro para uma cadeia de caracteres que contém o texto da dica de ferrame
 
 Essa função de membro implementa o comportamento do [SB_SETTIPTEXT](/windows/win32/Controls/sb-settiptext)de mensagens Win32, conforme descrito no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#12](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_14.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

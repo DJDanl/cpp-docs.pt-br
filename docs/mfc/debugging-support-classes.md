@@ -1,8 +1,6 @@
 ---
 title: Depurando classes de suporte
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.debug
 helpviewer_keywords:
 - debugging memory leaks, MFC
 - memory allocation, debugging dynamic
@@ -12,22 +10,22 @@ helpviewer_keywords:
 - debugging [MFC], memory leaks
 - memory leaks, MFC debug classes
 ms.assetid: d79e084a-8326-4251-8700-4efac07c511e
-ms.openlocfilehash: 90a21b260185bb2202eed66b8e4144eb7183c157
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 570a1e87eadcce18feacf20f9c25562662eb17c9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241256"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446989"
 ---
 # <a name="debugging-support-classes"></a>Depurando classes de suporte
 
-MFC fornece as classes a seguir para ajudá-lo a depurar problemas de alocação de memória dinâmica.
+O MFC fornece as seguintes classes para ajudá-lo a depurar problemas de alocação de memória dinâmica.
 
 [CDumpContext](../mfc/reference/cdumpcontext-class.md)<br/>
 Fornece um destino para despejos de diagnóstico.
 
 [CMemoryState](../mfc/reference/cmemorystate-structure.md)<br/>
-Estrutura que fornece os instantâneos do uso de memória. Também é usado para comparar instantâneos de memória anteriores e posteriores.
+Estrutura que fornece instantâneos de uso de memória. Também usado para comparar instantâneos de memória anteriores e posteriores.
 
 ## <a name="see-also"></a>Consulte também
 

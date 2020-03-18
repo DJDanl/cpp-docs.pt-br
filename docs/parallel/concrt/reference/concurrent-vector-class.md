@@ -34,11 +34,11 @@ helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
 ms.openlocfilehash: 002f1e3f691de3315810efed8f7d8f6c547cf653
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854113"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417246"
 ---
 # <a name="concurrent_vector-class"></a>Classe concurrent_vector
 
@@ -53,7 +53,7 @@ class concurrent_vector: protected details::_Allocator_base<T,
 private details::_Concurrent_vector_base_v4;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo de dados dos elementos a serem armazenados no vetor.
@@ -65,7 +65,7 @@ O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre 
 
 ### <a name="public-typedefs"></a>Typedefs Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`allocator_type`|Um tipo que representa a classe de alocador para o vetor simultâneo.|
 |`const_iterator`|Um tipo que fornece um iterador de acesso aleatório que pode ler um elemento `const` em um vetor simultâneo.|
@@ -82,20 +82,20 @@ O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre 
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[concurrent_vector](#ctor)|Sobrecarregado. Constrói um vetor simultâneo.|
 |[~ concurrent_vector destruidor](#dtor)|Apaga todos os elementos e destrói esse vetor simultâneo.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[assign](#assign)|Sobrecarregado. Apaga os elementos do vetor simultâneo e atribui a ele `_N` cópias de `_Item`ou valores especificados pelo intervalo do iterador [`_Begin``_End`). Esse método não é seguro para simultaneidade.|
 |[at](#at)|Sobrecarregado. Fornece acesso ao elemento no índice especificado no vetor simultâneo. Esse método é protegido contra simultaneidade para operações de leitura e também aumenta o vetor, desde que você tenha garantido que o valor `_Index` seja menor que o tamanho do vetor simultâneo.|
 |[back](#back)|Sobrecarregado. Retorna uma referência ou uma `const` referência ao último elemento no vetor simultâneo. Se o vetor simultâneo estiver vazio, o valor de retorno será indefinido. Esse método é seguro para simultaneidade.|
 |[begin](#begin)|Sobrecarregado. Retorna um iterador do tipo `iterator` ou `const_iterator` ao início do vetor simultâneo. Esse método é seguro para simultaneidade.|
-|[capacity](#capacity)|Retorna o tamanho máximo para o qual o vetor simultâneo pode crescer sem a necessidade de alocar mais memória. Esse método é seguro para simultaneidade.|
+|[capacidade](#capacity)|Retorna o tamanho máximo para o qual o vetor simultâneo pode crescer sem a necessidade de alocar mais memória. Esse método é seguro para simultaneidade.|
 |[cbegin](#cbegin)|Retorna um iterador do tipo `const_iterator` para o início do vetor simultâneo. Esse método é seguro para simultaneidade.|
 |[cend](#cend)|Retorna um iterador do tipo `const_iterator` ao final do vetor simultâneo. Esse método é seguro para simultaneidade.|
 |[clear](#clear)|Apaga todos os elementos no vetor simultâneo. Esse método não é seguro para simultaneidade.|
@@ -119,7 +119,7 @@ O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre 
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[operator\[\]](#operator_at)|Sobrecarregado. Fornece acesso ao elemento no índice especificado no vetor simultâneo. Esse método é protegido por simultaneidade para operações de leitura e também ao aumentar o vetor, desde que você tenha garantido que o valor `_Index` seja menor que o tamanho do vetor simultâneo.|
 |[operator=](#operator_eq)|Sobrecarregado. Atribui o conteúdo de outro objeto de `concurrent_vector` a este. Esse método não é seguro para simultaneidade.|
@@ -136,7 +136,7 @@ Para obter informações detalhadas sobre a classe `concurrent_vector`, consulte
 
 `concurrent_vector`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** concurrent_vector. h
 
@@ -156,7 +156,7 @@ void assign(_InputIterator _Begin,
     _InputIterator _End);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_InputIterator*<br/>
 O tipo do iterador especificado.
@@ -187,7 +187,7 @@ reference at(size_type _Index);
 const_reference at(size_type _Index) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Index*<br/>
 O índice do elemento a ser recuperado.
@@ -316,7 +316,7 @@ concurrent_vector(_InputIterator _Begin,
     const allocator_type& _Al = allocator_type());
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *M*<br/>
 O tipo de alocador do vetor de origem.
@@ -455,7 +455,7 @@ iterator grow_by(
     const_reference _Item);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Delta*<br/>
 O número de elementos a serem acrescentados ao objeto.
@@ -479,7 +479,7 @@ Aumenta esse vetor simultâneo até que tenha pelo menos `_N` elementos. Esse m�
 iterator grow_to_at_least(size_type _N);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_N*<br/>
 O novo tamanho mínimo para o objeto `concurrent_vector`.
@@ -516,7 +516,7 @@ concurrent_vector& operator= (
     concurrent_vector&& _Vector);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *M*<br/>
 O tipo de alocador do vetor de origem.
@@ -538,7 +538,7 @@ reference operator[](size_type _index);
 const_reference operator[](size_type _index) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Index*<br/>
 O índice do elemento a ser recuperado.
@@ -563,7 +563,7 @@ iterator push_back(const_reference _Item);
 iterator push_back(T&& _Item);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Item*<br/>
 O valor a ser acrescentado.
@@ -608,7 +608,7 @@ Aloca espaço suficiente para aumentar o vetor simultâneo para o tamanho `_N` s
 void reserve(size_type _N);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_N*<br/>
 O número de elementos para os quais reservar espaço.
@@ -630,7 +630,7 @@ void resize(
     const T& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_N*<br/>
 O novo tamanho do concurrent_vector.
@@ -680,12 +680,12 @@ Permuta o conteúdo de dois vetores simultâneos. Esse método não é seguro pa
 void swap(concurrent_vector& _Vector);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Vector*<br/>
 O objeto `concurrent_vector` com o qual trocar conteúdo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Contêineres e objetos em paralelo](../../../parallel/concrt/parallel-containers-and-objects.md)

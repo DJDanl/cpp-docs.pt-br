@@ -179,11 +179,11 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
 ms.openlocfilehash: 1565a2eef681cbf36a0e166f59cde0320843e8aa
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869897"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420417"
 ---
 # <a name="cframewndex-class"></a>Classe CFrameWndEx
 
@@ -199,7 +199,7 @@ class CFrameWndEx : public CFrameWnd
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Ajusta o layout do item do cliente OLE e a área do cliente do quadro.|
 |`CFrameWndEx::AddDockSite`|Este método não é usado.|
@@ -289,7 +289,7 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx::UpdateCaption](#updatecaption)|Chamado pelo Framework para atualizar a legenda do quadro da janela.|
 |[CFrameWndEx:: WinHelp](#winhelp)|Invoca o aplicativo `WinHelp` ou a ajuda relacionada ao contexto.|
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra como herdar uma classe da classe `CFrameWndEx`. O exemplo ilustra as assinaturas de método na subclasse e como substituir o método `OnShowPopupMenu`. Este trecho de código faz parte do [exemplo do Word pad](../../overview/visual-cpp-samples.md).
 
@@ -308,7 +308,7 @@ O exemplo a seguir demonstra como herdar uma classe da classe `CFrameWndEx`. O e
 
 [CFrameWndEx](../../mfc/reference/cframewndex-class.md)
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxframewndex. h
 
@@ -332,7 +332,7 @@ BOOL AddPane(
     BOOL bTail=TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pControlBar*<br/>
 no Um painel da barra de controle para registrar.
@@ -352,7 +352,7 @@ Recalcula o layout de todos os painéis que estão encaixados na janela do quadr
 virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hdwp*<br/>
 Um identificador para uma estrutura que contém as posições de várias janelas. .
@@ -369,7 +369,7 @@ Define o menu de quadro e o atualiza quando o processamento de comandos está oc
 virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hMenuAlt*<br/>
 no Identificador para um menu alternativo.
@@ -387,7 +387,7 @@ void DockPane(
     LPCRECT lpRect=NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 no Um ponteiro para a barra de controle a ser encaixado.
@@ -420,7 +420,7 @@ BOOL DockPaneLeftOf(
     CPane* pLeftOf);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 no Um ponteiro para o objeto de painel a ser encaixado.
@@ -444,7 +444,7 @@ Habilita o modo ocultar automaticamente para o painel quando ele é encaixado no
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDockStyle*<br/>
 no Especifica o lado da janela do quadro principal para a qual encaixar o painel.
@@ -473,7 +473,7 @@ Habilita o encaixe dos painéis da janela do quadro.
 BOOL EnableDocking(DWORD dwDockStyle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDockStyle*<br/>
 no Especifica o lado da janela do quadro principal em que a barra do painel se encaixa.
@@ -502,7 +502,7 @@ Mostra ou oculta o menu principal em um modo de tela inteira.
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnableMenu*<br/>
 no TRUE para mostrar o menu principal em um modo de tela inteira; caso contrário, FALSE.
@@ -515,7 +515,7 @@ Habilita o modo de tela inteira para a janela do quadro.
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiFullScreenCmd*<br/>
 no A ID de um comando que habilita e desabilita o modo de tela inteira.
@@ -536,7 +536,7 @@ Habilita ou desabilita o carregamento do estado de encaixe.
 void EnableLoadDockState(BOOL bEnable=TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 no TRUE para habilitar o carregamento do estado de encaixe, FALSE para desabilitar o carregamento do estado de encaixe.
@@ -555,7 +555,7 @@ void EnablePaneMenu(
     BOOL bViewMenuShowsToolbarsOnly=FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 no TRUE para habilitar a manipulação automática dos menus pop-up da barra de controle; FALSE para desabilitar a manipulação automática dos menus pop-up da barra de controle.
@@ -635,7 +635,7 @@ Retorna um ponteiro para o painel que tem a ID especificada.
 CBasePane* GetPane(UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 no A ID de controle.
@@ -680,7 +680,7 @@ virtual BOOL GetToolbarButtonToolTipText(
     CString& strTTText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pButton*<br/>
 no Um ponteiro para um botão da barra de ferramentas.
@@ -707,7 +707,7 @@ BOOL InsertPane(
     BOOL bAfter=TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pControlBar*<br/>
 Um ponteiro para uma barra de controle a ser inserida na lista de barras de controle e registrada com o Gerenciador de encaixe.
@@ -765,7 +765,7 @@ BOOL IsPointNearDockSite(
     BOOL& bOuterEdge) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *empresas*<br/>
 no A posição do ponto.
@@ -817,7 +817,7 @@ virtual BOOL LoadFrame(
     CCreateContext* pContext = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDResource*<br/>
 no A ID de recurso usada para carregar todos os recursos de quadro.
@@ -847,7 +847,7 @@ virtual BOOL NegotiateBorderSpace(
     LPRECT lpRectBorder);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nBorderCmd*<br/>
 no O comando de negociação de borda. Consulte a seção comentários para obter os valores possíveis.
@@ -883,7 +883,7 @@ afx_msg void OnActivate(
     BOOL bMinimized);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nState*<br/>
 no Se o quadro está ativo ou inativo. Consulte a tabela na seção comentários para obter os valores possíveis.
@@ -914,7 +914,7 @@ afx_msg void OnActivateApp(
     DWORD dwThreadID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bActive*<br/>
 no TRUE se o aplicativo for selecionado; FALSE se o aplicativo não estiver selecionado.
@@ -934,7 +934,7 @@ afx_msg LRESULT OnChangeVisualManager(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *wParam*<br/>
 no Esse parâmetro não é usado.
@@ -1000,7 +1000,7 @@ Chamado pelo Framework quando um menu pop-up ativo processa uma mensagem de WM_D
 virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMenuPopup*<br/>
 Um ponteiro para um menu pop-up.
@@ -1021,7 +1021,7 @@ virtual BOOL OnCmdMsg(
     AFX_CMDHANDLERINFO* pHandlerInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 no A ID do comando.
@@ -1059,7 +1059,7 @@ Chamado pelo Framework após a criação do quadro.
 afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpCreateStruct*<br/>
 no Um ponteiro para a [Estrutura CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) do novo quadro.
@@ -1093,7 +1093,7 @@ virtual BOOL OnDrawMenuImage(
     const CRect& rectImage);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -1123,7 +1123,7 @@ virtual void OnDrawMenuLogo(
     const CRect& rectLogo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -1148,7 +1148,7 @@ afx_msg LRESULT OnDWMCompositionChanged(
     LPARAM lp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *processador*<br/>
 no Esse parâmetro não é usado.
@@ -1172,7 +1172,7 @@ LRESULT OnExitSizeMove(
     LPARAM lp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *processador*<br/>
 no Esse parâmetro não é usado.
@@ -1194,7 +1194,7 @@ Chamado pelo Framework quando o quadro é redimensionado para definir limites de
 afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpMMI*<br/>
 no Ponteiro para uma estrutura [MINMAXINFO](/windows/win32/api/winuser/ns-winuser-minmaxinfo) .
@@ -1211,7 +1211,7 @@ afx_msg LRESULT OnIdleUpdateCmdUI(
     LPARAM lParam = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *wParam*<br/>
 no Esse parâmetro não é usado.
@@ -1235,7 +1235,7 @@ afx_msg void OnLButtonDown(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFlags*<br/>
 no Indica se o usuário pressionou as teclas modificadoras. Para obter os valores possíveis, consulte *wParam* de parâmetro em [WM_LBUTTONDOWN notificação](/windows/win32/inputdev/wm-lbuttondown).
@@ -1255,7 +1255,7 @@ afx_msg void OnLButtonUp(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFlags*<br/>
 no Indica se o usuário pressionou as teclas modificadoras. Para obter os valores possíveis, consulte *wParam* de parâmetro em [WM_LBUTTONUP notificação](/windows/win32/inputdev/wm-lbuttonup).
@@ -1275,7 +1275,7 @@ virtual BOOL OnMenuButtonToolHitTest(
     TOOLINFO* pTI);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pButton*<br/>
 no Um ponteiro para o botão da barra de ferramentas.
@@ -1302,7 +1302,7 @@ afx_msg LRESULT OnMenuChar(
     CMenu* pMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nChar*<br/>
 no Código de caractere da tecla pressionada.
@@ -1333,7 +1333,7 @@ afx_msg void OnMouseMove(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFlags*<br/>
 no Indica se um usuário pressionou as teclas modificadoras. Para obter os valores possíveis, consulte *wParam* de parâmetro em [WM_MOUSEMOVE notificação](/windows/win32/inputdev/wm-mousemove).
@@ -1351,7 +1351,7 @@ Chamado pelo Framework quando uma janela de painel é movida.
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFrame*<br/>
 no Ponteiro para a janela do painel da [Classe CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) .
@@ -1370,7 +1370,7 @@ Chamado pelo Framework quando a área não cliente do quadro deve ser redesenhad
 afx_msg BOOL OnNcActivate(BOOL bActive);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bActive*<br/>
 no TRUE para desenhar o quadro. FALSE para desenhar o quadro inativo.
@@ -1391,7 +1391,7 @@ afx_msg void OnNcCalcSize(
     NCCALCSIZE_PARAMS FAR* lpncsp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bCalcValidRects*<br/>
 no VERDADEIRO quando o aplicativo deve especificar uma área de cliente válida; caso contrário, FALSE.
@@ -1409,7 +1409,7 @@ Chamado pelo Framework quando o ponteiro se move ou quando um botão do mouse é
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *empresas*<br/>
 no O local do ponteiro em coordenadas da tela.
@@ -1430,7 +1430,7 @@ afx_msg void OnNcMouseMove(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nHitTest*<br/>
 no Um valor enumerado de ponteiro clicado. Para obter uma lista de valores possíveis, consulte [WM_NCHITTEST notificação](/windows/win32/inputdev/wm-nchittest).
@@ -1458,7 +1458,7 @@ Chamado pelo Framework para controlar a visibilidade de um painel.
 afx_msg BOOL OnPaneCheck(UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 no ID de controle de um painel.
@@ -1479,7 +1479,7 @@ afx_msg LRESULT OnPostPreviewFrame(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *wParam*<br/>
 no Esse parâmetro não é usado.
@@ -1503,7 +1503,7 @@ afx_msg LRESULT OnPowerBroadcast(
     LPARAM lp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *processador*<br/>
 no O evento de gerenciamento de energia. Para obter uma lista de valores possíveis, consulte [WM_POWERBROADCAST mensagem](/windows/win32/Power/wm-powerbroadcast).
@@ -1529,7 +1529,7 @@ afx_msg LRESULT OnSetMenu(
 BOOL OnSetMenu(HMENU hmenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *processador*<br/>
 no Identificador para o novo menu da janela do quadro.
@@ -1558,7 +1558,7 @@ virtual void OnSetPreviewMode(
     CPrintPreviewState* pState);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bPreview*<br/>
 no TRUE para habilitar a visualização de impressão; FALSE para desabilitar a visualização de impressão.
@@ -1578,7 +1578,7 @@ afx_msg LRESULT OnSetText(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *wParam*<br/>
 no Esse parâmetro não é usado.
@@ -1602,7 +1602,7 @@ virtual BOOL OnShowCustomizePane(
     UINT uiToolbarID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMenuPane*<br/>
 no Um ponteiro para o painel de personalização rápida.
@@ -1626,7 +1626,7 @@ Chamado pelo Framework para mostrar ou ocultar painéis.
 virtual BOOL OnShowPanes(BOOL bShow);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bShow*<br/>
 no TRUE se o aplicativo mostrar os painéis; Caso contrário, FALSE.
@@ -1651,7 +1651,7 @@ Chamado pelo Framework quando ele exibe um menu pop-up.
 virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMenu*<br/>
 no Um ponteiro para um menu pop-up.
@@ -1675,7 +1675,7 @@ afx_msg void OnSize(
     int cy);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nType*<br/>
 no O tipo de redimensionamento. Para obter os valores possíveis, consulte *wParam* de parâmetro em [WM_SIZE notificação](/windows/win32/winmsg/wm-size).
@@ -1698,7 +1698,7 @@ afx_msg void OnSizing(
     LPRECT pRect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *fwSide*<br/>
 no A borda do quadro que é movido. Consulte o *wParam* do parâmetro em [WM_SIZING notificação](/windows/win32/winmsg/wm-sizing).
@@ -1728,7 +1728,7 @@ virtual BOOL OnTearOffMenu(
     CPane* pBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMenuPopup*<br/>
 no Um ponteiro para um menu pop-up.
@@ -1756,7 +1756,7 @@ afx_msg LRESULT OnToolbarContextMenu(
     LPARAM lp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *processador*<br/>
 no Esse parâmetro não é usado.
@@ -1780,7 +1780,7 @@ afx_msg LRESULT OnToolbarCreateNew(
     LPARAM lp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *processador*<br/>
 no Esse parâmetro não é usado.
@@ -1804,7 +1804,7 @@ afx_msg LRESULT OnToolbarDelete(
     LPARAM lp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Não utilizado*<br/>
 no Esse parâmetro não é usado.
@@ -1826,7 +1826,7 @@ Chamado pelo Framework para definir o menu de quadro.
 virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hMenuAlt*<br/>
 no Identificador para o menu alternativo.
@@ -1841,7 +1841,7 @@ A estrutura chama esse método para atualizar a barra de título da janela do qu
 virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bAddToTitle*<br/>
 no TRUE para adicionar o título do documento ativo à barra de título da janela do quadro; caso contrário, FALSE.
@@ -1856,7 +1856,7 @@ Chamado pelo Framework para atualizar o menu do painel.
 afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pCmdUI*<br/>
 no Ponteiro para o objeto de interface do usuário do painel.
@@ -1871,7 +1871,7 @@ Chamado pelo Framework quando o tamanho do quadro, a posição ou a ordem z fora
 afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpwndpos*<br/>
 no Ponteiro para uma estrutura [WINDOWPOS](/windows/win32/api/winuser/ns-winuser-windowpos) que contém o novo tamanho e a posição.
@@ -1896,7 +1896,7 @@ CBasePane* PaneFromPoint(
     CRuntimeClass* pRTCBarType) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *empresas*<br/>
 no A tela é coordenada do ponto a ser verificado.
@@ -1931,7 +1931,7 @@ Manipula mensagens de janela específicas antes de serem expedidas.
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMsg*<br/>
 no Um ponteiro para uma estrutura de [msg](/windows/win32/api/winuser/ns-winuser-msg) que contém a mensagem a ser processada.
@@ -1950,7 +1950,7 @@ Ajusta o layout do quadro e suas janelas filhas.
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bNotify*<br/>
 no Especifica se é para notificar o item do cliente OLE sobre a alteração de layout.
@@ -1972,7 +1972,7 @@ void RemovePaneFromDockManager(
     CBasePane* pBarReplacement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pControlBar*<br/>
 no Um ponteiro para o painel da barra de controle a ser removido.
@@ -2003,7 +2003,7 @@ Restaura o layout de encaixe para o estado de encaixe armazenado no registro.
 void SetDockState(const CDockState& state);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *state*<br/>
 O estado de encaixe. Este parâmetro é ignorado.
@@ -2016,7 +2016,7 @@ Define a janela do quadro de visualização de impressão.
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 no Ponteiro para uma janela de quadro de visualização de impressão.
@@ -2034,7 +2034,7 @@ void SetupToolbarMenu(
     const UINT uiViewUserToolbarCmdLast);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *AdicionarMenu*<br/>
 no Um objeto `CMenu` a ser modificado.
@@ -2069,7 +2069,7 @@ void ShowPane(
     BOOL bActivate);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 no Um ponteiro para a barra de controle para mostrar ou ocultar.
@@ -2103,7 +2103,7 @@ virtual void WinHelp(
     UINT nCmd = HELP_CONTEXT);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwData*<br/>
 Dados que dependem do parâmetro *nCmd* . Para obter uma lista de valores possíveis, consulte [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw).
@@ -2113,7 +2113,7 @@ O comando de ajuda. Para obter uma lista de valores possíveis, consulte [WinHel
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

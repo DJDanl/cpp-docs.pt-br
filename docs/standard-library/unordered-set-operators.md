@@ -6,11 +6,11 @@ f1_keywords:
 - unordered_set/std::operator==
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
 ms.openlocfilehash: 59a7154ed46ac788516bc9f42c3385ec8f07dcf1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890714"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422503"
 ---
 # <a name="ltunordered_setgt-operators"></a>Operadores &lt;unordered_set&gt;
 
@@ -22,7 +22,7 @@ Testa se o objeto [unordered_set](../standard-library/unordered-set-class.md) à
 bool operator!=(const unordered_set <Key, Hash, Pred, Allocator>& left, const unordered_set <Key, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `unordered_set`.
@@ -38,7 +38,7 @@ Um objeto do tipo `unordered_set`.
 
 A comparação entre objetos unordered_set não é afetada pela ordem arbitrária em que eles armazenam seus elementos. Dois unordered_sets serão iguais se tiverem o mesmo número de elementos e os elementos em um contêiner forem uma permutação dos elementos do outro contêiner. Caso contrário, são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // unordered_set_ne.cpp
@@ -90,7 +90,7 @@ Testa se o objeto [unordered_set](../standard-library/unordered-set-class.md) à
 bool operator==(const unordered_set <Key, Hash, Pred, Allocator>& left, const unordered_set <Key, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `unordered_set`.
@@ -106,7 +106,7 @@ Um objeto do tipo `unordered_set`.
 
 A comparação entre objetos unordered_set não é afetada pela ordem arbitrária em que eles armazenam seus elementos. Dois unordered_sets serão iguais se tiverem o mesmo número de elementos e os elementos em um contêiner forem uma permutação dos elementos do outro contêiner. Caso contrário, são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // unordered_set_eq.cpp
@@ -156,7 +156,7 @@ Testa se o objeto [unordered_multiset](../standard-library/unordered-multiset-cl
 bool operator!=(const unordered_multiset <Key, Hash, Pred, Allocator>& left, const unordered_multiset <Key, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `unordered_multiset`.
@@ -172,7 +172,7 @@ Um objeto do tipo `unordered_multiset`.
 
 A comparação entre objetos unordered_multiset não é afetada pela ordem arbitrária em que eles armazenam seus elementos. Dois unordered_multisets serão iguais se tiverem o mesmo número de elementos e os elementos em um contêiner forem uma permutação dos elementos do outro contêiner. Caso contrário, são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // unordered_multiset_ne.cpp
@@ -225,7 +225,7 @@ Testa se o objeto [unordered_multiset](../standard-library/unordered-multiset-cl
 bool operator==(const unordered_multiset <Key, Hash, Pred, Allocator>& left, const unordered_multiset <Key, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `unordered_multiset`.
@@ -241,7 +241,7 @@ Um objeto do tipo `unordered_multiset`.
 
 A comparação entre objetos unordered_multiset não é afetada pela ordem arbitrária em que eles armazenam seus elementos. Dois unordered_multisets serão iguais se tiverem o mesmo número de elementos e os elementos em um contêiner forem uma permutação dos elementos do outro contêiner. Caso contrário, são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // unordered_multiset_eq.cpp

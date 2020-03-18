@@ -154,11 +154,11 @@ helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
 ms.openlocfilehash: f6d52c8fce8e1437e87f9f251b7f5f050efa6fed
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864712"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417806"
 ---
 # <a name="cwindow-class"></a>Classe CWindow
 
@@ -177,13 +177,13 @@ class CWindow
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CWindow::CWindow](#cwindow)|Construtor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CWindow::ArrangeIconicWindows](#arrangeiconicwindows)|Organiza todas as janelas filhas minimizadas.|
 |[CWindow:: Attach](#attach)|Anexa uma janela ao objeto `CWindow`.|
@@ -331,14 +331,14 @@ class CWindow
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[HWND de CWindow:: Operator](#operator_hwnd)|Converte o objeto `CWindow` em um HWND.|
 |[CWindow:: Operator =](#operator_eq)|Atribui um HWND ao objeto `CWindow`.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CWindow:: m_hWnd](#m_hwnd)|O identificador para a janela associada ao objeto `CWindow`.|
 |[CWindow::rcDefault](#rcdefault)|Contém as dimensões da janela padrão.|
@@ -374,7 +374,7 @@ class CWindow
 
 Para obter mais informações sobre o Windows, consulte o [Windows](/windows/win32/winmsg/windows) e os tópicos subsequentes na SDK do Windows. Para obter mais informações sobre como usar o Windows na ATL, consulte o artigo [classes de janela do ATL](../../atl/atl-window-classes.md).
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -398,12 +398,12 @@ Anexa a janela identificada por *hWndNew* ao objeto `CWindow`.
 void Attach(HWND hWndNew) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWndNew*<br/>
 no O identificador para uma janela.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#1](../../atl/codesnippet/cpp/cwindow-class_1.cpp)]
 
@@ -419,7 +419,7 @@ HDC BeginPaint(LPPAINTSTRUCT lpPaint) throw();
 
 Consulte [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#2](../../atl/codesnippet/cpp/cwindow-class_2.cpp)]
 
@@ -435,7 +435,7 @@ BOOL BringWindowToTop() throw();
 
 Consulte [BringWindowToTop](/windows/win32/api/winuser/nf-winuser-bringwindowtotop) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#3](../../atl/codesnippet/cpp/cwindow-class_3.cpp)]
 
@@ -447,7 +447,7 @@ Centraliza a janela em uma determinada janela.
 BOOL CenterWindow(HWND hWndCenter = NULL) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWndCenter*<br/>
 no O identificador para a janela em relação à qual centralizar. Se esse parâmetro for nulo (o valor padrão), o método definirá *hWndCenter* como a janela pai da janela se for uma janela filho. Caso contrário, ele definirá *hWndCenter* como a janela do proprietário da janela.
@@ -456,7 +456,7 @@ no O identificador para a janela em relação à qual centralizar. Se esse parâ
 
 TRUE se a janela for centralizada com êxito; caso contrário, FALSE.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#4](../../atl/codesnippet/cpp/cwindow-class_4.cpp)]
 
@@ -554,7 +554,7 @@ HWND Create(
     LPVOID lpCreateParam = NULL) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpstrWndClass*<br/>
 no Um ponteiro para a classe da janela.
@@ -640,7 +640,7 @@ O construtor.
 CWindow(HWND hWnd = NULL) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWnd*<br/>
 no O identificador para uma janela.
@@ -685,7 +685,7 @@ Consulte [DestroyWindow](/windows/win32/api/winuser/nf-winuser-destroywindow) no
 
 Ele não destrói o próprio objeto `CWindow`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#5](../../atl/codesnippet/cpp/cwindow-class_5.cpp)]
 
@@ -701,7 +701,7 @@ HWND Detach() throw();
 
 O HWND associado ao objeto `CWindow`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#6](../../atl/codesnippet/cpp/cwindow-class_6.cpp)]
 
@@ -815,7 +815,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE) throw();
 
 Consulte [EnableWindow](/windows/win32/api/winuser/nf-winuser-enablewindow) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#7](../../atl/codesnippet/cpp/cwindow-class_7.cpp)]
 
@@ -831,7 +831,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint) throw();
 
 Consulte [EndPaint](/windows/win32/api/winuser/nf-winuser-endpaint) na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#2](../../atl/codesnippet/cpp/cwindow-class_2.cpp)]
 
@@ -859,7 +859,7 @@ BOOL GetClientRect(LPRECT lpRect) const throw();
 
 Consulte [GetClientRect](/windows/win32/api/winuser/nf-winuser-getclientrect) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#8](../../atl/codesnippet/cpp/cwindow-class_8.cpp)]
 
@@ -875,7 +875,7 @@ HDC GetDC() throw();
 
 Consulte [GetDC](/windows/win32/api/winuser/nf-winuser-getdc) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#9](../../atl/codesnippet/cpp/cwindow-class_9.cpp)]
 
@@ -899,7 +899,7 @@ Localiza a janela descendente especificada pelo identificador fornecido.
 HWND GetDescendantWindow(int nID) const throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 no O identificador da janela descendente a ser recuperada.
@@ -923,7 +923,7 @@ HRESULT GetDlgControl(
     void** ppCtrl) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 no A ID de recurso do controle que está sendo recuperado.
@@ -965,7 +965,7 @@ HRESULT GetDlgHost(
     void** ppHost) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 no A ID de recurso do controle que está sendo recuperado.
@@ -1050,7 +1050,7 @@ Os estilos estendidos da janela.
 
 Para recuperar os estilos de janela regulares, chame [GetStyle](#getstyle).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#10](../../atl/codesnippet/cpp/cwindow-class_10.cpp)]
 
@@ -1086,7 +1086,7 @@ Recupera o identificador para o ícone grande ou pequeno da janela.
 HICON GetIcon(BOOL bBigIcon = TRUE) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bBigIcon*<br/>
 no Se for TRUE (o valor padrão), o método retornará o ícone grande. Caso contrário, ele retornará o ícone pequeno.
@@ -1159,7 +1159,7 @@ HWND GetParent() const throw();
 
 Consulte [GetParent](/windows/win32/api/winuser/nf-winuser-getparent) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#11](../../atl/codesnippet/cpp/cwindow-class_11.cpp)]
 
@@ -1218,7 +1218,7 @@ Os estilos da janela.
 
 Para recuperar os estilos de janela estendidos, chame [GetExStyle](#getexstyle).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#12](../../atl/codesnippet/cpp/cwindow-class_12.cpp)]
 
@@ -1270,7 +1270,7 @@ HWND GetTopWindow() const throw();
 
 Consulte [GetTopWindow](/windows/win32/api/winuser/nf-winuser-gettopwindow) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#13](../../atl/codesnippet/cpp/cwindow-class_13.cpp)]
 
@@ -1334,7 +1334,7 @@ HDC GetWindowDC() throw();
 
 Consulte [GetWindowDC](/windows/win32/api/winuser/nf-winuser-getwindowdc) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#14](../../atl/codesnippet/cpp/cwindow-class_14.cpp)]
 
@@ -1398,7 +1398,7 @@ DWORD GetWindowProcessID() throw();
 
 Consulte [GetWindowThreadProcessID](/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#15](../../atl/codesnippet/cpp/cwindow-class_15.cpp)]
 
@@ -1436,7 +1436,7 @@ BOOL GetWindowText(BSTR& bstrText) throw();
 int GetWindowText(CSimpleString& strText) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszStringBuf*<br/>
 Um buffer no qual gravar o texto da janela.
@@ -1484,7 +1484,7 @@ DWORD GetWindowThreadID() throw();
 
 Consulte [GetWindowThreadProcessID](/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#16](../../atl/codesnippet/cpp/cwindow-class_16.cpp)]
 
@@ -1524,7 +1524,7 @@ BOOL HideCaret() throw();
 
 Consulte [HideCaret](/windows/win32/api/winuser/nf-winuser-hidecaret) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#17](../../atl/codesnippet/cpp/cwindow-class_17.cpp)]
 
@@ -1557,7 +1557,7 @@ Consulte [InvalidateRect](/windows/win32/api/winuser/nf-winuser-invalidaterect) 
 
 Passa NULL para o parâmetro `RECT` para a função do Win32 `InvalidateRect`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#18](../../atl/codesnippet/cpp/cwindow-class_18.cpp)]
 
@@ -1637,7 +1637,7 @@ BOOL IsIconic() const throw();
 
 Consulte [Isiconal](/windows/win32/api/winuser/nf-winuser-isiconic) na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#19](../../atl/codesnippet/cpp/cwindow-class_19.cpp)]
 
@@ -1665,7 +1665,7 @@ BOOL IsWindow() throw();
 
 Consulte [IsWindow](/windows/win32/api/winuser/nf-winuser-iswindow) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#20](../../atl/codesnippet/cpp/cwindow-class_20.cpp)]
 
@@ -1681,7 +1681,7 @@ BOOL IsWindowEnabled() const throw();
 
 Consulte [IsWindowEnabled](/windows/win32/api/winuser/nf-winuser-iswindowenabled) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#21](../../atl/codesnippet/cpp/cwindow-class_21.cpp)]
 
@@ -1697,7 +1697,7 @@ BOOL IsWindowVisible() const throw();
 
 Consulte [IsWindowVisible](/windows/win32/api/winuser/nf-winuser-iswindowvisible) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#22](../../atl/codesnippet/cpp/cwindow-class_22.cpp)]
 
@@ -1713,7 +1713,7 @@ BOOL IsWindowUnicode() throw();
 
 Consulte [IsWindowUnicode](/windows/win32/api/winuser/nf-winuser-iswindowunicode) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#23](../../atl/codesnippet/cpp/cwindow-class_23.cpp)]
 
@@ -1749,7 +1749,7 @@ Desabilita ou habilita o desenho na janela chamando a função Win32 [LockWindow
 BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Impeça*<br/>
 no Se for TRUE (o valor padrão), a janela será bloqueada. Caso contrário, ele será desbloqueado.
@@ -1806,7 +1806,7 @@ int MessageBox(
 
 Consulte [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#24](../../atl/codesnippet/cpp/cwindow-class_24.cpp)]
 
@@ -1821,7 +1821,7 @@ BOOL ModifyStyle(
     UINT nFlags = 0) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwRemove*<br/>
 no Especifica os estilos de janela a serem removidos durante a modificação do estilo.
@@ -1852,7 +1852,7 @@ Se *nFlags* for diferente de zero, `ModifyStyle` chamará a função do Win32 `S
 
 Para modificar os estilos estendidos de uma janela, chame [ModifyStyleEx](#modifystyleex).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#25](../../atl/codesnippet/cpp/cwindow-class_25.cpp)]
 
@@ -1867,7 +1867,7 @@ BOOL ModifyStyleEx(
     UINT nFlags = 0) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwRemove*<br/>
 no Especifica os estilos estendidos a serem removidos durante a modificação do estilo.
@@ -1898,7 +1898,7 @@ Se *nFlags* for diferente de zero, `ModifyStyleEx` chamará a função do Win32 
 
 Para modificar o Windows usando estilos de janela regulares, chame [ModifyStyle](#modifystyle).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#26](../../atl/codesnippet/cpp/cwindow-class_26.cpp)]
 
@@ -1982,7 +1982,7 @@ Consulte a [mensagem de ismessage](/windows/win32/api/winuser/nf-winuser-postmes
 
 Retorna sem esperar que o thread processe a mensagem.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#27](../../atl/codesnippet/cpp/cwindow-class_27.cpp)]
 
@@ -2006,7 +2006,7 @@ Envia uma mensagem de [WM_PRINT](/windows/win32/gdi/wm-print) à janela para sol
 void Print(HDC hDC, DWORD dwFlags) const throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hDC*<br/>
 no O identificador para um contexto de dispositivo.
@@ -2034,7 +2034,7 @@ Envia uma mensagem de [WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient) à jan
 void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hDC*<br/>
 no O identificador para um contexto de dispositivo.
@@ -2079,7 +2079,7 @@ throw()
 
 Consulte [RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#28](../../atl/codesnippet/cpp/cwindow-class_28.cpp)]
 
@@ -2095,7 +2095,7 @@ int ReleaseDC(HDC hDC);
 
 Consulte [ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#9](../../atl/codesnippet/cpp/cwindow-class_9.cpp)]
 
@@ -2110,7 +2110,7 @@ BOOL ResizeClient(
     BOOL bRedraw = FALSE) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nWidth*<br/>
 Nova largura da janela em pixels.
@@ -2208,7 +2208,7 @@ static LRESULT SendMessage(
 
 Consulte [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#29](../../atl/codesnippet/cpp/cwindow-class_29.cpp)]
 
@@ -2224,7 +2224,7 @@ void SendMessageToDescendants(
     BOOL bDeep = TRUE) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *message*<br/>
 no A mensagem a ser enviada.
@@ -2271,7 +2271,7 @@ HWND SetActiveWindow() throw();
 
 Consulte [SetActiveWindow](/windows/win32/api/winuser/nf-winuser-setactivewindow) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#30](../../atl/codesnippet/cpp/cwindow-class_30.cpp)]
 
@@ -2307,7 +2307,7 @@ Define o identificador da janela para o valor especificado.
 int SetDlgCtrlID(int nID) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 no O novo valor a ser definido para o identificador da janela.
@@ -2355,7 +2355,7 @@ HWND SetFocus() throw();
 
 Consulte [SetFocus](/windows/win32/api/winuser/nf-winuser-setfocus) na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#31](../../atl/codesnippet/cpp/cwindow-class_31.cpp)]
 
@@ -2367,7 +2367,7 @@ Altera a fonte atual da janela enviando uma mensagem de [WM_SETFONT](/windows/wi
 void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hFont*<br/>
 no O identificador para a nova fonte.
@@ -2383,7 +2383,7 @@ Associa uma tecla de acesso à janela enviando uma mensagem de WM_SETHOTKEY.
 int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *wVirtualKeyCode*<br/>
 no O código de chave virtual da tecla de acesso. Para obter uma lista de códigos de chave virtual padrão, consulte WinUser. h.
@@ -2403,7 +2403,7 @@ Define o ícone grande ou pequeno da janela para o ícone identificado por *HICO
 HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hIcon*<br/>
 no O identificador para um novo ícone.
@@ -2443,7 +2443,7 @@ HWND SetParent(HWND hWndNewParent) throw();
 
 Consulte [setpai](/windows/win32/api/winuser/nf-winuser-setparent) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#32](../../atl/codesnippet/cpp/cwindow-class_32.cpp)]
 
@@ -2455,7 +2455,7 @@ Define ou limpa o sinalizador de redesenho enviando uma mensagem de [WM_SETREDRA
 void SetRedraw(BOOL bRedraw = TRUE) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bRedraw*<br/>
 no Especifica o estado do sinalizador de redesenho. Se TRUE (o valor padrão), o sinalizador de redesenho será definido; Se for FALSE, o sinalizador será limpo.
@@ -2464,7 +2464,7 @@ no Especifica o estado do sinalizador de redesenho. Se TRUE (o valor padrão), o
 
 Chame `SetRedraw` para permitir que as alterações sejam redesenhadas ou para impedir que as alterações sejam redesenhadas.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#33](../../atl/codesnippet/cpp/cwindow-class_33.cpp)]
 
@@ -2631,7 +2631,7 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 
 Consulte [SetWindowText](/windows/win32/api/winuser/nf-winuser-setwindowtextw) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#34](../../atl/codesnippet/cpp/cwindow-class_34.cpp)]
 
@@ -2659,7 +2659,7 @@ BOOL ShowCaret() throw();
 
 Veja o [cuidado](/windows/win32/api/winuser/nf-winuser-showcaret) na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#35](../../atl/codesnippet/cpp/cwindow-class_35.cpp)]
 
@@ -2699,7 +2699,7 @@ BOOL ShowWindow(int nCmdShow) throw();
 
 Consulte [conwindow](/windows/win32/api/winuser/nf-winuser-showwindow) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#36](../../atl/codesnippet/cpp/cwindow-class_36.cpp)]
 
@@ -2727,7 +2727,7 @@ BOOL UpdateWindow() throw();
 
 Consulte [UpdateWindow](/windows/win32/api/winuser/nf-winuser-updatewindow) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#37](../../atl/codesnippet/cpp/cwindow-class_37.cpp)]
 
@@ -2770,6 +2770,6 @@ BOOL WinHelp(
 
 Consulte o [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) no SDK do Windows.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral da classe](../../atl/atl-class-overview.md)

@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
 ms.openlocfilehash: 4977cbe0b749724f999d6d7089d46f12d1e2963e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866418"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421481"
 ---
 # <a name="ctoolbar-class"></a>Classe CToolBar
 
@@ -69,7 +69,7 @@ class CToolBar : public CControlBar
 |----------|-----------------|
 |[CToolBar::CToolBar](#ctoolbar)|Constrói um objeto `CToolBar`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|DESCRIÇÃO|
 |----------|-----------------|
@@ -167,7 +167,7 @@ Essa função de membro retorna o índice do primeiro botão da barra de ferrame
 int CommandToIndex(UINT nIDFind) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDFind*<br/>
 ID de comando de um botão da barra de ferramentas.
@@ -187,7 +187,7 @@ virtual BOOL Create(
     UINT nID = AFX_IDW_TOOLBAR);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParentWnd*<br/>
 Ponteiro para a janela que é o pai da barra de ferramentas.
@@ -245,7 +245,7 @@ virtual BOOL CreateEx(
     UINT nID = AFX_IDW_TOOLBAR);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParentWnd*<br/>
 Ponteiro para a janela que é o pai da barra de ferramentas.
@@ -300,7 +300,7 @@ void GetButtonInfo(
     int& iImage) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Índice do botão da barra de ferramentas ou do separador cujas informações serão recuperadas.
@@ -328,7 +328,7 @@ Chame essa função de membro para recuperar o estilo de um botão ou separador 
 UINT GetButtonStyle(int nIndex) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 O índice do botão da barra de ferramentas ou do estilo do separador a ser recuperado.
@@ -353,7 +353,7 @@ void GetButtonText(
     CString& rString) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Índice do texto a ser recuperado.
@@ -377,7 +377,7 @@ Essa função de membro retorna a ID de comando do botão ou separador especific
 UINT GetItemID(int nIndex) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Índice do item cuja ID deve ser recuperada.
@@ -400,7 +400,7 @@ virtual void GetItemRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Índice do item (botão ou separador) cujas coordenadas de retângulo devem ser recuperadas.
@@ -449,7 +449,7 @@ BOOL LoadBitmap(LPCTSTR lpszResourceName);
 BOOL LoadBitmap(UINT nIDResource);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszResourceName*<br/>
 Ponteiro para o nome do recurso do bitmap a ser carregado.
@@ -477,7 +477,7 @@ BOOL LoadToolBar(LPCTSTR lpszResourceName);
 BOOL LoadToolBar(UINT nIDResource);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszResourceName*<br/>
 Ponteiro para o nome do recurso da barra de ferramentas a ser carregada.
@@ -505,7 +505,7 @@ Chame essa função de membro para definir a imagem de bitmap para a barra de fe
 BOOL SetBitmap(HBITMAP hbmImageWell);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hbmImageWell*<br/>
 Identificador de uma imagem de bitmap associada a uma barra de ferramentas.
@@ -530,7 +530,7 @@ void SetButtonInfo(
     int iImage);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Índice de base zero do botão ou separador para o qual as informações serão definidas.
@@ -579,7 +579,7 @@ BOOL SetButtons(
     int nIDCount);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpIDArray*<br/>
 Ponteiro para uma matriz de IDs de comando. Pode ser nulo para alocar botões vazios.
@@ -609,7 +609,7 @@ void SetButtonStyle(
     UINT nStyle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Índice do botão ou separador cujas informações serão definidas.
@@ -652,7 +652,7 @@ BOOL SetButtonText(
     LPCTSTR lpszText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Índice do botão cujo texto deve ser definido.
@@ -676,7 +676,7 @@ Essa função de membro define a altura da barra de ferramentas para o valor, em
 void SetHeight(int cyHeight);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *cyHeight*<br/>
 A altura em pixels da barra de ferramentas.
@@ -697,7 +697,7 @@ void SetSizes(
     SIZE sizeImage);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *sizeButton*<br/>
 O tamanho em pixels de cada botão.
@@ -715,7 +715,7 @@ Chame essa função de membro somente para barras de ferramentas que não seguem
 
 [!code-cpp[NVC_MFCListView#8](../../atl/reference/codesnippet/cpp/ctoolbar-class_4.cpp)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de CTRLBARS do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Exemplo de DLGCBR32 do MFC](../../overview/visual-cpp-samples.md)<br/>

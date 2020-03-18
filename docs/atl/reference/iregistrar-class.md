@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 ms.openlocfilehash: e347bdba1656a53cd705123a26650dad50d3892f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857126"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417610"
 ---
 # <a name="iregistrar-interface"></a>Interface IRegistrar
 
@@ -40,7 +40,7 @@ Consulte o tópico [usando parâmetros substituíveis (o pré-processador do reg
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[IRegistrar:: ResourceRegisterSz](#resourceregistersz)|Registra o recurso. |
 |[IRegistrar:: ResourceUnregisterSz](#resourceunregistersz)| Cancela o registro do recurso.|
@@ -51,7 +51,7 @@ Consulte o tópico [usando parâmetros substituíveis (o pré-processador do reg
 |[IRegistrar:: ResourceRegister](#resourceregister)|Registra o recurso.|
 |[IRegistrar:: ResourceUnregister](#resourceunregister)|Cancela o registro do recurso.|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlifase. h
 
@@ -135,7 +135,7 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Usando parâmetros substituíveis (pré-processador do Registrador)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>

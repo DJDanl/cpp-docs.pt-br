@@ -11,7 +11,6 @@ f1_keywords:
 - CStreamRowset.CStreamRowset
 - ATL.CStreamRowset.CStreamRowset
 - ATL::CStreamRowset::CStreamRowset
-- CStreamRowset
 - CStreamRowset<TAccessor>::CStreamRowset
 - ATL::CStreamRowset<TAccessor>::CStreamRowset
 - CStreamRowset<TAccessor>.Close
@@ -27,16 +26,16 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: b566ddab89d2198e3f6b24eb9a20c60747749d1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a0e67ff1e800ff0f838b863eaaf839d4456ed82
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368663"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441082"
 ---
 # <a name="cstreamrowset-class"></a>Classe CStreamRowset
 
-Usado em uma `CCommand` ou `CTable` declaração.
+Usado em uma declaração de `CCommand` ou `CTable`.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -50,22 +49,22 @@ class CStreamRowset
 *TAccessor*<br/>
 Uma classe de acessador.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** atldbcli.h
+**Cabeçalho:** atldbcli. h
 
 ## <a name="members"></a>Membros
 
-### <a name="methods"></a>Métodos
+### <a name="methods"></a>{1&gt;Métodos&lt;1}
 
 |||
 |-|-|
-|[CStreamRowset](#cstreamrowset)|Construtor. Cria uma instância e inicializa o `CStreamRowset` objeto.|
-|[Fechar](#close)|Versões do [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) ponteiro de interface na classe.|
+|[CStreamRowset](#cstreamrowset)|Construtor. Cria uma instância e inicializa o objeto `CStreamRowset`.|
+|[Fechar](#close)|Libera o ponteiro de interface [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) na classe.|
 
 ## <a name="remarks"></a>Comentários
 
-Use `CStreamRowset` em seu `CCommand` ou `CTable` declaração, por exemplo:
+Use `CStreamRowset` em sua declaração de `CCommand` ou `CTable`, por exemplo:
 
 [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]
 
@@ -73,18 +72,18 @@ ou
 
 [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]
 
-`ICommand::Execute` Retorna um `ISequentialStream` ponteiro, que é armazenado em `m_spStream`. Você, em seguida, usar o `Read` método para recuperar os dados (cadeia de caracteres Unicode) em formato XML. Por exemplo:
+`ICommand::Execute` retorna um ponteiro de `ISequentialStream`, que é armazenado em `m_spStream`. Em seguida, você usa o método `Read` para recuperar os dados (cadeia de caracteres Unicode) no formato XML. Por exemplo:
 
 [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]
 
-SQL Server 2000 executa o formatação de XML e retornará todas as colunas e todas as linhas do conjunto de linhas como uma cadeia de caracteres XML.
+SQL Server 2000 executa a formatação XML e retornará todas as colunas e todas as linhas do conjunto de linhas como uma cadeia de caracteres XML.
 
 > [!NOTE]
->  Esse recurso funciona apenas com o SQL Server 2000.
+>  Este recurso funciona apenas com SQL Server 2000.
 
-## <a name="cstreamrowset"></a> CStreamRowset::CStreamRowset
+## <a name="cstreamrowset"></a>CStreamRowset::CStreamRowset
 
-Cria uma instância e inicializa o `CStreamRowset` objeto.
+Cria uma instância e inicializa o objeto `CStreamRowset`.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -92,9 +91,9 @@ Cria uma instância e inicializa o `CStreamRowset` objeto.
 CStreamRowset();
 ```
 
-## <a name="close"></a> CStreamRowset::Close
+## <a name="close"></a>CStreamRowset:: fechar
 
-Versões do [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) ponteiro de interface na classe.
+Libera o ponteiro de interface [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) na classe.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -104,5 +103,5 @@ void Close();
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

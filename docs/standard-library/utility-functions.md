@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::move [C++]
 - std::swap [C++]
 ms.openlocfilehash: 723b077500b9b741445efcd8574fb26cd53e5fc7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854850"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422496"
 ---
 # <a name="ltutilitygt-functions"></a>Funções &lt;utility&gt;
 
@@ -49,7 +49,7 @@ template <class T, class Other = T>
     T exchange(T& val, Other&& new_val)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor*\
 O objeto que receberá o valor de new_val.
@@ -107,7 +107,7 @@ template <class Type>    // accepts everything else
     constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Tipo*\
 O tipo do valor passado em *ARG*, que pode ser diferente do tipo de *ARG*. Geralmente determinado por um argumento de modelo da função de encaminhamento.
@@ -184,7 +184,7 @@ template <class T2, class T1>
     constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Index*\
 O índice de base 0 do elemento escolhido.
@@ -281,7 +281,7 @@ template <class T, class U>
     pair<T, U> make_pair(T&& Val1, U&& Val2);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *val1*
 O valor que inicializa o primeiro elemento de `pair`.
@@ -322,7 +322,7 @@ template <class Type>
     constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Tipo*\
 Um tipo deduzido do tipo de argumento passado em *ARG*, junto com as regras de recolhimento de referência.
@@ -361,7 +361,7 @@ template <class T, class U>
     void swap(pair<T, U>& left, pair<T, U>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo ou do tipo `pair`.

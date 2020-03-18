@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 8b216941837cd79492aa6cb707481073b5321bce
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 48ffe6f124b91ee8ad60452f26d895bc2698779b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866588"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447311"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funções da troca de dados da caixa de diálogo para CRecordView e CDaoRecordView
 
@@ -68,7 +68,7 @@ void AFXAPI DDX_FieldCBIndex(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
@@ -90,11 +90,11 @@ Use a primeira versão se você estiver trabalhando com as classes baseadas em O
 
 Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md). Para obter exemplos e mais informações sobre campo DDX para os campos [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) , consulte o artigo [registros de exibições](../../data/record-views-mfc-data-access.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [DDX_FieldText](#ddx_fieldtext) para obter um exemplo de DDX_Field geral. O exemplo seria semelhante para `DDX_FieldCBIndex`.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** AFXDAO. h
 
@@ -116,7 +116,7 @@ void AFXAPI DDX_FieldCBString(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
@@ -138,11 +138,11 @@ Use a primeira versão se você estiver trabalhando com as classes baseadas em O
 
 Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md). Para obter exemplos e mais informações sobre campo DDX para os campos [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) , consulte o artigo [registros de exibições](../../data/record-views-mfc-data-access.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [DDX_FieldText](#ddx_fieldtext) para obter um exemplo de DDX_Field geral. O exemplo inclui uma chamada para `DDX_FieldCBString`.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
   **Cabeçalho** AFXDAO. h
 
@@ -164,7 +164,7 @@ void AFXAPI DDX_FieldCBStringExact(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
@@ -186,11 +186,11 @@ Use a primeira versão se você estiver trabalhando com as classes baseadas em O
 
 Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md). Para obter exemplos e mais informações sobre campo DDX para os campos [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) , consulte o artigo [registros de exibições](../../data/record-views-mfc-data-access.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [DDX_FieldText](#ddx_fieldtext) para obter um exemplo de DDX_Field geral. Chamadas para `DDX_FieldCBStringExact` seriam semelhantes.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
   **Cabeçalho** AFXDAO. h
 
@@ -212,7 +212,7 @@ void AFXAPI DDX_FieldCheck(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
@@ -232,7 +232,7 @@ Quando `DDX_FieldCheck` é chamado, o *valor* é definido como o estado atual do
 
 Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
   **Cabeçalho** AFXDAO. h
 
@@ -254,7 +254,7 @@ void AFXAPI DDX_FieldLBIndex(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
@@ -276,11 +276,11 @@ Use a primeira versão se você estiver trabalhando com as classes baseadas em O
 
 Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md). Para obter exemplos e mais informações sobre campo DDX para os campos [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) , consulte o artigo [registros de exibições](../../data/record-views-mfc-data-access.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [DDX_FieldText](#ddx_fieldtext) para obter um exemplo de DDX_Field geral.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
   **Cabeçalho** AFXDAO. h
 
@@ -302,7 +302,7 @@ void AFXAPI DDX_FieldLBString(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
@@ -324,11 +324,11 @@ Use a primeira versão se você estiver trabalhando com as classes baseadas em O
 
 Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md). Para obter exemplos e mais informações sobre campo DDX para os campos [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) , consulte o artigo [registros de exibições](../../data/record-views-mfc-data-access.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [DDX_FieldText](#ddx_fieldtext) para obter um exemplo de DDX_Field geral. Chamadas para `DDX_FieldLBString` seriam semelhantes.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
   **Cabeçalho** AFXDAO. h
 
@@ -350,7 +350,7 @@ void AFXAPI DDX_FieldLBStringExact(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
@@ -372,11 +372,11 @@ Use a primeira versão se você estiver trabalhando com as classes baseadas em O
 
 Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md). Para obter exemplos e mais informações sobre campo DDX para os campos [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) , consulte o artigo [registros de exibições](../../data/record-views-mfc-data-access.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [DDX_FieldText](#ddx_fieldtext) para obter um exemplo de DDX_Field geral. Chamadas para `DDX_FieldLBStringExact` seriam semelhantes.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
   **Cabeçalho** AFXDAO. h
 
@@ -398,7 +398,7 @@ void AFXAPI DDX_FieldRadio(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
@@ -420,11 +420,11 @@ Use a primeira versão se você estiver trabalhando com as classes baseadas em O
 
 Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md). Para obter exemplos e mais informações sobre campo DDX para os campos [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) , consulte o artigo [registros de exibições](../../data/record-views-mfc-data-access.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [DDX_FieldText](#ddx_fieldtext) para obter um exemplo de DDX_Field geral. Chamadas para `DDX_FieldRadio` seriam semelhantes.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
   **Cabeçalho** AFXDAO. h
 
@@ -446,7 +446,7 @@ void AFXAPI DDX_FieldScroll(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
@@ -468,15 +468,16 @@ Use a primeira versão se você estiver trabalhando com as classes baseadas em O
 
 Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md). Para obter exemplos e mais informações sobre campo DDX para os campos [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) , consulte o artigo [registros de exibições](../../data/record-views-mfc-data-access.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [DDX_FieldText](#ddx_fieldtext) para obter um exemplo de DDX_Field geral. Chamadas para `DDX_FieldScroll` seriam semelhantes.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
   **Cabeçalho** AFXDAO. h
 
-  ## <a name="ddx_fieldslider"></a>  DDX_FieldSlider
+## <a name="ddx_fieldslider"></a>  DDX_FieldSlider
+
 A função `DDX_FieldSlider` sincroniza a posição de Thumb de um controle deslizante em uma exibição de registro e um membro de dados de campo **int** de um conjunto de registros associado à exibição de registro (ou com qualquer variável inteira escolhida para mapeá-lo).
 
 ### <a name="syntax"></a>Sintaxe
@@ -495,7 +496,7 @@ void AFXAPI DDX_FieldSlider(
    CDaoRecordset* pRecordset );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto [CDataExchange](cdataexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
@@ -519,11 +520,11 @@ Use a primeira substituição da função se você estiver trabalhando com as cl
 
 Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../dialog-data-exchange-and-validation.md). Para obter exemplos e mais informações sobre campo DDX para `CRecordView` e `CDaoRecordView` campos, consulte [exibições de registro](../../data/record-views-mfc-data-access.md). Para obter informações sobre controles deslizantes, consulte [usando CSliderCtrl](../using-csliderctrl.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [DDX_FieldText](#ddx_fieldtext) para obter um exemplo de DDX_Field geral. Chamadas para `DDX_FieldSlider` seriam semelhantes.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** AFXDAO. h
 
@@ -641,7 +642,7 @@ void AFXAPI DDX_FieldText(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pDX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . A estrutura fornece esse objeto para estabelecer o contexto da troca de dados, incluindo sua direção.
@@ -663,16 +664,16 @@ Use as versões com parâmetros [CRecordset](../../mfc/reference/crecordset-clas
 
 Para obter mais informações sobre o campo DDX, consulte a [caixa de diálogo troca de dados e validação](../../mfc/dialog-data-exchange-and-validation.md). Para obter exemplos e mais informações sobre campo DDX para os campos [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) , consulte o artigo [registros de exibições](../../data/record-views-mfc-data-access.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 A função `DoDataExchange` a seguir para um [CRecordView](../../mfc/reference/crecordview-class.md) contém chamadas de função `DDX_FieldText` para três tipos de dados: `IDC_COURSELIST` é uma caixa de combinação; os outros dois controles são caixas de edição. Para a programação do DAO, o parâmetro *m_pSet* é um ponteiro para um [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
 
 [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
   **Cabeçalho** AFXDAO. h
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Macros e globais](mfc-macros-and-globals.md)

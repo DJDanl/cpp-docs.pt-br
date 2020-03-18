@@ -20,7 +20,7 @@ f1_keywords:
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetTextHeight
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetWICFactory
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetWriteFactory
-- AFXGLOBALS/AFX_GLOBAL_DATA::IsD2DInitialized
+- AFXGLOBALS/AFX_GLOBAL_DATA::InitD2D
 - AFXGLOBALS/AFX_GLOBAL_DATA::Is32BitIcons
 - AFXGLOBALS/AFX_GLOBAL_DATA::IsD2DInitialized
 - AFXGLOBALS/AFX_GLOBAL_DATA::IsDwmCompositionEnabled
@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: dda3056cbed18ef93e09b52cd9d0a6b00e1db177
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 66cfb66e091d487ea9d3f563b7b6bbb9ca1ea928
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869910"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447329"
 ---
 # <a name="afx_global_data-structure"></a>Estrutura AFX_GLOBAL_DATA
 
@@ -100,7 +100,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA:: GetTextHeight](#gettextheight)|Recupera a altura dos caracteres de texto na fonte atual.|
 |[AFX_GLOBAL_DATA:: GetWICFactory](#getwicfactory)|Retorna um ponteiro para a interface de `IWICImagingFactory` que é armazenada nos dados globais. Se a interface não for inicializada, ela será criada e terá os parâmetros padrão.|
 |[AFX_GLOBAL_DATA:: GetWriteFactory](#getwritefactory)|Retorna um ponteiro para a interface de `IDWriteFactory` que é armazenada nos dados globais. Se a interface não for inicializada, ela será criada e terá os parâmetros padrão.|
-|[AFX_GLOBAL_DATA:: IsD2DInitialized](#isd2dinitialized)|Inicializa as fábricas `D2D`, `DirectWrite`e `WIC`. Chame esse método antes que a janela principal seja inicializada.|
+|[AFX_GLOBAL_DATA:: InitD2D](#initd2d)|Inicializa as fábricas `D2D`, `DirectWrite`e `WIC`. Chame esse método antes que a janela principal seja inicializada.|
 |[AFX_GLOBAL_DATA:: Is32BitIcons](#is32biticons)|Indica se há suporte para ícones predefinidos de 32 bits.|
 |[AFX_GLOBAL_DATA:: IsD2DInitialized](#isd2dinitialized)|Determina se o `D2D` foi inicializado.|
 |[AFX_GLOBAL_DATA:: IsDwmCompositionEnabled](#isdwmcompositionenabled)|Fornece uma maneira simples de chamar o método [DwmIsCompositionEnabled](/windows/win32/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) do Windows.|
@@ -535,6 +535,7 @@ TRUE se a composição de [Gerenciador de janelas da área de trabalho](/windows
 ## <a name="ishighcontrastmode"></a>AFX_GLOBAL_DATA:: IsHighContrastMode
 
 Indica se as imagens são exibidas no momento em alto contraste.
+
 ```
 BOOL IsHighContrastMode() const;
 ```

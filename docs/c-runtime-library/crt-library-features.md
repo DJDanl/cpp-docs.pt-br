@@ -1,8 +1,6 @@
 ---
 title: Funcionalidades da biblioteca CRT
 ms.date: 08/20/2018
-f1_keywords:
-- c.runtime
 helpviewer_keywords:
 - MSVCR71.dll
 - libraries [C++], multithreaded
@@ -18,12 +16,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: b9a2691d492a277ffe0018b6e86b00cd245840ed
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: HT
+ms.openlocfilehash: a350e2c45d9ccf83fb09a76f43b63a6b17273cff
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58767685"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438536"
 ---
 # <a name="crt-library-features"></a>Funcionalidades da biblioteca CRT
 
@@ -37,7 +35,7 @@ A partir do Visual Studio 2015, o CRT foi refatorado em novos binários. O UCRT 
 
 A tabela a seguir lista as bibliotecas que implementam o UCRT.
 
-|Biblioteca|DLL associada|Características|Opção|Diretivas do pré-processador|
+|Biblioteca|DLL associada|Características|{1&gt;Opção&lt;1}|Diretivas do pré-processador|
 |-------------|--------------------|---------------------|------------|-----------------------------|
 |libucrt.lib|Nenhum|Vincula estaticamente o UCRT no código.|**/MT**|_MT|
 |libucrtd.lib|Nenhum|Versão de depuração do UCRT para vinculação estática. Não redistribuível.|**/MTd**|_DEBUG, _MT|
@@ -48,7 +46,7 @@ A biblioteca vcruntime contém códigos específicos à implementação do CRT n
 
 Esta tabela lista as bibliotecas que implementam a biblioteca vcruntime.
 
-|Biblioteca|DLL associada|Características|Opção|Diretivas do pré-processador|
+|Biblioteca|DLL associada|Características|{1&gt;Opção&lt;1}|Diretivas do pré-processador|
 |-------------|--------------------|---------------------|------------|-----------------------------|
 |libvcruntime.lib|Nenhum|Vinculada estaticamente no código.|**/MT**|_MT|
 |libvcruntimed.lib|Nenhum|Versão de depuração para vinculação estática. Não redistribuível.|**/MTd**|_MT, _DEBUG|
@@ -56,13 +54,13 @@ Esta tabela lista as bibliotecas que implementam a biblioteca vcruntime.
 |vcruntimed.lib|vcruntime\<version>d.dll|Biblioteca de importação de DLL do vcruntime de Depuração. Não redistribuível.|**/MDd**|_DEBUG, _MT, _DLL|
 
 > [!NOTE]
-> Quando a refatoração do UCRT ocorreu, as funções do Tempo de Execução de Simultaneidade foram movidas para concrt140.dll, que foi adicionado ao pacote redistribuível do C++. Essa DLL é necessária para os contêineres e algoritmos paralelos do C++, como `concurrency::parallel_for`. Além disso, a Biblioteca padrão do C++ requer que essa DLL no Windows XP dê suporte a primitivas de sincronização, porque o Windows XP não tem variáveis de condição.
+> Quando a refatoração do UCRT ocorreu, as funções do Runtime de Simultaneidade foram movidas para concrt140.dll, que foi adicionado ao pacote redistribuível do C++. Essa DLL é necessária para os contêineres e algoritmos paralelos do C++, como `concurrency::parallel_for`. Além disso, a Biblioteca padrão do C++ requer que essa DLL no Windows XP dê suporte a primitivas de sincronização, porque o Windows XP não tem variáveis de condição.
 
 O código que inicializa o CRT está em uma das várias bibliotecas, com base no fato de a biblioteca CRT ser vinculada estática ou dinamicamente ou de o código ser nativo, gerenciado ou misto. Esse código manipula a inicialização, a inicialização interna de dados por thread e o encerramento do CRT. Ele é específico à versão do compilador utilizada. Essa biblioteca é sempre vinculada estaticamente, mesmo ao usar um UCRT vinculado dinamicamente.
 
 Esta tabela lista as bibliotecas que implementam a inicialização e o encerramento do CRT.
 
-|Biblioteca|Características|Opção|Diretivas do pré-processador|
+|Biblioteca|Características|{1&gt;Opção&lt;1}|Diretivas do pré-processador|
 |-------------|---------------------|------------|-----------------------------|
 |libcmt.lib|Vincula estaticamente a inicialização nativa do CRT no código.|**/MT**|_MT|
 |libcmtd.lib|Vincula estaticamente a versão de Depuração da inicialização nativa do CRT. Não redistribuível.|**/MTd**|_DEBUG, _MT|
@@ -75,7 +73,7 @@ Esta tabela lista as bibliotecas que implementam a inicialização e o encerrame
 
 Se você vincular o programa por meio da linha de comando sem uma opção do compilador que especifica uma biblioteca em tempo de execução C, o vinculador usará as bibliotecas CRT vinculadas estaticamente: libcmt.lib, libvcruntime.lib e libucrt.lib.
 
-O uso do CRT vinculado estaticamente indica que todas as informações de estado salvas pela biblioteca em tempo de execução C serão locais para essa instância do CRT. Por exemplo, se você usar [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](../c-runtime-library/reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) ao usar um CRT vinculado estaticamente, a posição do analisador `strtok` não estará relacionada ao estado `strtok` usado em código no mesmo processo (mas em outra DLL ou outro EXE) que está vinculado a outra instância do CRT estático. Por outro lado, o CRT vinculado dinamicamente compartilha o estado de todo o código em um processo que está vinculado dinamicamente ao CRT. Essa preocupação não se aplicará se você usar as novas versões mais seguras dessas funções; por exemplo, `strtok_s` não apresenta esse problema.
+O uso do CRT vinculado estaticamente indica que todas as informações de estado salvas pela biblioteca de runtime C serão locais para essa instância do CRT. Por exemplo, se você usar [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](../c-runtime-library/reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) ao usar um CRT vinculado estaticamente, a posição do analisador `strtok` não estará relacionada ao estado `strtok` usado em código no mesmo processo (mas em outra DLL ou outro EXE) que está vinculado a outra instância do CRT estático. Por outro lado, o CRT vinculado dinamicamente compartilha o estado de todo o código em um processo que está vinculado dinamicamente ao CRT. Essa preocupação não se aplicará se você usar as novas versões mais seguras dessas funções; por exemplo, `strtok_s` não apresenta esse problema.
 
 Como uma DLL compilada por meio da vinculação a um CRT estático terá seu próprio estado de CRT, não é recomendável vincular estaticamente ao CRT em uma DLL, a menos que as consequências dessa ação sejam especificamente desejadas e compreendidas. Por exemplo, se você chamar [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) em um executável que carrega a DLL vinculada a seu próprio CRT estático, as exceções de hardware geradas pelo código na DLL não serão capturadas pelo conversor, mas as exceções de hardware geradas pelo código no executável principal serão capturadas.
 
@@ -89,7 +87,7 @@ Essa versão do CRT não está em conformidade total com o padrão C99. Especifi
 
 ## <a name="c-standard-library"></a>Biblioteca Padrão C++
 
-|Biblioteca Padrão C++|Características|Opção|Diretivas do pré-processador|
+|Biblioteca Padrão C++|Características|{1&gt;Opção&lt;1}|Diretivas do pré-processador|
 |----------------------------|---------------------|------------|-----------------------------|
 |libcpmt.lib|Multi-threaded, vínculo estático|**/MT**|_MT|
 |msvcprt.lib|Multi-threaded, vínculo dinâmico (biblioteca de importação para MSVCP*versão*.dll)|**/MD**|_MT, _DLL|

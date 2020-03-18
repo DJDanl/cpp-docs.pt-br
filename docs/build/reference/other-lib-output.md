@@ -1,27 +1,25 @@
 ---
 title: Outra saída LIB
 ms.date: 11/04/2016
-f1_keywords:
-- Lib
 helpviewer_keywords:
 - output files, LIB
 ms.assetid: 656864a6-0b7a-4633-8dc6-ee3b1766d836
-ms.openlocfilehash: 1f0140d33a06a1bdb95df4a8c52aea1f84b3aca1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4152795c2f1cc2acbeb7a55d0d5ee3419fe6f789
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320234"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439168"
 ---
 # <a name="other-lib-output"></a>Outra saída LIB
 
-No modo padrão, você pode usar a opção /LIST para exibir informações sobre a biblioteca resultante. Você pode redirecionar essa saída para um arquivo.
+No modo padrão, você pode usar a opção/LIST para exibir informações sobre a biblioteca resultante. Você pode redirecionar essa saída para um arquivo.
 
-LIB exibe uma mensagem de copyright e de versão e ecoa arquivos de comando, a menos que a opção /NOLOGO é usada.
+LIB exibe uma mensagem de direitos autorais e de versão e ecoa arquivos de comando, a menos que a opção/NOLOGO seja usada.
 
-Quando você digita `lib` com nenhuma outra entrada LIB exibirá uma instrução de uso que resume as suas opções.
+Quando você digita `lib` sem outra entrada, LIB exibe uma instrução de uso que resume suas opções.
 
-Erro e aviso mensagens emitidas por LIB têm o formato LNK*nnnn*. As ferramentas LINK, DUMPBIN e EDITBIN também usam esse intervalo de erros. A Ajuda está disponível selecionando o erro na janela de saída e pressionando F1.
+Mensagens de erro e de aviso emitidas por LIB têm o formato LNK*nnnn*. As ferramentas LINK, DUMPBIN e EDITBIN também usam esse intervalo de erros. A ajuda está disponível selecionando o erro na janela saída e pressionando F1.
 
 ## <a name="see-also"></a>Consulte também
 

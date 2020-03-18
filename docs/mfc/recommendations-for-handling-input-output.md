@@ -1,5 +1,5 @@
 ---
-title: Recomendações para manusear entrada / saída
+title: Recomendações para tratamento de entrada-saída
 ms.date: 11/04/2016
 helpviewer_keywords:
 - I/O [MFC], about I/O
@@ -8,45 +8,45 @@ helpviewer_keywords:
 - I/O [MFC], options
 - I/O [MFC], file-based options
 ms.assetid: d664b175-3b4a-40c3-b14b-39de6b12e419
-ms.openlocfilehash: 760c213c3af7f9c75374f04e3dfc6b9499eade5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 956a92fd1761f61081afa2eb9c6cb35fe72b46d6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218558"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446902"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>Recomendações para manusear entrada/saída
 
-Se você usa e/s baseado em arquivo ou não depende de como você responder às perguntas na árvore de decisão a seguir:
+Se você usa e/s baseada em arquivo ou não depende de como você responde às perguntas na árvore de decisão a seguir:
 
-**Os dados primários em seu aplicativo residam em um arquivo de disco**
+**Os dados primários em seu aplicativo residem em um arquivo de disco**
 
 - Sim, os dados primários residem em um arquivo de disco:
 
-     **O aplicativo ler o arquivo inteiro na memória no arquivo abrir e gravar todo o arquivo de volta no disco no arquivo Salvar**
+     **O aplicativo lê o arquivo inteiro na memória no arquivo aberto e grava todo o arquivo de volta em disco no arquivo salvar**
 
-   - Sim: Esse é o caso de documento padrão MFC. Use `CDocument` serialização.
+   - Sim: esse é o caso de documento padrão do MFC. Use `CDocument` serialização.
 
-   - Não: Isso normalmente é o caso de atualização do arquivo de baseado em transação. Atualize o arquivo em uma base por transação e não precisa `CDocument` serialização.
+   - Não: normalmente, esse é o caso da atualização baseada em transações do arquivo. Você atualiza o arquivo por transação e não precisa de `CDocument` serialização.
 
 - Não, os dados primários não residem em um arquivo de disco:
 
-     **Os dados residir em uma fonte de dados ODBC**
+     **Os dados residem em uma fonte de dados ODBC**
 
    - Sim, os dados residem em uma fonte de dados ODBC:
 
-         Use MFC's database support. The standard MFC implementation for this case includes a `CDatabase` object, as discussed in the article [MFC: Using Database Classes with Documents and Views](../data/mfc-using-database-classes-with-documents-and-views.md). The application might also read and write an auxiliary file — the purpose of the application wizard "both a database view and file support" option. In this case, you'd use serialization for the auxiliary file.
+      Use o suporte a banco de dados do MFC. A implementação padrão do MFC para esse caso inclui um objeto `CDatabase`, conforme discutido no artigo [MFC: usando classes de banco de dados com documentos e exibições](../data/mfc-using-database-classes-with-documents-and-views.md). O aplicativo também pode ler e gravar um arquivo auxiliar – a finalidade do assistente de aplicativo "a opção de exibição de banco de dados e suporte a arquivos". Nesse caso, você usaria a serialização para o arquivo auxiliar.
 
-   - Não, os dados não residir em uma fonte de dados ODBC.
+   - Não, os dados não residem em uma fonte de dados ODBC.
 
-         Examples of this case: the data resides in a non-ODBC DBMS; the data is read via some other mechanism, such as OLE or DDE.
+      Exemplos desse caso: os dados residem em um DBMS não-ODBC; os dados são lidos por meio de algum outro mecanismo, como OLE ou DDE.
 
-         In such cases, you won't use serialization, and your application won't have Open and Save menu items. You might still want to use a `CDocument` as a home base, just as an MFC ODBC application uses the document to store `CRecordset` objects. But you won't use the framework's default File Open/Save document serialization.
+      Nesses casos, você não usará a serialização e seu aplicativo não terá itens de menu abrir e salvar. Talvez você ainda queira usar um `CDocument` como base inicial, assim como um aplicativo ODBC do MFC usa o documento para armazenar `CRecordset` objetos. Mas você não usará a serialização de documento de abrir/salvar arquivo padrão da estrutura.
 
-Para dar suporte a abrir, salvar e salve como comandos no menu Arquivo, o framework fornece a serialização de documento. Serialização lê e grava dados, incluindo objetos derivados da classe `CObject`, permanente para armazenamento, normalmente um arquivo de disco. A serialização é fácil de usar e atende a muitas das suas necessidades, mas pode ser inadequado em muitos aplicativos de acesso a dados. Aplicativos de acesso a dados normalmente atualizam dados em uma base por transação. Eles atualizar os registros afetados pela transação em vez de ler e gravar um arquivo de dados inteira ao mesmo tempo.
+Para dar suporte aos comandos abrir, salvar e salvar como no menu arquivo, a estrutura fornece a serialização de documentos. A serialização lê e grava dados, incluindo objetos derivados da classe `CObject`, para armazenamento permanente, normalmente um arquivo de disco. A serialização é fácil de usar e atende a muitas das suas necessidades, mas pode ser inadequada em muitos aplicativos de acesso a dados. Os aplicativos de acesso a dados normalmente atualizam dados por transação. Eles atualizam os registros afetados pela transação em vez de ler e gravar um arquivo de dados inteiro ao mesmo tempo.
 
 Para obter informações sobre serialização, consulte [serialização](../mfc/serialization-in-mfc.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Serialização: Serialização vs. Banco de dados de entrada/saída](../mfc/serialization-serialization-vs-database-input-output.md)
+[Serialização: entrada/saída do banco de dados de serialização](../mfc/serialization-serialization-vs-database-input-output.md)

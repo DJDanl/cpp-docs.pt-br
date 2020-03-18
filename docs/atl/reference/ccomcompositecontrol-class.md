@@ -17,11 +17,11 @@ helpviewer_keywords:
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
 ms.openlocfilehash: b57eaf105bfca1a49d53b5e5e99969b0fa2fc82f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864938"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417904"
 ---
 # <a name="ccomcompositecontrol-class"></a>Classe CComCompositeControl
 
@@ -37,7 +37,7 @@ template <class T>
 class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bem como de quaisquer outras interfaces às quais você deseja dar suporte para seu controle composto.
@@ -46,14 +46,14 @@ Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-clas
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CComCompositeControl::CComCompositeControl](#ccomcompositecontrol)|O construtor.|
 |[CComCompositeControl:: ~ CComCompositeControl](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|Chame esse método para aconselhar ou cancelar todos os controles hospedados pelo controle composto.|
 |[CComCompositeControl::CalcExtent](#calcextent)|Chame esse método para calcular o tamanho em unidades HIMETRIC do recurso de caixa de diálogo usado para hospedar o controle composto.|
@@ -63,7 +63,7 @@ Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-clas
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CComCompositeControl:: m_hbrBackground](#m_hbrbackground)|O pincel de plano de fundo.|
 |[CComCompositeControl:: m_hWndFocus](#m_hwndfocus)|O identificador da janela que atualmente tem foco.|
@@ -84,7 +84,7 @@ Um controle implementado por uma classe derivada de `CComCompositeControl`tem um
 > [!NOTE]
 >  Para que os aceleradores funcionem corretamente com um `CComCompositeControl`, é necessário carregar uma tabela de acelerador à medida que o controle é criado, passar o identificador e o número de aceleradores de volta para [IOleControlImpl:: GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo)e, finalmente, destruir a tabela quando o controle for liberado.
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_COM#14](../../atl/codesnippet/cpp/ccomcompositecontrol-class_2.h)]
 
@@ -98,7 +98,7 @@ Um controle implementado por uma classe derivada de `CComCompositeControl`tem um
 
 `CComCompositeControl`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlctl. h
 
@@ -110,7 +110,7 @@ Chame esse método para aconselhar ou cancelar todos os controles hospedados pel
 HRESULT AdviseSinkMap(bool bAdvise);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bAdvise*<br/>
 True se todos os controles forem aconselhados; caso contrário, false.
@@ -120,7 +120,7 @@ True se todos os controles forem aconselhados; caso contrário, false.
 |||
 |-|-|
 |S_OK  |Todos os controles no mapa do coletor de eventos foram conectados ou desconectados da origem do evento com êxito.|
-|{1&gt;E_FAIL&lt;1}  |Nem todos os controles no mapa do coletor de eventos podem ser conectados ou desconectados da origem do evento com êxito.|
+|E_FAIL  |Nem todos os controles no mapa do coletor de eventos podem ser conectados ou desconectados da origem do evento com êxito.|
 |{1&gt;E_POINTER&lt;1}  |Esse erro geralmente indica um problema com uma entrada no mapa do coletor de eventos do controle ou um problema com um argumento de modelo usado em uma classe base `IDispEventImpl` ou `IDispEventSimpleImpl`.|
 |CONNECT_E_ADVISELIMIT  |O ponto de conexão já atingiu seu limite de conexões e não pode aceitar mais nenhuma.|
 |CONNECT_E_CANNOTCONNECT  |O coletor não dá suporte à interface exigida por este ponto de conexão.|
@@ -138,7 +138,7 @@ Chame esse método para calcular o tamanho em unidades HIMETRIC do recurso de ca
 BOOL CalcExtent(SIZE& size);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *size*<br/>
 Uma referência a uma estrutura de `SIZE` a ser preenchida por este método.
@@ -162,7 +162,7 @@ HWND Create(
     LPARAM dwInitParam = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWndParent*<br/>
 Um identificador para a janela pai do controle.
@@ -215,7 +215,7 @@ virtual HWND CreateControlWindow(
     RECT& rcPos);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWndParent*<br/>
 Um identificador para a janela pai do controle.
@@ -259,7 +259,7 @@ HRESULT SetBackgroundColorFromAmbient();
 
 Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Fundamentos do controle composto](../../atl/atl-composite-control-fundamentals.md)<br/>

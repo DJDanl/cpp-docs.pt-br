@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
 ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890896"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419409"
 ---
 # <a name="ltstringgt-operators"></a>Operadores de &lt;cadeia de caracteres&gt;
 
@@ -101,7 +101,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
     const basic_string<CharType, Traits, Allocator>&& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser concatenado.
@@ -117,7 +117,7 @@ A cadeia de caracteres que é a concatenação de cadeias de caracteres de entra
 
 As funções que cada sobrecarga `operator+` para concatenar dois objetos do modelo de classe [Basic_string classe](../standard-library/basic-string-class.md). Todos efetivamente retornam `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Para obter mais informações, consulte [Append](../standard-library/basic-string-class.md#append).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // string_op_con.cpp
@@ -190,7 +190,7 @@ bool operator!=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
@@ -206,7 +206,7 @@ Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser c
 
 A comparação entre os objetos da cadeia de caracteres baseia-se em uma comparação de pares lexicográficos de seus caracteres. Duas cadeias de caracteres são iguais se tiverem o mesmo número de caracteres e seus valores de caractere respectivos são os mesmos. Caso contrário, são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // string_op_ne.cpp
@@ -281,7 +281,7 @@ bool operator==(
     const basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
@@ -297,7 +297,7 @@ Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser c
 
 A comparação entre os objetos da cadeia de caracteres baseia-se em uma comparação de pares lexicográficos de seus caracteres. Duas cadeias de caracteres são iguais se tiverem o mesmo número de caracteres e seus valores de caractere respectivos são os mesmos. Caso contrário, são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // string_op_eq.cpp
@@ -372,7 +372,7 @@ bool operator<(
     const basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
@@ -394,7 +394,7 @@ Uma comparação entre cadeias de caracteres lexicográficos compara-as por cara
 
 - Não encontra nenhuma desigualdade e percebe que as cadeias de caracteres têm o mesmo número de caracteres e então as cadeias de caracteres são iguais.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // string_op_lt.cpp
@@ -468,7 +468,7 @@ bool operator<=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
@@ -490,7 +490,7 @@ Uma comparação entre cadeias de caracteres lexicográficos compara-as por cara
 
 - Não encontra nenhuma desigualdade e percebe que as cadeias de caracteres têm o mesmo número de caracteres, então as cadeias de caracteres são iguais.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // string_op_le.cpp
@@ -561,7 +561,7 @@ basic_ostream<CharType, Traits>& operator<<(
     const basic_string<CharType, Traits, Allocator>& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Ostr*\
 O fluxo de saída que está sendo gravado.
@@ -598,7 +598,7 @@ bool operator>(
     const basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
@@ -620,7 +620,7 @@ Uma comparação entre cadeias de caracteres lexicográficos compara-as por cara
 
 - Não encontra nenhuma desigualdade e percebe que as cadeias de caracteres têm o mesmo número de caracteres e então as cadeias de caracteres são iguais.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // string_op_gt.cpp
@@ -701,7 +701,7 @@ bool operator>=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
@@ -723,7 +723,7 @@ Uma comparação entre cadeias de caracteres lexicográficos compara-as por cara
 
 - Não encontra nenhuma desigualdade e percebe que as cadeias de caracteres têm o mesmo número de caracteres e então as cadeias de caracteres são iguais.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // string_op_ge.cpp
@@ -794,7 +794,7 @@ basic_istream<CharType, Traits>& operator>>(
     basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Istr*\
 O fluxo de entrada usado para extrair a sequência
@@ -822,7 +822,7 @@ Depois que a função extrai `_Istr`. [max_size](../standard-library/basic-strin
 
 Se a função extrair nenhum elemento, ela chamará [SetState](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). Em qualquer caso, chama **istr**. **largura**(0) e retorna \* **isso**.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // string_op_read_.cpp
@@ -841,6 +841,6 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<string>](../standard-library/string.md)

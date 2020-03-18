@@ -7,18 +7,18 @@ f1_keywords:
 - VC.Project.VCConfiguration.Android.Makefile.IntermediateDirectory
 - VC.Project.VCConfiguration.Android.Makefile.BuildLogFile
 - VC.Project.VCConfiguration.Android.Makefile.ConfigurationType
-ms.openlocfilehash: a52cedb1f7f7af1d4a0ff8e1a0d766d6e769e2fa
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 0d03cff6b202f554e9829c51b35f069ae61576de
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177413"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446877"
 ---
 # <a name="general-project-properties-android-c-makefile"></a>Propriedades gerais do projeto (Makefile Android C++)
 
-Propriedade | DESCRIÇÃO | Opções
---- | ---| ---
-Diretório de Saída | Especifica um caminho relativo para o diretório de arquivo de saída e pode incluir variáveis de ambiente.
-Diretório intermediário | Especifica um caminho relativo para o diretório de arquivo intermediário e pode incluir variáveis de ambiente.
-Arquivo de log de build | Especifica o arquivo de log de build para gravação quando o registro em log de build está habilitado.
-Tipo de Configuração | Especifica o tipo de saída gerado por essa configuração. | **Biblioteca Dinâmica (.so)** – Biblioteca Dinâmica ( *.so*)<br>**Biblioteca estática (.a)** – Biblioteca estática ( *.a*)<br>**Utilitário** – utilitário<br>**Makefile** – Makefile<br>
+| Propriedade | Descrição | Opções |
+|--|--|--|
+| Diretório de Saída | Especifica um caminho relativo para o diretório de arquivo de saída e pode incluir variáveis de ambiente. |
+| Diretório intermediário | Especifica um caminho relativo para o diretório de arquivo intermediário e pode incluir variáveis de ambiente. |
+| Arquivo de log de build | Especifica o arquivo de log de build para gravação quando o registro em log de build está habilitado. |
+| Tipo de configuração | Especifica o tipo de saída gerado por essa configuração. | **Biblioteca Dinâmica (.so)** – Biblioteca Dinâmica ( *.so*)<br>**Biblioteca estática (.a)** – Biblioteca estática ( *.a*)<br>**Utilitário** – utilitário<br>**Makefile** – Makefile<br> |

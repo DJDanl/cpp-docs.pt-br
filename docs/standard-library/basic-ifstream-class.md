@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
 ms.openlocfilehash: 1e5e22c837ca2d6389591cec6d2cdd256ca50b1a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865854"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421964"
 ---
 # <a name="basic_ifstream-class"></a>Classe basic_ifstream
 
@@ -34,7 +34,7 @@ template <class Elem, class Tr = char_traits<Elem>>
 class basic_ifstream : public basic_istream<Elem, Tr>
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *elem*
 O elemento básico no buffer de arquivo.
@@ -46,7 +46,7 @@ As características do elemento básico no buffer de arquivo (geralmente `char_t
 
 O objeto armazena um objeto da classe `basic_filebuf`< `Elem`, `Tr`>.
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como ler texto de um arquivo.
 
@@ -83,29 +83,29 @@ This is the contents of basic_ifstream_class.txt.
 This is the contents of basic_ifstream_class.txt.
 ```
 
-### <a name="constructors"></a>{1&gt;Construtores&lt;1}
+### <a name="constructors"></a>Construtores
 
-|Construtor|Descrição|
+|Construtor|DESCRIÇÃO|
 |-|-|
 |[basic_ifstream](#basic_ifstream)|Inicializa uma nova instância de um objeto `basic_ifstream`.|
 
 ### <a name="member-functions"></a>Funções de membro
 
-|Função de membro|Descrição|
+|Função de membro|DESCRIÇÃO|
 |-|-|
 |[close](#close)|Fecha um arquivo.|
 |[is_open](#is_open)|Determina se um arquivo está aberto.|
-|[open](#open)|Abre um arquivo.|
+|[abrir](#open)|Abre um arquivo.|
 |[rdbuf](#rdbuf)|Retorna o endereço do buffer de fluxo armazenado.|
 |[swap](#swap)|Troca o conteúdo desse `basic_ifstream` pelo conteúdo do `basic_ifstream` fornecido.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|Operador|DESCRIÇÃO|
 |-|-|
 |[operator=](#op_eq)|Atribui o conteúdo desse objeto de fluxo. Essa é uma atribuição de movimentação que envolve um `rvalue` que não deixa uma cópia.|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** \<fstream >
 
@@ -131,7 +131,7 @@ explicit basic_ifstream(
 basic_ifstream(basic_ifstream&& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Filename*\
 O nome do arquivo a ser aberto.
@@ -150,7 +150,7 @@ O segundo e o terceiro construtores inicializam a classe base chamando `basic_is
 
 O quarto construtor inicializa o objeto com o conteúdo de `right`, tratados como uma referência rvalue.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como ler texto de um arquivo. Para criar o arquivo, consulte o exemplo para [basic_ofstream::basic_ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream).
 
@@ -187,7 +187,7 @@ void close();
 
 A função de membro chama [rdbuf](#rdbuf) **->** [Fechar](../standard-library/basic-filebuf-class.md#close).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) para ver um exemplo que usa `close`.
 
@@ -207,7 +207,7 @@ bool is_open() const;
 
 A função membro retorna [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open) para ver um exemplo que usa `is_open`.
 
@@ -235,7 +235,7 @@ void open(
     ios_base::openmode _Mode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Filename*\
 O nome do arquivo a ser aberto.
@@ -250,7 +250,7 @@ A proteção de abertura de arquivo padrão, equivalente ao parâmetro `shflag` 
 
 A função de membro chama [rdbuf](#rdbuf) **->** [Open](../standard-library/basic-filebuf-class.md#open)(_ *filename*, &#124; `_Mode` **ios_base:: in**). Se abrir falhar, a função chamará [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`), o que pode gerar uma exceção ios_base:: Failure.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) para obter um exemplo que usa `open`.
 
@@ -262,7 +262,7 @@ Atribui o conteúdo desse objeto de fluxo. Essa é uma atribuição de movimenta
 basic_ifstream& operator=(basic_ifstream&& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 Uma referência rvalue a um objeto `basic_ifstream`.
@@ -287,7 +287,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 
 Um ponteiro para um objeto [basic_filebuf](../standard-library/basic-filebuf-class.md) que representa o buffer de fluxo armazenado.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) para ver um exemplo que usa `rdbuf`.
 
@@ -299,7 +299,7 @@ Troca o conteúdo de dois `basic_ifstream` objetos.
 void swap(basic_ifstream& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 Uma referência a outro buffer de fluxo.
@@ -308,7 +308,7 @@ Uma referência a outro buffer de fluxo.
 
 A função membro troca o conteúdo deste objeto pelo conteúdo de *direita*.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programação de iostream](../standard-library/iostream-programming.md)\

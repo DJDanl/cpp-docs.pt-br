@@ -5,6 +5,9 @@ f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
 - char_cpp
+- char8_t_cpp
+- char16_t_cpp
+- char32_t_cpp
 - double_cpp
 - float_cpp
 - int_cpp
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: f6bfc72bf279d09e89423866d9cb46ad3496b49c
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: e67d31e18ebbb6afd9d98542e4a6aa236b2d3e71
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301490"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445314"
 ---
 # <a name="built-in-types-c"></a>Tipos internos (C++)
 
@@ -66,13 +69,13 @@ A tabela a seguir explica as restrições de tamanhos de tipo em relação umas 
 
 ### <a name="built-in-type-size-restrictions"></a>Restrições de tamanho de tipo interno
 
-|Categoria|{1&gt;Tipo&lt;1}|Conteúdo|
+|Categoria|Tipo|{1&gt;Conteúdo&lt;1}|
 |--------------|----------|--------------|
 |Integral|**char**|Tipo **Char** é um tipo integral que geralmente contém membros do conjunto de caracteres de execução básica — por padrão, isso é ASCII na C++Microsoft.<br /><br /> O C++ compilador trata variáveis do tipo **Char**, **sinal assinado**e **caractere não assinado** como tendo tipos diferentes. Variáveis do tipo **Char** são promovidas para **int** como se fossem **caracteres assinados** por tipo por padrão, a menos que a opção de compilação/j seja usada. Nesse caso, eles são tratados como tipo de **caractere não assinado** e são promovidos para **int** sem a extensão de assinatura.|
 ||**bool**|O tipo **bool** é um tipo integral que pode ter um dos dois valores **true** ou **false**. Seu tamanho não é especificado.|
 ||**short**|Digite **int Short** (ou simplesmente **Short**) é um tipo integral maior ou igual ao tamanho do tipo **Char**e menor que ou igual ao tamanho do tipo **int**.<br /><br /> Objetos do tipo **Short** podem ser declarados como **assinados** de forma curta ou **sem sinal**. A **assinatura curta** é um sinônimo de **curto**.|
 ||**int**|O tipo **int** é um tipo integral que é maior ou igual ao tamanho do tipo **int inteiro**e menor que ou igual ao tamanho do tipo **Long**.<br /><br /> Objetos do tipo **int** podem ser declarados como **int assinados** ou **não assinados**. **Int assinado** é um sinônimo para **int**.|
-||**__int8**, **__int16**, **__int32**, **__int64**|`__int n`inteiro dimensionado, em que `n` é o tamanho, em bits, da variável de inteiro. **__int8**, **__int16**, **__int32** e **__Int64** são palavras-chave específicas da Microsoft. Nem todos os tipos estão disponíveis em todas as arquiteturas. (não há suporte para **__int128** .)|
+||**__int8**, **__int16**, **__int32** **__int64**|`__int n`inteiro dimensionado, em que `n` é o tamanho, em bits, da variável de inteiro. **__int8**, **__int16**, **__int32** e **__Int64** são palavras-chave específicas da Microsoft. Nem todos os tipos estão disponíveis em todas as arquiteturas. (não há suporte para **__int128** .)|
 ||**long**|Tipo **Long** (ou **Long int**) é um tipo integral maior ou igual ao tamanho do tipo **int**. (No Windows **Long** tem o mesmo tamanho que **int**.)<br /><br /> Objetos do tipo **Long** podem ser declarados como **assinados** longos ou **não**assinados. O **Long assinado** é um sinônimo de **longo**.|
 ||**long long**|Maior que um **longo**não assinado.<br /><br /> Objetos do tipo **longo** longo podem ser declarados como **assinados** longos longos ou **não assinados**longos. um **longo tempo assinado** é um sinônimo por **longos**longos.|
 ||**wchar_t**, **__wchar_t**|Uma variável do tipo **wchar_t** designa um tipo de caractere largo ou multibyte. Por padrão, **wchar_t** é um tipo nativo, mas você pode usar [/Zc: wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para fazer **wchar_t** um typedef para **não assinado**. O tipo de **__wchar_t** é um sinônimo específico da Microsoft para o tipo de **wchar_t** nativo.<br /><br /> Use o prefixo L antes de um literal de caractere ou de cadeia de caracteres para designar o tipo de caractere largo.|
@@ -86,10 +89,10 @@ A tabela a seguir lista a quantidade de armazenamento necessária para tipos int
 
 ### <a name="sizes-of-built-in-types"></a>Tamanhos de tipos internos
 
-|{1&gt;Tipo&lt;1}|Tamanho|
+|Tipo|Size|
 |----------|----------|
-|**bool**, **char**, **unsigned char**, **signed char**, **__int8**|1 byte|
-|**__int16**, **short**, **unsigned short**, **wchar_t**, **__wchar_t**|2 bytes|
+|**bool**, **Char**, **Char não assinado**, **signed char**, **__int8**|1 byte|
+|**__int16**, **curto**, **sem sinal**, **wchar_t**, **__wchar_t**|2 bytes|
 |**float**, **__int32**, **int**, **não assinado int**, **Long**, **longo não assinado**|4 bytes|
 |**Double**, **__int64**, **longa dupla**, **longa longa**|8 bytes|
 
@@ -99,6 +102,6 @@ Consulte [intervalos de tipos de dados](data-type-ranges.md) para obter um resum
 
 Para obter mais informações sobre conversão de tipo, consulte [conversões padrão](standard-conversions.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Intervalos de tipos de dados](data-type-ranges.md)

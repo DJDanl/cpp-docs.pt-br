@@ -10,11 +10,11 @@ helpviewer_keywords:
 - build time analysis
 - vcperf.exe
 ms.openlocfilehash: d0796cec3fe4ac6183279e8d8013a9550f18b61c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857044"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417428"
 ---
 # <a name="irelogger-class"></a>Classe IRelogger
 
@@ -62,7 +62,7 @@ O valor de retorno padrão para todas as funções que não são substituídas �
 
 [~ IRelogger](#irelogger-destructor)
 
-### <a name="functions"></a>{1&gt;Funções&lt;1}
+### <a name="functions"></a>Funções
 
 \ [OnBeginRelogging](#on-begin-relogging)
 \ [OnBeginReloggingPass](#on-begin-relogging-pass)
@@ -137,7 +137,7 @@ virtual AnalysisControl OnSimpleEvent(const EventStack& eventStack);
 
 Essa função é chamada quando um evento simples está sendo processado.
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *eventStack*
 A pilha de eventos para este evento simples. Para obter mais informações sobre as pilhas de eventos, consulte [eventos](../event-table.md).
@@ -154,7 +154,7 @@ virtual AnalysisControl OnStartActivity(const EventStack& eventStack);
 
 Essa função é chamada quando um evento de início de atividade está sendo processado.
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *eventStack*
 A pilha de eventos para este evento de início de atividade. Para obter mais informações sobre as pilhas de eventos, consulte [eventos](../event-table.md).
@@ -171,7 +171,7 @@ Essa função é chamada quando um evento de parada de atividade está sendo pro
 virtual AnalysisControl OnStopActivity(const EventStack& eventStack);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *eventStack*
 A pilha de eventos para este evento de parada de atividade. Para obter mais informações sobre as pilhas de eventos, consulte [eventos](../event-table.md).
@@ -188,7 +188,7 @@ virtual AnalysisControl OnTraceInfo(const TraceInfo& traceInfo);
 
 Essa função é chamada uma vez no início de cada análise ou aprovação de reregistro em log.
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *TraceInfo*
 Um objeto [TraceInfo](../cpp-event-data-types/trace-info.md) que contém propriedades úteis sobre o rastreamento que está sendo consumido.

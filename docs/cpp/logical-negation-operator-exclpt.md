@@ -3,18 +3,17 @@ title: 'Operador de negação lógica: !'
 ms.date: 08/27/2018
 f1_keywords:
 - '!'
-- Not
 helpviewer_keywords:
 - '! operator'
 - NOT operator
 - logical negation
 ms.assetid: 650add9f-a7bc-426c-b01d-5fc6a81c8b62
-ms.openlocfilehash: 7b37e5108ca01d782c13508c0cd7a96b096cd745
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06142ef15fcdbafdbae4b892772a04b117c087f6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216402"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446543"
 ---
 # <a name="logical-negation-operator-"></a>Operador de negação lógica: !
 
@@ -26,15 +25,15 @@ ms.locfileid: "62216402"
 
 ## <a name="remarks"></a>Comentários
 
-O operador de negação lógica (**!**) inverte o significado do respectivo operando. O operando deve ser do tipo aritmético ou ponteiro (ou uma expressão que é avaliada para o tipo aritmético ou ponteiro). O operando é convertido implicitamente no tipo **bool**. O resultado será TRUE se o operando convertido for FALSE; o resultado será FALSE se o operando convertido for TRUE. O resultado é do tipo **bool**.
+O operador lógico de negação ( **!** ) reverte o significado de seu operando. O operando deve ser do tipo aritmético ou ponteiro (ou uma expressão que é avaliada para o tipo aritmético ou ponteiro). O operando é convertido implicitamente no tipo **bool**. O resultado será TRUE se o operando convertido for FALSE; o resultado será FALSE se o operando convertido for TRUE. O resultado é do tipo **bool**.
 
-Para uma expressão *eletrônico*, a expressão unária `!e` é equivalente à expressão `(e == 0)`, exceto onde operadores sobrecarregados estão envolvidos.
+Para uma expressão *e*, a expressão unário `!e` é equivalente à expressão `(e == 0)`, exceto onde operadores sobrecarregados estão envolvidos.
 
 ## <a name="operator-keyword-for-"></a>Palavra-chave de operador para !
 
-O **não** operador é uma ortografia alternativa de **!**. Há duas maneiras para acessar o **não** operador em seus programas: incluir o arquivo de cabeçalho \<lt;iso646.h&gt >, ou compilando com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção do compilador (desabilitar extensões de linguagem).
+O operador **not** é uma grafia alternativa de **!** . Há duas maneiras de acessar o operador **not** em seus programas: inclua o arquivo de cabeçalho \<iso646. h > ou compile com a opção de compilador [/za](../build/reference/za-ze-disable-language-extensions.md) (desabilitar extensões de linguagem).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // expre_Logical_NOT_Operator.cpp

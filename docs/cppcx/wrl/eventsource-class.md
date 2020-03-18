@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
 ms.openlocfilehash: 1350e51ff609a888b6a8ad6841be6856b68c7994
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865724"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418303"
 ---
 # <a name="eventsource-class"></a>Classe EventSource
 
@@ -41,7 +41,7 @@ template<typename TDelegateInterface>
 class EventSource;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *TDelegateInterface*<br/>
 A interface para um delegado que representa um manipulador de eventos.
@@ -50,13 +50,13 @@ A interface para um delegado que representa um manipulador de eventos.
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-| {1&gt;Nome&lt;1}                                     | Descrição                                            |
+| Nome                                     | DESCRIÇÃO                                            |
 | ---------------------------------------- | ------------------------------------------------------ |
-| [EventSource:: EventSource](#eventsource) | Inicializa uma nova instância da classe `EventSource`. |
+| [EventSource:: EventSource](#eventsource) | Inicia uma nova instância da classe `EventSource`. |
 
 ### <a name="public-methods"></a>Métodos públicos
 
-| {1&gt;Nome&lt;1}                                 | Descrição                                                                                                                                                      |
+| Nome                                 | DESCRIÇÃO                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [EventSource:: Adicionar](#add)             | Acrescenta o manipulador de eventos representado pela interface de representante especificada ao conjunto de manipuladores de eventos para o objeto de `EventSource` atual.                     |
 | [EventSource:: GetSize](#getsize)     | Recupera o número de manipuladores de eventos associados ao objeto de `EventSource` atual.                                                                         |
@@ -65,7 +65,7 @@ A interface para um delegado que representa um manipulador de eventos.
 
 ### <a name="protected-data-members"></a>Membros de Dados Protegidos
 
-| {1&gt;Nome&lt;1}                                                    | Descrição                                                                                                                       |
+| Nome                                                    | DESCRIÇÃO                                                                                                                       |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | [EventSource:: addRemoveLock_](#addremovelock)           | Sincroniza o acesso à matriz de [targets_](#targets) ao adicionar, remover ou invocar manipuladores de eventos.                          |
 | [EventSource:: targets_](#targets)                       | Uma matriz de um ou mais manipuladores de eventos.                                                                                           |
@@ -75,7 +75,7 @@ A interface para um delegado que representa um manipulador de eventos.
 
 `EventSource`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Event. h
 
@@ -92,7 +92,7 @@ HRESULT Add(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *delegateInterface*<br/>
 A interface para um objeto delegado, que representa um manipulador de eventos.
@@ -114,7 +114,7 @@ Wrappers::SRWLock addRemoveLock_;
 
 ## <a name="eventsource"></a>EventSource:: EventSource
 
-Inicializa uma nova instância da classe `EventSource`.
+Inicia uma nova instância da classe `EventSource`.
 
 ```cpp
 EventSource();
@@ -290,7 +290,7 @@ void InvokeAll(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T0*<br/>
 O tipo do argumento do manipulador de eventos inicial.
@@ -362,7 +362,7 @@ HRESULT Remove(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *token*<br/>
 Um identificador que representa um manipulador de eventos. Esse token foi retornado quando o manipulador de eventos foi registrado pelo método [Add ()](#add) .

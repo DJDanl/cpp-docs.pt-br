@@ -7,11 +7,11 @@ f1_keywords:
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
 ms.openlocfilehash: aba17b7bf052b6974bf849f60ff895b8e84a1092
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854895"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421845"
 ---
 # <a name="ltexceptiongt-typedefs"></a>Typedefs &lt;exception&gt;
 
@@ -51,7 +51,7 @@ typedef void (*terminate_handler)();
 
 O tipo descreve um ponteiro para uma função adequada para uso como um manipulador de finalização.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [set_terminate](../standard-library/exception-functions.md#set_terminate) para obter um exemplo do uso de `terminate_handler`.
 
@@ -63,6 +63,6 @@ O tipo descreve um ponteiro para uma função adequada para uso como um `unexpec
 typedef void (*unexpected_handler)();
 ```
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [set_unexpected](../standard-library/exception-functions.md#set_unexpected) para obter um exemplo do uso de `unexpected_handler`.

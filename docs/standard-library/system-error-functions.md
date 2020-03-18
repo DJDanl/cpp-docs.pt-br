@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::make_error_condition
 - std::system_category
 ms.openlocfilehash: ab4d0d1ee810df8f719bba762262eb03bf899408
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876246"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422419"
 ---
 # <a name="ltsystem_errorgt-functions"></a>Funções &lt;system_error&gt;
 
@@ -55,7 +55,7 @@ Cria um objeto de código de erro.
 error_code make_error_code(std::errc error) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *erro*\
 O `std::errc` valor de enumeração a ser armazenado no objeto de código de erro.
@@ -74,7 +74,7 @@ Cria um objeto de condição de erro.
 error_condition make_error_condition(std::errc error) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *erro*\
 O `std::errc` valor de enumeração a ser armazenado no objeto de código de erro.

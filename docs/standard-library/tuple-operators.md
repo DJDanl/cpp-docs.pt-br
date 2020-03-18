@@ -10,11 +10,11 @@ f1_keywords:
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866181"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422643"
 ---
 # <a name="lttuplegt-operators"></a>Operadores &lt;tuple&gt;
 
@@ -29,7 +29,7 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *TN*
 O tipo do enésimo elemento de tupla.
@@ -38,7 +38,7 @@ O tipo do enésimo elemento de tupla.
 
 A função retorna falso quando `N` é 0, caso contrário `get<0>(tpl1) != get<0>(tpl2) || get<1>(tpl1) != get<1>(tpl2) || ... || get<N - 1>(tpl1) == get<N - 1>(tpl2)`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // std__tuple__operator_ne.cpp
@@ -94,7 +94,7 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *TN*
 O tipo do enésimo elemento de tupla.
@@ -103,7 +103,7 @@ O tipo do enésimo elemento de tupla.
 
 A função retorna verdadeiro quando `N` é maior que 0 e o primeiro valor divergente em `tpl1` é comparado como menor que o valor correspondente em `tpl2`, caso contrário, retorna falso.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // std__tuple__operator_lt.cpp
@@ -159,7 +159,7 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *TN*
 O tipo do enésimo elemento de tupla.
@@ -168,7 +168,7 @@ O tipo do enésimo elemento de tupla.
 
 A função retorna `!(tpl2 < tpl1)`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // std__tuple__operator_le.cpp
@@ -224,7 +224,7 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *TN*
 O tipo do enésimo elemento de tupla.
@@ -233,7 +233,7 @@ O tipo do enésimo elemento de tupla.
 
 A função retorna verdadeiro quando `N` é 0, caso contrário `get<0>(tpl1) == get<0>(tpl2) && get<1>(tpl1) == get<1>(tpl2) && ... && get<N - 1>(tpl1) == get<N - 1>(tpl2)`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // std__tuple__operator_eq.cpp
@@ -289,7 +289,7 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *TN*
 O tipo do enésimo elemento de tupla.
@@ -298,7 +298,7 @@ O tipo do enésimo elemento de tupla.
 
 A função retorna `tpl2 < tpl1`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // std__tuple__operator_gt.cpp
@@ -354,7 +354,7 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *TN*
 O tipo do enésimo elemento de tupla.
@@ -363,7 +363,7 @@ O tipo do enésimo elemento de tupla.
 
 A função retorna `!(tpl1 < tpl2)`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // std__tuple__operator_ge.cpp
