@@ -26,11 +26,11 @@ helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
 ms.openlocfilehash: 6a0b83f722d1b616e9c10713646d337f9cb090a4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864874"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418086"
 ---
 # <a name="catlarray-class"></a>Classe CAtlArray
 
@@ -43,7 +43,7 @@ template<typename E, class ETraits = CElementTraits<E>>
 class CAtlArray
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *E*<br/>
 O tipo de dados a serem armazenados na matriz.
@@ -62,7 +62,7 @@ O código usado para copiar ou mover elementos.
 |[AssertValid](#assertvalid)|Chame esse método para confirmar que o objeto de matriz é válido.|
 |[CAtlArray](#catlarray)|O construtor.|
 |[~ CAtlArray](#dtor)|O destruidor.|
-|[Copiar](#copy)|Chame esse método para copiar os elementos de uma matriz para outra.|
+|[Copy](#copy)|Chame esse método para copiar os elementos de uma matriz para outra.|
 |[FreeExtra](#freeextra)|Chame esse método para remover quaisquer elementos vazios da matriz.|
 |[GetAt](#getat)|Chame esse método para recuperar um único elemento do objeto de matriz.|
 |[GetCount](#getcount)|Chame esse método para retornar o número de elementos armazenados na matriz.|
@@ -112,7 +112,7 @@ size_t Add(INARGTYPE element);
 size_t Add();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *elementos*<br/>
 O elemento a ser adicionado à matriz.
@@ -137,7 +137,7 @@ Chame esse método para adicionar o conteúdo de uma matriz ao final de outra.
 size_t Append(const CAtlArray<E, ETraits>& aSrc);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *aSrc*<br/>
 A matriz a ser acrescentada.
@@ -210,7 +210,7 @@ Chame esse método para copiar os elementos de uma matriz para outra.
 void Copy(const CAtlArray<E, ETraits>& aSrc);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *aSrc*<br/>
 A origem dos elementos a serem copiados para uma matriz.
@@ -253,7 +253,7 @@ const E& GetAt(size_t iElement) const throw();
 E& GetAt(size_t iElement) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ielemento*<br/>
 O valor de índice do elemento de matriz a ser retornado.
@@ -323,7 +323,7 @@ Chame esse método para inserir uma matriz em outra.
 void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *isniciar*<br/>
 O índice no qual a matriz deve ser inserida.
@@ -352,7 +352,7 @@ Chame esse método para inserir um novo elemento (ou várias cópias de um eleme
 void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ielemento*<br/>
 O índice em que o elemento ou os elementos devem ser inseridos.
@@ -402,7 +402,7 @@ E& operator[](size_t ielement) throw();
 const E& operator[](size_t ielement) const throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ielemento*<br/>
 O valor de índice do elemento de matriz a ser retornado.
@@ -451,7 +451,7 @@ Chame esse método para remover um ou mais elementos da matriz.
 void RemoveAt(size_t iElement, size_t nCount = 1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ielemento*<br/>
 O índice do primeiro elemento a ser removido.
@@ -477,7 +477,7 @@ Chame esse método para definir o valor de um elemento no objeto de matriz.
 void SetAt(size_t iElement, INARGTYPE element);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ielemento*<br/>
 O índice que aponta para o elemento de matriz a ser definido.
@@ -501,7 +501,7 @@ Chame esse método para definir o tamanho do objeto da matriz.
 bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nNewSize*<br/>
 O tamanho necessário da matriz.
@@ -531,7 +531,7 @@ Chame esse método para definir o valor de um elemento no objeto de matriz, expa
 void SetAtGrow(size_t iElement, INARGTYPE element);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ielemento*<br/>
 O índice que aponta para o elemento de matriz a ser definido.
@@ -547,7 +547,7 @@ Substitui o valor do elemento apontado pelo índice. Se *ielemento* for maior qu
 
 [!code-cpp[NVC_ATL_Utilities#12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de MMXSwarm](../../overview/visual-cpp-samples.md)<br/>
 [Exemplo de DynamicConsumer](../../overview/visual-cpp-samples.md)<br/>

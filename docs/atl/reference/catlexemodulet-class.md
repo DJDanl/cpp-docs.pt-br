@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
 ms.openlocfilehash: d37cc8e97d29cbedfeb4ba79502d44529485399f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863147"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418051"
 ---
 # <a name="catlexemodulet-class"></a>Classe CAtlExeModuleT
 
@@ -40,7 +40,7 @@ template <class T>
 class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 Sua classe derivada de `CAtlExeModuleT`.
@@ -49,14 +49,14 @@ Sua classe derivada de `CAtlExeModuleT`.
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|O construtor.|
 |[CAtlExeModuleT:: ~ CAtlExeModuleT](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CAtlExeModuleT::InitializeCom](#initializecom)|Inicializa COM.|
 |[CAtlExeModuleT::P arseCommandLine](#parsecommandline)|Analisa a linha de comando e executa o registro, se necessário.|
@@ -72,7 +72,7 @@ Sua classe derivada de `CAtlExeModuleT`.
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CAtlExeModuleT:: m_bDelayShutdown](#m_bdelayshutdown)|Um sinalizador que indica que deve haver um atraso ao desligar o módulo.|
 |[CAtlExeModuleT:: m_dwPause](#m_dwpause)|Um valor de pausa usado para garantir que todos os objetos sejam liberados antes do desligamento.|
@@ -98,7 +98,7 @@ Para obter mais informações sobre módulos na ATL, consulte [classes de módul
 
 `CAtlExeModuleT`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlbase. h
 
@@ -188,7 +188,7 @@ Analisa a linha de comando e executa o registro, se necessário.
 bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpCmdLine*<br/>
 A linha de comando passada para o aplicativo.
@@ -228,7 +228,7 @@ Esse método é chamado imediatamente antes de entrar no loop de mensagem.
 HRESULT PreMessageLoop(int nShowCmd) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nShowCmd*<br/>
 O valor passado como o parâmetro *nShowCmd* em WinMain.
@@ -249,7 +249,7 @@ Registra o objeto de classe com OLE para que outros aplicativos possam se conect
 HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwClsContext*<br/>
 Especifica o contexto no qual o objeto de classe deve ser executado. Os valores possíveis são CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER ou CLSCTX_LOCAL_SERVER.
@@ -281,7 +281,7 @@ Esse método executa o código no módulo EXE para inicializar, executar o loop 
 HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nShowCmd*<br/>
 Especifica como a janela deve ser mostrada. Esse parâmetro pode ser um dos valores discutidos na seção [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) . O padrão é SW_HIDE.
@@ -338,7 +338,7 @@ Esse método implementa o código necessário para executar um EXE.
 int WinMain(int nShowCmd) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nShowCmd*<br/>
 Especifica como a janela deve ser mostrada. Esse parâmetro pode ser um dos valores discutidos na seção [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
@@ -351,7 +351,7 @@ Retorna o valor de retorno do executável.
 
 Esse método pode ser substituído. Se substituir [CAtlExeModuleT::P remessageloop](#premessageloop), [CAtlExeModuleT::P ostmessageloop](#postmessageloop)ou [CAtlExeModuleT:: RunMessageLoop](#runmessageloop) não fornecer flexibilidade suficiente, será possível substituir a função `WinMain` usando esse método.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de ATLDuck](../../overview/visual-cpp-samples.md)<br/>
 [Classe CAtlModuleT](../../atl/reference/catlmodulet-class.md)<br/>

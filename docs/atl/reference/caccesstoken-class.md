@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
 ms.openlocfilehash: 33fbaae5dafaccdf7f7e6880eaa42dd68352e840
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864860"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418156"
 ---
 # <a name="caccesstoken-class"></a>Classe CAccessToken
 
@@ -76,13 +76,13 @@ class CAccessToken
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CAccessToken:: ~ CAccessToken](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CAccessToken:: Attach](#attach)|Chame esse método para apropriar-se do identificador de token de acesso fornecido.|
 |[CAccessToken::CheckTokenMembership](#checktokenmembership)|Chame esse método para determinar se um SID especificado está habilitado no objeto `CAccessToken`.|
@@ -136,7 +136,7 @@ Um [token de acesso](/windows/win32/SecAuthZ/access-tokens) é um objeto que des
 
 Para obter uma introdução ao modelo de controle de acesso no Windows, consulte [controle de acesso](/windows/win32/SecAuthZ/access-control) no SDK do Windows.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ATLSecurity. h
 
@@ -148,7 +148,7 @@ Chame esse método para apropriar-se do identificador de token de acesso forneci
 void Attach(HANDLE hToken) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hToken*<br/>
 Um identificador para o token de acesso.
@@ -179,7 +179,7 @@ bool CheckTokenMembership(
     bool* pbIsMember) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rSid*<br/>
 Referência a um objeto de [classe CSid](../../atl/reference/csid-class.md) .
@@ -210,7 +210,7 @@ bool CreateImpersonationToken(
     SECURITY_IMPERSONATION_LEVEL sil = SecurityImpersonation) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pImp*<br/>
 Ponteiro para o novo objeto `CAccessToken`.
@@ -237,7 +237,7 @@ bool CreatePrimaryToken(
     const CSecurityAttributes* pTokenAttributes = NULL) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pPri*<br/>
 Ponteiro para o novo objeto `CAccessToken`.
@@ -274,7 +274,7 @@ bool CreateProcessAsUser(
     LPCTSTR pCurrentDirectory = NULL) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pApplicationName*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o módulo a ser executado. Este parâmetro não pode ser nulo.
@@ -328,7 +328,7 @@ bool CreateRestrictedToken(
     const CTokenPrivileges& PrivilegesToDelete = CTokenPrivileges()) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pRestrictedToken*<br/>
 O novo objeto `CAccessToken` restrito.
@@ -379,7 +379,7 @@ bool DisablePrivilege(
     CTokenPrivileges* pPreviousState = NULL) throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pszPrivilege*<br/>
 Ponteiro para uma cadeia de caracteres que contém o privilégio a ser desabilitado no objeto `CAccessToken`.
@@ -401,7 +401,7 @@ bool DisablePrivileges(
     CTokenPrivileges* pPreviousState = NULL) throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rPrivileges*<br/>
 Ponteiro para uma matriz de cadeias de caracteres que contém os privilégios a serem desabilitados no objeto `CAccessToken`.
@@ -423,7 +423,7 @@ bool EnablePrivilege(
     CTokenPrivileges* pPreviousState = NULL) throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pszPrivilege*<br/>
 Ponteiro para uma cadeia de caracteres que contém o privilégio a ser habilitado no objeto `CAccessToken`.
@@ -445,7 +445,7 @@ bool EnablePrivileges(
     CTokenPrivileges* pPreviousState = NULL) throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rPrivileges*<br/>
 Ponteiro para uma matriz de cadeias de caracteres que contém os privilégios a serem habilitados no objeto `CAccessToken`.
@@ -465,7 +465,7 @@ Chame esse método para retornar a DACL padrão do objeto de `CAccessToken`.
 bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDacl*<br/>
 Ponteiro para o objeto da [classe CDacl](../../atl/reference/cdacl-class.md) que receberá a `CAccessToken` DACL padrão do objeto.
@@ -482,7 +482,7 @@ Chame esse método para obter o objeto de `CAccessToken` igual ao token de acess
 bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDesiredAccess*<br/>
 Especifica uma máscara de acesso que especifica os tipos de acesso solicitados ao token de acesso. Esses tipos de acesso solicitados são comparados com a DACL do token para determinar quais acessos são concedidos ou negados.
@@ -499,7 +499,7 @@ Chame esse método para retornar os grupos de tokens do objeto de `CAccessToken`
 bool GetGroups(CTokenGroups* pGroups) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pGroups*<br/>
 Ponteiro para o objeto da [classe CTokenGroups](../../atl/reference/ctokengroups-class.md) que receberá as informações do grupo.
@@ -529,7 +529,7 @@ bool GetImpersonationLevel(
     SECURITY_IMPERSONATION_LEVEL* pImpersonationLevel) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pImpersonationLevel*<br/>
 Ponteiro para um [SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level) tipo de enumeração que receberá as informações de nível de representação.
@@ -546,7 +546,7 @@ Chame esse método para obter a ID de sessão de logon associada ao objeto `CAcc
 bool GetLogonSessionId(LUID* pluid) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pluid*<br/>
 Ponteiro para um [LUID](/windows/win32/api/winnt/ns-winnt-luid) que receberá a ID de sessão de logon.
@@ -567,7 +567,7 @@ Chame esse método para obter o SID de logon associado ao objeto `CAccessToken`.
 bool GetLogonSid(CSid* pSid) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pSid*<br/>
 Ponteiro para um objeto de [classe CSid](../../atl/reference/csid-class.md) .
@@ -588,7 +588,7 @@ Chame esse método para obter o proprietário associado ao objeto `CAccessToken`
 bool GetOwner(CSid* pSid) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pSid*<br/>
 Ponteiro para um objeto de [classe CSid](../../atl/reference/csid-class.md) .
@@ -609,7 +609,7 @@ Chame esse método para obter o grupo primário associado ao objeto `CAccessToke
 bool GetPrimaryGroup(CSid* pSid) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pSid*<br/>
 Ponteiro para um objeto de [classe CSid](../../atl/reference/csid-class.md) .
@@ -630,7 +630,7 @@ Chame esse método para obter os privilégios associados ao objeto `CAccessToken
 bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pPrivileges*<br/>
 Ponteiro para um objeto de [classe CTokenPrivileges](../../atl/reference/ctokenprivileges-class.md) que receberá os privilégios.
@@ -647,7 +647,7 @@ Chame esse método para inicializar o `CAccessToken` com o token de acesso do pr
 bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDesiredAccess*<br/>
 Especifica uma máscara de acesso que especifica os tipos de acesso solicitados ao token de acesso. Esses tipos de acesso solicitados são comparados com a DACL do token para determinar quais acessos são concedidos ou negados.
@@ -683,7 +683,7 @@ Chame esse método para obter a origem do objeto `CAccessToken`.
 bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pSource*<br/>
 Ponteiro para uma estrutura de [TOKEN_SOURCE](/windows/win32/api/winnt/ns-winnt-token_source) .
@@ -700,7 +700,7 @@ Chame esse método para obter informações associadas ao objeto `CAccessToken`.
 bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pStatistics*<br/>
 Ponteiro para uma estrutura de [TOKEN_STATISTICS](/windows/win32/api/winnt/ns-winnt-token_statistics) .
@@ -717,7 +717,7 @@ Chame esse método para obter a ID de sessão dos serviços de terminal associad
 bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pdwSessionId*<br/>
 A ID de sessão dos serviços de terminal.
@@ -737,7 +737,7 @@ bool GetThreadToken(
     bool bOpenAsSelf = true) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDesiredAccess*<br/>
 Especifica uma máscara de acesso que especifica os tipos de acesso solicitados ao token de acesso. Esses tipos de acesso solicitados são comparados com a DACL do token para determinar quais acessos são concedidos ou negados.
@@ -762,7 +762,7 @@ Chame esse método para obter a ID do token associada ao objeto `CAccessToken`.
 bool GetTokenId(LUID* pluid) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pluid*<br/>
 Ponteiro para um [LUID](/windows/win32/api/winnt/ns-winnt-luid) que receberá a ID do token.
@@ -779,7 +779,7 @@ Chame esse método para obter o tipo de token do objeto `CAccessToken`.
 bool GetType(TOKEN_TYPE* pType) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pType*<br/>
 Endereço da variável de [TOKEN_TYPE](/windows/win32/api/winnt/ne-winnt-token_type) que, em caso de êxito, recebe o tipo do token.
@@ -800,7 +800,7 @@ Chame esse método para identificar o usuário associado ao objeto `CAccessToken
 bool GetUser(CSid* pSid) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pSid*<br/>
 Ponteiro para um objeto de [classe CSid](../../atl/reference/csid-class.md) .
@@ -829,7 +829,7 @@ Chame esse método para atribuir um `CAccessToken` de representação a um threa
 bool Impersonate(HANDLE hThread = NULL) const throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hThread*<br/>
 Identificador para o thread ao qual atribuir o token de representação. Esse identificador deve ter sido aberto com TOKEN_IMPERSONATE direitos de acesso. Se *hThread* for NULL, o método fará com que o thread pare de usar um token de representação.
@@ -902,7 +902,7 @@ bool LogonUser(
     DWORD dwLogonProvider = LOGON32_PROVIDER_DEFAULT) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pszUserName*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome de usuário. Esse é o nome da conta de usuário para fazer logon.
@@ -938,7 +938,7 @@ bool OpenCOMClientToken(
     bool bOpenAsSelf = true) throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDesiredAccess*<br/>
 Especifica uma máscara de acesso que especifica os tipos de acesso solicitados ao token de acesso. Esses tipos de acesso solicitados são comparados com a DACL do token para determinar quais acessos são concedidos ou negados.
@@ -971,7 +971,7 @@ bool OpenNamedPipeClientToken(
     bool bOpenAsSelf = true) throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hPipe*<br/>
 Identificador para um pipe nomeado.
@@ -1007,7 +1007,7 @@ bool OpenRPCClientToken(
     bool bOpenAsSelf = true) throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *BindingHandle*<br/>
 Identificador de associação no servidor que representa uma associação a um cliente.
@@ -1043,7 +1043,7 @@ bool OpenThreadToken(
     SECURITY_IMPERSONATION_LEVEL sil = SecurityImpersonation) throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDesiredAccess*<br/>
 Especifica uma máscara de acesso que especifica os tipos de acesso solicitados ao token de acesso. Esses tipos de acesso solicitados são comparados com a DACL do token para determinar quais acessos são concedidos ou negados.
@@ -1079,7 +1079,7 @@ bool PrivilegeCheck(
     bool* pbResult) const throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *RequiredPrivileges*<br/>
 Ponteiro para uma estrutura de [PRIVILEGE_SET](/windows/win32/api/winnt/ns-winnt-privilege_set) .
@@ -1103,7 +1103,7 @@ Chame esse método para impedir que um thread use um token de representação.
 bool Revert(HANDLE hThread = NULL) const throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hThread*<br/>
 Manipule o thread para reverter a representação. Se *hThread* for NULL, o thread atual será assumido.
@@ -1124,7 +1124,7 @@ Chame esse método para definir a DACL padrão do objeto `CAccessToken`.
 bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rDacl*<br/>
 As novas informações de [classe CDacl](../../atl/reference/cdacl-class.md) padrão.
@@ -1145,7 +1145,7 @@ Chame esse método para definir o proprietário do objeto `CAccessToken`.
 bool SetOwner(const CSid& rSid) throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rSid*<br/>
 O objeto da [classe CSid](../../atl/reference/csid-class.md) que contém as informações do proprietário.
@@ -1166,7 +1166,7 @@ Chame esse método para definir o grupo primário do objeto `CAccessToken`.
 bool SetPrimaryGroup(const CSid& rSid) throw(...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rSid*<br/>
 O objeto da [classe CSid](../../atl/reference/csid-class.md) que contém as informações do grupo primário.
@@ -1179,7 +1179,7 @@ Retorna verdadeiro em caso de êxito, falso em caso de falha.
 
 O grupo primário é o grupo padrão para novos objetos criados enquanto esse token de acesso está em vigor.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
 [Tokens de acesso](/windows/win32/SecAuthZ/access-tokens)<br/>

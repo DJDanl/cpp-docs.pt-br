@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
 ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855244"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418646"
 ---
 # <a name="cfileexception-class"></a>Classe CFileException
 
@@ -96,7 +96,7 @@ CFileException(
     LPCTSTR lpszArchiveName = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *causa*<br/>
 Uma variável de tipo enumerada que indica o motivo da exceção. Consulte [CFileException:: m_cause](#m_cause) para obter uma lista dos valores possíveis.
@@ -122,7 +122,7 @@ Converte um determinado valor de erro de biblioteca em tempo de execução em um
 static int PASCAL ErrnoToException(int nErrno);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nErrno*<br/>
 Um código de erro inteiro, conforme definido no tempo de execução, inclui o arquivo ERRNO. T.
@@ -150,7 +150,7 @@ virtual BOOL GetErrorMessage(
     PUINT pnHelpContext = NULL) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszError*<br/>
 [entrada, saída] Ponteiro para um buffer que recebe uma mensagem de erro.
@@ -255,7 +255,7 @@ Retorna um enumerador que corresponde a um determinado valor de *lOsError* . Se 
 static int PASCAL OsErrorToException(LONG lOsError);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lOsError*<br/>
 Um código de erro específico do sistema operacional.
@@ -276,7 +276,7 @@ Constrói um objeto `CFileException` correspondente a um determinado valor *nErr
 static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nErrno*<br/>
 Um código de erro inteiro, conforme definido no tempo de execução, inclui o arquivo ERRNO. T.
@@ -296,7 +296,7 @@ Gera um `CFileException` correspondente a um determinado valor *lOsError* . Se o
 static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lOsError*<br/>
 Um código de erro específico do sistema operacional.
@@ -308,7 +308,7 @@ Um ponteiro para a cadeia de caracteres que contém o nome do arquivo que causou
 
 [!code-cpp[NVC_MFCFiles#29](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_6.cpp)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Classe CException](../../mfc/reference/cexception-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

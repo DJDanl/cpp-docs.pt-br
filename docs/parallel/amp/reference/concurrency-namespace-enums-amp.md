@@ -6,11 +6,11 @@ f1_keywords:
 - amp/Concurrency::queuing_mode
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
 ms.openlocfilehash: a4feb2f98fc288fa79c0f9d81e4ed882027eddf8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855712"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419297"
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Enumerações do namespace de simultaneidade (AMP)
 
@@ -28,7 +28,7 @@ enum access_type;
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`access_type_auto`|Escolha automaticamente o melhor `access_type` para o acelerador.|
 |`access_type_none`|Especializada. A alocação só pode ser acessada no acelerador e não na CPU.|
@@ -46,11 +46,11 @@ enum queuing_mode;
 
 ### <a name="values"></a>Valores
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`queuing_mode_immediate`|Um modo de enfileiramento que especifica que todos os comandos, por exemplo, [Parallel_for_each function (C++ amp)](concurrency-namespace-functions-amp.md#parallel_for_each), são enviados para o dispositivo acelerador correspondente assim que retornam ao chamador.|
 |`queuing_mode_automatic`|Um modo de enfileiramento que especifica que os comandos sejam colocados em fila em uma fila de comandos que corresponde ao objeto [accelerator_view](accelerator-view-class.md) . Os comandos são enviados para o dispositivo quando [accelerator_view:: flush](accelerator-view-class.md#flush) é chamado.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)

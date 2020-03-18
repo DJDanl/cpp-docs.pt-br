@@ -38,11 +38,11 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
 ms.openlocfilehash: 42fdc7a3f09568b641229e897a2a493994a7ba8a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862951"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417589"
 ---
 # <a name="message-map-macros-atl"></a>Macros de mapa de mensagens (ATL)
 
@@ -85,7 +85,7 @@ Essas macros definem entradas e mapas de mensagens.
 |[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Mapeia uma mensagem WM_NOTIFY refletida para uma função de manipulador, com base no código de notificação e em um intervalo contíguo de identificadores de controle.|
 |[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mapeia uma mensagem WM_NOTIFY refletida para uma função de manipulador, com base em um intervalo contíguo de identificadores de controle.|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -97,7 +97,7 @@ Marca o início de um mapa de mensagens alternativo.
 ALT_MSG_MAP(msgMapID)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *msgMapID*<br/>
 no O identificador do mapa de mensagens.
@@ -114,7 +114,7 @@ A macro [END_MSG_MAP](#end_msg_map) marca o final do mapa de mensagens. Observe 
 
 Para obter mais informações sobre como usar mapas de mensagens na ATL, consulte [mapas de mensagens](../../atl/message-maps-atl.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra o mapa de mensagem padrão e um mapa de mensagem alternativo, cada um contendo uma função de manipulador:
 
@@ -124,7 +124,7 @@ O exemplo a seguir mostra dois mapas de mensagens alternativos. O mapa de mensag
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -136,7 +136,7 @@ Marca o início do mapa de mensagens padrão.
 BEGIN_MSG_MAP(theClass)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Classe*<br/>
 no O nome da classe que contém o mapa de mensagens.
@@ -147,7 +147,7 @@ no O nome da classe que contém o mapa de mensagens.
 
 As macros a seguir mapeiam uma mensagem para uma função de manipulador. Essa função deve ser definida na *classe*.
 
-|Macro|Descrição|
+|Macro|DESCRIÇÃO|
 |-----------|-----------------|
 |[MESSAGE_HANDLER](#message_handler)|Mapeia uma mensagem do Windows para uma função de manipulador.|
 |[MESSAGE_RANGE_HANDLER](#message_range_handler)|Mapeia um intervalo contíguo de mensagens do Windows para uma função de manipulador.|
@@ -162,7 +162,7 @@ As macros a seguir mapeiam uma mensagem para uma função de manipulador. Essa f
 
 As macros a seguir direcionam mensagens para outro mapa de mensagens. Esse processo é chamado de "encadeamento".
 
-|Macro|Descrição|
+|Macro|DESCRIÇÃO|
 |-----------|-----------------|
 |[CHAIN_MSG_MAP](#chain_msg_map)|Encadeia para o mapa de mensagem padrão na classe base.|
 |[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|Encadeia para o mapa de mensagem padrão em um membro de dados da classe.|
@@ -172,7 +172,7 @@ As macros a seguir direcionam mensagens para outro mapa de mensagens. Esse proce
 
 As macros a seguir direcionam mensagens "refletidas" da janela pai. Por exemplo, um controle normalmente envia mensagens de notificação para sua janela pai para processamento, mas a janela pai pode refletir a mensagem de volta para o controle.
 
-|Macro|Descrição|
+|Macro|DESCRIÇÃO|
 |-----------|-----------------|
 |[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|Mapeia uma mensagem WM_COMMAND refletida para uma função de manipulador, com base no código de notificação e no identificador do item de menu, controle ou acelerador.|
 |[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|Mapeia uma mensagem WM_COMMAND refletida para uma função de manipulador, com base no identificador do item de menu, controle ou acelerador.|
@@ -185,7 +185,7 @@ As macros a seguir direcionam mensagens "refletidas" da janela pai. Por exemplo,
 |[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mapeia uma mensagem WM_NOTIFY refletida para uma função de manipulador, com base em um intervalo contíguo de identificadores de controle.|
 |[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Mapeia uma mensagem WM_NOTIFY refletida para uma função de manipulador, com base no código de notificação e em um intervalo contíguo de identificadores de controle.|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#102](../../atl/codesnippet/cpp/message-map-macros-atl_3.h)]
 
@@ -203,7 +203,7 @@ A macro [END_MSG_MAP](#end_msg_map) marca o final do mapa de mensagens. Observe 
 
 Para obter mais informações sobre como usar mapas de mensagens na ATL, consulte [mapas de mensagens](../../atl/message-maps-atl.md).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -215,7 +215,7 @@ Define uma entrada em um mapa de mensagens.
 CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *theChainClass*<br/>
 no O nome da classe base que contém o mapa de mensagens.
@@ -232,7 +232,7 @@ CHAIN_MSG_MAP_ALT direciona mensagens para um mapa de mensagens alternativo em u
 
 Para obter mais informações sobre como usar mapas de mensagens na ATL, consulte [mapas de mensagens](../../atl/message-maps-atl.md).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -244,7 +244,7 @@ Define uma entrada em um mapa de mensagens.
 CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *theChainMember*<br/>
 no O nome do membro de dados que contém o mapa de mensagens.
@@ -261,7 +261,7 @@ CHAIN_MSG_MAP_ALT_MEMBER direciona mensagens para um mapa de mensagens alternati
 
 Para obter mais informações sobre como usar mapas de mensagens na ATL, consulte [mapas de mensagens](../../atl/message-maps-atl.md).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -273,7 +273,7 @@ Define uma entrada em um mapa de mensagens.
 CHAIN_MSG_MAP(theChainClass)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *theChainClass*<br/>
 no O nome da classe base que contém o mapa de mensagens.
@@ -287,7 +287,7 @@ CHAIN_MSG_MAP direciona mensagens para um mapa de mensagens padrão da classe ba
 
 Para obter mais informações sobre como usar mapas de mensagens na ATL, consulte [mapas de mensagens](../../atl/message-maps-atl.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#107](../../atl/codesnippet/cpp/message-map-macros-atl_4.h)]
 
@@ -299,7 +299,7 @@ Este exemplo ilustra o seguinte:
 
 - Se um procedimento de janela estiver usando o segundo mapa de mensagens alternativo do `CMyClass`e `OnChar` não tratar uma mensagem, a mensagem será direcionada para o mapa de mensagens alternativo especificado no `CMyBaseClass`. `CMyBaseClass` deve ter declarado este mapa de mensagem com ALT_MSG_MAP (1).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -311,7 +311,7 @@ Define uma entrada em um mapa de mensagens.
 CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dynaChainID*<br/>
 no O identificador exclusivo para o mapa de mensagens de um objeto.
@@ -325,7 +325,7 @@ CHAIN_MSG_MAP_DYNAMIC direciona mensagens, em tempo de execução, para o mapa d
 
 Para obter mais informações sobre como usar mapas de mensagens na ATL, consulte [mapas de mensagens](../../atl/message-maps-atl.md).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -337,7 +337,7 @@ Define uma entrada em um mapa de mensagens.
 CHAIN_MSG_MAP_MEMBER(theChainMember)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *theChainMember*<br/>
 no O nome do membro de dados que contém o mapa de mensagens.
@@ -351,7 +351,7 @@ CHAIN_MSG_MAP_MEMBER direciona mensagens para o mapa de mensagens padrão de um 
 
 Para obter mais informações sobre como usar mapas de mensagens na ATL, consulte [mapas de mensagens](../../atl/message-maps-atl.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#108](../../atl/codesnippet/cpp/message-map-macros-atl_5.h)]
 
@@ -363,7 +363,7 @@ Este exemplo ilustra o seguinte:
 
 - Se um procedimento de janela estiver usando o segundo mapa de mensagens alternativo do `CMyClass`e `OnChar` não tratar uma mensagem, a mensagem será direcionada para o mapa de mensagens alternativo especificado de `m_obj`. A classe `CMyContainedClass` deve ter declarado esse mapa de mensagens com ALT_MSG_MAP (1).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -375,15 +375,15 @@ Semelhante a [COMMAND_HANDLER](#command_handler), mas mapeia uma mensagem de [WM
 COMMAND_CODE_HANDLER(code, func)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*código*<br/>
+*code*<br/>
 no O código de notificação.
 
 *func*<br/>
 no O nome da função do manipulador de mensagens.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -395,12 +395,12 @@ Define uma entrada em um mapa de mensagens.
 COMMAND_HANDLER(id, code, func)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *id*<br/>
 no O identificador do item de menu, controle ou acelerador.
 
-*código*<br/>
+*code*<br/>
 no O código de notificação.
 
 *func*<br/>
@@ -425,7 +425,7 @@ Além de COMMAND_HANDLER, você pode usar [MESSAGE_HANDLER](#message_handler) pa
 
 Para obter mais informações sobre como usar mapas de mensagens na ATL, consulte [mapas de mensagens](../../atl/message-maps-atl.md).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -437,7 +437,7 @@ Semelhante a [COMMAND_HANDLER](#command_handler), mas mapeia uma mensagem de [WM
 COMMAND_ID_HANDLER(id, func)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *id*<br/>
 no O identificador do item de menu, controle ou acelerador que envia a mensagem.
@@ -445,7 +445,7 @@ no O identificador do item de menu, controle ou acelerador que envia a mensagem.
 *func*<br/>
 no O nome da função do manipulador de mensagens.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -457,7 +457,7 @@ Semelhante a [COMMAND_RANGE_HANDLER](#command_range_handler), mas mapeia [WM_COM
 COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *idFirst*<br/>
 no Marca o início de um intervalo contíguo de identificadores de controle.
@@ -465,7 +465,7 @@ no Marca o início de um intervalo contíguo de identificadores de controle.
 *idLast*<br/>
 no Marca o final de um intervalo contíguo de identificadores de controle.
 
-*código*<br/>
+*code*<br/>
 no O código de notificação.
 
 *func*<br/>
@@ -475,7 +475,7 @@ no O nome da função do manipulador de mensagens.
 
 Esse intervalo é baseado no identificador do item de menu, controle ou acelerador que envia a mensagem.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -487,7 +487,7 @@ Semelhante a [COMMAND_HANDLER](#command_handler), mas mapeia [WM_COMMAND](/windo
 COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *idFirst*<br/>
 no Marca o início de um intervalo contíguo de identificadores de controle.
@@ -502,7 +502,7 @@ no O nome da função do manipulador de mensagens.
 
 Esse intervalo é baseado no identificador do item de menu, controle ou acelerador que envia a mensagem.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -528,7 +528,7 @@ Fornece um manipulador padrão para a janela filho (controle) que receberá mens
 DEFAULT_REFLECTION_HANDLER()
 ```
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -548,7 +548,7 @@ Observe que sempre há exatamente uma instância de BEGIN_MSG_MAP e END_MSG_MAP.
 
 Para obter mais informações sobre como usar mapas de mensagens na ATL, consulte [mapas de mensagens](../../atl/message-maps-atl.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra o mapa de mensagem padrão e um mapa de mensagem alternativo, cada um contendo uma função de manipulador:
 
@@ -558,7 +558,7 @@ O exemplo a seguir mostra dois mapas de mensagens alternativos. O mapa de mensag
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -574,7 +574,7 @@ FORWARD_NOTIFICATIONS()
 
 Especifique essa macro como parte do seu mapa de mensagens.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -586,7 +586,7 @@ Define uma entrada em um mapa de mensagens.
 MESSAGE_HANDLER( msg, func )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *MSG*<br/>
 no A mensagem do Windows.
@@ -611,11 +611,11 @@ Além de MESSAGE_HANDLER, você pode usar [COMMAND_HANDLER](#command_handler) e 
 
 Para obter mais informações sobre como usar mapas de mensagens na ATL, consulte [mapas de mensagens](../../atl/message-maps-atl.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#129](../../atl/codesnippet/cpp/message-map-macros-atl_8.h)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -627,7 +627,7 @@ Semelhante a [MESSAGE_HANDLER](#message_handler), mas mapeia uma variedade de me
 MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *msgFirst*<br/>
 no Marca o início de um intervalo contíguo de mensagens.
@@ -638,7 +638,7 @@ no Marca o final de um intervalo contíguo de mensagens.
 *func*<br/>
 no O nome da função do manipulador de mensagens.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -650,7 +650,7 @@ Semelhante a [NOTIFY_HANDLER](#notify_handler), mas mapeia uma mensagem de [WM_N
 NOTIFY_CODE_HANDLER(cd, func)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *cd*<br/>
 no O código de notificação.
@@ -658,7 +658,7 @@ no O código de notificação.
 *func*<br/>
 no O nome da função do manipulador de mensagens.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -670,7 +670,7 @@ Define uma entrada em um mapa de mensagens.
 NOTIFY_HANDLER( id, cd, func )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *id*<br/>
 no O identificador do controle que envia a mensagem.
@@ -698,11 +698,11 @@ Além de NOTIFY_HANDLER, você pode usar [MESSAGE_HANDLER](#message_handler) par
 
 Para obter mais informações sobre como usar mapas de mensagens na ATL, consulte [mapas de mensagens](../../atl/message-maps-atl.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#130](../../atl/codesnippet/cpp/message-map-macros-atl_9.h)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -714,7 +714,7 @@ Semelhante a [NOTIFY_HANDLER](#notify_handler), mas mapeia uma mensagem de [WM_N
 NOTIFY_ID_HANDLER( id, func )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *id*<br/>
 no O identificador do controle que envia a mensagem.
@@ -722,7 +722,7 @@ no O identificador do controle que envia a mensagem.
 *func*<br/>
 no O nome da função do manipulador de mensagens.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -734,7 +734,7 @@ Semelhante a [NOTIFY_RANGE_HANDLER](#notify_range_handler), mas mapeia [WM_NOTIF
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *idFirst*<br/>
 no Marca o início de um intervalo contíguo de identificadores de controle.
@@ -752,7 +752,7 @@ no O nome da função do manipulador de mensagens.
 
 Esse intervalo se baseia no identificador do controle que envia a mensagem.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -764,7 +764,7 @@ Semelhante a [NOTIFY_HANDLER](#notify_handler), mas mapeia [WM_NOTIFY](/windows/
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *idFirst*<br/>
 no Marca o início de um intervalo contíguo de identificadores de controle.
@@ -779,7 +779,7 @@ no O nome da função do manipulador de mensagens.
 
 Esse intervalo se baseia no identificador do controle que envia a mensagem.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -795,7 +795,7 @@ REFLECT_NOTIFICATIONS()
 
 Especifique essa macro como parte do mapa de mensagens da janela pai.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -807,15 +807,15 @@ Semelhante a [COMMAND_CODE_HANDLER](#command_code_handler), mas os comandos de m
 REFLECTED_COMMAND_CODE_HANDLER( code, func )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*código*<br/>
+*code*<br/>
 no O código de notificação.
 
 *func*<br/>
 no O nome da função do manipulador de mensagens.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -827,18 +827,18 @@ Semelhante a [COMMAND_HANDLER](#command_handler), mas os comandos de mapas refle
 REFLECTED_COMMAND_HANDLER( id, code, func )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *id*<br/>
 no O identificador do item de menu, controle ou acelerador.
 
-*código*<br/>
+*code*<br/>
 no O código de notificação.
 
 *func*<br/>
 no O nome da função do manipulador de mensagens.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -850,7 +850,7 @@ Semelhante a [COMMAND_ID_HANDLER](#command_id_handler), mas os comandos de mapas
 REFLECTED_COMMAND_ID_HANDLER( id, func )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *id*<br/>
 no O identificador do item de menu, controle ou acelerador.
@@ -858,7 +858,7 @@ no O identificador do item de menu, controle ou acelerador.
 *func*<br/>
 no O nome da função do manipulador de mensagens.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -870,7 +870,7 @@ Semelhante a [COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler), mas os c
 REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *idFirst*<br/>
 no Marca o início de um intervalo contíguo de identificadores de controle.
@@ -878,13 +878,13 @@ no Marca o início de um intervalo contíguo de identificadores de controle.
 *idLast*<br/>
 no Marca o final de um intervalo contíguo de identificadores de controle.
 
-*código*<br/>
+*code*<br/>
 no O código de notificação.
 
 *func*<br/>
 no O nome da função do manipulador de mensagens.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -896,7 +896,7 @@ Semelhante a [COMMAND_RANGE_HANDLER](#command_range_handler), mas os comandos de
 REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *idFirst*<br/>
 no Marca o início de um intervalo contíguo de identificadores de controle.
@@ -907,7 +907,7 @@ no Marca o final de um intervalo contíguo de identificadores de controle.
 *func*<br/>
 no O nome da função do manipulador de mensagens.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -919,7 +919,7 @@ Semelhante a [NOTIFY_CODE_HANDLER](#notify_code_handler), mas mapeia as notifica
 REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *cd*<br/>
 no O código de notificação.
@@ -927,7 +927,7 @@ no O código de notificação.
 *func*<br/>
 no O nome da função do manipulador de mensagens.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -939,7 +939,7 @@ Semelhante a [NOTIFY_HANDLER](#notify_handler), mas mapeia as notificações ref
 REFLECTED_NOTIFY_HANDLER( id, cd, func )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *id*<br/>
 no O identificador do item de menu, controle ou acelerador.
@@ -950,7 +950,7 @@ no O código de notificação.
 *func*<br/>
 no O nome da função do manipulador de mensagens.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -962,7 +962,7 @@ Semelhante a [NOTIFY_ID_HANDLER](#notify_id_handler), mas mapeia as notificaçõ
 REFLECTED_NOTIFY_ID_HANDLER( id, func )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *id*<br/>
 no O identificador do item de menu, controle ou acelerador.
@@ -970,7 +970,7 @@ no O identificador do item de menu, controle ou acelerador.
 *func*<br/>
 no O nome da função do manipulador de mensagens.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -982,7 +982,7 @@ Semelhante a [NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler), mas mapeia
 REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *idFirst*<br/>
 no Marca o início de um intervalo contíguo de identificadores de controle.
@@ -996,7 +996,7 @@ no O código de notificação.
 *func*<br/>
 no O nome da função do manipulador de mensagens.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -1008,7 +1008,7 @@ Semelhante a [NOTIFY_RANGE_HANDLER](#notify_range_handler), mas mapeia as notifi
 REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *idFirst*<br/>
 no Marca o início de um intervalo contíguo de identificadores de controle.
@@ -1019,6 +1019,6 @@ no Marca o final de um intervalo contíguo de identificadores de controle.
 *func*<br/>
 no O nome da função do manipulador de mensagens.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Macros](../../atl/reference/atl-macros.md)

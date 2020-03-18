@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
 ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874028"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418933"
 ---
 # <a name="insert_iterator-class"></a>Classe insert_iterator
 
@@ -28,7 +28,7 @@ template <class Container>
 class insert_iterator;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *contêiner*
 O tipo de contêiner no qual os elementos deverão ser inseridos por um `insert_iterator`.
@@ -45,7 +45,7 @@ O contêiner do tipo `Container` deve satisfazer os requisitos para um contêine
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome de tipo|DESCRIÇÃO|
+|Nome do tipo|DESCRIÇÃO|
 |-|-|
 |[container_type](#container_type)|Um tipo que representa o contêiner no qual uma inserção geral deve ser feita.|
 |[reference](#reference)|Um tipo que fornece uma referência a um elemento em uma sequência controlada pelo contêiner associado.|
@@ -114,7 +114,7 @@ Constrói um `insert_iterator` que insere um elemento em uma posição especific
 insert_iterator(Container& _Cont, typename Container::iterator _It);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Cont*\
 O contêiner no qual o `insert_iterator` deve inserir elementos.
@@ -242,7 +242,7 @@ insert_iterator<Container>& operator++();
 insert_iterator<Container> operator++(int);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 Um `insert_iterator` que trata do próximo local no qual um valor pode ser armazenado.
 
@@ -308,7 +308,7 @@ insert_iterator<Container>& operator=(
     typename Container::value_type&& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor*\
 O valor a ser atribuído ao contêiner.
@@ -427,7 +427,7 @@ The first element in the list L is: 10.
 */
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [\<iterator>](../standard-library/iterator.md)\
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

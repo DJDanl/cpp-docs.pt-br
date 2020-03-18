@@ -34,11 +34,11 @@ f1_keywords:
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
 ms.openlocfilehash: 4005ae888511ec987fe83ab3d616aa0fc3675a22
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854114"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419136"
 ---
 # <a name="concurrency-namespace-functions"></a>Funções do namespace de simultaneidade
 
@@ -68,7 +68,7 @@ Aloca um bloco de memória do tamanho especificado no subalocador de cache Tempo
 void* __cdecl Alloc(size_t _NumBytes);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_NumBytes*<br/>
 O número de bytes de memória a serem alocados.
@@ -97,7 +97,7 @@ bool asend(
     const T& _Data);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo dos dados a serem enviados.
@@ -135,7 +135,7 @@ template<typename T, class _Ax>
 void concurrent_queue<T, _Ax>::clear();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 
@@ -151,7 +151,7 @@ __declspec(noinline) auto create_async(const _Function& _Func)
     -> decltype(ref new details::_AsyncTaskGeneratorThunk<_Function>(_Func));
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Function*<br/>
 {2&gt;Tipo&lt;2}.
@@ -210,7 +210,7 @@ template<typename _ReturnType>
 __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Task);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo do parâmetro do qual a tarefa deve ser construída.
@@ -273,7 +273,7 @@ Libera um bloco de memória alocado anteriormente pelo método `Alloc` para o su
 void __cdecl Free(_Pre_maybenull_ _Post_invalid_ void* _PAllocation);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_PAllocation*<br/>
 Um ponteiro para a memória alocada anteriormente pelo método de `Alloc` que deve ser liberado. Se o parâmetro `_PAllocation` for definido como o valor `NULL`, esse método irá ignorá-lo e retornar imediatamente.
@@ -382,7 +382,7 @@ void concurrent_vector<T, _Ax>::internal_assign_iterators(
    _I last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 
@@ -448,7 +448,7 @@ choice<std::tuple<T1, T2, Ts...>> make_choice(
     Ts... _Items);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T1*<br/>
 O tipo de bloco de mensagem da primeira origem.
@@ -501,7 +501,7 @@ multitype_join<std::tuple<T1, T2, Ts...>, greedy> make_greedy_join(
     Ts... _Items);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T1*<br/>
 O tipo de bloco de mensagem da primeira origem.
@@ -555,7 +555,7 @@ multitype_join<std::tuple<T1, T2, Ts...>> make_join(
     Ts... _Items);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T1*<br/>
 O tipo de bloco de mensagem da primeira origem.
@@ -591,7 +591,7 @@ template <class _Function>
 task_handle<_Function> make_task(const _Function& _Func);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Function*<br/>
 O tipo do objeto de função que será invocado para executar o trabalho representado pelo objeto `task_handle`.
@@ -601,7 +601,7 @@ A função que será invocada para executar o trabalho representado pelo objeto 
 
 ### <a name="return-value"></a>Valor retornado
 
-Um objeto `task_handle`.
+Um objeto `task_handle` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -658,7 +658,7 @@ inline void parallel_buffered_sort(
     const size_t _Chunk_size = 2048);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Random_iterator*<br/>
 O tipo de iterador do intervalo de entrada.
@@ -743,7 +743,7 @@ void parallel_for(
     affinity_partitioner& _Part);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Index_type*<br/>
 O tipo do índice que está sendo usado para a iteração.
@@ -792,7 +792,7 @@ void parallel_for_each(
     _Partitioner&& _Part);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Iterator*<br/>
 O tipo do iterador que está sendo usado para iterar no contêiner.
@@ -950,7 +950,7 @@ void parallel_invoke(
     const _Function10& _Func10);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Function1*<br/>
 O tipo do primeiro objeto de função a ser executado em paralelo.
@@ -1067,7 +1067,7 @@ inline void parallel_radixsort(
     const size_t _Chunk_size = 256* 256);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Random_iterator*<br/>
 O tipo de iterador do intervalo de entrada.
@@ -1133,7 +1133,7 @@ inline _Reduce_type parallel_reduce(
     const _Sym_reduce_fun& _Sym_fun);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Forward_iterator*<br/>
 O tipo de iterador do intervalo de entrada.
@@ -1194,7 +1194,7 @@ inline void parallel_sort(
     const size_t _Chunk_size = 2048);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Random_iterator*<br/>
 O tipo de iterador do intervalo de entrada.
@@ -1294,7 +1294,7 @@ first2,
     const _Binary_operator& _Binary_op);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Input_iterator1*<br/>
 O tipo do primeiro ou somente iterador de entrada.
@@ -1377,7 +1377,7 @@ T receive(
     unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo de carga.
@@ -1412,7 +1412,7 @@ void run_with_cancellation_token(
     cancellation_token _Ct);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Function*<br/>
 O tipo do objeto de função que será invocado.
@@ -1439,7 +1439,7 @@ template <class T>
 bool send(ITarget<T>& _Trg, const T& _Data);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo de carga.
@@ -1464,7 +1464,7 @@ Para obter mais informações, consulte [funções de passagem de mensagens](../
 inline void set_ambient_scheduler(std::shared_ptr<::Concurrency::scheduler_interface> _Scheduler);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Scheduler*<br/>
 O Agendador de ambiente a ser definido.
@@ -1486,12 +1486,12 @@ void __cdecl set_task_execution_resources(
     PGROUP_AFFINITY _PGroupAffinity);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_ProcessAffinityMask*<br/>
 A máscara de afinidade à qual o Tempo de Execução de Simultaneidade threads de trabalho deve ser restringido. Use esse método em um sistema com mais de 64 threads de hardware somente se você quiser limitar o Tempo de Execução de Simultaneidade a um subconjunto do grupo de processadores atual. Em geral, você deve usar a versão do método que aceita uma matriz de afinidades de grupo como um parâmetro, para restringir a afinidade em máquinas com mais de 64 threads de hardware.
 
-*count*<br/>
+*contagem*<br/>
 O número de entradas de `GROUP_AFFINITY` na matriz especificada pelo parâmetro `_PGroupAffinity`.
 
 *_PGroupAffinity*<br/>
@@ -1516,7 +1516,7 @@ inline void swap(
     concurrent_vector<T, _Ax>& _B);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo de dados dos elementos armazenados nos vetores simultâneos.
@@ -1545,7 +1545,7 @@ task<_TaskType> task_from_exception(
     const task_options& _TaskOptions = task_options());
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_TaskType*<br/>
 
@@ -1571,7 +1571,7 @@ inline task<void> task_from_result(
     const task_options& _TaskOptions = task_options());
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 
@@ -1592,7 +1592,7 @@ void Trace_agents_register_name(
     _In_z_ const wchar_t* _Name);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo do objeto. Normalmente, esse é um bloco de mensagem ou um agente.
@@ -1627,7 +1627,7 @@ bool try_receive(
     typename ITarget<T>::filter_method const& _Filter_proc);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo de carga
@@ -1657,7 +1657,7 @@ Pausa o contexto atual por um período de tempo especificado.
 void __cdecl wait(unsigned int _Milliseconds);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Milliseconds*<br/>
 O número de milissegundos para o qual o contexto atual deve ser pausado. Se o parâmetro `_Milliseconds` for definido como o valor `0`, o contexto atual deverá gerar a execução para outros contextos executáveis antes de continuar.
@@ -1680,7 +1680,7 @@ auto when_all(
     _Iterator>::_Perform(_TaskOptions, _Begin,  _End));
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Iterator*<br/>
 O tipo do iterador de entrada.
@@ -1732,7 +1732,7 @@ auto when_any(
                _Iterator>::_Perform(_CancellationToken._GetImplValue(), _Begin, _End));
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Iterator*<br/>
 O tipo do iterador de entrada.
@@ -1757,6 +1757,6 @@ Uma tarefa que foi concluída com êxito quando alguma das tarefas de entrada fo
 
 Para obter mais informações, consulte [paralelismo de tarefas](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)

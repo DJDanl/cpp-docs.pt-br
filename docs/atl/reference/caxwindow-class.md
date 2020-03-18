@@ -17,11 +17,11 @@ helpviewer_keywords:
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
 ms.openlocfilehash: 6f5c178090a970906209e41da9298be61a61c639
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864709"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418002"
 ---
 # <a name="caxwindow-class"></a>Classe CAxWindow
 
@@ -38,7 +38,7 @@ class CAxWindow : public CWindow
 
 ## <a name="members"></a>Membros
 
-### <a name="methods"></a>{1&gt;Métodos&lt;1}
+### <a name="methods"></a>Métodos
 
 |||
 |-|-|
@@ -68,7 +68,7 @@ A classe `CAxWindow` é implementada como uma especialização da classe `CAxWin
 
 Se você precisar alterar a classe base, poderá usar `CAxWindowT` e especificar a nova classe base como um argumento de modelo.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -82,7 +82,7 @@ HRESULT AttachControl(
     IUnknown** ppUnkContainer);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pControl*<br/>
 no Um ponteiro para a `IUnknown` do controle.
@@ -106,7 +106,7 @@ Constrói um objeto `CAxWindow` usando um identificador de objeto de janela exis
 CAxWindow(HWND hWnd = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWnd*<br/>
 Um identificador para um objeto de janela existente.
@@ -127,7 +127,7 @@ HRESULT CreateControl(
     IUnknown** ppUnkContainer = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 Um ponteiro para uma cadeia de caracteres para criar o controle. Deve ser formatada de uma das seguintes maneiras:
@@ -146,10 +146,10 @@ Um ponteiro para uma cadeia de caracteres para criar o controle. Deve ser format
    > `"MSHTML:"` deve preceder o fragmento HTML para que ele seja designado como sendo um fluxo MSHTML. Somente o ProgID e o CLSID têm suporte em plataformas Windows Mobile. Windows CE plataformas incorporadas, além do Windows Mobile com suporte para CE IE, oferecem suporte a todos os tipos, incluindo ProgID, CLSID, URL, referência ao documento ativo e fragmento de HTML.
 
 *pStream*<br/>
-no Um ponteiro para um fluxo que é usado para inicializar as propriedades do controle. Pode ser NULO.
+no Um ponteiro para um fluxo que é usado para inicializar as propriedades do controle. Pode ser NULL.
 
 *ppUnkContainer*<br/>
-fora O endereço de um ponteiro que receberá a `IUnknown` do contêiner. Pode ser NULO.
+fora O endereço de um ponteiro que receberá a `IUnknown` do contêiner. Pode ser NULL.
 
 *dwResID*<br/>
 A ID de recurso de um recurso HTML. O controle WebBrowser será criado e carregado com o recurso especificado.
@@ -168,7 +168,7 @@ Esse método fornece o mesmo resultado que chamar:
 
 Consulte [CAxWindow2T:: CreateControlLic](../../atl/reference/caxwindow2t-class.md#createcontrollic) para criar, inicializar e hospedar um controle ActiveX licenciado.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) para obter um exemplo que usa `CreateControl`.
 
@@ -194,7 +194,7 @@ HRESULT CreateControlEx(
     IUnknown* punkSink = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 Um ponteiro para uma cadeia de caracteres para criar o controle. Deve ser formatada de uma das seguintes maneiras:
@@ -213,13 +213,13 @@ Um ponteiro para uma cadeia de caracteres para criar o controle. Deve ser format
    > `"MSHTML:"` deve preceder o fragmento HTML para que ele seja designado como sendo um fluxo MSHTML. Somente o ProgID e o CLSID têm suporte em plataformas Windows Mobile. Windows CE plataformas incorporadas, além do Windows Mobile com suporte para CE IE, oferecem suporte a todos os tipos, incluindo ProgID, CLSID, URL, referência ao documento ativo e fragmento de HTML.
 
 *pStream*<br/>
-no Um ponteiro para um fluxo que é usado para inicializar as propriedades do controle. Pode ser NULO.
+no Um ponteiro para um fluxo que é usado para inicializar as propriedades do controle. Pode ser NULL.
 
 *ppUnkContainer*<br/>
-fora O endereço de um ponteiro que receberá a `IUnknown` do contêiner. Pode ser NULO.
+fora O endereço de um ponteiro que receberá a `IUnknown` do contêiner. Pode ser NULL.
 
 *ppUnkControl*<br/>
-fora O endereço de um ponteiro que receberá a `IUnknown` do controle. Pode ser NULO.
+fora O endereço de um ponteiro que receberá a `IUnknown` do controle. Pode ser NULL.
 
 *iidSink*<br/>
 no O identificador de interface de uma interface de saída no objeto contido. Pode ser IID_NULL.
@@ -240,7 +240,7 @@ Esse método é semelhante a [CAxWindow:: CreateControl](#createcontrol), mas ao
 
 Consulte [CAxWindow2T:: CreateControlLicEx](../../atl/reference/caxwindow2t-class.md#createcontrollicex) para criar, inicializar e hospedar um controle ActiveX licenciado.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) para obter um exemplo que usa `CreateControlEx`.
 
@@ -264,7 +264,7 @@ Atribui um HWND a um objeto de `CAxWindow` existente.
 CAxWindow<TBase>& operator=(HWND hWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWnd*<br/>
 Um identificador para uma janela existente.
@@ -283,7 +283,7 @@ template <class  Q>
 HRESULT QueryControl(Q** ppUnk);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *IID*<br/>
 no Especifica o IID da interface do controle.
@@ -308,7 +308,7 @@ template <class  Q>
 HRESULT QueryHost(Q** ppUnk);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *IID*<br/>
 no Especifica o IID da interface do controle.
@@ -335,7 +335,7 @@ Define a interface de expedição externa para o objeto `CAxWindow`.
 HRESULT SetExternalDispatch(IDispatch* pDisp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDisp*<br/>
 no Um ponteiro para uma interface `IDispatch`.
@@ -352,7 +352,7 @@ Define a interface [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihan
 HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pUIHandler*<br/>
 no Um ponteiro para uma interface `IDocHostUIHandlerDispatch`.
@@ -365,7 +365,7 @@ Um valor HRESULT padrão.
 
 A interface de `IDocHostUIHandlerDispatch` externa é usada pelos controles que consultam o site do host para a interface `IDocHostUIHandlerDispatch`. O controle WebBrowser é um controle que faz isso.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de ATLCON](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWindow](../../atl/reference/cwindow-class.md)<br/>

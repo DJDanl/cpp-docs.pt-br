@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
 ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854091"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419780"
 ---
 # <a name="ltnumericgt-functions"></a>Funções &lt;numeric&gt;
 
@@ -59,7 +59,7 @@ Type accumulate(
     BinaryOperation binary_op);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador de entrada que aborda o primeiro elemento no intervalo para somar ou combinar usando *binary_op*.
@@ -81,7 +81,7 @@ A soma de *init* e todos os elementos no intervalo especificado para a primeira 
 
 O valor inicial garante que haja um resultado bem definido quando o intervalo estiver vazio, caso em que *init* é retornado. A operação binária não precisa ser associativa ou comutadora. O resultado é inicializado para o valor inicial *init* e, em seguida, *Result* = *binary_op*(*resultado*, *in_iter*) é calculado iterativamente por meio do intervalo, em que *in_iter* é um iterador que aponta para cada elemento sucessivo no intervalo. O intervalo deve ser válido e a complexidade é linear com o tamanho do intervalo. O tipo de retorno do operador binário deve ser conversível para **Type** para garantir o fechamento durante a iteração.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // numeric_accum.cpp
@@ -215,7 +215,7 @@ ForwardIterator2 adjacent_difference(
     BinaryOperation binary_op);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 Uma política de execução.
@@ -246,7 +246,7 @@ Para *uma sequência de valores de*1, *um*2, *um*3, em um intervalo de entrada, 
 
 A operação binária *binary_op* não deve ser associativa ou comutadora, pois a ordem das operações aplicadas é especificada.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // numeric_adj_diff.cpp
@@ -345,7 +345,7 @@ ForwardIterator2 exclusive_scan(
     BinaryOperation binary_op);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 Uma política de execução.
@@ -378,7 +378,7 @@ template <class M, class N>
 constexpr common_type_t<M,N> gcd(M m, N n);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *m*, *n*\
 Valores do tipo integral.
@@ -440,7 +440,7 @@ ForwardIterator2 inclusive_scan(
     Type init);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 Uma política de execução.
@@ -486,7 +486,7 @@ Type inner_product(
     BinaryOperation2 binary_op2);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *first1*
 Um iterador de entrada que trata o primeiro elemento no primeiro intervalo cujo produto interno ou produto interno generalizado com o segundo intervalo deverá ser calculado.
@@ -516,7 +516,7 @@ substituindo iterativamente *init* por *init* + (*a*i \* *b*).
 
 A segunda função membro retorna:
 
-*binary_op1* init (*1* *binary_op2* *b*1) *binary_op1* (*um*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *b*n)
+*init* *binary_op1* init (*1* *binary_op2* *b*1) *binary_op1* (*um*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *b*n)
 
 substituindo a *init* por iteração por *binary_op1* *init* (*a*i *binary_op2* *b*).
 
@@ -524,7 +524,7 @@ substituindo a *init* por iteração por *binary_op1* *init* (*a*i *binary_op2* 
 
 O valor inicial garante que haja um resultado bem definido quando o intervalo estiver vazio. Nesse caso, *init* é retornado. As operações binárias não precisam ser associativas ou comutadoras. O intervalo deve ser válido e a complexidade é linear com o tamanho do intervalo. O tipo de retorno do operador binário deve ser conversível para **Type** para garantir o fechamento durante a iteração.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // numeric_inner_prod.cpp
@@ -623,7 +623,7 @@ template <class ForwardIterator, class Type>
 void iota(ForwardIterator first, ForwardIterator last, Type value);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador de entrada que trata o primeiro elemento no intervalo a ser preenchido.
@@ -634,7 +634,7 @@ Um iterador de entrada que trata o último elemento no intervalo a ser preenchid
 *value*\
 O valor inicial a ser armazenado no primeiro elemento e incrementado sucessivamente para os elementos posteriores.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra alguns usos para a função `iota` ao preencher uma [lista](../standard-library/list.md) de inteiros e, em seguida, preencher um [vetor](../standard-library/vector.md) com o `list` para que a função [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle) possa ser usada.
 
@@ -702,7 +702,7 @@ OutputIterator partial_sum(
     BinaryOperation binary_op);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 Um iterador de entrada que trata o primeiro elemento no intervalo para ser parcialmente somado ou combinado de acordo com uma operação binária especificada.
@@ -730,7 +730,7 @@ Para *uma sequência de valores de*1, *um*2, *um*3, em um intervalo de entrada, 
 
 A operação binária *binary_op* não deve ser associativa ou comutadora, pois a ordem das operações aplicadas é especificada.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // numeric_partial_sum.cpp
@@ -835,7 +835,7 @@ Type reduce(
     BinaryOperation binary_op);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 Uma política de execução.
@@ -888,7 +888,7 @@ ForwardIterator2 transform_exclusive_scan(
     UnaryOperation unary_op);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 Uma política de execução.
@@ -953,7 +953,7 @@ ForwardIterator2 transform_inclusive_scan(
     Type init);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 Uma política de execução.
@@ -1033,7 +1033,7 @@ Type transform_reduce(
     UnaryOperation unary_op);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *exec*
 Uma política de execução.

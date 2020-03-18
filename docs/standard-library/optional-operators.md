@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (optional)
 - std::operatoroperator&lt;= (optional)
 ms.openlocfilehash: c5d0de435180054b186400384fc0583df5b03246
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854040"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419689"
 ---
 # <a name="ltoptionalgt-operators"></a>&lt;operadores de&gt; opcionais
 
@@ -37,7 +37,7 @@ template <class T, class U> constexpr bool operator==(const optional<T>&, const 
 template <class T, class U> constexpr bool operator==(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `optional`, `nullopt_t`ou `T`.
@@ -57,7 +57,7 @@ template <class T, class U> constexpr bool operator!=(const optional<T>&, const 
 template <class T, class U> constexpr bool operator!=(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `optional`, `nullopt_t`ou `T`.
@@ -81,7 +81,7 @@ template <class T, class U> constexpr bool operator<(const optional<T>&, const U
 template <class T, class U> constexpr bool operator<(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `optional`, `nullopt_t`ou `T`.
@@ -105,7 +105,7 @@ template <class T, class U> constexpr bool operator<=(const optional<T>&, const 
 template <class T, class U> constexpr bool operator<=(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `optional`, `nullopt_t`ou `T`.
@@ -133,7 +133,7 @@ template <class T, class U> constexpr bool operator>(const optional<T>&, const U
 template <class T, class U> constexpr bool operator>(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `optional`, `nullopt_t`ou `T`.
@@ -161,7 +161,7 @@ template <class T, class U> constexpr bool operator>=(const optional<T>&, const 
 template <class T, class U> constexpr bool operator>=(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `optional`, `nullopt_t`ou `T`.

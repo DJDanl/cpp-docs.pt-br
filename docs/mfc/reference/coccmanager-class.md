@@ -31,11 +31,11 @@ helpviewer_keywords:
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
 ms.openlocfilehash: c2a49e3396879e5f1e0864ab5342b57541c6b36c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865932"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416756"
 ---
 # <a name="coccmanager-class"></a>Classe COccManager
 
@@ -51,7 +51,7 @@ class COccManager : public CNoTrackObject
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[COccManager:: CreateContainer](#createcontainer)|Cria um objeto `COleContainer`.|
 |[COccManager::CreateDlgControls](#createdlgcontrols)|Cria controles ActiveX, hospedados pelo objeto `COleContainer` associado.|
@@ -76,7 +76,7 @@ A classe base, `CNoTrackObject`, é uma classe base não documentada (localizada
 
 `COccManager`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxocc. h
 
@@ -88,7 +88,7 @@ Chamado pelo Framework para criar um contêiner de controle.
 virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 Um ponteiro para o objeto de janela associado ao contêiner de site personalizado.
@@ -117,7 +117,7 @@ virtual BOOL CreateDlgControls(
     _AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWndParent*<br/>
 Um ponteiro para o pai do objeto da caixa de diálogo.
@@ -143,7 +143,7 @@ Chamado pelo Framework para criar um site de controle, hospedado pelo contêiner
 virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pCtrlCont*<br/>
 Um ponteiro para o contêiner de controle que hospeda o novo site de controle.
@@ -166,7 +166,7 @@ Chame essa função para determinar se o controle é um botão de ação padrão
 static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 O objeto de janela que contém o controle de botão.
@@ -191,7 +191,7 @@ virtual BOOL IsDialogMessage(
     LPMSG lpMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWndDlg*<br/>
 Um ponteiro para a caixa de diálogo de destino pretendida da mensagem.
@@ -218,7 +218,7 @@ static BOOL AFX_CDECL IsLabelControl(CWnd* pWnd);
 static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 Um ponteiro para a janela que contém o controle.
@@ -245,7 +245,7 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
     LPMSG lpMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 Um ponteiro para a janela que contém o controle.
@@ -271,7 +271,7 @@ virtual BOOL OnEvent(
     AFX_CMDHANDLERINFO* pHandlerInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pCmdTarget*<br/>
 Um ponteiro para o objeto `CCmdTarget` tentando manipular o evento
@@ -303,7 +303,7 @@ virtual const DLGTEMPLATE* PreCreateDialog(
     const DLGTEMPLATE* pOrigTemplate);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pOccDialogInfo*<br/>
 Uma estrutura de `_AFX_OCC_DIALOG_INFO` que contém informações sobre o modelo de caixa de diálogo e todos os controles ActiveX hospedados pela caixa de diálogo.
@@ -329,7 +329,7 @@ Chamado pelo Framework para liberar memória alocada para o modelo de caixa de d
 virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pOccDialogInfo*<br/>
 Uma estrutura de `_AFX_OCC_DIALOG_INFO` que contém informações sobre o modelo de caixa de diálogo e todos os controles ActiveX hospedados pela caixa de diálogo.
@@ -350,7 +350,7 @@ static void AFX_CDECL SetDefaultButton(
     BOOL bDefault);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 Um ponteiro para a janela que contém o controle.
@@ -377,7 +377,7 @@ virtual DLGTEMPLATE* SplitDialogTemplate(
     DLGITEMTEMPLATE** ppOleDlgItems);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pTemplate*<br/>
 Um ponteiro para o modelo de caixa de diálogo a ser examinado.
@@ -400,7 +400,7 @@ Se não houver controles ActiveX no modelo, NULL será retornado *.*
 
 Substitua essa função para personalizar esse processo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleControlSite](../../mfc/reference/colecontrolsite-class.md)<br/>

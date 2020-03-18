@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::toupper [C++]
 - std::use_facet [C++]
 ms.openlocfilehash: 3c5d81aecb5e78a8fd3c3f32da82f6048ae4fac8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856461"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420018"
 ---
 # <a name="ltlocalegt-functions"></a>Funções &lt;locale&gt;
 
@@ -60,7 +60,7 @@ template <class Facet>
 bool has_facet(const locale& Loc);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Loc*
 A localidade a ser testada para a presença de uma faceta.
@@ -73,7 +73,7 @@ A localidade a ser testada para a presença de uma faceta.
 
 A função de modelo é útil para verificar se as facetas não obrigatórias estão listadas em uma localidade antes de `use_facet` ser chamado para evitar a exceção que seria gerada se elas não estiverem presentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_has_facet.cpp
@@ -103,7 +103,7 @@ template <class CharType>
 bool isalnum(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ch*\
 O elemento alfanumérico a ser testado.
@@ -115,7 +115,7 @@ A localidade que contém o elemento alfanumérico a ser testado.
 
 **true** se o elemento testado for alfanumérico; **false** se não.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_isalnum.cpp
@@ -170,7 +170,7 @@ template <class CharType>
 bool isalpha(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ch*\
 O elemento a ser testado.
@@ -186,7 +186,7 @@ A localidade que contém o elemento alfabético a ser testado.
 
 A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md)\< **chartype**> > (`Loc`). [é](../standard-library/ctype-class.md#is)( **CType**\< **CharType**>:: **Alpha**, `Ch`).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_isalpha.cpp
@@ -235,7 +235,7 @@ template <class CharType>
 bool iscntrl(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ch*\
 O elemento a ser testado.
@@ -251,7 +251,7 @@ A localidade que contém o elemento a ser testado.
 
 A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md)\< **chartype**> > (`Loc`). [é](../standard-library/ctype-class.md#is)( **CType**\< **CharType**>:: **Tab**, `Ch`).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_iscntrl.cpp
@@ -300,7 +300,7 @@ template <class CharType>
 bool isdigit(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ch*\
 O elemento a ser testado.
@@ -316,7 +316,7 @@ A localidade que contém o elemento a ser testado.
 
 A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md)\< **chartype**> > (`Loc`). [é](../standard-library/ctype-class.md#is)( **CType**\< **CharType**>:: **digit**, `Ch`).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_is_digit.cpp
@@ -365,7 +365,7 @@ template <class CharType>
 bool isgraph(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ch*\
 O elemento a ser testado.
@@ -381,7 +381,7 @@ A localidade que contém o elemento a ser testado.
 
 A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md)\< **chartype**> > (`Loc`). [é](../standard-library/ctype-class.md#is)( **CType**\< **CharType**>:: **Graph**, `Ch`).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_is_graph.cpp
@@ -430,7 +430,7 @@ template <class CharType>
 bool islower(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ch*\
 O elemento a ser testado.
@@ -446,7 +446,7 @@ A localidade que contém o elemento a ser testado.
 
 A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md)\< **chartype**> > (`Loc`). [é](../standard-library/ctype-class.md#is)( **CType**\< **CharType**>:: **Low**, `Ch`).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_islower.cpp
@@ -495,7 +495,7 @@ template <class CharType>
 bool isprint(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ch*\
 O elemento a ser testado.
@@ -511,7 +511,7 @@ A localidade que contém o elemento a ser testado.
 
 A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md)\< **chartype**> > (`Loc`). [é](../standard-library/ctype-class.md#is)( **CType**\< **CharType**>:: **Print**, `Ch`).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_isprint.cpp
@@ -559,7 +559,7 @@ template <class CharType>
 bool ispunct(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ch*\
 O elemento a ser testado.
@@ -575,7 +575,7 @@ A localidade que contém o elemento a ser testado.
 
 A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)`<`[CType](../standard-library/ctype-class.md)\< **chartype**> > (`Loc`). [é](../standard-library/ctype-class.md#is)( **CType**\< **CharType**>:: **punct**, `Ch`).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_ispunct.cpp
@@ -624,7 +624,7 @@ template <class CharType>
 bool isspace(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ch*\
 O elemento a ser testado.
@@ -640,7 +640,7 @@ A localidade que contém o elemento a ser testado.
 
 A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md)\< **chartype**> > (`Loc`). [é](../standard-library/ctype-class.md#is)( **CType**\< **CharType**>:: **Space**, `Ch`).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_isspace.cpp
@@ -689,7 +689,7 @@ template <class CharType>
 bool isupper(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ch*\
 O elemento a ser testado.
@@ -705,7 +705,7 @@ A localidade que contém o elemento a ser testado.
 
 A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md)\< **chartype**> > (`Loc`). [é](../standard-library/ctype-class.md#is)( **CType**\< **CharType**>:: **Upper**, `Ch`).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_isupper.cpp
@@ -754,7 +754,7 @@ template <class CharType>
 bool isxdigit(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ch*\
 O elemento a ser testado.
@@ -772,7 +772,7 @@ A função de modelo retorna [use_facet](../standard-library/locale-functions.md
 
 Dígitos hexadecimais usam base 16 para representar números, usando os números de 0 a 9 e letras de A a F, sem diferenciar maiúsculas e minúsculas, para representar os números decimais de 0 a 15.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_isxdigit.cpp
@@ -821,7 +821,7 @@ template <class CharType>
 CharType tolower(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ch*\
 O caractere a ser convertido em letras minúsculas.
@@ -837,7 +837,7 @@ O caractere convertido em letras minúsculas.
 
 A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md)\< **chartype**> > (`Loc`). [tolower](../standard-library/ctype-class.md#tolower)( `Ch`).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_tolower.cpp
@@ -870,7 +870,7 @@ template <class CharType>
 CharType toupper(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Ch*\
 O caractere a ser convertido em maiúsculas.
@@ -886,7 +886,7 @@ O caractere convertido em maiúsculas.
 
 A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md)\< **chartype**> > (`Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_toupper.cpp
@@ -919,7 +919,7 @@ template <class Facet>
 const Facet& use_facet(const locale& Loc);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Loc*
 A localidade const que contém o tipo de faceta que está sendo referenciado.
@@ -932,7 +932,7 @@ Uma referência à faceta da classe `Facet` contida na localidade do argumento.
 
 A referência à faceta retornada pela função de modelo permanece válida, desde que exista qualquer cópia da localidade que a contém. Se nenhum objeto de faceta da classe `Facet` estiver listado na localidade do argumento, a função gerará uma exceção `bad_cast`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_use_facet.cpp
@@ -971,6 +971,6 @@ The character 'a' in locale loc1 is alphabetic.
 The character '!' in locale loc2 is not alphabetic.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<locale>](../standard-library/locale.md)

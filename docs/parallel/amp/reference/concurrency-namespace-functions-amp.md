@@ -14,11 +14,11 @@ f1_keywords:
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
 ms.openlocfilehash: 90a23ce111f7307610de3f0ad4bcec05d8de27df
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855715"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419311"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funções do namespace de simultaneidade (AMP)
 
@@ -40,10 +40,10 @@ Bloqueia a execução de todos os threads em um bloco até que todos os acessos 
 inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Barrier*<br/>
-Um objeto `tile_barrier`.
+Um objeto `tile_barrier` .
 
 ## <a name="amp_uninitialize"></a>amp_uninitialize
 
@@ -71,7 +71,7 @@ inline bool atomic_compare_exchange(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Dest*<br/>
 O local do qual um dos valores a serem comparados é lido e para o qual o novo valor, se houver, deve ser armazenado.
@@ -107,7 +107,7 @@ inline float atomic_exchange(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Dest*<br/>
 Ponteiro para o local de destino.
@@ -135,7 +135,7 @@ inline unsigned int atomic_fetch_add(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Dest*<br/>
 Ponteiro para o local da memória.
@@ -163,7 +163,7 @@ inline unsigned int atomic_fetch_and(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Dest*<br/>
 Ponteiro para o local da memória.
@@ -186,7 +186,7 @@ inline int atomic_fetch_dec(_Inout_ int* _Dest
 inline unsigned int atomic_fetch_dec(_Inout_ unsigned int* _Dest) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Dest*<br/>
 O local na memória do valor a ser decrementado.
@@ -205,7 +205,7 @@ inline int atomic_fetch_inc(_Inout_ int* _Dest) restrict(amp);
 inline unsigned int atomic_fetch_inc(_Inout_ unsigned int* _Dest) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Dest*<br/>
 O local na memória do valor a ser incrementado.
@@ -230,7 +230,7 @@ inline unsigned int atomic_fetch_max(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Dest*<br/>
 O local do qual um dos valores a serem comparados é lido e para o qual o máximo dos dois valores deve ser armazenado.
@@ -258,7 +258,7 @@ inline unsigned int atomic_fetch_min(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Dest*<br/>
 O local do qual um dos valores a serem comparados é lido e para o qual o mínimo dos dois valores deve ser armazenado.
@@ -286,7 +286,7 @@ inline unsigned int atomic_fetch_or(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Dest*<br/>
 Ponteiro para o local da memória.
@@ -314,7 +314,7 @@ inline unsigned int atomic_fetch_sub(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Dest*<br/>
 Ponteiro para o local de destino.
@@ -342,7 +342,7 @@ inline unsigned int atomic_fetch_xor(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Dest*<br/>
 Ponteiro para o local da memória.
@@ -422,10 +422,10 @@ void copy(
     OutputIterator _DestIter);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Dest*<br/>
-O objeto ao qual será copiado.
+O objeto para o qual copiar.
 
 *_DestIter*<br/>
 Um iterador de saída para a posição inicial no destino.
@@ -511,10 +511,10 @@ concurrency::completion_future copy_async(
     const array_view<value_type, _Rank>& _Src, OutputIterator _DestIter);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Dest*<br/>
-O objeto ao qual será copiado.
+O objeto para o qual copiar.
 
 *_DestIter*<br/>
 Um iterador de saída para a posição inicial no destino.
@@ -580,7 +580,7 @@ Bloqueia a execução de todos os threads em um bloco até que todos os acessos 
 inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Barrier*<br/>
 Um objeto tile_barrier
@@ -635,7 +635,7 @@ void parallel_for_each(
     const _Kernel_type& _Kernel);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Accl_view*<br/>
 O objeto `accelerator_view` no qual executar a computação paralela.
@@ -669,11 +669,11 @@ Bloqueia a execução de todos os threads em um bloco até que todos os `tile_st
 inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Barrier*<br/>
 Um objeto tile_barrier.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)

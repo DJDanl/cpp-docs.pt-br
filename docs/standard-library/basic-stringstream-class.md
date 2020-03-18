@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::basic_stringstream [C++], str
 ms.assetid: 49629814-ca37-45c5-931b-4ff894e6ebd2
 ms.openlocfilehash: ebf9b87b60cf790a2ca032eb805095f277324178
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866279"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416777"
 ---
 # <a name="basic_stringstream-class"></a>Classe basic_stringstream
 
@@ -30,7 +30,7 @@ template <class Elem, class Tr = char_traits<Elem>, class Alloc = allocator<Elem
 class basic_stringstream : public basic_iostream<Elem, Tr>
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *alocação*
 A classe do alocador.
@@ -45,26 +45,26 @@ As características de caractere especializadas no elemento básico da cadeia de
 
 O modelo de classe descreve um objeto que controla a inserção e a extração de elementos e objetos codificados usando um buffer de fluxo de classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **elem**, **TR**, `Alloc`>, com elementos do tipo `Elem`, cujas características de caractere são determinadas pela classe `Tr`e cujos elementos são alocados por um alocador de classe `Alloc`. O objeto armazena um objeto da classe basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
 
-### <a name="constructors"></a>{1&gt;Construtores&lt;1}
+### <a name="constructors"></a>Construtores
 
-|Construtor|Descrição|
+|Construtor|DESCRIÇÃO|
 |-|-|
 |[basic_stringstream](#basic_stringstream)|Constrói um objeto do tipo `basic_stringstream`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome de tipo|Descrição|
+|Nome do tipo|DESCRIÇÃO|
 |-|-|
 |[allocator_type](#allocator_type)|O tipo é um sinônimo do parâmetro de modelo `Alloc`.|
 
 ### <a name="member-functions"></a>Funções de membro
 
-|Função de membro|Descrição|
+|Função de membro|DESCRIÇÃO|
 |-|-|
 |[rdbuf](#rdbuf)|Retorna o endereço do buffer de fluxo armazenado do tipo `pointer` para [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>.|
 |[str](#str)|Define ou obtém o texto em um buffer de cadeia de caracteres sem alterar a posição de gravação.|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** \<sstream >
 
@@ -88,7 +88,7 @@ explicit basic_stringstream(ios_base::openmode _Mode = ios_base::in | ios_base::
 explicit basic_stringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base::openmode _Mode = ios_base::in | ios_base::out);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Mode*\
 Uma das enumerações em [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
@@ -114,7 +114,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 O endereço do buffer de fluxo armazenado do tipo `pointer` para basic_stringbuf < **elem**, **TR**`Alloc`>.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) para ver um exemplo que usa `rdbuf`.
 
@@ -129,7 +129,7 @@ void str(
     const basic_string<Elem, Tr, Alloc>& _Newstr);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Newstr*\
 A nova cadeia de caracteres.
@@ -142,11 +142,11 @@ Retorna um objeto da classe [basic_string](../standard-library/basic-string-clas
 
 A primeira função membro retorna [rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str). As segunda função membro chama `rdbuf` -> **str**( `_Newstr`).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [basic_stringbuf:: Str](../standard-library/basic-stringbuf-class.md#str) para obter um exemplo que usa `str`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programação de iostream](../standard-library/iostream-programming.md)\

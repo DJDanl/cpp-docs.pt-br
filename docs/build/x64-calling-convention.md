@@ -4,11 +4,11 @@ description: Detalhes da Convenção de chamada ABI padrão x64.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
 ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856879"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417162"
 ---
 # <a name="x64-calling-convention"></a>Convenção de chamada x64
 
@@ -45,7 +45,7 @@ A tabela a seguir resume como os parâmetros são passados:
 |Tipo de parâmetro|Como foi passado|
 |--------------------|----------------|
 |Ponto flutuante|Primeiros 4 parâmetros-XMM0 até XMM3. Outros passaram na pilha.|
-|Inteiro|Primeiros 4 parâmetros-RCX, RDX, R8, R9. Outros passaram na pilha.|
+|Integer|Primeiros 4 parâmetros-RCX, RDX, R8, R9. Outros passaram na pilha.|
 |Agregações (8, 16, 32 ou 64 bits) e __m64|Primeiros 4 parâmetros-RCX, RDX, R8, R9. Outros passaram na pilha.|
 |Agregações (outras)|Por ponteiro. Quatro primeiros parâmetros passados como ponteiros em RCX, RDX, R8 e R9|
 |__m128|Por ponteiro. Quatro primeiros parâmetros passados como ponteiros em RCX, RDX, R8 e R9|
@@ -93,7 +93,7 @@ func2() {   // RCX = 2, RDX = XMM1 = 1.0, and R8 = 7
 }
 ```
 
-## <a name="return-values"></a>Valores de retorno
+## <a name="return-values"></a>Valores retornados
 
 Um valor de retorno escalar que pode caber em 64 bits é retornado por meio de RAX; Isso inclui tipos de __m64. Tipos não escalares, incluindo flutuações, duplos e tipos de vetor, como [__m128](../cpp/m128.md), [__m128i](../cpp/m128i.md), [__m128d](../cpp/m128d.md) são retornados em XMM0. O estado dos bits não utilizados no valor retornado em RAX ou XMM0 é indefinido.
 
@@ -205,6 +205,6 @@ Quando você inclui setjmpex. h ou setjmp. h, todas as chamadas para [setjmp](..
 
 Uma chamada para `setjmp` preserva o ponteiro de pilha atual, os registros não volátil e os registros de MxCsr.  Chamadas para `longjmp` retornam para o site de chamada de `setjmp` mais recente e redefinem o ponteiro de pilha, os registros não voláteis e os registros de MxCsr, de volta ao estado como preservado pela chamada de `setjmp` mais recente.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Convenções de software x64](../build/x64-software-conventions.md)

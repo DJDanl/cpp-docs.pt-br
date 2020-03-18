@@ -12,11 +12,11 @@ helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
 ms.openlocfilehash: b666ba3debe164118c9b40b90313646592b04876
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855239"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417743"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de depuração e relatório de erros
 
@@ -85,7 +85,7 @@ A macro ATLASSERT executa a mesma funcionalidade que a macro [_ASSERTE](../../c-
 ATLASSERT(booleanExpression);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor booliano*<br/>
 Expressão (incluindo ponteiros) que é avaliada como zero ou 0.
@@ -94,7 +94,7 @@ Expressão (incluindo ponteiros) que é avaliada como zero ou 0.
 
 Em builds de depuração, ATLASSERT avalia a *booliana* e gera um relatório de depuração quando o resultado é false.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atldef. h
 
@@ -107,7 +107,7 @@ ATLENSURE(booleanExpression);
 ATLENSURE_THROW(booleanExpression, hr);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor booliano*<br/>
 Especifica uma expressão booliana a ser testada.
@@ -127,11 +127,11 @@ No caso de ATLENSURE_THROW, `AtlThrow` é chamado com o HRESULT especificado.
 
 A diferença entre ATLENSURE e ATLASSERT é que o ATLENSURE gera uma exceção em compilações de versão, bem como em compilações de depuração.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -143,7 +143,7 @@ Nas compilações de depuração da ATL, o envia a cadeia de caracteres " *FuncN
 ATLTRACENOTIMPL(funcname);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *funcname*<br/>
 no Uma cadeia de caracteres que contém o nome da função que não está implementada.
@@ -152,11 +152,11 @@ no Uma cadeia de caracteres que contém o nome da função que não está implem
 
 Em builds de versão, simplesmente retorna E_NOTIMPL.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ATLTRACE. h
 
@@ -173,7 +173,7 @@ ATLTRACE(
     LPCSTR lpszFormat, ...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *exp*<br/>
 no A cadeia de caracteres e as variáveis a serem enviadas à janela de saída ou a qualquer aplicativo que intercepta essas mensagens.
@@ -204,7 +204,7 @@ ATLTRACE2(
     LPCSTR lpszFormat,  ...);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *exp*<br/>
 no A cadeia de caracteres a ser enviada à janela de saída ou a qualquer aplicativo que intercepta essas mensagens.
@@ -226,7 +226,7 @@ O parâmetro *Category* lista os sinalizadores de rastreamento a serem definidos
 
 ### <a name="atl-trace-flags"></a>Sinalizadores de rastreamento da ATL
 
-|Categoria da ATL|Descrição|
+|Categoria da ATL|DESCRIÇÃO|
 |------------------|-----------------|
 |`atlTraceGeneral`|Relatórios sobre todos os aplicativos ATL. O padrão.|
 |`atlTraceCOM`|Relatórios sobre métodos COM.|
@@ -244,7 +244,7 @@ O parâmetro *Category* lista os sinalizadores de rastreamento a serem definidos
 
 ### <a name="mfc-trace-flags"></a>Sinalizadores de rastreamento do MFC
 
-|Categoria do MFC|Descrição|
+|Categoria do MFC|DESCRIÇÃO|
 |------------------|-----------------|
 |`traceAppMsg`|Uso geral, mensagens do MFC. Sempre recomendado.|
 |`traceDumpContext`|Mensagens de [CDumpContext](../../mfc/reference/cdumpcontext-class.md).|
@@ -279,11 +279,11 @@ ATLTRACE2 limita o conteúdo da cadeia de caracteres a ser enviada ao dispositiv
 
 ATLTRACE e ATLTRACE2 têm o mesmo comportamento, ATLTRACE está incluído para compatibilidade com versões anteriores.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Macros](../../atl/reference/atl-macros.md)<br/>
 [Funções globais de relatório de erros e depuração](../../atl/reference/debugging-and-error-reporting-global-functions.md)

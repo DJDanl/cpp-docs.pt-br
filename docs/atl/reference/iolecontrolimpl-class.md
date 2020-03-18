@@ -12,11 +12,11 @@ helpviewer_keywords:
 - IOleControlImpl class
 ms.assetid: 5a4255ad-ede4-49ca-ba9a-07c2e919fa85
 ms.openlocfilehash: 3bdb501d8210c98ce982719358564c4937991e12
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864939"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417624"
 ---
 # <a name="iolecontrolimpl-class"></a>Classe IOleControlImpl
 
@@ -32,7 +32,7 @@ template<class T>
 class IOleControlImpl
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 Sua classe, derivada de `IOleControlImpl`.
@@ -41,7 +41,7 @@ Sua classe, derivada de `IOleControlImpl`.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[IOleControlImpl:: FreezeEvents](#freezeevents)|Indica se o contêiner ignora ou não os eventos do controle.|
 |[IOleControlImpl::GetControlInfo](#getcontrolinfo)|Preenche informações sobre o comportamento do teclado do controle. A implementação da ATL retorna E_NOTIMPL.|
@@ -60,7 +60,7 @@ A classe `IOleControlImpl` fornece uma implementação padrão da interface [IOl
 
 `IOleControlImpl`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlctl. h
 
@@ -126,7 +126,7 @@ Retorna E_NOTIMPL.
 
 Consulte [IOleControl:: onmnemônico](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) na SDK do Windows.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)<br/>
 [Interfaces de controles ActiveX](/windows/win32/com/activex-controls-interfaces)<br/>

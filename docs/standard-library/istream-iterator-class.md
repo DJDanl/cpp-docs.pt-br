@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
 ms.openlocfilehash: 941d625e388edc75dfe25a2de0e609c6d955ff19
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869884"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420116"
 ---
 # <a name="istream_iterator-class"></a>Classe istream_iterator
 
@@ -34,7 +34,7 @@ class istream_iterator
     const Type&>;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Tipo*\
 O tipo de objeto a ser extraído do fluxo de entrada.
@@ -50,15 +50,15 @@ Um tipo integral com sinal que representa o tipo de diferença para `istream_ite
 
 Depois de construir ou incrementar um objeto da classe istream_iterator com um ponteiro armazenado não nulo, o objeto tenta extrair e armazenar um objeto do tipo `Type` do fluxo de entrada associado. Se a extração falhar, o objeto substitui eficientemente o ponteiro armazenado por um ponteiro nulo, criando um indicador de fim de sequência.
 
-### <a name="constructors"></a>{1&gt;Construtores&lt;1}
+### <a name="constructors"></a>Construtores
 
-|Construtor|Descrição|
+|Construtor|DESCRIÇÃO|
 |-|-|
 |[istream_iterator](#istream_iterator)|Constrói um iterador de fim de fluxo como o `istream_iterator` padrão ou um `istream_iterator` inicializado para o tipo de fluxo do iterador do qual ele lê.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome do tipo|Descrição|
+|Nome do tipo|DESCRIÇÃO|
 |-|-|
 |[char_type](#char_type)|Um tipo que é fornecido para o tipo de caractere do `istream_iterator`.|
 |[istream_type](#istream_type)|Um tipo que é fornecido para o tipo de fluxo da `istream_iterator`.|
@@ -66,13 +66,13 @@ Depois de construir ou incrementar um objeto da classe istream_iterator com um p
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|Operador|DESCRIÇÃO|
 |-|-|
 |[operator*](#op_star)|O operador de desreferenciamento retorna o objeto armazenado do tipo `Type` tratado por `istream_iterator`.|
 |[operator->](#op_arrow)|Retorna o valor de um membro, se houver.|
 |[operator++](#op_add_add)|Ou extrai um objeto incrementado do fluxo de entrada, ou copia o objeto antes de incrementá-lo e retorna a cópia.|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** > iterador de \<
 
@@ -90,7 +90,7 @@ typedef CharType char_type;
 
 O tipo é um sinônimo do parâmetro de modelo `Chartype`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // istream_iterator_char_type.cpp
@@ -136,7 +136,7 @@ istream_iterator();
 istream_iterator(istream_type& _Istr);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Istr*\
 O fluxo de entrada a ser lido usado para inicializar o `istream_iterator`.
@@ -147,7 +147,7 @@ O primeiro construtor inicializa o ponteiro de fluxo de entrada com um ponteiro 
 
 O iterador de fim do fluxo pode ser usado para testar se um `istream_iterator` atingiu o final de um fluxo.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // istream_iterator_istream_iterator.cpp
@@ -193,7 +193,7 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 O tipo é um sinônimo para `basic_istream`\< **CharType**, > de **características**.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [istream_iterator](#istream_iterator) para obter um exemplo de como declarar e usar `istream_type`.
 
@@ -209,7 +209,7 @@ const Type& operator*() const;
 
 O objeto armazenado do tipo `Type`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // istream_iterator_operator.cpp
@@ -259,7 +259,7 @@ O valor de um membro, se houver.
 
 O operador retorna `&*this`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // istream_iterator_operator_vm.cpp
@@ -305,7 +305,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 O primeiro operador de membro retorna uma referência ao objeto incrementado do tipo `Type` extraído do fluxo de entrada e a segunda função de membro retorna uma cópia do objeto.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // istream_iterator_operator_incr.cpp
@@ -349,7 +349,7 @@ typedef Traits traits_type;
 
 O tipo é um sinônimo do parâmetro de modelo *Traits*.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // istream_iterator_traits_type.cpp
@@ -384,7 +384,7 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Struct input_iterator_tag](../standard-library/input-iterator-tag-struct.md)\
 [Struct iterator](../standard-library/iterator-struct.md)\

@@ -7,11 +7,11 @@ f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
 ms.openlocfilehash: 665732700ee6b85425f332a0eb96a5b75864a74e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855786"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419283"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Funções do namespace Concurrency::graphics::direct3d
 
@@ -30,7 +30,7 @@ IUnknown* get_sampler(
     const sampler& _Sampler) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Av*<br/>
 Uma exibição do acelerador D3D na qual o estado de amostra do D3D deve ser criado.
@@ -69,7 +69,7 @@ _Ret_ IUnknown *get_texture(
     const texture_view<value_type, _Rank>& _Texture) restrict(cpu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *value_type*<br/>
 O tipo de elemento da textura.
@@ -92,7 +92,7 @@ Crie uma amostra de um ponteiro de interface de estado de amostra do D3D.
 sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_D3D_sampler*<br/>
 Ponteiro de interface IUnknown do estado de amostra de D3D do qual criar a amostra.
@@ -116,7 +116,7 @@ texture<value_type, _Rank> make_texture(
     DXGI_FORMAT _View_format = DXGI_FORMAT_UNKNOWN) restrict(cpu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *value_type*<br/>
 O tipo dos elementos na textura.
@@ -148,7 +148,7 @@ inline uint4 msad4(
     uint4 _Accum) restrict(amp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Reference*<br/>
 A matriz de referência de 4 bytes em um valor UINT
@@ -163,12 +163,12 @@ Um vetor de quatro valores a ser adicionado à soma mascarada de diferenças abs
 
 Retorna um vetor de quatro somas. Cada soma corresponde à soma mascarada de diferenças absolutas de diferentes alinhamentos de bytes entre o valor de referência e o valor de origem.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** amp_graphics. h
 
 **Namespace:** Concurrency:: Graphics::d irect3d
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Concurrency::graphics::direct3d](concurrency-graphics-direct3d-namespace.md)

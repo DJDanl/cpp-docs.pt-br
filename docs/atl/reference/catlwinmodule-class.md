@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
 ms.openlocfilehash: d0bc98fa48f84e67ab38106dea3fe22d5ad1757d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857345"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418023"
 ---
 # <a name="catlwinmodule-class"></a>Classe CAtlWinModule
 
@@ -39,7 +39,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 |[CAtlWinModule::CAtlWinModule](#catlwinmodule)|O construtor.|
 |[CAtlWinModule:: ~ CAtlWinModule](#dtor)|O destruidor.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|DESCRIÇÃO|
 |----------|-----------------|
@@ -68,7 +68,7 @@ Esse método inicializa e adiciona uma estrutura de `_AtlCreateWndData`.
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pData*<br/>
 Ponteiro para a estrutura de `_AtlCreateWndData` a ser inicializada e adicionada ao módulo atual.
@@ -116,7 +116,7 @@ void* ExtractCreateWndData();
 
 Retorna um ponteiro para a estrutura de `_AtlCreateWndData` adicionada anteriormente com [CAtlWinModule:: AddCreateWndData](#addcreatewnddata)ou NULL se nenhum objeto estiver disponível.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>

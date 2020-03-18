@@ -19,11 +19,11 @@ helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
 ms.openlocfilehash: 1e1674bad1164e640939d430a860beac7a6e4208
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855660"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417883"
 ---
 # <a name="com_interface_entry-macros"></a>COM_INTERFACE_ENTRY macros
 
@@ -47,7 +47,7 @@ Essas macros inserem as interfaces de um objeto em seu mapa de COM para que poss
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|O mesmo que [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), exceto que a consulta de qualquer IID resulta em uma chamada para *Func*.|
 |[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Retorna E_NOINTERFACE e termina o processamento de mapa COM quando a interface especificada é consultada.|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlcom. h
 
@@ -61,7 +61,7 @@ Insere interfaces no mapa de interface COM.
 COM_INTERFACE_ENTRY( x )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 no O nome de uma interface à qual seu objeto de classe deriva diretamente.
@@ -70,7 +70,7 @@ no O nome de uma interface à qual seu objeto de classe deriva diretamente.
 
 Normalmente, esse é o tipo de entrada usado com mais frequência.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 BEGIN_COM_MAP(CThisExample)
@@ -80,7 +80,7 @@ BEGIN_COM_MAP(CThisExample)
 END_COM_MAP()
 ```
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlcom. h
 
@@ -92,7 +92,7 @@ Use esta macro para desambiguar duas ramificações de herança.
 COM_INTERFACE_ENTRY2(x, x2)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 no O nome de uma interface que você deseja expor do seu objeto.
@@ -104,7 +104,7 @@ no O nome da ramificação de herança da qual *x* é exposto.
 
 Por exemplo, se você derivar o objeto de classe de duas interfaces duplas, exporá `IDispatch` usando COM_INTERFACE_ENTRY2, já que `IDispatch` pode ser obtido em qualquer uma das interfaces.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#118](../../atl/codesnippet/cpp/com-map-macros_2.h)]
 
@@ -116,7 +116,7 @@ Use essa macro para inserir a interface no mapa COM e especificar seu IID.
 COM_INTERFACE_ENTRY_IID(iid, x)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *IID*<br/>
 no O GUID da interface exposta.
@@ -124,7 +124,7 @@ no O GUID da interface exposta.
 *x*<br/>
 no O nome da classe cujo vtable será exposto como a interface identificada por *IID*.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#117](../../atl/codesnippet/cpp/com-map-macros_3.h)]
 
@@ -136,7 +136,7 @@ O mesmo que [COM_INTERFACE_ENTRY2](#com_interface_entry2), exceto que você pode
 COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *IID*<br/>
 no O GUID que você está especificando para a interface.
@@ -155,7 +155,7 @@ Quando a interface identificada por *IID* é consultada, COM_INTERFACE_ENTRY_AGG
 COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *IID*<br/>
 no O GUID da interface consultada.
@@ -167,7 +167,7 @@ no O nome de um ponteiro de `IUnknown`.
 
 O parâmetro *punk* é considerado para apontar para o desconhecido interno de uma agregação ou para NULL; nesse caso, a entrada é ignorada. Normalmente, você `CoCreate` a agregação em `FinalConstruct`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#112](../../atl/codesnippet/cpp/com-map-macros_4.h)]
 
@@ -179,7 +179,7 @@ O mesmo que [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), exc
 COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *punk*<br/>
 no O nome de um ponteiro de `IUnknown`.
@@ -188,7 +188,7 @@ no O nome de um ponteiro de `IUnknown`.
 
 Se a consulta de interface falhar, o processamento do mapa COM continuará.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#113](../../atl/codesnippet/cpp/com-map-macros_5.h)]
 
@@ -200,7 +200,7 @@ O mesmo que [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), exc
 COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *IID*<br/>
 no O GUID da interface consultada.
@@ -213,7 +213,7 @@ no O identificador da agregação que será criada se *punk* for NULL.
 
 ### <a name="remarks"></a>Comentários
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#114](../../atl/codesnippet/cpp/com-map-macros_6.h)]
 
@@ -225,7 +225,7 @@ O mesmo que [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggrega
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *punk*<br/>
 no O nome de um ponteiro de `IUnknown`. Deve ser um membro da classe que contém o mapa COM.
@@ -237,7 +237,7 @@ no O identificador da agregação que será criada se *punk* for NULL.
 
 Se a consulta de interface falhar, o processamento do mapa COM continuará.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Windowing#115](../../atl/codesnippet/cpp/com-map-macros_7.h)]
 
@@ -249,7 +249,7 @@ Faz com que o seu programa chame [DebugBreak](/windows/win32/api/debugapi/nf-deb
 COM_INTERFACE_ENTRY_BREAK(x)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 no Texto usado para construir o identificador de interface.
@@ -266,7 +266,7 @@ Salva os dados específicos da interface para cada instância.
 COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *IID*<br/>
 no O GUID da interface de divisão.
@@ -281,7 +281,7 @@ no O nome de um ponteiro de `IUnknown`. Deve ser um membro da classe que contém
 
 Se a interface não for usada, isso reduzirá o tamanho geral da instância do objeto.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_COM#54](../../atl/codesnippet/cpp/com-map-macros_8.h)]
 
@@ -293,7 +293,7 @@ Expõe suas interfaces destacáveis.
 COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *IID*<br/>
 no O GUID da interface de divisão.
@@ -305,7 +305,7 @@ no O nome da classe que implementa a interface.
 
 Uma interface retirada é implementada como um objeto separado que é instanciado toda vez que a interface que ela representa é consultada. Normalmente, você cria sua interface como uma remontagem se a interface raramente é usada, pois isso salva um ponteiro vtable em cada instância do seu objeto principal. A redivisão é excluída quando sua contagem de referência se torna zero. A classe que implementa a divisão deve ser derivada de `CComTearOffObjectBase` e ter seu próprio mapa COM.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]
 
@@ -317,7 +317,7 @@ Processa o mapa COM da classe base quando o processamento atinge essa entrada no
 COM_INTERFACE_ENTRY_CHAIN(classname)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *classname*<br/>
 no Uma classe base do objeto atual.
@@ -340,7 +340,7 @@ Um mecanismo geral para conectar-se à lógica de `QueryInterface` da ATL.
 COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *IID*<br/>
 no O GUID da interface exposta.
@@ -367,7 +367,7 @@ O mesmo que [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), exceto que a 
 COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dw*<br/>
 no Um parâmetro passado para o *Func*.
@@ -387,7 +387,7 @@ Retorna E_NOINTERFACE e termina o processamento de mapa COM quando a interface e
 COM_INTERFACE_ENTRY_NOINTERFACE(x)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 no Texto usado para construir o identificador de interface.

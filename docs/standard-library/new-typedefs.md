@@ -5,11 +5,11 @@ f1_keywords:
 - new/std::new_handler
 ms.assetid: aef01de1-06b5-4b6c-aebc-2c9f423d7e47
 ms.openlocfilehash: 80123bc35422984ef92bdba6da45052d3461b1d7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854920"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419794"
 ---
 # <a name="ltnewgt-typedefs"></a>Typedefs &lt;new&gt;
 
@@ -23,7 +23,7 @@ inline constexpr size_t hardware_constructive_interference_size = implementation
 
 Esse número é o tamanho máximo recomendado de memória contígua ocupada por dois objetos acessados com a localidade temporal por threads simultâneos. Deve ser pelo menos `alignof(max_align_t)`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 struct together { 
@@ -50,7 +50,7 @@ inline constexpr size_t hardware_destructive_interference_size = implementation-
 
 Esse número é o deslocamento mínimo recomendado entre dois objetos acessados simultaneamente para evitar degradação de desempenho adicional devido à contenção introduzida pela implementação. Deve ser pelo menos `alignof(max_align_t)`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 struct keep_apart {
@@ -71,6 +71,6 @@ typedef void (*new_handler)();
 
 Esse tipo de função de manipulador é chamado por **operador novo** ou `operator new[]` quando eles não podem atender a uma solicitação de armazenamento adicional.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [set_new_handler](../standard-library/new-functions.md#set_new_handler) para obter um exemplo usando `new_handler` como um valor retornado.

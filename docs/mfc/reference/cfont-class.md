@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
 ms.openlocfilehash: c37b2f657105e0065e0cddb2c508424bd6c89b0a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866601"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418618"
 ---
 # <a name="cfont-class"></a>Classe CFont
 
@@ -41,13 +41,13 @@ class CFont : public CGdiObject
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CFont::CFont](#cfont)|Constrói um objeto `CFont`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CFont:: CreateFont](#createfont)|Inicializa um `CFont` com as características especificadas.|
 |[CFont:: CreateFontIndirect](#createfontindirect)|Inicializa um objeto `CFont` com as características fornecidas em uma estrutura de `LOGFONT`.|
@@ -58,7 +58,7 @@ class CFont : public CGdiObject
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[Operador CFont:: Operator HFONT](#operator_hfont)|Retorna o identificador de fonte GDI do Windows anexado ao objeto `CFont`.|
 
@@ -78,7 +78,7 @@ Para obter mais informações sobre `CFont`, consulte [objetos gráficos](../../
 
 `CFont`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Afxwin. h
 
@@ -94,7 +94,7 @@ CFont();
 
 O objeto resultante deve ser inicializado com `CreateFont`, `CreateFontIndirect`, `CreatePointFont`ou `CreatePointFontIndirect` antes que possa ser usado.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#70](../../mfc/codesnippet/cpp/cfont-class_1.cpp)]
 
@@ -120,7 +120,7 @@ BOOL CreateFont(
     LPCTSTR lpszFacename);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nHeight*<br/>
 Especifica a altura desejada (em unidades lógicas) da fonte. Consulte o membro `lfHeight` da estrutura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)no SDK do Windows para obter uma descrição. O valor absoluto de *nHeight* não deve exceder 16.384 unidades de dispositivo depois que ele é convertido. Para todas as comparações de altura, o mapeador de fontes procura a maior fonte que não exceda o tamanho solicitado ou a menor fonte se todas as fontes excederem o tamanho solicitado.
@@ -188,7 +188,7 @@ Os aplicativos podem usar as configurações padrão para a maioria dos parâmet
 
 Quando terminar com o objeto `CFont` criado pela função `CreateFont`, use `CDC::SelectObject` para selecionar uma fonte diferente no contexto do dispositivo e, em seguida, exclua o objeto `CFont` que não é mais necessário.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]
 
@@ -200,7 +200,7 @@ Inicializa um objeto `CFont` com as características fornecidas em uma estrutura
 BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpLogFont*<br/>
 Aponta para uma estrutura de `LOGFONT` que define as características da fonte lógica.
@@ -217,7 +217,7 @@ Essa fonte tem as características especificadas na estrutura [LOGFONT](/windows
 
 Quando você não precisar mais do objeto `CFont` criado pela função `CreateFontIndirect`, use `CDC::SelectObject` para selecionar uma fonte diferente no contexto do dispositivo e, em seguida, exclua o objeto `CFont` que não é mais necessário.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#72](../../mfc/codesnippet/cpp/cfont-class_3.cpp)]
 
@@ -232,7 +232,7 @@ BOOL CreatePointFont(
     CDC* pDC = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nPointSize*<br/>
 Altura da fonte solicitada em décimos de um ponto. (Por exemplo, passe 120 para solicitar uma fonte de 12 pontos.)
@@ -253,7 +253,7 @@ Ele converte automaticamente a altura em *nPointSize* em unidades lógicas usand
 
 Quando você terminar com o objeto `CFont` criado pela função `CreatePointFont`, primeiro selecione a fonte fora do contexto do dispositivo e, em seguida, exclua o objeto `CFont`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#73](../../mfc/codesnippet/cpp/cfont-class_4.cpp)]
 
@@ -267,7 +267,7 @@ BOOL CreatePointFontIndirect(
     CDC* pDC = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpLogFont*<br/>
 Aponta para uma estrutura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) que define as características da fonte lógica. O membro de `lfHeight` da estrutura de `LOGFONT` é medido em décimos de um ponto em vez de unidades lógicas. (Por exemplo, defina `lfHeight` como 120 para solicitar uma fonte de 12 pontos.)
@@ -285,7 +285,7 @@ Essa função converte automaticamente a altura em `lfHeight` em unidades lógic
 
 Quando você terminar com o objeto `CFont` criado pela função `CreatePointFontIndirect`, primeiro selecione a fonte fora do contexto do dispositivo e, em seguida, exclua o objeto `CFont`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#74](../../mfc/codesnippet/cpp/cfont-class_5.cpp)]
 
@@ -297,7 +297,7 @@ Retorna um ponteiro para um objeto `CFont` quando um identificador HFONT é forn
 static CFont* PASCAL FromHandle(HFONT hFont);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hFont*<br/>
 Um identificador HFONT para uma fonte do Windows.
@@ -310,7 +310,7 @@ Um ponteiro para um objeto `CFont` se for bem-sucedido; caso contrário, NULL.
 
 Se um objeto `CFont` ainda não estiver anexado ao identificador, um objeto de `CFont` temporário será criado e anexado. Esse objeto de `CFont` temporário é válido somente até a próxima vez que o aplicativo tiver tempo ocioso em seu loop de eventos, quando todos os objetos gráficos temporários forem excluídos. Outra maneira de dizer isso é que o objeto temporário é válido somente durante o processamento de uma mensagem de janela.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#75](../../mfc/codesnippet/cpp/cfont-class_6.cpp)]
 
@@ -322,7 +322,7 @@ Chame essa função para recuperar uma cópia da estrutura de `LOGFONT` para `CF
 int GetLogFont(LOGFONT* pLogFont);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pLogFont*<br/>
 Ponteiro para a estrutura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) para receber as informações da fonte.
@@ -331,7 +331,7 @@ Ponteiro para a estrutura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw
 
 Diferente de zero se a função for realizada com sucesso, caso contrário, 0.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#76](../../mfc/codesnippet/cpp/cfont-class_7.cpp)]
 
@@ -353,11 +353,11 @@ Como esse operador é usado automaticamente para conversões de `CFont` para [fo
 
 Para obter mais informações sobre como usar objetos gráficos, consulte [objetos gráficos](/windows/win32/gdi/graphic-objects) na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#77](../../mfc/codesnippet/cpp/cfont-class_8.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de HIERSVR do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>

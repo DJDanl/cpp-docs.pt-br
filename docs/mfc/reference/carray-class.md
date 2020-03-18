@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
 ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874444"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418856"
 ---
 # <a name="carray-class"></a>Classe CArray
 
@@ -60,7 +60,7 @@ template <class TYPE, class ARG_TYPE = const TYPE&>
 class CArray : public CObject
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *TYPE*<br/>
 Parâmetro de modelo que especifica o tipo de objetos armazenados na matriz. *Type* é um parâmetro que é retornado por `CArray`.
@@ -72,13 +72,13 @@ Parâmetro de modelo que especifica o tipo de argumento que é usado para acessa
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CArray::CArray](#carray)|Constrói uma matriz vazia.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CArray:: Adicionar](#add)|Inclui um elemento ao final da matriz; aumenta a matriz quando necessário.|
 |[CArray:: Append](#append)|Acrescenta outra matriz à matriz; aumenta a matriz, se necessário|
@@ -87,7 +87,7 @@ Parâmetro de modelo que especifica o tipo de argumento que é usado para acessa
 |[CArray::FreeExtra](#freeextra)|Libera toda memória não usada acima do limite superior atual.|
 |[CArray::GetAt](#getat)|Retorna o valor a um determinado índice.|
 |[CArray:: GetCount](#getcount)|Obtém o número de elementos nesta matriz.|
-|[CArray:: GetData](#getdata)|Permite acesso aos elementos na matriz. Pode ser NULO.|
+|[CArray:: GetData](#getdata)|Permite acesso aos elementos na matriz. Pode ser NULL.|
 |[CArray::GetSize](#getsize)|Obtém o número de elementos nesta matriz.|
 |[CArray::GetUpperBound](#getupperbound)|Retorna o maior índice válido.|
 |[CArray::InsertAt](#insertat)|Insere um elemento (ou todos os elementos em outra matriz) em um índice especificado.|
@@ -100,7 +100,7 @@ Parâmetro de modelo que especifica o tipo de argumento que é usado para acessa
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[operator&#91;&#93;](#operator_at)|Define ou obtém o elemento no índice especificado.|
 
@@ -130,7 +130,7 @@ Para obter mais informações sobre como usar `CArray`, consulte o artigo [cole�
 
 `CArray`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxtempl. h
 
@@ -142,7 +142,7 @@ Adiciona um novo elemento ao final de uma matriz, aumentando a matriz em 1.
 INT_PTR Add(ARG_TYPE newElement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ARG_TYPE*<br/>
 Parâmetro de modelo que especifica o tipo de argumentos que referenciam elementos nesta matriz.
@@ -158,7 +158,7 @@ O índice do elemento adicionado.
 
 Se [SetSize](#setsize) tiver sido usado com um valor `nGrowBy` maior que 1, a memória extra poderá ser alocada. No entanto, o limite superior aumentará apenas em 1.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]
 
@@ -170,7 +170,7 @@ Chame essa função de membro para adicionar o conteúdo de uma matriz ao final 
 INT_PTR Append(const CArray& src);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *src*<br/>
 Origem dos elementos a serem acrescentados a uma matriz.
@@ -185,7 +185,7 @@ As matrizes devem ser do mesmo tipo.
 
 Se necessário, `Append` pode alocar memória extra para acomodar os elementos acrescentados à matriz.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]
 
@@ -201,7 +201,7 @@ CArray();
 
 A matriz aumenta um elemento por vez.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCollections#24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]
 
@@ -213,7 +213,7 @@ Use essa função de membro para copiar os elementos de uma matriz para outra.
 void Copy(const CArray& src);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *src*<br/>
 Origem dos elementos a serem copiados para uma matriz.
@@ -224,7 +224,7 @@ Chame essa função de membro para substituir os elementos de uma matriz pelos e
 
 `Copy` não libera memória; no entanto, se necessário, `Copy` pode alocar memória extra para acomodar os elementos copiados para a matriz.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]
 
@@ -237,7 +237,7 @@ TYPE& ElementAt(INT_PTR nIndex);
 const TYPE& ElementAt(INT_PTR nIndex) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Um índice inteiro que é maior ou igual a 0 e menor ou igual ao valor retornado por [GetUpperBound](#getupperbound).
@@ -250,7 +250,7 @@ Uma referência a um elemento de matriz.
 
 Ele é usado para implementar o operador de atribuição do lado esquerdo para matrizes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [GetSize](#getsize).
 
@@ -266,7 +266,7 @@ void FreeExtra();
 
 Essa função não tem efeito sobre o tamanho ou limite superior da matriz.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [GetData](#getdata).
 
@@ -279,7 +279,7 @@ TYPE& GetAt(INT_PTR nIndex);
 const TYPE& GetAt(INT_PTR nIndex) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *TYPE*<br/>
 Parâmetro de modelo que especifica o tipo dos elementos da matriz.
@@ -295,7 +295,7 @@ O elemento de matriz atualmente neste índice.
 
 Passar um valor negativo ou um valor maior que o valor retornado por `GetUpperBound` resultará em uma asserção com falha.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCollections#26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]
 
@@ -315,7 +315,7 @@ O número de itens na matriz.
 
 Chame esse método para recuperar o número de elementos na matriz. Como os índices são baseados em zero, o tamanho é 1 maior que o maior índice. Chamar esse método irá gerar o mesmo resultado que o método [CArray:: GetSize](#getsize) .
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCollections#27](../../mfc/codesnippet/cpp/carray-class_6.cpp)]
 
@@ -328,7 +328,7 @@ const TYPE* GetData() const;
 TYPE* GetData();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *TYPE*<br/>
 Parâmetro de modelo que especifica o tipo dos elementos da matriz.
@@ -343,7 +343,7 @@ Se nenhum elemento estiver disponível, `GetData` retornará um valor nulo.
 
 Embora o acesso direto aos elementos de uma matriz possa ajudá-lo a trabalhar mais rapidamente, tome cuidado ao chamar `GetData`; todos os erros que você fizer afetam diretamente os elementos da matriz.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCollections#28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]
 
@@ -359,7 +359,7 @@ INT_PTR GetSize() const;
 
 Como os índices são baseados em zero, o tamanho é 1 maior que o maior índice. Chamar esse método irá gerar o mesmo resultado que o método [CArray:: GetCount](#getcount) .
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCollections#29](../../mfc/codesnippet/cpp/carray-class_8.cpp)]
 
@@ -377,7 +377,7 @@ Como os índices de matriz são baseados em zero, essa função retorna um valor
 
 A condição `GetUpperBound( )` =-1 indica que a matriz não contém elementos.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CArray:: GetAt](#getat).
 
@@ -396,7 +396,7 @@ void InsertAt(
     CArray* pNewArray);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Um índice de inteiro que pode ser maior que o valor retornado por `GetUpperBound`.
@@ -424,7 +424,7 @@ A segunda versão insere todos os elementos de outra coleção de `CArray`, come
 
 A função `SetAt`, por outro lado, substitui um elemento de matriz especificado e não altera os elementos.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCollections#30](../../mfc/codesnippet/cpp/carray-class_9.cpp)]
 
@@ -449,7 +449,7 @@ TYPE& operator[](int_ptr nindex);
 const TYPE& operator[](int_ptr nindex) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *TYPE*<br/>
 Parâmetro de modelo que especifica o tipo de elementos nesta matriz.
@@ -463,7 +463,7 @@ O primeiro operador, chamado para matrizes que não são **const**, pode ser usa
 
 A versão de depuração da biblioteca é declarada se o subscrito (no lado esquerdo ou direito de uma instrução de atribuição) está fora dos limites.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCollections#34](../../mfc/codesnippet/cpp/carray-class_10.cpp)]
 
@@ -479,7 +479,7 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
     INT_PTR nCount);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pNewData*<br/>
 Um novo buffer para a matriz de elementos.
@@ -510,7 +510,7 @@ void RemoveAll();
 
 Se a matriz já estiver vazia, a função ainda funcionará.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCollections#31](../../mfc/codesnippet/cpp/carray-class_11.cpp)]
 
@@ -524,7 +524,7 @@ void RemoveAt(
     INT_PTR nCount = 1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Um índice inteiro que é maior ou igual a 0 e menor ou igual ao valor retornado por [GetUpperBound](#getupperbound).
@@ -538,7 +538,7 @@ No processo, ele muda para baixo todos os elementos acima dos elemento (s) remov
 
 Se você tentar remover mais elementos do que os contidos na matriz acima do ponto de remoção, a versão de depuração da biblioteca será declarada.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCollections#32](../../mfc/codesnippet/cpp/carray-class_12.cpp)]
 
@@ -550,7 +550,7 @@ Define o elemento de matriz no índice especificado.
 void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Um índice inteiro que é maior ou igual a 0 e menor ou igual ao valor retornado por [GetUpperBound](#getupperbound).
@@ -567,7 +567,7 @@ O novo valor do elemento a ser armazenado na posição especificada.
 
 Você deve garantir que o valor do índice representa uma posição válida na matriz. Se estiver fora dos limites, a versão de depuração da biblioteca será declarada.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [GetAt](#getat).
 
@@ -579,7 +579,7 @@ Define o elemento de matriz no índice especificado.
 void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Um índice de inteiro maior ou igual a 0.
@@ -594,7 +594,7 @@ O elemento a ser adicionado a esta matriz. Um valor nulo é permitido.
 
 A matriz aumenta automaticamente, se necessário (ou seja, o limite superior é ajustado para acomodar o novo elemento).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCollections#33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]
 
@@ -608,7 +608,7 @@ void SetSize(
     INT_PTR nGrowBy = -1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nNewSize*<br/>
 O novo tamanho da matriz (número de elementos). Deve ser maior ou igual a 0.
@@ -624,11 +624,11 @@ Use essa função para definir o tamanho da sua matriz antes de começar a usar 
 
 O parâmetro *nGrowBy* afeta a alocação de memória interna enquanto a matriz está crescendo. Seu uso nunca afeta o tamanho da matriz conforme relatado por [GetSize](#getsize) e [GetUpperBound](#getupperbound). Se o valor padrão for usado, o MFC alocará a memória de uma maneira calculada para evitar a fragmentação da memória e otimizar a eficiência para a maioria dos casos.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [GetData](#getdata).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [COLETA de amostra do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>

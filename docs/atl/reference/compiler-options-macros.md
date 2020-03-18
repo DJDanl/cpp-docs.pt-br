@@ -17,11 +17,11 @@ helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
 ms.openlocfilehash: 84083c696ee7bdcbb9538bf587c4aaded7a3932e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857165"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417792"
 ---
 # <a name="compiler-options-macros"></a>Macros de opções de compilador
 
@@ -183,7 +183,7 @@ ATL_NO_VTABLE
 
 Se o ponteiro vtable for impedido de ser inicializado no construtor e no destruidor da classe, o vinculador poderá eliminar a vtable e todas as funções para as quais ele aponta. Expande para **__declspec (novtable)** .
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_COM#53](../../atl/codesnippet/cpp/compiler-options-macros_4.h)]
 
@@ -199,7 +199,7 @@ Um símbolo que indica que uma função não deve ser embutida.
     }
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *MyFunction*<br/>
 A função que não deve ser embutida.
@@ -220,6 +220,6 @@ _ATL_SINGLE_THREADED
 
 Especifica que o objeto sempre é executado no thread COM primário. Consulte [especificando o modelo de Threading do projeto](../../atl/specifying-the-threading-model-for-a-project-atl.md) para outras opções de Threading, e [Opções, assistente de objeto simples do ATL](../../atl/reference/options-atl-simple-object-wizard.md) para obter uma descrição dos modelos de Threading disponíveis para um objeto ATL.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Macros](../../atl/reference/atl-macros.md)

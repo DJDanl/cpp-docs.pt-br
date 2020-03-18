@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
 ms.openlocfilehash: cfffebd16c3c1d62dc4084b962c22911e4b46ae5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867293"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420620"
 ---
 # <a name="cdaofieldexchange-class"></a>Classe CDaoFieldExchange
 
@@ -37,14 +37,14 @@ class CDaoFieldExchange
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|Retornará zero se a operação atual for apropriada para o tipo de campo que está sendo atualizado.|
 |[CDaoFieldExchange::SetFieldType](#setfieldtype)|Especifica o tipo de membro de dados do conjunto de registros — coluna ou parâmetro — representado por todas as chamadas subsequentes para funções DFX até a próxima chamada para `SetFieldType`.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDaoFieldExchange:: m_nOperation](#m_noperation)|A operação DFX que está sendo executada pela chamada atual para a função de membro `DoFieldExchange` do conjunto de registros.|
 |[CDaoFieldExchange:: m_prs](#m_prs)|Um ponteiro para o conjunto de registros no qual as operações DFX estão sendo executadas.|
@@ -73,7 +73,7 @@ A função membro [IsValidOperation](#isvalidoperation) é fornecida para escrev
 
 `CDaoFieldExchange`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFXDAO. h
 
@@ -108,7 +108,7 @@ O objeto `CDaoFieldExchange` fornece o contexto para várias operações DFX dif
 
 Os valores possíveis de `m_nOperation` são:
 
-|Operação|Descrição|
+|Operação|DESCRIÇÃO|
 |---------------|-----------------|
 |`AddToParameterList`|Cria a cláusula **Parameters** da instrução SQL.|
 |`AddToSelectList`|Compila a cláusula **Select** da instrução SQL.|
@@ -140,7 +140,7 @@ Chame `SetFieldType` na substituição de `DoFieldExchange` da sua classe de `CD
 void SetFieldType(UINT nFieldType);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFieldType*<br/>
 Um valor de **enum FieldType**, declarado em `CDaoFieldExchange`, que pode ser um dos seguintes:
@@ -157,7 +157,7 @@ Se você parametrizar a classe do conjunto de registros, deverá adicionar chama
 
 Em geral, cada grupo de chamadas de função DFX associadas a membros de dados de campo ou membros de dados de parâmetros deve ser precedido por uma chamada para `SetFieldType`. O parâmetro *nFieldType* de cada chamada de `SetFieldType` identifica o tipo dos membros de dados representados pelas chamadas de função DFX que seguem a chamada `SetFieldType`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)

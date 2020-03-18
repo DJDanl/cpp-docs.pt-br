@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (set)
 - std::operator== (set)
 ms.openlocfilehash: 4618030cf81f79a085e16052c8b9c547201e3577
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875755"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419542"
 ---
 # <a name="ltsetgt-operators"></a>Operadores &lt;set&gt;
 
@@ -33,7 +33,7 @@ Testa se o objeto set à esquerda do operador é diferente do objeto set à dire
 bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `set`.
@@ -94,7 +94,7 @@ Testa se o objeto set à esquerda do operador é menor do que o objeto set à di
 bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `set`.
@@ -155,7 +155,7 @@ Testa se o objeto set à esquerda do operador é menor ou igual ao objeto set à
 bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `set`.
@@ -224,7 +224,7 @@ Testa se o objeto set à esquerda do operador é igual ao objeto set à direita.
 bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `set`.
@@ -286,7 +286,7 @@ Testa se o objeto set à esquerda do operador é maior que o objeto set à direi
 bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `set`.
@@ -347,7 +347,7 @@ Testa se o objeto set à esquerda do operador é maior ou igual ao objeto set à
 bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `set`.
@@ -416,7 +416,7 @@ Testa se o objeto multiset à esquerda do operador é diferente do objeto multis
 bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `multiset`.
@@ -478,7 +478,7 @@ Testa se o objeto multiset à esquerda do operador é menor que o objeto multise
 bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `multiset`.
@@ -544,7 +544,7 @@ Testa se o objeto multiset à esquerda do operador é menor ou igual ao objeto m
 bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `multiset`.
@@ -619,7 +619,7 @@ Testa se o objeto multiset à esquerda do operador é igual ao objeto multiset �
 bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `multiset`.
@@ -681,7 +681,7 @@ Testa se o objeto multiset à esquerda do operador é maior que o objeto multise
 bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `multiset`.
@@ -747,7 +747,7 @@ Testa se o objeto multiset à esquerda do operador é maior ou igual ao objeto m
 bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `multiset`.

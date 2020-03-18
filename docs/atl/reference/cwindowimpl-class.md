@@ -19,11 +19,11 @@ helpviewer_keywords:
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
 ms.openlocfilehash: b8b633dcf4ea14e899ee00552b553476cf697689
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862952"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417764"
 ---
 # <a name="cwindowimpl-class"></a>Classe CWindowImpl
 
@@ -39,7 +39,7 @@ template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 Sua nova classe, derivada de `CWindowImpl`.
@@ -54,7 +54,7 @@ Uma [classe de características](../../atl/understanding-window-traits.md) que d
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CWindowImpl:: criar](#create)|Cria uma janela.|
 
@@ -76,7 +76,7 @@ Uma [classe de características](../../atl/understanding-window-traits.md) que d
 |[GetWndClassInfo](#getwndclassinfo)|Retorna uma instância estática de [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md), que gerencia as informações de classe de janela.|
 |[WindowProc](#windowproc)|Processa as mensagens enviadas para a janela.|
 
-### <a name="data-members"></a>Membros de Dados
+### <a name="data-members"></a>Membros de dados
 
 |||
 |-|-|
@@ -104,7 +104,7 @@ O destruidor de classe base (~ `CWindowImplRoot`) garante que a janela tenha des
 
 `CWindowImpl` deriva de `CWindowImplBaseT`, que deriva de `CWindowImplRoot`, que deriva de `TBase` e [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-|Para obter mais informações sobre|Consulte|
+|Para saber mais sobre|Consulte|
 |--------------------------------|---------|
 |Criando controles|[Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md)|
 |Usando o Windows na ATL|[Classes de janela da ATL](../../atl/atl-window-classes.md)|
@@ -122,7 +122,7 @@ O destruidor de classe base (~ `CWindowImplRoot`) garante que a janela tenha des
 
 `CWindowImpl`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlwin. h
 
@@ -141,7 +141,7 @@ HWND Create(
     LPVOID lpCreateParam = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWndParent*<br/>
 no O identificador para a janela pai ou proprietário.
@@ -193,7 +193,7 @@ LRESULT DefWindowProc(
 LRESULT DefWindowProc();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uMsg*<br/>
 no A mensagem enviada para a janela.
@@ -288,7 +288,7 @@ Chamado depois de receber a última mensagem (normalmente WM_NCDESTROY).
 virtual void OnFinalMessage(HWND hWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWnd*<br/>
 no Um identificador para a janela que está sendo destruída.
@@ -305,7 +305,7 @@ Subclasses a janela identificada por *HWND* e a anexa ao objeto `CWindowImpl`.
 BOOL SubclassWindow(HWND hWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWnd*<br/>
 no O identificador para a janela que está sendo subclasse.
@@ -345,7 +345,7 @@ static LRESULT CALLBACK WindowProc(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWnd*<br/>
 no O identificador para a janela.
@@ -375,7 +375,7 @@ O resultado do processamento da mensagem.
 
 Você pode substituir `WindowProc` para fornecer um mecanismo diferente para lidar com mensagens.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [Classe CComControl](../../atl/reference/ccomcontrol-class.md)<br/>

@@ -157,11 +157,11 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: 42e630c1280eb366f9007511ac5d74ac19455a56
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866665"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418492"
 ---
 # <a name="cmdiframewndex-class"></a>Classe CMDIFrameWndEx
 
@@ -177,7 +177,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Recalcula o layout do item ativo.|
 |`CMDIFrameWndEx::AddDockSite`|Este método não é usado.|
@@ -257,9 +257,9 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::UpdateMDITabbedBarsIcons](#updatemditabbedbarsicons)|Define o ícone para cada painel com guias MDI.|
 |[CMDIFrameWndEx:: WinHelp](#winhelp)|Chamado pelo Framework para iniciar o aplicativo WinHelp ou a ajuda de contexto. (Substitui [CWnd:: WinHelp](../../mfc/reference/cwnd-class.md#winhelp).)|
 
-### <a name="data-members"></a>Membros de Dados
+### <a name="data-members"></a>Membros de dados
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CMDIFrameWndEx:: m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Determina se os painéis de encaixe podem ser convertidos em janelas filho MDI.|
 |[CMDIFrameWndEx:: m_bDisableSetRedraw](#m_bdisablesetredraw)|Habilita ou desabilita a otimização de redesenho para janelas filho MDI.|
@@ -268,7 +268,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 Para tirar proveito dos recursos de personalização estendidos em seu aplicativo MDI, derive a classe de janela do quadro MDI do aplicativo de `CMDIFrameWndEx` em vez de `CMDIFrameWnd`.
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 O exemplo a seguir deriva uma classe de `CMDIFrameWndEx`. Este trecho de código vem do [exemplo DrawClient: aplicativo de desenho de objeto OLE baseado na faixa](../../overview/visual-cpp-samples.md)de bits do MFC.
 
@@ -288,7 +288,7 @@ O exemplo a seguir deriva uma classe de `CMDIFrameWndEx`. Este trecho de código
 
 [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxMDIFrameWndEx. h
 
@@ -310,7 +310,7 @@ BOOL AddPane(
     BOOL bTail=TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pControlBar*<br/>
 no Ponteiro para o painel a ser registrado.
@@ -342,7 +342,7 @@ Recalcula o layout de todos os painéis encaixados.
 virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hdwp*<br/>
 no Identifica a estrutura de várias janelas de posição. Você pode obter esse valor chamando `BeginDeferWindowPos`.
@@ -359,7 +359,7 @@ Determina se o recurso de guias MDI ou o recurso de grupos com guias MDI está h
 BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pnMDITabsType*<br/>
 fora Um ponteiro para uma variável de inteiro que indica quais recursos estão habilitados:
@@ -406,7 +406,7 @@ Converte o painel de encaixe especificado em um documento com guias.
 virtual CMDIChildWndEx* ControlBarToTabbedDocument(CDockablePane* pBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 Um ponteiro para o painel de encaixe a ser convertido.
@@ -429,7 +429,7 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
     CObject* pObj);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpcszDocName*<br/>
 no Uma cadeia de texto que contém um identificador de documento. Normalmente, é o caminho completo de um arquivo de documento.
@@ -447,7 +447,7 @@ A estrutura chama esse método quando ele carrega a lista de documentos salvos a
 
 Substitua esse método para criar documentos quando eles estiverem sendo carregados do registro.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como `CreateDocumentWindow` é usado no [exemplo VisualStudioDemo: aplicativo MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -465,7 +465,7 @@ virtual CMDIChildWndEx* CreateNewWindow(
     CObject* pObj);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpcszDocName*<br/>
 no O nome do documento.
@@ -488,7 +488,7 @@ void DockPane(
     LPCRECT lpRect=NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 no Ponteiro para o painel a ser encaixado.
@@ -503,7 +503,7 @@ no Não usado.
 
 Esse método encaixa o especificado no painel em um dos lados da janela do quadro que foi especificado quando [CBasePane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) e [CMDIFrameWndEx:: EnableDocking](#enabledocking) eram chamados.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra o uso do método `DockPane`. Esse trecho de código vem do [exemplo de VisualStudioDemo: aplicativo MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -519,7 +519,7 @@ BOOL DockPaneLeftOf(
     CPane* pLeftOf);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 no Um ponteiro para o painel de encaixe.
@@ -535,7 +535,7 @@ Retornará TRUE se a operação for bem-sucedida. Caso contrário, retornará FA
 
 Chame esse método para encaixar vários objetos de painel em uma ordem predefinida. Esse método encaixa o painel especificado por *pBar* à esquerda do painel especificado por *pLeftOf*.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como o método `DockPaneLeftOf` é usado no [exemplo VisualStudioDemo: aplicativo MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -549,7 +549,7 @@ Habilita o modo ocultar automaticamente para painéis quando eles são encaixado
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDockStyle*<br/>
 no Especifica os lados da janela do quadro principal que será habilitada. Use um ou mais dos sinalizadores a seguir.
@@ -566,7 +566,7 @@ no Especifica os lados da janela do quadro principal que será habilitada. Use u
 
 Chame essa função para habilitar o modo de ocultar automaticamente para painéis quando eles estiverem encaixados nos lados especificados da janela do quadro principal.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como o método `EnableAutoHidePanes` é usado no [exemplo VisualStudioDemo: aplicativo MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -582,7 +582,7 @@ Habilita o encaixe dos painéis que pertencem à janela do quadro MDI.
 BOOL EnableDocking(DWORD dwDockStyle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDockStyle*<br/>
 no Especifica o estilo de encaixe que você deseja aplicar.
@@ -593,7 +593,7 @@ no Especifica o estilo de encaixe que você deseja aplicar.
 
 Chame essa função para habilitar o encaixe de painéis que pertencem ao objeto `CMDIFrameWndEx`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como o método `EnableDocking` é usado no [exemplo VisualStudioDemo: aplicativo MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -607,7 +607,7 @@ Mostra ou oculta o menu principal no modo de tela inteira.
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnableMenu*<br/>
 no TRUE para mostrar o menu principal no modo de tela inteira ou FALSE para ocultá-lo.
@@ -622,7 +622,7 @@ Habilita o modo de tela inteira para a janela do quadro.
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiFullScreenCmd*<br/>
 no A ID de um comando que habilita ou desabilita o modo de tela inteira.
@@ -639,7 +639,7 @@ Habilita ou desabilita o carregamento do estado de encaixe.
 void EnableLoadDockState(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 no TRUE para habilitar o carregamento do estado de encaixe, FALSE para desabilitar o carregamento do estado de encaixe.
@@ -656,7 +656,7 @@ void EnableMDITabbedGroups(
     const CMDITabInfo& params);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 no Se for TRUE, o recurso de grupos com guias MDI será habilitado; Se for FALSE, o recurso de grupos com guias MDI será desabilitado.
@@ -684,7 +684,7 @@ Mesmo se os grupos com guias MDI já estiverem habilitados, você poderá chamar
 
 Para obter mais informações sobre como usar grupos com guias MDI, veja [grupos com guias MDI](../../mfc/mdi-tabbed-groups.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como `EnableMDITabbedGroups` é usado no [exemplo VisualStudioDemo: aplicativo MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -705,7 +705,7 @@ void EnableMDITabs(
     BOOL bActiveTabCloseButton=FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 Especifica se as guias estão habilitadas.
@@ -736,7 +736,7 @@ Os rótulos de guia podem ser localizados na parte superior ou inferior do quadr
 
 Se *bTabCustomTooltips* for true, uma mensagem de AFX_WM_ON_GET_TAB_TOOLTIP será enviada para a janela do quadro principal. Seu código pode lidar com essa mensagem e fornecer a estrutura com dicas de ferramenta personalizadas para guias MDI.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como `EnableMDITabs` é usado no [exemplo MDITabsDemo: aplicativo MDI com guias do MFC](../../overview/visual-cpp-samples.md).
 
@@ -750,7 +750,7 @@ Especifica se a última guia ativa deve ser aberta quando o usuário fecha a gui
 void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bLastActiveTab*<br/>
 no Se verdadeiro, habilite a ativação da última guia ativa. Se for FALSE, desabilite a ativação da última guia ativa.
@@ -781,7 +781,7 @@ void EnablePaneMenu(
     BOOL bViewMenuShowsToolbarsOnly=FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 no Se for TRUE, a manipulação automática do menu do painel será habilitada; Se for FALSE, a manipulação automática será desabilitada.
@@ -805,7 +805,7 @@ no Se for TRUE, o menu do painel exibirá apenas uma lista de barras de ferramen
 
 O menu do painel pop-up exibe a lista de painéis do aplicativo e permite que o usuário mostre ou oculte painéis individuais.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como `EnablePaneMenu` é usado no [exemplo VisualStudioDemo: aplicativo MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -829,7 +829,7 @@ void EnableWindowsDialog(
     BOOL bShowHelpButton=FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiMenuId*<br/>
 no Especifica a ID de recurso de um menu.
@@ -847,7 +847,7 @@ no O identificador de recurso de cadeia de caracteres que contém a cadeia de ca
 
 Use este método para inserir um item de menu cujo comando chama uma caixa de diálogo de gerenciamento de janela filho MDI ( [Classe CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). O novo item é inserido no menu especificado por *uiMenuId*. Chame `EnableWindowsDialog` ao processar a mensagem de WM_CREATE.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como `EnableWindowsDialog` é usado no [exemplo VisualStudioDemo: aplicativo MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -965,7 +965,7 @@ Retorna um ponteiro para o painel que tem a ID de controle especificada.
 CBasePane* GetPane(UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 no A ID de controle.
@@ -1014,7 +1014,7 @@ virtual BOOL GetToolbarButtonToolTipText(
     CString& strTTText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pButton*<br/>
 no Um ponteiro para um botão da barra de ferramentas.
@@ -1039,7 +1039,7 @@ BOOL InsertPane(
     BOOL bAfter=TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pControlBar*<br/>
 no Um ponteiro para o painel a ser inserido.
@@ -1098,7 +1098,7 @@ Determina se a janela com guias especificada está na lista de janelas que estã
 BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 no Um ponteiro para janela com guias.
@@ -1130,7 +1130,7 @@ BOOL IsPointNearDockSite(
     BOOL& bOuterEdge) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *empresas*<br/>
 no O ponto especificado nas coordenadas da tela.
@@ -1175,7 +1175,7 @@ virtual BOOL LoadFrame(
     CCreateContext* pContext = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDResource*<br/>
 no A ID de um recurso compartilhado associado à janela do quadro.
@@ -1201,7 +1201,7 @@ Carrega o layout especificado de grupos com guias MDI e a lista de documentos ab
 virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszProfileName*<br/>
 no Especifica o nome do perfil.
@@ -1222,7 +1222,7 @@ Para carregar ou salvar o estado de guias e grupos MDI e a lista de documentos a
 
 - Substitua [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) para criar documentos corretamente quando eles estiverem sendo carregados do registro. O primeiro parâmetro é a cadeia de caracteres que `GetDocumentName` retornada.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como `LoadMDIState` é usado no [exemplo VisualStudioDemo: aplicativo MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -1236,7 +1236,7 @@ Move a guia ativa da janela com guias ativa no momento para o próximo grupo com
 void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bNext*<br/>
 no Se for TRUE, mova a guia para o próximo grupo com guias. Se for FALSE, mova-o para o grupo com guias anterior.
@@ -1249,7 +1249,7 @@ Cria um novo grupo com guias com uma única janela.
 void MDITabNewGroup(BOOL bVert=TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bVert*<br/>
 no Especifica o novo alinhamento de grupo. Se for TRUE, o novo grupo será alinhado verticalmente. Se for FALSE, o novo grupo será alinhado horizontalmente.
@@ -1258,7 +1258,7 @@ no Especifica o novo alinhamento de grupo. Se for TRUE, o novo grupo será alinh
 
 Use essa função para criar uma nova janela com guias (novo grupo com guias) e adicione a primeira guia a ela.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como `MDITabNewGroup` é usado no [exemplo VisualStudioDemo: aplicativo MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -1278,7 +1278,7 @@ Indica se as barras de controle de encaixe podem ser convertidas em janelas filh
 
 O valor padrão é `FALSE`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como `m_bCanCovertControlBarToMDIChild` é usado no [exemplo VisualStudioDemo: aplicativo MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -1310,7 +1310,7 @@ virtual BOOL NegotiateBorderSpace(
     LPRECT lpRectBorder);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nBorderCmd*<br/>
 no Contém um dos seguintes valores do `CFrameWnd::BorderCmd`de enumeração:
@@ -1340,7 +1340,7 @@ Chamado pelo Framework quando o usuário clica no botão **fechar** em um painel
 virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 no Ponteiro para o painel que está sendo fechado.
@@ -1363,7 +1363,7 @@ Chamado pelo Framework quando o usuário clica no botão **fechar** em uma janel
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 no Ponteiro para a janela do mini-quadro sendo fechada.
@@ -1386,7 +1386,7 @@ Chamado pelo Framework quando um menu pop-up ativo processa uma mensagem de WM_D
 virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMenuPopup*<br/>
 no Ponteiro para um menu pop-up.
@@ -1407,7 +1407,7 @@ virtual BOOL OnCmdMsg(
     AFX_CMDHANDLERINFO* pHandlerInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 no A ID do comando.
@@ -1436,7 +1436,7 @@ virtual BOOL OnDrawMenuImage(
     const CRect& rectImage);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Ponteiro para um contexto de dispositivo.
@@ -1496,7 +1496,7 @@ virtual BOOL OnMenuButtonToolHitTest(
     TOOLINFO* pTI);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pButton*<br/>
 no O botão da barra de ferramentas.
@@ -1520,7 +1520,7 @@ Chamado pelo Framework para mover uma janela de mini-quadro.
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFrame*<br/>
 no Um ponteiro para uma janela de mini-quadro.
@@ -1539,7 +1539,7 @@ virtual void OnSetPreviewMode(
     CPrintPreviewState* pState);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bPreview*<br/>
 no Se verdadeiro, define o modo de visualização de impressão. Se for FALSE, cancelará o modo de visualização.
@@ -1561,7 +1561,7 @@ virtual BOOL OnShowCustomizePane(
     UINT uiToolbarID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMenuPane*<br/>
 no Um ponteiro para o painel de personalização rápida.
@@ -1590,7 +1590,7 @@ virtual BOOL OnShowMDITabContextMenu(
     BOOL bTabDrop);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *empresas*<br/>
 no O local do menu em coordenadas da tela.
@@ -1619,7 +1619,7 @@ Substitua esse método em uma classe derivada de [CBCGPMDIFrameWnd](../../mfc/re
 
 Se você não processar `OnShowMDITabContextMenu`, o menu de atalho não será exibido. Essa função é gerada pelo **Assistente de aplicativo MFC** quando você habilita o recurso de grupos com guias MDI.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como `OnShowMDITabContextMenu` é usado no [exemplo VisualStudioDemo: aplicativo MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -1633,7 +1633,7 @@ Chamado pelo Framework para mostrar ou ocultar painéis.
 virtual BOOL OnShowPanes(BOOL bShow);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bShow*<br/>
 no TRUE para mostrar painéis, FALSE para ocultar painéis.
@@ -1676,7 +1676,7 @@ virtual void OnSizeMDIClient(
     const CRect& rectNew);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rectOld*<br/>
 no O tamanho atual da janela do cliente MDI.
@@ -1696,7 +1696,7 @@ virtual BOOL OnTearOffMenu(
     CPane* pBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMenuPopup*<br/>
 no Um ponteiro para o menu pop-up.
@@ -1720,7 +1720,7 @@ Chamado pelo Framework para atualizar o menu de quadro.
 virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hMenuAlt*<br/>
 no Um identificador para um menu.
@@ -1743,7 +1743,7 @@ CBasePane* PaneFromPoint(
     CRuntimeClass* pRTCBarType) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *empresas*<br/>
 no O ponto (em coordenadas da tela).
@@ -1776,7 +1776,7 @@ Chamado pelo Framework para recalcular o layout da janela do quadro.
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bNotify*<br/>
 no Determina se o item in-loco ativo para a janela do quadro recebe a notificação da alteração de layout. Se for TRUE, o item será notificado; caso contrário, FALSE.
@@ -1798,7 +1798,7 @@ void RemovePaneFromDockManager(
     CBasePane* pBarReplacement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pControlBar*<br/>
 no Um ponteiro para um painel a ser removido.
@@ -1829,7 +1829,7 @@ Salva o layout atual de grupos com guias MDI e a lista de documentos abertos ant
 virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszProfileName*<br/>
 no Especifica o nome do perfil.
@@ -1854,7 +1854,7 @@ Para carregar ou salvar o estado de guias e grupos MDI e a lista de documentos a
 
 - Substitua [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) para criar documentos corretamente quando eles forem carregados do registro. O parâmetro para `CreateDocumentWindow` é a cadeia de caracteres que `GetDocumentName` retornada anteriormente.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como `SaveMDIState` é usado no [exemplo VisualStudioDemo: aplicativo MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -1868,7 +1868,7 @@ Define a janela do quadro de visualização de impressão.
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 no Ponteiro para uma janela de quadro de visualização de impressão.
@@ -1886,7 +1886,7 @@ void SetupToolbarMenu(
     const UINT uiViewUserToolbarCmdLast);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *AdicionarMenu*<br/>
 no Uma referência a um objeto de [classe CMenu](../../mfc/reference/cmenu-class.md) a ser modificado.
@@ -1919,7 +1919,7 @@ void ShowPane(
     BOOL bActivate);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 no Ponteiro para o painel a ser mostrado ou ocultado.
@@ -1937,7 +1937,7 @@ no TRUE para mostrar o painel como ativo. FALSE para mostrar o painel como inati
 
 Chame esse método para mostrar ou ocultar o painel. Não use `ShowWindow` para painéis de encaixe.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como `ShowPane` é usado no [exemplo VisualStudioDemo: aplicativo MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -1951,7 +1951,7 @@ Cria uma caixa de [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmana
 void ShowWindowsDialog();
 ```
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como `ShowWindowsDialog` é usado no [exemplo VisualStudioDemo: aplicativo MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -1965,7 +1965,7 @@ Converte o documento tabulado especificado em um painel de encaixe.
 virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMDIChildWnd*<br/>
 Um ponteiro para uma janela filho MDI que contém um painel de encaixe.
@@ -1978,7 +1978,7 @@ TRUE se o método foi bem-sucedido, FALSE em caso de falha.
 
 Use este método para converter um documento com guias em um painel de encaixe. O documento com guias deve ter sido criado usando [CMDIFrameWndEx:: ControlBarToTabbedDocument](#controlbartotabbeddocument).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como `TabbedDocumentToControlBar` é usado no [exemplo VisualStudioDemo: aplicativo MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -2012,7 +2012,7 @@ virtual void WinHelp(
     UINT nCmd = HELP_CONTEXT);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwData*<br/>
 no Especifica os dados conforme necessário para o tipo de ajuda especificado por *nCmd*.
@@ -2024,7 +2024,7 @@ no Especifica o tipo de ajuda solicitada. Para obter uma lista de valores possí
 
 Esse método substitui [CWnd:: WinHelp](../../mfc/reference/cwnd-class.md#winhelp).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

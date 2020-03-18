@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (deque)
 - std::operator== (deque)
 ms.openlocfilehash: 868909ac4346a59cade3660f288a0f0e71bc4ed0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883781"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419129"
 ---
 # <a name="ltdequegt-operators"></a>Operadores &lt;deque&gt;
 
@@ -33,7 +33,7 @@ Testa se o objeto do deque do lado esquerdo do operador não é igual ao objeto 
 bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `deque`.
@@ -84,7 +84,7 @@ Testa se o objeto do deque do lado esquerdo do operador é menor que o objeto do
 bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `deque`.
@@ -139,7 +139,7 @@ Testa se o objeto do deque do lado esquerdo do operador é menor ou igual ao obj
 bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `deque`.
@@ -194,7 +194,7 @@ Testa se o objeto do deque do lado esquerdo do operador é igual ao objeto do de
 bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `deque`.
@@ -252,7 +252,7 @@ Testa se o objeto do deque do lado esquerdo do operador é maior que o objeto do
 bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `deque`.
@@ -308,7 +308,7 @@ Testa se o objeto do deque do lado esquerdo do operador é maior ou igual ao obj
 bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `deque`.

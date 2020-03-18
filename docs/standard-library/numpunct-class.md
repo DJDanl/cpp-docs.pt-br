@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856462"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419717"
 ---
 # <a name="numpunct-class"></a>Classe numpunct
 
@@ -48,7 +48,7 @@ template <class CharType>
 class numpunct : public locale::facet;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *CharType*
 O tipo usado em um programa para codificar caracteres em uma localidade.
@@ -65,7 +65,7 @@ Como qualquer faceta de localidade, a ID de objeto estático tem um valor armaze
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome de tipo|DESCRIÇÃO|
+|Nome do tipo|DESCRIÇÃO|
 |-|-|
 |[char_type](#char_type)|Um tipo que é usado para descrever um caractere usado por uma localidade.|
 |[string_type](#string_type)|Um tipo que descreve uma cadeia de caracteres que contém caracteres do tipo `CharType`.|
@@ -343,7 +343,7 @@ O construtor para objetos do tipo `numpunct`.
 explicit numpunct(size_t _Refs = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Refs*\
 Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
@@ -466,7 +466,7 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [\<locale>](../standard-library/locale.md)\
 [Classe facet](../standard-library/locale-class.md#facet_class)\

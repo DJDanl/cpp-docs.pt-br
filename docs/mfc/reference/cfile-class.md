@@ -61,11 +61,11 @@ helpviewer_keywords:
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
 ms.openlocfilehash: a9161764f6c8646766a73add01c25cce5619ad19
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855245"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418702"
 ---
 # <a name="cfile-class"></a>Classe de testcfile
 
@@ -193,7 +193,7 @@ UINT nOpenFlags,
 CAtlTransactionManager* pTM);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hFile*<br/>
 Handle de um arquivo para anexar ao objeto `CFile`.
@@ -435,7 +435,7 @@ static BOOL PASCAL GetStatus(
     CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rStatus*<br/>
 Uma referência a uma estrutura de `CFileStatus` fornecida pelo usuário que receberá as informações de status. A estrutura de `CFileStatus` tem os seguintes campos:
@@ -510,7 +510,7 @@ virtual void LockRange(
     ULONGLONG dwCount);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwPos*<br/>
 O deslocamento de byte do início do intervalo de bytes a ser bloqueado.
@@ -572,7 +572,7 @@ virtual BOOL Open(
     CFileException* pError = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFileName*<br/>
 Uma cadeia de caracteres que contém o caminho para o arquivo desejado. O caminho pode ser relativo, absoluto ou um nome de rede (UNC).
@@ -600,9 +600,9 @@ A tabela a seguir descreve os possíveis resultados de `Open`.
 
 |`pError`|Erro encontrado|Valor retornado|Conteúdo do CFileException|
 |--------------|------------------------|------------------|----------------------------|
-|NULL|Não|TRUE|n/d|
+|NULO|Não|TRUE|n/d|
 |PTR a `CFileException`|Não|TRUE|inalterado|
-|NULL|Sim|FALSE|n/d|
+|NULO|Sim|FALSE|n/d|
 |PTR a `CFileException`|Sim|FALSE|inicializado para descrever o erro|
 
 ### <a name="example"></a>Exemplo
@@ -629,7 +629,7 @@ virtual UINT Read(
     UINT nCount);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpBuf*<br/>
 Ponteiro para o buffer fornecido pelo usuário que deve receber os dados lidos do arquivo.
@@ -657,7 +657,7 @@ static void PASCAL Remove(
     CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFileName*<br/>
 Uma cadeia de caracteres que é o caminho para o arquivo desejado. O caminho pode ser relativo ou absoluto e pode conter um nome de rede.
@@ -686,7 +686,7 @@ static void PASCAL Rename(
     CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszOldName*<br/>
 O caminho antigo.
@@ -715,7 +715,7 @@ LONGLONG lOff,
 UINT nFrom);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lOff*<br/>
 Número de bytes para mover o ponteiro do arquivo. Valores positivos movem o ponteiro do arquivo para o final do arquivo; valores negativos movem o ponteiro do arquivo para o início do arquivo.
@@ -757,7 +757,7 @@ void SeekToBegin();
 
 ### <a name="remarks"></a>Comentários
 
-`SeekToBegin()` equivale a `Seek( 0L, CFile::begin )`.
+`SeekToBegin()` é equivalente a `Seek( 0L, CFile::begin )`.
 
 ### <a name="example"></a>Exemplo
 
@@ -777,7 +777,7 @@ O comprimento do arquivo em bytes.
 
 ### <a name="remarks"></a>Comentários
 
-`SeekToEnd()` equivale a `CFile::Seek( 0L, CFile::end )`.
+`SeekToEnd()` é equivalente a `CFile::Seek( 0L, CFile::end )`.
 
 ### <a name="example"></a>Exemplo
 
@@ -791,7 +791,7 @@ Chame essa função para especificar o caminho do arquivo. Por exemplo, se o cam
 virtual void SetFilePath(LPCTSTR lpszNewName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszNewName*<br/>
 Ponteiro para uma cadeia de caracteres que especifica o novo caminho.
@@ -813,7 +813,7 @@ Chame essa função para alterar o comprimento do arquivo.
 virtual void SetLength(ULONGLONG dwNewLen);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwNewLen*<br/>
 Comprimento desejado do arquivo em bytes. Esse valor pode ser maior ou menor que o comprimento atual do arquivo. O arquivo será estendido ou truncado conforme apropriado.
@@ -838,7 +838,7 @@ static void PASCAL SetStatus(
     CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFileName*<br/>
 Uma cadeia de caracteres que é o caminho para o arquivo desejado. O caminho pode ser relativo ou absoluto e pode conter um nome de rede.
@@ -869,7 +869,7 @@ virtual void UnlockRange(
     ULONGLONG dwCount);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwPos*<br/>
 O deslocamento de byte do início do intervalo de bytes a ser desbloqueado.
@@ -898,7 +898,7 @@ virtual void Write(
     UINT nCount);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpBuf*<br/>
 Um ponteiro para o buffer fornecido pelo usuário que contém os dados a serem gravados no arquivo.
@@ -916,7 +916,7 @@ O número de bytes a serem transferidos do buffer. Para arquivos de modo de text
 
 Consulte também os exemplos de [testcfile:: RecFile](#cfile) e [testcfile:: Open](#open).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de DRAWCLI do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>

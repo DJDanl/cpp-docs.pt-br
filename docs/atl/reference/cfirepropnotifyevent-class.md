@@ -12,11 +12,11 @@ helpviewer_keywords:
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
 ms.openlocfilehash: 694127ceccc1d1b55e5da9abca799dff77dcfc60
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864912"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417862"
 ---
 # <a name="cfirepropnotifyevent-class"></a>Classe CFirePropNotifyEvent
 
@@ -35,7 +35,7 @@ class CFirePropNotifyEvent
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|Auto-estática Notifica o coletor do contêiner de que uma propriedade de controle foi alterada.|
 |[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|Auto-estática Notifica o coletor do contêiner que uma propriedade de controle está prestes a ser alterada.|
@@ -48,7 +48,7 @@ Se a classe que implementa seu controle for derivada de `IPropertyNotifySink`, o
 
 Para obter mais informações sobre como criar controles, consulte o [tutorial do ATL](../../atl/active-template-library-atl-tutorial.md).
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlctl. h
 
@@ -60,7 +60,7 @@ Notifica todas as interfaces de [IPropertyNotifySink](/windows/win32/api/ocidl/n
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pUnk*<br/>
 no Ponteiro para a `IUnknown` do objeto que envia a notificação.
@@ -84,7 +84,7 @@ Notifica todas as interfaces de [IPropertyNotifySink](/windows/win32/api/ocidl/n
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pUnk*<br/>
 no Ponteiro para a `IUnknown` do objeto que envia a notificação.
@@ -100,6 +100,6 @@ Um dos valores de HRESULT padrão.
 
 Essa função é segura para chamar mesmo que o controle não dê suporte a pontos de conexão.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral da classe](../../atl/atl-class-overview.md)

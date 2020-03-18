@@ -6,11 +6,11 @@ helpviewer_keywords:
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
 ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855781"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418289"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Como definir e consumir classes e estruturas (C++/CLI)
 

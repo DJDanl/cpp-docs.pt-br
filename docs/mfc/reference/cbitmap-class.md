@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
 ms.openlocfilehash: 7161a4cf4484b6cc9e76e6955de558ca6e9121ca
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855418"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418954"
 ---
 # <a name="cbitmap-class"></a>Classe CBitmap
 
@@ -55,13 +55,13 @@ class CBitmap : public CGdiObject
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CBitmap::CBitmap](#cbitmap)|Constrói um objeto `CBitmap`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CBitmap:: CreateBitmap](#createbitmap)|Inicializa o objeto com um bitmap de memória dependente de dispositivo que tem uma largura, altura e padrão de bits especificados.|
 |[CBitmap::CreateBitmapIndirect](#createbitmapindirect)|Inicializa o objeto com um bitmap com a largura, a altura e o padrão de bits (se um for especificado) fornecido em uma estrutura de `BITMAP`.|
@@ -79,7 +79,7 @@ class CBitmap : public CGdiObject
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[Operador CBitmap:: Operator HBITMAP](#operator_hbitmap)|Retorna o identificador do Windows anexado ao objeto `CBitmap`.|
 
@@ -97,7 +97,7 @@ Para obter mais informações sobre como usar objetos gráficos como `CBitmap`, 
 
 `CBitmap`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Afxwin. h
 
@@ -126,7 +126,7 @@ BOOL CreateBitmap(
     const void* lpBits);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nWidth*<br/>
 Especifica a largura (em pixels) do bitmap.
@@ -165,7 +165,7 @@ Inicializa um bitmap que tem a largura, a altura e o padrão de bits (se um for 
 BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpBitmap*<br/>
 Aponta para uma estrutura de [bitmap](/windows/win32/api/wingdi/ns-wingdi-bitmap) que contém informações sobre o bitmap.
@@ -193,7 +193,7 @@ BOOL CreateCompatibleBitmap(
     int nHeight);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Especifica o contexto do dispositivo.
@@ -231,7 +231,7 @@ BOOL CreateDiscardableBitmap(
     int nHeight);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Especifica um contexto de dispositivo.
@@ -262,7 +262,7 @@ Retorna um ponteiro para um objeto `CBitmap` ao receber um identificador para um
 static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hBitmap*<br/>
 Especifica um bitmap GDI do Windows.
@@ -283,7 +283,7 @@ Recupera as propriedades da imagem para o bitmap anexado.
 int GetBitmap(BITMAP* pBitMap);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBitMap*<br/>
 Ponteiro para uma estrutura de [bitmap](/windows/win32/api/wingdi/ns-wingdi-bitmap) que receberá as propriedades da imagem. Esse parâmetro não deve ser nulo.
@@ -304,7 +304,7 @@ DWORD GetBitmapBits(
     LPVOID lpBits) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwCount*<br/>
 O número de bytes a serem copiados no buffer.
@@ -345,7 +345,7 @@ BOOL LoadBitmap(LPCTSTR lpszResourceName);
 BOOL LoadBitmap(UINT nIDResource);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszResourceName*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que contém o nome do recurso de bitmap.
@@ -386,7 +386,7 @@ BOOL LoadMappedBitmap(
     int nMapSize = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDBitmap*<br/>
 A ID do recurso de bitmap.
@@ -418,7 +418,7 @@ Carrega um bitmap predefinido usado pelo Windows.
 BOOL LoadOEMBitmap(UINT nIDBitmap);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDBitmap*<br/>
 Número de ID do bitmap do Windows predefinido. Os valores possíveis estão listados abaixo do WINDOWS. T
@@ -481,7 +481,7 @@ DWORD SetBitmapBits(
     const void* lpBits);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwCount*<br/>
 Especifica o número de bytes apontados por *lpBits*.
@@ -503,7 +503,7 @@ CSize SetBitmapDimension(
     int nHeight);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nWidth*<br/>
 Especifica a largura do bitmap (em unidades de 0,1 a milímetros).
@@ -519,7 +519,7 @@ As dimensões de bitmap anteriores. A altura está na variável de membro `cy` d
 
 O GDI não usa esses valores, exceto para retorná-los quando um aplicativo chama a função de membro [GetBitmapDimension](#getbitmapdimension) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [MDI de exemplo do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>

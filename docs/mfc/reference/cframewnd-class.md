@@ -107,11 +107,11 @@ helpviewer_keywords:
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
 ms.openlocfilehash: d2e043c8c9f4ad86636cd0e9ea7d695826b6c8fb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866419"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418625"
 ---
 # <a name="cframewnd-class"></a>Classe CFrameWnd
 
@@ -127,13 +127,13 @@ class CFrameWnd : public CWnd
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CFrameWnd:: CFrameWnd](#cframewnd)|Constrói um objeto `CFrameWnd`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CFrameWnd:: ActivateFrame](#activateframe)|Torna o quadro visível e disponível para o usuário.|
 |[CFrameWnd:: BeginModalState](#beginmodalstate)|Define a janela do quadro como modal.|
@@ -182,7 +182,7 @@ class CFrameWnd : public CWnd
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CFrameWnd:: OnCreateClient](#oncreateclient)|Cria uma janela de cliente para o quadro.|
 |[CFrameWnd:: OnHideMenuBar](#onhidemenubar)|Chamado antes que o menu no aplicativo do MFC atual esteja oculto.|
@@ -190,7 +190,7 @@ class CFrameWnd : public CWnd
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CFrameWnd:: m_bAutoMenuEnable](#m_bautomenuenable)|Controla a funcionalidade habilitar e desabilitar automaticamente para itens de menu.|
 |[CFrameWnd:: rectDefault](#rectdefault)|Passe esse `CRect` estático como um parâmetro ao criar um objeto `CFrameWnd` para permitir que o Windows escolha o tamanho inicial e a posição da janela.|
@@ -239,7 +239,7 @@ Uma `CFrameWnd` contém implementações padrão para executar as seguintes fun�
 
 - Se a janela do quadro for a janela principal do aplicativo, a janela do quadro será o contexto para executar o WinHelp. Fechar a janela do quadro desligará o WINHELP. EXE se foi iniciado para obter ajuda para este aplicativo.
 
-Não use o C++ operador **delete** para destruir uma janela de quadro. Use `CWnd::DestroyWindow` em seu lugar. A implementação `CFrameWnd` do `PostNcDestroy` excluirá o C++ objeto quando a janela for destruída. Quando o usuário fechar a janela do quadro, o manipulador de `OnClose` padrão chamará `DestroyWindow`.
+Não use o C++ operador **delete** para destruir uma janela de quadro. Use `CWnd::DestroyWindow` em vez disso. A implementação `CFrameWnd` do `PostNcDestroy` excluirá o C++ objeto quando a janela for destruída. Quando o usuário fechar a janela do quadro, o manipulador de `OnClose` padrão chamará `DestroyWindow`.
 
 Para obter mais informações sobre `CFrameWnd`, consulte [janelas de quadros](../../mfc/frame-windows.md).
 
@@ -253,7 +253,7 @@ Para obter mais informações sobre `CFrameWnd`, consulte [janelas de quadros](.
 
 `CFrameWnd`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Afxwin. h
 
@@ -265,7 +265,7 @@ Chame essa função de membro para ativar e restaurar a janela do quadro para qu
 virtual void ActivateFrame(int nCmdShow = -1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nCmdShow*<br/>
 Especifica o parâmetro a ser passado para [CWnd:: sawindow](../../mfc/reference/cwnd-class.md#showwindow). Por padrão, o quadro é mostrado e restaurado corretamente.
@@ -278,7 +278,7 @@ A implementação padrão ativa o quadro e o coloca na parte superior da ordem Z
 
 Substitua essa função de membro para alterar a forma como um quadro é ativado. Por exemplo, você pode forçar o Windows filho MDI a ser maximizado. Adicione a funcionalidade apropriada e, em seguida, chame a versão da classe base com um *nCmdShow*explícito.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCWindowing#1](../../mfc/reference/codesnippet/cpp/cframewnd-class_1.cpp)]
 
@@ -318,7 +318,7 @@ virtual BOOL Create(
     CCreateContext* pContext = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszClassName*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que nomeia a classe do Windows. O nome da classe pode ser qualquer nome registrado com a função global `AfxRegisterWndClass` ou `RegisterClass` função do Windows. Se NULL, usa os atributos de `CFrameWnd` padrão predefinidos.
@@ -364,7 +364,7 @@ CWnd* CreateView(
     UINT nID = AFX_IDW_PANE_FIRST);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pContext*<br/>
 Especifica o tipo de exibição e documento.
@@ -391,7 +391,7 @@ void DockControlBar(
     LPCRECT lpRect = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 Aponta para a barra de controle a ser encaixada.
@@ -424,7 +424,7 @@ Chame essa função para habilitar as barras de controle encaixáveis em uma jan
 void EnableDocking(DWORD dwDockStyle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDockStyle*<br/>
 Especifica quais lados da janela do quadro podem servir como sites de encaixe para barras de controle. Pode ser um ou mais dos seguintes:
@@ -443,7 +443,7 @@ Especifica quais lados da janela do quadro podem servir como sites de encaixe pa
 
 Por padrão, as barras de controle serão encaixadas em um lado da janela do quadro na seguinte ordem: superior, inferior, esquerda, direita.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CToolBar:: Create](../../mfc/reference/ctoolbar-class.md#create).
 
@@ -470,7 +470,7 @@ void FloatControlBar(
     DWORD dwStyle = CBRS_ALIGN_TOP);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 Aponta para a barra de controle a ser flutuante.
@@ -551,7 +551,7 @@ Chame `GetControlBar` para obter acesso à barra de controle associada à ID.
 CControlBar* GetControlBar(UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 O número de ID de uma barra de controle.
@@ -574,7 +574,7 @@ Chame essa função de membro para armazenar informações de estado sobre as ba
 void GetDockState(CDockState& state) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *state*<br/>
 Contém o estado atual das barras de controle da janela do quadro no retorno.
@@ -647,7 +647,7 @@ virtual void GetMessageString(
     CString& rMessage) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 ID de recurso da mensagem desejada.
@@ -681,10 +681,10 @@ void InitialUpdateFrame(
     BOOL bMakeVisible);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDoc*<br/>
-Aponta para o documento ao qual a janela do quadro está associada. Pode ser NULO.
+Aponta para o documento ao qual a janela do quadro está associada. Pode ser NULL.
 
 *bMakeVisible*<br/>
 Se for TRUE, indica que o quadro deve ficar visível e ativo. Se for FALSE, nenhum descendente será tornado visível.
@@ -727,7 +727,7 @@ Chame para carregar a tabela de acelerador especificada.
 BOOL LoadAccelTable(LPCTSTR lpszResourceName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszResourceName*<br/>
 Identifica o nome do recurso de acelerador. Use MAKEINTRESOURCE se o recurso for identificado com uma ID de inteiro.
@@ -752,7 +752,7 @@ Chame essa função para restaurar as configurações de cada barra de controle 
 void LoadBarState(LPCTSTR lpszProfileName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszProfileName*<br/>
 Nome de uma seção no arquivo de inicialização (INI) ou uma chave no registro do Windows em que as informações de estado são armazenadas.
@@ -775,7 +775,7 @@ virtual BOOL LoadFrame(
     CCreateContext* pContext = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDResource*<br/>
 A ID dos recursos compartilhados associados à janela do quadro.
@@ -818,7 +818,7 @@ Quando esse membro de dados é definido, os itens de menu são habilitados autom
 
 Esse membro de dados simplifica a implementação de comandos opcionais com base na seleção atual e reduz a necessidade de escrever ON_UPDATE_COMMAND_UI manipuladores para habilitar e Desabilitar itens de menu.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCWindowing#3](../../mfc/reference/codesnippet/cpp/cframewnd-class_3.cpp)]
 
@@ -832,7 +832,7 @@ virtual BOOL NegotiateBorderSpace(
     LPRECT lpRectBorder);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nBorderCmd*<br/>
 Contém um dos seguintes valores do `enum BorderCmd`:
@@ -862,7 +862,7 @@ Chamado sempre que uma ação é executada na barra de controle especificada.
 afx_msg BOOL OnBarCheck(UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 A ID da barra de controle que está sendo mostrada.
@@ -899,7 +899,7 @@ virtual BOOL OnCreateClient(
     CCreateContext* pContext);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *LPC*<br/>
 Um ponteiro para uma estrutura [CREATEstruct](/windows/win32/api/winuser/ns-winuser-createstructw) do Windows.
@@ -944,7 +944,7 @@ virtual void OnSetPreviewMode(
     CPrintPreviewState* pState);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bPreview*<br/>
 Especifica se o aplicativo deve ser colocado no modo de visualização de impressão ou não. Defina como TRUE para colocar na visualização de impressão, FALSE para cancelar o modo de visualização.
@@ -978,7 +978,7 @@ Chamado pelo Framework quando o menu associado é atualizado.
 afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pCmdUI*<br/>
 Um ponteiro para um objeto [CCmdUI](../../mfc/reference/ccmdui-class.md) que representa o menu que gerou o comando Update. O manipulador de atualização chama a função de membro [Enable](../../mfc/reference/ccmdui-class.md#enable) do objeto `CCmdUI` por meio de *pCmdUI* para atualizar a interface do usuário.
@@ -991,7 +991,7 @@ Chamado pelo Framework quando as barras de controle padrão são ativadas ou des
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bNotify*<br/>
 Determina se o item in-loco ativo para a janela do quadro recebe a notificação da alteração de layout. Se for TRUE, o item será notificado; caso contrário, FALSE.
@@ -1018,7 +1018,7 @@ Chame essa função para armazenar informações sobre cada barra de controle de
 void SaveBarState(LPCTSTR lpszProfileName) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszProfileName*<br/>
 Nome de uma seção no arquivo de inicialização ou uma chave no registro do Windows em que as informações de estado são armazenadas.
@@ -1035,7 +1035,7 @@ Designa a exibição especificada como a exibição ativa para visualização av
 void SetActivePreviewView(CView* pViewNew);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pViewNew*<br/>
 Um ponteiro para uma exibição a ser ativada.
@@ -1052,7 +1052,7 @@ void SetActiveView(
     BOOL bNotify = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pViewNew*<br/>
 Especifica um ponteiro para um objeto [cvisualização](../../mfc/reference/cview-class.md) ou nulo para nenhuma exibição ativa.
@@ -1072,7 +1072,7 @@ Chame essa função de membro para aplicar informações de estado armazenadas e
 void SetDockState(const CDockState& state);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *state*<br/>
 Aplique o estado armazenado às barras de controle da janela do quadro.
@@ -1089,9 +1089,9 @@ Define o estado de exibição do menu no aplicativo MFC atual como oculto ou exi
 virtual BOOL SetMenuBarState(DWORD nState);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*nState*|no Especifica se o menu deve ser exibido ou ocultado. O parâmetro *nState* pode ter os seguintes valores:<br /><br />-AFX_MBS_VISIBLE (0x01) – exibe o menu se ele estiver oculto, mas não tem efeito se estiver visível.<br />-AFX_MBS_HIDDEN (0x02) – oculta o menu se ele estiver visível, mas não tem efeito se estiver oculto.|
 
@@ -1111,9 +1111,9 @@ Define o comportamento padrão do menu no aplicativo MFC atual como oculto ou vi
 virtual void SetMenuBarVisibility(DWORD nStyle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*nStyle*|no Especifica se o menu está oculto por padrão ou está visível e tem o foco. O parâmetro *nStyle* pode ter os seguintes valores:<br /><br />-AFX_MBV_KEEPVISIBLE (0x01)-<br />     O menu é exibido o tempo todo e, por padrão, não tem o foco.<br />-AFX_MBV_DISPLAYONFOCUS (0x02)-<br />     O menu fica oculto por padrão. Se o menu estiver oculto, pressione a tecla ALT para exibir o menu e dar a ele o foco. Se o menu for exibido, pressione a tecla ALT ou ESC para ocultar o menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (combinação de bits bit (ou))-o menu fica oculto por padrão. Se o menu estiver oculto, pressione a tecla F10 para exibir o menu e dar a ele o foco. Se o menu for exibido, pressione a tecla F10 para ativar ou desativar o foco no menu. O menu é exibido até que você pressione a tecla ALT ou ESC para ocultá-lo.|
 
@@ -1132,7 +1132,7 @@ void SetMessageText(LPCTSTR lpszText);
 void SetMessageText(UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszText*<br/>
 Aponta para a cadeia de caracteres a ser colocada na barra de status.
@@ -1152,7 +1152,7 @@ Define a posição atual da barra de progresso do Windows 7 exibida na barra de 
 void SetProgressBarPosition(int nProgressPos);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nProgressPos*<br/>
 Especifica a posição a ser definida. Ele deve estar dentro do intervalo definido por `SetProgressBarRange`.
@@ -1169,7 +1169,7 @@ void SetProgressBarRange(
     int nRangeMax);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nRangeMin*<br/>
 Valor mínimo.
@@ -1187,7 +1187,7 @@ Define o tipo e o estado do indicador de progresso exibido em um botão da barra
 void SetProgressBarState(TBPFLAG tbpFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *tbpFlags*<br/>
 Sinalizadores que controlam o estado atual do botão de progresso. Especifique apenas um dos sinalizadores a seguir porque todos os Estados são mutuamente exclusivos: TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
@@ -1208,7 +1208,7 @@ BOOL SetTaskbarOverlayIcon(
     LPCTSTR lpcszDescr);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDResource*<br/>
 Especifica a ID de recurso de um ícone a ser usado como a sobreposição. Consulte a descrição de *HICON* para obter detalhes.
@@ -1233,7 +1233,7 @@ Define o título do objeto de janela.
 void SetTitle(LPCTSTR lpszTitle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszTitle*<br/>
 Um ponteiro para uma cadeia de caracteres que contém o título do objeto de janela.
@@ -1249,7 +1249,7 @@ void ShowControlBar(
     BOOL bDelay);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 Ponteiro para a barra de controle a ser mostrado ou ocultado.
@@ -1268,12 +1268,12 @@ Chame essa função de membro para mostrar todas as janelas descendentes do obje
 void ShowOwnedWindows(BOOL bShow);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bShow*<br/>
 Especifica se as janelas de propriedade devem ser mostradas ou ocultas.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

@@ -167,11 +167,11 @@ helpviewer_keywords:
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
 ms.openlocfilehash: 59291516c14ea6ff8b1d2fe515d121dd6f910cba
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866667"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420578"
 ---
 # <a name="cbasepane-class"></a>Classe CBasePane
 
@@ -187,14 +187,14 @@ class CBasePane : public CWnd
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`CBasePane::CBasePane`|Construtor padrão.|
 |`CBasePane::~CBasePane`|Destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`CBasePane::accHitTest`|Chamado pelo Framework para recuperar o elemento filho ou o objeto filho em um determinado ponto na tela. (Substitui [CWnd:: accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
 |`CBasePane::accLocation`|Chamado pelo Framework para recuperar o local da tela atual para o objeto especificado. (Substitui [CWnd:: accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
@@ -302,7 +302,7 @@ class CBasePane : public CWnd
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CBasePane::D oPaint](#dopaint)|Preenche a tela de fundo do painel.|
 
@@ -340,7 +340,7 @@ As seguintes dicas de personalização pertencem ao `CBasePane Class` e a todas 
 
 - Se você quiser flutuar ou desencaixar um painel que está no modo de ocultação automática, deverá chamar [CDockablePane:: autoocultarmode](../../mfc/reference/cdockablepane-class.md#setautohidemode) com false como o primeiro argumento antes de chamar [CBasePane:: FloatPane](#floatpane) ou [CBasePane:: UndockPane](#undockpane).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra como usar vários métodos na classe `CBasePane`. O exemplo demonstra como recuperar um painel da classe `CFrameWndEx` e como definir o modo de encaixe, o alinhamento do painel e o estilo do painel. O código é do [exemplo do Word pad](../../overview/visual-cpp-samples.md).
 
@@ -356,7 +356,7 @@ O exemplo a seguir demonstra como usar vários métodos na classe `CBasePane`. O
 
 [CBasePane](../../mfc/reference/cbasepane-class.md)
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxbasepane. h
 
@@ -368,7 +368,7 @@ O exemplo a seguir demonstra como usar vários métodos na classe `CBasePane`. O
 virtual void AccNotifyObjectFocusEvent(int);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *int*<br/>
 no Não usado.
@@ -381,7 +381,7 @@ Adiciona um painel ao Gerenciador de encaixe.
 void AddPane(CBasePane* pBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 no Um ponteiro para um painel a ser adicionado.
@@ -400,7 +400,7 @@ Redireciona uma chamada para o Gerenciador de encaixe para ajustar o layout de e
 virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hdwp*<br/>
 fora Um identificador para uma estrutura que contém várias posições de janela.
@@ -433,7 +433,7 @@ virtual CSize CalcFixedLayout(
     BOOL bHorz);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bStretch*<br/>
 no Indica se a barra deve ser ampliada para o tamanho do quadro. O parâmetro *bStretch* é diferente de zero quando a barra não é uma barra de encaixe (não disponível para encaixe) e é 0 quando é encaixada ou flutuante (disponível para encaixe).
@@ -457,7 +457,7 @@ Determina se outro painel pode ser encaixado no painel.
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 no Um ponteiro para o painel a ser encaixado.
@@ -538,7 +538,7 @@ Determina se o painel pode ser encaixado em outro painel.
 virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDockBar*<br/>
 no Um ponteiro para outro painel.
@@ -636,7 +636,7 @@ Copia o estado de um determinado painel.
 virtual void CopyState(CBasePane* pOrgBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pOrgBar*<br/>
 no Um ponteiro para outro painel.
@@ -653,7 +653,7 @@ Se o painel puder flutuar, esse método criará uma janela de mini-quadro para e
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rectInitial*<br/>
 no Especifica as coordenadas iniciais da janela de mini quadros.
@@ -685,7 +685,7 @@ virtual BOOL CreateEx(
     CCreateContext* pContext=NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwStyleEx*<br/>
 no Os estilos estendidos (consulte [CWnd:: CreateEx](../../mfc/reference/cwnd-class.md#createex) para obter mais informações).
@@ -726,7 +726,7 @@ Você pode usar qualquer combinação de estilos de janela filho e estilos de ba
 
 A biblioteca adiciona vários novos estilos para os painéis. A tabela a seguir descreve os novos estilos:
 
-|Estilo|Descrição|
+|Estilo|DESCRIÇÃO|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|O painel pode flutuar.|
 |AFX_CBRS_AUTOHIDE|O painel dá suporte ao modo ocultar automaticamente|
@@ -749,7 +749,7 @@ virtual BOOL DockPane(
     AFX_DOCK_METHOD dockMethod);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDockBar*<br/>
 no Um ponteiro para outro painel.
@@ -778,7 +778,7 @@ Encaixa o painel usando informações de tipo de tempo de execução.
 void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bUseDockSite*<br/>
 no Se for TRUE, encaixe no site de encaixe. Se for FALSE, encaixe no quadro pai.
@@ -797,7 +797,7 @@ virtual BOOL DockToFrameWindow(
     BOOL bOuterEdge = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwAlignment*<br/>
 no O lado do quadro pai ao qual você deseja encaixar o painel.
@@ -855,7 +855,7 @@ Preenche a tela de fundo do painel.
 virtual void DoPaint(CDC* pDC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -872,7 +872,7 @@ Habilita o encaixe do painel no quadro principal.
 virtual void EnableDocking(DWORD dwAlignment);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwAlignment*<br/>
 no Especifica o alinhamento de encaixe a ser habilitado.
@@ -893,7 +893,7 @@ Habilita ou desabilita a garra. Se a garra estiver habilitada, o usuário poder�
 virtual void EnableGripper(BOOL bEnable);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 no TRUE para habilitar a garra; FALSE para desabilitá-lo.
@@ -913,7 +913,7 @@ virtual BOOL FloatPane(
     bool bShow=true);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rectFloat*<br/>
 no Especifica as coordenadas de tela em que o painel flutuante é exibido.
@@ -943,7 +943,7 @@ virtual HRESULT get_accHelpTopic(
     long* pidTopic);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pszHelpFile*<br/>
 no Endereço de um BSTR que recebe o caminho completo do arquivo **WinHelp** associado ao objeto especificado, se houver.
@@ -970,7 +970,7 @@ A estrutura chama esse método para recuperar os filhos selecionados deste objet
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pvarChildren*<br/>
 no Recebe informações que identificam os filhos selecionados.
@@ -1011,7 +1011,7 @@ Uma combinação de bits ou de AFX_CBRS_ de sinalizadores.
 
 O valor de retorno é uma combinação dos seguintes valores possíveis.
 
-|Estilo|Descrição|
+|Estilo|DESCRIÇÃO|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|Torna a barra de controle flutuante.|
 |AFX_CBRS_AUTOHIDE|Habilita o modo ocultar automaticamente.|
@@ -1030,7 +1030,7 @@ virtual DWORD GetCurrentAlignment() const;
 
 O alinhamento atual da barra de controle. A tabela a seguir mostra os valores possíveis:
 
-|{1&gt;Valor&lt;1}|Alinhamento|
+|Valor|Alinhamento|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|Alinhamento à esquerda.|
 |CBRS_ALIGN_RIGHT|Alinhamento à direita.|
@@ -1119,7 +1119,7 @@ Retorna um identificador para o ícone do painel.
 virtual HICON GetPaneIcon(BOOL bBigIcon);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bBigIcon*<br/>
 no Especifica um ícone de 32 pixels por 32 pixels, se verdadeiro; Especifica um ícone de 16 pixels por 16 pixels, se for falso.
@@ -1180,7 +1180,7 @@ Retorna um ponteiro para a janela do mini-quadro pai.
 virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bNoAssert*<br/>
 no Se for TRUE, esse método não verificará se há ponteiros não válidos. Se você chamar esse método quando o aplicativo for encerrado, defina esse parâmetro como TRUE.
@@ -1215,7 +1215,7 @@ Retorna um ponteiro para a janela pai que está dentro de uma guia.
 CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hWndTab*<br/>
 fora Se o valor de retorno não for nulo, esse parâmetro conterá o identificador para a janela com guias pai.
@@ -1267,7 +1267,7 @@ BOOL InsertPane(
     BOOL bAfter = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pControlBar*<br/>
 no Um ponteiro para o painel a ser inserido.
@@ -1425,7 +1425,7 @@ BOOL IsPointNearDockSite(
     BOOL& bOuterEdge) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *empresas*<br/>
 no O ponto especificado.
@@ -1519,7 +1519,7 @@ virtual BOOL LoadState(
     UINT uiID=(UINT)-1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszProfileName*<br/>
 no Nome do perfil.
@@ -1549,7 +1549,7 @@ virtual HDWP MoveWindow(
     HDWP hdwp = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Rect*<br/>
 no Um retângulo que especifica o novo local e o tamanho do painel.
@@ -1576,7 +1576,7 @@ Chamado pelo Framework após a alteração do pai do painel.
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWndOldParent*<br/>
 no Um ponteiro para o pai anterior.
@@ -1597,7 +1597,7 @@ virtual void OnBeforeChangeParent(
     BOOL bDelay=FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWndNewParent*<br/>
 no Um ponteiro para uma nova janela pai.
@@ -1631,7 +1631,7 @@ Este método não é usado no momento.
 virtual void OnMovePaneDivider(CPaneDivider* /* unused */);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Não utilizado*<br/>
 no Não usado.
@@ -1646,7 +1646,7 @@ virtual void OnPaneContextMenu(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParentFrame*<br/>
 no Um ponteiro para o quadro pai.
@@ -1668,7 +1668,7 @@ Chamado pelo Framework quando um painel é removido de sua janela pai do mini-qu
 virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMiniFrame*<br/>
 no Um ponteiro para uma janela de mini-quadro a partir da qual o painel é removido.
@@ -1687,7 +1687,7 @@ A implementação padrão não faz nada.
 virtual BOOL OnSetAccData(long lVal);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lVal*<br/>
 no Não usado.
@@ -1710,7 +1710,7 @@ CBasePane* PaneFromPoint(
     CRuntimeClass* pRTCBarType = NULL) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *empresas*<br/>
 no Especifica o ponto, em coordenadas da tela, para verificar.
@@ -1749,7 +1749,7 @@ void RemovePaneFromDockManager(
     CBasePane* pBarReplacement = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 no Um ponteiro para um painel a ser removido.
@@ -1777,7 +1777,7 @@ virtual BOOL SaveState(
     UINT uiID=(UINT)-1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszProfileName*<br/>
 no Nome do perfil.
@@ -1804,7 +1804,7 @@ Seleciona a fonte padrão para um determinado contexto de dispositivo.
 CFont* SelectDefaultFont(CDC* pDC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um contexto de dispositivo.
@@ -1821,12 +1821,12 @@ Define o estilo da barra de controle.
 virtual void SetControlBarStyle(DWORD dwNewStyle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwNewStyle*<br/>
 no Uma combinação bit-a-OR dos seguintes valores possíveis.
 
-|Estilo|Descrição|
+|Estilo|DESCRIÇÃO|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|Torna a barra de controle flutuante.|
 |AFX_CBRS_AUTOHIDE|Habilita o modo ocultar automaticamente.|
@@ -1841,7 +1841,7 @@ Define o modo de encaixe para o painel.
 void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dockModeNew*<br/>
 no Especifica o novo modo de encaixe para o painel.
@@ -1862,7 +1862,7 @@ Define o alinhamento do painel.
 virtual void SetPaneAlignment(DWORD dwAlignment);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwAlignment*<br/>
 no Especifica o novo alinhamento.
@@ -1873,7 +1873,7 @@ Normalmente, a estrutura chama esse método quando um painel é encaixado de um 
 
 A tabela a seguir mostra os valores possíveis para *dwAlignment*:
 
-|{1&gt;Valor&lt;1}|Alinhamento|
+|Valor|Alinhamento|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|Alinhamento à esquerda.|
 |CBRS_ALIGN_RIGHT|Alinhamento à direita.|
@@ -1888,7 +1888,7 @@ Define o estilo do painel.
 virtual void SetPaneStyle(DWORD dwNewStyle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwNewStyle*<br/>
 no Especifica o novo estilo a ser definido.
@@ -1914,7 +1914,7 @@ virtual HDWP SetWindowPos(
     HDWP hdwp = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWndInsertAfter*<br/>
 no Identifica o objeto de `CWnd` que vem antes deste objeto `CWnd` na ordem Z. Para obter mais informações, consulte [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).
@@ -1956,7 +1956,7 @@ virtual void ShowPane(
     BOOL bActivate);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bShow*<br/>
 no Especifica se é para mostrar (TRUE) ou ocultar (FALSE) um painel.
@@ -1983,7 +1983,7 @@ virtual CSize StretchPane(
     BOOL bVert);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nLength*<br/>
 no O comprimento pelo qual estender o painel.
@@ -2003,7 +2003,7 @@ Remove o painel do site de encaixe, controle deslizante padrão ou janela de min
 virtual void UndockPane(BOOL bDelay=FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bDelay*<br/>
 Se for TRUE, o layout de encaixe não será recalculado imediatamente.
@@ -2014,7 +2014,7 @@ Chame esse método para manipular o estado do painel ou excluir o painel do layo
 
 Se você quiser continuar a usar esse painel, chame [CBasePane::D ockpane](#dockpane) ou [CBasePane:: FloatPane](#floatpane) antes de chamar esse método.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

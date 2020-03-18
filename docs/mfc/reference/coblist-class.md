@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
 ms.openlocfilehash: 2fc3a3643c675394de555f1411030e278bcee775
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855235"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416868"
 ---
 # <a name="coblist-class"></a>Classe CObList
 
@@ -71,13 +71,13 @@ class CObList : public CObject
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CObList::CObList](#coblist)|Constrói uma lista vazia para ponteiros de `CObject`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CObList:: AddHead](#addhead)|Adiciona um elemento (ou todos os elementos em outra lista) ao início da lista (cria um novo cabeçalho).|
 |[CObList:: addcaudal](#addtail)|Adiciona um elemento (ou todos os elementos em outra lista) à parte final da lista (cria uma nova cauda).|
@@ -128,7 +128,7 @@ Para obter mais informações sobre como usar `CObList`, consulte o artigo [cole
 
 `CObList`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxcoll. h
 
@@ -141,7 +141,7 @@ POSITION AddHead(CObject* newElement);
 void AddHead(CObList* pNewList);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *newElement*<br/>
 O ponteiro de `CObject` a ser adicionado a esta lista.
@@ -164,7 +164,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 
 A lista pode estar vazia antes da operação.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -187,7 +187,7 @@ POSITION AddTail(CObject* newElement);
 void AddTail(CObList* pNewList);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *newElement*<br/>
 O ponteiro de `CObject` a ser adicionado a esta lista.
@@ -210,7 +210,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**Posicionar addcaudal (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void Addcaudal (CPtrList** <strong>\*</strong> `pNewList` **);**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**Posicionar Addcaudal (Const CString &** `newElement` **);**<br /><br /> **Posição Addcaudal (LPCTSTR** `newElement` **);**<br /><br /> **void Addcaudal (cstringlist** <strong>\*</strong> `pNewList` **);**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -232,7 +232,7 @@ Constrói uma lista de ponteiros `CObject` vazia.
 CObList(INT_PTR nBlockSize = 10);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nBlockSize*<br/>
 A granularidade de alocação de memória para estender a lista.
@@ -248,7 +248,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**CPtrList (INT_PTR** `nBlockSize` **= 10);**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**CStringList (INT_PTR** `nBlockSize` **= 10);**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Abaixo está uma lista da classe derivada de `CObject``CAge` usada em todos os exemplos de coleção:
 
@@ -268,7 +268,7 @@ POSITION Find(
     POSITION startAfter = NULL) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *searchValue*<br/>
 O ponteiro de objeto a ser encontrado nesta lista.
@@ -291,7 +291,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**Localização da posição (void** <strong>\*</strong> `searchValue` **, posição** `startAfter` **= NULL) const;**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**Find de posição (LPCTSTR** `searchValue` **, Position** `startAfter` **= NULL) const;**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -305,7 +305,7 @@ Usa o valor de *nIndex* como um índice na lista.
 POSITION FindIndex(INT_PTR nIndex) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 O índice de base zero do elemento de lista a ser encontrado.
@@ -325,7 +325,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**Position FindIndex (INT_PTR** `nIndex` **) const;**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**Position FindIndex (INT_PTR** `nIndex` **) const;**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -340,7 +340,7 @@ CObject*& GetAt(POSITION position);
 const CObject*& GetAt(POSITION position) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *position*<br/>
 Um valor de posição retornado por uma chamada de função membro de `GetHeadPosition` ou `Find` anterior.
@@ -362,7 +362,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetAt (** *posição* da posição **) const;**<br /><br /> **void\*& GetAt (** *posição* da posição **);**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**Const CString & GetAt (** *posição* da posição **) const;**<br /><br /> **CString & GetAt (** *posição* da posição **);**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [FindIndex](#findindex).
 
@@ -385,7 +385,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetCount () const;**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetCount () const;**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -417,7 +417,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& constante GetHead (); void\*& GetHead ();**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**Const CString & GetHead () const; CString & GetHead ();**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -444,7 +444,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSIÇÃO GetHeadPosition () const;**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**POSIÇÃO GetHeadPosition () const;**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -459,7 +459,7 @@ CObject*& GetNext(POSITION& rPosition);
 const CObject* GetNext(POSITION& rPosition) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rPosition*<br/>
 Uma referência a um valor de posição retornado por uma `GetNext`anterior, `GetHeadPosition`ou outra chamada de função de membro.
@@ -488,7 +488,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|`void*& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const void* GetNext( POSITION&` `rPosition` `) const;`|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|`CString& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetNext( POSITION&` `rPosition` `) const;`|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -510,7 +510,7 @@ CObject*& GetPrev(POSITION& rPosition);
 const CObject* GetPrev(POSITION& rPosition) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rPosition*<br/>
 Uma referência a um valor de posição retornado por uma `GetPrev` anterior ou outra chamada de função de membro.
@@ -537,7 +537,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|`void*& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const void* GetPrev( POSITION&` `rPosition` `) const;`|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|`CString& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetPrev( POSITION&` `rPosition` `) const;`|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -573,7 +573,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetSize () const;**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetSize () const;**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -603,7 +603,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& getcauda () const; void\*& getcauda ();**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**Const CString & getcauda () const; CString & getcauda ();**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -628,7 +628,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSIÇÃO GetTailPosition () const;**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**POSIÇÃO GetTailPosition () const;**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -644,7 +644,7 @@ POSITION InsertAfter(
     CObject* newElement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *position*<br/>
 Um valor de posição retornado por uma chamada de função de membro `GetNext`, `GetPrev`ou `Find` anterior.
@@ -663,7 +663,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 
 Um valor de posição que é o mesmo que o parâmetro de *posição* .
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -688,7 +688,7 @@ POSITION InsertBefore(
     CObject* newElement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *position*<br/>
 Um valor de posição retornado por uma chamada de função de membro `GetNext`, `GetPrev`ou `Find` anterior.
@@ -707,7 +707,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**Posição InsertBefore (** *posição* da posição **, void** <strong>\*</strong> `newElement` **);**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**Posição InsertBefore (** *posição* da posição **, Const CString &** `newElement` **);**<br /><br /> **Posição InsertBefore (** *posição* da posição **, LPCTSTR** `newElement` **);**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -741,7 +741,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**BOOL IsEmpty () const;**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**BOOL IsEmpty () const;**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [RemoveAll](#removeall).
 
@@ -766,7 +766,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAll ();**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**void RemoveAll ();**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -780,7 +780,7 @@ Remove o elemento especificado desta lista.
 void RemoveAt(POSITION position);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *position*<br/>
 A posição do elemento a ser removido da lista.
@@ -798,7 +798,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAt (** *posição* da posição **);**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**void RemoveAt (** *posição* da posição **);**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Tenha cuidado ao remover um elemento durante uma iteração de lista. O exemplo a seguir mostra uma técnica de remoção que garante um valor de **posição** válido para [GetNext](#getnext).
 
@@ -837,7 +837,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveHead ();**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**CString RemoveHead ();**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -866,7 +866,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveTail ();**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**CString RemoveTail ();**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -882,7 +882,7 @@ void SetAt(
     CObject* newElement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pos*<br/>
 A posição do elemento a ser definido.
@@ -903,7 +903,7 @@ A tabela a seguir mostra outras funções de membro que são semelhantes a `CObL
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**void SetAt (POSITION** `pos` **, const CString &** `newElement` **);**|
 |[CStringlist](../../mfc/reference/cstringlist-class.md)|**void SetAt (posição** `pos` **, LPCTSTR** `newElement` **);**|
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte [CObList:: CObList](#coblist) para obter uma lista da classe `CAge`.
 
@@ -917,7 +917,7 @@ a CAge at $4D98 40
 a CAge at $4DB8 65
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

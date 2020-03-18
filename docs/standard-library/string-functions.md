@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::to_string [C++]
 - std::to_wstring [C++]
 ms.openlocfilehash: 828aeb975178850f5c0a7ea3b7e982bbadd6e7c4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856460"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419486"
 ---
 # <a name="ltstringgt-functions"></a>Funções &lt;de cadeia de caracteres&gt;
 
@@ -74,7 +74,7 @@ basic_istream<Allocator, Traits>& getline(
     basic_string<Allocator, Traits, Allocator>& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *is*\
 O fluxo de entrada do qual uma cadeia de caracteres será extraída.
@@ -171,7 +171,7 @@ double stod(
 ;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -200,7 +200,7 @@ float stof(
     size_t* idx = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -235,7 +235,7 @@ int stoi(
 
 O valor inteiro.
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -267,7 +267,7 @@ long stol(
     int base = 10);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -297,7 +297,7 @@ double stold(
     size_t* idx = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -328,7 +328,7 @@ long long stoll(
     int base = 10);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -360,7 +360,7 @@ unsigned long stoul(
     int base = 10);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -392,7 +392,7 @@ unsigned long long stoull(
     int base = 10);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -417,7 +417,7 @@ template <class Traits, class Allocator>
 void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Uma cadeia de caracteres cujos elementos devem ser trocado pelos de outra cadeia de caracteres.
@@ -480,7 +480,7 @@ string to_string(double Val);
 string to_string(long double Val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -528,7 +528,7 @@ wstring to_wstring(double Val);
 wstring to_wstring(long double Val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
@@ -560,6 +560,6 @@ A função converte `Val` em uma sequência de elementos armazenados em um objet
 
 A função retorna `wstring(Buf)`.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [\<string>](../standard-library/string.md)

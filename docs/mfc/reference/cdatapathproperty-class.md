@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
 ms.openlocfilehash: 89cb8ddcdd42643f52f755516e8845109163c57a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890818"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418688"
 ---
 # <a name="cdatapathproperty-class"></a>Classe CDataPathProperty
 
@@ -45,7 +45,7 @@ class CDataPathProperty : public CAsyncMonikerFile
 |----------|-----------------|
 |[CDataPathProperty::CDataPathProperty](#cdatapathproperty)|Constrói um objeto `CDataPathProperty`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|DESCRIÇÃO|
 |----------|-----------------|
@@ -95,7 +95,7 @@ CDataPathProperty(COleControl* pControl = NULL);
 CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pControl*<br/>
 Um ponteiro para o objeto de controle OLE a ser associado a este objeto de `CDataPathProperty`.
@@ -152,7 +152,7 @@ virtual BOOL Open(
 virtual BOOL Open(CFileException* pError = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pControl*<br/>
 Um ponteiro para o objeto de controle OLE a ser associado a este objeto de `CDataPathProperty`.
@@ -197,7 +197,7 @@ Chame essa função de membro para associar um controle OLE assíncrono ao objet
 void SetControl(COleControl* pControl);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pControl*<br/>
 Um ponteiro para o controle OLE assíncrono a ser associado à propriedade.
@@ -210,12 +210,12 @@ Chame essa função de membro para definir o nome do caminho da propriedade.
 void SetPath(LPCTSTR lpszPath);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszPath*<br/>
 Um caminho, que pode ser absoluto ou relativo, para a propriedade que está sendo carregada de forma assíncrona. `CDataPathProperty` usa URLs, não nomes de File. Se você quiser um objeto `CDataPathProperty` para um arquivo, preceda `file://` ao caminho.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Imagem de exemplo do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)<br/>

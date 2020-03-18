@@ -21,11 +21,11 @@ helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
 ms.openlocfilehash: 8fa4e7a035ded2e1a20dd278a5d54d40252e1958
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862595"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417925"
 ---
 # <a name="ccomobjectrootex-class"></a>Classe CComObjectRootEx
 
@@ -38,14 +38,14 @@ template<class ThreadModel>
 class CComObjectRootEx : public CComObjectRootBase
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *ThreadModel*<br/>
 A classe cujos métodos implementam o modelo de threading desejado. Você pode escolher explicitamente o modelo de Threading definindo *ThreadModel* como [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)ou [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Você pode aceitar o modelo de thread padrão do servidor definindo *ThreadModel* como [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) ou [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).
 
 ## <a name="members"></a>Membros
 
-### <a name="methods"></a>{1&gt;Métodos&lt;1}
+### <a name="methods"></a>Métodos
 
 |||
 |-|-|
@@ -95,7 +95,7 @@ Se o objeto for agregado, [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknow
 
 Se o objeto não for agregado, `IUnknown` será implementada por `CComObject` ou `CComPolyObject`. Nesse caso, as chamadas para `QueryInterface`, `AddRef`e `Release` são delegadas a `InternalQueryInterface`, `InternalAddRef`e `InternalRelease` de `CComObjectRootEx`para executar as operações reais.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlcom. h
 
@@ -133,7 +133,7 @@ Há vantagens em executar a inicialização em `FinalConstruct` em vez do constr
 
    No entanto, `FinalConstruct` é chamado imediatamente depois que a classe mais derivada é totalmente construída, permitindo que você chame funções virtuais e use a implementação de contagem de referência fornecida pela ATL.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Normalmente, substitua esse método na classe derivada de `CComObjectRootEx` para criar objetos agregados. Por exemplo:
 
@@ -193,7 +193,7 @@ static HRESULT InternalQueryInterface(
     void** ppvObject);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pThis*<br/>
 no Um ponteiro para o objeto que contém o mapa COM de interfaces expostas para `QueryInterface`.
@@ -296,7 +296,7 @@ Para cada classe listada no mapa de objetos, essa função é chamada uma vez qu
 static void WINAPI ObjectMain(bool bStarting);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bStarting*<br/>
 fora O valor será TRUE se a classe estiver sendo inicializada; caso contrário, FALSE.
@@ -307,7 +307,7 @@ O valor do parâmetro *bStarting* indica se o módulo está sendo inicializado o
 
 `ObjectMain` é chamado a partir do ponto de entrada da DLL, portanto, o tipo de operação que a função de ponto de entrada pode executar é restrito. Para obter mais informações sobre essas restrições, consulte [DLLs e C++ o comportamento da biblioteca de tempo de execução Visual](../../build/run-time-library-behavior.md) e [DllMain](/windows/win32/Dlls/dllmain).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]
 
@@ -331,7 +331,7 @@ Recupera um ponteiro indireto para a interface solicitada.
 HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *IID*<br/>
 no O GUID da interface que está sendo solicitada.
@@ -369,7 +369,7 @@ Para obter a propriedade, o thread deve chamar `Lock`. Cada chamada para `Lock` 
 
 Se o modelo de thread for de thread único, esse método não fará nada.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
 [Classe CComObject](../../atl/reference/ccomobject-class.md)<br/>

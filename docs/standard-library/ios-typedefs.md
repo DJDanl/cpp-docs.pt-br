@@ -10,11 +10,11 @@ f1_keywords:
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
 ms.openlocfilehash: 20bffbeb7720274302633c5dda9e6364c06d5b54
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856385"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418961"
 ---
 # <a name="ltiosgt-typedefs"></a>Typedefs &lt;ios&gt;
 
@@ -58,7 +58,7 @@ typedef fpos<mbstate_t> streampos;
 
 O tipo é um sinônimo de [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // ios_streampos.cpp
@@ -97,7 +97,7 @@ Indica o tamanho do fluxo.
 
 O tipo é um inteiro com sinal que descreve um objeto que pode armazenar uma contagem do número de elementos envolvidos em várias operações de fluxo. Sua representação tem pelo menos 16 bits. Ela não é necessariamente grande o suficiente para representar uma posição de byte arbitrária dentro de um fluxo.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Após compilar e executar o programa a seguir, examine o arquivo test.txt para ver o efeito da configuração `streamsize`.
 
@@ -141,7 +141,7 @@ typedef fpos<mbstate_t> wstreampos;
 
 O tipo é um sinônimo de [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // ios_wstreampos.cpp

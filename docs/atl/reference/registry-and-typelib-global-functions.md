@@ -18,11 +18,11 @@ helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
 ms.openlocfilehash: c5fdaceb47b6cd09dd9d66f26af1337a8dc6bbae
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863144"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417491"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Funções globais de registro e TypeLib
 
@@ -66,7 +66,7 @@ Use essa função para determinar se o aplicativo redireciona o acesso do regist
 ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pEnabled*<br/>
 fora VERDADEIRO indica que as informações do registro são direcionadas para o nó **HKCU** ; FALSE indica que o aplicativo grava informações de registro no nó padrão. O nó padrão é **HKEY_CLASSES_ROOT** (**HKCR**).
@@ -95,7 +95,7 @@ Cria a chave do Registro especificada.
 LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hKey*<br/>
 Um identificador para uma chave de registro aberta.
@@ -127,7 +127,7 @@ Exclui a chave do Registro especificada.
 LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hKey*<br/>
 Um identificador para uma chave de registro aberta.
@@ -156,7 +156,7 @@ Um auxiliar para registrar um Gerenciador de visualização.
 BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeName, LPCTSTR lpszFilterExt);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszCLSID*<br/>
 Especifica o CLSID do manipulador.
@@ -179,7 +179,7 @@ Essa função é chamada para registrar uma biblioteca de tipos.
 ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hInstTypeLib*<br/>
 O identificador para a instância do módulo.
@@ -209,7 +209,7 @@ Abre a chave do Registro especificada.
 LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hKey*<br/>
 Um identificador para uma chave de registro aberta.
@@ -241,7 +241,7 @@ Abre a chave do Registro especificada.
 LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM samDesired, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hKey*<br/>
 Um identificador para uma chave de registro aberta.
@@ -279,7 +279,7 @@ Um auxiliar para cancelar o registro de um Gerenciador de visualização.
 BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszCLSID*<br/>
 Especifica o CLSID do manipulador a ser cancelado.
@@ -298,7 +298,7 @@ Define se o aplicativo redireciona o acesso do registro para o nó **HKEY_CURREN
 ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 no VERDADEIRO indica que as informações do registro são direcionadas para o nó **HKCU** ; FALSE indica que o aplicativo grava informações de registro no nó padrão. O nó padrão é **HKEY_CLASSES_ROOT** (**HKCR**).
@@ -329,7 +329,7 @@ ATLAPI AtlUnRegisterTypeLib(
     LPCOLESTR lpszIndex);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hInstTypeLib*<br/>
 O identificador para a instância do módulo.
@@ -363,7 +363,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
     ITypeLib** ppTypeLib);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hInstTypeLib*<br/>
 Identificador para o módulo associado à biblioteca de tipos.
@@ -406,7 +406,7 @@ HRESULT RegistryDataExchange(
     void* pItem = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pT*<br/>
 Um ponteiro para o objeto atual.
@@ -437,7 +437,7 @@ Os valores de enumeração possíveis que indicam a operação que a função de
 
 **Cabeçalho:** atlbase. h
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Funções](atl-functions.md)<br/>
 [Macros de troca de dados de Registro](registry-data-exchange-macros.md)

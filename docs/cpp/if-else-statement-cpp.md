@@ -10,11 +10,11 @@ helpviewer_keywords:
 - else keyword [C++]
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 ms.openlocfilehash: 0e9de2d39e09e148c7e4f3ea82c3dadb173c2d0c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78884138"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418464"
 ---
 # <a name="if-else-statement-c"></a>Instrução if-else (C++)
 
@@ -64,7 +64,7 @@ else  // optional
 }
 ```
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 ```cpp
 // if_else_statement.cpp
@@ -115,7 +115,7 @@ int main()
 
 **Visual Studio 2017 versão 15,3 e posterior** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): uma instrução **If** também pode conter uma expressão que declara e Inicializa uma variável nomeada. Use essa forma da instrução If-quando a variável só for necessária dentro do escopo do bloco If.
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 ```cpp
 #include <iostream>
@@ -186,7 +186,7 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instruções de seleção](../cpp/selection-statements-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>

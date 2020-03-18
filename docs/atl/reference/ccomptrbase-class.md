@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
 ms.openlocfilehash: 740920225fc513a869b4a92344f87004831e4768
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864940"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417876"
 ---
 # <a name="ccomptrbase-class"></a>Classe CComPtrBase
 
@@ -35,7 +35,7 @@ template <class T>
 class CComPtrBase
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo de objeto a ser referenciado pelo ponteiro inteligente.
@@ -44,13 +44,13 @@ O tipo de objeto a ser referenciado pelo ponteiro inteligente.
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CComPtrBase:: ~ CComPtrBase](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CComPtrBase:: Advise](#advise)|Chame esse método para criar uma conexão entre o ponto de conexão do `CComPtrBase`e o coletor de um cliente.|
 |[CComPtrBase:: Attach](#attach)|Chame esse método para apropriar-se de um ponteiro existente.|
@@ -64,7 +64,7 @@ O tipo de objeto a ser referenciado pelo ponteiro inteligente.
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CComPtrBase:: Operator T *](#operator_t_star)|O operador cast.|
 |[CComPtrBase:: Operator!](#operator_not)|O operador NOT.|
@@ -76,7 +76,7 @@ O tipo de objeto a ser referenciado pelo ponteiro inteligente.
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CComPtrBase::p](#p)|A variável de membro de dados do ponteiro.|
 
@@ -84,7 +84,7 @@ O tipo de objeto a ser referenciado pelo ponteiro inteligente.
 
 Essa classe fornece a base para outros apontadores inteligentes que usam rotinas de gerenciamento de memória COM, como [CComQIPtr](../../atl/reference/ccomqiptr-class.md) e [CComPtr](../../atl/reference/ccomptr-class.md). As classes derivadas adicionam seus próprios construtores e operadores, mas contam com os métodos fornecidos pelo `CComPtrBase`.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlcomcli. h
 
@@ -99,7 +99,7 @@ HRESULT Advise(
     LPDWORD pdw) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pUnk*<br/>
 Um ponteiro para a `IUnknown`do cliente.
@@ -126,7 +126,7 @@ Chame esse método para apropriar-se de um ponteiro existente.
 void Attach(T* p2) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *P2*<br/>
 O objeto `CComPtrBase` se apropriará desse ponteiro.
@@ -163,7 +163,7 @@ HRESULT CoCreateInstance(
     DWORD dwClsContext = CLSCTX_ALL) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *szProgID*<br/>
 Ponteiro para um ProgID, usado para recuperar o CLSID.
@@ -195,7 +195,7 @@ Chame esse método para copiar o ponteiro de `CComPtrBase` para outra variável 
 HRESULT CopyTo(T** ppT) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Apresentação*<br/>
 Endereço da variável que receberá o ponteiro de `CComPtrBase`.
@@ -234,10 +234,10 @@ Chame esse método para verificar se o `IUnknown` especificado aponta para o mes
 bool IsEqualObject(IUnknown* pOther) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pOther*<br/>
-O `IUnknown *` de comparação.
+O `IUnknown *` a ser comparado.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -289,7 +289,7 @@ O operador de igualdade.
 bool operator== (T* pT) const throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pT*<br/>
 Um ponteiro para um objeto.
@@ -322,7 +322,7 @@ O operador menor que.
 bool operator<(T* pT) const throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pT*<br/>
 Um ponteiro para um objeto.
@@ -364,7 +364,7 @@ template <class Q> HRESULT QueryInterface(Q
 ** pp) const throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Q*<br/>
 O tipo de objeto cujo ponteiro de interface é necessário.
@@ -402,7 +402,7 @@ Chame esse método para definir o site do `CComPtrBase` objeto para a `IUnknown`
 HRESULT SetSite(IUnknown* punkParent) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *punkParent*<br/>
 Um ponteiro para a interface de `IUnknown` do pai.
@@ -415,6 +415,6 @@ Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 Esse método chama [AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral da classe](../../atl/atl-class-overview.md)

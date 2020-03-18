@@ -80,11 +80,11 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890834"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419101"
 ---
 # <a name="forward_list-class"></a>Classe forward_list
 
@@ -98,7 +98,7 @@ template <class Type,
 class forward_list
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 Tipo * \
 O tipo de dados do elemento a ser armazenado na forward_list.
@@ -119,7 +119,7 @@ Adições à sequência controlada podem ocorrer por chamadas para [forward_list
 
 ## <a name="members"></a>Membros
 
-### <a name="constructors"></a>{1&gt;Construtores&lt;1}
+### <a name="constructors"></a>Construtores
 
 |||
 |-|-|
@@ -140,7 +140,7 @@ Adições à sequência controlada podem ocorrer por chamadas para [forward_list
 |[size_type](#size_type)|Um tipo que representa a distância sem sinal entre dois elementos.|
 |[value_type](#value_type)|Um tipo que representa o tipo de elemento armazenado em uma lista de encaminhamento.|
 
-### <a name="functions"></a>{1&gt;Funções&lt;1}
+### <a name="functions"></a>Funções
 
 |||
 |-|-|
@@ -206,7 +206,7 @@ template <class InputIterator>
 void assign(InputIterator First, InputIterator Last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *primeiro*\
 O início do intervalo de substituição.
@@ -397,7 +397,7 @@ template <class T>
 iterator emplace_after(const_iterator Where, Type&& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Onde*\
 A posição na lista de encaminhamento de destino em que o novo elemento é criado.
@@ -422,7 +422,7 @@ template <class Type>
     void emplace_front(Type&& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor*\
 O elemento adicionado ao início da lista de encaminhamento.
@@ -467,7 +467,7 @@ iterator erase_after(const_iterator Where);
 iterator erase_after(const_iterator first, const_iterator last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Onde*\
 A posição na lista de encaminhamento de destino em que o novo elemento é apagado.
@@ -513,7 +513,7 @@ template <class InputIterator>
 forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Al*\
 A classe de alocador a ser usada com esse objeto.
@@ -590,7 +590,7 @@ template <class InputIterator>
     void insert_after(const_iterator Where, InputIterator First, InputIterator Last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Onde*\
 A posição na lista de encaminhamento de destino em que o primeiro elemento é inserido.
@@ -668,7 +668,7 @@ template <class Predicate>
     void merge(forward_list& right, Predicate comp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 A lista de encaminhamento a ser mesclada.
@@ -696,7 +696,7 @@ forward_list& operator=(initializer_list<Type> IList);
 forward_list& operator=(forward_list&& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 A lista de encaminhamento que está sendo copiada para a lista de encaminhamento.
@@ -743,7 +743,7 @@ void push_front(const Type& val);
 void push_front(Type&& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor*\
 O elemento adicionado ao início da lista de encaminhamento.
@@ -768,7 +768,7 @@ Apaga elementos em uma lista de encaminhamento que correspondem a um valor espec
 void remove(const Type& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor*\
 O valor que, se mantido por um elemento, resultará na remoção de tal elemento da lista.
@@ -788,7 +788,7 @@ template <class Predicate>
     void remove_if(Predicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Pred*
 O predicado unário que, se atendido por um elemento, resultará na exclusão de tal elemento da lista.
@@ -808,7 +808,7 @@ void resize(size_type _Newsize);
 void resize(size_type _Newsize, const Type& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Newsize*\
 O número de elementos na lista de encaminhamento redimensionada.
@@ -850,7 +850,7 @@ template <class Predicate>
 void sort(Predicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Pred*
 O predicado de ordenação.
@@ -890,12 +890,12 @@ void splice_after(
     const_iterator Last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Onde*\
 A posição na forward_list de destino após a qual o elemento deve ser inserido.
 
-*Source*\
+*Origem*\
 A forward_list de origem que deve ser inserida na forward_list de destino.
 
 \ *ITER*
@@ -919,7 +919,7 @@ Se a união no intervalo inserir elementos `N` e `&Source != this`, um objeto da
 
 Nenhum iterador, ponteiro ou referência que designa elementos unidos se torna inválido.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // forward_list_splice_after.cpp
@@ -1000,7 +1000,7 @@ Troca os elementos de duas listas de encaminhamento.
 void swap(forward_list& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 A lista de encaminhamento que fornece os elementos a serem trocados.
@@ -1019,7 +1019,7 @@ template <class BinaryPredicate>
 void unique(BinaryPredicate comp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *comp*\
 O predicado binário usado para comparar elementos sucessivos.
