@@ -1,35 +1,33 @@
 ---
 title: CWinApp e o Assistente de Aplicativo MFC
 ms.date: 11/04/2016
-f1_keywords:
-- CWinApp
 helpviewer_keywords:
 - application wizards [MFC], and CWinApp
 - CWinApp class [MFC], and MFC Application Wizard
 - MFC, wizards
 ms.assetid: f8ac0491-3302-4e46-981d-0790624eb8a2
-ms.openlocfilehash: cb45c8ffae15628b0b99a1ebcd962d88d845f83b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a46842d7b4d6a588da585d63e2ad56982bb0ff8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241570"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447032"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp e o Assistente de Aplicativo MFC
 
-Quando ele cria um aplicativo de esqueleto, o Assistente de aplicativo do MFC declara uma classe de aplicativo derivada de [CWinApp](../mfc/reference/cwinapp-class.md). O Assistente de aplicativo do MFC também gera um arquivo de implementação que contém os seguintes itens:
+Quando ele cria um aplicativo de esqueleto, o assistente de aplicativo MFC declara uma classe de aplicativo derivada de [CWinApp](../mfc/reference/cwinapp-class.md). O assistente de aplicativo do MFC também gera um arquivo de implementação que contém os seguintes itens:
 
-- Um mapa de mensagem para a classe de aplicativo.
+- Um mapa de mensagens para a classe de aplicativo.
 
-- Um construtor de classe vazia.
+- Um construtor de classe vazio.
 
-- Uma variável que declara um e apenas o objeto da classe.
+- Uma variável que declara o único objeto e somente da classe.
 
-- Uma implementação padrão de seu `InitInstance` função de membro.
+- Uma implementação padrão de sua função de membro do `InitInstance`.
 
-A classe do aplicativo é colocada no cabeçalho do projeto e arquivos de origem principal. Os nomes da classe e os arquivos criados são baseados no nome do projeto que você fornecer no Assistente de aplicativo MFC. A maneira mais fácil para exibir o código para essas classes é por meio [modo de exibição de classe](/visualstudio/ide/viewing-the-structure-of-code).
+A classe Application é colocada no cabeçalho do projeto e nos arquivos de origem principais. Os nomes da classe e dos arquivos criados são baseados no nome do projeto que você fornecer no assistente de aplicativo do MFC. A maneira mais fácil de exibir o código para essas classes é por meio de [modo de exibição de classe](/visualstudio/ide/viewing-the-structure-of-code).
 
-O mapa de mensagem fornecida e implementações padrão são adequadas para muitas finalidades, mas você pode modificá-los conforme necessário. Essas implementações mais interessantes é a `InitInstance` função de membro. Normalmente, você adicionará código para a implementação de esqueleto de `InitInstance`.
+As implementações padrão e o mapa de mensagens fornecidos são adequados para muitas finalidades, mas você pode modificá-las conforme necessário. O mais interessante dessas implementações é a função membro `InitInstance`. Normalmente, você adicionará código à implementação estrutural de `InitInstance`.
 
 ## <a name="see-also"></a>Consulte também
 

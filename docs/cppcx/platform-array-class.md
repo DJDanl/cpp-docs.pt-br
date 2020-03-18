@@ -3,18 +3,17 @@ title: Classe Platform::Array
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
-- VCCORLIB/Namespace not found::Platform
-- VCCORLIB/Namespace not found::Platform::Array Constructors
-- VCCORLIB/Namespace not found::Platform::Array::Value
+- VCCORLIB/Platform::Array
+- VCCORLIB/Platform::Array::Value
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 94166dfcb222d5cfece146e7ad67bb04d6ad06e9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 7d9fca4de954b5ba9c7cbcb3bdfce0fe3263dbd7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221830"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445803"
 ---
 # <a name="platformarray-class"></a>Classe Platform::Array
 
@@ -35,35 +34,35 @@ Platform::Array herda todos os métodos de [Platform::WriteOnlyArray Class](../c
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[Construtores de matriz](#ctor)|Inicializa uma matriz unidimensional e modificável de tipos especificados pelo parâmetro do modelo de classe, *T*.|
 
-### <a name="methods"></a>Métodos
+### <a name="methods"></a>{1&gt;Métodos&lt;1}
 
 Consulte [Platform::WriteOnlyArray Class](../cppcx/platform-writeonlyarray-class.md).
 
-### <a name="properties"></a>Propriedades
+### <a name="properties"></a>{1&gt;Propriedades&lt;1}
 
 |||
 |-|-|
-|[Array::Value](#value)|Recupera um identificador para a matriz atual.|
+|[Matriz:: valor](#value)|Recupera um identificador para a matriz atual.|
 
 ### <a name="remarks"></a>Comentários
 
 A classe da matriz é fechada e não pode ser herdada.
 
-O sistema de tipo de tempo de execução do Windows não suporta o conceito de matrizes denteadas e, portanto, você não pode passar um IVector < Platform:: array\<T >> como um parâmetro de método ou valor de retorno. Para passar uma matriz denteada ou uma sequência de sequências através da ABI, use `IVector<IVector<T>^>`.
+O sistema do tipo Windows Runtime não dá suporte ao conceito de matrizes denteadas e, portanto, você não pode passar um IVector < Platform:: array\<T > > como um valor de retorno ou parâmetro de método. Para passar uma matriz denteada ou uma sequência de sequências através da ABI, use `IVector<IVector<T>^>`.
 
-Para obter mais informações sobre quando e como usar Platform:: array, consulte [matriz e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Para obter mais informações sobre quando e como usar o platform:: Array, consulte [array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
-Essa classe é definida no cabeçalho vccorlib.h, que é incluído automaticamente pelo compilador. Ele é visível no IntelliSense mas não no Pesquisador de objetos porque ele não é um tipo público definido em Platform. winmd.
+Essa classe é definida no cabeçalho vccorlib.h, que é incluído automaticamente pelo compilador. Ele é visível no IntelliSense, mas não no Pesquisador de objetos porque não é um tipo público definido em Platform. winmd.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 Opção do compilador: **/ZW**
 
-## <a name="ctor"></a>  Construtores de matriz
+## <a name="ctor"></a>Construtores de matriz
 
 Inicializa uma matriz unidimensional e modificável de tipos especificados pelo parâmetro do modelo de classe, *T*.
 
@@ -87,9 +86,9 @@ Um ponteiro para uma matriz do tipo de dados `T` que é usado para inicializar e
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre como criar instâncias de Platform:: array, consulte [matriz e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Para obter mais informações sobre como criar instâncias de Platform:: Array, consulte [array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
-## <a name="get"></a>  Método Array:: Get
+## <a name="get"></a>Método Array:: Get
 
 Recupera uma referência ao elemento de matriz no local do índice especificado.
 
@@ -102,13 +101,13 @@ T& get(unsigned int index)  const;
 #### <a name="parameters"></a>Parâmetros
 
 *index*<br/>
-Um índice com base zero que identifica um elemento na matriz. O índice mínimo é 0 e o índice máximo é o valor especificado pela `size` parâmetro na [construtor Array](#ctor).
+Um índice com base zero que identifica um elemento na matriz. O índice mínimo é 0 e o índice máximo é o valor especificado pelo parâmetro `size` no construtor de [matriz](#ctor).
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O elemento de matriz especificado pelo parâmetro `index`.
 
-## <a name="value"></a>  Propriedade array:: Value
+## <a name="value"></a>Propriedade Array:: Value
 
 Recupera um identificador para a matriz atual.
 
@@ -118,7 +117,7 @@ Recupera um identificador para a matriz atual.
 property Array^ Value;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um identificador para a matriz atual.
 

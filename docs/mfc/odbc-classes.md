@@ -1,47 +1,45 @@
 ---
 title: Classes ODBC
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.data
 helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-ms.openlocfilehash: 75e022ea3e5de4a57f0ef2b1e3f312654c2889ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4cfa0d7afa197de7b65b6a0bd6b881a09534ef6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237769"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447700"
 ---
 # <a name="odbc-classes"></a>Classes ODBC
 
-Essas classes funcionam com as outras classes de estrutura de aplicativo para fornecer acesso fácil a uma ampla variedade de bancos de dados para o qual os drivers de conectividade de banco de dados aberto (ODBC) estão disponíveis.
+Essas classes funcionam com as outras classes de estrutura de aplicativo para fornecer acesso fácil a uma ampla variedade de bancos de dados para os quais estão disponíveis drivers ODBC (Open Database Connectivity).
 
-Programas que usam bancos de dados ODBC terá pelo menos um `CDatabase` objeto e um `CRecordset` objeto.
+Os programas que usam bancos de dados ODBC terão, pelo menos, um objeto `CDatabase` e um objeto `CRecordset`.
 
 [CDatabase](../mfc/reference/cdatabase-class.md)<br/>
-Encapsula uma conexão a uma fonte de dados, por meio do qual você pode operar na fonte de dados.
+Encapsula uma conexão com uma fonte de dados, por meio da qual você pode operar na fonte de dados.
 
 [CRecordset](../mfc/reference/crecordset-class.md)<br/>
-Encapsula um conjunto de registros selecionados de uma fonte de dados. Conjuntos de registros habilitar a rolagem de registro em registro, atualização de registros (adicionando, editando e excluindo registros), a seleção de qualificação com um filtro, classificação da seleção e parametrizar a seleção com informações obtidas ou calculados em tempo de execução.
+Encapsula um conjunto de registros selecionados de uma fonte de dados. Os conjuntos de registros habilitam a rolagem do registro para registro, Atualizando registros (adicionando, editando e excluindo registros), qualificando a seleção com um filtro, classificando a seleção e parametrizando a seleção com informações obtidas ou calculadas em tempo de execução.
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Fornece um formulário de exibição diretamente conectada a um objeto de conjunto de registros. Os dados de caixa de diálogo (DDX) mecanismo troca dados entre o conjunto de registros e os controles de exibição de registro do exchange. Como todos os modos de exibição de formulário, uma exibição de registro com base em um recurso de modelo de caixa de diálogo. Exibições de registro também dão suporte a movimentação de registro para registro no conjunto de registros, Atualizando registros e fechando o conjunto de registros associado quando o modo de exibição do registro é fechado.
+Fornece uma exibição de formulário diretamente conectada a um objeto Recordset. O mecanismo de intercâmbio de dados de caixa de diálogo (campo DDX) troca dados entre o conjunto de registros e os controles da exibição de registro. Como todas as exibições de formulário, uma exibição de registro é baseada em um recurso de modelo de caixa de diálogo. As exibições de registro também dão suporte à movimentação de registro para registro no conjunto de registros, à atualização de registros e ao fechamento do conjunto de registros associado quando a exibição de registro é fechada.
 
 [CDBException](../mfc/reference/cdbexception-class.md)<br/>
-Uma exceção resultante de falhas no acesso a dados do processamento. Essa classe tem a mesma finalidade como outras classes de exceção no mecanismo de tratamento de exceção da biblioteca de classes.
+Uma exceção resultante de falhas no processamento de acesso a dados. Essa classe tem a mesma finalidade que outras classes de exceção no mecanismo de tratamento de exceções da biblioteca de classes.
 
 [CFieldExchange](../mfc/reference/cfieldexchange-class.md)<br/>
-Fornece informações de contexto para dar suporte à troca de campos de registro (RFX), que troca dados entre os membros de dados de campo e membros de dados de parâmetro de um objeto de conjunto de registros e as colunas da tabela correspondente na fonte de dados. Semelhante à classe [CDataExchange](../mfc/reference/cdataexchange-class.md), que é usado da mesma forma para troca de dados de caixa de diálogo (DDX).
+Fornece informações de contexto para dar suporte ao suporte RFX (Record Field Exchange), que troca dados entre os membros de dados de campo e os membros de dados de parâmetro de um objeto Recordset e as colunas de tabela correspondentes na fonte de dados. Análogo à classe [CDataExchange](../mfc/reference/cdataexchange-class.md), que é usada da mesma forma para a troca de dados de caixa de diálogo (campo DDX).
 
 ## <a name="related-classes"></a>Classes relacionadas
 
 [CLongBinary](../mfc/reference/clongbinary-class.md)<br/>
-Encapsula um identificador para o armazenamento para um objeto binário grande (BLOB), como um bitmap. `CLongBinary` objetos são usados para gerenciar objetos de dados grandes armazenados nas tabelas de banco de dados.
+Encapsula um identificador para o armazenamento de um objeto binário grande (BLOB), como um bitmap. `CLongBinary` objetos são usados para gerenciar grandes objetos de dados armazenados em tabelas de banco de dado.
 
 [CDBVariant](../mfc/reference/cdbvariant-class.md)<br/>
-permite que você armazene um valor sem se preocupar sobre o tipo de dados do valor. `CDBVariant` Controla o tipo de dados do valor atual, que é armazenado em uma união.
+Permite que você armazene um valor sem se preocupar com o tipo de dados do valor. `CDBVariant` controla o tipo de dados do valor atual, que é armazenado em uma União.
 
 ## <a name="see-also"></a>Consulte também
 

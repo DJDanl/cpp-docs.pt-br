@@ -2,19 +2,19 @@
 title: Erro do compilador C2579
 ms.date: 11/04/2016
 f1_keywords:
-- C2759
+- C2579
 helpviewer_keywords:
-- C2759
+- C2579
 ms.assetid: ab090a8d-5462-4046-a1a6-8007e354dedb
-ms.openlocfilehash: 243bdec7dc51af501a24aeb9b2c49d266476f030
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 905a0b1841246ca4a714ed99635e332b62538f2e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367961"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446121"
 ---
 # <a name="compiler-error-c2579"></a>Erro do compilador C2579
 
-não é possível resolver o tipo 'type' (deslocamento). Espera-se no arquivo
+Não é possível resolver o tipo ' type ' (deslocamento). É esperado no arquivo
 
 C2579 sempre segue C4691. Para obter mais informações, consulte [aviso do compilador (nível 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md).

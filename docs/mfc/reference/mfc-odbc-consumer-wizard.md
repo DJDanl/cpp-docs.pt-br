@@ -4,12 +4,12 @@ ms.date: 08/29/2019
 helpviewer_keywords:
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: 84fdc0d180f5b1b0f2e64c3597cb474611ad3914
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: fd7e8df6692889914af2dd060ac42ed4ca3ebb8b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177439"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446431"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Assistente de consumidor ODBC MFC
 
@@ -23,7 +23,7 @@ Esse assistente não está disponível no Visual Studio 2019 e versões posterio
 
 Este assistente configura uma classe de conjunto de registros ODBC e as associações de dados necessárias para acessar a fonte de dados especificada.
 
-## <a name="uielement-list"></a>Lista UIElement
+## <a name="uielement-list"></a>Lista de UIElement
 
 - **Fonte de Dados**
 
@@ -35,7 +35,7 @@ Este assistente configura uma classe de conjunto de registros ODBC e as associa�
 
      A caixa **examinar** especifica o diretório no qual serão selecionados os arquivos a serem usados como fontes de dados. O padrão é \Program Files\Common Files\ODBC\Data sources. As fontes de dados de arquivo existentes (arquivos. DSN) aparecem na caixa de listagem principal. Você pode configurar as fontes de dados antecipadamente usando a guia **DSN de arquivo** no administrador de [fonte de dados ODBC](/sql/odbc/admin/odbc-data-source-administrator)ou criar novas usando essa caixa de diálogo.
 
-     Para criar uma nova fonte de dados de arquivo nessa caixa de diálogo `New` , clique para especificar um nome de DSN; a caixa de diálogo **criar nova fonte de dados** é exibida. Na caixa de diálogo **criar nova fonte de dados** , selecione um driver apropriado e `Next`clique em **procurar**e selecione o nome do arquivo a ser usado como uma fonte de dados (você precisa selecionar "todos os arquivos" para exibir arquivos não DSN, como arquivos. xls); clique em e, em seguida, clique em **concluir.** `Next` (Se você selecionou um arquivo não DSN, obterá uma caixa de diálogo específica do driver, como "configuração ODBC do Microsoft Excel", que converterá o arquivo em um DSN.)
+     Para criar uma nova fonte de dados de arquivo nessa caixa de diálogo, clique em `New` para especificar um nome de DSN; a caixa de diálogo **criar nova fonte de dados** é exibida. Na caixa de diálogo **criar nova fonte de dados** , selecione um driver apropriado e clique em `Next`; clique em **procurar**e selecione o nome do arquivo a ser usado como uma fonte de dados (você precisa selecionar "todos os arquivos" para exibir arquivos não DSN, como arquivos. xls); clique em `Next`e em **concluir**. (Se você selecionou um arquivo não DSN, obterá uma caixa de diálogo específica do driver, como "configuração ODBC do Microsoft Excel", que converterá o arquivo em um DSN.)
 
      > [!NOTE]
      > Você também pode criar uma nova fonte de dados de arquivo com antecedência usando o administrador de fonte de dados ODBC. No menu **Iniciar** , selecione **configurações**, **painel de controle**, **Ferramentas administrativas**, **fontes de dados (ODBC)** e, em seguida, **administrador de fonte de dados ODBC**.
@@ -54,7 +54,7 @@ Este assistente configura uma classe de conjunto de registros ODBC e as associa�
 
 - **Class**
 
-      The name of the consumer class, based by default on the name of the file or machine data source that you selected.
+   O nome da classe de consumidor, com base por padrão no nome da fonte de dados de arquivo ou computador que você selecionou.
 
 - **Arquivo .h**
 

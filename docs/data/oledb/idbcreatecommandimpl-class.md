@@ -6,22 +6,21 @@ f1_keywords:
 - IDBCreateCommandImpl
 - ATL.IDBCreateCommandImpl
 - IDBCreateCommandImpl.CreateCommand
-- CreateCommand
 - IDBCreateCommandImpl::CreateCommand
 helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 7450d91cd5e5383b55e2ebb391fe5f1190cbed2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27ca1fd20e8f358d936789da695611d96a6e7aa1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408908"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446132"
 ---
 # <a name="idbcreatecommandimpl-class"></a>Classe IDBCreateCommandImpl
 
-Fornece uma implementação de [IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85)) interface.
+Fornece uma implementação da interface [IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85)) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,14 +33,14 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
-O objeto de sessão é derivado de `IDBCreateCommandImpl`.
+O objeto de sessão derivado de `IDBCreateCommandImpl`.
 
 *CommandClass*<br/>
 Sua classe de comando.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** atldb.h
+**Cabeçalho:** Atldb. h
 
 ## <a name="members"></a>Membros
 
@@ -55,7 +54,7 @@ Sua classe de comando.
 
 Uma interface opcional no objeto de sessão para obter um novo comando.
 
-## <a name="createcommand"></a> IDBCreateCommandImpl::CreateCommand
+## <a name="createcommand"></a>IDBCreateCommandImpl:: CreateCommand
 
 Cria um novo comando e retorna a interface solicitada.
 
@@ -69,15 +68,15 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [idbcreatecommand:: CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) na *referência do programador do OLE DB*.
+Consulte [IDBCreateCommand:: CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) na *referência do programador de OLE DB*.
 
-Alguns parâmetros correspondem aos *referência do programador DB OLE* parâmetros de nomes diferentes, que são descritos em `IDBCreateCommand::CreateCommand`:
+Alguns parâmetros correspondem a parâmetros de *referência do programador OLE DB* de nomes diferentes, que são descritos em `IDBCreateCommand::CreateCommand`:
 
-|Parâmetros de modelo de banco de dados OLE|*Referência do OLE DB Programmer* parâmetros|
+|OLE DB parâmetros de modelo|Parâmetros *de referência do programador de OLE DB*|
 |--------------------------------|------------------------------------------------|
 |*ppvCommand*|*ppCommand*|
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

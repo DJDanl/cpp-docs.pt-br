@@ -20,7 +20,7 @@ f1_keywords:
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetTextHeight
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetWICFactory
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetWriteFactory
-- AFXGLOBALS/AFX_GLOBAL_DATA::IsD2DInitialized
+- AFXGLOBALS/AFX_GLOBAL_DATA::InitD2D
 - AFXGLOBALS/AFX_GLOBAL_DATA::Is32BitIcons
 - AFXGLOBALS/AFX_GLOBAL_DATA::IsD2DInitialized
 - AFXGLOBALS/AFX_GLOBAL_DATA::IsDwmCompositionEnabled
@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: dda3056cbed18ef93e09b52cd9d0a6b00e1db177
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 66cfb66e091d487ea9d3f563b7b6bbb9ca1ea928
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420585"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447329"
 ---
 # <a name="afx_global_data-structure"></a>Estrutura AFX_GLOBAL_DATA
 
@@ -76,14 +76,14 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|DESCRIÇÃO|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`|Constrói uma estrutura de `AFX_GLOBAL_DATA`.|
 |`AFX_GLOBAL_DATA::~AFX_GLOBAL_DATA`|Destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|DESCRIÇÃO|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA:: CleanUp](#cleanup)|Libera recursos que são alocados pela estrutura, como pincéis, fontes e DLLs.|
 |[AFX_GLOBAL_DATA::D 2D1MakeRotateMatrix](#d2d1makerotatematrix)|Cria uma transformação de rotação que gira por um ângulo especificado em torno de um ponto especificado.|
@@ -100,7 +100,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA:: GetTextHeight](#gettextheight)|Recupera a altura dos caracteres de texto na fonte atual.|
 |[AFX_GLOBAL_DATA:: GetWICFactory](#getwicfactory)|Retorna um ponteiro para a interface de `IWICImagingFactory` que é armazenada nos dados globais. Se a interface não for inicializada, ela será criada e terá os parâmetros padrão.|
 |[AFX_GLOBAL_DATA:: GetWriteFactory](#getwritefactory)|Retorna um ponteiro para a interface de `IDWriteFactory` que é armazenada nos dados globais. Se a interface não for inicializada, ela será criada e terá os parâmetros padrão.|
-|[AFX_GLOBAL_DATA:: IsD2DInitialized](#isd2dinitialized)|Inicializa as fábricas `D2D`, `DirectWrite`e `WIC`. Chame esse método antes que a janela principal seja inicializada.|
+|[AFX_GLOBAL_DATA:: InitD2D](#initd2d)|Inicializa as fábricas `D2D`, `DirectWrite`e `WIC`. Chame esse método antes que a janela principal seja inicializada.|
 |[AFX_GLOBAL_DATA:: Is32BitIcons](#is32biticons)|Indica se há suporte para ícones predefinidos de 32 bits.|
 |[AFX_GLOBAL_DATA:: IsD2DInitialized](#isd2dinitialized)|Determina se o `D2D` foi inicializado.|
 |[AFX_GLOBAL_DATA:: IsDwmCompositionEnabled](#isdwmcompositionenabled)|Fornece uma maneira simples de chamar o método [DwmIsCompositionEnabled](/windows/win32/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) do Windows.|
@@ -117,15 +117,15 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|Nome|DESCRIÇÃO|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA:: EnableAccessibilitySupport](#enableaccessibilitysupport)|Habilita ou desabilita o suporte ao Microsoft Acessibilidade Ativa. Acessibilidade Ativa fornece métodos confiáveis para expor informações sobre elementos da interface do usuário.|
 |[AFX_GLOBAL_DATA:: IsAccessibilitySupport](#isaccessibilitysupport)|Indica se o suporte ao Microsoft Acessibilidade Ativa está habilitado.|
 |[AFX_GLOBAL_DATA:: IsWindowsLayerSupportAvailable](#iswindowslayersupportavailable)|Indica se o sistema operacional dá suporte a janelas em camadas.|
 
-### <a name="data-members"></a>Membros de dados
+### <a name="data-members"></a>Membros de Dados
 
-|Nome|DESCRIÇÃO|
+|{1&gt;Nome&lt;1}|Descrição|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA:: bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|Indica se o sistema operacional atual dá suporte à mistura alfa.|
 |[AFX_GLOBAL_DATA:: bIsWindows7](#biswindows7)|Indica se o aplicativo está sendo executado no sistema operacional Windows 7 ou superior|
@@ -150,7 +150,7 @@ A maioria dos dados na estrutura de `AFX_GLOBAL_DATA` é inicializada quando seu
 
 `AFX_GLOBAL_DATA`
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** afxglobals. h
 
@@ -185,7 +185,7 @@ HRESULT D2D1MakeRotateMatrix(
     D2D1_MATRIX_3X2_F *matrix);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *firmeza*<br/>
 O ângulo da rotação no sentido horário, em graus.
@@ -211,7 +211,7 @@ BOOL DrawParentBackground(
     LPRECT lpRect = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pWnd*<br/>
 no Ponteiro para a janela de um controle.
@@ -243,7 +243,7 @@ BOOL DrawTextOnGlass(
     COLORREF clrText = (COLORREF)-1);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hTheme*<br/>
 no Manipule os dados de tema de uma janela ou NULL. A estrutura usará o tema especificado para desenhar o texto se esse parâmetro não for nulo e houver suporte para temas. Caso contrário, a estrutura não usa um tema para desenhar o texto.
@@ -292,7 +292,7 @@ Habilita ou desabilita o suporte ao Microsoft Acessibilidade Ativa.
 void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bEnable*<br/>
 no TRUE para habilitar o suporte de acessibilidade; FALSE para desabilitar o suporte de acessibilidade. O valor padrão é TRUE.
@@ -315,7 +315,7 @@ BOOL ExcludeTag(
     BOOL bIsCharsList = FALSE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *strBuffer*<br/>
 no Um buffer de texto.
@@ -327,7 +327,7 @@ no O nome de um par de marcas XML de abertura e fechamento.
 fora Quando esse método retorna, o parâmetro *strTag* contém o texto que está entre as marcas XML de abertura e fechamento que são nomeadas pelo parâmetro *lpszTag* . Qualquer espaço em branco à esquerda ou à direita é cortado do resultado.
 
 *bIsCharsList*<br/>
-no TRUE para converter símbolos de caracteres de escape no parâmetro *strTag* em caracteres de escape reais; FALSE não para executar a conversão. O valor padrão é FALSE. Para obter mais informações, consulte Comentários.
+no TRUE para converter símbolos de caracteres de escape no parâmetro *strTag* em caracteres de escape reais; FALSE não para executar a conversão. O valor padrão é FALSE. Para obter mais informações, consulte Remarks.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -357,14 +357,14 @@ Recupera a cor atual do elemento da interface do usuário especificado.
 COLORREF GetColor(int nColor);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nColor*<br/>
 no Um valor que especifica um elemento de interface do usuário cuja cor é recuperada. Para obter uma lista de valores válidos, consulte o parâmetro *nIndex* do método [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor) .
 
 ### <a name="return-value"></a>Valor retornado
 
-O valor de cor RGB do elemento de interface do usuário especificado. Para obter mais informações, consulte Comentários.
+O valor de cor RGB do elemento de interface do usuário especificado. Para obter mais informações, consulte Remarks.
 
 ### <a name="remarks"></a>Comentários
 
@@ -402,7 +402,7 @@ Recupera as métricas associadas à área não cliente de janelas não minimizad
 BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *info*<br/>
 [entrada, saída] Uma estrutura [NONCLIENTMETRICS](/windows/win32/api/winuser/ns-winuser-nonclientmetricsw) que contém as métricas escalonáveis associadas à área não cliente de uma janela não minimizada.
@@ -419,7 +419,7 @@ Recupera a altura dos caracteres de texto na fonte atual.
 int GetTextHeight(BOOL bHorz = TRUE);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bHorz*<br/>
 no TRUE para recuperar a altura dos caracteres quando o texto é executado horizontalmente; FALSE para recuperar a altura dos caracteres quando o texto é executado verticalmente. O valor padrão é TRUE.
@@ -462,7 +462,7 @@ BOOL InitD2D(
     DWRITE_FACTORY_TYPE writeFactoryType = DWRITE_FACTORY_TYPE_SHARED);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *d2dFactoryType*<br/>
 O modelo de Threading da fábrica D2D e os recursos que ele cria.
@@ -535,6 +535,7 @@ TRUE se a composição de [Gerenciador de janelas da área de trabalho](/windows
 ## <a name="ishighcontrastmode"></a>AFX_GLOBAL_DATA:: IsHighContrastMode
 
 Indica se as imagens são exibidas no momento em alto contraste.
+
 ```
 BOOL IsHighContrastMode() const;
 ```
@@ -691,7 +692,7 @@ Registra a classe de janela do MFC especificada.
 CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpszClassNamePrefix*<br/>
 no O nome da classe de janela a ser registrada.
@@ -732,7 +733,7 @@ BOOL SetLayeredAttrib(
     DWORD dwFlags);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *HWND*<br/>
 no Identificador para a janela em camadas.
@@ -760,7 +761,7 @@ BOOL SetMenuFont(
     BOOL bHorz);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpLogFont*<br/>
 no Ponteiro para uma estrutura que contém os atributos de uma fonte.
@@ -876,7 +877,7 @@ HRESULT ShellCreateItemFromParsingName(
     void **ppv);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pszPath*<br/>
 no Um ponteiro para um nome de exibição.
@@ -894,7 +895,7 @@ fora Quando essa função retorna, contém o ponteiro de interface solicitado em
 
 Retorna S_OK se obtiver êxito; caso contrário, será um valor de erro.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Gráfico da hierarquia](../hierarchy-chart.md)<br/>
 [Estruturas, estilos, retornos de chamada e mapas de mensagem](structures-styles-callbacks-and-message-maps.md)<br/>

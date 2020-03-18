@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856436"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421313"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributos C++ para COM e .NET
 
@@ -82,7 +82,7 @@ Além disso, o vinculador Visual C++ produzirá todas as informações de atribu
 
 C++os atributos podem ser descritos usando quatro campos básicos: o destino ao qual eles podem ser aplicados (**aplica-se a**), se eles forem repetíveis ou não (**repetíveis**), a presença necessária de outros atributos (**atributos obrigatórios**) e incompatibilidade com outros atributos (**atributos inválidos**). Esses campos são listados em uma tabela que acompanha o tópico de referência de cada atributo. Cada um desses campos é descrito abaixo.
 
-### <a name="applies-to"></a>Aplica-se a
+### <a name="applies-to"></a>Aplica-se A
 
 Este campo descreve os diferentes C++ elementos de linguagem que são alvos legais para o atributo especificado. Por exemplo, se um atributo especificar "Class" no campo **aplica-se a** , isso indica que o atributo só pode ser aplicado a uma C++ classe legal. Se o atributo for aplicado a uma função de membro de uma classe, ocorrerá um erro de sintaxe.
 
@@ -92,7 +92,7 @@ Para obter mais informações, consulte [atributos por uso](attributes-by-usage.
 
 Este campo informa se o atributo pode ser aplicado repetidamente ao mesmo destino. A maioria dos atributos não é repetível.
 
-### <a name="required-attributes"></a>Atributos Necessários
+### <a name="required-attributes"></a>Atributos necessários.
 
 Este campo lista outros atributos que precisam estar presentes (ou seja, aplicados ao mesmo destino) para que o atributo especificado funcione corretamente. Não é comum que um atributo tenha qualquer entrada para esse campo.
 

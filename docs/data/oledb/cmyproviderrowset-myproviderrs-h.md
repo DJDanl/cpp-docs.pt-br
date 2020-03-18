@@ -3,24 +3,22 @@ title: CCustomRowset (CustomRS.H)
 ms.date: 10/22/2018
 f1_keywords:
 - cmyproviderrowset
-- myproviderrs.h
 - ccustomrowset
-- customrs.h
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderRowset class in MyProviderRS.H
 - CCustomRowset class in CustomRS.H
 ms.assetid: 7ba1a124-3842-40eb-a36b-302190a1af3a
-ms.openlocfilehash: 9f9dcb97ecd6b5f37f1af2187abf8b5612eedce3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c84ff359bdbb39f281928fa0135edd40b1f7d20
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230657"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446084"
 ---
 # <a name="ccustomrowset-customrsh"></a>CCustomRowset (CustomRS.H)
 
-O assistente gera uma entrada para o objeto de conjunto de linhas. Nesse caso, ele é chamado `CCustomRowset`. O `CCustomRowset` classe herda de uma classe de provedor do OLE DB chamada `CRowsetImpl`, que implementa todas as interfaces necessárias para o objeto de conjunto de linhas. O código a seguir mostra a cadeia de herança para `CRowsetImpl`:
+O assistente gera uma entrada para o objeto de conjunto de linhas. Nesse caso, ele é chamado de `CCustomRowset`. A classe `CCustomRowset` herda de uma classe de provedor de OLE DB chamada `CRowsetImpl`, que implementa todas as interfaces necessárias para o objeto Rowset. O código a seguir mostra a cadeia de herança para `CRowsetImpl`:
 
 ```cpp
 template <class T, class Storage, class CreatorClass, 
@@ -30,13 +28,13 @@ class CMyRowsetImpl:
       CSimpleRow, IRowsetLocateImpl< T >>
 ```
 
-`CRowsetImpl` também usa o `IAccessor` e `IColumnsInfo` interfaces. Ele usa essas interfaces para campos de saída nas tabelas. A classe também fornece uma implementação para `IRowsetIdentity`, que permite que o consumidor determinar se duas linhas são os mesmos. O `IRowsetInfo` interface implementa propriedades para o objeto de conjunto de linhas. O `IConvertType` interface permite que o provedor para resolver as diferenças entre tipos de dados solicitados pelo consumidor quanto os usados pelo provedor.
+`CRowsetImpl` também usa as interfaces `IAccessor` e `IColumnsInfo`. Ele usa essas interfaces para campos de saída em tabelas. A classe também fornece uma implementação para `IRowsetIdentity`, que permite que o consumidor determine se duas linhas são iguais. A interface `IRowsetInfo` implementa propriedades para o objeto Rowset. A interface `IConvertType` permite que o provedor resolva as diferenças entre os tipos de dados solicitados pelo consumidor e os usados pelo provedor.
 
-O `IRowset` interface realmente lida com a recuperação de dados. Primeiro, o consumidor chama um método chamado `GetNextRows` para retornar um identificador para uma linha, conhecida como um `HROW`. O consumidor, em seguida, chama `IRowset::GetData` com que `HROW` para recuperar os dados solicitados.
+A interface `IRowset` realmente manipula a recuperação de dados. O consumidor primeiro chama um método chamado `GetNextRows` para retornar um identificador a uma linha, conhecido como um `HROW`. Em seguida, o consumidor chama `IRowset::GetData` com esse `HROW` para recuperar os dados solicitados.
 
-`CRowsetImpl` também pega vários parâmetros de modelo. Esses parâmetros permitem que você determine como o `CRowsetImpl` classe lida com os dados. O `ArrayType` argumento permite que você determine qual mecanismo de armazenamento é usado para armazenar os dados da linha. O *RowClass* parâmetro especifica qual classe contém um `HROW`.
+`CRowsetImpl` também usa vários parâmetros de modelo. Esses parâmetros permitem que você determine como a classe de `CRowsetImpl` lida com os dados. O argumento `ArrayType` permite que você determine qual mecanismo de armazenamento é usado para armazenar os dados de linha. O parâmetro *maclass* especifica qual classe contém um `HROW`.
 
-O *RowsetInterface* parâmetro permite que você também usar o `IRowsetLocate` ou `IRowsetScroll` interface. O `IRowsetLocate` e `IRowsetScroll` interfaces ambos herdam `IRowset`. Portanto, os modelos de provedor do OLE DB devem fornecer um tratamento especial para essas interfaces. Se você quiser usar qualquer uma dessas interfaces, você precisará usar esse parâmetro.
+O parâmetro *RowsetInterface* permite que você também use a interface `IRowsetLocate` ou `IRowsetScroll`. As interfaces `IRowsetLocate` e `IRowsetScroll` herdam de `IRowset`. Portanto, os modelos de provedor de OLE DB devem fornecer tratamento especial para essas interfaces. Se você quiser usar qualquer uma dessas interfaces, precisará usar esse parâmetro.
 
 ## <a name="see-also"></a>Consulte também
 

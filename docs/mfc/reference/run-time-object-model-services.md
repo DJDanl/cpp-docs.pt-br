@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: f8b891467d91d0c945b6c59c90dbc49fd7cbcb30
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: a4e471decd07cb2025b833513403b64f43105d0c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421341"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446445"
 ---
 # <a name="run-time-object-model-services"></a>Serviços do modelo de objeto de tempo de execução
 
@@ -64,7 +64,7 @@ Determina se a biblioteca de controles comuns implementa a API especificada.
 AFX_COMCTL32_IF_EXISTS(  proc );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *proc*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome da função ou especifica o valor ordinal da função. Se esse parâmetro for um valor ordinal, ele deverá estar na palavra de ordem inferior; a palavra de ordem superior deve ser zero. Esse parâmetro deve estar em Unicode.
@@ -73,7 +73,7 @@ Ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome da f
 
 Use esta macro para determinar se a biblioteca de controles comuns da função especificada pelo *proc* (em vez de chamar [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress).
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 afxcomctl32.h, afxcomctl32.inl
 
@@ -87,7 +87,7 @@ Determina se a biblioteca de controles comuns implementa a API especificada (est
 AFX_COMCTL32_IF_EXISTS2( proc );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *proc*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome da função ou especifica o valor ordinal da função. Se esse parâmetro for um valor ordinal, ele deverá estar na palavra de ordem inferior; a palavra de ordem superior deve ser zero. Esse parâmetro deve estar em Unicode.
@@ -96,7 +96,7 @@ Ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome da f
 
 Use esta macro para determinar se a biblioteca de controles comuns da função especificada pelo *proc* (em vez de chamar [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress). Esta macro é a versão Unicode do AFX_COMCTL32_IF_EXISTS.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 afxcomctl32.h, afxcomctl32.inl
 
@@ -108,7 +108,7 @@ Adiciona a capacidade de acessar informações em tempo de execução sobre a cl
 DECLARE_DYNAMIC(class_name)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *class_name*<br/>
 O nome real da classe.
@@ -123,11 +123,11 @@ Se DECLARE_DYNAMIC for incluído na declaração de classe, IMPLEMENT_DYNAMIC de
 
 Para obter mais informações sobre a macro DECLARE_DYNAMIC, consulte os [Tópicos da classe CObject](../../mfc/using-cobject.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte o exemplo para [IMPLEMENT_DYNAMIC](#implement_dynamic).
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** AFX. h
 
@@ -139,7 +139,7 @@ Permite que objetos de classes derivadas de `CObject`sejam criados dinamicamente
 DECLARE_DYNCREATE(class_name)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *class_name*<br/>
 O nome real da classe.
@@ -157,11 +157,11 @@ Para obter mais informações sobre a macro DECLARE_DYNCREATE, consulte os [Tóp
 > [!NOTE]
 >  A macro DECLARE_DYNCREATE inclui toda a funcionalidade do DECLARE_DYNAMIC.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte o exemplo para [IMPLEMENT_DYNCREATE](#implement_dyncreate).
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** AFX. h
 
@@ -175,7 +175,7 @@ Declara as funções de membro `GetUserTypeNameID` e `GetMiscStatus` da classe d
 DECLARE_OLECTLTYPE( class_name )
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *class_name*<br/>
 O nome da classe de controle.
@@ -184,7 +184,7 @@ O nome da classe de controle.
 
 `GetUserTypeNameID` e `GetMiscStatus` são funções virtuais puras, declaradas em `COleControl`. Como essas funções são virtuais puras, elas devem ser substituídas em sua classe de controle. Além de DECLARE_OLECTLTYPE, você deve adicionar a macro IMPLEMENT_OLECTLTYPE à sua declaração de classe de controle.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** afxctl. h
 
@@ -198,7 +198,7 @@ Declara que o controle OLE fornece uma lista de páginas de propriedades para ex
 DECLARE_PROPPAGEIDS( class_name )
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *class_name*<br/>
 O nome da classe de controle que possui as páginas de propriedades.
@@ -209,7 +209,7 @@ Use a macro `DECLARE_PROPPAGEIDS` no final da declaração de sua classe. Em seg
 
 Para obter mais informações sobre páginas de propriedades, consulte o artigo [controles ActiveX: páginas de propriedades](../mfc-activex-controls-property-pages.md).
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** afxctl. h
 
@@ -221,7 +221,7 @@ Gera o C++ código de cabeçalho necessário para uma classe derivada de `CObjec
 DECLARE_SERIAL(class_name)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *class_name*<br/>
 O nome real da classe.
@@ -242,11 +242,11 @@ Você pode usar a macro AFX_API para exportar automaticamente o `CArchive` opera
 
 Para obter mais informações sobre a macro DECLARE_SERIAL, consulte os [Tópicos da classe CObject](../../mfc/using-cobject.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 [!code-cpp[NVC_MFCCObjectSample#21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** AFX. h
 
@@ -258,7 +258,7 @@ Gera o C++ código necessário para uma classe derivada de `CObject`dinâmica co
 IMPLEMENT_DYNAMIC(class_name, base_class_name)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *class_name*<br/>
 O nome real da classe.
@@ -272,13 +272,13 @@ Use a macro IMPLEMENT_DYNAMIC em um módulo. cpp e, em seguida, vincule o códig
 
 Para obter mais informações, consulte [CObject Class topics](../../mfc/using-cobject.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 [!code-cpp[NVC_MFCCObjectSample#2](../../mfc/codesnippet/cpp/run-time-object-model-services_3.h)]
 
 [!code-cpp[NVC_MFCCObjectSample#3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** AFX. h
 
@@ -290,7 +290,7 @@ Permite que objetos de classes derivadas de `CObject`sejam criados dinamicamente
 IMPLEMENT_DYNCREATE(class_name, base_class_name)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *class_name*<br/>
 O nome real da classe.
@@ -308,13 +308,13 @@ Se DECLARE_DYNCREATE for incluído na declaração de classe, IMPLEMENT_DYNCREAT
 
 Observe que essa definição de macro invocará o construtor padrão para sua classe. Se um construtor não trivial for explicitamente implementado pela classe, também deverá implementar explicitamente o construtor padrão. O construtor padrão pode ser adicionado às seções de membro **privado** ou **protegido** da classe para impedir que ele seja chamado de fora da implementação da classe.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 [!code-cpp[NVC_MFCCObjectSample#22](../../mfc/codesnippet/cpp/run-time-object-model-services_5.h)]
 
 [!code-cpp[NVC_MFCCObjectSample#23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** AFX. h
 
@@ -329,7 +329,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *class_name*<br/>
 O nome real da classe.
@@ -340,11 +340,11 @@ O nome do objeto exposto a outros aplicativos (colocados entre aspas).
 *nFlags*<br/>
 Contém um ou mais dos seguintes sinalizadores:
 
-   - `afxRegInsertable` permite que o controle apareça na caixa de diálogo Inserir objeto para objetos OLE.
-   - `afxRegApartmentThreading` define o modelo de threading no registro como ThreadingModel = Apartment.
-   - `afxRegFreeThreading` define o modelo de threading no registro como ThreadingModel = Free.
+- `afxRegInsertable` permite que o controle apareça na caixa de diálogo Inserir objeto para objetos OLE.
+- `afxRegApartmentThreading` define o modelo de threading no registro como ThreadingModel = Apartment.
+- `afxRegFreeThreading` define o modelo de threading no registro como ThreadingModel = Free.
 
-         You can combine the two flags `afxRegApartmentThreading` and `afxRegFreeThreading` to set ThreadingModel=Both. See [InprocServer32](/windows/win32/com/inprocserver32) in the Windows SDK for more information on threading model registration.
+Você pode combinar os dois sinalizadores `afxRegApartmentThreading` e `afxRegFreeThreading` para definir ThreadingModel = both. Consulte [InprocServer32](/windows/win32/com/inprocserver32) no SDK do Windows para obter mais informações sobre o registro do modelo de Threading.
 
 os componentes *l*, *W1*, *W2*, *B1*, *B2*, *B3*, *B4*, *B5*, *B6*, *B7*e *B8* do CLSID da classe.
 
@@ -357,7 +357,7 @@ O nome externo é o identificador exposto a outros aplicativos. Os aplicativos c
 
 A ID da classe OLE é um identificador exclusivo de 128 bits para o objeto. Consiste em um **longo**, duas **palavras**s e oito **bytes**s, conforme representado por *l*, *W1*, *W2*e *B1* a *B8* na descrição da sintaxe. O assistente de aplicativo e os assistentes de código criam IDs de classe OLE exclusivas para você, conforme necessário.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** AFXDISP. h
 
@@ -371,7 +371,7 @@ Implementa as funções de membro `GetUserTypeNameID` e `GetMiscStatus` da class
 DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *class_name*<br/>
 O nome da classe de controle.
@@ -391,7 +391,7 @@ A função membro `GetUserTypeNameID` retorna a cadeia de caracteres de recurso 
 > [!NOTE]
 >  As configurações padrão usadas pelo ControlWizard ActiveX são: OLEMISC_ACTIVATEWHENVISIBLE, OLEMISC_SETCLIENTSITEFIRST, OLEMISC_INSIDEOUT, OLEMISC_CANTLINKINSIDE e OLEMISC_RECOMPOSEONRESIZE.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** afxctl. h
 
@@ -403,7 +403,7 @@ Gera o C++ código necessário para uma classe derivada de `CObject`dinâmica co
 IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *class_name*<br/>
 O nome real da classe.
@@ -424,11 +424,11 @@ Você pode usar a macro AFX_API para exportar automaticamente o `CArchive` opera
 
 Para obter mais informações, consulte os [Tópicos da classe CObject](../../mfc/using-cobject.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 [!code-cpp[NVC_MFCCObjectSample#24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** AFX. h
 
@@ -440,7 +440,7 @@ Obtém a estrutura de classe de tempo de execução do nome de C++ uma classe.
 RUNTIME_CLASS(class_name)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *class_name*<br/>
 O nome real da classe (não entre aspas).
@@ -451,11 +451,11 @@ RUNTIME_CLASS retorna um ponteiro para uma estrutura [CRuntimeClass](../../mfc/r
 
 Para obter mais informações, consulte [CObject Class topics](../../mfc/using-cobject.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 [!code-cpp[NVC_MFCCObjectSample#25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** AFX. h
 
@@ -467,7 +467,7 @@ Permite que objetos de classes derivadas de `CCmdTarget`sejam criados por meio d
 DECLARE_OLECREATE(class_name)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *class_name*<br/>
 O nome real da classe.
@@ -480,7 +480,7 @@ Adicione a macro DECLARE_OLECREATE no módulo. h da classe e, em seguida, inclua
 
 Se DECLARE_OLECREATE for incluído na declaração de classe, IMPLEMENT_OLECREATE deverá ser incluído na implementação da classe. Uma declaração de classe usando DECLARE_OLECREATE também deve usar DECLARE_DYNCREATE ou DECLARE_SERIAL.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho**: AFXDISP. h
 
@@ -492,7 +492,7 @@ Essa macro ou [IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags) deve apare
 IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *class_name*<br/>
 O nome real da classe.
@@ -511,11 +511,11 @@ O nome externo é o identificador exposto a outros aplicativos. Os aplicativos c
 
 A ID da classe OLE é um identificador exclusivo de 128 bits para o objeto. Consiste em um **longo**, duas **palavras**s e oito **bytes**s, conforme representado por *l*, *W1*, *W2*e *B1* a *B8* na descrição da sintaxe. O assistente de aplicativo e os assistentes de código criam IDs de classe OLE exclusivas para você, conforme necessário.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho**: AFXDISP. h
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Macros e globais](mfc-macros-and-globals.md)<br/>
 [Isolamento da biblioteca de controles comuns MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>

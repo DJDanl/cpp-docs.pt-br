@@ -1,9 +1,6 @@
 ---
 title: Executando como um membro do grupo de usuários
 ms.date: 11/04/2016
-f1_keywords:
-- PRJ0050
-- VCD0047
 helpviewer_keywords:
 - Users Group [C++]
 - security [C++], Users Group
@@ -12,12 +9,12 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-ms.openlocfilehash: dc06e2dc58d28c34a646ccffc0be90368b3297f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 117ef426950fc9aff5ae41e894f0d7ae898369cd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411286"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445432"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Executando como um membro do grupo de usuários
 
@@ -29,11 +26,11 @@ A execução como administrador torna o sistema vulnerável a vários tipos de a
 
 ## <a name="non-administrator-user-groups"></a>Grupos de usuários não administradores
 
-As contas de usuário do Windows que os desenvolvedores normalmente usam devem ser adicionadas aos grupos Usuários ou Usuários Avançados. Os desenvolvedores também devem ser adicionados ao grupo Depuração. Ser um membro do grupo Usuários permite que você execute tarefas rotineiras, inclusive a execução de programas e o acesso a sites da Internet, sem expor o computador a riscos desnecessários. Como membro do grupo Usuários Avançados, você também pode executar tarefas como instalação de aplicativos, instalação de impressoras e a maioria das operações do Painel de Controle. Se você precisa executar tarefas administrativas, como atualizar o sistema operacional ou configurar parâmetros de sistema, faça logon em uma conta de administrador apenas pelo tempo necessário para executar a tarefa administrativa. Como alternativa, o Windows **runas** comando pode ser usado para iniciar aplicativos específicos com acesso administrativo.
+As contas de usuário do Windows que os desenvolvedores normalmente usam devem ser adicionadas aos grupos Usuários ou Usuários Avançados. Os desenvolvedores também devem ser adicionados ao grupo Depuração. Ser um membro do grupo Usuários permite que você execute tarefas rotineiras, inclusive a execução de programas e o acesso a sites da Internet, sem expor o computador a riscos desnecessários. Como membro do grupo Usuários Avançados, você também pode executar tarefas como instalação de aplicativos, instalação de impressoras e a maioria das operações do Painel de Controle. Se você precisa executar tarefas administrativas, como atualizar o sistema operacional ou configurar parâmetros de sistema, faça logon em uma conta de administrador apenas pelo tempo necessário para executar a tarefa administrativa. Como alternativa, o comando **runas** do Windows pode ser usado para iniciar aplicativos específicos com acesso administrativo.
 
 ## <a name="exposing-customers-to-security-risks"></a>Exposição dos clientes a riscos de segurança
 
-Não fazer parte do grupo Administradores é particularmente importante para desenvolvedores porque, além de proteger os computadores de desenvolvimento, impede que os desenvolvedores escrevam inadvertidamente um código que exija que os clientes ingressem no grupo Administradores para executar os aplicativos que você desenvolve. Se código que requer acesso de administrador é introduzido durante o desenvolvimento, ele falhará em tempo de execução, alertando para o fato de que o aplicativo exige agora que os clientes executem como administradores.
+Não fazer parte do grupo Administradores é particularmente importante para desenvolvedores porque, além de proteger os computadores de desenvolvimento, impede que os desenvolvedores escrevam inadvertidamente um código que exija que os clientes ingressem no grupo Administradores para executar os aplicativos que você desenvolve. Se código que requer acesso de administrador é introduzido durante o desenvolvimento, ele falhará em runtime, alertando para o fato de que o aplicativo exige agora que os clientes executem como administradores.
 
 ## <a name="code-that-requires-administrator-privileges"></a>Código que exige privilégios de administrador
 

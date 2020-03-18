@@ -1,24 +1,22 @@
 ---
 title: Classes de desenho e impressão
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.drawing
 helpviewer_keywords:
 - output [MFC], graphical classes
 - drawing [MFC], classes
 - printing classes [MFC]
 - graphics [MFC], graphical output classes
 ms.assetid: 2781c599-a038-462a-98ca-634b07ee22b0
-ms.openlocfilehash: 70645d5bb4ab3d1a168e164b2bd721f2d2479742
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64bcb958b2ba896000cdfc9de78fb8a38e8462c5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408219"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445636"
 ---
 # <a name="drawing-and-printing-classes"></a>Classes de desenho e impressão
 
-No Windows, toda a saída gráfica é desenhada em uma área de desenho virtual chamada um contexto de dispositivo (DC). O MFC fornece classes para encapsular os vários tipos de controladores de domínio, bem como encapsulamentos Windows ferramentas de desenho como pincéis, bitmaps, paletas e canetas.
+No Windows, toda a saída gráfica é desenhada em uma área de desenho virtual chamada DC (contexto de dispositivo). O MFC fornece classes para encapsular os vários tipos de DCs, bem como encapsulamentos para ferramentas de desenho do Windows, como bitmaps, pincéis, paletas e canetas.
 
 ## <a name="see-also"></a>Consulte também
 

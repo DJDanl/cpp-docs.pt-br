@@ -6,18 +6,18 @@ helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: 65a1b11578565e08f0be7aa04f96d3da4cbfbf7a
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 06cb922aff4079f29b93874787a8b79ef99d75c3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988127"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446308"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>Como encapsular classe nativa a ser usada por C#
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>Como: encapsular classe nativa para uso por C\#
 
 Este exemplo mostra como encapsular uma classe C++ nativa para que ela possa ser consumida pelo código C#criado no ou outra linguagem .net.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // wrap_native_class_for_mgd_consumption.cpp

@@ -5,7 +5,6 @@ ms.topic: reference
 f1_keywords:
 - cliext::list
 - cliext::list::assign
-- cliext::list::assign
 - cliext::list::back
 - cliext::list::back_item
 - cliext::list::begin
@@ -109,18 +108,18 @@ helpviewer_keywords:
 - operator>(list) member [STL/CLR]
 - operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-ms.openlocfilehash: 8350e8b7036731cf3e09b9ce26278b2a656d80be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c8fdab696960b0f3bfbe26ab91b1e1493204e9b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364604"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446257"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 
-A classe de modelo descreve um objeto que controla uma sequência de comprimento variado de elementos que tem acesso bidirecional. Você pode usar o contêiner `list` para gerenciar uma sequência de elementos como uma lista vinculada de bidirecional de nós, cada armazenar um elemento.
+A classe de modelo descreve um objeto que controla uma sequência de comprimento variável de elementos que tem acesso bidirecional. Você usa o contêiner `list` para gerenciar uma sequência de elementos como uma lista vinculada bidirecional de nós, cada um armazenando um elemento.
 
-Na descrição abaixo, `GValue` é o mesmo que *valor* , a menos que o último é um tipo ref, nesse caso, ele é `Value^`.
+Na descrição abaixo, `GValue` é igual ao *valor* , a menos que o último seja um tipo ref; nesse caso, ele é `Value^`.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -142,13 +141,13 @@ template<typename Value>
 *Valor*<br/>
 O tipo de um elemento na sequência controlada.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** \<cliext/lista >
 
 **Namespace:** cliext
 
-## <a name="declarations"></a>Declarações
+## <a name="declarations"></a>{1&gt;{2&gt;Declarações&lt;2}&lt;1}
 
 |Definição do tipo|Descrição|
 |---------------------|-----------------|
@@ -158,7 +157,7 @@ O tipo de um elemento na sequência controlada.
 |[list::difference_type (STL/CLR)](#difference_type)|O tipo de uma distância com sinal entre dois elementos.|
 |[list::generic_container (STL/CLR)](#generic_container)|O tipo da interface genérica para o contêiner.|
 |[list::generic_iterator (STL/CLR)](#generic_iterator)|O tipo de um iterador para a interface genérica para o contêiner.|
-|[list::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|O tipo de um iterador inverso para a interface genérica para o contêiner.|
+|[list::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|O tipo de um iterador reverso para a interface genérica para o contêiner.|
 |[list::generic_value (STL/CLR)](#generic_value)|O tipo de um elemento para a interface genérica para o contêiner.|
 |[list::iterator (STL/CLR)](#iterator)|O tipo de um iterador para a sequência controlada.|
 |[list::reference (STL/CLR)](#reference)|O tipo de uma referência para um elemento.|
@@ -176,16 +175,16 @@ O tipo de um elemento na sequência controlada.
 |[list::end (STL/CLR)](#end)|Designa o fim da sequência controlada.|
 |[list::erase (STL/CLR)](#erase)|Remove os elementos em posições especificadas.|
 |[list::front (STL/CLR)](#front)|Acessa o primeiro elemento.|
-|[list::insert (STL/CLR)](#insert)|Adiciona os elementos em uma posição especificada.|
+|[list::insert (STL/CLR)](#insert)|Adiciona elementos em uma posição especificada.|
 |[list::list (STL/CLR)](#list)|Constrói um objeto contêiner.|
 |[list::merge (STL/CLR)](#merge)|Mescla duas sequências controladas ordenadas.|
 |[list::pop_back (STL/CLR)](#pop_back)|Remove o último elemento.|
 |[list::pop_front (STL/CLR)](#pop_front)|Remove o primeiro elemento.|
 |[list::push_back (STL/CLR)](#push_back)|Adiciona um novo último elemento.|
-|[list::push_front (STL/CLR)](#push_front)|Adiciona um novo elemento primeiro.|
+|[list::push_front (STL/CLR)](#push_front)|Adiciona um novo primeiro elemento.|
 |[list::rbegin (STL/CLR)](#rbegin)|Designa o início da sequência controlada invertida.|
 |[list::remove (STL/CLR)](#remove)|Remove um elemento com um valor especificado.|
-|[list::remove_if (STL/CLR)](#remove_if)|Remove elementos que passarem um teste especificado.|
+|[list::remove_if (STL/CLR)](#remove_if)|Remove os elementos que passam um teste especificado.|
 |[list::rend (STL/CLR)](#rend)|Designa o fim da sequência controlada invertida.|
 |[list::resize (STL/CLR)](#resize)|Altera o número de elementos.|
 |[list::reverse (STL/CLR)](#reverse)|Inverte a sequência controlada.|
@@ -193,7 +192,7 @@ O tipo de um elemento na sequência controlada.
 |[list::sort (STL/CLR)](#sort)|Ordena a sequência controlada.|
 |[list::splice (STL/CLR)](#splice)|Costura novamente links entre os nós.|
 |[list::swap (STL/CLR)](#swap)|Alterna o conteúdo de dois contêineres.|
-|[list::to_array (STL/CLR)](#to_array)|Copia a sequência controlada para uma nova matriz.|
+|[list::to_array (STL/CLR)](#to_array)|Copia a sequência controlada em uma nova matriz.|
 |[list::unique (STL/CLR)](#unique)|Remove elementos adjacentes que são passados a um teste especificado.|
 
 |Propriedade|Descrição|
@@ -204,39 +203,39 @@ O tipo de um elemento na sequência controlada.
 |Operador|Descrição|
 |--------------|-----------------|
 |[list::operator= (STL/CLR)](#op_as)|Substitui a sequência controlada.|
-|[operator!= (list) (STL/CLR)](#op_neq)|Determina se um `list` objeto não é igual a outro `list` objeto.|
-|[operator< (list) (STL/CLR)](#op_lt)|Determina se um `list` objeto é menor que outro `list` objeto.|
-|[operator<= (list) (STL/CLR)](#op_lteq)|Determina se um `list` objeto é menor ou igual a outro `list` objeto.|
-|[operator== (list) (STL/CLR)](#op_eq)|Determina se um `list` objeto é igual a outro `list` objeto.|
-|[operator> (list) (STL/CLR)](#op_gt)|Determina se um `list` objeto é maior que outro `list` objeto.|
-|[operator>= (list) (STL/CLR)](#op_gteq)|Determina se um `list` objeto é maior que ou igual a outro `list` objeto.|
+|[operator!= (list) (STL/CLR)](#op_neq)|Determina se um objeto `list` não é igual a outro objeto `list`.|
+|[operator< (list) (STL/CLR)](#op_lt)|Determina se um objeto de `list` é menor que outro objeto de `list`.|
+|[operator<= (list) (STL/CLR)](#op_lteq)|Determina se um objeto de `list` é menor ou igual a outro objeto de `list`.|
+|[operator== (list) (STL/CLR)](#op_eq)|Determina se um objeto de `list` é igual a outro objeto de `list`.|
+|[operator> (list) (STL/CLR)](#op_gt)|Determina se um objeto de `list` é maior que outro objeto de `list`.|
+|[operator>= (list) (STL/CLR)](#op_gteq)|Determina se um objeto de `list` é maior ou igual a outro objeto de `list`.|
 
 ## <a name="interfaces"></a>Interfaces
 
 |Interface|Descrição|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplicar um objeto.|
-|<xref:System.Collections.IEnumerable>|Por meio de elementos de sequência.|
-|<xref:System.Collections.ICollection>|Manter o grupo de elementos.|
-|<xref:System.Collections.Generic.IEnumerable%601>|Por meio de elementos com tipo de sequência.|
-|<xref:System.Collections.Generic.ICollection%601>|Manter o grupo de elementos com tipo.|
-|IList\<valor >|Manter o contêiner genérico.|
+|<xref:System.Collections.IEnumerable>|Sequência por meio de elementos.|
+|<xref:System.Collections.ICollection>|Manter grupo de elementos.|
+|<xref:System.Collections.Generic.IEnumerable%601>|Sequenciar por meio de elementos tipados.|
+|<xref:System.Collections.Generic.ICollection%601>|Manter grupo de elementos tipados.|
+|IList\<valor >|Manter contêiner genérico.|
 
 ## <a name="remarks"></a>Comentários
 
-O objeto aloca e libera armazenamento para a sequência que controla como nós individuais em uma lista de links bidirecional. Ele reorganiza elementos alterando os links entre nós nunca copiando o conteúdo de um nó para outro. Isso significa que você pode inserir e remover elementos livremente sem prejudicar os elementos restantes. Portanto, uma lista é um bom candidato para o contêiner subjacente para a classe de modelo [queue (STL/CLR)](../dotnet/queue-stl-clr.md) ou a classe de modelo [stack (STL/CLR)](../dotnet/stack-stl-clr.md).
+O objeto aloca e libera o armazenamento para a sequência que ele controla como nós individuais em uma lista de links bidirecionais. Ele reorganiza os elementos alterando os links entre os nós, nunca copiando o conteúdo de um nó para outro. Isso significa que você pode inserir e remover elementos livremente sem perturbar os elementos restantes. Portanto, uma lista é um bom candidato para o contêiner subjacente para fila de classe de modelo [(STL/CLR)](../dotnet/queue-stl-clr.md) ou [pilha de classes de modelo (STL/CLR)](../dotnet/stack-stl-clr.md).
 
-Um `list` objeto dá suporte a iteradores bidirecionais, que significa que você pode passar para elementos adjacentes, dado um iterador que designa um elemento na sequência controlada. Um nó de cabeçalho especial corresponde ao iterador retornado por [List:: end (STL/CLR)](../dotnet/list-end-stl-clr.md)`()`. Você pode diminuir este iterador para alcançar o último elemento na sequência controlada, se estiver presente. Você pode incrementar um iterador de lista para alcançar o nó principal e, em seguida, compare igual a `end()`. Mas você não é possível desreferenciar o iterador retornado por `end()`.
+Um objeto `list` dá suporte a iteradores bidirecionais, o que significa que você pode passar para elementos adjacentes, dado um iterador que designa um elemento na sequência controlada. Um nó de cabeçalho especial corresponde ao iterador retornado por [list:: End (STL/CLR)](../dotnet/list-end-stl-clr.md)`()`. Você pode decrementar esse iterador para alcançar o último elemento na sequência controlada, se presente. Você pode incrementar um iterador de lista para alcançar o nó principal e, em seguida, ele irá comparar igual a `end()`. Mas não é possível desreferenciar o iterador retornado pelo `end()`.
 
-Observe que você não pode se referir a um elemento de lista diretamente, dado sua posição numérica – o que exige um iterador de acesso aleatório. Portanto, é uma lista *não* pode ser usado como contêiner para a classe de modelo subjacente [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).
+Observe que você não pode fazer referência a um elemento de lista diretamente, dada sua posição numérica, que requer um iterador de acesso aleatório. Portanto, uma lista *não* pode ser usada como o contêiner subjacente para a classe de modelo [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).
 
-Um iterador de lista armazena um identificador para o seu nó lista associada, que por sua vez armazena um identificador para o contêiner associado. Você pode usar iteradores somente com seus objetos de contêiner associado. Um iterador de lista permanece válido desde que seu nó da lista associada é associada a alguma lista. Além disso, um iterador válido é dereferencable – você pode usá-lo para acessar ou alterar o valor do elemento que ele designa – desde que não é igual a `end()`.
+Um iterador de lista armazena um identificador para seu nó de lista associado que, por sua vez, armazena um identificador para seu contêiner associado. Você pode usar iteradores somente com seus objetos de contêiner associados. Um iterador de lista permanece válido, desde que seu nó de lista associado esteja associado a alguma lista. Além disso, um iterador válido é dereferencable--você pode usá-lo para acessar ou alterar o valor do elemento que ele designa, desde que ele não seja igual a `end()`.
 
-Apagando ou remover um elemento chama o destruidor para seu valor armazenado. Destruir o contêiner apaga todos os elementos. Portanto, um contêiner cujo tipo de elemento é uma classe ref garante que nenhum elemento sobreviver além do contêiner. No entanto, observe que um contêiner de identificadores não *não* destruir seus elementos.
+Apagar ou remover um elemento chama o destruidor para seu valor armazenado. A destruição do contêiner apaga todos os elementos. Assim, um contêiner cujo tipo de elemento é uma ref class garante que nenhum elemento sobreviver além o contêiner. No entanto, observe que um contêiner de identificadores *não* destrói seus elementos.
 
 ## <a name="members"></a>Membros
 
-## <a name="assign"></a> list::assign (STL/CLR)
+## <a name="assign"></a>lista:: assign (STL/CLR)
 
 Substitui todos os elementos.
 
@@ -258,23 +257,23 @@ Número de elementos a inserir.
 Início do intervalo a ser inserido.
 
 *last*<br/>
-Fim do intervalo a inserir.
+Fim do intervalo a ser inserido.
 
 *right*<br/>
-Enumeração a ser inserido.
+Enumeração a ser inserida.
 
 *val*<br/>
 Valor do elemento a ser inserido.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função membro substitui a sequência controlada por uma repetição de *contagem* elementos de valor *val*. Você usá-lo para preencher o contêiner com elementos tudo que tem o mesmo valor.
+A primeira função de membro substitui a sequência controlada por uma repetição de elementos de *contagem* do valor *Val*. Você o usa para preencher o contêiner com todos os elementos com o mesmo valor.
 
-Se `InIt` é um tipo inteiro, a segunda função membro se comporta da mesma como `assign((size_type)first, (value_type)last)`. Caso contrário, ele substitui a sequência controlada pela sequência [`first`, `last`). Você usá-lo para tornar o controlado uma cópia de sequência outra sequência.
+Se `InIt` for um tipo inteiro, a segunda função de membro se comformará com `assign((size_type)first, (value_type)last)`. Caso contrário, ele substituirá a sequência controlada pela sequência [`first``last`). Você o usa para tornar a sequência controlada uma cópia de outra sequência.
 
-A terceira função membro substitui a sequência controlada pela sequência designada pelo enumerador *certa*. Você pode usá-lo para fazer uma cópia de uma sequência descrita por um enumerador a sequência controlada.
+A terceira função de membro substitui a sequência controlada pela sequência designada pelo enumerador *à direita*. Você o usa para tornar a sequência controlada uma cópia de uma sequência descrita por um enumerador.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_assign.cpp
@@ -318,7 +317,7 @@ a b
 a b c
 ```
 
-## <a name="back"></a> list::back (STL/CLR)
+## <a name="back"></a>lista:: voltar (STL/CLR)
 
 Acessa o último elemento.
 
@@ -330,9 +329,9 @@ reference back();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna uma referência ao último elemento da sequência controlada, que deve ser não vazio. Você pode usá-lo para acessar o último elemento, quando você souber que ele existe.
+A função member retorna uma referência ao último elemento da sequência controlada, que deve ser não vazia. Você o usa para acessar o último elemento, quando você sabe que ele existe.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_back.cpp
@@ -369,7 +368,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a> list::back_item (STL/CLR)
+## <a name="back_item"></a>List:: back_item (STL/CLR)
 
 Acessa o último elemento.
 
@@ -381,9 +380,9 @@ property value_type back_item;
 
 ### <a name="remarks"></a>Comentários
 
-A propriedade acessa o último elemento da sequência controlada, que deve ser não vazio. Você pode usá-lo para ler ou gravar o último elemento, quando você souber que ele existe.
+A propriedade acessa o último elemento da sequência controlada, que deve ser não vazio. Você o usa para ler ou gravar o último elemento, quando souber que ele existe.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_back_item.cpp
@@ -420,7 +419,7 @@ back_item = c
 a b x
 ```
 
-## <a name="begin"></a> list::begin (STL/CLR)
+## <a name="begin"></a>List:: Begin (STL/CLR)
 
 Designa o início da sequência controlada.
 
@@ -432,9 +431,9 @@ iterator begin();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador de acesso aleatório que designa o primeiro elemento da sequência controlada ou logo após o fim de uma sequência vazia. Use-o para obter um iterador que designa o início `current` da sequência controlada, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
+A função membro retorna um iterador de acesso aleatório que designa o primeiro elemento da sequência controlada ou apenas após o final de uma sequência vazia. Use-o para obter um iterador que designa o início `current` da sequência controlada, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_begin.cpp
@@ -475,7 +474,7 @@ a b c
 x y c
 ```
 
-## <a name="clear"></a> list::clear (STL/CLR)
+## <a name="clear"></a>lista:: Clear (STL/CLR)
 
 Remove todos os elementos.
 
@@ -487,9 +486,9 @@ void clear();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro chama efetivamente [List:: Erase (STL/CLR)](../dotnet/list-erase-stl-clr.md) `(` [List:: Begin (STL/CLR)](../dotnet/list-begin-stl-clr.md) `(),` [List:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) `())`. Você pode usá-lo para garantir que a sequência controlada vazia.
+A função de membro efetivamente chama [list:: Erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)`(` [lista:: Begin (STL/CLR)](../dotnet/list-begin-stl-clr.md)`(),` [list:: End (STL/CLR)](../dotnet/list-end-stl-clr.md)`())`. Você o usa para garantir que a sequência controlada esteja vazia.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_clear.cpp
@@ -532,7 +531,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> list::const_iterator (STL/CLR)
+## <a name="const_iterator"></a>List:: const_iterator (STL/CLR)
 
 O tipo de um iterador de constante para a sequência controlada.
 
@@ -544,9 +543,9 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve um objeto do tipo não especificado `T2` que pode servir como um iterador de acesso aleatório constante para a sequência controlada.
+O tipo descreve um objeto de tipo não especificado `T2` que pode servir como um iterador de acesso aleatório constante para a sequência controlada.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_const_iterator.cpp
@@ -573,7 +572,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> list::const_reference (STL/CLR)
+## <a name="const_reference"></a>List:: const_reference (STL/CLR)
 
 O tipo de uma referência de constante para um elemento.
 
@@ -587,7 +586,7 @@ typedef value_type% const_reference;
 
 O tipo descreve uma referência constante para um elemento.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_const_reference.cpp
@@ -617,9 +616,9 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> list::const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a>List:: const_reverse_iterator (STL/CLR)
 
-O tipo de um iterador inverso constante para a sequência controlada...
+O tipo de um iterador reverso constante para a sequência controlada.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -629,9 +628,9 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve um objeto do tipo não especificado `T4` que pode servir como um iterador inverso constante para a sequência controlada.
+O tipo descreve um objeto de tipo não especificado `T4` que pode servir como um iterador reverso constante para a sequência controlada.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_const_reverse_iterator.cpp
@@ -659,9 +658,9 @@ int main()
 c b a
 ```
 
-## <a name="difference_type"></a> list::difference_type (STL/CLR)
+## <a name="difference_type"></a>lista::d ifference_type (STL/CLR)
 
-Os tipos de uma distância com sinal entre dois elementos.
+Os tipos de uma distância assinada entre dois elementos.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -671,9 +670,9 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve uma contagem com sinal de elemento.
+O tipo descreve uma contagem de elementos assinados.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_difference_type.cpp
@@ -713,7 +712,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> list::empty (STL/CLR)
+## <a name="empty"></a>lista:: Empty (STL/CLR)
 
 Testa se nenhum elemento está presente.
 
@@ -725,9 +724,9 @@ bool empty();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna verdadeiro para uma sequência controlada vazia. É equivalente a [List:: Size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() == 0`. Você pode usá-lo para testar se a lista estiver vazia.
+A função membro retorna verdadeiro para uma sequência controlada vazia. É equivalente a [list:: Size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() == 0`. Você o usa para testar se a lista está vazia.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_empty.cpp
@@ -764,7 +763,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> list::end (STL/CLR)
+## <a name="end"></a>List:: End (STL/CLR)
 
 Designa o fim da sequência controlada.
 
@@ -776,9 +775,9 @@ iterator end();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador de acesso aleatório que aponta para logo após o fim da sequência controlada. Você pode usá-lo para obter um iterador que designa o fim da sequência controlada; seu status alteração não se o comprimento da sequência controlada for alterado.
+A função membro retorna um iterador de acesso aleatório que aponta para além do fim da sequência controlada. Você o usa para obter um iterador que designa o final da sequência controlada; seu status não será alterado se o comprimento da sequência controlada for alterado.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_end.cpp
@@ -820,7 +819,7 @@ a b c
 a x y
 ```
 
-## <a name="erase"></a> list::erase (STL/CLR)
+## <a name="erase"></a>lista:: Erase (STL/CLR)
 
 Remove os elementos em posições especificadas.
 
@@ -844,15 +843,15 @@ Elemento a ser apagado.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função membro remove o elemento da sequência controlada apontada por *onde*. Você pode usá-lo para remover um único elemento.
+A primeira função de membro remove o elemento da sequência controlada apontada por *Where*. Você o usa para remover um único elemento.
 
-A segunda função de membro remove os elementos da sequência controlada no intervalo [`first`, `last`). Você pode usá-lo para remover a zero ou mais elementos contíguos.
+A segunda função de membro remove os elementos da sequência controlada no intervalo [`first`, `last`). Você o usa para remover zero ou mais elementos contíguos.
 
-Ambas as funções membro retornam um iterador que designa o primeiro elemento restante além de todos os elementos removidos ou [List:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) `()` se não houver tal elemento.
+Ambas as funções de membro retornam um iterador que designa o primeiro elemento restante além de todos os elementos removidos ou [list:: End (STL/CLR)](../dotnet/list-end-stl-clr.md)`()` se nenhum elemento desse tipo existir.
 
-Ao apagar elementos, o número de cópias de elemento é linear no número de elementos entre o fim de apagamento e final da sequência mais próximo. (Ao apagar uma ou mais elementos em ambas as extremidades da sequência, nenhuma cópia do elemento ocorre.)
+Ao apagar elementos, o número de cópias de elemento é linear no número de elementos entre o fim da eliminação e o final mais próximo da sequência. (Ao apagar um ou mais elementos em qualquer uma das extremidades da sequência, não ocorre nenhuma cópia do elemento.)
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_erase.cpp
@@ -899,7 +898,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="front"></a> list::front (STL/CLR)
+## <a name="front"></a>List:: Front (STL/CLR)
 
 Acessa o primeiro elemento.
 
@@ -911,9 +910,9 @@ reference front();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna uma referência para o primeiro elemento da sequência controlada, que deve ser não vazio. Você pode usá-lo para ler ou gravar o primeiro elemento, quando você souber que ele existe.
+A função member retorna uma referência ao primeiro elemento da sequência controlada, que deve ser não vazia. Você o usa para ler ou gravar o primeiro elemento, quando souber que ele existe.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_front.cpp
@@ -950,7 +949,7 @@ front() = a
 x b c
 ```
 
-## <a name="front_item"></a> list::front_item (STL/CLR)
+## <a name="front_item"></a>List:: front_item (STL/CLR)
 
 Acessa o primeiro elemento.
 
@@ -962,9 +961,9 @@ property value_type front_item;
 
 ### <a name="remarks"></a>Comentários
 
-A propriedade acessa o primeiro elemento da sequência controlada, que deve ser não vazio. Você pode usá-lo para ler ou gravar o primeiro elemento, quando você souber que ele existe.
+A propriedade acessa o primeiro elemento da sequência controlada, que deve ser não vazio. Você o usa para ler ou gravar o primeiro elemento, quando souber que ele existe.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_front_item.cpp
@@ -1001,7 +1000,7 @@ front_item = a
 x b c
 ```
 
-## <a name="generic_container"></a> list::generic_container (STL/CLR)
+## <a name="generic_container"></a>List:: generic_container (STL/CLR)
 
 O tipo da interface genérica para o contêiner.
 
@@ -1015,9 +1014,9 @@ typedef Microsoft::VisualC::StlClr::
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve a interface genérica para essa classe de contêiner do modelo.
+O tipo descreve a interface genérica para esta classe de contêiner de modelo.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_generic_container.cpp
@@ -1067,7 +1066,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_iterator"></a> list::generic_iterator (STL/CLR)
+## <a name="generic_iterator"></a>List:: generic_iterator (STL/CLR)
 
 O tipo de um iterador para uso com a interface genérica para o contêiner.
 
@@ -1081,9 +1080,9 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve um iterador genérico que pode ser usado com a interface genérica para essa classe de contêiner do modelo.
+O tipo descreve um iterador genérico que pode ser usado com a interface genérica para essa classe de contêiner de modelo.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_generic_iterator.cpp
@@ -1125,9 +1124,9 @@ a b c
 a a c
 ```
 
-## <a name="generic_reverse_iterator"></a> list::generic_reverse_iterator (STL/CLR)
+## <a name="generic_reverse_iterator"></a>List:: generic_reverse_iterator (STL/CLR)
 
-O tipo de um iterador inverso para uso com a interface genérica para o contêiner.
+O tipo de um iterador reverso para uso com a interface genérica para o contêiner.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -1138,9 +1137,9 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve um iterador inverso genérico que pode ser usado com a interface genérica para essa classe de contêiner do modelo.
+O tipo descreve um iterador reverso genérico que pode ser usado com a interface genérica para essa classe de contêiner de modelo.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_generic_reverse_iterator.cpp
@@ -1182,9 +1181,9 @@ a b c
 a c c
 ```
 
-## <a name="generic_value"></a> list::generic_value (STL/CLR)
+## <a name="generic_value"></a>List:: generic_value (STL/CLR)
 
-O tipo de um elemento para uso com a interface genérica para o contêiner.
+O tipo de um elemento a ser usado com a interface genérica para o contêiner.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -1194,9 +1193,9 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve um objeto do tipo `GValue` que descreve o valor de elemento armazenado para uso com a interface genérica para essa classe de contêiner do modelo.
+O tipo descreve um objeto do tipo `GValue` que descreve o valor do elemento armazenado para uso com a interface genérica para essa classe de contêiner de modelo.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_generic_value.cpp
@@ -1238,9 +1237,9 @@ a b c
 a a c
 ```
 
-## <a name="insert"></a> list::insert (STL/CLR)
+## <a name="insert"></a>lista:: Insert (STL/CLR)
 
-Adiciona os elementos em uma posição especificada.
+Adiciona elementos em uma posição especificada.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -1262,32 +1261,32 @@ Número de elementos a inserir.
 Início do intervalo a ser inserido.
 
 *last*<br/>
-Fim do intervalo a inserir.
+Fim do intervalo a ser inserido.
 
 *right*<br/>
-Enumeração a ser inserido.
+Enumeração a ser inserida.
 
 *val*<br/>
 Valor do elemento a ser inserido.
 
 *where*<br/>
-Onde no contêiner antes da qual inserir.
+Onde o contêiner deve ser inserido antes.
 
 ### <a name="remarks"></a>Comentários
 
-Cada um dos membro funções inserções, antes do elemento apontado por *onde* na sequência controlada, uma sequência especificada pelos operandos restantes.
+Cada uma das funções de membro é inserida, antes do elemento apontado por *onde* na sequência controlada, uma sequência especificada pelos operandos restantes.
 
-A primeira função membro insere um elemento com o valor *val* e retorna um iterador que designa o elemento recém-inserido. Você pode usá-lo para inserir um único elemento antes de um local designado por um iterador.
+A primeira função de membro insere um elemento com valor *Val* e retorna um iterador que designa o elemento recém-inserido. Você o usa para inserir um único elemento antes de um local designado por um iterador.
 
-A segunda função membro insere uma repetição de *contagem* elementos de valor *val*. Você pode usá-lo para inserir zero ou mais elementos adjacentes que são todas as cópias do mesmo valor.
+A segunda função de membro insere uma repetição de elementos de *contagem* do valor *Val*. Você o usa para inserir zero ou mais elementos contíguos que são todas as cópias do mesmo valor.
 
-Se `InIt` for um tipo inteiro, a terceira função membro se comportará da mesma forma que `insert(where, (size_type)first, (value_type)last)`. Caso contrário, ele insere a sequência [`first`, `last`). Você pode usá-lo para inserir a zero ou mais elementos contíguos copiados de outra sequência.
+Se `InIt` for um tipo inteiro, a terceira função membro se comportará da mesma forma que `insert(where, (size_type)first, (value_type)last)`. Caso contrário, ele insere a sequência [`first`, `last`). Você o usa para inserir zero ou mais elementos contíguos copiados de outra sequência.
 
-A quarta função membro insere a sequência designada pela *certa*. Você pode usá-lo para inserir uma sequência descrita por um enumerador.
+A quarta função de membro insere a sequência designada à *direita*. Você o usa para inserir uma sequência descrita por um enumerador.
 
-Ao inserir um único elemento, o número de cópias de elemento é linear no número de elementos entre o ponto de inserção e a extremidade mais próximo da sequência. (Ao inserir um ou mais elementos em ambas as extremidades da sequência, não há cópias de elemento ocorrem). Se `InIt` é um iterador de entrada, a terceira função membro efetivamente executa uma inserção única para cada elemento na sequência. Caso contrário, quando inserindo `N` elementos, o número de cópias de elemento é linear no `N` mais o número de elementos entre o ponto de inserção e a extremidade mais próximo da sequência.
+Ao inserir um único elemento, o número de cópias de elemento é linear no número de elementos entre o ponto de inserção e o final mais próximo da sequência. (Ao inserir um ou mais elementos em qualquer uma das extremidades da sequência, não ocorre nenhuma cópia do elemento.) Se `InIt` for um iterador de entrada, a terceira função de membro efetivamente executará uma única inserção para cada elemento na sequência. Caso contrário, ao inserir elementos de `N`, o número de cópias de elemento será linear em `N` além do número de elementos entre o ponto de inserção e o final da sequência mais próximo.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_insert.cpp
@@ -1356,7 +1355,7 @@ y y a x b
 a x b c y y a x b
 ```
 
-## <a name="iterator"></a> list::iterator (STL/CLR)
+## <a name="iterator"></a>List:: iterador (STL/CLR)
 
 O tipo de um iterador para a sequência controlada.
 
@@ -1368,9 +1367,9 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve um objeto do tipo não especificado `T1` que pode servir como um iterador de acesso aleatório para a sequência controlada.
+O tipo descreve um objeto de tipo não especificado `T1` que pode servir como um iterador de acesso aleatório para a sequência controlada.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_iterator.cpp
@@ -1405,7 +1404,7 @@ a b c
 x b c
 ```
 
-## <a name="list"></a> list::list (STL/CLR)
+## <a name="list"></a>lista:: List (STL/CLR)
 
 Constrói um objeto contêiner.
 
@@ -1431,7 +1430,7 @@ Número de elementos a inserir.
 Início do intervalo a ser inserido.
 
 *last*<br/>
-Fim do intervalo a inserir.
+Fim do intervalo a ser inserido.
 
 *right*<br/>
 Objeto ou intervalo a inserir.
@@ -1445,31 +1444,31 @@ O construtor:
 
 `list();`
 
-inicializa a sequência controlada com nenhum elemento. Você pode usá-lo para especificar uma sequência controlada inicial vazia.
+Inicializa a sequência controlada sem elementos. Você o usa para especificar uma sequência controlada inicial vazia.
 
 O construtor:
 
 `list(list<Value>% right);`
 
-inicializa a sequência controlada com a sequência [`right.begin()`, `right.end()`). Você pode usá-lo para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto de lista *certa*.
+Inicializa a sequência controlada com a sequência [`right.begin()`, `right.end()`). Você o usa para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto List *à direita*.
 
 O construtor:
 
 `list(list<Value>^ right);`
 
-inicializa a sequência controlada com a sequência [`right->begin()`, `right->end()`). Você pode usá-lo para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto de lista cujo identificador é *certa*.
+Inicializa a sequência controlada com a sequência [`right->begin()`, `right->end()`). Você o usa para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto de lista cujo identificador é *direito*.
 
 O construtor:
 
 `explicit list(size_type count);`
 
-inicializa a sequência controlada com *contagem* elementos com valor `value_type()`. Você usá-lo para preencher o contêiner com elementos tudo que tem o valor padrão.
+Inicializa a sequência controlada com elementos de *contagem* , cada um com valor `value_type()`. Você o usa para preencher o contêiner com todos os elementos que têm o valor padrão.
 
 O construtor:
 
 `list(size_type count, value_type val);`
 
-inicializa a sequência controlada com *contagem* elementos com valor de *val*. Você usá-lo para preencher o contêiner com elementos tudo que tem o mesmo valor.
+Inicializa a sequência controlada com elementos de *contagem* cada um com valor *Val*. Você o usa para preencher o contêiner com todos os elementos com o mesmo valor.
 
 O construtor:
 
@@ -1477,15 +1476,15 @@ O construtor:
 
 `list(InIt first, InIt last);`
 
-inicializa a sequência controlada com a sequência [`first`, `last`). Você pode usá-lo para fazer uma cópia de outra sequência a sequência controlada.
+Inicializa a sequência controlada com a sequência [`first`, `last`). Você o usa para tornar a sequência controlada uma cópia de outra sequência.
 
 O construtor:
 
 `list(System::Collections::Generic::IEnumerable<Value>^ right);`
 
-inicializa a sequência controlada com a sequência designada pelo enumerador *certa*. Você pode usá-lo para fazer uma cópia de outra sequência descrita por um enumerador a sequência controlada.
+Inicializa a sequência controlada com a sequência designada pelo enumerador *à direita*. Você o usa para tornar a sequência controlada uma cópia de outra sequência descrita por um enumerador.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_construct.cpp
@@ -1550,7 +1549,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="merge"></a> list::merge (STL/CLR)
+## <a name="merge"></a>lista:: Merge (STL/CLR)
 
 Mescla duas sequências controladas ordenadas.
 
@@ -1564,21 +1563,21 @@ template<typename Pred2>
 
 #### <a name="parameters"></a>Parâmetros
 
-*pred*<br/>
-Comparador para pares de elementos.
+*Pred*<br/>
+Comparador de pares de elementos.
 
 *right*<br/>
-Contêiner de mesclagem.
+Contêiner para mesclagem.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função membro remove todos os elementos da sequência controlada por *certa* e inseri-los na sequência controlada. As duas sequências devem ser ordenadas anteriormente pelo `operator<` – elementos não devem diminuir em valor conforme você percorre a sequência. A sequência resultante também é ordenada por `operator<`. Você pode usar essa função de membro para mesclar duas sequências que aumentam o valor em uma sequência que aumenta também de valor.
+A primeira função de membro remove todos os elementos da sequência controlada pela *direita* e os insere na sequência controlada. Ambas as sequências devem ser ordenadas anteriormente por `operator<`--os elementos não devem diminuir no valor conforme você progride por qualquer uma das sequências. A sequência resultante também é ordenada por `operator<`. Você usa essa função de membro para mesclar duas sequências que aumentam em valor em uma sequência que também aumenta em valor.
 
-A segunda função membro se comporta da mesma maneira que a primeira, exceto que as sequências são ordenadas por `pred`  --  `pred(X, Y)` deve ser false para qualquer elemento `X` que segue o elemento `Y` na sequência. Você pode usá-lo para mesclar duas sequências ordenadas por uma função de predicado ou delegado que você especificar.
+A segunda função de membro se comporta da mesma forma que a primeira, exceto que as sequências são ordenadas por `pred` -- `pred(X, Y)` deve ser false para qualquer elemento `X` que siga o elemento `Y` na sequência. Você o usa para mesclar duas sequências ordenadas por uma função de predicado ou delegado que você especificar.
 
-As funções de executam uma mesclagem estável – nenhum par de elementos das sequências de controlado originais é revertido na sequência controlada resultante. Além disso, se um par de elementos `X` e `Y` na sequência controlada resultante tem ordenação equivalente – `!(X < Y) && !(X < Y)` – um elemento da sequência controlada original aparecerá antes de um elemento da sequência controlada por *certa*.
+Ambas as funções executam uma mesclagem estável – nenhum par de elementos em nenhuma das sequências controladas originais é invertido na sequência controlada resultante. Além disso, se um par de elementos `X` e `Y` na sequência controlada resultante tiver ordenação equivalente, `!(X < Y) && !(X < Y)`--um elemento da sequência controlada original aparecerá antes de um elemento da sequência controlado pela *direita*.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_merge.cpp
@@ -1647,7 +1646,7 @@ f e e d c c b a a
 c1.size() = 0
 ```
 
-## <a name="op_as"></a> list::operator= (STL/CLR)
+## <a name="op_as"></a>List:: Operator = (STL/CLR)
 
 Substitui a sequência controlada.
 
@@ -1664,9 +1663,9 @@ O contêiner a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 
-As cópias de operador de membro *certa* ao objeto, em seguida, retorna `*this`. Você pode usá-lo para substituir a sequência controlada por uma cópia da sequência controlada no *certa*.
+O operador membro copia *diretamente* para o objeto e, em seguida, retorna `*this`. Você o usa para substituir a sequência controlada por uma cópia da sequência controlada *à direita*.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_operator_as.cpp
@@ -1700,7 +1699,7 @@ a b c
 a b c
 ```
 
-## <a name="pop_back"></a> list::pop_back (STL/CLR)
+## <a name="pop_back"></a>lista::p op_back (STL/CLR)
 
 Remove o último elemento.
 
@@ -1712,9 +1711,9 @@ void pop_back();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro remove o último elemento da sequência controlada, que deve ser não vazio. Você pode usá-lo para diminuir a lista por um elemento na parte traseira.
+A função membro remove o último elemento da sequência controlada, que deve ser não vazio. Você o usa para encurtar a lista por um elemento na parte de trás.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_pop_back.cpp
@@ -1747,7 +1746,7 @@ a b c
 a b
 ```
 
-## <a name="pop_front"></a> list::pop_front (STL/CLR)
+## <a name="pop_front"></a>lista::p op_front (STL/CLR)
 
 Remove o primeiro elemento.
 
@@ -1759,9 +1758,9 @@ void pop_front();
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro remove o primeiro elemento da sequência controlada, que deve ser não vazio. Você pode usá-lo para diminuir a lista por um elemento na frente.
+A função membro remove o primeiro elemento da sequência controlada, que deve ser não vazio. Você o usa para encurtar a lista por um elemento na frente.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_pop_front.cpp
@@ -1794,7 +1793,7 @@ a b c
 b c
 ```
 
-## <a name="push_back"></a> list::push_back (STL/CLR)
+## <a name="push_back"></a>lista::p ush_back (STL/CLR)
 
 Adiciona um novo último elemento.
 
@@ -1806,9 +1805,9 @@ void push_back(value_type val);
 
 ### <a name="remarks"></a>Comentários
 
-A função membro insere um elemento com valor `val` no final da sequência controlada. Você pode usá-lo para acrescentar a outro elemento à lista.
+A função membro insere um elemento com o valor `val` no final da sequência controlada. Você o usa para acrescentar outro elemento à lista.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_push_back.cpp
@@ -1834,9 +1833,9 @@ int main()
 a b c
 ```
 
-## <a name="push_front"></a> list::push_front (STL/CLR)
+## <a name="push_front"></a>lista::p ush_front (STL/CLR)
 
-Adiciona um novo elemento primeiro.
+Adiciona um novo primeiro elemento.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -1846,9 +1845,9 @@ void push_front(value_type val);
 
 ### <a name="remarks"></a>Comentários
 
-A função membro insere um elemento com valor `val` no início da sequência controlada. Você pode usá-lo para preceder a outro elemento à lista.
+A função membro insere um elemento com o valor `val` no início da sequência controlada. Você o usa para colocar outro elemento na lista.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_push_front.cpp
@@ -1874,7 +1873,7 @@ int main()
 c b a
 ```
 
-## <a name="rbegin"></a> list::rbegin (STL/CLR)
+## <a name="rbegin"></a>lista:: rbegin (STL/CLR)
 
 Designa o início da sequência controlada invertida.
 
@@ -1886,9 +1885,9 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador inverso que designa o último elemento da sequência controlada ou logo após o início de uma sequência vazia. Portanto, ele designa o `beginning` da sequência invertida. Use-o para obter um iterador que designa o início `current` da sequência controlada que é vista na ordem inversa, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
+A função membro retorna um iterador reverso que designa o último elemento da sequência controlada ou apenas além do início de uma sequência vazia. Portanto, ele designa o `beginning` da sequência invertida. Use-o para obter um iterador que designa o início `current` da sequência controlada que é vista na ordem inversa, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_rbegin.cpp
@@ -1929,7 +1928,7 @@ a b c
 a y x
 ```
 
-## <a name="reference"></a> list::reference (STL/CLR)
+## <a name="reference"></a>List:: Reference (STL/CLR)
 
 O tipo de uma referência para um elemento.
 
@@ -1943,7 +1942,7 @@ typedef value_type% reference;
 
 O tipo descreve uma referência a um elemento.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_reference.cpp
@@ -1984,7 +1983,7 @@ a b c
 A B C
 ```
 
-## <a name="remove"></a> list::remove (STL/CLR)
+## <a name="remove"></a>List:: Remove (STL/CLR)
 
 Remove um elemento com um valor especificado.
 
@@ -2001,9 +2000,9 @@ Valor do elemento a ser removido.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro remove um elemento na sequência controlada para as quais `((System::Object^)val)->Equals((System::Object^)x)` for verdadeira (se houver). Você pode usá-lo para apagar um elemento arbitrário com o valor especificado.
+A função membro remove um elemento na sequência controlada para a qual `((System::Object^)val)->Equals((System::Object^)x)` é true (se houver). Você o usa para apagar um elemento arbitrário com o valor especificado.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_remove.cpp
@@ -2043,9 +2042,9 @@ a b c
 a c
 ```
 
-## <a name="remove_if"></a> list::remove_if (STL/CLR)
+## <a name="remove_if"></a>List:: remove_if (STL/CLR)
 
-Remove elementos que passarem um teste especificado.
+Remove os elementos que passam um teste especificado.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2056,14 +2055,14 @@ template<typename Pred1>
 
 #### <a name="parameters"></a>Parâmetros
 
-*pred*<br/>
-Teste de elementos a serem removidos.
+*Pred*<br/>
+Teste para elementos a serem removidos.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro remove da sequência controlada (apaga) todos os elementos `X` para o qual `pred(X)` é verdadeiro. Você pode usá-lo para remover todos os elementos que satisfazem uma condição a que você especificar como uma função ou um delegado.
+A função de membro remove da sequência controlada (apaga) todos os elementos `X` para os quais `pred(X)` é verdadeiro. Você o usa para remover todos os elementos que atendem a uma condição especificada como uma função ou um delegado.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_remove_if.cpp
@@ -2107,7 +2106,7 @@ a b b b c
 b b b
 ```
 
-## <a name="rend"></a> list::rend (STL/CLR)
+## <a name="rend"></a>lista:: rend (STL/CLR)
 
 Designa o fim da sequência controlada invertida.
 
@@ -2119,9 +2118,9 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um iterador inverso que aponta logo após o início da sequência controlada. Portanto, ele designa o `end` da sequência invertida. Use-o para obter um iterador que designa o fim `current` da sequência controlada vista na ordem inversa, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
+A função membro retorna um iterador reverso que aponta apenas além do início da sequência controlada. Portanto, ele designa o `end` da sequência invertida. Use-o para obter um iterador que designa o fim `current` da sequência controlada vista na ordem inversa, mas seu status poderá mudar se o tamanho da sequência controlada for alterado.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_rend.cpp
@@ -2163,7 +2162,7 @@ a b c
 y x c
 ```
 
-## <a name="resize"></a> list::resize (STL/CLR)
+## <a name="resize"></a>lista:: redimensionar (STL/CLR)
 
 Altera o número de elementos.
 
@@ -2180,13 +2179,13 @@ void resize(size_type new_size, value_type val);
 Novo tamanho da sequência controlada.
 
 *val*<br/>
-Valor do elemento de preenchimento.
+Valor do elemento Padding.
 
 ### <a name="remarks"></a>Comentários
 
-As funções membro de ambos os Verifique [List:: Size (STL/CLR)](../dotnet/list-size-stl-clr.md) `()` daqui em diante retorna *new_size*. Se for necessário tornar a sequência controlada mais longa, a primeira função membro acrescentará elementos com valor `value_type()`, enquanto a segunda função membro acrescentará elementos com valor *val*. Para tornar a sequência controlada mais curta, ambas as funções membro efetivamente apagar o último elemento [List:: Size (STL/CLR)](../dotnet/list-size-stl-clr.md) `() -` `new_size` vezes. Você pode usá-lo para garantir que a sequência controlada tem tamanho *new_size*, filtragem ou preenchimento atual sequência controlada.
+As funções de membro asseguram que a [lista:: Size (STL/CLR)](../dotnet/list-size-stl-clr.md)`()` daqui em diante retorne *new_size*. Se ele precisar tornar a sequência controlada mais longa, a primeira função de membro acrescentará elementos com valor `value_type()`, enquanto a segunda função de membro acrescenta elementos com valor *Val*. Para tornar a sequência controlada mais curta, ambas as funções de membro efetivamente apagam a última lista de elementos [:: Size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() -` `new_size` vezes. Você pode usá-lo para garantir que a sequência controlada tenha tamanho *new_size*, recortando ou preenchendo a sequência controlada atual.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_resize.cpp
@@ -2223,7 +2222,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="reverse"></a> list::reverse (STL/CLR)
+## <a name="reverse"></a>List:: Reverse (STL/CLR)
 
 Inverte a sequência controlada.
 
@@ -2235,9 +2234,9 @@ void reverse();
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro inverte a ordem de todos os elementos na sequência controlada. Você pode usá-lo para refletir uma lista de elementos.
+A função membro reverte a ordem de todos os elementos na sequência controlada. Você o usa para refletir uma lista de elementos.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_reverse.cpp
@@ -2270,7 +2269,7 @@ a b c
 c b a
 ```
 
-## <a name="reverse_iterator"></a> list::reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a>List:: reverse_iterator (STL/CLR)
 
 O tipo de um iterador inverso para a sequência controlada.
 
@@ -2282,9 +2281,9 @@ typedef T3 reverse_iterator;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve um objeto do tipo não especificado `T3` que pode servir como um iterador inverso para a sequência controlada.
+O tipo descreve um objeto de tipo não especificado `T3` que pode servir como um iterador reverso para a sequência controlada.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_reverse_iterator.cpp
@@ -2319,7 +2318,7 @@ c b a
 x b a
 ```
 
-## <a name="size"></a> list::size (STL/CLR)
+## <a name="size"></a>lista:: tamanho (STL/CLR)
 
 Conta o número de elementos.
 
@@ -2331,9 +2330,9 @@ size_type size();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna o comprimento da sequência controlada. Você pode usá-lo para determinar o número de elementos que estão na sequência controlada. Se você se preocupa se a sequência tem tamanho diferente de zero, consulte [List:: Empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)`()`.
+A função membro retorna o comprimento da sequência controlada. Você o usa para determinar o número de elementos atualmente na sequência controlada. Se tudo o que você se importa é se a sequência tem tamanho diferente de zero, confira [lista:: Empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)`()`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_size.cpp
@@ -2372,9 +2371,9 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> list::size_type (STL/CLR)
+## <a name="size_type"></a>List:: size_type (STL/CLR)
 
-O tipo de uma distância com sinal entre dois elementos.
+O tipo de uma distância assinada entre dois elementos.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2384,9 +2383,9 @@ typedef int size_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve uma contagem de elemento não negativo.
+O tipo descreve uma contagem de elementos não negativos.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_size_type.cpp
@@ -2420,7 +2419,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="sort"></a> list::sort (STL/CLR)
+## <a name="sort"></a>lista:: Sort (STL/CLR)
 
 Ordena a sequência controlada.
 
@@ -2434,18 +2433,18 @@ template<typename Pred2>
 
 #### <a name="parameters"></a>Parâmetros
 
-*pred*<br/>
-Comparador para pares de elementos.
+*Pred*<br/>
+Comparador de pares de elementos.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função membro reorganiza os elementos na sequência controlada para que eles são ordenados por `operator<` – elementos não diminuir em valor conforme você percorre a sequência. Você pode usar essa função de membro para classificar a sequência em ordem crescente.
+A primeira função de membro reorganiza os elementos na sequência controlada para que eles sejam ordenados por `operator<`--os elementos não diminuem em valor conforme você progride pela sequência. Você usa essa função de membro para classificar a sequência em ordem crescente.
 
-A segunda função membro se comporta da mesma maneira que a primeira, exceto que a sequência é ordenada pelo `pred`  --  `pred(X, Y)` é false para qualquer elemento `X` que segue o elemento `Y` na sequência resultante. Você pode usá-lo para classificar a sequência em uma ordem especificada por uma função de predicado ou delegado.
+A segunda função de membro se comporta da mesma forma que a primeira, exceto que a sequência é ordenada por `pred` -- `pred(X, Y)` é false para qualquer elemento `X` que segue o elemento `Y` na sequência resultante. Você o usa para classificar a sequência em uma ordem que você especifica por uma função de predicado ou delegado.
 
-As funções executam uma classificação estável, pois nenhum par de elementos na sequência controlada original é revertido na sequência controlada resultante.
+Ambas as funções executam uma classificação estável – nenhum par de elementos na sequência controlada original é invertido na sequência controlada resultante.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_sort.cpp
@@ -2485,9 +2484,9 @@ c b a
 a b c
 ```
 
-## <a name="splice"></a> list::splice (STL/CLR)
+## <a name="splice"></a>lista:: Splice (STL/CLR)
 
-Restitch links entre os nós.
+Recosturar links entre nós.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2502,26 +2501,26 @@ void splice(iterator where, list<Value>% right,
 #### <a name="parameters"></a>Parâmetros
 
 *first*<br/>
-Início do intervalo a ter splice.
+Início do intervalo para unir.
 
 *last*<br/>
-Final do intervalo a ter splice.
+Fim do intervalo para unir.
 
 *right*<br/>
-Contêiner do qual realizar splice.
+Contêiner para o qual unir.
 
 *where*<br/>
-Onde no contêiner a ter splice antes.
+Em que em contêiner para unir antes.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função membro insere a sequência controlada por *certa* antes do elemento na sequência controlada apontado por *onde*. Ele também remove todos os elementos de *certa*. (`%right` não deve ser igual a `this`.) Você pode usá-lo a ter splice todos de uma lista em outra.
+A primeira função de membro insere a sequência controlada pela *direita* antes que o elemento na sequência controlada apontasse por *onde*. Ele também remove todos os elementos da *direita*. (`%right` não deve ser igual a `this`.) Você o usa para unir todas as listas de uma lista em outra.
 
-A segunda função membro remove o elemento apontado por *primeira* na sequência controlada por *à direita* e insere-o antes do elemento na sequência controlada apontada por *onde* . (Se `where` `==` `first` `||` `where` `== ++first`, nenhuma alteração ocorrerá.) Você pode usá-lo a ter splice um único elemento de uma lista em outra.
+A segunda função de membro remove o elemento apontado pela *primeira* na sequência controlada pela *direita* e a insere antes de o elemento na sequência controlada apontar para por *onde*. (Se `where` `==` `first` `||` `where` `== ++first`, nenhuma alteração ocorrerá.) Você o usa para unir um único elemento de uma lista em outro.
 
-A terceira função membro insere o subintervalo designado por [`first`, `last`) da sequência controlada por *à direita* antes do elemento na sequência controlada apontada por *onde*. Ele também remove o subintervalo original da sequência controlada por *certa*. (Se `right` `==` `this`, o intervalo de [`first`, `last`) não deve incluir o elemento apontado por *onde*.) Você pode usá-lo a ter splice uma subsequência de zero ou mais elementos de uma lista em outra.
+A terceira função de membro insere o subintervalo designado por [`first`, `last`) da sequência controlada por *direita* antes que o elemento na sequência controlada apontasse por *onde*. Ele também remove o subintervalo original da sequência controlada pela *direita*. (Se `right` `==` `this`, o intervalo [`first`, `last`) não deve incluir o elemento apontado por *onde*.) Você o usa para unir uma subsequência de zero ou mais elementos de uma lista em outra.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_splice.cpp
@@ -2578,7 +2577,7 @@ b c a
 c2.size() = 0
 ```
 
-## <a name="swap"></a> list::swap (STL/CLR)
+## <a name="swap"></a>List:: swap (STL/CLR)
 
 Alterna o conteúdo de dois contêineres.
 
@@ -2595,9 +2594,9 @@ Contêiner com o qual trocar conteúdos.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro troca as sequências controladas entre `*this` e *direito*. Ele faz isso em tempo constante e não gera exceções. Você pode usá-lo como uma maneira rápida para trocar o conteúdo de dois contêineres.
+A função membro troca as sequências controladas entre `*this` e *direita*. Ele faz isso em constante tempo e não lança nenhuma exceção. Você o usa como uma maneira rápida de trocar o conteúdo de dois contêineres.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_swap.cpp
@@ -2642,9 +2641,9 @@ x x x x x
 a b c
 ```
 
-## <a name="to_array"></a> list::to_array (STL/CLR)
+## <a name="to_array"></a>List:: to_array (STL/CLR)
 
-Copia a sequência controlada para uma nova matriz.
+Copia a sequência controlada em uma nova matriz.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2654,9 +2653,9 @@ cli::array<Value>^ to_array();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna uma matriz que contém a sequência controlada. Você pode usá-lo para obter uma cópia da sequência controlada em forma de matriz.
+A função membro retorna uma matriz que contém a sequência controlada. Você o usa para obter uma cópia da sequência controlada na forma de matriz.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_to_array.cpp
@@ -2691,7 +2690,7 @@ a b c d
 a b c
 ```
 
-## <a name="unique"></a> list::unique (STL/CLR)
+## <a name="unique"></a>lista:: Unique (STL/CLR)
 
 Remove elementos adjacentes que são passados a um teste especificado.
 
@@ -2705,16 +2704,16 @@ template<typename Pred2>
 
 #### <a name="parameters"></a>Parâmetros
 
-*pred*<br/>
-Comparador para pares de elementos.
+*Pred*<br/>
+Comparador de pares de elementos.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função membro remove da sequência controlada (apaga) todos os elementos que comparam igual ao elemento anterior - se elemento `X` precede o elemento `Y` e `X == Y`, a função membro remove `Y`. Você usá-lo para remover apenas uma cópia de cada subsequência dos elementos adjacentes que compare igual. Observe que, se a sequência controlada for ordenado, por exemplo, chamando [List:: Sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)`()`, a função membro deixa apenas elementos com valores exclusivos. (Portanto, o nome).
+A primeira função de membro remove da sequência controlada (apaga) cada elemento que compara igual ao elemento anterior – se o elemento `X` precede o elemento `Y` e `X == Y`, a função de membro remove `Y`. Você o usa para remover todas, exceto uma cópia de todas as subsequências de elementos adjacentes que se comparam iguais. Observe que, se a sequência controlada for ordenada, como chamando [list:: Sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)`()`, a função member deixará apenas elementos com valores exclusivos. (Portanto, o nome).
 
-A segunda função membro se comporta da mesma maneira que a primeira, exceto que ele remove cada elemento `Y` após um elemento `X` para o qual `pred(X, Y)`. Você pode usá-lo para remover apenas uma cópia de cada subsequência dos elementos adjacentes que satisfazem a uma função de predicado ou delegado que você especificar. Observe que, se a sequência controlada for ordenado, como ao chamar `sort(pred)`, a função membro deixa apenas os elementos que não têm uma ordenação equivalente com todos os outros elementos.
+A segunda função de membro se comporta da mesma forma que a primeira, exceto pelo fato de que ela remove cada elemento `Y` seguir um elemento `X` para o qual `pred(X, Y)`. Você o usa para remover todas, exceto uma cópia de cada subsequência de elementos adjacentes que satisfaçam uma função de predicado ou delegado que você especificar. Observe que, se a sequência controlada for ordenada, como chamando `sort(pred)`, a função de membro deixará apenas os elementos que não têm uma ordem equivalente com outros elementos.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_unique.cpp
@@ -2757,7 +2756,7 @@ a b c
 a a
 ```
 
-## <a name="value_type"></a> list::value_type (STL/CLR)
+## <a name="value_type"></a>List:: value_type (STL/CLR)
 
 O tipo de um elemento.
 
@@ -2769,9 +2768,9 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo do parâmetro de modelo *valor*.
+O tipo é um sinônimo para o *valor*do parâmetro de modelo.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_value_type.cpp
@@ -2802,9 +2801,9 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a> operator!= (list) (STL/CLR)
+## <a name="op_neq"></a>operador! = (lista) (STL/CLR)
 
-Lista de comparação de diferença.
+Lista não é igual a comparação.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2824,9 +2823,9 @@ Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
-Retorna a função de operador `!(left == right)`. Você pode usá-lo para testar se *esquerdo* não for ordenado igual *à direita* quando as duas listas são comparado elemento por elemento.
+A função Operator retorna `!(left == right)`. Você o usa para testar se a *esquerda* não é ordenada da mesma forma que a *correta* quando as duas listas são elementos comparados por elemento.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_operator_ne.cpp
@@ -2871,9 +2870,9 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> operator&lt; (list) (STL/CLR)
+## <a name="op_lt"></a>operador&lt; (lista) (STL/CLR)
 
-Lista inferior a comparação.
+Lista menor que comparação.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2893,9 +2892,9 @@ Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
-O operador função retornará true se, para a posição mais baixa `i` para o qual `!(right[i] < left[i])` é verdade também que `left[i] < right[i]`. Caso contrário, retornará `left->size() < right->size()` usá-lo para testar se *esquerdo* é ordenado antes *direita* quando as duas listas são comparado elemento por elemento.
+A função Operator retornará true se, para a posição mais baixa `i` para a qual `!(right[i] < left[i])` também é true que `left[i] < right[i]`. Caso contrário, ele retornará `left->size() < right->size()` você o usará para testar se a *esquerda* é ordenada antes da *direita* quando as duas listas são comparadas Element por elemento.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_operator_lt.cpp
@@ -2940,9 +2939,9 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operator&lt;= (list) (STL/CLR)
+## <a name="op_lteq"></a>operador&lt;= (lista) (STL/CLR)
 
-Listar menor ou igual comparação.
+Lista de comparação menor ou igual.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -2962,9 +2961,9 @@ Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
-Retorna a função de operador `!(right < left)`. Você pode usá-lo para testar se *esquerdo* não for ordenado após *à direita* quando as duas listas são comparado elemento por elemento.
+A função Operator retorna `!(right < left)`. Você o usa para testar se a *esquerda* não é ordenada após *direita* quando as duas listas são elementos comparados por elemento.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_operator_le.cpp
@@ -3009,9 +3008,9 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> operator== (list) (STL/CLR)
+## <a name="op_eq"></a>Operator = = (lista) (STL/CLR)
 
-Comparação de igualdade de lista.
+Listar comparação igual.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -3031,9 +3030,9 @@ Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
-A função de operador retornará true somente se as sequências controladas por *esquerdo* e *à direita* têm o mesmo tamanho e, para cada posição `i`, `left[i] ==` `right[i]`. Usá-lo para testar se *esquerdo* é ordenada igual *direita* quando as duas listas são comparado elemento por elemento.
+A função Operator retornará true somente se as sequências controladas pela *esquerda* e *à direita* tiverem o mesmo comprimento e, para cada posição `i`, `left[i] ==` `right[i]`. Você o usa para testar se a *esquerda* é ordenada da mesma forma que a *direita* quando as duas listas são elementos comparados por elemento.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_operator_eq.cpp
@@ -3078,9 +3077,9 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operator&gt; (list) (STL/CLR)
+## <a name="op_gt"></a>operador&gt; (lista) (STL/CLR)
 
-Lista de comparação de maior que.
+Lista maior que comparação.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -3100,9 +3099,9 @@ Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
-Retorna a função de operador `right` `<` `left`. Usá-lo para testar se *esquerdo* é ordenada após *direita* quando as duas listas são comparado elemento por elemento.
+A função Operator retorna `right` `<` `left`. Você o usa para testar se a *esquerda* é ordenada após *direita* quando as duas listas são elementos comparados por elemento.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_operator_gt.cpp
@@ -3147,9 +3146,9 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operator&gt;= (list) (STL/CLR)
+## <a name="op_gteq"></a>operador&gt;= (lista) (STL/CLR)
 
-Listar maior que ou igual a comparação.
+Lista maior ou igual a comparação.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -3169,9 +3168,9 @@ Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
-Retorna a função de operador `!(left` `<` `right)`. Você pode usá-lo para testar se *esquerdo* não for ordenado antes *à direita* quando as duas listas são comparado elemento por elemento.
+A função Operator retorna `!(left` `<` `right)`. Você o usa para testar se a *esquerda* não é ordenada antes da *direita* quando as duas listas são comparadas Element por elemento.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // cliext_list_operator_ge.cpp

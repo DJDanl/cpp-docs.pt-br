@@ -1,5 +1,5 @@
 ---
-title: Referência (Tempo de Execução de Simultaneidade)
+title: Referência (Runtime de Simultaneidade)
 ms.date: 11/04/2016
 f1_keywords:
 - concurrent_vector/Concurrency::details::_Concurrent_vector_base_v4::_My_segment
@@ -217,7 +217,6 @@ f1_keywords:
 - concurrent_vector/Concurrency::details::_Concurrent_vector_base_v4::_Segment_t
 - concrt/Concurrency::details::_ReentrantPPLLock::_Scoped_lock
 - ppl/Concurrency::_Task_handle_base_with_dtor::_Task_handle_base
-- DWORD
 - concurrent_queue/Concurrency::details::_Concurrent_queue_base_v4::_Internal_empty
 - concrt/Concurrency::details::_TaskCollection::_Wait
 - agents/Concurrency::_Order_node_base::consume_message
@@ -453,25 +452,25 @@ helpviewer_keywords:
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1ae4616400069b44e23e30e3df69aae6dec6592
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180141"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446286"
 ---
-# <a name="reference-concurrency-runtime"></a>Referência (Tempo de Execução de Simultaneidade)
+# <a name="reference-concurrency-runtime"></a>Referência (Runtime de Simultaneidade)
 
-Esta seção contém informações de referência para o tempo de execução de simultaneidade.
+Esta seção contém informações de referência para o Tempo de Execução de Simultaneidade.
 
 > [!Note]
-> O C++ padrão de linguagem reserva o uso de identificadores que começam com um caractere de sublinhado (_) para implementações, como bibliotecas. Não use esses nomes em seu código. O comportamento de elementos de código cujos nomes seguem essa convenção não é garantido e está sujeito a alteração em versões futuras. Por esses motivos, esses elementos de código são omitidos da documentação do tempo de execução de simultaneidade.
+> O C++ padrão de idioma reserva o uso de identificadores que começam com um caractere de sublinhado (_) para implementações como bibliotecas. Não use esses nomes em seu código. O comportamento de elementos de código cujos nomes seguem essa convenção não é garantido e está sujeito a alteração em versões futuras. Por esses motivos, esses elementos de código são omitidos da documentação Tempo de Execução de Simultaneidade.
 
 ## <a name="in-this-section"></a>Nesta seção
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
-O namespace de simultaneidade fornece classes e funções que permitem que você acessam no tempo de execução de simultaneidade, uma estrutura de programação simultânea para C++. Para obter mais informações, consulte [Tempo de Execução de Simultaneidade](../concurrency-runtime.md).
+O namespace de simultaneidade fornece classes e funções que lhe dão acesso ao Tempo de Execução de Simultaneidade, uma estrutura de programação simultânea C++para o. Para obter mais informações, consulte [Runtime de Simultaneidade](../concurrency-runtime.md).
 
-[std namespace](std-namespace.md)
+[namespace padrão](std-namespace.md)
 
-[stdx namespace](stdx-namespace.md)
+[namespace stdx](stdx-namespace.md)

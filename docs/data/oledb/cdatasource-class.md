@@ -18,7 +18,6 @@ f1_keywords:
 - ATL.CDataSource.GetProperties
 - CDataSource.GetProperties
 - ATL::CDataSource::GetProperties
-- GetProperties
 - ATL::CDataSource::GetProperty
 - ATL.CDataSource.GetProperty
 - CDataSource.GetProperty
@@ -57,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 3cb522d1f6ed256f8e042bc2f978e8bc5100888c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d97138b548a3e303898ee2bafde88af38aa78f40
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311703"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445303"
 ---
 # <a name="cdatasource-class"></a>Classe CDataSource
 
@@ -74,21 +73,21 @@ Corresponde a um objeto de fonte de dados OLE DB, que representa uma conexão po
 class CDataSource
 ```
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** atldbcli. h
 
 ## <a name="members"></a>Membros
 
-### <a name="methods"></a>Métodos
+### <a name="methods"></a>{1&gt;Métodos&lt;1}
 
 |||
 |-|-|
-|[Fechar](#close)|Fecha a conexão.|
-|[GetInitializationString](#getinitializationstring)|Recupera a cadeia de caracteres de inicialização da fonte de dados que está aberta no momento.|
+|[Fechar](#close)|Encerra a conexão.|
+|[Getinicializastring](#getinitializationstring)|Recupera a cadeia de caracteres de inicialização da fonte de dados que está aberta no momento.|
 |[GetProperties](#getproperties)|Obtém os valores das propriedades atualmente definidas para a fonte de dados conectada.|
 |[GetProperty](#getproperty)|Obtém o valor de uma única propriedade definida atualmente para a fonte de dados conectada.|
-|[Abrir](#open)|Cria uma conexão com um provedor (fonte de dados) usando um `CLSID`moniker `ProgID`, ou um `CEnumerator` identificador de origem fornecido pelo chamador.|
+|[Abrir](#open)|Cria uma conexão com um provedor (fonte de dados) usando um `CLSID`, `ProgID`ou um moniker `CEnumerator` fornecido pelo chamador.|
 |[OpenFromFileName](#openfromfilename)|Abre uma fonte de dados de um arquivo especificado pelo nome de arquivo fornecido pelo usuário.|
 |[OpenFromInitializationString](#openfrominitializationstring)|Abre a fonte de dados especificada por uma cadeia de caracteres de inicialização.|
 |[OpenWithPromptFileName](#openwithpromptfilename)|Permite que o usuário selecione um arquivo de link de dados criado anteriormente para abrir a fonte de dados correspondente.|
@@ -96,13 +95,13 @@ class CDataSource
 
 ## <a name="remarks"></a>Comentários
 
-Uma ou mais sessões de banco de dados podem ser criadas para uma única conexão. Essas sessões são representadas `CSession`por. Você deve chamar [CDataSource:: Open](../../data/oledb/cdatasource-open.md) para abrir a conexão antes de criar uma sessão `CSession::Open`com.
+Uma ou mais sessões de banco de dados podem ser criadas para uma única conexão. Essas sessões são representadas por `CSession`. Você deve chamar [CDataSource:: Open](../../data/oledb/cdatasource-open.md) para abrir a conexão antes de criar uma sessão com `CSession::Open`.
 
-Para obter um exemplo de como usar `CDataSource`o, consulte o exemplo [CatDB](../../overview/visual-cpp-samples.md) .
+Para obter um exemplo de como usar `CDataSource`, consulte o exemplo [CatDB](../../overview/visual-cpp-samples.md) .
 
 ## <a name="close"></a>CDataSource:: fechar
 
-Fecha a conexão liberando o `m_spInit` ponteiro.
+Fecha a conexão liberando o ponteiro de `m_spInit`.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -129,7 +128,7 @@ fora Um ponteiro para a cadeia de inicialização.
 *bIncludePassword*<br/>
 no **true** se a cadeia de caracteres incluir uma senha; caso contrário, **false**.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um HRESULT padrão.
 
@@ -154,7 +153,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 Consulte [IDBProperties:: GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) na *referência do programador de OLE DB* no SDK do Windows.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um HRESULT padrão.
 
@@ -183,9 +182,9 @@ no Um GUID que identifica o conjunto de propriedades para o qual retornar a prop
 no A ID da propriedade a ser retornada.
 
 *pVariant*<br/>
-fora Um ponteiro para a variante em `GetProperty` que retorna o valor da propriedade.
+fora Um ponteiro para a variante em que `GetProperty` retorna o valor da propriedade.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um HRESULT padrão.
 
@@ -195,7 +194,7 @@ Para obter várias propriedades, use [GetProperties](../../data/oledb/cdatasourc
 
 ## <a name="open"></a>CDataSource:: abrir
 
-Abre uma conexão com uma fonte de dados usando `CLSID`um `ProgID`moniker, `CEnumerator` ou ou solicita ao usuário uma caixa de diálogo do localizador.
+Abre uma conexão com uma fonte de dados usando um `CLSID`, `ProgID`ou `CEnumerator` moniker ou solicita ao usuário uma caixa de diálogo do localizador.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -240,7 +239,7 @@ HRESULT Open(LPCSTR szProgID,
 
 #### <a name="parameters"></a>Parâmetros
 
-*clsid*<br/>
+*CLSID*<br/>
 no O `CLSID` do provedor de dados.
 
 *pPropSet*<br/>
@@ -273,7 +272,7 @@ no Manipule a janela que será o pai da caixa de diálogo. Usar a sobrecarga de 
 *dwPromptOptions*<br/>
 no Determina o estilo da caixa de diálogo do localizador a ser exibida. Consulte Msdasc. h para obter os valores possíveis.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um HRESULT padrão.
 
@@ -283,9 +282,9 @@ A sobrecarga do método que usa o parâmetro *HWND* abre um objeto de fonte de d
 
 As sobrecargas de método que não usam o parâmetro *HWND* abrem um objeto de fonte de dados sem usar os componentes de serviço em oledb32. dll. Um objeto [CDataSource](../../data/oledb/cdatasource-class.md) aberto com essas sobrecargas de função não poderá utilizar nenhuma das funcionalidades dos componentes de serviço.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
-O código a seguir mostra como abrir uma fonte de dados do Jet 4,0 com modelos de OLE DB. Você trata a fonte de dados Jet como uma fonte de dados OLE DB. No entanto, sua `Open` chamada para precisa de dois conjuntos de propriedades: um para DBPROPSET_DBINIT e outro para DBPROPSET_JETOLEDB_DBINIT, para que você possa definir DBPROP_JETOLEDB_DATABASEPASSWORD.
+O código a seguir mostra como abrir uma fonte de dados do Jet 4,0 com modelos de OLE DB. Você trata a fonte de dados Jet como uma fonte de dados OLE DB. No entanto, sua chamada para `Open` precisa de dois conjuntos de propriedades: um para DBPROPSET_DBINIT e o outro para DBPROPSET_JETOLEDB_DBINIT, para que você possa definir DBPROP_JETOLEDB_DATABASEPASSWORD.
 
 [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]
 
@@ -306,7 +305,7 @@ no O nome de um arquivo, geralmente uma conexão de fonte de dados (. UDL).
 
 Para obter mais informações sobre arquivos de link de dados (arquivos. udl), consulte [visão geral da API de link de dados](/previous-versions/windows/desktop/ms718102(v=vs.85)) no SDK do Windows.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um HRESULT padrão.
 
@@ -335,7 +334,7 @@ no Se esse argumento for definido como **true**, `OpenFromInitializationString` 
 
 O valor padrão é **false**, que especifica que o usuário nunca será solicitado (define DBPROP_INIT_PROMPT como DBPROMPT_NOPROMPT).
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um HRESULT padrão.
 
@@ -366,7 +365,7 @@ no Determina o estilo da caixa de diálogo do localizador a ser exibida. Consult
 *szInitialDirectory*<br/>
 no O diretório inicial a ser exibido na caixa de diálogo localizador.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um HRESULT padrão.
 
@@ -392,7 +391,7 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 
 #### <a name="parameters"></a>Parâmetros
 
-*clsid*<br/>
+*CLSID*<br/>
 no O `CLSID` de um provedor de dados.
 
 *szProgID*<br/>
@@ -404,7 +403,7 @@ no Um ponteiro para uma matriz de estruturas [DBPROPSET](/previous-versions/wind
 *ulPropSets*<br/>
 no O número de estruturas [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) passadas no argumento *pPropSet* . Se isso for zero, o provedor ignorará *pPropSet*.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um HRESULT padrão.
 

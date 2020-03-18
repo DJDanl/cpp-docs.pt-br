@@ -2,7 +2,6 @@
 title: 'Como: Adicionar, editar ou excluir controles (C++)'
 ms.date: 02/15/2019
 f1_keywords:
-- vc.editors.dialog.dialog
 - vc.controls.activex
 - vc.editors.dialog.insertActiveXControls
 helpviewer_keywords:
@@ -43,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: b940e94faf710de8ae5bc604b47dc35a1bc290a7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a42a64f93d334c0b5c63b0eca1567e6964d0a3ae
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491176"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447213"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Como: Adicionar, editar ou excluir controles (C++)
 
@@ -59,7 +58,7 @@ A guia **Editor de caixa de diálogo** é exibida na [janela caixa de ferramenta
 > [!TIP]
 > Ao usar o **Editor de caixa de diálogo**, em muitas instâncias, você pode selecionar o botão direito do mouse para exibir um menu de atalho de comandos usados com frequência.
 
-## <a name="add-controls"></a>Adicionar controles
+## <a name="add-controls"></a>adicionar controles
 
 ### <a name="to-add-a-control"></a>Para adicionar um controle
 
@@ -99,7 +98,7 @@ A guia **Editor de caixa de diálogo** é exibida na [janela caixa de ferramenta
 
 ### <a name="to-add-a-custom-control"></a>Para adicionar um controle personalizado
 
-Você pode adicionar controles personalizados à caixa de diálogo. Selecione o ícone de **controle personalizado** na caixa de **ferramentas** e arraste-o para a caixa de diálogo. Para adicionar um `Syslink` controle, adicione um controle personalizado e, em seguida, altere a propriedade de `Syslink` **classe** do controle para. Essa ação fará com que as propriedades sejam atualizadas e `Syslink` mostre as propriedades do controle. Para obter informações sobre a classe de invólucro do MFC, consulte [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
+Você pode adicionar controles personalizados à caixa de diálogo. Selecione o ícone de **controle personalizado** na caixa de **ferramentas** e arraste-o para a caixa de diálogo. Para adicionar um controle de `Syslink`, adicione um controle personalizado e, em seguida, altere a propriedade **Class** do controle para `Syslink`. Essa ação fará com que as propriedades sejam atualizadas e mostre as propriedades do controle de `Syslink`. Para obter informações sobre a classe de invólucro do MFC, consulte [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
 
 ## <a name="edit-controls"></a>Editar controles
 
@@ -119,12 +118,12 @@ Você pode adicionar controles personalizados à caixa de diálogo. Selecione o 
 
 1. Verifique se o controle tem foco no **Editor da caixa de diálogo**.
 
-1. Vá para menu **Editar** > **desfazer**. Se o foco não estiver no controle, o comando **desfazer** não estará disponível.
+1. Vá para menu **editar** > **desfazer**. Se o foco não estiver no controle, o comando **desfazer** não estará disponível.
 
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Para definir uma variável de membro para um controle de caixa de diálogo (não botão)
 
 > [!NOTE]
-> Esse processo se aplica somente a controles de caixa de diálogo dentro de um projeto MFC. Os projetos da ATL devem usar a nova caixa de diálogo **mensagens e manipuladores de eventos do Windows** . Para obter mais informações, consulte [tipos de mensagem associados a objetos de interface do usuário](../mfc/reference/message-types-associated-with-user-interface-objects.md), editando [um manipulador de mensagens](../mfc/reference/editing-a-message-handler.md)e [definindo um manipulador de mensagens para uma mensagem refletida](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
+> Esse processo se aplica somente a controles de caixa de diálogo dentro de um projeto MFC. Os projetos da ATL devem usar a nova caixa de diálogo **mensagens e manipuladores de eventos do Windows** . Para obter mais informações, consulte [tipos de mensagem associados a objetos de interface do usuário](../mfc/reference/message-types-associated-with-user-interface-objects.md), [editando um manipulador de mensagens](../mfc/reference/editing-a-message-handler.md)e [definindo um manipulador de mensagens para uma mensagem refletida](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
 
 1. No [Editor de caixa de diálogo](../windows/dialog-editor.md), selecione um controle.
 
@@ -170,7 +169,7 @@ Atualmente, o **Editor de caixa de diálogo** não adiciona automaticamente o c�
 ||||
 |-|-|-|
 |Controle deslizante|Controle de árvore|Seletor de data e hora|
-|Controle de rotação|Controle guia|Calendário mensal|
+|Controle de rotação|Controle guia|Month Calendar|
 |Controle de progresso|Controle de animação|Controle de endereço IP|
 |Tecla de acesso|Controle de edição rico|Caixa de combinação estendida|
 |Controle de lista|Controle rich edit 2,0|Controle personalizado|
@@ -182,11 +181,11 @@ Para usar controles RichEdit, você deve chamar `LoadLibrary`. Para obter mais i
 > [!NOTE]
 > Para usar um controle RichEdit com MFC, você deve primeiro chamar [o AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) para carregar o controle RichEdit 2,0 (Riched20. DLL) ou chame [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) para carregar o controle RichEdit 1,0 mais antigo (riched32. DLL).
 >
-> Você pode usar a classe [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) atual com o controle RichEdit 1,0 mais antigo, `CRichEditCtrl` mas é projetado apenas para dar suporte ao controle RichEdit 2,0. Como o RichEdit 1,0 e o RichEdit 2,0 são semelhantes, a maioria dos métodos funcionará. No entanto, há algumas diferenças entre os controles 1,0 e 2,0, de modo que alguns métodos podem funcionar incorretamente ou não funcionar.
+> Você pode usar a classe [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) atual com o controle RichEdit 1,0 mais antigo, mas `CRichEditCtrl` é projetada apenas para dar suporte ao controle RichEdit 2,0. Como o RichEdit 1,0 e o RichEdit 2,0 são semelhantes, a maioria dos métodos funcionará. No entanto, há algumas diferenças entre os controles 1,0 e 2,0, de modo que alguns métodos podem funcionar incorretamente ou não funcionar.
 
 ### <a name="activex-controls"></a>Controles ActiveX
 
-O Visual Studio permite que você insira controles ActiveX em sua caixa de diálogo. Para obter mais informações, consulte [controles ActiveX do MFC](../mfc/mfc-activex-controls.md) e contêineres de [controle ActiveX](../mfc/activex-control-containers.md).
+O Visual Studio permite que você insira controles ActiveX em sua caixa de diálogo. Para obter mais informações, consulte [controles ActiveX do MFC](../mfc/mfc-activex-controls.md) e [contêineres de controle ActiveX](../mfc/activex-control-containers.md).
 
 A caixa de diálogo **Inserir controle ActiveX** permite que você insira controles ActiveX em sua caixa de diálogo ao usar o [Editor de caixa](../windows/dialog-editor.md)de diálogo. Essa caixa de diálogo contém as seguintes propriedades:
 
@@ -217,22 +216,22 @@ A caixa de diálogo **Inserir controle ActiveX** permite que você insira contro
 
 Os controles ActiveX fornecidos por fornecedores independentes podem vir equipados com suas próprias propriedades e características. Essas propriedades são exibidas na janela **Propriedades** . Todas as páginas de propriedades criadas pelos gravadores do controle ActiveX são exibidas na caixa de diálogo **páginas de propriedades** . (Para exibir a **página de propriedades** de um controle ActiveX específico, selecione o botão **página de propriedades** na [janela Propriedades](/visualstudio/ide/reference/properties-window)).
 
-- Selecione o controle **ActiveX** e vá para o menu **Exibir** > página de**Propriedades** para exibir as propriedades. Faça alterações conforme necessário na página de propriedades.
+- Selecione o controle **ActiveX** e vá para a **exibição** de menu > **página de propriedades** para exibir as propriedades. Faça alterações conforme necessário na página de propriedades.
 
    Várias guias são exibidas na página de propriedades de um controle ActiveX, dependendo das folhas de propriedades que são fornecidas como parte do controle ActiveX.
 
 > [!NOTE]
 > Esse procedimento se aplica ao uso da página de propriedades para editar controles ActiveX. Você também pode procurar e editar propriedades do ActiveX na janela novas **Propriedades** .
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 Win32
 
 ## <a name="see-also"></a>Consulte também
 
 [Gerenciar controles da caixa de diálogo](controls-in-dialog-boxes.md)<br/>
-[Como: Controles de layout](arrangement-of-controls-on-dialog-boxes.md)<br/>
-[Como: Definir acesso e valores de controle](defining-mnemonics-access-keys.md)
+[Como: controles de layout](arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Como definir o acesso e os valores de controle](defining-mnemonics-access-keys.md)
 
 <!-- excluded links
 [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)<br/>

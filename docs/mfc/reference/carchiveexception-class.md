@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
 ms.openlocfilehash: 731735bccf9225e67d82b1fe90336c92a630b368
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855242"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420648"
 ---
 # <a name="carchiveexception-class"></a>Classe CArchiveException
 
@@ -33,13 +33,13 @@ class CArchiveException : public CException
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CArchiveException::CArchiveException](#carchiveexception)|Constrói um objeto `CArchiveException`.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CArchiveException:: m_cause](#m_cause)|Indica a causa da exceção.|
 |[CArchiveException:: m_strFileName](#m_strfilename)|Especifica o nome do arquivo para esta condição de exceção.|
@@ -58,7 +58,7 @@ A classe `CArchiveException` inclui um membro de dados público que indica a cau
 
 `CArchiveException`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -72,7 +72,7 @@ CArchiveException(
     LPCTSTR lpszArchiveName = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *causa*<br/>
 Uma variável de tipo enumerada que indica o motivo da exceção. Para obter uma lista dos enumeradores, consulte o membro de dados [m_cause](#m_cause) .
@@ -118,7 +118,7 @@ Esse membro de dados é uma variável pública do tipo **int**. Seus valores sã
     >  Esses enumeradores de causa de `CArchiveException` são diferentes dos enumeradores de causa de `CFileException`.
 
     > [!NOTE]
-    > O `CArchiveException::generic` foi preterido. Use `genericException` em seu lugar. Se **genérico** for usado em um aplicativo e criado com/CLR, haverá erros de sintaxe que não são fáceis de decifrar.
+    > O `CArchiveException::generic` foi preterido. Use `genericException` em vez disso. Se **genérico** for usado em um aplicativo e criado com/CLR, haverá erros de sintaxe que não são fáceis de decifrar.
 
 ##  <a name="m_strfilename"></a>CArchiveException:: m_strFileName
 
@@ -128,7 +128,7 @@ Especifica o nome do arquivo para esta condição de exceção.
 CString m_strFileName;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CException](../../mfc/reference/cexception-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (map)
 - std::operator== (map)
 ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883949"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419962"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; operadores
 
@@ -35,7 +35,7 @@ bool operator!=(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `map`.
@@ -51,7 +51,7 @@ Um objeto do tipo `map`.
 
 A comparação entre os objetos de mapa baseia-se em uma comparação par de seus elementos. Dois mapas serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // map_op_ne.cpp
@@ -100,7 +100,7 @@ bool operator<(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `map`.
@@ -116,7 +116,7 @@ Um objeto do tipo `map`.
 
 A comparação entre os objetos de mapa baseia-se em uma comparação par de seus elementos. A relação menor que entre dois objetos é baseada em uma comparação do primeiro par de elementos desiguais.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // map_op_lt.cpp
@@ -165,7 +165,7 @@ bool operator<=(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `map`.
@@ -177,7 +177,7 @@ Um objeto do tipo `map`.
 
 **true**, se o mapa à esquerda do operador for menor ou igual ao mapa à direita do operador; caso contrário, **false**.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // map_op_le.cpp
@@ -233,7 +233,7 @@ bool operator==(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `map`.
@@ -249,7 +249,7 @@ Um objeto do tipo `map`.
 
 A comparação entre os objetos de mapa baseia-se em uma comparação par de seus elementos. Dois mapas serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // map_op_eq.cpp
@@ -298,7 +298,7 @@ bool operator>(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `map`.
@@ -314,7 +314,7 @@ Um objeto do tipo `map`.
 
 A comparação entre os objetos de mapa baseia-se em uma comparação par de seus elementos. A relação maior que entre dois objetos é baseada em uma comparação entre o primeiro par de elementos desiguais.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // map_op_gt.cpp
@@ -362,7 +362,7 @@ bool operator>=(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `map`.
@@ -374,7 +374,7 @@ Um objeto do tipo `map`.
 
 **true**, se o mapa à esquerda do operador for maior ou igual ao mapa à direita da lista; caso contrário, **false**.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // map_op_ge.cpp
@@ -430,7 +430,7 @@ bool operator!=(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `multimap`.
@@ -446,7 +446,7 @@ Um objeto do tipo `multimap`.
 
 A comparação entre os objetos de multimapa baseia-se em uma comparação par de seus elementos. Dois multimapas serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // multimap_op_ne.cpp
@@ -495,7 +495,7 @@ bool operator<(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `multimap`.
@@ -511,7 +511,7 @@ Um objeto do tipo `multimap`.
 
 A comparação entre os objetos de multimapa baseia-se em uma comparação par de seus elementos. A relação menor que entre dois objetos é baseada em uma comparação do primeiro par de elementos desiguais.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // multimap_op_lt.cpp
@@ -560,7 +560,7 @@ bool operator<=(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `multimap`.
@@ -572,7 +572,7 @@ Um objeto do tipo `multimap`.
 
 **true**, se o multimapa à esquerda do operador for menor ou igual ao multimapa à direita do operador; caso contrário, **false**.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // multimap_op_le.cpp
@@ -628,7 +628,7 @@ bool operator==(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `multimap`.
@@ -644,7 +644,7 @@ Um objeto do tipo `multimap`.
 
 A comparação entre os objetos de multimapa baseia-se em uma comparação par de seus elementos. Dois multimapas serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // multimap_op_eq.cpp
@@ -693,7 +693,7 @@ bool operator>(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `multimap`.
@@ -709,7 +709,7 @@ Um objeto do tipo `multimap`.
 
 A comparação entre os objetos de multimapa baseia-se em uma comparação par de seus elementos. A relação maior que entre dois objetos é baseada em uma comparação entre o primeiro par de elementos desiguais.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // multimap_op_gt.cpp
@@ -758,7 +758,7 @@ bool operator>=(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `multimap`.
@@ -770,7 +770,7 @@ Um objeto do tipo `multimap`.
 
 **true**, se o multimapa à esquerda do operador for maior que ou igual ao multimapa à direita da lista; caso contrário, **false**.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // multimap_op_ge.cpp
