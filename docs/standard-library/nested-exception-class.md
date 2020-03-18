@@ -2,18 +2,18 @@
 title: Classe nested_exception
 ms.date: 11/04/2016
 f1_keywords:
-- exception/std::bad_exception
+- exception/std::nested_exception
 helpviewer_keywords:
-- bad_exception class
+- nested_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: 5741b3aa255f915500f5fe79ab5374c8c86f8814
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ed58eb6cc074b54ae6801d2b11089af9a79f8c8f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460186"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441621"
 ---
-# <a name="nestedexception-class"></a>Classe nested_exception
+# <a name="nested_exception-class"></a>Classe nested_exception
 
 A classe descreve uma exceção para uso com várias heranças. Ele captura a exceção atualmente manipulada e a armazena para uso posterior.
 
@@ -36,7 +36,7 @@ class nested_exception {
 |-|-|
 |[operator=](#op_as)||
 
-### <a name="functions"></a>Funções
+### <a name="functions"></a>{1&gt;Funções&lt;1}
 
 |||
 |-|-|
@@ -55,9 +55,9 @@ nested_exception& operator=(const nested_exception&) = default;
 exception_ptr nested_ptr() const;
 ```
 
-#### <a name="return-value"></a>Valor de retorno
+#### <a name="return-value"></a>Valor retornado
 
-A exceção armazenada capturada `nested_exception` por este objeto.
+A exceção armazenada capturada por este objeto de `nested_exception`.
 
 ### <a name="rethrow_nested"></a>rethrow_nested
 
@@ -67,15 +67,15 @@ A exceção armazenada capturada `nested_exception` por este objeto.
 
 #### <a name="remarks"></a>Comentários
 
-Se `nested_ptr()` o retornar um ponteiro nulo, a função `std::terminate()`chamará. Caso contrário, ele gera a exceção armazenada `*this`capturada pelo.
+Se `nested_ptr()` retornar um ponteiro nulo, a função chamará `std::terminate()`. Caso contrário, ele lança a exceção armazenada capturada por `*this`.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** \<exception>
+**Cabeçalho:** exceção de \<>
 
 **Namespace:** std
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe de exceção](../standard-library/exception-class.md)\
+[classe de exceção](../standard-library/exception-class.md)\
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

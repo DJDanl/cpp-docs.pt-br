@@ -21,7 +21,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- tell
 - telli64
 - _telli64
 - _tell
@@ -33,12 +32,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 54f672a1b230103d6f9ae1c45d2c9e487764939e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f092bdfdb27dd73baf159da60ba66bd5809aaf61
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946265"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443679"
 ---
 # <a name="_tell-_telli64"></a>_tell, _telli64
 
@@ -60,7 +59,7 @@ __int64 _telli64(
 *processamento*<br/>
 Descritor de arquivo que faz referência a um arquivo aberto.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 A posição atual do ponteiro de arquivo. Em dispositivos sem capacidade de busca, o valor retornado será indefinido.
 
@@ -72,7 +71,7 @@ Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/er
 
 A função **_tell** Obtém a posição atual do ponteiro do arquivo (se houver) associado ao argumento *Handle* . A posição é expressa como o número de bytes do início do arquivo. Para a função **_telli64** , esse valor é expresso como um inteiro de 64 bits.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -80,7 +79,7 @@ A função **_tell** Obtém a posição atual do ponteiro do arquivo (se houver)
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```C
 // crt_tell.c

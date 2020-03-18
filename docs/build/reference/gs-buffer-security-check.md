@@ -4,7 +4,6 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.BufferSecurityCheck
 - VC.Project.VCCLCompilerTool.BufferSecurityCheck
-- /GS
 helpviewer_keywords:
 - buffers [C++], buffer overruns
 - buffer overruns, compiler /GS switch
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-ms.openlocfilehash: 10afa874092eb563903ba5f49c6add136afc869c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92d296e8079a9ecd8d366c46bbdad8b2ee5dc313
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292166"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439566"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (verificação de segurança do buffer)
 
-Detecta alguns estouros de buffer que substituem o endereço de retorno da função, o endereço do manipulador de exceção ou determinados tipos de parâmetros. Causar um estouro de buffer é uma técnica usada por hackers para explorar o código que não impõe restrições de tamanho do buffer.
+Detecta algumas saturações de buffer que substituem o endereço de retorno de uma função, o endereço do manipulador de exceção ou determinados tipos de parâmetros. A causa de uma saturação de buffer é uma técnica usada por hackers para explorar o código que não impõe restrições de tamanho de buffer.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,25 +32,25 @@ Detecta alguns estouros de buffer que substituem o endereço de retorno da funç
 
 ## <a name="remarks"></a>Comentários
 
-**/GS** é ativado por padrão. Se você espera que seu aplicativo não tenha nenhuma exposição de segurança, use **/GS-**. Para obter mais informações sobre como suprimir a detecção de estouro de buffer, consulte [safebuffers](../../cpp/safebuffers.md).
+O **/GS** está ativado por padrão. Se você espera que seu aplicativo não tenha nenhuma exposição de segurança, use **/GS-** . Para obter mais informações sobre como suprimir a detecção de estouro de buffer, consulte [safebuffers](../../cpp/safebuffers.md).
 
 ## <a name="security-checks"></a>Verificações de segurança
 
-Em funções que o compilador reconhece como sujeitos a problemas de estouro de buffer, o compilador aloca espaço na pilha antes do endereço de retorno. Entrada da função, o espaço alocado é carregado com um *cookie de segurança* que é calculada uma vez no carregamento do módulo. Na saída da função e durante o desenrolamento de quadro em sistemas operacionais de 64 bits, uma função auxiliar é chamada para certificar-se de que o valor do cookie ainda é o mesmo. Um valor diferente indica que uma substituição da pilha pode ter ocorrido. Se um valor diferente for detectado, o processo será encerrado.
+Em funções que o compilador reconhece como sujeito a problemas de saturação de buffer, o compilador aloca espaço na pilha antes do endereço de retorno. Na entrada da função, o espaço alocado é carregado com um *cookie de segurança* que é calculado uma vez no carregamento do módulo. Na saída da função, e durante o desenrolamento do quadro em sistemas operacionais de 64 bits, uma função auxiliar é chamada para garantir que o valor do cookie ainda seja o mesmo. Um valor diferente indica que uma substituição da pilha pode ter ocorrido. Se um valor diferente for detectado, o processo será encerrado.
 
-## <a name="gs-buffers"></a>Buffers de GS
+## <a name="gs-buffers"></a>Buffers GS
 
-Uma verificação de segurança de estouro de buffer é executada em um *buffer GS*. Um buffer de GS pode ser um destes procedimentos:
+Uma verificação de segurança de saturação de buffer é executada em um *buffer GS*. Um buffer GS pode ser um dos seguintes:
 
-- Uma matriz que é maior que 4 bytes, tem mais de dois elementos e tem um tipo de elemento que não é um tipo de ponteiro.
+- Uma matriz com mais de 4 bytes tem mais de dois elementos e tem um tipo de elemento que não é um tipo de ponteiro.
 
-- Uma estrutura de dados cujo tamanho é maior que 8 bytes e não contém nenhum ponteiro.
+- Uma estrutura de dados cujo tamanho tem mais de 8 bytes e não contém ponteiros.
 
-- Um buffer alocado usando o [alloca](../../c-runtime-library/reference/alloca.md) função.
+- Um buffer alocado usando a função [_alloca](../../c-runtime-library/reference/alloca.md) .
 
-- Qualquer classe ou estrutura que contém um buffer de GS.
+- Qualquer classe ou estrutura que contenha um buffer GS.
 
-Por exemplo, as seguintes instruções declaram buffers GS.
+Por exemplo, as instruções a seguir declaram buffers GS.
 
 ```cpp
 char buffer[20];
@@ -60,7 +59,7 @@ struct { int a; int b; int c; int d; } myStruct;
 struct { int a; char buf[20]; };
 ```
 
-No entanto, as instruções a seguir não declaram os buffers de GS. As primeiras duas declarações contêm elementos do tipo de ponteiro. As instruções de terceira e quarta declaram matrizes cujo tamanho é muito pequeno. A quinta instrução declara uma estrutura cujo tamanho em uma plataforma não é mais do que 8 bytes de x86.
+No entanto, as instruções a seguir não declaram buffers GS. As duas primeiras declarações contêm elementos de tipo de ponteiro. A terceira e a quarta instruções declaram matrizes cujo tamanho é muito pequeno. A quinta instrução declara uma estrutura cujo tamanho em uma plataforma x86 não tem mais de 8 bytes.
 
 ```cpp
 char *pBuf[20];
@@ -70,67 +69,67 @@ int buf[2];
 struct { int a; int b; };
 ```
 
-## <a name="initialize-the-security-cookie"></a>Inicializar o Cookie de segurança
+## <a name="initialize-the-security-cookie"></a>Inicializar o cookie de segurança
 
-O **/GS** opção de compilador requer que o cookie de segurança seja inicializada antes de qualquer função que usa o cookie é executada. O cookie de segurança deve ser inicializado imediatamente na entrada para um arquivo EXE ou DLL. Isso é feito automaticamente se você usar os pontos de entrada do VCRuntime padrão: mainCRTStartup, wmainCRTStartup, WinMainCRTStartup, wWinMainCRTStartup, ou dllmaincrtstartup. Se você usar um ponto de entrada alternativo, você deve inicializar o cookie de segurança manualmente, chamando [security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md).
+A opção de compilador **/GS** requer que o cookie de segurança seja inicializado antes que qualquer função que usa o cookie seja executada. O cookie de segurança deve ser inicializado imediatamente na entrada para um EXE ou DLL. Isso é feito automaticamente se você usar os pontos de entrada VCRuntime padrão: mainCRTStartup, wmainCRTStartup, WinMainCRTStartup, wWinMainCRTStartup ou _DllMainCRTStartup. Se você usar um ponto de entrada alternativo, deverá inicializar manualmente o cookie de segurança chamando [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md).
 
 ## <a name="what-is-protected"></a>O que é protegido
 
-O **/GS** opção de compilador protege os seguintes itens:
+A opção de compilador **/GS** protege os seguintes itens:
 
 - O endereço de retorno de uma chamada de função.
 
 - O endereço de um manipulador de exceção para uma função.
 
-- Parâmetros de função vulnerável.
+- Parâmetros de função vulneráveis.
 
-Em todas as plataformas, **/GS** tenta detectar saturações de buffer para o endereço de retorno. Saturações de buffer são exploradas mais facilmente em plataformas como x86 e x64, que usam as convenções de chamada que armazenam o endereço de retorno de uma chamada de função na pilha.
+Em todas as plataformas, o **/GS** tenta detectar saturações de buffer no endereço de retorno. As saturações de buffer são exploradas mais facilmente em plataformas como x86 e x64, que usam convenções de chamada que armazenam o endereço de retorno de uma chamada de função na pilha.
 
-Em x86, se uma função usa um manipulador de exceção, o compilador injeta um cookie de segurança para proteger o endereço do manipulador de exceção. O cookie é verificado durante o desenrolamento de quadro.
+No x86, se uma função usar um manipulador de exceção, o compilador injetará um cookie de segurança para proteger o endereço do manipulador de exceção. O cookie é verificado durante o desenrolamento do quadro.
 
-**/GS** protege *vulneráveis parâmetros* que são passados para uma função. Um parâmetro vulnerável for um ponteiro, uma referência de C++, uma C-estrutura (tipo de POD do C++) que contém um ponteiro ou um buffer de GS.
+**/GS** protege *parâmetros vulneráveis* que são passados para uma função. Um parâmetro vulnerável é um ponteiro, uma C++ referência, uma estrutura C (C++ tipo de Pod) que contém um ponteiro ou um buffer GS.
 
-Um parâmetro vulnerável é alocado antes do cookie e variáveis locais. Um estouro de buffer pode substituir esses parâmetros. E o código na função que usa esses parâmetros pode causar um ataque antes que a função retorna e a verificação de segurança é executada. Para minimizar esse risco, o compilador faz uma cópia dos parâmetros vulneráveis durante o prólogo da função e coloca-os abaixo da área de armazenamento de buffers.
+Um parâmetro vulnerável é alocado antes do cookie e das variáveis locais. Uma saturação de buffer pode substituir esses parâmetros. E o código na função que usa esses parâmetros pode causar um ataque antes que a função seja retornada e a verificação de segurança seja executada. Para minimizar esse perigo, o compilador faz uma cópia dos parâmetros vulneráveis durante a função prólogo e os coloca abaixo da área de armazenamento para quaisquer buffers.
 
-O compilador não faz cópias dos parâmetros de vulnerabilidade nas seguintes situações:
+O compilador não faz cópias de parâmetros vulneráveis nas seguintes situações:
 
-- Funções que não contêm um buffer de GS.
+- Funções que não contêm um buffer GS.
 
-- Otimizações ([/O opções](o-options-optimize-code.md)) não estão habilitados.
+- As otimizações ([/o opções](o-options-optimize-code.md)) não estão habilitadas.
 
 - Funções que têm uma lista de argumentos variáveis (...).
 
-- Funções que são marcadas com [naked](../../cpp/naked-cpp.md).
+- Funções que são marcadas com [Naked](../../cpp/naked-cpp.md).
 
 - Funções que contêm código de assembly embutido na primeira instrução.
 
-- Um parâmetro é usado somente de maneiras que são menos prováveis de ser explorável no caso de uma saturação de buffer.
+- Um parâmetro é usado apenas de maneiras que são menos prováveis de serem exploráveis no caso de uma saturação de buffer.
 
 ## <a name="what-is-not-protected"></a>O que não está protegido
 
-O **/GS** opção de compilador não protege contra todos os ataques de segurança de estouro de buffer. Por exemplo, se você tiver um buffer e uma vtable em um objeto, um estouro de buffer pode corromper a vtable.
+A opção de compilador **/GS** não protege contra todos os ataques de segurança contra estouro de buffer. Por exemplo, se você tiver um buffer e uma vtable em um objeto, uma saturação de buffer poderá corromper a vtable.
 
-Mesmo se você usar **/GS**, tente sempre escrever código seguro com nenhum estouros de buffer.
+Mesmo que você use **/GS**, sempre tente escrever código seguro que não tenha saturações de buffer.
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Para definir essa opção do compilador no Visual Studio
 
-1. Na **Gerenciador de soluções**, clique com botão direito no projeto e, em seguida, clique em **propriedades**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e clique em **Propriedades**.
 
-   Para obter mais informações, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+   Para obter mais informações, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. No **páginas de propriedades** caixa de diálogo, clique o **C/C++** pasta.
+1. Na caixa de diálogo **páginas de propriedades** , clique na pasta **C/C++**  .
 
-1. Clique o **geração de código** página de propriedades.
+1. Clique na página de propriedades **geração de código** .
 
-1. Modificar a **Buffer Security Check** propriedade.
+1. Modifique a propriedade de **verificação de segurança do buffer** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
 - Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BufferSecurityCheck%2A>.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
-Este exemplo saturações de um buffer. Isso faz com que o aplicativo falhe em tempo de execução.
+Este exemplo satura um buffer. Isso faz com que o aplicativo falhe em tempo de execução.
 
 ```C
 // compile with: /c /W1

@@ -3,12 +3,12 @@ title: Referência de CppProperties. JSON
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: c276b566d8efc116c8789fd7ebec17dc2017a00d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417365"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442559"
 ---
 # <a name="cpppropertiesjson-reference"></a>Referência de CppProperties. JSON
 
@@ -28,7 +28,7 @@ Uma configuração pode ter uma das seguintes propriedades:
 |`forcedInclude`|O cabeçalho a ser incluído automaticamente em cada unidade de compilação (mapeado para /FI no MSVC ou -include no Clang)|
 |`undefines`|A lista de macros a terem as definições excluídas (mapeada para /U no MSVC)|
 |`intelliSenseMode`|O mecanismo IntelliSense a ser usado. Você pode especificar uma das variantes específicas de arquitetura predefinidas para MSVC, gcc ou clang.|
-|`environments`|Conjuntos de variáveis definidos pelo usuário que se comportam como variáveis de ambiente em um prompt de comando e são acessados com o $ {env.<VARIABLE>} Ela.|
+|`environments`|Conjuntos de variáveis definidos pelo usuário que se comportam como variáveis de ambiente em um prompt de comando e são acessados com a macro $ {env.\<VARIABLE >}.|
 
 ### <a name="intellisensemode-values"></a>valores de intelliSensemode
 
@@ -64,7 +64,7 @@ Observação: os valores `msvc-x86` e `msvc-x64` têm suporte apenas por motivos
 
 O Visual Studio fornece os seguintes ambientes predefinidos para a Microsoft C++ que são mapeados para o prompt de comando do desenvolvedor correspondente. Ao herdar um desses ambientes, você pode consultar qualquer uma das variáveis de ambiente usando a propriedade global `env` com esta sintaxe de macro: $ {env.\<variável >}.
 
-|Nome de variável|DESCRIÇÃO|
+|Nome da Variável|Descrição|
 |-----------|-----------------|
 |vsdev|O ambiente padrão do Visual Studio|
 |msvc_x86|Compilar para x86 usando ferramentas x86|
@@ -77,7 +77,7 @@ O Visual Studio fornece os seguintes ambientes predefinidos para a Microsoft C++
 
 Quando a carga de trabalho do Linux é instalada, os seguintes ambientes ficam disponíveis para o direcionamento remoto do Linux e do WSL:
 
-|Nome de variável|DESCRIÇÃO|
+|Nome da Variável|Descrição|
 |-----------|-----------------|
 |linux_x86|Direcionar ao Linux x86 remotamente|
 |linux_x64|Direcionar ao Linux x64 remotamente|
@@ -131,7 +131,7 @@ Você tem acesso às seguintes macros internas dentro de *CppProperties. JSON*:
 |`${projectRoot}`| O caminho completo para a pasta onde *CppProperties. JSON* é colocado|
 |`${env.vsInstallDir}`| O caminho completo para a pasta em que a instância em execução do Visual Studio está instalada|
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Se o seu projeto tiver uma pasta include e também incluir o *Windows. h* e outros cabeçalhos comuns da SDK do Windows, talvez você queira atualizar o arquivo de configuração *CppProperties. JSON* com o seguinte:
 
@@ -162,7 +162,7 @@ Se o seu projeto tiver uma pasta include e também incluir o *Windows. h* e outr
 
 Se você não estiver vendo o IntelliSense que espera, poderá solucionar problemas acessando **ferramentas** > **Opções** > **Editor de texto** > **CC++ /**  > **avançado** e definindo **habilitar registro em log** como **true**. Para começar, tente definir o **nível de log** para 5 e **registrar filtros em log** como 8.
 
-![Registro de diagnóstico](media/diagnostic-logging.png)
+![Diagnostic logging](media/diagnostic-logging.png)
 
 A saída é canalizada para o **janela de saída** e fica visível quando você escolhe **Mostrar saída de: C++ log Visual**. A saída contém, entre outras coisas, a lista de caminhos de inclusão reais que o IntelliSense está tentando usar. Se os caminhos não corresponderem àqueles em *CppProperties. JSON*, tente fechar a pasta e excluir a subpasta *. vs* que contém dados de navegação armazenados em cache.
 

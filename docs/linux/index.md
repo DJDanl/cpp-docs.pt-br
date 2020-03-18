@@ -3,16 +3,18 @@ layout: LandingPage
 title: Documentação de desenvolvimento em Linux com C++
 description: Criar e depurar aplicativos em execução no Linux.
 ms.topic: landing-page
-ms.openlocfilehash: ee956f25914e1996acb6776d9ecbb8c9e79c689b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 9c09e9bd590ece013a2ee7d85017b3e046394232
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216108"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441515"
 ---
 # <a name="linux-development-with-c-documentation"></a>Documentação de desenvolvimento em Linux com C++
 
 Use o Visual Studio 2017 e versões posteriores para criar e depurar aplicativos executados em computadores remotos do Linux ou no Subsistema do Windows para Linux.
+
+<!-- markdownlint-disable MD033 -->
 
 <ul class="panelContent cardsF">
     <li>

@@ -1,22 +1,20 @@
 ---
 title: Classes de banco de dados OLE
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - OLE DB consumers, support
 - COleDBRecordView class [MFC]
 ms.assetid: 65245d26-8743-4efd-9a72-90e19aef3c3a
-ms.openlocfilehash: 9bdae23707ac451f1280a999c9721dec65e09004
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bdb53c0391c465c281e47ebf104f0d7b2bc8858c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185978"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447638"
 ---
 # <a name="ole-db-classes"></a>Classes de banco de dados OLE
 
-O suporte de banco de dados OLE no MFC consiste no momento, a classe [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md). `COleDBRecordView` Exibe os registros de banco de dados em controles, por meio de um modo de exibição de formulário conectado diretamente a um [CRowset](../data/oledb/crowset-class.md) objeto. Para obter mais informações sobre os modelos de consumidor do OLE DB, consulte [lista de modelos OLE DB consumidor](../data/oledb/ole-db-consumer-templates-reference.md).
+O suporte a OLE DB no MFC atualmente consiste na classe [COleDBRecordView](../mfc/reference/coledbrecordview-class.md). `COleDBRecordView` exibe registros de banco de dados em controles, por meio de uma exibição de formulário conectada diretamente a um objeto [CRowset](../data/oledb/crowset-class.md) . Para obter mais informações sobre os modelos de consumidor OLE DB, consulte [lista de modelos de consumidor de OLE DB](../data/oledb/ole-db-consumer-templates-reference.md).
 
 ## <a name="see-also"></a>Consulte também
 

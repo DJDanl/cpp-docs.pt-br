@@ -1,17 +1,6 @@
 ---
 title: Funções &lt;type_traits&gt;
 ms.date: 11/04/2016
-f1_keywords:
-- type_traits/std::is_assignable
-- type_traits/std::is_copy_assignable
-- type_traits/std::is_copy_constructible
-- type_traits/std::is_default_constructible
-- type_traits/std::is_move_assignable
-- type_traits/std::is_move_constructible
-- type_traits/std::is_nothrow_move_assignable
-- type_traits/std::is_trivially_copy_assignable
-- type_traits/std::is_trivially_move_assignable
-- type_traits/std::is_trivially_move_constructible
 ms.assetid: dce4492f-f3e4-4d5e-bdb4-5875321254ec
 helpviewer_keywords:
 - std::is_assignable
@@ -24,12 +13,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: 48ca51d56994f3d487af6744801acedf5c6cc79c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 40ebd24a286039391dedacf289d305ee5ec9ca95
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422636"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447472"
 ---
 # <a name="lttype_traitsgt-functions"></a>Funções &lt;type_traits&gt;
 
@@ -50,7 +39,7 @@ template <class To, class From>
 struct is_assignable;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Para*\
 O tipo do objeto que recebe a atribuição.
@@ -71,7 +60,7 @@ template <class Ty>
 struct is_copy_assignable;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Ty*\
 O tipo a ser consultado.
@@ -89,7 +78,7 @@ template <class Ty>
 struct is_copy_constructible;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Ty*\
 O tipo a ser consultado.
@@ -98,7 +87,7 @@ O tipo a ser consultado.
 
 Uma instância do predicado de tipo se aplica true se o tipo *Ty* é uma classe que tem um construtor de cópia, caso contrário, ela mantém false.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 #include <type_traits>
@@ -141,7 +130,7 @@ template <class Ty>
 struct is_default_constructible;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*\
 O tipo a ser consultado.
@@ -150,7 +139,7 @@ O tipo a ser consultado.
 
 Uma instância do predicado de tipo fica true se o tipo *T* é um tipo de classe que tem um construtor padrão, caso contrário, ele mantém false. Isso é equivalente ao predicado `is_constructible<T>`. O tipo *T* deve ser um tipo completo, **void**ou uma matriz de limite desconhecido.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 #include <type_traits>
@@ -193,7 +182,7 @@ template <class T>
 struct is_move_assignable;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*\
 O tipo a ser consultado.
@@ -211,7 +200,7 @@ template <class T>
 struct is_move_constructible;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*\
 O tipo a ser avaliado
@@ -229,7 +218,7 @@ template <class Ty>
 struct is_nothrow_move_assignable;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Ty*\
 O tipo a ser consultado.
@@ -271,7 +260,7 @@ template <class Ty>
 struct is_trivially_copy_assignable;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*\
 O tipo a ser consultado.
@@ -291,7 +280,7 @@ template <class Ty>
 struct is_trivially_move_assignable;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Ty*\
 O tipo a ser consultado.
@@ -321,7 +310,7 @@ template <class Ty>
 struct is_trivially_move_constructible;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Ty*\
 O tipo a ser consultado.
@@ -348,6 +337,6 @@ as classes de todos os membros de dados não estáticos do tipo de classe tivere
 
 as classes de todos os membros de dados não estáticos da matriz de tipo de classe tiverem construtores de movimentação trivial
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [<type_traits>](../standard-library/type-traits.md)

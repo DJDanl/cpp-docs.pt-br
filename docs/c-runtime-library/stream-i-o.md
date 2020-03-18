@@ -1,19 +1,17 @@
 ---
 title: E/S de fluxo
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - I/O routines, stream I/O
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 8bf81d1969fcbcfd255f3d4f9878bd3aab421703
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 0fc49d4cd26593cb02a2ff05c3205cc630ef848c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746247"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444611"
 ---
 # <a name="stream-io"></a>E/S de fluxo
 
@@ -98,4 +96,4 @@ A entrada pode seguir a saída diretamente apenas com uma chamada intermediária
 ## <a name="see-also"></a>Consulte também
 
 [Entrada e saída](../c-runtime-library/input-and-output.md)<br/>
-[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

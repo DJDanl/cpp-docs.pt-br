@@ -1,19 +1,18 @@
 ---
-title: '&lt;incluir > (comentários de documentação do C++)'
+title: '&lt;incluir > (C++ comentários de documentação)'
 ms.date: 11/04/2016
 f1_keywords:
-- include
 - <include>
 helpviewer_keywords:
 - include C++ XML tag
 - <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-ms.openlocfilehash: b7d1033aa5b6c95c0db8eb9debf74596dc214fb0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1d6a26f28069cfb4a1c74bd591d63bc89352774
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291321"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439513"
 ---
 # <a name="ltincludegt"></a>&lt;include&gt;
 
@@ -45,7 +44,7 @@ A marca \<include> usa a sintaxe XML XPath. Veja a documentação do XPath para 
 
 Compile com [/doc](doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Este é um exemplo de vários arquivos. O primeiro arquivo, que usa \<include>, contém os seguintes comentários da documentação:
 

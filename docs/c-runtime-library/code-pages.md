@@ -1,8 +1,6 @@
 ---
 title: Páginas de código
 ms.date: 11/04/2016
-f1_keywords:
-- c.international
 helpviewer_keywords:
 - character sets [C++], code pages
 - ANSI [C++], code pages
@@ -12,12 +10,12 @@ helpviewer_keywords:
 - code pages [C++], types of
 - locale code pages [C++]
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
-ms.openlocfilehash: 83c54a3d624ddad4de6c359c44c3b4be80c95a6e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 13b31b7d7750158caf498d92db67fd3e61856c5c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738576"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443505"
 ---
 # <a name="code-pages"></a>Páginas de código
 
@@ -35,7 +33,7 @@ A biblioteca em tempo de execução da Microsoft usa os seguintes tipos de pági
 
    também define a localidade para a página de código ANSI padrão do sistema.
 
-- Página de código de localidade. O comportamento de várias rotinas de tempo de execução depende da configuração de localidade atual, que inclui a página de código de localidade. (Para obter mais informações, consulte [Rotinas dependentes de localidade](../c-runtime-library/locale.md).) Por padrão, todas as rotinas dependentes de localidade da biblioteca de tempo de execução da Microsoft usam a página de código que corresponde à localidade "C". Em tempo de execução, você pode alterar ou consultar a página de código de localidade em uso com uma chamada para [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
+- Página de código de localidade. O comportamento de várias rotinas de tempo de execução depende da configuração de localidade atual, que inclui a página de código de localidade. (Para obter mais informações, consulte [rotinas dependentes de localidade](../c-runtime-library/locale.md).) Por padrão, todas as rotinas dependentes da localidade na biblioteca de tempo de execução da Microsoft usam a página de código que corresponde à localidade "C". Em tempo de execução, você pode alterar ou consultar a página de código de localidade em uso com uma chamada para [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 
 - Página de código multibyte. O comportamento da maioria das rotinas de caracteres multibyte da biblioteca de tempo de execução depende da configuração atual de página de código multibyte. Por padrão, essas rotinas usam a página de código ANSI padrão do sistema. Em tempo de execução, você pode consultar e alterar a página de código multibyte com [_getmbcp](../c-runtime-library/reference/getmbcp.md) e [_setmbcp](../c-runtime-library/reference/setmbcp.md), respectivamente.
 
@@ -44,4 +42,4 @@ A biblioteca em tempo de execução da Microsoft usa os seguintes tipos de pági
 ## <a name="see-also"></a>Consulte também
 
 [Internacionalização](../c-runtime-library/internationalization.md)<br/>
-[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -1,19 +1,16 @@
 ---
 title: '&lt;de exceção >C++ (comentários da documentação)'
 ms.date: 11/04/2016
-f1_keywords:
-- exception
-- <exception>
 helpviewer_keywords:
 - <exception> C++ XML tag
 - exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
-ms.openlocfilehash: ddfe647fa2db55b3ca606265011896a66398a8a2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: d56e0ce7c892cfd9fd909b5268043d77929bd43c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988301"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439866"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -32,7 +29,7 @@ Uma referência a uma exceção que está disponível no ambiente de compilaçã
 
 Coloque o nome entre aspas simples ou duplas.
 
-Para obter informações sobre como criar uma referência cref para um tipo genérico, consulte [ \<consulte>](see-visual-cpp.md).
+Para obter informações sobre como criar uma referência cref para um tipo genérico, consulte [\<consulte>](see-visual-cpp.md).
 
 *description*<br/>
 Uma descrição.
@@ -43,7 +40,7 @@ Compile com [/doc](doc-process-documentation-comments-c-cpp.md) para processar c
 
 O compilador MSVC tentará resolver referências CREF em um passo entre os comentários da documentação.  Portanto, se você estiver usando as regras de pesquisa do C++ e um símbolo não for encontrado pelo compilador, a referência será marcada como não resolvida. Confira [\<seealso>](seealso-visual-cpp.md) para obter mais informações.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // xml_exception_tag.cpp
