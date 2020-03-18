@@ -1,29 +1,27 @@
 ---
 title: Usando CHeaderCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CHeaderCtrl
 helpviewer_keywords:
 - header controls [MFC], using
 - CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
-ms.openlocfilehash: bf99aad508aee52bc8d345ca084ef96ef40f803b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74e306368d7354bbc9f8281a8bf7fa857b6bf524
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386402"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444008"
 ---
 # <a name="using-cheaderctrl"></a>Usando CHeaderCtrl
 
-Usar um controle de cabeçalho, representado pela classe [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), para exibir cabeçalhos de coluna para obter uma lista de colunas. Por exemplo, um controle de cabeçalho seria útil para implementar controles de coluna em uma planilha.
+Use um controle de cabeçalho, representado pela classe [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), para exibir cabeçalhos de coluna para uma lista de colunas. Por exemplo, um controle de cabeçalho seria útil para implementar controles de coluna em uma planilha.
 
-O controle de cabeçalho geralmente é dividido em partes, chamados "itens de cabeçalho," cada um tendo um título para a coluna associada de texto ou números. Dependendo dos estilos que você definir, você pode fornecer um número de forma direta para os usuários manipular os itens de cabeçalho.
+O controle de cabeçalho geralmente é dividido em partes, chamadas "itens de cabeçalho", cada um com um título para a coluna associada de texto ou números. Dependendo dos estilos definidos, você pode fornecer várias maneiras diretas para os usuários manipularem os itens de cabeçalho.
 
 > [!NOTE]
->  [CListCtrl](../mfc/reference/clistctrl-class.md) fornece um controle de cabeçalho inserido, e [CListView](../mfc/reference/clistview-class.md) encapsula `CListCtrl` em uma classe do MFC. Em geral, pensar em usar `CHeaderCtrl` às listas de rótulo que você pretenda desenhar por conta própria.
+>  O [CListCtrl](../mfc/reference/clistctrl-class.md) fornece um controle de cabeçalho incorporado e o [CListView](../mfc/reference/clistview-class.md) encapsula `CListCtrl` em uma classe MFC. Em geral, pense em usar `CHeaderCtrl` para rotular listas que você pretende desenhar por conta própria.
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
 - [Controle de cabeçalho e de lista](../mfc/header-control-and-list-control.md)
 

@@ -2,24 +2,21 @@
 title: property (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
-f1_keywords:
-- property_cpp
-- property
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 4a05f9cf8cbec9644254d14873a3259f12b33aed
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 46501717755933b2bdc11ee4ee6249bfea9f18cd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311857"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445165"
 ---
 # <a name="property--ccli-and-ccx"></a>property (C++/CLI e C++/CX)
 
 Declara uma *propriedade*, que é uma função membro que se comporta e é acessada como um membro de dados ou um elemento de matriz.
 
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
+## <a name="all-runtimes"></a>Todos os Runtimes
 
 Você pode declarar um dos seguintes tipos de propriedades.
 
@@ -88,7 +85,7 @@ O corpo do método da propriedade do acessador set ou get. *property_body* pode 
 
 Saiba mais em [Propriedades (C++/CX)](../cppcx/properties-c-cx.md).
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 Opção do compilador: `/ZW`
 
@@ -163,7 +160,7 @@ Há permissão para uma acessibilidade diferente nos métodos acessadores em um 
 
 **property** é uma palavra-chave contextual.  Saiba mais em [Palavras-chave contextuais](context-sensitive-keywords-cpp-component-extensions.md).
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 Opção do compilador: `/clr`
 

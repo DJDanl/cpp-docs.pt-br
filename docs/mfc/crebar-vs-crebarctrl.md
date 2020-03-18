@@ -1,37 +1,34 @@
 ---
 title: CReBar vs. CReBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CReBar
-- CReBarCtrl
 helpviewer_keywords:
 - CReBar class [MFC], vs. CReBarCtrl
 - rebar controls [MFC], CReBarCtrl class [MFC]
 - GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
-ms.openlocfilehash: a1b5cda729e760246449bf197fdc9b32752b96e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94f889be453a17a55357a260bd2a0c07037f6ded
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241759"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445278"
 ---
 # <a name="crebar-vs-crebarctrl"></a>CReBar vs. CReBarCtrl
 
-MFC fornece classes para criar rebars: [CReBar](../mfc/reference/crebar-class.md) e [CReBarCtrl](../mfc/reference/crebarctrl-class.md) (que encapsula a API de controle comum do Windows). `CReBar` fornece toda a funcionalidade do controle rebar comum, e trata muitas das configurações necessárias de controle comuns e estruturas para você.
+O MFC fornece duas classes para criar rebarras: [CReBar](../mfc/reference/crebar-class.md) e [CReBarCtrl](../mfc/reference/crebarctrl-class.md) (que encapsula a API de controle comum do Windows). `CReBar` fornece toda a funcionalidade do controle comum de rebar e lida com muitas das configurações e estruturas de controle comuns necessárias para você.
 
-`CReBarCtrl` é uma classe wrapper para um controle rebar Win32 e, portanto, pode ser mais fácil de implementar se você não pretende integrar o rebar na arquitetura do MFC. Se você planeja usar `CReBarCtrl` e integrar o rebar na arquitetura do MFC, você deve tomar cuidado adicional para se comunicar manipulações de controle rebar ao MFC. Essa comunicação não é difícil; No entanto, ele é trabalho adicional é desnecessário quando você usar `CReBar`.
+`CReBarCtrl` é uma classe wrapper para o controle rebar do Win32 e, portanto, pode ser mais fácil de implementar se você não pretende integrar o rebar à arquitetura do MFC. Se você planeja usar `CReBarCtrl` e integrar o rebar à arquitetura do MFC, deve tomar cuidado adicional para comunicar as manipulações do controle rebar ao MFC. Essa comunicação não é difícil; no entanto, ele é um trabalho adicional que é desnecessário quando você usa `CReBar`.
 
-Visual C++ fornece duas maneiras de tirar proveito do controle rebar comuns.
+O C++ Visual fornece duas maneiras de aproveitar o controle comum de rebar.
 
-- Criar o rebar usando `CReBar`e, em seguida, chame [CReBar::GetReBarCtrl](../mfc/reference/crebar-class.md#getrebarctrl) para obter acesso ao `CReBarCtrl` funções de membro.
+- Crie o rebar usando `CReBar`e, em seguida, chame [CReBar:: GetReBarCtrl](../mfc/reference/crebar-class.md#getrebarctrl) para obter acesso às funções de membro do `CReBarCtrl`.
 
     > [!NOTE]
-    >  `CReBar::GetReBarCtrl` é uma função de membro embutida que projeta o **isso** ponteiro do objeto rebar. Isso significa que, em tempo de execução, a chamada de função tem sem sobrecarga.
+    >  `CReBar::GetReBarCtrl` é uma função membro embutida que converte **esse** ponteiro do objeto rebar. Isso significa que, em tempo de execução, a chamada de função não tem sobrecarga.
 
-- Criar o rebar usando [CReBarCtrl](../mfc/reference/crebarctrl-class.md)do construtor.
+- Crie o rebar usando o construtor de [CReBarCtrl](../mfc/reference/crebarctrl-class.md).
 
-Qualquer um dos métodos lhe darão acesso às funções de membro do controle rebar. Quando você chama `CReBar::GetReBarCtrl`, ele retorna uma referência a um `CReBarCtrl` , você pode usar o conjunto de funções de membro de objeto. Ver [CReBar](../mfc/reference/crebar-class.md) para obter informações sobre como construir e criar um rebar usando `CReBar`.
+Qualquer um dos métodos fornecerá acesso às funções de membro do controle rebar. Quando você chama `CReBar::GetReBarCtrl`, ele retorna uma referência a um objeto `CReBarCtrl` para que você possa usar qualquer conjunto de funções de membro. Consulte [CReBar](../mfc/reference/crebar-class.md) para obter informações sobre como construir e criar um rebar usando `CReBar`.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,25 +1,23 @@
 ---
 title: Classes de arquivo e banco de dados
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.file
 helpviewer_keywords:
 - database classes [MFC], MFC
 - database classes [MFC]
 - file classes [MFC]
 ms.assetid: 580b169c-e26e-4395-b128-5408d08c98fe
-ms.openlocfilehash: 96c45cad5da0bf16edfa71cb7e357ae4d66e318d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0996810a2af835c5c98a4f3311d2411466d43583
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405827"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442393"
 ---
 # <a name="file-and-database-classes"></a>Classes de arquivo e banco de dados
 
-Essas classes permitem que você armazene informações de um banco de dados ou um arquivo de disco. Há três conjuntos de classes de banco de dados, OLE DB, ODBC e DAO — que fornecem funcionalidade semelhante. O grupo de OLE DB é implementado usando o OLE DB e funciona com os modelos de consumidor do OLE DB, o grupo DAO é implementado usando o objeto de acesso de dados e o grupo ODBC é implementado usando conectividade aberta de banco de dados. Há também um conjunto de classes para manipulação de arquivos padrão, fluxos ativos e fluxos HTML.
+Essas classes permitem que você armazene informações em um banco de dados ou em um arquivo de disco. Há três conjuntos de classes de banco de dados — OLE DB, ODBC e DAO, que fornecem funcionalidade semelhante. O grupo de OLE DB é implementado usando OLE DB e funciona com os modelos de consumidor OLE DB, o grupo DAO é implementado usando o objeto de acesso a dados e o grupo ODBC é implementado usando a conectividade aberta de Open Database. Também há um conjunto de classes para manipular arquivos padrão, fluxos ativos e fluxos HTML.
 
-As seguintes categorias de classes de suportam a persistência de dados.
+As categorias de classes a seguir dão suporte à persistência de dados.
 
 - [Classes de e/s de arquivo](../mfc/file-i-o-classes.md)
 

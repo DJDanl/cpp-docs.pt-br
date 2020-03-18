@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: cc6c5315757b4a1602eba53ebafb573dd88caed2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2ceb22afa5e6d071c1cb8dae79327eaaf08e3ee1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141803"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445111"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Criando operações assíncronas no C++ para aplicativos UWP
 
@@ -90,7 +90,7 @@ O exemplo a seguir mostra as várias maneiras de criar um objeto `IAsyncAction` 
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-## <a name="example-component"></a>Exemplo: Criando um C++ componente de Windows Runtime e consumindo-o deC#
+## <a name="example-component"></a>Exemplo: Criando um C++ componente de Windows Runtime e consumindo-o a partir de C\#
 
 Considere um aplicativo que usa XAML e C# defina a interface do usuário e C++ um componente Windows Runtime para executar operações de computação intensiva. Neste exemplo, o C++ componente computa quais números em um determinado intervalo são primos. Para ilustrar as diferenças entre as quatro Windows Runtime interfaces de tarefa assíncronas, comece, no Visual Studio, criando uma **solução em branco** e nomeando-a `Primes`. Em seguida, adicione à solução uma Windows Runtime projeto de **componente** e nomeie-o `PrimesLibrary`. Adicione o código a seguir ao arquivo C++ de cabeçalho gerado (Este exemplo renomeia Class1. h para Primes. h). Cada método de `public` define uma das quatro interfaces assíncronas. Os métodos que retornam um valor retornam um objeto [Windows:: Foundation:: Collections:: IVector\<int >](/uwp/api/Windows.Foundation.Collections.IVector_T_) . Os métodos que relatam o progresso produzem `double` valores que definem a porcentagem de trabalho geral que foi concluída.
 

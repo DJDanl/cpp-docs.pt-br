@@ -1,8 +1,6 @@
 ---
 title: Classes de automação OLE
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - Automation, classes
 - Automation classes [MFC], OLE classes
@@ -10,22 +8,22 @@ helpviewer_keywords:
 - Automation classes [MFC]
 - OLE Automation [MFC]
 ms.assetid: 96e5372b-ff8a-4da1-933b-4d9bbf4dceb3
-ms.openlocfilehash: 08e33e1fce3f792e76e2eec4ecb59601c99d9822
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 644a4930eb55636ba6e87b949ed610b725334661
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348712"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447688"
 ---
 # <a name="ole-automation-classes"></a>Classes de automação OLE
 
-Essas classes de dar suporte a clientes de automação (aplicativos que controlam a outros aplicativos). Servidores de automação (aplicativos que podem ser controlados por outros aplicativos) têm suporte por meio [mapas de envios](../mfc/reference/dispatch-maps.md).
+Essas classes dão suporte a clientes de automação (aplicativos que controlam outros aplicativos). Os servidores de automação (aplicativos que podem ser controlados por outros aplicativos) têm suporte por meio de [mapas de expedição](../mfc/reference/dispatch-maps.md).
 
 [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)<br/>
-Usado para chamar os servidores de automação de seu cliente de automação. Ao adicionar uma classe, essa classe é usada para criar classes fortemente tipadas para os servidores de automação que fornecem uma biblioteca de tipos.
+Usado para chamar servidores de automação do cliente de automação. Ao adicionar uma classe, essa classe é usada para criar classes de tipo seguro para servidores de automação que fornecem uma biblioteca de tipos.
 
 [COleDispatchException](../mfc/reference/coledispatchexception-class.md)<br/>
-Uma exceção resultante de um erro durante a automação OLE. Exceções de automação são geradas por servidores de automação e capturadas por clientes de automação.
+Uma exceção resultante de um erro durante a automação OLE. As exceções de automação são geradas por servidores de automação e detectadas por clientes de automação.
 
 ## <a name="see-also"></a>Consulte também
 

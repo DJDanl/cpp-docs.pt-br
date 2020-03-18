@@ -1,22 +1,17 @@
 ---
 title: char, wchar_t, char16_t, char32_t
 ms.date: 02/14/2018
-f1_keywords:
-- char_cpp
-- char16_t_cpp
-- wchar_t_cpp
-- char32_t_cpp
 ms.assetid: 6b33e9f5-455b-4e49-8f12-a150cbfe2e5b
-ms.openlocfilehash: 542751cdbd5bb21bb70467163c823e2669373e24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a518f24973aaddff59b97f104d9d912e4a2bedce
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331151"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447163"
 ---
-# <a name="char-wchart-char16t-char32t"></a>char, wchar_t, char16_t, char32_t
+# <a name="char-wchar_t-char16_t-char32_t"></a>char, wchar_t, char16_t, char32_t
 
-Os tipos **char**, **wchar_t**, **char16_t** e **char32_t** são tipos internos que representam caracteres alfanuméricos, bem como glifos não alfanuméricos e caracteres não imprimíveis.
+Os tipos **Char**, **wchar_t**, **char16_t** e **char32_t** são tipos internos que representam caracteres alfanuméricos, bem como glifos não alfanuméricos e caracteres não imprimíveis.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,10 +24,10 @@ char32_t ch4{ U'a' };
 
 ## <a name="remarks"></a>Comentários
 
-O **char** tipo era o tipo de caracteres original em C e C++. O tipo **unsigned char** geralmente é usado para representar uma *bytes*, que não é um tipo interno em C++. O **char** tipo pode ser usado para armazenar os caracteres do conjunto de caracteres ASCII ou qualquer um dos conjuntos de caracteres ISO-8859 e bytes individuais de caracteres de vários bytes, como Shift-JIS ou a codificação UTF-8 de conjunto de caracteres Unicode. Cadeias de caracteres de **char** tipo são denominados *restringir* cadeias de caracteres, mesmo quando usado para codificar caracteres multibyte. No compilador da Microsoft, **char** é um tipo de 8 bits.
+O tipo **Char** era o tipo de caractere original em C C++e. O tipo de **caractere não assinado** geralmente é usado para representar um *byte*, que não é um tipo interno no C++. O tipo **Char** pode ser usado para armazenar caracteres do conjunto de caracteres ASCII ou de qualquer um dos conjuntos de caracteres ISO-8859, e bytes individuais de caracteres de byte múltiplo, como Shift-JIS ou a codificação UTF-8 do conjunto de caracteres Unicode. As cadeias de caracteres do tipo **Char** são chamadas de cadeias de caracteres *estreitas* , mesmo quando usadas para codificar personagens de byte múltiplo. No compilador Microsoft, **Char** é um tipo de 8 bits.
 
-O **wchar_t** tipo é um tipo de caractere largo definido pela implementação. O compilador da Microsoft, ele representa um caractere largo de 16 bits usado para armazenar Unicode codificado como UTF-16LE, o tipo de caracteres nativos em sistemas de operacionais do Windows. As versões de caractere largo do uso de funções da biblioteca de tempo de execução do C Universal (UCRT) **wchar_t** e seu ponteiro e uma matriz de tipos como parâmetros e valores de retorno, assim como as versões de caractere largo da API nativa do Windows.
+O tipo de **wchar_t** é um tipo de caractere largo definido pela implementação. No compilador da Microsoft, ele representa um caractere largo de 16 bits usado para armazenar o Unicode codificado como UTF-16LE, o tipo de caractere nativo em sistemas operacionais Windows. As versões de caracteres largos das funções de biblioteca do universal C Runtime (UCRT) usam **wchar_t** e seus tipos de ponteiro e de matriz como parâmetros e valores de retorno, assim como as versões de caracteres largos da API nativa do Windows.
 
-O **char16_t** e **char32_t** tipos representam caracteres largos de 16 bits e 32 bits, respectivamente. Unicode codificada como UTF-16 pode ser armazenado na **char16_t** tipo e Unicode codificada como UTF-32 pode ser armazenados na **char32_t** tipo. Cadeias de caracteres de um desses tipos e **wchar_t** são todos os referidos como *ampla* cadeias de caracteres, embora o termo geralmente refere-se especificamente a cadeias de caracteres de **wchar_t** tipo.
+Os tipos **char16_t** e **char32_t** representam caracteres de 16 bits e 32 bits de largura, respectivamente. O Unicode codificado como UTF-16 pode ser armazenado no tipo de **char16_t** , e o Unicode codificado como utf-32 pode ser armazenado no tipo de **char32_t** . Cadeias desses tipos e **wchar_t** são conhecidas como cadeias de caracteres *grandes* , embora o termo geralmente se refira especificamente a cadeias de caracteres do tipo **wchar_t** .
 
-Na biblioteca C++ padrão, o `basic_string` tipo é especializado em cadeias de caracteres estreitas e largos. Use `std::string` quando os caracteres são do tipo **char**, `std::u16string` quando os caracteres são do tipo **char16_t**, `std::u32string` quando os caracteres são do tipo **char32_t** , e `std::wstring` quando os caracteres são do tipo **wchar_t**. Outros tipos que representam o texto, incluindo `std::stringstream` e `std::cout` tem especializações para cadeias de caracteres estreitas e largos.
+Na biblioteca C++ padrão, o tipo de `basic_string` é especializado para cadeias de caracteres estreitas e largas. Use `std::string` quando os caracteres são do tipo **Char**, `std::u16string` quando os caracteres são do tipo **char16_t**, `std::u32string` quando os caracteres são do tipo **char32_t**e `std::wstring` quando os caracteres são do tipo **wchar_t**. Outros tipos que representam texto, incluindo `std::stringstream` e `std::cout` têm especializações para cadeias de caracteres estreitas e largos.

@@ -1,24 +1,22 @@
 ---
 title: Usando CToolBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CToolBarCtrl
 helpviewer_keywords:
 - CToolBarCtrl class [MFC]
 - toolbar controls [MFC], creating
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
-ms.openlocfilehash: 70bb563b7dd4558ab1943ad87ee3db5b877951e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a82a763ca357feccbe5b61d4f85d6038563c1c11
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411663"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442244"
 ---
 # <a name="using-ctoolbarctrl"></a>Usando CToolBarCtrl
 
-Você pode usar o controle de barra de ferramentas ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) para criar uma janela de controle que contém botões e espaços opcionais. Cada botão na janela de controle de barra de ferramentas envia uma mensagem de comando para a janela pai como o usuário escolhe-lo. Normalmente, os botões na barra de ferramentas correspondem aos itens no menu do aplicativo, fornecendo uma maneira mais direta e adicional para o usuário acessar os comandos do aplicativo.
+Você pode usar o controle Toolbar ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) para criar uma janela de controle que contém botões e espaços opcionais. Cada botão na janela de controle da barra de ferramentas envia uma mensagem de comando para a janela pai à medida que o usuário a escolhe. Normalmente, os botões em uma barra de ferramentas correspondem aos itens no menu do aplicativo, fornecendo uma maneira adicional e mais direta para que o usuário acesse os comandos de um aplicativo.
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
 - [Métodos de criação de uma barra de ferramentas](../mfc/methods-of-creating-a-toolbar.md)
 

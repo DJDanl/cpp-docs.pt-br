@@ -14,14 +14,12 @@ f1_keywords:
 - CEnumeratorAccessor.m_nType
 - CEnumeratorAccessor::m_nType
 - ATL.CEnumeratorAccessor.m_nType
-- m_nType
 - ATL::CEnumeratorAccessor::m_szDescription
 - CEnumeratorAccessor.m_szDescription
 - CEnumeratorAccessor::m_szDescription
 - ATL.CEnumeratorAccessor.m_szDescription
 - CEnumeratorAccessor::m_szName
 - ATL.CEnumeratorAccessor.m_szName
-- m_szName
 - ATL::CEnumeratorAccessor::m_szName
 - CEnumeratorAccessor.m_szName
 - CEnumeratorAccessor::m_szParseName
@@ -37,12 +35,12 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: dd698499607a5c4f04ccd01207d78fef9328c079
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d85f630a01ab7e2a07035a8a304a56be91eca8a9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311853"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442006"
 ---
 # <a name="cenumeratoraccessor-class"></a>Classe CEnumeratorAccessor
 
@@ -54,7 +52,7 @@ Usado pelo [CEnumerator](../../data/oledb/cenumerator-class.md) para acessar os 
 class CEnumeratorAccessor
 ```
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** atldbcli. h
 
@@ -74,7 +72,7 @@ class CEnumeratorAccessor
 
 Esse conjunto de linhas consiste nas fontes de dados e enumeradores visíveis do enumerador atual.
 
-## <a name="bisparent"></a> CEnumeratorAccessor::m_bIsParent
+## <a name="bisparent"></a>CEnumeratorAccessor:: m_bIsParent
 
 Uma variável que indica se o enumerador é um enumerador pai, se a linha for um enumerador.
 
@@ -88,7 +86,7 @@ VARIANT_BOOL m_bIsParent;
 
 Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) na *referência do programador de OLE DB* para obter mais informações.
 
-## <a name="ntype"></a>CEnumeratorAccessor::m_nType
+## <a name="ntype"></a>CEnumeratorAccessor:: m_nType
 
 Uma variável que indica se a linha descreve uma fonte de dados ou um enumerador.
 
@@ -102,7 +100,7 @@ USHORT m_nType;
 
 Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) na *referência do programador de OLE DB* para obter mais informações.
 
-## <a name="szdescription"></a>CEnumeratorAccessor::m_szDescription
+## <a name="szdescription"></a>CEnumeratorAccessor:: m_szDescription
 
 A descrição da fonte de dados ou do enumerador.
 
@@ -116,7 +114,7 @@ WCHAR m_szDescription[129];
 
 Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) na *referência do programador de OLE DB* para obter mais informações.
 
-## <a name="szname"></a> CEnumeratorAccessor::m_szName
+## <a name="szname"></a>CEnumeratorAccessor:: m_szName
 
 O nome da fonte de dados ou do enumerador.
 
@@ -130,7 +128,7 @@ WCHAR m_szName[129];
 
 Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) na *referência do programador de OLE DB* para obter mais informações.
 
-## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
+## <a name="szparsename"></a>CEnumeratorAccessor:: m_szParseName
 
 Cadeia de caracteres a ser passada para [IParseDisplayName](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) para obter um moniker para a fonte de dados ou o enumerador.
 

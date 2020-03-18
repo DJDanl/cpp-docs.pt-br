@@ -1,17 +1,15 @@
 ---
 title: Usando CListCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CListCtrl
 helpviewer_keywords:
 - CListCtrl class [MFC], using
 ms.assetid: 20d6a5d6-8f07-4ddf-975f-ea2dfebcc835
-ms.openlocfilehash: 8641b7aec3aacf4de6aabfdcc9ffcbc64c278b41
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ada26f43849bec2ad4cb63a6084c10805e27fcb0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512908"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441982"
 ---
 # <a name="using-clistctrl"></a>Usando CListCtrl
 
@@ -22,7 +20,7 @@ Em alguns modos de exibição, os usuários podem arrastar ícones para posiçõ
 Para obter informações relacionadas, consulte [sobre controles de exibição de lista](/windows/win32/Controls/list-view-controls-overview) no SDK do Windows.
 
 > [!NOTE]
->  O SDK do Windows se refere a controles de lista como "controles de exibição de lista". Esse uso de "exibição" não se refere às classes de exibição do MFC `CListView`, particularmente. Para obter mais informações, consulte [controle de lista e exibição de lista](../mfc/list-control-and-list-view.md).
+>  O SDK do Windows se refere a controles de lista como "controles de exibição de lista". Esse uso de "exibição" não se refere às classes de exibição do MFC, particularmente `CListView`. Para obter mais informações, consulte [controle de lista e exibição de lista](../mfc/list-control-and-list-view.md).
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 

@@ -22,7 +22,6 @@ topic_type:
 - apiref
 f1_keywords:
 - mbsnbcpy
-- _ftcsncpy
 - _mbsnbcpy
 - mbsnbcpy_l
 - _mbsnbcpy_l
@@ -36,19 +35,19 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: 9b8a5884b646baf582e6bb9868136ffe7c2a24cf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9a52f8abb220c840f1b7f71d029efacd4c5206fb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952258"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442864"
 ---
 # <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy, _mbsnbcpy_l
 
 Copia **n** bytes de uma cadeia de caracteres para uma cadeia de caracteres de destino. Versões mais seguras dessas funções estão disponíveis, consulte [_mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md).
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -93,17 +92,17 @@ Número de bytes a serem copiados.
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **_mbsnbcpy** retorna um ponteiro para a cadeia de caracteres de destino. Nenhum valor retornado é reservado para indicar um erro.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_mbsnbcpy** copia os bytes de *contagem* de *strSource* para *strDest*. Se a *contagem* exceder o tamanho de *strDest* ou as cadeias de caracteres de origem e de destino se sobrepõem, o comportamento de **_mbsnbcpy** será indefinido.
+A função **_mbsnbcpy** copia bytes de *contagem* de *strSource* para *strDest*. Se a *contagem* exceder o tamanho de *strDest* ou as cadeias de caracteres de origem e de destino se sobrepõem, o comportamento de **_mbsnbcpy** será indefinido.
 
 Se *strSource* ou *strDest* for um ponteiro NULL, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará **NULL** e definirá **errno** como **EINVAL**.
 
-O valor de saída é afetado pela configuração da configuração de categoria **LC_CTYPE** da localidade; consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções são idênticas, exceto pelo fato de que aquelas que não têm o sufixo **_L** usam a localidade atual e as versões que têm o sufixo **_L** , em vez disso, usam o parâmetro Locale que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da configuração de categoria de **LC_CTYPE** da localidade; consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções são idênticas, exceto pelo fato de que aquelas que não têm o sufixo de **_L** usam a localidade atual e as versões que têm o sufixo **_L** , em vez disso, usam o parâmetro de localidade que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
 > Essas funções podem ser vulneráveis a ameaças de estouro de buffer. As saturações de buffer podem ser usadas para executar código arbitrário do invasor, que pode resultar na elevação de privilégio sem garantia e comprometer o sistema. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
@@ -117,7 +116,7 @@ Em C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 |**_tcsncpy**|[strncpy](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)|**_mbsnbcpy**|[wcsncpy](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)|
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcp_l**|**_wcsncpy_l**|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|

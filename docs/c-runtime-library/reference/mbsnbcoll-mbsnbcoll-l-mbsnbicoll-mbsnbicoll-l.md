@@ -23,13 +23,9 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- mbsnbicoll
-- mbsnbcoll
-- mbsnbicoll_l
 - _mbsnbcoll
+- _mbsnbcoll_l
 - _mbsnbicoll
-- _ftcsnicoll
-- _ftcsncoll
 - mbsnbcoll_l
 helpviewer_keywords:
 - _mbsnbcoll_l function
@@ -42,22 +38,22 @@ helpviewer_keywords:
 - _tcsncoll function
 - _mbsnbicoll function
 - _mbsnbicoll_l function
-- tcsncoll function
-- tcsnicoll function
+- _tcsncoll_l function
+- _tcsnicoll_l function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-ms.openlocfilehash: 72c435060a6ac62213a50ba1d9fb9ef7d83fcb33
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d759bda0133a95406a586011d39d69074283bf97
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952278"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438212"
 ---
 # <a name="_mbsnbcoll-_mbsnbcoll_l-_mbsnbicoll-_mbsnbicoll_l"></a>_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 
 Compara *n* bytes de duas cadeias de caracteres multibyte usando informações de página de código multibyte.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -88,7 +84,7 @@ int _mbsnbicoll_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*string1*, *string2*<br/>
+*seqüência1*, *seqüência2*<br/>
 Cadeias de caracteres a serem comparadas.
 
 *count*<br/>
@@ -97,7 +93,7 @@ Número de bytes a serem comparados.
 *locale*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O valor de retorno indica a relação das subcadeias de caracteres de *seqüência1* e *seqüência2*.
 
@@ -128,7 +124,7 @@ O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da lo
 |**_tcsnicoll**|[_strnicoll](strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|**_mbsnbicoll**|[_wcsnicoll](strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|
 |**_tcsnicoll_l**|[_strnicoll_l](strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|**_mbsnbicoll_l**|[_wcsnicoll_l](strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
