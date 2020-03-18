@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
 ms.openlocfilehash: ab130b2401dc9885f82fd5668a2d722a96dd289b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862508"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417470"
 ---
 # <a name="service-map-macros"></a>Mapa do Serviço macros
 
@@ -25,7 +25,7 @@ Essas macros definem as entradas e mapas de serviço.
 |[SERVICE_ENTRY](#service_entry)|Indica que o objeto dá suporte a uma ID de serviço específica.|
 |[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Instrui o [IServiceProviderImpl:: QueryService](#queryservice) ao encadeamento com o objeto especificado.|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlcom. h
 
@@ -37,7 +37,7 @@ Marca o início do mapa do serviço.
 BEGIN_SERVICE_MAP(theClass)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Classe*<br/>
 no Especifica a classe que contém o mapa do serviço.
@@ -50,7 +50,7 @@ Use o mapa do serviço para implementar a funcionalidade do provedor de serviço
 
 - [SERVICE_ENTRY_CHAIN](#service_entry_chain)   Instrui o [IServiceProviderImpl:: QueryService](#queryservice) à cadeia para outro objeto especificado.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]
 
@@ -62,7 +62,7 @@ Marca o final do mapa do serviço.
 END_SERVICE_MAP()
 ```
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte o exemplo para [BEGIN_SERVICE_MAP](#begin_service_map).
 
@@ -74,12 +74,12 @@ Indica que o objeto dá suporte à ID de serviço especificada pelo *Sid*.
 SERVICE_ENTRY( SID )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *SID*<br/>
 A ID do serviço.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte o exemplo para [BEGIN_SERVICE_MAP](#begin_service_map).
 
@@ -91,12 +91,12 @@ Instrui o [IServiceProviderImpl:: QueryService](#queryservice) ao encadeamento c
 SERVICE_ENTRY_CHAIN( punk )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *punk*<br/>
 Um ponteiro para a interface **IUnknown** a ser encadeada.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte o exemplo para [BEGIN_SERVICE_MAP](#begin_service_map).
 
@@ -111,7 +111,7 @@ STDMETHOD(QueryService)(
     void** ppvObject);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *guidService*<br/>
 no Ponteiro para um identificador de serviço (SID).
@@ -129,9 +129,9 @@ O valor HRESULT retornado é um dos seguintes:
 |Valor retornado|Significado|
 |------------------|-------------|
 |S_OK|O serviço foi criado ou recuperado com êxito.|
-|{1&gt;E_INVALIDARG&lt;1}|Um ou mais argumentos são inválidos.|
-|{1&gt;E_OUTOFMEMORY&lt;1}|A memória é insuficiente para criar o serviço.|
-|E_UNEXPECTED|Ocorreu um erro desconhecido.|
+|E_INVALIDARG|Um ou mais argumentos são inválidos.|
+|E_OUTOFMEMORY|A memória é insuficiente para criar o serviço.|
+|E_UNEXPECTED|Erro desconhecido.|
 |{1&gt;E_NOINTERFACE&lt;1}|A interface solicitada não faz parte deste serviço ou o serviço é desconhecido.|
 
 ### <a name="remarks"></a>Comentários
@@ -150,6 +150,6 @@ O objeto que implementa a interface também pode implementar interfaces que faze
 
 Dois serviços diferentes, como SID_SMyService e SID_SYourService, podem especificar o uso da mesma interface, mesmo que a implementação da interface possa não ter nada em comum entre os dois serviços. Isso funciona porque uma chamada para `QueryService` (SID_SMyService, IID_IDispatch) pode retornar um objeto diferente de `QueryService` (SID_SYourService, IID_IDispatch). A identidade do objeto não é presumida quando você especifica um identificador de serviço diferente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Macros](../../atl/reference/atl-macros.md)

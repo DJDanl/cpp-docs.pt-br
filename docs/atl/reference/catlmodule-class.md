@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
 ms.openlocfilehash: 798e94aed3bbd98108866ce0a1810485bd68699b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857128"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418044"
 ---
 # <a name="catlmodule-class"></a>Classe CAtlModule
 
@@ -41,14 +41,14 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CAtlModule::CAtlModule](#catlmodule)|O construtor.|
 |[CAtlModule:: ~ CAtlModule](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)|Substitua esse método para adicionar parâmetros ao mapa de substituição do componente de registro do ATL (registrador).|
 |[CAtlModule::AddTermFunc](#addtermfunc)|Adiciona uma nova função a ser chamada quando o módulo é encerrado.|
@@ -63,7 +63,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CAtlModule:: m_libid](#m_libid)|Contém o GUID do módulo atual.|
 |[CAtlModule:: m_pGIT](#m_pgit)|Ponteiro para a tabela de interface global.|
@@ -82,7 +82,7 @@ Essa classe substitui a [classe CComModule](../../atl/reference/ccommodule-class
 
 `CAtlModule`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlbase. h
 
@@ -94,7 +94,7 @@ Substitua esse método para adicionar parâmetros ao mapa de substituição do c
 virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw() = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pRegistrar*<br/>
 Reservado.
@@ -117,7 +117,7 @@ Adiciona uma nova função a ser chamada quando o módulo é encerrado.
 HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFunc*<br/>
 Ponteiro para a função a ser adicionada.
@@ -161,7 +161,7 @@ Recupera um ponteiro para a tabela de interface global.
 virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ppGIT*<br/>
 Ponteiro para a variável que receberá o ponteiro para a tabela de interface global.
@@ -258,7 +258,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszRes*<br/>
 Um nome de recurso.
@@ -295,7 +295,7 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszRes*<br/>
 Um nome de recurso.
@@ -330,7 +330,7 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nResID*<br/>
 Uma ID de recurso.
@@ -352,7 +352,7 @@ Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 
 Semelhante a [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced) , exceto `CAtlModule::UpdateRegistryFromResourceS` cria um link estático para o componente do registro ATL (registrador).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>

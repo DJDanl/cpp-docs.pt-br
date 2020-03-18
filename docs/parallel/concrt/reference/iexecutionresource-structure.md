@@ -12,11 +12,11 @@ helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
 ms.openlocfilehash: 40799d1ed6e21e6932f1adfbad117c436918b792
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854111"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417176"
 ---
 # <a name="iexecutionresource-structure"></a>Estrutura IExecutionResource
 
@@ -32,7 +32,7 @@ struct IExecutionResource;
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[IExecutionResource::CurrentSubscriptionLevel](#currentsubscriptionlevel)|Retorna o número de raízes do processador virtual ativadas e os threads externos assinados atualmente associados ao thread de hardware subjacente que esse recurso de execução representa.|
 |[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|Retorna um identificador exclusivo para o thread de hardware que este recurso de execução representa.|
@@ -47,7 +47,7 @@ Os recursos de execução podem ser autônomos ou associados a raízes de proces
 
 `IExecutionResource`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** concrtrm. h
 
@@ -117,7 +117,7 @@ Retorna esse recurso de execução para o Gerenciador de recursos.
 virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pScheduler*<br/>
 Uma interface para o Agendador que faz a solicitação para remover esse recurso de execução.
@@ -134,7 +134,7 @@ Raízes de processador virtual também podem ser retornadas ao Gerenciador de re
 
 `invalid_operation` será gerada se o parâmetro `pScheduler` for diferente do Agendador para o qual esse recurso de execução foi criado, ou, com um recurso de execução autônomo, se o thread atual for diferente do thread que criou a assinatura de thread.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [Estrutura IVirtualProcessorRoot](ivirtualprocessorroot-structure.md)

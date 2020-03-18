@@ -7,11 +7,11 @@ helpviewer_keywords:
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
 ms.openlocfilehash: 9108aaf3fcface847b0391455a2aecd4d45658c4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856944"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417344"
 ---
 # <a name="dll-frequently-asked-questions"></a>{1&gt;Perguntas frequentes sobre DLLs&lt;1}
 
@@ -63,6 +63,6 @@ As DLLs que são vinculadas implicitamente a um aplicativo são carregadas quand
 
 Uma possível causa do vazamento de memória é que o MFC cria objetos temporários que são usados dentro de funções de manipulador de mensagens. Em aplicativos MFC, esses objetos temporários são limpos automaticamente na função `CWinApp::OnIdle()` que é chamada entre as mensagens de processamento. No entanto, nas bibliotecas de vínculo dinâmico (DLLs) do MFC, a função `OnIdle()` não é chamada automaticamente. Como resultado, os objetos temporários não são limpos automaticamente. Para limpar objetos temporários, a DLL deve chamar explicitamente `OnIdle(1)` periodicamente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Criar DLLs C /C++ no Visual Studio](dlls-in-visual-cpp.md)
