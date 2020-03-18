@@ -5,7 +5,6 @@ f1_keywords:
 - ATL::IRowsetIdentityImpl
 - ATL.IRowsetIdentityImpl
 - IRowsetIdentityImpl
-- IsSameRow
 - IRowsetIdentityImpl.IsSameRow
 - ATL.IRowsetIdentityImpl.IsSameRow
 - IRowsetIdentityImpl::IsSameRow
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: 51f8d7e832476619ccec277c9d73791041d146a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8c976fcb23bf41d88d88be3887db4dde52379d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390824"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446317"
 ---
 # <a name="irowsetidentityimpl-class"></a>Classe IRowsetIdentityImpl
 
-Implementa o OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913(v=vs.85)) interface, que permite o teste para a identidade de linha.
+Implementa a interface OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913(v=vs.85)) , que permite o teste de identidade de linha.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,22 +37,22 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 *T*<br/>
 Uma classe derivada de `IRowsetIdentityImpl`.
 
-*RowClass*<br/>
+*Classe de categoria*<br/>
 A unidade de armazenamento para o `HROW`.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** atldb.h
+**Cabeçalho:** Atldb. h
 
 ## <a name="members"></a>Membros
 
-### <a name="methods"></a>Métodos
+### <a name="methods"></a>{1&gt;Métodos&lt;1}
 
 |||
 |-|-|
 |[IsSameRow](#issamerow)|Compara dois identificadores de linha para ver se eles se referem à mesma linha.|
 
-## <a name="issamerow"></a> IRowsetIdentityImpl::IsSameRow
+## <a name="issamerow"></a>IRowsetIdentityImpl::IsSameRow
 
 Compara dois identificadores de linha para ver se eles se referem à mesma linha.
 
@@ -66,13 +65,13 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) na *referência do programador do OLE DB*.
+Consulte [IRowsetIdentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) na *referência do programador de OLE DB*.
 
 ### <a name="remarks"></a>Comentários
 
-Para comparar identificadores de linha, este método converte o `HROW` lida com a `RowClass` membros e chamadas `memcmp` em ponteiros.
+Para comparar identificadores de linha, esse método converte os identificadores de `HROW` para `RowClass` Membros e chamadas `memcmp` nos ponteiros.
 
 ## <a name="see-also"></a>Consulte também
 
-[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

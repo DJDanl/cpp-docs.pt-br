@@ -5,17 +5,16 @@ ms.date: 12/03/2019
 f1_keywords:
 - twoPhase
 - /Zc:twoPhase
-- VC.Project.VCCLCompilerTool.EnforceTypeConversionRules
 helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: a2ede9f0875bf718d63361201cf8923666078f7a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3464759793a2dd243024a9f3f52263f76514033a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856950"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438647"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase- (desabilitar a pesquisa de nome de duas fases)
 
@@ -23,7 +22,7 @@ A **/Zc: twoPhase-** Option, em **/permissive-** , informa ao compilador para us
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/Zc:twoPhase-**
+> **/Zc: twoPhase-**
 
 ## <a name="remarks"></a>Comentários
 
@@ -195,7 +194,7 @@ Para obter mais informações sobre problemas de conformidade, consulte [ C++ me
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione a página de propriedades **Propriedades de Configuração** > **C/C++**  > **Linha de Comando**.
+1. Selecione a página de propriedades **Propriedades da Configuração** > **C/C++**  > **Linha de Comando**.
 
 1. Modifique a propriedade **Opções adicionais** para incluir **/Zc: twoPhase-** e escolha **OK**.
 

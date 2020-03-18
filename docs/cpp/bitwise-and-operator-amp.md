@@ -1,19 +1,17 @@
 ---
 title: 'Operador AND bit a bit: &amp;'
 ms.date: 11/04/2016
-f1_keywords:
-- bitand
 helpviewer_keywords:
 - AND operator
 - bitwise operators [C++], AND operator
 - '& operator [C++], bitwise operators'
 ms.assetid: 76f40de3-c417-47b9-8a77-532f3fc990a5
-ms.openlocfilehash: b7d0d73802a5af7ab71e980d73eaff5c5b3c4bb8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba17c9a633b7b18cad2881dfef90fde7c2074319
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387702"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446144"
 ---
 # <a name="bitwise-and-operator-amp"></a>Operador AND bit a bit: &amp;
 
@@ -27,15 +25,15 @@ expression & expression
 
 As expressões podem ser outras expressões E, ou (sujeito às restrições de tipo mencionadas abaixo) expressões de igualdade, expressões relacionais, expressões aditivas, expressões multiplicativas, expressões de ponteiro para membro, expressões de conversão, expressões unárias, expressões pós-fixadas ou expressões primárias.
 
-O operador AND bit a bit (**&**) compara cada bit do primeiro operando ao bit correspondente do segundo operando. Se os dois bits forem 1, o bit de resultado correspondente será definido como 1. Caso contrário, o bit de resultado correspondente será definido como 0.
+O operador AND e AND de bit ( **&** ) é comparado cada bit do primeiro operando com o bit correspondente do segundo operando. Se os dois bits forem 1, o bit de resultado correspondente será definido como 1. Caso contrário, o bit de resultado correspondente será definido como 0.
 
-Os dois operandos do operador AND bit a bit devem ser de tipos integrais. As conversões aritméticas usuais abordadas [conversões padrão](standard-conversions.md), são aplicadas aos operandos.
+Os dois operandos do operador AND bit a bit devem ser de tipos integrais. As conversões aritméticas usuais abordadas nas [conversões padrão](standard-conversions.md)são aplicadas aos operandos.
 
-## <a name="operator-keyword-for-"></a>Palavra-chave de operador para &
+## <a name="operator-keyword-for-"></a>Palavra-chave Operator para &
 
-O **bitand** operador é o equivalente de texto de **&**. Há duas maneiras para acessar o **bitand** operador em seus programas: incluir o arquivo de cabeçalho `iso646.h`, ou compilando com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção do compilador (desabilitar extensões de linguagem).
+O operador **bitand** é o texto equivalente de **&** . Há duas maneiras de acessar o operador **bitand** em seus programas: inclua o arquivo de cabeçalho `iso646.h`ou compile com a opção de compilador [/za](../build/reference/za-ze-disable-language-extensions.md) (desabilitar extensões de linguagem).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // expre_Bitwise_AND_Operator.cpp

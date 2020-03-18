@@ -1,8 +1,6 @@
 ---
 title: Arquivos de entrada LINK
 ms.date: 11/04/2016
-f1_keywords:
-- link
 helpviewer_keywords:
 - files [C++], LINK
 - module definition files
@@ -14,39 +12,39 @@ helpviewer_keywords:
 - import libraries [C++], linker files
 - command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
-ms.openlocfilehash: 48ad9423ae35c22a97a873fe6a2a0479c12ab33b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25d8e20903a97186e2c32a079fd74ece3626b7fa
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291503"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439349"
 ---
 # <a name="link-input-files"></a>Arquivos de entrada LINK
 
-Você pode fornecer o vinculador com arquivos que contêm objetos, importação e bibliotecas padrão, recursos, definições de módulo e comando de entrada. LINK não usa extensões de arquivo, fazer suposições sobre o conteúdo de um arquivo. Em vez disso, o LINK examina cada arquivo de entrada para determinar o tipo de arquivo é.
+Você fornece o vinculador com arquivos que contêm objetos, bibliotecas padrão e de importação, recursos, definições de módulo e entrada de comando. O LINK não usa extensões de arquivo para fazer suposições sobre o conteúdo de um arquivo. Em vez disso, o LINK examina cada arquivo de entrada para determinar que tipo de arquivo é.
 
-Arquivos de objeto na linha de comando são processados na ordem em que aparecem na linha de comando. Bibliotecas são pesquisadas na ordem de linha de comando, com a seguinte limitação: Símbolos não resolvidos quando colocar em um arquivo de objeto de uma biblioteca são pesquisada para nessa biblioteca pela primeira vez e, em seguida, as bibliotecas a seguir na linha de comando e [/DEFAULTLIB (especificar biblioteca padrão)](defaultlib-specify-default-library.md) diretivas e, em seguida, a quaisquer bibliotecas no início da linha de comando.
+Os arquivos de objeto na linha de comando são processados na ordem em que aparecem na linha de comando. As bibliotecas também são pesquisadas na ordem de linha de comando, com a seguinte limitação: símbolos que não são resolvidos ao trazer um arquivo de objeto de uma biblioteca são pesquisados nessa biblioteca primeiro e, em seguida, as bibliotecas a seguir da linha de comando e das diretivas [/DEFAULTLIB (especificar biblioteca padrão)](defaultlib-specify-default-library.md) e, em seguida, para todas as bibliotecas no início da linha de comando.
 
 > [!NOTE]
->  LINK não aceita mais um ponto e vírgula (ou qualquer outro caractere) como o início de um comentário em arquivos de resposta e arquivos de ordem. Ponto e vírgula é reconhecida apenas como o início de comentários em arquivos de definição de módulo (. def).
+>  O LINK não aceita mais um ponto e vírgula (ou qualquer outro caractere) como o início de um comentário em arquivos de resposta e arquivos de ordem. Pontos e vírgulas são reconhecidos apenas como o início de comentários em arquivos de definição de módulo (. def).
 
-LINK usa os seguintes tipos de arquivos de entrada:
+O LINK usa os seguintes tipos de arquivos de entrada:
 
 - [arquivos. obj](dot-obj-files-as-linker-input.md)
 
 - [arquivos. netmodule](netmodule-files-as-linker-input.md)
 
-- [.lib files](dot-lib-files-as-linker-input.md)
+- [arquivos. lib](dot-lib-files-as-linker-input.md)
 
-- [arquivos. EXP](dot-exp-files-as-linker-input.md)
+- [arquivos. exp](dot-exp-files-as-linker-input.md)
 
 - [arquivos. def](dot-def-files-as-linker-input.md)
 
-- [arquivos. PDB](dot-pdb-files-as-linker-input.md)
+- [arquivos. pdb](dot-pdb-files-as-linker-input.md)
 
 - [arquivos. res](dot-res-files-as-linker-input.md)
 
-- [arquivos .exe](dot-exe-files-as-linker-input.md)
+- [arquivos. exe](dot-exe-files-as-linker-input.md)
 
 - [arquivos. txt](dot-txt-files-as-linker-input.md)
 

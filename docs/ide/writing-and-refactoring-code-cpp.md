@@ -4,12 +4,12 @@ description: Use o editor de código C++ no Visual Studio para formatar, navegar
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: 2da1b38d2f5bb61edb473e5909b76225f214a116
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: da3f4e7d783561dba8250652a0715e51e71cc387
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274785"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438154"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Editar e refatorar o código C++ no Visual Studio
 
@@ -21,9 +21,9 @@ O IntelliSense é uma ferramenta eficiente de preenchimento de código que suger
 
 ![Lista suspensa de membros no C&#43;&#43;](../ide/media/cpp-statement-completion.png)
 
-Alguns símbolos são omitidos automaticamente para ajudar a restringir os resultados. Por exemplo, ao acessar os membros de um objeto de classe fora da classe, você não poderá ver os membros particulares por padrão nem os membros protegidos (se você não estiver no contexto de uma classe filho). Ajuste a filtragem usando os botões na parte inferior.
+Alguns símbolos são omitidos automaticamente para ajudar a restringir os resultados. Por exemplo, ao acessar membros de um objeto de classe de fora da classe, você não poderá ver membros privados por padrão ou membros protegidos (se você não estiver no contexto de uma classe filho). Ajuste a filtragem usando os botões na parte inferior.
 
-Depois de escolher o símbolo na lista suspensa, preencha-o automaticamente com **Tab**, **Enter** ou um dos caracteres de confirmação (por padrão: {}[]().,:;+-*/%&|^!=?@#\). Para adicionar ou remover caracteres dessa lista, pesquise "IntelliSense" em **Início Rápido** (Ctrl+Q) e escolha a opção **Editor de Texto > C/C++ > Avançado**. A opção **Caracteres de Confirmação da Lista de Membros** permite que você personalize a lista com as alterações desejadas.
+Depois de escolher o símbolo na lista suspensa, você pode completá-lo com **Tab**, **Inserir**ou um dos outros caracteres de confirmação (por padrão: `{ } [ ] ( ) . , : ; + - * / % & | ^ ! = ? @ # \`). Para adicionar ou remover caracteres dessa lista, pesquise "IntelliSense" em **Início Rápido** (Ctrl+Q) e escolha a opção **Editor de Texto > C/C++ > Avançado**. A opção **Caracteres de Confirmação da Lista de Membros** permite que você personalize a lista com as alterações desejadas.
 
 A opção **Modo de Filtro da Lista de Membros** controla quais tipos de sugestões de preenchimento automático do IntelliSense são exibidos. Por padrão, ele está definido como **Difuso**. Em uma pesquisa difusa, se você tiver um símbolo chamado *MyAwesomeClass*, poderá digitar "MAC" e localizar a classe nas sugestões de preenchimento automático. O algoritmo difuso define um limite mínimo ao qual os símbolos precisam atender para serem mostrados na lista. A filtragem **inteligente** exibe todos os símbolos que contêm subcadeias de caracteres que correspondem ao que foi digitado. A filtragem de **prefixo** pesquisa cadeias de caracteres que começam com o que foi digitado.
 
@@ -35,7 +35,7 @@ O IntelliCode é o IntelliSense assistido por IA. Ele coloca o candidato mais pr
 
 Ao escrever em C++, o IntelliCode ajudará durante o uso de bibliotecas populares, como a Biblioteca Padrão C++. O contexto do código é usado para fornecer as recomendações mais úteis primeiro. No exemplo a seguir, a função de membro `size` é comumente usada com a função `sort` e, portanto, ela é exibida no início da lista de resultados.
 
-![C&#43;&#43; IntelliCode](../ide/media/intellicode-cpp.png "C++ IntelliCode")
+![IntelliCode&#43; &#43; C](../ide/media/intellicode-cpp.png "C++IntelliCode")
 
 ::: moniker range="vs-2019"
 
@@ -53,18 +53,18 @@ No Visual Studio 2017, o IntelliCode está disponível como uma extensão no Vis
 
 O **IntelliSense Preditivo** é um recurso experimental que usa o reconhecimento contextual para limitar o número de resultados exibidos na lista suspensa do IntelliSense. O algoritmo aplica a correspondência de tipos, de modo que ele mostre somente os resultados que correspondem ao tipo esperado. No caso mais simples, se você digitar `int x =` e invocar a lista suspensa do IntelliSense, verá apenas inteiros ou funções que retornam inteiros. Esse recurso está desativado por padrão porque ainda está em desenvolvimento. Ela funciona melhor com símbolos globais; ainda não há suporte para funções de membro. Você pode ativá-la digitando "Preditivo" em **Início Rápido** ou acessando **Ferramentas** > **Opções** > **Editor de Texto** > **C/C++**  > **Experimental** > **Habilitar IntelliSense Preditivo**.
 
-Para substituir o **IntelliSense Preditivo** e mostrar a lista mais longa, pressione **Ctrl+J**. Se o **IntelliSense Preditivo** estiver ativado, a invocação de **Ctrl+J** removerá o filtro Preditivo. Pressionar **Ctrl+J** novamente removerá o filtro de acessibilidade dos resultados da Lista de Membros quando relevante. O botão ([+]) na lista suspensa do IntelliSense realiza a mesma ação que **Ctrl+J**. Passe o mouse sobre o botão para ver informações de dica de ferramenta sobre o que está sendo mostrado.
+Para substituir o **IntelliSense preditiva** e mostrar a lista mais longa, pressione **Ctrl + J**. Se o **IntelliSense preditiva** estiver ativado, invocar **Ctrl + J** removerá o filtro de previsão. Pressionar **Ctrl+J** novamente removerá o filtro de acessibilidade dos resultados da Lista de Membros quando relevante. O botão ([+]) na lista suspensa do IntelliSense faz a mesma coisa que **Ctrl + J**. Passe o mouse sobre o botão para ver as informações de dica de ferramenta sobre o que está sendo mostrado.
 
-![IntelliSense Preditivo no C&#43;&#43;](../ide/media/predictive-intellisense-cpp.png "IntelliSense Preditivo")
+![C&#43; &#43; IntelliSense preditiva](../ide/media/predictive-intellisense-cpp.png "IntelliSense preditiva")
 
 A captura de tela anterior mostra vários botões na lista suspensa. Eles habilitam filtros do IntelliSense para diferentes tipos de resultados:
 
 - Variáveis e constantes
-- Funções
+- {1&gt;Funções&lt;1}
 - Tipos
 - Macros
 - Enums
-- Namespaces
+- {1&gt;Namespaces&lt;1}
 
 Um botão é exibido somente se ele é relevante para a sessão atual do IntelliSense. Normalmente, você não verá todos os botões ao mesmo tempo.
 
@@ -72,21 +72,21 @@ Um botão é exibido somente se ele é relevante para a sessão atual do Intelli
 
 Quando o cursor estiver dentro de uma definição de modelo, uma **Barra de Modelo** será exibida, que permite fornecer argumentos de modelo de exemplo para o IntelliSense. 
 
-![IntelliSense do Modelo mostra as instanciações existentes no C&#43;&#43;](../ide/media/template-intellisense-cpp-1.png "IntelliSense do Modelo mostra as instanciações existentes")
+![Modelo&#43; &#43; C o IntelliSense mostrar instanciações existentes](../ide/media/template-intellisense-cpp-1.png "Modelo IntelliSense mostrar instanciações existentes")
 
-Clique no ícone **<T>** para expandir/recolher a **Barra de Modelo**. Clique no ícone de lápis ou clique duas vezes na **Barra de Modelo** para abrir a janela **Editar**. 
+Clique no ícone **\<t >** para expandir/recolher a **barra de modelos**. Clique no ícone de lápis ou clique duas vezes na **Barra de Modelo** para abrir a janela **Editar**. 
 
-![IntelliSense do Modelo no C&#43;&#43;](../ide/media/template-intellisense-cpp-3.png "IntelliSense do Modelo")
+![IntelliSense&#43; &#43; do modelo C](../ide/media/template-intellisense-cpp-3.png "IntelliSense de modelo")
 
 As edições feitas na janela são aplicadas diretamente ao código-fonte, para que você possa ver os efeitos em tempo real. 
 
 A Barra de Modelo pode preencher candidatos automaticamente com base nas instanciações no código. Clique em **Adicionar Todas as Instanciações Existentes** para ver uma lista de todos os argumentos concretos que foram usados para criar uma instância do modelo em toda a base de código.
 
-![Lista de resultados do IntelliSense do Modelo no C&#43;&#43;](../ide/media/template-intellisense-cpp-2.png "Lista de resultados do IntelliSense do Modelo")
+![Lista&#43; &#43; de resultados do IntelliSense do modelo C](../ide/media/template-intellisense-cpp-2.png "Lista de resultados do IntelliSense de modelo")
 
 Uma janela na parte inferior do editor mostra o local em que cada instanciação foi encontrada e quais eram os argumentos.
 
-![Mapa de instanciação do IntelliSense do Modelo no C&#43;&#43;](../ide/media/template-intellisense-cpp-4.png "Mapa de instanciação do IntelliSense do Modelo")
+![Mapa&#43; &#43; de instanciação do IntelliSense do modelo C](../ide/media/template-intellisense-cpp-4.png "Mapa de instanciação do IntelliSense de modelo")
 
 As informações da **Barra de Modelo** são tratadas como específicas do usuário. Elas são armazenadas na pasta .vs e não são confirmadas no controle do código-fonte.
 
@@ -98,17 +98,17 @@ Para alguns tipos de erros, bem como padrões de codificação comuns, o editor 
 
 No exemplo a seguir, um `vector` foi declarado, mas nenhuma definição foi encontrada e, portanto, o editor oferece a inclusão do arquivo de cabeçalho necessário:
 
-![Correção rápida no C&#43;&#43;](../ide/media/quick-fix-for-header-cpp.png "Correção Rápida no C++")
+![Correção&#43; &#43; rápida C](../ide/media/quick-fix-for-header-cpp.png "C++Correção rápida")
 
 O editor também oferece Correções Rápidas para algumas oportunidades de refatoração. Por exemplo, se você declarar uma classe em um arquivo de cabeçalho, o Visual Studio oferecerá a criação de uma definição para ele em um arquivo .cpp separado. 
 
-![Correção rápida no C&#43;&#43;](../ide/media/quick-fix.png "Correção Rápida no C++")
+![Correção&#43; &#43; rápida C](../ide/media/quick-fix.png "C++Correção rápida")
 
 ## <a name="change-tracking"></a>Change tracking
 
 Sempre que você fizer uma alteração em um arquivo, uma barra amarela será exibida à esquerda para indicar que alterações não salvas foram feitas. Quando você salvar o arquivo, a barra ficará verde. As barras verde e amarela serão preservadas, desde que o documento esteja aberto no editor. Elas representam as alterações feitas desde que você abriu o documento pela última vez.
 
-![Controle de Alterações do C&#43;&#43;](../ide/media/change-tracking-cpp.png "Controle de Alterações")
+![Controle&#43; &#43; de alterações C](../ide/media/change-tracking-cpp.png "Change tracking")
 
 ## <a name="move-code"></a>Mover o código
 
@@ -118,13 +118,13 @@ Você pode mover as linhas de código para cima e para baixo selecionando-as, ma
 
 Um snippet é uma parte predefinida do código-fonte. Clique com o botão direito do mouse em um único ponto ou no texto selecionado para inserir um snippet ou colocar o texto selecionado entre o snippet. A ilustração a seguir mostra as três etapas para colocar uma instrução selecionada entre um loop for. Os realces em amarelo na imagem final são campos editáveis acessados com a tecla TAB. Para obter mais informações, consulte [Snippets de Código](/visualstudio/ide/code-snippets).
 
-![Lista suspensa Inserir Snippet no C&#43;&#43;](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
+![Menu&#43; &#43; suspenso&#45;de inserção de trecho de C](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
 
 ##  <a name="add-class"></a>Adicionar Classe
 
 Adicione uma nova classe por meio do menu **Projeto** ou do menu de contexto em **Gerenciador de Soluções**:
 
-![Adicionar Nova Classe no C&#43;&#43;](../ide/media/vs2017-add-class.png "vs2015_cpp_add_class")
+![Adicionar nova classe em C&#43;&#43;](../ide/media/vs2017-add-class.png "vs2015_cpp_add_class")
 
 Use também o Assistente de Classe para modificar ou examinar uma classe existente.
 
@@ -153,13 +153,13 @@ O Visual Studio 2017 e posterior vem com suporte interno para o [ClangFormat](ht
 - Chromium
 - Mozilla
 - WebKit
-- Visual Studio
+- {1&gt;Visual Studio&lt;1}
 
 Forneça também seu próprio arquivo .clang-format ou _clang-format para aplicar regras personalizadas a todos os arquivos de código no mesmo nível ou abaixo.
 
 Os arquivos podem ser compartilhados com facilidade por meio do controle do código-fonte e, portanto, você pode impor convenções de codificação a toda a equipe de desenvolvimento.
 
-![Formato do Clang no C&#43;&#43;](../ide/media/clang-format-cpp.png "Formato do Clang")
+![Formato&#43; &#43; C Clang](../ide/media/clang-format-cpp.png "Formato Clang")
 
 O Visual Studio 2017 e posterior também dá suporte ao [EditorConfig](https://editorconfig.org/), que funciona de maneira semelhante. No entanto, o ClangFormat traz mais opções de estilo do que o EditorConfig, incluindo regras específicas do C++. Com o **EditorConfig**, você cria arquivos **.editorconfig** e coloca-os em pastas diferentes da base de código para especificar estilos de código para essas pastas e suas subpastas. Um arquivo **.editorconfig** substitui qualquer outro arquivo **.editorconfig** nas pastas pai e substitui as configurações de formatação definidas por meio de **Ferramentas** > **Opções**. Defina regras para tabulações vs. espaços, o tamanho do recuo, entre outros. Para obter mais informações, confira [Criar configurações portáteis do editor personalizado com o EditorConfig](/visualstudio/ide/create-portable-custom-editor-options).
 
@@ -167,7 +167,7 @@ O Visual Studio 2017 e posterior também dá suporte ao [EditorConfig](https://e
 
 A caixa de pesquisa **Início Rápido** fornece a maneira mais rápida de localizar uma configuração ou ferramenta. Ela está localizada no menu principal. Basta começar a digitar e a lista de preenchimento automático filtrará os resultados.
 
-![Início Rápido do Visual Studio](../ide/media/vs2015_cpp_quick_launch.png "Início Rápido")
+![Início rápido do Visual Studio](../ide/media/vs2015_cpp_quick_launch.png "Início Rápido")
 
 Para definir opções de formatação como recuos, preenchimento de chaves e colorização, digite "Formatação do C++" na janela **Início Rápido**.
 
@@ -179,11 +179,11 @@ Outras opções de formatação estão localizadas em **Editar** > **Avançado**
 
 As opções para habilitar e configurar recursos de edição específicos do C++ estão localizadas em **Ferramentas** > **Opções** > **Editor de Texto** > **C/C++** . Depois de escolher a opção que deseja definir, você obtenha mais ajuda pressionando **F1** quando a caixa de diálogo estiver no foco. Para obter opções gerais de formatação de código, digite `Editor C++` em **Início Rápido**.
 
-![Ferramentas do Visual Studio > Opções](../ide/media/tools-options.png "Opções do editor")
+![Opções de > de Ferramentas do Visual Studio](../ide/media/tools-options.png "Opções do editor")
 
 As funcionalidades experimentais, que podem ou não ser incluídas em uma versão futura do Visual Studio, são encontradas na caixa de diálogo [Experimental do C++ do Editor de Texto](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental). No Visual Studio 2017 e posterior, você pode habilitar o **IntelliSense Preditivo** nessa caixa de diálogo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Ler e entender o código C++](read-and-understand-code-cpp.md)</br>
 [Navegar pela base de código C++ no Visual Studio](navigate-code-cpp.md)</br>

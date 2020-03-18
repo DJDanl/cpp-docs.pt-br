@@ -1,19 +1,18 @@
 ---
-title: '&lt;lista > (comentários de documentação do C++)'
+title: '> da lista deC++ &lt;(comentários da documentação)'
 ms.date: 11/04/2016
 f1_keywords:
 - list
-- <list>
 helpviewer_keywords:
 - list C++ XML tag
 - <list> C++ XML tag
 ms.assetid: c792a10b-0451-422c-9aa0-604116e69d64
-ms.openlocfilehash: fd5b97ac518bc4075697da7b6ed88ed46bdd8814
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 102cf9f7b1b867a012f662ce786d97012826abd1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305262"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439309"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
@@ -50,7 +49,7 @@ Uma lista ou tabela pode ter quantos blocos \<item> forem necessários.
 
 Compile com [/doc](doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // xml_list_tag.cpp
