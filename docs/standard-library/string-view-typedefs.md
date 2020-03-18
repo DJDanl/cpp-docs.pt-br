@@ -7,11 +7,11 @@ f1_keywords:
 - xstring/std::u32string_view
 - xstring/std::wstring_view
 ms.openlocfilehash: c3367afe1353ac70abb74a59658a255614ac8470
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865841"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422377"
 ---
 # <a name="ltstring_viewgt-typedefs"></a>&lt;string_view TYPEDEFs&gt;
 
@@ -87,6 +87,6 @@ Para obter uma lista de construtores de cadeia de caracteres, consulte [basic_st
 > [!NOTE]
 > O tamanho de **wchar_t** é de dois bytes no Windows, mas esse não é necessariamente o caso para todas as plataformas. Se você precisar de um string_view tipo de caractere largo com uma largura com garantia de que permaneça o mesmo em todas as plataformas, use [u16string_view](../standard-library/string-view-typedefs.md#u16string_view) ou [u32string_view](../standard-library/string-view-typedefs.md#u32string_view).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [\<string_view >](../standard-library/string-view.md)

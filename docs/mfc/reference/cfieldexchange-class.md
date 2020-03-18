@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
 ms.openlocfilehash: e66b3ed16d4f21d46567c37bfaf7929d32f63b8e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866272"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420403"
 ---
 # <a name="cfieldexchange-class"></a>Classe CFieldExchange
 
@@ -29,7 +29,7 @@ class CFieldExchange
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|DESCRIÇÃO|
 |----------|-----------------|
@@ -73,7 +73,7 @@ Se você escrever sua própria função suporte RFX, chame `IsFieldType` no iní
 BOOL IsFieldType(UINT* pnField);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pnField*<br/>
 O número sequencial do membro de dados de campo ou parâmetro é retornado nesse parâmetro. Esse número corresponde à ordem do membro de dados na função [CRecordset::D ofieldexchange](../../mfc/reference/crecordset-class.md#dofieldexchange) ou [CRecordset::D obulkfieldexchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) .
@@ -94,7 +94,7 @@ Você precisa de uma chamada para `SetFieldType` na substituição de [DoFieldEx
 void SetFieldType(UINT nFieldType);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nFieldType*<br/>
 Um valor da `enum FieldType`, declarado em `CFieldExchange`, que pode ser um dos seguintes:
@@ -132,7 +132,7 @@ Este exemplo mostra várias chamadas para funções suporte RFX com chamadas que
 
 [!code-cpp[NVC_MFCDatabase#33](../../mfc/codesnippet/cpp/cfieldexchange-class_1.cpp)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CRecordset](../../mfc/reference/crecordset-class.md)

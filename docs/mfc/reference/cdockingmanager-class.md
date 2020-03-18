@@ -161,11 +161,11 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
 ms.openlocfilehash: 8709b3a4eb3f57a3d2700ad7aaed16df994245c5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883911"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420466"
 ---
 # <a name="cdockingmanager-class"></a>Classe CDockingManager
 
@@ -181,7 +181,7 @@ class CDockingManager : public CObject
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDockingManager::AddDockSite](#adddocksite)|Cria um painel de encaixe e o adiciona à lista de barras de controle.|
 |[CDockingManager::AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|Adiciona um identificador a um painel de barras à lista de painéis de barras com guias MDI ocultos.|
@@ -256,9 +256,9 @@ class CDockingManager : public CObject
 |[CDockingManager::StartSDocking](#startsdocking)|Inicia o encaixe inteligente da janela especificada de acordo com o alinhamento do Gerenciador de encaixe inteligente.|
 |[CDockingManager::StopSDocking](#stopsdocking)|Para o encaixe inteligente.|
 
-### <a name="data-members"></a>Membros de Dados
+### <a name="data-members"></a>Membros de dados
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDockingManager:: m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Especifica se o Gerenciador de encaixe oculta painéis no modo de contêiner OLE.|
 |[CDockingManager:: m_dockModeGlobal](#m_dockmodeglobal)|Especifica o modo de encaixe global.|
@@ -290,7 +290,7 @@ As dicas a seguir se aplicam a objetos `CDockingManager`:
 
 - Se você quiser criar um painel não flutuante e não redimensionável, chame o método [CDockingManager:: AddPane](#addpane) . Esse método registra o painel com o Gerenciador de encaixe, que é responsável pelo layout do painel.
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra como usar vários métodos na classe `CDockingManager` para configurar um objeto `CDockingManager`. O exemplo mostra como exibir um botão adicional que abre um menu pop-up nas legendas de todos os painéis de encaixe e como definir o modo de encaixe do objeto. Este trecho de código faz parte do [exemplo de demonstração do Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -302,7 +302,7 @@ O exemplo a seguir demonstra como usar vários métodos na classe `CDockingManag
 
 [CDockingManager](../../mfc/reference/cdockingmanager-class.md)
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxDockingManager. h
 
@@ -316,7 +316,7 @@ BOOL AddDockSite(
     CDockSite** ppDockBar = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *info*<br/>
 no Uma referência a uma estrutura de informações que contém alinhamento de painel de encaixe.
@@ -336,7 +336,7 @@ Adiciona um identificador a um painel de barras à lista de painéis de barras c
 void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 no Um ponteiro para um painel de barras
@@ -353,7 +353,7 @@ BOOL AddPane(
     BOOL bInsertForOuterEdge = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 [entrada, saída] Especifica o painel a ser adicionado ao Gerenciador de encaixe.
@@ -383,7 +383,7 @@ Recalcula e ajusta o layout de todos os painéis em uma janela do quadro.
 virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hdwp*<br/>
 no Especifica a estrutura de posição da janela adiada. Para obter mais informações, consulte [tipos de dados do Windows](/windows/win32/WinProg/windows-data-types).
@@ -398,7 +398,7 @@ Adiciona um quadro à lista de mini quadros.
 virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 no Um ponteiro para um quadro.
@@ -427,7 +427,7 @@ virtual BOOL AdjustRectToClientArea(
     DWORD dwAlignment);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rectResult*<br/>
 no Uma referência a um objeto `CRect`
@@ -461,7 +461,7 @@ void AlignAutoHidePane(
     BOOL bIsVisible = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDefaultSlider*<br/>
 no O painel deslizante de encaixe.
@@ -479,7 +479,7 @@ CMFCAutoHideToolBar* AutoHidePane(
     CMFCAutoHideToolBar* pCurrAutoHideToolBar = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 no Um ponteiro para o painel de barras.
@@ -501,7 +501,7 @@ void BringBarsToTop(
     BOOL bExcludeDockedBars = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwAlignment*<br/>
 no O alinhamento das barras de encaixe que são trazidas para a parte superior de outras janelas.
@@ -519,7 +519,7 @@ void BuildPanesMenu(
     BOOL bToolbarsOnly);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *AdicionarMenu*<br/>
 no Um menu para adicionar os nomes dos painéis e barras de ferramentas de encaixe ao.
@@ -540,7 +540,7 @@ void CalcExpectedDockedRect(
     CDockablePane** ppTargetBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 no Um ponteiro para a janela a ser encaixada.
@@ -569,7 +569,7 @@ Cria um Gerenciador de encaixe.
 BOOL Create(CFrameWnd* pParentWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParentWnd*<br/>
 no Um ponteiro para o quadro pai do Gerenciador de encaixe. Esse valor não deve ser nulo.
@@ -592,7 +592,7 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
     const CBasePane* pBarToDock);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pt*<br/>
 no O local do painel a ser verificado.
@@ -635,7 +635,7 @@ Habilita ou desabilita o carregamento do layout de encaixe do registro.
 void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bDesativar*<br/>
 no TRUE para desabilitar o carregamento do layout de encaixe do registro; caso contrário, FALSE.
@@ -655,7 +655,7 @@ void DockPane(
     LPCRECT lpRect = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 no Um ponteiro para um painel de barras para encaixar.
@@ -676,7 +676,7 @@ BOOL DockPaneLeftOf(
     CPane* pTargetBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBarToDock*<br/>
 no Um ponteiro para o painel a ser encaixado à esquerda de *pTargetBar*.
@@ -696,7 +696,7 @@ Habilita o encaixe do painel no quadro principal, cria um painel de encaixe e o 
 BOOL EnableAutoHidePanes(DWORD dwStyle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwStyle*<br/>
 no O alinhamento de encaixe.
@@ -713,7 +713,7 @@ Cria um painel de encaixe e habilita o encaixe do painel no quadro principal.
 BOOL EnableDocking(DWORD dwStyle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwStyle*<br/>
 no O alinhamento de encaixe.
@@ -730,7 +730,7 @@ Exibe um botão adicional que abre um menu pop-up nas legendas de todos os pain�
 static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 no TRUE para habilitar o menu do site de encaixe; caso contrário, FALSE.
@@ -761,7 +761,7 @@ void EnablePaneContextMenu(
     BOOL bToolbarsOnly = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 no Se for TRUE, a biblioteca ativará o suporte para o menu de contexto automático; Se FALSE, a biblioteca desativa o suporte para o menu de contexto automático.
@@ -785,7 +785,7 @@ virtual CDockSite* FindDockSite(
     BOOL bOuter);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwAlignment*<br/>
 no O alinhamento do painel de barras.
@@ -807,7 +807,7 @@ virtual CBasePane* FindPaneByID(
     BOOL bSearchMiniFrames = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uBarID*<br/>
 no Especifica a ID de controle do painel a ser localizado.
@@ -829,7 +829,7 @@ Retorna o painel de barras que tem a ID do painel da barra de destino.
 virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pTargetBar*<br/>
 no Um ponteiro para o painel da barra de destino.
@@ -861,7 +861,7 @@ virtual CPaneFrameWnd* FrameFromPoint(
     BOOL bFloatMultiOnly) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pt*<br/>
 no Especifica o ponto, em coordenadas da tela, para verificar.
@@ -886,7 +886,7 @@ CRect GetClientAreaBounds() const;
 void GetClientAreaBounds(CRect& rcClient);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rcClient*<br/>
 fora Uma referência ao retângulo que contém os limites da área do cliente.
@@ -981,7 +981,7 @@ void GetPaneList(
     BOOL bIncludeTabs = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lstBars*<br/>
 [entrada, saída] Contém todos os painéis do Gerenciador de encaixe atual.
@@ -1049,7 +1049,7 @@ void HideAutoHidePanes(
     BOOL bImmediately = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBarToExclude*<br/>
 no Um ponteiro para uma barra a ser excluído da ocultação.
@@ -1068,7 +1068,7 @@ BOOL InsertDockSite(
     CDockSite** ppDockBar = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *info*<br/>
 no Uma estrutura que contém as informações de alinhamento sobre o painel de encaixe.
@@ -1094,7 +1094,7 @@ BOOL InsertPane(
     BOOL bAfter = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pControlBar*<br/>
 no Um ponteiro para um painel de controle.
@@ -1168,7 +1168,7 @@ BOOL IsPointNearDockSite(
     BOOL& bOuterEdge) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *empresas*<br/>
 no O ponto especificado.
@@ -1205,7 +1205,7 @@ virtual BOOL LoadState(
     UINT uiID = (UINT) -1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszProfileName*<br/>
 no Nome do perfil.
@@ -1225,7 +1225,7 @@ Bloqueia a janela especificada.
 void LockUpdate(BOOL bLock);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Impeça*<br/>
 no TRUE se a janela estiver bloqueada; Caso contrário, FALSE.
@@ -1302,7 +1302,7 @@ Chamado pelo Framework quando a janela do quadro é ativada ou desativada.
 virtual void OnActivateFrame(BOOL bActivate);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bActivate*<br/>
 no Se for TRUE, a janela do quadro será ativada; Se for FALSE, a janela do quadro será desativada.
@@ -1327,7 +1327,7 @@ Chamado pelo Framework para mover uma janela de mini-quadro.
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFrame*<br/>
 no Um ponteiro para uma janela de mini-quadro.
@@ -1344,7 +1344,7 @@ Chamado pelo Framework quando ele cria um menu que tem uma lista de painéis.
 void OnPaneContextMenu(CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *empresas*<br/>
 no Especifica o local do menu.
@@ -1370,7 +1370,7 @@ virtual CBasePane* PaneFromPoint(
     const CBasePane* pBarToIgnore = NULL) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *empresas*<br/>
 no Especifica o ponto, em coordenadas da tela, para verificar.
@@ -1413,7 +1413,7 @@ BOOL ProcessPaneContextMenuCommand(
     AFX_CMDHANDLERINFO* pHandlerInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 no A ID de uma barra de controle no menu.
@@ -1439,7 +1439,7 @@ Recalcula o layout interno dos controles presentes na lista de controles.
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bNotify*<br/>
 no Esse parâmetro não é usado.
@@ -1460,7 +1460,7 @@ Remove o painel de barras ocultos especificado.
 void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 no Um ponteiro para um painel de barras a ser removido.
@@ -1473,7 +1473,7 @@ Remove um quadro especificado da lista de mini quadros.
 virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 no Um ponteiro para um quadro a ser removido.
@@ -1495,7 +1495,7 @@ void RemovePaneFromDockManager(
     CBasePane* pBarReplacement = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 no Um ponteiro para um painel a ser removido.
@@ -1522,7 +1522,7 @@ BOOL ReplacePane(
     CDockablePane* pNewBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pOriginalBar*<br/>
 no Um ponteiro para o painel original.
@@ -1552,7 +1552,7 @@ virtual BOOL SaveState(
     UINT uiID = (UINT) -1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszProfileName*<br/>
 no Um caminho para uma chave do registro.
@@ -1579,7 +1579,7 @@ BOOL SendMessageToMiniFrames(
     LPARAM lParam = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uMessage*<br/>
 no A mensagem a ser enviada.
@@ -1602,7 +1602,7 @@ Grava o Gerenciador de encaixe em um arquivo morto.
 void Serialize(CArchive& ar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *multi-hop*<br/>
 no Uma referência a um objeto de arquivo morto.
@@ -1619,7 +1619,7 @@ Define o tamanho, a largura e a altura das barras de controle e o painel especif
 void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pAHDockingBar*<br/>
 no Um ponteiro para um painel de encaixáveis.
@@ -1634,7 +1634,7 @@ static void SetDockingMode(
     AFX_SMARTDOCK_THEME theme = AFX_SDT_DEFAULT);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dockMode*<br/>
 Especifica o novo modo de encaixe. Para obter mais informações, consulte a seção Comentários.
@@ -1672,7 +1672,7 @@ void SetPrintPreviewMode(
     CPrintPreviewState* pState);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bPreview*<br/>
 no TRUE se o modo de visualização de impressão estiver definido; Caso contrário, FALSE.
@@ -1688,7 +1688,7 @@ Define os parâmetros que definem o comportamento do encaixe inteligente.
 static void SetSmartDockingParams(CSmartDockingInfo& params);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *params*<br/>
 [entrada, saída] Define os parâmetros para encaixe inteligente.
@@ -1707,7 +1707,7 @@ Mostra ou oculta as janelas dos mini quadros.
 void ShowDelayShowMiniFrames(BOOL bshow);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bShow*<br/>
 no TRUE para tornar a janela do quadro mostrado ativa; FALSE para ocultar a janela do quadro.
@@ -1720,7 +1720,7 @@ Mostra ou oculta os painéis do controle e as barras de AutoOcultar.
 virtual BOOL ShowPanes(BOOL bShow);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bShow*<br/>
 no TRUE para mostrar os painéis; FALSE para ocultar os painéis.
@@ -1737,7 +1737,7 @@ Inicia o encaixe inteligente da janela especificada de acordo com o alinhamento 
 void StartSDocking(CWnd* pDockingWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDockingWnd*<br/>
 no Um ponteiro para uma janela a ser encaixada.
@@ -1764,7 +1764,7 @@ Retorna um dos seguintes valores enumerados: AFX_SDT_DEFAULT, AFX_SDT_VS2005 AFX
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

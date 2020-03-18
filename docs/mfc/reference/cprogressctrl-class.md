@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
 ms.openlocfilehash: 9d63a1113e521eb73c99c47b335eb7ab00ccd753
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866318"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421530"
 ---
 # <a name="cprogressctrl-class"></a>Classe CProgressCtrl
 
@@ -63,13 +63,13 @@ class CProgressCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CProgressCtrl::CProgressCtrl](#cprogressctrl)|Constrói um objeto `CProgressCtrl`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CProgressCtrl:: criar](#create)|Cria um controle de barra de progresso e o anexa a um objeto `CProgressCtrl`.|
 |[CProgressCtrl::CreateEx](#createex)|Cria um controle de progresso com os estilos estendidos do Windows especificados e o anexa a um objeto `CProgressCtrl`.|
@@ -107,7 +107,7 @@ Para obter mais informações sobre como usar `CProgressCtrl`, consulte [control
 
 `CProgressCtrl`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxcmn. h
 
@@ -123,7 +123,7 @@ CProgressCtrl();
 
 Depois de construir o objeto `CProgressCtrl`, chame `CProgressCtrl::Create` para criar o controle da barra de progresso.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CProgressCtrl#1](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_1.cpp)]
 
@@ -139,7 +139,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwStyle*<br/>
 Especifica o estilo do controle da barra de progresso. Aplique qualquer combinação de stylesdescribed de janela no [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) no SDK do Windows, além dos seguintes estilos de controle de barra de progresso, ao controle:
@@ -165,7 +165,7 @@ TRUE se o objeto de `CProgressCtrl` for criado com êxito; caso contrário, FALS
 
 Você constrói um objeto `CProgressCtrl` em duas etapas. Primeiro, chame o construtor, que cria o objeto `CProgressCtrl` e, em seguida, chame `Create`, que cria o controle da barra de progresso.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CProgressCtrl#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_2.cpp)]
 
@@ -182,7 +182,7 @@ virtual BOOL CreateEx(
     UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwExStyle*<br/>
 Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista de estilos estendidos do Windows, consulte o parâmetro *dwExStyle* para [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) no SDK do Windows.
@@ -255,7 +255,7 @@ A posição do controle da barra de progresso.
 
 A posição do controle da barra de progresso não é o local físico na tela, mas sim entre o intervalo superior e inferior indicado em [SetRange](#setrange).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CProgressCtrl#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_3.cpp)]
 
@@ -269,7 +269,7 @@ void GetRange(
     int& nUpper);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nLower*<br/>
 Uma referência a um inteiro que recebe o limite inferior do controle da barra de progresso.
@@ -281,7 +281,7 @@ Uma referência a um inteiro que recebe o limite superior do controle de barra d
 
 Essa função copia os valores dos limites inferior e superior para os inteiros referenciados por *nLower* e *nUpper*, respectivamente.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CProgressCtrl#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_4.cpp)]
 
@@ -297,23 +297,23 @@ int GetState() const;
 
 O estado do controle da barra de progresso atual, que é um dos seguintes valores:
 
-|{1&gt;Valor&lt;1}|Estado|
+|Valor|Estado|
 |-----------|-----------|
 |PBST_NORMAL|Em andamento|
-|PBST_ERROR|Error|
-|PBST_PAUSED|Em pausa|
+|PBST_ERROR|Erro|
+|PBST_PAUSED|Em Pausa|
 
 ### <a name="remarks"></a>Comentários
 
 Esse método envia a mensagem de [PBM_GETSTATE](/windows/win32/Controls/pbm-getstate) , que é descrita na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir define a variável, `m_progressCtrl`, que é usada para acessar programaticamente o controle da barra de progresso. Essa variável é usada no exemplo a seguir.
 
 [!code-cpp[NVC_MFC_CProgressCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_5.h)]
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir recupera o estado do controle de barra de progresso atual.
 
@@ -337,13 +337,13 @@ A etapa incremento é a quantidade pela qual uma chamada para [CProgressCtrl:: S
 
 Esse método envia a mensagem de [PBM_GETSTEP](/windows/win32/Controls/pbm-getstep) , que é descrita na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir define a variável, `m_progressCtrl`, que é usada para acessar programaticamente o controle da barra de progresso. Essa variável é usada no exemplo a seguir.
 
 [!code-cpp[NVC_MFC_CProgressCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_5.h)]
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir recupera o incremento de etapa do controle de barra de progresso atual.
 
@@ -357,7 +357,7 @@ Avança a posição atual do controle de barra de progresso pelo incremento espe
 int OffsetPos(int nPos);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nPos*<br/>
 Valor para avançar a posição.
@@ -366,7 +366,7 @@ Valor para avançar a posição.
 
 A posição anterior do controle da barra de progresso.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CProgressCtrl#5](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_8.cpp)]
 
@@ -378,9 +378,9 @@ Define a cor da barra de indicadores de progresso no controle da barra de progre
 COLORREF SetBarColor(COLORREF clrBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*clrBar*|no Um valor de [COLORREF](/windows/win32/gdi/colorref) que especifica a nova cor da barra de indicador de progresso. Especifique CLR_DEFAULT para fazer com que a barra de progresso Use sua cor padrão.|
 
@@ -394,13 +394,13 @@ O método `SetBarColor` define a cor da barra de progresso somente se um [tema](
 
 Esse método envia a mensagem de [PBM_SETBARCOLOR](/windows/win32/Controls/pbm-setbarcolor) , que é descrita na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir define a variável, `m_progressCtrl`, que é usada para acessar programaticamente o controle da barra de progresso. Essa variável é usada no exemplo a seguir.
 
 [!code-cpp[NVC_MFC_CProgressCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_5.h)]
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir altera a cor da barra de progresso para vermelho, verde, azul ou o padrão.
 
@@ -414,7 +414,7 @@ Define a cor do plano de fundo da barra de progresso.
 COLORREF SetBkColor(COLORREF clrNew);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *clrNew*<br/>
 Um valor COLORREF que especifica a nova cor do plano de fundo. Especifique o valor de CLR_DEFAULT para usar a cor de plano de fundo padrão para a barra de progresso.
@@ -423,7 +423,7 @@ Um valor COLORREF que especifica a nova cor do plano de fundo. Especifique o val
 
 O valor [COLORREF](/windows/win32/gdi/colorref) indicando a cor do plano de fundo anterior ou CLR_DEFAULT se a cor do plano de fundo for a cor padrão.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CProgressCtrl#6](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_10.cpp)]
 
@@ -437,9 +437,9 @@ BOOL SetMarquee(
     int nInterval);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*fMarqueeMode*|no TRUE para ativar o modo de letreiro ou FALSE para ativar o modo de letreiro.|
 |*nIntervalo*|no Tempo em milissegundos entre as atualizações da animação do letreiro digital.|
@@ -454,13 +454,13 @@ Quando o modo de letreiro é ativado, a barra de progresso é animada e rola com
 
 Esse método envia a mensagem de [PBM_SETMARQUEE](/windows/win32/Controls/pbm-setmarquee) , que é descrita na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir define a variável, `m_progressCtrl`, que é usada para acessar programaticamente o controle da barra de progresso. Essa variável é usada no exemplo a seguir.
 
 [!code-cpp[NVC_MFC_CProgressCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_5.h)]
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir inicia e interrompe a animação de rolagem de letreiro.
 
@@ -474,7 +474,7 @@ Define a posição atual do controle da barra de progresso como especificado por
 int SetPos(int nPos);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nPos*<br/>
 Nova posição do controle da barra de progresso.
@@ -487,7 +487,7 @@ A posição anterior do controle da barra de progresso.
 
 A posição do controle da barra de progresso não é o local físico na tela, mas sim entre o intervalo superior e inferior indicado em [SetRange](#setrange).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CProgressCtrl#7](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_12.cpp)]
 
@@ -505,7 +505,7 @@ void SetRange32(
     int nUpper);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nLower*<br/>
 Especifica o limite inferior do intervalo (o padrão é zero).
@@ -517,7 +517,7 @@ Especifica o limite superior do intervalo (o padrão é 100).
 
 A função membro `SetRange32` define o intervalo de 32 bits para o controle de progresso.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CProgressCtrl#8](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_13.cpp)]
 
@@ -529,9 +529,9 @@ Define o estado do controle da barra de progresso atual.
 int SetState(int iState);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*IState*|no O estado para definir a barra de progresso. Use um dos seguintes valores:<br /><br /> -PBST_NORMAL em andamento<br />-PBST_ERROR-erro<br />-PBST_PAUSED-em pausa|
 
@@ -543,13 +543,13 @@ O estado anterior do controle da barra de progresso atual.
 
 Esse método envia a mensagem de [PBM_SETSTATE](/windows/win32/Controls/pbm-setstate) , que é descrita na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir define a variável, `m_progressCtrl`, que é usada para acessar programaticamente o controle da barra de progresso. Essa variável é usada no exemplo a seguir.
 
 [!code-cpp[NVC_MFC_CProgressCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_5.h)]
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir define o estado do controle da barra de progresso atual como pausado ou em andamento.
 
@@ -563,7 +563,7 @@ Especifica o incremento de etapa para um controle de barra de progresso.
 int SetStep(int nStep);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nStep*<br/>
 Incremento de nova etapa.
@@ -578,7 +578,7 @@ A etapa incremento é a quantidade pela qual uma chamada para `CProgressCtrl::St
 
 O incremento da etapa padrão é 10.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CProgressCtrl#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_15.cpp)]
 
@@ -598,11 +598,11 @@ A posição anterior do controle da barra de progresso.
 
 O incremento Step é definido pela função membro `CProgressCtrl::SetStep`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_CProgressCtrl#10](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_16.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de CMNCTRL2 do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>

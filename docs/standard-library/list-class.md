@@ -99,11 +99,11 @@ helpviewer_keywords:
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 ms.openlocfilehash: d5f64f44ec62a8bd1862af2b8f9cb72b2d0210e4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890831"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420074"
 ---
 # <a name="list-class"></a>Classe list
 
@@ -116,7 +116,7 @@ template <class Type, class Allocator= allocator<Type>>
 class list
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Tipo*\
 O tipo de dados do elemento a ser armazenado na lista.
@@ -242,7 +242,7 @@ void assign(
     InputIterator Last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Primeiro*\
 Posição do elemento primeiro no intervalo de elementos ser copiado da lista de argumentos.
@@ -755,7 +755,7 @@ Insere um elemento construído no local em uma lista na posição especificada.
 void emplace(iterator Where, Type&& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Onde*\
 A posição na [lista](../standard-library/list-class.md) de destino em que o primeiro elemento é inserido.
@@ -799,7 +799,7 @@ Adiciona um elemento construído no local ao final de uma lista.
 void emplace_back(Type&& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor*\
 O elemento adicionado ao final da [lista](../standard-library/list-class.md).
@@ -840,7 +840,7 @@ Adiciona um elemento construído no local ao início de uma lista.
 void emplace_front(Type&& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor*\
 O elemento adicionado ao início da [lista](../standard-library/list-class.md).
@@ -979,7 +979,7 @@ iterator erase(iterator Where);
 iterator erase(iterator first, iterator last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Onde*\
 Posição do elemento a ser removido da lista.
@@ -1147,7 +1147,7 @@ template <class InputIterator>
 void insert(iterator Where, InputIterator First, InputIterator Last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Onde*\
 A posição na lista de destino em que o primeiro elemento é inserido.
@@ -1276,7 +1276,7 @@ template <class InputIterator>
 list(InputIterator First, InputIterator Last, const Allocator& Al);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Al*\
 A classe de alocador a ser usada com esse objeto.
@@ -1454,7 +1454,7 @@ template <class Traits>
 void merge(list<Type, Allocator>& right, Traits comp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 A lista de argumentos a ser mesclada com a lista de destino.
@@ -1536,7 +1536,7 @@ list& operator=(const list& right);
 list& operator=(list&& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 A [lista](../standard-library/list-class.md) que está sendo copiada para o `list`.
@@ -1692,7 +1692,7 @@ Adiciona um elemento ao fim da lista.
 void push_back(void push_back(Type&& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor*\
 O elemento adicionado ao final da lista.
@@ -1747,7 +1747,7 @@ void push_front(const Type& val);
 void push_front(Type&& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor*\
 O elemento adicionado ao início da lista.
@@ -1908,7 +1908,7 @@ Apaga elementos em uma lista que correspondem a um valor especificado.
 void remove(const Type& val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor*\
 O valor que, se mantido por um elemento, resultará na remoção de tal elemento da lista.
@@ -1966,7 +1966,7 @@ template <class Predicate>
 void remove_if(Predicate pred)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Pred*
 O predicado unário que, se atendido por um elemento, resultará na exclusão de tal elemento da lista.
@@ -2117,7 +2117,7 @@ void resize(size_type _Newsize);
 void resize(size_type _Newsize, Type val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Newsize*\
 O novo tamanho da lista.
@@ -2299,7 +2299,7 @@ template <class Traits>
     void sort(Traits comp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *comp*\
 O operador de comparação usado para ordenar elementos sucessivos.
@@ -2371,12 +2371,12 @@ void splice(const_iterator Where, list<Type, Allocator>& Source, const_iterator 
 void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator First, const_iterator Last);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Onde*\
 A posição na lista de destino antes da inserção.
 
-*Source*\
+*Origem*\
 A lista de origem a ser inserida na lista de destino.
 
 \ *ITER*
@@ -2485,7 +2485,7 @@ void swap(list<Type, Allocator>& right);
 friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 A lista que fornece os elementos a serem alternados ou a lista cujos elementos devem ser trocados com os da lista *à esquerda*.
@@ -2552,7 +2552,7 @@ template <class BinaryPredicate>
 void unique(BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Pred*
 O predicado binário usado para comparar elementos sucessivos.

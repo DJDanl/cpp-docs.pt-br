@@ -345,11 +345,11 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
 ms.openlocfilehash: b631baefdb200c787d7b764ed73b60b3bdd5f592
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866668"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420214"
 ---
 # <a name="cmfcvisualmanager-class"></a>Classe CMFCVisualManager
 
@@ -367,13 +367,13 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`CMFCVisualManager::CMFCVisualManager`|Construtor padrão.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CMFCVisualManager::AdjustFrames](#adjustframes)||
 |[CMFCVisualManager::AdjustToolbars](#adjusttoolbars)||
@@ -553,7 +553,7 @@ Para alterar a aparência do seu aplicativo, você deve usar outras classes que 
 
 Todos os métodos de desenho são virtuais. Isso permite que você crie um estilo visual personalizado para a GUI do seu aplicativo. Se você quiser criar seu próprio estilo visual, derive uma classe de uma das classes do Visual Manager e substitua os métodos de desenho que você deseja alterar.
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 Este exemplo demonstra como instanciar os objetos de `CMFCVisualManager` padrão e personalizados.
 
@@ -585,7 +585,7 @@ void CMFCSkinsApp::SetSkin (int iIndex)
 }
 ```
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra como recuperar os valores padrão de um objeto `CMFCVisualManager`. Este trecho de código faz parte do [exemplo do painel Tarefas](../../overview/visual-cpp-samples.md).
 
@@ -599,7 +599,7 @@ O exemplo a seguir demonstra como recuperar os valores padrão de um objeto `CMF
 
 `CMFCVisualManager`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxvisualmanager. h
 
@@ -641,7 +641,7 @@ Substitua essa função em um gerenciador visual derivado e retorne TRUE se as g
 CMFCVisualManager(BOOL bTemporary = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *bTemporary*<br/>
 
@@ -653,7 +653,7 @@ no *bTemporary*<br/>
 static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *bAutoDestroyOnly*<br/>
 
@@ -669,7 +669,7 @@ void DoDrawHeaderSortArrow(
     BOOL bDlgCtrl);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *Rect*<br/>
@@ -688,7 +688,7 @@ virtual BOOL DrawComboBorderWinXP(CDC*,
     BOOL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *CDC&#42;*<br/>
 no *CRect*<br/>
@@ -708,7 +708,7 @@ virtual BOOL DrawComboDropButtonWinXP(CDC*,
     BOOL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *CDC&#42;*<br/>
 no *CRect*<br/>
@@ -727,7 +727,7 @@ virtual BOOL DrawPushButtonWinXP(CDC*,
     UINT);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *CDC&#42;*<br/>
 no *CRect*<br/>
@@ -750,7 +750,7 @@ virtual BOOL DrawTextOnGlass(
     COLORREF clrText = (COLORREF)-1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *strText*<br/>
@@ -769,7 +769,7 @@ no *clrText*<br/>
 void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *bEnable*<br/>
 
@@ -783,7 +783,7 @@ A estrutura chama esse método para recuperar a cor do texto de um botão de ocu
 virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pButton*<br/>
 no Um ponteiro para um botão de ocultar automaticamente.
@@ -820,7 +820,7 @@ A estrutura chama esse método para recuperar a cor do texto na barra de legenda
 virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBar*<br/>
 no Um ponteiro para uma barra de legenda.
@@ -877,7 +877,7 @@ Substitua esse método em um gerenciador visual personalizado para alterar o tam
 virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *pButton*<br/>
 
@@ -936,7 +936,7 @@ virtual COLORREF GetMenuItemTextColor(
     BOOL bDisabled);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *pButton*<br/>
 no *bHighlighted*<br/>
@@ -970,7 +970,7 @@ Chamado pelo Framework quando ele precisa recuperar o tamanho dos botões do sis
 virtual CSize GetNcBtnSize(BOOL bSmall) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bSmall*<br/>
 no Um parâmetro booliano que indica se `GetNcBtnSize` deve recuperar o tamanho de um pequeno ou um botão de sistema grande. Se *bSmall* for TRUE, `GetNcBtnSize` retornará o tamanho de um pequeno botão do sistema. Caso contrário, ele retorna o tamanho de um botão grande do sistema.
@@ -1017,7 +1017,7 @@ A estrutura chama esse método para obter a cor do plano de fundo de uma lista d
 virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pPropList*<br/>
 no Um ponteiro para a lista de propriedades que a estrutura está desenhando.
@@ -1038,7 +1038,7 @@ A estrutura chama esse método para recuperar a cor do texto de uma lista de pro
 virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pPropList*<br/>
 no Um ponteiro para a lista de propriedades.
@@ -1057,7 +1057,7 @@ Substitua essa função para personalizar a cor do texto de uma lista de proprie
 virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *pHyperLink*<br/>
 
@@ -1071,7 +1071,7 @@ no *pHyperLink*<br/>
 virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *CMFCRibbonPanelMenu&#42;*<br/>
 
@@ -1105,7 +1105,7 @@ virtual int GetRibbonQuickAccessToolBarRightMargin();
 virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *bDisabled*<br/>
 
@@ -1125,7 +1125,7 @@ virtual void GetRibbonSliderColors(
     COLORREF& clrFill);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *pSlider*<br/>
 no *bIsHighlighted*<br/>
@@ -1142,7 +1142,7 @@ no *clrFill*<br/>
 virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *pStatusBar*<br/>
 
@@ -1158,7 +1158,7 @@ virtual int GetShowAllMenuItemsHeight(
     const CSize& sizeDefault);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *sizeDefault*<br/>
@@ -1175,7 +1175,7 @@ virtual void GetSmartDockingBaseGuideColors(
     COLORREF& clrBaseGroupBorder);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *clrBaseGroupBackground*<br/>
 no *clrBaseGroupBorder*<br/>
@@ -1214,7 +1214,7 @@ virtual COLORREF GetStatusBarPaneTextColor(
     CMFCStatusBarPaneInfo* pPane);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *pStatusBar*<br/>
 no *pPane*<br/>
@@ -1240,7 +1240,7 @@ virtual void GetTabFrameColors(
     CBrush*& pbrBlack);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pTabWnd*<br/>
 no Um ponteiro para a janela com guias onde o quadro está desenhando uma guia.
@@ -1279,7 +1279,7 @@ Substitua essa função em uma classe derivada se desejar personalizar o conjunt
 virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *CMFCBaseTabCtrl&#42;*<br/>
 
@@ -1296,7 +1296,7 @@ virtual COLORREF GetTabTextColor(
     BOOL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *CMFCBaseTabCtrl&#42;*<br/>
 no *int*<br/>
@@ -1406,7 +1406,7 @@ virtual COLORREF GetToolbarButtonTextColor(
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pButton*<br/>
 no Um ponteiro para o botão da barra de ferramentas.
@@ -1478,7 +1478,7 @@ virtual BOOL GetToolTipInfo(
     UINT nType = (UINT)(-1));
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *parâmetros*<br/>
 no *ndeclarações*<br/>
@@ -1515,7 +1515,7 @@ BOOL IsAutoDestroy() const;
 virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *CMFCDesktopAlertWndButton&#42;*<br/>
 
@@ -1703,7 +1703,7 @@ BOOL IsToolbarButtonFillEnabled() const;
 virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *CMFCToolBar&#42;*<br/>
 
@@ -1729,7 +1729,7 @@ virtual void OnActivateApp(
     BOOL bActive);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *pWnd*<br/>
 no *bActive*<br/>
@@ -1748,7 +1748,7 @@ virtual void OnDrawAutoHideButtonBorder(
     CMFCAutoHideButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -1780,7 +1780,7 @@ virtual void OnDrawBarGripper(
     CBasePane* pBar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para o contexto do dispositivo para uma barra de controle.
@@ -1811,7 +1811,7 @@ virtual BOOL OnDrawBrowseButton(
     COLORREF& clrText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -1848,7 +1848,7 @@ virtual void OnDrawButtonBorder(
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para o contexto do dispositivo de um botão da barra de ferramentas.
@@ -1879,7 +1879,7 @@ virtual void OnDrawButtonSeparator(
     BOOL bHorz);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pButton*<br/>
@@ -1902,7 +1902,7 @@ virtual void OnDrawCaptionBarBorder(
     BOOL bFlatBorder);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -1937,7 +1937,7 @@ virtual void OnDrawCaptionBarButtonBorder(
     BOOL bIsSysButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pBar*<br/>
@@ -1959,7 +1959,7 @@ virtual void OnDrawCaptionBarInfoArea(
     CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pBar*<br/>
@@ -1982,7 +1982,7 @@ virtual void OnDrawCaptionButton (
     int nImageID = -1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -2022,7 +2022,7 @@ virtual void OnDrawCheckBox(
     BOOL bEnabled);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *Rect*<br/>
@@ -2044,7 +2044,7 @@ virtual void OnDrawCheckBoxEx(
     BOOL bEnabled);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *Rect*<br/>
@@ -2069,7 +2069,7 @@ virtual void OnDrawComboBorder(
     CMFCToolBarComboBoxButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para o contexto do dispositivo de um botão de caixa de combinação.
@@ -2107,7 +2107,7 @@ virtual void OnDrawComboDropButton(
     CMFCToolBarComboBoxButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -2137,7 +2137,7 @@ Substitua esse método em seu Gerenciador visual derivado para personalizar a ap
 virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *pWndCtrl*<br/>
 
@@ -2156,7 +2156,7 @@ virtual void OnDrawDefaultRibbonImage(
     BOOL bIsHighlighted = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -2190,7 +2190,7 @@ virtual void OnDrawEditBorder(
     CMFCToolBarEditBoxButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -2221,7 +2221,7 @@ virtual void OnDrawExpandingBox(
     COLORREF colorBox);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *Rect*<br/>
@@ -2242,7 +2242,7 @@ virtual void OnDrawFloatingToolbarBorder(
     CRect rectBorderSize);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -2277,7 +2277,7 @@ virtual void OnDrawHeaderCtrlBorder(
     BOOL bIsHighlighted);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pCtrl*<br/>
 no Um ponteiro para um objeto `CMFCHeaderCtrl`. A estrutura desenha a borda deste controle de cabeçalho.
@@ -2310,7 +2310,7 @@ virtual void OnDrawHeaderCtrlSortArrow(
     BOOL bIsUp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pCtrl*<br/>
 no Um ponteiro para um controle de cabeçalho. O Gerenciador visual desenha a seta de classificação deste objeto de [classe CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) .
@@ -2337,7 +2337,7 @@ virtual void OnDrawMenuArrowOnCustomizeList(
     BOOL bSelected);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *rectCommand*<br/>
@@ -2356,7 +2356,7 @@ virtual void OnDrawMenuBorder(
     CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para o contexto do dispositivo para um objeto `CMFCPopupMenu`.
@@ -2382,7 +2382,7 @@ virtual void OnDrawMenuCheck(
     BOOL bIsRadio);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pButton*<br/>
@@ -2403,7 +2403,7 @@ virtual void OnDrawMenuItemButton(
     BOOL bDisabled);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pButton*<br/>
@@ -2421,7 +2421,7 @@ virtual COLORREF OnDrawMenuLabel(
     CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *Rect*<br/>
@@ -2439,7 +2439,7 @@ virtual void OnDrawMenuResizeBar(
     int nResizeFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *Rect*<br/>
@@ -2461,7 +2461,7 @@ virtual void OnDrawMenuScrollButton(
     BOOL bIsDisabled);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -2500,7 +2500,7 @@ virtual void OnDrawMenuShadow(
     BOOL bRTL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *rectClient*<br/>
@@ -2527,7 +2527,7 @@ virtual void OnDrawMenuSystemButton(
     BOOL bHighlight);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -2560,7 +2560,7 @@ virtual void OnDrawMiniFrameBorder(
     CRect rectBorderSize);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pFrameWnd*<br/>
@@ -2579,7 +2579,7 @@ virtual void OnDrawOutlookBarSplitter(
     CRect rectSplitter);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -2603,7 +2603,7 @@ virtual void OnDrawOutlookPageButtonBorder(
     BOOL bIsPressed);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -2632,7 +2632,7 @@ virtual void OnDrawPaneBorder(
     CRect& rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para o contexto do dispositivo de uma barra de controle.
@@ -2660,7 +2660,7 @@ virtual COLORREF OnDrawPaneCaption(
     CRect rectButtons);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -2695,7 +2695,7 @@ virtual void OnDrawPaneDivider(
     BOOL bAutoHideMode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pSlider*<br/>
@@ -2712,7 +2712,7 @@ virtual void OnDrawPopupWindowBorder(
     CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *Rect*<br/>
@@ -2728,7 +2728,7 @@ virtual void OnDrawPopupWindowButtonBorder(
     CMFCDesktopAlertWndButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *rectClient*<br/>
@@ -2745,7 +2745,7 @@ virtual COLORREF OnDrawPopupWindowCaption(
     CMFCDesktopAlertWnd* pPopupWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *rectCaption*<br/>
@@ -2765,7 +2765,7 @@ virtual void OnDrawRibbonApplicationButton(
     CMFCRibbonButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -2787,7 +2787,7 @@ virtual void OnDrawRibbonButtonBorder(
     CMFCRibbonButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -2810,7 +2810,7 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
     CRect rectGroup);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -2841,7 +2841,7 @@ virtual void OnDrawRibbonCaption(
     CRect rectText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -2869,7 +2869,7 @@ virtual void OnDrawRibbonCaptionButton(
     CMFCRibbonCaptionButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Um ponteiro para um contexto de dispositivo.
@@ -2892,7 +2892,7 @@ virtual void OnDrawRibbonCategory(
     CRect rectCategory);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -2919,7 +2919,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
     CMFCRibbonContextCaption* pContextCaption);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no O contexto de desenho.
@@ -2943,7 +2943,7 @@ virtual void OnDrawRibbonCategoryScroll(
     CRibbonCategoryScroll* pScroll);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pScroll*<br/>
@@ -2961,7 +2961,7 @@ virtual COLORREF OnDrawRibbonCategoryTab(
     BOOL bIsActive);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -2991,7 +2991,7 @@ virtual void OnDrawRibbonCheckBoxOnList(
     BOOL bHighlighted);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pCheckBox*<br/>
@@ -3017,7 +3017,7 @@ virtual void OnDrawRibbonColorPaletteBox(
     BOOL bIsDisabled);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pColorButton*<br/>
@@ -3042,7 +3042,7 @@ virtual void OnDrawRibbonDefaultPaneButton(
     CMFCRibbonButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3064,7 +3064,7 @@ virtual void OnDrawRibbonDefaultPaneButtonContext(
     CMFCRibbonButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pButton*<br/>
@@ -3082,7 +3082,7 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
     BOOL bHighlighted);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pButton*<br/>
@@ -3101,7 +3101,7 @@ virtual void OnDrawRibbonGalleryBorder(
     CRect rectBorder);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pButton*<br/>
@@ -3117,7 +3117,7 @@ virtual void OnDrawRibbonGalleryButton(
     CMFCRibbonGalleryIcon* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pButton*<br/>
@@ -3134,7 +3134,7 @@ virtual void OnDrawRibbonKeyTip(
     CString str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pElement*<br/>
@@ -3154,7 +3154,7 @@ virtual void OnDrawRibbonLabel(
     CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3179,7 +3179,7 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
     CMFCRibbonButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3202,7 +3202,7 @@ virtual void OnDrawRibbonMainPanelFrame(
     CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3226,7 +3226,7 @@ virtual void OnDrawRibbonMenuCheckFrame(
     CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pButton*<br/>
@@ -3246,7 +3246,7 @@ virtual COLORREF OnDrawRibbonPanel(
     CRect rectCaption);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3279,7 +3279,7 @@ virtual void OnDrawRibbonPanelCaption(
     CRect rectCaption);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3307,7 +3307,7 @@ virtual void OnDrawRibbonProgressBar(
     BOOL bInfiniteMode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3339,7 +3339,7 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
     CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3365,7 +3365,7 @@ virtual void OnDrawRibbonRecentFilesFrame(
     CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3391,7 +3391,7 @@ virtual void OnDrawRibbonSliderChannel(
     CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3420,7 +3420,7 @@ virtual void OnDrawRibbonSliderThumb(
     BOOL bIsDisabled);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3459,7 +3459,7 @@ virtual void OnDrawRibbonSliderZoomButton(
     BOOL bIsDisabled);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3497,7 +3497,7 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
     CMFCRibbonStatusBarPane* pPane);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3527,7 +3527,7 @@ virtual COLORREF OnDrawRibbonTabsFrame(
     CRect rectTab);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Um ponteiro para um contexto de dispositivo.
@@ -3557,7 +3557,7 @@ virtual void OnDrawScrollButtons(
     BOOL bHilited);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *Rect*<br/>
@@ -3579,7 +3579,7 @@ virtual void OnDrawSeparator(
     BOOL bIsHoriz);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para o contexto do dispositivo para uma barra de controle.
@@ -3606,7 +3606,7 @@ virtual void OnDrawShowAllMenuItems(
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *Rect*<br/>
@@ -3627,7 +3627,7 @@ virtual void OnDrawSpinButtons(
     CMFCSpinButtonCtrl* pSpinCtrl);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3636,7 +3636,7 @@ no Um ponteiro para um contexto de dispositivo.
 no Um retângulo que especifica os limites do controle de rotação.
 
 *nState*<br/>
-no Um sinalizador que indica o estado do controle de rotação. Consulte a seção Comentários para obter mais informações.
+no Um sinalizador que indica o estado do controle de rotação. Para obter mais informações, consulte a seção Comentários.
 
 *bOrientation*<br/>
 no Um parâmetro booliano que especifica a orientação do controle de rotação. Um valor TRUE indica que o controle de rotação é horizontal. Caso contrário, será vertical.
@@ -3671,7 +3671,7 @@ virtual void OnDrawSplitterBorder(
     CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3697,7 +3697,7 @@ virtual void OnDrawSplitterBox(
     CRect& rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3725,7 +3725,7 @@ virtual void OnDrawStatusBarPaneBorder(
     UINT nStyle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3763,7 +3763,7 @@ virtual void OnDrawStatusBarProgress(
     BOOL bProgressText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para o contexto do dispositivo para a barra de status.
@@ -3807,7 +3807,7 @@ virtual void OnDrawStatusBarSizeBox(
     CRect rectSizeBox);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3835,7 +3835,7 @@ virtual void OnDrawTab(
     const CMFCBaseTabCtrl* pTabWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3872,7 +3872,7 @@ virtual void OnDrawTabCloseButton(
     BOOL bIsDisabled);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3910,7 +3910,7 @@ virtual void OnDrawTabContent(
     COLORREF clrText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3947,7 +3947,7 @@ virtual void OnDrawTabsButtonBorder(
     CMFCBaseTabCtrl* pWndTab);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -3981,7 +3981,7 @@ virtual void OnDrawTask(
     BOOL bIsSelected = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4016,7 +4016,7 @@ virtual void OnDrawTasksGroupAreaBorder(
     BOOL bNoTitle = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4047,7 +4047,7 @@ virtual void OnDrawTasksGroupCaption(
     BOOL bCanCollapse = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4082,7 +4082,7 @@ virtual void OnDrawTasksGroupIcon(
     BOOL bCanCollapse = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pGroup*<br/>
@@ -4104,7 +4104,7 @@ virtual void OnDrawTearOffCaption(
     BOOL bIsActive);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4129,7 +4129,7 @@ virtual void OnDrawToolBoxFrame(
     const CRect& rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *Rect*<br/>
@@ -4146,7 +4146,7 @@ virtual BOOL OnEraseMDIClientArea(
     CRect rectClient);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4171,7 +4171,7 @@ virtual void OnErasePopupWindowButton(
     CMFCDesktopAlertWndButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *rectClient*<br/>
@@ -4190,7 +4190,7 @@ virtual void OnEraseTabsArea(
     const CMFCBaseTabCtrl* pTabWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4219,7 +4219,7 @@ virtual void OnEraseTabsButton(
     CMFCBaseTabCtrl* pWndTab);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4250,7 +4250,7 @@ virtual BOOL OnEraseTabsFrame(
     const CMFCBaseTabCtrl* pTabWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4280,7 +4280,7 @@ virtual void OnFillAutoHideButtonBackground(
     CMFCAutoHideButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4308,7 +4308,7 @@ virtual void OnFillBarBackground(
     BOOL bNCArea = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para o contexto do dispositivo para uma barra de controle.
@@ -4329,7 +4329,7 @@ no Um valor reservado.
 
 A implementação padrão desse método preenche o plano de fundo da barra com a cor do plano de fundo 3D da variável global `afxGlobalData`. Substitua esse método em um gerenciador visual derivado para personalizar o plano de fundo de um painel.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra como usar o `OnFillBarBackground` na classe `CMFCVisualManager`. Este trecho de código faz parte do [exemplo de demonstração do Outlook](../../overview/visual-cpp-samples.md).
 
@@ -4347,7 +4347,7 @@ virtual void OnFillButtonInterior(
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para o contexto do dispositivo de um botão da barra de ferramentas.
@@ -4381,7 +4381,7 @@ virtual COLORREF OnFillCaptionBarButton(
     BOOL bIsSysButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pBar*<br/>
@@ -4407,7 +4407,7 @@ virtual COLORREF OnFillCommandsListBackground(
     BOOL bIsSelected = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4437,7 +4437,7 @@ virtual void OnFillHeaderCtrlBackground(
     CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pCtrl*<br/>
 no Um ponteiro para um objeto [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) . A estrutura preenche o plano de fundo deste controle de cabeçalho.
@@ -4464,7 +4464,7 @@ virtual COLORREF OnFillMiniFrameCaption(
     BOOL bActive);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4497,7 +4497,7 @@ virtual void OnFillOutlookBarCaption(
     COLORREF& clrText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4525,7 +4525,7 @@ virtual void OnFillOutlookPageButton(
     COLORREF& clrText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4556,7 +4556,7 @@ virtual void OnFillPopupWindowBackground(
     CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4578,7 +4578,7 @@ virtual COLORREF OnFillRibbonButton(
     CMFCRibbonButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4611,7 +4611,7 @@ virtual void OnFillRibbonEdit(
     COLORREF& clrSelText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4656,7 +4656,7 @@ virtual COLORREF OnFillRibbonMainPanelButton(
     CMFCRibbonButton* pButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4683,7 +4683,7 @@ virtual void OnFillRibbonMenuFrame(
     CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4707,7 +4707,7 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
     CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *PDC*<br/>
 no *pMenuBar*<br/>
@@ -4726,7 +4726,7 @@ virtual void OnFillSplitterBackground(
     CRect rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4755,7 +4755,7 @@ virtual void OnFillTab(
     const CMFCBaseTabCtrl* pTabWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4790,7 +4790,7 @@ virtual void OnFillTasksGroupInterior(
     BOOL bSpecial = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4815,7 +4815,7 @@ virtual void OnFillTasksPaneBackground(
     CRect rectWorkArea);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4839,7 +4839,7 @@ virtual void OnHighlightMenuItem(
     COLORREF& clrText);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para o contexto do dispositivo para um menu.
@@ -4869,7 +4869,7 @@ virtual void OnHighlightRarelyUsedMenuItems(
     CRect rectRarelyUsed);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Um ponteiro para um contexto de dispositivo.
@@ -4889,7 +4889,7 @@ virtual BOOL OnNcActivate(
     BOOL bActive);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *pWnd*<br/>
 no *bActive*<br/>
@@ -4909,7 +4909,7 @@ virtual BOOL OnNcPaint(
     CRect rectRedraw);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 no Um ponteiro para a janela cuja área de não-cliente a estrutura desenha.
@@ -4938,7 +4938,7 @@ virtual BOOL OnSetWindowRegion(
     CSize sizeWindow);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 no Um ponteiro para a janela com a região que foi alterada.
@@ -4980,7 +4980,7 @@ static void RedrawAll();
 virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *cor* do<br/>
 
@@ -4996,7 +4996,7 @@ Define o gerenciador padrão.
 static void SetDefaultManager(CRuntimeClass* pRTI);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pRTI*<br/>
 no Um ponteiro para as informações de tempo de execução de um gerenciador visual.
@@ -5015,7 +5015,7 @@ Habilita ou desabilita o modo em relevo para imagens de barra de ferramentas des
 void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEmboss*<br/>
 no Um parâmetro booliano que indica se o modo de relevo deve ser habilitado para imagens de barra de ferramentas desabilitadas.
@@ -5032,7 +5032,7 @@ Habilita ou desabilita o efeito de iluminação para imagens inativas em um menu
 void SetFadeInactiveImage(BOOL bFade = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bFade*<br/>
 no Um parâmetro booliano que especifica se o efeito de iluminação deve ser habilitado.
@@ -5049,7 +5049,7 @@ Define um sinalizador que indica se os botões de menu parecem simples. Caso con
 void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bMenuFlatLook*<br/>
 no Um parâmetro booliano que indica se os botões de menu parecem simples.
@@ -5066,7 +5066,7 @@ Define a largura e a altura da sombra do menu.
 void SetMenuShadowDepth(int nDepth);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nDepth*<br/>
 no Um inteiro que especifica a profundidade da sombra do menu em pixels.
@@ -5083,7 +5083,7 @@ Define um sinalizador que indica se o [CMFCVisualManager](../../mfc/reference/cm
 void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bShadow*<br/>
 no Um parâmetro booliano que indica se o Visual Manager exibe uma sombra em imagens realçadas.
@@ -5092,7 +5092,7 @@ no Um parâmetro booliano que indica se o Visual Manager exibe uma sombra em ima
 
 Por padrão, esse recurso está desabilitado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

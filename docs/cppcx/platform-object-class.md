@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
 ms.openlocfilehash: 77313f8c4dcc87fa9de852afe2d60e614f8fc3a3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865737"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418345"
 ---
 # <a name="platformobject-class"></a>Classe Platform::Object
 
@@ -33,16 +33,16 @@ public ref class Object : Object
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[Objeto:: objeto](#ctor)|Inicializa uma nova instância da classe Object.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[Objeto:: Equals](#equals)|Determina se o objeto especificado é igual ao objeto atual.|
-|[Objeto:: GetHashCode](#gethashcode)|Retorna o código hash para a instância.|
+|[Objeto:: GetHashCode](#gethashcode)|Retorna o código hash desta instância.|
 |[Objeto:: ReferenceEquals](#referenceequals)|Determina se as instâncias de Object especificadas são a mesma instância.|
 |[ToString](#tostring)|Retorna uma cadeia de caracteres que representa o objeto atual. Pode ser substituído.|
 |[GetType](#gettype)|Obtém um [Platform::Type](../cppcx/platform-type-class.md) que descreve a instância atual.|
@@ -53,7 +53,7 @@ public ref class Object : Object
 
 `Object`
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** vccorlib.h
 
@@ -71,10 +71,10 @@ bool Equals(
 )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *obj*<br/>
-O objeto a ser comparado.
+O objeto a comparar.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -108,7 +108,7 @@ Retorna um objeto [Platform:: Type](../cppcx/platform-type-class.md) que descrev
 Object::GetType();
 ```
 
-### <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno
+### <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno
 
 Um objeto [Platform:: Type](../cppcx/platform-type-class.md) que descreve o tipo de tempo de execução do objeto.
 
@@ -144,13 +144,13 @@ Determina se as instâncias de Object especificadas são a mesma instância.
 public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Obj1*<br/>
-O primeiro objeto a ser comparado.
+O primeiro objeto a comparar.
 
 *obj2*<br/>
-O segundo objeto a ser comparado.
+O segundo objeto a comparar.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -183,7 +183,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace da plataforma](platform-namespace-c-cx.md)<br/>
 [Classe Platform::Type](platform-type-class.md)<br/>

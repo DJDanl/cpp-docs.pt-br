@@ -15,11 +15,11 @@ helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
 ms.openlocfilehash: cd7b04b0dc5ca1bc496ce87a6459d00ed5813bf7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854107"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422216"
 ---
 # <a name="ischeduler-structure"></a>Estrutura IScheduler
 
@@ -35,7 +35,7 @@ struct IScheduler;
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[IScheduler:: AddVirtualProcessors](#addvirtualprocessors)|Fornece um Agendador com um conjunto de raízes de processador virtual para seu uso. Cada interface de `IVirtualProcessorRoot` representa o direito de executar um único thread que pode executar o trabalho em nome do Agendador.|
 |[IScheduler:: GetId](#getid)|Retorna um identificador exclusivo para o Agendador.|
@@ -53,7 +53,7 @@ Se você estiver implementando um Agendador personalizado que se comunica com o 
 
 `IScheduler`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** concrtrm. h
 
@@ -69,12 +69,12 @@ virtual void AddVirtualProcessors(
     unsigned int count) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ppVirtualProcessorRoots*<br/>
 Uma matriz de interfaces de `IVirtualProcessorRoot` que representa as raízes do processador virtual que estão sendo adicionadas ao agendador.
 
-*count*<br/>
+*contagem*<br/>
 O número de interfaces `IVirtualProcessorRoot` na matriz.
 
 ### <a name="remarks"></a>Comentários
@@ -121,12 +121,12 @@ virtual void NotifyResourcesExternallyBusy(
     unsigned int count) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ppVirtualProcessorRoots*<br/>
 Uma matriz de interfaces `IVirtualProcessorRoot` associadas aos threads de hardware nos quais outros agendadores se tornaram ocupados.
 
-*count*<br/>
+*contagem*<br/>
 O número de interfaces `IVirtualProcessorRoot` na matriz.
 
 ### <a name="remarks"></a>Comentários
@@ -149,12 +149,12 @@ virtual void NotifyResourcesExternallyIdle(
     unsigned int count) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ppVirtualProcessorRoots*<br/>
 Uma matriz de interfaces `IVirtualProcessorRoot` associadas a threads de hardware nos quais outros agendadores se tornaram ociosos.
 
-*count*<br/>
+*contagem*<br/>
 O número de interfaces `IVirtualProcessorRoot` na matriz.
 
 ### <a name="remarks"></a>Comentários
@@ -177,12 +177,12 @@ virtual void RemoveVirtualProcessors(
     unsigned int count) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ppVirtualProcessorRoots*<br/>
 Uma matriz de interfaces de `IVirtualProcessorRoot` que representa as raízes do processador virtual a serem removidas.
 
-*count*<br/>
+*contagem*<br/>
 O número de interfaces `IVirtualProcessorRoot` na matriz.
 
 ### <a name="remarks"></a>Comentários
@@ -202,7 +202,7 @@ virtual void Statistics(
     _Out_ unsigned int* pNumberOfTasksEnqueued) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pTaskCompletionRate*<br/>
 O número de tarefas que foram concluídas pelo Agendador desde a última chamada para esse método.
@@ -221,7 +221,7 @@ Você deve implementar esse método se quiser que o Gerenciador de recursos use 
 
 Na ausência de informações estatísticas, o Gerenciador de recursos usará níveis de assinatura de thread de hardware para tomar decisões de migração e alocação de recursos. Para obter mais informações sobre os níveis de assinatura, consulte [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>

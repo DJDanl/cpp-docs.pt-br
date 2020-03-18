@@ -183,11 +183,11 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
 ms.openlocfilehash: 6f15280943fce39bae4eebfb537f9a61d256d2e8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856411"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420914"
 ---
 # <a name="ctoolbarctrl-class"></a>Classe CToolBarCtrl
 
@@ -203,13 +203,13 @@ class CToolBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CToolBarCtrl::CToolBarCtrl](#ctoolbarctrl)|Constrói um objeto `CToolBarCtrl`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CToolBarCtrl:: AddBitmap](#addbitmap)|Adiciona uma ou mais imagens de botão de bitmap à lista de imagens de botão disponíveis para um controle de barra de ferramentas.|
 |[CToolBarCtrl:: AddButtons](#addbuttons)|Adiciona um ou mais botões a um controle ToolBar.|
@@ -349,7 +349,7 @@ Para obter mais informações sobre como usar `CToolBarCtrl`, consulte [controle
 
 `CToolBarCtrl`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxcmn. h
 
@@ -367,7 +367,7 @@ int AddBitmap(
     CBitmap* pBitmap);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nNumButtons*<br/>
 Número de imagens de botão no bitmap.
@@ -396,7 +396,7 @@ BOOL AddButtons(
     LPTBBUTTON lpButtons);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nNumButtons*<br/>
 Número de botões a serem adicionados.
@@ -481,7 +481,7 @@ Adiciona uma nova cadeia de caracteres, passada como uma ID de recurso, à lista
 int AddString(UINT nStringID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nStringID*<br/>
 Identificador de recurso do recurso de cadeia de caracteres a ser adicionado à lista de cadeias de caracteres do controle da barra de ferramentas.
@@ -498,7 +498,7 @@ Adiciona uma nova cadeia ou cadeias de caracteres à lista de cadeias disponíve
 int AddStrings(LPCTSTR lpszStrings);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszStrings*<br/>
 Endereço de um buffer que contém uma ou mais cadeias de caracteres terminadas em nulo para adicionar à lista de cadeias da barra de ferramentas. A última cadeia de caracteres deve ser terminada com dois caracteres nulos.
@@ -541,9 +541,9 @@ BOOL ChangeBitmap(
     int iBitmap);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*idButton*|no Identificador de comando do botão que deve receber um novo bitmap.|
 |*iBitmap*|no Índice de base zero de uma imagem na lista de imagens do controle da barra de ferramentas atual.|
@@ -558,7 +558,7 @@ Se esse método for bem-sucedido, o sistema exibirá a imagem especificada no bo
 
 Esse método envia a mensagem de [TB_CHANGEBITMAP](/windows/win32/Controls/tb-changebitmap) , que é descrita na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir altera o bitmap do botão **salvar arquivo** para o bitmap do botão **sobre** .
 
@@ -574,7 +574,7 @@ BOOL CheckButton(
     BOOL bCheck = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Identificador de comando do botão a ser verificado ou desmarcado.
@@ -598,7 +598,7 @@ Recupera o índice de base zero para o botão associado ao identificador de coma
 UINT CommandToIndex(UINT nID) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 ID de comando cujo índice de botão você deseja localizar.
@@ -621,7 +621,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwStyle*<br/>
 Especifica o estilo do controle da barra de ferramentas. As barras de ferramentas sempre devem ter o estilo WS_CHILD. Além disso, você pode especificar qualquer combinação de estilos de barra de ferramentas e estilos de janela, conforme descrito em **comentários**.
@@ -672,7 +672,7 @@ virtual BOOL CreateEx(
     UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwExStyle*<br/>
 Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista de estilos estendidos do Windows, consulte o parâmetro *dwExStyle* para [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) no SDK do Windows.
@@ -729,7 +729,7 @@ Exclui um botão do controle ToolBar.
 BOOL DeleteButton(int nIndex);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Índice de base zero do botão a ser excluído.
@@ -750,7 +750,7 @@ BOOL EnableButton(
     BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Identificador de comando do botão a ser habilitado ou desabilitado.
@@ -790,7 +790,7 @@ Recupera o índice do bitmap associado a um botão em uma barra de ferramentas.
 int GetBitmap(int nID) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Identificador de comando do botão cujo índice de bitmap deve ser recuperado.
@@ -829,7 +829,7 @@ BOOL GetButton(
     LPTBBUTTON lpButton) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Índice de base zero do botão para o qual recuperar informações.
@@ -863,7 +863,7 @@ int GetButtonInfo(
     TBBUTTONINFO* ptbbi) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 O identificador do botão.
@@ -899,9 +899,9 @@ Recupera o texto de exibição de um botão especificado no controle da barra de
 CString GetButtonText(int idButton) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*idButton*|no O identificador do botão cujo texto de exibição é recuperado.|
 
@@ -921,9 +921,9 @@ Recupera o esquema de cores do controle da barra de ferramentas atual.
 BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*lpColorScheme*|fora Ponteiro para uma estrutura [ColorScheme](/windows/win32/api/commctrl/ns-commctrl-colorscheme) que recebe as informações do esquema de cores. Quando esse método retorna, a estrutura descreve a cor de realce e a cor da sombra do controle da barra de ferramentas.|
 
@@ -959,7 +959,7 @@ Recupera a interface [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarg
 HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ppDropTarget*<br/>
 Um ponteiro para um ponteiro de interface [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) . Se ocorrer um erro, um ponteiro NULL será colocado nesse endereço.
@@ -1044,7 +1044,7 @@ Recupera a marca de inserção atual para a barra de ferramentas.
 void GetInsertMark(TBINSERTMARK* ptbim) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ptbim*<br/>
 Um ponteiro para uma estrutura [TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) que recebe a marca de inserção.
@@ -1079,7 +1079,7 @@ BOOL GetItemRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Índice de base zero do botão para o qual recuperar informações.
@@ -1103,7 +1103,7 @@ Recupera o tamanho total de todos os botões e separadores visíveis na barra de
 BOOL GetMaxSize(LPSIZE pSize) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pSize*<br/>
 Um ponteiro para uma estrutura de [tamanho](/windows/win32/api/windef/ns-windef-size) que recebe o tamanho dos itens.
@@ -1136,7 +1136,7 @@ Recupera as métricas do objeto `CToolBarCtrl`.
 void GetMetrics(LPTBMETRICS ptbm) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ptbm*<br/>
 Um ponteiro para a estrutura [TBMETRICS](/windows/win32/api/commctrl/ns-commctrl-tbmetrics) do objeto `CToolBarCtrl`.
@@ -1155,9 +1155,9 @@ BOOL GetPadding(
     int* pnVertPadding) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*pnHorzPadding*|fora Um inteiro que recebe o preenchimento horizontal do controle ToolBar, em pixels.|
 |*pnVertPadding*|fora Um inteiro que recebe o preenchimento vertical do controle ToolBar, em pixels.|
@@ -1196,7 +1196,7 @@ BOOL GetRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 O identificador do botão.
@@ -1236,7 +1236,7 @@ Recupera informações sobre o estado do botão especificado em um controle Tool
 int GetState(int nID) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Identificador de comando do botão para o qual recuperar informações.
@@ -1264,7 +1264,7 @@ int GetString(
     CString& str) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nString*<br/>
 Índice da cadeia de caracteres.
@@ -1322,7 +1322,7 @@ Determina onde um ponto reside em um controle ToolBar.
 int HitTest(LPPOINT ppt) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *apresentação*<br/>
 Um ponteiro para uma estrutura de [ponto](/previous-versions/dd162805\(v=vs.85\)) que contém a coordenada x do teste de clique no membro `x` e a coordenada y do teste de clique no membro `y`. As coordenadas são relativas à área do cliente da barra de ferramentas.
@@ -1347,7 +1347,7 @@ BOOL HideButton(
     BOOL bHide = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Identificador de comando do botão a ser ocultado ou mostrado.
@@ -1373,7 +1373,7 @@ BOOL Indeterminate(
     BOOL bIndeterminate = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Identificador de comando do botão cujo estado indeterminado deve ser definido ou limpo.
@@ -1399,7 +1399,7 @@ BOOL InsertButton(
     LPTBBUTTON lpButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Índice baseado em zero de um botão. Essa função insere o botão novo à esquerda deste botão.
@@ -1425,7 +1425,7 @@ BOOL InsertMarkHitTest(
     LPTBINSERTMARK ptbim) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *apresentação*<br/>
 Um ponteiro para uma estrutura de [ponto](/previous-versions/dd162805\(v=vs.85\)) que contém as coordenadas de teste de clique, em relação à área do cliente da barra de ferramentas.
@@ -1449,7 +1449,7 @@ Determina se o botão especificado em um controle ToolBar está marcado.
 BOOL IsButtonChecked(int nID) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Identificador de comando do botão na barra de ferramentas.
@@ -1470,7 +1470,7 @@ Determina se o botão especificado em um controle ToolBar está habilitado.
 BOOL IsButtonEnabled(int nID) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Identificador de comando do botão na barra de ferramentas.
@@ -1491,7 +1491,7 @@ Determina se o botão especificado em um controle ToolBar está oculto.
 BOOL IsButtonHidden(int nID) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Identificador de comando do botão na barra de ferramentas.
@@ -1512,7 +1512,7 @@ Verifica o estado de realce de um botão da barra de ferramentas.
 BOOL IsButtonHighlighted(int nID) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 no A ID de comando para o botão da barra de ferramentas.
@@ -1529,7 +1529,7 @@ Determina se o botão especificado em um controle ToolBar é indeterminado.
 BOOL IsButtonIndeterminate(int nID) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 no Identificador de comando do botão na barra de ferramentas.
@@ -1550,7 +1550,7 @@ Determina se o botão especificado em um controle ToolBar é pressionado.
 BOOL IsButtonPressed(int nID) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Identificador de comando do botão na barra de ferramentas.
@@ -1573,12 +1573,12 @@ void LoadImages(
     HINSTANCE hinst);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *iBitmapID*<br/>
 ID de um bitmap que contém as imagens a serem carregadas. Para especificar seu próprio recurso de bitmap, defina esse parâmetro como a ID de um recurso de bitmap e defina *hinst* como nulo. O recurso de bitmap será adicionado à lista de imagens como uma única imagem. Você pode adicionar bitmaps padrão definidos pelo sistema definindo *hinst* como HINST_COMMCTRL e definindo esse parâmetro como uma das seguintes IDs:
 
-|ID do bitmap|Descrição|
+|ID do bitmap|DESCRIÇÃO|
 |---------------|-----------------|
 |IDB_HIST_LARGE_COLOR|Bitmaps do Explorer em tamanho grande|
 |IDB_HIST_SMALL_COLOR|Bitmaps do Explorer em tamanho pequeno|
@@ -1604,7 +1604,7 @@ BOOL MapAccelerator(
     UINT* pIDBtn);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *chAccel*<br/>
 Caractere de acelerador a ser mapeado. Esse caractere é o mesmo caractere que é sublinhado no texto do botão.
@@ -1630,7 +1630,7 @@ BOOL MarkButton(
     BOOL fHighlight = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 O identificador do botão.
@@ -1656,7 +1656,7 @@ BOOL MoveButton(
     UINT nNewPos);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nOldPos*<br/>
 O índice de base zero do botão a ser movido.
@@ -1680,7 +1680,7 @@ Pressiona ou libera o botão especificado em um controle ToolBar.
 BOOL PressButton(int nID, BOOL bPress = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 no Identificador de comando do botão a ser pressionado ou liberado.
@@ -1706,9 +1706,9 @@ Substitui o bitmap existente no controle da barra de ferramentas atual por um no
 BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*pReplaceBitmap*|no Ponteiro para uma estrutura [TBREPLACEBITMAP](/windows/win32/api/commctrl/ns-commctrl-tbreplacebitmap) que descreve o bitmap a ser substituído e o novo bitmap.|
 
@@ -1720,7 +1720,7 @@ TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
 Esse método envia a mensagem de [TB_REPLACEBITMAP](/windows/win32/Controls/tb-replacebitmap) , que é descrita na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir substitui o bitmap da barra de ferramentas padrão por um bitmap diferente.
 
@@ -1737,7 +1737,7 @@ void RestoreState(
     LPCTSTR lpszValueName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hKeyRoot*<br/>
 Identifica uma chave aberta no momento no registro ou qualquer um dos seguintes valores de identificador reservados predefinidos:
@@ -1767,7 +1767,7 @@ void SaveState(
     LPCTSTR lpszValueName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hKeyRoot*<br/>
 Identifica uma chave aberta no momento no registro ou qualquer um dos seguintes valores de identificador reservados predefinidos:
@@ -1794,7 +1794,7 @@ Define a configuração de realce de âncora para uma barra de ferramentas.
 BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *fAnchor*<br/>
 no Especifica se o realce de âncora está habilitado ou desabilitado. Se esse valor for diferente de zero, o realce de âncora será habilitado. Se esse valor for zero, o realce de âncora será desabilitado
@@ -1815,7 +1815,7 @@ Define o tamanho das imagens de bitmap reais a serem adicionadas a um controle T
 BOOL SetBitmapSize(CSize size);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *size*<br/>
 Largura e altura, em pixels, das imagens de bitmap.
@@ -1838,7 +1838,7 @@ BOOL SetButtonInfo(
     TBBUTTONINFO* ptbbi);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 O identificador do botão.
@@ -1862,7 +1862,7 @@ Define o tamanho dos botões no controle ToolBar.
 BOOL SetButtonSize(CSize size);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *size*<br/>
 Largura e altura, em pixels, dos botões.
@@ -1875,7 +1875,7 @@ Diferente de zero, se for bem-sucedido; caso contrário, zero.
 
 O tamanho do botão sempre deve ser pelo menos tão grande quanto o tamanho do bitmap que ele fecha. Essa função deve ser chamada somente antes de adicionar qualquer bitmap à barra de ferramentas. Se o aplicativo não definir explicitamente o tamanho do botão, o padrão será de 24 por 22 pixels.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CToolBar:: GetToolBarCtrl](../../mfc/reference/ctoolbar-class.md#gettoolbarctrl).
 
@@ -1887,7 +1887,7 @@ Especifica o tamanho da estrutura de `TBBUTTON`.
 void SetButtonStructSize(int nSize);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nSize*<br/>
 Tamanho, em bytes, da estrutura de `TBBUTTON`.
@@ -1908,7 +1908,7 @@ BOOL SetButtonWidth(
     int cxMax);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *cxMin*<br/>
 Largura mínima do botão, em pixels. Os botões da barra de ferramentas nunca serão mais estreitos que esse valor.
@@ -1934,7 +1934,7 @@ BOOL SetCmdID(
     UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 O índice de base zero do botão cuja ID de comando deve ser definida.
@@ -1954,9 +1954,9 @@ Define o esquema de cores do controle da barra de ferramentas atual.
 void SetColorScheme(const COLORSCHEME* lpColorScheme);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*lpColorScheme*|no Ponteiro para uma estrutura [ColorScheme](/windows/win32/api/commctrl/ns-commctrl-colorscheme) que descreve a cor de realce e a cor da sombra do controle ToolBar.|
 
@@ -1966,7 +1966,7 @@ Esse método não terá efeito se um tema visual do Windows Vista estiver defini
 
 Esse método envia a mensagem de [TB_SETCOLORSCHEME](/windows/win32/Controls/tb-setcolorscheme) , que é descrita na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir define o esquema de cores para o controle da barra de ferramentas atual. O exemplo de código faz com que as bordas esquerda e superior de cada botão de ferramenta sejam vermelhas e as bordas direita e inferior azuis. Quando o usuário pressiona o botão, as bordas vermelhas do botão ficam azuis e suas bordas azuis ficam vermelhas.
 
@@ -1980,7 +1980,7 @@ Define a lista de imagens que o controle Toolbar usará para exibir botões desa
 CImageList* SetDisabledImageList(CImageList* pImageList);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pImageList*<br/>
 Um ponteiro para um objeto `CImageList` que contém as imagens a serem usadas pelo controle Toolbar para exibir imagens de botão desabilitadas.
@@ -2003,7 +2003,7 @@ DWORD SetDrawTextFlags(
     DWORD dwDTFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwMask*<br/>
 Uma combinação de um ou mais dos sinalizadores de DT_, especificada na função [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)do Win32, que indica quais bits em *dwDTFlags* serão usados ao desenhar o texto.
@@ -2027,7 +2027,7 @@ Define os estilos estendidos para um controle ToolBar.
 DWORD SetExtendedStyle(DWORD dwExStyle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwExStyle*<br/>
 Um valor que especifica os novos estilos estendidos. Esse parâmetro pode ser uma combinação dos estilos estendidos da barra de ferramentas.
@@ -2048,7 +2048,7 @@ Define a lista de imagens que o controle Toolbar usará para exibir botões "que
 CImageList* SetHotImageList(CImageList* pImageList);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pImageList*<br/>
 Um ponteiro para um objeto `CImageList` que contém as imagens a serem usadas pelo controle Toolbar para exibir imagens de botão quente.
@@ -2071,7 +2071,7 @@ Define o item ativo em uma barra de ferramentas.
 int SetHotItem(int nHot);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nHot*<br/>
 O número de índice com base em zero do item que se tornará quente. Se esse valor for-1, nenhum dos itens será quente.
@@ -2092,7 +2092,7 @@ Define a lista de imagens que a barra de ferramentas usará para exibir botões 
 CImageList* SetImageList(CImageList* pImageList);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pImageList*<br/>
 Um ponteiro para um objeto `CImageList` que contém as imagens a serem usadas pelo controle Toolbar para exibir as imagens de botão em seu estado padrão.
@@ -2115,7 +2115,7 @@ Define o recuo para o primeiro botão em um controle ToolBar.
 BOOL SetIndent(int iIndent);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *iIndent*<br/>
 O valor que especifica o recuo, em pixels.
@@ -2132,7 +2132,7 @@ Define a marca de inserção atual para a barra de ferramentas.
 void SetInsertMark(TBINSERTMARK* ptbim);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ptbim*<br/>
 Um ponteiro para a estrutura [TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) que contém a marca de inserção.
@@ -2149,7 +2149,7 @@ Define a cor usada para desenhar a marca de inserção para a barra de ferrament
 COLORREF SetInsertMarkColor(COLORREF clrNew);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *clrNew*<br/>
 Um valor de COLORREF que contém a nova cor de marca de inserção.
@@ -2170,7 +2170,7 @@ Define o número máximo de linhas de texto exibidas em um botão da barra de fe
 BOOL SetMaxTextRows(int iMaxRows);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *iMaxRows*<br/>
 Número máximo de linhas a serem definidas.
@@ -2187,7 +2187,7 @@ Define as métricas do objeto `CToolBarCtrl`.
 void SetMetrics(LPTBMETRICS ptbm);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ptbm*<br/>
 Um ponteiro para a estrutura [TBMETRICS](/windows/win32/api/commctrl/ns-commctrl-tbmetrics) do objeto `CToolBarCtrl`.
@@ -2204,7 +2204,7 @@ Define a janela do proprietário do controle ToolBar.
 void SetOwner(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 Ponteiro para o `CWnd` ou objeto derivado de `CWnd`que será a janela do novo proprietário do controle da barra de ferramentas.
@@ -2223,9 +2223,9 @@ DWORD SetPadding(
     int nVertPadding);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*nHorzPadding*|no Especifica o preenchimento horizontal do controle ToolBar, em pixels.|
 |*nVertPadding*|no Especifica o preenchimento vertical do controle ToolBar, em pixels.|
@@ -2238,7 +2238,7 @@ Um DWORD cuja palavra inferior contém o valor de preenchimento horizontal anter
 
 Esse método envia a mensagem de [TB_SETPADDING](/windows/win32/Controls/tb-setpadding) , que é descrita na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir define o preenchimento horizontal e vertical do controle Toolbar atual como 20 pixels.
 
@@ -2254,9 +2254,9 @@ CImagelist* SetPressedImageList(
     CImageList* pImageList);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
 |*iImageID*|no O índice de base zero da lista de imagens. Defina esse parâmetro como zero se você usar apenas uma lista de imagens.|
 |*pImageList*|no Ponteiro para um [CImageList](../../mfc/reference/cimagelist-class.md) que contém a nova lista de imagens.|
@@ -2269,7 +2269,7 @@ Ponteiro para um [CImageList](../../mfc/reference/cimagelist-class.md) que cont�
 
 Esse método envia a mensagem de [TB_SETPRESSEDIMAGELIST](/windows/win32/Controls/tb-setpressedimagelist) , que é descrita na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo de código a seguir define a lista de imagens pressionadas como a mesma da lista de imagens padrão.
 
@@ -2286,7 +2286,7 @@ void SetRows(
     LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nRows*<br/>
 Número de linhas solicitado.
@@ -2321,7 +2321,7 @@ BOOL SetState(
     UINT nState);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nID*<br/>
 Identificador de comando do botão.
@@ -2345,7 +2345,7 @@ Define os estilos para um controle ToolBar.
 void SetStyle(DWORD dwStyle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwStyle*<br/>
 Um DWORD que contém uma combinação de [estilos de controle de barra de ferramentas](/windows/win32/Controls/toolbar-control-and-button-styles), conforme descrito na SDK do Windows.
@@ -2358,7 +2358,7 @@ Associa um controle de dica de ferramenta a um controle ToolBar.
 void SetToolTips(CToolTipCtrl* pTip);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pTip*<br/>
 Ponteiro para o objeto [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) .
@@ -2371,7 +2371,7 @@ Define o estilo visual do objeto `CToolBarCtrl`.
 HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pszSubAppName*<br/>
 Um ponteiro para uma cadeia de caracteres Unicode que contém o estilo visual da barra de ferramentas a ser definido.
@@ -2384,7 +2384,7 @@ O valor de retorno não é usado.
 
 Essa função de membro emula a funcionalidade da [TB_SETWINDOWTHEME](/windows/win32/Controls/tb-setwindowtheme) mensagem, conforme descrito na SDK do Windows.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de CMNCTRL1 do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Exemplo de MFCIE do MFC](../../overview/visual-cpp-samples.md)<br/>

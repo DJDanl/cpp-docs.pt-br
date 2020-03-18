@@ -8,11 +8,11 @@ helpviewer_keywords:
 - COM interfaces, COM map macros
 ms.assetid: 0f33656d-321f-4996-90cc-9a7f21ab73c3
 ms.openlocfilehash: 3159a53b5a500aa61b85cf2bc5a97d321ed6ebb5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864925"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417848"
 ---
 # <a name="com-map-macros"></a>Macros de mapa COM
 
@@ -23,7 +23,7 @@ Essas macros definem mapas de interface COM.
 |[BEGIN_COM_MAP](#begin_com_map)|Marca o início das entradas do mapa da interface COM.|
 |[END_COM_MAP](#end_com_map)|Marca o final das entradas do mapa da interface COM.|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlcom. h
 
@@ -35,7 +35,7 @@ O mapa COM é o mecanismo que expõe interfaces em um objeto a um cliente por me
 BEGIN_COM_MAP(x)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 no O nome do objeto de classe no qual você está expondo interfaces.
@@ -44,7 +44,7 @@ no O nome do objeto de classe no qual você está expondo interfaces.
 
 [CComObjectRootEx:: InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) retorna ponteiros apenas para interfaces no mapa com. Inicie o mapa de interface com a macro BEGIN_COM_MAP, adicione entradas para cada uma de suas interfaces com a macro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) ou uma de suas variantes e conclua o mapa com a macro [END_COM_MAP](#end_com_map) .
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Do exemplo de [bip](../../overview/visual-cpp-samples.md) do ATL:
 
@@ -58,7 +58,7 @@ Finaliza a definição do seu mapa de interface COM.
 END_COM_MAP()
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Macros](../../atl/reference/atl-macros.md)<br/>
 [Funções globais de mapa COM](../../atl/reference/com-map-global-functions.md)

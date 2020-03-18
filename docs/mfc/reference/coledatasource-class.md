@@ -37,11 +37,11 @@ helpviewer_keywords:
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
 ms.openlocfilehash: 5cd573590bc1adb303e0b4c5cd600b9fa6c685b2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855704"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421131"
 ---
 # <a name="coledatasource-class"></a>Classe COleDataSource
 
@@ -111,7 +111,7 @@ void CacheData(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *cfFormat*<br/>
 O formato da área de transferência no qual os dados serão oferecidos. Esse parâmetro pode ser um dos formatos predefinidos da área de transferência ou o valor retornado pela função [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) nativa do Windows.
@@ -147,7 +147,7 @@ void CacheGlobalData(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *cfFormat*<br/>
 O formato da área de transferência no qual os dados serão oferecidos. Esse parâmetro pode ser um dos formatos predefinidos da área de transferência ou o valor retornado pela função [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) nativa do Windows.
@@ -186,7 +186,7 @@ void DelayRenderData(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *cfFormat*<br/>
 O formato da área de transferência no qual os dados serão oferecidos. Esse parâmetro pode ser um dos formatos predefinidos da área de transferência ou o valor retornado pela função [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) nativa do Windows.
@@ -216,7 +216,7 @@ void DelayRenderFileData(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *cfFormat*<br/>
 O formato da área de transferência no qual os dados serão oferecidos. Esse parâmetro pode ser um dos formatos predefinidos da área de transferência ou o valor retornado pela função [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) nativa do Windows.
@@ -246,7 +246,7 @@ void DelaySetData(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *cfFormat*<br/>
 O formato da área de transferência no qual os dados serão colocados. Esse parâmetro pode ser um dos formatos predefinidos da área de transferência ou o valor retornado pela função [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) nativa do Windows.
@@ -273,7 +273,7 @@ DROPEFFECT DoDragDrop(
     COleDropSource* pDropSource = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwEffects*<br/>
 Operações de arrastar e soltar que são permitidas nesta fonte de dados. Pode ser um ou mais dos seguintes:
@@ -360,7 +360,7 @@ virtual BOOL OnRenderData(
     LPSTGMEDIUM lpStgMedium);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpFormatEtc*<br/>
 Aponta para a estrutura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) especificando o formato no qual as informações são solicitadas.
@@ -392,7 +392,7 @@ virtual BOOL OnRenderFileData(
     CFile* pFile);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpFormatEtc*<br/>
 Aponta para a estrutura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) especificando o formato no qual as informações são solicitadas.
@@ -422,7 +422,7 @@ virtual BOOL OnRenderGlobalData(
     HGLOBAL* phGlobal);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpFormatEtc*<br/>
 Aponta para a estrutura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) especificando o formato no qual as informações são solicitadas.
@@ -455,7 +455,7 @@ virtual BOOL OnSetData(
     BOOL bRelease);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpFormatEtc*<br/>
 Aponta para a estrutura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) especificando o formato no qual os dados estão sendo substituídos.
@@ -486,7 +486,7 @@ Coloca os dados contidos no objeto `COleDataSource` na área de transferência d
 void SetClipboard();
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de HIERSVR do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Exemplo de OCLIENT do MFC](../../overview/visual-cpp-samples.md)<br/>

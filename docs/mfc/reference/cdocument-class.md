@@ -121,11 +121,11 @@ helpviewer_keywords:
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856755"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418695"
 ---
 # <a name="cdocument-class"></a>Classe CDocument
 
@@ -141,13 +141,13 @@ class CDocument : public CCmdTarget
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDocument:: CDocument](#cdocument)|Constrói um objeto `CDocument`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDocument:: AddView](#addview)|Anexa uma exibição ao documento.|
 |[CDocument:: BeginReadChunks](#beginreadchunks)|Inicializa a leitura da parte.|
@@ -200,14 +200,14 @@ class CDocument : public CCmdTarget
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDocument:: OnFileSendMail](#onfilesendmail)|Envia uma mensagem de email com o documento anexado.|
 |[CDocument:: OnUpdateFileSendMail](#onupdatefilesendmail)|Habilita o comando enviar email se o suporte a email estiver presente.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDocument:: m_bGetThumbnailMode](#m_bgetthumbnailmode)|Especifica que `CDocument` objeto foi criado pelo Dllhost para miniaturas. Deve ser feito o check-in `CView::OnDraw`.|
 |[CDocument:: m_bPreviewHandlerMode](#m_bpreviewhandlermode)|Especifica que `CDocument` objeto foi criado pelo prevhost para `Rich Preview`. Deve ser feito o check-in `CView::OnDraw`.|
@@ -252,7 +252,7 @@ Para obter mais informações sobre `CDocument`, consulte Tópicos de arquitetur
 
 `CDocument`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Afxwin. h
 
@@ -264,7 +264,7 @@ Chame essa função para anexar uma exibição ao documento.
 void AddView(CView* pView);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pView*<br/>
 Aponta para a exibição que está sendo adicionada.
@@ -275,7 +275,7 @@ Essa função adiciona a exibição especificada à lista de exibições associa
 
 Chame essa função somente se você estiver criando e anexando manualmente uma exibição. Em geral, você permitirá que o Framework Conecte documentos e exibições definindo um objeto [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) para associar uma classe de documento, uma classe de exibição e uma classe de janela de quadro.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocViewSDI#12](../../mfc/codesnippet/cpp/cdocument-class_1.cpp)]
 
@@ -297,7 +297,7 @@ Chamado pelo Framework antes que uma janela do quadro exibindo o documento seja 
 virtual BOOL CanCloseFrame(CFrameWnd* pFrame);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFrame*<br/>
 Aponta para a janela do quadro de uma exibição anexada ao documento.
@@ -356,7 +356,7 @@ virtual void DeleteContents();
 
 Ele é chamado logo antes de o documento ser destruído. Ele também é chamado para garantir que um documento esteja vazio antes de ser reutilizado. Isso é particularmente importante para um aplicativo SDI, que usa apenas um documento; o documento é reutilizado sempre que o usuário cria ou abre outro documento. Chame essa função para implementar um comando "Editar limpar tudo" ou semelhante que exclua todos os dados do documento. A implementação padrão dessa função não faz nada. Substitua essa função para excluir os dados em seu documento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#57](../../mfc/codesnippet/cpp/cdocument-class_2.cpp)]
 
@@ -370,7 +370,7 @@ virtual POSITION FindChunk(
     DWORD pid);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *guid*<br/>
 Especifica o GUID de uma parte a ser localizada.
@@ -410,7 +410,7 @@ CDocTemplate* GetDocTemplate() const;
 
 Um ponteiro para o modelo de documento para este tipo de documento, ou NULL se o documento não for gerenciado por um modelo de documento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#58](../../mfc/codesnippet/cpp/cdocument-class_3.cpp)]
 
@@ -425,7 +425,7 @@ virtual CFile* GetFile(
     CFileException* pError);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFileName*<br/>
 Uma cadeia de caracteres que é o caminho para o arquivo desejado. O caminho pode ser relativo ou absoluto.
@@ -452,7 +452,7 @@ virtual POSITION GetFirstViewPosition() const;
 
 Um valor de posição que pode ser usado para iteração com a função de membro [GetNextView](#getnextview) .
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#59](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]
 
@@ -464,7 +464,7 @@ Chame essa função para iterar em todas as exibições do documento.
 virtual CView* GetNextView(POSITION& rPosition) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rPosition*<br/>
 Uma referência a um valor de posição retornado por uma chamada anterior para as funções de membro `GetNextView` ou [GetFirstViewPosition](#getfirstviewposition) . Esse valor não deve ser nulo.
@@ -477,7 +477,7 @@ Um ponteiro para a exibição identificada por *rPosition*.
 
 A função retorna a exibição identificada por *rPosition* e, em seguida, define *rPosition* como o valor de posição da próxima exibição na lista. Se a exibição recuperada for a última na lista, *rPosition* será definido como NULL.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#59](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]
 
@@ -504,7 +504,7 @@ virtual BOOL GetThumbnail(
     DWORD* pdwAlpha);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *CX*<br/>
 Especifica a largura e a altura do bitmap.
@@ -583,7 +583,7 @@ virtual HRESULT LoadDocumentFromStream(
     DWORD dwGrfMode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pStream*<br/>
 Um ponteiro para um fluxo. Esse fluxo é fornecido pelo shell.
@@ -723,7 +723,7 @@ Chamado pelo Framework em resposta a um evento de documento.
 virtual void OnDocumentEvent(DocumentEvent deEvent);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *desigual*<br/>
 no Um tipo de dados enumerado que descreve o tipo de evento.
@@ -734,7 +734,7 @@ Os eventos de documento podem afetar várias classes. Esse método é responsáv
 
 A tabela a seguir lista os valores possíveis para deevent *e os* eventos aos quais eles correspondem.
 
-|{1&gt;Valor&lt;1}|Evento correspondente|
+|Valor|Evento correspondente|
 |-----------|-------------------------|
 |`onAfterNewDocument`|Um novo documento foi criado.|
 |`onAfterOpenDocument`|Um novo documento foi aberto.|
@@ -751,7 +751,7 @@ virtual void OnDrawThumbnail(
     LPRECT lprcBounds);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dc*<br/>
 Uma referência a um contexto de dispositivo.
@@ -787,7 +787,7 @@ virtual HRESULT OnLoadDocumentFromStream(
     DWORD grfMode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pStream*<br/>
 Um ponteiro para um fluxo de entrada.
@@ -821,7 +821,7 @@ Se o usuário escolher o comando File New em um aplicativo SDI, a estrutura usar
 
 Observe que há casos em que `OnNewDocument` é chamado duas vezes. Isso ocorre quando o documento é inserido como um servidor de documentos ActiveX. A função é chamada primeiro pelo método de `CreateInstance` (exposto pela classe derivada de `COleObjectFactory`) e uma segunda vez pelo método de `InitNew` (exposto pela classe derivada de `COleServerDoc`).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Os exemplos a seguir ilustram métodos alternativos de inicializar um objeto de documento.
 
@@ -839,7 +839,7 @@ Chamado pelo Framework como parte do comando File Open.
 virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszPathName*<br/>
 Aponta para o caminho do documento a ser aberto.
@@ -854,7 +854,7 @@ A implementação padrão dessa função abre o arquivo especificado, chama a fu
 
 Se o usuário escolher o comando File Open em um aplicativo SDI, a estrutura usará essa função para reinicializar o objeto `CDocument` existente, em vez de criar um novo. Se o usuário escolher o arquivo aberto em um aplicativo MDI, a estrutura construirá um novo `CDocument` objeto a cada vez e, em seguida, chamará essa função para inicializá-la. Você deve posicionar o código de inicialização nessa função em vez de no construtor para que o comando File Open seja eficaz em aplicativos SDI.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Os exemplos a seguir ilustram métodos alternativos de inicializar um objeto de documento.
 
@@ -874,7 +874,7 @@ Direciona o Gerenciador de visualização para retornar o HWND recuperado da cha
 virtual HRESULT OnPreviewHandlerQueryFocus(HWND* phwnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *phwnd*<br/>
 fora Quando esse método retorna, contém um ponteiro para o HWND retornado da chamada da função `GetFocus` do thread de primeiro plano do Gerenciador de visualização.
@@ -893,7 +893,7 @@ Direciona o Gerenciador de visualização para manipular um pressionamento de te
 virtual HRESULT OnPreviewHandlerTranslateAccelerator(MSG* pmsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pmsg*<br/>
 no Um ponteiro para uma mensagem de janela.
@@ -952,7 +952,7 @@ Chamado pelo Framework como parte do comando File Save ou File Save as.
 virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszPathName*<br/>
 Aponta para o caminho totalmente qualificado para o qual o arquivo deve ser salvo.
@@ -983,7 +983,7 @@ Habilita o comando ID_FILE_SEND_MAIL se o suporte a email (MAPI) estiver present
 void OnUpdateFileSendMail(CCmdUI* pCmdUI);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pCmdUI*<br/>
 Um ponteiro para o objeto [CCmdUI](../../mfc/reference/ccmdui-class.md) associado ao comando ID_FILE_SEND_MAIL.
@@ -1002,7 +1002,7 @@ Essa função de membro é chamada pelo Framework antes que a janela do quadro s
 virtual void PreCloseFrame(CFrameWnd* pFrame);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFrame*<br/>
 Ponteiro para o [CFrameWnd](../../mfc/reference/cframewnd-class.md) que contém o objeto `CDocument` associado.
@@ -1021,7 +1021,7 @@ Lê o próximo valor de parte.
 virtual BOOL ReadNextChunkValue(IFilterChunkValue** ppValue);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ppValue*<br/>
 fora Quando a função retorna, *ppValue* contém o valor que foi lido.
@@ -1042,7 +1042,7 @@ virtual void ReleaseFile(
     BOOL bAbort);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFile*<br/>
 Um ponteiro para o objeto de testcfile a ser liberado.
@@ -1068,7 +1068,7 @@ virtual void RemoveChunk(
     DWORD pid);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Guid*<br/>
 Especifica o GUID de uma parte a ser removida.
@@ -1086,7 +1086,7 @@ Chame essa função para desanexar uma exibição de um documento.
 void RemoveView(CView* pView);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pView*<br/>
 Aponta para a exibição que está sendo removida.
@@ -1111,7 +1111,7 @@ virtual void ReportSaveLoadException(
     UINT nIDPDefault);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszPathName*<br/>
 Aponta para o nome do documento que estava sendo salvo ou carregado.
@@ -1153,7 +1153,7 @@ Define um valor de parte.
 virtual BOOL SetChunkValue (IFilterChunkValue* pValue);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Valores*<br/>
 Especifica um valor de parte a ser definido.
@@ -1172,7 +1172,7 @@ Chame essa função depois de fazer modificações no documento.
 virtual void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bModified*<br/>
 Sinalizador que indica se o documento foi modificado.
@@ -1191,7 +1191,7 @@ virtual void SetPathName(
     BOOL bAddToMRU = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszPathName*<br/>
 Aponta para a cadeia de caracteres a ser usada como o caminho para o documento.
@@ -1211,7 +1211,7 @@ Chame essa função para especificar o título do documento (a cadeia de caracte
 virtual void SetTitle(LPCTSTR lpszTitle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszTitle*<br/>
 Aponta para a cadeia de caracteres a ser usada como o título do documento.
@@ -1231,7 +1231,7 @@ void UpdateAllViews(
     CObject* pHint = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pSender*<br/>
 Aponta para a exibição que modificou o documento, ou NULL se todas as exibições forem atualizadas.
@@ -1248,11 +1248,11 @@ Você deve chamar essa função depois de chamar a função de membro [SetModifi
 
 Essa função chama a função de membro [cvisualização:: OnUpdate](../../mfc/reference/cview-class.md#onupdate) para cada uma das exibições do documento, exceto o modo de exibição de envio, passando *pHint* e *lHint*. Use esses parâmetros para passar informações para as exibições sobre as modificações feitas no documento. Você pode codificar informações usando *lHint* e/ou pode definir uma classe derivada de [CObject](../../mfc/reference/cobject-class.md)para armazenar informações sobre as modificações e passar um objeto dessa classe usando *pHint*. Substitua a função de membro `CView::OnUpdate` em sua classe derivada de [cvisualização](../../mfc/reference/cview-class.md)para otimizar a atualização da exibição do modo de exibição com base nas informações passadas.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#64](../../mfc/codesnippet/cpp/cdocument-class_9.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de MDIDOCVW do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Exemplo de SNAPVW do MFC](../../overview/visual-cpp-samples.md)<br/>

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
 ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874020"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421439"
 ---
 # <a name="cruntimeclass-structure"></a>Estrutura CRuntimeClass
 
@@ -30,7 +30,7 @@ struct CRuntimeClass
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CRuntimeClass:: CreateObject](#createobject)|Cria um objeto durante o tempo de execução.|
 |[CRuntimeClass::FromName](#fromname)|Cria um objeto durante o tempo de execução usando o conhecido nome de classe.|
@@ -38,7 +38,7 @@ struct CRuntimeClass
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CRuntimeClass:: m_lpszClassName](#m_lpszclassname)|O nome da classe.|
 |[CRuntimeClass:: m_nObjectSize](#m_nobjectsize)|O tamanho do objeto em bytes.|
@@ -61,7 +61,7 @@ Para obter mais informações sobre como usar `CRuntimeClass`, consulte o artigo
 
 `CRuntimeClass`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -77,7 +77,7 @@ static CObject* PASCAL CreateObject(LPCSTR lpszClassName);
 static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszClassName*<br/>
 O nome familiar da classe a ser criada.
@@ -90,7 +90,7 @@ Um ponteiro para o objeto recém-criado ou NULL se o nome da classe não for enc
 
 Classes derivadas de `CObject` podem oferecer suporte à criação dinâmica, que é a capacidade de criar um objeto de uma classe especificada em tempo de execução. As classes Document, View e frame, por exemplo, devem oferecer suporte à criação dinâmica. Para obter mais informações sobre a criação dinâmica e o membro de `CreateObject`, consulte [classe CObject](../../mfc/using-cobject.md) e [classe CObject: especificando níveis de funcionalidade](../../mfc/specifying-levels-of-functionality.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [IsDerivedFrom](#isderivedfrom).
 
@@ -104,7 +104,7 @@ static CRuntimeClass* PASCAL FromName(LPCSTR lpszClassName);
 static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszClassName*<br/>
 O nome familiar de uma classe derivada de `CObject`.
@@ -113,7 +113,7 @@ O nome familiar de uma classe derivada de `CObject`.
 
 Um ponteiro para um objeto `CRuntimeClass`, correspondente ao nome passado em *lpszClassName*. A função retornará NULL se nenhum nome de classe correspondente for encontrado.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]
 
@@ -125,7 +125,7 @@ Chame essa função para determinar se a classe de chamada é derivada da classe
 BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBaseClass*<br/>
 O nome familiar de uma classe derivada de `CObject`.
@@ -143,7 +143,7 @@ A relação é determinada pela "movimentação" da classe do membro a cadeia de
 
 Para obter mais informações sobre como usar `CRuntimeClass`, consulte o artigo [classe CObject: Acessando informações de classe de tempo de execução](../../mfc/accessing-run-time-class-information.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCObjectSample#18](../../mfc/codesnippet/cpp/cruntimeclass-structure_2.cpp)]
 
@@ -155,7 +155,7 @@ Uma cadeia de caracteres terminada em nulo que contém o nome da classe ASCII.
 
 Esse nome pode ser usado para criar uma instância da classe usando a função de membro `FromName`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [IsDerivedFrom](#isderivedfrom).
 
@@ -167,7 +167,7 @@ O tamanho do objeto, em bytes.
 
 Se o objeto tiver membros de dados que apontam para a memória alocada, o tamanho dessa memória não será incluído.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [IsDerivedFrom](#isderivedfrom).
 
@@ -179,7 +179,7 @@ Se seu aplicativo se vincula estaticamente ao MFC, esse membro de dados contém 
 
 Se o seu aplicativo se vincula dinamicamente à biblioteca do MFC, consulte [m_pfnGetBaseClass](#m_pfngetbaseclass).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [IsDerivedFrom](#isderivedfrom).
 
@@ -199,7 +199,7 @@ Se seu aplicativo usar a biblioteca do MFC como uma DLL compartilhada, esse memb
 
 Se seu aplicativo se vincula estaticamente à biblioteca do MFC, consulte [m_pBaseClass](#m_pbaseclass).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [IsDerivedFrom](#isderivedfrom).
 
@@ -211,11 +211,11 @@ O número do esquema (-1 para classes não serializáveis).
 
 Para obter mais informações sobre os números de esquema, consulte a macro [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) .
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [IsDerivedFrom](#isderivedfrom).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [CObject::GetRuntimeClass](../../mfc/reference/cobject-class.md#getruntimeclass)<br/>

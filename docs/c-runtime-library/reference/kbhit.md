@@ -21,7 +21,6 @@ topic_type:
 - apiref
 f1_keywords:
 - _kbhit
-- kbhit
 - conio/_kbhit
 helpviewer_keywords:
 - keyboard input
@@ -33,19 +32,19 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 49c8df1a2c600ad3976babea0b560108ea69efd8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 972b060dd98b5d267fa1f529c898573d4b82bb61
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953510"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438097"
 ---
 # <a name="_kbhit"></a>_kbhit
 
 Verifica no console se há entradas de teclado.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -54,15 +53,15 @@ Verifica no console se há entradas de teclado.
 int _kbhit( void );
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**_kbhit** retornará um valor diferente de zero se uma tecla tiver sido pressionada. Caso contrário, retorna 0.
+**_kbhit** retornará um valor diferente de zero se uma chave tiver sido pressionada. Caso contrário, retorna 0.
 
 ## <a name="remarks"></a>Comentários
 
 A função **_kbhit** verifica o console para obter um pressionamento de tecla recente. Se a função retornar um valor diferente de zero, um pressionamento de tecla está aguardando no buffer. O programa pode então chamar **_getch** ou **_getche** para obter o pressionamento de teclas.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -70,11 +69,11 @@ A função **_kbhit** verifica o console para obter um pressionamento de tecla r
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```C
 // crt_kbhit.c
@@ -99,7 +98,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Saída de Exemplo
+### <a name="sample-output"></a>Saída de exemplo
 
 ```Output
 Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!

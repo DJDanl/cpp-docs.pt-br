@@ -18,11 +18,11 @@ helpviewer_keywords:
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
 ms.openlocfilehash: 90c80dbc5c8b6788f3afad3cf77d796139fbd946
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866651"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420830"
 ---
 # <a name="ddx_dhtml-helper-macros"></a>DDX_DHtml macros auxiliares
 
@@ -41,7 +41,7 @@ As macros auxiliares DDX_DHtml permitem acesso fácil às propriedades de contro
 |[DDX_DHtml_Frame_Src](#ddx_dhtml_frame_src)|Define ou recupera a URL do quadro associado.|
 |[DDX_DHtml_IFrame_Src](#ddx_dhtml_iframe_src)|Define ou recupera a URL do quadro associado.|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxdhtml. h
 
@@ -56,7 +56,7 @@ DDX_DHtml_Anchor_Href(
     CString& var)
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *DX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
@@ -82,7 +82,7 @@ DDX_DHtml_Anchor_Target(
     CString& var)
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *DX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
@@ -108,7 +108,7 @@ DDX_DHtml_ElementInnerHtml(
     CString& var)
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *DX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
@@ -134,7 +134,7 @@ DDX_DHtml_ElementInnerText(
     CString& var)
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *DX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
@@ -160,7 +160,7 @@ DDX_DHtml_ElementValue(
     var)
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *DX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
@@ -188,7 +188,7 @@ DDX_DHtml_Frame_Src(
     CString& var)
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *DX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
@@ -214,7 +214,7 @@ DDX_DHtml_IFrame_Src(
     CString& var)
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *DX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
@@ -240,7 +240,7 @@ DDX_DHtml_Img_Src(
     CString& var)
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *DX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
@@ -257,6 +257,6 @@ Ao usar a macro DDX_DHtml_Img_Src para recuperar a propriedade src para um eleme
 
 Essa macro chama a função [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) usando a ID de expedição DISPID_IHTMLIMGELEMENT_SRC.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)

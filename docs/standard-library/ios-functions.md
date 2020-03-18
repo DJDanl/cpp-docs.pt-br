@@ -57,11 +57,11 @@ helpviewer_keywords:
 - std::unitbuf [C++]
 - std::uppercase [C++]
 ms.openlocfilehash: c3b1e2350d0923cbfddf95492842ae126859e29f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856450"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421607"
 ---
 # <a name="ltiosgt-functions"></a>Funções &lt;ios&gt;
 
@@ -73,7 +73,7 @@ Especifica que variáveis do tipo [bool](../cpp/bool-cpp.md) aparecem como **tru
 ios_base& boolalpha(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -125,7 +125,7 @@ Especifica que variáveis inteiras aparecem em notação de base 10.
 ios_base& dec(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -178,7 +178,7 @@ Configura os sinalizadores de um objeto `ios_base` para usar um formato de exibi
 ios_base& defaultfloat(ios_base& iosbase);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Iosbase*\
 Um objeto `ios_base`.
@@ -195,7 +195,7 @@ Especifica que um número de ponto flutuante é exibido em notação de decimal 
 ios_base& fixed(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -243,7 +243,7 @@ Especifica que variáveis inteiras devem aparecer em notação de base 16.
 ios_base& hex(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -284,7 +284,7 @@ Faz com que o sinal de um número seja justificado à esquerda e o número seja 
 ios_base& internal(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -342,7 +342,7 @@ Faz com que um texto que não é tão largo quanto a largura de saída apareça 
 ios_base& left(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -397,7 +397,7 @@ Especifica que variáveis do tipo [bool](../cpp/bool-cpp.md) apareçam como 1 ou
 ios_base& noboolalpha(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -426,7 +426,7 @@ Desativa a indicação da base da notação em que um número é exibido.
 ios_base& noshowbase(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -437,7 +437,7 @@ Uma referência ao objeto do qual o *Str* é derivado.
 
 ### <a name="remarks"></a>Comentários
 
-`noshowbase` fica ativo por padrão. Use [showbase](../standard-library/ios-functions.md#showbase) para indicar a base da notação dos números.
+`noshowbase` está ativado por padrão. Use [showbase](../standard-library/ios-functions.md#showbase) para indicar a base da notação dos números.
 
 O manipulador chama efetivamente `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::showbase)`e, em seguida, retorna *Str*.
 
@@ -453,7 +453,7 @@ Exibe somente a parte de número inteiro de números de ponto flutuante cuja par
 ios_base& noshowpoint(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -500,7 +500,7 @@ Faz com que números positivos não recebam sinalização explícita.
 ios_base& noshowpos(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -511,7 +511,7 @@ Uma referência ao objeto do qual o *Str* é derivado.
 
 ### <a name="remarks"></a>Comentários
 
-`noshowpos` fica ativo por padrão.
+`noshowpos` está ativado por padrão.
 
 O manipulador chama efetivamente `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::showps)`e retorna *Str*.
 
@@ -527,7 +527,7 @@ Faz com que espaços sejam lidos pelo fluxo de entrada.
 ios_base& noskipws(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -569,7 +569,7 @@ Faz com que a saída seja armazenada em buffer e processada quando o buffer esti
 ios_base& nounitbuf(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -592,7 +592,7 @@ Especifica que dígitos hexadecimais e o expoente em notação científica apare
 ios_base& nouppercase(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -617,7 +617,7 @@ Especifica que variáveis inteiras aparecem em notação de base 8.
 ios_base& oct(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -644,7 +644,7 @@ Faz com que um texto que não é tão largo quanto a largura de saída apareça 
 ios_base& right(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -701,7 +701,7 @@ Faz com que números de ponto flutuante sejam exibidos usando notação científ
 ios_base& scientific(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -746,7 +746,7 @@ Indica a base da notação em que um número é exibido.
 ios_base& showbase(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -800,7 +800,7 @@ Exibe a parte de número inteiro de um número de ponto flutuante e os dígitos 
 ios_base& showpoint(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -827,7 +827,7 @@ Faz com que números positivos recebam sinalização explícita.
 ios_base& showpos(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -872,7 +872,7 @@ Faz com que espaços não sejam lidos pelo fluxo de entrada.
 ios_base& skipws(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -924,7 +924,7 @@ Faz com que a saída seja processada quando o buffer não estiver vazio.
 ios_base& unitbuf(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.
@@ -949,7 +949,7 @@ Especifica que dígitos hexadecimais e o expoente em notação científica apare
 ios_base& uppercase(ios_base& str);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 Uma referência a um objeto do tipo [ios_base](../standard-library/ios-base-class.md) ou um tipo que herda de `ios_base`.

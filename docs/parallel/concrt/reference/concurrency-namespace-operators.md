@@ -6,11 +6,11 @@ f1_keywords:
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
 ms.openlocfilehash: 676e1936af317a6ab19959f8fd09b1de06dfaf69
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883766"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422139"
 ---
 # <a name="concurrency-namespace-operators"></a>Operadores do namespace de simultaneidade
 
@@ -45,7 +45,7 @@ inline task<void> operator||(
     const task<void>& rhs);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ReturnType*<br/>
 O tipo da tarefa retornada.
@@ -94,7 +94,7 @@ inline task<void>  operator&&(
     const task<void>& rhs);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ReturnType*<br/>
 O tipo da tarefa retornada.
@@ -124,7 +124,7 @@ inline bool operator== (
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo de dados dos elementos armazenados nos vetores simultâneos.
@@ -162,7 +162,7 @@ inline bool operator!= (
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo de dados dos elementos armazenados nos vetores simultâneos.
@@ -200,7 +200,7 @@ inline bool operator<(
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo de dados dos elementos armazenados nos vetores simultâneos.
@@ -238,7 +238,7 @@ inline bool operator<= (
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo de dados dos elementos armazenados nos vetores simultâneos.
@@ -276,7 +276,7 @@ inline bool operator>(
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo de dados dos elementos armazenados nos vetores simultâneos.
@@ -314,7 +314,7 @@ inline bool operator>= (
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo de dados dos elementos armazenados nos vetores simultâneos.
@@ -341,6 +341,6 @@ O comportamento desse operador é idêntico ao operador equivalente para a class
 
 Esse método não é seguro para simultaneidade com relação a outros métodos que poderiam modificar qualquer um dos vetores simultâneos `_A` ou `_B`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)

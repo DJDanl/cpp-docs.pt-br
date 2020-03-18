@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::yield [C++]
 ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876160"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420732"
 ---
 # <a name="ltthreadgt-functions"></a>Funções &lt;thread&gt;
 
@@ -50,7 +50,7 @@ class Period>
 inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Rel_time*\
 O objeto [duration](../standard-library/duration-class.md) que especifica um intervalo de tempo.
@@ -70,7 +70,7 @@ void sleep_until(const chrono::time_point<Clock, Duration>& Abs_time);
 void sleep_until(const xtime *Abs_time);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Abs_time*\
 Representa um ponto no tempo.
@@ -87,7 +87,7 @@ Permuta os Estados de dois objetos de **thread** .
 void swap(thread& Left, thread& Right) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 O objeto de **thread** à esquerda.
@@ -107,6 +107,6 @@ Sinaliza ao sistema operacional para executar outros threads, mesmo se o thread 
 inline void yield() noexcept;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<thread>](../standard-library/thread.md)

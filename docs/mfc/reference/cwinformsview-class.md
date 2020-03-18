@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
 ms.openlocfilehash: f4a5e6b88527dad8606092ccebd4899bba5181f6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78872439"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420858"
 ---
 # <a name="cwinformsview-class"></a>Classe CWinFormsView
 
@@ -31,19 +31,19 @@ class CWinFormsView : public CView;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CWinFormsView::CWinFormsView](#cwinformsview)|Constrói um objeto `CWinFormsView`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CWinFormsView:: GetControl](#getcontrol)|Recupera um ponteiro para o controle de Windows Forms.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|{1&gt;Nome&lt;1}||
+|Nome||
 |----------|-|
 |[Controle CWinFormsView:: Operator ^](#operator_control)|Converte um tipo como um ponteiro para um controle Windows Forms.|
 
@@ -59,7 +59,7 @@ Para obter mais informações sobre como usar Windows Forms, consulte [usando um
 > [!NOTE]
 >  CWinFormsView não dá suporte à janela divisor do MFC ( [classe CSplitterWnd](../../mfc/reference/csplitterwnd-class.md)). Atualmente, há suporte apenas para o controle divisor Windows Forms.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxwinforms. h
 
@@ -71,12 +71,12 @@ Constrói um objeto `CWinFormsView`.
 CWinFormsView(System::Type^ pManagedViewType);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pManagedViewType*<br/>
 Um ponteiro para o tipo de dados do controle de usuário Windows Forms.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 No exemplo a seguir, a classe `CUserView` herda de `CWinFormsView` e passa o tipo de `UserControl1` para o Construtor `CWinFormsView`. `UserControl1` é um controle personalizado do ControlLibrary1. dll.
 
@@ -112,11 +112,11 @@ operator System::Windows::Forms::Control^() const;
 
 Esse operador permite passar uma exibição de `CWinFormsView` para funções que aceitam um ponteiro para um controle de Windows Forms do tipo <xref:System.Windows.Forms.Control>.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte [CWinFormsView:: GetControl](#getcontrol).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md)<br/>

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (utility)
 - std::operator== (utility)
 ms.openlocfilehash: ec6c996487dc2e6c5ce628fe5e080b4f601479d9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854851"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422398"
 ---
 # <a name="ltutilitygt-operators"></a>Operadores &lt;utility&gt;
 
@@ -40,7 +40,7 @@ template <class T, class U>
     constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `pair`.
@@ -56,7 +56,7 @@ Um objeto do tipo `pair`.
 
 Um par será igual a outro par se cada um dos seus respectivos elementos for igual. Dois pares serão diferentes se o primeiro ou o segundo elemento não for igual ao elemento correspondente do outro par.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // utility_op_ne.cpp
@@ -112,7 +112,7 @@ template <class T, class U>
 constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `pair`.
@@ -128,7 +128,7 @@ Um objeto do tipo `pair`.
 
 Um par será igual a outro par se cada um dos seus respectivos elementos for igual. A função retorna `left`. **first** == `right`. **first** && `left`. **second** == `right`. **second**. Dois pares serão diferentes se o primeiro ou o segundo elemento não for igual ao elemento correspondente do outro par.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // utility_op_eq.cpp
@@ -175,7 +175,7 @@ template <class T, class U>
 constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `pair` ao lado esquerdo do operador.
@@ -193,7 +193,7 @@ O objeto de `pair` de `left` deve ser estritamente menor do que o objeto de `pai
 
 Em uma comparação de pares, os primeiros elementos dos valores dos dois pares têm prioridade mais alta. Se eles forem diferentes, o resultado da comparação entre eles será considerado o resultado da comparação do par. Se os valores dos primeiros elementos não forem diferentes, os valores do segundo elemento serão comparados e o resultado dessa comparação será interpretado como o resultado da comparação do par.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // utility_op_lt.cpp
@@ -252,7 +252,7 @@ template <class T, class U>
 constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `pair` ao lado esquerdo do operador.
@@ -268,7 +268,7 @@ Um objeto do tipo `pair` ao lado direito do operador.
 
 Em uma comparação de pares, os primeiros elementos dos valores dos dois pares têm prioridade mais alta. Se eles forem diferentes, o resultado da comparação entre eles será considerado o resultado da comparação do par. Se os valores dos primeiros elementos não forem diferentes, os valores do segundo elemento serão comparados e o resultado dessa comparação será interpretado como o resultado da comparação do par.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // utility_op_le.cpp
@@ -337,7 +337,7 @@ template <class T, class U>
 constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `pair` ao lado esquerdo do operador.
@@ -355,7 +355,7 @@ O objeto de `pair` de `left` é considerado estritamente maior do que o objeto d
 
 Em uma comparação de pares, os primeiros elementos dos valores dos dois pares têm prioridade mais alta. Se eles forem diferentes, o resultado da comparação entre eles será considerado o resultado da comparação do par. Se os valores dos primeiros elementos não forem diferentes, os valores do segundo elemento serão comparados e o resultado dessa comparação será interpretado como o resultado da comparação do par.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // utility_op_gt.cpp
@@ -424,7 +424,7 @@ template <class T, class U>
     constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `pair` ao lado esquerdo do operador.
@@ -440,7 +440,7 @@ Um objeto do tipo `pair` ao lado direito do operador.
 
 Em uma comparação de pares, os primeiros elementos dos valores dos dois pares têm prioridade mais alta. Se eles forem diferentes, o resultado da comparação entre eles será considerado o resultado da comparação do par. Se os valores dos primeiros elementos não forem diferentes, os valores do segundo elemento serão comparados e o resultado dessa comparação será interpretado como o resultado da comparação do par.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // utility_op_ge.cpp

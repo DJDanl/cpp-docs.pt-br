@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
 ms.openlocfilehash: ebc36d82af9bfe12ab30a86214e58610b5eaab95
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866265"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418751"
 ---
 # <a name="cdatabase-class"></a>Classe CDatabase
 
@@ -71,13 +71,13 @@ class CDatabase : public CObject
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDatabase:: CDatabase](#cdatabase)|Constrói um objeto `CDatabase`. Você deve inicializar o objeto chamando `OpenEx` ou `Open`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDatabase:: BeginTrans](#begintrans)|Inicia uma "transação" — uma série de chamadas reversível para as funções de `AddNew`, `Edit`, `Delete`e `Update` membro do `CRecordset` de classe — na fonte de dados conectada. A fonte de dados deve dar suporte a transações para `BeginTrans` ter qualquer efeito.|
 |[CDatabase:: BindParameters](#bindparameters)|Permite associar parâmetros antes de chamar `CDatabase::ExecuteSQL`.|
@@ -102,7 +102,7 @@ class CDatabase : public CObject
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDatabase:: m_hdbc](#m_hdbc)|Identificador de conexão ODBC (Open Database Connectivity) para uma fonte de dados. Digite *HDBC*.|
 
@@ -123,7 +123,7 @@ Para obter mais informações sobre `CDatabase`, consulte a [fonte de dados de a
 
 `CDatabase`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFXDB. h
 
@@ -159,7 +159,7 @@ Chame a função de membro [CanTransact](#cantransact) para determinar se o driv
 
 Para obter mais informações sobre transações, consulte o artigo [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o artigo [transação: executando uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
@@ -171,7 +171,7 @@ Substitua `BindParameters` quando precisar associar parâmetros antes de chamar 
 virtual void BindParameters(HSTMT hstmt);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hstmt*<br/>
 O identificador de instrução ODBC para o qual você deseja associar parâmetros.
@@ -240,7 +240,7 @@ Depois de construir o objeto, você deve chamar sua `OpenEx` ou `Open` função 
 
 Talvez seja conveniente inserir o objeto `CDatabase` em sua classe de documento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Este exemplo ilustra o uso de `CDatabase` em uma classe derivada de `CDocument`.
 
@@ -262,7 +262,7 @@ Você deve fechar todos os conjuntos de registros associados ao objeto `CDatabas
 
 Todas as instruções pendentes de `AddNew` ou `Edit` de conjuntos de registros usando o banco de dados são canceladas e todas as transações pendentes são revertidas. Todos os conjuntos de registros dependentes do objeto `CDatabase` são deixados em um estado indefinido.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDatabase#12](../../mfc/codesnippet/cpp/cdatabase-class_3.cpp)]
 
@@ -286,7 +286,7 @@ Até que você chame `CommitTrans` para encerrar uma transação, você pode cha
 
 Para obter mais informações sobre transações, consulte o artigo [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o artigo [transação: executando uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
@@ -298,7 +298,7 @@ Chame essa função de membro quando precisar executar um comando SQL diretament
 void ExecuteSQL(LPCTSTR lpszSQL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSQL*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que contém um comando SQL válido a ser executado. Você pode passar um [CString](../../atl-mfc-shared/reference/cstringt-class.md).
@@ -309,7 +309,7 @@ Crie o comando como uma cadeia de caracteres terminada em nulo. `ExecuteSQL` nã
 
 A maioria dos seus comandos para uma fonte de dados é emitida por meio de objetos recordset, que dão suporte a comandos para selecionar dados, inserir novos registros, excluir registros e editar registros. No entanto, nem toda a funcionalidade ODBC é diretamente suportada pelas classes de banco de dados, de modo que você pode precisar fazer uma chamada direta do SQL com `ExecuteSQL`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDatabase#13](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]
 
@@ -447,7 +447,7 @@ Normalmente, não será necessário acessar essa variável de membro diretamente
 
 Em algumas circunstâncias, no entanto, talvez seja necessário usar o identificador diretamente. Por exemplo, se você precisar chamar funções da API ODBC diretamente, em vez de `CDatabase`de classe, talvez seja necessário um identificador de conexão para passar como um parâmetro. Consulte o exemplo de código abaixo.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDatabase#15](../../mfc/codesnippet/cpp/cdatabase-class_5.cpp)]
 
@@ -459,7 +459,7 @@ A estrutura chama essa função de membro ao executar diretamente uma instruçã
 virtual void OnSetOptions(HSTMT hstmt);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hstmt*<br/>
 O identificador de instrução ODBC para o qual as opções estão sendo definidas.
@@ -490,7 +490,7 @@ virtual BOOL Open(
     BOOL bUseCursorLib = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszDSN*<br/>
 Especifica um nome de fonte de dados — um nome registrado com ODBC por meio do programa Administrador ODBC. Se um valor de DSN for especificado em *lpszConnect* (no formato "DSN =\<> de fonte de dados"), ele não deverá ser especificado novamente em *lpszDSN*. Nesse caso, *lpszDSN* deve ser nulo. Caso contrário, você poderá passar NULL se desejar apresentar ao usuário uma caixa de diálogo de fonte de dados na qual o usuário pode selecionar uma fonte de dados. Para obter mais informações, consulte comentários.
@@ -526,7 +526,7 @@ Você também pode usar a cadeia de conexão para vários níveis de autorizaç�
 
 É possível que uma tentativa de conexão expire o tempo se, por exemplo, o host do DBMS não estiver disponível. Se a tentativa de conexão falhar, `Open` lançará uma `CDBException`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDatabase#14](../../mfc/codesnippet/cpp/cdatabase-class_6.cpp)]
 
@@ -540,7 +540,7 @@ virtual BOOL OpenEx(
     DWORD dwOptions = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszConnectString*<br/>
 Especifica uma cadeia de conexão ODBC. Isso inclui o nome da fonte de dados, bem como outras informações opcionais, como uma ID de usuário e senha. Por exemplo, "DSN = SQLServer_Source; UID = SA; PWD = abc123 "é uma possível cadeia de conexão. Observe que, se você passar NULL para *lpszConnectString*, uma caixa de diálogo fonte de dados solicitará que o usuário selecione uma fonte de dados.
@@ -574,7 +574,7 @@ Você também pode usar a cadeia de conexão para vários níveis de autorizaç�
 
 É possível que uma tentativa de conexão expire o tempo se, por exemplo, o host do DBMS não estiver disponível. Se a tentativa de conexão falhar, `OpenEx` lançará uma `CDBException`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDatabase#11](../../mfc/codesnippet/cpp/cdatabase-class_7.cpp)]
 
@@ -598,7 +598,7 @@ Após uma chamada para `Rollback`, a transação terminará e você deverá cham
 
 Após uma reversão, o registro que era atual antes da reversão permanece atual. Para obter detalhes sobre o estado do conjunto de registros e a fonte de dados após uma reversão, consulte a transação do artigo [(ODBC)](../../data/odbc/transaction-odbc.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o artigo [transação: executando uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
@@ -610,7 +610,7 @@ Chame essa função de membro — antes de chamar `OpenEx` ou `Open` — para su
 void SetLoginTimeout(DWORD dwSeconds);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwSeconds*<br/>
 O número de segundos para permitir antes que uma tentativa de conexão expire.
@@ -629,7 +629,7 @@ Chame essa função de membro para substituir o número padrão de segundos a pe
 void SetQueryTimeout(DWORD dwSeconds);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwSeconds*<br/>
 O número de segundos para permitir antes que uma tentativa de consulta expire.
@@ -640,7 +640,7 @@ Uma operação pode atingir o tempo limite devido a problemas de acesso à rede,
 
 O valor padrão para tempos limite de consulta é 15 segundos. Nem todas as fontes de dados dão suporte à capacidade de definir um valor de tempo limite de consulta. Se você definir um valor de tempo limite de consulta de 0, nenhum tempo limite ocorrerá; a comunicação com a fonte de dados pode parar de responder. Esse comportamento pode ser útil durante o desenvolvimento. Se a fonte de dados não der suporte ao tempo limite, você obterá a saída do rastreamento, mas não uma exceção.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

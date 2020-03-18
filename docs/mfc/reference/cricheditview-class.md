@@ -101,11 +101,11 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
 ms.openlocfilehash: b32578cc3c9ad4f7a89b8ee76449259c0fa0b43b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883640"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421474"
 ---
 # <a name="cricheditview-class"></a>Classe CRichEditView
 
@@ -121,13 +121,13 @@ class CRichEditView : public CCtrlView
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CRichEditView::CRichEditView](#cricheditview)|Constrói um objeto `CRichEditView`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CRichEditView::AdjustDialogPosition](#adjustdialogposition)|Move uma caixa de diálogo para que ela não oculte a seleção atual.|
 |[CRichEditView:: CanPaste](#canpaste)|Informa se a área de transferência contém dados que podem ser colados na exibição de edição rica.|
@@ -164,7 +164,7 @@ class CRichEditView : public CCtrlView
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CRichEditView::GetClipboardData](#getclipboarddata)|Recupera um objeto da área de transferência para um intervalo nesta exibição de edição rica.|
 |[CRichEditView:: GetContextMenu](#getcontextmenu)|Recupera um menu de contexto a ser usado em um botão direito do mouse.|
@@ -181,7 +181,7 @@ class CRichEditView : public CCtrlView
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CRichEditView:: m_nBulletIndent](#m_nbulletindent)|Indica a quantidade de recuo para listas com marcadores.|
 |[CRichEditView:: m_nWordWrap](#m_nwordwrap)|Indica as restrições de quebra automática de palavra.|
@@ -210,7 +210,7 @@ Para obter um exemplo de como usar uma exibição de edição rica em um aplicat
 
 `CRichEditView`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxrich. h
 
@@ -222,7 +222,7 @@ Chame essa função para mover a caixa de diálogo fornecida para que ela não o
 void AdjustDialogPosition(CDialog* pDlg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDlg*<br/>
 Ponteiro para um objeto `CDialog`.
@@ -258,7 +258,7 @@ void DoPaste(
     HMETAFILEPICT hMetaPict);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dataobj*<br/>
 O [COleDataObject](../../mfc/reference/coledataobject-class.md) que contém os dados a serem colados.
@@ -287,7 +287,7 @@ BOOL FindText(
     BOOL bNext = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFind*<br/>
 Contém a cadeia de caracteres a ser pesquisada.
@@ -309,7 +309,7 @@ Diferente de zero se o texto *lpszFind* for encontrado; caso contrário, 0.
 
 Essa função exibe o cursor de espera durante a operação de localização.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#151](../../mfc/codesnippet/cpp/cricheditview-class_1.cpp)]
 
@@ -325,7 +325,7 @@ BOOL FindTextSimple(
     BOOL bNext = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFind*<br/>
 Contém a cadeia de caracteres a ser pesquisada.
@@ -343,7 +343,7 @@ Indica a direção da pesquisa. Se for TRUE, a direção da pesquisa será para 
 
 Diferente de zero se o texto *lpszFind* for encontrado; caso contrário, 0.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo para [CRichEditView:: LocalizarTexto](#findtext).
 
@@ -363,7 +363,7 @@ Uma estrutura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w
 
 Para obter mais informações, consulte a mensagem [EM_GETCHARFORMAT](/windows/win32/Controls/em-getcharformat) e a estrutura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]
 
@@ -379,7 +379,7 @@ virtual HRESULT GetClipboardData(
     LPDATAOBJECT* lplpdataobj);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpchrg*<br/>
 Ponteiro para a estrutura [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) especificando o intervalo de caracteres (e os itens OLE) a serem copiados para o objeto de dados especificado por *lplpdataobj*.
@@ -426,7 +426,7 @@ virtual HMENU GetContextMenu(
     CHARRANGE* lpchrg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *seltyp*<br/>
 O tipo de seleção. Os valores de tipo de seleção são descritos na seção comentários.
@@ -525,7 +525,7 @@ CSize GetPaperSize() const;
 
 O tamanho do papel usado na impressão, medido em MM_TWIPS.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#153](../../mfc/codesnippet/cpp/cricheditview-class_3.cpp)]
 
@@ -557,7 +557,7 @@ CRect GetPrintRect() const;
 
 Os limites da área da imagem usada na impressão, medida em MM_TWIPS.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#154](../../mfc/codesnippet/cpp/cricheditview-class_4.cpp)]
 
@@ -585,7 +585,7 @@ CRichEditCtrl& GetRichEditCtrl() const;
 
 O objeto `CRichEditCtrl` para esta exibição.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo para [CRichEditView:: LocalizarTexto](#findtext).
 
@@ -623,7 +623,7 @@ long GetTextLengthEx(
     UINT uCodePage = -1) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwFlags*<br/>
 Valor que especifica o método a ser usado para determinar o comprimento do texto. Esse membro pode ser um ou mais dos valores listados no membro flags de [GETTEXTLENGTHEX](/windows/win32/api/richedit/ns-richedit-gettextlengthex) descrito na SDK do Windows.
@@ -647,7 +647,7 @@ Chame essa função para inserir o arquivo especificado (como um objeto [CRichEd
 void InsertFileAsObject(LPCTSTR lpszFileName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFileName*<br/>
 Cadeia de caracteres que contém o nome do arquivo a ser inserido.
@@ -660,7 +660,7 @@ Chame essa função para inserir um objeto [CRichEditCntrItem](../../mfc/referen
 HRESULT InsertItem(CRichEditCntrItem* pItem);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pItem*<br/>
 Ponteiro para o item a ser inserido.
@@ -681,7 +681,7 @@ Chame essa função para determinar se o *CF* é um formato de área de transfer
 static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *CF*<br/>
 O formato de área de transferência de interesse.
@@ -698,7 +698,7 @@ Chame essa função para determinar se o item OLE especificado está selecionado
 virtual BOOL IsSelected(const CObject* pDocItem) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDocItem*<br/>
 Ponteiro para um objeto na exibição.
@@ -737,7 +737,7 @@ Um dos seguintes valores:
 
 - `WrapToTargetDevice` indica quebra automática de palavra com base nas características do dispositivo de destino.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo para [CRichEditView:: WrapChanged](#wrapchanged).
 
@@ -751,7 +751,7 @@ void OnCharEffect(
     DWORD dwEffect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwMask*<br/>
 Os efeitos de formatação de caractere a serem modificados na seleção atual.
@@ -765,7 +765,7 @@ Cada chamada para essa função alterna os efeitos de formatação especificados
 
 Para obter mais informações sobre os parâmetros *dwMask* e *dwEffect* e seus valores possíveis, consulte os membros de dados correspondentes de [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#155](../../mfc/codesnippet/cpp/cricheditview-class_5.cpp)]
 
@@ -781,7 +781,7 @@ virtual void OnFindNext(
     BOOL bWord);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFind*<br/>
 A cadeia de caracteres a ser localizada.
@@ -811,7 +811,7 @@ virtual void OnInitialUpdate();
 
 A implementação padrão dessa função chama a função de membro [cvisualização:: OnUpdate](../../mfc/reference/cview-class.md#onupdate) sem informações de dica (isto é, usando os valores padrão de 0 para o parâmetro *lHint* e NULL para o parâmetro *pHint* ). Substitua essa função para executar uma inicialização única que exija informações sobre o documento. Por exemplo, se seu aplicativo tiver documentos de tamanho fixo, você poderá usar essa função para inicializar os limites de rolagem de uma exibição com base no tamanho do documento. Se seu aplicativo der suporte a documentos de tamanho variável, use `OnUpdate` para atualizar os limites de rolagem sempre que o documento for alterado.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CRichEditView:: m_nWordWrap](#m_nwordwrap).
 
@@ -823,7 +823,7 @@ Use essa função para carregar dados nativos de um item inserido.
 virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpStg*<br/>
 Ponteiro para um objeto [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) .
@@ -848,7 +848,7 @@ Chame essa função para alterar o alinhamento de parágrafo para os parágrafos
 void OnParaAlign(WORD wAlign);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *wAlign*<br/>
 Alinhamento de parágrafo desejado. Um dos seguintes valores:
@@ -859,7 +859,7 @@ Alinhamento de parágrafo desejado. Um dos seguintes valores:
 
 - PFA_CENTER centralizar os parágrafos entre as margens.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#156](../../mfc/codesnippet/cpp/cricheditview-class_6.cpp)]
 
@@ -871,7 +871,7 @@ Substitua essa função para alterar as características dessa exibição de edi
 virtual void OnPrinterChanged(const CDC& dcPrinter);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dcPrinter*<br/>
 Um objeto [CDC](../../mfc/reference/cdc-class.md) para a nova impressora.
@@ -892,7 +892,7 @@ virtual void OnReplaceAll(
     BOOL bWord);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFind*<br/>
 O texto a ser substituído.
@@ -910,7 +910,7 @@ Indica se a pesquisa deve selecionar palavras inteiras ou não.
 
 Chame essa função para substituir todas as ocorrências de um determinado texto por outra cadeia de caracteres. Substitua essa função para alterar as características da pesquisa para esta exibição.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo para [CRichEditView:: LocalizarTexto](#findtext).
 
@@ -927,7 +927,7 @@ virtual void OnReplaceSel(
     LPCTSTR lpszReplace);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFind*<br/>
 O texto a ser substituído.
@@ -956,7 +956,7 @@ Chamado pelo Framework sempre que uma pesquisa falha.
 virtual void OnTextNotFound(LPCTSTR lpszFind);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFind*<br/>
 O texto que não foi encontrado.
@@ -967,7 +967,7 @@ Substitua essa função para alterar a notificação de saída de um [MessageBee
 
 Para obter mais informações, consulte [MessageBeep](/windows/win32/api/winuser/nf-winuser-messagebeep) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#157](../../mfc/codesnippet/cpp/cricheditview-class_7.cpp)]
 
@@ -982,7 +982,7 @@ void OnUpdateCharEffect(
     DWORD dwEffect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pCmdUI*<br/>
 Ponteiro para um objeto [CCmdUI](../../mfc/reference/ccmdui-class.md) .
@@ -999,7 +999,7 @@ A máscara *dwMask* especifica quais atributos de formatação de caracteres ver
 
 Para obter mais informações sobre os parâmetros *dwMask* e *dwEffect* e seus valores possíveis, consulte os membros de dados correspondentes de [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#158](../../mfc/codesnippet/cpp/cricheditview-class_8.cpp)]
 
@@ -1013,7 +1013,7 @@ void OnUpdateParaAlign(
     WORD wAlign);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pCmdUI*<br/>
 Ponteiro para um objeto [CCmdUI](../../mfc/reference/ccmdui-class.md) .
@@ -1027,7 +1027,7 @@ O alinhamento de parágrafo a ser verificado. Um dos seguintes valores:
 
 - PFA_CENTER centralizar os parágrafos entre as margens.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#159](../../mfc/codesnippet/cpp/cricheditview-class_9.cpp)]
 
@@ -1044,7 +1044,7 @@ long PrintInsideRect(
     BOOL bOutput);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Ponteiro para um contexto de dispositivo para a área de saída.
@@ -1069,7 +1069,7 @@ O índice do último caractere que se ajusta à área de saída mais um.
 
 Normalmente, essa chamada é seguida por uma chamada para [CRichEditCtrl::D isplayband](../../mfc/reference/cricheditctrl-class.md#displayband) que gera a saída.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo para [CRichEditView:: Getpapers](#getpapersize).
 
@@ -1084,7 +1084,7 @@ long PrintPage(
     long nIndexStop);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Ponteiro para um contexto de dispositivo para saída de página.
@@ -1118,7 +1118,7 @@ virtual HRESULT QueryAcceptData(
     HGLOBAL hMetaFile);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpdataobj*<br/>
 Ponteiro para o [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) a ser consultado.
@@ -1145,7 +1145,7 @@ Substitua essa função para lidar com a organização diferente de itens COM em
 
 Para obter mais informações sobre HRESULT e `IDataObject`, consulte [estrutura de códigos de erro com](/windows/win32/com/structure-of-com-error-codes) e [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject), respectivamente, na SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#160](../../mfc/codesnippet/cpp/cricheditview-class_10.cpp)]
 
@@ -1157,7 +1157,7 @@ Chame essa função para definir os atributos de formatação de caracteres para
 void SetCharFormat(CHARFORMAT2 cf);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *CF*<br/>
 Estrutura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) que contém os novos atributos de formatação de caractere padrão.
@@ -1168,7 +1168,7 @@ Somente os atributos especificados pelo membro `dwMask` de *CF* são alterados p
 
 Para obter mais informações, consulte [EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat) mensagem e estrutura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]
 
@@ -1180,7 +1180,7 @@ Chame essa função para definir as margens de impressão para esta exibição d
 void SetMargins(const CRect& rectMargin);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rectMargin*<br/>
 Os novos valores de margem para impressão, medidos em MM_TWIPS.
@@ -1191,7 +1191,7 @@ Se [m_nWordWrap](#m_nwordwrap) for `WrapToTargetDevice`, você deverá chamar [W
 
 Observe que as margens usadas pelo [PrintPage](#printpage) são relativas à página física, não à página lógica. Assim, as margens de zero geralmente serão cortadas pelo texto, pois muitas impressoras têm áreas não imprimíveis na página. Para evitar o recorte do texto, você deve chamar use `SetMargins` para definir margens de impressora razoáveis antes da impressão.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo para [CRichEditView:: Getpapers](#getpapersize).
 
@@ -1203,7 +1203,7 @@ Chame essa função para definir o tamanho do papel para imprimir esta exibiçã
 void SetPaperSize(CSize sizePaper);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *sizePaper*<br/>
 Os novos valores de tamanho de papel para impressão, medidos em MM_TWIPS.
@@ -1212,7 +1212,7 @@ Os novos valores de tamanho de papel para impressão, medidos em MM_TWIPS.
 
 Se [m_nWordWrap](#m_nwordwrap) for `WrapToTargetDevice`, você deverá chamar [WrapChanged](#wrapchanged) depois de usar essa função para ajustar as características de impressão.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#161](../../mfc/codesnippet/cpp/cricheditview-class_11.cpp)]
 
@@ -1224,7 +1224,7 @@ Chame essa função para definir os atributos de formatação de parágrafo para
 BOOL SetParaFormat(PARAFORMAT2& pf);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pf*<br/>
 Estrutura [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) que contém os novos atributos de formatação de parágrafo padrão.
@@ -1239,7 +1239,7 @@ Somente os atributos especificados pelo membro `dwMask` de *PF* são alterados p
 
 Para obter mais informações, consulte [EM_SETPARAFORMAT](/windows/win32/Controls/em-setparaformat) mensagem e estrutura [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) no SDK do Windows.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#162](../../mfc/codesnippet/cpp/cricheditview-class_12.cpp)]
 
@@ -1251,7 +1251,7 @@ Chame essa função para redefinir o estado de pesquisa interno do controle [CRi
 void TextNotFound(LPCTSTR lpszFind);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFind*<br/>
 Contém a cadeia de texto que não foi encontrada.
@@ -1262,7 +1262,7 @@ Contém a cadeia de texto que não foi encontrada.
 
 O parâmetro *lpszFind* deve incluir o mesmo conteúdo que a cadeia de caracteres fornecida para [LocalizarTexto](#findtext). Depois de redefinir o estado de pesquisa interno, esse método chamará o método [OnTextNotFound](#ontextnotfound) com a cadeia de caracteres de pesquisa fornecida.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo para [CRichEditView:: LocalizarTexto](#findtext).
 
@@ -1278,11 +1278,11 @@ virtual void WrapChanged();
 
 Substitua essa função para modificar a maneira como o modo de exibição de edição avançada responde a alterações no [m_nWordWrap](#m_nwordwrap) ou nas características de impressão ( [OnPrinterChanged](#onprinterchanged)).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#163](../../mfc/codesnippet/cpp/cricheditview-class_13.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de WORDPAD do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>

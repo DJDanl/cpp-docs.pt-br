@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
 ms.openlocfilehash: a861e557b7368d13d615aaf796faded93c72b040
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855673"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421166"
 ---
 # <a name="csocket-class"></a>Classe CSocket
 
@@ -41,13 +41,13 @@ class CSocket : public CAsyncSocket
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CSocket::CSocket](#csocket)|Constrói um objeto `CSocket`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CSocket:: Attach](#attach)|Anexa um identificador de soquete a um objeto `CSocket`.|
 |[CSocket::CancelBlockingCall](#cancelblockingcall)|Cancela uma chamada de bloqueio que está em andamento no momento.|
@@ -57,7 +57,7 @@ class CSocket : public CAsyncSocket
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CSocket::OnMessagePending](#onmessagepending)|Chamado para processar mensagens pendentes enquanto aguarda a conclusão de uma chamada de bloqueio.|
 
@@ -90,7 +90,7 @@ Para obter mais informações, consulte [Windows Sockets in MFC](../../mfc/windo
 
 `CSocket`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AfxSock. h
 
@@ -102,7 +102,7 @@ Chame essa função de membro para anexar o identificador de `hSocket` a um obje
 BOOL Attach(SOCKET hSocket);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hSocket*<br/>
 Contém um identificador para um soquete.
@@ -117,7 +117,7 @@ O identificador de soquete é armazenado no membro de dados de [m_hSocket](../..
 
 Para obter mais informações, consulte [Windows Sockets: using Sockets with arquivamentos](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCSocketThread#1](../../mfc/reference/codesnippet/cpp/csocket-class_2.h)]
 
@@ -154,7 +154,7 @@ BOOL Create(
     LPCTSTR lpszSocketAddress = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nSocketPort*<br/>
 Uma porta específica a ser usada com o soquete ou 0 se você quiser que o MFC selecione uma porta.
@@ -204,7 +204,7 @@ Retorna um ponteiro para um objeto `CSocket`.
 static CSocket* PASCAL FromHandle(SOCKET hSocket);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hSocket*<br/>
 Contém um identificador para um soquete.
@@ -255,7 +255,7 @@ A estrutura chama `OnMessagePending` enquanto o soquete está bombeando mensagen
 
 Para obter mais informações, consulte [Windows Sockets: using Sockets with arquivamentos](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CAsyncSocket](../../mfc/reference/casyncsocket-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

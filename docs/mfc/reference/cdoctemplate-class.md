@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
 ms.openlocfilehash: 3b2d84af9be8e5c606cde8794b51e12207dcdec9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855675"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420606"
 ---
 # <a name="cdoctemplate-class"></a>Classe CDocTemplate
 
@@ -67,13 +67,13 @@ class CDocTemplate : public CCmdTarget
 
 ### <a name="protected-constructors"></a>Construtores protegidos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDocTemplate::CDocTemplate](#cdoctemplate)|Constrói um objeto `CDocTemplate`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDocTemplate:: AddDocument](#adddocument)|Adiciona um documento a um modelo.|
 |[CDocTemplate::CloseAllDocuments](#closealldocuments)|Fecha todos os documentos associados a este modelo.|
@@ -127,7 +127,7 @@ Para obter mais informações sobre `CDocTemplate`, consulte [modelos de documen
 
 `CDocTemplate`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Afxwin. h
 
@@ -139,7 +139,7 @@ Use esta função para adicionar um documento a um modelo.
 virtual void AddDocument(CDocument* pDoc);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDoc*<br/>
 Um ponteiro para o documento a ser adicionado.
@@ -160,7 +160,7 @@ CDocTemplate (
     CRuntimeClass* pViewClass);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDResource*<br/>
 Especifica a ID dos recursos usados com o tipo de documento. Isso pode incluir o menu, ícone, tabela de aceleração e recursos de cadeia de caracteres.
@@ -198,7 +198,7 @@ Chame essa função de membro para fechar todos os documentos abertos.
 virtual void CloseAllDocuments(BOOL bEndSession);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEndSession*<br/>
 Não usado.
@@ -231,13 +231,13 @@ virtual CFrameWnd* CreateNewFrame(
     CFrameWnd* pOther);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDoc*<br/>
-O documento ao qual a janela do novo quadro deve se referir. Pode ser NULO.
+O documento ao qual a janela do novo quadro deve se referir. Pode ser NULL.
 
 *pOther*<br/>
-A janela do quadro na qual a janela do novo quadro deve ser baseada. Pode ser NULO.
+A janela do quadro na qual a janela do novo quadro deve ser baseada. Pode ser NULL.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -260,7 +260,7 @@ CFrameWnd* CreateOleFrame(
     BOOL bCreateView);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParentWnd*<br/>
 Um ponteiro para a janela pai do quadro.
@@ -289,7 +289,7 @@ virtual BOOL GetDocString(
     enum DocStringIndex index) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rString*<br/>
 Uma referência a um objeto `CString` que conterá a cadeia de caracteres quando a função retornar.
@@ -351,7 +351,7 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
 
 Um ponteiro para o próximo documento na lista de documentos associados a este modelo.
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rPos*<br/>
 Uma referência a um valor de posição retornado por uma chamada anterior para [GetFirstDocPosition](#getfirstdocposition) ou `GetNextDoc`.
@@ -375,13 +375,13 @@ virtual void InitialUpdateFrame(
     BOOL bMakeVisible = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFrame*<br/>
 A janela do quadro que precisa da atualização inicial.
 
 *pDoc*<br/>
-O documento ao qual o quadro está associado. Pode ser NULO.
+O documento ao qual o quadro está associado. Pode ser NULL.
 
 *bMakeVisible*<br/>
 Indica se o quadro deve ficar visível e ativo.
@@ -414,7 +414,7 @@ virtual Confidence MatchDocType(
     CDocument*& rpDocMatch);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszPathName*<br/>
 Nome do caminho do arquivo cujo tipo deve ser determinado.
@@ -462,7 +462,7 @@ virtual CDocument* OpenDocumentFile(
     BOOL bAddToMRU) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszPathName*<br/>
 no Ponteiro para o caminho do arquivo que contém o documento a ser aberto.
@@ -486,7 +486,7 @@ Remove o documento apontado por *pDoc* da lista de documentos associados a este 
 virtual void RemoveDocument(CDocument* pDoc);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDoc*<br/>
 Ponteiro para o documento a ser removido.
@@ -515,7 +515,7 @@ Determina os recursos para contêineres OLE ao editar um item OLE no local.
 void SetContainerInfo(UINT nIDOleInPlaceContainer);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDOleInPlaceContainer*<br/>
 A ID dos recursos usados quando um objeto inserido é ativado.
@@ -534,7 +534,7 @@ Chame essa função para carregar o título padrão do documento e exibi-lo na b
 virtual void SetDefaultTitle(CDocument* pDocument) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDocument*<br/>
 Ponteiro para o documento cujo título deve ser definido.
@@ -555,7 +555,7 @@ void SetServerInfo(
     CRuntimeClass* pOleViewClass = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDOleEmbedding*<br/>
 A ID dos recursos usados quando um objeto inserido é aberto em uma janela separada.
@@ -585,7 +585,7 @@ CFrameWnd* CreatePreviewFrame(
     CDocument* pDoc);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParentWnd*<br/>
 Um ponteiro para uma janela pai (geralmente fornecido pelo shell).
@@ -610,7 +610,7 @@ void SetPreviewInfo(
     CRuntimeClass* pPreviewViewClass = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDPreviewFrame*<br/>
 Especifica uma ID de recurso do quadro de visualização.
@@ -623,7 +623,7 @@ Especifica um ponteiro para uma estrutura de informações de classe de tempo de
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (queue)
 - std::operator== (queue)
 ms.openlocfilehash: 420d717b34b6c17587f8790701906e06ab008d96
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854881"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419647"
 ---
 # <a name="ltqueuegt-operators"></a>Operadores &lt;queue&gt;
 
@@ -33,7 +33,7 @@ Testa se o objeto da fila do lado esquerdo do operador não é igual ao do lado 
 bool operator!=(const queue <Type, Container>& left, const queue <Type, Container>& right,);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `queue`.
@@ -100,7 +100,7 @@ Testa se o objeto da fila do lado esquerdo do operador é menor que o do lado di
 bool operator<(const queue <Type, Container>& left, const queue <Type, Container>& right,);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `queue`.
@@ -163,7 +163,7 @@ Testa se o objeto da fila do lado esquerdo do operador é menor ou igual ao do l
 bool operator<=(const queue <Type, Container>& left, const queue <Type, Container>& right,);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `queue`.
@@ -228,7 +228,7 @@ Testa se o objeto da fila do lado esquerdo do operador é igual ao do lado direi
 bool operator==(const queue <Type, Container>& left, const queue <Type, Container>& right,);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `queue`.
@@ -294,7 +294,7 @@ Testa se o objeto da fila do lado esquerdo do operador é maior que o do lado di
 bool operator>(const queue <Type, Container>& left, const queue <Type, Container>& right,);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `queue`.
@@ -360,7 +360,7 @@ Testa se o objeto de fila do lado esquerdo do operador é maior ou igual ao do l
 bool operator>=(const queue <Type, Container>& left, const queue <Type, Container>& right,);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `queue`.

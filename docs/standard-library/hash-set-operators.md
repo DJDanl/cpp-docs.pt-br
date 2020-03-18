@@ -6,11 +6,11 @@ f1_keywords:
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
 ms.openlocfilehash: 3900e9c6e4fb7f5a163279165a51b440d138a8e5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883832"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418996"
 ---
 # <a name="lthash_setgt-operators"></a>Operadores &lt;hash_set&gt;
 
@@ -30,7 +30,7 @@ Testa se o objeto hash_set no lado esquerdo do operador não é igual ao objeto 
 bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `hash_set`.
@@ -48,7 +48,7 @@ A comparação entre os objetos hash_set é baseada em uma comparação de parid
 
 Os membros dos arquivos de cabeçalho [< hash_map >](../standard-library/hash-map.md) e [< hash_set](../standard-library/hash-set.md) > estão no [namespace stdext](../standard-library/stdext-namespace.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_op_ne.cpp
@@ -98,7 +98,7 @@ Testa se o objeto hash_set no lado esquerdo do operador é igual ao objeto hash_
 bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `hash_set`.
@@ -114,7 +114,7 @@ Um objeto do tipo `hash_set`.
 
 A comparação entre objetos hash_set é baseada em uma comparação de paridade de seus elementos. Dois hash_sets serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_set_op_eq.cpp
@@ -164,7 +164,7 @@ Testa se o objeto hash_multiset no lado esquerdo do operador não é igual ao ob
 bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `hash_multiset`.
@@ -180,7 +180,7 @@ Um objeto do tipo `hash_multiset`.
 
 A comparação entre os objetos hash_multiset é baseada em uma comparação de paridade de seus elementos. Dois hash_multisets serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hashset_op_ne.cpp
@@ -230,7 +230,7 @@ Testa se o objeto hash_multiset no lado esquerdo do operador é igual ao objeto 
 bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 Um objeto do tipo `hash_multiset`.
@@ -246,7 +246,7 @@ Um objeto do tipo `hash_multiset`.
 
 A comparação entre os objetos hash_multiset é baseada em uma comparação de paridade de seus elementos. Dois hash_multisets serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // hash_multiset_op_eq.cpp
@@ -285,6 +285,6 @@ The hash_multisets s1 and s2 are not equal.
 The hash_multisets s1 and s2 are equal.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [<hash_set>](../standard-library/hash-set.md)

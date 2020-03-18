@@ -5,17 +5,17 @@ helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
 ms.openlocfilehash: c93867f3be3b17f703c549aa5c05f3d327934c26
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856281"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417183"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Instruções passo a passo: usando MSBuild para criar um projeto do Visual C++
 
 Este passo a passo demonstra como usar o MSBuild para criar um projeto do Visual Studio C++ em um prompt de comando. Você aprenderá a criar arquivos de origem C++ e um arquivo de projeto baseado em XML para um aplicativo de console Visual C++. Depois de criar o projeto, você aprenderá a personalizar o processo de build.
 
-Esta explicação passo a passo ilustra as seguintes tarefas:
+Este passo a passo ilustra as seguintes tarefas:
 
 - Criar arquivos de origem C++ para o projeto.
 
@@ -25,7 +25,7 @@ Esta explicação passo a passo ilustra as seguintes tarefas:
 
 - Usar o MSBuild para personalizar o projeto.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 {1&gt;Você precisa dos seguintes itens para concluir esta explicação:&lt;1}
 

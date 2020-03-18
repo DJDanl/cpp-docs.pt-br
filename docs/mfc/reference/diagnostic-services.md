@@ -19,11 +19,11 @@ helpviewer_keywords:
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
 ms.openlocfilehash: 4cf3f53d1e238218b4eb892dc92e3c823dcc1296
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855240"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421397"
 ---
 # <a name="diagnostic-services"></a>Serviços de diagnóstico
 
@@ -101,7 +101,7 @@ Suprime avisos do compilador para o uso de funções do MFC preteridas.
 _AFX_SECURE_NO_WARNINGS
 ```
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Este exemplo de código causaria um aviso do compilador se _AFX_SECURE_NO_WARNINGS não fosse definido.
 
@@ -131,7 +131,7 @@ void AfxDebugBreak( );
 
 `AfxDebugBreak` não tem efeito nas versões de lançamento de um aplicativo MFC e deve ser removido. Essa função só deve ser usada em aplicativos MFC. Use a versão da API do Win32, `DebugBreak`, para causar uma interrupção em aplicativos não MFC.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxver_. h
 
@@ -143,7 +143,7 @@ Avalia seu argumento.
 ASSERT(booleanExpression)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor booliano*<br/>
 Especifica uma expressão (incluindo valores de ponteiro) que é avaliada como zero ou 0.
@@ -163,11 +163,11 @@ Na versão de lançamento do MFC, ASSERT não avalia a expressão e, portanto, n
 > [!NOTE]
 >  Essa função está disponível somente na versão de depuração do MFC.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_Utilities#44](../../mfc/codesnippet/cpp/diagnostic-services_2.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -179,7 +179,7 @@ Essa macro declara que o objeto apontado é um objeto da classe especificada ou 
 ASSERT_KINDOF(classname, pobject)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *classname*<br/>
 O nome de uma classe derivada de `CObject`.
@@ -202,7 +202,7 @@ Essa função funciona somente para classes declaradas com a macro [DECLARE_DYNA
 > [!NOTE]
 >  Essa função está disponível somente na versão de depuração do MFC.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -214,7 +214,7 @@ Use para testar suas suposições sobre a validade do estado interno de um objet
 ASSERT_VALID(pObject)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pObject*<br/>
 Especifica um objeto de uma classe derivada de `CObject` que tem uma versão de substituição da função membro `AssertValid`.
@@ -230,11 +230,11 @@ Na versão de lançamento do MFC, ASSERT_VALID não faz nada. Na versão de depu
 
 Para obter mais informações e exemplos, consulte [DEBUGGING MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCObjectSample#19](../../mfc/codesnippet/cpp/diagnostic-services_5.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -261,7 +261,7 @@ Depois de inserir essa diretiva, o pré-processador inserirá DEBUG_NEW sempre q
 > [!NOTE]
 >  Nas versões anteriores do MFC (4,1 e anteriores), você precisava colocar a instrução `#define` após todas as instruções que chamaram as macros IMPLEMENT_DYNCREATE ou IMPLEMENT_SERIAL. Isso não é mais necessário.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -279,11 +279,11 @@ Em uma compilação de versão, DEBUG_ONLY não avalia seu argumento. Isso é ú
 
 A macro DEBUG_ONLY é equivalente à *expressão* ao redor com `#ifdef _DEBUG` e `#endif`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_Utilities#32](../../mfc/codesnippet/cpp/diagnostic-services_6.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -298,7 +298,7 @@ ENSURE(  booleanExpression )
 ENSURE_VALID( booleanExpression  )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor booliano*<br/>
 Especifica uma expressão booliana a ser testada.
@@ -314,7 +314,7 @@ A macro ENSURE_ARG funciona como a macro If.
 ENSURE_VALID chama a macro ASSERT_VALID (que tem efeito somente em compilações de depuração). Além disso, ENSURE_VALID lançará uma exceção se o ponteiro for nulo. O teste nulo é executado nas configurações de depuração e de versão.
 
 Se qualquer um desses testes falhar, uma mensagem de alerta será exibida da mesma maneira que a declaração. A macro gera uma exceção de argumento inválida, se necessário.
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -332,7 +332,7 @@ THIS_FILE
 
 As informações são usadas pelas macros ASSERT e VERIFY. O assistente de aplicativo e os assistentes de código colocam a macro em arquivos de código-fonte que criam.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 #ifdef _DEBUG
@@ -344,7 +344,7 @@ static char THIS_FILE[] = __FILE__;
 // compiler recognizes.
 ```
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -365,7 +365,7 @@ Na versão de depuração do MFC, essa macro envia a cadeia de caracteres especi
 
 Para obter mais informações, consulte [DEBUGGING MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -377,7 +377,7 @@ Na versão de depuração do MFC, o avalia seu argumento.
 VERIFY(booleanExpression)
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *valor booliano*<br/>
 Especifica uma expressão (incluindo valores de ponteiro) que é avaliada como zero ou 0.
@@ -394,11 +394,11 @@ em que *Name* é o nome do arquivo de origem e *num* é o número de linha da as
 
 Na versão de lançamento do MFC, a verificação avalia a expressão, mas não imprime nem interrompe o programa. Por exemplo, se a expressão for uma chamada de função, a chamada será feita.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCDocView#198](../../mfc/codesnippet/cpp/diagnostic-services_7.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -418,11 +418,11 @@ No Windows NT e em todas as versões do Windows, `afxDump` saída é enviada par
 
 Essa variável é definida somente na versão de depuração do MFC. Para obter mais informações sobre `afxDump`, consulte [DEBUGGING MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_Utilities#23](../../mfc/codesnippet/cpp/diagnostic-services_8.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -436,7 +436,7 @@ Função interna que o MFC usa para despejar o estado de um objeto durante a dep
 void AfxDump(const CObject* pOb);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pOb*<br/>
 Um ponteiro para um objeto de uma classe derivada de `CObject`.
@@ -447,7 +447,7 @@ Um ponteiro para um objeto de uma classe derivada de `CObject`.
 
 O código do programa não deve chamar `AfxDump`, mas, em vez disso, deve chamar a função de membro `Dump` do objeto apropriado.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -469,11 +469,11 @@ int  afxMemDF;
 
 - `checkAlwaysMemDF` chama `AfxCheckMemory` toda vez que a memória é alocada ou liberada. Isso irá reduzir significativamente as alocações de memória e desalocações.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_Utilities#30](../../mfc/codesnippet/cpp/diagnostic-services_9.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -496,11 +496,11 @@ Essa função pode ser usada para verificar os valores de retorno de chamadas pa
 > [!NOTE]
 >  Essa função tem o mesmo efeito em compilações de depuração e não depuração.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCOleContainer#33](../../mfc/codesnippet/cpp/diagnostic-services_10.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -533,11 +533,11 @@ em um módulo de programa, as chamadas subsequentes para `AfxCheckMemory` mostra
 
 Essa função funciona apenas na versão de depuração do MFC.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCObjectSample#26](../../mfc/codesnippet/cpp/diagnostic-services_11.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -549,7 +549,7 @@ Chame essa função enquanto estiver no depurador para despejar o estado de um o
 void AfxDump(const CObject* pOb);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pOb*<br/>
 Um ponteiro para um objeto de uma classe derivada de `CObject`.
@@ -560,7 +560,7 @@ Um ponteiro para um objeto de uma classe derivada de `CObject`.
 
 O código do programa não deve chamar `AfxDump`, mas, em vez disso, deve chamar a função de membro `Dump` do objeto apropriado.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -572,7 +572,7 @@ Essa função global pode ser usada para gerar uma imagem da pilha atual.
 void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwTarget*<br/>
 Indica o destino da saída de despejo. Os valores possíveis, que podem ser combinados usando o operador or- **&#124;** bit-a-or (), são os seguintes:
@@ -621,7 +621,7 @@ Cada linha na saída acima indica o endereço da última chamada de função, o 
 
 Por exemplo, a tabela a seguir descreve a primeira linha da saída acima:
 
-|Saída|Descrição|
+|Saída|DESCRIÇÃO|
 |------------|-----------------|
 |`00427D55:`|O endereço de retorno da última chamada de função.|
 |`DUMP2\DEBUG\DUMP2.EXE!`|O nome do caminho completo do módulo que contém a chamada de função.|
@@ -635,7 +635,7 @@ Para usar essa função com êxito:
 - O arquivo IMAGEHLP. A DLL deve estar no seu caminho. Se você não tiver essa DLL, a função exibirá uma mensagem de erro. Consulte [biblioteca de ajuda de imagem](/windows/win32/Debug/image-help-library) para obter informações sobre o conjunto de funções fornecido pelo imagehlp.
 
 - Os módulos que têm quadros na pilha devem incluir informações de depuração. Se eles não contiverem informações de depuração, a função ainda irá gerar um rastreamento de pilha, mas o rastreamento será menos detalhado.
-  ### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+  ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -647,7 +647,7 @@ Habilita e desabilita o despejo de vazamento de memória no destruidor AFX_DEBUG
 BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bDump*<br/>
 no VERDADEIRO indica que o despejo de vazamento de memória está habilitado; FALSO indica que o despejo de vazamento de memória está desabilitado.
@@ -665,7 +665,7 @@ Se seu aplicativo carregar outra biblioteca antes da biblioteca do MFC, algumas 
 > [!NOTE]
 >  Se você usar esse método para desativar o despejo de vazamento de memória, não receberá relatórios de vazamentos de memória válidos em seu aplicativo. Você só deve usar esse método se tiver certeza de que o relatório de vazamento de memória contém vazamentos de memória falso.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -677,7 +677,7 @@ O rastreamento de memória de diagnóstico normalmente é habilitado na versão 
 BOOL AfxEnableMemoryTracking(BOOL bTrack);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bTrack*<br/>
 Definir esse valor como TRUE ativa o controle de memória; FALSE desativa-o.
@@ -695,11 +695,11 @@ Para obter mais informações sobre `AfxEnableMemoryTracking`, consulte [DEBUGGI
 > [!NOTE]
 >  Essa função funciona apenas na versão de depuração do MFC.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_Utilities#24](../../mfc/codesnippet/cpp/diagnostic-services_12.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -714,7 +714,7 @@ BOOL AfxIsMemoryBlock(
     LONG* plRequestNumber = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *p*<br/>
 Aponta para o bloco de memória a ser testado.
@@ -733,11 +733,11 @@ Diferente de zero se o bloco de memória estiver alocado no momento e o comprime
 
 Ele também verifica o tamanho especificado em relação ao tamanho alocado original. Se a função retornar zero, o número de sequência de alocação será retornado em *plRequestNumber*. Esse número representa a ordem na qual o bloco foi alocado em relação a todas as outras **novas** alocações.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_Utilities#27](../../mfc/codesnippet/cpp/diagnostic-services_13.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -752,7 +752,7 @@ BOOL AfxIsValidAddress(
     BOOL bReadWrite = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *LP*<br/>
 Aponta para o endereço de memória a ser testado.
@@ -773,11 +773,11 @@ Em compilações não depuradas, é diferente de zero se *LP* não for NULL; cas
 
 O endereço não está restrito a blocos alocados por **novo**.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_Utilities#28](../../mfc/codesnippet/cpp/diagnostic-services_14.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -791,7 +791,7 @@ BOOL  AfxIsValidString(
     int nLength = -1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpsz*<br/>
 O ponteiro a ser testado.
@@ -805,11 +805,11 @@ Em compilações de depuração, diferente de zero se o ponteiro especificado ap
 
 Em compilações não depuradas, diferente de zero se *lpsz* não for nulo; caso contrário, 0.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_Utilities#29](../../mfc/codesnippet/cpp/diagnostic-services_15.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -821,7 +821,7 @@ Define um gancho que habilita a chamada da função especificada antes de cada b
 AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pfnAllocHook*<br/>
 Especifica o nome da função a ser chamada. Consulte os comentários para o protótipo de uma função de alocação.
@@ -847,7 +847,7 @@ O número de sequência da alocação de memória.
 
 Observe que a Convenção de chamada AFXAPI implica que o receptor deve remover os parâmetros da pilha.
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -862,7 +862,7 @@ AFXAPI AfxDoForAllClasses(
     void* pContext);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *PFN*<br/>
 Aponta para uma função de iteração a ser chamada para cada classe. Os argumentos de função são um ponteiro para um objeto `CRuntimeClass` e um ponteiro void para dados adicionais que o chamador fornece para a função.
@@ -877,13 +877,13 @@ As classes derivadas de `CObject`serializáveis são classes derivadas usando a 
 > [!NOTE]
 >  Essa função funciona apenas na versão de depuração do MFC.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCollections#113](../../mfc/codesnippet/cpp/diagnostic-services_16.cpp)]
 
 [!code-cpp[NVC_MFCCollections#114](../../mfc/codesnippet/cpp/diagnostic-services_17.cpp)]
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -897,7 +897,7 @@ void AfxDoForAllObjects(
     void* pContext);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *PFN*<br/>
 Aponta para uma função de iteração a ser executada para cada objeto. Os argumentos da função são um ponteiro para um `CObject` e um ponteiro void para dados adicionais que o chamador fornece para a função.
@@ -912,13 +912,13 @@ Os objetos Stack, global ou Embedded não são enumerados. O ponteiro passado pa
 > [!NOTE]
 >  Essa função funciona apenas na versão de depuração do MFC.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCCollections#115](../../mfc/codesnippet/cpp/diagnostic-services_18.cpp)]
 
 [!code-cpp[NVC_MFCCollections#116](../../mfc/codesnippet/cpp/diagnostic-services_19.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Macros e globais](mfc-macros-and-globals.md)<br/>
 [CObject::D UMP](cobject-class.md#dump)

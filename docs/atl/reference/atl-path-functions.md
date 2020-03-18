@@ -42,11 +42,11 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
 ms.openlocfilehash: 76efbb0bd43b800f186eac1afa168fc2a0c939f6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865011"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418184"
 ---
 # <a name="atl-path-functions"></a>Funções de caminho da ATL
 
@@ -66,7 +66,7 @@ A ATL fornece a classe ATLPath para manipular caminhos na forma de [CPathT](cpat
 |`CPathA`|Uma especialização de [CPathT](cpatht-class.md) usando `CStringA`.|
 |`CPathW`|Uma especialização de [CPathT](cpatht-class.md) usando `CStringW`.|
 
-### <a name="functions"></a>{1&gt;Funções&lt;1}
+### <a name="functions"></a>Funções
 
 |||
 |-|-|
@@ -107,7 +107,7 @@ A ATL fornece a classe ATLPath para manipular caminhos na forma de [CPathT](cpat
 |[ATLPath::StripToRoot](#striptoroot)|Essa função é um wrapper sobrecarregado para [PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw).|
 |[ATLPath::UnquoteSpaces](#unquotespaces)|Essa função é um wrapper sobrecarregado para [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw).|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlpath. h
 

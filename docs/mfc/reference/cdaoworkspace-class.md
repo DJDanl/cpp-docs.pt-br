@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883858"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420487"
 ---
 # <a name="cdaoworkspace-class"></a>Classe CDaoWorkspace
 
@@ -83,13 +83,13 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|Constrói um objeto de espaço de trabalho. Depois, chame `Create` ou `Open`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDaoWorkspace:: Append](#append)|Anexa um espaço de trabalho recém-criado à coleção de espaços de trabalho do mecanismo de banco de dados.|
 |[CDaoWorkspace::BeginTrans](#begintrans)|Inicia uma nova transação, que se aplica a todos os bancos de dados abertos no espaço de trabalho.|
@@ -120,7 +120,7 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CDaoWorkspace::m_pDAOWorkspace](#m_pdaoworkspace)|Aponta para o objeto de espaço de trabalho DAO subjacente.|
 
@@ -131,7 +131,7 @@ Na maioria dos casos, você não precisará de vários espaços de trabalho, e n
 > [!NOTE]
 >  As classes de banco de dados DAO são diferentes das classes de banco de dados MFC baseadas em ODBC (Open Database Connectivity). Todos os nomes de classe de banco de dados DAO têm um prefixo "CDao". Em geral, as classes do MFC baseadas no DAO são mais compatíveis do que as classes do MFC baseadas no ODBC. As classes baseadas em DAO acessam dados por meio do mecanismo de banco de dados Microsoft Jet, incluindo drivers ODBC. Eles também oferecem suporte a operações DDL (linguagem de definição de dados), como a criação de bancos de dado e a adição de tabelas e campos por meio das classes, sem precisar chamar o DAO diretamente.
 
-## <a name="capabilities"></a>{1&gt;Capabilities&lt;1}
+## <a name="capabilities"></a>Funcionalidades
 
 A classe `CDaoWorkspace` fornece o seguinte:
 
@@ -165,7 +165,7 @@ Abrir explicitamente o espaço de trabalho padrão ou abrir um espaço de trabal
 
 Encerre uma sessão de espaço de trabalho fechando o espaço de trabalho com a função de membro [fechar](#close) . `Close` fecha todos os bancos de dados que você não fechou anteriormente, revertendo todas as transações não confirmadas.
 
-## <a name="transactions"></a>Transações
+## <a name="transactions"></a>Transactions
 
 O DAO gerencia transações no nível do espaço de trabalho; Portanto, as transações em um espaço de trabalho com vários bancos de dados abertos se aplicam a todos os bancos de dados. Por exemplo, se dois bancos de dados tiverem atualizações não confirmadas e você chamar o [CommitTrans](#committrans), todas as atualizações serão confirmadas. Se você quiser limitar as transações a um único banco de dados, precisará de um objeto espaço de trabalho separado para ele.
 
@@ -189,7 +189,7 @@ Para obter informações sobre como chamar o DAO diretamente e sobre a seguranç
 
 `CDaoWorkspace`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFXDAO. h
 
@@ -307,7 +307,7 @@ static void PASCAL CompactDatabase(
     LPCTSTR lpszPassword);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSrcName*<br/>
 O nome de um banco de dados existente e fechado. Pode ser um caminho completo e um nome de arquivo, como "C:\\\MYDB. MDB ". Se o nome do arquivo tiver uma extensão, você deverá especificá-la. Se sua rede der suporte à UNC (Convenção de nomenclatura uniforme), você também poderá especificar um caminho de rede, como "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB ". (As barras invertidas duplas são necessárias nas cadeias de caracteres de caminho C++ porque "\\" é o caractere de escape.)
@@ -319,7 +319,7 @@ O caminho completo do banco de dados compactado que você está criando. Você t
 Uma senha, usada quando você deseja compactar um banco de dados protegido por senha. Observe que, se você usar a versão do `CompactDatabase` que usa uma senha, deverá fornecer todos os parâmetros. Além disso, como esse é um parâmetro de conexão, ele requer formatação especial, da seguinte maneira:; PWD = *lpszPassword*. Por exemplo:; PWD = "feliz". (O ponto e vírgula à esquerda é necessário.)
 
 *lpszLocale*<br/>
-Uma expressão de cadeia de caracteres usada para especificar a ordem de agrupamento para criar *lpszDestName*. Se você omitir esse argumento aceitando o valor padrão de `dbLangGeneral` (veja abaixo), a localidade do novo banco de dados será a mesma do banco de dados antigo. Os possíveis valores são:
+Uma expressão de cadeia de caracteres usada para especificar a ordem de agrupamento para criar *lpszDestName*. Se você omitir esse argumento aceitando o valor padrão de `dbLangGeneral` (veja abaixo), a localidade do novo banco de dados será a mesma do banco de dados antigo. Os valores possíveis são:
 
 - `dbLangGeneral` inglês, alemão, francês, Português, italiano e espanhol moderno
 
@@ -394,7 +394,7 @@ virtual void Create(
     LPCTSTR lpszPassword);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 Uma cadeia de caracteres com até 14 caracteres que nomeia exclusivamente o novo objeto de espaço de trabalho. Você deve fornecer um nome. Para obter informações relacionadas, consulte o tópico "propriedade de nome" na ajuda do DAO.
@@ -449,7 +449,7 @@ void GetDatabaseInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 O índice de base zero do objeto de banco de dados na coleção Databases do espaço de trabalho, para pesquisa por índice.
@@ -619,7 +619,7 @@ void GetWorkspaceInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 O índice de base zero do objeto de banco de dados na coleção de espaços de trabalho, para pesquisa por índice.
@@ -651,7 +651,7 @@ Chame `Idle` para fornecer ao mecanismo de banco de dados a oportunidade de exec
 static void PASCAL Idle(int nAction = dbFreeLocks);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nAction*<br/>
 Uma ação a ser tomada durante o processamento de ociosidade. Atualmente, a única ação válida é `dbFreeLocks`.
@@ -703,7 +703,7 @@ Abre explicitamente um objeto de espaço de trabalho associado ao espaço de tra
 virtual void Open(LPCTSTR lpszName = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 O nome do objeto de espaço de trabalho DAO a ser aberto — uma cadeia de caracteres com até 14 caracteres que nomeia exclusivamente o espaço de trabalho. Aceite o valor padrão NULL para abrir explicitamente o espaço de trabalho padrão. Para obter os requisitos de nomenclatura, consulte o parâmetro *lpszName* para [Create](#create). Para obter informações relacionadas, consulte o tópico "propriedade de nome" na ajuda do DAO.
@@ -734,7 +734,7 @@ Chame essa função de membro se precisar tentar reparar um banco de dados corro
 static void PASCAL RepairDatabase(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 O caminho e o nome de arquivo de um banco de dados do mecanismo do Microsoft Jet existente. Se você omitir o caminho, somente o diretório atual será pesquisado. Se o seu sistema der suporte à UNC (Convenção de nomenclatura uniforme), você também poderá especificar um caminho de rede, como: "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB ". (As barras invertidas duplas são necessárias na cadeia de caracteres do caminho porque C++ "\\" é o caractere de escape.)
@@ -776,7 +776,7 @@ Chame essa função de membro para definir a senha padrão que o mecanismo de ba
 static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszPassword*<br/>
 A senha padrão. Uma senha pode ter até 14 caracteres e pode conter qualquer caractere, exceto o ASCII 0 (nulo). As senhas diferenciam maiúsculas de minúsculas.
@@ -805,7 +805,7 @@ Chame essa função de membro para definir o nome de usuário padrão que o meca
 static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszDefaultUser*<br/>
 O nome de usuário padrão. Um nome de usuário pode ter de 1-20 A caracteres de comprimento e incluir caracteres alfabéticos, caracteres acentuados, números, espaços e símbolos, exceto para: "(aspas),/(barra invertida), \ (barra invertida), \[ \] (colchetes) &#124; ,: (dois-pontos), (ponto-e-vírgula), \< (sinal de igual), > (sinal de maior que), + (sinal de adição) (ponto e vírgula),, (vírgula), (ponto de interrogação), \* (asterisco), espaços à esquerda e caracteres de controle (ASCII 00 a ASCII 31). Para obter informações relacionadas, consulte o tópico "propriedade de nome de usuário" na ajuda do DAO.
@@ -834,7 +834,7 @@ Chame essa função de membro para especificar o local das configurações do re
 static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszRegistrySubkey*<br/>
 Uma cadeia de caracteres que contém o nome de uma subchave do registro do Windows para o local das configurações ou dos parâmetros do mecanismo de banco de dados do Microsoft Jet necessários para bancos dos dados ISAM instaláveis.
@@ -856,7 +856,7 @@ Chame essa função de membro para definir o valor da propriedade IsolateODBCTra
 void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bIsolateODBCTrans*<br/>
 Passe TRUE se desejar começar a isolar as transações ODBC. Passe FALSE se desejar parar de isolar as transações ODBC.
@@ -875,7 +875,7 @@ Chame essa função de membro para definir o valor da Propriedade do DAO LoginTi
 static void PASCAL SetLoginTimeout(short nSeconds);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nSeconds*<br/>
 O número de segundos antes de ocorrer um erro quando você tenta fazer logon em um banco de dados ODBC.
@@ -888,7 +888,7 @@ Quando você está tentando fazer logon em um banco de dados ODBC, como Microsof
 
 Para obter informações relacionadas, consulte o tópico "Propriedade LoginTimeout" na ajuda do DAO.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

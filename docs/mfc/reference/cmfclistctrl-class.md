@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
 ms.openlocfilehash: 599a00af28ee5b8effbabbe5b334022ceb49f91a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869966"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420312"
 ---
 # <a name="cmfclistctrl-class"></a>Classe CMFCListCtrl
 
@@ -49,7 +49,7 @@ class CMFCListCtrl : public CListCtrl
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CMFCListCtrl::EnableMarkSortedColumn](#enablemarksortedcolumn)|Habilita a capacidade de marcar uma coluna classificada com uma cor de plano de fundo diferente.|
 |[CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)|Habilita o modo de classificação múltipla.|
@@ -67,7 +67,7 @@ class CMFCListCtrl : public CListCtrl
 
 o `CMFCListCtrl` oferece dois aprimoramentos para a classe de [classe CListCtrl](../../mfc/reference/clistctrl-class.md) . Primeiro, ele indica que a classificação de coluna é uma opção disponível ao desenhar automaticamente uma seta de classificação no cabeçalho. Em segundo lugar, ele dá suporte à classificação de dados em várias colunas ao mesmo tempo.
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra como usar vários métodos na classe `CMFCListCtrl`. O exemplo mostra como criar um controle de lista, inserir colunas, inserir itens, definir o texto de um item e definir a fonte do controle de lista. Este trecho de código faz parte do [exemplo de demonstração do Visual Studio](../../overview/visual-cpp-samples.md).
 
@@ -86,7 +86,7 @@ O exemplo a seguir demonstra como usar vários métodos na classe `CMFCListCtrl`
 
 [CMFCListCtrl](../../mfc/reference/cmfclistctrl-class.md)
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxlistctrl. h
 
@@ -100,7 +100,7 @@ void EnableMarkSortedColumn(
     BOOL bRedraw = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bMark*<br/>
 no Um parâmetro booliano que determina se uma cor de plano de fundo diferente deve ser habilitada.
@@ -120,7 +120,7 @@ Permite classificar as linhas de dados no controle de lista por várias colunas.
 void EnableMultipleSort(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 no Um booliano que especifica se o modo de classificação de vários colunas deve ser habilitado.
@@ -172,7 +172,7 @@ virtual int OnCompareItems(
     int iColumn);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lParam1*<br/>
 no O primeiro item a ser comparado.
@@ -201,7 +201,7 @@ virtual COLORREF OnGetCellBkColor(
     int nColumn);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nRow*<br/>
 no A linha da célula em questão.
@@ -228,7 +228,7 @@ virtual HFONT OnGetCellFont(
     DWORD dwData = 0);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nRow*<br/>
 no A linha da célula em questão.
@@ -257,7 +257,7 @@ virtual COLORREF OnGetCellTextColor(
     int nColumn);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nRow*<br/>
 no A linha da célula em questão.
@@ -281,7 +281,7 @@ Remove uma coluna de classificação da lista de colunas classificadas.
 void RemoveSortColumn(int iColumn);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *iColumn*<br/>
 no A coluna a ser removida.
@@ -301,7 +301,7 @@ void SetSortColumn(
     BOOL bAdd = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *iColumn*<br/>
 no A coluna a ser classificada.
@@ -327,7 +327,7 @@ virtual void Sort(
     BOOL bAdd = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *iColumn*<br/>
 no A coluna a ser classificada.
@@ -338,7 +338,7 @@ no Um booliano que especifica a ordem de classificação.
 *bAdicionar*<br/>
 no Um booliano que especifica se esse método adiciona a coluna indicada por *IColumn* à lista de colunas de classificação.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

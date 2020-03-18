@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
 ms.openlocfilehash: 2f4a394e29be135cac95edf6f504d8b066f53414
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866292"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420368"
 ---
 # <a name="cftpfilefind-class"></a>Classe CFtpFileFind
 
@@ -35,13 +35,13 @@ class CFtpFileFind : public CFileFind
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CFtpFileFind::CFtpFileFind](#cftpfilefind)|Constrói um objeto `CFtpFileFind`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CFtpFileFind:: FindFile](#findfile)|Localiza um arquivo em um servidor FTP.|
 |[CFtpFileFind::FindNextFile](#findnextfile)|Continua uma pesquisa de arquivo de uma chamada anterior para [FindFile](#findfile).|
@@ -55,7 +55,7 @@ Outras classes do MFC projetadas para a Internet e o arquivo local pesquisados i
 
 Para obter mais informações sobre como usar `CFtpFileFind` e outras classes WinInet, consulte o artigo [programação de Internet com o WinInet](../../mfc/win32-internet-extensions-wininet.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 O código a seguir demonstra como enumerar todos os arquivos no diretório atual do servidor FTP.
 
@@ -69,7 +69,7 @@ O código a seguir demonstra como enumerar todos os arquivos no diretório atual
 
 `CFtpFileFind`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFXINET. h
 
@@ -83,7 +83,7 @@ explicit CFtpFileFind(
     DWORD_PTR dwContext = 1);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pConnection*<br/>
 Um ponteiro para um objeto `CFtpConnection`. Você pode obter uma conexão FTP chamando [CInternetSession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection).
@@ -95,7 +95,7 @@ O identificador de contexto para o objeto `CFtpFileFind`. Consulte **comentário
 
 O valor padrão de *dwContext* é enviado pelo MFC para o objeto `CFtpFileFind` do objeto [CInternetSession](../../mfc/reference/cinternetsession-class.md) que criou o objeto `CFtpFileFind`. Você pode substituir o padrão para definir o identificador de contexto como um valor de sua escolha. O identificador de contexto é retornado para [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para fornecer o status no objeto com o qual ele é identificado. Consulte o artigo [primeiras etapas da Internet: WinInet](../../mfc/wininet-basics.md) para obter mais informações sobre o identificador de contexto.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo na classe visão geral neste tópico.
 
@@ -109,7 +109,7 @@ virtual BOOL FindFile(
     DWORD dwFlags = INTERNET_FLAG_RELOAD);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pstrName*<br/>
 Um ponteiro para uma cadeia de caracteres que contém o nome do arquivo a ser localizado. Se for NULL, a chamada executará uma pesquisa curinga (*).
@@ -135,7 +135,7 @@ Diferente de zero, se for bem-sucedido; caso contrário, 0. Para obter informaç
 
 Depois de chamar `FindFile` para recuperar o primeiro arquivo FTP, você pode chamar [FindNextFile](#findnextfile) para recuperar arquivos FTP subsequentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo anterior neste tópico.
 
@@ -157,7 +157,7 @@ Você deve chamar essa função pelo menos uma vez antes de chamar qualquer fun�
 
 `FindNextFile` encapsula a função [FindNextFile](/windows/win32/api/fileapi/nf-fileapi-findnextfilew)do Win32.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo anterior neste tópico.
 
@@ -177,7 +177,7 @@ O arquivo e o caminho do localizador de recursos universal (URL).
 
 `GetFileURL` é semelhante à função de membro [CFileFind:: GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath), exceto pelo fato de que ela retorna a URL no formato `ftp://moose/dir/file.txt`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CFileFind](../../mfc/reference/cfilefind-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

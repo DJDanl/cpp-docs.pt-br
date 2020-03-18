@@ -193,11 +193,11 @@ helpviewer_keywords:
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
 ms.openlocfilehash: e65ad8b5d8b14ff747adc55b517d9e695d9cbb66
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855422"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420998"
 ---
 # <a name="cwinapp-class"></a>Classe CWinApp
 
@@ -217,7 +217,7 @@ class CWinApp : public CWinThread
 |----------|-----------------|
 |[CWinApp:: CWinApp](#cwinapp)|Constrói um objeto `CWinApp`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|DESCRIÇÃO|
 |----------|-----------------|
@@ -285,7 +285,7 @@ class CWinApp : public CWinThread
 |[CWinApp:: WriteProfileInt](#writeprofileint)|Grava um inteiro em uma entrada no aplicativo. Arquivo INI.|
 |[CWinApp:: WriteProfileString](#writeprofilestring)|Grava uma cadeia de caracteres em uma entrada no aplicativo. Arquivo INI.|
 
-### <a name="protected-methods"></a>Métodos Protegidos
+### <a name="protected-methods"></a>Métodos protegidos
 
 |Nome|DESCRIÇÃO|
 |----------|-----------------|
@@ -381,7 +381,7 @@ Chame essa função de membro para adicionar um modelo de documento à lista de 
 void AddDocTemplate(CDocTemplate* pTemplate);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pTemplate*<br/>
 Um ponteiro para o `CDocTemplate` a ser adicionado.
@@ -402,7 +402,7 @@ Chame essa função de membro para adicionar *lpszPathName* à lista de arquivos
 virtual void AddToRecentFileList(LPCTSTR lpszPathName);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszPathName*<br/>
 O caminho do arquivo.
@@ -425,7 +425,7 @@ Chamado pelo Framework quando o aplicativo é encerrado inesperadamente.
 virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpvParam*<br/>
 no Reservado para uso futuro.
@@ -450,7 +450,7 @@ Chame essa função de membro para fechar todos os documentos abertos antes de s
 void CloseAllDocuments(BOOL bEndSession);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEndSession*<br/>
 Especifica se a sessão do Windows está sendo finalizada ou não. Será verdadeiro se a sessão estiver sendo encerrada; caso contrário, FALSE.
@@ -467,7 +467,7 @@ Chame essa função de membro para criar um DC (contexto de dispositivo de impre
 BOOL CreatePrinterDC(CDC& dc);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dc*<br/>
 Uma referência a um contexto de dispositivo de impressora.
@@ -490,7 +490,7 @@ Constrói um objeto `CWinApp` e passa *lpszAppName* para ser armazenado como o n
 CWinApp(LPCTSTR lpszAppName = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszAppName*<br/>
 Uma cadeia de caracteres terminada em nulo que contém o nome do aplicativo que o Windows usa. Se esse argumento não for fornecido ou for nulo, `CWinApp` usará a cadeia de caracteres de recurso AFX_IDS_APP_TITLE ou o nome do arquivo executável.
@@ -514,7 +514,7 @@ LONG DelRegTree(
     CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hParentKey*<br/>
 Identificador para uma chave do registro.
@@ -544,7 +544,7 @@ virtual int DoMessageBox(
     UINT nIDPrompt);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszPrompt*<br/>
 Endereço do texto na caixa de mensagem.
@@ -573,7 +573,7 @@ Essa função de membro é chamada pelo Framework para implementar [CWaitCursor]
 virtual void DoWaitCursor(int nCode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nCode*<br/>
 Se esse parâmetro for 1, um cursor de espera será exibido. Se for 0, o cursor de espera será restaurado sem incrementar a contagem de referência. Se-1, o cursor de espera terminará.
@@ -602,7 +602,7 @@ BOOL EnableD2DSupport(
     DWRITE_FACTORY_TYPE writeFactoryType = DWRITE_FACTORY_TYPE_SHARED);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *d2dFactoryType*<br/>
 O modelo de Threading da fábrica D2D e os recursos que ele cria.
@@ -648,7 +648,7 @@ Habilita a interação da barra de tarefas.
 BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 Especifica se a interação com a barra de tarefas do Windows 7 deve ser habilitada (TRUE) ou desabilitada (FALSE).
@@ -755,7 +755,7 @@ Retorna a chave para HKEY_CURRENT_USER\\"software" \RegistryKey\ProfileName.
 HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pTM*<br/>
 Ponteiro para um objeto `CAtlTransactionManager`.
@@ -822,7 +822,7 @@ Obtém o modelo de documento identificado pelo *PDV*e, em seguida, define *pos* 
 CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pos*<br/>
 Uma referência a um valor de posição retornado por uma chamada anterior para `GetNextDocTemplate` ou [GetFirstDocTemplatePosition](#getfirstdoctemplateposition). O valor é atualizado para a próxima posição por essa chamada.
@@ -847,7 +847,7 @@ Chame essa função de membro para preparar um contexto de dispositivo de impres
 BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pPrintDlg*<br/>
 Um ponteiro para uma estrutura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) .
@@ -876,7 +876,7 @@ BOOL GetProfileBinary(
     UINT* pBytes);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSection*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que especifica a seção que contém a entrada.
@@ -921,7 +921,7 @@ UINT GetProfileInt(
     int nDefault);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSection*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que especifica a seção que contém a entrada.
@@ -962,7 +962,7 @@ CString GetProfileString(
     LPCTSTR lpszDefault = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSection*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que especifica a seção que contém a entrada.
@@ -998,7 +998,7 @@ HKEY GetSectionKey(
     CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSection*<br/>
 O nome da chave a ser obtida.
@@ -1030,7 +1030,7 @@ virtual void HtmlHelp(
     UINT nCmd = 0x000F);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwData*<br/>
 Especifica dados adicionais. O valor usado depende do valor do parâmetro *nCmd* . O padrão é `0x000F` que significa [HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command).
@@ -1093,7 +1093,7 @@ Carrega o recurso de cursor chamado por *lpszResourceName* ou especificado pelo 
 HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nIDResource) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszResourceName*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que contém o nome do recurso de cursor. Você pode usar um `CString` para esse argumento.
@@ -1123,7 +1123,7 @@ Carrega o recurso de ícone nomeado por *lpszResourceName* ou especificado pelo 
 HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszResourceName*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que contém o nome do recurso de ícone. Você também pode usar um `CString` para esse argumento.
@@ -1152,7 +1152,7 @@ Carrega o recurso de cursor predefinido do Windows especificado por *nIDCursor*.
 HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDCursor*<br/>
 Um identificador de constante de manifesto **OCR_** que especifica um cursor do Windows predefinido. Você deve ter `#define OEMRESOURCE` antes de `#include \<afxwin.h>` para obter acesso às constantes do **OCR_** no Windows. T.
@@ -1179,7 +1179,7 @@ Carrega o recurso de ícone predefinido do Windows especificado por *nIDIcon*.
 HICON LoadOEMIcon(UINT nIDIcon) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIDIcon*<br/>
 Um identificador de constante de manifesto **OIC_** que especifica um ícone predefinido do Windows. Você deve ter `#define OEMRESOURCE` antes de `#include \<afxwin.h>` para acessar as constantes do **OIC_** no Windows. T.
@@ -1200,7 +1200,7 @@ Carrega o recurso de cursor predefinido do Windows que o *lpszCursorName* especi
 HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszCursorName*<br/>
 Um identificador de constante de manifesto **IDC_** que especifica um cursor do Windows predefinido. Esses identificadores são definidos no WINDOWS. T. A lista a seguir mostra os possíveis valores predefinidos e significados para *lpszCursorName*:
@@ -1249,7 +1249,7 @@ Carrega o recurso de ícone predefinido do Windows que o *lpszIconName* especifi
 HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszIconName*<br/>
 Um identificador de constante de manifesto que especifica um ícone predefinido do Windows. Esses identificadores são definidos no WINDOWS. T. Para obter uma lista dos possíveis valores predefinidos e suas descrições, consulte o parâmetro *lpIconName* em [loadicon](/windows/win32/api/winuser/nf-winuser-loadiconw) na SDK do Windows.
@@ -1270,7 +1270,7 @@ Chame essa função de membro de dentro da função de membro [InitInstance](#in
 void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nMaxMRU*<br/>
 O número de arquivos usados recentemente a serem controlados.
@@ -1546,7 +1546,7 @@ Chamado pelo Framework quando a janela do quadro principal recebe uma mensagem d
 virtual BOOL OnDDECommand(LPTSTR lpszCommand);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszCommand*<br/>
 Aponta para uma cadeia de caracteres de comando DDE recebida pelo aplicativo.
@@ -1685,7 +1685,7 @@ Substitua essa função de membro para executar o processamento em tempo ocioso.
 virtual BOOL OnIdle(LONG lCount);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lCount*<br/>
 Um contador é incrementado A cada vez que `OnIdle` é chamado quando a fila de mensagens do aplicativo está vazia. Essa contagem é redefinida como 0 sempre que uma nova mensagem é processada. Você pode usar o parâmetro *lCount* para determinar o período de tempo relativo que o aplicativo esteve ocioso sem processar uma mensagem.
@@ -1733,7 +1733,7 @@ virtual CDocument* OpenDocumentFile(
     BOOL bAddToMRU = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFileName*<br/>
 no O nome do arquivo a ser aberto.
@@ -1761,7 +1761,7 @@ Chame essa função de membro para analisar a linha de comando e enviar os parâ
 void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rCmdInfo*<br/>
 Uma referência a um objeto [CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) .
@@ -1790,7 +1790,7 @@ Substitua essa função para filtrar as mensagens de janela antes que elas sejam
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMsg*<br/>
 Um ponteiro para uma estrutura de [msg](/windows/win32/api/winuser/ns-winuser-msg) que contém a mensagem a ser processada.
@@ -1809,9 +1809,9 @@ virtual BOOL ProcessMessageFilter(
     LPMSG lpMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*código*<br/>
+*code*<br/>
 Especifica um código de gancho. Essa função de membro usa o código para determinar como processar *lpMsg.*
 
 *lpMsg*<br/>
@@ -1835,7 +1835,7 @@ Essa função de membro é chamada por [InitInstance](#initinstance) para aceita
 BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *rCmdInfo*<br/>
 Uma referência a um objeto [CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) .
@@ -1880,7 +1880,7 @@ virtual LRESULT ProcessWndProcException(
     const MSG* pMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *e*<br/>
 Um ponteiro para uma exceção não percebida.
@@ -1924,7 +1924,7 @@ Chame essa função de membro para registrar todos os tipos de documento do seu 
 void RegisterShellFileTypes(BOOL bCompat = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bCompat*<br/>
 no VERDADEIRO adiciona entradas de registro para comandos do Shell imprimir e imprimir no, permitindo que um usuário imprima arquivos diretamente do Shell ou arrastando o arquivo para um objeto de impressora. Ele também adiciona uma tecla DefaultIcon. Por padrão, esse parâmetro é FALSE para compatibilidade com versões anteriores.
@@ -1958,7 +1958,7 @@ virtual HRESULT RegisterWithRestartManager(
     DWORD dwCallbackFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 |||
 |-|-|
@@ -2115,7 +2115,7 @@ void SelectPrinter(
     BOOL bFreeOld = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hDevNames*<br/>
 Um identificador para um [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)trutura que identifica o driver, o dispositivo e os nomes de porta de saída de uma impressora específica.
@@ -2138,7 +2138,7 @@ Define o tipo de ajuda do aplicativo.
 void SetHelpMode(AFX_HELP_TYPE eHelpType);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *eHelpType*<br/>
 Especifica o tipo de ajuda a ser usado. Consulte [CWinApp:: m_eHelpType](#m_ehelptype) para obter mais informações.
@@ -2158,7 +2158,7 @@ void SetRegistryKey(LPCTSTR lpszRegistryKey);
 void SetRegistryKey(UINT nIDRegistryKey);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszRegistryKey*<br/>
 Ponteiro para uma cadeia de caracteres que contém o nome da chave.
@@ -2254,7 +2254,7 @@ virtual void WinHelp(
     UINT nCmd = HELP_CONTEXT);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwData*<br/>
 Especifica dados adicionais. O valor usado depende do valor do parâmetro *nCmd* .
@@ -2284,7 +2284,7 @@ BOOL WriteProfileBinary(
     UINT nBytes);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSection*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que especifica a seção que contém a entrada. Se a seção não existir, ela será criada. O nome da seção diferencia maiúsculas de minúsculas; a cadeia de caracteres pode ser qualquer combinação de letras maiúsculas e minúsculas.
@@ -2321,7 +2321,7 @@ BOOL WriteProfileInt(
     int nValue);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSection*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que especifica a seção que contém a entrada. Se a seção não existir, ela será criada. O nome da seção diferencia maiúsculas de minúsculas; a cadeia de caracteres pode ser qualquer combinação de letras maiúsculas e minúsculas.
@@ -2355,7 +2355,7 @@ BOOL WriteProfileString(
     LPCTSTR lpszValue);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszSection*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que especifica a seção que contém a entrada. Se a seção não existir, ela será criada. O nome da seção diferencia maiúsculas de minúsculas; a cadeia de caracteres pode ser qualquer combinação de letras maiúsculas e minúsculas.
@@ -2384,14 +2384,14 @@ Define explicitamente a ID do modelo de usuário do aplicativo para o aplicativo
 void SetAppID(LPCTSTR lpcszAppID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpcszAppID*<br/>
 Especifica a ID do modelo de usuário do aplicativo.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Classe CWinThread](../../mfc/reference/cwinthread-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

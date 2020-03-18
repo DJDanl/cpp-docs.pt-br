@@ -22,11 +22,11 @@ helpviewer_keywords:
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
 ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856451"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419997"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -138,21 +138,21 @@ cout.imbue(loc);
 
 As regras de formatação numérica para inserções subsequentes em `cout` permanecem iguais as da localidade C, mesmo que a localidade global forneça regras que se modificam para inserção de valores monetários e de data.
 
-### <a name="constructors"></a>{1&gt;Construtores&lt;1}
+### <a name="constructors"></a>Construtores
 
-|Construtor|Descrição|
+|Construtor|DESCRIÇÃO|
 |-|-|
 |[locale](#locale)|Cria uma localidade, ou uma cópia de uma localidade, ou uma cópia da localidade em que uma faceta ou uma categoria foi substituída por uma faceta ou categoria de outra localidade.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome de tipo|Descrição|
+|Nome do tipo|DESCRIÇÃO|
 |-|-|
 |[category](#category)|Um tipo de inteiro que fornece valores de bitmask para denotar famílias padrão de facetas.|
 
 ### <a name="member-functions"></a>Funções de membro
 
-|Função de membro|Descrição|
+|Função de membro|DESCRIÇÃO|
 |-|-|
 |[combine](#combine)|Insere uma faceta de uma localidade especificada em uma localidade de destino.|
 |[name](#name)|Retorna o nome da localidade armazenado.|
@@ -161,12 +161,12 @@ As regras de formatação numérica para inserções subsequentes em `cout` perm
 
 |||
 |-|-|
-|[classic](#classic)|A função membro estática retorna um objeto de localidade que representa a localidade C clássica.|
+|[clássico](#classic)|A função membro estática retorna um objeto de localidade que representa a localidade C clássica.|
 |[global](#global)|Redefine o local padrão do programa.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|Operador|DESCRIÇÃO|
 |-|-|
 |[operator=](#op_eq)|Atribui uma localidade.|
 |[operator!=](#op_neq)|Testa a desigualdade de duas localidades.|
@@ -175,12 +175,12 @@ As regras de formatação numérica para inserções subsequentes em `cout` perm
 
 ### <a name="classes"></a>Classes
 
-|Classe|Descrição|
+|Classe|DESCRIÇÃO|
 |-|-|
 |[facet](#facet_class)|Uma classe que serve como a classe base para todas as facetas de localidade.|
 |[`id`](#id_class)|A classe do membro fornece uma identificação exclusiva da faceta usada como um índice para procurar facetas em uma localidade.|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** \<localidade >
 
@@ -242,7 +242,7 @@ Uma referência à localidade C.
 
 A localidade C clássica é a localidade ASCII em inglês dos EUA dentro da biblioteca C padrão. É a localidade que é usada implicitamente em programas que não são internacionalizados.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_classic.cpp
@@ -290,7 +290,7 @@ template <class Facet>
 locale combine(const locale& source_locale) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *source_locale*\
 A localidade que contém a faceta a ser inserida na localidade de destino.
@@ -299,7 +299,7 @@ A localidade que contém a faceta a ser inserida na localidade de destino.
 
 A função membro retorna um objeto Locale que substitui ou adiciona a **\*essa** faceta `Facet` listada em *source_locale*.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_combine.cpp
@@ -358,7 +358,7 @@ Redefine a localidade padrão do programa. Essa chamada afeta a localidade globa
 static locale global(const locale& new_default_locale);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *new_default_locale*\
 A localidade a ser usada como localidade padrão pelo programa.
@@ -371,7 +371,7 @@ A localidade anterior antes da redefinição da localidade padrão.
 
 Na inicialização do programa, a localidade global será a mesma que a localidade clássica. A função `global()` chama `setlocale( LC_ALL, loc.name. c_str())` para estabelecer uma localidade correspondente na biblioteca C padrão.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_global.cpp
@@ -435,7 +435,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 ~locale();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *locale_name*\
 Nome de uma localidade.
@@ -472,7 +472,7 @@ Substitui (ou adiciona) à *from_locale* da faceta *new_facet*, se *new_facet* n
 
 Se o nome da localidade *locale_name* for um ponteiro nulo ou for inválido, a função lançará [runtime_error](../standard-library/runtime-error-class.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_locale.cpp
@@ -524,7 +524,7 @@ string name() const;
 
 Uma cadeia de caracteres que fornece o nome da localidade.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_name.cpp
@@ -567,7 +567,7 @@ Testa a desigualdade de duas localidades.
 bool operator!=(const locale& right) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 Uma das localidades que terá sua desigualdade testada.
@@ -580,7 +580,7 @@ Um valor booliano que será **verdadeiro** se as localidades não forem cópias 
 
 Duas localidades são iguais se forem a mesma localidade, se uma for uma cópia do outro, ou se tiverem nomes idênticos.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_op_ne.cpp
@@ -631,7 +631,7 @@ bool operator()(
     const basic_string<CharType, Traits, Allocator>& right) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 A cadeia de caracteres à esquerda.
@@ -661,7 +661,7 @@ return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 
 Isso significa que você pode usar um objeto de localidade como um objeto de função.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_op_compare.cpp
@@ -700,7 +700,7 @@ Testa a igualdade de duas localidades.
 bool operator==(const locale& right) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 Uma das localidades que terá sua igualdade testada.
@@ -713,7 +713,7 @@ Um valor booliano que será **verdadeiro** se as localidades forem cópias da me
 
 Duas localidades são iguais se forem a mesma localidade, se uma for uma cópia do outro, ou se tiverem nomes idênticos.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // locale_op_eq.cpp
@@ -757,7 +757,7 @@ locales loc1 (German_Germany.1252)
 and loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<locale>](../standard-library/locale.md)\
 [Páginas de código](../c-runtime-library/code-pages.md)\

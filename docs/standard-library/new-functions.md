@@ -7,11 +7,11 @@ f1_keywords:
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854921"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419836"
 ---
 # <a name="ltnewgt-functions"></a>Funções &lt;new&gt;
 
@@ -32,7 +32,7 @@ template <class T>
     constexpr T* launder(T* ptr) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *PTR*
 O endereço de um byte na memória que contém um objeto cujo tipo é semelhante a *T*.
@@ -47,7 +47,7 @@ Também conhecido como uma barreira de otimização de ponteiro.
 
 Usado como uma expressão constante quando o valor de seu argumento pode ser usado em uma expressão constante. Um byte de armazenamento pode ser acessado por meio de um valor de ponteiro que aponta para um objeto se dentro do armazenamento ocupado por outro objeto, um objeto com um ponteiro semelhante.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 struct X { const int n; };
@@ -71,7 +71,7 @@ extern const std::nothrow_t nothrow;
 
 O objeto é usado como um argumento de função para corresponder ao tipo de parâmetro [std::nothrow_t](../standard-library/nothrow-t-structure.md).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [operador new](../standard-library/new-operators.md#op_new) e [operador new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) para obter exemplos de como `std::nothrow_t` é usado como um parâmetro de função.
 
@@ -83,7 +83,7 @@ Instala uma função de usuário que deve ser chamada quando o **novo operador**
 new_handler set_new_handler(new_handler Pnew) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *Pnew*
 O `new_handler` a ser instalado.
@@ -96,7 +96,7 @@ O `new_handler` a ser instalado.
 
 A função armazena *Pnew* em um novo ponteiro de [manipulador](../standard-library/new-typedefs.md#new_handler) estático que ele mantém e retorna o valor armazenado anteriormente no ponteiro. O novo manipulador é usado pelo [operador New](../standard-library/new-operators.md#op_new)(**size_t**).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // new_set_new_handler.cpp

@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
 ms.openlocfilehash: a99d8c8022d23f627320b66c3f376be803c9c839
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876042"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420536"
 ---
 # <a name="cbrush-class"></a>Classe CBrush
 
@@ -49,7 +49,7 @@ class CBrush : public CGdiObject
 |----------|-----------------|
 |[CBrush::CBrush](#cbrush)|Constrói um objeto `CBrush`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|DESCRIÇÃO|
 |----------|-----------------|
@@ -99,7 +99,7 @@ CBrush(int nIndex, COLORREF crColor);
 explicit CBrush(CBitmap* pBitmap);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *crColor*<br/>
 Especifica a cor de primeiro plano do pincel como uma cor RGB. Se o pincel estiver hachurado, esse parâmetro especificará a cor da hachura.
@@ -146,7 +146,7 @@ Inicializa um pincel com um estilo, cor e padrão especificados em uma estrutura
 BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpLogBrush*<br/>
 Aponta para uma estrutura [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) que contém informações sobre o pincel.
@@ -179,7 +179,7 @@ BOOL CreateDIBPatternBrush(
     UINT nUsage);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hPackedDIB*<br/>
 Identifica um objeto de memória global que contém um bitmap independente de dispositivo (DIB) empacotado.
@@ -234,7 +234,7 @@ BOOL CreateHatchBrush(
     COLORREF crColor);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Especifica o estilo de hachura do pincel. Pode ser qualquer um dos seguintes valores:
@@ -274,7 +274,7 @@ Inicializa um pincel com um padrão especificado por um bitmap.
 BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pBitmap*<br/>
 Identifica um bitmap.
@@ -307,7 +307,7 @@ Inicializa um pincel com uma cor sólida especificada.
 BOOL CreateSolidBrush(COLORREF crColor);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *crColor*<br/>
 Uma estrutura [COLORREF](/windows/win32/gdi/colorref) que especifica a cor do pincel. A cor especifica um valor RGB e pode ser construída com a macro RGB no WINDOWS. T.
@@ -334,7 +334,7 @@ Inicializa uma cor de pincel.
 BOOL CreateSysColorBrush(int nIndex);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 Especifica um índice de cores. Esse valor corresponde à cor usada para pintar um dos 21 elementos da janela. Consulte [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor) no SDK do Windows para obter uma lista de valores.
@@ -361,7 +361,7 @@ Retorna um ponteiro para um objeto `CBrush` ao receber um identificador para um 
 static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *hBrush*<br/>
 IDENTIFICADOR para um pincel GDI do Windows.
@@ -388,7 +388,7 @@ Chame essa função de membro para recuperar a estrutura de `LOGBRUSH`.
 int GetLogBrush(LOGBRUSH* pLogBrush);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pLogBrush*<br/>
 Aponta para uma estrutura [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) que contém informações sobre o pincel.
@@ -433,7 +433,7 @@ Para obter mais informações sobre como usar objetos gráficos, consulte [objet
 
 [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de PROPDLG do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>

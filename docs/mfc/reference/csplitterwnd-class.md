@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
 ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890948"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421453"
 ---
 # <a name="csplitterwnd-class"></a>Classe CSplitterWnd
 
@@ -93,13 +93,13 @@ class CSplitterWnd : public CWnd
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CSplitterWnd:: CSplitterWnd](#csplitterwnd)|Chamada para construir um objeto de `CSplitterWnd`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CSplitterWnd:: ActivateNext](#activatenext)|Executa o próximo painel ou comando do painel anterior.|
 |[CSplitterWnd:: CanActivateNext](#canactivatenext)|Verifica se o comando próximo painel ou painel anterior é possível no momento.|
@@ -133,7 +133,7 @@ class CSplitterWnd : public CWnd
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CSplitterWnd:: OnDraw](#ondraw)|Chamado pelo Framework para desenhar a janela separadora.|
 |[CSplitterWnd:: OnDrawSplitter](#ondrawsplitter)|Renderiza uma imagem de uma janela de divisão.|
@@ -189,7 +189,7 @@ Para obter mais informações sobre como criar janelas de divisão dinâmica, co
 
 `CSplitterWnd`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxext. h
 
@@ -201,7 +201,7 @@ Chamado pelo Framework para executar o próximo painel ou comando de painel ante
 virtual void ActivateNext(BOOL bPrev = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bPrev*<br/>
 Indica qual janela deve ser ativada. **Verdadeiro** para anterior; **False** para avançar.
@@ -218,7 +218,7 @@ Chamado pelo Framework para verificar se o comando próximo painel ou painel ant
 virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bPrev*<br/>
 Indica qual janela deve ser ativada. **Verdadeiro** para anterior; **False** para avançar.
@@ -246,7 +246,7 @@ virtual BOOL Create(
     UINT nID = AFX_IDW_PANE_FIRST);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParentWnd*<br/>
 A janela do quadro pai da janela do separador.
@@ -289,7 +289,7 @@ A altura mínima inicial da linha e a largura da coluna de uma janela de divisã
 
 Para obter mais informações sobre janelas de divisores dinâmicos, consulte "janelas de divisão" no artigo [vários tipos de documento, exibições e janelas de quadros](../../mfc/multiple-document-types-views-and-frame-windows.md), [Nota técnica 29](../../mfc/tn029-splitter-windows.md)e a visão geral da classe `CSplitterWnd`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCWindowing#125](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_1.cpp)]
 
@@ -303,7 +303,7 @@ virtual BOOL CreateScrollBarCtrl(
     UINT nID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwStyle*<br/>
 Especifica o estilo da janela.
@@ -332,7 +332,7 @@ virtual BOOL CreateStatic(
     UINT nID = AFX_IDW_PANE_FIRST);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParentWnd*<br/>
 A janela do quadro pai da janela do separador.
@@ -386,7 +386,7 @@ virtual BOOL CreateView(
     CCreateContext* pContext);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *row*<br/>
 Especifica a linha de janela do separador na qual posicionar a nova exibição.
@@ -413,7 +413,7 @@ Todos os painéis de uma janela separadora estática devem ser criados antes de 
 
 A estrutura também chama essa função de membro para criar novos painéis quando o usuário de uma janela de divisão dinâmica divide um painel, linha ou coluna.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCWindowing#4](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_2.cpp)]
 
@@ -437,7 +437,7 @@ Exclui uma coluna da janela divisora.
 virtual void DeleteColumn(int colDelete);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *colDelete*<br/>
 Especifica a coluna a ser excluída.
@@ -454,7 +454,7 @@ Exclui uma linha da janela divisora.
 virtual void DeleteRow(int rowDelete);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Excluir*<br/>
 Especifica a linha a ser excluída.
@@ -473,7 +473,7 @@ virtual void DeleteView(
     int col);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *row*<br/>
 Especifica a linha de janela do separador na qual excluir a exibição.
@@ -514,7 +514,7 @@ virtual BOOL DoScroll(
     BOOL bDoScroll = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pViewFrom*<br/>
 Um ponteiro para a exibição da qual a mensagem de rolagem se origina.
@@ -556,7 +556,7 @@ virtual BOOL DoScrollBy(
     BOOL bDoScroll = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pViewFrom*<br/>
 Um ponteiro para a exibição da qual a mensagem de rolagem se origina.
@@ -587,7 +587,7 @@ virtual CWnd* GetActivePane(
     int* pCol = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pRow*<br/>
 Um ponteiro para um **int** para recuperar o número de linha do painel ativo.
@@ -626,7 +626,7 @@ void GetColumnInfo(
     int& cxMin) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *col*<br/>
 Especifica uma coluna.
@@ -647,7 +647,7 @@ CWnd* GetPane(
     int col) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *row*<br/>
 Especifica uma linha.
@@ -682,7 +682,7 @@ void GetRowInfo(
     int& cyMin) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *row*<br/>
 Especifica uma linha.
@@ -725,7 +725,7 @@ int IdFromRowCol(
     int col) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *row*<br/>
 Especifica a linha da janela do separador.
@@ -741,7 +741,7 @@ A ID da janela filho do painel.
 
 Essa função de membro é usada para criar não exibições como painéis e pode ser chamada antes que o painel exista.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCWindowing#5](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_3.cpp)]
 
@@ -756,7 +756,7 @@ BOOL IsChildPane(
     int* pCol);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 Um ponteiro para um objeto [CWnd](../../mfc/reference/cwnd-class.md) a ser testado.
@@ -802,7 +802,7 @@ virtual void OnDrawSplitter(
     const CRect& rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Um ponteiro para o contexto do dispositivo no qual desenhar. Se o *PDC* for nulo, [CWnd:: RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) será chamado pela estrutura e nenhuma janela de divisão será desenhada.
@@ -835,7 +835,7 @@ Renderiza a imagem de uma janela de divisão para ter o mesmo tamanho e forma qu
 virtual void OnInvertTracker(const CRect& rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Rect*<br/>
 Referência a um objeto `CRect` especificando o retângulo de controle.
@@ -860,7 +860,7 @@ Chame essa função de membro para reexibir corretamente a janela separadora dep
 
 A estrutura chama essa função de membro sempre que o usuário redimensiona a janela divisora ou move uma divisão.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [CSplitterWnd:: SetColumnInfo](#setcolumninfo).
 
@@ -875,7 +875,7 @@ virtual void SetActivePane(
     CWnd* pWnd = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *row*<br/>
 Se *pWnd* for NULL, especificará a linha no painel que estará ativo.
@@ -903,7 +903,7 @@ void SetColumnInfo(
     int cxMin);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *col*<br/>
 Especifica uma coluna de janela de Splitter.
@@ -920,7 +920,7 @@ Chame essa função de membro para definir uma nova largura mínima e uma largur
 
 Quando a estrutura exibe a janela separadora, ela apresenta os painéis em colunas e linhas de acordo com suas dimensões ideais, trabalhando do canto superior esquerdo para o lado inferior direito da área do cliente da janela do divisor.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCWindowing#6](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_4.cpp)]
 
@@ -935,7 +935,7 @@ void SetRowInfo(
     int cyMin);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *row*<br/>
 Especifica uma linha de janela de Splitter.
@@ -960,7 +960,7 @@ Especifica o novo estilo de rolagem para o suporte à barra de rolagem compartil
 void SetScrollStyle(DWORD dwStyle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwStyle*<br/>
 O novo estilo de rolagem para o suporte à barra de rolagem compartilhada da janela de divisão, que pode ser um dos seguintes valores:
@@ -981,7 +981,7 @@ Indica onde uma janela do quadro se divide verticalmente.
 virtual BOOL SplitColumn(int cxBefore);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *cxBefore*<br/>
 A posição, em pixels, antes da qual a divisão ocorre.
@@ -1004,7 +1004,7 @@ Indica onde uma janela do quadro se divide horizontalmente.
 virtual BOOL SplitRow(int cyBefore);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *cyBefore*<br/>
 A posição, em pixels, antes da qual a divisão ocorre.
@@ -1027,14 +1027,14 @@ Chamado pelo Framework para desenhar a janela separadora.
 virtual void OnDraw(CDC* pDC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Um ponteiro para um contexto de dispositivo.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de VIEWEX do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>

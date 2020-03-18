@@ -14,11 +14,11 @@ helpviewer_keywords:
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
 ms.openlocfilehash: a0d79ae95a0604ca75f03673873e99394a1bc295
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865063"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417652"
 ---
 # <a name="iatlmemmgr-class"></a>Classe IAtlMemMgr
 
@@ -32,7 +32,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 
 ## <a name="members"></a>Membros
 
-### <a name="methods"></a>{1&gt;Métodos&lt;1}
+### <a name="methods"></a>Métodos
 
 |||
 |-|-|
@@ -48,11 +48,11 @@ Essa interface é implementada por [CComHeap](../../atl/reference/ccomheap-class
 > [!NOTE]
 >  As funções de heap local e global são mais lentas do que outras funções de gerenciamento de memória e não fornecem quantos recursos. Portanto, novos aplicativos devem usar as [funções de heap](/windows/win32/Memory/heap-functions). Eles estão disponíveis na classe [CWin32Heap](../../atl/reference/cwin32heap-class.md) .
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_ATL_Utilities#94](../../atl/codesnippet/cpp/iatlmemmgr-class_1.cpp)]
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlmem. h
 
@@ -64,7 +64,7 @@ Chame esse método para alocar um bloco de memória.
 void* Allocate(size_t nBytes) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nBytes*<br/>
 O número de bytes solicitado no novo bloco de memória.
@@ -77,7 +77,7 @@ Retorna um ponteiro para o início do bloco de memória alocado recentemente.
 
 Chame [IAtlMemMgr:: Free](#free) ou [IAtlMemMgr:: realoque](#reallocate) para liberar a memória alocada por esse método.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Para obter um exemplo, consulte a [visão geral do IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
@@ -89,7 +89,7 @@ Chame esse método para liberar um bloco de memória.
 void Free(void* p) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *p*<br/>
 Ponteiro para a memória alocada anteriormente por esse Gerenciador de memória.
@@ -98,7 +98,7 @@ Ponteiro para a memória alocada anteriormente por esse Gerenciador de memória.
 
 Use este método para liberar memória obtida por [IAtlMemMgr:: Allocate](#allocate) ou [IAtlMemMgr:: realoque](#reallocate).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Para obter um exemplo, consulte a [visão geral do IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
@@ -110,7 +110,7 @@ Chame esse método para recuperar o tamanho de um bloco de memória alocado.
 size_t GetSize(void* p) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *p*<br/>
 Ponteiro para a memória alocada anteriormente por esse Gerenciador de memória.
@@ -119,7 +119,7 @@ Ponteiro para a memória alocada anteriormente por esse Gerenciador de memória.
 
 Retorna o tamanho do bloco de memória em bytes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Para obter um exemplo, consulte a [visão geral do IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
@@ -131,7 +131,7 @@ Chame esse método para realocar memória alocada por esse Gerenciador de memór
 void* Reallocate(void* p, size_t nBytes) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *p*<br/>
 Ponteiro para a memória alocada anteriormente por esse Gerenciador de memória.
@@ -149,7 +149,7 @@ Chame [IAtlMemMgr:: Free](#free) ou [IAtlMemMgr:: realoque](#reallocate) para li
 
 Conceitualmente, esse método libera a memória existente e aloca um novo bloco de memória. Na realidade, a memória existente pode ser estendida ou reutilizada de outra forma.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Para obter um exemplo, consulte a [visão geral do IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
@@ -161,7 +161,7 @@ A propriedade `AllowContextMenu` especifica se o controle hospedado tem permiss�
 STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pbAllowContextMenu*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
@@ -182,7 +182,7 @@ A propriedade `AllowShowUI` especifica se o controle hospedado tem permissão pa
 STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pbAllowShowUI*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
@@ -203,7 +203,7 @@ A propriedade `AllowWindowlessActivation` especifica se o contêiner permitirá 
 STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pbAllowWindowless*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
@@ -224,7 +224,7 @@ A propriedade `BackColor` especifica a cor do plano de fundo ambiente do contêi
 STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pclrBackground*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
@@ -245,7 +245,7 @@ A implementação do objeto de host ATL usa COLOR_BTNFACE ou COLOR_WINDOW como o
 STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pbDisplayAsDefault*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
@@ -266,7 +266,7 @@ A propriedade `DocHostDoubleClickFlags` especifica a operação que deve ocorrer
 STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pdwDocHostDoubleClickFlags*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
@@ -287,7 +287,7 @@ A propriedade `DocHostFlags` especifica os recursos de interface do usuário do 
 STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pdwDocHostFlags*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
@@ -308,7 +308,7 @@ A propriedade `Font` especifica a fonte de ambiente do contêiner.
 STDMETHOD(get_Font)(IFontDisp** pFont);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFont*<br/>
 fora O endereço de um ponteiro de interface `IFontDisp` usado para receber o valor atual dessa propriedade.
@@ -329,7 +329,7 @@ A propriedade `ForeColor` especifica a cor de primeiro plano de ambiente do cont
 STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pclrForeground*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
@@ -350,7 +350,7 @@ A propriedade `LocaleID` especifica a ID de localidade ambiente do contêiner.
 STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *plcidLocaleID*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
@@ -373,7 +373,7 @@ A propriedade de ambiente `MessageReflect` especifica se o contêiner refletirá
 STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pbMessageReflect*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
@@ -394,7 +394,7 @@ A propriedade `OptionKeyPath` especifica o caminho da chave do registro para as 
 STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pbstrOptionKeyPath*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
@@ -411,7 +411,7 @@ A propriedade de ambiente `ShowGrabHandles` permite que o controle descubra se e
 STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pbShowGrabHandles*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
@@ -432,7 +432,7 @@ O `ShowHatching` propriedade de ambiente permite que o controle descubra se ele 
 STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pbShowHatching*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
@@ -453,7 +453,7 @@ A propriedade `UserMode` especifica o modo de usuário ambiente do contêiner.
 STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pbUserMode*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
@@ -474,7 +474,7 @@ A propriedade `AllowContextMenu` especifica se o controle hospedado tem permiss�
 STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bAllowContextMenu*<br/>
 no O novo valor dessa propriedade.
@@ -495,7 +495,7 @@ A propriedade `AllowShowUI` especifica se o controle hospedado tem permissão pa
 STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bAllowShowUI*<br/>
 no O novo valor dessa propriedade.
@@ -516,7 +516,7 @@ A propriedade `AllowWindowlessActivation` especifica se o contêiner permitirá 
 STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bAllowWindowless*<br/>
 no O novo valor dessa propriedade.
@@ -537,7 +537,7 @@ A propriedade `BackColor` especifica a cor do plano de fundo ambiente do contêi
 STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *clrBackground*<br/>
 no O novo valor dessa propriedade.
@@ -558,7 +558,7 @@ A implementação do objeto de host ATL usa COLOR_BTNFACE ou COLOR_WINDOW como o
 STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bDisplayAsDefault*<br/>
 no O novo valor dessa propriedade.
@@ -579,7 +579,7 @@ A propriedade `DocHostDoubleClickFlags` especifica a operação que deve ocorrer
 STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDocHostDoubleClickFlags*<br/>
 no O novo valor dessa propriedade.
@@ -600,7 +600,7 @@ A propriedade `DocHostFlags` especifica os recursos de interface do usuário do 
 STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDocHostFlags*<br/>
 no O novo valor dessa propriedade.
@@ -621,7 +621,7 @@ A propriedade `Font` especifica a fonte de ambiente do contêiner.
 STDMETHOD(put_Font)(IFontDisp* pFont);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFont*<br/>
 no O novo valor dessa propriedade.
@@ -642,7 +642,7 @@ A propriedade `ForeColor` especifica a cor de primeiro plano de ambiente do cont
 STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *clrForeground*<br/>
 no O novo valor dessa propriedade.
@@ -663,7 +663,7 @@ A propriedade `LocaleID` especifica a ID de localidade ambiente do contêiner.
 STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lcidLocaleID*<br/>
 no O novo valor dessa propriedade.
@@ -684,7 +684,7 @@ A propriedade de ambiente `MessageReflect` especifica se o contêiner refletirá
 STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bMessageReflect*<br/>
 no O novo valor dessa propriedade.
@@ -705,7 +705,7 @@ A propriedade `OptionKeyPath` especifica o caminho da chave do registro para as 
 STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bstrOptionKeyPath*<br/>
 no O novo valor dessa propriedade.
@@ -722,7 +722,7 @@ A propriedade `UserMode` especifica o modo de usuário ambiente do contêiner.
 STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bUserMode*<br/>
 no O novo valor dessa propriedade.
@@ -743,7 +743,7 @@ Esse método é chamado para complementar a interface de propriedade de ambiente
 virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDispatch*<br/>
 Ponteiro para a nova interface.
@@ -764,7 +764,7 @@ Anexa um controle existente (e inicializado anteriormente) ao objeto de host usa
 STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pUnkControl*<br/>
 no Um ponteiro para a interface de `IUnknown` do controle a ser anexado ao objeto de host.
@@ -787,7 +787,7 @@ STDMETHOD(CreateControl)(
     IStream* pStream);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpTricsData*<br/>
 no Uma cadeia de caracteres que identifica o controle a ser criado. Pode ser um CLSID (deve incluir chaves), ProgID, URL ou HTML bruto (prefixado por **Mshtml:** ).
@@ -796,7 +796,7 @@ no Uma cadeia de caracteres que identifica o controle a ser criado. Pode ser um 
 no Um identificador para a janela a ser usada para hospedagem.
 
 *pStream*<br/>
-no Um ponteiro de interface para um fluxo que contém dados de inicialização para o controle. Pode ser NULO.
+no Um ponteiro de interface para um fluxo que contém dados de inicialização para o controle. Pode ser NULL.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -824,7 +824,7 @@ STDMETHOD(CreateControlEx)(
     IUnknown* punkAdvise);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpTricsData*<br/>
 no Uma cadeia de caracteres que identifica o controle a ser criado. Pode ser um CLSID (deve incluir chaves), ProgID, URL ou HTML bruto (prefixado com **Mshtml:** ).
@@ -833,10 +833,10 @@ no Uma cadeia de caracteres que identifica o controle a ser criado. Pode ser um 
 no Um identificador para a janela a ser usada para hospedagem.
 
 *pStream*<br/>
-no Um ponteiro de interface para um fluxo que contém dados de inicialização para o controle. Pode ser NULO.
+no Um ponteiro de interface para um fluxo que contém dados de inicialização para o controle. Pode ser NULL.
 
 *ppUnk*<br/>
-fora O endereço de um ponteiro que receberá a interface de `IUnknown` do controle criado. Pode ser NULO.
+fora O endereço de um ponteiro que receberá a interface de `IUnknown` do controle criado. Pode ser NULL.
 
 *riidAdvise*<br/>
 no O identificador de interface de uma interface de saída no objeto contido. Pode ser IID_NULL.
@@ -862,7 +862,7 @@ Retorna o ponteiro de interface especificado fornecido pelo controle hospedado.
 STDMETHOD(QueryControl)(REFIID riid, void** ppvObject);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *riid*<br/>
 no A ID de uma interface no controle que está sendo solicitado.
@@ -882,7 +882,7 @@ Define o dispinterface externo, que está disponível para controles contidos po
 STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDisp*<br/>
 no Um ponteiro para uma interface `IDispatch`.
@@ -899,7 +899,7 @@ Chame essa função para definir a interface [IDocHostUIHandlerDispatch](../../a
 STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDisp*<br/>
 no Um ponteiro para uma interface `IDocHostUIHandlerDispatch`.
@@ -924,7 +924,7 @@ STDMETHOD(CreateControlLic)(
     BSTR bstrLic);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bstrLic*<br/>
 no O BSTR que contém a chave de licença para o controle.
@@ -935,7 +935,7 @@ Consulte [IAxWinHostWindow:: CreateControl](#createcontrol) para obter uma descr
 
 Chamar esse método é equivalente a chamar [IAxWinHostWindowLic:: CreateControlLicEx](#createcontrollicex)
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) para obter um exemplo que usa `IAxWinHostWindowLic::CreateControlLic`.
 
@@ -954,7 +954,7 @@ STDMETHOD(CreateControlLicEx)(
     BSTR bstrLic);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bstrLic*<br/>
 no O BSTR que contém a chave de licença para o controle.
@@ -963,10 +963,10 @@ no O BSTR que contém a chave de licença para o controle.
 
 Consulte [IAxWinHostWindow:: CreateControlEx](#createcontrolex) para obter uma descrição dos parâmetros e do valor de retorno restantes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) para obter um exemplo que usa `IAxWinHostWindowLic::CreateControlLicEx`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral da classe](../../atl/atl-class-overview.md)

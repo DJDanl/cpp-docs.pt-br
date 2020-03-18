@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
 ms.openlocfilehash: 9025d595e79eed9f81aff77b931a2585359a8c3a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874783"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421971"
 ---
 # <a name="basic_ostream-class"></a>Classe basic_ostream
 
@@ -38,7 +38,7 @@ template <class Elem, class Tr = char_traits<Elem>>
 class basic_ostream : virtual public basic_ios<Elem, Tr>
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *elem*
 Um `char_type`.
@@ -104,19 +104,19 @@ Os dois grupos de funções chamam [SetState](../standard-library/basic-ios-clas
 
 Um objeto da classe basic_istream\< **elem**, **TR**> armazena apenas um objeto base público virtual da classe [basic_ios](../standard-library/basic-ios-class.md) **\<elem**, **TR >** .
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 Consulte o exemplo de [Classe basic_ifstream](../standard-library/basic-ofstream-class.md) para saber mais sobre fluxos de saída.
 
-### <a name="constructors"></a>{1&gt;Construtores&lt;1}
+### <a name="constructors"></a>Construtores
 
-|Construtor|Descrição|
+|Construtor|DESCRIÇÃO|
 |-|-|
 |[basic_ostream](#basic_ostream)|Constrói um objeto `basic_ostream`.|
 
 ### <a name="member-functions"></a>Funções de membro
 
-|Função de membro|Descrição|
+|Função de membro|DESCRIÇÃO|
 |-|-|
 |[flush](#flush)|Libera o buffer.|
 |[put](#put)|Coloca um caractere em um fluxo.|
@@ -128,12 +128,12 @@ Consulte o exemplo de [Classe basic_ifstream](../standard-library/basic-ofstream
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descrição|
+|Operador|DESCRIÇÃO|
 |-|-|
 |[operator=](#op_eq)|Atribui o valor do objeto parâmetro `basic_ostream` fornecido para esse objeto.|
 |[operator<<](#basic_ostream_operator_lt_lt)|Grava no fluxo.|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** \<ostream >
 
@@ -151,7 +151,7 @@ explicit basic_ostream(
 basic_ostream(basic_ostream&& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *strbuf*
 Um objeto do tipo [basic_streambuf](../standard-library/basic-streambuf-class.md).
@@ -166,7 +166,7 @@ Uma referência rvalue a um objeto do tipo `basic_ostream`.
 
 O primeiro construtor inicializa a classe base chamando [init](../standard-library/basic-ios-class.md#init)(`strbuf`). O segundo construtor inicializa a classe base chamando [basic_ios::move](../standard-library/basic-ios-class.md#move)`(right)`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte o exemplo de [basic_ofstream::basic_ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream) para saber mais sobre fluxos de saída.
 
@@ -186,7 +186,7 @@ Uma referência ao objeto basic_ostream.
 
 Se [rdbuf](../standard-library/basic-ios-class.md#rdbuf) não for um ponteiro nulo, a função chamará **rdbuf->** [pubsync](../standard-library/basic-streambuf-class.md#pubsync). Se isso retornar -1, a função chamará [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**). Retorna **\*this**.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // basic_ostream_flush.cpp
@@ -235,7 +235,7 @@ basic_ostream<Elem, Tr>& operator<<(long double val);
 basic_ostream<Elem, Tr>& operator<<(const void* val);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *PFN*
 Um ponteiro de função.
@@ -298,7 +298,7 @@ basic_ostream<Elem, Tr>& operator<<(long double val);
 
 cada Converter *Val* em um campo numérico e inseri-lo chamando **use_facet < num_put\<Elem, OutIt >** (`getloc`) **. put**(**OutIt**(`rdbuf`), **\*isso**, `getloc`, **Val**). Aqui, **OutIt** é definido como **ostreambuf_iterator\<Elem, Tr>** . A função retorna **\*this**.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // basic_ostream_op_write.cpp
@@ -356,7 +356,7 @@ Atribui valores para o parâmetro de objeto `basic_ostream` fornecido para esse 
 basic_ostream& operator=(basic_ostream&& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 Uma referência `rvalue` a um objeto `basic_ostream`.
@@ -373,7 +373,7 @@ Coloca um caractere em um fluxo.
 basic_ostream<Elem, Tr>& put(char_type _Ch);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Ch*\
 Um caractere.
@@ -386,7 +386,7 @@ Uma referência ao objeto basic_ostream.
 
 A função de saída não formatada insere o elemento *_Ch*. Retorna **\*this**.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // basic_ostream_put.cpp
@@ -417,7 +417,7 @@ basic_ostream<Elem, Tr>& seekp(pos_type _Pos);
 basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *_Pos*\
 A posição no fluxo.
@@ -436,7 +436,7 @@ Uma referência ao objeto basic_ostream.
 
 Se [Fail](../standard-library/basic-ios-class.md#fail) for **false**, a primeira função de membro chamará **NewPOS =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( *_Pos*), para alguns `pos_type` objeto temporário `newpos`. Se `fail` for false, a segunda função chamará **NewPOS = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( *_Off _Way*). Em ambos os casos, se (`off_type`)**newpos ==** (`off_type`)(-1) (a operação de posicionamento falhar), a função chamará **istr.** [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). Ambas as funções retornam **\*this**.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // basic_ostream_seekp.cpp
@@ -486,7 +486,7 @@ Troca os valores desse `basic_ostream` objeto pelo valores do `basic_ostream` fo
 void swap(basic_ostream& right);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à direita*
 Uma referência a um objeto `basic_ostream`.
@@ -511,7 +511,7 @@ Posição no fluxo de saída.
 
 Se [Fail](../standard-library/basic-ios-class.md#fail) for **false**, a função member retornará [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**). Caso contrário, retornará `pos_type`(-1).
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [seekp](#seekp) para obter um exemplo usando `tellp`.
 
@@ -523,7 +523,7 @@ Coloque caracteres em um fluxo.
 basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *contagem*\
 Contagem de caracteres a colocar no fluxo.
@@ -539,11 +539,11 @@ Uma referência ao objeto basic_ostream.
 
 A [função de saída não formatada](../standard-library/basic-ostream-class.md) insere a sequência de elementos de *contagem* começando em *Str*.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Consulte [streamsize](../standard-library/ios-typedefs.md#streamsize) para obter um exemplo usando `write`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programação de iostream](../standard-library/iostream-programming.md)\

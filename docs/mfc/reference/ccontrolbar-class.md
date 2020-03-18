@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
 ms.openlocfilehash: 41e40b3da7b4a294fe396a9d93f7c6a93593ff95
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866417"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420529"
 ---
 # <a name="ccontrolbar-class"></a>Classe CControlBar
 
@@ -63,13 +63,13 @@ class CControlBar : public CWnd
 
 ## <a name="members"></a>Membros
 
-### <a name="protected-constructors"></a>Construtores Protegidos
+### <a name="protected-constructors"></a>Construtores protegidos
 
 |Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CControlBar::CControlBar](#ccontrolbar)|Constrói um objeto `CControlBar`.|
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|DESCRIÇÃO|
 |----------|-----------------|
@@ -133,7 +133,7 @@ virtual CSize CalcDynamicLayout(
     DWORD nMode);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nLength*<br/>
 A dimensão solicitada da barra de controle, seja horizontal ou vertical, dependendo de *dwMode*.
@@ -169,7 +169,7 @@ virtual CSize CalcFixedLayout(
     BOOL bHorz);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bStretch*<br/>
 Indica se a barra deve ser ampliada para o tamanho do quadro. O parâmetro *bStretch* é diferente de zero quando a barra não é uma barra de encaixe (não disponível para encaixe) e é 0 quando é encaixada ou flutuante (disponível para encaixe).
@@ -187,12 +187,12 @@ Barras de controle, como barras de ferramentas, podem ser alongadas horizontal o
 
 Se *bStretch* for true, estique a dimensão ao longo da orientação fornecida pelo *bHorz*. Em outras palavras, se *bHorz* for false, a barra de controle será ampliada verticalmente. Se *bStretch* for false, não ocorrerá nenhuma ampliação. A tabela a seguir mostra as possíveis permutas e os estilos de barra de controle resultantes de *bStretch* e *bHorz*.
 
-|bStretch|bHorz|Tira|{1&gt;Orientação&lt;1}|Encaixe/não encaixe|
+|bStretch|bHorz|Tira|Orientação|Encaixe/não encaixe|
 |--------------|-----------|----------------|-----------------|--------------------------|
 |TRUE|TRUE|Alongamento horizontal|Orientado horizontalmente|Sem encaixe|
 |TRUE|FALSE|Alongamento vertical|Verticalmente orientado|Sem encaixe|
-|FALSE|TRUE|Não há alargamento disponível|Orientado horizontalmente|Encaixe|
-|FALSE|FALSE|Não há alargamento disponível|Verticalmente orientado|Encaixe|
+|FALSE|TRUE|Não há alargamento disponível|Orientado horizontalmente|Docking|
+|FALSE|FALSE|Não há alargamento disponível|Verticalmente orientado|Docking|
 
 ##  <a name="calcinsiderect"></a>CControlBar::CalcInsideRect
 
@@ -204,7 +204,7 @@ virtual void CalcInsideRect(
     BOOL bHorz) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Rect*<br/>
 Contém as dimensões atuais da barra de controle; incluindo as bordas.
@@ -234,7 +234,7 @@ Chamado pelo Framework para renderizar as bordas e a barra de garra da barra de 
 virtual void DoPaint(CDC* pDC);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Aponta para o contexto do dispositivo a ser usado para renderizar as bordas e a garra da barra de controle.
@@ -255,7 +255,7 @@ virtual void DrawBorders(
     CRect& rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Aponta para o contexto do dispositivo a ser usado para renderizar as bordas da barra de controle.
@@ -277,7 +277,7 @@ virtual void DrawGripper(
     const CRect& rect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 Aponta para o contexto do dispositivo a ser usado para renderizar a garra da barra de controle.
@@ -297,7 +297,7 @@ Chame essa função para permitir que uma barra de controle seja encaixada.
 void EnableDocking(DWORD dwDockStyle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwDockStyle*<br/>
 Especifica se a barra de controle oferece suporte a encaixe e aos lados de sua janela pai para a qual a barra de controle pode ser encaixada, se houver suporte. Pode ser um ou mais dos seguintes:
@@ -432,7 +432,7 @@ virtual void OnUpdateCmdUI(
     BOOL bDisableIfNoHndler) = 0;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pTarget*<br/>
 Aponta para a janela principal do quadro do aplicativo. Esse ponteiro é usado para rotear mensagens de atualização.
@@ -454,7 +454,7 @@ Chame essa função para definir os estilos de **CBRS_** desejados para a barra 
 void SetBarStyle(DWORD dwStyle);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwStyle*<br/>
 Os estilos desejados para a barra de controle. Pode ser um ou mais dos seguintes:
@@ -503,7 +503,7 @@ void SetBorders(
 void SetBorders(LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *cxLeft*<br/>
 A largura (em pixels) da borda esquerda da barra de controle.
@@ -534,14 +534,14 @@ Altera o proprietário local de uma barra de controle.
 void SetInPlaceOwner(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 Um ponteiro para um objeto `CWnd`.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Exemplo de CTRLBARS do MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>

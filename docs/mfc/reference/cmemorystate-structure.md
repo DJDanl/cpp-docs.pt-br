@@ -9,11 +9,11 @@ helpviewer_keywords:
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
 ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855238"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420683"
 ---
 # <a name="cmemorystate-structure"></a>Estrutura CMemoryState
 
@@ -29,13 +29,13 @@ struct CMemoryState
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CMemoryState::CMemoryState](#cmemorystate)|Constrói uma estrutura semelhante a uma classe que controla pontos de verificação de memória.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CMemoryState:: ponto de verificação](#checkpoint)|Obtém um instantâneo (ponto de verificação) do estado da memória atual.|
 |[CMemoryState::D ifference](#difference)|Computa a diferença entre dois objetos do tipo `CMemoryState`.|
@@ -71,7 +71,7 @@ Para obter mais informações sobre como usar `CMemoryState` e outros diagnósti
 
 `CMemoryState`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -87,7 +87,7 @@ void Checkpoint();
 
 A [diferença](#difference) entre `CMemoryState` funções membro e o [DumpAllObjectsSince](#dumpallobjectssince) usam esses dados de instantâneo.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo para o construtor [CMemoryState](#cmemorystate) .
 
@@ -99,7 +99,7 @@ Constrói um objeto `CMemoryState` vazio que deve ser preenchido pela função d
 CMemoryState();
 ```
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFC_Utilities#18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]
 
@@ -113,7 +113,7 @@ BOOL Difference(
     const CMemoryState& newState);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *oldState*<br/>
 O estado de memória inicial, conforme definido por um ponto de verificação de `CMemoryState`.
@@ -129,7 +129,7 @@ Diferente de zero se os dois Estados de memória forem diferentes; caso contrár
 
 O [ponto de verificação](#checkpoint) deve ter sido chamado para cada um dos dois parâmetros de estado de memória.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo para o construtor [CMemoryState](#cmemorystate) .
 
@@ -145,7 +145,7 @@ void DumpAllObjectsSince() const;
 
 Chamar `DumpAllObjectsSince` com um objeto de `CMemoryState` não inicializado despejará todos os objetos atualmente na memória.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo para o construtor [CMemoryState](#cmemorystate) .
 
@@ -179,7 +179,7 @@ Um relatório de exemplo fornece informações sobre o número (ou quantidade) d
 
 Blocos livres são o número de blocos cuja desalocação foi atrasada se `afxMemDF` foi definido como `delayFreeMemDF`. Para obter mais informações, consulte [afxMemDF](diagnostic-services.md#afxmemdf), na seção "macros MFC e globais".
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   O código a seguir deve ser colocado em *ProjName*app. cpp. Defina as seguintes variáveis globais:
 
@@ -195,6 +195,6 @@ Adicione um manipulador para a função `ExitInstance` e use o seguinte código:
 
 Agora você pode executar o programa no modo de depuração para ver a saída da função `DumpStatistics`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)

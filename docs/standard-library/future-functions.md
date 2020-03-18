@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::make_error_condition [C++]
 - std::swap [C++]
 ms.openlocfilehash: 5435c3b9e10f151fc77c72b58c93510b6a867ce1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865162"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421747"
 ---
 # <a name="ltfuturegt-functions"></a>Funções &lt;future&gt;
 
@@ -42,7 +42,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
     async(launch policy, Fn&& fn, ArgTypes&&... args);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *política*
 Um valor [launch](../standard-library/future-enums.md#launch).
@@ -90,7 +90,7 @@ Cria um [error_code](../standard-library/error-code-class.md) com o objeto [erro
 inline error_code make_error_code(future_errc Errno) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Errno*\
 Um valor de [future_errc](../standard-library/future-enums.md#future_errc) que identifica o erro relatado.
@@ -107,7 +107,7 @@ Cria um [error_condition](../standard-library/error-condition-class.md) com o ob
 inline error_condition make_error_condition(future_errc Errno) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Errno*\
 Um valor de [future_errc](../standard-library/future-enums.md#future_errc) que identifica o erro relatado.
@@ -128,7 +128,7 @@ template <class Ty, class... ArgTypes>
 void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& Right) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *à esquerda*
 O objeto `promise` à esquerda.
@@ -136,6 +136,6 @@ O objeto `promise` à esquerda.
 \ *à direita*
 O objeto `promise` à direita.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<future>](../standard-library/future.md)

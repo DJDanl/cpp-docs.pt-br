@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::make_tuple [C++]
 - std::tie [C++]
 ms.openlocfilehash: 46c386ecffb8fbbf7c07d40b334afd91d261ebcf
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866180"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422650"
 ---
 # <a name="lttuplegt-functions"></a>Funções &lt;tuple&gt;
 
@@ -79,7 +79,7 @@ template <class T, class... Types>
    constexpr T&& get(tuple<Types...>&& Tuple) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Index*\
 O índice do elemento a ser obtido.
@@ -99,7 +99,7 @@ As funções de modelo retornam uma referência ao valor no *índice*index ou do
 
 Chamar `get<T>(Tuple)` produzirá um erro do compilador se a Tupla contiver mais ou menos de um elemento do tipo T.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 #include <tuple>
@@ -136,7 +136,7 @@ template <class T, class Tuple> constexpr T make_from_tuple(Tuple&& t);
 
 ### <a name="remarks"></a>Comentários
 
-Mesmo que `return make_from_tuple_impl<T>(forward<Tuple>(t), make_index_sequence<tuple_size_v<decay_t<Tuple>>>{})`.
+Igual a `return make_from_tuple_impl<T>(forward<Tuple>(t), make_index_sequence<tuple_size_v<decay_t<Tuple>>>{})`.
 
 ## <a name="make_tuple"></a>make_tuple
 
@@ -147,7 +147,7 @@ template <class T1, class T2, ..., class TN>
    tuple<V1, V2, ..., VN> make_tuple(const T1& t1, const T2& t2, ..., const TN& tN);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *TN*
 O tipo do enésimo parâmetro de função.
@@ -161,7 +161,7 @@ A função de modelo retorna `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`, onde cad
 
 Uma vantagem de `make_tuple` é que os tipos de objetos que estão sendo armazenados são determinados automaticamente pelo compilador e não precisam ser explicitamente especificados. Não use argumentos de modelo explícitos, como `make_tuple<int, int>(1, 2)`, ao usar `make_tuple`, pois ele é desnecessariamente detalhado e adiciona problemas complexos de referência rvalue que podem causar falha de compilação.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // std__tuple__make_tuple.cpp
@@ -212,7 +212,7 @@ template <class T1, class T2, ..., class TN>
 tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *TN*
 O tipo de base do enésimo elemento de tupla.
@@ -221,7 +221,7 @@ O tipo de base do enésimo elemento de tupla.
 
 A função do modelo retorna `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // std__tuple__tie.cpp

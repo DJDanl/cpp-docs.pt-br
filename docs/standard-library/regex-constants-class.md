@@ -83,11 +83,11 @@ helpviewer_keywords:
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
 ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876121"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419626"
 ---
 # <a name="regex_constants-namespace"></a>regex_constants namespace
 
@@ -113,7 +113,7 @@ O namespace `regex_constants` encapsula vários tipos de sinalizador e seus valo
 |[match_flag_type](#match_flag_type)|Sinalizadores para opções de correspondência de expressões regulares.|
 |[syntax_option_type](#syntax_option_type)|Sinalizadores para a seleção de opções de sintaxe.|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** \<Regex >
 
@@ -288,7 +288,7 @@ Os modificadores de sintaxe são:
 
 `collate` -- faz as correspondências distinguirem localidades
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<regex>](../standard-library/regex.md)\
 [classe de regex_error](../standard-library/regex-error-class.md)\

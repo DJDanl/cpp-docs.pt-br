@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
 ms.openlocfilehash: 43154e1ec4c6b856ad203a4b9ac49e4f4bcf9576
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866550"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421411"
 ---
 # <a name="cwinthread-class"></a>Classe CWinThread
 
@@ -71,13 +71,13 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CWinThread::CWinThread](#cwinthread)|Constrói um objeto `CWinThread`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CWinThread:: CreateThread](#createthread)|Inicia a execução de um objeto `CWinThread`.|
 |[CWinThread:: ExitInstance](#exitinstance)|Substitua para limpar quando seu thread for encerrado.|
@@ -98,13 +98,13 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[IDENTIFICADOR de CWinThread:: Operator](#operator_handle)|Recupera o identificador do objeto `CWinThread`.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CWinThread:: m_bAutoDelete](#m_bautodelete)|Especifica se deve-se destruir o objeto na terminação de thread.|
 |[CWinThread:: m_hThread](#m_hthread)|Identificador para o thread atual.|
@@ -136,7 +136,7 @@ Para obter mais informações sobre `CWinThread`, consulte os artigos [multithre
 
 `CWinThread`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Afxwin. h
 
@@ -151,7 +151,7 @@ BOOL CreateThread(
     LPSECURITY_ATTRIBUTES lpSecurityAttrs = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwCreateFlags*<br/>
 Especifica um sinalizador adicional que controla a criação do thread. Esse sinalizador pode conter um dos dois valores:
@@ -280,7 +280,7 @@ Substitua essa função para manter `OnIdle` de ser chamado depois que mensagens
 virtual BOOL IsIdleMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMsg*<br/>
 Aponta para a mensagem atual que está sendo processada.
@@ -340,7 +340,7 @@ DWORD m_nThreadID;
 O membro de dados `m_nThreadID` é uma variável pública do tipo DWORD. Ele só será válido se o objeto de thread do kernel subjacente existir atualmente.
 Consulte também comentários sobre [m_hThread](#m_hthread) tempo de vida.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
   Consulte o exemplo de [AfxGetThread](application-information-and-management.md#afxgetthread).
 
@@ -380,7 +380,7 @@ Substitua essa função de membro para executar o processamento em tempo ocioso.
 virtual BOOL OnIdle(LONG lCount);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lCount*<br/>
 Um contador é incrementado A cada vez que `OnIdle` é chamado quando a fila de mensagens do thread está vazia. Essa contagem é redefinida como 0 sempre que uma nova mensagem é processada. Você pode usar o parâmetro *lCount* para determinar o período de tempo relativo que o thread esteve ocioso sem processar uma mensagem.
@@ -428,7 +428,7 @@ BOOL PostThreadMessage(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *message*<br/>
 ID da mensagem definida pelo usuário.
@@ -458,7 +458,7 @@ Substitua essa função para filtrar as mensagens de janela antes que elas sejam
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMsg*<br/>
 Aponta para uma [estrutura msg](/windows/win32/api/winuser/ns-winuser-msg) que contém a mensagem a ser processada.
@@ -481,9 +481,9 @@ virtual BOOL ProcessMessageFilter(
     LPMSG lpMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*código*<br/>
+*code*<br/>
 Especifica um código de gancho. Essa função de membro usa o código para determinar como processar *lpMsg.*
 
 *lpMsg*<br/>
@@ -509,7 +509,7 @@ virtual LRESULT ProcessWndProcException(
     const MSG* pMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *e*<br/>
 Aponta para uma exceção sem tratamento.
@@ -527,7 +527,7 @@ Não chame essa função de membro diretamente.
 
 A implementação padrão dessa função de membro trata apenas das exceções geradas a partir das seguintes mensagens:
 
-|{1&gt;Comando&lt;1}|Ação|
+|Comando|Ação|
 |-------------|------------|
 |WM_CREATE|Falha.|
 |WM_PAINT|Validar a janela afetada, impedindo que outra mensagem WM_PAINT seja gerada.|
@@ -594,7 +594,7 @@ Essa função define o nível de prioridade do thread atual dentro de sua classe
 BOOL SetThreadPriority(int nPriority);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nPriority*<br/>
 Especifica o novo nível de prioridade de thread dentro de sua classe de prioridade. Esse parâmetro deve ser um dos seguintes valores, listados da prioridade mais alta para a mais baixa:
@@ -639,7 +639,7 @@ A contagem de suspensão anterior do thread se tiver êxito; caso contrário, `0
 
 Se qualquer thread tiver uma contagem de suspensão acima de zero, esse thread não será executado. O thread pode ser retomado chamando a função membro [ResumeThread](#resumethread) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>

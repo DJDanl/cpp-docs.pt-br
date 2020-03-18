@@ -189,11 +189,11 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
 ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883688"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420256"
 ---
 # <a name="cmfcribbonbar-class"></a>Classe CMFCRibbonBar
 
@@ -211,13 +211,13 @@ class CMFCRibbonBar : public CPane
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`CMFCRibbonBar::CMFCRibbonBar`|Construtor padrão.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[CMFCRibbonBar:: ActivateContextCategory](#activatecontextcategory)|Ativa uma categoria de contexto que já está visível.|
 |[CMFCRibbonBar:: AddCategory](#addcategory)|Adiciona uma nova categoria da faixa de faixas à faixa de faixas.|
@@ -335,7 +335,7 @@ Para obter informações sobre como adicionar uma barra de faixa de faixas ao se
 
 [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxRibbonBar. h
 
@@ -347,7 +347,7 @@ Ativa uma categoria de contexto que já está visível.
 BOOL ActivateContextCategory(UINT uiContextID);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiContextID*<br/>
 no A ID da categoria de contexto.
@@ -373,7 +373,7 @@ CMFCRibbonCategory* AddCategory(
     CRuntimeClass* pRTI= NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 no Nome da categoria da faixa de faixas.
@@ -404,7 +404,7 @@ Um ponteiro para a nova categoria da faixa de faixas se o método foi bem-sucedi
 
 Se o parâmetro *pRTI* não for nulo, a nova categoria da faixa de faixas será criada dinamicamente usando a classe de tempo de execução.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra como usar o método `AddCategory` na classe `CMFCRibbonBar`.
 
@@ -429,7 +429,7 @@ CMFCRibbonCategory* AddContextCategory(
     CRuntimeClass* pRTI = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 no Nome da categoria.
@@ -499,7 +499,7 @@ CMFCRibbonMainPanel* AddMainCategory(
     32));
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 no Nome da categoria da faixa de faixas principal.
@@ -524,7 +524,7 @@ Ponteiro para a nova categoria da faixa de faixas principal se o método foi bem
 
 Se uma categoria da faixa de faixas principal já existir, ela será excluída.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra como usar o método `AddMainCategory` na classe `CMFCRibbonBar`.
 
@@ -558,7 +558,7 @@ CMFCRibbonCategory* AddQATOnlyCategory(
     16));
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszName*<br/>
 no Nome da categoria.
@@ -585,7 +585,7 @@ Adiciona o elemento Ribbon especificado à linha Tabs da barra da faixa de faixa
 void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pElement*<br/>
 no Ponteiro para um elemento da faixa de faixas.
@@ -602,7 +602,7 @@ Constrói e inicializa um objeto [CMFCRibbonBar](../../mfc/reference/cmfcribbonb
 CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bReplaceFrameCaption*<br/>
 no TRUE para a barra da faixa de quadros substituir a legenda da janela do quadro principal; FALSE para localizar a barra da faixa de faixas sob a legenda da janela do quadro principal.
@@ -620,7 +620,7 @@ BOOL Create(
     UINT nID = AFX_IDW_RIBBON_BAR);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParentWnd*<br/>
 no Ponteiro para a janela pai da barra da faixa de forma.
@@ -637,7 +637,7 @@ TRUE se a janela foi criada; caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra como usar o método `Create` da classe `CMFCRibbonBar`.
 
@@ -655,7 +655,7 @@ BOOL CreateEx(
     UINT nID = AFX_IDW_RIBBON_BAR);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pParentWnd*<br/>
 no Ponteiro para a janela pai da barra da faixa de forma.
@@ -683,7 +683,7 @@ Fecha todos os controles KeyTip na barra da faixa de faixas.
 void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bSetFocus*<br/>
 no TRUE para definir o foco para a janela pai da barra da faixa de forma.
@@ -701,7 +701,7 @@ BOOL DrawMenuImage(
     const CRect& rectImage);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pDC*<br/>
 no Ponteiro para um contexto de dispositivo para o botão de menu.
@@ -736,7 +736,7 @@ Habilita ou desabilita o recurso KeyTip para a barra da faixa de faixas.
 void EnableKeyTips(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 no TRUE para habilitar o recurso keytips; FALSE para desabilitar o recurso keytips.
@@ -753,7 +753,7 @@ Habilita ou desabilita o recurso de **visualização de impressão** .
 void EnablePrintPreview(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 no TRUE para habilitar o recurso de **visualização de impressão** ; FALSE para desabilitar o recurso de **visualização de impressão** .
@@ -774,7 +774,7 @@ void EnableToolTips(
     BOOL bEnableDescr = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bEnable*<br/>
 no TRUE para habilitar dicas de ferramenta na barra da faixa de ferramentas; FALSE para desabilitar as dicas de ferramenta na barra da faixa de ferramentas.
@@ -796,7 +796,7 @@ CMFCRibbonBaseElement* FindByData(
     BOOL bVisibleOnly = TRUE) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwData*<br/>
 no Os dados associados a um elemento Ribbon.
@@ -823,7 +823,7 @@ CMFCRibbonBaseElement* FindByID(
     BOOL bExcludeQAT = FALSE) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiCmdID*<br/>
 no ID de comando para um elemento da faixa de faixas.
@@ -852,7 +852,7 @@ Recupera o índice da categoria da faixa de faixas que contém os dados especifi
 int FindCategoryIndexByData(DWORD dwData) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *dwData*<br/>
 no Os dados associados a uma categoria da faixa de faixas.
@@ -923,7 +923,7 @@ Recupera um ponteiro para a categoria da faixa de faixas no índice especificado
 CMFCRibbonCategory* GetCategory(int nIndex) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 no O índice de base zero de uma categoria da faixa de bits na lista de categorias da faixa de bits contida na barra da faixa de faixas.
@@ -968,7 +968,7 @@ Recupera o índice da categoria da faixa de faixas especificada.
 int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pCategory*<br/>
 no Ponteiro para uma categoria da faixa de faixas.
@@ -987,7 +987,7 @@ BOOL GetContextName(
     CString& strName) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiContextID*<br/>
 no Uma ID de contexto de categoria da faixa de faixas.
@@ -1023,7 +1023,7 @@ void GetElementsByID(
     CArray<CMFCRibbonBaseElement*,CMFCRibbonBaseElement*>& arButtons);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiCmdID*<br/>
 no ID de comando de um elemento da faixa de faixas.
@@ -1065,7 +1065,7 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lstItems*<br/>
 fora A lista de IDs de comando para elementos da faixa de faixas que estão contidos na barra da faixa de faixas.
@@ -1181,7 +1181,7 @@ Recupera uma lista de IDs de comando para os elementos da faixa de guia na barra
 void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lstCommands*<br/>
 fora A lista de IDs de comando para os elementos da faixa de faixas na barra de ferramentas de acesso rápido.
@@ -1303,7 +1303,7 @@ virtual CMFCRibbonBaseElement* HitTest(
     BOOL bCheckPanelCaption= FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *empresas*<br/>
 no Local do ponto nas coordenadas da barra da faixa de faixas.
@@ -1312,7 +1312,7 @@ no Local do ponto nas coordenadas da barra da faixa de faixas.
 no TRUE para pesquisar a categoria ativa; FALSE não pesquisa a categoria ativa.
 
 *bCheckPanelCaption*<br/>
-no TRUE para testar a legenda do painel da faixa de faixas com o ponto localizado nele; FALSE não testar a legenda do painel da faixa de das faixas com o ponto localizado nele. Consulte a seção Comentários para obter mais informações.
+no TRUE para testar a legenda do painel da faixa de faixas com o ponto localizado nele; FALSE não testar a legenda do painel da faixa de das faixas com o ponto localizado nele. Para obter mais informações, consulte a seção Comentários.
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -1408,7 +1408,7 @@ Indica se os grupos de botões localizados na barra da faixa de faixas exibem um
 virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pGroup*<br/>
 no Esse parâmetro não é usado.
@@ -1473,7 +1473,7 @@ virtual void OnClickButton(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pButton*<br/>
 no Ponteiro para o botão que foi clicado.
@@ -1491,7 +1491,7 @@ virtual void OnEditContextMenu(
     CPoint point);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *pEdit*<br/>
 no *ponto*<br/>
@@ -1506,7 +1506,7 @@ Chamado pelo Framework quando o layout muda de direção.
 virtual void OnRTLChanged(BOOL bIsRTL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bIsRTL*<br/>
 no TRUE se o layout for da direita para a esquerda; FALSE se o layout for da esquerda para a direita.
@@ -1523,7 +1523,7 @@ Esse método é interno à estrutura e não se destina a ser chamado a partir do
 BOOL OnSetAccData(long lVal);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 Long *lVal* o índice do objeto acessível.
 
@@ -1543,7 +1543,7 @@ virtual BOOL OnShowRibbonContextMenu(
     CMFCRibbonBaseElement* pHit);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *pWnd*<br/>
 no *x*<br/>
@@ -1564,7 +1564,7 @@ virtual BOOL OnShowRibbonQATMenu(
     CMFCRibbonBaseElement* pHit);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 no *pWnd*<br/>
 no *x*<br/>
@@ -1586,7 +1586,7 @@ BOOL OnSysKeyDown(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFrameWnd*<br/>
 no Ponteiro para a janela do quadro principal pai da barra da faixa de quadros.
@@ -1614,7 +1614,7 @@ BOOL OnSysKeyUp(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pFrameWnd*<br/>
 no Ponteiro para a janela do quadro principal pai da barra da faixa de quadros.
@@ -1649,7 +1649,7 @@ Determina se a mensagem especificada é processada pela barra da faixa de faixas
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pMsg*<br/>
 no Ponteiro para uma mensagem.
@@ -1704,7 +1704,7 @@ Exclui a categoria de faixa de faixas especificada da barra da faixa de faixas.
 BOOL RemoveCategory(int nIndex);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 no O índice de base zero de uma categoria na lista de categorias da faixa de bits contida na barra da faixa de faixas.
@@ -1727,7 +1727,7 @@ BOOL SetActiveCategory(
     BOOL bForceRestore= FALSE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pCategory*<br/>
 no Uma categoria da faixa de faixas que está contida na barra da faixa de faixas.
@@ -1753,7 +1753,7 @@ Associa os botões do sistema na barra da faixa de faixas que pertencem a uma ja
 void SetActiveMDIChild(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pWnd*<br/>
 no Ponteiro para uma janela filho MDI.
@@ -1770,7 +1770,7 @@ void SetApplicationButton(
     CSize sizeButton);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pButton*<br/>
 no Um ponteiro para o botão da faixa de de do aplicativo.
@@ -1782,7 +1782,7 @@ no O tamanho do botão da faixa de de um aplicativo.
 
 O botão de faixa de forma do aplicativo é um grande botão arredondado localizado no canto superior esquerdo do controle da faixa de forma.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra como usar o método `SetApplicationButton` na classe `CMFCRibbonBar`.
 
@@ -1799,7 +1799,7 @@ BOOL SetElementKeys(
     LPCTSTR lpszMenuKeys= NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiCmdID*<br/>
 no A ID de comando de um elemento da faixa de faixas.
@@ -1828,7 +1828,7 @@ void SetKeyboardNavigationLevel(
     BOOL bSetFocus = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *pLevel*<br/>
 no Ponteiro para o objeto de navegação do teclado atual.
@@ -1850,7 +1850,7 @@ void SetMaximizeMode(
     CWnd* pWnd = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bMax*<br/>
 no TRUE para exibir os botões do sistema para uma janela filho MDI na barra da faixa de faixas; FALSE para remover os botões do sistema de uma janela filho MDI da barra da faixa de faixas.
@@ -1872,7 +1872,7 @@ void SetQuickAccessCommands(
     BOOL bRecalcLayout=TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lstCommands*<br/>
 no A lista de comandos a serem colocados na barra de ferramentas de acesso rápido.
@@ -1880,7 +1880,7 @@ no A lista de comandos a serem colocados na barra de ferramentas de acesso rápi
 *bRecalcLayout*<br/>
 no TRUE se desejar redesenhar a faixa de faixas depois de adicionar os elementos da faixa de faixas; Caso contrário, FALSE.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra como usar o método `SetQuickAccessCommands` na classe `CMFCRibbonBar`.
 
@@ -1894,7 +1894,7 @@ Define a barra de ferramentas de acesso rápido para o estado padrão.
 void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& state);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *state*<br/>
 no O estado padrão da barra de ferramentas de acesso rápido.
@@ -1903,7 +1903,7 @@ no O estado padrão da barra de ferramentas de acesso rápido.
 
 O estado da barra de ferramentas de acesso rápido inclui uma lista de comandos e sua visibilidade.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra como usar o método `SetQuickAccessDefaultState` na classe `CMFCRibbonBar`.
 
@@ -1917,7 +1917,7 @@ Posiciona a barra de ferramentas de acesso rápido acima ou abaixo da barra da f
 void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bOnTop*<br/>
 no TRUE para posicionar a barra de ferramentas de acesso rápido acima da barra da faixa de opções; FALSE para posicionar a barra de ferramentas de acesso rápido abaixo da barra da faixa de faixas.
@@ -1932,7 +1932,7 @@ void SetTooltipFixedWidth(
     int nWidthLargeImage);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nWidthRegular*<br/>
 no A largura, em pixels, de uma dica de ferramenta de tamanho fixo regular.
@@ -1954,7 +1954,7 @@ void ShowCategory(
     BOOL bShow=TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nIndex*<br/>
 no O índice da categoria da faixa de faixas.
@@ -1972,7 +1972,7 @@ void ShowContextCategories(
     BOOL bShow=TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiContextID*<br/>
 no A ID da categoria de contexto.
@@ -2012,7 +2012,7 @@ Determina se o código de caractere de pressionamento de tecla especificado é p
 virtual BOOL TranslateChar(UINT nChar);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nChar*<br/>
 no Um código de caractere de pressionamento de tecla.
@@ -2069,7 +2069,7 @@ virtual BOOL LoadFromResource(
     HINSTANCE hInstance = NULL);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uiXMLResID*<br/>
 Especifica a ID de recurso da cadeia de caracteres XML com informações da barra de faixa de faixas.
@@ -2097,7 +2097,7 @@ Salva a barra da faixa de faixas em um buffer.
 UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *ppBuffer*<br/>
 Quando essa função retorna, *ppBuffer* aponta para um buffer alocado por esse método e contém informações da barra de faixa de faixas no formato XML.
@@ -2116,7 +2116,7 @@ Salva a barra da faixa de faixas em um arquivo XML.
 BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *lpszFilePath*<br/>
 Especifica o arquivo de saída.
@@ -2137,7 +2137,7 @@ void SetWindows7Look(
     BOOL bRecalc = TRUE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *bWindows7Look*<br/>
 TRUE define a aparência do Windows 7; Caso contrário, FALSE.
@@ -2147,7 +2147,7 @@ TRUE recalcula o layout da faixa de opção; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MFC, library versions
 - libraries [MFC], versions
 ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856794"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420172"
 ---
 # <a name="mfc-library-versions"></a>Versões de biblioteca MFC
 
@@ -97,7 +97,7 @@ onde as letras mostradas em minúsculas em itálico são espaços reservados par
 
 Todas as bibliotecas listadas na tabela a seguir são incluídas predefinidas no diretório \atlmfc\lib para arquiteturas de compilação com suporte.
 
-|Biblioteca|Descrição|
+|Biblioteca|DESCRIÇÃO|
 |-------------|-----------------|
 |NAFXCW.LIB|Biblioteca de vínculos estáticos do MFC, versão de lançamento|
 |NAFXCWD.LIB|Biblioteca de vínculos estáticos do MFC, versão de depuração|
@@ -114,7 +114,7 @@ As DLLs compartilhadas do MFC também seguem uma Convenção de nomenclatura est
 
 As DLLs do MFC têm números de *versão* que indicam a compatibilidade binária. Use as DLLs do MFC que têm a mesma versão que as outras bibliotecas e o conjunto de ferramentas do compilador para garantir a compatibilidade em um projeto.
 
-|DLL|Descrição|
+|DLL|DESCRIÇÃO|
 |---------|-----------------|
 |*Versão*do MFC. DLL|DLL de versão do MFC, ANSI ou MBCS|
 |DLL de*versão*do MFC|DLL do MFC, versão de lançamento Unicode|
@@ -139,6 +139,6 @@ Você pode usar as bibliotecas do MFC dinâmicos ou estáticas para criar DLLs q
 
 Quando você cria seu projeto de DLL vinculando-se às bibliotecas estáticas do MFC, sua DLL pode ser implantada sem as DLLs compartilhadas do MFC. Quando o projeto de DLL é vinculado à*versão*do MFC de bibliotecas de importação. LIB ou MFC*versão*U. lib, você deve implantar a*versão*do MFC Shared DLL compartilhada correspondente. DLL ou o MFC*versão*U. dll junto com sua dll. Para obter mais informações, consulte [DLLs](../build/dlls-in-visual-cpp.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Tópicos gerais do MFC](../mfc/general-mfc-topics.md)
