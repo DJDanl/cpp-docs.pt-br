@@ -25,7 +25,6 @@ topic_type:
 f1_keywords:
 - _isgraph_l
 - _iswgraph_l
-- _ismbcgraph_l
 - Isgraph
 - _istgraph_l
 - _istgraph
@@ -40,12 +39,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-ms.openlocfilehash: 88219ca6dc4218fc13f7d7c0b5f2ba399c07d501
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 282f11dfa6a4545b672419d42fe960c0e5001fbf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954873"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442971"
 ---
 # <a name="isgraph-iswgraph-_isgraph_l-_iswgraph_l"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
 
@@ -75,7 +74,7 @@ int _iswgraph_l(
 *c*<br/>
 Inteiro a ser testado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma dessas rotinas retornará zero se *c* for uma representação específica de um caractere imprimível que não seja um espaço. **isgraph** retornará um valor diferente de zero se *c* for um caractere imprimível que não seja um espaço. **iswgraph** retornará um valor diferente de zero se *c* for um caractere largo imprimível diferente de um espaço de caracteres largo. Cada uma dessas rotinas retornará 0 se *c* não atender à condição de teste.
 
@@ -90,7 +89,7 @@ O comportamento de **isgraph** e **_isgraph_l** será indefinido se *c* não for
 |**_istgraph**|**isgraph**|[_ismbcgraph](ismbcgraph-functions.md)|**iswgraph**|
 |**_istgraph_l**|**_isgraph_l**|[_ismbcgraph_l](ismbcgraph-functions.md)|**_iswgraph_l**|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|

@@ -21,15 +21,9 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- _strnicmp
-- _wcsnicmp_l
 - _mbsnbicmp
 - mbsnbicmp
 - mbsnbicmp_l
-- _tcsnicmp
-- _strnicmp_l
-- _tcsnicmp_l
-- _wcsnicmp
 - _mbsnbicmp_l
 helpviewer_keywords:
 - _tcsnicmp_l function
@@ -43,19 +37,19 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: 19ffa4c47f0144ba136607fe5cef09e9bd65374f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c7a4d5def115101c9f3fbd6c53d649ab5b122f1c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952183"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442839"
 ---
 # <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp, _mbsnbicmp_l
 
 Compara **n** bytes de duas cadeias de caracteres multibyte e ignora maiúsculas e minúsculas.
 
 > [!IMPORTANT]
-> Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -69,13 +63,13 @@ int _mbsnbicmp(
 
 ### <a name="parameters"></a>Parâmetros
 
-*string1*, *string2*<br/>
+*seqüência1*, *seqüência2*<br/>
 Cadeias de caracteres com terminação nula.
 
 *count*<br/>
 Número de bytes a serem comparados.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O valor retornado indica a relação entre as subcadeias de caracteres.
 
@@ -89,13 +83,13 @@ Em um erro, **_mbsnbicmp** retorna **_NLSCMPERROR**, que é definido em String. 
 
 ## <a name="remarks"></a>Comentários
 
-A função **_mbsnbicmp** executa uma comparação ordinal de, no máximo, os bytes da primeira *contagem* de *seqüência1* e *seqüência2*. A comparação é executada convertendo cada caractere em minúsculas; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) é uma versão com diferenciação de maiúsculas e minúsculas do **_mbsnbicmp**. A comparação terminará se um caractere nulo de terminação for atingido em qualquer cadeia de caracteres antes de a *contagem* deles ser comparada. Se as cadeias de caracteres forem iguais quando um caractere nulo de terminação for atingido em uma cadeia de caracteres antes de a *contagem* de caracteres serem comparados, a cadeia de caracteres menor será menor.
+A função **_mbsnbicmp** executa uma comparação ordinal de, no máximo, os bytes da primeira *contagem* de *seqüência1* e *seqüência2*. A comparação é executada convertendo cada caractere em minúsculas; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) é uma versão de **_mbsnbicmp**que diferencia maiúsculas de minúsculas. A comparação terminará se um caractere nulo de terminação for atingido em qualquer cadeia de caracteres antes de a *contagem* deles ser comparada. Se as cadeias de caracteres forem iguais quando um caractere nulo de terminação for atingido em uma cadeia de caracteres antes de a *contagem* de caracteres serem comparados, a cadeia de caracteres menor será menor.
 
 **_mbsnbicmp** é semelhante a [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), exceto pelo fato de que ele compara Cadeias de caracteres com até *contagem* de bytes, em vez de personagens.
 
 Duas cadeias de caracteres que contêm caracteres localizados entre 'Z' e 'a' na tabela ASCII ('[', '\\', ']', '^', '_' e '\`') são comparadas de modo diferente, dependendo das maiúsculas e minúsculas delas. Por exemplo, as duas cadeias de caracteres "ABCDE" e "ABCD ^" comparam uma maneira se a comparação for minúscula ("ABCDE" > "abcd ^") e a outra maneira ("ABCDE" < "ABCD ^") se for maiúscula.
 
-o **_mbsnbicmp** reconhece sequências de caracteres multibyte de acordo com a [página de código multibyte](../../c-runtime-library/code-pages.md) em uso no momento. Ela não é afetada pela configuração da localidade atual.
+**_mbsnbicmp** reconhece seqüências de caracteres multibyte de acordo com a [página de código multibyte](../../c-runtime-library/code-pages.md) em uso no momento. Ela não é afetada pela configuração da localidade atual.
 
 Se *seqüência1* ou *seqüência2* for um ponteiro nulo, **_mbsnbicmp** invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **_NLSCMPERROR** e definirá **errno** como **EINVAL**.
 
@@ -106,7 +100,7 @@ Se *seqüência1* ou *seqüência2* for um ponteiro nulo, **_mbsnbicmp** invocar
 |**_tcsnicmp**|**_strnicmp**|**_mbsnbicmp**|**_wcsnicmp**|
 |**_tcsnicmp_l**|**_strnicmp_l**|**_mbsnbicmp_l**|**_wcsnicmp_l**|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -114,7 +108,7 @@ Se *seqüência1* ou *seqüência2* for um ponteiro nulo, **_mbsnbicmp** invocar
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Veja o exemplo de [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md).
 

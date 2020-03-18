@@ -1,8 +1,6 @@
 ---
 title: Console e E/S de porta
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - routines, console and port I/O
 - routines
@@ -11,12 +9,12 @@ helpviewer_keywords:
 - I/O [CRT], port
 - I/O routines, console and port I/O
 ms.assetid: 0eee1c92-9b3d-41e0-a43a-257e546eeec8
-ms.openlocfilehash: 55f97a70f2ce12f6363d234e9bbc9384d7ee9fe1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 5b4dc2a081ea11bd84d932f55b5b247de81f296a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752370"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443452"
 ---
 # <a name="console-and-port-io"></a>Console e E/S de porta
 
@@ -45,4 +43,4 @@ Essas rotinas fazem leitura e gravação no seu console ou na porta especificada
 ## <a name="see-also"></a>Consulte também
 
 [Entrada e saída](../c-runtime-library/input-and-output.md)<br/>
-[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

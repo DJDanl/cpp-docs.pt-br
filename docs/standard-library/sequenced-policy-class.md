@@ -1,18 +1,18 @@
 ---
-title: Classe de sequenced_policy
+title: Classe sequenced_policy
 ms.date: 04/18/2019
 f1_keywords:
-- execution/std::execution::parallel_policy
-ms.openlocfilehash: 63be7166b84fa452f53baf6b6de16831eb657a23
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+- execution/std::execution::sequenced_policy
+ms.openlocfilehash: 5647f20b560828016231a9bbd38977c51211e6bb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269188"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444921"
 ---
-# <a name="sequencedpolicy-class"></a>Classe de sequenced_policy
+# <a name="sequenced_policy-class"></a>Classe sequenced_policy
 
-Usado como um tipo exclusivo para resolver a ambiguidade de sobrecarga de algoritmo paralelo e exigem a execução de um algoritmo paralelo não pode ser paralelizada.
+Usado como um tipo exclusivo para desambiguar a sobrecarga de algoritmo paralelo e exigir que a execução de um algoritmo paralelo não seja paralelizada.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -22,4 +22,4 @@ class execution::sequenced_policy;
 
 ## <a name="remarks"></a>Comentários
 
-Durante a execução de um algoritmo paralelo com o `execution::sequenced_policy` política, se a invocação de uma função de acesso de elemento sai por meio de uma exceção não percebida, `terminate()` deverá ser chamado.
+Durante a execução de um algoritmo paralelo com a política de `execution::sequenced_policy`, se a invocação de uma função de acesso de elemento sair por meio de uma exceção não capturada, `terminate()` deverá ser chamado.

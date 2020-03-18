@@ -1,24 +1,22 @@
 ---
 title: Usando CToolTipCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CToolTipCtrl
 helpviewer_keywords:
 - CToolTipCtrl class [MFC], creating tool tips
 - CToolTipCtrl class
 ms.assetid: 8fc58a04-4792-4223-a092-d349d11344da
-ms.openlocfilehash: 06f296fc21a6ad4480755289d30b5ff4ac27ca8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a750a9927f5cf36cb0232b3ce1bac1720f7020f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411612"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442206"
 ---
 # <a name="using-ctooltipctrl"></a>Usando CToolTipCtrl
 
-O [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) classe encapsula a funcionalidade de um controle de dica de ferramenta, uma pequena janela pop-up que exibe uma única linha de texto que descreve a finalidade de uma ferramenta em um aplicativo. Uma dica de ferramenta está oculta a maioria das vezes, que aparecem somente quando o usuário coloca o cursor em uma ferramenta e deixa-lo lá para aproximadamente metade em segundo lugar. A dica de ferramenta aparece perto do cursor e desaparece quando o usuário clica em um botão do mouse ou move o cursor da ferramenta.
+A classe [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) encapsula a funcionalidade de um controle de dica de ferramenta, uma pequena janela pop-up que exibe uma única linha de texto que descreve a finalidade de uma ferramenta em um aplicativo. Uma dica de ferramenta é oculta na maior parte do tempo, aparecendo somente quando o usuário coloca o cursor em uma ferramenta e a deixa lá por aproximadamente um meio segundo. A dica de ferramenta aparece perto do cursor e desaparece quando o usuário clica em um botão do mouse ou move o cursor para fora da ferramenta.
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
 - [Métodos de criação de dicas de ferramenta](../mfc/methods-of-creating-tool-tips.md)
 

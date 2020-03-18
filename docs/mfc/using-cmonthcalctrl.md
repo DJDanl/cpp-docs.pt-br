@@ -1,24 +1,22 @@
 ---
 title: Usando CMonthCalCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CMonthCalCtrl
 helpviewer_keywords:
 - CMonthCalCtrl class [MFC], about CMonthCalCtrl class
 ms.assetid: 2be0e8c2-ed03-4853-aea1-4461eba18611
-ms.openlocfilehash: e21cba7062a21913c5be230d3488d963fb8b769b
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: f13532b67fa129d0fed402deef2696c0bc25f585
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631679"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441938"
 ---
 # <a name="using-cmonthcalctrl"></a>Usando CMonthCalCtrl
 
 O[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)(controle de calendário mensal) implementa uma interface de usuário do tipo calendário. Isso fornece ao usuário um método muito intuitivo e reconhecível de inserir ou selecionar uma data. O controle também fornece ao aplicativo os meios para obter e definir as informações de data no controle usando tipos de dados existentes. Por padrão, o controle de calendário mensal exibe o dia e o mês atuais. No entanto, o usuário é capaz de rolar para os meses anteriores e posteriores e selecionar um mês e/ou ano específico.
 
 > [!NOTE]
->  Para usar a `CMonthCalCtrl` classe em seu projeto, você deve incluir AFXDTCTL. H, geralmente em *stdafx. h*.
+>  Para usar a classe `CMonthCalCtrl` em seu projeto, você deve incluir AFXDTCTL. H, geralmente em *stdafx. h*.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 

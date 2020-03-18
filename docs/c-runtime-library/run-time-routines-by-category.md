@@ -1,24 +1,22 @@
 ---
-title: Rotinas de tempo de execução C universais por categoria
+title: Rotinas de runtime C universais por categoria
 ms.date: 04/06/2018
-f1_keywords:
-- c.runtime
 helpviewer_keywords:
 - routines, run-time
 - functions [CRT], run-time
 - categories, run-time functions
 - functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
-ms.openlocfilehash: 0f81ad76a535cc4e4f5aa740e1501d3ffd323e2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 4da18db2278a38fd7c59010d2c64d5cb804ad4eb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499574"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444815"
 ---
-# <a name="universal-c-runtime-routines-by-category"></a>Rotinas de tempo de execução C universais por categoria
+# <a name="universal-c-runtime-routines-by-category"></a>Rotinas de runtime C universais por categoria
 
-Esta seção lista e descreve rotinas da biblioteca em UCRT (tempo de execução C universal) por categoria. Para comodidade de referência, algumas rotinas são listadas em mais de uma categoria. As rotinas de caracteres multibyte e as rotinas de caracteres largos são agrupadas com as contrapartes de caracteres de byte único, onde elas existem.
+Esta seção lista e descreve rotinas da biblioteca em UCRT (runtime C universal) por categoria. Para comodidade de referência, algumas rotinas são listadas em mais de uma categoria. As rotinas de caracteres multibyte e as rotinas de caracteres largos são agrupadas com as contrapartes de caracteres de byte único, onde elas existem.
 
 ## <a name="ucrt-library-routine-categories"></a>Categorias de rotina de biblioteca em UCRT
 

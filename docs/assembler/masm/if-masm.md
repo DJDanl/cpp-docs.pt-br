@@ -1,17 +1,15 @@
 ---
 title: IF (MASM)
 ms.date: 12/17/2019
-f1_keywords:
-- if
 helpviewer_keywords:
 - IF directive
 ms.assetid: 82e43712-4f0c-4bf6-90ce-0663e81af707
-ms.openlocfilehash: 38d366a3a41e7b08759594899cdcbb2cb84dfbfa
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 6e63f5c8075b3c94370ad8863d224c097cf0ecdf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317286"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440754"
 ---
 # <a name="if"></a>IF
 
@@ -31,7 +29,7 @@ Concede o assembly de *ifstatements* se *expressão1* for true (diferente de zer
 
 As seguintes diretivas podem ser substituídas por [ElseIf](elseif-masm.md): **ELSEIFB**, **ELSEIFDEF**, **ELSEIFDIF**, **ELSEIFDIFI**, **ElseIf**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**e **ELSEIFNDEF**. Opcionalmente, o monta *instruções ELSE* se a expressão anterior for false. Observe que as expressões são avaliadas no momento do assembly.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Referência de diretivas](directives-reference.md)\
 [MASM BNF Grammar](masm-bnf-grammar.md)

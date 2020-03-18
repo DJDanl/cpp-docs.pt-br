@@ -74,7 +74,6 @@ f1_keywords:
 - _WIN32
 - _WIN64
 - _WINRT_DLL
-- __func__
 helpviewer_keywords:
 - timestamps, preprocessor macro
 - cl.exe compiler, version number
@@ -226,12 +225,12 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: ff3945fa9476e090f26ce029c63b1813401082e0
-ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
+ms.openlocfilehash: 6da1ecd178c0bbeed3b741fb611571203d79cb76
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473842"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444946"
 ---
 # <a name="predefined-macros"></a>Macros predefinidas
 
@@ -460,7 +459,7 @@ O MSVC dá suporte a essas macros predefinidas adicionais.
    |Visual Studio 6.0|1200|
    |Visual Studio .NET 2002 (7,0)|1300|
    |Visual Studio .NET 2003 (7,1)|1310|
-   |Visual Studio 2005 (8,0)|1\.400|
+   |Visual Studio 2005 (8,0)|1400|
    |Visual Studio 2008 (9,0)|1500|
    |Visual Studio 2010 (10,0)|1600|
    |Visual Studio 2012 (11,0)|1700|
@@ -544,7 +543,7 @@ Nenhuma macro de pré-processador que identifique a versão da Biblioteca ATL ou
 
 - `_MFC_VER` definido em \<afxver_. h > como um literal inteiro que codifica o número de versão do MFC.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Macros (C/C++)](../preprocessor/macros-c-cpp.md)<br/>
 [Operadores de pré-processador](../preprocessor/preprocessor-operators.md)<br/>

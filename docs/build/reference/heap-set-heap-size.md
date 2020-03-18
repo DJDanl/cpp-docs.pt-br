@@ -3,7 +3,6 @@ title: /HEAP (definir tamanho do heap)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.HeapCommitSize
-- /heap
 - VC.Project.VCLinkerTool.HeapReserveSize
 helpviewer_keywords:
 - -HEAP linker option
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - /HEAP linker option
 - HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
-ms.openlocfilehash: 715eaa358d052d4ae646f38f2e784f0235dffccb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f155ad56ec1a90479b402e38e7ec7f3e3d80e470
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270348"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439528"
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (definir tamanho do heap)
 
@@ -26,25 +25,25 @@ ms.locfileid: "62270348"
 
 ## <a name="remarks"></a>Comentários
 
-A opção /HEAP define o tamanho do heap em bytes. Essa opção é somente para uso ao criar um arquivo .exe.
+A opção/HEAP define o tamanho do heap em bytes. Essa opção só é usada para a criação de um arquivo. exe.
 
-O *reservar* argumento especifica a alocação de heap total na memória virtual. O tamanho do heap padrão é 1 MB. O vinculador Arredonda o valor especificado para o mais próximo de 4 bytes.
+O argumento *Reserve* especifica a alocação de heap total na memória virtual. O tamanho de heap padrão é 1 MB. O vinculador arredonda o valor especificado para os 4 bytes mais próximos.
 
-Opcional `commit` argumento especifica a quantidade de memória física para alocar por vez. Memória virtual confirmada faz com que o espaço a ser reservado no arquivo de paginação. Uma maior `commit` valor economiza tempo quando o aplicativo precisa de mais espaço de heap, mas aumenta os requisitos de memória e, possivelmente, o tempo de inicialização.
+O argumento opcional `commit` especifica a quantidade de memória física a ser alocada de cada vez. A memória virtual confirmada faz com que o espaço seja reservado no arquivo de paginação. Um valor mais alto `commit` economiza tempo quando o aplicativo precisa de mais espaço de heap, mas aumenta os requisitos de memória e, possivelmente, o tempo de inicialização.
 
-Especifique o *reservar* e `commit` valores em decimal ou notação de linguagem C.
+Especifique os valores de *reserva* e `commit` em notação decimal ou C-Language.
 
-Essa funcionalidade também está disponível por meio de um arquivo de definição de módulo com [HEAPSIZE](heapsize.md).
+Essa funcionalidade também está disponível por meio de um arquivo de definição de módulo com [heapsize](heapsize.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Clique o **vinculador** pasta.
+1. Clique na pasta **Vinculador**.
 
-1. Clique o **sistema** página de propriedades.
+1. Clique na página de propriedades do **sistema** .
 
-1. Modificar a **tamanho de confirmação de Heap** propriedade.
+1. Modifique a propriedade **tamanho de confirmação de heap** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 

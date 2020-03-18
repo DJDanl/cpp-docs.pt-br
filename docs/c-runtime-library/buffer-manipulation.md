@@ -1,18 +1,16 @@
 ---
 title: Manipulação de buffer
 ms.date: 04/04/2018
-f1_keywords:
-- c.memory
 helpviewer_keywords:
 - buffers, manipulation routines
 - buffers
 ms.assetid: 164f4860-ce66-412c-8291-396fbd70f03e
-ms.openlocfilehash: e8a449cbfa6a52ccc2346e2215ce187c09d677e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: a79bfdb33d2bff5e18c916a2e116ab03251afdf1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590496"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443592"
 ---
 # <a name="buffer-manipulation"></a>Manipulação de buffer
 
@@ -35,4 +33,4 @@ Quando as áreas de origem e de destino se sobrepõem, apenas **memmove** é gar
 
 ## <a name="see-also"></a>Consulte também
 
-[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)
+[Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)

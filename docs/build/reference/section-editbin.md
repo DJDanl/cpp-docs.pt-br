@@ -2,19 +2,19 @@
 title: /SECTION (EDITBIN)
 ms.date: 11/04/2016
 f1_keywords:
-- /section
+- /section_editbin
 helpviewer_keywords:
 - -SECTION editbin option
 - SECTION editbin option
 - alignment characters in sections
 - /SECTION editbin option
 ms.assetid: 4680ab4e-c984-4251-8241-93440cad7615
-ms.openlocfilehash: 8bcc925b34118630c872a0147b93291626b7c19b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 770e1d1c1cf288a7fe68f5bd076791d43f5b8572
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318596"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438918"
 ---
 # <a name="section-editbin"></a>/SECTION (EDITBIN)
 
@@ -24,30 +24,30 @@ ms.locfileid: "62318596"
 
 ## <a name="remarks"></a>Comentários
 
-Esta opção altera os atributos de uma seção, sobrescrevendo os atributos que foram definidos quando o arquivo de objeto para a seção foi compilado ou vinculado.
+Essa opção altera os atributos de uma seção, substituindo os atributos que foram definidos quando o arquivo de objeto da seção foi compilado ou vinculado.
 
-Após os dois-pontos ( **:** ), especifique a *nome* da seção. Para alterar o nome da seção, execute *nome* com um sinal de igual (=) e um *newname* para a seção.
+Após os dois-pontos ( **:** ), especifique o *nome* da seção. Para alterar o nome da seção, siga o *nome* com um sinal de igual (=) e um *NewName* para a seção.
 
-Para definir ou alterar a seção `attributes`, especifique uma vírgula (**,**) seguido por um ou mais caracteres de atributos. Para negar a um atributo, preceda seu caractere com um ponto de exclamação (!). Os seguintes caracteres especificam atributos de memória:
+Para definir ou alterar o `attributes`da seção, especifique uma vírgula ( **,** ) seguida de um ou mais caracteres de atributos. Para negar um atributo, preceda seu caractere com um ponto de exclamação (!). Os seguintes caracteres especificam atributos de memória:
 
 |Atributo|Configuração|
 |---------------|-------------|
 |c|código|
-|d|Descartável|
+|d|Descartado|
 |e|executável|
-|i|dados inicializados|
-|k|memória de virtual em cache|
-|m|Remover link|
+|{1&gt;i&lt;1}|dados inicializados|
+|k|memória virtual armazenada em cache|
+|m|remover link|
 |o|informações de link|
-|p|memória virtual paginável|
+|p|memória virtual paginada|
 |r|read|
-|s|shared|
+|s|compartilhadas|
 |u|dados não inicializados|
-|W|write|
+|w|write|
 
-Para controlar *alinhamento*, especifique o caractere **um** seguido por um dos caracteres a seguir para definir o tamanho de alinhamento em bytes, da seguinte maneira:
+Para controlar o *alinhamento*, especifique o caractere **a** seguido de um dos caracteres a seguir para definir o tamanho do alinhamento em bytes, da seguinte maneira:
 
-|Caractere|Tamanho de alinhamento em bytes|
+|Caractere|Tamanho do alinhamento em bytes|
 |---------------|-----------------------------|
 |1|1|
 |2|2|
@@ -58,7 +58,7 @@ Para controlar *alinhamento*, especifique o caractere **um** seguido por um dos 
 |s|64|
 |x|sem alinhamento|
 
-Especifique o `attributes` e *alinhamento* caracteres como uma cadeia de caracteres com nenhum espaço em branco. Os caracteres não diferenciam maiusculas de minúsculas.
+Especifique os `attributes` e os caracteres de *alinhamento* como uma cadeia de caracteres sem espaço em branco. Os caracteres não diferenciam maiúsculas de minúsculas.
 
 ## <a name="see-also"></a>Consulte também
 

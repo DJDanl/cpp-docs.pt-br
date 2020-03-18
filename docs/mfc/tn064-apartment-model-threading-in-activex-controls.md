@@ -1,8 +1,6 @@
 ---
-title: 'TN064: Threading de modelo de apartamento em controles ActiveX'
+title: 'TN064: modelo Apartment Threading em controles ActiveX'
 ms.date: 11/04/2016
-f1_keywords:
-- vc.controls.activex
 helpviewer_keywords:
 - OLE controls [MFC], container support
 - containers [MFC], multithreaded
@@ -10,14 +8,14 @@ helpviewer_keywords:
 - multithread container [MFC]
 - apartment model threading [MFC]
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
-ms.openlocfilehash: 2c6b9dd3ed244f7169e5055eebe7a34e3345e841
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f490e82e179da4614eea345136a9edfb1d320705
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513328"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442108"
 ---
-# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: Threading de modelo de apartamento em controles ActiveX
+# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: modelo Apartment Threading em controles ActiveX
 
 > [!NOTE]
 >  A observação técnica a seguir não foi atualizada desde que foi incluída pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizados ou incorretos. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice de documentação online.
@@ -40,7 +38,7 @@ A habilitação do Threading de modelo Apartment é fácil para a maioria dos co
 
 ## <a name="protecting-shared-data"></a>Protegendo dados compartilhados
 
-Se o seu controle usa dados compartilhados, como uma variável de membro estático, o acesso a esses dados deve ser protegido com uma seção crítica para impedir que mais de um thread modifique os dados ao mesmo tempo. Para configurar uma seção crítica para essa finalidade, declare uma variável de membro estático da classe `CCriticalSection` na classe do seu controle. Use as `Lock` funções `Unlock` de membro e deste objeto de seção crítica sempre que seu código acessar os dados compartilhados.
+Se o seu controle usa dados compartilhados, como uma variável de membro estático, o acesso a esses dados deve ser protegido com uma seção crítica para impedir que mais de um thread modifique os dados ao mesmo tempo. Para configurar uma seção crítica para essa finalidade, declare uma variável de membro estático da classe `CCriticalSection` na classe do seu controle. Use as funções de membro `Lock` e `Unlock` deste objeto de seção crítica onde quer que seu código acesse os dados compartilhados.
 
 Considere, por exemplo, uma classe de controle que precisa manter uma cadeia de caracteres que é compartilhada por todas as instâncias. Essa cadeia de caracteres pode ser mantida em uma variável de membro estático e protegida por uma seção crítica. A declaração de classe do controle conterá o seguinte:
 
@@ -60,7 +58,7 @@ int CString CSampleCtrl::_strShared;
 CCriticalSection CSampleCtrl::_critSect;
 ```
 
-O acesso ao `_strShared` membro estático pode então ser protegido pela seção crítica:
+O acesso ao membro estático `_strShared` pode então ser protegido pela seção crítica:
 
 ```
 void CSampleCtrl::SomeMethod()
@@ -76,7 +74,7 @@ if (_strShared.Empty())
 
 ## <a name="registering-an-apartment-model-aware-control"></a>Registrando um controle com reconhecimento de modelo de apartamento
 
-Os controles que dão suporte ao Threading de modelo Apartment devem indicar esse recurso no registro, adicionando o valor nomeado "ThreadingModel" com um valor de "Apartment" na entrada do registro de ID de classe sob a *ID* \\  **de classe Chave InprocServer32** . Para fazer com que essa chave seja automaticamente registrada para seu controle, passe o sinalizador *afxRegApartmentThreading* no sexto parâmetro `AfxOleRegisterControlClass`para:
+Controles que dão suporte a Threading de modelo Apartment devem indicar esse recurso no registro, adicionando o valor nomeado "ThreadingModel" com um valor de "Apartment" em sua entrada de registro de ID de classe sob a chave *ID de classe*\\**InprocServer32** . Para fazer com que essa chave seja automaticamente registrada para seu controle, passe o sinalizador *afxRegApartmentThreading* no sexto parâmetro para `AfxOleRegisterControlClass`:
 
 ```
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)

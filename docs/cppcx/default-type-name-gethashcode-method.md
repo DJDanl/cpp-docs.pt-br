@@ -1,19 +1,17 @@
 ---
 title: Método default::(type_name)::GetHashCode
 ms.date: 12/30/2016
-f1_keywords:
-- VCCORLIB/Platform::Object::GetHashCode
 ms.assetid: 58ea60f8-f820-4103-9b9b-b6635ada3fa5
-ms.openlocfilehash: 427756e8e87162738bd2297f1f6edc5af8d7b194
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f64607ab21cd0fd5deccbd16f3f69f96e4d245b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176103"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444307"
 ---
-# <a name="defaulttypenamegethashcode-method"></a>Método default::(type_name)::GetHashCode
+# <a name="defaulttype_namegethashcode-method"></a>Método default::(type_name)::GetHashCode
 
-Retorna o código hash para essa instância.
+Retorna o código hash para a instância.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -21,15 +19,15 @@ Retorna o código hash para essa instância.
 public:int GetHashCode();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O código hash para essa instância.
+O código hash para esta instância.
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cliente com suporte mínimo:** Windows 8
+**Mínimo de cliente com suporte:** Windows 8
 
-**Servidor com suporte mínimo:** Windows Server 2012
+**Mínimo de servidor com suporte:** Windows Server 2012
 
 **Namespace:** padrão
 

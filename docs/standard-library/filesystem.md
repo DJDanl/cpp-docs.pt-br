@@ -3,11 +3,6 @@ title: '&lt;filesystem&gt;'
 description: Descreve as classes, funções e tipos no cabeçalho filesystem da biblioteca padrão C++ .
 ms.date: 01/22/2020
 f1_keywords:
-- filesystem/std::experimental::filesystem::directory_entry
-- filesystem/std::experimental::filesystem::recursive_directory_iterator
-- filesystem/std::experimental::filesystem::path
-- filesystem/std::experimental::filesystem::filesystem_error
-- filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 no-loc:
@@ -17,12 +12,12 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: dbe6dc89d5460a08ffafd86aa3fcd01222c82166
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: f9e384953a4e675ad6235a274c447031976a1585
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725676"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441714"
 ---
 # &lt;filesystem&gt;
 
@@ -135,6 +130,6 @@ Para obter mais informações e exemplos de código, consulte [navegação doC++
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)| Enumera as opções para a função `permissions`. |
 |[perms](../standard-library/filesystem-enumerations.md#perms)|Um tipo de bitmask usado para transmitir permissões e opções de permissões|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)

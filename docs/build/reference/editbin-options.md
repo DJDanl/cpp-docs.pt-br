@@ -2,17 +2,15 @@
 title: Opções EDITBIN
 description: Guia de referência para as opções de linha de comando do utilitário do Microsoft EDITBIN.
 ms.date: 02/09/2020
-f1_keywords:
-- editbin
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-ms.openlocfilehash: c27172522ceabeccd06d7b957aa791edc49beec8
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 9fd4170e5ee020780963d83936f1a9fd08d2be11
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257696"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439960"
 ---
 # <a name="editbin-options"></a>Opções EDITBIN
 
@@ -22,7 +20,7 @@ Uma opção consiste em um especificador de opção, que é um traço (`-`) ou u
 
 EDITBIN tem as seguintes opções:
 
-|Opção|Finalidade|
+|{1&gt;Opção&lt;1}|Finalidade|
 |------------|-------------|
 |[/ALLOWBIND](allowbind.md)|Especifica se uma DLL pode ser associada.|
 |[/ALLOWISOLATION](allowisolation.md)|Especifica o comportamento de pesquisa de manifesto de arquivo executável ou DLL.|
@@ -45,7 +43,7 @@ EDITBIN tem as seguintes opções:
 |[/TSAWARE](tsaware.md)|Especifica que o aplicativo foi projetado para ser executado em um ambiente de vários usuários.|
 |[/VERSION](version.md)|Define o número de versão no cabeçalho.|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Ferramentas de compilação MSVC adicionais](c-cpp-build-tools.md)\
 [Referência de EDITBIN](editbin-reference.md)

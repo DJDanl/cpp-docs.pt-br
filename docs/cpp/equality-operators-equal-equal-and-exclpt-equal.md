@@ -2,7 +2,6 @@
 title: 'Operadores de igualdade: == e !='
 ms.date: 11/04/2016
 f1_keywords:
-- not_eq
 - '!='
 - ==
 helpviewer_keywords:
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - not_eq operator
 - equal to operator
 ms.assetid: ba4e9659-2392-4fb4-be5a-910a2a6df45a
-ms.openlocfilehash: d6248d4a31c478b62e5fbe304d9bde9b51b7cb06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e42b66438579bc9be6274863366762b8b4ffbe9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392161"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444403"
 ---
 # <a name="equality-operators--and-"></a>Operadores de igualdade: == e !=
 
@@ -34,15 +33,15 @@ expression != expression
 
 Operadores de igualdade binários comparam seus operandos em buscar de igualdades ou desigualdades estritas.
 
-Os operadores de igualdade, igual a (`==`) e diferente de (`!=`), têm precedência mais baixa do que os operadores relacionais, mas se comportam de maneira semelhante. É o tipo de resultado desses operadores **bool**.
+Os operadores de igualdade, igual a (`==`) e diferente de (`!=`), têm precedência mais baixa do que os operadores relacionais, mas se comportam de maneira semelhante. O tipo de resultado para esses operadores é **bool**.
 
-O operador igual a (`==`) retorna **verdadeira** (1) se os dois operandos tiverem o mesmo valor; caso contrário, retornará **falso** (0). O operador de não-igual a (`!=`) retorna **verdadeira** se os operandos não tiverem o mesmo valor; caso contrário, retornará **false**.
+O operador equal-to (`==`) retornará **true** (1) se ambos os operandos tiverem o mesmo valor; caso contrário, retornará **false** (0). O operador NOT-equal-to (`!=`) retornará **true** se os operandos não tiverem o mesmo valor; caso contrário, retornará **false**.
 
 ## <a name="operator-keyword-for-"></a>Palavra-chave do operador para !=
 
-O operador `not_eq` é o equivalente de texto de `!=`. Há duas maneiras para acessar o `not_eq` operador em seus programas: incluir o arquivo de cabeçalho `iso646.h`, ou compilando com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção do compilador (desabilitar extensões de linguagem).
+O operador `not_eq` é o equivalente de texto de `!=`. Há duas maneiras de acessar o operador de `not_eq` em seus programas: inclua o arquivo de cabeçalho `iso646.h`ou compile com a opção de compilador [/za](../build/reference/za-ze-disable-language-extensions.md) (desabilitar extensões de linguagem).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // expre_Equality_Operators.cpp
@@ -60,7 +59,7 @@ int main() {
 }
 ```
 
-Os operadores de igualdade podem comparar ponteiros a membros do mesmo tipo. Em comparação, conversões de ponteiro para membro são executadas. Os ponteiros para membros também podem ser comparados a uma expressão constante que é avaliada como 0.
+Os operadores de igualdade podem comparar ponteiros a membros do mesmo tipo. Nessa comparação, as conversões de ponteiro para membro são executadas. Os ponteiros para membros também podem ser comparados a uma expressão constante que é avaliada como 0.
 
 ## <a name="see-also"></a>Consulte também
 

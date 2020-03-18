@@ -9,11 +9,8 @@ f1_keywords:
 - vc.editors.bitmap
 - vc.editors.dialog.GridSettings
 - vc.editors.gridsettings
-- vc.editors.bitmap
 - vc.editors.icon
 - vc.editors.texttool
-- vc.editors.bitmap
-- vc.editors.icon
 helpviewer_keywords:
 - editors, images
 - resource editors [C++], graphics
@@ -42,12 +39,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 0f8fe228b804538b6a0d0377f05d79c34e787587
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 9c1c09f8ffe0ef8d4759b9242ba30e8fafaaeb01
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69514225"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443759"
 ---
 # <a name="image-editor-for-icons-c"></a>Editor de imagem para íconesC++()
 
@@ -71,7 +68,7 @@ Para obter informações sobre o **Editor de imagem**, consulte como [criar um �
 
 O menu **imagem** , que aparece somente quando o **Editor de imagem** está ativo, tem comandos para editar imagens, gerenciar paletas de cores e definir opções de janela do **Editor de imagem** . Além disso, os comandos para usar imagens de dispositivo estão disponíveis ao trabalhar com ícones e cursores.
 
-|Comando|Descrição|
+|{1&gt;Comando&lt;1}|Descrição|
 |---|---|
 |**Inverter cores**|Inverte suas cores.|
 |**Inverter Horizontalmente**|Inverte a imagem ou a seleção horizontalmente.|
@@ -86,8 +83,8 @@ O menu **imagem** , que aparece somente quando o **Editor de imagem** está ativ
 |**Desenho opaco**|Quando selecionado, torna a seleção atual opaca.<br/><br/>Quando desmarcada, torna a seleção atual transparente.|
 |**Editor de barra de ferramentas**|Abre a [caixa de diálogo novo recurso de barra de ferramentas](../windows/new-toolbar-resource-dialog-box.md).|
 |**Configurações de grade**|Abre a caixa de diálogo **configurações de grade** , na qual é possível especificar grades para a imagem.|
-|**Novo tipo de imagem**|Abre a [caixa \<de diálogo novo dispositivo > tipo de imagem](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Um único recurso de ícone pode conter várias imagens de tamanhos diferentes e o Windows pode usar o tamanho de ícone apropriado dependendo de como será exibido. Um novo tipo de dispositivo não modifica o tamanho do ícone, mas, em vez disso, cria uma nova imagem dentro do ícone. Aplica-se somente a ícones e cursores.|
-|**Ícone atual/tipo de imagem do cursor**|Abre um submenu que lista as nove primeiras imagens de cursor ou ícone disponíveis. O último comando no submenu, **mais**, abre a [caixa de \<diálogo abrir dispositivo > imagem](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
+|**Novo tipo de imagem**|Abre a [caixa de diálogo novo tipo de imagem do dispositivo \<>](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Um único recurso de ícone pode conter várias imagens de tamanhos diferentes e o Windows pode usar o tamanho de ícone apropriado dependendo de como será exibido. Um novo tipo de dispositivo não modifica o tamanho do ícone, mas, em vez disso, cria uma nova imagem dentro do ícone. Aplica-se somente a ícones e cursores.|
+|**Ícone atual/tipo de imagem do cursor**|Abre um submenu que lista as nove primeiras imagens de cursor ou ícone disponíveis. O último comando no submenu, **mais**, abre a [caixa de diálogo abrir \<dispositivo > imagem](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
 |**Excluir tipo de imagem**|Exclui a imagem de dispositivo selecionada.|
 |**Ferramentas**|Inicia um submenu que contém todas as ferramentas disponíveis na barra de ferramentas do **Editor de imagem** .|
 
@@ -100,11 +97,11 @@ A caixa de diálogo **configurações de grade** permite que você especifique a
 |**Largura**|Especifica a largura de cada bloco de blocos.<br/><br/>Essa propriedade é útil ao desenhar bitmaps que contêm várias imagens que são organizadas em intervalos regulares.|
 |**Altura**|Especifica a altura de cada bloco de blocos.<br/><br/>Essa propriedade é útil ao desenhar bitmaps que contêm várias imagens que são organizadas em intervalos regulares.|
 
-## <a name="toolbar"></a>Barra de ferramentas
+## <a name="toolbar"></a>Barra de Ferramentas
 
 A barra de ferramentas do **Editor de imagem** contém ferramentas para desenhar, pintar, inserir texto, apagar e manipular exibições. Ele também contém um seletor de opção, com o qual você pode selecionar opções para usar cada ferramenta. Por exemplo, você pode escolher entre várias larguras de pincel, fatores de ampliação e estilos de linha.
 
-Todas as ferramentas disponíveis na barra de ferramentas do **Editor de imagens** também estão disponíveis nas**ferramentas**de **imagem** > de menu. Para usar a barra de ferramentas e o seletor de **Opções** do **Editor de imagem** , selecione a ferramenta ou a opção desejada.
+Todas as ferramentas disponíveis na barra de ferramentas do **Editor de imagens** também estão disponíveis na **imagem** do menu > **ferramentas**. Para usar a barra de ferramentas e o seletor de **Opções** do **Editor de imagem** , selecione a ferramenta ou a opção desejada.
 
 ![Barra de ferramentas do editor de imagem](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")<br/>
 Barra de ferramentas do **Editor de imagem**
@@ -114,7 +111,7 @@ Barra de ferramentas do **Editor de imagem**
 
 Como muitas das ferramentas de desenho estão disponíveis no [teclado](../windows/accelerator-keys-image-editor-for-icons.md), às vezes é útil ocultar a barra de ferramentas do **Editor de imagem** .
 
-- Para exibir ou ocultar a barra de ferramentas do **Editor de imagens** , vá até menu **Exibir** > **barras de ferramentas** e escolha Editor de **imagem**.
+- Para exibir ou ocultar a barra de ferramentas do **Editor de imagens** , vá até **modo de exibição** de menu > barras de **ferramentas** e escolha **Editor de imagem**.
 
 > [!NOTE]
 > Os elementos dessa barra de ferramentas aparecerão indisponíveis quando um arquivo de imagem do projeto ou da solução atual não estiver aberto no **Editor de imagem**.
@@ -123,14 +120,14 @@ Como muitas das ferramentas de desenho estão disponíveis no [teclado](../windo
 
 Com o seletor de **opção** , você pode especificar a largura de uma linha, um traço de pincel e muito mais. O ícone no botão seletor de **Opções** é alterado dependendo de qual ferramenta você selecionou.
 
-![Seletor de forma de&#45;desenho na barra de ferramentas do editor de imagens](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")<br/>
+![Seletor de forma de desenho&#45;na barra de ferramentas do editor de imagens](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")<br/>
 Seletor de **opção** na barra de ferramentas do **Editor de imagem**
 
 ### <a name="text-tool"></a>Ferramenta de texto
 
 Use a caixa de diálogo **ferramenta de texto** para adicionar texto a um recurso de cursor, bitmap ou ícone.
 
-Para acessar essa caixa de diálogo, abra **o editor de imagem** e vá para menu**ferramentas**de **imagem** > e, em seguida, selecione o comando **ferramenta de texto** .
+Para acessar essa caixa de diálogo, abra o **Editor de imagem** e vá para o menu **imagem** > **ferramentas**e, em seguida, selecione o comando **ferramenta de texto** .
 
 > [!TIP]
 > Você pode clicar com o botão direito do mouse na caixa de diálogo **ferramenta de texto** para acessar um menu de atalho padrão que contém uma lista de comandos padrão do Windows.
@@ -151,11 +148,11 @@ Para acessar essa caixa de diálogo, selecione o botão **fonte** na caixa de di
 
 Aqui está um exemplo de como adicionar texto a um ícone em um aplicativo do Windows e manipular a fonte do seu texto.
 
-1. Crie um C++ aplicativo Windows Forms. Para obter detalhes, confira [Como: Crie Windows Forms aplicativos](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Um arquivo *app. ico* é adicionado ao seu projeto por padrão.
+1. Crie um C++ aplicativo Windows Forms. Para obter detalhes, consulte [como criar Windows Forms aplicativos](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Um arquivo *app. ico* é adicionado ao seu projeto por padrão.
 
 1. Em **Gerenciador de soluções**, clique duas vezes no arquivo *app. ico*. O **Editor de imagem** será aberto.
 
-1. Vá para menu**ferramentas** de **imagem** > e selecione **ferramenta de texto**.
+1. Vá para o menu **imagem** > **ferramentas** e selecione **ferramenta de texto**.
 
 1. Na caixa de diálogo **ferramenta de texto** , *C++* digite a área de texto vazia. Esse texto será exibido em uma caixa redimensionável localizada no canto superior esquerdo do *app. ico* no **Editor de imagem**.
 
@@ -209,11 +206,11 @@ Por padrão, o **Editor de imagem** exibe a exibição no painel esquerdo em tam
 
 Para todos os painéis do **Editor de imagem** com um fator de ampliação de 4 ou superior, você pode exibir uma grade que delimita os pixels individuais na imagem.
 
-1. Vá para o menu**configurações da grade**de **imagem** > .
+1. Vá para a **imagem** do menu > **configurações da grade**.
 
 1. Marque a caixa de seleção **grade de pixels** para exibir a grade ou desmarque a caixa para ocultar a grade.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 Nenhum
 

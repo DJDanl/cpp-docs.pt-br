@@ -1,9 +1,6 @@
 ---
 title: Macros comuns para comandos e propriedades do MSBuild
 ms.date: 08/02/2019
-f1_keywords:
-- VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
-- VC.Project.VCCLCompilerTool.XMLDocumentationFileName
 helpviewer_keywords:
 - $(FrameworkSDKDir) macro
 - ProjectName macro $(ProjectName)
@@ -93,12 +90,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: e2c7fe6f2ea63f2cbd259e4114843fcfc28fcd84
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 5038416a8df3282b426d3298c73520f78e962766
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988332"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440173"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Macros comuns para comandos e propriedades do MSBuild
 
@@ -125,7 +122,7 @@ Esta tabela descreve um subconjunto comumente usado das macros disponíveis; Há
 |**$(IntDir)**|Caminho para o diretório especificado para arquivos intermediários. Se for um caminho relativo, os arquivos intermediários vão para esse caminho anexado ao diretório do projeto. Esse caminho deve ter uma barra à direita. Ele resolve para o valor da propriedade de **diretório intermediário** . Não use **$ (OutDir)** para definir essa propriedade.|
 |**$(OutDir)**|Caminho para o diretório de arquivo de saída. Se for um caminho relativo, os arquivos de saída vão para esse caminho anexado ao diretório do projeto. Esse caminho deve ter uma barra à direita. Ele resolve para o valor da propriedade diretório de **saída** . Não use **$ (IntDir)** para definir essa propriedade.|
 |**$(Platform)**|O nome da plataforma do projeto atual, por exemplo, "Win32".|
-|**$(PlatformShortName)**|O nome curto da arquitetura atual, por exemplo, "x86" ou "x64".|
+|**$ (PlatformShortName)**|O nome curto da arquitetura atual, por exemplo, "x86" ou "x64".|
 |**$(ProjectDir)**|O diretório do projeto (definido como unidade + caminho); inclui a barra invertida à direita '\\'.|
 |**$(ProjectExt)**|A extensão de arquivo do projeto. Inclui o “.” antes da extensão de arquivo.|
 |**$(ProjectFileName)**|O nome de arquivo do projeto (definido como nome base + extensão de arquivo).|

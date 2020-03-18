@@ -2,9 +2,6 @@
 title: Tamanhos de tipo e variável em assembly embutido
 ms.date: 08/30/2018
 ms.topic: reference
-f1_keywords:
-- length
-- Type
 helpviewer_keywords:
 - variables, length
 - size, getting in inline assembly
@@ -16,38 +13,38 @@ helpviewer_keywords:
 - variables, type
 - variables, size
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
-ms.openlocfilehash: 36c97ee866ca449e9bbcf514e464a13f24f12cd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cdb8bddccbea0ef711cb0be4bbac60f7457c625c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166887"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441572"
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>Tamanhos de tipo e variável em assembly embutido
 
 **Seção específica da Microsoft**
 
-O **comprimento**, **tamanho**, e **tipo** operadores têm um significado limitado em assembly embutido. Não pode ser usados em todos os com o `DUP` operador (porque você não pode definir os dados com diretivas MASM ou operadores). Mas você pode usá-los para localizar o tamanho de variáveis de C ou C++ ou tipos:
+Os operadores de **comprimento**, **tamanho**e **tipo** têm um significado limitado no assembly embutido. Eles não podem ser usados com o operador de `DUP` (porque você não pode definir dados com diretivas ou operadores MASM). Mas você pode usá-los para localizar o tamanho de C C++ ou de variáveis ou tipos:
 
-- O **comprimento** operador pode retornar o número de elementos em uma matriz. Ele retorna o valor 1 para não-matriz de variáveis.
+- O operador **Length** pode retornar o número de elementos em uma matriz. Ele retorna o valor 1 para variáveis que não são da matriz.
 
-- O **tamanho** operador pode retornar o tamanho de uma variável de C ou C++. Tamanho da variável é o produto de sua **comprimento** e **tipo**.
+- O operador **size** pode retornar o tamanho de um C ou C++ uma variável. O tamanho de uma variável é o produto de seu **comprimento** e **tipo**.
 
-- O **tipo** operador pode retornar o tamanho de uma variável ou tipo de C ou C++. Se a variável for uma matriz **tipo** retorna o tamanho de um único elemento da matriz.
+- O operador **Type** pode retornar o tamanho de um C ou C++ tipo ou variável. Se a variável for uma matriz, **Type** retornará o tamanho de um único elemento da matriz.
 
-Por exemplo, se seu programa tem um elemento de 8 **int** matriz,
+Por exemplo, se seu programa tiver uma matriz **int** de 8 elementos,
 
 ```cpp
 int arr[8];
 ```
 
-as expressões de C e o assembly a seguir produzem o tamanho de `arr` e seus elementos.
+as expressões C e assembly a seguir produzem o tamanho de `arr` e seus elementos.
 
-|__asm|C|Tamanho|
+|__asm|C|Size|
 |-------------|-------|----------|
-|**COMPRIMENTO** arr|`sizeof`(arr)/`sizeof`(arr[0])|8|
-|**TAMANHO** arr|`sizeof`(arr)|32|
-|**TIPO** arr|`sizeof`(arr[0])|4|
+|**Comprimento** arr|`sizeof`(ARR)/`sizeof`(arr [0])|8|
+|Arr de **tamanho**|`sizeof`(ARR)|32|
+|**Digite** arr|`sizeof`(arr [0])|4|
 
 **Fim da seção específica da Microsoft**
 
