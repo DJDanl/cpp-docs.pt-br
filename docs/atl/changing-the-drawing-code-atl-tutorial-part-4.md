@@ -5,12 +5,12 @@ ms.date: 09/26/2018
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-ms.openlocfilehash: df89837e8f453443dc092a1b96e9c3f395fa2353
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 4244dae532f467f28a5ca53e15ee601344999233
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127373"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509359"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Alteração do código de desenho (Tutorial ATL, parte 4)
 
@@ -111,12 +111,15 @@ Recompile o controle. Verifique se o arquivo PolyCtl. htm está fechado se ainda
     > [!NOTE]
     > Para erros envolvendo `ATL::CW2AEX`, em script. cpp, substitua line `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );` por `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`e `TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );` de linha por `TRACE( "Source Text: %s\n", bstrSourceLineText );`.<br/>
     > Para erros que envolvem `HMONITOR`, abra StdAfx. h no projeto `TCProps` e substitua:
+    >
     > ```
     > #ifndef WINVER
     > #define WINVER 0x0400
     > #endif
     > ```
+    >
     > por
+    >
     > ```
     > #ifndef WINVER
     > #define WINVER 0x0500
@@ -156,7 +159,7 @@ Na próxima etapa, você adicionará um evento.
 
 De [volta à etapa 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [na etapa 5](../atl/adding-an-event-atl-tutorial-part-5.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Tutorial](../atl/active-template-library-atl-tutorial.md)<br/>
 [Testando propriedades e eventos com contêiner de teste](../mfc/testing-properties-and-events-with-test-container.md)

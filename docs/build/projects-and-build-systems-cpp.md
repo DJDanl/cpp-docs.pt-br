@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
 ms.topic: overview
-ms.openlocfilehash: 1548f82b62163600b5220c553bebcea72020abbc
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: df3b768c139bc4dc000c185d7153fd4aa38ae94a
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274737"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509445"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>C/C++ projetos e sistemas de compilação no Visual Studio
 
@@ -40,11 +40,12 @@ Você pode criar programas simples invocando o compilador MSVC (CL. exe) diretam
 ```cmd
 cl /EHsc hello.cpp
 ```
+
 Observe que, aqui, o compilador (CL. exe) invoca automaticamente C++ o pré-processador e o vinculador para produzir o arquivo de saída final.  Para obter mais informações, consulte [criando na linha de comando](building-on-the-command-line.md).
 
 ## <a name="build-systems-and-projects"></a>Compilar sistemas e projetos
 
-A maioria dos programas do mundo real usa algum tipo de *sistema de compilação* para gerenciar complexidades de compilação de vários arquivos de origem para várias configurações (por exemplo, depuração vs. versão), várias plataformas (x86, x64, ARM e assim por diante), etapas de compilação personalizadas e até mesmo várias executáveis que devem ser compilados em uma determinada ordem. As configurações são feitas em um ou mais arquivos de configuração de compilação, e o sistema de compilação aceita esse arquivo como entrada antes de invocar o compilador. O conjunto de arquivos de código-fonte e arquivos de configuração de compilação necessários para criar um arquivo executável é chamado de *projeto*. 
+A maioria dos programas do mundo real usa algum tipo de *sistema de compilação* para gerenciar complexidades de compilação de vários arquivos de origem para várias configurações (por exemplo, depuração vs. versão), várias plataformas (x86, x64, ARM e assim por diante), etapas de compilação personalizadas e até mesmo vários executáveis que devem ser compilados em uma determinada ordem. As configurações são feitas em um ou mais arquivos de configuração de compilação, e o sistema de compilação aceita esse arquivo como entrada antes de invocar o compilador. O conjunto de arquivos de código-fonte e arquivos de configuração de compilação necessários para criar um arquivo executável é chamado de *projeto*. 
 
 A lista a seguir mostra várias opções para projetos do Visual C++Studio:
 
@@ -77,7 +78,7 @@ Discute como usar o C/C++ compilador e as ferramentas de compilação diretament
 
 [Criando DLLs no Visual Studio](dlls-in-visual-cpp.md) Como criar, depurar e implantar C/C++ DLLs (bibliotecas compartilhadas) no Visual Studio.
 
-[Passo a passo: Criando e usando uma biblioteca](walkthrough-creating-and-using-a-static-library-cpp.md) estática como criar um arquivo binário. lib.
+[Walkthrough: Criando e usando uma biblioteca estática](walkthrough-creating-and-using-a-static-library-cpp.md) Como criar um arquivo binário. lib.
 
 [Criando aplicativos CC++ /isolados e assemblies lado a lado](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) Descreve o modelo de implantação para aplicativos da área de trabalho do Windows, com base na ideia de aplicativos isolados e assemblies lado a lado.
 
@@ -89,5 +90,5 @@ Discute como usar o C/C++ compilador e as ferramentas de compilação diretament
 
 [Configurando programas para o Windows XP](configuring-programs-for-windows-xp.md) Como direcionar o Windows XP com as ferramentas de Build do MSVC.
 
-[Referência de build C/C++](reference/c-cpp-building-reference.md)<br/>
+[Referência de compilação C/C++](reference/c-cpp-building-reference.md)<br/>
 Fornece links para artigos de referência sobre compilação de programa em C++, opções de compilador e vinculador, e outras ferramentas de compilação.
