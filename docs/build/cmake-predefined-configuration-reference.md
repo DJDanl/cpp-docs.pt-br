@@ -4,12 +4,12 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: 3988c5f062c1f30886dbaa4bca8502e2bd841dfc
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: f7a8594fb4cdedd4a1f5640914155ccd1eacdc14
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624750"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509426"
 ---
 # <a name="cmake-predefined-build-configurations"></a>Configurações de build CMake predefinidas
 
@@ -351,6 +351,7 @@ essas opções permitem que você execute comandos no sistema remoto antes e dep
   ]
 }
 ```
+
 ::: moniker-end
 
 ::: moniker range="vs-2019"
@@ -695,7 +696,7 @@ Quando você escolhe uma configuração, ela é adicionada ao arquivo CMakeSetti
 ```
 
 ::: moniker-end
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Projetos do CMake no Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Configurar um projeto do Linux CMake](../linux/cmake-linux-project.md)<br/>

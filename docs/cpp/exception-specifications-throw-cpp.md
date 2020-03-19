@@ -8,12 +8,12 @@ helpviewer_keywords:
 - throw keyword [C++]
 - noexcept keyword [C++]
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-ms.openlocfilehash: 8245704de16ba94dbe0479a3c19d2a83fb170989
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 4c7cc6027a3af4c300b88389cb29e3ccf091514e
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245876"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509395"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Especificações de exceção (throw, noexcept)C++()
 
@@ -24,11 +24,13 @@ Antes do C++ 17 havia dois tipos de especificação de exceção. A *especifica�
 ```cpp
 void MyFunction(int i) throw();
 ```
+
 informa o compilador que a função não lança exceções. No entanto, em **/std: modo c++ 14** isso poderia levar a um comportamento indefinido se a função gerar uma exceção. Portanto, é recomendável usar o operador [noexcept](../cpp/noexcept-cpp.md) em vez de um acima:
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
+
 A tabela a seguir resume a implementação C++ de especificações de exceção da Microsoft:
 
 |Especificação de exceção|Significado|
@@ -127,7 +129,7 @@ About to throw 1
 in handler
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instruções try, throw e catch (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
 [Práticas C++ recomendadas modernas para exceções e tratamento de erros](errors-and-exception-handling-modern-cpp.md)

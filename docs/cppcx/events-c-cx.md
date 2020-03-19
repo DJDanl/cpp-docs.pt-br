@@ -3,12 +3,12 @@ title: Eventos (C++/CX)
 description: Como usar C++o/CX para criar e usar manipuladores de eventos no Windows Runtime.
 ms.date: 02/03/2020
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 45f9a7bc17d9a695613ce551dae796b2cd2e0e6f
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: b40f71b183561b52047c1f7316def3d895465d2a
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972192"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509354"
 ---
 # <a name="events-ccx"></a>Eventos (C++/CX)
 
@@ -28,7 +28,7 @@ O exemplo de código a seguir mostra como declarar e disparar um evento. Observe
 
 [!code-cpp[cx_events#01](../cppcx/codesnippet/CPP/cx_events/class1.h#01)]
 
-### <a name="usage"></a>Medição de
+### <a name="usage"></a>Uso
 
 O exemplo a seguir mostra como uma classe assinante usa o operador `+=` para assinar o evento e fornecer um manipulador de eventos a ser invocado quando o evento for acionado. Observe que a função fornecida corresponde à assinatura do representante que é definido no lado do editor no namespace `EventTest` .
 
@@ -59,7 +59,7 @@ Vários manipuladores podem ser associados ao mesmo evento. A origem do evento �
 
 A ordem na qual a origem do evento invoca manipuladores de evento em receptores de evento não é garantida e pode ser diferente de uma chamada para outra.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Sistema de tipos](../cppcx/type-system-c-cx.md)<br/>
 [Delegados](../cppcx/delegates-c-cx.md)<br/>
