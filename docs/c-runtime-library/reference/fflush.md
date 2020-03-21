@@ -26,12 +26,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: 966ff5622faaccd2d9e501b39da99b010e841c22
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4597a013054a549047b4467c5bfed605e55e7656
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940940"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077335"
 ---
 # <a name="fflush"></a>fflush
 
@@ -45,12 +45,12 @@ int fflush(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **fflush** retornará 0 se o buffer tiver sido liberado com êxito. O valor 0 também é retornado em casos em que o fluxo especificado não tem nenhum buffer ou está aberto para acesso somente leitura. Um valor de retorno de **EOF** indica um erro.
 
@@ -63,7 +63,7 @@ A função **fflush** libera o *fluxo*de fluxo. Se o fluxo foi aberto no modo de
 
 Se o *fluxo* for **nulo**, o comportamento será o mesmo que uma chamada para **fflush** em cada fluxo aberto. Todos os fluxos abertos no modo de gravação e todos os fluxos abertos no modo de atualização em que a última operação foi uma gravação são liberados. A chamada não tem efeito em outros fluxos.
 
-Normalmente, esses buffers são mantidos pelo sistema operacional, que determina o momento ideal para gravar os dados automaticamente no disco: quando um buffer estiver cheio, quando um fluxo for fechado ou quando um programa for encerrado normalmente sem fechar fluxos. O recurso de confirmar no disco da biblioteca em tempo de execução permite assegurar que dados críticos sejam gravados diretamente no disco em vez de em buffers do sistema operacional. Sem reescrever um programa existente, você pode habilitar esse recurso vinculando os arquivos de objeto do programa com COMMODE.OBJ. No arquivo executável resultante, chamadas para **_flushall** gravam o conteúdo de todos os buffers em disco. Somente **_flushall** e **fflush** são afetados pelo COMMODE. obj.
+Normalmente, esses buffers são mantidos pelo sistema operacional, que determina o momento ideal para gravar os dados automaticamente no disco: quando um buffer estiver cheio, quando um fluxo for fechado ou quando um programa for encerrado normalmente sem fechar fluxos. O recurso de confirmar no disco da biblioteca em tempo de execução permite assegurar que dados críticos sejam gravados diretamente no disco em vez de em buffers do sistema operacional. Sem reescrever um programa existente, você pode habilitar esse recurso vinculando os arquivos de objeto do programa com COMMODE.OBJ. No arquivo executável resultante, as chamadas para **_flushall** gravam o conteúdo de todos os buffers em disco. Somente **_flushall** e **fflush** são afetados por COMMODE. obj.
 
 Para obter informações sobre como controlar o recurso de confirmação em disco, consulte [E/S de fluxo](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) e [_fdopen](fdopen-wfdopen.md).
 
@@ -103,10 +103,10 @@ int main(void)
 
         // Write data to a file immediately instead of buffering.
         fflush(my_file);
-    
+
         if (my_number == 5)
         {
-            // Without using fflush, no data was written to the file 
+            // Without using fflush, no data was written to the file
             // prior to the crash, so the data is lost.
             *crash_the_program = 5;
         }
@@ -127,7 +127,7 @@ int main(void)
 User selected 5
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

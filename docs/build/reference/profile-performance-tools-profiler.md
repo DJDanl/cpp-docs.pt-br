@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: 678816ce455d2a982ff8218becd805a0b2cdd896
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: cf07154c6b681e2ad30a85a62a0db996c3f3d911
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416040"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078314"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (criador de perfil das ferramentas de desempenho)
 
@@ -74,4 +74,3 @@ SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES LINK_FLAGS "/PROFILE")
 
 [Referência de vinculador MSVC](linking.md)<br/>
 [Opções de vinculador MSVC](linker-options.md)
-

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: afa9324d6074db72fd065cfa07c16349f86a615c
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ce3eb9e51a103aa54b74c7b5b4f775eb402269f1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626607"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076944"
 ---
 # <a name="vcbuild-vs-msbuild-build-system-changes-in-visual-studio-2010"></a>VCBuild versus MSBuild: criar alterações no sistema no Visual Studio 2010
 
@@ -63,7 +63,7 @@ Quando **Gerenciador de soluções** é usado para adicionar um arquivo a um pro
 
 ## <a name="vc-directories-settings"></a>Configurações de diretórios do VC + +
 
-As configurações de diretórios do Visual C++ são especificadas na [Página de propriedades dos diretórios do VC++](../ide/vcpp-directories-property-page.md). No Visual Studio 2008 e versões anteriores, as configurações de diretórios se aplicam por usuário e a lista de diretórios excluídos é especificada no arquivo *SYSINCL. dat* . 
+As configurações de diretórios do Visual C++ são especificadas na [Página de propriedades dos diretórios do VC++](../ide/vcpp-directories-property-page.md). No Visual Studio 2008 e versões anteriores, as configurações de diretórios se aplicam por usuário e a lista de diretórios excluídos é especificada no arquivo *SYSINCL. dat* .
 
 Você não poderá alterar as configurações de diretórios do VC++ se executar [devenv /resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe) na linha de comando. Também não será possível alterar as configurações se você abrir o menu **Ferramentas**, clicar em **Importar e Exportar Configurações** e selecionar a opção **Redefinir todas as configurações**.
 
@@ -73,6 +73,6 @@ Para migrar as configurações de diretórios do VC + + de um arquivo *. vssetti
 2. Selecione **Importar configurações de ambiente selecionadas**
 3. Siga as instruções no assistente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [MSBuild na linha de comando – C++](../build/msbuild-visual-cpp.md)

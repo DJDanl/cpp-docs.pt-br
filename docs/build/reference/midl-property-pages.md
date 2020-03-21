@@ -47,12 +47,12 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: e9c9cb75d326642c86405992a4bf9d7da9e578df
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 260936d01a611f061b0b4fa9a5c087ff38cc66a3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927690"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076125"
 ---
 # <a name="midl-property-pages"></a>Páginas de propriedade MIDL
 
@@ -62,7 +62,7 @@ As páginas de propriedades de MIDL estão disponíveis como uma propriedade de 
 
 ### <a name="preprocessor-definitions"></a>Definições do Pré-processador
 
-Especifica uma ou mais definições, incluindo as macros de MIDL\[(\][/d](/windows/win32/midl/-d))).
+Especifica uma ou mais definições, incluindo macros de MIDL ([/d](/windows/win32/midl/-d))\[macros\]).
 
 ### <a name="additional-include-directories"></a>Diretórios de Inclusão Adicionais
 
@@ -70,7 +70,7 @@ Especifica um ou mais diretórios a serem adicionados ao caminho de inclusão ([
 
 ### <a name="additional-metadata-directories"></a>Diretórios de metadados adicionais
 
-Especifique o diretório que contém o arquivo Windows. Foundation. WinMD (caminho\]de[/metadata_dir](/windows/win32/midl/-metadata-dir) \[).
+Especifique o diretório que contém o arquivo Windows. Foundation. WinMD ([/metadata_dir](/windows/win32/midl/-metadata-dir) \[caminho\]).
 
 ### <a name="enable-windows-runtime"></a>Habilitar Windows Runtime
 
@@ -88,7 +88,7 @@ Força a compatibilidade com o MkTypLib. exe versão 2, 3 ([/mktyplib203](/windo
 
 Seleciona a restrição dos erros de código de MIDL ([/w](/windows/win32/midl/-w)).
 
-**Durante**
+**Opções**
 
 - **1**
 - **1**
@@ -108,7 +108,7 @@ Suprimir a exibição da faixa de inicialização e mensagem de informação ([/
 
 Especifica o tipo de caractere padrão do compilador C que será usado para compilar o código gerado. ([/Char](/windows/win32/midl/-char) assinado | não assinado | ascii7).
 
-**Durante**
+**Opções**
 
 - Assinado com **assinatura**
 - **Não** assinado – não assinado
@@ -118,7 +118,7 @@ Especifica o tipo de caractere padrão do compilador C que será usado para comp
 
 Especifica qual ambiente deve ser direcionado ([/env](/windows/win32/midl/-env) arm32 | Win32 | IA64 | x64).
 
-**Durante**
+**Opções**
 
 - **Não definido** -Win32
 - **Microsoft Windows 32-bit** -Win32
@@ -157,7 +157,7 @@ Especifica o diretório de saída ([/out](/windows/win32/midl/-out) [Directory])
 
 Especifica o nome do arquivo de metadados gerado ([/winmd](/windows/win32/midl/-winmd) filename).
 
-### <a name="header-file"></a>Arquivo de cabeçalho
+### <a name="header-file"></a>Arquivos de cabeçalho
 
 Especifica o nome do arquivo de cabeçalho gerado ([/h](/windows/win32/midl/-h) filename).
 
@@ -185,7 +185,7 @@ Especifica o nome do arquivo de biblioteca de tipos ([/tlb](/windows/win32/midl/
 
 Gerar somente arquivo stub do cliente ([/Client](/windows/win32/midl/-client) [stub | None]).
 
-**Durante**
+**Opções**
 
 - **Stub** -stub
 - **Nenhum** -nenhum
@@ -194,7 +194,7 @@ Gerar somente arquivo stub do cliente ([/Client](/windows/win32/midl/-client) [s
 
 Gerar somente arquivo stub de servidor ([/Server](/windows/win32/midl/-server) [stub | None]).
 
-**Durante**
+**Opções**
 
 - **Stub** -stub
 - **Nenhum** -nenhum
@@ -211,7 +211,7 @@ Especifique o arquivo stub do servidor ([/sstub](/windows/win32/midl/-sstub) [Fi
 
 Especifica o formato de arquivo de biblioteca de tipos ([/oldtlb |/newtlb]).
 
-**Durante**
+**Opções**
 
 - **NewFormat** -novo formato
 - **OldFormat** -formato antigo
@@ -220,9 +220,9 @@ Especifica o formato de arquivo de biblioteca de tipos ([/oldtlb |/newtlb]).
 
 ### <a name="c-preprocess-options"></a>Opções de pré-processamento C
 
-Especifica as opções a serem passadas para o pré-processador do compilador C (comutadores[/cpp_opt](/windows/win32/midl/-cpp-opt) ).
+Especifica as opções para passar para o pré-processador do compilador C ([/cpp_opt](/windows/win32/midl/-cpp-opt) comutadores).
 
-### <a name="undefine-preprocessor-definitions"></a>Excluir definições do pré-processador
+### <a name="undefine-preprocessor-definitions"></a>Excluir as definições do pré-processador
 
 Especifica um ou mais desdefinidos, incluindo macros de MIDL ([/u](/windows/win32/midl/-U) [macros]).
 
@@ -230,7 +230,7 @@ Especifica um ou mais desdefinidos, incluindo macros de MIDL ([/u](/windows/win3
 
 Selecione a opção de verificação de erro ([/Error All | None]).
 
-**Durante**
+**Opções**
 
 - **EnableCustom** -todos
 - **Todos** -todos
@@ -242,7 +242,7 @@ Verifique se há erros de memória insuficiente (alocação de[/Error](/windows/
 
 ### <a name="check-bounds"></a>Verificar limites
 
-Verifique o tamanho vs. especificação do comprimento da transmissão ([/Error](/windows/win32/midl/-error) bounds_check).
+Verifique o tamanho vs. especificação do comprimento da transmissão ([/error](/windows/win32/midl/-error) bounds_check).
 
 ### <a name="check-enum-range"></a>Verificar intervalo de enumeração
 
@@ -254,7 +254,7 @@ Verifique se os ponteiros de referência não são nulos ([/Error](/windows/win3
 
 ### <a name="check-stub-data"></a>Verificar dados de stub
 
-Emitir verificação adicional para a validade de dados de stub do lado do servidor ([/Error](/windows/win32/midl/-error) stub_data).
+Emitir verificação adicional para a validade de dados de stub do lado do servidor ([/error](/windows/win32/midl/-error) stub_data).
 
 ### <a name="prepend-with-abi-namespace"></a>Preceder com o namespace ' ABI '
 
@@ -262,13 +262,13 @@ Preceda o namespace ' ABI ' para todos os tipos.  ([/ns_prefix](/windows/win32/m
 
 ### <a name="validate-parameters"></a>Validar parâmetros
 
-Gerar informações adicionais para validar os parâmetros ([/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
+Gere informações adicionais para validar os parâmetros ([/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
 
 ### <a name="struct-member-alignment"></a>Alinhamento de membro de struct
 
 Especifica o nível de empacotamento das estruturas no sistema de destino (/ZpN).
 
-**Durante**
+**Opções**
 
 - **Não definido** -não definido
 - **1 byte** -Zp1
@@ -283,6 +283,3 @@ Redireciona a saída da tela para um arquivo ([/o](/windows/win32/midl/-o) File)
 ### <a name="minimum-target-system"></a>Sistema de destino mínimo
 
 Defina o sistema de destino mínimo ([/target](/windows/win32/midl/-target) String).
-
-
-

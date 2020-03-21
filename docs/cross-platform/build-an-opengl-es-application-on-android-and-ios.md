@@ -2,12 +2,12 @@
 title: Criar um aplicativo OpenGL ES no Android e iOS
 ms.date: 10/09/2019
 ms.assetid: 76a67886-df57-4a81-accb-2e3c2eaf607b
-ms.openlocfilehash: 23dd9dbb1ff32050494e0d1d105cd55de3123fbb
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 3709cfcc681f265d08758f97422ae16e98a66a1c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177671"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079665"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Criar um aplicativo OpenGL ES no Android e iOS
 
@@ -109,7 +109,7 @@ A solução criada pelo modelo define o aplicativo Android como o projeto padrã
 
    Os projetos de biblioteca e aplicativo de atividades nativas do C++ Android gerados colocam o código compartilhado em uma biblioteca dinâmica. Ele inclui o código "Glue" para a interface com a plataforma Android. A maior parte do código do aplicativo está na biblioteca. O manifesto, os recursos e as instruções de compilação estão no projeto de empacotamento. O código compartilhado é chamado de main.cpp no projeto NativeActivity. Para obter mais informações sobre como programar uma Atividade Nativa do Android, consulte a página [Conceitos](https://developer.android.com/ndk/guides/concepts.html) do NDK do Android Developer.
 
-   O Visual Studio compila projetos de atividades nativas do Android usando o Android NDK. Ele usa Clang como o conjunto de ferramentas de plataforma. O Visual Studio mapeia as propriedades do projeto nos comandos Compile, link e Debug na plataforma de destino. Para obter detalhes, abra a caixa de diálogo **Páginas de Propriedade** para o projeto MyOpenGLESApp.Android.NativeActivity. Para saber mais sobre as opções de linha de comando, consulte o [Manual do usuário do compilador Clang](http://clang.llvm.org/docs/UsersManual.html).
+   O Visual Studio compila projetos de atividades nativas do Android usando o Android NDK. Ele usa Clang como o conjunto de ferramentas de plataforma. O Visual Studio mapeia as propriedades do projeto nos comandos Compile, link e Debug na plataforma de destino. Para obter detalhes, abra a caixa de diálogo **Páginas de Propriedade** para o projeto MyOpenGLESApp.Android.NativeActivity. Para saber mais sobre as opções de linha de comando, consulte o [Manual do usuário do compilador Clang](https://clang.llvm.org/docs/UsersManual.html).
 
 ## <a name="build-and-run-the-ios-app-on-an-ios-device"></a>Criar e executar o aplicativo iOS em um dispositivo iOS
 

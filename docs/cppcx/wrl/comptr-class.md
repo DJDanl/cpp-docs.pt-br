@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2881d25434291aebff6a2d3a542044e58e0e81f2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418317"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077884"
 ---
 # <a name="comptr-class"></a>Classe ComPtr
 
@@ -88,7 +88,7 @@ Para obter mais informações sobre os apontadores inteligentes, consulte a subs
 
 ## <a name="members"></a>Membros
 
-### <a name="public-typedefs"></a>Typedefs Públicos
+### <a name="public-typedefs"></a>Typedefs públicos
 
 Nome            | DESCRIÇÃO
 --------------- | ---------------------------------------------------------------
@@ -117,7 +117,7 @@ Nome                                                      | DESCRIÇÃO
 [ComPtr::Reset](#reset)                                   | Libera Todas as referências para o ponteiro para a interface que está associada a esse `ComPtr`.
 [ComPtr:: swap](#swap)                                     | Troca a interface gerenciada pelo `ComPtr` atual com a interface gerenciada pelo `ComPtr`especificado.
 
-### <a name="protected-methods"></a>Métodos protegidos
+### <a name="protected-methods"></a>Métodos Protegidos
 
 Nome                                        | DESCRIÇÃO
 ------------------------------------------- | --------------------------------------------------------------------------------
@@ -151,7 +151,7 @@ Nome                 | DESCRIÇÃO
 
 **Namespace:** Microsoft:: WRL
 
-## <a name="tilde-comptr"></a>ComPtr:: ~ ComPtr
+## <a name="comptrcomptr"></a><a name="tilde-comptr"></a>ComPtr:: ~ ComPtr
 
 Desinicializa uma instância do `ComPtr`.
 
@@ -159,7 +159,7 @@ Desinicializa uma instância do `ComPtr`.
 WRL_NOTHROW ~ComPtr();
 ```
 
-## <a name="as"></a>ComPtr:: as
+## <a name="comptras"></a><a name="as"></a>ComPtr:: as
 
 Retorna um objeto `ComPtr` que representa a interface identificada pelo parâmetro de modelo especificado.
 
@@ -191,7 +191,7 @@ O primeiro modelo é o formulário que você deve usar em seu código. O segundo
 
 S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
-## <a name="asiid"></a>ComPtr:: AsIID
+## <a name="comptrasiid"></a><a name="asiid"></a>ComPtr:: AsIID
 
 Retorna um objeto `ComPtr` que representa a interface identificada pela ID de interface especificada.
 
@@ -214,7 +214,7 @@ Se o objeto tiver uma interface cuja ID é igual a *riid*, um ponteiro de indire
 
 S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
-## <a name="asweak"></a>ComPtr:: asfraca
+## <a name="comptrasweak"></a><a name="asweak"></a>ComPtr:: asfraca
 
 Recupera uma referência fraca para o objeto atual.
 
@@ -233,7 +233,7 @@ Quando essa operação é concluída, um ponteiro para um objeto de referência 
 
 S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
-## <a name="attach"></a>ComPtr:: Attach
+## <a name="comptrattach"></a><a name="attach"></a>ComPtr:: Attach
 
 Associa esse `ComPtr` ao tipo de interface especificado pelo parâmetro de tipo de modelo atual.
 
@@ -248,7 +248,7 @@ void Attach(
 *other*<br/>
 Um tipo de interface.
 
-## <a name="comptr"></a>ComPtr:: ComPtr
+## <a name="comptrcomptr"></a><a name="comptr"></a>ComPtr:: ComPtr
 
 Intializes uma nova instância da classe `ComPtr`. Sobrecargas fornecem construtores padrão, copiar, mover e conversão.
 
@@ -304,7 +304,7 @@ Os quarto e quinto construtores são construtores de cópia. O quinto Construtor
 
 O sexto e o sétimo construtores são construtores de movimentação. O sétimo Construtor moverá um objeto se ele for convertido para o tipo atual.
 
-## <a name="copyto"></a>ComPtr:: CopyTo
+## <a name="comptrcopyto"></a><a name="copyto"></a>ComPtr:: CopyTo
 
 Copia a interface atual ou especificada associada a este `ComPtr` para o ponteiro especificado.
 
@@ -347,7 +347,7 @@ A segunda função executa uma operação `QueryInterface` na interface associad
 
 A terceira função executa uma operação `QueryInterface` na interface associada a esse `ComPtr` para a interface subjacente do parâmetro *U* .
 
-## <a name="detach"></a>ComPtr::D Etach
+## <a name="comptrdetach"></a><a name="detach"></a>ComPtr::D Etach
 
 Desassocia esse `ComPtr` objeto da interface que ele representa.
 
@@ -359,7 +359,7 @@ T* Detach();
 
 Um ponteiro para a interface que foi representada por esse objeto de `ComPtr`.
 
-## <a name="get"></a>ComPtr:: Get
+## <a name="comptrget"></a><a name="get"></a>ComPtr:: Get
 
 Recupera um ponteiro para a interface que está associada a este `ComPtr`.
 
@@ -371,7 +371,7 @@ T* Get() const;
 
 Ponteiro para a interface que está associada a este `ComPtr`.
 
-## <a name="getaddressof"></a>ComPtr:: getaddressof
+## <a name="comptrgetaddressof"></a><a name="getaddressof"></a>ComPtr:: getaddressof
 
 Recupera o endereço do membro de dados [ptr_](#ptr) , que contém um ponteiro para a interface representada por esse `ComPtr`.
 
@@ -384,7 +384,7 @@ T** GetAddressOf();
 
 O endereço de uma variável.
 
-## <a name="internaladdref"></a>ComPtr:: InternalAddRef
+## <a name="comptrinternaladdref"></a><a name="internaladdref"></a>ComPtr:: InternalAddRef
 
 Incrementa a contagem de referência da interface associada a este `ComPtr`.
 
@@ -396,7 +396,7 @@ void InternalAddRef() const;
 
 Esse método é protegido.
 
-## <a name="internalrelease"></a>ComPtr:: InternalRelease
+## <a name="comptrinternalrelease"></a><a name="internalrelease"></a>ComPtr:: InternalRelease
 
 Executa uma operação de liberação COM na interface associada a este `ComPtr`.
 
@@ -408,7 +408,7 @@ void InternalRelease();
 
 Esse método é protegido.
 
-## <a name="operator-ampersand"></a>Operador ComPtr:: Operator&amp;
+## <a name="comptroperatoramp"></a><a name="operator-ampersand"></a>Operador ComPtr:: Operator&amp;
 
 Libera a interface associada a este objeto `ComPtr` e, em seguida, recupera o endereço do objeto `ComPtr`.
 
@@ -426,7 +426,7 @@ Uma referência fraca para o `ComPtr`atual.
 
 Esse método difere de [ComPtr:: Getaddressof](#getaddressof) , pois esse método libera uma referência ao ponteiro da interface. Use `ComPtr::GetAddressOf` quando você precisar do endereço do ponteiro da interface, mas não quiser liberar essa interface.
 
-## <a name="operator-arrow"></a>ComPtr:: Operator-&gt;
+## <a name="comptroperator-gt"></a><a name="operator-arrow"></a>ComPtr:: Operator-&gt;
 
 Recupera um ponteiro para o tipo especificado pelo parâmetro de modelo atual.
 
@@ -442,7 +442,7 @@ Ponteiro para o tipo especificado pelo nome do tipo de modelo atual.
 
 Essa função auxiliar remove a sobrecarga desnecessária causada pelo uso da macro STDMETHOD. Essa função faz com que os tipos de `IUnknown` `private` em vez de `virtual`.
 
-## <a name="operator-assign"></a>ComPtr:: Operator =
+## <a name="comptroperator"></a><a name="operator-assign"></a>ComPtr:: Operator =
 
 Atribui um valor ao `ComPtr`atual.
 
@@ -501,7 +501,7 @@ A sexta versão é um operador de cópia que usa semântica de movimentação; u
 
 A sétima versão é um operador de cópia que usa semântica de movimentação; uma referência rvalue a um `ComPtr` do tipo *U* é uma conversão estática e atribuída ao `ComPtr`atual.
 
-## <a name="operator-equality"></a>ComPtr:: Operator = =
+## <a name="comptroperator"></a><a name="operator-equality"></a>ComPtr:: Operator = =
 
 Indica se dois objetos `ComPtr` são iguais.
 
@@ -536,7 +536,7 @@ O primeiro operador produz `true` se o objeto *a* é igual ao objeto *b*; caso c
 
 O segundo e o terceiro operadores produzem `true` se *o objeto a* é igual a `nullptr`; caso contrário, `false`.
 
-## <a name="operator-inequality"></a>ComPtr:: Operator! =
+## <a name="comptroperator"></a><a name="operator-inequality"></a>ComPtr:: Operator! =
 
 Indica se dois objetos `ComPtr` não são iguais.
 
@@ -571,7 +571,7 @@ O primeiro operador produz `true` se o objeto *a* não for igual ao objeto *b*; 
 
 O segundo e o terceiro operadores produzem `true` se *o objeto a* não for igual a `nullptr`; caso contrário, `false`.
 
-## <a name="operator-microsoft-wrl-details-booltype"></a>ComPtr:: Operator Microsoft:: WRL::D etalhes:: Booltype
+## <a name="comptroperator-microsoftwrldetailsbooltype"></a><a name="operator-microsoft-wrl-details-booltype"></a>ComPtr:: Operator Microsoft:: WRL::D etalhes:: Booltype
 
 Indica se um `ComPtr` está gerenciando o tempo de vida do objeto de uma interface.
 
@@ -583,7 +583,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 Se uma interface estiver associada a esse `ComPtr`, o endereço do membro de dados [BoolStruct:: member](boolstruct-structure.md#member) ; caso contrário, `nullptr`.
 
-## <a name="ptr"></a>ComPtr::p tr_
+## <a name="comptrptr_"></a><a name="ptr"></a>ComPtr::p tr_
 
 Contém um ponteiro para a interface que está associada e gerenciada por este `ComPtr`.
 
@@ -595,7 +595,7 @@ InterfaceType *ptr_;
 
 `ptr_` é um membro de dados interno e protegido.
 
-## <a name="releaseandgetaddressof"></a>ComPtr:: ReleaseAndGetAddressOf
+## <a name="comptrreleaseandgetaddressof"></a><a name="releaseandgetaddressof"></a>ComPtr:: ReleaseAndGetAddressOf
 
 Libera a interface associada a este `ComPtr` e, em seguida, recupera o endereço do membro de dados [ptr_](#ptr) , que contém um ponteiro para a interface que foi lançada.
 
@@ -607,7 +607,7 @@ T** ReleaseAndGetAddressOf();
 
 O endereço do membro de dados [ptr_](#ptr) deste `ComPtr`.
 
-## <a name="reset"></a>ComPtr:: Reset
+## <a name="comptrreset"></a><a name="reset"></a>ComPtr:: Reset
 
 Libera Todas as referências para o ponteiro para a interface que está associada a esse `ComPtr`.
 
@@ -619,7 +619,7 @@ unsigned long Reset();
 
 O número de referências liberadas, se houver.
 
-## <a name="swap"></a>ComPtr:: swap
+## <a name="comptrswap"></a><a name="swap"></a>ComPtr:: swap
 
 Troca a interface gerenciada pelo `ComPtr` atual com a interface gerenciada pelo `ComPtr`especificado.
 
@@ -637,4 +637,3 @@ void Swap(
 
 *r*<br/>
 Um `ComPtr`.
-

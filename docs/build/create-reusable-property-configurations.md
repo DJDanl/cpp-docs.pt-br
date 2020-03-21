@@ -3,16 +3,16 @@ title: Compartilhar ou reutilizar configurações do projeto do Visual Studio-C+
 ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: 49a0153edc5678777c937423ba2bdbd2d92a6a35
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 451e22997f81753abf0c8d55d3b9e8d097cc6d5d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303211"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078699"
 ---
 # <a name="share-or-reuse-visual-studio-project-settings"></a>Compartilhamento ou reutilização das configurações de projeto do Visual Studio
 
-Para criar um grupo personalizado de configurações que você pode compartilhar com outras pessoas ou reutilizar em vários projetos, use **Gerenciador de propriedades** para criar uma *folha de propriedades* (arquivo. props) para armazenar as configurações de cada tipo de projeto que você deseja que possa reutilizar ou compartilhar com outras pessoas. O uso de folhas de propriedades é muito menos propenso a erros do que outras maneiras de criar configurações "globais". 
+Para criar um grupo personalizado de configurações que você pode compartilhar com outras pessoas ou reutilizar em vários projetos, use **Gerenciador de propriedades** para criar uma *folha de propriedades* (arquivo. props) para armazenar as configurações de cada tipo de projeto que você deseja que possa reutilizar ou compartilhar com outras pessoas. O uso de folhas de propriedades é muito menos propenso a erros do que outras maneiras de criar configurações "globais".
 
 > [!IMPORTANT]
 > **Arquivos .user e por que eles são problemáticos**

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: d91ee36d26e307577aa56560eb95bef5ed03305b
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 1b4e7f0f188ce7b3003f12cb7acafaf15a03d86a
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051528"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078250"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Walkthrough: compilar um programa C na linha de comando
 
@@ -63,9 +63,8 @@ Se você estiver executando uma versão diferente do Windows, examine o menu ini
 Se você instalou as ferramentas de C++ compilação do Microsoft Visual 2015 no Windows 10, abra o menu **Iniciar** e, em seguida, role para baixo e abra a pasta **ferramentas de Build Visual C++**  . Escolha **Visual C++ 2015 prompt de comando de ferramentas nativas do x86** para abrir a janela de prompt de comando.
 
 Se você estiver executando uma versão diferente do Windows, examine o menu iniciar ou a página inicial de uma pasta de ferramentas do Visual Studio que contenha um atalho de prompt de comando do desenvolvedor. Você também pode usar a função de pesquisa do Windows para procurar "prompt de comando do desenvolvedor" e escolher um que corresponda à versão instalada do Visual Studio. Use o atalho para abrir a janela de prompt de comando.
-   
-::: moniker-end
 
+::: moniker-end
 
 Em seguida, verifique se o C++ prompt de comando do Visual Developer está configurado corretamente. Na janela do prompt de comando, digite `cl` e verifique se a saída é semelhante a esta:
 
@@ -183,7 +182,7 @@ As linguagens C++ C e são semelhantes, mas não as mesmas. O Microsoft C/C++ Co
 
 O MSVC é compatível com o padrão ISO C99, mas não é estritamente compatível. Na maioria dos casos, o código C portátil será compilado e executado conforme o esperado. O C++ Visual não dá suporte à maioria das alterações no C11 ISO. Certas funções de biblioteca e nomes de função POSIX são preteridos pelo MSVC. As funções têm suporte, mas os nomes preferenciais foram alterados. Para obter mais informações, consulte [recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md) e [aviso do compilador (nível 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Passo a passo: criando um programa C++ padrão (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [Referência da linguagem C](../c-language/c-language-reference.md)<br/>

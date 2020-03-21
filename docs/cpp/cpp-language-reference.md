@@ -1,20 +1,20 @@
 ---
-title: '{1&gt;Referência da linguagem C++&lt;1}'
+title: Referência da linguagem C++
 ms.custom: index-page
 ms.date: 12/10/2019
 helpviewer_keywords:
 - C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 8d828c1b151e37380c123003c245f6b83243f84a
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: f00d4eb5dc69ee0ab95ea864e63091b041a1853f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301581"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079932"
 ---
-# <a name="c-language-reference"></a>{1&gt;Referência da linguagem C++&lt;1}
+# <a name="c-language-reference"></a>Referência da linguagem C++
 
-Essa referência explica a C++ linguagem de programação implementada no compilador C++ da Microsoft. A organização se baseia no [*manual de C++ referência anotada*](http://www.stroustrup.com/arm.html) de Margaret Ellis e Bjarne STROUSTRUP e no padrão ANSI/ISO C++ International (ISO/IEC FDIS 14882). As implementações específicas da Microsoft de recursos da linguagem C++ são incluídas.
+Essa referência explica a C++ linguagem de programação implementada no compilador C++ da Microsoft. A organização se baseia no *manual de C++ referência anotada* de Margaret Ellis e Bjarne STROUSTRUP e no padrão ANSI/ISO C++ International (ISO/IEC FDIS 14882). As implementações específicas da Microsoft de recursos da linguagem C++ são incluídas.
 
 Para obter uma visão geral C++ das práticas de programação modernas, consulte [Bem-vindo de C++volta para ](welcome-back-to-cpp-modern-cpp.md).
 
@@ -96,12 +96,12 @@ Informações sobre o comportamento não padrão do compilador C++ da Microsoft.
 [Bem-vindo outra vez ao C++](welcome-back-to-cpp-modern-cpp.md)<br/>
 Uma visão geral das C++ práticas de programação modernas para escrever programas seguros, corretos e eficientes.
 
-## <a name="related-sections"></a>Seções Relacionadas
+## <a name="related-sections"></a>Seções relacionadas
 
 [Extensões de componentes para plataformas de runtime](../extensions/component-extensions-for-runtime-platforms.md)<br/>
 Material de referência sobre como usar C++ o compilador da Microsoft para o .net de destino.
 
-[Referência de build C/C++](../build/reference/c-cpp-building-reference.md)<br/>
+[Referência de compilação C/C++](../build/reference/c-cpp-building-reference.md)<br/>
 Opções do compilador, opções de vinculador e outras ferramentas de compilação.
 
 [Referência de pré-processador do C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
@@ -110,6 +110,6 @@ Material de referência sobre pragmas, diretivas de pré-processador, macros pre
 [Bibliotecas do Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
 Uma lista de links para as páginas de início de referência para as C++ várias bibliotecas da Microsoft.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Referência da linguagem C](../c-language/c-language-reference.md)

@@ -2,12 +2,12 @@
 title: Bibliotecas estáticas (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: f62ef03cfdf2f424fd4a50c2e866d73b5bdce7fc
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 42c247650f778dcc9dbfa13d27cbb0244c0ebbc2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302947"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077972"
 ---
 # <a name="static-libraries-ccx"></a>Bibliotecas estáticas (C++/CX)
 
@@ -15,16 +15,15 @@ Uma biblioteca estática que é usada em um aplicativo de Plataforma Universal d
 
 ## <a name="creating-static-libraries"></a>Criando bibliotecas estáticas
 
-
 As instruções para criar um novo projeto variam de acordo com a versão do Visual Studio instalada. Verifique se você tem o seletor de versão no canto superior esquerdo definido como a versão correta.
 
 ::: moniker range="vs-2019"
 
 ### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>Para criar uma biblioteca estática UWP no Visual Studio 2019
 
-1. Na barra de menus, escolha **Arquivo** > **Novo** > **Projeto** para abrir a caixa de diálogo **Criar um novo projeto**.
+1. Na barra de menus, escolha **arquivo** > **novo** **projeto** de > para abrir a caixa de diálogo **criar um novo projeto** .
 
-1. Na parte superior da caixa de diálogo, defina idioma **C++** como, defina **plataforma** para **Windows**e defina **tipo de projeto** como **UWP**. 
+1. Na parte superior da caixa de diálogo, **Language** defina idioma **C++** como, defina **plataforma** para **Windows**e defina **tipo de projeto** como **UWP**.
 
 1. Na lista filtrada de tipos de projeto, escolha **biblioteca estática (universal do C++Windows-/CX)** e escolha **Avançar**. Na próxima página, dê um nome ao projeto e especifique o local do projeto, se desejado.
 
@@ -36,7 +35,7 @@ As instruções para criar um novo projeto variam de acordo com a versão do Vis
 
 ### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>Para criar uma biblioteca estática UWP no Visual Studio 2017 ou no Visual Studio 2015
 
-1. Na barra de menus, selecione **Arquivo** > **Novo** > **Projeto**. Em **Visual C++**  > **Windows universal** , escolha **biblioteca estática (universal do Windows)** .
+1. Na barra de menus, escolha **Arquivo** > **Novo** > **Projeto**. Em **Visual C++**  > **Windows universal** , escolha **biblioteca estática (universal do Windows)** .
 
 1. No **Gerenciador de Soluções**, abra o menu de atalho para o projeto e escolha **Propriedades**. Na caixa de diálogo **Propriedades** , na página **Propriedades de configuração** > **CC++ /** , defina a **extensão consumir Windows Runtime** como **Sim (/ZW)** .
 
@@ -52,6 +51,6 @@ Se você consumir uma biblioteca estática que cria classes públicas `ref` , as
 
 Você pode ignorar o aviso com segurança apenas se a biblioteca estática não estiver produzindo Windows Runtime componentes consumidos fora da própria biblioteca. Se a biblioteca não consumir um componente que ela definir, o vinculador poderá otimizar a implementação mesmo que os metadados públicos contenham as informações de tipo. Isso significa que os componentes públicos em uma biblioteca estática serão compilados, mas não serão ativados no tempo de execução. Por esse motivo, qualquer componente Windows Runtime destinado ao consumo por outros componentes ou aplicativos deve ser implementado em uma DLL (biblioteca de vínculo dinâmico).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Threading e Marshaling](../cppcx/threading-and-marshaling-c-cx.md)

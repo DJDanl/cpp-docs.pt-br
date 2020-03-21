@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: 2c1e53c529be8c589f51b9011cee42e5f6f1165b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8524ec61f1d785c8ab4a7b3dbef76bba69ddb6d6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688507"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075524"
 ---
 # <a name="weibull_distribution-class"></a>Classe weibull_distribution
 
@@ -68,10 +68,10 @@ class weibull_distribution
    };
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 *RealType*
-O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+\ *RealType*
+O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -94,7 +94,7 @@ As funções membro `operator()` retornam o próximo valor gerado com base no me
 
 Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).
 
-Para obter informações detalhadas sobre a distribuição Weibull, consulte o artigo [Distribuição Weibull](http://mathworld.wolfram.com/WeibullDistribution.html) da Wolfram MathWorld.
+Para obter informações detalhadas sobre a distribuição Weibull, consulte o artigo [Distribuição Weibull](https://mathworld.wolfram.com/WeibullDistribution.html) da Wolfram MathWorld.
 
 ## <a name="example"></a>Exemplo
 
@@ -209,23 +209,23 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<random>
+**Cabeçalho:** \<> aleatório
 
 **Namespace:** std
 
-## <a name="weibull_distribution"></a> weibull_distribution::weibull_distribution
+## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a> weibull_distribution::weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
 explicit weibull_distribution(const param_type& parm);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*um* \
+*um*\
 O parâmetro de distribuição `a`.
 
-*b* \
+*b*\
 O parâmetro de distribuição `b`.
 
 \ de *parâmetros*
@@ -233,13 +233,13 @@ A estrutura `param_type` usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
-**Precondição:** `0.0 < a` e `0.0 < b`
+**Pré-condição:** `0.0 < a` e `0.0 < b`
 
 O primeiro construtor constrói um objeto cujo valor `a` armazenado contém o valor *a* e cujo valor `b` armazenado contém o valor *b*.
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="param_type"></a> weibull_distribution::param_type
+## <a name="weibull_distributionparam_type"></a><a name="param_type"></a> weibull_distribution::param_type
 
 Armazena os parâmetros da distribuição.
 
@@ -255,12 +255,12 @@ struct param_type {
    };
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*um* \
+*um*\
 O parâmetro de distribuição `a`.
 
-*b* \
+*b*\
 O parâmetro de distribuição `b`.
 
 \ *à direita*
@@ -268,10 +268,10 @@ O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários
 
-**Precondição:** `0.0 < a` e `0.0 < b`
+**Pré-condição:** `0.0 < a` e `0.0 < b`
 
 Essa estrutura pode ser enviada ao construtor de classe de distribuição na instanciação, para a função de membro `param()` para definir os parâmetros armazenados de uma distribuição existente e para `operator()` a ser usado no lugar dos parâmetros armazenados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<random>](../standard-library/random.md)

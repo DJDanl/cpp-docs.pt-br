@@ -4,12 +4,12 @@ description: BNF descrição de MASM para x64.
 ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), BNF reference
-ms.openlocfilehash: 29eae0b110f99f1f417e153f18aa2ac3aff5c69b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 1a9577292e60db73838e5e6b850a4634db959fd6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322802"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075458"
 ---
 # <a name="microsoft-macro-assembler-bnf-grammar"></a>Gramática do Microsoft Macro Assembler BNF
 
@@ -245,8 +245,8 @@ A gramática BNF permite definições recursivas. Por exemplo, a gramática usa 
 &nbsp;&nbsp;&nbsp;&nbsp;*E07* *addOp* *E08* | *E08*
 
 \ *E08*
-&nbsp;&nbsp;&nbsp;&nbsp; *E09* alta\
-&nbsp;&nbsp;&nbsp;&nbsp;|  *E09* baixo\
+&nbsp;&nbsp;&nbsp;&nbsp;**HIGH** *E09* alta\
+&nbsp;&nbsp;&nbsp;&nbsp;| **LOW** *E09* baixo\
 &nbsp;&nbsp;&nbsp;&nbsp;| **HIGHWORD** *E09*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **LOWWORD** *E09*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *E09*
@@ -270,7 +270,7 @@ A gramática BNF permite definições recursivas. Por exemplo, a gramática usa 
 &nbsp;&nbsp;&nbsp;&nbsp;( *expr* ) \
 &nbsp;&nbsp;&nbsp;&nbsp;| ⟦ *expr* ⟧ \
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* de **largura** | \
-&nbsp;&nbsp;&nbsp;&nbsp;|  *id* da máscara\
+&nbsp;&nbsp;&nbsp;&nbsp;| **MASK** *id* da máscara\
 &nbsp;&nbsp;&nbsp;&nbsp;| de **tamanho** *sizeArg*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **sizeof** *sizeArg*\
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* de **comprimento** | \
@@ -353,7 +353,7 @@ A gramática BNF permite definições recursivas. Por exemplo, a gramática usa 
 &nbsp;&nbsp;&nbsp;&nbsp;*E ⟦ ⟧* *decNumber*
 
 *expr*\
-&nbsp;&nbsp;&nbsp;&nbsp; *E05* curto\
+&nbsp;&nbsp;&nbsp;&nbsp;**SHORT** *E05* curto\
 &nbsp;&nbsp;&nbsp;&nbsp;|  **. Digite** E01 \
 &nbsp;&nbsp;&nbsp;&nbsp;| **OPATTR** *E01*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *E01*
@@ -414,10 +414,10 @@ A gramática BNF permite definições recursivas. Por exemplo, a gramática usa 
 &nbsp;&nbsp;&nbsp;&nbsp;**req** | = *Textliteral*
 
 \ *fpuRegister*
-&nbsp;&nbsp;&nbsp;&nbsp; *expr* de St
+&nbsp;&nbsp;&nbsp;&nbsp;**ST** *expr* de St
 
 \ *frameExpr*
-&nbsp;&nbsp;&nbsp;&nbsp; *ID* seg\
+&nbsp;&nbsp;&nbsp;&nbsp;**SEG** *ID* seg\
 &nbsp;&nbsp;&nbsp;&nbsp;| **DGROUP** : *ID*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *segmentRegister* : *ID*\
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* de | 
@@ -531,7 +531,7 @@ A gramática BNF permite definições recursivas. Por exemplo, a gramática usa 
 &nbsp;&nbsp;&nbsp;&nbsp;qualquer palavra reservada.
 
 \ de *palavras-chave*
-&nbsp;&nbsp; *&nbsp;&nbsp;palavra-chave* * | palavra-chave*
+&nbsp;&nbsp; *&nbsp;&nbsp;palavra-chave* * | palavra-chave* *keywordList*
 
 \ *labelDef*
 &nbsp;&nbsp;&nbsp;*ID* de &nbsp;: | *ID* :: | @@:
@@ -600,7 +600,7 @@ A gramática BNF permite definições recursivas. Por exemplo, a gramática usa 
 &nbsp;&nbsp;&nbsp;&nbsp;**ENDM** ;;
 
 \ *macroForc*
-&nbsp;&nbsp;&nbsp;&nbsp; *ID* forcDir, *textliteral* ;; \
+&nbsp;&nbsp;&nbsp;&nbsp;*forcDir* *ID* forcDir, *textliteral* ;; \
 &nbsp;&nbsp;&nbsp;&nbsp;*macroBody*\
 &nbsp;&nbsp;&nbsp;&nbsp;**ENDM** ;;
 
@@ -856,7 +856,7 @@ A gramática BNF permite definições recursivas. Por exemplo, a gramática usa 
 &nbsp;&nbsp;&nbsp;&nbsp;*specialRegister* | *gpRegister* | *byteRegister* | *qwordRegister* |  *fpuRegister* | *SIMDRegister* | *segmentRegister*
 
 \ *regList*
-&nbsp;&nbsp;&nbsp;&nbsp;*registrar* |  *registro* regList
+&nbsp;&nbsp;&nbsp;&nbsp;*registrar* | *regList* *registro* regList
 
 \ *relOp*
 &nbsp;&nbsp;&nbsp;&nbsp;EQ | NE | LT | LE | GT | GE
@@ -960,7 +960,7 @@ A gramática BNF permite definições recursivas. Por exemplo, a gramática usa 
 &nbsp;&nbsp;&nbsp;&nbsp;*stringChar* | *stext* *stringChar*
 
 *string*\
-&nbsp;&nbsp;&nbsp;&nbsp;*aspas* ⟦ *stext* ⟧
+&nbsp;&nbsp;&nbsp;&nbsp;*aspas* ⟦ *stext* ⟧ *quote*
 
 \ *stringChar*
 &nbsp;&nbsp;&nbsp;*cotação* de *aspas* &nbsp;| Qualquer caractere, exceto aspas.
@@ -1000,7 +1000,7 @@ A gramática BNF permite definições recursivas. Por exemplo, a gramática usa 
 &nbsp;&nbsp;&nbsp;&nbsp;*simpleExpr* |! *simpleExpr*
 
 *text*\
-&nbsp;&nbsp;&nbsp;&nbsp;*timeliteral* | caractere de *texto* |! *texto* de caractere | *caractere* |! *caractere* de
+&nbsp;&nbsp;&nbsp;&nbsp;*timeliteral* | caractere de *texto* |! *character* *texto* de caractere | *caractere* |! *caractere* de
 
 \ *textDir*
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* *textMacroDir* ;;
@@ -1071,4 +1071,3 @@ A gramática BNF permite definições recursivas. Por exemplo, a gramática usa 
 
 \ *xmmRegister*
 &nbsp;&nbsp;&nbsp;&nbsp;XMM0 | XMM1 | XMM2 | XMM3 | XMM4 | XMM5 | XMM6 | XMM7 | XMM8 | XMM9 | XMM10 | XMM11 | XMM12 | XMM13 | XMM14 | XMM15\
-

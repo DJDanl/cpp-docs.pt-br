@@ -1,5 +1,5 @@
 ---
-title: 'Compilando arquivos de informações de navegação: Visão geral'
+title: 'Compilando arquivos de informações de navegação: visão geral'
 ms.date: 05/06/2019
 helpviewer_keywords:
 - .bsc files, about .bsc files
@@ -7,47 +7,46 @@ helpviewer_keywords:
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 5d33460ba63e50d31e44384be382e98cfbea4c91
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 94cb5865e56e12f51ef4a8598a5df3fcbe69fa0f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220538"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078353"
 ---
-# <a name="building-browse-information-files-overview"></a>Compilando arquivos de informações de navegação: Visão geral
-
+# <a name="building-browse-information-files-overview"></a>Compilando arquivos de informações de navegação: visão geral
 
 > [!WARNING]
-> Embora BSCMAKE ainda está instalado com o Visual Studio, ele não é mais usado pelo IDE. Desde o Visual Studio 2008, as informações de símbolo e procura são armazenadas automaticamente em um arquivo. sdf de SQL Server na pasta da solução.
+> Embora o BSCMAKE ainda esteja instalado com o Visual Studio, ele não é mais usado pelo IDE. Como o Visual Studio 2008, as informações de procura e símbolo são armazenadas automaticamente em um arquivo SQL Server. sdf na pasta da solução.
 
-Para criar informações de procura para navegação de símbolo, o compilador cria um arquivo. SBR para cada arquivo de origem em seu projeto, em seguida, BSCMAKE. EXE concatena os arquivos. SBR em um único arquivo. bsc.
+Para criar informações de procura para navegação de símbolo, o compilador cria um arquivo. sbr para cada arquivo de origem em seu projeto, em seguida, BSCMAKE. EXE concatena os arquivos. sbr em um arquivo. BSC.
 
-Gerando arquivos. SBR e. bsc leva tempo, portanto, o Visual Studio desativa a essas funções por padrão. Se você deseja procurar informações atuais, você deve ativar as opções de pesquisa e compile o projeto novamente.
+Gerar arquivos. sbr e. BSC leva tempo, portanto, o Visual Studio desativa essas funções por padrão. Se você quiser procurar informações atuais, deverá ativar as opções de procura e criar seu projeto novamente.
 
-Use [/FR](fr-fr-create-dot-sbr-file.md) ou [/Fr](fr-fr-create-dot-sbr-file.md) para indicar ao compilador para criar arquivos. SBR. Para criar arquivos. bsc, você pode chamar [BSCMAKE](bscmake-command-line.md) da linha de comando. Usar BSCMAKE da linha de comando lhe dá controle mais preciso sobre a manipulação de arquivos de informações de procura. Ver [referência de BSCMAKE](bscmake-reference.md) para obter mais informações.
+Use [/fr](fr-fr-create-dot-sbr-file.md) ou [/fr](fr-fr-create-dot-sbr-file.md) para instruir o compilador a criar arquivos. sbr. Para criar arquivos. BSC, você pode chamar [BSCMAKE](bscmake-command-line.md) na linha de comando. O uso do BSCMAKE da linha de comando proporciona um controle mais preciso sobre a manipulação de arquivos de informações de procura. Consulte [referência de BSCMAKE](bscmake-reference.md) para obter mais informações.
 
 > [!TIP]
->  Você pode ativar a geração do arquivo. SBR mas deixe a geração do arquivo. bsc desativada. Isso fornece fast builds, mas também permite que você crie um arquivo. bsc atualizada rapidamente, ativar a geração do arquivo. bsc e compilar o projeto.
+>  Você pode ativar a geração de arquivo. SBR, mas deixar a geração de arquivo BSC desativada. Isso fornece compilações rápidas, mas também permite que você crie um novo arquivo. BSC rapidamente ativando a geração de arquivo BSC e compilando o projeto.
 
-Você pode reduzir o tempo, memória e espaço em disco necessário para criar um arquivo. bsc, reduzindo o tamanho do arquivo. bsc.
+Você pode reduzir o tempo, a memória e o espaço em disco necessários para criar um arquivo. BSC, reduzindo o tamanho do arquivo. BSC.
 
-Ver [página de propriedades gerais (projeto)](general-property-page-project.md) para obter informações sobre como criar um arquivo de navegador no ambiente de desenvolvimento.
+Consulte a [página de propriedades geral (projeto)](general-property-page-project.md) para obter informações sobre como criar um arquivo de navegador no ambiente de desenvolvimento.
 
-### <a name="to-create-a-smaller-bsc-file"></a>Para criar um arquivo. bsc menor
+### <a name="to-create-a-smaller-bsc-file"></a>Para criar um arquivo. BSC menor
 
-1. Use [opções de linha de comando BSCMAKE](bscmake-options.md) para excluir informações do arquivo de informações de procura.
+1. Use [as opções de linha de comando do BSCMAKE](bscmake-options.md) para excluir informações do arquivo de informações de procura.
 
-1. Omita símbolos locais em um ou mais arquivos. SBR durante a compilação ou a montagem.
+1. Omita símbolos locais em um ou mais arquivos. sbr durante a compilação ou montagem.
 
-1. Se um arquivo de objeto não contém informações necessárias para o estágio atual de depuração, omita o seu arquivo. SBR do comando BSCMAKE ao recriar o arquivo de informações de procura.
+1. Se um arquivo de objeto não contiver informações necessárias para o estágio atual de depuração, omita seu arquivo. sbr do comando BSCMAKE ao recriar o arquivo de informações de procura.
 
-### <a name="to-combine-the-browse-information-from-several-projects-into-one-browser-file-bsc"></a>Para combinar informações de procura de vários projetos em arquivo de um navegador (. bsc)
+### <a name="to-combine-the-browse-information-from-several-projects-into-one-browser-file-bsc"></a>Para combinar as informações de procura de vários projetos em um arquivo de navegador (. BSC)
 
-1. Não criar o arquivo. bsc no nível do projeto ou usar a opção /n para impedir que os arquivos. SBR sejam truncados.
+1. Não crie o arquivo. BSC no nível do projeto ou use a opção/n para impedir que os arquivos. sbr sejam truncados.
 
-1. Depois que todos os projetos são criados, execute BSCMAKE com todos os arquivos. SBR como entrada. Caracteres curinga é aceitos. Por exemplo, se você tivesse os diretórios de projeto C:\X, C:\Y e C:\Z com arquivos. SBR neles e você desejar combiná-los todos em um único arquivo. bsc, em seguida, usar BSCMAKE C:\X\\\*. SBR C:\Y\\\*. SBR C:\Z\\ \*. SBR /o c:\whatever_directory\combined.bsc para criar o arquivo. bsc combinado.
+1. Depois que todos os projetos forem compilados, execute BSCMAKE com todos os arquivos. sbr como entrada. Caracteres curinga são aceitos. Por exemplo, se você tivesse os diretórios de projeto C:\X, C:\Y e C:\Z com arquivos. sbr neles e quisesse combiná-los em um arquivo. BSC, use BSCMAKE C:\X\\\*. sbr C:\Y\\\*. sbr C:\Z\\\*. sbr/o c:\ whatever_directory \combined.BSC para criar o arquivo. BSC combinado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Ferramentas de Build do MSVC adicionais](c-cpp-build-tools.md)<br/>
+[Ferramentas de build adicionais do MSVC](c-cpp-build-tools.md)<br/>
 [Referência de BSCMAKE](bscmake-reference.md)

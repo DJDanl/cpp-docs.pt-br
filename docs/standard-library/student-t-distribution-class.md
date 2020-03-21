@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: ebf9324d478a12476b548dc62455e205b9261430
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5a4e7306dbfee4f1482ee81d3470f166697e3ab6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685861"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076376"
 ---
 # <a name="student_t_distribution-class"></a>Classe student_t_distribution
 
@@ -62,10 +62,10 @@ public:
    };
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-@No__t_1 *RealType*
-O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+\ *RealType*
+O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -80,7 +80,7 @@ A função de propriedade `n()` retorna o valor para o parâmetro de distribuiç
 
 Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).
 
-Para obter informações detalhadas sobre a distribuição *t* de Student, consulte o artigo da Wolfram MathWorld [Students t-Distribution](http://mathworld.wolfram.com/Studentst-Distribution.html) (Distribuição t de Student).
+Para obter informações detalhadas sobre a distribuição *t* de Student, consulte o artigo da Wolfram MathWorld [Students t-Distribution](https://mathworld.wolfram.com/Studentst-Distribution.html) (Distribuição t de Student).
 
 ## <a name="example"></a>Exemplo
 
@@ -159,11 +159,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<random>
+**Cabeçalho:** \<> aleatório
 
 **Namespace:** std
 
-## <a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
+## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
 
 Constrói a distribuição.
 
@@ -172,7 +172,7 @@ explicit student_t_distribution(RealType n = 1.0);
 explicit student_t_distribution(const param_type& parm);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *n*\
 O parâmetro de distribuição `n`.
@@ -188,7 +188,7 @@ O primeiro construtor constrói um objeto cujo valor `n` armazenado contém o va
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="param_type"></a>  student_t_distribution::param_type
+## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>  student_t_distribution::param_type
 
 Armazena todos os parâmetros da distribuição.
 
@@ -203,7 +203,7 @@ struct param_type {
    };
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *n*\
 O parâmetro de distribuição `n`.
@@ -217,6 +217,6 @@ O objeto `param_type` a ser comparado a este.
 
 Essa estrutura pode ser enviada ao construtor de classe de distribuição na instanciação, para a função de membro `param()` para definir os parâmetros armazenados de uma distribuição existente e para `operator()` a ser usado no lugar dos parâmetros armazenados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<random>](../standard-library/random.md)

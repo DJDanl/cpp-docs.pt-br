@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 50052e13371482fa0a8b6d66ef666b9801837501
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c1a3539ea4ea705ad8bd1e40acda965ef66e2051
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444031"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077721"
 ---
 # <a name="isessionpropertiesimpl-class"></a>Classe ISessionPropertiesImpl
 
@@ -28,11 +28,11 @@ Fornece uma implementação da interface [ISessionProperties](/previous-versions
 ```cpp
 template <class T, class PropClass = T>
 class ATL_NO_VTABLE ISessionPropertiesImpl :
-   public ISessionProperties, 
+   public ISessionProperties,
    public CUtlProps<PropClass>
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 Sua classe, derivada de `ISessionPropertiesImpl`.
@@ -40,7 +40,7 @@ Sua classe, derivada de `ISessionPropertiesImpl`.
 *PropClass*<br/>
 Uma classe de propriedade definida pelo usuário que assume como padrão *T*.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Atldb. h
 
@@ -57,7 +57,7 @@ Uma classe de propriedade definida pelo usuário que assume como padrão *T*.
 
 Uma interface obrigatória em sessões. Essa classe implementa as propriedades da sessão chamando uma função estática definida pelo [mapa do conjunto de propriedades](../../data/oledb/begin-propset-map.md). O mapa do conjunto de propriedades deve ser especificado na sua classe de sessão.
 
-## <a name="getproperties"></a>ISessionPropertiesImpl:: GetProperties
+## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a>ISessionPropertiesImpl:: GetProperties
 
 Retorna a lista de propriedades no grupo de propriedades `DBPROPSET_SESSION` que estão atualmente definidas na sessão.
 
@@ -70,11 +70,11 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
    DBPROPSET ** prgPropertySets);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 Consulte [ISessionProperties:: GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="setproperties"></a>ISessionPropertiesImpl:: SetProperties
+## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a>ISessionPropertiesImpl:: SetProperties
 
 Define as propriedades no grupo de propriedades `DBPROPSET_SESSION`.
 
@@ -85,11 +85,11 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
    DBPROPSET rgPropertySets[]);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 Consulte [ISessionProperties:: SetProperties](/previous-versions/windows/desktop/ms714405(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

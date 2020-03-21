@@ -2,12 +2,12 @@
 title: 'Guia de portabilidade: rabisco do MFC'
 ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: c5e0e8fecd99e4f03077574da7b7fcb3e538762b
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 789d29effeea76045a4a10fbca19f20d06778f7c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627219"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076961"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guia de portabilidade: rabisco do MFC
 
@@ -23,7 +23,7 @@ Antes de tentar atualizar, verifique se você tem a carga de trabalho da Área d
 
 Em seguida, faça o backup de toda a solução e todo o seu conteúdo.
 
-Por fim, abra a solução na versão mais recente do Visual Studio e permita que o assistente converta o projeto. 
+Por fim, abra a solução na versão mais recente do Visual Studio e permita que o assistente converta o projeto.
 
 Observe que você também pode executar devenv na linha de comando, usando a opção `/Upgrade`, em vez de usar o assistente para atualizar seus projetos. Consulte [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Isso poderia ser útil para automatizar o processo de atualização para um grande número de projetos.
 
@@ -73,7 +73,7 @@ Isso é um aviso, não um erro, e é muito comum ao atualizar um projeto do Visu
 
 Se o código usa partes da API do Windows que não estão disponíveis na versão do Windows especificada com essa macro, você deve ver isso como um erro de compilador. No caso do código do Scribble, não há erro.
 
-### <a name="step-3-testing-and-debugging"></a>Etapa 3. Teste e depuração
+### <a name="step-3-testing-and-debugging"></a>Etapa 3. Testando e depurando
 
 Não há nenhum conjunto de testes, portanto, apenas iniciamos o aplicativo e testamos seus recursos manualmente pela interface do usuário. Nenhum problema foi observado.
 
@@ -85,7 +85,7 @@ Agora que você migrou para o Visual Studio 2017, convém fazer algumas alteraç
 
 O Scribble era um aplicativo de área de trabalho do Windows pequeno e simples e não foi difícil converter. Muitos aplicativos pequenos e simples são convertidos com a mesma facilidade para a nova versão.  Para aplicativos mais complexos, com muito mais linhas de código, código herdado mais antigo que pode não estar de acordo com os padrões de engenharia modernos, vários projetos e bibliotecas, etapas de build personalizadas ou builds automatizadas com scripts complexas, levará mais tempo para atualizar. Continuar com o [próximo exemplo](../porting/porting-guide-com-spy.md), um aplicativo ATL/COM chamado COM Spy.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Portabilidade e atualização: exemplos e estudos de caso](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Próximo exemplo: COM Spy](../porting/porting-guide-com-spy.md)

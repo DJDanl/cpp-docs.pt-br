@@ -10,18 +10,18 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 1fc7ec438d83be1a92d8fa9d699f4172aba842e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: c69dc7ed5e34d98d5acff8f2bc28c34761bd31c6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515551"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076813"
 ---
 # <a name="safeint-class"></a>Classe SafeInt
 
 Estende as primitivas de inteiro para ajudar a evitar o estouro de inteiro e permite comparar diferentes tipos de inteiros.
 
-> [!NOTE] 
+> [!NOTE]
 > A última versão dessa biblioteca está localizada em [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt).
 
 ## <a name="syntax"></a>Sintaxe
@@ -31,15 +31,15 @@ template<typename T, typename E = _SAFEINT_DEFAULT_ERROR_POLICY>
 class SafeInt;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-| Modelo  |  Descrição |
+| Modelo  |  DESCRIÇÃO |
 |--------|------------|
 | T         |  O tipo de inteiro ou parâmetro booliano que `SafeInt` substitui. |
 | E         |  Um tipo de dados enumerados que define a política de tratamento de erro. |
 | U         |  O tipo de inteiro ou parâmetro booliano para o operando secundário. |
 
-| Parâmetro  |  Descrição |
+| Parâmetro  |  DESCRIÇÃO |
 |---------|-----------------|
 | *rhs*      |  [in] Um parâmetro de entrada que representa o valor no lado direito do operador em várias funções independentes. |
 | *i*        |  [in] Um parâmetro de entrada que representa o valor no lado direito do operador em várias funções independentes. |
@@ -49,7 +49,7 @@ class SafeInt;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-| Nome                          |  Descrição |
+| Nome                          |  DESCRIÇÃO |
 |---------------------------|--------------------|
 | [SafeInt::SafeInt](#safeint)  |  Construtor padrão. |
 
@@ -132,7 +132,7 @@ class SafeInt;
 | -=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator-= (U rhs)` |
 | -=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator-= (SafeInt<U, E> rhs)` |
 
-### <a name="logical-operators"></a>Operadores Lógicos
+### <a name="logical-operators"></a>Operadores lógicos
 
 | Nome     |  Sintaxe |
 |------|--------------|
@@ -229,7 +229,7 @@ Existem duas opções para personalizar a política de erro. A primeira opção 
 
 **Namespace:** msl::utilities
 
-## <a name="safeint"></a>SafeInt::SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt::SafeInt
 
 Constrói um objeto `SafeInt`.
 
@@ -255,7 +255,7 @@ SafeInt (
 )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *i*<br/>
 [in] O valor do novo objeto `SafeInt`. Este deve ser um parâmetro do tipo T ou U, dependendo do construtor.

@@ -7,39 +7,39 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-ms.openlocfilehash: a9601b2afe40133a5cc88589b530b5ed549ac81e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a173e1466179dfb40a33d7bdb4a94eabdbf23cc0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389223"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079054"
 ---
 # <a name="testing-the-read-only-provider"></a>Testando o provedor somente leitura simples
 
-Para testar um provedor, você precisa de um consumidor. Isso será útil se o consumidor pode corresponder com o provedor. Os modelos de consumidor do OLE DB são um wrapper fino em torno do OLE DB e coincidirem com os objetos COM de provedor. Como a fonte é fornecida com os modelos de consumidor, é fácil de depurar um provedor com eles. Os modelos de consumidor também são uma maneira muito pequeno e rápida para desenvolver aplicativos de consumidor.
+Para testar um provedor, você precisa de um consumidor. Ele ajuda se o consumidor pode corresponder ao provedor. Os modelos de consumidor OLE DB são um wrapper fino em volta de OLE DB e correspondem aos objetos COM do provedor. Como a origem é enviada com os modelos de consumidor, é fácil depurar um provedor com eles. Os modelos de consumidor também são uma maneira muito pequena e rápida de desenvolver aplicativos de consumidor.
 
-O exemplo neste tópico cria um aplicativo do Assistente de aplicativo MFC padrão para um consumidor de teste. O aplicativo de teste é uma caixa de diálogo simple com o código de modelo de consumidor OLE DB adicionado.
+O exemplo neste tópico cria um aplicativo de assistente de aplicativo do MFC padrão para um consumidor de teste. O aplicativo de teste é uma caixa de diálogo simples com OLE DB código de modelo de consumidor adicionado.
 
 ## <a name="to-create-the-test-application"></a>Para criar o aplicativo de teste
 
 1. No menu **Arquivo**, clique em **Novo** e clique em **Projeto**.
 
-1. No **tipos de projeto** painel, selecione o **instalado** > **Visual C++** > **MFC/ATL** pasta. No **modelos** painel, selecione **aplicativo MFC**.
+1. No painel **tipos de projeto** , selecione a **pasta instalada** > **Visual C++**  > **MFC/ATL** . No painel **modelos** , selecione **aplicativo MFC**.
 
-1. Para o nome do projeto, insira *TestProv*e, em seguida, clique em **Okey**.
+1. Para o nome do projeto, insira *TestProv*e clique em **OK**.
 
-   O **aplicativo do MFC** assistente é exibido.
+   O assistente de **aplicativo do MFC** é exibido.
 
-1. Sobre o **tipo de aplicativo** página, selecione **caixa de diálogo com base em**.
+1. Na página **tipo de aplicativo** , selecione **baseado na caixa de diálogo**.
 
-1. Sobre o **recursos avançados** página, selecione **automação**e, em seguida, clique em **concluir**.
+1. Na página **recursos avançados** , selecione **automação**e clique em **concluir**.
 
 > [!NOTE]
-> O aplicativo não exija o suporte de automação se você adicionar `CoInitialize` em `CTestProvApp::InitInstance`.
+> O aplicativo não exigirá suporte à automação se você adicionar `CoInitialize` no `CTestProvApp::InitInstance`.
 
-Você pode exibir e editar os **TestProv** caixa de diálogo (IDD_TESTPROV_DIALOG), selecionando-o no **exibição de recurso**. Coloque as duas caixas de listagem, uma para cada cadeia de caracteres no conjunto de linhas, na caixa de diálogo. Desativar a propriedade de classificação para as duas caixas de listagem pressionando **Alt**+**Enter** quando uma caixa de listagem é selecionada e definindo o **classificação** propriedade para **False**. Além disso, coloque um **executar** botão na caixa de diálogo para buscar o arquivo. O terminar **TestProv** caixa de diálogo deve ter duas caixas de listagem rotulada como "Cadeia de caracteres 1" e "Cadeia de caracteres 2", respectivamente; ele também tem **Okey**, **Cancelar**, e **executar**  botões.
+Você pode exibir e editar a caixa de diálogo **TestProv** (IDD_TESTPROV_DIALOG) selecionando-a em **modo de exibição de recursos**. Coloque duas caixas de listagem, uma para cada cadeia de caracteres no conjunto de linhas, na caixa de diálogo. Desative a Propriedade Sort de ambas as caixas de listagem pressionando **Alt**+**Enter** quando uma caixa de listagem estiver selecionada e definindo a propriedade de **classificação** como **false**. Além disso, coloque um botão **executar** na caixa de diálogo para buscar o arquivo. A caixa de diálogo **TestProv** concluída deve ter duas caixas de listagem rotuladas "cadeia de caracteres 1" e "cadeia de caracteres 2", respectivamente; Ele também tem os botões **OK**, **Cancelar**e **executar** .
 
-Abra o arquivo de cabeçalho para a classe de caixa de diálogo (no TestProvDlg.h neste caso). Adicione o seguinte código para o arquivo de cabeçalho (fora de qualquer declaração de classe):
+Abra o arquivo de cabeçalho da classe de caixa de diálogo (neste caso, TestProvDlg. h). Adicione o seguinte código ao arquivo de cabeçalho (fora de qualquer declaração de classe):
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -61,9 +61,9 @@ END_COLUMN_MAP()
 };
 ```
 
-O código representa um registro de usuário que define quais colunas serão no conjunto de linhas. Quando o cliente chama `IAccessor::CreateAccessor`, ele usa essas entradas para especificar quais colunas você deseja associar. Os modelos de consumidor do OLE DB também permitem que você associar colunas dinamicamente. As macros COLUMN_ENTRY são a versão do lado do cliente das macros PROVIDER_COLUMN_ENTRY. As duas macros COLUMN_ENTRY especifiquem o ordinal, o membro de dados, comprimento e tipo para duas cadeias de caracteres.
+O código representa um registro de usuário que define quais colunas estarão no conjunto de linhas. Quando o cliente chama `IAccessor::CreateAccessor`, ele usa essas entradas para especificar quais colunas vincular. Os modelos de consumidor OLE DB também permitem que você associe colunas dinamicamente. As macros COLUMN_ENTRY são a versão do lado do cliente do PROVIDER_COLUMN_ENTRY macros. As duas macros COLUMN_ENTRY especificam o ordinal, o tipo, o comprimento e o membro de dados para as duas cadeias de caracteres.
 
-Adicionar uma função de manipulador para o **executados** botão pressionando **Ctrl** e clicando duas vezes o **execute** botão. Coloque o seguinte código na função:
+Adicione uma função de manipulador para o botão **executar** pressionando **Ctrl** e clicando duas vezes no botão **executar** . Coloque o seguinte código na função:
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////
@@ -92,20 +92,20 @@ void CTestProvDlg::OnRun()
 }
 ```
 
-O `CCommand`, `CDataSource`, e `CSession` classes todas pertencem aos modelos de consumidor OLE DB. Cada classe imita um objeto COM no provedor. O `CCommand` objeto leva o `CProvider` classe, declarada no arquivo de cabeçalho, como um parâmetro de modelo. O `CProvider` parâmetro representa as associações que você usa para acessar os dados do provedor. 
+Todas as classes `CCommand`, `CDataSource`e `CSession` pertencem aos modelos de consumidor OLE DB. Cada classe imita um objeto COM no provedor. O objeto `CCommand` usa a classe `CProvider`, declarada no arquivo de cabeçalho, como um parâmetro de modelo. O parâmetro `CProvider` representa associações que você usa para acessar os dados do provedor.
 
-As linhas para abrir cada uma das classes criam cada objeto COM no provedor. Para localizar o provedor, use o `ProgID` do provedor. Você pode obter o `ProgID` do registro do sistema ou examinando o arquivo Custom.rgs (Abra o diretório do provedor e pesquise o `ProgID` chave).
+As linhas para abrir cada uma das classes criam cada objeto COM no provedor. Para localizar o provedor, use o `ProgID` do provedor. Você pode obter a `ProgID` do registro do sistema ou procurando o arquivo. rgs personalizado (Abra o diretório do provedor e pesquise a chave de `ProgID`).
 
-O arquivo txt está incluído com o `MyProv` exemplo. Para criar um arquivo de sua preferência, use um editor e digite um número par de cadeias de caracteres, pressionar **Enter** entre cada cadeia de caracteres. Se você mover o arquivo, altere o nome do caminho.
+O arquivo MyData. txt está incluído no exemplo de `MyProv`. Para criar um arquivo próprio, use um editor e digite um número par de cadeias de caracteres, pressionando **Enter** entre cada cadeia. Altere o nome do caminho se você mover o arquivo.
 
-Passe a cadeia de caracteres "c:\\\samples\\\myprov\\\MyData.txt" no `table.Open` linha. Se você entrar na `Open` chamada, você ver que essa cadeia de caracteres é transmitida para o `SetCommandText` método no provedor. Observe que o `ICommandText::Execute` método usou essa cadeia de caracteres.
+Passe a cadeia de caracteres "c:\\\Samples\\\myprov\\\MyData.txt" na linha de `table.Open`. Se você entrar na chamada `Open`, verá que essa cadeia de caracteres é passada para o método `SetCommandText` no provedor. Observe que o método `ICommandText::Execute` usou essa cadeia de caracteres.
 
-Para buscar os dados, chame `MoveNext` na tabela. `MoveNext` chamadas a `IRowset::GetNextRows`, `GetRowCount`, e `GetData` funções. Quando não existem mais linhas (ou seja, a posição atual no conjunto de linhas é maior que `GetRowCount`), o loop é encerrado.
+Para buscar os dados, chame `MoveNext` na tabela. `MoveNext` chama as funções `IRowset::GetNextRows`, `GetRowCount`e `GetData`. Quando não há mais linhas (ou seja, a posição atual no conjunto de linhas é maior que `GetRowCount`), o loop é encerrado.
 
-Quando não existem mais linhas, os provedores retornam DB_S_ENDOFROWSET. O valor DB_S_ENDOFROWSET não é um erro. Você sempre deve verificar em relação a S_OK para cancelar um loop de busca de dados e não usar a macro SUCCEEDED.
+Quando não há mais linhas, os provedores retornam DB_S_ENDOFROWSET. O valor de DB_S_ENDOFROWSET não é um erro. Você sempre deve verificar em relação a S_OK para cancelar um loop de busca de dados e não usar a macro com êxito.
 
-Agora você deve ser capaz de compilar e testar o programa.
+Agora você deve ser capaz de criar e testar o programa.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Aprimorando o provedor somente leitura simples](../../data/oledb/enhancing-the-simple-read-only-provider.md)

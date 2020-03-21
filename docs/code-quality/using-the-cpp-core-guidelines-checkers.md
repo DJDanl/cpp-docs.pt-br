@@ -4,12 +4,12 @@ ms.date: 08/14/2018
 ms.topic: conceptual
 dev_langs:
 - CPP
-ms.openlocfilehash: 955a445fbc29fca479a64684b4b60909234a0b38
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: b9eea6dc466db202ee388a2bfb2e59632e210b7f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418679"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076176"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>Usar os verificadores de Diretrizes Principais do C++
 
@@ -17,7 +17,7 @@ As C++ diretrizes básicas são um conjunto portátil de diretrizes, regras e pr
 
 ## <a name="the-c-core-guidelines-project"></a>O C++ projeto de diretrizes principais
 
-Criado por Bjarne Stroustrup e outros, as C++ principais diretrizes são um guia para usar o C++ moderno de forma segura e eficaz. As diretrizes enfatizam a segurança de tipo estático e a segurança de recursos. Eles identificam maneiras de eliminar ou minimizar as partes mais propensas a erros da linguagem e sugerem como tornar seu código mais simples e mais funcional de maneira confiável. Essas diretrizes são mantidas pela Standard C++ Foundation. Para saber mais, confira a documentação, C++ [ C++ as diretrizes básicas](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)e acesse os arquivos de projeto de documentação das diretrizes principais no [GitHub](https://github.com/isocpp/CppCoreGuidelines).
+Criado por Bjarne Stroustrup e outros, as C++ principais diretrizes são um guia para usar o C++ moderno de forma segura e eficaz. As diretrizes enfatizam a segurança de tipo estático e a segurança de recursos. Eles identificam maneiras de eliminar ou minimizar as partes mais propensas a erros da linguagem e sugerem como tornar seu código mais simples e mais funcional de maneira confiável. Essas diretrizes são mantidas pela Standard C++ Foundation. Para saber mais, confira a documentação, C++ [ C++ as diretrizes básicas](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)e acesse os arquivos de projeto de documentação das diretrizes principais no [GitHub](https://github.com/isocpp/CppCoreGuidelines).
 
 ## <a name="enable-the-c-core-check-guidelines-in-code-analysis"></a>Habilitar as C++ diretrizes de verificação principal na análise de código
 
@@ -166,7 +166,7 @@ Em vez de #pragmas, você pode usar opções de linha de comando na página de p
 
 Você pode usar a opção de linha de comando para desabilitar temporariamente toda a análise de código de um arquivo, especificando `/analyze-`. Isso produz o aviso *D9025 substituindo '/ANALYZE ' por '/ANALYZE-'* , que lembra você para reabilitar a análise de código mais tarde.
 
-## <a name="corecheck_per_file"></a>Habilitar o C++ verificador de diretrizes principais em arquivos de projeto específicos
+## <a name="enable-the-c-core-guidelines-checker-on-specific-project-files"></a><a name="corecheck_per_file"></a>Habilitar o C++ verificador de diretrizes principais em arquivos de projeto específicos
 
 Às vezes, pode ser útil fazer uma análise de código focada e ainda usar o IDE do Visual Studio. O cenário de exemplo a seguir pode ser usado para projetos grandes para economizar tempo de compilação e para facilitar o filtro de resultados:
 
@@ -237,7 +237,7 @@ Você precisa definir algumas variáveis de ambiente e usar opções de linha de
 
 A biblioteca de suporte a diretrizes foi projetada para ajudá-lo a seguir as principais diretrizes. O GSL inclui definições que permitem que você substitua construções propensas a erros com alternativas mais seguras. Por exemplo, você pode substituir um `T*, length` par de parâmetros pelo tipo de `span<T>`. O GSL está disponível em [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl). A biblioteca é de código-fonte aberto, para que você possa exibir as fontes, fazer comentários ou contribuir. O projeto pode ser encontrado em [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL).
 
-## <a name="vs2015_corecheck"></a>Use as C++ diretrizes de verificação principal nos projetos do Visual Studio 2015
+## <a name="use-the-c-core-check-guidelines-in-visual-studio-2015-projects"></a><a name="vs2015_corecheck"></a>Use as C++ diretrizes de verificação principal nos projetos do Visual Studio 2015
 
 Se você usar o Visual Studio 2015, C++ os conjuntos de regras de análise de código de verificação de núcleo não serão instalados por padrão. Você deve executar algumas etapas adicionais para poder habilitar as ferramentas C++ de análise de código de verificação de núcleo no Visual Studio 2015. A Microsoft fornece suporte para projetos do Visual Studio 2015 usando um pacote NuGet. O pacote é denominado Microsoft. CppCoreCheck e está disponível em [http://www.nuget.org/packages/Microsoft.CppCoreCheck](https://www.nuget.org/packages/Microsoft.CppCoreCheck). Este pacote requer que você tenha pelo menos o Visual Studio 2015 com atualização 1 instalado.
 

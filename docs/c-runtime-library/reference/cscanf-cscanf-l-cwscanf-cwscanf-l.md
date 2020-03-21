@@ -48,18 +48,18 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 8b996e510d6a8c106aa88a60a8da456d36a4b3e5
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 973642aa113c8db4174b399f22e980daba95ce41
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778307"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079990"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
 Lê os dados formatados do console. Versões mais seguras dessas funções estão disponíveis; consulte [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).
 
-> [!NOTE] 
+> [!NOTE]
 > No Visual Studio 2015, a `printf` e a `scanf` família de funções foram declaradas como **embutidas** e movidas para os cabeçalhos `<stdio.h>` e `<conio.h>`. Se você estiver migrando um código mais antigo, poderá ver *LNK2019* em conexão com essas funções. Para obter mais informações, consulte o [histórico de alterações Visual C++ 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 > [!IMPORTANT]
@@ -88,12 +88,12 @@ int _cwscanf_l(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *format*<br/>
 Cadeia de caracteres de controle de formato.
 
-*argumento*<br/>
+*argument*<br/>
 Parâmetros opcionais.
 
 *locale*<br/>
@@ -105,11 +105,11 @@ O número de campos que foram convertidos e atribuídos com êxito. O valor reto
 
 ## <a name="remarks"></a>Comentários
 
-A função **_cscanf** lê dados diretamente do console do para os locais fornecidos pelo *argumento*. A função [_getche](getch-getwch.md) é usada para ler caracteres. Cada parâmetro opcional deve ser um ponteiro para uma variável com um tipo que corresponde a um especificador de tipo no *formato*. O formato controla a interpretação dos campos de entrada e tem a mesma forma e função que o parâmetro de *formato* para a função [scanf](scanf-scanf-l-wscanf-wscanf-l.md) . Embora **_cscanf** normalmente Echo o caractere de entrada, ele não faz isso se a última chamada fosse **_ungetch**.
+A função **_cscanf** lê os dados diretamente do console do para os locais fornecidos pelo *argumento*. A função [_getche](getch-getwch.md) é usada para ler caracteres. Cada parâmetro opcional deve ser um ponteiro para uma variável com um tipo que corresponde a um especificador de tipo no *formato*. O formato controla a interpretação dos campos de entrada e tem a mesma forma e função que o parâmetro de *formato* para a função [scanf](scanf-scanf-l-wscanf-wscanf-l.md) . Embora **_cscanf** normalmente ecoa o caractere de entrada, ele não faz isso se a última chamada fosse **_ungetch**.
 
 Essa função valida seus parâmetros. Se o formato for **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará **EOF**.
 
-As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro Locale passado em vez da localidade do thread atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -125,7 +125,7 @@ As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fa
 |**_cscanf**, **_cscanf_l**|\<conio.h>|
 |**_cwscanf**, **_cwscanf_l**|\<conio.h> ou \<wchar.h>|
 
-Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -164,7 +164,7 @@ Enter three integers: 1 2 3
 You entered 3 2 1
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de porta e console](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>

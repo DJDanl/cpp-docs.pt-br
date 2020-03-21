@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 723b077500b9b741445efcd8574fb26cd53e5fc7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3e92d6dc9f6966efda0e26fb28cf14652be880c7
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422496"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075594"
 ---
 # <a name="ltutilitygt-functions"></a>Funções &lt;utility&gt;
 
-## <a name="asconst"></a>as_const
+## <a name="as_const"></a><a name="asconst"></a>as_const
 
 ```cpp
 template <class T> constexpr add_const_t<T>& as_const(T& t) noexcept;
@@ -34,13 +34,13 @@ template <class T> void as_const(const T&&) = delete;
 
 Retorna *T*.
 
-## <a name="declval"></a>declval
+## <a name="declval"></a><a name="declval"></a>declval
 
 ```cpp
 template <class T> add_rvalue_reference_t<T> declval() noexcept;  // as unevaluated operand
 ```
 
-## <a name="exchange"></a>transferência
+## <a name="exchange"></a><a name="exchange"></a>transferência
 
 **(C++14)** Atribui um novo valor a um objeto e retorna seu antigo valor.
 
@@ -95,7 +95,7 @@ The old value of c1 is: 1
 The new value of c1 after exchange is: 2
 ```
 
-## <a name="forward"></a>avançada
+## <a name="forward"></a><a name="forward"></a>avançada
 
 Converterá condicionalmente seu argumento em uma referência rvalue se o argumento for um rvalue ou referência rvalue. Isso restaura o rvalue-ness de um argumento para a função de encaminhamento como suporte ao encaminhamento perfeito.
 
@@ -127,19 +127,19 @@ Você deve especificar um argumento de modelo explícito para chamar `forward`.
 
 Restaurar o rvalue-qualidade do valor original de um argumento para fazer a resolução de sobrecarga é conhecido como *encaminhamento perfeito*. O encaminhamento perfeito permite que uma função de modelo aceite um argumento do tipo de referência e restaure seu rvalue-ness quando for necessário para resolução de sobrecarga correta. Usando o encaminhamento perfeito, você pode preservar as semânticas de movimento para rvalues, além de evitar ter que fornecer sobrecargas para funções que variam apenas pelo tipo de referência de seus argumentos.
 
-## <a name="from_chars"></a>from_chars
+## <a name="from_chars"></a><a name="from_chars"></a>from_chars
 
 ```cpp
 from_chars_result from_chars(const char* first, const char* last, see below& value, int base = 10);
 
-from_chars_result from_chars(const char* first, const char* last, float& value, chars_format fmt = chars_format::general); 
+from_chars_result from_chars(const char* first, const char* last, float& value, chars_format fmt = chars_format::general);
 
-from_chars_result from_chars(const char* first, const char* last, double& value, chars_format fmt = chars_format::general); 
+from_chars_result from_chars(const char* first, const char* last, double& value, chars_format fmt = chars_format::general);
 
 from_chars_result from_chars(const char* first, const char* last, long double& value, chars_format fmt = chars_format::general);
 ```
 
-## <a name="get"></a>Obter
+## <a name="get"></a><a name="get"></a>Obter
 
 Obtém um elemento de um objeto `pair`, por posição no índice ou por tipo.
 
@@ -235,35 +235,35 @@ int main()
 1 0.27
 ```
 
-## <a name="index_sequence"></a>index_sequence
+## <a name="index_sequence"></a><a name="index_sequence"></a>index_sequence
 
 ```cpp
 template<size_t... I>
     using index_sequence = integer_sequence<size_t, I...>;
 ```
 
-## <a name="index_sequence_for"></a>index_sequence_for
+## <a name="index_sequence_for"></a><a name="index_sequence_for"></a>index_sequence_for
 
 ```cpp
 template<class... T>
     using index_sequence_for = make_index_sequence<sizeof...(T)>;
 ```
 
-## <a name="make_index_sequence"></a>make_index_sequence
+## <a name="make_index_sequence"></a><a name="make_index_sequence"></a>make_index_sequence
 
 ```cpp
 template<size_t N>
     using make_index_sequence = make_integer_sequence<size_t, N>;
 ```
 
-## <a name="make_integer_sequence"></a>make_integer_sequence
+## <a name="make_integer_sequence"></a><a name="make_integer_sequence"></a>make_integer_sequence
 
 ```cpp
 template<class T, T N>
     using make_integer_sequence = integer_sequence<T, see below >;
 ```
 
-## <a name="make_pair"></a>make_pair
+## <a name="make_pair"></a><a name="make_pair"></a>make_pair
 
 Uma função de modelo que você pode usar para construir objetos do tipo `pair`, em que os tipos de componente são automaticamente escolhidos com base nos tipos de dados que são transmitidos como parâmetros.
 
@@ -313,7 +313,7 @@ A função auxiliar `make_pair` também possibilita passar dois valores a uma fu
 
 Para obter um exemplo de como usar a função auxiliar `make_pair` para declarar e inicializar um par, consulte [Estrutura pair](../standard-library/pair-structure.md).
 
-## <a name="move"></a>prosseguir
+## <a name="move"></a><a name="move"></a>prosseguir
 
 Converte incondicionalmente seu argumento em uma referência de rvalue e, assim, os sinais que podem ser movidos se seu tipo for habilitado para movimento.
 
@@ -342,13 +342,13 @@ O *tipo* de argumento de modelo não deve ser especificado explicitamente, mas d
 
 Se o valor passado em *ARG* for um lvalue — ou seja, ele tiver um nome ou seu endereço pode ser obtido — ele será invalidado quando ocorrer a movimentação. Não se refere ao valor passado em *ARG* por seu nome ou endereço depois de ser movido.
 
-## <a name="moveif"></a>move_if_noexcept
+## <a name="move_if_noexcept"></a><a name="moveif"></a>move_if_noexcept
 
 ```cpp
 template <class T> constexpr conditional_t< !is_nothrow_move_constructible_v<T> && is_copy_constructible_v<T>, const T&, T&&> move_if_noexcept(T& x) noexcept;
 ```
 
-## <a name="swap"></a>permuta
+## <a name="swap"></a><a name="swap"></a>permuta
 
 Troca os elementos de dois objetos de estrutura de tipo ou [par](../standard-library/pair-structure.md) .
 
@@ -373,18 +373,18 @@ Um objeto do tipo ou do tipo `pair`.
 
 Uma vantagem do `swap` é que os tipos de objetos que estão sendo armazenados são determinados automaticamente pelo compilador e não precisam ser especificados explicitamente. Não use argumentos de modelo explícitos, como `swap<int, int>(1, 2)` ao usar `swap` porque ele é detalhado e adiciona problemas de referência de rvalue complexos que podem causar falha de compilação.
 
-## <a name="to_chars"></a>to_chars
+## <a name="to_chars"></a><a name="to_chars"></a>to_chars
 
 ```cpp
 to_chars_result to_chars(char* first, char* last, see below value, int base = 10);
-to_chars_result to_chars(char* first, char* last, float value); 
-to_chars_result to_chars(char* first, char* last, double value); 
+to_chars_result to_chars(char* first, char* last, float value);
+to_chars_result to_chars(char* first, char* last, double value);
 to_chars_result to_chars(char* first, char* last, long double value);
-to_chars_result to_chars(char* first, char* last, float value, chars_format fmt); 
-to_chars_result to_chars(char* first, char* last, double value, chars_format fmt); 
+to_chars_result to_chars(char* first, char* last, float value, chars_format fmt);
+to_chars_result to_chars(char* first, char* last, double value, chars_format fmt);
 to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt);
-to_chars_result to_chars(char* first, char* last, float value, chars_format fmt, int precision); 
-to_chars_result to_chars(char* first, char* last, double value, chars_format fmt, int precision); 
+to_chars_result to_chars(char* first, char* last, float value, chars_format fmt, int precision);
+to_chars_result to_chars(char* first, char* last, double value, chars_format fmt, int precision);
 to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt, int precision);
 ```
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 3572bd0d0b0e8149f527c1c43eca5870783b13a8
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 4fa0990de25b624b670ababfd8e66f340e2fb8f3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965252"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079974"
 ---
 # <a name="pack-pragma"></a>pragma pack
 
@@ -26,7 +26,7 @@ Especifica o alinhamento da embalagem para a estrutura, União e membros de clas
 > **#pragma Pack (pop** [ **,** { *Identifier* | *n* }] **)** \
 > **pacote de #pragma (** [ *n* ] **)**
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 **mostrar**\
 Adicional Exibe o valor de byte atual para o alinhamento da embalagem. O valor é exibido por uma mensagem de aviso.
@@ -35,7 +35,7 @@ Adicional Exibe o valor de byte atual para o alinhamento da embalagem. O valor �
 Adicional Envia o valor de alinhamento atual da embalagem na pilha interna do compilador e define o valor de alinhamento atual da embalagem como *n*. Se *n* não for especificado, o valor de alinhamento de embalagem atual será enviado por push.
 
 \ **pop**
-Adicional Remove o registro da parte superior da pilha interna do compilador. Se *n* não for especificado com **pop**, o valor de embalagem associado ao registro resultante na parte superior da pilha será o novo valor de alinhamento de embalagem. Se *n* for especificado, por exemplo, `#pragma pack(pop, 16)`, *n* se tornará o novo valor de alinhamento de embalagem. Se você pop-up usando um *identificador*, por exemplo, `#pragma pack(pop, r1)`, todos os registros na pilha serão retirados até que o registro que tem o *identificador* seja encontrado. Esse registro é exibido e o valor de embalagem associado ao registro resultante na parte superior da pilha é o novo valor de alinhamento de embalagem. Se você pop-up usando um *identificador* que não foi encontrado em nenhum registro na pilha, o **pop** será ignorado. 
+Adicional Remove o registro da parte superior da pilha interna do compilador. Se *n* não for especificado com **pop**, o valor de embalagem associado ao registro resultante na parte superior da pilha será o novo valor de alinhamento de embalagem. Se *n* for especificado, por exemplo, `#pragma pack(pop, 16)`, *n* se tornará o novo valor de alinhamento de embalagem. Se você pop-up usando um *identificador*, por exemplo, `#pragma pack(pop, r1)`, todos os registros na pilha serão retirados até que o registro que tem o *identificador* seja encontrado. Esse registro é exibido e o valor de embalagem associado ao registro resultante na parte superior da pilha é o novo valor de alinhamento de embalagem. Se você pop-up usando um *identificador* que não foi encontrado em nenhum registro na pilha, o **pop** será ignorado.
 
 A instrução `#pragma pack (pop, r1, 2)` é equivalente a `#pragma pack (pop, r1)` seguida por `#pragma pack(2)`.
 
@@ -120,6 +120,6 @@ O exemplo a seguir mostra como usar a sintaxe *Push*, *pop*e *show* .
 #pragma pack(show)   // C4810
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Diretivas pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

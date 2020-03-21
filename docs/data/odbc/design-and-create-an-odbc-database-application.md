@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - application design [C++], database applications
 ms.assetid: 0eb106b3-91b7-4c42-8c93-a8224aa9fe12
-ms.openlocfilehash: 8dcf2e4c90bd0a9a32a2cf2403ef4b4b0bf11a7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aecb2b6d86f7c5b8093c9284d19bc3cc8cedb6c5
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395957"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079876"
 ---
 # <a name="design-and-create-an-odbc-database-application"></a>Projetar e criar um aplicativo de banco de dados ODBC
 
-Esses tópicos o ajudarão a criar e configurar seu aplicativo de banco de dados ODBC.
+Estes tópicos ajudam você a projetar e configurar seu aplicativo de banco de dados ODBC.
 
 ## <a name="in-this-section"></a>Nesta seção
 
@@ -23,7 +23,6 @@ Esses tópicos o ajudarão a criar e configurar seu aplicativo de banco de dados
 
 - [Noções básicas de ODBC](../../data/odbc/odbc-basics.md)
 
-
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)

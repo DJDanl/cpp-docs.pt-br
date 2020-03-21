@@ -4,12 +4,12 @@ description: Como usar ponteiros brutos emC++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 9ea498c254bc37dc8dc550232127cb2db3bc0886
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2dbb4f11fc0c08578e82371e8df77e9643313879
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250656"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077141"
 ---
 # <a name="raw-pointers-c"></a>Ponteiros brutos (C++)
 
@@ -45,7 +45,7 @@ Um ponteiro (se não é declarado como **const**) pode ser incrementado ou dimin
     const int* pconst = &c; // declare a non-const pointer to const int
     const int c2 = 2;
     pconst = &c2;  // OK pconst itself isn't const
-    const int* const pconst2 = &c; 
+    const int* const pconst2 = &c;
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
@@ -168,7 +168,7 @@ int main()
 
 Determinadas operações aritméticas podem ser executadas em ponteiros não const para que apontem para um novo local da memória. Um ponteiro pode ser incrementado e diminuído usando os operadores **++** , **+=** , **-=** e **--** . Essa técnica pode ser usada em matrizes e é especialmente útil em buffers de dados não tipados. Um **\*void** é incrementado pelo tamanho de um **Char** (1 byte). Um ponteiro tipado é incrementado por tamanho do tipo para o qual ele aponta.
 
-O exemplo a seguir demonstra como a aritmética de ponteiro pode ser usada para acessar pixels individuais em um bitmap no Windows. Observe o uso de **New** e **delete**e o operador de desreferência. 
+O exemplo a seguir demonstra como a aritmética de ponteiro pode ser usada para acessar pixels individuais em um bitmap no Windows. Observe o uso de **New** e **delete**e o operador de desreferência.
 
 ```cpp
 #include <Windows.h>
@@ -235,7 +235,7 @@ int main()
 
 ## <a name="void-pointers"></a>void * ponteiros
 
-Um ponteiro para **anular** simplesmente aponta para um local de memória bruto. Às vezes, é necessário usar ponteiros **void\*** , por exemplo, ao C++ passar entre as funções Code e C. 
+Um ponteiro para **anular** simplesmente aponta para um local de memória bruto. Às vezes, é necessário usar ponteiros **void\*** , por exemplo, ao C++ passar entre as funções Code e C.
 
 Quando um ponteiro tipado é convertido em um ponteiro void, o conteúdo do local da memória não é alterado, mas as informações de tipo são perdidas, para que você não possa executar operações de incremento ou decréscimo. Um local de memória pode ser convertido, por exemplo, de MyClass * para void * e de volta para MyClass *. Essas operações são inerentemente propensas a erros e exigem muito cuidado para evitar erros. O C++ moderno não incentiva o uso de ponteiros void, a menos que seja absolutamente necessário.
 
@@ -290,7 +290,7 @@ int main()
 }
 ```
 
-## <a name="pointers_to_functions"></a>Ponteiros para funções
+## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>Ponteiros para funções
 
 Na programação em estilo C, os ponteiros de função são usados principalmente para passar funções para outras funções. Nesse cenário, o chamador pode personalizar o comportamento de uma função sem modificá-la. No moderno C++, as [expressões lambda](lambda-expressions-in-cpp.md) fornecem o mesmo recurso com maior segurança de tipos e outras vantagens.
 
@@ -342,7 +342,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Ponteiros inteligentes](smart-pointers-modern-cpp.md)
 [operador de indireção: *](indirection-operator-star.md)<br/>

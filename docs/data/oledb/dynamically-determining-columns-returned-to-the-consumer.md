@@ -5,18 +5,18 @@ helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-ms.openlocfilehash: 81353581d22f3d075fd19d783591ec856c21e241
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b6061fc7da6f4c4dd53ae70a0e2d5ba7ec40023
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175492"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079640"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Determinando dinamicamente colunas retornadas ao consumidor
 
-As macros PROVIDER_COLUMN_ENTRY lidar normalmente com o `IColumnsInfo::GetColumnsInfo` chamar. No entanto, como um consumidor pode optar por usar indicadores, o provedor deve ser capaz de alterar as colunas retornadas, dependendo se o consumidor solicita um indicador.
+As macros PROVIDER_COLUMN_ENTRY normalmente lidam com a chamada `IColumnsInfo::GetColumnsInfo`. No entanto, como um consumidor pode optar por usar indicadores, o provedor deve ser capaz de alterar as colunas retornadas dependendo se o consumidor solicitar um indicador.
 
-Para lidar com o `IColumnsInfo::GetColumnsInfo` chamar, exclua o PROVIDER_COLUMN_MAP, que define uma função `GetColumnInfo`, da `CCustomWindowsFile` registro do usuário no *personalizado*RS.h e substituí-lo com a definição para seu próprio `GetColumnInfo` função:
+Para manipular a chamada de `IColumnsInfo::GetColumnsInfo`, exclua o PROVIDER_COLUMN_MAP, que define uma função `GetColumnInfo`, do registro de usuário de `CCustomWindowsFile` no RS. h *personalizado*e substitua-o pela definição para sua própria função de `GetColumnInfo`:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -39,11 +39,11 @@ public:
 };
 ```
 
-Em seguida, implementar o `GetColumnInfo` funcionar *personalizado*RS.cpp, conforme mostrado no código a seguir.
+Em seguida, implemente a função `GetColumnInfo` no RS. cpp *personalizado*, conforme mostrado no código a seguir.
 
-`GetColumnInfo` verifica primeiro se a propriedade do OLE DB `DBPROP_BOOKMARKS` está definido. Para obter a propriedade `GetColumnInfo` usa um ponteiro (`pRowset`) para o objeto de conjunto de linhas. O `pThis` ponteiro representa a classe que criou o conjunto de linhas, que é a classe em que o mapa de propriedade é armazenado. `GetColumnInfo` typecasts a `pThis` ponteiro para um `RCustomRowset` ponteiro.
+`GetColumnInfo` verifica primeiro para ver se a propriedade OLE DB `DBPROP_BOOKMARKS` está definida. Para obter a propriedade, `GetColumnInfo` usa um ponteiro (`pRowset`) para o objeto de conjunto de linhas. O ponteiro de `pThis` representa a classe que criou o conjunto de linhas, que é a classe na qual o mapa de propriedade é armazenado. `GetColumnInfo` typecasts o ponteiro de `pThis` para um ponteiro de `RCustomRowset`.
 
-Para verificar se há o `DBPROP_BOOKMARKS` propriedade, `GetColumnInfo` usa o `IRowsetInfo` interface, que pode ser obtido chamando `QueryInterface` sobre o `pRowset` interface. Como alternativa, você pode usar uma ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) método em vez disso.
+Para verificar a propriedade `DBPROP_BOOKMARKS`, `GetColumnInfo` usa a interface `IRowsetInfo`, que você pode obter chamando `QueryInterface` na interface `pRowset`. Como alternativa, você pode usar um método ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) em vez disso.
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -53,7 +53,7 @@ ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
    static ATLCOLUMNINFO _rgColumns[5];
    ULONG ulCols = 0;
   
-   // Check the property flag for bookmarks; if it is set, set the zero 
+   // Check the property flag for bookmarks; if it is set, set the zero
    // ordinal entry in the column map with the bookmark information.
    CCustomRowset* pRowset = (CCustomRowset*) pThis;
    CComQIPtr<IRowsetInfo, &IID_IRowsetInfo> spRowsetProps = pRowset;
@@ -75,25 +75,25 @@ ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
   
       if (SUCCEEDED(hr) && (var.boolVal == VARIANT_TRUE))
       {
-         ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD), 
-         DBTYPE_BYTES, 0, 0, GUID_NULL, CCustomWindowsFile, dwBookmark, 
+         ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
+         DBTYPE_BYTES, 0, 0, GUID_NULL, CCustomWindowsFile, dwBookmark,
          DBCOLUMNFLAGS_ISBOOKMARK)
          ulCols++;
       }
    }
   
    // Next, set the other columns up.
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command"), 1, 256, DBTYPE_STR, 0xFF, 0xFF, 
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command"), 1, 256, DBTYPE_STR, 0xFF, 0xFF,
       GUID_NULL, CCustomWindowsFile, szCommand)
    ulCols++;
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text"), 2, 256, DBTYPE_STR, 0xFF, 0xFF, 
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text"), 2, 256, DBTYPE_STR, 0xFF, 0xFF,
       GUID_NULL, CCustomWindowsFile, szText)
    ulCols++;
   
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command2"), 3, 256, DBTYPE_STR, 0xFF, 0xFF, 
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command2"), 3, 256, DBTYPE_STR, 0xFF, 0xFF,
       GUID_NULL, CCustomWindowsFile, szCommand2)
    ulCols++;
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text2"), 4, 256, DBTYPE_STR, 0xFF, 0xFF, 
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text2"), 4, 256, DBTYPE_STR, 0xFF, 0xFF,
       GUID_NULL, CCustomWindowsFile, szText2)
    ulCols++;
   
@@ -104,7 +104,7 @@ ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
 }
 ```
 
-Este exemplo usa uma matriz estática para conter as informações de coluna. Se o consumidor não deseja que a coluna de indicador, uma entrada na matriz é não utilizada. Para lidar com as informações, você deve criar duas macros a matriz: ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX aceita um parâmetro extra, *sinalizadores*, que é necessário se você designar uma coluna de indicador.
+Este exemplo usa uma matriz estática para manter as informações de coluna. Se o consumidor não quiser a coluna de indicadores, uma entrada na matriz não será usada. Para lidar com as informações, você cria duas macros de matriz: ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX usa um parâmetro extra, *sinalizadores*, que é necessário se você designar uma coluna de indicador.
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -135,7 +135,7 @@ Este exemplo usa uma matriz estática para conter as informações de coluna. Se
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```
 
-No `GetColumnInfo` função, a macro de indicador é usada da seguinte forma:
+Na função `GetColumnInfo`, a macro de indicador é usada da seguinte maneira:
 
 ```cpp
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
@@ -143,8 +143,8 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
    DBCOLUMNFLAGS_ISBOOKMARK)
 ```
 
-Agora você pode compilar e executar o provedor aprimorado. Para testar o provedor, modifique o consumidor de teste, conforme descrito na [implementando um consumidor simples](../../data/oledb/implementing-a-simple-consumer.md). Execute o consumidor de teste com o provedor e verifique se que o consumidor de teste recupera as cadeias de caracteres apropriadas do provedor.
+Agora você pode compilar e executar o provedor avançado. Para testar o provedor, modifique o consumidor de teste conforme descrito em [implementando um consumidor simples](../../data/oledb/implementing-a-simple-consumer.md). Execute o consumidor de teste com o provedor e verifique se o consumidor de teste recupera as cadeias de caracteres apropriadas do provedor.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Aprimorando o provedor somente leitura simples](../../data/oledb/enhancing-the-simple-read-only-provider.md)<br/>

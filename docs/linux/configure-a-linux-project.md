@@ -2,12 +2,12 @@
 title: Configurar um projeto do C++ Linux no Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 853afc39412ecd07f3ec6c9ad42d0ab599bfe17e
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419381"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077732"
 ---
 # <a name="configure-a-linux-project"></a>Configurar um projeto do Linux
 
@@ -17,9 +17,9 @@ O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 
 ::: moniker-end
 
-Este tópico descreve como configurar um projeto do C++ Linux, conforme descrito em [Criar um projeto do C++ Linux no Visual Studio](create-a-new-linux-project.md). Para projetos do CMake Linux, confira [Configurar um projeto do CMake Linux](cmake-linux-project.md). 
+Este tópico descreve como configurar um projeto do C++ Linux, conforme descrito em [Criar um projeto do C++ Linux no Visual Studio](create-a-new-linux-project.md). Para projetos do CMake Linux, confira [Configurar um projeto do CMake Linux](cmake-linux-project.md).
 
-Configure um projeto do Linux para ter como destino um computador Linux físico, uma máquina virtual ou o [WSL](/windows/wsl/about) (Subsistema do Windows para Linux). 
+Configure um projeto do Linux para ter como destino um computador Linux físico, uma máquina virtual ou o [WSL](/windows/wsl/about) (Subsistema do Windows para Linux).
 
 ::: moniker range="vs-2019"
 
@@ -92,7 +92,7 @@ Como toda a compilação está acontecendo em um computador remoto (ou no WSL), 
 
 ![Eventos de compilação](media/settings_buildevents.png)
 
-## <a name="remote_intellisense"></a> IntelliSense para cabeçalhos em sistemas remotos
+## <a name="intellisense-for-headers-on-remote-systems"></a><a name="remote_intellisense"></a> IntelliSense para cabeçalhos em sistemas remotos
 
 Quando você adiciona uma nova conexão no **Gerenciador de Conexões**, o Visual Studio detecta automaticamente os diretórios de inclusão para o compilador no sistema remoto. Visual Studio compacta e copia os arquivos para um diretório no seu computador local do Windows. Depois disso, sempre que você usar essa conexão em um projeto do Visual Studio ou CMake, os cabeçalhos nesses diretórios serão usados para fornecer IntelliSense.
 

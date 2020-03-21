@@ -5,12 +5,12 @@ helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
 description: Os módulos no C++ 20 fornecem uma alternativa moderna para arquivos de cabeçalho.
-ms.openlocfilehash: 28e1824250ad4fb404c528aa9511745abb001f31
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 286d2ec8a26dbd0a85e8f8721ad6fd7f12f45a31
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301373"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078035"
 ---
 # <a name="overview-of-modules-in-c"></a>Visão geral dos módulos no C++
 
@@ -52,7 +52,7 @@ export module Foo;
 
 #define ANSWER 42
 
-namespace Bar 
+namespace Bar
 {
    int f_internal() {
         return ANSWER;
@@ -168,6 +168,6 @@ import <vector>
 import "myheader.h"
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [módulo, importar, exportar](import-export-module.md)

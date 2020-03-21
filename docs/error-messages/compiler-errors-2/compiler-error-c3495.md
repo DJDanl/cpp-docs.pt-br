@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3495
 ms.assetid: 1fd40cb8-8373-403d-b8a8-f08424a50807
-ms.openlocfilehash: 1a61d4f2472ef6da8aedcf8a8ef90b70de47d8af
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6fe4286142c90f341925d7e76ca8de6d3b7daa9f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738265"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075004"
 ---
 # <a name="compiler-error-c3495"></a>Erro do compilador C3495
 
@@ -19,7 +19,7 @@ ms.locfileid: "74738265"
 
 Não é possível capturar uma variável que não tenha duração de armazenamento automática, como uma variável marcada `static` ou `extern`.
 
-### <a name="to-correct-this-error"></a>Para corrigir esse erro
+### <a name="to-correct-this-error"></a>Para corrigir este erro
 
 - Não passe uma variável `static` ou `extern` para a lista de captura da expressão lambda.
 
@@ -37,7 +37,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Expressões Lambda](../../cpp/lambda-expressions-in-cpp.md)
-

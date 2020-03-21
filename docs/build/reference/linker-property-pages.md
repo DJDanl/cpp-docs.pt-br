@@ -3,16 +3,16 @@ title: Páginas de propriedade do vinculador
 ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-ms.openlocfilehash: 55fcefd826ec6ecb153adad495e21ce97aa432f1
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: fd0befd7b8ed4e7a4209c3c80602be2f2a99422f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927713"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079606"
 ---
 # <a name="linker-property-pages"></a>Páginas de propriedade do vinculador
 
-As propriedades a seguir são encontradas em**Propriedades** > do **projeto** > **definição** > do**vinculador**de propriedades. Para obter mais informações sobre o vinculador, consulte [CL invoca as opções do vinculador e do](cl-invokes-the-linker.md) [vinculador](linker-options.md).
+As propriedades a seguir são encontradas em **Propriedades** de > de **projeto** > **Propriedades de configuração** > **vinculador**. Para obter mais informações sobre o vinculador, consulte [CL invoca as opções do vinculador e do](cl-invokes-the-linker.md) [vinculador](linker-options.md).
 
 ## <a name="general-property-page"></a>Página de propriedades geral
 
@@ -24,27 +24,27 @@ A opção [/out](out-output-file-name.md) substitui o nome padrão e o local do 
 
 Imprime mensagens de progresso do vinculador
 
-**Durante**
+**Opções**
 
 - **Não definido** -sem detalhes.
-- **Exibir todas as mensagens de progresso** – exibe todas as mensagens de progresso. 
+- **Exibir todas as mensagens de progresso** – exibe todas as mensagens de progresso.
 - **Para bibliotecas pesquisadas** – exibe mensagens de progresso indicando apenas as bibliotecas pesquisadas.
 - **Sobre o dobramento COMDAT durante a vinculação otimizada** – exibe informações sobre o dobramento COMDAT durante a vinculação otimizada.
 - **Sobre os dados removidos durante a vinculação otimizada** – exibe informações sobre as funções e os dados removidos durante a vinculação otimizada.
 - **Sobre módulos incompatíveis com Seh** -exibe informações sobre módulos incompatíveis com a manipulação de exceção segura.
 - **Sobre a atividade do vinculador relacionada ao código gerenciado** – exiba informações sobre a atividade do vinculador relacionada ao código gerenciado.
 
-### <a name="version"></a>Version
+### <a name="version"></a>Versão
 
 A opção [/version](version-version-information.md) informa o vinculador para colocar um número de versão no cabeçalho do arquivo. exe ou. dll. Use DUMPBIN/HEADERS para ver o campo versão da imagem dos valores de cabeçalho OPCIONais para ver o efeito de **/version**.
 
 ### <a name="enable-incremental-linking"></a>Habilitar vinculação incremental
 
-Habilita a vinculação incremental. ([/INCREMENTAL](incremental-link-incrementally.md),/INCREMENTAL: NO)
+Habilita a vinculação incremental. ([/incremental](incremental-link-incrementally.md),/incremental: no)
 
 ### <a name="suppress-startup-banner"></a>Suprimir Faixa de Inicialização
 
-A opção [/nologo](nologo-suppress-startup-banner-linker.md) impede a exibição da mensagem de direitos autorais e do número de versão. 
+A opção [/nologo](nologo-suppress-startup-banner-linker.md) impede a exibição da mensagem de direitos autorais e do número de versão.
 
 ### <a name="ignore-import-library"></a>Ignorar Biblioteca de Importação
 
@@ -80,9 +80,9 @@ Especifica se as entradas devem ser usadas para a ferramenta de bibliotecário, 
 
 Para obter informações sobre como acessar a página de propriedades do vinculador **geral** , consulte [definir C++ Propriedades do compilador e de compilação no Visual Studio](../working-with-project-properties.md).
 
-### <a name="link-status"></a>Status do link
+### <a name="link-status"></a>Status do Link
 
-Especifica se o vinculador deve exibir um indicador de progresso mostrando qual porcentagem do link foi concluída. O padrão é não exibir essas informações de status. ([/LTCG](ltcg-link-time-code-generation.md): STATUS | LTCG: NOSTATUS)
+Especifica se o vinculador deve exibir um indicador de progresso mostrando qual porcentagem do link foi concluída. O padrão é não exibir essas informações de status. ([/LTCG](ltcg-link-time-code-generation.md): status | LTCG: NOSTATUS)
 
 ### <a name="prevent-dll-binding"></a>Impedir Associação de DLL
 
@@ -96,7 +96,7 @@ Especifica se o vinculador deve exibir um indicador de progresso mostrando qual 
 
 A opção [/Force](force-force-file-output.md) informa o vinculador para criar um arquivo. exe ou dll, mesmo que um símbolo seja referenciado, mas não definido, ou seja definido com multiplicação. Ele pode criar um arquivo. exe inválido.
 
-**Durante**
+**Opções**
 
 - **Enabled** -/Force sem argumentos implica vários e não resolvidos.
 - **Somente símbolo definido multiplicado** – Use/Force: Multiple para criar um arquivo de saída, mesmo que o link encontre mais de uma definição para um símbolo.
@@ -106,7 +106,7 @@ A opção [/Force](force-force-file-output.md) informa o vinculador para criar u
 
 Prepara uma imagem para HotPatching.
 
-**Durante**
+**Opções**
 
 - **Enabled** -prepara uma imagem para HotPatching.
 - **Somente imagem x86** -prepara uma imagem x86 para HotPatching.
@@ -119,13 +119,13 @@ A opção [/Section](section-specify-section-attributes.md) altera os atributos 
 
 ## <a name="input-property-page"></a>Página de propriedades de entrada
 
-### <a name="additional-dependencies"></a>Dependências adicionais
+### <a name="additional-dependencies"></a>Dependências Adicionais
 
 Especifica itens adicionais a serem adicionados à linha de comando do link, por exemplo, *Kernel32. lib*.
 
 ### <a name="ignore-all-default-libraries"></a>Ignorar todas as bibliotecas padrão
 
-A opção [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) informa o vinculador para remover uma ou mais bibliotecas padrão da lista de bibliotecas que pesquisa ao resolver referências externas. 
+A opção [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) informa o vinculador para remover uma ou mais bibliotecas padrão da lista de bibliotecas que pesquisa ao resolver referências externas.
 
 ### <a name="ignore-specific-default-libraries"></a>Ignorar bibliotecas padrão específicas
 
@@ -133,7 +133,7 @@ Especifica um ou mais nomes de bibliotecas padrão a serem ignoradas. Separe vá
 
 ### <a name="module-definition-file"></a>Arquivo de definição de módulo
 
-A opção [/def](def-specify-module-definition-file.md) passa um arquivo de definição de módulo (. def) para o vinculador. Somente um arquivo. def pode ser especificado para vincular. 
+A opção [/def](def-specify-module-definition-file.md) passa um arquivo de definição de módulo (. def) para o vinculador. Somente um arquivo. def pode ser especificado para vincular.
 
 ### <a name="add-module-to-assembly"></a>Adicionar módulo ao assembly
 
@@ -149,7 +149,7 @@ A opção [/include](include-force-symbol-references.md) informa o vinculador pa
 
 ### <a name="delay-loaded-dlls"></a>Atrasar DLLs carregadas
 
-A opção [/DELAYLOAD](delayload-delay-load-import.md) causa o carregamento atrasado de DLLs. O nome da dll especifica uma DLL para atrasar a carga. 
+A opção [/DELAYLOAD](delayload-delay-load-import.md) causa o carregamento atrasado de DLLs. O nome da dll especifica uma DLL para atrasar a carga.
 
 ### <a name="assembly-link-resource"></a>Recurso de link de assembly
 
@@ -171,17 +171,17 @@ A opção [/ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-
 
 ### <a name="allow-isolation"></a>Permitir isolamento
 
-Especifica o comportamento da pesquisa de manifesto. ([/ALLOWISOLATION](allowisolation-manifest-lookup.md): NO)
+Especifica o comportamento da pesquisa de manifesto. ([/ALLOWISOLATION](allowisolation-manifest-lookup.md): no)
 
 ### <a name="enable-user-account-control-uac"></a>Habilitar UAC (controle de conta de usuário)
 
-Especifica se o controle de conta de usuário está habilitado ou não.  ([/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md),/MANIFESTUAC: NO)
+Especifica se o controle de conta de usuário está habilitado ou não.  ([/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md),/MANIFESTUAC: no)
 
 ### <a name="uac-execution-level"></a>Nível de execução do UAC
 
 Especifica o nível de execução solicitado para o aplicativo durante a execução com o controle de conta de usuário.  (/MANIFESTUAC: Level = [valor])
 
-**Durante**
+**Opções**
 
 - **asInvoker** -nível de execução do UAC: como chamador.
 - **highestAvailable** -nível de execução do UAC: mais alto disponível.
@@ -197,12 +197,12 @@ Especifica se os níveis de proteção da interface do usuário devem ser ignora
 
 Essa opção permite a criação de informações de depuração para o arquivo. exe ou a DLL.
 
-**Durante**
+**Opções**
 
 - **Não** – não produz nenhuma informação de depuração.
 - **Gerar informações de depuração** -crie um banco de dados de programa completo (PDB) ideal para distribuição para o servidor de símbolos da Microsoft.
-- **Gerar informações de depuração otimizadas para links mais rápidos** – produz um banco de dados de programa (PDB) ideal para o ciclo de depuração de link de edição. 
-- **Gerar informações de depuração otimizadas para compartilhamento e publicação** – produz um banco de dados de programa (PDB) ideal para o ciclo de depuração de link de edição. 
+- **Gerar informações de depuração otimizadas para links mais rápidos** – produz um banco de dados de programa (PDB) ideal para o ciclo de depuração de link de edição.
+- **Gerar informações de depuração otimizadas para compartilhamento e publicação** – produz um banco de dados de programa (PDB) ideal para o ciclo de depuração de link de edição.
 
 ### <a name="generate-program-database-file"></a>Gerar arquivo de banco de dados do programa
 
@@ -234,7 +234,7 @@ A opção [/MapInfo](mapinfo-include-information-in-mapfile.md) informa o vincul
 
 A opção [/Subsystem](subsystem-specify-subsystem.md) informa ao sistema operacional como executar o arquivo. exe. A escolha do subsistema afeta o símbolo de ponto de entrada (ou função de ponto de entrada) que o vinculador escolherá.
 
-**Durante**
+**Opções**
 
 - **Não definido** -nenhum subsistema definido.
 - **Console** -aplicativo de modo de caractere Win32. Os aplicativos de console recebem um console do sistema operacional. Se Main ou wmain for definido, CONSOLE será o padrão.
@@ -286,12 +286,12 @@ A opção [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) informa o siste
 
 Use a opção de vinculador [/Driver](driver-windows-nt-kernel-mode-driver.md) para criar um driver de modo kernel do Windows NT.
 
-**Durante**
+**Opções**
 
 - **Não definido** -configuração de driver padrão.
 - Driver **Driver**
-- **Somente** -/Driver: faz com que o vinculador adicione o bit IMAGE_FILE_UP_SYSTEM_ONLY às características no cabeçalho de saída para especificar que ele é um driver uniprocessador (up). O sistema operacional se recusará a carregar um driver ativo em um sistema de multiprocessador (MP).
-- **WDM** -/Driver: WDM faz com que o vinculador defina o bit IMAGE_DLLCHARACTERISTICS_WDM_DRIVER no campo DLLCHARACTERISTICS do cabeçalho opcional.
+- **Somente** -/Driver: faz com que o vinculador adicione o IMAGE_FILE_UP_SYSTEM_ONLY bit às características no cabeçalho de saída para especificar que ele é um driver uniprocessador (up). O sistema operacional se recusará a carregar um driver ativo em um sistema de multiprocessador (MP).
+- **WDM** -/Driver: WDM faz com que o vinculador defina o IMAGE_DLLCHARACTERISTICS_WDM_DRIVER bit no campo DLLCHARACTERISTICS do cabeçalho opcional.
 
 ## <a name="optimization-property-page"></a>Página de propriedades de otimização
 
@@ -315,7 +315,7 @@ Especifique o arquivo. pgd para otimizações guiadas por perfil. ([/PGD](pgd-sp
 
 Especifica a geração do código de tempo de vinculação. ([/LTCG](ltcg-link-time-code-generation.md))
 
-**Durante**
+**Opções**
 
 - **Padrão** -configuração de LTCG padrão.
 - **Usar geração de código de tempo de link rápido** -use a geração de código de tempo de link com [/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md).
@@ -352,7 +352,7 @@ Permite especificar a ID de recurso da biblioteca de tipos gerada pelo vinculado
 
 Habilita ou desabilita a geração de metadados do Windows.
 
-**Durante**
+**Opções**
 
 - **Sim** – habilite a geração de arquivos de metadados do Windows.
 - **Não** -desabilite a geração de arquivos de metadados do Windows.
@@ -375,33 +375,33 @@ Assine parcialmente um metadado do Windows. Use [/WINMDDELAYSIGN](winmddelaysign
 
 ## <a name="advanced-property-page"></a>Página de propriedades avançada
 
-### <a name="entry-point"></a>Ponto de entrada
+### <a name="entry-point"></a>Entry Point
 
 A opção [/entry](entry-entry-point-symbol.md) especifica uma função de ponto de entrada como o endereço inicial de um arquivo. exe ou dll.
 
 ### <a name="no-entry-point"></a>Nenhum ponto de entrada
 
-A opção [/NOENTRY](noentry-no-entry-point.md)é necessária para criar uma DLL somente de recursos. Use esta opção para impedir que o link vincule uma referência `_main` à dll.
+A opção [/NOENTRY](noentry-no-entry-point.md)é necessária para criar uma DLL somente de recursos. Use esta opção para impedir que o LINK vincule uma referência a `_main` na DLL.
 
 ### <a name="set-checksum"></a>Definir soma de verificação
 
 A opção [/Release](release-set-the-checksum.md) define a soma de verificação no cabeçalho de um arquivo. exe.
 
-### <a name="base-address"></a>Endereço base
+### <a name="base-address"></a>Endereço básico
 
 Define um endereço básico para o programa. ([/Base](base-base-address.md): {endereço\[, tamanho] | @filename, chave})
 
 ### <a name="randomized-base-address"></a>Endereço base aleatório
 
-Endereço base aleatório. ([/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)\[: NO])
+Endereço base aleatório. ([/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)\[: no])
 
 ### <a name="fixed-base-address"></a>Endereço base fixo
 
-Cria um programa que só pode ser carregado em seu endereço básico preferido. ([/FIXED](fixed-fixed-base-address.md)\[: NO])
+Cria um programa que só pode ser carregado em seu endereço básico preferido. ([/FIXED](fixed-fixed-base-address.md)\[: no])
 
 ### <a name="data-execution-prevention-dep"></a>Prevenção de execução de dados (DEP)
 
-Marca um executável como tendo sido testado para ser compatível com o recurso de prevenção de execução de dados do Windows. ([/NXCOMPAT](nxcompat-compatible-with-data-execution-prevention.md)\[: NO])
+Marca um executável como tendo sido testado para ser compatível com o recurso de prevenção de execução de dados do Windows. ([/NXCOMPAT](nxcompat-compatible-with-data-execution-prevention.md)\[: no])
 
 ### <a name="turn-off-assembly-generation"></a>Desativar a geração de assembly
 
@@ -409,13 +409,13 @@ A opção [/noAssembly](noassembly-create-a-msil-module.md) informa o vinculador
 
 ### <a name="unload-delay-loaded-dll"></a>Descarregar DLL carregada com atraso
 
-O qualificador **Unload** informa a função auxiliar de carregamento de atraso para dar suporte ao descarregamento explícito da dll. ([/DELAY](delay-delay-load-import-settings.md): UNLOAD)
+O qualificador **Unload** informa a função auxiliar de carregamento de atraso para dar suporte ao descarregamento explícito da dll. ([/Delay](delay-delay-load-import-settings.md): Unload)
 
 ### <a name="nobind-delay-loaded-dll"></a>DLL de atraso NOBIND carregado
 
-O qualificador **NOBIND** instrui o vinculador a não incluir um IAT vinculável na imagem final. O padrão é criar a IAT associável para DLLs carregadas com atraso. ([/DELAY](delay-delay-load-import-settings.md): NOBIND)
+O qualificador **NOBIND** instrui o vinculador a não incluir um IAT vinculável na imagem final. O padrão é criar a IAT associável para DLLs carregadas com atraso. ([/Delay](delay-delay-load-import-settings.md): nobind)
 
-### <a name="import-library"></a>Biblioteca de importação
+### <a name="import-library"></a>Bibliotecas de importação
 
 Substitui o nome da biblioteca de importação padrão. ([/IMPLIB](implib-name-import-library.md): filename)
 
@@ -427,7 +427,7 @@ A opção [/Merge](merge-combine-sections.md) combina a primeira seção (from) 
 
 A opção [/Machine](machine-specify-target-platform.md) especifica a plataforma de destino para o programa.
 
-**Durante**
+**Opções**
 
 - **Não definido**
 - **MachineARM**
@@ -445,13 +445,13 @@ A opção [/Machine](machine-specify-target-platform.md) especifica a plataforma
 
 ### <a name="profile"></a>Perfil
 
-Produz um arquivo de saída que pode ser usado com o criador de perfil de Ferramentas de desempenho. Requer que GenerateDebugInformation (/[/debug](debug-generate-debug-info.md)) seja definido. ([/PROFILE](profile-performance-tools-profiler.md))
+Produz um arquivo de saída que pode ser usado com o criador de perfil de Ferramentas de desempenho. Requer que GenerateDebugInformation (/[/debug](debug-generate-debug-info.md)) seja definido. ([/Profile](profile-performance-tools-profiler.md))
 
 ### <a name="clr-thread-attribute"></a>Atributo de thread CLR
 
 Especifique explicitamente o atributo threading para o ponto de entrada do seu programa CLR.
 
-**Durante**
+**Opções**
 
 - **Atributo threading do MTA** – aplica o atributo MTAThreadAttribute ao ponto de entrada do seu programa.
 - **Atributo threading STA** – aplica o atributo STAThreadAttribute ao ponto de entrada do seu programa.
@@ -461,7 +461,7 @@ Especifique explicitamente o atributo threading para o ponto de entrada do seu p
 
 Define o tipo (IJW, puro ou seguro) de uma imagem do CLR.
 
-**Durante**
+**Opções**
 
 - **Forçar imagem IJW**
 - **Forçar imagem IL pura**
@@ -488,7 +488,7 @@ Assinar parcialmente um assembly. Use [/delaysign](delaysign-partially-sign-an-a
 
 Permite fornecer informações de ICE (erro interno do compilador) diretamente à equipe do Visual C++.
 
-**Durante**
+**Opções**
 
 - **PromptImmediately** -solicitar imediatamente.
 - **Fila para o próximo** logon-fila para o próximo logon.
@@ -503,7 +503,7 @@ A opção [/align](align-section-alignment.md) especifica o alinhamento de cada 
 
 [/CLRSUPPORTLASTERROR](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md), que é ativado por padrão, preserva o último código de erro das funções chamadas por meio do mecanismo P/Invoke, que permite chamar funções nativas em DLLs, do código compilado com/CLR.
 
-**Durante**
+**Opções**
 
 - **Habilitado** -habilitar CLRSupportLastError.
 - **Desabilitado** -desabilitar CLRSupportLastError.

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 3ece04811a75fba22db447875dc6ed08c22987b5
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 25fffd018c45200571f99dc87ab8ffe29bb6667f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142052"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080000"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Instruções passo a passo: criando um aplicativo com base no agente
 
 Este tópico descreve como criar um aplicativo básico baseado em agente. Neste tutorial, você pode criar um agente que lê dados de um arquivo de texto de forma assíncrona. O aplicativo usa o algoritmo de soma de verificação Adler-32 para calcular a soma de verificação do conteúdo desse arquivo.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 Você deve entender os seguintes tópicos para concluir este passo a passos:
 
@@ -28,7 +28,7 @@ Você deve entender os seguintes tópicos para concluir este passo a passos:
 
 - [Estruturas de dados de sincronização](../../parallel/concrt/synchronization-data-structures.md)
 
-## <a name="top"></a>As
+## <a name="sections"></a><a name="top"></a>As
 
 Este tutorial demonstra como executar as seguintes tarefas:
 
@@ -38,7 +38,7 @@ Este tutorial demonstra como executar as seguintes tarefas:
 
 - [Usando a classe file_reader no aplicativo](#useagentclass)
 
-## <a name="createapplication"></a>Criando o aplicativo de console
+## <a name="creating-the-console-application"></a><a name="createapplication"></a>Criando o aplicativo de console
 
 Esta seção mostra como criar um C++ aplicativo de console que faz referência aos arquivos de cabeçalho que o programa usará. As etapas iniciais variam de acordo com a versão do Visual Studio que você está usando. Verifique se o seletor de versão está definido corretamente no canto superior esquerdo desta página.
 
@@ -48,7 +48,7 @@ Esta seção mostra como criar um C++ aplicativo de console que faz referência 
 
 1. No menu principal, escolha **arquivo** > **novo** **projeto** de > para abrir a caixa de diálogo **criar um novo projeto** .
 
-1. Na parte superior da caixa de diálogo, defina **Linguagem** como **C++** , **Plataforma** como **Windows** e **Tipo de projeto** como **Console**. 
+1. Na parte superior da caixa de diálogo, defina **Linguagem** como **C++** , **Plataforma** como **Windows** e **Tipo de projeto** como **Console**.
 
 1. Na lista filtrada de tipos de projeto, escolha **Aplicativo de Console** e, em seguida, escolha **Avançar**. Na próxima página, digite `BasicAgent` como o nome do projeto e especifique o local do projeto, se desejado.
 
@@ -80,7 +80,7 @@ Esta seção mostra como criar um C++ aplicativo de console que faz referência 
 
 [[Superior](#top)]
 
-## <a name="createagentclass"></a>Criando a classe file_reader
+## <a name="creating-the-file_reader-class"></a><a name="createagentclass"></a>Criando a classe file_reader
 
 Esta seção mostra como criar a classe `file_reader`. O tempo de execução agenda cada agente para executar o trabalho em seu próprio contexto. Portanto, você pode criar um agente que executa o trabalho de forma síncrona, mas interage com outros componentes de maneira assíncrona. A classe `file_reader` lê dados de um determinado arquivo de entrada e envia dados desse arquivo para um determinado componente de destino.
 
@@ -128,7 +128,7 @@ O exemplo a seguir mostra o conteúdo completo de file_reader. h.
 
 [[Superior](#top)]
 
-## <a name="useagentclass"></a>Usando a classe file_reader no aplicativo
+## <a name="using-the-file_reader-class-in-the-application"></a><a name="useagentclass"></a>Usando a classe file_reader no aplicativo
 
 Esta seção mostra como usar a classe `file_reader` para ler o conteúdo de um arquivo de texto. Ele também mostra como criar um objeto [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) que recebe esses dados de arquivo e calcula sua soma de verificação de Adler-32.
 
@@ -192,17 +192,17 @@ Quando usado com a entrada de exemplo, esse programa produz a seguinte saída:
 Adler-32 sum is fefb0d75
 ```
 
-## <a name="robust-programming"></a>Programação Robusta
+## <a name="robust-programming"></a>Programação robusta
 
 Para impedir o acesso simultâneo aos membros de dados, recomendamos que você adicione métodos que executam trabalho à seção `protected` ou `private` da sua classe. Adicione apenas métodos que enviam ou recebem mensagens de ou para o agente para a seção `public` da sua classe.
 
 Sempre chame o método [Concurrency:: Agent::d um](reference/agent-class.md#done) para mover o agente para o estado concluído. Normalmente, você chama esse método antes de retornar do método `run`.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Para obter outro exemplo de um aplicativo baseado em agente, consulte [Walkthrough: usando Join para evitar deadlock](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Blocos de mensagens assíncronos](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

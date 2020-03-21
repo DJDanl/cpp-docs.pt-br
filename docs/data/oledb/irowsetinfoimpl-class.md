@@ -25,12 +25,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: 7389ba689fb1f371b5fbf73045dcdc78cd465d88
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 691871bfc4a9e63167611a3228807fb12e32d1cb
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446190"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077877"
 ---
 # <a name="irowsetinfoimpl-class"></a>Classe IRowsetInfoImpl
 
@@ -41,11 +41,11 @@ Fornece uma implementação para a interface [IRowsetInfo](/previous-versions/wi
 ```cpp
 template <class T, class PropClass = T>
 class ATL_NO_VTABLE IRowsetInfoImpl :
-   public IRowsetInfo, 
+   public IRowsetInfo,
    public CUtlProps<PropClass>
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 Sua classe, derivada de `IRowsetInfoImpl`.
@@ -53,7 +53,7 @@ Sua classe, derivada de `IRowsetInfoImpl`.
 *PropClass*<br/>
 Uma classe de propriedade definida pelo usuário que assume como padrão *T*.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** altdb. h
 
@@ -71,7 +71,7 @@ Uma classe de propriedade definida pelo usuário que assume como padrão *T*.
 
 Uma interface obrigatória em conjuntos de linhas. Essa classe implementa as propriedades do conjunto de linhas usando o [mapa de conjunto de propriedades](../../data/oledb/begin-propset-map.md) definido em sua classe de comando. Embora a classe Rowset pareça estar usando os conjuntos de propriedades da classe Command, o conjunto de linhas é fornecido com sua própria cópia das propriedades de tempo de execução, quando ele é criado por um comando ou objeto de sessão.
 
-## <a name="getproperties"></a>IRowsetInfoImpl:: GetProperties
+## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a>IRowsetInfoImpl:: GetProperties
 
 Retorna as configurações atuais das propriedades no grupo de `DBPROPSET_ROWSET`.
 
@@ -84,11 +84,11 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
    DBPROPSET** prgPropertySets);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 Consulte [IRowsetInfo:: GetProperties](/previous-versions/windows/desktop/ms719611(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="getreferencedrowset"></a>IRowsetInfoImpl::GetReferencedRowset
+## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a>IRowsetInfoImpl::GetReferencedRowset
 
 Retorna um ponteiro de interface para o conjunto de linhas ao qual um indicador se aplica.
 
@@ -100,11 +100,11 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
    IUnknown** ppReferencedRowset);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 Consulte [IRowsetInfo:: GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85)) na *referência do programador de OLE DB*. O parâmetro *iOrdinal* deve ser uma coluna de indicador.
 
-## <a name="getspecification"></a>IRowsetInfoImpl:: getespecificion
+## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a>IRowsetInfoImpl:: getespecificion
 
 Retorna um ponteiro de interface no objeto (comando ou sessão) que criou esse conjunto de linhas.
 
@@ -115,7 +115,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
    IUnknown** ppSpecification);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 Consulte [IRowsetInfo:: Getespecification](/previous-versions/windows/desktop/ms716746(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -123,7 +123,7 @@ Consulte [IRowsetInfo:: Getespecification](/previous-versions/windows/desktop/ms
 
 Use esse método com [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) para recuperar propriedades do objeto de fonte de dados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

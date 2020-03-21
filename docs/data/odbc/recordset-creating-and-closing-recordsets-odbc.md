@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: como criar e fechar conjuntos de registros (ODBC)'
+title: 'Conjunto de registros: criando e fechando conjuntos de registros (ODBC)'
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, creating
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: b4896dff711d87db05334afc0345c15da2fa23e6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: e7aa4c0fc2a0acfe7b8df2f50f99bf44eb1ef456
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707991"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075916"
 ---
-# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Conjunto de registros: como criar e fechar conjuntos de registros (ODBC)
+# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Conjunto de registros: criando e fechando conjuntos de registros (ODBC)
 
-> [!NOTE] 
+> [!NOTE]
 > O Assistente de consumidor ODBC do MFC não está disponível no Visual Studio 2019 e posterior. É possível criar um consumidor manualmente.
 
 Este tópico aplica-se às classes ODBC do MFC.
@@ -33,7 +33,7 @@ Este tópico explica:
 
 - [Quando e como fechar um objeto de conjunto de registros](#_core_closing_a_recordset).
 
-##  <a name="_core_creating_recordsets_at_run_time"></a> Como criar conjuntos de registros em tempo de execução
+##  <a name="creating-recordsets-at-run-time"></a><a name="_core_creating_recordsets_at_run_time"></a> Como criar conjuntos de registros em tempo de execução
 
 Antes de poder criar objetos recordset em seu programa, normalmente você escreve classes de conjunto de registros específicas do aplicativo. Para saber mais sobre essa etapa preliminar, confira [Como adicionar um consumidor ODBC do MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
 
@@ -57,7 +57,7 @@ Em sua chamada [Open](../../mfc/reference/crecordset-class.md#open), você pode:
 
 - Especificar se o conjunto de registros é um dynaset ou um instantâneo. Os conjuntos de registros são abertos como instantâneos por padrão. Ou pode especificar um conjunto de registros somente de encaminhamento, que permite apenas rolagem para frente, um registro por vez.
 
-   Por padrão, um conjunto de registros usa o tipo padrão armazenado no membro de dados `CRecordset` `m_nDefaultType`. Os assistentes escrevem código para inicializar `m_nDefaultType` para o tipo de conjunto de registros escolhido no assistente. Em vez de aceitar este padrão, é possível substituir outro tipo de conjunto de registros.
+   Por padrão, um conjunto de registros usa o tipo padrão armazenado no membro de dados `CRecordset``m_nDefaultType`. Os assistentes escrevem código para inicializar `m_nDefaultType` para o tipo de conjunto de registros escolhido no assistente. Em vez de aceitar este padrão, é possível substituir outro tipo de conjunto de registros.
 
 - Especificar uma cadeia de caracteres para substituir a instrução **SELECT** SQL padrão construída pelo conjunto de registros.
 
@@ -74,12 +74,12 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-Após chamar `Open`, use as funções de membro e membros de dados do objeto para trabalhar com os registros. Em alguns casos, talvez convenha repetir a consulta ou atualizar o conjunto de registros para incluir alterações que ocorreram na fonte de dados. Para saber mais, confira [Conjunto de registros: como repetir a consulta de um conjunto de registros (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
+Após chamar `Open`, use as funções de membro e membros de dados do objeto para trabalhar com os registros. Em alguns casos, talvez convenha repetir a consulta ou atualizar o conjunto de registros para incluir alterações que ocorreram na fonte de dados. Para obter mais informações, consulte [conjunto de registros: reconsultando um conjunto de registros (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
 
 > [!TIP]
->  A cadeia de conexão usada durante o desenvolvimento pode não ser a mesma cadeia de conexão de que seus usuários eventuais precisam. Para obter ideias sobre como generalizar o seu aplicativo com relação a isso, confira [Fonte de dados: como gerenciar conexões (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
+>  A cadeia de conexão usada durante o desenvolvimento pode não ser a mesma cadeia de conexão de que seus usuários eventuais precisam. Para obter ideias sobre como generalizar seu aplicativo nesse aspecto, consulte [fonte de dados: Gerenciando conexões (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
 
-##  <a name="_core_setting_recordset_options"></a> Como definir opções de conjunto de registros
+##  <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> Como definir opções de conjunto de registros
 
 Após construir seu objeto de conjunto de registros, mas antes de chamar `Open` para selecionar registros, talvez convenha definir algumas opções para controlar o comportamento do conjunto de registros. Para todos os conjuntos de registros, você pode:
 
@@ -96,7 +96,7 @@ Também será possível definir a opção a seguir se as condições estiverem c
 > [!NOTE]
 >  Para afetar a seleção de registros, é necessário definir essas opções antes de chamar a função de membro `Open`.
 
-##  <a name="_core_closing_a_recordset"></a> Como fechar um conjunto de registros
+##  <a name="closing-a-recordset"></a><a name="_core_closing_a_recordset"></a> Como fechar um conjunto de registros
 
 Quando você concluir seu conjunto de registros, deverá descartá-lo e desalocar sua memória.
 
@@ -110,8 +110,8 @@ Quando você concluir seu conjunto de registros, deverá descartá-lo e desaloca
 
 `Close` libera o manipulador `HSTMT` do conjunto de registros. Ele não destrói o objeto C++.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: rolagem (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
-[Conjunto de registros: adicionar, atualizar e excluir registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[Conjunto de registros: rolando (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
+[Conjunto de registros: adicionando, atualizando e excluindo registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

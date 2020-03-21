@@ -119,12 +119,12 @@ helpviewer_keywords:
 - std::basic_string_view, substr
 - std::basic_string_view, swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 2f262ee238d8ee9b441f5bc1daebcf6a64f35a52
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8f6b1bdf5648298221a8b41de31ec49ae0c47513
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445840"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076711"
 ---
 # <a name="basic_string_view-class"></a>Classe basic_string_view
 
@@ -175,7 +175,7 @@ template <class CharType, class Traits = char_traits<CharType>>
 class basic_string_view;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *CharType*
 O tipo dos caracteres que são armazenados no string_view. A C++ biblioteca padrão fornece os seguintes typedefs para especializações deste modelo.
@@ -187,15 +187,15 @@ O tipo dos caracteres que são armazenados no string_view. A C++ biblioteca padr
 \ de *características*
 O padrão é [char_traits](char-traits-struct.md)<*CharType*>.
 
-### <a name="constructors"></a>{1&gt;Construtores&lt;1}
+### <a name="constructors"></a>Construtores
 
-|Construtor|Descrição|
+|Construtor|DESCRIÇÃO|
 |-|-|
 |[basic_string_view](#basic_string_view)|Constrói um string_view que está vazio ou aponta para todos ou para parte de outros dados do objeto de cadeia de caracteres ou para uma matriz de caracteres de estilo C.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome de tipo|Descrição|
+|Nome do tipo|DESCRIÇÃO|
 |-|-|
 |**const_iterator**|Iterador de acesso aleatório que pode ler elementos **const** .|
 |**const_pointer**|`using const_pointer = const value_type*;`|
@@ -213,14 +213,14 @@ O padrão é [char_traits](char-traits-struct.md)<*CharType*>.
 
 ### <a name="member-operators"></a>Operadores de membro
 
-|Operador|Descrição|
+|Operador|DESCRIÇÃO|
 |-|-|
 |[operator=](#op_eq)|Atribui um objeto de cadeia de caracteres string_view ou conversível a outro string_view.|
 |[operator\[\]](#op_at)|Retorna o elemento no índice especificado.|
 
 ### <a name="member-functions"></a>Funções de membro
 
-|Função de membro|Descrição|
+|Função de membro|DESCRIÇÃO|
 |-|-|
 |[at](#at)|Retorna um const_reference ao elemento em um local especificado.|
 |[back](#back)|Retorna um const_reference para o último elemento.|
@@ -256,7 +256,7 @@ O padrão é [char_traits](char-traits-struct.md)<*CharType*>.
 
 Se for solicitado que uma função gere uma sequência mais longa que os elementos [max_size](#max_size), a função relatará um erro de comprimento, gerando um objeto do tipo [length_error](../standard-library/length-error-class.md).
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 [std: c++ 17](../build/reference/std-specify-language-standard-version.md) ou posterior
 
@@ -264,7 +264,7 @@ Se for solicitado que uma função gere uma sequência mais longa que os element
 
 **Namespace:** std
 
-## <a name="at"></a>basic_string_view:: at
+## <a name="basic_string_viewat"></a><a name="at"></a>basic_string_view:: at
 
 Retorna um const_reference para o caractere no índice baseado em 0 especificado.
 
@@ -272,7 +272,7 @@ Retorna um const_reference para o caractere no índice baseado em 0 especificado
 constexpr const_reference at(size_type offset) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *deslocamento*
 O índice do elemento a ser referenciado.
@@ -283,13 +283,13 @@ Um const_reference para o caractere na posição especificada pelo índice de pa
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro elemento tem um índice de zero e os elementos a seguir são indexados consecutivamente pelos inteiros positivos, de modo que um string_view de comprimento *n* tenha um elemento *n*th indexado pelo número *n-* 1. **em** gera uma exceção para índices inválidos, diferentemente do [operador\[\]](#op_at). 
+O primeiro elemento tem um índice de zero e os elementos a seguir são indexados consecutivamente pelos inteiros positivos, de modo que um string_view de comprimento *n* tenha um elemento *n*th indexado pelo número *n-* 1. **em** gera uma exceção para índices inválidos, diferentemente do [operador\[\]](#op_at).
 
 Em geral, recomendamos que **em** para sequências como `std::vector` e string_view nunca devem ser usados. Um índice inválido passado para uma sequência é um erro lógico que deve ser descoberto e corrigido durante o desenvolvimento. Se um programa não tiver certeza absoluta de que seus índices são válidos, ele deve testá-los, não chamar at () e contar com exceções para se defender contra programação com cuidado.
 
 Consulte [basic_string_view:: operator\[\]](#op_at) para obter mais informações.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // basic_string_view_at.cpp
@@ -306,7 +306,7 @@ int main()
 }
 ```
 
-## <a name="back"></a>basic_string_view:: voltar
+## <a name="basic_string_viewback"></a><a name="back"></a>basic_string_view:: voltar
 
 Retorna um const_reference para o último elemento.
 
@@ -324,7 +324,7 @@ Gera uma exceção se o string_view estiver vazio.
 
 Tenha em mente que, depois que um string_view for modificado, por exemplo chamando `remove_suffix`, o elemento retornado por essa função não será mais o último elemento nos dados subjacentes.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Um string_view que é construído com um literal de cadeia de caracteres C não inclui o nulo de terminação e, portanto, no exemplo a seguir, `back` retorna ' p ' e não ' \ 0 '.
 
@@ -332,7 +332,7 @@ Um string_view que é construído com um literal de cadeia de caracteres C não 
 char c[] = "Help"; // char[5]
 string_view sv{ c };
 cout << sv.size(); // size() == 4
-cout << sv.back() << endl; // p 
+cout << sv.back() << endl; // p
 ```
 
 Os nulos inseridos são tratados como qualquer outro caractere:
@@ -342,7 +342,7 @@ string_view e = "embedded\0nulls"sv;
 cout << boolalpha << (e.back() == 's'); // true
 ```
 
-## <a name="basic_string_view"></a>basic_string_view:: basic_string_view
+## <a name="basic_string_viewbasic_string_view"></a><a name="basic_string_view"></a>basic_string_view:: basic_string_view
 
 Constrói um string_view.
 
@@ -353,7 +353,7 @@ constexpr basic_string_view(const charT* str);
 constexpr basic_string_view(const charT* str, size_type len);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 O ponteiro para os valores de caracteres.
@@ -367,7 +367,7 @@ Os construtores com um parâmetro charT * supõem que a entrada é terminada em 
 
 Você também pode construir um string_view com um literal. Consulte o [operador "" VA](string-view-operators.md#op_sv).
 
-## <a name="begin"></a>basic_string_view:: Begin
+## <a name="basic_string_viewbegin"></a><a name="begin"></a>basic_string_view:: Begin
 
 O mesmo que [cbegin](#cbegin).
 
@@ -378,7 +378,7 @@ constexpr const_iterator begin() const noexcept;
 ### <a name="return-value"></a>Valor retornado
 Retorna um const_iterator endereçando o primeiro elemento.
 
-## <a name="cbegin"></a>basic_string_view:: cbegin
+## <a name="basic_string_viewcbegin"></a><a name="cbegin"></a>basic_string_view:: cbegin
 
 Retorna um const_iterator que aborda o primeiro elemento no intervalo.
 
@@ -390,7 +390,7 @@ constexpr const_iterator cbegin() const noexcept;
 
 Um iterador de acesso aleatório **const** que aponta para o primeiro elemento do intervalo ou o local logo após o final de um intervalo vazio (para um intervalo vazio, `cbegin() == cend()`).
 
-## <a name="cend"></a>basic_string_view:: cend
+## <a name="basic_string_viewcend"></a><a name="cend"></a>basic_string_view:: cend
 
 Retorna um const_iterator que aborda o local logo após o último elemento em um intervalo.
 
@@ -406,7 +406,7 @@ Um iterador de acesso aleatório **const** que aponta muito além do fim do inte
 
 O valor retornado por `cend` não deve ser desreferenciado.
 
-## <a name="compare"></a>basic_string_view:: Compare
+## <a name="basic_string_viewcompare"></a><a name="compare"></a>basic_string_view:: Compare
 
 Executa uma comparação de maiúsculas e minúsculas com um string_view especificado (ou um tipo de cadeia de caracteres conversível) para determinar se os dois objetos são iguais ou se um deles é modo lexicográfico menor do que o outro. Os [operadores\<string_view >](string-view-operators.md) usam essa função de membro para executar comparações.
 
@@ -419,7 +419,7 @@ constexpr int compare(size_type pos, size_type num, const charT* ptr) const;
 constexpr int compare(size_type pos, size_type num, const charT* ptr, size_type num2) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *strv*
 O string_view que deve ser comparado a esse string_view.
@@ -445,9 +445,9 @@ Um valor negativo se esse string_view for menor que *strv* ou *PTR*; zero se as 
 
 ### <a name="remarks"></a>Comentários
 
-As funções de membro de `compare` executam uma comparação que diferencia maiúsculas de minúsculas de todos ou de parte de cada sequência de caracteres. 
+As funções de membro de `compare` executam uma comparação que diferencia maiúsculas de minúsculas de todos ou de parte de cada sequência de caracteres.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // basic_string_view_compare.cpp
@@ -483,11 +483,11 @@ int main()
    cout << "sv_C is: " << sv_C << endl;
    cout << "sv_D is: " << sv_D << endl;
    int comp2a = sv_C.compare(2, 3, sv_D);
-   cout << "The last three characters of sv_C are" 
+   cout << "The last three characters of sv_C are"
        << to_alpha(comp2a) << "sv_D.\n";
 
    int comp2b = sv_C.compare(0, 3, sv_D);
-   cout << "The first three characters of sv_C are" 
+   cout << "The first three characters of sv_C are"
        << to_alpha(comp2b) << "sv_D.\n";
 
    // The third member function compares part of
@@ -498,7 +498,7 @@ int main()
    cout << "sv_F is: " << sv_F << endl;
    int comp3a = sv_E.compare(2, 3, sv_F, 1, 3);
    cout << "The three characters from position 2 of sv_E are"
-       << to_alpha(comp3a) 
+       << to_alpha(comp3a)
        << "the 3 characters of sv_F from position 1.\n";
 
    // The fourth member function compares
@@ -555,7 +555,7 @@ cs_C: ACAB
 The 3 characters from position 1 of sv_I are equal to the first 3 characters of cs_C.
 ```
 
-## <a name="copy"></a>basic_string_view:: copiar
+## <a name="basic_string_viewcopy"></a><a name="copy"></a>basic_string_view:: copiar
 
 Copia no máximo um número especificado de caracteres de uma posição indexada em um string_view de origem para uma matriz de caracteres de destino. É recomendável que você use a função segura [basic_string_view:: _Copy_s](#_copy_s) em vez disso.
 
@@ -563,7 +563,7 @@ Copia no máximo um número especificado de caracteres de uma posição indexada
 size_type copy(charT* ptr, size_type count, size_type offset = 0) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *PTR*
 A matriz de caracteres de destino à qual os elementos devem ser copiados.
@@ -582,7 +582,7 @@ O número de caracteres realmente copiados.
 
 Um caractere nulo não é acrescentado ao final da cópia.
 
-## <a name="_copy_s"></a>basic_string_view:: _Copy_s
+## <a name="basic_string_view_copy_s"></a><a name="_copy_s"></a>basic_string_view:: _Copy_s
 
 Proteger a função de cópia CRT a ser usada em vez da [cópia](#copy).
 
@@ -594,7 +594,7 @@ size_type _Copy_s(
     size_type _Off = 0) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *dest*
 A matriz de caracteres de destino à qual os elementos devem ser copiados.
@@ -617,7 +617,7 @@ Um caractere nulo não é acrescentado ao final da cópia.
 
 Para obter mais informações, consulte [c-Runtime-Library/Security-Features-in-the-CRT](../c-runtime-library/security-features-in-the-crt.md).
 
-## <a name="crbegin"></a>basic_string_view:: crbegin
+## <a name="basic_string_viewcrbegin"></a><a name="crbegin"></a>basic_string_view:: crbegin
 
 Retorna um const_reverse_iterator que aborda o primeiro elemento em uma string_view invertida.
 
@@ -627,11 +627,11 @@ constexpr const_reverse_iterator crbegin() const noexcept;
 
 ### <a name="return-value"></a>Valor retornado
 
-Um const_reverse_iterator que aborda o primeiro elemento em uma string_view invertida. 
+Um const_reverse_iterator que aborda o primeiro elemento em uma string_view invertida.
 
-## <a name="crend"></a>basic_string_view:: crend
+## <a name="basic_string_viewcrend"></a><a name="crend"></a>basic_string_view:: crend
 
-O mesmo que [rend](#rend). 
+O mesmo que [rend](#rend).
 
 ```cpp
 constexpr const_reverse_iterator crend() const noexcept;
@@ -641,7 +641,7 @@ constexpr const_reverse_iterator crend() const noexcept;
 
 Retorna um const_reverse_iterator que aborda um anterior ao final de uma string_view invertida.
 
-## <a name="data"></a>basic_string_view::d o ATA
+## <a name="basic_string_viewdata"></a><a name="data"></a>basic_string_view::d o ATA
 
 Retorna um ponteiro não proprietário bruto para a sequência de caracteres const do objeto que foi usado para construir o string_view.
 
@@ -659,7 +659,7 @@ O ponteiro não pode modificar os caracteres.
 
 Uma sequência de caracteres string_view não é necessariamente terminada em nulo. O tipo de retorno para `data` não é uma cadeia de caracteres C válida, pois nenhum caractere nulo é acrescentado. O caractere nulo ' \ 0 ' não tem um significado especial em um objeto do tipo string_view e pode ser parte do objeto string_view assim como qualquer outro caractere.
 
-## <a name="empty"></a>basic_string_view:: Empty
+## <a name="basic_string_viewempty"></a><a name="empty"></a>basic_string_view:: Empty
 
 Testa se o string_view contém caracteres ou não.
 
@@ -675,7 +675,7 @@ constexpr bool empty() const noexcept;
 
 A função de membro é equivalente a [size](#size)() = = 0.
 
-## <a name="end"></a>basic_string_view:: End
+## <a name="basic_string_viewend"></a><a name="end"></a>basic_string_view:: End
 
 Retorna um const_iterator de acesso aleatório que aponta para um passado para o último elemento.
 
@@ -691,7 +691,7 @@ Retorna um const_iterator de acesso aleatório que aponta para um passado para o
 
 `end` é usado para testar se um const_iterator atingiu o final de seu string_view. O valor retornado por `end` não deve ser desreferenciado.
 
-## <a name="find"></a>basic_string_view:: localizar
+## <a name="basic_string_viewfind"></a><a name="find"></a>basic_string_view:: localizar
 
 Pesquisa um string_view em uma direção de encaminhamento para a primeira ocorrência de um caractere ou Subcadeia de caracteres que corresponde a uma sequência especificada de caractere (s).
 
@@ -702,7 +702,7 @@ constexpr size_type find(const charT* ptr, size_type offset, size_type count) co
 constexpr size_type find(const charT* ptr, size_type offset = 0) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 O string_view para o qual a função de membro deve ser pesquisada.
@@ -723,7 +723,7 @@ O número de caracteres em *PTR*, contando a frente do primeiro caractere.
 
 O índice do primeiro caractere da subsequência pesquisada quando for houver êxito, caso contrário, `npos`.
 
-## <a name="find_first_not_of"></a>basic_string_view:: find_first_not_of
+## <a name="basic_string_viewfind_first_not_of"></a><a name="find_first_not_of"></a>basic_string_view:: find_first_not_of
 
 Pesquisa o primeiro caractere que não é um elemento de um objeto de cadeia de caracteres string_view ou conversível especificado.
 
@@ -734,7 +734,7 @@ constexpr size_type find_first_not_of(const charT* ptr, size_type offset, size_t
 constexpr size_type find_first_not_of(const charT* ptr, size_type offset = 0) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 O string_view para o qual a função de membro deve ser pesquisada.
@@ -755,7 +755,7 @@ O número de caracteres, contando a frente do primeiro caractere, na cadeia de c
 
 O índice do primeiro caractere da subsequência pesquisada quando for houver êxito, caso contrário, `npos`.
 
-## <a name="find_first_of"></a>basic_string_view:: find_first_of
+## <a name="basic_string_viewfind_first_of"></a><a name="find_first_of"></a>basic_string_view:: find_first_of
 
 Pesquisa o primeiro caractere que corresponde a qualquer elemento de uma string_view especificada.
 
@@ -766,7 +766,7 @@ constexpr size_type find_first_of(const charT* str, size_type offset, size_type 
 constexpr size_type find_first_of(const charT* str, size_type offset = 0) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *chVal*
 O valor de caractere que a função membro deve pesquisar.
@@ -787,7 +787,7 @@ O string_view para o qual a função de membro deve ser pesquisada.
 
 O índice do primeiro caractere da subsequência pesquisada quando for houver êxito, caso contrário, `npos`.
 
-## <a name="find_last_not_of"></a>basic_string_view:: find_last_not_of
+## <a name="basic_string_viewfind_last_not_of"></a><a name="find_last_not_of"></a>basic_string_view:: find_last_not_of
 
 Procura o último caractere que não seja qualquer elemento de um string_view especificado.
 
@@ -798,7 +798,7 @@ constexpr size_type find_last_not_of(const charT* ptr, size_type offset, size_ty
 constexpr size_type find_last_not_of(const charT* ptr, size_type offset = npos) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 O string_view para o qual a função de membro deve ser pesquisada.
@@ -819,7 +819,7 @@ O número de caracteres, contando a frente do primeiro caractere, em *PTR*.
 
 O índice do primeiro caractere da subsequência pesquisada quando for houver êxito, caso contrário, `string_view::npos`.
 
-## <a name="find_last_of"></a>basic_string_view:: find_last_of
+## <a name="basic_string_viewfind_last_of"></a><a name="find_last_of"></a>basic_string_view:: find_last_of
 
 Pesquisa o último caractere que corresponde a qualquer elemento de uma string_view especificada.
 
@@ -830,7 +830,7 @@ constexpr size_type find_last_of(const charT* ptr, size_type offset, size_type c
 constexpr size_type find_last_of(const charT* ptr, size_type offset = npos) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *Str*
 O string_view para o qual a função de membro deve ser pesquisada.
@@ -851,7 +851,7 @@ O número de caracteres, contando a frente do primeiro caractere, na cadeia de c
 
 O índice do último caractere da subsequência pesquisada quando houver êxito, caso contrário, `npos`.
 
-## <a name="front"></a>basic_string_view:: front
+## <a name="basic_string_viewfront"></a><a name="front"></a>basic_string_view:: front
 
 Retorna um const_reference para o primeiro elemento.
 
@@ -867,7 +867,7 @@ Um const_reference para o primeiro elemento.
 
 Gera uma exceção se o string_view estiver vazio.
 
-## <a name="length"></a>basic_string_view:: comprimento
+## <a name="basic_string_viewlength"></a><a name="length"></a>basic_string_view:: comprimento
 
 Retorna o número atual de elementos.
 
@@ -879,7 +879,7 @@ constexpr size_type length() const noexcept;
 
 A função membro é igual a [size](#size).
 
-## <a name="max_size"></a>basic_string_view:: max_size
+## <a name="basic_string_viewmax_size"></a><a name="max_size"></a>basic_string_view:: max_size
 
 Retorna o número máximo de caracteres que um string_view pode conter.
 
@@ -895,7 +895,7 @@ O número máximo de caracteres que um string_view pode conter.
 
 Uma exceção do tipo [length_error](../standard-library/length-error-class.md) é lançada quando uma operação produz um string_view com um comprimento maior que `max_size()`.
 
-## <a name="op_eq"></a>basic_string_view:: Operator =
+## <a name="basic_string_viewoperator"></a><a name="op_eq"></a>basic_string_view:: Operator =
 
 Atribui um objeto de cadeia de caracteres string_view ou conversível a outro string_view.
 
@@ -903,14 +903,14 @@ Atribui um objeto de cadeia de caracteres string_view ou conversível a outro st
 constexpr basic_string_view& operator=(const basic_string_view&) noexcept = default;
 ```
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
    string_view s = "Hello";
    string_view s2 = s;
 ```
 
-## <a name="op_at"></a>basic_string_view:: operator []
+## <a name="basic_string_viewoperator"></a><a name="op_at"></a>basic_string_view:: operator []
 
 Fornece um const_reference para o caractere com um índice especificado.
 
@@ -918,7 +918,7 @@ Fornece um const_reference para o caractere com um índice especificado.
 constexpr const_reference operator[](size_type offset) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *deslocamento*
 O índice do elemento a ser referenciado.
@@ -939,7 +939,7 @@ A referência retornada poderá ser invalidada se os dados de cadeia de caracter
 
 Ao compilar com [\_iterador\_depurar\_nível](../standard-library/iterator-debug-level.md) definido como 1 ou 2, um erro de tempo de execução ocorrerá se você tentar acessar um elemento fora dos limites do string_view. Para obter mais informações, consulte [Iteradores verificados](../standard-library/checked-iterators.md).
 
-## <a name="rbegin"></a>basic_string_view:: rbegin
+## <a name="basic_string_viewrbegin"></a><a name="rbegin"></a>basic_string_view:: rbegin
 
 Retorna um iterador const para o primeiro elemento em uma string_view invertida.
 
@@ -955,7 +955,7 @@ Retorna um iterador de acesso aleatório para o primeiro elemento em uma string_
 
 `rbegin` é usado com uma string_view invertida da mesma forma que [begin](#begin) é usado com um string_view. `rbegin` pode ser usado para inicializar uma iteração retroativa.
 
-## <a name="remove_prefix"></a>basic_string_view:: remove_prefix
+## <a name="basic_string_viewremove_prefix"></a><a name="remove_prefix"></a>basic_string_view:: remove_prefix
 
 Move o ponteiro para frente pelo número especificado de elementos.
 
@@ -967,7 +967,7 @@ constexpr void remove_prefix(size_type n);
 
 Deixa os dados subjacentes inalterados. Move o ponteiro de string_view para frente por n elementos e define o membro de dados de `size` privado como size-n.
 
-## <a name="remove_suffix"></a>basic_string_view:: remove_suffix
+## <a name="basic_string_viewremove_suffix"></a><a name="remove_suffix"></a>basic_string_view:: remove_suffix
 
 Reduz o tamanho da exibição pelo número especificado de elementos, começando da parte posterior.
 
@@ -979,7 +979,7 @@ constexpr void remove_suffix(size_type n);
 
 Deixa os dados subjacentes e o ponteiro para ele não alterado. Define o membro de dados de `size` privada como size-n.
 
-## <a name="rend"></a>basic_string_view:: rend
+## <a name="basic_string_viewrend"></a><a name="rend"></a>basic_string_view:: rend
 
 Retorna um iterador const que aponta para um passado o último elemento em uma string_view invertida.
 
@@ -995,7 +995,7 @@ Um iterador de acesso aleatório inverso const que aponta para um passado o últ
 
 `rend` é usado com uma string_view revertida como [end](#end) é usado com um string_view. `rend` pode ser usado para testar se um iterador reverso atingiu o final de seu string_view. O valor retornado por `rend` não deve ser desreferenciado.
 
-## <a name="rfind"></a>basic_string_view:: rfind
+## <a name="basic_string_viewrfind"></a><a name="rfind"></a>basic_string_view:: rfind
 
 Pesquisa um string_view em um inverso para uma subcadeia de caracteres que corresponde a uma sequência especificada.
 
@@ -1006,7 +1006,7 @@ constexpr size_type rfind(const charT* ptr, size_type offset, size_type count) c
 constexpr size_type rfind(const charT* ptr, size_type offset = npos) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ *chVal*
 O valor de caractere que a função membro deve pesquisar.
@@ -1027,7 +1027,7 @@ O string_view para o qual a função de membro deve ser pesquisada.
 
 O índice do primeiro caractere da subcadeia de caracteres quando bem-sucedido; caso contrário `npos`.
 
-## <a name="size"></a>basic_string_view:: tamanho
+## <a name="basic_string_viewsize"></a><a name="size"></a>basic_string_view:: tamanho
 
 Retorna o número de elementos no string_view.
 
@@ -1043,7 +1043,7 @@ O comprimento do string_view.
 
 Um string_view pode modificar seu comprimento, por exemplo, por `remove_prefix` e `remove_suffix`. Como isso não modifica os dados de cadeia de caracteres subjacentes, o tamanho de um string_view não é necessariamente o tamanho dos dados subjacentes.
 
-## <a name="substr"></a>basic_string_view:: subst
+## <a name="basic_string_viewsubstr"></a><a name="substr"></a>basic_string_view:: subst
 
 Retorna um string_view que representa (no máximo) o número especificado de caracteres de uma posição especificada.
 
@@ -1051,7 +1051,7 @@ Retorna um string_view que representa (no máximo) o número especificado de car
 constexpr basic_string_view substr(size_type offset = 0, size_type count = npos) const;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *deslocamento*
 Um índice que localiza o elemento na posição a partir da qual a cópia é feita, com um valor padrão de 0.
@@ -1063,7 +1063,7 @@ O número de caracteres a serem incluídos na Subcadeia, se estiverem presentes.
 
 Um objeto string_view que representa a subsequência especificada de elementos.
 
-## <a name="swap"></a>basic_string_view:: swap
+## <a name="basic_string_viewswap"></a><a name="swap"></a>basic_string_view:: swap
 
 Troca duas string_views, em outras palavras, os ponteiros para os dados de cadeia de caracteres subjacentes e os valores de tamanho.
 
@@ -1071,12 +1071,12 @@ Troca duas string_views, em outras palavras, os ponteiros para os dados de cadei
 constexpr void swap(basic_string_view& sv) noexcept;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 \ de *VA*
 O string_view de origem cujos valores de ponteiro e tamanho devem ser trocados com o da string_view de destino.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [\<string_view >](../standard-library/string-view.md)\
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

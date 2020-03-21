@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-ms.openlocfilehash: 1bcc029536d2602d50178d7148332b8371db3c7f
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 0c00ac552e525fd57f6f09b0be5655958cfce3cc
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630826"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075136"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>Aviso do compilador (nível 1) C4727
 
@@ -28,11 +28,11 @@ Portanto, se você fez o seguinte e gera C4727:
 
 ::: moniker range="<=vs-2017"
 
-**cl /clr /GL a.cpp b.cpp c.cpp /Ycstdafx.h**
+**CL/CLR/GL a. cpp b. cpp c. cpp/Ycstdafx.h**
 
 Em vez disso, você faria o seguinte:
 
-**cl /clr /GL a.cpp /Ycstdafx.h /c**
+**CL/CLR/GL a. cpp/Ycstdafx.h/c**
 
 **CL/CLR/GL b. cpp c. cpp/Yustdafx.h/link a. obj**
 
@@ -50,8 +50,7 @@ Em vez disso, você faria o seguinte:
 
 ::: moniker-end
 
-
-Para saber mais, veja
+Para obter mais informações, consulte
 
 - [/Yc (criar arquivo de cabeçalho pré-compilado)](../../build/reference/yc-create-precompiled-header-file.md)
 

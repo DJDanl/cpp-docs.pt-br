@@ -1,23 +1,21 @@
 ---
-title: Ferramentas e recursos do C++ em edições do Visual Studio
+title: Ferramentas e funcionalidades do C++ em edições do Visual Studio
 ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: a7514e5cc52b24740b82cc067e77955c4784c9f0
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 03a28c87bd0a122229a7e93b7077b1d6e3fea53f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400635"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079248"
 ---
-# <a name="c-tools-and-features-in-visual-studio-editions"></a>Ferramentas e recursos do C++ em edições do Visual Studio
-
+# <a name="c-tools-and-features-in-visual-studio-editions"></a>Ferramentas e funcionalidades do C++ em edições do Visual Studio
 
 ::: moniker range=">=vs-2019"
 
-
-Os recursos do C++ a seguir estão disponíveis no Visual Studio 2019. A menos que indicado de outra forma, todos os recursos estão disponíveis em todas as edições: Visual Studio Community, Visual Studio Professional e Visual Studio Enterprise. Alguns recursos exigem cargas de trabalho específicas ou componentes opcionais, que você pode instalar com o Instalador do Visual Studio.
+Os recursos do C++ a seguir estão disponíveis no Visual Studio 2019. A menos que declarado de outra forma, todos os recursos estão disponíveis em todas as edições: Visual Studio Community, Visual Studio Professional e Visual Studio Enterprise. Alguns recursos exigem cargas de trabalho específicas ou componentes opcionais, que você pode instalar com o Instalador do Visual Studio.
 
 ## <a name="platforms"></a>Plataformas
 
@@ -35,12 +33,12 @@ Os recursos do C++ a seguir estão disponíveis no Visual Studio 2019. A menos q
 - Clang/LLVM
   - No Windows, Clang/LLVM 7.0, direcionando x86 ou x64 (somente suporte a CMake). Outras versões do Clang poderiam funcionar, mas não há suporte oficial para elas.
   - No Linux, há suporte a qualquer instalação do Clang/LLVM pela distribuição.
- 
+
 ## <a name="c-workloads"></a>Cargas de trabalho do C++
 
 O Visual Studio inclui as seguintes cargas de trabalho para desenvolvimento do C++. É possível instalar qualquer uma ou todas elas juntamente com outras cargas de trabalho como Desenvolvimento para Desktop do .NET, Desenvolvimento do Python, Desenvolvimento do Azure, Desenvolvimento de Extensão do Visual Studio e outros.
 
-### <a name="desktop-development-with-c"></a>Desenvolvimento de área de trabalho com o C++
+### <a name="desktop-development-with-c"></a>Desenvolvimento para desktop com C++
 
 Incluído:
 - Principais recursos de área de trabalho do C++
@@ -71,7 +69,7 @@ Componentes opcionais:
 
 Incluído:
 - Funcionalidades principais do C++
-- Tempo de execução C Universal do Windows
+- Runtime C Universal do Windows
 - Desenvolvimento do C++ para Linux
 
 Componentes opcionais:
@@ -103,7 +101,7 @@ Componentes opcionais:
 
 Incluído:
 - Funcionalidades principais do C++
-- Tempo de execução C Universal do Windows
+- Runtime C Universal do Windows
 - Atualização dos Pacotes Redistribuíveis do C++ 2019
 - MSVC v142 – ferramentas de build do C++ para VS 2019 x64/x86 (v14.21)
 
@@ -136,21 +134,20 @@ Componentes opcionais:
 - Ferramentas de desenvolvimento do iOS para C++
 - IncrediBuild - Aceleração de Build
 
-
 ## <a name="individual-components"></a>Componentes individuais
 
 É possível instalar esses componentes independentemente de qualquer carga de trabalho.
 
 - Diagnóstico do JavaScript
 - Live Share
-- Tempo de execução da Plataforma Universal do Windows do C++ para ferramentas de build v142
+- runtime da Plataforma Universal do Windows do C++ para ferramentas de build v142
 - Publicação ClickOnce
 - Projetos do Instalador do Microsoft Visual Studio
 
 ## <a name="libraries-and-headers"></a>Bibliotecas e cabeçalhos
 
 - Cabeçalhos e bibliotecas do Windows
-- CRT (Tempo de execução C) Universal do Windows
+- CRT (Runtime C) Universal do Windows
 - Biblioteca Padrão C++
 - ATL
 - MFC
@@ -174,7 +171,7 @@ Componentes opcionais:
 
 Os seguintes modelos de projeto estão disponíveis dependendo de quais cargas de trabalho você instalou.
 
-Área de Trabalho do Windows:
+Área de trabalho do Windows:
 - Projeto Vazio
 - Aplicativo de console
 - Assistente da Área de Trabalho do Windows
@@ -191,18 +188,18 @@ Os seguintes modelos de projeto estão disponíveis dependendo de quais cargas d
 - Biblioteca de classes do CLR
 - Projeto Makefile (Windows)
 - ActiveXControl do MFC
-- Projeto de teste de unidade nativo
+- Projeto de Teste da Unidade Nativa
 - Google Test
 
 Plataforma Universal do Windows (C++/CX):
 - Aplicativo em Branco
 - Aplicativo DirectX 11 e XAML
 - Aplicativo DirectX 11
-- Aplicativo DirectX 12 
-- Aplicativo de Teste de Unidade 
-- DLL 
-- Componente do Tempo de Execução do Windows 
-- Biblioteca Estática 
+- Aplicativo DirectX 12
+- Aplicativo de Teste de Unidade
+- DLL
+- componente do Windows Runtime
+- Biblioteca Estática
 - Projeto de Empacotamento de Aplicativos do Windows
 
 Linux:
@@ -237,7 +234,7 @@ Linux:
 - Depuração gerenciada
 - Uso de GPU
 - Uso de memória
-- Depuração remota
+- Depuração Remota
 - Depuração SQL
 - Análise de código estático
 
@@ -248,7 +245,7 @@ Linux:
 - Designer/Editor de HTML
 - Editor de XML
 - Editor de Código-fonte
-- Recursos de produtividade: Refatoração, mecanismo IntelliSense EDG, Formatação de código do C++
+- Recursos de produtividade: refatoração, mecanismo IntelliSense EDG C++ , formatação de código
 - Designer de Formulários do Windows
 - Designer de dados
 - Editor de Recurso Nativo (arquivos .rc)
@@ -265,7 +262,7 @@ Linux:
 - Designer de dados
 - Objetos de dados
 - Serviços Web
-- conexões de servidor
+- Gerenciador de Servidores
 
 ## <a name="automation-and-extensibility"></a>Automação e extensibilidade
 
@@ -291,9 +288,9 @@ Linux:
 - Microsoft Fakes (Isolamento de teste de unidade) (somente Enterprise)
 - Cobertura de código (somente Enterprise)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Instalar o Visual Studio](/visualstudio/install/install-visual-studio)<br/>
+[Instalar Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [Novidades no Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
 [Tipos de projeto do C++ no Visual Studio](../build/reference/visual-cpp-project-types.md)
 
@@ -345,7 +342,7 @@ As tabelas a seguir mostram os recursos do Visual C++ disponíveis no Visual Stu
 |Aplicativo Direct3D|X||X|X|
 |DLL (Universal do Windows)|X||X|X|
 |Biblioteca Estática (Universal do Windows)|X||X|X|
-|Componente do Tempo de Execução do Windows|X||X|X|
+|componente do Windows Runtime|X||X|X|
 |Aplicativo de Teste de Unidade (Universal do Windows)|X||X|X|
 |Projeto ATL|||X|X|
 |Biblioteca de Classes (CLR)||X|X|X|
@@ -393,7 +390,7 @@ As tabelas a seguir mostram os recursos do Visual C++ disponíveis no Visual Stu
 |Depuração gerenciada||X|X|X|
 |Uso de GPU|X||X|X|
 |Uso de memória|X||X|X|
-|Depuração remota|X|X|X|X|
+|Depuração Remota|X|X|X|X|
 |Depuração SQL|||X|X|
 |Análise de código estático|Limitado|Limitado|X|X|
 
@@ -406,7 +403,7 @@ As tabelas a seguir mostram os recursos do Visual C++ disponíveis no Visual Stu
 |Designer/Editor de HTML|X|X|X|X|
 |Editor de XML|X|X|X|X|
 |Editor de Código-fonte|X|X|X|X|
-|Recursos de produtividade: Refatoração, IntelliSense, formatação de Código C++|X|X|X|X|
+|Funcionalidades de produtividade: Refatoração, IntelliSense, Formatação de Código C++|X|X|X|X|
 |Designer de Formulários do Windows||X|X|X|
 |Designer de dados|||X|X|
 |Editor de Recurso Nativo (arquivos .rc)|||X|X|
@@ -421,7 +418,7 @@ As tabelas a seguir mostram os recursos do Visual C++ disponíveis no Visual Stu
 |Designer de dados|||X|X|
 |Objetos de dados|||X|X|
 |Serviços Web|||X|X|
-|conexões de servidor|||X|X|
+|Gerenciador de Servidores|||X|X|
 
 ## <a name="build-and-project-systems"></a>Sistemas de build e de projeto
 
@@ -459,9 +456,9 @@ As tabelas a seguir mostram os recursos do Visual C++ disponíveis no Visual Stu
 |Mapa de códigos e grafos de dependência|||somente leitura|X|
 |Depuração do mapa de códigos||||X|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Instalar o Visual Studio](/visualstudio/install/install-visual-studio)<br/>
+[Instalar Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [Novidades no Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
 [Tipos de projeto do C++ no Visual Studio](../build/reference/visual-cpp-project-types.md)
 

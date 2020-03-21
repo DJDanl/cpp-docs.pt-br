@@ -4,12 +4,12 @@ description: Siga o princípio de RAII em moderno C++ para evitar vazamentos de 
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: 01867ec0a71ba54bb6534da1b408cb0610d652a7
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: d30b5296b35bec7f8949057becfaeeea61ef09a0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303368"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078027"
 ---
 # <a name="object-lifetime-and-resource-management-raii"></a>Tempo de vida do objeto e gerenciamento de recursos (RAII)
 
@@ -41,7 +41,7 @@ void functionUsingWidget () {
 ```
 
 No exemplo a seguir, `w` possui um recurso de memória e, portanto, deve ter código em seu destruidor para excluir a memória.
- 
+
 ```cpp
 class widget
 {
@@ -89,7 +89,7 @@ Usando ponteiros inteligentes para alocação de memória, você pode eliminar o
 
 O design de C++ garante que os objetos sejam destruídos quando saem do escopo. Ou seja, eles são destruídos conforme os blocos são encerrados, na ordem inversa de construção. Quando um objeto é destruído, suas bases e membros são destruídos em uma ordem específica. Objetos declarados fora de qualquer bloco, no escopo global, podem causar problemas. Pode ser difícil depurar, se o construtor de um objeto global lançar uma exceção.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Bem-vindo de volta paraC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>

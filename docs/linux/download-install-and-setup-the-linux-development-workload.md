@@ -3,12 +3,12 @@ title: Instalar uma carga de trabalho do Linux para C++ no Visual Studio
 description: Descreve como baixar, instalar e configurar a carga de trabalho do Linux para C++ no Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 1dad17756cbc12fdf65250b7c54314ff2a645287
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 719fb9a04c3b0090a1ae5442f881ba6b7d2136c5
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966207"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077636"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Baixar, instalar e configurar a carga de trabalho do Linux
 
@@ -20,11 +20,11 @@ Os projetos do Linux são permitidos no Visual Studio 2017 e posterior.
 
 ::: moniker range=">=vs-2017"
 
-Você pode usar o Visual Studio IDE no Windows para criar, editar e depurar C++ projetos que são executados em um sistema Linux remoto, máquina virtual ou o [subsistema do Windows para Linux](/windows/wsl/about). 
+Você pode usar o Visual Studio IDE no Windows para criar, editar e depurar C++ projetos que são executados em um sistema Linux remoto, máquina virtual ou o [subsistema do Windows para Linux](/windows/wsl/about).
 
-Você pode trabalhar em sua base de código existente que usa CMake sem precisar convertê-la em um projeto do Visual Studio. Se sua base de código for de multiplaforma, você poderá direcioná-la ao Windows e ao Linux de dentro do Visual Studio. Por exemplo, você pode editar, compilar e depurar seu código no Windows usando o Visual Studio e redirecionar rapidamente o projeto para Linux para compilar e depurar em um ambiente Linux. Os arquivos de cabeçalho do Linux são copiados automaticamente para o computador local, onde o Visual Studio os usa para fornecer suporte total ao IntelliSense (conclusão da instrução, ir para definição e assim por diante). 
- 
-Para qualquer um desses cenários, a carga de trabalho **Desenvolvimento para Linux com C++** é necessária. 
+Você pode trabalhar em sua base de código existente que usa CMake sem precisar convertê-la em um projeto do Visual Studio. Se sua base de código for de multiplaforma, você poderá direcioná-la ao Windows e ao Linux de dentro do Visual Studio. Por exemplo, você pode editar, compilar e depurar seu código no Windows usando o Visual Studio e redirecionar rapidamente o projeto para Linux para compilar e depurar em um ambiente Linux. Os arquivos de cabeçalho do Linux são copiados automaticamente para o computador local, onde o Visual Studio os usa para fornecer suporte total ao IntelliSense (conclusão da instrução, ir para definição e assim por diante).
+
+Para qualquer um desses cenários, a carga de trabalho **Desenvolvimento para Linux com C++** é necessária.
 
 ::: moniker-end
 

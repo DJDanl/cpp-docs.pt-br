@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: como obter SUMs e outros resultados agregados (ODBC)'
+title: 'Conjunto de registros: obtendo SUMs e outros resultados agregados (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - SQL, retrieving aggregate values from recordsets
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 29906366e6e9a5a852fcf40d9e7ecc8593d1b0b0
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 38a458eb6634d5075315c9c0bbd2cb215bc76eda
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707841"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075911"
 ---
-# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Conjunto de registros: como obter SUMs e outros resultados agregados (ODBC)
+# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Conjunto de registros: obtendo SUMs e outros resultados agregados (ODBC)
 
-> [!NOTE] 
+> [!NOTE]
 > O Assistente de consumidor ODBC do MFC não está disponível no Visual Studio 2019 e posterior. É possível criar um consumidor manualmente.
 
 Este tópico aplica-se às classes ODBC do MFC.
@@ -36,7 +36,7 @@ Este tópico explica como obter resultados agregados usando as seguintes palavra
 
 - **COUNT** conta o número de registros em uma coluna de qualquer tipo de dados.
 
-Use essas funções SQL para obter informações estatísticas sobre os registros em uma fonte de dados, em vez de extrair registros da fonte de dados. O conjunto de registros criado normalmente é composto de um único registro (se todas as colunas forem agregações) que contém um valor. (Pode haver mais de um registro se você usou uma cláusula **GROUP BY**.) Esse valor é o resultado do cálculo ou da extração executada pela função SQL.
+Use essas funções SQL para obter informações estatísticas sobre os registros em uma fonte de dados, em vez de extrair registros da fonte de dados. O conjunto de registros criado normalmente é composto de um único registro (se todas as colunas forem agregações) que contém um valor. (Pode haver mais de um registro se você usou uma cláusula **Group by** .) Esse valor é o resultado do cálculo ou extração executada pela função SQL.
 
 > [!TIP]
 >  Para adicionar uma cláusula **GROUP BY** SQL (e, possivelmente, uma cláusula **HAVING**) à instrução SQL, acrescente-a ao final de `m_strFilter`. Por exemplo:
@@ -56,7 +56,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 
 - **MAX** e **MIN** retornam o mesmo tipo de dados que as colunas que calculam.
 
-     Por exemplo, o assistente **Adicionar Classe** cria `long` `m_lSales` para acomodar uma coluna Vendas, mas é necessário substituir isso por um membro de dados um `double m_dblSumSales` para acomodar o resultado da agregação. Consulte o exemplo a seguir.
+     Por exemplo, o assistente para **Adicionar classe** cria `long` `m_lSales` para acomodar uma coluna vendas, mas você precisa substituir isso por um membro de dados `double m_dblSumSales` para acomodar o resultado agregado. Veja os exemplos a seguir.
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Para obter um resultado de agregação para um conjunto de registros
 
@@ -91,7 +91,7 @@ Para:
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Conjunto de registros: como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
