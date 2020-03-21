@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: como parametrizar um conjunto de registros (ODBC)'
+title: 'Conjunto de registros: parametrizando um conjunto de registros (ODBC)'
 ms.date: 05/09/2019
 helpviewer_keywords:
 - parameterizing recordsets
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: 499741693009fb27df58f0ed3cde046d5e6b8c2d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: eaf95312b73b5165d64de7f9ded95db29d8909d0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707788"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075813"
 ---
-# <a name="recordset-parameterizing-a-recordset-odbc"></a>Conjunto de registros: como parametrizar um conjunto de registros (ODBC)
+# <a name="recordset-parameterizing-a-recordset-odbc"></a>Conjunto de registros: parametrizando um conjunto de registros (ODBC)
 
 Este tópico aplica-se às classes ODBC do MFC.
 
@@ -30,7 +30,7 @@ Este tópico explica:
 
 - [Como passar informações de parâmetro para um objeto de conjunto de registros em tempo de execução](#_core_passing_parameter_values_at_run_time).
 
-##  <a name="_core_parameterized_recordsets"></a> Conjuntos de registros com parâmetros
+##  <a name="parameterized-recordsets"></a><a name="_core_parameterized_recordsets"></a> Conjuntos de registros com parâmetros
 
 Um conjunto de registros com parâmetros permite que você passe informações em tempo de execução. Ele tem dois efeitos valiosos:
 
@@ -40,13 +40,13 @@ Um conjunto de registros com parâmetros permite que você passe informações e
 
 Quando você chama `Open` para executar a consulta, o conjunto de registros usa as informações de parâmetro para concluir sua instrução **SELECT SQL**. É possível parametrizar qualquer conjunto de registros.
 
-##  <a name="_core_when_to_use_parameters"></a> Quando usar parâmetros
+##  <a name="when-to-use-parameters"></a><a name="_core_when_to_use_parameters"></a> Quando usar parâmetros
 
 Os usos típicos de parâmetros incluem:
 
 - Passar argumentos de tempo de execução para uma consulta predefinida.
 
-   Para passar parâmetros para um procedimento armazenado, é necessário especificar uma instrução **CALL** ODBC completa e personalizada – com espaços reservados de parâmetro – quando você chama `Open`, substituindo a instrução SQL padrão do conjunto de registros. Para saber mais, confira [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) na *Referência de Biblioteca de Classes* e [SQL: como personalizar a instrução SQL do seu conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) e [Conjunto de registros: como declarar uma classe para uma consulta predefinida (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
+   Para passar parâmetros para um procedimento armazenado, é necessário especificar uma instrução **CALL** ODBC completa e personalizada – com espaços reservados de parâmetro – quando você chama `Open`, substituindo a instrução SQL padrão do conjunto de registros. Para obter mais informações, consulte [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) na *biblioteca de classes Reference* e [SQL: Personalizando a instrução SQL do conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) e o [conjunto de registros: declarando uma classe para uma consulta predefinida (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
 
 - Executar com eficiência inúmeras repetições de consulta com diferentes informações de parâmetro.
 
@@ -75,25 +75,25 @@ Os usos típicos de parâmetros incluem:
                                        // for some drivers
     ```
 
-   Para ver uma discussão sobre como usar cotações corretamente para cadeias de caracteres de filtro, confira [Conjunto de registros: como filtrar registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
+   Para obter uma discussão sobre como usar aspas corretamente para cadeias de caracteres de filtro, consulte conjunto de registros [: filtrando registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
    O valor do parâmetro é diferente a cada vez que você repete a consulta do conjunto de registros para uma nova ID de aluno.
 
    > [!TIP]
    > Usar um parâmetro é mais eficiente do que simplesmente um filtro. Para ver um conjunto de registros com parâmetros, o banco de dados deve processar uma instrução **SELECT** SQL somente uma vez. Para um conjunto de registros filtrado sem parâmetros, a instrução **SELECT** deve ser processada cada vez que você `Requery` com um novo valor de filtro.
 
-Para saber mais sobre filtros, confira [Conjunto de registros: como filtrar registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
+Para obter mais informações sobre filtros, consulte [Recordset: Filtering Records (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
-##  <a name="_core_parameterizing_your_recordset_class"></a> Como parametrizar sua classe de conjunto de registros
+##  <a name="parameterizing-your-recordset-class"></a><a name="_core_parameterizing_your_recordset_class"></a> Como parametrizar sua classe de conjunto de registros
 
 > [!NOTE]
-> Esta seção aplica-se a objetos derivados de `CRecordset` nos quais o fetch de linha em massa não foi implementado. Se você está usando o fetch de linha em massa, implementar parâmetros é um processo semelhante. Para saber mais, confira [Conjunto de registros: como efetuar fetch de registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Esta seção aplica-se a objetos derivados de `CRecordset` nos quais o fetch de linha em massa não foi implementado. Se você está usando o fetch de linha em massa, implementar parâmetros é um processo semelhante. Para obter mais informações, consulte conjunto de registros [: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Antes de criar sua classe de conjunto de registros, determine quais parâmetros são necessários, quais são seus tipos de dados e como o conjunto de registros os usa.
 
 #### <a name="to-parameterize-a-recordset-class"></a>Para parametrizar uma classe de conjunto de registros
 
-> [!NOTE] 
+> [!NOTE]
 > O Assistente de consumidor ODBC do MFC não está disponível no Visual Studio 2019 e posterior. Ainda é possível criar essa funcionalidade manualmente.
 
 1. Execute o [Assistente de consumidor ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) de **Adicionar Classe** para criar a classe.
@@ -117,7 +117,7 @@ Antes de criar sua classe de conjunto de registros, determine quais parâmetros 
 
    Adicione seus membros de dados de parâmetro após os membros de dados de campo gerados pelo assistente. A convenção é acrescentar a palavra “Param” a cada nome de parâmetro definido pelo usuário.
 
-1. Modifique a definição de função de membro [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) no arquivo .cpp. Adicione uma chamada de função RFX para cada membro de dados de parâmetro adicionado à classe. Para saber mais sobre como escrever suas funções RFX, confira [Troca de campo de registro: como a RFX funciona](../../data/odbc/record-field-exchange-how-rfx-works.md). Preceda as chamadas RFX para os parâmetros com uma única chamada para:
+1. Modifique a definição de função de membro [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) no arquivo .cpp. Adicione uma chamada de função RFX para cada membro de dados de parâmetro adicionado à classe. Para obter informações sobre como escrever suas funções do suporte RFX, consulte [gravar campo Exchange: como o suporte RFX funciona](../../data/odbc/record-field-exchange-how-rfx-works.md). Preceda as chamadas RFX para os parâmetros com uma única chamada para:
 
     ```cpp
     pFX->SetFieldType( CFieldExchange::param );
@@ -126,7 +126,7 @@ Antes de criar sua classe de conjunto de registros, determine quais parâmetros 
 
 1. No construtor de sua classe de conjunto de registros, incremente a contagem de parâmetros, `m_nParams`.
 
-   Para saber mais, confira [Troca de campo de registro: como trabalhar com o código do assistente](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md).
+   Para obter informações, consulte [gravar campo Exchange: trabalhando com o código do assistente](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md).
 
 1. Ao escrever o código que cria um objeto de conjunto de registros dessa classe, insira um símbolo “?” (ponto de interrogação) em cada local em suas cadeias de caracteres de instrução SQL em que um parâmetro deve ser substituído.
 
@@ -138,7 +138,7 @@ Antes de criar sua classe de conjunto de registros, determine quais parâmetros 
 > [!TIP]
 > A cadeia de caracteres com a qual há mais probabilidade de se trabalhar é a cadeia de caracteres especificada (se houver) para o membro de dados [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) da classe, mas alguns drivers ODBC podem permitir parâmetros em outras cláusulas SQL.
 
-##  <a name="_core_passing_parameter_values_at_run_time"></a> Como passar valores de parâmetro em tempo de execução
+##  <a name="passing-parameter-values-at-run-time"></a><a name="_core_passing_parameter_values_at_run_time"></a> Como passar valores de parâmetro em tempo de execução
 
 É necessário especificar valores de parâmetro antes de chamar `Open` (para um novo objeto de conjunto de registros) ou `Requery` (para um existente).
 
@@ -176,8 +176,8 @@ O conjunto de registros contém registros para os alunos cujos registros atendem
 > [!NOTE]
 >  Se necessário, é possível definir o valor de um membro de dados de parâmetro como Null, usando [SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull). Da mesma forma, é possível verificar se um membro de dados de parâmetro é Null usando [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: adicionar, atualizar e excluir registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
+[Conjunto de registros: adicionando, atualizando e excluindo registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
 [Conjunto de registros: como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

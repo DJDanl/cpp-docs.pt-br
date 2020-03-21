@@ -4,12 +4,12 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: 24b4698ebc8dd4f61dfd88ad14e64d4f70b2ef35
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: eaecd0d4e6e2b024ce3312719e7104298d3f9a66
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707030"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075276"
 ---
 # <a name="atl-com-10-component-wizard"></a>Assistente de componente de COM+ 1.0 da ATL
 
@@ -29,7 +29,7 @@ Você pode especificar se o objeto é compatível com interfaces duplas e à aut
 
 A partir do Visual Studio 2008, o script de registro produzido por esse assistente registra seus componentes COM em **HKEY_CURRENT_USER**, e não em **HKEY_LOCAL_MACHINE**. Para modificar esse comportamento, defina a opção **Registrar componente para todos os usuários** do Assistente da ATL.
 
-## <a name="names"></a>Nomes
+## <a name="names"></a>Names
 
 Especifique os nomes para o objeto, a interface e as classes a ser adicionados ao seu projeto. Com exceção de **Nome curto**, todas as demais caixas podem ser editadas de forma independente. Se você alterar o texto para **Nome curto**, a alteração será refletida nos nomes de todas as outras caixas dessa página. Se você alterar o nome **Coclass** na seção COM, a alteração será refletida nas caixas **Tipo** e **ProgID**, mas o nome da **Interface** não mudará. Esse comportamento de nomenclatura foi criado para tornar todos os nomes facilmente identificáveis à medida que você desenvolve seu controle.
 
@@ -43,7 +43,7 @@ Especifique os nomes para o objeto, a interface e as classes a ser adicionados a
 
    O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a declaração de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.
 
-- **Class**
+- **Classe**
 
    Define o nome da classe a ser criada. Esse nome é baseado no nome fornecido em **Nome curto**, precedido por "C", o prefixo típico de um nome de classe.
 
@@ -57,7 +57,7 @@ Especifique os nomes para o objeto, a interface e as classes a ser adicionados a
 
    Indica se o objeto usa atributos. Se você estiver adicionando um objeto a um projeto ATL atribuído, essa opção será selecionada e não estará disponível para alteração. Ou seja, você pode adicionar somente objetos atribuídos a um projeto criado com suporte a atributos.
 
-   Se você selecionar essa opção para um projeto ATL que não seja compatível com o atributo, o assistente solicitará que você especifique se deseja adicionar suporte a atributo ao projeto.
+   Se você selecionar essa opção para um projeto ATL que não tenha suporte a atributo, o assistente solicitará que você especifique se deseja adicionar suporte a atributo ao projeto.
 
    Qualquer objeto que você adiciona após definir essa opção será designado como atribuído por padrão (a caixa de seleção fica marcada). Você pode desmarcar essa caixa para adicionar um objeto que não usa atributos.
 
@@ -85,9 +85,9 @@ Fornece informações sobre a funcionalidade COM do objeto.
 - **ProgID**
 
    Define o nome que os contêineres podem usar em vez do CLSID do objeto.
-   
+
 ::: moniker-end
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Componente COM+ 1.0 da ATL](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)

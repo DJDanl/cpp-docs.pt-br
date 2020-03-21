@@ -4,18 +4,17 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: f0ae4a3718858c4de5417aaf5a4f9bc0c0ba9984
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 1d6d2b73495d5ca6e275b13ed3c430f8169179d4
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525350"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079104"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Armazenando cadeias de caracteres no provedor de banco de dados OLE
 
-> [!NOTE] 
+> [!NOTE]
 > O assistente de Provedor OLE DB da ATL não está disponível no Visual Studio 2019 e posteriores.
-
 
 Em *Custom*RS.h, o **Assistente de Provedor OLE DB da ATL** cria um registro de usuário padrão chamado `CWindowsFile`. Para lidar com duas cadeias de caracteres, modifique `CWindowsFile` conforme mostrado no seguinte código:
 
@@ -56,6 +55,6 @@ Os membros de dados `szCommand` e `szText` representam as duas cadeias de caract
 
 Quando isso for feito, você poderá adicionar a funcionalidade de [ler cadeias de caracteres no provedor OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Implementando o provedor somente leitura simples](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>

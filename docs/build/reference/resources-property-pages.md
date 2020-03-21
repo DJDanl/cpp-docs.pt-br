@@ -14,12 +14,12 @@ f1_keywords:
 - VC.Project.VCResourceCompilerTool.ResourceOutputFileName
 - VC.Project.VCResourceCompilerTool.NullTerminateStrings
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 916b6615d80000d601c909f771a1ec8f1b947927
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 4f3688da4feb11f673e11372e5df086dc8c7e21a
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177347"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078286"
 ---
 # <a name="resources-property-page"></a>Página de propriedades de recursos
 
@@ -31,7 +31,7 @@ As propriedades de recursos do C++.net em aplicativos/CLI são expostas na [pág
 
 Especifica uma ou mais definições para o compilador de recurso. (/d [macro])
 
-## <a name="undefine-preprocessor-definitions"></a>Excluir definições do pré-processador
+## <a name="undefine-preprocessor-definitions"></a>Excluir as definições do pré-processador
 
 Desdefina um símbolo. /u
 
@@ -59,10 +59,10 @@ Suprimir a exibição da faixa de inicialização e mensagem de informação (/n
 
 Especifica o nome do arquivo de recurso (/fo [File])
 
-## <a name="null-terminate-strings"></a>Cadeias de caracteres de término nulas 
+## <a name="null-terminate-strings"></a>Cadeias de caracteres de término nulas
 
 Anexar nulos a todas as cadeias de caracteres nas tabelas de cadeias. opção
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [C++referência de página de propriedades do projeto](property-pages-visual-cpp.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: 9b2d1f3bf1a229a0590553369e37bc07f35ada33
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 381fa347a4ca2872ef0697d76a1e788c97e8a014
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627136"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075436"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Walkthrough: Criando um programa C++ padrão (C++)
 
@@ -34,9 +34,9 @@ As etapas a seguir variam dependendo da versão do Visual Studio que você está
 
 ### <a name="to-create-a-c-project-in-visual-studio-2019"></a>Para criar um C++ projeto no Visual Studio 2019
 
-1. No menu principal, escolha **Arquivo** > **Novo** > **Projeto** para abrir a caixa de diálogo **Criar um projeto**.
+1. No menu principal, escolha **arquivo** > **novo** **projeto** de > para abrir a caixa de diálogo **criar um novo projeto** .
 
-1. Na parte superior da caixa de diálogo, defina **Linguagem** como **C++** , **Plataforma** como **Windows** e **Tipo de projeto** como **Console**. 
+1. Na parte superior da caixa de diálogo, defina **Linguagem** como **C++** , **Plataforma** como **Windows** e **Tipo de projeto** como **Console**.
 
 1. Na lista filtrada de tipos de projeto, escolha **Aplicativo de Console** e, em seguida, escolha **Avançar**. Na próxima página, insira um nome para o projeto e especifique o local do projeto, se desejado.
 
@@ -72,11 +72,11 @@ As etapas a seguir variam dependendo da versão do Visual Studio que você está
 
 1. Clique em **OK** para criar o projeto.
 
-1. Conclua o **Assistente de aplicativo Win32**. 
+1. Conclua o **Assistente de aplicativo Win32**.
 
-1. Clique em **Avançar**e verifique se **aplicativo de console** está selecionado e desmarque a caixa **cabeçalhos pré-compilados** . 
+1. Clique em **Avançar**e verifique se **aplicativo de console** está selecionado e desmarque a caixa **cabeçalhos pré-compilados** .
 
-1. Clique em **Finalizar**.
+1. Clique em **Concluir**.
 
 ::: moniker-end
 
@@ -109,7 +109,7 @@ As etapas a seguir variam dependendo da versão do Visual Studio que você está
 **Anterior:** [aplicativos de console no C++ Visual](../windows/console-applications-in-visual-cpp.md)<br/>
 **Próximo:** [passo a passos: Compilando um programa nativo C++ na linha de comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
-[Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)
+[Biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

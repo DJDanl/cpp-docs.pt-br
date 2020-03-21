@@ -2,12 +2,12 @@
 title: Declarações e definições (C++)
 ms.date: 12/12/2019
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-ms.openlocfilehash: d52294b635e05f42a4c48620214a90cad609f575
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 7aa9e07a471ed5a32ecc8f13690f1a1bf08b655f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301542"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077212"
 ---
 # <a name="declarations-and-definitions-c"></a>Declarações e definições (C++)
 
@@ -40,9 +40,9 @@ namespace N {
 }
 ```
 
-Na linha 5, a função `main` é declarada. Na linha 7, uma variável **const** chamada `pi` é declarada e *inicializada*. Na linha 8, um inteiro `i` é declarado e inicializado com o valor produzido pela função `f`. O nome `f` é visível para o compilador devido à *declaração de encaminhamento* na linha 3. 
+Na linha 5, a função `main` é declarada. Na linha 7, uma variável **const** chamada `pi` é declarada e *inicializada*. Na linha 8, um inteiro `i` é declarado e inicializado com o valor produzido pela função `f`. O nome `f` é visível para o compilador devido à *declaração de encaminhamento* na linha 3.
 
-Na linha 9, uma variável chamada `obj` do tipo `C` é declarada. No entanto, essa declaração gera um erro porque `C` não é declarada até mais tarde no programa e não é declarada de encaminhamento. Para corrigir o erro, você pode mover toda a *definição* de `C` antes de `main` ou adicionar uma declaração de encaminhamento para ele. Esse comportamento é diferente de outras linguagens, C#como, em que funções e classes podem ser usadas antes de seu ponto de declaração em um arquivo de origem. 
+Na linha 9, uma variável chamada `obj` do tipo `C` é declarada. No entanto, essa declaração gera um erro porque `C` não é declarada até mais tarde no programa e não é declarada de encaminhamento. Para corrigir o erro, você pode mover toda a *definição* de `C` antes de `main` ou adicionar uma declaração de encaminhamento para ele. Esse comportamento é diferente de outras linguagens, C#como, em que funções e classes podem ser usadas antes de seu ponto de declaração em um arquivo de origem.
 
 Na linha 10, uma variável chamada `str` do tipo `std::string` é declarada. O nome `std::string` é visível porque é introduzido no [arquivo de cabeçalho](header-files-cpp.md) `string` que é mesclado no arquivo de origem na linha 1. `std` é o namespace no qual a classe `string` é declarada.
 
@@ -107,6 +107,6 @@ Um C++ programa pode conter mais de uma [unidade de compilação](header-files-c
 [decltype](decltype-cpp.md)<br/>
 [Atributos emC++](attributes.md)<br/>
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Conceitos básicos](../cpp/basic-concepts-cpp.md)<br/>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: de299f17686d68956e9847d47743d8931734d4ad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189000"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075200"
 ---
 # <a name="hint-files"></a>Arquivos de dica
 
@@ -150,13 +150,13 @@ Dicas usam a seguinte sintaxe:
 
 |Sintaxe|Significado|
 |------------|-------------|
-|`#define` *hint-name* *replacement-string*<br /><br /> `#define` *hint-name* `(` *parameter*, ...`)`*replacement-string*|Uma diretiva do pré-processador que define uma nova dica ou redefine uma dica existente. Após a diretiva, o pré-processador substitui cada ocorrência de *hint-name* no código-fonte por *replacement-string*.<br /><br /> O segundo formato de sintaxe define uma dica semelhante a uma função. Se uma dica semelhante a uma função ocorre no código-fonte, o pré-processador primeiro substitui cada ocorrência do *parameter* na *replacement-string* pelo argumento correspondente no código-fonte e, em seguida, substitui *hint-name* pela *replacement-string*.|
+|*dica de* `#define`- *Replacement-name-string*<br /><br /> `#define` *dica-nome* `(` *parâmetro*,...`)`*substituição-Cadeia de caracteres*|Uma diretiva do pré-processador que define uma nova dica ou redefine uma dica existente. Após a diretiva, o pré-processador substitui cada ocorrência de *hint-name* no código-fonte por *replacement-string*.<br /><br /> O segundo formato de sintaxe define uma dica semelhante a uma função. Se uma dica semelhante a uma função ocorre no código-fonte, o pré-processador primeiro substitui cada ocorrência do *parameter* na *replacement-string* pelo argumento correspondente no código-fonte e, em seguida, substitui *hint-name* pela *replacement-string*.|
 |`@<`|Uma *replacement-string* específica a um arquivo de dica que indica o início de um conjunto de elementos de mapa.|
 |`@=`|Uma *replacement-string* específica a um arquivo de dica que indica um elemento do mapa intermediário. Um mapa pode ter vários elementos de mapa.|
 |`@>`|Uma *replacement-string* específica a um arquivo de dica que indica o fim de um conjunto de elementos de mapa.|
-|`#undef` *hint-name*|A diretiva do pré-processador que exclui uma dica existente. O nome da dica é fornecido pelo identificador *hint-name*.|
-|`//` *comment*|Um comentário de linha única.|
-|`/*` *comment* `*/`|Um comentário de várias linhas.|
+|nome da `#undef` *dica*|A diretiva do pré-processador que exclui uma dica existente. O nome da dica é fornecido pelo identificador *hint-name*.|
+|`//` *Comentário*|Um comentário de linha única.|
+|*Comentário* de `/*` `*/`|Um comentário de várias linhas.|
 
 ## <a name="example"></a>Exemplo
 
@@ -183,7 +183,7 @@ A lista mostra os diretórios nesse projeto que contêm arquivos de dica e o con
     #define _In_count_(size)
     ```
 
-- Depuração
+- Depurar
 
     ```cpp.hint
     // Debug
@@ -242,10 +242,9 @@ Estas notas se aplicam à lista anterior:
 
 - A dica `#undef` no diretório `A2` removeu as dicas para `OBRACE` e `CBRACE` no arquivo de dica do diretório `Debug`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Tipos de arquivo criados para projetos do Visual Studio C++](file-types-created-for-visual-cpp-projects.md)<br>
 [Diretiva #define (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [Diretiva #undef (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [Anotações de SAL](../../c-runtime-library/sal-annotations.md)<br>
-

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /FORCE linker option
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-ms.openlocfilehash: 28b1c21382832c8775ffe0406038a482e74076c5
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: d1d85174290faa95e73c63a25f7d80c554e83ace
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299714"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079626"
 ---
 # <a name="force-force-file-output"></a>/FORCE (forçar saída de arquivo)
 
@@ -41,7 +41,7 @@ Se um módulo for compilado com **/CLR**, **/Force** não criará uma imagem.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Clique com o botão direito do mouse no projeto em **Gerenciador de soluções** e escolha **Propriedades**. 
+1. Clique com o botão direito do mouse no projeto em **Gerenciador de soluções** e escolha **Propriedades**.
 
 1. Clique na pasta **Vinculador**.
 
@@ -55,7 +55,7 @@ Para obter mais informações, confira [Definir as propriedades de build e do co
 
 - Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência de vinculador MSVC](linking.md)<br/>
 [Opções de vinculador MSVC](linker-options.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: 68c01623ef97e89623dff3f46a952c75ea31a774
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 5e31105e682e8acecbdc0da461614fc46e4ae227
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707824"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079770"
 ---
 # <a name="sql"></a>SQL
 
@@ -23,7 +23,7 @@ A Linguagem SQL é uma maneira de se comunicar com um banco de dados relacional 
 
 As instruções SQL começam com um verbo de palavra-chave como **CREATE** ou **SELECT**. O SQL é uma linguagem muito avançada; uma instrução única pode afetar toda uma tabela.
 
-Existem muitas versões do SQL, cada uma desenvolvida com um DBMS específico em mente. As classes do banco de dados do MFC reconhecem um conjunto de instruções SQL que corresponde à especificação de rascunho do SQL CAE (Common Applications Environment) do Grupo de Acesso do SQL (1991) e ao X/Open. Para saber mais sobre a sintaxe dessas instruções, confira o Apêndice C na *Referência do Programador* *do SDK ODBC* no CD da Biblioteca MSDN.
+Existem muitas versões do SQL, cada uma desenvolvida com um DBMS específico em mente. As classes do banco de dados do MFC reconhecem um conjunto de instruções SQL que corresponde à especificação de rascunho do SQL CAE (Common Applications Environment) do Grupo de Acesso do SQL (1991) e ao X/Open. Para obter informações sobre a sintaxe dessas instruções, consulte o Apêndice C na *referência do programador* do *ODBC SDK* no CD da biblioteca MSDN.
 
 Este tópico explica:
 
@@ -33,13 +33,13 @@ Este tópico explica:
 
 - [Como as classes de banco de dados usam o SQL](#_core_how_the_database_classes_use_sql).
 
-##  <a name="_core_open_database_connectivity_.28.odbc.29"></a> ODBC
+##  <a name="open-database-connectivity-odbc"></a><a name="_core_open_database_connectivity_.28.odbc.29"></a> ODBC
 
 As classes de banco de dados são implementadas com a ODBC, que usa o SQL em uma interface de nível de chamada em vez de inserir comandos SQL no código. A ODBC usa o SQL para se comunicar com uma [fonte de dados](../../data/odbc/data-source-odbc.md) por meio de drivers ODBC. Esses drivers interpretam o SQL e o convertem, se necessário, para uso com um formato de banco de dados específico, como o Microsoft Access. Para saber mais sobre como a ODBC usa o SQL, confira [ODBC](../../data/odbc/odbc-basics.md) e a *Referência do Programador* do SDK ODBC no CD da Biblioteca MSDN.
 
-##  <a name="_core_the_database_classes"></a> Classes de Banco de Dados
+##  <a name="database-classes"></a><a name="_core_the_database_classes"></a> Classes de Banco de Dados
 
-> [!NOTE] 
+> [!NOTE]
 > O Assistente de consumidor ODBC do MFC não está disponível no Visual Studio 2019 e posterior. É possível criar um consumidor manualmente.
 
 As classes de banco de dados são criadas para permitir que você manipule e atualize dados em uma [fonte de dados](../../data/odbc/data-source-odbc.md) existente. O [Assistente de Aplicativo MFC](../../mfc/reference/database-support-mfc-application-wizard.md), o [Assistente de consumidor ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (acessado por meio de **Adicionar Classe**) e as classes de banco de dados constroem a maioria das instruções SQL para você.
@@ -64,13 +64,13 @@ Além disso, as classes de banco de dados reconhecem as instruções **CALL** OD
 
 Se as classes não puderem reconhecer uma instrução fornecida pelo usuário em `CRecordset::Open`, ela será interpretada como um nome de tabela.
 
-Para obter uma explicação de como a estrutura constrói instruções SQL, confira [Conjunto de registros: como os conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) e [SQL: como personalizar a instrução SQL do seu conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Para obter uma explicação de como a estrutura constrói instruções SQL, consulte [conjunto de registros: como os conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) e [SQL: Personalizando a instrução SQL do conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
-Os bancos de dados SQL usam tipos de dados semelhantes aos usados em C e C++. Para ver uma discussão dessas semelhanças, confira [SQL: tipos de dados SQL e C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
+Os bancos de dados SQL usam tipos de dados semelhantes aos usados em C e C++. Para obter uma discussão dessas semelhanças, consulte [SQL: SQL e C++ tipos de dados (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
-É possível encontrar mais informações sobre o SQL, incluindo uma lista de instruções SQL compatível, tipos de dados, gramática principal do SQL e uma lista de leitura de publicações recomendadas na *Referência do Programador* do *SDK ODBC* no CD da Biblioteca MSDN.
+Você pode encontrar mais informações sobre o SQL, incluindo uma lista de instruções SQL com suporte, tipos de dados, gramática do SQL Core e uma lista de leitura de publicações recomendadas sobre o SQL, na *referência do programador do SDK do* *ODBC* no CD da biblioteca do MSDN.
 
-##  <a name="_core_how_the_database_classes_use_sql"></a> Como as classes de banco de dados usam o SQL
+##  <a name="how-the-database-classes-use-sql"></a><a name="_core_how_the_database_classes_use_sql"></a> Como as classes de banco de dados usam o SQL
 
 Os conjuntos de registros derivados das classes de banco de dados usam a ODBC para se comunicar com uma fonte de dados e a ODBC recupera os registros da fonte de dados por meio do envio de instruções SQL. Este tópico explica a relação entre as classes de banco de dados e o SQL.
 
@@ -80,13 +80,13 @@ Quando o conjunto de registros chama a ODBC para enviar uma instrução SQL à f
 
 Os tópicos a seguir fornecem mais informações sobre como as classes de banco de dados usam o SQL:
 
-- [SQL: Como personalizar a instrução SQL do seu conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
+- [SQL: Personalizando a instrução SQL do conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
 - [SQL: tipos de dados SQL e C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 
-- [SQL: fazer chamadas SQL diretas (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+- [SQL: fazendo chamadas SQL diretas (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Noções básicas de ODBC](../../data/odbc/odbc-basics.md)

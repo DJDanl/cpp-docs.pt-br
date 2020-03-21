@@ -1,5 +1,5 @@
 ---
-title: classes is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
+title: is_invocable, is_invocable_r, is_nothrow_invocable is_nothrow_invocable_r classes
 ms.date: 02/21/2019
 f1_keywords:
 - type_traits/std::is_invocable
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: 20fec55fc3ad1924ee85db3b2f78812e4847f447
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 53394a10464e2688953cd1b5703530e2719b7593
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456225"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076450"
 ---
-# <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>classes is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
+# <a name="is_invocable-is_invocable_r-is_nothrow_invocable-is_nothrow_invocable_r-classes"></a>is_invocable, is_invocable_r, is_nothrow_invocable is_nothrow_invocable_r classes
 
-Esses modelos determinam se um tipo pode ser invocado com os tipos de argumento especificados. `is_invocable_r`Além `is_nothrow_invocable_r` disso, determine se o resultado da invocação é conversível para um tipo específico. `is_nothrow_invocable`Além `is_nothrow_invocable_r` disso, determine se a invocação é conhecida por não lançar exceções. Adicionado em C++ 17.
+Esses modelos determinam se um tipo pode ser invocado com os tipos de argumento especificados. `is_invocable_r` e `is_nothrow_invocable_r` também determinam se o resultado da invocação é conversível para um tipo específico. `is_nothrow_invocable` e `is_nothrow_invocable_r` também determinam se a invocação é conhecida por não lançar exceções. Adicionado em C++ 17.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -59,26 +59,26 @@ inline constexpr bool is_nothrow_invocable_r_v =
     std::is_nothrow_invocable_r<Convertible, Callable, Args...>::value;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Acessível*\
+\ *callable*
 O tipo callable para consulta.
 
-*Argumento*\
+*Args*\
 Os tipos de argumentos a serem consultados.
 
-*Vertida*\
+\ *conversíveis*
 O tipo de resultado de *callable* deve ser conversível.
 
 ## <a name="remarks"></a>Comentários
 
-O `is_invocable` predicado de tipo será true se o tipo callable *callable* puder ser invocado usando os *argumentos Arguments* em um contexto não avaliado.
+O predicado de tipo `is_invocable` se manterá verdadeiro se o tipo callable *callable* puder ser invocado usando os *argumentos Arguments* em um contexto não avaliado.
 
-O `is_invocable_r` predicado de tipo se aplica true se o tipo callable *callable* puder ser invocado usando os *argumentos Arguments* em um contexto não avaliado para produzir um tipo de resultado conversível para conversível.
+O predicado de tipo `is_invocable_r` se manterá verdadeiro se o tipo callable *callable* puder ser invocado usando os *argumentos Arguments* em um contexto não avaliado para produzir um tipo de resultado conversível para *conversível*.
 
-O `is_nothrow_invocable` predicado de tipo será true se o tipo callable *callable* puder ser invocado usando os *argumentos Arguments* em um contexto não avaliado e essa chamada não for conhecida como não lançar uma exceção.
+O predicado de tipo `is_nothrow_invocable` se manterá verdadeiro se o tipo callable *callable* puder ser invocado usando os *argumentos Arguments* em um contexto não avaliado e essa chamada for conhecida por não gerar uma exceção.
 
-O `is_nothrow_invocable_r` predicado de tipo se aplica true se o tipo callable *callable* puder ser invocado usando os *argumentos Arguments* em um contexto não avaliado para produzir um tipo de resultado conversível para conversível e que tal chamada seja conhecida como não throw  uma exceção.
+O predicado de tipo `is_nothrow_invocable_r` se manterá verdadeiro se o tipo callable *callable* puder ser invocado usando os *argumentos Arguments* em um contexto não avaliado para produzir um tipo de resultado conversível para *conversível*e essa chamada não for conhecida como não lançar uma exceção.
 
 Cada um dos tipos *conversíveis*, *callable*e os tipos nos *args* do pacote de parâmetros deve ser um tipo completo, uma matriz de limite desconhecido ou um **void**possivelmente qualificado por CV. Caso contrário, o comportamento do predicado será indefinido.
 
@@ -103,7 +103,7 @@ int main()
 {
     static_assert( std::is_invocable<decltype(test1), short>::value );
 
-    static_assert( std::is_invocable_r<int(*)(), decltype(test1), int>::value ); 
+    static_assert( std::is_invocable_r<int(*)(), decltype(test1), int>::value );
     static_assert( std::is_invocable_r<long(*)(), decltype(test1), int>::value ); // fails
 
     static_assert( std::is_nothrow_invocable<decltype(test1), int>::value );
@@ -116,11 +116,11 @@ int main()
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<type_traits>
+**Cabeçalho:** \<type_traits >
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [<type_traits>](../standard-library/type-traits.md)\
 [invoke](functional-functions.md#invoke)

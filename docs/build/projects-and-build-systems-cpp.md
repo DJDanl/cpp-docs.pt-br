@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
 ms.topic: overview
-ms.openlocfilehash: df3b768c139bc4dc000c185d7153fd4aa38ae94a
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 3d82ac4569e06a4472047a79da60032ad2db43ca
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509445"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078467"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>C/C++ projetos e sistemas de compilação no Visual Studio
 
@@ -23,19 +23,19 @@ Você pode usar o Visual Studio para editar, compilar e compilar C++ qualquer ba
 
 ## <a name="c-compilation"></a>C++ocorrida
 
-*Criar* um programa C++ significa compilar o código-fonte de um ou mais arquivos e, em seguida, vincular esses arquivos a um arquivo executável (. exe), uma biblioteca de carregamento dinâmico (. dll) ou uma biblioteca estática (. lib). 
+*Criar* um programa C++ significa compilar o código-fonte de um ou mais arquivos e, em seguida, vincular esses arquivos a um arquivo executável (. exe), uma biblioteca de carregamento dinâmico (. dll) ou uma biblioteca estática (. lib).
 
 A C++ compilação básica envolve três etapas principais:
 
 - O C++ pré-processador transforma todas as definições de #directives e macro em cada arquivo de origem. Isso cria uma *unidade de tradução*.
 - O C++ compilador compila cada unidade de tradução em arquivos de objeto (. obj), aplicando quaisquer opções de compilador definidas.
-- O *vinculador* mescla os arquivos de objeto em um único executável, aplicando as opções de vinculador que foram definidas. 
+- O *vinculador* mescla os arquivos de objeto em um único executável, aplicando as opções de vinculador que foram definidas.
 
 ## <a name="the-msvc-toolset"></a>O conjunto de ferramentas MSVC
 
 O compilador C++ da Microsoft, o vinculador, as bibliotecas padrão e os utilitários relacionados incluem o conjunto de ferramentas do compilador MSVC (também chamado de ferramentas ou "ferramentas de Build"). Eles estão incluídos no Visual Studio. Você também pode baixar e usar o conjunto de ferramentas como um pacote autônomo gratuitamente nas [ferramentas de Build para o local de download do Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
 
-Você pode criar programas simples invocando o compilador MSVC (CL. exe) diretamente da linha de comando. O comando a seguir aceita um único arquivo de código-fonte e invoca o CL. exe para criar um executável chamado *Hello. exe*: 
+Você pode criar programas simples invocando o compilador MSVC (CL. exe) diretamente da linha de comando. O comando a seguir aceita um único arquivo de código-fonte e invoca o CL. exe para criar um executável chamado *Hello. exe*:
 
 ```cmd
 cl /EHsc hello.cpp
@@ -45,21 +45,21 @@ Observe que, aqui, o compilador (CL. exe) invoca automaticamente C++ o pré-proc
 
 ## <a name="build-systems-and-projects"></a>Compilar sistemas e projetos
 
-A maioria dos programas do mundo real usa algum tipo de *sistema de compilação* para gerenciar complexidades de compilação de vários arquivos de origem para várias configurações (por exemplo, depuração vs. versão), várias plataformas (x86, x64, ARM e assim por diante), etapas de compilação personalizadas e até mesmo vários executáveis que devem ser compilados em uma determinada ordem. As configurações são feitas em um ou mais arquivos de configuração de compilação, e o sistema de compilação aceita esse arquivo como entrada antes de invocar o compilador. O conjunto de arquivos de código-fonte e arquivos de configuração de compilação necessários para criar um arquivo executável é chamado de *projeto*. 
+A maioria dos programas do mundo real usa algum tipo de *sistema de compilação* para gerenciar complexidades de compilação de vários arquivos de origem para várias configurações (por exemplo, depuração vs. versão), várias plataformas (x86, x64, ARM e assim por diante), etapas de compilação personalizadas e até mesmo vários executáveis que devem ser compilados em uma determinada ordem. As configurações são feitas em um ou mais arquivos de configuração de compilação, e o sistema de compilação aceita esse arquivo como entrada antes de invocar o compilador. O conjunto de arquivos de código-fonte e arquivos de configuração de compilação necessários para criar um arquivo executável é chamado de *projeto*.
 
 A lista a seguir mostra várias opções para projetos do Visual C++Studio:
 
 - Crie um projeto do Visual Studio usando o IDE do Visual Studio e configure-o usando páginas de propriedades. Os projetos do Visual Studio produzem programas que são executados no Windows. Para obter uma visão geral, consulte [compilando e compilando](/visualstudio/ide/compiling-and-building-in-visual-studio) na documentação do Visual Studio.
 
 - Abra uma pasta que contenha um arquivo CMakeLists. txt. O suporte do CMake é integrado ao Visual Studio. Você pode usar o IDE para editar, testar e depurar sem modificar os arquivos CMake de forma alguma. Isso permite que você trabalhe no mesmo projeto CMake que outras pessoas que podem estar usando editores diferentes. CMake é a abordagem recomendada para o desenvolvimento de plataforma cruzada. Para obter mais informações, consulte [projetos do cmake](cmake-projects-in-visual-studio.md).
- 
+
 - Abra uma pasta flexível de arquivos de origem sem arquivo de projeto. O Visual Studio usará a heurística para criar os arquivos. Essa é uma maneira fácil de compilar e executar pequenos aplicativos de console. Para obter mais informações, consulte [abrir projetos de pasta](open-folder-projects-cpp.md).
 
 - Abra uma pasta que contenha um makefile ou qualquer outro arquivo de configuração do sistema de compilação. Você pode configurar o Visual Studio para invocar qualquer comando de Build arbitrário Adicionando arquivos JSON à pasta. Para obter mais informações, consulte [abrir projetos de pasta](open-folder-projects-cpp.md).
- 
+
 - Abra um Makefile do Windows no Visual Studio. Para obter mais informações, consulte [referência de NMAKE](reference/nmake-reference.md).
 
-## <a name="msbuild-from-the-command-line"></a>MSBuild da linha de comando 
+## <a name="msbuild-from-the-command-line"></a>MSBuild da linha de comando
 
 Você pode invocar o MSBuild na linha de comando passando-o um arquivo. vcxproj juntamente com as opções de linha de comando. Essa abordagem requer uma boa compreensão do MSBuild e é recomendada somente quando absolutamente necessário. Para mais informações, consulte [MSBuild](msbuild-visual-cpp.md).
 
@@ -69,7 +69,7 @@ Você pode invocar o MSBuild na linha de comando passando-o um arquivo. vcxproj 
 
 [Projetos do cmake](cmake-projects-in-visual-studio.md) Como codificar, compilar e implantar projetos CMake no Visual Studio.
 
-[Abrir projetos de pasta](open-folder-projects-cpp.md) Como usar o Visual Studio para codificar, compilar e implantar C++ projetos com base em qualquer sistema de compilação arbitrário ou sem sistema de compilação. Absolutamente. 
+[Abrir projetos de pasta](open-folder-projects-cpp.md) Como usar o Visual Studio para codificar, compilar e implantar C++ projetos com base em qualquer sistema de compilação arbitrário ou sem sistema de compilação. Absolutamente.
 
 [Builds de versão](release-builds.md) Como criar e solucionar problemas de builds de versão otimizados para implantação para usuários finais.
 

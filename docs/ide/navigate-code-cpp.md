@@ -2,12 +2,12 @@
 title: Navegar pelo código C++ no Visual Studio
 description: Use várias ferramentas no Visual Studio para navegar pela base de código C++.
 ms.date: 05/28/2019
-ms.openlocfilehash: 0877fe64e913ab394d9605b9ff0b9825febca793
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 932694db70019924557259d4defe802b53ef0f89
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446684"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079085"
 ---
 # <a name="navigate-c-code-in-visual-studio"></a>Navegar pelo código C++ no Visual Studio
 
@@ -31,7 +31,7 @@ Navegue até a definição de um símbolo de código, clicando com o botão dire
 
 ## <a name="go-to"></a>Ir para
 
-**Ir para** refere-se a um conjunto de recursos de navegação, com cada um fornecendo um tipo específico de resultado com base nos filtros especificados. 
+**Ir para** refere-se a um conjunto de recursos de navegação, com cada um fornecendo um tipo específico de resultado com base nos filtros especificados.
 
 Abra **Ir para** com **Ctrl+,** . Esta ação criará uma caixa de pesquisa sobre o documento que você está editando.
 
@@ -82,7 +82,7 @@ A opção **Localizar** pode ter o escopo definido para uma seleção, o documen
 
 ![Localizar&#43; &#43; C](../ide/media/find-cpp.png "Localizar")
 
-A opção **Localizar nos Arquivos** é uma versão mais eficiente de **Localizar** que exibe os resultados na janela **Localizar Resultados**. Você pode pesquisar dependências de código externas, filtrar por tipos de arquivos e muito mais. 
+A opção **Localizar nos Arquivos** é uma versão mais eficiente de **Localizar** que exibe os resultados na janela **Localizar Resultados**. Você pode pesquisar dependências de código externas, filtrar por tipos de arquivos e muito mais.
 
 ![C&#43; &#43; localizar nos arquivos](../ide/media/find-in-files-cpp.png "Localizar em Arquivos")
 
@@ -106,7 +106,7 @@ Agrupe os resultados pelas seguintes categorias:
 - Definição, então Caminho
 - Definição, Projeto e, então, Caminho
 
-#### <a name="filter-results"></a>Filtrar os resultados
+#### <a name="filter-results"></a>Resultados do filtro
 
 Para filtrar os resultados, passe o mouse sobre uma coluna e selecione o ícone de filtragem exibido. Filtre os resultados da primeira coluna para ocultar itens como referências de cadeias de caracteres e comentários que talvez você não deseje ver.
 
@@ -118,7 +118,7 @@ Para filtrar os resultados, passe o mouse sobre uma coluna e selecione o ícone 
 
 - **Resultados não processados**: as operações **Localizar todas as referências** podem levar tempo para serem concluídas em bases de código maiores, portanto, a lista de resultados mostra os resultados "não processados" aqui. Os resultados não processados correspondem ao nome do símbolo que está sendo pesquisado, mas que ainda não foi confirmado como uma referência de código real. Ative esse filtro para obter resultados mais rápidos. Apenas lembre-se de que alguns resultados podem não ser referências reais.
 
-#### <a name="sort-results"></a>Classificar os resultados
+#### <a name="sort-results"></a>Classificar resultados
 
 Classifique os resultados por qualquer coluna, selecionando essa coluna. Alterne entre ordem ascendente ou decrescente selecionando a coluna novamente.
 
@@ -128,7 +128,7 @@ Navegue até a definição de um tipo em um arquivo ou até membros de tipo, usa
 
 ![Barra&#43; &#43; de navegação C](../ide/media/navbar-cpp.png "Barra de navegação")
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Ler e entender o código C++](read-and-understand-code-cpp.md)</br>
 - [Editar e refatorar o código C++](read-and-understand-code-cpp.md)</br>

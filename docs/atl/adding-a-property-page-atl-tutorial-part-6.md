@@ -3,16 +3,16 @@ title: Adicionando uma página de propriedades (Tutorial ATL, parte 6)
 ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-ms.openlocfilehash: 2c487d1446f5d1050868f2066359e9639f474ba3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 467ae19c372e24b2d368002cb83367b7087136fd
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524691"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078764"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Adicionando uma página de propriedades (Tutorial ATL, parte 6)
 
-> [!NOTE] 
+> [!NOTE]
 > O assistente de Provedor OLE DB da ATL não está disponível no Visual Studio 2019 e posteriores.
 
 As páginas de propriedades são implementadas como objetos COM separados, que permitem que eles sejam compartilhados se necessário. Nesta etapa, você realizará as seguintes tarefas para adicionar uma página de propriedades ao controle:
@@ -45,7 +45,7 @@ Para adicionar uma página de propriedades ao seu controle, use o modelo Página
 
 Os três arquivos seguintes são criados:
 
-|Arquivo|Descrição|
+|Arquivo|DESCRIÇÃO|
 |----------|-----------------|
 |PolyProp.h|Contém a classe C++ `CPolyProp`, que implementa a página de propriedades.|
 |PolyProp.cpp|Inclui o arquivo PolyProp.h.|
@@ -149,6 +149,6 @@ Em seguida, você colocará seu controle em uma página da Web.
 
 [Voltar para a Etapa 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [Na Etapa 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Tutorial](../atl/active-template-library-atl-tutorial.md)

@@ -4,12 +4,12 @@ ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: bf42981396abf8e91077da5c1cc1f180891d2a63
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b5d44a378e231b99f1b6461bc1329179bfd68f89
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446556"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075825"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avisos do compilador por versão do compilador
 
@@ -25,7 +25,7 @@ Essas versões do compilador introduziram novos avisos:
 | Visual Studio 2008 | 15.00.21022.08 |
 | Visual Studio 2010 | 16.00.40219.01 |
 | Visual Studio 2012 | 17.00.51106.1 |
-| {1&gt;{2&gt;Visual Studio 2013&lt;2}&lt;1} | 18.00.21005.1 |
+| Visual Studio 2013 | 18.00.21005.1 |
 | Visual Studio 2015 RTM | 19.00.23026.0 |
 | Visual Studio 2015 Atualização 1 | 19.00.23506.0 |
 | Visual Studio 2015 Atualização 2 | 19.00.23918.0 |
@@ -55,7 +55,6 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 
 ::: moniker-end
 ::: moniker range=">= vs-2017"
-
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Avisos introduzidos no Visual Studio 2017 versão 15,8 (versão do compilador 19.15.26726.0)
 
@@ -672,10 +671,10 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C4997 | `'type': coclass does not implement a COM interface or pseudo-interface` |
 | C4998 | `EXPECTATION FAILED: description(number)` |
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Erros eC++ avisos do C/compilador e ferramentas de compilação](../compiler-errors-1/c-cpp-build-errors.md) \
 [Avisos do compilador C4000-C5999](compiler-warnings-c4000-c5999.md) \
  \ [opção de compilador/WV](../../build/reference/compiler-option-warning-level.md)
 [Avisos do compilador que estão desativados por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) \
-[warning](../../preprocessor/warning.md)
+[aviso](../../preprocessor/warning.md)

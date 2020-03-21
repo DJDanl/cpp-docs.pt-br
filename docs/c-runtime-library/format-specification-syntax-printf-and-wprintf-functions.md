@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c5cd93607f8e5a892d789dcb6aeef934f8936dad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417169"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078055"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxe de especificação de formato: funções printf e wprintf
 
-As várias funções `printf` e `wprintf` usam uma cadeia de caracteres de formato e argumentos opcionais e produzem uma sequência formatada de caracteres de saída. A cadeia de caracteres de formato contém zero ou mais *diretivas*, que são caracteres literais para saída, ou *especificações de conversão* codificadas, que descrevem como formatar um argumento na saída. Este artigo descreve a sintaxe usada para codificar as especificações de conversão na cadeia de caracteres de formato. Para obter uma lista dessas funções, veja [E/S de fluxo](../c-runtime-library/stream-i-o.md). 
+As várias funções `printf` e `wprintf` usam uma cadeia de caracteres de formato e argumentos opcionais e produzem uma sequência formatada de caracteres de saída. A cadeia de caracteres de formato contém zero ou mais *diretivas*, que são caracteres literais para saída, ou *especificações de conversão* codificadas, que descrevem como formatar um argumento na saída. Este artigo descreve a sintaxe usada para codificar as especificações de conversão na cadeia de caracteres de formato. Para obter uma lista dessas funções, veja [E/S de fluxo](../c-runtime-library/stream-i-o.md).
 
 Uma especificação de conversão consiste em campos obrigatórios e opcionais neste formulário:
 
@@ -39,7 +39,7 @@ A especificação de conversão básica contém apenas o sinal de porcentagem e 
 
 <a name="type"></a>
 
-> [!NOTE] 
+> [!NOTE]
 > No Visual Studio 2015, a `printf` e a `scanf` família de funções foram declaradas como **embutidas** e movidas para os cabeçalhos `<stdio.h>` e `<conio.h>`. Se você estiver migrando um código mais antigo, poderá ver *LNK2019* em conexão com essas funções. Para obter mais informações, consulte o [histórico de alterações Visual C++ 2003-2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 ## <a name="type-conversion-specifier"></a>Especificador de conversão de tipo
@@ -74,7 +74,7 @@ Tipos inteiros, como `short`, `int`, `long`, `long long`e suas variantes de `uns
 |**a**|Ponto flutuante|Valor hexadecimal de ponto flutuante de precisão dupla e assinado que tem o formato [-]0x*h.hhhh*__p±__*dd*, no qual *h.hhhh* são os dígitos hexadecimais (usando letras minúsculas) da mantissa e *dd* são um ou mais dígitos para o expoente. A precisão especifica o número de dígitos após a vírgula.|
 |**A**|Ponto flutuante|Valor hexadecimal de ponto flutuante de precisão dupla e assinado que tem o formato [-]0X*h.hhhh*__P±__*dd*, em que *h.hhhh* são os dígitos hexadecimais (usando letras maiúsculas) da mantissa e *dd* são um ou mais dígitos para o expoente. A precisão especifica o número de dígitos após a vírgula.|
 |**n**|Ponteiro para o inteiro|Número de caracteres gravados com êxito até o momento no fluxo ou no buffer. Esse valor é armazenado no inteiro cujo endereço é fornecido como o argumento. O tamanho do número inteiro apontado pode ser controlado por um prefixo de especificação de tamanho de argumento. O especificador **n** é desabilitado por padrão; para obter mais informações, consulte a observação de segurança importante.|
-|**p**|Tipo de ponteiro|Exibe o argumento como um endereço usando dígitos hexadecimais.|
+|**p**|Tipo ponteiro|Exibe o argumento como um endereço usando dígitos hexadecimais.|
 |**s**|String|Quando usado com funções `printf`, especifica uma cadeia de caracteres de byte único ou uma cadeia de caracteres de bytes múltiplos; quando usado com funções `wprintf`, especifica uma cadeia de caracteres largos. Os caracteres são exibidos até o primeiro caractere nulo ou até que o valor de *precisão* seja atingido.|
 |**S**|String|Quando usado com funções `printf`, especifica uma cadeia de caracteres largos; quando usado com funções `wprintf`, especifica uma cadeia de caracteres de byte único ou uma cadeia de caracteres de bytes múltiplos. Os caracteres são exibidos até o primeiro caractere nulo ou até que o valor de *precisão* seja atingido.|
 |**Z**|Estrutura `ANSI_STRING` ou `UNICODE_STRING`|Quando o endereço de uma estrutura [ANSI_STRING](/windows/win32/api/ntdef/ns-ntdef-string) ou [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) é passado como o argumento, exibe a cadeia de caracteres contida no buffer apontado pelo campo `Buffer` da estrutura. Use um prefixo modificador de *tamanho* de **w** para especificar um argumento `UNICODE_STRING` – por exemplo, `%wZ`. O campo `Length` da estrutura deve ser definido como a duração, em bytes, da cadeia de caracteres. O campo `MaximumLength` da estrutura deve ser definido como a duração, em bytes, do buffer.<br /><br /> Normalmente, o caractere de tipo **Z** é usado somente em funções de depuração de driver que usam uma especificação de conversão, como `dbgPrint` e `kdPrint`.|
@@ -83,7 +83,7 @@ A partir do Visual Studio 2015, se o argumento que corresponde a um especificado
 
 |Valor|Saída|
 |-----------|------------|
-|{1&gt;infinity&lt;1}|`inf`|
+|infinity|`inf`|
 |NaN silencioso|`nan`|
 |Sinalização de NaN|`nan(snan)`|
 |NaN indefinido|`nan(ind)`|

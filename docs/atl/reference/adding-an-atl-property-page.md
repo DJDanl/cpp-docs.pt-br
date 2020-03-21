@@ -6,16 +6,16 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
-ms.openlocfilehash: 81f793fbdc6d9dda567051b8c35a96f3d3f2f470
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 3e27d276e5500c1e32ca7b576b355f14f18a47f6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524622"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075269"
 ---
 # <a name="adding-an-atl-property-page"></a>Adição de uma página de propriedades da ATL
 
-> [!NOTE] 
+> [!NOTE]
 > O assistente de Página de Propriedades da ATL não está disponível no Visual Studio 2019 e versões posteriores.
 
 Para adicionar uma página de propriedades ATL (Active Template Library) ao seu projeto, ele deve ter sido criado como um aplicativo ATL ou como um aplicativo MFC compatível com ATL. Use o [Assistente de Projeto ATL](../../atl/reference/atl-project-wizard.md) para criar um aplicativo ATL ou [adicione um objeto ATL ao aplicativo MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar o suporte à ATL para um aplicativo MFC.
@@ -35,8 +35,8 @@ Se estiver adicionando uma página de propriedades para um controle, este dever�
 
 Depois de criar uma página de propriedades para um controle, você deve fornecer a entrada [PROP_PAGE](property-map-macros.md#prop_page) no mapa de propriedades do controle.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Páginas de propriedade](../../atl/atl-com-property-pages.md)<br/>
 [Princípios básicos de objetos COM da ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
-[Exemplo: Implementação de uma página de propriedades](../../atl/example-implementing-a-property-page.md)
+[Exemplo: implementando uma página de propriedades](../../atl/example-implementing-a-property-page.md)

@@ -6,15 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: 205f6d3debafe22373355af12ef88c83d6a01911
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: a46a55cca221293e83a72bf0c2670e2343c744b0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707011"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076202"
 ---
 # <a name="options-atl-property-page-wizard"></a>Opções, Assistente de Página de Propriedades da ATL
-
 
 ::: moniker range="vs-2019"
 
@@ -32,24 +31,24 @@ Use esta página do assistente para definir o modelo de threading e o nível de 
 
    Confira mais informações em [Como especificar o modelo de threading para um projeto](../../atl/specifying-the-threading-model-for-a-project-atl.md).
 
-   |Opção|Descrição|
+   |Opção|DESCRIÇÃO|
    |------------|-----------------|
-   |**Simples**|A página de propriedades é executada apenas no thread COM primário.|
+   |**Single**|A página de propriedades é executada apenas no thread COM primário.|
    |**Apartment**|A página de propriedades pode ser criada em qualquer apartament de thread único. O padrão.|
 
 - **Agregação**
 
    Adiciona suporte de agregação para a página de propriedades que você está criando. Confira mais informações em [Agregação](../../atl/aggregation.md).
 
-   |Opção|Descrição|
+   |Opção|DESCRIÇÃO|
    |------------|-----------------|
    |**Sim**|Cria uma página de propriedades que pode ser agregada.|
-   |**No**|Cria uma página de propriedades que não pode ser agregada.|
+   |**Não**|Cria uma página de propriedades que não pode ser agregada.|
    |**Apenas**|Cria uma página de propriedades que só pode ser instanciada por meio de uma agregação.|
 
 ::: moniker-end
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Assistente de página de propriedades da ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
 [Cadeias de caracteres, Assistente de Página de Propriedades da ATL](../../atl/reference/strings-atl-property-page-wizard.md)

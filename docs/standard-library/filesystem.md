@@ -12,12 +12,12 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: f9e384953a4e675ad6235a274c447031976a1585
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 86be11da1e2cef2fe0ca12691aeb0ce3dbe94202
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441714"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076503"
 ---
 # &lt;filesystem&gt;
 
@@ -32,7 +32,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> No lançamento do Visual Studio 2017, o cabeçalho de > de filesystemde \<ainda não C++ era um padrão. C++no Visual Studio 2017 RTW implementa o padrão final de rascunho, encontrado em [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf). O Visual Studio 2017 versão 15,7 e posterior dá suporte ao novo \<de C++ 17 filesystem> Standard.
+> No lançamento do Visual Studio 2017, o cabeçalho de > de filesystemde \<ainda não C++ era um padrão. C++no Visual Studio 2017 RTW implementa o padrão final de rascunho, encontrado em [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100). O Visual Studio 2017 versão 15,7 e posterior dá suporte ao novo \<de C++ 17 filesystem> Standard.
 > Essa é uma implementação completamente nova, incompatível com a versão do `std::experimental` anterior. Ele tornou-se necessário pelo suporte do symlink, correções de bugs e alterações no comportamento padrão necessário. Atualmente, incluindo \<filesystem> fornece a nova `std::filesystem` e a `std::experimental::filesystem`anterior. Incluindo \<experimental/filesystem> fornece apenas a implementação experimental antiga. A implementação de experimental será removida na próxima versão de interrupção da ABI das bibliotecas.
 
 Esse cabeçalho dá suporte a sistemas de arquivos para uma das duas classes amplas de sistemas operacionais de host: Microsoft Windows e POSIX.
@@ -112,7 +112,7 @@ Para obter mais informações e exemplos de código, consulte [navegação doC++
 |-|-|
 |[estrutura de space_info](../standard-library/space-info-structure.md)|Mantém informações sobre um volume.|
 
-## <a name="functions"></a>{1&gt;Funções&lt;1}
+## <a name="functions"></a>Funções
 
 [funções de > de filesystem\<](../standard-library/filesystem-functions.md)
 
@@ -130,6 +130,6 @@ Para obter mais informações e exemplos de código, consulte [navegação doC++
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)| Enumera as opções para a função `permissions`. |
 |[perms](../standard-library/filesystem-enumerations.md#perms)|Um tipo de bitmask usado para transmitir permissões e opções de permissões|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)

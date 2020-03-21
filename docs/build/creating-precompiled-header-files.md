@@ -7,18 +7,18 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6333e105a20612d6cbdf8d4b4d4abf47286c4e9b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417372"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078592"
 ---
 # <a name="precompiled-header-files"></a>Arquivos de cabeçalho pré-compilado
 
-Quando você cria um novo projeto no Visual Studio, um *arquivo de cabeçalho pré-compilado* chamado *PCH. h* é adicionado ao projeto. (No Visual Studio 2017 e anterior, o arquivo foi chamado de *stdafx. h*.) A finalidade do arquivo é acelerar o processo de compilação. Todos os arquivos de cabeçalho estáveis, por exemplo, cabeçalhos de biblioteca padrão, como `<vector>`, devem ser incluídos aqui. O cabeçalho pré-compilado é compilado somente quando ele ou qualquer arquivo que ele inclui, são modificados. Se você fizer alterações apenas no código-fonte do projeto, a compilação ignorará a compilação para o cabeçalho pré-compilado. 
+Quando você cria um novo projeto no Visual Studio, um *arquivo de cabeçalho pré-compilado* chamado *PCH. h* é adicionado ao projeto. (No Visual Studio 2017 e anterior, o arquivo foi chamado de *stdafx. h*.) A finalidade do arquivo é acelerar o processo de compilação. Todos os arquivos de cabeçalho estáveis, por exemplo, cabeçalhos de biblioteca padrão, como `<vector>`, devem ser incluídos aqui. O cabeçalho pré-compilado é compilado somente quando ele ou qualquer arquivo que ele inclui, são modificados. Se você fizer alterações apenas no código-fonte do projeto, a compilação ignorará a compilação para o cabeçalho pré-compilado.
 
-As opções do compilador para cabeçalhos pré-compilados são [/y](reference/y-precompiled-headers.md). Nas páginas de propriedades do projeto, as opções estão localizadas em **Propriedades de configuraçãoC++ > C/> cabeçalhos pré-compilados**. Você pode optar por não usar cabeçalhos pré-compilados e pode especificar o nome do arquivo de cabeçalho e o nome e o caminho do arquivo de saída. 
+As opções do compilador para cabeçalhos pré-compilados são [/y](reference/y-precompiled-headers.md). Nas páginas de propriedades do projeto, as opções estão localizadas em **Propriedades de configuraçãoC++ > C/> cabeçalhos pré-compilados**. Você pode optar por não usar cabeçalhos pré-compilados e pode especificar o nome do arquivo de cabeçalho e o nome e o caminho do arquivo de saída.
 
 ## <a name="custom-precompiled-code"></a>Código pré-compilado personalizado
 

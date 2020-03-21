@@ -3,12 +3,12 @@ title: Implantar, executar e depurar seu projeto Linux em C++ no Visual Studio
 description: Descreve como compilar, executar e depurar o código no destino remoto de dentro de um projeto do Linux em C++ no Visual Studio.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 183554814ef48a93c11d782a89e04c43fcce5e9f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e68feab3a71cd5bb3f6b88eee52f0872ef4bb213
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441662"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077832"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Implantar, executar e depurar o projeto do Linux
 
@@ -35,7 +35,7 @@ Há várias maneiras de interagir com o projeto do Linux e depurá-lo.
 ## <a name="debug-your-linux-project"></a>Depurar o projeto do Linux
 
 1. Selecione o modo de depuração na página de propriedades **Depuração**.
-   
+
    ::: moniker range="vs-2019"
 
    O GDB é usado para depurar aplicativos em execução no Linux. Durante a depuração em um sistema remoto (exceto o WSL), o GDB pode ser executado em dois modos diferentes, que podem ser selecionados na opção **Modo de Depuração**, na página de propriedades **Depuração** do projeto:
@@ -51,7 +51,6 @@ Há várias maneiras de interagir com o projeto do Linux e depurá-lo.
    ![Opções do GDB](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
-
 
    - No modo **gdbserver**, o GDB é executado localmente, que se conecta ao gdbserver no sistema remoto.  Observe que esse é o único modo ao qual a janela do Console do Linux dá suporte.
 
@@ -129,7 +128,7 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 ::: moniker range="vs-2019"
 
-## <a name="separate_build_debug"></a> Especificar computadores diferentes para compilação e depuração
+## <a name="specify-different-machines-for-building-and-debugging"></a><a name="separate_build_debug"></a> Especificar computadores diferentes para compilação e depuração
 
 No Visual Studio de 2019 versão 16.1, você pode separar o computador de compilação remoto do seu computador de depuração remoto para projetos do CMake e projetos do Linux baseados no MSBuild destinados a um computador Linux remoto. Por exemplo, você pode fazer uma compilação cruzada no x64 e implantar em um dispositivo ARM ao visar cenários de IoT.
 
@@ -194,10 +193,10 @@ Se quiser controle completo sobre a implantação, você poderá acrescentar os 
 
 ::: moniker-end
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 - Para depurar dispositivos ARM no Linux, consulte esta postagem no blog: [Debugging an embedded ARM device in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/) (Depurando um dispositivo ARM inserido no Visual Studio).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Propriedades do depurador C++ (Linux C++)](prop-pages/debugging-linux.md)

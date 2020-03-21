@@ -2,12 +2,12 @@
 title: Portando para a Plataforma Universal do Windows (C++)
 ms.date: 10/23/2019
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 9314cb564e792a7d4949d422a3942e9d46a23cb2
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 0013d85ad8c27c06560c9f9e541691f4335252d1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627203"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076849"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portando para a Plataforma Universal do Windows (C++)
 
@@ -21,9 +21,9 @@ Este tópico contém os procedimentos a seguir para portabilidade de código par
 
 - [Portabilidade de um Componente do Runtime do Windows 8.1 para a UWP](#BK_81Component)
 
-Se você tiver uma DLL de área de trabalho clássica Win32 e desejar chamá-la de um aplicativo da UWP, você poderá fazer isso também. Usando esses procedimentos, você pode criar uma camada da interface do usuário da UWP para um aplicativo C++ da área de trabalho do Windows clássica existente ou seu código C++ padrão de plataforma cruzada. Veja [Como usar o código C++ existente em um aplicativo da Plataforma Universal do Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md). 
+Se você tiver uma DLL de área de trabalho clássica Win32 e desejar chamá-la de um aplicativo da UWP, você poderá fazer isso também. Usando esses procedimentos, você pode criar uma camada da interface do usuário da UWP para um aplicativo C++ da área de trabalho do Windows clássica existente ou seu código C++ padrão de plataforma cruzada. Veja [Como usar o código C++ existente em um aplicativo da Plataforma Universal do Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
 
-## <a name="BK_81StoreApp"></a> Portabilidade de um aplicativo da Windows 8.1 Store para a UWP
+## <a name="porting-a-windows-81-store-app-to-the-uwp"></a><a name="BK_81StoreApp"></a> Portabilidade de um aplicativo da Windows 8.1 Store para a UWP
 
 Se você tiver um aplicativo da Windows 8.1 Store, você poderá usar este procedimento para fazê-lo funcionar na UWP e em qualquer dispositivo que execute o Windows 10.  É uma boa ideia criar primeiro o projeto com o Visual Studio 2019 como um projeto Windows 8.1, para primeiro eliminar os problemas que surgirem de alterações no compilador e nas bibliotecas. Depois disso, há duas maneiras para converter isso em um projeto do Windows 10 da UWP. A maneira mais fácil (conforme explicado no procedimento a seguir) é criar um projeto Universal do Windows e copiar o código existente dentro dele. Se você estiver usando um projeto Universal para área de trabalho do Windows 8.1 e Windows 8.1 Phone, seu projeto será iniciado com dois layouts diferentes em XAML mas terminará com um único layout dinâmico, que se ajusta o tamanho de exibição.
 
@@ -68,7 +68,7 @@ Se você tiver um aplicativo da Windows 8.1 Store, você poderá usar este proce
 
 1. Execute e depure o aplicativo em um emulador ou um dispositivo físico para cada tipo de dispositivo ao qual seu aplicativo dá suporte. Para executar um emulador, você precisa executar o Visual Studio em um computador físico, não em uma máquina virtual.
 
-## <a name="BK_81Component"></a> Portabilidade um Componente do Runtime do Windows 8.1 para a UWP
+## <a name="porting-a-windows-81-runtime-component-to-the-uwp"></a><a name="BK_81Component"></a> Portabilidade um Componente do Runtime do Windows 8.1 para a UWP
 
 Se você tiver uma DLL ou um componente do Windows Runtime que já funciona com aplicativos da Windows 8.1 Store, você poderá usar este procedimento fazer com que o componente ou DLL funcione com a UWP e o Windows 10. O procedimento básico é criar um novo projeto e copiar seu código nele.
 
@@ -82,7 +82,7 @@ Se você tiver uma DLL ou um componente do Windows Runtime que já funciona com 
 
 1. Compile e resolva quaisquer erros devidos a alterações interruptivas entre versões diferentes do Windows SDK.
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>solução de problemas
 
 É possível encontrar vários erros durante o processo de portabilidade do código para a UWP. Aqui estão alguns dos problemas possíveis que podem ser encontrados.
 
@@ -106,7 +106,7 @@ Se isso acontecer, o projeto não está sendo compilado como um projeto Universa
 
 Se você criar um novo projeto UWP usando o Visual Studio, esse erro não deverá aparecer.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Guia de portabilidade do Visual C++](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
 [Desenvolver aplicativos para a UWP (Plataforma Universal do Windows)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)

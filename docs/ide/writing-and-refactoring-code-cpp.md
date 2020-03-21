@@ -4,12 +4,12 @@ description: Use o editor de código C++ no Visual Studio para formatar, navegar
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: da3f4e7d783561dba8250652a0715e51e71cc387
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6d920ec302e8385d900d74152ee5ad17851fdaac
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438154"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077841"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Editar e refatorar o código C++ no Visual Studio
 
@@ -60,25 +60,25 @@ Para substituir o **IntelliSense preditiva** e mostrar a lista mais longa, press
 A captura de tela anterior mostra vários botões na lista suspensa. Eles habilitam filtros do IntelliSense para diferentes tipos de resultados:
 
 - Variáveis e constantes
-- {1&gt;Funções&lt;1}
+- Funções
 - Tipos
 - Macros
 - Enums
-- {1&gt;Namespaces&lt;1}
+- Namespaces
 
 Um botão é exibido somente se ele é relevante para a sessão atual do IntelliSense. Normalmente, você não verá todos os botões ao mesmo tempo.
 
 ## <a name="template-intellisense"></a>IntelliSense de modelo
 
-Quando o cursor estiver dentro de uma definição de modelo, uma **Barra de Modelo** será exibida, que permite fornecer argumentos de modelo de exemplo para o IntelliSense. 
+Quando o cursor estiver dentro de uma definição de modelo, uma **Barra de Modelo** será exibida, que permite fornecer argumentos de modelo de exemplo para o IntelliSense.
 
 ![Modelo&#43; &#43; C o IntelliSense mostrar instanciações existentes](../ide/media/template-intellisense-cpp-1.png "Modelo IntelliSense mostrar instanciações existentes")
 
-Clique no ícone **\<t >** para expandir/recolher a **barra de modelos**. Clique no ícone de lápis ou clique duas vezes na **Barra de Modelo** para abrir a janela **Editar**. 
+Clique no ícone **\<t >** para expandir/recolher a **barra de modelos**. Clique no ícone de lápis ou clique duas vezes na **Barra de Modelo** para abrir a janela **Editar**.
 
 ![IntelliSense&#43; &#43; do modelo C](../ide/media/template-intellisense-cpp-3.png "IntelliSense de modelo")
 
-As edições feitas na janela são aplicadas diretamente ao código-fonte, para que você possa ver os efeitos em tempo real. 
+As edições feitas na janela são aplicadas diretamente ao código-fonte, para que você possa ver os efeitos em tempo real.
 
 A Barra de Modelo pode preencher candidatos automaticamente com base nas instanciações no código. Clique em **Adicionar Todas as Instanciações Existentes** para ver uma lista de todos os argumentos concretos que foram usados para criar uma instância do modelo em toda a base de código.
 
@@ -94,21 +94,21 @@ As informações da **Barra de Modelo** são tratadas como específicas do usuá
 
 Se o editor detectar problemas com o código, ele adicionará rabiscos coloridos sob o problema. Rabiscos vermelhos indicam um código que não será compilado. Rabiscos verdes indicam outros tipos de problemas que podem ser graves. Abra a janela **Lista de Erros** para obter mais informações sobre os problemas.
 
-Para alguns tipos de erros, bem como padrões de codificação comuns, o editor oferecerá uma **Correção Rápida** na forma de uma lâmpada que é exibida quando você focaliza o rabisco. Clique na seta para baixo para ver as sugestões. 
+Para alguns tipos de erros, bem como padrões de codificação comuns, o editor oferecerá uma **Correção Rápida** na forma de uma lâmpada que é exibida quando você focaliza o rabisco. Clique na seta para baixo para ver as sugestões.
 
 No exemplo a seguir, um `vector` foi declarado, mas nenhuma definição foi encontrada e, portanto, o editor oferece a inclusão do arquivo de cabeçalho necessário:
 
 ![Correção&#43; &#43; rápida C](../ide/media/quick-fix-for-header-cpp.png "C++Correção rápida")
 
-O editor também oferece Correções Rápidas para algumas oportunidades de refatoração. Por exemplo, se você declarar uma classe em um arquivo de cabeçalho, o Visual Studio oferecerá a criação de uma definição para ele em um arquivo .cpp separado. 
+O editor também oferece Correções Rápidas para algumas oportunidades de refatoração. Por exemplo, se você declarar uma classe em um arquivo de cabeçalho, o Visual Studio oferecerá a criação de uma definição para ele em um arquivo .cpp separado.
 
 ![Correção&#43; &#43; rápida C](../ide/media/quick-fix.png "C++Correção rápida")
 
-## <a name="change-tracking"></a>Change tracking
+## <a name="change-tracking"></a>controle de alterações
 
 Sempre que você fizer uma alteração em um arquivo, uma barra amarela será exibida à esquerda para indicar que alterações não salvas foram feitas. Quando você salvar o arquivo, a barra ficará verde. As barras verde e amarela serão preservadas, desde que o documento esteja aberto no editor. Elas representam as alterações feitas desde que você abriu o documento pela última vez.
 
-![Controle&#43; &#43; de alterações C](../ide/media/change-tracking-cpp.png "Change tracking")
+![Controle&#43; &#43; de alterações C](../ide/media/change-tracking-cpp.png "controle de alterações")
 
 ## <a name="move-code"></a>Mover o código
 
@@ -153,7 +153,7 @@ O Visual Studio 2017 e posterior vem com suporte interno para o [ClangFormat](ht
 - Chromium
 - Mozilla
 - WebKit
-- {1&gt;Visual Studio&lt;1}
+- Visual Studio
 
 Forneça também seu próprio arquivo .clang-format ou _clang-format para aplicar regras personalizadas a todos os arquivos de código no mesmo nível ou abaixo.
 
@@ -183,7 +183,7 @@ As opções para habilitar e configurar recursos de edição específicos do C++
 
 As funcionalidades experimentais, que podem ou não ser incluídas em uma versão futura do Visual Studio, são encontradas na caixa de diálogo [Experimental do C++ do Editor de Texto](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental). No Visual Studio 2017 e posterior, você pode habilitar o **IntelliSense Preditivo** nessa caixa de diálogo.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte Também
 
 [Ler e entender o código C++](read-and-understand-code-cpp.md)</br>
 [Navegar pela base de código C++ no Visual Studio](navigate-code-cpp.md)</br>

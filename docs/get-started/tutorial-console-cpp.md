@@ -6,12 +6,12 @@ ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: ff1b5295f9fefd681ea76d09349415b59ceac1f2
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 27522a6960546dc935ea3d9bce974eb36789c0aa
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631307"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079286"
 ---
 # <a name="create-a-c-console-app-project"></a>Criar um projeto de aplicativo de console C++
 
@@ -29,7 +29,7 @@ O Visual Studio usa os *projetos* para organizar o código em um aplicativo e as
 
 1. Se tiver começado a usar o Visual Studio, você verá a caixa de diálogo do Visual Studio 2019. Escolha **Criar um novo projeto** para começar.
 
-   ![Caixa de diálogo inicial do Visual Studio 2019](./media/calc-vs2019-initial-dialog.png "Caixa de diálogo inicial do Visual o Studio 2019")
+   ![A caixa de diálogo inicial do Visual Studio 2019](./media/calc-vs2019-initial-dialog.png "A caixa de diálogo inicial do Visual Studio 2019")
 
    Caso contrário, na barra de menus no Visual Studio, escolha **Arquivo** > **Novo** > **Projeto**. A janela **Criar um novo projeto** é aberta.
 
@@ -42,7 +42,7 @@ O Visual Studio usa os *projetos* para organizar o código em um aplicativo e as
 
 1. Na caixa de diálogo **Configurar novo projeto**, selecione a caixa de edição **Nome do projeto**, dê ao novo projeto o nome *CalculatorTutorial* e, em seguida, escolha **Criar**.
 
-   ![Nomear o projeto na caixa de diálogo Configurar novo projeto](./media/calc-vs2019-name-your-project.png "Nomear o projeto na caixa de diálogo Configurar novo projeto")
+   ![Nomeie seu projeto na caixa de diálogo Configurar seu novo projeto](./media/calc-vs2019-name-your-project.png "Nomeie seu projeto na caixa de diálogo Configurar seu novo projeto")
 
    Um aplicativo de console do Windows C++ vazio é criado. Os aplicativos de console usam uma janela de console do Windows para exibir a saída e aceitar a entrada do usuário. No Visual Studio, uma janela do editor é aberta e mostra o código gerado:
 
@@ -148,7 +148,7 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
 
    ![Gerenciador de Soluções](./media/calc-vs2019-solution-explorer.png "Gerenciador de Soluções")
 
-   Agora você deve ter três guias abertas no editor: *CalculatorTutorial.cpp*, *Calculator.h* e *Calculator.cpp*. Se você fechar acidentalmente uma delas, poderá abri-la novamente clicando duas vezes na janela **Gerenciador de Soluções**.
+   Agora você deve ter três guias abertas no editor: *CalculatorTutorial. cpp*, *Calculator. h*e *Calculator. cpp*. Se você fechar acidentalmente uma delas, poderá abri-la novamente clicando duas vezes na janela **Gerenciador de Soluções**.
 
 1. Em **Calculator.h**, remova as linhas `Calculator();` e `~Calculator();` que foram geradas, já que você não precisa delas aqui. Em seguida, adicione a seguinte linha de código para que o arquivo agora tenha esta aparência:
 
@@ -174,7 +174,7 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
 
    Um pop-up será exibido, possibilitando uma espiada na alteração de código que foi feita em outro arquivo. O código foi adicionado ao *Calculator.cpp*.
 
-   ![Pop-up com a definição de calcular](./media/calc-vs2019-pop-up-definition.png "Pop-up com a definição de calcular")
+   ![Pop-up com definição de Calculate](./media/calc-vs2019-pop-up-definition.png "Pop-up com definição de Calculate")
 
    Atualmente, retorna apenas 0,0. Vamos mudar isso. Pressione **Esc** para fechar o pop-up.
 
@@ -292,13 +292,13 @@ Uma vez que o usuário é livre para digitar qualquer coisa na janela do console
 
 Sempre que você depura seu código, pode perceber que algumas novas janelas aparecem. Essas janelas podem ajudar a sua experiência de depuração. Dê uma olhada na janela **Autos**. A janela **Autos** mostra os valores atuais das variáveis usadas pelo menos três linhas antes e até a linha atual. Para ver todas as variáveis dessa função, alterne para a janela **Locais**. Na verdade, você pode modificar os valores dessas variáveis enquanto depura para ver que efeito elas teriam sobre o programa. Neste caso, podemos deixá-las de lado.
 
-   ![A janela Locais](./media/calc-vs2019-debug-locals.png "A janela Locais")
+   ![A janela locais](./media/calc-vs2019-debug-locals.png "A janela locais")
 
 Também é possível apenas focalizar variáveis no código em si para ver seus valores atuais em que a execução está em pausa momento. Verifique se a janela do editor está em foco clicando nela primeiro.
 
-   ![Focalize para exibir valores atuais da variável](./media/calc-vs2019-hover-tooltip.png "Focalize para exibir os valores atuais da variável")
+   ![Focalizar para exibir valores de variáveis atuais](./media/calc-vs2019-hover-tooltip.png "Focalizar para exibir valores de variáveis atuais")
 
-### <a name="to-continue-debugging"></a>Para continue a depuração
+### <a name="to-continue-debugging"></a>Para continuar a depuração
 
 1. A linha amarela à esquerda mostra o ponto atual de execução. A linha atual que chama `Calculate`, assim, pressione **F11** para **Depurar** a função. Você se encontrará no corpo da função `Calculate`. Atenção ao **Depurar**; se fizer isso muitas vezes, poderá perder muito tempo. Ela entra em qualquer código que você usa na linha em que você está, incluindo funções de biblioteca padrão.
 
@@ -359,7 +359,7 @@ Vamos tratar da divisão por zero de modo mais simples para que um usuário poss
 
 1. Agora pressione **F5** uma vez. A execução do programa continua até ele precisar pausar para pedir entrada do usuário. Insira `10 / 0` novamente. Agora, é impressa uma mensagem mais útil. O usuário é solicitado a fornecer mais entradas e o programa continua em execução normalmente.
 
-   ![O resultado final após alterações](./media/calc-vs2019-final-verification.png "O resultado final após alterações")
+   ![O resultado final após as alterações](./media/calc-vs2019-final-verification.png "O resultado final após as alterações")
 
    > [!Note]
    > Quando você edita o código no modo de depuração, há um risco de o código se tornar obsoleto. Isso acontece quando o depurador ainda está executando seu código antigo e não ainda o atualizou com suas alterações. O depurador abre em pop-up uma caixa de diálogo para informá-lo quando isso acontece. Às vezes, pode ser necessário pressionar **F5** para atualizar o código que está sendo executado. Em particular, se você fizer uma alteração dentro de uma função enquanto o ponto de execução está dentro daquela função, precisará sair da função e voltar para ela para obter o código atualizado. Se isso não funcionar por alguma razão e você vir uma mensagem de erro, você poderá interromper a depuração clicando no quadrado vermelho na barra de ferramentas abaixo dos menus na parte superior do IDE e iniciar a depuração novamente inserindo **F5** ou escolhendo a seta " reproduzir" verde ao lado do botão Parar na barra de ferramentas.
@@ -403,7 +403,7 @@ O Visual Studio usa os *projetos* para organizar o código em um aplicativo e as
 
 3. Na caixa de edição **Nome** na parte inferior de edição, dê um nome ao novo projeto *CalculatorTutorial* e, em seguida, escolha **OK**.
 
-   ![A caixa de diálogo Novo projeto](./media/calculator-new-project-dialog.png "A caixa de diálogo Novo Projeto")
+   ![A caixa de diálogo novo projeto](./media/calculator-new-project-dialog.png "A caixa de diálogo novo projeto")
 
    Um aplicativo de console do Windows C++ vazio é criado. Os aplicativos de console usam uma janela de console do Windows para exibir a saída e aceitar a entrada do usuário. No Visual Studio, uma janela do editor é aberta e mostra o código gerado:
 
@@ -416,13 +416,13 @@ O Visual Studio usa os *projetos* para organizar o código em um aplicativo e as
 
     int main()
     {
-        std::cout << "Hello World!\n"; 
+        std::cout << "Hello World!\n";
     }
 
     // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
     // Debug program: F5 or Debug > Start Debugging menu
 
-    // Tips for Getting Started: 
+    // Tips for Getting Started:
     //   1. Use the Solution Explorer window to add/manage files
     //   2. Use the Team Explorer window to connect to source control
     //   3. Use the Output window to see build output and other messages
@@ -496,7 +496,7 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
 
 1. Para executar o aplicativo, pressione **CTRL+F5** ou vá para o menu **Depurar** e escolha **Iniciar Sem Depuração**. Se você receber um pop-up com a mensagem **Este projeto está desatualizado**, você poderá selecionar **Não mostrar esta caixa de diálogo novamente** e, em seguida, escolher **Sim** para compilar seu aplicativo. Você deve ver uma janela do console em exibição com o texto especificado no código.
 
-   ![Compilar e iniciar seu aplicativo](./media/calculator-first-launch.gif "Compilar e iniciar seu aplicativo")
+   ![Crie e inicie seu aplicativo](./media/calculator-first-launch.gif "Crie e inicie seu aplicativo")
 
 1. Feche a janela do console ao terminar.
 
@@ -514,7 +514,7 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
 
    ![Gerenciador de Soluções](./media/calculator-solution-explorer.png "Gerenciador de Soluções")
 
-   Agora você deve ter três guias abertas no editor: *CalculatorTutorial.cpp*, *Calculator.h* e *Calculator.cpp*. Se você fechar acidentalmente uma delas, poderá abri-la novamente clicando duas vezes na janela **Gerenciador de Soluções**.
+   Agora você deve ter três guias abertas no editor: *CalculatorTutorial. cpp*, *Calculator. h*e *Calculator. cpp*. Se você fechar acidentalmente uma delas, poderá abri-la novamente clicando duas vezes na janela **Gerenciador de Soluções**.
 
 1. Em **Calculator.h**, remova as linhas `Calculator();` e `~Calculator();` que foram geradas, já que você não precisa delas aqui. Em seguida, adicione a seguinte linha de código para que o arquivo agora tenha esta aparência:
 
@@ -656,17 +656,17 @@ Uma vez que o usuário é livre para digitar qualquer coisa na janela do console
 
 Sempre que você depura seu código, pode perceber que algumas novas janelas aparecem. Essas janelas podem ajudar a sua experiência de depuração. Dê uma olhada na janela **Autos**. A janela **Autos** mostra os valores atuais das variáveis usadas pelo menos três linhas antes e até a linha atual.
 
-   ![A janela Autos](./media/calculator-autos.png "A janela Autos")
+   ![A janela automáticos](./media/calculator-autos.png "A janela automáticos")
 
 Para ver todas as variáveis dessa função, alterne para a janela **Locais**. Na verdade, você pode modificar os valores dessas variáveis enquanto depura para ver que efeito elas teriam sobre o programa. Neste caso, podemos deixá-las de lado.
 
-   ![A janela Locais](./media/calculator-locals.png "A janela Locais")
+   ![A janela locais](./media/calculator-locals.png "A janela locais")
 
 Também é possível apenas focalizar variáveis no código em si para ver seus valores atuais em que a execução está em pausa momento. Verifique se a janela do editor está em foco clicando nela primeiro.
 
-   ![Focalize para exibir valores atuais da variável](./media/calculator-hover-tooltip.gif "Focalize para exibir os valores atuais da variável")
+   ![Focalizar para exibir valores de variáveis atuais](./media/calculator-hover-tooltip.gif "Focalizar para exibir valores de variáveis atuais")
 
-### <a name="to-continue-debugging"></a>Para continue a depuração
+### <a name="to-continue-debugging"></a>Para continuar a depuração
 
 1. A linha amarela à esquerda mostra o ponto atual de execução. A linha atual que chama `Calculate`, assim, pressione **F11** para **Depurar** a função. Você se encontrará no corpo da função `Calculate`. Atenção ao **Depurar**; se fizer isso muitas vezes, poderá perder muito tempo. Ela entra em qualquer código que você usa na linha em que você está, incluindo funções de biblioteca padrão.
 
@@ -674,7 +674,7 @@ Também é possível apenas focalizar variáveis no código em si para ver seus 
 
 1. Continue usando **F10** para realizar a **Depuração Parcial** de cada linha até que você voltar para a função `main()` no outro arquivo e pare na linha `cout`.
 
-   ![Realizar depuração circular de Calculate e verificar o resultado](./media/calculator-undefined-zero.gif "Realizar depuração circular de Calculate e verificar o resultado")
+   ![Sair do cálculo e verificar o resultado](./media/calculator-undefined-zero.gif "Sair do cálculo e verificar o resultado")
 
    Parece que o programa está fazendo o que é esperado: ele usa o primeiro número e o divide pelo segundo. Na linha `cout`, focalize a variável `result` ou dê uma olhada `result` na janela **Autos**. Você verá que seu valor está listado como "inf", o que não parece correto, então vamos corrigi-lo. A linha `cout` somente gera qualquer valor que esteja armazenado em `result`, portanto, quando você avança mais uma linha usando **F10**, a janela do console exibe:
 
@@ -730,11 +730,11 @@ Vamos tratar da divisão por zero de modo mais simples para que um usuário poss
 
 1. Agora pressione **F5** uma vez. A execução do programa continua até ele precisar pausar para pedir entrada do usuário. Insira `10 / 0` novamente. Agora, é impressa uma mensagem mais útil. O usuário é solicitado a fornecer mais entradas e o programa continua em execução normalmente.
 
-   ![O resultado final após alterações](./media/calculator-final-verification.gif "O resultado final após alterações")
+   ![O resultado final após as alterações](./media/calculator-final-verification.gif "O resultado final após as alterações")
 
    > [!Note]
    > Quando você edita o código no modo de depuração, há um risco de o código se tornar obsoleto. Isso acontece quando o depurador ainda está executando seu código antigo e não ainda o atualizou com suas alterações. O depurador abre em pop-up uma caixa de diálogo para informá-lo quando isso acontece. Às vezes, pode ser necessário pressionar **F5** para atualizar o código que está sendo executado. Em particular, se você fizer uma alteração dentro de uma função enquanto o ponto de execução está dentro daquela função, precisará sair da função e voltar para ela para obter o código atualizado. Se isso não funcionar por alguma razão e você vir uma mensagem de erro, você poderá interromper a depuração clicando no quadrado vermelho na barra de ferramentas abaixo dos menus na parte superior do IDE e iniciar a depuração novamente inserindo **F5** ou escolhendo a seta " reproduzir" verde ao lado do botão Parar na barra de ferramentas.
-   
+
    > Noções básicas sobre os atalhos de Executar e Depurar
    >
    > - **F5** (ou **Depurar** > **Iniciar Depuração**) iniciará uma sessão de depuração se uma ainda não estiver ativa e executará o programa até atingir um ponto de interrupção ou o programa precisar de entrada do usuário. Se nenhuma entrada do usuário for necessária e nenhum ponto de interrupção estiver disponível para ser atingido, o programa será encerrado e a janela do console fechará mesmo quando o programa for encerrado. Se você tiver algo parecido com um programa "Olá, Mundo" para ser executado, use **CTRL+F5** ou defina um ponto de interrupção antes de inserir **F5** para manter a janela aberta.

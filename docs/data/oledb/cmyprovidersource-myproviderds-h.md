@@ -11,16 +11,16 @@ helpviewer_keywords:
 - CMyProviderSource class in MyProviderDS.H
 - CCustomSource class in CustomDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-ms.openlocfilehash: 296e7848b1d756fe0aba6156be2501db45bb092b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60324ae914c9490144a715e06323ee6d184ce201
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230549"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079729"
 ---
-# <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS.h)
+# <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS. h)
 
-As classes de provedor usam herança múltipla. O código a seguir mostra a cadeia de herança para o objeto de fonte de dados:
+As classes de provedor usam várias heranças. O código a seguir mostra a cadeia de herança para o objeto de fonte de dados:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////
@@ -35,18 +35,18 @@ class ATL_NO_VTABLE CCustomSource :
    public IInternalConnectionImpl<CCustomSource>
 ```
 
-Todos os componentes COM derivam `CComObjectRootEx` e `CComCoClass`. `CComObjectRootEx` fornece todas as a implementação para o `IUnknown` interface. Ele pode lidar com qualquer modelo de threading. `CComCoClass` lida com suporte para qualquer erro necessário. Se você quiser enviar informações de erro mais detalhadas para o cliente, você pode usar algumas das APIs de erro em `CComCoClass`.
+Todos os componentes COM derivam de `CComObjectRootEx` e `CComCoClass`. `CComObjectRootEx` fornece toda a implementação para a interface `IUnknown`. Ele pode lidar com qualquer modelo de Threading. `CComCoClass` manipula qualquer suporte de erro necessário. Se você quiser enviar informações de erro mais avançadas para o cliente, poderá usar algumas das APIs de erro no `CComCoClass`.
 
-O objeto de fonte de dados também herda de várias classes de 'Impl'. Cada classe fornece a implementação de uma interface. A fonte de dados objeto implementa a `IPersist`, `IDBProperties`, `IDBInitialize`, e `IDBCreateSession` interfaces. Cada interface é necessária pelo OLE DB para implementar o objeto de fonte de dados. Você pode escolher dar suporte ou não suporte à funcionalidade específica por herdar ou não herdar de uma dessas classes de 'Impl'. Se você quiser dar suporte a `IDBDataSourceAdmin` interface, você herda do `IDBDataSourceAdminImpl` classe para obter a funcionalidade necessária.
+O objeto de fonte de dados também é herdado de várias classes ' impl '. Cada classe fornece a implementação para uma interface. O objeto de fonte de dados implementa as interfaces `IPersist`, `IDBProperties`, `IDBInitialize`e `IDBCreateSession`. Cada interface é exigida pelo OLE DB para implementar o objeto de fonte de dados. Você pode optar por dar suporte ou não a uma funcionalidade específica, herdando ou não herdando de uma dessas classes ' impl '. Se você quiser dar suporte à interface `IDBDataSourceAdmin`, herdará da classe `IDBDataSourceAdminImpl` para obter a funcionalidade necessária.
 
 ## <a name="com-map"></a>Mapa COM
 
-Sempre que o cliente chama `QueryInterface` para uma interface na fonte de dados, ele percorre o mapa COM a seguir:
+Sempre que o cliente chama `QueryInterface` para uma interface na fonte de dados, ele passa pelo seguinte mapa COM:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////
 // CCustomSource
-class ATL_NO_VTABLE CCustomSource : 
+class ATL_NO_VTABLE CCustomSource :
    public CComObjectRootEx<CComSingleThreadModel>,
    public CComCoClass<CCustomSource, &CLSID_Custom>,
    public IDBCreateSessionImpl<CCustomSource, CCustomSession>,
@@ -56,13 +56,13 @@ class ATL_NO_VTABLE CCustomSource :
    public IInternalConnectionImpl<CCustomSource>
 ```
 
-Todos os componentes COM derivam `CComObjectRootEx` e `CComCoClass`. `CComObjectRootEx` fornece todas as a implementação para o `IUnknown` interface. Ele pode lidar com qualquer modelo de threading. `CComCoClass` lida com suporte para qualquer erro necessário. Se você quiser enviar informações de erro mais detalhadas para o cliente, você pode usar algumas das APIs de erro em `CComCoClass`.
+Todos os componentes COM derivam de `CComObjectRootEx` e `CComCoClass`. `CComObjectRootEx` fornece toda a implementação para a interface `IUnknown`. Ele pode lidar com qualquer modelo de Threading. `CComCoClass` manipula qualquer suporte de erro necessário. Se você quiser enviar informações de erro mais avançadas para o cliente, poderá usar algumas das APIs de erro no `CComCoClass`.
 
-O objeto de fonte de dados também herda de várias classes de 'Impl'. Cada classe fornece a implementação de uma interface. A fonte de dados objeto implementa a `IPersist`, `IDBProperties`, `IDBInitialize`, e `IDBCreateSession` interfaces. Cada interface é necessária pelo OLE DB para implementar o objeto de fonte de dados. Você pode escolher dar suporte ou não suporte à funcionalidade específica por herdar ou não herdar de uma dessas classes de 'Impl'. Se você quiser dar suporte a `IDBDataSourceAdmin` interface, você herda do `IDBDataSourceAdminImpl` classe para obter a funcionalidade necessária.
+O objeto de fonte de dados também é herdado de várias classes ' impl '. Cada classe fornece a implementação para uma interface. O objeto de fonte de dados implementa as interfaces `IPersist`, `IDBProperties`, `IDBInitialize`e `IDBCreateSession`. Cada interface é exigida pelo OLE DB para implementar o objeto de fonte de dados. Você pode optar por dar suporte ou não a uma funcionalidade específica, herdando ou não herdando de uma dessas classes ' impl '. Se você quiser dar suporte à interface `IDBDataSourceAdmin`, herdará da classe `IDBDataSourceAdminImpl` para obter a funcionalidade necessária.
 
 ## <a name="com-map"></a>Mapa COM
 
-Sempre que o cliente chama `QueryInterface` para uma interface na fonte de dados, ele percorre o mapa COM a seguir:
+Sempre que o cliente chama `QueryInterface` para uma interface na fonte de dados, ele passa pelo seguinte mapa COM:
 
 ```cpp
 BEGIN_COM_MAP(CCustomSource)
@@ -74,9 +74,9 @@ BEGIN_COM_MAP(CCustomSource)
 END_COM_MAP()
 ```
 
-As macros COM_INTERFACE_ENTRY são da ATL e informar a implementação de `QueryInterface` em `CComObjectRootEx` para retornar as interfaces apropriadas.
+As macros COM_INTERFACE_ENTRY são da ATL e dizem a implementação de `QueryInterface` no `CComObjectRootEx` para retornar as interfaces apropriadas.
 
-## <a name="property-map"></a>Mapa de propriedade
+## <a name="property-map"></a>Mapa de propriedades
 
 O mapa de propriedade especifica todas as propriedades atribuídas pelo provedor:
 
@@ -148,9 +148,9 @@ BEGIN_PROPSET_MAP(CCustomSource)
 END_PROPSET_MAP()
 ```
 
-As propriedades no OLE DB são agrupadas. O objeto de fonte de dados tem dois grupos de propriedades: uma para o DBPROPSET_DATASOURCEINFO definido e um para o DBPROPSET_DBINIT definido. O conjunto DBPROPSET_DATASOURCEINFO corresponde às propriedades sobre o provedor e sua fonte de dados. O conjunto DBPROPSET_DBINIT corresponde a propriedades usadas na inicialização. O OLE DB modelos de provedor lidar com esses conjuntos com as macros PROPERTY_SET. As macros de criar um bloco que contém uma matriz de propriedades. Sempre que o cliente chama o `IDBProperties` interface, o provedor usa o mapa de propriedade.
+As propriedades no OLE DB são agrupadas. O objeto de fonte de dados tem dois grupos de propriedades: um para o conjunto de DBPROPSET_DATASOURCEINFO e outro para o conjunto de DBPROPSET_DBINIT. O conjunto de DBPROPSET_DATASOURCEINFO corresponde a propriedades sobre o provedor e sua fonte de dados. O conjunto de DBPROPSET_DBINIT corresponde às propriedades usadas na inicialização. Os modelos de provedor de OLE DB lidam com esses conjuntos com as macros PROPERTY_SET. As macros criam um bloco que contém uma matriz de propriedades. Sempre que o cliente chama a interface `IDBProperties`, o provedor usa o mapa de propriedade.
 
-Você não precisa implementar todas as propriedades na especificação. No entanto, você deve dar suporte as propriedades necessárias; Consulte a especificação de conformidade de nível 0 para obter mais informações. Se você não quiser para dar suporte a uma propriedade, remova-a do mapa. Se você quiser dar suporte a uma propriedade, adicioná-lo para o mapa usando uma macro PROPERTY_INFO_ENTRY. A macro corresponde à `UPROPINFO` estrutura conforme mostrado no código a seguir:
+Você não precisa implementar todas as propriedades na especificação. No entanto, você deve dar suporte às propriedades necessárias; consulte a especificação conformidade de nível 0 para obter mais informações. Se você não quiser dar suporte a uma propriedade, poderá removê-la do mapa. Se você quiser dar suporte a uma propriedade, adicione-a ao mapa usando uma macro PROPERTY_INFO_ENTRY. A macro corresponde à estrutura de `UPROPINFO`, conforme mostrado no código a seguir:
 
 ```cpp
 struct UPROPINFO
@@ -168,17 +168,17 @@ struct UPROPINFO
 };
 ```
 
-Cada elemento na estrutura representa informações para lidar com a propriedade. Ele contém um `DBPROPID` para determinar o GUID e a ID da propriedade. Ele também contém entradas para determinar o tipo e o valor da propriedade.
+Cada elemento na estrutura representa informações para manipular a propriedade. Ele contém um `DBPROPID` para determinar o GUID e a ID da propriedade. Ele também contém entradas para determinar o tipo e o valor da propriedade.
 
-Se você quiser alterar o valor padrão de uma propriedade (Observe que um consumidor pode alterar o valor de uma propriedade gravável a qualquer momento), você pode usar a macro PROPERTY_INFO_ENTRY_VALUE ou PROPERTY_INFO_ENTRY_EX. Essas macros permitem que você especifique um valor para uma propriedade correspondente. A macro PROPERTY_INFO_ENTRY_VALUE é uma notação abreviada que permite que você altere o valor. A macro PROPERTY_INFO_ENTRY_VALUE chama a macro PROPERTY_INFO_ENTRY_EX. Essa macro permite que você adicionar ou alterar todos os atributos de `UPROPINFO` estrutura.
+Se você quiser alterar o valor padrão de uma propriedade (Observe que um consumidor pode alterar o valor de uma propriedade gravável a qualquer momento), você pode usar a macro PROPERTY_INFO_ENTRY_VALUE ou PROPERTY_INFO_ENTRY_EX. Essas macros permitem que você especifique um valor para uma propriedade correspondente. A macro PROPERTY_INFO_ENTRY_VALUE é uma notação abreviada que permite que você altere o valor. A macro PROPERTY_INFO_ENTRY_VALUE chama a macro PROPERTY_INFO_ENTRY_EX. Essa macro permite adicionar ou alterar todos os atributos na estrutura de `UPROPINFO`.
 
-Se você quiser definir seu próprio conjunto de propriedade, você poderá adicionar um fazendo uma combinação de BEGIN_PROPSET_MAP/END_PROPSET_MAP adicional. Definir um GUID para o conjunto de propriedades e, em seguida, definir suas próprias propriedades. Se você tiver propriedades específicas do provedor, você deve adicioná-los para uma nova propriedade definida em vez de usar um existente. Isso evita problemas em versões posteriores do OLE DB.
+Se você quiser definir seu próprio conjunto de propriedades, poderá adicionar um fazendo uma combinação adicional de BEGIN_PROPSET_MAP/END_PROPSET_MAP. Defina um GUID para o conjunto de propriedades e defina suas próprias propriedades. Se você tiver propriedades específicas do provedor, adicione-as a um novo conjunto de propriedades em vez de usar uma existente. Isso evita problemas em versões posteriores do OLE DB.
 
 ## <a name="user-defined-property-sets"></a>Conjuntos de propriedades definidas pelo usuário
 
-Visual C++ dá suporte a conjuntos de propriedades definidas pelo usuário. Você não precisa substituir `GetProperties` ou `GetPropertyInfo`. Em vez disso, os modelos de detectam qualquer conjunto de propriedades definidas pelo usuário e adicioná-lo ao objeto apropriado.
+O C++ Visual oferece suporte a conjuntos de propriedades definidas pelo usuário. Você não precisa substituir `GetProperties` ou `GetPropertyInfo`. Em vez disso, os modelos detectam qualquer conjunto de propriedades definidas pelo usuário e o adicionam ao objeto apropriado.
 
-Se você tiver um conjunto de propriedades definidas pelo usuário que precisa estar disponível no momento da inicialização (ou seja, antes do consumidor chama `IDBInitialize::Initialize`), você pode especificar isso usando o sinalizador UPROPSET_USERINIT junto com a macro BEGIN_PROPERTY_SET_EX. A propriedade definida deve ser no objeto de fonte de dados para este trabalho (como requer a especificação OLE DB). Por exemplo:
+Se você tiver um conjunto de propriedades definido pelo usuário que precisa estar disponível no momento da inicialização (ou seja, antes de o consumidor chamar `IDBInitialize::Initialize`), você pode especificar isso usando o sinalizador UPROPSET_USERINIT junto com a macro BEGIN_PROPERTY_SET_EX. O conjunto de propriedades deve estar no objeto de fonte de dados para que isso funcione (conforme a especificação de OLE DB requer). Por exemplo:
 
 ```cpp
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)
@@ -186,6 +186,6 @@ BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)
 END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Arquivos gerados pelo Assistente do Provedor](../../data/oledb/provider-wizard-generated-files.md)<br/>

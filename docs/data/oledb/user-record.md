@@ -8,16 +8,16 @@ helpviewer_keywords:
 - user records, described
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-ms.openlocfilehash: d6920a73f107f226cc31cb27fd15178f6d2f1c26
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 4a8fb6c9eeee3736501a04a095bdd763de16de7d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525259"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078999"
 ---
 # <a name="user-record"></a>Registro de usuário
 
-> [!NOTE] 
+> [!NOTE]
 > O assistente de Provedor OLE DB da ATL não está disponível no Visual Studio 2019 e posteriores.
 
 O registro de usuário fornece a estrutura de dados e código que representa os dados da coluna para um conjunto de linhas. Um registro de usuário pode ser criado no tempo de compilação ou tempo de execução. Quando você cria um provedor usando o **Assistente de Provedor OLE DB da ATL**, o assistente cria um registro de usuário padrão que se parece com isto (supondo que você especificou um nome de provedor [nome curto] como *MyProvider*):
@@ -43,7 +43,7 @@ Os modelos de provedor OLE DB tratam de todas as especificações OLE DB em inte
 
 ```cpp
 template <class T>
-static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols) 
+static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)
 ```
 
 Isso equivale a:
@@ -69,6 +69,6 @@ Quando um registro de usuário é criado em tempo de execução, `GetColumnInfo`
 
 Veja um exemplo mais detalhado de como substituir `GetColumnInfo` em um registro de usuário em [Determinando dinamicamente as colunas retornadas ao consumidor](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

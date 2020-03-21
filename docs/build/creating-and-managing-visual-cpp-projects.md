@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: d6bfefdaa3dfc67f861cf116718f89c0e9766e47
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 3694478e22bfd2a3c58a72ba0c3ad2d15351bc9f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624473"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078687"
 ---
 # <a name="visual-studio-projects---c"></a>Projetos do Visual Studio – C++
 
@@ -23,7 +23,7 @@ Um *projeto do Visual Studio* é um projeto baseado no sistema de build do MSBui
 
 ::: moniker range="vs-2019"
 
-Crie projetos C++ escolhendo **Arquivo** > **Novo** > **Projeto** e, em seguida, definindo a **Linguagem** como C++. Na lista de resultados, você verá uma lista de modelos de projeto pela qual poderá filtrar, definindo a **Plataforma** ou o **Tipo de Projeto** e digitando palavras-chave na caixa de pesquisa. 
+Crie projetos C++ escolhendo **Arquivo** > **Novo** > **Projeto** e, em seguida, definindo a **Linguagem** como C++. Na lista de resultados, você verá uma lista de modelos de projeto pela qual poderá filtrar, definindo a **Plataforma** ou o **Tipo de Projeto** e digitando palavras-chave na caixa de pesquisa.
 
    ![Modelos de projeto do Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Caixa de diálogo novo projeto do Visual Studio 2019")
 
@@ -45,13 +45,13 @@ Depois que você criar um projeto, ele será exibido na janela [Gerenciador de S
 
 Quando você cria um projeto, um arquivo de solução (.sln) também é criado. Adicione mais projetos à solução clicando com o botão direito do mouse nele no **Gerenciador de Soluções**. O arquivo de solução é usado para coordenar as dependências de build quando você tem vários projetos relacionados, mas não faz muito mais do que isso. Todas as opções do compilador são definidas no nível do projeto.
 
-## <a name="add-items"></a>Adicionar itens
+## <a name="add-items"></a>Adicionar Itens
 
 Adicione arquivos de código-fonte, ícones ou outros itens ao projeto clicando com o botão direito do mouse no projeto no **Gerenciador de Soluções** e escolhendo **Adicionar > Novo** ou **Adicionar > Existente**.
 
 ## <a name="add-third-party-libraries"></a>Adicionar bibliotecas de terceiros
 
-Para adicionar bibliotecas de terceiros, use o gerenciador de pacotes do [vcpkg](vcpkg.md). Execute a etapa de integração do Visual Studio para configurar os caminhos para essa biblioteca quando você referenciá-la em qualquer projeto do Visual Studio. 
+Para adicionar bibliotecas de terceiros, use o gerenciador de pacotes do [vcpkg](vcpkg.md). Execute a etapa de integração do Visual Studio para configurar os caminhos para essa biblioteca quando você referenciá-la em qualquer projeto do Visual Studio.
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>Definir opções do compilador e outras propriedades de build
 
@@ -61,7 +61,7 @@ Para definir configurações de build para um projeto, clique com o botão direi
 
 Para compilar e executar o novo projeto, pressione **F5** ou clique na *lista suspensa de depuração* com a seta verde na barra de ferramentas principal. A *lista suspensa de configuração* é o local em que você escolhe se deseja executar um build de *Depuração* ou *Versão* (ou outra configuração personalizada).
 
-Um novo projeto é compilado sem erros. Ao adicionar seu próprio código, ocasionalmente, você pode introduzir um erro ou disparar um aviso. Um erro impede a conclusão do build, ao contrário de um aviso. Todos os erros e avisos serão exibidos na Janela de Saída e na Lista de Erros quando você compilar o projeto. 
+Um novo projeto é compilado sem erros. Ao adicionar seu próprio código, ocasionalmente, você pode introduzir um erro ou disparar um aviso. Um erro impede a conclusão do build, ao contrário de um aviso. Todos os erros e avisos serão exibidos na Janela de Saída e na Lista de Erros quando você compilar o projeto.
 
    ![Janela de Saída e Lista de Erros](../overview/media/vs2017-output-error-list.png)
 
@@ -74,7 +74,7 @@ Como usar as páginas de propriedades e as folhas de propriedades para especific
 
 [Bibliotecas e componentes de referência em tempo de compilação](adding-references-in-visual-cpp-projects.md)<br/>
 Como incluir bibliotecas, DLLs e componentes .NET e COM em um projeto.
- 
+
 [Organização de arquivos de saída do projeto](how-to-organize-project-output-files-for-builds.md)<br/>
 Como personalizar a localização dos arquivos executáveis criados no processo de build.
 
@@ -84,7 +84,7 @@ Como adicionar qualquer comando arbitrário para o processo de build em pontos e
 [Criar um projeto com base em código existente](how-to-create-a-cpp-project-from-existing-code.md)<br/>
 Como criar um projeto do Visual Studio com base em uma coleção flexível de arquivos de origem.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Sistemas de Compilação e Projetos](projects-and-build-systems-cpp.md)<br>
 [Guia C++ de atualização e portabilidade da Microsoft](../porting/visual-cpp-porting-and-upgrading-guide.md)

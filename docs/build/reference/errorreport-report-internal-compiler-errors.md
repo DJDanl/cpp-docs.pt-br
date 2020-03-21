@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-ms.openlocfilehash: afc366728e62029ffbd3993e2fdd740e3aaf3369
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9efe96ed2611795e1fef408ad07b49d65261c3b1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439891"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075079"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (erros de compilador internos do relatório)
 
@@ -30,7 +30,6 @@ Um erro de compilador interno (ICE) resulta quando o compilador não pode proces
 
 Os argumentos **/errorreport** são substituídos pelas configurações do serviço relatório de erros do Windows. O compilador envia automaticamente relatórios de erros internos à Microsoft, se os relatórios estiverem habilitados pelo Relatório de Erros do Windows. Nenhum relatório será enviado se for desabilitado pelo Relatório de Erros do Windows.
 
-
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter mais informações, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
@@ -43,7 +42,7 @@ Os argumentos **/errorreport** são substituídos pelas configurações do servi
 
 - Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Opções do compilador MSVC](compiler-options.md)\
 [Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)

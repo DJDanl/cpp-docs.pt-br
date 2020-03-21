@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: d9b074667614da8d83fae7b00b49bf63c9390b69
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 20ca118b3aacb02333d49b67d13de30f11dc5d8d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927685"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079495"
 ---
 # <a name="manifest-tool-property-pages"></a>Páginas de propriedades Ferramenta de Manifesto
 
-Use essas páginas para especificar opções gerais para [Mt. exe](/windows/win32/sbscs/mt-exe). Essas páginas são encontradas em**Propriedades** > do **projeto** > ferramentas de**configuração** > de**manifesto ferramenta**.
+Use essas páginas para especificar opções gerais para [Mt. exe](/windows/win32/sbscs/mt-exe). Essas páginas são encontradas em **Propriedades** de > de **projeto** > **Propriedades de configuração** > ferramenta de **manifesto**.
 
 ## <a name="general-property-page"></a>Página de propriedades geral
 
@@ -49,9 +49,9 @@ Use essas páginas para especificar opções gerais para [Mt. exe](/windows/win3
 
 Usa a opção /identity para especificar uma cadeia de caracteres de identidade, que inclui os atributos para o [\<Elemento assemblyIdentity>](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Uma cadeia de caracteres de identidade começa com o valor do atributo `name` e é seguida por pares *atributo* = *valor*. Os atributos de uma cadeia de caracteres de identidade são delimitados por uma vírgula.
 
-Este é um exemplo de cadeia de caracteres de identidade:`Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+Este é um exemplo de cadeia de caracteres de identidade: `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
 
-## <a name="input-and-output-property-page"></a>Página de propriedades de entrada e saída     
+## <a name="input-and-output-property-page"></a>Página de propriedades de entrada e saída
 
 ###  <a name="additional-manifest-files"></a>Arquivos de manifesto adicionais
 
@@ -97,15 +97,15 @@ Usado com-ManagedAssembly. -Category faz com que as marcas de categoria sejam ge
 
 Especifica se o aplicativo tem reconhecimento de DPI. Por padrão, a configuração é **Sim** para projetos MFC e **Não** caso contrário, porque apenas os projetos MFC têm reconhecimento de DPI interno. Você poderá substituir a configuração por **Sim** se adicionar um código para lidar com diferentes configurações de DPI. O aplicativo poderá parecer difuso ou pequeno se você defini-lo como tendo reconhecimento de DPI quando ele não tiver.
 
-**Durante**
+**Opções**
 
-- **Nenhum**
+- **Nenhuma**
 - **Alto reconhecimento de DPI**
 - **Reconhecimento de DPI alto por monitor**
 
 ## <a name="isolated-com-property-page"></a>Página de propriedades COM isolada
 
-Para obter mais informações sobre com isolado, consulte [aplicativos isolados](/windows/win32/SbsCs/isolated-applications) e [como: Crie aplicativos isolados para consumir componentes](../how-to-build-isolated-applications-to-consume-com-components.md)com.
+Para obter mais informações sobre COM isolado, consulte [aplicativos isolados](/windows/win32/SbsCs/isolated-applications) e [como criar aplicativos isolados para consumir componentes com](../how-to-build-isolated-applications-to-consume-com-components.md).
 
 ###  <a name="type-library-file"></a>Arquivo de biblioteca de tipos
 
@@ -133,11 +133,10 @@ Computa o hash de arquivos especificados nos elementos de arquivo e atualiza o a
 
 Especifica o caminho de pesquisa a ser usado ao atualizar os hashes de arquivo.
 
-###  <a name="additional-options"></a>Opções Adicionais
+###  <a name="additional-options"></a>Opções adicionais
 
-Opções Adicionais
+Opções adicionais
 
-
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [C++referência de página de propriedades do projeto](property-pages-visual-cpp.md)

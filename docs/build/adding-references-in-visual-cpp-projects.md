@@ -7,33 +7,33 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: a65ad69914b14e7b8b37c321fa7d06740af57e3a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a8cd13e27859d09bcaaca1f5f6f1c2750b908fe6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493382"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078781"
 ---
 # <a name="consuming-libraries-and-components"></a>Consumindo bibliotecas e componentes
 
-Geralmente, um C++ projeto precisa chamar funções ou acessar dados em um arquivo binário, como biblioteca estática (arquivos. lib), dll, componente Windows Runtime, componente com ou assembly .net. Nesses casos, você precisa configurar o projeto para que ele possa encontrar esse binário no momento da compilação. As etapas específicas dependem do tipo de seu projeto, do tipo de binário e se o binário está sendo compilado na mesma solução que o seu projeto. 
+Geralmente, um C++ projeto precisa chamar funções ou acessar dados em um arquivo binário, como biblioteca estática (arquivos. lib), dll, componente Windows Runtime, componente com ou assembly .net. Nesses casos, você precisa configurar o projeto para que ele possa encontrar esse binário no momento da compilação. As etapas específicas dependem do tipo de seu projeto, do tipo de binário e se o binário está sendo compilado na mesma solução que o seu projeto.
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Consumindo bibliotecas baixadas via vcpkg
 
-Para consumir uma biblioteca que você baixou usando o Gerenciador de pacotes do **vcpkg** , você pode ignorar as instruções abaixo. Consulte [vcpkg: Um C++ Gerenciador de pacotes para Windows, Linux e](vcpkg.md#integrate-with-visual-studio-windows) MacOS para obter mais informações.
+Para consumir uma biblioteca que você baixou usando o Gerenciador de pacotes do **vcpkg** , você pode ignorar as instruções abaixo. Consulte [vcpkg: um C++ Gerenciador de pacotes para Windows, Linux e MacOS](vcpkg.md#integrate-with-visual-studio-windows) para obter mais informações.
 
 ## <a name="consuming-static-libraries"></a>Consumindo bibliotecas estáticas
 
 Se seu projeto de biblioteca estática estiver sendo compilado na mesma solução:
 
-1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>inclua os arquivos de cabeçalho da biblioteca estática usando aspas. Em uma solução típica, o caminho começará `../<library project name>`. O IntelliSense irá ajudá-lo a encontrá-lo.
-2. Adicione uma referência ao projeto de biblioteca estática. Clique com o botão direito do mouse em **referências** no nó do projeto de aplicativo em **Gerenciador de soluções** e escolha **Adicionar referência**. 
+1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>inclua os arquivos de cabeçalho da biblioteca estática usando aspas. Em uma solução típica, o caminho começará com `../<library project name>`. O IntelliSense irá ajudá-lo a encontrá-lo.
+2. Adicione uma referência ao projeto de biblioteca estática. Clique com o botão direito do mouse em **referências** no nó do projeto de aplicativo em **Gerenciador de soluções** e escolha **Adicionar referência**.
 
 Se a biblioteca estática não fizer parte da solução:
 
-1. Clique com o botão direito do mouse no nó do projeto de aplicativo em **Gerenciador de soluções** e escolha **Propriedades**. 
+1. Clique com o botão direito do mouse no nó do projeto de aplicativo em **Gerenciador de soluções** e escolha **Propriedades**.
 2. Na página de propriedades **diretórios do vc + +** , adicione o caminho para o diretório em que o arquivo. lib está localizado em **caminhos de biblioteca** e adicione o caminho para os arquivos de cabeçalho de biblioteca nos diretórios de **inclusão**.  
-3. Na página de propriedades de **entrada do >** do vinculador, adicione o nome do arquivo. lib a **dependências adicionais**.
+3. Na página de propriedades de **entrada do > do vinculador** , adicione o nome do arquivo. lib a **dependências adicionais**.
 
 ## <a name="dynamic-link-libraries"></a>Bibliotecas de vínculo dinâmico
 
@@ -46,11 +46,11 @@ Se a DLL não fizer parte da solução de aplicativo, você precisará do arquiv
 
 ## <a name="com-objects"></a>objetos COM
 
-Se seu aplicativo C++ nativo precisar consumir um objeto com e esse objeto for *registrado*, tudo o que você precisará fazer é chamar COCREATEINSTANCE e passar o CLSID do objeto. O sistema irá encontrá-lo no registro do Windows e carregá-lo. Um C++projeto/CLI pode consumir um objeto com da mesma maneira ou adicionando uma referência a ele na lista de **Adicionar referências > com** e consumindo-o por meio de seu [tempo de execução Callable Wrapper](/dotnet/framework/interop/runtime-callable-wrapper). 
+Se seu aplicativo C++ nativo precisar consumir um objeto com e esse objeto for *registrado*, tudo o que você precisará fazer é chamar COCREATEINSTANCE e passar o CLSID do objeto. O sistema irá encontrá-lo no registro do Windows e carregá-lo. Um C++projeto/CLI pode consumir um objeto com da mesma maneira ou adicionando uma referência a ele na lista de **Adicionar referências > com** e consumindo-o por meio de seu [tempo de execução Callable Wrapper](/dotnet/framework/interop/runtime-callable-wrapper).
 
 ## <a name="net-assemblies-and-windows-runtime-components"></a>Assemblies do .NET e componentes do Windows Runtime
 
-Em projetos UWP C++ou/CLI, você consome assemblies .net ou componentes Windows Runtime adicionando uma *referência* ao assembly ou ao componente. No nó **referências** em um projeto UWP ou C++/CLI, você vê referências a componentes usados com frequência. Clique com o botão direito do mouse no nó **referências** em **Gerenciador de soluções** para abrir o **Gerenciador** de referências e navegar pelos componentes adicionais que são conhecidos pelo sistema. Clique no botão **procurar** para navegar para qualquer pasta na qual um componente personalizado está localizado. Como os assemblies do .NET e os componentes do Windows Runtime contêm informações de tipo interno, você pode exibir seus métodos e classes clicando com o botão direito do mouse e escolhendo **Exibir no Pesquisador de objetos**. 
+Em projetos UWP C++ou/CLI, você consome assemblies .net ou componentes Windows Runtime adicionando uma *referência* ao assembly ou ao componente. No nó **referências** em um projeto UWP ou C++/CLI, você vê referências a componentes usados com frequência. Clique com o botão direito do mouse no nó **referências** em **Gerenciador de soluções** para abrir o **Gerenciador** de referências e navegar pelos componentes adicionais que são conhecidos pelo sistema. Clique no botão **procurar** para navegar para qualquer pasta na qual um componente personalizado está localizado. Como os assemblies do .NET e os componentes do Windows Runtime contêm informações de tipo interno, você pode exibir seus métodos e classes clicando com o botão direito do mouse e escolhendo **Exibir no Pesquisador de objetos**.
 
 ## <a name="reference-properties"></a>Propriedades de referência
 
@@ -88,7 +88,7 @@ As propriedades de referência de assembly estão disponíveis somente para refe
 
    Exibe o caminho relativo do diretório do projeto ao assembly referenciado.
 
-### <a name="build-properties"></a>Propriedades de build
+### <a name="build-properties"></a>Compilar propriedades
 
 As propriedades a seguir estão disponíveis em vários tipos de referências. Elas permitem que você especifique como compilar com referências.
 
@@ -136,7 +136,7 @@ As propriedades a seguir são encontradas em referências de assembly .NET e COM
 
    Exibe a descrição da referência selecionada.
 
-- **Caminho Completo**
+- **Caminho completo**
 
    Exibe o caminho do diretório do assembly referenciado.
 
@@ -164,7 +164,7 @@ As propriedades a seguir são encontradas em referências de assembly .NET e COM
 
    Exibe a versão do assembly referenciado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [C++referência de página de propriedades do projeto](reference/property-pages-visual-cpp.md)<br>
 [Definição das propriedades de compilação do C++ no Visual Studio](working-with-project-properties.md)

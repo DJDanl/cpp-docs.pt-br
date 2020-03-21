@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ull_rshift intrinsic
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-ms.openlocfilehash: e914a019877482058c6b2842d3138cda02f1e228
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: bf9fe7775cee1c774c097a1b6bd371721c9fa34f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219713"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80074985"
 ---
 # <a name="__ull_rshift"></a>__ull_rshift
 
@@ -24,30 +24,30 @@ em x64, desloca um valor de 64 bits especificado pelo primeiro parâmetro para a
 
 ```C
 unsigned __int64 __ull_rshift(
-   unsigned __int64 mask, 
+   unsigned __int64 mask,
    int nBit
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*mascara*\
+\ de *máscara*
 no O valor inteiro de 64 bits a ser deslocado para a direita.
 
-*nBit*\
+\ *NBIT*
 no O número de bits a serem deslocados, o módulo 32 em x86 e o módulo 64 em x64.
 
 ## <a name="return-value"></a>Valor retornado
 
-A máscara mudada por `nBit` bits.
+A máscara foi deslocada por `nBit` bits.
 
 ## <a name="requirements"></a>Requisitos
 
-|Intrínseco|Arquitetura|
+|Intrinsic|Arquitetura|
 |---------------|------------------|
 |`__ull_rshift`|x86, x64|
 
-**Arquivo de cabeçalho** \<> intrin. h
+**Arquivo de cabeçalho** \<intrin. h >
 
 ## <a name="remarks"></a>Comentários
 
@@ -80,7 +80,7 @@ int main()
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [__ll_lshift](../intrinsics/ll-lshift.md)\
 [__ll_rshift](../intrinsics/ll-rshift.md)\

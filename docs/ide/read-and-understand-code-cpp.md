@@ -2,12 +2,12 @@
 title: Ler e entender o código C++ no Visual Studio
 description: Use o editor de código C++ no Visual Studio para formatar e entender o código.
 ms.date: 05/28/2019
-ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: aa9008900ae631668d7a87fb413dd389696f3454
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416126"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079041"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Ler e entender o código C++ no Visual Studio
 
@@ -59,9 +59,9 @@ Passe o mouse sobre qualquer variável, função ou outro símbolo para obter in
 
 ::: moniker range="vs-2019"
 
-![Informações rápidas em C&#43;&#43;](../ide/media/quick-info-vs2019.png "Informações Rápidas")
+![Informações rápidas em C&#43;&#43;](../ide/media/quick-info-vs2019.png "Informação Rápida")
 
-A dica de ferramenta **Informações Rápidas** tem um link **Pesquisar Online**. Acesse **Ferramentas** > **Opções** > **Editor de Texto** > **C++**  > **Exibir** para especificar o provedor de pesquisa. 
+A dica de ferramenta **Informações Rápidas** tem um link **Pesquisar Online**. Acesse **Ferramentas** > **Opções** > **Editor de Texto** > **C++**  > **Exibir** para especificar o provedor de pesquisa.
 
 Se houver um erro no código, passe o mouse sobre ele, e as **Informações Rápidas** exibirão a mensagem de erro. Encontre também a mensagem de erro na janela Lista de Erros.
 
@@ -71,7 +71,7 @@ Se houver um erro no código, passe o mouse sobre ele, e as **Informações Ráp
 
 ::: moniker range="<=vs-2017"
 
-![Informações rápidas em C&#43;&#43;](../ide/media/quick-info.png "Informações Rápidas")
+![Informações rápidas em C&#43;&#43;](../ide/media/quick-info.png "Informação Rápida")
 
 Se houver um erro no código, passe o mouse sobre ele, e as **Informações Rápidas** exibirão a mensagem de erro. Encontre também a mensagem de erro na janela **Lista de Erros**.
 
@@ -93,11 +93,11 @@ Passe o mouse sobre uma variável ou uma declaração da função, clique com o 
 
 Posicione o cursor sobre qualquer tipo, palavra-chave ou função ou imediatamente após eles e pressione **F1** para ir diretamente para o tópico de referência relevante em docs.microsoft.com. **F1** também funciona em itens da Lista de Erros e em muitas caixas de diálogo.
 
-## <a name="class-view"></a>Modo de exibição de classe
+## <a name="class-view"></a>Exibição de Classe
 
 O **Modo de Exibição de Classe** exibe um conjunto pesquisável de árvores de todos os símbolos de códigos e suas hierarquias de pai/filho e escopo, organizadas por projeto. Configure o que o **Modo de Exibição de Classe** exibe em **Configurações do Modo de Exibição de Classe** (clique no ícone da caixa de engrenagem na parte superior da janela).
 
-![Modo de Exibição de Classe em C&#43;&#43;](../ide/media/class-view.png "Modo de exibição de classe")
+![Modo de Exibição de Classe em C&#43;&#43;](../ide/media/class-view.png "Exibição de Classe")
 
 ## <a name="generate-graph-of-include-files"></a>Gerar grafo de arquivos de inclusão
 

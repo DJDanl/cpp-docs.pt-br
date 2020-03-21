@@ -3,12 +3,12 @@ title: Criar e configurar um projeto CMake do Linux no Visual Studio
 description: Como criar, configurar, editar e compilar um projeto CMake do Linux no Visual Studio
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: a0b98e1d0e9ca5e68f5fd12c458fe29b9835b65c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d781d1995a4c9a60932d498d2ad7cfea97ee023f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446857"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077660"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Criar e configurar um projeto do Linux CMake
 
@@ -37,14 +37,14 @@ Para obter informações gerais sobre o suporte do CMake no Visual Studio, confi
 
 ## <a name="before-you-begin"></a>Antes de começar
 
-Primeiro, verifique se você tem a carga de trabalho **Desenvolvimento do Linux com C++** instalada, incluindo o componente do CMake. Veja [Instalar uma carga de trabalho do Linux para C++ no Visual Studio](download-install-and-setup-the-linux-development-workload.md). 
+Primeiro, verifique se você tem a carga de trabalho **Desenvolvimento do Linux com C++** instalada, incluindo o componente do CMake. Veja [Instalar uma carga de trabalho do Linux para C++ no Visual Studio](download-install-and-setup-the-linux-development-workload.md).
 
-No sistema Linux, verifique se os seguintes itens estão instalados: 
+No sistema Linux, verifique se os seguintes itens estão instalados:
 
 - gcc
 - gdb
 - rsync
-- zip 
+- zip
 
 ::: moniker range="vs-2019"
 
@@ -92,7 +92,7 @@ Assim que você abre a pasta, o Visual Studio analisa o arquivo CMakeLists.txt e
 
 ::: moniker range="vs-2019"
 
-Para direcionar o subsistema do Windows para Linux, clique em **Gerenciar Configurações** na lista suspensa de configuração na barra de ferramentas principal. Em seguida, pressione o botão **Adicionar Configuração** e escolha **WSL-Debug** ou **WSL-Release** se estiver usando o GCC ou as variantes do Clang se estiver usando o conjunto de ferramentas do Clang/LLVM. 
+Para direcionar o subsistema do Windows para Linux, clique em **Gerenciar Configurações** na lista suspensa de configuração na barra de ferramentas principal. Em seguida, pressione o botão **Adicionar Configuração** e escolha **WSL-Debug** ou **WSL-Release** se estiver usando o GCC ou as variantes do Clang se estiver usando o conjunto de ferramentas do Clang/LLVM.
 
 **Visual Studio 2019 versão 16.1** Ao ter como destino o WSL, não é necessário usar cópia de fontes ou cabeçalhos, pois o compilador no Linux tem acesso direto ao sistema de arquivos do Windows em que os arquivos de origem estão localizados. (Na versão 1903 e posteriores do Windows, os aplicativos do Windows podem acessar igualmente os arquivos de cabeçalho do Linux diretamente, mas o Visual Studio ainda não pode aproveitar esse recurso.)
 
@@ -102,13 +102,13 @@ Para destinos remotos, por padrão, o Visual Studio escolhe o primeiro sistema r
 
 Se você especificar um destino remoto do Linux, a origem será copiada para o sistema remoto.
 
-Depois que você seleciona um destino, CMake é executado automaticamente no sistema Linux para gerar o cache do CMake para o projeto. 
+Depois que você seleciona um destino, CMake é executado automaticamente no sistema Linux para gerar o cache do CMake para o projeto.
 
 ![Gerar cache CMake no Linux](media/cmake-linux-1.png "Gerar o cache CMake no Linux")
 
 Para fornecer suporte ao IntelliSense para cabeçalhos em sistemas Linux remotos, o Visual Studio os copia automaticamente do computador Linux para um diretório do computador Windows local. Para obter mais informações, veja [IntelliSense para cabeçalhos remotos](configure-a-linux-project.md#remote_intellisense).
 
-## <a name="debug_cmake_project"></a> Depurar o projeto CMake
+## <a name="debug-the-cmake-project"></a><a name="debug_cmake_project"></a> Depurar o projeto CMake
 
 Para depurar o código no sistema de destino de depuração especificado, defina um ponto de interrupção, selecione o destino do CMake como o item de inicialização no menu da barra de ferramentas ao lado da configuração do projeto e escolha **&#x23f5; Iniciar** na barra de ferramentas ou pressione F5.
 
@@ -125,13 +125,13 @@ Para personalizar os argumentos de linha de comando do programa, pressione o bot
 
 Para especificar argumentos adicionais, adicione-os na matriz JSON `args`. Para obter mais informações, confira [Projetos Open Folder para C++](../build/open-folder-projects-cpp.md) e [Configurar sessões de depuração do CMake](../build/configure-cmake-debugging-sessions.md).
 
-## <a name="configure_cmake_linux"></a> Definir as configurações do CMake para Linux
+## <a name="configure-cmake-settings-for-linux"></a><a name="configure_cmake_linux"></a> Definir as configurações do CMake para Linux
 
-Um arquivo CMakeSettings.json em um projeto do CMake Linux pode especificar todas as propriedades listadas em [Personalizar configurações do CMake](../build/customize-cmake-settings.md), além de propriedades adicionais que controlam as configurações de build no computador Linux remoto. 
+Um arquivo CMakeSettings.json em um projeto do CMake Linux pode especificar todas as propriedades listadas em [Personalizar configurações do CMake](../build/customize-cmake-settings.md), além de propriedades adicionais que controlam as configurações de build no computador Linux remoto.
 
 ::: moniker range="vs-2019"
 
-Para alterar as configurações padrão do CMake no Visual Studio 2019, na barra de ferramentas principal, abra a lista suspensa **Configuração** e escolha **Gerenciar Configurações**. 
+Para alterar as configurações padrão do CMake no Visual Studio 2019, na barra de ferramentas principal, abra a lista suspensa **Configuração** e escolha **Gerenciar Configurações**.
 
 ![CMake gerenciar configurações](../build/media/vs2019-cmake-manage-configurations.png "Lista suspensa de configurações do CMake")
 
@@ -207,7 +207,6 @@ A configuração Linux-Debug padrão no Visual Studio 2019 versão 16.1 e poster
 
 Para saber mais informações sobre essas configurações, confira [Referência do CMakeSettings.json](../build/cmakesettings-reference.md).
 
-
 ## <a name="optional-settings"></a>Configurações opcionais
 
 Você pode usar as seguintes configurações opcionais para obter mais controle:
@@ -222,9 +221,7 @@ Você pode usar as seguintes configurações opcionais para obter mais controle:
 
 Essas opções permitem que você execute comandos no sistema Linux antes e depois do build e antes da geração do CMake. Os valores podem ser qualquer comando válido no sistema remoto. A saída é canalizada para o Visual Studio.
 
-
-
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Trabalhando com Propriedades do Projeto](../build/working-with-project-properties.md)<br/>
 [Projetos do CMake no Visual Studio](../build/cmake-projects-in-visual-studio.md)<br/>
