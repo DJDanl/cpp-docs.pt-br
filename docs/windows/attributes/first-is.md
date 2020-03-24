@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 9d06435caaeb53beb76bd145c92c470446cae3a7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4ac7142ed4f81d6011894681311e1aa5f129380b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501565"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167011"
 ---
 # <a name="first_is"></a>first_is
 
@@ -23,9 +23,9 @@ Especifica o índice do primeiro elemento de matriz a ser transmitido.
 [ first_is("expression") ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*expression*<br/>
+*expressão*<br/>
 Uma ou mais expressões em linguagem C. São permitidos slots de argumento vazios.
 
 ## <a name="remarks"></a>Comentários
@@ -67,9 +67,9 @@ requestedit] HRESULT get_I([out, retval]long *i);
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>

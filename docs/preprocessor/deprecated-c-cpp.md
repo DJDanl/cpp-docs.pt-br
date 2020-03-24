@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: 5694c5175ff23952c601884243b428a842278b7d
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6caf5283aea848186c8bd6f9dd2009bb8d8ee8b5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446485"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167622"
 ---
 # <a name="deprecated-pragma"></a>pragma preterido
 
@@ -35,7 +35,7 @@ Como o pragma **preterido** funciona em todos os identificadores correspondentes
 
 Recomendamos que você use o atributo `[[deprecated]]` do C++ 14, quando possível, em vez do pragma **preterido** . O modificador de Declaração [__declspec (preterido)](../cpp/deprecated-cpp.md) específico da Microsoft também é uma opção melhor em muitos casos do que o pragma **preterido** . O atributo `[[deprecated]]` e o modificador `__declspec(deprecated)` permitem que você especifique o status preterido para formulários específicos de funções sobrecarregadas. O aviso de diagnóstico só aparece em referências à função sobrecarregada específica à qual o atributo ou o modificador se aplica.
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 ```cpp
 // pragma_directive_deprecated.cpp
@@ -72,6 +72,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Diretivas pragma e a palavra-chave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

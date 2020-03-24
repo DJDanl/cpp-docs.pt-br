@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: f36cf8d1be589cc614a6def583b00af00aabdb61
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 755741faec6c0ba702d372ca8dee486edcb72ef3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501802"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167323"
 ---
 # <a name="call_as"></a>call_as
 
@@ -23,9 +23,9 @@ Permite que uma função [local](local-cpp.md) seja mapeada para uma função re
 [ call_as(function) ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*function*<br/>
+*função*<br/>
 A função local que você deseja que seja chamada quando uma função remota é invocada.
 
 ## <a name="remarks"></a>Comentários
@@ -59,9 +59,9 @@ __interface IMInterface {
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>

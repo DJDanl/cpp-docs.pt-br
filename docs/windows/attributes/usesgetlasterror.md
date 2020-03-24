@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: b14316bd929f4b41b13a76c41e94b31b7534e9d8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f58929db01a1710e811a973c0559ad29b242b4eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513883"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166127"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
@@ -29,7 +29,7 @@ O atributo **usesgetlasterror** C++ tem a mesma funcionalidade que o atributo MI
 
 ## <a name="example"></a>Exemplo
 
-Consulte o exemplo de [idl_module](idl-module.md) para obter um exemplo de como usar o **usesgetlasterror**.
+Consulte o exemplo de [idl_module](idl-module.md) para obter um exemplo de como usar **usesgetlasterror**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -42,8 +42,8 @@ Consulte o exemplo de [idl_module](idl-module.md) para obter um exemplo de como 
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)

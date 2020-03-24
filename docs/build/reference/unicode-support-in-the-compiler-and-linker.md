@@ -8,45 +8,45 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 420b01263320cf86df3f99da4523cc2b8bb4d4b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317322"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168831"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Suporte Unicode no compilador e vinculador
 
-A maioria das ferramentas de compilação do Visual C++ dão suporte a Unicode entradas e saídas.
+A maioria C++ das ferramentas de Build do Visual oferece suporte a entradas e saídas Unicode.
 
 ## <a name="filenames"></a>Nomes de arquivos
 
-Nomes de arquivo especificados na linha de comando ou em diretivas de compilador (como `#include`) pode conter caracteres Unicode.
+Os nomes de fileespecificados na linha de comando ou nas diretivas do compilador (como `#include`) podem conter caracteres Unicode.
 
 ## <a name="source-code-files"></a>Arquivos de código-fonte
 
-Caracteres Unicode têm suporte em identificadores, macros, cadeia de caracteres literais e em comentários.  Também há suporte para nomes de caracteres universais.
+Há suporte para caracteres Unicode em identificadores, macros, cadeias de caracteres e literais de caracteres e em comentários.  Também há suporte para nomes de caracteres universais.
 
-Unicode pode ser inserida em um arquivo de código fonte nas codificações:
+O Unicode pode ser inserido em um arquivo de código-fonte nas seguintes codificações:
 
-- Endian de UTF-16 pequeno com ou sem marca de ordem de byte (BOM)
+- UTF-16 little endian com ou sem marca de ordem de byte (BOM)
 
-- Endian de UTF-16 grande com ou sem BOM
+- Big endian UTF-16 com ou sem BOM
 
-- UTF-8 com BOM
+- UTF-8 with BOM
 
 ## <a name="output"></a>Saída
 
-Durante a compilação, o compilador gera o diagnóstico no console no UTF-16.  Os caracteres que podem ser exibidos no console dependem as propriedades da janela de console.  Redirecionado para um arquivo de saída do compilador está na página de código atual do console ANSI.
+Durante a compilação, o compilador gera diagnósticos para o console em UTF-16.  Os caracteres que podem ser exibidos no console dependem das propriedades da janela do console.  A saída do compilador redirecionada para um arquivo está na página de código do console ANSI atual.
 
-## <a name="linker-response-files-and-def-files"></a>Arquivos de resposta de vinculador e. Arquivos DEF
+## <a name="linker-response-files-and-def-files"></a>Arquivos de resposta do vinculador e. Arquivos DEF
 
 Arquivos de resposta e arquivos DEF podem ser UTF-16 com uma BOM ou ANSI.
 
-## <a name="asm-and-cod-dumps"></a>despejos de. ASM e. COD
+## <a name="asm-and-cod-dumps"></a>despejos. asm e. COD
 
-despejos de. ASM e. COD estão em ANSI por padrão para compatibilidade com MASM. Use [/FAu](fa-fa-listing-file.md) para saída UTF-8. Observe que, se você especificar **/FAs**, a origem misturada será diretamente impressa e poderá parecer truncada, por exemplo, se o código-fonte é UTF-8 e você não especificou **/fasu**.
+os despejos. asm e. COD estão em ANSI por padrão para compatibilidade com MASM. Use [/FAU](fa-fa-listing-file.md) para saída UTF-8. Observe que, se você especificar **/FAS**, a fonte intermisturada será impressa diretamente e poderá parecer distorcida, por exemplo, se o código-fonte for UTF-8 e você não tiver especificado **/FAsu**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Uso do conjunto de ferramentas MSVC da linha de comando](../building-on-the-command-line.md)

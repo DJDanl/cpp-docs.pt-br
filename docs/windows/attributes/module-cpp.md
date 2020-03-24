@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: daa0ae4aea5ff2a1a3312efcf3c39f43b541abf6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e93073a1728063038ddd4e28dbb313854ee3c8c5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514917"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166686"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -23,18 +23,18 @@ Define o bloco de biblioteca no arquivo. idl.
 [ module (type=dll, name=string, version=1.0, uuid=uuid, lcid=integer, control=boolean, helpstring=string, helpstringdll=string, helpfile=string, helpcontext=integer, helpstringcontext=integer, hidden=boolean, restricted=boolean, custom=string, resource_name=string,) ];
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*type*<br/>
+*tipo*<br/>
 Adicional Pode ser um dos seguintes:
 
-- `dll`Adiciona funções e classes que permitem que a DLL resultante funcione como um servidor COM em processo. Este é o valor padrão.
+- `dll` adiciona funções e classes que permitem que a DLL resultante funcione como um servidor COM em processo. Esse é o valor padrão.
 
-- `exe`Adiciona funções e classes que permitem que o executável resultante funcione como um servidor COM fora do processo.
+- `exe` adiciona funções e classes que permitem que o executável resultante funcione como um servidor COM fora do processo.
 
-- `service`Adiciona funções e classes que permitem que o executável resultante funcione como um serviço NT.
+- `service` adiciona funções e classes que permitem que o executável resultante funcione como um serviço NT.
 
-- `unspecified`Desabilita a injeção de código ATL relacionada ao atributo do módulo: a injeção da classe do módulo ATL, a instância global _AtlModule e as funções de ponto de entrada. Não desabilita a injeção de código ATL devido a outros atributos no projeto.
+- `unspecified` desabilita a injeção de código ATL relacionada ao atributo de módulo: a injeção de classe de módulo ATL, _AtlModule de instância global e funções de ponto de entrada. Não desabilita a injeção de código ATL devido a outros atributos no projeto.
 
 *name*<br/>
 Adicional O nome do bloco de biblioteca.
@@ -103,7 +103,7 @@ Se esse atributo for usado em um projeto que usa ATL, o comportamento do atribut
 
    [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) é usado como a classe base e o ponto de entrada executável padrão [WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
-- `type` = **serviço**
+- **serviço** de  = `type`
 
    [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) é usado como a classe base e o ponto de entrada executável padrão [WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
@@ -157,16 +157,16 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
 [Atributos independentes](stand-alone-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[library](/windows/win32/Midl/library)<br/>
+[biblioteca](/windows/win32/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>

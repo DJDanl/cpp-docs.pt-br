@@ -14,12 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 078c83a9c95c1b143af2037240d5cc0a16211827
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 27e15f8dec693c6b7e70f3e03f274dcbc4f04677
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492877"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169013"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Tipos de arquivo criados para projetos C++ do Visual Studio
 
@@ -47,21 +47,21 @@ Os projetos costumam produzir um EXE ou uma DLL. Os projetos podem ser dependent
 
 A tabela a seguir mostra os arquivos comuns em um projeto do Visual Studio e os identifica com sua extensão de arquivo.
 
-|Extensão de arquivo|Tipo|Conteúdo|
+|Extensão de arquivo|Type|Conteúdo|
 |--------------------|----------|--------------|
-|.asmx|Origem|Arquivo de implantação.|
-|.asp|Origem|Arquivo Active Server Page.|
-|.atp|Projeto|Arquivo de projeto de modelo do aplicativo.|
+|.asmx|Fonte|Arquivo de implantação.|
+|.asp|Fonte|Arquivo Active Server Page.|
+|.atp|Project|Arquivo de projeto de modelo do aplicativo.|
 |.bmp, .dib, .gif, .jpg, .jpe, .png|Recurso|Arquivos de imagem gerais.|
 |.bsc|Compilando|O arquivo de código do navegador.|
-|.cpp, .c|Origem|Arquivos de código-fonte principal do aplicativo.|
+|.cpp, .c|Fonte|Arquivos de código-fonte principal do aplicativo.|
 |.cur|Recurso|Arquivo gráfico de bitmap do cursor.|
-|.dbp|Projeto|Arquivo de projeto de banco de dados.|
-|.disco|Origem|O arquivo de documento da descoberta dinâmica. Manipula a descoberta de serviço Web XML.|
-|.exe, .dll|Projeto|Arquivos de biblioteca executável ou de vínculo dinâmico.|
-|.h|Origem|Um arquivo de cabeçalho (inclusão).|
+|.dbp|Project|Arquivo de projeto de banco de dados.|
+|.disco|Fonte|O arquivo de documento da descoberta dinâmica. Manipula a descoberta de serviço Web XML.|
+|.exe, .dll|Project|Arquivos de biblioteca executável ou de vínculo dinâmico.|
+|.h|Fonte|Um arquivo de cabeçalho (inclusão).|
 |.htm, .html, .xsp, .asp, .htc, .hta, .xml|Recurso|Arquivos da Web comuns.|
-|.HxC|Projeto|Arquivo de projeto da Ajuda.|
+|.HxC|Project|Arquivo de projeto da Ajuda.|
 |.ico|Recurso|Arquivo gráfico de bitmap do ícone.|
 |.idb|Compilando|O arquivo de estado, que contém informações de dependência entre os arquivos de origem e as definições de classe. Ele pode ser usado pelo compilador durante a compilação incremental. Use a opção do compilador [/Fd](fd-program-database-file-name.md) para especificar o nome do arquivo .idb.|
 |.idl|Compilando|Um arquivo de linguagem IDL. Para obter mais informações, confira [Arquivo IDL](/windows/win32/Rpc/the-interface-definition-language-idl-file) no SDK do Windows.|
@@ -75,15 +75,15 @@ A tabela a seguir mostra os arquivos comuns em um projeto do Visual Studio e os 
 |.sln|Solução|O arquivo de [solução](/visualstudio/ide/solutions-and-projects-in-visual-studio).|
 |.suo|Solução|O arquivo de opções da solução.|
 |.txt|Recurso|Um arquivo de texto, geralmente, o arquivo "Leiame".|
-|.vap|Projeto|Um arquivo de projeto do Visual Studio Analyzer.|
+|.vap|Project|Um arquivo de projeto do Visual Studio Analyzer.|
 |.vbg|Solução|Um arquivo de grupo de projetos compatível.|
-|.vbp, .vip, .vbproj|Projeto|O arquivo de projeto do Visual Basic.|
-|.vcxitems|Projeto|Projeto Itens Compartilhados para compartilhar arquivos de código entre vários projetos do C++. Para obter mais informações, consulte [Project and Solution files](project-and-solution-files.md).|
-|.vcxproj|Projeto|O arquivo de projeto do Visual Studio. Para obter mais informações, consulte [Project and Solution files](project-and-solution-files.md).|
-|.vcxproj.filters|Projeto|Usado quando você usa Gerenciador de Soluções para adicionar um arquivo a um projeto. O arquivo de filtros define o local no modo de exibição de árvore de Gerenciador de Soluções para adicionar o arquivo, com base em sua extensão de nome de arquivo.|
-|.vdproj|Projeto|O arquivo de projeto de implantação do Visual Studio.|
-|.vmx|Projeto|O arquivo de projeto de macro.|
-|.vup|Projeto|O arquivo de projeto de utilitário.|
+|.vbp, .vip, .vbproj|Project|O arquivo de projeto do Visual Basic.|
+|.vcxitems|Project|Projeto Itens Compartilhados para compartilhar arquivos de código entre vários projetos do C++. Para obter mais informações, consulte [Project and Solution files](project-and-solution-files.md).|
+|.vcxproj|Project|O arquivo de projeto do Visual Studio. Para obter mais informações, consulte [Project and Solution files](project-and-solution-files.md).|
+|.vcxproj.filters|Project|Usado quando você usa Gerenciador de Soluções para adicionar um arquivo a um projeto. O arquivo de filtros define o local no modo de exibição de árvore de Gerenciador de Soluções para adicionar o arquivo, com base em sua extensão de nome de arquivo.|
+|.vdproj|Project|O arquivo de projeto de implantação do Visual Studio.|
+|.vmx|Project|O arquivo de projeto de macro.|
+|.vup|Project|O arquivo de projeto de utilitário.|
 
 Para obter informações sobre outros arquivos associados ao Visual Studio, confira [Tipos de arquivo e extensões de arquivo no Visual Studio .NET](/visualstudio/ide/reference/project-and-solution-file-types).
 
@@ -91,7 +91,7 @@ Os arquivos de projeto são organizados em pastas no Gerenciador de Soluções. 
 
 Quando você adiciona um item a um projeto, você adiciona o item a todas as configurações para esse projeto. O item é adicionado independentemente de ser compilável ou não. Por exemplo, se você tem um projeto chamado MyProject, a adição de um item o adiciona às configurações de projeto Depuração e Versão.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Criando e gerenciando projetos C++ do Visual Studio](../creating-and-managing-visual-cpp-projects.md)<br>
 [Tipos de C++ projeto do Visual Studio](visual-cpp-project-types.md)<br>
