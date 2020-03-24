@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: aa70c2417b3262e98118b5e717ce39d0147024de
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d929543f699dcd20471ff9a9b45f54119f82a40a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491011"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168519"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -23,28 +23,28 @@ Indica que a classe oferece suporte à agregação.
 [ aggregatable(value) ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *value*<br/>
 Adicional Um parâmetro para indicar quando o objeto COM pode ser agregado:
 
-- `never`O objeto COM não pode ser agregado.
+- `never` o objeto COM não pode ser agregado.
 
-- `allowed`O objeto COM pode ser criado diretamente ou pode ser agregado. Esse é o padrão.
+- `allowed` o objeto COM pode ser criado diretamente ou pode ser agregado. Esse é o padrão.
 
-- `always`O objeto COM não pode ser criado diretamente e só pode ser agregado. Ao chamar `CoCreateInstance` esse objeto, você deve especificar a interface do `IUnknown` objeto de agregação (o controle `IUnknown`).
+- `always` o objeto COM não pode ser criado diretamente e só pode ser agregado. Ao chamar `CoCreateInstance` para esse objeto, você deve especificar a interface de `IUnknown` do objeto de agregação (o `IUnknown`de controle).
 
 ## <a name="remarks"></a>Comentários
 
-O C++ atributo agregável tem a mesma funcionalidade que o atributo MIDL [agregável](/windows/win32/Midl/aggregatable) . Isso significa que o compilador passará o atributo **agregável** para o arquivo. idl gerado.
+O **aggregatable** C++ atributo agregável tem a mesma funcionalidade que o atributo MIDL [agregável](/windows/win32/Midl/aggregatable) . Isso significa que o compilador passará o atributo **agregável** para o arquivo. idl gerado.
 
-Esse atributo requer que o atributo [coclass](coclass.md), [ProgID](progid.md)ou [vi_progid](vi-progid.md) (ou outro atributo que implica um deles) também seja aplicado ao mesmo elemento. Se qualquer atributo único for usado, os outros dois serão aplicados automaticamente. Por exemplo, se `progid` é `vi_progid` aplicado e `coclass` também é aplicado.
+Esse atributo requer que o atributo [coclass](coclass.md), [ProgID](progid.md)ou [vi_progid](vi-progid.md) (ou outro atributo que implica um deles) também seja aplicado ao mesmo elemento. Se qualquer atributo único for usado, os outros dois serão aplicados automaticamente. Por exemplo, se `progid` for aplicado, `vi_progid` e `coclass` também serão aplicadas.
 
 ### <a name="atl-projects"></a>Projetos da ATL
 
 Se esse atributo for usado em um projeto que usa ATL, o comportamento do atributo será alterado. Além do comportamento descrito anteriormente, o atributo também adiciona uma das seguintes macros à classe de destino:
 
-|Valor do parâmetro|Macro inserida|
+|Valor de parâmetro|Macro inserida|
 |---------------------|--------------------|
 |`Never`|[DECLARE_NOT_AGGREGATABLE](../../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|
 |`Allowed`|[DECLARE_POLY_AGGREGATABLE](../../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|
@@ -79,7 +79,7 @@ class CMyClass {};
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
