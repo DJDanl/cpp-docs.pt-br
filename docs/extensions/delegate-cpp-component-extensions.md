@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 29bf305ed5e4845437b90ed672d1ab0c0de9ced6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 388ccb28c9311b4727199e6b7324771c24c2906d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516481"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172432"
 ---
 # <a name="delegate--ccli-and-ccx"></a>delegate (C++/CLI e C++/CX)
 
 Declara um tipo que representa um ponteiro de função.
 
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
+## <a name="all-runtimes"></a>Todos os Runtimes
 
 O Windows Runtime e o common language runtime dão suporte a delegados.
 
@@ -45,7 +45,7 @@ delegate-type-identifier
 )
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *access*<br/>
 (opcional) A acessibilidade do delegado, que pode ser **public** (padrão) ou **private**. O protótipo de função também pode ser qualificado com as palavras-chaves **const** ou **volatile**.
@@ -79,7 +79,7 @@ delegate
 function_declaration
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *access*<br/>
 (opcional) A acessibilidade de delegate fora do assembly pode ser public ou private.  O padrão é private.  Dentro de uma classe, um delegado pode ter qualquer acessibilidade.
@@ -119,7 +119,7 @@ Ao criar um delegado para uma função global ou estática, apenas um parâmetro
 
 Saiba mais sobre delegados em
 
-- [Como: definir e usar delegados (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
+- [Como definir e usar delegados (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
 - [Delegados genéricos (C++/CLI)](generic-delegates-visual-cpp.md)
 
@@ -200,6 +200,6 @@ in func2 10
 in static func3 11
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

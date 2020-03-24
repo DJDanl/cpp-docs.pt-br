@@ -1,19 +1,19 @@
 ---
-title: 'Como: declarar tipos de valor com a palavra-chave interior_ptr (C++/CLI)'
+title: Como declarar tipos de valores com a palavra-chave interior_ptr (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 2b75f6c4763ddd7d3fd2d802371e21c40d506b16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515751"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172276"
 ---
-# <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Como: declarar tipos de valor com a palavra-chave interior_ptr (C++/CLI)
+# <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Como declarar tipos de valores com a palavra-chave interior_ptr (C++/CLI)
 
 Um **interior_ptr** pode ser usado com um tipo de valor.
 
@@ -22,7 +22,7 @@ Um **interior_ptr** pode ser usado com um tipo de valor.
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>DESCRIÇÃO
 
 O seguinte exemplo em C++/CLI mostra como usar um **interior_ptr** com um tipo de valor.
 
@@ -67,7 +67,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>DESCRIÇÃO
 
 Em um tipo de valor, o ponteiro **this** é avaliado como interior_ptr.
 
@@ -89,11 +89,11 @@ value struct V {
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>DESCRIÇÃO
 
 O exemplo a seguir mostra como usar o operador address-of com membros estáticos.
 
-O endereço de um membro do tipo Visual C++ estático produz um ponteiro nativo.  O endereço de um membro de tipo de valor estático é um ponteiro gerenciado porque o membro de tipo de valor é alocado no heap de tempo de execução e pode ser movido pelo coletor de lixo.
+O endereço de um membro do tipo Visual C++ estático produz um ponteiro nativo.  O endereço de um membro de tipo de valor estático é um ponteiro gerenciado porque o membro de tipo de valor é alocado no heap de runtime e pode ser movido pelo coletor de lixo.
 
 ### <a name="code"></a>Código
 
@@ -127,6 +127,6 @@ int main() {
 hello
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)

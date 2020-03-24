@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-ms.openlocfilehash: 395f1443f4eef16d9eea44c23a6e3288daf03d14
-ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.openlocfilehash: 0da32aae9a8c2c7f21ee9576e1e1147822314a36
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912837"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172172"
 ---
 # <a name="__identifier-ccli"></a>__identifier (C++/CLI)
 
 Permite o uso de palavras-chave C++ como identificadores.
 
-## <a name="all-platforms"></a>Todas as Plataformas
+## <a name="all-platforms"></a>Todas as plataformas
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -33,7 +33,7 @@ O uso da palavra-chave **__identifier** para identificadores que não são palav
 
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
 
-### <a name="requirements"></a>Requisitos do
+### <a name="requirements"></a>Requisitos
 
 Opção do compilador: `/ZW`
 
@@ -67,7 +67,7 @@ int main() {
 
 A palavra-chave **__identifier** é válida com a opção do compilador `/clr`.
 
-### <a name="requirements"></a>Requisitos do
+### <a name="requirements"></a>Requisitos
 
 Opção do compilador: `/clr`
 
@@ -94,7 +94,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

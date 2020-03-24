@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 67b03256390d5447ae5accc28dd450a7f60f485c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418450"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180180"
 ---
 # <a name="enumerations-c"></a>Enumerações (C++)
 
@@ -143,7 +143,7 @@ namespace ScopedEnumConversions
 
 Observe que a linha `hand = account_num;` ainda causa o erro que ocorre com enums sem escopo, como mostrado anteriormente. É permitido com uma conversão explícita. No entanto, com enums com escopo, a conversão tentada na próxima instrução, `account_num = Suit::Hearts;`, não é mais permitida sem uma conversão explícita.
 
-## <a name="no_enumerators"></a>Enums sem enumeradores
+## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a>Enums sem enumeradores
 
 **Visual Studio 2017 versão 15,3 e posterior** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): ao definir uma enumeração (regular ou com escopo) com um tipo subjacente explícito e nenhum enumerador, você pode, na verdade, introduzir um novo tipo integral que não tenha nenhuma conversão implícita para nenhum outro tipo. Ao usar esse tipo em vez de seu tipo subjacente interno, você pode eliminar o potencial para erros sutis causados por conversões implícitas inadvertidas.
 

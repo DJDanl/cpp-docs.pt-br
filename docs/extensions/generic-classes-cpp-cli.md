@@ -9,12 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: 71850807f6332f31195ef9bafbd9468f48cb6fb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78f4bf3abb98aab5e626e8ada538a22bdbca2912
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516381"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172354"
 ---
 # <a name="generic-classes-ccli"></a>Classes genéricas (C++/CLI)
 
@@ -37,7 +37,7 @@ class-body
 
 Na sintaxe acima, os seguintes termos são usados:
 
-*Atributos*<br/>
+*atributos*<br/>
 (Opcional) Informações declarativas adicionais. Saiba mais sobre atributos e classes de atributos em Atributos.
 
 *class-key*<br/>
@@ -48,10 +48,10 @@ Na sintaxe acima, os seguintes termos são usados:
 *constraint-clauses*<br/>
 Uma lista (não separada por vírgulas) de cláusulas **where** que especificam as restrições para os parâmetros de tipo. Assume o formato:
 
-> **where** *type-parameter-identifier* **:** *constraint-list*  **...**
+> **em que** *tipo de parâmetro-identificador* **:** *restrição-List* **..** .
 
 *constraint-list*<br/>
-*class-or-interface*[`,` *...* ]
+*Class-ou-interface*[`,` *...* ]
 
 *accessibility-modifiers*<br/>
 Modificadores de acessibilidade para a classe genérica. Para o Windows Runtime, o único modificador permitido é **private**. Para o Common Language Runtime, os modificadores permitidos são **private** e **public**.
@@ -95,7 +95,7 @@ int main() {
 }
 ```
 
-Ambos os tipos de valor (tipos internos, como **int** ou **double**, ou tipos de valor definidos pelo usuário) e tipos de referência podem ser usados como um argumento de tipo genérico. Independentemente disso, a sintaxe dentro da definição genérica é a mesma. Sintaticamente, o tipo desconhecido é tratado como se fosse um tipo de referência. No entanto, o tempo de execução é capaz de determinar se o tipo usado é, na verdade, um tipo de valor e substituir o código gerado apropriado para acesso direto aos membros. Tipos de valor usados como argumentos de tipo genérico não passam por conversão boxing e, portanto, não sofrem a penalidade de desempenho associada à conversão boxing. A sintaxe usada dentro do corpo do genérico deve ser `T^` e `->`, em vez de `.`. Todo uso de [ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md) para o parâmetro de tipo é adequadamente interpretado pelo tempo de execução como a criação simples de um tipo de valor se o argumento de tipo for de valor.
+Ambos os tipos de valor (tipos internos, como **int** ou **double**, ou tipos de valor definidos pelo usuário) e tipos de referência podem ser usados como um argumento de tipo genérico. Independentemente disso, a sintaxe dentro da definição genérica é a mesma. Sintaticamente, o tipo desconhecido é tratado como se fosse um tipo de referência. No entanto, o runtime é capaz de determinar se o tipo usado é, na verdade, um tipo de valor e substituir o código gerado apropriado para acesso direto aos membros. Tipos de valor usados como argumentos de tipo genérico não passam por conversão boxing e, portanto, não sofrem a penalidade de desempenho associada à conversão boxing. A sintaxe usada dentro do corpo do genérico deve ser `T^` e `->`, em vez de `.`. Todo uso de [ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md) para o parâmetro de tipo é adequadamente interpretado pelo runtime como a criação simples de um tipo de valor se o argumento de tipo for de valor.
 
 Também é possível declarar uma classe genérica com [Restrições em parâmetros de tipo genérico (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) nos tipos que podem ser usados para o parâmetro de tipo. No exemplo a seguir, qualquer tipo usado para `ItemType` deve implementar a interface `IItem`. A tentativa de usar **int**, por exemplo, que não implementa `IItem`, geraria um erro de tempo de compilação porque o argumento de tipo não satisfaz a restrição.
 
@@ -710,6 +710,6 @@ The field is assigned the double value: 0.123
 The field is assigned the string: Hello Generics!
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Genéricos](generics-cpp-component-extensions.md)

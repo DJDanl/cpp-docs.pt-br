@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 01dabcd15eb1a14734c16b9e54c0ab2e030d0479
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a47c56673e19f891b24ff433b9c614804f0bd51c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514067"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166361"
 ---
-# <a name="restricted"></a>restricted
+# <a name="restricted"></a>restrito
 
 Especifica que um membro de um módulo, interface ou Dispinterface não pode ser chamado arbitrariamente.
 
@@ -25,9 +25,9 @@ Especifica que um membro de um módulo, interface ou Dispinterface não pode ser
 ) ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*interfaces*<br/>
+*interface*<br/>
 Uma ou mais interfaces que podem não ser chamadas arbitrariamente em um objeto COM. Esse parâmetro só é válido quando aplicado a uma classe.
 
 ## <a name="remarks"></a>Comentários
@@ -72,9 +72,9 @@ class c : public a, public b
 |**Atributos necessários**|**coclass** (quando aplicado à **classe** ou **estrutura**)|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)<br/>

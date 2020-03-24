@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
-ms.openlocfilehash: c2dc4f1654b7e76bf9506f82d6d613684258c174
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 908a0f2dd304a5b5f9d3b70e80fafbfe3574ece1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184010"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179933"
 ---
 # <a name="expressions-c"></a>Expressões (C++)
 
@@ -22,13 +22,13 @@ Esta seção descreve as expressões C++. As expressões são sequências de ope
 
 - Geração de "efeitos colaterais". (Efeitos colaterais são todas as ações diferentes da avaliação da expressão — por exemplo, a alteração do valor de um objeto.)
 
-Em C++, os operadores podem ser sobrecarregados e seus significados podem ser definidos pelo usuário. No entanto, a precedência e o número de operandos que eles utilizam não podem ser alterados. Esta seção descreve a sintaxe e a semântica dos operadores como eles são fornecidos com a linguagem, não quando são sobrecarregados. Além [tipos de expressões](../cpp/types-of-expressions.md) e [semântica de expressões](../cpp/semantics-of-expressions.md), os seguintes tópicos são abordados:
+Em C++, os operadores podem ser sobrecarregados e seus significados podem ser definidos pelo usuário. No entanto, a precedência e o número de operandos que eles utilizam não podem ser alterados. Esta seção descreve a sintaxe e a semântica dos operadores como eles são fornecidos com a linguagem, não quando são sobrecarregados. Além dos [tipos de expressões](../cpp/types-of-expressions.md) e [semânticas de expressões](../cpp/semantics-of-expressions.md), os seguintes tópicos são abordados:
 
 - [Expressões primárias](../cpp/primary-expressions.md)
 
 - [Operador de resolução de escopo](../cpp/scope-resolution-operator.md)
 
-- [Expressões pós-fixadas](../cpp/postfix-expressions.md)
+- [Expressões de sufixo](../cpp/postfix-expressions.md)
 
 - [Expressões com operadores unários](../cpp/expressions-with-unary-operators.md)
 
@@ -53,6 +53,6 @@ Tópicos sobre operadores em outras seções:
     > [!NOTE]
     >  Os operadores para tipos internos não podem ser sobrecarregados; o comportamento deles é predefinido.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)

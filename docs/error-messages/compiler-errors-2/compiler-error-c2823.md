@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2823
 ms.assetid: 982b1b35-1a7c-456e-b711-f80cfe2d571e
-ms.openlocfilehash: 5f9b60499fd3c3bd5f06834e3c4f6482031066d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef07e1b542c4c3977f35de7ed9cd0f0a5358cedb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406958"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201949"
 ---
 # <a name="compiler-error-c2823"></a>Erro do compilador C2823
 
-> um modelo de typedef é ilegal
+> um modelo de typedef é inválido
 
-Modelos não são permitidos em `typedef` definições.
+Modelos não são permitidos em definições de `typedef`.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C2823 e mostra uma maneira de corrigir isso:
+O exemplo a seguir gera C2823 e mostra uma maneira de corrigi-lo:
 
 ```cpp
 // C2823.cpp

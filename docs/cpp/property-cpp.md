@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-ms.openlocfilehash: ece1016b7a18873dfa477b0f8b6ae4271a0f8001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03f71739698fd20a01fd72567ce5b9babc176327
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301481"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179296"
 ---
 # <a name="property-c"></a>property (C++)
 
@@ -30,7 +30,7 @@ Esse atributo pode ser aplicado a “membros de dados virtuais” não estático
 
 ## <a name="remarks"></a>Comentários
 
-Quando o compilador vê um membro de dados declarado com esse atributo à direita de um operador de seleção de membro ("**.**"ou"**->**"), ele converte a operação de um `get` ou `put` função, dependendo se essa expressão for um l-value ou um valor r. Nos contextos mais complicados, como "`+=`", uma regravação é executada fazendo `get` e `put`.
+Quando o compilador vê um membro de dados declarado com esse atributo à direita de um operador de seleção de membro (" **.** " ou " **->** "), ele converte a operação em uma função `get` ou `put`, dependendo se tal expressão é um l-Value ou um valor r. Em contextos mais complicados, como "`+=`", uma regravação é executada fazendo `get` e `put`.
 
 Esse atributo também pode ser usado na declaração de uma matriz vazia em uma definição de classe ou estrutura. Por exemplo:
 
@@ -66,7 +66,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [__declspec](../cpp/declspec.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

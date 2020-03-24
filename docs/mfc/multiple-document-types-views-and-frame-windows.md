@@ -15,76 +15,76 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: 154fc67dc35d5e5633c72c27100da9be56c0c68c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2948564b9008f9a89c89d58e3249b20b3dc2ffd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238580"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168636"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Vários tipos de documento, exibições e janelas com moldura
 
-A relação padrão entre um documento, seu modo de exibição e sua janela de quadro é descrita em [criação de documento/exibição](../mfc/document-view-creation.md). Muitos aplicativos dão suporte a um único documento tipo (mas, possivelmente, vários documentos abertos desse tipo) com uma única exibição no documento e janela de quadro apenas um por documento. Mas alguns aplicativos podem precisar alterar um ou mais dos padrões.
+A relação padrão entre um documento, sua exibição e sua janela de quadro é descrita em [criação de documento/exibição](../mfc/document-view-creation.md). Muitos aplicativos dão suporte a um único tipo de documento (mas possivelmente a vários documentos abertos desse tipo) com uma única exibição no documento e apenas uma janela de quadro por documento. Mas alguns aplicativos podem precisar alterar um ou mais desses padrões.
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>Do que você deseja saber mais sobre
 
-- [Vários tipos de documentos](#_core_multiple_document_types)
+- [Vários tipos de documento](#_core_multiple_document_types)
 
-- [Vários modos de exibição](#_core_multiple_views)
+- [Várias exibições](#_core_multiple_views)
 
-- [Várias janelas com moldura](#_core_multiple_frame_windows)
+- [Várias janelas de quadros](#_core_multiple_frame_windows)
 
-- [Janelas separadoras](#_core_splitter_windows)
+- [Janelas de divisão](#_core_splitter_windows)
 
-##  <a name="_core_multiple_document_types"></a> Vários tipos de documentos
+##  <a name="multiple-document-types"></a><a name="_core_multiple_document_types"></a>Vários tipos de documento
 
-O Assistente de aplicativo do MFC cria uma classe de documento único para você. Em alguns casos, no entanto, você talvez precise dar suporte a mais de um tipo de documento. Por exemplo, seu aplicativo pode precisar documentos de planilha e gráfico. Cada tipo de documento é representado por sua própria classe de documento e, provavelmente, por sua própria classe de exibição também. Quando o usuário escolhe o comando novo arquivo, o framework exibe uma caixa de diálogo que lista os tipos de documento com suporte. Em seguida, ele cria um documento do tipo escolhido pelo usuário. Cada tipo de documento é gerenciado pelo seu próprio objeto de modelo de documento.
+O assistente de aplicativo do MFC cria uma única classe de documento para você. No entanto, em alguns casos, talvez seja necessário dar suporte a mais de um tipo de documento. Por exemplo, seu aplicativo pode precisar de documentos de planilha e gráfico. Cada tipo de documento é representado por sua própria classe de documento e provavelmente por sua própria classe de exibição também. Quando o usuário escolhe o comando arquivo novo, a estrutura exibe uma caixa de diálogo que lista os tipos de documento com suporte. Em seguida, ele cria um documento do tipo que o usuário escolhe. Cada tipo de documento é gerenciado por seu próprio objeto de modelo de documento.
 
-Para criar classes de documento adicionais, consulte [adicionando uma classe](../ide/adding-a-class-visual-cpp.md). Escolher [CDocument](../mfc/reference/cdocument-class.md) como o tipo de classe para derivar e fornecer as informações do documento solicitado. Em seguida, implemente os dados da nova classe.
+Para criar classes de documento adicionais, consulte [adicionando uma classe](../ide/adding-a-class-visual-cpp.md). Escolha [CDocument](../mfc/reference/cdocument-class.md) como o tipo de classe para derivar e forneça as informações de documento solicitadas. Em seguida, implemente os dados da nova classe.
 
-Para permitir que a estrutura de conhecer a sua classe de documento extra, você deve adicionar uma segunda chamada para [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) em sua classe de aplicativo [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) substituir. Para obter mais informações, consulte [modelos de documento](../mfc/document-templates-and-the-document-view-creation-process.md).
+Para permitir que a estrutura saiba sobre sua classe de documento extra, você deve adicionar uma segunda chamada para [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) na substituição de [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) da sua classe de aplicativo. Para obter mais informações, consulte [modelos de documento](../mfc/document-templates-and-the-document-view-creation-process.md).
 
-##  <a name="_core_multiple_views"></a> Vários modos de exibição
+##  <a name="multiple-views"></a><a name="_core_multiple_views"></a>Várias exibições
 
-Muitos documentos exigem somente uma única exibição, mas é possível oferecer suporte a mais de uma exibição de um único documento. Para ajudá-lo a implementar vários modos de exibição, um objeto de documento mantém uma lista de suas exibições, fornece funções de membro para adicionar e remover os modos de exibição e fornece o [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) a função de membro para permitir que vários modos de exibição saibam quando o dados do documento foi alterado.
+Muitos documentos exigem apenas uma única exibição, mas é possível dar suporte a mais de uma exibição de um único documento. Para ajudá-lo a implementar vários modos de exibição, um objeto de documento mantém uma lista de suas exibições, fornece funções de membro para adicionar e remover exibições e fornece a função membro [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) para permitir que várias exibições saibam quando os dados do documento foram alterados.
 
-MFC dá suporte a três interfaces de usuário comuns que exigem várias exibições no mesmo documento. Esses modelos são:
+O MFC dá suporte a três interfaces de usuário comuns que exigem várias exibições no mesmo documento. Esses modelos são:
 
-- Objetos de exibição da mesma classe, cada um em uma janela de quadro de documento MDI separada.
+- Exibir objetos da mesma classe, cada um em uma janela de quadro de documento MDI separada.
 
-   Você talvez queira dar suporte à criação de uma segunda janela do quadro em um documento. O usuário pode escolher um comando nova janela para abrir um segundo quadro com um modo de exibição do mesmo documento e, em seguida, use dois quadros para exibir as diferentes partes do documento ao mesmo tempo. O framework suporta o comando nova janela no menu janela para aplicativos MDI duplicando a janela de quadro inicial e a exibição anexados ao documento.
+   Talvez você queira dar suporte à criação de uma segunda janela de quadro em um documento. O usuário pode escolher um novo comando de janela para abrir um segundo quadro com uma exibição do mesmo documento e, em seguida, usar os dois quadros para exibir partes diferentes do documento simultaneamente. A estrutura dá suporte ao comando nova janela no menu janela para aplicativos MDI duplicando a janela inicial do quadro e a exibição anexada ao documento.
 
-- Objetos de exibição da mesma classe na mesma janela de quadro do documento.
+- Exibir objetos da mesma classe na mesma janela do quadro do documento.
 
-   Janelas separadoras dividir o espaço do modo de exibição de uma janela de documento único em vários modos de exibição separados do documento. A estrutura cria vários objetos de exibição da mesma classe de exibição. Para obter mais informações, consulte [divisor Windows](#_core_splitter_windows).
+   Janelas de divisão dividem o espaço de exibição de uma única janela de documento em várias exibições separadas do documento. A estrutura cria vários objetos View da mesma classe View. Para obter mais informações, consulte [divisão do Windows](#_core_splitter_windows).
 
 - Exibir objetos de classes diferentes em uma janela de quadro único.
 
-   Nesse modelo, uma variação da janela separadora, vários modos de exibição compartilham uma janela de quadro único. As exibições são construídas a partir de classes diferentes, cada modo de exibição fornece uma maneira diferente para exibir o mesmo documento. Por exemplo, um modo de exibição pode mostrar um documento de processamento de texto no modo normal, enquanto o outro modo de exibição mostra-lo no modo de estrutura de tópicos. Um controle de splitter permite ao usuário ajustar os tamanhos relativos dos modos de exibição.
+   Nesse modelo, uma variação da janela separadora, várias exibições compartilham uma única janela de quadro. As exibições são construídas de classes diferentes, cada exibição que fornece uma maneira diferente de exibir o mesmo documento. Por exemplo, um modo de exibição pode mostrar um documento de processamento de texto no modo normal enquanto o outro modo de exibição o mostra no modo de estrutura de tópicos. Um controle de divisão permite que o usuário ajuste os tamanhos relativos das exibições.
 
-A figura a seguir, dividido em partes a, b e c, mostra os três modelos de interface do usuário na ordem apresentada acima.
+A figura a seguir, dividida nas partes a, b e c, mostra os três modelos de interface de usuário na ordem apresentada acima.
 
-![Vários&#45;exibir interfaces do usuário](../mfc/media/vc37a71.gif "diversos&#45;exibir interfaces do usuário") <br/>
-Interfaces do usuário do modo de exibição de vários
+![Várias&#45;interfaces de usuário de exibição](../mfc/media/vc37a71.gif "Várias&#45;interfaces de usuário de exibição") <br/>
+Interfaces de usuário de várias exibições
 
-A estrutura fornece esses modelos, Implementando o comando nova janela e fornecendo a classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), como descrito em [divisor Windows](#_core_splitter_windows). Você pode implementar outros modelos usando esses como seu ponto de partida. Para programas de exemplo que ilustram as diferentes configurações de exibições e janelas com moldura divisores, consulte [exemplos de MFC](../overview/visual-cpp-samples.md).
+A estrutura fornece esses modelos implementando o novo comando de janela e fornecendo a classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), conforme discutido em [janelas de divisão](#_core_splitter_windows). Você pode implementar outros modelos usando esses como ponto de partida. Para programas de exemplo que ilustram diferentes configurações de exibições, janelas de quadros e divisores, consulte [exemplos de MFC](../overview/visual-cpp-samples.md#mfc-samples).
 
-Para obter mais informações sobre `UpdateAllViews`, consulte a classe [CView](../mfc/reference/cview-class.md) no *referência da MFC* e o [exemplo de rabisco](../overview/visual-cpp-samples.md).
+Para obter mais informações sobre `UpdateAllViews`, consulte classe [cvisualização](../mfc/reference/cview-class.md) na *referência do MFC* e o [exemplo de rabisco](../overview/visual-cpp-samples.md).
 
-##  <a name="_core_multiple_frame_windows"></a> Windows de vários quadros
+##  <a name="multiple-frame-windows"></a><a name="_core_multiple_frame_windows"></a>Várias janelas de quadros
 
-Você pode usar o comando nova janela no menu janela para aplicativos MDI para criar uma segunda janela do quadro no mesmo documento. Para obter mais informações, consulte o primeiro modelo na figura, a exibição de várias Interfaces de usuário.
+Você pode usar o comando nova janela no menu janela para aplicativos MDI para criar uma segunda janela de quadro no mesmo documento. Para obter mais informações, consulte o primeiro modelo nas interfaces de usuário da figura com várias exibições.
 
-##  <a name="_core_splitter_windows"></a> Windows divisor
+##  <a name="splitter-windows"></a><a name="_core_splitter_windows"></a>Janelas de divisão
 
-Em uma janela separadora, a janela é, ou pode ser dividido em dois ou mais painéis roláveis. Um divisor controle (ou "dividir a caixa") no quadro de janela ao lado de barras de rolagem permite ao usuário ajustar os tamanhos relativos dos painéis. Cada painel é uma exibição no mesmo documento. Divisores "dinâmicos", as exibições são da mesma classe, conforme mostrado na parte b de figura, a exibição de várias Interfaces de usuário. Em divisores "estáticos", os modos de exibição podem ser de classes diferentes. Janelas separadoras de ambos os tipos são suportadas pela classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md).
+Em uma janela divisora, a janela é, ou pode, ser dividida em dois ou mais painéis roláveis. Um controle de Splitter (ou "caixa de divisão") no quadro de janela ao lado das barras de rolagem permite que o usuário ajuste os tamanhos relativos dos painéis. Cada painel é uma exibição no mesmo documento. Em divisores "dinâmicos", as exibições são da mesma classe, conforme mostrado na parte b da figura de interfaces de usuário de várias exibições. Em divisores "estáticos", as exibições podem ser de classes diferentes. As janelas de divisores de ambos os tipos são suportadas pela classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md).
 
-Janelas separadoras dinâmicas, com exibições da mesma classe, permitem ao usuário dividir uma janela em vários painéis à vontade e, em seguida, role diferentes painéis para ver as diferentes partes do documento. O usuário também pode reverter divisão da janela para remover os modos de exibição adicionais. As janelas separadoras adicionadas para o [exemplo de Scribble](../overview/visual-cpp-samples.md) são um exemplo. Esse tópico descreve a técnica para a criação de janelas separadoras dinâmicas. Uma janela divisora dinâmica é mostrada na parte b da figura, a exibição de várias Interfaces de usuário.
+Janelas de divisão dinâmica, com exibições da mesma classe, permitem que o usuário divida uma janela em vários painéis em e, em seguida, role painéis diferentes para ver diferentes partes do documento. O usuário também pode desdividir a janela para remover as exibições adicionais. As janelas de Splitter adicionadas ao [exemplo de rabisco](../overview/visual-cpp-samples.md) são um exemplo. Esse tópico descreve a técnica para criar janelas de divisão dinâmica. Uma janela divisora dinâmica é mostrada na parte b da figura de interfaces de usuário de exibição múltipla.
 
-Janelas separadoras estáticas, modos de exibição de classes diferentes, comece com a janela dividida em vários painéis, cada um com uma finalidade diferente. Por exemplo, no editor de bitmap do Visual C++, a janela de imagem mostra dois painéis lado a lado. O painel esquerdo exibe uma imagem life-sized do bitmap. O painel direito exibe uma imagem ampliada ou ampliada do mesmo bitmap. Os painéis são separados por uma "barra divisória" que o usuário pode arrastar para alterar o tamanho relativo dos painéis. Uma janela separadora estático é mostrada na parte c da figura modo de exibição de várias Interfaces de usuário.
+Janelas divisoras estáticas, com exibições de classes diferentes, começam com a janela dividida em vários painéis, cada uma com uma finalidade diferente. Por exemplo, no editor de C++ bitmap Visual, a janela de imagem mostra dois painéis lado a lado. O painel esquerdo exibe uma imagem de tamanho da vida do bitmap. O painel direito exibe uma imagem com zoom ou ampliada do mesmo bitmap. Os painéis são separados por uma "barra de divisão" que o usuário pode arrastar para alterar os tamanhos relativos dos painéis. Uma janela divisora estática é mostrada na parte c da figura de interfaces de usuário de exibição múltipla.
 
-Para obter mais informações, consulte a classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) na *referência da MFC* e [exemplos de MFC](../overview/visual-cpp-samples.md).
+Para obter mais informações, consulte Class [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) na *referência do MFC* e [exemplos do MFC](../overview/visual-cpp-samples.md#mfc-samples).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Arquitetura de documento/exibição](../mfc/document-view-architecture.md)

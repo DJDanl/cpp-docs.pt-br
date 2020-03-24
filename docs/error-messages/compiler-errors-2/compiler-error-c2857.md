@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2857
 ms.assetid: b57302bd-58ec-45ae-992a-1e282d5eeccc
-ms.openlocfilehash: 10c0ea3b54ded29bf80f83713cea33428dca6ca0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11b620f9748ac85e731d79b0652c0392375b2ea4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350433"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201845"
 ---
 # <a name="compiler-error-c2857"></a>Erro do compilador C2857
 
-> ' #include ' instrução especificada com o /Yc*filename* opção de linha de comando não foi encontrada no arquivo de origem
+> a instrução ' #include ' especificada com a opção de linha de comando/YC*filename* não foi encontrada no arquivo de origem
 
-O [/Yc](../../build/reference/yc-create-precompiled-header-file.md) opção especifica o nome de um arquivo de inclusão não está incluído no arquivo de origem que está sendo compilado.
+A opção [/YC](../../build/reference/yc-create-precompiled-header-file.md) especifica o nome de um arquivo de inclusão que não está incluído no arquivo de origem que está sendo compilado.
 
 ## <a name="remarks"></a>Comentários
 
-Quando você usa o **/Yc**<em>filename</em> opção em um arquivo de origem para criar um arquivo de cabeçalho pré-compilado (PCH), que o arquivo de origem deve incluir o *filename* arquivo de cabeçalho. Todos os arquivos incluídos pelo arquivo de origem, até e incluindo especificado *filename*, está incluído no arquivo PCH. Em outros arquivos de origem compilados usando o **/Yu**<em>filename</em> opção para usar o PCH de arquivo, uma inclusão de *filename* deve ser a primeira linha não seja de comentários no arquivo. O compilador ignora qualquer coisa no arquivo de origem antes dessa inclusão.
+Quando você usa a opção **/YC**<em>filename</em> em um arquivo de origem para criar um arquivo de cabeçalho pré-compilado (PCH), esse arquivo de origem deve incluir o arquivo de cabeçalho *filename* . Cada arquivo incluído no arquivo de origem, até e incluindo o *nome*de arquivo especificado, é incluído no arquivo PCH. Em outros arquivos de origem compilados usando a opção **/Yu**<em>filename</em> para usar o arquivo PCH, uma inclusão de *filename* deve ser a primeira linha que não seja de comentário no arquivo. O compilador ignora qualquer coisa no arquivo de origem antes que isso seja incluído.
 
-Esse erro pode ser causado por um `#include "filename"` instrução em um bloco de compilação condicional não é compilado em seu arquivo de origem PCH.
+Esse erro pode ser causado por uma instrução `#include "filename"` em um bloco de compilação condicional que não é compilado em seu arquivo de origem PCH.
 
 ## <a name="example"></a>Exemplo
 
-No uso normal, um arquivo de origem em seu projeto é designado como o arquivo de origem PCH, e um arquivo de cabeçalho é usado como o arquivo de cabeçalho PCH. Um arquivo de cabeçalho PCH típico tem todos os cabeçalhos da biblioteca usados em seu projeto, mas cabeçalhos não locais que ainda estão em desenvolvimento. Neste exemplo, o arquivo de cabeçalho PCH é denominado *my_pch.h*.
+No uso típico, um arquivo de origem em seu projeto é designado como o arquivo de origem PCH e um arquivo de cabeçalho é usado como o arquivo de cabeçalho PCH. Um arquivo de cabeçalho PCH típico tem todos os cabeçalhos de biblioteca usados em seu projeto, mas não os cabeçalhos locais que ainda estão em desenvolvimento. Neste exemplo, o arquivo de cabeçalho PCH é chamado de *my_pch. h*.
 
 ```cpp
 // my_pch.h
@@ -35,7 +35,7 @@ No uso normal, um arquivo de origem em seu projeto é designado como o arquivo d
 #include <stdio.h>
 ```
 
-O arquivo de origem PCH é compilado usando o **/Yc**<em>my_pch.h</em> opção. Se o compilador não encontra uma inclusão desse arquivo de cabeçalho PCH, ele gera C2857:
+O arquivo de origem PCH é compilado usando a opção **/Yc**<em>my_pch. h</em> . Se o compilador não encontrar uma inclusão desse arquivo de cabeçalho PCH, ele gerará C2857:
 
 ```cpp
 // my_pch.cpp
@@ -46,7 +46,7 @@ O arquivo de origem PCH é compilado usando o **/Yc**<em>my_pch.h</em> opção. 
 #endif
 ```
 
-Para usar esse arquivo PCH, os arquivos de origem devem ser compilados usando o **/Yu**<em>my_pch.h</em> opção. O arquivo de cabeçalho PCH deve ser incluído pela primeira vez em arquivos de origem que usam o PCH:
+Para usar esse arquivo PCH, os arquivos de origem devem ser compilados usando a opção **/Yu**<em>my_pch. h</em> . O arquivo de cabeçalho PCH deve ser incluído primeiro em arquivos de origem que usam o PCH:
 
 ```cpp
 // C2857.cpp

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-ms.openlocfilehash: a6b1823fe93c45abd8dabbd22116924e0a64f19a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3dfdb45bdf8a508eca9d29e90b3f7c05e7b147d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154211"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179907"
 ---
 # <a name="for-statement-c"></a>Instrução for (C++)
 
-Executa uma instrução repetidamente até que a condição se torne falsa. Para obter informações sobre baseado em intervalo para a instrução, consulte [de instrução (C++) baseado em intervalo](../cpp/range-based-for-statement-cpp.md).
+Executa uma instrução repetidamente até que a condição se torne falsa. Para obter informações sobre a instrução for baseada em intervalo, consulte [instrução for com base emC++intervalo ()](../cpp/range-based-for-statement-cpp.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -24,19 +24,19 @@ for ( init-expression ; cond-expression ; loop-expression )
 
 ## <a name="remarks"></a>Comentários
 
-Use o **para** instrução para construir loops que devem ser executados um número de vezes especificado.
+Use a instrução **for** para construir loops que devem executar um número de vezes especificado.
 
-O **para** instrução consiste em três partes opcionais, conforme mostrado na tabela a seguir.
+A instrução **for** consiste em três partes opcionais, conforme mostrado na tabela a seguir.
 
 ### <a name="for-loop-elements"></a>Elementos loop "for"
 
-|Nome da sintaxe|Quando executado|Descrição|
+|Nome da sintaxe|Quando executado|DESCRIÇÃO|
 |-----------------|-------------------|-----------------|
-|`init-expression`|Antes de qualquer outro elemento do **para** instrução, `init-expression` é executado apenas uma vez. O controle passa para `cond-expression`.|Muitas vezes usado para inicializar índices de loop. Ele pode conter expressões ou declarações.|
+|`init-expression`|Antes de qualquer outro elemento da instrução **for** , `init-expression` é executado apenas uma vez. O controle passa para `cond-expression`.|Muitas vezes usado para inicializar índices de loop. Ele pode conter expressões ou declarações.|
 |`cond-expression`|Antes da execução de cada iteração de `statement`, incluindo a primeira iteração. `statement` será executado apenas se `cond-expression` for avaliado como verdadeiro (diferente de zero).|Uma expressão que é avaliada para um tipo integral ou um tipo de classe que tem uma conversão ambígua para um tipo integral. Geralmente usado para testar critérios de encerramento de loop.|
 |`loop-expression`|No fim de cada iteração de `statement`. Depois que `loop-expression` é executado, `cond-expression` é avaliado.|Geralmente usado para incrementar índices de loop.|
 
-Os exemplos a seguir mostram diferentes maneiras de usar o **para** instrução.
+Os exemplos a seguir mostram diferentes maneiras de usar a instrução **for** .
 
 ```cpp
 #include <iostream>
@@ -98,11 +98,11 @@ for (int i = 10; i > 0; i--) {
     // Output: 10 12 14 16 18
 ```
 
-Um **para** loop termina quando um [quebra](../cpp/break-statement-cpp.md), [retornar](../cpp/return-statement-cpp.md), ou [goto](../cpp/goto-statement-cpp.md) (para uma instrução rotulada fora o **para**loop) dentro do `statement` é executado. Um [continue](../cpp/continue-statement-cpp.md) instrução em um **para** loop termina apenas a iteração atual.
+Um loop **for** termina quando um [Break](../cpp/break-statement-cpp.md), [Return](../cpp/return-statement-cpp.md)ou [goto](../cpp/goto-statement-cpp.md) (para uma instrução rotulada fora do loop **for** ) dentro de `statement` é executado. Uma instrução [continue](../cpp/continue-statement-cpp.md) em um loop **for** encerra apenas a iteração atual.
 
-Se `cond-expression` for omitido, ele será considerado verdadeiro e o **para** loop não será encerrado sem um **quebra**, **retornar**, ou **goto** dentro do `statement`.
+Se `cond-expression` for omitido, ele será considerado true e o loop **for** não será encerrado sem um **Break**, **return**ou **goto** dentro de `statement`.
 
-Embora os três campos do **para** instrução normalmente são usadas para inicialização, teste para finalização, e aumentando, eles não são restritos a esses usos. Por exemplo, o código a seguir imprime os número de 0 a 4. Nesse caso, `statement` é a instrução null:
+Embora os três campos da instrução **for** normalmente são usados para inicialização, teste para encerramento e incrementos, eles não são restritos a esses usos. Por exemplo, o código a seguir imprime os número de 0 a 4. Nesse caso, `statement` é a instrução null:
 
 ```cpp
 #include <iostream>
@@ -119,7 +119,7 @@ int main()
 
 ## <a name="for-loops-and-the-c-standard"></a>para loops e o padrão C++
 
-O padrão C++ informa que uma variável declarada em um **para** loop deverá sair do escopo após a **para** loop termina. Por exemplo:
+O C++ padrão diz que uma variável declarada em um loop **for** deve sair do escopo depois que o loop **for** termina. Por exemplo:
 
 ```cpp
 for (int i = 0 ; i < 5 ; i++) {
@@ -128,11 +128,11 @@ for (int i = 0 ; i < 5 ; i++) {
 // i is now out of scope under /Za or /Zc:forScope
 ```
 
-Por padrão, sob [/Ze](../build/reference/za-ze-disable-language-extensions.md), uma variável declarada em um **para** loop permanece no escopo até que o **para** término do escopo delimitador do loop.
+Por padrão, em [/ze](../build/reference/za-ze-disable-language-extensions.md), uma variável declarada em um loop **for** permanece no escopo até o final do escopo de delimitação do loop **for** .
 
-[/ZC: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) habilita o comportamento padrão de variáveis declaradas em loops for sem a necessidade de especificar `/Za`.
+[/Zc: o forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) habilita o comportamento padrão das variáveis declaradas nos loops for sem a necessidade de especificar `/Za`.
 
-Também é possível usar as diferenças de escopo a **para** loop para declarar variáveis novamente em `/Ze` da seguinte maneira:
+Também é possível usar as diferenças de escopo do loop **for** para redeclarar variáveis em `/Ze` da seguinte maneira:
 
 ```cpp
 // for_statement5.cpp
@@ -144,9 +144,9 @@ int main(){
 }
 ```
 
-Isso mais de perto imita o comportamento padrão de uma variável declarada em um **para** loop, o que exige que as variáveis declaradas em um **para** loop para sair do escopo depois que o loop é realizado. Quando uma variável é declarada em um **para** loop, o compilador a promove internamente a uma variável local na **para** escopo delimitador do loop, mesmo se já houver uma variável local com o mesmo nome.
+Isso imita mais de forma semelhante o comportamento padrão de uma variável declarada em um loop **for** , que requer variáveis declaradas em um loop **for** para sair do escopo após a conclusão do loop. Quando uma variável é declarada em um loop **for** , o compilador a promove internamente a uma variável local no escopo de delimitação do loop **for** , mesmo que já exista uma variável local com o mesmo nome.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instruções de iteração](../cpp/iteration-statements-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>

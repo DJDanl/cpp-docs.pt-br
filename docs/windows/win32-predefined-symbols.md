@@ -6,39 +6,39 @@ helpviewer_keywords:
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: 8a238021f255da30a132755a297a471dd1f51246
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae79b4c1a4021b32f631c694b376d2202b345415
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387676"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165919"
 ---
 # <a name="win32-predefined-symbols"></a>Símbolos predefinidos Win32
 
-Esses símbolos são definidos nos arquivos de cabeçalho do Win32 e dão suporte a ações e funções de aplicativo do Windows padrão. Esses símbolos são usados principalmente com elementos de interface do usuário comuns. Quando você estiver trabalhando com controles nos editores de recursos, esses símbolos aparecerá na [janela de propriedades](/visualstudio/ide/reference/properties-window) associados a controles comuns. Por exemplo, se sua barra de ferramentas deve exibir o ícone do aplicativo, o ícone será associado com o símbolo IDI_SMALL na **propriedade** janela.
+Esses símbolos são definidos nos arquivos de cabeçalho do Win32 e dão suporte a funções e ações padrão de aplicativos do Windows. Esses símbolos são usados principalmente com elementos comuns da interface do usuário. Quando você estiver trabalhando com controles nos editores de recursos, esses símbolos serão exibidos no [janela Propriedades](/visualstudio/ide/reference/properties-window) associado a controles comuns. Por exemplo, se a barra de ferramentas deve exibir o ícone do aplicativo, o ícone será associado ao símbolo IDI_SMALL na janela de **Propriedades** .
 
 |||
 |-|-|
-|IDABORT|(controle) Caixa de diálogo, o botão de anulação|
-|IDC_STATIC|(controle) Texto estático em uma caixa de diálogo|
-|IDCANCEL|(controle) Caixa de diálogo, o botão Cancelar|
-|IDD_ABOUTBOX|(caixa de diálogo) Caixa de diálogo sobre o produto|
-|IDI_PROJECTNAME|(ícone) Ícone do projeto atual|
-|IDI_SMALL|(ícone) Ícone pequeno do projeto atual|
-|IDIGNORE|(controle) Usado com o botão Ignorar em caixas de diálogo|
-|IDM_ABOUT|(item de menu) Usado com a Ajuda... Sobre...|
-|IDM_EXIT|(item de menu) Usado com o arquivo... Sair...|
-|IDNO|(controle) Caixa de diálogo, nenhum botão|
-|IDOK|(controle) Caixa de diálogo, botão Okey|
-|IDRETRY|(controle) Caixa de diálogo, um botão de repetição|
-|IDS_APP_TITLE|(string) Nome do aplicativo atual|
-|IDYES|(controle) Caixa de diálogo, o botão Sim|
+|IDABORT|controlo Caixa de diálogo, botão anular|
+|IDC_STATIC|controlo Texto estático em uma caixa de diálogo|
+|IDCANCEL|controlo Caixa de diálogo, botão Cancelar|
+|IDD_ABOUTBOX|' Caixa de diálogo produto sobre|
+|IDI_PROJECTNAME|cone Ícone do projeto atual|
+|IDI_SMALL|cone Ícone pequeno do projeto atual|
+|IDIGNORE|controlo Usado com o botão ignorar em caixas de diálogo|
+|IDM_ABOUT|(item de menu) Usado com a ajuda... Sobre...|
+|IDM_EXIT|(item de menu) Usado com arquivo... Sair...|
+|IDNO|controlo Caixa de diálogo, sem botão|
+|IDOK|controlo Caixa de diálogo, botão OK|
+|IDRETRY|controlo Caixa de diálogo, botão de repetição|
+|IDS_APP_TITLE|Strings Nome do aplicativo atual|
+|IDYES|controlo Caixa de diálogo, botão Sim|
 
 ## <a name="requirements"></a>Requisitos
 
 Win32
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [IDs de símbolos predefinidos](../windows/predefined-symbol-ids.md)<br/>
 [Símbolos predefinidos do MFC](../windows/mfc-predefined-symbols.md)<br/>

@@ -1,21 +1,21 @@
 ---
-title: caso (C++ COM atributo)
+title: Case (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.case
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: b3058f2fe6f35e1b11d4790780cb0fcdcaada706
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da72fff3bb600b5db2fba0ecdfe9c6a768836f3c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148426"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167324"
 ---
 # <a name="case-c"></a>case (C++)
 
-Usado com o [switch_type](switch-type.md) atributo em uma **união**.
+Usado com o atributo [switch_type](switch-type.md) em uma **Union**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,10 +23,10 @@ Usado com o [switch_type](switch-type.md) atributo em uma **união**.
 [ case(value) ]
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *value*<br/>
-Um valor de entrada possíveis para o qual você deseja fornecer processamento. O tipo de **valor** pode ser um dos seguintes tipos:
+Um valor de entrada possível para o qual você deseja fornecer processamento. O tipo de **valor** pode ser um dos seguintes tipos:
 
 - `int`
 
@@ -40,11 +40,11 @@ ou um identificador desse tipo.
 
 ## <a name="remarks"></a>Comentários
 
-O **caso** atributo C++ tem a mesma funcionalidade que o **caso** atributo MIDL. Esse atributo é usado apenas com o [switch_type](switch-type.md) atributo.
+O atributo **Case** C++ tem a mesma funcionalidade que o atributo MIDL de **caso** . Esse atributo só é usado com o atributo [switch_type](switch-type.md) .
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra um uso do **caso** atributo:
+O código a seguir mostra um uso do atributo **Case** :
 
 ```cpp
 // cpp_attr_ref_case.cpp
@@ -65,18 +65,18 @@ struct SizedValue2 {
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|Membro de um **classe** ou **struct**|
+|**Aplica-se a**|Membro de uma **classe** ou **estrutura**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-ms.openlocfilehash: a8c6733a9f6e5c9650333f96a92ff18eedb9c356
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 920135943c9dfb46b00ee6ceb2535fde128dffb0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516491"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172029"
 ---
 # <a name="pin_ptr-ccli"></a>pin_ptr (C++/CLI)
 
 Declara um *ponteiro de fixação*, que é usado apenas com o Common Language Runtime.
 
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
+## <a name="all-runtimes"></a>Todos os Runtimes
 
-(Não há comentários para esse recurso de linguagem que se apliquem a todos os tempos de execução.)
+(Não há comentários para esse recurso de linguagem que se apliquem a todos os runtimes.)
 
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
 
@@ -39,12 +39,12 @@ Um *ponteiro de fixação* é um ponteiro interior que impede o objeto apontado 
 [cli::]pin_ptr<cv_qualifiertype>var = &initializer;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *cv_qualifier*<br/>
 Qualificadores **const** ou **volatile**. Por padrão, um ponteiro de fixação é **volatile**. É redundante, mas não é um erro declarar um ponteiro de fixação **volatile**.
 
-*type*<br/>
+*tipo*<br/>
 O tipo de *inicializador*.
 
 *var*<br/>
@@ -57,7 +57,7 @@ Um membro de um tipo de referência, um elemento de uma matriz gerenciada ou qua
 
 Um **pin_ptr** representa um superconjunto da funcionalidade de um ponteiro nativo. Portanto, qualquer coisa que possa ser atribuída a um ponteiro nativo também pode ser atribuída a um **pin_ptr**. Um ponteiro interno tem permissão para realizar o mesmo conjunto de operações que os ponteiros nativos, incluindo comparação e aritmética de ponteiros.
 
-Um objeto ou subobjeto de uma classe gerenciada pode ser fixado, caso em que o Common Language Runtime não o move durante a coleta de lixo. O principal uso dele é passar um ponteiro para dados gerenciados como um parâmetro real de uma chamada de função não gerenciada. Durante um ciclo de coleta, o tempo de execução inspeciona os metadados criados para o ponteiro de fixação e não move o item para o qual ele aponta.
+Um objeto ou subobjeto de uma classe gerenciada pode ser fixado, caso em que o Common Language Runtime não o move durante a coleta de lixo. O principal uso dele é passar um ponteiro para dados gerenciados como um parâmetro real de uma chamada de função não gerenciada. Durante um ciclo de coleta, o runtime inspeciona os metadados criados para o ponteiro de fixação e não move o item para o qual ele aponta.
 
 A fixação de um objeto também fixa seus campos de valor; ou seja, campos de tipo de valor ou primitivos. No entanto, os campos declarados com o identificador de acompanhamento (`%`) não são fixados.
 
@@ -89,7 +89,7 @@ Ponteiros de fixação não podem ser usados como:
 
 Saiba mais sobre ponteiros internos em [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md).
 
-Saiba mais sobre ponteiros de fixação em [Como fixar ponteiros e matrizes](how-to-pin-pointers-and-arrays.md) e [Como declarar ponteiros de fixação e tipos de valor](how-to-declare-pinning-pointers-and-value-types.md).
+Para obter mais informações sobre como fixar ponteiros, consulte [como: fixar ponteiros e matrizes](how-to-pin-pointers-and-arrays.md) e [como declarar ponteiros de fixação e tipos de valor](how-to-declare-pinning-pointers-and-value-types.md).
 
 ### <a name="requirements"></a>Requisitos
 
