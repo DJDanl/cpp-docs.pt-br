@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: e9222f16ef6356c2d89401690bda7e6d27f8aba6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: a1645c1116daa66c578a6d6e697ab168e4006af9
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708024"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150947"
 ---
 # <a name="data-access-in-visual-c"></a>Acesso a dados no Visual C++
 
@@ -32,7 +32,7 @@ A biblioteca MFC (Microsoft Foundation Classes) fornece classes para programar c
 [Programação do OLE DB](oledb/ole-db-programming.md)<br/>
 Uma interface principalmente herdada que ainda é necessária em alguns cenários, especialmente quando você está programando com relação a servidores vinculados.
 
-## <a name="related-topics"></a>Tópicos relacionados
+## <a name="related-topics"></a>Tópicos Relacionados
 
 [Conectar-se ao Banco de Dados SQL usando C e C++](/azure/sql-database/sql-database-develop-cplusplus-simple)<br/>
 Conecte-se ao Banco de Dados SQL do Azure de aplicativos C ou C++.
@@ -43,17 +43,17 @@ O [Armazenamento do Azure](/azure/storage/storage-introduction) é uma solução
 [ODBC Driver for SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server)<br/>
 O driver ODBC mais recente fornece um eficiente acesso a dados para o Microsoft SQL Server e para o Banco de Dados SQL do Microsoft Azure para aplicativos baseados em C/C++. Ele dá suporte para recursos, incluindo o Always Encrypted, o Azure Active Directory e os Grupos de Disponibilidade AlwaysOn. Também está disponível para MacOS e Linux.
 
-[OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)<br/>
+[Driver do OLE DB para SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)<br/>
 O driver OLE DB mais recente é uma API (interface de programação de aplicativo) de acesso a dados autônoma que é compatível com Microsoft SQL Server e ao Banco de Dados SQL do Microsoft Azure.
 
 [Central de Desenvolvedores do Microsoft Azure C e C++](https://azure.microsoft.com/develop/cpp/)<br/>
 O Azure facilita o build de aplicativos do C++, com maior flexibilidade, escalabilidade e confiabilidade usando ferramentas que você adora.
 
 [Como usar o Armazenamento de Blobs do C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
-O Armazenamento de Blobs do Azure é um serviço que armazena dados não estruturados na nuvem como objetos/blobs. O Armazenamento de Blobs pode armazenar qualquer tipo de texto ou dados binários, como um documento, um arquivo de mídia ou um instalador de aplicativo. O Armazenamento de Blobs também é conhecido como armazenamento de objeto.
+O Armazenamento de Blobs do Azure é um serviço que armazena dados não estruturados na nuvem como objetos/blobs. O Armazenamento de Blobs pode conter qualquer tipo de texto ou de dados binários, como um documento, um arquivo de mídia ou um instalador de aplicativo. O Armazenamento de Blobs também é chamado de armazenamento de objeto.
 
-[ Referência do Programador de ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
-A interface ODBC é projetada para uso com a linguagem de programação C. O uso da interface ODBC abrange três áreas: instruções SQL, chamadas de função ODBC e programação em C.
+[Referência do programador ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
+A interface ODBC é projetada para uso com a linguagem de programação C. O uso da interface ODBC abrange três áreas: instruções SQL, chamadas da função ODBC e programação em C.
 
 ## <a name="see-also"></a>Consulte também
 

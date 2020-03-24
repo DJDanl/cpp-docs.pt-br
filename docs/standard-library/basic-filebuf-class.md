@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: ec6fced70a53d27fdb3312a5b349e9e653ccbd24
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 9b4492f10e2871792d8e1870fcfea37775dc7bde
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422104"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150843"
 ---
 # <a name="basic_filebuf-class"></a>Classe basic_filebuf
 
@@ -58,7 +58,7 @@ template <class Char_T, class Tr = char_traits<Char_T>>
 class basic_filebuf : public basic_streambuf<Char_T, Tr>
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Char_T*\
 O elemento básico no buffer de arquivo.
@@ -75,7 +75,7 @@ O modelo de classe descreve um buffer de fluxo que controla a transmissão de el
 
 Um objeto da classe `basic_filebuf<Char_T, Tr>` armazena um ponteiro de arquivo, que designa o objeto `FILE` que controla o fluxo associado a um arquivo aberto. Ele também armazena ponteiros para duas facetas de conversão de arquivo para uso pelas funções membro protegidas [estouro](#overflow) e [estouro negativo](#underflow). Para obter mais informações, confira [`basic_filebuf::open`](#open).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo a seguir demonstra como forçar um objeto do tipo `basic_filebuf<wchar_t>` a armazenar caracteres Unicode em seu buffer interno chamando o método `pubsetbuf()`.
 
@@ -194,15 +194,15 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 72 00 6c 00 64 00 00 00 00 00 00 00 00 00 00 00   r.l.d...........
 ```
 
-### <a name="constructors"></a>Construtores
+### <a name="constructors"></a>{1&gt;Construtores&lt;1}
 
-|Construtor|DESCRIÇÃO|
+|Construtor|Descrição|
 |-|-|
 |[basic_filebuf](#basic_filebuf)|Constrói um objeto do tipo `basic_filebuf`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome do tipo|DESCRIÇÃO|
+|Nome do tipo|Descrição|
 |-|-|
 |[char_type](#char_type)|Associa um nome de tipo ao parâmetro de modelo `Char_T`.|
 |[int_type](#int_type)|Faz com que esse tipo no escopo de `basic_filebuf` seja equivalente ao tipo com o mesmo nome no escopo de `Tr`.|
@@ -212,7 +212,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 ### <a name="member-functions"></a>Funções de membro
 
-|Função de membro|DESCRIÇÃO|
+|Função de membro|Descrição|
 |-|-|
 |[close](#close)|Fecha um arquivo.|
 |[is_open](#is_open)|Indica se um arquivo está aberto.|
@@ -227,13 +227,13 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 |[uflow](../standard-library/basic-streambuf-class.md#uflow)|Função virtual protegida para extrair o elemento atual do fluxo de entrada.|
 |[underflow](#underflow)|Função virtual protegida para extrair o elemento atual do fluxo de entrada.|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Cabeçalho:** \<fstream >
 
 **Namespace:** std
 
-## <a name="basic_filebuf"></a>  basic_filebuf::basic_filebuf
+## <a name="basic_filebufbasic_filebuf"></a><a name="basic_filebuf"></a>  basic_filebuf::basic_filebuf
 
 Constrói um objeto do tipo `basic_filebuf`.
 
@@ -249,7 +249,7 @@ O primeiro construtor armazena um ponteiro nulo em todos os ponteiros que contro
 
 O segundo construtor inicializa o objeto com o conteúdo de *Right*, tratado como uma referência rvalue.
 
-## <a name="char_type"></a>  basic_filebuf::char_type
+## <a name="basic_filebufchar_type"></a><a name="char_type"></a>  basic_filebuf::char_type
 
 Associa um nome de tipo ao parâmetro de modelo `Char_T`.
 
@@ -257,7 +257,7 @@ Associa um nome de tipo ao parâmetro de modelo `Char_T`.
 typedef Char_T char_type;
 ```
 
-## <a name="close"></a>  basic_filebuf::close
+## <a name="basic_filebufclose"></a><a name="close"></a>  basic_filebuf::close
 
 Fecha um arquivo.
 
@@ -275,7 +275,7 @@ A função membro retornará um ponteiro nulo se o ponteiro de arquivo for um po
 
 Para um fluxo amplo, se alguma inserção tiver ocorrido desde que o fluxo foi aberto, ou desde a última chamada para `streampos`, a função chamará [`overflow`](#overflow). Ele também insere qualquer sequência necessária para restaurar o estado de conversão inicial, usando a faceta de conversão de arquivo `fac` para chamar `fac.unshift` conforme necessário. Cada elemento produzido `byte` do tipo **Char** é gravado no fluxo associado designado pelo ponteiro do arquivo `fp` como se fosse por meio de chamadas sucessivas do formulário `fputc(byte, fp)`. Se a chamada para `fac.unshift` ou qualquer gravação falhar, a função não terá êxito.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo a seguir pressupõe dois arquivos no diretório atual: *basic_filebuf_close. txt* (o conteúdo é "testando") e *iotest. txt* (o conteúdo é "ssss").
 
@@ -324,7 +324,7 @@ s
 1
 ```
 
-## <a name="int_type"></a>  basic_filebuf::int_type
+## <a name="basic_filebufint_type"></a><a name="int_type"></a>  basic_filebuf::int_type
 
 Torna esse tipo dentro do escopo de `basic_filebuf` equivalente ao tipo de mesmo nome no escopo de `Tr`.
 
@@ -332,7 +332,7 @@ Torna esse tipo dentro do escopo de `basic_filebuf` equivalente ao tipo de mesmo
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="is_open"></a>  basic_filebuf::is_open
+## <a name="basic_filebufis_open"></a><a name="is_open"></a>  basic_filebuf::is_open
 
 Indica se um arquivo está aberto.
 
@@ -344,7 +344,7 @@ bool is_open() const;
 
 **true** se o ponteiro do arquivo não for nulo.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // basic_filebuf_is_open.cpp
@@ -368,7 +368,7 @@ false
 true
 ```
 
-## <a name="off_type"></a>  basic_filebuf::off_type
+## <a name="basic_filebufoff_type"></a><a name="off_type"></a>  basic_filebuf::off_type
 
 Torna esse tipo dentro do escopo de `basic_filebuf` equivalente ao tipo de mesmo nome no escopo de `Tr`.
 
@@ -376,7 +376,7 @@ Torna esse tipo dentro do escopo de `basic_filebuf` equivalente ao tipo de mesmo
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="open"></a>  basic_filebuf::open
+## <a name="basic_filebufopen"></a><a name="open"></a>  basic_filebuf::open
 
 Abre um arquivo.
 
@@ -400,7 +400,7 @@ basic_filebuf<Char_T, Tr> *open(
     ios_base::openmode mode);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nome de arquivo*\
 O nome do arquivo a ser aberto.
@@ -417,7 +417,7 @@ Se o buffer já estiver aberto ou se o ponteiro do arquivo for um ponteiro nulo,
 
 ### <a name="remarks"></a>Comentários
 
-A função membro abre o arquivo com nome *filename*, chamando [`fopen`](../c-runtime-library/reference/fopen-wfopen.md)`(filename, strmode)`. `strmode` é determinado de `mode & ~(`[`ate`](../standard-library/ios-base-class.md#openmode)` | `[`binary`](../standard-library/ios-base-class.md#openmode)`)`:
+A função membro abre o arquivo com nome *filename*, chamando [`fopen`](../c-runtime-library/reference/fopen-wfopen.md)`(filename, strmode)`. `strmode` é determinado de `mode & ~(`[`ate`](../standard-library/ios-base-class.md#openmode) `|` [`binary`](../standard-library/ios-base-class.md#openmode)`)`:
 
 - `ios_base::in` se torna `"r"` (abrir arquivo existente para leitura).
 
@@ -437,11 +437,11 @@ Se o ponteiro do arquivo não for um ponteiro nulo, a função determinará a fa
 
 Se o ponteiro do arquivo for um ponteiro nulo, a função retornará um ponteiro nulo. Caso contrário, retornará **this**.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Consulte [`basic_filebuf::close`](#close) para obter um exemplo que usa `open`.
 
-## <a name="op_eq"></a>  basic_filebuf::operator=
+## <a name="basic_filebufoperator"></a><a name="op_eq"></a>  basic_filebuf::operator=
 
 Atribua o conteúdo deste objeto de buffer de fluxo. Essa é uma atribuição de movimentação que envolve um Rvalue que não deixa uma cópia para trás.
 
@@ -449,7 +449,7 @@ Atribua o conteúdo deste objeto de buffer de fluxo. Essa é uma atribuição de
 basic_filebuf& operator=(basic_filebuf&& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 \ *à direita*
 Uma referência rvalue para um objeto [basic_filebuf](../standard-library/basic-filebuf-class.md).
@@ -462,7 +462,7 @@ Retorna __* isso__.
 
 O operador member substitui o conteúdo do objeto usando o conteúdo de *Right*, tratado como uma referência rvalue. Para obter mais informações, consulte [Declarador de referência rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="overflow"></a>  basic_filebuf::overflow
+## <a name="basic_filebufoverflow"></a><a name="overflow"></a>  basic_filebuf::overflow
 
 Chamado quando um novo caractere é inserido em um buffer cheio.
 
@@ -470,7 +470,7 @@ Chamado quando um novo caractere é inserido em um buffer cheio.
 virtual int_type overflow(int_type _Meta = traits_type::eof);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Meta*\
 O caractere a ser inserido no buffer ou `traits_type::eof`.
@@ -489,7 +489,7 @@ Se `_Meta != traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof
 
 - Ele pode converter qualquer saída pendente no buffer de saída, seguida por `ch`, usando a faceta de conversão de arquivo `fac` para chamar `fac.out` conforme necessário. Cada elemento produzido `ch` do tipo *Char* é gravado no fluxo associado designado pelo ponteiro do arquivo `fp` como se fosse por meio de chamadas sucessivas do formulário `fputc(ch, fp)`. Se qualquer conversão ou gravação falhar, a função não será bem-sucedida.
 
-## <a name="pbackfail"></a>  basic_filebuf::pbackfail
+## <a name="basic_filebufpbackfail"></a><a name="pbackfail"></a>  basic_filebuf::pbackfail
 
 Tenta colocar um elemento de volta no fluxo de entrada e torná-lo o elemento atual (apontado pelo ponteiro seguinte).
 
@@ -497,7 +497,7 @@ Tenta colocar um elemento de volta no fluxo de entrada e torná-lo o elemento at
 virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Meta*\
 O caractere a ser inserido no buffer ou `traits_type::eof`.
@@ -516,7 +516,7 @@ A função membro virtual protegida coloca um elemento de volta no buffer de ent
 
 - Se a função puder enviar um elemento por push para o fluxo de entrada, isso poderá fazer isso, por exemplo, chamando `ungetc` para um elemento do tipo **Char**.
 
-## <a name="pos_type"></a>  basic_filebuf::pos_type
+## <a name="basic_filebufpos_type"></a><a name="pos_type"></a>  basic_filebuf::pos_type
 
 Torna esse tipo dentro do escopo de `basic_filebuf` equivalente ao tipo de mesmo nome no escopo de `Tr`.
 
@@ -524,7 +524,7 @@ Torna esse tipo dentro do escopo de `basic_filebuf` equivalente ao tipo de mesmo
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="seekoff"></a>  basic_filebuf::seekoff
+## <a name="basic_filebufseekoff"></a><a name="seekoff"></a>  basic_filebuf::seekoff
 
 Tenta alterar as posições atuais para os fluxos controlados.
 
@@ -535,7 +535,7 @@ virtual pos_type seekoff(
     ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Off*\
 A posição a ser procurada em relação a *_Way*.
@@ -558,7 +558,7 @@ Para um arquivo aberto para leitura e gravação, os fluxos de entrada e saída 
 
 Se o ponteiro de arquivo `fp` for um ponteiro nulo, a função falhará. Caso contrário, ele tentará alterar a posição do fluxo chamando `fseek(fp, _Off, _Way)`. Se essa função for bem sucedido e a posição resultante `fposn` puder ser determinada chamando `fgetpos(fp, &fposn)`, a função terá sucesso. Se a função for realizada com sucesso, ela retornará um valor do tipo `pos_type` contendo `fposn`. Caso contrário, retorna uma posição de fluxo inválida.
 
-## <a name="seekpos"></a>  basic_filebuf::seekpos
+## <a name="basic_filebufseekpos"></a><a name="seekpos"></a>  basic_filebuf::seekpos
 
 Tenta alterar as posições atuais para os fluxos controlados.
 
@@ -568,7 +568,7 @@ virtual pos_type seekpos(
     ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Sp*\
 A posição pela qual buscar.
@@ -588,7 +588,7 @@ Para um arquivo aberto para leitura e gravação, os fluxos de entrada e saída 
 
 Para um fluxo amplo, se qualquer inserções tiverem ocorrido desde que o fluxo foi aberto ou desde a última chamada a `streampos`, as chamadas de função [estourarão](#overflow). Ele também insere qualquer sequência necessária para restaurar o estado de conversão inicial, usando a faceta de conversão de arquivo `fac` para chamar `fac.unshift` conforme necessário. Cada elemento produzido `byte` do tipo **Char** é gravado no fluxo associado designado pelo ponteiro do arquivo `fp` como se fosse por meio de chamadas sucessivas do formulário `fputc(byte, fp)`. Se a chamada para `fac.unshift` ou qualquer gravação falhar, a função não terá êxito.
 
-## <a name="setbuf"></a>  basic_filebuf::setbuf
+## <a name="basic_filebufsetbuf"></a><a name="setbuf"></a>  basic_filebuf::setbuf
 
 Executa um operação específica para cada buffer de fluxo derivado.
 
@@ -598,7 +598,7 @@ virtual basic_streambuf<Char_T, Tr> *setbuf(
     streamsize count);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Buffer*\
 Ponteiro para um buffer.
@@ -614,7 +614,7 @@ A função membro protegido retornará zero se o ponteiro do arquivo `fp` for um
 
 `setbuf` chama `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` para oferecer a matriz de elementos de `count` começando em *_Buffer* como um buffer para o fluxo. Se essa função retornar um valor diferente de zero, a função retornará um ponteiro nulo. Caso contrário, retornará **this** para indicar o sucesso.
 
-## <a name="swap"></a>  basic_filebuf::swap
+## <a name="basic_filebufswap"></a><a name="swap"></a>  basic_filebuf::swap
 
 Troca o conteúdo desse `basic_filebuf` pelo conteúdo do `basic_filebuf` fornecido.
 
@@ -622,12 +622,12 @@ Troca o conteúdo desse `basic_filebuf` pelo conteúdo do `basic_filebuf` fornec
 void swap(basic_filebuf& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 \ *à direita*
 Uma referência lvalue a outro `basic_filebuf`.
 
-## <a name="sync"></a>  basic_filebuf::sync
+## <a name="basic_filebufsync"></a><a name="sync"></a>  basic_filebuf::sync
 
 Tenta sincronizar os fluxos controlados com quaisquer fluxos externos associados.
 
@@ -639,7 +639,7 @@ virtual int sync();
 
 Retornará zero se o ponteiro do arquivo `fp` for um ponteiro nulo. Caso contrário, ele retornará zero somente se as chamadas para [overflow](#overflow) e `fflush(fp)` forem bem sucedidos ao liberar qualquer saída pendente para o fluxo.
 
-## <a name="traits_type"></a>  basic_filebuf::traits_type
+## <a name="basic_filebuftraits_type"></a><a name="traits_type"></a>  basic_filebuf::traits_type
 
 Associa um nome de tipo ao parâmetro de modelo `Tr`.
 
@@ -647,7 +647,7 @@ Associa um nome de tipo ao parâmetro de modelo `Tr`.
 typedef Tr traits_type;
 ```
 
-## <a name="underflow"></a>  basic_filebuf::underflow
+## <a name="basic_filebufunderflow"></a><a name="underflow"></a>  basic_filebuf::underflow
 
 Extrai o elemento atual do fluxo de entrada.
 
@@ -667,7 +667,7 @@ A função de membro virtual protegida tenta extrair o elemento atual `ch` do fl
 
 - Ele pode ler um ou mais elementos do tipo **Char**, como se houver chamadas sucessivas do formulário `fgetc(fp)`e convertê-los em um elemento `ch` do tipo `Char_T` usando a `fac` da faceta de conversão de arquivo para chamar `fac.in` conforme necessário. Se qualquer leitura ou conversão falhar, a função não será bem-sucedida.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [\<fstream>](../standard-library/fstream.md)\
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

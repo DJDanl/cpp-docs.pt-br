@@ -2,12 +2,12 @@
 title: Configurar um projeto do C++ Linux no Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 853afc39412ecd07f3ec6c9ad42d0ab599bfe17e
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 50d5df0e25e82238297458ec7fedb955654e525b
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077732"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150960"
 ---
 # <a name="configure-a-linux-project"></a>Configurar um projeto do Linux
 
@@ -17,7 +17,7 @@ O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 
 ::: moniker-end
 
-Este tópico descreve como configurar um projeto do C++ Linux, conforme descrito em [Criar um projeto do C++ Linux no Visual Studio](create-a-new-linux-project.md). Para projetos do CMake Linux, confira [Configurar um projeto do CMake Linux](cmake-linux-project.md).
+Este tópico descreve como configurar um projeto do C++ Linux, conforme descrito em [Criar um projeto do C++ Linux no Visual Studio](create-a-new-linux-project.md). Para projetos do CMake Linux, consulte [configurar um projeto CMake do Linux](cmake-linux-project.md).
 
 Configure um projeto do Linux para ter como destino um computador Linux físico, uma máquina virtual ou o [WSL](/windows/wsl/about) (Subsistema do Windows para Linux).
 
@@ -123,7 +123,7 @@ Habilite o log ajudar a solucionar problemas:
 
 ::: moniker-end
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Defina propriedades de build e compilador](../build/working-with-project-properties.md)<br/>
 [Propriedades gerais de C++ (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
