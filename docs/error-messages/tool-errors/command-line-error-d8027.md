@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - D8027
 ms.assetid: f228220f-0c7f-49a6-a6e0-1f7bd4745aa6
-ms.openlocfilehash: d3a7908ec9e7e37d83fd7b928cad2ef256313c40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42341507dfc2d3da02639dd28ab1265783452388
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214175"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196879"
 ---
 # <a name="command-line-error-d8027"></a>Erro D8027 (linha de comando)
 
-não é possível executar 'componente'
+Não é possível executar ' Component '
 
-O compilador não pôde executar o componente determinado compilador ou vinculador.
+O compilador não pôde executar o componente de compilador ou vinculador fornecido.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
 
-1. Não há memória suficiente para carregar o componente. Se NMAKE invocado o compilador, execute o compilador fora o makefile.
+1. Não há memória suficiente para carregar o componente. Se NMAKE invocar o compilador, execute o compilador fora do makefile.
 
-1. O sistema operacional atual não pôde executar o componente. Verifique se o caminho aponta para os arquivos executáveis apropriado para seu sistema operacional.
+1. O sistema operacional atual não pôde executar o componente. Verifique se o caminho aponta para os arquivos executáveis apropriados para o seu sistema operacional.
 
-1. O componente estava corrompido. Copiar novamente o componente a partir dos discos de distribuição, usando o programa de instalação.
+1. O componente foi corrompido. Recopie o componente dos discos de distribuição usando o programa de instalação.
 
 1. Uma opção foi especificada incorretamente. Por exemplo:
 

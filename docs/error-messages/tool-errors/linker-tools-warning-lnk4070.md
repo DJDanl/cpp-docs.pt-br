@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4070
 ms.assetid: f95f179a-fff9-427e-bd51-466b3934517f
-ms.openlocfilehash: e7139b21f053ea8633356c7194cd719a6a4aef35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 391a477625b51fd37eacc5d455801ce90d2abbc2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410259"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193999"
 ---
 # <a name="linker-tools-warning-lnk4070"></a>Aviso LNK4070 (Ferramentas de Vinculador)
 
-/Out: filename diretiva em. EXP difere do nome de arquivo de saída 'filename'; Ignorando diretiva
+/OUT: diretiva de nome de arquivo em. EXP difere do nome de arquivo de saída ' FileName '; ignorando diretiva
 
-O `filename` especificado na [nome](../../build/reference/name-c-cpp.md) ou [biblioteca](../../build/reference/library.md) difere de instrução quando o arquivo. EXP foi criado a partir da saída `filename` que foi considerado por padrão ou especificado com o [/Out](../../build/reference/out-output-file-name.md) opção.
+O `filename` especificado na instrução [Name](../../build/reference/name-c-cpp.md) ou [library](../../build/reference/library.md) quando o arquivo. exp foi criado difere do `filename` de saída que foi assumido por padrão ou especificado com a opção [/out](../../build/reference/out-output-file-name.md) .
 
-Você verá este aviso se você alterar o nome de um arquivo de saída no ambiente de desenvolvimento e onde o arquivo. def do projeto não foi atualizado. Atualize manualmente o arquivo. def para resolver este aviso.
+Você verá esse aviso se alterar o nome de um arquivo de saída no ambiente de desenvolvimento e onde o arquivo. def do projeto não foi atualizado. Atualize manualmente o arquivo. def para resolver este aviso.
 
-Um programa cliente que usa a DLL resultante poderá ter problemas.
+Um programa cliente que usa a DLL resultante pode ter problemas.

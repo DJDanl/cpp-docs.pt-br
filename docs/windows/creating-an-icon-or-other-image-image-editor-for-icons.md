@@ -79,12 +79,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 046b7e0070d95f5d17b3240884db76533f1c6ccd
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 931d84f16b46ea8fe21ecc0a63d20dac958ce960
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443918"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160432"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Como: criar um ícone ou outra imagem
 
@@ -98,7 +98,7 @@ Quando você cria um novo ícone ou cursor, o **Editor de imagem** primeiro cria
 
 Por padrão, o **Editor de imagem** dá suporte à criação de imagens adicionais para os dispositivos mostrados na tabela a seguir. Você pode criar imagens para outros dispositivos digitando largura, altura e parâmetros de contagem de cores na caixa de diálogo **imagem personalizada** .
 
-|Cor|Largura (pixels)|Altura (pixels)|
+|Color|Largura (pixels)|Altura (pixels)|
 |-----------|----------------------|-----------------------|
 |Monocromático|16|16|
 |Monocromático|32|32|
@@ -145,15 +145,15 @@ A propriedade **personalizada** abre a caixa de diálogo **imagem personalizada*
 
 A caixa de diálogo **imagem personalizada** permite que você crie uma nova imagem com um tamanho personalizado e um número de cores. As seguintes propriedades incluídas são:
 
-|Propriedade|Descrição|
+|Propriedade|DESCRIÇÃO|
 |---|---|
-|**Largura**|Fornece um espaço para inserir a largura da imagem personalizada em pixels (1-512, limite de 2048).|
-|**Altura**|Fornece um espaço para inserir a altura da imagem personalizada em pixels (1-512, limite de 2048).|
+|**Width**|Fornece um espaço para inserir a largura da imagem personalizada em pixels (1-512, limite de 2048).|
+|**Height**|Fornece um espaço para inserir a altura da imagem personalizada em pixels (1-512, limite de 2048).|
 |**Cores**|Fornece um espaço para você escolher o número de cores para a imagem personalizada: 2, 16 ou 256.|
 
 Use a caixa de diálogo **abrir &lt;dispositivo&gt; imagem** para abrir imagens de C++ dispositivo em projetos. Ele lista as imagens de dispositivo existentes no recurso atual (imagens que fazem parte do recurso atual). A seguinte propriedade incluída é:
 
-|Propriedade|Descrição|
+|Propriedade|DESCRIÇÃO|
 |---|---|
 |**Imagens atuais**|Lista as imagens incluídas no recurso. Selecione o tipo de imagem que você deseja abrir.|
 
@@ -271,7 +271,7 @@ Quando você cria um bitmap, a imagem é criada no formato de bitmap (. bmp). Vo
    > [!NOTE]
    > Você deve criar ou abrir o bitmap fora do seu projeto para salvá-lo como outro formato de arquivo. Se você criar ou abri-lo em seu projeto, o comando **salvar como** não estará disponível. Para obter mais informações, consulte [exibindo recursos em um arquivo de script de recurso fora de um projeto (autônomo)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 
-1. Selecione **Salvar**.
+1. Clique em **Salvar**.
 
 ### <a name="to-convert-an-image-from-one-format-to-another"></a>Para converter uma imagem de um formato para outro
 
@@ -283,7 +283,7 @@ Você pode abrir imagens GIF ou JPEG no **Editor de imagens** e salvá-las como 
 
 1. Na caixa de diálogo **salvar arquivo como** , na caixa **nome do arquivo** , digite o nome do arquivo e a extensão que denota o formato desejado.
 
-1. Selecione **Salvar**.
+1. Clique em **Salvar**.
 
 ### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Para adicionar um novo recurso de imagem a um C++ projeto não gerenciado
 
@@ -305,11 +305,11 @@ Você pode abrir imagens GIF ou JPEG no **Editor de imagens** e salvá-las como 
 
    O recurso é adicionado ao seu projeto no **Gerenciador de soluções** e o recurso é aberto no [Editor de imagem](../windows/image-editor-for-icons.md). Agora você pode usar todas as ferramentas disponíveis no **Editor de imagens** para modificar a imagem. Para obter mais informações sobre como adicionar imagens a um projeto gerenciado, consulte [carregando uma imagem em tempo de design](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms).
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 Nenhum
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Editor de imagens para ícones](../windows/image-editor-for-icons.md)<br/>
 [Como: editar uma imagem](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>

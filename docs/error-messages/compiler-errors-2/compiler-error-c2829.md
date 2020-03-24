@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C2829
 ms.assetid: b3bfecb8-c8c1-45fd-bb85-4b42a6b8ed2b
-ms.openlocfilehash: 5fe1703fe6239b414903dbcc714d9402a900c06d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 358d60b11a4c26cd3d7374853921f03a82bab76b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227936"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201860"
 ---
 # <a name="compiler-error-c2829"></a>Erro do compilador C2829
 
-'operator operador' não pode ter uma lista de parâmetros variáveis
+' operator Operator ' não pode ter uma lista de parâmetros de variável
 
-Apenas dois operadores podem levar a listas de parâmetro de variável:
+Somente dois operadores podem ter listas de parâmetros variáveis:
 
-- Chamada de função `()`
+- `()` de chamada de função
 
 - `new`

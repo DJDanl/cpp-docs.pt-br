@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2164
 ms.assetid: 23d7691d-80f3-4979-a519-378e5498d2d1
-ms.openlocfilehash: d9da84f6f59782f93d7a13d0e9aa46b1a88cc064
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6e01dabb2f6b13ea38de833fcd0a3e271e05c76
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396895"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191204"
 ---
 # <a name="resource-compiler-error-rc2164"></a>Erro RC2164 (compilador de recurso)
 
-valor inesperado na RCDATA
+valor inesperado em RCDATA
 
-O *dados brutos* os valores na **RCDATA** instrução deve ser números inteiros ou cadeias de caracteres, cada um separado por uma vírgula. Verifique se você não deixe de fora de uma vírgula ou deixe de fora de aspas em torno de uma cadeia de caracteres.
+Os valores de *dados brutos* na instrução **RCDATA** devem ser inteiros ou cadeias de caracteres, cada um separado por uma vírgula. Certifique-se de não deixar uma vírgula ou deixar uma aspa ao contrário de uma cadeia de caracteres.

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: 380cf58180913f538c1c326d6aaf49947b694063
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3eae1aca53c40a33b8d120b02fdde8f68d58b723
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445422"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160419"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>Como: criar uma caixa de diálogo (C++)
 
@@ -26,7 +26,7 @@ O local e o tamanho de C++ uma caixa de diálogo e o local e o tamanho dos contr
 > [!NOTE]
 > Se o seu projeto ainda não contiver um arquivo. rc, consulte [criando um novo arquivo de script de recurso](../windows/how-to-create-a-resource-script-file.md).
 
-## <a name="how-to"></a>Como
+## <a name="how-to"></a>Instruções
 
 O **Editor de caixa de diálogo** permite que você:
 
@@ -96,11 +96,11 @@ Quando você testa uma caixa de diálogo, ela normalmente é exibida em um local
 
 1. Para encerrar a simulação, pressione **ESC** ou selecione o botão **fechar** na caixa de diálogo que você está testando.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 Win32
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Editor de caixa de diálogo](../windows/dialog-editor.md)<br/>
 [Como: gerenciar controles da caixa de diálogo](../windows/controls-in-dialog-boxes.md)<br/>

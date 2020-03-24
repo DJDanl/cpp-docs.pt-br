@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - U1078
 ms.assetid: 24087955-9362-4ddf-9966-e0de43ea4647
-ms.openlocfilehash: cfccb9139fc1081a2651c2f54381517dce765ca8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1529e98f851accee071f4f233cc9bf518c70324
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366882"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193648"
 ---
 # <a name="nmake-fatal-error-u1078"></a>Erro fatal U1078 (NMAKE)
 
-estouro constante em 'expression'
+estouro de constante em ' Expression '
 
-A expressão fornecida continha uma constante que excederam o intervalo de-2.147.483.648 a 2.147.483.647. A constante é exibida em uma das seguintes situações:
+A expressão fornecida continha uma constante que excedeu o intervalo de-2.147.483.648 a 2.147.483.647. A constante apareceu em uma das seguintes situações:
 
 - Uma expressão especificada com uma diretiva de pré-processamento
 
-- Um nível de erro especificado com o traço (**-**) modificador de comando
+- Um nível de erro especificado com o modificador de comando Dash ( **-** )

@@ -3,12 +3,12 @@ title: Programação em paralelo no Visual C++
 ms.date: 11/04/2016
 ms.assetid: f5c28ab6-a1d9-492f-b207-05e8aee73e96
 ms.topic: overview
-ms.openlocfilehash: 3aa6e248f34293f6564f0b98c524f07535dbb20e
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: bc7abf7f378085160312c370552ff966e4ce0a1e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274772"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160392"
 ---
 # <a name="parallel-programming-in-visual-c"></a>Programação em paralelo no Visual C++
 
@@ -16,10 +16,10 @@ O C++ Visual fornece as seguintes tecnologias para ajudá-lo a criar programas d
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-|Título|Descrição|
+|Title|DESCRIÇÃO|
 |-----------|-----------------|
 |[Paralelização automática e vetorização automática](auto-parallelization-and-auto-vectorization.md)|Otimizações de compilador que aceleram o código.|
-|[Tempo de Execução de Simultaneidade](concrt/concurrency-runtime.md)|Classes que simplificam a gravação de programas que usam paralelismo de dados ou paralelismo de tarefas.|
+|[Runtime de Simultaneidade](concrt/concurrency-runtime.md)|Classes que simplificam a gravação de programas que usam paralelismo de dados ou paralelismo de tarefas.|
 |[C++ AMP (C++ Accelerated Massive Parallelism)](amp/cpp-amp-cpp-accelerated-massive-parallelism.md)|Classes que permitem o uso de processadores gráficos modernos para programação de uso geral.|
 |[Suporte de multithreading para código anterior (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)|Tecnologias mais antigas que podem ser úteis em aplicativos mais antigos. Para novos aplicativos, use o Tempo de Execução de Simultaneidade ou C++ amp.|
 |[OpenMP](openmp/openmp-in-visual-cpp.md)|A implementação da API de OpenMP da Microsoft.|

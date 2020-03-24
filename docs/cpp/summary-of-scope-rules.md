@@ -8,20 +8,20 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-ms.openlocfilehash: af708fd72904fb775ff1088948972bec159816c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f8b79c637662d79051b72e6aabefc99c450bdc5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266901"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160873"
 ---
 # <a name="summary-of-scope-rules"></a>Resumo das regras de escopo
 
-O uso de um nome deve ser inequívoco dentro de seu escopo (até o ponto onde a sobrecarga é determinada). Se o nome denota uma função, a função deve ser inequívoca em relação ao número e tipo de parâmetros. Se o nome permanecer inequívoco, [acesso de membro](../cpp/member-access-control-cpp.md) as regras são aplicadas.
+O uso de um nome deve ser inequívoco dentro de seu escopo (até o ponto onde a sobrecarga é determinada). Se o nome denota uma função, a função deve ser inequívoca em relação ao número e ao tipo de parâmetros. Se o nome permanecer inequívoca, as regras [de acesso de membro](../cpp/member-access-control-cpp.md) serão aplicadas.
 
 ## <a name="constructor-initializers"></a>Inicializadores de construtores
 
-[Inicializadores de construtor](constructors-cpp.md#member_init_list) são avaliados no escopo do bloco externo do construtor para o qual eles são especificados. Portanto, eles podem usar nomes de parâmetro do construtor.
+[Inicializadores de Construtor](constructors-cpp.md#member_init_list) são avaliados no escopo do bloco mais externo do construtor para o qual eles são especificados. Portanto, eles podem usar os nomes de parâmetro do construtor.
 
 ## <a name="global-names"></a>Nomes globais
 
@@ -29,21 +29,21 @@ Um nome de um objeto, função ou enumerador é global se introduzido fora de qu
 
 - Resolução do escopo (`::`)
 
-- Seleção de membro para objetos e referências (**.**)
+- Seleção de membros para objetos e referências ( **.** )
 
-- Seleção de membro para ponteiros (**->**)
+- Seleção de membros para ponteiros ( **->** )
 
 ## <a name="qualified-names"></a>Nomes qualificados
 
 Os nomes usados com o operador de resolução de escopo binário (`::`) são chamados de "nomes qualificados". O nome especificado depois do operador de resolução de escopo deve ser membro da classe especificada à esquerda do operador ou membro de sua classe base.
 
-Os nomes especificados após o operador de seleção de membro (**.** ou **->**) devem ser membros do tipo de classe do objeto especificado à esquerda do operador ou membros de suas classes base. Os nomes especificados à direita do operador de seleção de membros (**->**) também podem ser objetos de outro tipo de classe, contanto que o lado esquerdo da **->** é um objeto de classe e que a classe define um operador de seleção de membro sobrecarregado (**->**) que é avaliada como um ponteiro para algum outro tipo de classe. (Esse provisionamento é abordado mais detalhadamente [acesso de membro de classe](../cpp/member-access.md).)
+Nomes especificados após o operador de seleção de membro ( **.** ou **->** ) devem ser membros do tipo de classe do objeto especificado à esquerda do operador ou membros de sua classe base (es). Os nomes especificados à direita do operador de seleção de membro ( **->** ) também podem ser objetos de outro tipo de classe, desde que o lado esquerdo de **->** seja um objeto de classe e que a classe defina um operador de seleção de membro sobrecarregado ( **->** ) que seja avaliado como um ponteiro para algum outro tipo de classe. (Esse provisionamento é discutido em mais detalhes em [acesso de membro de classe](../cpp/member-access.md).)
 
 O compilador pesquisa por nomes na seguinte ordem, parando quando o nome é encontrado:
 
 1. Escopo do bloco atual se o nome for usado em uma função; caso contrário, o escopo global.
 
-1. Para fora por meio de cada escopo de bloco delimitador, incluindo o escopo da função externa (que inclui parâmetros de função).
+1. Fora de cada escopo de bloco delimitador, incluindo o escopo de função mais externo (que inclui parâmetros de função).
 
 1. Se o nome for usado dentro de uma função de membro, o escopo da classe será pesquisado por nome.
 
@@ -57,20 +57,20 @@ No entanto, você pode modificar essa ordem de pesquisa como segue:
 
 1. Os nomes precedidos por `::` forçam a pesquisa a iniciar no escopo global.
 
-1. Os nomes precedidos pela **classe**, **struct**, e **união** palavras-chave forçam o compilador a pesquisar somente por **classe**,  **struct**, ou **união** nomes.
+1. Os nomes precedidos pelas palavras-chave **Class**, **struct**e **Union** forçam o compilador a pesquisar somente nomes de **classe**, **struct**ou **Union** .
 
-1. Nomes no lado esquerdo do operador de resolução de escopo (`::`) pode ser apenas **classe**, **struct**, **namespace**, ou **união**nomes.
+1. Os nomes no lado esquerdo do operador de resolução de escopo (`::`) podem ser somente nomes de **classe**, **struct**, **namespace**ou **União** .
 
-Se o nome se refere a um membro não estático, mas é usado em uma função de membro estático, uma mensagem de erro é gerada. Da mesma forma, se o nome se refere a qualquer membro não estático em uma classe delimitadora, uma mensagem de erro é gerada porque as classes incluídas não têm classe circunscrição **isso** ponteiros.
+Se o nome se refere a um membro não estático, mas é usado em uma função de membro estático, uma mensagem de erro é gerada. Da mesma forma, se o nome se referir a qualquer membro não estático em uma classe delimitadora, uma mensagem de erro será gerada porque as classes embutidas não têm **a** classe delimitadora de ponteiros.
 
 ## <a name="function-parameter-names"></a>Nomes de parâmetro de função
 
-Nomes de parâmetro de função em definições de função são considerados para estar no escopo do bloco externo da função. Portanto, eles são nomes locais e saem do escopo quando a função é encerrada.
+Os nomes de parâmetro de função nas definições de função são considerados no escopo do bloco mais externo da função. Portanto, eles são nomes locais e saem do escopo quando a função é encerrada.
 
-Nomes de parâmetro de função em declarações de função (protótipos) estão no escopo local da declaração e saem do escopo no final da declaração.
+Os nomes de parâmetro de função em declarações de função (protótipos) estão no escopo local da declaração e saem do escopo no final da declaração.
 
-Parâmetros padrão estão no escopo do parâmetro para o qual eles são o padrão, conforme descrito nos dois parágrafos anteriores. No entanto, eles não podem acessar variáveis locais nem membros de classes não estáticas. Parâmetros padrão são avaliados no ponto da chamada de função, mas eles são avaliados no escopo original da declaração de função. Portanto, os parâmetros padrão para funções de membro são sempre avaliados no escopo da classe.
+Os parâmetros padrão estão no escopo do parâmetro para o qual eles são o padrão, conforme descrito nos dois parágrafos anteriores. No entanto, eles não podem acessar variáveis locais nem membros de classes não estáticas. Os parâmetros padrão são avaliados no ponto da chamada de função, mas são avaliados no escopo original da declaração de função. Portanto, os parâmetros padrão para as funções de membro são sempre avaliados no escopo de classe.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Herança](../cpp/inheritance-cpp.md)

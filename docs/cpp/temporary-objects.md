@@ -5,18 +5,18 @@ helpviewer_keywords:
 - temporary objects
 - objects [C++], temporary
 ms.assetid: 4c8cec02-391e-4225-9bc6-06d150201412
-ms.openlocfilehash: 19fd21da09149e730aac9bd0fb2cde066043e030
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b298872a688c3b8e383a04ea4d82753859cbb2e6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266797"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160743"
 ---
 # <a name="temporary-objects"></a>Objetos temporários
 
 Em alguns casos, é necessário que o compilador crie objetos temporários. Esses objetos temporários podem ser criados pelos seguintes motivos:
 
-- Para inicializar uma **const** referência com um inicializador de um tipo diferente do tipo subjacente da referência que está sendo inicializado.
+- Para inicializar uma referência **const** com um inicializador de um tipo diferente daquele do tipo subjacente da referência que está sendo inicializada.
 
 - Para armazenar o valor de retorno de uma função que retorna um tipo definido pelo usuário. Esses temporários só serão criados quando o programa não copia o valor de retorno para um objeto. Por exemplo:
 
@@ -33,7 +33,7 @@ Em alguns casos, é necessário que o compilador crie objetos temporários. Esse
 
    Como o valor de retorno não é copiado a outro objeto, um objeto temporário será criado. Um caso comum mais comum onde os temporários são criados é durante a avaliação de uma expressão onde as funções sobrecarregadas do operador devem ser chamadas. Essas funções sobrecarregadas do operador retornam um tipo definido pelo usuário que geralmente não é copiado a outro objeto.
 
-   Considere a expressão `ComplexResult = Complex1 + Complex2 + Complex3`. A expressão `Complex1 + Complex2` é avaliada, e o resultado é armazenado em um objeto temporário. Em seguida, a expressão *temporária* `+ Complex3` é avaliada, e o resultado é copiado para `ComplexResult` (o supondo que o operador de atribuição não seja sobrecarregado).
+   Considere a expressão `ComplexResult = Complex1 + Complex2 + Complex3`. A expressão `Complex1 + Complex2` é avaliada, e o resultado é armazenado em um objeto temporário. Em seguida, o `+ Complex3` de expressão *temporário* é avaliado e o resultado é copiado para `ComplexResult` (supondo que o operador de atribuição não esteja sobrecarregado).
 
 - Para armazenar o resultado de uma conversão em um tipo definido pelo usuário. Quando um objeto de um determinado tipo é convertido explicitamente em um tipo definido pelo usuário, o novo objeto é criado como um objeto temporário.
 
@@ -43,5 +43,5 @@ Os objetos temporários têm um tempo de vida definido pelo ponto de criação e
 
 |Motivo temporário criado|Ponto de destruição|
 |------------------------------|-----------------------|
-|Resultado da avaliação de expressão|Todos os temporaries criados como resultado da avaliação da expressão são destruídos no final da instrução de expressão (ou seja, em que o ponto e vírgula), ou no final das expressões de controle para **para**, **se**, **enquanto**, **fazer**, e **alternar** instruções.|
-|Inicializando **const** referências|Se um inicializador não for um valor l do mesmo tipo da referência que está sendo inicializada, um temporário do tipo de objeto subjacente será criada e inicializada com a expressão de inicialização. Esse objeto temporário será destruído imediatamente depois que o objeto de referência ao qual está associado é destruído.|
+|Resultado da avaliação de expressão|Todos os temporaries criados como resultado da avaliação de expressão são destruídos no final da instrução de expressão (ou seja, no ponto-e-vírgula) ou no final das expressões de controle para as instruções **for**, **If**, **while** **, e** **switch** .|
+|Inicializando referências **const**|Se um inicializador não for um valor l do mesmo tipo da referência que está sendo inicializada, um temporário do tipo de objeto subjacente será criada e inicializada com a expressão de inicialização. Esse objeto temporário será destruído imediatamente depois que o objeto de referência ao qual está associado é destruído.|

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4037
 ms.assetid: 9ba02fd3-b04f-4679-bab9-26fa82cf09bb
-ms.openlocfilehash: 9a8121617e622fc12efe5bd26aac23faf2530f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43fae7d0f19f96998d2e1a1739bc3e596bbd9ea9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410298"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194194"
 ---
 # <a name="linker-tools-warning-lnk4037"></a>Aviso LNK4037 (Ferramentas de Vinculador)
 
->'*símbolo*' não existe; ignorado
+>'*Symbol*' não existe; aceita
 
-O nome decorado *símbolo* não pôde ser ordenados usando o [/ORDER](../../build/reference/order-put-functions-in-order.md) opção porque ele não pôde ser encontrado no programa. Verifique a especificação de *símbolo* no arquivo de resposta de ordem. Para obter mais informações, consulte o [/ORDER (colocar funções na ordem)](../../build/reference/order-put-functions-in-order.md) a opção de vinculador.
+Não foi possível ordenar o *símbolo* de nome decorado usando a opção [/Order](../../build/reference/order-put-functions-in-order.md) porque ele não foi encontrado no programa. Verifique a especificação do *símbolo* no arquivo de resposta do pedido. Para obter mais informações, consulte a opção de vinculador [/Order (put functions in order)](../../build/reference/order-put-functions-in-order.md) .
 
 > [!NOTE]
-> LINK não é possível ordenar funções estáticas, como nomes de função estática não são nomes de símbolos públicos. Quando **/ORDER** é especificado, esse aviso de vinculador é gerado para cada símbolo no arquivo de resposta de ordem que são estáticos ou não foi encontrado.
+> O LINK não pode ordenar funções estáticas porque nomes de funções estáticas não são nomes de símbolos públicos. Quando **/Order** é especificado, esse aviso do vinculador é gerado para cada símbolo no arquivo de resposta da ordem que é estático ou não encontrado.

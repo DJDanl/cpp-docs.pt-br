@@ -4,12 +4,12 @@ ms.date: 11/19/2019
 f1_keywords:
 - noexcept_cpp
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
-ms.openlocfilehash: 5e8d58ed246b0143dc3d3be545cd796a4c3d60ed
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: cc669a43ff9acbb98ce970c21cba5ac9cdc5b732
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245621"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161042"
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
 
@@ -19,7 +19,7 @@ ms.locfileid: "74245621"
 
 > *noexcept-expressão*: &nbsp;&nbsp;&nbsp;&nbsp;**noexcepto** &nbsp;&nbsp;&nbsp;&nbsp;**noexcept (** *expressão de constante* **)**
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *expressão de constante*<br/>
 Uma expressão constante do tipo **bool** que representa se o conjunto de possíveis tipos de exceção está vazio. A versão incondicional é equivalente a `noexcept(true)`.
@@ -44,7 +44,7 @@ T copy_object(const T& obj) noexcept(std::is_pod<T>)
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Práticas C++ recomendadas modernas para exceções e tratamento de erros](errors-and-exception-handling-modern-cpp.md)<br/>
 [Especificações de exceção (throw, noexcept)](exception-specifications-throw-cpp.md)

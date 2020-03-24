@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4104
 ms.assetid: ca6728db-d616-419a-a570-65e8445c6079
-ms.openlocfilehash: 3d89b27c32b33b917abb7fc140eebf5924142423
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 604dccf01b3dffc0060546bebf19d64c16ebf965
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298536"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193960"
 ---
 # <a name="linker-tools-warning-lnk4104"></a>Aviso LNK4104 (Ferramentas de Vinculador)
 
-exportação de símbolo 'symbol' deve ser PRIVATE
+a exportação do símbolo ' Symbol ' deve ser privada
 
-O `symbol` pode ser uma das seguintes opções:
+O `symbol` pode ser um dos seguintes:
 
 - `DllCanUnloadNow`
 
@@ -49,4 +49,4 @@ O `symbol` pode ser uma das seguintes opções:
 
 - `RasCustomEntryDlg`
 
-Esse aviso é emitido quando você estiver criando uma biblioteca de importação para uma DLL e exportar uma das funções acima sem especificá-lo como particular no arquivo de definição de módulo. Em geral, essas funções são exportadas para uso somente pelo OLE. Colocando-as na biblioteca de importação pode resultar em comportamento incomum quando um programa vinculado à biblioteca incorretamente faz chamadas para eles. Para obter mais informações sobre a palavra-chave PRIVADA, consulte [exportações](../../build/reference/exports.md).
+Esse aviso é emitido quando você está criando uma biblioteca de importação para uma DLL e exporta uma das funções acima sem especificá-la como particular no arquivo de definição de módulo. Em geral, essas funções são exportadas para uso somente pelo OLE. Colocá-los na biblioteca de importação pode levar a um comportamento incomum quando um programa vinculado à biblioteca faz chamadas a eles incorretamente. Para obter mais informações sobre a palavra-chave PRIVATE, consulte [Exports](../../build/reference/exports.md).

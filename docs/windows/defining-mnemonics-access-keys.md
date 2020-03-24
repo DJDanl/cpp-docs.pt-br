@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 8ebd8d48b68581bf00215b4ca14f5ac0a543a3c0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e782788832063e210356864e074c15e9ba3555f4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443904"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160314"
 ---
 # <a name="how-to-define-control-access-and-values-c"></a>Como definir o acesso e os valores de controleC++()
 
@@ -147,11 +147,11 @@ Você pode ter mais de um grupo de botões de opção em uma caixa de diálogo. 
 
    Agora você pode modificar seu código para especificar qual botão de opção deve aparecer selecionado. Por exemplo, `m_radioBox1 = 0;` seleciona o primeiro botão de opção no grupo.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 Win32
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gerenciar controles da caixa de diálogo](controls-in-dialog-boxes.md)<br/>
 [Como: Adicionar, editar ou excluir controles](adding-editing-or-deleting-controls.md)<br/>

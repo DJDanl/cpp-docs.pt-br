@@ -11,12 +11,12 @@ helpviewer_keywords:
 - + operator [C++], unary operators
 - + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
-ms.openlocfilehash: 83fedd9d3cc6cd7c08ba79d2ed83e9f62d919e29
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e640d18dc3755385188e166c57ad5e912ac24fb4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857236"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160587"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>Operadores unários de adição e de negação: + e -
 
@@ -45,7 +45,7 @@ A negação unária de quantidades não assinadas é executada subtraindo o valo
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Expressões com operadores unários](../cpp/expressions-with-unary-operators.md)<br/>
 [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
