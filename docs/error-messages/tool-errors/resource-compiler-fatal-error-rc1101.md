@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - RC1101
 ms.assetid: ff273384-b819-464a-8c0e-d5951e4a28b4
-ms.openlocfilehash: abe16bb949fff46f01b51efee842f065d8e37cae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45ffe1d687cc54268af489a268a5927d00ad3224
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374281"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182507"
 ---
 # <a name="resource-compiler-fatal-error-rc1101"></a>Erro fatal RC1101 (compilador de recurso)
 
-> Nenhum recurso nome de arquivo binário especificado
+> nenhum nome de arquivo binário de recurso especificado
 
-A saída de renomear (/ fo) opção não foi seguida por um nome de arquivo.
+A opção renomear saída (/fo) não foi seguida por um nome de arquivo.
 
-Use a seguinte sintaxe para a opção /fo:
+Use a sintaxe a seguir para a opção/FO:
 
-> **RC /fo** *outfilename* <em>infilename</em>**.rc**
+> **RC/fo** *outfilename* arquivo de <em>arquivo</em> **. rc**

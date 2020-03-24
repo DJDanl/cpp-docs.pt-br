@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6102
 ms.assetid: dbd2241f-6595-431e-9597-d9dbdb3a0ca2
-ms.openlocfilehash: 73c4b48819937ed4b49c80969c18701c8820956e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 146ca1f51b15ee87475bc2007d63259d70450f38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383832"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173758"
 ---
 # <a name="math-error-m6102"></a>Erro M6102 (Math)
 
-denormal
+anormal
 
-Uma operação gerou um número muito pequeno de ponto flutuante, que ser inválida devido a perda de significância. Desnormalizado exceções de ponto flutuante são mascaradas, fazendo com que eles sejam interceptadas e operada.
+Uma operação gerou um número de ponto flutuante muito pequeno, que é inválido devido à perda de significância. As exceções desnormals de ponto flutuante geralmente são mascaradas, fazendo com que elas sejam interceptadas e operadas.
 
-Programa é encerrado com código de saída 130.
+O programa é encerrado com o código de saída 130.

@@ -1,31 +1,31 @@
 ---
-title: Compilador aviso (nível 1) C4772
+title: Aviso do compilador (nível 1) C4772
 ms.date: 11/04/2016
 f1_keywords:
 - C4772
 helpviewer_keywords:
 - C4772
 ms.assetid: dafe6fd8-9faf-41f5-9d66-a55838742c14
-ms.openlocfilehash: 95243ab66d5d0296e1c316ff8dde7add75a030cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89156b2f29fd21160e6abddc3ecb21efaee6dde1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385453"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175123"
 ---
-# <a name="compiler-warning-level-1-c4772"></a>Compilador aviso (nível 1) C4772
+# <a name="compiler-warning-level-1-c4772"></a>Aviso do compilador (nível 1) C4772
 
-> \#import referenciou um tipo de uma biblioteca de tipos faltando; '*tipo ausente*' usado como um espaço reservado
+> \#importação referenciou um tipo de uma biblioteca de tipos ausente; '*tipo ausente*' usado como um espaço reservado
 
-Uma biblioteca de tipos foi referenciada com o [#import](../../preprocessor/hash-import-directive-cpp.md) diretiva. No entanto, a biblioteca de tipos continha uma referência a outra biblioteca de tipos que não foi referenciada com `#import`. Esse outro arquivo. tlb não foi encontrado pelo compilador.
+Uma biblioteca de tipos foi referenciada com a diretiva [#import](../../preprocessor/hash-import-directive-cpp.md) . No entanto, a biblioteca de tipos continha uma referência a outra biblioteca de tipos que não foi referenciada com `#import`. Esse outro arquivo. tlb não foi encontrado pelo compilador.
 
-Observe que o compilador não encontrará as bibliotecas de tipos em diretórios diferentes se você usar o [/I (diretórios de inclusão adicionais)](../../build/reference/i-additional-include-directories.md) opção de compilador para especificar os diretórios. Se você deseja que o compilador para encontrar as bibliotecas de tipos em diretórios diferentes, adicione esses diretórios para a variável de ambiente PATH.
+Observe que o compilador não encontrará bibliotecas de tipos em diretórios diferentes se você usar a opção de compilador [/i (diretórios de inclusão adicionais)](../../build/reference/i-additional-include-directories.md) para especificar esses diretórios. Se você quiser que o compilador encontre bibliotecas de tipos em diretórios diferentes, adicione esses diretórios à variável de ambiente PATH.
 
-Por padrão, esse aviso é emitido como um erro. Não podem ser suprimidos C4772 com /W0.
+Por padrão, esse aviso é emitido como um erro. C4772 não pode ser suprimido com/W0.
 
 ## <a name="example"></a>Exemplo
 
-Essa é a primeira biblioteca de tipo necessária para reproduzir C4772.
+Essa é a primeira biblioteca de tipos necessária para reproduzir C4772.
 
 ```IDL
 // c4772a.idl
@@ -40,7 +40,7 @@ library C4772aLib
 };
 ```
 
-Esta é a segunda biblioteca de tipo necessária para reproduzir C4772.
+Essa é a segunda biblioteca de tipos necessária para reproduzir o C4772.
 
 ```IDL
 // c4772b.idl

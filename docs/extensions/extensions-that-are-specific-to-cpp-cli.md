@@ -3,12 +3,12 @@ title: Extensões específicas de C++/CLI
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 81e3fd32-6c8f-490b-9190-a6dc291545c8
-ms.openlocfilehash: 1113f50696cd9c4de31bc796973cccf7a9ee6fb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3d65c026d679537d29ef153cca3ae9f4628f3386
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516391"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182104"
 ---
 # <a name="extensions-that-are-specific-to-ccli"></a>Extensões específicas de C++/CLI
 
@@ -26,6 +26,6 @@ Os seguintes recursos de linguagem se aplicam apenas ao C++/CLI:
 
 [Listas de argumentos variáveis (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

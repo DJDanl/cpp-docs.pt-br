@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Detach method [C++]
 - VARIANT object
 ms.assetid: c348ac08-62cf-4657-a16f-974a79c12158
-ms.openlocfilehash: 8426c80af04b2c0906af150ea3e91304335e9f69
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9737db6b77483fa55e1dad90b9464752cd8537a5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500556"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187733"
 ---
 # <a name="_variant_tdetach"></a>_variant_t::Detach
 
 **Seção específica da Microsoft**
 
-Desanexa o `VARIANT` objeto `_variant_t` encapsulado deste objeto.
+Desanexa o objeto de `VARIANT` encapsulado deste objeto `_variant_t`.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,16 +28,16 @@ Desanexa o `VARIANT` objeto `_variant_t` encapsulado deste objeto.
 VARIANT Detach( );
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-O encapsulado `VARIANT`.
+O `VARIANT`encapsulado.
 
 ## <a name="remarks"></a>Comentários
 
-Extrai e retorna o encapsulado `VARIANT`e limpa esse `_variant_t` objeto sem destruí-lo. Essa função de membro remove `VARIANT` o de encapsulamento e define `VARTYPE` o desse `_variant_t` objeto como VT_EMPTY. Cabe a você liberar o retornado `VARIANT` chamando a função [VariantClear](/windows/win32/api/oleauto/nf-oleauto-variantclear) .
+Extrai e retorna o `VARIANT`encapsulado e, em seguida, limpa esse objeto `_variant_t` sem destruí-lo. Essa função de membro remove a `VARIANT` do encapsulamento e define a `VARTYPE` desse objeto `_variant_t` como VT_EMPTY. Cabe a você liberar o `VARIANT` retornado chamando a função [VariantClear](/windows/win32/api/oleauto/nf-oleauto-variantclear) .
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe _variant_t](../cpp/variant-t-class.md)

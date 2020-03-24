@@ -6,40 +6,40 @@ f1_keywords:
 helpviewer_keywords:
 - U1033
 ms.assetid: c146f7b5-7d5c-4329-a522-28a648546016
-ms.openlocfilehash: 3b1df28e3cd7b27a9e7a130d9d71c1af68db9aec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4511b15c84479c3531a3bea85964e2768de0181f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324357"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173381"
 ---
 # <a name="nmake-fatal-error-u1033"></a>Erro fatal U1033 (NMAKE)
 
-Erro de sintaxe: 'string' inesperado
+erro de sintaxe: ' String ' inesperado
 
-A cadeia de caracteres não é parte da sintaxe válida para um makefile.
+A cadeia de caracteres não faz parte da sintaxe válida para um makefile.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
 
-1. Se o fechamento definido de colchetes angulares (**<<**) para um arquivo embutido não estão no início de uma linha, ocorre o seguinte erro:
+1. Se o conjunto de fechamento de colchetes angulares ( **<<** ) para um arquivo embutido não estiver no início de uma linha, o seguinte erro ocorrerá:
 
     ```
     syntax error : 'EOF' unexpected
     ```
 
-1. Se uma definição de macro no makefile continha um sinal de igual (**=**) sem o nome de um anterior ou se o nome que está sendo definido é uma macro que se expande para nada, ocorre o seguinte erro:
+1. Se uma definição de macro no Makefile contiver um sinal de igual ( **=** ) sem um nome anterior ou se o nome que está sendo definido for uma macro que se expande como Nothing, ocorre o seguinte erro:
 
     ```
     syntax error : '=' unexpected
     ```
 
-1. Se o ponto e vírgula (**;**) em uma linha de comentário em ferramentas. INI não está no início da linha, ocorre o seguinte erro:
+1. Se o ponto-e-vírgula ( **;** ) em uma linha de comentário em ferramentas. INI não está no início da linha, o seguinte erro ocorre:
 
     ```
     syntax error : ';' unexpected
     ```
 
-1. Se o makefile tiverem sido formatado por um processador de texto, o seguinte erro pode ocorrer:
+1. Se o makefile tiver sido formatado por um processador de texto, o seguinte erro poderá ocorrer:
 
     ```
     syntax error : ':' unexpected

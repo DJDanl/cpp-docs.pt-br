@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: 1726e6ce74dfd7b6b0c6e4b69771a826cdf07774
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 9c5c2824778a679627bd3008276849890f43ac7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71230413"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190684"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Erro RW2002 (compilador de recurso)
 
@@ -21,7 +21,7 @@ Erro de análise
 
 1. **Tipo de acelerador necessário (ASCII ou VIRTKEY)**
 
-   O `type` campo na instrução **Accelerators** deve conter o valor ASCII ou VIRTKEY.
+   O campo `type` na instrução **Accelerators** deve conter o valor ASCII ou VIRTKEY.
 
 1. **INÍCIO esperado na tabela do acelerador**
 
@@ -65,11 +65,11 @@ Erro de análise
 
 1. **Vírgula esperada na tabela do acelerador**
 
-   O compilador de recurso requer uma vírgula entre `event` os campos e *idvalue* na instrução **Accelerators** .
+   O compilador de recurso requer uma vírgula entre os campos `event` e *idvalue* na instrução **Accelerators** .
 
 1. **Nome de classe de controle esperado**
 
-   O `class` campo de uma instrução de **controle** na instrução da **caixa de diálogo** deve ser um dos seguintes tipos: BOTÃO, caixa de combinação, editar, caixa de listagem, barra de ROLAgem, estático ou definido pelo usuário. Verifique se a classe está grafada corretamente.
+   O campo `class` de uma instrução de **controle** na instrução da **caixa de diálogo** deve ser um dos seguintes tipos: Button, ComboBox, Edit, ListBox, ScrollBar, static ou User-defined. Verifique se a classe está grafada corretamente.
 
 1. **Nome de face da fonte esperado**
 
@@ -85,11 +85,11 @@ Erro de análise
 
 1. **Valor de comando numérico esperado**
 
-   O compilador de recurso estava esperando um campo *idvalue* numérico na instrução **Accelerators** . Verifique se você usou uma `#define` constante para especificar o valor e se a constante está grafada corretamente.
+   O compilador de recurso estava esperando um campo *idvalue* numérico na instrução **Accelerators** . Verifique se você usou uma constante `#define` para especificar o valor e se a constante está grafada corretamente.
 
 1. **Constante numérica esperada na tabela de cadeia de caracteres**
 
-   Uma constante numérica, definida em uma `#define` instrução, deve seguir imediatamente a palavra-chave **begin** em uma instrução **STRINGTABLE** .
+   Uma constante numérica, definida em uma instrução `#define`, deve seguir imediatamente a palavra-chave **begin** em uma instrução **STRINGTABLE** .
 
 1. **Tamanho de ponto numérico esperado**
 
@@ -105,19 +105,19 @@ Erro de análise
 
 1. **Cadeia de caracteres esperada ou comando acelerador de constante**
 
-   O compilador de recurso não pôde determinar que tipo de chave está sendo configurada para o acelerador. O `event` campo na instrução **aceleradores** pode ser inválido.
+   O compilador de recurso não pôde determinar que tipo de chave está sendo configurada para o acelerador. O campo `event` na instrução **Accelerators** pode ser inválido.
 
 1. **Esperando número para ID**
 
-   Esperando um número para o `id` campo de uma instrução de controle na instrução da **caixa de diálogo** . Verifique se você tem um número ou `#define` uma instrução para a ID de controle.
+   Esperando um número para o campo `id` de uma instrução de controle na instrução da **caixa de diálogo** . Verifique se você tem um número ou `#define` instrução para a ID de controle.
 
 1. **Esperando cadeia de caracteres entre aspas na classe da caixa de diálogo**
 
-   O `class` campo da opção de classe na instrução da **caixa de diálogo** deve ser um número inteiro ou uma cadeia de caracteres entre aspas duplas.
+   O campo `class` da opção de classe na instrução da **caixa de diálogo** deve ser um número inteiro ou uma cadeia de caracteres entre aspas duplas.
 
 1. **Esperando cadeia de caracteres entre aspas no título da caixa de diálogo**
 
-   O `captiontext` campo da opção de legenda na instrução da **caixa de diálogo** deve ser uma cadeia de caracteres ASCII entre aspas duplas.
+   O campo `captiontext` da opção CAPTION na instrução **Dialog** deve ser uma cadeia de caracteres ASCII entre aspas duplas.
 
 1. **Arquivo não encontrado: nome de arquivo**
 
@@ -129,11 +129,11 @@ Erro de análise
 
 1. **Acelerador inválido**
 
-   Um `event` campo na instrução **Accelerators** não foi reconhecido ou tem mais de dois caracteres de comprimento.
+   Um campo `event` na instrução **Accelerators** não foi reconhecido ou tinha mais de dois caracteres de comprimento.
 
 1. **Tipo de acelerador inválido (ASCII ou VIRTKEY)**
 
-   O `type` campo na instrução **Accelerators** deve conter o valor ASCII ou VIRTKEY.
+   O campo `type` na instrução **Accelerators** deve conter o valor ASCII ou VIRTKEY.
 
 1. **Caractere de controle inválido**
 
@@ -141,7 +141,7 @@ Erro de análise
 
 1. **Tipo de controle inválido**
 
-   Cada instrução de controle em uma instrução de **caixa de diálogo** deve ser uma das seguintes: CHECKBOX, COMBOBOX, CONTROL, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ICON, LISTBOX, LTEXT, SUPRESSÃO, RADIOBUTTON, RTEXT, SCROLLBAR. Verifique se essas instruções de controle estão escritas corretamente.
+   Cada instrução de controle em uma instrução de **diálogo** deve ser uma das seguintes: CheckBox, ComboBox, Control, CTEXT, DEFPUSHBUTTON, EDITTEXT, GroupBox, Icon, ListBox, LTEXT, botão de opção, RTEXT, ScrollBar. Verifique se essas instruções de controle estão escritas corretamente.
 
 1. **Tipo inválido**
 
@@ -149,7 +149,7 @@ Erro de análise
 
 1. **Cadeia de texto ou ordinal esperado no controle**
 
-   O campo de *texto* de uma instrução de **controle** na instrução da **caixa de diálogo** deve ser uma cadeia de caracteres de texto ou uma referência ordinal para o tipo de controle. Se estiver usando um ordinal, verifique se você tem uma `#define` instrução para o controle.
+   O campo de *texto* de uma instrução de **controle** na instrução da **caixa de diálogo** deve ser uma cadeia de caracteres de texto ou uma referência ordinal para o tipo de controle. Se estiver usando um ordinal, verifique se você tem uma instrução `#define` para o controle.
 
 1. **Parênteses incompatíveis**
 

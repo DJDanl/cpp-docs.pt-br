@@ -12,12 +12,12 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-ms.openlocfilehash: 38d33faec3610495e8cc5e97db2e81bd74be8b8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1a66b6464bf952a530dbf1ea188bfd681d684d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515661"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172068"
 ---
 # <a name="overview-of-generics-in-ccli"></a>Visão geral de genéricos em C++/CLI
 
@@ -25,11 +25,11 @@ Genéricos são tipos parametrizados compatíveis com o Common Language Runtime.
 
 ## <a name="why-generics"></a>Por que genéricos?
 
-O C++ é compatível com modelos, e tanto modelos quanto genéricos são compatíveis com tipos parametrizados para criar classes de coleção com tipos definidos. No entanto, modelos fornecem parametrização em tempo de compilação. Não é possível fazer referência a uma montagem que contenha uma definição de modelo e criar novas especializações do modelo. Uma vez compilado, um modelo especializado se parece com qualquer outra classe ou método. Em contraste, os genéricos são emitidos no MSIL como um tipo parametrizado conhecido pelo tempo de execução por ser um tipo parametrizado. Um código-fonte que faz referência a um assembly contendo um tipo genérico pode criar especializações do tipo genérico. Confira mais informações sobre a comparação de genéricos e modelos C++ padrão em [Genéricos e modelos (C++/CLI)](generics-and-templates-visual-cpp.md).
+O C++ é compatível com modelos, e tanto modelos quanto genéricos são compatíveis com tipos parametrizados para criar classes de coleção com tipos definidos. No entanto, modelos fornecem parametrização em tempo de compilação. Não é possível fazer referência a uma montagem que contenha uma definição de modelo e criar novas especializações do modelo. Uma vez compilado, um modelo especializado se parece com qualquer outra classe ou método. Em contraste, os genéricos são emitidos no MSIL como um tipo parametrizado conhecido pelo runtime por ser um tipo parametrizado. Um código-fonte que faz referência a um assembly contendo um tipo genérico pode criar especializações do tipo genérico. Confira mais informações sobre a comparação de genéricos e modelos C++ padrão em [Genéricos e modelos (C++/CLI)](generics-and-templates-visual-cpp.md).
 
 ## <a name="generic-functions-and-types"></a>Funções e tipos genéricos
 
-Tipos de classe, desde que sejam tipos gerenciados, podem ser genéricos. Um exemplo disso pode ser uma classe `List`. O tipo de um objeto na lista seria o parâmetro de tipo. Se você precisasse de uma classe `List` para vários tipos diferentes de objetos, antes dos genéricos, seria possível usar uma `List` que usa `System::Object` como o tipo de item. Porém, isso permitiria que qualquer objeto (incluindo objetos do tipo errado) fosse usado na lista. Essa lista seria chamada de uma classe de coleção sem tipo definido. Na melhor das hipóteses, você poderia verificar o tipo em tempo de execução e lançar uma exceção. Ou, poderia ter usado um modelo, que perderia sua qualidade genérica depois de compilado em um assembly. Os consumidores do seu assembly não poderiam criar suas próprias especializações do modelo. Genéricos permitem criar classes de coleção com tipos definidos, digamos `List<int>` (lidas como "Lista de int") e `List<double>` ("Lista de duplos"), o que geraria um erro em tempo de compilação se você tentasse inserir um tipo que a coleção não foi projetada para aceitar na coleção com tipo definido. Além disso, esses tipos permanecem genéricos depois de serem compilados.
+Tipos de classe, desde que sejam tipos gerenciados, podem ser genéricos. Um exemplo disso pode ser uma classe `List`. O tipo de um objeto na lista seria o parâmetro de tipo. Se você precisasse de uma classe `List` para vários tipos diferentes de objetos, antes dos genéricos, seria possível usar uma `List` que usa `System::Object` como o tipo de item. Porém, isso permitiria que qualquer objeto (incluindo objetos do tipo errado) fosse usado na lista. Essa lista seria chamada de uma classe de coleção sem tipo definido. Na melhor das hipóteses, você poderia verificar o tipo em runtime e lançar uma exceção. Ou, poderia ter usado um modelo, que perderia sua qualidade genérica depois de compilado em um assembly. Os consumidores do seu assembly não poderiam criar suas próprias especializações do modelo. Genéricos permitem criar classes de coleção com tipos definidos, digamos `List<int>` (lidas como "Lista de int") e `List<double>` ("Lista de duplos"), o que geraria um erro em tempo de compilação se você tentasse inserir um tipo que a coleção não foi projetada para aceitar na coleção com tipo definido. Além disso, esses tipos permanecem genéricos depois de serem compilados.
 
 Uma descrição da sintaxe de classes genéricas pode ser encontrada em [Classes genéricas (C++/CLI)](generic-classes-cpp-cli.md). Um novo namespace, <xref:System.Collections.Generic>, introduz um conjunto de tipos de coleção parametrizados, incluindo <xref:System.Collections.Generic.Dictionary%602>, <xref:System.Collections.Generic.List%601> e <xref:System.Collections.Generic.LinkedList%601>.
 
@@ -65,13 +65,13 @@ generic <typename T>
 ref class Queue : public List<T> {};
 ```
 
-### <a name="constraint"></a>Restrição
+### <a name="constraint"></a>Constraint
 
 Uma restrição é aplicada aos tipos que podem ser usados como um parâmetro de tipo. Por exemplo, uma determinada classe genérica pode aceitar apenas classes que herdam de uma classe especificada ou que implementam uma interface especificada. Confira mais informações em [Restrições em parâmetros de tipo genérico (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="reference-types-and-value-types"></a>Tipos de referência e tipos de valor
 
-Tipos de identificador de tipos de valor podem ser usados como argumentos de tipo. Na definição genérica, em que qualquer um desses tipos pode ser usado, a sintaxe é a dos tipos de referência. Por exemplo, o operador `->` é usado para acessar membros do tipo do parâmetro de tipo, independentemente de o tipo de referência usado no final ser um tipo de referência ou um tipo de valor. Quando um tipo de valor é usado como argumento de tipo, o tempo de execução gera um código que usa os tipos de valor diretamente sem fazer a conversão boxing dos tipos de valor.
+Tipos de identificador de tipos de valor podem ser usados como argumentos de tipo. Na definição genérica, em que qualquer um desses tipos pode ser usado, a sintaxe é a dos tipos de referência. Por exemplo, o operador `->` é usado para acessar membros do tipo do parâmetro de tipo, independentemente de o tipo de referência usado no final ser um tipo de referência ou um tipo de valor. Quando um tipo de valor é usado como argumento de tipo, o runtime gera um código que usa os tipos de valor diretamente sem fazer a conversão boxing dos tipos de valor.
 
 Ao usar um tipo de referência como um argumento de tipo genérico, use a sintaxe do identificador. Ao usar um tipo de valor como um argumento de tipo genérico, use o nome do tipo diretamente.
 
@@ -122,7 +122,7 @@ int main() {
 }
 ```
 
-Essas restrições também se aplicam a operadores. Um parâmetro de tipo genérico irrestrito não pode usar os operadores `==` e `!=` para comparar duas instâncias do parâmetro de tipo, no caso de o tipo não ser compatível com esses operadores. Essas verificações são necessárias para genéricos, mas não para modelos porque os genéricos podem ser especializados em tempo de execução com qualquer classe que atenda às restrições, quando for tarde demais para verificar o uso de membros inválidos.
+Essas restrições também se aplicam a operadores. Um parâmetro de tipo genérico irrestrito não pode usar os operadores `==` e `!=` para comparar duas instâncias do parâmetro de tipo, no caso de o tipo não ser compatível com esses operadores. Essas verificações são necessárias para genéricos, mas não para modelos porque os genéricos podem ser especializados em runtime com qualquer classe que atenda às restrições, quando for tarde demais para verificar o uso de membros inválidos.
 
 Uma instância padrão do parâmetro de tipo pode ser criada usando o operador `()`. Por exemplo:
 
@@ -130,6 +130,6 @@ Uma instância padrão do parâmetro de tipo pode ser criada usando o operador `
 
 em que `T` é um parâmetro de tipo em uma classe genérica ou definição de método, inicializa a variável com seu valor padrão. Se `T` for uma classe ref, ele será um ponteiro nulo. Se `T` for uma classe de valor, o objeto será inicializado como zero. Isso é chamado de *inicializador padrão*.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Genéricos](generics-cpp-component-extensions.md)

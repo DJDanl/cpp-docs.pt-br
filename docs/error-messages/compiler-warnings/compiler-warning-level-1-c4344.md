@@ -1,20 +1,20 @@
 ---
-title: Compilador aviso (nível 1) C4344
+title: Aviso do compilador (nível 1) C4344
 ms.date: 11/04/2016
 f1_keywords:
 - C4344
 helpviewer_keywords:
 - C4344
 ms.assetid: cd20859d-f07f-4c70-904b-cb756a53b1ed
-ms.openlocfilehash: 0a3a1f6144c0429c3a9d96fdee4a7d9f4cab1ee6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5247c104a3326e58647b772fa9c26cbf2b805c51
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187268"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162875"
 ---
-# <a name="compiler-warning-level-1-c4344"></a>Compilador aviso (nível 1) C4344
+# <a name="compiler-warning-level-1-c4344"></a>Aviso do compilador (nível 1) C4344
 
-alteração de comportamento: uso dos resultados de argumentos de modelo explícitos na chamada para 'function'
+alteração de comportamento: o uso de argumentos de template explícitos resulta em chamada para ' function '
 
-Uma chamada para uma função usando argumentos de modelo explícitos chama uma função diferente que seria se argumentos explícitos não tinham sido especificados
+Uma chamada para uma função usando argumentos de modelo explícitos chamará uma função diferente da que se argumentos explícitos não tivessem sido especificados

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 3194c34bacfe7b2ed758ab245c5858eadb18e64e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 08c60ff261e944ed5b54b51a013a6d331f212154
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301516"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179764"
 ---
 # <a name="function-call-operator-"></a>Operador de chamada da função: ()
 
@@ -176,8 +176,8 @@ int main() {
 
 As funções podem ser chamadas recursivamente. Para obter mais informações sobre declarações de função, consulte [funções](functions-cpp.md). O material relacionado está em [unidades de tradução e vinculação](../cpp/program-and-linkage-cpp.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Expressões pós-fixadas](../cpp/postfix-expressions.md)<br/>
-[Operadores internos C++, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Chamada de função](../c-language/function-call-c.md)

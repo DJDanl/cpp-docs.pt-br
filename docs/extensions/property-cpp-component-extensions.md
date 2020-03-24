@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 46501717755933b2bdc11ee4ee6249bfea9f18cd
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b961a93628752b11cd1d147268a4947acf29f67a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445165"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171970"
 ---
 # <a name="property--ccli-and-ccx"></a>property (C++/CLI e C++/CX)
 
@@ -56,9 +56,9 @@ property type default[index_list] {
 }
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*type*<br/>
+*tipo*<br/>
 O tipo de dados do valor da propriedade e, consequentemente, a própria propriedade.
 
 *property_name*<br/>
@@ -85,7 +85,7 @@ O corpo do método da propriedade do acessador set ou get. *property_body* pode 
 
 Saiba mais em [Propriedades (C++/CX)](../cppcx/properties-c-cx.md).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 Opção do compilador: `/ZW`
 
@@ -108,12 +108,12 @@ modifier property type default[index];
 }
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *modifier*<br/>
 Um modificador que pode ser usado na declaração de propriedade ou em um método de acessador get/set. Os valores possíveis são **static** e **virtual**.
 
-*type*<br/>
+*tipo*<br/>
 O tipo do valor que é representado pela propriedade.
 
 *property_name*<br/>
@@ -160,7 +160,7 @@ Há permissão para uma acessibilidade diferente nos métodos acessadores em um 
 
 **property** é uma palavra-chave contextual.  Saiba mais em [Palavras-chave contextuais](context-sensitive-keywords-cpp-component-extensions.md).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
 Opção do compilador: `/clr`
 
@@ -210,6 +210,6 @@ test
 21
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

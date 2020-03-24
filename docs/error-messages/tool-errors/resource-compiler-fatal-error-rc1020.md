@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC1020
 ms.assetid: 3e073ebf-9136-4bf8-ac6a-3c642ed64594
-ms.openlocfilehash: ac4a9d521728b22966f6d8824479d13cc7394601
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff4cc5564f59d0adf74ae86149130dd5d017a9ae
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297328"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182676"
 ---
 # <a name="resource-compiler-fatal-error-rc1020"></a>Erro fatal RC1020 (compilador de recurso)
 
-'#endif' inesperado
+' #endif ' inesperado
 
-Uma `#endif` diretiva apareceu sem encontrar uma correspondência `#if`, **#ifdef**, ou **#ifndef** diretiva.
+Uma diretiva `#endif` apareceu sem uma diretiva `#if`, **#ifdef**ou **#ifndef** correspondente.
 
-Certifique-se de que há uma correspondência `#endif` para cada `#if`, **#ifdef**, e **#ifndef** instrução.
+Verifique se há um `#endif` correspondente para cada `#if`, **#ifdef**e instrução **#ifndef** .

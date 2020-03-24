@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
-ms.openlocfilehash: 1e0e967edd1808b27d3d4e92f29f7472608f8e65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9476c0c446463c04084f46ed17a8ada7fb01fd7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330460"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188123"
 ---
-# <a name="tilestatic-keyword"></a>Palavra-chave tile_static
+# <a name="tile_static-keyword"></a>Palavra-chave tile_static
 
-O **tile_static** palavra-chave é usada para declarar uma variável que pode ser acessada por todos os threads em um bloco de threads. O tempo de vida da variável começa quando a execução alcança o ponto de declaração e termina com o retorno da função de kernel. Para obter mais informações sobre como usar blocos, consulte [blocos usando](../parallel/amp/using-tiles.md).
+A palavra-chave **tile_static** é usada para declarar uma variável que pode ser acessada por todos os threads em um bloco de threads. O tempo de vida da variável começa quando a execução alcança o ponto de declaração e termina com o retorno da função de kernel. Para obter mais informações sobre como usar blocos, consulte [usando blocos](../parallel/amp/using-tiles.md).
 
-O **tile_static** palavra-chave tem as seguintes limitações:
+A palavra-chave **tile_static** tem as seguintes limitações:
 
 - Pode ser usado somente em variáveis que estão em uma função que tenha o modificador `restrict(amp)`.
 
 - Não pode ser usado em variáveis que são tipos de referência ou ponteiro.
 
-- Um **tile_static** variável não pode ter um inicializador. Os construtores e destruidores padrão não são invocados automaticamente.
+- Uma variável **tile_static** não pode ter um inicializador. Os construtores e destruidores padrão não são invocados automaticamente.
 
-- O valor de não inicializado **tile_static** variável será indefinida.
+- O valor de uma variável de **tile_static** não inicializada é indefinido.
 
-- Se um **tile_static** variável é declarada em um gráfico de chamada que está enraizado por uma chamada sem bloco para `parallel_for_each`, um aviso será gerado e o comportamento da variável será indefinido.
+- Se uma variável de **tile_static** for declarada em um grafo de chamada com raiz por uma chamada que não seja de ladrilho para `parallel_for_each`, um aviso será gerado e o comportamento da variável será indefinido.
 
 ## <a name="example"></a>Exemplo
 
-A exemplo a seguir mostra como uma **tile_static** variável pode ser usada para acumular dados entre vários threads em um bloco.
+O exemplo a seguir mostra como uma variável **tile_static** pode ser usada para acumular dados em vários threads em um bloco.
 
 ```cpp
 // Sample data:
@@ -144,9 +144,9 @@ for (int i = 0; i < 4; i++) {
 // 5 5 2 2 4 4
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md)<br/>
 [Visão geral do C++ AMP](../parallel/amp/cpp-amp-overview.md)<br/>
-[Função parallel_for_each (C++ AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)<br/>
+[Função parallel_for_each (C++ amp)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)<br/>
 [Passo a passo: multiplicação de matrizes](../parallel/amp/walkthrough-matrix-multiplication.md)

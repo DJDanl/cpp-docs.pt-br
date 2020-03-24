@@ -3,18 +3,18 @@ title: enum class  (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: da9097a02de08fd1615f5401d08c438c5f64c139
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6305d41febfe4d55b2b84062e76ff62c3ea2b18a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516591"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182130"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>enum class  (C++/CLI e C++/CX)
 
 Declara uma enumeração no escopo do namespace, que é um tipo definido pelo usuário que consiste em um conjunto de constantes nomeadas chamadas de enumeradores.
 
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
+## <a name="all-runtimes"></a>Todos os Runtimes
 
 ### <a name="remarks"></a>Comentários
 
@@ -32,7 +32,7 @@ C++/CX e C++/CLI são compatíveis com a **public enum class** e à **private en
 accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [var];
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *access*<br/>
 A acessibilidade da enumeração, que pode ser **public** ou **private**.
@@ -80,7 +80,7 @@ Opção do compilador: `/ZW`
 accessenum structname [:type] { enumerator-list } var;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *access*<br/>
 A acessibilidade do enum. Pode ser **public** ou **private**.
@@ -91,7 +91,7 @@ Uma lista delimitada por vírgulas dos identificadores (enumeradores) na enumera
 *name*<br/>
 O nome da enumeração. Enumerações gerenciadas anônimas não são permitidas.
 
-*type*<br/>
+*tipo*<br/>
 (Opcional) O tipo subjacente dos *identifiers*. Pode ser qualquer tipo escalar, como versões assinadas ou não assinadas de **int**, **short** ou **long**.  **bool** ou **char** também são permitidos.
 
 *var*<br/>
@@ -219,6 +219,6 @@ convert to int: 1
 1
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC1102
 ms.assetid: bd2091f8-ef5e-4151-a8d6-98043e9422b6
-ms.openlocfilehash: 7e322b96d32e6d531de4081386702767d45f0837
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e614a7e85f508a452f42588fe40054dfcc8a7089
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374294"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182474"
 ---
 # <a name="resource-compiler-fatal-error-rc1102"></a>Erro fatal RC1102 (compilador de recurso)
 
-Erro interno: muitos argumentos para RCPP
+erro interno: muitos argumentos para RCPP
 
-Muitos argumentos foram passados para o pré-processador do compilador de recurso. Reduzir o número de símbolos definidos com os símbolos definem (/ d) opção definindo-as em seu código-fonte. Esse erro também pode ser causado pela especificação muito muitos incluem caminhos de pesquisa de arquivo usando a opção de incluir o caminho de pesquisa (/ eu).
+Muitos argumentos foram passados para o pré-processador do compilador de recurso. Reduza o número de símbolos definidos com a opção definir símbolos (/d) definindo-os em sua fonte. Esse erro também pode ser causado pela especificação de muitos caminhos de pesquisa de arquivos de inclusão usando a opção de caminho de pesquisa de inclusão (/i).

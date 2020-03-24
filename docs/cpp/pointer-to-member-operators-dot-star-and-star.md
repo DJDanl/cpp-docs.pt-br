@@ -1,5 +1,5 @@
 ---
-title: Operadores de ponteiro para membro:. * e -&gt;*
+title: Operadores de ponteiro para membro:. * e-&gt;*
 ms.date: 11/04/2016
 f1_keywords:
 - .*
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - expressions [C++], operators
 - ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
-ms.openlocfilehash: 60dad0e3134662957ee21396d330af795e80918e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ff7dd26f36f10948dac42783ad61d16f5feda09
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267657"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188331"
 ---
-# <a name="pointer-to-member-operators--and--gt"></a>Operadores de ponteiro para membro:. * e -&gt;*
+# <a name="pointer-to-member-operators--and--gt"></a>Operadores de ponteiro para membro:. * e-&gt;*
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,7 +29,7 @@ expression ->* expression
 
 ## <a name="remarks"></a>Comentários
 
-Os operadores de ponteiro para membro. * e ->\*, retornar o valor de um membro de classe específica para o objeto especificado no lado esquerdo da expressão.  O lado direito deve especificar um membro da classe.  O exemplo a seguir mostra como usar estes operadores:
+Os operadores de ponteiro para membro,. * e->\*, retornam o valor de um membro de classe específico para o objeto especificado no lado esquerdo da expressão.  O lado direito deve especificar um membro da classe.  O exemplo a seguir mostra como usar estes operadores:
 
 ```cpp
 // expre_Expressions_with_Pointer_Member_Operators.cpp
@@ -82,11 +82,11 @@ No exemplo anterior, um ponteiro para um membro, `pmfn`, é usado para invocar a
 
 O operador binário .* combina seu primeiro operando, que deve ser um objeto de tipo de classe, com o segundo operando, que deve ser um tipo de ponteiro para membro.
 
-O operador binário -> * combina seu primeiro operando, que deve ser um ponteiro para um objeto do tipo de classe, com o segundo operando deve ser um tipo de ponteiro para membro.
+O operador binário-> * combina seu primeiro operando, que deve ser um ponteiro para um objeto do tipo de classe, com seu segundo operando, que deve ser um tipo de ponteiro para membro.
 
 Em uma expressão que contém o operador .*, o primeiro operando deve ser do tipo de classe, e é acessível para, do ponteiro para o membro especificado no segundo operando ou de um tipo acessível derivado de maneira não ambígua de e acessíveis a essa classe.
 
-Em uma expressão que contém o-> * operador, o primeiro operando deve ser do tipo "ponteiro para o tipo de classe" do tipo especificado no segundo operando, ou ele deve ser de um tipo de maneira não ambígua derivado dessa classe.
+Em uma expressão que contém o operador-> *, o primeiro operando deve ser do tipo "ponteiro para o tipo de classe" do tipo especificado no segundo operando ou deve ser de um tipo inequivocadamente derivado dessa classe.
 
 ## <a name="example"></a>Exemplo
 
@@ -128,11 +128,11 @@ int main() {
 }
 ```
 
-O resultado da. * ou ->\* operadores de ponteiro para membro é um objeto ou função do tipo especificado na declaração de ponteiro para membro. Assim, no exemplo anterior, o resultado da expressão `ADerived.*pmfnFunc1()` é um ponteiro para uma função que retorna void. Esse resultado será um valor l se o segundo operando for um valor l.
+O resultado do. * ou->\* operadores de ponteiro para membro é um objeto ou função do tipo especificado na declaração do ponteiro para membro. Assim, no exemplo anterior, o resultado da expressão `ADerived.*pmfnFunc1()` é um ponteiro para uma função que retorna void. Esse resultado será um valor l se o segundo operando for um valor l.
 
 > [!NOTE]
 >  Se o resultado de um dos operadores de ponteiro para membro for uma função, o resultado poderá ser usado apenas como um operando para o operador da chamada de função.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

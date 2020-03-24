@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - statements [C++]
 ms.assetid: e56996b2-b846-4b99-ac94-ac72fffc5ec7
-ms.openlocfilehash: 9493860087331ee2d8ff05a5c0bd59c7a46ad51a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9aba5deddca6fbf480cd9d573606b16b7ab047db
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325553"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188422"
 ---
 # <a name="overview-of-c-statements"></a>Visão geral de instruções C++
 
@@ -28,7 +28,7 @@ declaration-statement
 try-throw-catch
 ```
 
-Na maioria dos casos, a sintaxe da instrução C++ é idêntica de ANSI C. A principal diferença entre os dois é que em C, declarações são permitidas apenas no início de um bloco; C++ adiciona o *instrução de declaração*, que remove efetivamente esta restrição. Isso permite que você apresente variáveis em um ponto no programa onde um valor de inicialização pré-computado pode ser calculado.
+Na maioria dos casos, C++ a sintaxe da instrução é idêntica à do ANSI C. A principal diferença entre os dois é que, em C, as declarações são permitidas apenas no início de um bloco; C++ adiciona a *instrução de declaração*, que efetivamente remove essa restrição. Isso permite que você apresente variáveis em um ponto no programa onde um valor de inicialização pré-computado pode ser calculado.
 
 Declarar variáveis dentro de blocos também permite que você controle com precisão o escopo e o tempo de vida das variáveis.
 
@@ -43,6 +43,6 @@ Os tópicos sobre instruções descrevem as seguintes palavras-chave de C++:
 |[default](../cpp/switch-statement-cpp.md)|[__finally](../cpp/structured-exception-handling-c-cpp.md)|[switch](../cpp/switch-statement-cpp.md)||
 |[do](../cpp/do-while-statement-cpp.md)|[if](../cpp/if-else-statement-cpp.md)|[throw](../cpp/try-throw-and-catch-statements-cpp.md)||
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instruções](../cpp/statements-cpp.md)

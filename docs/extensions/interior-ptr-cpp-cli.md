@@ -9,20 +9,20 @@ f1_keywords:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-ms.openlocfilehash: 0fba04efeaa634f5e21600768297aee0d999d1c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 264ac0a56996b0dcbeeb64246623eca1a3fc73ff
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515691"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172146"
 ---
 # <a name="interior_ptr-ccli"></a>interior_ptr (C++/CLI)
 
 Um *ponteiro interno* declara um ponteiro para dentro de um tipo de referência, mas não para o objeto propriamente dito. Um ponteiro interno pode apontar para um identificador de referência, um tipo de valor, um identificador de tipo com conversão boxing, um membro de um tipo gerenciado ou um elemento de uma matriz gerenciada.
 
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
+## <a name="all-runtimes"></a>Todos os Runtimes
 
-(Não há comentários para esse recurso de linguagem que se apliquem a todos os tempos de execução.)
+(Não há comentários para esse recurso de linguagem que se apliquem a todos os runtimes.)
 
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
 
@@ -42,12 +42,12 @@ O exemplo de sintaxe a seguir demonstra um ponteiro interno.
 cli::interior_ptr<cv_qualifier type> var = &initializer;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *cv_qualifier*<br/>
 Qualificadores **const** ou **volatile**.
 
-*type*<br/>
+*tipo*<br/>
 O tipo de *inicializador*.
 
 *var*<br/>
@@ -58,7 +58,7 @@ Um membro de um tipo de referência, um elemento de uma matriz gerenciada ou qua
 
 ### <a name="remarks"></a>Comentários
 
-Um ponteiro nativo não é capaz de rastrear um item enquanto sua localização é alterada no heap gerenciado, o que é resultante da movimentação de instâncias de um objeto pelo coletor de lixo. Para que um ponteiro faça referência à instância corretamente, o tempo de execução precisa atualizá-lo para o objeto recém-posicionado.
+Um ponteiro nativo não é capaz de rastrear um item enquanto sua localização é alterada no heap gerenciado, o que é resultante da movimentação de instâncias de um objeto pelo coletor de lixo. Para que um ponteiro faça referência à instância corretamente, o runtime precisa atualizá-lo para o objeto recém-posicionado.
 
 Um **interior_ptr** representa um superconjunto da funcionalidade de um ponteiro nativo.  Portanto, qualquer coisa que possa ser atribuída a um ponteiro nativo também pode ser atribuída a um **interior_ptr**.  Um ponteiro interno tem permissão para realizar o mesmo conjunto de operações que os ponteiros nativos, incluindo comparação e aritmética de ponteiros.
 
@@ -74,13 +74,13 @@ Confira em [pin_ptr](pin-ptr-cpp-cli.md) mais informações sobre como declarar 
 
 Confira mais informações sobre ponteiros internos em
 
-- [Como: declarar e usar ponteiros internos e matrizes gerenciadas (C++/CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
+- [Como declarar e usar ponteiros internos e matrizes gerenciadas (C++/CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
 
-- [Como: declarar tipos de valor com a palavra-chave interior_ptr (C++/CLI)](how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)
+- [Como declarar tipos de valor com a palavra-chave interior_ptr (C++/CLI)](how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)
 
-- [Como: sobrecarregar funções com ponteiros internos e nativos (C++/CLI)](how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)
+- [Como sobrecarregar funções com ponteiros internos e nativos (C++/CLI)](how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)
 
-- [Como: declarar ponteiros internos com a palavra-chave const (C++/CLI)](how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)
+- [Como declarar ponteiros internos com a palavra-chave const (C++/CLI)](how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)
 
 ### <a name="requirements"></a>Requisitos
 
@@ -122,6 +122,6 @@ int main() {
 3
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

@@ -4,20 +4,20 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - event handling [C++]
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
-ms.openlocfilehash: 9eb0334e3633921842fcc06155ba0300ff6192e1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: cc9265cd3f9f400e2880405019e4d2c9a934f10a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222181"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180076"
 ---
 # <a name="event-handling-in-native-c"></a>Tratamento de eventos em C++ nativo
 
-No formato nativo C++ manipulação de eventos, você configura um receptor de origem e o evento de eventos usando o [event_source](../windows/attributes/event-source.md) e [event_receiver](../windows/attributes/event-receiver.md) atributos, respectivamente, especificando `type` =`native`. Esses atributos as permitem que as classes às quais eles são aplicados disparem eventos e manipulem eventos em um contexto nativo, e não de COM.
+Na manipulação C++ de eventos nativos, você configura uma origem de evento e um receptor de evento usando os atributos [EVENT_SOURCE](../windows/attributes/event-source.md) e [event_receiver](../windows/attributes/event-receiver.md) , respectivamente, especificando `type`=`native`. Esses atributos as permitem que as classes às quais eles são aplicados disparem eventos e manipulem eventos em um contexto nativo, e não de COM.
 
 ## <a name="declaring-events"></a>Declarando eventos
 
-Em uma classe de origem do evento, use o [Event](../cpp/event.md) palavra-chave em uma declaração de método para declarar o método como um evento. Certifique-se de declarar o método, mas não defina-o; fazer isso gerará um erro do compilador, pois o compilador define o método implicitamente quando ele é transformado em um evento. Os eventos nativos podem ser métodos com zero ou mais parâmetros. O tipo de retorno pode ser void ou qualquer tipo integral.
+Em uma classe de origem de evento, use a palavra-chave [__event](../cpp/event.md) em uma declaração de método para declarar o método como um evento. Certifique-se de declarar o método, mas não defina-o; fazer isso gerará um erro do compilador, pois o compilador define o método implicitamente quando ele é transformado em um evento. Os eventos nativos podem ser métodos com zero ou mais parâmetros. O tipo de retorno pode ser void ou qualquer tipo integral.
 
 ## <a name="defining-event-handlers"></a>Definindo manipuladores de eventos
 
@@ -25,7 +25,7 @@ Em uma classe de receptor de evento, você define manipuladores de eventos, que 
 
 ## <a name="hooking-event-handlers-to-events"></a>Vinculando manipuladores de eventos a eventos
 
-Também em uma classe de receptor de evento, use a função intrínseca [hook](../cpp/hook.md) para associar eventos a manipuladores de eventos e [unhook](../cpp/unhook.md) para desassociar eventos de manipuladores de eventos. Você pode vincular diversos eventos a um manipulador ou vincular diversos manipuladores a um evento.
+Também em uma classe receptora de eventos, você usa a função intrínseca [__hook](../cpp/hook.md) para associar eventos a manipuladores de eventos e [__unhook](../cpp/unhook.md) para dissociar eventos de manipuladores de eventos. Você pode vincular diversos eventos a um manipulador ou vincular diversos manipuladores a um evento.
 
 ## <a name="firing-events"></a>Acionando eventos
 
@@ -88,6 +88,6 @@ MyHandler2 was called with value 123.
 MyHandler1 was called with value 123.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de eventos](../cpp/event-handling.md)

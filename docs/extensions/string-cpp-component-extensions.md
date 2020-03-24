@@ -6,12 +6,12 @@ helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-ms.openlocfilehash: 8440ddf510f99618c28a6b6d585c8628df85f9cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9da900ffbfff34dc596d8981095d8285bf37208
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516021"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171938"
 ---
 # <a name="string--ccli-and-ccx"></a>Cadeia de caracteres (C++/CLI e C++/CX)
 
@@ -40,7 +40,7 @@ Opção do compilador: `/ZW`
 
 Quando compilar com `/clr`, o compilador converterá literais de cadeia de caracteres em cadeias de caracteres do tipo <xref:System.String>. Para preservar a compatibilidade com versões anteriores do código existente, há duas exceções:
 
-- Tratamento de exceções. Quando um literal de cadeia de caracteres é lançado, o compilador o captura como um literal de cadeia de caracteres.
+- {1&gt;Tratamento de exceções&lt;1}. Quando um literal de cadeia de caracteres é lançado, o compilador o captura como um literal de cadeia de caracteres.
 
 - Dedução de modelo. Quando um literal de cadeia de caracteres é passado como um argumento de modelo, o compilador não o converterá em um <xref:System.String>. Observe que os literais de cadeia de caracteres transmitidos como um argumento genérico serão promovidos para <xref:System.String>.
 
@@ -259,7 +259,7 @@ System.SByte*
 System.String
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Literais de cadeia de caracteres e de caracteres](../cpp/string-and-character-literals-cpp.md)<br/>

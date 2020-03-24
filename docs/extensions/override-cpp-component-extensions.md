@@ -6,12 +6,12 @@ helpviewer_keywords:
 - overriding, override keyword [C++]
 - override keyword [C++]
 ms.assetid: 34d19257-1686-4fcd-96f5-af07c70ba914
-ms.openlocfilehash: 8dc7a0a0e6cf759d956fd701d033bd773e572af3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 32c825539efe670528eab7416afefe07d4cb1b6c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515651"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172094"
 ---
 # <a name="override--ccli-and-ccx"></a>substituir (C++/CLI e C++/CX)
 
@@ -81,7 +81,7 @@ ref struct X : public I1 {
 
 Opção do compilador: `/clr`
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Especificador override](../cpp/override-specifier.md)<br/>
 [Especificadores de substituição](override-specifiers-cpp-component-extensions.md)

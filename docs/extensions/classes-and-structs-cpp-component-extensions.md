@@ -13,18 +13,18 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311739"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172562"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>classe ref e struct ref (C++/CLI e C++/CX)
 
 As extensões **classe ref** ou **struct ref** declaram uma classe ou struct cujo *tempo de vida do objeto* é administrado automaticamente. Quando o objeto não está mais acessível ou sai do escopo, a memória é liberada.
 
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
+## <a name="all-runtimes"></a>Todos os Runtimes
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -38,7 +38,7 @@ class_accessvalue classnamemodifier :  inherit_accessbase_type {};
 class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *class_access*<br/>
 (Opcional) A acessibilidade da classe ou struct fora do assembly. Os valores possíveis são **public** e **private** (**private** é o padrão). As classes aninhadas ou structs não podem ter um especificador *class_access*.
@@ -73,13 +73,13 @@ Saiba mais sobre classes e structs em
 
 - [Classes, structs e uniões](../cpp/classes-and-structs-cpp.md)
 
-- [Destruidores e finalizadores em Como definir e consumir classes e structs (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [Destruidores e finalizadores em How to: definem e consomem classes eC++structs (/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [Operadores definidos pelo usuário (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
 - [Conversões definidas pelo usuário (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md)
 
-- [Como: encapsular a classe nativa a ser usada pelo C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
+- [Como encapsular a classe nativa a ser usada por C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
 - [Classes genéricas (C++/CLI)](generic-classes-cpp-cli.md)
 
@@ -89,7 +89,7 @@ Saiba mais sobre classes e structs em
 
 Confira [Classes e structs ref](../cppcx/ref-classes-and-structs-c-cx.md) e [Classes e structs value](../cppcx/value-classes-and-structs-c-cx.md).
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *base_type*<br/>
 (Opcional) Um tipo base. Uma **classe ref** ou uma **struct ref** pode herdar de zero ou mais interfaces e de zero ou um tipo **ref**. Uma **classe value** ou uma **struct value** só pode herdar de mais interfaces ou de nenhuma.
@@ -106,9 +106,9 @@ Opção do compilador: `/ZW`
 
 ### <a name="remarks"></a>Comentários
 
-A tabela a seguir lista as diferenças de sintaxe mostradas na seção **Todos os tempos de execução** que são específicas a C++/CLI.
+A tabela a seguir lista as diferenças de sintaxe mostradas na seção **Todos os runtimes** que são específicas a C++/CLI.
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *base_type*<br/>
 (Opcional) Um tipo base. Um **classe ref** ou **struct ref** pode herdar de nenhuma ou mais interfaces gerenciadas e de zero ou um tipo ref. Um **classe valuee** ou **struct value** só pode herdar de nenhuma ou mais interfaces gerenciadas.
@@ -121,6 +121,6 @@ As palavras-chave **classe value** e **struct value** informam ao compilador que
 
 Opção do compilador: `/clr`
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

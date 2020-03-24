@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
-ms.openlocfilehash: 1920af8873578c63ab768dae4bcdf4d91fe7cd57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f59cb33bed15847ed1a7a2dbe99ea030babf3337
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164807"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177151"
 ---
 # <a name="compiler-error-c2668"></a>Erro do compilador C2668
 
-'function': chamada ambígua à função sobrecarregada
+' function ': chamada ambígua para função sobrecarregada
 
-A chamada de função sobrecarregada especificado não pôde ser resolvida. Você talvez queira converter explicitamente um ou mais dos parâmetros reais.
+Não foi possível resolver a chamada de função sobrecarregada especificada. Talvez você queira converter explicitamente um ou mais dos parâmetros reais.
 
-Você também pode obter esse erro por meio do uso do modelo. Se, na mesma classe, você tem uma função de membro regular e uma função de membro personalizado com a mesma assinatura, um modelo deve vir primeiro. Essa é uma limitação da implementação atual do Visual C++.
+Você também pode obter esse erro por meio de uso de modelo. Se, na mesma classe, você tiver uma função de membro regular e uma função de membro de modelo com a mesma assinatura, o modelo um deverá vir primeiro. Essa é uma limitação da implementação atual do Visual C++.
 
 ## <a name="example"></a>Exemplo
 
@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-Outra maneira de resolver esse erro é com um [usando a declaração](../../cpp/using-declaration.md):
+Outra maneira de resolver esse erro é com uma [declaração using](../../cpp/using-declaration.md):
 
 ```cpp
 // C2668b.cpp
@@ -88,7 +88,7 @@ class MyTestCase : public AppTestCase {
 
 Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003: conversão ambígua na conversão da constante 0.
 
-Conversão de uma conversão usando a constante 0 é ambíguo, pois int requer uma conversão ambos os longos e para void *. Para resolver esse erro, converta 0 para o tipo exato do parâmetro de função que está sendo usado de forma que nenhuma conversão precisa acontecer (esse código será válido nas versões do Visual Studio .NET 2003 e o Visual Studio .NET do Visual C++).
+A conversão em uma conversão usando constante 0 é ambígua, pois int requer uma conversão tanto para Long quanto para void *. Para resolver esse erro, converta 0 para o tipo exato do parâmetro de função que está sendo usado para que nenhuma conversão precise ocorrer (esse código será válido nas versões do Visual Studio .NET 2003 e do Visual Studio .NET C++).
 
 ```cpp
 // C2668c.cpp
@@ -110,7 +110,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-Esse erro pode ocorrer porque o CRT agora tem float e double formas de todas as funções de matemática.
+Esse erro pode ocorrer porque o CRT agora tem formas flutuantes e duplas de todas as funções matemáticas.
 
 ```cpp
 // C2668d.cpp
@@ -125,7 +125,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-Esse erro pode ocorrer porque a pow (int, int) foi removido do Math. h no CRT.
+Esse erro pode ocorrer porque o pow (int, int) foi removido do Math. h no CRT.
 
 ```cpp
 // C2668e.cpp
@@ -138,7 +138,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-Esse código foi bem-sucedido no Visual Studio 2015, mas falha no Visual Studio 2017 e posterior com C2668. No Visual Studio 2015, o compilador tratou a inicialização de lista de cópia de maneira incorreta da mesma maneira que a inicialização de cópia regular; ele considerou somente a conversão de construtores para a resolução de sobrecarga.
+Esse código tem êxito no Visual Studio 2015, mas falha no Visual Studio 2017 e posterior com C2668. No Visual Studio 2015, o compilador tratou a inicialização de lista de cópia de maneira incorreta da mesma maneira que a inicialização de cópia regular; ele considerou somente a conversão de construtores para a resolução de sobrecarga.
 
 ```cpp
 struct A {

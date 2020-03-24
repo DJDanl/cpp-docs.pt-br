@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: f2e6db997891817620c1b2c1f70cb310818dd346
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b4931962febb1e68701aa3fe271e08f3aa8d9238
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514421"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166751"
 ---
 # <a name="max_is"></a>max_is
 
@@ -23,9 +23,9 @@ Designa o valor máximo para um índice de matriz válido.
 [ max_is("expression") ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*expression*<br/>
+*expressão*<br/>
 Uma ou mais expressões em linguagem C. São permitidos slots de argumento vazios.
 
 ## <a name="remarks"></a>Comentários
@@ -43,13 +43,13 @@ O atributo **max_is** C++ tem a mesma funcionalidade que o atributo MIDL [max_is
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|**size_is**|
 
-Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="example"></a>Exemplo
 
 Consulte [first_is](first-is.md) para obter um exemplo de como especificar uma seção de uma matriz.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>

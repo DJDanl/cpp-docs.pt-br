@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2928
 ms.assetid: 869e57f4-7024-4cbe-b47b-6e1e2a6005c5
-ms.openlocfilehash: ab6e73ec10c7611338e2ee331985842dfa401ef1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d290ffaef839d7ac0b91bc1ef54ca57af15ddee0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385765"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176931"
 ---
 # <a name="compiler-error-c2928"></a>Erro do compilador C2928
 
-instanciação explícita; 'identifier' não é uma função ou um membro de dados estáticos da classe de modelo 'class'
+instanciação explícita; ' identifier ' não é um membro de dados estáticos ou de função da classe de modelo ' class '
 
-Você não é possível instanciar explicitamente um membro da `class` que é não uma função ou `static` variável.
+Você não pode instanciar explicitamente um membro de `class` que não seja uma função ou `static` variável.

@@ -1,19 +1,19 @@
 ---
-title: 'Como: Definir construtores de movimentação e operadores de atribuição de movimentação (C++)'
+title: Como definir construtores de movimentação e mover operadores de atribuição (C++)
 ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: b601c53c01940fe110036d569e0be9d43a123a91
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 81f717162e2c7bebc62a9deeb208700380f62cb8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345025"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179361"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Operadores de construtores de movimento e de atribuição de movimento (C++)
 
-Este tópico descreve como gravar um *construtor de movimentação* e um operador de atribuição de movimentação para a classe C++. Um construtor de movimentação permite que os recursos pertencentes a um objeto rvalue a ser movido para um lvalue sem copiar. Para obter mais informações sobre a semântica de movimentação, consulte [Declarador de referência Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Este tópico descreve como gravar um *Construtor de movimentação* e um operador de atribuição de movimentação C++ para uma classe. Um Construtor move permite que os recursos de propriedade de um objeto rvalue sejam movidos para um lvalue sem cópia. Para obter mais informações sobre a semântica de movimentação, consulte [Declarador de referência rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 Este tópico baseia-se na seguinte classe do C++, `MemoryBlock`, que gerencia um buffer de memória.
 
@@ -219,7 +219,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como a semântica de movimentação pode melhorar o desempenho de seus aplicativos. O exemplo adiciona dois elementos a um objeto de vetor e insere um novo elemento entre os dois elementos existentes. O `vector` classe usa semântica de movimentação para executar a operação de inserção com eficiência movendo os elementos do vetor em vez de copiá-los.
+O exemplo a seguir mostra como a semântica de movimentação pode melhorar o desempenho de seus aplicativos. O exemplo adiciona dois elementos a um objeto de vetor e insere um novo elemento entre os dois elementos existentes. A classe `vector` usa a semântica de movimentação para executar a operação de inserção com eficiência movendo os elementos do vetor em vez de copiá-los.
 
 ```cpp
 // rvalue-references-move-semantics.cpp
@@ -241,7 +241,7 @@ int main()
 }
 ```
 
-Este exemplo gera a seguinte saída:
+Esse exemplo gera a saída a seguir:
 
 ```Output
 In MemoryBlock(size_t). length = 25.
@@ -264,7 +264,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.
 ```
 
-Antes do Visual Studio 2010, este exemplo produziu a saída a seguir:
+Antes do Visual Studio 2010, este exemplo produziu a seguinte saída:
 
 ```Output
 In MemoryBlock(size_t). length = 25.
@@ -289,7 +289,7 @@ In ~MemoryBlock(). length = 75. Deleting resource.
 
 A versão deste exemplo que usa a semântica de movimentação é mais eficiente do que a versão que não usa a semântica de movimentação, pois ela executa menos operações de cópia, alocação de memória e desalocação de memória.
 
-## <a name="robust-programming"></a>Programação robusta
+## <a name="robust-programming"></a>Programação Robusta
 
 Para evitar vazamento de recursos, sempre libere recursos (como a memória, os identificadores de arquivo e os soquetes) no operador de atribuição de movimentação.
 
@@ -307,9 +307,9 @@ MemoryBlock(MemoryBlock&& other)
 }
 ```
 
-O [std:: move](../standard-library/utility-functions.md#move) função preserva a propriedade de rvalue da *outros* parâmetro.
+A função [std:: move](../standard-library/utility-functions.md#move) preserva a propriedade rvalue do *outro* parâmetro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Declarador de referência Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
-[std::move](../standard-library/utility-functions.md#move)
+[std:: move](../standard-library/utility-functions.md#move)

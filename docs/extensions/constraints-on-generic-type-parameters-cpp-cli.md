@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: 6eefb6a7d888a031f6ff7f88d08da4d67a4dc8c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: be5af8f6b2edaa8f93fef7ae06b2175b54b25396
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516201"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172472"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Restrições em parâmetros de tipo genérico (C++/CLI)
 
@@ -27,7 +27,7 @@ Restrições são opcionais; não especificar uma restrição em um parâmetro �
 where type-parameter: constraint list
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *type-parameter*<br/>
 Um dos parâmetros de tipo a ser restringido.
@@ -43,7 +43,7 @@ Você também pode especificar um parâmetro genérico como restrição. O argum
 
 ## <a name="remarks"></a>Comentários
 
-A cláusula da restrição é composta por **where** seguido por um parâmetro de tipo, dois-pontos (**:**) e a restrição, que especifica a natureza da restrição no parâmetro de tipo. **where** é uma palavra-chave contextual; veja mais em [Palavras-chave contextuais](context-sensitive-keywords-cpp-component-extensions.md). Separe várias cláusulas **where** com um espaço.
+A cláusula da restrição é composta por **where** seguido por um parâmetro de tipo, dois-pontos ( **:** ) e a restrição, que especifica a natureza da restrição no parâmetro de tipo. **where** é uma palavra-chave contextual; veja mais em [Palavras-chave contextuais](context-sensitive-keywords-cpp-component-extensions.md). Separe várias cláusulas **where** com um espaço.
 
 As restrições são aplicadas aos parâmetros de tipo para colocar limitações sobre os tipos que podem ser usados como argumentos para um tipo ou método genérico.
 
@@ -198,6 +198,6 @@ where A : C
 ref struct SampleClass {};
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Genéricos](generics-cpp-component-extensions.md)

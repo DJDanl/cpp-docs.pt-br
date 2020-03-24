@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 978f1f546c0df8de4ff167ddf5ddf724feb31b6e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 96d5e609130b34a4a5f35109ce691c2de470e537
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514010"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166153"
 ---
 # <a name="string-c"></a>string (C++)
 
-Indica que a matriz de **caractere**unidimensional, `byte` **wchar_t**, (ou equivalente) ou o ponteiro para tal matriz deve ser tratado como uma cadeia de caracteres.
+Indica que o **caractere**unidimensional, **wchar_t**, a matriz `byte` (ou equivalente) ou o ponteiro para tal matriz deve ser tratado como uma cadeia de caracteres.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -55,9 +55,9 @@ __interface IFireTabCtrl
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de matriz](array-attributes.md)<br/>

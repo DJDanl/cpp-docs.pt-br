@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - Assign method [C++]
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
-ms.openlocfilehash: 922c29849361d3a116df32671a2c49ac3b4988fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09af33f4ed246c459d5c78d8d23d5316ad9c07c6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396126"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190636"
 ---
-# <a name="bstrtassign"></a>_bstr_t::Assign
+# <a name="_bstr_tassign"></a>_bstr_t::Assign
 
 **Seção específica da Microsoft**
 
-Cópias de um `BSTR` para o `BSTR` encapsulado por um **_**`bstr_t`.
+Copia um `BSTR` para o `BSTR` encapsulado por um **_** `bstr_t`.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,14 +27,14 @@ void Assign(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *s*<br/>
 Um `BSTR` a ser copiado para o `BSTR` encapsulado por um `_bstr_t`.
 
 ## <a name="remarks"></a>Comentários
 
-**Atribua** faz uma cópia binária, que significa que toda a duração do `BSTR` é copiado, independentemente do conteúdo.
+**Atribuir** uma cópia binária, o que significa que todo o comprimento do `BSTR` é copiado, independentemente do conteúdo.
 
 ## <a name="example"></a>Exemplo
 
@@ -111,6 +111,6 @@ bstrWrapper2 = some text
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe _bstr_t](../cpp/bstr-t-class.md)

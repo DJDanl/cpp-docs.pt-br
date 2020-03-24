@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2989
 ms.assetid: 936303d8-eb3b-4746-82ec-2f18020a6f64
-ms.openlocfilehash: e5f03d644ab6c25b7eb0da0dc1684c7de5c2e6a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 585823c2114befa3e6d432e3cf8100fa14ed1a7d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366128"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176722"
 ---
 # <a name="compiler-error-c2989"></a>Erro do compilador C2989
 
-'class': tipo de classe já foi declarado como um tipo diferente de classe
+' class ': o tipo de classe já foi declarado como um tipo que não é de classe
 
-A classe genérica ou modelo redefine uma classe não são de modelo ou não genérico. Verifique os arquivos de cabeçalho para conflitos.
+A classe genérica ou o modelo redefine uma classe que não é de modelo ou não genérica. Verifique se há conflitos nos arquivos de cabeçalho.
 
 O exemplo a seguir gera C2989:
 
@@ -31,7 +31,7 @@ class C{};  // C2989
 class C2{};
 ```
 
-C2989 também podem ocorrer ao usar genéricos:
+C2989 também pode ocorrer ao usar genéricos:
 
 ```cpp
 // C2989b.cpp

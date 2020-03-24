@@ -1,26 +1,26 @@
 ---
-title: C4840 do compilador (nível 4) de aviso
+title: Aviso do compilador (nível 4) C4840
 ms.date: 09/13/2018
 f1_keywords:
 - C4840
 helpviewer_keywords:
 - C4840
-ms.openlocfilehash: a757004659c1a9d2ce858cfae5ddfbc6c024d782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 649083d66d0c7a0ef11c742e56cbfb70e2e9b75f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360002"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185198"
 ---
-# <a name="compiler-warning-level-4-c4840"></a>C4840 do compilador (nível 4) de aviso
+# <a name="compiler-warning-level-4-c4840"></a>Aviso do compilador (nível 4) C4840
 
-> o uso não portátil da classe*tipo*' como um argumento para uma função variadic
+> uso não portátil da classe '*Type*' como um argumento para uma função Variadic
 
 ## <a name="remarks"></a>Comentários
 
-Classes ou estruturas que são passadas para uma função variadic devem ser facilmente copiadas. Ao passar esses objetos, o compilador simplesmente faz uma cópia bit a bit e não chama o construtor nem o destruidor.
+Classes ou estruturas que são passadas para uma função Variadic devem ser trivialmente copiáveis. Ao passar esses objetos, o compilador simplesmente faz uma cópia bit a bit e não chama o construtor nem o destruidor.
 
-Esse aviso é disponível partir do Visual Studio 2017.
+Esse aviso está disponível a partir do Visual Studio 2017.
 
 ## <a name="example"></a>Exemplo
 
@@ -49,7 +49,7 @@ int main()
 }
 ```
 
-Para cadeias de caracteres criadas e gerenciadas usando `CStringW`, fornecido `operator LPCWSTR()` deve ser usado para converter um `CStringW` objeto no ponteiro de cadeia de caracteres de estilo C esperado pela cadeia de caracteres de formato:
+Para cadeias de caracteres criadas e gerenciadas usando `CStringW`, o `operator LPCWSTR()` fornecido deve ser usado para converter um objeto `CStringW` para o ponteiro de cadeia de caracteres estilo C esperado pela cadeia de caracteres de formato:
 
 ```cpp
     CStringW str1;

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2919
 ms.assetid: 140a6db9-eb48-4c5e-84a7-a09d2653605b
-ms.openlocfilehash: ab11226c8cc4629a265dd182d5f882f6b3be7e5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 624b3ab47ccb1c934b612ec8648b5eee0d233690
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160842"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176969"
 ---
 # <a name="compiler-error-c2919"></a>Erro do compilador C2919
 
-'type': Operadores não podem ser usados na superfície publicada de um tipo WinRT
+' type ': os operadores não podem ser usados na superfície publicada de um tipo WinRT
 
-O sistema de tipo de tempo de execução do Windows não oferece suporte a funções de membro do operador na superfície publicada de um tipo. Isso ocorre porque nem todas as linguagens podem consumir funções de membro do operador. Você pode criar funções de membro que podem ser chamadas do código C++ na mesma unidade de compilação ou de classe do operador particular ou interno.
+O sistema do tipo Windows Runtime não oferece suporte a funções de membro de operador na superfície publicada de um tipo. Isso ocorre porque nem todas as linguagens podem consumir funções de membro do operador. Você pode criar funções de membro de operador privado ou interno que podem ser C++ chamadas a partir do código na mesma classe ou unidade de compilação.
 
-Para corrigir esse problema, remova a função de operador de membro da interface pública ou alterá-lo para uma função de membro nomeadas. Por exemplo, em vez de `operator==`, nomeie a função de membro `Equals`.
+Para corrigir esse problema, remova a função de membro de operador da interface pública ou altere-a para uma função de membro nomeada. Por exemplo, em vez de `operator==`, nomeie a função de membro `Equals`.

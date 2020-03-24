@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4750
 ms.assetid: b0b2c938-7d2a-4c36-8270-7daee15ffee3
-ms.openlocfilehash: 35b57cf88bf9f9a170a05af890632316b7030838
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 9ba0a37d2c213c35002b8e09d4377869a868d401
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052394"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175162"
 ---
 # <a name="compiler-warning-level-1-c4750"></a>Aviso do compilador (nível 1) C4750
 
@@ -19,7 +19,7 @@ ms.locfileid: "74052394"
 
 A função ' identifier ' força a expansão embutida da função [_alloca](../../c-runtime-library/reference/alloca.md) dentro de um loop, o que pode causar um estouro de pilha quando o loop é executado.
 
-### <a name="to-correct-this-error"></a>Para corrigir este erro
+### <a name="to-correct-this-error"></a>Para corrigir esse erro
 
 1. Certifique-se de que a função ' identifier ' não seja modificada com o especificador de [__forceinline](../../cpp/inline-functions-cpp.md) .
 
@@ -55,6 +55,6 @@ int main(void)
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [_alloca](../../c-runtime-library/reference/alloca.md)

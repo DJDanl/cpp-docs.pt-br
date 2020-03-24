@@ -7,18 +7,18 @@ helpviewer_keywords:
 - inline functions [C++], treating member functions as
 - member functions [C++], definition in class declaration
 ms.assetid: 9f77a438-500e-40bb-a6c6-544678f3f4c8
-ms.openlocfilehash: faa7d016c8f48e9a5ee57c8efa4ce3dfd3f3eb01
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d1c3e069325363276e58a617d6ba21cb0b6e4ff0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345848"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188461"
 ---
 # <a name="overview-of-member-functions"></a>Visão geral das funções de membro
 
-As funções membro são estáticas ou não estáticas. O comportamento das funções membro estáticas é diferente de outras funções de membro porque as funções membro estáticas não têm nenhum **isso** argumento. Funções de membro não estáticas têm um **isso** ponteiro. As funções membro, sejam elas estáticas ou não estáticas, podem ser definidas dentro ou fora da declaração da classe.
+As funções membro são estáticas ou não estáticas. O comportamento de funções de membro estáticos difere de outras funções de membro porque as funções de membro static não têm **nenhum argumento implícito** . Funções **de membro** não static têm um ponteiro. As funções membro, sejam elas estáticas ou não estáticas, podem ser definidas dentro ou fora da declaração da classe.
 
-Se uma função membro for definida dentro de uma declaração de classe, ela será tratada como uma função embutida, e não há necessidade de qualificar o nome da função com o nome da sua classe. Embora as funções definidas dentro de declarações de classe já sejam tratadas como funções embutidas, você pode usar o **embutido** palavra-chave para documentar o código.
+Se uma função membro for definida dentro de uma declaração de classe, ela será tratada como uma função embutida, e não há necessidade de qualificar o nome da função com o nome da sua classe. Embora as funções definidas nas declarações de classe já sejam tratadas como funções embutidas, você pode usar a palavra-chave **inline** para documentar o código.
 
 Este é um exemplo de declaração de uma função dentro de uma declaração de classe:
 
@@ -43,7 +43,7 @@ int main()
 }
 ```
 
-Se a definição de uma função de membro estiver fora da declaração de classe, ele é tratado como uma função embutida somente se ele for declarado explicitamente como **embutido**. Além disso, o nome da função na definição deve ser qualificado com o nome da sua classe usando o operador de resolução de escopo (`::`).
+Se a definição de uma função de membro estiver fora da declaração de classe, ela será tratada como uma função embutida somente se ela for explicitamente declarada como **embutida**. Além disso, o nome da função na definição deve ser qualificado com o nome da sua classe usando o operador de resolução de escopo (`::`).
 
 O exemplo a seguir é idêntico à declaração de classe `Account`anterior, com exceção da função `Deposit`, que é definida fora de declaração da classe:
 

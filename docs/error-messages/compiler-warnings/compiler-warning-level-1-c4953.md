@@ -1,24 +1,24 @@
 ---
-title: Compilador aviso (nível 1) C4953
+title: Aviso do compilador (nível 1) C4953
 ms.date: 08/27/2018
 f1_keywords:
 - C4953
 helpviewer_keywords:
 - C4953
 ms.assetid: 3c4f6ac6-3976-41ab-8a27-3c41d7472ea7
-ms.openlocfilehash: 1948342e1ff97c38ca3a44694dc7e7d399d96825
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46f07227b5df62938cc51a7be4cf4f3595a0d947
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384147"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174513"
 ---
-# <a name="compiler-warning-level-1-c4953"></a>Compilador aviso (nível 1) C4953
+# <a name="compiler-warning-level-1-c4953"></a>Aviso do compilador (nível 1) C4953
 
-> Item embutido '*função*' foi editado desde o perfil de dados foram coletados, dados de perfil não usados
+> '*Function*' embutido foi editado desde que os dados do perfil foram coletados, dados de perfil não usados
 
-Ao usar [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), o compilador detectou um módulo de entrada foi recompilado após `/LTCG:PGINSTRUMENT` e tem uma função (*função*) que foi editado e onde existente execuções de teste identificado o funcionar como um candidato para inlining. No entanto, como resultado de recompilação do módulo, a função deixará de ser um candidato para inlining.
+Ao usar [/LTCG: PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), o compilador detectou um módulo de entrada que foi recompilado após `/LTCG:PGINSTRUMENT` e tem uma função (*função*) que foi editada e onde as execuções de teste existentes identificaram a função como um candidato para o inlining. No entanto, como resultado da recompilação do módulo, a função não será mais um candidato para a inlinhagem.
 
-Esse aviso é informativo. Para resolver este aviso, execute `/LTCG:PGINSTRUMENT`, todos os teste de refazer é executado e executar `/LTCG:PGOPTIMIZE`.
+Esse aviso é informativo. Para resolver esse aviso, execute `/LTCG:PGINSTRUMENT`, refaça todas as execuções de teste e execute `/LTCG:PGOPTIMIZE`.
 
-Esse aviso deve ser substituído com um erro se `/LTCG:PGOPTIMIZE` tivesse sido usada.
+Esse aviso será substituído por um erro se `/LTCG:PGOPTIMIZE` tivesse sido usado.

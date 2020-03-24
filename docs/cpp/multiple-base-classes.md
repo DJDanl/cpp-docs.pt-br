@@ -7,16 +7,16 @@ helpviewer_keywords:
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-ms.openlocfilehash: b58c238da37fbbaf7c2c2913b652c26d98fbd96e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: b8bc411b1b8d0b459fe58a39cf351d59d09b2d0e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345943"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179446"
 ---
 # <a name="multiple-base-classes"></a>Várias classes base
 
-Uma classe pode ser derivada de mais de uma classe base. Em um modelo de herança múltipla (em que classes são derivadas de mais de uma classe base), as classes base são especificadas usando o *base de dados de lista* elemento de gramática. Por exemplo, a declaração de classe de `CollectionOfBook`, derivada de `Collection` e de `Book`, pode ser especificada:
+Uma classe pode ser derivada de mais de uma classe base. Em um modelo de várias heranças (em que classes são derivadas de mais de uma classe base), as classes base são especificadas usando o elemento de gramática de *lista de base* . Por exemplo, a declaração de classe de `CollectionOfBook`, derivada de `Collection` e de `Book`, pode ser especificada:
 
 ```cpp
 // deriv_MultipleBaseClasses.cpp
@@ -31,14 +31,14 @@ class CollectionOfBook : public Book, public Collection {
 
 A ordem na qual as classes base são especificadas não é significativa, exceto em determinados casos nos quais os construtores e os destruidores são invocados. Nesses casos, a ordem na qual as classes base são especificadas afeta o seguinte:
 
-- A ordem na qual ocorre a inicialização pelo construtor. Se seu código depende da parte `Book` de `CollectionOfBook` para ser inicializado antes da parte `Collection`, a ordem de especificação é significante. A inicialização ocorre na ordem em que as classes são especificadas na *base de dados de lista*.
+- A ordem na qual ocorre a inicialização pelo construtor. Se seu código depende da parte `Book` de `CollectionOfBook` para ser inicializado antes da parte `Collection`, a ordem de especificação é significante. A inicialização ocorre na ordem em que as classes são especificadas na *lista de base*.
 
-- A ordem na qual os destruidores são chamados para limpeza. Novamente, se for necessário que uma "parte" específica da classe esteja presente quando outra parte for destruída, a ordem é importante. Os destruidores são chamados na ordem inversa das classes especificadas na *base de dados de lista*.
+- A ordem na qual os destruidores são chamados para limpeza. Novamente, se for necessário que uma "parte" específica da classe esteja presente quando outra parte for destruída, a ordem é importante. Os destruidores são chamados na ordem inversa das classes especificadas na lista de *base*.
 
     > [!NOTE]
     >  A ordem de especificação das classes base pode afetar o layout de memória da classe. Não tome decisões de programação com base na ordem dos membros base na memória.
 
-Ao especificar o *base de dados de lista*, você não pode especificar o mesmo nome de classe mais de uma vez. No entanto, uma classe pode ser uma base indireta para uma classe derivada mais de uma vez.
+Ao especificar a *lista de base*, você não pode especificar o mesmo nome de classe mais de uma vez. No entanto, uma classe pode ser uma base indireta para uma classe derivada mais de uma vez.
 
 ## <a name="virtual-base-classes"></a>Classes base virtuais
 
@@ -48,16 +48,16 @@ Cada objeto não virtual contém uma cópia dos membros de dados definidos na cl
 
 Quando uma classe base é especificada como base virtual, ela pode atuar como uma base indireta mais de uma vez sem duplicação de seus membros de dados. Uma única cópia dos membros de dados é compartilhada por todas as classes base que ela usa como base virtual.
 
-Ao declarar uma classe base virtual, o **virtual** palavra-chave aparece nas listas de base das classes derivadas.
+Ao declarar uma classe base virtual, a palavra-chave **virtual** é exibida nas listas base das classes derivadas.
 
 Considere a hierarquia de classes na figura a seguir, que ilustra uma linha simulada de almoço.
 
-![Gráfico de linha de almoço simulado](../cpp/media/vc38xp1.gif "gráfico de linha de almoço simulado") <br/>
-Gráfico de linha de almoço simulado
+![Grafo de linha de almoço simulada](../cpp/media/vc38xp1.gif "Grafo de linha de almoço simulada") <br/>
+Grafo de linha de almoço simulado
 
 Na figura, `Queue` é a classe base para `CashierQueue` e `LunchQueue`. No entanto, quando as duas classes são combinadas para formar `LunchCashierQueue`, o seguinte problema ocorre: a nova classe contém dois subobjetos do tipo `Queue`, um de `CashierQueue` e o outro de `LunchQueue`. A figura a seguir mostra o layout conceitual de memória (o layout real de memória pode ser otimizado).
 
-![Simulada de almoço&#45;objeto line](../cpp/media/vc38xp2.gif "simulada de almoço&#45;o objeto de linha") <br/>
+![Objeto de linha&#45;de almoço simulado](../cpp/media/vc38xp2.gif "Objeto de linha&#45;de almoço simulado") <br/>
 Objeto de linha de almoço simulado
 
 Observe que há dois subobjetos `Queue` no objeto `LunchCashierQueue`. O código a seguir declara `Queue` como uma classe base virtual:
@@ -71,27 +71,27 @@ class LunchQueue : virtual public Queue {};
 class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 ```
 
-O **virtual** palavra-chave garante que apenas uma cópia do subobjeto `Queue` está incluído (consulte a figura a seguir).
+A palavra-chave **virtual** garante que apenas uma cópia do subobjeto `Queue` esteja incluída (consulte a figura a seguir).
 
-![Simulada de almoço&#45;objeto de linha, as classes base virtuais](../cpp/media/vc38xp3.gif "simulada de almoço&#45;o objeto de linha, as classes base virtuais") <br/>
+![Objeto de linha&#45;de almoço simulado, classes base virtuais](../cpp/media/vc38xp3.gif "Objeto de linha&#45;de almoço simulado, classes base virtuais") <br/>
 Objeto de linha de almoço simulado com classes base virtuais
 
 Uma classe pode ter um componente virtual e um componente não virtual de determinado tipo. Isso acontece nas condições ilustradas na figura a seguir.
 
-![Virtual e não&#45;componentes virtuais de uma classe](../cpp/media/vc38xp4.gif "Virtual e não&#45;componentes virtuais de uma classe") <br/>
+![Componentes virtuais e&#45;não virtuais de uma classe](../cpp/media/vc38xp4.gif "Componentes virtuais e&#45;não virtuais de uma classe") <br/>
 Componentes virtuais e não virtuais da mesma classe
 
 Na figura, `CashierQueue` e `LunchQueue` usam `Queue` como uma classe base virtual. No entanto, `TakeoutQueue` especifica `Queue` como uma classe base, não uma classe base virtual. Portanto, `LunchTakeoutCashierQueue` tem dois subobjetos do tipo `Queue`: um do caminho de herança que inclui `LunchCashierQueue` e outro do caminho que inclui `TakeoutQueue`. Isso é ilustrado na figura a seguir.
 
-![Não & virtual&#45;herança virtual no layout do objeto](../cpp/media/vc38xp5.gif "virtuais e não&#45;herança virtual no layout do objeto") <br/>
-Layout do objeto com herança virtual e não virtual
+![Virtual & herança&#45;não virtual no layout do objeto](../cpp/media/vc38xp5.gif "Virtual & herança&#45;não virtual no layout do objeto") <br/>
+Layout de objeto com herança virtual e não virtual
 
 > [!NOTE]
 >  A herança virtual oferece benefícios significativos de tamanho quando comparada com a herança não virtual. No entanto, pode apresentar a sobrecarga adicional de processamento.
 
-Se uma classe derivada substitui uma função virtual que herda de uma classe base virtual e, se um construtor ou um destruidor para a classe base derivada chamar essa função usando um ponteiro para a classe base virtual, o compilador virtual poderá inserir campos “vtordisp” adicionais ocultos nas classes com bases virtuais. O `/vd0` opção de compilador suprime a adição do membro de deslocamento do construtor/destruidor vtordisp ocultos. O `/vd1` opção de compilador, o padrão, permite que eles são necessários. Desative vtordisps apenas se você tiver certeza de que todos os destruidores e construtores da classe chamam funções virtuais virtualmente.
+Se uma classe derivada substitui uma função virtual que herda de uma classe base virtual e, se um construtor ou um destruidor para a classe base derivada chamar essa função usando um ponteiro para a classe base virtual, o compilador virtual poderá inserir campos “vtordisp” adicionais ocultos nas classes com bases virtuais. A opção de compilador `/vd0` suprime a adição do membro de substituição do Construtor vtordisp/destruidor oculto. A opção de compilador `/vd1`, o padrão, habilita-os onde eles são necessários. Desative vtordisps apenas se você tiver certeza de que todos os destruidores e construtores da classe chamam funções virtuais virtualmente.
 
-O `/vd` opção de compilador afeta um módulo de compilação inteiro. Use o `vtordisp` pragma para suprimir e, em seguida, reabilitar `vtordisp` campos em uma classe por classe base:
+A opção de compilador `/vd` afeta um módulo de compilação inteiro. Use o `vtordisp` pragma para suprimir e, em seguida, reativar `vtordisp` campos de acordo com a classe:
 
 ```cpp
 #pragma vtordisp( off )
@@ -188,12 +188,12 @@ As conversões explícitas e implícitas de ponteiros ou as referências aos tip
 
 - A declaração de um objeto de tipo `D`.
 
-- O efeito de aplicar o operador address-of (**&**) para o objeto. Observe que o operador address-of sempre fornece o endereço base do objeto.
+- O efeito de aplicar o operador de endereço ( **&** ) a esse objeto. Observe que o operador address-of sempre fornece o endereço base do objeto.
 
 - O efeito de converter explicitamente o ponteiro obtido usando o operador address-of para o tipo de classe base `A`. Observe que a coerção do endereço do objeto para o tipo `A*` não fornece sempre ao compilador informações suficientes sobre o subobjeto do tipo `A` a ser selecionado; nesse caso, existem dois subobjetos.
 
-![Conversão ambígua dos ponteiros para classes base](../cpp/media/vc38xt1.gif "conversão ambígua dos ponteiros para classes base") <br/>
-Conversão ambígua dos ponteiros para classes base
+![Conversão ambígua de ponteiros para classes base](../cpp/media/vc38xt1.gif "Conversão ambígua de ponteiros para classes base") <br/>
+Conversão ambígua de ponteiros para classes base
 
 A conversão para o tipo `A*` (ponteiro para `A`) é ambígua porque não há como distinguir qual subobjeto do tipo `A` está correto. Observe que você pode evitar a ambiguidade explicitamente especificando qual subobjeto você pretende usar, como segue:
 
@@ -208,11 +208,11 @@ Se forem usadas classes base virtuais, as funções, os objetos, os tipos e os e
 
 A figura a seguir mostra como os objetos são compostos usando a herança virtual e não virtual.
 
-![Derivação virtual e não&#45;derivação virtual](../cpp/media/vc38xr1.gif "derivação Virtual e não&#45;derivação virtual") <br/>
-Derivação não virtual contra não virtual
+![Derivação virtual e&#45;derivação não virtual](../cpp/media/vc38xr1.gif "Derivação virtual e&#45;derivação não virtual") <br/>
+Derivação virtual versus não virtual
 
 Na figura, o acesso a qualquer membro da classe `A` por meio de classes base não virtuais causa uma ambiguidade; o compilador não tem nenhuma informação que explique se ele deve usar o subobjeto associado a `B` ou o subobjeto associado a `C`. No entanto, quando `A` é especificada como uma classe base virtual, não há dúvida sobre qual subobjeto está sendo acessado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Herança](../cpp/inheritance-cpp.md)

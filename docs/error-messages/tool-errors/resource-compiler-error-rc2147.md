@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - RC2147
 ms.assetid: 09974f06-1731-4e70-b373-f9218e0ee8d9
-ms.openlocfilehash: 9b4555d819bfcf30debc6a4dc9261999648e3e95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f76c61ace4e0e1d8eea9a33669b66021861c36f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399883"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191139"
 ---
 # <a name="resource-compiler-error-rc2147"></a>Erro RC2147 (compilador de recurso)
 
-Não é um número de identificação de SUBIDIOMA
+A ID do subidioma não é um número
 
-O valor da ID de SUBIDIOMA deve ser um número.
+O valor da ID do SUBIDIOMA deve ser um número.
 
-O **LINGUAGEM** instrução deve usar a sintaxe a seguir:
+A instrução de **idioma** deve usar a seguinte sintaxe:
 
-**LANGUAGE** *primary_language_ID*,*secondary_language_ID*
+**LANGUAGE** *Primary_language_ID*de idiomas,*secondary_language_ID*
 
-IDs de SUBIDIOMA válidas são definidas como **SUBLANG_** constantes no arquivo de Winnt. h.
+As IDs válidas de subidioma são definidas como **SUBLANG_** constantes no arquivo Winnt. h.
