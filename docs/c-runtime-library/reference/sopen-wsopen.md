@@ -35,12 +35,12 @@ helpviewer_keywords:
 - files [C++], sharing
 - _wsopen function
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
-ms.openlocfilehash: d337b2353ad15eade15235b4b5217a3b881bab1d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8a8bad8888e141e7be77cb605f4774722753bfb4
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948054"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150714"
 ---
 # <a name="_sopen-_wsopen"></a>_sopen, _wsopen
 
@@ -77,7 +77,7 @@ O tipo de compartilhamento permitido.
 *pmode*<br/>
 Configuração de permissão.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada uma destas funções mostra um descritor de arquivo do arquivo aberto.
 
@@ -86,7 +86,7 @@ Se *filename* ou *oflag* for um ponteiro **NULL** , ou se *oflag* ou *shflag* n�
 |Valor errno|Condição|
 |-|-|
 | **EACCES** | O caminho determinado é um diretório ou o arquivo é somente leitura, mas foi realizada uma tentativa de operação de abertura para gravação. |
-| **EEXIST** | Sinalizadores **_O_CREAT** e **_O_EXCL** foram especificados, mas o *nome de arquivo* já existe. |
+| **EEXIST** | Sinalizadores de **_O_CREAT** e **_O_EXCL** foram especificados, mas o *nome de arquivo* já existe. |
 | **EINVAL** | Argumento *oflag* ou *shflag* inválido. |
 | **EMFILE** | Nenhum outro descritor de arquivo disponível. |
 | **ENOENT** | Arquivo ou caminho não encontrado. |
@@ -95,7 +95,7 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 ## <a name="remarks"></a>Comentários
 
-A função **_sopen** abre o arquivo especificado por *filename* e prepara o arquivo para leitura ou gravação compartilhada, conforme definido por *oflag* e *shflag*. **_wsopen** é uma versão de caractere largo do **_sopen**; o argumento *filename* para **_wsopen** é uma cadeia de caracteres largos. **_wsopen** e **_sopen** se comportam de outra forma.
+A função **_sopen** abre o arquivo especificado por *filename* e prepara o arquivo para leitura ou gravação compartilhada, conforme definido por *oflag* e *shflag*. **_wsopen** é uma versão de caractere largo do **_sopen**; o argumento de *nome de arquivo* para **_wsopen** é uma cadeia de caracteres largos. **_wsopen** e **_sopen** se comportar de forma idêntica.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -103,7 +103,7 @@ A função **_sopen** abre o arquivo especificado por *filename* e prepara o arq
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsopen**|**_sopen**|**_sopen**|**_wsopen**|
 
-A expressão de número inteiro *oflag* é formada pela combinação de uma ou mais das constantes de manifesto a seguir \<, que são definidas em Fcntl. h >. Quando duas ou mais constantes formam o argumento *oflag*, elas são combinadas com o operador OR-bit **&#124;** ().
+A expressão de inteiro *oflag* é formada pela combinação de uma ou mais das constantes de manifesto a seguir, que são definidas em \<Fcntl. h >. Quando duas ou mais constantes formam o argumento *oflag*, elas são combinadas com o operador OR-bit **&#124;** ().
 
 |constante *oflag*|Comportamento|
 |-|-|
@@ -112,14 +112,14 @@ A expressão de número inteiro *oflag* é formada pela combinação de uma ou m
 | **_O_CREAT** | Cria um arquivo e o abre para gravação. Não terá efeito se o arquivo especificado por *filename* existir. O argumento *pmode* é necessário quando **_O_CREAT** é especificado. |
 | **_O_CREAT** &#124; **_O_SHORT_LIVED** | Cria um arquivo temporário e, se possível, não alinha com o disco. O argumento *pmode* é necessário quando **_O_CREAT** é especificado. |
 | **_O_CREAT** &#124; **_O_TEMPORARY** | Cria um arquivo temporário, que é excluído quando o último descritor de arquivo é fechado. O argumento *pmode* é necessário quando **_O_CREAT** é especificado. |
-| **_O_CREAT** &#124; ` _O_EXCL` | Retorna um valor de erro se um arquivo especificado por *filename* existir. Aplica-se somente quando usado com **_O_CREAT**. |
+| **_O_CREAT** &#124; `_O_EXCL` | Retorna um valor de erro se um arquivo especificado por *filename* existir. Aplica-se somente quando usado com **_O_CREAT**. |
 | **_O_NOINHERIT** | Impede a criação de um descritor de arquivo compartilhado. |
 | **_O_RANDOM** | Especifica que o cache é otimizado para acesso aleatório do disco, mas não se restringe a isso. |
 | **_O_RDONLY** | Abre um arquivo somente leitura. Não pode ser especificado com **_O_RDWR** ou **_O_WRONLY**. |
 | **_O_RDWR** | Abre um arquivo para leitura e gravação. Não pode ser especificado com **_O_RDONLY** ou **_O_WRONLY**. |
 | **_O_SEQUENTIAL** | Especifica que o cache é otimizado para acesso sequencial do disco, mas não se restringe a isso. |
 | **_O_TEXT** | Abre um arquivo no modo de texto (convertido). (Para obter mais informações, consulte [E/S de arquivo nos modos de texto e binário](../../c-runtime-library/text-and-binary-mode-file-i-o.md) e [fopen](fopen-wfopen.md).) |
-| **_O_TRUNC** | Abre um arquivo e o trunca para que ele fique com tamanho zero; o arquivo deve ter permissão de gravação. Não pode ser especificado com **_O_RDONLY**. **_O_TRUNC** usado com **_O_CREAT** abre um arquivo existente ou cria um arquivo. **Observação:** O sinalizador **_O_TRUNC** destrói o conteúdo do arquivo especificado. |
+| **_O_TRUNC** | Abre um arquivo e o trunca para que ele fique com tamanho zero; o arquivo deve ter permissão de gravação. Não pode ser especificado com **_O_RDONLY**. **_O_TRUNC** usado com **_O_CREAT** abre um arquivo existente ou cria um arquivo. **Observação:** O sinalizador de **_O_TRUNC** destrói o conteúdo do arquivo especificado. |
 | **_O_WRONLY** | Abre um arquivo somente gravação. Não pode ser especificado com **_O_RDONLY** ou **_O_RDWR**. |
 | **_O_U16TEXT** | Abre um arquivo no modo Unicode UTF-16. |
 | **_O_U8TEXT** | Abre um arquivo no modo Unicode UTF-8. |
@@ -129,9 +129,9 @@ Para especificar o modo de acesso ao arquivo, você deve especificar **_O_RDONLY
 
 Quando um arquivo é aberto no modo Unicode usando **_O_WTEXT**, **_O_U8TEXT**ou **_O_U16TEXT**, as funções de entrada convertem os dados lidos do arquivo em dados UTF-16 armazenados como tipo **wchar_t**. As funções que gravam em um arquivo aberto no modo Unicode esperam buffers que contêm dados UTF-16 armazenados como tipo **wchar_t**. Se o arquivo estiver codificado como UTF-8, os dados em UTF-16 serão convertidos em UTF-8 no momento da gravação. O conteúdo do arquivo codificado como UTF-8 será convertido em UTF-16 no momento da leitura. Tentar ler ou gravar uma quantidade ímpar de bytes no modo Unicode gera um erro de validação de parâmetro. Para ler ou gravar dados armazenados em seu programa como UTF-8, use um modo de arquivo de texto ou binário em vez do modo Unicode. Você é responsável por toda a conversão de codificação necessária.
 
-Se **_sopen** for chamado com **_O_WRONLY** |  **_O_APPEND** (modo de acréscimo) e **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**, primeiro ele tentará abrir o arquivo para leitura e gravação, ler a bom e, em seguida, reabri-la para somente gravação. Se uma falha impedir de abrir o arquivo para leitura e gravação, ele será aberto somente para gravação e usará o valor padrão na configuração do modo Unicode.
+Se **_sopen** for chamado com **_O_WRONLY** |  **_O_APPEND** (modo de acréscimo) e **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**, primeiro ele tentará abrir o arquivo para leitura e gravação, ler a bom e, em seguida, reabri-la para gravação. Se uma falha impedir de abrir o arquivo para leitura e gravação, ele será aberto somente para gravação e usará o valor padrão na configuração do modo Unicode.
 
-O argumento *shflag* é uma expressão constante que consiste em uma das constantes de manifesto a seguir, que são definidas \<em share. h >.
+O argumento *shflag* é uma expressão constante que consiste em uma das constantes de manifesto a seguir, que são definidas em \<share. h >.
 
 |constante *shflag*|Comportamento|
 |-|-|
@@ -140,7 +140,7 @@ O argumento *shflag* é uma expressão constante que consiste em uma das constan
 | **_SH_DENYRD** | Nega acesso de leitura a um arquivo. |
 | **_SH_DENYNO** | Permite acesso de leitura e gravação. |
 
-O argumento *pmode* é necessário somente quando **_O_CREAT** é especificado. Se o arquivo não existir, *pmode* especificará as configurações de permissão do arquivo, que são definidas quando o novo arquivo é fechado pela primeira vez. Caso contrário, *pmode* será ignorado. *pmode* é uma expressão de inteiro que contém uma ou ambas as constantes de manifesto **_S_IWRITE** e **_S_IREAD**, que são definidas \<em SYS\Stat.h >. Quando as duas constantes são fornecidas, elas são combinadas com o operador OR bit a bit. O significado de *pmode* é o seguinte.
+O argumento *pmode* é necessário somente quando **_O_CREAT** é especificado. Se o arquivo não existir, *pmode* especificará as configurações de permissão do arquivo, que são definidas quando o novo arquivo é fechado pela primeira vez. Caso contrário, *pmode* será ignorado. *pmode* é uma expressão de inteiro que contém uma ou ambas as constantes de manifesto **_S_IWRITE** e **_S_IREAD**, que são definidas em \<SYS\Stat.h >. Quando as duas constantes são fornecidas, elas são combinadas com o operador OR bit a bit. O significado de *pmode* é o seguinte.
 
 |*pmode*|Significado|
 |-|-|
@@ -152,7 +152,7 @@ Se a permissão de gravação não for fornecida, o arquivo será somente leitur
 
 **_sopen** aplica a máscara de permissão de arquivo atual a *pmode* antes que as permissões sejam definidas. (Consulte [_umask](umask.md).)
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 |Rotina|Cabeçalho necessário|Cabeçalho opcional|
 |-------------|---------------------|---------------------|
@@ -161,7 +161,7 @@ Se a permissão de gravação não for fornecida, o arquivo será somente leitur
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Veja o exemplo de [_locking](locking.md).
 

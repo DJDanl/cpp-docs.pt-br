@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: d9e8778e970b6b672d6198770ad0c7ab5a4674b9
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6dd14bf9f53030920bb5114fb3a52499444ff10a
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076860"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150752"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Histórico de alterações de 2003 a 2015 do Visual C++
 
@@ -2471,7 +2471,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
 
    Não há nenhum diagnóstico de compilador associado a essa alteração.
 
-   Exemplo
+   {1&gt;Exemplo&lt;1}
 
     ```cpp
     #include <type_traits>
@@ -2854,7 +2854,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
 
    No Visual Studio 2012, o `E1` na expressão `E1::b` é resolvido para `::E1` no escopo global. No Visual Studio 2013, `E1` na expressão `E1::b` é resolvido para a definição `typedef E2` em `main()` e tem o tipo `::E2`.
 
-- O layout do objeto foi alterado. No x64, o layout do objeto de uma classe pode ser alterado em relação às versões anteriores. Se ele tiver uma função **virtual** , mas não tiver uma classe base que tenha uma função **virtual** , o modelo de objeto do compilador inserirá um ponteiro para uma tabela de função **virtual** após o layout do membro de dados. Isso significa que o layout pode não ser ideal em todos os casos. Em versões anteriores, uma otimização para o x64 tentaria melhorar o layout para você, mas como ela falhou em funcionar corretamente em situações de código complexas, ela foi removida no Visual Studio 2013. Por exemplo, considere este código:
+- {1&gt;O layout do objeto foi alterado.&lt;1} No x64, o layout do objeto de uma classe pode ser alterado em relação às versões anteriores. Se ele tiver uma função **virtual** , mas não tiver uma classe base que tenha uma função **virtual** , o modelo de objeto do compilador inserirá um ponteiro para uma tabela de função **virtual** após o layout do membro de dados. Isso significa que o layout pode não ser ideal em todos os casos. Em versões anteriores, uma otimização para o x64 tentaria melhorar o layout para você, mas como ela falhou em funcionar corretamente em situações de código complexas, ela foi removida no Visual Studio 2013. Por exemplo, considere este código:
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -3040,7 +3040,7 @@ A enumeração `SchedulerType` de `UmsThreadDefault` foi preterida. A especifica
 
 ### <a name="standard-library"></a>Biblioteca Padrão
 
-- Após uma alteração da falha entre os padrões C++98/03 e C++11, o uso de argumentos de modelo explícitos para chamar `make_pair()` – como `make_pair<int, int>(x, y)` – normalmente não é compilado no Visual C++ no Visual Studio 2012. A solução sempre é chamar `make_pair() `sem argumentos de modelo explícitos – como `make_pair(x, y)`. O fornecimento de argumentos de modelo explícitos anula a finalidade da função. Se precisar de controle preciso sobre o tipo resultante, use `pair` em vez de `make_pair` – como `pair<short, short>(int1, int2)`.
+- Após uma alteração da falha entre os padrões C++98/03 e C++11, o uso de argumentos de modelo explícitos para chamar `make_pair()` – como `make_pair<int, int>(x, y)` – normalmente não é compilado no Visual C++ no Visual Studio 2012. A solução é sempre chamar `make_pair()` sem argumentos de modelo explícitos, como no `make_pair(x, y)`. O fornecimento de argumentos de modelo explícitos anula a finalidade da função. Se precisar de controle preciso sobre o tipo resultante, use `pair` em vez de `make_pair` – como `pair<short, short>(int1, int2)`.
 
 - Outra alteração significativa entre os padrões C++ 98/03 e C++ 11: quando um é implicitamente conversível para B e B é implicitamente conversível em C, mas um não é implicitamente conversível para C, C++ 98/03 e Visual Studio 2010 permitido que `pair<A, X>` seja convertido (implicitamente ou explicitamente) em `pair<C, X>`. (O outro tipo, X, não é de interesse aqui e não é específico para o primeiro tipo no par.) O C++ compilador no Visual Studio 2012 detecta que um não é implicitamente conversível em C e remove a conversão de pares da resolução de sobrecarga. Essa é uma alteração positiva para muitos cenários. Por exemplo, sobrecarregar `func(const pair<int, int>&)` e `func(const pair<string, string>&)` e chamar `func()` com `pair<const char *, const char *>` compilará com essa alteração. No entanto, essa alteração interrompe o código que baseava-se em conversões de par agressivas. Esse código geralmente pode ser corrigido executando explicitamente uma parte da conversão – por exemplo, passando `make_pair(static_cast<B>(a), x)` para uma função que espera `pair<C, X>`.
 
@@ -3522,6 +3522,6 @@ A enumeração `SchedulerType` de `UmsThreadDefault` foi preterida. A especifica
 
 - O compilador agora relata código inacessível (C4702).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Novidades do Visual C++ no Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)

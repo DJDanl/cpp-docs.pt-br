@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: bf6623bb61e7a217fcc18a268a583a7ecea4931d
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 58ff645a381fd55c591a2566b2e698f0e9821935
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889989"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150610"
 ---
 # <a name="num_get-class"></a>Classe num_get
 
@@ -44,7 +44,7 @@ O tipo de iterador do qual as funções get numéricas leem sua entrada.
 
 Como qualquer faceta de localidade, a ID de objeto estático tem um valor armazenado inicial de zero. A primeira tentativa de acessar seu valor armazenado armazena um valor positivo exclusivo na **id.**
 
-### <a name="constructors"></a>Construtores
+### <a name="constructors"></a>{1&gt;Construtores&lt;1}
 
 |Construtor|Descrição|
 |-|-|
@@ -52,7 +52,7 @@ Como qualquer faceta de localidade, a ID de objeto estático tem um valor armaze
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nome de tipo|Descrição|
+|Nome do tipo|Descrição|
 |-|-|
 |[char_type](#char_type)|Um tipo que é usado para descrever um caractere usado por uma localidade.|
 |[iter_type](#iter_type)|Um tipo que descreve um iterador de entrada.|
@@ -64,13 +64,13 @@ Como qualquer faceta de localidade, a ID de objeto estático tem um valor armaze
 |[do_get](#do_get)|Uma função virtual que é chamada para extrair um valor numérico ou booliano de uma sequência de caracteres.|
 |[get](#get)|Extrai um valor numérico ou booliano de uma sequência de caracteres.|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-**Cabeçalho:** \<locale>
+**Cabeçalho:** \<localidade >
 
 **Namespace:** std
 
-## <a name="char_type"></a>  num_get::char_type
+## <a name="num_getchar_type"></a><a name="char_type"></a>  num_get::char_type
 
 Um tipo que é usado para descrever um caractere usado por uma localidade.
 
@@ -82,7 +82,7 @@ typedef CharType char_type;
 
 O tipo é um sinônimo do parâmetro de modelo **CharType**.
 
-## <a name="do_get"></a>  num_get::do_get
+## <a name="num_getdo_get"></a><a name="do_get"></a>  num_get::do_get
 
 Uma função virtual que é chamada para extrair um valor numérico ou booliano de uma sequência de caracteres.
 
@@ -167,19 +167,19 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* \
+*primeiro*\
 O início do intervalo de caracteres do qual o número será lido.
 
-*última* \
+*última*\
 O fim do intervalo de caracteres do qual o número será lido.
 
 \ *iosbase*
 O [ios_base](../standard-library/ios-base-class.md) cujos sinalizadores são usados pela conversão.
 
-*estado* \
+*estado*\
 O estado para o qual failbit (consulte [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) é adicionado após a falha.
 
-*valor* \
+*valor*\
 O valor que foi lido.
 
 ### <a name="return-value"></a>Valor retornado
@@ -213,9 +213,9 @@ Caso contrário, a especificação de conversão é `ld`.
 
 O formato de um campo de entrada de inteiro é determinado pela [faceta de localidade](../standard-library/locale-class.md#facet_class)`fac` retornada pela chamada [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base:: getloc](../standard-library/ios-base-class.md#getloc)`())`. Especificamente:
 
-`fac.`[numpunct:: grouping](../standard-library/numpunct-class.md#grouping)`()` determina como os dígitos são agrupados à esquerda de qualquer ponto decimal
+`fac.`[numpunct::grouping](../standard-library/numpunct-class.md#grouping)`()` determina como os dígitos são agrupados à esquerda de qualquer vírgula decimal
 
-`fac.`[numpunct:: thousands_sep](../standard-library/numpunct-class.md#thousands_sep)`()` determina a sequência que separa grupos de dígitos à esquerda de qualquer ponto decimal.
+`fac.`[numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep)`()` determina a sequência que separa grupos de dígitos à esquerda de qualquer vírgula decimal.
 
 Se nenhuma instância de `fac.thousands_sep()` ocorrer no campo de entrada numérico, nenhuma restrição de agrupamento é imposta. Caso contrário, qualquer restrição de agrupamento imposta pelo `fac.grouping()` será imposta e os separadores serão removidos antes que a verificação de conversão ocorra.
 
@@ -325,11 +325,11 @@ comporta-se da mesma maneira que a primeira, exceto que esforça-se para corresp
 
 Um campo de entrada Booliano adota um de dois formatos. Se `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) for false, será o mesmo que um campo de entrada inteiro, exceto que o valor convertido deve ser 0 (para false) ou 1 (para true). Caso contrário, a sequência deve corresponder a `fac.`[numpunct::falsename](../standard-library/numpunct-class.md#falsename)`()` (para falso) ou `fac.`[numpunct::truename](../standard-library/numpunct-class.md#truename)`()` (para verdadeiro).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Veja o exemplo de [obter](#get), em que a função membro virtual é chamada por `do_get`.
 
-## <a name="get"></a>  num_get::get
+## <a name="num_getget"></a><a name="get"></a>  num_get::get
 
 Extrai um valor numérico ou booliano de uma sequência de caracteres.
 
@@ -414,19 +414,19 @@ iter_type get(
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* \
+*primeiro*\
 O início do intervalo de caracteres do qual o número será lido.
 
-*última* \
+*última*\
 O fim do intervalo de caracteres do qual o número será lido.
 
 \ *iosbase*
 O [ios_base](../standard-library/ios-base-class.md) cujos sinalizadores são usados pela conversão.
 
-*estado* \
+*estado*\
 O estado para o qual failbit (consulte [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) é adicionado após a falha.
 
-*valor* \
+*valor*\
 O valor que foi lido.
 
 ### <a name="return-value"></a>Valor retornado
@@ -441,7 +441,7 @@ A primeira função membro virtual protegida virtual tenta corresponder elemento
 
 O campo de entrada de inteiro é convertido pelas mesmas regras usadas pelas funções de verificação para corresponder e converter uma série de elementos **Char** de um arquivo. Cada elemento **Char** é presumido para mapear para um elemento equivalente do tipo `CharType` por um mapeamento simples de um-para-um. A especificação de conversão de verificação equivalente é determinada da seguinte forma:
 
-- Se `iosbase.`[sinalizadores](../standard-library/ios-base-class.md#flags)` & ios_base::basefield == ios_base::`[Oct](../standard-library/ios-functions.md#oct), a especificação de conversão será `lo`.
+- Se `iosbase.`[sinalizadores](../standard-library/ios-base-class.md#flags)`& ios_base::basefield == ios_base::`[Oct](../standard-library/ios-functions.md#oct), a especificação de conversão será `lo`.
 
 - Se `iosbase.flags & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex), a especificação de conversão é `lx`.
 
@@ -519,7 +519,7 @@ comporta-se da mesma maneira que a primeira, exceto que tenta corresponder a um 
 
 Um campo de entrada booliano adota um de dois formatos. Se `iosbase.flags & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) for **false**, será o mesmo que um campo de entrada de inteiro, exceto pelo fato de que o valor convertido deve ser 0 (para **falso**) ou 1 (para **verdadeiro**). Caso contrário, a sequência deve corresponder a `fac.`[falsename](../standard-library/numpunct-class.md#falsename) (para **false**) ou `fac.`[TrueName](../standard-library/numpunct-class.md#truename) (para **verdadeiro**).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // num_get_get.cpp
@@ -551,7 +551,7 @@ int main( )
 }
 ```
 
-## <a name="iter_type"></a>  num_get::iter_type
+## <a name="num_getiter_type"></a><a name="iter_type"></a>  num_get::iter_type
 
 Um tipo que descreve um iterador de entrada.
 
@@ -563,7 +563,7 @@ typedef InputIterator iter_type;
 
 O tipo é um sinônimo do parâmetro de modelo `InputIterator`.
 
-## <a name="num_get"></a>  num_get::num_get
+## <a name="num_getnum_get"></a><a name="num_get"></a>  num_get::num_get
 
 O construtor para objetos do tipo `num_get` que são usados para extrair valores numéricos das sequências.
 

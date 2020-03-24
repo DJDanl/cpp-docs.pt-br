@@ -29,12 +29,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 546d8c61e875dd7c295e892359e39fa5a76867b4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d5a1b0d106774ede13b0e23d4bacb8fbbc47d28f
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421796"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150674"
 ---
 # <a name="ltfunctionalgt-functions"></a>Funções &lt;funcionais&gt;
 
@@ -51,7 +51,7 @@ Essas funções são preteridas no C++ 17:
 |-|-|
 |[not1](#not1)|[not2](#not2)|
 
-## <a name="bind"></a>associa
+## <a name="bind"></a><a name="bind"></a>associa
 
 Associa argumentos a um objeto que pode ser chamado.
 
@@ -63,7 +63,7 @@ template <class RTy, class FT, class T1, class T2, ..., class TN>
     unspecified bind(FT fn, T1 t1, T2 t2, ..., TN tN);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 \ *Fey*
 O tipo do objeto a ser chamado.
@@ -81,7 +81,7 @@ O enésimo argumento de chamada.
 
 Os tipos `FT, T1, T2, ..., TN` devem ser Copy-constructible e `INVOKE(fn, t1, ..., tN)` deve ser uma expressão válida para alguns valores `w1, w2, ..., wN`.
 
-A primeira função de modelo retorna um wrapper de chamada de encaminhamento `g` com um tipo de resultado fraco. O efeito de `g(u1, u2, ..., uM)` é `INVOKE(f, v1, v2, ..., vN, `[invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, em que `cv` é o qualificador cv de `g` e os valores e os tipos dos argumentos associados `v1, v2, ..., vN` são determinados conforme especificado abaixo. É possível usá-lo para associar argumentos a um objeto que pode ser chamado e criar um objeto que pode ser chamado com uma lista de argumentos personalizada.
+A primeira função de modelo retorna um wrapper de chamada de encaminhamento `g` com um tipo de resultado fraco. O efeito de `g(u1, u2, ..., uM)` é `INVOKE(f, v1, v2, ..., vN,` [invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, em que `cv` é o qualificador cv de `g` e os valores e os tipos dos argumentos associados `v1, v2, ..., vN` são determinados conforme especificado abaixo. É possível usá-lo para associar argumentos a um objeto que pode ser chamado e criar um objeto que pode ser chamado com uma lista de argumentos personalizada.
 
 A segunda função de modelo retorna um wrapper de chamada de encaminhamento `g` com um tipo aninhado `result_type`, que é sinônimo de `RTy`. O efeito de `g(u1, u2, ..., uM)` é `INVOKE(f, v1, v2, ..., vN, RTy)`, em que `cv` são os qualificadores cv de `g` e os valores e tipos dos argumentos associados `v1, v2, ..., vN` são determinados conforme especificado abaixo. É possível usá-lo para associar argumentos a um objeto que pode ser chamado e criar um objeto que pode ser chamado com uma lista de argumentos personalizada e um tipo de retorno especificado.
 
@@ -101,7 +101,7 @@ O número de argumentos em uma chamada para `bind` e o argumento `fn` deve ser i
 
 O número de argumentos na chamada de função para o wrapper de chamada retornado por `bind` deve ser, pelo menos, tão grande quanto o maior valor numerado de `is_placeholder<PH>::value` para todos os argumentos de espaço reservado na chamada para `bind`. Por exemplo, `bind(cos, _2)(0.0, 1.0)` está correto (e retorna `cos(1.0)`) e `bind(cos, _2)(0.0)` está incorreto.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // std__functional__bind.cpp
@@ -152,7 +152,7 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a>bind1st
+## <a name="bind1st"></a><a name="bind1st"></a>bind1st
 
 Uma função de modelo auxiliar que cria um adaptador para converter um objeto de função binária em um objeto de função unário. Ele associa o primeiro argumento da função Binary a um valor especificado. Preterido no C++ 11, removido do C++ 17.
 
@@ -161,7 +161,7 @@ template <class Operation, class Type>
     binder1st <Operation> bind1st (const Operation& func, const Type& left);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *func*\
 O objeto de função binária a ser convertido em um objeto de função unária.
@@ -179,7 +179,7 @@ Os vinculadores de função são um tipo de adaptador de função. Como eles ret
 
 Se *Func* for um objeto do tipo `Operation` e `c` for uma constante, `bind1st( func, c )` será o mesmo que o construtor da classe [binder1st](../standard-library/binder1st-class.md) `binder1st<Operation>(func, c)`e será mais conveniente de usar.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // functional_bind1st.cpp
@@ -246,7 +246,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a>bind2nd
+## <a name="bind2nd"></a><a name="bind2nd"></a>bind2nd
 
 Uma função de modelo auxiliar que cria um adaptador para converter um objeto de função binária em um objeto de função unário. Ele associa o segundo argumento da função Binary a um valor especificado. Preterido no C++ 11, removido do C++ 17.
 
@@ -255,7 +255,7 @@ template <class Operation, class Type>
     binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *func*\
 O objeto de função binária a ser convertido em um objeto de função unária.
@@ -273,7 +273,7 @@ Os vinculadores de função são um tipo de adaptador de função. Como eles ret
 
 Se *Func* for um objeto do tipo `Operation` e `c` for uma constante, `bind2nd(func, c)` será o mesmo que o construtor da classe [binder2nd](../standard-library/binder2nd-class.md) `binder2nd<Operation>(func, c)`e mais conveniente usar.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // functional_bind2nd.cpp
@@ -340,7 +340,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a>bit_and
+## <a name="bit_and"></a><a name="bit_and"></a>bit_and
 
 Um objeto de função predefinido que faz uma operação AND bit a bit (binário `operator&`) em seus argumentos.
 
@@ -362,7 +362,7 @@ struct bit_and<void>
 };
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Tipo*, *T*, *U*\
 Qualquer tipo que dê suporte a um `operator&` que usa operandos dos tipos especificados ou inferidos.
@@ -381,7 +381,7 @@ O resultado de `Left & Right`. O modelo especializado realiza o encaminhamento p
 
 O functor `bit_and` é restrito a tipos integrais para os tipos de dados básicos ou a tipos definidos pelo usuário que implementam o `operator&` binário.
 
-## <a name="bit_not"></a>bit_not
+## <a name="bit_not"></a><a name="bit_not"></a>bit_not
 
 Um objeto de função predefinido que faz uma operação complementar de bits (não) (unário `operator~`) em seu argumento. Adicionado em C++ 14.
 
@@ -401,7 +401,7 @@ struct bit_not<void>
 };
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Tipo*\
 Um tipo que dá suporte a um `operator~` unário.
@@ -417,7 +417,7 @@ O resultado de `~ Right`. O modelo especializado realiza o encaminhamento perfei
 
 O functor `bit_not` é restrito a tipos integrais para os tipos de dados básicos ou a tipos definidos pelo usuário que implementam o `operator~` binário.
 
-## <a name="bit_or"></a>bit_or
+## <a name="bit_or"></a><a name="bit_or"></a>bit_or
 
 Um objeto de função predefinido que faz uma operação OR bit a bit (`operator|`) em seus argumentos.
 
@@ -439,7 +439,7 @@ struct bit_or<void>
 };
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Tipo*, *T*, *U*\
 Qualquer tipo que dê suporte a um `operator|` que usa operandos dos tipos especificados ou inferidos.
@@ -458,7 +458,7 @@ O resultado de `Left | Right`. O modelo especializado realiza o encaminhamento p
 
 O functor `bit_or` é restrito a tipos integrais para os tipos de dados básicos ou a tipos definidos pelo usuário que implementam `operator|`.
 
-## <a name="bit_xor"></a>bit_xor
+## <a name="bit_xor"></a><a name="bit_xor"></a>bit_xor
 
 Um objeto de função predefinido que faz uma operação XOR bit a bit (`operator^`binário) em seus argumentos.
 
@@ -480,7 +480,7 @@ struct bit_xor<void>
 };
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Tipo*, *T*, *U*\
 Qualquer tipo que dê suporte a um `operator^` que usa operandos dos tipos especificados ou inferidos.
@@ -499,7 +499,7 @@ O resultado de `Left ^ Right`. O modelo especializado realiza o encaminhamento p
 
 O functor `bit_xor` é restrito a tipos integrais para os tipos de dados básicos ou a tipos definidos pelo usuário que implementam o `operator^` binário.
 
-## <a name="cref"></a>cref
+## <a name="cref"></a><a name="cref"></a>cref
 
 Constrói uma constante `reference_wrapper` de um argumento.
 
@@ -511,7 +511,7 @@ template <class Ty>
 reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Ty*\
 O tipo do argumento a ser encapsulado.
@@ -523,7 +523,7 @@ O argumento a ser encapsulado.
 
 A primeira função retorna `reference_wrapper<const Ty>(arg.get())`. Ela é usada para encapsular uma referência constante. A segunda função retorna `reference_wrapper<const Ty>(arg)`. Ela é usada para encapsular novamente uma referência encapsulada como uma referência constante.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // std__functional__cref.cpp
@@ -555,7 +555,7 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="invoke"></a>Chame
+## <a name="invoke"></a><a name="invoke"></a>Chame
 
 Invoca qualquer objeto que possa ser chamado com os argumentos fornecidos. Adicionado em C++ 17.
 
@@ -565,7 +565,7 @@ invoke_result_t<Callable, Args...>
     invoke(Callable&& fn, Args&&... args) noexcept(/* specification */);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 \ *callable*
 O tipo do objeto a ser chamado.
@@ -602,7 +602,7 @@ Invoca o objeto não chamado *FN* usando os *argumentos*de parâmetros. Efetivam
 
 Para obter informações sobre o tipo de resultado de um objeto que possa ser chamado, consulte [invoke_result](invoke-result-class.md). Para predicados em tipos que podem ser chamados, consulte [is_invocable, is_invocable_r, is_nothrow_invocable is_nothrow_invocable_r classes](is-invocable-classes.md).
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // functional_invoke.cpp
@@ -676,7 +676,7 @@ pd->n_: 42
 42 is divisible by 7.
 ```
 
-## <a name="mem_fn"></a>mem_fn
+## <a name="mem_fn"></a><a name="mem_fn"></a>mem_fn
 
 Gera um wrapper de chamada simples.
 
@@ -685,7 +685,7 @@ template <class RTy, class Ty>
 unspecified mem_fn(RTy Ty::*pm);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 \ *RTy*
 O tipo de retorno da função encapsulada.
@@ -701,7 +701,7 @@ O wrapper de chamada retornado é derivado de `std::unary_function<cv Ty*, RTy>`
 
 O wrapper de chamada retornado é derivado de `std::binary_function<cv Ty*, T2, RTy>` (e a definição do tipo aninhado `result_type` como um sinônimo para *RTy*, o tipo aninhado `first argument_type` como um sinônimo para `cv Ty*`e o tipo aninhado `second argument_type` como um sinônimo para `T2`) somente se o tipo *Ty* é um ponteiro para função membro com o `cv` CV-Qualifier que usa um argumento, do tipo `T2`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // std__functional__mem_fn.cpp
@@ -739,7 +739,7 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a>mem_fun
+## <a name="mem_fun"></a><a name="mem_fun"></a>mem_fun
 
 Funções de modelo auxiliares usadas para construir adaptadores de objeto de função para funções membro, quando inicializadas com argumentos de ponteiro. Preterido no C++ 11 para [mem_fn](#mem_fn) e para [ligar](#bind)e removido em c++ 17.
 
@@ -757,7 +757,7 @@ template <class Result, class Type, class Arg>
 const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg) const);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 \ *pMem*
 Um ponteiro para a função membro da classe `Type` a ser convertida em um objeto de função.
@@ -766,7 +766,7 @@ Um ponteiro para a função membro da classe `Type` a ser convertida em um objet
 
 Um objeto de função **const** ou **non_const** do tipo `mem_fun_t` ou `mem_fun1_t`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // functional_mem_fun.cpp
@@ -826,7 +826,7 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a>mem_fun_ref
+## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a>mem_fun_ref
 
 Funções de modelo auxiliares usadas para construir adaptadores de objeto de função para funções membro, quando inicializadas usando argumentos de referência. Preterido no C++ 11, removido do C++ 17.
 
@@ -844,7 +844,7 @@ template <class Result, class Type, class Arg>
 const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pMem)(Arg) const);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 \ *pMem*
 Um ponteiro para a função membro da classe `Type` a ser convertida em um objeto de função.
@@ -853,7 +853,7 @@ Um ponteiro para a função membro da classe `Type` a ser convertida em um objet
 
 Um objeto de função **const** ou `non_const` do tipo `mem_fun_ref_t` ou `mem_fun1_ref_t`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // functional_mem_fun_ref.cpp
@@ -931,7 +931,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a>not1
+## <a name="not1"></a><a name="not1"></a>not1
 
 Retorna o complemento de um predicado unário. Preterido por [not_fn](#not_fn) em c++ 17.
 
@@ -940,7 +940,7 @@ template <class UnaryPredicate>
 unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 \ de *predicado*
 O predicado unário a ser negado.
@@ -953,7 +953,7 @@ Um predicado unário que é a negação do predicado unário modificado.
 
 Se um `unary_negate` for construído a partir de um predicado unário `predicate(x)`, ele retornará `!predicate(x)`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // functional_not1.cpp
@@ -1003,7 +1003,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a>not2
+## <a name="not2"></a><a name="not2"></a>not2
 
 Retorna o complemento de um predicado binário. Preterido por [not_fn](#not_fn) em c++ 17.
 
@@ -1012,7 +1012,7 @@ template <class BinaryPredicate>
 binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *func*\
 O predicado binário a ser negado.
@@ -1025,7 +1025,7 @@ Um predicado binário que é a negação do predicado binário modificado.
 
 Se um `binary_negate` for construído a partir de um predicado binário `binary_predicate(x, y)`, ele retornará `!binary_predicate(x, y)`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // functional_not2.cpp
@@ -1079,7 +1079,7 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="not_fn"></a>not_fn
+## <a name="not_fn"></a><a name="not_fn"></a>not_fn
 
 O modelo de função `not_fn` usa um objeto que possa ser chamado e retorna um objeto que possa ser chamado. Quando o objeto chamável retornado for invocado posteriormente com alguns argumentos, ele os passa para o objeto original callable e, logicamente, nega o resultado. Preserva o comportamento de qualificação const e categoria de valor do objeto callable Wrapped. `not_fn` é novo no C++ 17 e substitui as `std::not1`preteridas, `std::not2`, `std::unary_negate`e `std::binary_negate`.
 
@@ -1088,7 +1088,7 @@ template <class Callable>
 /* unspecified */ not_fn(Callable&& func);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *func*\
 Um objeto chamável usado para construir o wrapper de chamada de encaminhamento.
@@ -1137,7 +1137,7 @@ template<class... Args> auto operator()(Args&&... args) const&& -> decltype(!dec
 
 Os dois primeiros são os mesmos que `return !std::invoke(fd, std::forward<Args>(args)...)`. Os dois segundos são os mesmos que `return !std::invoke(std::move(fd), std::forward<Args>(args)...)`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // functional_not_fn_.cpp
@@ -1179,7 +1179,7 @@ Elements divisible by three: 2
 Elements not divisible by three: 5
 ```
 
-## <a name="ptr_fun"></a>ptr_fun
+## <a name="ptr_fun"></a><a name="ptr_fun"></a>ptr_fun
 
 Funções de modelo auxiliares usadas para converter ponteiros de funções unárias e binárias, respectivamente, em funções adaptáveis unárias e binárias. Preterido no C++ 11, removido do C++ 17.
 
@@ -1191,7 +1191,7 @@ template <class Arg1, class Arg2, class Result>
 pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(Result (*pfunc)(Arg1, Arg2));
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 \ *pFunc*
 O ponteiro de função unária ou binária a ser convertido em uma função adaptável.
@@ -1206,11 +1206,11 @@ A segunda função de modelo retorna a função Binary [pointer_to_binary_functi
 
 Um ponteiro de função é um objeto de função. Ele pode ser passado para qualquer algoritmo que espera uma função como um parâmetro, mas não é adaptável. Informações sobre seus tipos aninhados são necessárias para usá-lo com um adaptador, por exemplo, para associar um valor a ele ou para desfazê-lo. A conversão de ponteiros de funções unárias ou binárias pela função auxiliar `ptr_fun` permite que os adaptadores de função funcionem com ponteiros de funções unárias ou binárias.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a>referência
+## <a name="ref"></a><a name="ref"></a>referência
 
 Constrói um `reference_wrapper` de um argumento.
 
@@ -1226,7 +1226,7 @@ template <class Ty>
 
 Uma referência para `arg`; especificamente, `reference_wrapper<Ty>(arg)`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo a seguir define duas funções: uma associada a uma variável de cadeia de caracteres e a outra associada a uma referência da variável de cadeia de caracteres calculada por uma chamada para `ref`. Quando o valor da variável muda, a primeira função continua usando o valor antigo e a segunda função usa o novo valor.
 
@@ -1302,7 +1302,7 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a>permuta
+## <a name="swap"></a><a name="swap"></a>permuta
 
 Troca dois objetos `function`.
 
@@ -1311,7 +1311,7 @@ template <class FT>
     void swap(function<FT>& f1, function<FT>& f2);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 \ *ft*
 O tipo controlado pelos objetos de função.
@@ -1326,7 +1326,7 @@ O segundo objeto de função.
 
 A função retorna `f1.swap(f2)`.
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```cpp
 // std__functional__swap.cpp
