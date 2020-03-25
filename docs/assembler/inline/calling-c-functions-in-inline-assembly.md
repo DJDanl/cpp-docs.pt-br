@@ -9,18 +9,18 @@ helpviewer_keywords:
 - inline assembly, calling functions
 - __asm keyword [C++], calling functions
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
-ms.openlocfilehash: 4d12321cd90f596c94c2337e100663436d512107
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94bbfda3a5fd15885f3d8276d506541418a9489f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167174"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169585"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>Chamando funções C no assembly embutido
 
 **Seção específica da Microsoft**
 
-Um `__asm` bloco pode chamar funções de C, incluindo as rotinas da biblioteca C. A exemplo a seguir chama o `printf` rotina da biblioteca:
+Um bloco de `__asm` pode chamar funções C, incluindo rotinas de biblioteca C. O exemplo a seguir chama a rotina de biblioteca de `printf`:
 
 ```cpp
 // InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp
@@ -50,16 +50,16 @@ int main( void )
 }
 ```
 
-Como argumentos de função são passados na pilha, você simplesmente enviar por push os argumentos necessários — ponteiros, no exemplo anterior da cadeia de caracteres — antes de chamar a função. Os argumentos são empurrados na ordem inversa, para que eles vêm da pilha na ordem desejada. Para emular a instrução de C
+Como os argumentos de função são passados na pilha, você simplesmente envia os argumentos necessários – ponteiros de cadeia de caracteres, no exemplo anterior, antes de chamar a função. Os argumentos são enviados por push na ordem inversa, portanto, eles aparecem na pilha na ordem desejada. Para emular a instrução C
 
 ```cpp
 printf( format, hello, world );
 ```
 
-o exemplo envia por push ponteiros para `world`, `hello`, e `format`, nessa ordem e, em seguida, chama `printf`.
+o exemplo envia ponteiros para `world`, `hello`e `format`, nessa ordem, e, em seguida, chama `printf`.
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Assembler embutido](../../assembler/inline/inline-assembler.md)<br/>

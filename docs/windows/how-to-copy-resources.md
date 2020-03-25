@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0af4e8faeb3d8606fb351b193364a2748fbc944e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421194"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215195"
 ---
 # <a name="how-to-manage-resources-c"></a>Como: gerenciar recursos (C++)
 
@@ -46,7 +46,7 @@ Você pode copiar recursos de um arquivo para outro sem alterá-los ou alterar o
 Você pode copiar facilmente recursos de um arquivo executável ou recurso existente para o arquivo de recurso atual. Para copiar recursos, abra os dois arquivos que contêm recursos ao mesmo tempo e arraste os itens de um arquivo para outro ou copie e cole entre os dois arquivos. Esse método funciona para arquivos de script de recurso (. rc) e de modelo de recurso (. rct) e como arquivos executáveis (. exe).
 
 > [!NOTE]
-> O C++ Visual inclui arquivos de recurso de exemplo que você pode usar em seu próprio aplicativo. Para obter mais informações, consulte [ClipArt: recursos comuns](https://github.com/Microsoft/VCSamples).
+> O C++ Visual inclui arquivos de recurso de exemplo que você pode usar em seu próprio aplicativo. Para obter mais informações, consulte [ClipArt: recursos comuns](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general).
 
 Você não pode arrastar e soltar, copiar, recortar ou colar entre arquivos de recursos no projeto (**modo de exibição de recursos**) e arquivos autônomos. rc abertos em janelas de documentos. Você pode fazer isso em versões anteriores do produto. Use apenas o método arrastar e soltar entre arquivos. RC que estão abertos fora do projeto.
 
@@ -130,4 +130,4 @@ Win32
 
 [Arquivos de recurso](../windows/resource-files-visual-studio.md)<br/>
 [Como: criar recursos](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Como incluir recursos em tempo de compilação](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[Como incluir recursos em tempo de compilação](../windows/how-to-include-resources-at-compile-time.md)

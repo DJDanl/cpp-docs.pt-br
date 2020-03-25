@@ -1,5 +1,5 @@
 ---
-title: 'MFC: Usando Classes de banco de dados com documentos e exibições'
+title: 'MFC: usando classes de banco de dados com documentos e exibições'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [C++], database applications
@@ -14,63 +14,63 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: 78765d17b52889123f13c492699230834decba66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2b073b20b9518667b43c30e7ee3199a84a3ad38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182886"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213376"
 ---
-# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: Usando Classes de banco de dados com documentos e exibições
+# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: usando classes de banco de dados com documentos e exibições
 
-Você pode usar as classes de banco de dados do MFC com ou sem a arquitetura de documento/exibição. Este tópico enfatiza a trabalhar com documentos e exibições. Ele explica:
+Você pode usar as classes de banco de dados MFC com ou sem a arquitetura de documento/exibição. Este tópico enfatiza o trabalho com documentos e exibições. Ele explica:
 
-- [Como escrever um aplicativo baseado em formulário](#_core_writing_a_form.2d.based_application) usando um `CRecordView` objeto como o modo de exibição principal no seu documento.
+- [Como escrever um aplicativo baseado em formulário](#_core_writing_a_form.2d.based_application) usando um objeto `CRecordView` como a exibição principal no documento.
 
-- [Como usar objetos de conjunto de registros em seus documentos e exibições](#_core_using_recordsets_in_documents_and_views).
+- [Como usar objetos Recordset em seus documentos e exibições](#_core_using_recordsets_in_documents_and_views).
 
 - [Outras considerações](#_core_other_factors).
 
-Para alternativas, consulte [MFC: Usando Classes de banco de dados sem documentos e exibições](../data/mfc-using-database-classes-without-documents-and-views.md).
+Para alternativas, consulte [MFC: usando classes de banco de dados sem documentos e exibições](../data/mfc-using-database-classes-without-documents-and-views.md).
 
-##  <a name="_core_writing_a_form.2d.based_application"></a> Escrevendo um aplicativo baseado em formulário
+##  <a name="writing-a-form-based-application"></a><a name="_core_writing_a_form.2d.based_application"></a>Escrevendo um aplicativo baseado em formulário
 
-Muitos aplicativos de acesso a dados são baseados em formulários. A interface do usuário é um formulário contendo controles em que o usuário examina, insere ou edita dados. Para tornar o formulário de aplicativo com base, use a classe `CRecordView`. Quando você executar o Assistente de aplicativo do MFC e seleciona **ODBC** tipo de cliente na **suporte do banco de dados** página, o projeto usa `CRecordView` para a classe de exibição.
+Muitos aplicativos de acesso a dados são baseados em formulários. A interface do usuário é um formulário que contém controles nos quais o usuário examina, insere ou edita dados. Para tornar o formulário do aplicativo baseado, use a classe `CRecordView`. Quando você executa o assistente de aplicativo MFC e seleciona tipo de cliente **ODBC** na página de **suporte do banco de dados** , o projeto usa `CRecordView` para a classe de exibição.
 
-Em um aplicativo baseado em formulário, cada objeto de exibição de registro armazena um ponteiro para um `CRecordset` objeto. Mecanismo de exchange (RFX) de campos de registro da estrutura troca dados entre o conjunto de registros e a fonte de dados. Os dados de caixa de diálogo (DDX) mecanismo troca dados entre os controles no formulário e os membros de dados do campo do objeto recordset do exchange. `CRecordView` também fornece padrão funções de manipulador de comando para navegar de um registro para o registro no formulário.
+Em um aplicativo baseado em formulário, cada objeto de exibição de registro armazena um ponteiro para um objeto `CRecordset`. O mecanismo de intercâmbio de campo de registro (suporte RFX) da estrutura troca dados entre o conjunto de registros e a fonte de dados. O mecanismo de intercâmbio de dados de caixa de diálogo (campo DDX) troca dados entre os membros de dados de campo do objeto Recordset e os controles no formulário. `CRecordView` também fornece funções de manipulador de comando padrão para navegar de registro para registro no formulário.
 
-Para criar um aplicativo baseado em formulário com o Assistente de aplicativo, consulte [criando um aplicativo do MFC com base em formulários](../mfc/reference/creating-a-forms-based-mfc-application.md) e [suporte de banco de dados, o Assistente de aplicativo MFC](../mfc/reference/database-support-mfc-application-wizard.md).
+Para criar um aplicativo baseado em formulário com o assistente de aplicativo, consulte [criando um aplicativo MFC baseado em formulários](../mfc/reference/creating-a-forms-based-mfc-application.md) e [suporte a banco de dados, assistente de aplicativo MFC](../mfc/reference/database-support-mfc-application-wizard.md).
 
 Para obter uma discussão completa sobre formulários, consulte [exibições de registro](../data/record-views-mfc-data-access.md).
 
-##  <a name="_core_using_recordsets_in_documents_and_views"></a> Usando conjuntos de registros em documentos e exibições
+##  <a name="using-recordsets-in-documents-and-views"></a><a name="_core_using_recordsets_in_documents_and_views"></a>Usando conjuntos de registros em documentos e exibições
 
-Muitos aplicativos simples baseados em formulário não é necessário para documentos. Se seu aplicativo é mais complexo, você provavelmente desejará usar um documento como um proxy para o banco de dados, armazenando um `CDatabase` objeto que se conecta à fonte de dados. Aplicativos baseados em formulário geralmente armazenam um ponteiro para um objeto de conjunto de registros no modo de exibição. Outros tipos de aplicativos de banco de dados armazenam conjuntos de registros e `CDatabase` objeto no documento. Aqui estão algumas possibilidades para usar documentos em aplicativos de banco de dados:
+Muitos aplicativos simples baseados em formulário não precisam de documentos. Se seu aplicativo for mais complexo, provavelmente você desejará usar um documento como um proxy para o banco de dados, armazenando um objeto de `CDatabase` que se conecta à fonte de dado. Normalmente, os aplicativos baseados em formulário armazenam um ponteiro para um objeto Recordset na exibição. Outros tipos de aplicativos de banco de dados armazenam conjuntos de registros e `CDatabase` objeto no documento. Aqui estão algumas possibilidades para usar documentos em aplicativos de banco de dados:
 
-- Se você estiver acessando um conjunto de registros em um contexto local, crie um `CRecordset` objeto localmente nas funções de membro do documento ou o modo de exibição, conforme necessário.
+- Se você estiver acessando um conjunto de registros em um contexto local, crie um objeto `CRecordset` localmente em funções de membro do documento ou exibição, conforme necessário.
 
-   Declare um objeto de conjunto de registros como uma variável local em uma função. Passar NULL para o construtor, que faz com que a estrutura criar e abrir um temporário `CDatabase` objeto para você. Como alternativa, passe um ponteiro para um `CDatabase` objeto. Use o conjunto de registros dentro da função e deixá-lo a ser destruído automaticamente quando a função for encerrada.
+   Declare um objeto Recordset como uma variável local em uma função. Passe NULL para o construtor, o que faz com que a estrutura crie e abra um objeto de `CDatabase` temporário para você. Como alternativa, passe um ponteiro para um objeto `CDatabase`. Use o conjunto de registros dentro da função e permita que ele seja destruído automaticamente quando a função sair.
 
-   Quando você passar NULL para um construtor de conjunto de registros, a estrutura usa informações retornadas pelo conjunto de registros `GetDefaultConnect` função de membro para criar um `CDatabase` de objeto e abri-lo. Os assistentes implementam `GetDefaultConnect` para você.
+   Quando você passa NULL para um construtor de conjunto de registros, a estrutura usa as informações retornadas pela função de membro `GetDefaultConnect` do conjunto de registros para criar um objeto de `CDatabase` e abri-lo. Os assistentes implementam `GetDefaultConnect` para você.
 
-- Se você estiver acessando um conjunto de registros durante o tempo de vida do documento, inserir um ou mais `CRecordset` objetos no seu documento.
+- Se você estiver acessando um conjunto de registros durante o tempo de vida do seu documento, insira um ou mais objetos `CRecordset` em seu documento.
 
-   Construa os objetos de conjunto de registros ao inicializar o documento ou conforme necessário. Você pode escrever uma função que retorna um ponteiro para o conjunto de registros, se ele já existe ou cria e abre o conjunto de registros, se ele ainda não existir. Fechar, excluir e recriar o conjunto de registros, conforme necessário ou chamar seu `Requery` função de membro para atualizar os registros.
+   Construa os objetos do conjunto de registros ao inicializar o documento ou conforme necessário. Você pode escrever uma função que retorna um ponteiro para o conjunto de registros se ele já existir ou construir e abrir o conjunto de registros se ele ainda não existir. Feche, exclua e recrie o conjunto de registros conforme necessário ou chame sua função de membro `Requery` para atualizar os registros.
 
-- Se você estiver acessando uma fonte de dados durante o tempo de vida do documento, inserir uma `CDatabase` do objeto ou armazenar um ponteiro para um `CDatabase` objeto nele.
+- Se você estiver acessando uma fonte de dados durante o tempo de vida do seu documento, insira um `CDatabase` objeto ou armazene um ponteiro para um objeto `CDatabase` nele.
 
-   O `CDatabase` objeto gerencia uma conexão à fonte de dados. O objeto é criado automaticamente durante a construção de documento, e você chamar seu `Open` função de membro ao inicializar o documento. Quando você constrói objetos de conjunto de registros nas funções de membro de documento, você passa um ponteiro para o documento `CDatabase` objeto. Isso associa cada conjunto de registros com sua fonte de dados. O objeto de banco de dados geralmente é destruído quando o documento é fechado. Os objetos de conjunto de registros normalmente são destruídos quando saírem do escopo de uma função.
+   O objeto `CDatabase` gerencia uma conexão com sua fonte de dados. O objeto é construído automaticamente durante a construção do documento e você chama sua função de membro `Open` ao inicializar o documento. Ao construir objetos de conjunto de registros em funções de membro de documento, você passa um ponteiro para o objeto de `CDatabase` do documento. Isso associa cada conjunto de registros à sua fonte de dados. O objeto de banco de dados geralmente é destruído quando o documento é fechado. Os objetos Recordset normalmente são destruídos quando saem do escopo de uma função.
 
-##  <a name="_core_other_factors"></a> Outros fatores
+##  <a name="other-factors"></a><a name="_core_other_factors"></a>Outros fatores
 
-Aplicativos baseados em formulário geralmente não têm nenhum uso para o mecanismo de serialização do documento da estrutura, então você pode querer remover, desabilitar ou substituir os **New** e **abrir** comandos na **Arquivo** menu. Consulte o artigo [serialização: Serialização vs. Entrada/saída de banco de dados](../mfc/serialization-serialization-vs-database-input-output.md).
+Aplicativos baseados em formulário geralmente não têm nenhum uso para o mecanismo de serialização de documentos da estrutura, portanto, talvez você queira remover, desabilitar ou substituir os comandos **novo** e **abrir** no menu **arquivo** . Consulte o artigo [serialização: serialização versus entrada/saída do banco de dados](../mfc/serialization-serialization-vs-database-input-output.md).
 
-Você também poderá fazer uso de muitas possibilidades de interface do usuário que o framework pode dar suporte. Por exemplo, você pode usar várias `CRecordView` objetos em uma janela separadora, abra vários conjuntos de registros em diferentes várias janelas de filho de MDI (interface MDI) do documento e assim por diante.
+Talvez você também queira usar as várias possibilidades de interface do usuário para as quais a estrutura pode dar suporte. Por exemplo, você pode usar vários objetos `CRecordView` em uma janela separadora, abrir vários conjuntos de registros em diferentes janelas filhas de MDI (interface de vários documentos) e assim por diante.
 
-Você talvez queira implementar a impressão de tudo o que está no modo de exibição, se ele é um formulário é implementada com `CRecordView` ou alguma outra coisa. Como as classes derivadas `CFormView`, `CRecordView` não dão suporte a impressão, mas você pode substituir o `OnPrint` a função de membro para permitir a impressão. Para obter mais informações, consulte a classe [CFormView](../mfc/reference/cformview-class.md).
+Talvez você queira implementar a impressão de qualquer coisa que esteja em sua exibição, seja um formulário implementado com `CRecordView` ou outra coisa. Como classes derivadas de `CFormView`, `CRecordView` não oferece suporte à impressão, mas você pode substituir a função membro `OnPrint` para permitir a impressão. Para obter mais informações, consulte Class [CFormView](../mfc/reference/cformview-class.md).
 
-Talvez você não queira usar documentos e exibições em todos os. Nesse caso, consulte [MFC: Usando Classes de banco de dados sem documentos e exibições](../data/mfc-using-database-classes-without-documents-and-views.md).
+Talvez você não queira usar documentos e exibições. Nesse caso, consulte [MFC: usando classes de banco de dados sem documentos e exibições](../data/mfc-using-database-classes-without-documents-and-views.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classes de banco de dados MFC](../data/mfc-database-classes-odbc-and-dao.md)

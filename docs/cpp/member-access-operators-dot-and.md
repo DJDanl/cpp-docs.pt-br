@@ -1,5 +1,5 @@
 ---
-title: Operadores de acesso de membro:. e -&gt;
+title: Operadores de acesso de membro:. e-&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - .
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - . operator
 - member access
 ms.assetid: f8fc3df9-d728-40c5-b384-276927f5f1b3
-ms.openlocfilehash: 0f370aa04af2e78efd5edfb7836fb71a4c4516a7
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 05bab55e1646783e0f8ab9b414d608c912f60a0f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345982"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178009"
 ---
-# <a name="member-access-operators--and--gt"></a>Operadores de acesso de membro:. e -&gt;
+# <a name="member-access-operators--and--gt"></a>Operadores de acesso de membro:. e-&gt;
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,9 +36,9 @@ Os operadores de acesso de membro **.** e **->** são usados para fazer referên
 
 Há duas formas de expressões de acesso do membro:
 
-1. No primeiro formato, *postfix-expression* representa um valor de struct, classe ou tipo de união, e *nome* nomeia um membro da estrutura especificada, união ou classe. O valor da operação é de *nome* e é um l-value se *postfix-expression* é um l-value.
+1. No primeiro formulário, o *sufixo-expressão* representa um valor de struct, classe ou tipo de União, e *nome* nomeia um membro da estrutura, União ou classe especificada. O valor da operação é o de *Name* e é um l-value se o *sufixo-Expression* é um l-Value.
 
-1. Na segunda forma *postfix-expression* representa um ponteiro para uma estrutura, união ou classe, e *nome* nomeia um membro da estrutura especificada, união ou classe. O valor é de *nome* e é um l-value. O **->** operador desreferencia o ponteiro. Portanto, as expressões `e->member` e `(*e).member` (onde *eletrônico* representa um ponteiro) geram resultados idênticos (exceto quando os operadores **->** ou <strong>\*</strong> são sobrecarregados).
+1. No segundo formulário, o *sufixo-Expression* representa um ponteiro para uma estrutura, União ou classe e *nome* nomeia um membro da estrutura, União ou classe especificada. O valor é o de *Name* e é um l-Value. O operador **->** faz a referência ao ponteiro. Portanto, as expressões `e->member` e `(*e).member` (onde *e* representa um ponteiro) produzem resultados idênticos (exceto quando os operadores **->** ou <strong>\*</strong> estão sobrecarregados).
 
 ## <a name="example"></a>Exemplo
 
@@ -76,7 +76,7 @@ int main() {
 2/1/2000
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Expressões pós-fixadas](../cpp/postfix-expressions.md)<br/>
 [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

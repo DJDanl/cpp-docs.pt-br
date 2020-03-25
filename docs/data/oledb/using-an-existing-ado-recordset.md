@@ -6,18 +6,18 @@ helpviewer_keywords:
 - OLE DB consumer templates, ADO recordsets
 - recordsets [C++], using in OLE DB
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
-ms.openlocfilehash: eb558bb319bb5ddb61d0383846099d708f99c627
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48f6eb3bac34b37f495b9492e19b4197ed69cca3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389002"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209346"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Usando um conjunto de registros ADO existente
 
-Para combinar modelos de consumidor OLE DB e o Active Directory Data Objects (ADO), use o ADO para abrir um conjunto de registros (correspondente a um conjunto de linhas em que os modelos de consumidor de banco de dados OLE). Quando você tem um conjunto de registros, faça o seguinte para se conectar a um conjunto de linhas do OLE DB:
+Para misturar OLE DB modelos de consumidor e ADO (Active Data Objects), use o ADO para abrir um conjunto de registros (correspondente a um conjunto de linhas nos modelos de consumidor OLE DB). Quando você tiver um conjunto de registros, faça o seguinte para se conectar a um conjunto de linhas OLE DB:
 
-1. Chame `QueryInterface` para o `IRowset` e `IAccessor` ponteiros.
+1. Chame `QueryInterface` para os ponteiros de `IRowset` e `IAccessor`.
 
     ```cpp
     IRowset* lpRowset = NULL;
@@ -27,9 +27,9 @@ Para combinar modelos de consumidor OLE DB e o Active Directory Data Objects (AD
     ```
 
     > [!NOTE]
-    > *lpUnk* aponta para o `IUnknown` objeto do conjunto de registros ADO.
+    > *lpUnk* aponta para o objeto `IUnknown` do conjunto de registros ADO.
 
-1. Anexe o conjunto de linhas e o acessador às suas classes de modelo de consumidor OLE DB apropriados.
+1. Anexe o acessador e o conjunto de linhas às suas classes de modelo de consumidor OLE DB apropriadas.
 
     ```cpp
     CRowset rs;
@@ -40,6 +40,6 @@ Para combinar modelos de consumidor OLE DB e o Active Directory Data Objects (AD
     rs.SetAccessor(accessor);
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Usando acessadores](../../data/oledb/using-accessors.md)

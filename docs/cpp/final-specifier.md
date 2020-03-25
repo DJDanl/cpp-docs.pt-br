@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - final Identifier
 ms.assetid: 649866d0-79d4-449f-ab74-f84b911b79a3
-ms.openlocfilehash: c6400c8060664713fdd004a5aa9536e0617bc0c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93e8d9b0b445d1120ec15911eb763ae1d7d2d359
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154770"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188645"
 ---
 # <a name="final-specifier"></a>especificador final
 
-Você pode usar o **final** palavra-chave para designar funções virtuais que não podem ser substituídas em uma classe derivada. Também é possível usá-la para designar classes que não podem ser herdadas.
+Você pode usar a palavra-chave **final** para designar funções virtuais que não podem ser substituídas em uma classe derivada. Também é possível usá-la para designar classes que não podem ser herdadas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,13 +26,13 @@ class class-name final base-classes
 
 ## <a name="remarks"></a>Comentários
 
-**final** é contextual e tem um significado especial somente quando ele é usado após uma declaração de função ou nome de classe; caso contrário, ele não é uma palavra-chave reservada.
+**final** é contextual e tem um significado especial apenas quando é usado após uma declaração de função ou nome de classe; caso contrário, não é uma palavra-chave reservada.
 
 Quando **final** é usado em declarações de classe, `base-classes` é uma parte opcional da declaração.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir usa o **final** palavra-chave para especificar que uma função virtual não pode ser substituída.
+O exemplo a seguir usa a palavra-chave **final** para especificar que uma função virtual não pode ser substituída.
 
 ```cpp
 class BaseClass
@@ -49,7 +49,7 @@ class DerivedClass: public BaseClass
 
 Para obter informações sobre como especificar que as funções de membro podem ser substituídas, consulte [especificador de substituição](../cpp/override-specifier.md).
 
-O próximo exemplo usa o **final** palavra-chave para especificar que uma classe não pode ser herdada.
+O exemplo a seguir usa a palavra-chave **final** para especificar que uma classe não pode ser herdada.
 
 ```cpp
 class BaseClass final
@@ -62,7 +62,7 @@ class DerivedClass: public BaseClass // compiler error: BaseClass is
 };
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
 [Especificador override](../cpp/override-specifier.md)

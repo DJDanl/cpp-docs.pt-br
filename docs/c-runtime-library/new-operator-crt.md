@@ -18,13 +18,13 @@ helpviewer_keywords:
 - operator new[]
 - vector new
 ms.assetid: 79682f85-6889-40f6-b8f7-9eed5176ea35
-ms.openlocfilehash: 6a940088856afe6cc23629c91d1449ffcbd2f79f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d5a339ad842c46ce4f0ee708464adf8300bb6c59
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940129"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171496"
 ---
 # <a name="operator-newcrt"></a>operator new(CRT)
 
-A partir do Visual Studio 2013, o tempo de execução do C Universal (UCRT) não dá suporte às funções operator new e operator delete específicas de C++. Elas agora fazem parte da biblioteca C++ padrão. Para obter mais informações, consulte os [operadores new e delete](../cpp/new-and-delete-operators.md) e [operador new](../cpp/new-operator-cpp.md) na Referência da Linguagem C++.
+A partir do Visual Studio 2013, o runtime do C Universal (UCRT) não dá suporte às funções operator new e operator delete específicas de C++. Elas agora fazem parte da biblioteca C++ padrão. Para obter mais informações, consulte os [operadores new e delete](../cpp/new-and-delete-operators.md) e [operador new](../cpp/new-operator-cpp.md) na Referência da Linguagem C++.

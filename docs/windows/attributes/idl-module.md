@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 8838a833552ae7066dbcf17b4f676d6626c069f8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6dd0a34d5d957838613bde2c9e05d5ef26a1f678
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514680"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168038"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -24,12 +24,12 @@ Especifica um ponto de entrada em um arquivo. dll.
 function declaration
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *name*<br/>
 Um nome definido pelo usuário para o bloco de código que será exibido no arquivo. idl.
 
-*dllname*<br/>
+*nomedadll*<br/>
 Adicional O arquivo. dll que contém a exportação.
 
 *uuid*<br/>
@@ -87,9 +87,9 @@ void FuncName(int i);
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos independentes](stand-alone-attributes.md)<br/>

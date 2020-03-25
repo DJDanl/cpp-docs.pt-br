@@ -8,24 +8,24 @@ helpviewer_keywords:
 - procedure calls
 - procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-ms.openlocfilehash: 196c50ea62c3e3188b61a3b35a9e2752740c4ad5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ece626eb7fbecae9b90321ccc2569607897cf520
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283905"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209853"
 ---
 # <a name="output-parameters"></a>Parâmetros de saída
 
-Chamar um procedimento armazenado é semelhante à execução de um comando SQL. A principal diferença é que os procedimentos armazenados usam parâmetros de saída (ou "outparameters") e valores de retorno.
+Chamar um procedimento armazenado é semelhante a executar um comando SQL. A principal diferença é que os procedimentos armazenados usam parâmetros de saída (ou "Parameters") e retornam valores.
 
-O seguinte procedimento armazenado, o primeiro '? 'é o valor de retorno (telefone) e o segundo'?' é o parâmetro de entrada (nome):
+No procedimento armazenado a seguir, o primeiro "?" é o valor de retorno (telefone) e o segundo "?" é o parâmetro de entrada (nome):
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }"))
 ```
 
-Especifique os parâmetros in e out no mapa de parâmetro:
+Você especifica os parâmetros in e out no mapa de parâmetros:
 
 ```cpp
 BEGIN_PARAM_MAP(CMySProcAccessor)
@@ -36,11 +36,11 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()
 ```
 
-Seu aplicativo deve tratar a saída retornada de procedimentos armazenados. Provedores OLE DB diferentes retornam parâmetros de saída e retornam valores em momentos diferentes durante o processamento do resultado. Por exemplo, o Microsoft OLE DB provider for SQL Server (SQLOLEDB) não fornecer parâmetros de saída e retornar códigos até depois que o consumidor tiver recuperado ou cancelado os conjuntos de resultados retornados pelo procedimento armazenado. A saída é retornada no último pacote TDS do servidor.
+Seu aplicativo deve manipular a saída retornada de procedimentos armazenados. Provedores do OLE DB diferentes retornam parâmetros de saída e valores de retorno em horários diferentes durante o processamento de resultados. Por exemplo, o provedor de OLE DB da Microsoft para SQL Server (SQLOLEDB) não fornece parâmetros de saída e códigos de retorno até que o consumidor tenha recuperado ou cancelado os conjuntos de resultados retornados pelo procedimento armazenado. A saída é retornada no último pacote TDS do servidor.
 
-## <a name="row-count"></a>Contagem de linhas
+## <a name="row-count"></a>Contagem de Linhas
 
-Se você usar o OLE DB modelos de consumidor para executar um procedimento armazenado que tem outparameters, a contagem de linhas não é definida até que você feche o conjunto de linhas.
+Se você usar os modelos de consumidor OLE DB para executar um procedimento armazenado que tem os parâmetros, a contagem de linhas não será definida até que você feche o conjunto de linhas.
 
 Por exemplo, considere um procedimento armazenado com um conjunto de linhas e um outparameter:
 
@@ -53,8 +53,8 @@ as
 return 0
 ```
 
-O `@_rowcount` outparameter informa quantas linhas foram retornadas da tabela de teste. No entanto, esse procedimento armazenado limita o número de linhas como 50. Por exemplo, se houvesse 100 linhas no teste, o número de linhas seria 50 (porque esse código recupera apenas as primeiras 50 linhas). Se houver apenas 30 linhas na tabela, o número de linhas seria 30. Certifique-se de chamar `Close` ou `CloseAll` para preencher o outparameter antes de buscar o seu valor.
+O `@_rowcount` outparameter relata quantas linhas foram retornadas da tabela de teste. No entanto, esse procedimento armazenado limita o número de linhas a 50. Por exemplo, se houver 100 linhas em teste, o número de linhas seria 50 (porque esse código recupera apenas as 50 linhas superiores). Se houver apenas 30 linhas na tabela, o número de linhas seria 30. Certifique-se de chamar `Close` ou `CloseAll` para popular o outparameter antes de buscar seu valor.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Usando procedimentos armazenados](../../data/oledb/using-stored-procedures.md)

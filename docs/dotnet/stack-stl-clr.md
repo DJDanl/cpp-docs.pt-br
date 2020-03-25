@@ -53,12 +53,12 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: 9f1ae182573ca70a6983b9cd23e253ecf30731e4
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 18c94df643371f7b645ac9658a51d133d53f3403
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441986"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208319"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
@@ -78,7 +78,7 @@ template<typename Value,
     { ..... };
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Valor*<br/>
 O tipo de um elemento na sequência controlada.
@@ -86,7 +86,7 @@ O tipo de um elemento na sequência controlada.
 *Contêiner*<br/>
 O tipo do contêiner subjacente.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** \<cliext/pilha >
 
@@ -94,7 +94,7 @@ O tipo do contêiner subjacente.
 
 ## <a name="declarations"></a>{1&gt;{2&gt;Declarações&lt;2}&lt;1}
 
-|Definição do tipo|Descrição|
+|Definição do tipo|DESCRIÇÃO|
 |---------------------|-----------------|
 |[stack::const_reference (STL/CLR)](#const_reference)|O tipo de uma referência de constante para um elemento.|
 |[stack::container_type (STL/CLR)](#container_type)|O tipo do contêiner subjacente.|
@@ -105,7 +105,7 @@ O tipo do contêiner subjacente.
 |[stack::size_type (STL/CLR)](#size_type)|O tipo de uma distância com sinal entre dois elementos.|
 |[stack::value_type (STL/CLR)](#value_type)|O tipo de um elemento.|
 
-|Função membro|Descrição|
+|Função membro|DESCRIÇÃO|
 |---------------------|-----------------|
 |[stack::assign (STL/CLR)](#assign)|Substitui todos os elementos.|
 |[stack::empty (STL/CLR)](#empty)|Testa se nenhum elemento está presente.|
@@ -117,11 +117,11 @@ O tipo do contêiner subjacente.
 |[stack::top (STL/CLR)](#top)|Acessa o último elemento.|
 |[stack::to_array (STL/CLR)](#to_array)|Copia a sequência controlada em uma nova matriz.|
 
-|Propriedade|Descrição|
+|Propriedade|DESCRIÇÃO|
 |--------------|-----------------|
 |[stack::top_item (STL/CLR)](#top_item)|Acessa o último elemento.|
 
-|Operador|Descrição|
+|Operador|DESCRIÇÃO|
 |--------------|-----------------|
 |[stack::operator= (STL/CLR)](#op_as)|Substitui a sequência controlada.|
 |[operator!= (stack) (STL/CLR)](#op_neq)|Determina se um objeto `stack` não é igual a outro objeto `stack`.|
@@ -133,7 +133,7 @@ O tipo do contêiner subjacente.
 
 ## <a name="interfaces"></a>Interfaces
 
-|Interface|Descrição|
+|Interface|DESCRIÇÃO|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplicar um objeto.|
 |Istachar\<valor, contêiner >|Mantenha o adaptador de contêiner genérico.|
@@ -144,7 +144,7 @@ O objeto aloca e libera o armazenamento para a sequência que ele controla por m
 
 ## <a name="members"></a>Membros
 
-## <a name="assign"></a>pilha:: atribuir (STL/CLR)
+## <a name="stackassign-stlclr"></a><a name="assign"></a>pilha:: atribuir (STL/CLR)
 
 Substitui todos os elementos.
 
@@ -154,7 +154,7 @@ Substitui todos os elementos.
 void assign(stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *right*<br/>
 Adaptador de contêiner a ser inserido.
@@ -163,7 +163,7 @@ Adaptador de contêiner a ser inserido.
 
 A função de membro atribui `right.get_container()` ao contêiner subjacente. Você o usa para alterar todo o conteúdo da pilha.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_assign.cpp
@@ -198,7 +198,7 @@ a b c
 a b c
 ```
 
-## <a name="const_reference"></a>Stack:: const_reference (STL/CLR)
+## <a name="stackconst_reference-stlclr"></a><a name="const_reference"></a>Stack:: const_reference (STL/CLR)
 
 O tipo de uma referência de constante para um elemento.
 
@@ -212,7 +212,7 @@ typedef value_type% const_reference;
 
 O tipo descreve uma referência constante para um elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_const_reference.cpp
@@ -242,7 +242,7 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a>Stack:: container_type (STL/CLR)
+## <a name="stackcontainer_type-stlclr"></a><a name="container_type"></a>Stack:: container_type (STL/CLR)
 
 O tipo do contêiner subjacente.
 
@@ -256,7 +256,7 @@ typedef Container value_type;
 
 O tipo é um sinônimo do parâmetro de modelo *Container*.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_container_type.cpp
@@ -284,7 +284,7 @@ int main()
 a b c
 ```
 
-## <a name="difference_type"></a>Stack: ifference_type de:d (STL/CLR)
+## <a name="stackdifference_type-stlclr"></a><a name="difference_type"></a>Stack: ifference_type de:d (STL/CLR)
 
 Os tipos de uma distância assinada entre dois elementos.
 
@@ -298,7 +298,7 @@ typedef int difference_type;
 
 O tipo descreve uma contagem de elementos possivelmente negativo.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_difference_type.cpp
@@ -342,7 +342,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a>pilha:: Empty (STL/CLR)
+## <a name="stackempty-stlclr"></a><a name="empty"></a>pilha:: Empty (STL/CLR)
 
 Testa se nenhum elemento está presente.
 
@@ -356,7 +356,7 @@ bool empty();
 
 A função membro retorna verdadeiro para uma sequência controlada vazia. É equivalente a [Stack:: Size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Você o usa para testar se a pilha está vazia.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_empty.cpp
@@ -396,7 +396,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="generic_container"></a>Stack:: generic_container (STL/CLR)
+## <a name="stackgeneric_container-stlclr"></a><a name="generic_container"></a>Stack:: generic_container (STL/CLR)
 
 O tipo da interface genérica para o adaptador do contêiner.
 
@@ -411,7 +411,7 @@ typedef Microsoft::VisualC::StlClr::IStack<Value>
 
 O tipo descreve a interface genérica para essa classe de adaptador de contêiner de modelo.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_generic_container.cpp
@@ -459,7 +459,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_value"></a>Stack:: generic_value (STL/CLR)
+## <a name="stackgeneric_value-stlclr"></a><a name="generic_value"></a>Stack:: generic_value (STL/CLR)
 
 O tipo de um elemento a ser usado com a interface genérica para o contêiner.
 
@@ -473,7 +473,7 @@ typedef GValue generic_value;
 
 O tipo descreve um objeto do tipo `GValue` que descreve o valor do elemento armazenado para uso com a interface genérica para essa classe de contêiner de modelo. (`GValue` será `value_type` ou `value_type^` se `value_type` for um tipo de referência.)
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_generic_value.cpp
@@ -517,7 +517,7 @@ a b c
 c b a
 ```
 
-## <a name="get_container"></a>Stack:: get_container (STL/CLR)
+## <a name="stackget_container-stlclr"></a><a name="get_container"></a>Stack:: get_container (STL/CLR)
 
 Acessa o contêiner subjacente.
 
@@ -531,7 +531,7 @@ container_type^ get_container();
 
 A função membro retorna um identificador para o contêiner subjacente. Você o usa para ignorar as restrições impostas pelo wrapper do contêiner.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_get_container.cpp
@@ -559,7 +559,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a>Stack:: Operator = (STL/CLR)
+## <a name="stackoperator-stlclr"></a><a name="op_as"></a>Stack:: Operator = (STL/CLR)
 
 Substitui a sequência controlada.
 
@@ -569,7 +569,7 @@ Substitui a sequência controlada.
 stack <Value, Container>% operator=(stack <Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *right*<br/>
 Adaptador de contêiner a ser copiado.
@@ -578,7 +578,7 @@ Adaptador de contêiner a ser copiado.
 
 O operador membro copia *diretamente* para o objeto e, em seguida, retorna `*this`. Você o usa para substituir a sequência controlada por uma cópia da sequência controlada *à direita*.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_operator_as.cpp
@@ -613,7 +613,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a>pilha::p op (STL/CLR)
+## <a name="stackpop-stlclr"></a><a name="pop"></a>pilha::p op (STL/CLR)
 
 Remove o último elemento.
 
@@ -627,7 +627,7 @@ void pop();
 
 A função membro remove o último elemento da sequência controlada, que deve ser não vazio. Você o usa para encurtar a pilha por um elemento na parte de trás.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_pop.cpp
@@ -661,7 +661,7 @@ a b c
 a b
 ```
 
-## <a name="push"></a>Stack::p USH (STL/CLR)
+## <a name="stackpush-stlclr"></a><a name="push"></a>Stack::p USH (STL/CLR)
 
 Adiciona um novo último elemento.
 
@@ -675,7 +675,7 @@ void push(value_type val);
 
 A função membro insere um elemento com o valor `val` no final da sequência controlada. Você o usa para acrescentar outro elemento à pilha.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_push.cpp
@@ -702,7 +702,7 @@ int main()
 a b c
 ```
 
-## <a name="reference"></a>Stack:: Reference (STL/CLR)
+## <a name="stackreference-stlclr"></a><a name="reference"></a>Stack:: Reference (STL/CLR)
 
 O tipo de uma referência para um elemento.
 
@@ -716,7 +716,7 @@ typedef value_type% reference;
 
 O tipo descreve uma referência a um elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_reference.cpp
@@ -751,7 +751,7 @@ a b c
 a b x
 ```
 
-## <a name="size"></a>pilha:: tamanho (STL/CLR)
+## <a name="stacksize-stlclr"></a><a name="size"></a>pilha:: tamanho (STL/CLR)
 
 Conta o número de elementos.
 
@@ -765,7 +765,7 @@ size_type size();
 
 A função membro retorna o comprimento da sequência controlada. Você o usa para determinar o número de elementos atualmente na sequência controlada. Se tudo o que você se importa é se a sequência tem tamanho diferente de zero, confira [pilha:: Empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_size.cpp
@@ -805,7 +805,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a>Stack:: size_type (STL/CLR)
+## <a name="stacksize_type-stlclr"></a><a name="size_type"></a>Stack:: size_type (STL/CLR)
 
 O tipo de uma distância assinada entre dois elementos.
 
@@ -819,7 +819,7 @@ typedef int size_type;
 
 O tipo descreve uma contagem de elementos não negativos.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_size_type.cpp
@@ -854,7 +854,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="stack"></a>pilha:: Stack (STL/CLR)
+## <a name="stackstack-stlclr"></a><a name="stack"></a>pilha:: Stack (STL/CLR)
 
 Constrói um objeto de adaptador de contêiner.
 
@@ -867,7 +867,7 @@ stack(stack<Value, Container>^ right);
 explicit stack(container_type% wrapped);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *right*<br/>
 Objeto a ser copiado.
@@ -901,7 +901,7 @@ O construtor:
 
 usa o contêiner existente *encapsulado* como o contêiner encapsulado. Você o usa para construir uma pilha de um contêiner existente.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_construct.cpp
@@ -947,7 +947,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="to_array"></a>Stack:: to_array (STL/CLR)
+## <a name="stackto_array-stlclr"></a><a name="to_array"></a>Stack:: to_array (STL/CLR)
 
 Copia a sequência controlada em uma nova matriz.
 
@@ -961,7 +961,7 @@ cli::array<Value>^ to_array();
 
 A função membro retorna uma matriz que contém a sequência controlada. Você o usa para obter uma cópia da sequência controlada na forma de matriz.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_to_array.cpp
@@ -997,7 +997,7 @@ a b c d
 a b c
 ```
 
-## <a name="top"></a>Stack:: Top (STL/CLR)
+## <a name="stacktop-stlclr"></a><a name="top"></a>Stack:: Top (STL/CLR)
 
 Acessa o último elemento.
 
@@ -1011,7 +1011,7 @@ reference top();
 
 A função member retorna uma referência ao último elemento da sequência controlada, que deve ser não vazia. Você o usa para acessar o último elemento, quando você sabe que ele existe.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_top.cpp
@@ -1049,7 +1049,7 @@ top() = c
 a b x
 ```
 
-## <a name="top_item"></a>Stack:: top_item (STL/CLR)
+## <a name="stacktop_item-stlclr"></a><a name="top_item"></a>Stack:: top_item (STL/CLR)
 
 Acessa o último elemento.
 
@@ -1063,7 +1063,7 @@ property value_type top_item;
 
 A propriedade acessa o último elemento da sequência controlada, que deve ser não vazio. Você o usa para ler ou gravar o último elemento, quando souber que ele existe.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_top_item.cpp
@@ -1101,7 +1101,7 @@ top_item = c
 a b x
 ```
 
-## <a name="value_type"></a>Stack:: value_type (STL/CLR)
+## <a name="stackvalue_type-stlclr"></a><a name="value_type"></a>Stack:: value_type (STL/CLR)
 
 O tipo de um elemento.
 
@@ -1115,7 +1115,7 @@ typedef Value value_type;
 
 O tipo é um sinônimo para o *valor*do parâmetro de modelo.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_value_type.cpp
@@ -1146,7 +1146,7 @@ int main()
 c b a
 ```
 
-## <a name="op_neq"></a>operador! = (pilha) (STL/CLR)
+## <a name="operator-stack-stlclr"></a><a name="op_neq"></a>operador! = (pilha) (STL/CLR)
 
 Comparação de pilha não igual.
 
@@ -1159,7 +1159,7 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *left*<br/>
 Contêiner esquerdo a comparar.
@@ -1171,7 +1171,7 @@ Contêiner direito a comparar.
 
 A função Operator retorna `!(left == right)`. Você o usa para testar se a *esquerda* não é ordenada da mesma forma que a *correta* quando as duas pilhas são comparadas Element por elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_operator_ne.cpp
@@ -1217,7 +1217,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a>operador&lt; (pilha) (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a>operador&lt; (pilha) (STL/CLR)
 
 Pilha menor que comparação.
 
@@ -1230,7 +1230,7 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *left*<br/>
 Contêiner esquerdo a comparar.
@@ -1242,7 +1242,7 @@ Contêiner direito a comparar.
 
 A função Operator retornará true se, para a posição mais baixa `i` para a qual `!(right[i] < left[i])` também é true que `left[i] < right[i]`. Caso contrário, ele retornará `left->`[pilha:: Size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() <` `right->size()` você o usará para testar se a *esquerda* é ordenada antes da *direita* quando as duas pilhas são comparadas Element por elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_operator_lt.cpp
@@ -1288,7 +1288,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a>operador&lt;= (pilha) (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a>operador&lt;= (pilha) (STL/CLR)
 
 Pilha menor ou igual a comparação.
 
@@ -1301,7 +1301,7 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *left*<br/>
 Contêiner esquerdo a comparar.
@@ -1313,7 +1313,7 @@ Contêiner direito a comparar.
 
 A função Operator retorna `!(right < left)`. Você o usa para testar se a *esquerda* não é ordenada após *direita* quando as duas pilhas são comparadas Element por elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_operator_le.cpp
@@ -1359,7 +1359,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a>Operator = = (Stack) (STL/CLR)
+## <a name="operator-stack-stlclr"></a><a name="op_eq"></a>Operator = = (Stack) (STL/CLR)
 
 Comparação igual à pilha.
 
@@ -1372,7 +1372,7 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *left*<br/>
 Contêiner esquerdo a comparar.
@@ -1384,7 +1384,7 @@ Contêiner direito a comparar.
 
 A função Operator retornará true somente se as sequências controladas pela *esquerda* e *à direita* tiverem o mesmo comprimento e, para cada posição `i`, `left[i] ==` `right[i]`. Você o usa para testar se a *esquerda* é ordenada da mesma forma que a *correta* quando as duas pilhas são comparadas Element por elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_operator_eq.cpp
@@ -1430,7 +1430,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a>operador&gt; (pilha) (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a>operador&gt; (pilha) (STL/CLR)
 
 Pilha maior que comparação.
 
@@ -1443,7 +1443,7 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *left*<br/>
 Contêiner esquerdo a comparar.
@@ -1455,7 +1455,7 @@ Contêiner direito a comparar.
 
 A função Operator retorna `right` `<` `left`. Você o usa para testar se a *esquerda* é ordenada após *direita* quando as duas pilhas são comparadas Element por elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_operator_gt.cpp
@@ -1501,7 +1501,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a>operador&gt;= (pilha) (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a>operador&gt;= (pilha) (STL/CLR)
 
 Pilha maior ou igual a comparação.
 
@@ -1514,7 +1514,7 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *left*<br/>
 Contêiner esquerdo a comparar.
@@ -1526,7 +1526,7 @@ Contêiner direito a comparar.
 
 A função Operator retorna `!(left < right)`. Você o usa para testar se a *esquerda* não é ordenada antes da *direita* quando as duas pilhas são comparadas Element por elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_stack_operator_ge.cpp

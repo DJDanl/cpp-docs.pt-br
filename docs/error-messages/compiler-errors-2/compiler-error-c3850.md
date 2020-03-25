@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3850
 ms.assetid: 028f3a37-f3ad-4ebc-9168-3cdea47524d4
-ms.openlocfilehash: 9cd0428726f92c7347b162f74b46035f99cc2d3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5de7994e8bf46105e94271ab29bf9e27f1da3e76
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380949"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165555"
 ---
 # <a name="compiler-error-c3850"></a>Erro do compilador C3850
 
-> '*char*': um-nome de caractere universal Especifica um caractere inválido
+> '*Char*': um nome de caractere universal especifica um caractere inválido
 
 ## <a name="remarks"></a>Comentários
 
-Caracteres representados como nomes de caracteres universais devem representar pontos de código Unicode válidos no intervalo 0-10FFFF. Um nome de caractere universal não pode conter um valor no intervalo substituto Unicode, DFFF u+D800 ou um par de substitutos codificados. O compilador gera o substituto automaticamente, o ponto de par de um código válido.
+Os caracteres representados como nomes de caracteres universais devem representar pontos de código Unicode válidos no intervalo de 0 a 10FFFF. Um nome de caractere universal não pode conter um valor no intervalo substituto de Unicode, D800-DFFF ou um par substituto codificado. O compilador gera automaticamente o par substituto a partir de um ponto de código válido.
 
-No código compilado como C, um nome de caractere universal não pode representar um caractere no intervalo 0000-009F, inclusive, com exceção da 0024 ('$'), 0040 ('\@') e 0060 (' ').
+No código compilado como C, um nome de caractere universal não pode representar um caractere no intervalo 0000-009F, inclusive, com as exceções de 0024 (' $ '), 0040 ('\@') e 0060 (' ' ').
 
-No código compilado c++, um nome de caractere universal pode usar qualquer ponto de código Unicode válido em uma cadeia de caracteres ou literal de caractere. Fora de um literal, um nome de caractere universal não pode representar um caractere de controle no intervalos 0000 001F ou 007F-009F, ambos incluídos, ou definir um membro do caractere de origem básicos.  Para obter mais informações, consulte [conjuntos de caracteres](../../cpp/character-sets.md).
+No código compilado como C++, um nome de caractere universal pode usar qualquer ponto de código Unicode válido em uma cadeia de caracteres ou um literal de caractere. Fora de um literal, um nome de caractere universal não pode representar um caractere de controle nos intervalos 0000-001F ou 007F-009F, ambos incluídos ou um membro do conjunto de caracteres de origem básico.  Para obter mais informações, consulte [conjuntos de caracteres](../../cpp/character-sets.md).
 
 ## <a name="example"></a>Exemplo
 

@@ -1,17 +1,17 @@
 ---
-title: dupla (C++ COM atributo)
+title: dual (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 8f02f6b69b31f10b41d5c920cfc2ad62dfa1cef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409675"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168207"
 ---
 # <a name="dual"></a>dual
 
@@ -25,11 +25,11 @@ Coloca uma interface no arquivo. idl como uma interface dupla.
 
 ## <a name="remarks"></a>Comentários
 
-Quando o **dual** atributo C++ precede uma interface, ele faz com que a interface a ser colocado dentro do bloco de biblioteca no arquivo. idl gerado.
+Quando o atributo **Dual** C++ precede uma interface, ele faz com que a interface seja colocada dentro do bloco de biblioteca no arquivo. idl gerado.
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir é um bloco de atributo que usa **dual** antes de uma definição de interface:
+O código a seguir é um bloco de atributo que usa **Dual** antes de uma definição de interface:
 
 ```cpp
 // cpp_attr_ref_dual.cpp
@@ -55,18 +55,18 @@ __interface IStatic : IDispatch
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
 |**Aplica-se a**|**interface**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|`dispinterface`|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos por uso](attributes-by-usage.md)<br/>

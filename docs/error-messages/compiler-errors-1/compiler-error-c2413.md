@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2413
 ms.assetid: d0403952-f41e-4b21-840d-ab4e44171838
-ms.openlocfilehash: 3c29b3ebdb6cca1ff5fcc9f84348f4b9950ae128
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 251818f0dbdf0a73c7c30bf20c1944b5b1087453
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402990"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205687"
 ---
 # <a name="compiler-error-c2413"></a>Erro do compilador C2413
 
-'token': tamanho de align inválido
+' token ': tamanho de alinhamento inválido
 
-O tamanho usado com o `ALIGN` diretiva está ausente ou fora do intervalo válido.
+O tamanho usado com a diretiva `ALIGN` está ausente ou fora do intervalo válido.

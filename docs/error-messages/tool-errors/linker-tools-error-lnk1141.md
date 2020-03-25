@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1141
 ms.assetid: 83b78606-6dd3-43a7-88e2-152f5359cbd8
-ms.openlocfilehash: e2e3ae2462919a8261e450460370a46f0022bb1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2564cbb557f818aa3ef06e0032335b534daf7188
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255021"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184197"
 ---
 # <a name="linker-tools-error-lnk1141"></a>Erro das Ferramentas de Vinculador LNK1141
 
-Falha ao gerar arquivo de exportação
+falha durante a compilação do arquivo de exportação
 
-[LINK](../../build/reference/linking.md) não foi possível criar o arquivo de exportação (. Exp).
+O [link](../../build/reference/linking.md) não pôde criar o arquivo Exports (. exp).
 
-As causas desse erro incluem problemas de sistema, como erros de sintaxe e de memória insuficientes em opções ou instruções de definição de módulo.
+As causas desse erro incluem problemas de sistema como memória insuficiente e erros de sintaxe em instruções de opções ou de definição de módulo.
 
 Esse erro é precedido por outro erro que fornece informações adicionais.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Arquivos .Exp como entrada do vinculador](../../build/reference/dot-exp-files-as-linker-input.md)

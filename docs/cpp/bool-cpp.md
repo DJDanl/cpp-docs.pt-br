@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bool keyword [C++]
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
-ms.openlocfilehash: a3384bbb118c7363a603b5b9b0c8a375cb3dd185
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: db246cda79c778f37c5afbfda4a68c191c474e12
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301620"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190489"
 ---
 # <a name="bool-c"></a>bool (C++)
 
@@ -50,7 +50,7 @@ Não é possível aplicar o sufixo ou o prefixo **--** operador a uma variável 
 
 O tipo **bool** participa de promoções integrais. Um valor de r do tipo **bool** pode ser convertido em um r-value do tipo **int**, com false se tornando zero e verdadeiro se tornando um. Como um tipo distinto, **bool** participa da resolução de sobrecarga.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
 [Tipos internos](../cpp/fundamental-types-cpp.md)

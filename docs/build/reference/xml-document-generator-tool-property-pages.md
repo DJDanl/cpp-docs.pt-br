@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-ms.openlocfilehash: c99677d7fc53ae3343e15e54997fe0101322fbcf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f10ddf98c238120750e72644779a6ad74af2d1e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316152"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171626"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>Páginas de propriedade da ferramenta geradora de documento XML
 
@@ -22,7 +22,7 @@ A página de propriedades da Ferramenta de Gerador de Documento XML expõe a fun
 > [!NOTE]
 >  As opções de xdcmake.exe no ambiente de desenvolvimento (páginas de propriedades) são diferentes das opções exibidas quando xdcmake.exe é usado na linha de comando. Para obter informações sobre como usar xdcmake.exe na linha de comando, confira [Referência de XDCMake](xdcmake-reference.md).
 
-## <a name="uielement-list"></a>Lista UIElement
+## <a name="uielement-list"></a>Lista de elementos de interface do usuário
 
 - **Suprimir Faixa de Inicialização**
 
@@ -34,12 +34,12 @@ A página de propriedades da Ferramenta de Gerador de Documento XML expõe a fun
 
 - **Arquivo de Documento de Saída**
 
-   O nome e o local de diretório do arquivo de saída .xml. Ver [macros comuns para compilar comandos e propriedades](common-macros-for-build-commands-and-properties.md) para obter informações sobre como usar macros para especificar locais de diretório.
+   O nome e o local de diretório do arquivo de saída .xml. Consulte [macros comuns para criar comandos e propriedades](common-macros-for-build-commands-and-properties.md) para obter informações sobre como usar macros para especificar locais de diretório.
 
 - **Dependências de biblioteca de documentos**
 
    Se o projeto tem uma dependência de um projeto .lib na solução, você pode processar arquivos .xdc do projeto .lib nos arquivos .xml do projeto atual.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência de página de propriedades do projeto C++](property-pages-visual-cpp.md)
+[C++referência de página de propriedades do projeto](property-pages-visual-cpp.md)

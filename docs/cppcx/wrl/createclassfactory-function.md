@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-ms.openlocfilehash: 323fce053707d6d00d1e17b641613d15607ab6f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0467a9a1341e29a61a3b32d999769b01385f641f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398648"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214052"
 ---
 # <a name="createclassfactory-function"></a>Função CreateClassFactory
 
@@ -30,13 +30,13 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 ) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*flags*<br/>
-Uma combinação de um ou mais [RuntimeClassType](runtimeclasstype-enumeration.md) valores de enumeração.
+*sinalizadores*<br/>
+Uma combinação de um ou mais valores de enumeração [RuntimeClassType](runtimeclasstype-enumeration.md) .
 
 *entry*<br/>
-Ponteiro para um [CreatorMap](creatormap-structure.md) que contém informações de registro e inicialização sobre o parâmetro *riid*.
+Ponteiro para um [CreatorMap](creatormap-structure.md) que contém informações de inicialização e de registro sobre o parâmetro *riid*.
 
 *riid*<br/>
 Referência a uma ID de interface.
@@ -44,20 +44,20 @@ Referência a uma ID de interface.
 *ppFactory*<br/>
 Se essa operação for concluída com êxito, um ponteiro para uma fábrica de classes.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
+S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
 ## <a name="remarks"></a>Comentários
 
-Um erro de asserção será emitido se o parâmetro de modelo *fábrica* não deriva da interface `IClassFactory`.
+Um erro de declaração é emitido se a *fábrica* de parâmetros de modelo não deriva da interface `IClassFactory`.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** module.h
+**Cabeçalho:** Module. h
 
-**Namespace:** Microsoft::WRL
+**Namespace:** Microsoft:: WRL
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL::Wrappers::Details](microsoft-wrl-wrappers-details-namespace.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - BK1509
 ms.assetid: 53df7037-1913-4b63-b425-c0bf44081792
-ms.openlocfilehash: 384f202ea3eb969da2ce3a3b82209c383009c62e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04637e13aa49b873117228c8aabd9151e6a6b822
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279522"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197673"
 ---
 # <a name="bscmake-error-bk1509"></a>Erro BK1509 (BSCMAKE)
 
 sem espaço de heap
 
-BSCMAKE ficou sem memória, incluindo a memória virtual.
+O BSCMAKE ficou sem memória, incluindo a memória virtual.
 
 ### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir usando as seguintes soluções possíveis
 
@@ -27,4 +27,4 @@ BSCMAKE ficou sem memória, incluindo a memória virtual.
 
 1. Aumente o tamanho do arquivo de permuta do Windows.
 
-1. Reduza a memória que BSCMAKE requer usando /Ei ou /Es eliminar alguns arquivos ou /Em para eliminar os corpos de macro de entrada.
+1. Reduza a memória que o BSCMAKE requer usando/Ei ou/es para eliminar alguns arquivos de entrada ou/em para eliminar os corpos das macros.

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-ms.openlocfilehash: d9954c12fb1065a4aa5e7afbdecd1f96758acaf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 191456a1e290b568897ba76cd5bdccb8f83c310b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365657"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201455"
 ---
 # <a name="compiler-error-c3268"></a>Erro do compilador C3268
 
-> '*função*': uma função genérica ou uma função de membro de uma classe genérica não pode ter uma lista de parâmetros variáveis
+> '*Function*': uma função genérica ou uma função membro de uma classe de Generic não pode ter uma lista de parâmetros variáveis
 
 ## <a name="remarks"></a>Comentários
 
-O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+As opções de compilador **/CLR: Pure** e **/CLR: safe** são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-Ver [genéricos](../../extensions/generics-cpp-component-extensions.md) para obter mais informações.
+Consulte [genéricos](../../extensions/generics-cpp-component-extensions.md) para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 

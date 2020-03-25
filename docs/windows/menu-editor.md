@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: a21ff3ba736bd345e4b8399a761b5a8d9db531ac
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 3671dbe33b2d6e373e2df3d54267c6aac5bbf20d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444978"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214442"
 ---
 # <a name="menu-editor-c"></a>Editor de menuC++()
 
@@ -53,13 +53,13 @@ Os menus permitem que você organize os comandos de maneira lógica e fácil de 
 > [!TIP]
 > Ao usar o **Editor de menu**, em muitas instâncias, você pode clicar com o botão direito do mouse para exibir um menu pop-up de comandos usados com frequência. Os comandos disponíveis dependem do que o ponteiro está apontando.
 
-## <a name="how-to"></a>Como
+## <a name="how-to"></a>Instruções
 
 O **Editor de menus** permite que você:
 
 ### <a name="to-create-a-standard-menu"></a>Criar um menu padrão
 
-1. Vá para a **exibição**de menu  > **Other Windows** > **modo de exibição de recursos** e clique com o botão direito do mouse no título do **menu** . Escolha **Adicionar recurso**e, em seguida, **menu**.
+1. Vá para a **exibição** de menu > outros **modo de exibição de recursos** de > do **Windows** e clique com o botão direito do mouse no título do **menu** . Escolha **Adicionar recurso**e, em seguida, **menu**.
 
 1. Selecione a caixa **novo item** (o retângulo que contém o *tipo aqui*) na barra de menus.
 
@@ -194,7 +194,7 @@ Normalmente, quando você está trabalhando no **Editor de menu**, um recurso de
 
 Win32
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Editores de recursos](../windows/resource-editors.md)<br/>
 [Comandos de menu](../windows/menu-command-properties.md)<br/>

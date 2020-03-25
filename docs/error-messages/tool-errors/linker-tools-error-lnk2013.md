@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2013
 ms.assetid: 21408e2d-3f56-4d1f-a031-00df70785ed4
-ms.openlocfilehash: 4d932a89f1b0bde27f6de2f84b2ed103dab1b1b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ad3f40f06e64422b393edb457a0dcf419828b6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299057"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194740"
 ---
 # <a name="linker-tools-error-lnk2013"></a>Erro das Ferramentas de Vinculador LNK2013
 
-estouro de conserto de tipo de correção. Destino de 'nome do símbolo' está fora do intervalo
+estouro no conserto do tipo de correção. O ' nome do símbolo ' de destino está fora do intervalo
 
-O vinculador pode não cabe o endereço necessário ou offset na instrução fornecida porque o símbolo de destino está muito longe do local da instrução.
+O vinculador não pode se ajustar ao endereço ou deslocamento necessário para a instrução especificada porque o símbolo de destino está muito longe do local da instrução.
 
-Você pode resolver esse problema criando várias imagens ou usando o [/ORDER](../../build/reference/order-put-functions-in-order.md) opção para que a instrução e o destino estiverem mais juntos.
+Você pode resolver esse problema criando várias imagens ou usando a opção [/Order](../../build/reference/order-put-functions-in-order.md) para que a instrução e o destino fiquem mais próximos.
 
-Quando o nome do símbolo é um símbolo definido pelo usuário (e não é um símbolo gerado pelo compilador), você também pode tentar as seguintes ações para resolver o erro:
+Quando o nome do símbolo é um símbolo definido pelo usuário (e não um símbolo gerado pelo compilador), você também pode tentar as seguintes ações para resolver o erro:
 
-- Altere a função estática para ser não estático.
+- Altere a função estática para não estático.
 
-- Renomeie a seção de código que contém a função estática para ser o mesmo que o chamador.
+- Renomeie a seção de código que contém a função estática como sendo a mesma do chamador.
 
-Use `DUMPBIN /SYMBOLS`, para ver se uma função é estática.
+Use `DUMPBIN /SYMBOLS`para ver se uma função é estática.

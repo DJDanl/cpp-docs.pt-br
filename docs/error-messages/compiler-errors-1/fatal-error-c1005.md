@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1005
 ms.assetid: 150daf8e-a38a-4669-9c1a-a05b5a1f65ef
-ms.openlocfilehash: a84791367656729b1cbd50ca180368f6c01531a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8b0fe71dcfb6253327de247d24ef9d90c59181d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383185"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204861"
 ---
 # <a name="fatal-error-c1005"></a>Erro fatal C1005
 
-muito grande para o buffer de cadeia de caracteres
+Cadeia de caracteres muito grande para o buffer
 
 Uma cadeia de caracteres em um arquivo intermediário do compilador estourou um buffer.
 
-Você pode obter esse erro quando o parâmetro que você passa como o [/Fd](../../build/reference/fd-program-database-file-name.md) ou [/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) opções do compilador é maior que 256 bytes.
+Você pode obter esse erro quando o parâmetro que você passa para as opções do compilador [/FD](../../build/reference/fd-program-database-file-name.md) ou [/YL](../../build/reference/yl-inject-pch-reference-for-debug-library.md) é maior que 256 bytes.

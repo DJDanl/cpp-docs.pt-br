@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-ms.openlocfilehash: df753241c093db75202a10b106631ce36cf73379
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3abd1d020e4181a42a7bc38319e5e17e69ef0507
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857275"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178530"
 ---
 # <a name="__stdcall"></a>__stdcall
 
@@ -21,7 +21,7 @@ A Convenção de chamada **__stdcall** é usada para chamar funções de API do 
 
 ## <a name="syntax"></a>Sintaxe
 
-> *return-type* **\_\_stdcall** *function-name*[ **(** *argument-list* **)** ]
+> *tipo de retorno* **\_\_** *nome de função*stdcall [ **(** *lista de argumentos* **)** ]
 
 ## <a name="remarks"></a>Comentários
 
@@ -33,7 +33,7 @@ A lista a seguir mostra a implementação dessa convenção de chamada.
 |Convenção de passagem de argumentos|Por valor, a menos que um ponteiro ou um tipo de referência seja passado.|
 |Responsabilidade de manutenção de pilha|A função chamada remove seus próprios argumentos da pilha.|
 |Convenção de decoração de nome|Um sublinhado (_) é prefixado com o nome. O nome é seguido pela arroba (@) e pelo número de bytes (em decimal) na lista de argumentos. Portanto, a função declarada como `int func( int a, double b )` está decorada da seguinte maneira: `_func@12`|
-|Convenção de conversão de maiúsculas/minúsculas|{1&gt;Nenhum&lt;1}|
+|Convenção de conversão de maiúsculas/minúsculas|Nenhum|
 
 A opção de compilador [/gz](../build/reference/gd-gr-gv-gz-calling-convention.md) especifica **__stdcall** para todas as funções não declaradas explicitamente com uma Convenção de chamada diferente.
 
@@ -51,7 +51,7 @@ struct CMyClass {
 };
 ```
 
-this
+este
 
 ```cpp
 void CMyClass::mymethod() { return; }
@@ -74,7 +74,7 @@ No exemplo a seguir, o uso de **__stdcall** resulta em todos os tipos de funçã
 typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Convenções de passagem e nomenclatura de argumentos](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

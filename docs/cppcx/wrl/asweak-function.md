@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - AsWeak function
 ms.assetid: a6f10cfc-c1d6-4761-adb9-1a119cc99913
-ms.openlocfilehash: 45df6332fccb2a22284eb6478c7554d87318ca78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d11f55d57f4053fd6d46b727a8ed91b340d1764b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398843"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214169"
 ---
 # <a name="asweak-function"></a>Função AsWeak
 
@@ -28,27 +28,27 @@ HRESULT AsWeak(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
-Um ponteiro para o tipo do parâmetro *p*.
+Um ponteiro para o tipo de parâmetro *p*.
 
 *p*<br/>
 Uma instância de um tipo.
 
 *pWeak*<br/>
-Quando essa operação for concluída, um ponteiro para uma referência fraca ao parâmetro *p*.
+Quando essa operação é concluída, um ponteiro para uma referência fraca ao parâmetro *p*.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-S_OK, se essa operação for bem-sucedida; Caso contrário, um erro HRESULT que indica a causa da falha.
+S_OK, se essa operação for bem-sucedida; caso contrário, um erro HRESULT indica a causa da falha.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** client.h
+**Cabeçalho:** Client. h
 
-**Namespace:** Microsoft::WRL
+**Namespace:** Microsoft:: WRL
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL](microsoft-wrl-namespace.md)

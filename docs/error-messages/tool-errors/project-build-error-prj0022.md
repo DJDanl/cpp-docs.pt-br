@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0022
 ms.assetid: 691344a8-fc70-4aeb-9372-dde72f4588a4
-ms.openlocfilehash: 35bb9b2c1f03fdcf28a06bf1e678d4e6600bc97f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc5a676baaa3d24516843f2fc0be25f6390826b5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359306"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192374"
 ---
 # <a name="project-build-error-prj0022"></a>Erro de Build PRJ0022 no Projeto
 
-> Ferramenta desconhecida, propriedade '*propriedade*'contém o nome de arquivo inválido'*arquivo*'.
+> Ferramenta desconhecida, propriedade '*Property*' contém nome de arquivo inválido '*File*'.
 
-O nome do arquivo *arquivo* especificado na propriedade *propriedade* era inválido.
+O *arquivo* de nome de arquivo especificado na *Propriedade* de propriedade era inválido.
 
 Você pode ter usado uma macro desconhecida ou inválida.
 
-Ver [configuração de propriedades do projeto Visual C++](../../build/working-with-project-properties.md) para obter informações sobre como acessar as propriedades do projeto.
+Consulte [Configurando propriedades do projeto Visual C++ ](../../build/working-with-project-properties.md) para obter informações sobre como acessar as propriedades do seu projeto.

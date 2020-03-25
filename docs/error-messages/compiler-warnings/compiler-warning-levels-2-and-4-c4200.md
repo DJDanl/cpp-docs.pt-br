@@ -1,25 +1,25 @@
 ---
-title: (Níveis 2 e 4) de aviso do compilador C4200
+title: Aviso do compilador (níveis 2 e 4) C4200
 ms.date: 11/04/2016
 f1_keywords:
 - C4200
 helpviewer_keywords:
 - C4200
 ms.assetid: e44d6073-937f-42b7-acc1-65e802b475c6
-ms.openlocfilehash: 56a2ba641df610519949f64f6feeca18d9a99e93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b0750fe50e18214e0841eff6b3459438e9a6aec
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359950"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197945"
 ---
-# <a name="compiler-warning-levels-2-and-4-c4200"></a>(Níveis 2 e 4) de aviso do compilador C4200
+# <a name="compiler-warning-levels-2-and-4-c4200"></a>Aviso do compilador (níveis 2 e 4) C4200
 
 extensão não padrão usada: matriz de tamanho zero na estrutura/união
 
 Indica que uma estrutura ou união contém uma matriz de tamanho zero.
 
-A declaração de uma matriz de tamanho zero é uma extensão da Microsoft. Isso causa um aviso de nível 2 quando um arquivo C++ é compilado e um aviso de nível 4 quando um arquivo C é compilado. C++compilação também fornece esse aviso: "Não é possível gerar operador construtor de cópia ou atribuição de cópia quando UDT tiver uma matriz de tamanho zero". Este exemplo gera um aviso C4200:
+A declaração de uma matriz de tamanho zero é uma extensão da Microsoft. Isso causa um aviso de nível 2 quando um arquivo C++ é compilado e um aviso de nível 4 quando um arquivo C é compilado. A compilação do C++ também fornece esse aviso: "Não é possível gerar operador construtor de cópia ou de atribuição de cópia quando UDT tiver uma matriz de tamanho zero." Este exemplo gera um aviso C4200:
 
 ```cpp
 // C4200.cpp

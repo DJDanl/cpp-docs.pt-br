@@ -9,12 +9,12 @@ helpviewer_keywords:
 - volatile objects
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
-ms.openlocfilehash: 572fe244a076492e3f3316dd6d00f6fe7d7c3c9c
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6d193c530cbe0258d8713883b769fe4828a248c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857197"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187421"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
@@ -56,7 +56,7 @@ Se você estiver familiarizado com a C# palavra-chave volátil ou estiver famili
 
 **Seção específica da Microsoft**
 
-Quando a opção de compilador **/volatile: MS** é usada – por padrão, quando há arquiteturas diferentes de ARM, o compilador gera código extra para manter a ordenação entre referências a objetos voláteis, além de manter a ordenação para referências a outros objetos globais. Em particular:
+Quando a opção de compilador **/volatile: MS** é usada – por padrão, quando há arquiteturas diferentes de ARM, o compilador gera código extra para manter a ordenação entre referências a objetos voláteis, além de manter a ordenação para referências a outros objetos globais. Especialmente:
 
 - Uma gravação em um objeto volátil (também conhecida como gravação volátil) tem semântica de versão; ou seja, uma referência a um objeto global ou estático que ocorre antes de uma gravação em um objeto volátil na sequência da instrução ocorrerá antes dessa gravação volátil no binário compilado.
 
@@ -69,7 +69,7 @@ Isso permite que os objetos voláteis sejam usados para versões e bloqueios de 
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
 [const](../cpp/const-cpp.md)<br/>

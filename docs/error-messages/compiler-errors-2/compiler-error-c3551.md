@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - C3551
 ms.assetid: c8ee23da-6568-40db-93a6-3ddb7ac47712
-ms.openlocfilehash: 48b378eb734c5830bedbf417d99d34955e2e6d0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9a4ce2276a602d59e495a2f336bb9d59dc0cc99
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375971"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200753"
 ---
 # <a name="compiler-error-c3551"></a>Erro do compilador C3551
 
-"esperado que um final de tipo de retorno especificado"
+"esperado um tipo de retorno mais recente especificado"
 
-Se você usar o `auto` palavra-chave como um espaço reservado para o tipo de retorno de uma função, você deve fornecer um tipo de retorno com especificação tardia. No exemplo a seguir, o retorno com especificação tardia tipo de função `myFunction` é um ponteiro para uma matriz de quatro elementos do tipo `int`.
+Se você usar a palavra-chave `auto` como um espaço reservado para o tipo de retorno de uma função, deverá fornecer um tipo de retorno especificado de forma tardia. No exemplo a seguir, o tipo de retorno de função mais recente `myFunction` é um ponteiro para uma matriz de quatro elementos do tipo `int`.
 
 ```
 auto myFunction()->int(*)[4];
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [auto](../../cpp/auto-cpp.md)

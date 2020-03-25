@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2555
 ms.assetid: 5e49ebb8-7c90-457a-aa12-7ca7ab6574b2
-ms.openlocfilehash: cc6c3a3a29665ccf65b77a3d9866986cb0a46b9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebf3e4a3aff48311edd5fb95b01a7b2d23990231
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353182"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202418"
 ---
 # <a name="compiler-error-c2555"></a>Erro do compilador C2555
 
-'class1::function1': função virtual de substituição retornar o tipo é diferente e não é covariante com 'class2::function2'
+' class1:: function1 ': tipo de retorno da função virtual de substituição difere e não é covariant de ' class2:: function2 '
 
-Uma função virtual e uma função de substituição derivada têm listas de parâmetro idênticos, mas tipos diferentes de retorno. Uma função de substituição em uma classe derivada não pode ser diferente de uma função virtual em uma classe base somente por seu tipo de retorno.
+Uma função virtual e uma função de substituição derivada têm listas de parâmetros idênticas, mas diferentes tipos de retorno. Uma função de substituição em uma classe derivada não pode diferir de uma função virtual em uma classe base somente por seu tipo de retorno.
 
-Para resolver esse erro, converta o valor de retorno após a função virtual tiver sido chamado.
+Para resolver esse erro, converta o valor de retorno depois que a função virtual tiver sido chamada.
 
-Você também poderá ver esse erro se você compilar com /clr.   Por exemplo, o Visual C++ equivalente para a declaração c# a seguir:
+Você também poderá ver esse erro se compilar com/CLR.   Por exemplo, o equivalente C++ Visual para a seguinte C# declaração:
 
 ```
 Guid[] CheckSources(Guid sourceID, Guid[] carouselIDs);
 ```
 
-is
+é
 
 ```
 Guid CheckSources(Guid sourceID, Guid carouselIDs[]) [];

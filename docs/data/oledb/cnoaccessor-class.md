@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNoAccessor class
 ms.assetid: eb669ae5-0a56-49a3-9646-c4ae6239da31
-ms.openlocfilehash: 0cf1b47cc03d1839ae5c547393c3c193dab439d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c82d756690c6c2a719cb03f458c471aa44e3d5b5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230458"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211725"
 ---
 # <a name="cnoaccessor-class"></a>Classe CNoAccessor
 
@@ -27,39 +27,39 @@ class CNoAccessor
 
 ## <a name="remarks"></a>Comentários
 
-Use `CNoAccessor` como um argumento de modelo quando você não deseja que a classe para dar suporte a parâmetros ou colunas de saída.
+Use `CNoAccessor` como um argumento de modelo quando você não quiser que a classe dê suporte a parâmetros ou colunas de saída.
 
-`CNoAccessor` implementa os seguintes métodos de stub, cada um dos quais correspondem aos outros métodos de classe de acessador:
+`CNoAccessor` implementa os seguintes métodos stub, cada um dos quais corresponde a outros métodos de classe de acessador:
 
-- `BindColumns` -Associa as colunas para acessadores.
+- `BindColumns`-associa colunas a acessadores.
 
-- `BindParameters` -Associa os parâmetros criados para colunas.
+- `BindParameters`-associa os parâmetros criados a colunas.
 
-- `Bind` -Cria associações.
+- `Bind`-cria associações.
 
-- `Close` -Fecha o acessador.
+- `Close`-fecha o acessador.
 
-- `ReleaseAccessors` -Libera os acessadores criados pela classe.
+- `ReleaseAccessors`-libera os acessadores criados pela classe.
 
-- `FreeRecordMemory` -Libera quaisquer colunas no registro atual que precise ser liberada.
+- `FreeRecordMemory` – libera Todas as colunas no registro atual que precisam ser liberadas.
 
-- `GetColumnInfo` -Obtém informações de coluna do conjunto de linhas aberto.
+- `GetColumnInfo`-Obtém informações de coluna do conjunto de linhas aberto.
 
-- `GetNumAccessors` -Recupera o número de acessadores criado pela classe.
+- `GetNumAccessors` – recupera o número de acessadores criados pela classe.
 
-- `IsAutoAccessor` -Retorna true se os dados são recuperados do acessador automaticamente durante uma operação de movimentação.
+- `IsAutoAccessor`-retornará true se os dados forem recuperados automaticamente para o acessador durante uma operação de movimentação.
 
-- `GetHAccessor` -Recupera o identificador do acessador de um acessador especificado.
+- `GetHAccessor` – recupera o identificador de acessador de um acessador especificado.
 
-- `GetBuffer` -Recupera o ponteiro para o buffer de indicador.
+- `GetBuffer`-recupera o ponteiro para o buffer de indicadores.
 
-- `NoBindOnNullRowset` -Impede que a associação de dados em conjuntos de linhas vazios.
+- `NoBindOnNullRowset`-impede a vinculação de dados em conjuntos de linhas vazios.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atldbcli.h
+**Cabeçalho:** atldbcli. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

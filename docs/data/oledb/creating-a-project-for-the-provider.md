@@ -6,34 +6,34 @@ helpviewer_keywords:
 - OLE DB providers, projects
 - projects [C++], creating
 ms.assetid: 076a75de-1d4b-486a-bcf8-9c0f6b049fa2
-ms.openlocfilehash: dc085b1f663369033947ed2a5577f334dd79c0aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2ff42ba8a2e908f672db7e96fc9f24f51a1fd9b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361939"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211400"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Criando um projeto para o provedor
 
-## <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Para criar um projeto no qual o provedor OLE DB residirá
+## <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Para criar um projeto no qual o provedor de OLE DB residirá
 
 1. No menu **Arquivo**, clique em **Novo** e em **Projeto**.
 
-   A caixa de diálogo **Novo Projeto** é exibida.
+   A caixa de diálogo **Novo Projeto** aparecerá.
 
-1. No **tipos de projeto** painel, clique no **instalado** > **Visual C++** > **MFC/ATL** pasta. No **modelos** painel, clique em **projeto ATL**.
+1. No painel **tipos de projeto** , clique na **pasta instalado** > **Visual C++**  > **MFC/ATL** . No painel **modelos** , clique em **projeto ATL**.
 
     > [!NOTE]
-    > Nas versões anteriores do Visual Studio, localize o tipo de projeto no **Installed** > **modelos** > **Visual C++**  >  **ATL**.
+    > Nas versões anteriores do Visual Studio, encontre o tipo de projeto em **installed** > **templates** > **Visual C++**  > **ATL**.
 
-1. No **nome** caixa, digite um nome para o projeto e, em seguida, clique em **Okey**.
+1. Na caixa **nome** , insira um nome para o projeto e clique em **OK**.
 
-   O **ATL Project Wizard** é exibida.
+   O **Assistente de projeto do ATL** é exibido.
 
-1. No **ATL Project Wizard**, escolha **biblioteca de vínculo dinâmico (DLL)** para **tipo de aplicativo**.
+1. No **Assistente de projeto do ATL**, escolha biblioteca de **vínculo dinâmico (DLL)** para o **tipo de aplicativo**.
 
-1. Clique em **Finalizar**.
+1. Clique em **Concluir**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Criando um provedor do OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

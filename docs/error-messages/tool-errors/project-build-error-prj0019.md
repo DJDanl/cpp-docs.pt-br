@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0019
 ms.assetid: 5390a62b-aacf-4bc8-b9d7-08f1e0233423
-ms.openlocfilehash: e97d9488df0eeb666cb78354d0363c2a359a159d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3aed7ca5dcf5803305d8765f50430520a5b73d2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359391"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192530"
 ---
 # <a name="project-build-error-prj0019"></a>Erro de Build PRJ0019 no Projeto
 
-Uma ferramenta retornou um código de erro do
+Uma ferramenta retornou um código de erro de
 
 Um nível de erro era diferente de zero para uma etapa de compilação personalizada ou um evento de compilação.
 
-Você também verá prj0019 no quando uma ferramenta retornou um código de erro, mas nenhuma mensagem de erro. Isso pode acontecer, por exemplo, se você redirecionar a saída do MIDL para terminação nula.
+Você também verá PRJ0019 quando uma ferramenta retornou um código de erro, mas nenhuma mensagem de erro. Isso pode acontecer, por exemplo, se você redirecionar a saída de MIDL para NUL.
 
-Ver [solução de problemas de etapas de compilação personalizado e eventos de Build](../../build/troubleshooting-build-customizations.md) para obter mais informações.
+Consulte [Solucionando problemas de etapas de compilação personalizadas e eventos de compilação](../../build/troubleshooting-build-customizations.md) para obter mais informações.
 
-Esse erro também pode ocorrer quando você estiver executando como um membro do grupo de usuários e acesso administrativo é necessária. Para obter mais informações, consulte [em execução como um membro do grupo usuários](../../security/running-as-a-member-of-the-users-group.md).
+Esse erro também pode ocorrer quando você está executando como um membro do grupo usuários e o acesso administrativo é necessário. Para obter mais informações, consulte [executando como um membro do grupo usuários](../../security/running-as-a-member-of-the-users-group.md).

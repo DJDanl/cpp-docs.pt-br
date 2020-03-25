@@ -34,12 +34,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: 00d8164425ada573020971f66312b2282cc72c45
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2b08e0e8f3b5b43f79019c70e3fe32ae9064dee9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441142"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211114"
 ---
 # <a name="csimplerow-class"></a>Classe CSimpleRow
 
@@ -51,22 +51,22 @@ Fornece uma implementação padrão para o identificador de linha, que é usado 
 class CSimpleRow
 ```
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Atldb. h
 
 ## <a name="members"></a>Membros
 
-### <a name="methods"></a>{1&gt;Métodos&lt;1}
+### <a name="methods"></a>Métodos
 
 |||
 |-|-|
 |[AddRefRow](#addrefrow)|Adiciona uma contagem de referência em um identificador de linha existente.|
-|[Compare](#compare)|Compara duas linhas para ver se elas se referem à mesma instância de linha.|
+|[Comparar](#compare)|Compara duas linhas para ver se elas se referem à mesma instância de linha.|
 |[CSimpleRow](#csimplerow)|O construtor.|
 |[ReleaseRow](#releaserow)|Libera linhas.|
 
-### <a name="data-members"></a>Membros de Dados
+### <a name="data-members"></a>Membros de dados
 
 |||
 |-|-|
@@ -77,7 +77,7 @@ class CSimpleRow
 
 Um identificador de linha é logicamente uma marca exclusiva para uma linha de resultado. `IRowsetImpl` cria uma nova `CSimpleRow` para cada linha solicitada em [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` também pode ser substituído por sua própria implementação do identificador de linha, pois é um argumento de modelo padrão para `IRowsetImpl`. O único requisito para substituir essa classe é fazer com que a classe de substituição forneça um construtor que aceite um único parâmetro do tipo **Long**.
 
-## <a name="addrefrow"></a>CSimpleRow::AddRefRow
+## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a>CSimpleRow::AddRefRow
 
 Adiciona uma contagem de referência a um identificador de linha existente de uma maneira thread-safe.
 
@@ -87,7 +87,7 @@ Adiciona uma contagem de referência a um identificador de linha existente de um
 DWORD AddRefRow();
 ```
 
-## <a name="compare"></a>CSimpleRow:: Compare
+## <a name="csimplerowcompare"></a><a name="compare"></a>CSimpleRow:: Compare
 
 Compara duas linhas para ver se elas se referem à mesma instância de linha.
 
@@ -97,7 +97,7 @@ Compara duas linhas para ver se elas se referem à mesma instância de linha.
 HRESULT Compare(CSimpleRow* pRow);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *pRow*<br/>
 Um ponteiro para um objeto `CSimpleRow`.
@@ -106,7 +106,7 @@ Um ponteiro para um objeto `CSimpleRow`.
 
 Um valor HRESULT, geralmente S_OK, indicando que as duas linhas são a mesma instância de linha ou S_FALSE, indicando que as duas linhas são diferentes. Consulte [IRowsetIdentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) na *referência do programador de OLE DB* para outros valores de retorno possíveis.
 
-## <a name="csimplerow"></a>CSimpleRow::CSimpleRow
+## <a name="csimplerowcsimplerow"></a><a name="csimplerow"></a>CSimpleRow::CSimpleRow
 
 O construtor.
 
@@ -116,7 +116,7 @@ O construtor.
 CSimpleRow(DBCOUNTITEM iRowsetCur);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *iRowsetCur*<br/>
 no Índice para o conjunto de linhas atual.
@@ -125,7 +125,7 @@ no Índice para o conjunto de linhas atual.
 
 Define [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) como *iRowsetCur*.
 
-## <a name="releaserow"></a>CSimpleRow::ReleaseRow
+## <a name="csimplerowreleaserow"></a><a name="releaserow"></a>CSimpleRow::ReleaseRow
 
 Libera linhas de uma maneira thread-safe.
 
@@ -135,7 +135,7 @@ Libera linhas de uma maneira thread-safe.
 DWORD ReleaseRow();
 ```
 
-## <a name="dwref"></a>CSimpleRow:: m_dwRef
+## <a name="csimplerowm_dwref"></a><a name="dwref"></a>CSimpleRow:: m_dwRef
 
 Contagem de referência para um identificador de linha existente.
 
@@ -145,7 +145,7 @@ Contagem de referência para um identificador de linha existente.
 DWORD m_dwRef;
 ```
 
-## <a name="irowset"></a>CSimpleRow:: m_iRowset
+## <a name="csimplerowm_irowset"></a><a name="irowset"></a>CSimpleRow:: m_iRowset
 
 Índice para o conjunto de linhas que representa o cursor.
 
@@ -155,7 +155,7 @@ DWORD m_dwRef;
 KeyType m_iRowset;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

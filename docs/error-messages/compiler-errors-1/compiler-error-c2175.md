@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2175
 ms.assetid: 3a8fa90b-2b29-414a-bb55-cf27c2bf989a
-ms.openlocfilehash: 4c4af877d771d4e45c9336f1eb4a29fd45fa79fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7d045accae170f4f7f17835ff535a044ff91219
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175465"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206915"
 ---
 # <a name="compiler-error-c2175"></a>Erro do compilador C2175
 
-'local': localidade inválida
+' locale ': localidade inválida
 
-A localidade especificada não é válida. Ver [cadeias de caracteres de país/região e idioma](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) na *referência de biblioteca de tempo de execução* para localidades com suporte.
+A localidade especificada não é válida. Consulte [cadeias de caracteres de idioma e país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) na *referência da biblioteca de tempo de execução* para localidades com suporte.

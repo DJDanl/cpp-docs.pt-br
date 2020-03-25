@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::Swap
 ms.assetid: ed134a08-ceb7-4279-aa02-a183c3a426ea
-ms.openlocfilehash: 97d24f1f4453e948c621651e029254db1b0de712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e665dbca025da56ba81c3fdf1749b2d653b78c00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398141"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213558"
 ---
 # <a name="swap-function-wrl"></a>Função swap (WRL)
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+O oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,7 +25,7 @@ WRL_NOTHROW inline void Swap(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *left*<br/>
 O primeiro argumento.
@@ -33,7 +33,7 @@ O primeiro argumento.
 *right*<br/>
 O segundo argumento.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 ## <a name="remarks"></a>Comentários
 
@@ -41,10 +41,10 @@ Troca os valores dos dois argumentos especificados.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** internal.h
+**Cabeçalho:** Internal. h
 
-**Namespace:** Microsoft::WRL::Details
+**Namespace:** Microsoft:: WRL::D etalhes
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)

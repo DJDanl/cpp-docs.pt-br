@@ -9,16 +9,16 @@ helpviewer_keywords:
 - do keyword [C++]
 - while keyword [C++], do-while
 ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
-ms.openlocfilehash: d930c1884975288ff11f4d4e5cf2728e717e17d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f52c065210a8861dc065508248a506770b039b1d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392252"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189267"
 ---
 # <a name="do-while-statement-c"></a>Instrução do-while (C++)
 
-Executa um *instrução* repetidamente até que a condição de término especificada (o *expressão*) é avaliada como zero.
+Executa uma *instrução* repetidamente até que a condição de término especificada (a *expressão*) seja avaliada como zero.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,7 +30,7 @@ while ( expression ) ;
 
 ## <a name="remarks"></a>Comentários
 
-O teste da condição de término é realizado após cada execução do loop; Portanto, uma **fazer-enquanto** loop é executado uma ou mais vezes, dependendo do valor da expressão de término. A instrução **do-while** também pode terminar quando uma instrução [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) ou [return](../cpp/return-statement-cpp.md) é executada no corpo da instrução.
+O teste da condição de encerramento é feito após cada execução do loop; Portanto, um loop **do-while** executa uma ou mais vezes, dependendo do valor da expressão de encerramento. A instrução **do-while** também pode terminar quando uma instrução [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) ou [return](../cpp/return-statement-cpp.md) é executada no corpo da instrução.
 
 A *expressão* deve ter o tipo aritmético ou ponteiro. A execução procede da seguinte maneira:
 
@@ -40,7 +40,7 @@ A *expressão* deve ter o tipo aritmético ou ponteiro. A execução procede da 
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra a **fazer-enquanto** instrução:
+O exemplo a seguir demonstra a instrução **do-while** :
 
 ```cpp
 // do_while_statement.cpp
@@ -55,7 +55,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instruções de iteração](../cpp/iteration-statements-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>

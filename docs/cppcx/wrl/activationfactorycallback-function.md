@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActivationFactoryCallback function
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
-ms.openlocfilehash: 4743e7724c5aba4171cb017654267afaac676f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0be4bebcc561cdf1df3f2502c8cc1927bdc65564
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303871"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214208"
 ---
 # <a name="activationfactorycallback-function"></a>Função ActivationFactoryCallback
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+O oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,30 +27,30 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*activationId*<br/>
+*ActivationID*<br/>
 Identificador para uma cadeia de caracteres que especifica um nome de classe de tempo de execução.
 
 *ppFactory*<br/>
-Quando essa operação for concluída, um alocador de ativação que corresponde ao parâmetro *activationId*.
+Quando essa operação for concluída, uma fábrica de ativação que corresponde ao parâmetro *ActivationID*.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha. HRESULTs de falha provavelmente são CLASS_E_CLASSNOTAVAILABLE e E_INVALIDARG.
+S_OK se for bem-sucedido; caso contrário, um HRESULT que descreve a falha. Prováveis HRESULTs de falha são CLASS_E_CLASSNOTAVAILABLE e E_INVALIDARG.
 
 ## <a name="remarks"></a>Comentários
 
-Obtém o alocador de ativação para a ID de ativação especificado.
+Obtém o alocador de ativação para a ID de ativação especificada.
 
-O tempo de execução do Windows chama essa função de retorno de chamada para solicitar um objeto especificado pelo seu nome de classe de tempo de execução.
+O Windows Runtime chama essa função de retorno de chamada para solicitar um objeto especificado por seu nome de classe de tempo de execução.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** module.h
+**Cabeçalho:** Module. h
 
-**Namespace:** Microsoft::WRL::Details
+**Namespace:** Microsoft:: WRL::D etalhes
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)

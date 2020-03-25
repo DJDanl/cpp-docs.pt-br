@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0007
 ms.assetid: d923948b-acc9-498f-bf3b-f14e41bed61a
-ms.openlocfilehash: 83cb02f4d9d5232eda45b3bdbb591dd819fa12d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96d1b5655fc2c3f78efc04e1dc11c45f7b4ccee9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359586"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192972"
 ---
 # <a name="project-build-error-prj0007"></a>Erro PRJ0007 (compilação de projeto)
 
-Não foi possível criar o diretório de saída 'diretório'.
+Não foi possível criar o diretório de saída ' Directory '.
 
-Visual C++ Falha ao criar um diretório de saída. Os motivos possíveis incluem:
+Falha C++ visual ao criar um diretório de saída. Possíveis razões:
 
-- O diretório no qual o diretório de saída foi a ser criado é somente leitura.
+- O diretório no qual o diretório de saída deve ser criado é somente leitura.
 
-- Computador está sem espaço em disco.
+- O computador está sem espaço em disco.
 
 - Você especificou um caminho de diretório inválido.
 
-- Permissões de usuário não são suficientes para criar o diretório.
+- As permissões de usuário não são suficientes para criar o diretório.

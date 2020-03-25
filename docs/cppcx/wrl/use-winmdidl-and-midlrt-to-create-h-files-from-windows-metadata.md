@@ -3,12 +3,12 @@ title: Como usar winmdidl.exe e midlrt.exe para criar arquivos .h a partir de me
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: 3aa7cd28a37ec7187cc3c87927a83e45eeda2a4e
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: bceb4aff22f6ebba9c8705b3b5a55d0478f244c9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75791664"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213532"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Como usar winmdidl.exe e midlrt.exe para criar arquivos .h a partir de metadados do Windows
 
@@ -44,7 +44,7 @@ Exibe o tempo de execução total na saída do console.
 **/OutDir:** <em>dir</em><br/>
 Especifica um diretório de saída. Se o caminho contiver espaços, use aspas. O diretório de saída padrão é *\<unidade >* : \users\\ *\<nome de usuário >* arquivos \AppData\Local\VirtualStore\Program (x86) \microsoft Visual Studio 12,0\\.
 
-**/banner:** <em>file</em><br/>
+**/Banner:** <em>arquivo</em><br/>
 Especifica um arquivo que contém texto personalizado para preceder a mensagem de direitos autorais padrão e o número de versão winmdidl na parte superior do arquivo. idl gerado. Se o caminho contiver espaços, use aspas.
 
 **/utf8**<br/>

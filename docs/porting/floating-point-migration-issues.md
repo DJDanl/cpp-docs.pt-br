@@ -2,12 +2,12 @@
 title: Problemas de migração de ponto flutuante
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: 0a84b764d395063f38cae299cff75437318b024e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 40eb08e4f9c7058d6b11700535e1c25f86548a22
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626986"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215014"
 ---
 # <a name="floating-point-migration-issues"></a>Problemas de migração de ponto flutuante
 
@@ -29,7 +29,7 @@ Melhorias de correção de geração de código em diferentes modos de ponto flu
 
 Na maioria dos casos, as alterações de ponto flutuante nas bibliotecas e nos compiladores mais novos resultam em um comportamento mais rápido ou mais correto, ou ambos. Você poderá até mesmo observar um melhor desempenho de energia do processador quando as instruções SSE2 substituem as instruções x87. No entanto, se você tiver um código que deve replicar com precisão o comportamento de ponto flutuante de um compilador mais antigo, considere o uso das funcionalidades de multiplataforma nativa do Visual Studio e compile o projeto afetado com o conjunto de ferramentas mais antigo. Para obter mais informações, consulte [Usar a multiplataforma nativa no Visual Studio para compilar projetos antigos](use-native-multi-targeting.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atualizando projetos de versões anteriores do VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visão geral de possíveis problemas de atualização (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>

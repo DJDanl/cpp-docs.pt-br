@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2434
 ms.assetid: 01329e26-7c74-4219-b74f-69e3a40c9738
-ms.openlocfilehash: c73a8d4fcde945ddf2495cc2d0d7dc47216f2db3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 869db3b49075fa477860e045e59306e22a381ca4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166328"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205451"
 ---
 # <a name="compiler-error-c2434"></a>Erro do compilador C2434
 
-> '*símbolo*': um símbolo declarado com __declspec(process) não pode ser inicializado dinamicamente em /clr: pure modo
+> '*Symbol*': um símbolo declarado com __declspec (Process) não pode ser inicializado dinamicamente no modo/CLR: Pure
 
 ## <a name="remarks"></a>Comentários
 
-O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+As opções de compilador **/CLR: Pure** e **/CLR: safe** são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-Não é possível inicializar dinamicamente uma variável per-process sob **/clr: pure**. Para obter mais informações, consulte [/clr (compilação de tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md) e [processo](../../cpp/process.md).
+Não é possível inicializar dinamicamente uma variável por processo em **/CLR: Pure**. Para obter mais informações, consulte [/CLR (compilação em tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md) e [processo](../../cpp/process.md).
 
 ## <a name="example"></a>Exemplo
 

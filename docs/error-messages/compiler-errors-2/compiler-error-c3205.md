@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3205
 ms.assetid: 802d306e-5ff3-4491-8a22-c5f1c072d005
-ms.openlocfilehash: bd4d17ff2b6a0197db730a53c5846806335c9fd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7cb38a687daed93f72655337cd7cd3f25aaa08d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402691"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176423"
 ---
 # <a name="compiler-error-c3205"></a>Erro do compilador C3205
 
-lista de argumentos para o parâmetro de modelo 'parameter' está ausente
+a lista de argumentos para o parâmetro de modelo ' Parameter ' está ausente
 
-Um [modelo](../../cpp/templates-cpp.md) parâmetro está ausente.
+Um parâmetro de [modelo](../../cpp/templates-cpp.md) está ausente.
 
 ## <a name="example"></a>Exemplo
 

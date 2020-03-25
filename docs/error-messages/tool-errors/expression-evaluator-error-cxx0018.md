@@ -7,35 +7,35 @@ helpviewer_keywords:
 - CAN0018
 - CXX0018
 ms.assetid: d3d115d6-8981-4651-b615-566de867a263
-ms.openlocfilehash: 1c235e27199d79711c784e460824bf1cbb845f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a894de22b0296a6a7ce9c52d2cbebfed057df92a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397114"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195910"
 ---
 # <a name="expression-evaluator-error-cxx0018"></a>Erro CXX0018 (avaliador de expressão)
 
-nome de registro inválido
+nome de registro inadequado
 
 Um registro especificado não existe ou não pode ser exibido.
 
-A janela de inspeção pode exibir os seguintes registros:
+O janela Inspeção pode exibir os seguintes registros:
 
-AX    SP    DS    IP
+IP DO AX SP DS
 
-BX    BP    ES    FL
+BX
 
-CX    SI    SS    GS
+CX SI SS GS
 
-DX    DI    CS    SS
+INJEÇÃO DE CS DO DX SS
 
-EAX    ESP    DS    EIP
+EIP DE DS DE ESP DO EAX
 
 EBX    EBP    ES    EFL
 
 ECX    ESI    FS
 
-EDX    EDI    CS
+EDX EDI CS
 
-Esse erro é idêntico ao CAN0018.
+Esse erro é idêntico a CAN0018.

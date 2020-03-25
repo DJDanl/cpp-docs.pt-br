@@ -9,16 +9,16 @@ helpviewer_keywords:
 - scope resolution operator
 - ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
-ms.openlocfilehash: e601bed976009a72a43545d8d38a38d75e93a137
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07c2884ed0ba114c22a0c71bbaf7268d6f6931a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267356"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178880"
 ---
 # <a name="scope-resolution-operator-"></a>Operador de resolução do escopo: ::
 
-O operador de resolução de escopo **::** é usado para identificar e resolver a ambiguidade de identificadores usados em escopos diferentes. Para obter mais informações sobre escopo, consulte [escopo](../cpp/scope-visual-cpp.md).
+O operador de resolução de escopo **::** é usado para identificar e desambiguar identificadores usados em escopos diferentes. Para obter mais informações sobre escopo, consulte [escopo](../cpp/scope-visual-cpp.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -150,7 +150,7 @@ int main() {
 
 ## <a name="with-scoped-enumerations"></a>Com enumerações de escopo
 
-O operador de resolução do escopo também é usado com os valores de uma enumeração com escopo [declarações de enumeração](../cpp/enumerations-cpp.md), conforme mostrado no exemplo a seguir:
+O operador de resolução com escopo também é usado com os valores de [declarações de enumeração](../cpp/enumerations-cpp.md)de enumeração com escopo definido, como no exemplo a seguir:
 
 ```cpp
 enum class EnumA{
@@ -164,7 +164,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Namespaces](../cpp/namespaces-cpp.md)
