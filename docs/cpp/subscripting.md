@@ -9,20 +9,20 @@ helpviewer_keywords:
 - operator overloading [C++], examples
 - subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
-ms.openlocfilehash: 376cacc3f70995c271a29b741ad266049da45785
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8974f6619af462050fc8a02798fe44007ea928e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330540"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160886"
 ---
 # <a name="subscripting"></a>Subscrito
 
-O operador subscrito (**[]**), como o operador de chamada de função, é considerado um operador binário. O operador subscrito deve ser uma função de membro não estático que usa um único argumento. Este argumento ou pode ser de qualquer tipo e designa o subscrito de matriz desejado.
+O operador de subscrito ( **[]** ), como o operador de chamada de função, é considerado um operador binário. O operador subscrito deve ser uma função de membro não estático que usa um único argumento. Este argumento ou pode ser de qualquer tipo e designa o subscrito de matriz desejado.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como criar um vetor de tipo **int** que implementa a verificação de limites:
+O exemplo a seguir demonstra como criar um vetor do tipo **int** que implementa a verificação de limites:
 
 ```cpp
 // subscripting.cpp
@@ -91,10 +91,10 @@ Element: [10] = 10
 
 ## <a name="comments"></a>Comentários
 
-Quando `i` atinge 10 no programa anterior, **operator []** detecta que um Subscrito fora dos limites está sendo usado e emite uma mensagem de erro.
+Quando `i` atinge 10 no programa anterior, **Operator []** detecta que um subscrito fora dos limites está sendo usado e emite uma mensagem de erro.
 
-Observe que a função **operator []** retorna um tipo de referência. Isso a torna um l-value, permitindo usar as expressões subscritas em ambos os lados dos operadores de atribuição.
+Observe que o **operador function []** retorna um tipo de referência. Isso a torna um l-value, permitindo usar as expressões subscritas em ambos os lados dos operadores de atribuição.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Sobrecarga de Operador](../cpp/operator-overloading.md)

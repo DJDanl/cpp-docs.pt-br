@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - D9024
 ms.assetid: daf4896d-223d-4af0-9b6d-89109cf3d1bb
-ms.openlocfilehash: c577aceacef748045f867a6bc253a1dd6c84aafe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5de051b9ca5c09af74b94be4b75616bce6fadf2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214149"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196754"
 ---
 # <a name="command-line-warning-d9024"></a>Aviso D9024 (linha de comando)
 
-código-fonte não reconhecido 'filename' tipo de arquivo, supõe-se do arquivo de objeto
+tipo de arquivo de origem não reconhecido ' FileName ', arquivo de objeto assumido
 
 A extensão do arquivo especificado não foi reconhecida. O arquivo foi considerado como um arquivo de objeto e foi passado para o vinculador.
 
 As seguintes extensões são reconhecidas:
 
-- . c (arquivo de origem de C)
+- . c (arquivo de origem C)
 
-- . cxx (arquivo de origem do C++)
+- . cxx (C++ arquivo de origem)
 
-- . cpp (arquivo de origem do C++)
+- . cpp (C++ arquivo de origem)
 
 - . obj (arquivo de objeto)
 
@@ -33,4 +33,4 @@ As seguintes extensões são reconhecidas:
 
 - . def (arquivo de definição de módulo)
 
-- . EXP (vinculador exporta o arquivo, criado pelo LINK /LIB)
+- . exp (arquivo de exportação do vinculador, criado pelo LINK/LIB)

@@ -1,5 +1,5 @@
 ---
-title: 'Operador AND lógico: &amp;&amp;'
+title: 'Operador lógico AND: &amp;&amp;'
 ms.date: 11/04/2016
 f1_keywords:
 - '&&'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - AND operator
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
-ms.openlocfilehash: 0843ba95467c3ae0d735476de48a8195a59788f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b21d91009c455b67af6fae88fceafeeaf8043301
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368650"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179426"
 ---
-# <a name="logical-and-operator-ampamp"></a>Operador AND lógico: &amp;&amp;
+# <a name="logical-and-operator-ampamp"></a>Operador lógico AND: &amp;&amp;
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,7 +25,7 @@ expression && expression
 
 ## <a name="remarks"></a>Comentários
 
-O operador AND lógico (**&&**) retorna um valor booliano TRUE se ambos os operandos forem TRUE e retornará FALSE caso contrário. Os operandos são implicitamente convertidos para o tipo **bool** antes da avaliação e o resultado é do tipo **bool**. O AND lógico tem associatividade da esquerda para a direita.
+O operador AND lógico ( **&&** ) retornará o valor booliano true se ambos os operandos forem true e retornará false caso contrário. Os operandos são convertidos implicitamente no tipo **bool** antes da avaliação, e o resultado é do tipo **bool**. O AND lógico tem associatividade da esquerda para a direita.
 
 Os operandos para o operador AND lógico não precisam ser do mesmo tipo, mas devem ser de tipo integral ou ponteiro. Os operandos são geralmente expressões relacionais ou de igualdade.
 
@@ -41,9 +41,9 @@ char *pch = 0;
 
 Se `pch` for nulo (0), o lado direito da expressão nunca será avaliado. Portanto, a atribuição por meio de um ponteiro nulo é impossível.
 
-## <a name="operator-keyword-for-"></a>Palavra-chave de operador para & &
+## <a name="operator-keyword-for-"></a>Palavra-chave Operator para & &
 
-O **e** operador é o equivalente de texto de **&&**. Há duas maneiras para acessar o **e** operador em seus programas: incluir o arquivo de cabeçalho `iso646.h`, ou compilando com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção do compilador (desabilitar extensões de linguagem).
+O operador **and** é o texto equivalente de **&&** . Há duas maneiras de acessar o operador **and** em seus programas: inclua o arquivo de cabeçalho `iso646.h`ou compile com a opção de compilador [/za](../build/reference/za-ze-disable-language-extensions.md) (desabilitar extensões de linguagem).
 
 ## <a name="example"></a>Exemplo
 
@@ -67,8 +67,8 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Operadores C++ internos precedência e associatividade](cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++Precedência e Associação de operadores internos](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operadores lógicos C](../c-language/c-logical-operators.md)

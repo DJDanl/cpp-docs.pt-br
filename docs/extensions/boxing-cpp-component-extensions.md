@@ -5,20 +5,20 @@ ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 6221087b60e76e3a2648366c4efebc4105f0ab58
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 709754e8609406f635444937af93488060167ba9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311738"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172601"
 ---
 # <a name="boxing--ccli-and-ccx"></a>Conversão boxing (C++/CLI e C++/CX)
 
 A conversão de tipos de valor em objetos é chamada de *boxing*, e a conversão de objetos em tipos de valor é chamada de *unboxing*.
 
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
+## <a name="all-runtimes"></a>Todos os Runtimes
 
-(Não há comentários para esse recurso de linguagem que se apliquem a todos os tempos de execução.)
+(Não há comentários para esse recurso de linguagem que se apliquem a todos os runtimes.)
 
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
 
@@ -82,11 +82,11 @@ Operações de boxing e unboxing permitem que tipos de valor sejam tratados como
 
 Para obter mais informações, consulte:
 
-- [Como: solicitar explicitamente uma conversão boxing](../dotnet/how-to-explicitly-request-boxing.md)
+- [Como solicitar uma conversão boxing explicitamente](../dotnet/how-to-explicitly-request-boxing.md)
 
-- [Como: usar gcnew para criar tipos de valor e usar conversão boxing implícita](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
+- [Como usar gcnew para criar tipos de valor e usar conversão boxing implícita](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
 
-- [Como: realizar uma operação de unbox](../dotnet/how-to-unbox.md)
+- [Como reverter uma conversão boxing](../dotnet/how-to-unbox.md)
 
 - [Conversões padrão e conversão boxing implícita](../dotnet/standard-conversions-and-implicit-boxing.md)
 
@@ -188,6 +188,6 @@ in func2(System::ValueType^)
 in func2(System::ValueType^)
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

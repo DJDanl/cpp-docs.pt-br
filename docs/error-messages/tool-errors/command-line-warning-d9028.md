@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - D9028
 ms.assetid: 03852b51-fa59-4114-ab1f-2af0509119af
-ms.openlocfilehash: 007c0a9e9a0f51740b1d6b668905fa20d7ef2964
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e65881159176ba0d144a8abc5f395ce1b96402f0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214045"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196645"
 ---
 # <a name="command-line-warning-d9028"></a>Aviso D9028 (linha de comando)
 
-> Falha na recompilação mínima, revertendo para compilação normal
+> falha mínima de reconstrução, revertendo para compilação normal
 
-O arquivo. IDB do projeto está corrompido. Exclua o arquivo e recompile.
+O arquivo Project. idb está corrompido. Exclua o arquivo e recompile.
 
-Para obter mais informações sobre as recompilações mínimo e o arquivo. IDB, consulte preteridas [opção de compilador /Gm](../../build/reference/gm-enable-minimal-rebuild.md).
+Para obter mais informações sobre recompilações mínimas e o arquivo. idb, consulte a [opção de compilador/GM](../../build/reference/gm-enable-minimal-rebuild.md)preterida.

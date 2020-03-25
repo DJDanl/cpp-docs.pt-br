@@ -19,12 +19,12 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-ms.openlocfilehash: 31ed5f7a17b9b45dbbecf5ccb29d2b51a7635eaa
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 03f7f6f5a1a2842ad7fb0ba2715fada130277e70
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245136"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187980"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>Instruções try, throw e catch (C++)
 
@@ -74,7 +74,7 @@ MyData GetNetworkResource()
 
 ## <a name="remarks"></a>Comentários
 
-O código após a cláusula **try** é a seção de código protegida. A expressão throw *gera*— ou seja, gera — uma exceção. O bloco de código após a cláusula **Catch** é o manipulador de exceção. Esse é o manipulador que *captura* a exceção que é gerada se os tipos nas expressões **throw** e **Catch** forem compatíveis. Para obter uma lista de regras que regem a correspondência de tipos em blocos **Catch** , consulte [como os blocos catch são avaliados](../cpp/how-catch-blocks-are-evaluated-cpp.md). Se a instrução **Catch** especificar uma elipse (...) em vez de um tipo, o bloco **Catch** tratará de cada tipo de exceção. Quando você compila com a opção [/EHA](../build/reference/eh-exception-handling-model.md) , elas podem incluir exceções estruturadas C e exceções assíncronas geradas pelo sistema ou pelo aplicativo, como proteção de memória, divisão por zero e violações de ponto flutuante. Como os blocos **Catch** são processados em ordem de programa para localizar um tipo correspondente, um manipulador de reticências deve ser o último manipulador para o bloco **try** associado. Use `catch(...)` com cuidado; não permita que um programa continue a menos que o bloco catch saiba tratar a exceção específica que será capturada. Normalmente, um bloco `catch(...)` é usado para registrar erros e executar a limpeza especial antes de execução do programa ser interrompida.
+O código após a cláusula **try** é a seção de código protegida. A **throw** expressão throw *gera*— ou seja, gera — uma exceção. O bloco de código após a cláusula **Catch** é o manipulador de exceção. Esse é o manipulador que *captura* a exceção que é gerada se os tipos nas expressões **throw** e **Catch** forem compatíveis. Para obter uma lista de regras que regem a correspondência de tipos em blocos **Catch** , consulte [como os blocos catch são avaliados](../cpp/how-catch-blocks-are-evaluated-cpp.md). Se a instrução **Catch** especificar uma elipse (...) em vez de um tipo, o bloco **Catch** tratará de cada tipo de exceção. Quando você compila com a opção [/EHA](../build/reference/eh-exception-handling-model.md) , elas podem incluir exceções estruturadas C e exceções assíncronas geradas pelo sistema ou pelo aplicativo, como proteção de memória, divisão por zero e violações de ponto flutuante. Como os blocos **Catch** são processados em ordem de programa para localizar um tipo correspondente, um manipulador de reticências deve ser o último manipulador para o bloco **try** associado. Use `catch(...)` com cuidado; não permita que um programa continue a menos que o bloco catch saiba tratar a exceção específica que será capturada. Normalmente, um bloco `catch(...)` é usado para registrar erros e executar a limpeza especial antes de execução do programa ser interrompida.
 
 Uma expressão **throw** que não tem nenhum operando gera novamente a exceção que está sendo manipulada no momento. Recomendamos essa forma ao lançar novamente a exceção, pois isso preserva as informações de tipo polimórfico da exceção original. Essa expressão deve ser usada apenas em um manipulador **Catch** ou em uma função que é chamada a partir de um manipulador **Catch** . O objeto de exceção lançado novamente é o objeto da exceção original, não uma cópia.
 
@@ -91,7 +91,7 @@ catch(...) {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Práticas C++ recomendadas modernas para exceções e tratamento de erros](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>

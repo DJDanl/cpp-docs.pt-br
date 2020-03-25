@@ -1,5 +1,5 @@
 ---
-title: 'Um&#39;s operador de complemento individual: ~'
+title: 'Operador&#39;de complemento One s: ~'
 ms.date: 11/04/2016
 f1_keywords:
 - "~"
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - compl operator
 - ~ operator [C++], syntax
 ms.assetid: 4bf81967-34f7-4b4b-aade-fd03d5da0174
-ms.openlocfilehash: d8fb8ca56932669ff85646f2aa0c10691122013b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 777f253925caf38647863bdaa93fde8d5a03e3f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245008"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177710"
 ---
-# <a name="one39s-complement-operator-"></a>Um&#39;s operador de complemento individual: ~
+# <a name="one39s-complement-operator-"></a>Operador&#39;de complemento One s: ~
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,7 +31,7 @@ O operador de complemento de um (`~`), às vezes chamado de operador de “compl
 
 ## <a name="operator-keyword-for-"></a>Palavra-chave do operador para ~
 
-O **compl** operador é o equivalente de texto de `~`. Há duas maneiras para acessar o **compl** operador em seus programas: incluir o arquivo de cabeçalho `iso646.h`, ou compilando com [/Za](../build/reference/za-ze-disable-language-extensions.md).
+O operador **Compal** é o texto equivalente de `~`. Há duas maneiras de acessar o operador **Compal** em seus programas: inclua o arquivo de cabeçalho `iso646.h`ou compile com [/za](../build/reference/za-ze-disable-language-extensions.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -52,9 +52,9 @@ int main () {
 
 Nesse exemplo, o novo valor atribuído a `y` é o complemento de um do valor sem sinal 0xFFFF, ou 0x0000.
 
-A promoção de integral é executada em operandos integrais, e o tipo resultante é o tipo para o qual o operando é promovido. Ver [conversões padrão](standard-conversions.md) para obter mais informações sobre como a promoção é feita.
+A promoção de integral é executada em operandos integrais, e o tipo resultante é o tipo para o qual o operando é promovido. Consulte [conversões padrão](standard-conversions.md) para obter mais informações sobre como a promoção é feita.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Expressões com operadores unários](../cpp/expressions-with-unary-operators.md)<br/>
 [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

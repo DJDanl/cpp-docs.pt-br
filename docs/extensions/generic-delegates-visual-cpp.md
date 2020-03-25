@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 449659126f52997d548ebd7785a78c1200038ee6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 4c579d0c0ab39a2ddcadfd116bdfed8ba9da2863
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515761"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182026"
 ---
 # <a name="generic-delegates-ccli"></a>Delegados Genéricos (C++/CLI)
 
@@ -27,9 +27,9 @@ generic < [class | typename] type-parameter-identifiers>
 ([formal-parameters]);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*attributes*<br/>
+*atributos*<br/>
 (Opcional) Informações declarativas adicionais. Saiba mais sobre atributos e classes de atributos em Atributos.
 
 *type-parameter-identifier(s)*<br/>
@@ -162,6 +162,6 @@ Invoking the integer delegate: i = 123, j = 123
 Invoking the double delegate: m = 0.123, n = 0.123
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Genéricos](generics-cpp-component-extensions.md)

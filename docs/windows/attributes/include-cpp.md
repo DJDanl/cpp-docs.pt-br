@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: ece88ebd7b5d9d81beb871427b58a72b2cf02022
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 39f991bb036dce1c50a9d2ee800d3fec65af7c55
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514553"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166777"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -23,20 +23,20 @@ Especifica um ou mais arquivos de cabeçalho a serem incluídos no arquivo. idl 
 [ include(header_file) ];
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *header_file*<br/>
 O nome de um arquivo que você deseja incluir no arquivo. idl gerado.
 
 ## <a name="remarks"></a>Comentários
 
-O atributo **include** C++ faz com `#include` que uma instrução seja colocada abaixo `import "docobj.idl"` da instrução no arquivo. idl gerado.
+O atributo **include** C++ faz com que uma instrução `#include` seja colocada abaixo da instrução `import "docobj.idl"` no arquivo. idl gerado.
 
 O atributo **include** C++ tem a mesma funcionalidade que o atributo MIDL [include](/windows/win32/Midl/include) .
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra um exemplo de como usar **include**. Para este exemplo, o arquivo include. h contém apenas uma `#include` instrução.
+O código a seguir mostra um exemplo de como usar **include**. Para este exemplo, o arquivo include. h contém apenas uma instrução `#include`.
 
 ```cpp
 // cpp_attr_ref_include.cpp
@@ -56,9 +56,9 @@ O código a seguir mostra um exemplo de como usar **include**. Para este exemplo
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos independentes](stand-alone-attributes.md)<br/>

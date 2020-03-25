@@ -6,16 +6,16 @@ helpviewer_keywords:
 - null statement
 - null values, expressions
 ms.assetid: 606f5953-55f0-40c8-ae03-3ee3a819b851
-ms.openlocfilehash: 2797937b184bebe0e29f8e5eae428f601c824811
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 167a1e579c15fd59da1979efd9aa979184318115
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245174"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177801"
 ---
 # <a name="null-statement"></a>Instrução nula
 
-A "instrução nula" é uma instrução de expressão com o *expressão* ausente. É útil quando a sintaxe da linguagem pede por uma instrução, mas nenhuma avaliação de expressão. Consiste em um ponto e vírgula.
+A "instrução NULL" é uma instrução de expressão com a *expressão* ausente. É útil quando a sintaxe da linguagem pede por uma instrução, mas nenhuma avaliação de expressão. Consiste em um ponto e vírgula.
 
 Em geral, as instruções nulas são usadas como espaços reservados em instruções de iteração ou como instruções nas quais são colocados rótulos no final de instruções ou funções compostas.
 
@@ -41,6 +41,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instrução de expressão](../cpp/expression-statement.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
-ms.openlocfilehash: 7dbe4381465036bdd102b3be753a18451886a3d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 789bb879922bbd96a04085159205d02fb7f495c8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166250"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160678"
 ---
 # <a name="typename"></a>typename
 
-Em definições de modelo fornece uma dica ao compilador que um identificador desconhecido é um tipo. Listas de parâmetros de modelo, é usado para especificar um parâmetro de tipo.
+Em definições de modelo, fornece uma dica ao compilador de que um identificador desconhecido é um tipo. Em listas de parâmetros de modelo, é usado para especificar um parâmetro de tipo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,7 +25,7 @@ typename identifier;
 
 ## <a name="remarks"></a>Comentários
 
-Essa palavra-chave deve ser usado se um nome de uma definição de modelo é um nome qualificado que é dependente de um argumento de modelo; é opcional se o nome qualificado não é dependente. Para obter mais informações, consulte [modelos e resolução de nome](../cpp/templates-and-name-resolution.md).
+Essa palavra-chave deve ser usada se um nome em uma definição de modelo for um nome qualificado que dependa de um argumento de modelo; é opcional se o nome qualificado não for dependente. Para obter mais informações, consulte [modelos e resolução de nomes](../cpp/templates-and-name-resolution.md).
 
 **TypeName** pode ser usado por qualquer tipo em qualquer lugar em uma definição ou declaração de modelo. Não é permitido na lista de classes base, a menos que como um argumento de modelo para uma classe base de modelo.
 
@@ -38,7 +38,7 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};
 ```
 
-O **typename** palavra-chave também pode ser usado no lugar de **classe** em listas de parâmetros de modelo. Por exemplo, as instruções a seguir são semanticamente equivalentes:
+A palavra-chave **TypeName** também pode ser usada no lugar da **classe** em listas de parâmetros de modelo. Por exemplo, as instruções a seguir são semanticamente equivalentes:
 
 ```cpp
 template<class T1, class T2>...
@@ -59,7 +59,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos](../cpp/templates-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

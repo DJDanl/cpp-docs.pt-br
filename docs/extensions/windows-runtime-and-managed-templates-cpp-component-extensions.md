@@ -5,18 +5,18 @@ ms.topic: reference
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-ms.openlocfilehash: a8cc429763d042ba262d5543f4a2d85bbf8aa29a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce30133d9a2d1ce5a6e446093a617f3a108055c4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515961"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171821"
 ---
 # <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows Runtime e modelos gerenciados (C++/CLI e C++/CX)
 
 Os modelos possibilitam definir um protótipo de um tipo do Windows Runtime ou do Common Language Runtime e, em seguida, criar instâncias de variações desse tipo usando parâmetros de tipo de modelo diferentes.
 
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
+## <a name="all-runtimes"></a>Todos os Runtimes
 
 Você pode criar modelos a partir de valores ou tipos de referência.  Saiba mais sobre como criar tipos de valor ou de referência em [Classes e structs](classes-and-structs-cpp-component-extensions.md).
 
@@ -40,7 +40,7 @@ Opção do compilador: `/clr`
 
 ### <a name="examples"></a>Exemplos
 
-É possível criar uma instância de um tipo genérico com um parâmetro de modelo de tipo gerenciado, mas não é possível criar uma instância de um modelo gerenciado com um parâmetro de modelo de tipo genérico. Isso ocorre porque os tipos genéricos são resolvidos no tempo de execução. Saiba mais em [Genéricos e modelos (C++/CLI)](generics-and-templates-visual-cpp.md).
+É possível criar uma instância de um tipo genérico com um parâmetro de modelo de tipo gerenciado, mas não é possível criar uma instância de um modelo gerenciado com um parâmetro de modelo de tipo genérico. Isso ocorre porque os tipos genéricos são resolvidos no runtime. Saiba mais em [Genéricos e modelos (C++/CLI)](generics-and-templates-visual-cpp.md).
 
 ```cpp
 // managed_templates.cpp
@@ -130,6 +130,6 @@ template <>
 class A <int> {};
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

@@ -1,22 +1,22 @@
 ---
-title: Compilador aviso (nível 1) C4402
+title: Aviso do compilador (nível 1) C4402
 ms.date: 11/04/2016
 f1_keywords:
 - C4402
 helpviewer_keywords:
 - C4402
 ms.assetid: 2aaecfae-1e79-4787-87e8-0973f7ec0efe
-ms.openlocfilehash: 8d76c108213776d8502ce9152433df22cf6925c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b55568c42f2389f880357ab1ba72b68e6b40ee6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182413"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162602"
 ---
-# <a name="compiler-warning-level-1-c4402"></a>Compilador aviso (nível 1) C4402
+# <a name="compiler-warning-level-1-c4402"></a>Aviso do compilador (nível 1) C4402
 
-deve usar operador PTR
+deve usar o operador PTR
 
-Um tipo é usado em um operando sem um operador PTR quando referindo-se a ou de conversão para um tipo no código de assembly embutido.
+Um tipo é usado em um operando sem um operador PTR ao se referir a um tipo em código de assembly embutido.
 
-O compilador pressupõe que o operador PTR.
+O compilador assume o operador PTR.

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4962
 ms.assetid: 62b156fe-04e5-4a6e-9339-6ab148185f87
-ms.openlocfilehash: e3f7b715da3774d8289fdd526cf1fa0b5bdddba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a600c1875040e1076978bb80c467e6232303cd82
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280796"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164840"
 ---
 # <a name="compiler-warning-c4962"></a>Aviso do compilador C4962
 
-'function': Otimizações guiadas por perfil desabilitadas porque otimizações fizeram dados de perfil se tornar inconsistente"
+' function ': otimizações guiadas por perfil desabilitadas porque otimizações fizeram com que os dados de perfil se tornem inconsistentes "
 
-Uma função não foi compilada com /ltcg: PGO, porque os dados de contagem (perfil) para a função não confiáveis. Refa a criação de perfil para gerar o arquivo. PGC que contém os dados de perfil não confiável para essa função.
+Uma função não foi compilada com/LTCG: PGO, pois os dados de contagem (perfil) da função não são confiáveis. Refazer a criação de perfil para gerar novamente o arquivo. pgc que contém os dados de perfil não confiáveis para essa função.
 
-Esse aviso é desativado por padrão. Para obter mais informações, consulte [compilador avisos que são desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+Esse aviso está desativado por padrão. Para obter mais informações, consulte [os avisos do compilador que estão desativados por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md).

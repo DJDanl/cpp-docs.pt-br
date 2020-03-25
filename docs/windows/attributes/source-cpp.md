@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 79614a345e6c07b03df351da93a847fe12e4b110
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5f961513b948c3195aea864d97313ac09e97344e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514026"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166218"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -23,9 +23,9 @@ Em uma classe, especifica as interfaces de origem do objeto COM para pontos de c
 [ source(interfaces) ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*interfaces*<br/>
+*interface*<br/>
 Uma ou mais interfaces que você especifica ao aplicar o atributo de origem a uma classe. Esse parâmetro não é usado quando a origem é aplicada a uma propriedade ou um método.
 
 ## <a name="remarks"></a>Comentários
@@ -74,14 +74,14 @@ class NN : public b
 
 |||
 |-|-|
-|**Aplica-se a**|**class**, **struct**, **interface**|
+|**Aplica-se a**|**classe**, **struct**, **interface**|
 |**Repetível**|Não|
-|**Atributos necessários**|`coclass`(quando aplicado à classe ou estrutura)|
+|**Atributos necessários**|`coclass` (quando aplicado à classe ou estrutura)|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>

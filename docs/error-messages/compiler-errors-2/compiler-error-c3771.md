@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3771
 ms.assetid: 68c23b25-7f21-4eaa-8f7e-38fda1130a69
-ms.openlocfilehash: 6b15d867bbaf66f511cbda200d692f5db4371ab3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c29ad6007d33c43ae1e4758ae05caa9109053e3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400156"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165724"
 ---
 # <a name="compiler-error-c3771"></a>Erro do compilador C3771
 
-"identificador": declaração friend não pode ser encontrada no escopo de namespace mais próximo
+"Identifier": declaração Friend não pode ser encontrada no escopo de namespace mais próximo
 
-A declaração de modelo de classe para o modelo especificado *identificador* não pode ser encontrado no namespace atual.
+A declaração de modelo de classe para o *identificador* de modelo especificado não pode ser encontrada no namespace atual.
 
-### <a name="to-correct-this-error"></a>Para corrigir este erro
+### <a name="to-correct-this-error"></a>Para corrigir esse erro
 
-- Certifique-se de que a declaração de modelo de classe para o identificador de modelo é definida no namespace atual ou que o identificador de modelo é um nome totalmente qualificado.
+- Verifique se a declaração de modelo de classe para o identificador de modelo está definida no namespace atual ou se o identificador de modelo é um nome totalmente qualificado.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo de código a seguir declara um modelo de classe e uma função no namespace `NA`, mas tentar declarar um modelo de função friend no namespace `NB`.
+O exemplo de código a seguir declara um modelo de classe e uma função no namespace `NA`, mas tenta declarar um modelo de função Friend no namespace `NB`.
 
 ```cpp
 // C3771.cpp
@@ -47,6 +47,6 @@ namespace NB {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos](../../cpp/templates-cpp.md)

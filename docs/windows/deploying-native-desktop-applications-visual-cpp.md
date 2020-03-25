@@ -10,12 +10,12 @@ helpviewer_keywords:
 - distributing applications [C++]
 ms.assetid: 37f1691e-d67c-41e4-926e-528a237a9bac
 ms.topic: overview
-ms.openlocfilehash: af3141a8fd626a909de93b219bf3b6d8186f0623
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: e9ae5db05c0835bb65a65cdccf58ab7f7d1b789f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274753"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160184"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Implantando aplicativos da área de trabalho nativos (Visual C++)
 
@@ -51,7 +51,7 @@ Os artigos desta seção da documentação descrevem como garantir que um aplica
 
 - [Implantação de ClickOnce para aplicativos do Visual C++](clickonce-deployment-for-visual-cpp-applications.md)
 
-- [Executando um aplicativo do C++ /clr em uma versão de tempo de execução anterior](running-a-cpp-clr-application-on-a-previous-runtime-version.md)
+- [Executando um aplicativo do C++ /clr em uma versão de runtime anterior](running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 
 ## <a name="related-sections"></a>Seções relacionadas
 

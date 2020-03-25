@@ -1,34 +1,34 @@
 ---
-title: Compilador aviso (nível 1) C4657
+title: Aviso do compilador (nível 1) C4657
 ms.date: 11/04/2016
 f1_keywords:
 - C4657
 helpviewer_keywords:
 - C4657
 ms.assetid: eb750050-cea6-4ead-b80c-d5dcd4971cfc
-ms.openlocfilehash: 92415d1d17c3342dbb721aa850f37f4dfabd1406
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cc049d99339a6f19ca86cd5c7a10f062a1451a9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375685"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199492"
 ---
-# <a name="compiler-warning-level-1-c4657"></a>Compilador aviso (nível 1) C4657
+# <a name="compiler-warning-level-1-c4657"></a>Aviso do compilador (nível 1) C4657
 
-expressão envolve um tipo de dados que forem novo desde a última compilação
+a expressão envolve um tipo de dados que é novo desde a última compilação
 
-Você adicionou ou alterou um tipo de dados, tornando-o novo no seu código-fonte desde a última compilação bem-sucedida. Editar e continuar não suporta alterações em tipos de dados existentes.
+Você adicionou ou alterou um tipo de dados, tornando-o novo no código-fonte desde a última compilação bem-sucedida. Editar e continuar não oferece suporte a alterações em tipos de dados existentes.
 
-Esse aviso será sempre ser seguido [Fatal C1092 de erro](../../error-messages/compiler-errors-1/fatal-error-c1092.md). Para obter mais informações, consulte o [Supported Code Changes](/visualstudio/debugger/supported-code-changes-cpp).
+Esse aviso sempre será seguido pelo [erro fatal C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md). Para obter mais informações, consulte as [alterações de código com suporte](/visualstudio/debugger/supported-code-changes-cpp).
 
 ### <a name="to-remove-this-warning-without-ending-the-current-debug-session"></a>Para remover este aviso sem encerrar a sessão de depuração atual
 
-1. Altere o tipo de dados para seu estado antes do erro.
+1. Altere o tipo de dados de volta para seu estado anterior ao erro.
 
-1. Dos **Debug** menu, escolha **aplicar alterações de código**.
+1. No menu **depurar** , escolha **aplicar alterações de código**.
 
-### <a name="to-remove-this-error-without-changing-your-source-code"></a>Para remover esse erro sem alterar seu código-fonte
+### <a name="to-remove-this-error-without-changing-your-source-code"></a>Para remover esse erro sem alterar o código-fonte
 
-1. Dos **Debug** menu, escolha **parar depuração**.
+1. No menu **depurar** , escolha **parar depuração**.
 
-1. Dos **Build** menu, escolha **Build**.
+1. No menu **Compilar** , escolha **Compilar**.

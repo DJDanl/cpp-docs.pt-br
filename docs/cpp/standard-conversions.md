@@ -6,12 +6,12 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: c51a5ea5aaabb27babb9e4cd355721742088d31e
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 41ad348b7109451f519c44f685cea0a271f71925
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998905"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161004"
 ---
 # <a name="standard-conversions"></a>Conversões padrão
 
@@ -189,20 +189,20 @@ O primeiros é quando a classe base especificada estiver acessível e a convers�
 
 O acesso a uma classe base depende do tipo de herança usado na derivação. Considere a herança lustrada na figura a seguir.
 
-![Grafo de herança mostrando&#45;]o grafo de herança de acessibilidade da classe base(../cpp/media/vc38xa1.gif "mostrando a acessibilidade da classe base&#45;") <br/>
+![Grafo de herança mostrando&#45;acessibilidade da classe base](../cpp/media/vc38xa1.gif "Grafo de herança mostrando&#45;acessibilidade da classe base") <br/>
 Gráfico de herança para ilustração de acessibilidade a classe base
 
 A tabela a seguir mostra a acessibilidade da classe base para a situação ilustrada na figura.
 
 |Tipo de função|Derivação|Conversão de<br /><br /> B * para uma\* legal?|
 |----------------------|----------------|-------------------------------------------|
-|Função externa (fora do escopo da classe)|Particular|Não|
+|Função externa (fora do escopo da classe)|Privado|Não|
 ||Protegido|Não|
 ||Público|Sim|
-|Função membro B (no escopo de B)|Particular|Sim|
+|Função membro B (no escopo de B)|Privado|Sim|
 ||Protegido|Sim|
 ||Público|Sim|
-|Função membro C (no escopo de C)|Particular|Não|
+|Função membro C (no escopo de C)|Privado|Não|
 ||Protegido|Sim|
 ||Público|Sim|
 
@@ -327,6 +327,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [C++referência de linguagem](../cpp/cpp-language-reference.md)

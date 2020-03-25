@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiplicative operators [C++]
 - division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
-ms.openlocfilehash: 9a01672976703634c06724c9c655605bb433facf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc6359d3d7d2045d44af07f80b3e101da356d4b1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301819"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179348"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operadores multiplicativos e o operador de módulo
 
@@ -38,19 +38,19 @@ Os operadores de multiplicação são:
 
 - Multiplicação (<strong>\*</strong>)
 
-- Divisão (**/**)
+- Divisão ( **/** )
 
-- Módulo (resto da divisão) (**%**)
+- Módulo (restante da divisão) ( **%** )
 
 Esses operadores binários possuem associatividade da esquerda para a direita.
 
-Os operadores de multiplicação usam operandos de tipos aritméticos. O operador de módulo (**%**) tem um requisito mais rígido que seus operandos devem ser do tipo integral. (Para obter o resto de uma divisão de ponto flutuante, use a função de tempo de execução [fmod](../c-runtime-library/reference/fmod-fmodf.md).) As conversões abordadas em [conversões padrão](standard-conversions.md) são aplicadas aos operandos, e o resultado é do tipo convertido.
+Os operadores de multiplicação usam operandos de tipos aritméticos. O operador de módulo ( **%** ) tem um requisito mais estrito no que seus operandos devem ser do tipo integral. (Para obter o restante de uma divisão de ponto flutuante, use a função de tempo de execução, [fmod](../c-runtime-library/reference/fmod-fmodf.md).) As conversões abordadas nas [conversões padrão](standard-conversions.md) são aplicadas aos operandos e o resultado é do tipo convertido.
 
 O operador de multiplicação gera o resultado da multiplicação do primeiro operando pelo segundo.
 
 O operador de divisão gera o resultado da divisão do primeiro operando pelo segundo.
 
-O operador de módulo produz o resto fornecido pela expressão a seguir, onde *e1* é o primeiro operando e *e2* é o segundo: *e1* -(*e1*  /  *e2*) \* *e2*, em que ambos os operandos forem de tipos integrais.
+O operador de módulo produz o restante fornecido pela expressão a seguir, em *que E1* é o primeiro operando *e E2* é o segundo: *E1* -(*E1* / *E2*) \* *E2*, em que ambos os operandos são de tipos integrais.
 
 A divisão por 0 em uma divisão ou em uma expressão de módulo é indefinida e gera um erro de tempo de execução. Desse modo, as expressões a seguir geram resultados indefinidos e errôneos:
 
@@ -70,13 +70,13 @@ No Microsoft C++, o resultado de uma expressão de módulo sempre é igual ao si
 
 **Fim da seção específica da Microsoft**
 
-Se a divisão calculada de dois inteiros for inexata e apenas um operando for negativo, o resultado será o interior maior (em magnitude, independentemente do sinal), que é menor que o valor exato que seria gerado pela operação de divisão. Por exemplo, o valor calculado de -11 / 3 é-3.666666666. O resultado dessa divisão integral é -3.
+Se a divisão calculada de dois inteiros for inexata e apenas um operando for negativo, o resultado será o interior maior (em magnitude, independentemente do sinal), que é menor que o valor exato que seria gerado pela operação de divisão. Por exemplo, o valor calculado de-11/3 é-3,666666666. O resultado dessa divisão integral é-3.
 
-A relação entre os operadores de multiplicação é fornecida pela identidade (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.
+A relação entre os operadores multiplicativa é fornecida pela identidade (*e1* / *E2*) \* *e2* + *E1* % *E2* == *E1*.
 
 ## <a name="example"></a>Exemplo
 
-O programa a seguir demonstra os operadores de multiplicação. Observe que ambos os operandos de `10 / 3` deve ser explicitamente convertido no tipo **float** para impedir o truncamento para que ambos os operandos forem do tipo **float** antes da divisão.
+O programa a seguir demonstra os operadores de multiplicação. Observe que qualquer operando de `10 / 3` deve ser convertido explicitamente no tipo **float** para evitar o truncamento para que ambos os operandos sejam do tipo **float** antes da divisão.
 
 ```cpp
 // expre_Multiplicative_Operators.cpp
@@ -92,7 +92,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)<br/>
 [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

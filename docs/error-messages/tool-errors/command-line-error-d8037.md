@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - D8037
 ms.assetid: acddaaa0-bd84-426f-a37b-8f680b379c9d
-ms.openlocfilehash: f9f099d1abb8529620c1b3a0bc14705463ca5cd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed6778861c89bb9755087c4d58f094a57d5f760f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214086"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196853"
 ---
 # <a name="command-line-error-d8037"></a>Erro D8037 (linha de comando)
 
-não é possível criar arquivo il temporário; Limpe diretório temp de arquivos il antigos
+Não é possível criar arquivo Il temporário; limpar diretório temporário de arquivos Il antigos
 
-Não há espaço suficiente para criar arquivos intermediários de compilador temporário. Para corrigir esse erro, remova os arquivos antigos do MSIL no diretório especificado pela **TMP** variável de ambiente. Esses arquivos poderão ser de _CL_hhhhhhhh.ss o formulário, em que h representa um dígito hexadecimal aleatório e ss representa o tipo de arquivo IL. Além disso, certifique-se de atualizar o computador com os patches mais recentes do sistema operacional.
+Não há espaço suficiente para criar arquivos intermediários de compilador temporários. Para corrigir esse erro, remova todos os arquivos MSIL antigos no diretório especificado pela variável de ambiente **tmp** . Esses arquivos estarão no formato _CL_hhhhhhhh. SS, em que h representa um dígito hexadecimal aleatório e SS representa o tipo de arquivo IL. Além disso, certifique-se de atualizar seu computador com os patches de sistema operacional mais recentes.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Erros de linha de comando D8000 a D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
 [Opções do compilador MSVC](../../build/reference/compiler-options.md)

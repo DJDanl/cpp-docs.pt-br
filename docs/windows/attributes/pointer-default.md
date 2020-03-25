@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: c70c372e5f1c3a9c2f620a1fa3505fb9d0436e79
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d0c5832623c1e418f4c6e8bdb606d1d363503483
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514262"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166530"
 ---
 # <a name="pointer_default"></a>pointer_default
 
@@ -23,7 +23,7 @@ Especifica o atributo de ponteiro padrão para todos os ponteiros, exceto para o
 [ pointer_default(value) ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *value*<br/>
 Um valor que descreve o tipo de ponteiro: **PTR**, **ref**ou **Unique**.
@@ -47,9 +47,9 @@ Consulte o exemplo de [DefaultValue](defaultvalue.md) para obter um exemplo de u
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)

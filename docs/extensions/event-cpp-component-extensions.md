@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 8b34a4f146cc7961ee1176580def6319185693e9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311768"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172380"
 ---
 # <a name="event--ccli-and-ccx"></a>event (C++/CLI e C++/CX)
 
 A palavra-chave **event** declara um *evento*, que é uma notificação a assinantes registrados (*manipuladores de eventos*) de que ocorreu algo de interesse.
 
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
+## <a name="all-runtimes"></a>Todos os Runtimes
 
 O C++/CX é compatível com a declaração de um *membro de evento* ou um *bloco de eventos*. Um membro de evento é uma forma abreviada de declarar um bloco de eventos. Por padrão, um membro de evento declara as funções `add()`, `remove()` e `raise()` que são declaradas explicitamente em um bloco de eventos. Para personalizar as funções em um membro de evento, declare um bloco de eventos e, em seguida, substitua as funções necessárias.
 
@@ -38,7 +38,7 @@ modifiereventdelegate^ event_name
 }
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *modifier*<br/>
 Um modificador que pode ser usado na declaração de evento ou em um método de acessador de evento.  Os valores possíveis são **static** e **virtual**.
@@ -102,7 +102,7 @@ modifiereventdelegate^ event_name
 }
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *modifier*<br/>
 Um modificador que pode ser usado na declaração de evento ou em um método de acessador de evento.  Os valores possíveis são **static** e **virtual**.
@@ -230,7 +230,7 @@ OnClick: 7, 3.14159
 OnDblClick: Hello
 ```
 
-O exemplo de código a seguir demonstra a lógica usada para gerar o método `raise` de um evento trivial: Se o evento tiver um ou mais assinantes, chamar o método `raise` implícita ou explicitamente chama o delegado. Se o tipo de retorno do delegado não for **void** e se houver zero assinantes de evento, o método `raise` retornará o valor padrão para o tipo de delegado. Se não houver qualquer assinante de evento, chamar o método `raise` simplesmente retorna e não gera nenhuma exceção. Se o tipo de retorno delegado não for **void**, o tipo de delegado será retornado.
+O exemplo de código a seguir demonstra a lógica usada para gerar o método `raise` de um evento trivial: se o evento tiver um ou mais assinantes, chamar o método `raise` implicitamente ou chamar explicitamente o delegado. Se o tipo de retorno do delegado não for **void** e se houver zero assinantes de evento, o método `raise` retornará o valor padrão para o tipo de delegado. Se não houver qualquer assinante de evento, chamar o método `raise` simplesmente retorna e não gera nenhuma exceção. Se o tipo de retorno delegado não for **void**, o tipo de delegado será retornado.
 
 ```cpp
 // trivial_events.cpp
@@ -270,6 +270,6 @@ int main() {
 688
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

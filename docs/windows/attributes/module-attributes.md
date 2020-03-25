@@ -1,24 +1,24 @@
 ---
-title: Atributos de módulo (COM C++)
+title: Atributos do móduloC++ (com)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - module attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: 46d135dc-613f-4810-90a4-e155ab8ed91a
-ms.openlocfilehash: 69c0834c95b6e8bc33c984da5a3589269ed62e97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c71fd4bf007d1a74d9cf959388fdfe37922c60fc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409233"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166738"
 ---
 # <a name="module-attributes"></a>Atributos de módulo
-O seguinte atributo só pode ser aplicado para o [módulo](module-cpp.md) atributo.
+O atributo a seguir só pode ser aplicado ao atributo [Module](module-cpp.md) .
 
-|Atributo|Descrição|
+|Atributo|DESCRIÇÃO|
 |---------------|-----------------|
-|[helpstringdll](helpstringdll.md)|Especifica o nome da DLL a usar para executar a pesquisa de cadeia de caracteres do documento (localização).|
+|[helpstringdll](helpstringdll.md)|Especifica o nome da DLL a ser usada para executar a pesquisa de cadeia de caracteres do documento (localização).|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos por uso](attributes-by-usage.md)

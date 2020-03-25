@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: d644f59ac92bf4e39f191c291dd4fef626411c3d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c507a9ae42afc5081c290d38464aa7f24c277d15
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514942"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166114"
 ---
 # <a name="uuid-c-attributes"></a>uuid (atributos C++)
 
@@ -25,7 +25,7 @@ Especifica a ID exclusiva para uma classe ou interface.
 ) ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uuid*<br/>
 Um identificador exclusivo de 128 bits.
@@ -38,7 +38,7 @@ Se você não especificar o **UUID**, o compilador irá gerar o mesmo GUID para 
 
 Você pode usar Uuidgen. exe ou Guidgen. exe para gerar suas próprias IDs exclusivas. (Para executar uma dessas ferramentas, clique em **Iniciar** e em **executar** no menu. Em seguida, digite o nome da ferramenta necessária.)
 
-Quando usado em um projeto que não usa a ATL também, especificar o atributo **UUID** é o mesmo que especificar o modificador **_ overdeclspec** do [UUID](../../cpp/uuid-cpp.md) . Para recuperar o **UUID** de uma classe, você pode usar [__uuidof](../../cpp/uuidof-operator.md)
+Quando usado em um projeto que não usa a ATL também, especificar o atributo **UUID** é o mesmo que especificar o [uuid](../../cpp/uuid-cpp.md) **__declspec** o modificador de UUID. Para recuperar o **UUID** de uma classe, você pode usar [__uuidof](../../cpp/uuidof-operator.md)
 
 ## <a name="example"></a>Exemplo
 
@@ -57,7 +57,7 @@ Consulte o exemplo [ligável](bindable.md) para obter um exemplo de uso de **UUI
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)<br/>

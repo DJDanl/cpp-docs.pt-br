@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Koenig lookup
 - argument-dependent lookup [C++]
 ms.assetid: c0928401-da2c-4658-942d-9ba4df149c35
-ms.openlocfilehash: d979b79c0f712ed35a42a44047dd1091010c72bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88811e8070fdfe398bc12734221dee772515d8bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184458"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190529"
 ---
 # <a name="argument-dependent-name-koenig-lookup-on-functions"></a>Pesquisa de nome dependente do argumento (Koenig) em funções
 
-O compilador pode usar a pesquisa por nome dependente de argumento para localizar a definição de uma chamada de função não qualificada. A pesquisa por nome dependente de argumento também é chamada de pesquisa de Koenig. O tipo de cada argumento em uma chamada de função é definido dentro de uma hierarquia de namespaces, classes, estruturas, uniões ou modelos. Quando você especifica um não-qualificados [sufixo](../cpp/postfix-expressions.md) chamada de função, o compilador pesquisa para a definição de função na hierarquia associada a cada tipo de argumento.
+O compilador pode usar a pesquisa por nome dependente de argumento para localizar a definição de uma chamada de função não qualificada. A pesquisa por nome dependente de argumento também é chamada de pesquisa de Koenig. O tipo de cada argumento em uma chamada de função é definido dentro de uma hierarquia de namespaces, classes, estruturas, uniões ou modelos. Quando você especifica uma chamada de função de [sufixo](../cpp/postfix-expressions.md) não qualificado, o compilador pesquisa a definição de função na hierarquia associada a cada tipo de argumento.
 
 ## <a name="example"></a>Exemplo
 

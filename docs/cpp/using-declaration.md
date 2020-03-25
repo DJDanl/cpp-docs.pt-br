@@ -7,12 +7,12 @@ helpviewer_keywords:
 - namespaces [C++], unqualified names in
 - using keyword [C++]
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: a158094141307acb507d5f3e873c600e89135ad7
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: d762ea36e83d2384b7bb50c2914f6a634c134d15
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301269"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187837"
 ---
 # <a name="using-declaration"></a>usando declaração
 
@@ -25,7 +25,7 @@ using [typename] nested-name-specifier unqualified-id ;
 using declarator-list ;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *especificador de nome aninhado* Uma sequência de nomes de namespace, classe ou enumeração e operadores de resolução de escopo (::), terminados por um operador de resolução de escopo. Um operador de resolução de escopo único pode ser usado para introduzir um nome do namespace global. O **TypeName** de palavra-chave é opcional e pode ser usado para resolver nomes dependentes quando introduzido em um modelo de classe de uma classe base.
 
@@ -325,7 +325,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Namespaces](../cpp/namespaces-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

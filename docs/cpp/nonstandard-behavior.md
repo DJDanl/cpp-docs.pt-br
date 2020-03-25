@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-ms.openlocfilehash: 82c5faae68f9da747017119d76578cc88163d8bb
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: d3bb4ca843833cfe9e027f694f25c989895487bb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222035"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161029"
 ---
 # <a name="nonstandard-behavior"></a>Comportamento não padrão
 
-As seções a seguir listam alguns dos locais em que a implementação da Microsoft C++ não é compatível com o C++ padrão. Os números de seção fornecidos abaixo se referem aos números da seção no padrão C++ 11 (ISO/IEC 14882:2011(E)).
+As seções a seguir listam alguns dos locais em que a implementação C++ da Microsoft do não está em C++ conformidade com o padrão. Os números de seção fornecidos abaixo se referem aos números da seção no padrão C++ 11 (ISO/IEC 14882:2011(E)).
 
-A lista de limites do compilador que diferem daqueles definidos no padrão C++ é fornecida em [limites do compilador](../cpp/compiler-limits.md).
+A lista de limites de compilador que diferem daqueles definidos C++ no padrão é fornecida nos [limites do compilador](../cpp/compiler-limits.md).
 
 ## <a name="covariant-return-types"></a>Tipos de retorno covariantes
 
-As classes base virtuais não têm suporte como tipo de retorno covariante quando a função virtual tem um número variável de argumentos. Isso não está em conformidade com a seção 10.3, parágrafo 7 da especificação ISO do C++. O exemplo a seguir não é compilado, dando erro do compilador [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
+As classes base virtuais não têm suporte como tipo de retorno covariante quando a função virtual tem um número variável de argumentos. Isso não está em conformidade com a seção 10.3, parágrafo 7 da especificação ISO do C++. O exemplo a seguir não compila, dando erro do compilador [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
 
 ```cpp
 // CovariantReturn.cpp
@@ -38,7 +38,7 @@ class B : virtual A
 
 ## <a name="binding-nondependent-names-in-templates"></a>Associação de nomes não dependentes nos modelos
 
-O Microsoft C++ compilador não oferece suporte a nomes de associação não dependentes ao analisar inicialmente um modelo. Isso não está em conformidade com a seção 14.6.3 da especificação ISO do C++. Isso pode fazer com que sobrecargas declaradas após o modelo (mas antes do modelo ser instanciado) sejam vistas.
+No momento C++ , o compilador Microsoft não dá suporte à associação de nomes não dependentes ao analisar inicialmente um modelo. Isso não está em conformidade com a seção 14.6.3 da especificação ISO do C++. Isso pode fazer com que sobrecargas declaradas após o modelo (mas antes do modelo ser instanciado) sejam vistas.
 
 ```cpp
 #include <iostream>
@@ -73,9 +73,9 @@ void g() throw();    // parsed and used
 
 Para obter mais informações sobre especificações de exceção, consulte [especificações de exceção](../cpp/exception-specifications-throw-cpp.md).
 
-## <a name="chartraitseof"></a>char_traits::eof()
+## <a name="char_traitseof"></a>char_traits::eof()
 
-O C++ padrão declara que [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) não deve corresponder a um válido `char_type` valor. O Microsoft C++ compilador impõe essa restrição para o tipo **char**, mas não para o tipo **wchar_t**. Isso não está em conformidade com o requisito da Tabela 62, na seção 12.1.1 da especificação ISO do C++. O exemplo abaixo demonstra isso.
+Os C++ Estados padrão que [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) não devem corresponder a um valor de `char_type` válido. O compilador C++ da Microsoft impõe essa restrição para o tipo **Char**, mas não para o tipo **wchar_t**. Isso não está em conformidade com o requisito da Tabela 62, na seção 12.1.1 da especificação ISO do C++. O exemplo abaixo demonstra isso.
 
 ```cpp
 #include <iostream>
@@ -94,4 +94,4 @@ int main()
 
 ## <a name="storage-location-of-objects"></a>Local de armazenamento de objetos
 
-O padrão C++ (seção 1.8, parágrafo 6) exige que objetos completos do C++ tenham locais exclusivos de armazenamento. No entanto com a Microsoft C++, há casos em que o tipos sem membros de dados compartilharão um local de armazenamento com outros tipos para o tempo de vida do objeto.
+O padrão C++ (seção 1.8, parágrafo 6) exige que objetos completos do C++ tenham locais exclusivos de armazenamento. No entanto C++, com a Microsoft, há casos em que os tipos sem membros de dados compartilharão um local de armazenamento com outros tipos durante o tempo de vida do objeto.

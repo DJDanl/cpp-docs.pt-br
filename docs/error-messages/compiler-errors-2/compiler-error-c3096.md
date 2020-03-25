@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3096
 ms.assetid: 56353c9a-800c-474f-b428-3e5d2a7afc9a
-ms.openlocfilehash: 67de54eab963ec395a6fe08e22d06ae72aa06d94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20cf6983e522262f4719a9280ecde2caaf45c4a3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325150"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176670"
 ---
 # <a name="compiler-error-c3096"></a>Erro do compilador C3096
 
-'attribute': atributo é permitido em membros de classes de atributo apenas dados
+' attribute ': atributo é permitido somente em membros de dados de classes de atributo
 
 Um atributo foi aplicado incorretamente.
 

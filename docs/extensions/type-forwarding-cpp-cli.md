@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - type forwarding, C++
 ms.assetid: ae730b69-0c27-41cc-84e1-3132783866ea
-ms.openlocfilehash: c5148c05e5580942d885b310e35f3b629224a654
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0803ecc2ffb2da2748b1ef063481aa2571f27f50
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515971"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171925"
 ---
 # <a name="type-forwarding-ccli"></a>Encaminhamento de tipos (C++/CLI)
 
@@ -31,12 +31,12 @@ O exemplo de código a seguir demonstra como usar o encaminhamento de tipo.
 [assembly:TypeForwardedTo(type::typeid)];
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*new*<br/>
+*novo*<br/>
 O assembly para o qual você está movendo a definição de tipo.
 
-*type*<br/>
+*tipo*<br/>
 O tipo cuja definição você está movendo para outro assembly.
 
 ### <a name="remarks"></a>Comentários

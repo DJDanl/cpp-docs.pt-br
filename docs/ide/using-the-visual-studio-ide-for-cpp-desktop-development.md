@@ -5,12 +5,12 @@ helpviewer_keywords:
 - IDE [C++]
 - Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
-ms.openlocfilehash: 7a9559f1aac9f0bd26b35dd03729ab86ad695b04
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 2cf2844fd4247c3c69648823302a6ad56ff5fd45
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182766"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171770"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Usando o IDE do Visual Studio para desenvolvimento de área de trabalho do C++
 
@@ -42,20 +42,20 @@ Após a conclusão da instalação do Visual Studio, você estará pronto para c
 
 Para começar a usar o IDE do Visual Studio para compilar aplicativos do C++, leia os tópicos a seguir na ordem. Cada um deles baseia-se no trabalho concluído nos tópicos anteriores:
 
-- [Passo a passo: Como trabalhar com Projetos e Soluções (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)
+- [Passo a passo: trabalhando com projetos e soluções (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)
 
-- [Passo a passo: Compilação de um projeto (C++)](walkthrough-building-a-project-cpp.md)
+- [Passo a passo: compilando um projeto (C++)](walkthrough-building-a-project-cpp.md)
 
-- [Passo a passo: Teste de um projeto (C++)](walkthrough-testing-a-project-cpp.md)
+- [Passo a passo: testando um projeto (C++)](walkthrough-testing-a-project-cpp.md)
 
-- [Passo a passo: Depurando um projeto (C++)](walkthrough-debugging-a-project-cpp.md)
+- [Passo a passo: depurando um projeto (C++)](walkthrough-debugging-a-project-cpp.md)
 
-- [Passo a passo: Implantação do programa (C++)](walkthrough-deploying-your-program-cpp.md)
+- [Passo a passo: implantando o programa (C++)](walkthrough-deploying-your-program-cpp.md)
 
 ## <a name="next-steps"></a>Próximas etapas
 
 Depois de concluir esses passos a passos, você estará pronto para começar a criar seus próprios projetos. Para obter mais informações e recursos para o desenvolvimento do C++, confira [Visual C++ no Visual Studio](../overview/visual-cpp-in-visual-studio.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Introdução ao desenvolvimento com Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)

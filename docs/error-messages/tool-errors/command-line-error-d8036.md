@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - D8036
 ms.assetid: 420a8daf-1873-49cd-95ea-a603d77b9410
-ms.openlocfilehash: b5c8fce07b9149189ee875e2b0bcfed42ab3d1a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 209d0ea3f9fa3fd2e311506d3e03162c639f4a6e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395151"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196866"
 ---
 # <a name="command-line-error-d8036"></a>Erro D8036 (linha de comando)
 
-'/ opção' não permitido com vários arquivos de origem
+"/Option" não é permitido com vários arquivos de origem
 
-Essas opções do compilador não podem ser usadas com vários arquivos de origem:
+Essas opções de compilador não podem ser usadas com vários arquivos de origem:
 
-- Listagem de arquivos do assembly de nome (/ Fa)
+- Lista de arquivos de assembly de nome (/FA)
 
-- Renomeie o arquivo de objeto (/ Fo)
+- Renomear arquivo de objeto (/fo)
 
-- Criar informações de navegador de origem sem variáveis locais (/ Fr)
+- Criar informações do navegador de origem sem variáveis locais (/FR)
 
-- Criar informações de navegador de origem que incluem as variáveis locais (/ FR)
+- Criar informações do navegador de origem que incluem variáveis locais (/FR)

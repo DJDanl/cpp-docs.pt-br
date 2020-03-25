@@ -1,20 +1,20 @@
 ---
-title: Compilador aviso (nível 1) C4089
+title: Aviso do compilador (nível 1) C4089
 ms.date: 11/04/2016
 f1_keywords:
 - C4089
 helpviewer_keywords:
 - C4089
 ms.assetid: 7c8f929b-9bf9-4063-9b7e-4affd98c1acc
-ms.openlocfilehash: 62dc060876145e7d2f8652fefe1738d149d1cf4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3758326ef6e3574b54c858031b8041d8f57cd350
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280523"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163943"
 ---
-# <a name="compiler-warning-level-1-c4089"></a>Compilador aviso (nível 1) C4089
+# <a name="compiler-warning-level-1-c4089"></a>Aviso do compilador (nível 1) C4089
 
-'function': tipos diferentes em parâmetro real 'número', 'number' do parâmetro formal
+' function ': tipos diferentes no parâmetro real ' Number ', parâmetro formal ' Number '
 
-Os parâmetros formais e reais correspondentes têm tipos diferentes. O parâmetro real será passado sem alteração. A função converte o parâmetro real para o tipo especificado na definição de função.
+Os parâmetros formal e real correspondentes têm tipos diferentes. O parâmetro real é passado sem alteração. A função converte o parâmetro real para o tipo especificado na definição da função.

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-ms.openlocfilehash: 70e73a6286a4b6adaba20b5a35dc16d8389b1948
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 537bd6d645532d9d5d20b740125c66f3953239bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501872"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168454"
 ---
 # <a name="async_uuid"></a>async_uuid
 
@@ -23,7 +23,7 @@ Especifica o UUID que direciona o compilador MIDL para definir versões síncron
 [async_uuid (uuid)]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uuid*<br/>
 Um UUID que identifica a versão da interface.
@@ -55,11 +55,11 @@ __interface ICustom {
 |**Aplica-se a**|`interface`|
 |**Repetível**|Não|
 |**Atributos necessários**|Nenhum|
-|**Atributos inválidos**|**dual**, **dispinterface**|
+|**Atributos inválidos**|**dupla**, **dispinterface**|
 
-Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)

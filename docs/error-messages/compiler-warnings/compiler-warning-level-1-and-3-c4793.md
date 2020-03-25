@@ -15,36 +15,36 @@ helpviewer_keywords:
 - C6637
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
-ms.openlocfilehash: e7ca3b10e09b0d6818fbc7f5607ebc9c95c7f15c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de6f514d8e3ad8e7715c9cd13a695e3398fffc8d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280536"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164801"
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>Aviso do compilador (nível 1 e 3) C4793
 
-> '*função*': função é compilada como código nativo: '*motivo*'
+> '*Function*': a função é compilada como código nativo: '*Reason*'
 
 ## <a name="remarks"></a>Comentários
 
-O compilador não pode ser compilado *função* em código gerenciado, mesmo que o [/clr](../../build/reference/clr-common-language-runtime-compilation.md) for especificada a opção de compilador. Em vez disso, o compilador emite aviso C4793 e uma mensagem explicativa continuação e, em seguida, compila *função* em código nativo. A mensagem de continuação contém o *motivo* texto que explica o motivo *função* não pode ser compilada para `MSIL`.
+O compilador não pode compilar a *função* em código gerenciado, embora a opção de compilador [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) seja especificada. Em vez disso, o compilador emite o Aviso C4793 e uma mensagem de continuação explicativa e, em seguida, compila a *função* no código nativo. A mensagem de continuação contém o texto do *motivo* que explica por que a *função* não pode ser compilada para `MSIL`.
 
-Esse é um aviso de nível 1 quando você especificar o **/clr: pure** opção de compilador.  O **/clr: pure** opção do compilador é preterida no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+Esse é um aviso de nível 1 quando você especifica a opção de compilador **/CLR: Pure** .  A opção de compilador **/CLR: Pure** foi preterida no visual Studio 2015 e não tem suporte no visual Studio 2017.
 
 A tabela a seguir lista todas as mensagens de continuação possíveis.
 
 |Mensagem de motivo|Comentários|
 |--------------------|-------------|
-|Não há suporte para tipos de dados alinhados no código gerenciado|O CLR deve ser capaz de alocar dados conforme necessário, que talvez não seja possível se os dados alinhados com declarações, como [__m128](../../cpp/m128.md) ou [alinhar](../../cpp/align-cpp.md).|
-|Funções que usam ImageBase' não são suportadas em código gerenciado|`__ImageBase` é um símbolo de vinculador especial que normalmente é usado somente pelo código nativo de baixo nível para carregar uma DLL.|
-|varargs não são compatíveis com o ' / clr' opção de compilador|Funções nativas não é possível chamar funções gerenciadas que tenham [listas de argumentos variáveis](../../cpp/functions-with-variable-argument-lists-cpp.md) (varargs) porque as funções têm requisitos de layout de pilha diferente. No entanto, se você especificar o **/clr: pure** opção de compilador, o argumento variável listas têm suporte porque o assembly pode conter apenas funções gerenciadas. Para obter mais informações, consulte [código puro e verificável (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|
-|O CLR de 64 bits não dá suporte a dados declarados com o modificador __ptr32|Um ponteiro deve ser do mesmo tamanho que um ponteiro nativo na plataforma atual. Para obter mais informações, consulte [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|
-|O CLR de 32 bits não dá suporte a dados declarados com o modificador __ptr64|Um ponteiro deve ser do mesmo tamanho que um ponteiro nativo na plataforma atual. Para obter mais informações, consulte [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|
-|Não há suporte para um ou mais intrínsecos em código gerenciado|O nome do intrínseco não está disponível no momento em que a mensagem é emitida. No entanto, um intrínseco que faz com que essa mensagem geralmente representa uma instrução de baixo nível de máquina.|
-|Não há suporte para o assembly nativo do embutido ( ASM') no código gerenciado|[Código de assembly embutido](../../assembler/inline/asm.md) pode conter código nativo arbitrário, que não pode ser gerenciado.|
-|Uma conversão de função virtual não clrcall deve ser compilada como nativas|Um não -[clrcall](../../cpp/clrcall.md) conversão de função virtual deve usar um endereço não gerenciado.|
-|Uma função usando 'setjmp' deve ser compilada como nativo|O CLR deve ser capaz de controlar a execução do programa. No entanto, o [setjmp](../../cpp/using-setjmp-longjmp.md) função ignora a execução do programa regular, salvando e restaurando informações de baixo nível, como registros e o estado de execução.|
+|Não há suporte para tipos de dados alinhados em código gerenciado|O CLR deve ser capaz de alocar dados conforme necessário, o que pode não ser possível se os dados estiverem alinhados com declarações como [__m128](../../cpp/m128.md) ou [alinhar](../../cpp/align-cpp.md).|
+|Funções que usam ' __ImageBase ' não são suportadas em código gerenciado|`__ImageBase` é um símbolo de vinculador especial que é normalmente usado somente por código nativo de baixo nível para carregar uma DLL.|
+|Não há suporte para varargs na opção de compilador '/CLR '|As funções nativas não podem chamar funções gerenciadas que têm varargs ( [listas de argumentos variáveis](../../cpp/functions-with-variable-argument-lists-cpp.md) ) porque as funções têm requisitos de layout de pilha diferentes. No entanto, se você especificar a opção de compilador **/CLR: Pure** , as listas de argumentos variáveis serão suportadas porque o assembly pode conter apenas funções gerenciadas. Para obter mais informações, consulte [puro e verificável CodeC++(/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|
+|O CLR de 64 bits não dá suporte a dados declarados com o modificador de __ptr32|Um ponteiro deve ter o mesmo tamanho de um ponteiro nativo na plataforma atual. Para obter mais informações, consulte [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|
+|O CLR de 32 bits não dá suporte a dados declarados com o modificador de __ptr64|Um ponteiro deve ter o mesmo tamanho de um ponteiro nativo na plataforma atual. Para obter mais informações, consulte [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|
+|Não há suporte para um ou mais intrínsecos no código gerenciado|O nome do intrínseco não está disponível no momento em que a mensagem é emitida. No entanto, um intrínseco que causa essa mensagem normalmente representa uma instrução de computador de nível baixo.|
+|O assembly nativo embutido (' __asm ') não tem suporte no código gerenciado|O [código de assembly embutido](../../assembler/inline/asm.md) pode conter código nativo arbitrário, que não pode ser gerenciado.|
+|Uma conversão de função virtual não __clrcall deve ser compilada como nativa|Uma conversão de função virtual não[__clrcall](../../cpp/clrcall.md) deve usar um endereço não gerenciado.|
+|Uma função que usa ' _setjmp ' deve ser compilada como nativa|O CLR deve ser capaz de controlar a execução do programa. No entanto, a função [setjmp](../../cpp/using-setjmp-longjmp.md) ignora a execução regular do programa salvando e restaurando informações de baixo nível, como registros e estado de execução.|
 
 ## <a name="example"></a>Exemplo
 

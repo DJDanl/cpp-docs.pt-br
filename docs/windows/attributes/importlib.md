@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: 92cf335e5c4754595f2c7af2e1aef30d309d2f5f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 451204aae52d884b9cbc81d7e589028f5cfefae5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514615"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166803"
 ---
 # <a name="importlib"></a>importlib
 
@@ -23,14 +23,14 @@ Torna os tipos que já foram compilados em outra biblioteca de tipos disponívei
 [ importlib("tlb_file") ];
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *tlb_file*<br/>
 O nome de um arquivo. tlb, entre aspas, que você deseja importar para a biblioteca de tipos do projeto atual.
 
 ## <a name="remarks"></a>Comentários
 
-O atributo **importlib** C++ faz com `importlib` que uma instrução seja colocada no bloco de biblioteca do arquivo. idl gerado. O atributo **importlib** tem a mesma funcionalidade que o atributo MIDL [importlib](/windows/win32/Midl/importlib) .
+O atributo **importlib** C++ faz com que uma instrução `importlib` seja colocada no bloco de biblioteca do arquivo. idl gerado. O atributo **importlib** tem a mesma funcionalidade que o atributo MIDL [importlib](/windows/win32/Midl/importlib) .
 
 ## <a name="example"></a>Exemplo
 
@@ -54,9 +54,9 @@ O código a seguir mostra um exemplo de como usar **importlib**:
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de compilador](compiler-attributes.md)<br/>
 [Atributos independentes](stand-alone-attributes.md)<br/>

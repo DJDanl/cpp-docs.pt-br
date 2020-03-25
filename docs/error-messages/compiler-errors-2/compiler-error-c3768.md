@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3768
 ms.assetid: 091f0d53-1dff-43fd-813d-5c43c85b6ab0
-ms.openlocfilehash: e9c385fd178dc967e72f5e0ca7fab27b28ad962f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 534be9e3873276313335ca921264be92c9259b93
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400208"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165737"
 ---
 # <a name="compiler-error-c3768"></a>Erro do compilador C3768
 
-> não é possível obter o endereço de uma função virtual vararg em código gerenciado puro
+> Não é possível obter o endereço de uma função virtual vararg em código gerenciado puro
 
 ## <a name="remarks"></a>Comentários
 
-O **/clr: pure** opção do compilador é preterida no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+A opção de compilador **/CLR: Pure** foi preterida no visual Studio 2015 e não tem suporte no visual Studio 2017.
 
-Ao compilar com **/clr: pure**, é possível tomar o endereço de uma máquina virtual `vararg` função.
+Ao compilar com **/CLR: Pure**, você não pode tomar o endereço de uma função de `vararg` virtual.
 
 ## <a name="example"></a>Exemplo
 

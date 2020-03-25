@@ -6,12 +6,12 @@ helpviewer_keywords:
 - metadata, extending
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-ms.openlocfilehash: 6d200c36946e7bc7d441c2c4db1bdfe96d4aeef9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aed36ac7fed7eb1f16f8648f7bcd7efb37f43a75
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515991"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171886"
 ---
 # <a name="user-defined-attributes--ccli-and-ccx"></a>Atributos definidos pelo usuário (C++/CLI e C++/CX)
 
@@ -31,7 +31,7 @@ As informações e a sintaxe apresentadas neste tópico destinam-se a substituir
 
 Você pode definir um atributo personalizado definindo um tipo e tornando <xref:System.Attribute> uma classe base para o tipo e, opcionalmente, aplicando o atributo <xref:System.AttributeUsageAttribute>.
 
-Para obter mais informações, confira:
+Para obter mais informações, consulte:
 
 - [Destinos do atributo](attribute-targets-cpp-component-extensions.md)
 
@@ -173,7 +173,7 @@ public:
 public ref class SomeClass {};
 ```
 
-O tempo de execução requer que a parte pública da classe de atributo personalizado possa ser serializada.  Ao criar atributos personalizados, os argumentos nomeados de seu atributo personalizado estão limitados às constantes do tempo de compilação.  (Considere isso uma sequência de bits anexada ao layout da classe nos metadados.)
+O runtime requer que a parte pública da classe de atributo personalizado possa ser serializada.  Ao criar atributos personalizados, os argumentos nomeados de seu atributo personalizado estão limitados às constantes do tempo de compilação.  (Considere isso uma sequência de bits anexada ao layout da classe nos metadados.)
 
 ```cpp
 // extending_metadata_f.cpp
@@ -192,6 +192,6 @@ ref struct A : Attribute {
 ref struct B {};
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

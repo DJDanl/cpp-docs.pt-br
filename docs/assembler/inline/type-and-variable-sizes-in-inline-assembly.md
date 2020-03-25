@@ -13,12 +13,12 @@ helpviewer_keywords:
 - variables, type
 - variables, size
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
-ms.openlocfilehash: cdb8bddccbea0ef711cb0be4bbac60f7457c625c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bc98c8561a7fd06f875781802558cdd7e71a67ec
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441572"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169234"
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>Tamanhos de tipo e variável em assembly embutido
 
@@ -40,7 +40,7 @@ int arr[8];
 
 as expressões C e assembly a seguir produzem o tamanho de `arr` e seus elementos.
 
-|__asm|C|Size|
+|__asm|C|Tamanho|
 |-------------|-------|----------|
 |**Comprimento** arr|`sizeof`(ARR)/`sizeof`(arr [0])|8|
 |Arr de **tamanho**|`sizeof`(ARR)|32|
@@ -48,6 +48,6 @@ as expressões C e assembly a seguir produzem o tamanho de `arr` e seus elemento
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Usando a linguagem de assembly em blocos __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

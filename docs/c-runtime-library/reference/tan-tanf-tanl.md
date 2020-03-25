@@ -35,12 +35,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: c79c56555e04c865b70d52a6b1a6e3da1ce94c87
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fc1a75bdc6fddb5134b9db17961ba3c4550bc79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946897"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168701"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -59,7 +59,7 @@ float tan( float x );  // C++ only
 long double tan( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Ângulo em radianos.
@@ -70,8 +70,8 @@ As funções **Tan** retornam a tangente de *x*. Se *x* for maior ou igual a 263
 
 |Entrada|Exceção SEH|**Matherr** Exception|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|nenhum|_DOMAIN|
-|± INF|**INVÁLIDO**|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
+|± INF|**Inválido**|_DOMAIN|
 
 ## <a name="remarks"></a>Comentários
 
@@ -81,7 +81,7 @@ Como C++ o permite sobrecarga, você pode chamar sobrecargas de **Tan** que leva
 
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-------------|---------------------|-|
-|**tan**, **tanf**, **tanl**|\<math.h>|\<cmath> ou \<math.h>|
+|**Tan**, **tanf**, **tanl**|\<math.h>|\<cmath> ou \<math.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -109,7 +109,7 @@ int main( void )
 tan( 0.785398 ) = 1.000000
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

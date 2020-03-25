@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-ms.openlocfilehash: 467300501ffbbf8063e203d4c7395af34a954ed0
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 21685af5fc4f2dcf042698e054430e50531163b7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301360"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177736"
 ---
 # <a name="numeric-boolean-and-pointer-literals"></a>Literais numéricos, booleanos e de ponteiro
 
@@ -137,7 +137,7 @@ if (num < 100)
 
 No exemplo anterior, pode ser melhor usar uma constante nomeada que transmita um significado claro, por exemplo "MAXIMUM_ERROR_THRESHOLD". E se o valor de retorno "success" for visto pelos usuários finais, poderá ser melhor usar uma constante de cadeia de caracteres nomeada que possa ser armazenada em um único local em um arquivo de onde ele pode ser localizado em outros idiomas. Usar constantes nomeadas ajuda outras pessoas, bem como você mesmo a entender a intenção do código.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Convenções lexicais](../cpp/lexical-conventions.md)<br/>
 [C++Literais de cadeia de caracteres](../cpp/string-and-character-literals-cpp.md)<br/>

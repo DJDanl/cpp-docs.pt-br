@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], uuid
 - uuid __declspec keyword
 ms.assetid: 9d004621-09bc-4a8d-871b-648f5d5102d7
-ms.openlocfilehash: c121ad99dfbe0021a263f324ccdb9a95441bba33
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 09e40d38382bea0f902fda03d15d24e0cf1a627d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740462"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187798"
 ---
 # <a name="uuid-c"></a>uuid (C++)
 
@@ -35,13 +35,13 @@ struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;
 struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;
 ```
 
-Esse atributo poderá ser aplicado a uma redeclaração. Isso permite que os cabeçalhos do sistema forneçam as definições de interfaces `IUnknown`, como, e a redeclaração em algum outro cabeçalho ( \<como comdef. h >) para fornecer o GUID.
+Esse atributo poderá ser aplicado a uma redeclaração. Isso permite que os cabeçalhos do sistema forneçam as definições de interfaces, como `IUnknown`, e a redeclaração em algum outro cabeçalho (como \<comdef. h >) para fornecer o GUID.
 
 A palavra-chave [__uuidof](../cpp/uuidof-operator.md) pode ser aplicada para recuperar o GUID de constante anexado a um tipo definido pelo usuário.
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [__declspec](../cpp/declspec.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

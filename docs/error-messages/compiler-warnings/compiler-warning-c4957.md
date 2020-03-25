@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4957
 ms.assetid: a18c52d4-23e2-44f1-b4b5-f7fa5a7f3987
-ms.openlocfilehash: 79a1b516db1508c755693b67ca2e4070095839da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 340c26c97d0b5b686eee487cd3fd8b6b05bdf373
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388652"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164893"
 ---
 # <a name="compiler-warning-c4957"></a>Aviso do compilador C4957
 
-> '*cast*': conversão explícita de '*cast_from*'para'*cast_to*' não é verificável
+> '*Cast*': conversão explícita de '*cast_from*' em '*cast_to*' não é verificável
 
 ## <a name="remarks"></a>Comentários
 
-Uma conversão resulta em uma imagem não verificável.
+Uma conversão resultará em uma imagem não verificável.
 
-Algumas conversões são seguros (por exemplo, uma `static_cast` que dispara a conversões definidas pelo usuário e uma `const_cast`). Um [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) é garantido que produzem código verificável.
+Algumas conversões são seguras (por exemplo, um `static_cast` que dispara conversões definidas pelo usuário e uma `const_cast`). Uma [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) é garantida para produzir código verificável.
 
-Para obter mais informações, consulte [código puro e verificável (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Para obter mais informações, consulte [puro e verificável CodeC++(/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-O **/CLR: safe** opção do compilador é preterida no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+A opção de compilador **/CLR: safe** foi preterida no visual Studio 2015 e não tem suporte no visual Studio 2017.
 
-Esse aviso é emitido como um erro e pode ser desabilitado com o [aviso](../../preprocessor/warning.md) pragma ou o [/wd](../../build/reference/compiler-option-warning-level.md) opção de compilador.
+Esse aviso é emitido como um erro e pode ser desabilitado com o pragma de [aviso](../../preprocessor/warning.md) ou a opção de compilador [/WD](../../build/reference/compiler-option-warning-level.md) .
 
 ## <a name="example"></a>Exemplo
 

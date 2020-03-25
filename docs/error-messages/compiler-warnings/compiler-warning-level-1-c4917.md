@@ -1,25 +1,25 @@
 ---
-title: Compilador aviso (nível 1) C4917
+title: Aviso do compilador (nível 1) C4917
 ms.date: 11/04/2016
 f1_keywords:
 - C4917
 helpviewer_keywords:
 - C4917
 ms.assetid: c05e2610-4a5d-4f4b-a99b-c15fd7f1d5f1
-ms.openlocfilehash: 97f6f0a08c8ef292d81471cb5d0d94e359466933
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7a2d72b429f762e476286093c7f273a9a546cb6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393487"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174668"
 ---
-# <a name="compiler-warning-level-1-c4917"></a>Compilador aviso (nível 1) C4917
+# <a name="compiler-warning-level-1-c4917"></a>Aviso do compilador (nível 1) C4917
 
-'declarator': um GUID só pode ser associado uma classe, interface ou namespace
+' declarador ': um GUID só pode ser associado a uma classe, interface ou namespace
 
-Uma estrutura definida pelo usuário diferente [classe](../../cpp/class-cpp.md), [interface](../../cpp/interface.md), ou [namespace](../../cpp/namespaces-cpp.md) não pode ter um GUID.
+Uma estrutura definida pelo usuário diferente da [classe](../../cpp/class-cpp.md), [interface](../../cpp/interface.md)ou [namespace](../../cpp/namespaces-cpp.md) não pode ter um GUID.
 
-Esse aviso é desativado por padrão. Ver [compilador avisos que são desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.
+Esse aviso está desativado por padrão. Consulte [os avisos do compilador que estão desativados por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 

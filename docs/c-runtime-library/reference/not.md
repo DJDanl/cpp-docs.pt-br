@@ -1,5 +1,5 @@
 ---
-title: not
+title: não
 ms.date: 11/04/2016
 api_location:
 - msvcrt.dll
@@ -23,16 +23,16 @@ f1_keywords:
 helpviewer_keywords:
 - not function
 ms.assetid: d2ddbd5c-33c0-4aff-8961-feac155b4ba1
-ms.openlocfilehash: 01247a12484e49087d45e7d1417656a5c1782c8b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bf84b7fd0cf1379b7a805b5aaf8739189f3e647e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951269"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168727"
 ---
-# <a name="not"></a>not
+# <a name="not"></a>não
 
-Uma alternativa para o operador !.
+Uma alternativa para o operador !>.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -73,4 +73,4 @@ a is zero
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<iso646.h>
+**Cabeçalho:** \<iso646. h >

@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
-ms.openlocfilehash: 3609e3f0541cfd8a8af8559d8d49e6a77c00d91c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a100ece1a0c67be01b31f38bdca17e78c2e1b6f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403380"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179101"
 ---
 # <a name="restrict-c-amp"></a>restrita (C++ AMP)
 
-O especificador de restrição pode ser aplicado a declarações de função e lambda. Impõe restrições no código na função e no comportamento da função em aplicativos que usam o tempo de execução do C++ Accelerated Massive Parallelism(AMP C++).
+O especificador de restrição pode ser aplicado a declarações de função e lambda. Impõe restrições no código na função e no comportamento da função em aplicativos que usam o runtime do C++ Accelerated Massive Parallelism(AMP C++).
 
 > [!NOTE]
->  Para obter informações sobre o **restringir** palavra-chave que faz parte do **declspec** atributos de classe de armazenamento, consulte [restringir](../cpp/restrict.md).
+>  Para obter informações sobre a palavra-chave **restrict** que faz parte do **__declspec** atributos de classe de armazenamento, consulte [restringir](../cpp/restrict.md).
 
-O **restringir** cláusula usa os seguintes formulários:
+A cláusula **restrict** usa os seguintes formulários:
 
-|Cláusula|Descrição|
+|Cláusula|DESCRIÇÃO|
 |------------|-----------------|
 |`restrict(cpu)`|A função pode usar a linguagem C++ completa. Somente outras funções que são declaradas usando as funções restrict(cpu) podem chamar a função.|
 |`restrict(amp)`|A função só pode usar o subconjunto da linguagem C++ que o AMP C++ pode acelerar.|
@@ -31,7 +31,7 @@ O **restringir** cláusula usa os seguintes formulários:
 
 ## <a name="remarks"></a>Comentários
 
-O **restringir** palavra-chave é uma palavra-chave contextual. Os especificadores de restrição `cpu` e `amp` não são palavras reservadas. A lista de especificadores não é extensível. Uma função que não tem um **restringir** cláusula é o mesmo que uma função que tem o `restrict(cpu)` cláusula.
+A palavra-chave **restrict** é uma palavra-chave contextual. Os especificadores de restrição `cpu` e `amp` não são palavras reservadas. A lista de especificadores não é extensível. Uma função que não tem uma cláusula **restrict** é igual a uma função que tem a cláusula `restrict(cpu)`.
 
 Uma função que tem a cláusula `restrict(amp)` tem as seguintes limitações:
 
@@ -39,7 +39,7 @@ Uma função que tem a cláusula `restrict(amp)` tem as seguintes limitações:
 
 - A função deve ser embutível.
 
-- A função pode declarar somente **int**, **unsigned int**, **float**, e **double** variáveis e as classes e estruturas que contêm apenas Esses tipos. **bool** também é permitido, mas ele deve ser alinhado com 4 bytes se você usá-lo em um tipo composto.
+- A função pode declarar apenas **int**, **unsigned int**, **float**e **Double** Variables, e classes e estruturas que contêm apenas esses tipos. **bool** também é permitido, mas deve ser alinhado em 4 bytes se você usá-lo em um tipo composto.
 
 - As funções lambda não podem capturar por referência nem capturar os ponteiros.
 
@@ -49,7 +49,7 @@ Uma função que tem a cláusula `restrict(amp)` tem as seguintes limitações:
 
    - Recursão.
 
-   - Variáveis declaradas com o [volátil](../cpp/volatile-cpp.md) palavra-chave.
+   - Variáveis declaradas com a palavra-chave [volatile](../cpp/volatile-cpp.md) .
 
    - Funções virtuais.
 
@@ -61,29 +61,29 @@ Uma função que tem a cláusula `restrict(amp)` tem as seguintes limitações:
 
    - Ponteiros para ponteiros.
 
-   - **GoTo** instruções.
+   - instruções **goto** .
 
    - Instruções rotuladas.
 
-   - **tente**, **catch**, ou **throw** instruções.
+   - instruções **try**, **Catch**ou **throw** .
 
    - Variáveis globais.
 
-   - Variáveis estáticas. Use [palavra-chave tile_static](../cpp/tile-static-keyword.md) em vez disso.
+   - Variáveis estáticas. Em vez disso, use [Tile_static palavra-chave](../cpp/tile-static-keyword.md) .
 
    - **dynamic_cast** conversões.
 
-   - O **typeid** operador.
+   - O operador **typeid** .
 
    - Declarações asm.
 
    - Varargs.
 
-Para uma discussão sobre limitações da função, consulte [restringir restrições (amp)](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/).
+Para obter uma discussão sobre limitações de função, consulte [restrições (amp)](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como usar o `restrict(amp)`cláusula.
+O exemplo a seguir mostra como usar a cláusula `restrict(amp)`.
 
 ```cpp
 void functionAmp() restrict(amp) {}
@@ -104,6 +104,6 @@ void callFunctions() restrict(amp)
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)

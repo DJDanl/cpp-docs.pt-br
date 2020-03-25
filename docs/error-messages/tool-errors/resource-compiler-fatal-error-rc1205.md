@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC1205
 ms.assetid: 6cfbe019-ad8a-4267-b4b9-0d675bb3819a
-ms.openlocfilehash: 7593c6ca0ab12ef21297a592b866eb6a87cef8fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a35b01ebd0b058a101bc41d7224ae79963ba3fe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359054"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172861"
 ---
 # <a name="resource-compiler-fatal-error-rc1205"></a>Erro fatal RC1205 (compilador de recurso)
 
-página de código inválido
+página de código inválida
 
-Especificar a página de código (/c) opção foi seguida por uma página de código inválido. Ver [páginas de código](../../c-runtime-library/code-pages.md) na *referência de biblioteca de tempo de execução* para obter mais informações.
+A opção especificar página de código (/c) foi seguida por uma página de código inválida. Consulte [páginas de código](../../c-runtime-library/code-pages.md) na *referência da biblioteca de tempo de execução* para obter mais informações.

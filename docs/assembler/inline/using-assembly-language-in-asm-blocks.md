@@ -6,18 +6,18 @@ helpviewer_keywords:
 - assembly language [C++]
 - __asm keyword [C++], assembly language in
 ms.assetid: ad699356-1d16-4984-871f-c5fd7797c1fb
-ms.openlocfilehash: e2da242bf22b8b01a315d5bb09498764b54e1504
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5c7c9274ab5b75efa007fd96fc00d80bd53426e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166562"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169117"
 ---
-# <a name="using-assembly-language-in-asm-blocks"></a>Usando a linguagem de assembly em blocos __asm
+# <a name="using-assembly-language-in-__asm-blocks"></a>Usando a linguagem de assembly em blocos __asm
 
 **Seção específica da Microsoft**
 
-O assembler embutido tem muito em comum com outros montadores. Por exemplo, ele aceita qualquer expressão que é legal no MASM. Esta seção descreve o uso de recursos de linguagem de assembly em `__asm` blocos.
+O Assembler embutido tem muito em comum com outros montadores. Por exemplo, ele aceita qualquer expressão que seja legal em MASM. Esta seção descreve o uso de recursos de linguagem de assembly em blocos de `__asm`.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
 
@@ -37,7 +37,7 @@ O assembler embutido tem muito em comum com outros montadores. Por exemplo, ele 
 
 - [Comentários da linguagem de assembly](../../assembler/inline/assembly-language-comments.md)
 
-- [O pseudoinstrução Emit](../../assembler/inline/emit-pseudoinstruction.md)
+- [O _emit Pseudoinstruction](../../assembler/inline/emit-pseudoinstruction.md)
 
 - [Depuração e listagens para assembly embutido](../../assembler/inline/debugging-and-listings-for-inline-assembly.md)
 
@@ -45,6 +45,6 @@ O assembler embutido tem muito em comum com outros montadores. Por exemplo, ele 
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Assembler embutido](../../assembler/inline/inline-assembler.md)<br/>

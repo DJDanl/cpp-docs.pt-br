@@ -9,16 +9,16 @@ helpviewer_keywords:
 - smart pointers, definition
 - smart pointers
 ms.assetid: 8c7b2c43-eb92-4d42-9a8e-61aa37d71333
-ms.openlocfilehash: 34527f818b135fd5af629ebb69feaffd03b715fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12ea612625e21a8a13021b75e92f3752b0b5ce80
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301624"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179413"
 ---
 # <a name="member-access"></a>Acesso de membro
 
-Acesso de membro de classe pode ser controlado pela sobrecarga de operador de acesso a membro (**->**). Esse operador é considerado um operador unário nesse uso, e a função sobrecarregada do operador deve ser uma função de membro da classe. Portanto, a declaração dessa função é:
+O acesso de membro de classe pode ser controlado pela sobrecarga do operador de acesso de membro ( **->** ). Esse operador é considerado um operador unário nesse uso, e a função sobrecarregada do operador deve ser uma função de membro da classe. Portanto, a declaração dessa função é:
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,8 +32,8 @@ em que *tipo de classe* é o nome da classe à qual esse operador pertence. A fu
 
 Esse operador é usado (frequentemente em conjunto com o operador de desreferência de ponteiro) para implementar "ponteiros inteligentes" que validam os ponteiros antes da desreferência ou do uso da contagem.
 
-O elemento de linguagem **.** operador de acesso de membro não pode ser sobrecarregado.
+O elemento de linguagem **.** o operador de acesso de membro não pode ser sobrecarregado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Sobrecarga de Operador](../cpp/operator-overloading.md)

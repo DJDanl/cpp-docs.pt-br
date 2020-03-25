@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - U1070
 ms.assetid: 8639fc39-b4b1-48f5-ac91-0e9fb61680fd
-ms.openlocfilehash: 35bea47f6626dfe283a537d3d96340921c37f3f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 008d49df3460cb7cf760e4b278db20da444555fe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367233"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182767"
 ---
 # <a name="nmake-fatal-error-u1070"></a>Erro fatal U1070 (NMAKE)
 
-ciclo em definição de macro 'macroname'
+ciclo na definição de macro ' macroname '
 
-A definição da macro determinada continha uma macro cuja definição macro determinada. As definições de macro circulares são inválidas.
+A definição de macro fornecida continha uma macro cuja definição continha a macro fornecida. As definições de macro circular são inválidas.
 
 ## <a name="example"></a>Exemplo
 
@@ -28,7 +28,7 @@ ONE=$(TWO)
 TWO=$(ONE)
 ```
 
-fazer com que o erro a seguir:
+causa o seguinte erro:
 
 ```
 cycle in macro definition 'TWO'

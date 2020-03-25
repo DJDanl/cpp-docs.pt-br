@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - relational function templates
 ms.assetid: 57893a51-9adb-41fc-941d-2ca97687db2a
-ms.openlocfilehash: 1c47627baa270c3b5eb58127590aefc6d06c9df3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db5091ca8fd29235ea1a0f70410a05ffcb9d7a65
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403406"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188175"
 ---
 # <a name="relational-function-templates"></a>Modelos de função relacional
 
@@ -74,7 +74,7 @@ template<typename _Interface,
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *i*<br/>
 Um ponteiro de interface bruto.
@@ -88,6 +88,6 @@ Esses modelos de função permitem a comparação com um ponteiro inteligente à
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

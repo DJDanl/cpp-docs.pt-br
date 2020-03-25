@@ -1,35 +1,35 @@
 ---
-title: Compilador aviso (nível 2) C4412
+title: Aviso do compilador (nível 2) C4412
 ms.date: 11/04/2016
 f1_keywords:
 - C4412
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-ms.openlocfilehash: 2c9d50fc3433321c0ca92366a512892212545754
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 601b99eec4625e9b598ece4cbb74d0039ad04bf0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402431"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161783"
 ---
-# <a name="compiler-warning-level-2-c4412"></a>Compilador aviso (nível 2) C4412
+# <a name="compiler-warning-level-2-c4412"></a>Aviso do compilador (nível 2) C4412
 
-> '*função*': assinatura de função contém o tipo '*tipo*'; Objetos de C++ são seguros para passar entre código puro e combinado ou nativo.
+> '*Function*': assinatura de função contém tipo '*Type*'; C++ os objetos não são seguros para passar entre o código puro e o misto ou nativo.
 
 ## <a name="remarks"></a>Comentários
 
-O **/clr: pure** opção do compilador é preterida no Visual Studio 2015 e sem suporte no Visual Studio 2017. Se você tiver o código que precisa ser pura, é recomendável portar para C#.
+A opção de compilador **/CLR: Pure** foi preterida no visual Studio 2015 e não tem suporte no visual Studio 2017. Se você tiver um código que precisa ser puro, é recomendável portá-lo C#para.
 
-O compilador detectou uma situação potencialmente não segura que pode resultar em um erro de tempo de execução: está sendo feita uma chamada de um **/clr: pure** compiland para uma função que foi importada por meio de dllimport e a assinatura de função contém um tipo não seguro . Um tipo é seguro se ele contém uma função de membro ou tem um membro de dados que é um tipo não seguro ou uma indireção a um tipo que não é segura.
+O compilador detectou uma situação potencialmente insegura que poderia resultar em um erro de tempo de execução: uma chamada está sendo feita de um compiland **/CLR: Pure** para uma função que foi importada via DllImport e a assinatura de função contém um tipo não seguro. Um tipo não é seguro se ele contiver uma função de membro ou tiver um membro de dados que seja um tipo não seguro ou um indireção para um tipo não seguro.
 
-Isso não é seguro por causa da diferença no padrão de convenções entre código puro e nativo de chamada (ou misto gerenciado e nativo). Durante a importação de (por meio `dllimport`) uma função em um **/clr: pure** compiland, certifique-se de que as declarações de cada tipo na assinatura são idênticas àquelas em compiland que exporta a função (sendo especialmente cuidado em relação a diferenças em convenções de chamada implícitas).
+Isso não é seguro por causa da diferença nas convenções de chamada padrão entre código puro e nativo (ou misto nativo e gerenciado). Ao importar (via `dllimport`) uma função em um compiland **/CLR: Pure** , verifique se as declarações de cada tipo na assinatura são idênticas às do compiland que exporta a função (sendo especialmente cauteloso nas diferenças nas convenções de chamada implícitas).
 
-Uma função membro virtual é especialmente propensa a gerar resultados inesperados.  No entanto, até mesmo uma função não virtual deve ser testada para garantir que você obtenha os resultados corretos. Se você tiver certeza de que você está obtendo os resultados corretos, você pode ignorar este aviso.
+Uma função membro virtual é especialmente propensa a fornecer resultados inesperados.  No entanto, até mesmo uma função não virtual deve ser testada para garantir que você obtenha os resultados corretos. Se você tiver certeza de que está obtendo os resultados corretos, poderá ignorar este aviso.
 
-C4412 está desativado por padrão. Ver [compilador avisos que são desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) e [dllexport, dllimport](../../cpp/dllexport-dllimport.md) para obter mais informações.
+C4412 está desativado por padrão. Consulte [os avisos do compilador que estão desativados por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) e [dllexport, DllImport](../../cpp/dllexport-dllimport.md) para obter mais informações.
 
-Para resolver este aviso, remova todas as funções do tipo.
+Para resolver esse aviso, remova todas as funções do tipo.
 
 ## <a name="example"></a>Exemplo
 
@@ -61,7 +61,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir é um arquivo de cabeçalho que declara dois tipos. O `Unsafe` tipo é seguro porque ele tem uma função de membro.
+O exemplo a seguir é um arquivo de cabeçalho que declara dois tipos. O tipo de `Unsafe` não é seguro porque ele tem uma função membro.
 
 ```cpp
 // C4412.h
@@ -81,7 +81,7 @@ struct Safe {
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo exporta as funções com os tipos definidos no arquivo de cabeçalho.
+Este exemplo exporta funções com os tipos definidos no arquivo de cabeçalho.
 
 ```cpp
 // C4412_2.cpp
@@ -98,7 +98,7 @@ __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }
 
 ## <a name="example"></a>Exemplo
 
-O padrão de convenção de chamada um **/clr: pure** compilação é diferente de uma compilação nativa.  Quando C4412.h é incluída, `Test` padrão é `__clrcall`. Se você compilar e executar esse programa (não use **/c**), o programa irá acionar uma exceção.
+A Convenção de chamada padrão em uma compilação **/CLR: Pure** é diferente de uma compilação nativa.  Quando C4412. h é incluído, `Test` usa como padrão `__clrcall`. Se você compilar e executar este programa (não use **/c**), o programa gerará uma exceção.
 
 O exemplo a seguir gera C4412.
 

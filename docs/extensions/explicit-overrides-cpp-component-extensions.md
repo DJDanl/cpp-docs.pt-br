@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: b80e49489c0b0d26469ba9f8b77e80a962668e35
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: c199301794daaa140ede2fd99b0ae755cea70f97
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821633"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172367"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>Substituições explícitas (C++/CLI e C++/CX)
 
@@ -25,15 +25,15 @@ overriding-function-declarator = type::function [,type::function] { overriding-f
 overriding-function-declarator = function { overriding-function-definition }
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *overriding-function-declarator*<br/>
 O tipo de retorno, nome e lista de argumentos da função de substituição.  Observe que a função de substituição não precisa ter o mesmo nome da função que está sendo substituída.
 
-*type*<br/>
+*tipo*<br/>
 O tipo base que contém uma função para substituir.
 
-*function*<br/>
+*função*<br/>
 Uma lista delimitada por vírgulas de um ou mais nomes de função a serem substituídos.
 
 *overriding-function-definition*<br/>
@@ -47,7 +47,7 @@ Saiba mais sobre como modificar o comportamento de tipos e membros de tipo herda
 
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
 
-### <a name="requirements"></a>Requisitos do
+### <a name="requirements"></a>Requisitos
 
 Opção do compilador: `/ZW`
 
@@ -57,7 +57,7 @@ Opção do compilador: `/ZW`
 
 Saiba mais sobre substituições explícitas em código nativo ou compilado com `/clr:oldSyntax` em [Substituições explícitas](../cpp/explicit-overrides-cpp.md).
 
-### <a name="requirements"></a>Requisitos do
+### <a name="requirements"></a>Requisitos
 
 Opção do compilador: `/clr`
 
@@ -172,6 +172,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

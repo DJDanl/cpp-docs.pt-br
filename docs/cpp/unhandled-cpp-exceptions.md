@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ exception handling, unhandled exceptions
 - unhandled exceptions [C++]
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
-ms.openlocfilehash: cd5ce722c5159041ba8fb0a4a41b942a1bd4614f
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: f42a4e2af46ab7690d6f4bc9641c09f3757eb6b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246058"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160548"
 ---
 # <a name="unhandled-c-exceptions"></a>Exceções C++ não tratadas
 
@@ -54,6 +54,6 @@ term_func was called by terminate.
 
 A função `term_func` deve encerrar o programa ou o thread atual, idealmente chamando `exit`. Caso contrário, retorna para seu chamador, `abort` é chamado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Práticas C++ recomendadas modernas para exceções e tratamento de erros](../cpp/errors-and-exception-handling-modern-cpp.md)

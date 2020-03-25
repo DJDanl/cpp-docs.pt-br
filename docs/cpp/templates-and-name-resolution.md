@@ -2,12 +2,12 @@
 title: Modelos e resolução de nome
 ms.date: 11/04/2016
 ms.assetid: 519ba7b5-cd25-4549-865a-9a7b9dffdc28
-ms.openlocfilehash: e4a53df0a192c1d7b7f376e4401eb99fcbf7d481
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 693a2e69446410531d6a02047e8f230542362033
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266745"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160795"
 ---
 # <a name="templates-and-name-resolution"></a>Modelos e resolução de nome
 
@@ -73,6 +73,6 @@ Os nomes e as expressões dependentes de um parâmetro de modelo são categoriza
 
 As expressões dependentes de tipo e de valor são expressões que envolvem variáveis que são dependentes de tipo ou de valor. Essas expressões podem ter a semântica diferente, dependendo dos parâmetros usados para o modelo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos](../cpp/templates-cpp.md)

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: d9f6c6b9798bc708bb5334eafc0585471f25c059
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 142a9120e0b6b95e659fcb47c275653fbefd8cbe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513581"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165868"
 ---
 # <a name="working-with-resource-files"></a>Trabalhando com arquivos de recurso
 
 > [!WARNING]
 > Esta seção se aplica a aplicativos de área de C++trabalho do Windows escritos em.
 >
-> Para obter informações sobre os recursos em aplicativos Plataforma Universal do Windows C++escritos no, consulte [definindo recursos de aplicativo](/windows/uwp/app-resources/)ou adicionando recursos C++a projetos da/CLI (gerenciados), consulte [recursos em aplicativos da área de trabalho](/dotnet/framework/resources/index) no .NET Framework do desenvolvedor Orienta.
+> Para obter informações sobre os recursos do Plataforma Universal do Windows aplicativos C++escritos no, consulte [definindo recursos do aplicativo](/windows/uwp/app-resources/)ou adicionando recursos C++a projetos da/CLI (gerenciados), consulte [recursos em aplicativos da área de trabalho](/dotnet/framework/resources/index) no guia do desenvolvedor do .NET Framework.
 
 Os recursos podem ser compostos por uma ampla variedade de elementos, como:
 
@@ -55,7 +55,7 @@ Fornece links para a documentação do Visual C++.
 [Fale conosco](/visualstudio/ide/talk-to-us)<br/>
 Fornece links para informações sobre o uso do conjunto de documentação, o contado com suporte ao produto, e a aplicação de recursos de acessibilidade.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Aplicativos da área de trabalho do Windows](../windows/windows-desktop-applications-cpp.md)<br/>
 [Menus e outros recursos](/windows/win32/menurc/resources)

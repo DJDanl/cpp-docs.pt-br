@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2616
 ms.assetid: 8d0c02d6-a0b0-4135-b10f-438d67da68c6
-ms.openlocfilehash: bc0afc67985a71b2e7a48c3af323a00df1ed89c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c83b9031b0e11052235d03bdd9ba8013a3848d9b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329576"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177255"
 ---
 # <a name="compiler-error-c2616"></a>Erro do compilador C2616
 
-'conversion': não é possível converter implicitamente um não lvalue 'type1' em 'type2' que não seja const
+' Conversion ': não é possível converter implicitamente um ' type1 ' não lvalue em um ' type2 ' que não seja const
 
-Uma referência não pode ser inicializada de não lvalue.
+Uma referência não pode ser inicializada a partir de um não lvalue.
 
-Este é um erro em compatibilidade com ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) e um aviso em extensões da Microsoft (**/Ze**).
+Este é um erro em compatibilidade com ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)) e um aviso em extensões da Microsoft ( **/ze**).

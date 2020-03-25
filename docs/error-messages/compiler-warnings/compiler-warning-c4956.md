@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4956
 ms.assetid: 9154f2d1-d49f-4e07-90d2-0e9bc028011a
-ms.openlocfilehash: c15de8b22f56a2555cc763a45153139b1df01a31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 474bdfa6eb670f39a2876b0c1490e7254cf216e7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280835"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164892"
 ---
 # <a name="compiler-warning-c4956"></a>Aviso do compilador C4956
 
-> '*tipo*': esse tipo não é verificável
+> '*Type*': este tipo não é verificável
 
 ## <a name="remarks"></a>Comentários
 
-Esse aviso é gerado quando [/CLR: safe](../../build/reference/clr-common-language-runtime-compilation.md) for especificado e seu código contém um tipo que não é verificável. O **/CLR: safe** opção do compilador é preterida no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+Esse aviso é gerado quando [/CLR: safe](../../build/reference/clr-common-language-runtime-compilation.md) é especificado e seu código contém um tipo que não é verificável. A opção de compilador **/CLR: safe** foi preterida no visual Studio 2015 e não tem suporte no visual Studio 2017.
 
-Para obter mais informações, consulte [código puro e verificável (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Para obter mais informações, consulte [puro e verificável CodeC++(/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-Esse aviso é emitido como um erro e pode ser desabilitado com o [aviso](../../preprocessor/warning.md) pragma ou o [/wd](../../build/reference/compiler-option-warning-level.md) opção de compilador.
+Esse aviso é emitido como um erro e pode ser desabilitado com o pragma de [aviso](../../preprocessor/warning.md) ou a opção de compilador [/WD](../../build/reference/compiler-option-warning-level.md) .
 
 ## <a name="example"></a>Exemplo
 

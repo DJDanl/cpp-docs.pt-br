@@ -5,12 +5,12 @@ helpviewer_keywords:
 - labeled statement
 - statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
-ms.openlocfilehash: 030f1d74cf8a6c6686fcebd10559b5bd7b5d964c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d971a0e9864aeada1db5f004ef70577512e78c76
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368741"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179686"
 ---
 # <a name="labeled-statements"></a>Instruções rotuladas
 
@@ -56,7 +56,7 @@ int main() {
 
 **A instrução goto**
 
-A aparência de um *identificador* rótulo no programa de origem declara um rótulo. Somente um [goto](../cpp/goto-statement-cpp.md) instrução pode transferir o controle para um *identificador* rótulo. O fragmento de código a seguir ilustra o uso do **goto** instrução e um *identificador* rótulo:
+A aparência de um rótulo de *identificador* no programa de origem declara um rótulo. Somente uma instrução [goto](../cpp/goto-statement-cpp.md) pode transferir o controle para um rótulo de *identificador* . O fragmento de código a seguir ilustra o uso da instrução **goto** e um rótulo de *identificador* :
 
 Um rótulo não pode aparecer sozinho: deve estar sempre anexado a uma instrução. Se for necessário usar um rótulo sozinho, coloque uma instrução nula depois do rótulo.
 
@@ -79,9 +79,9 @@ int main() {
 //Output: At Test2 label.
 ```
 
-**A instrução case**
+**A instrução Case**
 
-Rótulos que aparecem depois de **caso** palavra-chave também não pode aparecer fora de uma **alternar** instrução. (Essa restrição também se aplica a **padrão** palavra-chave.) O fragmento de código a seguir mostra o uso correto de **caso** rótulos:
+Os rótulos que aparecem após a palavra-chave **Case** também não podem aparecer fora de uma instrução **switch** . (Essa restrição também se aplica à palavra-chave **Default** .) O fragmento de código a seguir mostra o uso correto dos rótulos de **caso** :
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -109,9 +109,9 @@ switch( msg )
 }
 ```
 
-## <a name="labels-in-the-case-statement"></a>Rótulos na instrução case
+## <a name="labels-in-the-case-statement"></a>Rótulos na instrução Case
 
-Rótulos que aparecem depois de **caso** palavra-chave também não pode aparecer fora de uma **alternar** instrução. (Essa restrição também se aplica a **padrão** palavra-chave.) O fragmento de código a seguir mostra o uso correto de **caso** rótulos:
+Os rótulos que aparecem após a palavra-chave **Case** também não podem aparecer fora de uma instrução **switch** . (Essa restrição também se aplica à palavra-chave **Default** .) O fragmento de código a seguir mostra o uso correto dos rótulos de **caso** :
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -156,7 +156,7 @@ switch( msg )
 
 ## <a name="labels-in-the-goto-statement"></a>Rótulos na instrução goto
 
-A aparência de um *identificador* rótulo no programa de origem declara um rótulo. Somente um [goto](../cpp/goto-statement-cpp.md) instrução pode transferir o controle para um *identificador* rótulo. O fragmento de código a seguir ilustra o uso do **goto** instrução e um *identificador* rótulo:
+A aparência de um rótulo de *identificador* no programa de origem declara um rótulo. Somente uma instrução [goto](../cpp/goto-statement-cpp.md) pode transferir o controle para um rótulo de *identificador* . O fragmento de código a seguir ilustra o uso da instrução **goto** e um rótulo de *identificador* :
 
 Um rótulo não pode aparecer sozinho: deve estar sempre anexado a uma instrução. Se for necessário usar um rótulo sozinho, coloque uma instrução nula depois do rótulo.
 
@@ -178,7 +178,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral das instruções C++](../cpp/overview-of-cpp-statements.md)<br/>
 [Instrução switch (C++)](../cpp/switch-statement-cpp.md)

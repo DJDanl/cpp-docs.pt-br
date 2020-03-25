@@ -13,12 +13,12 @@ helpviewer_keywords:
 - decrement operators [C++], syntax
 - decrement operators [C++]
 ms.assetid: 45ea7fc7-f279-4be9-a216-1d9a0ef9eb7b
-ms.openlocfilehash: deb8acc6c6a68c9a97f2f0efbdc4084b4937df46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32c210961c4966bb7b2cbcc597bd3c99f0d6ed24
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392096"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177658"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>Operadores de incremento e de decremento pré-fixados: ++ e --
 
@@ -31,13 +31,13 @@ ms.locfileid: "62392096"
 
 ## <a name="remarks"></a>Comentários
 
-O operador de incremento de prefixo (**++**) adiciona um ao operando; esse valor incrementado é o resultado da expressão. O operando deve ser um l-value não é do tipo **const**. O resultado é um valor l do mesmo tipo do operando.
+O operador de incremento de prefixo ( **++** ) adiciona um ao seu operando; Esse valor incrementado é o resultado da expressão. O operando deve ser um l-Value que não seja do tipo **const**. O resultado é um valor l do mesmo tipo do operando.
 
-O operador de decremento de prefixo (**--**) é análogo ao operador de incremento de prefixo, exceto que o operando é decrementado por um e o resultado é esse valor decrementado.
+O operador de diminuição de prefixo ( **--** ) é análogo ao operador de incremento de prefixo, exceto pelo fato de que o operando é decrementado por um e o resultado é esse valor diminuído.
 
-**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): O operando de um operador de incremento ou decremento não pode ser do tipo **bool**.
+**Visual Studio 2017 versão 15,3 e posterior** (disponível com [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): o operando de um incremento ou um operador de decréscimo não pode ser do tipo **bool**.
 
-Os operadores de incremento e decremento de prefixo e sufixo afetam seus operandos. A principal diferença entre eles é a ordem em que o incremento ou decremento ocorre na avaliação de uma expressão. (Para obter mais informações, consulte [incremento de sufixo e operadores de decremento](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) Na forma de prefixo, o incremento ou decremento ocorre antes de o valor ser usado na avaliação da expressão, assim o valor da expressão é diferente do valor do operando. Na forma de sufixo, o incremento ou decremento ocorre após que o valor é usado na avaliação da expressão, assim o valor da expressão é igual ao valor do operando. Por exemplo, o programa seguir imprime "`++i = 6`":
+Os operadores de incremento e decremento de prefixo e sufixo afetam seus operandos. A principal diferença entre eles é a ordem em que o incremento ou decremento ocorre na avaliação de uma expressão. (Para obter mais informações, consulte [incremento de sufixo e diminuir operadores](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) No formulário de prefixo, o incremento ou o decréscimo ocorre antes de o valor ser usado na avaliação da expressão, portanto, o valor da expressão é diferente do valor do operando. Na forma de sufixo, o incremento ou decremento ocorre após que o valor é usado na avaliação da expressão, assim o valor da expressão é igual ao valor do operando. Por exemplo, o programa seguir imprime "`++i = 6`":
 
 ```cpp
 // expre_Increment_and_Decrement_Operators.cpp
@@ -54,7 +54,7 @@ int main() {
 
 Um operando tipo integral ou flutuante é incrementado ou decrementado pelo valor inteiro 1. O tipo do resultado é igual ao tipo do operando. Um operando do tipo ponteiro é incrementado ou decrementado pelo tamanho do objeto pertinente. Um ponteiro incrementado aponta para o próximo objeto;um ponteiro decrementado aponta para o objeto anterior.
 
-Porque os operadores de incremento e decremento têm efeitos colaterais, usando expressões com operadores de incremento ou decremento em uma [macro do pré-processador](../preprocessor/macros-c-cpp.md) pode ter resultados indesejados. Considere este exemplo:
+Como os operadores de incremento e decremento têm efeitos colaterais, o uso de expressões com operadores de incremento ou decréscimo em uma [macro de pré-processador](../preprocessor/macros-c-cpp.md) pode ter resultados indesejáveis. Considere este exemplo:
 
 ```cpp
 // expre_Increment_and_Decrement_Operators2.cpp
@@ -78,7 +78,7 @@ Se `i` for maior ou igual a `j` ou menor que `j` por 1, será incrementado duas 
 > [!NOTE]
 >  As funções embutidas C++ são preferíveis para macros em muitos casos, pois eliminam efeitos colaterais como os descritas aqui, e permitem que a linguagem faça uma verificação de tipo mais completa.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Expressões com operadores unários](../cpp/expressions-with-unary-operators.md)<br/>
 [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

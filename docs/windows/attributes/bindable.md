@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 4a74531a40bcacdae4ef98c292884e7a43fa82fe
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9e476183374ad2a70864fd46aaa19c616cd3ce91
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501832"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167349"
 ---
 # <a name="bindable"></a>bindable
 
@@ -25,19 +25,19 @@ Indica que a propriedade dá suporte à associação de dados.
 
 ## <a name="remarks"></a>Comentários
 
-O C++ atributo acoplável tem a mesma funcionalidade que o atributo MIDL [acoplável](/windows/win32/Midl/bindable) . Você pode usá-lo em propriedades definidas com os atributos [propget](propget.md), [propput](propput.md)ou [propputref](propputref.md) , ou pode definir manualmente um método vinculável.
+O atributo **acoplável** C++ tem a mesma funcionalidade que o atributo MIDL [acoplável](/windows/win32/Midl/bindable) . Você pode usá-lo em propriedades definidas com os atributos [propget](propget.md), [propput](propput.md)ou [propputref](propputref.md) , ou pode definir manualmente um método vinculável.
 
-Os seguintes exemplos de MFC mostram o usode Bindable:
+Os seguintes exemplos de MFC mostram o uso de **Bindable**:
 
-- [Exemplos de controles: Controles ActiveX baseados em MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Exemplos de controles: controles ActiveX baseados em MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [Exemplo de CIRC: Controle ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Exemplo de CIRC: controle ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [Exemplo de TESTHELP: Controle ActiveX com dicas de ferramenta e ajuda](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Exemplo de TESTHELP: controle ActiveX com dicas de ferramentas e ajuda](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra como você pode usar o vinculável em uma propriedade:
+O código a seguir mostra como você pode usar o **vinculável** em uma propriedade:
 
 ```cpp
 // cpp_attr_ref_bindable.cpp
@@ -69,9 +69,9 @@ __interface IPropDemo : IDispatch {
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0046
 - CAN0046
 ms.assetid: a76e657b-c018-415b-b426-ce9e72eb645d
-ms.openlocfilehash: ce139867897852f35cf4758e7105c8740ed5de1e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 2e63def8388a5cfdef195fb31911abafe83f9c09
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345366"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184938"
 ---
 # <a name="expression-evaluator-error-cxx0046"></a>Erro CXX0046 (avaliador de expressão)
 
 lista de argumentos necessária para a função de membro
 
-Uma expressão de chamada de função de membro, mas não especificou nenhum parâmetro real.
+Uma expressão chamada uma função membro, mas não especificou nenhum parâmetro real.
 
-Esse erro é idêntico ao CAN0046.
+Esse erro é idêntico a CAN0046.

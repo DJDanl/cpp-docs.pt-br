@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 538cdbb38ac525cfee03a641f3e62e22a69f8e2b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f928fa281c99630ad52ce1fde184c44e9387263
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501546"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166972"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -23,7 +23,7 @@ Define o nome do arquivo de ajuda para uma biblioteca de tipos.
 [ helpfile("filename") ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *filename*<br/>
 O nome do arquivo que contém os tópicos da ajuda.
@@ -47,9 +47,9 @@ Consulte o exemplo de [módulo](module-cpp.md) para obter um exemplo de como usa
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)<br/>

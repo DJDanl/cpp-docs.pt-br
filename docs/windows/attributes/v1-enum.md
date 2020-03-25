@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-ms.openlocfilehash: c67f6303e73da42db5efd006bd6cdf3ded5bb8cf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1a189f6f1c5ef9d4ae77df9f1eda3f3671ddaf52
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513861"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166101"
 ---
 # <a name="v1_enum"></a>v1_enum
 
@@ -29,7 +29,7 @@ O atributo **v1_enum** C++ tem a mesma funcionalidade que o atributo MIDL [v1_en
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra o uso de **v1_enum**:
+O código a seguir mostra um uso de **v1_enum**:
 
 ```cpp
 // cpp_attr_ref_v1_enum.cpp
@@ -53,9 +53,9 @@ enum eList {
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)

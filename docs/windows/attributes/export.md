@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-ms.openlocfilehash: 771bfdfe4eab2acf31e97a606795066e8938a8a1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6264db037069f5fc6b858bdd466ce6c68b814a84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501610"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167038"
 ---
-# <a name="export"></a>export
+# <a name="export"></a>exportar
 
 Faz com que uma estrutura de dados seja colocada no arquivo. idl.
 
@@ -59,9 +59,9 @@ struct MyStruct {
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de compilador](compiler-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)

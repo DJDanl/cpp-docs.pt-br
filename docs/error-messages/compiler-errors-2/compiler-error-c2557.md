@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2557
 ms.assetid: 48a33d82-aa16-4658-b346-2311fcb39864
-ms.openlocfilehash: 851ee704fbac85db9173d4fa3d13aa5c53e902e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e1103c6ec2db311bbbf8dbaf918ca966a102e5c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353022"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177541"
 ---
 # <a name="compiler-error-c2557"></a>Erro do compilador C2557
 
-'identifier': membros particulares e protegidos não podem ser inicializados sem um construtor
+' identifier ': membros privados e protegidos não podem ser inicializados sem um construtor
 
-Somente os membros e amigos podem atribuir um valor a um membro particular ou protegido. Membros não públicos devem ser inicializados no construtor da classe.
+Somente membros e amigos podem atribuir um valor a um membro privado ou protegido. Membros não públicos devem ser inicializados no construtor de classe.

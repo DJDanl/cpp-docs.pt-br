@@ -8,18 +8,18 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: 60e8965e3ef2538554d8c664b35bd0849bd5e69e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb4566a0094db6d9e0cc97d81718a18a6df5cf18
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515701"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172159"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>classe de interface (C++/CLI e C++/CX)
 
 Declara uma interface.  Confira mais informações sobre interfaces nativas em [__interface](../cpp/interface.md).
 
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
+## <a name="all-runtimes"></a>Todos os Runtimes
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -29,7 +29,7 @@ interface class
 name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *interface_access*<br/>
 A acessibilidade de uma interface fora do assembly.  Os valores possíveis são **public** e **private**.  **private** é o padrão. Interfaces aninhadas não pode ter um especificador *interface_access*.
@@ -53,7 +53,7 @@ Uma interface define como uma classe pode ser implementada. Uma interface não �
 
 Uma classe ou um struct derivado de uma interface deve implementar todos os membros dessa interface. Ao implementar a interface *name*, você também deve implementar as interfaces na lista `base_interface`.
 
-Para obter mais informações, confira:
+Para obter mais informações, consulte:
 
 - [Construtor estático de interface](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
@@ -218,6 +218,6 @@ ref struct R : I, J {
 };
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

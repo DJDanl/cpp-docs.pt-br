@@ -2,12 +2,12 @@
 title: Alterar assinatura
 ms.date: 11/16/2016
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
-ms.openlocfilehash: ec42fd00ecf48fb700042f02543e3fe194fe6975
-ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
-ms.translationtype: HT
+ms.openlocfilehash: 1599a7900e33db61994ea75581f9d87b1aee83f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281942"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171899"
 ---
 # <a name="change-signature"></a>Alterar assinatura
 
@@ -35,11 +35,11 @@ ms.locfileid: "52281942"
 
    ![Caixa de diálogo Alterar Assinatura](images/changesignature_dialog.png)
 
-   | Botão | Descrição
+   | Botão | DESCRIÇÃO
    | ------ | ---
    | **Para cima/baixo**    | Mova o parâmetro selecionado para cima e para baixo na lista
    | **Adicionar**        | Adicionar um novo parâmetro à lista
-   | **Removerr**     | Remova o parâmetro selecionado da lista
+   | **Remover**     | Remova o parâmetro selecionado da lista
    | **Modificar**     | Modifica o parâmetro selecionado alterando seu tipo, nome e indica se ele é opcional e qual seu valor injetado
    | **Reverter**     | Restaura o parâmetro selecionado para seu estado original
    | **Reverter Tudo** | Restaura todos os parâmetros para seu estado original
@@ -53,7 +53,7 @@ ms.locfileid: "52281942"
 
    Aqui, você pode fazer o seguinte:
 
-   | Entrada | Descrição
+   | Entrada | DESCRIÇÃO
    | ----- | ---
    | **Tipo**               | O tipo do parâmetro (int, double, float, etc.)
    | **Nome**               | O nome do parâmetro

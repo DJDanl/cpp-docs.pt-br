@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - override Identifier
 ms.assetid: b286fb46-9374-4ad8-b2e7-4607119b6133
-ms.openlocfilehash: 71505f8b9b4dc2800e80a78a64f0ca6984af1349
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 82837ae34ab786e607df54038493b14350574a15
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345861"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188474"
 ---
 # <a name="override-specifier"></a>substituir especificador
 
-Você pode usar o **substituir** palavra-chave para designar as funções que substituem uma função virtual em uma classe base membro.
+Você pode usar a palavra-chave **override** para designar funções de membro que substituem uma função virtual em uma classe base.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,11 +23,11 @@ function-declaration override;
 
 ## <a name="remarks"></a>Comentários
 
-**substituir** é contextual e tem um significado somente quando especial é usada após uma declaração de função de membro; caso contrário, ele não é uma palavra-chave reservada.
+a **substituição** é contextual e tem um significado especial apenas quando é usada após uma declaração de função de membro; caso contrário, não é uma palavra-chave reservada.
 
 ## <a name="example"></a>Exemplo
 
-Use **substituir** para ajudar a evitar o comportamento de herança inadequados em seu código. O exemplo a seguir mostra onde, sem usar **substituir**, o comportamento da função de membro da classe derivada pode não ser o esperado. O compilador não emite erros para esse código.
+Use **override** para ajudar a evitar o comportamento de herança acidental em seu código. O exemplo a seguir mostra onde, sem usar **override**, o comportamento da função membro da classe derivada pode não ter sido planejado. O compilador não emite erros para esse código.
 
 ```cpp
 class BaseClass
@@ -51,7 +51,7 @@ class DerivedClass: public BaseClass
 };
 ```
 
-Quando você usa **substituir**, o compilador gera erros em vez de criar silenciosamente novo membro de funções.
+Quando você usa **override**, o compilador gera erros em vez de criar silenciosamente novas funções de membro.
 
 ```cpp
 class BaseClass
@@ -78,9 +78,9 @@ class DerivedClass: public BaseClass
 };
 ```
 
-Para especificar que as funções não podem ser substituídas e que as classes não podem ser herdadas, use o [final](../cpp/final-specifier.md) palavra-chave.
+Para especificar que as funções não podem ser substituídas e que as classes não podem ser herdadas, use a palavra-chave [final](../cpp/final-specifier.md) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Especificador final](../cpp/final-specifier.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

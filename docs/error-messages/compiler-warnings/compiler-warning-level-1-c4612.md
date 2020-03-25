@@ -1,27 +1,27 @@
 ---
-title: Compilador aviso (nível 1) C4612
+title: Aviso do compilador (nível 1) C4612
 ms.date: 08/27/2018
 f1_keywords:
 - C4612
 helpviewer_keywords:
 - C4612
 ms.assetid: 21ac02b2-51cd-4aff-9b70-d543511d5962
-ms.openlocfilehash: ed5458fc52c1c9c9f12187095e4658204613d1a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9478caef9eaba9c72dc282179100daf2d94c6d5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406360"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185978"
 ---
-# <a name="compiler-warning-level-1-c4612"></a>Compilador aviso (nível 1) C4612
+# <a name="compiler-warning-level-1-c4612"></a>Aviso do compilador (nível 1) C4612
 
-> Erro ao incluir o nome de arquivo
+> erro no nome de arquivo de inclusão
 
 ## <a name="remarks"></a>Comentários
 
-Este aviso ocorre com **#pragma include_alias** quando um nome de arquivo está incorreta ou ausente.
+Esse aviso ocorre com **#pragma include_alias** quando um nome de arquivo está incorreto ou ausente.
 
-Os argumentos para o **#pragma include_alias** instrução pode usar o formulário de cotação ("*filename*") ou a forma de colchete (\<*filename*>), mas ambas devem Use o mesmo formulário.
+Os argumentos para a instrução **#pragma include_alias** podem usar o formulário de aspas ("*filename*") ou o formato de ângulo (\<*nome de arquivo*>), mas ambos devem usar o mesmo formulário.
 
 ## <a name="example"></a>Exemplo
 

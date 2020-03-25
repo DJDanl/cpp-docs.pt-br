@@ -12,18 +12,18 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-ms.openlocfilehash: e4173c16e13c08a54b36e42183e6e18b6ed4fdc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecd8425bf7bcc9772d7b1327add79b89aea629a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516191"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182234"
 ---
 # <a name="arrays-ccli-and-ccx"></a>Arrays (C++/CLI e C++/CX)
 
 O tipo `Platform::Array<T>` em C++/CX, ou a palavra-chave **array** em C++/CLI, declara uma matriz de um tipo especificado e o valor inicial.
 
-## <a name="all-platforms"></a>Todas as Plataformas
+## <a name="all-platforms"></a>Todas as plataformas
 
 A matriz deve ser declarada usando o modificador handle-to-object (^) após o colchete angular de fechamento (>) na declaração.
 O número de elementos da matriz não faz parte do tipo. Uma variável de matriz pode fazer referência a matrizes de tamanhos diferentes.
@@ -32,7 +32,7 @@ Ao contrário do C++ padrão, a subscrição não é um sinônimo para aritméti
 
 Saiba mais sobre matrizes em:
 
-- [Como: usar matrizes no C++/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
+- [Como usar matrizes no C++/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
 
 - [Listas de argumentos variáveis (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)
 
@@ -168,6 +168,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

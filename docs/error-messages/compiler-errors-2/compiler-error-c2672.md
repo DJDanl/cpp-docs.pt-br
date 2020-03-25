@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2672
 ms.assetid: 7e86338a-2d4b-40fe-9dd2-ac6886f3f31a
-ms.openlocfilehash: df0f656c9db23739ec62629088b9cc5f7950a92d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f844b54285a7df69bfb4387a7afcc82dfef9252
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386857"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177125"
 ---
 # <a name="compiler-error-c2672"></a>Erro do compilador C2672
 
-> '*função*': função sobrecarregada não correspondente encontrada
+> '*Function*': nenhuma função sobrecarregada correspondente encontrada
 
-O compilador não foi possível encontrar uma função sobrecarregada que corresponde à função especificada. Foi encontrada nenhuma função que usa a correspondência de parâmetros ou nenhuma função correspondente tem a acessibilidade necessária no contexto.
+O compilador não pôde encontrar uma função sobrecarregada que corresponda à função especificada. Não foi encontrada nenhuma função que aceite parâmetros correspondentes ou nenhuma função correspondente tem a acessibilidade necessária no contexto.
 
-Quando usado por determinados algoritmos ou contêineres da biblioteca padrão, seus tipos devem fornecer membros acessíveis ou funções de amigo que satisfazem os requisitos do contêiner ou algoritmo. Por exemplo, seus tipos de iterador devem derivar de `std::iterator<>`. Operações de comparação ou o uso de outros operadores em tipos de elemento de contêiner pode exigir que o tipo de ser considerado como um lado esquerdo e um operando à direita. Usar o tipo como um operando à direita pode exigir a implementação do operador como uma função não membro do tipo.
+Quando usado por determinados contêineres ou algoritmos de biblioteca padrão, seus tipos devem fornecer Membros acessíveis ou funções Friend que atendam aos requisitos do contêiner ou do algoritmo. Por exemplo, os tipos de iteradores devem derivar de `std::iterator<>`. As operações de comparação ou o uso de outros operadores em tipos de elementos de contêiner podem exigir que o tipo seja considerado como um operando à esquerda e à direita. O uso do tipo como um operando à direita pode exigir a implementação do operador como uma função não membro do tipo.
 
 ## <a name="example"></a>Exemplo
 
-Versões do compilador antes do Visual Studio 2017 não executou a verificação de acesso em nomes qualificados em alguns contextos de modelo. Isso pode interferir no comportamento SFINAE esperado quando a substituição deve falhar devido à inacessibilidade de um nome. Eventualmente, isso poderia ter causado uma falha ou comportamento inesperado no tempo de execução devido ao compilador ter chamado incorretamente a sobrecarga errada do operador. No Visual Studio 2017, é gerado um erro do compilador.
+As versões do compilador antes do Visual Studio 2017 não realizaram a verificação de acesso em nomes qualificados em alguns contextos de modelo. Isso pode interferir no comportamento SFINAE esperado quando a substituição deve falhar devido à inacessibilidade de um nome. Eventualmente, isso poderia ter causado uma falha ou comportamento inesperado no runtime devido ao compilador ter chamado incorretamente a sobrecarga errada do operador. No Visual Studio 2017, é gerado um erro do compilador.
 
-Este exemplo é compilado no Visual Studio 2015, mas gera um erro no Visual Studio 2017. Para corrigir esse problema, torne o membro de parâmetro de modelo acessível no qual ela é avaliada.
+Este exemplo é compilado no Visual Studio 2015, mas gera um erro no Visual Studio 2017. Para corrigir esse problema, torne o membro de parâmetro de modelo acessível onde ele é avaliado.
 
 ```cpp
 #include <type_traits>

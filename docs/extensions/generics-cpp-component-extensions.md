@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-ms.openlocfilehash: 31998cf77e3f3cfdc6bc19ad2fc57a50da77e0f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 29c6b22189ea1f644c0fa52ec0f4d605604361ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516341"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181987"
 ---
 # <a name="generics--ccli-and-ccx"></a>Genéricos (C++/CLI e C++/CX)
 
@@ -32,7 +32,7 @@ Informações sobre como definir e usar interfaces genéricas.
 [Delegados genéricos (C++/CLI)](generic-delegates-visual-cpp.md)<br/>
 Informações sobre como definir e usar delegados genéricos.
 
-[Restrições em parâmetros de tipo genérico (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)<br/>
+[Restrições de parâmetros de tipo genérico (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)<br/>
 Informações sobre como usar restrições em tipos genéricos.
 
 [Consumindo genéricos (C++/CLI)](consuming-generics-cpp-cli.md)<br/>
@@ -51,9 +51,9 @@ Informações sobre como definir e usar classes genéricas.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Como: iterar em uma coleção genérica com for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
+[Como iterar em uma coleção genérica com for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
 Uso da palavra-chave [for each, in](../dotnet/for-each-in.md) em uma coleção genérica.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

@@ -8,24 +8,24 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: c38bfca4c1b93d373c86bbc710ccb30c43dafd4f
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 4f105558d7795210e1edb2470af4e50326f49de6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857458"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182195"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Mensagens do vetorizador e do paralelizador
 
-Você pode usar o Microsoft C++ opções do compilador [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) e [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) para definir o [paralelização automática e vetorização automática](../../parallel/auto-parallelization-and-auto-vectorization.md) motivo de saída códigos e mensagens informativas sobre sua atividade. Este artigo explica os códigos de motivo e as mensagens.
+Você pode usar as opções C++ de compilador da Microsoft [/Qpar-Report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) e [/Qvec-Report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) para definir a [paralelização automática e a Auto-vetorização](../../parallel/auto-parallelization-and-auto-vectorization.md) para códigos de motivo de saída e mensagens informativas sobre sua atividade. Este artigo explica os códigos de motivo e as mensagens.
 
-## <a name="BKMK_InformationalMessages"></a> Mensagens informativas
+## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>Mensagens informativas
 
 Dependendo do nível de relatório especificado, uma das mensagens informativas a seguir é exibida para cada loop.
 
 Para obter informações sobre códigos de motivos, consulte a próxima parte deste artigo.
 
-|Mensagem informativa|Descrição|
+|Mensagem informativa|DESCRIÇÃO|
 |---------------------------|-----------------|
 |5001|`Loop vectorized.`|
 |5002|`Loop not vectorized due to reason '*description*'.`|
@@ -33,15 +33,15 @@ Para obter informações sobre códigos de motivos, consulte a próxima parte de
 |5012|`Loop not parallelized due to reason '*description*'.`|
 |5021|`Unable to associate loop with pragma.`|
 
-As seções a seguir listam os códigos de motivos possíveis para o paralelizador e o vetorizador.
+As seções a seguir listam possíveis códigos de motivo para paralelizador automático e vetorizador automático.
 
-## <a name="BKMK_ReasonCode50x"></a> códigos de motivo 5xx
+## <a name="5xx-reason-codes"></a><a name="BKMK_ReasonCode50x"></a>códigos de motivo do 5xx
 
-O 5*xx* códigos de motivo se aplicam a paralelizador e o vetorizador.
+Os códigos de motivo de 5*XX* se aplicam ao paralelizador automático e ao vetorizador automático.
 
 |Código de motivo|Explicação|
 |-----------------|-----------------|
-|500|Uma mensagem genérica que abrange vários casos — por exemplo, o loop inclui várias saídas, ou o cabeçalho do loop não termina incrementando a variável de indução.|
+|500|Uma mensagem genérica que abrange vários casos — por exemplo, o loop inclui várias saídas ou o cabeçalho do loop não termina aumentando a variável de indução.|
 |501|`Induction variable is not local; or upper bound is not loop-invariant.`|
 |502|`Induction variable is stepped in some manner other than a simple +1.`|
 |503|`Loop includes exception-handling or switch statements.`|
@@ -198,9 +198,9 @@ void code_504(int *A) {
 }
 ```
 
-## <a name="BKMK_ReasonCode100x"></a> códigos de motivo 10xx
+## <a name="10xx-reason-codes"></a><a name="BKMK_ReasonCode100x"></a>códigos de motivo de 10xx
 
-Os 10*xx* códigos de motivo se aplicam ao paralelizador.
+Os códigos de motivo de 10*XX* se aplicam ao paralelizador automático.
 
 |Código de motivo|Explicação|
 |-----------------|-----------------|
@@ -407,9 +407,9 @@ void code_1010()
 }
 ```
 
-## <a name="BKMK_ReasonCode110x"></a> códigos de motivo 11xx
+## <a name="11xx-reason-codes"></a><a name="BKMK_ReasonCode110x"></a>códigos de motivo de 11xx
 
-O 11*xx* códigos de motivo se aplicam ao vetorizador.
+Os códigos de motivo de 11*XX* se aplicam ao vetorizador automático.
 
 |Código de motivo|Explicação|
 |-----------------|-----------------|
@@ -555,9 +555,9 @@ void code_1106(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode120x"></a> códigos de motivo 12xx
+## <a name="12xx-reason-codes"></a><a name="BKMK_ReasonCode120x"></a>códigos de motivo de 12xx
 
-Os 12*xx* códigos de motivo se aplicam ao vetorizador.
+Os códigos de motivo de 12*XX* se aplicam ao vetorizador automático.
 
 |Código de motivo|Explicação|
 |-----------------|-----------------|
@@ -630,9 +630,9 @@ void code_1203(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode130x"></a> códigos de motivo 13xx
+## <a name="13xx-reason-codes"></a><a name="BKMK_ReasonCode130x"></a>códigos de motivo de 13xx
 
-Os 13*xx* códigos de motivo se aplicam ao vetorizador.
+Os códigos de motivo de 13*XX* se aplicam ao vetorizador automático.
 
 |Código de motivo|Explicação|
 |-----------------|-----------------|
@@ -762,13 +762,13 @@ void code_1305( S_1305 *s, S_1305 x)
 }
 ```
 
-## <a name="BKMK_ReasonCode140x"></a> códigos de motivo 14xx
+## <a name="14xx-reason-codes"></a><a name="BKMK_ReasonCode140x"></a>códigos de motivo de 14xx
 
-As 14*xx* motivo códigos ocorrem quando alguma opção que é incompatível com a vetorização é especificada.
+Os códigos de motivo de 14*XX* ocorrem quando uma opção incompatível com a vetorização é especificada.
 
 |Código de motivo|Explicação|
 |-----------------|-----------------|
-|1400|`#pragma loop(no_vector) is specified.`|
+|1\.400|`#pragma loop(no_vector) is specified.`|
 |1401|`/kernel switch is specified when targeting x86 or ARM.`|
 |1402|`/arch:SSE2 or higher switch is not specified when targeting x86.`|
 |1403|`/arch:ATOM switch is specified and the loop includes operations on doubles.`|
@@ -834,9 +834,9 @@ void code_1404(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode150x"></a> códigos de motivo 15xx
+## <a name="15xx-reason-codes"></a><a name="BKMK_ReasonCode150x"></a>códigos de motivo de 15xx
 
-Os 15*xx* códigos de motivo se aplica ao alias. O alias ocorre quando um local na memória pode ser acessado por dois nomes diferentes.
+Os códigos de motivo de 15*XX* se aplicam a aliases. O alias ocorre quando um local na memória pode ser acessado por dois nomes diferentes.
 
 |Código de motivo|Explicação|
 |-----------------|-----------------|
@@ -962,12 +962,12 @@ void code_1505(int *A, int *B)
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[C /C++ erros e avisos das ferramentas compilador e build](../compiler-errors-1/c-cpp-build-errors.md)
-[paralelização automática e vetorização automática](../../parallel/auto-parallelization-and-auto-vectorization.md) \
-[Vetorizador automático no Visual Studio 2012 – visão geral](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
-[#pragma loop()](../../preprocessor/loop.md) \
-[/Q opções (operações de nível baixo)](../../build/reference/q-options-low-level-operations.md) \
-[/Qpar-Report (nível de Paralelizador automático relatórios)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
+[Erros eC++ avisos do C/compilador e ferramentas de compilação](../compiler-errors-1/c-cpp-build-errors.md)
+[a paralelização automática e a autoria de vetores](../../parallel/auto-parallelization-and-auto-vectorization.md) \
+[Auto-vetorizador automático no Visual Studio 2012 – visão geral](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
+[loop de #pragma ()](../../preprocessor/loop.md) \
+[Opções de/q (operações de nível baixo)](../../build/reference/q-options-low-level-operations.md) \
+[/Qpar-Report (nível de relatório do paralelizador automático automático)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
 [/Qvec-report (nível de relatórios do vetorizador automático)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

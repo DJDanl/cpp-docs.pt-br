@@ -6,33 +6,33 @@ helpviewer_keywords:
 - attributes [COM]
 - COM, attributes
 ms.assetid: 52a5dd70-e8be-4bba-afd6-daf90fe689a0
-ms.openlocfilehash: eb87d3861c6b3066cf482108e2ce2243c8196093
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15225d23abb66b8aadd5f82b8429334356bdaa8d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148443"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168311"
 ---
 # <a name="com-attributes"></a>Atributos COM
 
-Os atributos COM injetam código para dar suporte a diversas áreas de desenvolvimento COM e desenvolvimento do .NET Framework common language runtime. Esses variam de áreas de implementação de interface personalizada e suporte às interfaces existentes para dar suporte a eventos, métodos e propriedades de estoque. Além disso, o suporte pode ser encontrado para a composição e a implementação de controle ActiveX.
+Os atributos COM injetam código para dar suporte a várias áreas de desenvolvimento COM e .NET Framework Common Language Runtime desenvolvimento. Essas áreas variam de implementação de interface personalizada e suporte de interfaces existentes para dar suporte a propriedades, métodos e eventos de ações. Além disso, o suporte pode ser encontrado para implementação de controle de composição e ActiveX.
 
-|Atributo|Descrição|
+|Atributo|DESCRIÇÃO|
 |---------------|-----------------|
-|[aggregatable](aggregatable.md)|Indica se um controle pode ser agregado por outro controle.|
+|[aggregatable](aggregatable.md)|Indica que um controle pode ser agregado por outro controle.|
 |[aggregates](aggregates.md)|Indica que um controle agrega a classe de destino.|
 |[coclass](coclass.md)|Cria um objeto COM, que pode implementar uma interface COM.|
-|[com_interface_entry](com-interface-entry-cpp.md)|Adiciona uma entrada de interface para um mapa COM.|
-|[implements_category](implements-category.md)|Especifica as categorias de componentes implementados para a classe.|
+|[com_interface_entry](com-interface-entry-cpp.md)|Adiciona uma entrada de interface a um mapa COM.|
+|[implements_category](implements-category.md)|Especifica as categorias de componente implementadas para a classe.|
 |[progid](progid.md)|Define o ProgID de um controle.|
 |[rdx](rdx.md)|Cria ou modifica uma chave do registro.|
 |[registration_script](registration-script.md)|Executa o script de registro especificado.|
-|[requires_category](requires-category.md)|Especifica as categorias de componente necessário para a classe.|
-|[support_error_info](support-error-info.md)|Dá suporte a relatórios de erros para o objeto de destino.|
+|[requires_category](requires-category.md)|Especifica as categorias de componente necessárias para a classe.|
+|[support_error_info](support-error-info.md)|Dá suporte ao relatório de erros para o objeto de destino.|
 |[synchronize](synchronize.md)|Sincroniza o acesso a um método.|
 |[threading](threading-cpp.md)|Especifica o modelo de threading para um objeto COM.|
 |[vi_progid](vi-progid.md)|Define um ProgID independente de versão para um controle.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos por grupo](attributes-by-group.md)

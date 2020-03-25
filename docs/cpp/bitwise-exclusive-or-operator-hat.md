@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-ms.openlocfilehash: 07af1b507cf256b84ac2f0f2db4061790a23555a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a44dc60a985729aae79ed0e2e48c44adace647b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232008"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190710"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Operador OR exclusivo bit a bit: ^
 
@@ -27,13 +27,13 @@ expression ^ expression
 
 ## <a name="remarks"></a>Comentários
 
-O operador OR exclusivo bit a bit (**^**) compara cada bit do primeiro operando ao bit correspondente de seu segundo operando. Se um bit for 0 e o outro bit for 1, o bit resultante correspondente será definido como 1. Caso contrário, o bit de resultado correspondente será definido como 0.
+O operador OR exclusivo or ( **^** ) de OR bit compara cada bit de seu primeiro operando com o bit correspondente de seu segundo operando. Se um bit for 0 e o outro bit for 1, o bit de resultado correspondente será definido como 1. Caso contrário, o bit de resultado correspondente é definido como zero (0).
 
-Ambos os operandos para o operador OR exclusivo bit a bit devem ser do tipo integral. As conversões aritméticas usuais abordadas [conversões padrão](standard-conversions.md) são aplicadas aos operandos.
+Ambos os operandos para o operador OR exclusivo bit a bit devem ser do tipo integral. As conversões aritméticas usuais abordadas nas [conversões padrão](standard-conversions.md) são aplicadas aos operandos.
 
 ## <a name="operator-keyword-for-"></a>Palavra-chave do operador para ^
 
-O **xor** operador é o equivalente de texto de **^**. Há duas maneiras para acessar o **xor** operador em seus programas: incluir o arquivo de cabeçalho `iso646.h`, ou compilando com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção do compilador (desabilitar extensões de linguagem).
+O operador **XOR** é o equivalente de texto do **^** . Há duas maneiras de acessar o operador **XOR** em seus programas: inclua o arquivo de cabeçalho `iso646.h`ou compile com a opção de compilador [/za](../build/reference/za-ze-disable-language-extensions.md) (desabilitar extensões de linguagem).
 
 ## <a name="example"></a>Exemplo
 
@@ -51,6 +51,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C++], vs. templates
 - templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-ms.openlocfilehash: 74cfd791e8400b788d38f272eed3d421ca4230e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 567286ee24e9df968b2d352489fe12f2735854eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516351"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172341"
 ---
 # <a name="generics-and-templates-ccli"></a>Genéricos e modelos (C++/CLI)
 
@@ -23,13 +23,13 @@ Saiba mais em [Windows Runtime e modelos gerenciados](windows-runtime-and-manage
 
 Principais diferenças entre genéricos e modelos do C++:
 
-- Os genéricos são genéricos até serem substituídos por tipos no tempo de execução. Os modelos são especializados no tempo de compilação para que não sejam tipos parametrizados no tempo de execução
+- Os genéricos são genéricos até serem substituídos por tipos no runtime. Os modelos são especializados no tempo de compilação para que não sejam tipos parametrizados no runtime
 
-- O Common Language Runtime é compatível especificamente com genéricos no MSIL. Como o tempo de execução reconhece os genéricos, tipos específicos podem ser substituídos por tipos genéricos ao fazer referência a um assembly que contém um tipo genérico. Modelos, por outro lado, são resolvidos em tipos comuns no tempo de compilação, e os tipos resultantes não podem ser especializados em outros assemblies.
+- O Common Language Runtime é compatível especificamente com genéricos no MSIL. Como o runtime reconhece os genéricos, tipos específicos podem ser substituídos por tipos genéricos ao fazer referência a um assembly que contém um tipo genérico. Modelos, por outro lado, são resolvidos em tipos comuns no tempo de compilação, e os tipos resultantes não podem ser especializados em outros assemblies.
 
-- Genéricos especializados em dois assemblies diferentes com os mesmos argumentos de tipo são o mesmo tipo. Modelos especializados em dois assemblies diferentes com os mesmos argumentos de tipo são considerados pelo tempo de execução como tipos diferentes.
+- Genéricos especializados em dois assemblies diferentes com os mesmos argumentos de tipo são o mesmo tipo. Modelos especializados em dois assemblies diferentes com os mesmos argumentos de tipo são considerados pelo runtime como tipos diferentes.
 
-- Genéricos são gerados como uma única parte do código executável que é usado para todos os argumentos de tipo de referência (isso não se aplica a tipos de valor, que têm uma implementação exclusiva por tipo de valor). O compilador JIT tem conhecimento dos genéricos e é capaz de otimizar o código para os tipos de valor ou referência que são usados como argumentos de tipo. Os modelos geram um código de tempo de execução separado para cada especialização.
+- Genéricos são gerados como uma única parte do código executável que é usado para todos os argumentos de tipo de referência (isso não se aplica a tipos de valor, que têm uma implementação exclusiva por tipo de valor). O compilador JIT tem conhecimento dos genéricos e é capaz de otimizar o código para os tipos de valor ou referência que são usados como argumentos de tipo. Os modelos geram um código de runtime separado para cada especialização.
 
 - Os genéricos não permitem parâmetros de modelo sem tipo, como `template <int i> C {}`. Os modelos permitem.
 
@@ -43,11 +43,11 @@ Principais diferenças entre genéricos e modelos do C++:
 
 ## <a name="combining-templates-and-generics"></a>Combinação de modelos e genéricos
 
-A diferença básica nos genéricos tem implicações na criação de aplicativos que combinam modelos e genéricos. Por exemplo, suponha que você queira criar um wrapper genérico para uma classe de modelo para expor esse modelo a outras linguagens como genérico. Não é possível fazer o genérico pegar um parâmetro de tipo e passar para o modelo, já que o modelo precisa ter esse parâmetro de tipo no tempo de compilação, mas o genérico não resolve o parâmetro de tipo até o tempo de execução. Aninhar um modelo dentro de um genérico também não funciona porque não há nenhuma maneira de expandir os modelos no tempo de compilação para tipos genéricos arbitrários que possa ser instanciada no tempo de execução.
+A diferença básica nos genéricos tem implicações na criação de aplicativos que combinam modelos e genéricos. Por exemplo, suponha que você queira criar um wrapper genérico para uma classe de modelo para expor esse modelo a outras linguagens como genérico. Não é possível fazer o genérico pegar um parâmetro de tipo e passar para o modelo, já que o modelo precisa ter esse parâmetro de tipo no tempo de compilação, mas o genérico não resolve o parâmetro de tipo até o runtime. Aninhar um modelo dentro de um genérico também não funciona porque não há nenhuma maneira de expandir os modelos no tempo de compilação para tipos genéricos arbitrários que possa ser instanciada no runtime.
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>DESCRIÇÃO
 
 O exemplo a seguir mostra uma maneira simples de usar modelos e genéricos juntos. Neste exemplo, a classe de modelo passa o próprio parâmetro para o tipo genérico. O inverso não é possível.
 
@@ -92,6 +92,6 @@ int main() {
 F
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Genéricos](generics-cpp-component-extensions.md)

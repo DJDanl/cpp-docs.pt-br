@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4216
 ms.assetid: 68512095-acbc-47aa-96bf-9eb0e73b24a3
-ms.openlocfilehash: 102e8721b35012c72ad0568c759b7956d670a2f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9907ebef5711c61321d8ce2da8b330602c63f0a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165107"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193843"
 ---
 # <a name="linker-tools-warning-lnk4216"></a>Aviso LNK4216 (Ferramentas de Vinculador)
 
-Entrada de ponto de entrada exportado
+Entrada de ponto de entrada exportada
 
 Um ponto de entrada foi exportado de uma DLL. O ponto de entrada de uma DLL não precisa ser exportado.

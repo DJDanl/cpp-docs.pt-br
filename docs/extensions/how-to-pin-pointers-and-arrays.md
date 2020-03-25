@@ -1,19 +1,19 @@
 ---
-title: 'Como: Fixar ponteiros e matrizes'
+title: Como fixar ponteiros e matrizes
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - pointers, pinning
 - arrays [C++], pinning
 ms.assetid: ee783260-e676-46b8-a38e-11a06f1d57b0
-ms.openlocfilehash: ae8c1da79f41cf9209f2765ce5aa2f7ca3d34aea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8dc42690f0f56b97b2af3ed54dfb17d49b081695
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515681"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172211"
 ---
-# <a name="how-to-pin-pointers-and-arrays"></a>Como: Fixar ponteiros e matrizes
+# <a name="how-to-pin-pointers-and-arrays"></a>Como fixar ponteiros e matrizes
 
 Fixar um subobjeto definido em um objeto gerenciado tem o efeito de fixar todo o objeto.  Por exemplo, se qualquer elemento de uma matriz for fixado, a matriz inteira também será fixada. Não há extensões da linguagem para declarar uma matriz fixada. Para fixar uma matriz, declare um ponteiro de anexação ao seu tipo de elemento e fixe um dos seus elementos.
 
@@ -45,6 +45,6 @@ int main() {
 ++
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [pin_ptr (C++/CLI)](pin-ptr-cpp-cli.md)

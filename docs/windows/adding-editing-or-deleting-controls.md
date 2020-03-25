@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: a42a64f93d334c0b5c63b0eca1567e6964d0a3ae
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ad14a0500336bc1ca61e00bcd6d9a6e1088afc81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447213"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167518"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Como: Adicionar, editar ou excluir controles (C++)
 
@@ -144,9 +144,9 @@ Você também pode usar a guia **variáveis de membro** no [Assistente de classe
 
 Na caixa de diálogo, selecione o controle, pressione a tecla **delete** ou vá para o menu **Editar** > **excluir**.
 
-## <a name="other-issues"></a>Outros Problemas
+## <a name="other-issues"></a>Outros problemas
 
-### <a name="troubleshooting"></a>Solução de problemas
+### <a name="troubleshooting"></a>solução de problemas
 
 Depois que você adicionar um controle comum ou um controle de edição rico a uma caixa de diálogo, ele não aparecerá quando você testar a caixa de diálogo. Ou, a própria caixa de diálogo não aparecerá. Por exemplo:
 
@@ -189,10 +189,10 @@ O Visual Studio permite que você insira controles ActiveX em sua caixa de diál
 
 A caixa de diálogo **Inserir controle ActiveX** permite que você insira controles ActiveX em sua caixa de diálogo ao usar o [Editor de caixa](../windows/dialog-editor.md)de diálogo. Essa caixa de diálogo contém as seguintes propriedades:
 
-|Propriedade|Descrição|
+|Propriedade|DESCRIÇÃO|
 |---|---|
 |**Controle ActiveX**|Exibe uma lista de controles ActiveX.<br/><br/>A inserção de um controle dessa caixa de diálogo não gera uma classe wrapper. Se você precisar de uma classe wrapper, use [modo de exibição de classe](/visualstudio/ide/viewing-the-structure-of-code) para criar uma, consulte [adicionando uma classe](../ide/adding-a-class-visual-cpp.md).<br/><br/>Se um controle ActiveX não aparecer nessa caixa de diálogo, tente instalar o controle de acordo com as instruções do fornecedor.|
-|**Path**|Exibe o arquivo no qual o controle ActiveX é encontrado.|
+|**Caminho**|Exibe o arquivo no qual o controle ActiveX é encontrado.|
 
 > [!CAUTION]
 > Talvez não seja legal distribuir todos os controles ActiveX em seu sistema. Consulte o contrato de licença para o software que instalou os controles ou contate a empresa do software.
@@ -223,11 +223,11 @@ Os controles ActiveX fornecidos por fornecedores independentes podem vir equipad
 > [!NOTE]
 > Esse procedimento se aplica ao uso da página de propriedades para editar controles ActiveX. Você também pode procurar e editar propriedades do ActiveX na janela novas **Propriedades** .
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 Win32
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gerenciar controles da caixa de diálogo](controls-in-dialog-boxes.md)<br/>
 [Como: controles de layout](arrangement-of-controls-on-dialog-boxes.md)<br/>

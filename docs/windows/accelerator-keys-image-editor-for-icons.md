@@ -5,12 +5,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 35aeeb7e644849d215cd4782a1d06576449746ef
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 867c7d2c217b5efb832654a7863e834a4351c126
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447208"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167570"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Teclas de aceleração (C++ editor de imagem para ícones)
 
@@ -19,7 +19,7 @@ Abaixo estão as teclas de aceleração para os comandos do editor de imagem que
 > [!NOTE]
 > As opções disponíveis nas caixas de diálogo e os nomes os locais dos comandos de menu que você vê podem diferir do que é descrito na Ajuda, dependendo de suas configurações ativas ou da edição. Para alterar as configurações, vá até **ferramentas** de menu > **configurações de importação e exportação**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-|{1&gt;Comando&lt;1}|Keys|Descrição|
+|Comando|simétricas|DESCRIÇÃO|
 |-------------|----------|-----------------|
 |Image.AirBrushTool|**Ctrl** + **A**|Desenha usando um spray com o tamanho e a cor selecionados.|
 |Image.BrushTool|**Ctrl** + **B**|Desenha usando um pincel com a forma, o tamanho e a cor selecionados.|
@@ -37,7 +37,7 @@ Abaixo estão as teclas de aceleração para os comandos do editor de imagem que
 |Image.LineTool|**Ctrl** + **L**|Desenha uma linha reta com a forma, o tamanho e a cor selecionados.|
 |Image.MagnificationTool|**Ctrl** + **M**|Ativa a ferramenta de **ampliação** , que permite que você amplie seções específicas da imagem.|
 |Image.Magnify|**Ctrl** + **Shift** + **M**|Alterna entre a ampliação atual e a ampliação de 1:1.|
-|Image.NewImageType|**Inserir**|Inicia a [caixa de diálogo novo tipo de imagem do dispositivo \<>](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) com a qual você pode criar uma imagem para um tipo de imagem diferente.|
+|Image.NewImageType|**Inserção**|Inicia a [caixa de diálogo novo tipo de imagem do dispositivo \<>](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) com a qual você pode criar uma imagem para um tipo de imagem diferente.|
 |Image.NextColor|**Ctrl** +  **]**<br /><br /> - ou -<br /><br /> **Ctrl** + **seta para a direita**|Altera a cor do primeiro plano do desenho para a próxima cor da paleta.|
 |Image.NextRightColor|**Ctrl** + **Shift** +  **]**<br /><br /> - ou -<br /><br /> **Shift** + **Ctrl** + **seta para a direita**|Altera a cor do plano de fundo do desenho para a próxima cor da paleta.|
 |Image.OutlinedEllipseTool|**Shift** + **ALT** + **P**|Desenha uma elipse preenchida com um contorno.|
@@ -59,11 +59,11 @@ Abaixo estão as teclas de aceleração para os comandos do editor de imagem que
 |Image.ZoomIn|**Ctrl** + **Shift** +  **.** (ponto final)<br /><br /> - ou -<br /><br /> **Ctrl** + **seta para cima**|Aumenta a ampliação da exibição atual.|
 |Image.ZoomOut|**Ctrl** +  **,** (vírgula)<br /><br /> - ou -<br /><br /> **Ctrl** + **seta para baixo**|Reduz a ampliação da exibição atual.|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 Nenhum
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Editor de imagens para ícones](../windows/image-editor-for-icons.md)<br/>
 [Como: criar um ícone ou outra imagem](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>

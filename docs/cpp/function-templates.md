@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-ms.openlocfilehash: d430ad7650ffa47f0d6334a827b416cfb05ae6c2
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: f2caf70dd90e76c7bc4f20ea4bf34845b343efc2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894368"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179738"
 ---
 # <a name="function-templates"></a>Modelos de função
 
@@ -28,9 +28,9 @@ int main() {
 }
 ```
 
-Esse código define uma família de funções que permutam os valores dos argumentos. Com base neste modelo, você pode gerar funções que permutarão **int** e **longo** tipos e também tipos definidos pelo usuário. `MySwap` permutará até mesmo classes se o operador de atribuição e o construtor de cópia da classe estiverem definidos corretamente.
+Esse código define uma família de funções que permutam os valores dos argumentos. A partir desse modelo, você pode gerar funções que trocam tipos **int** e **Long** e também tipos definidos pelo usuário. `MySwap` permutará até mesmo classes se o operador de atribuição e o construtor de cópia da classe estiverem definidos corretamente.
 
-Além disso, o modelo de função impedirá você de permuta de objetos de tipos diferentes, pois o compilador conhece os tipos dos *uma* e *b* parâmetros em tempo de compilação.
+Além disso, o modelo de função impedirá que você permutasse objetos de tipos diferentes, porque o compilador *sabe os tipos* dos parâmetros a e *b* no momento da compilação.
 
 Embora essa função possa ser executada por uma função sem modelo, usando ponteiros nulos, a versão com modelo oferece segurança de tipos. Considere as seguintes chamadas:
 
@@ -55,9 +55,9 @@ int main(int j) {
 }
 ```
 
-Quando o argumento de modelo é especificado explicitamente, as conversões implícitas normais são realizadas para converter o argumento da função no tipo dos parâmetros correspondentes do modelo de função. No exemplo acima, o compilador converterá `j` digitar **char**.
+Quando o argumento de modelo é especificado explicitamente, as conversões implícitas normais são realizadas para converter o argumento da função no tipo dos parâmetros correspondentes do modelo de função. No exemplo acima, o compilador converterá `j` no tipo **Char**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos](../cpp/templates-cpp.md)<br/>
 [Instanciação do modelo de função](../cpp/function-template-instantiation.md)<br/>

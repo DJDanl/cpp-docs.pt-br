@@ -7,12 +7,12 @@ helpviewer_keywords:
 - protected keyword [C++], member access
 - protected keyword [C++]
 ms.assetid: 863d299f-fc0d-45d5-a1a7-bd24b7778a93
-ms.openlocfilehash: 1cbe88a80b83caa78972d1e2799c1e0d87d1cb0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29f57eac7201ac0647275c70c539f9b2f28eb81b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244522"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179244"
 ---
 # <a name="protected-c"></a>protected (C++)
 
@@ -26,7 +26,7 @@ protected base-class
 
 ## <a name="remarks"></a>Comentários
 
-O **protegidos** palavra-chave especifica o acesso a membros de classe na *lista de membros* até o próximo especificador de acesso (**público** ou **privada**) ou no final da definição de classe. Membros de classe declarados como **protegidos** pode ser usado somente pelo seguinte:
+A palavra-chave **Protected** especifica o acesso a membros de classe na *lista de membros* até o próximo especificador de acesso (**público** ou **privado**) ou o final da definição de classe. Os membros de classe declarados como **protegidos** podem ser usados somente pelo seguinte:
 
 - Funções de membro da classe que declarou originalmente esses membros.
 
@@ -36,20 +36,20 @@ O **protegidos** palavra-chave especifica o acesso a membros de classe na *lista
 
 - Direcionar classes derivadas de modo particular que também têm acesso aos membros protegidos.
 
-Preceder o nome de uma classe base, o **protegidos** palavra-chave especifica que os membros públicos e protegidos da classe base são membros protegidos de suas classes derivadas.
+Ao anteceder o nome de uma classe base, a palavra-chave **Protected** especifica que os membros públicos e protegidos da classe base são membros protegidos de suas classes derivadas.
 
-Membros protegidos não são tão particulares quanto **privados** membros, que são acessíveis somente aos membros da classe na qual eles são declarados, mas eles não são tão públicos quanto **público** membros, que são acessíveis no qualquer função.
+Membros protegidos não são tão privados como membros **privados** , que são acessíveis somente para membros da classe na qual eles são declarados, mas não são tão públicos como membros **públicos** , que são acessíveis em qualquer função.
 
-Membros protegidos que também são declarados como **estático** podem ser acessados por qualquer friend ou função de membro de uma classe derivada. Membros que não são declarados como protegidos **estático** podem ser acessados por friends e funções de membro em uma classe derivada somente por meio de um ponteiro para fazer referência ao, ou o objeto da classe derivada.
+Membros protegidos que também são declarados como **estáticos** são acessíveis a qualquer função Friend ou membro de uma classe derivada. Membros protegidos que não são declarados como **estáticos** são acessíveis a amigos e a funções de membro em uma classe derivada somente por meio de um ponteiro para, referência a ou objeto da classe derivada.
 
-Para obter informações relacionadas, consulte [amigo](../cpp/friend-cpp.md), [pública](../cpp/public-cpp.md), [privada](../cpp/private-cpp.md)e a tabela de acesso de membro no [controlando o acesso a membros de classe](member-access-control-cpp.md) .
+Para obter informações relacionadas, consulte [amigo](../cpp/friend-cpp.md), [público](../cpp/public-cpp.md), [privado](../cpp/private-cpp.md)e a tabela de acesso a membros no [controle de acesso a membros de classe](member-access-control-cpp.md).
 
 ## <a name="clr-specific"></a>Específico do /clr
 
-Nos tipos de CLR, o C++ palavras-chave do especificador de acesso (**pública**, **privada**, e **protegido**) podem afetar a visibilidade de tipos e métodos em relação aos assemblies. Para obter mais informações, consulte [controle de acesso de membro](member-access-control-cpp.md).
+Em tipos CLR, as C++ palavras-chave do especificador de acesso (**pública**, **privada**e **protegida**) podem afetar a visibilidade dos tipos e métodos em relação aos assemblies. Para obter mais informações, consulte [controle de acesso de membro](member-access-control-cpp.md).
 
 > [!NOTE]
->  Arquivos compilados com [/LN](../build/reference/ln-create-msil-module.md) não são afetados por esse comportamento. Nesse caso, todas as classes gerenciadas (públicas ou particulares) serão visíveis.
+>  Arquivos compilados com [/ln](../build/reference/ln-create-msil-module.md) não são afetados por esse comportamento. Nesse caso, todas as classes gerenciadas (públicas ou particulares) serão visíveis.
 
 ## <a name="end-clr-specific"></a>Específico de END /clr
 
@@ -87,7 +87,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controlando o acesso a membros de classe](member-access-control-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

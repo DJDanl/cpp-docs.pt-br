@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
-ms.openlocfilehash: 8c659f23d6828616c4a48522b61330336e994cbb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d0fb85a3f5642bc5fffcad29892ca15bb13a1ce0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514643"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166908"
 ---
 # <a name="immediatebind"></a>immediatebind
 
@@ -42,9 +42,9 @@ Consulte [ligável](bindable.md) para obter um exemplo de como usar **immediateb
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>

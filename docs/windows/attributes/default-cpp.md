@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b789f82f4b5a09b86d72dfde5d783665cf2e918a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501690"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167180"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -25,7 +25,7 @@ Indica que a dispinterface ou personalizada definida em uma coclass representa a
 [ default(interface1, interface2) ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *interface1*<br/>
 A interface padrão que será disponibilizada para os ambientes de script que criam um objeto com base na classe definida com o atributo **padrão** .
@@ -43,7 +43,7 @@ O atributo **padrão** C++ tem a mesma funcionalidade que o atributo MIDL [padr�
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra como o **padrão** é usado na definição de uma coclass para `ICustomDispatch` especificar como a interface de programação padrão:
+O código a seguir mostra como o **padrão** é usado na definição de uma coclass para especificar `ICustomDispatch` como a interface de programação padrão:
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -104,9 +104,9 @@ O atributo de [origem](source-cpp.md) também tem um exemplo de como usar o **pa
 |**Atributos necessários**|**coclass** (quando aplicado à **classe** ou **estrutura**)|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>

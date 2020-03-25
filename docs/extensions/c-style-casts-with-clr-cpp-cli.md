@@ -5,14 +5,14 @@ ms.topic: reference
 helpviewer_keywords:
 - C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-ms.openlocfilehash: d9544e3002cfa489e9700b83367b15b164e9b513
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b7e492c62047e3b38224637f842d8a7fcbae84f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516131"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172588"
 ---
-# <a name="c-style-casts-with-clr-ccli"></a>Conversões C-Style com /clr (C++/CLI)
+# <a name="c-style-casts-with-clr-ccli"></a>Conversões de Estilo C-Style com /clr (C++/CLI)
 
 O tópico a seguir aplica-se apenas ao Common Language Runtime.
 
@@ -28,7 +28,7 @@ Quando usado com tipos CLR, o compilador tenta mapear a conversão C-style para 
 
 5. static_cast mais const_cast
 
-Se nenhuma das conversões acima for válida e se o tipo da expressão e o tipo de destino forem tipos de referência do CLR, a conversão C-style será mapeada para uma verificação do tempo de execução (instrução MSIL castclass). Caso contrário, uma conversão C-style será considerada inválida e o compilador emitirá um erro.
+Se nenhuma das conversões acima for válida e se o tipo da expressão e o tipo de destino forem tipos de referência do CLR, a conversão C-style será mapeada para uma verificação do runtime (instrução MSIL castclass). Caso contrário, uma conversão C-style será considerada inválida e o compilador emitirá um erro.
 
 ## <a name="remarks"></a>Comentários
 
@@ -160,6 +160,6 @@ int main() {
 
 Opção do compilador: `/clr`
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
