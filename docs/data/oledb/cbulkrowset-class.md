@@ -95,12 +95,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: a235a38531141f306b33093ac2546ae232830f0e
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e66a183c7bbafa16b3aefea8da1472255b507468
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446057"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212117"
 ---
 # <a name="cbulkrowset-class"></a>Classe CBulkRowset
 
@@ -113,18 +113,18 @@ template <class TAccessor>
 class CBulkRowset : public CRowset<TAccessor>
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *TAccessor*<br/>
 Uma classe de acessador.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atldbcli. h
 
 ## <a name="members"></a>Membros
 
-### <a name="methods"></a>{1&gt;Métodos&lt;1}
+### <a name="methods"></a>Métodos
 
 |||
 |-|-|
@@ -139,13 +139,13 @@ Uma classe de acessador.
 |[ReleaseRows](#releaserows)|Define a linha atual (`m_nCurrentRow`) como zero e libera Todas as linhas.|
 |[SetRows](#setrows)|Define o número de identificadores de linha a serem recuperados por uma chamada.|
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra o uso da classe `CBulkRowset`.
 
 [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
-## <a name="addrefrows"></a>CBulkRowset::AddRefRows
+## <a name="cbulkrowsetaddrefrows"></a><a name="addrefrows"></a>CBulkRowset::AddRefRows
 
 Chama [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) para incrementar a contagem de referência para todas as linhas recuperadas atualmente do conjunto de linhas em massa.
 
@@ -159,7 +159,7 @@ HRESULT AddRefRows() throw();
 
 Um HRESULT padrão.
 
-## <a name="cbulkrowset"></a>CBulkRowset::CBulkRowset
+## <a name="cbulkrowsetcbulkrowset"></a><a name="cbulkrowset"></a>CBulkRowset::CBulkRowset
 
 Cria um novo objeto `CBulkRowset` e define a contagem de linhas padrão como 10.
 
@@ -169,7 +169,7 @@ Cria um novo objeto `CBulkRowset` e define a contagem de linhas padrão como 10.
 CBulkRowset();
 ```
 
-## <a name="movefirst"></a>CBulkRowset:: MoveFirst
+## <a name="cbulkrowsetmovefirst"></a><a name="movefirst"></a>CBulkRowset:: MoveFirst
 
 Recupera a primeira linha de dados.
 
@@ -183,7 +183,7 @@ HRESULT MoveFirst() throw();
 
 Um HRESULT padrão.
 
-## <a name="movelast"></a>CBulkRowset:: MoveLast
+## <a name="cbulkrowsetmovelast"></a><a name="movelast"></a>CBulkRowset:: MoveLast
 
 Move para a última linha.
 
@@ -197,7 +197,7 @@ HRESULT MoveLast() throw();
 
 Um HRESULT padrão.
 
-## <a name="movenext"></a>CBulkRowset:: MoveNext
+## <a name="cbulkrowsetmovenext"></a><a name="movenext"></a>CBulkRowset:: MoveNext
 
 Recupera a próxima linha de dados.
 
@@ -211,7 +211,7 @@ HRESULT MoveNext() throw();
 
 Um HRESULT padrão. Quando o final do conjunto de linhas for atingido, retornará DB_S_ENDOFROWSET.
 
-## <a name="moveprev"></a>CBulkRowset::MovePrev
+## <a name="cbulkrowsetmoveprev"></a><a name="moveprev"></a>CBulkRowset::MovePrev
 
 Move para a linha anterior.
 
@@ -225,7 +225,7 @@ HRESULT MovePrev() throw();
 
 Um HRESULT padrão.
 
-## <a name="movetobookmark"></a>CBulkRowset::MoveToBookmark
+## <a name="cbulkrowsetmovetobookmark"></a><a name="movetobookmark"></a>CBulkRowset::MoveToBookmark
 
 Busca a linha marcada por um indicador ou a linha em um deslocamento especificado (*lSkip*) desse indicador.
 
@@ -236,7 +236,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
    DBCOUNTITEM lSkip = 0) throw();
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *Indicador*<br/>
 no Um indicador que marca o local do qual você deseja buscar dados.
@@ -248,7 +248,7 @@ no A contagem de números de linhas do indicador até a linha de destino. Se *lS
 
 Consulte [IRowset:: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="movetoratio"></a>CBulkRowset::MoveToRatio
+## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a>CBulkRowset::MoveToRatio
 
 Busca linhas começando com base em uma posição fracionária no conjunto de linhas.
 
@@ -259,7 +259,7 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
    DBCOUNTITEM nDenominator)throw();
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *nNumerator*<br/>
 no O numerador usado para determinar a posição fracionária da qual buscar dados.
@@ -277,9 +277,9 @@ Um HRESULT padrão.
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-Em que `RowsetSize` é o tamanho do conjunto de linhas, medido em linhas. A precisão dessa fórmula depende do provedor específico. Para obter detalhes, consulte [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) na *referência do programador de OLE DB*.
+em que `RowsetSize` é o tamanho do conjunto de linhas, medido em linhas. A precisão dessa fórmula depende do provedor específico. Para obter detalhes, consulte [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="releaserows"></a>CBulkRowset:: ReleaseRows
+## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a>CBulkRowset:: ReleaseRows
 
 Chama [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) para decrementar a contagem de referência para todas as linhas recuperadas atualmente do conjunto de linhas em massa.
 
@@ -293,7 +293,7 @@ HRESULT ReleaseRows() throw();
 
 Um HRESULT padrão.
 
-## <a name="setrows"></a>CBulkRowset:: SetRows
+## <a name="cbulkrowsetsetrows"></a><a name="setrows"></a>CBulkRowset:: SetRows
 
 Define o número de identificadores de linha recuperados por cada chamada.
 
@@ -303,7 +303,7 @@ Define o número de identificadores de linha recuperados por cada chamada.
 void SetRows(DBROWCOUNT nRows) throw();
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *nRows*<br/>
 no O novo tamanho do conjunto de linhas (número de linhas).
@@ -312,7 +312,7 @@ no O novo tamanho do conjunto de linhas (número de linhas).
 
 Se você chamar essa função, ela deverá ser anterior à abertura do conjunto de linhas.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

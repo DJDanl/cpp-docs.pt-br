@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0059
 - CAN0059
 ms.assetid: e8bdcb74-1315-4083-b24d-e47eac7d1ec0
-ms.openlocfilehash: 9d031044ffc89df40bb4196c8c5f19749b76898d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3473d4ae3380b5896005bc2801ef334f3a5ec4e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299524"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184574"
 ---
 # <a name="expression-evaluator-error-cxx0059"></a>Erro CXX0059 (avaliador de expressão)
 
-operando esquerdo é a classe não é um nome de função
+o operando esquerdo é uma classe que não é um nome de função
 
-O operando esquerdo de uma chamada de função era um nome de classe e não pôde ser resolvido para uma chamada de função. Omitindo o nome de uma função de membro em uma expressão pode causar esse erro.
+O operando esquerdo de uma chamada de função era um nome de classe e não pôde ser resolvido para uma chamada de função. Omitir o nome de uma função de membro em uma expressão pode causar esse erro.
 
-Esse erro é idêntico ao CAN0059.
+Esse erro é idêntico a CAN0059.

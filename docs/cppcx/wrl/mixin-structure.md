@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - MixIn structure
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
-ms.openlocfilehash: 16fd6b46d616df7163a304afa7f32ac3c095d398
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b302d6e08e401a24b465508d5ddabcae8b16bd8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325345"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213688"
 ---
 # <a name="mixin-structure"></a>Estrutura MixIn
 
-Garante que uma classe de tempo de execução deriva de interfaces do COM clássico, em seguida e as interfaces de tempo de execução do Windows, se houver.
+Garante que uma classe de tempo de execução derive de interfaces Windows Runtime, se houver, e as interfaces COM clássicas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,20 +29,20 @@ template<
 struct MixIn;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*Derivado*<br/>
-Um tipo derivado de [implementa](implements-structure.md) estrutura.
+*Gerados*<br/>
+Um tipo derivado da estrutura [Implements](implements-structure.md) .
 
 *MixInType*<br/>
 Um tipo base.
 
 *hasImplements*<br/>
-**Verdadeiro** se *MixInType* é derivado do tipo base; a implementação atual **falsos** caso contrário.
+**true** se *MixInType* for derivado da implementação atual do tipo base; caso contrário, **false** .
 
 ## <a name="remarks"></a>Comentários
 
-Se uma classe é derivada de tempo de execução do Windows e interfaces de classe COM, a lista de declarações de classe deve primeiro liste qualquer interface de tempo de execução do Windows e, em seguida, interfaces de qualquer COM clássico. **Mescla** garante que as interfaces são especificadas na ordem correta.
+Se uma classe for derivada de Windows Runtime e de interfaces COM de classe, a lista de declaração de classe deverá primeiro listar as interfaces de Windows Runtime e, em seguida, as interfaces COM clássicas. **Mescla** garante que as interfaces sejam especificadas na ordem correta.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -52,8 +52,8 @@ Se uma classe é derivada de tempo de execução do Windows e interfaces de clas
 
 **Cabeçalho:** Implements. h
 
-**Namespace:** Microsoft::WRL
+**Namespace:** Microsoft:: WRL
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL](microsoft-wrl-namespace.md)

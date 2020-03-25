@@ -1,19 +1,19 @@
 ---
-title: registration_script (C++ COM atributo)
+title: registration_script (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.registration_script
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-ms.openlocfilehash: 0b2c4d576a699dea7772821b5635944b2663c57c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 780f3d41676d01458f47542d6f0862a278edff6a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407309"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214572"
 ---
-# <a name="registrationscript"></a>registration_script
+# <a name="registration_script"></a>registration_script
 
 Executa o script de registro personalizado especificado.
 
@@ -23,20 +23,20 @@ Executa o script de registro personalizado especificado.
 [ registration_script(script) ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*script*<br/>
-O caminho completo para um arquivo de script (. rgs) de registro personalizado. Um valor de **none**, como `script = "none"`, indica que a coclass não tem nenhum requisito de registro.
+*prescritiva*<br/>
+O caminho completo para um arquivo de script de registro personalizado (. rgs). Um valor de **nenhum**, como `script = "none"`, indica que a coclass não tem requisitos de registro.
 
 ## <a name="remarks"></a>Comentários
 
-O **registration_script** C++ atributo executa o script de registro personalizado especificado por *script*. Se esse atributo não for especificado, um arquivo. rgs padrão (que contém informações para registrar o componente) será usado. Para obter mais informações sobre arquivos. rgs, consulte [o componente de registro ATL (registrador)](../../atl/atl-registry-component-registrar.md).
+O atributo **registration_script** C++ executa o script de registro personalizado especificado pelo *script*. Se esse atributo não for especificado, um arquivo. rgs padrão (contendo informações para registrar o componente) será usado. Para obter mais informações sobre arquivos. rgs, consulte [o componente de registro do ATL (registrador)](../../atl/atl-registry-component-registrar.md).
 
-Este atributo exige que o [coclass](coclass.md), [progid](progid.md), ou [vi_progid](vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicadas ao mesmo elemento.
+Esse atributo requer que o atributo [coclass](coclass.md), [ProgID](progid.md)ou [vi_progid](vi-progid.md) (ou outro atributo que implica um deles) também seja aplicado ao mesmo elemento.
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir especifica que o componente tem um script de registro chamado cpp_attr_ref_registration_script.rgs.
+O código a seguir especifica que o componente tem um script de registro chamado cpp_attr_ref_registration_script. rgs.
 
 ```cpp
 // cpp_attr_ref_registration_script.cpp
@@ -59,18 +59,18 @@ class CMyClass:public IFace {};
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|**class**, **struct**|
+|**Aplica-se a**|**classe**, **struct**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Um ou mais das seguintes opções: `coclass`, `progid`, ou `vi_progid`.|
+|**Atributos necessários**|Um ou mais dos seguintes: `coclass`, `progid`ou `vi_progid`.|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de COM](com-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>

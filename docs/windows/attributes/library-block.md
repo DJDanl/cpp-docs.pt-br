@@ -1,21 +1,21 @@
 ---
-title: library_block (C++ COM atributo)
+title: library_block (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.library_block
 helpviewer_keywords:
 - library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-ms.openlocfilehash: 219f6a89dd7f80246e0337c2ef3bcad43540b165
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 405cc1cd5af7dcd689e833764f3da2fdc6d5f703
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409246"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214767"
 ---
-# <a name="libraryblock"></a>library_block
+# <a name="library_block"></a>library_block
 
-Coloca uma construção de dentro do bloco de biblioteca IDL.
+Coloca uma construção dentro do bloco de biblioteca IDL.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,7 +25,7 @@ Coloca uma construção de dentro do bloco de biblioteca IDL.
 
 ## <a name="remarks"></a>Comentários
 
-Quando você coloca um constructo de dentro do bloco de biblioteca, você certifique-se de que ele será passado para a biblioteca de tipos, independentemente se ele é referenciado. Por padrão, somente construções modificado pela [coclass](coclass.md), [dispinterface](dispinterface.md), e [idl_module](idl-module.md) atributos são colocados no bloco de biblioteca.
+Quando você coloca um constructo dentro do bloco de biblioteca, você garante que ele será passado para a biblioteca de tipos, independentemente de ser referenciado. Por padrão, apenas construções modificadas pelos atributos [coclass](coclass.md), [dispinterface](dispinterface.md)e [idl_module](idl-module.md) são colocadas no bloco de biblioteca.
 
 ## <a name="example"></a>Exemplo
 
@@ -44,18 +44,18 @@ __interface IMyInterface {
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|Em qualquer lugar|
+|**Aplica-se a**|Lugares|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de compilador](compiler-attributes.md)<br/>
 [Atributos independentes](stand-alone-attributes.md)

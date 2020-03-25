@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0009
 ms.assetid: 89291778-cda4-495d-983f-ddcc06dfc98b
-ms.openlocfilehash: 963b7c861f9e8ee7105ebdc23afff08c4be46465
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d02325504b04a13cd15dee0bd70891bf5a63b62e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359495"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192948"
 ---
 # <a name="project-build-error-prj0009"></a>Erro de Build PRJ0009 no Projeto
 
-Criar log não pôde ser aberto para gravação.
+Não foi possível abrir o log de compilação para gravação.
 
-**Certifique-se de que o arquivo não está aberto por outro processo e não está protegido contra gravação.**
+**Verifique se o arquivo não está aberto por outro processo e não está protegido contra gravação.**
 
-Depois de definir a **log de Build** propriedade **Sim** e executar um build ou recompilação, Visual C++ não pôde abrir o log de compilação no modo exclusivo.
+Depois de definir a propriedade **log de compilação** como **Sim** e executar uma compilação ou recompilação, o Visual C++ não pôde abrir o log de compilação no modo exclusivo.
 
-Inspecionar a **log de Build** definindo abrindo o **opções** caixa de diálogo (no **ferramentas** menu, clique em **opções** comando) e, em seguida, selecionando **compilação do VC + +** na **projetos** pasta. O arquivo de build chama BuildLog. htm e é gravado para o diretório intermediário de $(IntDir).
+Inspecione a configuração **log de compilação** abrindo a caixa de diálogo **Opções** (no menu **ferramentas** , clique no comando **Opções** ) e selecione **compilação do vc + +** na pasta **projetos** . O arquivo de compilação é chamado de BuildLog. htm e é gravado no diretório intermediário $ (IntDir).
 
 Possíveis motivos para esse erro:
 
-- Você está executando dois processos do Visual C++ e tentar compilar a mesma configuração do mesmo projeto em ambos simultaneamente.
+- Você está executando dois processos de Visual C++ e tentando criar a mesma configuração do mesmo projeto simultaneamente.
 
 - O arquivo de log de compilação é aberto em um processo que bloqueia o arquivo.
 
 - O usuário não tem permissão para criar um arquivo.
 
-- O usuário atual não tem acesso de gravação para o arquivo BuildLog.
+- O usuário atual não tem acesso de gravação ao arquivo BuildLog. htm.

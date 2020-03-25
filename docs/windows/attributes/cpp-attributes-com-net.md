@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 734d82a30df3e143a6f47cb1b3eca2cd778830bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421313"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214923"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributos C++ para COM e .NET
 
@@ -78,7 +78,7 @@ Alguns projetos contêm vários arquivos. idl independentes. Eles são usados pa
 
 Além disso, o vinculador Visual C++ produzirá todas as informações de atributo relacionadas a IDL para um único arquivo MIDL. Não haverá nenhuma maneira de gerar duas bibliotecas de tipos a partir de um único projeto.
 
-## <a name="contexts"></a>Contextos de atributo
+## <a name="attribute-contexts"></a><a name="contexts"></a>Contextos de atributo
 
 C++os atributos podem ser descritos usando quatro campos básicos: o destino ao qual eles podem ser aplicados (**aplica-se a**), se eles forem repetíveis ou não (**repetíveis**), a presença necessária de outros atributos (**atributos obrigatórios**) e incompatibilidade com outros atributos (**atributos inválidos**). Esses campos são listados em uma tabela que acompanha o tópico de referência de cada atributo. Cada um desses campos é descrito abaixo.
 

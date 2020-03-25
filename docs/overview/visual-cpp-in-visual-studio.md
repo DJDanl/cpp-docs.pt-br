@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 1e567f2264fe40e6b386bf8d1758ed866d8f3f38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416096"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215066"
 ---
 # <a name="c-in-visual-studio"></a>C++ no Visual Studio
 
@@ -65,7 +65,7 @@ Saiba mais sobre o C++, obtenha uma visão geral do C++ Moderno e encontre links
 [Aprender sobre o Visual C++](../build/vscpp-step-1-create.md)<br/>
 Comece a conhecer o C++.
 
-[Exemplos do Visual C++](visual-cpp-samples.md)<br/>
+[Amostras do C++ Visual Studio](visual-cpp-samples.md)<br/>
 Informações sobre exemplos.
 
 ## <a name="c-development-tools"></a>Ferramentas de desenvolvimento do C++
@@ -137,7 +137,7 @@ As seções a seguir fornecem informações sobre as diferentes bibliotecas do C
 [Referência da biblioteca em tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 Inclui alternativas aprimoradas de segurança a funções que são conhecidas por impor problemas de segurança.
 
-[Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>
 A Biblioteca Padrão do C++.
 
 [ATL (Active Template Library)](../atl/atl-com-desktop-components.md)<br/>

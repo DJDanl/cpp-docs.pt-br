@@ -7,14 +7,14 @@ helpviewer_keywords:
 - operator = [C++], bstr
 - operator= [C++], bstr
 ms.assetid: fb31bb1b-ce29-4388-b5fd-8dac830cf18a
-ms.openlocfilehash: 97f0100d8a34253f3a1375d34b887d3d31a77f43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b7f499dd84a67020232aab84966647378daadad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350865"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181064"
 ---
-# <a name="bstrtoperator-"></a>_bstr_t::operator =
+# <a name="_bstr_toperator-"></a>_bstr_t::operator =
 
 **Seção específica da Microsoft**
 
@@ -29,7 +29,7 @@ _bstr_t& operator=(const wchar_t* s3);
 _bstr_t& operator=(const _variant_t& var);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *s1*<br/>
 Um objeto `_bstr_t` a ser atribuído a um objeto existente `_bstr_t`.
@@ -37,7 +37,7 @@ Um objeto `_bstr_t` a ser atribuído a um objeto existente `_bstr_t`.
 *s2*<br/>
 Uma cadeia de caracteres multibyte a ser atribuída a um objeto `_bstr_t` existente.
 
-*s3*<br/>
+*Estado*<br/>
 Uma cadeia de caracteres Unicode a ser atribuída a um objeto `_bstr_t` existente.
 
 *var*<br/>
@@ -47,8 +47,8 @@ Um objeto `_variant_t` a ser atribuído a um objeto existente `_bstr_t`.
 
 ## <a name="example"></a>Exemplo
 
-Ver [_bstr_t::Assign](../cpp/bstr-t-assign.md) para obter um exemplo de como usar **operador =**.
+Consulte [_bstr_t:: assign](../cpp/bstr-t-assign.md) para obter um exemplo de uso de **Operator =** .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe _bstr_t](../cpp/bstr-t-class.md)

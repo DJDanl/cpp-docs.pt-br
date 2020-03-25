@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CancelTransitionPolicy Enumeration
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
-ms.openlocfilehash: cb07f28794d466dde08719057a21ebf62f989e85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e820b3fffb4a00e95a1210a5c0beb3229c6d1657
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398752"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214117"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>Enumeração CancelTransitionPolicy
 
-Indica como uma operação assíncrona de tentar fazer a transição para um estado terminal de concluído ou erro deve se comportar em relação a um estado cancelado solicitado pelo cliente.
+Indica como uma operação assíncrona tenta fazer a transição para um estado de terminal de concluído ou o erro deve se comportar com relação a um estado cancelado solicitado pelo cliente.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,17 +30,17 @@ enum CancelTransitionPolicy;
 
 ### <a name="values"></a>Valores
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|`RemainCanceled`|Se a operação assíncrona está atualmente em um estado cancelado solicitado pelo cliente, isso indica que ele permanecerá no estado cancelado em vez de fazer a transição para um estado de erro ou de terminal concluída.|
-|`TransitionFromCanceled`|Se a operação assíncrona está atualmente em um estado cancelado solicitado pelo cliente, isso indica que estado deve fazer a transição do estado cancelado para o estado terminal de concluído ou erro, conforme determinado pela chamada que utiliza esse sinalizador.|
+|`RemainCanceled`|Se a operação assíncrona estiver atualmente em um estado cancelado solicitado pelo cliente, isso indica que ele permanecerá no estado cancelado em vez de fazer a transição para um terminal concluído ou estado de erro.|
+|`TransitionFromCanceled`|Se a operação assíncrona estiver atualmente em um estado cancelado solicitado pelo cliente, isso indicará que o estado deve fazer a transição desse estado cancelado para o estado do terminal de concluído ou erro, conforme determinado pela chamada que utiliza esse sinalizador.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** async.h
+**Cabeçalho:** Async. h
 
-**Namespace:** Microsoft::WRL
+**Namespace:** Microsoft:: WRL
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL](microsoft-wrl-namespace.md)

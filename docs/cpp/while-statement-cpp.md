@@ -7,16 +7,16 @@ helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-ms.openlocfilehash: 669618e9807109be18117968b1f5b6f49ec15e07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dfbbb2865c9cf0a23b04ce213a0e739e29c27da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325410"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187317"
 ---
 # <a name="while-statement-c"></a>Instrução while (C++)
 
-Executa *instrução* repetidamente até que *expressão* for avaliada como zero.
+Executa a *instrução* repetidamente até que a *expressão* seja avaliada como zero.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,11 +27,11 @@ while ( expression )
 
 ## <a name="remarks"></a>Comentários
 
-O teste de *expressão* ocorre antes de cada execução do loop; portanto, um **enquanto** loop é executado zero ou mais vezes. *expressão* deve ser de um tipo integral, um tipo de ponteiro, ou um tipo de classe com conversão inequívoca em integral ou tipo de ponteiro.
+O teste de *expressão* ocorre antes de cada execução do loop; Portanto, um loop **while** é executado zero ou mais vezes. a *expressão* deve ser de um tipo integral, um tipo de ponteiro ou um tipo de classe com uma conversão não ambígua para um tipo integral ou de ponteiro.
 
-Um **enquanto** loop também pode terminar quando um [quebra](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), ou [retornar](../cpp/return-statement-cpp.md) dentro da instrução corpo é executado. Use [continue](../cpp/continue-statement-cpp.md) para finalizar a iteração atual sem sair do **enquanto** loop. **Continue** passa para a próxima iteração do controle de **enquanto** loop.
+Um loop **while** também pode terminar quando um [Break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md)ou [Return](../cpp/return-statement-cpp.md) dentro do corpo da instrução é executado. Use [continuar](../cpp/continue-statement-cpp.md) para encerrar a iteração atual sem sair do loop **while** . **continuar** passa o controle para a próxima iteração do loop **while** .
 
-O código a seguir usa uma **enquanto** loop à direita serão cortados sublinhados de uma cadeia de caracteres:
+O código a seguir usa um loop **while** para cortar sublinhados à direita de uma cadeia de caracteres:
 
 ```cpp
 // while_statement.cpp
@@ -62,7 +62,7 @@ int main()
 
 A condição de término é avaliada na parte superior do loop. Se não houver um sublinhado à direita, o loop nunca será executado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instruções de iteração](../cpp/iteration-statements-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>

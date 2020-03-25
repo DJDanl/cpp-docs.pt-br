@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: e9921d18e9ec060f61959278b68906338f02b5b7
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d26cf1e92717d2925edf3730e1ae4ec935365321
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447715"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178451"
 ---
 # <a name="mfc-desktop-applications"></a>Aplicativos para desktop do MFC
 
@@ -43,7 +43,7 @@ Detalha visualmente as relações de classe na biblioteca de classes.
 [Visão geral da classe](class-library-overview.md)<br/>
 Lista as classes na biblioteca do MFC de acordo com a categoria.
 
-[Explicações Passo a Passo](walkthroughs-mfc.md)<br/>
+[Instruções passo a passo](walkthroughs-mfc.md)<br/>
 Contém artigos que orientam você pelas várias tarefas associadas aos recursos da biblioteca do MFC.
 
 [Notas técnicas](mfc-technical-notes.md)<br/>
@@ -70,7 +70,7 @@ Um guia para os recursos do Visual Studio para criar aplicativos MFC.
 [Trabalhando com arquivos de recurso](../windows/working-with-resource-files.md)<br/>
 Como usar os arquivos de recurso para gerenciar dados estáticos da interface do usuário, como cadeias de caracteres da interface e o layout da caixa de diálogo.
 
-## <a name="related-sections"></a>Seções Relacionadas
+## <a name="related-sections"></a>Seções relacionadas
 
 [Categorias de gráfico da hierarquia](hierarchy-chart-categories.md)<br/>
 Descreve o gráfico de hierarquia do MFC por categoria.
@@ -78,7 +78,7 @@ Descreve o gráfico de hierarquia do MFC por categoria.
 [Classes compartilhadas ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 Fornece links para classes que são compartilhadas entre MFC e ATL.
 
-[Exemplos de MFC](../overview/visual-cpp-samples.md)<br/>
+[Exemplos de MFC](../overview/visual-cpp-samples.md#mfc-samples)<br/>
 Fornece links para exemplos que demonstram como usar o MFC.
 
 [Referência de bibliotecas do Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
@@ -87,6 +87,6 @@ Fornece links para várias bibliotecas fornecidas com Visual C++, incluindo ATL,
 [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 Fornece links para usar o depurador do Visual Studio para corrigir erros de lógica em seu aplicativo ou procedimentos armazenados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [MFC e ATL](mfc-and-atl.md)

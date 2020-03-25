@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ImplementsBase structure
 ms.assetid: f898eb17-136d-4c87-b3ea-771319314641
-ms.openlocfilehash: 5e1d0376a8b2646f12064105af7bcf555f4a8e31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffc006521d4f5131d7e387c1b2df79a358ad7def
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398232"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213883"
 ---
 # <a name="implementsbase-structure"></a>Estrutura ImplementsBase
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+O oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,9 +26,9 @@ struct ImplementsBase;
 
 ## <a name="remarks"></a>Comentários
 
-Usado para validar os tipos de parâmetro de modelo no [implementa estrutura](implements-structure.md).
+Usado para validar os tipos de parâmetro de modelo na [estrutura implementações](implements-structure.md).
 
-O **ImplementsBase** estrutura está vazia por design.
+A estrutura **ImplementsBase** está vazia por design.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -38,8 +38,8 @@ O **ImplementsBase** estrutura está vazia por design.
 
 **Cabeçalho:** Implements. h
 
-**Namespace:** Microsoft::WRL::Details
+**Namespace:** Microsoft:: WRL::D etalhes
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)

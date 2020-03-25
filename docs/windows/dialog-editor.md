@@ -23,18 +23,18 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 40b5d8c8390c638b70bc2c0860ccf3c17872719c
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 9d0f9993d81c499f67a08e5401c5e56dba7b281c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445019"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215248"
 ---
 # <a name="dialog-editor-c"></a>Editor de caixaC++de diálogo ()
 
 O **Editor de diálogo** permite que você crie ou edite recursos da caixa de diálogo.
 
-- Para abrir o editor, clique duas vezes no arquivo. rc de uma caixa de diálogo na janela **modo de exibição de recursos** ou vá para a **exibição**de menu  >  outro**modo de exibição de recursos**do**Windows** > .
+- Para abrir o editor, clique duas vezes no arquivo. rc de uma caixa de diálogo na janela **modo de exibição de recursos** ou vá até **modo de exibição** de menu > outra **modo de exibição de recursos**de > do **Windows** .
 
 Uma das primeiras etapas para criar um novo modelo de caixa de diálogo ou caixa de diálogo é adicionar controles. No **Editor de caixa de diálogo**, você pode organizar os controles para se ajustar a um determinado tamanho, forma ou alinhamento, ou pode movê-los para o trabalho na caixa de diálogo. Também é fácil excluir um controle.
 
@@ -55,19 +55,19 @@ Para obter mais informações sobre recursos, consulte como [criar uma caixa](..
 
 A barra de ferramentas do **Editor de caixa de diálogo** contém botões para organizar o layout dos controles na caixa de diálogo, por exemplo, tamanho e alinhamento. Os botões da barra de ferramentas do **Editor de caixa de diálogo** correspondem aos comandos no menu **Formatar** .
 
-|Ícone|Significado|Ícone|Significado|
+|ícone|Significado|ícone|Significado|
 |----------|-------------|----------|-------------|
 |![Botão de diálogo testar](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|Caixa de diálogo de teste|![Espaço ao longo do botão](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|Via|
-|![Botão Alinhar à esquerda](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|Alinhar à esquerda|![Botão para baixo do espaço](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|Abaixo|
+|![Botão Alinhar à esquerda](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|Alinhar à esquerda|![Botão para baixo do espaço](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|Para baixo|
 |![Botão alinhar direitos](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|Alinhar direitos|![Botão da mesma largura](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|Igualar largura|
 |![Botão alinhar partes superiores](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|Alinhar partes superiores|![Botão da mesma altura](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|Igualar altura|
 |![Botão alinhar abaixo](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|Alinhar partes inferiores|![Botão igualar tamanho](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|Igualar tamanho|
 |![Centralizar botão vertical](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![Botão de alternância de grade](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Ativar/Desativar Grade|
 |![Botão horizontal central](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Horizontal|![Botão Alternar guias](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Alternar guias|
 
-- Para mostrar ou ocultar a barra de ferramentas do **Editor de caixa de diálogo** , vá para **exibição**de menu  > **barras de ferramentas** >  editor de**caixa de diálogo**.
+- Para mostrar ou ocultar a barra de ferramentas do **Editor de caixa de diálogo** , vá até modo de **exibição** de menu > **barras de ferramentas** > editor de **diálogo**.
 
-Quando você abre o **Editor de caixa** de C++ diálogo em um projeto, a barra de ferramentas do **Editor de caixa de diálogo** aparece automaticamente na parte superior da sua solução. no entanto, se você fechar explicitamente a barra de ferramentas, será necessário chamá-la na próxima vez que abrir o editor de caixa de **diálogo** . Você pode alternar sua exibição selecionando-a na lista de barras de ferramentas e janelas disponíveis.
+Quando você abre o **Editor de caixa** de C++ diálogo em um projeto, a barra de ferramentas do **Editor de caixa de diálogo** aparece automaticamente na parte superior da sua solução. no entanto, se você fechar explicitamente a barra de ferramentas, será necessário chamá-la da próxima vez que abrir o editor da caixa de **diálogo**. Você pode alternar sua exibição selecionando-a na lista de barras de ferramentas e janelas disponíveis.
 
 ## <a name="switch-between-dialog-box-controls-and-code"></a>Alternar entre controles de caixa de diálogo e código
 
@@ -92,7 +92,7 @@ Com um controle selecionado, selecione o botão **ControlEvents** ou o botão **
 
 Abaixo estão as teclas de aceleração padrão para os comandos do **Editor de caixa de diálogo** .  
 
-|Comando|Novas|Descrição|
+|Comando|simétricas|DESCRIÇÃO|
 |-------------|----------|-----------------|
 |Format.AlignBottoms|**Ctrl** + **Shift** + **seta para baixo**|Alinha as bordas inferiores dos controles selecionados com o controle dominante.|
 |Format.AlignCenters|**Shift** + **F9**|Alinha os centros verticais dos controles selecionados com o controle dominante.|
@@ -105,7 +105,7 @@ Abaixo estão as teclas de aceleração padrão para os comandos do **Editor de 
 |Format.CenterHorizontal|**Ctrl** + **Shift** + **F9**|Centraliza os controles horizontalmente dentro da caixa de diálogo.|
 |Format.CenterVertical|**Ctrl** + **F9**|Centraliza os controles verticalmente dentro da caixa de diálogo.|
 |Format.CheckMnemonics|**Ctrl** + **M**|Verifica a exclusividade de mnemônicos.|
-|Format. SizeToContent|**Shift** + **F7**|Redimensiona os controles selecionados para ajustá-los ao texto da legenda.|
+|Format.SizeToContent|**Shift** + **F7**|Redimensiona os controles selecionados para ajustá-los ao texto da legenda.|
 |Format.SpaceAcross|**Alt** + **Seta para a Esquerda**|Espaça uniformemente os controles selecionados horizontalmente.|
 |Format.SpaceDown|**Alt** + **seta para baixo**|Espaça uniformemente os controles selecionados verticalmente.|
 |Format.TabOrder|**Ctrl** + **D**|Define a ordem dos controles dentro da caixa de diálogo.|
@@ -116,7 +116,7 @@ Abaixo estão as teclas de aceleração padrão para os comandos do **Editor de 
 
    Para obter mais informações, consulte [Identificando e personalizando atalhos de teclado](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
-- Para alterar as configurações, vá até **ferramentas**de menu  > **configurações de importação e exportação**.
+- Para alterar as configurações, vá até **ferramentas** de menu > **configurações de importação e exportação**.
 
    As opções disponíveis nas caixas de diálogo e os nomes e locais dos comandos de menu que você vê podem diferir do que está descrito na **ajuda** , dependendo de suas configurações ativas ou edição.  Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
@@ -124,7 +124,7 @@ Abaixo estão as teclas de aceleração padrão para os comandos do **Editor de 
 
 Win32
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Editores de recursos](../windows/resource-editors.md)<br/>
 [Como: criar uma caixa de diálogo](../windows/creating-a-new-dialog-box.md)<br/>

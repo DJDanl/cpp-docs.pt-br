@@ -2,18 +2,18 @@
 title: Organização do código-fonte (modelos do C++)
 ms.date: 04/22/2019
 ms.assetid: 50569c5d-0219-4966-9bcf-a8689074ad1d
-ms.openlocfilehash: 1933758e47f2fcc0b63f0d16809591b932501854
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
-ms.translationtype: HT
+ms.openlocfilehash: 76898d04e5f9f0576898eb40945b7718c650d71a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611394"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178724"
 ---
 # <a name="source-code-organization-c-templates"></a>Organização do código-fonte (modelos do C++)
 
 Ao definir um modelo de classe, você deve organizar o código-fonte de tal forma que as definições de membro sejam visíveis para o compilador quando ele precisar delas.   Você tem a opção de usar o *modelo de inclusão* ou o modelo de *instanciação explícita*. No modelo de inclusão, as definições de membro são incluídas em todos os arquivos que usam um modelo. Essa abordagem é a mais simples e oferece a máxima flexibilidade em termos dos tipos concretos que podem ser usados com seu modelo. A desvantagem é que pode aumentar o tempo de compilação. O impacto pode ser significativo se um projeto e/ou os próprios arquivos incluídos forem grandes. Com a abordagem de instanciação explícita, o próprio modelo instancia as classes concretas ou membros de classe para tipos específicos.  Essa abordagem pode acelerar os tempos de compilação, mas limita o uso somente para as classes que o implementador de modelo habilitou antecipadamente. Em geral, é recomendável que você use o modelo de inclusão, a menos que os tempos de compilação se tornem um problema.
 
-## <a name="background"></a>Informações preliminares
+## <a name="background"></a>Segundo plano
 
 Os modelos não são como classes comuns no sentido de que o compilador não gera o código de objeto para um modelo ou qualquer um dos seus membros. Não há nada a ser gerado até que o modelo seja instanciado com tipos concretos. Quando o compilador encontra uma instanciação de modelo, como `MyClass<int> mc;`, e ainda não existe nenhuma classe com essa assinatura, ele gera uma nova classe. Ele também tenta gerar código para todas as funções membro que são usadas. Se essas definições estiverem em um arquivo que não esteja #incluído, direta ou indiretamente, no arquivo .cpp que está sendo compilado, o compilador não poderá vê-los.  Do ponto de vista do compilador, isso não é necessariamente um erro porque as funções podem ser definidas em outra unidade de tradução, que serão encontradas pelo vinculador.  Caso o vinculador não encontre esse código, ele gerará um erro **externo não resolvido**.
 

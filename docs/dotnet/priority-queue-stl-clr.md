@@ -51,18 +51,18 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-ms.openlocfilehash: ed5e190f0c64aca3876d1cd1f05c9d75224355cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e21e7ba4dc3a4ed270548506ac1a9e37a2c1a23a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384758"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208462"
 ---
-# <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
+# <a name="priority_queue-stlclr"></a>priority_queue (STL/CLR)
 
-A classe de modelo descreve um objeto que controla uma variação ordenados a sequência de elementos que tem acesso limitado. Você usar o adaptador de contêiner `priority_queue` para gerenciar um contêiner subjacente, como uma fila de prioridade.
+A classe de modelo descreve um objeto que controla uma sequência ordenada de comprimento variável de elementos que tem acesso limitado. Você usa o adaptador de contêiner `priority_queue` para gerenciar um contêiner subjacente como uma fila de prioridade.
 
-Na descrição abaixo, `GValue` é o mesmo que *valor* , a menos que o último é um tipo ref, nesse caso, ele é `Value^`. Da mesma forma, `GContainer` é o mesmo que *contêiner* , a menos que o último é um tipo ref, nesse caso, ele é `Container^`.
+Na descrição abaixo, `GValue` é igual ao *valor* , a menos que o último seja um tipo ref; nesse caso, ele é `Value^`. Da mesma forma, `GContainer` é o mesmo que o *contêiner* , a menos que o último seja um tipo ref; nesse caso, ele é `Container^`.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -75,12 +75,12 @@ template<typename Value,
     { ..... };
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Valor*<br/>
 O tipo de um elemento na sequência controlada.
 
-*Container*<br/>
+*Contêiner*<br/>
 O tipo do contêiner subjacente.
 
 ## <a name="requirements"></a>Requisitos
@@ -89,79 +89,79 @@ O tipo do contêiner subjacente.
 
 **Namespace:** cliext
 
-## <a name="declarations"></a>Declarações
+## <a name="declarations"></a>{1&gt;{2&gt;Declarações&lt;2}&lt;1}
 
-|Definição do tipo|Descrição|
+|Definição do tipo|DESCRIÇÃO|
 |---------------------|-----------------|
 |[priority_queue::const_reference (STL/CLR)](#const_reference)|O tipo de uma referência de constante para um elemento.|
 |[priority_queue::container_type (STL/CLR)](#container_type)|O tipo do contêiner subjacente.|
 |[priority_queue::difference_type (STL/CLR)](#difference_type)|O tipo de uma distância com sinal entre dois elementos.|
-|[priority_queue::generic_container (STL/CLR)](#generic_container)|O tipo da interface genérica para o adaptador de contêiner.|
+|[priority_queue::generic_container (STL/CLR)](#generic_container)|O tipo da interface genérica para o adaptador do contêiner.|
 |[priority_queue::generic_value (STL/CLR)](#generic_value)|O tipo de um elemento para a interface genérica para o adaptador de contêiner.|
 |[priority_queue::reference (STL/CLR)](#reference)|O tipo de uma referência para um elemento.|
 |[priority_queue::size_type (STL/CLR)](#size_type)|O tipo de uma distância com sinal entre dois elementos.|
 |[priority_queue::value_compare (STL/CLR)](#value_compare)|O delegado de ordenação para dois elementos.|
 |[priority_queue::value_type (STL/CLR)](#value_type)|O tipo de um elemento.|
 
-|Função membro|Descrição|
+|Função membro|DESCRIÇÃO|
 |---------------------|-----------------|
 |[priority_queue::assign (STL/CLR)](#assign)|Substitui todos os elementos.|
 |[priority_queue::empty (STL/CLR)](#empty)|Testa se nenhum elemento está presente.|
 |[priority_queue::get_container (STL/CLR)](#get_container)|Acessa o contêiner subjacente.|
-|[priority_queue::pop (STL/CLR)](#pop)|Remove o elemento hghest prioridade.|
+|[priority_queue::pop (STL/CLR)](#pop)|Remove o elemento hghest-Priority.|
 |[priority_queue::priority_queue (STL/CLR)](#priority_queue)|Constrói um objeto contêiner.|
 |[priority_queue::push (STL/CLR)](#push)|Adiciona um novo elemento.|
 |[priority_queue::size (STL/CLR)](#size)|Conta o número de elementos.|
 |[priority_queue::top (STL/CLR)](#top)|Acessa o elemento de prioridade mais alta.|
-|[priority_queue::to_array (STL/CLR)](#to_array)|Copia a sequência controlada para uma nova matriz.|
+|[priority_queue::to_array (STL/CLR)](#to_array)|Copia a sequência controlada em uma nova matriz.|
 |[priority_queue::value_comp (STL/CLR)](#value_comp)|Copia o delegado de ordenação para dois elementos.|
 
-|Propriedade|Descrição|
+|Propriedade|DESCRIÇÃO|
 |--------------|-----------------|
 |[priority_queue::top_item (STL/CLR)](#top_item)|Acessa o elemento de prioridade mais alta.|
 
-|Operador|Descrição|
+|Operador|DESCRIÇÃO|
 |--------------|-----------------|
 |[priority_queue::operator= (STL/CLR)](#op_as)|Substitui a sequência controlada.|
 
 ## <a name="interfaces"></a>Interfaces
 
-|Interface|Descrição|
+|Interface|DESCRIÇÃO|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplicar um objeto.|
-|IPriorityQueue\<valor, o contêiner >|Manter o adaptador de contêiner genérico.|
+|IPriorityQueue\<valor, contêiner >|Mantenha o adaptador de contêiner genérico.|
 
 ## <a name="remarks"></a>Comentários
 
-O objeto aloca e libera armazenamento para a sequência que controla por meio de um contêiner subjacente, do tipo `Container`, que armazena `Value` elementos e aumenta conforme a demanda. Ele mantém a sequência ordenada como um heap, com o elemento de prioridade mais alta (o elemento superior) prontamente acessível e removível. O objeto restringe o acesso a novos elementos de envio por push e pop apenas o elemento de prioridade mais alta, a implementação de uma fila de prioridade.
+O objeto aloca e libera o armazenamento para a sequência que ele controla por meio de um contêiner subjacente, do tipo `Container`, que armazena `Value` elementos e cresce sob demanda. Ele mantém a sequência ordenada como um heap, com o elemento de prioridade mais alta (o elemento superior) prontamente acessível e removível. O objeto restringe o acesso para enviar novos elementos por push e retirar apenas o elemento de prioridade mais alta, implementando uma fila de prioridade.
 
-O objeto ordena a sequência que controla chamando um objeto armazenado de delegado do tipo [priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md). Você pode especificar o objeto armazenado delegado ao construir o priority_queue; Se você não especificar nenhum objeto delegado, o padrão é a comparação `operator<(value_type, value_type)`. Acessar esse objeto armazenado chamando a função de membro [priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`.
+O objeto ordena a sequência que ele controla chamando um objeto delegado armazenado do tipo [priority_queue:: value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md). Você pode especificar o objeto delegado armazenado ao construir o priority_queue; Se você não especificar nenhum objeto delegado, o padrão será a `operator<(value_type, value_type)`de comparação. Você acessa esse objeto armazenado chamando a função membro [priority_queue:: value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`.
 
-Um objeto delegado deve impor uma ordenação fraca estrita em valores do tipo [priority_queue:: value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md). Isso significa que, para qualquer duas chaves `X` e `Y`:
+Esse objeto delegado deve impor uma ordenação fraca estrita em valores do tipo [priority_queue:: value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md). Isso significa que, para quaisquer duas chaves `X` e `Y`:
 
-`value_comp()(X, Y)` Retorna o mesmo valor de booliano resultar em cada chamada.
+`value_comp()(X, Y)` retorna o mesmo resultado booliano em cada chamada.
 
-Se `value_comp()(X, Y)` for true, em seguida, `value_comp()(Y, X)` deve ser falsa.
+Se `value_comp()(X, Y)` for true, `value_comp()(Y, X)` deverá ser false.
 
-Se `value_comp()(X, Y)` for true, então `X` deve ser ordenado antes `Y`.
+Se `value_comp()(X, Y)` for true, `X` será considerado como ordenado antes de `Y`.
 
-Se `!value_comp()(X, Y) && !value_comp()(Y, X)` for true, então `X` e `Y` são considerados como tendo uma ordenação equivalente.
+Se `!value_comp()(X, Y) && !value_comp()(Y, X)` for true, `X` e `Y` serão considerados como uma ordenação equivalente.
 
-Para qualquer elemento `X` que precede `Y` na sequência controlada, `key_comp()(Y, X)` é false. (Para o objeto de delegado padrão, as chaves nunca diminui no valor.)
+Para qualquer elemento `X` que preceda `Y` na sequência controlada, `key_comp()(Y, X)` é false. (Para o objeto delegado padrão, as chaves nunca diminuem em valor.)
 
-O elemento de prioridade mais alto, portanto, é um dos elementos que não for ordenado antes de qualquer outro elemento.
+O elemento de prioridade mais alta é, portanto, um dos elementos que não são ordenados antes de qualquer outro elemento.
 
-Como o contêiner subjacente mantém elementos classificados como um heap:
+Como o contêiner subjacente mantém os elementos ordenados como um heap:
 
 O contêiner deve oferecer suporte a iteradores de acesso aleatório.
 
-Elementos com uma ordenação equivalente podem ser removidos em uma ordem diferente que eles foram enviados por push. (A ordenação não é estável.)
+Elementos com ordenação equivalente podem ser retirados em uma ordem diferente da que foram enviados por push. (A ordem não é estável.)
 
-Portanto, os candidatos para o contêiner subjacente incluem [deque (STL/CLR)](../dotnet/deque-stl-clr.md) e [vector (STL/CLR)](../dotnet/vector-stl-clr.md).
+Assim, os candidatos ao contêiner subjacente incluem [deque (STL/CLR)](../dotnet/deque-stl-clr.md) e [vector (STL/CLR)](../dotnet/vector-stl-clr.md).
 
 ## <a name="members"></a>Membros
 
-## <a name="assign"></a> priority_queue::assign (STL/CLR)
+## <a name="priority_queueassign-stlclr"></a><a name="assign"></a>priority_queue:: assign (STL/CLR)
 
 Substitui todos os elementos.
 
@@ -171,14 +171,14 @@ Substitui todos os elementos.
 void assign(priority_queue<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *right*<br/>
 Adaptador de contêiner a ser inserido.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro atribui `right.get_container()` para o contêiner subjacente. Você pode usá-lo para alterar a todo o conteúdo da fila.
+A função de membro atribui `right.get_container()` ao contêiner subjacente. Você o usa para alterar todo o conteúdo da fila.
 
 ### <a name="example"></a>Exemplo
 
@@ -215,7 +215,7 @@ c a b
 c a b
 ```
 
-## <a name="const_reference"></a> priority_queue::const_reference (STL/CLR)
+## <a name="priority_queueconst_reference-stlclr"></a><a name="const_reference"></a>priority_queue:: const_reference (STL/CLR)
 
 O tipo de uma referência de constante para um elemento.
 
@@ -259,7 +259,7 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a> priority_queue::container_type (STL/CLR)
+## <a name="priority_queuecontainer_type-stlclr"></a><a name="container_type"></a>priority_queue:: container_type (STL/CLR)
 
 O tipo do contêiner subjacente.
 
@@ -301,9 +301,9 @@ int main()
 c a b
 ```
 
-## <a name="difference_type"></a> priority_queue::difference_type (STL/CLR)
+## <a name="priority_queuedifference_type-stlclr"></a><a name="difference_type"></a>priority_queue::d ifference_type (STL/CLR)
 
-Os tipos de uma distância com sinal entre dois elementos.
+Os tipos de uma distância assinada entre dois elementos.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -313,7 +313,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve uma contagem de elemento possivelmente negativo.
+O tipo descreve uma contagem de elementos possivelmente negativo.
 
 ### <a name="example"></a>Exemplo
 
@@ -359,7 +359,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a> priority_queue::empty (STL/CLR)
+## <a name="priority_queueempty-stlclr"></a><a name="empty"></a>priority_queue:: Empty (STL/CLR)
 
 Testa se nenhum elemento está presente.
 
@@ -371,7 +371,7 @@ bool empty();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna verdadeiro para uma sequência controlada vazia. É equivalente a [priority_queue:: Size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)`() == 0`. Você pode usá-lo para testar se priority_queue estiver vazio.
+A função membro retorna verdadeiro para uma sequência controlada vazia. É equivalente a [priority_queue:: Size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)`() == 0`. Você o usa para testar se o priority_queue está vazio.
 
 ### <a name="example"></a>Exemplo
 
@@ -413,7 +413,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="generic_container"></a> priority_queue::generic_container (STL/CLR)
+## <a name="priority_queuegeneric_container-stlclr"></a><a name="generic_container"></a>priority_queue:: generic_container (STL/CLR)
 
 O tipo da interface genérica para o contêiner.
 
@@ -426,7 +426,7 @@ typedef Microsoft::VisualC::StlClr::IPriorityQueue<Value>
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve a interface genérica para essa classe de adaptador de contêiner do modelo.
+O tipo descreve a interface genérica para essa classe de adaptador de contêiner de modelo.
 
 ### <a name="example"></a>Exemplo
 
@@ -476,9 +476,9 @@ d c b a
 e d b a c
 ```
 
-## <a name="generic_value"></a> priority_queue::generic_value (STL/CLR)
+## <a name="priority_queuegeneric_value-stlclr"></a><a name="generic_value"></a>priority_queue:: generic_value (STL/CLR)
 
-O tipo de um elemento para uso com a interface genérica para o contêiner.
+O tipo de um elemento a ser usado com a interface genérica para o contêiner.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -488,7 +488,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve um objeto do tipo `GValue` que descreve o valor de elemento armazenado para uso com a interface genérica para essa classe de contêiner do modelo. (`GValue` seja `value_type` ou `value_type^` se `value_type` é um tipo de referência.)
+O tipo descreve um objeto do tipo `GValue` que descreve o valor do elemento armazenado para uso com a interface genérica para essa classe de contêiner de modelo. (`GValue` será `value_type` ou `value_type^` se `value_type` for um tipo de referência.)
 
 ### <a name="example"></a>Exemplo
 
@@ -534,7 +534,7 @@ c a b
 c b a
 ```
 
-## <a name="get_container"></a> priority_queue::get_container (STL/CLR)
+## <a name="priority_queueget_container-stlclr"></a><a name="get_container"></a>priority_queue:: get_container (STL/CLR)
 
 Acessa o contêiner subjacente.
 
@@ -546,7 +546,7 @@ container_type get_container();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna o contêiner subjacente. Você pode usá-lo para ignorar as restrições impostas pelo wrapper do contêiner.
+A função membro retorna o contêiner subjacente. Você o usa para ignorar as restrições impostas pelo wrapper do contêiner.
 
 ### <a name="example"></a>Exemplo
 
@@ -575,7 +575,7 @@ int main()
 c a b
 ```
 
-## <a name="op_as"></a> priority_queue::operator= (STL/CLR)
+## <a name="priority_queueoperator-stlclr"></a><a name="op_as"></a>priority_queue:: Operator = (STL/CLR)
 
 Substitui a sequência controlada.
 
@@ -585,14 +585,14 @@ Substitui a sequência controlada.
 priority_queue <Value, Container>% operator=(priority_queue <Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *right*<br/>
-Adaptador de contêiner para copiar.
+Adaptador de contêiner a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 
-As cópias de operador de membro *certa* ao objeto, em seguida, retorna `*this`. Você pode usá-lo para substituir a sequência controlada por uma cópia da sequência controlada no *certa*.
+O operador membro copia *diretamente* para o objeto e, em seguida, retorna `*this`. Você o usa para substituir a sequência controlada por uma cópia da sequência controlada *à direita*.
 
 ### <a name="example"></a>Exemplo
 
@@ -629,9 +629,9 @@ c a b
 c a b
 ```
 
-## <a name="pop"></a> priority_queue::pop (STL/CLR)
+## <a name="priority_queuepop-stlclr"></a><a name="pop"></a>priority_queue::p op (STL/CLR)
 
-Remove o elemento mais alto proirity.
+Remove o elemento proirity mais alto.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -641,7 +641,7 @@ void pop();
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro remove o elemento de prioridade mais alta da sequência controlada, que deve ser não vazio. Você pode usá-lo para encurtar a fila por um elemento na parte traseira.
+A função membro remove o elemento de prioridade mais alta da sequência controlada, que deve ser não vazia. Você o usa para encurtar a fila por um elemento na parte de trás.
 
 ### <a name="example"></a>Exemplo
 
@@ -677,7 +677,7 @@ c a b
 b a
 ```
 
-## <a name="priority_queue"></a> priority_queue::priority_queue (STL/CLR)
+## <a name="priority_queuepriority_queue-stlclr"></a><a name="priority_queue"></a>priority_queue::p riority_queue (STL/CLR)
 
 Constrói um objeto de adaptador de contêiner.
 
@@ -699,19 +699,19 @@ template<typename InIt>
         value_compare^ pred, container_type% cont);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
-*cont*<br/>
+*contínua*<br/>
 O contêiner a ser copiado.
 
 *first*<br/>
 Início do intervalo a ser inserido.
 
 *last*<br/>
-Fim do intervalo a inserir.
+Fim do intervalo a ser inserido.
 
-*pred*<br/>
-Ordenação de predicado para a sequência controlada.
+*Pred*<br/>
+Predicado de ordenação para a sequência controlada.
 
 *right*<br/>
 Objeto ou intervalo a inserir.
@@ -722,49 +722,49 @@ O construtor:
 
 `priority_queue();`
 
-cria um contêiner vazio encapsulado, com o padrão de predicado de ordenação. Você pode usá-lo para especificar uma sequência controlada inicial vazia, com o padrão de predicado de ordenação.
+Cria um contêiner encapsulado vazio, com o predicado de ordenação padrão. Você o usa para especificar uma sequência controlada inicial vazia, com o predicado de ordenação padrão.
 
 O construtor:
 
 `priority_queue(priority_queue<Value, Container>% right);`
 
-cria um contêiner de encapsulado é uma cópia da `right.get_container()`, com o predicado de ordenação `right.value_comp()`. Você pode usá-lo para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto de fila *certa*, com o mesmo predicado de ordenação.
+Cria um contêiner encapsulado que é uma cópia de `right.get_container()`, com o predicado de ordenação `right.value_comp()`. Você o usa para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto de fila *direito*, com o mesmo predicado de ordenação.
 
 O construtor:
 
 `priority_queue(priority_queue<Value, Container>^ right);`
 
-cria um contêiner de encapsulado é uma cópia da `right->get_container()`, com o predicado de ordenação `right->value_comp()`. Você pode usá-lo para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto de fila `*right`, com o mesmo predicado de ordenação.
+Cria um contêiner encapsulado que é uma cópia de `right->get_container()`, com o predicado de ordenação `right->value_comp()`. Você o usa para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto de fila `*right`, com o mesmo predicado de ordenação.
 
 O construtor:
 
 `explicit priority_queue(value_compare^ pred);`
 
-cria um contêiner vazio encapsulado, com o predicado de ordenação *pred*. Você pode usá-lo para especificar uma sequência controlada inicial vazia, com o predicado de ordenação especificado.
+Cria um contêiner encapsulado vazio, com o predicado de ordenação *Pred*. Você o usa para especificar uma sequência controlada inicial vazia, com o predicado de ordenação especificado.
 
 O construtor:
 
 `priority_queue(value_compare^ pred, container_type cont);`
 
-cria um contêiner vazio encapsulado, com o predicado de ordenação *pred*, em seguida, envia todos os elementos de *cont* usá-lo para especificar uma sequência controlada inicial de um contêiner existente, com o predicado de ordenação especificado.
+Cria um contêiner encapsulado vazio, com o predicado de ordenação *Pred*, em seguida, envia todos os elementos de *cont* . Use-os para especificar uma sequência controlada inicial de um contêiner existente, com o predicado de ordenação especificado.
 
 O construtor:
 
 `template<typename InIt> priority_queue(InIt first, InIt last);`
 
-cria um contêiner vazio encapsulado, com o predicado de ordenação padrão e, depois, a sequência [`first`, `last`). Você pode usá-lo para especificar uma sequência controlada inicial de um eqeuence especificado, com o predicado de ordenação especificado.
+Cria um contêiner encapsulado vazio, com o predicado de ordenação padrão e, em seguida, envia por push a sequência [`first`, `last`). Você o usa para especificar uma sequência controlada inicial de um eqeuence especificado, com o predicado de ordenação especificado.
 
 O construtor:
 
 `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred);`
 
-cria um contêiner vazio encapsulado, com o predicado de ordenação *pred*, em seguida, envia a sequência [`first`, `last`). Você pode usá-lo para especificar uma sequência controlada inicial de um seqeuence especificado, com o predicado de ordenação especificado.
+Cria um contêiner encapsulado vazio, com o predicado de ordenação *Pred*e, em seguida, envia a sequência [`first`, `last`). Você o usa para especificar uma sequência controlada inicial de um seqeuence especificado, com o predicado de ordenação especificado.
 
 O construtor:
 
 `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred, container_type% cont);`
 
-cria um contêiner vazio encapsulado, com o predicado de ordenação *pred*, em seguida, envia todos os elementos de *cont* plus a sequência [`first`, `last`). Você pode usá-lo para especificar uma sequência controlada inicial de um contêiner existente e um seqeuence especificado, com o predicado de ordenação especificado.
+Cria um contêiner encapsulado vazio, com o predicado de ordenação *Pred*, em seguida, envia todos os elementos de *cont* plus a sequence [`first`, `last`). Você o usa para especificar uma sequência controlada inicial de um contêiner existente e um seqeuence especificado, com o predicado de ordenação especificado.
 
 ### <a name="example"></a>Exemplo
 
@@ -864,7 +864,7 @@ c a b
 a c b
 ```
 
-## <a name="push"></a> priority_queue::push (STL/CLR)
+## <a name="priority_queuepush-stlclr"></a><a name="push"></a>priority_queue::p USH (STL/CLR)
 
 Adiciona um novo elemento.
 
@@ -876,7 +876,7 @@ void push(value_type val);
 
 ### <a name="remarks"></a>Comentários
 
-A função membro insere um elemento com valor `val` na sequência controlada e reordena a sequência controlada para manter a disciplina de heap. Você pode usá-lo para adicionar outro elemento à fila.
+A função membro insere um elemento com valor `val` na sequência controlada e reordena a sequência controlada para manter a disciplina de heap. Você o usa para adicionar outro elemento à fila.
 
 ### <a name="example"></a>Exemplo
 
@@ -905,7 +905,7 @@ int main()
 c a b
 ```
 
-## <a name="reference"></a> priority_queue::reference (STL/CLR)
+## <a name="priority_queuereference-stlclr"></a><a name="reference"></a>priority_queue:: Reference (STL/CLR)
 
 O tipo de uma referência para um elemento.
 
@@ -954,7 +954,7 @@ c a b
 x a b
 ```
 
-## <a name="size"></a> priority_queue::size (STL/CLR)
+## <a name="priority_queuesize-stlclr"></a><a name="size"></a>priority_queue:: Size (STL/CLR)
 
 Conta o número de elementos.
 
@@ -966,7 +966,7 @@ size_type size();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna o comprimento da sequência controlada. Você pode usá-lo para determinar o número de elementos que estão na sequência controlada. Se você se preocupa se a sequência tem tamanho diferente de zero, consulte [priority_queue:: Empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)`()`.
+A função membro retorna o comprimento da sequência controlada. Você o usa para determinar o número de elementos atualmente na sequência controlada. Se tudo o que você se importa é se a sequência tem tamanho diferente de zero, consulte [priority_queue:: Empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)`()`.
 
 ### <a name="example"></a>Exemplo
 
@@ -1008,9 +1008,9 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> priority_queue::size_type (STL/CLR)
+## <a name="priority_queuesize_type-stlclr"></a><a name="size_type"></a>priority_queue:: size_type (STL/CLR)
 
-O tipo de uma distância com sinal entre dois elementos.
+O tipo de uma distância assinada entre dois elementos.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -1020,7 +1020,7 @@ typedef int size_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo descreve uma contagem de elemento não negativo.
+O tipo descreve uma contagem de elementos não negativos.
 
 ### <a name="example"></a>Exemplo
 
@@ -1057,9 +1057,9 @@ c a b
 size difference = 2
 ```
 
-## <a name="to_array"></a> priority_queue::to_array (STL/CLR)
+## <a name="priority_queueto_array-stlclr"></a><a name="to_array"></a>priority_queue:: to_array (STL/CLR)
 
-Copia a sequência controlada para uma nova matriz.
+Copia a sequência controlada em uma nova matriz.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -1069,7 +1069,7 @@ cli::array<Value>^ to_array();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna uma matriz que contém a sequência controlada. Você pode usá-lo para obter uma cópia da sequência controlada em forma de matriz.
+A função membro retorna uma matriz que contém a sequência controlada. Você o usa para obter uma cópia da sequência controlada na forma de matriz.
 
 ### <a name="example"></a>Exemplo
 
@@ -1107,7 +1107,7 @@ d c b a
 c a b
 ```
 
-## <a name="top"></a> priority_queue::top (STL/CLR)
+## <a name="priority_queuetop-stlclr"></a><a name="top"></a>priority_queue:: Top (STL/CLR)
 
 Acessa o elemento de prioridade mais alta.
 
@@ -1119,7 +1119,7 @@ reference top();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna uma referência ao elemento superior (prioridade mais alta) da sequência controlada, que deve ser não vazio. Você pode usá-lo para acessar o elemento de prioridade mais alta, quando você souber que ele existe.
+A função membro retorna uma referência ao elemento superior (prioridade mais alta) da sequência controlada, que deve ser não vazia. Você o usa para acessar o elemento de prioridade mais alta, quando você sabe que ele existe.
 
 ### <a name="example"></a>Exemplo
 
@@ -1153,7 +1153,7 @@ int main()
     }
 ```
 
-## <a name="top_item"></a> priority_queue::top_item (STL/CLR)
+## <a name="priority_queuetop_item-stlclr"></a><a name="top_item"></a>priority_queue:: top_item (STL/CLR)
 
 Acessa o elemento de prioridade mais alta.
 
@@ -1165,7 +1165,7 @@ property value_type back_item;
 
 ### <a name="remarks"></a>Comentários
 
-A propriedade acessa o elemento superior (prioridade mais alta) da sequência controlada, que deve ser não vazio. Você pode usá-lo para ler ou gravar o elemento de prioridade mais alta, quando você souber que ele existe.
+A propriedade acessa o elemento superior (prioridade mais alta) da sequência controlada, que deve ser não vazio. Você o usa para ler ou gravar o elemento de prioridade mais alta, quando você sabe que ele existe.
 
 ### <a name="example"></a>Exemplo
 
@@ -1205,7 +1205,7 @@ top_item = c
 x a b
 ```
 
-## <a name="value_comp"></a> priority_queue::value_comp (STL/CLR)
+## <a name="priority_queuevalue_comp-stlclr"></a><a name="value_comp"></a>priority_queue:: value_comp (STL/CLR)
 
 Copia o delegado de ordenação para dois elementos.
 
@@ -1217,7 +1217,7 @@ value_compare^ value_comp();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna o delegado de ordenação usado para ordenar a sequência controlada. Use-o para comparar dois valores.
+A função member retorna o delegado de ordenação usado para ordenar a sequência controlada. Use-o para comparar dois valores.
 
 ### <a name="example"></a>Exemplo
 
@@ -1264,7 +1264,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="value_compare"></a> priority_queue::value_compare (STL/CLR)
+## <a name="priority_queuevalue_compare-stlclr"></a><a name="value_compare"></a>priority_queue:: value_compare (STL/CLR)
 
 O delegado de ordenação para dois valores.
 
@@ -1276,7 +1276,7 @@ binary_delegate<value_type, value_type, int> value_compare;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo para o delegado que determina se o primeiro argumento é ordenado antes que o segundo.
+O tipo é um sinônimo para o delegado que determina se o primeiro argumento é ordenado antes do segundo.
 
 ### <a name="example"></a>Exemplo
 
@@ -1323,7 +1323,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="value_type"></a> priority_queue::value_type (STL/CLR)
+## <a name="priority_queuevalue_type-stlclr"></a><a name="value_type"></a>priority_queue:: value_type (STL/CLR)
 
 O tipo de um elemento.
 
@@ -1335,7 +1335,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Comentários
 
-O tipo é um sinônimo do parâmetro de modelo *valor*.
+O tipo é um sinônimo para o *valor*do parâmetro de modelo.
 
 ### <a name="example"></a>Exemplo
 

@@ -39,12 +39,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 9c1c09f8ffe0ef8d4759b9242ba30e8fafaaeb01
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 47798b5d628484482dffdc963d6e8c7a809f42ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443759"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168010"
 ---
 # <a name="image-editor-for-icons-c"></a>Editor de imagem para íconesC++()
 
@@ -68,7 +68,7 @@ Para obter informações sobre o **Editor de imagem**, consulte como [criar um �
 
 O menu **imagem** , que aparece somente quando o **Editor de imagem** está ativo, tem comandos para editar imagens, gerenciar paletas de cores e definir opções de janela do **Editor de imagem** . Além disso, os comandos para usar imagens de dispositivo estão disponíveis ao trabalhar com ícones e cursores.
 
-|{1&gt;Comando&lt;1}|Descrição|
+|Comando|DESCRIÇÃO|
 |---|---|
 |**Inverter cores**|Inverte suas cores.|
 |**Inverter Horizontalmente**|Inverte a imagem ou a seleção horizontalmente.|
@@ -90,14 +90,14 @@ O menu **imagem** , que aparece somente quando o **Editor de imagem** está ativ
 
 A caixa de diálogo **configurações de grade** permite que você especifique as configurações de grade para a imagem e exibe linhas de grade sobre a imagem editada. As linhas são úteis para editar a imagem, mas não são salvas como parte da própria imagem.
 
-|Propriedade|Descrição|
+|Propriedade|DESCRIÇÃO|
 |---|---|
 |**Grade de pixel**|Quando marcada, exibe uma grade em volta de cada pixel no **Editor de imagem**.<br/><br/>A grade aparece apenas a 4 × e resoluções superiores.|
 |**Grade de blocos**|Quando selecionado, exibe uma grade em volta de blocos de pixels no **Editor de imagens**, especificado pelos valores de espaçamento da grade.|
-|**Largura**|Especifica a largura de cada bloco de blocos.<br/><br/>Essa propriedade é útil ao desenhar bitmaps que contêm várias imagens que são organizadas em intervalos regulares.|
-|**Altura**|Especifica a altura de cada bloco de blocos.<br/><br/>Essa propriedade é útil ao desenhar bitmaps que contêm várias imagens que são organizadas em intervalos regulares.|
+|**Width**|Especifica a largura de cada bloco de blocos.<br/><br/>Essa propriedade é útil ao desenhar bitmaps que contêm várias imagens que são organizadas em intervalos regulares.|
+|**Height**|Especifica a altura de cada bloco de blocos.<br/><br/>Essa propriedade é útil ao desenhar bitmaps que contêm várias imagens que são organizadas em intervalos regulares.|
 
-## <a name="toolbar"></a>Barra de Ferramentas
+## <a name="toolbar"></a>Barra de ferramentas
 
 A barra de ferramentas do **Editor de imagem** contém ferramentas para desenhar, pintar, inserir texto, apagar e manipular exibições. Ele também contém um seletor de opção, com o qual você pode selecionar opções para usar cada ferramenta. Por exemplo, você pode escolher entre várias larguras de pincel, fatores de ampliação e estilos de linha.
 
@@ -136,13 +136,13 @@ Abra a caixa de diálogo **fonte da ferramenta de texto** para alterar a fonte, 
 
 Para acessar essa caixa de diálogo, selecione o botão **fonte** na caixa de diálogo **ferramenta de texto** . As propriedades disponíveis são:
 
-|Propriedade|Descrição|
+|Propriedade|DESCRIÇÃO|
 |---|---|
 |**Fonte**|Lista as fontes disponíveis.|
 |**Estilo da fonte**|Lista os estilos disponíveis para a fonte especificada.|
-|**Size**|Lista os tamanhos de pontos disponíveis para a fonte especificada.|
+|**Tamanho**|Lista os tamanhos de pontos disponíveis para a fonte especificada.|
 |**Amostra**|Mostra um exemplo de como o texto será exibido com as configurações de fonte especificadas.|
-|**script**|Lista os scripts de idioma disponíveis para a fonte especificada.<br/><br/>Quando você seleciona um script de idioma diferente, o conjunto de caracteres para esse idioma fica disponível para a criação de documentos multilíngües.|
+|**Script**|Lista os scripts de idioma disponíveis para a fonte especificada.<br/><br/>Quando você seleciona um script de idioma diferente, o conjunto de caracteres para esse idioma fica disponível para a criação de documentos multilíngües.|
 
 #### <a name="to-change-the-font-of-text-on-an-image"></a>Para alterar a fonte do texto em uma imagem
 
@@ -210,11 +210,11 @@ Para todos os painéis do **Editor de imagem** com um fator de ampliação de 4 
 
 1. Marque a caixa de seleção **grade de pixels** para exibir a grade ou desmarque a caixa para ocultar a grade.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 Nenhum
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Editores de recursos](../windows/resource-editors.md)<br/>
 [Ícones](/windows/win32/menurc/icons)

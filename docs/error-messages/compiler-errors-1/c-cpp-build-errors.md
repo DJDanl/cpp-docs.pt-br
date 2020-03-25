@@ -1,5 +1,5 @@
 ---
-title: C /C++ erros e avisos das ferramentas de compilação
+title: Erros eC++ avisos das ferramentas de compilação C/Build
 ms.date: 11/17/2017
 helpviewer_keywords:
 - builds [C++], errors
@@ -7,74 +7,74 @@ helpviewer_keywords:
 - error messages [C++], build errors
 - errors [C++], builds
 ms.assetid: 2470b496-28fa-47e7-a238-a086d99b06ca
-ms.openlocfilehash: d16b691592a7b35a08bc02a0214f5415bd4ad2dd
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 92b0402a85edd4ac6ac8ffaace676b045c05064c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856898"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208294"
 ---
 # <a name="cc-compiler-and-build-tools-errors-and-warnings"></a>Erros e avisos do Compilador de C/C++ e de ferramentas de build
 
-Os artigos nesta seção da documentação explicam diagnóstico mensagens de erro e aviso geradas pelo Microsoft C /C++ ferramentas de compilador e de build.
+Os artigos nesta seção da documentação explicam o erro de diagnóstico e as mensagens de aviso que são geradas peloC++ Microsoft C/Compiler e por ferramentas de compilação.
 
 [!INCLUDE[error-boilerplate](../includes/error-boilerplate.md)]
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[(BKxxxx) de avisos e erros BSCMAKE](../tool-errors/bscmake-errors-bk1500-through-bk4505.md) \
-Erros e avisos gerados pelo Microsoft procurar informações de manutenção do utilitário (BSCMAKE. EXE).
+[BSCMAKE erros e avisos (BKxxxx)](../tool-errors/bscmake-errors-bk1500-through-bk4505.md) \
+Erros e avisos gerados pelo utilitário de manutenção de informações do Microsoft Browse (BSCMAKE. EXE).
 
-[Avisos e erros de linha de comando](../tool-errors/command-line-errors-d8000-through-d9999.md) \
-Erros e avisos gerados por ferramentas de compilação para problemas de opções de linha de comando.
+[Erros de linha de comando e avisos](../tool-errors/command-line-errors-d8000-through-d9999.md) \
+Erros e avisos gerados pelas ferramentas de compilação para problemas de opções de linha de comando.
 
-[Erros do compilador fatais C999 - C1999](../compiler-errors-1/compiler-fatal-errors-c999-through-c1999.md) \
-Erros de interrompem o C++ compilador (CL. EXE).
+[Erros fatais do compilador C999-C1999](../compiler-errors-1/compiler-fatal-errors-c999-through-c1999.md) \
+Erros que interrompem o C++ compilador (CL. EXE).
 
-[Erros do compilador C2001 - C3999](../compiler-errors-1/compiler-errors-c2001-through-c2099.md) \
+[Erros do compilador C2001-C3999](../compiler-errors-1/compiler-errors-c2001-through-c2099.md) \
 Erros detectados pelo C++ compilador (CL. EXE).
 
-[Avisos do compilador C4000 - C5999](../compiler-warnings/compiler-warnings-c4000-through-c4199.md) \
+[Avisos do compilador C4000-C5999](../compiler-warnings/compiler-warnings-c4000-through-c4199.md) \
 Avisos para problemas detectados pelo C++ compilador (CL. EXE).
 
-[Avisos do compilador pela versão do compilador](../compiler-warnings/compiler-warnings-by-compiler-version.md) \
-Uma lista de avisos introduzidos por cada versão do compilador.
+[Avisos do compilador por versão do compilador](../compiler-warnings/compiler-warnings-by-compiler-version.md) \
+Uma lista dos avisos introduzidos por cada versão do compilador.
 
-[Erros de tempo de execução C (Rxxxx)](../tool-errors/c-runtime-errors-r6002-through-r6035.md) \
+[Rxxxx (erros de tempo de execução C)](../tool-errors/c-runtime-errors-r6002-through-r6035.md) \
 Erros gerados em tempo de execução pela biblioteca de tempo de execução C (CRT).
 
-[Erros CVTRES e avisos (CVTxxxx)](../tool-errors/cvtres-errors-cvt1100-through-cvt4001.md) \
-Erros e avisos gerados pelo recurso de arquivo para COFF objeto conversão utilitário Microsoft (CVTRES. EXE).
+[CVTRES erros e avisos (CVTxxxx)](../tool-errors/cvtres-errors-cvt1100-through-cvt4001.md) \
+Erros e avisos gerados pelo arquivo de recursos da Microsoft para o utilitário de conversão de objeto COFF (CVTRES. EXE).
 
-[Erros de avaliador de expressão (CXXxxxx)](../tool-errors/expression-evaluator-errors-cxx0000-through-cxx0072.md) \
-Erros gerados pelas ferramentas do depurador e de diagnóstico.
+[Erros do avaliador de expressão (CXXxxxx)](../tool-errors/expression-evaluator-errors-cxx0000-through-cxx0072.md) \
+Erros gerados pelo depurador e pelas ferramentas de diagnóstico.
 
-[Ferramentas de vinculador erros e avisos (LNKxxxx)](../tool-errors/linker-tools-errors-and-warnings.md) \
-Erros e avisos gerados pelo vinculador e relacionados ferramentas (LINK. EXE, LIB. EXE, DUMPBIN. EXE, EDITBIN. EXE).
+ \ de [erros e avisos das ferramentas do vinculador (LNKxxxx)](../tool-errors/linker-tools-errors-and-warnings.md)
+Erros e avisos gerados pelo vinculador e por ferramentas relacionadas (LINK. EXE, LIB. EXE, DUMPBIN. EXE, EDITBIN. EXE).
 
-[Erros de matemática (Mxxxx)](../tool-errors/math-errors-m6101-through-m6205.md) \
+[Erros matemáticos (Mxxxx)](../tool-errors/math-errors-m6101-through-m6205.md) \
 Erros gerados pela biblioteca de matemática de ponto flutuante de tempo de execução.
 
-[Erros NMAKE e avisos (Uxxxx)](../tool-errors/nmake-errors-u1000-through-u4011.md) \
+[NMAKE erros e avisos (uXXXX)](../tool-errors/nmake-errors-u1000-through-u4011.md) \
 Erros e avisos gerados pela ferramenta Microsoft makefile (NMAKE. EXE).
 
-[Erros de Otimização Guiada por perfil e avisos (PGxxxx)](../tool-errors/profile-guided-optimization-errors-and-warnings.md) \
+[Erros e avisos de Otimização Guiada por perfil (PGxxxx)](../tool-errors/profile-guided-optimization-errors-and-warnings.md) \
 Erros e avisos gerados pelas ferramentas de Otimização Guiada por perfil (PGO).
 
-[Erros de compilação do projeto e avisos (PRJxxxx)](../tool-errors/project-build-errors-and-warnings-prjxxxx.md) \
-Erros e avisos gerados pelo nativo C++ projeto de sistema de compilação do Visual Studio.
+[Avisos e erros de compilação do projeto (PRJxxxx)](../tool-errors/project-build-errors-and-warnings-prjxxxx.md) \
+Erros e avisos gerados pelo sistema de C++ compilação do projeto nativo no Visual Studio.
 
-[Erros de compilador de recurso e avisos (RCxxxx, RWxxxx)](../tool-errors/resource-compiler-errors-rc1000-through-rc4413.md) \
-Erros e avisos gerados pelo compilador de recursos (RC. EXE).
+[Erros e avisos do compilador de recurso (RCxxxx, RWxxxx)](../tool-errors/resource-compiler-errors-rc1000-through-rc4413.md) \
+Erros e avisos gerados pelo compilador de recurso (RC. EXE).
 
-[Mensagens do vetorizador e do paralelizador](../tool-errors/vectorizer-and-parallelizer-messages.md) \
-Mensagens de diagnóstico geradas pelas opções do compilador de otimização do vetorizador e do paralelizador.
+[Mensagens de vetorizador automático e paralelizador automático](../tool-errors/vectorizer-and-parallelizer-messages.md) \
+Mensagens de diagnóstico geradas pelas opções do compilador de otimização vetorizador automático e paralelizador automático.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
 [Avisos do compilador desativados por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência de build do C/C++](../../build/reference/c-cpp-building-reference.md) \
 [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)

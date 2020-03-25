@@ -23,12 +23,12 @@ helpviewer_keywords:
 - __wgetmainargs
 - __getmainargs
 ms.assetid: f72f54eb-9509-4bdf-8752-40fc49055439
-ms.openlocfilehash: dbf186fa699e8faf85385fd322482a4373b3fd60
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 01658c6146706d8ea7bfd70d002efcfff88031b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940343"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171587"
 ---
 # <a name="__getmainargs-__wgetmainargs"></a>__getmainargs, __wgetmainargs
 
@@ -52,7 +52,7 @@ int __wgetmainargs (
    _startupinfo * _StartInfo)
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 `_Argc`<br/>
 Um inteiro que contém o número de argumentos que se seguem em `argv`. O parâmetro `argc` é sempre maior ou igual a 1.
@@ -69,7 +69,7 @@ Um inteiro que, se definido como 1, expande os curingas nos argumentos de linha 
 `_StartInfo`<br/>
 Outras informações a serem passadas para a DLL do CRT.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 0 se for bem-sucedido; um valor negativo se não for.
 

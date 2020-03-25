@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1507
 ms.assetid: 3c5220d7-ccb3-45b4-9da0-cb06147311f6
-ms.openlocfilehash: 35e21ce2db086506d06bb3ea40781d1c68c7a75f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f4a642c712f9973b8d7c696dd981a00777c8641
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279769"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197724"
 ---
 # <a name="bscmake-error-bk1507"></a>Erro BK1507 (BSCMAKE)
 
-não é possível abrir o arquivo temporário 'filename' [: motivo]
+Não é possível abrir o arquivo temporário ' FileName ' [: reason]
 
-BSCMAKE não é possível abrir um arquivo temporário.
+BSCMAKE não pode abrir um arquivo temporário.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
 
-1. O **TMP** variável de ambiente não está definida como uma unidade válida e o diretório.
+1. A variável de ambiente **tmp** não está definida como uma unidade e um diretório válidos.
 
 1. Um disco cheio.

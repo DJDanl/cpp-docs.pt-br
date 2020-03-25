@@ -3,35 +3,35 @@ title: Referência WRL
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 5779dae8-8634-4c77-aa8b-9a348692a2bb
-ms.openlocfilehash: 602e70a013b0f92eee174a218ba0fb04396ecd5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82d684cef627c1cce8255c56725acf044d3e9340
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404553"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213506"
 ---
 # <a name="wrl-reference"></a>Referência WRL
 
-Esta seção contém informações de referência para o Windows Runtime C++ modelo Library (WRL).
+Esta seção contém informações de referência para a C++ WRL (biblioteca de modelos de Windows Runtime).
 
 > [!NOTE]
-> A biblioteca de modelos C++ do Windows Runtime define a funcionalidade que oferece suporte a infraestrutura de biblioteca de modelos de C++ de tempo de execução do Windows e não se destina a ser usado diretamente do seu código. Essa funcionalidade está disponível nesta documentação.
+> A Windows Runtime C++ biblioteca de modelos define a funcionalidade que dá C++ suporte à infraestrutura de Windows Runtime Template Library e não se destina a ser usada diretamente do seu código. Essa funcionalidade é indicada nesta documentação.
 
 ## <a name="in-this-section"></a>Nesta seção
 
 [Namespace Microsoft::WRL](microsoft-wrl-namespace.md)<br/>
-Define os tipos fundamentais que compõem a biblioteca de modelos C++ do Windows Runtime.
+Define os tipos fundamentais que compõem a Windows Runtime C++ biblioteca de modelos.
 
 [Namespace Microsoft::WRL::Wrappers](microsoft-wrl-wrappers-namespace.md)<br/>
-Define os tipos de wrapper de recurso aquisição é a inicialização (RAII) que simplificam o gerenciamento de tempo de vida de objetos, cadeias de caracteres e identificadores.
+Define a aquisição de recursos como tipos de wrapper de inicialização (RAII) que simplificam o gerenciamento do tempo de vida de objetos, cadeias de caracteres e identificadores.
 
 [Namespace Microsoft::WRL::Wrappers::HandleTraits](microsoft-wrl-wrappers-handletraits-namespace.md)<br/>
-Descreve as características dos tipos comuns de recursos com base no identificador.
+Descreve as características de tipos de recursos baseados em identificadores comuns.
 
 [Namespace Windows::Foundation](windows-foundation-namespace.md)<br/>
-Habilita a funcionalidade fundamental do tempo de execução do Windows, como a criação de objeto e de fábrica.
+Permite a funcionalidade de Windows Runtime fundamental, como a criação de um objeto e de fábrica.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
 [WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](windows-runtime-cpp-template-library-wrl.md)<br/>
-Apresenta a biblioteca de modelos de C++ do tempo de execução do Windows, uma biblioteca de modelos COM base em que fornece uma maneira de baixo nível para criar e usar componentes de tempo de execução do Windows.
+Apresenta Windows Runtime C++ biblioteca de modelos, uma biblioteca de modelos baseada em com que fornece uma maneira de baixo nível para criar e usar componentes de Windows Runtime.

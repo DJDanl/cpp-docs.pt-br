@@ -1,21 +1,21 @@
 ---
-title: com_interface_entry (C++ COM atributo)
+title: com_interface_entry (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: 65d174679f851613e064568b071cfcbdad8f0f06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7b378baedd3f8c2720c7ab17698e8b416304061
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148257"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168298"
 ---
-# <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
+# <a name="com_interface_entry-c"></a>com_interface_entry (C++)
 
-Adiciona uma entrada de interface do mapa COM da classe de destino.
+Adiciona uma entrada de interface ao mapa COM da classe de destino.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -24,18 +24,18 @@ Adiciona uma entrada de interface do mapa COM da classe de destino.
   com_interface_entry) ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *com_interface_entry*<br/>
-Uma cadeia de caracteres que contém o texto real da entrada. Para obter uma lista de valores possíveis, consulte [COM_INTERFACE_ENTRY Macros](../../atl/reference/com-interface-entry-macros.md).
+Uma cadeia de caracteres que contém o texto real da entrada. Para obter uma lista de valores possíveis, consulte [COM_INTERFACE_ENTRY macros](../../atl/reference/com-interface-entry-macros.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **com_interface_entry** C++ atributo insere o conteúdo unabridged de uma cadeia de caracteres para o mapa de interface COM do objeto de destino. Se o atributo é aplicado de uma vez para o objeto de destino, a entrada será inserida no início do mapa de interface existente. Se o atributo é aplicado várias vezes ao mesmo objeto de destino, as entradas são inseridas no início do mapa de interface na ordem em que elas são recebidas.
+O atributo **COM_INTERFACE_ENTRY** C++ insere o conteúdo Unabridged de uma cadeia de caracteres no mapa de interface com do objeto de destino. Se o atributo for aplicado uma vez ao objeto de destino, a entrada será inserida no início do mapa de interface existente. Se o atributo for aplicado repetidamente ao mesmo objeto de destino, as entradas serão inseridas no início do mapa de interface na ordem em que são recebidas.
 
-Este atributo exige que o [coclass](coclass.md), [progid](progid.md), ou [vi_progid](vi-progid.md) atributo (ou outro atributo que implica uma destas opções) também ser aplicadas ao mesmo elemento. Se qualquer atributo único for usado, os outros dois são aplicados automaticamente. Por exemplo, se `progid` for aplicada, `vi_progid` e `coclass` também são aplicadas.
+Esse atributo requer que o atributo [coclass](coclass.md), [ProgID](progid.md)ou [vi_progid](vi-progid.md) (ou outro atributo que implica um deles) também seja aplicado ao mesmo elemento. Se qualquer atributo único for usado, os outros dois serão aplicados automaticamente. Por exemplo, se `progid` for aplicado, `vi_progid` e `coclass` também serão aplicadas.
 
-Porque o primeiro uso **com_interface_entry** faz com que a nova interface a ser inserido no início do mapa de interface, ele deve ser um dos seguintes tipos de COM_INTERFACE_ENTRY:
+Como o primeiro uso de **COM_INTERFACE_ENTRY** faz com que a nova interface seja inserida no início do mapa de interface, ela deve ser um dos seguintes tipos de COM_INTERFACE_ENTRY:
 
 - COM_INTERFACE_ENTRY
 
@@ -45,9 +45,9 @@ Porque o primeiro uso **com_interface_entry** faz com que a nova interface a ser
 
 - COM_INTERFACE_ENTRY2_IID
 
-Usos adicionais a **com_interface_entry** atributo pode usar todos os COM_INTERFACE_ENTRY tipos suportados.
+Usos adicionais do atributo **COM_INTERFACE_ENTRY** podem usar todos os tipos de COM_INTERFACE_ENTRY com suporte.
 
-Essa restrição é necessária porque o ATL usa a primeira entrada no mapa de interface como a identidade `IUnknown`; portanto, a entrada deve ser uma interface válida. Por exemplo, o exemplo de código a seguir é inválido porque a primeira entrada no mapa de interface não especifica uma interface COM real.
+Essa restrição é necessária porque a ATL usa a primeira entrada no mapa de interface como a identidade `IUnknown`; Portanto, a entrada deve ser uma interface válida. Por exemplo, o exemplo de código a seguir é inválido porque a primeira entrada no mapa de interface não especifica uma interface COM real.
 
 ```cpp
 [ coclass, com_interface_entry =
@@ -60,7 +60,7 @@ Essa restrição é necessária porque o ATL usa a primeira entrada no mapa de i
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir adiciona duas entradas para o mapa de interface COM existente de `CMyBaseClass`. A primeira é uma interface padrão e o segundo oculta o `IDebugTest` interface.
+O código a seguir adiciona duas entradas ao mapa de interface COM existente do `CMyBaseClass`. A primeira é uma interface padrão e a segunda oculta a interface `IDebugTest`.
 
 ```cpp
 // cpp_attr_ref_com_interface_entry.cpp
@@ -90,7 +90,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };
 ```
 
-O mapa de objeto COM resultante para `CMyBaseClass` é da seguinte maneira:
+O mapa de objetos COM resultante para `CMyBaseClass` é o seguinte:
 
 ```cpp
 BEGIN_COM_MAP(CMyClass)
@@ -105,18 +105,18 @@ END_COM_MAP()
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|**class**, **struct**|
+|**Aplica-se a**|**classe**, **struct**|
 |**Repetível**|Sim|
-|**Atributos obrigatórios**|Um ou mais das seguintes opções: `coclass`, `progid`, ou `vi_progid`.|
+|**Atributos necessários**|Um ou mais dos seguintes: `coclass`, `progid`ou `vi_progid`.|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de COM](com-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>

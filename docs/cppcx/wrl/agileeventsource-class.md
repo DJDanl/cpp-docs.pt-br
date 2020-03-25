@@ -6,12 +6,12 @@ f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 7a919c0b2aa778ba1db19c3bfc3871542e8f9569
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 71a70f783d8f8967d755bb788f4aae4861340d64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441272"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214182"
 ---
 # <a name="agileeventsource-class"></a>Classe AgileEventSource
 
@@ -29,7 +29,7 @@ class AgileEventSource :
         TDelegateInterface, TEventSourceOptions>;
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 *TDelegateInterface*<br/>
 A interface para um delegado que representa um manipulador de eventos.
@@ -47,7 +47,7 @@ A grande maioria dos componentes no Windows Runtime são componentes ágeis. Par
 
 `AgileEventSource`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Event. h
 
@@ -57,11 +57,11 @@ A grande maioria dos componentes no Windows Runtime são componentes ágeis. Par
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |[Método AgileEventSource:: Add](#add)|Acrescenta o manipulador de eventos Agile representado pela interface de delegação especificada ao conjunto de manipuladores de eventos para o objeto **AgileEventSource** atual.|
 
-## <a name="add"></a>Método AgileEventSource:: Add
+## <a name="agileeventsourceadd-method"></a><a name="add"></a>Método AgileEventSource:: Add
 
 Acrescenta o manipulador de eventos representado pela interface de representante especificada ao conjunto de manipuladores de eventos para o objeto [EventSource](eventsource-class.md) atual.
 
@@ -74,7 +74,7 @@ HRESULT Add(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *delegateInterface*<br/>
 A interface para um objeto delegado, que representa um manipulador de eventos.
@@ -86,6 +86,6 @@ Quando essa operação for concluída, um identificador que representa o evento.
 
 S_OK se for bem-sucedido; caso contrário, um HRESULT que indica o erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL](microsoft-wrl-namespace.md)

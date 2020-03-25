@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 24f107e0c1f74f95afc521c8a4c888a26a35c13a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ab2e0d152e4c123fa23512bc0111cebd070b3ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173386"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200852"
 ---
 # <a name="compiler-error-c3409"></a>Erro do compilador C3409
 
@@ -19,21 +19,21 @@ ms.locfileid: "62173386"
 
 ## <a name="remarks"></a>Comentários
 
-Os colchetes foram interpretados pelo compilador como um [atributo](../../windows/attributes-alphabetical-reference.md) bloco, mas nenhum atributo foi encontrado.
+Os colchetes foram interpretados pelo compilador como um bloco de [atributos](../../windows/attributes-alphabetical-reference.md) , mas nenhum atributo foi encontrado.
 
-O compilador pode gerar esse erro quando você usa colchetes como parte da definição de uma expressão lambda. Esse erro ocorre quando o compilador não pode determinar se os colchetes são parte da definição de uma expressão lambda ou de um bloco de atributo. Para obter mais informações sobre expressões lambda, consulte [Expressões lambda](../../cpp/lambda-expressions-in-cpp.md).
+O compilador pode gerar esse erro quando você usa colchetes como parte da definição de uma expressão lambda. Esse erro ocorre quando o compilador não pode determinar se os colchetes fazem parte da definição de uma expressão lambda ou de um bloco de atributo. Para obter mais informações sobre expressões lambda, consulte [Expressões lambda](../../cpp/lambda-expressions-in-cpp.md).
 
-### <a name="to-correct-this-error"></a>Para corrigir este erro
+### <a name="to-correct-this-error"></a>Para corrigir esse erro
 
-1. Se os colchetes são parte de um bloco de atributo:
+1. Se os colchetes fizerem parte de um bloco de atributos:
 
-   1. Forneça um ou mais atributos no bloco de atributo.
+   1. Forneça um ou mais atributos no bloco de atributos.
 
    1. Remova o bloco de atributo.
 
-1. Se os colchetes são parte de uma expressão lambda, certifique-se de que a expressão lambda segue as regras de sintaxe válida.
+1. Se os colchetes fizerem parte de uma expressão lambda, certifique-se de que a expressão lambda segue regras de sintaxe válidas.
 
-   Para obter mais informações sobre a sintaxe da expressão lambda, consulte [sintaxe de expressão Lambda](../../cpp/lambda-expression-syntax.md).
+   Para obter mais informações sobre a sintaxe de expressão lambda, consulte [sintaxe de expressão lambda](../../cpp/lambda-expression-syntax.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -56,7 +56,7 @@ class b : public x {};
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C3409 porque uma expressão lambda usa o `mutable` especificação, mas não fornece uma lista de parâmetros. O compilador não pode determinar se os colchetes são parte da definição de uma expressão lambda ou de um bloco de atributo.
+O exemplo a seguir gera C3409 porque uma expressão lambda usa a especificação `mutable`, mas não fornece uma lista de parâmetros. O compilador não pode determinar se os colchetes fazem parte da definição de uma expressão lambda ou de um bloco de atributo.
 
 ```cpp
 // C3409b.cpp
@@ -67,7 +67,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [attribute](../../windows/attributes-alphabetical-reference.md)<br/>
 [Expressões Lambda](../../cpp/lambda-expressions-in-cpp.md)<br/>

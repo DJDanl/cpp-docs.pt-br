@@ -6,18 +6,18 @@ helpviewer_keywords:
 - override specifiers, C++
 - override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
-ms.openlocfilehash: c1e8e7db2879b0226eaff562f5b5b826bce14caf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 410fe9ecc48b92c68132f7b1b8057c2549c8afcf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515741"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181896"
 ---
 # <a name="override-specifiers--ccli-and-ccx"></a>Especificadores de substituição (C++/CLI e C++/CX)
 
 Os *Especificadores de substituição* modificam a forma como os tipos herdados e os membros de tipos herdados se comportam em tipos derivados.
 
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
+## <a name="all-runtimes"></a>Todos os Runtimes
 
 ### <a name="remarks"></a>Comentários
 
@@ -53,6 +53,6 @@ Opção do compilador: `/ZW`
 
 Opção do compilador: `/clr`
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 4f4bfe233e3228c50aee734de4ad979c38a55fda
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2f252206f6e364b1a87ee3b7b88b14d0ea19bacb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514537"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214780"
 ---
 # <a name="length_is"></a>length_is
 
@@ -23,9 +23,9 @@ Especifica o número de elementos da matriz a serem transmitidos.
 [ length_is("expression") ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*expression*<br/>
+*expressão*<br/>
 Uma ou mais expressões em linguagem C. São permitidos slots de argumento vazios.
 
 ## <a name="remarks"></a>Comentários
@@ -47,9 +47,9 @@ Consulte [first_is](first-is.md) para obter um exemplo de como especificar uma s
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>

@@ -1,21 +1,21 @@
 ---
-title: includelib (atributo de COM do C++)
+title: includelib (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.includelib
 helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
-ms.openlocfilehash: 57f039eeae527dd03884b12e7d9eb424d87f597f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4022a3f1f2d4ccaabe65c24065be8e1c846d604d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409350"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214832"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
-Faz com que um arquivo. IDL ou. h a serem incluídos no arquivo. idl gerado.
+Faz com que um arquivo. IDL ou. h seja incluído no arquivo. idl gerado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,14 +23,14 @@ Faz com que um arquivo. IDL ou. h a serem incluídos no arquivo. idl gerado.
 [ includelib(name.idl) ];
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*name.idl*<br/>
-O nome do arquivo. IDL que você deseja que seja incluído como parte do arquivo. idl gerado.
+*nome. idl*<br/>
+O nome do arquivo. idl que você deseja incluir como parte do arquivo. idl gerado.
 
 ## <a name="remarks"></a>Comentários
 
-O **includelib** C++ atributo faz com que um arquivo. IDL ou. h ser incluído no arquivo. idl gerado, após o `importlib` instrução.
+O atributo **includelib** C++ faz com que um arquivo. IDL ou. h seja incluído no arquivo. idl gerado, após a instrução de `importlib`.
 
 ## <a name="example"></a>Exemplo
 
@@ -45,18 +45,18 @@ O código a seguir é mostrado em um arquivo. cpp:
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|Em qualquer lugar|
+|**Aplica-se a**|Lugares|
 |**Repetível**|Sim|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos independentes](stand-alone-attributes.md)<br/>

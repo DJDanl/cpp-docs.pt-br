@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_raise_error function
 ms.assetid: a98226c2-c3fe-44f1-8ff5-85863de11cd6
-ms.openlocfilehash: 5790fceef26d6de4edff604270cc7108f764aced
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2012ec98d8d40d60a7f12feb68bdc371e1616223
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399246"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189787"
 ---
-# <a name="comraiseerror"></a>_com_raise_error
+# <a name="_com_raise_error"></a>_com_raise_error
 
 **Seção específica da Microsoft**
 
-Gera uma [com_error](../cpp/com-error-class.md) em resposta a uma falha.
+Gera um [_com_error](../cpp/com-error-class.md) em resposta a uma falha.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,9 +28,9 @@ void __stdcall _com_raise_error(
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
-*hr*<br/>
+*Human*<br/>
 Informações de HRESULT.
 
 *perrinfo*<br/>
@@ -38,11 +38,11 @@ Objeto `IErrorInfo`.
 
 ## <a name="remarks"></a>Comentários
 
-**com_raise_error**, que é definido em \<comdef >, pode ser substituído por uma versão escrito pelo usuário do mesmo nome e protótipo. Isso poderia ser feito se você quisesse usar `#import`, mas não quisesse usar ao tratamento de exceções do C++. Nesse caso, uma versão de usuário do **com_raise_error** pode decidir fazer um `longjmp` ou exibir uma caixa de mensagem e ser interrompido. No entanto, a versão do usuário não deve retornar, pois o código de suporte do compilador COM não espera que ela retorne.
+**_com_raise_error**, que é definido no \<comdef. h >, pode ser substituído por uma versão escrita pelo usuário com o mesmo nome e protótipo. Isso poderia ser feito se você quisesse usar `#import`, mas não quisesse usar ao tratamento de exceções do C++. Nesse caso, uma versão de usuário do **_com_raise_error** pode decidir fazer uma `longjmp` ou exibir uma caixa de mensagem e parar. No entanto, a versão do usuário não deve retornar, pois o código de suporte do compilador COM não espera que ela retorne.
 
-Você também pode usar [set_com_error_handler](../cpp/set-com-error-handler.md) para substituir a função de tratamento de erros padrão.
+Você também pode usar [_set_com_error_handler](../cpp/set-com-error-handler.md) para substituir a função de tratamento de erros padrão.
 
-Por padrão, **com_raise_error** é definido da seguinte maneira:
+Por padrão, **_com_raise_error** é definido da seguinte maneira:
 
 ```cpp
 void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
@@ -54,11 +54,11 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<comdef >
+**Cabeçalho:** \<comdef. h >
 
-**Lib:** Se o **wchar_t is Native Type** opção de compilador está ativada, use comsuppw. lib ou comsuppwd. Se **wchar_t is Native Type** estiver desativado, use comsupp. Para obter mais informações, consulte [/Zc:wchar_t (wchar_t é o tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+**Lib:** Se o wchar_t opção de compilador de **tipo nativo** estiver ativado, use comsuppw. lib ou comsuppwd. lib. Se **Wchar_t tipo nativo** for off, use comsupp. lib. Para obter mais informações, consulte [/Zc:wchar_t (wchar_t é o tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Funções globais COM do compilador](../cpp/compiler-com-global-functions.md)<br/>
 [_set_com_error_handler](../cpp/set-com-error-handler.md)

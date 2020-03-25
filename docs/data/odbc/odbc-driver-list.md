@@ -6,16 +6,16 @@ helpviewer_keywords:
 - ODBC drivers, list of
 - drivers, ODBC
 ms.assetid: 4e12c832-39fe-44f7-9230-5c8d37203f11
-ms.openlocfilehash: 479c30717d645d511e06651e36f73bb1188f0d21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 619aae452b0657e552baa54445dd38457fa32319
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395762"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213116"
 ---
 # <a name="odbc-driver-list"></a>Lista de drivers ODBC
 
-Visual C++ fornece drivers ODBC para os bancos de dados a seguir:
+O C++ Visual fornece drivers ODBC para os seguintes bancos de dados:
 
 - SQL Server
 
@@ -31,8 +31,8 @@ Visual C++ fornece drivers ODBC para os bancos de dados a seguir:
 
 - Arquivos de texto
 
-Para obter informações sobre drivers ODBC disponíveis da Microsoft e outras empresas, incluindo o pacote de Driver ODBC, entre em contato com o Microsoft Product Support Services.
+Para obter informações sobre drivers ODBC disponíveis da Microsoft e de outras empresas, incluindo o ODBC Driver Pack, entre em contato com o atendimento Microsoft.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)

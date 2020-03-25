@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-ms.openlocfilehash: 905c9fc41b1b42dffe9c7b39fae0b096cdc24950
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 451313b5bd1eb5011f1175de5c3bcfe6fb054299
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501761"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214910"
 ---
 # <a name="cpp_quote"></a>cpp_quote
 
@@ -23,9 +23,9 @@ Emite a cadeia de caracteres especificada, sem os caracteres de aspas, no arquiv
 [ cpp_quote("statement") ];
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*statement*<br/>
+*instrução*<br/>
 Uma instrução C.
 
 ## <a name="remarks"></a>Comentários
@@ -51,9 +51,9 @@ Veja o exemplo de [Dual](dual.md) para um exemplo use como usar **cpp_quote**.
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos independentes](stand-alone-attributes.md)

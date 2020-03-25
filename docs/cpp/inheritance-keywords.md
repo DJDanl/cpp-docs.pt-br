@@ -18,12 +18,12 @@ helpviewer_keywords:
 - derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
-ms.openlocfilehash: 656ee7ed38c24c9f3b8881f84d8e33ca81e3d936
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 781673582cb2c3086677b05abc6a7eb73eeabdb4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183486"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178167"
 ---
 # <a name="inheritance-keywords"></a>Palavras-chave de herança
 
@@ -35,9 +35,9 @@ class [__multiple_inheritance] class-name;
 class [__virtual_inheritance] class-name;
 ```
 
-em que:
+onde:
 
-*class-name*<br/>
+*nome da classe*<br/>
 O nome da classe que está sendo declarada.
 
 O C++ permite que você declare um ponteiro para um membro de classe antes da definição da classe. Por exemplo:
@@ -47,15 +47,15 @@ class S;
 int S::*p;
 ```
 
-No código acima, `p` é declarado como um ponteiro para membro inteiro da classe. S. No entanto, `class S` tem ainda não foi definida neste código; ela foi apenas declarada. Quando o compilador encontrar esse ponteiro, ele fará uma representação generalizada do ponteiro. O tamanho de representação depende do modelo de herança especificado. Há quatro maneiras de especificar um modelo de herança para o compilador:
+No código acima, `p` é declarado como um ponteiro para o membro inteiro da classe S. No entanto, `class S` ainda não foi definido neste código; Ele só foi declarado. Quando o compilador encontrar esse ponteiro, ele fará uma representação generalizada do ponteiro. O tamanho de representação depende do modelo de herança especificado. Há quatro maneiras de especificar um modelo de herança para o compilador:
 
-- No IDE, em **representação de ponteiro para membro**
+- No IDE sob **representação de ponteiro para membro**
 
-- Na linha de comando usando o [/vmg](../build/reference/vmb-vmg-representation-method.md) alternar
+- Na linha de comando usando a opção [/VMG](../build/reference/vmb-vmg-representation-method.md)
 
-- Usando o [pointers_to_members](../preprocessor/pointers-to-members.md) (pragma)
+- Usando o [pointers_to_members](../preprocessor/pointers-to-members.md) pragma
 
-- Usando as palavras-chave de herança **Single_Inheritance**, **multiple_inheritance**, e **virtual_inheritance**. Essa técnica controla o modelo de herança com base em classes.
+- Usando as palavras-chave de herança **__single_inheritance**, **__multiple_inheritance**e **__virtual_inheritance**. Essa técnica controla o modelo de herança com base em classes.
 
     > [!NOTE]
     >  Se você sempre declara um ponteiro para um membro de uma classe depois de defini-la, você não precisa usar qualquer uma dessas opções.
@@ -74,10 +74,10 @@ independentemente das opções de linha de comando ou dos pragmas, os ponteiros 
 > [!NOTE]
 >  A mesma declaração de encaminhamento de uma representação de ponteiro para membro de classe deve ocorrer em cada unidade de tradução que declarar ponteiros para membros daquela classe, e a declaração deve ocorrer antes que os ponteiros para os membros sejam declarados.
 
-Para compatibilidade com versões anteriores, **_single_inheritance**, **_multiple_inheritance**, e **_virtual_inheritance** são sinônimos do **_ Single_Inheritance**, **multiple_inheritance**, e **virtual_inheritance** , a menos que a opção de compilador [/Za \(desativar idioma extensões)](../build/reference/za-ze-disable-language-extensions.md) for especificado.
+Para a compatibilidade com versões anteriores, **_single_inheritance**, **_multiple_inheritance**e **_virtual_inheritance** são sinônimos de **__single_inheritance**, **__multiple_inheritance**e **__Virtual_inheritance** , a menos que a opção do compilador [/za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) seja especificada.
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Palavras-chave](../cpp/keywords-cpp.md)

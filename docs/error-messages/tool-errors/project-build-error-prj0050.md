@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0050
 ms.assetid: ceef3b37-0acf-4abd-ac62-aa830b4fa145
-ms.openlocfilehash: ec2490bad70d2b2eb72cbb48771900f09f8c2f67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56e092b5f7c33ad9543951621b2a9d8f6992331f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226485"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191984"
 ---
 # <a name="project-build-error-prj0050"></a>Erro de Build PRJ0050 no Projeto
 
-Falha ao registrar a saída. Verifique se que você tem as permissões apropriadas para modificar o registro.
+Falha ao registrar a saída. Verifique se você tem as permissões apropriadas para modificar o registro.
 
-O sistema de compilação do Visual C++ não pôde registrar a saída da compilação (dll ou .exe). Você precisa estar conectado como um administrador para modificar o registro.
+O sistema C++ de compilação Visual não pôde registrar a saída da compilação (DLL ou. exe). Você precisa estar conectado como administrador para modificar o registro.
 
-Se você estiver criando um arquivo. dll, você pode tentar registrar o arquivo. dll manualmente usando o regsvr32.exe, isso deve exibir informações sobre por que a compilação falhou.
+Se você estiver criando uma. dll, poderá tentar registrar o. dll manualmente usando regsvr32. exe, que deve exibir informações sobre o motivo da falha da compilação.
 
-Se você não estiver criando um arquivo. dll, examine o log de compilação para o comando que causa um erro.
+Se você não estiver criando uma. dll, examine o log de compilação do comando que causa um erro.

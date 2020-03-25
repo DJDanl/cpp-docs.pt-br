@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::CallbackContext Enumeration
 ms.assetid: 60e0c7cb-5d8f-482a-bdca-ca9335ae4899
-ms.openlocfilehash: 7f4e020ab0b1e377456c27d3b4666e15b5a4f7a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1daa3988fcb985dab9d3083233a3703a20cc2fdb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161652"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214247"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Enumeração Platform::CallbackContext
 
@@ -26,17 +26,17 @@ enum class CallbackContext {};
 
 ### <a name="members"></a>Membros
 
-|Type Code|Descrição|
+|Type Code|DESCRIÇÃO|
 |---------------|-----------------|
 |Qualquer|A função de retorno de chamada pode ser executada em qualquer contexto de thread.|
-|Same|A função de retorno de chamada pode ser executada apenas no contexto de thread que iniciou a operação assíncrona.|
+|Idêntico|A função de retorno de chamada pode ser executada apenas no contexto de thread que iniciou a operação assíncrona.|
 
 ### <a name="requirements"></a>Requisitos
 
-**Cliente com suporte mínimo:** Windows 8
+**Mínimo de cliente com suporte:** Windows 8
 
-**Servidor com suporte mínimo:** Windows Server 2012
+**Mínimo de servidor com suporte:** Windows Server 2012
 
-**Namespace:** Plataforma
+**Namespace:** Platform
 
 **Metadados:** platform.winmd

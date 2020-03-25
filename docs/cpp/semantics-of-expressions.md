@@ -7,12 +7,12 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 6770d3fb314222c7c58b6b97fa42d74cbc1e9b33
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5213fc7972f3a2590ceac5038a7b5e07495df594
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857314"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178843"
 ---
 # <a name="semantics-of-expressions"></a>Semântica de expressões
 
@@ -69,10 +69,10 @@ A linguagem C++ especifica determinadas compatibilidades ao especificar operando
 
 |Tipo esperado|Tipos permitidos|
 |-------------------|-------------------|
-|*type*|*tipo* de `const`<br /> *tipo* de `volatile`<br /> *tipo*&<br /> *tipo* de `const`&<br /> *tipo* de `volatile`&<br /> *tipo* de `volatile const`<br /> *tipo* de `volatile const`&|
-|*tipo* \*|*tipo* \*<br /> `const` *tipo* \*<br /> `volatile` *tipo* \*<br /> `volatile const` *tipo* \*|
-|*tipo* de `const`|*type*<br /> *tipo* de `const`<br />*tipo* de `const`&|
-|*tipo* de `volatile`|*type*<br /> *tipo* de `volatile`<br /> *tipo* de `volatile`&|
+|*tipo*|*tipo* de `const`<br /> *tipo* de `volatile`<br /> *tipo*&<br /> *tipo* de `const`&<br /> *tipo* de `volatile`&<br /> *tipo* de `volatile const`<br /> *tipo* de `volatile const`&|
+|*tipo* \*|*tipo* \*<br /> *tipo* de `const` \*<br /> *tipo* de `volatile` \*<br /> *tipo* de `volatile const` \*|
+|*tipo* de `const`|*tipo*<br /> *tipo* de `const`<br />*tipo* de `const`&|
+|*tipo* de `volatile`|*tipo*<br /> *tipo* de `volatile`<br /> *tipo* de `volatile`&|
 
 Como as regras acima podem sempre ser usadas em conjunto, um ponteiro const para um objeto volatile pode ser fornecido onde um ponteiro é esperado.
 
@@ -116,6 +116,6 @@ No momento, a definição da linguagem C++ não especifica pontos de sequência.
 
 - A expressão em uma instrução return. A expressão é completamente avaliada e todos os efeitos colaterais são concluídos antes que o controle retorne à função de chamada.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Expressões](../cpp/expressions-cpp.md)

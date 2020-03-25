@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - xor function
 ms.assetid: 0fe9554b-d87b-4487-92ed-366c6dc21df2
-ms.openlocfilehash: a1a1fb677087da173ef490b1a533f4c62d463702
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a9b3c393f481f083dcf476ae95cc30541a01ad28
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444191"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170092"
 ---
 # <a name="xor"></a>xor
 
@@ -44,7 +44,7 @@ Uma alternativa para o operador ^.
 
 A macro produz o operador ^.
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 ```cpp
 // iso646_xor.cpp
@@ -70,6 +70,6 @@ int main( )
 1
 ```
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** \<iso646. h >

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - record scrolling [C++]
 - scrolling records
 ms.assetid: f8b13477-2a37-459e-a30c-806fb78165ac
-ms.openlocfilehash: 66944221910dbd23d78a78fc951030efbee86bd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bbacd6625e846381d2bafc8133e8b36efe51b1a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398015"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213441"
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>Manipuladores de comandos para rolagem de registro (Acesso a dados MFC)
 
-O [CRecordView](../mfc/reference/crecordview-class.md) classe fornece padrão manipulação de comando para os seguintes comandos:
+A classe [CRecordView](../mfc/reference/crecordview-class.md) fornece manipulação de comandos padrão para os seguintes comandos padrão:
 
 - ID_RECORD_MOVE_FIRST
 
@@ -25,11 +25,11 @@ O [CRecordView](../mfc/reference/crecordview-class.md) classe fornece padrão ma
 
 - ID_RECORD_MOVE_PREV
 
-O `OnMove` função de membro fornece manipulação para todos os quatro comandos, que move de um registro para o registro de comando padrão. Como esses comandos são emitidos, RFX (ou DFX) carrega o novo registro nos campos do conjunto de registros e DDX move os valores para os controles do formulário de registro. Para obter informações sobre RFX, consulte [Exchange RFX (Record Field)](../data/odbc/record-field-exchange-rfx.md).
+A função membro `OnMove` fornece o tratamento de comandos padrão para todos os quatro comandos, que se movem de registro para registro. Como esses comandos são emitidos, RFX (ou DFX) carrega o novo registro nos campos do conjunto de registros e DDX move os valores para os controles do formulário de registro. Para obter informações sobre suporte RFX, consulte [Record Field Exchange (suporte RFX)](../data/odbc/record-field-exchange-rfx.md).
 
 > [!NOTE]
 >  Certifique-se de usar essas IDs de comando padrão para os objetos de interface de usuário associados com os comandos de navegação de registro padrão.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte à navegação em uma exibição de registro](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)

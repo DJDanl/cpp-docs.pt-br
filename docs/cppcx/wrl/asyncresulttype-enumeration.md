@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - AsyncResultType enumeration
 ms.assetid: 4195d234-3f3f-4363-9118-6ad2a7551cf2
-ms.openlocfilehash: d3f99fa85a777ae8361ed6f7cb82fe97ddd8d667
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8a2a9ec803fba1be0012fcb58bf3b42e78f9071
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398791"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214156"
 ---
 # <a name="asyncresulttype-enumeration"></a>Enumeração AsyncResultType
 
-Especifica o tipo de resultado retornado pelo `GetResults()` método.
+Especifica o tipo de resultado retornado pelo método `GetResults()`.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,17 +28,17 @@ enum AsyncResultType;
 
 ### <a name="values"></a>Valores
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|`MultipleResults`|Um conjunto de vários resultados, que são apresentadas progressivamente entre `Start` estado e antes de `Close()` é chamado.|
-|`SingleResult`|Um único resultado é apresentado após o `Complete` evento ocorre.|
+|`MultipleResults`|Um conjunto de vários resultados, que são apresentados progressivamente entre `Start` estado e antes de `Close()` ser chamado.|
+|`SingleResult`|Um único resultado, que é apresentado após a ocorrência do evento `Complete`.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** async.h
+**Cabeçalho:** Async. h
 
-**Namespace:** Microsoft::WRL
+**Namespace:** Microsoft:: WRL
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL](microsoft-wrl-namespace.md)

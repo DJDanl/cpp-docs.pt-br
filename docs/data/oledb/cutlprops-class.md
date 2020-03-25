@@ -29,12 +29,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: bbeae4faad4d650d8dc44a61a22b1fcc63a0bc15
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3498ec1250d9443007acb3b12ec25983a71587d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441037"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211101"
 ---
 # <a name="cutlprops-class"></a>Classe CUtlProps
 
@@ -47,18 +47,18 @@ template < class T >
 class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 A classe que contém a `BEGIN_PROPSET_MAP`.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Atldb. h
 
 ## <a name="members"></a>Membros
 
-### <a name="methods"></a>{1&gt;Métodos&lt;1}
+### <a name="methods"></a>Métodos
 
 |||
 |-|-|
@@ -76,7 +76,7 @@ A maior parte dessa classe é um detalhe de implementação.
 
 Para obter mais informações sobre as macros usadas em um mapa de conjunto de propriedades, consulte [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) e [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
 
-## <a name="getpropvalue"></a>CUtlProps:: GetPropValue
+## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a>CUtlProps:: GetPropValue
 
 Obtém uma propriedade de um conjunto de propriedades.
 
@@ -88,7 +88,7 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
    VARIANT* pvValue);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *pguidPropSet*<br/>
 no O GUID para o propset.
@@ -103,7 +103,7 @@ fora Um ponteiro para uma variante que contém o novo valor da propriedade.
 
 `Failure` em caso de falha e S_OK se tiver êxito.
 
-## <a name="isvalidvalue"></a>CUtlProps:: isvalidavalue
+## <a name="cutlpropsisvalidvalue"></a><a name="isvalidvalue"></a>CUtlProps:: isvalidavalue
 
 Usado para validar um valor antes de definir uma propriedade.
 
@@ -114,7 +114,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
    DBPROP* pDBProp);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *iCurSet*<br/>
 O índice na matriz de conjunto de propriedades; zero se houver apenas um conjunto de propriedades.
@@ -130,7 +130,7 @@ Um HRESULT padrão. O valor de retorno padrão é S_OK.
 
 Se você tiver alguma rotina de validação que deseja executar em um valor que você está prestes a usar para definir uma propriedade, você deve substituir essa função. Por exemplo, você pode validar DBPROP_AUTH_PASSWORD em relação a uma tabela de senha para determinar um valor válido.
 
-## <a name="oninterfacerequested"></a>CUtlProps::OnInterfaceRequested
+## <a name="cutlpropsoninterfacerequested"></a><a name="oninterfacerequested"></a>CUtlProps::OnInterfaceRequested
 
 Lida com solicitações para uma interface opcional quando um consumidor chama um método em uma das interfaces de criação de objeto.
 
@@ -140,7 +140,7 @@ Lida com solicitações para uma interface opcional quando um consumidor chama u
 virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *riid*<br/>
 no O IID para a interface solicitada. Para obter mais detalhes, consulte a descrição do parâmetro *riid* de `ICommand::Execute` na *referência do programador de OLE DB* (no SDK do *MDAC*).
@@ -165,7 +165,7 @@ Se um consumidor abrir um objeto e solicitar uma interface opcional, o provedor 
 
 Se você quiser lidar com outras interfaces, substitua essa função em sua fonte de dados, sessão, comando ou classe de conjunto de linhas para processar funções. Sua substituição deve passar pelas interfaces de propriedades set/get normais para garantir que a configuração de propriedades também defina todas as propriedades encadeadas (consulte [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).
 
-## <a name="onpropertychanged"></a>CUtlProps:: OnPropertyChanged
+## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a>CUtlProps:: OnPropertyChanged
 
 Chamado depois de definir uma propriedade para manipular as propriedades encadeadas.
 
@@ -176,7 +176,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
    DBPROP* pDBProp);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *iCurSet*<br/>
 O índice na matriz de conjunto de propriedades; zero se houver apenas um conjunto de propriedades.
@@ -192,13 +192,13 @@ Um HRESULT padrão. O valor de retorno padrão é S_OK.
 
 Se você quiser manipular propriedades encadeadas, como indicadores ou atualizações cujos valores são dependentes de outro valor de propriedade, você deve substituir essa função.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 Nessa função, o usuário Obtém a ID da Propriedade do parâmetro `DBPROP*`. Agora, é possível comparar a ID com uma propriedade para cadeia. Quando a propriedade é encontrada, `SetProperties` é chamado com a propriedade que agora será definida em conjunto com a outra propriedade. Nesse caso, se uma Obtém a propriedade `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`ou `DBPROP_ORDEREDBOOKMARKS`, uma pode definir a propriedade `DBPROP_BOOKMARKS`.
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="setpropvalue"></a>CUtlProps:: SetPropValue
+## <a name="cutlpropssetpropvalue"></a><a name="setpropvalue"></a>CUtlProps:: SetPropValue
 
 Define uma propriedade em um conjunto de propriedades.
 
@@ -210,7 +210,7 @@ HRESULT SetPropValue(const GUID* pguidPropSet,
    VARIANT* pvValue);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *pguidPropSet*<br/>
 no O GUID para o propset.
@@ -225,7 +225,7 @@ no Um ponteiro para uma variante que contém o novo valor da propriedade.
 
 `Failure` em caso de falha e S_OK se tiver êxito.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

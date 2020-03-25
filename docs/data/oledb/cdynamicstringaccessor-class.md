@@ -12,16 +12,16 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0590bc015c5487315b8cbd38f0baf91eb3082cc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230989"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211855"
 ---
 # <a name="cdynamicstringaccessor-class"></a>Classe CDynamicStringAccessor
 
-Permite que você acesse uma fonte de dados quando você não tem nenhum conhecimento sobre o esquema de banco de dados (estrutura de base do banco de dados).
+Permite que você acesse uma fonte de dados quando não tem nenhum conhecimento do esquema de banco (a estrutura subjacente do banco de dado).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,7 +32,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho**: atldbcli.h
+**Cabeçalho**: atldbcli. h
 
 ## <a name="members"></a>Membros
 
@@ -45,17 +45,17 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 ## <a name="remarks"></a>Comentários
 
-Embora [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) solicita dados no formato nativo relatado pelo provedor, `CDynamicStringAccessor` solicita que o provedor de buscar todos os dados acessados do armazenamento de dados como dados de cadeia de caracteres. Isso é especialmente útil para tarefas simples que não exigem o cálculo dos valores no repositório de dados, como exibir ou imprimir o conteúdo do repositório de dados.
+Embora o [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) solicite dados no formato nativo relatado pelo provedor, `CDynamicStringAccessor` solicita que o provedor busque todos os dados acessados do armazenamento de dados como dados de cadeia de caracteres. Isso é especialmente útil para tarefas simples que não exigem o cálculo de valores no armazenamento de dados, como exibir ou imprimir o conteúdo do armazenamento de dados.
 
-Não importa o tipo nativo dos dados da coluna no armazenamento de dados; desde que o provedor pode dar suporte a conversão de dados, ele fornecerá os dados no formato de cadeia de caracteres. Se o provedor não der suporte a conversão de tipo de dados nativo para uma cadeia de caracteres (que não é comum), chamada de solicitação retornará o valor de sucesso DB_S_ERRORSOCCURED, e o status para a coluna correspondente será indicar um problema de conversão com DBSTATUS_E_CANTCONVERTVALUE.
+O tipo nativo de dados de coluna no repositório de dados não importa; desde que o provedor possa dar suporte à conversão de dados, ele fornecerá os dados no formato de cadeia de caracteres. Se o provedor não oferecer suporte à conversão do tipo de dados nativo em uma cadeia de caracteres (o que não é comum), a chamada solicitante retornará o valor de êxito DB_S_ERRORSOCCURED e o status da coluna correspondente indicará um problema de conversão com DBSTATUS_E_CANTCONVERTVALUE.
 
-Use `CDynamicStringAccessor` métodos para obter informações de coluna. Você pode usar essas informações de coluna para criar um acessador dinamicamente em tempo de execução.
+Use os métodos `CDynamicStringAccessor` para obter informações de coluna. Use essas informações de coluna para criar um acessador dinamicamente em tempo de execução.
 
-As informações de coluna são armazenadas em um buffer criadas e gerenciadas por esta classe. Obter dados de buffer usando [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md), ou armazená-lo para o buffer usando [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
+As informações de coluna são armazenadas em um buffer criado e gerenciado por essa classe. Obtenha dados do buffer usando [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)ou armazene-os no buffer usando [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
 
 Para obter uma discussão e exemplos de como usar as classes de acessador dinâmico, consulte [usando acessadores dinâmicos](../../data/oledb/using-dynamic-accessors.md).
 
-## <a name="getstring"></a> CDynamicStringAccessor::GetString
+## <a name="cdynamicstringaccessorgetstring"></a><a name="getstring"></a>CDynamicStringAccessor:: GetString
 
 Recupera os dados da coluna especificada como uma cadeia de caracteres.
 
@@ -69,23 +69,23 @@ BaseType* GetString(const CHAR* pColumnName) const throw();
 BaseType* GetString(const WCHAR* pColumnName) const throw();
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *nColumn*<br/>
-[in] O número da coluna. Os números de coluna começam com 1. Um valor de 0 refere-se para a coluna de indicador, se houver.
+no O número da coluna. Os números de coluna começam com 1. Um valor de 0 se refere à coluna de indicador, se houver.
 
 *pColumnName*<br/>
-[in] Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.
+no Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para o valor de cadeia de caracteres recuperados da coluna especificada. O valor é do tipo `BaseType`, que estará **CHAR** ou **WCHAR** dependendo se Unicode é definida ou não. Retorna NULL se a coluna especificada não for encontrada.
+Um ponteiro para o valor da cadeia de caracteres recuperado da coluna especificada. O valor é do tipo `BaseType`, que será **Char** ou **WCHAR** , dependendo se _UNICODE é definido ou não. Retornará NULL se a coluna especificada não for encontrada.
 
 ### <a name="remarks"></a>Comentários
 
-O segundo substituir formulário usa o nome da coluna como uma cadeia de caracteres ANSI. O terceiro substituir formulário usa o nome da coluna como uma cadeia de caracteres Unicode.
+O segundo formulário de substituição usa o nome da coluna como uma cadeia de caracteres ANSI. O terceiro formulário de substituição usa o nome da coluna como uma cadeia de caracteres Unicode.
 
-## <a name="setstring"></a> CDynamicStringAccessor::SetString
+## <a name="cdynamicstringaccessorsetstring"></a><a name="setstring"></a>CDynamicStringAccessor:: SetString
 
 Define os dados da coluna especificada como uma cadeia de caracteres.
 
@@ -102,30 +102,30 @@ HRESULT SetString(const WCHAR* pColumnName,
    BaseType* data) throw();
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *nColumn*<br/>
-[in] O número da coluna. Os números de coluna começam com 1. O valor especial de 0 refere-se para a coluna de indicador, se houver.
+no O número da coluna. Os números de coluna começam com 1. O valor especial de 0 se refere à coluna de indicador, se houver.
 
 *pColumnName*<br/>
-[in] Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.
+no Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.
 
 *data*<br/>
-[in] Um ponteiro para os dados de cadeia de caracteres a ser gravado para a coluna especificada.
+no Um ponteiro para os dados de cadeia de caracteres a serem gravados na coluna especificada.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para o valor de cadeia de caracteres para o qual definir a coluna especificada. O valor é do tipo `BaseType`, que estará **CHAR** ou **WCHAR** dependendo se Unicode é definida ou não.
+Um ponteiro para o valor da cadeia de caracteres para o qual definir a coluna especificada. O valor é do tipo `BaseType`, que será **Char** ou **WCHAR** , dependendo se _UNICODE é definido ou não.
 
 ### <a name="remarks"></a>Comentários
 
-O segundo substituir o formulário usa o nome da coluna como uma cadeia de caracteres ANSI e o terceiro substituir o formulário usa o nome da coluna como uma cadeia de caracteres Unicode.
+O segundo formulário de substituição usa o nome da coluna como uma cadeia de caracteres ANSI e o terceiro formulário de substituição usa o nome da coluna como uma cadeia de caracteres Unicode.
 
-Se _SECURE_ATL for definido para ter um valor diferente de zero, uma falha de asserção de tempo de execução será gerada se a entrada *dados* cadeia for maior que o comprimento máximo permitido da coluna de dados referenciado. Caso contrário, a cadeia de caracteres de entrada será truncada se ele for maior que o comprimento máximo permitido.
+Se _SECURE_ATL for definido para ter um valor diferente de zero, uma falha de asserção de tempo de execução será gerada se a cadeia de caracteres de *dados* de entrada for maior do que o comprimento máximo permitido da coluna de dados referenciada. Caso contrário, a cadeia de caracteres de entrada será truncada se for maior do que o comprimento máximo permitido.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CAccessor](../../data/oledb/caccessor-class.md)<br/>
 [Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>

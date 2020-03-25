@@ -22,16 +22,16 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 23467caf46d38175a74dab061f60e11009f1f481
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0fa5f381dba4f67934007d59dbdaf4450bcfb60
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230834"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211790"
 ---
 # <a name="cenumerator-class"></a>Classe CEnumerator
 
-Usa um objeto de enumerador OLE DB que expõe o [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) interface para retornar um conjunto de linhas que descrevem todas as fontes de dados e enumeradores.
+Usa um objeto enumerador OLE DB, que expõe a interface [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) para retornar um conjunto de linhas que descreve todas as fontes de dados e enumeradores.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,7 +42,7 @@ class CEnumerator :
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atldbcli.h
+**Cabeçalho:** atldbcli. h
 
 ## <a name="members"></a>Membros
 
@@ -50,17 +50,17 @@ class CEnumerator :
 
 |||
 |-|-|
-|[Find](#find)|Pesquisa por meio de provedores disponíveis (fontes de dados) procurando um com o nome especificado.|
-|[GetMoniker](#getmoniker)|Recupera o `IMoniker` interface para o registro atual.|
+|[Localizar](#find)|Pesquisa por meio de provedores disponíveis (fontes de dados) procurando um com o nome especificado.|
+|[GetMoniker](#getmoniker)|Recupera a interface `IMoniker` para o registro atual.|
 |[Abrir](#open)|Abre o enumerador.|
 
 ## <a name="remarks"></a>Comentários
 
-Você pode recuperar o `ISourcesRowset` dados indiretamente a partir dessa classe.
+Você pode recuperar os dados de `ISourcesRowset` indiretamente dessa classe.
 
-## <a name="find"></a> Cenumerator:: Find
+## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator:: find
 
-Procura por um nome especificado entre os provedores disponíveis.
+Procura um nome especificado entre os provedores disponíveis.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -68,22 +68,22 @@ Procura por um nome especificado entre os provedores disponíveis.
 bool Find(TCHAR* szSearchName) throw();
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *szSearchName*<br/>
-[in] O nome a ser pesquisado.
+no O nome a ser pesquisado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**True** se o nome foi encontrado. Caso contrário, **falsos**.
+**true** se o nome foi encontrado. Caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
-Esse nome é mapeado para o `SOURCES_NAME` membro a [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) interface.
+Esse nome é mapeado para o membro `SOURCES_NAME` da interface [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
 
-## <a name="getmoniker"></a> CEnumerator::GetMoniker
+## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator:: GetMoniker
 
-Analisa o nome de exibição para extrair o componente da cadeia de caracteres que pode ser convertido em um identificador de origem.
+Analisa o nome de exibição para extrair o componente da cadeia de caracteres que pode ser convertida em um moniker.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -94,21 +94,21 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
    LPCTSTR lpszDisplayName) const throw();
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *ppMoniker*<br/>
-[out] O moniker analisada do nome de exibição ([cenumeratoraccessor:: M_szparsename](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) da linha atual.
+fora O moniker analisado a partir do nome de exibição ([CEnumeratorAccessor:: m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) da linha atual.
 
 *lpszDisplayName*<br/>
-[in] O nome de exibição para analisar.
+no O nome de exibição a ser analisado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um HRESULT padrão.
 
-## <a name="open"></a> Cenumerator:: Open
+## <a name="cenumeratoropen"></a><a name="open"></a>CEnumerator:: abrir
 
-Associa o identificador de origem para o enumerador, se for especificado, então recupera o conjunto de linhas para o enumerador chamando [ISourcesRowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)).
+Associa o moniker para o enumerador, se um for especificado, recupera o conjunto de linhas para o enumerador chamando [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)).
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -120,23 +120,23 @@ HRESULT Open(const CLSID* pClsid = & CLSID_OLEDB_ENUMERATOR) throw();
 HRESULT Open(const CEnumerator& enumerator) throw();
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *pMoniker*<br/>
-[in] Um ponteiro para um identificador de origem para um enumerador.
+no Um ponteiro para um moniker de um enumerador.
 
 *pClsid*<br/>
-[in] Um ponteiro para o `CLSID` de um enumerador.
+no Um ponteiro para a `CLSID` de um enumerador.
 
 *enumerator*<br/>
-[in] Uma referência a um enumerador.
+no Uma referência a um enumerador.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um HRESULT padrão.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

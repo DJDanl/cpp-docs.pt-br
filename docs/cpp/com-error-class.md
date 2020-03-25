@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-ms.openlocfilehash: 828a1ec68fef631700d5b64e6aeeec6660acf9a8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0c33791fbe6011a3eddc6e535a3a4ed838e5e06c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498740"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180804"
 ---
 # <a name="_com_error-class"></a>Classe _com_error
 
@@ -29,7 +29,7 @@ Um objeto **_com_error** representa uma condição de exceção detectada pelas 
 
 |||
 |-|-|
-|[operator =](../cpp/com-error-operator-equal.md)|Atribui um objeto **_com_error** existente a outro.|
+|[operador =](../cpp/com-error-operator-equal.md)|Atribui um objeto de **_com_error** existente para outro.|
 
 ### <a name="extractor-functions"></a>Funções de extrator
 
@@ -44,9 +44,9 @@ Um objeto **_com_error** representa uma condição de exceção detectada pelas 
 |||
 |-|-|
 |[Descrição](../cpp/com-error-description.md)|Chama a função `IErrorInfo::GetDescription`.|
-|[HelpContext](../cpp/com-error-helpcontext.md)|Chama a função `IErrorInfo::GetHelpContext`.|
+|[Identificação](../cpp/com-error-helpcontext.md)|Chama a função `IErrorInfo::GetHelpContext`.|
 |[HelpFile](../cpp/com-error-helpfile.md)|Chama a função `IErrorInfo::GetHelpFile`.|
-|[Source](../cpp/com-error-source.md)|Chama a função `IErrorInfo::GetSource`.|
+|[Origem](../cpp/com-error-source.md)|Chama a função `IErrorInfo::GetSource`.|
 |[GUID](../cpp/com-error-guid.md)|Chama a função `IErrorInfo::GetGUID`.|
 
 ### <a name="format-message-extractor"></a>Extrator de mensagem de formato
@@ -59,18 +59,18 @@ Um objeto **_com_error** representa uma condição de exceção detectada pelas 
 
 |||
 |-|-|
-|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Mapeia 32 bits HRESULT para 16 bits `wCode`.|
-|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Mapeia 16 bits `wCode` para HRESULT de 32 bits.|
+|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Mapeia 32 bits de HRESULT para `wCode`de 16 bits.|
+|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Mapeia `wCode` de 16 bits para HRESULT de 32 bits.|
 
 **Fim da seção específica da Microsoft**
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<> comdef. h
+**Cabeçalho:** \<comdef. h >
 
-`Lib:`comsuppw. lib ou comsuppwd. lib (consulte [/Zc: wchar_t (Wchar_t é o tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)
+`Lib:` comsuppw. lib ou comsuppwd. lib (consulte [/Zc: wchar_t (Wchar_t é o tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classes de suporte COM do compilador](../cpp/compiler-com-support-classes.md)<br/>
 [Interface IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActivateInstance function
 ms.assetid: 8cfd1dd9-5fda-4cc2-acf8-d40e783b3875
-ms.openlocfilehash: 43aa34153f0e71dd665090243ff2288bff704404
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1109e769352d412df8348822e05b66063159ee8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303963"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214221"
 ---
 # <a name="activateinstance-function"></a>Função ActivateInstance
 
-Registra e recupera uma instância de um tipo especificado definido em uma ID de classe especificado.
+Registra e recupera uma instância de um tipo especificado definido em uma ID de classe especificada.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,27 +29,27 @@ inline HRESULT ActivateInstance(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
-Um tipo para ativar.
+Um tipo a ser ativado.
 
 *activatableClassId*<br/>
-A ID da classe que define o parâmetro *T*.
+O nome da ID de classe que define o parâmetro *T*.
 
-*instance*<br/>
-Quando essa operação for concluída, uma referência a uma instância do *T*.
+*instância*<br/>
+Quando essa operação é concluída, uma referência a uma instância de *T*.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um erro HRESULT que indica a causa do erro.
+S_OK se for bem-sucedido; caso contrário, um erro HRESULT indica a causa do erro.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** client.h
+**Cabeçalho:** Client. h
 
-**Namespace:** Windows::Foundation
+**Namespace:** Windows:: Foundation
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Windows::Foundation](windows-foundation-namespace.md)

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-ms.openlocfilehash: 81bb80446ef3df09eaed7a8728e789de67c27122
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1cc18d2192a42d22e31ee346f1e233cd7615ac0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395541"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209255"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Trabalhando com modelos de consumidor de banco de dados OLE
 
-Os seguintes tópicos fornecem alguns exemplos de como usar o OLE DB modelos de consumidor em cenários comuns:
+Os tópicos a seguir fornecem alguns exemplos de como usar os modelos de consumidor OLE DB em cenários comuns:
 
 - [Simplificando o acesso a dados com atributos de banco de dados](../../data/oledb/simplifying-data-access-with-database-attributes.md)
 
@@ -48,16 +48,16 @@ Os seguintes tópicos fornecem alguns exemplos de como usar o OLE DB modelos de 
 
 - [Recebendo notificações](../../data/oledb/receiving-notifications.md)
 
-Para obter um exemplo de criação e implementação de um consumidor OLE DB, consulte [criando um consumidor simples](../../data/oledb/creating-an-ole-db-consumer.md).
+Para obter um exemplo de criação e implementação de um consumidor de OLE DB, consulte [criando um consumidor simples](../../data/oledb/creating-an-ole-db-consumer.md).
 
-Você também pode encontrar exemplos de como usar o OLE DB modelos de consumidor nos exemplos a seguir:
+Você também pode encontrar exemplos de como usar os modelos de consumidor OLE DB nos seguintes exemplos:
 
-- [CatDB](https://github.com/Microsoft/VCSamples)
+- [CatDB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [DBViewer](https://github.com/Microsoft/VCSamples)
+- [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [MultiRead](https://github.com/Microsoft/VCSamples)
+- [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

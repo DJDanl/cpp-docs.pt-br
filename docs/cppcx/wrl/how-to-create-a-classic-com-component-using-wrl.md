@@ -1,16 +1,16 @@
 ---
-title: 'Como: Criar um componente COM clássico usando WRL'
+title: Como criar um componente COM clássico com WRL
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-ms.openlocfilehash: ec762b07caa30ce9aa6f4c67f84bb66ae884a7cf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a1507a1a980dfd98a235b7456d73add955c02043
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498383"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213909"
 ---
-# <a name="how-to-create-a-classic-com-component-using-wrl"></a>Como: Criar um componente COM clássico usando WRL
+# <a name="how-to-create-a-classic-com-component-using-wrl"></a>Como criar um componente COM clássico com WRL
 
 Você pode usar a WRL C++ (biblioteca de modelos de Windows Runtime) para criar componentes com clássicos básicos para uso em aplicativos de desktop, além de usá-los para aplicativos da UWP (plataforma universal do Windows). Para a criação de componentes COM, a Windows Runtime C++ biblioteca de modelos pode exigir menos código do que a ATL. Para obter informações sobre o subconjunto de COM com C++ suporte da biblioteca de modelos do Windows Runtime, consulte [Windows Runtime C++ Template Library (WRL)](windows-runtime-cpp-template-library-wrl.md).
 
@@ -28,11 +28,11 @@ Este documento mostra como usar a Windows Runtime C++ biblioteca de modelos para
 
    [!code-cpp[wrl-classic-com-component#1](../codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_1.idl)]
 
-5. Em CalculatorComponent. cpp, defina a `CalculatorComponent` classe. A `CalculatorComponent` classe herda de [Microsoft:: WRL:: RuntimeClass](runtimeclass-class.md). [Microsoft:: WRL:: RuntimeClassFlags\<ClassicCom >](runtimeclassflags-structure.md) especifica que a classe deriva de [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) e não [IInspectable](/windows/win32/api/inspectable/nn-inspectable-iinspectable). (`IInspectable` está disponível apenas para Windows Runtime componentes de aplicativo.) Cria uma fábrica para a classe que pode ser usada com funções como [CoCreateInstance.](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) `CoCreatableClass`
+5. No CalculatorComponent. cpp, defina a classe `CalculatorComponent`. A classe `CalculatorComponent` herda de [Microsoft:: WRL:: RuntimeClass](runtimeclass-class.md). [Microsoft:: WRL:: RuntimeClassFlags\<ClassicCom >](runtimeclassflags-structure.md) especifica que a classe deriva de [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) e não [IInspectable](/windows/win32/api/inspectable/nn-inspectable-iinspectable). (`IInspectable` está disponível somente para componentes de aplicativo Windows Runtime.) `CoCreatableClass` cria uma fábrica para a classe que pode ser usada com funções como [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
    [!code-cpp[wrl-classic-com-component#2](../codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_2.cpp)]
 
-6. Use o código a seguir para substituir o código `dllmain.cpp`em. Esse arquivo define as funções de exportação de DLL. Essas funções usam a classe [Microsoft:: WRL:: module](module-class.md) para gerenciar as fábricas de classes para o módulo.
+6. Use o código a seguir para substituir o código em `dllmain.cpp`. Esse arquivo define as funções de exportação de DLL. Essas funções usam a classe [Microsoft:: WRL:: module](module-class.md) para gerenciar as fábricas de classes para o módulo.
 
    [!code-cpp[wrl-classic-com-component#3](../codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_3.cpp)]
 
@@ -49,11 +49,11 @@ Este documento mostra como usar a Windows Runtime C++ biblioteca de modelos para
         DllCanUnloadNow         PRIVATE
     ```
 
-9. Adicione runtimeobject. lib à linha do vinculador. Para saber como, consulte [. Arquivos lib como entrada](../../build/reference/dot-lib-files-as-linker-input.md)do vinculador.
+9. Adicione runtimeobject. lib à linha do vinculador. Para saber como, consulte [. Arquivos lib como entrada do vinculador](../../build/reference/dot-lib-files-as-linker-input.md).
 
 ### <a name="to-consume-the-com-component-from-a-desktop-app"></a>Para consumir o componente COM de um aplicativo de área de trabalho
 
-1. Registre o componente COM com o registro do Windows. Para fazer isso, crie um arquivo de entradas de registro, `RegScript.reg`nomeie-o e adicione o texto a seguir. `C:\temp\WRLClassicCOM\Debug\CalculatorComponent.dll`  *Substitua\<dll-Path >* pelo caminho da sua DLL — por exemplo,.
+1. Registre o componente COM com o registro do Windows. Para fazer isso, crie um arquivo de entradas de registro, nomeie-o `RegScript.reg`e adicione o texto a seguir. Substitua *\<dll-path >* pelo caminho de sua DLL — por exemplo, `C:\temp\WRLClassicCOM\Debug\CalculatorComponent.dll`.
 
     ```
     Windows Registry Editor Version 5.00
@@ -82,12 +82,12 @@ Este documento mostra como usar a Windows Runtime C++ biblioteca de modelos para
 
    [!code-cpp[wrl-classic-com-component#6](../codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_6.cpp)]
 
-## <a name="robust-programming"></a>Programação robusta
+## <a name="robust-programming"></a>Programação Robusta
 
-Este documento usa funções COM padrão para demonstrar que você pode usar a Windows Runtime C++ biblioteca de modelos para criar um componente com e disponibilizá-lo para qualquer tecnologia habilitada para com. Você também pode usar Windows Runtime C++ tipos de biblioteca de modelos, como [Microsoft:: WRL:: ComPtr](comptr-class.md) em seu aplicativo de área de trabalho para gerenciar o tempo de vida de com e outros objetos. O código a seguir usa a C++ biblioteca de modelos Windows Runtime para gerenciar o tempo `ICalculatorComponent` de vida do ponteiro. A `CoInitializeWrapper` classe é um wrapper RAII que garante que a biblioteca com seja liberada e também garante que o tempo de vida da biblioteca com fique inativo no objeto de `ComPtr` ponteiro inteligente.
+Este documento usa funções COM padrão para demonstrar que você pode usar a Windows Runtime C++ biblioteca de modelos para criar um componente com e disponibilizá-lo para qualquer tecnologia habilitada para com. Você também pode usar Windows Runtime C++ tipos de biblioteca de modelos, como [Microsoft:: WRL:: ComPtr](comptr-class.md) em seu aplicativo de área de trabalho para gerenciar o tempo de vida de com e outros objetos. O código a seguir usa a C++ biblioteca de modelos Windows Runtime para gerenciar o tempo de vida do ponteiro de `ICalculatorComponent`. A classe `CoInitializeWrapper` é um wrapper RAII que garante que a biblioteca COM seja liberada e também garanta que o tempo de vida da biblioteca COM fique inativo no objeto de ponteiro inteligente `ComPtr`.
 
 [!code-cpp[wrl-classic-com-component#7](../codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_7.cpp)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](windows-runtime-cpp-template-library-wrl.md)

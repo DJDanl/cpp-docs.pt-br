@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2022
 ms.assetid: d2128c73-dde3-4b8e-a9b2-0a153acefb3b
-ms.openlocfilehash: e55202274c5ec3982f784ad6cdf074a5a99e922f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d30dad6f8ad146ff467eb4eaf32b21dd6950d25f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345331"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194636"
 ---
 # <a name="linker-tools-error-lnk2022"></a>Erro das Ferramentas de Vinculador LNK2022
 
-> Falha na operação de metadados (*HRESULT*): *error_message*
+> falha na operação de metadados (*HRESULT*): *ERROR_MESSAGE*
 
-O vinculador detectou um erro durante a mesclagem de metadados. Os erros de metadados devem ser resolvidos para vincular com êxito.
+O vinculador detectou um erro ao mesclar metadados. Os erros de metadados devem ser resolvidos para vincular com êxito.
 
-Uma maneira para diagnosticar esse problema é executar **ildasm-tokens** nos arquivos de objeto para localizar quais tipos têm os tokens listados no `error_message`e procure as diferenças.  Nos metadados, dois tipos diferentes com o mesmo nome não é válido, mesmo se o atributo LayoutType apenas é diferente.
+Uma maneira de diagnosticar esse problema é executar **ILDASM-tokens** nos arquivos de objeto para descobrir quais tipos têm os tokens listados em `error_message`e procurar diferenças.  Nos metadados, dois tipos diferentes com o mesmo nome não são válidos, mesmo que o atributo apenas layout seja diferente.
 
-Um motivo para das LNK2022 é quando há um tipo (como um struct) em vários compilandos com o mesmo nome, mas com definições conflitantes e quando você compila com [/clr](../../build/reference/clr-common-language-runtime-compilation.md).  Nesse caso, certifique-se de que o tipo tem uma definição de idêntica em todos os compilandos.  O nome do tipo está listado no `error_message`.
+Um motivo para LNK2022 é quando um tipo (como uma struct) existe em vários compilandos com o mesmo nome, mas com definições conflitantes e quando você compila com [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  Nesse caso, verifique se o tipo tem uma definição idêntica em todos os compilandos.  O nome do tipo é listado em `error_message`.
 
-Outra possível causa das LNK2022 é quando o vinculador encontra um arquivo de metadados em um local diferente do que foi especificado para o compilador (com [#using](../../preprocessor/hash-using-directive-cpp.md) ). Verifique se o arquivo de metadados (. dll ou. netmodule) está no mesmo local quando passados para o vinculador, como ele era quando ele foi passado para o compilador.
+Outra causa possível para LNK2022 é quando o vinculador encontra um arquivo de metadados em um local diferente do que foi especificado para o compilador (com [#using](../../preprocessor/hash-using-directive-cpp.md) ). Certifique-se de que o arquivo de metadados (. dll ou. netmodule) esteja no mesmo local quando passado para o vinculador, como foi quando ele foi passado para o compilador.
 
-Ao criar um aplicativo ATL, o uso da macro `_ATL_MIXED` é necessário em todos os compilandos, se ele for usado em pelo menos um.
+Ao criar um aplicativo ATL, o uso da macro `_ATL_MIXED` será necessário em todos os compilandos, se for usado em pelo menos um.
 
 ## <a name="example"></a>Exemplo
 
@@ -39,9 +39,9 @@ public ref class Test {};
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo mostra que não é possível vincular dois arquivos de código de origem que contêm tipos de mesmo nome mas de diferentes definições.
+Este exemplo mostra que não é possível vincular dois arquivos de código-fonte que contêm tipos de mesmo nome, mas definições diferentes.
 
-O exemplo a seguir gera das LNK2022.
+O exemplo a seguir gera LNK2022.
 
 ```cpp
 // LNK2022_b.cpp

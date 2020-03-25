@@ -32,16 +32,16 @@ helpviewer_keywords:
 - Hash method
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-ms.openlocfilehash: e3513084697a60a33b9fa2ab02222a9b332cce79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06e860425215d9fde268b780c001301b14a1caa1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408830"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210425"
 ---
 # <a name="irowsetlocateimpl-class"></a>Classe IRowsetLocateImpl
 
-Implementa o OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85)) interface, que busca linhas arbitrárias em um conjunto de linhas.
+Implementa a interface OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85)) , que busca linhas arbitrárias de um conjunto de linhas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -61,7 +61,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
        MapClass>
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 Uma classe derivada de `IRowsetLocateImpl`.
@@ -69,24 +69,24 @@ Uma classe derivada de `IRowsetLocateImpl`.
 *RowsetInterface*<br/>
 Uma classe derivada de `IRowsetImpl`.
 
-*RowClass*<br/>
+*Classe de categoria*<br/>
 A unidade de armazenamento para o `HROW`.
 
 *MapClass*<br/>
 A unidade de armazenamento para todos os identificadores de linha mantidos pelo provedor.
 
 *BookmarkKeyType*<br/>
-O tipo de indicador, como um longo período ou uma cadeia de caracteres. Indicadores comuns devem ter um comprimento de pelo menos dois bytes. (Comprimento de byte único é reservado para o banco de dados OLE [indicadores padrão](/previous-versions/windows/desktop/ms712954(v=vs.85))`DBBMK_FIRST`, `DBBMK_LAST`, e `DBBMK_INVALID`.)
+O tipo do indicador, como um longo ou uma cadeia de caracteres. Indicadores comuns devem ter um comprimento de pelo menos dois bytes. (O comprimento de byte único é reservado para os [indicadores](/previous-versions/windows/desktop/ms712954(v=vs.85)) de OLE DB padrão`DBBMK_FIRST`, `DBBMK_LAST`e `DBBMK_INVALID`.)
 
-*BookmarkType*<br/>
-O mecanismo de mapeamento para manter as relações de dados de indicador.
+*Bookmarktype*<br/>
+O mecanismo de mapeamento para manter relações de indicador para dados.
 
 *BookmarkMapClass*<br/>
 A unidade de armazenamento para todos os identificadores de linha mantidos pelo indicador.
 
 ## <a name="requirements"></a>Requisitos
 
-**Header**: atldb.h
+**Cabeçalho**: Atldb. h
 
 ## <a name="members"></a>Membros
 
@@ -94,12 +94,12 @@ A unidade de armazenamento para todos os identificadores de linha mantidos pelo 
 
 |||
 |-|-|
-|[Compare](#compare)|Compara dois indicadores.|
+|[Comparar](#compare)|Compara dois indicadores.|
 |[GetRowsAt](#getrowsat)|Busca linhas começando com a linha especificada por um deslocamento de um indicador.|
-|[GetRowsByBookmark](#getrowsbybookmark)|Busque as linhas que correspondem aos indicadores especificados.|
-|[Hash](#hash)|Retorna o hash valores para os indicadores especificados.|
+|[GetRowsByBookmark](#getrowsbybookmark)|Busca as linhas que correspondem aos indicadores especificados.|
+|[Hash](#hash)|Retorna valores de hash para os indicadores especificados.|
 
-### <a name="data-members"></a>Membros de Dados
+### <a name="data-members"></a>Membros de dados
 
 |||
 |-|-|
@@ -107,15 +107,15 @@ A unidade de armazenamento para todos os identificadores de linha mantidos pelo 
 
 ## <a name="remarks"></a>Comentários
 
-`IRowsetLocateImpl` é a implementação de modelos OLE DB do [IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85)) interface. `IRowsetLocate` é usado para buscar linhas arbitrárias em um conjunto de linhas. Um conjunto de linhas que não implementa essa interface é um `sequential` conjunto de linhas. Quando `IRowsetLocate` está presente em um conjunto de linhas, a coluna 0 é o indicador das linhas; lendo esta coluna irá obter um valor de indicador que pode ser usado para reposicionar na mesma linha.
+`IRowsetLocateImpl` é a implementação de modelos de OLE DB da interface [IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85)) . `IRowsetLocate` é usado para buscar linhas arbitrárias de um conjunto de linhas. Um conjunto de linhas que não implementa essa interface é um conjunto de linhas `sequential`. Quando `IRowsetLocate` está presente em um conjunto de linhas, a coluna 0 é o indicador para as linhas; a leitura desta coluna obterá um valor de indicador que pode ser usado para reposicionar a mesma linha.
 
-`IRowsetLocateImpl` é usado para implementar o suporte a indicadores em provedores. Os indicadores são espaços reservados (índices de um conjunto de linhas) que permitem que o consumidor retornar rapidamente a uma linha, permitindo o acesso aos dados de alta velocidade. O provedor determina o que é podem indicadores exclusivamente identificar uma linha. Usando `IRowsetLocateImpl` métodos, você pode comparar os indicadores, linhas de busca por deslocarem, em busca de linhas por indicador e retornam valores de hash de indicadores.
+`IRowsetLocateImpl` é usado para implementar o suporte a indicadores em provedores. Indicadores são espaços reservados (índices em um conjunto de linhas) que permitem que o consumidor retorne rapidamente a uma linha, permitindo acesso de alta velocidade aos dados. O provedor determina quais indicadores podem identificar uma linha exclusivamente. Usando métodos de `IRowsetLocateImpl`, você pode comparar indicadores, buscar linhas por deslocamento, buscar linhas por indicador e retornar valores de hash para indicadores.
 
-Para dar suporte a indicadores de OLE DB em um conjunto de linhas, verifique o conjunto de linhas herdam dessa classe.
+Para dar suporte a OLE DB indicadores em um conjunto de linhas, faça com que o conjunto de linhas herde dessa classe.
 
-Para obter informações sobre como implementar o suporte a indicadores, consulte [provedor oferecer suporte a indicadores](../../data/oledb/provider-support-for-bookmarks.md) na *guia do programador do Visual C++* e [indicadores](/previous-versions/windows/desktop/ms709728(v=vs.85)) no *Referência do programador do OLE DB* na plataforma do SDK.
+Para obter informações sobre como implementar o suporte a indicadores, consulte [suporte do provedor para indicadores](../../data/oledb/provider-support-for-bookmarks.md) no *Guia do programador C++ Visual* e [indicadores](/previous-versions/windows/desktop/ms709728(v=vs.85)) na *referência do programador de OLE DB* no SDK da plataforma.
 
-## <a name="compare"></a> IRowsetLocateImpl::Compare
+## <a name="irowsetlocateimplcompare"></a><a name="compare"></a>IRowsetLocateImpl:: Compare
 
 Compara dois indicadores.
 
@@ -130,25 +130,25 @@ STDMETHOD (Compare )(HCHAPTER /* hReserved */,
    DBCOMPARE* pComparison);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
-Ver [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)) na *referência do programador do OLE DB*.
+Consulte [IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)) na *referência do programador de OLE DB*.
 
 ### <a name="remarks"></a>Comentários
 
-Qualquer um dos indicadores podem ser um padrão definido pelo OLE DB [indicador padrão](/previous-versions/windows/desktop/ms712954(v=vs.85)) (`DBBMK_FIRST`, `DBBMK_LAST`, ou `DBBMK_INVALID`). O valor retornado na `pComparison` indica a relação entre os dois indicadores:
+Qualquer um dos indicadores pode ser um [indicador padrão](/previous-versions/windows/desktop/ms712954(v=vs.85)) definido por OLE DB padrão (`DBBMK_FIRST`, `DBBMK_LAST`ou `DBBMK_INVALID`). O valor retornado em `pComparison` indica a relação entre os dois indicadores:
 
-- DBCOMPARE_LT (`cbBookmark1` está antes `cbBookmark2`.)
+- DBCOMPARE_LT (`cbBookmark1` é antes de `cbBookmark2`.)
 
 - DBCOMPARE_EQ (`cbBookmark1` é igual a `cbBookmark2`.)
 
-- DBCOMPARE_GT (`cbBookmark1` após `cbBookmark2`.)
+- DBCOMPARE_GT (`cbBookmark1` é após `cbBookmark2`.)
 
-- DBCOMPARE_NE (os indicadores são iguais e não ordenados).
+- DBCOMPARE_NE (os indicadores são iguais e não são ordenados.)
 
-- DBCOMPARE_NOTCOMPARABLE (não não possível comparar os indicadores.)
+- DBCOMPARE_NOTCOMPARABLE (os indicadores não podem ser comparados.)
 
-## <a name="getrowsat"></a> IRowsetLocateImpl::GetRowsAt
+## <a name="irowsetlocateimplgetrowsat"></a><a name="getrowsat"></a>IRowsetLocateImpl:: GetRowsAt
 
 Busca linhas começando com a linha especificada por um deslocamento de um indicador.
 
@@ -165,19 +165,19 @@ STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,
    HROW** prghRows);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
-Ver [irowsetlocate:: Getrowsat](/previous-versions/windows/desktop/ms723031(v=vs.85)) na *referência do programador do OLE DB*.
+Consulte [IRowsetLocate:: GetRowsAt](/previous-versions/windows/desktop/ms723031(v=vs.85)) na *referência do programador de OLE DB*.
 
 ### <a name="remarks"></a>Comentários
 
-Para buscar da posição do cursor, em vez disso, use [IRowset::GetRowsAt](/previous-versions/windows/desktop/ms723031(v=vs.85)).
+Para obter a posição do cursor em vez disso, use [IRowset:: GetRowsAt](/previous-versions/windows/desktop/ms723031(v=vs.85)).
 
 `IRowsetLocateImpl::GetRowsAt` não altera a posição do cursor.
 
-## <a name="getrowsbybookmark"></a> IRowsetLocateImpl::GetRowsByBookmark
+## <a name="irowsetlocateimplgetrowsbybookmark"></a><a name="getrowsbybookmark"></a>IRowsetLocateImpl::GetRowsByBookmark
 
-Busca de uma ou mais linhas que correspondem aos indicadores especificados.
+Busca uma ou mais linhas que correspondam aos indicadores especificados.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -190,20 +190,20 @@ STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,
    DBROWSTATUS* rgRowStatus[]);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *hReserved*<br/>
-[in] Corresponde ao *hChapter* parâmetro [irowsetlocate:: Getrowsbybookmark](/previous-versions/windows/desktop/ms725420(v=vs.85)).
+no Corresponde ao parâmetro *hChapter* para [IRowsetLocate:: GetRowsByBookmark](/previous-versions/windows/desktop/ms725420(v=vs.85)).
 
-Para outros parâmetros, consulte [irowsetlocate:: Getrowsbybookmark](/previous-versions/windows/desktop/ms725420(v=vs.85)) na *referência do programador DB OLE*.
+Para outros parâmetros, consulte [IRowsetLocate:: GetRowsByBookmark](/previous-versions/windows/desktop/ms725420(v=vs.85)) na *referência do programador de OLE DB*.
 
 ### <a name="remarks"></a>Comentários
 
-O indicador pode ser um valor que você define ou OLE DB [indicadores padrão](/previous-versions/windows/desktop/ms712954(v=vs.85)) (`DBBMK_FIRST` ou `DBBMK_LAST`). não altera a posição do cursor.
+O indicador pode ser um valor que você define ou um OLE DB [indicadores padrão](/previous-versions/windows/desktop/ms712954(v=vs.85)) (`DBBMK_FIRST` ou `DBBMK_LAST`). Não altera a posição do cursor.
 
-## <a name="hash"></a> IRowsetLocateImpl::Hash
+## <a name="irowsetlocateimplhash"></a><a name="hash"></a>IRowsetLocateImpl:: hash
 
-Retorna o hash valores para os indicadores especificados.
+Retorna valores de hash para os indicadores especificados.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -216,14 +216,14 @@ STDMETHOD (Hash )(HCHAPTER /* hReserved */,
    DBROWSTATUS rgBookmarkStatus[]);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *hReserved*<br/>
-[in] Corresponde ao *hChapter* parâmetro [IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697(v=vs.85)).
+no Corresponde ao parâmetro *hChapter* para [IRowsetLocate:: hash](/previous-versions/windows/desktop/ms709697(v=vs.85)).
 
-Para outros parâmetros, consulte [IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697(v=vs.85)) na *referência do programador DB OLE*.
+Para outros parâmetros, consulte [IRowsetLocate:: hash](/previous-versions/windows/desktop/ms709697(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="rgbookmarks"></a> IRowsetLocateImpl::m_rgBookmarks
+## <a name="irowsetlocateimplm_rgbookmarks"></a><a name="rgbookmarks"></a>IRowsetLocateImpl:: m_rgBookmarks
 
 Uma matriz de indicadores.
 
@@ -233,10 +233,10 @@ Uma matriz de indicadores.
 CAtlArray<DBROWCOUNT> m_rgBookmarks;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85))
-[suporte do provedor para indicadores](../../data/oledb/provider-support-for-bookmarks.md)<br/>
+[IRowsetLocate: IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85))
+[suporte ao provedor para indicadores](../../data/oledb/provider-support-for-bookmarks.md)<br/>
 [Indicadores](/previous-versions/windows/desktop/ms709728(v=vs.85))

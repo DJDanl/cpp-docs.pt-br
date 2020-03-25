@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: b66a207766962856cc4d7181607868c2a48ebe84
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 087cd613fa0dfd9cb6e07ac47a6a38d63bba004e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513650"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167869"
 ---
 # <a name="resource-files-c"></a>Arquivos de recurso (C++)
 
@@ -46,7 +46,7 @@ O termo *arquivo de recursos* pode se referir a vários tipos de arquivo, como:
 
 - Um recurso individual existente como um arquivo autônomo. Esse tipo inclui um bitmap, ícone ou arquivo de cursor referenciado de um arquivo. rc.
 
-- Um arquivo de cabeçalho gerado pelo ambiente de desenvolvimento. Esse tipo inclui `Resource.h`, que é referenciado de um arquivo. rc.
+- Um arquivo de cabeçalho gerado pelo ambiente de desenvolvimento. Esse tipo inclui `Resource.h`, que é referenciado a partir de um arquivo. rc.
 
 Os recursos encontrados em outros tipos de arquivo, como. exe,. dll e. res, são chamados de *recursos*.
 
@@ -70,23 +70,23 @@ Para obter mais informações sobre recursos, consulte como [criar recursos](../
 
 Os seguintes tipos de arquivos podem ser abertos para editar os recursos que eles contêm:
 
-| Nome do Arquivo | Descrição |
+| Nome do arquivo | DESCRIÇÃO |
 |---|---|
-| . rc | Arquivos de script de recurso |
-| . rct | Arquivos de modelo de recurso |
-| . res | Arquivos de recursos |
+| .rc | Arquivos de script de recurso |
+| .rct | Arquivos de modelo de recurso |
+| . res | Arquivos de recurso |
 | .resx | Arquivos de recursos gerenciados |
 | .exe | Arquivos executáveis |
-| . dll | Arquivos de biblioteca de vínculo dinâmico |
+| .dll | Arquivos de biblioteca de vínculo dinâmico |
 | .bmp, .ico, .dib, .cur | Arquivos de bitmap, ícone, barra de ferramentas e cursor |
 
 Ao editar recursos, o ambiente do Visual Studio funciona com o e afeta os seguintes arquivos:
 
-| Nome do Arquivo | Descrição |
+| Nome do arquivo | DESCRIÇÃO |
 |---|---|
 | Resource.h | Arquivo de cabeçalho gerado pelo ambiente de desenvolvimento que contém definições de símbolo.<br/><br/>Incluir este arquivo no controle do código-fonte. |
 | Nome de arquivo. APS | Versão binária do arquivo de script de recurso atual usado para carregamento rápido.<br /><br /> Os editores de recursos não lêem diretamente os arquivos. rc ou Resource. h. O compilador de recursos os compila em arquivos. APS consumidos pelos editores de recursos. Esse arquivo é uma etapa de compilação e armazena somente dados simbólicos.<br/><br/>Assim como ocorre com um processo de compilação normal, as informações que não são simbólicas, como comentários, são descartadas durante o processo de compilação.<br/><br/>Sempre que o arquivo. APS estiver fora de sincronia com o arquivo. rc, o arquivo. rc será regenerado. Por exemplo, quando você **salva**, o editor de recursos substitui o arquivo. rc e o arquivo Resource. h. Todas as alterações nos próprios recursos permanecem incorporadas no arquivo. rc, mas os comentários sempre serão perdidos quando o arquivo. rc for substituído. Para obter informações sobre como preservar comentários, consulte [incluir recursos no momento da compilação](../windows/how-to-include-resources-at-compile-time.md).<br/><br/>Normalmente, você não deve incluir o arquivo. APS no controle do código-fonte. |
-| . rc | Arquivo de script de recurso que contém script para os recursos em seu projeto atual. Esse arquivo é substituído pelo arquivo. APS sempre que você salvar.<br/><br/>Incluir este arquivo no controle do código-fonte. |
+| .rc | Arquivo de script de recurso que contém script para os recursos em seu projeto atual. Esse arquivo é substituído pelo arquivo. APS sempre que você salvar.<br/><br/>Incluir este arquivo no controle do código-fonte. |
 
 ## <a name="manifest-resources"></a>Recursos de manifesto
 
@@ -108,7 +108,7 @@ Em C++ projetos de área de trabalho, os recursos de manifesto são arquivos XML
 </dependency>
 ```
 
-Para um aplicativo do Windows XP ou do Windows Vista, o recurso de manifesto deve especificar a versão mais atual dos controles comuns do Windows para o aplicativo a ser usado. O exemplo acima usa a `6.0.0.0`versão, que dá suporte ao [controle Syslink](/windows/win32/Controls/syslink-overview).
+Para um aplicativo do Windows XP ou do Windows Vista, o recurso de manifesto deve especificar a versão mais atual dos controles comuns do Windows para o aplicativo a ser usado. O exemplo acima usa a versão `6.0.0.0`, que dá suporte ao [controle Syslink](/windows/win32/Controls/syslink-overview).
 
 > [!NOTE]
 > Você só pode ter um recurso de manifesto por módulo.
@@ -129,7 +129,7 @@ Para exibir as informações de versão e tipo contidas em um recurso de manifes
 
 Win32
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Trabalhando com arquivos de recurso](../windows/working-with-resource-files.md)<br/>
 [Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>

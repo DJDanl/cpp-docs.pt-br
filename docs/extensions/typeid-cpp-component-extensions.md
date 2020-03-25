@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: ec64388d5f71cff01207129e337cf20bb151db1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b22481fecb4b7de5106921fec1c3a43fab81a48
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515981"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181740"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C++/CLI e C++/CX)
 
@@ -19,7 +19,7 @@ Obtém um valor que indica o tipo de um objeto.
 > [!NOTE]
 > Este tópico refere-se à versão de extensões de componente C++ do typeid. Para a versão C++ do ISO dessa palavra-chave, confira [Operador typeid](../cpp/typeid-operator.md).
 
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
+## <a name="all-runtimes"></a>Todos os Runtimes
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -27,7 +27,7 @@ Obtém um valor que indica o tipo de um objeto.
 T::typeid
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O nome de um tipo.
@@ -40,14 +40,14 @@ O nome de um tipo.
 Platform::Type^ type = T::typeid;
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O nome de um tipo.
 
 ### <a name="remarks"></a>Comentários
 
-No C++/CX, typeid retorna um [Platform::Type](../cppcx/platform-type-class.md) que é construído a partir de informações de tipo do tempo de execução.
+No C++/CX, typeid retorna um [Platform::Type](../cppcx/platform-type-class.md) que é construído a partir de informações de tipo do runtime.
 
 ### <a name="requirements"></a>Requisitos
 
@@ -61,9 +61,9 @@ Opção do compilador: `/ZW`
 type::typeid
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*type*<br/>
+*tipo*<br/>
 O nome de um tipo (declarador abstrato) para o qual você deseja o objeto `System::Type`.
 
 ### <a name="remarks"></a>Comentários
@@ -74,7 +74,7 @@ O nome de um tipo (declarador abstrato) para o qual você deseja o objeto `Syste
 
 `typeid` deve ser capaz de avaliar um nome de tipo (tipo) no tempo de compilação, enquanto GetType avalia o tipo a retornar no tempo de execução.
 
-`typeid` pode ter um nome de tipo nativo ou um alias de tempo de execução de linguagem comum para o nome do tipo nativo; saiba mais em [Equivalentes do .NET Framework aos tipos nativos do C++ (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).
+`typeid` pode ter um nome de tipo nativo ou um alias de Common Language runtime para o nome do tipo nativo; saiba mais em [Equivalentes do .NET Framework aos tipos nativos do C++ (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).
 
 `typeid` também trabalha com tipos nativos, embora ainda retorne um System::Type.  Para obter uma estrutura type_info, use [Operador typeid](../cpp/typeid-operator.md).
 
@@ -188,6 +188,6 @@ int::typeid != pointer_to_int::typeid, as expected
 int::typeid == handle_to_int::typeid, as expected
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

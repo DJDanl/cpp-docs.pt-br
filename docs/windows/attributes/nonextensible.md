@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: f2947e223d068ea6cc92a41abe19cb7f920112b2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2a1cd4d685e2fd141c6e11feaea488f44a884c80
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514403"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214638"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-Especifica que a `IDispatch` implementação inclui apenas as propriedades e os métodos listados na descrição da interface e não pode ser estendido com membros adicionais em tempo de execução.
+Especifica que a implementação de `IDispatch` inclui apenas as propriedades e os métodos listados na descrição da interface e não pode ser estendido com membros adicionais em tempo de execução.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -56,12 +56,12 @@ __interface IFireTabCtrl
 |-|-|
 |**Aplica-se a**|**interface**|
 |**Repetível**|Não|
-|**Atributos necessários**|`dual`e `oleautomation`, ou`dispinterface`|
+|**Atributos necessários**|`dual` e `oleautomation`ou `dispinterface`|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)

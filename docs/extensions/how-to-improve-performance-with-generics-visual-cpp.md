@@ -1,5 +1,5 @@
 ---
-title: 'Como: Melhorar o desempenho com genéricos (C++/CLI)'
+title: 'Como: melhorar o desempenho com os genéricos (C++/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-ms.openlocfilehash: 958da08716022bedaa8d0fe217814fa2bd86c065
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a460456a383fcb3eb81e17c1ad5817f790f3c399
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515711"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181935"
 ---
-# <a name="how-to-improve-performance-with-generics-ccli"></a>Como: Melhorar o desempenho com genéricos (C++/CLI)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>Como: melhorar o desempenho com os genéricos (C++/CLI)
 
 Com genéricos, você pode criar um código reutilizável com base em um parâmetro de tipo. O tipo real do parâmetro de tipo é adiado até ser chamado pelo código do cliente. Confira mais informações sobre genéricos em [Genéricos](generics-cpp-component-extensions.md).
 
@@ -124,6 +124,6 @@ int main()
 14
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Genéricos](generics-cpp-component-extensions.md)

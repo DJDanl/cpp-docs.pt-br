@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - __crtLCMapStringW
 ms.assetid: 45b4ac0e-438c-4fa3-b4d1-34195f4467d9
-ms.openlocfilehash: 8d9458529e5772f31e3ae5463d3a6ff5a7b726e9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f239d95c0dfd50f765b6f23d7874f01dce085054
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940455"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170989"
 ---
 # <a name="__crtlcmapstringw"></a>__crtLCMapStringW
 
@@ -43,7 +43,7 @@ int __crtLCMapStringW(
    int     cchDest)
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *Localidade*<br/>
 Identificador de localidade. A localidade fornece um contexto para o mapeamento de cadeia de caracteres ou a geração de chaves de classificação. Um aplicativo pode usar a macro `MAKELCID` para criar um identificador de localidade.
@@ -65,7 +65,7 @@ Ponteiro longo para um buffer em que a função armazena a cadeia de caracteres 
 *cchDest*<br/>
 Tamanho, em caracteres, do buffer apontado por `lpDestStr`.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Se o valor de `cchDest` for diferente de zero, o número de caracteres, ou bytes, se `LCMAP_SORTKEY` for especificado, gravados no buffer indica êxito. Essa contagem inclui espaço para um terminador nulo.
 

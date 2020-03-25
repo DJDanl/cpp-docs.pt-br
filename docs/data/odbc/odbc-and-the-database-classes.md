@@ -7,22 +7,22 @@ helpviewer_keywords:
 - ODBC classes [C++], MFC database classes
 - MFC [C++], ODBC and
 ms.assetid: b166f82d-6f85-4556-aac8-fb851235d22c
-ms.openlocfilehash: 7692a8128e3dac97c9107e986f6698db76c22c58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c69f49cbe233eb0782fdaa9767ea55f4d04203c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395827"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213146"
 ---
 # <a name="odbc-and-the-database-classes"></a>Classes ODBC e de banco de dados
 
-As classes de banco de dados ODBC MFC encapsulam as chamadas de função de API ODBC que você normalmente faria por conta própria no membro de funções do [CDatabase](../../mfc/reference/cdatabase-class.md) e [CRecordset](../../mfc/reference/crecordset-class.md) classes. Por exemplo, a associação de registros retornados em locais de armazenamento, manipulação de condições de erro e outras operações, sequências complexas de chamada ODBC são gerenciadas para você pelas classes de banco de dados. Como resultado, você deve usar uma interface de classe consideravelmente mais simples para manipular registros por meio de um objeto de conjunto de registros.
+As classes de banco de dados ODBC do MFC encapsulam as chamadas de função da API do ODBC que normalmente você faria nas funções membro das classes [CDatabase](../../mfc/reference/cdatabase-class.md) e [CRecordset](../../mfc/reference/crecordset-class.md) . Por exemplo, as sequências de chamadas ODBC complexas, associação de registros retornados a locais de armazenamento, tratamento de condições de erro e outras operações são gerenciadas para você pelas classes de banco de dados. Como resultado, você usa uma interface de classe consideravelmente mais simples para manipular registros por meio de um objeto Recordset.
 
 > [!NOTE]
->  Fontes de dados ODBC são acessíveis por meio de classes MFC ODBC, conforme descrito neste tópico, ou as classes de objeto de acesso a dados MFC (DAO).
+>  As fontes de dados ODBC podem ser acessadas por meio das classes ODBC do MFC, conforme descrito neste tópico ou por meio das classes DAO (objeto de acesso a dados) do MFC.
 
-Embora as classes de banco de dados encapsulam a funcionalidade de ODBC, eles não fornecem um mapeamento de funções API ODBC. As classes de banco de dados fornecem um nível mais alto de abstração, modelada de objetos de acesso a dados localizados no Microsoft Access e Microsoft Visual Basic. Para obter mais informações, consulte [ODBC e MFC](../../data/odbc/odbc-and-mfc.md).
+Embora as classes de banco de dados encapsulam a funcionalidade ODBC, elas não fornecem um mapeamento um-para-um de funções da API do ODBC. As classes de banco de dados fornecem um nível mais alto de abstração, modelada após os objetos de acesso a dados encontrados no Microsoft Access e no Microsoft Visual Basic. Para obter mais informações, consulte [ODBC e MFC](../../data/odbc/odbc-and-mfc.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Noções básicas de ODBC](../../data/odbc/odbc-basics.md)

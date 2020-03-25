@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 0315af63e9fdbbb0b136a85a23cb28936dee6836
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 40a2828ce6b21384ec49c371f23e506d816f1284
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273556"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204783"
 ---
 # <a name="fatal-error-c1010"></a>Erro fatal C1010
 
@@ -37,15 +37,15 @@ Para desativar o uso de cabeçalho pré-compilado em um projeto, siga estas etap
 
 1. Na lista suspensa **configuração** , selecione **todas as configurações**.
 
-1. Selecione a página de propriedades **configuração** > de cabeçalhos**CC++/**  > pré-compilados.
+1. Selecione as **Propriedades de configuração** > página de propriedades **cabeçalhos pré-compilados** **C++ C/**  > .
 
 1. Na lista propriedade, selecione a lista suspensa para a propriedade de **cabeçalho pré-compilado** e escolha **não usar cabeçalhos pré-compilados**. Escolha **OK** para salvar suas alterações.
 
 1. Na janela **Gerenciador de soluções** , clique com o botão direito do mouse no arquivo de origem *PCH. cpp* em seu projeto. (Em projetos mais antigos, o arquivo pode ser nomeado *stdafx. cpp*.) Escolha **excluir do projeto** para removê-lo da compilação.
 
-1. Use o comando de menu **criar** > **solução limpa** para cada configuração que você criar, para excluir todos os arquivos *Project_Name. pch* em seus diretórios de Build intermediários.
+1. Use o comando de menu **compilar** > **solução de limpeza** para cada configuração que você criar, para excluir qualquer arquivo *Project_Name. pch* em seus diretórios intermediários de compilação.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Arquivos de cabeçalho pré-compilados](../../build/creating-precompiled-header-files.md)\
 [/Yc (criar arquivo de cabeçalho pré-compilado)](../../build/reference/yc-create-precompiled-header-file.md)\
