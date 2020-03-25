@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: db2940ec3536ae8ea29ba40db84ea869ecb3d0ac
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b249eaf61266ed9964e44f6f0ad1c2f12a1b1067
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513923"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214494"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -23,28 +23,28 @@ Especifica o modelo de threading para um objeto COM.
 [ threading(model=enumeration) ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*model*<br/>
+*modelo*<br/>
 Adicional Um dos seguintes modelos de Threading:
 
-- `apartment`(segmentação de apartamento)
+- `apartment` (segmentação de apartamento)
 
-- `neutral`(Componentes do .NET Framework sem interface do usuário)
+- `neutral` (.NET Framework componentes sem interface do usuário)
 
-- `single`(Threading simples)
+- `single` (Threading simples)
 
-- `free`(Threading livre)
+- `free` (Threading livre)
 
-- `both`(segmentação de apartamento e gratuita)
+- `both` (segmentação de apartamento e livre)
 
 O valor padrão é `apartment`.
 
 ## <a name="remarks"></a>Comentários
 
-O C++ atributo threading não aparece no arquivo. idl gerado, mas será usado na implementação do seu objeto com.
+O **threading** C++ atributo threading não aparece no arquivo. idl gerado, mas será usado na implementação do seu objeto com.
 
-Em projetos ATL, se o atributo [coclass](coclass.md) também estiver presente, o modelo de threading especificado pelo *modelo* será passado como o parâmetro de modelo para a `coclass` classe [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) , inserido pelo atributo.
+Em projetos ATL, se o atributo [coclass](coclass.md) também estiver presente, o modelo de threading especificado pelo *modelo* será passado como o parâmetro de modelo para a classe [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) , inserido pelo atributo `coclass`.
 
 O atributo **Threading** também protege o acesso a um [EVENT_SOURCE](event-source.md).
 
@@ -65,7 +65,7 @@ Consulte o exemplo [licenciado](licensed.md) para obter um exemplo de uso de **T
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de COM](com-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>

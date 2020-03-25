@@ -7,23 +7,23 @@ helpviewer_keywords:
 - CXX0015
 - CAN0015
 ms.assetid: 35efaf77-d578-48d8-bfc5-fdeb2a46a8b5
-ms.openlocfilehash: f73aef18563426d28a81b92b3c37d1b7e345d0d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19cf47d6b7b718eb19b987bcc16854af3266069b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397140"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196060"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>Erro CXX0015 (avaliador de expressão)
 
 expressão muito complexa (estouro de pilha)
 
-A expressão inserida era muito complexo ou aninhados muito profundamente para a quantidade de armazenamento disponível para o avaliador de expressão de C.
+A expressão inserida era muito complexa ou está aninhada muito profundamente para a quantidade de armazenamento disponível para o avaliador de expressão C.
 
-Estouro normalmente ocorre devido a muitos cálculos pendentes.
+O estouro geralmente ocorre devido a muitos cálculos pendentes.
 
-Reorganize a expressão para que cada componente da expressão pode ser avaliada como ele é encontrado, em vez de ter que esperar para outras partes da expressão deve ser calculado.
+Reorganize a expressão para que cada componente da expressão possa ser avaliado conforme for encontrado, em vez de ter que esperar que outras partes da expressão sejam calculadas.
 
-Divida a expressão em vários comandos.
+Quebre a expressão em vários comandos.
 
-Esse erro é idêntico ao CAN0015.
+Esse erro é idêntico a CAN0015.

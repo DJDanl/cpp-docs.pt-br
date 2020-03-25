@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2069
 ms.assetid: 0c87445a-9eed-4917-a733-f08217f2d64d
-ms.openlocfilehash: c394a2f9cdd3bc1b757d7ea0e19026cd9928160e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed2df4c50d037c5f193616078433cafd1b67a644
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208913"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207784"
 ---
 # <a name="compiler-error-c2069"></a>Erro do compilador C2069
 
-Converter do termo 'void' para não 'void'
+conversão de termo ' void ' para não ' void '
 
-Tipo `void` não pode ser convertido em qualquer outro tipo.
+O tipo `void` não pode ser convertido em nenhum outro tipo.

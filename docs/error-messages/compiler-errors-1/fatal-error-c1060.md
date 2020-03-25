@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1060
 ms.assetid: feaf305c-c84c-4160-b974-50e283412849
-ms.openlocfilehash: 876ae7a368d2d1a1ee94a04fc9ecf50d0f4b8d78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1a7c3ccab716a9281d4520f4c5fce2afff60187
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364227"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204432"
 ---
 # <a name="fatal-error-c1060"></a>Erro fatal C1060
 
@@ -21,13 +21,13 @@ O sistema operacional ou a biblioteca de tempo de execução não pode preencher
 
 ### <a name="to-fix-this-error-try-the-following-possible-solutions"></a>Para corrigir esse erro tente as seguintes soluções possíveis
 
-1. Se o compilador também emitir erros [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) e [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md), use o [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opção do compilador para diminuir o limite de alocação de memória. Mais espaço de heap está disponível para o aplicativo se você diminuir a alocação da memória restante.
+1. Se o compilador também emitir erros [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) e [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md), use a opção de compilador [/ZM](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) para reduzir o limite de alocação de memória. Mais espaço de heap está disponível para o aplicativo se você diminuir a alocação da memória restante.
 
-   Se o [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opção já estiver definida, tente removê-lo. O espaço de heap pode se esgotar porque o limite de alocação de memória especificado na opção é muito alto. O compilador usa um limite padrão se você remover o [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opção.
+   Se a opção [/ZM](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) já estiver definida, tente removê-la. O espaço de heap pode se esgotar porque o limite de alocação de memória especificado na opção é muito alto. O compilador usará um limite padrão se você remover a opção [/ZM](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) .
 
-1. Se você estiver compilando em uma plataforma de 64 bits, use o conjunto de ferramentas do compilador de 64 bits. Para obter mais informações, veja [Como: Habilitar um 64-Bit Visual C++ conjunto de ferramentas na linha de comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
+1. Se você estiver compilando em uma plataforma de 64 bits, use o conjunto de ferramentas do compilador de 64 bits. Para obter informações, consulte [como habilitar um conjunto de ferramentas do Visual C++ de 64 bits na linha de comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
 
-1. No Windows de 32 bits, tente usar o [3 GB](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) Boot. ini.
+1. No Windows de 32 bits, tente usar a opção [/3GB](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) boot. ini.
 
 1. Aumente o tamanho do arquivo de permuta do Windows.
 

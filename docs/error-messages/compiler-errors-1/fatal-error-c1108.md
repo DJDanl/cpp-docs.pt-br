@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1108
 ms.assetid: 3cadf07b-b7a7-41c7-ad5c-06ceb8af8c3b
-ms.openlocfilehash: 6e029e5cff5994282e96484d7c1ea04ca61049f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39a1891713cfe513f6de63a9e66a0f30147ce96c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257862"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203693"
 ---
 # <a name="fatal-error-c1108"></a>Erro fatal C1108
 
-> não é possível localizar a DLL: '*nome da dll*'
+> Não é possível localizar a DLL: '*nome da dll*'
 
-A DLL especificada (*nome da dll*) não pôde ser encontrado no caminho.
+A DLL especificada (*nome da dll*) não foi encontrada no caminho.
 
-Para resolver esse erro, reinstale o Visual C++ ou copiar o arquivo. dll apropriado da instalação para o computador.
+Para resolver esse erro, reinstale C++ o Visual ou copie o arquivo. dll apropriado da instalação para o seu computador.

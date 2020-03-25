@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 980cdc1c4ac82015cab61133a64fa54fbd030843
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b0a6d000309a709c528822870f910521f51100df
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68821108"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208293"
 ---
 > [!IMPORTANT]
 > Os compiladores e as ferramentas de compilação do Visual Studio podem relatar muitos tipos de erros e avisos. Depois que um erro ou aviso for encontrado, as ferramentas de compilação poderão fazer suposições sobre a intenção de código e tentar continuar, para que mais problemas possam ser relatados ao mesmo tempo. Se as ferramentas fizerem a suposição errada, erros ou avisos posteriores talvez não se apliquem ao seu projeto. Quando você corrigir problemas em seu projeto, sempre comece com o primeiro erro ou aviso que é relatado e reconstrua com frequência. Uma correção pode fazer com que muitos erros subsequentes desapareçam.

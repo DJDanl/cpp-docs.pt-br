@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C++]
 ms.assetid: 63739928-8985-4b05-93ce-016322e6da3d
-ms.openlocfilehash: 3dda0b19fffaaf725ab363a0c4fe70d2ca54e3f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23d31e1456106d5f82c4a13079c72c231b8477bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267709"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190476"
 ---
 # <a name="break-statement-c"></a>Instrução break (C++)
 
-O **quebra** instrução finaliza a execução do delimitador mais próximo loop ou instrução condicional, na qual ele aparece. O controle passa para a instrução que segue o encerramento da instrução, se houver.
+A instrução **Break** termina a execução do loop de fechamento ou da instrução condicional mais próxima na qual ele aparece. O controle passa para a instrução que segue o encerramento da instrução, se houver.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,17 +25,17 @@ break;
 
 ## <a name="remarks"></a>Comentários
 
-O **quebra** instrução é usada com a condicional [alternar](../cpp/switch-statement-cpp.md) instrução e com o [fazer](../cpp/do-while-statement-cpp.md), [para](../cpp/for-statement-cpp.md), e [ao](../cpp/while-statement-cpp.md) instruções de loop.
+A instrução **Break** é usada com a instrução [switch](../cpp/switch-statement-cpp.md) condicional e [com as instruções](../cpp/do-while-statement-cpp.md)do loop do, [for](../cpp/for-statement-cpp.md)e [while](../cpp/while-statement-cpp.md) .
 
-Em um **alternar** instrução, o **quebra** instrução faz com que o programa executar a próxima instrução fora o **alternar** instrução. Sem um **quebra** instrução, cada instrução do correspondente **caso** rótulo ao final dos **alternar** instrução, incluindo o **padrão**cláusula, é executada.
+Em uma instrução **switch** , a instrução **Break** faz com que o programa execute a próxima instrução fora da instrução **switch** . Sem uma instrução **Break** , todas as instruções do rótulo **Case** correspondente ao final da instrução **switch** , incluindo a cláusula **Default** , são executadas.
 
-Em loops, o **quebra** instrução finaliza a execução do delimitadora mais próxima **fazer**, **para**, ou **enquanto** instrução. O controle passa para a instrução que segue a instrução encerrada, se houver.
+Em loops, a instrução **Break** encerra a execução da instrução do, **for**ou **while** mais próxima de **delimitação.** O controle passa para a instrução que segue a instrução encerrada, se houver.
 
-Em instruções aninhadas, a **quebra** instrução termina somente os **fazer**, **para**, **alternar**, ou **enquanto**instrução que a delimita imediatamente. Você pode usar um **retornar** ou **goto** instrução para transferir o controle de mais profundamente aninhada estruturas.
+Em instruções aninhadas, a instrução **Break** encerra apenas a instrução **do**, **for**, **switch**ou **while** que a imediatamente o inclui. Você pode usar uma instrução **Return** ou **goto** para transferir o controle de estruturas mais profundamente aninhadas.
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir mostra como usar o **quebra** instrução em um **para** loop.
+O código a seguir mostra como usar a instrução **Break** em um loop **for** .
 
 ```cpp
 #include <iostream>
@@ -71,7 +71,7 @@ In each case:
 3
 ```
 
-O código a seguir mostra como usar **quebra** em um **enquanto** loop e uma **fazer** loop.
+O código a seguir mostra como usar **Break** em um loop **while** e um loop **do** .
 
 ```cpp
 #include <iostream>
@@ -104,7 +104,7 @@ In each case:
 0123
 ```
 
-O código a seguir mostra como usar **quebra** em uma instrução switch. Você deve usar **quebra** em todos os casos se desejar tratar cada caso separadamente; se você não usar **quebra**, a execução do código falhará no próximo caso.
+O código a seguir mostra como usar **Break** em uma instrução switch. Você deve usar a **quebra** em todos os casos se desejar manipular cada caso separadamente; Se você não usar **Break**, a execução do código passará para o próximo caso.
 
 ```cpp
 #include <iostream>
@@ -151,7 +151,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instruções de atalho](../cpp/jump-statements-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>

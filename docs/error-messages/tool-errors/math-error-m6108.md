@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - M6108
 ms.assetid: 054893b4-49bc-45d9-882f-7cb50ba387c0
-ms.openlocfilehash: d60e9b6284c79828fda1f7af542fcf197f189ad0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68e6ae823613d87eb01c443b564b46746259cd7b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393266"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173719"
 ---
 # <a name="math-error-m6108"></a>Erro M6108 (Math)
 
@@ -19,7 +19,7 @@ raiz quadrada
 
 O operando em uma operação de raiz quadrada era negativo.
 
-Programa é encerrado com código de saída 136.
+O programa é encerrado com o código de saída 136.
 
 > [!NOTE]
->  O `sqrt` função na biblioteca em tempo de execução C e a função intrínseca do FORTRAN **SQRT** não geram esse erro. O C `sqrt` função verifica se o argumento antes de executar a operação e retorna um valor de erro se o operando for negativo. O FORTRAN **SQRT** função gera o erro de domínio [M6201](../../error-messages/tool-errors/math-error-m6201.md) em vez desse erro.
+>  A função `sqrt` na biblioteca de tempo de execução do C e a função intrínseca do FORTRAN **sqrt** não geram esse erro. A função C `sqrt` verifica o argumento antes de executar a operação e retorna um valor de erro se o operando for negativo. A função FORTRAN **sqrt** gera o erro de domínio [M6201](../../error-messages/tool-errors/math-error-m6201.md) em vez desse erro.

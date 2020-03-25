@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1215
 ms.assetid: 0774d8e6-f0c1-4efb-8723-7e1be6863d81
-ms.openlocfilehash: cc9763771778118a823d8c54f922026215b534f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d35279d9f47735489902fde284314a2c94f7a682
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242767"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195065"
 ---
 # <a name="linker-tools-error-lnk1215"></a>Erro das Ferramentas de Vinculador LNK1215
 
-Falha de operação de metadados (HRESULT): erro
+falha na operação de metadados (HRESULT): erro
 
-O vinculador recebeu um erro de tempo de execução .NET durante a tentativa de realizar uma atualização de metadados por meio do runtime do .NET.
+O vinculador recebeu um erro do tempo de execução do .NET ao tentar fazer uma atualização de metadados por meio do tempo de execução do .NET.
 
-`HRESULT` é o HRESULT do método de tempo de execução do .NET. `error` é o. Texto fornecido pelo NET.
+`HRESULT` é o HRESULT do método de tempo de execução do .NET. `error` é o. Texto fornecido pela rede.
 
-Você provavelmente terá um vinculador incompatível e tempo de execução do .NET; Reinstale o Visual C++.
+Você provavelmente tem um vinculador incompatível e tempo de execução do .NET; Reinstale C++o Visual.

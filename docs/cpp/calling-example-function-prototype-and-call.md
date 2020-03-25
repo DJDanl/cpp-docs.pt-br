@@ -5,12 +5,12 @@ helpviewer_keywords:
 - calling conventions, examples [C++]
 - examples [C++], calling conventions
 ms.assetid: e4275d1f-df2e-4bfc-a162-eb43ec69554a
-ms.openlocfilehash: cbe9ee16db502c9e27dcbd74da4ef6a85f00960f
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: c41d7679be8b7faa3c8df1368d14815a1b840284
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857626"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190164"
 ---
 # <a name="calling-example-function-prototype-and-call"></a>Exemplo de chamada: protótipo de função e chamada
 
@@ -41,6 +41,6 @@ Para obter mais informações, consulte [resultados do exemplo de chamada](../cp
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Convenções de chamada](../cpp/calling-conventions.md)

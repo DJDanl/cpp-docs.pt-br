@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 90092b5d1c250fd79be107b0c36ee5641f70b30c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 54e112db1e0d7d4ec5495d02cf56a62b51607140
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943934"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170378"
 ---
 # <a name="_access-_waccess"></a>_access, _waccess
 
@@ -58,15 +58,15 @@ int _waccess(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *path*<br/>
 Caminho do arquivo ou do diretório.
 
-*modo*<br/>
+*mode*<br/>
 Atributo de leitura/gravação.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada função retorna 0 se o arquivo tem o modo determinado. A função retornará-1 se o arquivo nomeado não existir ou não tiver o modo fornecido; Nesse caso, `errno` é definido como mostrado na tabela a seguir.
 
@@ -80,7 +80,7 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 ## <a name="remarks"></a>Comentários
 
-Quando usado com arquivos, a função **_access** determina se o arquivo ou diretório especificado existe e tem os atributos especificados pelo valor de *Mode*. Quando usado com diretórios, **_access** determina apenas se o diretório especificado existe; no Windows 2000 e sistemas operacionais posteriores, todos os diretórios têm acesso de leitura e gravação.
+Quando usado com arquivos, a função **_access** determina se o arquivo ou diretório especificado existe e tem os atributos especificados pelo valor de *modo*. Quando usado com diretórios, **_access** determina apenas se o diretório especificado existe; no Windows 2000 e sistemas operacionais posteriores, todos os diretórios têm acesso de leitura e gravação.
 
 |valor de *modo*|Verifica o arquivo quanto a|
 |------------------|---------------------|
@@ -91,7 +91,7 @@ Quando usado com arquivos, a função **_access** determina se o arquivo ou dire
 
 Essa função apenas verifica se os arquivos e diretórios são somente leitura ou não, ela não verifica as configurações de segurança do sistema de arquivos. Para isso você precisa de um token de acesso. Para obter mais informações sobre a segurança do sistema de arquivos, consulte [Access Tokens (Tokens de acesso)](/windows/win32/SecAuthZ/access-tokens). Existe uma classe ATL para fornecer essa funcionalidade, consulte [Classe CAccessToken](../../atl/reference/caccesstoken-class.md).
 
-**_waccess** é uma versão de caractere largo do **_access**; o argumento *path* para **_waccess** é uma cadeia de caracteres largos. **_waccess** e **_access** se comportam de outra forma.
+**_waccess** é uma versão de caractere largo do **_access**; o argumento de *caminho* para **_waccess** é uma cadeia de caracteres largos. **_waccess** e **_access** se comportar de forma idêntica.
 
 Essa função valida seus parâmetros. Se o *caminho* for nulo ou o *modo* não especificar um modo válido, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função definirá `errno` como `EINVAL` e retornará –1.
 
@@ -142,7 +142,7 @@ File crt_ACCESS.C exists.
 File crt_ACCESS.C does not have write permission.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>

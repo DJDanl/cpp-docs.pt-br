@@ -7,21 +7,21 @@ helpviewer_keywords:
 - CAN0065
 - CXX0065
 ms.assetid: aac68f87-0b90-4c19-afa6-1c587625a5fd
-ms.openlocfilehash: 7b62e42da2a74d910e2dc56ce2dfcb5cb38f2bfa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4120deec3c8e7ce14e381f782904cf83a588e43
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299308"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184418"
 ---
 # <a name="expression-evaluator-error-cxx0065"></a>Erro CXX0065 (avaliador de expressão)
 
-precisa de variável de quadro de pilha
+a variável precisa de um quadro de pilha
 
-Uma expressão continha uma variável que existe dentro do escopo atual, mas ainda não tiver sido criada.
+Uma expressão continha uma variável que existe dentro do escopo atual, mas ainda não foi criada.
 
-Esse erro pode ocorrer quando você tiver entrado em prólogo de uma função, mas ainda não configurar o registro de ativação para a função, ou se você tiver entrado no código de saída para a função.
+Esse erro pode ocorrer quando você tiver passado para o prólogo de uma função, mas ainda não tiver configurado o registro de ativação para a função, ou se você tiver percorrido o código de saída para a função.
 
-Percorrer o código de prólogo até que o quadro de pilha foi configurado antes de avaliar a expressão.
+Percorra o código de prólogo até que o registro de ativação tenha sido configurado antes de avaliar a expressão.
 
-Esse erro é idêntico ao CAN0065.
+Esse erro é idêntico a CAN0065.

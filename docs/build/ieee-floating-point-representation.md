@@ -11,32 +11,32 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-ms.openlocfilehash: de132dcf28747cd866229cff8972e2aed271a047
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: bb8523256c05479b303dec66ca79caa28e7cda03
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630349"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169806"
 ---
 # <a name="ieee-floating-point-representation"></a>Representação de ponto flutuante IEEE
 
-A C++ Microsoft (MSVC) é consistente com os padrões numéricos do IEEE. O padrão IEEE-754 descreve os formatos de ponto flutuante, uma maneira de representar números reais no hardware. Há pelo menos cinco formatos internos para números de ponto flutuante que podem ser representes no hardware de destino do compilador MSVC, mas o compilador usa apenas dois deles. Os formatos de *precisão única* (4 bytes) e *de precisão dupla* (8 bytes) são usados em MSVC. A precisão única é declarada usando a palavra-chave **float**. A precisão dupla é declarada usando a palavra-chave **Double**. O padrão IEEE também especifica formatos de *meia precisão* (2 bytes) e *de precisão quádrupla* (16 bytes), bem como um formato de *precisão estendida dupla* (10 bytes), que alguns C e C++ compiladores implementam como **longos** tipo de dados Double. No compilador MSVC, o tipo de dados **Double longo** é tratado como um tipo distinto, mas o tipo de armazenamento é mapeado para **Double**. No entanto, há suporte à linguagem intrínseca e ao assembly para cálculos usando os outros formatos, incluindo o formato de precisão estendida dupla (10 bytes), em que o hardware dá suporte.
+A C++ Microsoft (MSVC) é consistente com os padrões numéricos do IEEE. O padrão IEEE-754 descreve os formatos de ponto flutuante, uma maneira de representar números reais no hardware. Há pelo menos cinco formatos internos para números de ponto flutuante que podem ser representes no hardware de destino do compilador MSVC, mas o compilador usa apenas dois deles. Os formatos de *precisão única* (4 bytes) e *de precisão dupla* (8 bytes) são usados em MSVC. A precisão única é declarada usando a palavra-chave **float**. A precisão dupla é declarada usando a palavra-chave **Double**. O padrão IEEE também especifica formatos de *meia precisão* (2 bytes) e *de precisão quádrupla* (16 bytes), bem como um formato de *precisão estendida dupla* (10 bytes), que alguns C e C++ compiladores implementam como o tipo de dados **Double longo** . No compilador MSVC, o tipo de dados **Double longo** é tratado como um tipo distinto, mas o tipo de armazenamento é mapeado para **Double**. No entanto, há suporte à linguagem intrínseca e ao assembly para cálculos usando os outros formatos, incluindo o formato de precisão estendida dupla (10 bytes), em que o hardware dá suporte.
 
 Os valores são armazenados da seguinte maneira:
 
 |Valor|Armazenado como|
 |-----------|---------------|
-|precisão única|sinal de bit, expoente de 8 bits, significante de 23 bits|
+|precisão simples|sinal de bit, expoente de 8 bits, significante de 23 bits|
 |precisão dupla|sinal de bit, expoente de 11 bits, significante-bit de 52 bits|
 |precisão estendida dupla|bit de sinal, expoente de 15 bits, significante-bit de 64 bits|
 
-Nos formatos de precisão simples e de precisão dupla, há um 1 líder na parte fracionária, chamado de *significante* (e, às vezes, chamado de *mantissa*), que não é armazenado na memória, portanto, os significands são realmente 24 ou 53 bits, embora apenas 23 ou 52 bits sejam armazenados. O formato de precisão estendida dupla realmente armazena esse bit.
+Em formatos de precisão simples e de precisão dupla, há um 1 líder na parte fracionária, chamado de *significante* (e, às vezes, chamado de *mantissa*), que não é armazenado na memória, portanto, os significands são, na verdade, 24 ou 53 bits, embora apenas 23 ou 52 bits sejam armazenados. O formato de precisão estendida dupla realmente armazena esse bit.
 
 Os expoentes são tendenciosas por metade de seu valor possível. Isso significa que você subtrai essa tendência do expoente armazenado para obter o expoente real. Se o expoente armazenado for menor que a tendência, ele será, na verdade, um expoente negativo.
 
 Os expoentes são tendenciosas da seguinte maneira:
 
-|Lado|Tendenciosa por|
+|Expoente|Tendenciosa por|
 |--------------|---------------|
 |8 bits (precisão única)|127|
 |11 bits (precisão dupla)|1023|
@@ -50,11 +50,11 @@ O formato, em seguida, para os vários tamanhos é o seguinte:
 
 |Formatar|byte 1|byte 2|byte 3|byte 4|...|byte n|
 |------------|------------|------------|------------|------------|---------|------------|
-|precisão única| `SXXXXXXX`|`XMMMMMMM`|`MMMMMMMM`|`MMMMMMMM`|||
+|precisão simples| `SXXXXXXX`|`XMMMMMMM`|`MMMMMMMM`|`MMMMMMMM`|||
 |precisão dupla|`SXXXXXXX`|`XXXXMMMM`|`MMMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
 |precisão estendida dupla|`SXXXXXXX`|`XXXXXXXX`|`1MMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
 
-`S`representa o bit de sinal, `X`os bits de expoente tendenciosa, `M`e são os bits significante. Observe que o bit mais à esquerda é considerado nos formatos de precisão simples e de precisão dupla, mas está presente como "1" em byte 3 do formato de precisão estendida dupla.
+`S` representa o bit de sinal, os `X`são os bits de expoente com tendência e os `M`são os bits significante. Observe que o bit mais à esquerda é considerado nos formatos de precisão simples e de precisão dupla, mas está presente como "1" em byte 3 do formato de precisão estendida dupla.
 
 Para deslocar o ponto binário corretamente, você primeiro despolar o expoente e, em seguida, move o ponto binário para a direita ou para a esquerda do número apropriado de bits.
 
@@ -72,11 +72,11 @@ Os valores + ∞ e − ∞ são representados por um expoente de todos os e um s
 
 ### <a name="subnormals"></a>Subnormals
 
-É possível representar números de magnitude menor do que o menor número normalizado. Esses números são conhecidos como números subnormals ou desnormals. Se o expoente for todos os zeros e o significante for diferente de zero, o bit principal implícito do significante será considerado como zero, não um. A precisão dos números subnormals fica inativa conforme o número de zeros à esquerda no significante vai para cima.
+É possível representar números de magnitude menor do que o menor número normalizado. Esses números são conhecidos como números *subnormals* ou *desnormals* . Se o expoente for todos os zeros e o significante for diferente de zero, o bit principal implícito do significante será considerado como zero, não um. A precisão dos números subnormals fica inativa conforme o número de zeros à esquerda no significante vai para cima.
 
 ### <a name="nan---not-a-number"></a>NaN – não é um número
 
-É possível representar valores que não são um número real, como 0/0, no formato de ponto flutuante IEEE. Um valor desse tipo é chamado de *Nan*. Um NaN é representado por um expoente de todos aqueles e um significante diferente de zero. Há dois tipos de NaNs, *Quiet* Nans ou QNaNs e sinalização Nans ou SNaNs. O NaNs silencioso tem um líder na significante e geralmente é propagado por meio de uma expressão. Eles representam um valor indeterminado, como o resultado da divisão por infinito ou multiplicando um infinito por zero. a sinalização de NaNs tem um zero à esquerda no significante. Eles são usados para operações que não são válidas, para sinalizar uma exceção de hardware de ponto flutuante.
+É possível representar valores que não são um número real, como 0/0, no formato de ponto flutuante IEEE. Um valor desse tipo é chamado de *Nan*. Um NaN é representado por um expoente de todos aqueles e um significante diferente de zero. Há dois tipos de NaNs, *Quiet* Nans ou QNaNs e *sinalização* Nans ou SNaNs. O NaNs silencioso tem um líder na significante e geralmente é propagado por meio de uma expressão. Eles representam um valor indeterminado, como o resultado da divisão por infinito ou multiplicando um infinito por zero. a sinalização de NaNs tem um zero à esquerda no significante. Eles são usados para operações que não são válidas, para sinalizar uma exceção de hardware de ponto flutuante.
 
 ## <a name="examples"></a>Exemplos
 
@@ -100,7 +100,7 @@ Veja a seguir alguns exemplos no formato de precisão simples:
    |-|-|-|-|
    |4|1 * 2<sup>2</sup>|0100 0000 1000 0000 0000 0000 0000 0000|0x40800000|
 
-- O valor 6. Mesmo expoente, significante é maior pela metade — é (1). 100 0000 ... 0000 0000, que, como esta é uma fração binária, é 1 1/2 porque os valores dos dígitos fracionários são 1/2, 1/4, 1/8 e assim por diante.
+- O valor 6. Mesmo expoente, significante é maior pela metade — é (1.) 100 0000... 0000 0000, que, como esta é uma fração binária, é 1 1/2 porque os valores dos dígitos fracionários são 1/2, 1/4, 1/8 e assim por diante.
 
    |Valor|Fórmula|Representação binária|Hexadecimal|
    |-|-|-|-|
@@ -112,7 +112,7 @@ Veja a seguir alguns exemplos no formato de precisão simples:
    |-|-|-|-|
    |1|1 * 2<sup>0</sup>|0011 1111 1000 0000 0000 0000 0000 0000|0x3F800000|
 
-- O valor 0,75. O expoente polarizado é 126, 011 1111 0 em Binary e o significante é (1.) 100 0000 ... 0000 0000, que é 1 1/2.
+- O valor 0,75. O expoente polarizado é 126, 011 1111 0 em Binary e significante é (1.) 100 0000... 0000 0000, que é 1 1/2.
 
    |Valor|Fórmula|Representação binária|Hexadecimal|
    |-|-|-|-|
@@ -128,7 +128,7 @@ Veja a seguir alguns exemplos no formato de precisão simples:
 
    |Valor|Fórmula|Representação binária|Hexadecimal|
    |-|-|-|-|
-   |0.1|1,6 * 2<sup>-4</sup>|0011 1101 1100 1100 1100 1100 1100 1101|0x3DCCCCCD|
+   |0,1|1,6 * 2<sup>-4</sup>|0011 1101 1100 1100 1100 1100 1100 1101|0x3DCCCCCD|
 
 - Zero é um caso especial que usa a fórmula para o mínimo valor positivo possível representável, que é todos os zeros.
 
@@ -136,6 +136,6 @@ Veja a seguir alguns exemplos no formato de precisão simples:
    |-|-|-|-|
    |0|1 * 2<sup>-128</sup>|0000 0000 0000 0000 0000 0000 0000 0000|0x00000000|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Por que números de ponto flutuante podem perder a precisão](why-floating-point-numbers-may-lose-precision.md)

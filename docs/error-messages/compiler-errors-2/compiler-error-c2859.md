@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2859
 ms.assetid: fcfbc58d-08f6-4752-9688-8aaac517e684
-ms.openlocfilehash: ac86f7411847fa4bca7623bbd821632277e9a5e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66aebe58853b5dee0caf3d5f7a44b03ee83c1cef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350407"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201767"
 ---
 # <a name="compiler-error-c2859"></a>Erro do compilador C2859
 
-nome do arquivo não é o arquivo de tipo que foi usado quando esse cabeçalho pré-compilado foi criado, recrie o cabeçalho pré-compilado.
+filename não é o arquivo de tipo que foi usado quando esse cabeçalho pré-compilado foi criado, recrie o cabeçalho pré-compilado.
 
-Os arquivos de cabeçalho pré-compilado e o banco de dados do projeto devem ser criados em conjunto para garantir que informações consistentes. Recompile o projeto para recriar o cabeçalho pré-compilado.
+O banco de dados do projeto e os arquivos de cabeçalho pré-compilados devem ser criados juntos para garantir informações consistentes. Recompile o projeto para recriar o cabeçalho pré-compilado.
 
-Para obter informações sobre cabeçalhos pré-compilados, consulte [/Y (cabeçalhos pré-compilados)](../../build/reference/y-precompiled-headers.md).
+Para obter informações sobre cabeçalhos pré-compilados, consulte [/y (cabeçalhos pré-compilados)](../../build/reference/y-precompiled-headers.md).

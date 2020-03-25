@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: 7c737661bb8429e416b515e4e7fcaf54956385d0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bb9e44d34c675e4f5d955c5f422a6dd35259ec8d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514543"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214793"
 ---
 # <a name="lcid"></a>lcid
 
@@ -25,7 +25,7 @@ Permite passar um identificador de localidade para uma função.
 
 ## <a name="remarks"></a>Comentários
 
-O atributo **LCID** C++ implementa a funcionalidade do atributo MIDL de [LCID](/windows/win32/Midl/lcid) . Se você quiser implementar a localidade para um bloco de biblioteca, use o parâmetro **LCID =** `lcid` para o atributo [Module](module-cpp.md) .
+O atributo **LCID** C++ implementa a funcionalidade do atributo MIDL de [LCID](/windows/win32/Midl/lcid) . Se você quiser implementar a localidade para um bloco de biblioteca, use o parâmetro **LCID =** `lcid` para o atributo de [módulo](module-cpp.md) .
 
 ## <a name="example"></a>Exemplo
 
@@ -53,9 +53,9 @@ __interface IStatic {
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de parâmetro](parameter-attributes.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2109
 ms.assetid: b800aa67-33c0-42f5-81a2-7a64a3b6b824
-ms.openlocfilehash: adfbc32adc9e55f4cc0e1a49d3b5505efead5d25
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49edd32da192816ba22cb030958f87cd049ec59c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399896"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191555"
 ---
 # <a name="resource-compiler-error-rc2109"></a>Erro RC2109 (compilador de recurso)
 
-esperada constante numérica da caixa de diálogo
+constante de caixa de diálogo numérica esperada
 
-Um **caixa de diálogo** instrução requer valores inteiros para o *x, y, largura*, e *altura* campos. Verifique se esses valores são incluídos após o **caixa de diálogo** palavra-chave e que não são negativos.
+Uma instrução de **caixa de diálogo** requer valores inteiros para os campos *x, y, Width*e *Height* . Verifique se esses valores estão incluídos após a palavra-chave da **caixa de diálogo** e se eles não são negativos.

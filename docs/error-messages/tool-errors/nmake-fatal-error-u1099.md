@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - U1099
 ms.assetid: 6688a805-43e6-4247-a2d0-14be082f0b13
-ms.openlocfilehash: 395f25d8d27bc5e9b6132c87390c8c3bc19b6cc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c963180059a48d9aa0b09103df1ed54f82b8a2f1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298237"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193388"
 ---
 # <a name="nmake-fatal-error-u1099"></a>Erro fatal U1099 (NMAKE)
 
@@ -19,8 +19,8 @@ estouro de pilha
 
 O makefile que está sendo processado era muito complexo para a alocação de pilha atual em NMAKE. NMAKE tem uma alocação de 0x3000 (12K).
 
-Para aumentar a alocação da pilha do NMAKE, execute as [/stack (editbin)](../../build/reference/stack.md) utilitário com uma maior opção de pilha:
+Para aumentar a alocação de pilha do NMAKE, execute o utilitário [editbin/stack](../../build/reference/stack.md) com uma opção de pilha maior:
 
-**editbin /STACK:reserve NMAKE. EXE**
+**EDITBIN/STACK: Reserve NMAKE. EXE**
 
-em que *reservar* é um número maior que a alocação de pilha atual em NMAKE.
+em que *Reserve* é um número maior que a alocação de pilha atual em NMAKE.

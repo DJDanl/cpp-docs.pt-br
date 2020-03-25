@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2404
 ms.assetid: 51794d2f-404b-4d89-b3ea-fc5faa9c197d
-ms.openlocfilehash: 6ecaada498c2b84ec2c4f579ce66f580426a4150
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b44e46dc5b4e52268428d2a6414580933d7b12f4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282706"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205914"
 ---
 # <a name="compiler-error-c2404"></a>Erro do compilador C2404
 
-'identifier': registro inválido em 'context'
+' identifier ': registro inválido em ' Context '
 
-Esse registro é inválido neste contexto.
+Este registro é inválido neste contexto.

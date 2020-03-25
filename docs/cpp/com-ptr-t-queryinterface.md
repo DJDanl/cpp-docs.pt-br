@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - QueryInterface method [C++]
 ms.assetid: d03292f1-6b02-40db-9756-8b0837a97319
-ms.openlocfilehash: 42953c92e4cf31b5ccd02dd51811fc1fdeedbcaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26dda2dff83ff0adbb7ef05c5e75f64b44138bd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399259"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170665"
 ---
-# <a name="comptrtqueryinterface"></a>_com_ptr_t::QueryInterface
+# <a name="_com_ptr_tqueryinterface"></a>_com_ptr_t::QueryInterface
 
 **Seção específica da Microsoft**
 
-Chamadas a **QueryInterface** função de membro de `IUnknown` no ponteiro de interface encapsulado.
+Chama a função de membro **QueryInterface** de `IUnknown` no ponteiro de interface encapsulada.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,9 +33,9 @@ template<typename _InterfaceType> HRESULT QueryInterface (
 ) throw( );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
-*iid*<br/>
+*IID*<br/>
 `IID` de um ponteiro de interface.
 
 *p*<br/>
@@ -43,10 +43,10 @@ Ponteiro da interface bruto.
 
 ## <a name="remarks"></a>Comentários
 
-Chamadas `IUnknown::QueryInterface` no ponteiro de interface encapsulado com especificado `IID` e retorna o ponteiro de interface bruto resultante na *p*. Essa rotina retorna o HRESULT para indicar êxito ou falha.
+Chama `IUnknown::QueryInterface` no ponteiro de interface encapsulado com o `IID` especificado e retorna o ponteiro de interface bruto resultante em *p*. Essa rotina retorna o HRESULT para indicar êxito ou falha.
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

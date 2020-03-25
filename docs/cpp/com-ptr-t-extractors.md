@@ -20,14 +20,14 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-ms.openlocfilehash: bac1f9a139d2fb0092ef0869587ae8b54342fe82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31ac39104c041d1d119f6cd06de5f9c4a620dac0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399324"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190021"
 ---
-# <a name="comptrt-extractors"></a>Extratores _com_ptr_t
+# <a name="_com_ptr_t-extractors"></a>Extratores _com_ptr_t
 
 **Seção específica da Microsoft**
 
@@ -46,20 +46,20 @@ operator bool( ) const throw( );
 
 ## <a name="remarks"></a>Comentários
 
-- **operador Interface** <strong>\*</strong> retorna o ponteiro de interface encapsulado, que pode ser NULL.
+- a **interface do operador** <strong>\*</strong> retorna o ponteiro de interface encapsulado, que pode ser nulo.
 
-- **operador Interface &** retorna uma referência ao ponteiro de interface encapsulado e emitirá um erro se o ponteiro é NULL.
+- **interface do operador &** Retorna uma referência ao ponteiro de interface encapsulado e emite um erro se o ponteiro for nulo.
 
-- **operador** <strong>\*</strong> permite que um objeto de ponteiro inteligente atue como se fosse a interface encapsulada real quando desreferenciado.
+- o **operador** <strong>\*</strong> permite que um objeto de ponteiro inteligente atue como se fosse a interface encapsulada real quando a referência foi cancelada.
 
-- **operador ->** permite que um objeto de ponteiro inteligente atue como se fosse a interface encapsulada real quando desreferenciado.
+- **operador->** Permite que um objeto de ponteiro inteligente atue como se fosse a interface encapsulada real quando não referenciada.
 
-- **operador &** libera qualquer ponteiro de interface encapsulado, substituindo-o por NULL e retorna o endereço do ponteiro encapsulado. Isso permite que o ponteiro inteligente a ser passado pelo endereço para uma função que tem um *out* parâmetro por meio do qual ele retorna um ponteiro de interface.
+- **& do operador** Libera qualquer ponteiro de interface encapsulada, substituindo-o por NULL e retorna o endereço do ponteiro encapsulado. Isso permite que o ponteiro inteligente seja passado pelo endereço para uma função que tem um parâmetro *out* por meio do qual ele retorna um ponteiro de interface.
 
-- **operador bool** permite que um objeto de ponteiro inteligente a ser usado em uma expressão condicional. Esse operador retornará TRUE se o ponteiro não for nulo.
+- **booliano de operador** Permite que um objeto de ponteiro inteligente seja usado em uma expressão condicional. Esse operador retornará TRUE se o ponteiro não for nulo.
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

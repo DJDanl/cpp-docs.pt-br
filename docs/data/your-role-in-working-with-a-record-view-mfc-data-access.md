@@ -5,33 +5,33 @@ helpviewer_keywords:
 - record views, customizing default code
 - MFC, record views
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
-ms.openlocfilehash: c5c35208f654cff90e3cdf87e697e654bdfbe307
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 351aa2d5ce950017aa8c1b3d99c8d297a423ad9f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153327"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208995"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Sua função ao trabalhar com uma exibição de registro (Acesso a dados MFC)
 
 A tabela a seguir mostra o que você geralmente deve fazer para trabalhar com um modo de exibição do registro e a estrutura que funciona para você.
 
-### <a name="working-with-a-record-view-you-and-the-framework"></a>Trabalhando com um modo de exibição do registro: Você e a estrutura
+### <a name="working-with-a-record-view-you-and-the-framework"></a>Trabalhando com uma exibição do registro: você e a estrutura
 
 |Você|A estrutura|
 |---------|-------------------|
 |Use o editor de diálogo do Visual C++ para criar o formulário.|Cria um recurso de modelo de diálogo com controles.|
-|Use o [Assistente de aplicativo MFC](../mfc/reference/database-support-mfc-application-wizard.md) para criar classes derivadas [CRecordView](../mfc/reference/crecordview-class.md) e [CRecordset](../mfc/reference/crecordset-class.md).|Grava as classes para você.|
+|Use o [Assistente de aplicativo MFC](../mfc/reference/database-support-mfc-application-wizard.md) para criar classes derivadas de [CRecordView](../mfc/reference/crecordview-class.md) e [CRecordset](../mfc/reference/crecordset-class.md).|Grava as classes para você.|
 |Mapeie controles de exibição de registro para membros de dados de campo do conjunto de registros.|Fornece DDX entre os controles e os campos de registros.|
-||Fornece manipuladores de comandos para a padrão **mover primeiro**, **Mover último**, **mover próximo**, e **mover anterior** comandos dos menus ou barra de ferramentas botões.|
+||Fornece manipuladores de comando padrão para **mover primeiro**, **mover por último**, mover **próximo**e **mover comandos anteriores** de menus ou botões da barra de ferramentas.|
 ||Atualiza as alterações feitas à fonte de dados.|
 |[Opcional] Escreva o código para preencher caixas de listagem ou caixas de combinação ou outros controles com dados de um segundo conjunto de registros.||
 |[Opcional] Escreva o código para qualquer validação especial.||
 |[Opcional] Escreva o código para adicionar ou excluir registros.||
 
-Programação baseada em formulários é apenas uma abordagem de trabalhar com um banco de dados. Para obter informações sobre os aplicativos usando algumas outra interface do usuário, ou nenhuma interface do usuário, consulte [MFC: Usando Classes de banco de dados com documentos e exibições](../data/mfc-using-database-classes-with-documents-and-views.md) e [MFC: Usando Classes de banco de dados sem documentos e exibições](../data/mfc-using-database-classes-without-documents-and-views.md). Para obter métodos alternativos para exibir registros de banco de dados, consulte classes [CListView](../mfc/reference/clistview-class.md) e [CTreeView](../mfc/reference/ctreeview-class.md).
+Programação baseada em formulários é apenas uma abordagem de trabalhar com um banco de dados. Para obter informações sobre aplicativos que usam alguma outra interface do usuário, ou nenhuma interface do usuário, consulte [MFC: usando classes de banco de dados com documentos e exibições](../data/mfc-using-database-classes-with-documents-and-views.md) e [MFC: usando classes de banco de dados sem documentos e exibições](../data/mfc-using-database-classes-without-documents-and-views.md). Para obter abordagens alternativas para exibir registros de banco de dados, consulte classes [CListView](../mfc/reference/clistview-class.md) e [CTreeView](../mfc/reference/ctreeview-class.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Exibição de registro (Acesso a dados MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Lista de drivers ODBC](../data/odbc/odbc-driver-list.md)

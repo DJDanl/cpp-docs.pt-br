@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-ms.openlocfilehash: a173e1466179dfb40a33d7bdb4a94eabdbf23cc0
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: dc3c4ea36aa9dac64f2aa7861fd5d51927c77ecd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079054"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209490"
 ---
 # <a name="testing-the-read-only-provider"></a>Testando o provedor somente leitura simples
 
@@ -22,7 +22,7 @@ O exemplo neste tópico cria um aplicativo de assistente de aplicativo do MFC pa
 
 ## <a name="to-create-the-test-application"></a>Para criar o aplicativo de teste
 
-1. No menu **Arquivo**, clique em **Novo** e clique em **Projeto**.
+1. No menu **Arquivo**, clique em **Novo** e em **Projeto**.
 
 1. No painel **tipos de projeto** , selecione a **pasta instalada** > **Visual C++**  > **MFC/ATL** . No painel **modelos** , selecione **aplicativo MFC**.
 

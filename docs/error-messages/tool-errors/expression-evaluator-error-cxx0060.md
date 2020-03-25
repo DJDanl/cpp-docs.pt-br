@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0060
 - CXX0060
 ms.assetid: 40c0ff02-ca6b-4232-b1e3-1f3a213ee2a3
-ms.openlocfilehash: 30e44be23a84e9f14f194f9baaaba1eda6c7a097
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32bee6d51368eb74ca0856607cf44bf902d202a2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299498"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184561"
 ---
 # <a name="expression-evaluator-error-cxx0060"></a>Erro CXX0060 (avaliador de expressão)
 
-Registre-se não está disponível
+o registro não está disponível
 
-Uma expressão especificada de um registro que não pode ser usado. Esse erro pode ser causado pela tentativa de acessar um registro que não existe no computador em execução.
+Uma expressão especificou um registro que não pode ser usado. Esse erro pode ser causado pela tentativa de acessar um registro que não existe no computador que está executando o.
 
-Esse erro é idêntico ao CAN0060.
+Esse erro é idêntico a CAN0060.

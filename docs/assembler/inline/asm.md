@@ -9,37 +9,37 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: 43c7ae02e465ce8de2871d78e7ba604221aa7426
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: de28e4c0fad6b89a62b4479c5c32f0b8606cf3af
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445907"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169625"
 ---
-# <a name="asm"></a>__asm
+# <a name="__asm"></a>__asm
 
 **Seção específica da Microsoft**
 
-O `__asm` palavra-chave invoca o assembler embutido e pode aparecer sempre que uma instrução C ou C++ é legal. Ela não pode aparecer sozinha. Ela deve ser seguida por uma instrução de assembly, um grupo de instruções entre chaves ou, pelo menos, um par vazio de chaves. O termo "bloco `__asm`" refere-se aqui a qualquer instrução ou grupo de instruções, estando ou não entre chaves.
+A palavra-chave `__asm` invoca o Assembler embutido e pode aparecer sempre C++ que um C ou uma instrução for legal. Ela não pode aparecer sozinha. Ela deve ser seguida por uma instrução de assembly, um grupo de instruções entre chaves ou, pelo menos, um par vazio de chaves. O termo "bloco `__asm`" refere-se aqui a qualquer instrução ou grupo de instruções, estando ou não entre chaves.
 
 > [!NOTE]
-> Suporte do Visual C++ para o C++ padrão `asm` palavra-chave é limitado ao fato de que o compilador não gerará um erro sobre a palavra-chave. No entanto, um `asm` bloco não gerará nenhum código significativo. Use `__asm` em vez de `asm`.
+> O C++ suporte Visual para a C++ palavra-chave Standard `asm` é limitado ao fato de que o compilador não gerará um erro na palavra-chave. No entanto, um bloco de `asm` não gerará nenhum código significativo. Use `__asm` em vez de `asm`.
 
 ## <a name="grammar"></a>Gramática
 
-*asm-block*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *assembly-instruction* **;**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**ASM {** *lista de instruções de assembly* **}** **;** <sub>otimizado</sub>
+*ASM-bloquear*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm** *de instruções de assembly* **;** <sub>aceitar</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm {** *assembly-Instruction-List* **}** **;** <sub>aceitar</sub>
 
 *lista de instruções de assembly*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;**<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrução de assembly* **;** <sub>aceitar</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-Instruction* **;** *assembly – instrução-List* **;** <sub>aceitar</sub>
 
 ## <a name="remarks"></a>Comentários
 
-Se usado sem chaves, o `__asm` palavra-chave significa que o resto da linha é uma instrução de linguagem de assembly. Se usado com chaves, significa que cada linha entre as chaves é uma instrução de linguagem de assembly. Para compatibilidade com versões anteriores, `_asm` é um sinônimo de `__asm`.
+Se usado sem chaves, a palavra-chave `__asm` significa que o restante da linha é uma instrução de linguagem de assembly. Se usado com chaves, significa que cada linha entre as chaves é uma instrução de linguagem de assembly. Para compatibilidade com versões anteriores, `_asm` é um sinônimo para `__asm`.
 
-Uma vez que o `__asm` palavra-chave é um separador de instrução, você pode colocar instruções de assembly na mesma linha.
+Como a palavra-chave `__asm` é um separador de instrução, você pode colocar instruções de assembly na mesma linha.
 
 Antes do Visual Studio 2005, a instrução
 
@@ -47,15 +47,15 @@ Antes do Visual Studio 2005, a instrução
 __asm int 3
 ```
 
-código nativo a ser gerado quando compilado com não causou **/clr**; o compilador traduziu a instrução para uma instrução de interrupção de CLR.
+Não fazia com que o código nativo fosse gerado quando compilado com **/CLR**; o compilador converteu a instrução em uma instrução de interrupção de CLR.
 
-`__asm int 3` Agora resulta na geração de código nativo para a função. Se você desejar uma função para fazer com que um ponto de interrupção em seu código e se você quiser que essa função seja compilada em MSIL, use [debugbreak](../../intrinsics/debugbreak.md).
+`__asm int 3` agora resulta na geração de código nativo para a função. Se você quiser que uma função cause um ponto de interrupção em seu código e se desejar que a função seja compilada para MSIL, use [__debugbreak](../../intrinsics/debugbreak.md).
 
-Para compatibilidade com versões anteriores, **_asm** é um sinônimo de **ASM** , a menos que a opção de compilador [/Za \(desabilitar extensões de linguagem)](../../build/reference/za-ze-disable-language-extensions.md) for especificado.
+Para compatibilidade com versões anteriores, **_asm** é um sinônimo para **__asm** , a menos que a opção de compilador [/za \(desabilitar extensões de linguagem)](../../build/reference/za-ze-disable-language-extensions.md) seja especificada.
 
 ## <a name="example"></a>Exemplo
 
-O fragmento de código a seguir é uma simples `__asm` bloco entre chaves:
+O fragmento de código a seguir é um bloco de `__asm` simples entre chaves:
 
 ```cpp
 __asm {
@@ -73,19 +73,19 @@ __asm mov dx, 0xD007
 __asm out dx, al
 ```
 
-Porque o `__asm` palavra-chave é um separador de instrução, você também pode colocar instruções de assembly na mesma linha:
+Como a palavra-chave `__asm` é um separador de instrução, você também pode colocar instruções de assembly na mesma linha:
 
 ```cpp
 __asm mov al, 2   __asm mov dx, 0xD007   __asm out dx, al
 ```
 
-Todos os três exemplos geram o mesmo código, mas o primeiro estilo (colocando o `__asm` bloquear entre chaves) tem algumas vantagens. As chaves separar o código do assembly de código C ou C++ e evitar a repetição desnecessária de claramente o `__asm` palavra-chave. Chaves também podem evitar ambiguidades. Se você deseja colocar uma instrução C ou C++ na mesma linha como um `__asm` bloco, você deve incluir o bloco entre chaves. Sem os colchetes, o compilador não pode determinar onde código do assembly termina e instruções de C ou C++ começam. Por fim, como o texto entre chaves tem o mesmo formato de texto comum de MASM, você pode facilmente recortar e colar o texto de arquivos de origem existentes (MASM).
+Todos os três exemplos geram o mesmo código, mas o primeiro estilo (delimitador o bloco de `__asm` entre chaves) tem algumas vantagens. As chaves claramente separam o código do assembly C++ do C ou do código e evitam a repetição necessária da palavra-chave `__asm`. As chaves também podem impedir ambiguidades. Se você quiser colocar um C ou C++ uma instrução na mesma linha de um bloco de `__asm`, deverá colocar o bloco entre chaves. Sem as chaves, o compilador não pode determinar onde o código do assembly é interrompido C++ , e C ou instruções começam. Por fim, como o texto entre chaves tem o mesmo formato que o texto MASM comum, você pode facilmente cortar e colar texto de arquivos de origem MASM existentes.
 
-Ao contrário das chaves no C e C++, as chaves que incluem um `__asm` bloco não afetam o escopo da variável. Você também pode aninhar `__asm` blocos; o aninhamento não afeta o escopo da variável.
+Ao contrário das chaves em C C++e, as chaves que envolvem um bloco de `__asm` não afetam o escopo da variável. Você também pode aninhar blocos de `__asm`; o aninhamento não afeta o escopo da variável.
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Palavras-chave](../../cpp/keywords-cpp.md)<br/>
 [Assembler embutido](../../assembler/inline/inline-assembler.md)<br/>

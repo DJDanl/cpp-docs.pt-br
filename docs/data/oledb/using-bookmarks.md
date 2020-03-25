@@ -1,5 +1,5 @@
 ---
-title: Usando indicadores
+title: Usar indicadores
 ms.date: 10/24/2018
 helpviewer_keywords:
 - rowsets, bookmarks
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - bookmarks, OLE DB
 - OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-ms.openlocfilehash: 579e67151858904e877a34bf30467e3cb97fe2c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a4a2d65ba7367b5568603b5f08a07c6d85cc4a5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388950"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209307"
 ---
-# <a name="using-bookmarks"></a>Usando indicadores
+# <a name="using-bookmarks"></a>Usar indicadores
 
-Antes de abrir o conjunto de linhas, você deve instruir o provedor que você deseja usar indicadores. Para fazer isso, defina as `DBPROP_BOOKMARKS` propriedade para **verdadeiro** no conjunto de suas propriedades. O provedor recupera indicadores como coluna de zero, então você deve usar a macro especial BOOKMARK_ENTRY e o `CBookmark` classe se você estiver usando um acessador estática. `CBookmark` é uma classe de modelo em que o argumento é o comprimento em bytes do buffer indicador. O comprimento do buffer exigido para um indicador depende do provedor. Se você estiver usando o provedor OLE DB ODBC, conforme mostrado no exemplo a seguir, o buffer deve ser de 4 bytes.
+Antes de abrir o conjunto de linhas, você deve informar ao provedor que deseja usar indicadores. Para fazer isso, defina a propriedade `DBPROP_BOOKMARKS` como **true** em seu conjunto de propriedades. O provedor recupera indicadores como uma coluna zero, portanto, você deve usar a macro especial BOOKMARK_ENTRY e a classe `CBookmark` se estiver usando um acessador estático. `CBookmark` é uma classe de modelo em que o argumento é o comprimento em bytes do buffer de indicadores. O comprimento do buffer necessário para um indicador depende do provedor. Se você estiver usando o provedor de OLE DB ODBC, conforme mostrado no exemplo a seguir, o buffer deverá ter 4 bytes.
 
 ```cpp
 class CProducts
@@ -30,7 +30,7 @@ public:
 };
 ```
 
-Em seguida, usado pelo código a seguir:
+Em seguida, usado pelo seguinte código:
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
@@ -41,7 +41,7 @@ CSession session;
 product.Open(session, "Products", &propset);
 ```
 
-Se você usar `CDynamicAccessor`, o buffer é definido dinamicamente em tempo de execução. Nesse caso, você pode usar uma versão especializada do `CBookmark` para os quais você não especificar um comprimento de buffer. Use a função `GetBookmark` para recuperar o indicador do registro atual, conforme mostrado no exemplo de código:
+Se você usar `CDynamicAccessor`, o buffer será definido dinamicamente em tempo de execução. Nesse caso, você pode usar uma versão especializada do `CBookmark` para o qual você não especifica um comprimento de buffer. Use a função `GetBookmark` para recuperar o indicador do registro atual, conforme mostrado neste exemplo de código:
 
 ```cpp
 CTable<CDynamicAccessor> product;
@@ -55,8 +55,8 @@ product.MoveNext();
 product.GetBookmark(&bookmark);
 ```
 
-Para obter informações sobre o suporte a indicadores em provedores, consulte [suporte do provedor para indicadores](../../data/oledb/provider-support-for-bookmarks.md).
+Para obter informações sobre como dar suporte a indicadores em provedores, consulte [suporte do provedor para indicadores](../../data/oledb/provider-support-for-bookmarks.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Usando acessadores](../../data/oledb/using-accessors.md)

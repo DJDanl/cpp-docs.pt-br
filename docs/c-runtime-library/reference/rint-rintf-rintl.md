@@ -30,12 +30,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 57c4dc60d6b4d29e5c46fa6f1d03d0710ed44309
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac9db3ee5a50bb334754a8a1191638a319829b97
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949261"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170885"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -54,19 +54,19 @@ float rint( float x );  // C++ only
 long double rint( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 O valor do ponto flutuante a ser arredondado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-As funções **rimir** retornam um valor de ponto flutuante que representa o inteiro mais próximo a *x*. Valores intermediários são arredondados de acordo com a configuração atual do modo de arredondamento de ponto flutuante, o mesmo que as funções **nearbyint** . Ao contrário das funções **nearbyint** , as funções **rimir** podem gerar a exceção de ponto flutuante **FE_INEXACT** se o resultado for diferente no valor do argumento. Nenhum erro é retornado.
+As funções **rimir** retornam um valor de ponto flutuante que representa o inteiro mais próximo a *x*. Valores intermediários são arredondados de acordo com a configuração atual do modo de arredondamento de ponto flutuante, o mesmo que as funções **nearbyint** . Ao contrário das funções **nearbyint** , as funções **rimir** podem gerar a **FE_INEXACT** exceção de ponto flutuante se o resultado for diferente no valor do argumento. Nenhum erro é retornado.
 
 |Entrada|Exceção SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|nenhum|nenhum|
-|Desnormalizado|EXCEPTION_FLT_UNDERFLOW|nenhum|
+|± ∞, QNAN, IND|none|none|
+|Desnormalizado|EXCEPTION_FLT_UNDERFLOW|none|
 
 ## <a name="remarks"></a>Comentários
 
@@ -76,7 +76,7 @@ Como C++ o permite sobrecarga, você pode chamar sobrecargas de **rimir** que le
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
-|**rint**, **rintf**, **rintl**|\<math.h>|\<cmath>|
+|**rimir**, **rintf**, **rintl**|\<math.h>|\<cmath>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -116,7 +116,7 @@ rintl(2.500000) is 3
 rintl(-2.500000) is -3
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

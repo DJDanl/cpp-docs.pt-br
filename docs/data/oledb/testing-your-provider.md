@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing providers
 - OLE DB providers, testing
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
-ms.openlocfilehash: 722757b93d3423b02340c382b16e08a31626bc01
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b1f068c928abd0a6656bed0702422d9bda843208
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311764"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209489"
 ---
 # <a name="testing-your-provider"></a>Testando o provedor
 
@@ -23,6 +23,6 @@ Antes de liberar um provedor, você deve fazer os testes a seguir, na ordem indi
 
 1. Execute os testes de conformidade OLE DB (incluindo testes de conformidade do ADO) para mostrar que seu provedor atende ao padrão de nível 0 para provedores de OLE DB. (Para obter uma explicação do nível 0, pesquise os **testes de conformidade de OLE DB nível 0** no [Guia do programador de OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Esses testes e a documentação associada estão incluídos no C++ visual no SDK de acesso a dados. Esses testes também ajudam a mostrar que seu provedor é executado bem quando agregado por outros [provedores de serviço](../../data/oledb/ole-db-resource-pooling-and-services.md) e é especialmente útil se você modificar ou adicionar propriedades. Para obter mais informações sobre os testes de conformidade, consulte o arquivo Leiame do SDK de acesso a dados, que está localizado em um dos CDs do Visual Studio.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Trabalhando com modelos de provedor do OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

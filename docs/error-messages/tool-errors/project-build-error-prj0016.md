@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0016
 ms.assetid: e9745336-883a-4c70-9c40-7753e02f0325
-ms.openlocfilehash: 6733ef1f390f2ff377356dda3f7cd3ebfe10cc2b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0cab1e35a36ab78426923d60acafb5cdf2942469
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509876"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192738"
 ---
 # <a name="project-build-error-prj0016"></a>Erro PRJ0016 (compilação de projeto)
 
@@ -25,6 +25,6 @@ Esse erro também pode ocorrer se a seguinte chave do registro estiver definida:
 
 Para resolver esse erro, exclua a chave RestrictRun. Se essa chave do registro for necessária, acrescente **VCSpawn. exe** à lista de entradas na chave.
 
-Outra causa desse erro é que a configuração de política não inclui VCSpawn. exe na chave do registro HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun como um programa de janela permitido para essa conta de usuário.
+Outra causa desse erro é que a configuração de política não inclui VCSpawn. exe na chave do registro HKEY_CURRENT_USER \Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun como um programa de janela permitido para essa conta de usuário.
 
 Para obter informações adicionais, consulte [aderir às configurações de política do sistema](/previous-versions/windows/desktop/Policy/adhering-to-system-policy-settings), na seção "executar somente aplicativos do Windows permitidos".

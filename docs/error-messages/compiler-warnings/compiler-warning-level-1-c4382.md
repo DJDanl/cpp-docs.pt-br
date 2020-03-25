@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 1) C4382
+title: Aviso do compilador (nível 1) C4382
 ms.date: 11/04/2016
 f1_keywords:
 - C4382
 helpviewer_keywords:
 - C4382
 ms.assetid: 34be9ad3-bae6-411a-8f80-0c8fd0d2c092
-ms.openlocfilehash: cca2f8cc13cc8317bac3736e142ef58e126ed994
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b8dbf77defab2a711ad931057c740193908474b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390484"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186966"
 ---
-# <a name="compiler-warning-level-1-c4382"></a>Compilador aviso (nível 1) C4382
+# <a name="compiler-warning-level-1-c4382"></a>Aviso do compilador (nível 1) C4382
 
-> Lançando '*tipo*': um tipo com clrcall destruidor ou Construtor de cópia só pode ser capturado em /clr: pure módulo
+> lançando '*Type*': um tipo com __clrcall destruidor ou construtor de cópia só pode ser capturado no módulo/CLR: Pure
 
 ## <a name="remarks"></a>Comentários
 
-O **/clr: pure** opção do compilador é preterida no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+A opção de compilador **/CLR: Pure** foi preterida no visual Studio 2015 e não tem suporte no visual Studio 2017.
 
-Quando compilado com **/clr** (não **/clr: pure**), tratamento de exceção espera que as funções de membro em um tipo nativo seja [cdecl](../../cpp/cdecl.md) e não [clrcall](../../cpp/clrcall.md). Tipos nativos com funções de membro usando `__clrcall` convenção de chamada não pode ser capturada em um módulo compilado com **/clr**.
+Quando compilado com **/CLR** (não **/CLR: Pure**), a manipulação de exceção espera que as funções de membro em um tipo nativo sejam [__cdecl](../../cpp/cdecl.md) e não [__clrcall](../../cpp/clrcall.md). Tipos nativos com funções de membro usando `__clrcall` Convenção de chamada não podem ser capturados em um módulo compilado com **/CLR**.
 
-Se a exceção será capturada em um módulo compilado com **/clr: pure**, você pode ignorar este aviso.
+Se a exceção for capturada em um módulo compilado com **/CLR: Pure**, você poderá ignorar esse aviso.
 
 Para obter mais informações, consulte [/clr (compilação de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 

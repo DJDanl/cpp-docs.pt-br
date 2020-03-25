@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2722
 ms.assetid: 4cc2c7fa-cb12-4bcf-9df1-6d627ef62973
-ms.openlocfilehash: 4274ac6ec33e0176f998fcf5a2b3efd570a4009f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7426df1970dee58cd4363ee345e2286165e375b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383029"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202146"
 ---
 # <a name="compiler-error-c2722"></a>Erro do compilador C2722
 
-':: operador ': inválido após comando operator; Use 'operator operador'
+':: operator ': inválido após comando de operador; Use ' operator Operator '
 
-Uma `operator` instrução redefinições `::new` ou `::delete`. O `new` e `delete` operadores são globais, portanto, o operador de resolução de escopo (`::`) não faz sentido. Remover o `::` operador.
+Uma instrução `operator` redefine `::new` ou `::delete`. Os operadores de `new` e `delete` são globais, portanto, o operador de resolução de escopo (`::`) não faz sentido. Remova o operador de `::`.

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9ec612aa9f8c6eaf1731d62b654d45841cdfa159
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942828"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170249"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -58,19 +58,19 @@ float cos( float x );  // C++ only
 long double cos( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *x*<br/>
 Ângulo em radianos.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 O cosseno de *x*. Se *x* for maior ou igual a 263, ou menor ou igual a-263, uma perda de significância no resultado ocorrerá.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|nenhum|**_DOMAIN**|
-|± INF|**INVÁLIDO**|**_DOMAIN**|
+|± QNAN, IND|none|**_DOMAIN**|
+|± INF|**Inválido**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Comentários
 
@@ -88,7 +88,7 @@ Para obter informações adicionais sobre compatibilidade, consulte [Compatibili
 
 Veja o exemplo em [sin, sinf, sinl](sin-sinf-sinl.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

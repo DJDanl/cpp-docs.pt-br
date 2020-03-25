@@ -1,24 +1,24 @@
 ---
-title: Compilador aviso (nível 4) C4611
+title: Aviso do compilador (nível 4) C4611
 ms.date: 11/04/2016
 f1_keywords:
 - C4611
 helpviewer_keywords:
 - C4611
 ms.assetid: bd90d0a6-75f9-4e97-968d-dda6773e9fd8
-ms.openlocfilehash: b799c568d73a081a4d4cf5616f376f3efc9eeffb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7de4cdf0eacb1b9848a4350f1d223da1fd47d1fc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349666"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198296"
 ---
-# <a name="compiler-warning-level-4-c4611"></a>Compilador aviso (nível 4) C4611
+# <a name="compiler-warning-level-4-c4611"></a>Aviso do compilador (nível 4) C4611
 
-interação entre 'function' e a destruição de objeto de C++ é não portátil
+a interação entre a ' função C++ ' e a destruição de objeto não é portátil
 
-Em algumas plataformas, funções, que incluem **catch** pode não oferecer suporte a semântica de objeto C++ de destruição quando estiver fora do escopo.
+Em algumas plataformas, as funções que incluem o **Catch** podem C++ não dar suporte à semântica de objeto de destruição quando fora do escopo.
 
-Para evitar comportamento inesperado, evite usar **catch** em funções que têm construtores e destruidores.
+Para evitar um comportamento inesperado, evite usar funções **Catch** nas que têm construtores e destruidores.
 
-Esse aviso é emitido somente uma vez. ver [aviso pragma](../../preprocessor/warning.md).
+Este aviso é emitido apenas uma vez; consulte o [aviso de pragma](../../preprocessor/warning.md).

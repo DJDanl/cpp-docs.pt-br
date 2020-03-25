@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-ms.openlocfilehash: 003b9a58bfb08130f034530f59e2de27efa2ae8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 096ccb7ff443d24e0d53e73a5950faa1e85aeae6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298913"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194558"
 ---
 # <a name="linker-tools-error-lnk2031"></a>Erro das Ferramentas de Vinculador LNK2031
 
-> não é possível gerar p/invoke para "*function_declaration*" *decorated_name*; chamando convenção faltante nos metadados
+> Não é possível gerar p/invoke para "*function_declaration*" *decorated_name*; Convenção de chamada ausente nos metadados
 
 ## <a name="remarks"></a>Comentários
 
-Ao tentar importar uma função nativa em uma imagem pura, lembre-se de que as convenções de chamada implícitas diferem entre compilações nativas e puras. Para obter mais informações sobre imagens puras, consulte [código puro e verificável (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Ao tentar importar uma função nativa em uma imagem pura, lembre-se de que as convenções implícitas de chamada diferem entre as compilações nativas e puras. Para obter mais informações sobre imagens puras, consulte [código puro e verificável (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-O **/clr: pure** opção do compilador é preterida no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+A opção de compilador **/CLR: Pure** foi preterida no visual Studio 2015 e não tem suporte no visual Studio 2017.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo de código gera um componente com uma função exportada, nativo, cuja convenção de chamada é implicitamente [cdecl](../../cpp/cdecl.md).
+Este exemplo de código gera um componente com uma função exportada, nativa, cuja Convenção de chamada é implicitamente [__cdecl](../../cpp/cdecl.md).
 
 ```cpp
 // LNK2031.cpp
@@ -37,7 +37,7 @@ extern "C" {
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir cria um cliente puro que consome a função nativa. No entanto, a convenção de chamada sob **/clr: pure** é [clrcall](../../cpp/clrcall.md). O exemplo a seguir gera das LNK2031.
+O exemplo a seguir cria um cliente puro que consome a função nativa. No entanto, a Convenção de chamada em **/CLR: Pure** é [__clrcall](../../cpp/clrcall.md). O exemplo a seguir gera LNK2031.
 
 ```cpp
 // LNK2031_b.cpp
@@ -52,7 +52,7 @@ int main() {
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como utilizar a função nativa de uma imagem pura. Observe o explícito **cdecl** especificador de convenção de chamada.
+O exemplo a seguir mostra como consumir a função nativa de uma imagem pura. Observe o especificador de Convenção de chamada de **__cdecl** explícito.
 
 ```cpp
 // LNK2031_c.cpp

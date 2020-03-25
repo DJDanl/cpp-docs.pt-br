@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2207
 ms.assetid: d7d7b537-68f1-420a-9835-b5b6f2cb5cfd
-ms.openlocfilehash: cbb5c099243e6aafd9ad050c8da1436eb2d71603
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f5bea563ae91df0e641af3911aa246b1f813336
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400455"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206694"
 ---
 # <a name="compiler-error-c2207"></a>Erro do compilador C2207
 
-'member': um membro de um modelo de classe não é possível adquirir um tipo de função
+' member ': um membro de um template de classe não pode adquirir um tipo de função
 
-O `member` da classe de modelo foi analisado anteriormente como um membro de dados não estáticos. Ele não pode ser redefinido como uma função de membro.
+O `member` do modelo de classe foi previamente analisado como um membro de dados não estático. Ele não pode ser redefinido como uma função membro.

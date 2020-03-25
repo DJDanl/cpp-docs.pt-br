@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - CXX0069
 ms.assetid: cf334b23-1e17-4d37-acc5-18597ee84164
-ms.openlocfilehash: 4a37e7ef5a260f696f3c3f0cb95fd8557ce8dfbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07e6dea2090c09223719d0dbeeadc9497e7ab042
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299355"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184262"
 ---
 # <a name="expression-evaluator-error-cxx0069"></a>Erro CXX0069 (avaliador de expressão)
 
-precisa de variável de quadro de pilha
+a variável precisa de um quadro de pilha
 
-O avaliador de expressão não é possível avaliar a variável porque ela não ocorre em um quadro de pilha. Isso pode ser causado por variáveis declaradas como parte de uma função embutida.
+O avaliador de expressão não pode avaliar a variável porque ela não ocorre em um registro de ativação. Isso pode ser causado por variáveis declaradas como parte de uma função embutida.

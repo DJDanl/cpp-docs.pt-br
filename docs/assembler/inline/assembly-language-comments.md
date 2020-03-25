@@ -7,27 +7,27 @@ helpviewer_keywords:
 - macros [C++], assembly language
 - __asm keyword [C++], instructions
 ms.assetid: 0dc10850-77f5-426e-9dab-185ea28e06e4
-ms.openlocfilehash: fc37658eccd99b61d45aa9a9a7a2675ef90eee89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8b2c98c61d58d72e78dbffd4f3b6ed7707d2d7a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167238"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169598"
 ---
 # <a name="assembly-language-comments"></a>Comentários da linguagem de assembly
 
 **Seção específica da Microsoft**
 
-Instruções em um `__asm` bloco pode usar comentários da linguagem de assembly:
+As instruções em um bloco de `__asm` podem usar comentários de linguagem de assembly:
 
 ```cpp
 __asm mov ax, offset buff ; Load address of buff
 ```
 
-Como macros C expandem em uma única linha lógica, evite o uso de comentários da linguagem de assembly em macros. (Consulte [definindo blocos ASM como Macros C](../../assembler/inline/defining-asm-blocks-as-c-macros.md).) Uma `__asm` bloco também pode conter comentários de estilo C; para obter mais informações, consulte [usando C ou C++ em blocos ASM](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md).
+Como as macros C se expandem para uma única linha lógica, evite usar comentários de linguagem de assembly em macros. (Consulte [definindo blocos de __asm como macros C](../../assembler/inline/defining-asm-blocks-as-c-macros.md).) Um bloco de `__asm` também pode conter comentários em estilo C; para obter mais informações, consulte [usando C C++ ou em blocos de __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md).
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Usando a linguagem de assembly em blocos __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C1311
 ms.assetid: 6590a06c-ce9d-4f17-8f62-c809343143b8
-ms.openlocfilehash: ba2b797c9bf521533e7c2ccff8d358b6216d392f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e57e4e0899a5f9d81e87a203b1b699cef0884f0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266460"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203262"
 ---
 # <a name="fatal-error-c1311"></a>Erro fatal C1311
 
-Formato COFF estaticamente não é possível inicializar 'var' com número bytes de um endereço
+O formato COFF não pode inicializar ' var ' estaticamente com o número de byte (s) de um endereço
 
-Um endereço cujo valor não é conhecido em tempo de compilação não pode ser atribuído estaticamente a uma variável cujo tipo tem um armazenamento de menos de quatro bytes.
+Um endereço cujo valor não é conhecido em tempo de compilação não pode ser atribuído estaticamente a uma variável cujo tipo tem armazenamento de menos de quatro bytes.
 
-Esse erro pode ocorrer no código que não C++ válido.
+Esse erro pode ocorrer em código que, de outra C++forma, é válido.
 
-O exemplo a seguir mostra uma condição que possa causar C1311.
+O exemplo a seguir mostra uma condição que pode causar C1311.
 
 ```
 char c = (char)"Hello, world";   // C1311
