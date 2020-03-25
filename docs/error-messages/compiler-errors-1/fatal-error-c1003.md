@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1003
 ms.assetid: 27d2d009-2e0f-41fb-8bfc-372752fbe920
-ms.openlocfilehash: 385fcc5831ecede8fb4aed2403cee8f7b6c6b9b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 438eafd04fe56a3484fbab5c9b7dbfcc6c40ba73
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364240"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204913"
 ---
 # <a name="fatal-error-c1003"></a>Erro fatal C1003
 
-Contagem de erros excede o número; interrompendo compilação
+a contagem de erros excede o número; parando compilação
 
-Erros no programa são numerosos para permitir a recuperação. O compilador deve terminar.
+Os erros no programa são muito numerosos para permitir a recuperação. O compilador deve terminar.

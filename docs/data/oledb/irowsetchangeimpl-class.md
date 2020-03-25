@@ -31,12 +31,12 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 1e07289a2d0fb283a20657797db5f915c06a39ad
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b069cd08814855a0528806ac6d19ed8f5beb6f37
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446322"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210451"
 ---
 # <a name="irowsetchangeimpl-class"></a>Classe IRowsetChangeImpl
 
@@ -54,7 +54,7 @@ template <
 class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 Uma classe derivada de `IRowsetChangeImpl`.
@@ -71,7 +71,7 @@ A unidade de armazenamento para o identificador de linha.
 *MapClass*<br/>
 A unidade de armazenamento para todos os identificadores de linha mantidos pelo provedor.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Atldb. h
 
@@ -108,7 +108,7 @@ A implementação de modelos de OLE DB dá suporte a todos os métodos base (`Se
 
 - Veja também como a classe `RUpdateRowset` é usada no exemplo [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) .
 
-## <a name="deleterows"></a>IRowsetChangeImpl::D eleteRows
+## <a name="irowsetchangeimpldeleterows"></a><a name="deleterows"></a>IRowsetChangeImpl::D eleteRows
 
 Exclui linhas do conjunto de linhas.
 
@@ -121,11 +121,11 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
    DBROWSTATUS rgRowStatus[]);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 Consulte [IRowsetChange::D eleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="insertrow"></a>IRowsetChangeImpl:: InsertRow
+## <a name="irowsetchangeimplinsertrow"></a><a name="insertrow"></a>IRowsetChangeImpl:: InsertRow
 
 Cria e Inicializa uma nova linha no conjunto de linhas.
 
@@ -138,11 +138,11 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
    HROW* phRow);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 Consulte [IRowsetChange:: InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="setdata"></a>IRowsetChangeImpl:: SetData
+## <a name="irowsetchangeimplsetdata"></a><a name="setdata"></a>IRowsetChangeImpl:: SetData
 
 Define valores de dados em uma ou mais colunas.
 
@@ -154,11 +154,11 @@ STDMETHOD (SetData )(HROW hRow,
    void* pSrcData);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 Consulte [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="flushdata"></a>IRowsetChangeImpl:: FlushData
+## <a name="irowsetchangeimplflushdata"></a><a name="flushdata"></a>IRowsetChangeImpl:: FlushData
 
 Substituído pelo provedor para confirmar dados para seu armazenamento.
 
@@ -169,7 +169,7 @@ HRESULT FlushData(HROW hRowToFlush,
    HACCESSOR hAccessorToFlush);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *hRowToFlush*<br/>
 no Identificador para as linhas dos dados. O tipo dessa linha é determinado a partir do argumento de modelo da *classe* rowgroup da classe `IRowsetImpl` (`CSimpleRow` por padrão).
@@ -181,7 +181,7 @@ no Identificador para o acessador, que contém informações de associação e i
 
 Um HRESULT padrão.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

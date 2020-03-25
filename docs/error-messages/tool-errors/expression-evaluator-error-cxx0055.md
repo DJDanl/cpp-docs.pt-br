@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0055
 - CXX0055
 ms.assetid: bb2a81f9-35ea-4b02-a49e-6b2c7023aebd
-ms.openlocfilehash: 7584516f55af51107f2765b57986cf6ea4700fc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62197741ada96240e628b95b520bf94396bba5f7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299511"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184704"
 ---
 # <a name="expression-evaluator-error-cxx0055"></a>Erro CXX0055 (avaliador de expressão)
 
 símbolo ambíguo no operador de contexto
 
-Um símbolo no operador de contexto (**{}**) chamado mais de um símbolo no programa.
+Um símbolo no operador de contexto ( **{}** ) referido em mais de um símbolo no programa.
 
 O operador de resolução de escopo (`::`) pode ser capaz de resolver a ambiguidade.
 
-Esse erro é idêntico ao CAN0055.
+Esse erro é idêntico a CAN0055.

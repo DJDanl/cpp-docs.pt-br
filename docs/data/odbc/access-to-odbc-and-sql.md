@@ -9,21 +9,21 @@ helpviewer_keywords:
 - SQL [C++], calling ODBC API functions
 - ODBC [C++], API functions
 ms.assetid: 5613d7dc-00b7-4646-99ae-1116c05c52b4
-ms.openlocfilehash: 7a539d911bbf4f4d9582da0ebedaeffaa0d8fa7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b590ce9309cbbe95285001cc5befe70a1d1961f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395996"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213324"
 ---
 # <a name="access-to-odbc-and-sql"></a>Acesso a ODBC e SQL
 
-A biblioteca Microsoft Foundation Class encapsula muitas chamadas de API do Windows e ainda permite que você chame qualquer função de API do Windows diretamente. As classes de banco de dados oferecem a mesma flexibilidade em relação a API do ODBC. Embora as classes de banco de dados protegem você de grande parte da complexidade do ODBC, você pode chamar funções API ODBC diretamente de qualquer lugar em seu programa.
+O biblioteca MFC encapsula muitas chamadas à API do Windows e ainda permite que você chame qualquer função da API do Windows diretamente. As classes de banco de dados oferecem a mesma flexibilidade em relação à API ODBC. Embora as classes de banco de dados protejam você de grande parte da complexidade do ODBC, você pode chamar funções da API do ODBC diretamente de qualquer lugar em seu programa.
 
-Da mesma forma, as classes de banco de dados protegem você de ter que trabalhar com o [SQL](../../data/odbc/sql.md), mas você pode usar o SQL diretamente se desejar. Você pode personalizar objetos de conjunto de registros passando uma instrução SQL personalizada (ou partes de configuração da instrução padrão) quando você abre o conjunto de registros. Você também pode fazer chamadas SQL diretamente usando o [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) função de membro da classe [CDatabase](../../mfc/reference/cdatabase-class.md).
+Da mesma forma, as classes de banco de dados protegem você de ter que trabalhar muito com o [SQL](../../data/odbc/sql.md), mas você pode usar o SQL diretamente se desejar. Você pode personalizar objetos Recordset passando uma instrução SQL personalizada (ou definindo partes da instrução padrão) ao abrir o conjunto de registros. Você também pode fazer chamadas SQL diretamente usando a função membro [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) da classe [CDatabase](../../mfc/reference/cdatabase-class.md).
 
-Para obter mais informações, consulte [ODBC: API de ODBC de chamar diretamente funções](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) e [SQL: Fazendo chamadas SQL diretas (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).
+Para obter mais informações, consulte [ODBC: chamando funções da API ODBC diretamente](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) e [SQL: fazendo chamadas SQL diretas (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [ODBC e MFC](../../data/odbc/odbc-and-mfc.md)

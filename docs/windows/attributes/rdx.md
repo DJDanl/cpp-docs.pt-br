@@ -1,17 +1,17 @@
 ---
-title: RDX (C++ COM atributo)
+title: RDX (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.rdx
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: 2790c3de01d21242daee73fc442ad22d88739355
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0140b759b1d78eb1284213a0dc47d9600b2a83b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407491"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214624"
 ---
 # <a name="rdx"></a>rdx
 
@@ -23,39 +23,39 @@ Cria uma chave do registro ou modifica uma chave do registro existente.
 [ rdx(key, valuename=NULL, regtype) ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*key*<br/>
-O nome da chave a ser criado ou aberto.
+*chave*<br/>
+O nome da chave a ser criada ou aberta.
 
-*valuename*<br/>
-(Opcional) Especifica o campo de valor a ser definido. Se um campo de valor com esse nome ainda não existir na chave, ele será adicionado.
+*valueName*<br/>
+Adicional Especifica o campo de valor a ser definido. Se um campo de valor com esse nome ainda não existir na chave, ele será adicionado.
 
 *regtype*<br/>
-O tipo de chave do registro que está sendo adicionado. Pode ser uma das seguintes opções: `text`, `dword`, `binary`, ou `CString`.
+O tipo de chave do registro que está sendo adicionado. Pode ser um dos seguintes: `text`, `dword`, `binary`ou `CString`.
 
 ## <a name="remarks"></a>Comentários
 
-O **rdx** atributo C++ cria ou modifica uma chave do registro existente para um componente COM. O atributo adiciona uma macro BEGIN_RDX_MAP para o objeto que implementa o membro de destino. `RegistryDataExchange`, uma função injetada como resultado da macro BEGIN_RDX_MAP, pode ser usada para transferir dados entre o registro e os membros de dados
+O atributo **RDX** C++ cria ou modifica uma chave de registro existente para um componente com. O atributo adiciona uma macro BEGIN_RDX_MAP ao objeto que implementa o membro de destino. `RegistryDataExchange`, uma função injetada como resultado da macro BEGIN_RDX_MAP, pode ser usada para transferir dados entre o registro e os membros de dados
 
-Esse atributo pode ser usado em conjunto com o [coclass](coclass.md), [progid](progid.md), ou [vi_progid](vi-progid.md) atributos ou outros atributos que implica uma destas opções.
+Esse atributo pode ser usado em conjunto com os atributos [coclass](coclass.md), [ProgID](progid.md)ou [vi_progid](vi-progid.md) ou outros atributos que implicam um deles.
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="attribute-context"></a>Atributo de contexto
+### <a name="attribute-context"></a>Contexto de atributo
 
 |||
 |-|-|
-|**Aplica-se a**|**classe** ou **struct** membro|
+|**Aplica-se a**|membro de **classe** ou **struct**|
 |**Repetível**|Não|
-|**Atributos obrigatórios**|Nenhum|
+|**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir adiciona uma chave do Registro chamada MyValue para o sistema que descreve o componente COM CMyClass.
+O código a seguir adiciona uma chave do registro chamada MyValue ao sistema que descreve o componente COM do CMyClass.
 
 ```cpp
 // cpp_attr_ref_rdx.cpp
@@ -76,7 +76,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de COM](com-attributes.md)<br/>
 [registration_script](registration-script.md)

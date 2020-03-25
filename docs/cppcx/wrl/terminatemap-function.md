@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - TerminateMap function
 ms.assetid: 1c314a61-da5d-49bb-ac44-c34ee3c23b66
-ms.openlocfilehash: 2a451bf68bfb543ee5e82a9a48097cac7e8a9821
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 560f563e43fc8b818b04cd0bda6b01fbc916cb84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398115"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213545"
 ---
 # <a name="terminatemap-function"></a>Função TerminateMap
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+O oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,20 +27,20 @@ inline bool TerminateMap(
     bool forceTerminate) throw()
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *module*<br/>
 Um [módulo](module-class.md).
 
 *serverName*<br/>
-O nome de um subconjunto de fábricas de classe no módulo especificado pelo parâmetro *módulo*.
+O nome de um subconjunto de fábricas de classe no módulo especificado pelo *módulo*de parâmetro.
 
 *forceTerminate*<br/>
-**True** para encerrar a classe fábricas, independentemente de eles estão ativos; **falsos** não encerrar as fábricas de classes se qualquer fábrica estiver ativa.
+**true** para encerrar as fábricas de classe, independentemente de estarem ativas; **false** para não encerrar as fábricas de classe se qualquer fábrica estiver ativa.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**Verdadeiro** se todas as fábricas de classes foram encerradas; caso contrário, **falso**.
+**true** se todas as fábricas de classe forem encerradas; caso contrário, **false**.
 
 ## <a name="remarks"></a>Comentários
 
@@ -48,10 +48,10 @@ Desliga as fábricas de classes no módulo especificado.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** module.h
+**Cabeçalho:** Module. h
 
-**Namespace:** Microsoft::WRL::Details
+**Namespace:** Microsoft:: WRL::D etalhes
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)

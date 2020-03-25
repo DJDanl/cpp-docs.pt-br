@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C++]
 ms.assetid: 94e99983-46a5-4e21-800c-28f8a7c6a8ff
-ms.openlocfilehash: 19ea551f625cac02e639753a976eddb7a5fa164b
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 002a8ad2887bd711bc3654d8e8910e2bede889d4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345832"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177554"
 ---
 # <a name="private-c"></a>private (C++)
 
@@ -25,22 +25,22 @@ private base-class
 
 ## <a name="remarks"></a>Comentários
 
-Quando precede uma lista de membros de classe, o **privada** palavra-chave especifica que esses membros são acessíveis somente de funções de membro e friends da classe. Isso se aplica a todos os membros declarados até o especificador seguinte do acesso ou ao final da classe.
+Ao anteceder uma lista de membros de classe, a palavra-chave **Private** especifica que esses membros são acessíveis somente de funções de membro e amigos da classe. Isso se aplica a todos os membros declarados até o especificador seguinte do acesso ou ao final da classe.
 
-Preceder o nome de uma classe base, o **privada** palavra-chave especifica que os membros públicos e protegidos da classe base são membros particulares da classe derivada.
+Ao anteceder o nome de uma classe base, a palavra-chave **Private** especifica que os membros públicos e protegidos da classe base são membros privados da classe derivada.
 
 O acesso padrão dos membros em um classe é particular. O acesso padrão dos membros em uma estrutura ou união é público.
 
 O acesso padrão de uma classe base é particular para classes e público para estruturas. Uniões não podem ter classes base.
 
-Para obter informações relacionadas, consulte [amigo](../cpp/friend-cpp.md), [pública](../cpp/public-cpp.md), [protegido](../cpp/protected-cpp.md)e a tabela de acesso de membro em [controlando o acesso a membros de classe](member-access-control-cpp.md).
+Para obter informações relacionadas, consulte [amigo](../cpp/friend-cpp.md), [público](../cpp/public-cpp.md), [protegido](../cpp/protected-cpp.md)e a tabela de acesso a membros no [controle de acesso a membros de classe](member-access-control-cpp.md).
 
 ## <a name="clr-specific"></a>Específico do /clr
 
-Nos tipos de CLR, o C++ palavras-chave do especificador de acesso (**pública**, **privada**, e **protegido**) podem afetar a visibilidade de tipos e métodos em relação aos assemblies. Para obter mais informações, consulte [controle de acesso de membro](member-access-control-cpp.md).
+Em tipos CLR, as C++ palavras-chave do especificador de acesso (**pública**, **privada**e **protegida**) podem afetar a visibilidade dos tipos e métodos em relação aos assemblies. Para obter mais informações, consulte [controle de acesso de membro](member-access-control-cpp.md).
 
 > [!NOTE]
->  Arquivos compilados com [/LN](../build/reference/ln-create-msil-module.md) não são afetados por esse comportamento. Nesse caso, todas as classes gerenciadas (públicas ou particulares) serão visíveis.
+>  Arquivos compilados com [/ln](../build/reference/ln-create-msil-module.md) não são afetados por esse comportamento. Nesse caso, todas as classes gerenciadas (públicas ou particulares) serão visíveis.
 
 ## <a name="end-clr-specific"></a>Específico de END /clr
 
@@ -81,7 +81,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controlando o acesso a membros de classe](member-access-control-cpp.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 309bb7e707d649cf78528f3d0df6cf8e43201823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a4c86987ceff0f04986d32011ba941e0d2319fe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361851"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211296"
 ---
 # <a name="crestrictions-class"></a>Classe CRestrictions
 
-Uma classe genérica que permite que você especificar restrições para conjuntos de linhas de esquema.
+Uma classe genérica que permite que você especifique restrições para conjuntos de linhas de esquema.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,7 +32,7 @@ class CRestrictions :
    public CSchemaRowset <T, nRestrictions>
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 A classe usada para o acessador.
@@ -41,11 +41,11 @@ A classe usada para o acessador.
 O número de colunas de restrição para o conjunto de linhas de esquema.
 
 *pguid*<br/>
-Um ponteiro para o GUID para o esquema.
+Um ponteiro para o GUID do esquema.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atldbsch.h
+**Cabeçalho:** Atldbsch. h
 
 ## <a name="members"></a>Membros
 
@@ -53,11 +53,11 @@ Um ponteiro para o GUID para o esquema.
 
 |||
 |-|-|
-|[Abrir](#open)|Retorna um resultado definido de acordo com as restrições fornecidas pelo usuário.|
+|[Abrir](#open)|Retorna um conjunto de resultados de acordo com as restrições fornecidas pelo usuário.|
 
-## <a name="open"></a> Crestrictions:: Open
+## <a name="crestrictionsopen"></a><a name="open"></a>CRestrictions:: abrir
 
-Retorna um resultado definido de acordo com as restrições fornecidas pelo usuário.
+Retorna um conjunto de resultados de acordo com as restrições fornecidas pelo usuário.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -73,29 +73,29 @@ HRESULT Open(const CSession& session,
    bool bBind = true);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
-*session*<br/>
-[in] Especifica um objeto de sessão existente usado para se conectar à fonte de dados.
+*sessão*<br/>
+no Especifica um objeto de sessão existente usado para se conectar à fonte de dados.
 
 *lpszParam*<br/>
-[in] Especifica as restrições no conjunto de linhas de esquema.
+no Especifica as restrições no conjunto de linhas de esquema.
 
 *bBind*<br/>
-[in] Especifica se deve associar o mapa de coluna automaticamente. O padrão é **verdadeira**, que faz com que o mapa de coluna a ser associado automaticamente. Definindo *bBind* à **falso** impede que a associação automática do mapa de coluna para que você pode vincular manualmente. (A vinculação manual é de interesse específico para os usuários OLAP.)
+no Especifica se o mapa de coluna deve ser associado automaticamente. O padrão é **true**, o que faz com que o mapa de coluna seja vinculado automaticamente. Definir *bBind* como **false** impede a associação automática do mapa de coluna para que você possa associar manualmente. (A vinculação manual é de interesse particular para os usuários OLAP.)
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um dos valores HRESULT padrão.
+Um dos valores de HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
 Você pode especificar um máximo de sete restrições em um conjunto de linhas de esquema.
 
-Ver [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) para obter informações sobre as restrições definidas em cada conjunto de linhas de esquema.
+Consulte [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) para obter informações sobre as restrições definidas em cada conjunto de linhas de esquema.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classes typedef e classes de conjunto de linhas de esquema](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

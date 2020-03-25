@@ -2,39 +2,39 @@
 title: F. Novos recursos e esclarecimentos na versão 2.0
 ms.date: 01/22/2019
 ms.assetid: 0d4beb66-f2d5-468c-8cd3-4b00dcbab061
-ms.openlocfilehash: 2e186bbc82f4f43e831dd05cdded2a9e946d1dd2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8cd82000992ab957bf2c41f11deccd65e2e6ea8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362706"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215027"
 ---
 # <a name="f-new-features-and-clarifications-in-version-20"></a>F. Novos recursos e esclarecimentos na versão 2.0
 
-Este apêndice resume as principais alterações feitas à especificação de OpenMP C/C++ na movimentação da versão 1.0 para a versão 2.0. Os seguintes itens são novos recursos adicionados à especificação de:
+Este apêndice resume as principais alterações feitas na especificação de OpenMP C/C++ em migrando da versão 1,0 para a versão 2,0. Os seguintes itens são novos recursos adicionados à especificação:
 
-- Vírgulas são permitidas em OpenMP [diretivas](2-directives.md#21-directive-format).
+- As vírgulas são permitidas em [diretivas](2-directives.md#21-directive-format)de OpenMP.
 
-- Adição do `num_threads` cláusula. Essa cláusula permite que um usuário solicitar um número específico de segmentos de uma [constructo paralelo](2-directives.md#23-parallel-construct).
+- Adição da cláusula `num_threads`. Essa cláusula permite que um usuário solicite um número específico de threads para uma [construção paralela](2-directives.md#23-parallel-construct).
 
-- O [threadprivate](2-directives.md#271-threadprivate-directive) diretiva foi estendida para aceitar as variáveis de escopo de bloco estático.
+- A diretiva [threadprivate](2-directives.md#271-threadprivate-directive) foi estendida para aceitar variáveis de escopo de bloco estáticas.
 
-- Matrizes de comprimento variável C99 são tipos completos e pode ser especificados de qualquer lugar tipos completos são permitidos, como as listas de `private`, `firstprivate`, e `lastprivate` cláusulas (consulte [seção 2.7.2](2-directives.md#272-data-sharing-attribute-clauses)).
+- As matrizes de comprimento variável C99 são tipos completos e podem ser especificadas em qualquer lugar que os tipos completos são permitidos, como nas listas de cláusulas `private`, `firstprivate`e `lastprivate` (consulte a [seção 2.7.2](2-directives.md#272-data-sharing-attribute-clauses)).
 
-- Uma variável privada em uma região paralela pode ser marcada [privada](2-directives.md#2721-private) novamente em uma diretiva aninhada.
+- Uma variável privada em uma região paralela pode ser marcada como [particular](2-directives.md#2721-private) novamente em uma diretiva aninhada.
 
-- O `copyprivate` cláusula foi adicionada. Ele fornece um mecanismo para usar uma variável particular para transmitir um valor de um membro de uma equipe para os outros membros. É uma alternativa ao uso de uma variável compartilhada para o valor ao fornecimento de uma variável compartilhada como seria difícil (por exemplo, em uma necessidade de uma variável diferente em cada nível de recursão). O [copyprivate](2-directives.md#2728-copyprivate) cláusula só pode aparecer no `single` diretiva.
+- A cláusula `copyprivate` foi adicionada. Ele fornece um mecanismo para usar uma variável privada para transmitir um valor de um membro de uma equipe para os outros membros. É uma alternativa ao uso de uma variável compartilhada para o valor ao fornecer uma variável compartilhada como essa seria difícil (por exemplo, em uma recursão que requer uma variável diferente em cada nível). A cláusula [copyprivate](2-directives.md#2728-copyprivate) só pode aparecer na diretiva `single`.
 
-- Adição de rotinas de tempo [omp_get_wtick](3-run-time-library-functions.md#332-omp_get_wtick-function) e [omp_get_wtime](3-run-time-library-functions.md#331-omp_get_wtime-function) semelhante para as rotinas MPI. Essas funções são necessárias para os intervalos de relógio de parede.
+- Adição de rotinas de tempo [omp_get_wtick](3-run-time-library-functions.md#332-omp_get_wtick-function) e [omp_get_wtime](3-run-time-library-functions.md#331-omp_get_wtime-function) semelhante às rotinas MPI. Essas funções são necessárias para fazer intervalos de relógio de parede.
 
-- Um apêndice com uma lista de [comportamentos definidos por implementação](e-implementation-defined-behaviors-in-openmp-c-cpp.md) foi adicionado no OpenMP C/C++. Uma implementação é necessária para definir e documentar seu comportamento nesses casos.
+- Um apêndice com uma lista de [comportamentos definidos pela implementação](e-implementation-defined-behaviors-in-openmp-c-cpp.md) em OpenMP C/C++ foi adicionado. Uma implementação é necessária para definir e documentar seu comportamento nesses casos.
 
-- As alterações a seguir servem para esclarecer ou corrigir recursos na especificação da API OpenMP anterior para C/C++:
+- As alterações a seguir servem para esclarecer ou corrigir os recursos na especificação de API de OpenMP anteriorC++para C/:
 
-  - Esclareceu que o comportamento de [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) e [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) quando `omp_in_parallel` retorna diferente de zero é indefinido.
+  - Esclareceu que o comportamento de [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) e [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) quando `omp_in_parallel` retorna zero é indefinido.
 
-  - Esclareceu [aninhamento de diretiva](2-directives.md#29-directive-nesting) quando aninhado paralelo é usado.
+  - [Aninhamento de diretiva](2-directives.md#29-directive-nesting) esclarecido quando paralelo aninhado é usado.
 
-  - O [inicialização de bloqueio](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions) e [bloquear destruição](3-run-time-library-functions.md#322-omp_destroy_lock-and-omp_destroy_nest_lock-functions) funções podem ser chamadas em uma região paralela.
+  - A [inicialização de bloqueio](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions) e as funções de [destruição de bloqueio](3-run-time-library-functions.md#322-omp_destroy_lock-and-omp_destroy_nest_lock-functions) podem ser chamadas em uma região paralela.
 
-  - Novos exemplos foram adicionados ao [Apêndice A](a-examples.md).
+  - Novos exemplos foram adicionados ao [Apêndice a](a-examples.md).

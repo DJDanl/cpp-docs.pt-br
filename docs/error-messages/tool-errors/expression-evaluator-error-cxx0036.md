@@ -7,35 +7,35 @@ helpviewer_keywords:
 - CXX0036
 - CAN0036
 ms.assetid: 383404be-df5b-4eec-b113-df21bb5d269d
-ms.openlocfilehash: d7961d92760cc5ac325b4bc9f187d4ee2298479a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 164fd9ee00071e218e5bb4f3ab00febc618725a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397023"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195494"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>Erro CXX0036 (avaliador de expressão)
 
-contexto incorreto {...} especificação
+contexto inadequado {...} especificação
 
-Essa mensagem pode ser gerada por qualquer um dos vários erros no uso do operador de contexto (**{}**).
+Essa mensagem pode ser gerada por qualquer um dos vários erros no uso do operador de contexto ( **{}** ).
 
-- A sintaxe do operador de contexto (**{}**) foi especificado incorretamente.
+- A sintaxe do operador de contexto ( **{}** ) foi fornecida incorretamente.
 
    A sintaxe do operador de contexto é:
 
-     {*function*,*module*,*dll*}*expression*
+     {*função*,*módulo*,*dll*} *expressão* de
 
-   Isso especifica o contexto do *expressão*. O operador de contexto tem a mesma precedência e o uso como uma conversão de tipo.
+   Especifica o contexto da *expressão*. O operador de contexto tem a mesma precedência e uso como uma conversão de tipo.
 
-   À direita vírgulas pode ser omitida. Se qualquer uma das *função*, *módulo*, ou *dll* contém uma vírgula literal, você deve colocar o nome inteiro entre parênteses.
+   Vírgulas à direita podem ser omitidas. Se qualquer *função*, *módulo*ou *dll* contiver uma vírgula literal, você deverá colocar o nome inteiro entre parênteses.
 
-- O nome da função está escrito incorretamente ou não existe na biblioteca de vínculo dinâmico ou módulo especificado.
+- O nome da função foi digitado incorretamente ou não existe no módulo especificado ou na biblioteca de vínculo dinâmico.
 
-   Como o C é uma linguagem diferencia maiusculas de minúsculas, *função* deve ser fornecido em diferencie maiusculas de minúsculas, conforme definido na fonte.
+   Como C é uma linguagem que diferencia maiúsculas de minúsculas, a *função* deve ser fornecida no caso exato, pois ela é definida na origem.
 
-- Não foi possível encontrar o módulo ou DLL.
+- Não foi possível encontrar o módulo ou a DLL.
 
-   Verifique o nome de caminho completo do módulo especificado ou da DLL.
+   Verifique o nome do caminho completo do módulo ou DLL especificado.
 
-Esse erro é idêntico ao CAN0036.
+Esse erro é idêntico a CAN0036.

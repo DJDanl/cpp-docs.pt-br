@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 05ece23e6d79fc399085099deebcde0aa4a92c64
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 8b22f3aaf706fa096f6c25ab8e9fdab6dc512cd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "70311631"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208792"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Convertendo projetos do modo misto em linguagem intermediária pura
 
@@ -27,7 +27,7 @@ Se você estiver usando uma versão anterior do conjunto de C++ ferramentas do c
 
 1. Remover links para as [bibliotecas de tempo de execução do C](../c-runtime-library/crt-library-features.md) (CRT):
 
-   1. No arquivo. cpp que define o ponto de entrada do seu aplicativo, altere o ponto de `Main()`entrada para. O `Main()` uso de indica que seu projeto não é vinculado ao CRT.
+   1. No arquivo. cpp que define o ponto de entrada do seu aplicativo, altere o ponto de entrada para `Main()`. O uso de `Main()` indica que o projeto não é vinculado ao CRT.
 
    2. Em Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione **Propriedades** no menu de atalho para abrir as páginas de propriedades do seu aplicativo.
 
@@ -38,14 +38,14 @@ Se você estiver usando uma versão anterior do conjunto de C++ ferramentas do c
       > [!NOTE]
       > Você não precisa definir essa propriedade para Windows Forms aplicativos porque o campo **subsistema** está definido como **Windows (/SUBSYSTEM: Windows)** por padrão.
 
-   5. Em *stdafx. h*, comente todas as `#include` instruções. Por exemplo, em aplicativos de console:
+   5. Em *stdafx. h*, comente todas as instruções de `#include`. Por exemplo, em aplicativos de console:
 
       ```cpp
       // #include <iostream>
       // #include <tchar.h>
       ```
 
-       - ou -
+       -ou-
 
        Por exemplo, em aplicativos Windows Forms:
 
@@ -75,24 +75,24 @@ Se você estiver usando uma versão anterior do conjunto de C++ ferramentas do c
 
    Sempre que apropriado, substitua os tipos não gerenciados por referências a estruturas do namespace [System](/dotnet/api/system) . Os tipos gerenciados comuns são listados na tabela a seguir:
 
-   |Estrutura|Descrição|
+   |Estrutura|DESCRIÇÃO|
    |---------------|-----------------|
-   |[Booliano](/dotnet/api/system.boolean)|Representa um valor booliano.|
-   |[Byte](/dotnet/api/system.byte)|Representa um inteiro sem sinal de 8 bits.|
-   |[Char](/dotnet/api/system.char)|Representa um caractere Unicode.|
+   |[Booliano](/dotnet/api/system.boolean)|{1&gt;Representa um valor booliano.&lt;1}|
+   |[Byte](/dotnet/api/system.byte)|{1&gt;Representa um inteiro sem sinal de 8 bits.&lt;1}|
+   |[Char](/dotnet/api/system.char)|{1&gt;Representa um caractere Unicode.&lt;1}|
    |[DateTime](/dotnet/api/system.datetime)|Representa um momento no tempo, geralmente expresso como uma data e hora do dia.|
-   |[Decimal](/dotnet/api/system.decimal)|Representa um número decimal.|
-   |[Duplo](/dotnet/api/system.double)|Representa um número de ponto flutuante de precisão dupla.|
-   |[Guid](/dotnet/api/system.guid)|Representa um identificador global exclusivo (GUID).|
-   |[Int16](/dotnet/api/system.int16)|Representa um inteiro com sinal de 16 bits.|
-   |[Int32](/dotnet/api/system.int32)|Representa um inteiro com sinal de 32 bits.|
-   |[Int64](/dotnet/api/system.int64)|Representa um inteiro com sinal de 64 bits.|
-   |[IntPtr](/dotnet/api/system.intptr)|Um tipo específico da plataforma que é usado para representar um ponteiro ou um identificador.|
-   |[SByte](/dotnet/api/system.byte)|Representa um inteiro com sinal de 8 bits.|
-   |[Simples](/dotnet/api/system.single)|Representa um número de ponto flutuante de precisão simples.|
-   |[TimeSpan](/dotnet/api/system.timespan)|Representa um intervalo de tempo.|
-   |[UInt16](/dotnet/api/system.uint16)|Representa um inteiro sem sinal de 16 bits.|
-   |[UInt32](/dotnet/api/system.uint32)|Representa um inteiro sem sinal de 32 bits.|
-   |[UInt64](/dotnet/api/system.uint64)|Representa um inteiro sem sinal de 64 bits.|
-   |[UIntPtr](/dotnet/api/system.uintptr)|Um tipo específico da plataforma que é usado para representar um ponteiro ou um identificador.|
+   |[Decimal](/dotnet/api/system.decimal)|{1&gt;Representa um número decimal.&lt;1}|
+   |[Double](/dotnet/api/system.double)|{1&gt;Representa um número de ponto flutuante de precisão dupla.&lt;1}|
+   |[Guid](/dotnet/api/system.guid)|{1&gt;Representa um identificador global exclusivo (GUID).&lt;1}|
+   |[Int16](/dotnet/api/system.int16)|{1&gt;Representa um inteiro com sinal de 16 bits.&lt;1}|
+   |[Int32](/dotnet/api/system.int32)|{1&gt;Representa um inteiro com sinal de 32 bits.&lt;1}|
+   |[Int64](/dotnet/api/system.int64)|{1&gt;Representa um inteiro com sinal de 64 bits.&lt;1}|
+   |[IntPtr](/dotnet/api/system.intptr)|{1&gt;Um tipo específico da plataforma que é usado para representar um ponteiro ou um identificador.&lt;1}|
+   |[SByte](/dotnet/api/system.byte)|{1&gt;Representa um inteiro com sinal de 8 bits.&lt;1}|
+   |[Single](/dotnet/api/system.single)|{1&gt;Representa um número de ponto flutuante de precisão simples.&lt;1}|
+   |[TimeSpan](/dotnet/api/system.timespan)|{1&gt;Representa um intervalo de tempo.&lt;1}|
+   |[UInt16](/dotnet/api/system.uint16)|{1&gt;Representa um inteiro sem sinal de 16 bits.&lt;1}|
+   |[UInt32](/dotnet/api/system.uint32)|{1&gt;Representa um inteiro sem sinal de 32 bits.&lt;1}|
+   |[UInt64](/dotnet/api/system.uint64)|{1&gt;Representa um inteiro sem sinal de 64 bits.&lt;1}|
+   |[UIntPtr](/dotnet/api/system.uintptr)|{1&gt;Um tipo específico da plataforma que é usado para representar um ponteiro ou um identificador.&lt;1}|
    |[Livre](/dotnet/api/system.void)|Indica um método que não retorna um valor; ou seja, o método tem o tipo de retorno void.|

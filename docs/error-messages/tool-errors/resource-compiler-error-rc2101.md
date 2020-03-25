@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - RC2101
 ms.assetid: 580f9d74-162f-41e9-9438-ddbe3457c359
-ms.openlocfilehash: 595e87b73d79a01993e0e9b3aaa814332b21413f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 3fb576758e447c54e4ddfe7ddb024a1fd35a65f2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345284"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191646"
 ---
 # <a name="resource-compiler-error-rc2101"></a>Erro RC2101 (compilador de recurso)
 
 Diretiva inválida no arquivo RC pré-processado
 
-O arquivo de compilador de recurso contém um **#pragma** diretiva.
+O arquivo do compilador de recurso contém uma diretiva **#pragma** .
 
-Use o **#ifndef** diretiva de pré-processador com a constante RC_INVOKED que o compilador de recurso define quando ele processa um arquivo de inclusão. Coloque o **#pragma** diretiva dentro de um bloco de código que não é processado quando a constante RC_INVOKED é definida. Código no bloco é processado apenas pelo compilador C/C++ e não pelo compilador de recurso. O código de exemplo a seguir demonstra essa técnica:
+Use a diretiva de pré-processador de **#ifndef** com a constante RC_INVOKED que o compilador de recursos define quando processa um arquivo de inclusão. Coloque a diretiva **#pragma** dentro de um bloco de código que não é processado quando a constante de RC_INVOKED é definida. O código no bloco é processado somente pelo compilador C/C++ e não pelo compilador de recurso. O código de exemplo a seguir demonstra essa técnica:
 
 ```
 #ifndef RC_INVOKED
@@ -27,6 +27,6 @@ Use o **#ifndef** diretiva de pré-processador com a constante RC_INVOKED que o 
 #endif
 ```
 
-O **#pragma** diretiva de pré-processador não tem nenhum significado um. Arquivo RC. O **#include** diretiva de pré-processador é usada frequentemente em um. Arquivo RC para incluir um arquivo de cabeçalho (um arquivo de cabeçalho personalizado baseado no projeto ou um arquivo de cabeçalho padrão fornecido pela Microsoft com um de seus produtos). Alguns deles incluem arquivos contêm o **#pragma** diretiva. Como um arquivo de cabeçalho pode incluir um ou mais outros arquivos de cabeçalho, o arquivo que contém problemático **#pragma** diretiva pode não ser imediatamente óbvia.
+A diretiva de pré-processador de **#pragma** não tem nenhum significado em um. Arquivo RC. A diretiva de pré-processador de **#include** é usada com frequência em um. O arquivo RC para incluir um arquivo de cabeçalho (um arquivo de cabeçalho personalizado baseado em projeto ou um arquivo de cabeçalho padrão fornecido pela Microsoft com um de seus produtos). Alguns desses incluem arquivos contêm a diretiva **#pragma** . Como um arquivo de cabeçalho pode incluir um ou mais arquivos de cabeçalho, o arquivo que contém a diretiva de **#pragma** incorreta pode não ser imediatamente óbvio.
 
-O **#ifndef** técnica RC_INVOKED pode controlar, incluindo arquivos de cabeçalho nos arquivos de cabeçalho baseada em projeto.
+A técnica de RC_INVOKED **#ifndef** pode controlar a inclusão de arquivos de cabeçalho em arquivos de cabeçalho baseados em projeto.

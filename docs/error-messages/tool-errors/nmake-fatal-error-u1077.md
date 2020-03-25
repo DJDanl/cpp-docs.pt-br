@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U1077
 ms.assetid: 70d989f8-ef34-4ad7-8fe0-5b800556b2a1
-ms.openlocfilehash: 6b0e7b13628c9f38231f4a8772e9babadaf90636
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da50af5a1dc0fc6086629d1f26ebe949a25d6faf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366947"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193493"
 ---
 # <a name="nmake-fatal-error-u1077"></a>Erro fatal U1077 (NMAKE)
 
-'programa': 'value' de código de retorno
+' programa ': código de retorno ' value '
 
-O comando especificado ou um programa chamado pelo NMAKE falhou e retornou o código de saída determinada.
+O comando ou programa dado chamado por NMAKE falhou e retornou o código de saída fornecido.
 
-Para suprimir esse erro e continuar a sessão NMAKE, use a opção /I, o **. Ignorar** diretiva ponto ou traço (**-**) modificador de comando. Para continuar a sessão NMAKE para partes não relacionadas a árvore de dependência, use a opção /K.
+Para suprimir esse erro e continuar a sessão NMAKE, use a opção/I, o **. IGNORE** a diretiva de ponto ou o modificador de comando Dash ( **-** ). Para continuar a sessão NMAKE para partes não relacionadas da árvore de dependência, use a opção/K.

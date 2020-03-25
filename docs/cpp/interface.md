@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-ms.openlocfilehash: 7c95e3700b4124c4793e0214ed3b06ecfeee72f1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 9b265dcbaca9f8fa836795cca990804371813647
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222083"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178185"
 ---
-# <a name="interface"></a>__interface
+# <a name="__interface"></a>__interface
 
 **Seção específica da Microsoft**
 
-Microsoft C++ interface pode ser definida da seguinte maneira:
+Uma interface C++ da Microsoft pode ser definida da seguinte maneira:
 
 - Ela pode herdar de zero ou mais interfaces base.
 
@@ -39,7 +39,7 @@ modifier __interface interface-name {interface-definition};
 
 ## <a name="remarks"></a>Comentários
 
-Um C++ [classe](../cpp/class-cpp.md) ou [struct](../cpp/struct-cpp.md) poderia ser implementado com essas regras, mas **interface** impõe-los.
+Uma C++ [classe](../cpp/class-cpp.md) ou [struct](../cpp/struct-cpp.md) pode ser implementada com essas regras, mas **__interface** as impõe.
 
 Por exemplo, o seguinte é uma definição de interface de exemplo:
 
@@ -50,7 +50,7 @@ __interface IMyInterface {
 };
 ```
 
-Para obter informações sobre as interfaces gerenciadas, consulte [classe de interface](../extensions/interface-class-cpp-component-extensions.md).
+Para obter informações sobre interfaces gerenciadas, consulte [classe de interface](../extensions/interface-class-cpp-component-extensions.md).
 
 Observe que você não precisa indicar explicitamente que as funções `CommitX` e `get_X` são puramente virtuais. Uma declaração equivalente para a primeira função seria:
 
@@ -58,7 +58,7 @@ Observe que você não precisa indicar explicitamente que as funções `CommitX`
 virtual HRESULT CommitX() = 0;
 ```
 
-**interface** implica a [novtable](../cpp/novtable.md) **declspec** modificador.
+**__interface** implica o modificador de **__declspec** [novtable](../cpp/novtable.md) .
 
 ## <a name="example"></a>Exemplo
 
@@ -144,7 +144,7 @@ bstr_data = Testing
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
 [Atributos de interface](../windows/attributes/interface-attributes.md)

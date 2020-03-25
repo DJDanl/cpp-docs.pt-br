@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 08cab967fbfbd4b3207e96a4fdbd2d2dbc6da793
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e2bb01e6acb9298b08fddc3117ec93dd7c0c2417
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447453"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211999"
 ---
 # <a name="cdbpropset-class"></a>Classe CDBPropSet
 
@@ -49,13 +49,13 @@ Herda da estrutura de `DBPROPSET` e adiciona um construtor que inicializa os cam
 class CDBPropSet : public tagDBPROPSET
 ```
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atldbcli. h
 
 ## <a name="members"></a>Membros
 
-### <a name="methods"></a>{1&gt;Métodos&lt;1}
+### <a name="methods"></a>Métodos
 
 |||
 |-|-|
@@ -73,7 +73,7 @@ class CDBPropSet : public tagDBPROPSET
 
 Os provedores de OLE DB e os consumidores usam estruturas de `DBPROPSET` para passar matrizes de estruturas de `DBPROP`. Cada estrutura de `DBPROP` representa uma única propriedade que pode ser definida.
 
-## <a name="addproperty"></a>CDBPropSet:: AddProperty
+## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a>CDBPropSet:: AddProperty
 
 Adiciona uma propriedade ao conjunto de propriedades.
 
@@ -94,7 +94,7 @@ bool AddProperty(DWORD dwPropertyID,
    CY cyValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *dwPropertyID*<br/>
 no A ID da propriedade a ser adicionada. Usado para inicializar a `dwPropertyID` da estrutura de `DBPROP` adicionada ao conjunto de propriedades.
@@ -124,7 +124,7 @@ no Um valor de moeda CY usado para inicializar o valor da propriedade para a est
 
 **true** se a propriedade tiver sido adicionada com êxito. Caso contrário, **false**.
 
-## <a name="cdbpropset"></a>CDBPropSet::CDBPropSet
+## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a>CDBPropSet::CDBPropSet
 
 O construtor. Inicializa os campos `rgProperties`, `cProperties`e `guidPropertySet` da estrutura [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
@@ -138,7 +138,7 @@ CDBPropSet(const CDBPropSet& propset);
 CDBPropSet();
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *guid*<br/>
 no Um GUID usado para inicializar o campo de `guidPropertySet`.
@@ -146,7 +146,7 @@ no Um GUID usado para inicializar o campo de `guidPropertySet`.
 *propset*<br/>
 no Outro objeto `CDBPropSet` para a construção da cópia.
 
-## <a name="setguid"></a>CDBPropSet:: SetGUID
+## <a name="cdbpropsetsetguid"></a><a name="setguid"></a>CDBPropSet:: SetGUID
 
 Define o campo `guidPropertySet` na estrutura de `DBPROPSET`.
 
@@ -156,7 +156,7 @@ Define o campo `guidPropertySet` na estrutura de `DBPROPSET`.
 void SetGUID(const GUID& guid) throw();
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *guid*<br/>
 no Um GUID usado para definir o campo de `guidPropertySet` da estrutura [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
@@ -165,7 +165,7 @@ no Um GUID usado para definir o campo de `guidPropertySet` da estrutura [DBPROPS
 
 Esse campo também pode ser definido pelo [Construtor](../../data/oledb/cdbpropset-cdbpropset.md) .
 
-## <a name="op_equal"></a>CDBPropSet:: Operator =
+## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a>CDBPropSet:: Operator =
 
 Atribui o conteúdo de um conjunto de propriedades a outro conjunto de propriedades.
 
@@ -175,7 +175,7 @@ Atribui o conteúdo de um conjunto de propriedades a outro conjunto de proprieda
 CDBPropSet& operator =(CDBPropSet& propset) throw();
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

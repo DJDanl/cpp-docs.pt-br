@@ -6,18 +6,18 @@ helpviewer_keywords:
 - OLE DB consumer templates, accessors
 - rowsets [C++], accessors
 ms.assetid: 6ce484a6-fbbe-40de-8ff9-5cddcd78d283
-ms.openlocfilehash: 4eaedfca0c93aca89cbfd985c1de0f57306e470c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e35318fd1b5a245eaed982674d69484e34f9dac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389132"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209333"
 ---
 # <a name="using-accessors"></a>Usando acessadores
 
-Os tópicos a seguir explicam como determinar qual tipo de acessador é melhor para seus dados de aplicativo e, em seguida, como usar os diferentes tipos de acessadores disponíveis:
+Os tópicos a seguir explicam como determinar qual tipo de acessador é melhor para seu aplicativo de dados e como usar os diferentes tipos de acessadores disponíveis:
 
-- [Determinando quais acessador a ser usado](../../data/oledb/determining-which-type-of-accessor-to-use.md)
+- [Determinando qual acessador usar](../../data/oledb/determining-which-type-of-accessor-to-use.md)
 
 - [Usando vários acessadores em um conjunto de linhas](../../data/oledb/using-multiple-accessors-on-a-rowset.md)
 
@@ -27,6 +27,6 @@ Os tópicos a seguir explicam como determinar qual tipo de acessador é melhor p
 
 - [Acessando dados XML](../../data/oledb/accessing-xml-data.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Trabalhando com modelos de consumidor do OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

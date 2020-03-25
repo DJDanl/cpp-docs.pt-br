@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
-ms.openlocfilehash: beb382b9c6ccf80d01f5a0262832e7fb7e1ea0a4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e1255578883c8d2bc278184a02575a0a51ed9b6c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345654"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204952"
 ---
 # <a name="fatal-error-c1001"></a>Erro fatal C1001
 
-> INTERNO COMPILADOR ERROR(compiler file *file*, line *number*)
+> ERRO interno do compilador ( *arquivo*de arquivo do compilador, *número*da linha)
 
-O compilador não pode gerar o código correto para uma construção, geralmente devido à combinação de uma expressão específica e uma opção de otimização ou um problema na análise. Se o arquivo de compilador listado tiver um utc ou segmento de caminho de C2, provavelmente é um erro de otimização. Se o arquivo tem um segmento de caminho cxxfe ou c1xx ou é msc1.cpp, provavelmente é um erro do analisador. Se o arquivo denominado cl.exe, nenhuma outra informação está disponível.
+O compilador não pode gerar o código correto para um constructo, geralmente devido à combinação de uma expressão específica e uma opção de otimização, ou um problema na análise. Se o arquivo do compilador listado tiver um segmento de caminho UTC ou C2, provavelmente será um erro de otimização. Se o arquivo tiver um segmento de caminho cxxfe ou c1xx, ou for msc1. cpp, provavelmente será um erro do analisador. Se o arquivo chamado for CL. exe, não há outras informações disponíveis.
 
-Geralmente, você pode corrigir um problema de otimização, removendo uma ou mais opções de otimização. Para determinar qual é a opção com defeito, remova uma opção em uma hora e recompile até que a mensagem de erro desaparecerá. São as opções mais comumente responsáveis [/Og (otimizações globais)](../../build/reference/og-global-optimizations.md) e [/Oi (gerar funções intrínsecas)](../../build/reference/oi-generate-intrinsic-functions.md). Depois de determinar qual opção de otimização é responsável, você pode desabilitá-lo em torno de função em que o erro ocorre usando o [otimizar](../../preprocessor/optimize.md) pragma e continuar a usar a opção para o restante do módulo. Para obter mais informações sobre opções de otimização, consulte [melhores práticas de otimização](../../build/optimization-best-practices.md).
+Geralmente, você pode corrigir um problema de otimização removendo uma ou mais opções de otimização. Para determinar qual opção está com defeito, remova as opções uma de cada vez e recompile até que a mensagem de erro desapareça. As opções mais comumente responsáveis são [/og (otimizações globais)](../../build/reference/og-global-optimizations.md) e [/Oi (gerar funções intrínsecas)](../../build/reference/oi-generate-intrinsic-functions.md). Depois de determinar qual opção de otimização é responsável, você pode desabilitá-la em relação à função em que o erro ocorre usando o pragma de [otimização](../../preprocessor/optimize.md) e continuar a usar a opção para o restante do módulo. Para obter mais informações sobre as opções de otimização, consulte [práticas recomendadas de otimização](../../build/optimization-best-practices.md).
 
-Se as otimizações não são responsáveis pelo erro, tente reescrever a linha em que o erro é relatado, ou várias linhas de código ao redor dessa linha. Para ver o código de forma que o compilador vê-lo após o pré-processamento, você pode usar o [/P (pré-processar em um arquivo)](../../build/reference/p-preprocess-to-a-file.md) opção.
+Se as otimizações não forem responsáveis pelo erro, tente reescrever a linha em que o erro é relatado ou várias linhas de código que estejam relacionadas a essa linha. Para ver o código da forma como o compilador o vê após o pré-processamento, você pode usar a opção [/p (pré-processar para um arquivo)](../../build/reference/p-preprocess-to-a-file.md) .
 
-Para obter mais informações sobre como isolar a origem do erro e como relatar um erro interno do compilador para a Microsoft, consulte [como relatar um problema com o conjunto de ferramentas do Visual C++](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Para obter mais informações sobre como isolar a origem do erro e como relatar um erro de compilador interno à Microsoft, consulte [como relatar um problema com o conjunto de C++ ferramentas Visual](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).

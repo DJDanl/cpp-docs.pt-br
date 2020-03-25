@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 893ddf3b4d030384572baf77647e09d4d2a9d719
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 5f12b126db7c0e040f06640d3ecd201007d73968
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445000"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167882"
 ---
 # <a name="resource-editors-c"></a>Editores de recursosC++()
 
@@ -73,7 +73,7 @@ Você pode acessar recursos do Win32 no painel de [modo de exibição de recurso
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Para exibir um recurso do Win32 em um editor de recursos
 
-1. Vá para a **exibição**de menu  >  outro**Modo de Exibição de Recursos**do**Windows** > .
+1. Acesse o **modo de exibição** de menu > outros **modo de exibição de recursos**de > do **Windows** .
 
 1. Se a janela de **modo de exibição de recursos** não for a janela superior, selecione a guia **modo de exibição de recursos** para trazê-la para a parte superior.
 
@@ -118,7 +118,7 @@ Os recursos a seguir não fornecem uma visualização Visual: acelerador, manife
 1. No [janela Propriedades](/visualstudio/ide/reference/properties-window), selecione o botão **páginas de propriedades** .
 
    > [!TIP]
-   > Use um atalho, vá para a **exibição**de menu  > **páginas de propriedades**.
+   > Use um atalho, vá para a **exibição** de menu > **páginas de propriedades**.
 
    A página de **Propriedades** do recurso é aberta exibindo uma visualização desse recurso. Você pode usar as teclas de seta para **cima** e para **baixo** para navegar pelo controle de árvore em **modo de exibição de recursos** ou na janela do documento. A página de **Propriedades** permanecerá aberta e mostrará qualquer recurso que tenha foco e possa ser visualizado.
 
@@ -126,7 +126,7 @@ Os recursos a seguir não fornecem uma visualização Visual: acelerador, manife
 
 Nenhum
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Trabalhando com arquivos de recurso](../windows/working-with-resource-files.md)<br/>
 [Arquivos de recurso](../windows/resource-files-visual-studio.md)<br/>

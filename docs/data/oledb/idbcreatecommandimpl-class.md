@@ -11,12 +11,12 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 27ca1fd20e8f358d936789da695611d96a6e7aa1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4a4978401ba90e3a7a91ac40cc1b0668adf12ee8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446132"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210711"
 ---
 # <a name="idbcreatecommandimpl-class"></a>Classe IDBCreateCommandImpl
 
@@ -30,7 +30,7 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
    : public IDBCreateCommand
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O objeto de sessão derivado de `IDBCreateCommandImpl`.
@@ -38,7 +38,7 @@ O objeto de sessão derivado de `IDBCreateCommandImpl`.
 *CommandClass*<br/>
 Sua classe de comando.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Atldb. h
 
@@ -54,7 +54,7 @@ Sua classe de comando.
 
 Uma interface opcional no objeto de sessão para obter um novo comando.
 
-## <a name="createcommand"></a>IDBCreateCommandImpl:: CreateCommand
+## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a>IDBCreateCommandImpl:: CreateCommand
 
 Cria um novo comando e retorna a interface solicitada.
 
@@ -66,7 +66,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
    IUnknown ** ppvCommand);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 Consulte [IDBCreateCommand:: CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -76,7 +76,7 @@ Alguns parâmetros correspondem a parâmetros de *referência do programador OLE
 |--------------------------------|------------------------------------------------|
 |*ppvCommand*|*ppCommand*|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

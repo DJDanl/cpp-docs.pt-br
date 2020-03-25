@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - C2220
 ms.assetid: d610802c-64d7-40ad-a2a6-0ed0b6815a6c
-ms.openlocfilehash: 3ff730c6fea7d2c57c4ec3054fc627cdc6227e2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4fdac833e69e748dd29b9cf772c167fc1dbbd00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311742"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206655"
 ---
 # <a name="compiler-error-c2220"></a>Erro do compilador C2220
 
-Aviso tratado como erro - nenhum arquivo de objeto gerado
+aviso tratado como erro-nenhum arquivo de objeto gerado
 
-[/WX](../../build/reference/compiler-option-warning-level.md) instrui o compilador a tratar todos os avisos como erros. Porque ocorreu um erro, nenhum objeto ou arquivo executável foi gerado.
+[/WX](../../build/reference/compiler-option-warning-level.md) informa o compilador para tratar todos os avisos como erros. Como ocorreu um erro, nenhum objeto ou arquivo executável foi gerado.
 
-Esse erro aparece somente quando o **/WX** sinalizador está definido e ocorrer um aviso durante a compilação. Para corrigir esse erro, você deve eliminar cada aviso em seu projeto.
+Esse erro só aparece quando o sinalizador **/WX** é definido e um aviso ocorre durante a compilação. Para corrigir esse erro, você deve eliminar todos os avisos em seu projeto.
 
-### <a name="to-fix-use-one-of-the-following-techniques"></a>Para corrigir, use uma das seguintes técnicas
+### <a name="to-fix-use-one-of-the-following-techniques"></a>Para corrigir, use uma das técnicas a seguir
 
 - Corrija os problemas que causam avisos em seu projeto.
 
-- Compilar em um nível inferior do aviso — por exemplo, use **/w3** em vez de **/W4**.
+- Compile em um nível de aviso inferior — por exemplo, use **/w3** em vez de **/W4**.
 
-- Use uma [aviso](../../preprocessor/warning.md) pragma para desabilitar ou suprimir um aviso específico.
+- Use um pragma de [aviso](../../preprocessor/warning.md) para desabilitar ou suprimir um aviso específico.
 
 - Não use **/WX** para compilar.

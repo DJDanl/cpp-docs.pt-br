@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RC2104
 ms.assetid: 792a3bd8-cb4c-4817-b288-4ce37082b582
-ms.openlocfilehash: 6ac1786e795c0c8ed57af2d341f43b8ba39229c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4a06f88e4a73da6b711d108a1f79c14fae0907c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346555"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191633"
 ---
 # <a name="resource-compiler-error-rc2104"></a>Erro RC2104 (compilador de recurso)
 
@@ -23,7 +23,7 @@ Este erro geralmente é causado por um erro de digitação na definição do rec
 
 Para corrigir o problema, localize o arquivo de cabeçalho que deve conter o nome da chave ou a palavra-chave definida e verifique se ele está incluído em seu arquivo de recurso, e se o nome da chave ou a palavra-chave está escrito corretamente. Se o projeto foi criado com um cabeçalho pré-compilado e você subsequentemente o removeu, certifique-se de que o arquivo de recurso ainda inclui quaisquer cabeçalhos necessários.
 
-Para verificar se as palavras-chave definidas e nomes de chave em seu arquivo de recurso, no Visual Studio, abra o **exibição de recurso** janela — na barra de menus, escolha **exibição**, **exibição recursos**— e em seguida, abra o menu de atalho para o arquivo. RC e escolha **símbolos de recurso** para exibir a lista de símbolos definidos. Para modificar os cabeçalhos incluídos, abra o menu de atalho para o arquivo. RC e escolha **inclui recursos**.
+Para verificar as palavras-chave definidas e os nomes de chaves em seu arquivo de recurso, no Visual Studio, abra a janela **modo de exibição de recursos** — na barra de menus, escolha **Exibir**, **modo de exibição de recursos**— e abra o menu de atalho para o arquivo. rc e escolha **símbolos de recurso** para exibir a lista de símbolos definidos. Para modificar os cabeçalhos incluídos, abra o menu de atalho do arquivo. rc e escolha **recursos incluir**.
 
 Se você encontrar esta mensagem:
 

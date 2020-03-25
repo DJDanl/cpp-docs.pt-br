@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1106
 ms.assetid: 528f7e65-04be-4966-b8af-9276837c7cda
-ms.openlocfilehash: 7551e2f3f1efc90913981feb674f48aadb9ace51
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 091d4e173bfb2eff8ffee2b5c30647f4d5e3bc04
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255313"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195364"
 ---
 # <a name="linker-tools-error-lnk1106"></a>Erro das Ferramentas de Vinculador LNK1106
 
-arquivo inválido ou disco cheio: não é possível buscar para local
+arquivo ou disco inválido cheio: não é possível buscar no local
 
-A ferramenta não foi possível ler ou gravar em `location` em um arquivo mapeado em memória.
+A ferramenta não pôde ler ou gravar `location` em um arquivo mapeado para a memória.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
 
 1. Disco cheio.
 
-   Libere espaço e vinculá-lo novamente.
+   Libere espaço e vincule novamente.
 
-1. Tentando vincular uma rede.
+1. Tentando vincular em uma rede.
 
-   Algumas redes não suportam totalmente os arquivos mapeados na memória usados pelo vinculador. Tente vincular em seu disco local.
+   Algumas redes não dão suporte total aos arquivos mapeados por memória usados pelo vinculador. Tente vincular em seu disco local.
 
-1. Bloco inválido no disco.
+1. Bloco inadequado em seu disco.
 
-   Embora o sistema operacional e hardware de disco devem ter detectado esse erro, você talvez queira executar um programa de verificação de disco.
+   Embora o sistema operacional e o hardware do disco tenham detectado um erro desse tipo, talvez você queira executar um programa de verificação de disco.
 
 1. Sem espaço de heap.
 
-   Ver [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) para obter mais informações.
+   Consulte [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) para obter mais informações.

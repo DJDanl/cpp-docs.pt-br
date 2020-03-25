@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2026
 ms.assetid: 8e64b6e1-b967-479b-be97-d12dc4a8e389
-ms.openlocfilehash: da4c03c681f95efaa5edb159869315b41d027e99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9747b1edadc76ceeb502b2c6fd03496b91769f5a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303522"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208059"
 ---
 # <a name="compiler-error-c2026"></a>Erro do compilador C2026
 
-cadeia de caracteres muito grande, caracteres truncados à direita
+cadeia muito grande, caracteres à direita truncados
 
-A cadeia de caracteres era maior que o limite de caracteres de byte único 16380.
+A cadeia de caracteres era maior do que o limite de 16380 caracteres de byte único.
 
-Antes de cadeias de caracteres adjacentes são concatenadas, uma cadeia de caracteres não pode ser maior do que 16380 caracteres de byte único.
+Antes de as cadeias de caracteres adjacentes serem concatenadas, uma cadeia de caracteres não pode ter mais de 16380 caracteres de byte único.
 
-Uma cadeia de caracteres Unicode de tamanho de aproximadamente metade essa também seria gerar esse erro.
+Uma cadeia de caracteres Unicode de aproximadamente uma metade desse comprimento também geraria esse erro.
 
-Se você tiver uma cadeia de caracteres definida da seguinte maneira, ele gera C2026:
+Se você tiver uma cadeia de caracteres definida da seguinte maneira, ela gerará C2026:
 
 ```
 char sz[] =
@@ -33,7 +33,7 @@ long string here\
 ";
 ```
 
-Você pode dividi-la da seguinte maneira:
+Você pode dividi-lo da seguinte maneira:
 
 ```
 char sz[] =
@@ -43,4 +43,4 @@ imagine a really, really "
 ";
 ```
 
-Você pode desejar armazenar excepcionalmente grande de cadeias de caracteres literais (32K ou mais) em um recurso personalizado ou um arquivo externo. Ver [criando um recurso de dados ou novo personalizado](../../windows/creating-a-new-custom-or-data-resource.md) para obter mais informações.
+Talvez você queira armazenar literais de cadeia de caracteres muito grandes (32K ou mais) em um recurso personalizado ou em um arquivo externo. Consulte [criando um novo recurso personalizado ou de dados](../../windows/creating-a-new-custom-or-data-resource.md) para obter mais informações.

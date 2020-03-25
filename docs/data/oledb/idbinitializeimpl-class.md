@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 1fc60db6db341d0667e24a81ae0f1394f54497ff
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ff74ae93f01c7e8588a0eff1f48d3f6f0e6d5e81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447373"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210763"
 ---
 # <a name="idbinitializeimpl-class"></a>Classe IDBInitializeImpl
 
@@ -56,18 +56,18 @@ template <class T>
 class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 Sua classe, derivada de `IDBInitializeImpl`.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Atldb. h
 
 ## <a name="members"></a>Membros
 
-### <a name="methods"></a>{1&gt;Métodos&lt;1}
+### <a name="methods"></a>Métodos
 
 |||
 |-|-|
@@ -80,7 +80,7 @@ Sua classe, derivada de `IDBInitializeImpl`.
 |[Initialize](#initialize)|Inicia o provedor.|
 |[Cancelar](#uninitialize)|Interrompe o provedor.|
 
-### <a name="data-members"></a>Membros de Dados
+### <a name="data-members"></a>Membros de dados
 
 |||
 |-|-|
@@ -91,7 +91,7 @@ Sua classe, derivada de `IDBInitializeImpl`.
 
 Uma interface obrigatória em objetos de fonte de dados e interface opcional em enumeradores.
 
-## <a name="idbinitializeimpl"></a>IDBInitializeImpl::IDBInitializeImpl
+## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a>IDBInitializeImpl::IDBInitializeImpl
 
 O construtor.
 
@@ -105,7 +105,7 @@ IDBInitializeImpl();
 
 Inicializa todos os membros de dados.
 
-## <a name="initialize"></a>IDBInitializeImpl:: Initialize
+## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a>IDBInitializeImpl:: Initialize
 
 Inicializa o objeto de fonte de dados preparando seu suporte de propriedade.
 
@@ -119,7 +119,7 @@ STDMETHOD(Initialize)(void);
 
 Consulte [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="uninitialize"></a>IDBInitializeImpl:: Uninitialize
+## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a>IDBInitializeImpl:: Uninitialize
 
 Coloca o objeto de fonte de dados em um estado não inicializado liberando recursos internos, como o suporte à propriedade.
 
@@ -133,7 +133,7 @@ STDMETHOD(Uninitialize)(void);
 
 Consulte [IDBInitialize:: Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="dwstatus"></a>IDBInitializeImpl:: m_dwStatus
+## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a>IDBInitializeImpl:: m_dwStatus
 
 Sinalizadores de fonte de dados.
 
@@ -161,7 +161,7 @@ enum DATASOURCE_FLAGS {
 |`DSF_PERSIST_DIRTY`|Defina se o objeto de fonte de dados exigirá persistência (ou seja, se houver alterações).|
 |`DSF_INITIALIZED`|Defina se a fonte de dados foi inicializada.|
 
-## <a name="pcutlpropinfo"></a>IDBInitializeImpl:: m_pCUtlPropInfo
+## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a>IDBInitializeImpl:: m_pCUtlPropInfo
 
 Um ponteiro para objeto de implementação para informações de propriedades de banco de dados.
 
@@ -171,7 +171,7 @@ Um ponteiro para objeto de implementação para informações de propriedades de
 CUtlPropInfo< T >* m_pCUtlPropInfo;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

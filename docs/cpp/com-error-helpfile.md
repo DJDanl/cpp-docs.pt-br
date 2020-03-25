@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - HelpFile method [C++]
 ms.assetid: d2d3a0a1-6b62-4d52-a818-3cfae545a4af
-ms.openlocfilehash: 826ac53f001355127f16b7ad2a7583a0f8800de7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 775adfa7d5dd5aca098edcd793c2164d65fe7efa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155027"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190216"
 ---
-# <a name="comerrorhelpfile"></a>_com_error::HelpFile
+# <a name="_com_errorhelpfile"></a>_com_error::HelpFile
 
 **Seção específica da Microsoft**
 
@@ -25,16 +25,16 @@ Chama a função `IErrorInfo::GetHelpFile`.
 _bstr_t HelpFile() const;
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Retorna o resultado da `IErrorInfo::GetHelpFile` para o `IErrorInfo` registrado no `_com_error` objeto. O BSTR resultante é encapsulado em um objeto `_bstr_t`. Se nenhum `IErrorInfo` é registrado, ele retornará um `_bstr_t`.
+Retorna o resultado de `IErrorInfo::GetHelpFile` para o objeto de `IErrorInfo` registrado no objeto `_com_error`. O BSTR resultante é encapsulado em um objeto `_bstr_t`. Se nenhum `IErrorInfo` for registrado, ele retornará um `_bstr_t`vazio.
 
 ## <a name="remarks"></a>Comentários
 
-Qualquer falha ao chamar o `IErrorInfo::GetHelpFile` método é ignorado.
+Qualquer falha ao chamar o método `IErrorInfo::GetHelpFile` é ignorada.
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe _com_error](../cpp/com-error-class.md)

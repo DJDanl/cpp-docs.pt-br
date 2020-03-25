@@ -57,12 +57,12 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: 08f90ef6be7a5eeb560add9c60a6578057fbb310
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 5339472574bced99d833a0b60e8b72b10b0fa989
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447519"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208358"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
@@ -82,7 +82,7 @@ template<typename Value,
     { ..... };
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *Valor*<br/>
 O tipo de um elemento na sequência controlada.
@@ -90,7 +90,7 @@ O tipo de um elemento na sequência controlada.
 *Contêiner*<br/>
 O tipo do contêiner subjacente.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** \<cliext/fila >
 
@@ -98,7 +98,7 @@ O tipo do contêiner subjacente.
 
 ## <a name="declarations"></a>{1&gt;{2&gt;Declarações&lt;2}&lt;1}
 
-|Definição do tipo|Descrição|
+|Definição do tipo|DESCRIÇÃO|
 |---------------------|-----------------|
 |[queue::const_reference (STL/CLR)](#const_reference)|O tipo de uma referência de constante para um elemento.|
 |[queue::container_type (STL/CLR)](#container_type)|O tipo do contêiner subjacente.|
@@ -109,7 +109,7 @@ O tipo do contêiner subjacente.
 |[queue::size_type (STL/CLR)](#size_type)|O tipo de uma distância com sinal entre dois elementos.|
 |[queue::value_type (STL/CLR)](#value_type)|O tipo de um elemento.|
 
-|Função membro|Descrição|
+|Função membro|DESCRIÇÃO|
 |---------------------|-----------------|
 |[queue::assign (STL/CLR)](#assign)|Substitui todos os elementos.|
 |[queue::back (STL/CLR)](#back)|Acessa o último elemento.|
@@ -122,12 +122,12 @@ O tipo do contêiner subjacente.
 |[queue::size (STL/CLR)](#size)|Conta o número de elementos.|
 |[queue::to_array (STL/CLR)](#to_array)|Copia a sequência controlada em uma nova matriz.|
 
-|Propriedade|Descrição|
+|Propriedade|DESCRIÇÃO|
 |--------------|-----------------|
 |[queue::back_item (STL/CLR)](#back_item)|Acessa o último elemento.|
 |[queue::front_item (STL/CLR)](#front_item)|Acessa o primeiro elemento.|
 
-|Operador|Descrição|
+|Operador|DESCRIÇÃO|
 |--------------|-----------------|
 |[queue::operator= (STL/CLR)](#op_as)|Substitui a sequência controlada.|
 |[operator!= (queue) (STL/CLR)](#op_neq)|Determina se um objeto `queue` não é igual a outro objeto `queue`.|
@@ -139,7 +139,7 @@ O tipo do contêiner subjacente.
 
 ## <a name="interfaces"></a>Interfaces
 
-|Interface|Descrição|
+|Interface|DESCRIÇÃO|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplicar um objeto.|
 |IQueue\<valor, contêiner >|Mantenha o adaptador de contêiner genérico.|
@@ -150,7 +150,7 @@ O objeto aloca e libera o armazenamento para a sequência que ele controla por m
 
 ## <a name="members"></a>Membros
 
-## <a name="assign"></a>fila:: atribuir (STL/CLR)
+## <a name="queueassign-stlclr"></a><a name="assign"></a>fila:: atribuir (STL/CLR)
 
 Substitui todos os elementos.
 
@@ -160,7 +160,7 @@ Substitui todos os elementos.
 void assign(queue<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *right*<br/>
 Adaptador de contêiner a ser inserido.
@@ -169,7 +169,7 @@ Adaptador de contêiner a ser inserido.
 
 A função de membro atribui `right.get_container()` ao contêiner subjacente. Você o usa para alterar todo o conteúdo da fila.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_assign.cpp
@@ -204,7 +204,7 @@ a b c
 a b c
 ```
 
-## <a name="back"></a>fila:: voltar (STL/CLR)
+## <a name="queueback-stlclr"></a><a name="back"></a>fila:: voltar (STL/CLR)
 
 Acessa o último elemento.
 
@@ -218,7 +218,7 @@ reference back();
 
 A função member retorna uma referência ao último elemento da sequência controlada, que deve ser não vazia. Você o usa para acessar o último elemento, quando você sabe que ele existe.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_back.cpp
@@ -256,7 +256,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a>fila:: back_item (STL/CLR)
+## <a name="queueback_item-stlclr"></a><a name="back_item"></a>fila:: back_item (STL/CLR)
 
 Acessa o último elemento.
 
@@ -270,7 +270,7 @@ property value_type back_item;
 
 A propriedade acessa o último elemento da sequência controlada, que deve ser não vazio. Você o usa para ler ou gravar o último elemento, quando souber que ele existe.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_back_item.cpp
@@ -308,7 +308,7 @@ back_item = c
 a b x
 ```
 
-## <a name="const_reference"></a>fila:: const_reference (STL/CLR)
+## <a name="queueconst_reference-stlclr"></a><a name="const_reference"></a>fila:: const_reference (STL/CLR)
 
 O tipo de uma referência de constante para um elemento.
 
@@ -322,7 +322,7 @@ typedef value_type% const_reference;
 
 O tipo descreve uma referência constante para um elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_const_reference.cpp
@@ -352,7 +352,7 @@ int main()
 a b c
 ```
 
-## <a name="container_type"></a>fila:: container_type (STL/CLR)
+## <a name="queuecontainer_type-stlclr"></a><a name="container_type"></a>fila:: container_type (STL/CLR)
 
 O tipo do contêiner subjacente.
 
@@ -366,7 +366,7 @@ typedef Container value_type;
 
 O tipo é um sinônimo do parâmetro de modelo `Container`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_container_type.cpp
@@ -394,7 +394,7 @@ int main()
 a b c
 ```
 
-## <a name="difference_type"></a>fila: ifference_type de:d (STL/CLR)
+## <a name="queuedifference_type-stlclr"></a><a name="difference_type"></a>fila: ifference_type de:d (STL/CLR)
 
 Os tipos de uma distância assinada entre dois elementos.
 
@@ -408,7 +408,7 @@ typedef int difference_type;
 
 O tipo descreve uma contagem de elementos possivelmente negativo.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_difference_type.cpp
@@ -452,7 +452,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a>fila:: Empty (STL/CLR)
+## <a name="queueempty-stlclr"></a><a name="empty"></a>fila:: Empty (STL/CLR)
 
 Testa se nenhum elemento está presente.
 
@@ -466,7 +466,7 @@ bool empty();
 
 A função membro retorna verdadeiro para uma sequência controlada vazia. É equivalente a [Queue:: Size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`. Você o usa para testar se a fila está vazia.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_empty.cpp
@@ -506,7 +506,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="front"></a>Queue:: Front (STL/CLR)
+## <a name="queuefront-stlclr"></a><a name="front"></a>Queue:: Front (STL/CLR)
 
 Acessa o primeiro elemento.
 
@@ -520,7 +520,7 @@ reference front();
 
 A função member retorna uma referência ao primeiro elemento da sequência controlada, que deve ser não vazia. Você o usa para acessar o primeiro elemento, quando você sabe que ele existe.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_front.cpp
@@ -558,7 +558,7 @@ front() = a
 x b c
 ```
 
-## <a name="front_item"></a>fila:: front_item (STL/CLR)
+## <a name="queuefront_item-stlclr"></a><a name="front_item"></a>fila:: front_item (STL/CLR)
 
 Acessa o primeiro elemento.
 
@@ -572,7 +572,7 @@ property value_type front_item;
 
 A propriedade acessa o primeiro elemento da sequência controlada, que deve ser não vazio. Você o usa para ler ou gravar o primeiro elemento, quando souber que ele existe.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_front_item.cpp
@@ -610,7 +610,7 @@ front_item = a
 x b c
 ```
 
-## <a name="generic_container"></a>fila:: generic_container (STL/CLR)
+## <a name="queuegeneric_container-stlclr"></a><a name="generic_container"></a>fila:: generic_container (STL/CLR)
 
 O tipo da interface genérica para o adaptador do contêiner.
 
@@ -625,7 +625,7 @@ typedef Microsoft::VisualC::StlClr::IQueue<Value>
 
 O tipo descreve a interface genérica para essa classe de adaptador de contêiner de modelo.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_generic_container.cpp
@@ -673,7 +673,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_value"></a>fila:: generic_value (STL/CLR)
+## <a name="queuegeneric_value-stlclr"></a><a name="generic_value"></a>fila:: generic_value (STL/CLR)
 
 O tipo de um elemento a ser usado com a interface genérica para o contêiner.
 
@@ -687,7 +687,7 @@ typedef GValue generic_value;
 
 O tipo descreve um objeto do tipo `GValue` que descreve o valor do elemento armazenado para uso com a interface genérica para essa classe de contêiner de modelo. (`GValue` será `value_type` ou `value_type^` se `value_type` for um tipo de referência.)
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_generic_value.cpp
@@ -731,7 +731,7 @@ a b c
 a b c
 ```
 
-## <a name="get_container"></a>fila:: get_container (STL/CLR)
+## <a name="queueget_container-stlclr"></a><a name="get_container"></a>fila:: get_container (STL/CLR)
 
 Acessa o contêiner subjacente.
 
@@ -745,7 +745,7 @@ container_type^ get_container();
 
 A função membro retorna o contêiner subjacente. Você o usa para ignorar as restrições impostas pelo wrapper do contêiner.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_get_container.cpp
@@ -772,7 +772,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a>Queue:: Operator = (STL/CLR)
+## <a name="queueoperator-stlclr"></a><a name="op_as"></a>Queue:: Operator = (STL/CLR)
 
 Substitui a sequência controlada.
 
@@ -782,7 +782,7 @@ Substitui a sequência controlada.
 queue <Value, Container>% operator=(queue <Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *right*<br/>
 Adaptador de contêiner a ser copiado.
@@ -791,7 +791,7 @@ Adaptador de contêiner a ser copiado.
 
 O operador membro copia *diretamente* para o objeto e, em seguida, retorna `*this`. Você o usa para substituir a sequência controlada por uma cópia da sequência controlada *à direita*.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_operator_as.cpp
@@ -826,7 +826,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a>fila::p op (STL/CLR)
+## <a name="queuepop-stlclr"></a><a name="pop"></a>fila::p op (STL/CLR)
 
 Remove o último elemento.
 
@@ -840,7 +840,7 @@ void pop();
 
 A função membro remove o último elemento da sequência controlada, que deve ser não vazio. Você o usa para encurtar a fila por um elemento na parte de trás.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_pop.cpp
@@ -874,7 +874,7 @@ a b c
 b c
 ```
 
-## <a name="push"></a>fila::p USH (STL/CLR)
+## <a name="queuepush-stlclr"></a><a name="push"></a>fila::p USH (STL/CLR)
 
 Adiciona um novo último elemento.
 
@@ -888,7 +888,7 @@ void push(value_type val);
 
 A função Member adiciona um elemento com valor `val` no final da fila. Você o usa para acrescentar um elemento à fila.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_push.cpp
@@ -915,7 +915,7 @@ int main()
 a b c
 ```
 
-## <a name="queue"></a>fila:: Queue (STL/CLR)
+## <a name="queuequeue-stlclr"></a><a name="queue"></a>fila:: Queue (STL/CLR)
 
 Constrói um objeto de adaptador de contêiner.
 
@@ -928,7 +928,7 @@ queue(queue<Value, Container>^ right);
 explicit queue(container_type% wrapped);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *right*<br/>
 Objeto a ser copiado.
@@ -962,7 +962,7 @@ O construtor:
 
 usa o contêiner existente *encapsulado* como o contêiner encapsulado. Você o usa para construir uma fila de um contêiner existente.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_construct.cpp
@@ -1008,7 +1008,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="reference"></a>Queue:: Reference (STL/CLR)
+## <a name="queuereference-stlclr"></a><a name="reference"></a>Queue:: Reference (STL/CLR)
 
 O tipo de uma referência para um elemento.
 
@@ -1022,7 +1022,7 @@ typedef value_type% reference;
 
 O tipo descreve uma referência a um elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_reference.cpp
@@ -1057,7 +1057,7 @@ a b c
 a b x
 ```
 
-## <a name="size"></a>fila:: tamanho (STL/CLR)
+## <a name="queuesize-stlclr"></a><a name="size"></a>fila:: tamanho (STL/CLR)
 
 Conta o número de elementos.
 
@@ -1071,7 +1071,7 @@ size_type size();
 
 A função membro retorna o comprimento da sequência controlada. Você o usa para determinar o número de elementos atualmente na sequência controlada. Se tudo o que você se importa é se a sequência tem tamanho diferente de zero, confira [fila:: Empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_size.cpp
@@ -1111,7 +1111,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a>fila:: size_type (STL/CLR)
+## <a name="queuesize_type-stlclr"></a><a name="size_type"></a>fila:: size_type (STL/CLR)
 
 O tipo de uma distância assinada entre dois elementos.
 
@@ -1125,7 +1125,7 @@ typedef int size_type;
 
 O tipo descreve uma contagem de elementos não negativos.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_size_type.cpp
@@ -1160,7 +1160,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="to_array"></a>fila:: to_array (STL/CLR)
+## <a name="queueto_array-stlclr"></a><a name="to_array"></a>fila:: to_array (STL/CLR)
 
 Copia a sequência controlada em uma nova matriz.
 
@@ -1174,7 +1174,7 @@ cli::array<Value>^ to_array();
 
 A função membro retorna uma matriz que contém a sequência controlada. Você o usa para obter uma cópia da sequência controlada na forma de matriz.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_to_array.cpp
@@ -1210,7 +1210,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a>fila:: value_type (STL/CLR)
+## <a name="queuevalue_type-stlclr"></a><a name="value_type"></a>fila:: value_type (STL/CLR)
 
 O tipo de um elemento.
 
@@ -1224,7 +1224,7 @@ typedef Value value_type;
 
 O tipo é um sinônimo para o *valor*do parâmetro de modelo.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_value_type.cpp
@@ -1255,7 +1255,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a>operador! = (fila) (STL/CLR)
+## <a name="operator-queue-stlclr"></a><a name="op_neq"></a>operador! = (fila) (STL/CLR)
 
 Comparação de não Equals de fila.
 
@@ -1268,7 +1268,7 @@ template<typename Value,
         queue<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *left*<br/>
 Contêiner esquerdo a comparar.
@@ -1280,7 +1280,7 @@ Contêiner direito a comparar.
 
 A função Operator retorna `!(left == right)`. Você o usa para testar se a *esquerda* não é ordenada da mesma forma que a *correta* quando as duas filas são comparadas Element por elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_operator_ne.cpp
@@ -1326,7 +1326,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a>&lt; do operador (fila) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>&lt; do operador (fila) (STL/CLR)
 
 Fila menor que comparação.
 
@@ -1339,7 +1339,7 @@ template<typename Value,
         queue<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *left*<br/>
 Contêiner esquerdo a comparar.
@@ -1351,7 +1351,7 @@ Contêiner direito a comparar.
 
 A função Operator retornará true se, para a posição mais baixa `i` para a qual `!(right[i] < left[i])` também é true que `left[i] < right[i]`. Caso contrário, ele retornará `left->`[fila:: Size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() <` `right->size()` você o usará para testar se a *esquerda* é ordenada antes da *direita* quando as duas filas são comparadas Element por elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_operator_lt.cpp
@@ -1397,7 +1397,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a>operador&lt;= (fila) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>operador&lt;= (fila) (STL/CLR)
 
 Fila menor ou igual a comparação.
 
@@ -1410,7 +1410,7 @@ template<typename Value,
         queue<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *left*<br/>
 Contêiner esquerdo a comparar.
@@ -1422,7 +1422,7 @@ Contêiner direito a comparar.
 
 A função Operator retorna `!(right < left)`. Você o usa para testar se a *esquerda* não é ordenada após *direita* quando as duas filas são comparadas Element por elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_operator_le.cpp
@@ -1468,7 +1468,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a>Operator = = (fila) (STL/CLR)
+## <a name="operator-queue-stlclr"></a><a name="op_eq"></a>Operator = = (fila) (STL/CLR)
 
 Comparação de igual da fila.
 
@@ -1481,7 +1481,7 @@ template<typename Value,
         queue<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *left*<br/>
 Contêiner esquerdo a comparar.
@@ -1493,7 +1493,7 @@ Contêiner direito a comparar.
 
 A função Operator retornará true somente se as sequências controladas pela *esquerda* e *à direita* tiverem o mesmo comprimento e, para cada posição `i`, `left[i] ==` `right[i]`. Você o usa para testar se a *esquerda* é ordenada da mesma forma que a *direita* quando as duas filas são comparadas Element por elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_operator_eq.cpp
@@ -1539,7 +1539,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a>&gt; do operador (fila) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>&gt; do operador (fila) (STL/CLR)
 
 Fila maior que comparação.
 
@@ -1552,7 +1552,7 @@ template<typename Value,
         queue<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *left*<br/>
 Contêiner esquerdo a comparar.
@@ -1564,7 +1564,7 @@ Contêiner direito a comparar.
 
 A função Operator retorna `right` `<` `left`. Você o usa para testar se a *esquerda* é ordenada após *direita* quando as duas filas são comparadas Element por elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_operator_gt.cpp
@@ -1610,7 +1610,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a>operador&gt;= (fila) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>operador&gt;= (fila) (STL/CLR)
 
 Fila maior ou igual a comparação.
 
@@ -1623,7 +1623,7 @@ template<typename Value,
         queue<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *left*<br/>
 Contêiner esquerdo a comparar.
@@ -1635,7 +1635,7 @@ Contêiner direito a comparar.
 
 A função Operator retorna `!(left < right)`. Você o usa para testar se a *esquerda* não é ordenada antes da *direita* quando as duas filas são comparadas Element por elemento.
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```cpp
 // cliext_queue_operator_ge.cpp

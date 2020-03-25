@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - BK1503
 ms.assetid: e6582344-b91e-486f-baf3-4f9028d83c3b
-ms.openlocfilehash: c81e955b912e03b322c0429097410fae74713b9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0f05b3979024cb053394c51fa9337197b5de7bf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280133"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197854"
 ---
 # <a name="bscmake-error-bk1503"></a>Erro BK1503 (BSCMAKE)
 
-não é possível gravar no arquivo 'filename' [: motivo]
+Não é possível gravar no arquivo ' FileName ' [: reason]
 
-BSCMAKE combina arquivos. SBR gerados durante a compilação em um banco de dados do navegador. Se o banco de dados resultante do navegador excede 64 MB, ou se o número de arquivos de entrada (. SBR) excede 4092, esse erro será emitido.
+BSCMAKE combina os arquivos. sbr gerados durante a compilação em um banco de dados do navegador. Se o banco de dados do navegador resultante exceder 64 MB ou se o número de arquivos de entrada (. sbr) exceder 4092, esse erro será emitido.
 
-Se o problema é causado por arquivos de mais de 4092. SBR, você deve reduzir o número de arquivos de entrada. De dentro do Visual Studio, isso pode ser feito [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) seu projeto inteiro, em seguida, verificar novamente em uma base de arquivo por arquivo.
+Se o problema for causado por mais de 4092 arquivos. SBR, você deverá reduzir o número de arquivos de entrada. No Visual Studio, isso pode ser feito por meio do [/fr](../../build/reference/fr-fr-create-dot-sbr-file.md) de todo o seu projeto e, em seguida, verificar novamente um arquivo por arquivo.
 
-Se o problema é causado por um arquivo. bsc maior que 64MB, reduzindo o número de arquivos. SBR como entrada diminuirá o tamanho do arquivo. bsc resultante. Além disso, a quantidade de informações de pesquisa pode ser reduzida com o uso de /Em (Excluir Macro expandida símbolos), /El (excluir variáveis locais) e /Es (excluir arquivos do sistema).
+Se o problema for causado por um arquivo. BSC maior que 64MB, reduzir o número de arquivos. sbr como entrada diminuirá o tamanho do arquivo. BSC resultante. Além disso, a quantidade de informações de procura pode ser reduzida com o uso do/em (excluir símbolos expandidos de macro),/El (excluir variáveis locais) e/es (excluir arquivos do sistema).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Opções de BSCMAKE](../../build/reference/bscmake-options.md)

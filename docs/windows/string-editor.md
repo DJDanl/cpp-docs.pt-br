@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: 996e5f132e5cfa33c39c4cc3ddbeb692f41925bc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f9b21893bd361d02b3446360b24a97f4d1d1365
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514719"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214403"
 ---
 # <a name="string-editor-c"></a>Editor de cadeiaC++de caracteres ()
 
@@ -50,7 +50,7 @@ As tabelas de cadeia de caracteres facilitam a localização do aplicativo em di
 > [!NOTE]
 > O Windows não permite a criação de tabelas de cadeia de caracteres vazias. Se você criar uma tabela de cadeia de caracteres sem entradas, ela será excluída automaticamente quando você salvar o arquivo de recurso.
 
-## <a name="how-to"></a>Como
+## <a name="how-to"></a>Instruções
 
 O **Editor de cadeia de caracteres** permite:
 
@@ -58,7 +58,7 @@ O **Editor de cadeia de caracteres** permite:
 
 1. Abra a tabela de cadeia de caracteres clicando duas vezes em seu ícone no [modo de exibição de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Vá para o menu **Editar** > **Localizar e substituir** e escolha **Localizar**.
+1. Vá para o menu **editar** > **Localizar e substituir** e escolha **Localizar**.
 
 1. Na caixa **Localizar** , selecione uma cadeia de caracteres de pesquisa anterior na lista suspensa ou digite o texto da legenda ou o identificador de recurso da cadeia de caracteres que você deseja localizar.
 
@@ -69,13 +69,13 @@ O **Editor de cadeia de caracteres** permite:
 >
 > Digite uma expressão regular para corresponder a um padrão ou selecione o botão à direita da caixa **Localizar** para exibir uma lista de expressões de pesquisa regulares. Quando você seleciona uma expressão nessa lista, ela é substituída como o texto de pesquisa na caixa **Localizar** .
 >
-> Se você usar expressões regulares, certifique-se **de usar: A caixa** de seleção expressões regulares está marcada.
+> Se você usar expressões regulares, certifique-se de que a caixa de seleção **usar: expressões regulares** esteja marcada.
 
 ### <a name="to-add-or-delete-a-string-resource"></a>Para adicionar ou excluir um recurso de cadeia de caracteres
 
 Você pode inserir ou excluir entradas rapidamente na tabela de cadeia de caracteres usando o **Editor de cadeia de caracteres**. Novas cadeias de caracteres são colocadas no final da tabela e recebem o próximo identificador disponível. Você pode editar as propriedades de **ID**, **valor**ou **legenda** no [janela Propriedades](/visualstudio/ide/reference/properties-window) conforme necessário.
 
-O **Editor de cadeia de caracteres** garante que você não use uma ID que já esteja em uso. Se você selecionar uma ID que já está em uso, o **Editor de cadeia de caracteres** o notificará e atribuirá uma ID `IDS_STRING58113`exclusiva genérica, por exemplo.
+O **Editor de cadeia de caracteres** garante que você não use uma ID que já esteja em uso. Se você selecionar uma ID que já está em uso, o **Editor de cadeia de caracteres** o notificará e atribuirá uma ID exclusiva genérica, por exemplo `IDS_STRING58113`.
 
 #### <a name="to-add-a-string-table-entry"></a>Para adicionar uma entrada de tabela de cadeia de caracteres
 
@@ -96,7 +96,7 @@ O **Editor de cadeia de caracteres** garante que você não use uma ID que já e
 
 Selecione a entrada que você deseja excluir e siga um destes procedimentos:
 
-- Vá para o menu **Editar** > **excluir**.
+- Vá para o menu **editar** > **excluir**.
 
 - Clique com o botão direito do mouse na cadeia de caracteres a ser excluída e escolha **excluir**.
 
@@ -142,7 +142,7 @@ Você pode usar a edição in-loco para alterar as propriedades de **ID**, **val
 
 1. Na [janela Propriedades](/visualstudio/ide/reference/properties-window), digite um novo valor para a propriedade que você deseja alterar.
 
-1. Pressione **ENTER**.
+1. Pressione **Enter**.
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Para adicionar formatação ou caracteres especiais a um recurso de cadeia de caracteres
 
@@ -155,11 +155,11 @@ Você pode usar a edição in-loco para alterar as propriedades de **ID**, **val
    |Para obter isso...|Digite isto...|
    |-----------------|---------------|
    | Nova linha | \\n |
-   | Retorno de carro | \\d |
-   | Tabulação | \\t |
+   | Retorno de carro | \\r |
+   | Tab | \\t |
    | Barra invertida (\\) | \\\\ |
    | Caractere ASCII | \\DDD (notação octal) |
-   | Alerta (Bell) | \\um |
+   | Alerta (Bell) | \\a |
 
    > [!NOTE]
    > O **Editor de cadeia de caracteres** não dá suporte ao conjunto completo de caracteres asci de escape. Você só pode usar os listados acima.
@@ -168,9 +168,9 @@ Você pode usar a edição in-loco para alterar as propriedades de **ID**, **val
 
 Win32
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Cadeias de caracteres](/windows/win32/menurc/strings)
-[ de editores de recursos](../windows/resource-editors.md)<br/>
+[Editores de recursos](../windows/resource-editors.md)
+[cadeias de caracteres](/windows/win32/menurc/strings)<br/>
 [Sobre cadeias de caracteres](/windows/win32/menurc/about-strings)<br/>
 [Personalizando layouts de janela](/visualstudio/ide/customizing-window-layouts-in-visual-studio)

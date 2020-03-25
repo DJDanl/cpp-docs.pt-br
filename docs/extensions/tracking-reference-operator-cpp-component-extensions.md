@@ -8,18 +8,18 @@ helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-ms.openlocfilehash: c6fef4562545b03e212d0e4e58742a1209a6ab81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab1b11d3f8d3416a6e9ed345085d63ce86d56010
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516011"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181779"
 ---
 # <a name="tracking-reference-operator-ccli-and-ccx"></a>Operador de referência de acompanhamento (C++/CLI e C++/CX)
 
 Uma *referência de acompanhamento* (`%`) se comporta como uma referência comum do C++ (`&`), exceto que quando um objeto é atribuído a uma referência de acompanhamento, a contagem de referência do objeto é incrementada.
 
-## <a name="all-platforms"></a>Todas as Plataformas
+## <a name="all-platforms"></a>Todas as plataformas
 
 Uma referência de acompanhamento possui as características a seguir.
 
@@ -75,7 +75,7 @@ Não é possível ter uma referência de C++ nativa para um objeto no heap colet
 
 Saiba mais sobre referências de acompanhamento no C++/CLI em:
 
-- [Como: usar referências de rastreamento no C++/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
+- [Como usar referências de acompanhamento no C++/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
 
 ### <a name="examples"></a>Exemplos
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3389
 ms.assetid: eaaffe17-23f2-413c-b1ad-f7220cfa1334
-ms.openlocfilehash: 6a9568f3c3be88438eae1f28e12dc780301ead0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b166096390169939f01bcb976a57612f10f7df2e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402574"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201130"
 ---
 # <a name="compiler-error-c3389"></a>Erro do compilador C3389
 
-> declspec (*palavra-chave*) não pode ser usado com /clr: pure ou /CLR: safe
+> __declspec (*palavra-chave*) não pode ser usada com/CLR: pure ou/CLR: safe
 
 ## <a name="remarks"></a>Comentários
 
-O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+As opções de compilador **/CLR: Pure** e **/CLR: safe** são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-Um [declspec](../../cpp/declspec.md) modificador usado implica um segundo o estado do processo.  [/CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md) implica um por [appdomain](../../cpp/appdomain.md) estado.  Assim, declarando uma variável com o `keyword` **declspec** modificador e compilar com **/clr: pure** não é permitido.
+Um modificador de [__declspec](../../cpp/declspec.md) usado implica um estado por processo.  [/CLR: Pure](../../build/reference/clr-common-language-runtime-compilation.md) implica um estado por [AppDomain](../../cpp/appdomain.md) .  Portanto, declarar uma variável com o modificador `keyword` **__declspec** e compilar com **/CLR: Pure** não é permitido.
 
 ## <a name="example"></a>Exemplo
 

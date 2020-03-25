@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - GUID method [C++]
 ms.assetid: e84c2c23-d02e-48f8-b776-9bd6937296d2
-ms.openlocfilehash: 905b67577a65b81be0b4d18c7513652dd8c5f055
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5b05cd4e26f89d42ea23b605f5e6560795a0cfa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155053"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180630"
 ---
-# <a name="comerrorguid"></a>_com_error::GUID
+# <a name="_com_errorguid"></a>_com_error::GUID
 
 **Seção específica da Microsoft**
 
@@ -25,16 +25,16 @@ Chama a função `IErrorInfo::GetGUID`.
 GUID GUID( ) const throw( );
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Retorna o resultado da `IErrorInfo::GetGUID` para o `IErrorInfo` registrado no `_com_error` objeto. Se nenhum `IErrorInfo` é registrado, ele retorna `GUID_NULL`.
+Retorna o resultado de `IErrorInfo::GetGUID` para o objeto de `IErrorInfo` registrado no objeto `_com_error`. Se nenhum objeto de `IErrorInfo` for registrado, ele retornará `GUID_NULL`.
 
 ## <a name="remarks"></a>Comentários
 
-Qualquer falha ao chamar o `IErrorInfo::GetGUID` método é ignorado.
+Qualquer falha ao chamar o método `IErrorInfo::GetGUID` é ignorada.
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe _com_error](../cpp/com-error-class.md)

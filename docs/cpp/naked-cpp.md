@@ -7,18 +7,18 @@ helpviewer_keywords:
 - __declspec keyword [C++], naked
 - naked __declspec keyword
 ms.assetid: 69723241-05e1-439b-868e-20a83a16ab6d
-ms.openlocfilehash: 951760d7f9566c084bbe3d5a574d006020576c61
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: cfe3631086515e4e31c7d4188d46e3a7440662b7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345006"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177944"
 ---
 # <a name="naked-c"></a>naked (C++)
 
 **Seção específica da Microsoft**
 
-Para funções declaradas com o **naked** atributo, o compilador gera um código sem código de prólogo e epílogo. Você pode usar esse recurso para escrever suas próprias sequências de código de prólogo/epílogo usando o código de assembler embutido. As funções naked são particularmente úteis para escrever drivers para dispositivo virtuais.  Observe que o **naked** atributo só é válido em x86 e ARM e não está disponível em x64.
+Para funções declaradas com o atributo **Naked** , o compilador gera código sem prólogo e código epílogo. Você pode usar esse recurso para escrever suas próprias sequências de código de prólogo/epílogo usando o código de assembler embutido. As funções naked são particularmente úteis para escrever drivers para dispositivo virtuais.  Observe que o atributo **Naked** só é válido no x86 e no ARM e não está disponível em x64.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,15 +28,15 @@ __declspec(naked) declarator
 
 ## <a name="remarks"></a>Comentários
 
-Porque o **naked** atributo só é relevante para a definição de uma função e não é um modificador de tipo, funções naked devem usar a sintaxe de atributo estendido e a [declspec](../cpp/declspec.md) palavra-chave.
+Como o atributo **Naked** só é relevante para a definição de uma função e não é um modificador de tipo, as funções Naked devem usar a sintaxe de atributo estendido e a palavra-chave [__declspec](../cpp/declspec.md) .
 
-O compilador não gere uma função embutida para uma função marcada com o atributo naked, mesmo se a função também é marcada com o [forceinline](inline-functions-cpp.md) palavra-chave.
+O compilador não pode gerar uma função embutida para uma função marcada com o atributo Naked, mesmo que a função também seja marcada com a palavra-chave [__forceinline](inline-functions-cpp.md) .
 
-O compilador emitirá um erro se o **naked** atributo é aplicado a qualquer coisa que não seja a definição de um método de não-membro.
+O compilador emitirá um erro se o atributo **Naked** for aplicado a algo diferente da definição de um método que não seja membro.
 
 ## <a name="examples"></a>Exemplos
 
-Esse código define uma função com o **naked** atributo:
+Esse código define uma função com o atributo **Naked** :
 
 ```
 __declspec( naked ) int func( formal_parameters ) {}
@@ -49,14 +49,14 @@ Ou, alternativamente:
 Naked int func( formal_parameters ) {}
 ```
 
-O **naked** atributo afeta somente a natureza de geração de código do compilador para sequências de prólogo e epílogo da função. Não afeta o código que é gerado pela chamada dessas funções. Portanto, o **naked** atributo não é considerado parte do tipo da função e ponteiros de função não podem ter o **naked** atributo. Além disso, o **naked** atributo não pode ser aplicado a uma definição de dados. Por exemplo, esta amostra de código gera um erro:
+O atributo **Naked** afeta apenas a natureza da geração de código do compilador para as sequências de prólogo e epílogo da função. Não afeta o código que é gerado pela chamada dessas funções. Portanto, o atributo **Naked** não é considerado parte do tipo da função e os ponteiros de função não podem ter o atributo **Naked** . Além disso, o atributo **Naked** não pode ser aplicado a uma definição de dados. Por exemplo, esta amostra de código gera um erro:
 
 ```
 __declspec( naked ) int i;
 // Error--naked attribute not permitted on data declarations.
 ```
 
-O **naked** atributo só é relevante para a definição da função e não pode ser especificado no protótipo da função. Por exemplo, esta declaração gera um erro de compilador:
+O atributo **Naked** é relevante apenas para a definição da função e não pode ser especificado no protótipo da função. Por exemplo, esta declaração gera um erro de compilador:
 
 ```
 __declspec( naked ) int func();  // Error--naked attribute not permitted on function declarations
@@ -64,7 +64,7 @@ __declspec( naked ) int func();  // Error--naked attribute not permitted on func
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [__declspec](../cpp/declspec.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>

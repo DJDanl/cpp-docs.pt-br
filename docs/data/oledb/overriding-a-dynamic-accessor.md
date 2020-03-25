@@ -6,18 +6,18 @@ helpviewer_keywords:
 - dynamic accessors
 - overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-ms.openlocfilehash: 01beab80fb8574e0caa4ad3054d174c60106ce94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d46531f2d4075df98081886dfdfd1f2cf65d9948
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282930"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209840"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Substituindo um acessador dinâmico
 
-Quando você usa um acessador dinâmico, como `CDynamicAccessor`, o comando `Open` método cria um acessador para você automaticamente, com base nas informações de coluna do conjunto de linhas aberto. Você pode substituir o acessador dinâmico para controlar exatamente como as colunas são associadas.
+Quando você usa um acessador dinâmico, como `CDynamicAccessor`, o método `Open` de comando cria um acessador para você automaticamente, com base nas informações de coluna do conjunto de linhas aberto. Você pode substituir o acessador dinâmico para controlar exatamente como as colunas são associadas.
 
-Para substituir o acessador dinâmico, passe **falsos** como o último parâmetro para o `CCommand::Open` método. Isso impede que `Open` desde a criação de um acessador automaticamente. Em seguida, você pode chamar `GetColumnInfo` e chamar `AddBindEntry` para cada coluna que você deseja associar. O código a seguir mostra como fazer isso:
+Para substituir o acessador dinâmico, passe **false** como o último parâmetro para o método `CCommand::Open`. Isso impede `Open` de criar um acessador automaticamente. Em seguida, você pode chamar `GetColumnInfo` e chamar `AddBindEntry` para cada coluna que você deseja associar. O código a seguir mostra como fazer isso:
 
 ```cpp
 USES_CONVERSION;
@@ -69,6 +69,6 @@ while (product.MoveNext() == S_OK)
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Usando acessadores](../../data/oledb/using-accessors.md)

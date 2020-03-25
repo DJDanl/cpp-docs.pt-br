@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2526
 ms.assetid: 0f8c554c-f990-457e-bcae-b6f273481825
-ms.openlocfilehash: 909f1d0d9b2d0ad16948f07a086f29ab194731e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3267b84aa913ec8b8d070fdc0a206abfa0c5a636
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282255"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202599"
 ---
 # <a name="compiler-error-c2526"></a>Erro do compilador C2526
 
-'identifier1': Função de vínculo a C não pode retornar C++ classe 'identifier2'
+' identifier1 ': a função de vínculo C C++ não pode retornar a classe ' identifier2 '
 
-Uma função definida com vínculo a C não pode retornar um tipo definido pelo usuário.
+Uma função definida com vínculo C não pode retornar um tipo definido pelo usuário.

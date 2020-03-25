@@ -35,12 +35,12 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: 93bee6319d356128f56c1886d395cf25db372e80
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 5527b7c46b728a4a009a56fca3fea52bf5ef9bf3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443876"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214416"
 ---
 # <a name="how-to-create-resources-c"></a>Como: criar recursos (C++)
 
@@ -114,12 +114,12 @@ Você também pode usar o botão direito do mouse na janela **modo de exibição
 
 O **modo de exibição de recursos** Windows inclui a caixa de diálogo **Adicionar recurso** com as seguintes propriedades para adicionar recursos a C++ um projeto de aplicativo da área de trabalho do Windows:
 
-| Propriedade | Descrição |
+| Propriedade | DESCRIÇÃO |
 |---|---|
 | **Tipo de recurso** | Especifique o tipo de recurso que você deseja criar.<br/><br/>Você pode expandir as categorias de recurso de cursor e caixa de diálogo para revelar recursos adicionais, que estão localizados em *.. \Microsoft Visual Studio \<versão\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct*. Se você precisar adicionar arquivos. RCT, coloque-os aqui ou especifique outro [caminho de inclusão](../windows/how-to-specify-include-directories-for-resources.md). Os recursos mostrados no nível superior no controle de árvore são os recursos padrão fornecidos pelo Visual Studio. Os recursos nos arquivos. rct aparecem no segundo nível sob a categoria apropriada. Não há limite predefinido para o número de arquivos. rct que você pode adicionar.<br/><br/> |
 | **Novo** | Crie um recurso com base no tipo selecionado na caixa **tipo de recurso** e abra o recurso no editor apropriado.<br/><br/>Por exemplo, se você criar um recurso de caixa de diálogo, ele abrirá o recurso no [Editor de caixa de diálogo](../windows/dialog-editor.md). |
-| **Importarar** | Abra a caixa de diálogo **importar** para navegar até o recurso que você deseja importar para o projeto atual.<br/><br/>Você pode importar um bitmap, ícone, cursor, HTML, som (. WAV) ou arquivo de recurso personalizado. |
-| **Personalizado** | Abra a caixa de diálogo **novo recurso personalizado** para criar um recurso personalizado.<br/><br/>Também inclui uma propriedade de **tipo de recurso** que fornece uma caixa de texto para inserir o nome do tipo de recurso personalizado. O C++ Visual automaticamente coloca em maiúscula o nome quando você sai. Os recursos personalizados são editados apenas no [Editor de binários](../windows/binary-editor.md). |
+| **Importaçãoação** | Abra a caixa de diálogo **importar** para navegar até o recurso que você deseja importar para o projeto atual.<br/><br/>Você pode importar um bitmap, ícone, cursor, HTML, som (. WAV) ou arquivo de recurso personalizado. |
+| **Custom** | Abra a caixa de diálogo **novo recurso personalizado** para criar um recurso personalizado.<br/><br/>Também inclui uma propriedade de **tipo de recurso** que fornece uma caixa de texto para inserir o nome do tipo de recurso personalizado. O C++ Visual automaticamente coloca em maiúscula o nome quando você sai. Os recursos personalizados são editados apenas no [Editor de binários](../windows/binary-editor.md). |
 
 Quando você cria um novo recurso, o C++ Visual atribui um nome exclusivo a ele, por exemplo, `IDD_Dialog1`. Você pode personalizar essa ID de recurso editando as propriedades de recurso no editor de recursos associado ou no [janela Propriedades](/visualstudio/ide/reference/properties-window).
 
@@ -182,11 +182,11 @@ Depois de personalizar um modelo de recurso, salve as alterações na pasta do m
 
 Com o arquivo de script de recurso aberto, no menu, vá para **arquivo** > **salvar \<*nome*do arquivo > como**. Especifique um local e escolha **OK**.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 Win32
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Arquivos de recurso](../windows/resource-files-visual-studio.md)<br/>
 [Como: gerenciar recursos](../windows/how-to-copy-resources.md)<br/>

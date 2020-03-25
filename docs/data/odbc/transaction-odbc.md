@@ -10,43 +10,43 @@ helpviewer_keywords:
 - recordsets [C++], transactions
 - ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
-ms.openlocfilehash: a151ec5ca2b4bdc19bfa7dc626aebda0740a2c9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49fc0e244dd4f63bd7a69d963ff2a9fbc00ddb6c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329914"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212596"
 ---
 # <a name="transaction-odbc"></a>Transação (ODBC)
 
-Este tópico se aplica às classes ODBC do MFC.
+Este tópico aplica-se às classes ODBC do MFC.
 
-Uma transação é uma maneira de agrupar, ou um lote, uma série de atualizações para um [fonte de dados](../../data/odbc/data-source-odbc.md) para que todos são confirmados ao mesmo tempo ou nenhum são confirmadas se você reverter a transação. Se você não usar uma transação, as alterações na fonte de dados são confirmadas automaticamente, em vez de confirmação sob demanda.
-
-> [!NOTE]
->  Nem todos os drivers de banco de dados ODBC suportam a transações. Chame o `CanTransact` função de membro de seu [CDatabase](../../mfc/reference/cdatabase-class.md) ou [CRecordset](../../mfc/reference/crecordset-class.md) objeto para determinar se o driver dá suporte a transações para um determinado banco de dados. Observe que `CanTransact` não informa se a fonte de dados fornece suporte de transação completa. Você também deve chamar `CDatabase::GetCursorCommitBehavior` e `CDatabase::GetCursorRollbackBehavior` após `CommitTrans` e `Rollback` para verificar o efeito da transação na abertura `CRecordset` objeto.
-
-Chamadas para o `AddNew` e `Edit` funções de membro de uma `CRecordset` afetam os dados de origem imediatamente quando você chama do objeto `Update`. `Delete` chamadas também entram em vigor imediatamente. Por outro lado, você pode usar uma transação consiste em várias chamadas para `AddNew`, `Edit`, `Update`, e `Delete`, que são executadas, mas não foi confirmada até que você chame `CommitTrans` explicitamente. Estabelecendo uma transação, você pode executar uma série dessas chamadas, mantendo a capacidade de revertê-los. Se um recurso crítico não está disponível ou outra condição impede que toda a transação seja concluída, você pode reverter a transação em vez de confirmá-lo. Nesse caso, nenhuma das alterações que pertencem à transação afeta a fonte de dados.
+Uma transação é uma maneira de agrupar, ou em lote, uma série de atualizações em uma [fonte de dados](../../data/odbc/data-source-odbc.md) para que todas sejam confirmadas de uma só vez ou nenhuma seja confirmada se você reverter a transação. Se você não usar uma transação, as alterações na fonte de dados serão confirmadas automaticamente em vez de serem confirmadas sob demanda.
 
 > [!NOTE]
->  Atualmente, a classe `CRecordset` não oferece suporte a atualizações para a fonte de dados se você tiver implementado a busca de linhas em massa. Isso significa que você não pode fazer chamadas para `AddNew`, `Edit`, `Delete`, ou `Update`. No entanto, você pode escrever funções próprias para executar atualizações e, em seguida, chamar essas funções dentro de uma determinada transação. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: Buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Nem todos os drivers de banco de dados ODBC dão suporte a transações. Chame a função membro `CanTransact` do seu objeto [CDatabase](../../mfc/reference/cdatabase-class.md) ou [CRecordset](../../mfc/reference/crecordset-class.md) para determinar se o driver dá suporte a transações para um determinado banco de dados. Observe que `CanTransact` não informa se a fonte de dados fornece suporte completo a transações. Você também deve chamar `CDatabase::GetCursorCommitBehavior` e `CDatabase::GetCursorRollbackBehavior` após `CommitTrans` e `Rollback` para verificar o efeito da transação no objeto Open `CRecordset`.
+
+As chamadas para as funções de membro `AddNew` e `Edit` de um objeto `CRecordset` afetam a fonte de dados imediatamente quando você chama `Update`. `Delete` chamadas também entram em vigor imediatamente. Por outro lado, você pode usar uma transação que consiste em várias chamadas para `AddNew`, `Edit`, `Update`e `Delete`, que são executadas, mas não confirmadas até que você chame `CommitTrans` explicitamente. Ao estabelecer uma transação, você pode executar uma série de chamadas desse tipo e, ao mesmo tempo, manter a capacidade de redistribuí-las. Se um recurso crítico não estiver disponível ou alguma outra condição impedir a conclusão da transação inteira, você poderá reverter a transação em vez de confirmá-la. Nesse caso, nenhuma das alterações pertencentes à transação afeta a fonte de dados.
 
 > [!NOTE]
->  Além de afetar seu conjunto de registros, as transações afetam instruções SQL que você execute diretamente desde que você use o ODBC **HDBC** associado com seus `CDatabase` objeto ou um ODBC **HSTMT** com base em que **HDBC**.
-
-As transações são particularmente úteis quando você tem vários registros que devem ser atualizados ao mesmo tempo. Nesse caso, você deseja evitar uma transação concluída de metade, tais como pode acontecer se uma exceção foi lançada antes da última atualização foi feita. Agrupar essas atualizações em uma transação permite uma recuperação (reversão) das alterações e retorna os registros para o estado anterior à transação. Por exemplo, se um banco transfere dinheiro de uma conta para a conta B, tanto a retirada de A e o depósito em B deve ser bem-sucedidas para processar os fundos corretamente ou a transação inteira falhará.
-
-As classes de banco de dados, você executa transações por meio de `CDatabase` objetos. Um `CDatabase` objeto representa uma conexão a uma fonte de dados e um ou mais conjuntos de registros associados a esse `CDatabase` objeto opera em tabelas do banco de dados por meio de funções de membro do conjunto de registros.
+>  Atualmente, a classe `CRecordset` não oferece suporte a atualizações para a fonte de dados se você tiver implementado a busca em massa de linha. Isso significa que você não pode fazer chamadas para `AddNew`, `Edit`, `Delete`ou `Update`. No entanto, você pode escrever suas próprias funções para executar atualizações e, em seguida, chamar essas funções em uma determinada transação. Para obter mais informações sobre a busca de linha em massa, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 > [!NOTE]
->  Há suporte para apenas um nível de transações. Você não pode aninhar transações, nem pode abranger de uma transação de vários objetos de banco de dados.
+>  Além de afetar o conjunto de registros, as transações afetam as instruções SQL executadas diretamente, desde que você use o **HDBC** ODBC associado ao seu objeto `CDatabase` ou a um **HSTMT** ODBC com base nesse **HDBC**.
+
+As transações são particularmente úteis quando você tem vários registros que devem ser atualizados simultaneamente. Nesse caso, você deseja evitar uma transação com meia conclusão, como pode acontecer se uma exceção foi lançada antes da última atualização ter sido feita. O agrupamento dessas atualizações em uma transação permite uma recuperação (reversão) das alterações e retorna os registros para o estado de pretransação. Por exemplo, se um banco transferir dinheiro da conta A para a conta B, tanto a retirada de um quanto o depósito para B deverão ter êxito em processar os fundos corretamente ou a transação inteira deverá falhar.
+
+Nas classes de banco de dados, você executa transações por meio de `CDatabase` objetos. Um objeto `CDatabase` representa uma conexão com uma fonte de dados e um ou mais conjuntos de registros associados a esse objeto `CDatabase` operam em tabelas do banco de dados por meio de funções membro do conjunto de registros.
+
+> [!NOTE]
+>  Há suporte para apenas um nível de transações. Não é possível aninhar transações nem uma transação abranger vários objetos de banco de dados.
 
 Os tópicos a seguir fornecem mais informações sobre como as transações são executadas:
 
-- [Transação: realizar uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
+- [Transação: realizando uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
 
 - [Transação: como as transações afetam atualizações (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)

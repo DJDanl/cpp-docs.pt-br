@@ -6,28 +6,28 @@ helpviewer_keywords:
 - connections [C++], data source
 - OLE DB consumer templates [C++], data sources
 ms.assetid: 6ee52216-e082-4869-a1d6-ce561cfb76e5
-ms.openlocfilehash: 2c11230d106b50e8120dfa9f4e283e97700d2739
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0514f6a9285936c85608f08774c1d377fd72d6ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175987"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211049"
 ---
 # <a name="data-sources-and-sessions"></a>Origens de dados e sessões
 
-A figura a seguir mostra as classes que dão suporte à conexão e acessar uma fonte de dados. Cada classe baseia-se em uma implementação padrão de componente do OLE DB.
+A figura a seguir mostra as classes que dão suporte à conexão e ao acesso a uma fonte de dados. Cada classe é baseada em uma implementação de componente de OLE DB padrão.
 
-![Classes de dados de origem e de sessão](../../data/oledb/media/vcdatasourcesessionclasses.gif "classes de dados de origem e de sessão") <br/>
-Fonte de dados e Classes de sessão
+![Fonte de dados e classes de sessão](../../data/oledb/media/vcdatasourcesessionclasses.gif "Fonte de dados e classes de sessão") <br/>
+Fonte de dados e classes de sessão
 
 As classes são:
 
-- [CDataSource](../../data/oledb/cdatasource-class.md) essa classe instancia o objeto de fonte de dados, que cria e gerencia uma conexão a uma fonte de dados por meio de um provedor OLE DB. A fonte de dados usa informações de como as informações de autenticação e o endereço da fonte de dados na forma de uma cadeia de caracteres de conexão.
+- [CDataSource](../../data/oledb/cdatasource-class.md) Essa classe instancia o objeto de fonte de dados, que cria e gerencia uma conexão com uma fonte de dados por meio de um provedor de OLE DB. A fonte de dados obtém informações como o endereço da fonte de dados e as informações de autenticação na forma de uma cadeia de conexão.
 
-   Também vale a pena observar que a classe auxiliar [CEnumerator](../../data/oledb/cenumerator-class.md) geralmente é usada antes que qualquer conexão seja estabelecida para obter uma lista de provedores disponíveis registrado em um sistema. Isso permite que você selecione um provedor como uma fonte de dados. Por exemplo, o **propriedades de vínculo de dados** caixa de diálogo usa essa classe para preencher a lista de provedores na **provedores** guia. Ele é igual para o `SQLBrowseConnect` ou `SQLDriverConnect` função.
+   Também vale a pena observar que a classe auxiliar [CEnumerator](../../data/oledb/cenumerator-class.md) é geralmente usada antes que qualquer conexão seja estabelecida para obter uma lista de provedores disponíveis registrados em um sistema. Isso permite que você selecione um provedor como uma fonte de dados. Por exemplo, a caixa de diálogo **Propriedades do link de dados** usa essa classe para popular a lista de provedores na guia **provedores** . Ele equivale à função `SQLBrowseConnect` ou `SQLDriverConnect`.
 
-- [CSession](../../data/oledb/csession-class.md) essa classe cria uma instância do objeto de sessão, que representa uma sessão de acesso único à fonte de dados. No entanto, você pode criar várias sessões em uma fonte de dados. Para cada sessão, você pode criar conjuntos de linhas, comandos e outros objetos para acessar dados da fonte de dados. A sessão lida com transações.
+- [CSession](../../data/oledb/csession-class.md) Essa classe instancia o objeto Session, que representa uma única sessão de acesso à fonte de dados. No entanto, você pode criar várias sessões em uma fonte de dados. Para cada sessão, você pode criar conjuntos de linhas, comandos e outros objetos para acessar dados da fonte de dados. A sessão manipula transações.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

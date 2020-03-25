@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: 85e95afa92c8a968865d9a3031e1a309e68ae7d3
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: fff4146681e31f0f1fea9fbaa559de7c722740d2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "70311921"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211452"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Criando um consumidor sem usar um assistente
 
@@ -17,7 +17,7 @@ O exemplo a seguir pressupõe que você está adicionando suporte do consumidor 
 
 Adição de suporte do consumidor de OLE DB sem usar o **Assistente de Consumidor OLE DB do ATL**:
 
-- No arquivo *PCH. h* , acrescente as seguintes `#include` instruções:
+- No arquivo *PCH. h* , acrescente as seguintes instruções de `#include`:
 
     ```cpp
     #include <atlbase.h>
@@ -76,6 +76,6 @@ Via programação, um consumidor normalmente executa a seguinte sequência de op
     CoUninitialize();
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Criando um consumidor do OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)

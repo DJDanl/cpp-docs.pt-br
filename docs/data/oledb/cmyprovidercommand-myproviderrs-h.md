@@ -9,12 +9,12 @@ helpviewer_keywords:
 - CMyProviderCommand class in MyProviderRS.H
 - CCustomCommand class in CustomRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
-ms.openlocfilehash: 61bd60b63490303c65729843c3c0351a570a8056
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: afa8571173117a23962eb84f6fa5b4cf2c3c46e7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444153"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211751"
 ---
 # <a name="ccustomcommand-customrsh"></a>CCustomCommand (CustomRS.H)
 
@@ -39,6 +39,6 @@ O objeto Command também fornece uma implementação de `IColumnsInfo`. OLE DB r
 
 O provedor também contém uma interface chamada `IObjectWithSite`. A interface `IObjectWithSite` foi implementada no ATL 2,0 e permite que o implementador Transmita informações sobre si mesmo para seu filho. O objeto Command usa as informações de `IObjectWithSite` para informar qualquer objeto de conjunto de linhas gerado sobre quem os criou.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Arquivos gerados pelo Assistente do Provedor](../../data/oledb/provider-wizard-generated-files.md)

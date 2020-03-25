@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNoRowset class
 ms.assetid: 55c6c7a4-9e3a-4775-a2dd-c8b333012fa6
-ms.openlocfilehash: 6193e2d461761c53fb05e5c16b3914c56d545173
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19a1e01fd29c74cf1c44081c24bf384704cf2acd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230471"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211465"
 ---
 # <a name="cnorowset-class"></a>Classe CNoRowset
 
@@ -28,7 +28,7 @@ template <class TAccessor = CAccessorBase>
 class CNoRowset
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *TAccessor*<br/>
 Uma classe de acessador. O padrão é `CAccessorBase`.
@@ -37,27 +37,27 @@ Uma classe de acessador. O padrão é `CAccessorBase`.
 
 Use `CNoRowset` como um argumento de modelo se o comando não retornar um conjunto de linhas.
 
-`CNoRowset` implementa os seguintes métodos de stub, cada um dos quais correspondem aos outros métodos de classe de acessador:
+`CNoRowset` implementa os seguintes métodos stub, cada um dos quais corresponde a outros métodos de classe de acessador:
 
-- `BindFinished` -Indica quando a associação for concluída (retorna `S_OK`).
+- `BindFinished`-indica quando a associação está concluída (retorna `S_OK`).
 
-- `Close` -Libera linhas e a interface IRowset atual.
+- `Close`-libera as linhas e a interface IRowset atual.
 
-- `GetIID` -Recupera a ID de interface de um ponto de conexão.
+- `GetIID`-recupera a ID de interface de um ponto de conexão.
 
-- `GetInterface` -Recupera uma interface.
+- `GetInterface`-recupera uma interface.
 
-- `GetInterfacePtr` -Recupera um ponteiro de interface encapsulado.
+- `GetInterfacePtr`-recupera um ponteiro de interface encapsulado.
 
-- `SetAccessor` -Define um ponteiro para o acessador.
+- `SetAccessor`-define um ponteiro para o acessador.
 
-- `SetupOptionalRowsetInterfaces` -Configura interfaces opcionais para o conjunto de linhas.
+- `SetupOptionalRowsetInterfaces`-Configura interfaces opcionais para o conjunto de linhas.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atldbcli.h
+**Cabeçalho:** atldbcli. h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

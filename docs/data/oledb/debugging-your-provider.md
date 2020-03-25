@@ -7,33 +7,33 @@ helpviewer_keywords:
 - Visual C++ debugger, debugging providers
 - Visual C++ debugger
 ms.assetid: 90d4e7db-06ea-4de0-a7f4-4f3751d50d93
-ms.openlocfilehash: 21d4cb455413c3f7cbcbed02cdd4c364a469426d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f80ce5dc82dd2baeefe3410a488a5fefda0e9bf0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176142"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211088"
 ---
 # <a name="debugging-your-provider"></a>Depurando o provedor
 
-Há duas maneiras para depurar seu provedor:
+Há duas maneiras de depurar seu provedor:
 
-- Como provedores são criados no processo, você pode criar um código de consumidor usando os modelos de consumidor OLE DB e a etapa no provedor de normalmente.
+- Como os provedores são criados no processo, você pode criar um código de consumidor usando os modelos de consumidor OLE DB e entrar no provedor normalmente.
 
-- Você pode usar vários utilitários que vêm com o Visual C++.
+- Você pode usar vários utilitários que acompanham o C++Visual.
 
-## <a name="to-use-debugging"></a>Usar a depuração
+## <a name="to-use-debugging"></a>Para usar a depuração
 
-1. Abra o projeto de provedor.
+1. Abra o projeto do provedor.
 
-1. Sobre o **projetos** menu, clique em **propriedades**.
+1. No menu **projetos** , clique em **Propriedades**.
 
-1. No **páginas de propriedades** caixa de diálogo, clique o **depuração** guia.
+1. Na caixa de diálogo **páginas de propriedades** , clique na guia **depuração** .
 
-1. Selecione opções conforme requerido, clique em **Okey**.
+1. Selecione as opções conforme necessário, clique em **OK**.
 
-1. Definir pontos de interrupção e, em seguida, depure como de costume.
+1. Defina pontos de interrupção e, em seguida, depurar como de costume.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Trabalhando com modelos de provedor do OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

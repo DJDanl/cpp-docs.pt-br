@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - statements [C++], C++
 ms.assetid: 7028fddf-0d47-469a-a7df-f8576423e066
-ms.openlocfilehash: 4cb4dc9b718e0e6b183df62ddd056da1e0ed398f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59eb1ef2cbb9046a8ed9ea134a0c37aba6c37ba3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267187"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178607"
 ---
 # <a name="statements-c"></a>Instruções (C++)
 
@@ -24,7 +24,7 @@ As instruções em C++ são os elementos do programa que controlam como e em que
 
    - [Instruções de expressão](../cpp/expression-statement.md). Estas instruções avaliam uma expressão para verificar seus efeitos colaterais ou seu valor de retorno.
 
-   - [Instruções nulas&lt;1](../cpp/null-statement.md). Estas instruções podem ser fornecidas nos lugares em que uma instrução é exigida pela sintaxe do C++, mas nenhuma ação deve ser tomada.
+   - [Instruções nulas](../cpp/null-statement.md). Estas instruções podem ser fornecidas nos lugares em que uma instrução é exigida pela sintaxe do C++, mas nenhuma ação deve ser tomada.
 
    - [Instruções compostas](../cpp/compound-statements-blocks.md). Estas instruções são grupos de instruções entre chaves ({ }). Podem ser usadas onde quer que uma instrução simples possa ser usada.
 
@@ -36,8 +36,8 @@ As instruções em C++ são os elementos do programa que controlam como e em que
 
    - [Instruções de declaração](declarations-and-definitions-cpp.md). As declarações introduzem um nome em um programa.
 
-Para obter informações sobre instruções de tratamento de exceções, consulte [tratamento de exceções](../cpp/exception-handling-in-visual-cpp.md).
+Para obter informações sobre instruções de tratamento de exceção, consulte [manipulação de exceção](../cpp/exception-handling-in-visual-cpp.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)

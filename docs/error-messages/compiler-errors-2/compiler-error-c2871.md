@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2871
 ms.assetid: 44aeb84d-61f0-45e0-8dad-22a3cd46b7f8
-ms.openlocfilehash: 355a485de46916977be6f7b801794806a9c9e0ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc24e5fefe9ffd67dc6b01520ea32805a22f70c3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165186"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201676"
 ---
 # <a name="compiler-error-c2871"></a>Erro do compilador C2871
 
-'name': um namespace com esse nome não existe
+' name ': um namespace com este nome não existe
 
-Esse erro ocorrerá quando você passa um identificador que não é um namespace para um [usando](../../cpp/namespaces-cpp.md#using_directives) diretiva.
+Esse erro ocorrerá quando você passar um identificador que não seja um namespace para uma diretiva [using](../../cpp/namespaces-cpp.md#using_directives) .
 
 ## <a name="example"></a>Exemplo
 

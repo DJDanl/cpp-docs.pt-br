@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
-ms.openlocfilehash: 52fe3df7e872c257aa8802f84c548ad57d21be27
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 13805ab1dc2c2b4792fd05c9140006c610b42f75
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447408"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210100"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Referência dos modelos de consumidor de banco de dados OLE
 
@@ -132,7 +132,7 @@ Usado como um índice para acessar dados em um conjunto de linhas.
 [CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md)<br/>
 Usado para recuperar OLE DB informações de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência dos modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [Modelos do OLE DB](../../data/oledb/ole-db-templates.md)

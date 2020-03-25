@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - Error method [C++]
 ms.assetid: b53a15fd-198e-4276-afcd-13439c4807f7
-ms.openlocfilehash: 606f553060e71ece18b3d48159ec40133be28965
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e2c52d10b15822703329dcea18944773f5784ea
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155092"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180752"
 ---
-# <a name="comerrorerror"></a>_com_error::Error
+# <a name="_com_errorerror"></a>_com_error::Error
 
 **Seção específica da Microsoft**
 
-Recupera o HRESULT transmitido ao construtor.
+Recupera o HRESULT passado para o construtor.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,16 +26,16 @@ Recupera o HRESULT transmitido ao construtor.
 HRESULT Error( ) const throw( );
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Item HRESULT bruto passado para o construtor.
 
 ## <a name="remarks"></a>Comentários
 
-Recupera o item HRESULT encapsulado em um `_com_error` objeto.
+Recupera o item de HRESULT encapsulado em um objeto `_com_error`.
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe _com_error](../cpp/com-error-class.md)

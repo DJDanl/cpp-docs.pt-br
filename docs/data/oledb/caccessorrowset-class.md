@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 77c4eebae6ede5d74e24421cc4d3951c78e08777
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: efb5618c03b1f70a809bb2bafe9611474799e00b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447276"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212245"
 ---
 # <a name="caccessorrowset-class"></a>Classe CAccessorRowset
 
@@ -46,7 +46,7 @@ template <class TAccessor = CNoAccessor,
 class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *TAccessor*<br/>
 Uma classe de acessador.
@@ -54,13 +54,13 @@ Uma classe de acessador.
 *TRowset*<br/>
 Uma classe de conjunto de linhas.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atldbcli. h
 
 ## <a name="members"></a>Membros
 
-### <a name="methods"></a>{1&gt;Métodos&lt;1}
+### <a name="methods"></a>Métodos
 
 |||
 |-|-|
@@ -74,7 +74,7 @@ Uma classe de conjunto de linhas.
 
 A classe `TAccessor` gerencia o acessador. A classe *TRowset* gerencia o conjunto de linhas.
 
-## <a name="bind"></a>CAccessorRowset:: bind
+## <a name="caccessorrowsetbind"></a><a name="bind"></a>CAccessorRowset:: bind
 
 Cria as associações se você especificou `bBind` como **false** em [CCommand:: Open](../../data/oledb/ccommand-open.md).
 
@@ -88,7 +88,7 @@ HRESULT Bind();
 
 Um HRESULT padrão.
 
-## <a name="caccessorrowset"></a>CAccessorRowset::CAccessorRowset
+## <a name="caccessorrowsetcaccessorrowset"></a><a name="caccessorrowset"></a>CAccessorRowset::CAccessorRowset
 
 Inicializa o objeto `CAccessorRowset`.
 
@@ -98,7 +98,7 @@ Inicializa o objeto `CAccessorRowset`.
 CAccessorRowset();
 ```
 
-## <a name="close"></a>CAccessorRowset:: fechar
+## <a name="caccessorrowsetclose"></a><a name="close"></a>CAccessorRowset:: fechar
 
 Libera todos os acessadores ativos e o conjunto de linhas.
 
@@ -112,7 +112,7 @@ void Close();
 
 Libera qualquer memória associada.
 
-## <a name="freerecordmemory"></a>CAccessorRowset::FreeRecordMemory
+## <a name="caccessorrowsetfreerecordmemory"></a><a name="freerecordmemory"></a>CAccessorRowset::FreeRecordMemory
 
 Libera Todas as colunas no registro atual que precisam ser liberadas.
 
@@ -122,7 +122,7 @@ Libera Todas as colunas no registro atual que precisam ser liberadas.
 void FreeRecordMemory();
 ```
 
-## <a name="getcolumninfo"></a>CAccessorRowset:: GetColumnInfo
+## <a name="caccessorrowsetgetcolumninfo"></a><a name="getcolumninfo"></a>CAccessorRowset:: GetColumnInfo
 
 Obtém informações de coluna do conjunto de linhas aberto.
 
@@ -137,7 +137,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
    DBCOLUMNINFO** ppColumnInfo);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 Consulte [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) na *referência do programador de OLE DB*.
 
@@ -151,7 +151,7 @@ O usuário deve liberar as informações da coluna retornada e o buffer de cadei
 
 Para obter mais informações, consulte [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) na *referência do programador de OLE DB*.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

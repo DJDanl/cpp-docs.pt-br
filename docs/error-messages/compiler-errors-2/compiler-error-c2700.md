@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2700
 ms.assetid: a231eb86-bdae-4b37-a606-06854f47929f
-ms.openlocfilehash: 204e43f3fc98e8adcc444c3e4753c8cb65744ab5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee2f129cb285c446ebb358e2ae4a45adfba05d7a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367610"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202404"
 ---
 # <a name="compiler-error-c2700"></a>Erro do compilador C2700
 
-'identifier': não pode ser lançado (use/W4 para obter mais informações)
+' identifier ': não pode ser lançado (use/W4 para obter mais informações)
 
-O objeto não pode ser gerado. Compilar com [/W4](../../build/reference/compiler-option-warning-level.md) para obter mais informações de diagnóstico.
+O objeto não pode ser gerado. Compile com [/W4](../../build/reference/compiler-option-warning-level.md) para obter mais informações de diagnóstico.

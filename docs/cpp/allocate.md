@@ -7,18 +7,18 @@ helpviewer_keywords:
 - __declspec keyword [C++], allocate
 - allocate __declspec keyword
 ms.assetid: 67828b31-de60-4c0e-b0a6-ef3aab22641d
-ms.openlocfilehash: a2284395b09c34b0d22c4499bf804cfcc3a74c4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d9429aa7c079f0f99a936019e5945092dc1f006
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155271"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181519"
 ---
 # <a name="allocate"></a>allocate
 
 **Seção específica da Microsoft**
 
-O **alocar** especificador de declaração nomeia um segmento de dados no qual o item de dados será alocado.
+O especificador de Declaração **ALLOCATE** nomeia um segmento de dados no qual o item de dados será alocado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -53,7 +53,7 @@ int main() {
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [__declspec](../cpp/declspec.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

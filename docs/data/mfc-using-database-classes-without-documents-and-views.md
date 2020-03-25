@@ -1,5 +1,5 @@
 ---
-title: 'MFC: Usando Classes de banco de dados sem documentos e exibições'
+title: 'MFC: usando classes de banco de dados sem documentos e exibições'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC applications [C++], without views
@@ -17,85 +17,85 @@ helpviewer_keywords:
 - database applications [C++], without documents
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
-ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57a7abd89bc9bfb465912a35c21f9780668f4466
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396009"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213350"
 ---
-# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: Usando Classes de banco de dados sem documentos e exibições
+# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: usando classes de banco de dados sem documentos e exibições
 
-Às vezes, não convém usar a arquitetura de documento/exibição da estrutura em seus aplicativos de banco de dados. Este tópico explica:
+Às vezes, talvez você não queira usar a arquitetura de documentos/exibições da estrutura em seus aplicativos de banco de dados. Este tópico explica:
 
-- [Quando você não precisa usar documentos](#_core_when_you_don.92.t_need_documents) , como a serialização de documento.
+- [Quando você não precisa usar documentos](#_core_when_you_don.92.t_need_documents) como serialização de documento.
 
-- [Opções do Assistente de aplicativo](#_core_appwizard_options_for_documents_and_views) para dar suporte a aplicativos sem a serialização e sem relacionadas a documentos **arquivo** comandos de menu, como **New**, **abrir** , **Salve**, e **Salvar como**.
+- [Opções do assistente de aplicativo](#_core_appwizard_options_for_documents_and_views) para dar suporte a aplicativos sem serialização e sem comandos de menu de **arquivo** relacionados a documentos, como **novo**, **abrir**, **salvar**e **salvar como**.
 
 - [Como trabalhar com um aplicativo que usa um documento mínimo](#_core_applications_with_minimal_documents).
 
-- [Como estruturar um aplicativo com nenhum documento ou o modo de exibição](#_core_applications_with_no_document).
+- [Como estruturar um aplicativo sem nenhum documento ou exibição](#_core_applications_with_no_document).
 
-##  <a name="_core_when_you_don.92.t_need_documents"></a> Quando você não precisa documentos
+##  <a name="when-you-do-not-need-documents"></a><a name="_core_when_you_don.92.t_need_documents"></a>Quando você não precisa de documentos
 
-Alguns aplicativos têm um conceito distinto de um documento. Esses aplicativos normalmente carrega todos ou a maioria de um arquivo de armazenamento na memória com um **abrir arquivo** comando. Eles write-back o arquivo atualizado para o armazenamento de uma só vez com um **salvar arquivo** ou **Salvar como** comando. O que o usuário vê é um arquivo de dados.
+Alguns aplicativos têm um conceito distinto de um documento. Normalmente, esses aplicativos carregam todo ou a maior parte de um arquivo do armazenamento na memória com um comando **File Open** . Eles gravam o arquivo atualizado de volta ao armazenamento de uma só vez com um comando **File Save** ou **Save as** . O que o usuário vê é um arquivo de dados.
 
-Algumas categorias de aplicativos, no entanto, não exigem um documento. Aplicativos de banco de dados operam em termos de transações. O aplicativo seleciona os registros de um banco de dados e apresenta ao usuário, geralmente um por vez. O que o usuário vê é normalmente um único registro atual, que pode ser o único na memória.
+No entanto, algumas categorias de aplicativos não exigem um documento. Os aplicativos de banco de dados operam em termos de transações. O aplicativo seleciona registros de um banco de dados e os apresenta ao usuário, geralmente um de cada vez. O que o usuário vê geralmente é um único registro atual, que pode ser o único na memória.
 
-Se seu aplicativo não exigir um documento para o armazenamento de dados, você pode dispensar com alguns ou todos da arquitetura de documento/exibição da estrutura. Quanto você dispensar depende a abordagem que você preferir. Você pode:
+Se seu aplicativo não exigir um documento para armazenar dados, você poderá dispensar com algumas ou todas as arquiteturas de documentos/exibições da estrutura. A quantidade de dispensas com o depende da abordagem que você preferir. Você pode:
 
-- Use um documento mínimo como um local para armazenar uma conexão à fonte de dados, mas dispensador com recursos de documento normal, como a serialização. Isso é útil quando você quiser vários modos de exibição dos dados e quiser sincronizar todas as exibições, atualizando-os ao mesmo tempo e assim por diante.
+- Use um documento mínimo como um local para armazenar uma conexão com sua fonte de dados, mas dispensar com recursos de documentos normais, como serialização. Isso é útil quando você deseja várias exibições dos dados e deseja sincronizar todas as exibições, atualizando-as todas de uma vez e assim por diante.
 
-- Use uma janela de quadro no qual você desenhar diretamente, em vez de usar um modo de exibição. Nesse caso, você pode omite o documento e armazena dados ou conexões de dados no objeto de janela com moldura.
+- Use uma janela de quadro, na qual você desenha diretamente, em vez de usar uma exibição. Nesse caso, você omite o documento e armazena quaisquer dados ou conexões de dados no objeto quadro-janela.
 
-##  <a name="_core_appwizard_options_for_documents_and_views"></a> Opções do Assistente de aplicativo para documentos e exibições
+##  <a name="application-wizard-options-for-documents-and-views"></a><a name="_core_appwizard_options_for_documents_and_views"></a>Opções do assistente de aplicativo para documentos e exibições
 
-O Assistente de aplicativo do MFC tem várias opções **selecione o suporte de banco de dados**, que são listadas na tabela a seguir. Se você usar o Assistente de aplicativo do MFC para criar um aplicativo, todas essas opções produzirem aplicativos com documentos e exibições. Algumas opções fornecem documentos e exibições que omitem funcionalidade desnecessários do documento. Para obter mais informações, consulte [suporte de banco de dados, o Assistente de aplicativo MFC](../mfc/reference/database-support-mfc-application-wizard.md).
+O assistente de aplicativo do MFC tem várias opções em **selecionar suporte a banco de dados**, que são listadas na tabela a seguir. Se você usar o assistente de aplicativo do MFC para criar um aplicativo, todas essas opções produzirão aplicativos com documentos e exibições. Algumas opções fornecem documentos e exibições que omitem a funcionalidade de documento desnecessária. Para obter mais informações, consulte [suporte a banco de dados, assistente de aplicativo MFC](../mfc/reference/database-support-mfc-application-wizard.md).
 
-|Opção|Exibir|Documento|
+|Opção|Visualizar|Document|
 |------------|----------|--------------|
-|**Nenhum**|Derivada de `CView`.|Não fornece suporte de nenhum banco de dados. Esta é a opção padrão.<br /><br /> Se você selecionar o **suporte de arquitetura de documento/exibição** opção a [tipo de aplicativo, Assistente de aplicativo MFC](../mfc/reference/application-type-mfc-application-wizard.md) página, você obtém suporte de documento completo, incluindo a serialização e **novo** , **Aberto**, **salvar**, e **Salvar como** os comandos no **arquivo** menu. Ver [aplicativos sem nenhum documento](#_core_applications_with_no_document).|
-|**Somente os arquivos de cabeçalho**|Derivada de `CView`.|Fornece o nível básico de suporte do banco de dados para seu aplicativo.<br /><br /> Inclui afxdb. h. Adiciona bibliotecas de vínculo, mas não cria quaisquer classes específicas de banco de dados. Você pode criar conjuntos de registros mais tarde e usá-los para examinar e atualizar registros.|
-|**Exibição de banco de dados sem suporte para arquivo**|Derivado de `CRecordView`|Fornece suporte a documentos, mas não há suporte de serialização. Documento pode armazenar o conjunto de registros e coordenar várias exibições; não oferece suporte a serialização ou o **New**, **abra**, **salvar**, e **Salvar como** comandos. Ver [aplicativos com o mínimo documentos](#_core_applications_with_minimal_documents). Se você incluir um modo de exibição de banco de dados, você deve especificar a fonte de dados.<br /><br /> Inclui um conjunto de registros, bibliotecas de vínculo, uma exibição de registro e arquivos de cabeçalho do banco de dados. (Disponível somente para aplicativos com o **suporte de arquitetura de documento/exibição** opção selecionada na [tipo de aplicativo, Assistente de aplicativo MFC](../mfc/reference/application-type-mfc-application-wizard.md) página.)|
-|**Exibição de banco de dados com suporte para arquivo**|Derivado de `CRecordView`|Fornece suporte total a documentos, incluindo a serialização e relacionadas a documentos **arquivo** comandos de menu. Aplicativos de banco de dados geralmente operam em uma base por registro, em vez de por arquivo base e, portanto, não precisa de serialização. No entanto, você pode ter um uso especial para serialização. Ver [aplicativos com o mínimo documentos](#_core_applications_with_minimal_documents). Se você incluir um modo de exibição de banco de dados, você deve especificar a fonte de dados.<br /><br /> Inclui um conjunto de registros, bibliotecas de vínculo, uma exibição de registro e arquivos de cabeçalho do banco de dados. (Disponível somente para aplicativos com o **suporte de arquitetura de documento/exibição** opção selecionada na [tipo de aplicativo, Assistente de aplicativo MFC](../mfc/reference/application-type-mfc-application-wizard.md) página.)|
+|**Nenhuma**|Derivada de `CView`.|Não fornece suporte a banco de dados. Essa é a opção padrão.<br /><br /> Se você selecionar a opção de **suporte de arquitetura de documento/exibição** na página [tipo de aplicativo, assistente de aplicativo MFC](../mfc/reference/application-type-mfc-application-wizard.md) , obterá suporte a documentos completos, incluindo serialização e **novos**, **abrir**, **salvar**e **salvar como** comandos no menu **arquivo** . Consulte [aplicativos sem nenhum documento](#_core_applications_with_no_document).|
+|**Somente arquivos de cabeçalho**|Derivada de `CView`.|Fornece o nível básico de suporte de banco de dados para seu aplicativo.<br /><br /> Inclui AFXDB. h. Adiciona bibliotecas de links, mas não cria nenhuma classe específica de banco de dados. Você pode criar conjuntos de registros posteriormente e usá-los para examinar e atualizar registros.|
+|**Exibição de banco de dados sem suporte a arquivo**|Derivado de `CRecordView`|Fornece suporte a documentos, mas sem suporte de serialização. O documento pode armazenar conjuntos de registros e coordenar várias exibições; o não oferece suporte à serialização ou aos comandos **novo**, **abrir**, **salvar**e **salvar como** . Consulte [aplicativos com documentos mínimos](#_core_applications_with_minimal_documents). Se você incluir um modo de exibição de banco de dados, deverá especificar a origem dos mesmos.<br /><br /> Inclui arquivos de cabeçalho de banco de dados, bibliotecas de link, uma exibição de registro e um conjunto de registros. (Disponível somente para aplicativos com a opção de **suporte de arquitetura de documento/exibição** selecionada na página [tipo de aplicativo, assistente de aplicativo MFC](../mfc/reference/application-type-mfc-application-wizard.md) .)|
+|**Exibição de banco de dados com suporte a arquivos**|Derivado de `CRecordView`|Fornece suporte a documentos completos, incluindo a serialização e comandos de menu de **arquivo** relacionados a documentos. Os aplicativos de banco de dados normalmente operam em uma base por registro, em vez de por arquivo e, portanto, não precisam de serialização. No entanto, você pode ter um uso especial para a serialização. Consulte [aplicativos com documentos mínimos](#_core_applications_with_minimal_documents). Se você incluir um modo de exibição de banco de dados, deverá especificar a origem dos mesmos.<br /><br /> Inclui arquivos de cabeçalho de banco de dados, bibliotecas de link, uma exibição de registro e um conjunto de registros. (Disponível somente para aplicativos com a opção de **suporte de arquitetura de documento/exibição** selecionada na página [tipo de aplicativo, assistente de aplicativo MFC](../mfc/reference/application-type-mfc-application-wizard.md) .)|
 
-Para uma discussão sobre alternativas para serialização e usos alternativos para serialização, consulte [serialização: Serialização vs. Entrada/saída de banco de dados](../mfc/serialization-serialization-vs-database-input-output.md).
+Para obter uma discussão de alternativas para serialização e usos alternativos para serialização, consulte [serialização: serialização versus entrada/saída de banco de dados](../mfc/serialization-serialization-vs-database-input-output.md).
 
-##  <a name="_core_applications_with_minimal_documents"></a> Aplicativos com documentos mínimos
+##  <a name="applications-with-minimal-documents"></a><a name="_core_applications_with_minimal_documents"></a>Aplicativos com documentos mínimos
 
-O Assistente de aplicativo do MFC tem duas opções que dão suporte a aplicativos de acesso de dados com base em formulário. Cada opção cria um `CRecordView`-derivado da classe de exibição e um documento. Elas podem diferir no que eles deixam de fora do documento.
+O assistente de aplicativo do MFC tem duas opções que dão suporte a aplicativos de acesso a dados baseados em formulário. Cada opção cria uma classe de exibição derivada de `CRecordView`e um documento. Eles diferem no que saem do documento.
 
-###  <a name="_core_a_document_without_file_support"></a> Documento sem suporte para arquivo
+###  <a name="document-without-file-support"></a><a name="_core_a_document_without_file_support"></a>Documento sem suporte a arquivo
 
-Selecione a opção de banco de dados do Assistente de aplicativo **modo de exibição sem suporte a arquivos de banco de dados** se você não precisa de serialização de documento. O documento tem as seguintes finalidades úteis:
+Selecione a opção de banco de dados do assistente de aplicativo exibição de banco de dados **sem suporte de arquivo** se você não precisar de serialização de documento. O documento oferece as seguintes finalidades úteis:
 
-- Ele é um local conveniente para armazenar um `CRecordset` objeto.
+- É um local conveniente para armazenar um objeto de `CRecordset`.
 
-   Esse uso é comparável a conceitos de documento comum: o documento armazena os dados (ou, nesse caso, um conjunto de registros) e a exibição é um modo de exibição do documento.
+   Esse uso paraleliza os conceitos de documento comum: o documento armazena os dados (ou, nesse caso, um conjunto de registros) e a exibição é uma exibição do documento.
 
-- Se seu aplicativo apresenta vários modos de exibição (como várias exibições de registro), um documento dá suporte a coordenar os modos de exibição.
+- Se seu aplicativo apresentar várias exibições (como várias exibições de registro), um documento dará suporte à coordenação de exibições.
 
-   Se várias exibições mostram os mesmos dados, você pode usar o `CDocument::UpdateAllViews` a função de membro para coordenar as atualizações para todos os modos de exibição quando qualquer modo de exibição altera os dados.
+   Se várias exibições mostrarem os mesmos dados, você poderá usar a função de membro `CDocument::UpdateAllViews` para coordenar as atualizações para todas as exibições quando qualquer exibição alterar os dados.
 
-Você geralmente pode usar essa opção para aplicativos simples baseados em formulário. O Assistente de aplicativo dá suporte a uma estrutura conveniente para tais aplicativos automaticamente.
+Normalmente, você usa essa opção para aplicativos simples baseados em formulário. O assistente de aplicativo dá suporte a uma estrutura conveniente para esses aplicativos automaticamente.
 
-###  <a name="_core_a_document_with_file_support"></a> Documento com suporte para arquivo
+###  <a name="document-with-file-support"></a><a name="_core_a_document_with_file_support"></a>Documento com suporte a arquivos
 
-Selecione a opção de banco de dados do Assistente de aplicativo **modo de exibição com suporte a arquivos de banco de dados** quando você tem a alternativa de usar para o documento relacionado **arquivo** comandos de menu e serialização do documento. Parte de acesso a dados do seu programa, você pode usar o documento da mesma maneira como descrito em [documento sem suporte a arquivos](#_core_a_document_without_file_support). Você pode usar o recurso de serialização do documento, por exemplo, para ler e gravar um documento de perfil de usuário serializada que armazena as preferências do usuário ou outras informações úteis. Para obter mais ideias, consulte [serialização: Serialização vs. Entrada/saída de banco de dados](../mfc/serialization-serialization-vs-database-input-output.md).
+Selecione a opção de banco de dados do assistente de aplicativo **exibição de banco de dados com suporte a arquivos** quando você tiver um uso alternativo para os comandos de menu de **arquivo** relacionados ao documento e a serialização de documento. Para a parte de acesso a dados do seu programa, você pode usar o documento da mesma maneira descrita em [documento sem suporte a arquivos](#_core_a_document_without_file_support). Você pode usar o recurso de serialização do documento, por exemplo, para ler e gravar um documento de perfil de usuário serializado que armazena as preferências do usuário ou outras informações úteis. Para obter mais ideias, consulte [serialização: serialização versus entrada/saída do banco de dados](../mfc/serialization-serialization-vs-database-input-output.md).
 
-O Assistente de aplicativo dá suporte a essa opção, mas você deve escrever o código que serializa o documento. Store as informações serializadas em membros de dados do documento.
+O assistente de aplicativo dá suporte a essa opção, mas você deve escrever o código que serializa o documento. Armazene as informações serializadas em membros de dados de documento.
 
-##  <a name="_core_applications_with_no_document"></a> Aplicativos sem nenhum documento
+##  <a name="applications-with-no-document"></a><a name="_core_applications_with_no_document"></a>Aplicativos sem nenhum documento
 
-Às vezes, você talvez queira escrever um aplicativo que não usa documentos ou modos de exibição. Sem documentos, você armazena seus dados (como um `CRecordset` objeto) em sua classe de janela com moldura ou sua classe de aplicativo. Quaisquer requisitos adicionais dependem se o aplicativo apresenta uma interface do usuário.
+Às vezes, talvez você queira escrever um aplicativo que não use documentos ou exibições. Sem documentos, você armazena seus dados (como um objeto `CRecordset`) em sua classe de janela de quadro ou sua classe de aplicativo. Quaisquer requisitos adicionais dependem se o aplicativo apresenta uma interface do usuário.
 
-###  <a name="_core_database_support_with_a_user_interface"></a> Suporte de banco de dados com uma Interface do usuário
+###  <a name="database-support-with-a-user-interface"></a><a name="_core_database_support_with_a_user_interface"></a>Suporte a banco de dados com uma interface do usuário
 
-Se você tiver uma interface do usuário (em vez de, por exemplo, uma interface de linha de comando do console), seu aplicativo desenha diretamente na área de cliente da janela do quadro, em vez de em uma exibição. Esse aplicativo não usa `CRecordView`, `CFormView`, ou `CDialog` para sua interface do usuário principal, mas normalmente usa `CDialog` para caixas de diálogo comuns.
+Se você tiver uma interface do usuário (diferente de, por exemplo, uma interface de linha de comando do console), seu aplicativo será desenhado diretamente na área do cliente da janela do quadro em vez de em uma exibição. Esse aplicativo não usa `CRecordView`, `CFormView`ou `CDialog` para sua interface do usuário principal, mas normalmente usa `CDialog` para caixas de diálogo comuns.
 
-###  <a name="_core_writing_applications_without_documents"></a> Escrevendo aplicativos sem documentos
+###  <a name="writing-applications-without-documents"></a><a name="_core_writing_applications_without_documents"></a>Gravando aplicativos sem documentos
 
-Porque o Assistente de aplicativo não oferece suporte a criação de aplicativos sem documentos, você deve escrever seu próprio `CWinApp`-classe derivada e, se necessário, crie também uma `CFrameWnd` ou `CMDIFrameWnd` classe. Substituir `CWinApp::InitInstance` e declarar um objeto de aplicativo, como:
+Como o assistente de aplicativo não oferece suporte à criação de aplicativos sem documentos, você deve escrever sua própria classe derivada de `CWinApp`e, se necessário, também criar uma classe `CFrameWnd` ou `CMDIFrameWnd`. Substitua `CWinApp::InitInstance` e declare um objeto de aplicativo como:
 
 ```cpp
 CYourNameApp theApp;
@@ -103,22 +103,22 @@ CYourNameApp theApp;
 
 A estrutura ainda fornece o mecanismo de mapa de mensagens e muitos outros recursos.
 
-###  <a name="_core_database_support_separate_from_the_user_interface"></a> Banco de dados separado de suporte da Interface do usuário
+###  <a name="database-support-separate-from-the-user-interface"></a><a name="_core_database_support_separate_from_the_user_interface"></a>Suporte a banco de dados separado da interface do usuário
 
-Alguns aplicativos precisam de nenhuma interface do usuário ou apenas um mínimo. Por exemplo, suponha que você está escrevendo:
+Alguns aplicativos não precisam de nenhuma interface do usuário ou apenas um mínimo. Por exemplo, suponha que você esteja escrevendo:
 
-- Um objeto de acesso a dados intermediários que outros aplicativos (clientes) exigem um processamento especial de dados entre o aplicativo e a fonte de dados.
+- Um objeto intermediário de acesso a dados que outros aplicativos (clientes) chamam para processamento especial de dados entre o aplicativo e a fonte de dados.
 
-- Um aplicativo que processa os dados sem intervenção do usuário, como um aplicativo que move dados de um formato de banco de dados para outro ou que faz cálculos e executa as atualizações em lotes.
+- Um aplicativo que processa dados sem intervenção do usuário, como um aplicativo que move dados de um formato de banco de dado para outro ou um que faz cálculos e executa atualizações em lotes.
 
-Como nenhum documento possui o `CRecordset` do objeto, você provavelmente deseja armazená-lo como um membro de dados inseridos em seu `CWinApp`-aplicativo classe derivada. As alternativas incluem:
+Como nenhum documento possui o objeto `CRecordset`, você provavelmente desejará armazená-lo como um membro de dados incorporado em sua classe de aplicativo derivada `CWinApp`. As alternativas incluem:
 
-- Não manter uma permanente `CRecordset` em todos os do objeto. É possível passar NULL para seus construtores de classe do conjunto de registros. Nesse caso, o framework cria um temporário `CDatabase` usando as informações no conjunto de registros do objeto `GetDefaultConnect` função de membro. Isso é a abordagem alternativa mais provável.
+- Não manter um objeto `CRecordset` permanente. Você pode passar NULL para seus construtores de classe do conjunto de registros. Nesse caso, a estrutura cria um objeto de `CDatabase` temporário usando as informações na função de membro `GetDefaultConnect` do conjunto de registros. Essa é a abordagem alternativa mais provável.
 
-- Tornando o `CRecordset` uma variável global do objeto. Essa variável deve ser um ponteiro para um objeto de conjunto de registros que você criar dinamicamente no seu `CWinApp::InitInstance` substituir. Isso evita que a tentativa de construir o objeto antes que a estrutura seja inicializada.
+- Tornando o objeto `CRecordset` uma variável global. Essa variável deve ser um ponteiro para um objeto Recordset criado dinamicamente em sua substituição de `CWinApp::InitInstance`. Isso evita a tentativa de construir o objeto antes que a estrutura seja inicializada.
 
-- Usando objetos de conjunto de registros, como você faria no contexto de um documento ou uma exibição. Crie conjuntos de registros no membro de funções de seu aplicativo ou objetos de janela do quadro.
+- Usando objetos Recordset como você faria dentro do contexto de um documento ou de uma exibição. Crie conjuntos de registros nas funções de membro de seus objetos de aplicativo ou janela de quadro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classes de banco de dados MFC](../data/mfc-database-classes-odbc-and-dao.md)

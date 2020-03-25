@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-ms.openlocfilehash: 493f6597d146480714848b37154cc8bacd37113a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab5d5b32ceb87a3b1ccf08d170889dd4825f6c17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516001"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181792"
 ---
 # <a name="sealed--ccli-and-ccx"></a>sealed (C++/CLI e C++/CX)
 
@@ -22,7 +22,7 @@ ms.locfileid: "65516001"
 > [!NOTE]
 > A linguagem padrão ISO 11 do C++introduziu a palavra-chave [final](../cpp/final-specifier.md). Use **final** em classes padrão e **sealed** em classes ref.
 
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
+## <a name="all-runtimes"></a>Todos os Runtimes
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,7 +31,7 @@ ref class identifier sealed {...};
 virtual return-type identifier() sealed {...};
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *identifier*<br/>
 O nome da função ou classe.
@@ -138,6 +138,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

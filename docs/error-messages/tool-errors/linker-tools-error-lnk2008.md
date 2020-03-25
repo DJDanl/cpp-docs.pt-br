@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2008
 ms.assetid: bbcd83c5-c8ae-439e-a033-63643a5bb373
-ms.openlocfilehash: 97bb2be18da5d166d1d5fba42e4ec8ce1f0439fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7794d09f7eeb9dceba7098ca7af90ccf2eeccad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386519"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194818"
 ---
 # <a name="linker-tools-error-lnk2008"></a>Erro das Ferramentas de Vinculador LNK2008
 
-O alvo da correção não está alinhado 'symbol_name'
+O destino de correção não está alinhado ' symbol_name '
 
-LINK encontrado um alvo da correção em seu arquivo de objeto não foi devidamente alinhado.
+O LINK encontrou um destino de correção no arquivo de objeto que não estava alinhado corretamente.
 
-Esse erro pode ser causado pelo alinhamento secton personalizado (#pragma, por exemplo, [pack](../../preprocessor/pack.md)), [alinhar](../../cpp/align-cpp.md) modificador, ou usando o código de linguagem assembly que modifica secton alinhamento.
+Esse erro pode ser causado por um alinhamento de separador personalizado (por exemplo, #pragma [Pack](../../preprocessor/pack.md)), modificador de [alinhamento](../../cpp/align-cpp.md) ou usando o código de linguagem do assembly que modifica o alinhamento da bifurcação.
 
-Se seu código não usa nenhuma das opções acima, isso pode ser causado pelo compilador.
+Se o seu código não usar nenhuma das opções acima, isso pode ser causado pelo compilador.

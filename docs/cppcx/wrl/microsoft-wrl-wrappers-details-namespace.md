@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - Details namespace
 ms.assetid: 6d3f04ac-9b53-4a82-a188-a85309ec34a4
-ms.openlocfilehash: deccd4519b2ddf18725dca5af13b94ac79d6e280
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 005fa79d413708f630b0a6aebbc06782086c81b3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392005"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213753"
 ---
 # <a name="microsoftwrlwrappersdetails-namespace"></a>Namespace Microsoft::WRL::Wrappers::Details
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+O oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,23 +34,23 @@ namespace Microsoft::WRL::Wrappers::Details;
 
 ### <a name="classes"></a>Classes
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|[Classe SyncLockT](synclockt-class.md)|Representa um tipo que pode levar exclusivo ou a propriedade compartilhada de um recurso.|
-|[Classe SyncLockWithStatusT](synclockwithstatust-class.md)|Representa um tipo que pode levar exclusivo ou a propriedade compartilhada de um recurso.|
+|[Classe SyncLockT](synclockt-class.md)|Representa um tipo que pode assumir a propriedade exclusiva ou compartilhada de um recurso.|
+|[Classe SyncLockWithStatusT](synclockwithstatust-class.md)|Representa um tipo que pode assumir a propriedade exclusiva ou compartilhada de um recurso.|
 
 ### <a name="methods"></a>Métodos
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|[Método CompareStringOrdinal](comparestringordinal-method.md)|Compara dois especificado `HSTRING` objetos e retorna um inteiro que indica sua posição relativa em uma ordem de classificação.|
+|[Método CompareStringOrdinal](comparestringordinal-method.md)|Compara dois objetos `HSTRING` especificados e retorna um inteiro que indica sua posição relativa em uma ordem de classificação.|
 
 ## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** corewrappers. h
 
-**Namespace:** Microsoft::WRL::Wrappers::Details
+**Namespace:** Microsoft:: WRL:: wrappers::D etalhes
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL::Wrappers](microsoft-wrl-wrappers-namespace.md)
