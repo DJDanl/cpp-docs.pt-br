@@ -2,12 +2,12 @@
 title: Regras e limitações gerais
 ms.date: 11/04/2016
 ms.assetid: 6c48902d-4259-4761-95d4-e421d69aa050
-ms.openlocfilehash: 3bd8956b08d3e5f2109c5574802a3a8a72fba537
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 1adbaf9d9be3a0fc0724603e01b81700554839bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857522"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188580"
 ---
 # <a name="general-rules-and-limitations"></a>Regras e limitações gerais
 
@@ -85,6 +85,6 @@ ms.locfileid: "74857522"
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [dllexport, dllimport](../cpp/dllexport-dllimport.md)

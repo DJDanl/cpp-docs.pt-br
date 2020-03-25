@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3641
 ms.assetid: e8d3613e-5e8d-46fe-a516-eb7d1de7cd21
-ms.openlocfilehash: f6c27067e4f07c89b4226cf4d26adf2afb0b07ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44356fb1a1818a02102d23e6b308457f2f39506b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385648"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200506"
 ---
 # <a name="compiler-error-c3641"></a>Erro do compilador C3641
 
-> '*função*': inválido de convenção de chamada 'calling_convention' para função compilada com /clr: pure ou /CLR: safe
+> '*Function*': Convenção de chamada inválida ' calling_convention ' para função compilada com/CLR: pure ou/CLR: safe
 
 ## <a name="remarks"></a>Comentários
 
-O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+As opções de compilador **/CLR: Pure** e **/CLR: safe** são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-Somente [clrcall](../../cpp/clrcall.md) convenção de chamada é permitida com [/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md).
+Somente [__clrcall](../../cpp/clrcall.md) Convenção de chamada é permitida com [/CLR: Pure](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Exemplo
 

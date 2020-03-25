@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C1208
 ms.assetid: 4eefd8f0-5c2e-4a11-9e63-293e1139db65
-ms.openlocfilehash: ffa4aae19cc83617363fcfb3536f5a364aeed00f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf4af072d000e70114ed1723ec802086ca90ba48
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228790"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203392"
 ---
 # <a name="fatal-error-c1208"></a>Erro fatal C1208
 
-Não há suporte para alocar classes de referência na pilha pela versão do tempo de execução instalado
+Não há suporte para a alocação de classes de referência na pilha na versão do tempo de execução instalada
 
-C1208 ocorre quando você tem um compilador para a versão atual, mas um common language runtime de uma versão anterior.
+C1208 ocorre quando você tem um compilador para a versão atual, mas uma Common Language Runtime de uma versão anterior.
 
 Algumas funcionalidades do compilador podem não funcionar em uma versão anterior do tempo de execução.
 
-Instale a versão common language runtime que é destinado para uso com o compilador.
+Instale a versão Common Language Runtime destinada ao uso com seu compilador.

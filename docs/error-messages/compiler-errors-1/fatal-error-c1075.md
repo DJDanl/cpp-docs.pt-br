@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1075
 ms.assetid: 69a74e3d-b53f-4526-a440-2c94e6403355
-ms.openlocfilehash: 36dad542d6ff421ad227b09ebd58052b940b18a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2701cebb7c1da7d737930af11d6c6336fe4e9aa2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166796"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204159"
 ---
 # <a name="fatal-error-c1075"></a>Erro fatal C1075
 
-o token esquerdo foi sem correspondência no final do arquivo
+o token esquerdo não corresponde ao fim do arquivo
 
-O compilador esperadas *token* antes de que atingiu o final do arquivo.
+O compilador esperava correspondência de *token* antes de atingir o final do arquivo.
 
-Esse erro pode ser causado por um colchete sem correspondência, chave, ou outros emparelhado caractere.
+Esse erro pode ser causado por um colchete, chave ou outro caractere emparelhado sem correspondência.

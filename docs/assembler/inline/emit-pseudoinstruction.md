@@ -7,18 +7,18 @@ helpviewer_keywords:
 - byte defining (inline assembly)
 - _emit pseudoinstruction
 ms.assetid: 004c48f3-364c-4e82-9a51-e326f9cc7b2b
-ms.openlocfilehash: f2a7c9c4dab97bc1aba3147b5d75f6abbdac951f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8be250aadf20dc4a7dee6a0b565ece21840339d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167148"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169468"
 ---
-# <a name="emit-pseudoinstruction"></a>Pseudoinstrução _emit
+# <a name="_emit-pseudoinstruction"></a>Pseudoinstrução _emit
 
 **Seção específica da Microsoft**
 
-O **pseudoinstrução** Emit define um byte na posição atual no segmento de texto atual. O **pseudoinstrução** Emit é semelhante a [DB](../../assembler/masm/db.md) diretiva do MASM.
+O **_emit** pseudoinstruction define um byte no local atual no segmento de texto atual. O **_emit** pseudoinstruction se assemelha à diretiva [DB](../../assembler/masm/db.md) de MASM.
 
 O fragmento a seguir coloca os bytes 0x4A, 0x43 e 0x4B no código:
 
@@ -33,10 +33,10 @@ __asm {
 ```
 
 > [!CAUTION]
-> Se `_emit` gera instruções que modificam os registros e você compila o aplicativo com otimizações, o compilador não pode determinar quais registros são afetados. Por exemplo, se `_emit` gera uma instrução que modifica o **rax** register, o compilador não sabe disso **rax** foi alterado. O compilador pode, em seguida, fazer uma suposição incorreta sobre o valor em que registrar depois que o código de assembler embutido é executado. Consequentemente, seu aplicativo pode apresentar um comportamento imprevisível, quando ele é executado.
+> Se `_emit` gerar instruções que modificam os registros e você compilar o aplicativo com otimizações, o compilador não poderá determinar quais registros serão afetados. Por exemplo, se `_emit` gera uma instrução que modifica o registro **Rax** , o compilador não sabe que **Rax** foi alterado. O compilador pode então fazer uma suposição incorreta sobre o valor no registro depois que o código embutido do assembler é executado. Consequentemente, seu aplicativo pode apresentar comportamento imprevisível quando é executado.
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Usando a linguagem de assembly em blocos __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

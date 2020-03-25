@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: 0073aaa886bba33a0ec6c07fb89d6eee032765c8
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: d12b338b4b52d81b01097a1e1f5c83ec10eac774
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972229"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189488"
 ---
 # <a name="dynamic_cast-operator"></a>Operador dynamic_cast
 
@@ -291,7 +291,7 @@ in GlobalTest
 Can't cast to C
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Operadores de conversão](../cpp/casting-operators.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

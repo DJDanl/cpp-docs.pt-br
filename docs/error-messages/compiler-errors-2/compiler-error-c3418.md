@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3418
 ms.assetid: 54042c04-3c45-41c1-bad7-90f9ee05a21b
-ms.openlocfilehash: 8456e9b17b72cd4ac98349d2f2871a1c59f56911
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21023bfb551a1894e25cc4940892dde0f0440a0e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311475"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200864"
 ---
 # <a name="compiler-error-c3418"></a>Erro do compilador C3418
 
-Não há suporte para o especificador de acesso 'especificador'
+Não há suporte para o especificador de acesso ' especificador '
 
-Um especificador de acesso do CLR foi especificado incorretamente.  Para obter mais informações, consulte a visibilidade de tipo e a visibilidade de membro em [como: Definir e consumir Classes e Structs (C++ /CLI CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md).
+Um especificador de acesso CLR foi especificado incorretamente.  Para obter mais informações, consulte visibilidade de tipo e visibilidade de membro em [How to: define and consuma classes andC++structs (/CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md).
 
 ## <a name="example"></a>Exemplo
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2721
 ms.assetid: 7a97823c-3ce1-4112-8253-fc1448685235
-ms.openlocfilehash: bf33ebdc3f34efb22809cbc5e62070226df2fd5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6edda08807c752c9257bf09033538d57ac276ed7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300760"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202119"
 ---
 # <a name="compiler-error-c2721"></a>Erro do compilador C2721
 
-'especificador de ': especificador de classe de armazenamento inválido entre palavra-chave operator e tipo
+' especificador ': especificador de classe de armazenamento inválido entre palavra-chave do operador e tipo
 
-Conversões de tipo definido pelo usuário se aplicam a todas as classes de armazenamento, para que você não pode especificar uma classe de armazenamento em uma conversão de tipo.
+As conversões de tipo definidas pelo usuário se aplicam a todas as classes de armazenamento, portanto, você não pode especificar uma classe de armazenamento em uma conversão de tipo.

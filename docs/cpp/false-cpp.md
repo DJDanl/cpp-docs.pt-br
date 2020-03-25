@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - false keyword [C++]
 ms.assetid: cc13aec5-1f02-4d38-8dbf-5473ea2b354f
-ms.openlocfilehash: 5fc27c7f1dfde7d1f686f0a752652773ade9cc0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f363e309b91e44472447d040aa36752750afec6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183720"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188929"
 ---
 # <a name="false-c"></a>false (C++)
 
-A palavra-chave é um dos dois valores para uma variável do tipo [bool](../cpp/bool-cpp.md) ou uma expressão condicional (uma expressão condicional agora é um **verdadeiro** expressão booleana). Por exemplo, se `i` é uma variável do tipo **bool**, o `i = false;` instrução atribui **falso** para `i`.
+A palavra-chave é um dos dois valores de uma variável do tipo [bool](../cpp/bool-cpp.md) ou uma expressão condicional (uma expressão condicional é agora uma expressão booliana **verdadeira** ). Por exemplo, se `i` for uma variável do tipo **bool**, a instrução `i = false;` atribuirá **false** a `i`.
 
 ## <a name="example"></a>Exemplo
 
@@ -37,6 +37,6 @@ int main()
 0
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Palavras-chave](../cpp/keywords-cpp.md)

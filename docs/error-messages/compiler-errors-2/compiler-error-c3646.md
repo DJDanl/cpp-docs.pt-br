@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3646
 ms.assetid: 4391ead2-9637-4ca3-aeda-5a991b18d66d
-ms.openlocfilehash: 04ff1d026c97c56611f8b786d8a7254db711e4a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13a3ebeb6e7783687abc73cd0dcc018abe827809
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385583"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200467"
 ---
 # <a name="compiler-error-c3646"></a>Erro do compilador C3646
 
-> 'especificador de ': especificador de substituição desconhecido
+> ' especificador ': especificador de substituição desconhecido
 
 ## <a name="remarks"></a>Comentários
 
-O compilador não encontrou um token na posição em que ele esperava-se encontrar um especificador de substituição, mas o token não foi reconhecido pelo compilador.
+O compilador encontrou um token na posição em que esperava encontrar um especificador de substituição, mas o token não foi reconhecido pelo compilador.
 
-Por exemplo, se o não reconhecido *especificador* é **_NOEXCEPT**, substitua-o com a palavra-chave **noexcept**.
+Por exemplo, se o *especificador* não reconhecido for **_NOEXCEPT**, substitua-o pela palavra-chave **noexcept**.
 
 Para obter mais informações, consulte [especificadores de substituição](../../extensions/override-specifiers-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C3646 e mostra uma maneira de corrigir isso:
+O exemplo a seguir gera C3646 e mostra uma maneira de corrigi-lo:
 
 ```cpp
 // C3646.cpp

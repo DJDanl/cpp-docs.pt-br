@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1332
 ms.assetid: b31d5ca0-c27f-4177-896b-2637dccbde24
-ms.openlocfilehash: 3c071ae8ac8c212b5bf3cd3eba8b082d790f7d58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 681a1d723d7a50e04fa2bf57706d61fa995f9789
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161063"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183560"
 ---
 # <a name="linker-tools-error-lnk1332"></a>Erro das Ferramentas de Vinculador LNK1332
 
-detectado\<contagem > tipos de tempo de execução do Windows importados em um módulo e definido em outro módulo
+contagem de\<detectada > tipos de Windows Runtime importados em um módulo e definidos em outro módulo
 
-Quando ele produzida destino atual, o vinculador detectada <`count`> tipos de tempo de execução do Windows, cada um deles é importada em um módulo e também é definida em outro módulo.
+Quando ele produziu o destino atual, o vinculador detectou <`count`> tipos de Windows Runtime, cada um dos quais é importado em um módulo e também definido em outro módulo.
 
-### <a name="to-correct-this-error"></a>Para corrigir este erro
+### <a name="to-correct-this-error"></a>Para corrigir esse erro
 
-- Corrigi cada um dos erros das LNK2039 na compilação de acordo com a sugestão na mensagem de erro.
+- Corrija cada um dos erros de LNK2039 na compilação de acordo com a sugestão na mensagem de erro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Erro das ferramentas de vinculador LNK2039](../../error-messages/tool-errors/linker-tools-error-lnk2039.md)<br/>
 [Erros e avisos das ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)

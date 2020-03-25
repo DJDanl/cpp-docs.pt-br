@@ -26,12 +26,12 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: dac82ecd1c96d1edf9175a29797d93c65bc19c99
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4cdfd99ec344cd357900d76dfc7f9400046e448a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952744"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170183"
 ---
 # <a name="__max"></a>__max
 
@@ -43,12 +43,12 @@ Uma macro de pré-processador que retorna o maior de dois valores.
 #define __max(a,b) (((a) > (b)) ? (a) : (b))
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *a*, *b*<br/>
 Valores de qualquer tipo numérico a serem comparados.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **__max** retorna o maior de seus argumentos.
 
@@ -68,7 +68,7 @@ O argumento retornado é avaliado duas vezes pela macro. Isso pode levar a resul
 
 Para obter mais informações, consulte o exemplo para [__min](min.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [__min](min.md)<br/>
