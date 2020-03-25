@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2362
 ms.assetid: 7aafecbc-b3cf-45a6-9ec3-a17e3f222511
-ms.openlocfilehash: d48806982bbb6cdda4d29e47f6692e7e3601d6de
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 330932f53627f8ba09e9e089cec7809eeeb6ab1c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503205"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206070"
 ---
 # <a name="compiler-error-c2362"></a>Erro do compilador C2362
 
-> inicialização de '*identificador*' é ignorada por ' goto *rótulo*'
+> a inicialização de '*Identifier*' é ignorada por ' GoTo *Label*'
 
-Quando compilado usando [/Za](../../build/reference/za-ze-disable-language-extensions.md), um salto para o rótulo impede que o identificador que está sendo inicializado.
+Quando compilado usando [/za](../../build/reference/za-ze-disable-language-extensions.md), um salto para o rótulo impede que o identificador seja inicializado.
 
-Você só pode saltar após uma declaração com um inicializador que a declaração seja colocada em um bloco que não é inserido, ou se a variável já foi inicializada.
+Você só poderá pular uma declaração com um inicializador se a declaração estiver incluída em um bloco que não é inserido ou se a variável já tiver sido inicializada.
 
 O exemplo a seguir gera C2362:
 
@@ -33,7 +33,7 @@ label1:;
 }
 ```
 
-Solução possível:
+Resolução possível:
 
 ```cpp
 // C2362b.cpp

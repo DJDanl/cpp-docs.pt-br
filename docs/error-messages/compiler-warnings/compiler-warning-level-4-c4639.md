@@ -1,21 +1,21 @@
 ---
-title: Compilador aviso (nível 4) C4639
+title: Aviso do compilador (nível 4) C4639
 ms.date: 11/04/2016
 f1_keywords:
 - C4639
 helpviewer_keywords:
 - C4639
 ms.assetid: f94f7392-cdbb-4bf4-8a00-20dc90d3efe9
-ms.openlocfilehash: 4419493c673cb5916be751cc95af19a779086a5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d379b159cd7fd67629ea74c47a9e55f1167dc74a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408076"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198244"
 ---
-# <a name="compiler-warning-level-4-c4639"></a>Compilador aviso (nível 4) C4639
+# <a name="compiler-warning-level-4-c4639"></a>Aviso do compilador (nível 4) C4639
 
-Erro MSXML, documento XML de comentários não serão processados. Motivo
+Erro de MSXML, comentários de documento XML não serão processados. reason
 
 Esse aviso pode ocorrer por vários motivos.
 
@@ -23,8 +23,8 @@ Para resolver este aviso:
 
 - Recompile.
 
-- Reinstale o MSXML, reinstalando o common language runtime.
+- Reinstale o MSXML reinstalando o Common Language Runtime.
 
-- Editar ou remover o comentário da documentação que está causando o aviso e recompile.
+- Edite ou remova o comentário de documentação que está causando o aviso e recompile.
 
-Quando C4639 é emitido, todos os processamento adicional de comentário XML está desabilitado e o arquivo. XDC não é gerado.
+Quando C4639 é emitido, todo o processamento de comentário XML adicional é desabilitado e o arquivo. xdc não é gerado.

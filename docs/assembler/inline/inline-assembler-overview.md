@@ -7,24 +7,24 @@ helpviewer_keywords:
 - invoking inline assembler
 - inline assembly, inline assembler
 ms.assetid: d990331a-0e33-4760-8d7a-b720b0288335
-ms.openlocfilehash: 21e0d9ca0e64922b83518eb79c19d2f2e67813bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6233e07e115c21a0a173f094079dc9c1753533b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167005"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169391"
 ---
 # <a name="inline-assembler-overview"></a>Visão geral do assembler embutido
 
 **Seção específica da Microsoft**
 
-O assembler integrado permite inserir instruções da linguagem de assembly em seus programas de origem C e C++ sem etapas adicionais de assembly e vinculação. O assembler integrado é incorporado ao compilador e, portanto, não é necessário um assembler separado, como o MASM (Microsoft Macro Assembler).
+O Assembler embutido permite que você incorpore instruções de linguagem de assembly C++ em seus programas C e de origem sem assembly extra e etapas de link. O assembler integrado é incorporado ao compilador e, portanto, não é necessário um assembler separado, como o MASM (Microsoft Macro Assembler).
 
-Como o assembler integrado não requer etapas de link e do assembly separado, é mais conveniente que um assembler separado. Código de assembly embutido pode usar qualquer C ou C++ variável ou função nome que está no escopo, portanto, é fácil integrá-la ao código do programa de C e C++. E porque o código do assembly pode ser misturado com instruções de C e C++, ele pode realizar tarefas que são incômodas ou impossíveis em C ou C++ sozinho.
+Como o assembler integrado não requer etapas de link e do assembly separado, é mais conveniente que um assembler separado. O código de assembly embutido pode usar C++ qualquer c ou nome de função ou variável que esteja no escopo, portanto, é fácil integrá-lo com o C++ C e o código do seu programa. E como o código do assembly pode ser misturado com instruções C++ c e, ele pode executar tarefas que são complicadas ou impossíveis C++ em C ou sozinhas.
 
-O [ASM](../../assembler/inline/asm.md) palavra-chave invoca o assembler embutido e pode aparecer sempre que um C ou C++ instrução é legal. Ela não pode aparecer sozinha. Ela deve ser seguida por uma instrução de assembly, um grupo de instruções entre chaves ou, pelo menos, um par vazio de chaves. O termo "bloco `__asm`" refere-se aqui a qualquer instrução ou grupo de instruções, estando ou não entre chaves.
+A palavra-chave [__asm](../../assembler/inline/asm.md) invoca o Assembler embutido e pode aparecer sempre C++ que um C ou uma instrução for legal. Ela não pode aparecer sozinha. Ela deve ser seguida por uma instrução de assembly, um grupo de instruções entre chaves ou, pelo menos, um par vazio de chaves. O termo "bloco `__asm`" refere-se aqui a qualquer instrução ou grupo de instruções, estando ou não entre chaves.
 
-O código a seguir é uma simples `__asm` bloco entre chaves. (O código é uma sequência personalizada de prólogos da função.)
+O código a seguir é um bloco de `__asm` simples entre chaves. (O código é uma sequência personalizada de prólogos da função.)
 
 ```cpp
 // asm_overview.cpp
@@ -62,6 +62,6 @@ __asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Assembler embutido](../../assembler/inline/inline-assembler.md)<br/>

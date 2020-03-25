@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2124
 ms.assetid: 4eb5c4ec-ca9b-46a0-805b-35e040e9ed41
-ms.openlocfilehash: b61c76c96430ab39a6225ab16b4851b20303f5a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da83601c8a4e99118bb7301da39c5bf9957e10eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219841"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191347"
 ---
 # <a name="resource-compiler-error-rc2124"></a>Erro RC2124 (compilador de recurso)
 
-menus vazios não permitidos
+menus vazios não são permitidos
 
-Uma **final** palavra-chave aparece antes de quaisquer itens de menu são definidos na **MENU** instrução. O compilador de recurso não permite que os menus vazios. Verifique se você não tem qualquer aspas abertas dentro de **MENU** instrução.
+Uma palavra-chave **end** é exibida antes de qualquer item de menu ser definido na instrução de **menu** . O compilador de recurso não permite menus vazios. Verifique se você não tem aspas abertas na instrução de **menu** .

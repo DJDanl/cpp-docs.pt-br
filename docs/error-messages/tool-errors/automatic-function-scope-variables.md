@@ -1,5 +1,5 @@
 ---
-title: Variáveis automáticas (escopo da função)
+title: Variáveis automáticas (escopo de função)
 ms.date: 04/22/2019
 helpviewer_keywords:
 - automatic variables
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, declared within functions
 ms.assetid: 6e1a14c2-1fb0-4937-8628-8d963cc35ed4
-ms.openlocfilehash: 60dcfe61be24516b96054532931fb65245ab31d0
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: ec01f280c9de314ce670cae590c9a6917e9c0f07
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856683"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197873"
 ---
-# <a name="automatic-function-scope-variables"></a>Variáveis automáticas (escopo da função)
+# <a name="automatic-function-scope-variables"></a>Variáveis automáticas (escopo de função)
 
 Uma variável declarada dentro de uma função só pode ser usada dentro do escopo dessa função.
 
@@ -33,7 +33,7 @@ int main() {
 }
 ```
 
-E, em seguida,
+e, em seguida,
 
 ```cpp
 // LNK2019_AV_2.cpp
@@ -53,6 +53,6 @@ void test(void) {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Erro de ferramentas de vinculador LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)
+[Erro de ferramentas do vinculador LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

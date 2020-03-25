@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: 3b00bf78d286ba530dee85240236a2a9ea171113
-ms.sourcegitcommit: a146b169664c001406a0cccc7fbda1b8d7be5078
+ms.openlocfilehash: 2ffb307aa3eb6bb8d253129a550c95342ad497bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69024640"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189462"
 ---
 # <a name="delete-operator-c"></a>Operador delete (C++)
 
@@ -21,8 +21,8 @@ Desaloca um bloco de memória.
 
 ## <a name="syntax"></a>Sintaxe
 
-> [`::`] `delete` *expressão de conversão*\
-> [`::`] `delete []` *expressão de conversão*
+> [`::`] `delete` *expressão cast*\
+> [`::`] `delete []` *expressão CAST*
 
 ## <a name="remarks"></a>Comentários
 
@@ -36,7 +36,7 @@ delete MyDialog;
 
 O uso de **delete** em um ponteiro para um objeto não alocado com **New** fornece resultados imprevisíveis. No entanto, você pode usar **delete** em um ponteiro com o valor 0. Essa provisão significa que, quando o **novo** retorna 0 em caso de falha, a exclusão do resultado de uma **nova** operação com falha é inofensiva. Para obter mais informações, consulte [os operadores New e Delete](../cpp/new-and-delete-operators.md).
 
-Os operadores **New** e **delete** também podem ser usados para tipos internos, incluindo matrizes. Se `pointer` se referir a uma matriz, coloque colchetes`[]`vazios ( `pointer`) antes de:
+Os operadores **New** e **delete** também podem ser usados para tipos internos, incluindo matrizes. Se `pointer` se referir a uma matriz, coloque colchetes vazios (`[]`) antes de `pointer`:
 
 ```cpp
 int* set = new int[100];
@@ -80,7 +80,7 @@ int main()
 }
 ```
 
-Os dois casos a seguir produzem resultados indefinidos: usando a forma de matriz`delete []`de Delete () em um objeto e usando a forma nonarray de Delete em uma matriz.
+Os dois casos a seguir produzem resultados indefinidos: usando a forma de matriz de Delete (`delete []`) em um objeto e usando a forma nonarray de Delete em uma matriz.
 
 ## <a name="example"></a>Exemplo
 
@@ -92,8 +92,8 @@ O operador Delete invoca a função de **exclusão do operador**.
 
 Para objetos que não são do tipo de classe ([Class](../cpp/class-cpp.md), [struct](../cpp/struct-cpp.md)ou [Union](../cpp/unions.md)), o operador global Delete é invocado. Para objetos do tipo de classe, o nome da função de desalocação será resolvido no escopo global se a expressão de exclusão começar com o operador unário de resolução de escopo (`::`). Caso contrário, o operador Delete invoca o destruidor para um objeto antes de desalocar a memória (se o ponteiro não for nulo). O operador delete pode ser definido em uma base por classe; se não houver nenhuma definição para uma classe específica, a exclusão global do operador é chamada. Se a expressão de exclusão for usada para desalocar um objeto da classe cujo tipo estático tem um destruidor virtual, a função de desalocação é resolvida pelo destruidor virtual do tipo dinâmico do objeto.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Expressões com operadores unários](../cpp/expressions-with-unary-operators.md)\
-[Palavras-chave](../cpp/keywords-cpp.md)\
+[Expressões com operadores Unários](../cpp/expressions-with-unary-operators.md)\
+\ [palavras-chave](../cpp/keywords-cpp.md)
 [Operadores new e delete](../cpp/new-and-delete-operators.md)

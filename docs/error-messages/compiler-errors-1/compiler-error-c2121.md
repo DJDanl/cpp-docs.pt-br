@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2121
 ms.assetid: e04f32da-3736-4df3-8a1c-d687afcecf5c
-ms.openlocfilehash: cc16a6212b99142be24560f39888ec0b59a87712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eede1c1c22cd3edf37706589f1148a1d8b2f5be3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397686"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207461"
 ---
 # <a name="compiler-error-c2121"></a>Erro do compilador C2121
 
-'#': caractere inválido: possivelmente o resultado de uma expansão de macro
+' # ': caractere inválido: possivelmente o resultado de uma expansão de macro
 
-Um caractere # inválido pode ter sido inserido por uma macro incorreta que usa o operador token-pasting (#) em vez do operador stringizing (#).
+Um caractere # inválido pode ter sido inserido por uma macro incorreta que usa o operador de colagem de tokens (# #) em vez do operador de cadeia de caracteres (#).

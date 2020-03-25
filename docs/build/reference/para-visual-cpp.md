@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <para> C++ XML tag
 - para C++ XML tag
 ms.assetid: 35f2a1b3-bc14-4f13-bcb0-c39ccbf74d59
-ms.openlocfilehash: d8de55344eef7634d8a9a55a32b8ff5beb8852d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38c50a1152b8fea9b6d7bd55d89deff6546dbc83
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320013"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171171"
 ---
 # <a name="ltparagt"></a>&lt;para&gt;
 
@@ -25,7 +25,7 @@ A marca \<para> é para uso dentro de uma marca, como [\<summary>](summary-visua
 <para>content</para>
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *content*<br/>
 O texto do parágrafo.
@@ -38,6 +38,6 @@ Compile com [/doc](doc-process-documentation-comments-c-cpp.md) para processar c
 
 Consulte [\<summary>](summary-visual-cpp.md) para obter um exemplo sobre o uso de \<para>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Documentação XML](xml-documentation-visual-cpp.md)

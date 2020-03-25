@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3457
 ms.assetid: 5c1e366a-fa75-4cca-b9a3-86d4ebe4090e
-ms.openlocfilehash: 813b1c085cb0464880cb400b6200f9574220bd71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1481bd1d430aff74bff8140941b0ab218acbe364
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363720"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200872"
 ---
 # <a name="compiler-error-c3457"></a>Erro do compilador C3457
 
-'attribute': atributo não suporta argumentos sem nome
+' attribute ': atributo não dá suporte a argumentos sem nome
 
-Atributos de anotação de origem, ao contrário de atributo personalizados de CLR ou atributos de compilador, só há suporte para argumentos nomeados.
+Atributos de anotação de origem, diferentemente dos atributos de atributo ou do compilador personalizado do CLR, dão suporte apenas a argumentos nomeados.
 
 ## <a name="example"></a>Exemplo
 

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0025
 ms.assetid: 57725c78-bc63-44f3-9667-2969b2d7c41d
-ms.openlocfilehash: 5f3699dce75a20b9cc6e1d712bc5702543ab7b6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30445a3abc2a6ad05c983448f57ed5b93df6e61f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383939"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192348"
 ---
 # <a name="project-build-error-prj0025"></a>Erro PRJ0025 (compilação de projeto)
 
-> Arquivo em lotes '*arquivo*' contém conteúdo Unicode que não pôde ser convertido na página de código ANSI do usuário.
+> O arquivo em lotes '*File*' contém o conteúdo Unicode que não pôde ser convertido na página de código ANSI do usuário.
 >
 > *Conteúdo UNICODE do arquivo*
 
-O sistema de projeto encontrado conteúdo Unicode em um personalizado regra de compilação ou criar um evento que não pode ser convertido corretamente na página de código ANSI atual do usuário.
+O sistema de projeto encontrou o conteúdo Unicode em uma regra de compilação personalizada ou um evento de compilação que não pode ser convertido corretamente na página de código ANSI atual do usuário.
 
-A resolução para esse erro é atualizar o conteúdo da regra de compilação ou evento para usar o ANSI ou para instalar a página de código em seu computador e defini-lo como o padrão do sistema de compilação.
+A resolução para esse erro é atualizar o conteúdo da regra de compilação ou do evento de compilação para usar o ANSI ou instalar a página de código no computador e defini-la como o padrão do sistema.
 
-Para obter mais informações sobre personalizado etapas de build e eventos de build, consulte [Noções básicas sobre etapas de compilação personalizadas e eventos de Build](../../build/understanding-custom-build-steps-and-build-events.md).
+Para obter mais informações sobre etapas de compilação personalizadas e eventos de compilação, consulte [noções básicas sobre etapas de compilação personalizadas e eventos de compilação](../../build/understanding-custom-build-steps-and-build-events.md).

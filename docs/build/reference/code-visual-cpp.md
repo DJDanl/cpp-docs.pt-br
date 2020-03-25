@@ -7,14 +7,14 @@ helpviewer_keywords:
 - <code> C++ XML tag
 - code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
-ms.openlocfilehash: bacd95f9c93a439e5bab7a556ac2724a042411b8
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f4bc28c4615a4aab3076940806f54c699ec1ee0e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440162"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169924"
 ---
-# <a name="ltcodegt"></a>&lt;código&gt;
+# <a name="ltcodegt"></a>&lt;code&gt;
 
 A marcação \<code> oferece uma maneira de indicar uma ou várias linhas como código.
 
@@ -24,7 +24,7 @@ A marcação \<code> oferece uma maneira de indicar uma ou várias linhas como c
 <code>content</code>
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *content*<br/>
 O texto a que ser marcado como código.
@@ -35,10 +35,10 @@ Use [\<c>](c-visual-cpp.md) para indicar que uma parte do texto deve ser marcada
 
 Compile com [/doc](doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 Consulte o tópico [\<example>](example-visual-cpp.md) para obter um exemplo de como usar a marca \<code>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Documentação XML](xml-documentation-visual-cpp.md)

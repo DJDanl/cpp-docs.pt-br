@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2004
 ms.assetid: 07645371-e67b-4a2c-b0e0-dde24c94ef7e
-ms.openlocfilehash: 8088494106aa702fda0497fa431e48267167a185
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d26ab12c5b82d52b7dcbb176d9bfa033d7ddfee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160413"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194831"
 ---
 # <a name="linker-tools-error-lnk2004"></a>Erro das Ferramentas de Vinculador LNK2004
 
-estouro de conserto relativo GP para 'target'; breve seção 'seção' é muito grande ou fora do intervalo.
+o estouro relativo de GP foi transcorretivo para ' destino '; a seção curta ' section ' é muito grande ou está fora do intervalo.
 
 A seção era muito grande.
 
-Para resolver esse erro, reduzir o tamanho da seção curta, seja explicitamente colocar dados nas seções longo por meio da seção #pragma (".sectionname", leitura, gravação, longo) e usando `__declspec(allocate(".sectionname"))` em declarações e definições de dados.  Por exemplo,
+Para resolver esse erro, reduza o tamanho da seção curta, colocando explicitamente os dados nas seções longas por meio de #pragma seção (". sectionname", leitura, gravação, longo) e usando `__declspec(allocate(".sectionname"))` em definições de dados e declarações.  Por exemplo,
 
 ```
 #pragma section(".data$mylong", read, write, long)
@@ -32,7 +32,7 @@ char    rg4[16] = { 1 };
 char    rg5[32] = { 1 };
 ```
 
-Você também pode mover os dados agrupados logicamente em sua própria estrutura que será uma coleção de dados maiores que 8 bytes, que o compilador alocará uma seção de dados longos.  Por exemplo,
+Você também pode mover dados logicamente agrupados para sua própria estrutura que será uma coleção de dados com mais de 8 bytes, que o compilador irá alocar em uma seção de dados longos.  Por exemplo,
 
 ```
 // from this...

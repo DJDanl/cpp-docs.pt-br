@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6202
 ms.assetid: 4d17045f-c6dc-4705-9512-e9af12c35fb4
-ms.openlocfilehash: c216c4d01513868dd56f47c7d5ca7f8b734d1797
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8a3a4ab87a410c4cee8f7e4a1a0517c169d0364
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393227"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173654"
 ---
 # <a name="math-error-m6202"></a>Erro M6202 (Math)
 
-'function': erro de sing
+' function ': erro de _SING
 
-Um argumento para a função fornecida era um valor de singularidade para essa função. A função não está definida para o argumento.
+Um argumento para a função fornecida era um valor de singular para esta função. A função não está definida para esse argumento.
 
-Esse erro chama o `_matherr` função com o nome da função, seus argumentos e o tipo de erro. Você pode reescrever o `_matherr` função para personalizar o tratamento de certos erros de matemática de ponto flutuante de tempo de execução.
+Esse erro chama a função `_matherr` com o nome da função, seus argumentos e o tipo de erro. Você pode reescrever a função `_matherr` para personalizar o tratamento de determinados erros de matemática de ponto flutuante de tempo de execução.

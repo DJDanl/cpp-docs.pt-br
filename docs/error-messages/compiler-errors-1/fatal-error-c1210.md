@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C1210
 ms.assetid: e2208309-c284-425c-a7e8-48e96e66f35b
-ms.openlocfilehash: a90ca3e3b55642f1a6cd847997b83e4b7db46818
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50bafa522c931c909b5ce163a78305ffc028765a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385843"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203379"
 ---
 # <a name="fatal-error-c1210"></a>Erro fatal C1210
 
-> /CLR: pure e /CLR: safe não são suportados pela versão do tempo de execução instalado
+> /CLR: Pure e/CLR: safe não são suportados pela versão do tempo de execução instalada
 
-O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+As opções de compilador **/CLR: Pure** e **/CLR: safe** são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-C1210 ocorre quando você tem um compilador para a versão atual, mas um common language runtime de uma versão anterior.
+C1210 ocorre quando você tem um compilador para a versão atual, mas uma Common Language Runtime de uma versão anterior.
 
 Algumas funcionalidades do compilador podem não funcionar em uma versão anterior do tempo de execução.
 
-Para resolver C1210 instale a versão common language runtime que é destinado para uso com o compilador.
+Para resolver o C1210, instale a versão Common Language Runtime destinada ao uso com seu compilador.

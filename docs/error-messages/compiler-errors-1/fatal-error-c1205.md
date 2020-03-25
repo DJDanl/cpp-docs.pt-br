@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1205
 ms.assetid: f855c145-8cf7-4dd1-bb19-257ee38b8382
-ms.openlocfilehash: c6e1fb545af0a069ac7d79957b967eba7659f825
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c37a1ece324971a3c0c68d584c04d78803212476
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166420"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203470"
 ---
 # <a name="fatal-error-c1205"></a>Erro fatal C1205
 
-Generics não são suportados pela versão do tempo de execução instalado
+Os genéricos não são suportados pela versão do tempo de execução instalado
 
-A versão do common language runtime que o compilador está usando não é uma versão do tempo de execução com suporte pelo compilador atual.  Por exemplo, o recurso genéricos requer um tempo de execução que é correspondido para o compilador.
+A versão do Common Language Runtime que o compilador está usando não é uma versão do tempo de execução com suporte do compilador atual.  Por exemplo, o recurso de genéricos requer um tempo de execução que seja correspondido ao compilador.
 
-A especificação de caminho talvez precise ser modificado.
+Talvez seja necessário modificar sua especificação de caminho.

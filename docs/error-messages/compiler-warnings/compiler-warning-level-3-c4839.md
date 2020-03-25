@@ -1,25 +1,25 @@
 ---
-title: Compilador aviso (nível 3) C4839
+title: Aviso do compilador (nível 3) C4839
 ms.date: 09/13/2018
 f1_keywords:
 - C4839
 helpviewer_keywords:
 - C4839
 ms.assetid: f4f99066-9258-4330-81a8-f4a75a1d95ee
-ms.openlocfilehash: 09b6e5b8dc984b35df7de96f5cf8610f2b0f16af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c238dc16359583bf55f7590d2ce7c0363d66df7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401521"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198569"
 ---
-# <a name="compiler-warning-level-3-c4839"></a>Compilador aviso (nível 3) C4839
+# <a name="compiler-warning-level-3-c4839"></a>Aviso do compilador (nível 3) C4839
 
-> uso não padrão da classe*tipo*' como um argumento para uma função variadic
+> uso não padrão da classe '*Type*' como um argumento para uma função Variadic
 
-Classes ou estruturas que são passadas para uma função variadic como `printf` devem ser facilmente copiados. Ao passar esses objetos, o compilador simplesmente faz uma cópia bit a bit e não chama o construtor nem o destruidor.
+Classes ou estruturas que são passadas para uma função Variadic como `printf` devem ser trivialmente copiáveis. Ao passar esses objetos, o compilador simplesmente faz uma cópia bit a bit e não chama o construtor nem o destruidor.
 
-Esse aviso é disponível partir do Visual Studio 2017.
+Esse aviso está disponível a partir do Visual Studio 2017.
 
 ## <a name="example"></a>Exemplo
 
@@ -51,7 +51,7 @@ Para corrigir o erro, é possível chamar uma função membro que retorna um tip
     printf("%i\n", i.load());
 ```
 
-Para cadeias de caracteres criadas e gerenciadas usando `CStringW`, fornecido `operator LPCWSTR()` deve ser usado para converter um `CStringW` objeto para o ponteiro do C esperado pela cadeia de caracteres de formato.
+Para cadeias de caracteres criadas e gerenciadas usando `CStringW`, o `operator LPCWSTR()` fornecido deve ser usado para converter um objeto `CStringW` para o ponteiro C esperado pela cadeia de caracteres de formato.
 
 ```cpp
     CStringW str1;

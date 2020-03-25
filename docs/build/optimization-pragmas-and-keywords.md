@@ -6,22 +6,22 @@ helpviewer_keywords:
 - pragmas, for optimization
 - optimization, keywords and pragmas
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
-ms.openlocfilehash: db9af687c7de560b0012ceea50a7cbfcc7d5de9c
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 192564d475da121a874b5a40de62b37d7f934ce7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341200"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169793"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>Pragmas e palavras-chave de otimização
 
-Várias palavras-chave e pragmas que você usa em seu código C ou C++ afetam otimização:
+Várias palavras-chave e pragmas que você usa em seu C ou C++ código afetam a otimização:
 
 - [__asm](../assembler/inline/asm.md)
 
 - [__assume](../intrinsics/assume.md)
 
-- [inline, __inline, or \__forceinline](../cpp/inline-functions-cpp.md)
+- [inline, __inline ou \__forceinline](../cpp/inline-functions-cpp.md)
 
 - [#pragma auto_inline](../preprocessor/auto-inline.md)
 
@@ -33,12 +33,12 @@ Várias palavras-chave e pragmas que você usa em seu código C ou C++ afetam ot
 
 - [#pragma inline_recursion](../preprocessor/inline-recursion.md)
 
-- [#pragma intrinsic](../preprocessor/intrinsic.md)
+- [#pragma intrínseco](../preprocessor/intrinsic.md)
 
-- [otimizar #pragma](../preprocessor/optimize.md)
+- [#pragma otimizar](../preprocessor/optimize.md)
 
-- [palavra-chave Register](../cpp/storage-classes-cpp.md#register)
+- [Palavra-chave Register](../cpp/storage-classes-cpp.md#register)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Otimizando seu código](optimizing-your-code.md)

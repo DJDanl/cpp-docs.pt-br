@@ -6,33 +6,33 @@ helpviewer_keywords:
 - inline assembly [C++], about inline assembly
 - inline assembly [C++], using
 ms.assetid: 94364d97-faa7-4bdf-8473-570956986c51
-ms.openlocfilehash: ecf1598ec90a8600e1fa9aae565724c254dc11e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e634f78eca753487cf122ac95df55828bb64625
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167389"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169650"
 ---
 # <a name="advantages-of-inline-assembly"></a>Vantagens do assembly embutido
 
 **Seção específica da Microsoft**
 
-Como o assembler integrado não requer etapas de link e do assembly separado, é mais conveniente que um assembler separado. O código do assembly integrado pode usar qualquer nome de variável ou de função C que esteja no escopo. Portanto, ele é de fácil integração com código C do programa. Porque o código do assembly pode ser mesclado embutido com instruções C ou C++, ele pode realizar tarefas que são incômodas ou impossíveis em C ou C++.
+Como o assembler integrado não requer etapas de link e do assembly separado, é mais conveniente que um assembler separado. O código do assembly integrado pode usar qualquer nome de variável ou de função C que esteja no escopo. Portanto, ele é de fácil integração com código C do programa. Como o código do assembly pode ser combinado embutido com C++ instruções C ou, ele pode executar tarefas que são complicadas ou impossíveis em C ou C++.
 
-Os usos de assembly embutido incluem:
+Os usos do assembly embutido incluem:
 
-- Escrevendo funções na linguagem assembly.
+- Gravando funções na linguagem do assembly.
 
-- Otimizando o ponto a seções críticas de velocidade do código.
+- A otimização de cores de seções críticas de velocidade de código.
 
-- Tornando o acesso direto de hardware para drivers de dispositivo.
+- Fazendo o acesso direto ao hardware para drivers de dispositivo.
 
-- Escrevendo código de prólogo e epílogo para chamadas de "naked".
+- Escrever o prólogo e o código epílogo para chamadas "Naked".
 
-Assembly embutido é uma ferramenta de finalidade especial. Se você planeja transferir um aplicativo em computadores diferentes, provavelmente você desejará colocar código específicas do computador em um módulo separado. Como o assembler embutido não dá suporte a todos os do Microsoft Macro Assembler (MASM) diretivas de macro e dados, talvez seja mais conveniente usar MASM para esses módulos.
+O assembly embutido é uma ferramenta de finalidade especial. Se você planeja portar um aplicativo para computadores diferentes, provavelmente desejará colocar o código específico do computador em um módulo separado. Como o Assembler embutido não dá suporte a todas as diretivas de macro e de dados do Microsoft Macro Assembler (MASM), você pode achar mais conveniente usar o MASM para esses módulos.
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Assembler embutido](../../assembler/inline/inline-assembler.md)<br/>

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3286
 ms.assetid: 554328c8-cf44-4f7d-a8d2-def74d28ecdd
-ms.openlocfilehash: 8c09ea34c7dabf2cadecad7c76d766c9496f5a5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c87e98f11a560d0d92be8ea7bc624edd4e09ad2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381339"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201390"
 ---
 # <a name="compiler-error-c3286"></a>Erro do compilador C3286
 
-> '*especificador*': uma variável de iteração não pode ter qualquer especificadores de classe de armazenamento
+> '*especificador*': uma variável de iteração não pode ter nenhum especificador de classe de armazenamento
 
-Uma classe de armazenamento não pode ser especificada em uma variável de iteração. Para obter mais informações, consulte [classes de armazenamento (C++)](../../cpp/storage-classes-cpp.md) e [para cada um, no](../../dotnet/for-each-in.md).
+Uma classe de armazenamento não pode ser especificada em uma variável de iteração. Para obter mais informações, consulte [classes deC++armazenamento ()](../../cpp/storage-classes-cpp.md) e [para cada uma, em](../../dotnet/for-each-in.md).
 
 ## <a name="example"></a>Exemplo
 

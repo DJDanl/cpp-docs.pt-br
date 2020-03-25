@@ -7,12 +7,12 @@ helpviewer_keywords:
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: fba85462218d0cc2ba1d52caa4e59b2cfb9f4fd6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 39b936acc43243973c2f66ef6fc7306026cc3259
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443490"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171041"
 ---
 # <a name="compatibility"></a>Compatibilidade
 
@@ -28,7 +28,7 @@ Exceto conforme indicado na documentação para funções específicas, o UCRT �
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-|{1&gt;Título&lt;1}|Descrição|
+|Title|DESCRIÇÃO|
 |-----------|-----------------|
 |[Os aplicativos UWP, o Windows Runtime e o tempo de execução C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Descreve quando as rotinas UCRT não são compatíveis com aplicativos universais do Windows ou Microsoft Store aplicativos.|
 |[Conformidade com ANSI C](../c-runtime-library/ansi-c-compliance.md)|Descreve a nomenclatura em conformidade com padrão no UCRT.|

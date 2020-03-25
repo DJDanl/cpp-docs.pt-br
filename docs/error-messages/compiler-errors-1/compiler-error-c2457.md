@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2457
 ms.assetid: 347e169d-23ad-434f-8836-5b09b53980ff
-ms.openlocfilehash: a08ac9f9cfbc332b90ad16c663349ee227427278
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40e666b1f2b566ca6309ee7759452647f8101a38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347097"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205238"
 ---
 # <a name="compiler-error-c2457"></a>Erro do compilador C2457
 
-> '*macro*': macro pré-definida não pode aparecer fora do corpo de uma função
+> '*macro*': macro predefinida não pode aparecer fora de um corpo de função
 
-Você tentou usar uma macro predefinida, como [ &#95; &#95;função&#95;&#95;](../../preprocessor/predefined-macros.md), em um espaço global.
+Você tentou usar uma macro predefinida, [ &#95; &#95;&#95;](../../preprocessor/predefined-macros.md)como a função, em um espaço global.
 
 ## <a name="example"></a>Exemplo
 

@@ -1,20 +1,20 @@
 ---
-title: Compilador aviso (nível 1) C4541
+title: Aviso do compilador (nível 1) C4541
 ms.date: 11/04/2016
 f1_keywords:
 - C4541
 helpviewer_keywords:
 - C4541
 ms.assetid: b57b8f3e-117d-4fc2-bba6-faec17e5fa9d
-ms.openlocfilehash: 21ce7648b86ae92041e2f87c1fbcd51d80905efb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6168f68506fa5160ce6127c2531b6b76dfabf85b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214797"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186316"
 ---
-# <a name="compiler-warning-level-1-c4541"></a>Compilador aviso (nível 1) C4541
+# <a name="compiler-warning-level-1-c4541"></a>Aviso do compilador (nível 1) C4541
 
-'identifier' usado em tipo polimórfico 'type' com /GR-; poderá ocorrer comportamento imprevisível
+' identifier ' usado no tipo polimórfico ' type ' com/GR-; pode ocorrer um comportamento imprevisível
 
-Você tentou usar um recurso que exige informações de tipo de tempo de execução sem habilitar informações de tipo de tempo de execução. Recompilar com [/GR](../../build/reference/gr-enable-run-time-type-information.md).
+Você tentou usar um recurso que requer informações de tipo de tempo de execução sem habilitar informações de tipo em tempo de execução. Recompile com [/gr](../../build/reference/gr-enable-run-time-type-information.md).

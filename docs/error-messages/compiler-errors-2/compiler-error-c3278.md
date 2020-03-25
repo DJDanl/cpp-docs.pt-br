@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3278
 ms.assetid: 56f818f5-85a6-4792-843b-54fe16327658
-ms.openlocfilehash: 7618336c08dd111e495d7e4102b8e61c6e927c39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec51064853afa37f75022042c8c6121b6c5248a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382080"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201429"
 ---
 # <a name="compiler-error-c3278"></a>Erro do compilador C3278
 
-> direcionar a chamada de interface ou método puro '*método*' falhará em tempo de execução
+> a chamada direta da interface ou do método puro '*Method*' falhará em tempo de execução
 
 ## <a name="remarks"></a>Comentários
 
-Foi feita uma chamada para um método de interface ou um método puro, que não é permitido.
+Foi feita uma chamada para um método de interface ou um método puro, o que não é permitido.
 
 ## <a name="example"></a>Exemplo
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - exception handling [C++], termination handlers
 - try-catch keyword [C++], termination handlers
 ms.assetid: 52aa1f8f-f8dd-44b8-be94-5e2fc88d44fb
-ms.openlocfilehash: f0b994075a8d59ce5d0955f10bf8c61d357d2db9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a243281e0d984a42cd4b4d9f249d867812d8bca
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209462"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187304"
 ---
 # <a name="writing-a-termination-handler"></a>Escrevendo um manipulador de término
 
@@ -26,14 +26,14 @@ Os manipuladores de término usam a instrução try-finally.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
 
-- [A instrução try-finally](../cpp/try-finally-statement.md)
+- [A instrução try – finally](../cpp/try-finally-statement.md)
 
 - [Limpando recursos](../cpp/cleaning-up-resources.md)
 
-- [Tempo de ações no tratamento de exceções](../cpp/timing-of-exception-handling-a-summary.md)
+- [Tempo de ações na manipulação de exceção](../cpp/timing-of-exception-handling-a-summary.md)
 
-- [Restrições em manipuladores de término](../cpp/restrictions-on-termination-handlers.md)
+- [Restrições em manipuladores de encerramento](../cpp/restrictions-on-termination-handlers.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Tratamento de exceções estruturado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

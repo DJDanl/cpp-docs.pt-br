@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1201
 ms.assetid: e58b9b9a-2c6f-454d-8719-9773aca765d1
-ms.openlocfilehash: 21f429ebffb7cacd6f50b9559d72a63527bfade9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cca16f89b3f6b3053211762dab622d33695d4783
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62229349"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203483"
 ---
 # <a name="fatal-error-c1201"></a>Erro fatal C1201
 
-não é possível continuar após erro de sintaxe na definição do modelo de classe
+Não é possível continuar após erro de sintaxe na definição do modelo de classe
 
 Ocorreu um erro inesperado ao analisar uma definição de modelo de classe.
 
-Corrija quaisquer outros erros e recompile. Se isso falhar, observe as circunstâncias do erro, tentar isolar o problema e criar um caso de teste pode ser reproduzido, em seguida, entre em contato com [Microsoft Product Support Services](/visualstudio/ide/talk-to-us).
+Corrija quaisquer outros erros e recompile. Se isso falhar, observe as circunstâncias do erro, tente isolar o problema e criar um caso de teste reproduzível e entre em contato com [o atendimento Microsoft](/visualstudio/ide/talk-to-us).

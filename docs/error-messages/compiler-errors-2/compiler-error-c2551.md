@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2551
 ms.assetid: 6f48b91d-635b-4eef-b13c-1bf2056c1053
-ms.openlocfilehash: 945062d7723d2c9879aa87eaccf7855d63920a6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d431730c8b9a9a315c54aa3133691bc49e63f445
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353179"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202478"
 ---
 # <a name="compiler-error-c2551"></a>Erro do compilador C2551
 
-' void *' precisa de conversão explícita do tipo
+o tipo ' void * ' precisa de uma conversão explícita
 
-Um `void` ponteiro é atribuído a um ponteiro nonvoid por conversão implícita. Você deve usar uma conversão explícita.
+Um ponteiro de `void` é atribuído a um ponteiro não void por conversão implícita. Você deve usar uma conversão explícita.

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3367
 ms.assetid: e675d42b-f5b0-4d43-aab1-1f5024233102
-ms.openlocfilehash: f53312fa9225270ef79d50d2ad351adce790d6fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bedc94039f8621a93672c0dfa0cad5a54aad796e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300525"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201156"
 ---
 # <a name="compiler-error-c3367"></a>Erro do compilador C3367
 
-'static_member_function': não é possível usar função static para criar um delegate não associado
+' static_member_function ': não é possível usar a função static para criar um delegado não associado
 
-Quando você chama um delegate não associado, você deve passar uma instância de um objeto. Uma vez que uma função de membro estático é chamada pelo nome da classe, você só pode instanciar um delegate não associado com uma função de membro de instância.
+Ao chamar um delegado não associado, você deve passar uma instância de um objeto. Como uma função de membro estático é chamada por meio do nome de classe, você só pode instanciar um delegado não associado com uma função de membro de instância.
 
-Para obter mais informações sobre delegados não associados, consulte [como: Definir e usar delegados (C++/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).
+Para obter mais informações sobre delegados não associados, consulte [How to: define and use delegatesC++(/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).
 
 ## <a name="example"></a>Exemplo
 

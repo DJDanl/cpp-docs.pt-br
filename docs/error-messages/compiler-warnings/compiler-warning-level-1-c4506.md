@@ -1,24 +1,24 @@
 ---
-title: Compilador aviso (nível 1) C4506
+title: Aviso do compilador (nível 1) C4506
 ms.date: 11/04/2016
 f1_keywords:
 - C4506
 helpviewer_keywords:
 - C4506
 ms.assetid: aa682869-65d1-4dad-ba32-198f10b44f91
-ms.openlocfilehash: ad18b8469b602d8e2aaa29087eac75e609fe6844
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10f3c01015dff11a0af40cbb2a4bb92ce33ea535
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160829"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186541"
 ---
-# <a name="compiler-warning-level-1-c4506"></a>Compilador aviso (nível 1) C4506
+# <a name="compiler-warning-level-1-c4506"></a>Aviso do compilador (nível 1) C4506
 
-Nenhuma definição de função embutida 'function'
+nenhuma definição para função embutida ' function '
 
-A função fornecida foi declarada e marcada para inlining mas não foi definida.
+A função fornecida foi declarada e marcada para inlining, mas não foi definida.
 
-O compilador fez não embutir a função.
+O compilador não embutiu a função.
 
-Certifique-se de que as funções externas para ser embutido são declaradas com o `extern` palavra-chave.
+Verifique se as funções externas a serem embutidas são declaradas com a palavra-chave `extern`.

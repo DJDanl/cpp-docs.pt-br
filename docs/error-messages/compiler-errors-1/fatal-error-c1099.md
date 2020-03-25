@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1099
 ms.assetid: c050b074-a06a-4026-9e10-569029cc0739
-ms.openlocfilehash: 673a54f705a8ff46ad94167a4458ab538df69c88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 630e6212e38c63d1cbc54b063c5557970952cb22
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387000"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203834"
 ---
 # <a name="fatal-error-c1099"></a>Erro fatal C1099
 
-Editar e continuar encerrando compilação do mecanismo
+Mecanismo editar e continuar encerrando compilação
 
-Editar e continuar a carregar um arquivo de cabeçalho pré-compilado em preparação para compilar as alterações de código, mas as ações subsequentes (como alterações de código antes do cabeçalho pré-compilado `#include` instrução ou parar o depurador) impediu o editar e continuar do Concluindo a compilação com que o processo. Você não precisa realizar nenhuma ação para corrigir esse erro.
+Editar e continuar carregou um arquivo de cabeçalho pré-compilado em preparação para compilar alterações de código, mas ações subsequentes (como alterações de código antes do cabeçalho pré-compilado `#include` instrução ou parar o depurador) impediram editar e continuar de concluir a compilação com esse processo. Você não precisa realizar nenhuma ação para corrigir esse erro.

@@ -7,23 +7,23 @@ helpviewer_keywords:
 - CAN0033
 - CXX0033
 ms.assetid: 0bd62c5b-de89-481f-9b12-88fe84805afe
-ms.openlocfilehash: 8563eb2fbc24c6ad8db639d2e227802412a16090
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2916808d98f1fabc2157fbedc96d76e196661279
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397049"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195507"
 ---
 # <a name="expression-evaluator-error-cxx0033"></a>Erro CXX0033 (avaliador de expressão)
 
-Erro nas informações de tipo OMF
+erro em informações do tipo OMF
 
-O arquivo executável não tinha um formato de módulo de objeto válido (OMF) para depuração.
+O arquivo executável não tinha um OMF (formato de módulo de objeto) válido para depuração.
 
-Esse erro é idêntico ao CAN0033.
+Esse erro é idêntico a CAN0033.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
 
-1. O arquivo executável não foi criado com a opção de vinculador lançada com esta versão do Visual C++. Vincular novamente o código de objeto usando a versão atual do LINK.exe.
+1. O arquivo executável não foi criado com o vinculador lançado com esta versão do Visual C++. Vincule novamente o código do objeto usando a versão atual do LINK. exe.
 
-1. O arquivo .exe pode ter sido corrompido. Recompile e vincular novamente o programa.
+1. O arquivo. exe pode ter sido corrompido. Recompile e vincule novamente o programa.

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0025
 - CXX0025
 ms.assetid: 3e2fb541-63b3-46ac-9f93-3dadb253bcf6
-ms.openlocfilehash: 695a6e909717fe38dd8db6f4981db0d756fbb390
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b230c10d22abef9bdb8d1fe7030552e52ca3451
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359820"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195767"
 ---
 # <a name="expression-evaluator-error-cxx0025"></a>Erro CXX0025 (avaliador de expressão)
 
-operador precisa struct/union
+o operador precisa de struct/Union
 
-Um operador que usa uma expressão de `struct` ou **união** tipo foi aplicado a uma expressão que não seja um `struct` ou **união**.
+Um operador que usa uma expressão de `struct` ou tipo **Union** foi aplicado a uma expressão que não é uma `struct` ou **Union**.
 
-Componentes de classe, estrutura ou união variáveis devem ter um nome totalmente qualificado. Componentes não podem ser inseridos sem a especificação completa.
+Os componentes de classe, estrutura ou variáveis Union devem ter um nome totalmente qualificado. Os componentes não podem ser inseridos sem especificação completa.
 
-Esse erro é idêntico ao CAN0025.
+Esse erro é idêntico a CAN0025.

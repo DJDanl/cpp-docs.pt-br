@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3320
 ms.assetid: 2ef72d9a-1f1d-4b2e-b244-9fd3f3e70cb6
-ms.openlocfilehash: 622e7366dda4cd6693d9b6128855fa0966e07952
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0289d49ebbb0e30153beb6b0b2bc758bff5ef118
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222473"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201299"
 ---
 # <a name="compiler-error-c3320"></a>Erro do compilador C3320
 
-'type': tipo não pode ter o mesmo nome que a propriedade de 'name' do módulo
+' type ': o tipo não pode ter o mesmo nome que a propriedade ' name ' do módulo
 
-Um exportado-tipo definido pelo usuário (UDT), que pode ser um struct, classe, enum ou união, não pode ter o mesmo nome como o parâmetro passado para o [módulo](../../windows/module-cpp.md) propriedade de nome do atributo.
+Um UDT (tipo definido pelo usuário) exportado, que pode ser uma struct, Class, enum ou Union, não pode ter o mesmo nome que o parâmetro passado para a propriedade Name do atributo de [módulo](../../windows/module-cpp.md) .
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera uma C3320:
+O exemplo a seguir gera C3320:
 
 ```cpp
 // C3320.cpp

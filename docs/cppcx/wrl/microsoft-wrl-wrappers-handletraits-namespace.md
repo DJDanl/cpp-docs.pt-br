@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - HandleTraits namespace
 ms.assetid: 2fb5c6d1-bfc2-4e09-91eb-31705064ffb3
-ms.openlocfilehash: 6ed8156b6a0e71d40d1579fc9a33912f698e1773
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b19cc426fc7c1b4fc6ec0638730d59998f8c108a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391966"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213727"
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Namespace Microsoft::WRL::Wrappers::HandleTraits
 
-Descreve as características dos tipos comuns de recursos com base no identificador.
+Descreve as características de tipos de recursos baseados em identificadores comuns.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,24 +28,24 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
 
 ### <a name="structures"></a>Estruturas
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|[Estrutura CriticalSectionTraits](criticalsectiontraits-structure.md)|É especialista um `CriticalSection` objeto para dar suporte a uma seção crítica inválida ou uma função para liberar uma seção crítica.|
-|[Estrutura EventTraits](eventtraits-structure.md)|Define as características de um `Event` identificador de classe.|
+|[Estrutura CriticalSectionTraits](criticalsectiontraits-structure.md)|Especializa um objeto `CriticalSection` para dar suporte a uma seção crítica inválida ou a uma função para liberar uma seção crítica.|
+|[Estrutura EventTraits](eventtraits-structure.md)|Define características de um identificador de classe de `Event`.|
 |[Estrutura FileHandleTraits](filehandletraits-structure.md)|Define as características de um identificador de arquivo.|
-|[Estrutura HANDLENullTraits](handlenulltraits-structure.md)|Define as características comuns de um identificador não inicializado.|
-|[Estrutura HANDLETraits](handletraits-structure.md)|Define as características comuns de um identificador.|
-|[Estrutura MutexTraits](mutextraits-structure.md)|Define as características comuns do [Mutex](mutex-class.md) classe.|
-|[Estrutura SemaphoreTraits](semaphoretraits-structure.md)|Define as características comuns de um objeto de sinal.|
-|[Estrutura SRWLockExclusiveTraits](srwlockexclusivetraits-structure.md)|Descreve características comuns do `SRWLock` classe no modo de bloqueio exclusivo.|
-|[Estrutura SRWLockSharedTraits](srwlocksharedtraits-structure.md)|Descreve características comuns do `SRWLock` classe no modo de bloqueio compartilhado.|
+|[Estrutura HANDLENullTraits](handlenulltraits-structure.md)|Define características comuns de um identificador não inicializado.|
+|[Estrutura HANDLETraits](handletraits-structure.md)|Define características comuns de um identificador.|
+|[Estrutura MutexTraits](mutextraits-structure.md)|Define características comuns da classe [mutex](mutex-class.md) .|
+|[Estrutura SemaphoreTraits](semaphoretraits-structure.md)|Define características comuns de um objeto Semaphore.|
+|[Estrutura SRWLockExclusiveTraits](srwlockexclusivetraits-structure.md)|Descreve as características comuns da classe `SRWLock` no modo de bloqueio exclusivo.|
+|[Estrutura SRWLockSharedTraits](srwlocksharedtraits-structure.md)|Descreve as características comuns da classe `SRWLock` no modo de bloqueio compartilhado.|
 
 ## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** corewrappers. h
 
-**Namespace:** Microsoft::WRL::Wrappers
+**Namespace:** Microsoft:: WRL:: wrappers
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL::Wrappers](microsoft-wrl-wrappers-namespace.md)

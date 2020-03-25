@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0023
 ms.assetid: ed55a320-e7c8-489f-886e-825feee0d576
-ms.openlocfilehash: 73ac5e7d4675dd9ec724a8f4c7118fe6abd663a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7763ca1d21a13c845e9cd7277d513cca431a9900
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359235"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192621"
 ---
 # <a name="project-build-error-prj0023"></a>Erro PRJ0023 (compilação de projeto)
 
-> Ferramenta '*ferramenta*', a propriedade desconhecida contém o nome de arquivo inválido'*arquivo*'.
+> Ferramenta '*ferramenta*', Propriedade desconhecida contém nome de arquivo inválido '*File*'.
 
-O nome do arquivo *arquivo* especificadas para a ferramenta *ferramenta* era inválido.
+O *arquivo* de nome de arquivo especificado para a *ferramenta* de ferramenta era inválido.
 
 Você pode ter usado uma macro desconhecida ou inválida.
 
-Ver [configuração de propriedades do projeto Visual C++](../../build/working-with-project-properties.md) para obter informações sobre como acessar as propriedades do projeto.
+Consulte [Configurando propriedades do projeto Visual C++ ](../../build/working-with-project-properties.md) para obter informações sobre como acessar as propriedades do seu projeto.

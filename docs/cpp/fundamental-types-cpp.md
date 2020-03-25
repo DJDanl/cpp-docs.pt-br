@@ -46,12 +46,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: e67d31e18ebbb6afd9d98542e4a6aa236b2d3e71
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 14d96453785a55f625b5467458f9cf79e6739acf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445314"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188583"
 ---
 # <a name="built-in-types-c"></a>Tipos internos (C++)
 
@@ -69,7 +69,7 @@ A tabela a seguir explica as restrições de tamanhos de tipo em relação umas 
 
 ### <a name="built-in-type-size-restrictions"></a>Restrições de tamanho de tipo interno
 
-|Categoria|Tipo|{1&gt;Conteúdo&lt;1}|
+|Categoria|Type|Conteúdo|
 |--------------|----------|--------------|
 |Integral|**char**|Tipo **Char** é um tipo integral que geralmente contém membros do conjunto de caracteres de execução básica — por padrão, isso é ASCII na C++Microsoft.<br /><br /> O C++ compilador trata variáveis do tipo **Char**, **sinal assinado**e **caractere não assinado** como tendo tipos diferentes. Variáveis do tipo **Char** são promovidas para **int** como se fossem **caracteres assinados** por tipo por padrão, a menos que a opção de compilação/j seja usada. Nesse caso, eles são tratados como tipo de **caractere não assinado** e são promovidos para **int** sem a extensão de assinatura.|
 ||**bool**|O tipo **bool** é um tipo integral que pode ter um dos dois valores **true** ou **false**. Seu tamanho não é especificado.|
@@ -89,7 +89,7 @@ A tabela a seguir lista a quantidade de armazenamento necessária para tipos int
 
 ### <a name="sizes-of-built-in-types"></a>Tamanhos de tipos internos
 
-|Tipo|Size|
+|Type|Tamanho|
 |----------|----------|
 |**bool**, **Char**, **Char não assinado**, **signed char**, **__int8**|1 byte|
 |**__int16**, **curto**, **sem sinal**, **wchar_t**, **__wchar_t**|2 bytes|
@@ -102,6 +102,6 @@ Consulte [intervalos de tipos de dados](data-type-ranges.md) para obter um resum
 
 Para obter mais informações sobre conversão de tipo, consulte [conversões padrão](standard-conversions.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Intervalos de tipos de dados](data-type-ranges.md)

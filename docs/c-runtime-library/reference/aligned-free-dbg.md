@@ -25,12 +25,12 @@ helpviewer_keywords:
 - _aligned_free_dbg function
 - aligned_free_dbg function
 ms.assetid: eb0cb3c8-0992-4db8-bac3-65f1b8311ca6
-ms.openlocfilehash: b510d16b6e784202094bb05e6364f7af1b1fff97
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 18c1a23d666070afaf1eff687c7d33b0240f0ac3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939913"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171275"
 ---
 # <a name="_aligned_free_dbg"></a>_aligned_free_dbg
 
@@ -44,16 +44,16 @@ void _aligned_free_dbg(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *memblock*<br/>
-Um ponteiro para o bloco de memória que foi retornado para a função [_aligned_malloc](aligned-malloc.md) ou [_aligned_offset_malloc](aligned-offset-malloc.md) .
+Um ponteiro para o bloco de memória que foi retornado para a [_aligned_malloc](aligned-malloc.md) ou [_aligned_offset_malloc](aligned-offset-malloc.md) função.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_aligned_free_dbg** é uma versão de depuração da função [_aligned_free](aligned-free.md) . Quando [_DEBUG](../../c-runtime-library/debug.md) não é definido, cada chamada para **_aligned_free_dbg** é reduzida para uma chamada para `_aligned_free`. Tanto `_aligned_free` o quanto o **_aligned_free_dbg** livres de um bloco de memória no heap base, mas o **_aligned_free_dbg** acomoda um recurso de depuração: a capacidade de manter os blocos liberados na lista vinculada do heap para simular condições de memória insuficiente.
+A função **_aligned_free_dbg** é uma versão de depuração da função [_aligned_free](aligned-free.md) . Quando [_DEBUG](../../c-runtime-library/debug.md) não é definido, cada chamada para **_aligned_free_dbg** é reduzida a uma chamada para `_aligned_free`. Ambos `_aligned_free` e **_aligned_free_dbg** liberar um bloco de memória no heap base, mas **_aligned_free_dbg** acomoda um recurso de depuração: a capacidade de manter os blocos liberados na lista vinculada do heap para simular condições de memória insuficiente.
 
-o **_aligned_free_dbg** executa uma verificação de validade em todos os arquivos especificados e locais de bloco antes de executar a operação gratuita. O aplicativo não deve fornecer essas informações. Ao liberar um bloco de memória, o gerenciador de heap de depuração verifica automaticamente a integridade dos buffers nos dois lados da parte do usuário e emite um relatório de erro se tiver ocorrido substituição. Se o campo _CRTDBG_DELAY_FREE_MEM_DF bit do sinalizador [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) for definido, o bloco liberado será preenchido com o valor 0xDD, atribuído o tipo de bloco _FREE_BLOCK e mantido na lista vinculada de blocos de memória do heap.
+**_aligned_free_dbg** executa uma verificação de validade em todos os arquivos especificados e locais de bloco antes de executar a operação gratuita. O aplicativo não deve fornecer essas informações. Ao liberar um bloco de memória, o gerenciador de heap de depuração verifica automaticamente a integridade dos buffers nos dois lados da parte do usuário e emite um relatório de erro se tiver ocorrido substituição. Se o campo _CRTDBG_DELAY_FREE_MEM_DF bit do sinalizador [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) for definido, o bloco liberado será preenchido com o valor 0xDD, atribuído o tipo de bloco de _FREE_BLOCK e mantido na lista vinculada de blocos de memória do heap.
 
 Se ocorrer um erro ao liberar a memória, o `errno` é definido com informações do sistema operacional sobre a natureza da falha. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -67,6 +67,6 @@ Para obter informações sobre como os blocos de memória são alocados, inicial
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Rotinas de depuração](../../c-runtime-library/debug-routines.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MAX_DIR constant
 - MAX_EXT constant
 ms.assetid: 2b5d0e43-1347-45b4-8397-24a8a45c444e
-ms.openlocfilehash: 89609de3fc5584a960480bff83566f5e38c8be1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 8db9961bd2d5b5b3ea9d3addad3c26737b4f5199
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477526"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171392"
 ---
 # <a name="path-field-limits"></a>Limites de campo do demarcador
 
@@ -48,8 +48,8 @@ Essas constantes definem o comprimento máximo para o caminho e para os campos i
 |`_MAX_PATH`|Comprimento máximo do caminho completo|
 
 > [!NOTE]
-> O tempo de execução C dá suporte a comprimentos de caminho com até 32.768 caracteres; porém, o suporte a esses caminhos mais longos depende do sistema operacional, especificamente do sistema de arquivos. A soma dos campos não deve exceder `_MAX_PATH` para compatibilidade completa com versões anteriores em relação a sistemas de arquivos FAT32. O sistema de arquivos NTFS do Windows é compatível com caminhos com até 32768 caracteres de comprimento, mas somente quando as APIs Unicode são usadas. Ao usar nomes de caminho longos, faça um prefixo para o caminho com os caracteres \\ \\? \ e use as versões Unicode das funções de tempo de execução C.
+> O runtime C dá suporte a comprimentos de caminho com até 32.768 caracteres; porém, o suporte a esses caminhos mais longos depende do sistema operacional, especificamente do sistema de arquivos. A soma dos campos não deve exceder `_MAX_PATH` para compatibilidade completa com versões anteriores em relação a sistemas de arquivos FAT32. O sistema de arquivos NTFS do Windows é compatível com caminhos com até 32768 caracteres de comprimento, mas somente quando as APIs Unicode são usadas. Ao usar nomes de caminho longos, faça um prefixo para o caminho com os caracteres \\\\? \ e use as versões Unicode das funções de runtime C.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Constantes globais](../c-runtime-library/global-constants.md)

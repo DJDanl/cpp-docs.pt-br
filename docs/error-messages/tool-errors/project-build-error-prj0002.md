@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0002
 ms.assetid: 1c820b1f-9a24-4681-80ed-4fcbfd7caa00
-ms.openlocfilehash: d8e13bcc03a02fd9dbc739566a92025a7b97d598
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30680f5b26f3be5e7f9b48d18e82fca42ed65493
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359703"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192933"
 ---
 # <a name="project-build-error-prj0002"></a>Erro de Build PRJ0002 no Projeto
 
-> resultado do erro retornado de '*linha de comando*'.
+> resultado do erro retornado da '*linha de comando*'.
 
-Um comando, *linha de comando*, que foi formado de entrada do usuário na **páginas de propriedades** caixa de diálogo, retornada um código de erro, mas nenhuma informação será exibida no **saída** janela .
+Um comando, *linha de comando*, que foi formado por entrada do usuário na caixa de diálogo **páginas de propriedades** , retornou um código de erro, mas nenhuma informação será exibida na janela **saída** .
 
-A resolução para esse erro depende da ferramenta que gerou o erro. Para MIDL, você terá uma ideia do que deu errado se /o (redirecionar a saída) for definido.
+A resolução para esse erro depende de qual ferramenta gerou o erro. Para MIDL, você terá uma ideia do que deu errado se/o (saída de redirecionamento) for definida.
 
-Um arquivo em lotes, como uma etapa de compilação personalizada ou evento de build, que não é informativo sobre condições de falha também pode ser o motivo para esse erro.
+Um arquivo em lotes, como uma etapa de compilação personalizada ou um evento de Build, que não é informativo sobre as condições de falha também pode ser o motivo desse erro.

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: f1865089100ac7f60e8c011e72eedb3d0a3f8470
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6b9830ac2b6f1eacedd1b59184292f2148087093
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447066"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210854"
 ---
 # <a name="iaccessorimpl-class"></a>Classe IAccessorImpl
 
@@ -56,7 +56,7 @@ template <class T,
 class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 Seu conjunto de linhas ou classe de objeto de comando.
@@ -67,13 +67,13 @@ Unidade de armazenamento para informações de associação. O padrão é a estr
 *BindingVector*<br/>
 Unidade de armazenamento para informações de coluna. O padrão é [CAtlMap](../../atl/reference/catlmap-class.md) , em que o elemento key é um valor HACCESSOR e o elemento Value é um ponteiro para uma estrutura `BindType`.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Atldb. h
 
 ## <a name="members"></a>Membros
 
-### <a name="methods"></a>{1&gt;Métodos&lt;1}
+### <a name="methods"></a>Métodos
 
 |||
 |-|-|
@@ -92,7 +92,7 @@ Unidade de armazenamento para informações de coluna. O padrão é [CAtlMap](..
 
 Isso é obrigatório em conjuntos de linhas e comandos. OLE DB requer que os provedores implementem um HACCESSOR, que é uma marca para uma matriz de estruturas [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) . HACCESSORs fornecidos por `IAccessorImpl` são endereços das estruturas de `BindType`. Por padrão, `BindType` é definido como um `ATLBINDINGS` na definição de modelo de `IAccessorImpl`. `BindType` fornece um mecanismo usado pelo `IAccessorImpl` para controlar o número de elementos em sua matriz de `DBBINDING`, bem como uma contagem de referência e sinalizadores de acessador.
 
-## <a name="iaccessorimpl"></a>IAccessorImpl::IAccessorImpl
+## <a name="iaccessorimpliaccessorimpl"></a><a name="iaccessorimpl"></a>IAccessorImpl::IAccessorImpl
 
 O construtor.
 
@@ -102,7 +102,7 @@ O construtor.
 IAccessorImpl();
 ```
 
-## <a name="addrefaccessor"></a>IAccessorImpl::AddRefAccessor
+## <a name="iaccessorimpladdrefaccessor"></a><a name="addrefaccessor"></a>IAccessorImpl::AddRefAccessor
 
 Adiciona uma contagem de referência a acessador existente.
 
@@ -113,11 +113,11 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
    DBREFCOUNT* pcRefCount);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 Consulte [IAccessor:: AddRefAccessor](/previous-versions/windows/desktop/ms714978(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="createaccessor"></a>IAccessorImpl:: createaccesser
+## <a name="iaccessorimplcreateaccessor"></a><a name="createaccessor"></a>IAccessorImpl:: createaccesser
 
 Cria um acessador de um conjunto de associações.
 
@@ -132,11 +132,11 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
    DBBINDSTATUS rgStatus[]);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 Consulte [IAccessor:: Createaccesser](/previous-versions/windows/desktop/ms720969(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="getbindings"></a>IAccessorImpl:: GetBindings
+## <a name="iaccessorimplgetbindings"></a><a name="getbindings"></a>IAccessorImpl:: GetBindings
 
 Retorna as associações de colunas básicas do consumidor em um acessador.
 
@@ -149,11 +149,11 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
    DBBINDING** prgBindings);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 Consulte [IAccessor:: GetBindings](/previous-versions/windows/desktop/ms721253(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="releaseaccessor"></a>IAccessorImpl::ReleaseAccessor
+## <a name="iaccessorimplreleaseaccessor"></a><a name="releaseaccessor"></a>IAccessorImpl::ReleaseAccessor
 
 Libera um acessador.
 
@@ -164,11 +164,11 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
    DBREFCOUNT* pcRefCount);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 Consulte [IAccessor:: ReleaseAccessor](/previous-versions/windows/desktop/ms719717(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

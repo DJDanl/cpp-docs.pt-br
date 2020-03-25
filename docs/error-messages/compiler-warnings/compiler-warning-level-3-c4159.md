@@ -1,29 +1,29 @@
 ---
-title: Compilador aviso (nível 3) C4159
+title: Aviso do compilador (nível 3) C4159
 ms.date: 11/04/2016
 f1_keywords:
 - C4159
 helpviewer_keywords:
 - C4159
 ms.assetid: e2cf964e-f4b8-4b2c-9569-1abb94307232
-ms.openlocfilehash: e898af8f109ed23bd1784df7b39c174bbed675f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20d6010cb83107946c00f2f7b00cda771b2e70b9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402275"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199011"
 ---
-# <a name="compiler-warning-level-3-c4159"></a>Compilador aviso (nível 3) C4159
+# <a name="compiler-warning-level-3-c4159"></a>Aviso do compilador (nível 3) C4159
 
-> #<a name="pragma-pragmapop--has-popped-previously-pushed-identifier-identifier"></a>pragma pragma(pop,...): ativou o identificador anteriormente enviado '*identificador*'
+> #<a name="pragma-pragmapop--has-popped-previously-pushed-identifier-identifier"></a>pragma pragma (pop,...): foi exibido um identificador '*Identifier*' previamente enviado
 
 ## <a name="remarks"></a>Comentários
 
-Seu código-fonte contém um **push** instrução com um identificador para um pragma seguido por um **pop-up** instrução sem um identificador. Como resultado, *identificador* é aparecidos e subsequentes usos da *identificador* pode causar um comportamento inesperado.
+O código-fonte contém uma instrução **Push** com um identificador para um pragma seguido por uma instrução **pop** sem um identificador. Como resultado, o *identificador* é exibido e usos subsequentes do *identificador* podem causar um comportamento inesperado.
 
 ## <a name="example"></a>Exemplo
 
-Para evitar esse aviso, dar um identificador do **pop-up** instrução. Por exemplo:
+Para evitar esse aviso, forneça um identificador na instrução **pop** . Por exemplo:
 
 ```cpp
 // C4159.cpp

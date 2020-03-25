@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - C2891
 ms.assetid: e12cfb2d-df45-4b0d-b155-c51d17e812fa
-ms.openlocfilehash: d9a1cdafdf7d3a2843aee4a20f71c7e6a4693150
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2544cfc9e8cff283a7c3e0ace499408bb84cd046
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366362"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201624"
 ---
 # <a name="compiler-error-c2891"></a>Erro do compilador C2891
 
-'parameter': não é possível obter o endereço de um parâmetro de modelo
+' Parameter ': não é possível obter o endereço de um parâmetro de template
 
-É possível tomar o endereço de um parâmetro de modelo, a menos que ele é um lvalue. Parâmetros de tipo não são lvalues porque eles não possuem endereço. Valores sem tipo nas listas de parâmetro de modelo que não são l-Values também não tem um endereço. Este é um exemplo de código que faz com que o erro do compilador C2891, porque o valor passado como parâmetro de modelo é uma cópia gerado pelo compilador do argumento de modelo.
+Você não pode obter o endereço de um parâmetro de modelo, a menos que seja um lvalue. Parâmetros de tipo não são lvalues porque não têm endereço. Valores não tipo em listas de parâmetros de modelo que não são lvalue também não têm um endereço. Este é um exemplo de código que causa o erro do compilador C2891, pois o valor passado como parâmetro de modelo é uma cópia gerada pelo compilador do argumento de modelo.
 
 ```
 template <int i> int* f() { return &i; }
 ```
 
-Parâmetros de modelo que são l-Values, como tipos de referência, pode ter seu endereço obtido.
+Os parâmetros de modelo que são lvalue, como tipos de referência, podem ter seu endereço obtido.
 
 ```
 template <int& r> int* f() { return &r; }
 ```
 
-Para corrigir esse erro, não têm o endereço de um parâmetro de modelo, a menos que ele é um lvalue.
+Para corrigir esse erro, não assuma o endereço de um parâmetro de modelo, a menos que seja um lvalue.

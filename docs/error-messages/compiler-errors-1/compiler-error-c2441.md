@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2441
 ms.assetid: ffbd6573-777a-48dd-892f-5cf4a758dcab
-ms.openlocfilehash: 7fcf333f62253eb676c0f0ada1c927ab962ae1ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e5d5335717ec77c61069ad08e209f9e1851dc2f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338916"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205303"
 ---
 # <a name="compiler-error-c2441"></a>Erro do compilador C2441
 
-> '*variável*': um símbolo declarado com __declspec(process) deve ser const em /clr: pure modo
+> '*Variable*': um símbolo declarado com __declspec (Process) deve ser const no modo/CLR: Pure
 
 ## <a name="remarks"></a>Comentários
 
-O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+As opções de compilador **/CLR: Pure** e **/CLR: safe** são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-Por padrão, variáveis são definidas por domínio de aplicativo sob **/clr: pure**. Marcado como uma variável `__declspec(process)` sob **/clr: pure** é propensa a erros, se modificado em um domínio de aplicativo e lidos em outra diferente.
+Por padrão, as variáveis são por domínio de aplicativo sob **/CLR: Pure**. Uma variável marcada `__declspec(process)` em **/CLR: Pure** é propenso a erros se modificada em um domínio de aplicativo e lida em outra.
 
-Portanto, o compilador impõe por processo de ser variáveis `const` sob **/clr: pure**, tomada-los de leitura somente em todos os domínios de aplicativo.
+Portanto, o compilador impõe que as variáveis por processo sejam `const` em **/CLR: Pure**, tornando-as somente leitura em todos os domínios de aplicativo.
 
-Para obter mais informações, consulte [processo](../../cpp/process.md) e [/clr (compilação de tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md).
+Para obter mais informações, consulte [process](../../cpp/process.md) e [/CLR (compilação Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Exemplo
 

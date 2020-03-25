@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: c4b0caadf20d6c5494acf47ee5a788b5ee009c47
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a5384966ff96c4e4831ba06f7c67467156a9ecd2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957335"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170066"
 ---
 # <a name="__rtdynamiccast"></a>__RTDynamicCast
 
-Implementação de tempo de execução do operador [dynamic_cast](../cpp/dynamic-cast-operator.md).
+Implementação de runtime do operador [dynamic_cast](../cpp/dynamic-cast-operator.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,7 +43,7 @@ PVOID __RTDynamicCast (
    ) throw(...)
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *inptr*<br/>
 Ponteiro para um objeto polimórfico.
@@ -60,7 +60,7 @@ Resultado desejado da conversão.
 *isReference*<br/>
 **true** se a entrada for uma referência; **false** se a entrada for um ponteiro.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Ponteiro para o subobjeto apropriado, se for bem-sucedido; caso contrário, **NULL**.
 

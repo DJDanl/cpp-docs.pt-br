@@ -1,5 +1,5 @@
 ---
-title: Assembler embutido
+title: '{1&gt;Assembler embutido&lt;1}'
 ms.date: 08/30/2018
 helpviewer_keywords:
 - assembler [C++]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - inline assembler [C++]
 - inline assembly [C++]
 ms.assetid: 7e13f18f-3628-4306-8b81-4a6d09c043fe
-ms.openlocfilehash: f2be42cd5ab4d335d076a1eb4627c41f5b340350
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d36c4d83a1fbf5d7ad718a7caf1dccb8f6745676
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166939"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169365"
 ---
-# <a name="inline-assembler"></a>Assembler embutido
+# <a name="inline-assembler"></a>{1&gt;Assembler embutido&lt;1}
 
 **Seção específica da Microsoft**
 
@@ -24,7 +24,7 @@ A linguagem de assembly serve para muitas finalidades, como melhorar a velocidad
 > [!NOTE]
 >  Os programas com código assembler embutido não são totalmente portáteis para outras plataformas de hardware. Se seu projeto visa portabilidade, evite usar o assembler embutido.
 
-Assembly embutido não é compatível com o ARM e x64 processadores.  Os tópicos a seguir explicam como usar o assembler embutido do Visual C/C++ com processadores x86:
+Não há suporte para o assembly embutido nos processadores ARM e x64.  Os tópicos a seguir explicam como usar o assembler embutido do Visual C/C++ com processadores x86:
 
 - [Visão geral do assembler embutido](../../assembler/inline/inline-assembler-overview.md)
 
@@ -50,7 +50,7 @@ Assembly embutido não é compatível com o ARM e x64 processadores.  Os tópico
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Intrínsecos do compilador e linguagem assembly](../../intrinsics/compiler-intrinsics-and-assembly-language.md)<br/>
 [Referência da linguagem C++](../../cpp/cpp-language-reference.md)<br/>

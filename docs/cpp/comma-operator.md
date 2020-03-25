@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - comma operator
 ms.assetid: 38e0238e-19da-42ba-ae62-277bfdab6090
-ms.openlocfilehash: 8c6757f402cc7422824f1b701d3d1e4ae2566074
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ea2bd5c0e7653ba7f81531a5c39df2da41662a9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399207"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189761"
 ---
 # <a name="comma-operator-"></a>Operador de vírgula: ,
 
@@ -29,7 +29,7 @@ O operador vírgula tem associatividade da esquerda para a direita. Duas express
 
 As vírgulas podem ser usadas como separadores em alguns contextos, como listas de argumentos de função. Não confunda o uso da vírgula como separador com seu uso como operador; os dois usos são completamente diferentes.
 
-Considere a expressão `e1, e2`. O tipo e o valor da expressão são o tipo e o valor de *e2*; o resultado da avaliação *e1* é descartado. O resultado será um valor l se o operando à direita for um valor l.
+Considere a expressão `e1, e2`. O tipo e o valor da expressão são o tipo e o valor de *E2*; o resultado da avaliação do *E1* é Descartado. O resultado será um valor l se o operando à direita for um valor l.
 
 Onde a vírgula é geralmente usada como separador (por exemplo, nos argumentos reais para funções ou inicializadores agregados), o operador vírgula e seus operandos devem ser colocados entre parênteses. Por exemplo:
 
@@ -60,7 +60,7 @@ int main () {
 30
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)<br/>
 [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

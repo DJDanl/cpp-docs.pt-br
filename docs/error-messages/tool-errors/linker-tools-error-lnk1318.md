@@ -5,31 +5,31 @@ f1_keywords:
 - LNK1318
 helpviewer_keywords:
 - LNK1318
-ms.openlocfilehash: 8ed6489a27d4c0e117f7f18281ff188f40936e0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a61c11a9cbb25fea6fddc0bf1c5c4c2a7af1cf4f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160985"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183573"
 ---
 # <a name="linker-tools-error-lnk1318"></a>Erro das Ferramentas de Vinculador LNK1318
 
-> Erro PDB inesperado; *causar* '*detalhes*'
+> Erro de PDB inesperado; *causa* '*detalhes*'
 
 O vinculador encontrou um erro inesperado ao abrir, ler ou gravar em um arquivo PDB.
 
-Essa mensagem de erro é produzida para problemas incomuns em arquivos PDB. O *causar* e *detalhes* representam as informações disponíveis para o vinculador quando a falha ocorreu. Isso não pode ser muito úteis, como erros comuns ao lidar com arquivos PDB ter mensagens de erro mais informativo separado.
+Essa mensagem de erro é produzida para problemas incomuns em arquivos PDB. A *causa* e os *detalhes* representam as informações disponíveis para o vinculador quando a falha ocorreu. Isso pode não ser muito útil, pois erros comuns ao lidar com arquivos PDB têm mensagens de erro separadas e mais informativas.
 
-Como a origem do erro é incomum, apenas orientação genérica está disponível para resolver esse problema:
+Como a origem do erro é incomum, há apenas conselhos genéricos disponíveis para resolver esse problema:
 
-- Executar uma operação de limpeza em seus diretórios de compilação e, em seguida, fazer uma compilação completa de sua solução.
+- Execute uma operação de limpeza em seus diretórios de compilação e, em seguida, faça uma compilação completa da sua solução.
 
-- Reinicializar o computador, ou verificar se há processos isolados ou travada mspdbsrv.exe e kill-los no Gerenciador de tarefas.
+- Reinicialize o computador ou verifique se há processos MSPDBSRV. exe isolados ou desligados e elimine-os no taskmanager.
 
-- Desative a verificações antivírus em seus diretórios de projeto.
+- Desative as verificações de antivírus em seus diretórios de projeto.
 
-- Use o [/Zf](../../build/reference/zf.md) se usando a opção do compilador [/MP](../../build/reference/mp-build-with-multiple-processes.md) com o MSBuild ou outro paralela o processo de compilação.
+- Use a opção de compilador [/ZF](../../build/reference/zf.md) se estiver usando [/MP](../../build/reference/mp-build-with-multiple-processes.md) com MSBuild ou outro processo de compilação paralela.
 
-- Tente compilar usando o conjunto de ferramentas hospedado de 64 bits.
+- Tente criar usando o conjunto de ferramentas hospedados de 64 bits.
 
-- Serialização de vinculação para atenuar problemas de link paralelo, se necessário. Esse erro pode ser causado se mspdbsrv.exe é iniciado por uma instância do link e é desligado antes que outra instância do link é feita usá-lo. A desvantagem dessa correção é que suas compilações do projeto podem demorar muito para ser concluída.
+- Serialize a vinculação para atenuar problemas de link paralelo, se necessário. Esse erro pode ser causado se MSPDBSRV. exe for iniciado por uma instância do link e for desligado antes que outra instância do link seja feita usando-o. A desvantagem dessa correção é que as compilações do projeto podem levar consideravelmente mais tempo para serem concluídas.

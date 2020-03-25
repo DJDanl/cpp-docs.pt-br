@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C2411
 ms.assetid: 453317d3-0629-4b42-b8ea-3a0b39698ca5
-ms.openlocfilehash: 6aa044e8737e0e4a1eae60ec236a29386bc0df19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84f8c1813c413cac6888008ec0c92e67eccc18e9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403003"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205682"
 ---
 # <a name="compiler-error-c2411"></a>Erro do compilador C2411
 
-'identifier': membro de struct/union inválido em 'context'
+' identifier ': Membro struct/Union inválido em ' Context '
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
 
-1. O identificador não é um membro de uma estrutura visível ou união neste contexto.
+1. O identificador não é um membro de uma estrutura ou União visível neste contexto.
 
-1. O identificador não é um membro da estrutura ou união especificada com o operador de seleção de membro (.).
+1. O identificador não é um membro da estrutura ou União especificada com o operador de seleção de membro (.).

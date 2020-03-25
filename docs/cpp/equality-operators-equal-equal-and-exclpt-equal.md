@@ -13,12 +13,12 @@ helpviewer_keywords:
 - not_eq operator
 - equal to operator
 ms.assetid: ba4e9659-2392-4fb4-be5a-910a2a6df45a
-ms.openlocfilehash: 7e42b66438579bc9be6274863366762b8b4ffbe9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8a0c08f438528caeaac6d5e52e806a36fe56dd25
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444403"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189241"
 ---
 # <a name="equality-operators--and-"></a>Operadores de igualdade: == e !=
 
@@ -41,7 +41,7 @@ O operador equal-to (`==`) retornará **true** (1) se ambos os operandos tiverem
 
 O operador `not_eq` é o equivalente de texto de `!=`. Há duas maneiras de acessar o operador de `not_eq` em seus programas: inclua o arquivo de cabeçalho `iso646.h`ou compile com a opção de compilador [/za](../build/reference/za-ze-disable-language-extensions.md) (desabilitar extensões de linguagem).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 ```cpp
 // expre_Equality_Operators.cpp
@@ -61,7 +61,7 @@ int main() {
 
 Os operadores de igualdade podem comparar ponteiros a membros do mesmo tipo. Nessa comparação, as conversões de ponteiro para membro são executadas. Os ponteiros para membros também podem ser comparados a uma expressão constante que é avaliada como 0.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)<br/>
 [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

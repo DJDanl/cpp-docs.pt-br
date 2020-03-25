@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 0550b8fb42cb62d1a175960d6b0d4ed4dbecdcac
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e7e61369635a1a59ef16aa6262650d9648277eb0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939898"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171314"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s, _waccess_s
 
@@ -57,15 +57,15 @@ errno_t _waccess_s(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *path*<br/>
 Caminho do arquivo ou do diretório.
 
-*modo*<br/>
+*mode*<br/>
 Configuração de permissão.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Cada função retorna 0 se o arquivo tem o modo determinado. A função retorna um código de erro se o arquivo nomeado não existe ou não está acessível no modo determinado. Nesse caso, a função retorna um código de erro do conjunto da seguinte maneira e também define `errno` com o mesmo valor.
 
@@ -88,9 +88,9 @@ Quando usado com arquivos, a função **_access_s** determina se o arquivo espec
 |04|Permissão de leitura.|
 |06|Permissão de leitura e gravação.|
 
-A permissão para ler ou gravar o arquivo não é suficiente para garantir a capacidade de abrir um arquivo. Por exemplo, se um arquivo estiver bloqueado por outro processo, ele poderá não estar acessível, embora **_access_s** retorne 0.
+A permissão para ler ou gravar o arquivo não é suficiente para garantir a capacidade de abrir um arquivo. Por exemplo, se um arquivo estiver bloqueado por outro processo, ele poderá não estar acessível mesmo que **_access_s** retorna 0.
 
-**_waccess_s** é uma versão de caractere largo de **_access_s**, onde o argumento *Path* para **_waccess_s** é uma cadeia de caracteres largos. Caso contrário, **_waccess_s** e **_access_s** se comportam de forma idêntica.
+**_waccess_s** é uma versão de caractere largo do **_access_s**, em que o argumento *Path* para **_waccess_s** é uma cadeia de caracteres largos. Caso contrário, **_waccess_s** e **_access_s** se comportam de forma idêntica.
 
 Essas funções validam seus parâmetros. Se o *caminho* for nulo ou o *modo* não especificar um modo válido, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão `errno` como `EINVAL` e retornarão `EINVAL`.
 
@@ -151,7 +151,7 @@ File crt_access_s.c exists.
 File crt_access_s.c does not have write permission.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>

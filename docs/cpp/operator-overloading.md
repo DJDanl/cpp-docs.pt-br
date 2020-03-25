@@ -11,35 +11,35 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-ms.openlocfilehash: d6a294af3ea7ef6085eae0f7069ea2d1fdbb30e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a16f68088ffffd6c3cf38f5ae3adda5f2d59fb57
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377355"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188565"
 ---
 # <a name="operator-overloading"></a>Sobrecarga de operador
 
-O **operador** palavra-chave declara uma função especificando quais *símbolo do operador* significa quando aplicado às instâncias de uma classe. Isso confere ao operador mais de um significado, ou seja, o "sobrecarrega". O compilador distingue entre os diversos significados de um operador examinando os tipos de seus operandos.
+A palavra-chave **Operator** declara uma função especificando qual *operador-Symbol* significa quando aplicado a instâncias de uma classe. Isso confere ao operador mais de um significado, ou seja, o "sobrecarrega". O compilador distingue entre os diversos significados de um operador examinando os tipos de seus operandos.
 
 ## <a name="syntax"></a>Sintaxe
 
-> *type* **operator** *operator-symbol* **(** *parameter-list* **)**
+> operador operador de *tipo* **operator** *-símbolo* **(** *lista de parâmetros* **)**
 
 ## <a name="remarks"></a>Comentários
 
 Você pode redefinir a função da maioria dos operadores internos globalmente ou em uma classe de cada vez. Os operadores sobrecarregados são implementados como funções.
 
-É o nome de um operador sobrecarregado **operador** *x*, onde *x* é o operador como ele aparece na tabela a seguir. Por exemplo, para sobrecarregar o operador de adição, você define uma função chamada **operador +**. Da mesma forma, para sobrecarregar o operador de adição/atribuição **+=**, define uma função chamada **operator + =**.
+O nome de um operador sobrecarregado é o **Operator** *x*, em que *x* é o operador, como aparece na tabela a seguir. Por exemplo, para sobrecarregar o operador de adição, você define uma função chamada **Operator +** . Da mesma forma, para sobrecarregar o operador de adição/atribuição, **+=** , defina uma função chamada **Operator + =** .
 
 ### <a name="redefinable-operators"></a>Operadores redefiníveis
 
-|Operador|Nome|Tipo|
+|Operador|Nome|Type|
 |--------------|----------|----------|
 |**,**|Vírgula|Binário|
-|**\!**|NOT lógico|Unário|
-|**\!=**|Desigualdade|Binário|
-|**%**|Módulo|Binário|
+|**!**|NOT lógico|Unário|
+|**!=**|Desigualdade|Binário|
+|**%**|Modulus|Binário|
 |**%=**|Atribuição de módulo|Binário|
 |**&**|AND bit a bit|Binário|
 |**&**|Address-of|Unário|
@@ -56,7 +56,7 @@ Você pode redefinir a função da maioria dos operadores internos globalmente o
 |**+=**|Atribuição de adição|Binário|
 |**-**|Subtração|Binário|
 |**-**|Negação unária|Unário|
-|**--**|Decremento <sup>1</sup>|Unário|
+|**--**|Decrementar <sup>1</sup>|Unário|
 |**-=**|Atribuição de subtração|Binário|
 |**->**|Seleção de membro|Binário|
 |**->&#42;**|Seleção de ponteiro para membro|Binário|
@@ -65,27 +65,27 @@ Você pode redefinir a função da maioria dos operadores internos globalmente o
 |**\<**|Menor que|Binário|
 |**<<**|Shift esquerda|Binário|
 |**<<=**|Atribuição de deslocamento para a esquerda|Binário|
-|**<=**|Menor ou igual a|Binário|
+|**<=**|Menor que ou igual a|Binário|
 |**=**|Atribuição|Binário|
-|**==**|Igualdade|Binário|
+|**==**|Igualitário|Binário|
 |**>**|Maior que|Binário|
-|**>=**|Maior ou igual a|Binário|
+|**>=**|Maior que ou igual a|Binário|
 |**>>**|Shift direita|Binário|
 |**>>=**|Atribuição de deslocamento para a direita|Binário|
 |**[ ]**|Subscrito de matriz|—|
 |**^**|OR exclusivo|Binário|
 |**^=**|Atribuição de OR exclusivo|Binário|
-|**&#124;**|OR inclusivo de bit a bit|Binário|
+|**&#124;**|OR inclusivo bit a bit|Binário|
 |**&#124;=**|Atribuição OR inclusivo de bit a bit|Binário|
 |**&#124;&#124;**|OR lógico|Binário|
 |**~**|Complemento de um|Unário|
 |**delete**|Excluir|—|
-|**new**|Novo|—|
+|**novo**|Novo|—|
 |operadores de conversão|operadores de conversão|Unário|
 
-<sup>1</sup> as duas versões da unária aumentam e operadores de decremento: pré-incremento e pós-incremento.
+<sup>1</sup> existem duas versões do incremento unário e os operadores de decréscimo: preincremento e reincrement.
 
-Ver [regras gerais para sobrecarga de operador](../cpp/general-rules-for-operator-overloading.md) para obter mais informações. As restrições nas diversas categorias de operadores sobrecarregados são descritas nos tópicos a seguir:
+Consulte [regras gerais para sobrecarga de operador](../cpp/general-rules-for-operator-overloading.md) para obter mais informações. As restrições nas diversas categorias de operadores sobrecarregados são descritas nos tópicos a seguir:
 
 - [Operadores unários](../cpp/overloading-unary-operators.md)
 
@@ -99,11 +99,11 @@ Ver [regras gerais para sobrecarga de operador](../cpp/general-rules-for-operato
 
 - [Acesso de membro de classe](../cpp/member-access.md)
 
-- [Incremento e decremento](../cpp/increment-and-decrement-operator-overloading-cpp.md).
+- [Incrementar e decrementar](../cpp/increment-and-decrement-operator-overloading-cpp.md).
 
 - [Conversões de tipo definido pelo usuário](../cpp/user-defined-type-conversions-cpp.md)
 
-Os operadores mostrados na tabela a seguir não podem ser sobrecarregados. A tabela inclui os símbolos do pré-processador **#** e **##**.
+Os operadores mostrados na tabela a seguir não podem ser sobrecarregados. A tabela inclui os símbolos de pré-processador **#** e **##** .
 
 ### <a name="nonredefinable-operators"></a>Operadores não redefiníveis
 
@@ -125,7 +125,7 @@ pt.operator+( 3 );  // Call addition operator to add 3 to pt.
 
 ## <a name="example"></a>Exemplo
 
-A exemplo a seguir sobrecarrega o **+** operador para adicionar dois números complexos e retornam o resultado.
+O exemplo a seguir sobrecarrega o operador **+** para adicionar dois números complexos e retorna o resultado.
 
 ```cpp
 // operator_overloading.cpp
@@ -176,7 +176,7 @@ int main() {
 
 - [Acesso de membro](../cpp/member-access.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0032
 ms.assetid: bc6acbea-4041-4237-8b5a-f0434705d89f
-ms.openlocfilehash: f1f292f3979c993a8fa8cb8ff44653ac7124b121
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 62efa0e72c6fbe4bd38983ff0507923392427c04
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344353"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192478"
 ---
 # <a name="project-build-error-prj0032"></a>Erro de Build PRJ0032 no Projeto
 
-A propriedade 'Outputs' para a etapa de compilação personalizada em nível de projeto continha 'macro', que é avaliado como 'macro_expansion'.
+A propriedade ' Outputs ' para a etapa de compilação personalizada no nível do projeto continha ' macro ', que é avaliada como ' macro_expansion '.
 
-Uma etapa de compilação personalizada em um projeto teve saída incorreta provavelmente devido a um problema de avaliação de macro. Esse erro também pode significar que o caminho está mal formado, que contém caracteres ou combinações de caracteres são ilegais em um caminho de arquivo.
+Uma etapa de compilação personalizada em um projeto tinha uma saída inadequada provavelmente devido a um problema de avaliação de macro. Esse erro também pode significar que o caminho está mal formado, contendo caracteres ou combinações de caracteres ilegais em um caminho de arquivo.
 
-Para resolver esse erro, corrija a macro ou corrigir a especificação do caminho. O caminho de avaliado é um caminho absoluto do diretório do projeto.
+Para resolver esse erro, corrija a macro ou corrija a especificação do caminho. O caminho avaliado é um caminho absoluto do diretório do projeto.

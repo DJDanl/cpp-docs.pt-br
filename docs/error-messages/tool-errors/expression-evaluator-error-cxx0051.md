@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0051
 - CXX0051
 ms.assetid: 031cd2ed-d9bb-4aa5-9858-71581bcca49c
-ms.openlocfilehash: 12d7d9ccb1fee096115e8c82c825eb8df336f63b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bacaddb39f1a380053e74c8a7e9fd952dac8ea5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160621"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184821"
 ---
 # <a name="expression-evaluator-error-cxx0051"></a>Erro CXX0051 (avaliador de expressão)
 
 mais de um símbolo sobrecarregado especificado no ponto de interrupção
 
-O avaliador de expressão não pôde determinar qual dos mais de um símbolo sobrecarregado para usar como um ponto de interrupção.
+O avaliador de expressão não pôde determinar qual dos mais de um símbolo sobrecarregado deve ser usado como ponto de interrupção.
 
-Esse erro é idêntico ao CAN0051.
+Esse erro é idêntico a CAN0051.

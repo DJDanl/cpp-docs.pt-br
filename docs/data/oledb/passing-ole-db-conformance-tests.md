@@ -8,27 +8,27 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-ms.openlocfilehash: 9f78b16bc30651560137a39286460a8e5ceccd40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eda4dccda147ddd4776bb56e649f539a7550abd1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282810"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209752"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Passando testes de conformidade de banco de dados OLE
 
-Para provedores de tornar mais consistente, o SDK de acesso de dados fornece um conjunto de testes de conformidade do OLE DB. Os testes de verificar todos os aspectos do seu provedor e lhe dá garantia razoável de que suas funções de provedor como esperadas. Você pode encontrar os testes de conformidade com OLE DB sobre o Microsoft Data Access SDK. Esta seção se concentra em coisas que você deve fazer para passar nos testes de conformidade. Para obter informações sobre como executar os testes de conformidade com OLE DB, consulte o SDK.
+Para tornar os provedores mais consistentes, o SDK de acesso a dados fornece um conjunto de OLE DB testes de conformidade. Os testes verificam todos os aspectos do seu provedor e dão a você uma garantia razoável de que seu provedor funcione conforme o esperado. Você pode encontrar os testes de conformidade do OLE DB no SDK do Microsoft Data Access. Esta seção se concentra nas coisas que você deve fazer para passar os testes de conformidade. Para obter informações sobre como executar os testes de conformidade OLE DB, consulte o SDK.
 
 ## <a name="running-the-conformance-tests"></a>Executando os testes de conformidade
 
-No Visual C++ 6.0, os modelos de provedor do OLE DB adicionado um número de funções de gancho para permitir que você verifique os valores e propriedades. A maioria dessas funções foram adicionada em resposta a testes de conformidade.
+No Visual C++ 6,0, os modelos de provedor de OLE DB adicionaram várias funções de conexão para permitir que você verifique valores e propriedades. A maioria dessas funções foram adicionadas em resposta aos testes de conformidade.
 
 > [!NOTE]
-> Você precisará adicionar várias funções de validação de seu provedor para passar nos testes de conformidade com OLE DB.
+> Você precisa adicionar várias funções de validação para seu provedor para passar os testes de conformidade OLE DB.
 
-Este provedor requer duas rotinas de validação. A rotina primeiro, `CRowsetImpl::ValidateCommandID`, faz parte de sua classe de conjunto de linhas. Ele é chamado durante a criação do conjunto de linhas pelos modelos de provedor. O exemplo usa essa rotina para informar os consumidores que ele não dá suporte a índices. A primeira chamada é para `CRowsetImpl::ValidateCommandID` (Observe que o provedor usa o `_RowsetBaseClass` typedef adicionado no mapa de interface para `CCustomRowset` na [suporte do provedor para indicadores](../../data/oledb/provider-support-for-bookmarks.md), portanto, você não precise digitar essa linha longa de modelo argumentos). Em seguida, retorne DB_E_NOINDEX se o parâmetro de índice não é nulo (Isso indica que o consumidor deseja usar um índice em nós). Para obter mais informações sobre IDs de comando, consulte a especificação OLE DB e procure `IOpenRowset::OpenRowset`.
+Esse provedor requer duas rotinas de validação. A primeira rotina, `CRowsetImpl::ValidateCommandID`, faz parte da classe do conjunto de linhas. Ele é chamado durante a criação do conjunto de linhas pelos modelos de provedor. O exemplo usa essa rotina para informar aos consumidores que ele não oferece suporte a índices. A primeira chamada é para `CRowsetImpl::ValidateCommandID` (Observe que o provedor usa o typedef `_RowsetBaseClass` adicionado no mapa de interface para `CCustomRowset` no [suporte do provedor para indicadores](../../data/oledb/provider-support-for-bookmarks.md), de modo que você não precisa digitar essa linha longa de argumentos de modelo). Em seguida, retorne DB_E_NOINDEX se o parâmetro de índice não for nulo (isso indica que o consumidor deseja usar um índice em nós). Para obter mais informações sobre IDs de comando, consulte a especificação de OLE DB e procure `IOpenRowset::OpenRowset`.
 
-O código a seguir é o `ValidateCommandID` rotina de validação:
+O código a seguir é a rotina de validação de `ValidateCommandID`:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
@@ -48,12 +48,12 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }
 ```
 
-A chamada de modelos de provedor a `OnPropertyChanged` método sempre que alguém altera uma propriedade no grupo de DBPROPSET_ROWSET. Se você quiser manipular propriedades de outros grupos, adicioná-los ao objeto apropriado (ou seja, as verificações DBPROPSET_SESSION entrar a `CCustomSession` classe).
+Os modelos de provedor chamam o método `OnPropertyChanged` sempre que alguém altera uma propriedade no grupo DBPROPSET_ROWSET. Se você quiser manipular propriedades para outros grupos, adicione-as ao objeto apropriado (ou seja, DBPROPSET_SESSION as verificações vão na classe `CCustomSession`).
 
-O código primeiro verifica para ver se a propriedade está vinculada a outro. Se a propriedade está sendo encadeada, ele define a propriedade DBPROP_BOOKMARKS como `True`. Apêndice b da especificação do OLE DB contém informações sobre as propriedades. Essas informações também indica se a propriedade encadeada a outra.
+O código verifica primeiro se a propriedade está vinculada a outra. Se a propriedade estiver sendo encadeada, ela definirá a propriedade DBPROP_BOOKMARKS como `True`. O Apêndice C da especificação de OLE DB contém informações sobre propriedades. Essas informações também indicam se a propriedade é encadeada a outra.
 
-Você também poderá adicionar o `IsValidValue` rotina ao seu código. A chamada de modelos `IsValidValue` durante a tentativa de definir uma propriedade. Você pode substituir esse método se você precisar de processamento adicional ao definir um valor de propriedade. Você pode ter um dos seguintes métodos para cada conjunto de propriedades.
+Talvez você também queira adicionar a rotina de `IsValidValue` ao seu código. Os modelos chamam `IsValidValue` ao tentar definir uma propriedade. Você substituirá esse método se precisar de processamento adicional ao definir um valor de propriedade. Você pode ter um desses métodos para cada conjunto de propriedades.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Técnicas de provedor avançadas](../../data/oledb/advanced-provider-techniques.md)

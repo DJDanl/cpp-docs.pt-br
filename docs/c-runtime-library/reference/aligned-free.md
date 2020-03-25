@@ -26,12 +26,12 @@ helpviewer_keywords:
 - _aligned_free function
 - aligned_free function
 ms.assetid: ed1ce952-cdfc-4682-85cc-f75d4101603d
-ms.openlocfilehash: 44556d3f044a567f4903ef14a4b2a9b353af02ff
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0fa28be550050a7eec2a515cfb47d98fb26591d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943978"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170963"
 ---
 # <a name="_aligned_free"></a>_aligned_free
 
@@ -45,14 +45,14 @@ void _aligned_free (
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *memblock*<br/>
 Um ponteiro para o bloco de memória que foi retornado para a função `_aligned_malloc` ou `_aligned_offset_malloc`.
 
 ## <a name="remarks"></a>Comentários
 
-**_aligned_free** é marcado `__declspec(noalias)`, o que significa que a função está garantida para não modificar variáveis globais. Para obter mais informações, consulte [noalias](../../cpp/noalias.md).
+**_aligned_free** está marcado como `__declspec(noalias)`, o que significa que a função está garantida para não modificar variáveis globais. Para obter mais informações, consulte [noalias](../../cpp/noalias.md).
 
 Essa função não valida seu parâmetro, ao contrário das outras funções de CRT _aligned. Se *memblock* for um ponteiro nulo, essa função simplesmente não executará nenhuma ação. Ela não altera `errno` nem chama o manipulador de parâmetro inválido. Se ocorrer um erro na função porque as funções _aligned não foram usadas anteriormente para alocar o bloco de memória ou se ocorrer um desalinhamento de memória devido a algum problema imprevisto, a função gerará um relatório de depuração das [Macros _RPT, _RPTF, _RPTW, _RPTFW](rpt-rptf-rptw-rptfw-macros.md).
 
@@ -66,6 +66,6 @@ Essa função não valida seu parâmetro, ao contrário das outras funções de 
 
 Para obter mais informações, consulte [_aligned_malloc](aligned-malloc.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Alinhamento de dados](../../c-runtime-library/data-alignment.md)

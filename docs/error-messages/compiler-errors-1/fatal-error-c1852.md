@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C1852
 ms.assetid: fa011004-b8d6-46f1-ba80-4785e4ce137f
-ms.openlocfilehash: 895c2fc988c9566f9e50b1ac1a18eb4dc1c6661a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 540febabc8f2947f11b58cf7eadee53d47f7bef3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165730"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202872"
 ---
 # <a name="fatal-error-c1852"></a>Erro fatal C1852
 
-'filename' não é um arquivo de cabeçalho pré-compilado válido
+' FileName ' não é um arquivo de cabeçalho pré-compilado válido
 
 O arquivo não é um cabeçalho pré-compilado.
 
@@ -23,4 +23,4 @@ O arquivo não é um cabeçalho pré-compilado.
 
 1. Arquivo inválido especificado com **/Yu** ou **#pragma hdrstop**.
 
-1. O compilador pressupõe uma extensão de arquivo de. pch, se você não especifique o contrário.
+1. O compilador assume uma extensão de arquivo. pch se você não especificar o contrário.

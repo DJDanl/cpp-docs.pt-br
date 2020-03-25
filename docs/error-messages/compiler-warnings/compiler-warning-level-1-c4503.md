@@ -1,35 +1,35 @@
 ---
-title: Compilador aviso (nível 1) C4503
+title: Aviso do compilador (nível 1) C4503
 ms.date: 05/14/2018
 f1_keywords:
 - C4503
 helpviewer_keywords:
 - C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
-ms.openlocfilehash: 94c88511d87c3adf3cf5687a94948c83ebc5b3d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9077c448f3b5f1d70d18047b91dcf300e606c91f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160972"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186537"
 ---
-# <a name="compiler-warning-level-1-c4503"></a>Compilador aviso (nível 1) C4503
+# <a name="compiler-warning-level-1-c4503"></a>Aviso do compilador (nível 1) C4503
 
-> '*identificador*': decorado excedido, comprimento do nome nome foi truncado
+> '*Identifier*': tamanho de nome decorado excedido, o nome foi truncado
 
 ## <a name="remarks"></a>Comentários
 
-Esse aviso do compilador está obsoleto e não é gerado no Visual Studio 2017 e posteriores compiladores.
+Este aviso do compilador é obsoleto e não é gerado no Visual Studio 2017 e em compiladores posteriores.
 
-O nome decorado era maior que o limite do compilador (4096) e foi truncado. Para evitar esse aviso e o truncamento, reduza o número de argumentos ou os comprimentos de nome dos identificadores usados. Nomes que são mais tempo do que o limite do compilador um hash aplicado e não estão em perigo de uma colisão de nomes decorados.
+O nome decorado era maior do que o limite do compilador (4096) e foi truncado. Para evitar esse aviso e o truncamento, reduza o número de argumentos ou os comprimentos de nome de identificadores usados. Nomes decorados que são maiores que o limite do compilador têm um hash aplicado e não estão em perigo de uma colisão de nome.
 
-Ao usar uma versão mais antiga do Visual Studio, esse aviso pode ser emitido quando seu código contém modelos especializado em modelos repetidamente. Por exemplo, um mapa de mapas (da biblioteca padrão C++). Nessa situação, você pode tornar um tipo de suas definições de tipo (um **struct**, por exemplo) que contém o mapa.
+Ao usar uma versão mais antiga do Visual Studio, esse aviso pode ser emitido quando o código contém modelos especializados em modelos repetidamente. Por exemplo, um mapa de mapas (da biblioteca C++ padrão). Nessa situação, você pode tornar seus TYPEDEFs um tipo (uma **struct**, por exemplo) que contém o mapa.
 
-No entanto, você pode, decidir não reestruturar seu código.  É possível enviar um aplicativo que gera C4503, mas se você obtiver erros em tempo de link em um símbolo truncado, pode ser mais difícil de determinar o tipo do símbolo no erro. A depuração pode também ser mais difícil; o depurador pode ter dificuldade em lidar mapeando o nome do símbolo para o nome do tipo. A correção do programa, no entanto, não é afetada pelo nome truncado.
+No entanto, você pode decidir não reestruturar seu código.  É possível enviar um aplicativo que gera C4503, mas se você receber erros de tempo de link em um símbolo truncado, pode ser mais difícil determinar o tipo do símbolo no erro. A depuração também pode ser mais difícil; o depurador pode ter mapeamento difícil do nome do símbolo para o nome do tipo. No entanto, a exatidão do programa não é afetada pelo nome truncado.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C4503 nos compiladores antes do Visual Studio 2017:
+O exemplo a seguir gera C4503 em compiladores antes do Visual Studio 2017:
 
 ```cpp
 // C4503.cpp
@@ -47,7 +47,7 @@ typedef std::map<std::string, WebAppTest> Hello;
 Hello MyWAT;
 ```
 
-Este exemplo mostra uma maneira de reescrever o código para resolver C4503:
+Este exemplo mostra uma maneira de reescrever seu código para resolver C4503:
 
 ```cpp
 // C4503b.cpp

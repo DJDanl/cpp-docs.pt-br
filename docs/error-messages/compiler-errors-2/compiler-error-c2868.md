@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2868
 ms.assetid: 6ff5837b-e66d-44d1-9d17-80af35e08d08
-ms.openlocfilehash: 4cb259ed0f43831226fb7e1a1ccf7b28bcef7819
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cbcf7dc80aedc554594f88992059f98b7091c21
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165184"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201625"
 ---
 # <a name="compiler-error-c2868"></a>Erro do compilador C2868
 
-> '*identificador*': sintaxe inválida para declaração de using; esperado nome qualificado
+> '*Identifier*': sintaxe inválida para declaração de using; nome qualificado esperado
 
-Um [usando a declaração](../../cpp/using-declaration.md) requer uma *nome qualificado*, um operador de escopo (`::`) separados por sequência de nomes de namespace, classe ou enumeração que termina com o nome do identificador. Um operador de resolução de escopo único pode ser usado para introduzir um nome de namespace global.
+Uma [declaração using](../../cpp/using-declaration.md) requer um *nome qualificado*, uma sequência separada do operador de escopo (`::`) de namespace, classe ou nomes de enumeração que termina com o nome do identificador. Um operador de resolução de escopo único pode ser usado para introduzir um nome do namespace global.
 
 ## <a name="example"></a>Exemplo
 

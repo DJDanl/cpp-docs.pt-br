@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1224
 ms.assetid: e190b5d0-ce0c-4f65-8cc0-753f1cc9758a
-ms.openlocfilehash: 7e2c8da7443a9251d8111f643a785f5d75149cac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b84a2390baad5ac307fa025e3fffafa0f093fb6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242538"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183872"
 ---
 # <a name="linker-tools-error-lnk1224"></a>Erro das Ferramentas de Vinculador LNK1224
 
-endereço de base de imagem inválido
+endereço base de imagem inválido
 
-Você especificou um endereço base inválido para a imagem. Endereços de base devem ser alinhado de 64KB (os últimos quatro dígitos hexadecimais devem ser zero) e a imagem base deve se ajustar dentro de um valor de com ou sem sinal de 32 bits.
+Você especificou um endereço base inválido para a imagem. Os endereços base devem estar alinhados em 64 KB (os últimos quatro dígitos hexadecimais devem ser zero) e a base da imagem deve caber em um valor de 32 ou não assinado de 0 bit.
