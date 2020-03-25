@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: 8bfa20f55afd85019795fdd40548158c2f49e126
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 627ecff4835386dc70a9f3dfac0500404a84eefe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514662"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167986"
 ---
 # <a name="iid_is"></a>iid_is
 
@@ -23,9 +23,9 @@ Especifica o IID da interface COM apontada por um ponteiro de interface.
 [ iid_is("expression") ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*expression*<br/>
+*expressão*<br/>
 Uma expressão de linguagem C que especifica um IID de uma interface COM apontada por um ponteiro de interface.
 
 ## <a name="remarks"></a>Comentários
@@ -62,9 +62,9 @@ __interface IFireTabCtrl : IDispatch
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de parâmetro](parameter-attributes.md)

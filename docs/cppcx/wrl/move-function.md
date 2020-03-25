@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-ms.openlocfilehash: 8d7c959ecb2d3c06872871ba062d2be603489141
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65fe85e95453165430c7ef3cfd4c4bb2babd9868
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398167"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213698"
 ---
 # <a name="move-function"></a>Função Move
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+O oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,30 +27,30 @@ inline typename RemoveReference<T>::Type&& Move(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
 O tipo do argumento.
 
 *arg*<br/>
-Um argumento para mover.
+Um argumento a ser movido.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Parâmetro *arg* após características de referência ou uma referência de rvalue, se houver, foram removidos.
+O parâmetro *ARG* após referência ou as características de referência de rvalue, se houver, foram removidos.
 
 ## <a name="remarks"></a>Comentários
 
 Move o argumento especificado de um local para outro.
 
-Para obter mais informações, consulte o **mover semântica** seção [Declarador de referência Rvalue: & &](../../cpp/rvalue-reference-declarator-amp-amp.md).
+Para obter mais informações, consulte a seção **semântica de movimentação** do [Declarador de referência Rvalue: & &](../../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** internal.h
+**Cabeçalho:** Internal. h
 
-**Namespace:** Microsoft::WRL::Details
+**Namespace:** Microsoft:: WRL::D etalhes
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)

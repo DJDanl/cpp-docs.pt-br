@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - InvokeModeOptions structure
 - InvokeMode enum
-ms.openlocfilehash: 0e5b45042c9959b87ad5db97ab755e49de469149
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bca49479d97ee371f6728f90a9aa96da0387f54
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386038"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213831"
 ---
 # <a name="invokemodeoptions-structure"></a>Estrutura InvokeModeOptions
 
-Especifica se deve acionar todos os eventos na fila de delegado ou parar o acionamento depois que um erro será gerado. Os valores permitidos são especificados no `InvokeMode` enum.
+Especifica se todos os eventos devem ser acionados na fila de delegado ou para parar o acionamento depois que um erro é gerado. Os valores permitidos são especificados no `InvokeMode` enum.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,9 +37,9 @@ struct InvokeModeOptions
 
 **Cabeçalho:** Event. h
 
-**Namespace:** Microsoft::WRL
+**Namespace:** Microsoft:: WRL
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL](microsoft-wrl-namespace.md)<br/>
-[Classe Microsoft::WRL::AgileEventSource](agileeventsource-class.md)
+[Classe Microsoft:: WRL:: AgileEventSource](agileeventsource-class.md)

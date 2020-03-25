@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - AsyncStatusInternal enumeration
 ms.assetid: b783923f-3f1c-4487-9384-be572cbc62d7
-ms.openlocfilehash: f12bf4aafc87e44a6e2fb15ba79de4a9744bea58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0eadd1e3a287feecd36b00b231b42c31218352c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398778"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214143"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>Enumeração AsyncStatusInternal
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+O oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,7 +26,7 @@ enum AsyncStatusInternal;
 
 ## <a name="remarks"></a>Comentários
 
-Especifica um mapeamento entre enumerações internos para o estado das operações assíncronas e o `Windows::Foundation::AsyncStatus` enumeração.
+Especifica um mapeamento entre enumerações internas para o estado de operações assíncronas e a enumeração de `Windows::Foundation::AsyncStatus`.
 
 ## <a name="members"></a>Membros
 
@@ -47,10 +47,10 @@ Equivalente a `::Windows::Foundation::AsyncStatus::Error`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** async.h
+**Cabeçalho:** Async. h
 
-**Namespace:** Microsoft::WRL::Details
+**Namespace:** Microsoft:: WRL::D etalhes
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)

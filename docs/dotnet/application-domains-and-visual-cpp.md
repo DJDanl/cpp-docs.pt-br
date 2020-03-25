@@ -8,16 +8,16 @@ helpviewer_keywords:
 - interoperability [C++], application domains
 - mixed assemblies [C++], application domains
 ms.assetid: 75a08efc-9b02-40ba-99b7-dcbd71010bbf
-ms.openlocfilehash: 2296654e6935bc40f301226b184cf34f77cb126d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16c02bb58681ecb241d3552f57e0b05f2d6711b4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223021"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208791"
 ---
-# <a name="application-domains-and-visual-c"></a>Domínios de aplicativo e do Visual C++
+# <a name="application-domains-and-visual-c"></a>Domínios de aplicativo e Visual C++
 
-Se você tiver um `__clrcall` função virtual, seja por domínio de aplicativo (appdomain) vtable. Se você criar um objeto em um appdomain, você só pode chamar a função virtual de dentro do appdomain. No modo misto (**/clr**) por processo vtables será necessário se seu tipo não tem nenhum `__clrcall` funções virtuais. O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+Se você tiver uma função virtual `__clrcall`, a vtable será por domínio de aplicativo (AppDomain). Se você criar um objeto em um AppDomain, só poderá chamar a função virtual de dentro desse AppDomain. No modo misto ( **/CLR**), você terá vtables por processo se o seu tipo não tiver nenhuma `__clrcall` funções virtuais. As opções de compilador **/CLR: Pure** e **/CLR: safe** são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
 Para obter mais informações, consulte:
 
@@ -27,6 +27,6 @@ Para obter mais informações, consulte:
 
 - [process](../cpp/process.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Assemblies mistos (nativos e gerenciados)](../dotnet/mixed-native-and-managed-assemblies.md)

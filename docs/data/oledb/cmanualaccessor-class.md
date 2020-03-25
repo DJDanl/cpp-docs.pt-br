@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 80c8f94a417c700f86159de53bd53e4011f78d71
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4d9fb79bbf5203fa959672faec8c3b076c17f1ca
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447380"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211842"
 ---
 # <a name="cmanualaccessor-class"></a>Classe CManualAccessor
 
@@ -47,13 +47,13 @@ Representa um tipo de acessador projetado para uso avançado.
 class CManualAccessor : public CAccessorBase
 ```
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atldbcli. h
 
 ## <a name="members"></a>Membros
 
-### <a name="methods"></a>{1&gt;Métodos&lt;1}
+### <a name="methods"></a>Métodos
 
 |||
 |-|-|
@@ -66,7 +66,7 @@ class CManualAccessor : public CAccessorBase
 
 Usando `CManualAccessor`, você pode especificar o parâmetro e a associação de coluna de saída por chamadas de função em tempo de execução.
 
-## <a name="addbindentry"></a>CManualAccessor::AddBindEntry
+## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a>CManualAccessor::AddBindEntry
 
 Adiciona uma entrada de associação às colunas de saída.
 
@@ -80,7 +80,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
    void* pStatus = NULL) throw ();
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 Consulte [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -106,7 +106,7 @@ no Um ponteiro para a variável a ser associada ao status da coluna, se necessá
 
 Para usar essa função, você deve primeiro chamar [Createaccesser](../../data/oledb/cmanualaccessor-createaccessor.md). Não é possível adicionar mais entradas do que o número de colunas especificado em `CreateAccessor`.
 
-## <a name="addparameterentry"></a>CManualAccessor::AddParameterEntry
+## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a>CManualAccessor::AddParameterEntry
 
 Adiciona uma entrada de parâmetro às estruturas de entrada de parâmetro.
 
@@ -121,7 +121,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
    DBPARAMIO eParamIO = DBPARAMIO_INPUT) throw ();
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 Consulte [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -150,7 +150,7 @@ no Especifica se o parâmetro com o qual a associação está associada é um pa
 
 Para usar essa função, primeiro você deve chamar [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).
 
-## <a name="createaccessor"></a>CManualAccessor:: createaccesser
+## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a>CManualAccessor:: createaccesser
 
 Aloca memória para as estruturas de associação de coluna e inicializa os membros de dados de coluna.
 
@@ -162,7 +162,7 @@ HRESULT CreateAccessor(int nBindEntries,
    DBLENGTH nBufferSize) throw();
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *nBindEntries*<br/>
 no Número de colunas. Esse número deve corresponder ao número de chamadas para a função [CManualAccessor:: AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) .
@@ -181,7 +181,7 @@ Um dos valores de HRESULT padrão.
 
 Chame essa função antes de chamar a função `CManualAccessor::AddBindEntry`.
 
-## <a name="createparameteraccessor"></a>CManualAccessor::CreateParameterAccessor
+## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a>CManualAccessor::CreateParameterAccessor
 
 Aloca memória para as estruturas de ligação de parâmetro e inicializa os membros de dados de parâmetro.
 
@@ -193,7 +193,7 @@ HRESULT CreateParameterAccessor(int nBindEntries,
    DBLENGTH nBufferSize) throw();
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *nBindEntries*<br/>
 no Número de colunas.
@@ -212,7 +212,7 @@ Um dos valores de HRESULT padrão.
 
 Você deve chamar essa função antes de chamar [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

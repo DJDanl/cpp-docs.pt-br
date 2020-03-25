@@ -39,12 +39,12 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 6d973ad444f719b905af5a33e47ef28f4895111f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9324e3dc5c6691a7b50f137da1fad446b416e968
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447297"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167843"
 ---
 # <a name="how-to-edit-an-image"></a>Como: editar uma imagem
 
@@ -55,7 +55,7 @@ Você pode usar as ferramentas de seleção para definir uma área de uma imagem
 
 Você também pode criar um pincel personalizado a partir de uma seleção. Para obter mais informações, consulte [criando um pincel personalizado](../windows/creating-a-custom-brush-image-editor-for-icons.md).
 
-## <a name="how-to"></a>Como
+## <a name="how-to"></a>Instruções
 
 Para editar uma imagem, consulte Como:
 
@@ -204,21 +204,21 @@ Você pode definir ou modificar as propriedades de uma imagem usando o [janela P
 
 1. Na janela **Propriedades** , altere qualquer uma ou todas as propriedades da imagem.
 
-   |Propriedade|Descrição|
+   |Propriedade|DESCRIÇÃO|
    |--------------|-----------------|
    |**Cores**|Especifica o esquema de cores para a imagem. Selecione **monocromático**, **16**ou **256**ou **true color**.<br/><br/>Se você já tiver desenhado a imagem com uma paleta de 16 cores, selecionar **monocromático** causará substituições de preto e branco para as cores na imagem. O contraste nem sempre é mantido: por exemplo, áreas adjacentes de vermelho e verde são convertidas em preto.|
    |**Filename**|Especifica o nome do arquivo de imagem.<br/><br/>Por padrão, o Visual Studio atribui um nome de arquivo base criado removendo os quatro primeiros caracteres ("IDB_") do identificador de recurso padrão (IDB_BITMAP1) e adicionando a extensão apropriada. O nome do arquivo para a imagem neste exemplo seria *Bitmap1. bmp*. Você pode renomeá-lo *MYBITMAP1. bmp*.|
-   |**Altura**|Define a altura da imagem (em pixels). O valor padrão é 48.<br/><br/>A imagem é cortada ou o espaço em branco é adicionado abaixo da imagem existente.|
+   |**Height**|Define a altura da imagem (em pixels). O valor padrão é 48.<br/><br/>A imagem é cortada ou o espaço em branco é adicionado abaixo da imagem existente.|
    |**ID**|Define o identificador do recurso.<br/><br/>Para uma imagem, Microsoft Visual Studio, por padrão, atribui o próximo identificador disponível em uma série: IDB_BITMAP1, IDB_BITMAP2 e assim por diante. Nomes semelhantes são usados para ícones e cursores.|
    |**Palette**|Altera as propriedades de cor.<br/><br/>Clique duas vezes para selecionar uma cor e exibir a [caixa de diálogo Seletor de cores personalizado](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Defina a cor digitando os valores RGB ou HSL nas caixas de texto apropriadas.|
-   |**SaveCompressed**|Indica se a imagem está em um formato compactado. Esta propriedade é somente para leitura.<br/><br/>O Visual Studio não permite que você salve imagens em um formato compactado, portanto, para qualquer imagem criada no Visual Studio, essa propriedade será **falsa**. Se você abrir uma imagem compactada (criada em outro programa) no Visual Studio, essa propriedade será **verdadeira**. Se você salvar uma imagem compactada usando o Visual Studio, ela será descompactada e essa propriedade será revertida para **false**.|
-   |**Largura**|Define a largura da imagem (em pixels). O valor padrão para bitmaps é 48.<br/><br/>A imagem é cortada ou o espaço em branco é adicionado à direita da imagem existente.|
+   |**SaveCompressed**|Indica se a imagem está em um formato compactado. Essa propriedade é somente leitura.<br/><br/>O Visual Studio não permite que você salve imagens em um formato compactado, portanto, para qualquer imagem criada no Visual Studio, essa propriedade será **falsa**. Se você abrir uma imagem compactada (criada em outro programa) no Visual Studio, essa propriedade será **verdadeira**. Se você salvar uma imagem compactada usando o Visual Studio, ela será descompactada e essa propriedade será revertida para **false**.|
+   |**Width**|Define a largura da imagem (em pixels). O valor padrão para bitmaps é 48.<br/><br/>A imagem é cortada ou o espaço em branco é adicionado à direita da imagem existente.|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 Nenhum
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Editor de imagens para ícones](../windows/image-editor-for-icons.md)<br/>
 [Como: criar um ícone ou outra imagem](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>

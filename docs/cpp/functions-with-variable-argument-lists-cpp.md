@@ -1,5 +1,5 @@
 ---
-title: Lista de funções com argumentos variáveis (C++)
+title: Funções com listas de argumentos variáveisC++()
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arguments [C++], variable number of
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
-ms.openlocfilehash: 1f366af6f4058ffb8356017d59a7c176a978b860
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f456f31dec631f7d9340563a93dfafeea49a72b5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153847"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178438"
 ---
-# <a name="functions-with-variable-argument-lists--c"></a>Lista de funções com argumentos variáveis (C++)
+# <a name="functions-with-variable-argument-lists--c"></a>Funções com listas de argumentos variáveisC++()
 
-Declarações de função em que o último membro de é o botão de reticências (...) pode levar a um número variável de argumentos. Nesses casos, o C++ fornece verificação de tipo apenas para os argumentos explicitamente declarados. Você pode usar listas de argumentos variáveis quando precisar criar uma função tão geral que mesmo o número e os tipos de argumentos possam variar. A família de funções é um exemplo de funções que usam listas de argumentos variáveis. `printf` *argument-declaration-list*
+Declarações de função em que o último membro de é reticências (...) podem usar um número variável de argumentos. Nesses casos, o C++ fornece verificação de tipo apenas para os argumentos explicitamente declarados. Você pode usar listas de argumentos variáveis quando precisar criar uma função tão geral que mesmo o número e os tipos de argumentos possam variar. A família de funções é um exemplo de funções que usam listas de argumentos variáveis. *argumento de`printf`– declaração-lista*
 
 ## <a name="functions-with-variable-arguments"></a>Funções com argumentos variáveis
 
-Para acessar argumentos após a declaração, use as macros contidos no arquivo de inclusão padrão \<stdarg. h > conforme descrito abaixo.
+Para acessar argumentos depois daqueles declarados, use as macros contidas no arquivo de inclusão padrão \<STDARG. h > conforme descrito abaixo.
 
 **Seção específica da Microsoft**
 
@@ -32,11 +32,11 @@ O Microsoft C++ permite que as reticências sejam especificadas como um argument
 
 A declaração de uma função que pega um número variável de argumentos que requer pelo menos um argumento de espaço reservado, mesmo se não for usado. Se esse argumento de espaço reservado não for fornecido, não há como acessar os argumentos restantes.
 
-Quando os argumentos de tipo **char** são passados como argumentos variáveis, eles serão convertidos ao tipo **int**. Da mesma forma, quando os argumentos de tipo **float** são passados como argumentos variáveis, eles serão convertidos ao tipo **duplo**. Os argumentos de outros tipos estão sujeitos às promoções integral e de ponto flutuante comuns. Ver [conversões padrão](standard-conversions.md) para obter mais informações.
+Quando argumentos do tipo **Char** são passados como argumentos de variáveis, eles são convertidos no tipo **int**. Da mesma forma, quando argumentos do tipo **float** são passados como argumentos de variáveis, eles são convertidos em tipo **Double**. Os argumentos de outros tipos estão sujeitos às promoções integral e de ponto flutuante comuns. Consulte [conversões padrão](standard-conversions.md) para obter mais informações.
 
-Funções que exigem listas de variáveis são declaradas usando o botão de reticências (...) na lista de argumentos. Usar os tipos e macros que são descritas no \<stdarg. h > incluir arquivo para acessar os argumentos são passados por uma lista de variáveis. Para obter mais informações sobre essas macros, consulte [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). na documentação para a biblioteca de tempo de execução C.
+As funções que exigem listas de variáveis são declaradas usando as reticências (...) na lista de argumentos. Use os tipos e macros descritos no \<STDARG. h > incluir o arquivo para acessar argumentos que são passados por uma lista de variáveis. Para obter mais informações sobre essas macros, consulte [va_arg, va_copy, va_end va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). na documentação da biblioteca de tempo de execução do C.
 
-O exemplo a seguir mostra como as macros funcionam em conjunto com o tipo (declarado em \<stdarg. h >):
+O exemplo a seguir mostra como as macros funcionam em conjunto com o tipo (declarado em \<STDARG. h >):
 
 ```cpp
 // variable_argument_lists.cpp

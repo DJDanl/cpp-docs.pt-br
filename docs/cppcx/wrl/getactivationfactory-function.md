@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - GetActivationFactory function
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
-ms.openlocfilehash: 3e138eee9e5bc02971cd1eb34c78f2be4ad5c9a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 430b4ed3f6a02fd3db2bcab05fbb7f21f5367b5c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398414"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213974"
 ---
 # <a name="getactivationfactory-function"></a>Função GetActivationFactory
 
@@ -30,27 +30,27 @@ inline HRESULT GetActivationFactory(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *T*<br/>
-Um parâmetro de modelo que especifica o tipo de alocador de ativação.
+Um parâmetro de modelo que especifica o tipo da fábrica de ativação.
 
 *activatableClassId*<br/>
-O nome da classe que o alocador de ativação pode produzir.
+O nome da classe que a fábrica de ativação pode produzir.
 
-*factory*<br/>
-Quando essa operação for concluída, uma referência para o alocador de ativação para o tipo *T*.
+*padrões*<br/>
+Quando essa operação for concluída, uma referência ao alocador de ativação para o tipo *T*.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um erro HRESULT que indica por que esta operação falhou.
+S_OK se for bem-sucedido; caso contrário, um erro HRESULT indica por que essa operação falhou.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** client.h
+**Cabeçalho:** Client. h
 
-**Namespace:** Windows::Foundation
+**Namespace:** Windows:: Foundation
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Windows::Foundation](windows-foundation-namespace.md)

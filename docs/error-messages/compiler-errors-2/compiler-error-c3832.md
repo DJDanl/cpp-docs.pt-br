@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3832
 ms.assetid: 9a41df82-42e1-4908-958c-76cff9235de0
-ms.openlocfilehash: c21c495f70b9e6f5619b6b46fe1a6ce826de9d95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cee6993a108a5dc006476b31042e615b8d4aa81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390562"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165557"
 ---
 # <a name="compiler-error-c3832"></a>Erro do compilador C3832
 
-'biblioteca de tipos ': biblioteca de tipos parece como se ela foi compilada para ponteiros de 32 bits; Altere o qualificador 'ptrsize'
+' Type Library ': a biblioteca de tipos parece como se foi criada para ponteiros de 32 bits; Altere o qualificador ' ptrsize '
 
-Informações explícitas fornecidos com o `ptrsize` atributo o [#import](../../preprocessor/hash-import-directive-cpp.md) diretiva não conseguiram concordar com o que o compilador encontrado na biblioteca de tipos.
+Informações explícitas fornecidas com o atributo `ptrsize` da diretiva [#import](../../preprocessor/hash-import-directive-cpp.md) não concordaram com o que o compilador encontrou na biblioteca de tipos.

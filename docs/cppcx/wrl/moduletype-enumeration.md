@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ModuleType enumeration
 ms.assetid: 61a763af-a5a4-451d-8b40-815af507fcde
-ms.openlocfilehash: 3c7486cbc761975dd133f229f23dcf0b70e7e3ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8425a15d594f7b8b30027d3576ee86015b656130
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403224"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213714"
 ---
 # <a name="moduletype-enumeration"></a>Enumeração ModuleType
 
-Especifica se um módulo deve dar suporte a um servidor em processo ou um servidor fora do processo.
+Especifica se um módulo deve dar suporte a um servidor em processo ou a um servidor fora do processo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,20 +28,20 @@ enum ModuleType;
 
 ### <a name="values"></a>Valores
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
 |`InProc`|Um servidor em processo.|
-|`OutOfProc`|Um servidor de out-of-process.|
-|`DisableCaching`|Desabilite o mecanismo de cache no módulo.|
+|`OutOfProc`|Um servidor fora do processo.|
+|`DisableCaching`|Desabilitar o mecanismo de cache no módulo.|
 |`InProcDisableCaching`|Combinação de `InProc` e `DisableCaching`.|
 |`OutOfProcDisableCaching`|Combinação de `OutOfProc` e `DisableCaching`.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** module.h
+**Cabeçalho:** Module. h
 
-**Namespace:** Microsoft::WRL
+**Namespace:** Microsoft:: WRL
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL](microsoft-wrl-namespace.md)

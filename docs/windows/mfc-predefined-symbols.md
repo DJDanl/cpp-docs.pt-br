@@ -9,16 +9,16 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: e9e4f9f62a3004e171eea9e3552d8a0f58923075
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76279b24002460b51bc2f67d4395ff271752d964
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376452"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215170"
 ---
 # <a name="mfc-predefined-symbols"></a>Símbolos predefinidos MFC
 
-Projetos MFC sempre incluem vários arquivos de cabeçalho que dão suporte ao windows. Elas são adicionadas por meio `#include` instruções o `StdAfx.h` arquivo:
+Os projetos MFC sempre incluem vários arquivos de cabeçalho que dão suporte ao Windows. Eles são adicionados por meio de instruções `#include` no arquivo `StdAfx.h`:
 
 ```cpp
 #include <afxwin.h>      //MFC core and standard components
@@ -28,7 +28,7 @@ Projetos MFC sempre incluem vários arquivos de cabeçalho que dão suporte ao w
 #include <afxcmn.h>      //MFC support for Windows common controls.
 ```
 
-Os arquivos de cabeçalho incluem valores de ID de símbolo para valores comuns do MFC. Esses símbolos estão disponíveis somente quando você estiver trabalhando em um projeto MFC. O `AFX_` prefixo é seguido pelos prefixos de nome de símbolo padrão.
+Os arquivos de cabeçalho incluem valores de ID de símbolo para valores comuns do MFC. Esses símbolos só estão disponíveis quando você está trabalhando em um projeto do MFC. O prefixo de `AFX_` é seguido pelos prefixos de nome de símbolo padrão.
 
 |||
 |-|-|
@@ -152,7 +152,7 @@ Os arquivos de cabeçalho incluem valores de ID de símbolo para valores comuns 
 |AFX_IDS_BOLD|AFX_IDS_BOLDITALIC|
 |AFX_IDS_BORDERSTYLE_0|AFX_IDS_BORDERSTYLE_1|
 |AFX_IDS_CHANGE_LINK|AFX_IDS_CHECKLISTBOX_CHECK|
-|AFX_IDS_CHECKLISTBOX_MIXED|AFX_IDS_CHECKLISTBOX_ UNCHECK|
+|AFX_IDS_CHECKLISTBOX_MIXED|AFX_IDS_CHECKLISTBOX_ DESMARCAR|
 |AFX_IDS_COLOR_ACTIVEBAR|AFX_IDS_COLOR_ACTIVEBORDER|
 |AFX_IDS_COLOR_ACTIVETEXT|AFX_IDS_COLOR_APPWORKSPACE|
 |AFX_IDS_COLOR_BTNFACE|AFX_IDS_COLOR_BTNHIGHLIGHT|
@@ -211,9 +211,9 @@ Os arquivos de cabeçalho incluem valores de ID de símbolo para valores comuns 
 |AFX_IDS_UPDATING_ITEMS|AFX_IDS_USER_EXCEPTION|
 |AFX_IDS_VERB_EDIT|AFX_IDS_VERB_PROPERTIES|
 
-## <a name="mfc-database-programming"></a>MFC programação de banco de dados
+## <a name="mfc-database-programming"></a>Programação de banco de dados MFC
 
-Os símbolos nesta tabela só aparecem em um projeto MFC quando foi adicionado suporte de banco de dados. Eles oferecem suporte a conexão do MFC para servidores SQL e programação de banco de dados.
+Os símbolos nesta tabela só aparecem em um projeto MFC quando o suporte a banco de dados tiver sido adicionado. Eles dão suporte à conexão do MFC a servidores SQL e programação de banco de dados.
 
 |||
 |-|-|
@@ -232,11 +232,11 @@ Os símbolos nesta tabela só aparecem em um projeto MFC quando foi adicionado s
 |AFX_IDP_SQL_SNAPSHOT_ NOT_SUPPORTED|AFX_IDP_SQL_SQL_CONFORMANCE|
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
 
-## <a name="mfc-windows-programming"></a>Programação do Windows MFC
+## <a name="mfc-windows-programming"></a>Programação do Windows para MFC
 
-Esses símbolos também são parte dos arquivos de suporte do MFC, mas eles oferecem suporte a ações e funções de aplicativo do Windows padrão. Esses símbolos são usados com os menus.
+Esses símbolos também fazem parte dos arquivos de suporte do MFC, mas dão suporte a funções e ações padrão de aplicativos do Windows. Esses símbolos são usados com menus.
 
-Quando você estiver trabalhando com menus na **Editor de Menu**, esses símbolos aparecerá na **propriedade** janela associada com os comandos de menu comuns. Por exemplo, se seu aplicativo tiver um **arquivo** menu com um **sair** de comando, que o comando será associado com o símbolo ID_APP_EXIT no [janela propriedades](/visualstudio/ide/reference/properties-window).
+Quando você estiver trabalhando com menus no **Editor de menu**, esses símbolos serão exibidos na janela de **Propriedades** associada aos comandos de menu comuns. Por exemplo, se seu aplicativo tiver um menu de **arquivo** com um comando de **saída** , esse comando será associado ao símbolo ID_APP_EXIT no [janela Propriedades](/visualstudio/ide/reference/properties-window).
 
 ||||
 |-|-|-|
@@ -280,7 +280,7 @@ Quando você estiver trabalhando com menus na **Editor de Menu**, esses símbolo
 
 MFC
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [IDs de símbolos predefinidos](../windows/predefined-symbol-ids.md)<br/>
 [Símbolos predefinidos da ATL](../windows/atl-predefined-symbols.md)<br/>

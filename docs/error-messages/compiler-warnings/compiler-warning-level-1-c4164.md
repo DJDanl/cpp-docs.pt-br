@@ -1,20 +1,20 @@
 ---
-title: Compilador aviso (nível 1) C4164
+title: Aviso do compilador (nível 1) C4164
 ms.date: 11/04/2016
 f1_keywords:
 - C4164
 helpviewer_keywords:
 - C4164
 ms.assetid: 6d7e4a36-8227-4419-880f-44576033493e
-ms.openlocfilehash: fee06812753c705444a75d0a1c3a3ead9d402f67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c47320d783e6b314fd10c45180464e5a128111cc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391797"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176087"
 ---
-# <a name="compiler-warning-level-1-c4164"></a>Compilador aviso (nível 1) C4164
+# <a name="compiler-warning-level-1-c4164"></a>Aviso do compilador (nível 1) C4164
 
-'identifier': função intrínseca não declarada
+' identifier ': função intrínseca não declarada
 
-A função intrínseca especificada não está declarada; Talvez você precise #include do arquivo de cabeçalho apropriado.
+A função intrínseca especificada não está declarada; Talvez seja necessário #include o arquivo de cabeçalho apropriado.

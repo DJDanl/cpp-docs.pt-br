@@ -6,16 +6,16 @@ helpviewer_keywords:
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-ms.openlocfilehash: 1bf384967af9d6d639e11df882751bbdaf1b0aa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36c5263213b5ef348bb341a83da097db7dbb1d9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188389"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180908"
 ---
 # <a name="class-templates"></a>Modelos de classe
 
-Este tópico descreve as regras que são específicas para modelos de classe do C++.
+Este tópico descreve as regras específicas para modelos C++ de classe.
 
 ## <a name="member-functions-of-class-templates"></a>Funções de membro de modelos de classe
 
@@ -75,9 +75,9 @@ int main()
 }
 ```
 
-## <a name="nested-class-templates"></a>Modelos de classe aninhados
+## <a name="nested-class-templates"></a>Modelos de classe aninhada
 
-Os modelos podem ser definidos dentro de classes ou de modelos de classe. Nesse caso, eles são chamados de modelos de membro. Os modelos de membro que são classes são chamados de modelos de classe aninhados. Modelos de membro são funções são discutidos [modelos de função de membro](../cpp/member-function-templates.md).
+Os modelos podem ser definidos dentro de classes ou de modelos de classe. Nesse caso, eles são chamados de modelos de membro. Os modelos de membro que são classes são chamados de modelos de classe aninhados. Os modelos de membro que são funções são abordados em [modelos de função de membro](../cpp/member-function-templates.md).
 
 Os modelos de classe aninhados são declarados como modelos de classe dentro do escopo da classe externa. Eles podem ser definidos dentro ou fora da classe delimitadora.
 
@@ -193,9 +193,9 @@ X<T>::Y<U>::~Y()
 
 As classes locais não podem ter modelos de membro.
 
-## <a name="template-friends"></a>Amigos de modelo
+## <a name="template-friends"></a>Amigos do modelo
 
-Modelos de classe podem ter [amigos](friend-cpp.md). Uma classe ou um modelo de classe, uma função ou um modelo de função podem ser amigas (friends) de uma classe de modelo. Friends também podem ser especializações de um modelo de classe ou modelo de função, mas não especializações parciais.
+Os modelos de classe podem ter [amigos](friend-cpp.md). Uma classe ou um modelo de classe, uma função ou um modelo de função podem ser amigas (friends) de uma classe de modelo. Friends também podem ser especializações de um modelo de classe ou modelo de função, mas não especializações parciais.
 
 No exemplo a seguir, uma função friend é definida como um modelo de função no modelo de classe. Esse código gera uma versão da função friend para cada instanciação do modelo. Essa construção é útil quando a função friend depende dos mesmos parâmetros de modelo que a classe.
 
@@ -438,6 +438,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos](../cpp/templates-cpp.md)

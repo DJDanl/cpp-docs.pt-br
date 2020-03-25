@@ -9,20 +9,20 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-ms.openlocfilehash: f088b0f3ec94ad59c9c5576e6090a895bb88c3ad
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cb4653bd2f03683b9abad1eea0e9ffa88222090e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856882"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184236"
 ---
 # <a name="function-inlining-problems"></a>Problemas de inlining da função
 
-Se você estiver usando o inlining de função, você deve:
+Se você estiver usando o inlineação de função, deverá:
 
-- Ter as funções embutidas implementadas no arquivo de cabeçalho que você incluir.
+- Ter as funções embutidas implementadas no arquivo de cabeçalho que você inclui.
 
-- Ter inlining ativadas no arquivo de cabeçalho.
+- Fazer com que o alinhamento seja ativado no arquivo de cabeçalho.
 
 ```cpp
 // LNK2019_function_inline.cpp
@@ -37,7 +37,7 @@ struct _load_config_used {
 void _load_config_used::Test() { printf("in Test\n"); }
 ```
 
-E, em seguida,
+e, em seguida,
 
 ```cpp
 // LNK2019_function_inline_2.cpp
@@ -54,11 +54,11 @@ int main() {
 }
 ```
 
-Se você estiver usando o `#pragma inline_depth` compilador a diretiva, verifique se você tem um valor maior ou igual a 2 definido. Um valor de zero será desligado inlining. Verifique também se você estiver usando o **/Ob1** ou **/Ob2** opções do compilador.
+Se você estiver usando a diretiva de compilador `#pragma inline_depth`, certifique-se de ter um valor de 2 ou mais definido. Um valor de zero desativará o alinhamento. Verifique também se você está usando as opções de compilador **/Ob1** ou **/Ob2** .
 
-Combinação de opções de compilação embutido e não ser embutida em módulos diferentes, às vezes, pode causar problemas. Se uma biblioteca C++ é criada com o inlining de função ativada ([/Ob1](../../build/reference/ob-inline-function-expansion.md) ou [/Ob2](../../build/reference/ob-inline-function-expansion.md)), mas o arquivo de cabeçalho correspondente que descreve as funções tem inlining desativado (sem opção), você receberá o erro LNK2001. As funções não serem embutidas no código do arquivo de cabeçalho, mas uma vez que eles não estão no arquivo de biblioteca não há nenhum endereço para resolver a referência.
+A combinação de opções de compilação embutidas e não embutidas em diferentes módulos pode, às vezes, causar problemas. Se uma C++ biblioteca for criada com o inlineação de função ativado ([/Ob1](../../build/reference/ob-inline-function-expansion.md) ou [/Ob2](../../build/reference/ob-inline-function-expansion.md)), mas o arquivo de cabeçalho correspondente que descreve as funções tiver o inlining desativado (sem opção), você receberá o erro LNK2001. As funções não são embutidas no código do arquivo de cabeçalho, mas como não estão no arquivo de biblioteca, não há nenhum endereço para resolver a referência.
 
-Da mesma forma, um projeto que usa o inlining de função ainda define as funções em um arquivo. cpp, em vez de no cabeçalho do arquivo também obterão LNK2019. O arquivo de cabeçalho é incluído em todos os lugares considerado apropriado, mas as funções são apenas embutidas quando o arquivo. cpp passa pelo compilador. Portanto, o vinculador vê as funções como externos não resolvidos quando usado em outros módulos.
+Da mesma forma, um projeto que usa o inlineo de função ainda define as funções em um arquivo. cpp em vez de no arquivo de cabeçalho também obterá LNK2019. O arquivo de cabeçalho é incluído em qualquer lugar considerado apropriado, mas as funções são embutidas somente quando o arquivo. cpp passa pelo compilador; Portanto, o vinculador vê as funções como externas não resolvidas quando usadas em outros módulos.
 
 ```cpp
 // LNK2019_FIP.h
@@ -67,7 +67,7 @@ struct testclass {
 };
 ```
 
-E, em seguida,
+e, em seguida,
 
 ```cpp
 // LNK2019_FIP.cpp
@@ -76,7 +76,7 @@ E, em seguida,
 inline void testclass::PublicStatMemFunc1(void) {}
 ```
 
-E, em seguida,
+e, em seguida,
 
 ```cpp
 // LNK2019_FIP_2.cpp
@@ -91,6 +91,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Erro das ferramentas de vinculador LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

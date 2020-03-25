@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1312
 ms.assetid: 1aa7cd0e-d45f-4ae7-a85d-015ebb962eaf
-ms.openlocfilehash: a9f4173971a4211c94e389e9bbc7e41176e0a04a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dea37a518bfe6881c36cad495754d902452fcac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266407"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203197"
 ---
 # <a name="fatal-error-c1312"></a>Erro fatal C1312
 
-Muitas ramificações condicionais na função. Simplifique ou Refatore o código-fonte.
+Número excessivo de ramificações condicionais na função. Simplificar ou refatorar o código-fonte.
 
-O código é muito complexo para o compilador processar sem a falta de memória de pilha.  Simplifique seu código.
+O código é muito complexo para o compilador processar sem a execução da memória de pilha.  Simplifique seu código.

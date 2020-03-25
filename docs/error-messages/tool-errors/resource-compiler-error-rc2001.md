@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - RC2001
 ms.assetid: 92bfb4c0-1879-4606-bb9f-ef7368707b4a
-ms.openlocfilehash: f4755e04a744d94636b4b37aaf727e0d733008ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35042687b798b53857becdedba57861bd4f41a05
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346672"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191711"
 ---
 # <a name="resource-compiler-error-rc2001"></a>Erro RC2001 (compilador de recurso)
 
-Newline em constante
+nova linha em constante
 
-Uma constante de cadeia de caracteres foi retomada em uma segunda linha sem qualquer um, uma barra invertida (**\\**) ou de abertura e fechamento aspas duplas (**"**).
+Uma constante de cadeia de caracteres continuou em uma segunda linha sem uma barra invertida ( **\\** ) ou aspas duplas de fechamento e abertura ( **"** ).
 
-Para interromper uma constante de cadeia de caracteres que é em duas linhas no arquivo de origem, siga um destes procedimentos:
+Para interromper uma constante de cadeia de caracteres que está em duas linhas no arquivo de origem, siga um destes procedimentos:
 
-- Finalizar a primeira linha com o caractere de continuação de linha, uma barra invertida.
+- Terminar a primeira linha com o caractere de continuação de linha, uma barra invertida.
 
-- Feche a cadeia de caracteres na primeira linha com uma marca de aspas duplas e abra a cadeia de caracteres na próxima linha com outra aspa.
+- Feche a cadeia de caracteres na primeira linha com aspas duplas e abra a cadeia de caracteres na linha seguinte com outra aspa.
 
-Não é suficiente terminar a primeira linha com \n, a sequência de escape para inserir um caractere de nova linha em uma constante de cadeia de caracteres.
+Não é suficiente finalizar a primeira linha com \n, a sequência de escape para inserir um caractere de linha nova em uma constante de cadeia de caracteres.

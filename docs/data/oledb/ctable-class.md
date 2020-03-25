@@ -13,16 +13,16 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: fab1ba2e496f4945eb56c0a67b833f6bf063404e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47c9899889bbbf9b09300779691085786db0e088
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368429"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211140"
 ---
 # <a name="ctable-class"></a>Classe CTable
 
-Fornece um meio para acessar diretamente um conjunto de linhas simple (um sem parâmetros).
+Fornece um meio de acessar diretamente um conjunto de linhas simples (um sem parâmetros).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,7 +33,7 @@ class CTable :
    public CAccessorRowset <TAccessor, TRowset>
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *TAccessor*<br/>
 Uma classe de acessador.
@@ -43,7 +43,7 @@ Uma classe de conjunto de linhas.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atldbcli.h
+**Cabeçalho:** atldbcli. h
 
 ## <a name="members"></a>Membros
 
@@ -55,9 +55,9 @@ Uma classe de conjunto de linhas.
 
 ## <a name="remarks"></a>Comentários
 
-Ver [CCommand](../../data/oledb/ccommand-class.md) para obter informações sobre como executar um comando para acessar um conjunto de linhas.
+Consulte [CCommand](../../data/oledb/ccommand-class.md) para obter informações sobre como executar um comando para acessar um conjunto de linhas.
 
-## <a name="open"></a> Ctable:: Open
+## <a name="ctableopen"></a><a name="open"></a>CTable:: abrir
 
 Abre a tabela.
 
@@ -80,35 +80,35 @@ HRESULT Open(const CSession& session,
    ULONG ulPropSets = 0) throw ();
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
-*session*<br/>
-[in] A sessão para o qual a tabela é aberta.
+*sessão*<br/>
+no A sessão para a qual a tabela está aberta.
 
 *wszTableName*<br/>
-[in] O nome da tabela para abrir, passado como uma cadeia de caracteres Unicode.
+no O nome da tabela a ser aberta, passada como uma cadeia de caracteres Unicode.
 
 *szTableName*<br/>
-[in] O nome da tabela para abrir, passado como uma cadeia de caracteres ANSI.
+no O nome da tabela a ser aberta, passada como uma cadeia de caracteres ANSI.
 
 *dbid*<br/>
-[in] O `DBID` da tabela para abrir.
+no A `DBID` da tabela a ser aberta.
 
 *pPropSet*<br/>
-[in] Um ponteiro para uma matriz de [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) estruturas que contém as propriedades e valores a serem definidos. Ver [conjuntos de propriedades e grupos de propriedades](/previous-versions/windows/desktop/ms713696(v=vs.85)) na *referência do programador do OLE DB* no Windows SDK. O valor padrão de NULL não especifica que nenhuma propriedade.
+no Um ponteiro para uma matriz de estruturas [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) que contém propriedades e valores a serem definidos. Consulte [conjuntos de propriedades e grupos de propriedades](/previous-versions/windows/desktop/ms713696(v=vs.85)) na *referência do programador de OLE DB* no SDK do Windows. O valor padrão de NULL não especifica nenhuma propriedade.
 
 *ulPropSets*<br/>
-[in] O número de [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) estruturas passada a *pPropSet* argumento.
+no O número de estruturas [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) passadas no argumento *pPropSet* .
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais detalhes, consulte [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) na *referência do programador DB OLE*.
+Para obter mais detalhes, consulte [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

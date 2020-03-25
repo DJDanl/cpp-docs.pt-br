@@ -23,12 +23,12 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: e68e1480d2cd9a8d8a4d862252e6eb4384a5cd68
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b083ed27b6b1f471dbec9b96e7be7a6165f8d125
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513649"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214364"
 ---
 # <a name="version-information-editor-c"></a>Editor de informações deC++versão ()
 
@@ -42,7 +42,7 @@ Um recurso de informações de versão tem um bloco superior e um ou mais blocos
 > [!NOTE]
 > Ao usar o **Editor de informações de versão**, em muitas instâncias, você pode clicar com o botão direito do mouse para exibir um menu de atalho de comandos específicos do recurso. Por exemplo, se você selecionar enquanto aponta para uma entrada de cabeçalho de bloco, o menu de atalho mostrará as **novas informações de bloco de versão** e **excluirá** os comandos de informações de bloco de versão.
 
-## <a name="how-to"></a>Como
+## <a name="how-to"></a>Instruções
 
 O **Editor de informações de versão** permite que você:
 
@@ -50,11 +50,11 @@ O **Editor de informações de versão** permite que você:
 
 Selecione o item uma vez para selecioná-lo e, novamente, para começar a editá-lo. Faça alterações diretamente na tabela de **informações de versão** ou no [janela Propriedades](/visualstudio/ide/reference/properties-window). As alterações feitas serão refletidas em ambos os locais.
 
-Ao editar a `FILEFLAGS` chave no **Editor de informações de versão**, observe que você não pode definir as propriedades de **depuração**, **compilação particular**ou **compilação especial** na janela **Propriedades** para arquivos. rc:
+Ao editar a chave de `FILEFLAGS` no **Editor de informações de versão**, observe que você não pode definir as propriedades de **depuração**, **compilação particular**ou de **compilação especial** na janela **Propriedades** para arquivos. rc:
 
-   - O **Editor de informações de versão** define a propriedade de `#ifdef` **depuração** com um no script de recurso, `_DEBUG` com base no sinalizador de compilação.
+- O **Editor de informações de versão** define a propriedade de **depuração** com um `#ifdef` no script de recurso, com base no sinalizador de Build de `_DEBUG`.
 
-  - Se a `Private Build` chave tiver um **valor** definido na tabela de **informações de versão** , a propriedade de **compilação particular** correspondente na janela **Propriedades** da `FILEFLAGS` chave será **true**. Se o **valor** estiver vazio, a propriedade será **false**. Da mesma forma, a chave de **compilação especial** na tabela de **informações de versão** está vinculada à propriedade `FILEFLAGS` de **compilação especial** para a chave.
+- Se a chave de `Private Build` tiver um **valor** definido na tabela de **informações de versão** , a propriedade de **compilação particular** correspondente na janela **Propriedades** da chave de `FILEFLAGS` será **true**. Se o **valor** estiver vazio, a propriedade será **false**. Da mesma forma, a chave de **compilação especial** na tabela de **informações de versão** está vinculada à propriedade de **compilação especial** para a chave de `FILEFLAGS`.
 
 Você pode classificar a sequência de informações do bloco de cadeia de caracteres selecionando a **chave** ou os títulos de coluna de **valor** . Esses cabeçalhos reorganizam automaticamente as informações na sequência selecionada.
 
@@ -84,7 +84,7 @@ Se você quiser acessar as informações de versão de dentro de seu programa, u
 
 Win32
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Editores de recursos](../windows/resource-editors.md)<br/>
 [Menus e outros recursos](/windows/win32/menurc/resources)<br/>

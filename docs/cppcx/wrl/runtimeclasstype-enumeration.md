@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RuntimeClassType enumeration
 ms.assetid: d380712d-672e-4ea9-b7c5-cf9fa7dbb770
-ms.openlocfilehash: 80e8a120f7e3666721ff839a2a696388a64d734e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53f0172968c28762bb1305e274bbd47494cdaf4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403121"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213571"
 ---
 # <a name="runtimeclasstype-enumeration"></a>Enumeração RuntimeClassType
 
-Especifica o tipo de [RuntimeClass](runtimeclass-class.md) instância com suporte.
+Especifica o tipo de instância de [RuntimeClass](runtimeclass-class.md) com suporte.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -28,21 +28,21 @@ enum RuntimeClassType;
 
 ### <a name="values"></a>Valores
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----------|-----------------|
-|`ClassicCom`|Uma classe de tempo de execução do COM clássico.|
+|`ClassicCom`|Uma classe clássica de tempo de execução COM.|
 |`Delegate`|Equivalente a `ClassicCom`.|
-|`InhibitFtmBase`|Desabilita `FtmBase` suporte enquanto `__WRL_CONFIGURATION_LEGACY__` não está definido.|
-|`InhibitWeakReference`|Desabilita o suporte a referência fraca.|
-|`WinRt`|Uma classe de tempo de execução do Windows.|
+|`InhibitFtmBase`|Desabilita o suporte a `FtmBase` enquanto `__WRL_CONFIGURATION_LEGACY__` não está definido.|
+|`InhibitWeakReference`|Desabilita o suporte de referência fraca.|
+|`WinRt`|Uma classe Windows Runtime.|
 |`WinRtClassicComMix`|Uma combinação de `WinRt` e `ClassicCom`.|
 
 ## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** Implements. h
 
-**Namespace:** Microsoft::WRL
+**Namespace:** Microsoft:: WRL
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL](microsoft-wrl-namespace.md)

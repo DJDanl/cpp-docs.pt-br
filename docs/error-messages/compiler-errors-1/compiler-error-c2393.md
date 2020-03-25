@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2393
 ms.assetid: 4bd95728-e813-4ce8-844a-c6ebe235ca82
-ms.openlocfilehash: 39ca693aed3f08e7b2df3d687f94d93384393f23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc3c124f1a4daea0f2517a93c6b354b8233aa5e5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302391"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205979"
 ---
 # <a name="compiler-error-c2393"></a>Erro do compilador C2393
 
-> '*símbolo*': símbolo per-appdomain não pode ser alocado no segmento '*segmento*'
+> '*Symbol*': símbolo Per-AppDomain não pode ser alocado no segmento '*Segment*'
 
 ## <a name="remarks"></a>Comentários
 
-O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+As opções de compilador **/CLR: Pure** e **/CLR: safe** são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-O uso de [appdomain](../../cpp/appdomain.md) variáveis implica que você está compilando com **/clr: pure** ou **/CLR: safe**, e uma imagem pura ou segura não pode conter segmentos de dados.
+O uso de variáveis [AppDomain](../../cpp/appdomain.md) implica que você está compilando com **/CLR: Pure** ou **/CLR: safe**, e uma imagem segura ou pura não pode conter segmentos de dados.
 
-Ver [/clr (compilação de tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md) para obter mais informações.
+Consulte [/CLR (compilação Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 

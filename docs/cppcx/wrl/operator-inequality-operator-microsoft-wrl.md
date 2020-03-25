@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator!=
 ms.assetid: 785435da-87a6-4454-9bce-9d288a96dc26
-ms.openlocfilehash: 6068a7ddad78e3347f6987b30cc2884dc3f648fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7780ecd8d03be6fea4ffe3c0be17ed6e995e3f90
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232254"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213649"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!= Operador (Microsoft::WRL)
 
-Operador de desigualdade para [ComPtr](comptr-class.md) e [ComPtrRef](comptrref-class.md) objetos.
+Operador de desigualdade para objetos [ComPtr](comptr-class.md) e [ComPtrRef](comptrref-class.md) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -53,24 +53,24 @@ WRL_NOTHROW bool operator!=(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *a*<br/>
 O objeto à esquerda.
 
 *b*<br/>
-O objeto à direita.
+O objeto correto.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**Verdadeiro** se os objetos não forem iguais; caso contrário, **falso**.
+**true** se os objetos não forem iguais; caso contrário, **false**.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** client.h
+**Cabeçalho:** Client. h
 
-**Namespace:** Microsoft::WRL
+**Namespace:** Microsoft:: WRL
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL](microsoft-wrl-namespace.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf16 class
 ms.assetid: a9897f98-f84d-4db6-90ad-858b2727570c
-ms.openlocfilehash: a84ca6da22825ca3fa7ab43e43a574fb05caa1a8
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 73177985727f4da5cf3ca4eb9e3cc3fb5976f76d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689834"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215274"
 ---
 # <a name="codecvt_utf16"></a>codecvt_utf16
 
@@ -22,20 +22,20 @@ template<class Elem, unsigned long Maxcode = 0x10ffff, codecvt_mode Mode = (code
 class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
-@No__t_1 *elem*
+\ *elem*
 O tipo de elemento de caractere largo.
 
-@No__t_1 *Maxcode*
+\ *Maxcode*
 O número máximo de caracteres da faceta de localidade.
 
-*Modo* \
+*Modo*\
 Informações de configuração para a faceta de localidade.
 
 ## <a name="remarks"></a>Comentários
 
-Esse modelo de classe converte entre caracteres largos codificados como UCS-2 ou UCS-4 e um fluxo de bytes codificado como UTF-16LE, se o modo & LITTLE_ENDIAN ou UTF-16BE caso contrário.
+Esse modelo de classe converte entre caracteres largos codificados como UCS-2 ou UCS-4 e um fluxo de bytes codificado como UTF-16LE, se o modo & little_endian ou UTF-16BE caso contrário.
 
 O fluxo de bytes deve ser gravado em um arquivo binário. Ele pode ser corrompido se gravado em um arquivo de texto.
 
@@ -43,4 +43,4 @@ O fluxo de bytes deve ser gravado em um arquivo binário. Ele pode ser corrompid
 
 Cabeçalho: \<codecvt >
 
-Namespace: STD
+Namespace: std

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - combo boxes [C++], filling from second recordset
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
-ms.openlocfilehash: 9428f8a59dca021a1bd0e00a7970f4d19bab46be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb2525ef8b749f58303cae13b87b21d7df73d1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397920"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213402"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Preenchendo uma caixa de listagem de um segundo conjunto de registros (Acesso a dados MFC)
 
@@ -28,13 +28,13 @@ O modelo referente a este tópico consiste em um conjunto de registros primário
 
 #### <a name="to-fill-a-combo-box-or-list-box-from-a-second-recordset"></a>Para preencher uma caixa de combinação ou caixa de listagem de um segundo conjunto de registros
 
-1. Criar o objeto recordset ([CRecordset](../mfc/reference/crecordset-class.md).
+1. Crie o objeto Recordset ([CRecordset](../mfc/reference/crecordset-class.md).
 
-1. Obter um ponteiro para o [CComboBox](../mfc/reference/ccombobox-class.md) objeto para o controle de caixa de combinação.
+1. Obtenha um ponteiro para o objeto [CComboBox](../mfc/reference/ccombobox-class.md) para o controle caixa de combinação.
 
 1. Esvazie a caixa de combinação de qualquer conteúdo anterior.
 
-1. Percorra todos os registros no conjunto de registros, chamando [CComboBox:: AddString](../mfc/reference/ccombobox-class.md#addstring) para cada cadeia de caracteres do registro atual que você deseja adicionar à caixa de combinação.
+1. Mova todos os registros no conjunto de registros, chamando [CComboBox:: AddString](../mfc/reference/ccombobox-class.md#addstring) para cada cadeia de caracteres do registro atual que você deseja adicionar à caixa de combinação.
 
 1. Inicialize a seleção na caixa de combinação.
 
@@ -68,7 +68,7 @@ Essa função usa um segundo conjunto de registros `m_courseSet`, que contém um
 
 A função obtém `m_courseSet` do documento e o abre. Em seguida, esvazia `m_ctlCourseList` e rola pelo `m_courseSet`. Para cada registro, a função chama a função membro `AddString` da caixa de combinação para adicionar o valor da ID do curso do registro. Por fim, o código define a seleção da caixa de combinação.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Exibição de registro (Acesso a dados MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Lista de drivers ODBC](../data/odbc/odbc-driver-list.md)

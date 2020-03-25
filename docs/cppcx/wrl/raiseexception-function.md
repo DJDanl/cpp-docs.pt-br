@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-ms.openlocfilehash: 08305c5d59d7e272aac87ad9aa183c8e82588632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3270057bf5b1b27a98bef1ab236291eab15d27ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231347"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213623"
 ---
 # <a name="raiseexception-function"></a>Função RaiseException
 
-Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+O oferece suporte à infraestrutura WRL e não se destina a ser usado diretamente do seu código.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -26,26 +26,26 @@ inline void __declspec(noreturn)   RaiseException(
       DWORD dwExceptionFlags = EXCEPTION_NONCONTINUABLE);
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*hr*<br/>
-O código de exceção da exceção que está sendo gerado; ou seja, o HRESULT de uma operação com falha.
+*Human*<br/>
+O código de exceção da exceção que está sendo gerada; ou seja, o HRESULT de uma operação com falha.
 
 *dwExceptionFlags*<br/>
-Um sinalizador que indica uma exceção noncontinuable (o valor do sinalizador é diferente de zero) ou a exceção de continuidade (o valor do sinalizador é zero). Por padrão, a exceção é não continuável.
+Um sinalizador que indica uma exceção continuável (o valor do sinalizador é zero), ou a exceção não continuável (o valor do sinalizador é zero). Por padrão, a exceção é não continuável.
 
 ## <a name="remarks"></a>Comentários
 
 Gera uma exceção no thread de chamada.
 
-Para obter mais informações, consulte o Windows `RaiseException` função.
+Para obter mais informações, consulte a função `RaiseException` do Windows.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** internal.h
+**Cabeçalho:** Internal. h
 
-**Namespace:** Microsoft::WRL::Details
+**Namespace:** Microsoft:: WRL::D etalhes
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)

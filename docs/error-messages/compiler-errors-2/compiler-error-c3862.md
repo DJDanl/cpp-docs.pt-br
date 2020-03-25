@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3862
 ms.assetid: ba547366-4189-4077-8c00-ab45e08a9533
-ms.openlocfilehash: 2ba130862b1debbe2991ca7cbcae50192f900cd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b9c1e1213949d7d700094caa6687232df881ce6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302308"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165477"
 ---
 # <a name="compiler-error-c3862"></a>Erro do compilador C3862
 
-> '*função*': não é possível compilar uma função não gerenciada com /clr: pure ou /CLR: safe
+> '*Function*': não é possível compilar uma função não gerenciada com/CLR: pure ou/CLR: safe
 
 ## <a name="remarks"></a>Comentários
 
-O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+As opções de compilador **/CLR: Pure** e **/CLR: safe** são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-Uma compilação com **/clr: pure** ou **/CLR: safe** produzirá uma imagem única do MSIL, uma imagem sem nenhum código (não gerenciado) nativo.  Portanto, é possível usar o `unmanaged` pragma em um **/clr: pure** ou **/CLR: safe** compilação.
+Uma compilação com **/CLR: Pure** ou **/CLR: safe** produzirá uma imagem somente MSIL, uma imagem sem código nativo (não gerenciado).  Portanto, você não pode usar o `unmanaged` pragma em uma compilação **/CLR: Pure** ou **/CLR: safe** .
 
-Para obter mais informações, consulte [/clr (compilação de tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md) e [gerenciado, não gerenciado](../../preprocessor/managed-unmanaged.md).
+Para obter mais informações, consulte [/CLR (compilação do Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) e [gerenciados, não](../../preprocessor/managed-unmanaged.md)gerenciados.
 
 ## <a name="example"></a>Exemplo
 

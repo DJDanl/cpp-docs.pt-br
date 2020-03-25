@@ -66,12 +66,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: 89c7e62e51adbe96bee870b4baa8a35784b61ac0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e15be3342b32b432c438b65ec57765cb135f5316
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447255"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212232"
 ---
 # <a name="cbookmark-class"></a>Classe CBookmark
 
@@ -87,18 +87,18 @@ template <>
 class CBookmark< 0 > : public CBookmarkBase
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *nSize*<br/>
 O tamanho do buffer do indicador em bytes. Quando *nSize* for zero, o buffer de indicador será criado dinamicamente em tempo de execução.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atldbcli. h
 
 ## <a name="members"></a>Membros
 
-### <a name="methods"></a>{1&gt;Métodos&lt;1}
+### <a name="methods"></a>Métodos
 
 |||
 |-|-|
@@ -117,7 +117,7 @@ O tamanho do buffer do indicador em bytes. Quando *nSize* for zero, o buffer de 
 
 `CBookmark<0>` é uma especialização de modelo de `CBookmark`; seu buffer é criado dinamicamente em tempo de execução.
 
-## <a name="cbookmark"></a>CBookmark::CBookmark
+## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a>CBookmark::CBookmark
 
 O construtor.
 
@@ -128,7 +128,7 @@ CBookmark();
 CBookmark(DBLENGTH nSize);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *nSize*<br/>
 no Tamanho do buffer do indicador em bytes.
@@ -140,7 +140,7 @@ A primeira função define o buffer como nulo e o tamanho do buffer como 0. A se
 > [!NOTE]
 >  Essa função só está disponível no `CBookmark<0>`.
 
-## <a name="getbuffer"></a>CBookmark::GetBuffer
+## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a>CBookmark::GetBuffer
 
 Recupera o ponteiro para o buffer de indicadores.
 
@@ -154,7 +154,7 @@ virtual BYTE* GetBuffer() const throw();
 
 Um ponteiro para o buffer de indicadores.
 
-## <a name="getsize"></a>CBookmark::GetSize
+## <a name="cbookmarkgetsize"></a><a name="getsize"></a>CBookmark::GetSize
 
 Recupera o tamanho do buffer do indicador.
 
@@ -168,7 +168,7 @@ virtual DBLENGTH GetSize() const throw();
 
 O tamanho do buffer em bytes.
 
-## <a name="setbookmark"></a>CBookmark:: SetBookmark
+## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a>CBookmark:: SetBookmark
 
 Copia o valor de indicador referenciado por *pBuffer* para o buffer de `CBookmark` e define o tamanho do buffer como *nSize*.
 
@@ -178,7 +178,7 @@ Copia o valor de indicador referenciado por *pBuffer* para o buffer de `CBookmar
 HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *nSize*<br/>
 no O tamanho do buffer do indicador.
@@ -194,7 +194,7 @@ Um HRESULT padrão.
 
 Essa função só está disponível no `CBookmark<0>`.
 
-## <a name="operator"></a>CBookmark:: Operator =
+## <a name="cbookmarkoperator-"></a><a name="operator"></a>CBookmark:: Operator =
 
 Atribui um objeto de `CBookmark` para outro.
 
@@ -208,7 +208,7 @@ CBookmark& operator =(const CBookmark& bookmark) throw();
 
 Esse operador é necessário apenas em `CBookmark<0>`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

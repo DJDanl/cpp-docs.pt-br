@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 8d6dddef666f074a57f54b8c9447847ff56d26fd
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4ec0d959b2fc10fc34bfc7050a1970359dae5bbc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501477"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168116"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -23,9 +23,9 @@ Especifica o nome da DLL a ser usada para executar a pesquisa de cadeia de carac
 [ helpstringdll("string") ]
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*string*<br/>
+*cadeia de caracteres*<br/>
 A DLL a ser usada para executar a pesquisa de cadeia de caracteres do documento.
 
 ## <a name="remarks"></a>Comentários
@@ -58,9 +58,9 @@ __interface IMyI
 |**Atributos necessários**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)<br/>

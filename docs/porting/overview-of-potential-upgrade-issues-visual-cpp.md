@@ -2,12 +2,12 @@
 title: Visão geral de possíveis problemas de atualização (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 2b310760b1a6623a18a00e36e3bd5378d2ebb76e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ef088f4881dfbd9967f90a009e4a8e397a70b134
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627248"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214975"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Visão geral de possíveis problemas de atualização (Visual C++)
 
@@ -35,7 +35,7 @@ Se você tiver um arquivo-objeto que tenha símbolos externos com vinculação C
 
 Se você vincular a uma biblioteca de importação, qualquer versão mais recente das bibliotecas redistribuíveis do Visual Studio que preservar a compatibilidade com ABI poderá ser usada em runtime. Por exemplo, se o aplicativo é compilado e vinculado usando o conjunto de ferramentas do Visual Studio 2015 Atualização 3, você pode usar qualquer redistribuível do Visual Studio 2017 ou do Visual Studio 2019, porque as bibliotecas do 2015, do 2017 e do 2019 mantiveram a compatibilidade binária entre as versões. O inverso não é verdadeiro: você não pode usar um redistribuível para uma versão anterior do conjunto de ferramentas do que foi usado para criar seu código, mesmo se eles tiverem uma ABI compatível.
 
-### <a name="libraries"></a>Libraries
+### <a name="libraries"></a>Bibliotecas
 
 Se você compilar um arquivo de origem usando uma versão específica de arquivos de cabeçalho de bibliotecas do Visual Studio C++ (#incluindo os cabeçalhos), o arquivo-objeto resultante deverá ser vinculado à mesma versão das bibliotecas. Portanto, por exemplo, se seu arquivo de origem for compilado com o Visual Studio 2015 Atualização 3 \<immintrin.h>, você deverá vincular com a biblioteca vcruntime do Visual Studio 2015 Atualização 3. Da mesma forma, se seu arquivo de origem for compilado com o Visual Studio 2017 versão 15.5 \<iostream>, você deverá vincular à biblioteca C++ padrão do Visual Studio 2017 versão 15.5, msvcprt. Não há suporte para a mistura e combinação.
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t é do tipo nativo)
 
-(No Microsoft Visual C++ 6,0 e anterior, o **wchar_t** não foi implementado como um tipo interno, mas foi declarado em WCHAR. h como um typedef para não assinado curto.) O C++ padrão requer que **wchar_t** seja um tipo interno. Usar a versão typedef pode causar problemas de portabilidade. Caso você atualize de versões anteriores do Visual Studio e encontre o erro do compilador C2664 porque o código está tentando converter implicitamente um **wchar_t** em **unsigned short**, recomendamos que você altere código para corrigir o erro, em vez de configurar `/Zc:wchar_t-`. Para obter mais informações, consulte [/Zc:wchar_t (wchar_t é o tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+(No Microsoft Visual C++ 6,0 e versões anteriores, **wchar_t** não foi implementado como um tipo interno, mas foi declarado em WCHAR. h como um typedef para não assinado curto.) O C++ padrão requer que **wchar_t** seja um tipo interno. Usar a versão typedef pode causar problemas de portabilidade. Caso você atualize de versões anteriores do Visual Studio e encontre o erro do compilador C2664 porque o código está tentando converter implicitamente um **wchar_t** em **unsigned short**, recomendamos que você altere código para corrigir o erro, em vez de configurar `/Zc:wchar_t-`. Para obter mais informações, consulte [/Zc:wchar_t (wchar_t é o tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>Atualizando com as opções de vinculador /NODEFAULTLIB, /ENTRY e /NOENTRY
 
@@ -184,7 +184,7 @@ Antes de o Unicode ser padronizado, muitos programas usavam o MBCS (Conjunto de 
 
 Para obter mais informações, consulte [Porting from MBCS to Unicode](porting-guide-spy-increment.md#porting_to_unicode) (Portabilidade de MBCS para Unicode). Para obter informações gerais sobre MBCS versus Unicode, consulte [texto e cadeias de C++ caracteres em Visual](../text/text-and-strings-in-visual-cpp.md) e [internacionalização](../c-runtime-library/internationalization.md) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atualizando projetos de versões anteriores do VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Aprimoramentos de conformidade do C++ no Visual Studio](../overview/cpp-conformance-improvements.md)

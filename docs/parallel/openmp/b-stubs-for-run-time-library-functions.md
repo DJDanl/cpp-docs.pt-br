@@ -2,19 +2,19 @@
 title: B. Stubs para funções da biblioteca em tempo de execução
 ms.date: 01/22/2019
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-ms.openlocfilehash: 1e8d439eefad005c673cfb6c4ea12399b8236fb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9089bd6ef1f0a8f2f2ed94a7c496943c9bdd5e64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362979"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215053"
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. Stubs para funções da biblioteca em tempo de execução
 
-Esta seção fornece os stubs para as funções da biblioteca de tempo de execução definidas no OpenMP C e C++ API. Os stubs são fornecidos para habilitar a portabilidade para plataformas que não dão suporte a OpenMP C e C++ API. Nessas plataformas, OpenMP programas devem ser vinculados com uma biblioteca que contém essas funções de stub. As funções de stub assumem que as diretivas no programa OpenMP são ignoradas. Como tal, eles emularem semântica serial.
+Esta seção fornece stubs para as funções de biblioteca de tempo de execução definidas em OpenMP C++ C e API. Os stubs são fornecidos para permitir portabilidade para plataformas que não dão suporte a OpenMP C++ C e API. Nessas plataformas, os programas de OpenMP devem ser vinculados a uma biblioteca que contém essas funções de stub. As funções de stub pressupõem que as diretivas no programa de OpenMP sejam ignoradas. Dessa forma, eles emulam a semântica serial.
 
 > [!NOTE]
-> A variável de bloqueio que aparece nas funções de bloqueio deve ser acessada exclusivamente por meio dessas funções. Ele não deve ser inicializado ou caso contrário modificado no programa de usuário. Os usuários não devem fazer suposições sobre os mecanismos usados por implementações de OpenMP C e C++ para implementar bloqueios baseados no esquema usado pelas funções de stub.
+> A variável de bloqueio que aparece nas funções de bloqueio deve ser acessada exclusivamente por meio dessas funções. Ele não deve ser inicializado ou modificado de outra forma no programa do usuário. Os usuários não devem fazer suposições sobre mecanismos usados por OpenMP C C++ e implementações para implementar bloqueios com base no esquema usado pelas funções de stub.
 
 ## <a name="code"></a>Código
 

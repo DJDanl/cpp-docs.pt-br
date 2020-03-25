@@ -12,12 +12,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 88acba8d6e2541b3c9f7707b4dd9c03b13067dda
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a68cc85062f9ca711c453ef98f69a7c5ea114d94
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445355"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214351"
 ---
 # <a name="containers-advanced-features"></a>Contêineres: funcionalidades avançadas
 
@@ -27,7 +27,7 @@ Este artigo descreve as etapas necessárias para incorporar recursos avançados 
 
 - [Um link OLE para um objeto inserido](#_core_links_to_embedded_objects)
 
-##  <a name="_core_creating_a_container_server_application"></a>Criando um aplicativo de contêiner/servidor
+##  <a name="creating-a-containerserver-application"></a><a name="_core_creating_a_container_server_application"></a>Criando um aplicativo de contêiner/servidor
 
 Um aplicativo de contêiner/servidor é um aplicativo que atua como um contêiner e um servidor. O Microsoft Word para Windows é um exemplo disso. Você pode inserir documentos do Word para Windows em outros aplicativos e também pode inserir itens em documentos do Word para Windows. O processo para modificar o aplicativo de contêiner para ser um contêiner e um servidor completo (você não pode criar um aplicativo de contêiner/miniserver de combinação) é semelhante ao processo de criação de um servidor completo.
 
@@ -41,11 +41,11 @@ O artigo [servidores: Implementando um servidor](../mfc/servers-implementing-a-s
 
    Por exemplo, o exemplo OLE do MFC [OCLIENT](../overview/visual-cpp-samples.md) inseriu um item criado por seu aplicativo contêiner/servidor. Abra o aplicativo OCLIENT e no local edite o item criado pelo seu aplicativo de contêiner/servidor. Ao editar o item do aplicativo, você decide que deseja inserir um item criado pelo exemplo de OLE do MFC [HIERSVR](../overview/visual-cpp-samples.md). Para fazer isso, não é possível usar a ativação in-loco. Você deve abrir totalmente o HIERSVR para ativar este item. Como o biblioteca MFC não dá suporte a esse recurso OLE, a substituição de `COleClientItem::CanActivate` permite que você verifique essa situação e evite um possível erro em tempo de execução em seu aplicativo.
 
-Se você estiver criando um novo aplicativo e quiser que ele funcione como um aplicativo de contêiner/servidor, escolha essa opção na caixa de diálogo opções de OLE no assistente de aplicativo e esse suporte será criado automaticamente. Para obter mais informações, consulte o artigo [visão geral: Criando um contêiner de controle ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Para obter informações sobre exemplos de MFC, consulte exemplos de MFC.
+Se você estiver criando um novo aplicativo e quiser que ele funcione como um aplicativo de contêiner/servidor, escolha essa opção na caixa de diálogo opções de OLE no assistente de aplicativo e esse suporte será criado automaticamente. Para obter mais informações, consulte o artigo [visão geral: Criando um contêiner de controle ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Para obter informações sobre exemplos de MFC, consulte [exemplos de MFC](../overview/visual-cpp-samples.md#mfc-samples).
 
 Observe que você não pode inserir um aplicativo MDI em si mesmo. Um aplicativo que é um contêiner/servidor não pode ser inserido em si, a menos que seja um aplicativo SDI.
 
-##  <a name="_core_links_to_embedded_objects"></a>Links para objetos inseridos
+##  <a name="links-to-embedded-objects"></a><a name="_core_links_to_embedded_objects"></a>Links para objetos inseridos
 
 O recurso links para objetos inseridos permite que um usuário crie um documento com um link OLE para um objeto inserido dentro do aplicativo de contêiner. Por exemplo, crie um documento em um processador de texto que contenha uma planilha inserida. Se seu aplicativo oferecer suporte a links para objetos inseridos, ele poderá colar um link para a planilha contida no documento do processador de texto. Esse recurso permite que seu aplicativo use as informações contidas na planilha sem saber onde o processador de texto o recebeu originalmente.
 
@@ -71,7 +71,7 @@ O recurso links para objetos inseridos permite que um usuário crie um documento
 
 O [OCLIENT](../overview/visual-cpp-samples.md) de exemplo OLE do MFC implementa esse recurso. Para obter um exemplo de como isso é feito, consulte a função `InitInstance` no *OCLIENT. Arquivo CPP* deste aplicativo de exemplo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Contêineres](../mfc/containers.md)<br/>
 [Servidores](../mfc/servers.md)

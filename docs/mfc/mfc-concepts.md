@@ -3,12 +3,12 @@ title: Conceitos MFC
 ms.date: 01/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 5617051dc700bb1dd594a13627c9e3d01ef9caa9
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 3273538e4fdffbf68fbe01c7f912584380505d1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927914"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178516"
 ---
 # <a name="mfc-concepts"></a>Conceitos MFC
 
@@ -20,7 +20,7 @@ Esta seção fornece tópicos conceituais e baseados em tarefas para ajudá-lo a
 Discute os detalhes técnicos da biblioteca do MFC.
 
 [Usando CObject](../mfc/using-cobject.md)<br/>
-Fornece links para usar `CObject`o, a classe base para a maioria das classes no MFC.
+Fornece links para usar `CObject`, a classe base para a maioria das classes no MFC.
 
 [Coleções](../mfc/collections.md)<br/>
 Discute as classes de coleção criadas e não criadas a C++ partir de modelos.
@@ -29,7 +29,7 @@ Discute as classes de coleção criadas e não criadas a C++ partir de modelos.
 Fornece links para tópicos que abordam o uso de data e hora com o MFC.
 
 [Arquivos](../mfc/files-in-mfc.md)<br/>
-`CFile` Discute e como tratar arquivos no MFC.
+Discute `CFile` e como manipular arquivos no MFC.
 
 [Gerenciamento de memória (MFC)](../mfc/memory-management.md)<br/>
 Descreve como aproveitar os serviços de uso geral relacionados ao gerenciamento de memória.
@@ -66,5 +66,5 @@ Aborda a implementação do MFC do Windows Sockets.
 [Referência do MFC](../mfc/mfc-desktop-applications.md)<br/>
 Fornece material de referência da biblioteca MFC, um conjunto de classes que constituem uma estrutura de aplicativos, que é a estrutura de um aplicativo escrito para a API do Windows.
 
-[Exemplos de MFC](../overview/visual-cpp-samples.md)<br/>
+[Exemplos de MFC](../overview/visual-cpp-samples.md#mfc-samples)<br/>
 Fornece links para exemplos que mostram como usar o MFC em aplicativos de área de trabalho, DLLs, aplicativos de banco de dados, controles, aplicativos Web e muito mais.

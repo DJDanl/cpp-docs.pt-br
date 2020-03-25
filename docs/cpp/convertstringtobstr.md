@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ConvertStringToBSTR function
 ms.assetid: 071f9b3b-9643-4e06-a1e5-de96ed15bab2
-ms.openlocfilehash: 5e7d8abd29033fc88dae1e83fcc6467fb0ace46f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2065011ee6bbf98ce2c83be494f1e6631af9f7cf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154614"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170703"
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
 
@@ -25,10 +25,10 @@ Converte um valor `char *` em uma `BSTR`.
 BSTR __stdcall ConvertStringToBSTR(const char* pSrc)
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 
 *pSrc*<br/>
-Um `char *` variável.
+Uma variável `char *`.
 
 ## <a name="example"></a>Exemplo
 
@@ -60,10 +60,10 @@ BSTR text: Test
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<comutil. h >
+**Cabeçalho:** \<fileutil. h >
 
-**Lib:** comsuppw. lib ou comsuppwd (consulte [/ZC: wchar_t (wchar_t Is Native Type)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)
+**Lib:** comsuppw. lib ou comsuppwd. lib (consulte [/Zc: Wchar_t (Wchar_t é o tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Funções globais COM do compilador](../cpp/compiler-com-global-functions.md)

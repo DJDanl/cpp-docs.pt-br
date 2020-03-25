@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2795
 ms.assetid: 8cd8c7fe-2add-4871-85f7-9a6afe4ac588
-ms.openlocfilehash: efb13fce8239dd2572e2748c8b851252ebb1861a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecd74b7c47c0979e4b3e218d3b7eef850e20a878
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360106"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202068"
 ---
 # <a name="compiler-error-c2795"></a>Erro do compilador C2795
 
-'super::function' não é uma função de membro
+' super:: function ' não é uma função membro
 
-Essa mensagem de erro aparece sempre que você tentar usar [super](../../cpp/super.md) para acessar um membro que não seja uma função de membro.
+Essa mensagem de erro é exibida sempre que você tenta usar [super](../../cpp/super.md) para acessar um membro que não seja uma função de membro.

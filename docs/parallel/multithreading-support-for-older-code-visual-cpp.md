@@ -10,50 +10,50 @@ helpviewer_keywords:
 - multiple concurrent threads
 - multithreading [C++]
 ms.assetid: 24425b1f-5031-4c6b-aac7-017115a40e7c
-ms.openlocfilehash: 649e26c3f0704dfd6740b1a250613545e29316a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f76ff42d2e28afe251ce234220051111736d3c9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407738"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215079"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Suporte multithread para código anterior (Visual C++)
 
-Visual C++ permite que você tenha vários threads simultâneos de execução sendo executados simultaneamente. Com o multithreading, você pode rotacionar tarefas em segundo plano, gerenciar fluxos simultâneos de entrada, gerenciar uma interface do usuário e muito mais.
+O C++ visual permite que você tenha vários threads simultâneos de execução em execução simultaneamente. Com o multithreading, você pode girar as tarefas em segundo plano, gerenciar fluxos de entrada simultâneos, gerenciar uma interface do usuário e muito mais.
 
 ## <a name="in-this-section"></a>Nesta seção
 
 [Multithreading com C e Win32](multithreading-with-c-and-win32.md)<br/>
-Fornece suporte para criar aplicativos multithread com o Microsoft Windows
+Fornece suporte para a criação de aplicativos multithread com o Microsoft Windows
 
 [Multithreading com C++ e MFC](multithreading-with-cpp-and-mfc.md)<br/>
-Descreve quais são os processos e threads e o que a abordagem MFC para multithreading é.
+Descreve o que são processos e threads e qual é a abordagem do MFC para multithreading.
 
 [Multithread e localidades](multithreading-and-locales.md)<br/>
-Discute problemas que ocorrem ao usar a funcionalidade de localidade da biblioteca de tempo de execução C e a biblioteca padrão C++ em um aplicativo multithreaded.
+Discute os problemas que surgem ao usar a funcionalidade de localidade da biblioteca de tempo de execução C++ C e da biblioteca padrão em um aplicativo multithread.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
 [CWinThread](../mfc/reference/cwinthread-class.md)<br/>
-Representa um segmento de execução dentro de um aplicativo.
+Representa um thread de execução dentro de um aplicativo.
 
 [CSyncObject](../mfc/reference/csyncobject-class.md)<br/>
-Descreve uma classe virtual pura que fornece funcionalidade comum para os objetos de sincronização no Win32.
+Descreve uma classe virtual pura que fornece funcionalidade comum aos objetos de sincronização no Win32.
 
 [CSemaphore](../mfc/reference/csemaphore-class.md)<br/>
-Representa um semáforo, que é um objeto de sincronização que permite que um número limitado de threads em um ou mais processos para acessar um recurso.
+Representa um semáforo, que é um objeto de sincronização que permite que um número limitado de threads em um ou mais processos acessem um recurso.
 
 [CMutex](../mfc/reference/cmutex-class.md)<br/>
-Representa um mutex, que é um objeto de sincronização que permite um acesso mutuamente exclusivo de thread a um recurso.
+Representa um mutex, que é um objeto de sincronização que permite que um thread tenha acesso mutuamente exclusivo a um recurso.
 
 [CCriticalSection](../mfc/reference/ccriticalsection-class.md)<br/>
-Representa uma seção crítica, o que é um objeto de sincronização que permite que um thread por vez para acessar um recurso ou seção de código.
+Representa uma seção crítica, que é um objeto de sincronização que permite a um thread por vez acessar um recurso ou seção de código.
 
 [CEvent](../mfc/reference/cevent-class.md)<br/>
 Representa um evento, que é um objeto de sincronização que permite que um thread notifique outro que ocorreu um evento.
 
 [CMultiLock](../mfc/reference/cmultilock-class.md)<br/>
-Representa o mecanismo de controle de acesso usado no controle de acesso aos recursos em um programa multi-threaded.
+Representa o mecanismo de controle de acesso usado no controle do acesso a recursos em um programa multithread.
 
 [CSingleLock](../mfc/reference/csinglelock-class.md)<br/>
-Representa o mecanismo de controle de acesso usado no controle de acesso a um recurso em um programa multi-threaded.
+Representa o mecanismo de controle de acesso usado no controle do acesso a um recurso em um programa multithread.

@@ -6,37 +6,37 @@ helpviewer_keywords:
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-ms.openlocfilehash: 12c3de79626411b76a402a7f5407f40a7b054318
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e04b9a335c60cefdc28be2347ef1f0762c424d8e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387559"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210125"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Obtendo metadados com conjuntos de linhas de esquema
 
-Às vezes você precisa obter informações sobre o provedor, conjunto de linhas, tabela, colunas ou outras informações de banco de dados sem abrir o conjunto de linhas. Dados sobre a estrutura de banco de dados são chamados de metadados e podem ser recuperados por um número de métodos diferentes. Um método é usar conjuntos de linhas de esquema.
+Às vezes, você precisa obter informações sobre o provedor, conjunto de linhas, tabela, colunas ou outras informações do banco de dados sem abrir o conjunto de linhas. Os dados sobre a estrutura do banco de dado são chamados de metadados e podem ser recuperados por vários métodos diferentes. Um método é usar conjuntos de linhas de esquema.
 
-Modelos OLE DB fornecer um conjunto de classes para recuperar informações de esquema; Essas classes criar conjuntos de linhas do esquema predefinido e são listadas na [Classes de conjunto de linhas de esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).
+Os modelos de OLE DB fornecem um conjunto de classes para recuperar informações de esquema; Essas classes criam conjuntos de linhas de esquema predefinidos e são listadas em classes de conjunto de itens de [esquema e classes de typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).
 
 > [!NOTE]
-> Se você estiver usando o OLAP e alguns de seus conjuntos de linhas não são suportados pelas classes de conjunto de linhas de esquema (por exemplo, se você tiver um número variável de colunas), você deve considerar o uso `CManualAccessor` ou `CDynamicAccessor`. Você pode percorrer as colunas e usar instruções case para tratar os possíveis tipos de dados para cada coluna.
+> Se você estiver usando o OLAP e alguns dos seus conjuntos de linhas não forem suportados pelas classes de Rowset de esquema (por exemplo, você tem um número variável de colunas), considere usar `CManualAccessor` ou `CDynamicAccessor`. Você pode percorrer as colunas e as instruções Case de uso para manipular os possíveis tipos de dados para cada coluna.
 
-## <a name="catalogschema-model"></a>Modelo de esquema do catálogo
+## <a name="catalogschema-model"></a>Modelo de catálogo/esquema
 
-ANSI SQL define um modelo de esquema do catálogo para armazenamentos de dados; OLE DB usa esse modelo. Nesse modelo, os catálogos (bancos de dados) têm esquemas e esquemas têm tabelas.
+O ANSI SQL define um modelo de catálogo/esquema para armazenamentos de dados; OLE DB usa esse modelo. Nesse modelo, os catálogos (bancos de dados) têm esquemas e esquemas têm tabelas.
 
-- **Catálogo** um catálogo é outro nome de um banco de dados. É uma coleção de esquemas relacionadas. Para listar os catálogos (bancos de dados) que pertencem a uma determinada fonte de dados, use [CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md). Como muitos bancos de dados têm apenas um catálogo, metadados é às vezes chamado de informações de esquema.
+- **Catálogo** Um catálogo é outro nome para um banco de dados. É uma coleção de esquemas relacionados. Para listar os catálogos (bancos de dados) que pertencem a uma determinada fonte, use [CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md). Como muitos bancos de dados têm apenas um catálogo, os metadados às vezes são chamados de informações de esquema.
 
-- **Esquema** um esquema é uma coleção de objetos de banco de dados que são de propriedade ou ter sido criado por um determinado usuário. Para listar os esquemas de propriedade de um determinado usuário, use [CSchemata](../../data/oledb/cschemata-cschematainfo.md).
+- **Esquema** do Um esquema é uma coleção de objetos de banco de dados que são de propriedade ou que foram criados por um usuário específico. Para listar os esquemas de propriedade de um determinado usuário, use [CSchemata](../../data/oledb/cschemata-cschematainfo.md).
 
-   Em termos de Microsoft SQL Server e o ODBC 2. x, um esquema é um proprietário (por exemplo, dbo é um nome de esquema comum). Além disso, o SQL Server armazena metadados em um conjunto de tabelas: uma tabela contém uma lista de todas as tabelas e outra tabela contém uma lista de todas as colunas. Não há nenhum equivalente a um esquema em um banco de dados do Microsoft Access.
+   Nos termos Microsoft SQL Server e ODBC 2. x, um esquema é um proprietário (por exemplo, dbo é um nome de esquema típico). Além disso, SQL Server armazena metadados em um conjunto de tabelas: uma tabela contém uma lista de todas as tabelas e outra tabela contém uma lista de todas as colunas. Não há equivalente a um esquema em um banco de dados do Microsoft Access.
 
-- **Tabela** tabelas são conjuntos de colunas organizados em pedidos específicos. Para listar as tabelas definidas em um determinado catálogo (banco de dados) e informações sobre essas tabelas, use [CTables](../../data/oledb/ctables-ctableinfo.md)).
+- **Tabela** As tabelas são coleções de colunas organizadas em ordens específicas. Para listar as tabelas definidas em um determinado catálogo (banco de dados) e informações sobre essas tabelas, use [CTables](../../data/oledb/ctables-ctableinfo.md)).
 
 ## <a name="restrictions"></a>Restrições
 
-Quando você consulta para obter informações de esquema, você pode usar restrições para especificar o tipo de informação no qual você está interessado. Você pode considerar restrições como um qualificador em uma consulta ou um filtro. Por exemplo, na consulta:
+Ao consultar informações de esquema, você pode usar restrições para especificar o tipo de informações em que está interessado. Você pode considerar as restrições como um filtro ou qualificador em uma consulta. Por exemplo, na consulta:
 
 ```sql
 SELECT * FROM authors WHERE l_name = 'pivo'
@@ -44,23 +44,23 @@ SELECT * FROM authors WHERE l_name = 'pivo'
 
 `l_name` é uma restrição. Este é um exemplo simples com apenas uma restrição; as classes de conjunto de linhas de esquema dão suporte a várias restrições.
 
-O [classes de typedef do conjunto de linhas de esquema](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) encapsular todas as linhas do esquema de OLE DB para que você possa acessar um conjunto de linhas de esquema assim como qualquer outro conjunto de linhas instanciando e abri-lo. Por exemplo, a classe de typedef [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md) é definida como:
+As [classes de typedef do conjunto de linhas de esquema](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) encapsulam todos os conjuntos de itens de esquema de OLE DB para que você possa acessar um conjunto de linhas de esquema, assim como qualquer outro conjunto de linhas, instanciando e abrindo-o. Por exemplo, a classe typedef [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md) é definida como:
 
 ```cpp
 CRestrictions<CAccessor<CColumnsInfo>
 ```
 
-O [CRestrictions](../../data/oledb/crestrictions-class.md) classe fornece o suporte de restrição. Depois de criar uma instância do conjunto de linhas de esquema, chame [crestrictions:: Open](../../data/oledb/crestrictions-open.md). Esse método retorna um conjunto de resultados com base nas restrições que você especificar.
+A classe [cRestrictions](../../data/oledb/crestrictions-class.md) fornece o suporte de restrição. Depois de criar uma instância do conjunto de linhas de esquema, chame [CRestrictions:: Open](../../data/oledb/crestrictions-open.md). Esse método retorna um conjunto de resultados com base nas restrições que você especificar.
 
-Para especificar restrições, consulte [apêndice b: Conjuntos de linhas de esquema](/previous-versions/windows/desktop/ms712921(v=vs.85)) e consultar o conjunto de linhas que você está usando. Por exemplo, `CColumns` corresponde do [conjunto de linhas COLUMNS](/previous-versions/windows/desktop/ms723052(v=vs.85)); esse tópico lista as colunas de restrição no conjunto de linhas de colunas: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Você deve seguir nessa ordem no especificando suas restrições.
+Para especificar restrições, consulte o [Apêndice B: conjuntos](/previous-versions/windows/desktop/ms712921(v=vs.85)) de linhas de esquema e pesquise o conjunto de itens que você está usando. Por exemplo, `CColumns` corresponde ao [conjunto de linhas de colunas](/previous-versions/windows/desktop/ms723052(v=vs.85)); Esse tópico lista as colunas de restrição no conjunto de linhas de colunas: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME COLUMN_NAME. Você deve seguir essa ordem na especificação de suas restrições.
 
-Portanto, por exemplo, se você quiser restringir por nome de tabela, TABLE_NAME é a terceira coluna de restrição e, em seguida, chame `Open`, especificando o nome da tabela desejada como o terceiro parâmetro de restrição, conforme mostrado no exemplo a seguir.
+Portanto, por exemplo, se você quiser restringir pelo nome da tabela, TABLE_NAME será a terceira coluna de restrição e, em seguida, chamará `Open`, especificando o nome da tabela desejada como o terceiro parâmetro de restrição, conforme mostrado no exemplo a seguir.
 
 ### <a name="to-use-schema-rowsets"></a>Para usar conjuntos de linhas de esquema
 
-1. Incluir o arquivo de cabeçalho `Atldbsch.h` (você precisa `Atldbcli.h` para suporte de consumidor).
+1. Inclua o arquivo de cabeçalho `Atldbsch.h` (você também precisa de `Atldbcli.h` para o suporte do consumidor).
 
-1. Criar uma instância de um objeto de conjunto de linhas de esquema do consumidor ou do documento arquivo de cabeçalho. Se você quiser que as informações de tabela, declarar uma `CTables` objeto; se você quiser que as informações de coluna, declare um `CColumns` objeto. Este exemplo mostra como recuperar as colunas na tabela de autores:
+1. Crie uma instância de um objeto de conjunto de linhas de esquema no arquivo de cabeçalho do consumidor ou do documento. Se você quiser informações de tabela, declare um objeto `CTables`; Se você quiser informações de coluna, declare um objeto `CColumns`. Este exemplo mostra como recuperar as colunas na tabela autores:
 
     ```cpp
     CDataSource ds;
@@ -78,16 +78,16 @@ Portanto, por exemplo, se você quiser restringir por nome de tabela, TABLE_NAME
     }
     ```
 
-1. Para buscar as informações, acessar o membro de dados apropriado do objeto de conjunto de linhas de esquema, por exemplo, `ColumnSchemaRowset.m_szColumnName`. Este membro de dados corresponde ao nome da coluna. Para ver qual coluna de banco de dados OLE, cada membro de dados corresponde ao, consulte [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md).
+1. Para buscar as informações, acesse o membro de dados apropriado do objeto conjunto de linhas de esquema, por exemplo, `ColumnSchemaRowset.m_szColumnName`. Este membro de dados corresponde a COLUMN_NAME. Para ver a qual OLE DB coluna cada membro de dados corresponde, consulte [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md).
 
-Para a referência do conjunto de linhas de esquema, classes typedef fornecida nos modelos do OLE DB (consulte [Classes de conjunto de linhas de esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).
+Para a referência do conjunto de linhas de esquema, classes de typedef fornecidas nos modelos de OLE DB (consulte [classes de conjunto de linhas de esquema e classes de typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).
 
-Para obter mais informações sobre conjuntos de linhas de esquema de OLE DB, incluindo colunas de restrição, consulte [apêndice b: Conjuntos de linhas de esquema](/previous-versions/windows/desktop/ms712921(v=vs.85)) no **referência do programador do OLE DB**.
+Para obter mais informações sobre conjuntos de linhas de esquema OLE DB, incluindo colunas de restrição, consulte o [Apêndice B: conjuntos](/previous-versions/windows/desktop/ms712921(v=vs.85)) de itens de esquema na **referência do programador de OLE DB**.
 
-Para obter exemplos mais complexos de como usar classes rowset do esquema, consulte o [CatDB](https://github.com/Microsoft/VCSamples) e [DBViewer](https://github.com/Microsoft/VCSamples) exemplos.
+Para obter exemplos mais complexos de como usar classes de conjunto de linhas de esquema, consulte os exemplos de [CatDB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) e [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) .
 
-Para obter informações sobre o suporte do provedor de conjuntos de linhas de esquema, consulte [que dão suporte a conjuntos de linhas de esquema](../../data/oledb/supporting-schema-rowsets.md).
+Para obter informações sobre o suporte do provedor para conjuntos de linhas de esquema, consulte [dando suporte a conjuntos](../../data/oledb/supporting-schema-rowsets.md)de linhas de esquema.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Usando acessadores](../../data/oledb/using-accessors.md)

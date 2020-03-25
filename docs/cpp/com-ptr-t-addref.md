@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - AddRef method [C++], interface pointers
 ms.assetid: c104dac3-aad3-40bb-a298-75c6cd0e63a2
-ms.openlocfilehash: 7408b5c174f76673b56caffd56aaa87895bd08d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51182b461aeac83c12bb18a573a49b2d4347a190
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154936"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189917"
 ---
-# <a name="comptrtaddref"></a>_com_ptr_t::AddRef
+# <a name="_com_ptr_taddref"></a>_com_ptr_t::AddRef
 
 **Seção específica da Microsoft**
 
-Chamadas a `AddRef` função de membro de `IUnknown` no ponteiro de interface encapsulado.
+Chama a função membro `AddRef` de `IUnknown` no ponteiro de interface encapsulado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,10 +27,10 @@ void AddRef( );
 
 ## <a name="remarks"></a>Comentários
 
-Chamadas `IUnknown::AddRef` no ponteiro de interface encapsulado, gerando um `E_POINTER` erro se o ponteiro é NULL.
+Chama `IUnknown::AddRef` no ponteiro de interface encapsulada, gerando um erro de `E_POINTER` se o ponteiro for nulo.
 
 **Fim da seção específica da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

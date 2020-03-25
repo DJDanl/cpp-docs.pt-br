@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 19f28963a18abf42c6f629ac0f6491628387aa6d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f51b0210fff4db5be359fa94237f4d7c77b4fef2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491005"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214884"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -26,7 +26,7 @@ Define os metadados de um objeto na biblioteca de tipos.
 ) ];
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *uuid*<br/>
 Uma ID exclusiva.
@@ -46,14 +46,14 @@ O atributo **personalizado** tem a mesma funcionalidade que o atributo MIDL [per
 
 |||
 |-|-|
-|**Aplica-se a**|**Interface**não com, **classe**, **enum**s, `idl_module` métodos, membros de interface, parâmetros de interface, **typedef**s, **Union**s, **struct**s|
+|**Aplica-se a**|**Interface**não com, **classe**, **enum**s, métodos de `idl_module`, membros de interface, parâmetros de interface, **typedef**s, **Union**s, **struct**s|
 |**Repetível**|Sim|
 |**Atributos necessários**|**coclass** (quando usado na classe)|
 |**Atributos inválidos**|Nenhum|
 
-Para obter mais informações sobre os contextos de atributo, consulte contextos de [atributo](cpp-attributes-com-net.md#contexts).
+Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos independentes](stand-alone-attributes.md)<br/>

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0012
 - CAN0012
 ms.assetid: bf547e21-6708-4854-ad23-2ae5a889fd82
-ms.openlocfilehash: 400c4e219ba7c6699b3b531ad93909d0db682c64
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d8de83673c892146cb6d9e2c26e0ca9a4fadd62
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397179"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196125"
 ---
 # <a name="expression-evaluator-error-cxx0012"></a>Erro CXX0012 (avaliador de expressão)
 
 chave esquerda ausente
 
-A expressão contém uma chave de abertura desbalanceada. Digite novamente a expressão com equilibrada entre chaves.
+A expressão contém uma chave desbalanceada. Digite novamente a expressão com chaves balanceadas.
 
-Esse erro é idêntico ao CAN0012.
+Esse erro é idêntico a CAN0012.

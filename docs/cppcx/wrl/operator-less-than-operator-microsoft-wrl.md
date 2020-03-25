@@ -1,20 +1,20 @@
 ---
-title: 'operador&lt; operador (Microsoft:: wrl)'
+title: 'operador operador&lt; (Microsoft:: WRL)'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator<
 ms.assetid: bfae0e1c-1648-482b-99c2-3217d62aba46
-ms.openlocfilehash: 4887a7ebf3906edbc4a5a2a723caff0ad7732c46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04f5598667f7e0e036f0a55cd3f9cc52b5356299
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182919"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213636"
 ---
-# <a name="operatorlt-operator-microsoftwrl"></a>operador&lt; operador (Microsoft:: wrl)
+# <a name="operatorlt-operator-microsoftwrl"></a>operador operador&lt; (Microsoft:: WRL)
 
-Determina se o endereço de um objeto é menor que outro.
+Determina se o endereço de um objeto é menor que o outro.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -25,24 +25,24 @@ template<class T, class U>
 bool operator<(const Details::ComPtrRef<ComPtr<T>>& a, const Details::ComPtrRef<ComPtr<U>>& b) throw();
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 *a*<br/>
 O objeto à esquerda.
 
 *b*<br/>
-O objeto à direita.
+O objeto correto.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-**Verdadeiro** se o endereço de *um* é menor que o endereço do *b*; caso contrário, **false**.
+**true** se o endereço de *a* for menor que o endereço de *b*; caso contrário, **false**.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** client.h
+**Cabeçalho:** Client. h
 
-**Namespace:** Microsoft::WRL
+**Namespace:** Microsoft:: WRL
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace Microsoft::WRL](microsoft-wrl-namespace.md)

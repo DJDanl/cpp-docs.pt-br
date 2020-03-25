@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - C3888
 ms.assetid: 40820812-79c5-4dcd-a19d-b4164d25fc8a
-ms.openlocfilehash: e4d52946126e7be6c6f2aef34b5eb5a93a0babad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40156dfaad5965d30a32d3aa2ac574a5f91999ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187373"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176398"
 ---
 # <a name="compiler-error-c3888"></a>Erro do compilador C3888
 
-'name': a expressão const associada a este membro de dados literal não é suportada pelo C++/CLI
+' name ': a expressão const associada a este membro de dados literal não é suportada por C++/CLI
 
-O *nome* membro de dados que é declarado com o [literal](../../extensions/literal-cpp-component-extensions.md) palavra-chave é inicializada com um valor que o compilador não oferece suporte. O compilador suporta apenas constante integral, enum ou tipos de cadeia de caracteres. A causa provável para o **C3888** erro é que o membro de dados é inicializado com uma matriz de bytes.
+O membro de dados de *nome* declarado com a palavra-chave [literal](../../extensions/literal-cpp-component-extensions.md) é inicializado com um valor ao qual o compilador não oferece suporte. O compilador oferece suporte apenas a tipos de cadeia de caracteres, de enumeração ou integral constantes. A causa provável para o erro **C3888** é que o membro de dados é inicializado com uma matriz de bytes.
 
-### <a name="to-correct-this-error"></a>Para corrigir este erro
+### <a name="to-correct-this-error"></a>Para corrigir esse erro
 
 1. Verifique se o membro de dados literal declarado é um tipo com suporte.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [literal](../../extensions/literal-cpp-component-extensions.md)

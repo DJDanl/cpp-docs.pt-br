@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-ms.openlocfilehash: be9e1830ea44223aa46ad9a7f5c6cee6734fa9e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 739132ce1889b7e73b7ae19f5072a1dfec9c066d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385044"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181662"
 ---
 # <a name="additive-operators--and--"></a>Operadores aditivos: + e -
 
@@ -32,39 +32,39 @@ expression - expression
 
 Os operadores de adição são:
 
-- Adição (**+**)
+- Adição ( **+** )
 
-- Subtração (**-**)
+- Subtração ( **-** )
 
 Esses operadores binários possuem associatividade da esquerda para a direita.
 
-Os operadores de adição usam operandos de tipos aritméticos ou ponteiro. O resultado da adição (**+**) operador é a soma dos operandos. O resultado da subtração (**-**) operador é a diferença entre os operandos. Se um ou ambos os operandos forem ponteiros, eles devem ser ponteiros para os objetos, não para funções. Se ambos os operandos forem ponteiros, os resultados não serão significativos a menos que ambos sejam ponteiros para os objetos na mesma matriz.
+Os operadores de adição usam operandos de tipos aritméticos ou ponteiro. O resultado do operador de adição ( **+** ) é a soma dos operandos. O resultado do operador de subtração ( **-** ) é a diferença entre os operandos. Se um ou ambos os operandos forem ponteiros, eles devem ser ponteiros para os objetos, não para funções. Se ambos os operandos forem ponteiros, os resultados não serão significativos a menos que ambos sejam ponteiros para os objetos na mesma matriz.
 
-Operadores de adição usam operandos de *aritmético*, *integral*, e *escalar* tipos. Eles são definidos na tabela a seguir.
+Operadores aditivos usam operandos de tipos *aritméticos*, *inteiros*e *escalares* . Eles são definidos na tabela a seguir.
 
 ### <a name="types-used-with-additive-operators"></a>Tipos usados com operadores de adição
 
-|Tipo|Significado|
+|Type|Significado|
 |----------|-------------|
-|*arithmetic*|Os tipos integral e flutuante são coletivamente chamados de tipos “aritméticos”.|
-|*integral*|Os tipos char e int de todos os tamanhos (curto, longo) e enumerações são os tipos “integrais”.|
-|*scalar*|Os operandos escalares são operandos aritméticos ou de ponteiro.|
+|*aritmético*|Os tipos integral e flutuante são coletivamente chamados de tipos “aritméticos”.|
+|*integrado*|Os tipos char e int de todos os tamanhos (curto, longo) e enumerações são os tipos “integrais”.|
+|*único*|Os operandos escalares são operandos aritméticos ou de ponteiro.|
 
 As combinações legais para usar esses operadores são:
 
-*arithmetic* + *arithmetic*
+*aritmética* de + *aritmética*
 
-*scalar* + *integral*
+*integral* + *escalar*
 
-*integral* + *scalar*
+ + *integral* de *escala*
 
-*arithmetic* - *arithmetic*
+*aritmética* de - *aritmética*
 
-*scalar* - *scalar*
+*escala escalar - * *scalar*
 
 Observe que a adição e subtração não são operações equivalentes.
 
-Se ambos os operandos forem do tipo aritmético, as conversões abordadas em [conversões padrão](standard-conversions.md) são aplicadas aos operandos, e o resultado é do tipo convertido.
+Se ambos os operandos forem do tipo aritmético, as conversões abordadas nas [conversões padrão](standard-conversions.md) serão aplicadas aos operandos e o resultado será do tipo convertido.
 
 ## <a name="example"></a>Exemplo
 
@@ -86,7 +86,7 @@ int main() {
 }
 ```
 
-## <a name="pointer-addition"></a>Adição do ponteiro
+## <a name="pointer-addition"></a>Adição de ponteiro
 
 Se um dos operandos em uma operação de adição é um ponteiro para uma matriz de objetos, o outro deve ser do tipo integral. O resultado é um ponteiro que tem o mesmo tipo do ponteiro original e que aponta para outro elemento da matriz. O fragmento de código a seguir ilustra esse conceito:
 
@@ -109,11 +109,11 @@ Embora o valor de integral 1 seja adicionado a `pIntArray`, isso não significa 
 
 ## <a name="pointer-subtraction"></a>Subtração de ponteiro
 
-Se ambos os operandos forem ponteiros, o resultado da subtração será a diferença (em elementos de matriz) entre os operandos. A expressão de subtração gera um resultado integral com sinal do tipo `ptrdiff_t` (definido no arquivo de inclusão padrão \<stddef. h >).
+Se ambos os operandos forem ponteiros, o resultado da subtração será a diferença (em elementos de matriz) entre os operandos. A expressão de subtração produz um resultado integral assinado do tipo `ptrdiff_t` (definido no arquivo de inclusão padrão \<stddef. h >).
 
-Um dos operandos pode ser do tipo integral, desde que seja o segundo operando. O resultado da subtração é do mesmo tipo do ponteiro original. O valor da subtração é um ponteiro para o (*n* - *eu*) º elemento da matriz, onde *n* é o elemento apontado pelo ponteiro original e *eu* é o valor integral do segundo operando.
+Um dos operandos pode ser do tipo integral, desde que seja o segundo operando. O resultado da subtração é do mesmo tipo do ponteiro original. O valor da subtração é um ponteiro para o elemento da matriz (*n* - *i*), em que *n* é o elemento apontado pelo ponteiro *original e é* o valor integral do segundo operando.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)<br/>
 [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
