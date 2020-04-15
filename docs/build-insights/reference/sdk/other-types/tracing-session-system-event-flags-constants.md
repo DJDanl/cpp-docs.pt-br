@@ -1,6 +1,6 @@
 ---
 title: TRACING_SESSION_SYSTEM_EVENT_FLAGS constantes
-description: A C++ referência de constantes do SDK do insights do Build TRACING_SESSION_SYSTEM_EVENT_FLAGS.
+description: O C++ Build Insights SDK TRACING_SESSION_SYSTEM_EVENT_FLAGS referência de constantes.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ce0b0ea373ec53f0d5bcf228269299d69b49bb95
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 264d697cc905eb6b44c8ec7de835a552976f0eb8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332351"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323282"
 ---
 # <a name="tracing_session_system_event_flags-constants"></a>TRACING_SESSION_SYSTEM_EVENT_FLAGS constantes
 
 ::: moniker range="<=vs-2015"
 
-O C++ SDK de informações de compilação é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de versão do Visual Studio para este artigo como Visual Studio 2017 ou Visual Studio 2019.
+O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-As constantes `TRACING_SESSION_SYSTEM_EVENT_FLAGS` são usadas para descrever os eventos do sistema a serem coletados durante um rastreamento. Use-os para inicializar o campo `SystemEventFlags` da estrutura de [TRACING_SESSION_OPTIONS](tracing-session-options-struct.md) .
+As `TRACING_SESSION_SYSTEM_EVENT_FLAGS` constantes são usadas para descrever quais eventos do sistema devem ser coletados durante um rastreamento. Use-os para inicializar o `SystemEventFlags` campo da estrutura [TRACING_SESSION_OPTIONS.](tracing-session-options-struct.md)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,10 +42,10 @@ static const unsigned long long
 
 ## <a name="members"></a>Membros
 
-| {1&gt;Nome&lt;1} | Eventos ativados por este sinalizador |
+| Nome | Eventos ligados por esta bandeira |
 |--|--|
-| `TRACING_SESSION_SYSTEM_EVENT_FLAGS_CONTEXT` | Esse sinalizador é ativado por padrão pelo SDK C++ de informações de compilação, mesmo que não seja especificado explicitamente. Ele habilita eventos básicos do sistema que são necessários C++ para que o Build percepções funcione corretamente. Os eventos habilitados por esse sinalizador fornecem informações sobre processos, threads e carregamento de imagem. Você não pode desabilitar esses eventos. |
-| `TRACING_SESSION_SYSTEM_EVENT_FLAGS_CPU_SAMPLES` | Exemplos de CPU |
-| `TRACING_SESSION_SYSTEM_EVENT_FLAGS_ALL` | Esse sinalizador ativa todos os eventos do sistema. |
+| `TRACING_SESSION_SYSTEM_EVENT_FLAGS_CONTEXT` | Este sinalizador é ativado por padrão pelo C++ Build Insights SDK, mesmo que não seja especificado explicitamente. Ele permite que eventos básicos do sistema que são exigidos pelo C++ Build Insights funcionem corretamente. Os eventos habilitados por este sinalizador fornecem informações sobre processos, threads e carregamento de imagens. Você não pode desativar esses eventos. |
+| `TRACING_SESSION_SYSTEM_EVENT_FLAGS_CPU_SAMPLES` | Amostras de CPU |
+| `TRACING_SESSION_SYSTEM_EVENT_FLAGS_ALL` | Esta bandeira liga todos os eventos do sistema. |
 
 ::: moniker-end

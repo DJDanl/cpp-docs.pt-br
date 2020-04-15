@@ -1,5 +1,5 @@
 ---
-title: Classe CWinTraits
+title: Classe Cwintraits
 ms.date: 11/04/2016
 f1_keywords:
 - CWinTraits
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - CFrameWinTraits class
 - CControlWinTraits class
 ms.assetid: f78f486e-6d9c-42c6-8e86-371e05aa7e59
-ms.openlocfilehash: 840433ffb325a4f181848371306607b62373e75a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd73f733e4eff21da92937d1e1b0cce21552a48c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276770"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330306"
 ---
-# <a name="cwintraits-class"></a>Classe CWinTraits
+# <a name="cwintraits-class"></a>Classe Cwintraits
 
-Essa classe fornece um método para padronizar os estilos usados durante a criação de um objeto de janela.
+Esta classe fornece um método para padronizar os estilos usados ao criar um objeto de janela.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+> Esta classe e seus membros não podem ser usados em aplicativos executados no Tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,49 +36,49 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 #### <a name="parameters"></a>Parâmetros
 
 *t_dwStyle*<br/>
-Estilos de janela padrão do padrão.
+Estilos de janela padrão padrão.
 
 *t_dwExStyle*<br/>
-Estilos de janela estendidos por padrão.
+Estilos de janela estendidos padrão.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CWinTraits::GetWndExStyle](#getwndexstyle)|(Estático) Recupera os estilos estendidos para o `CWinTraits` objeto.|
-|[CWinTraits::GetWndStyle](#getwndstyle)|(Estático) Recupera os estilos padrão para o `CWinTraits` objeto.|
+|[CWinTraits::GetWndExStyle](#getwndexstyle)|(Estática) Recupera os estilos estendidos para o `CWinTraits` objeto.|
+|[CWinTraits::GetWndStyle](#getwndstyle)|(Estática) Recupera os estilos padrão `CWinTraits` para o objeto.|
 
 ## <a name="remarks"></a>Comentários
 
-Isso [características da janela](../../atl/understanding-window-traits.md) classe fornece um método simples para padronizar os estilos usados para a criação de um objeto de janela ATL. Usar uma especialização dessa classe como um parâmetro de modelo [CWindowImpl](../../atl/reference/cwindowimpl-class.md) ou outra das classes de janela da ATL para especificar os estilos de padrão e estendidas padrão usados para instâncias dessa classe de janela.
+Esta classe [de traços de janela](../../atl/understanding-window-traits.md) fornece um método simples para padronizar os estilos usados para a criação de um objeto de janela ATL. Use uma especialização desta classe como parâmetro de modelo para [CWindowImpl](../../atl/reference/cwindowimpl-class.md) ou outra das classes de janela da ATL para especificar o padrão padrão e os estilos estendidos usados para instâncias dessa classe de janela.
 
-Use este modelo quando desejar fornecer padrão estilos de janela que serão usados somente quando não há outros estilos são especificados na chamada para [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create).
+Use este modelo quando quiser fornecer estilos de janela padrão que serão usados somente quando nenhum outro estilo for especificado na chamada para [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create).
 
-ATL fornece três especializações predefinidas desse modelo para comumente usadas combinações de estilos de janela:
+A ATL fornece três especializações predefinidas deste modelo para combinações comumente usadas de estilos de janela:
 
 - `CControlWinTraits`
 
-   Projetado para uma janela de controle padrão. Os seguintes estilos padrão são usados: WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Não há nenhum estilos estendidos.
+   Projetado para uma janela de controle padrão. Os seguintes estilos padrão são usados: WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Não há estilos estendidos.
 
 - `CFrameWinTraits`
 
-   Projetado para uma janela de quadro padrão. Os estilos padrão usados incluem: WS_OVERLAPPEDWINDOW, WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Os estilos estendidos usados incluem: WS_EX_APPWINDOW e WS_EX_WINDOWEDGE.
+   Projetado para uma janela de quadro padrão. Os estilos padrão utilizados incluem: WS_OVERLAPPEDWINDOW, WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Os estilos estendidos utilizados incluem: WS_EX_APPWINDOW e WS_EX_WINDOWEDGE.
 
 - `CMDIChildWinTraits`
 
-   Projetado para uma janela filho da MDI padrão. Os estilos padrão usados incluem: WS_OVERLAPPEDWINDOW, WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Os estilos estendidos usados incluem: WS_EX_MDICHILD.
+   Projetado para uma janela de criança MDI padrão. Os estilos padrão utilizados incluem: WS_OVERLAPPEDWINDOW, WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Os estilos estendidos utilizados incluem: WS_EX_MDICHILD.
 
-Se você quiser garantir que determinados estilos são definidos para todas as instâncias da classe de janela ao mesmo tempo, permitindo que outros estilos a ser definido em uma base por instância, use [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) em vez disso.
+Se você quiser garantir que certos estilos sejam definidos para todas as instâncias da classe de janela, permitindo que outros estilos sejam definidos por instância, use [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) em vez disso.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlwin
+**Cabeçalho:** atlwin.h
 
-##  <a name="getwndstyle"></a>  CWinTraits::GetWndStyle
+## <a name="cwintraitsgetwndstyle"></a><a name="getwndstyle"></a>CWinTraits::GetWndStyle
 
-Chame essa função para recuperar os estilos padrão do `CWinTraits` objeto.
+Chame esta função para recuperar `CWinTraits` os estilos padrão do objeto.
 
 ```
 static DWORD GetWndStyle(DWORD dwStyle);
@@ -86,16 +86,16 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwStyle*<br/>
-Estilos padrão usados para a criação de uma janela. Se *dwStyle* for 0, os valores de estilo de modelo (`t_dwStyle`) são retornados. Se *dwStyle* for diferente de zero *dwStyle* é retornado.
+*Dwstyle*<br/>
+Estilos padrão usados para a criação de uma janela. Se *dwStyle* for 0, os`t_dwStyle`valores de estilo do modelo () serão devolvidos. Se *dwStyle* não for zero, *dwStyle* será devolvido.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Os estilos de janela padrão do objeto.
 
-##  <a name="getwndexstyle"></a>  CWinTraits::GetWndExStyle
+## <a name="cwintraitsgetwndexstyle"></a><a name="getwndexstyle"></a>CWinTraits::GetWndExStyle
 
-Chame essa função para recuperar os estilos estendidos do `CWinTraits` objeto.
+Chame esta função para recuperar `CWinTraits` os estilos estendidos do objeto.
 
 ```
 static DWORD GetWndExStyle(DWORD dwExStyle);
@@ -103,14 +103,14 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwExStyle*<br/>
-Estilos estendidos usados para a criação de uma janela. Se *dwExStyle* for 0, os valores de estilo de modelo (`t_dwExStyle`) são retornados. Se *dwExStyle* for diferente de zero *dwExStyle* é retornado.
+*Dwexstyle*<br/>
+Estilos estendidos usados para a criação de uma janela. Se *dwExStyle* for 0, os`t_dwExStyle`valores de estilo do modelo () serão devolvidos. Se *dwExStyle* não for zero, *dwExStyle* será devolvido.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Os estilos de janela estendidos do objeto.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>
-[Noções básicas sobre as características da janela](../../atl/understanding-window-traits.md)
+[Entendendo traços da janela](../../atl/understanding-window-traits.md)

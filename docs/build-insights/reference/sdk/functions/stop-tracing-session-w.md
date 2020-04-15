@@ -1,6 +1,6 @@
 ---
 title: StopTracingSessionW
-description: A C++ referência da função STOPTRACINGSESSIONW do SDK do insights do Build.
+description: A referência da função C++ Build Insights SDK StopTracingSessionW.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: fbb31b600d6aee8c03cb0b52f71c0afcb8b8e3b3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 6582e477ac6b13319ab5ab0f77295517548f7068
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332554"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323534"
 ---
 # <a name="stoptracingsessionw"></a>StopTracingSessionW
 
 ::: moniker range="<=vs-2015"
 
-O C++ SDK de informações de compilação é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de versão do Visual Studio para este artigo como Visual Studio 2017 ou Visual Studio 2019.
+O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-A função `StopTracingSessionW` para uma sessão de rastreamento em andamento e produz um arquivo de rastreamento bruto. Os arquivos de rastreamento brutos podem ser passados para as funções [Analyze](analyze.md), [AnalzeA](analyze-a.md)e [AnalyzeW](analyze-w.md) para iniciar uma sessão de análise. Os arquivos de rastreamento brutos também podem ser passados para as funções [relog](relog.md), [RelogA](relog-a.md)e [RelogW](relog-w.md) para iniciar a sessão de log novamente. Os executáveis que chamam `StopTracingSessionW` devem ter privilégios de administrador.
+A `StopTracingSessionW` função interrompe uma sessão de rastreamento em andamento e produz um arquivo de rastreamento bruto. Os arquivos de rastreamento bruto podem ser passados para as funções [Analyze,](analyze.md) [AnalzeA](analyze-a.md)e [AnalyzeW](analyze-w.md) para iniciar uma sessão de análise. Os arquivos de rastreamento bruto também podem ser passados para as funções [Relog,](relog.md) [RelogA](relog-a.md)e [RelogW](relog-w.md) para iniciar a sessão de relogamento. Os executáveis `StopTracingSessionW` chamados devem ter privilégios de administrador.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,17 +38,17 @@ enum RESULT_CODE StopTracingSessionW(
 
 ### <a name="parameters"></a>Parâmetros
 
-*sessionname*\
-O nome da sessão de rastreamento a ser interrompida. Use o mesmo nome de sessão que foi passado para [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)ou [StartTracingSessionW](start-tracing-session-w.md).
+*sessionName*\
+O nome da sessão de rastreamento para parar. Use o mesmo nome de sessão que o aprovado para [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)ou [StartTracingSessionW](start-tracing-session-w.md).
 
-\ *outputLogFile*
-Caminho para o arquivo de log de saída final em que o rastreamento bruto deve ser salvo.
+*saídaLogFile*\
+Caminho para o arquivo de log de saída final onde o traço bruto deve ser salvo.
 
-*estatísticas*\
-Ponteiro para um objeto [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) . `StopTracingSessionW` grava estatísticas de coleta de rastreamento neste objeto antes de retornar.
+*Estatísticas*\
+Ponteiro para um objeto [TRACING_SESSION_STATISTICS.](../other-types/tracing-session-statistics-struct.md) `StopTracingSessionW`escreve estatísticas de coleta de vestígios neste objeto antes de retornar.
 
 ### <a name="return-value"></a>Valor retornado
 
-Um código de resultado da enumeração [RESULT_CODE](../other-types/result-code-enum.md) .
+Um código de resultado do [RESULT_CODE](../other-types/result-code-enum.md) enum.
 
 ::: moniker-end

@@ -1,9 +1,11 @@
 ---
 title: memcpy_s, wmemcpy_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - memcpy_s
 - wmemcpy_s
+- _o_memcpy_s
+- _o_wmemcpy_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dc5e49115b65b6883e55df13d0610231a87c1c55
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952794"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333336"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
@@ -67,27 +70,29 @@ Tamanho do buffer de destino, em bytes para memcpy_s e caracteres largos (wchar_
 *src*<br/>
 Buffer do qual copiar.
 
-*count*<br/>
+*contagem*<br/>
 O número de caracteres a serem copiados.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Zero se for bem-sucedido; um código de erro em caso de falha.
 
-### <a name="error-conditions"></a>Condições de Erro
+### <a name="error-conditions"></a>Condições de erro
 
-|*dest*|*destSize*|*src*|*count*|Valor retornado|Conteúdo do *dest*|
+|*dest*|*destSize*|*src*|*contagem*|Valor retornado|Conteúdo *de dest*|
 |------------|----------------|-----------|---|------------------|------------------------|
-|qualquer|qualquer|qualquer|0|0|Não modificado|
-|**NULL**|qualquer|qualquer|diferente de zero|**EINVAL**|Não modificado|
-|qualquer|qualquer|**NULL**|diferente de zero|**EINVAL**|o *dest* está zerado|
-|qualquer|< *contar*|qualquer|diferente de zero|**ERANGE**|o *dest* está zerado|
+|any|any|any|0|0|Não modificado|
+|**NULO**|any|any|diferente de zero|**Einval**|Não modificado|
+|any|any|**NULO**|diferente de zero|**Einval**|*dest* é zerado|
+|any|< *Contar*|any|diferente de zero|**ERANGE**|*dest* é zerado|
 
 ## <a name="remarks"></a>Comentários
 
-**memcpy_s** copia bytes de *contagem* de *src* para *dest*; o **wmemcpy_s** copia os caracteres largos da *contagem* (dois bytes). Se a origem e o destino se sobrepõem, o comportamento de **memcpy_s** é indefinido. Use **memmove_s** para lidar com regiões sobrepostas.
+**memcpy_s** cópias *contam* bytes *de src* a *dest;* **wmemcpy_s** cópias *contam* caracteres largos (dois bytes). Se a origem e o destino se sobrepõem, o comportamento de **memcpy_s** é indefinido. Use **memmove_s** para lidar com regiões sobrepostas.
 
-Essas funções validam seus parâmetros. Se *Count* for diferente de zero e *dest* ou *src* for um ponteiro nulo, ou *destSize* for menor que *Count*, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornarão **EINVAL** ou **ERANGE** e definirá **errno** como o valor de retorno.
+Essas funções validam seus parâmetros. Se *a contagem* não for zero e *dest* ou *src* for um ponteiro nulo, ou *destTamanho* for menor do que *a contagem,* essas funções invocam o manipulador de parâmetros inválido, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, essas funções retornam **EINVAL** ou **ERANGE** e definem **errno** no valor de retorno.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -96,7 +101,7 @@ Essas funções validam seus parâmetros. Se *Count* for diferente de zero e *de
 |**memcpy_s**|\<memory.h> ou \<string.h>|
 |**wmemcpy_s**|\<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -138,7 +143,7 @@ int main()
 0 1 4 9 16 25 36 49 64 81
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

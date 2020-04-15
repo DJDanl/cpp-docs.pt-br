@@ -1,5 +1,5 @@
 ---
-title: Exemplos de scripts do registro
+title: Exemplos de scriptamento de registro
 ms.date: 11/04/2016
 helpviewer_keywords:
 - scripting, examples
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-ms.openlocfilehash: dffdd111d33d6fbd845e1534cdef1d5c8e1749d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bcdb7076982e2f0bd08f4fd82bb45f21e61ef20
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275406"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329338"
 ---
-# <a name="registry-scripting-examples"></a>Exemplos de scripts do registro
+# <a name="registry-scripting-examples"></a>Exemplos de scriptamento de registro
 
-Os exemplos de scripts neste tópico demonstram como adicionar uma chave ao registro do sistema, registrar o servidor COM registrador e especificar várias árvores de análise.
+Os exemplos de scriptneste tópico demonstram como adicionar uma chave ao registro do sistema, registrar o servidor Registrador COM e especificar várias árvores de análise.
 
-## <a name="add-a-key-to-hkeycurrentuser"></a>Adicionar uma chave em HKEY_CURRENT_USER
+## <a name="add-a-key-to-hkey_current_user"></a>Adicione uma chave para HKEY_CURRENT_USER
 
-A árvore de análise a seguir ilustra um script simples que adiciona uma única chave de registro do sistema. Em particular, o script adiciona a chave `MyVeryOwnKey`, para `HKEY_CURRENT_USER`. Ele também atribui o valor de cadeia de caracteres de padrão de `HowGoesIt` para a nova chave:
+A árvore de análise a seguir ilustra um script simples que adiciona uma única chave ao registro do sistema. Em particular, o script `MyVeryOwnKey`adiciona `HKEY_CURRENT_USER`a chave, para . Ele também atribui o valor `HowGoesIt` de seqüência padrão à nova chave:
 
 ```
 HKEY_CURRENT_USER
@@ -29,7 +29,7 @@ HKEY_CURRENT_USER
 }
 ```
 
-Esse script pode ser estendido facilmente para definir várias subchaves da seguinte maneira:
+Este script pode ser facilmente estendido para definir várias subchaves da seguinte forma:
 
 ```
 HKCU
@@ -45,11 +45,11 @@ HKCU
 }
 ```
 
-Agora, o script adiciona uma subchave `HasASubkey`, para `MyVeryOwnKey`. Para essa subchave, ele adiciona ambos os `PrettyCool` subchave (com um padrão `DWORD` valor de 55) e o `ANameValue` valor nomeado (com um valor de cadeia de caracteres de `WithANamedValue`).
+Agora, o script adiciona `HasASubkey`uma `MyVeryOwnKey`subchave, para . A esta subchave, adiciona `PrettyCool` tanto a subchave (com um valor padrão `DWORD` de 55) quanto o `ANameValue` valor nomeado (com um valor de seqüência de `WithANamedValue`).
 
-##  <a name="_atl_register_the_registrar_com_server"></a> Registrar o servidor de COM do registrador
+## <a name="register-the-registrar-com-server"></a><a name="_atl_register_the_registrar_com_server"></a>Registre o Servidor Registrador COM
 
-O script a seguir registra o servidor do registrador COM em si.
+O script a seguir registra o próprio servidor Registrador COM.
 
 ```
 HKCR
@@ -72,29 +72,29 @@ HKCR
 }
 ```
 
-Em tempo de execução, a árvore de análise adiciona o `ATL.Registrar` chave `HKEY_CLASSES_ROOT`. Para essa nova chave, em seguida, it:
+No tempo de execução, `ATL.Registrar` esta `HKEY_CLASSES_ROOT`árvore de análise adiciona a chave para . Para esta nova chave, então:
 
-- Especifica `ATL Registrar Class` como valor de cadeia de caracteres de padrão da chave.
+- Especifica `ATL Registrar Class` como o valor de seqüência padrão da chave.
 
 - Adiciona `CLSID` como uma subchave.
 
-- Especifica `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` para `CLSID`. (Esse valor é o registrador CLSID para uso com `CoCreateInstance`.)
+- Especifica `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` para `CLSID`. (Este valor é o CLSID do `CoCreateInstance`Registrador para uso com .)
 
-Uma vez que `CLSID` é compartilhado, ele não deve ser removido no modo de cancelar o registro. A instrução `NoRemove CLSID`, é feito indicando que `CLSID` deve ser aberto no modo de registro e ignoradas no modo de cancelar o registro.
+Uma `CLSID` vez que é compartilhado, ele não deve ser removido no modo Descadastrar. A declaração, `NoRemove CLSID`, faz `CLSID` isso indicando que deve ser aberta no modo Registrar e ignorada no modo Unregister.
 
-O `ForceRemove` instrução fornece uma função de manutenção do sistema, removendo uma chave e todas as suas subchaves antes de criar novamente a chave. Isso pode ser útil se os nomes das subchaves foram alterados. Neste exemplo de script, `ForceRemove` verifica se `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` já existe. Se isso acontecer, `ForceRemove`:
+A `ForceRemove` declaração fornece uma função de limpeza removendo uma chave e todas as suas subchaves antes de recriar a chave. Isso pode ser útil se os nomes das subchaves tiverem sido alterados. Neste exemplo de `ForceRemove` script, verifica `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` se já existe. Se isso `ForceRemove`acontecer,
 
-- Exclui de forma recursiva `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` e todas as suas subchaves.
+- Exclui recursivamente `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` todas as suas subchaves.
 
 - Recria `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.
 
-- Adiciona `ATL Registrar Class` como o valor de cadeia de caracteres padrão para `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.
+- Adiciona `ATL Registrar Class` como o valor `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`de string padrão para .
 
-A árvore de análise agora adiciona duas novas sub-chaves para `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. A primeira chave, `ProgID`, obtém um valor de cadeia de caracteres padrão que é o ProgID. A segunda chave, `InprocServer32`, obtém um valor de cadeia de caracteres padrão, `%MODULE%`, que é um valor de pré-processador explicado na seção [usando parâmetros substituíveis (pré-processador do registrador The)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), deste artigo. `InprocServer32` também obtém um valor nomeado, `ThreadingModel`, com um valor de cadeia de caracteres de `Apartment`.
+A árvore de análise agora adiciona `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`duas novas subchaves a . A primeira `ProgID`tecla, recebe um valor de string padrão que é o ProgID. A segunda `InprocServer32`chave, obtém um `%MODULE%`valor de string padrão, que é um valor de pré-processador explicado na seção, [Usando Parâmetros Substituíveis (Pré-processador do Registrador)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), deste artigo. `InprocServer32`também obtém um `ThreadingModel`valor nomeado, `Apartment`com um valor de seqüência de .
 
-## <a name="specify-multiple-parse-trees"></a>Especifique várias árvores de análise
+## <a name="specify-multiple-parse-trees"></a>Especificar árvores de parse múltiplas
 
-Para especificar mais de uma árvore de análise em um script, basta colocar uma única árvore no final do outro. Por exemplo, o script a seguir adiciona a chave `MyVeryOwnKey`, as árvores de análise para ambos `HKEY_CLASSES_ROOT` e `HKEY_CURRENT_USER`:
+Para especificar mais de uma árvore de análise em um script, basta colocar uma árvore no final de outra. Por exemplo, o script a `MyVeryOwnKey`seguir adiciona a chave, às árvores de análise para ambos `HKEY_CLASSES_ROOT` e: `HKEY_CURRENT_USER`
 
 ```
 HKCR
@@ -108,8 +108,8 @@ HKEY_CURRENT_USER
 ```
 
 > [!NOTE]
-> Em um script de registrador, 4K é o tamanho máximo do token. (Um token é qualquer elemento reconhecível na sintaxe). No exemplo de script anterior, `HKCR`, `HKEY_CURRENT_USER`, `'MyVeryOwnKey'`, e `'HowGoesIt'` são todos os tokens.
+> Em um script Registrador, 4K é o tamanho máximo do token. (Um token é qualquer elemento reconhecível na sintaxe.) No exemplo de `HKCR`scriptanterior, , `HKEY_CURRENT_USER`e `'MyVeryOwnKey'` `'HowGoesIt'` são todos tokens.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Criando scripts do Registrador](../atl/creating-registrar-scripts.md)
+[Criando scripts de registrador](../atl/creating-registrar-scripts.md)

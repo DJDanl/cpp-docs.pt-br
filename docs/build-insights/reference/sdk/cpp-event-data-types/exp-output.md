@@ -1,6 +1,6 @@
 ---
 title: Classe ExpOutput
-description: A C++ referência da classe build do SDK do insights ExpOutput.
+description: A referência da classe C++ Build Insights SDK ExpOutput.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: bc108096bf2fffba876231bbf522295d0d0dcc0d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 4c8c5f2f260596c444df7841c2a3e0c65f5163f7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333352"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324826"
 ---
 # <a name="expoutput-class"></a>Classe ExpOutput
 
 ::: moniker range="<=vs-2015"
 
-O C++ SDK de informações de compilação é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de versão do Visual Studio para este artigo como Visual Studio 2017 ou Visual Studio 2019.
+O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-A classe `ExpOutput` é usada com as funções [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Use-o para corresponder a um evento de [EXP_OUTPUT](../event-table.md#exp-output) .
+A `ExpOutput` classe é usada com as funções [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Use-o para combinar com um evento [EXP_OUTPUT.](../event-table.md#exp-output)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Membros
 
-Junto com os membros herdados de sua classe base [fileoutput](file-output.md) , a classe `ExpOutput` contém os seguintes membros:
+Juntamente com os membros herdados de `ExpOutput` sua classe base [FileOutput,](file-output.md) a classe contém os seguintes membros:
 
-### <a name="constructors"></a>{1&gt;Construtores&lt;1}
+### <a name="constructors"></a>Construtores
 
 [ExpOutput](#exp-output)
 
-## <a name="exp-output"></a>ExpOutput
+## <a name="expoutput"></a><a name="exp-output"></a>ExpOutput
 
 ```cpp
 ExpOutput(const RawEvent& event);
@@ -53,7 +53,7 @@ ExpOutput(const RawEvent& event);
 
 ### <a name="parameters"></a>Parâmetros
 
-*event*\
-Um evento [EXP_OUTPUT](../event-table.md#exp-output) .
+*Evento*\
+Um evento [EXP_OUTPUT.](../event-table.md#exp-output)
 
 ::: moniker-end

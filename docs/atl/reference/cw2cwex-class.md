@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CW2CWEX class
 ms.assetid: d654b22b-05a6-410f-a0ec-9a2cbbb4cca7
-ms.openlocfilehash: d1f960f8ec94b8e573490d4e708d4240b894b5ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07dd0319586054403d8ed0c8efc813b4061e355a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277146"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330443"
 ---
 # <a name="cw2cwex-class"></a>Classe CW2CWEX
 
-Essa classe é usada pelas macros de conversão de cadeia de caracteres CW2CTEX CT2CWEX e typedef CW2W.
+Esta classe é usada pelas macros de conversão de strings CW2CTEX e CT2CWEX, e pelo typedef CW2W.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+> Esta classe e seus membros não podem ser usados em aplicativos executados no Tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,7 +33,7 @@ class CW2CWEX
 #### <a name="parameters"></a>Parâmetros
 
 *t_nBufferLength*<br/>
-O tamanho do buffer usado no processo de tradução. O comprimento padrão é 128 bytes.
+O tamanho do buffer usado no processo de tradução. O comprimento padrão é de 128 bytes.
 
 ## <a name="members"></a>Membros
 
@@ -42,47 +42,47 @@ O tamanho do buffer usado no processo de tradução. O comprimento padrão é 12
 |Nome|Descrição|
 |----------|-----------------|
 |[CW2CWEX::CW2CWEX](#cw2cwex)|O construtor.|
-|[CW2CWEX::~CW2CWEX](#dtor)|O destruidor.|
+|[CW2CWEX:::~CW2CWEX](#dtor)|O destruidor.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CW2CWEX::Operator LPCWSTR](#operator_lpcwstr)|Operador de conversão.|
+|[CW2CWEX::operador LPCWSTR](#operator_lpcwstr)|Operador de conversão.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CW2CWEX::m_psz](#m_psz)|O membro de dados que armazena a cadeia de caracteres de origem.|
+|[CW2CWEX::m_psz](#m_psz)|O membro de dados que armazena a seqüência de origem.|
 
 ## <a name="remarks"></a>Comentários
 
-A menos que a funcionalidade adicional for necessária, use CW2CTEX, CT2CWEX ou CW2W em seu código.
+A menos que seja necessária funcionalidade extra, use CW2CTEX, CT2CWEX ou CW2W em seu código.
 
-Essa classe é seguro usar em loops e não estouram a pilha. Por padrão, as macros e classes de conversão ATL usam página de código ANSI do thread atual para a conversão.
+Esta classe é segura para usar em loops e não transbordará a pilha. Por padrão, as classes de conversão ATL e macros usam a página de código ANSI do segmento atual para a conversão.
 
-As macros a seguir se baseiam nessa classe:
+As seguintes macros são baseadas nesta classe:
 
-- CW2CTEX
+- Cw2ctex
 
 - CT2CWEX
 
-O typedef seguir baseia-se nessa classe:
+O tipo de digitação a seguir é baseado nesta classe:
 
 - CW2W
 
-Para uma discussão sobre essas macros de conversão de texto, consulte [ATL e Macros de conversão de cadeia de caracteres MFC](string-conversion-macros.md).
+Para uma discussão sobre essas macros de conversão de texto, consulte Macros de [conversão de strings ATL e MFC](string-conversion-macros.md).
 
 ## <a name="example"></a>Exemplo
 
-Ver [ATL e Macros de conversão de cadeia de caracteres MFC](string-conversion-macros.md) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.
+Consulte macros de [conversão de strings ATL e MFC](string-conversion-macros.md) para um exemplo de uso dessas macros de conversão de strings.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** Atlconv. h
+**Cabeçalho:** atlconv.h
 
-##  <a name="cw2cwex"></a>  CW2CWEX::CW2CWEX
+## <a name="cw2cwexcw2cwex"></a><a name="cw2cwex"></a>CW2CWEX::CW2CWEX
 
 O construtor.
 
@@ -93,17 +93,17 @@ CW2CWEX(LPCWSTR psz) throw(...);
 
 ### <a name="parameters"></a>Parâmetros
 
-*psz*<br/>
-A cadeia de caracteres de texto a ser convertido.
+*Psz*<br/>
+A seqüência de texto a ser convertida.
 
 *nCodePage*<br/>
-A página de código. Não usado nessa classe.
+A página de código. Não usado nesta aula.
 
 ### <a name="remarks"></a>Comentários
 
-Aloca um buffer usado no processo de tradução.
+Aloca o buffer usado no processo de tradução.
 
-##  <a name="dtor"></a>  CW2CWEX::~CW2CWEX
+## <a name="cw2cwexcw2cwex"></a><a name="dtor"></a>CW2CWEX:::~CW2CWEX
 
 O destruidor.
 
@@ -115,15 +115,15 @@ O destruidor.
 
 Libera o buffer alocado.
 
-##  <a name="m_psz"></a>  CW2CWEX::m_psz
+## <a name="cw2cwexm_psz"></a><a name="m_psz"></a>CW2CWEX::m_psz
 
-O membro de dados que armazena a cadeia de caracteres de origem.
+O membro de dados que armazena a seqüência de origem.
 
 ```
 LPCWSTR m_psz;
 ```
 
-##  <a name="operator_lpcwstr"></a>  CW2CWEX::Operator LPCWSTR
+## <a name="cw2cwexoperator-lpcwstr"></a><a name="operator_lpcwstr"></a>CW2CWEX::operador LPCWSTR
 
 Operador de conversão.
 
@@ -131,11 +131,11 @@ Operador de conversão.
 operator LPCWSTR() const throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna a cadeia de caracteres de texto enquanto digita LPCWSTR.
+Retorna a seqüência de texto como tipo LPCWSTR.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
 [Classe CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>

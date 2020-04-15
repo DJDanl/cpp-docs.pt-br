@@ -1,6 +1,6 @@
 ---
 title: Classe CommandLine
-description: A C++ referência de classe de linha de comando do SDK do insights do Build.
+description: A referência da classe C++ Build Insights SDK CommandLine.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ff16646920fe77f7f3b4cb8a194a38984c3e6c32
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: b35d688acf06579cc27f2fee053ef58032e204e0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333506"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325055"
 ---
 # <a name="commandline-class"></a>Classe CommandLine
 
 ::: moniker range="<=vs-2015"
 
-O C++ SDK de informações de compilação é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de versão do Visual Studio para este artigo como Visual Studio 2017 ou Visual Studio 2019.
+O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-A classe `CommandLine` é usada com as funções [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Use-o para corresponder a um evento [COMMAND_LINE](../event-table.md#command-line) .
+A `CommandLine` classe é usada com as funções [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Use-o para combinar com um evento [COMMAND_LINE.](../event-table.md#command-line)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -41,17 +41,17 @@ public:
 
 ## <a name="members"></a>Membros
 
-Junto com os membros herdados de sua classe base [SimpleEvent](simple-event.md) , a classe `CommandLine` contém os seguintes membros:
+Juntamente com os membros herdados de `CommandLine` sua classe base [SimpleEvent,](simple-event.md) a classe contém os seguintes membros:
 
-### <a name="constructors"></a>{1&gt;Construtores&lt;1}
+### <a name="constructors"></a>Construtores
 
-[CommandLine](#command-line)
+[Commandline](#command-line)
 
-### <a name="functions"></a>{1&gt;Funções&lt;1}
+### <a name="functions"></a>Funções
 
 [Valor](#value)
 
-## <a name="command-line"></a>CommandLine
+## <a name="commandline"></a><a name="command-line"></a>Commandline
 
 ```cpp
 CommandLine(const RawEvent& event);
@@ -59,10 +59,10 @@ CommandLine(const RawEvent& event);
 
 ### <a name="parameters"></a>Parâmetros
 
-*event*\
-Um evento [COMMAND_LINE](../event-table.md#command-line) .
+*Evento*\
+Um evento [COMMAND_LINE.](../event-table.md#command-line)
 
-## <a name="value"></a>Valor
+## <a name="value"></a><a name="value"></a> Valor
 
 ```cpp
 const wchar_t Value() const;
@@ -70,6 +70,6 @@ const wchar_t Value() const;
 
 ### <a name="return-value"></a>Valor retornado
 
-Uma cadeia de caracteres que contém uma linha de comando. O valor inclui argumentos que foram obtidos de um arquivo de resposta e de variáveis de ambiente, como CL, \_CL\_, link e \_LINK\_.
+Uma seqüência contendo uma linha de comando. O valor inclui argumentos obtidos a partir de um arquivo de \_\_resposta e \_de\_variáveis de ambiente como CL, CL, Link e LINK .
 
 ::: moniker-end

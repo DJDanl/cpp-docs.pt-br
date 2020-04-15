@@ -9,19 +9,19 @@ helpviewer_keywords:
 - sinks, notifying of changes
 - IPropertyNotifySinkCP class
 ms.assetid: 1b41445e-bc88-4fa6-bb62-d68aacec2bd5
-ms.openlocfilehash: 9838a48b078cbc59a5ae86669ad9f26792d9816e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c6d98bf5a6dfe5566839eb22bcd2bab2a9c28e4d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495635"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329603"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>Classe IPropertyNotifySinkCP
 
-Essa classe expõe a interface [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) como uma interface de saída em um objeto que pôde ser conectado.
+Esta classe expõe a interface [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) como uma interface de saída em um objeto conectável.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
+> Esta classe e seus membros não podem ser usados em aplicativos executados no Tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,24 +36,24 @@ class IPropertyNotifySinkCP
 *T*<br/>
 Sua classe, derivada de `IPropertyNotifySinkCP`.
 
-*CDV*<br/>
-Uma classe que gerencia as conexões entre um ponto de conexão e seus coletores. O valor padrão é [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), que permite conexões ilimitadas. Você também pode usar [CComUnkArray](../../atl/reference/ccomunkarray-class.md), que especifica um número fixo de conexões.
+*Cdv*<br/>
+Uma classe que gerencia as conexões entre um ponto de conexão e suas pias. O valor padrão é [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), que permite conexões ilimitadas. Você também pode usar [CComUnkArray](../../atl/reference/ccomunkarray-class.md), que especifica um número fixo de conexões.
 
 ## <a name="remarks"></a>Comentários
 
-`IPropertyNotifySinkCP`herda todos os métodos por meio de sua classe base, [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).
+`IPropertyNotifySinkCP`herda todos os métodos através de sua classe base, [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).
 
-A interface [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) permite que um objeto de coletor receba notificações sobre alterações de propriedade. A `IPropertyNotifySinkCP` classe expõe essa interface como uma interface de saída em um objeto que pôde ser conectado. O cliente deve implementar os `IPropertyNotifySink` métodos no coletor.
+A interface [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) permite que um objeto de sumidouro receba notificações sobre alterações de propriedade. A `IPropertyNotifySinkCP` classe expõe essa interface como uma interface de saída em um objeto conectável. O cliente deve `IPropertyNotifySink` implementar os métodos na pia.
 
-Derive sua classe `IPropertyNotifySinkCP` de quando desejar criar um ponto de conexão que represente `IPropertyNotifySink` a interface.
+Obtenha sua `IPropertyNotifySinkCP` classe de quando você deseja criar `IPropertyNotifySink` um ponto de conexão que represente a interface.
 
-Para obter mais informações sobre como usar pontos de conexão na ATL, consulte o artigo [pontos de conexão](../../atl/atl-connection-points.md).
+Para obter mais informações sobre o uso de pontos de conexão no ATL, consulte o artigo [Pontos de Conexão](../../atl/atl-connection-points.md).
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlctl. h
+**Cabeçalho:** atlctl.h
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)<br/>
 [Classe IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)<br/>

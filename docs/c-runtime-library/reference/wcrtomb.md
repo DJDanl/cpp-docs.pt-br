@@ -1,8 +1,9 @@
 ---
 title: wcrtomb
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcrtomb
+- _o_wcrtomb
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-ms.openlocfilehash: 8d2108b90f6884113f0bd974bf7aa634544adf5f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: eda857b80404aebe46b090741e0b56d4fe692f34
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945216"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328091"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
@@ -56,32 +58,34 @@ size_t wcrtomb(
 
 ### <a name="parameters"></a>Parâmetros
 
-*mbchar*<br/>
+*Mbchar*<br/>
 O caractere multibyte convertido resultante.
 
-*wchar*<br/>
+*Wchar*<br/>
 Um caractere largo a ser convertido.
 
-*mbstate*<br/>
-Um ponteiro para um objeto **mbstate_t** .
+*Mbstate*<br/>
+Um ponteiro para um objeto **mbstate_t.**
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna o número de bytes necessários para representar o caractere multibyte convertido, caso contrário, retorna –1 em caso de erro.
 
 ## <a name="remarks"></a>Comentários
 
-A função **wcrtomb** converte um caractere largo, começando no estado de conversão especificado contido em *mbstate*, do valor contido em *WCHAR*, no endereço representado por *mbchar*. O valor de retorno é o número de bytes necessários para representar o caractere multibyte correspondente, mas ele não retornará mais de **MB_CUR_MAX** bytes.
+A função **wcrtomb** converte um caractere amplo, começando no estado de conversão especificado contido em *mbstate*, a partir do valor contido em *wchar,* para o endereço representado por *mbchar*. O valor de retorno é o número de bytes necessários para representar o caractere multibyte correspondente, mas não retornará mais do que **MB_CUR_MAX** bytes.
 
-Se *mbstate* for NULL, o objeto **mbstate_t** interno que contém o estado de conversão de *mbchar* será usado. Se a sequência de caracteres *WCHAR* não tiver uma representação de caractere multibyte correspondente, um-1 será retornado e o **errno** será definido como **EILSEQ**.
+Se *o mbstate* for nulo, o objeto **interno mbstate_t** que contém o estado de conversão de *mbchar* é usado. Se a seqüência *de caracteres wchar* não tiver uma representação de caractere multibyte correspondente, a -1 é devolvida e o **errno** é definido como **EILSEQ**.
 
-A função **wcrtomb** difere de [wctomb, _wctomb_l](wctomb-wctomb-l.md) por sua reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas subsequentes para as mesmas ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis. Por exemplo, um aplicativo usaria **wcsrlen** em vez de **wcsnlen**, se uma chamada subsequente para **wcsrtombs** fosse usada em vez de **wcstombs**.
+A função **wcrtomb** difere de [wctomb, _wctomb_l](wctomb-wctomb-l.md) por sua reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas subseqüentes para as mesmas ou outras funções reinicializáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis. Por exemplo, um aplicativo usaria **wcsrlen** em vez de **wcsnlen**, se uma chamada subseqüente para **wcsrtombs** fosse usada em vez de **wcstombs**.
 
 Em C++, essa função tem uma sobrecarga de modelo que invoca os equivalentes mais recentes e seguros dessa função. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+
 ## <a name="exceptions"></a>Exceções
 
-A função **wcrtomb** é multithread segura, desde que nenhuma função no thread atual chame **setlocalize** enquanto essa função estiver sendo executada e o *mbstate* for nulo.
+A função **wcrtomb** é segura em vários segmentos, desde que nenhuma função no **setlocale** de chamadas de rosca atual enquanto esta função estiver sendo executada e enquanto o *mbstate* estiver nulo.
 
 ## <a name="example"></a>Exemplo
 
@@ -132,7 +136,7 @@ The corresponding wide character "Q" was converted to the "Q" multibyte characte
 |-------------|---------------------|
 |**wcrtomb**|\<wchar.h>|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [Localidade](../../c-runtime-library/locale.md)<br/>

@@ -1,23 +1,23 @@
 ---
-title: Funções globais WinModule
+title: Funções globais do WinModule
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlWinModuleAddCreateWndData
 - atlbase/ATL::AtlWinModuleExtractCreateWndData
 ms.assetid: 8ce45a5b-26a7-491f-9096-c09ceca5f2c2
-ms.openlocfilehash: 0e7450ea2a42c0b35dc5a6d1b77dfb0f2acb9520
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d7d001a2835514cc5385a7069c0bcda58cdd88e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196853"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329356"
 ---
-# <a name="winmodule-global-functions"></a>Funções globais WinModule
+# <a name="winmodule-global-functions"></a>Funções globais do WinModule
 
-Essas funções fornecem suporte para `_AtlCreateWndData` estruturar as operações.
+Essas funções fornecem `_AtlCreateWndData` suporte para operações de estrutura.
 
 > [!IMPORTANT]
-> As funções listadas na tabela a seguir não podem ser usadas em aplicativos executados no tempo de execução do Windows.
+> As funções listadas na tabela a seguir não podem ser usadas em aplicativos executados no Tempo de execução do Windows.
 
 |||
 |-|-|
@@ -26,9 +26,9 @@ Essas funções fornecem suporte para `_AtlCreateWndData` estruturar as operaç�
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlbase. h
+**Cabeçalho:** atlbase.h
 
-##  <a name="atlwinmoduleaddcreatewnddata"></a>  AtlWinModuleAddCreateWndData
+## <a name="atlwinmoduleaddcreatewnddata"></a><a name="atlwinmoduleaddcreatewnddata"></a>AtlWinModuleAddCreatewndData
 
 Essa função é usada para inicializar e adicionar uma estrutura `_AtlCreateWndData`.
 
@@ -42,19 +42,19 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 ### <a name="parameters"></a>Parâmetros
 
 *pWinModule*<br/>
-Ponteiro para um módulo [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) estrutura.
+Ponteiro para a estrutura [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) de um módulo.
 
-*pData*<br/>
-Ponteiro para o [atlcreatewnddata](../../atl/reference/atlcreatewnddata-structure.md) estrutura a ser inicializado e adicionados ao módulo atual.
+*Pdata*<br/>
+Ponteiro para a estrutura [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) a ser inicializada e adicionada ao módulo atual.
 
-*pObject*<br/>
-Ponteiro para um objeto **isso** ponteiro.
+*Pobject*<br/>
+Ponteiro para um objeto é **este** ponteiro.
 
 ### <a name="remarks"></a>Comentários
 
-Inicializa um `_AtlCreateWndData` estrutura, que é usada para armazenar os **isso** ponteiro usado para se referir a instâncias de classe e o adiciona à lista referenciada por um módulo `_ATL_WIN_MODULE70` estrutura. Chamado pelo [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).
+Inicializa uma `_AtlCreateWndData` estrutura, que é usada para armazenar o **ponteiro usado** para se referir a instâncias `_ATL_WIN_MODULE70` de classe, e adiciona-a à lista referenciada pela estrutura de um módulo. Chamado por [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).
 
-##  <a name="atlwinmoduleextractcreatewnddata"></a>  AtlWinModuleExtractCreateWndData
+## <a name="atlwinmoduleextractcreatewnddata"></a><a name="atlwinmoduleextractcreatewnddata"></a>AtlWinModuleExtractCreateWndData
 
 Chame essa função para extrair uma estrutura `_AtlCreateWndData` existente.
 
@@ -65,16 +65,16 @@ ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinM
 ### <a name="parameters"></a>Parâmetros
 
 *pWinModule*<br/>
-Ponteiro para um módulo [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) estrutura.
+Ponteiro para a estrutura [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) de um módulo.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna um ponteiro para o [atlcreatewnddata](../../atl/reference/atlcreatewnddata-structure.md) estrutura.
+Retorna um ponteiro para a estrutura [_AtlCreateWndData.](../../atl/reference/atlcreatewnddata-structure.md)
 
 ### <a name="remarks"></a>Comentários
 
-Essa função extrairá um existente `_AtlCreateWndData` estrutura na lista referenciada por um módulo `_ATL_WIN_MODULE70` estrutura.
+Esta função extrairá `_AtlCreateWndData` uma estrutura existente da lista referenciada pela estrutura de `_ATL_WIN_MODULE70` um módulo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Funções](../../atl/reference/atl-functions.md)
