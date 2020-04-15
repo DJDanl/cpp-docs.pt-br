@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: 1c63002db7de4ebce348505c4e757e6901861a93
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 4f293f73eb1fa8a38bf06692ef5b7938faeab0d0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688820"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367272"
 ---
 # <a name="uniform_real_distribution-class"></a>Classe uniform_real_distribution
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-@No__t_1 *RealType*
-O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType*\
+O tipo de resultado de ponto flutuante, padrão para **dobrar**. Para tipos possíveis, consulte [ \<>aleatórios ](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-O modelo de classe descreve uma distribuição inclusiva exclusiva que produz valores de um tipo de ponto flutuante de integral especificado pelo usuário com uma distribuição para que cada valor seja igualmente provável. A tabela a seguir contém links para artigos sobre cada um dos membros.
+O modelo de classe descreve uma distribuição exclusiva inclusiva que produz valores de um tipo de ponto flutuante integral especificado pelo usuário com uma distribuição para que cada valor seja igualmente provável. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
 |[uniform_real_distribution](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|
 |`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type](#param_type)|
 
-O membro da propriedade `a()` retorna o limite mínimo armazenado no momento da distribuição e `b()` retorna o limite máximo armazenado no momento. Para essa classe de distribuição, esses valores mínimo e máximo são os mesmos retornados pelas funções de propriedade comuns `min()` e `max()`, descritas no tópico [\<random>](../standard-library/random.md).
+O membro da propriedade `a()` retorna o limite mínimo armazenado no momento da distribuição e `b()` retorna o limite máximo armazenado no momento. Para esta classe de distribuição, esses valores mínimos e máximos `max()` são os mesmos devolvidos pelas funções de propriedade comum e descritos `min()` no [ \<](../standard-library/random.md) tópico>aleatório.
 
 O membro da propriedade `param()` define ou retorna o pacote de parâmetros de distribuição armazenado `param_type`.
 
@@ -93,7 +93,7 @@ A função membro `reset()` descarta qualquer valor armazenado em cache, de form
 
 As funções membro `operator()` retornam o próximo valor gerado com base no mecanismo URNG, do pacote de parâmetros atual ou do pacote de parâmetros especificado.
 
-Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).
+Para obter mais informações sobre as aulas de distribuição e seus membros, consulte [ \<>aleatórios ](../standard-library/random.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -178,7 +178,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="uniform_real_distribution"></a>  uniform_real_distribution::uniform_real_distribution
+## <a name="uniform_real_distributionuniform_real_distribution"></a><a name="uniform_real_distribution"></a>uniform_real_distribution:uniform_real_distribution
 
 Constrói a distribuição.
 
@@ -189,24 +189,24 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*um* \
+*Um*\
 O limite inferior para valor aleatório (inclusivo).
 
-*b* \
+*B*\
 O limite superior para valor aleatório (exclusivo).
 
-\ de *parâmetros*
+*Parm*\
 A estrutura `param_type` usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
-**Pré-condição:** `a < b`
+**Pré-condição:**`a < b`
 
-O primeiro construtor *constrói um objeto cujo valor armazenado contém* o valor a e cujo valor *de* *b* armazenado contém o valor *b*.
+O primeiro construtor constrói um objeto cujo *valor* armazenado contém o valor *a* e cujo valor *b* armazenado contém o valor *b*.
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="param_type"></a>  uniform_real_distribution::param_type
+## <a name="uniform_real_distributionparam_type"></a><a name="param_type"></a>uniform_real_distribution::param_type
 
 Armazena todos os parâmetros da distribuição.
 
@@ -224,21 +224,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*um* \
+*Um*\
 O limite inferior para valor aleatório (inclusivo).
 
-*b* \
+*B*\
 O limite superior para valor aleatório (exclusivo).
 
-\ *à direita*
+*Certo*\
 O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários
 
-**Pré-condição:** `a < b`
+**Pré-condição:**`a < b`
 
 Essa estrutura pode ser enviada ao construtor de classe de distribuição na instanciação, para a função de membro `param()` para definir os parâmetros armazenados de uma distribuição existente e para `operator()` a ser usado no lugar dos parâmetros armazenados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[\<random>](../standard-library/random.md)
+[\<>aleatório](../standard-library/random.md)

@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - C4744
 ms.assetid: f2a7d0b5-afd5-4926-abc3-cfbd367e3ff5
-ms.openlocfilehash: 9f63da4acd87ef2bb0ba80df9e8c0e3e3db4bc79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f932b1bcdf011678d4f85e0edf1e116a954b59fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185640"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367373"
 ---
 # <a name="compiler-warning-level-1-c4744"></a>Aviso do compilador (nível 1) C4744
 
-' var ' tem um tipo diferente em ' arquivo1 ' e ' arquivo2 ': ' type1 ' e ' type2 '
+'var' tem tipo diferente em 'file1' e 'file2': 'type1' e 'type2'
 
-Uma variável externa referenciada ou definida em dois arquivos tem tipos diferentes nesses arquivos.  Para resolver, torne as definições de tipo iguais ou altere o nome da variável em um dos arquivos.
+Uma variável externa referenciada ou definida em dois arquivos tem tipos diferentes nesses arquivos.  Para resolver, faça as definições do tipo iguais ou altere o nome da variável em um dos arquivos.
 
-C4744 é emitido somente quando os arquivos são compilados com/GL.  Para obter mais informações, consulte [/GL (otimização de programa inteiro)](../../build/reference/gl-whole-program-optimization.md).
+C4744 é emitido somente quando os arquivos são compilados com /GL.  Para obter mais informações, consulte [/GL (otimização de programa inteiro)](../../build/reference/gl-whole-program-optimization.md).
 
 > [!NOTE]
->  C4744 geralmente ocorre em arquivos C ( C++não), porque em C++ um nome de variável é decorado com informações de tipo.  Quando o exemplo (abaixo) for compilado como, você C++obterá o erro do vinculador LNK2019.
+> C4744 geralmente ocorre em arquivos C (não C++), porque em C++ um nome variável é decorado com informações de tipo.  Quando a amostra (abaixo) for compilada como C++, você terá erro de linker LNK2019.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo contém a primeira definição.
+Esta amostra contém a primeira definição.
 
 ```c
 // C4744.c
@@ -36,7 +36,7 @@ int global;
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C4744.
+A seguinte amostra gera C4744.
 
 ```c
 // C4744b.c

@@ -1,11 +1,13 @@
 ---
 title: _strninc, _wcsninc, _mbsninc, _mbsninc_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsninc
 - _mbsninc_l
 - _wcsninc
 - _strninc
+- _o__mbsninc
+- _o__mbsninc_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,19 +48,19 @@ helpviewer_keywords:
 - mbsninc_l function
 - _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
-ms.openlocfilehash: b03ca4c9515bd2c70a1ce2574850e23b3add44c5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 297d2fdf940ab81a3d636d4726e6e6a345ce5c02
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947066"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364475"
 ---
 # <a name="_strninc-_wcsninc-_mbsninc-_mbsninc_l"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
 
-Avança um ponteiro de cadeia de caracteres em **n** caracteres.
+Avança um ponteiro de string por **n** caracteres.
 
 > [!IMPORTANT]
-> **_mbsninc** e **_mbsninc_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsninc** e **_mbsninc_l** não podem ser usados em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -83,22 +86,24 @@ unsigned char *_mbsninc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*<br/>
+*Str*<br/>
 Cadeia de caracteres de origem.
 
-*count*<br/>
+*contagem*<br/>
 Número de caracteres para incrementar um ponteiro de cadeia de caracteres.
 
-*locale*<br/>
+*Localidade*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas rotinas retorna um ponteiro para *Str* após o *Str* ter sido incrementado por caracteres de *contagem* ou **NULL** se o ponteiro fornecido for **nulo**. Se *Count* for maior ou igual ao número de caracteres em *Str*, o resultado será indefinido.
+Cada uma dessas rotinas retorna um ponteiro para *str* depois que *str* foi incrementado por caracteres *de contagem* ou **NULL** se o ponteiro fornecido for **NULL**. Se *a contagem* for maior ou igual ao número de caracteres em *str,* o resultado é indefinido.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_mbsninc** incrementa a *Str* por caracteres multibyte de *contagem* . o **_mbsninc** reconhece sequências de caracteres multibyte de acordo com a [página de código multibyte](../../c-runtime-library/code-pages.md) em uso no momento.
+A função **_mbsninc** incrementa *str* por *contagem* de caracteres multibytes. **_mbsninc** reconhece sequências de caracteres multibytes de acordo com a [página de código multibyte](../../c-runtime-library/code-pages.md) atualmente em uso.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -106,9 +111,9 @@ A função **_mbsninc** incrementa a *Str* por caracteres multibyte de *contagem
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsninc**|**_strninc**|**_mbsninc**|**_wcsninc**|
 
-**_strninc** e **_wcsninc** são cadeias de caracteres de byte único e versões de cadeia de caracteres largos do **_mbsninc**. **_wcsninc** e **_strninc** são fornecidos apenas para esse mapeamento e não devem ser usados de outra forma. Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).
+**_strninc** e **_wcsninc** são versões de seqüência de caracteres de um único byte e versões de cadeia de caracteres amplos de **_mbsninc**. **_wcsninc** e **_strninc** são fornecidos apenas para este mapeamento e não devem ser usados de outra forma. Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsninc_l** é idêntico, exceto pelo fato de que ele usa o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_mbsninc_l** é idêntica, exceto que usa o parâmetro local passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -121,9 +126,9 @@ A função **_mbsninc** incrementa a *Str* por caracteres multibyte de *contagem
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cordas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Localidade](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strdec, _wcsdec, _mbsdec, _mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>

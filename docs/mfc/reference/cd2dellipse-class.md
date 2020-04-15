@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-ms.openlocfilehash: 21087682d40dac521cc949a39ef4b1aab23e7d71
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 82ad2fbfb8558486134f85d7ec9bcaa6eb4e7507
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177217"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369266"
 ---
 # <a name="cd2dellipse-class"></a>Classe CD2DEllipse
 
-Um wrapper para `D2D1_ELLIPSE`.
+Um invólucro para. `D2D1_ELLIPSE`
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,7 +31,7 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Sobrecarregado. Constrói um `CD2DEllipse` objeto do `D2D1_ELLIPSE` objeto.|
+|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Sobrecarregado. Constrói um `CD2DEllipse` objeto `D2D1_ELLIPSE` a partir do objeto.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -41,11 +41,11 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxrendertarget. h
+**Cabeçalho:** afxrendertarget.h
 
-##  <a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse
+## <a name="cd2dellipsecd2dellipse"></a><a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse
 
-Constrói um objeto CD2DEllipse do objeto CD2DRectF.
+Constrói um objeto CD2DEllipse a partir do objeto CD2DRectF.
 
 ```
 CD2DEllipse(const CD2DRectF& rect);
@@ -59,18 +59,18 @@ CD2DEllipse(
 
 ### <a name="parameters"></a>Parâmetros
 
-*rect*<br/>
-retângulo de origem
+*Rect*<br/>
+retângulo fonte
 
-*elipse*<br/>
-elipse de origem
+*ellipse*<br/>
+elipse fonte
 
 *ptCenter*<br/>
 O ponto central da elipse.
 
 *sizeRadius*<br/>
-O raio X e Y da elipse.
+O raio X e o raio Y da elipse.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classes](../../mfc/reference/mfc-classes.md)

@@ -31,12 +31,12 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: e31cf35c903a0e7572ce7d47ada21c4603119cb2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: c1c5593aee19254d4348d4e8658ffe9c3f0cf1b2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515571"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368247"
 ---
 # <a name="safeint-functions"></a>Funções (SafeInt)
 
@@ -47,7 +47,7 @@ Essas funções permitem comparar ou realizar operações matemáticas em dois t
 Cada uma dessas funções tem dois tipos de modelo: `T` e `U`. Cada um desses tipos pode ser um tipo booliano, caractere ou integral. Tipos integrais podem ser assinados ou não assinados e ter qualquer tamanho de 8 a 64 bits.
 
 > [!NOTE]
-> A última versão dessa biblioteca está localizada em [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt).
+> A versão mais recente desta [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)biblioteca está localizada em .
 
 ## <a name="in-this-section"></a>Nesta seção
 
@@ -57,7 +57,7 @@ Função                      | Descrição
 [SafeCast](#safecast)         | Converte um tipo de parâmetro em outro tipo.
 [SafeDivide](#safedivide)     | Divide dois números e protege contra a divisão por zero.
 [SafeEquals](#safeequals), [SafeGreaterThan](#safegreaterthan), [SafeGreaterThanEquals](#safegreaterthanequals), [SafeLessThan](#safelessthan), [SafeLessThanEquals](#safelessthanequals), [SafeNotEquals](#safenotequals) | Compara dois números. Essas funções permitem comparar dois tipos diferentes de números sem alterar seus tipos.
-[SafeModulus](#safemodulus)   | Realiza a operação de módulo em dois números.
+[Modulus seguro](#safemodulus)   | Realiza a operação de módulo em dois números.
 [SafeMultiply](#safemultiply) | Multiplica dois números juntos e protege contra estouros.
 [SafeSubtract](#safesubtract) | Subtrai dois números e protege contra estouros.
 
@@ -68,7 +68,7 @@ Seção                                                  | Descrição
 [SafeInt](../safeint/safeint-class.md)                   | A classe `SafeInt`.
 [SafeIntException](../safeint/safeintexception-class.md) | A classe de exceção específica da biblioteca SafeInt.
 
-## <a name="safeadd"></a>SafeAdd
+## <a name="safeadd"></a><a name="safeadd"></a>SafeAdd
 
 Adiciona dois números de uma maneira que protege contra estouros.
 
@@ -89,14 +89,14 @@ inline bool SafeAdd (
 *u*<br/>
 [in] O segundo número a adicionar. Deve ser do tipo U.
 
-*resultado*<br/>
+*Resultado*<br/>
 [out] O parâmetro em que `SafeAdd` armazena o resultado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se nenhum erro ocorrer; **false** se ocorrer um erro.
 
-## <a name="safecast"></a>SafeCast
+## <a name="safecast"></a><a name="safecast"></a>SafeCast
 
 Converte um tipo de número em outro tipo.
 
@@ -110,17 +110,17 @@ inline bool SafeCast (
 
 ### <a name="parameters"></a>Parâmetros
 
-*From*<br/>
+*De*<br/>
 [in] O número de origem para converter. Deve ser do tipo `T`.
 
-*To*<br/>
+*Para*<br/>
 [out] Uma referência ao novo tipo de número. Deve ser do tipo `U`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se nenhum erro ocorrer; **false** se ocorrer um erro.
 
-## <a name="safedivide"></a>SafeDivide
+## <a name="safedivide"></a><a name="safedivide"></a>SafeDivide
 
 Divide dois números de uma maneira que protege contra a divisão por zero.
 
@@ -141,14 +141,14 @@ inline bool SafeDivide (
 *u*<br/>
 [in] O dividendo. Deve ser do tipo U.
 
-*resultado*<br/>
+*Resultado*<br/>
 [out] O parâmetro em que `SafeDivide` armazena o resultado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se nenhum erro ocorrer; **false** se ocorrer um erro.
 
-## <a name="safeequals"></a>SafeEquals
+## <a name="safeequals"></a><a name="safeequals"></a>Segurançaigual
 
 Compara dois números para determinar se eles são iguais.
 
@@ -168,7 +168,7 @@ inline bool SafeEquals (
 *u*<br/>
 [in] O segundo número para comparar. Deve ser do tipo U.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se *t* e *u* forem iguais, caso contrário, **false**.
 
@@ -176,7 +176,7 @@ inline bool SafeEquals (
 
 O método aprimora `==` porque `SafeEquals` permite comparar dois tipos diferentes de números.
 
-## <a name="safegreaterthan"></a>SafeGreaterThan
+## <a name="safegreaterthan"></a><a name="safegreaterthan"></a>SafeGreaterThan
 
 Compara dois números.
 
@@ -196,7 +196,7 @@ inline bool SafeGreaterThan (
 *u*<br/>
 [in] O segundo número para comparar. Deve ser do tipo `U`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se *t* for maior que *u*; caso contrário, **false**.
 
@@ -204,7 +204,7 @@ inline bool SafeGreaterThan (
 
 `SafeGreaterThan` estende o operador de comparação regular, permitindo que você compare dois tipos diferentes de números.
 
-## <a name="safegreaterthanequals"></a>SafeGreaterThanEquals
+## <a name="safegreaterthanequals"></a><a name="safegreaterthanequals"></a>SafeGreaterThanEquals
 
 Compara dois números.
 
@@ -224,7 +224,7 @@ inline bool SafeGreaterThanEquals (
 *u*<br/>
 [in] O segundo número para comparar. Deve ser do tipo `U`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se *t* for maior que ou igual a *u*; caso contrário, **false**.
 
@@ -232,7 +232,7 @@ inline bool SafeGreaterThanEquals (
 
 `SafeGreaterThanEquals` aprimora o operador de comparação padrão porque permite comparar dois tipos diferentes de números.
 
-## <a name="safelessthan"></a>SafeLessThan
+## <a name="safelessthan"></a><a name="safelessthan"></a>SafeLessThan
 
 Determina se um número é menor que outro.
 
@@ -252,7 +252,7 @@ inline bool SafeLessThan (
 *u*<br/>
 [in] O segundo número. Deve ser do tipo `U`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se *t* for menor que *u*; caso contrário, **false**.
 
@@ -260,7 +260,7 @@ inline bool SafeLessThan (
 
 Esse método aprimora o operador de comparação padrão porque `SafeLessThan` permite comparar dois tipos diferentes de números.
 
-## <a name="safelessthanequals"></a>SafeLessThanEquals
+## <a name="safelessthanequals"></a><a name="safelessthanequals"></a>SafeLessThanEquals
 
 Compara dois números.
 
@@ -280,7 +280,7 @@ inline bool SafeLessThanEquals (
 *u*<br/>
 [in] O segundo número para comparar. Deve ser do tipo `U`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se *t* for menor que ou igual a *u*; caso contrário, **false**.
 
@@ -288,7 +288,7 @@ inline bool SafeLessThanEquals (
 
 `SafeLessThanEquals` estende o operador de comparação regular, permitindo que você compare dois tipos diferentes de números.
 
-## <a name="safemodulus"></a>SafeModulus
+## <a name="safemodulus"></a><a name="safemodulus"></a>Modulus seguro
 
 Realiza a operação de módulo em dois números.
 
@@ -309,14 +309,14 @@ inline bool SafeModulus (
 *u*<br/>
 [in] O dividendo. Deve ser do tipo `U`.
 
-*resultado*<br/>
+*Resultado*<br/>
 [out] O parâmetro em que `SafeModulus` armazena o resultado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se nenhum erro ocorrer; **false** se ocorrer um erro.
 
-## <a name="safemultiply"></a>SafeMultiply
+## <a name="safemultiply"></a><a name="safemultiply"></a>SafeMultiply
 
 Multiplica dois números juntos de uma forma que protege contra estouros.
 
@@ -337,14 +337,14 @@ inline bool SafeMultiply (
 *u*<br/>
 [in] O segundo número para multiplicar. Deve ser do tipo `U`.
 
-*resultado*<br/>
+*Resultado*<br/>
 [out] O parâmetro em que `SafeMultiply` armazena o resultado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 `true` se não ocorrer erro; `false` se ocorrer um erro.
 
-## <a name="safenotequals"></a>SafeNotEquals
+## <a name="safenotequals"></a><a name="safenotequals"></a>SafeNotEquals
 
 Determina se dois números não são iguais.
 
@@ -364,7 +364,7 @@ inline bool SafeNotEquals (
 *u*<br/>
 [in] O segundo número para comparar. Deve ser do tipo `U`.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se *t* e *u* não forem iguais, caso contrário, **false**.
 
@@ -372,7 +372,7 @@ inline bool SafeNotEquals (
 
 O método aprimora `!=` porque `SafeNotEquals` permite comparar dois tipos diferentes de números.
 
-## <a name="safesubtract"></a>SafeSubtract
+## <a name="safesubtract"></a><a name="safesubtract"></a>SafeSubtract
 
 Subtrai dois números de uma maneira que protege contra estouros.
 
@@ -393,9 +393,9 @@ inline bool SafeSubtract (
 *u*<br/>
 [in] O número para subtrair de *t*. Deve ser do tipo `U`.
 
-*resultado*<br/>
+*Resultado*<br/>
 [out] O parâmetro em que `SafeSubtract` armazena o resultado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **true** se nenhum erro ocorrer; **false** se ocorrer um erro.

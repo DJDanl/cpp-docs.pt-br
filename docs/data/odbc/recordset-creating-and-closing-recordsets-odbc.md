@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: 155b51debfb6eacd3cbdd3293875274ca2dc4ab5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 41b1c11e2c820b6e5777e1af426c5e1253ed5468
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212973"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367085"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Conjunto de registros: criando e fechando conjuntos de registros (ODBC)
 
@@ -33,7 +33,7 @@ Este tópico explica:
 
 - [Quando e como fechar um objeto de conjunto de registros](#_core_closing_a_recordset).
 
-##  <a name="creating-recordsets-at-run-time"></a><a name="_core_creating_recordsets_at_run_time"></a> Como criar conjuntos de registros em tempo de execução
+## <a name="creating-recordsets-at-run-time"></a><a name="_core_creating_recordsets_at_run_time"></a> Como criar conjuntos de registros em tempo de execução
 
 Antes de poder criar objetos recordset em seu programa, normalmente você escreve classes de conjunto de registros específicas do aplicativo. Para saber mais sobre essa etapa preliminar, confira [Como adicionar um consumidor ODBC do MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
 
@@ -74,12 +74,12 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-Após chamar `Open`, use as funções de membro e membros de dados do objeto para trabalhar com os registros. Em alguns casos, talvez convenha repetir a consulta ou atualizar o conjunto de registros para incluir alterações que ocorreram na fonte de dados. Para obter mais informações, consulte [conjunto de registros: reconsultando um conjunto de registros (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
+Após chamar `Open`, use as funções de membro e membros de dados do objeto para trabalhar com os registros. Em alguns casos, talvez convenha repetir a consulta ou atualizar o conjunto de registros para incluir alterações que ocorreram na fonte de dados. Para obter mais informações, consulte [Recordset: Requerying a Recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
 
 > [!TIP]
->  A cadeia de conexão usada durante o desenvolvimento pode não ser a mesma cadeia de conexão de que seus usuários eventuais precisam. Para obter ideias sobre como generalizar seu aplicativo nesse aspecto, consulte [fonte de dados: Gerenciando conexões (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
+> A cadeia de conexão usada durante o desenvolvimento pode não ser a mesma cadeia de conexão de que seus usuários eventuais precisam. Para obter ideias sobre como generalizar sua aplicação nesse sentido, consulte [Fonte de Dados: Gerenciamento de Conexões (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
 
-##  <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> Como definir opções de conjunto de registros
+## <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> Como definir opções de conjunto de registros
 
 Após construir seu objeto de conjunto de registros, mas antes de chamar `Open` para selecionar registros, talvez convenha definir algumas opções para controlar o comportamento do conjunto de registros. Para todos os conjuntos de registros, você pode:
 
@@ -94,9 +94,9 @@ Também será possível definir a opção a seguir se as condições estiverem c
 - Se o conjunto de registros for atualizável e for compatível com opções de bloqueio, especifique o método de [bloqueio](../../data/odbc/recordset-locking-records-odbc.md) usado para atualizações.
 
 > [!NOTE]
->  Para afetar a seleção de registros, é necessário definir essas opções antes de chamar a função de membro `Open`.
+> Para afetar a seleção de registros, é necessário definir essas opções antes de chamar a função de membro `Open`.
 
-##  <a name="closing-a-recordset"></a><a name="_core_closing_a_recordset"></a> Como fechar um conjunto de registros
+## <a name="closing-a-recordset"></a><a name="_core_closing_a_recordset"></a> Como fechar um conjunto de registros
 
 Quando você concluir seu conjunto de registros, deverá descartá-lo e desalocar sua memória.
 

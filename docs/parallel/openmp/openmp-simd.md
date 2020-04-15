@@ -5,27 +5,27 @@ helpviewer_keywords:
 - SIMD
 - OpenMP in Visual C++, new features
 - explicit parallelization, new features
-ms.openlocfilehash: 52402aa553c6d68d3073aba26ecac7b784522ee9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a7f1142a3a432628795341f4885b76a5c144990
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363265"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366460"
 ---
 # <a name="simd-extension"></a>Extensão SIMD
 
-O Visual C++ atualmente dá suporte a OpenMP 2.0 padrão, no entanto, o Visual Studio de 2019 agora também oferece a funcionalidade SIMD.
+Visual C++ atualmente suporta o padrão OpenMP 2.0, porém o Visual Studio 2019 também agora oferece funcionalidade SIMD.
 
 > [!NOTE]
-> Para usar SIMD, compilar com o `-openmp:experimental` comutador que habilita recursos de OpenMP adicionais não disponíveis ao usar o `-openmp` alternar.
+> Para usar o SIMD, `-openmp:experimental` compile com o switch que `-openmp` permite recursos adicionais de OpenMP não disponíveis ao usar o switch.
 >
-> O `-openmp:experimental` incorporou switch `-openmp`, que significa que todos os recursos do OpenMP 2.0 estão incluídos no seu uso.
+> Os `-openmp:experimental` subsumos `-openmp`do switch, o que significa que todos os recursos do OpenMP 2.0 estão incluídos em seu uso.
 
-Para obter mais informações, consulte [SIMD extensão para C++ OpenMP no Visual Studio](https://devblogs.microsoft.com/cppblog/simd-extension-to-c-openmp-in-visual-studio/).
+Para obter mais informações, consulte [extensão SIMD para C++ OpenMP no Visual Studio](https://devblogs.microsoft.com/cppblog/simd-extension-to-c-openmp-in-visual-studio/).
 
-## <a name="openmp-simd-in-visual-c"></a>SIMD OpenMP no VisualC++
+## <a name="openmp-simd-in-visual-c"></a>OpenMP SIMD no Visual C++
 
-OpenMP SIMD, introduzido no 4.0 OpenMP standard, fazer loops amigável para o vetor de destinos. Usando o `simd` diretiva antes de um loop, o compilador pode ignorar as dependências de vetor, faça loop como vetor amigável quanto possível e respeita a intenção dos usuários para ter várias iterações do loop executadas simultaneamente.
+OpenMP SIMD, introduzido no padrão OpenMP 4.0, tem como alvo fazer loops amigáveis ao vetor. Ao usar `simd` a diretiva antes de um loop, o compilador pode ignorar dependências vetoriais, tornar o loop o mais vetorial possível e respeitar a intenção dos usuários de executar várias iterações de loop simultaneamente.
 
 ```c
     #pragma omp simd
@@ -37,15 +37,15 @@ OpenMP SIMD, introduzido no 4.0 OpenMP standard, fazer loops amigável para o ve
     }
 ```
 
-O Visual C++ fornece como semelhante pragmas de loop não OpenMP `#pragma vector` e `#pragma ivdep`, no entanto, com o OpenMP SIMD, o compilador pode fazer mais, como:
+Visual C++ fornece pragmas de loop `#pragma vector` `#pragma ivdep`não-OpenMP similares como e , no entanto, com OpenMP SIMD, o compilador pode fazer mais, como:
 
-- Sempre é permitido para ignorar as dependências de vetor presente.
-- `/fp:fast` está habilitado dentro do loop.
-- Loops externas e loops com chamadas de função são amigável para o vetor.
-- Loops aninhados podem ser Unidos em um loop e feitos amigável para o vetor.
-- Aceleração híbrida com `#pragma omp for simd` para habilitar os vetores de multithreading e refinados de alta granularidade.  
+- Sempre permitido ignorar as atuais dependências vetoriais.
+- `/fp:fast`está ativado dentro do loop.
+- Loops externos e loops com chamadas de função são vetoriais.
+- Loops aninhados podem ser coalescidos em um loop e tornados vetoriais amigáveis.
+- Aceleração `#pragma omp for simd` híbrida com para permitir vetores multi-rosca de grãos grossos e de grãos finos.  
 
-Loops de vetor amigável, o compilador permanece sem confirmação, a menos que você use uma opção de log do vetor de suporte:
+Para loops vetoriais, o compilador permanece silencioso a menos que você use um interruptor de log de suporte vetorial:
 
 ```cmd
     cl -O2 -openmp:experimental -Qvec-report:2 mycode.cpp
@@ -57,7 +57,7 @@ Loops de vetor amigável, o compilador permanece sem confirmação, a menos que 
     mycode.cpp(96) : info C5001: Omp simd loop vectorized
 ```
 
-Loops não amigáveis de vetor, o compilador emite cada uma mensagem:
+Para loops não-vetoriais, o compilador emite cada uma mensagem:
 
 ```cmd
     cl -O2 -openmp:experimental mycode.cpp
@@ -70,23 +70,23 @@ Loops não amigáveis de vetor, o compilador emite cada uma mensagem:
 
 ### <a name="clauses"></a>Cláusulas
 
-A diretiva de OpenMP SIMD também pode executar as seguintes cláusulas para aprimorar o vetor de suporte:
+A diretiva OpenMP SIMD também pode tomar as seguintes cláusulas para melhorar o suporte ao vetor:
 
 |Diretiva|Descrição|
 |---|---|
-|`simdlen(length)`|Especifique o número de pistas de vetor.|
-|`safelen(length)`|Especifique a distância de dependência do vetor.|
-|`linear(list[ : linear-step]`)|O mapeamento linear de variável de indução do loop para assinatura de matriz.|
-|`aligned(list[ : alignment])`|O alinhamento dos dados.|
-|`private(list)`|Especifique a privatização de dados.|
-|`lastprivate(list)`|Especifique a privatização de dados com o valor final da última iteração.|
-|`reduction(reduction-identifier:list)`|Especifica as operações de redução personalizado.|
-|`collapse(n)`|Aninhamento de loops de união.|
+|`simdlen(length)`|Especifique o número de faixas vetoriais.|
+|`safelen(length)`|Especifique a distância de dependência vetorial.|
+|`linear(list[ : linear-step]`)|O mapeamento linear da variável de indução de loop à assinatura do array.|
+|`aligned(list[ : alignment])`|O alinhamento de dados.|
+|`private(list)`|Especificar privatização de dados.|
+|`lastprivate(list)`|Especificar a privatização de dados com valor final da última iteração.|
+|`reduction(reduction-identifier:list)`|Especifique operações de redução personalizadas.|
+|`collapse(n)`|Ninho de laço de coalescing.|
 
 > [!NOTE]
-> Cláusulas SIMD não eficiente são analisadas e ignoradas pelo compilador, com um aviso.
+> As cláusulas SIMD não eficazes são parsed e ignoradas pelo compilador com um aviso.
 >
-> Por exemplo, use os seguintes problemas de código um aviso:
+> Por exemplo, o uso do seguinte código emite um aviso:
 >
 > ```c
 >    #pragma omp simd simdlen(8)
@@ -104,9 +104,9 @@ A diretiva de OpenMP SIMD também pode executar as seguintes cláusulas para apr
 
 ### <a name="example"></a>Exemplo
   
-A diretiva de OpenMP SIMD fornece aos usuários uma maneira para ditar o compilador verifique loops vetor compatível com. Anotando um loop com a diretiva de OpenMP SIMD, os usuários pretendem ter várias iterações do loop executadas simultaneamente.
+A diretiva OpenMP SIMD fornece aos usuários uma maneira de ditar que o compilador torne os loops amigáveis aos vetores. Ao anotar um loop com a diretiva OpenMP SIMD, os usuários pretendem executar várias iterações de loop executadas simultaneamente.
 
-Por exemplo, o seguinte loop é anotado com a diretiva de OpenMP SIMD. Não há nenhum perfeito paralelismo entre iterações do loop, pois há uma dependência com versões anteriores do [i] para [i-1], mas devido à diretiva SIMD que o compilador ainda tem permissão para pacote de iterações consecutivas da primeira instrução em uma instrução de vetor e executar -los em paralelo.
+Por exemplo, o loop a seguir é anotado com a diretiva OpenMP SIMD. Não há um paralelismo perfeito entre iterações de loop, uma vez que há uma dependência retrógrada de a[i] para a[i-1], mas por causa da diretiva SIMD o compilador ainda é permitido embalar iterações consecutivas da primeira instrução em uma instrução vetorial e executá-las em paralelo.
 
 ```c
     #pragma omp simd
@@ -118,7 +118,7 @@ Por exemplo, o seguinte loop é anotado com a diretiva de OpenMP SIMD. Não há 
     }
 ```
 
-Portanto, é o seguinte formato de vetor transformado do loop **legal** porque o compilador mantém o comportamento sequencial de cada iteração do loop original. Em outras palavras, `a[i]` é executado após `a[-1]`, `b[i]` após `a[i]` e a chamada para `bar` acontece pela última vez.
+Portanto, a seguinte forma vetorial transformada do loop é **legal** porque o compilador mantém o comportamento seqüencial de cada iteração de loop original. Em outras `a[i]` palavras, `a[-1]`é `b[i]` executado `a[i]` depois , `bar` é depois e a chamada para acontecer por último.
 
 ```c
     for (i = 0; i < count; i+=4)
@@ -132,7 +132,7 @@ Portanto, é o seguinte formato de vetor transformado do loop **legal** porque o
     }
 ```
 
-Ele tem **não legais** para mover a referência de memória `*c` o loop se ele pode ser alias com `a[i]` ou `b[i]`. Também não é legal para reordenar as instruções dentro de uma iteração original se ele quebrar a dependência sequencial. Por exemplo, o seguinte loop transformado não é legal:
+Não é **legal** mover a `*c` referência de memória para fora `a[i]` do `b[i]`loop se ela pode ter alias com ou . Também não é legal reordenar as declarações dentro de uma iteração original se ela quebrar a dependência sequencial. Por exemplo, o seguinte loop transformado não é legal:
 
 ```c
     c = b;
@@ -148,6 +148,6 @@ Ele tem **não legais** para mover a referência de memória `*c` o loop se ele 
     }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[/openmp (habilitar suporte para OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md)<br/>
+[/openmp (habilitar suporte a OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md)<br/>

@@ -50,64 +50,64 @@ helpviewer_keywords:
 - omp_unset_lock OpenMP function
 - omp_unset_nest_lock OpenMP function
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
-ms.openlocfilehash: 4508c683ff5d4bece290b7fef2bbd83ae8023eac
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0475a83ba259ed00bbcb9ddaba99a1556b35f613
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416994"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317135"
 ---
 # <a name="openmp-functions"></a>Funções (OpenMP)
 
-Fornece links para funções usadas na API de OpenMP.
+Fornece links para funções usadas na API OpenMP.
 
-A implementação C++ visual do padrão de OpenMP inclui as funções e os tipos de dados a seguir.
+A implementação visual C++ do padrão OpenMP inclui as seguintes funções e tipos de dados.
 
-Para a execução do ambiente:
+Para execução do ambiente:
 
-|Função|DESCRIÇÃO|
+|Função|Descrição|
 |--------|-----------|
-|[omp_set_num_threads](#omp-set-num-threads)|Define o número de threads em regiões paralelas futuras, a menos que seja substituído por uma cláusula [num_threads](openmp-clauses.md#num-threads) .|
-|[omp_get_num_threads](#omp-get-num-threads)|Retorna o número de threads na região paralela.|
-|[omp_get_max_threads](#omp-get-max-threads)|Retorna um inteiro que é igual ou maior que o número de threads que estarão disponíveis se uma região paralela sem [num_threads](openmp-clauses.md#num-threads) fosse definida nesse ponto no código.|
-|[omp_get_thread_num](#omp-get-thread-num)|Retorna o número de thread do thread em execução dentro de sua equipe de threads.|
-|[omp_get_num_procs](#omp-get-num-procs)|Retorna o número de processadores que estão disponíveis quando a função é chamada.|
-|[omp_in_parallel](#omp-in-parallel)|Retorna diferente de zero se chamado de dentro de uma região paralela.|
-|[omp_set_dynamic](#omp-set-dynamic)|Indica que o número de threads disponíveis em regiões paralelas futuras pode ser ajustado pelo tempo de execução.|
-|[omp_get_dynamic](#omp-get-dynamic)|Retorna um valor que indica se o número de threads disponíveis em regiões paralelas futuras pode ser ajustado pelo tempo de execução.|
-|[omp_set_nested](#omp-set-nested)|Habilita o paralelismo aninhado.|
-|[omp_get_nested](#omp-get-nested)|Retorna um valor que indica se o paralelismo aninhado está habilitado.|
+|[omp_set_num_threads](#omp-set-num-threads)|Define o número de threads nas próximas regiões paralelas, a menos que substituído por uma cláusula [de num_threads.](openmp-clauses.md#num-threads)|
+|[omp_get_num_threads](#omp-get-num-threads)|Retorna o número de roscas na região paralela.|
+|[omp_get_max_threads](#omp-get-max-threads)|Retorna um inteiro igual ou maior do que o número de threads que estariam disponíveis se uma região paralela sem [num_threads](openmp-clauses.md#num-threads) fosse definida naquele ponto do código.|
+|[omp_get_thread_num](#omp-get-thread-num)|Retorna o número de rosca do segmento em execução dentro de sua equipe de segmento.|
+|[omp_get_num_procs](#omp-get-num-procs)|Retorna o número de processadores disponíveis quando a função é chamada.|
+|[omp_in_parallel](#omp-in-parallel)|Retorna não zero se chamado de dentro de uma região paralela.|
+|[omp_set_dynamic](#omp-set-dynamic)|Indica que o número de threads disponíveis nas próximas regiões paralelas pode ser ajustado pelo tempo de execução.|
+|[omp_get_dynamic](#omp-get-dynamic)|Retorna um valor que indica se o número de threads disponíveis nas próximas regiões paralelas pode ser ajustado pelo tempo de execução.|
+|[omp_set_nested](#omp-set-nested)|Permite o paralelismo aninhado.|
+|[omp_get_nested](#omp-get-nested)|Retorna um valor que indica se o paralelismo aninhado estiver ativado.|
 
-Para bloqueio:
+Para travamento:
 
-|Função|DESCRIÇÃO|
+|Função|Descrição|
 |--------|-----------|
-|[omp_init_lock](#omp-init-lock)|Inicializa um bloqueio simples.|
-|[omp_init_nest_lock](#omp-init-nest-lock)|Inicializa um bloqueio.|
-|[omp_destroy_lock](#omp-destroy-lock)|Desinicializa um bloqueio.|
-|[omp_destroy_nest_lock](#omp-destroy-nest-lock)|Desinicializa um bloqueio aninhado.|
-|[omp_set_lock](#omp-set-lock)|Bloqueia a execução de threads até que um bloqueio esteja disponível.|
-|[omp_set_nest_lock](#omp-set-nest-lock)|Bloqueia a execução de threads até que um bloqueio esteja disponível.|
-|[omp_unset_lock](#omp-unset-lock)|Libera um bloqueio.|
-|[omp_unset_nest_lock](#omp-unset-nest-lock)|Libera um bloqueio aninhado.|
-|[omp_test_lock](#omp-test-lock)|Tenta definir um bloqueio, mas não bloqueia a execução do thread.|
-|[omp_test_nest_lock](#omp-test-nest-lock)|Tenta definir um bloqueio aninhado, mas não bloqueia a execução do thread.|
+|[omp_init_lock](#omp-init-lock)|Inicializa uma fechadura simples.|
+|[omp_init_nest_lock](#omp-init-nest-lock)|Inicializa um cadeado.|
+|[omp_destroy_lock](#omp-destroy-lock)|Uninitialize um bloqueio.|
+|[omp_destroy_nest_lock](#omp-destroy-nest-lock)|Uninitialize uma fechadura nestable.|
+|[omp_set_lock](#omp-set-lock)|Bloqueia a execução do segmento até que um bloqueio esteja disponível.|
+|[omp_set_nest_lock](#omp-set-nest-lock)|Bloqueia a execução do segmento até que um bloqueio esteja disponível.|
+|[omp_unset_lock](#omp-unset-lock)|Libera um cadeado.|
+|[omp_unset_nest_lock](#omp-unset-nest-lock)|Libera uma fechadura nestable.|
+|[omp_test_lock](#omp-test-lock)|Tenta definir um bloqueio, mas não bloqueia a execução do segmento.|
+|[omp_test_nest_lock](#omp-test-nest-lock)|Tenta definir um bloqueio nestable, mas não bloqueia a execução do segmento.|
 
-|Tipo de dados|DESCRIÇÃO|
+|Tipo de dados|Descrição|
 |---------|-----------|
-|`omp_lock_t`|Um tipo que mantém o status de um bloqueio, se o bloqueio está disponível ou se um thread possui um bloqueio.|
-|`omp_nest_lock_t`|Um tipo que contém uma das seguintes informações sobre um bloqueio: se o bloqueio está disponível e a identidade do thread que possui o bloqueio e uma contagem de aninhamento.|
+|`omp_lock_t`|Um tipo que mantém o status de um bloqueio, se o bloqueio está disponível ou se um segmento possui uma fechadura.|
+|`omp_nest_lock_t`|Um tipo que contém uma das seguintes informações sobre uma fechadura: se o bloqueio está disponível, e a identidade do segmento que possui a fechadura e uma contagem de ninhos.|
 
-Para rotinas de tempo:
+Para rotinas de cronometragem:
 
-|Função|DESCRIÇÃO|
+|Função|Descrição|
 |--------|-----------|
 |[omp_get_wtime](#omp-get-wtime)|Retorna um valor em segundos do tempo decorrido de algum ponto.|
-|[omp_get_wtick](#omp-get-wtick)|Retorna o número de segundos entre os tiques do relógio do processador.|
+|[omp_get_wtick](#omp-get-wtick)|Retorna o número de segundos entre os relógios do processador.|
 
-## <a name="omp-destroy-lock"></a>omp_destroy_lock
+## <a name="omp_destroy_lock"></a><a name="omp-destroy-lock"></a>omp_destroy_lock
 
-Desinicializa um bloqueio.
+Uninitialize um bloqueio.
 
 ```cpp
 void omp_destroy_lock(
@@ -115,22 +115,22 @@ void omp_destroy_lock(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*lock*<br/>
-Uma variável do tipo `omp_lock_t` que foi inicializada com [omp_init_lock](#omp-init-lock).
+*Bloqueio*<br/>
+Uma variável `omp_lock_t` do tipo que foi inicializada com [omp_init_lock](#omp-init-lock).
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [3.2.2 omp_destroy_lock e funções de omp_destroy_nest_lock](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md).
+Para obter mais informações, consulte [as funções 3.2.2 omp_destroy_lock e omp_destroy_nest_lock](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md).
 
 ### <a name="example"></a>Exemplo
 
-Consulte [omp_init_lock](#omp-init-lock) para obter um exemplo de como usar `omp_destroy_lock`.
+Veja [omp_init_lock](#omp-init-lock) para um `omp_destroy_lock`exemplo de uso .
 
-## <a name="omp-destroy-nest-lock"></a>omp_destroy_nest_lock
+## <a name="omp_destroy_nest_lock"></a><a name="omp-destroy-nest-lock"></a>omp_destroy_nest_lock
 
-Desinicializa um bloqueio aninhado.
+Uninitialize uma fechadura nestable.
 
 ```cpp
 void omp_destroy_nest_lock(
@@ -138,22 +138,22 @@ void omp_destroy_nest_lock(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*lock*<br/>
-Uma variável do tipo `omp_nest_lock_t` que foi inicializada com [omp_init_nest_lock](#omp-init-nest-lock).
+*Bloqueio*<br/>
+Uma variável `omp_nest_lock_t` do tipo que foi inicializada com [omp_init_nest_lock](#omp-init-nest-lock).
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [3.2.2 omp_destroy_lock e funções de omp_destroy_nest_lock](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md).
+Para obter mais informações, consulte [as funções 3.2.2 omp_destroy_lock e omp_destroy_nest_lock](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md).
 
 ### <a name="example"></a>Exemplo
 
-Consulte [omp_init_nest_lock](#omp-init-nest-lock) para obter um exemplo de como usar `omp_destroy_nest_lock`.
+Veja [omp_init_nest_lock](#omp-init-nest-lock) para um `omp_destroy_nest_lock`exemplo de uso .
 
-## <a name="omp-get-dynamic"></a>omp_get_dynamic
+## <a name="omp_get_dynamic"></a><a name="omp-get-dynamic"></a>omp_get_dynamic
 
-Retorna um valor que indica se o número de threads disponíveis em regiões paralelas futuras pode ser ajustado pelo tempo de execução.
+Retorna um valor que indica se o número de threads disponíveis nas próximas regiões paralelas pode ser ajustado pelo tempo de execução.
 
 ```cpp
 int omp_get_dynamic();
@@ -161,21 +161,21 @@ int omp_get_dynamic();
 
 ### <a name="return-value"></a>Valor retornado
 
-Um valor diferente de zero significa que os threads serão ajustados dinamicamente.
+Um valor não zero significa que os segmentos serão ajustados dinamicamente.
 
 ### <a name="remarks"></a>Comentários
 
-O ajuste dinâmico de threads é especificado com [omp_set_dynamic](#omp-set-dynamic) e [OMP_DYNAMIC](openmp-environment-variables.md#omp-dynamic).
+O ajuste dinâmico dos segmentos é especificado com [omp_set_dynamic](#omp-set-dynamic) e [OMP_DYNAMIC](openmp-environment-variables.md#omp-dynamic).
 
-Para obter mais informações, consulte [3.1.7 omp_set_dynamic function](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).
+Para obter mais informações, consulte [3.1.7 omp_set_dynamic função](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).
 
 ### <a name="example"></a>Exemplo
 
-Consulte [omp_set_dynamic](#omp-set-dynamic) para obter um exemplo de como usar `omp_get_dynamic`.
+Veja [omp_set_dynamic](#omp-set-dynamic) para um `omp_get_dynamic`exemplo de uso .
 
-## <a name="omp-get-max-threads"></a>omp_get_max_threads
+## <a name="omp_get_max_threads"></a><a name="omp-get-max-threads"></a>omp_get_max_threads
 
-Retorna um inteiro que é igual ou maior que o número de threads que estarão disponíveis se uma região paralela sem [num_threads](openmp-clauses.md#num-threads) fosse definida nesse ponto no código.
+Retorna um inteiro igual ou maior do que o número de threads que estariam disponíveis se uma região paralela sem [num_threads](openmp-clauses.md#num-threads) fosse definida naquele ponto do código.
 
 ```cpp
 int omp_get_max_threads( )
@@ -183,7 +183,7 @@ int omp_get_max_threads( )
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [3.1.3 omp_get_max_threads function](../../../parallel/openmp/3-1-3-omp-get-max-threads-function.md).
+Para obter mais informações, consulte [3.1.3 omp_get_max_threads função](../../../parallel/openmp/3-1-3-omp-get-max-threads-function.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -223,9 +223,9 @@ int main( )
 8
 ```
 
-## <a name="omp-get-nested"></a>omp_get_nested
+## <a name="omp_get_nested"></a><a name="omp-get-nested"></a>omp_get_nested
 
-Retorna um valor que indica se o paralelismo aninhado está habilitado.
+Retorna um valor que indica se o paralelismo aninhado estiver ativado.
 
 ```cpp
 int omp_get_nested( );
@@ -233,21 +233,21 @@ int omp_get_nested( );
 
 ### <a name="return-value"></a>Valor retornado
 
-Um valor diferente de zero significa que o paralelismo aninhado está habilitado.
+Um valor não zero significa que o paralelismo aninhado está ativado.
 
 ### <a name="remarks"></a>Comentários
 
 O paralelismo aninhado é especificado com [omp_set_nested](#omp-set-nested) e [OMP_NESTED](openmp-environment-variables.md#omp-nested).
 
-Para obter mais informações, consulte [3.1.10 omp_get_nested function](../../../parallel/openmp/3-1-10-omp-get-nested-function.md).
+Para obter mais informações, consulte [3.1.10 omp_get_nested função](../../../parallel/openmp/3-1-10-omp-get-nested-function.md).
 
 ### <a name="example"></a>Exemplo
 
-Consulte [omp_set_nested](#omp-set-nested) para obter um exemplo de como usar `omp_get_nested`.
+Veja [omp_set_nested](#omp-set-nested) para um `omp_get_nested`exemplo de uso .
 
-## <a name="omp-get-num-procs"></a>omp_get_num_procs
+## <a name="omp_get_num_procs"></a><a name="omp-get-num-procs"></a>omp_get_num_procs
 
-Retorna o número de processadores que estão disponíveis quando a função é chamada.
+Retorna o número de processadores disponíveis quando a função é chamada.
 
 ```cpp
 int omp_get_num_procs();
@@ -255,7 +255,7 @@ int omp_get_num_procs();
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [3.1.5 omp_get_num_procs function](../../../parallel/openmp/3-1-5-omp-get-num-procs-function.md).
+Para obter mais informações, consulte [3.1.5 omp_get_num_procs função](../../../parallel/openmp/3-1-5-omp-get-num-procs-function.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -282,9 +282,9 @@ int main( )
 2
 ```
 
-## <a name="omp-get-num-threads"></a>omp_get_num_threads
+## <a name="omp_get_num_threads"></a><a name="omp-get-num-threads"></a>Omp_get_num_threads
 
-Retorna o número de threads na região paralela.
+Retorna o número de roscas na região paralela.
 
 ```cpp
 int omp_get_num_threads( );
@@ -292,7 +292,7 @@ int omp_get_num_threads( );
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [3.1.2 omp_get_num_threads function](../../../parallel/openmp/3-1-2-omp-get-num-threads-function.md).
+Para obter mais informações, consulte [3.1.2 omp_get_num_threads função](../../../parallel/openmp/3-1-2-omp-get-num-threads-function.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -332,9 +332,9 @@ int main()
 1
 ```
 
-## <a name="omp-get-thread-num"></a>omp_get_thread_num
+## <a name="omp_get_thread_num"></a><a name="omp-get-thread-num"></a>omp_get_thread_num
 
-Retorna o número de thread do thread em execução dentro de sua equipe de threads.
+Retorna o número de rosca do segmento em execução dentro de sua equipe de segmento.
 
 ```cpp
 int omp_get_thread_num( );
@@ -342,15 +342,15 @@ int omp_get_thread_num( );
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [3.1.4 omp_get_thread_num function](../../../parallel/openmp/3-1-4-omp-get-thread-num-function.md).
+Para obter mais informações, consulte [3.1.4 omp_get_thread_num função](../../../parallel/openmp/3-1-4-omp-get-thread-num-function.md).
 
 ### <a name="example"></a>Exemplo
 
-Consulte [Parallel](openmp-directives.md#parallel) para obter um exemplo de como usar `omp_get_thread_num`.
+Consulte [paralelo](openmp-directives.md#parallel) para obter `omp_get_thread_num`um exemplo de uso .
 
-## <a name="omp-get-wtick"></a>omp_get_wtick
+## <a name="omp_get_wtick"></a><a name="omp-get-wtick"></a>omp_get_wtick
 
-Retorna o número de segundos entre os tiques do relógio do processador.
+Retorna o número de segundos entre os relógios do processador.
 
 ```cpp
 double omp_get_wtick( );
@@ -358,13 +358,13 @@ double omp_get_wtick( );
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [3.3.2 omp_get_wtick function](../../../parallel/openmp/3-3-2-omp-get-wtick-function.md).
+Para obter mais informações, consulte [3.3.2 omp_get_wtick função](../../../parallel/openmp/3-3-2-omp-get-wtick-function.md).
 
 ### <a name="example"></a>Exemplo
 
-Consulte [omp_get_wtime](#omp-get-wtime) para obter um exemplo de como usar `omp_get_wtick`.
+Veja [omp_get_wtime](#omp-get-wtime) para um `omp_get_wtick`exemplo de uso .
 
-## <a name="omp-get-wtime"></a>omp_get_wtime
+## <a name="omp_get_wtime"></a><a name="omp-get-wtime"></a>omp_get_wtime
 
 Retorna um valor em segundos do tempo decorrido de algum ponto.
 
@@ -374,13 +374,13 @@ double omp_get_wtime( );
 
 ### <a name="return-value"></a>Valor retornado
 
-Retorna um valor em segundos do tempo decorrido de um ponto arbitrário, mas consistente.
+Retorna um valor em segundos do tempo decorrido de algum ponto arbitrário, mas consistente.
 
 ### <a name="remarks"></a>Comentários
 
-Esse ponto permanecerá consistente durante a execução do programa, tornando possível as futuras comparações.
+Esse ponto permanecerá consistente durante a execução do programa, tornando possível comparações próximas.
 
-Para obter mais informações, consulte [3.3.1 omp_get_wtime function](../../../parallel/openmp/3-3-1-omp-get-wtime-function.md).
+Para obter mais informações, consulte [3.3.1 omp_get_wtime função](../../../parallel/openmp/3-3-1-omp-get-wtime-function.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -413,9 +413,9 @@ wtick = 2.793651148400146e-007
 1/wtick = 3579545
 ```
 
-## <a name="omp-in-parallel"></a>omp_in_parallel
+## <a name="omp_in_parallel"></a><a name="omp-in-parallel"></a>omp_in_parallel
 
-Retorna diferente de zero se chamado de dentro de uma região paralela.
+Retorna não zero se chamado de dentro de uma região paralela.
 
 ```cpp
 int omp_in_parallel( );
@@ -423,7 +423,7 @@ int omp_in_parallel( );
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [3.1.6 omp_in_parallel function](../../../parallel/openmp/3-1-6-omp-in-parallel-function.md).
+Para obter mais informações, consulte [3.1.6 omp_in_parallel função](../../../parallel/openmp/3-1-6-omp-in-parallel-function.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -451,9 +451,9 @@ int main( )
 1
 ```
 
-## <a name="omp-init-lock"></a>omp_init_lock
+## <a name="omp_init_lock"></a><a name="omp-init-lock"></a>Omp_init_lock
 
-Inicializa um bloqueio simples.
+Inicializa uma fechadura simples.
 
 ```cpp
 void omp_init_lock(
@@ -461,14 +461,14 @@ void omp_init_lock(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*lock*<br/>
+*Bloqueio*<br/>
 Uma variável do tipo `omp_lock_t`.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [3.2.1 omp_init_lock e funções de omp_init_nest_lock](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).
+Para obter mais informações, consulte [as funções 3.2.1 omp_init_lock e omp_init_nest_lock](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -543,9 +543,9 @@ Thread 3 - starting locked region
 Thread 3 - ending locked region
 ```
 
-## <a name="omp-init-nest-lock"></a>omp_init_nest_lock
+## <a name="omp_init_nest_lock"></a><a name="omp-init-nest-lock"></a>omp_init_nest_lock
 
-Inicializa um bloqueio.
+Inicializa um cadeado.
 
 ```cpp
 void omp_init_nest_lock(
@@ -553,16 +553,16 @@ void omp_init_nest_lock(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*lock*<br/>
+*Bloqueio*<br/>
 Uma variável do tipo `omp_nest_lock_t`.
 
 ### <a name="remarks"></a>Comentários
 
-A contagem de aninhamento inicial é zero.
+A contagem inicial de aninhamento é zero.
 
-Para obter mais informações, consulte [3.2.1 omp_init_lock e funções de omp_init_nest_lock](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).
+Para obter mais informações, consulte [as funções 3.2.1 omp_init_lock e omp_init_nest_lock](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -628,9 +628,9 @@ Thread 0 - starting nested locked region
 Thread 0 - ending nested locked region
 ```
 
-## <a name="omp-set-dynamic"></a>omp_set_dynamic
+## <a name="omp_set_dynamic"></a><a name="omp-set-dynamic"></a>Omp_set_dynamic
 
-Indica que o número de threads disponíveis em regiões paralelas futuras pode ser ajustado pelo tempo de execução.
+Indica que o número de threads disponíveis nas próximas regiões paralelas pode ser ajustado pelo tempo de execução.
 
 ```cpp
 void omp_set_dynamic(
@@ -638,20 +638,20 @@ void omp_set_dynamic(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*val*<br/>
-Um valor que indica se o número de threads disponíveis em regiões paralelas futuras pode ser ajustado pelo tempo de execução. Se for diferente de zero, o tempo de execução poderá ajustar o número de threads, se zero, o tempo de execução não ajustará dinamicamente o número de threads.
+*Val*<br/>
+Um valor que indica se o número de threads disponíveis nas próximas regiões paralelas pode ser ajustado pelo tempo de execução. Se não zerar, o tempo de execução pode ajustar o número de threads, se zero, o tempo de execução não ajustará dinamicamente o número de roscas.
 
 ### <a name="remarks"></a>Comentários
 
 O número de threads nunca excederá o valor definido por [omp_set_num_threads](#omp-set-num-threads) ou por [OMP_NUM_THREADS](openmp-environment-variables.md#omp-num-threads).
 
-Use [omp_get_dynamic](#omp-get-dynamic) para exibir a configuração atual de `omp_set_dynamic`.
+Use [omp_get_dynamic](#omp-get-dynamic) para exibir `omp_set_dynamic`a configuração atual de .
 
-A configuração para `omp_set_dynamic` substituirá a configuração da variável de ambiente [OMP_DYNAMIC](openmp-environment-variables.md#omp-dynamic) .
+A configuração para `omp_set_dynamic` substituirá a configuração da variável ambiente [OMP_DYNAMIC.](openmp-environment-variables.md#omp-dynamic)
 
-Para obter mais informações, consulte [3.1.7 omp_set_dynamic function](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).
+Para obter mais informações, consulte [3.1.7 omp_set_dynamic função](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -679,9 +679,9 @@ int main()
 1
 ```
 
-## <a name="omp-set-lock"></a>omp_set_lock
+## <a name="omp_set_lock"></a><a name="omp-set-lock"></a>omp_set_lock
 
-Bloqueia a execução de threads até que um bloqueio esteja disponível.
+Bloqueia a execução do segmento até que um bloqueio esteja disponível.
 
 ```cpp
 void omp_set_lock(
@@ -689,22 +689,22 @@ void omp_set_lock(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*lock*<br/>
-Uma variável do tipo `omp_lock_t` que foi inicializada com [omp_init_lock](#omp-init-lock).
+*Bloqueio*<br/>
+Uma variável `omp_lock_t` do tipo que foi inicializada com [omp_init_lock](#omp-init-lock).
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [3.2.3 omp_set_lock e funções de omp_set_nest_lock](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md).
+Para obter mais informações, consulte [3.2.3 funções omp_set_lock e omp_set_nest_lock](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md).
 
 ### <a name="examples"></a>Exemplos
 
-Consulte [omp_init_lock](#omp-init-lock) para obter um exemplo de como usar `omp_set_lock`.
+Veja [omp_init_lock](#omp-init-lock) para um `omp_set_lock`exemplo de uso .
 
-## <a name="omp-set-nest-lock"></a>omp_set_nest_lock
+## <a name="omp_set_nest_lock"></a><a name="omp-set-nest-lock"></a>omp_set_nest_lock
 
-Bloqueia a execução de threads até que um bloqueio esteja disponível.
+Bloqueia a execução do segmento até que um bloqueio esteja disponível.
 
 ```cpp
 void omp_set_nest_lock(
@@ -712,22 +712,22 @@ void omp_set_nest_lock(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*lock*<br/>
-Uma variável do tipo `omp_nest_lock_t` que foi inicializada com [omp_init_nest_lock](#omp-init-nest-lock).
+*Bloqueio*<br/>
+Uma variável `omp_nest_lock_t` do tipo que foi inicializada com [omp_init_nest_lock](#omp-init-nest-lock).
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [3.2.3 omp_set_lock e funções de omp_set_nest_lock](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md).
+Para obter mais informações, consulte [3.2.3 funções omp_set_lock e omp_set_nest_lock](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md).
 
 ### <a name="examples"></a>Exemplos
 
-Consulte [omp_init_nest_lock](#omp-init-nest-lock) para obter um exemplo de como usar `omp_set_nest_lock`.
+Veja [omp_init_nest_lock](#omp-init-nest-lock) para um `omp_set_nest_lock`exemplo de uso .
 
-## <a name="omp-set-nested"></a>omp_set_nested
+## <a name="omp_set_nested"></a><a name="omp-set-nested"></a>Omp_set_nested
 
-Habilita o paralelismo aninhado.
+Permite o paralelismo aninhado.
 
 ```cpp
 void omp_set_nested(
@@ -735,22 +735,22 @@ void omp_set_nested(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*val*<br/>
-Um valor diferente de zero permite paralelismo aninhado, enquanto zero desabilita o paralelismo aninhado.
+*Val*<br/>
+Um valor não zero permite o paralelismo aninhado, enquanto zero desativa o paralelismo aninhado.
 
 ### <a name="remarks"></a>Comentários
 
-O paralelismo aninhado OMP pode ser ativado com `omp_set_nested`ou definindo a variável de ambiente [OMP_NESTED](openmp-environment-variables.md#omp-nested) .
+O paralelismo aninhado o `omp_set_nested`MP pode ser ligado com , ou definindo a variável de ambiente [OMP_NESTED.](openmp-environment-variables.md#omp-nested)
 
-A configuração para `omp_set_nested` substituirá a configuração da variável de ambiente `OMP_NESTED`.
+A configuração para `omp_set_nested` substituirá `OMP_NESTED` a configuração da variável ambiente.
 
-Habilitar a variável de ambiente pode interromper um programa de outra forma operacional, pois o número de threads aumenta exponencialmente ao aninhar regiões paralelas. Por exemplo, uma função que recurse seis vezes com o número de threads OMP definido como 4 requer 4.096 (4 para a potência de 6) threads. Exceto com os aplicativos ligados à e/s, o desempenho de um aplicativo geralmente degrada se houver mais threads do que processadores.
+Permitir a variável ambiente pode quebrar um programa operacional de outra forma, porque o número de threads aumenta exponencialmente ao aninhar regiões paralelas. Por exemplo, uma função que reamaldiçoa seis vezes com o número de roscas OMP definidas para 4 requer 4.096 (4 à potência de 6) threads. Exceto com aplicativos vinculados a I/O, o desempenho de um aplicativo geralmente se degrada se houver mais threads do que processadores.
 
-Use [omp_get_nested](#omp-get-nested) para exibir a configuração atual de `omp_set_nested`.
+Use [omp_get_nested](#omp-get-nested) para exibir `omp_set_nested`a configuração atual de .
 
-Para obter mais informações, consulte [3.1.9 omp_set_nested function](../../../parallel/openmp/3-1-9-omp-set-nested-function.md).
+Para obter mais informações, consulte [3.1.9 omp_set_nested função](../../../parallel/openmp/3-1-9-omp-set-nested-function.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -778,9 +778,9 @@ int main( )
 1
 ```
 
-## <a name="omp-set-num-threads"></a>omp_set_num_threads
+## <a name="omp_set_num_threads"></a><a name="omp-set-num-threads"></a>Omp_set_num_threads
 
-Define o número de threads em regiões paralelas futuras, a menos que seja substituído por uma cláusula [num_threads](openmp-clauses.md#num-threads) .
+Define o número de threads nas próximas regiões paralelas, a menos que substituído por uma cláusula [de num_threads.](openmp-clauses.md#num-threads)
 
 ```cpp
 void omp_set_num_threads(
@@ -788,22 +788,22 @@ void omp_set_num_threads(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *num_threads*<br/>
-O número de threads na região paralela.
+O número de fios na região paralela.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [3.1.1 omp_set_num_threads function](../../../parallel/openmp/3-1-1-omp-set-num-threads-function.md).
+Para obter mais informações, consulte [3.1.1 omp_set_num_threads função](../../../parallel/openmp/3-1-1-omp-set-num-threads-function.md).
 
 ### <a name="example"></a>Exemplo
 
-Consulte [omp_get_num_threads](#omp-get-num-threads) para obter um exemplo de como usar `omp_set_num_threads`.
+Veja [omp_get_num_threads](#omp-get-num-threads) para um `omp_set_num_threads`exemplo de uso .
 
-## <a name="omp-test-lock"></a>omp_test_lock
+## <a name="omp_test_lock"></a><a name="omp-test-lock"></a>omp_test_lock
 
-Tenta definir um bloqueio, mas não bloqueia a execução do thread.
+Tenta definir um bloqueio, mas não bloqueia a execução do segmento.
 
 ```cpp
 int omp_test_lock(
@@ -811,14 +811,14 @@ int omp_test_lock(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*lock*<br/>
-Uma variável do tipo `omp_lock_t` que foi inicializada com [omp_init_lock](#omp-init-lock).
+*Bloqueio*<br/>
+Uma variável `omp_lock_t` do tipo que foi inicializada com [omp_init_lock](#omp-init-lock).
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [3.2.5 omp_test_lock e funções de omp_test_nest_lock](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).
+Para obter mais informações, consulte [3.2.5 omp_test_lock e funções omp_test_nest_lock](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -874,9 +874,9 @@ Thread 3 - acquired simple_lock
 Thread 3 - released simple_lock
 ```
 
-## <a name="omp-test-nest-lock"></a>omp_test_nest_lock
+## <a name="omp_test_nest_lock"></a><a name="omp-test-nest-lock"></a>omp_test_nest_lock
 
-Tenta definir um bloqueio aninhado, mas não bloqueia a execução do thread.
+Tenta definir um bloqueio nestable, mas não bloqueia a execução do segmento.
 
 ```cpp
 int omp_test_nest_lock(
@@ -884,14 +884,14 @@ int omp_test_nest_lock(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*lock*<br/>
-Uma variável do tipo `omp_nest_lock_t` que foi inicializada com [omp_init_nest_lock](#omp-init-nest-lock).
+*Bloqueio*<br/>
+Uma variável `omp_nest_lock_t` do tipo que foi inicializada com [omp_init_nest_lock](#omp-init-nest-lock).
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [3.2.5 omp_test_lock e funções de omp_test_nest_lock](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).
+Para obter mais informações, consulte [3.2.5 omp_test_lock e funções omp_test_nest_lock](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).
 
 ### <a name="example"></a>Exemplo
 
@@ -965,9 +965,9 @@ Thread 2 - released nestable_lock
 Thread 2 - released nestable_lock
 ```
 
-## <a name="omp-unset-lock"></a>omp_unset_lock
+## <a name="omp_unset_lock"></a><a name="omp-unset-lock"></a>omp_unset_lock
 
-Libera um bloqueio.
+Libera um cadeado.
 
 ```cpp
 void omp_unset_lock(
@@ -975,22 +975,22 @@ void omp_unset_lock(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*lock*<br/>
-Uma variável do tipo `omp_lock_t` que foi inicializada com [omp_init_lock](#omp-init-lock), pertencente ao thread e executada na função.
+*Bloqueio*<br/>
+Uma variável `omp_lock_t` de tipo que foi inicializada com [omp_init_lock,](#omp-init-lock)de propriedade do segmento e execução na função.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [3.2.4 omp_unset_lock e funções de omp_unset_nest_lock](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md).
+Para obter mais informações, consulte [3.2.4 omp_unset_lock e funções omp_unset_nest_lock](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md).
 
 ### <a name="example"></a>Exemplo
 
-Consulte [omp_init_lock](#omp-init-lock) para obter um exemplo de como usar `omp_unset_lock`.
+Veja [omp_init_lock](#omp-init-lock) para um `omp_unset_lock`exemplo de uso .
 
-## <a name="omp-unset-nest-lock"></a>omp_unset_nest_lock
+## <a name="omp_unset_nest_lock"></a><a name="omp-unset-nest-lock"></a>omp_unset_nest_lock
 
-Libera um bloqueio aninhado.
+Libera uma fechadura nestable.
 
 ```cpp
 void omp_unset_nest_lock(
@@ -998,15 +998,15 @@ void omp_unset_nest_lock(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*lock*<br/>
-Uma variável do tipo `omp_nest_lock_t` que foi inicializada com [omp_init_nest_lock](#omp-init-nest-lock), pertencente ao thread e executada na função.
+*Bloqueio*<br/>
+Uma variável `omp_nest_lock_t` de tipo que foi inicializada com [omp_init_nest_lock](#omp-init-nest-lock), de propriedade do segmento e execução na função.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [3.2.4 omp_unset_lock e funções de omp_unset_nest_lock](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md).
+Para obter mais informações, consulte [3.2.4 omp_unset_lock e funções omp_unset_nest_lock](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md).
 
 ### <a name="example"></a>Exemplo
 
-Consulte [omp_init_nest_lock](#omp-init-nest-lock) para obter um exemplo de como usar `omp_unset_nest_lock`.
+Veja [omp_init_nest_lock](#omp-init-nest-lock) para um `omp_unset_nest_lock`exemplo de uso .

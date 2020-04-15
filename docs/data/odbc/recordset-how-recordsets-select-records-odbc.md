@@ -9,12 +9,12 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 252d17fc56c13415f1068d6b16ed8b1ee663b5f1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0aa9c082d2d04416358d948476f2ae0f9e2a35af
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212882"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366983"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Conjunto de registros: como conjuntos de registros selecionam registros (ODBC)
 
@@ -33,7 +33,7 @@ Este tópico explica:
 
 Os conjuntos de registros selecionam registros de uma fonte de dados por meio de um driver ODBC enviando de instruções SQL para o driver. O SQL enviado depende de como você cria e abre sua classe de conjunto de registros.
 
-##  <a name="your-options-in-selecting-records"></a><a name="_core_your_options_in_selecting_records"></a> Suas opções na seleção de registros
+## <a name="your-options-in-selecting-records"></a><a name="_core_your_options_in_selecting_records"></a> Suas opções na seleção de registros
 
 A tabela a seguir mostra suas opções na seleção de registros.
 
@@ -43,13 +43,13 @@ A tabela a seguir mostra suas opções na seleção de registros.
 |--------------|-------------|
 |Declara sua classe de conjunto de registros com o assistente **Adicionar Classe**|Especificar de qual tabela selecionar.<br /><br /> Especificar quais colunas incluir.<br /><br /> Confira [Como adicionar um consumidor ODBC do MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).|
 |Conclui a implementação da sua classe de conjunto de registros|Substituir funções de membro como `OnSetOptions` (Avançado) para definir opções específicas do aplicativo ou para alterar os padrões. Especifique membros de dados de parâmetro se você desejar ter um conjunto de registros parametrizado.|
-|Constrói um objeto de conjunto de registros (antes de chamar `Open`)|Especificar uma condição de pesquisa (possivelmente composta) para uso em uma cláusula **WHERE** que filtra os registros. Consulte [Recordset: Filtering Records (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).<br /><br /> Especificar uma ordem de classificação para uso em uma cláusula **ORDER BY** que classifica os registros. Consulte [conjunto de registros: classificando registros (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).<br /><br /> Especificar valores de parâmetro para quaisquer parâmetros que você adicionou à classe. Confira [conjunto de registros: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).|
+|Constrói um objeto de conjunto de registros (antes de chamar `Open`)|Especificar uma condição de pesquisa (possivelmente composta) para uso em uma cláusula **WHERE** que filtra os registros. Ver [conjunto de registros: Registros de filtragem (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).<br /><br /> Especificar uma ordem de classificação para uso em uma cláusula **ORDER BY** que classifica os registros. Ver [Conjunto de registros: Registros de classificação (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).<br /><br /> Especificar valores de parâmetro para quaisquer parâmetros que você adicionou à classe. Ver [Conjunto de registros: Parametrização de um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).|
 
-|Executa a consulta do conjunto de registros chamando `Open`| Especificar uma cadeia de caracteres SQL personalizada para substituir a cadeia de caracteres SQL padrão configurada pelo assistente. Consulte [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) na *referência da biblioteca de classes* e [SQL: Personalizando a instrução SQL do conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md). |
+|Executa a consulta do conjunto de registros chamando `Open`| Especificar uma cadeia de caracteres SQL personalizada para substituir a cadeia de caracteres SQL padrão configurada pelo assistente. Ver [CRecordset::Abrir](../../mfc/reference/crecordset-class.md#open) na referência da *biblioteca de classes* e [sql: Personalizando a declaração SQL (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)do seu conjunto de registros .|
 
-|Chama `Requery` para repetir a consulta do conjunto de registros com os valores mais recentes na fonte de dados|Especificar novos parâmetro, filtrar ou classificar. Consulte [conjunto de registros: reconsultando um conjunto de registros (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md). |
+|Chama `Requery` para repetir a consulta do conjunto de registros com os valores mais recentes na fonte de dados|Especificar novos parâmetro, filtrar ou classificar. Ver [Conjunto de registros: Requerying a Recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).|
 
-##  <a name="how-a-recordset-constructs-its-sql-statement"></a><a name="_core_how_a_recordset_constructs_its_sql_statement"></a> Como um conjunto de registros constrói sua instrução SQL
+## <a name="how-a-recordset-constructs-its-sql-statement"></a><a name="_core_how_a_recordset_constructs_its_sql_statement"></a> Como um conjunto de registros constrói sua instrução SQL
 
 Quando você chama a função de membro [Open](../../mfc/reference/crecordset-class.md#open) de um objeto de conjunto de registros, o `Open` constrói uma instrução SQL usando alguns dos seguintes ingredientes ou todos eles:
 
@@ -74,24 +74,24 @@ Após a construção da instrução, `Open` enviará o SQL para o Gerenciador e 
 
 É possível usar uma combinação dessas técnicas para abrir [tabelas](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md) e para construir uma consulta com base em uma [junção](../../data/odbc/recordset-performing-a-join-odbc.md) de várias tabelas. Com a personalização adicional, é possível chamar [consultas predefinidas](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md) (procedimentos armazenados), selecionar colunas de tabela não conhecidas em tempo de design e [associá](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)-las aos campos de conjunto de registros ou é possível realizar a maioria das outras tarefas de acesso a dados. As tarefas que você não pode realizar personalizando conjuntos de registros ainda podem ser efetuadas [chamando funções de API ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) ou executando diretamente instruções SQL com [CDatabase::ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).
 
-##  <a name="customizing-the-selection"></a><a name="_core_customizing_the_selection"></a> Como personalizar a seleção
+## <a name="customizing-the-selection"></a><a name="_core_customizing_the_selection"></a> Como personalizar a seleção
 
 Além de fornecer um filtro, uma ordem de classificação ou parâmetros, é possível usar as seguintes ações para personalizar a seleção do seu conjunto de registros:
 
 - Passe uma cadeia de caracteres SQL personalizada em *lpszSQL* quando você chama [Open](../../mfc/reference/crecordset-class.md#open) para o conjunto de registros. Qualquer coisa que você passa em *lpsqSQL* tem precedência sobre o que a função de membro [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) retorna.
 
-   Para obter mais informações, consulte [SQL: Personalizando a instrução SQL do conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md), que descreve os tipos de instruções SQL (ou instruções parciais) que você pode passar para `Open` e o que a estrutura faz com elas.
+   Para obter mais informações, consulte [SQL: Personalizando a Declaração SQL (ODBC) do seu Recordset,](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)que descreve `Open` os tipos de declarações SQL (ou declarações parciais) que você pode passar e o que a estrutura faz com elas.
 
     > [!NOTE]
     >  Se a cadeia de caracteres personalizada passada não começa com "SELECT" ou "{CALL", o MFC pressupõe que ela contém um nome de tabela. Isso também se aplica ao próximo item com marcadores.
 
 - Altere a cadeia de caracteres que o assistente escreve em sua função de membro `GetDefaultSQL` do conjunto de registros. Edite o código da função para alterar o que ela retorna. Por padrão, o assistente escreve uma função `GetDefaultSQL` que retorna um nome de tabela único.
 
-   É possível fazer `GetDefaultSQL` retornar um dos itens que você pode passar no parâmetro *lpszSQL* para `Open`. Se você não passa uma cadeia de caracteres SQL personalizada em *lpszSQL*, a estrutura usa a cadeia de caracteres que `GetDefaultSQL` retorna. No mínimo, `GetDefaultSQL` deve retornar um nome de tabela único. Mas é possível fazer com que ele retorne vários nomes de tabela, uma instrução **SELECT** completa, uma instrução **CALL** ODBC e assim por diante. Para obter uma lista do que você pode passar para *lpszSQL* — ou ter `GetDefaultSQL` retornar — consulte [SQL: Personalizando a instrução SQL do conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+   É possível fazer `GetDefaultSQL` retornar um dos itens que você pode passar no parâmetro *lpszSQL* para `Open`. Se você não passa uma cadeia de caracteres SQL personalizada em *lpszSQL*, a estrutura usa a cadeia de caracteres que `GetDefaultSQL` retorna. No mínimo, `GetDefaultSQL` deve retornar um nome de tabela único. Mas é possível fazer com que ele retorne vários nomes de tabela, uma instrução **SELECT** completa, uma instrução **CALL** ODBC e assim por diante. Para obter uma lista do que você pode passar `GetDefaultSQL` para *lpszSQL* — ou ter retorno — consulte [SQL: Personalizando a Declaração SQL (ODBC) do seu recordset.](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-   Se você estiver executando uma junção de duas ou mais tabelas, reescreva `GetDefaultSQL` para personalizar a lista de tabelas usada na cláusula **FROM** SQL. Para obter mais informações, consulte [conjunto de registros: executando uma junção (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
+   Se você estiver executando uma junção de duas ou mais tabelas, reescreva `GetDefaultSQL` para personalizar a lista de tabelas usada na cláusula **FROM** SQL. Para obter mais informações, consulte [Recordset: Realizando uma Join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
 
-- Associe membros de dados de campo adicionais manualmente, talvez com base nas informações que você obtém sobre o esquema de sua fonte de dados em tempo de execução. Adicione membros de dados de campo à classe de conjunto de registros ou às chamadas de função [RFX](../../data/odbc/record-field-exchange-using-rfx.md) ou RFX em massa para eles para a função de membro [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) ou [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) e as inicializações de membros de dados na classe do construtor. Para obter mais informações, consulte [conjunto de registros: vinculação dinâmica de colunas de dados (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+- Associe membros de dados de campo adicionais manualmente, talvez com base nas informações que você obtém sobre o esquema de sua fonte de dados em tempo de execução. Adicione membros de dados de campo à classe de conjunto de registros ou às chamadas de função [RFX](../../data/odbc/record-field-exchange-using-rfx.md) ou RFX em massa para eles para a função de membro [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) ou [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) e as inicializações de membros de dados na classe do construtor. Para obter mais informações, consulte [Recordset: Dynamically Binding Data Columns (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
 - Substitua funções de membro do conjunto de registros, como `OnSetOptions`, para definir opções específicas do aplicativo ou para substituir padrões.
 

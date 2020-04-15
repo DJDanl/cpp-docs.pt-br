@@ -46,16 +46,16 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: b883d442342dd9fbbd074d9f8fcab76f81ef9864
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c90a873033516710077d31c8bb8af5fb5172ca6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237550"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367504"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>Classe CMFCFilterChunkValueImpl
 
-Essa é uma classe que simplifica a lógica de par de valor de bloco e de propriedade.
+Esta é uma classe que simplifica a lógica do par de valores de pedaço e propriedade.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -69,7 +69,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Destructs o objeto.|
+|[CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Destrói o objeto.|
 |[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|Constrói o objeto.|
 
 ### <a name="public-methods"></a>Métodos públicos
@@ -77,43 +77,43 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 |Nome|Descrição|
 |----------|-----------------|
 |[CMFCFilterChunkValueImpl::Clear](#clear)|Limpa o ChunkValue.|
-|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|Copia essa parte para uma estrutura que descreve as características de uma parte.|
-|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|Inicializa esse valor de parte do valor de.|
-|[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|Recupera a parte GUID.|
-|[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|Recupera a parte PID (ID de propriedade).|
-|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|Obtém parte tipo.|
-|[CMFCFilterChunkValueImpl::GetString](#getstring)|Recupera o valor de cadeia de caracteres.|
-|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|Recupera o valor como um propvariant alocado.|
-|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|Retorna não alocado (valor interno) o valor.|
-|[CMFCFilterChunkValueImpl::IsValid](#isvalid)|Verifica se o valor dessa propriedade é válido ou não.|
-|[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|Sobrecarregado. Define a propriedade pela chave em um booliano.|
-|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|Define a propriedade pela chave para uma DWORD.|
-|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|Define a propriedade pela chave para um filetime.|
-|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Define a propriedade pela chave para um int64.|
-|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Define a propriedade pela chave em um inteiro.|
-|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|Define a propriedade pela chave para um longo período.|
-|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|Define a propriedade pela chave para um SystemTime.|
-|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|Define a propriedade pela chave para uma cadeia de caracteres Unicode.|
+|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|Copia este pedaço para uma estrutura descrevendo as características de um pedaço.|
+|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|Inicializa esse valor de pedaço do outro valor.|
+|[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|Recupera o pedaço GUID.|
+|[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|Recupera o pid de bloco (id de propriedade).|
+|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|Fica do tipo pedaço.|
+|[CMFCFilterChunkValueImpl::GetString](#getstring)|Recupera o valor da seqüência.|
+|[CMFCFilterChunkValueImpl:GetValue](#getvalue)|Recupera o valor como uma variante de propação alocada.|
+|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|Retorna valor não alocado (valor interno).|
+|[CMFCFilterChunkValueImpl:IsValid](#isvalid)|Verifica se esse valor de propriedade é válido ou não.|
+|[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|Sobrecarregado. Define a propriedade por chave para um booleano.|
+|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|Define a propriedade por chave para um DWORD.|
+|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|Define a propriedade por chave para um tempo de arquivo.|
+|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Define a propriedade por chave para um int64.|
+|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Define a propriedade por chave para um int.|
+|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|Define a propriedade por chave para um LONG.|
+|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|Define a propriedade por chave para um SystemTime.|
+|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|Define a propriedade por chave para uma seqüência unicode.|
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|Uma função auxiliar que define as propriedades comuns do bloco.|
+|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|Uma função auxiliar que define as propriedades comuns do pedaço.|
 
 ## <a name="remarks"></a>Comentários
 
-Para usar, basta criar uma classe CMFCFilterChunkValueImpl do tipo correto
+Para usar, basta criar uma classe CMFCFilterChunkValueImpl do tipo certo
 
 Exemplo:
 
-Fragmento CMFCFilterChunkValueImpl;
+CMFCFilterChunkValueIl chunk;
 
-hr = chunk.SetBoolValue(PKEY_IsAttachment, true);
+hr = pedaço. SetBoolValue (PKEY_IsAttachment, verdade);
 
 ou
 
-hr = chunk.SetFileTimeValue(PKEY_ItemDate, ftLastModified);
+hr = pedaço. SetFileTimeValue(PKEY_ItemDate, ftLastModified);
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -123,9 +123,9 @@ hr = chunk.SetFileTimeValue(PKEY_ItemDate, ftLastModified);
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxwin. h
+**Cabeçalho:** afxwin.h
 
-##  <a name="clear"></a>  CMFCFilterChunkValueImpl::Clear
+## <a name="cmfcfilterchunkvalueimplclear"></a><a name="clear"></a>CMFCFilterChunkValueImpl::Clear
 
 Limpa o ChunkValue.
 
@@ -135,7 +135,7 @@ void Clear();
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="cmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl
+## <a name="cmfcfilterchunkvalueimplcmfcfilterchunkvalueimpl"></a><a name="cmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl
 
 Constrói o objeto.
 
@@ -145,9 +145,9 @@ CMFCFilterChunkValueImpl();
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl
+## <a name="cmfcfilterchunkvalueimplcmfcfilterchunkvalueimpl"></a><a name="_dtorcmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl
 
-Destructs o objeto.
+Destrói o objeto.
 
 ```
 virtual ~CMFCFilterChunkValueImpl();
@@ -155,9 +155,9 @@ virtual ~CMFCFilterChunkValueImpl();
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="copychunk"></a>  CMFCFilterChunkValueImpl::CopyChunk
+## <a name="cmfcfilterchunkvalueimplcopychunk"></a><a name="copychunk"></a>CMFCFilterChunkValueImpl::CopyChunk
 
-Copia essa parte para uma estrutura que descreve as características de uma parte.
+Copia este pedaço para uma estrutura descrevendo as características de um pedaço.
 
 ```
 HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
@@ -166,17 +166,17 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 ### <a name="parameters"></a>Parâmetros
 
 *pStatChunk*<br/>
-Um ponteiro para o valor de destino que descrevem as características da parte.
+Um ponteiro para o valor de destino descrevendo as características do pedaço.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um código de erro.
+S_OK se for bem sucedido; caso contrário, um código de erro.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="copyfrom"></a>  CMFCFilterChunkValueImpl::CopyFrom
+## <a name="cmfcfilterchunkvalueimplcopyfrom"></a><a name="copyfrom"></a>CMFCFilterChunkValueImpl::CopyFrom
 
-Inicializa esse valor de parte do valor de.
+Inicializa esse valor de pedaço do outro valor.
 
 ```
 void CopyFrom (IFilterChunkValue* pValue);
@@ -185,69 +185,69 @@ void CopyFrom (IFilterChunkValue* pValue);
 ### <a name="parameters"></a>Parâmetros
 
 *pValue*<br/>
-Especifica o valor de origem para copiar de.
+Especifica o valor de origem a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getchunkguid"></a>  CMFCFilterChunkValueImpl::GetChunkGUID
+## <a name="cmfcfilterchunkvalueimplgetchunkguid"></a><a name="getchunkguid"></a>CMFCFilterChunkValueImpl::GetChunkGUID
 
-Recupera a parte GUID.
+Recupera o pedaço GUID.
 
 ```
 REFGUID GetChunkGUID() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma referência a um GUID que identifica o fragmento.
+Uma referência a um GUID identificando o pedaço.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getchunkpid"></a>  CMFCFilterChunkValueImpl::GetChunkPID
+## <a name="cmfcfilterchunkvalueimplgetchunkpid"></a><a name="getchunkpid"></a>CMFCFilterChunkValueImpl::GetChunkPID
 
-Recupera a parte PID (ID de propriedade).
+Recupera o pid de bloco (id de propriedade).
 
 ```
 DWORD GetChunkPID() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um valor DWORD que contém a ID da propriedade.
+Um valor DWORD contendo o ID de propriedade.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getchunktype"></a>  CMFCFilterChunkValueImpl::GetChunkType
+## <a name="cmfcfilterchunkvalueimplgetchunktype"></a><a name="getchunktype"></a>CMFCFilterChunkValueImpl::GetChunkType
 
-Recupera o tipo de bloco.
+Recupera o tipo de pedaço.
 
 ```
 CHUNKSTATE GetChunkType() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um valor enumerado de CHUNKSTATE, que especifica se o bloco atual é uma propriedade de tipo de texto ou uma propriedade de tipo de valor.
+Um valor enumerado CHUNKSTATE, que especifica se o pedaço atual é uma propriedade do tipo texto ou uma propriedade do tipo valor.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getstring"></a>  CMFCFilterChunkValueImpl::GetString
+## <a name="cmfcfilterchunkvalueimplgetstring"></a><a name="getstring"></a>CMFCFilterChunkValueImpl::GetString
 
-Recupera o valor de cadeia de caracteres.
+Recupera o valor da seqüência.
 
 ```
 CString &GetString();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma cadeia de caracteres que contém o valor da parte.
+Uma seqüência contendo o valor do pedaço.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getvalue"></a>  CMFCFilterChunkValueImpl::GetValue
+## <a name="cmfcfilterchunkvalueimplgetvalue"></a><a name="getvalue"></a>CMFCFilterChunkValueImpl:GetValue
 
-Recupera o valor como um propvariant alocado.
+Recupera o valor como uma variante de propação alocada.
 
 ```
 HRESULT GetValue(PROPVARIANT** ppPropVariant);
@@ -256,15 +256,15 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
 ### <a name="parameters"></a>Parâmetros
 
 *ppPropVariant*<br/>
-Quando a função retornar, este parâmetro contém o valor de bloco.
+Quando a função retorna, este parâmetro contém o valor do pedaço.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se PROPVARIANT foi alocado com êxito e o valor de bloco foi copiado com êxito *ppPropVariant*; caso contrário, um código de erro.
+S_OK se propvariant foi alocado com sucesso e o valor do pedaço foi copiado com sucesso para *ppPropVariant*; caso contrário, um código de erro.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getvaluenoalloc"></a>  CMFCFilterChunkValueImpl::GetValueNoAlloc
+## <a name="cmfcfilterchunkvalueimplgetvaluenoalloc"></a><a name="getvaluenoalloc"></a>CMFCFilterChunkValueImpl::GetValueNoAlloc
 
 Retorna o valor não alocado (valor interno).
 
@@ -272,29 +272,29 @@ Retorna o valor não alocado (valor interno).
 PROPVARIANT GetValueNoAlloc ();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna o valor atual da parte.
+Retorna o valor atual do pedaço.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="isvalid"></a>  CMFCFilterChunkValueImpl::IsValid
+## <a name="cmfcfilterchunkvalueimplisvalid"></a><a name="isvalid"></a>CMFCFilterChunkValueImpl:IsValid
 
-Verifica se o valor dessa propriedade é válido ou não.
+Verifica se esse valor de propriedade é válido ou não.
 
 ```
 BOOL IsValid() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-TRUE se o valor atual da parte for válido; Caso contrário, FALSE.
+TRUE se o valor do pedaço atual for válido; caso contrário, FALSO.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setboolvalue"></a>  CMFCFilterChunkValueImpl::SetBoolValue
+## <a name="cmfcfilterchunkvalueimplsetboolvalue"></a><a name="setboolvalue"></a>CMFCFilterChunkValueImpl::SetBoolValue
 
-Sobrecarregado. Define a propriedade pela chave em um booliano.
+Sobrecarregado. Define a propriedade por chave para um booleano.
 
 ```
 HRESULT SetBoolValue(
@@ -318,36 +318,36 @@ HRESULT SetBoolValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pkey*<br/>
+*Pkey*<br/>
 Especifica uma chave de propriedade.
 
 *bVal*<br/>
-Especifica o valor de parte a ser definido.
+Especifica o valor do pedaço a ser definido.
 
 *chunkType*<br/>
-Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.
+Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*locale*<br/>
-O idioma e um subidioma associado com um bloco de texto. Localidade do bloco é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
+*Localidade*<br/>
+A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>
-O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto de derivada. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.
+O comprimento dos caracteres do texto de origem do qual o pedaço atual foi derivado. Um valor zero significa correspondência caractere por caractere entre o texto-origem e o texto derivado. Um valor não zero significa que não existe tal correspondência direta.
 
 *cwcStartSource*<br/>
-O deslocamento do qual o texto de origem para uma parte derivada é iniciado no bloco de código-fonte.
+O deslocamento a partir do qual o texto de origem para um pedaço derivado começa no pedaço de origem.
 
 *chunkBreakType*<br/>
-O tipo de quebra que separa a parte anterior do bloco atual. São valores da enumeração CHUNK_BREAKTYPE.
+O tipo de quebra que separa o pedaço anterior do pedaço atual. Os valores são da enumeração CHUNK_BREAKTYPE.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um código de erro.
+S_OK se for bem sucedido; caso contrário, um código de erro.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setchunk"></a>  CMFCFilterChunkValueImpl::SetChunk
+## <a name="cmfcfilterchunkvalueimplsetchunk"></a><a name="setchunk"></a>CMFCFilterChunkValueImpl::SetChunk
 
-Uma função auxiliar que define as propriedades comuns do bloco.
+Uma função auxiliar que define as propriedades comuns do pedaço.
 
 ```
 HRESULT SetChunk(
@@ -361,33 +361,33 @@ HRESULT SetChunk(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pkey*<br/>
+*Pkey*<br/>
 Especifica uma chave de propriedade.
 
 *chunkType*<br/>
-Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.
+Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*locale*<br/>
-O idioma e um subidioma associado com um bloco de texto. Localidade do bloco é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
+*Localidade*<br/>
+A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>
-O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto de derivada. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.
+O comprimento dos caracteres do texto de origem do qual o pedaço atual foi derivado. Um valor zero significa correspondência caractere por caractere entre o texto-origem e o texto derivado. Um valor não zero significa que não existe tal correspondência direta.
 
 *cwcStartSource*<br/>
-O deslocamento do qual o texto de origem para uma parte derivada é iniciado no bloco de código-fonte.
+O deslocamento a partir do qual o texto de origem para um pedaço derivado começa no pedaço de origem.
 
 *chunkBreakType*<br/>
-O tipo de quebra que separa a parte anterior do bloco atual. São valores da enumeração CHUNK_BREAKTYPE.
+O tipo de quebra que separa o pedaço anterior do pedaço atual. Os valores são da enumeração CHUNK_BREAKTYPE.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, código de erro.
+S_OK se for bem sucedido; código de erro de outra forma.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setdwordvalue"></a>  CMFCFilterChunkValueImpl::SetDwordValue
+## <a name="cmfcfilterchunkvalueimplsetdwordvalue"></a><a name="setdwordvalue"></a>CMFCFilterChunkValueImpl::SetDwordValue
 
-Defina a propriedade por chave para uma DWORD.
+Defina a propriedade por chave para um DWORD.
 
 ```
 HRESULT SetDwordValue(
@@ -402,36 +402,36 @@ HRESULT SetDwordValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pkey*<br/>
+*Pkey*<br/>
 Especifica uma chave de propriedade.
 
 *dwVal*<br/>
-Especifica o valor de parte a ser definido.
+Especifica o valor do pedaço a ser definido.
 
 *chunkType*<br/>
-Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.
+Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*locale*<br/>
-O idioma e um subidioma associado com um bloco de texto. Localidade do bloco é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
+*Localidade*<br/>
+A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>
-O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto de derivada. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.
+O comprimento dos caracteres do texto de origem do qual o pedaço atual foi derivado. Um valor zero significa correspondência caractere por caractere entre o texto-origem e o texto derivado. Um valor não zero significa que não existe tal correspondência direta.
 
 *cwcStartSource*<br/>
-O deslocamento do qual o texto de origem para uma parte derivada é iniciado no bloco de código-fonte.
+O deslocamento a partir do qual o texto de origem para um pedaço derivado começa no pedaço de origem.
 
 *chunkBreakType*<br/>
-O tipo de quebra que separa a parte anterior do bloco atual. São valores da enumeração CHUNK_BREAKTYPE.
+O tipo de quebra que separa o pedaço anterior do pedaço atual. Os valores são da enumeração CHUNK_BREAKTYPE.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um código de erro.
+S_OK se for bem sucedido; caso contrário, um código de erro.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setfiletimevalue"></a>  CMFCFilterChunkValueImpl::SetFileTimeValue
+## <a name="cmfcfilterchunkvalueimplsetfiletimevalue"></a><a name="setfiletimevalue"></a>CMFCFilterChunkValueImpl::SetFileTimeValue
 
-Defina a propriedade pela chave para um filetime.
+Defina a propriedade por chave para um tempo de arquivo.
 
 ```
 HRESULT SetFileTimeValue(
@@ -446,34 +446,34 @@ HRESULT SetFileTimeValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pkey*<br/>
+*Pkey*<br/>
 Especifica uma chave de propriedade.
 
 *dtVal*<br/>
-Especifica o valor de parte a ser definido.
+Especifica o valor do pedaço a ser definido.
 
 *chunkType*<br/>
-Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.
+Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*locale*<br/>
-O idioma e um subidioma associado com um bloco de texto. Localidade do bloco é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
+*Localidade*<br/>
+A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>
-O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto de derivada. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.
+O comprimento dos caracteres do texto de origem do qual o pedaço atual foi derivado. Um valor zero significa correspondência caractere por caractere entre o texto-origem e o texto derivado. Um valor não zero significa que não existe tal correspondência direta.
 
 *cwcStartSource*<br/>
-O deslocamento do qual o texto de origem para uma parte derivada é iniciado no bloco de código-fonte.
+O deslocamento a partir do qual o texto de origem para um pedaço derivado começa no pedaço de origem.
 
 *chunkBreakType*<br/>
-O tipo de quebra que separa a parte anterior do bloco atual. São valores da enumeração CHUNK_BREAKTYPE.
+O tipo de quebra que separa o pedaço anterior do pedaço atual. Os valores são da enumeração CHUNK_BREAKTYPE.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um código de erro.
+S_OK se for bem sucedido; caso contrário, um código de erro.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setint64value"></a>  CMFCFilterChunkValueImpl::SetInt64Value
+## <a name="cmfcfilterchunkvalueimplsetint64value"></a><a name="setint64value"></a>CMFCFilterChunkValueImpl::SetInt64Value
 
 Defina a propriedade por chave para um int64.
 
@@ -490,36 +490,36 @@ HRESULT SetInt64Value(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pkey*<br/>
+*Pkey*<br/>
 Especifica uma chave de propriedade.
 
 *nVal*<br/>
-Especifica o valor de parte a ser definido.
+Especifica o valor do pedaço a ser definido.
 
 *chunkType*<br/>
-Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.
+Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*locale*<br/>
-O idioma e um subidioma associado com um bloco de texto. Localidade do bloco é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
+*Localidade*<br/>
+A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>
-O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto de derivada. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.
+O comprimento dos caracteres do texto de origem do qual o pedaço atual foi derivado. Um valor zero significa correspondência caractere por caractere entre o texto-origem e o texto derivado. Um valor não zero significa que não existe tal correspondência direta.
 
 *cwcStartSource*<br/>
-O deslocamento do qual o texto de origem para uma parte derivada é iniciado no bloco de código-fonte.
+O deslocamento a partir do qual o texto de origem para um pedaço derivado começa no pedaço de origem.
 
 *chunkBreakType*<br/>
-O tipo de quebra que separa a parte anterior do bloco atual. São valores da enumeração CHUNK_BREAKTYPE.
+O tipo de quebra que separa o pedaço anterior do pedaço atual. Os valores são da enumeração CHUNK_BREAKTYPE.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um código de erro.
+S_OK se for bem sucedido; caso contrário, um código de erro.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setintvalue"></a>  CMFCFilterChunkValueImpl::SetIntValue
+## <a name="cmfcfilterchunkvalueimplsetintvalue"></a><a name="setintvalue"></a>CMFCFilterChunkValueImpl::SetIntValue
 
-Defina a propriedade pela chave em um inteiro.
+Defina a propriedade por chave para um int.
 
 ```
 HRESULT SetIntValue(
@@ -534,36 +534,36 @@ HRESULT SetIntValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pkey*<br/>
+*Pkey*<br/>
 Especifica uma chave de propriedade.
 
 *nVal*<br/>
-Especifica o valor de parte a ser definido.
+Especifica o valor do pedaço a ser definido.
 
 *chunkType*<br/>
-Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.
+Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*locale*<br/>
-O idioma e um subidioma associado com um bloco de texto. Localidade do bloco é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
+*Localidade*<br/>
+A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>
-O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto de derivada. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.
+O comprimento dos caracteres do texto de origem do qual o pedaço atual foi derivado. Um valor zero significa correspondência caractere por caractere entre o texto-origem e o texto derivado. Um valor não zero significa que não existe tal correspondência direta.
 
 *cwcStartSource*<br/>
-O deslocamento do qual o texto de origem para uma parte derivada é iniciado no bloco de código-fonte.
+O deslocamento a partir do qual o texto de origem para um pedaço derivado começa no pedaço de origem.
 
 *chunkBreakType*<br/>
-O tipo de quebra que separa a parte anterior do bloco atual. São valores da enumeração CHUNK_BREAKTYPE.
+O tipo de quebra que separa o pedaço anterior do pedaço atual. Os valores são da enumeração CHUNK_BREAKTYPE.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um código de erro.
+S_OK se for bem sucedido; caso contrário, um código de erro.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setlongvalue"></a>  CMFCFilterChunkValueImpl::SetLongValue
+## <a name="cmfcfilterchunkvalueimplsetlongvalue"></a><a name="setlongvalue"></a>CMFCFilterChunkValueImpl::SetLongValue
 
-Defina a propriedade pela chave para um longo período.
+Defina a propriedade por chave para um LONG.
 
 ```
 HRESULT SetLongValue(
@@ -578,36 +578,36 @@ HRESULT SetLongValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pkey*<br/>
+*Pkey*<br/>
 Especifica uma chave de propriedade.
 
-*lVal*<br/>
-Especifica o valor de parte a ser definido.
+*Val*<br/>
+Especifica o valor do pedaço a ser definido.
 
 *chunkType*<br/>
-Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.
+Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*locale*<br/>
-O idioma e um subidioma associado com um bloco de texto. Localidade do bloco é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
+*Localidade*<br/>
+A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>
-O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto de derivada. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.
+O comprimento dos caracteres do texto de origem do qual o pedaço atual foi derivado. Um valor zero significa correspondência caractere por caractere entre o texto-origem e o texto derivado. Um valor não zero significa que não existe tal correspondência direta.
 
 *cwcStartSource*<br/>
-O deslocamento do qual o texto de origem para uma parte derivada é iniciado no bloco de código-fonte.
+O deslocamento a partir do qual o texto de origem para um pedaço derivado começa no pedaço de origem.
 
 *chunkBreakType*<br/>
-O tipo de quebra que separa a parte anterior do bloco atual. São valores da enumeração CHUNK_BREAKTYPE.
+O tipo de quebra que separa o pedaço anterior do pedaço atual. Os valores são da enumeração CHUNK_BREAKTYPE.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um código de erro.
+S_OK se for bem sucedido; caso contrário, um código de erro.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setsystemtimevalue"></a>  CMFCFilterChunkValueImpl::SetSystemTimeValue
+## <a name="cmfcfilterchunkvalueimplsetsystemtimevalue"></a><a name="setsystemtimevalue"></a>CMFCFilterChunkValueImpl::SetSystemTimeValue
 
-Define a propriedade pela chave para um SystemTime.
+Define a propriedade por chave para um SystemTime.
 
 ```
 HRESULT SetSystemTimeValue(
@@ -622,36 +622,36 @@ HRESULT SetSystemTimeValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pkey*<br/>
+*Pkey*<br/>
 Especifica uma chave de propriedade.
 
-*systemTime*<br/>
-Especifica o valor de parte a ser definido.
+*Systemtime*<br/>
+Especifica o valor do pedaço a ser definido.
 
 *chunkType*<br/>
-Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.
+Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*locale*<br/>
-O idioma e um subidioma associado com um bloco de texto. Localidade do bloco é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
+*Localidade*<br/>
+A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>
-O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto de derivada. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.
+O comprimento dos caracteres do texto de origem do qual o pedaço atual foi derivado. Um valor zero significa correspondência caractere por caractere entre o texto-origem e o texto derivado. Um valor não zero significa que não existe tal correspondência direta.
 
 *cwcStartSource*<br/>
-O deslocamento do qual o texto de origem para uma parte derivada é iniciado no bloco de código-fonte.
+O deslocamento a partir do qual o texto de origem para um pedaço derivado começa no pedaço de origem.
 
 *chunkBreakType*<br/>
-O tipo de quebra que separa a parte anterior do bloco atual. São valores da enumeração CHUNK_BREAKTYPE.
+O tipo de quebra que separa o pedaço anterior do pedaço atual. Os valores são da enumeração CHUNK_BREAKTYPE.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um código de erro.
+S_OK se for bem sucedido; caso contrário, um código de erro.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="settextvalue"></a>  CMFCFilterChunkValueImpl::SetTextValue
+## <a name="cmfcfilterchunkvalueimplsettextvalue"></a><a name="settextvalue"></a>CMFCFilterChunkValueImpl::SetTextValue
 
-Define a propriedade pela chave para uma cadeia de caracteres Unicode.
+Define a propriedade por chave para uma seqüência unicode.
 
 ```
 HRESULT SetTextValue(
@@ -666,33 +666,33 @@ HRESULT SetTextValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pkey*<br/>
+*Pkey*<br/>
 Especifica uma chave de propriedade.
 
-*pszValue*<br/>
-Especifica o valor de parte a ser definido.
+*Pszvalue*<br/>
+Especifica o valor do pedaço a ser definido.
 
 *chunkType*<br/>
-Sinalizadores de indicam se essa parte contém um tipo de texto ou uma propriedade de tipo de valor. Os valores de sinalizador são tirados da enumeração CHUNKSTATE.
+Os sinalizadores indicam se esse pedaço contém um tipo de texto ou uma propriedade do tipo valor. Os valores da bandeira são retirados da enumeração CHUNKSTATE.
 
-*locale*<br/>
-O idioma e um subidioma associado com um bloco de texto. Localidade do bloco é usada por indexadores de documento para executar adequada quebra de texto. Se a parte não é tipo de texto nem um tipo de valor com tipo de dados VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
+*Localidade*<br/>
+A linguagem e a sublinguagem associadas a um pedaço de texto. O local de bloco é usado por indexadores de documentos para executar a quebra de texto adequada. Se o pedaço não for do tipo de texto nem de um tipo de valor com VT_LPWSTR, VT_LPSTR ou VT_BSTR, este campo será ignorado.
 
 *cwcLenSource*<br/>
-O comprimento em caracteres do texto de origem do qual o bloco atual foi derivado. Um valor zero significa correspondência do caractere por caractere entre o texto de origem e o texto de derivada. Um valor diferente de zero significa que nenhuma correspondência tal direta existe.
+O comprimento dos caracteres do texto de origem do qual o pedaço atual foi derivado. Um valor zero significa correspondência caractere por caractere entre o texto-origem e o texto derivado. Um valor não zero significa que não existe tal correspondência direta.
 
 *cwcStartSource*<br/>
-O deslocamento do qual o texto de origem para uma parte derivada é iniciado no bloco de código-fonte.
+O deslocamento a partir do qual o texto de origem para um pedaço derivado começa no pedaço de origem.
 
 *chunkBreakType*<br/>
-O tipo de quebra que separa a parte anterior do bloco atual. São valores da enumeração CHUNK_BREAKTYPE.
+O tipo de quebra que separa o pedaço anterior do pedaço atual. Os valores são da enumeração CHUNK_BREAKTYPE.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um código de erro.
+S_OK se for bem sucedido; caso contrário, um código de erro.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classes](../../mfc/reference/mfc-classes.md)

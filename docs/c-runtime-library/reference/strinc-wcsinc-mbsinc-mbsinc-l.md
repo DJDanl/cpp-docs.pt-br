@@ -1,11 +1,13 @@
 ---
 title: _strinc, _wcsinc, _mbsinc, _mbsinc_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsinc
 - _wcsinc
 - _mbsinc_l
 - _strinc
+- _o__mbsinc
+- _o__mbsinc_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -43,19 +46,19 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-ms.openlocfilehash: a468438d747a9497e974b10f9974bb79ffef1add
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0cfbe857ec8bbcdec887d4594cee0bf2b66de380
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958242"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362903"
 ---
 # <a name="_strinc-_wcsinc-_mbsinc-_mbsinc_l"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 
 Avança um ponteiro de cadeia de caracteres em um caractere.
 
 > [!IMPORTANT]
-> **_mbsinc** e **_mbsinc_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsinc** e **_mbsinc_l** não podem ser usados em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -79,26 +82,28 @@ unsigned char *_mbsinc_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*current*<br/>
+*Atual*<br/>
 Ponteiro de caractere.
 
-*locale*<br/>
+*Localidade*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas rotinas retorna um ponteiro para o caractere que imediatamente segue o *atual*.
+Cada uma dessas rotinas retorna um ponteiro para o personagem que imediatamente segue *a corrente*.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_mbsinc** retorna um ponteiro para o primeiro byte do caractere multibyte que segue imediatamente o *atual*. **_mbsinc** reconhece sequências de caracteres multibyte de acordo com a [página de código multibyte](../../c-runtime-library/code-pages.md) em uso no momento; **_mbsinc_l** é idêntico, exceto que ele usa o parâmetro Locale que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+A função **_mbsinc** retorna um ponteiro para o primeiro byte do caractere multibyte que segue imediatamente *a corrente*. **_mbsinc** reconhece sequências de caracteres multibytes de acordo com a página de [código multibyte](../../c-runtime-library/code-pages.md) que está atualmente em uso; **_mbsinc_l** é idêntica, exceto que em vez disso usa o parâmetro local que é passado dentro Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-A função de texto genérico **_tcsinc**, definida em TCHAR. h, é mapeada para **_mbsinc** se **_MBCS** tiver sido definido, ou para **_wcsinc** se **_UNICODE** tiver sido definido. Caso contrário, **_tcsinc** será mapeado para **_strinc**. **_strinc** e **_wcsinc** são um caractere de byte único e versões de caractere largo do **_mbsinc**. **_strinc** e **_wcsinc** são fornecidos apenas para esse mapeamento e não devem ser usados de outra forma. Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).
+A função de texto genérico **_tcsinc**, definida em Tchar.h, mapeia para **_mbsinc** se **_MBCS** foi definida, ou para **_wcsinc** se **_UNICODE** foi definida. Caso contrário, **_tcsinc** mapas para **_strinc**. **_strinc** e **_wcsinc** são versões de caráter único e de caráter amplo de **_mbsinc**. **_strinc** e **_wcsinc** são fornecidos apenas para este mapeamento e não devem ser usados de outra forma. Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).
 
-Se *Current* for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função retornará **EINVAL** e definirá **errno** como **EINVAL**.
+Se *a corrente* for **NULA,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, esta função retorna **EINVAL** e define **errno** para **EINVAL**.
 
 > [!IMPORTANT]
 > Essas funções podem ser vulneráveis a ameaças de estouro de buffer. Os estouros de buffer podem ser usados em ataques de sistema porque podem causar uma elevação de privilégio não garantida. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -111,9 +116,9 @@ Se *Current* for **NULL**, o manipulador de parâmetro inválido será invocado,
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cordas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strdec, _wcsdec, _mbsdec, _mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
 [_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l](strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)<br/>
 [_strninc, _wcsninc, _mbsninc, _mbsninc_l](strninc-wcsninc-mbsninc-mbsninc-l.md)<br/>

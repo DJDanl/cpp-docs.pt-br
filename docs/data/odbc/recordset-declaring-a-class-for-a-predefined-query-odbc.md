@@ -8,12 +8,12 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: 9d19328fb82503519fd8eca083e0dd11e10883ea
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f9618f25d738c092ab1818ef7c4ea52928e2ea60
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212947"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367036"
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Conjunto de registros: declarando uma classe para uma consulta predefinida (ODBC)
 
@@ -25,14 +25,14 @@ Este tópico aplica-se às classes ODBC do MFC.
 Este tópico explica como criar uma classe de conjunto de registros para uma consulta predefinida (às vezes chamada de um procedimento armazenado, como no Microsoft SQL Server).
 
 > [!NOTE]
->  Este tópico aplica-se a objetos derivados de `CRecordset` nos quais o fetch de linha em massa não foi implementado. Se o fetch de linha em massa for implementado, o processo será muito semelhante. Para entender as diferenças entre os conjuntos de registros que implementam a busca de linha em massa e os que não têm, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Este tópico aplica-se a objetos derivados de `CRecordset` nos quais o fetch de linha em massa não foi implementado. Se o fetch de linha em massa for implementado, o processo será muito semelhante. Para entender as diferenças entre os conjuntos de registros que implementam a busca de linhas a granel e aqueles que não, consulte [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Alguns DBMs (sistemas de gerenciador de banco de dados) permitem que você crie uma consulta predefinida e chame-a dos seus programas como uma função. A consulta tem um nome, pode usar parâmetro e retornar registros. O procedimento neste tópico descreve como chamar uma consulta predefinida que retorna resultados (e talvez usa parâmetros).
 
 As classes do banco de dados não dão suporte à atualização de consultas predefinidas. A diferença entre uma consulta predefinida de instantâneo e uma consulta predefinida dynaset não é a capacidade de atualização, mas se as alterações feitas por outros usuários (ou outros conjuntos de registros em seu programa) estão visíveis em seu conjunto de registros.
 
 > [!TIP]
->  Não é necessário um conjunto de registros para chamar uma consulta predefinida que não retorna registros. Prepare a instrução SQL conforme descrito abaixo, mas execute-a chamado a função de membro `CDatabase`[ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).
+> Não é necessário um conjunto de registros para chamar uma consulta predefinida que não retorna registros. Prepare a instrução SQL conforme descrito abaixo, mas execute-a chamado a função de membro `CDatabase`[ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).
 
 É possível criar uma única classe de conjunto de registros para gerenciar a chamada de uma consulta predefinida, mas é necessário realizar um pouco do trabalho sozinho. Os assistentes não dão suporte à criação de uma classe especificamente para essa finalidade.
 
@@ -66,7 +66,7 @@ As classes do banco de dados não dão suporte à atualização de consultas pre
 
 1. Se a consulta usar parâmetros, adicione um membro de dados de parâmetro, uma chamada de função RFX e uma inicialização para cada parâmetro.
 
-1. É necessário incrementar `m_nParams` para cada parâmetro adicionado, como você fez `m_nFields` para os campos adicionados na etapa 4 deste procedimento. Para obter mais informações, consulte [conjunto de registros: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. É necessário incrementar `m_nParams` para cada parâmetro adicionado, como você fez `m_nFields` para os campos adicionados na etapa 4 deste procedimento. Para obter mais informações, consulte [Recordset: Parametizando um Conjunto de Registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 1. Escreva manualmente uma cadeia de caracteres da instrução SQL com o seguinte formulário:
 
@@ -151,7 +151,7 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
 Esse código constrói um instantâneo, passa-o para um parâmetro obtido anteriormente do usuário e chama a consulta predefinida. Quando a consulta é executada, ela retorna registros para o distrito de vendas especificado. Cada registro contém colunas para o número da conta e para o sobrenome e o número de telefone do cliente.
 
 > [!TIP]
->  Convém manipular um valor retornado (parâmetro de saída) de um procedimento armazenado. Para saber mais e obter um exemplo, confira [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
+> Convém manipular um valor retornado (parâmetro de saída) de um procedimento armazenado. Para saber mais e obter um exemplo, confira [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
 ## <a name="see-also"></a>Confira também
 

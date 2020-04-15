@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCDisableMenuAnimation
+title: CMFCDisableMenuAnimation Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCDisableMenuAnimation
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-ms.openlocfilehash: bf8c598e9e105569e0a5676267e205b3d3939712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 990f41d2dfa6491d246797322ee275c9648d52a9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345598"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367578"
 ---
-# <a name="cmfcdisablemenuanimation-class"></a>Classe CMFCDisableMenuAnimation
+# <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation Class
 
 Desabilita a animação do menu pop-up.
 
@@ -40,26 +40,26 @@ class CMFCDisableMenuAnimation
 |||
 |-|-|
 |Nome|Descrição|
-|[CMFCDisableMenuAnimation::Restore](#restore)|Restaura a animação anterior que a estrutura usada para exibir um menu pop-up.|
+|[CMFCDisableMenuAnimation::Restauração](#restore)|Restaura a animação anterior que a estrutura usou para exibir um menu pop-up.|
 
-### <a name="data-members"></a>Membros de Dados
+### <a name="data-members"></a>Membros de dados
 
 |||
 |-|-|
 |Nome|Descrição|
-|`CMFCDisableMenuAnimation::m_animType`|Armazena o tipo de animação anterior do menu pop-up.|
+|`CMFCDisableMenuAnimation::m_animType`|Armazena o tipo de animação do menu pop-up anterior.|
 
 ### <a name="remarks"></a>Comentários
 
-Use esta classe auxiliar para desabilitar temporariamente a animação do menu pop-up (por exemplo, quando você processar comandos de mouse ou teclado).
+Use esta classe de ajudantes para desativar temporariamente a animação do menu pop-up (por exemplo, quando você processa comandos de mouse ou teclado).
 
-Um `CMFCDisableMenuAnimation` desabilita o objeto de animação do menu pop-up durante seu ciclo de vida. O construtor armazena o tipo de animação do menu pop-up atual na `m_animType` campo e define o tipo de animação atual a `CMFCPopupMenu::NO_ANIMATION`. O destruidor restaura o tipo de animação anterior.
+Um `CMFCDisableMenuAnimation` objeto desativa a animação do menu pop-up durante sua vida útil. O construtor armazena o tipo de animação `m_animType` atual do menu pop-up no campo e define o tipo de animação atual para `CMFCPopupMenu::NO_ANIMATION`. O destruidor restaura o tipo de animação anterior.
 
-Você pode criar um `CMFCDisableMenuAnimation` objeto na pilha para desabilitar a animação do menu pop-up ao longo de uma única função. Se você quiser desabilitar a animação do menu pop-up entre as funções, crie um `CMFCDisableMenuAnimation` no heap de objeto e, em seguida, excluí-lo quando você deseja restaurar a animação do menu pop-up.
+Você pode `CMFCDisableMenuAnimation` criar um objeto na pilha para desativar a animação do menu pop-up em uma única função. Se você quiser desativar a animação do menu `CMFCDisableMenuAnimation` pop-up entre as funções, crie um objeto no heap e, em seguida, exclua-o quando quiser restaurar a animação do menu pop-up.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como usar a pilha para desabilitar temporariamente a animação de menus.
+O exemplo a seguir mostra como usar a pilha para desativar temporariamente a animação do menu.
 
 [!code-cpp[NVC_MFC_Misc#1](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]
 
@@ -71,9 +71,9 @@ O exemplo a seguir mostra como usar a pilha para desabilitar temporariamente a a
 
 **Cabeçalho:** afxpopupmenu.h
 
-##  <a name="restore"></a>  CMFCDisableMenuAnimation::Restore
+## <a name="cmfcdisablemenuanimationrestore"></a><a name="restore"></a>CMFCDisableMenuAnimation::Restauração
 
-Restaura a animação anterior que a estrutura usada para exibir um menu pop-up.
+Restaura a animação anterior que a estrutura usou para exibir um menu pop-up.
 
 ```
 void Restore ();
@@ -81,9 +81,9 @@ void Restore ();
 
 ### <a name="remarks"></a>Comentários
 
-Esse método é chamado pelo `CMFCDisableMenuAnimation` destruidor para restaurar a animação anterior que a estrutura usada para exibir um menu pop-up.
+Este método é `CMFCDisableMenuAnimation` chamado pelo destruidor para restaurar a animação anterior que a estrutura usada para exibir um menu pop-up.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

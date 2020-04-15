@@ -1,9 +1,11 @@
 ---
 title: wctomb, _wctomb_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wctomb_l
 - wctomb
+- _o__wctomb_l
+- _o_wctomb
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-ms.openlocfilehash: 195105618c75bd2a3a493f169fca4c2d3d4ebd62
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 162585ea866b4fb26cfaae3bc94345dadaba0baa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944996"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367408"
 ---
 # <a name="wctomb-_wctomb_l"></a>wctomb, _wctomb_l
 
@@ -59,21 +62,23 @@ int _wctomb_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*mbchar*<br/>
+*Mbchar*<br/>
 O endereço de um caractere multibyte.
 
-*wchar*<br/>
+*Wchar*<br/>
 Um caractere largo.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Se **wctomb** converter o caractere largo em um caractere multibyte, ele retornará o número de bytes (que nunca é maior que **MB_CUR_MAX**) no caractere largo. Se *WCHAR* for o caractere nulo de caractere largo (L ' \ 0 '), **wctomb** retornará 1. Se o ponteiro de destino *mbchar* for **nulo**, **wctomb** retornará 0. Se a conversão não for possível na localidade atual, **wctomb** retornará-1 e **errno** será definido como **EILSEQ**.
+Se **wctomb** converte o personagem largo em um caractere multibyte, ele retorna o número de bytes (que nunca é maior do que **MB_CUR_MAX**) no personagem amplo. Se *wchar* é o caractere nulo de caráter amplo (L'\0'), **wctomb** retorna 1. Se o ponteiro alvo *mbchar* for **NULL**, **wctomb** retorna 0. Se a conversão não for possível no local atual, o **wctomb** retorna -1 e **errno** é definido **como EILSEQ**.
 
 ## <a name="remarks"></a>Comentários
 
-A função **wctomb** converte seu argumento *WCHAR* para o caractere multibyte correspondente e armazena o resultado em *mbchar*. Você pode chamar a função de qualquer ponto, em qualquer programa. **wctomb** usa a localidade atual para qualquer comportamento dependente de localidade; **_wctomb_l** é idêntico ao **wctomb** , exceto pelo fato de que ele usa a localidade transmitida em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+A função **wctomb** converte seu argumento *wchar* para o caractere multibyte correspondente e armazena o resultado em *mbchar*. Você pode chamar a função de qualquer ponto, em qualquer programa. **wctomb** usa o local atual para qualquer comportamento dependente de localidades; **_wctomb_l** é idêntica ao **wctomb,** exceto que usa o local passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-**wctomb** valida seus parâmetros. Se *mbchar* for **NULL**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** será definido como **EINVAL** e a função retornará-1.
+**wctomb** valida seus parâmetros. Se *mbchar* for **NULL,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução continuar, **errno** será definido **como EINVAL** e a função retorna -1.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -81,7 +86,7 @@ A função **wctomb** converte seu argumento *WCHAR* para o caractere multibyte 
 |-------------|---------------------|
 |**wctomb**|\<stdlib.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -113,7 +118,7 @@ Convert a wide character:
    Multibyte character: a
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [Localidade](../../c-runtime-library/locale.md)<br/>

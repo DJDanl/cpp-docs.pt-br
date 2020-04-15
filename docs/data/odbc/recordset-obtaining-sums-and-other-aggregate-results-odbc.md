@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 1a8abc8b73ee878ac2feefa210268e87c608e938
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9ebbe78191d0c4140baf3557637ba2103886577d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212830"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368648"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Conjunto de registros: obtendo SUMs e outros resultados agregados (ODBC)
 
@@ -36,10 +36,10 @@ Este tópico explica como obter resultados agregados usando as seguintes palavra
 
 - **COUNT** conta o número de registros em uma coluna de qualquer tipo de dados.
 
-Use essas funções SQL para obter informações estatísticas sobre os registros em uma fonte de dados, em vez de extrair registros da fonte de dados. O conjunto de registros criado normalmente é composto de um único registro (se todas as colunas forem agregações) que contém um valor. (Pode haver mais de um registro se você usou uma cláusula **Group by** .) Esse valor é o resultado do cálculo ou extração executada pela função SQL.
+Use essas funções SQL para obter informações estatísticas sobre os registros em uma fonte de dados, em vez de extrair registros da fonte de dados. O conjunto de registros criado normalmente é composto de um único registro (se todas as colunas forem agregações) que contém um valor. (Pode haver mais de um registro se você usou uma cláusula **GROUP BY.)** Este valor é o resultado do cálculo ou extração realizado pela função SQL.
 
 > [!TIP]
->  Para adicionar uma cláusula **GROUP BY** SQL (e, possivelmente, uma cláusula **HAVING**) à instrução SQL, acrescente-a ao final de `m_strFilter`. Por exemplo:
+> Para adicionar uma cláusula **GROUP BY** SQL (e, possivelmente, uma cláusula **HAVING**) à instrução SQL, acrescente-a ao final de `m_strFilter`. Por exemplo:
 
 ```
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
@@ -48,7 +48,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 É possível limitar o número de registros usados para obter resultados agregados por meio da filtragem e da classificação das colunas.
 
 > [!CAUTION]
->  Alguns operadores de agregação retornam um tipo de dados diferente das colunas nas quais eles estão agregando.
+> Alguns operadores de agregação retornam um tipo de dados diferente das colunas nas quais eles estão agregando.
 
 - **SUM** e **AVG** podem retornar o próximo tipo de dados maior (por exemplo, chamar com `int` retorna **LONG** ou **duplo**).
 
@@ -56,7 +56,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 
 - **MAX** e **MIN** retornam o mesmo tipo de dados que as colunas que calculam.
 
-     Por exemplo, o assistente para **Adicionar classe** cria `long` `m_lSales` para acomodar uma coluna vendas, mas você precisa substituir isso por um membro de dados `double m_dblSumSales` para acomodar o resultado agregado. Veja os exemplos a seguir.
+     Por exemplo, o assistente **Adicionar Classe** cria `long` `m_lSales` para acomodar uma coluna Vendas, mas é necessário substituir isso por um membro de dados um `double m_dblSumSales` para acomodar o resultado da agregação. Veja os exemplos a seguir.
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Para obter um resultado de agregação para um conjunto de registros
 
@@ -77,7 +77,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 1. Abrir o conjunto de registros. O resultado da operação de agregação é deixado no `m_dblSumSales`.
 
 > [!NOTE]
->  Na verdade, o assistente atribui os nomes de membro de dados sem prefixos húngaros. Por exemplo, o assistente produziria `m_Sales` para uma coluna Vendas, em vez do nome `m_lSales` usado anteriormente para fins ilustrativos.
+> Na verdade, o assistente atribui os nomes de membro de dados sem prefixos húngaros. Por exemplo, o assistente produziria `m_Sales` para uma coluna Vendas, em vez do nome `m_lSales` usado anteriormente para fins ilustrativos.
 
 Se você estiver usando uma classe [CRecordView](../../mfc/reference/crecordview-class.md) para exibir os dados, será necessário alterar a chamada de função DDX para exibir o novo valor de membro de dados; nesse caso, alterando-o de:
 

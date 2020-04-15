@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiplicative operators [C++]
 - division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
-ms.openlocfilehash: bc6359d3d7d2045d44af07f80b3e101da356d4b1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 791f18793b49f7d3a986c3271fddef3acef33062
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179348"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367918"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operadores multiplicativos e o operador de módulo
 
@@ -36,21 +36,21 @@ expression % expression
 
 Os operadores de multiplicação são:
 
-- Multiplicação (<strong>\*</strong>)
+- Multiplicação<strong>\*</strong>( )
 
-- Divisão ( **/** )
+- Divisão**/**( )
 
-- Módulo (restante da divisão) ( **%** )
+- Módulo (remanescente da divisão) (**%**)
 
 Esses operadores binários possuem associatividade da esquerda para a direita.
 
-Os operadores de multiplicação usam operandos de tipos aritméticos. O operador de módulo ( **%** ) tem um requisito mais estrito no que seus operandos devem ser do tipo integral. (Para obter o restante de uma divisão de ponto flutuante, use a função de tempo de execução, [fmod](../c-runtime-library/reference/fmod-fmodf.md).) As conversões abordadas nas [conversões padrão](standard-conversions.md) são aplicadas aos operandos e o resultado é do tipo convertido.
+Os operadores de multiplicação usam operandos de tipos aritméticos. O operador de**%** módulo ( ) tem uma exigência mais rigorosa na de que seus operands devem ser de tipo integral. (Para obter o restante de uma divisão de pontos flutuantes, use a função de tempo de execução, [fmod](../c-runtime-library/reference/fmod-fmodf.md).) As conversões cobertas nas [Conversões Padrão](standard-conversions.md) são aplicadas aos operands, e o resultado é do tipo convertido.
 
 O operador de multiplicação gera o resultado da multiplicação do primeiro operando pelo segundo.
 
 O operador de divisão gera o resultado da divisão do primeiro operando pelo segundo.
 
-O operador de módulo produz o restante fornecido pela expressão a seguir, em *que E1* é o primeiro operando *e E2* é o segundo: *E1* -(*E1* / *E2*) \* *E2*, em que ambos os operandos são de tipos integrais.
+O operador de módulo produz o restante dado pela seguinte expressão, onde *e1* é o primeiro operand e *e2* é o segundo: *e1* - (*e1* / *e2*) \* *e2*, onde ambos os operands são de tipos integrais.
 
 A divisão por 0 em uma divisão ou em uma expressão de módulo é indefinida e gera um erro de tempo de execução. Desse modo, as expressões a seguir geram resultados indefinidos e errôneos:
 
@@ -62,21 +62,21 @@ f / 0.0
 Se ambos os operandos em uma expressão de multiplicação, divisão ou módulo tiverem o mesmo sinal, o resultado será positivo. Caso contrário, o resultado será negativo. O resultado do sinal de uma operação de módulo é definido pela implementação.
 
 > [!NOTE]
->  Uma vez que as conversões executadas pelos operadores de multiplicação não fornecem condições de estouro ou estouro negativo, as informações poderão ser perdidas se o resultado de uma operação de multiplicação não puder ser representado no tipo dos operandos após a conversão.
+> Uma vez que as conversões executadas pelos operadores de multiplicação não fornecem condições de estouro ou estouro negativo, as informações poderão ser perdidas se o resultado de uma operação de multiplicação não puder ser representado no tipo dos operandos após a conversão.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 No Microsoft C++, o resultado de uma expressão de módulo sempre é igual ao sinal do primeiro operando.
 
-**Fim da seção específica da Microsoft**
+**Fim específico da Microsoft**
 
-Se a divisão calculada de dois inteiros for inexata e apenas um operando for negativo, o resultado será o interior maior (em magnitude, independentemente do sinal), que é menor que o valor exato que seria gerado pela operação de divisão. Por exemplo, o valor calculado de-11/3 é-3,666666666. O resultado dessa divisão integral é-3.
+Se a divisão calculada de dois inteiros for inexata e apenas um operando for negativo, o resultado será o interior maior (em magnitude, independentemente do sinal), que é menor que o valor exato que seria gerado pela operação de divisão. Por exemplo, o valor calculado de -11 / 3 é -3.6666666666. O resultado dessa divisão integral é -3.
 
-A relação entre os operadores multiplicativa é fornecida pela identidade (*e1* / *E2*) \* *e2* + *E1* % *E2* == *E1*.
+A relação entre os operadores multiplicativos é dada \* pela identidade (*e1* / *e2*) *e2* + *e1* % *e2* == *e1*.
 
 ## <a name="example"></a>Exemplo
 
-O programa a seguir demonstra os operadores de multiplicação. Observe que qualquer operando de `10 / 3` deve ser convertido explicitamente no tipo **float** para evitar o truncamento para que ambos os operandos sejam do tipo **float** antes da divisão.
+O programa a seguir demonstra os operadores de multiplicação. Observe que ambos os `10 / 3` operand s em apers devem ser explicitamente lançados para digitar **flutuação** para evitar truncação de modo que ambos os operands são do tipo **flutuar** antes da divisão.
 
 ```cpp
 // expre_Multiplicative_Operators.cpp
@@ -95,5 +95,5 @@ int main() {
 ## <a name="see-also"></a>Confira também
 
 [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)<br/>
-[Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operadores internos C++, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operadores multiplicativos C](../c-language/c-multiplicative-operators.md)
