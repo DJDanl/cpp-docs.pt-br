@@ -29,18 +29,18 @@ helpviewer_keywords:
 - Microsoft::WRL::RuntimeClass::RuntimeClass, constructor
 - Microsoft::WRL::RuntimeClass::~RuntimeClass, destructor
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-ms.openlocfilehash: d45fe7c6d794f216da93ffbd95dbb7058d3336f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64b4124ba3c60fdcb53fc29c7b791c0f73a49579
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403185"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376229"
 ---
 # <a name="runtimeclass-class"></a>Classe RuntimeClass
 
-Representa uma classe COM ou WinRT que herda as interfaces especificadas e fornece o tempo de execução do Windows especificado, COM clássico e suporte fraco de referência.
+Representa uma classe WinRT ou COM que herda as interfaces especificadas e fornece o suporte de referência especificado do Windows Runtime, o COM clássico e o suporte de referência fraco.
 
-Essa classe fornece a implementação de texto clichê de classes do WinRT e COM, fornecendo a implementação de `QueryInterface`, `AddRef`, `Release` etc., gerencia a contagem de referência do módulo e tem suporte para fornecer a fábrica de classes para objetos ativáveis.
+Esta classe fornece a implementação de caldeiras das `QueryInterface`classes `AddRef` `Release` WinRT e COM, fornecendo a implementação de , etc., gerencia a contagem de referência do módulo e tem suporte para fornecer a fábrica de classe para objetos activáveis.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -52,36 +52,36 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 ### <a name="parameters"></a>Parâmetros
 
 *classFlags*<br/>
-Parâmetro opcional. Uma combinação de um ou mais [RuntimeClassType](runtimeclasstype-enumeration.md) valores de enumeração. O `__WRL_CONFIGURATION_LEGACY__` macro pode ser definida para alterar o valor padrão de classFlags para todas as classes de tempo de execução do projeto. Se definido, RuntimeClass instâncias são não agile por padrão. Quando não definido, as instâncias de RuntimeClass são agile por padrão. Para evitar ambiguidade, sempre especifique o `Microsoft::WRL::FtmBase` na `TInterfaces` ou `RuntimeClassType::InhibitFtmBase`. Observe que, se InhibitFtmBase e FtmBase são que ambos utilizou o objeto será agile.
+Parâmetro opcional. Uma combinação de um ou mais valores de enumeração [RuntimeClassType.](runtimeclasstype-enumeration.md) A `__WRL_CONFIGURATION_LEGACY__` macro pode ser definida para alterar o valor padrão do classFlags para todas as classes de tempo de execução no projeto. Se definidas, as instâncias do RuntimeClass não são ágeis por padrão. Quando não definidas, as instâncias do RuntimeClass são ágeis por padrão. Para evitar a ambiguidade, especifique sempre a `Microsoft::WRL::FtmBase` in `TInterfaces` ou `RuntimeClassType::InhibitFtmBase`. Observe que, se o InhibitFtmBase e o FtmBase forem usados, o objeto será ágil.
 
-*TInterfaces*<br/>
-A lista de interfaces que o objeto implementa além `IUnknown`, `IInspectable` ou outras interfaces controlados pelo [RuntimeClassType](runtimeclasstype-enumeration.md). Ele também pode listar outras classes a serem derivadas, notavelmente `Microsoft::WRL::FtmBase` para tornar o objeto agile e fazer com que ela implemente `IMarshal`.
+*Interfaces T*<br/>
+A lista de interfaces que `IUnknown` `IInspectable` o objeto implementa além ou outras interfaces controladas pelo [RuntimeClassType](runtimeclasstype-enumeration.md). Também pode listar outras classes a serem `Microsoft::WRL::FtmBase` derivadas, notadamente para `IMarshal`tornar o objeto ágil e fazê-lo implementar .
 
 ## <a name="members"></a>Membros
 
 `RuntimeClassInitialize`<br/>
-Uma função que inicializa o objeto se a `MakeAndInitialize` função de modelo é usada para construir o objeto. Ele retorna S_OK se o objeto foi inicializado com êxito, ou um código de erro COM se a falha na inicialização. O código de erro COM é propagado como o valor de retorno `MakeAndInitialize`. Observe que o `RuntimeClassInitialize` método não será chamado se o `Make` função de modelo é usada para construir o objeto.
+Uma função que inicializa o `MakeAndInitialize` objeto se a função de modelo for usada para construir o objeto. Ele retorna S_OK se o objeto foi inicializado com sucesso ou um código de erro COM se a inicialização falhar. O código de erro COM é `MakeAndInitialize`propagado como o valor de retorno de . Observe que `RuntimeClassInitialize` o método não `Make` é chamado se a função de modelo for usada para construir o objeto.
 
 ### <a name="public-constructors"></a>Construtores públicos
 
 | Nome                                               | Descrição                                                     |
 | -------------------------------------------------- | --------------------------------------------------------------- |
-| [RuntimeClass::RuntimeClass](#runtimeclass)        | Inicializa a instância atual do `RuntimeClass` classe.   |
-| [RuntimeClass::~RuntimeClass](#tilde-runtimeclass) | A instância atual do realiza o desligamento de `RuntimeClass` classe. |
+| [Classe de execução::RuntimeClass](#runtimeclass)        | Inicializa a instância atual `RuntimeClass` da classe.   |
+| [RuntimeClass::~RuntimeClass](#tilde-runtimeclass) | Desinicializa a instância `RuntimeClass` atual da classe. |
 
 ### <a name="public-methods"></a>Métodos públicos
 
 | Nome                                                      | Descrição                                                                                        |
 | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| [RuntimeClass::AddRef](#addref)                           | Incrementa a contagem de referência atual `RuntimeClass` objeto.                              |
-| [RuntimeClass::DecrementReference](#decrementreference)   | Diminui a contagem de referência atual `RuntimeClass` objeto.                              |
-| [RuntimeClass::GetIids](#getiids)                         | Obtém uma matriz que contém a interface implementadas pelo atual de IDs `RuntimeClass` objeto. |
-| [RuntimeClass::GetRuntimeClassName](#getruntimeclassname) | Obtém o nome de classe de tempo de execução do atual `RuntimeClass` objeto.                                  |
-| [RuntimeClass::GetTrustLevel](#gettrustlevel)             | Obtém o nível de confiança atual `RuntimeClass` objeto.                                         |
-| [RuntimeClass::GetWeakReference](#getweakreference)       | Obtém um ponteiro para o objeto de referência fraca para a atual `RuntimeClass` objeto.                 |
-| [RuntimeClass::InternalAddRef](#internaladdref)           | Incrementa a contagem de referência para a atual `RuntimeClass` objeto.                               |
-| [RuntimeClass::QueryInterface](#queryinterface)           | Recupera um ponteiro para a ID de interface especificado.                                                 |
-| [RuntimeClass::Release](#release)                         | Executa uma operação de lançamento COM atuais `RuntimeClass` objeto.                             |
+| [Classe de execução::AddRef](#addref)                           | Incrementa a contagem `RuntimeClass` de referência para o objeto atual.                              |
+| [RuntimeClass::DecrementReference](#decrementreference)   | Decreta a contagem de `RuntimeClass` referência para o objeto atual.                              |
+| [RuntimeClass::GetIids](#getiids)                         | Obtém uma matriz que pode conter os `RuntimeClass` IDs de interface implementados pelo objeto atual. |
+| [Classe de execução::GetRuntimeClassName](#getruntimeclassname) | Obtém o nome da `RuntimeClass` classe de tempo de execução do objeto atual.                                  |
+| [Classe de execução::GetTrustLevel](#gettrustlevel)             | Obtém o nível `RuntimeClass` de confiança do objeto atual.                                         |
+| [Classe de execução::GetWeakReference](#getweakreference)       | Obtém um ponteiro para o `RuntimeClass` objeto de referência fraco para o objeto atual.                 |
+| [Classe de execução::InternalAddRef](#internaladdref)           | Incrementa a contagem `RuntimeClass` de referência ao objeto atual.                               |
+| [Classe de execução::QueryInterface](#queryinterface)           | Recupera um ponteiro para o ID de interface especificado.                                                 |
+| [RuntimeClass::Lançamento](#release)                         | Executa uma operação de `RuntimeClass` liberação COM no objeto atual.                             |
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -89,21 +89,21 @@ Isso é um detalhe de implementação.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** Implements. h
+**Cabeçalho:** implements.h
 
-**Namespace:** Microsoft::WRL
+**Espaço de nome:** Microsoft::WRL
 
-## <a name="tilde-runtimeclass"></a>RuntimeClass::~RuntimeClass
+## <a name="runtimeclassruntimeclass"></a><a name="tilde-runtimeclass"></a>RuntimeClass::~RuntimeClass
 
-A instância atual do realiza o desligamento de `RuntimeClass` classe.
+Desinicializa a instância `RuntimeClass` atual da classe.
 
 ```cpp
 virtual ~RuntimeClass();
 ```
 
-## <a name="addref"></a>RuntimeClass::AddRef
+## <a name="runtimeclassaddref"></a><a name="addref"></a>Classe de execução::AddRef
 
-Incrementa a contagem de referência atual `RuntimeClass` objeto.
+Incrementa a contagem `RuntimeClass` de referência para o objeto atual.
 
 ```cpp
 STDMETHOD_(
@@ -112,25 +112,25 @@ STDMETHOD_(
 )();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
+S_OK se for bem sucedido; caso contrário, um HRESULT que indica o erro.
 
-## <a name="decrementreference"></a>RuntimeClass::DecrementReference
+## <a name="runtimeclassdecrementreference"></a><a name="decrementreference"></a>RuntimeClass::DecrementReference
 
-Diminui a contagem de referência atual `RuntimeClass` objeto.
+Decreta a contagem de `RuntimeClass` referência para o objeto atual.
 
 ```cpp
 ULONG DecrementReference();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
+S_OK se for bem sucedido; caso contrário, um HRESULT que indica o erro.
 
-## <a name="getiids"></a>RuntimeClass::GetIids
+## <a name="runtimeclassgetiids"></a><a name="getiids"></a>RuntimeClass::GetIids
 
-Obtém uma matriz que contém a interface implementadas pelo atual de IDs `RuntimeClass` objeto.
+Obtém uma matriz que pode conter os `RuntimeClass` IDs de interface implementados pelo objeto atual.
 
 ```cpp
 STDMETHOD(
@@ -142,19 +142,19 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parâmetros
 
-*iidCount*<br/>
-Quando essa operação for concluída, o número total de elementos na matriz *iids*.
+*IidCount*<br/>
+Quando esta operação for concluída, o número total de elementos em *iids*de matriz .
 
-*iids*<br/>
-Quando essa operação for concluída, um ponteiro para uma matriz de IDs de interface.
+*Iids*<br/>
+Quando esta operação for concluída, um ponteiro para uma matriz de IDs de interface.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, E_OUTOFMEMORY.
+S_OK se for bem sucedido; caso contrário, E_OUTOFMEMORY.
 
-## <a name="getruntimeclassname"></a>RuntimeClass::GetRuntimeClassName
+## <a name="runtimeclassgetruntimeclassname"></a><a name="getruntimeclassname"></a>Classe de execução::GetRuntimeClassName
 
-Obtém o nome de classe de tempo de execução do atual `RuntimeClass` objeto.
+Obtém o nome da `RuntimeClass` classe de tempo de execução do objeto atual.
 
 ```cpp
 STDMETHOD( GetRuntimeClassName )(
@@ -165,19 +165,19 @@ STDMETHOD( GetRuntimeClassName )(
 ### <a name="parameters"></a>Parâmetros
 
 *runtimeName*<br/>
-Quando essa operação for concluída, o nome de classe de tempo de execução.
+Quando esta operação for concluída, o nome da classe de tempo de execução.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
+S_OK se for bem sucedido; caso contrário, um HRESULT que indica o erro.
 
 ### <a name="remarks"></a>Comentários
 
-Um erro de asserção é emitido se `__WRL_STRICT__` ou `__WRL_FORCE_INSPECTABLE_CLASS_MACRO__` não está definido.
+Um erro de afirmação é emitido se `__WRL_STRICT__` ou `__WRL_FORCE_INSPECTABLE_CLASS_MACRO__` não for definido.
 
-## <a name="gettrustlevel"></a>RuntimeClass::GetTrustLevel
+## <a name="runtimeclassgettrustlevel"></a><a name="gettrustlevel"></a>Classe de execução::GetTrustLevel
 
-Obtém o nível de confiança atual `RuntimeClass` objeto.
+Obtém o nível `RuntimeClass` de confiança do objeto atual.
 
 ```cpp
 STDMETHOD(GetTrustLevel)(
@@ -188,19 +188,19 @@ STDMETHOD(GetTrustLevel)(
 ### <a name="parameters"></a>Parâmetros
 
 *trustLvl*<br/>
-Quando essa operação for concluída, o nível de confiança atual `RuntimeClass` objeto.
+Quando esta operação for concluída, o `RuntimeClass` nível de confiança do objeto atual.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Sempre S_OK.
 
 ### <a name="remarks"></a>Comentários
 
-Um erro de asserção é emitido se `__WRL_STRICT__` ou `__WRL_FORCE_INSPECTABLE_CLASS_MACRO__` não está definido.
+Um erro de afirmação é emitido se `__WRL_STRICT__` ou `__WRL_FORCE_INSPECTABLE_CLASS_MACRO__` não for definido.
 
-## <a name="getweakreference"></a>RuntimeClass::GetWeakReference
+## <a name="runtimeclassgetweakreference"></a><a name="getweakreference"></a>Classe de execução::GetWeakReference
 
-Obtém um ponteiro para o objeto de referência fraca para a atual `RuntimeClass` objeto.
+Obtém um ponteiro para o `RuntimeClass` objeto de referência fraco para o objeto atual.
 
 ```cpp
 STDMETHOD(
@@ -210,28 +210,28 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parâmetros
 
-*weakReference*<br/>
-Quando essa operação for concluída, um ponteiro para um objeto de referência fraca.
+*Weakreference*<br/>
+Quando esta operação for concluída, um ponteiro para um objeto de referência fraco.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Sempre S_OK.
 
-## <a name="internaladdref"></a>RuntimeClass::InternalAddRef
+## <a name="runtimeclassinternaladdref"></a><a name="internaladdref"></a>Classe de execução::InternalAddRef
 
-Incrementa a contagem de referência para a atual `RuntimeClass` objeto.
+Incrementa a contagem `RuntimeClass` de referência ao objeto atual.
 
 ```cpp
 ULONG InternalAddRef();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 A contagem de referência resultante.
 
-## <a name="queryinterface"></a>RuntimeClass::QueryInterface
+## <a name="runtimeclassqueryinterface"></a><a name="queryinterface"></a>Classe de execução::QueryInterface
 
-Recupera um ponteiro para a ID de interface especificado.
+Recupera um ponteiro para o ID de interface especificado.
 
 ```cpp
 STDMETHOD(
@@ -244,18 +244,18 @@ STDMETHOD(
 ### <a name="parameters"></a>Parâmetros
 
 *riid*<br/>
-Uma ID de interface.
+Um ID de interface.
 
-*ppvObject*<br/>
-Quando este opereation for concluída, um ponteiro para a interface especificada pelo *riid* parâmetro.
+*Ppvobject*<br/>
+Quando esta operação for concluída, um ponteiro para a interface especificado pelo parâmetro *riid.*
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
+S_OK se for bem sucedido; caso contrário, um HRESULT que indica o erro.
 
-## <a name="release"></a>RuntimeClass::Release
+## <a name="runtimeclassrelease"></a><a name="release"></a>RuntimeClass::Lançamento
 
-Executa uma operação de lançamento COM atuais `RuntimeClass` objeto.
+Executa uma operação de `RuntimeClass` liberação COM no objeto atual.
 
 ```cpp
 STDMETHOD_(
@@ -264,17 +264,17 @@ STDMETHOD_(
 )();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
+S_OK se for bem sucedido; caso contrário, um HRESULT que indica o erro.
 
 ### <a name="remarks"></a>Comentários
 
-Se a contagem de referência se torna zero, o `RuntimeClass` objeto é excluído.
+Se a contagem de `RuntimeClass` referência se tornar zero, o objeto será excluído.
 
-## <a name="runtimeclass"></a>RuntimeClass::RuntimeClass
+## <a name="runtimeclassruntimeclass"></a><a name="runtimeclass"></a>Classe de execução::RuntimeClass
 
-Inicializa a instância atual do `RuntimeClass` classe.
+Inicializa a instância atual `RuntimeClass` da classe.
 
 ```cpp
 RuntimeClass();

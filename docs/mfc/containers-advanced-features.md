@@ -12,64 +12,64 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: a68cc85062f9ca711c453ef98f69a7c5ea114d94
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cf130bf8dead5c59548821658b979785c4d54726
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214351"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376490"
 ---
 # <a name="containers-advanced-features"></a>Contêineres: funcionalidades avançadas
 
-Este artigo descreve as etapas necessárias para incorporar recursos avançados opcionais em aplicativos de contêiner existentes. Esses recursos são:
+Este artigo descreve as etapas necessárias para incorporar recursos avançados opcionais em aplicações de contêineres existentes. Essas características são:
 
-- [Um aplicativo que é um contêiner e um servidor](#_core_creating_a_container_server_application)
+- [Um aplicativo que é tanto um contêiner quanto um servidor](#_core_creating_a_container_server_application)
 
-- [Um link OLE para um objeto inserido](#_core_links_to_embedded_objects)
+- [Um link OLE para um objeto incorporado](#_core_links_to_embedded_objects)
 
-##  <a name="creating-a-containerserver-application"></a><a name="_core_creating_a_container_server_application"></a>Criando um aplicativo de contêiner/servidor
+## <a name="creating-a-containerserver-application"></a><a name="_core_creating_a_container_server_application"></a>Criando um aplicativo de contêiner/servidor
 
-Um aplicativo de contêiner/servidor é um aplicativo que atua como um contêiner e um servidor. O Microsoft Word para Windows é um exemplo disso. Você pode inserir documentos do Word para Windows em outros aplicativos e também pode inserir itens em documentos do Word para Windows. O processo para modificar o aplicativo de contêiner para ser um contêiner e um servidor completo (você não pode criar um aplicativo de contêiner/miniserver de combinação) é semelhante ao processo de criação de um servidor completo.
+Um aplicativo de contêiner/servidor é um aplicativo que atua como um contêiner e um servidor. O Microsoft Word for Windows é um exemplo disso. Você pode incorporar documentos do Word for Windows em outros aplicativos, e também pode incorporar itens em documentos do Word for Windows. O processo para modificar seu aplicativo de contêiner para ser um contêiner e um servidor completo (você não pode criar uma combinação de aplicativo de contêiner/miniservidor) é semelhante ao processo de criação de um servidor completo.
 
-O artigo [servidores: Implementando um servidor](../mfc/servers-implementing-a-server.md) lista várias tarefas necessárias para implementar um aplicativo de servidor. Se você converter um aplicativo de contêiner em um aplicativo de contêiner/servidor, precisará executar algumas dessas mesmas tarefas, adicionando o código ao contêiner. Veja a seguir uma lista das coisas importantes a considerar:
+O artigo [Servidores: Implementar um servidor](../mfc/servers-implementing-a-server.md) lista uma série de tarefas necessárias para implementar um aplicativo de servidor. Se você converter um aplicativo de contêiner em um aplicativo de contêiner/servidor, então você precisará executar algumas dessas mesmas tarefas, adicionando código ao contêiner. A seguir lista as coisas importantes a considerar:
 
-- O código de contêiner criado pelo assistente de aplicativo já Inicializa o subsistema OLE. Não será necessário alterar nem adicionar nada para esse suporte.
+- O código de contêiner criado pelo assistente de aplicativo já inicia o subsistema OLE. Você não precisará mudar ou adicionar nada para esse suporte.
 
-- Sempre que a classe base de uma classe de documento for `COleDocument`, altere a classe base para `COleServerDoc`.
+- Onde quer que a classe `COleDocument`base de uma `COleServerDoc`classe de documento esteja, mude a classe base para .
 
-- Substitua `COleClientItem::CanActivate` para evitar a edição de itens no local enquanto o próprio servidor está sendo usado para editar no local.
+- Substituir `COleClientItem::CanActivate` para evitar editar itens no lugar enquanto o servidor em si está sendo usado para editar no lugar.
 
-   Por exemplo, o exemplo OLE do MFC [OCLIENT](../overview/visual-cpp-samples.md) inseriu um item criado por seu aplicativo contêiner/servidor. Abra o aplicativo OCLIENT e no local edite o item criado pelo seu aplicativo de contêiner/servidor. Ao editar o item do aplicativo, você decide que deseja inserir um item criado pelo exemplo de OLE do MFC [HIERSVR](../overview/visual-cpp-samples.md). Para fazer isso, não é possível usar a ativação in-loco. Você deve abrir totalmente o HIERSVR para ativar este item. Como o biblioteca MFC não dá suporte a esse recurso OLE, a substituição de `COleClientItem::CanActivate` permite que você verifique essa situação e evite um possível erro em tempo de execução em seu aplicativo.
+   Por exemplo, a amostra [MFC](../overview/visual-cpp-samples.md) OLE OCLIENT incorporou um item criado pelo aplicativo container/server. Você abre o aplicativo OCLIENT e edita o item criado pelo aplicativo contêiner/servidor. Ao editar o item do seu aplicativo, você decide incorporar um item criado pela amostra [DeRO HIERSVR](../overview/visual-cpp-samples.md). Para fazer isso, você não pode usar ativação no local. Você deve abrir totalmente o HIERSVR para ativar este item. Como a Biblioteca de Classes da Microsoft Foundation `COleClientItem::CanActivate` não suporta esse recurso OLE, a substituição permite que você verifique essa situação e evite um possível erro de tempo de execução em seu aplicativo.
 
-Se você estiver criando um novo aplicativo e quiser que ele funcione como um aplicativo de contêiner/servidor, escolha essa opção na caixa de diálogo opções de OLE no assistente de aplicativo e esse suporte será criado automaticamente. Para obter mais informações, consulte o artigo [visão geral: Criando um contêiner de controle ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Para obter informações sobre exemplos de MFC, consulte [exemplos de MFC](../overview/visual-cpp-samples.md#mfc-samples).
+Se você estiver criando um novo aplicativo e quiser que ele funcione como um aplicativo de contêiner/servidor, escolha essa opção na caixa de diálogo Opções OLE no assistente do aplicativo e esse suporte será criado automaticamente. Para obter mais informações, consulte a visão geral do [artigo: Criando um contêiner de controle ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Para obter informações sobre amostras de MFC, consulte [MFC Samples](../overview/visual-cpp-samples.md#mfc-samples).
 
-Observe que você não pode inserir um aplicativo MDI em si mesmo. Um aplicativo que é um contêiner/servidor não pode ser inserido em si, a menos que seja um aplicativo SDI.
+Observe que você não pode inserir um aplicativo MDI em si mesmo. Um aplicativo que é um contêiner/servidor não pode ser inserido em si mesmo a menos que seja um aplicativo SDI.
 
-##  <a name="links-to-embedded-objects"></a><a name="_core_links_to_embedded_objects"></a>Links para objetos inseridos
+## <a name="links-to-embedded-objects"></a><a name="_core_links_to_embedded_objects"></a>Links para objetos incorporados
 
-O recurso links para objetos inseridos permite que um usuário crie um documento com um link OLE para um objeto inserido dentro do aplicativo de contêiner. Por exemplo, crie um documento em um processador de texto que contenha uma planilha inserida. Se seu aplicativo oferecer suporte a links para objetos inseridos, ele poderá colar um link para a planilha contida no documento do processador de texto. Esse recurso permite que seu aplicativo use as informações contidas na planilha sem saber onde o processador de texto o recebeu originalmente.
+O recurso Links to Embedded Objects permite que um usuário crie um documento com um link OLE para um objeto incorporado dentro do aplicativo do contêiner. Por exemplo, crie um documento em um processador de texto contendo uma planilha incorporada. Se o aplicativo suportar links para objetos incorporados, ele poderá colar um link para a planilha contida no documento do processador de texto. Esse recurso permite que seu aplicativo use as informações contidas na planilha sem saber onde o processador de texto originalmente conseguiu.
 
-#### <a name="to-link-to-embedded-objects-in-your-application"></a>Para vincular a objetos inseridos em seu aplicativo
+#### <a name="to-link-to-embedded-objects-in-your-application"></a>Para vincular a objetos incorporados em sua aplicação
 
-1. Derive sua classe de documento de `COleLinkingDoc` em vez de `COleDocument`.
+1. Obtenha sua classe `COleLinkingDoc` de `COleDocument`documentos em vez de .
 
-1. Crie uma ID de classe OLE (**CLSID**) para seu aplicativo usando o gerador de ID de classe incluído com as ferramentas de desenvolvimento de OLE.
+1. Crie um ID de classe OLE **(CLSID)** para sua aplicação usando o Gerador de ID de classe incluído nas Ferramentas de Desenvolvimento OLE.
 
-1. Registre o aplicativo com OLE.
+1. Registre o aplicativo no OLE.
 
-1. Crie um objeto `COleTemplateServer` como um membro de sua classe de aplicativo.
+1. Crie `COleTemplateServer` um objeto como membro da sua classe de aplicação.
 
-1. Na função de membro `InitInstance` da sua classe de aplicativo, faça o seguinte:
+1. Na função de `InitInstance` membro da sua classe de aplicação, faça o seguinte:
 
-   - Conecte o objeto `COleTemplateServer` aos modelos de documento chamando a função de membro `ConnectTemplate` do objeto.
+   - Conecte `COleTemplateServer` seu objeto aos modelos de `ConnectTemplate` documento chamando a função de membro do objeto.
 
-   - Chame a função de membro `COleTemplateServer::RegisterAll` para registrar todos os objetos de classe com o sistema OLE.
+   - Ligue `COleTemplateServer::RegisterAll` para a função membro para registrar todos os objetos de classe com o sistema OLE.
 
-   - Chame `COleTemplateServer::UpdateRegistry`. O único parâmetro a `UpdateRegistry` deve ser *OAT_CONTAINER* se o aplicativo não for iniciado com a opção "/Embedded". Isso registra o aplicativo como um contêiner que pode dar suporte a links para objetos inseridos.
+   - Chame `COleTemplateServer::UpdateRegistry`. O único parâmetro `UpdateRegistry` a ser *OAT_CONTAINER* se o aplicativo não for lançado com o interruptor "/Embedded". Isso registra o aplicativo como um contêiner que pode suportar links para objetos incorporados.
 
-      Se o aplicativo for iniciado com a opção "/Embedded", ele não deverá mostrar sua janela principal, semelhante a um aplicativo de servidor.
+      Se o aplicativo for lançado com o switch "/Embedded", ele não deve mostrar sua janela principal, semelhante a um aplicativo de servidor.
 
-O [OCLIENT](../overview/visual-cpp-samples.md) de exemplo OLE do MFC implementa esse recurso. Para obter um exemplo de como isso é feito, consulte a função `InitInstance` no *OCLIENT. Arquivo CPP* deste aplicativo de exemplo.
+A amostra [OLE Do](../overview/visual-cpp-samples.md) MFC Implementa esse recurso. Para um exemplo de como isso `InitInstance` é feito, consulte a função no *OCLIENT. Arquivo CPP* deste aplicativo de amostra.
 
 ## <a name="see-also"></a>Confira também
 

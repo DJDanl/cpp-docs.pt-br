@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-ms.openlocfilehash: 378451ac2643d62271fd9e7fa44706a84ee8bb83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2c60911b5469cbf74944c9f63af44f2351790280
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450283"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376561"
 ---
-# <a name="syncpercontainer-class"></a>Classe sync_per_container
+# <a name="sync_per_container-class"></a>Classe sync_per_container
 
 Descreve um [filtro de sincronização](../standard-library/allocators-header.md) que fornece um objeto de cache separado para cada objeto alocador.
 
@@ -44,7 +44,7 @@ class sync_per_container
 
 **Namespace:** stdext
 
-## <a name="equals"></a>  sync_per_container::equals
+## <a name="sync_per_containerequals"></a><a name="equals"></a>sync_per_container::iguais
 
 Compara a igualdade de dois caches.
 
@@ -59,12 +59,12 @@ bool equals(const sync_per_container<Cache>& Other) const;
 |*Cache*|O objeto de cache do filtro de sincronização.|
 |*Outros*|O objeto de cache a ser comparado quanto à igualdade.|
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-A função de membro sempre retorna **false**.
+A função do membro sempre retorna **falsa**.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<alocadores>](../standard-library/allocators-header.md)

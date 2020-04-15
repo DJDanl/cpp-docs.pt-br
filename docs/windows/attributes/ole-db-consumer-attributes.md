@@ -1,5 +1,5 @@
 ---
-title: Atributos de consumidor OLE DBC++ (com)
+title: Atributos do Consumidor OLE DB (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], database
@@ -9,24 +9,25 @@ helpviewer_keywords:
 - database attributes [C++/CLI]
 - attributes [C++/CLI], OLE DB consumer
 ms.assetid: 017b591f-8f9a-42b4-84d5-cc42a21ab0cc
-ms.openlocfilehash: 67f58d6dd32360248c6437f66fa7042871bc4ea6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a9147d80e87e23a754043a29eb3d15570e85aec0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214643"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377098"
 ---
 # <a name="ole-db-consumer-attributes"></a>Atributos de consumidor de banco de dados OLE
-Os atributos de consumidor OLE DB injetam o código, com base nos [modelos de consumidor de OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md), para criar um consumidor de OLE DB de trabalho que executa tarefas como abrir tabelas, executar comandos e acessar dados.
 
-|Atributo|DESCRIÇÃO|
+Os atributos de injeção do consumidor OLE DB, com base nos [Modelos de Consumo OLE DB,](../../data/oledb/ole-db-consumer-templates-reference.md)para criar um consumidor OLE DB em funcionamento que executa tarefas como abrir tabelas, executar comandos e acessar dados.
+
+|Atributo|Descrição|
 |---------------|-----------------|
-|[db_accessor](db-accessor.md)|Associa colunas em um conjunto de linhas e as associa aos mapas de acessadores correspondentes.|
-|[db_column](db-column.md)|Associa uma coluna especificada ao conjunto de linhas.|
+|[db_accessor](db-accessor.md)|Liga colunas em um conjunto de linhas e as liga aos mapas de acessório correspondentes.|
+|[db_column](db-column.md)|Vincula uma coluna especificada ao conjunto de linhas.|
 |[db_command](db-command.md)|Executa um comando OLE DB.|
-|[db_param](db-param.md)|Associa a variável de membro especificada a um parâmetro de entrada ou saída.|
-|[db_source](db-source.md)|Cria e encapsula uma conexão, por meio de um provedor, para uma fonte de dados.|
-|[db_table](db-table.md)|Abre uma tabela OLE DB.|
+|[db_param](db-param.md)|Associa a variável membro especificada com um parâmetro de entrada ou saída.|
+|[db_source](db-source.md)|Cria e encapsula uma conexão, através de um provedor, a uma fonte de dados.|
+|[Db_table](db-table.md)|Abre uma tabela OLE DB.|
 
 ## <a name="see-also"></a>Confira também
 

@@ -11,44 +11,44 @@ helpviewer_keywords:
 - document objects [MFC], life cycle of
 - initializing views [MFC]
 ms.assetid: 95d6f09b-a047-4079-856a-ae7d0548e9d2
-ms.openlocfilehash: 59e86f4000e2da588749ca48887d34c3effdfc3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c92d60941cd6542bd0d6c27e8a879dc85e3a3d6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297184"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377211"
 ---
 # <a name="initializing-and-cleaning-up-documents-and-views"></a>Inicializando e limpando documentos e exibições
 
-Use as seguintes diretrizes para Inicializando e limpando após seus documentos e exibições:
+Use as seguintes diretrizes para inicializar e limpar após seus documentos e visualizações:
 
-- Estrutura MFC inicializa documentos e exibições; você inicializa quaisquer dados que você adicionar a eles.
+- O quadro do MFC inicializa documentos e visualizações; inicializar todos os dados que você adicionar a eles.
 
-- A estrutura limpa como documentos e exibições fechar; Você deverá desalocar qualquer memória alocada no heap de dentro das funções de membro desses documentos e exibições.
+- A estrutura se limpa à medida que documentos e pontos de vista se fecham; você deve desalocar qualquer memória que você alocou no heap de dentro das funções de membro desses documentos e visualizações.
 
 > [!NOTE]
->  Lembre-se de que a inicialização para todo o aplicativo é mais bem efetuado em seu substituto do [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) função de membro da classe `CWinApp`, e a limpeza de todo o aplicativo é mais bem efetuada em seu substituto do `CWinApp`função de membro [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance).
+> Lembre-se de que a inicialização de todo o aplicativo é melhor `CWinApp`feita em sua substituição da função de membro `CWinApp` [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) da classe, e a limpeza para todo o aplicativo é melhor feita em sua substituição da função de membro [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance).
 
-Ciclo de vida de um documento (e sua janela de quadro e modo de exibição ou exibições) em um MDI aplicativo é o seguinte:
+O ciclo de vida de um documento (e sua janela de quadro e exibição ou visualização) em um aplicativo MDI é o seguinte:
 
-1. Durante a criação dinâmica, o construtor de documento é chamado.
+1. Durante a criação dinâmica, o construtor de documentos é chamado.
 
-1. Para da cada novo documento, o documento [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) ou [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) é chamado.
+1. Para cada novo documento, o documento [onNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) ou [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) é chamado.
 
-1. O usuário interage com o documento em todo seu ciclo de vida. Normalmente, isso acontece conforme o usuário trabalha nos dados de documento por meio da exibição, selecionar e editar os dados. O modo de exibição passa as alterações para o documento para o armazenamento e atualizando a outros modos de exibição. Durante esse tempo, o documento e o modo de exibição podem lidar com comandos.
+1. O usuário interage com o documento durante toda a sua vida. Normalmente isso acontece à medida que o usuário trabalha com dados de documentos através da exibição, selecionando e editando os dados. A exibição passa alterações no documento para armazenamento e atualização de outras visualizações. Durante este tempo, tanto o documento quanto a exibição podem lidar com comandos.
 
-1. A estrutura chama [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) para excluir dados específicos a um documento.
+1. A estrutura chama [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) para excluir dados específicos de um documento.
 
-1. Destruidor do documento é chamado.
+1. O destruidor do documento é chamado.
 
-Em um aplicativo SDI, etapa 1 é executada uma vez, quando o documento é criado. Em seguida, as etapas 2 a 4 são executadas várias vezes sempre que um novo documento for aberto. O novo documento reutiliza o objeto de documento existente. Por fim, a etapa 5 é executada quando o aplicativo termina.
+Em um aplicativo SDI, a etapa 1 é realizada uma vez, quando o documento é criado pela primeira vez. Em seguida, as etapas 2 a 4 são executadas repetidamente cada vez que um novo documento é aberto. O novo documento reutiliza o objeto de documento existente. Finalmente, a etapa 5 é realizada quando a aplicação termina.
 
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+## <a name="what-do-you-want-to-know-more-about"></a>O que você quer saber mais sobre
 
 - [Inicializando documentos e exibições](../mfc/initializing-documents-and-views.md)
 
 - [Limpando documentos e exibições](../mfc/cleaning-up-documents-and-views.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Arquitetura de documento/exibição](../mfc/document-view-architecture.md)

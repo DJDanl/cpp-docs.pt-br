@@ -14,16 +14,16 @@ helpviewer_keywords:
 - COleCmdUI [MFC], SetCheck
 - COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
-ms.openlocfilehash: 5dc4e9504805146a9eff0f5ab937868226e4516e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b7a6b21a3ad778b4a5ca345b1aaf42875810e4e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148504"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376273"
 ---
 # <a name="colecmdui-class"></a>Classe COleCmdUI
 
-Implementa um método para MFC atualizar o estado dos objetos de interface do usuário relacionado ao `IOleCommandTarget`-controlado por recursos de seu aplicativo.
+Implementa um método para o MFC atualizar o estado `IOleCommandTarget`dos objetos de interface do usuário relacionados aos recursos orientados pelo aplicativo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,21 +43,21 @@ class COleCmdUI : public CCmdUI
 
 |Nome|Descrição|
 |----------|-----------------|
-|[COleCmdUI::Enable](#enable)|Define ou limpa o ativar o sinalizador de comando.|
-|[COleCmdUI::SetCheck](#setcheck)|Define o estado de uma alternância de ativar/desativar comando.|
-|[COleCmdUI::SetText](#settext)|Retorna uma cadeia de texto nome ou o status de um comando.|
+|[COleCmdUI::Habilitar](#enable)|Define ou limpa o sinalizador de comando enable.|
+|[COleCmdUI::SetCheck](#setcheck)|Define o estado de um comando de alternação on/off.|
+|[COleCmdUI::SetText](#settext)|Retorna um nome de texto ou seqüência de status para um comando.|
 
 ## <a name="remarks"></a>Comentários
 
-Em um aplicativo que não está habilitado para DocObjects, quando os modos de exibição do usuário um menu no aplicativo, MFC processa as notificações UPDATE_COMMAND_UI. Cada notificação é fornecida uma [CCmdUI](../../mfc/reference/ccmdui-class.md) objeto que pode ser manipulado para refletir o estado de um determinado comando. No entanto, quando seu aplicativo está habilitado para DocObjects, MFC processa as notificações de UPDATE_OLE_COMMAND_UI e atribui `COleCmdUI` objetos.
+Em um aplicativo que não está habilitado para DocObjects, quando o usuário visualiza um menu no aplicativo, o MFC processa UPDATE_COMMAND_UI notificações. Cada notificação recebe um objeto [CCmdUI](../../mfc/reference/ccmdui-class.md) que pode ser manipulado para refletir o estado de um comando específico. No entanto, quando seu aplicativo está ativado para DocObjects, o MFC processa UPDATE_OLE_COMMAND_UI notificações e atribui `COleCmdUI` objetos.
 
-`COleCmdUI` permite que o DocObject receber comandos que se originam na interface do usuário do seu contêiner (por exemplo, FileNew, abrir, imprimir e assim por diante) e permite que um contêiner receber comandos que se originam na interface do usuário do DocObject. Embora `IDispatch` poderia ser usado para distribuir os mesmos comandos, `IOleCommandTarget` fornece uma maneira mais simples de consulta e execute porque ele se baseia em um conjunto padrão de comandos, normalmente sem argumentos, e nenhuma informação de tipo está envolvida. `COleCmdUI` pode ser usado para habilitar, atualizar e definir outras propriedades de DocObject comandos de interface do usuário. Quando você deseja invocar o comando, chame [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).
+`COleCmdUI`permite que um DocObject receba comandos que se originam na interface de usuário de seu contêiner (como FileNew, Open, Print e assim por diante), e permite que um contêiner receba comandos que se originam na interface de usuário do DocObject. Embora `IDispatch` possa ser usado para despachar os mesmos comandos, `IOleCommandTarget` fornece uma maneira mais simples de consultar e executar porque depende de um conjunto padrão de comandos, geralmente sem argumentos, e nenhuma informação de tipo está envolvida. `COleCmdUI`pode ser usado para ativar, atualizar e definir outras propriedades dos comandos de interface do usuário DocObject. Quando quiser invocar o comando, ligue para [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).
 
-Para obter mais informações sobre DocObjects, consulte [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) e [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md).
+Para obter mais informações sobre docObjects, consulte [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) e [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CCmdUI](../../mfc/reference/ccmdui-class.md)
+[Ccmdui](../../mfc/reference/ccmdui-class.md)
 
 `COleCmdUI`
 
@@ -65,9 +65,9 @@ Para obter mais informações sobre DocObjects, consulte [CDocObjectServer](../.
 
 **Cabeçalho:** afxdocobj.h
 
-##  <a name="colecmdui"></a>  COleCmdUI::COleCmdUI
+## <a name="colecmduicolecmdui"></a><a name="colecmdui"></a>COleCmdUI::COleCmdUI
 
-Constrói um `COleCmdUI` objeto associado a um comando de interface de usuário específica.
+Constrói um `COleCmdUI` objeto associado a um determinado comando de interface de usuário.
 
 ```
 COleCmdUI(
@@ -78,22 +78,22 @@ COleCmdUI(
 
 ### <a name="parameters"></a>Parâmetros
 
-*rgCmds*<br/>
-Uma lista de comandos com suporte associadas com o GUID especificado. O `OLECMD` estrutura associa comandos com sinalizadores de comando.
+*RGCmds*<br/>
+Uma lista de comandos suportados associados ao GUID dado. A `OLECMD` estrutura associa comandos com bandeiras de comando.
 
 *cCmds*<br/>
-A contagem de comandos *rgCmds*.
+A contagem de comandos em *rgCmds*.
 
 *pGroup*<br/>
 Um ponteiro para um GUID que identifica um conjunto de comandos.
 
 ### <a name="remarks"></a>Comentários
 
-O `COleCmdUI` objeto fornece uma interface programática para atualizar objetos de interface do usuário DocObject como itens de menu ou botões da barra de controle. Os objetos de interface do usuário podem ser habilitados, desabilitados, verificados, e/ou limpo por meio de `COleCmdUI` objeto.
+O `COleCmdUI` objeto fornece uma interface programática para atualizar objetos de interface de usuário do DocObject, como itens de menu ou botões de barra de controle. Os objetos de interface do usuário podem ser ativados, `COleCmdUI` desativados, verificados e/ou limpos através do objeto.
 
-##  <a name="enable"></a>  COleCmdUI::Enable
+## <a name="colecmduienable"></a><a name="enable"></a>COleCmdUI::Habilitar
 
-Chame essa função para definir o sinalizador de comando da `COleCmdUI` OLECOMDF_ENABLED, que informa a interface para o comando está disponível e habilitado, ou limpar o sinalizador de comando do objeto.
+Chame esta função para definir `COleCmdUI` o sinalizador de comando do objeto para OLECOMDF_ENABLED, que informa à interface que o comando está disponível e ativado, ou para limpar o sinalizador de comando.
 
 ```
 virtual void Enable(BOOL bOn);
@@ -101,12 +101,12 @@ virtual void Enable(BOOL bOn);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bOn*<br/>
-Indica se o comando associado a `COleCmdUI` objeto deve ser habilitado ou desabilitado. NonZero permite que o comando; 0 desabilita o comando.
+*Bon*<br/>
+Indica se o comando `COleCmdUI` associado ao objeto deve ser ativado ou desativado. Não zero habilita o comando; 0 desabilita o comando.
 
-##  <a name="setcheck"></a>  COleCmdUI::SetCheck
+## <a name="colecmduisetcheck"></a><a name="setcheck"></a>COleCmdUI::SetCheck
 
-Chame essa função para definir o estado de uma alternância de ativar/desativar comando.
+Chame esta função para definir o estado de um comando de alterneção de liga/desliga.
 
 ```
 virtual void SetCheck(int nCheck);
@@ -114,18 +114,18 @@ virtual void SetCheck(int nCheck);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nCheck*<br/>
-Um valor que determina o estado para definir uma alternância de ativar/desativar comando. Os valores são:
+*Ncheck*<br/>
+Um valor determinando o estado para definir um comando de alternância de on/off. Os valores são:
 
 |Valor|Descrição|
 |-----------|-----------------|
-|**1**|Define o comando como ativado.|
-|**2**|Define o comando como indeterminado; o estado não pode ser determinado porque o atributo desse comando é no dentro e fora dos Estados da seleção relevante.|
-|qualquer outro valor|Define o comando como desativado.|
+|**1**|Adere ao comando.|
+|**2**|Define o comando como indeterminado; o estado não pode ser determinado porque o atributo deste comando está em estados ligados e desligados na seleção relevante.|
+|qualquer outro valor|Detona o comando.|
 
-##  <a name="settext"></a>  COleCmdUI::SetText
+## <a name="colecmduisettext"></a><a name="settext"></a>COleCmdUI::SetText
 
-Chame essa função para retornar uma cadeia de texto nome ou o status de um comando.
+Chame esta função para retornar um nome de texto ou seqüência de status para um comando.
 
 ```
 virtual void SetText(LPCTSTR lpszText);
@@ -136,7 +136,7 @@ virtual void SetText(LPCTSTR lpszText);
 *lpszText*<br/>
 Um ponteiro para o texto a ser usado com o comando.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CCmdUI](../../mfc/reference/ccmdui-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
