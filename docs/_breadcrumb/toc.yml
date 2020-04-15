@@ -32,7 +32,7 @@
                 - name: MASM
                   tocHref: /cpp/assembler/masm/
                   topicHref: /cpp/assembler/masm/microsoft-macro-assembler-reference
-            - name: Biblioteca em Tempo de Execução C
+            - name: Biblioteca em Runtime C
               tocHref: /cpp/c-runtime-library/
               topicHref: /cpp/c-runtime-library/c-run-time-library-reference
               items:
@@ -87,7 +87,7 @@
                   topicHref: /cpp/data/odbc/open-database-connectivity-odbc
             - name: 'Editar, navegar e refatorar código'
               tocHref: /cpp/ide
-              topicHref: /cpp/overview-of-cpp-development
+              topicHref: /cpp/ide/read-and-understand-code-cpp
               items:
                 - name: IDE
                   tocHref: /cpp/ide/
