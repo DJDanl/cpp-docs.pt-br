@@ -1,5 +1,5 @@
 ---
-title: Mapeamentos de texto genéricos em TCHAR. h
+title: Mapeamentos de texto genérico em tchar.h
 ms.date: 11/04/2016
 helpviewer_keywords:
 - mapping generic-text
@@ -10,54 +10,54 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: 779702aa33e2aa24bf5a380bd8435745cc0aadbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf872df2e6fb49e64a973e8799eef98dec1cb472
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410701"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361350"
 ---
-# <a name="generic-text-mappings-in-tcharh"></a>Mapeamentos de texto genéricos em TCHAR. h
+# <a name="generic-text-mappings-in-tcharh"></a>Mapeamentos de texto genérico em tchar.h
 
-Para simplificar o transporte de código para uso internacional, a biblioteca de tempo de execução da Microsoft fornece mapeamentos de texto genérico de específico da Microsoft para muitos tipos de dados, rotinas e outros objetos. Você pode usar esses mapeamentos, que são definidos em TCHAR. h, para escrever código genérico que pode ser compilado para o byte único, vários bytes, ou conjuntos de caracteres Unicode, dependendo da constante de manifesto que você define usando uma `#define` instrução. Mapeamentos de texto genérico são extensões da Microsoft não compatíveis com ANSI.
+Para simplificar o transporte de código para uso internacional, a biblioteca de tempo de execução da Microsoft fornece mapeamentos de texto genérico específicos da Microsoft para muitos tipos de dados, rotinas e outros objetos. Você pode usar esses mapeamentos, que são definidos em tchar.h, para escrever código genérico que pode ser compilado para conjuntos de caracteres `#define` single-byte, multibyte ou Unicode, dependendo de uma constante manifesto que você define usando uma declaração. Mapeamentos de texto genérico são extensões da Microsoft não compatíveis com ANSI.
 
-Usando o TCHAR. h, você pode criar aplicativos Unicode das mesmas origens de byte único e conjunto de caracteres Multibyte (MBCS). TCHAR. h define as macros (que têm o prefixo `_tcs`) que, com as definições de pré-processador corretas, mapear para `str`, `_mbs`, ou `wcs` funções, conforme apropriado. Para compilar o MBCS, defina o símbolo `_MBCS`. Para compilar o Unicode, defina o símbolo `_UNICODE`. Para criar um aplicativo de byte único, defina nenhum (padrão). Por padrão, `_UNICODE` está definido para aplicativos MFC.
+Usando o tchar.h, você pode criar aplicativos MBCS (Multibyte Character Set, conjunto de caracteres de byte único) e Unicode das mesmas fontes. tchar.h define macros (que `_tcs`têm o prefixo ) que, com `str` `_mbs`as `wcs` definições corretas do pré-processador, mapeiam para , ou funções, conforme apropriado. Para construir o MBCS, defina o símbolo `_MBCS`. Para construir unicode, `_UNICODE`defina o símbolo . Para construir um aplicativo de byte único, defina nenhum (o padrão). Por padrão, `_UNICODE` é definido para aplicações MFC.
 
-O `_TCHAR` tipo de dados é definido condicionalmente em TCHAR. h. Se o símbolo `_UNICODE` está definido para a compilação `_TCHAR` é definido como **wchar_t**; caso contrário, para byte e compilações MBCS, ele é definido como **char**. (**wchar_t**, o tipo de dados de caracteres largos Unicode básico, é a contraparte de 16 bits um assinado de 8 bits **char**.) Aplicativos internacionais, use o `_tcs` família de funções, que operam em `_TCHAR` unidades, não em bytes. Por exemplo, `_tcsncpy` cópias `n` `_TCHARs`, e não `n` bytes.
+O `_TCHAR` tipo de dados é definido condicionalmente em tchar.h. Se o `_UNICODE` símbolo for definido `_TCHAR` para sua compilação, será definido como **wchar_t;** caso contrário, para construções de byte único e MBCS, é definido como **char**. **(wchar_t**, o tipo básico de dados de caracteres de caracteres de amplo Unicode, é a contrapartida de 16 bits para um **char**assinado de 8 bits .) Para aplicações internacionais, `_tcs` utilize a família de `_TCHAR` funções, que operam em unidades, não bytes. Por `_tcsncpy` exemplo, `n` `_TCHARs`cópias, não `n` bytes.
 
-Porque algum tratamento de cadeia de caracteres do conjunto de caractere de Byte único (SBCS) (assinados) de funções `char*` parâmetros, um resultados de aviso de compilador de incompatibilidade de tipo quando `_MBCS` está definido. Há três maneiras de evitar esse aviso:
+Como algumas funções de manipulação de strings do Single Byte Character Set (SBCS) tomam parâmetros (assinados), `char*` um compilador de tipo incompatível resulta quando `_MBCS` é definido. Há três maneiras de evitar este aviso:
 
-1. Use as conversões de função embutidas fortemente tipadas em TCHAR. h. Este é o comportamento padrão.
+1. Use a função inline de segurança do tipo em tchar.h. Esse é o comportamento padrão.
 
-1. Use as macros diretas em TCHAR. h definindo `_MB_MAP_DIRECT` na linha de comando. Se você fizer isso, você deverá realizar a correspondência de tipos manualmente. Isso é o método mais rápido, mas não é fortemente tipado.
+1. Use as macros diretas em `_MB_MAP_DIRECT` tchar.h definindo na linha de comando. Se você fizer isso, você deverá realizar a correspondência de tipos manualmente. Este é o método mais rápido, mas não é seguro para o tipo.
 
-1. Use as conversões de função de biblioteca de vinculada estaticamente fortemente tipadas em TCHAR. h. Para fazer isso, defina a constante `_NO_INLINING` na linha de comando. Esse é o método mais lento, no entanto, é o mais fortemente tipado.
+1. Use a função de biblioteca estáticamente ligada ao tipo em tchar.h. Para fazer isso, defina a constante `_NO_INLINING` na linha de comando. Esse é o método mais lento, no entanto, é o mais fortemente tipado.
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>Diretivas de pré-processador para mapeamentos de texto genérico
 
-|# define|Versão compilada|Exemplo|
+|# definir|Versão compilada|Exemplo|
 |---------------|----------------------|-------------|
 |`_UNICODE`|Unicode (caracteres largos)|`_tcsrev` mapeia para `_wcsrev`|
 |`_MBCS`|Caracteres multibyte|`_tcsrev` mapeia para `_mbsrev`|
-|None (o padrão não possui `_UNICODE` nem `_MBCS` definido)|SBCS (ASCII)|`_tcsrev` mapeia para `strrev`|
+|Nenhum (o padrão `_UNICODE` `_MBCS` não tem nem definido)|SBCS (ASCII)|`_tcsrev` mapeia para `strrev`|
 
-Por exemplo, a função de texto genérico `_tcsrev`, que é definido em TCHAR. h, é mapeado para `_mbsrev` se você tiver definido `_MBCS` em seu programa, ou para `_wcsrev` se você tiver definido `_UNICODE`. Do contrário, `_tcsrev` é mapeado para `strrev`. Outros mapeamentos de tipo de dados são fornecidos em TCHAR. h para conveniência de programação, mas `_TCHAR` é mais útil.
+Por exemplo, a função `_tcsrev`texto genérico , que é definida `_mbsrev` em `_MBCS` tchar.h, `_wcsrev` mapeia se você definiu em seu programa, ou se você definiu `_UNICODE`. Do contrário, `_tcsrev` é mapeado para `strrev`. Outros mapeamentos de tipo de dados são fornecidos em `_TCHAR` tchar.h para conveniência de programação, mas é o mais útil.
 
 ### <a name="generic-text-data-type-mappings"></a>Mapeamentos de tipo de dados de texto genérico
 
-|Texto genérico<br /> Nome do tipo de dados|UNICODE &AMP;<br /> MBCS não definidos|_MBCS<br /> Definido|_UNICODE<br /> Definido|
+|Texto genérico<br /> Nome do tipo de dados|& _UNICODE<br /> _MBCS Não Definidos|_MBCS<br /> Definido|_UNICODE<br /> Definido|
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|
-|`_TCHAR`|**char**|**char**|**wchar_t**|
+|`_TCHAR`|**char**|**char**|**Wchar_t**|
 |`_TINT`|**int**|**unsigned int**|`wint_t`|
-|`_TSCHAR`|**signed char**|**signed char**|**wchar_t**|
-|`_TUCHAR`|**unsigned char**|**unsigned char**|**wchar_t**|
-|`_TXCHAR`|**char**|**unsigned char**|**wchar_t**|
-|`_T` ou `_TEXT`|Nenhum efeito (removido pelo pré-processador)|Nenhum efeito (removido pelo pré-processador)|`L` (converte o caractere ou cadeia de caracteres a seguir à sua contraparte Unicode)|
+|`_TSCHAR`|**signed char**|**signed char**|**Wchar_t**|
+|`_TUCHAR`|**unsigned char**|**unsigned char**|**Wchar_t**|
+|`_TXCHAR`|**char**|**unsigned char**|**Wchar_t**|
+|`_T` ou `_TEXT`|Nenhum efeito (removido pelo pré-processador)|Nenhum efeito (removido pelo pré-processador)|`L`(converte o seguinte caractere ou string em sua contraparte Unicode)|
 
-Para obter uma lista de mapeamentos de texto genérico de rotinas, variáveis e outros objetos, consulte [mapeamentos de texto genérico](../c-runtime-library/generic-text-mappings.md) na referência da biblioteca de tempo de execução.
+Para obter uma lista de mapeamentos de texto genérico de rotinas, variáveis e outros objetos, consulte [Mapeamentos de texto genérico](../c-runtime-library/generic-text-mappings.md) sinuoso na referência de biblioteca em tempo de execução.
 
 > [!NOTE]
->  Não use o `str` família de funções com cadeias de caracteres Unicode, que possam conter inseridos bytes nulos. Da mesma forma, não use o `wcs` família de funções com cadeias de caracteres MBCS (ou SBCS).
+> Não use `str` a família de funções com strings Unicode, que provavelmente contenham bytes nulos incorporados. Da mesma forma, `wcs` não use a família de funções com cordas MBCS (ou SBCS).
 
 Os fragmentos de código a seguir ilustram o uso de `_TCHAR` e `_tcsrev` para mapear os modelos MBCS, Unicode e SBCS.
 
@@ -66,30 +66,30 @@ _TCHAR *RetVal, *szString;
 RetVal = _tcsrev(szString);
 ```
 
-Se `_MBCS` tiver sido definido, o pré-processador mapeia esse fragmento para este código:
+Se `_MBCS` tiver sido definido, o pré-processador mapeia este fragmento para este código:
 
 ```cpp
 char *RetVal, *szString;
 RetVal = _mbsrev(szString);
 ```
 
-Se `_UNICODE` tiver sido definido, o pré-processador mapeia esse fragmento para este código:
+Se `_UNICODE` tiver sido definido, o pré-processador mapeia este fragmento para este código:
 
 ```cpp
 wchar_t *RetVal, *szString;
 RetVal = _wcsrev(szString);
 ```
 
-Se nem `_MBCS` nem `_UNICODE` ter sido definido, o pré-processador mapeia o fragmento ao código ASCII de byte único, da seguinte maneira:
+Se `_MBCS` nem `_UNICODE` foram definidos, o pré-processador mapeia o fragmento para um único byte código ASCII, da seguinte forma:
 
 ```cpp
 char *RetVal, *szString;
 RetVal = strrev(szString);
 ```
 
-Portanto, você pode escrever, manter e compilar um arquivo de código-fonte única para execução com rotinas que são específicas para qualquer um dos três tipos de conjuntos de caracteres.
+Portanto, você pode escrever, manter e compilar um arquivo de código de código de código único para executar com rotinas específicas para qualquer um dos três tipos de conjuntos de caracteres.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Texto e cadeias de caracteres](../text/text-and-strings-in-visual-cpp.md)<br/>
-[Usando tipos de dados TCHAR.H com código _MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md)
+[Texto e Cordas](../text/text-and-strings-in-visual-cpp.md)<br/>
+[Usando TCHAR. Tipos de dados H com código de _MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md)

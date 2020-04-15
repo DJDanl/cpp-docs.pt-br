@@ -1,9 +1,11 @@
 ---
 title: _mkdir, _wmkdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wmkdir
 - _mkdir
+- _o__mkdir
+- _o__wmkdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: 0d2fd45b566909a61a04a5cabb34c74b9b253430
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 56e525dd765ff2594eebcfe9a0aed37670b12e3e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951727"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338781"
 ---
 # <a name="_mkdir-_wmkdir"></a>_mkdir, _wmkdir
 
@@ -61,12 +64,12 @@ int _wmkdir(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dirname*<br/>
+*Dirname*<br/>
 Caminho para um novo diretório.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas funções retorna o valor 0 se o novo diretório foi criado. Em um erro, a função retorna-1 e define **errno** como a seguir.
+Cada uma dessas funções retorna o valor 0 se o novo diretório foi criado. Em um erro, a função retorna -1 e define **errno** da seguinte forma.
 
 **EEXIST** O diretório não foi criado porque *dirname* é o nome de um arquivo, diretório ou dispositivo existente.
 
@@ -76,9 +79,11 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 ## <a name="remarks"></a>Comentários
 
-A função **_mkdir** cria um novo diretório com o *dirname especificado.* **_mkdir** pode criar apenas um novo diretório por chamada, de modo que somente o último componente de *dirname* pode nomear um novo diretório. **_mkdir** não converte os delimitadores de caminho. No Windows NT, a barra invertida (\\) e a barra "/" são delimitadores de caminho válidos em cadeias de caracteres em rotinas de tempo de execução.
+A função **_mkdir** cria um novo diretório com o *dirname especificado.* **_mkdir** pode criar apenas um novo diretório por chamada, de modo que apenas o último componente do *dirname* pode nomear um novo diretório. **_mkdir** não traduz delimitadores de caminhos. No Windows NT, a barra invertida (\\) e a barra "/" são delimitadores de caminho válidos em cadeias de caracteres em rotinas de tempo de execução.
 
-**_wmkdir** é uma versão de caractere largo do **_mkdir**; o argumento *dirname* para **_wmkdir** é uma cadeia de caracteres largos. **_wmkdir** e **_mkdir** se comportam de outra forma.
+**_wmkdir** é uma versão ampla do **_mkdir;** o argumento *dirname* para **_wmkdir** é uma seqüência de caracteres amplo. **_wmkdir** e **_mkdir** se comportam de forma idêntica.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -95,7 +100,7 @@ A função **_mkdir** cria um novo diretório com o *dirname especificado.* **_m
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
@@ -124,7 +129,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Saída de Exemplo
+### <a name="sample-output"></a>Saída de exemplo
 
 ```Output
 Directory '\testtmp' was successfully created
@@ -140,7 +145,7 @@ Directory of C:\testtmp
 Directory '\testtmp' was successfully removed
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Controle de diretório](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

@@ -1,9 +1,11 @@
 ---
 title: mbrtoc16, mbrtoc323
-ms.date: 10/22/2019
+ms.date: 4/2/2020
 api_name:
 - mbrtoc16
 - mbrtoc32
+- _o_mbrtoc16
+- _o_mbrtoc32
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-ms.openlocfilehash: 793eadf433f3117d89b4f0dc7c8397762405406b
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: 91755d19eacf73f19700eed7fffbffc529d4e235
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811129"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340973"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
-Traduz o primeiro caractere multibyte UTF-8 em uma cadeia de caracteres no caractere UTF-16 ou UTF-32 equivalente.
+Traduz o primeiro caractere multibyte UTF-8 em uma seqüência para o caractere UTF-16 ou UTF-32 equivalente.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -60,39 +63,41 @@ size_t mbrtoc32(
 
 ### <a name="parameters"></a>Parâmetros
 
-\ de *destino*
-Ponteiro para o equivalente de **char16_t** ou **char32_t** do caractere multibyte UTF-8 a ser convertido. Se for NULL, a função não armazenará um valor.
+*Destino*\
+Ponteiro para o **char16_t** ou **char32_t** equivalente do caractere multibyte UTF-8 a converter. Se nula, a função não armazena um valor.
 
-\ de *origem*
-Ponteiro para a cadeia de caracteres multibyte UTF-8 para converter.
+*Fonte*\
+Ponteiro para a seqüência de caracteres multibyte UTF-8 para converter.
 
-\ *max_bytes*
-O número máximo de bytes na *origem* para examinar um caractere a ser convertido. Esse argumento deve ser um valor entre um e o número de bytes, incluindo qualquer terminador nulo, restante na *origem*.
+*max_bytes*\
+O número máximo de bytes na *fonte* para examinar um caractere a ser convertido. Este argumento deve ser um valor entre um e o número de bytes, incluindo qualquer exterminador nulo, permanecendo na *fonte*.
 
-*estado* \
-Ponteiro para um objeto de estado de conversão **mbstate_t** usado para interpretar a cadeia de caracteres multibyte UTF-8 para um ou mais caracteres de saída.
+*Estado*\
+Ponteiro para um objeto de estado de conversão **mbstate_t** usado para interpretar a seqüência de vários bytes UTF-8 para um ou mais caracteres de saída.
 
 ## <a name="return-value"></a>Valor retornado
 
-Em caso de sucesso, retorna o valor da primeira dessas condições que se aplicam, dado o valor do *estado* atual:
+No sucesso, devolve o valor da primeira dessas condições que se aplica, dado o valor atual do *estado:*
 
 |Valor|Condição|
 |-----------|---------------|
-|0|Os próximos *max_bytes* ou menos caracteres convertidos da *origem* correspondem ao caractere de largura nula, que é o valor armazenado se o *destino* não for nulo.<br /><br /> o *estado* contém o estado de deslocamento inicial.|
-|Entre 1 e *max_bytes*, inclusive|O valor retornado é o número de bytes de *origem* que concluem um caractere multibyte válido. O caractere largo convertido será armazenado se o *destino* não for nulo.|
-|-3|O próximo caractere largo resultante de uma chamada anterior para a função foi armazenado no *destino* se o *destino* não for nulo. Nenhum byte da *origem* é consumido por essa chamada para a função.<br /><br /> Quando a *origem* aponta para um caractere multibyte UTF-8 que requer mais de um caractere largo para representar (por exemplo, um par substituto), o valor de *estado* é atualizado para que a próxima chamada de função escreva o caractere adicional.|
-|-2|Os próximos *max_bytes* bytes representam um caractere de multibyte UTF-8 incompleto, mas potencialmente válido. Nenhum valor é armazenado no *destino*. Esse resultado pode ocorrer se *max_bytes* for zero.|
-|-1|Ocorreu um erro de codificação. Os próximos *max_bytes* ou menos bytes não contribuem para um caractere de multibyte UTF-8 válido e completo. Nenhum valor é armazenado no *destino*.<br /><br /> **EILSEQ** é armazenado em **errno** e o *estado* do valor do estado de conversão não é especificado.|
+|0|Os próximos *max_bytes* ou menos caracteres convertidos da *origem* correspondem ao caractere de largura nulo, que é o valor armazenado se o *destino* não for nulo.<br /><br /> *estado* contém o estado de mudança inicial.|
+|Entre 1 e *max_bytes,* inclusive|O valor devolvido é o número de bytes de *fonte* que completam um caractere multibyte válido. O caractere largo convertido é armazenado se o *destino* não for nulo.|
+|-3|O próximo caractere amplo resultante de uma chamada anterior para a função foi armazenado no *destino* se o *destino* não for nulo. Nenhum bytes da *fonte* são consumidos por esta chamada para a função.<br /><br /> Quando *a fonte* aponta para um caractere multibyte UTF-8 que requer mais de um caractere amplo para representar (por exemplo, um par de substitutos), então o valor do *estado* é atualizado para que a próxima chamada de função escreva o caractere adicional.|
+|-2|Os próximos *bytes de max_bytes* representam um caractere multibyte UTF-8 incompleto, mas potencialmente válido. Nenhum valor é armazenado no *destino*. Esse resultado pode ocorrer se *max_bytes* for zero.|
+|-1|Ocorreu um erro de codificação. Os próximos *max_bytes* ou menos bytes não contribuem para um caractere multibyte UTF-8 completo e válido. Nenhum valor é armazenado no *destino*.<br /><br /> **O EILSEQ** é armazenado em **errno** e o *estado* de valor do estado de conversão não é especificado.|
 
 ## <a name="remarks"></a>Comentários
 
-A função **mbrtoc16** lê até *max_bytes* bytes da *origem* para localizar o primeiro caractere multibyte completo, válido UTF-8 e, em seguida, armazena o caractere UTF-16 equivalente no *destino*. Se o caractere exigir mais de um caractere de saída UTF-16, como um par alternativo, o valor de *estado* será definido para armazenar o próximo caractere UTF-16 no *destino* na próxima chamada para **mbrtoc16**. A função **mbrtoc32** é idêntica, mas a saída é armazenada como um caractere UTF-32.
+A função **mbrtoc16** lê até *max_bytes* bytes da *fonte* para encontrar o primeiro caractere multibyte UTF-8 completo e válido e, em seguida, armazena o caractere UTF-16 equivalente no *destino*. Se o caractere exigir mais de um caractere de saída UTF-16, como um par de substitutos, então o valor *do estado* será definido para armazenar o próximo caractere UTF-16 no *destino* na próxima chamada para **mbrtoc16**. A função **mbrtoc32** é idêntica, mas a saída é armazenada como um caractere UTF-32.
 
-Se a *origem* for nula, essas funções retornarão o equivalente de uma chamada feita usando argumentos de **NULL** para o *destino*, `""` (uma cadeia de caracteres vazia, terminada em nulo) para a *origem*e 1 para *max_bytes*. Os valores passados de *Destination* e *max_bytes* são ignorados.
+Se *a fonte* for nula, essas funções retornam o equivalente a uma chamada feita usando argumentos de **NULL** para *destino*, `""` (uma seqüência vazia e nula) para *fonte*e 1 para *max_bytes*. Os valores passados de *destino* e *max_bytes* são ignorados.
 
-Se a *origem* não for nula, a função começará no início da cadeia de caracteres e inspecionará até *max_bytes* bytes para determinar o número de bytes necessários para concluir o próximo caractere multibyte UTF-8, incluindo quaisquer sequências de deslocamento. Se os bytes examinados contiverem um caractere de multibyte UTF-8 válido e completo, a função converterá o caractere no caractere ou caracteres equivalentes de 16 bits ou 32 bits largos. Se o *destino* não for nulo, a função armazenará o primeiro caractere de resultado (e, possivelmente, somente) no destino. Se forem necessários caracteres de saída adicionais, um valor será definido no *estado*, para que as chamadas subsequentes para a função gerem os caracteres adicionais e retornem o valor-3. Se nenhum caractere de saída for necessário, *State* será definido como o estado de deslocamento inicial.
+Se a *fonte* não for nula, a função começa no início da seqüência e inspeciona até *max_bytes* bytes para determinar o número de bytes necessários para completar o próximo caractere multibyte UTF-8, incluindo quaisquer seqüências de turno. Se os bytes examinados contiverem um caractere multibyte UTF-8 válido e completo, a função converterá o caractere em caracteres ou caracteres de 16 bits ou 32 bits de largura equivalentes. Se *o destino* não for nulo, a função armazena o primeiro (e possivelmente único) personagem de resultado no destino. Se forem necessários caracteres de saída adicionais, um valor será definido no *estado,* de modo que as chamadas subseqüentes para a função desaem os caracteres adicionais e retornem o valor -3. Se não forem necessários mais caracteres de saída, *o estado* será definido para o estado inicial de deslocamento.
 
-Para converter caracteres de multibyte não UTF-8 em caracteres UTF-16 LE, use as funções [mbrtowc](mbrtowc.md), [mbtowc ou _mbtowc_l](mbtowc-mbtowc-l.md) .
+Para converter caracteres multibytes não-UTF-8 em caracteres LE UTF-16, use as funções [mbrtowc](mbrtowc.md), [mbtowc ou _mbtowc_l.](mbtowc-mbtowc-l.md)
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -102,12 +107,12 @@ Para converter caracteres de multibyte não UTF-8 em caracteres UTF-16 LE, use a
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-\ de [conversão de dados](../data-conversion.md)
+[Conversão de dados](../data-conversion.md)\
 [Localidade](../locale.md)\
-[Interpretação de sequências de caracteres multibyte](../interpretation-of-multibyte-character-sequences.md)\
+[Interpretação de sequências de caracteres multibytes](../interpretation-of-multibyte-character-sequences.md)\
 [c16rtomb, c32rtomb](c16rtomb-c32rtomb1.md)\
 [mbrtowc](mbrtowc.md)\
-[mbsrtowcs](mbsrtowcs.md)\
+[Mbsrtowcs](mbsrtowcs.md)\
 [mbsrtowcs_s](mbsrtowcs-s.md)

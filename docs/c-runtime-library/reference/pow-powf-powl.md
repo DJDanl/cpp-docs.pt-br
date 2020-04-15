@@ -1,10 +1,12 @@
 ---
 title: pow, powf, powl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - powl
 - pow
 - powf
+- _o_pow
+- _o_powf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 863d2b76ec131670b10eefc086fa3485bd0a983d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b181959ac05814a673ab11f33e4cfc5a39e3869e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950296"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333115"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
-Calcula *x* elevado à potência de *y*.
+Calcula *x* elevado ao poder de *y*.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -68,36 +71,38 @@ long double pow( long double x, int y );  // C++ only
 *x*<br/>
 Base.
 
-*y*<br/>
+*Y*<br/>
 Expoente.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna o valor de *x*<sup>*y*</sup>. Nenhuma mensagem de erro é impressa em estouro ou estouro negativo.
 
 |Valores de x e y|Valor retornado de pow|
 |-----------------------|-------------------------|
-|*x* ! = 0,0 e *y* = = 0,0|1|
-|*x* = = 0,0 e *y* = = 0,0|1|
-|*x* = = 0,0 e *y* < 0|INF|
+|*x* != 0,0 e *y* == 0,0|1|
+|*x* == 0,0 e *y* == 0,0|1|
+|*x* == 0,0 e *y* < 0|INF|
 
 ## <a name="remarks"></a>Comentários
 
-**pow** não reconhece valores inteiros de ponto flutuante maiores que 2<sup>64</sup> (por exemplo, 1,0 E100).
+**pow** não reconhece valores de ponto flutuante integral superiores a 2<sup>64</sup> (por exemplo, 1.0E100).
 
-o **pow** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+**pow** tem uma implementação que usa o Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-Como C++ o permite sobrecarga, você pode chamar qualquer uma das várias sobrecargas de **pow**. Em um programa C, **pow** sempre usa dois valores **Double** e retorna um valor **Double** .
+Como c++ permite sobrecarga, você pode chamar qualquer uma das várias sobrecargas de **pow**. Em um programa C, **pow** sempre pega dois valores **duplos** e retorna um valor **duplo.**
 
-A sobrecarga `pow(int, int)` não está mais disponível. Se você usar essa sobrecarga, o compilador poderá emitir [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Para evitar esse problema, converta o primeiro parâmetro para **Double**, **float**ou **Long** **Double**.
+A sobrecarga `pow(int, int)` não está mais disponível. Se você usar esta sobrecarga, o compilador pode emitir [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Para evitar esse problema, lance o primeiro parâmetro para **dobrar,** **flutuar**ou **dobrar.** **double**
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-|-|-|
-|**pow**, **powf**, **powl**|\<math.h>|\<math.h> ou \<cmath>|
+|**pow**, **powf,** **powl**|\<math.h>|\<math.h> ou \<cmath>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -120,7 +125,7 @@ int main( void )
 2.0 to the power of 3.0 is 8.0
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>

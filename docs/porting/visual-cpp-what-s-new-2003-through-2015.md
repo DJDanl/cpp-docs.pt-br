@@ -2,12 +2,12 @@
 title: Novidades do Visual C++ de 2003 até 2015
 ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 1e5454e749d93a817caa9ca13553e203f96e038b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 48b812bf43918d7fbc37d20d0ef1b02348759544
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446499"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332092"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novidades do Visual C++ de 2003 até 2015
 
@@ -20,19 +20,19 @@ Esta página reúne todas as páginas de "Novidades" para todas as versões de V
 
 No Visual Studio 2015 e posterior, as melhorias contínuas na conformidade do compilador podem, às vezes, alterar a forma pela qual o compilador entende o código-fonte existente. Quando isso acontecer, você poderá encontrar erros novos ou diferentes durante o build ou até diferenças de comportamento no código que foi compilado anteriormente e parecia executar corretamente.
 
-Felizmente, essas diferenças têm pouco ou nenhum impacto sobre a maior parte do código-fonte e quando as alterações de código-fonte ou outras alterações são necessárias para resolver essas diferenças, as correções geralmente são pequenas e descomplicadas. Incluímos muitos exemplos de código-fonte que eram aceitáveis e que, talvez, precisem ser alterados *(antes)* e as correções para corrigi-los *(depois)* .
+Felizmente, essas diferenças têm pouco ou nenhum impacto sobre a maior parte do código-fonte e quando as alterações de código-fonte ou outras alterações são necessárias para resolver essas diferenças, as correções geralmente são pequenas e descomplicadas. Incluímos muitos exemplos de código-fonte que eram aceitáveis e que, talvez, precisem ser alterados *(antes)* e as correções para corrigi-los *(depois)*.
 
 Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de build, elas não afetam a compatibilidade binária entre as atualizações de versões do Visual C++. Um tipo mais grave de alteração, ao *alteração significativa* pode afetar a compatibilidade binária, mas esses tipos de interrupções de compatibilidade binária ocorrem somente entre as versões principais do Visual C++. Por exemplo, entre o Visual C++ 2013 e Visual C++ 2015. Para obter informações sobre as alterações significativas que ocorreram entre o Visual C++ 2013 e o Visual C++ 2015, consulte [Histórico de alterações do Visual C++ de 2003 a 2015](../porting/visual-cpp-change-history-2003-2015.md).
 
 - [Melhorias de conformidade no Visual Studio 2015](#VS_RTM)
 
-- [Melhorias de conformidade no Visual Studio 2015 – Atualização 1](#VS_Update1)
+- [Melhorias de conformidade no Visual Studio 2015, Atualização 1](#VS_Update1)
 
-- [Melhorias de conformidade no Visual Studio 2015 – Atualização 2](#VS_Update2)
+- [Melhorias de conformidade no Visual Studio 2015, Atualização 2](#VS_Update2)
 
-- [Melhorias de conformidade no Visual Studio 2015 – Atualização 3](#VS_Update3)
+- [Melhorias de conformidade no Visual Studio 2015, Atualização 3](#VS_Update3)
 
-### <a name="VS_RTM"></a> Melhorias de conformidade no Visual Studio 2015
+### <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a>Melhorias de conformidade no Visual Studio 2015
 
 - **Opção /Zc:forScope-**
 
@@ -42,7 +42,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
     Command line warning  D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release
    ```
 
-   A opção foi comumente usada para permitir código não padrão que usa variáveis de loop após o momento em que deveriam ter saído do escopo, de acordo com o padrão. Ela só era necessária para compilar com a opção `/Za`, já que sem `/Za`, o uso de uma variável for loop após o final do loop sempre é permitido. Se a conformidade com os padrões não é importante nesse caso (por exemplo, se o código não se destina à portabilidade para outros compiladores), você pode desabilitar a opção `/Za` (ou definir a propriedade **Desabilitar extensões de linguagem** como **Não**). Se você deseja escrever código portátil e em conformidade com os padrões, você deve reescrever o código, movendo a declaração de tais variáveis para um ponto fora do loop, para ficar em conformidade com o padrão.
+   A opção foi comumente usada para permitir código não padrão que usa variáveis de loop após o momento em que deveriam ter saído do escopo, de acordo com o padrão. Ela só era necessária para compilar com a opção `/Za`, uma vez que sem `/Za`, o uso de uma variável for loop após o final do loop sempre é permitido. Se a conformidade com os padrões não for importante nesse caso (por exemplo, se o código não se destinar à portabilidade para outros compiladores), você poderá desabilitar a opção `/Za` (ou definir a propriedade **Desabilitar extensões de linguagem** como **Não**). Se você deseja escrever código portátil e em conformidade com os padrões, você deve reescrever o código, movendo a declaração de tais variáveis para um ponto fora do loop, para ficar em conformidade com o padrão.
 
    ```cpp
     // zc_forScope.cpp
@@ -63,7 +63,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
 - Não é possível executar testes de unidade com C++/CLI na linha de comando com mstest.exe. Em vez disso, use vstest.console.exe
 
-- **palavra-chave mutável.**
+- **Palavra-chave mutable.**
 
    O especificador de classe de armazenamento **mutable** não é mais permitido em locais em que anteriormente era compilado sem erros. Agora, o compilador gera um erro C2071 (classe de armazenamento inválida). Segundo o padrão, o especificador mutable só pode ser aplicado a nomes de membros de dados de classe e não pode ser aplicado a nomes declarados const ou static e também não pode ser aplicado para fazer referência a membros.
 
@@ -145,9 +145,9 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
    Para corrigir esse problema, remova `__declspec(align)` da declaração da função. Uma vez que ela não tinha efeito, removê-la não altera nada.
 
-- **Tratamento de exceções**
+- **Manuseio de exceções**
 
-   Há algumas alterações para o tratamento de exceções. Primeiro, os objetos de exceção precisam ser copiáveis ou móveis. O código a seguir é compilado no Visual Studio 2013, mas não é compilado no Visual Studio 2015:
+   Há algumas alterações para o tratamento de exceções. Primeiro, os objetos de exceção precisam ser copiáveis ou móveis. O código a seguir era compilado no Visual Studio 2013, mas não é compilado no Visual Studio 2015:
 
    ```cpp
     struct S {
@@ -163,7 +163,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
     }
    ```
 
-   O problema é que o construtor de cópia é particular, portanto o objeto não pode ser copiado como acontece no curso normal de tratamento de exceção. O mesmo se aplica quando o construtor de cópia é declarado **explicit**.
+   O problema é que o construtor de cópia é particular, portanto o objeto não pode ser copiado como acontece no curso normal de tratamento de exceção. O mesmo se aplica quando o construtor de cópia é declarado como **explicit**.
 
    ```cpp
     struct S {
@@ -179,7 +179,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
    Para atualizar o código, verifique se o construtor de cópia do objeto de exceção é público e não está marcado como **explicit**.
 
-   A captura de uma exceção pelo valor também exige que o objeto de exceção seja copiável. O código a seguir é compilado no Visual Studio 2013, mas não é compilado no Visual Studio 2015:
+   A captura de uma exceção pelo valor também exige que o objeto de exceção seja copiável. O código a seguir era compilado no Visual Studio 2013, mas não é compilado no Visual Studio 2015:
 
    ```cpp
     struct B {
@@ -253,9 +253,9 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
 - **Posicionamento de new e delete**
 
-   Uma alteração foi feita no operador **delete** para colocá-lo em conformidade com o padrão C++14. Detalhes da alteração dos padrões podem ser encontrados em [Desalocação dimensionada de C++](https://isocpp.org/files/papers/n3778.html). As alterações adicionam uma forma de operador **delete** global que usa um parâmetro de tamanho. A alteração da falha é que, se você já estava usando um operador **delete** com a mesma assinatura (para corresponder a um operador **placement new**), ocorre um erro do compilador (C2956, que ocorre no ponto em que o **placement new** é usado, já que essa é a posição no código em que o compilador tenta identificar um operador **delete** correspondente apropriado).
+   Uma alteração foi feita no operador **delete** para colocá-lo em conformidade com o padrão C++14. Detalhes da alteração dos padrões podem ser encontrados em [Desalocação dimensionada de C++](https://isocpp.org/files/papers/n3778.html). As alterações adicionam uma forma do operador **delete** global que usa um parâmetro de tamanho. A mudança de quebra é que se você estava usando anteriormente uma **exclusão** do operador com a mesma assinatura (para corresponder a um novo operador **de colocação),** você receberá um erro de compilador (C2956, que ocorre no ponto em que a **nova colocação** é usada, já que essa é a posição no código onde o compilador tenta identificar um operador **de exclusão** adequado).
 
-   A função `void operator delete(void *, size_t)` era um operador **placement delete** correspondente à função **de**placement new`void * operator new(size_t, size_t)` no C++11. Com a desalocação dimensionada de C++14, essa função **delete** é agora uma *função de desalocação comum* (operador **delete** global). O padrão indica que, se o uso de um **placement new** procurar uma função **delete** correspondente e localizar uma função de desalocação comum, o programa estará mal formado.
+   A função `void operator delete(void *, size_t)` era um operador **placement delete** correspondente à função `void * operator new(size_t, size_t)` de **placement new** no C++11. Com a dealocação de tamanho C++14, esta função **de exclusão** é agora uma *função usual de desalocação* (operador de **exclusão** global). O padrão indica que, se o uso de um **placement new** procurar uma função **delete** correspondente e localizar uma função de desalocação comum, o programa estará mal formado.
 
    Por exemplo, suponha que seu código defina um **placement new** e um **placement delete**:
 
@@ -264,21 +264,21 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
     void operator delete(void*, std::size_t) noexcept;
    ```
 
-   O problema ocorre devido à correspondência nas assinaturas de função entre um operador **placement delete** que você definiu e o novo operador **delete** de dimensionamento global. Considere se você pode usar um tipo diferente de `size_t` para operadores **placement new** e **delete**.  Observe que o tipo do **typedef** `size_t` é dependente do compilador; é um **typedef** para **int não assinado** no Visual C++. Uma boa solução é usar um tipo enumerado como este:
+   O problema ocorre devido à correspondência nas assinaturas de função entre um operador **placement delete** que você definiu e o novo operador **delete** de dimensionamento global. Considere se você pode usar um tipo diferente de `size_t` para operadores **placement new** e **delete**.  Observe que o tipo de  **typedef**`size_t` depende do compilador. Trata-se de um **typedef** para **unsigned int** no Visual C++. Uma boa solução é usar um tipo enumerado como este:
 
    ```cpp
     enum class my_type : size_t {};
    ```
 
-   Em seguida, altere sua definição de posicionamento **new** e **delete** use esse tipo como o segundo argumento, em vez de `size_t`. Você também precisará atualizar as chamadas para o **posicionamento novo** para passar o novo tipo (por exemplo, usando `static_cast<my_type>` para converter do valor inteiro) e atualizar a definição de **novo** e **excluir** para conversão de volta para o tipo de inteiro. Você não precisa usar um **enum** para isso; um tipo de classe com um membro `size_t` também funcionaria.
+   Em seguida, altere sua definição de posicionamento **new** e **delete** use esse tipo como o segundo argumento, em vez de `size_t`. Você também precisará atualizar as chamadas para **colocação nova** para passar `static_cast<my_type>` o novo tipo (por exemplo, usando para converter do valor inteiro) e atualizar a definição de **novo** e **excluir** para lançar de volta para o tipo inteiro. Você não precisa usar um **enum** para isso; um tipo de `size_t` classe com um membro também funcionaria.
 
    Uma solução alternativa é que você poderá eliminar completamente o **placement new**. Se seu código usar **placement new** para implementar um pool de memória no qual o argumento de posicionamento é o tamanho do objeto que está sendo alocado ou excluído, o recurso de desalocação dimensionada poderá ser adequado para substituir seu próprio código de pool de memória personalizado e você poderá abandonar as funções de posicionamento e simplesmente usar seu próprio operador **delete** de dois argumentos em vez das funções de posicionamento.
 
-   Se você não quiser atualizar o código imediatamente, reverta para o comportamento antigo usando a opção do compilador `/Zc:sizedDealloc-`. Se você usar essa opção, as funções de **exclusão** de dois argumentos não existirão e não causarão um conflito com o operador de **exclusão de posicionamento** .
+   Se não quiser atualizar o código imediatamente, você poderá reverter para o comportamento antigo usando a opção do compilador `/Zc:sizedDealloc-`. Se você usar essa opção, as funções de **exclusão** de dois argumentos não existem e não causarão um conflito com o operador **de exclusão de colocação.**
 
 - **Membros de dados de união**
 
-   Membros de dados de uniões não podem mais ter tipos de referência. O código a seguir foi compilado com êxito no Visual Studio 2013, mas gera um erro no Visual Studio 2015.
+   Membros de dados de uniões não podem mais ter tipos de referência. O código a seguir era compilado com êxito no Visual Studio 2013, mas gera um erro no Visual Studio 2015.
 
    ```cpp
     union U1 {
@@ -510,11 +510,11 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
    No Visual Studio 2013 e Visual Studio 2015, o compilador gera um construtor de cópia para uma classe quando essa classe tem um construtor de movimento definido pelo usuário, mas nenhum construtor de cópia definido pelo usuário. No Dev14, esse construtor de cópia implicitamente gerado também é marcado "= delete".
 
-### <a name="VS_Update1"></a> Melhorias de conformidade no Visual Studio 2015 – Atualização 1
+### <a name="conformance-improvements-in-visual-studio-2015-update-1"></a><a name="VS_Update1"></a>Melhorias de conformidade no Visual Studio 2015 Atualização 1
 
 - **Classes base virtuais particulares e herança indireta**
 
-   As versões anteriores do compilador permitiam que uma classe derivada chamasse funções membro de suas classes base de `private virtual` *derivadas indiretamente* . Esse comportamento antigo estava incorreto e não estava em conformidade com o padrão C++. O compilador não aceita mais código escrito dessa maneira e emite o erro do compilador C2280 como resultado.
+   As versões anteriores do compilador permitiam que uma classe derivada chamasse funções membro de suas classes base *derivadas indiretamente* `private virtual`. Esse comportamento antigo estava incorreto e não estava em conformidade com o padrão C++. O compilador não aceita mais código escrito dessa maneira e emite o erro do compilador C2280 como resultado.
 
    ```Output
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function
@@ -821,7 +821,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
    Os exemplos dos outros avisos restaurados são fornecidos em suas respectivas documentações.
 
-- **#include: uso do especificador de diretório pai '.. ' em PathName** (afeta apenas `/Wall` `/WX`)
+- **#include: uso do especificador do diretório pai '..' no nome de caminho** (afeta apenas `/Wall` `/WX`)
 
    As versões anteriores do compilador não detectavam o uso do especificador '..' de diretório pai no nome do caminho de diretivas `#include`. O código escrito dessa maneira geralmente se destina a incluir cabeçalhos que existem fora do projeto usando caminhos relativos de projeto de forma incorreta. Esse comportamento antigo criava um risco de que o programa poderia ser compilado pela inclusão de um arquivo de origem diferente do pretendido pelo programador ou desses caminhos relativos não serem portáteis para outros ambientes de build. Agora o compilador detecta e notifica o programador do código escrito dessa maneira e emite um aviso do compilador C4464 opcional, caso esteja habilitado.
 
@@ -843,7 +843,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
    Além disso, embora o compilador não forneça um diagnóstico específico, também é recomendável que especificador ".." de diretório pai não seja usado para especificar diretórios de inclusão de seu projeto.
 
-- **#pragma Optimize () ultrapassa o final do arquivo de cabeçalho** (afeta apenas `/Wall` `/WX`)
+- **#pragma optimize() ultrapassa o fim do arquivo de cabeçalho** (afeta apenas `/Wall` `/WX`)
 
    As versões anteriores do compilador não detectavam alterações nas configurações de sinalizador de otimização que escapam de um arquivo de cabeçalho incluído em uma unidade de tradução. Agora o compilador detecta e notifica o programador do código escrito dessa maneira e emite um aviso do compilador C4426 opcional no local do `#include` problemático, caso esteja habilitado. Esse aviso será emitido apenas se as alterações estiverem em conflito com os sinalizadores de otimização definidos por argumentos de linha de comando para o compilador.
 
@@ -876,7 +876,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
     #include "C4426.h"
    ```
 
-- **Aviso de #pragma incompatível (push)** e **aviso de #pragma (pop)** (afeta apenas `/Wall` `/WX`)
+- **#pragma warning(push)** e **#pragma warning(pop) incompatíveis** (afeta apenas `/Wall` `/WX`)
 
    As versões anteriores do compilador não detectavam a combinação de alterações de estado `#pragma warning(push)` com alterações de estado `#pragma warning(pop)` em um arquivo de origem diferente, o que é raramente pretendido. Esse comportamento antigo criava um risco do programa ser compilado com um conjunto de avisos habilitados diferentes do que o programador pretendia, resultando, possivelmente, em comportamento silencioso de runtime incorreto. Agora o compilador detecta e notifica o programador do código escrito dessa maneira e emite um aviso do compilador C5031 opcional no local do `#pragma warning(pop)` correspondente, caso esteja habilitado. Esse aviso inclui uma observação que referencia o local do `#pragma warning(push)` correspondente.
 
@@ -932,7 +932,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
    Embora incomum, às vezes o código é escrito intencionalmente dessa maneira. O código escrito dessa maneira é sensível às alterações na ordem `#include`; quando possível, é recomendável que os arquivos de código-fonte gerenciem o estado de aviso de forma autocontida.
 
-- **Aviso de #pragma sem correspondência (push)** (afeta somente `/Wall` `/WX`)
+- **#pragma warning(push) sem correspondência** (afeta apenas `/Wall` `/WX`)
 
    As versões anteriores do compilador não detectavam alterações de estado `#pragma warning(push)` sem correspondência no final de uma unidade de tradução. O compilador agora detecta e notifica o programador sobre código escrito dessa maneira e emite um aviso C5032 opcional do compilador no local do `#pragma warning(push)` sem correspondência, quando habilitado. Esse aviso será emitido somente se não houver erros de compilação na unidade de tradução.
 
@@ -985,7 +985,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
     warning C4720: unreachable code
    ```
 
-   Em muitos casos, esse aviso só pode ser emitido durante a compilação com otimizações habilitadas, já que as otimizações podem embutir mais chamadas de função, eliminar código redundante ou, caso contrário, possibilitar a determinação de que determinado código está inacessível. Observamos que as novas instâncias do aviso C4720 ocorriam frequentemente nos blocos **try/catch**, principalmente em relação ao uso de [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True).
+   Em muitos casos, esse aviso só pode ser emitido durante a compilação com otimizações habilitadas, já que as otimizações podem embutir mais chamadas de função, eliminar código redundante ou, caso contrário, possibilitar a determinação de que determinado código está inacessível. Observamos que as novas instâncias do aviso C4720 ocorreram frequentemente nos blocos **try/catch**, principalmente em relação ao uso de [std::find](../standard-library/algorithm-functions.md#find).
 
    Exemplo (antes)
 
@@ -1013,7 +1013,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
     }
    ```
 
-### <a name="VS_Update2"></a> Melhorias de conformidade no Visual Studio 2015 – Atualização 2
+### <a name="conformance-improvements-in-visual-studio-2015-update-2"></a><a name="VS_Update2"></a>Melhorias de conformidade no Visual Studio 2015 Update 2
 
 - **Erros e avisos adicionais podem ser emitidos como resultado do suporte parcial à expressão SFINAE**
 
@@ -1104,7 +1104,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
     };
    ```
 
-- `volatile` as **variáveis de membro impedem que construtores definidos implicitamente e operadores de atribuição** as versões anteriores do compilador permitissem que uma classe que tem variáveis de membro **voláteis** tenha construtores de cópia/movimentação padrão e os operadores de atribuição de cópia/movimentação padrão gerados automaticamente. Esse comportamento antigo estava incorreto e não estava em conformidade com o padrão C++. Agora o compilador considera que uma classe que tem variáveis de membro voláteis tenha operadores de construção e de atribuição não triviais que impedem que as implementações padrão desses operadores sejam geradas automaticamente. Quando essa classe é um membro de uma união (ou uma união anônima dentro de uma classe), os construtores copiar/mover e os operadores de atribuição copiar/mover da união (ou a classe que contém a união anônima) serão implicitamente definidos como excluídos. A tentativa de construir ou copiar a união (ou a classe que contém a união anônima) sem defini-la explicitamente é um erro e o compilador emite um erro de compilador C2280 como resultado.
+- `volatile` **Variáveis de membro evitam operadores de atribuição e construtores definidos implicitamente** As versões anteriores do compilador permitiam que os construtores padrão de copiar/mover e os operadores de atribuição padrão de copiar/mover de uma classe com variáveis de membro **volatile** fossem gerados automaticamente. Esse comportamento antigo estava incorreto e não estava em conformidade com o padrão C++. Agora o compilador considera que uma classe que tem variáveis de membro voláteis tenha operadores de construção e de atribuição não triviais que impedem que as implementações padrão desses operadores sejam geradas automaticamente. Quando essa classe é um membro de uma união (ou uma união anônima dentro de uma classe), os construtores copiar/mover e os operadores de atribuição copiar/mover da união (ou a classe que contém a união anônima) serão implicitamente definidos como excluídos. A tentativa de construir ou copiar a união (ou a classe que contém a união anônima) sem defini-la explicitamente é um erro e o compilador emite um erro de compilador C2280 como resultado.
 
    ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -1273,13 +1273,13 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
    A correção do código escrito dessa maneira pode exigir que as definições de operador sejam retiradas de um arquivo de cabeçalho e movidas para um arquivo de origem correspondente.
 
-### <a name="VS_Update3"></a> Melhorias de conformidade no Visual Studio 2015 – Atualização 3
+### <a name="conformance-improvements-in-visual-studio-2015-update-3"></a><a name="VS_Update3"></a>Melhorias de conformidade no Visual Studio 2015 Atualização 3
 
 - **std::is_convertable agora detecta autoatribuição**(biblioteca padrão) Versões anteriores da característica de tipo `std::is_convertable` não detectam corretamente autoatribuição de um tipo de classe quando o construtor de cópia é particular ou excluído. Agora, `std::is_convertable<>::value` é definido corretamente como **false** quando aplicado a um tipo de classe com um construtor de cópia particular ou excluído.
 
    Não há nenhum diagnóstico de compilador associado a essa alteração.
 
-   {1&gt;Exemplo&lt;1}
+   Exemplo
 
    ```cpp
     #include <type_traits>
@@ -1299,7 +1299,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");
    ```
 
-   Nas versões anteriores do Visual C++, as asserções estáticas na parte inferior deste exemplo passavam porque `std::is_convertable<>::value` era definido incorretamente como **true**. Agora `std::is_convertable<>::value` é definido corretamente como **false**, fazendo com que as asserções estáticas falhem.
+   Nas versões anteriores do Visual C++, as asserções estáticas na parte inferior deste exemplo passavam porque `std::is_convertable<>::value` era definido incorretamente como **true**. Agora, `std::is_convertable<>::value` é definido corretamente como **false**, fazendo com que as asserções estáticas falhem.
 
 - **Construtores triviais de cópia e movimentação padronizados ou excluídos respeitam especificadores de acesso**
 
@@ -1444,7 +1444,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
     };
    ```
 
-- **Arquivos de cabeçalho pré-compilado (PCH) e diretivas de #include incompatíveis** (afeta apenas `/Wall` `/WX`)
+- **Arquivos de PCH (cabeçalho pré-compilado) e diretivas #include incompatíveis** (afeta apenas `/Wall` `/WX`)
 
    As versões anteriores do compilador aceitavam diretivas `#include` incompatíveis em arquivos de origem entre compilações `-Yc` e `-Yu` ao usar arquivos de PCH (cabeçalho pré-compilado). O código escrito dessa maneira não é mais aceito pelo compilador. Agora o compilador emite o aviso do compilador CC4598 para ajudar a identificar diretivas `#include` incompatíveis ao usar arquivos de PCH.
 
@@ -1488,7 +1488,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
     #include "c.h"
    ```
 
-- **Arquivos de cabeçalho pré-compilado (PCH) e diretórios de inclusão incompatíveis** (afeta apenas `/Wall` `/WX`)
+- **Arquivos de PCH (cabeçalho pré-compilado) e diretórios #include incompatíveis** (afeta apenas `/Wall` `/WX`)
 
    As versões anteriores do compilador aceitavam argumentos de linha de comando de diretórios de inclusão incompatíveis (`-I`) para o compilador entre compilações `-Yc` e `-Yu` ao usar arquivos de PCH (cabeçalho pré-compilado). O código escrito dessa maneira não é mais aceito pelo compilador.   Agora o compilador emite o aviso do compilador CC4599 para ajudar a identificar argumentos de linha de comando de diretórios de inclusão incompatíveis (`-I`) ao usar arquivos de PCH.
 
@@ -1523,7 +1523,7 @@ O MSVC dá suporte a estes recursos de linguagem ISO C++11:
 - Operadores de conversão explícita.
 - Listas de inicializador e inicialização uniforme.
 - Literais brutos de cadeia de caracteres.
-- {1&gt;Modelos Variadic&lt;1}.
+- Modelos Variadic.
 - Modelos de alias.
 - Funções excluídas.
 - NSDMIs (inicializadores de membros de dados não estáticos).
@@ -1550,12 +1550,12 @@ Todos os contêineres agora suportam os requisitos de elementos refinados do C++
 Suporte para estes recursos do C++14:
 
 - "Transparent operator functors" less<>, greater<>, plus<>, multiplies<>, e assim por diante.
-- make_unique\<T > (args...) e make_unique < T [] > (n)
+- make_unique\<T>(args...) e make_unique<T[]>(n)
 - funções de não membro cbegin()/cend(), rbegin()/rend() e crbegin()/crend().
 - \<atomic> recebeu inúmeras melhorias de desempenho.
 - \<type_traits> recebeu grande estabilização e correções de código.
 
-### <a name="breaking-changes"></a>Alterações significativas
+### <a name="breaking-changes"></a>Alterações de quebra
 
 Esse suporte aperfeiçoado para padrões ISO C/C++ pode exigir alterações do código existente de modo que ele fique em conformidade com o C++11 e seja compilado corretamente no Visual C++ e Visual Studio 2013.
 
@@ -1580,9 +1580,9 @@ Esse suporte aperfeiçoado para padrões ISO C/C++ pode exigir alterações do c
 
 ### <a name="windows-runtime-app-development-support"></a>Suporte ao desenvolvimento de aplicativos do Windows Runtime
 
-- **Suporte para tipos demarcados em estruturas de valor.**
+- **Suporte para tipos demarcados em structs de valor.**
 
-   Agora você pode definir tipos de valor usando campos que podem ser nulos — por exemplo, `IBox<int>^` em vez de **int**. Isso significa que os campos podem ter um valor ou ser iguais a **nullptr**.
+   Agora você pode definir tipos de valor usando campos `IBox<int>^` que podem ser nulos — por exemplo, ao contrário do **int**. Isso significa que os campos podem ter um valor ou ser iguais a **nulo**.
 
 - **Informações de exceção mais completas.**
 
@@ -1596,7 +1596,7 @@ Esse suporte aperfeiçoado para padrões ISO C/C++ pode exigir alterações do c
 
    As APIs públicas do Windows Runtime agora podem ser preteridas e apresentar uma mensagem personalizada que aparecerá como um aviso de compilação, além de poderem oferecer orientação sobre a migração.
 
-- **Melhorias no depurador.**
+- **Melhorias do depurador.**
 
    Suporte para depuração de interoperação nativa/JavaScript, diagnóstico de exceção do Windows Runtime e depuração de código assíncrono (Windows Runtime e PPL).
 
@@ -1607,7 +1607,7 @@ Esse suporte aperfeiçoado para padrões ISO C/C++ pode exigir alterações do c
 
 - Melhorias no depurador. Suporte para depuração assíncrona e depuração Apenas Meu Código.
 - Categorias de análise de código. Agora é possível exibir a saída categorizada do analisador de código para ajudar a localizar e corrigir defeitos de código.
-- {1&gt;Diagnósticos XAML.&lt;1} Agora é possível diagnosticar problemas da interface do usuário e de capacidade de bateria no XAML.
+- Diagnósticos XAML. Agora é possível diagnosticar problemas da interface do usuário e de capacidade de bateria no XAML.
 - Melhorias nos gráficos e na depuração da GPU.
 - Captura e reprodução remotas em dispositivos reais.
 - Depuração simultânea do C++ AMP e da CPU.
@@ -1618,7 +1618,7 @@ Esse suporte aperfeiçoado para padrões ISO C/C++ pode exigir alterações do c
 
 - Suporte a Pipeline de conteúdo da imagem para formato DDS alfa pré-multiplicado.
 - O Editor de Imagens usa internamente o alfa pré-multiplicado na renderização e, assim, evita a renderização de artefatos como auréolas escuras.
-- Editores de imagem e modelo. A criação de filtros definidos pelo usuário é suportada agora no Shader Designer no Editor de Imagens e no Editor de Modelos.
+- Editores de imagem e modelo. Agora o Shader Designer, o Editor de Imagens e o Editor de Modelos permitem a criação de filtros definidos pelo usuário.
 
 ### <a name="ide-and-productivity"></a>IDE e produtividade
 
@@ -1632,19 +1632,19 @@ Esse suporte aperfeiçoado para padrões ISO C/C++ pode exigir alterações do c
 - ' (aspas simples)
 - "(aspas duplas)
 
-**Recursos adicionais de preenchimento automático do C++.**
+**Recursos adicionais de preenchimento automático de C++.**
 
 - Adiciona o ponto e vírgula para tipos de classe.
 - Preenche parênteses para literais de cadeia de caracteres bruta.
-- Conclui comentários de várias linhas (/\* \*/)
+- Completa comentários multi-linha\* \*(/ /)
 
 **Localizar Todas as Referências** agora resolve e filtra automaticamente referências em segundo plano depois que exibe a lista de correspondências textuais.
 
-**Filtragem da lista de membros baseada no contexto.** Os membros inacessíveis são filtrados e retirados das listas de membros do IntelliSense. Por exemplo, os membros particulares não são exibidos na lista de membros a menos que você esteja alterando o código que implementa o tipo. Enquanto a lista de membros está aberta, você pode pressionar **Ctrl**+**J** para remover um nível de filtragem (aplica-se somente à janela de lista de membros atual). Você pode pressionar **Ctrl**+**J** novamente para remover a filtragem textual e exibir todos os membros.
+**Filtragem da lista de membros baseada no contexto.** Os membros inacessíveis são filtrados e retirados das listas de membros do IntelliSense. Por exemplo, os membros particulares não são exibidos na lista de membros a menos que você esteja alterando o código que implementa o tipo. Enquanto a lista de membros estiver aberta, você pode pressionar **Ctrl**+**J** para remover um nível de filtragem (aplica-se apenas à janela atual da lista de membros). Você pode pressionar **Ctrl**+**J** novamente para remover a filtragem textual e mostrar cada membro.
 
 **Rolagem da ajuda do parâmetro.** A assinatura de função exibida na dica de ferramenta de parameter-help agora muda de acordo com o número de parâmetros digitados, em vez de mostrar apenas uma assinatura arbitrária e não atualizá-la com base no contexto atual. A ajuda de parâmetro também funciona corretamente quando exibida em funções aninhadas.
 
-**Alternar Cabeçalho/Arquivo de Código.** Agora é possível alternar entre um cabeçalho e seu arquivo de código correspondente usando um comando no menu de atalho ou um atalho de teclado.
+**Ativar/desativar arquivo de cabeçalho/código.** Agora é possível alternar entre um cabeçalho e seu arquivo de código correspondente usando um comando no menu de atalho ou um atalho de teclado.
 
 **Janela Propriedades do projeto C++ redimensionável**
 
@@ -1652,7 +1652,7 @@ Esse suporte aperfeiçoado para padrões ISO C/C++ pode exigir alterações do c
 
 **Melhoria de reconhecimento de DPI.** A configuração Reconhecimento de DPI para arquivos de manifesto de aplicativo agora oferece suporte à configuração "Reconhecimento de DPI Alto por Monitor".
 
-**Alternância mais rápida de configuração.** Em grandes aplicativos, a alternância de configurações, principalmente operações de alternância subsequentes, é executada com muito mais rapidez+.
+**Comutação de configuração mais rápida.** Em grandes aplicativos, a alternância de configurações, principalmente operações de alternância subsequentes, é executada com muito mais rapidez+.
 
 **Eficiência do tempo de compilação.** Diversas otimizações e o uso de vários núcleos tornam as compilações mais rápidas, principalmente para projetos grandes. As compilações incrementais para aplicativos C++ que têm referências a C++ WinMD também estão muito mais rápidas.
 
@@ -1682,7 +1682,7 @@ Esse suporte aperfeiçoado para padrões ISO C/C++ pode exigir alterações do c
 ### <a name="windows-runtime-app-development-support"></a>Suporte ao desenvolvimento de aplicativos do Windows Runtime
 
 - **Modelo de interface do usuário baseada em XAML nativo**. Para aplicativos do Windows Runtime, você pode usar o novo modelo de interface do usuário baseada em XAML nativo.
-- **Extensões de componentes do Visual C++** . Essas extensões simplificam o consumo de objetos do Windows Runtime, que são uma parte necessária dos aplicativos do Windows Runtime. Para obter mais informações, confira [Roadmap for Windows Runtime apps using C++](../cppcx/universal-windows-apps-cpp.md) (Roteiro para aplicativos do Windows Runtime usando C++) e [Referência de linguagem do Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
+- **Extensões de componentes do Visual C++**. Essas extensões simplificam o consumo de objetos do Windows Runtime, que são uma parte necessária dos aplicativos do Windows Runtime. Para obter mais informações, confira [Roadmap for Windows Runtime apps using C++](../cppcx/universal-windows-apps-cpp.md) (Roteiro para aplicativos do Windows Runtime usando C++) e [Referência de linguagem do Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
 - **Jogos do DirectX**. Você pode desenvolver jogos envolventes usando o novo suporte do DirectX para aplicativos do Windows Runtime.
 - **Interoperabilidade XAML/DirectX**. Os aplicativos do Windows Runtime que usam XAML e DirectX agora são interoperados com eficiência.
 - **Desenvolvimento de DLL do componente do Windows Runtime**. Desenvolvimento de DLL do componente torna o ambiente do Windows Runtime extensível.
@@ -1706,7 +1706,7 @@ O C++ AMP acelera a execução do código C++, aproveitando o hardware paralelo 
 
 **Depuração.** A experiência de depuração para aplicativos que usam o C++ AMP para a GPU de destino é exatamente igual a depuração de outros aplicativos em C++. Isso inclui as novas adições de depuração paralela mencionadas anteriormente.
 
-**Criação de perfil.** Atualmente, o suporte à criação de perfil para atividades de GPU é baseado em C++ AMP e outros modelos de programação baseados em Direct3D.
+**Perfil.** Atualmente, o suporte à criação de perfil para atividades de GPU é baseado em C++ AMP e outros modelos de programação baseados em Direct3D.
 
 #### <a name="general-parallel-programming-enhancements"></a>Melhorias na programação paralela em geral
 
@@ -1727,21 +1727,21 @@ Além da janela **Tarefas Paralelas** e **Pilhas Paralelas**, o Visual Studio 20
 
 **Suporte a modelos do Visual Studio.** Agora você pode usar a tecnologia de modelos do Visual Studio para criar modelos de projeto e item em C++.
 
-**Carga da solução assíncrona.** Os projetos agora são carregados de forma assíncrona, as partes principais da solução primeiro — para que você possa começar a trabalhar mais rapidamente.
+**Carga de solução assíncrona.** Os projetos agora são carregados de forma assíncrona, as partes principais da solução primeiro — para que você possa começar a trabalhar mais rapidamente.
 
 **Implantação automatizada para depuração remota.** A implantação de arquivos para depuração remota no Visual C++ foi simplificada. A opção **Implantar** no menu de contexto do projeto copia automaticamente para o computador remoto os arquivos especificados nas propriedades de configuração de depuração. Não é mais necessário copiar arquivos manualmente no computador remoto.
 
 **IntelliSense para C++/CLI.** C++/CLI agora tem total suporte IntelliSense. Recursos de IntelliSense, como informações rápidas, ajuda de parâmetro, membros da lista e preenchimento automático agora funcionam para C++/CLI. Além disso, outras melhorias de IntelliSense e IDE listadas neste documento também funcionam para C++/CLI.
 
-**Dicas mais valiosas da ferramenta IntelliSense.** As dicas de ferramenta Informações Rápidas do IntelliSense do C++ agora apresentam informações de estilo de comentários de documentação XML mais valiosas. Se você estiver usando uma API de uma biblioteca – por exemplo, C++ AMP – que tenha comentários de documentação XML, a dica de ferramenta do IntelliSense mostrará mais informações do que apenas a declaração. Além disso, se o seu código tiver os comentários de documentação XML, as dicas de ferramentas do IntelliSense mostrarão informações mais valiosas.
+**Dicas de ferramenta mais avançadas da ferramenta IntelliSense.** As dicas de ferramenta Informações Rápidas do IntelliSense do C++ agora apresentam informações de estilo de comentários de documentação XML mais valiosas. Se você estiver usando uma API de uma biblioteca – por exemplo, C++ AMP – que tenha comentários de documentação XML, a dica de ferramenta do IntelliSense mostrará mais informações do que apenas a declaração. Além disso, se o seu código tiver os comentários de documentação XML, as dicas de ferramentas do IntelliSense mostrarão informações mais valiosas.
 
-**Construções de código C++.** O código de esqueleto está disponível para alternância, if-else, loop e outras construções básicas de código, na lista suspensa Membros da Lista. Selecione um trecho de código da lista para inseri-lo em seu código e, em seguida, preencha a lógica necessária. Crie também seus próprios trechos personalizados de código para uso no editor.
+**Constructos de código C++.** O código de esqueleto está disponível para alternância, if-else, loop e outras construções básicas de código, na lista suspensa Membros da Lista. Selecione um trecho de código da lista para inseri-lo em seu código e, em seguida, preencha a lógica necessária. Crie também seus próprios trechos personalizados de código para uso no editor.
 
-**Melhorias nos membros da lista.** A lista suspensa **Membros da Lista** aparece automaticamente quando você digita o código no editor de código. Os resultados são filtrados, para que apenas os membros relevantes sejam exibidos conforme você digita. Você pode controlar o tipo de lógica de filtragem usada pela Lista de Membros na caixa de diálogo **Opções**, em **Editor de Texto** > **C/C++**  > **Avançado**.
+**Melhorias nos membros da lista.** A lista de paradas **Membros** da lista é exibida automaticamente à medida que você digita código no editor de código. Os resultados são filtrados, para que apenas os membros relevantes sejam exibidos conforme você digita. Você pode controlar o tipo de lógica de filtragem usada pela Lista de Membros na caixa de diálogo **Opções**, em **Editor de Texto** > **C/C++** > **Avançado**.
 
-**Colorização Semântica.** Tipos, enumerações, macros e outros tokens C++ agora têm colorização por padrão.
+**Colorização semântica.** Tipos, enumerações, macros e outros tokens C++ agora têm colorização por padrão.
 
-**Realce de referência.** A seleção de um símbolo agora realça todas as instâncias do símbolo no arquivo atual. Pressione **Ctrl**+**Shift**+**Seta para Cima** ou **Ctrl**+**Shift**+**Seta para Baixo** para percorrer as referências realçadas. Você pode desabilitar esse recurso na caixa de diálogo **Opções**, em **Editor de Texto** > **C/C++**  > **Avançado**.
+**Realce de referência.** A seleção de um símbolo agora realça todas as instâncias do símbolo no arquivo atual. Pressione **Ctrl**+**Shift**+**Up Seta** ou **Ctrl**+**Shift**+**Down Seta** para mover entre as referências destacadas. Você pode desabilitar esse recurso na caixa de diálogo **Opções**, em **Editor de Texto** > **C/C++** > **Avançado**.
 
 ### <a name="application-lifecycle-management-tools"></a>Ferramentas de gerenciamento de ciclo de vida do aplicativo
 
@@ -1753,7 +1753,7 @@ Aqui estão algumas outras melhorias da análise de código:
 
 - Novos avisos de simultaneidade ajudarão você a evitar bugs de simultaneidade, assegurando o uso correto das disciplinas de bloqueio em programas multi-threaded do C/C++. O analisador detecta possíveis condições de corrida, inversões na ordem de bloqueio, violações de contrato de bloqueio de chamador/receptor, operações de sincronização não correspondentes e outros bugs de simultaneidade.
 - Especifique as regras de C++ que você quer aplicar em execuções de análise de código usando conjuntos de regras.
-- Na janela **Análise de Código**, é possível inserir um pragma no código-fonte que suprime um aviso selecionado.
+- Na janela **Análise de código,** você pode inserir no código-fonte um pragma que suprime um aviso selecionado.
 - Melhore a precisão e a integridade da análise de código estático usando a nova versão de SAL (Linguagem de Anotação do Código-Fonte) da Microsoft para descrever como uma função usa seus parâmetros, as suposições que faz sobre eles e as garantias que oferece quando concluída.
 - Suporte para projetos do C++ de 64 bits.
 
@@ -1763,11 +1763,11 @@ Use a nova estrutura de teste da unidade C++ no Visual Studio para escrever test
 
 #### <a name="architecture-dependency-graphs"></a>Gráficos de dependência de arquitetura
 
-Para entender melhor o seu código, gere gráficos de dependência para binário, classe, namespace e arquivos de inclusão em uma solução. Na barra de menus, escolha **Arquitetura** > **Gerar Grafo de Dependência** e, em seguida, **Para Solução** ou **Para Arquivo de Inclusão** para gerar um grafo de dependência. Quando a geração do gráfico for concluída, você poderá explorá-lo expandindo cada nó, saber mais sobre os relacionamentos de dependência percorrendo os nós e procurar o código-fonte escolhendo **Exibir Conteúdo** no menu de atalho de um nó. Para gerar um grafo de dependência para arquivos de inclusão, no menu de atalho de um arquivo de código-fonte \*.cpp ou arquivo de cabeçalho \*.h, escolha **Gerar Grafo de Arquivos de Inclusão**.
+Para entender melhor o seu código, gere gráficos de dependência para binário, classe, namespace e arquivos de inclusão em uma solução. Na barra de menus, escolha **'Gráfico de geração de dependência'** de **arquitetura** > e, em seguida, **para solução** ou para **incluir arquivo** para gerar um gráfico de dependência. Quando a geração do gráfico for concluída, você poderá explorá-lo expandindo cada nó, saber mais sobre os relacionamentos de dependência percorrendo os nós e procurar o código-fonte escolhendo **Exibir Conteúdo** no menu de atalho de um nó. Para gerar um gráfico de dependência para incluir \*arquivos, no menu \*de atalho para um arquivo de código fonte .cpp ou arquivo de cabeçalho .h, escolha **Gerar gráfico de arquivos de inclusão**.
 
 #### <a name="architecture-explorer"></a>Architecture Explorer
 
-Usando o **Gerenciador de Arquitetura**, você pode explorar os ativos, projetos ou arquivos em sua solução C++. Na barra de menus, escolha **Arquitetura** > **Windows** > **Gerenciador de Arquitetura**. Você pode selecionar um nó em que esteja interessado, por exemplo, **Modo de Exibição de Classe**. Nesse caso, o lado direito da janela de ferramentas é expandido com uma lista de namespaces. Se você selecionar um namespace, uma nova coluna mostrará uma lista de classes, estruturas e enumerações nesse namespace. Continue a explorar esses ativos ou volte para a coluna na extremidade esquerda para iniciar outra consulta. Confira **Localizar código com o Gerenciador de Arquitetura**.
+Usando o **Architecture Explorer,** você pode explorar os ativos em sua solução C++, projetos ou arquivos. Na barra de menus, escolha **Arquitetura** > **Do Windows** > **Architecture Explorer**. Você pode selecionar um nó em que esteja interessado, por exemplo, **Modo de Exibição de Classe**. Nesse caso, o lado direito da janela de ferramentas é expandido com uma lista de namespaces. Se você selecionar um namespace, uma nova coluna mostrará uma lista de classes, estruturas e enumerações nesse namespace. Continue a explorar esses ativos ou volte para a coluna na extremidade esquerda para iniciar outra consulta. Consulte **Find Code with Architecture Explorer**.
 
 #### <a name="code-coverage"></a>Cobertura de código
 
@@ -1777,37 +1777,37 @@ A cobertura de código foi atualizada para instrumentar dinamicamente arquivos b
 
 ### <a name="c-compiler-and-linker"></a>Compilador e vinculador do C++
 
-**Palavra-chave auto** A palavra-chave **auto** tem uma nova finalidade. Use o significado padrão da palavra-chave **auto** para declarar uma variável cujo tipo é deduzido da expressão de inicialização na declaração da variável. A opção do compilador `/Zc:auto` invoca o significado novo ou anterior da palavra-chave **auto**.
+**auto Keyword.** A palavra-chave **auto** tem uma nova finalidade. Use o significado padrão da palavra-chave **auto** para declarar uma variável cujo tipo é deduzido da expressão de inicialização na declaração da variável. A opção do compilador `/Zc:auto` invoca o significado novo ou anterior da palavra-chave **auto**.
 
-**Especificador de tipo decltype.** O especificador de tipo **decltype** retorna o tipo de uma expressão especificada. Use o especificador de tipo **decltype** em combinação com a palavra-chave **auto** para declarar um tipo complexo ou conhecido apenas pelo compilador. Por exemplo, use a combinação para declarar uma função de modelo cujo tipo de retorno depende dos tipos de argumentos do modelo. Ou, declare uma função de modelo que chame outra função e, em seguida, retorna o tipo de retorno da função chamada.
+**Especificador de tipo decltype.** O especificador do tipo **de decltype** retorna o tipo de uma expressão especificada. Use o especificador de tipo **de cltype** em combinação com a palavra-chave **automática** para declarar um tipo complexo ou conhecido apenas no compilador. Por exemplo, use a combinação para declarar uma função de modelo cujo tipo de retorno depende dos tipos de argumentos do modelo. Ou, declare uma função de modelo que chame outra função e, em seguida, retorna o tipo de retorno da função chamada.
 
-**Expressões lambda.** Funções “lambda” têm um corpo de função, mas não têm nome. Elas combinam as melhores características de ponteiros de função e objetos de função. Use uma função lambda sozinha, como um parâmetro de função de modelo em vez de um objeto de função, ou em conjunto com a palavra-chave **auto** para declarar uma variável cujo tipo é uma lambda.
+**Lambda Expressions.** Funções “lambda” têm um corpo de função, mas não têm nome. Elas combinam as melhores características de ponteiros de função e objetos de função. Use uma função lambda por si só, como um parâmetro de função de modelo em vez de um objeto de função, ou juntamente com a palavra-chave **automática** para declarar uma variável cujo tipo é um lambda.
 
 **Referência Rvalue.** O declarador de referência RValue (&&) declara uma referência a um rvalue. Uma referência rvalue permite usar semântica de transferência de recursos e encaminhamento perfeito para gravar construtores, funções e modelos mais eficientes.
 
-**Declaração static_assert.** Uma declaração **static_assert** testa uma asserção de software no tempo de compilação, ao contrário de outros mecanismos de asserção, que testam no tempo de execução. Se a asserção falhar, a compilação falhará e uma mensagem de erro específica será emitida.
+**Declaração static_assert.** Uma **declaração static_assert** testa uma afirmação de software no momento da compilação, ao contrário de outros mecanismos de afirmação que testam em tempo de execução. Se a asserção falhar, a compilação falhará e uma mensagem de erro específica será emitida.
 
-**Palavras-chave nullptr e __nullptr.** O MSVC permite que você use a palavra-chave **nullptr** com o código nativo ou com o código gerenciado. A palavra-chave **nullptr** indica que um identificador de objeto, ponteiro interior ou tipo de ponteiro nativo não aponta para um objeto. O compilador interpreta **nullptr** como código gerenciado quando você usa a opção do compilador `/clr` e como código nativo quando você não usa a opção `/clr`.
-A palavra-chave **__nullptr** específica da Microsoft tem o mesmo significado que **nullptr**, mas aplica-se apenas ao código nativo. Se você compilar o código C/C++ nativo usando a opção do compilador `/clr`, o compilador não poderá determinar se a palavra-chave **nullptr** é um termo nativo ou gerenciado. Para tornar sua intenção clara para o compilador, use a palavra-chave nullptr para especificar o termo gerenciado e **__nullptr** para especificar o termo nativo.
+**Palavras-chave nullptr e __nullptr.** O MSVC permite que você use a palavra-chave **nullptr** com o código nativo ou com o código gerenciado. A **palavra-chave nullptr** indica que uma alça de objeto, ponteiro interior ou tipo de ponteiro nativo não aponta para um objeto. O compilador interpreta **nullptr** como código gerenciado quando você usa a opção do compilador `/clr` e como código nativo quando você não usa a opção `/clr`.
+A palavra-chave **__nullptr** específica da Microsoft tem o mesmo significado **de nullptr,** mas se aplica apenas ao código nativo. Se você compilar o código C/C++ nativo usando a opção do compilador `/clr`, o compilador não poderá determinar se a palavra-chave **nullptr** é um termo nativo ou gerenciado. Para tornar sua intenção clara para o compilador, use a palavra-chave nullptr para especificar o termo gerenciado e **__nullptr** para especificar o termo nativo.
 
 **Opção do compilador /Zc:trigraphs.** Por padrão, o suporte para trígrafos está desabilitado. Use a opção do compilador `/Zc:trigraphs` para habilitar o suporte a trígrafos.
 Um trígrafo consiste em dois pontos de interrogação consecutivos (??) seguidos por um terceiro caractere exclusivo. O compilador substitui um trígrafo por um caractere de pontuação correspondente. Por exemplo, o compilador substitui o trígrafo ??= pelo caractere # (sinal de número). Use trígrafos em arquivos de origem C que utilizam um conjunto de caracteres sem determinados caracteres de pontuação.
 
-**Nova opção Otimização Guiada Por Perfil.** PogoSafeMode é uma nova opção de otimização guiada por perfil que permite que você especifique se quer usar o modo de segurança ou o modo rápido ao otimizar o aplicativo. O modo de segurança é thread-safe, mas é mais lento do que o modo rápido. Modo rápido é o comportamento padrão.
+**Nova opção de Otimização guiada por perfil.** PogoSafeMode é uma nova opção de otimização guiada por perfil que permite que você especifique se quer usar o modo de segurança ou o modo rápido ao otimizar o aplicativo. O modo de segurança é thread-safe, mas é mais lento do que o modo rápido. Modo rápido é o comportamento padrão.
 
 **Nova opção de CLR (Common Language Runtime) /clr:nostdlib.** Uma nova opção foi adicionada para `/clr` (Compilação do Common Language Runtime). Será emitido um erro de compilação se versões diferentes da mesma biblioteca forem incluídas. A nova opção permite que você exclua as bibliotecas CLR padrão, para que seu programa possa usar uma versão especificada.
 
 **Nova diretiva pragma detect_mismatch.** A diretiva de pragma detect_mismatch permite que você coloque uma marca em seus arquivos que seja comparada a outras com o mesmo nome. Se houver diversos valores para o mesmo nome, o vinculador emitirá um erro.
 
-**Intrínsecos de XOP, FMA4 e LWP.** Novas funções intrínsecas foram adicionadas para dar suporte a intrínsecos de XOP adicionados para Visual Studio 2010 SP1, intrínsecos de FMA4 adicionados para Visual Studio 2010 SP1 e intrínsecos de LWP adicionados para tecnologias de processador do Visual Studio 2010 SP1. Use __cpuid, __cpuidex para determinar quais tecnologias de processador são compatíveis com um computador específico.
+**Intrínsecos de XOP, de FMA4 e de LWP.** Novas funções intrínsecas foram adicionadas para dar suporte a intrínsecos de XOP adicionados para Visual Studio 2010 SP1, intrínsecos de FMA4 adicionados para Visual Studio 2010 SP1 e intrínsecos de LWP adicionados para tecnologias de processador do Visual Studio 2010 SP1. Use __cpuid, __cpuidex para determinar quais tecnologias de processador são compatíveis com um computador específico.
 
 ### <a name="visual-studio-c-projects-and-the-build-system"></a>Projetos do Visual Studio C++ e o sistema de build
 
-**MSBuild.** Projetos e soluções do Visual C++ agora são criados usando o MSBuild.exe, que substitui o VCBuild.exe. MSBuild é a mesma ferramenta de compilação extensível, flexível e baseada em XML, usada por outras linguagens e tipos de projeto do Visual Studio. Por causa dessa alteração, os arquivos do projeto do Visual Studio C++ agora usam um formato de arquivo XML e têm a extensão de nome de arquivo .vcxproj. Os arquivos de projeto do Visual Studio C ++ de versões anteriores do Visual Studio são convertidos automaticamente no novo formato de arquivo.
+**Msbuild.** Projetos e soluções do Visual C++ agora são criados usando o MSBuild.exe, que substitui o VCBuild.exe. MSBuild é a mesma ferramenta de compilação extensível, flexível e baseada em XML, usada por outras linguagens e tipos de projeto do Visual Studio. Por causa dessa alteração, os arquivos do projeto do Visual Studio C++ agora usam um formato de arquivo XML e têm a extensão de nome de arquivo .vcxproj. Os arquivos de projeto do Visual Studio C ++ de versões anteriores do Visual Studio são convertidos automaticamente no novo formato de arquivo.
 
-**Diretórios VC++.** A configuração dos diretórios VC++ agora está localizada em dois locais. Use páginas de propriedades do projeto para definir valores por projeto para diretórios VC++. Use o **Gerenciador de Propriedades** e uma folha de propriedades para definir valores globais para cada configuração para os diretórios VC++.
+**Diretórios VC++.** A configuração dos diretórios VC++ agora está localizada em dois locais. Use páginas de propriedades do projeto para definir valores por projeto para diretórios VC++. Use o **Gerenciador de Propriedades** e uma planilha de propriedades para definir valores globais por configuração para diretórios VC++.
 
-**Dependências por projeto.** Em versões anteriores, dependências definidas entre projetos eram armazenadas no arquivo de soluções. Quando essas soluções são convertidas no novo formato de arquivo de projeto, as dependências são convertidas em referências por projeto. Essa alteração pode afetar os aplicativos porque os conceitos de dependências de solução e as referências por projeto são diferentes.
+**Dependências de projeto a projeto.** Em versões anteriores, dependências definidas entre projetos eram armazenadas no arquivo de soluções. Quando essas soluções são convertidas no novo formato de arquivo de projeto, as dependências são convertidas em referências por projeto. Essa alteração pode afetar os aplicativos porque os conceitos de dependências de solução e as referências por projeto são diferentes.
 
 **Macros e variáveis de ambiente.** A nova macro _ITERATOR_DEBUG_LEVEL invoca o suporte à depuração de iteradores. Use esta macro em vez das macros _SECURE_SCL e _HAS_ITERATOR_DEBUGGING mais antigas.
 
@@ -1815,7 +1815,7 @@ Um trígrafo consiste em dois pontos de interrogação consecutivos (??) seguido
 
 **Bibliotecas de Runtime de Simultaneidade.** A estrutura de Runtime de Simultaneidade é compatível com aplicativos e componentes executados simultaneamente e é a estrutura para a programação de aplicativos simultâneos no Visual C++. Para dar suporte à programação de aplicativo simultâneos, a PPL (Biblioteca de Padrões Paralelos) fornece algoritmos e contêineres para fins gerais, para executar o paralelismo refinado. A Biblioteca de Agentes Assíncronos fornece um modelo de programação baseado em ator e interfaces de passagem de mensagens para tarefas de fluxo de dados e pipelining de alta granularidade.
 
-**Biblioteca C++ padrão.** A lista a seguir descreve muitas das alterações feitas na Biblioteca C++ padrão.
+**Biblioteca C++ Padrão.** A lista a seguir descreve muitas das alterações feitas na Biblioteca C++ padrão.
 
 - O novo recurso de linguagem C++ de referência rvalue foi usado para implementar semântica de transferência de recursos e encaminhamento perfeito para muitas funções na Biblioteca de Modelos Padrão. Semântica de transferência de recursos e encaminhamento perfeito melhoram significativamente o desempenho das operações que alocam ou atribuem variáveis ou parâmetros.
 - As referências a Rvalue também são usadas para implementar a nova classe `unique_ptr`, que é um tipo de ponteiro inteligente mais seguro do que a classe `auto_ptr`. A classe `unique_ptr` é móvel, mas não copiável, implementa uma semântica de propriedade estrita sem afetar a segurança e funciona bem com contêineres que reconhecem as referências de rvalue. A classe `auto_ptr` foi preterida.
@@ -1854,31 +1854,31 @@ A maioria dos avisos `/analyze` (Análise de Código da Empresa) foi removida da
 
 #### <a name="animation-and-d2d-support"></a>Animação e suporte D2D
 
-O MFC agora é compatível com a animação e elementos gráficos do Direct2D. A biblioteca do MFC tem várias novas classes MFC e funções para dar suporte a essa funcionalidade. Também há dois novos passo a passo que mostram como adicionar um objeto D2D e um objeto de animação a um projeto. Essas instruções são **Passo a passo: adicionando um objeto D2D a um projeto MFC** e **Passo a passo: adicionando animação a um projeto MFC**.
+O MFC agora é compatível com a animação e elementos gráficos do Direct2D. A biblioteca do MFC tem várias novas classes MFC e funções para dar suporte a essa funcionalidade. Também há dois novos passo a passo que mostram como adicionar um objeto D2D e um objeto de animação a um projeto. Estes passo a passo são **Passo a passo: Adicionando um objeto D2D a um projeto mfc** e **passo a passo: adicionando animação a um projeto MFC**.
 
 ### <a name="ide"></a>IDE
 
-**IntelliSense aperfeiçoado.** O IntelliSense para o Visual C++ foi completamente reformulado para ser mais rápido, preciso e capaz de processar projetos maiores. Para alcançar essa melhoria, o IDE faz distinção entre como um desenvolvedor exibe e modifica o código-fonte e como o IDE usa configurações de projeto e o código-fonte para criar uma solução.
-Devido a essa separação de obrigações, os recursos de navegação, como **Modo de Exibição de Classe** e a nova caixa de diálogo **Navegar Para**, são tratados por um sistema baseado em um novo arquivo de banco de dados de desktop do SQL Server (.sdf), que substitui o antigo arquivo de navegação não compilado (.ncb). Recursos do IntelliSense, como Informações rápidas, Preenchimento automático e Ajuda do parâmetro só analisa unidades de tradução quando necessário. Os recursos híbridos, como a nova janela **Hierarquia de Chamada**, usam uma combinação dos recursos de navegação e do IntelliSense.
+**IntelliSense melhorado.** O IntelliSense para o Visual C++ foi completamente reformulado para ser mais rápido, preciso e capaz de processar projetos maiores. Para alcançar essa melhoria, o IDE faz distinção entre como um desenvolvedor exibe e modifica o código-fonte e como o IDE usa configurações de projeto e o código-fonte para criar uma solução.
+Devido a essa separação de obrigações, os recursos de navegação, como **Modo de Exibição de Classe** e a nova caixa de diálogo **Navegar Para**, são tratados por um sistema baseado em um novo arquivo de banco de dados de desktop do SQL Server (.sdf), que substitui o antigo arquivo de navegação não compilado (.ncb). Recursos do IntelliSense, como Informações rápidas, Preenchimento automático e Ajuda do parâmetro só analisa unidades de tradução quando necessário. Recursos híbridos, como a nova janela **Hierarquia de chamadas,** usam uma combinação dos recursos de navegação e IntelliSense.
 Como o IntelliSense só processa as informações que você precisa no momento, o IDE é mais ágil na resposta. Além disso, como informações mais atualizadas, janelas e exibições IDE são mais precisas. Por fim, como a infraestrutura do IDE é mais bem organizada, mais capaz e escalonável, pode processar projetos maiores.
 
 **Detecção aperfeiçoada de erros do IntelliSense.** O IDE detecta melhor os erros que podem causar perda do IntelliSense e exibe sublinhados ondulados vermelhos sob eles. Além disso, o IDE informa os erros do IntelliSense para a **Janela de Lista de Erros**. Para exibir o código que está causando o problema, clique duas vezes no erro na **Janela de Lista de Erros**.
 
 **Recurso #include de preenchimento automático.** O IDE dá suporte para preenchimento automático da palavra-chave `#include`. Quando você digita `#include`, o IDE cria uma caixa de listagem suspensa de arquivos de cabeçalho válidos. Se continuar digitando um nome de arquivo, o IDE filtrará a lista com base na sua entrada. A qualquer momento,selecione na lista o arquivo que você quer incluir. Isso permite que você inclua arquivos rapidamente sem saber o nome exato deles.
 
-**Navegar Para.** A caixa de diálogo **Navegar Para** permite procurar todos os símbolos e arquivos no projeto que correspondem a uma cadeia de caracteres especificada. Os resultados da pesquisa são revisados imediatamente conforme você digita caracteres adicionais na cadeia de pesquisa. O campo de comentários **Resultados** informa o número de itens encontrados e ajuda você a decidir se deseja restringir a pesquisa. Os campos de comentários **Tipo/Escopo**, **Local** e **Visualização** ajudam a desfazer a ambiguidade de itens com nomes semelhantes. Além disso, você pode estender esse recurso para dar suporte a outras linguagens de programação.
+**Navegue para.** A caixa de diálogo **Navegar para** você permite que você procure por todos os símbolos e arquivos do seu projeto que correspondam a uma seqüência de string especificada. Os resultados da pesquisa são revisados imediatamente conforme você digita caracteres adicionais na cadeia de pesquisa. O **campo de** feedback resultados informa o número de itens encontrados e ajuda você a decidir se restringe sua pesquisa. Os campos de comentários **Tipo/Escopo**, **Local** e **Visualização** ajudam a desfazer a ambiguidade de itens com nomes semelhantes. Além disso, você pode estender esse recurso para dar suporte a outras linguagens de programação.
 
 **Depuração e criação de perfil paralelas.** O depurador do Visual Studio está ciente do Runtime de Simultaneidade e ajuda você a solucionar problemas de aplicativos de processamento paralelo. Use a nova ferramenta de criador de perfil de simultaneidade para visualizar o comportamento geral do aplicativo. Use também a nova janela de ferramentas para visualizar o estado de tarefas e suas pilhas de chamadas.
 
-**Designer da faixa de opções.** O **Designer de Faixa de Opções** é um editor gráfico que permite criar e modificar uma interface do usuário da faixa de opções do MFC. A faixa de opções final da interface do usuário é representada por um arquivo de recurso baseado em XML (.mfcribbon-ms). Para aplicativos existentes, capture a interface do usuário da faixa de opções atual adicionando temporariamente algumas linhas de código e invocando o **Designer de Faixa de Opções**. Depois que o arquivo de recursos da faixa de opções é criado, substitua a interface do usuário da faixa de opções manuscrita com algumas instruções que carregam o recurso de faixa de opções.
+**Designer de Faixa de Opções.** O **Designer de Faixa de Opções** é um editor gráfico que permite criar e modificar uma interface do usuário da faixa de opções do MFC. A faixa de opções final da interface do usuário é representada por um arquivo de recurso baseado em XML (.mfcribbon-ms). Para aplicativos existentes, capture a interface do usuário da faixa de opções atual adicionando temporariamente algumas linhas de código e invocando o **Designer de Faixa de Opções**. Depois que o arquivo de recursos da faixa de opções é criado, substitua a interface do usuário da faixa de opções manuscrita com algumas instruções que carregam o recurso de faixa de opções.
 
-**Hierarquia de Chamadas.** A janela **Hierarquia de Chamadas** permite navegar para todas as funções chamadas por uma função específica ou para todas as funções que chamam uma função específica.
+**Ligue para hierarquia.** A janela **Hierarquia de** chamada permite que você navegue para todas as funções que são chamadas por uma função específica, ou para todas as funções que chamam uma função específica.
 
 ### <a name="tools"></a>Ferramentas
 
-**Assistente de classe do MFC.** O Visual C++ 2010 recupera a conceituada ferramenta Assistente de classe do MFC. O Assistente de classe MFC é uma maneira conveniente de adicionar classes, mensagens e variáveis em um projeto sem a necessidade de modificar manualmente os conjuntos de arquivos de origem.
+**Assistente de classe MFC.** O Visual C++ 2010 recupera a conceituada ferramenta Assistente de classe do MFC. O Assistente de classe MFC é uma maneira conveniente de adicionar classes, mensagens e variáveis em um projeto sem a necessidade de modificar manualmente os conjuntos de arquivos de origem.
 
-**Assistente de controle de ATL.** O Assistente de Controle de ATL não preenche mais o campo `ProgID` automaticamente. Se um controle de ATL não tiver um `ProgID`, outras ferramentas poderão não funcionar com ele. Um exemplo de uma ferramenta que requer que os controles tenham uma `ProgID` é a caixa de diálogo **Inserir Controle Ativo**. Para obter mais informações sobre a caixa de diálogo, confira **Inserir caixa de diálogo de controle ActiveX**.
+**Assistente de Controle ATL.** O Assistente de Controle de ATL não preenche mais o campo `ProgID` automaticamente. Se um controle de ATL não tiver um `ProgID`, outras ferramentas poderão não funcionar com ele. Um exemplo de uma ferramenta que requer que os controles tenham uma `ProgID` é a caixa de diálogo **Inserir Controle Ativo**. Para obter mais informações sobre a caixa de diálogo, consulte **Inserir caixa de diálogo de controle ActiveX**.
 
 ### <a name="microsoft-macro-assembler-reference"></a>Referência do Microsoft Macro Assembler
 
@@ -1888,12 +1888,12 @@ A adição do tipo de dados YMMWORD é compatível com operandos multimídia de 
 
 ### <a name="visual-c-integrated-development-environment-ide"></a>IDE (Ambiente de Desenvolvimento Integrado) do Visual C++
 
-- Caixas de diálogo criadas em aplicativos ATL, MFC e Win32 agora estão em conformidade com as diretrizes de estilo do Windows Vista. Quando você cria um novo projeto usando o Visual Studio 2008, todas as caixas de diálogo inseridas no aplicativo deverão estar em conformidade com as diretrizes de estilo do Windows Vista. Se você recompilar um projeto criado com uma versão anterior do Visual Studio, as caixas de diálogo existentes manterão a mesma aparência de antes. Para obter mais informações de como inserir caixas de diálogo em seu aplicativo, confira **Editor de Caixa de Diálogo**.
+- Caixas de diálogo criadas em aplicativos ATL, MFC e Win32 agora estão em conformidade com as diretrizes de estilo do Windows Vista. Quando você cria um novo projeto usando o Visual Studio 2008, todas as caixas de diálogo inseridas no aplicativo deverão estar em conformidade com as diretrizes de estilo do Windows Vista. Se você recompilar um projeto criado com uma versão anterior do Visual Studio, as caixas de diálogo existentes manterão a mesma aparência de antes. Para obter mais informações sobre como inserir caixas de diálogo em seu aplicativo, consulte **Editor de diálogo**.
 
-- O assistente do **Projeto de ATL** agora tem uma opção para registrar componentes para todos os usuários. Começando com o Visual Studio 2008, os componentes COM e as bibliotecas de tipos criados pelo assistente de **Projeto de ATL** são registrados no nó HKEY_CURRENT_USER do Registro, a menos que você selecione **Registrar componente para todos os usuários**.
-- O assistente de **Projeto de ATL** não fornece mais uma opção para criar projetos de ATL atribuídos. Começando com o Visual Studio 2008, o assistente de **Projeto da ATL** não tem uma opção para alterar o status atribuído de um novo projeto. Todos os novos projetos de ATL que o assistente cria agora são não atribuídos.
+- O assistente **do Projeto ATL** agora tem a opção de registrar componentes para todos os usuários. Começando com o Visual Studio 2008, os componentes COM e as bibliotecas de tipos criados pelo assistente de **Projeto de ATL** são registrados no nó HKEY_CURRENT_USER do Registro, a menos que você selecione **Registrar componente para todos os usuários**.
+- O assistente **do Projeto ATL** não oferece mais uma opção para criar projetos ATL atribuídos. Começando com o Visual Studio 2008, o assistente de **Projeto da ATL** não tem uma opção para alterar o status atribuído de um novo projeto. Todos os novos projetos de ATL que o assistente cria agora são não atribuídos.
 - A gravação do Registro pode ser redirecionada. Com a introdução do Windows Vista, a gravação em certas áreas do Registro exige um programa para ser executado no modo elevado. Não é aconselhável executar o Visual Studio sempre no modo elevado. O redirecionamento por usuário redireciona automaticamente gravações de Registro de HKEY_CLASSES_ROOT para HKEY_CURRENT_USER sem qualquer alteração na programação.
-- O **Designer de Classe** agora tem suporte limitado para código C++ nativo. Nas versões anteriores do Visual Studio, o **Designer de Classe** funcionava somente com Visual C# e Visual Basic. Os usuários do C++ agora podem usar o **Designer de Classe**, mas apenas no modo somente leitura. Para obter mais informações de como usar o **Designer de Classe** com o C++, confira **Working with Visual C++ Code in Class Designer** (Trabalhando com código do Visual C++ no Designer de Classe).
+- O **Class Designer** agora tem suporte limitado para código C++ nativo. Nas versões anteriores do Visual Studio, o **Designer de Classe** funcionava somente com Visual C# e Visual Basic. Os usuários c++ agora podem usar o **Class Designer,** mas apenas no modo somente leitura. Para obter mais informações de como usar o **Designer de Classe** com o C++, confira **Working with Visual C++ Code in Class Designer** (Trabalhando com código do Visual C++ no Designer de Classe).
 - O Assistente de projeto não tem mais uma opção de criar um projeto do SQL Server do C++. A partir do Visual Studio 2008, o assistente de novo projeto não tem uma opção para criar um projeto do SQL Server do C++. Os projetos do SQL Server criados usando uma versão anterior do Visual Studio ainda serão compilados e funcionarão corretamente.
 
 ### <a name="visual-c-libraries"></a>Bibliotecas do Visual C++
@@ -1915,7 +1915,7 @@ A adição do tipo de dados YMMWORD é compatível com operandos multimídia de 
 
 #### <a name="c-support-library"></a>Biblioteca de suporte do C++
 
-- O C++ apresenta a biblioteca de marshaling. A biblioteca de marshaling fornece uma maneira fácil e otimizada para realizar marshaling de dados entre ambientes gerenciados e nativos. A biblioteca é uma alternativa para abordagens mais complexas e menos eficientes, como o uso de PInvoke. Para obter mais informações, consulte **Visão geral de marshaling no C++** .
+- O C++ apresenta a biblioteca de marshaling. A biblioteca de marshaling fornece uma maneira fácil e otimizada para realizar marshaling de dados entre ambientes gerenciados e nativos. A biblioteca é uma alternativa para abordagens mais complexas e menos eficientes, como o uso de PInvoke. Para obter mais informações, consulte **Visão geral de marshaling no C++**.
 
 #### <a name="atl-server"></a>Servidor ATL
 
@@ -1940,7 +1940,7 @@ A adição do tipo de dados YMMWORD é compatível com operandos multimídia de 
 
 ### <a name="linker-changes"></a>Alterações no vinculador
 
-- As informações do Controle de conta de usuário agora são incorporadas em arquivos de manifesto para executáveis pelo vinculador do Visual C ++ (link.exe). Esse recurso é habilitado por padrão. Para obter mais informações de como desabilitar esse recurso ou de como modificar o comportamento padrão, confira `/MANIFESTUAC` (insere informações de UAC no manifesto).
+- As informações do Controle de conta de usuário agora são incorporadas em arquivos de manifesto para executáveis pelo vinculador do Visual C ++ (link.exe). Esse recurso está habilitado por padrão. Para obter mais informações de como desabilitar esse recurso ou de como modificar o comportamento padrão, confira `/MANIFESTUAC` (insere informações de UAC no manifesto).
 - O vinculador agora tem a opção `/DYNAMICBASE` para habilitar o recurso de Aleatoriedade de Layout do Espaço de Endereço do Windows Vista. Essa opção modifica o cabeçalho de um executável para indicar se o aplicativo deve trocar de base aleatoriamente de novo no tempo de carregamento.
 
 ## <a name="whats-new-for-c-in-visual-studio-2005"></a>Novidades do C++ no Visual Studio 2005
@@ -1988,7 +1988,7 @@ O compilador tem alterações significativas nesta versão.
 - A opção do compilador `/analyze` (Análise de Código da Empresa) foi adicionada.
 - A opção do compilador `/bigobj` foi adicionada.
 - `/clr:pure`, `/clr:safe` e `/clr:oldSyntax` foram adicionados. (Posteriormente preterido no Visual Studio 2015 e removido no Visual Studio 2017.)
-- Opções do compilador preteridas: muitas opções de compilador foram preteridas nesta versão. Confira **Opções do compilador preteridas** para obter mais informações.
+- Opções de compilador depreciadas: muitas opções de compilador foram preteridas nesta versão; consulte **Opções de compilador depreciadas** para obter mais informações.
 - A conversão dupla no código `/clr` foi reduzida. Confira **Conversão dupla (C++)** para obter mais informações.
 - O `/EH` (Modelo de Tratamento de Exceção) ou o `/EHs` não pode ser mais usado para capturar exceções geradas com algo que não seja um lançamento. Use `/EHa`.
 - A opção do compilador `/errorReport` (Relatar Erros Internos do Compilador) foi adicionada.
@@ -1999,7 +1999,7 @@ O compilador tem alterações significativas nesta versão.
 - A opção do compilador `/G` (Otimizar para Processador) foi adicionada.
 - A opção do compilador `/G` (Otimizar para Processador) foi adicionada.
 - As opções do compilador `/G3`, `/G4`, `/G5`, `/G6`, `/G7` e `/GB` foram removidas. Agora, o compilador usa um "modelo combinado" que as tentativas de criar o melhor arquivo de saída para todas as arquiteturas.
-- A `/Gf` foi removida. Use `/GF` (Eliminar Cadeias de Caracteres Duplicadas).
+- `/Gf` foi removido. Use `/GF` (Eliminar Cadeias de Caracteres Duplicadas).
 - A `/GL` (Otimização de Programa Inteiro) agora é compatível com `/CLRHEADER`.
 - `/GR` agora é habilitada por padrão.
 - A `/GS` (Verificação de Segurança do Buffer) agora fornece proteção de segurança para parâmetros de ponteiro vulneráveis. `/GS` agora é habilitada por padrão. `/GS` agora também funciona em funções compiladas para MSIL com `/clr` (Compilação do Common Language Runtime).
@@ -2018,8 +2018,8 @@ O compilador tem alterações significativas nesta versão.
 
 ### <a name="profile-guided-optimizations"></a>Otimizações orientadas a perfil
 
-- A `/QI0f` foi removida.
-- A `/QIfdiv` foi removida.
+- `/QI0f` foi removido.
+- `/QIfdiv` foi removido.
 - A opção do compilador `/QIPF_B` (Errata de Execução em Etapas da CPU B) foi adicionada.
 - A opção do compilador `/QIPF_C` (Errata de Execução em Etapas da CPU C) foi adicionada.
 - A opção do compilador `/QIPF_fr32` (Não Usar Registros de Ponto Flutuante Acima de 96) foi adicionada.
@@ -2091,7 +2091,7 @@ O compilador tem alterações significativas nesta versão.
 - A opção do vinculador `/CLRTHREADATTRIBUTE` (Definir Atributo de Thread do CLR) foi adicionada.
 - A opção do vinculador `/CLRUNMANAGEDCODECHECK` (Adicionar SuppressUnmanagedCodeSecurityAttribute) foi adicionada.
 - A opção do vinculador `/ERRORREPORT` (Relatar Erros Internos do Vinculador) foi adicionada.
-- A opção do vinculador `/EXETYPE` foi removida. O vinculador não oferece mais suporte para a criação de drivers de dispositivo do Windows 95 e Windows 98. Use um DDK apropriado para criar esses drivers de dispositivo. A palavra-chave EXETYPE não é mais válida para arquivos de definição de módulo.
+- A opção do vinculador `/EXETYPE` foi removida. O vinculador não oferece mais suporte para criação de drivers de dispositivo do Windows 95 e Windows 98. Use um DDK apropriado para criar esses drivers de dispositivo. A palavra-chave EXETYPE não é mais válida para arquivos de definição de módulo.
 - A opção do vinculador `/FUNCTIONPADMIN` (Criar Imagem Hotpatchable) foi adicionada.
 - A opção do vinculador `/LTCG` agora é compatível com módulos compilados com `/clr`. A `/LTCG` também foi atualizada para dar suporte a otimizações guiadas por perfil.
 - A opção do vinculador `/MANIFEST` (Criar Manifesto do Assembly Lado a Lado) foi adicionada.
@@ -2104,7 +2104,7 @@ O compilador tem alterações significativas nesta versão.
 - A opção do vinculador `/SECTION` (Especificar Atributos de Seção) agora é dá suporte para negação de atributo e não dá mais suporte para os atributos L ou D (relacionados a VxD).
 - Suporte Unicode no compilador e vinculador
 - A opção do vinculador `/VERBOSE` (Imprimir Mensagens de Andamento) agora também aceita ICF e REF.
-- A opção do vinculador `/VXD` foi removida. O vinculador não oferece mais suporte para a criação de drivers de dispositivo do Windows 95 e Windows 98. Use um DDK apropriado para criar esses drivers de dispositivo. A palavra-chave VXD não é mais válida para arquivos de definição de módulo.
+- A opção do vinculador `/VXD` foi removida. O vinculador não oferece mais suporte para criação de drivers de dispositivo do Windows 95 e Windows 98. Use um DDK apropriado para criar esses drivers de dispositivo. A palavra-chave VXD não é mais válida para arquivos de definição de módulo.
 - A opção do vinculador `/WS` foi removida. `/WS` foi usado para modificar imagens direcionadas ao Windows NT 4.0. O nome de arquivo IMAGECFG.exe -R pode ser usado em vez de `/WS`. IMAGECFG.exe pode ser encontrado no CD-ROM do Windows NT 4.0, em SUPPORT\DEBUG\I386\IMAGECFG.EXE.
 - A opção do vinculador `/WX` (Tratar Avisos do Vinculador como Erros) agora está documentada.
 
@@ -2158,7 +2158,7 @@ O compilador tem alterações significativas nesta versão.
 - Versões existentes menos seguras de muitas funções foram preteridas. Para desabilitar avisos de reprovação, defina _CRT_SECURE_NO_WARNINGS.
 - Muitas funções existentes agora validam seus parâmetros e invocam o manipulador de parâmetro inválido quando um parâmetro inválido é passado.
 - Muitas funções existentes agora definem `errno` onde antes não faziam.
-- A typedef `errno_t` com o tipo inteiro foi adicionada. `errno_t` é usado sempre que um tipo ou parâmetro de retorno de função lida com códigos de erro de `errno`. `errno_t` substitui `errcode`.
+- A typedef `errno_t` com o tipo inteiro foi adicionada. `errno_t` é usado sempre que um tipo ou parâmetro de retorno de função lida com códigos de erro de `errno`. O `errno_t` substitui o `errcode`.
 - Funções dependentes de localidade agora têm versões que usam a localidade como parâmetro em vez de usar a localidade atual. Essas novas funções têm o sufixo **_l**. Várias novas funções foram adicionadas para trabalhar com objetos de localidade. As novas funções incluem `_get_current_locale`, `_create_locale` e `_free_locale`.
 - Novas funções foram adicionadas para dar suporte a identificadores de arquivo de bloqueio e desbloqueio.
 - A família de funções `_spawn` não redefine errno como zero em caso de sucesso, como nas versões anteriores.
@@ -2205,7 +2205,7 @@ O compilador tem alterações significativas nesta versão.
 - A opção do compilador `/G7` foi adicionada.
 - A opção do compilador `/GS` foi melhorada para ajudar a proteger as variáveis locais contra estouros de buffer.
 - A opção do compilador `/noBool` foi removida. O compilador agora permite que **bool** apareça somente como uma palavra-chave (não como um identificador) em um arquivo de código-fonte C++.
-- O tipo **long long** agora está disponível como a **typedef** **__int64** Observe que ainda não há suporte para **long long** no CRT.
+- O tipo **long long** agora está disponível como a **typedef****__int64** Observe que ainda não há suporte para **long long** no CRT.
 - A opção do compilador `/Zm` agora especifica o limite de alocação da memória do cabeçalho pré-compilado.
 - O intrínseco _InterlockedCompareExchange agora está documentado.
 - O intrínseco _InterlockedDecrement agora está documentado.
@@ -2233,6 +2233,6 @@ As seguintes opções de vinculador foram adicionadas:
 
 A diretiva .SAFESEH e a opção `/safeseh` do ml.exe foram adicionadas.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Guia de atualização e portabilidade do Visual C++](visual-cpp-porting-and-upgrading-guide.md)

@@ -2,16 +2,16 @@
 title: /MANIFESTINPUT (especificar entrada de manifesto)
 ms.date: 07/24/2019
 ms.assetid: a0b0c21e-1f9b-4d8c-bb3f-178f57fa7f1b
-ms.openlocfilehash: 7b7bd54f98003d9158276fcf75fd61ffb5348585
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: d7c8351c915f5666ada9939df686c81c86ab89ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606468"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337500"
 ---
 # <a name="manifestinput-specify-manifest-input"></a>/MANIFESTINPUT (especificar entrada de manifesto)
 
-Especifica um arquivo de entrada de manifesto a ser incluído no manifesto inserido na imagem.
+Especifica um arquivo de entrada manifesto para incluir no manifesto incorporado na imagem.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -21,16 +21,16 @@ Especifica um arquivo de entrada de manifesto a ser incluído no manifesto inser
 
 ### <a name="parameters"></a>Parâmetros
 
-*filename*<br/>
-O arquivo de manifesto a ser incluído no manifesto inserido.
+*Filename*<br/>
+O arquivo manifesto para incluir no manifesto incorporado.
 
 ## <a name="remarks"></a>Comentários
 
-A opção **/MANIFESTINPUT** especifica o caminho de um arquivo de entrada a ser usado para criar o manifesto inserido em uma imagem executável. Se você tiver vários arquivos de entrada de manifesto, use a opção várias vezes — uma vez para cada arquivo de entrada. Os arquivos de entrada do manifesto são mesclados para criar o manifesto inserido. Essa opção requer a opção **/manifest: embed** .
+A opção **/MANIFESTINPUT** especifica o caminho de um arquivo de entrada para usar para criar o manifesto incorporado em uma imagem executável. Se você tiver vários arquivos de entrada manifesto, use o switch várias vezes — uma vez para cada arquivo de entrada. Os arquivos de entrada manifesto são mesclados para criar o manifesto incorporado. Esta opção requer a opção **/MANIFEST:EMBED.**
 
-Esta opção não pode ser definida diretamente no Visual Studio. Em vez disso, use a propriedade **adicional de arquivos de manifesto** do projeto para especificar arquivos de manifesto adicionais a serem incluídos. Para obter mais informações, consulte [páginas de propriedades da ferramenta de manifesto](manifest-tool-property-pages.md).
+Esta opção não pode ser definida diretamente no Visual Studio. Em vez disso, use a propriedade **Arquivos manifestos adicionais** do projeto para especificar arquivos manifestos adicionais para incluir. Para obter mais informações, consulte [Manifest Tool Property Pages](manifest-tool-property-pages.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência de vinculador MSVC](linking.md)<br/>
 [Opções de vinculador MSVC](linker-options.md)

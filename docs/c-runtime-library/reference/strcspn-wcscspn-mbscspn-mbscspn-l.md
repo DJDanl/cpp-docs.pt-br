@@ -1,11 +1,13 @@
 ---
 title: strcspn, wcscspn, _mbscspn, _mbscspn_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbscspn_l
 - wcscspn
 - _mbscspn
 - strcspn
+- _o__mbscspn
+- _o__mbscspn_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -42,19 +45,19 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-ms.openlocfilehash: 501732cd4758d14a32aba3bdf503c5d314eee7f9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2ba3c2941736d185ad93c7c6e44cb83c82ebb478
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940763"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358871"
 ---
 # <a name="strcspn-wcscspn-_mbscspn-_mbscspn_l"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
 
 Retorna o índice da primeira ocorrência, em uma cadeia de caracteres, de um caractere que pertence a um conjunto de caracteres.
 
 > [!IMPORTANT]
-> **_mbschr** e **_mbschr_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbschr** e **_mbschr_l** não podem ser usados em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -80,35 +83,37 @@ size_t _mbscspn_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*<br/>
+*Str*<br/>
 Cadeia de caracteres pesquisadas e terminadas em nulo.
 
-*strCharSet*<br/>
+*Strcharset*<br/>
 Conjunto de caracteres terminado em nulo.
 
-*locale*<br/>
+*Localidade*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Essas funções retornam o índice do primeiro caractere em *Str* que está em *strCharSet*. Se nenhum dos caracteres em *Str* estiver em *strCharSet*, o valor de retorno será o comprimento de *Str*.
+Essas funções retornam o índice do primeiro caractere em *str* que está em *strCharSet*. Se nenhum dos caracteres em *str* estiver em *strCharSet,* então o valor de retorno é o comprimento do *str*.
 
 Nenhum valor retornado é reservado para indicar um erro.
 
 ## <a name="remarks"></a>Comentários
 
-**wcscspn** e **_mbscspn** são versões de caractere largo e de multibyte de **strcspn**. Os argumentos de **wcscspn** são cadeias de caracteres largos; os de **_mbscspn** são cadeias de caracteres multibyte.
+**wcscspn** e **_mbscspn** são versões de amplo caráter e multibytes do **strcspn**. Os argumentos do **wcscspn** são cordas de caráter amplo; os de **_mbscspn** são cordas de caracteres multibytes.
 
-**_mbscspn** valida seus parâmetros. Se *Str* ou *strCharSet* for um ponteiro NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará 0 e definirá **errno** como **EINVAL**. **strcspn** e **wcscspn** não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
+**_mbscspn** valida seus parâmetros. Se *str* ou *strCharSet* for um ponteiro nulo, o manipulador de parâmetros inválidos será invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, a função retorna 0 e define **errno** para **EINVAL**. **strcspn** e **wcscspn** não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscspn**|**strcspn**|**_mbscspn**|**wcscspn**|
-|N/D|N/D|**_mbscspn_l**|N/D|
+|n/d|n/d|**_mbscspn_l**|n/d|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -116,9 +121,9 @@ O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da lo
 |-------------|---------------------|
 |**strcspn**|\<string.h>|
 |**wcscspn**|\<string.h> ou \<wchar.h>|
-|**_mbscspn**, **_mbscspn_l**|\<mbstring.h>|
+|**_mbscspn** **, _mbscspn_l**|\<mbstring.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -154,9 +159,9 @@ strcspn( "", "abc" ) = 0
 strcspn( "", "" ) = 0
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cordas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Localidade](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>

@@ -16,19 +16,19 @@ f1_keywords:
 helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
-ms.openlocfilehash: ce3585310198ee3e2d7b2b8b829f4202b1021284
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: fbdb77e7f52e858401c87e1cd8782b59cc6ebcea
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496198"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330468"
 ---
 # <a name="cwin32heap-class"></a>Classe CWin32Heap
 
-Essa classe implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) usando as funções de alocação de heap do Win32.
+Esta classe implementa [o IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) usando as funções de alocação de heap Win32.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
+> Esta classe e seus membros não podem ser usados em aplicativos executados no Tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,33 +43,33 @@ class CWin32Heap : public IAtlMemMgr
 |Nome|Descrição|
 |----------|-----------------|
 |[CWin32Heap::CWin32Heap](#cwin32heap)|O construtor.|
-|[CWin32Heap:: ~ CWin32Heap](#dtor)|O destruidor.|
+|[CWin32Heap::~Cwin32Heap](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CWin32Heap::Allocate](#allocate)|Aloca um bloco de memória do objeto heap.|
-|[CWin32Heap::Attach](#attach)|Anexa o objeto de heap a um heap existente.|
-|[CWin32Heap::Detach](#detach)|Desanexa o objeto de heap de um heap existente.|
-|[CWin32Heap:: Free](#free)|Libera memória alocada anteriormente do heap.|
-|[CWin32Heap::GetSize](#getsize)|Retorna o tamanho de um bloco de memória alocado do objeto heap.|
-|[CWin32Heap::Reallocate](#reallocate)|Realoca um bloco de memória do objeto heap.|
+|[CWin32Heap::Alocar](#allocate)|Aloca um bloco de memória do objeto heap.|
+|[CWin32Heap::Anexar](#attach)|Anexa o objeto de pilha a um monte existente.|
+|[CWin32Heap::Detach](#detach)|Destaca o objeto de pilha de um monte existente.|
+|[CWin32Heap::Grátis](#free)|Libera a memória anteriormente alocada do monte.|
+|[CWin32Heap::GetSize](#getsize)|Retorna o tamanho de um bloco de memória alocado a partir do objeto heap.|
+|[CWin32Heap::Realocação](#reallocate)|Realoca um bloco de memória do objeto heap.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CWin32Heap::m_bOwnHeap](#m_bownheap)|Um sinalizador usado para determinar a propriedade atual do identificador de heap.|
-|[CWin32Heap::m_hHeap](#m_hheap)|Identificador para o objeto de heap.|
+|[CWin32Heap::m_bOwnHeap](#m_bownheap)|Uma bandeira usada para determinar a propriedade atual da alça de pilha.|
+|[CWin32Heap::m_hHeap](#m_hheap)|Manuseie o objeto de pilha.|
 
 ## <a name="remarks"></a>Comentários
 
-`CWin32Heap`implementa métodos de alocação de memória usando as funções de alocação de heap do Win32, incluindo [HeapAlloc](/windows/win32/api/heapapi/nf-heapapi-heapalloc) e [HeapFree](/windows/win32/api/heapapi/nf-heapapi-heapfree). Ao contrário de outras classes `CWin32Heap` de heap, é necessário que um identificador de heap válido seja fornecido antes que a memória seja alocada: as outras classes usam como padrão o heap de processo. O identificador pode ser fornecido para o construtor ou para o método [CWin32Heap:: Attach](#attach) . Consulte o método [CWin32Heap:: CWin32Heap](#cwin32heap) para obter mais detalhes.
+`CWin32Heap`implementa métodos de alocação de memória usando as funções de alocação de pilha sinuosas do Win32, incluindo [HeapAlloc](/windows/win32/api/heapapi/nf-heapapi-heapalloc) e [HeapFree](/windows/win32/api/heapapi/nf-heapapi-heapfree). Ao contrário de `CWin32Heap` outras classes heap, requer que uma alça de pilha válida seja fornecida antes da memória ser alocada: as outras classes padrão para usar o heap de processo. A alça pode ser fornecida ao construtor ou ao método [CWin32Heap::Attach.](#attach) Consulte o método [CWin32Heap::CWin32Heap](#cwin32heap) para obter mais detalhes.
 
 ## <a name="example"></a>Exemplo
 
-Consulte o exemplo de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
+Veja o exemplo [de IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -79,9 +79,9 @@ Consulte o exemplo de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlmem. h
+**Cabeçalho:** atlmem.h
 
-##  <a name="allocate"></a>CWin32Heap:: Allocate
+## <a name="cwin32heapallocate"></a><a name="allocate"></a>CWin32Heap::Alocar
 
 Aloca um bloco de memória do objeto heap.
 
@@ -91,22 +91,22 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*nBytes*<br/>
-O número de bytes solicitado no novo bloco de memória.
+*Nbytes*<br/>
+O número solicitado de bytes no novo bloco de memória.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna um ponteiro para o bloco de memória alocado recentemente.
+Retorna um ponteiro para o bloco de memória recém-alocado.
 
 ### <a name="remarks"></a>Comentários
 
-Chame [CWin32Heap:: Free](#free) ou [CWin32Heap:: realoque](#reallocate) para liberar a memória alocada por esse método.
+Ligue para [CWin32Heap:::Free](#free) ou [CWin32Heap::Reallocate](#reallocate) para liberar a memória alocada por este método.
 
 Implementado usando [HeapAlloc](/windows/win32/api/heapapi/nf-heapapi-heapalloc).
 
-##  <a name="attach"></a>CWin32Heap:: Attach
+## <a name="cwin32heapattach"></a><a name="attach"></a>CWin32Heap::Anexar
 
-Anexa o objeto de heap a um heap existente.
+Anexa o objeto de pilha a um monte existente.
 
 ```
 void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
@@ -114,17 +114,17 @@ void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*hHeap*<br/>
-Um identificador de heap existente.
+*Hheap*<br/>
+Uma alça de pilha existente.
 
 *bTakeOwnership*<br/>
-Um sinalizador que indica se `CWin32Heap` o objeto deve assumir a propriedade sobre os recursos do heap.
+Uma bandeira indicando `CWin32Heap` se o objetivo é tomar posse sobre os recursos da pilha.
 
 ### <a name="remarks"></a>Comentários
 
-Se *bTakeOwnership* for true, o `CWin32Heap` objeto será responsável por excluir o identificador de heap.
+Se *bTakeOwnership* for `CWin32Heap` TRUE, o objeto será responsável pela exclusão da alça de pilha.
 
-##  <a name="cwin32heap"></a>CWin32Heap::CWin32Heap
+## <a name="cwin32heapcwin32heap"></a><a name="cwin32heap"></a>CWin32Heap::CWin32Heap
 
 O construtor.
 
@@ -139,13 +139,13 @@ CWin32Heap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hHeap*<br/>
+*Hheap*<br/>
 Um objeto existente do heap.
 
 *dwFlags*<br/>
 Sinalizadores usados na criação do heap.
 
-*nInitialSize*<br/>
+*{1&amp;gt;nInitialSize&amp;lt;1}*<br/>
 O tamanho inicial do heap.
 
 *nMaxSize*<br/>
@@ -159,17 +159,17 @@ Antes de alocar memória, é necessário fornecer o objeto `CWin32Heap` com um i
 
 Também é possível fornecer um identificador de heap existente para o construtor, caso em que o novo objeto não assume a propriedade do heap. O identificador original do heap ainda será válido quando o objeto `CWin32Heap` for excluído.
 
-Um heap existente também pode ser anexado ao novo objeto, usando [CWin32Heap:: Attach](#attach).
+Um heap existente também pode ser anexado ao novo objeto, usando [CWin32Heap::Attach](#attach).
 
 Se um heap for necessário onde todas as operações são executadas de um único thread, o melhor modo é criar o objeto como segue:
 
 [!code-cpp[NVC_ATL_Utilities#93](../../atl/codesnippet/cpp/cwin32heap-class_2.cpp)]
 
-O parâmetro HEAP_NO_SERIALIZE especifica que a exclusão mútua não será usada quando as funções de heap alocarem e liberarem memória, com um aumento de acordo com o desempenho.
+O parâmetro HEAP_NO_SERIALIZE especifica que a exclusão mútua não será usada quando as funções do heap alocarem e liberarem memória, com um aumento no desempenho consistente.
 
-O terceiro parâmetro é padronizado como 0, o que permite que o heap aumente conforme necessário. Consulte [HeapCreate](/windows/win32/api/heapapi/nf-heapapi-heapcreate) para obter uma explicação dos tamanhos e dos sinalizadores de memória.
+O terceiro parâmetro é padronizado como 0, o que permite que o heap aumente conforme necessário. Consulte [HeapCreate](/windows/win32/api/heapapi/nf-heapapi-heapcreate) para obter uma explicação sobre os tamanhos e bandeiras da memória.
 
-##  <a name="dtor"></a>CWin32Heap:: ~ CWin32Heap
+## <a name="cwin32heapcwin32heap"></a><a name="dtor"></a>CWin32Heap::~Cwin32Heap
 
 O destruidor.
 
@@ -179,23 +179,23 @@ O destruidor.
 
 ### <a name="remarks"></a>Comentários
 
-Destrói o identificador de heap se o `CWin32Heap` objeto tiver Propriedade do heap.
+Destrói a alça do `CWin32Heap` monte se o objeto tiver a posse do monte.
 
-##  <a name="detach"></a>  CWin32Heap::Detach
+## <a name="cwin32heapdetach"></a><a name="detach"></a>CWin32Heap::Detach
 
-Desanexa o objeto de heap de um heap existente.
+Destaca o objeto de pilha de um monte existente.
 
 ```
 HANDLE Detach() throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna o identificador para o heap para o qual o objeto foi anexado anteriormente.
+Retorna a alça ao heap ao qual o objeto foi previamente anexado.
 
-##  <a name="free"></a>CWin32Heap:: Free
+## <a name="cwin32heapfree"></a><a name="free"></a>CWin32Heap::Grátis
 
-Libera memória alocada anteriormente do heap por [CWin32Heap:: Allocate](#allocate) ou [CWin32Heap:: realoque](#reallocate).
+Libera a memória anteriormente alocada do heap por [CWin32Heap::Alocar](#allocate) ou [CWin32Heap::Realocar](#reallocate).
 
 ```
 virtual void Free(void* p) throw();
@@ -203,12 +203,12 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*<br/>
-Ponteiro para o bloco de memória a ser liberado. NULL é um valor válido e não faz nada.
+*P*<br/>
+Ponteiro para o bloco de memória para libertar. NULL é um valor válido e não faz nada.
 
-##  <a name="getsize"></a>CWin32Heap::GetSize
+## <a name="cwin32heapgetsize"></a><a name="getsize"></a>CWin32Heap::GetSize
 
-Retorna o tamanho de um bloco de memória alocado do objeto heap.
+Retorna o tamanho de um bloco de memória alocado a partir do objeto heap.
 
 ```
 virtual size_t GetSize(void* p) throw();
@@ -216,24 +216,24 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*<br/>
-Ponteiro para o bloco de memória cujo tamanho será obtido pelo método. Esse é um ponteiro retornado por [CWin32Heap:: Allocate](#allocate) ou [CWin32Heap:: realoque](#reallocate).
+*P*<br/>
+Ponteiro para o bloco de memória cujo tamanho o método obterá. Este é um ponteiro retornado por [CWin32Heap::Alocar](#allocate) ou [CWin32Heap:::Realocar](#reallocate).
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna o tamanho, em bytes, do bloco de memória alocado.
 
-##  <a name="m_bownheap"></a>  CWin32Heap::m_bOwnHeap
+## <a name="cwin32heapm_bownheap"></a><a name="m_bownheap"></a>CWin32Heap::m_bOwnHeap
 
-Um sinalizador usado para determinar a propriedade atual do identificador de heap armazenado em [m_hHeap](#m_hheap).
+Uma bandeira usada para determinar a propriedade atual da alça de pilha armazenada em [m_hHeap](#m_hheap).
 
 ```
 bool m_bOwnHeap;
 ```
 
-##  <a name="m_hheap"></a>  CWin32Heap::m_hHeap
+## <a name="cwin32heapm_hheap"></a><a name="m_hheap"></a>CWin32Heap::m_hHeap
 
-Identificador para o objeto de heap.
+Manuseie o objeto de pilha.
 
 ```
 HANDLE m_hHeap;
@@ -241,9 +241,9 @@ HANDLE m_hHeap;
 
 ### <a name="remarks"></a>Comentários
 
-Uma variável usada para armazenar um identificador para o objeto de heap.
+Uma variável usada para armazenar uma alça para o objeto de pilha.
 
-##  <a name="reallocate"></a>CWin32Heap:: realocar
+## <a name="cwin32heapreallocate"></a><a name="reallocate"></a>CWin32Heap::Realocação
 
 Realoca um bloco de memória do objeto heap.
 
@@ -253,25 +253,25 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*<br/>
-Ponteiro para o bloco de memória a ser realocado.
+*P*<br/>
+Ponteiro para o bloco de memória para realocar.
 
-*nBytes*<br/>
-O novo tamanho em bytes do bloco alocado. O bloco pode se tornar maior ou menor.
+*Nbytes*<br/>
+O novo tamanho em bytes do bloco alocado. O bloco pode ser feito maior ou menor.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna um ponteiro para o bloco de memória alocado recentemente.
+Retorna um ponteiro para o bloco de memória recém-alocado.
 
 ### <a name="remarks"></a>Comentários
 
-Se *p* for NULL, supõe-se que o bloco de memória ainda não foi alocado e [CWin32Heap:: Allocate](#allocate) é chamado, com um argumento de *nbytes*.
+Se *p* for NULL, presume-se que o bloco de memória ainda não foi alocado e [CWin32Heap::Alocar](#allocate) é chamado, com um argumento de *nBytes*.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral da classe](../../atl/atl-class-overview.md)<br/>
 [Classe IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)<br/>
 [Classe CLocalHeap](../../atl/reference/clocalheap-class.md)<br/>
-[Classe CGlobalHeap](../../atl/reference/cglobalheap-class.md)<br/>
-[Classe de CCRTHeap](../../atl/reference/ccrtheap-class.md)<br/>
-[Classe CComHeap](../../atl/reference/ccomheap-class.md)
+[Classe CglobalHeap](../../atl/reference/cglobalheap-class.md)<br/>
+[Classe CCRTHeap](../../atl/reference/ccrtheap-class.md)<br/>
+[Classe CcomHeap](../../atl/reference/ccomheap-class.md)

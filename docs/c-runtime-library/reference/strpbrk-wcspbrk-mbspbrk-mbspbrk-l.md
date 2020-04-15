@@ -1,11 +1,13 @@
 ---
 title: strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbspbrk
 - wcspbrk
 - _mbspbrk_l
 - strpbrk
+- _o__mbspbrk
+- _o__mbspbrk_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -47,12 +50,12 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: d6b18ab6dabfb1181f3e65507d27f6afe98a5b9f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ecdf896587096f0370351aac07cbd6be57257305
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947156"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322164"
 ---
 # <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
@@ -119,39 +122,41 @@ const unsigned char *_mbspbrk_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*<br/>
+*Str*<br/>
 Cadeia de caracteres pesquisadas e terminadas em nulo.
 
-*strCharSet*<br/>
+*Strcharset*<br/>
 Conjunto de caracteres terminado em nulo.
 
-*locale*<br/>
+*Localidade*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Retorna um ponteiro para a primeira ocorrência de qualquer caractere de *strCharSet* em *Str*, ou um ponteiro NULL se os dois argumentos de cadeia de caracteres não tiverem caracteres em comum.
+Retorna um ponteiro para a primeira ocorrência de qualquer caractere de *strCharSet* no *str*, ou um ponteiro NULL se os argumentos de duas seqüências não tiverem caracteres em comum.
 
 ## <a name="remarks"></a>Comentários
 
-A `strpbrk` função retorna um ponteiro para a primeira ocorrência de um caractere em *Str* que pertence ao conjunto de caracteres em *strCharSet*. A pesquisa não inclui o caractere nulo de terminação.
+A `strpbrk` função retorna um ponteiro para a primeira ocorrência de um caractere em *str* que pertence ao conjunto de caracteres em *strCharSet*. A pesquisa não inclui o caractere nulo de terminação.
 
 `wcspbrk` e `_mbspbrk` são versões de caracteres largos e de caracteres multibyte de `strpbrk`. Os argumentos e o valor retornado de `wcspbrk` são cadeias de caracteres largos; aqueles de `_mbspbrk` são cadeias de caracteres multibyte.
 
-`_mbspbrk` valida seus parâmetros. Se *Str* ou *strCharSet* for NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar `_mbspbrk` , retorna NULL e `errno` define como EINVAL. `strpbrk` e `wcspbrk` não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
+`_mbspbrk` valida seus parâmetros. Se *str* ou *strCharSet* for NULL, o manipulador de parâmetros inválidos será invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução `_mbspbrk` continuar, retorna `errno` NULL e define para EINVAL. `strpbrk` e `wcspbrk` não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
 
 `_mbspbrk` é semelhante ao `_mbscspn`, exceto que `_mbspbrk` retorna um ponteiro em vez de um valor do tipo [size_t](../../c-runtime-library/standard-types.md).
 
-Em C, essas funções assumem um ponteiro **const** para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga que assume um ponteiro para **const** retorna um ponteiro para **const**; a versão que usa um ponteiro para não**const** retorna um ponteiro para não**const**. A macro _CRT_CONST_CORRECT_OVERLOADS será definida se as versões **const** e não**const** dessas funções estiverem disponíveis. Se você precisar do comportamento não**const** para ambas as C++ sobrecargas, defina o símbolo _CONST_RETURN.
+Em C, essas funções tomam um ponteiro **const** para o primeiro argumento. No C++, duas sobrecargas estão disponíveis. A sobrecarga de um ponteiro para **const** retorna um ponteiro para **const**; a versão que leva um ponteiro para**não-const** retorna um ponteiro para**não-const**. O _CRT_CONST_CORRECT_OVERLOADS macro é definido se as **versões const** e**não-const** dessas funções estão disponíveis. Se você precisar do comportamento não**const** para ambas as sobrecargas C++, defina o símbolo _CONST_RETURN.
 
-O valor de saída é afetado pela configuração da configuração de categoria LC_CTYPE da localidade; para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). As versões dessas funções sem o sufixo **_L** usam a localidade atual para esse comportamento dependente de localidade; a versão com o sufixo **_L** é idêntica, exceto pelo fato de que ele usa o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da configuração da categoria LC_CTYPE do local; para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). As versões dessas funções sem o **sufixo _l** utilizam o local atual para este comportamento dependente da localidade; a versão com o **sufixo _l** é idêntica, exceto que ele usa o parâmetro local passado em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|
-|**n/d**|**n/d**|`_mbspbrk_l`|**n/d**|
+|**n/a**|**n/a**|`_mbspbrk_l`|**n/a**|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -197,9 +202,9 @@ int main( void )
 4: 5 pigs
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cordas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Localidade](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

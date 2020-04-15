@@ -1,8 +1,9 @@
 ---
 title: setbuf
-ms.date: 04/08/2019
+ms.date: 4/2/2020
 api_name:
 - setbuf
+- _o_setbuf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: c6c78297b1818131dcfcb10f4f2eaadd752d8ef4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f96cffb8770cda78ebff8d873b441ddc288bc41f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948272"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332073"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -47,17 +49,19 @@ void setbuf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-*buffer*<br/>
+*Buffer*<br/>
 Buffer alocado pelo usuário.
 
 ## <a name="remarks"></a>Comentários
 
-A função **setbuf** controla o buffer para o *Stream*. O argumento de *fluxo* deve se referir a um arquivo aberto que não foi lido ou gravado. Se o argumento de *buffer* for **nulo**, o fluxo não será armazenado em buffer. Caso contrário, o buffer deve apontar para uma matriz de caracteres de comprimento **BUFSIZ**, em que **BUFSIZ** é o tamanho do buffer, conforme definido em STDIO. T. O buffer especificado pelo usuário, em vez do buffer alocado do sistema padrão para o fluxo informado, é usado para buffer de E/S. O fluxo **stderr** é sem buffer por padrão, mas você pode usar **setbuf** para atribuir buffers a **stderr**.
+A função **setbuf** controla o buffering para *fluxo*. O argumento *do fluxo* deve se referir a um arquivo aberto que não foi lido ou escrito. Se o argumento *buffer* for **NULL,** o fluxo será desprotegido. Caso assim, o buffer deve apontar para uma matriz de caracteres de comprimento **BUFSIZ**, onde **BUFSIZ** é o tamanho do buffer definido em STDIO. H. O buffer especificado pelo usuário, em vez do buffer alocado do sistema padrão para o fluxo informado, é usado para buffer de E/S. O fluxo **stderr** é desprotegido por padrão, mas você pode usar **setbuf** para atribuir buffers ao **stderr**.
 
-o **setbuf** foi substituído por [setvbuf](setvbuf.md), que é a rotina preferida para o novo código. Ao contrário de **setvbuf**, o **setbuf** não tem nenhuma maneira de relatar erros. o **setvbuf** também permite que você controle o modo de buffer e o tamanho do buffer. **setbuf** existe para compatibilidade com o código existente.
+**setbuf** foi substituído por [setvbuf](setvbuf.md), que é a rotina preferida para o novo código. Ao contrário **do setvbuf**, **setbuf** não tem como reportar erros. **setvbuf** também permite controlar tanto o modo de buffer e o tamanho do buffer. **o setbuf** existe para compatibilidade com o código existente.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -65,7 +69,7 @@ o **setbuf** foi substituído por [setvbuf](setvbuf.md), que é a rotina preferi
 |-------------|---------------------|
 |**setbuf**|\<stdio.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -106,7 +110,7 @@ stream1 set to user-defined buffer at: 0012FCDC
 stream2 buffering disabled
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

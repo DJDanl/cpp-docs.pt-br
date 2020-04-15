@@ -1,9 +1,11 @@
 ---
 title: _putc_nolock, _putwc_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putc_nolock
 - _putwc_nolock
+- _o__putc_nolock
+- _o__putwc_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - _puttc_nolock function
 - _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
-ms.openlocfilehash: fdec6373f79fd711b371014fc58e17c190a26e95
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: aa96275b29d2510400622f52fa34c58ae251ff6c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950117"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338468"
 ---
 # <a name="_putc_nolock-_putwc_nolock"></a>_putc_nolock, _putwc_nolock
 
@@ -63,21 +66,23 @@ wint_t _putwc_nolock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*C*<br/>
 O caractere a ser gravado.
 
-*stream*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Consulte **putc, putwc**.
 
 ## <a name="remarks"></a>Comentários
 
-**_putc_nolock** e **_putwc_nolock** são idênticos às versões sem o sufixo **_nolock** , exceto que não estão protegidos contra interferência por outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+**_putc_nolock** e **_putwc_nolock** são idênticos às versões sem o sufixo **_nolock,** exceto que não estão protegidos contra interferências por outros segmentos. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
-**_putwc_nolock** é a versão de caractere largo do **_putc_nolock**; as duas funções se comportam de forma idêntica se o fluxo é aberto no modo ANSI. Atualmente, o **_putc_nolock** não dá suporte à saída em um fluxo Unicode.
+**_putwc_nolock** é a versão de grande caráter de **_putc_nolock;** as duas funções se comportam de forma idêntica se o fluxo for aberto no modo ANSI. **_putc_nolock** não suporta atualmente a saída em um fluxo UNICODE.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -92,9 +97,9 @@ Consulte **putc, putwc**.
 |**_putc_nolock**|\<stdio.h>|
 |**_putwc_nolock**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos Plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão associados ao console, **stdin**, **stdout**e **stderr**devem ser redirecionados antes que as funções de tempo de execução do C possam usá-los em aplicativos UWP. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+O console não é suportado em aplicativos Universal Windows Platform (UWP). As alças de fluxo padrão associadas ao console, **stdin**, **stdout**e **stderr,** devem ser redirecionadas antes que as funções de tempo de execução C possam usá-las em aplicativos UWP. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Libraries
+## <a name="libraries"></a>Bibliotecas
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
@@ -129,7 +134,7 @@ int main( void )
 This is the line of output
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>

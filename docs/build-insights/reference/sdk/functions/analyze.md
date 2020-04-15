@@ -1,6 +1,6 @@
 ---
 title: Analisar
-description: A C++ referência da função de análise do SDK do insights do Build.
+description: A referência de função C++ Build Insights SDK Analyze.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 49161641d1cff1c64261d95bb2caace2f802543a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 08b3643270cc785b3fbea36720d192b4a1473104
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332862"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324101"
 ---
 # <a name="analyze"></a>Analisar
 
 ::: moniker range="<=vs-2015"
 
-O C++ SDK de informações de compilação é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de versão do Visual Studio para este artigo como Visual Studio 2017 ou Visual Studio 2019.
+O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-A função `Analyze` é usada para analisar um rastreamento ETW (rastreamento de eventos para Windows) obtido do MSVC durante o C++ rastreamento de uma compilação. Os eventos no rastreamento ETW são encaminhados sequencialmente para um grupo do Analyzer fornecido pelo chamador. Essa função dá suporte a análises de várias passagens que permitem o encaminhamento do fluxo de eventos para o grupo do analisador várias vezes em uma linha.
+A `Analyze` função é usada para analisar um rastreamento de rastreamento de eventos para Windows (ETW) obtido do MSVC enquanto traça uma compilação C++. Os eventos no rastreamento eTW são encaminhados sequencialmente para um grupo analisador fornecido pelo chamador. Esta função suporta análises multi-pass que permitem o encaminhamento do fluxo de eventos para o grupo analisador várias vezes seguidas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,20 +45,20 @@ RESULT_CODE Analyze(
 
 ### <a name="parameters"></a>Parâmetros
 
-\ *TAnalyzerGroupMembers*
-Esse parâmetro é sempre deduzido.
+*Membros do TAnalyzerGroup*\
+Este parâmetro é sempre deduzido.
 
-\ *inputLogFile*
-O rastreamento ETW de entrada do qual você deseja ler eventos.
+*inputLogFile*\
+O rastreamento etw de entrada do que você deseja ler eventos.
 
-\ *numberOfPasses*
-O número de etapas de análise a serem executadas no rastreamento de entrada. O rastreamento é passado pelo grupo analisador fornecido uma vez por passagem de análise.
+*numberOfPasses*\
+O número de análises passa para ser executado no rastreamento de entrada. O rastreamento é passado através do grupo analisador fornecido uma vez por passe de análise.
 
-\ do *fileanalyzer*
-O grupo do analisador usado para a análise. Chame [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) para criar um grupo do Analyzer. Para usar um grupo do analisador dinâmico obtido do [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), primeiro encapsula-o dentro de um grupo do analisador estático passando seu endereço para `MakeStaticAnalyzerGroup`.
+*analyzerGroup*\
+O grupo analisador utilizado para a análise. Chamada [MakeStaticAnalyzegroup](make-static-analyzer-group.md) para criar um grupo de analisadores. Para usar um grupo de analisador dinâmico obtido do [MakeDynamicAnalyzerGroup,](make-dynamic-analyzer-group.md)primeiro encapsule-o dentro de um grupo de analisadores estáticos, passando seu endereço para `MakeStaticAnalyzerGroup`.
 
 ### <a name="return-value"></a>Valor retornado
 
-Um código de resultado da enumeração [RESULT_CODE](../other-types/result-code-enum.md) .
+Um código de resultado do [RESULT_CODE](../other-types/result-code-enum.md) enum.
 
 ::: moniker-end

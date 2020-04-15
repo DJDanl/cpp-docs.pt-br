@@ -1,8 +1,9 @@
 ---
 title: _heapmin
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _heapmin
+- _o__heapmin
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-ms.openlocfilehash: c36a1028e42d59217586cc50adcb612e78072b03
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6e8f90a7aa74ca3e890307f95b5f293f0be3575f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954801"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343991"
 ---
 # <a name="_heapmin"></a>_heapmin
 
@@ -47,15 +49,17 @@ Libera memória de heap não utilizada para o sistema operacional.
 int _heapmin( void );
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Se for bem-sucedido, **_heapmin** retornará 0; caso contrário, a função retornará-1 e definirá **errno** como **ENOSYS**.
+Se for bem sucedido, **_heapmin** retorna 0; caso contrário, a função retorna -1 e define **errno** para **ENOSYS**.
 
 Para obter mais informações sobre este e outros códigos retornados, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-A função **_heapmin** minimiza o heap liberando a memória heap não utilizada para o sistema operacional. Se o sistema operacional não oferecer suporte a **_heapmin**(por exemplo, Windows 98), a função retornará-1 e definirá **errno** como **ENOSYS**.
+A função **_heapmin** minimiza o monte liberando memória de pilha não utilizada para o sistema operacional. Se o sistema operacional não suportar **_heapmin**(por exemplo, Windows 98), a função retorna -1 e define **errno** para **ENOSYS**.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -65,10 +69,10 @@ A função **_heapmin** minimiza o heap liberando a memória heap não utilizada
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Alocação de Memória](../../c-runtime-library/memory-allocation.md)<br/>
-[free](free.md)<br/>
+[Alocação de memória](../../c-runtime-library/memory-allocation.md)<br/>
+[Livre](free.md)<br/>
 [_heapadd](../../c-runtime-library/heapadd.md)<br/>
 [_heapchk](heapchk.md)<br/>
 [_heapset](../../c-runtime-library/heapset.md)<br/>
