@@ -16,19 +16,19 @@ helpviewer_keywords:
 - ActiveX controls [C++], communication between container and control
 - IOleInPlaceActiveObject, ATL implementation
 ms.assetid: 44e6cc6d-a2dc-4187-98e3-73cf0320dea9
-ms.openlocfilehash: f52638c8a28652cc958ebb3d774319ab37a3c46d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b39ba2845a5483444dac53d1616654e902969c77
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495754"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326595"
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>Classe IOleInPlaceActiveObjectImpl
 
-Essa classe fornece métodos para auxiliar a comunicação entre um controle in-loco e seu contêiner.
+Esta classe fornece métodos para auxiliar a comunicação entre um controle no local e seu contêiner.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados no Windows Runtime.
+> Esta classe e seus membros não podem ser usados em aplicativos executados no Tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -44,23 +44,23 @@ Sua classe, derivada de `IOleInPlaceActiveObjectImpl`.
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[IOleInPlaceActiveObjectImpl::ContextSensitiveHelp](#contextsensitivehelp)|Habilita a ajuda contextual. A implementação da ATL retorna E_NOTIMPL.|
-|[IOleInPlaceActiveObjectImpl::EnableModeless](#enablemodeless)|Habilita caixas de diálogo sem janela restrita. A implementação da ATL retorna S_OK.|
-|[IOleInPlaceActiveObjectImpl::GetWindow](#getwindow)|Obtém um identificador de janela.|
+|[IOleInPlaceActiveObjectImpl::ContextSensitiveHelp](#contextsensitivehelp)|Permite ajuda sensível ao contexto. A implementação da ATL retorna E_NOTIMPL.|
+|[IOleInPlaceActiveObjectImpl::EnableModeless](#enablemodeless)|Habilita caixas de diálogo modeless. A implementação da ATL retorna S_OK.|
+|[IOleInPlaceActiveObjectImpl::GetWindow](#getwindow)|Pega uma alça da janela.|
 |[IOleInPlaceActiveObjectImpl::OnDocWindowActivate](#ondocwindowactivate)|Notifica o controle quando a janela do documento do contêiner é ativada ou desativada. A implementação da ATL retorna S_OK.|
-|[IOleInPlaceActiveObjectImpl::OnFrameWindowActivate](#onframewindowactivate)|Notifica o controle quando a janela de quadro de nível superior do contêiner é ativada ou desativada. A implementação da ATL retorna|
-|[IOleInPlaceActiveObjectImpl::ResizeBorder](#resizeborder)|Informa ao controle que ele precisa para redimensionar suas bordas. A implementação da ATL retorna S_OK.|
-|[IOleInPlaceActiveObjectImpl::TranslateAccelerator](#translateaccelerator)|Processa as mensagens do menu Accelerator-Key do contêiner. A implementação da ATL retorna E_NOTIMPL.|
+|[IOleInPlaceActiveObjectImpl::OnFrameWindowActivate](#onframewindowactivate)|Notifica o controle quando a janela de quadro de nível superior do contêiner é ativada ou desativada. A implementação atl retorna|
+|[IOleInPlaceActiveObjectImpl::Redimensionborder](#resizeborder)|Informa o controle que precisa para redimensionar suas fronteiras. A implementação da ATL retorna S_OK.|
+|[IOleInPlaceActiveObjectImpl::TranslateAccelerator](#translateaccelerator)|Processa as mensagens-chave do acelerador do menu do contêiner. A implementação da ATL retorna E_NOTIMPL.|
 
 ## <a name="remarks"></a>Comentários
 
-A interface [IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceactiveobject) auxilia na comunicação entre um controle in-loco e seu contêiner; por exemplo, comunicar o estado ativo do controle e do contêiner e informar ao controle que ele precisa para se redimensionar. Fornece uma implementação padrão do e `IOleInPlaceActiveObject` dá suporte `IUnknown` ao envio de informações para o dispositivo de despejo em compilações de depuração. `IOleInPlaceActiveObjectImpl`
+A interface [IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceactiveobject) auxilia a comunicação entre um controle no local e seu contêiner; por exemplo, comunicar o estado ativo do controle e do recipiente, e informar o controle que ele precisa para se redimensionar. A `IOleInPlaceActiveObjectImpl` classe fornece `IOleInPlaceActiveObject` uma implementação padrão e suporta `IUnknown` enviando informações para o dispositivo de despejo em compilações de depuração.
 
-**Artigos relacionados** [Tutorial do ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)
+**Artigos relacionados** [ATL Tutorial](../../atl/active-template-library-atl-tutorial.md), Criando um Projeto [ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -70,43 +70,43 @@ A interface [IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-iolein
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlctl. h
+**Cabeçalho:** atlctl.h
 
-##  <a name="contextsensitivehelp"></a>  IOleInPlaceActiveObjectImpl::ContextSensitiveHelp
+## <a name="ioleinplaceactiveobjectimplcontextsensitivehelp"></a><a name="contextsensitivehelp"></a>IOleInPlaceActiveObjectImpl::ContextSensitiveHelp
 
-Habilita a ajuda contextual.
+Permite ajuda sensível ao contexto.
 
 ```
 HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna E_NOTIMPL.
+Volta E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentários
 
-Consulte [IOleWindow:: ContextSensitiveHelp](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) na SDK do Windows.
+Consulte [IOleWindow::ContextSensitiveHelp](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) no Windows SDK.
 
-##  <a name="enablemodeless"></a>  IOleInPlaceActiveObjectImpl::EnableModeless
+## <a name="ioleinplaceactiveobjectimplenablemodeless"></a><a name="enablemodeless"></a>IOleInPlaceActiveObjectImpl::EnableModeless
 
-Habilita caixas de diálogo sem janela restrita.
+Habilita caixas de diálogo modeless.
 
 ```
 HRESULT EnableModeless(BOOL fEnable);
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_OK.
 
 ### <a name="remarks"></a>Comentários
 
-Consulte [IOleInPlaceActiveObject:: EnableModeless](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless) na SDK do Windows.
+Consulte [IOleInPlaceActiveObject::EnableModeless](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless) no Windows SDK.
 
-##  <a name="getwindow"></a>  IOleInPlaceActiveObjectImpl::GetWindow
+## <a name="ioleinplaceactiveobjectimplgetwindow"></a><a name="getwindow"></a>IOleInPlaceActiveObjectImpl::GetWindow
 
-O contêiner chama essa função para obter o identificador de janela do controle.
+O contêiner chama esta função para obter a alça da janela do controle.
 
 ```
 HRESULT GetWindow(HWND* phwnd);
@@ -114,11 +114,11 @@ HRESULT GetWindow(HWND* phwnd);
 
 ### <a name="remarks"></a>Comentários
 
-Alguns contêineres não funcionarão com um controle que tenha sido sem janela, mesmo que esteja em janela no momento. Na implementação da ATL, se o `CComControl::m_bWasOnceWindowless` membro de dados for true, a função retornará E_FAIL. Caso contrário, \* se *phwnd* não for nulo `GetWindow` , o atribuirá *phwnd* ao membro `m_hWnd` de dados da classe de controle e retornará S_OK.
+Alguns contêineres não funcionarão com um controle que tenha sido sem janelas, mesmo que esteja atualmente em janelas. Na implementação da ATL, se o membro de `CComControl::m_bWasOnceWindowless` dados for TRUE, a função retorna E_FAIL. Caso contrário, \* se *phwnd* `GetWindow` não for NULL, atribua *phwnd* ao membro `m_hWnd` de dados da classe de controle e retorna S_OK.
 
-Consulte [IOleWindow:: GetWindow](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) no SDK do Windows.
+Consulte [IOleWindow::GetWindow](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) no Windows SDK.
 
-##  <a name="ondocwindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnDocWindowActivate
+## <a name="ioleinplaceactiveobjectimplondocwindowactivate"></a><a name="ondocwindowactivate"></a>IOleInPlaceActiveObjectImpl::OnDocWindowActivate
 
 Notifica o controle quando a janela do documento do contêiner é ativada ou desativada.
 
@@ -126,15 +126,15 @@ Notifica o controle quando a janela do documento do contêiner é ativada ou des
 HRESULT OnDocWindowActivate(BOOL fActivate);
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_OK.
 
 ### <a name="remarks"></a>Comentários
 
-Consulte [IOleInPlaceActiveObject:: OnDocWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate) na SDK do Windows.
+Consulte [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate) no Windows SDK.
 
-##  <a name="onframewindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnFrameWindowActivate
+## <a name="ioleinplaceactiveobjectimplonframewindowactivate"></a><a name="onframewindowactivate"></a>IOleInPlaceActiveObjectImpl::OnFrameWindowActivate
 
 Notifica o controle quando a janela de quadro de nível superior do contêiner é ativada ou desativada.
 
@@ -142,17 +142,17 @@ Notifica o controle quando a janela de quadro de nível superior do contêiner �
 HRESULT OnFrameWindowActivate(BOOL fActivate);
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_OK.
 
 ### <a name="remarks"></a>Comentários
 
-Consulte [IOleInPlaceActiveObject:: OnFrameWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) na SDK do Windows.
+Consulte [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) in the Windows SDK.
 
-##  <a name="resizeborder"></a>  IOleInPlaceActiveObjectImpl::ResizeBorder
+## <a name="ioleinplaceactiveobjectimplresizeborder"></a><a name="resizeborder"></a>IOleInPlaceActiveObjectImpl::Redimensionborder
 
-Informa ao controle que ele precisa para redimensionar suas bordas.
+Informa o controle que precisa para redimensionar suas fronteiras.
 
 ```
 HRESULT ResizeBorder(
@@ -161,35 +161,35 @@ HRESULT ResizeBorder(
     BOOL fFrameWindow);
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_OK.
 
 ### <a name="remarks"></a>Comentários
 
-Consulte [IOleInPlaceActiveObject:: ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder) na SDK do Windows.
+Consulte [IOleInPlaceActiveObject::Redimensionarborder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder) no Windows SDK.
 
-##  <a name="translateaccelerator"></a>  IOleInPlaceActiveObjectImpl::TranslateAccelerator
+## <a name="ioleinplaceactiveobjectimpltranslateaccelerator"></a><a name="translateaccelerator"></a>IOleInPlaceActiveObjectImpl::TranslateAccelerator
 
-Processa as mensagens do menu Accelerator-Key do contêiner.
+Processa as mensagens-chave do acelerador do menu do contêiner.
 
 ```
 HRESULT TranslateAccelerator(LPMSG lpmsg);
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Esse método dá suporte aos seguintes valores de retorno:
+Este método suporta os seguintes valores de retorno:
 
-S_OK se a mensagem foi convertida com êxito.
+S_OK se a mensagem foi traduzida com sucesso.
 
-S_FALSE se a mensagem não tiver sido convertida.
+S_FALSE se a mensagem não foi traduzida.
 
 ### <a name="remarks"></a>Comentários
 
-Consulte [IOleInPlaceActiveObject:: TranslateAccelerator](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) na SDK do Windows.
+Consulte [IOleInPlaceActiveObject::TranslateAccelerator](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) no Windows SDK.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Interfaces de controles ActiveX](/windows/win32/com/activex-controls-interfaces)<br/>

@@ -1,8 +1,9 @@
 ---
 title: _flushall
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _flushall
+- _o__flushall
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-ms.openlocfilehash: dce7412ccc19d4870494851d366c059ff01de16a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 93181c0fe941a1c5e259e706771495666329bcb3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957148"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346614"
 ---
 # <a name="_flushall"></a>_flushall
 
@@ -44,19 +46,21 @@ Libera todos os fluxos, limpa todos os buffers.
 int _flushall( void );
 ```
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 **_flushall** retorna o número de fluxos abertos (entrada e saída). Nenhum erro é retornado.
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, a função **_flushall** grava em arquivos apropriados o conteúdo de todos os buffers associados a fluxos de saída abertos. Todos os buffers associados a fluxos de entrada abertos são limpos do seu conteúdo atual. (Normalmente, esses buffers são mantidos pelo sistema operacional, que determina o momento ideal para gravar os dados automaticamente no disco: quando um buffer estiver cheio, quando um fluxo for fechado ou quando um programa for encerrado normalmente sem fechar fluxos.)
+Por padrão, a função **_flushall** grava para arquivos apropriados o conteúdo de todos os buffers associados a fluxos de saída abertas. Todos os buffers associados a fluxos de entrada abertos são limpos do seu conteúdo atual. (Normalmente, esses buffers são mantidos pelo sistema operacional, que determina o momento ideal para gravar os dados automaticamente no disco: quando um buffer estiver cheio, quando um fluxo for fechado ou quando um programa for encerrado normalmente sem fechar fluxos.)
 
-Se uma leitura seguir uma chamada para **_flushall**, novos dados serão lidos dos arquivos de entrada para os buffers. Todos os fluxos permanecem abertos após a chamada para **_flushall**.
+Se uma leitura seguir uma chamada para **_flushall,** novos dados são lidos dos arquivos de entrada nos buffers. Todos os fluxos permanecem abertos após a chamada para **_flushall**.
 
-O recurso de confirmar no disco da biblioteca em tempo de execução permite assegurar que dados críticos sejam gravados diretamente no disco em vez de em buffers do sistema operacional. Sem reescrever um programa existente, você pode habilitar esse recurso vinculando os arquivos de objeto do programa com Commode.obj. No arquivo executável resultante, chamadas para **_flushall** gravam o conteúdo de todos os buffers em disco. Somente **_flushall** e [fflush](fflush.md) são afetados pelo COMMODE. obj.
+O recurso de confirmar no disco da biblioteca em tempo de execução permite assegurar que dados críticos sejam gravados diretamente no disco em vez de em buffers do sistema operacional. Sem reescrever um programa existente, você pode habilitar esse recurso vinculando os arquivos de objeto do programa com o Commode.obj. No arquivo executável resultante, chamadas para **_flushall** gravar o conteúdo de todos os buffers em disco. Apenas **_flushall** e [fflush](fflush.md) são afetados por Commode.obj.
 
 Para obter informações sobre como controlar o recurso de confirmação em disco, consulte [E/S de fluxo](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) e [_fdopen](fdopen-wfdopen.md).
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -88,7 +92,7 @@ int main( void )
 There were 3 streams flushed
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [_commit](commit.md)<br/>

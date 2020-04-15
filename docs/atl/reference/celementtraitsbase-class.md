@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CElementTraitsBase class
 ms.assetid: 75284caf-347e-4355-a7d8-efc708dd514a
-ms.openlocfilehash: 207207d26a2c43367a00b382f80761429159a7b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a29e8778cf2f3400df25b55574950a005bad995
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259112"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326999"
 ---
 # <a name="celementtraitsbase-class"></a>Classe CElementTraitsBase
 
-Essa classe fornece uma cópia padrão e move os métodos para uma classe de coleção.
+Esta classe fornece métodos padrão de cópia e movimento para uma classe de coleta.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,29 +40,29 @@ O tipo de dados a serem armazenados na coleção.
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CElementTraitsBase::INARGTYPE](#inargtype)|O tipo de dados a ser usado para adicionar elementos ao objeto de classe da coleção.|
-|[CElementTraitsBase::OUTARGTYPE](#outargtype)|O tipo de dados a ser usado para recuperar os elementos do objeto de classe da coleção.|
+|[CElementTraitsBase::INARGTYPE](#inargtype)|O tipo de dados a ser usado para adicionar elementos ao objeto da classe de coleta.|
+|[CElementTraitsBase::OUTARGTYPE](#outargtype)|O tipo de dados a ser usado para recuperar elementos do objeto da classe de coleta.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CElementTraitsBase::CopyElements](#copyelements)|Chame esse método para copiar elementos armazenados em um objeto de classe de coleção.|
-|[CElementTraitsBase::RelocateElements](#relocateelements)|Chame esse método para realocar os elementos armazenados em um objeto de classe de coleção.|
+|[CElementTraitsBase::CopyElements](#copyelements)|Chame este método para copiar elementos armazenados em um objeto de classe de coleção.|
+|[CElementTraitsBase::Realocar elementos](#relocateelements)|Chame este método para realocar elementos armazenados em um objeto de classe de coleção.|
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe base define métodos para copiar e realocação de elementos em uma classe de coleção. Ele é utilizado pelas classes [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), e [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).
+Esta classe base define métodos para copiar e realocar elementos em uma classe de coleção. É utilizado pelas classes [CDefaultElementTraits,](../../atl/reference/cdefaultelementtraits-class.md) [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)e [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).
 
-Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl-collection-classes.md).
+Para obter mais informações, consulte [ATL Collection Classes](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlcoll.h
 
-##  <a name="copyelements"></a>  CElementTraitsBase::CopyElements
+## <a name="celementtraitsbasecopyelements"></a><a name="copyelements"></a>CElementTraitsBase::CopyElements
 
-Chame esse método para copiar elementos armazenados em um objeto de classe de coleção.
+Chame este método para copiar elementos armazenados em um objeto de classe de coleção.
 
 ```
 static void CopyElements(
@@ -76,17 +76,17 @@ static void CopyElements(
 *pDest*<br/>
 Ponteiro para o primeiro elemento que receberá os dados copiados.
 
-*pSrc*<br/>
-Ponteiro para o primeiro elemento para copiar.
+*Psrc*<br/>
+Ponteiro para o primeiro elemento a copiar.
 
-*nElements*<br/>
+*nElementos*<br/>
 O número de elementos a serem copiados.
 
 ### <a name="remarks"></a>Comentários
 
-Os elementos de origem e de destino não devem se sobrepor.
+Os elementos de origem e destino não devem se sobrepor.
 
-##  <a name="inargtype"></a>  CElementTraitsBase::INARGTYPE
+## <a name="celementtraitsbaseinargtype"></a><a name="inargtype"></a>CElementTraitsBase::INARGTYPE
 
 O tipo de dados a ser usado para adicionar elementos à coleção.
 
@@ -94,17 +94,17 @@ O tipo de dados a ser usado para adicionar elementos à coleção.
 typedef const T& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CElementTraitsBase::OUTARGTYPE
+## <a name="celementtraitsbaseoutargtype"></a><a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE
 
-O tipo de dados a ser usado para recuperar os elementos da coleção.
+O tipo de dados a ser usado para recuperar elementos da coleta.
 
 ```
 typedef T& OUTARGTYPE;
 ```
 
-##  <a name="relocateelements"></a>  CElementTraitsBase::RelocateElements
+## <a name="celementtraitsbaserelocateelements"></a><a name="relocateelements"></a>CElementTraitsBase::Realocar elementos
 
-Chame esse método para realocar os elementos armazenados em um objeto de classe de coleção.
+Chame este método para realocar elementos armazenados em um objeto de classe de coleção.
 
 ```
 static void RelocateElements(
@@ -118,16 +118,16 @@ static void RelocateElements(
 *pDest*<br/>
 Ponteiro para o primeiro elemento que receberá os dados realocados.
 
-*pSrc*<br/>
-Ponteiro para o primeiro elemento para realocar.
+*Psrc*<br/>
+Ponteiro para o primeiro elemento a ser realocado.
 
-*nElements*<br/>
+*nElementos*<br/>
 O número de elementos para realocar.
 
 ### <a name="remarks"></a>Comentários
 
-Este método chama [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), que é suficiente para a maioria dos tipos de dados. Se os objetos que estão sendo movidos contêm ponteiros para os seus próprios membros, esse método precisará ser substituído.
+Este método chama [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), que é suficiente para a maioria dos tipos de dados. Se os objetos que estão sendo movidos contiverem ponteiros para seus próprios membros, este método precisará ser substituído.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral da classe](../../atl/atl-class-overview.md)

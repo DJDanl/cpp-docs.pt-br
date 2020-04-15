@@ -1,8 +1,9 @@
 ---
 title: _kbhit
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _kbhit
+- _o__kbhit
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 972b060dd98b5d267fa1f529c898573d4b82bb61
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c49a924a38aed3ff2d7953e150c4f3f1f3a5a25c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438097"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342248"
 ---
 # <a name="_kbhit"></a>_kbhit
 
@@ -55,13 +57,15 @@ int _kbhit( void );
 
 ## <a name="return-value"></a>Valor retornado
 
-**_kbhit** retornará um valor diferente de zero se uma chave tiver sido pressionada. Caso contrário, retorna 0.
+**_kbhit** retorna um valor não zero se uma tecla tiver sido pressionada. Caso contrário, retornará 0.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_kbhit** verifica o console para obter um pressionamento de tecla recente. Se a função retornar um valor diferente de zero, um pressionamento de tecla está aguardando no buffer. O programa pode então chamar **_getch** ou **_getche** para obter o pressionamento de teclas.
+A função **_kbhit** verifica o console para obter um toque de tecla recente. Se a função retornar um valor diferente de zero, um pressionamento de tecla está aguardando no buffer. O programa pode então chamar **_getch** ou **_getche** para obter o toque de tecla.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
@@ -73,7 +77,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 ```C
 // crt_kbhit.c
@@ -105,6 +109,6 @@ Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!
 Key struck was 'q'
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[E/S de porta e console](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[Console e Porta I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
