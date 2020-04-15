@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAnimationStoryboardEventHandler [MFC], OnStoryboardUpdated
 - CAnimationStoryboardEventHandler [MFC], SetAnimationController
 ms.assetid: 10a7e86b-c02d-4124-9a2e-61ecf8ac62fc
-ms.openlocfilehash: d12f38491cf3aafca41756ce97e1cad44deb67d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36b8b524591693775403d66fdc1f0754aaf67778
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338253"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364995"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>Classe CAnimationStoryboardEventHandler
 
@@ -45,14 +45,14 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CAnimationStoryboardEventHandler::CreateInstance](#createinstance)|Cria uma instância de `CAnimationStoryboardEventHandler` retorno de chamada.|
-|[CAnimationStoryboardEventHandler::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|Manipula `OnStoryboardStatusChanged` eventos que ocorrem quando status de um storyboard é alterado (substitui `CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`.)|
-|[CAnimationStoryboardEventHandler::OnStoryboardUpdated](#onstoryboardupdated)|Manipula `OnStoryboardUpdated` eventos que ocorrem quando um storyboard é atualizado (substitui `CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`.)|
-|[CAnimationStoryboardEventHandler::SetAnimationController](#setanimationcontroller)|Armazena um ponteiro para o controlador de animação para eventos de rota.|
+|[CAnimationStoryboardEventHandler::CreateInstance](#createinstance)|Cria uma `CAnimationStoryboardEventHandler` instância de retorno de chamada.|
+|[CAnimationStoryboardEventHandler::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|Lida `OnStoryboardStatusChanged` com eventos, que ocorrem quando o status `CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`de um storyboard muda (Overrides .)|
+|[CAnimationStoryboardEventHandler::OnStoryboardAtualizado](#onstoryboardupdated)|Lida `OnStoryboardUpdated` com eventos, que ocorrem quando um `CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`storyboard é atualizado (Overrides .)|
+|[CAnimationStoryboardEventHandler::SetAnimationController](#setanimationcontroller)|Armazena um ponteiro para o controlador de animação para rodar eventos.|
 
 ## <a name="remarks"></a>Comentários
 
-Esse manipulador de eventos é criado e passado para `IUIAnimationStoryboard::SetStoryboardEventHandler` método, quando você chama `CAnimationController::EnableStoryboardEventHandler`.
+Este manipulador de eventos é `IUIAnimationStoryboard::SetStoryboardEventHandler` criado e `CAnimationController::EnableStoryboardEventHandler`passado para o método, quando você chama .
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -66,7 +66,7 @@ Esse manipulador de eventos é criado e passado para `IUIAnimationStoryboard::Se
 
 **Cabeçalho:** afxanimationcontroller.h
 
-##  <a name="canimationstoryboardeventhandler"></a>  CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler
+## <a name="canimationstoryboardeventhandlercanimationstoryboardeventhandler"></a><a name="canimationstoryboardeventhandler"></a>CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler
 
 Constrói um objeto CAnimationStoryboardEventHandler.
 
@@ -74,7 +74,7 @@ Constrói um objeto CAnimationStoryboardEventHandler.
 CAnimationStoryboardEventHandler();
 ```
 
-##  <a name="createinstance"></a>  CAnimationStoryboardEventHandler::CreateInstance
+## <a name="canimationstoryboardeventhandlercreateinstance"></a><a name="createinstance"></a>CAnimationStoryboardEventHandler::CreateInstance
 
 Cria uma instância de retorno de chamada CAnimationStoryboardEventHandler.
 
@@ -91,13 +91,13 @@ Um ponteiro para o controlador de animação, que receberá eventos.
 
 *ppHandler*
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Se o método for bem-sucedido, retornará S_OK. Caso contrário, ele retornará um código de erro HRESULT.
+Se o método for bem-sucedido, retornará S_OK. Caso contrário, ele retorna um código de erro HRESULT.
 
-##  <a name="onstoryboardstatuschanged"></a>  CAnimationStoryboardEventHandler::OnStoryboardStatusChanged
+## <a name="canimationstoryboardeventhandleronstoryboardstatuschanged"></a><a name="onstoryboardstatuschanged"></a>CAnimationStoryboardEventHandler::OnStoryboardStatusChanged
 
-Manipula eventos OnStoryboardStatusChanged, que ocorrem quando status de um storyboard é alterado
+Lida com onStoryboardEventosalterados, que ocorrem quando o status de um storyboard muda
 
 ```
 IFACEMETHOD(OnStoryboardStatusChanged) (
@@ -108,22 +108,22 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 
 ### <a name="parameters"></a>Parâmetros
 
-*storyboard*<br/>
-Um ponteiro para o storyboard cujo status foi alterado.
+*Storyboard*<br/>
+Um ponteiro para storyboard cujo status mudou.
 
 *newStatus*<br/>
-Especifica o novo status de storyboard.
+Especifica o novo status do storyboard.
 
 *previousStatus*<br/>
-Especifica o status anterior do storyboard.
+Especifica o status do storyboard anterior.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se o método for bem-sucedido; Caso contrário, E_FAIL.
+S_OK se o método for bem sucedido; caso contrário, E_FAIL.
 
-##  <a name="onstoryboardupdated"></a>  CAnimationStoryboardEventHandler::OnStoryboardUpdated
+## <a name="canimationstoryboardeventhandleronstoryboardupdated"></a><a name="onstoryboardupdated"></a>CAnimationStoryboardEventHandler::OnStoryboardAtualizado
 
-Manipula eventos OnStoryboardUpdated, que ocorrem quando um storyboard é atualizado
+Lida com eventos onStoryboardAtualizado, que ocorrem quando um storyboard é atualizado
 
 ```
 IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
@@ -131,16 +131,16 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 
 ### <a name="parameters"></a>Parâmetros
 
-*storyboard*<br/>
-Um ponteiro para criar um storyboard, que foi atualizado.
+*Storyboard*<br/>
+Um ponteiro para storyboard, que foi atualizado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-S_OK se o método for bem-sucedido; Caso contrário, E_FAIL.
+S_OK se o método for bem sucedido; caso contrário, E_FAIL.
 
-##  <a name="setanimationcontroller"></a>  CAnimationStoryboardEventHandler::SetAnimationController
+## <a name="canimationstoryboardeventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationStoryboardEventHandler::SetAnimationController
 
-Armazena um ponteiro para o controlador de animação para eventos de rota.
+Armazena um ponteiro para o controlador de animação para rodar eventos.
 
 ```
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -151,6 +151,6 @@ void SetAnimationController(CAnimationController* pAnimationController);
 *pAnimationController*<br/>
 Um ponteiro para o controlador de animação, que receberá eventos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classes](../../mfc/reference/mfc-classes.md)

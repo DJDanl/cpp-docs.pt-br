@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-ms.openlocfilehash: bc1165cf1df3933575013906d1b24673467f0b36
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8789bb5e0e363458edffa7207ea1e138aae4d284
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178711"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365576"
 ---
 # <a name="sizeof-operator"></a>Operador sizeof
 
-Produz o tamanho de seu operando em relação ao tamanho do tipo **Char**.
+Rende o tamanho de seu operand em relação ao tamanho do tipo **char**.
 
 > [!NOTE]
->  Para obter informações sobre o operador de `sizeof ...`, consulte [reticências and Variadic templates](../cpp/ellipses-and-variadic-templates.md).
+> Para obter `sizeof ...` informações sobre o operador, consulte [Ellipses e Modelos Variadic](../cpp/ellipses-and-variadic-templates.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,15 +29,15 @@ sizeof  ( type-name )
 
 ## <a name="remarks"></a>Comentários
 
-O resultado do operador **sizeof** é do tipo `size_t`, um tipo integral definido no arquivo include \<stddef. h >. Esse operador permite que você evite especificar tamanhos de dados dependentes do computador em seus programas.
+O resultado do **tamanho** do `size_t`operador é do tipo , \<um tipo integral definido no arquivo incluir stddef.h>. Esse operador permite que você evite especificar tamanhos de dados dependentes do computador em seus programas.
 
-O operando para **sizeof** pode ser um dos seguintes:
+O operand para **tamanho pode** ser um dos seguintes:
 
-- O nome de um tipo. Para usar **sizeof** com um nome de tipo, o nome deve ser colocado entre parênteses.
+- O nome de um tipo. Para usar **tamanhos** com um nome de tipo, o nome deve ser incluído entre parênteses.
 
-- Uma expressão. Quando usado com uma expressão, **sizeof** pode ser especificado com ou sem parênteses. A expressão não é avaliada.
+- Uma expressão. Quando usado com uma expressão, **tamanhos** podem ser especificados com ou sem parênteses. A expressão não é avaliada.
 
-Quando o operador **sizeof** é aplicado a um objeto do tipo **Char**, ele resulta em 1. Quando o operador **sizeof** é aplicado a uma matriz, ele gera o número total de bytes nessa matriz, não o tamanho do ponteiro representado pelo identificador da matriz. Para obter o tamanho do ponteiro representado pelo identificador de matriz, passe-o como um parâmetro para uma função que usa **sizeof**. Por exemplo:
+Quando o **tamanho do operador** é aplicado a um objeto de tipo **char,** ele produz 1. Quando o **tamanho do** operador é aplicado a uma matriz, ele produz o número total de bytes nessa matriz, não o tamanho do ponteiro representado pelo identificador de matriz. Para obter o tamanho do ponteiro representado pelo identificador de matriz, passe-o como um parâmetro para uma função que usa **tamanho de**. Por exemplo:
 
 ## <a name="example"></a>Exemplo
 
@@ -71,19 +71,19 @@ The length of Hello, world! is: 14
 The size of the pointer is 4
 ```
 
-Quando o operador **sizeof** é aplicado a um tipo **Class**, **struct**ou **Union** , o resultado é o número de bytes em um objeto desse tipo, além de qualquer preenchimento adicionado para alinhar Membros em limites de palavras. O resultado não corresponde necessariamente ao tamanho calculado pela adição dos requisitos de armazenamento dos membros individuais. A opção do compilador [/ZP](../build/reference/zp-struct-member-alignment.md) e o pragma do [pacote](../preprocessor/pack.md) afetam os limites de alinhamento dos membros.
+Quando o **tamanho do** operador é aplicado a uma **classe,** **estruturaou**ou tipo **de união,** o resultado é o número de bytes em um objeto desse tipo, além de qualquer preenchimento adicionado para alinhar os membros nos limites da palavra. O resultado não corresponde necessariamente ao tamanho calculado pela adição dos requisitos de armazenamento dos membros individuais. A opção [/Zp](../build/reference/zp-struct-member-alignment.md) compilação e o pragma de [pacote](../preprocessor/pack.md) afetam os limites de alinhamento para membros.
 
-O operador **sizeof** nunca produz 0, mesmo para uma classe vazia.
+O **tamanho do operador** nunca rende 0, mesmo para uma classe vazia.
 
-O operador **sizeof** não pode ser usado com os seguintes operandos:
+O **tamanho do operador** não pode ser usado com os seguintes operands:
 
-- Funções. (No entanto, **sizeof** pode ser aplicado a ponteiros para funções.)
+- Funções. (No entanto, **tamanhos** podem ser aplicados a ponteiros para funções.)
 
 - Campos de bits.
 
 - Classes indefinidas.
 
-- O tipo **void**.
+- O **vazio**do tipo.
 
 - Matrizes alocadas dinamicamente.
 
@@ -93,11 +93,11 @@ O operador **sizeof** não pode ser usado com os seguintes operandos:
 
 - Nomes entre parênteses de tipos incompletos.
 
-Quando o operador **sizeof** é aplicado a uma referência, o resultado é o mesmo de se **sizeof** tivesse sido aplicado ao próprio objeto.
+Quando o **tamanho do** operador é aplicado a uma referência, o resultado é o mesmo que se **o tamanho** tivesse sido aplicado ao objeto em si.
 
-Se uma matriz sem tamanho for o último elemento de uma estrutura, o operador **sizeof** retornará o tamanho da estrutura sem a matriz.
+Se uma matriz não dimensionada for o último elemento de uma estrutura, o **tamanho do** operador retorna o tamanho da estrutura sem a matriz.
 
-O operador **sizeof** geralmente é usado para calcular o número de elementos em uma matriz usando uma expressão do formulário:
+O **tamanho do operador** é frequentemente usado para calcular o número de elementos em uma matriz usando uma expressão do formulário:
 
 ```cpp
 sizeof array / sizeof array[0]

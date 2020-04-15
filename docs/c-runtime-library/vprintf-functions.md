@@ -18,12 +18,12 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: 3c04879c7ec90aaba1199264c0c2128b9d1ea27c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: db4927e983a27110e587dacd9acf909f0c735b87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957231"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365673"
 ---
 # <a name="vprintf-functions"></a>Funções vprintf
 
@@ -44,32 +44,32 @@ As funções `vprintf` são semelhantes às funções correspondentes, conforme 
 
 Essas funções formatam os dados de saída para destinos como os seguintes.
 
-|Função|Função equivalente|Destino de saída|Validação do parâmetro|Suporte a parâmetros posicionais|
+|Função|Função equivalente|Destino de saída|Validação de parâmetro|Suporte a parâmetros posicionais|
 |--------------|--------------------------|------------------------|--------------------------|----------------------------------|
-|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Verifique se há nulos.|no|
-|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Verifique se há nulos.|no|
-|`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Fluxo*|Verifique se há nulos.|no|
+|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Verifique se há nulos.|não|
+|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Verifique se há nulos.|não|
+|`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Fluxo*|Verifique se há nulos.|não|
 |**vfprintf_p**|[fprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Fluxo*|Verifique se há nulos e formato válido.|sim|
-|`vfprintf_s`|[fprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Fluxo*|Verifique se há nulos e formato válido.|no|
-|`vfwprintf`|[fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Fluxo*|Verifique se há nulos.|no|
+|`vfprintf_s`|[fprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Fluxo*|Verifique se há nulos e formato válido.|não|
+|`vfwprintf`|[fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Fluxo*|Verifique se há nulos.|não|
 |**vfwprintf_p**|[fwprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Fluxo*|Verifique se há nulos e formato válido.|sim|
-|`vfwprintf_s`|[fwprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Fluxo*|Verifique se há nulos e formato válido.|no|
-|`vprintf`|[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Verifique se há nulos.|no|
+|`vfwprintf_s`|[fwprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Fluxo*|Verifique se há nulos e formato válido.|não|
+|`vprintf`|[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Verifique se há nulos.|não|
 |**vprintf_p**|[printf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Verifique se há nulos e formato válido.|sim|
-|`vprintf_s`|[printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Verifique se há nulos e formato válido.|no|
-|`vwprintf`|[wprintf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Verifique se há nulos.|no|
+|`vprintf_s`|[printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Verifique se há nulos e formato válido.|não|
+|`vwprintf`|[wprintf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Verifique se há nulos.|não|
 |**vwprintf_p**|[wprintf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Verifique se há nulos e formato válido.|sim|
-|`vwprintf_s`|[wprintf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Verifique se há nulos e formato válido.|no|
-|**vsprintf**|[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|memória apontada pelo *buffer*|Verifique se há nulos.|no|
+|`vwprintf_s`|[wprintf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Verifique se há nulos e formato válido.|não|
+|**vsprintf**|[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|memória apontada pelo *buffer*|Verifique se há nulos.|não|
 |**vsprintf_p**|[sprintf_p](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|memória apontada pelo *buffer*|Verifique se há nulos e formato válido.|sim|
-|`vsprintf_s`|[sprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|memória apontada pelo *buffer*|Verifique se há nulos e formato válido.|no|
-|`vswprintf`|[swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|memória apontada pelo *buffer*|Verifique se há nulos.|no|
+|`vsprintf_s`|[sprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|memória apontada pelo *buffer*|Verifique se há nulos e formato válido.|não|
+|`vswprintf`|[swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|memória apontada pelo *buffer*|Verifique se há nulos.|não|
 |**vswprintf_p**|[swprintf_p](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|memória apontada pelo *buffer*|Verifique se há nulos e formato válido.|sim|
-|`vswprintf_s`|[swprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|memória apontada pelo *buffer*|Verifique se há nulos e formato válido.|no|
-|`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|memória apontada pelo *buffer*|Verifique se há nulos.|no|
-|`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|memória apontada pelo *buffer*|Verifique se há nulos.|no|
-|`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|memória apontada pelo *buffer*|Verifique se há nulos.|no|
-|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|memória apontada pelo *buffer*|Verifique se há nulos.|no|
+|`vswprintf_s`|[swprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|memória apontada pelo *buffer*|Verifique se há nulos e formato válido.|não|
+|`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|memória apontada pelo *buffer*|Verifique se há nulos.|não|
+|`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|memória apontada pelo *buffer*|Verifique se há nulos.|não|
+|`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|memória apontada pelo *buffer*|Verifique se há nulos.|não|
+|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|memória apontada pelo *buffer*|Verifique se há nulos.|não|
 
 O argumento `argptr` tem o tipo `va_list`, definido em VARARGS.H e STDARG.H. A variável `argptr` deve ser inicializada por **va_start** e podem ser reinicializadas por chamadas `va_arg` subsequentes; `argptr` aponta para o início de uma lista de argumentos que são convertidos e transmitidos para saída de acordo com as especificações correspondentes no argumento *format*. O *formato* tem a mesma forma e função do que o argumento *format* para [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md). Nenhuma dessas funções invoca `va_end`. Para obter uma descrição mais completa de cada `vprintf` funcionam, consulte a descrição de sua função equivalente, conforme listado na tabela anterior.
 
@@ -81,12 +81,12 @@ As versões dessas funções com os sufixos **_s** e **_p** são as versões mai
 
 As versões dessas funções com o **_p** sufixo fornecem a capacidade de especificar a ordem na qual os argumentos fornecidos são substituídos na cadeia de caracteres de formato. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../c-runtime-library/printf-p-positional-parameters.md).
 
-Para **vsprintf**, `vswprintf`, `_vsnprintf` e `_vsnwprintf`, se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
+Para **vsprintf** `_vsnprintf` , `_vsnwprintf` `vswprintf`e , se a cópia ocorre entre cordas que se sobrepõem, o comportamento é indefinido.
 
 > [!IMPORTANT]
->  Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer). Se estiver usando as versões seguras dessas funções (os sufixos **_s** ou **_p**), uma cadeia de caracteres de formato fornecida pelo usuário poderia disparar uma exceção de parâmetro inválido caso a cadeia de caracteres fornecida pelo usuário contivesse caracteres de formatação inválidos.
+> Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer). Se estiver usando as versões seguras dessas funções (os sufixos **_s** ou **_p**), uma cadeia de caracteres de formato fornecida pelo usuário poderia disparar uma exceção de parâmetro inválido caso a cadeia de caracteres fornecida pelo usuário contivesse caracteres de formatação inválidos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../c-runtime-library/stream-i-o.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>

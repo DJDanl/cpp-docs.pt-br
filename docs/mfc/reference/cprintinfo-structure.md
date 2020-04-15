@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-ms.openlocfilehash: 96b6204fe46cb624d22506b2d3e5c1d7621b1865
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf0a1e6b7e742e950663f1ed9cc9ff2ddabd9d6f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372472"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364019"
 ---
 # <a name="cprintinfo-structure"></a>Estrutura CPrintInfo
 
@@ -25,49 +25,49 @@ struct CPrintInfo
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CPrintInfo::GetFromPage](#getfrompage)|Retorna o número da primeira página que está sendo impresso.|
+|[CPrintInfo::getFromPage](#getfrompage)|Retorna o número da primeira página que está sendo impressa.|
 |[CPrintInfo::GetMaxPage](#getmaxpage)|Retorna o número da última página do documento.|
 |[CPrintInfo::GetMinPage](#getminpage)|Retorna o número da primeira página do documento.|
-|[CPrintInfo::GetOffsetPage](#getoffsetpage)|Retorna o número das páginas que precede a primeira página de um item de DocObject que está sendo impressa em um trabalho de impressão DocObject combinado.|
-|[CPrintInfo::GetToPage](#gettopage)|Retorna o número da última página que está sendo impresso.|
-|[CPrintInfo::SetMaxPage](#setmaxpage)|Define o número da última página do documento.|
+|[CPrintInfo::GetOffsetPage](#getoffsetpage)|Retorna o número das páginas anteriores à primeira página de um item DocObject sendo impresso em um trabalho de impressão doCObject combinado.|
+|[CPrintInfo::GetToPage](#gettopage)|Retorna o número da última página a ser impressa.|
+|[CPrintInfo::SetmaxPage](#setmaxpage)|Define o número da última página do documento.|
 |[CPrintInfo::SetMinPage](#setminpage)|Define o número da primeira página do documento.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CPrintInfo::m_bContinuePrinting](#m_bcontinueprinting)|Contém um sinalizador que indica se a estrutura deve continuar o loop de impressão.|
-|[CPrintInfo::m_bDirect](#m_bdirect)|Contém um sinalizador que indica se o documento está sendo impresso diretamente (sem exibir a caixa de diálogo de impressão).|
-|[CPrintInfo::m_bDocObject](#m_bdocobject)|Contém um sinalizador que indica se o documento que está sendo impresso é DocObject.|
-|[CPrintInfo::m_bPreview](#m_bpreview)|Contém um sinalizador que indica se o documento está sendo visualizado.|
+|[CPrintInfo::m_bContinuePrinting](#m_bcontinueprinting)|Contém uma bandeira indicando se a estrutura deve continuar o loop de impressão.|
+|[CPrintInfo::m_bDirect](#m_bdirect)|Contém um sinalizador indicando se o documento está sendo impresso diretamente (sem exibir a caixa de diálogo Imprimir).|
+|[CPrintInfo::m_bDocObject](#m_bdocobject)|Contém um sinalizador indicando se o documento que está sendo impresso é um DocObject.|
+|[CPrintInfo::m_bPreview](#m_bpreview)|Contém uma bandeira indicando se o documento está sendo visualizado.|
 |[CPrintInfo::m_dwFlags](#m_dwflags)|Especifica as operações de impressão DocObject.|
 |[CPrintInfo::m_lpUserData](#m_lpuserdata)|Contém um ponteiro para uma estrutura criada pelo usuário.|
-|[CPrintInfo::m_nCurPage](#m_ncurpage)|Identifica o número da página que está sendo impresso.|
+|[CPrintInfo::m_nCurPage](#m_ncurpage)|Identifica o número da página que está sendo impressa no momento.|
 |[CPrintInfo::m_nJobNumber](#m_njobnumber)|Especifica o número de trabalho atribuído pelo sistema operacional para o trabalho de impressão atual|
-|[CPrintInfo::m_nNumPreviewPages](#m_nnumpreviewpages)|Identifica o número de páginas exibidas na janela de visualização. 1 ou 2.|
-|[CPrintInfo::m_nOffsetPage](#m_noffsetpage)|Especifica o deslocamento da primeira página do DocObject específico em um trabalho de impressão DocObject combinado.|
-|[CPrintInfo::m_pPD](#m_ppd)|Contém um ponteiro para o `CPrintDialog` objeto usado para a caixa de diálogo de impressão.|
-|[CPrintInfo::m_rectDraw](#m_rectdraw)|Especifica um retângulo que define a área utilizável da página atual.|
-|[CPrintInfo::m_strPageDesc](#m_strpagedesc)|Contém uma cadeia de caracteres de formato para exibição do número de página.|
+|[CPrintInfo::m_nNumPreviewPages](#m_nnumpreviewpages)|Identifica o número de páginas exibidas na janela de visualização; 1 ou 2.|
+|[CPrintInfo::m_nOffsetPage](#m_noffsetpage)|Especifica deslocamento da primeira página de um determinado DocObject em um trabalho de impressão doCObject combinado.|
+|[CPrintInfo::m_pPD](#m_ppd)|Contém um ponteiro `CPrintDialog` para o objeto usado para a caixa de diálogo Imprimir.|
+|[CPrintInfo::m_rectDraw](#m_rectdraw)|Especifica um retângulo definindo a área de página utilizável atual.|
+|[CPrintInfo::m_strPageDesc](#m_strpagedesc)|Contém uma seqüência de formato para exibição de número de página.|
 
 ## <a name="remarks"></a>Comentários
 
-`CPrintInfo` é uma estrutura e não tem uma classe base.
+`CPrintInfo`é uma estrutura e não tem uma classe base.
 
-A estrutura cria um objeto do `CPrintInfo` cada vez que a impressão ou o comando Visualizar impressão é escolhido e destrói a ele quando o comando for concluído.
+A estrutura cria `CPrintInfo` um objeto de cada vez que o comando Imprimir ou imprimir visualização é escolhido e o destrói quando o comando é concluído.
 
-`CPrintInfo` contém informações sobre o trabalho de impressão como um todo, como o intervalo de páginas a serem impressos e o status atual do trabalho de impressão, como a página que está sendo impresso. Algumas informações são armazenadas em um associado [CPrintDialog](../../mfc/reference/cprintdialog-class.md) do objeto; esse objeto contém os valores inseridos pelo usuário na caixa de diálogo Imprimir.
+`CPrintInfo`contém informações sobre o trabalho de impressão como um todo, como a gama de páginas a serem impressas e o status atual do trabalho de impressão, como a página que está sendo impressa. Algumas informações são armazenadas em um objeto [CPrintDialog](../../mfc/reference/cprintdialog-class.md) associado; este objeto contém os valores inseridos pelo usuário na caixa de diálogo Imprimir.
 
-Um `CPrintInfo` objeto é passado entre a estrutura e sua classe de exibição durante o processo de impressão e é usado para trocar informações entre os dois. Por exemplo, o framework informa à classe de exibição qual página de documento para impressão, atribuindo um valor para o `m_nCurPage` membro do `CPrintInfo`; a exibição de classe recupera o valor e faz a impressão real da página especificada.
+Um `CPrintInfo` objeto é passado entre a estrutura e sua classe de visualização durante o processo de impressão e é usado para trocar informações entre os dois. Por exemplo, o framework informa a classe de exibição qual página `m_nCurPage` do `CPrintInfo`documento a ser impressa atribuindo um valor ao membro do ; a classe de exibição recupera o valor e executa a impressão real da página especificada.
 
-Outro exemplo é o caso em que o tamanho do documento não é conhecido até que ele é impresso. Nessa situação, a classe de exibição testa o final do documento sempre que uma página é impressa. Quando o final for atingido, a classe de exibição define a `m_bContinuePrinting` membro do `CPrintInfo` como falso; isso informa a estrutura para interromper o loop de impressão.
+Outro exemplo é o caso em que o comprimento do documento não é conhecido até que seja impresso. Nesta situação, a classe de exibição testa para o final do documento cada vez que uma página é impressa. Quando o fim é alcançado, `m_bContinuePrinting` a `CPrintInfo` classe de exibição define o membro de FALSE; isso informa a estrutura para parar o loop de impressão.
 
-`CPrintInfo` é usado pelas funções membro de `CView` listado em "ver também." Para obter mais informações sobre a arquitetura de impressão fornecida pela biblioteca de classes Microsoft Foundation, consulte [Windows quadro](../../mfc/frame-windows.md) e [arquitetura de documento/exibição](../../mfc/document-view-architecture.md) e os artigos [ Imprimindo](../../mfc/printing.md) e [impressão: Documentos Multipágina](../../mfc/multipage-documents.md).
+`CPrintInfo`é usado pelas funções `CView` de membro listadas em "Ver Também". Para obter mais informações sobre a arquitetura de impressão fornecida pela Microsoft Foundation Class Library, consulte [Frame Windows](../../mfc/frame-windows.md) e [Document/View Architecture](../../mfc/document-view-architecture.md) e os artigos [Printing](../../mfc/printing.md) and [Printing: Multipage Documents](../../mfc/multipage-documents.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -77,129 +77,129 @@ Outro exemplo é o caso em que o tamanho do documento não é conhecido até que
 
 **Cabeçalho:** afxext.h
 
-##  <a name="getfrompage"></a>  CPrintInfo::GetFromPage
+## <a name="cprintinfogetfrompage"></a><a name="getfrompage"></a>CPrintInfo::getFromPage
 
-Chame essa função para recuperar o número da primeira página a ser impresso.
+Ligue para esta função para recuperar o número da primeira página a ser impressa.
 
 ```
 UINT GetFromPage() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O número da primeira página a ser impresso.
+O número da primeira página a ser impressa.
 
 ### <a name="remarks"></a>Comentários
 
-Esse é o valor especificado pelo usuário na caixa de diálogo Imprimir, e ele é armazenado na `CPrintDialog` objeto referenciado pelo `m_pPD` membro. Se o usuário não tiver especificado um valor, o padrão é a primeira página do documento.
+Este é o valor especificado pelo usuário na caixa de `CPrintDialog` diálogo Imprimir e `m_pPD` é armazenado no objeto referenciado pelo membro. Se o usuário não tiver especificado um valor, o padrão será a primeira página do documento.
 
-##  <a name="getmaxpage"></a>  CPrintInfo::GetMaxPage
+## <a name="cprintinfogetmaxpage"></a><a name="getmaxpage"></a>CPrintInfo::GetMaxPage
 
-Chame essa função para recuperar o número da última página do documento.
+Ligue para esta função para recuperar o número da última página do documento.
 
 ```
 UINT GetMaxPage() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O número da última página do documento.
 
 ### <a name="remarks"></a>Comentários
 
-Esse valor é armazenado na `CPrintDialog` objeto referenciado pelo `m_pPD` membro.
+Este valor é `CPrintDialog` armazenado no objeto `m_pPD` referenciado pelo membro.
 
-##  <a name="getminpage"></a>  CPrintInfo::GetMinPage
+## <a name="cprintinfogetminpage"></a><a name="getminpage"></a>CPrintInfo::GetMinPage
 
-Chame essa função para recuperar o número da primeira página do documento.
+Ligue para esta função para recuperar o número da primeira página do documento.
 
 ```
 UINT GetMinPage() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O número da primeira página do documento.
 
 ### <a name="remarks"></a>Comentários
 
-Esse valor é armazenado na `CPrintDialog` objeto referenciado pelo `m_pPD` membro.
+Este valor é `CPrintDialog` armazenado no objeto `m_pPD` referenciado pelo membro.
 
-##  <a name="getoffsetpage"></a>  CPrintInfo::GetOffsetPage
+## <a name="cprintinfogetoffsetpage"></a><a name="getoffsetpage"></a>CPrintInfo::GetOffsetPage
 
-Chame essa função para recuperar o deslocamento ao imprimir vários DocObject itens de um cliente DocObject.
+Chame esta função para recuperar o deslocamento ao imprimir vários itens do DocObject de um cliente DocObject.
 
 ```
 UINT GetOffsetPage() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O número de páginas que precede a primeira página de um item de DocObject que está sendo impressa em um trabalho de impressão DocObject combinado.
+O número de páginas que precedem a primeira página de um item DocObject sendo impresso em um trabalho de impressão docObject combinado.
 
 ### <a name="remarks"></a>Comentários
 
-Esse valor é referenciado pelo `m_nOffsetPage` membro. A primeira página do documento será numerada o `m_nOffsetPage` valor + 1 quando impresso como DocObject com outros documentos do Active Directory. O `m_nOffsetPage` membro é válido somente se o `m_bDocObject` valor é TRUE.
+Esse valor é referenciado pelo `m_nOffsetPage` membro. A primeira página do documento será `m_nOffsetPage` numerada o valor + 1 quando impresso como um DocObject com outros documentos ativos. O `m_nOffsetPage` membro só é `m_bDocObject` válido se o valor for TRUE.
 
-##  <a name="gettopage"></a>  CPrintInfo::GetToPage
+## <a name="cprintinfogettopage"></a><a name="gettopage"></a>CPrintInfo::GetToPage
 
-Chame essa função para recuperar o número da última página a ser impresso.
+Ligue para esta função para recuperar o número da última página a ser impressa.
 
 ```
 UINT GetToPage() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O número da última página a ser impresso.
-
-### <a name="remarks"></a>Comentários
-
-Esse é o valor especificado pelo usuário na caixa de diálogo Imprimir, e ele é armazenado na `CPrintDialog` objeto referenciado pelo `m_pPD` membro. Se o usuário não tiver especificado um valor, o padrão é a última página do documento.
-
-##  <a name="m_bcontinueprinting"></a>  CPrintInfo::m_bContinuePrinting
-
-Contém um sinalizador que indica se a estrutura deve continuar o loop de impressão.
+O número da última página a ser impressa.
 
 ### <a name="remarks"></a>Comentários
 
-Se você estiver fazendo a paginação de tempo de impressão, você pode definir esse membro como FALSE em seu substituto do `CView::OnPrepareDC` depois que você atingiu o final do documento. Você não precisa modificar essa variável se você tiver especificado o tamanho do documento no início do trabalho de impressão usando o `SetMaxPage` função de membro. O `m_bContinuePrinting` membro é uma variável pública do tipo BOOL.
+Este é o valor especificado pelo usuário na caixa de `CPrintDialog` diálogo Imprimir e `m_pPD` é armazenado no objeto referenciado pelo membro. Se o usuário não especificou um valor, o padrão será a última página do documento.
 
-##  <a name="m_bdirect"></a>  CPrintInfo::m_bDirect
+## <a name="cprintinfom_bcontinueprinting"></a><a name="m_bcontinueprinting"></a>CPrintInfo::m_bContinuePrinting
 
-A estrutura define esse membro como TRUE se a caixa de diálogo de impressão será ignorada para impressão direta; FALSE caso contrário.
-
-### <a name="remarks"></a>Comentários
-
-A caixa de diálogo de impressão normalmente é ignorada quando você imprime do shell ou quando a impressão é feita usando o comando ID_FILE_PRINT_DIRECT ID.
-
-Você normalmente não altere esse membro, mas se você alterá-lo, alterá-lo antes de chamada [CView::DoPreparePrinting](../../mfc/reference/cview-class.md#doprepareprinting) em seu substituto do [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting).
-
-##  <a name="m_bdocobject"></a>  CPrintInfo::m_bDocObject
-
-Contém um sinalizador que indica se o documento que está sendo impresso é DocObject.
+Contém uma bandeira indicando se a estrutura deve continuar o loop de impressão.
 
 ### <a name="remarks"></a>Comentários
 
-Membros de dados `m_dwFlags` e `m_nOffsetPage` são inválidas, a menos que esse sinalizador é verdadeiro.
+Se você estiver fazendo paginação em tempo de impressão, você `CView::OnPrepareDC` pode definir este membro como FALSE em sua substituição de uma vez que o fim do documento foi alcançado. Você não precisa modificar esta variável se você tiver especificado o comprimento do `SetMaxPage` documento no início do trabalho de impressão usando a função membro. O `m_bContinuePrinting` membro é uma variável pública do tipo BOOL.
 
-##  <a name="m_bpreview"></a>  CPrintInfo::m_bPreview
+## <a name="cprintinfom_bdirect"></a><a name="m_bdirect"></a>CPrintInfo::m_bDirect
 
-Contém um sinalizador que indica se o documento está sendo visualizado.
-
-### <a name="remarks"></a>Comentários
-
-Isso é definido pela estrutura, dependendo de qual lugar do comando executado. A caixa de diálogo de impressão não é exibida para um trabalho de visualização de impressão. O `m_bPreview` membro é uma variável pública do tipo BOOL.
-
-##  <a name="m_dwflags"></a>  CPrintInfo::m_dwFlags
-
-Contém uma combinação de sinalizadores que especificam as operações de impressão DocObject.
+O framework define este membro como TRUE se a caixa de diálogo Imprimir será contornada para impressão direta; FALSO de outra forma.
 
 ### <a name="remarks"></a>Comentários
 
-Válido somente se o membro de dados `m_bDocObject` é TRUE.
+A caixa de diálogo Imprimir é normalmente ignorada quando você imprime da concha ou quando a impressão é feita usando o ID_FILE_PRINT_DIRECT de id de comando.
 
-Os sinalizadores de podem ser um ou mais dos seguintes valores:
+Você normalmente não altera este membro, mas se você alterá-lo, altere-o antes de chamar [CView::DoPreparePrinting](../../mfc/reference/cview-class.md#doprepareprinting) em sua substituição de [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting).
+
+## <a name="cprintinfom_bdocobject"></a><a name="m_bdocobject"></a>CPrintInfo::m_bDocObject
+
+Contém um sinalizador indicando se o documento que está sendo impresso é um DocObject.
+
+### <a name="remarks"></a>Comentários
+
+Os `m_dwFlags` membros `m_nOffsetPage` dos dados são inválidos, a menos que esta bandeira seja VERDADEIRA.
+
+## <a name="cprintinfom_bpreview"></a><a name="m_bpreview"></a>CPrintInfo::m_bPreview
+
+Contém uma bandeira indicando se o documento está sendo visualizado.
+
+### <a name="remarks"></a>Comentários
+
+Isso é definido pela estrutura, dependendo do comando executado pelo usuário. A caixa de diálogo Imprimir não é exibida para um trabalho de visualização de impressão. O `m_bPreview` membro é uma variável pública do tipo BOOL.
+
+## <a name="cprintinfom_dwflags"></a><a name="m_dwflags"></a>CPrintInfo::m_dwFlags
+
+Contém uma combinação de sinalizadores especificando operações de impressão DocObject.
+
+### <a name="remarks"></a>Comentários
+
+Válido somente se `m_bDocObject` o membro de dados for TRUE.
+
+As bandeiras podem ser um ou mais dos seguintes valores:
 
 - PRINTFLAG_MAYBOTHERUSER
 
@@ -215,7 +215,7 @@ Os sinalizadores de podem ser um ou mais dos seguintes valores:
 
 - PRINTFLAG_PRINTTOFILE
 
-##  <a name="m_lpuserdata"></a>  CPrintInfo::m_lpUserData
+## <a name="cprintinfom_lpuserdata"></a><a name="m_lpuserdata"></a>CPrintInfo::m_lpUserData
 
 Contém um ponteiro para uma estrutura criada pelo usuário.
 
@@ -223,63 +223,63 @@ Contém um ponteiro para uma estrutura criada pelo usuário.
 
 Você pode usar isso para armazenar dados específicos de impressão que você não deseja armazenar em sua classe de exibição. O `m_lpUserData` membro é uma variável pública do tipo LPVOID.
 
-##  <a name="m_ncurpage"></a>  CPrintInfo::m_nCurPage
+## <a name="cprintinfom_ncurpage"></a><a name="m_ncurpage"></a>CPrintInfo::m_nCurPage
 
 Contém o número da página atual.
 
 ### <a name="remarks"></a>Comentários
 
-A estrutura chama `CView::OnPrepareDC` e `CView::OnPrint` uma vez para cada página do documento, especificando um valor diferente para este membro sempre; seus valores de intervalo do valor retornado por `GetFromPage` àquele retornado por `GetToPage`. Use esse membro nas suas substituições de `CView::OnPrepareDC` e `CView::OnPrint` para imprimir a página especificada do documento.
+O framework `CView::OnPrepareDC` `CView::OnPrint` chama e uma vez para cada página do documento, especificando um valor diferente para este membro cada vez; seus valores variam do `GetFromPage` valor devolvido até `GetToPage`o devolvido por . Use este membro em `CView::OnPrepareDC` suas `CView::OnPrint` substituições e para imprimir a página especificada do documento.
 
-Quando o modo de visualização é invocado pela primeira vez, o framework lê o valor desse membro para determinar qual página do documento deve ser visualizada inicialmente. Você pode definir o valor desse membro em seu substituto do `CView::OnPreparePrinting` para manter a posição atual do usuário no documento ao inserir o modo de visualização. O `m_nCurPage` membro é uma variável pública do tipo UINT.
+Quando o modo de visualização é invocado pela primeira vez, a estrutura lê o valor deste membro para determinar qual página do documento deve ser visualizada inicialmente. Você pode definir o valor deste membro `CView::OnPreparePrinting` em sua substituição de manter a posição atual do usuário no documento ao entrar no modo de visualização. O `m_nCurPage` membro é uma variável pública do tipo UINT.
 
-##  <a name="m_njobnumber"></a>  CPrintInfo::m_nJobNumber
+## <a name="cprintinfom_njobnumber"></a><a name="m_njobnumber"></a>CPrintInfo::m_nJobNumber
 
-Indica o número atribuído pelo sistema operacional para o trabalho de impressão atual.
+Indica o número de trabalho atribuído pelo sistema operacional para o trabalho de impressão atual.
 
 ### <a name="remarks"></a>Comentários
 
-Esse valor pode ser SP_ERROR se o trabalho ainda não foi impresso (ou seja, se o `CPrintInfo` objeto é construído recentemente e ainda não foi usado para imprimir), ou se ocorreu um erro ao iniciar o trabalho.
+Esse valor pode ser SP_ERROR se o trabalho ainda não `CPrintInfo` foi impresso (ou seja, se o objeto é recém-construído e ainda não foi usado para imprimir), ou se houve um erro no início do trabalho.
 
-##  <a name="m_nnumpreviewpages"></a>  CPrintInfo::m_nNumPreviewPages
+## <a name="cprintinfom_nnumpreviewpages"></a><a name="m_nnumpreviewpages"></a>CPrintInfo::m_nNumPreviewPages
 
-Contém o número de páginas exibidas no modo de visualização; ele pode ser 1 ou 2.
+Contém o número de páginas exibidas no modo de visualização; pode ser 1 ou 2.
 
 ### <a name="remarks"></a>Comentários
 
 O `m_nNumPreviewPages` membro é uma variável pública do tipo UINT.
 
-##  <a name="m_noffsetpage"></a>  CPrintInfo::m_nOffsetPage
+## <a name="cprintinfom_noffsetpage"></a><a name="m_noffsetpage"></a>CPrintInfo::m_nOffsetPage
 
-Contém o número de páginas que precede a primeira página do DocObject específico em um trabalho de impressão DocObject combinado.
+Contém o número de páginas que precedem a primeira página de um DocObject específico em um trabalho de impressão docObject combinado.
 
-##  <a name="m_ppd"></a>  CPrintInfo::m_pPD
+## <a name="cprintinfom_ppd"></a><a name="m_ppd"></a>CPrintInfo::m_pPD
 
-Contém um ponteiro para o `CPrintDialog` objeto usado para exibir a caixa de diálogo de impressão para o trabalho de impressão.
+Contém um ponteiro `CPrintDialog` para o objeto usado para exibir a caixa de diálogo Imprimir para o trabalho de impressão.
 
 ### <a name="remarks"></a>Comentários
 
-O `m_pPD` membro é uma variável pública declarada como um ponteiro para `CPrintDialog`.
+O `m_pPD` membro é uma variável pública `CPrintDialog`declarada como um ponteiro para .
 
-##  <a name="m_rectdraw"></a>  CPrintInfo::m_rectDraw
+## <a name="cprintinfom_rectdraw"></a><a name="m_rectdraw"></a>CPrintInfo::m_rectDraw
 
 Especifica a área de desenho utilizável da página em coordenadas lógicas.
 
 ### <a name="remarks"></a>Comentários
 
-Você talvez queira consultar a isso em seu substituto do `CView::OnPrint`. Você pode usar esse membro para controlar qual área permaneça utilizável depois que você imprimir cabeçalhos, rodapés e assim por diante. O `m_rectDraw` membro é uma variável pública do tipo `CRect`.
+Você pode querer se referir a `CView::OnPrint`isso em sua substituição de . Você pode usar este membro para acompanhar qual área permanece utilizável depois de imprimir cabeçalhos, rodapés e assim por diante. O `m_rectDraw` membro é uma `CRect`variável pública do tipo .
 
-##  <a name="m_strpagedesc"></a>  CPrintInfo::m_strPageDesc
+## <a name="cprintinfom_strpagedesc"></a><a name="m_strpagedesc"></a>CPrintInfo::m_strPageDesc
 
-Contém uma cadeia de caracteres de formato usada para exibir os números de página durante a visualização de impressão; Essa cadeia de caracteres consiste em duas subcadeias de caracteres, um para a exibição de página única e outra para a exibição de página dupla, cada terminada por um caractere '\n'.
+Contém uma seqüência de formato usada para exibir os números da página durante a visualização de impressão; esta seqüência consiste em duas substrings, uma para exibição de uma página e outra para exibição de duas páginas, cada uma terminada por um caractere '\n'.
 
 ### <a name="remarks"></a>Comentários
 
-A estrutura usa a "Página %u\nPages % u-%u\n" como o valor padrão. Se você quiser um formato diferente para os números de página, especifique uma cadeia de caracteres de formato em seu substituto do `CView::OnPreparePrinting`. O `m_strPageDesc` membro é uma variável pública do tipo `CString`.
+A estrutura usa "Page %u\nPages %u-%u\n" como o valor padrão. Se você quiser um formato diferente para os números da `CView::OnPreparePrinting`página, especifique uma seqüência de formato satisfaz a substituição de . O `m_strPageDesc` membro é uma `CString`variável pública do tipo .
 
-##  <a name="setmaxpage"></a>  CPrintInfo::SetMaxPage
+## <a name="cprintinfosetmaxpage"></a><a name="setmaxpage"></a>CPrintInfo::SetmaxPage
 
-Chame essa função para especificar o número da última página do documento.
+Ligue para esta função para especificar o número da última página do documento.
 
 ```
 void SetMaxPage(UINT nMaxPage);
@@ -292,15 +292,15 @@ Número da última página do documento.
 
 ### <a name="remarks"></a>Comentários
 
-Esse valor é armazenado na `CPrintDialog` objeto referenciado pelo `m_pPD` membro. Se o tamanho do documento é conhecido antes que ele seja impresso, chame essa função de sua substituição do `CView::OnPreparePrinting`. Se o tamanho do documento depende de uma configuração especificada pelo usuário na caixa de diálogo Imprimir, chame essa função de sua substituição do `CView::OnBeginPrinting`. Se o tamanho do documento não é conhecido até que ele é impresso, use o `m_bContinuePrinting` membro para controlar o loop de impressão.
+Este valor é `CPrintDialog` armazenado no objeto `m_pPD` referenciado pelo membro. Se o comprimento do documento for conhecido antes de ser impresso, `CView::OnPreparePrinting`chame esta função a partir de sua substituição de . Se o comprimento do documento depender de uma configuração especificada pelo usuário na caixa `CView::OnBeginPrinting`de diálogo Imprimir, chame esta função a partir da substituição de . Se o comprimento do documento não for conhecido até `m_bContinuePrinting` que seja impresso, use o membro para controlar o loop de impressão.
 
 ### <a name="example"></a>Exemplo
 
   Veja o exemplo de [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting).
 
-##  <a name="setminpage"></a>  CPrintInfo::SetMinPage
+## <a name="cprintinfosetminpage"></a><a name="setminpage"></a>CPrintInfo::SetMinPage
 
-Chame essa função para especificar o número da primeira página do documento.
+Ligue para esta função para especificar o número da primeira página do documento.
 
 ```
 void SetMinPage(UINT nMinPage);
@@ -313,15 +313,15 @@ Número da primeira página do documento.
 
 ### <a name="remarks"></a>Comentários
 
-Números de página normalmente começam em 1. Esse valor é armazenado na `CPrintDialog` objeto referenciado pelo `m_pPD` membro.
+Os números das páginas normalmente começam em 1. Este valor é `CPrintDialog` armazenado no objeto `m_pPD` referenciado pelo membro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Exemplo MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
+[Amostra de MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
-[CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)<br/>
+[Cview::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)<br/>
 [CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)<br/>
-[CView::OnEndPrintPreview](../../mfc/reference/cview-class.md#onendprintpreview)<br/>
+[CView::OnendPrintPreview](../../mfc/reference/cview-class.md#onendprintpreview)<br/>
 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)<br/>
 [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
 [CView::OnPrint](../../mfc/reference/cview-class.md#onprint)

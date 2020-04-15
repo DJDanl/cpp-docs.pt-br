@@ -1,17 +1,17 @@
 ---
-title: Delegando construtores (C++)
-description: Use os construtores de delegação no C++ para invocar outros construtores e reduzir a repetição de código.
+title: Construtores delegantes (C++)
+description: Use construtores delegantes em C++ para invocar outros construtores e reduzir a repetição de código.
 ms.date: 11/19/2019
-ms.openlocfilehash: 533cdfbeb882f3770cc554b0633611a4ffc2cfbd
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: f26a013aa3c081d900ffc3eb32649acc77505db0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250670"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316668"
 ---
 # <a name="delegating-constructors"></a>Delegação de construtores
 
-Muitas classes têm vários construtores que fazem coisas semelhantes, por exemplo, validar parâmetros:
+Muitas classes têm vários construtores que fazem coisas semelhantes — por exemplo, validam parâmetros:
 
 ```cpp
 class class_c {
@@ -36,7 +36,7 @@ public:
 };
 ```
 
-Você pode reduzir o código repetitivo adicionando uma função que faz toda a validação, mas o código para `class_c` seria mais fácil de entender e manter se um Construtor pudesse delegar um pouco do trabalho para outro. Para adicionar construtores de delegação, use a sintaxe `constructor (. . .) : constructor (. . .)`:
+Você poderia reduzir o código repetitivo adicionando uma função que `class_c` faz toda a validação, mas o código para seria mais fácil de entender e manter se um construtor pudesse delegar parte do trabalho para outro. Para adicionar construtores delegantes, `constructor (. . .) : constructor (. . .)` use a sintaxe:
 
 ```cpp
 class class_c {
@@ -61,9 +61,9 @@ int main() {
 }
 ```
 
-Conforme você percorre o exemplo anterior, observe que o Construtor `class_c(int, int, int)` primeiro chama o Construtor `class_c(int, int)`, que por sua vez chama `class_c(int)`. Cada um dos construtores executa apenas o trabalho que não é executado por outros construtores.
+Ao passar pelo exemplo anterior, observe `class_c(int, int, int)` que o construtor `class_c(int, int)`primeiro chama `class_c(int)`o construtor, que por sua vez chama . Cada um dos construtores realiza apenas o trabalho que não é realizado pelos outros construtores.
 
-O primeiro construtor chamado Inicializa o objeto para que todos os seus membros sejam inicializados nesse ponto. Você não pode fazer a inicialização de membro em um construtor que delega para outro construtor, como mostrado aqui:
+O primeiro construtor chamado inicializa o objeto para que todos os seus membros sejam inicializados nesse ponto. Você não pode fazer a inicialização de membros em uma construtora que delega para outro construtor, como mostrado aqui:
 
 ```cpp
 class class_a {
@@ -83,7 +83,7 @@ public:
 };
 ```
 
-O exemplo a seguir mostra o uso de inicializadores de membro de dados não estáticos. Observe que, se um construtor também inicializar um determinado membro de dados, o inicializador do membro será substituído:
+O próximo exemplo mostra o uso de iniciadores não estáticos de membros de dados. Observe que se um construtor também inicializar um determinado membro de dados, o inicializador do membro será substituído:
 
 ```cpp
 class class_a {
@@ -101,7 +101,7 @@ int main() {
 }
 ```
 
-A sintaxe de delegação de construtor não impede a criação acidental de recursão de Construtor — Constructor1 chama Constructor2 que chama Constructor1 – e nenhum erro é lançado até que haja um estouro de pilha. É sua responsabilidade evitar ciclos.
+A sintaxe da delegação de construtores não impede a criação acidental de recursão de construtores — a Construtora1 chama de Constructor2 — e nenhum erro é lançado até que haja um estouro de pilha. É sua responsabilidade evitar ciclos.
 
 ```cpp
 class class_f{

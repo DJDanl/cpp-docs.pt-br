@@ -9,23 +9,23 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 531ad2936322f90a38631a9450e0ad8a210fdd87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422041"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364908"
 ---
 # <a name="ltarraygt-operators"></a>Operadores &lt;array&gt;
 
-O cabeçalho de > de matriz de \<inclui essas funções de modelo de comparação de não membros de **matriz** .
+O \<cabeçalho de> de matriz inclui essas funções de modelo de comparação não-membros da **matriz.**
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+|[operador!=](#op_neq)|[Operador&gt;](#op_gt)|[Operador&gt;=](#op_gt_eq)|
+|[Operador&lt;](#op_lt)|[Operador&lt;=](#op_lt_eq)|[operador==](#op_eq_eq)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>operador!=
 
 Comparação de matriz, não é igual.
 
@@ -36,7 +36,7 @@ bool operator!=(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Ty*\
 O tipo de um elemento.
@@ -44,10 +44,10 @@ O tipo de um elemento.
 *N*\
 O tamanho da matriz.
 
-\ *à esquerda*
+*Deixou*\
 Contêiner esquerdo a comparar.
 
-\ *à direita*
+*Certo*\
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
@@ -98,7 +98,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>Operador&lt;
 
 Comparação de matriz, menor que.
 
@@ -109,7 +109,7 @@ bool operator<(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Ty*\
 O tipo de um elemento.
@@ -117,15 +117,15 @@ O tipo de um elemento.
 *N*\
 O tamanho da matriz.
 
-\ *à esquerda*
+*Deixou*\
 Contêiner esquerdo a comparar.
 
-\ *à direita*
+*Certo*\
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
-A função de modelo sobrecarrega `operator<` para comparar dois objetos da [classe de matriz](../standard-library/array-class-stl.md)de modelo de classe. A função retorna `lexicographical_compare(left.begin(), left.end(), right.begin())`.
+A função de `operator<` modelo sobrecarrega para comparar dois objetos da [classe de matriz](../standard-library/array-class-stl.md)de modelo de classe . A função retorna `lexicographical_compare(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Exemplo
 
@@ -171,7 +171,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>Operador&lt;=
 
 Comparação de matriz, menor ou igual.
 
@@ -182,7 +182,7 @@ bool operator<=(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Ty*\
 O tipo de um elemento.
@@ -190,10 +190,10 @@ O tipo de um elemento.
 *N*\
 O tamanho da matriz.
 
-\ *à esquerda*
+*Deixou*\
 Contêiner esquerdo a comparar.
 
-\ *à direita*
+*Certo*\
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
@@ -244,7 +244,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>operador==
 
 Comparação de matriz, igual.
 
@@ -255,7 +255,7 @@ bool operator==(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Ty*\
 O tipo de um elemento.
@@ -263,15 +263,15 @@ O tipo de um elemento.
 *N*\
 O tamanho da matriz.
 
-\ *à esquerda*
+*Deixou*\
 Contêiner esquerdo a comparar.
 
-\ *à direita*
+*Certo*\
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
 
-A função de modelo sobrecarrega `operator==` para comparar dois objetos da [classe de matriz](../standard-library/array-class-stl.md)de modelo de classe. A função retorna `equal(left.begin(), left.end(), right.begin())`.
+A função de `operator==` modelo sobrecarrega para comparar dois objetos da [classe de matriz](../standard-library/array-class-stl.md)de modelo de classe . A função retorna `equal(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Exemplo
 
@@ -317,7 +317,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>Operador&gt;
 
 Comparação de matriz, maior que.
 
@@ -328,7 +328,7 @@ bool operator>(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Ty*\
 O tipo de um elemento.
@@ -336,10 +336,10 @@ O tipo de um elemento.
 *N*\
 O tamanho da matriz.
 
-\ *à esquerda*
+*Deixou*\
 Contêiner esquerdo a comparar.
 
-\ *à direita*
+*Certo*\
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
@@ -390,7 +390,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>Operador&gt;=
 
 Comparação de matriz, maior ou igual.
 
@@ -401,7 +401,7 @@ bool operator>=(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Ty*\
 O tipo de um elemento.
@@ -409,10 +409,10 @@ O tipo de um elemento.
 *N*\
 O tamanho da matriz.
 
-\ *à esquerda*
+*Deixou*\
 Contêiner esquerdo a comparar.
 
-\ *à direita*
+*Certo*\
 Contêiner direito a comparar.
 
 ### <a name="remarks"></a>Comentários
@@ -465,4 +465,4 @@ false
 
 ## <a name="see-also"></a>Confira também
 
-[\<array>](../standard-library/array.md)
+[\<matriz>](../standard-library/array.md)

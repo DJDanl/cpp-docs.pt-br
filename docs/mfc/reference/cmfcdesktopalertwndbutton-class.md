@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCaptionButton
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
-ms.openlocfilehash: 639342e0a09a6e970478fce1b5aac629f03c2015
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b18a15f8bfd98396acae0558d121b32bc4127c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403653"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367622"
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>Classe CMFCDesktopAlertWndButton
 
-Permite que os botões a serem adicionados a uma caixa de diálogo de alerta da área de trabalho.
+Permite que os botões sejam adicionados a uma caixa de diálogo de alerta de área de trabalho.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,38 +45,38 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 |[CMFCDesktopAlertWndButton::IsCaptionButton](#iscaptionbutton)|Determina se o botão é exibido na área de legenda da caixa de diálogo de alerta.|
 |[CMFCDesktopAlertWndButton::IsCloseButton](#isclosebutton)|Determina se o botão fecha a caixa de diálogo de alerta.|
 
-### <a name="data-members"></a>Membros de Dados
+### <a name="data-members"></a>Membros de dados
 
 |||
 |-|-|
 |Nome|Descrição|
-|`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|Um valor booliano que especifica se o botão é exibido na área de legenda da caixa de diálogo de alerta.|
-|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Um valor booliano que especifica se o botão fecha a caixa de diálogo de alerta.|
+|`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|Um valor booleano que especifica se o botão é exibido na área de legenda da caixa de diálogo de alerta.|
+|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Um valor booleano que especifica se o botão fecha a caixa de diálogo de alerta.|
 
 ### <a name="remarks"></a>Comentários
 
-Por padrão, o construtor define a `m_bIsCaptionButton` e `m_bIsCloseButton` membros de dados como FALSE. O pai `CMFCDesktopAlertDialog` conjuntos de objetos `m_bIsCaptionButton` como TRUE se o botão é posicionado na área de legenda da caixa de diálogo de alerta. O `CMFCDesktopAlertDialog` classe cria um `CMFCDesktopAlertWndButton` objeto que serve como o botão que fecha a caixa de diálogo alerta caixa e define `m_bIsCloseButton` como TRUE.
+Por padrão, o construtor `m_bIsCaptionButton` `m_bIsCloseButton` define os membros e dados como FALSOs. O `CMFCDesktopAlertDialog` objeto `m_bIsCaptionButton` pai é configurado como TRUE se o botão estiver posicionado na área de legenda da caixa de diálogo de alerta. A `CMFCDesktopAlertDialog` classe `CMFCDesktopAlertWndButton` cria um objeto que serve como o botão `m_bIsCloseButton` que fecha a caixa de diálogo de alerta e define como TRUE.
 
-Adicione `CMFCDesktopAlertWndButton` objetos para um `CMFCDesktopAlertDialog` como faria ao adicionar qualquer botão do objeto. Para obter mais informações sobre `CMFCDesktopAlertDialog`, consulte [classe CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md).
+Adicione `CMFCDesktopAlertWndButton` objetos `CMFCDesktopAlertDialog` a um objeto como você adicionaria qualquer botão. Para obter `CMFCDesktopAlertDialog`mais informações sobre, consulte [CMFCDesktopAlertSala Class](../../mfc/reference/cmfcdesktopalertdialog-class.md).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o `SetImage` método no `CMFCDesktopAlertWndButton` classe. Este trecho de código faz parte do [amostra de demonstração de alerta da área de trabalho](../../overview/visual-cpp-samples.md).
+O exemplo a seguir `SetImage` demonstra como `CMFCDesktopAlertWndButton` usar o método na classe. Este trecho de código faz parte da [amostra de demonstração de alerta de área de trabalho](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#4](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DesktopAlertDemo#5](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_2.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
 [CButton](../../mfc/reference/cbutton-class.md)
 
-[CMFCButton](../../mfc/reference/cmfcbutton-class.md)
+[Cmfcbutton](../../mfc/reference/cmfcbutton-class.md)
 
 [CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)
 
@@ -84,7 +84,7 @@ O exemplo a seguir demonstra como usar o `SetImage` método no `CMFCDesktopAlert
 
 **Cabeçalho:** afxdesktopalertwnd.h
 
-##  <a name="iscaptionbutton"></a>  CMFCDesktopAlertWndButton::IsCaptionButton
+## <a name="cmfcdesktopalertwndbuttoniscaptionbutton"></a><a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton
 
 Determina se o botão é exibido na área de legenda da caixa de diálogo de alerta.
 
@@ -92,11 +92,11 @@ Determina se o botão é exibido na área de legenda da caixa de diálogo de ale
 BOOL IsCaptionButton() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se o botão é exibido na área de legenda da caixa de diálogo de alerta; Caso contrário, 0.
+Não zero se o botão for exibido na área de legenda da caixa de diálogo de alerta; caso contrário, 0.
 
-##  <a name="isclosebutton"></a>  CMFCDesktopAlertWndButton::IsCloseButton
+## <a name="cmfcdesktopalertwndbuttonisclosebutton"></a><a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton
 
 Determina se o botão fecha a caixa de diálogo de alerta.
 
@@ -104,11 +104,11 @@ Determina se o botão fecha a caixa de diálogo de alerta.
 BOOL IsCloseButton() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Diferente de zero se o botão fechar a caixa de diálogo de alerta; Caso contrário, 0.
+Não zero se o botão fechar a caixa de diálogo de alerta; caso contrário, 0.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

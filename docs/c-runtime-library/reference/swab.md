@@ -1,9 +1,10 @@
 ---
 title: _swab
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _swab
 - stdlib/_swab
+- _o__swab
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-ms.openlocfilehash: b0faba55c42023f4d66adae68de6be2c1ab009a0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f7fe23cd9c1b2eab52ebe50904d0bb18fe16cea6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946283"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362963"
 ---
 # <a name="_swab"></a>_swab
 
@@ -63,13 +65,15 @@ Número de bytes a serem copiados e trocados.
 
 ## <a name="return-value"></a>Valor retornado
 
-A função **swab** não retorna um valor. A função define **errno** como **EINVAL** se o ponteiro *src* ou *dest* é nulo ou *n* é menor que zero e o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
+A função **de cotonete** não retorna um valor. A função define **errno** para **EINVAL** se o ponteiro *src* ou *dest* for nulo ou *n* for menor que zero, e o manipulador de parâmetros inválido for invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md).
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-Se *n* for par, a função **_swab** copiará *n* bytes da *src*, trocará cada par de bytes adjacentes e armazenará o resultado no *dest*. Se *n* for ímpar, **_swab** copiará e trocará os primeiros *n*-1 bytes de *src*e o byte final não será copiado. A função **_swab** normalmente é usada para preparar dados binários para transferência para um computador que usa uma ordem de byte diferente.
+Se *n* estiver mesmo, a função **_swab** copia *n* bytes do *src,* troca cada par de bytes adjacentes e armazena o resultado em *dest*. Se *n* for estranho, **_swab** copia e troca os primeiros *bytes n*-1 *de src*, e o byte final não é copiado. A função **_swab** é normalmente usada para preparar dados binários para transferência para uma máquina que usa uma ordem de byte diferente.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -77,7 +81,7 @@ Se *n* for par, a função **_swab** copiará *n* bytes da *src*, trocará cada 
 |-------------|---------------------|
 |**_swab**|C: \<stdlib.h> C++: \<cstdlib> ou \<stdlib.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -106,6 +110,6 @@ After:  BADCFEHGJILKNMPORQTSVUXWZY
         ABCDEFGHIJKLMNOPQRSTUVWXYZ.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de buffer](../../c-runtime-library/buffer-manipulation.md)<br/>

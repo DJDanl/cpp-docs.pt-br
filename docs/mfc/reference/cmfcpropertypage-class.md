@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyPage [MFC], CMFCPropertyPage
 ms.assetid: d279d7f2-2d81-418d-9f23-6147d6e8df09
-ms.openlocfilehash: 4be584135ef789d7fbe3b1743ac0ad6ce66ac5b1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e493f016b6384a768935186c31e3fc71ade6382f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505039"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361766"
 ---
 # <a name="cmfcpropertypage-class"></a>Classe CMFCPropertyPage
 
-A `CMFCPropertyPage` classe dá suporte à exibição de menus pop-up em uma página de propriedades.
+A `CMFCPropertyPage` classe suporta a exibição de menus pop-up em uma página de propriedade.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,35 +39,35 @@ class CMFCPropertyPage : public CPropertyPage
 |Nome|Descrição|
 |----------|-----------------|
 |`CMFCPropertyPage::CreateObject`|Usado pela estrutura para criar uma instância dinâmica desse tipo de classe.|
-|`CMFCPropertyPage::GetThisClass`|Usado pela estrutura para obter um ponteiro para o objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) que está associado a esse tipo de classe.|
-|`CMFCPropertyPage::OnSetActive`|Essa função de membro é chamada pelo Framework quando a página é escolhida pelo usuário e se torna a página ativa. (Substitui [CPropertyPage:: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|
-|`CMFCPropertyPage::PreTranslateMessage`|Traduz mensagens de janela antes de serem expedidas para as funções do Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . Para obter mais informações e sintaxe de método, consulte [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Substitui `CPropertyPage::PreTranslateMessage`.)|
+|`CMFCPropertyPage::GetThisClass`|Usado pela estrutura para obter um ponteiro para o objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) que está associado a este tipo de classe.|
+|`CMFCPropertyPage::OnSetActive`|Essa função de membro é chamada pela framework quando a página é escolhida pelo usuário e se torna a página ativa. (Substitui [cpropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|
+|`CMFCPropertyPage::PreTranslateMessage`|Traduz mensagens de janela antes de serem enviadas para as funções [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows. Para obter mais informações e sintaxe do método, consulte [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Substitui `CPropertyPage::PreTranslateMessage`.)|
 
 ## <a name="remarks"></a>Comentários
 
-A `CMFCPropertyPage` classe representa páginas individuais de uma folha de propriedades, também conhecida como caixa de diálogo de tabulação.
+A `CMFCPropertyPage` classe representa páginas individuais de uma folha de propriedades, também conhecida como caixa de diálogo de guia.
 
-Use a `CMFCPropertyPage` classe junto com a classe [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) . Para usar menus em uma página de propriedades, substitua todas as ocorrências `CPropertyPage` da classe `CMFCPropertyPage` pela classe.
+Use `CMFCPropertyPage` a classe juntamente com a classe [CMFCPropertySheet.](../../mfc/reference/cmfcpropertysheet-class.md) Para usar menus em uma página de `CPropertyPage` propriedade, `CMFCPropertyPage` substitua todas as ocorrências da classe pela classe.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
-[CPropertyPage](../../mfc/reference/cpropertypage-class.md)
+[Cpropertypage](../../mfc/reference/cpropertypage-class.md)
 
-[CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)
+[Cmfcpropertypage](../../mfc/reference/cmfcpropertypage-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxpropertypage. h
+**Cabeçalho:** afxpropertypage.h
 
-##  <a name="cmfcpropertypage"></a>CMFCPropertyPage::CMFCPropertyPage
+## <a name="cmfcpropertypagecmfcpropertypage"></a><a name="cmfcpropertypage"></a>CMFCPropertyPage::CMFCPropertyPage
 
 Constrói um objeto `CMFCPropertyPage`.
 
@@ -83,22 +83,22 @@ CMFCPropertyPage(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nIDTemplate*<br/>
-ID de recurso do modelo para esta página.
+*Nidtemplate*<br/>
+ID de recursos do modelo para esta página.
 
 *nIDCaption*<br/>
-ID de recurso do rótulo a ser colocado na guia desta página. Se for 0, o nome será obtido do modelo da caixa de diálogo para esta página. O valor padrão é 0.
+ID de recurso do rótulo para colocar na guia para esta página. Se 0, o nome é obtido no modelo da caixa de diálogo para esta página. O valor padrão é 0.
 
 *lpszTemplateName*<br/>
-Aponta para o nome do modelo desta página. Não pode ser NULL.
+Aponta para o nome do modelo para esta página. Não pode ser NULL.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações sobre os parâmetros do Construtor, consulte [CPropertyPage:: CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).
+Para obter mais informações sobre os parâmetros do construtor, consulte [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

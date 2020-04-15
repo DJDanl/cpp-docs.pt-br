@@ -3,12 +3,12 @@ title: Criar e configurar um projeto CMake do Linux no Visual Studio
 description: Como criar, configurar, editar e compilar um projeto CMake do Linux no Visual Studio
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: d781d1995a4c9a60932d498d2ad7cfea97ee023f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 63c1f7953682e4d491660a18bedfa3d0ca4305ae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077660"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364383"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Criar e configurar um projeto do Linux CMake
 
@@ -25,13 +25,13 @@ Para criar um novo projeto CMake do Linux no Visual Studio 2019:
 1. Selecione **Arquivo > Novo Projeto** no Visual Studio ou pressione **Ctrl + Shift + N**.
 1. Defina a **Linguagem** como **C++** e pesquise "CMake". Em seguida, escolha **Avançar**. Insira um **Nome** e uma **Localização** e escolha **Criar**.
 
-O Visual Studio cria um arquivo mínimo CMakeLists.txt apenas com o nome do executável e a versão mínima necessária do CMake. Você pode editar manualmente esse arquivo da maneira que desejar. O Visual Studio nunca substituirá suas alterações. Você pode especificar argumentos de linha de comando CMake e variáveis de ambiente clicando com o botão direito do mouse no arquivo root CMakeLists. txt em **Gerenciador de soluções** e escolhendo **configurações de CMake para o projeto**. Para especificar opções para depuração, clique com o botão direito do mouse no nó do projeto e escolha **Depurar e iniciar configurações**.
+O Visual Studio cria um arquivo mínimo CMakeLists.txt apenas com o nome do executável e a versão mínima necessária do CMake. Você pode editar manualmente esse arquivo da maneira que desejar. O Visual Studio nunca substituirá suas alterações. Você pode especificar argumentos de linha de comando CMake e variáveis de ambiente clicando com o botão direito do mouse no arquivo Raiz CMakeLists.txt no **Solution Explorer** e escolhendo **configurações CMake para projeto**. Para especificar opções para depuração, clique com o botão direito do mouse no nó do projeto e escolha **Depurar e iniciar configurações**.
 
 ::: moniker-end
 
-Quando você abre uma pasta que contém um projeto CMake existente, o Visual Studio usa variáveis no cache CMake para configurar o IntelliSense e compila automaticamente. As definições de configuração e depuração locais são armazenadas em arquivos JSON que opcionalmente podem ser compartilhados com outras pessoas que estão usando o Visual Studio.
+Quando você abre uma pasta que contém um projeto CMake existente, o Visual Studio usa variáveis no cache CMake para configurar o IntelliSense e cria automaticamente. As definições de configuração e depuração locais são armazenadas em arquivos JSON que opcionalmente podem ser compartilhados com outras pessoas que estão usando o Visual Studio.
 
-O Visual Studio não modifica os arquivos CMakeLists.txt, de modo que outras pessoas trabalhando no mesmo projeto possam continuar usando quaisquer ferramentas que já estejam usando. O Visual Studio gera novamente o cache quando você salva as edições em CMakeLists. txt ou em alguns casos para CMakeSettings. JSON. Mas, se você estiver usando uma configuração de **Cache Existente**, o Visual Studio não modificará o cache.
+O Visual Studio não modifica os arquivos CMakeLists.txt, de modo que outras pessoas trabalhando no mesmo projeto possam continuar usando quaisquer ferramentas que já estejam usando. O Visual Studio regenera o cache quando você salva edições em CMakeLists.txt ou, em alguns casos, em CMakeSettings.json. Mas, se você estiver usando uma configuração de **Cache Existente**, o Visual Studio não modificará o cache.
 
 Para obter informações gerais sobre o suporte do CMake no Visual Studio, confira [Projetos CMake no Visual Studio](../build/cmake-projects-in-visual-studio.md). Leia este primeiro antes de continuar aqui.
 
@@ -45,10 +45,11 @@ No sistema Linux, verifique se os seguintes itens estão instalados:
 - gdb
 - rsync
 - zip
+- ninja-build
 
 ::: moniker range="vs-2019"
 
-O suporte do Linux para projetos do CMake requer que uma versão recente do CMake seja instalada no computador de destino. Muitas vezes, a versão oferecida pelo gerenciador de pacotes padrão de uma distribuição não é recente o suficiente para dar suporte a todos os recursos necessários para o Visual Studio. O Visual Studio 2019 detecta se uma versão recente do CMake está instalada no sistema Linux. Se nenhuma for encontrada, o Visual Studio mostrará uma barra de informações na parte superior do painel do editor que oferece a instalação para você em [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
+O suporte do Linux para projetos do CMake requer que uma versão recente do CMake seja instalada no computador de destino. Muitas vezes, a versão oferecida pelo gerenciador de pacotes padrão de uma distribuição não é recente o suficiente para dar suporte a todos os recursos necessários para o Visual Studio. O Visual Studio 2019 detecta se uma versão recente do CMake está instalada no sistema Linux. Se nenhum for encontrado, o Visual Studio mostra uma barra de informações na parte [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases)superior do painel do editor que oferece instalá-lo para você a partir de .
 
 O suporte ao CMake no Visual Studio requer o suporte do modo de servidor que foi apresentado no CMake 3.8. No Visual Studio 2019 versão 3.14 ou posterior, é recomendável.
 
@@ -56,7 +57,7 @@ O suporte ao CMake no Visual Studio requer o suporte do modo de servidor que foi
 
 ::: moniker range="vs-2017"
 
-O suporte ao CMake no Visual Studio requer o suporte do modo de servidor que foi apresentado no CMake 3.8. Para uma variante CMake fornecida pela Microsoft, baixe os binários predefinidos mais recentes em [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
+O suporte ao CMake no Visual Studio requer o suporte do modo de servidor que foi apresentado no CMake 3.8. Para obter uma variante CMake fornecida pela Microsoft, [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases)baixe os binários pré-construídos mais recentes em .
 
 Os binários serão instalados no `~/.vs/cmake`. Depois de implantar os binários, seu projeto será automaticamente regenerado. Se o CMake especificado pelo campo `cmakeExecutable` em `CMakeSettings.json` for inválido (não existir ou for uma versão sem suporte) e os binários predefinidos estiverem presentes, o Visual Studio ignorará `cmakeExecutable` e usará os binários predefinidos.
 
@@ -64,7 +65,7 @@ Os binários serão instalados no `~/.vs/cmake`. Depois de implantar os binário
 
 ## <a name="open-a-folder"></a>Abrir uma pasta
 
-Para começar, escolha **Arquivo** > **Abrir** > **Pasta** no menu principal ou digite `devenv.exe <foldername>` na linha de comando. A pasta que você abrir deverá conter um arquivo CMakeLists.txt, junto com o código-fonte.
+Para começar, escolha **Pasta** > **aberta** > de**arquivo** `devenv.exe <foldername>` no menu principal ou então digite na linha de comando. A pasta que você abrir deverá conter um arquivo CMakeLists.txt, junto com o código-fonte.
 O exemplo a seguir mostra um arquivo CMakeLists.txt simples e o arquivo .cpp:
 
 ```cpp
@@ -98,7 +99,7 @@ Para direcionar o subsistema do Windows para Linux, clique em **Gerenciar Config
 
 ::: moniker-end
 
-Para destinos remotos, por padrão, o Visual Studio escolhe o primeiro sistema remoto da lista em **Ferramentas** > **Opções** > **Multiplataforma** > **Gerenciador de Conexões**. Se nenhuma conexão remota for encontrada, será solicitado que você crie uma. Para obter mais informações, confira [Conectar-se ao seu computador Linux remoto](connect-to-your-remote-linux-computer.md).
+Para alvos remotos, o Visual Studio, por padrão, escolhe o primeiro sistema remoto da lista em **Tools** > **Options** > **Cross Platform** > **Connection Manager**. Se nenhuma conexão remota for encontrada, será solicitado que você crie uma. Para obter mais informações, confira [Conectar-se ao seu computador Linux remoto](connect-to-your-remote-linux-computer.md).
 
 Se você especificar um destino remoto do Linux, a origem será copiada para o sistema remoto.
 
@@ -112,7 +113,7 @@ Para fornecer suporte ao IntelliSense para cabeçalhos em sistemas Linux remotos
 
 Para depurar o código no sistema de destino de depuração especificado, defina um ponto de interrupção, selecione o destino do CMake como o item de inicialização no menu da barra de ferramentas ao lado da configuração do projeto e escolha **&#x23f5; Iniciar** na barra de ferramentas ou pressione F5.
 
-Para personalizar os argumentos de linha de comando do programa, pressione o botão **Alternar Destinos** na parte superior do **Gerenciador de Soluções** e escolha **Exibição de Destinos**. Em seguida, clique com o botão direito do mouse no destino e selecione **Configurações de Depuração e de Inicialização**. Isso abre ou cria um arquivo de configuração launch.vs.json que contém as informações do seu programa. Para especificar o local dos arquivos de origem, adicione uma propriedade **sourceFileMap** ao arquivo, conforme mostrado neste exemplo:
+Para personalizar os argumentos de linha de comando do programa, pressione o botão **Alternar Destinos** na parte superior do **Gerenciador de Soluções** e escolha **Exibição de Destinos**. Em seguida, clique com o botão direito do mouse no destino e selecione **Configurações de Depuração e de Inicialização**. Isso abre ou cria um arquivo de configuração launch.vs.json que contém as informações do seu programa. Para especificar o local para arquivos de origem, adicione uma propriedade **sourceFileMap** ao arquivo, conforme mostrado neste exemplo:
 
 ```json
 "MIMode": "gdb",
@@ -125,7 +126,7 @@ Para personalizar os argumentos de linha de comando do programa, pressione o bot
 
 Para especificar argumentos adicionais, adicione-os na matriz JSON `args`. Para obter mais informações, confira [Projetos Open Folder para C++](../build/open-folder-projects-cpp.md) e [Configurar sessões de depuração do CMake](../build/configure-cmake-debugging-sessions.md).
 
-## <a name="configure-cmake-settings-for-linux"></a><a name="configure_cmake_linux"></a> Definir as configurações do CMake para Linux
+## <a name="configure-cmake-settings-for-linux"></a><a name="configure_cmake_linux"></a>Configure configurações cMake para Linux
 
 Um arquivo CMakeSettings.json em um projeto do CMake Linux pode especificar todas as propriedades listadas em [Personalizar configurações do CMake](../build/customize-cmake-settings.md), além de propriedades adicionais que controlam as configurações de build no computador Linux remoto.
 
@@ -133,9 +134,9 @@ Um arquivo CMakeSettings.json em um projeto do CMake Linux pode especificar toda
 
 Para alterar as configurações padrão do CMake no Visual Studio 2019, na barra de ferramentas principal, abra a lista suspensa **Configuração** e escolha **Gerenciar Configurações**.
 
-![CMake gerenciar configurações](../build/media/vs2019-cmake-manage-configurations.png "Lista suspensa de configurações do CMake")
+![CFazer configurações de gerenciamento](../build/media/vs2019-cmake-manage-configurations.png "Lista suspensa de configurações do CMake")
 
-Isso abre o **Editor de Configurações do CMake** que você pode usar para editar o arquivo `CMakeSettings.json` na pasta raiz do projeto. Também é possível abrir o arquivo diretamente clicando no botão **Editar JSON** no editor. Para saber mais, confira [Customize CMake Settings](../build/customize-cmake-settings.md) (Personalizar Configurações do CMake).
+Isso abre o **Editor de Configurações do CMake** que você pode usar para editar o arquivo `CMakeSettings.json` na pasta raiz do projeto. Também é possível abrir o arquivo diretamente clicando no botão **Editar JSON** no editor. Para obter mais informações, consulte [Personalizar configurações cMake](../build/customize-cmake-settings.md).
 
 ::: moniker-end
 

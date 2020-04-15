@@ -1,6 +1,6 @@
 ---
 title: strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strncat
 - _strncat_l
@@ -8,6 +8,8 @@ api_name:
 - _mbsncat_l
 - wcsncat
 - wcsncat_l
+- _o__mbsncat
+- _o__mbsncat_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -61,19 +64,19 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: f27c2cb9b59d789e34da19b531a20d13475e62ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0e6fbc365d4e127d72df039b1351b1bfe91b1b74
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947338"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364204"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
 Acrescenta caracteres a uma cadeia de caracteres. Versões mais seguras dessas funções estão disponíveis, consulte [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsncat** e **_mbsncat_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncat** e **_mbsncat_l** não podem ser usados em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -128,34 +131,36 @@ unsigned char *_mbsncat_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*strDest*<br/>
+*Strdest*<br/>
 Cadeia de caracteres de destino terminada em nulo.
 
-*strSource*<br/>
+*Strsource*<br/>
 Cadeia de caracteres de origem com terminação nula.
 
-*count*<br/>
+*contagem*<br/>
 O número de caracteres a serem acrescentados.
 
-*locale*<br/>
+*Localidade*<br/>
 Localidade a usar.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Retorna um ponteiro para a cadeia de caracteres de destino. Nenhum valor retornado é reservado para indicar um erro.
 
 ## <a name="remarks"></a>Comentários
 
-A função **strncat** acrescenta, no máximo, a primeira *contagem* de caracteres de *strSource* a *strDest*. O caractere inicial de *strSource* substitui o caractere nulo de terminação de *strDest*. Se um caractere nulo aparecer em *strSource* antes que os caracteres de *contagem* sejam acrescentados, o **strncat** acrescentará todos os caracteres de *strSource*, até o caractere nulo. Se *Count* for maior que o comprimento de *strSource*, o comprimento de *strSource* será usado no lugar da *contagem*. Em todos os casos, a cadeia de caracteres resultante é encerrada com um caractere nulo. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
+A função **strncat** anexa, no máximo, os caracteres de primeira *contagem* de *strSource* para *strDest*. O caractere inicial do *strSource* substitui o caráter nulo de terminação de *strDest*. Se um caractere nulo aparecer no *strSource* antes de os caracteres *de contagem* forem anexados, **strncat** anexa todos os caracteres do *strSource*, até o caractere nulo. Se a *contagem* for maior do que o comprimento do *strSource,* o comprimento do *strSource* é usado no lugar da *contagem*. Em todos os casos, a cadeia de caracteres resultante é encerrada com um caractere nulo. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
 > [!IMPORTANT]
-> **strncat** não verifica espaço suficiente em *strDest*; Portanto, é uma possível causa de estouros de buffer. Tenha em mente que a *contagem* limita o número de caracteres acrescentados; Não é um limite para o tamanho de *strDest*. Consulte o exemplo abaixo. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
+> **strncat** não verifica se há espaço suficiente no *strDest;* é, portanto, uma causa potencial de excesso de buffer. Tenha em mente que *a contagem* limita o número de caracteres anexados; não é um limite para o tamanho do *strDest*. Veja o exemplo abaixo. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
-**wcsncat** e **_mbsncat** são versões de caractere largo e de multibyte de **strncat**. Os argumentos de cadeia de caracteres e o valor de retorno de **wcsncat** são cadeias de caracteres largos; os de **_mbsncat** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+**wcsncat** e **_mbsncat** são versões de amplo caráter e multibyte-caracteres de **strncat**. Os argumentos de seqüência e o valor de retorno do **wcsncat** são strings de caracteres amplos; os de **_mbsncat** são cordas de caracteres multibytes. Caso contrário, essas três funções se comportam de forma idêntica.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 No C++, essas funções têm sobrecargas de modelo. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -165,7 +170,7 @@ No C++, essas funções têm sobrecargas de modelo. Para obter mais informaçõe
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l** e **_wcsncat_l** não têm nenhuma dependência de localidade e não devem ser chamados diretamente. Eles são fornecidos para uso interno pelo **_tcsncat_l**.
+> **_strncat_l** e **_wcsncat_l** não têm dependência local e não devem ser chamados diretamente. São fornecidos para uso interno por **_tcsncat_l**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -176,7 +181,7 @@ No C++, essas funções têm sobrecargas de modelo. Para obter mais informaçõe
 |**_mbsncat**|\<mbstring.h>|
 |**_mbsncat_l**|\<mbstring.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -225,11 +230,11 @@ After BadAppend :  This is the initial string!Extra text to add to (47 chars)
 After GoodAppend:  This is the initial string!Extra text t (39 chars)
 ```
 
-Observe que **BadAppend** causou uma saturação de buffer.
+Observe que **o BadAppend** causou um buffer invadido.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cordas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

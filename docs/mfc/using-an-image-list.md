@@ -6,29 +6,29 @@ helpviewer_keywords:
 - CImageList class [MFC], using
 - image lists [MFC]
 ms.assetid: e0aed188-a1e6-400e-9f51-033d61c5541f
-ms.openlocfilehash: cb95de134939e1b06e2a8b827424c986f8c48ef3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d9566739a15e5d216eb052a7265313850515648
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180460"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366568"
 ---
 # <a name="using-an-image-list"></a>Usando uma lista de imagens
 
-Um uso típico de uma lista de imagens segue o padrão abaixo:
+O uso típico de uma lista de imagens segue o padrão abaixo:
 
-- Construir uma [CImageList](../mfc/reference/cimagelist-class.md) do objeto e chame uma das sobrecargas de seus [Create](../mfc/reference/cimagelist-class.md#create) função para criar uma lista de imagens e anexá-lo para o `CImageList` objeto.
+- Construa um objeto [CImageList](../mfc/reference/cimagelist-class.md) e chame [Create](../mfc/reference/cimagelist-class.md#create) uma das sobrecargas de sua função `CImageList` Criar para criar uma lista de imagens e anexá-la ao objeto.
 
-- Se você não adicionar imagens ao criar a lista de imagens, adicionar imagens à lista de imagens por meio da chamada a [Add](../mfc/reference/cimagelist-class.md#add) ou [leitura](../mfc/reference/cimagelist-class.md#read) função de membro.
+- Se você não adicionou imagens quando criou a lista de imagens, adicione imagens à lista de imagens chamando a função [Adicionar](../mfc/reference/cimagelist-class.md#add) ou [Ler](../mfc/reference/cimagelist-class.md#read) membro.
 
-- Associar a lista de imagens com um controle, chamando a função de membro apropriado desse controle ou desenhar imagens da lista de imagens por conta própria usando a lista de imagens [desenhar](../mfc/reference/cimagelist-class.md#draw) função de membro.
+- Associe a lista de imagens a um controle chamando a função de membro apropriada desse controle ou desenhe imagens da lista de imagens você mesmo usando a função [Draw](../mfc/reference/cimagelist-class.md#draw) member da lista de imagens.
 
-- Talvez, permitir que o usuário arrasta uma imagem, usando o suporte interno a da lista de imagens para serem arrastados.
+- Talvez permita que o usuário arraste uma imagem, usando o suporte interno da lista de imagens para arrastar.
 
 > [!NOTE]
->  Se a lista de imagens foi criada com o **novos** operador, você deve destruir a `CImageList` objeto quando você terminar com ele.
+> Se a lista de imagens foi criada com `CImageList` o **novo** operador, você deve destruir o objeto quando terminar com ele.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Usando CImageList](../mfc/using-cimagelist.md)<br/>
 [Controles](../mfc/controls-mfc.md)

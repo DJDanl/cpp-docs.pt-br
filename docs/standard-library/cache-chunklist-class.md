@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 035e5153b4e4c84743a64bcc9cec24920a6a0336
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d0dd6176a34bd625069511106c491225d1467d08
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688360"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366752"
 ---
 # <a name="cache_chunklist-class"></a>Classe cache_chunklist
 
@@ -36,9 +36,9 @@ class cache_chunklist
 
 ## <a name="remarks"></a>Comentários
 
-Esse modelo de classe usa o **operador New** para alocar partes de memória bruta, Subalocando blocos para alocar armazenamento para um bloco de memória quando necessário; Ele armazena blocos de memória desalocados em uma lista gratuita separada para cada parte e usa o **operador Delete** para desalocar uma parte quando nenhum de seus blocos de memória está em uso.
+Este modelo de classe usa **o operador novo** para alocar pedaços de memória bruta, subalocando blocos para alocar armazenamento para um bloco de memória quando necessário; ele armazena blocos de memória desalocados em uma lista livre separada para cada pedaço e usa a **exclusão do operador** para desalocar um pedaço quando nenhum de seus blocos de memória está em uso.
 
-Cada bloco de memória contém os bytes de *sz* de memória utilizável e um ponteiro para a parte à qual ele pertence. Cada parte contém `Nelts` blocos de memória, três ponteiros, um int e os dados que o **operador New** e o **operador Delete** exigem.
+Cada bloco de memória contém *bytes Sz* de memória utilizável e um ponteiro para o pedaço a que pertence. Cada pedaço `Nelts` contém blocos de memória, três ponteiros, um int e os dados que o **operador novo** e **o operador excluem** requerem.
 
 ### <a name="constructors"></a>Construtores
 
@@ -50,8 +50,8 @@ Cada bloco de memória contém os bytes de *sz* de memória utilizável e um pon
 
 |Função de membro|Descrição|
 |-|-|
-|[allocate](#allocate)|Aloca um bloco de memória.|
-|[deallocate](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|
+|[Alocar](#allocate)|Aloca um bloco de memória.|
+|[Desalocar](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -59,7 +59,7 @@ Cada bloco de memória contém os bytes de *sz* de memória utilizável e um pon
 
 **Namespace:** stdext
 
-## <a name="allocate"></a>  cache_chunklist::allocate
+## <a name="cache_chunklistallocate"></a><a name="allocate"></a>cache_chunklist::alocar
 
 Aloca um bloco de memória.
 
@@ -71,7 +71,7 @@ void *allocate(std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*count*|O número de elementos na matriz a serem alocados.|
+|*contagem*|O número de elementos na matriz a serem alocados.|
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -79,7 +79,7 @@ Um ponteiro para o objeto alocado.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="cache_chunklist"></a>  cache_chunklist::cache_chunklist
+## <a name="cache_chunklistcache_chunklist"></a><a name="cache_chunklist"></a>cache_chunklist:cache_chunklist
 
 Constrói um objeto do tipo `cache_chunklist`.
 
@@ -89,7 +89,7 @@ cache_chunklist();
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="deallocate"></a>  cache_chunklist::deallocate
+## <a name="cache_chunklistdeallocate"></a><a name="deallocate"></a>cache_chunklist::deallocate
 
 Libera um número especificado de objetos do armazenamento começando em uma posição especificada.
 
@@ -101,11 +101,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
-|*count*|O número de objetos a serem desalocados do armazenamento.|
+|*Ptr*|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|
+|*contagem*|O número de objetos a serem desalocados do armazenamento.|
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<alocadores>](../standard-library/allocators-header.md)

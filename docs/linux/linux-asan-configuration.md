@@ -2,12 +2,12 @@
 title: Configurar projetos do Linux para usar o Address Sanitizer
 description: Descreve como configurar projetos do C++ Linux no Visual Studio para usar o Address Sanitizer.
 ms.date: 06/07/2019
-ms.openlocfilehash: da7197981a431becfc1231dae96f7542062de675
-ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
+ms.openlocfilehash: 80e9ab46c948f2062391ae723c3425c435bd4507
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71195887"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364304"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Configurar projetos do Linux para usar o Address Sanitizer
 
@@ -15,7 +15,7 @@ No Visual Studio 2019 versão 16.1, o suporte ao ASan (AddressSanitizer) é inte
 
 ## <a name="about-asan"></a>Sobre o ASan
 
-O ASan é um detector de erros de memória de tempo de execução para o C/C++ que captura os seguintes erros:
+O ASan é um detector de erros de memória de runtime para o C/C++ que captura os seguintes erros:
 
 - Usar após liberar (referência de ponteiro pendente)
 - Estouro de buffer do heap
@@ -33,15 +33,15 @@ Também é possível ver a saída completa do ASan (incluindo a localização em
 ## <a name="enable-asan-for-msbuild-based-linux-projects"></a>Habilitar o ASan em projetos do Linux baseados no MSBuild
 
 > [!NOTE]
-> A partir do Visual Studio 2019 versão 16,4, o AddressSanitizer para projetos do Linux é habilitado por meio **das propriedades** > de > configuração**C/C++** **habilitar limpeza de endereço**.
+> A partir da versão 16.4 do Visual Studio 2019, o AddressSanitizer para projetos Linux é habilitado via **Configuration Properties** > **C/C++** > **Enable Address Sanitizer**.
 
-Para habilitar o ASan em projetos do Linux baseados no MSBuild, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções** e selecione **Propriedades**. Em seguida, navegue até **Propriedades de Configuração** > **C/C++**  > **Sanitizers**. O ASan é habilitado por meio de sinalizadores do compilador e do vinculador e, para funcionar, exige a recompilação do projeto.
+Para habilitar o ASan em projetos do Linux baseados no MSBuild, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções** e selecione **Propriedades**. Em seguida, navegue até **os** > **sanitizadores****C/C++** > de configuração. O ASan é habilitado por meio de sinalizadores do compilador e do vinculador e, para funcionar, exige a recompilação do projeto.
 
 ![Habilitar o ASan em um projeto do MSBuild](media/msbuild-asan-prop-page.png)
 
-Passe sinalizadores opcionais de tempo de execução do ASan navegando até **Propriedades de Configuração** > **Depuração** > **Sinalizadores de Tempo de Execução do AddressSanitizer**. Clique na seta para baixo para adicionar ou remover sinalizadores.
+Você pode passar sinalizadores de tempo de execução aSan opcionais navegando para **configuração propriedades** > **Depuração** > **de endereçoS Sanitizer Runtime Flags**. Clique na seta para baixo para adicionar ou remover sinalizadores.
 
-![Configurar sinalizadores de tempo de execução do ASan](media/msbuild-asan-runtime-flags.png)
+![Configurar sinalizadores de runtime do ASan](media/msbuild-asan-runtime-flags.png)
 
 ## <a name="enable-asan-for-visual-studio-cmake-projects"></a>Habilitar o ASan em projetos do CMake no Visual Studio
 
@@ -51,7 +51,7 @@ Verifique se você tem uma configuração do Linux (por exemplo, **Linux-Debug**
 
 ![A configuração de depuração do Linux](media/linux-debug-configuration.png)
 
-As opções do ASan estão na guia **Geral**. Insira os sinalizadores de tempo de execução do ASan no formato "sinalizador=valor", separados por ponto-e-vírgula.
+As opções do ASan estão na guia **Geral**. Insira os sinalizadores de runtime do ASan no formato "sinalizador=valor", separados por ponto-e-vírgula.
 
 ![A configuração de depuração do Linux](media/cmake-settings-asan-options.png)
 

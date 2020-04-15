@@ -5,22 +5,22 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: b7429e298cdf14d727fc481db6c4a3bf8574b5e7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7bc37e98ed85582cac8fc7ae21e54a6d5da9e06f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416896"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364960"
 ---
 # <a name="ltallocatorsgt-operators"></a>Operadores &lt;alocadores&gt;
 
-Essas são as funções de operador de modelo global definidas em &lt;alocadores&gt;. Para funções de operador de membro de classe, consulte a documentação da classe.
+Estas são as funções &lt;globais do&gt;operador de modelo definidas em alocadores . Para as funções de operador de classe, consulte a documentação da classe.
 
 |||
 |-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|
+|[operador!=](#op_neq)|[operador==](#op_eq_eq)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>operador!=
 
 Testa a desigualdade entre objetos do alocador de uma classe especificada.
 
@@ -31,12 +31,12 @@ bool operator!=(
     const allocator_base<Type, Sync>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|DESCRIÇÃO|
+|Parâmetro|Descrição|
 |---------------|-----------------|
-|*left*|Um dos objetos alocadores a serem testados quanto à desigualdade.|
-|*right*|Um dos objetos alocadores a serem testados quanto à desigualdade.|
+|*Deixou*|Um dos objetos alocadores a serem testados quanto à desigualdade.|
+|*Certo*|Um dos objetos alocadores a serem testados quanto à desigualdade.|
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -46,7 +46,7 @@ bool operator!=(
 
 O operador de modelo retorna `!(left == right)`.
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>operador==
 
 Testa a igualdade entre objetos do alocador de uma classe especificada.
 
@@ -57,12 +57,12 @@ bool operator==(
     const allocator_base<Type, Sync>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-|Parâmetro|DESCRIÇÃO|
+|Parâmetro|Descrição|
 |---------------|-----------------|
-|*left*|Um dos objetos alocadores a serem testados quanto à igualdade.|
-|*right*|Um dos objetos alocadores a serem testados quanto à igualdade.|
+|*Deixou*|Um dos objetos alocadores a serem testados quanto à igualdade.|
+|*Certo*|Um dos objetos alocadores a serem testados quanto à igualdade.|
 
 ### <a name="return-value"></a>Valor retornado
 
@@ -74,4 +74,4 @@ Esse operador de modelo retorna `left.equals(right)`.
 
 ## <a name="see-also"></a>Confira também
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<alocadores>](../standard-library/allocators-header.md)

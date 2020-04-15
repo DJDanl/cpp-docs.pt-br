@@ -5,20 +5,20 @@ f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-ms.openlocfilehash: fc512558969bc25d2b16afa2b93219e13d0b28ca
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3d647c7b05a3868ec0359410cc0e703306b874ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420151"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363075"
 ---
 # <a name="ltistreamgt-functions"></a>Função &lt;istream&gt;
 
 |||
 |-|-|
-|[swap](#istream_swap)|[ws](#ws)|
+|[Trocar](#istream_swap)|[Ws](#ws)|
 
-## <a name="istream_swap"></a>  swap
+## <a name="swap"></a><a name="istream_swap"></a>Trocar
 
 Troca os elementos de dois objetos de fluxo.
 
@@ -34,15 +34,15 @@ void swap(
     basic_iostream<Elem, Tr>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *à esquerda*
+*Deixou*\
 Um fluxo.
 
-\ *à direita*
+*Certo*\
 Um fluxo.
 
-## <a name="ws"></a>  ws
+## <a name="ws"></a><a name="ws"></a>Ws
 
 Ignora o espaço em branco no fluxo.
 
@@ -50,7 +50,7 @@ Ignora o espaço em branco no fluxo.
 template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _Istr);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Istr*\
 Um fluxo.
@@ -61,7 +61,7 @@ O fluxo.
 
 ### <a name="remarks"></a>Comentários
 
-O manipulador extrai e descarta quaisquer elementos `ch` para os quais [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc)). **é**( **ctype**\< **elem**>:: **Space**, **ch**) é true.
+O manipulador extrai e descarta `ch` quaisquer elementos para os quais [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **Elem**> > [(getloc).](../standard-library/ios-base-class.md#getloc) **is**( **ctype**\< **Elem**>:: **space**, **ch**) for verdadeiro.
 
 A função chamará [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) se encontrar o fim do arquivo enquanto extrai os elementos. Ele retorna *_Istr*.
 

@@ -4,10 +4,10 @@ ms.date: 06/07/2019
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
 f1_keywords: []
 ms.openlocfilehash: 394cb501b4df6caed6a358ffa96ce0de5d187ae1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "79441478"
 ---
 # <a name="cc-properties-linux-c"></a>Propriedades do C/C++ (Linux C++)
@@ -37,11 +37,11 @@ O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 | Tempo limite de compilação | Tempo limite de compilação remota, em milissegundos. |
 | Copiar arquivos-objetos | Especifica se é necessário copiar os arquivos-objetos compilados do sistema remoto para o computador local. |
 
-## <a name="optimization"></a>Otimização
+## <a name="optimization"></a>Optimization
 
 | Propriedade | Descrição | Opções |
 |--|--|--|
-| Otimização | Especifica o nível de otimização para o aplicativo. | **Personalizar** – otimização personalizada.<br/>**Desabilitado** – desabilitar a otimização.<br/>**Minimizar tamanho** – otimizar o tamanho.<br/>**Maximizar velocidade** – otimizar a velocidade.<br/>**Otimização total** – otimizações de alto custo. |
+| Optimization | Especifica o nível de otimização para o aplicativo. | **Personalizar** – otimização personalizada.<br/>**Desabilitado** – desabilitar a otimização.<br/>**Minimizar tamanho** – otimizar o tamanho.<br/>**Maximizar velocidade** – otimizar a velocidade.<br/>**Otimização total** – otimizações de alto custo. |
 | Alias estrito | Considera as regras de nome alternativo mais rígidas.  Um objeto de um tipo nunca é considerado como tendo o mesmo endereço que um objeto de um tipo diferente. |
 | Desenrolar loops | Desenrola loops para deixar o aplicativo mais rápido reduzindo o número de branches executados, em detrimento do aumento do tamanho do código. |
 | Otimização de tempo de vinculação | Habilita as otimizações entre procedimentos permitindo que o otimizador examine os arquivos-objeto no aplicativo. |
@@ -53,7 +53,7 @@ O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 | Propriedade | Descrição | Opções |
 |--|--|--|
 | Definições do Pré-processador | Define os símbolos de pré-processamento para o arquivo de origem. (-D) |
-| Excluir as definições do pré-processador | Especifica uma ou mais exclusões de definição do pré-processador.  (-U \[macro]) |
+| Excluir definições do pré-processador | Especifica uma ou mais exclusões de definição do pré-processador.  (-U \[macro]) |
 | Excluir todas as definições do pré-processador | Exclui as definições de todos os valores do pré-processador definidos anteriormente.  (-undef) |
 | Mostrar inclusões | Gera uma lista de arquivos de inclusão com a saída do compilador.  (-H) |
 
@@ -66,21 +66,21 @@ O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 | Otimização de ponto flutuante | Habilita as otimizações de ponto flutuante atenuando a conformidade com o IEEE-754. |
 | Métodos embutidos ocultados | Quando essa opção está habilitada, as cópias fora de linha de métodos embutidos são declaradas como `private extern`. |
 | Símbolos ocultos por padrão | Todos os símbolos são declarados como `private extern`, a menos que explicitamente marcado para exportação usando a macro `__attribute`. |
-| Habilitar exceções C++ | Especifica o modelo de tratamento de exceção usado pelo compilador. | **Não** – desabilitar o tratamento de exceções.<br/>**Sim** – habilitar tratamento de exceções. |
+| Habilitar exceções do C++ | Especifica o modelo de tratamento de exceção usado pelo compilador. | **Não** – desabilitar o tratamento de exceções.<br/>**Sim** – habilitar tratamento de exceções. |
 
 ## <a name="language"></a>Linguagem
 
 | Propriedade | Descrição | Opções |
 |--|--|--|
 | Habilitar informações de tipo de tempo de execução | Adiciona um código para verificar os tipos de objeto C++ no runtime (informações de tipo de runtime).     (frtti, fno-rtti) |
-| Padrão de linguagem C | Determina o padrão de linguagem C. | **Padrão**<br/>**C89** – padrão de linguagem C89.<br/>**C99** – padrão de linguagem C99.<br/>**C11** – padrão de linguagem C11.<br/>**C99 (dialeto GNU)** – padrão de linguagem C99 (dialeto GNU).<br/>**C11 (dialeto GNU)** – padrão de linguagem C11 (dialeto GNU). |
-| Padrão de linguagem C++ | Determina o padrão de linguagem C++. | **Padrão**<br/>**C++03** – padrão de linguagem C++03.<br/>**C++11** – padrão de linguagem C++11.<br/>**C++14** – padrão de linguagem C++14.<br/>**C++03 (dialeto GNU)** – padrão de linguagem C++03 (dialeto GNU).<br/>**C++11 (dialeto GNU)** – padrão de linguagem C++11 (dialeto GNU).<br/>**C++14 (dialeto GNU )** – padrão de linguagem C++14 (dialeto GNU). |
+| Padrão de linguagem C | Determina o padrão de linguagem C. | **Padrão**<br/>**C89** – padrão de linguagem C89.<br/>**C99** – padrão de linguagem C99.<br/>**C11** – padrão de linguagem C11.<br/>**C99 (dialeto GNU)** – padrão de linguagem C99 (dialeto GNU).<br/>**C11 (GNU Dialeto)** - C11 (GNU Dialeto) Padrão de língua. |
+| Padrão de linguagem C++ | Determina o padrão de linguagem C++. | **Padrão**<br/>**C++03** – padrão de linguagem C++03.<br/>**C++11** - C++11 Padrão de Linguagem.<br/>**C++14** – padrão de linguagem C++14.<br/>**C++03 (dialeto GNU)** – padrão de linguagem C++03 (dialeto GNU).<br/>**C++11 (dialeto GNU)** – padrão de linguagem C++11 (dialeto GNU).<br/>**C++14 (dialeto GNU)** – padrão de linguagem C++14 (dialeto GNU). |
 
 ## <a name="advanced"></a>Avançado
 
 | Propriedade | Descrição | Opções |
 |--|--|--|
-| Compilar como | Seleciona a opção de linguagem de compilação para arquivos .c e .cpp. (-x c, -x c++) | **Padrão** – detecção com base na extensão .c ou .cpp.<br/>**Compilar como Código C** – compilação como código C.<br/>**Compilar como Código C++** – compilação como código C++. |
+| Compilar como | Seleciona a opção de linguagem de compilação para arquivos .c e .cpp. (-x c, -x c++) | **Padrão** – detecção com base na extensão .c ou .cpp.<br/>**Compilar como Código C** - Compilar como código C.<br/>**Compilar como Código C++** - Compilar como código C++. |
 | Arquivos de inclusão forçados | Especifica um ou mais arquivos de inclusão forçada (-include \[name]) |
 
 ::: moniker-end

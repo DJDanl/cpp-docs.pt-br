@@ -1,6 +1,6 @@
 ---
 title: _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnset_s_l
 - _strnset_s
@@ -8,6 +8,10 @@ api_name:
 - _strnset_s_l
 - _wcsnset_s_l
 - _wcsnset_s
+- _o__mbsnset_s
+- _o__mbsnset_s_l
+- _o__strnset_s
+- _o__wcsnset_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -58,19 +63,19 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: acf84e6f09436f3bd97f9556ab8db9604243b8a8
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 62b0ecdc7d9e1afb93c4b15c37016ac687dc80d6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626141"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364450"
 ---
 # <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 
 Inicializa os caracteres de uma cadeia de caracteres para um determinado caractere. Essas versões de [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) tem aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsnset_s** e **_mbsnset_s_l** não podem ser usados em aplicativos que são executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnset_s** e **_mbsnset_s_l** não podem ser usados em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -118,36 +123,38 @@ errno_t _mbsnset_s_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*<br/>
+*Str*<br/>
 Cadeia de caracteres a ser alterada.
 
-*numberOfElements*<br/>
-O tamanho do buffer de *Str* .
+*Numberofelements*<br/>
+O tamanho do tampão *str.*
 
-*c*<br/>
+*C*<br/>
 Configuração de caractere.
 
-*count*<br/>
+*contagem*<br/>
 O número de caracteres a ser definido.
 
-*locale*<br/>
+*Localidade*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor retornado
 
 Zero se for bem-sucedido; caso contrário, um código de erro.
 
-Essas funções validam seus argumentos. Se *Str* não for uma cadeia de caracteres terminada em nulo válida ou o argumento size for menor ou igual a 0, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornarão um código de erro e definirei **errno** para esse código de erro. O código de erro padrão será **EINVAL** se um valor mais específico não se aplicar.
+Essas funções validam seus argumentos. Se *str* não for uma seqüência de seqüência de terminação nula válida ou o argumento de tamanho for menor ou igual a 0, então o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução for permitida, essas funções retornam um código de erro e definem **errno** para esse código de erro. O código de erro padrão é **EINVAL** se um valor mais específico não se aplicar.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções definem, no máximo, a primeira *contagem* de caracteres de *Str* para *c*. Se *Count* for maior que o tamanho de *Str*, o tamanho de *Str* será usado em vez de *Count*. Ocorrerá um erro se *Count* for maior que *numberOfElements* e ambos os parâmetros forem maiores que o tamanho de *Str*.
+Essas funções definem, no máximo, os caracteres de primeira *contagem* de *str* para *c*. Se *a contagem* for maior do que o tamanho do *str,* o tamanho do *str* é usado em vez de *contar*. Um erro ocorre se *a contagem* for maior que *o númeroOfElements* e ambos os parâmetros são maiores do que o tamanho do *str*.
 
-**_wcsnset_s** e **_mbsnset_s** são versões de caractere largo e de multibyte de **_strnset_s**. O argumento de cadeia de caracteres de **_wcsnset_s** é uma cadeia de caracteres largos; o de **_mbsnset_s** é a cadeia de caracteres amultibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+**_wcsnset_s** e **_mbsnset_s** são versões de amplo caráter e multibytes de **_strnset_s**. O argumento de seqüência de **_wcsnset_s** é uma seqüência de caracteres amplo; a de **_mbsnset_s** é uma seqüência de caracteres amultibytes. Caso contrário, essas três funções se comportam de forma idêntica.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-As versões de biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+As versões da biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -164,7 +171,7 @@ As versões de biblioteca de depuração dessas funções primeiro preenchem o b
 |**_strnset_s_l**|\<tchar.h>|
 |**_wcsnset_s**|\<string.h> ou \<wchar.h>|
 |**_wcsnset_s_l**|\<tchar.h>|
-|**_mbsnset_s**, **_mbsnset_s_l**|\<mbstring.h>|
+|**_mbsnset_s** **_mbsnset_s_l.**|\<mbstring.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -190,9 +197,9 @@ Before: This is a test
 After:  **** is a test
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulação de cordas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Localidade](../../c-runtime-library/locale.md)<br/>
 [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

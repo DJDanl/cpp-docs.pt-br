@@ -3,12 +3,12 @@ title: Instalar uma carga de trabalho do Linux para C++ no Visual Studio
 description: Descreve como baixar, instalar e configurar a carga de trabalho do Linux para C++ no Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 719fb9a04c3b0090a1ae5442f881ba6b7d2136c5
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8e10521ab35f3d85ced8bffd771b4e101d4d4fe6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077636"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364335"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Baixar, instalar e configurar a carga de trabalho do Linux
 
@@ -20,9 +20,9 @@ Os projetos do Linux são permitidos no Visual Studio 2017 e posterior.
 
 ::: moniker range=">=vs-2017"
 
-Você pode usar o Visual Studio IDE no Windows para criar, editar e depurar C++ projetos que são executados em um sistema Linux remoto, máquina virtual ou o [subsistema do Windows para Linux](/windows/wsl/about).
+Você pode usar o Visual Studio IDE no Windows para criar, editar e depurar projetos C++ que são executados em um sistema Linux remoto, máquina virtual ou o [Subsistema Windows para Linux](/windows/wsl/about).
 
-Você pode trabalhar em sua base de código existente que usa CMake sem precisar convertê-la em um projeto do Visual Studio. Se sua base de código for de multiplaforma, você poderá direcioná-la ao Windows e ao Linux de dentro do Visual Studio. Por exemplo, você pode editar, compilar e depurar seu código no Windows usando o Visual Studio e redirecionar rapidamente o projeto para Linux para compilar e depurar em um ambiente Linux. Os arquivos de cabeçalho do Linux são copiados automaticamente para o computador local, onde o Visual Studio os usa para fornecer suporte total ao IntelliSense (conclusão da instrução, ir para definição e assim por diante).
+Você pode trabalhar em sua base de código existente que usa CMake sem ter que convertê-la em um projeto do Visual Studio. Se sua base de código for de multiplaforma, você poderá direcioná-la ao Windows e ao Linux de dentro do Visual Studio. Por exemplo, você pode editar, construir e depurar seu código no Windows usando o Visual Studio e, em seguida, redirecionar rapidamente o projeto para Linux para construir e depurar em um ambiente Linux. Os arquivos de cabeçalho Linux são automaticamente copiados para sua máquina local, onde o Visual Studio os usa para fornecer suporte total ao IntelliSense (Conclusão de declaração, ir para definição e assim por diante).
 
 Para qualquer um desses cenários, a carga de trabalho **Desenvolvimento para Linux com C++** é necessária.
 
@@ -36,11 +36,11 @@ Para qualquer um desses cenários, a carga de trabalho **Desenvolvimento para Li
 
    ![Caixa de pesquisa do Windows](media/visual-studio-installer-search.png)
 
-2. Procure o instalador sob os resultados dos **Aplicativos** e clique duas vezes nele. Quando o instalador for aberto, escolha **Modificar**e, em seguida, clique na guia **cargas de trabalho** . Role para baixo até **outros conjuntos de ferramentas** e selecione o desenvolvimento do **Linux com C++**  carga de trabalho.
+1. Procure o instalador sob os resultados dos **Aplicativos** e clique duas vezes nele. Quando o instalador for aberto, escolha **Modificar**e clique na guia **Cargas de trabalho.** Role até Outros **conjuntos de ferramentas** e selecione o desenvolvimento do Linux com a carga de trabalho **C++.**
 
    ![Carga de trabalho do Visual C++ para Desenvolvimento em Linux](media/linuxworkload.png)
 
-1. Se você estiver direcionando para IoT ou plataformas incorporadas, vá para o painel **detalhes da instalação** à direita. Em **desenvolvimento Linux com C++** o, expanda **componentes opcionais**e escolha os componentes necessários. O suporte do CMake para o Linux está selecionado por padrão.
+1. Se você estiver mirando plataformas IoT ou incorporadas, vá para o painel **de detalhes de instalação** à direita. Em **desenvolvimento Linux com C++,** expanda **componentes opcionais**e escolha os componentes necessários. O suporte do CMake para o Linux está selecionado por padrão.
 
 1. Clique em **Modificar** para continuar a instalação.
 
@@ -48,46 +48,47 @@ Para qualquer um desses cenários, a carga de trabalho **Desenvolvimento para Li
 
 Se você ainda não tem um computador Linux, é possível criar uma máquina virtual do Linux no Azure. Para obter mais informações, consulte [Início Rápido: criar uma máquina virtual Linux no portal do Azure](/azure/virtual-machines/linux/quick-create-portal).
 
-No Windows 10, você pode instalar e ter sua distribuição favorita do Linux como destino no WSL (Subsistema do Windows para Linux). Para obter mais informações, confira [Guia de instalação do Subsistema do Windows para Linux para Windows 10](/windows/wsl/install-win10). Se não for possível acessar a Windows Store, você poderá [baixar manualmente os pacotes do WSL distribuição](/windows/wsl/install-manual). O WSL é um ambiente de console conveniente, mas não é recomendado para aplicativos gráficos.
+No Windows 10, você pode instalar e ter sua distribuição favorita do Linux como destino no WSL (Subsistema do Windows para Linux). Para obter mais informações, confira [Guia de instalação do Subsistema do Windows para Linux para Windows 10](/windows/wsl/install-win10). Se você não conseguir acessar a Windows Store, você pode [baixar manualmente os pacotes de distro WSL](/windows/wsl/install-manual). WSL é um ambiente de console conveniente, mas não é recomendado para aplicações gráficas.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Os projetos do Linux no Visual Studio exigem que as seguintes dependências sejam instaladas em seu sistema Linux remoto ou WSL:
+Os projetos Linux no Visual Studio exigem que as seguintes dependências sejam instaladas no seu sistema Linux remoto ou WSL:
 
-- **Um compilador – o** Visual Studio 2019 tem suporte pronto para o gcc e o [Clang](/cpp/build/clang-support-cmake?view=vs-2019).
-- **gdb** – o Visual Studio inicia automaticamente o gdb no sistema Linux e usa o front-end do depurador do Visual Studio para fornecer uma experiência de depuração de fidelidade total no Linux.
-- **rsync** e **zip** -a inclusão de rsync e zip permite que o Visual Studio Extraia Arquivos de cabeçalho do seu sistema Linux para o sistema de arquivos do Windows para uso pelo IntelliSense.
-- **Make**
-- **OpenSSH-Server** (somente sistemas Linux remotos)-o Visual Studio se conecta a sistemas Linux remotos por meio de uma conexão SSH segura.
-- **CMake** (somente projetos CMake) – você pode instalar [binários CMake vinculados estaticamente da Microsoft para Linux](https://github.com/microsoft/CMake/releases).
+- **Um compilador** - Visual Studio 2019 tem suporte fora da caixa para GCC e [Clang](/cpp/build/clang-support-cmake?view=vs-2019).
+- **gdb** - O Visual Studio lança automaticamente o gdb no sistema Linux, e usa o front-end do depurador Visual Studio para fornecer uma experiência de depuração de fidelidade total no Linux.
+- **rsync** e **zip** - a inclusão de rsync e zip permite que o Visual Studio extraia arquivos de cabeçalho do seu sistema Linux para o sistema de arquivos Windows para uso pelo IntelliSense.
+- **Fazer**
+- **openssh-server** (somente sistemas Linux remotos) - O Visual Studio se conecta a sistemas Linux remotos por meio de uma conexão SSH segura.
+- **CMake** (somente projetos CMake) - Você pode instalar [binários CMake vinculados estáticamente](https://github.com/microsoft/CMake/releases)da Microsoft para Linux .
+- **ninja-build** (somente projetos CMake)- [Ninja](https://ninja-build.org/) é o gerador padrão para configurações Linux e WSL no Visual Studio 2019 versão 16.6 ou posterior.
 
-Os comandos a seguir pressupõem que você esteja usando g + + em vez de Clang.
+Os seguintes comandos assumem que você está usando g++ em vez de gíria.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Os projetos do Linux no Visual Studio exigem que as seguintes dependências sejam instaladas em seu sistema Linux remoto ou WSL:
+Os projetos Linux no Visual Studio exigem que as seguintes dependências sejam instaladas no seu sistema Linux remoto ou WSL:
 
-- **gcc** -o Visual Studio 2017 tem suporte pronto para o gcc.
-- **gdb** – o Visual Studio inicia automaticamente o gdb no sistema Linux e usa o front-end do depurador do Visual Studio para fornecer uma experiência de depuração de fidelidade total no Linux.
-- **rsync** e **zip** -a inclusão de rsync e zip permite que o Visual Studio Extraia Arquivos de cabeçalho do seu sistema Linux para o sistema de arquivos do Windows a ser usado para o IntelliSense.
-- **Make**
-- **OpenSSH-Server** -o Visual Studio se conecta a sistemas Linux remotos por meio de uma conexão SSH segura.
-- **CMake** (somente projetos CMake) – você pode instalar [binários CMake vinculados estaticamente da Microsoft para Linux](https://github.com/microsoft/CMake/releases).
+- **gCC** - Visual Studio 2017 tem suporte fora da caixa para GCC.
+- **gdb** - O Visual Studio lança automaticamente o gdb no sistema Linux e usa o front-end do depurador Visual Studio para fornecer uma experiência de depuração de fidelidade total no Linux.
+- **rsync** e **zip** - a inclusão de rsync e zip permite que o Visual Studio extraia arquivos de cabeçalho do seu sistema Linux para o sistema de arquivos Windows para usar no IntelliSense.
+- **Fazer**
+- **abre o servidorsh** - O Visual Studio conecta-se a sistemas Linux remotos por meio de uma conexão SSH segura.
+- **CMake** (somente projetos CMake) - Você pode instalar [binários CMake vinculados estáticamente](https://github.com/microsoft/CMake/releases)da Microsoft para Linux .
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-## <a name="linux-setup-ubuntu-on-wsl"></a>Instalação do Linux: Ubuntu no WSL
+## <a name="linux-setup-ubuntu-on-wsl"></a>Configuração do Linux: Ubuntu na WSL
 
-Quando o seu alvo for o WSL, não é necessário adicionar uma conexão remota nem configurar o SSH para compilar e depurar. O **zip** e o **rsync** são necessários para a sincronização automática de cabeçalhos do Linux com o Visual Studio para o suporte ao IntelliSense. Se os aplicativos necessários ainda não estiverem presentes, você poderá instalá-los da seguinte maneira:
+Quando o seu alvo for o WSL, não é necessário adicionar uma conexão remota nem configurar o SSH para compilar e depurar. O **zip** e o **rsync** são necessários para a sincronização automática de cabeçalhos do Linux com o Visual Studio para o suporte ao IntelliSense. Se os aplicativos necessários ainda não estiverem presentes, você pode instalá-los da seguinte forma. **a compilação ninja** é necessária apenas para projetos CMake.
 
 ```bash
-sudo apt-get install g++ gdb make rsync zip
+sudo apt-get install g++ gdb make ninja-build rsync zip
 ```
 
 ::: moniker-end
@@ -96,12 +97,12 @@ sudo apt-get install g++ gdb make rsync zip
 
 ## <a name="ubuntu-on-remote-linux-systems"></a>Ubuntu em sistemas Linux remotos
 
-O sistema Linux de destino deve ter o **OpenSSH-Server**, o **g + +** , o **gdb**e o **Make** instalado, e o daemon ssh deve estar em execução. o **zip** e o **rsync** são necessários para a sincronização automática de cabeçalhos remotos com seu computador local para suporte ao IntelliSense. Se esses aplicativos ainda não estiverem presentes, será possível instalá-los da seguinte maneira:
+O sistema Linux de destino deve ter **openssh-server,** **g++**, **gdb,** **ninja-build** (somente projetos CMake), e **fazer** instalado, e o daemon ssh deve estar sendo executado. **zip** e **rsync** são necessários para sincronização automática de cabeçalhos remotos com sua máquina local para suporte intellisense. Se esses aplicativos ainda não estiverem presentes, será possível instalá-los da seguinte maneira:
 
 1. Em um prompt de shell no seu computador Linux, execute:
 
    ```bash
-   sudo apt-get install openssh-server g++ gdb make rsync zip
+   sudo apt-get install openssh-server g++ gdb make ninja-build rsync zip
    ```
 
    Sua senha raiz pode ser solicitada devido ao comando sudo.  Nesse caso, insira-a e continue. Depois de concluídos, os serviços e ferramentas necessários são instalados.
@@ -120,13 +121,13 @@ O sistema Linux de destino deve ter o **OpenSSH-Server**, o **g + +** , o **gdb*
 
 ## <a name="fedora-on-wsl"></a>Fedora no WSL
 
-O Fedora usa o instalador de pacote **dnf**. Para baixar o **g + +** , o **gdb**, **Make**, **rsync** e **zip**, execute:
+O Fedora usa o instalador de pacote **dnf**. Para baixar **g++**, **gdb**, **make**, **rsync**, **ninja-build**, e **zip**, execute:
 
    ```bash
-   sudo dnf install gcc-g++ gdb rsync make zip
+   sudo dnf install gcc-g++ gdb rsync ninja-build make zip
    ```
 
-O **zip** e o **rsync** são necessários para a sincronização automática de cabeçalhos do Linux com o Visual Studio para o suporte ao IntelliSense.
+O **zip** e o **rsync** são necessários para a sincronização automática de cabeçalhos do Linux com o Visual Studio para o suporte ao IntelliSense. **a compilação ninja** é necessária apenas para projetos CMake.
 
 ::: moniker-end
 
@@ -134,12 +135,12 @@ O **zip** e o **rsync** são necessários para a sincronização automática de 
 
 ## <a name="fedora-on-remote-linux-systems"></a>Fedora em sistemas Linux remotos
 
-O computador de destino que executa o Fedora usa o instalador do pacote **dnf**. Para baixar o **OpenSSH-Server**, **g + +** , **gdb**, **Make**, **rsync**e **zip**e reiniciar o daemon SSH, siga estas instruções:
+O computador de destino que executa o Fedora usa o instalador do pacote **dnf**. Para baixar **openssh-server**, **g++**, **gdb**, **make**, **ninja-build**, **rsync**, e **zip**, e reiniciar o daemon ssh, siga estas instruções. **a compilação ninja** é necessária apenas para projetos CMake.
 
 1. Em um prompt de shell no seu computador Linux, execute:
 
    ```bash
-   sudo dnf install openssh-server gcc-g++ gdb make rsync zip
+   sudo dnf install openssh-server gcc-g++ gdb ninja-build make rsync zip
    ```
 
    Sua senha raiz pode ser solicitada devido ao comando sudo.  Nesse caso, insira-a e continue. Depois de concluídos, os serviços e ferramentas necessários são instalados.

@@ -1,12 +1,17 @@
 ---
 title: tolower, _tolower, towlower, _tolower_l, _towlower_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _tolower_l
 - towlower
 - tolower
 - _tolower
 - _towlower_l
+- _o__tolower
+- _o__tolower_l
+- _o__towlower_l
+- _o_tolower
+- _o_towlower
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +26,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +52,12 @@ helpviewer_keywords:
 - characters, converting
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
-ms.openlocfilehash: 5d182fca50befac3393012572e68e65a8c81fa72
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 560fde4ae2167256acd54856fced15bc6ccecae6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957448"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362355"
 ---
 # <a name="tolower-_tolower-towlower-_tolower_l-_towlower_l"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
 
@@ -81,47 +87,49 @@ int _towlower_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*c*<br/>
+*C*<br/>
 Caractere a ser convertido.
 
-*locale*<br/>
+*Localidade*<br/>
 Localidade a ser usada para conversão específica de localidade.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas rotinas converte uma cópia de *c* em minúsculas se a conversão é possível e retorna o resultado. Não há valor retornado reservado para indicar um erro.
+Cada uma dessas rotinas converte uma cópia de *c* para minúscula, se a conversão for possível, e retorna o resultado. Não há valor retornado reservado para indicar um erro.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas rotinas converte determinada letra maiúscula em minúscula, se for possível e relevante. A conversão de casos de **towlower** é específica da localidade. Somente caracteres relevantes à localidade atual são alterados quanto a maiúsculas e minúsculas. As funções sem o sufixo **_L** usam a localidade definida atualmente. As versões dessas funções que têm o sufixo **_L** pegam a localidade como um parâmetro e usam isso em vez da localidade definida no momento. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+Cada uma dessas rotinas converte determinada letra maiúscula em minúscula, se for possível e relevante. A conversão de caso de **reboque é** específica local. Somente caracteres relevantes à localidade atual são alterados quanto a maiúsculas e minúsculas. As funções sem o **sufixo _l** usam o local definido no momento. As versões dessas funções que têm o **sufixo _l** tomam o local como parâmetro e usam isso em vez do local atualmente definido. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Para que o **_tolower** forneça os resultados esperados, [__isascii](isascii-isascii-iswascii.md) e [IsUpper](isupper-isupper-l-iswupper-iswupper-l.md) devem retornar diferentes de zero.
+Para **que _tolower** dêem os resultados esperados, [__isascii](isascii-isascii-iswascii.md) e [isupper](isupper-isupper-l-iswupper-iswupper-l.md) devem retornar sem zero.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_totlower**|**tolower**|**_mbctolower**|**towlower**|
+|**_totlower**|**Tolower**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l** e **_towlower_l** não têm nenhuma dependência de localidade e não devem ser chamados diretamente. Eles são fornecidos para uso interno pelo **_totlower_l**.
+> **_tolower_l** e **_towlower_l** não têm dependência local e não devem ser chamados diretamente. São fornecidos para uso interno por **_totlower_l**.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**tolower**|\<ctype.h>|
+|**Tolower**|\<ctype.h>|
 |**_tolower**|\<ctype.h>|
 |**towlower**|\<ctype.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
 Consulte o exemplo em [Funções to](../../c-runtime-library/to-functions.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
