@@ -11,19 +11,19 @@ helpviewer_keywords:
 - SafeIntException class
 - SafeIntException, constructor
 ms.assetid: 88bef958-1f48-4d55-ad4f-d1f9581a293a
-ms.openlocfilehash: 2998bbb83fd568d7ff627d6598c32fb5b17c1e40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: e118d7e3cce47ebb93cef16319a8fc45aab1118b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515561"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349941"
 ---
 # <a name="safeintexception-class"></a>Classe SafeIntException
 
 A classe `SafeInt` usa `SafeIntException` para identificar por que uma operação matemática não pode ser concluída.
 
 > [!NOTE]
-> A última versão dessa biblioteca está localizada em [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt).
+> A versão mais recente desta [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)biblioteca está localizada em .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -53,7 +53,7 @@ A [classe SafeInt](../safeint/safeint-class.md) é a única que usa a classe `Sa
 
 **Namespace:** msl::utilities
 
-## <a name="safeintexception"></a>SafeIntException::SafeIntException
+## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>SafeIntException::SafeIntException
 
 Cria um objeto `SafeIntException`.
 
@@ -67,7 +67,7 @@ SafeIntException(
 
 ### <a name="parameters"></a>Parâmetros
 
-*código*<br/>
+*Código*<br/>
 [in] Um valor de dados enumerados que descreve o erro ocorrido.
 
 ### <a name="remarks"></a>Comentários

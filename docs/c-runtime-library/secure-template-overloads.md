@@ -11,16 +11,16 @@ helpviewer_keywords:
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
 - secure template overloads
 ms.assetid: 562741d0-39c0-485e-8529-73d740f29f8f
-ms.openlocfilehash: dfb13d5a48376efb72a845e2f5e2380407937f5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 6dba60b57616a1656b2791958e460f0268eaa7fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744557"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361119"
 ---
 # <a name="secure-template-overloads"></a>Sobrecargas de modelo seguras
 
-A Microsoft preteriu muitas funções CRT (biblioteca de tempo de execução C) em favor de versões com segurança aprimorada. Por exemplo, `strcpy_s` é o substituto mais seguro de `strcpy`. As funções preteridas são as origens comuns de bugs de segurança, pois não impedem operações que podem substituir a memória. Por padrão, o compilador gerará um aviso de substituição quando você usar uma dessas funções. A CRT fornece sobrecargas de modelo do C++ para essas funções para ajudar a facilitar a transição para as variantes mais seguras.
+A Microsoft preteriu muitas funções CRT (biblioteca de runtime C) em favor de versões com segurança aprimorada. Por exemplo, `strcpy_s` é o substituto mais seguro de `strcpy`. As funções preteridas são as origens comuns de bugs de segurança, pois não impedem operações que podem substituir a memória. Por padrão, o compilador gerará um aviso de substituição quando você usar uma dessas funções. A CRT fornece sobrecargas de modelo do C++ para essas funções para ajudar a facilitar a transição para as variantes mais seguras.
 
 Por exemplo, este snippet de código gera um aviso porque `strcpy` foi preterido:
 
@@ -50,7 +50,7 @@ strcpy(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")
 A macro `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` não afeta as funções que usam contagem, como `strncpy`. Para habilitar as sobrecargas de modelo para funções de contagem, defina `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` como 1. Antes de fazer isso, no entanto, certifique-se de que seu código passa a contagem de caracteres, não o tamanho do buffer (um erro comum). Além disso, um código que grave explicitamente um terminador nulo ao final do buffer após a chamada de função não é necessário se a variante segura for chamada. Se você precisar de comportamento de truncamento, consulte [_TRUNCATE](../c-runtime-library/truncate.md).
 
 > [!NOTE]
->  A macro `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` requer que `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` também seja definida como 1. Se `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` for definida como 1 e `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` for definida como 0, o aplicativo não executará sobrecargas de modelo.
+> A macro `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` requer que `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` também seja definida como 1. Se `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` for definida como 1 e `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` for definida como 0, o aplicativo não executará sobrecargas de modelo.
 
 Quando você define `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` como 1, ele permite sobrecargas de modelo das variantes seguras (nomes terminando em "_s"). Nesse caso, se `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` for 1, uma pequena alteração deverá ser feita no código original:
 
@@ -91,7 +91,7 @@ strcpy_s(szBuf, "test"); // doesn't compile; you have to change it to
                          // strcpy_s(szBuf, 10, "test");
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md)<br/>
+[funcionalidades de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md)<br/>
 [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)

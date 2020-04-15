@@ -1,8 +1,9 @@
 ---
 title: srand
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - srand
+- _o_srand
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +34,16 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: 03e2b87a37d1b520b6e2b32c2f756fea625eb9a2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a8d018d429b2a484f88b7c1e0679f1f799983910
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958005"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355494"
 ---
 # <a name="srand"></a>srand
 
-Define o valor de semente inicial para o gerador de número pseudoaleatória usado pela função **Rand** .
+Define o valor da semente inicial para o gerador de números pseudoaleatório usado pela função **rand.**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -58,7 +60,9 @@ Semente para geração de números pseudoaleatórios
 
 ## <a name="remarks"></a>Comentários
 
-A função **srand** define o ponto de partida para gerar uma série de inteiros de pseudoaleatória no thread atual. Para reinicializar o gerador para criar a mesma sequência de resultados, chame a função **srand** e use o mesmo argumento de *semente* novamente. Qualquer outro valor para *Seed* define o gerador para um ponto de partida diferente na sequência pseudoaleatória. **Rand** recupera os números de pseudoaleatória que são gerados. Chamar **Rand** antes de qualquer chamada para **srand** gera a mesma sequência que chamar **srand** com a *semente* passada como 1.
+A função **srand** define o ponto de partida para gerar uma série de inteiros pseudoaleatórios no segmento atual. Para reinicializar o gerador para criar a mesma seqüência de resultados, ligue para a função **srand** e use o mesmo argumento *de sementenovamente.* Qualquer outro valor para *sementes* define o gerador para um ponto de partida diferente na seqüência pseudoaleatória. **rand** recupera os números pseudoaleatórios que são gerados. Chamar **rand** antes de qualquer chamada para **srand** gera a mesma seqüência que chamar **srand** com *sementes passadas* como 1.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -66,13 +70,13 @@ A função **srand** define o ponto de partida para gerar uma série de inteiros
 |-------------|---------------------|
 |**srand**|\<stdlib.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
 Veja o exemplo de [rand](rand.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[rand](rand.md)<br/>
+[Rand](rand.md)<br/>

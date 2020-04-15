@@ -6,16 +6,16 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_interface
 - PPLINTERFACE/concurrency::scheduler_interface::scheduler_interface::schedule
 ms.assetid: 4de61c78-a2c6-4698-bd47-964baf7fa287
-ms.openlocfilehash: 36feff80cab1c5d301c009a581b869d5c2bad5e9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: da2ebc2f9c2878baefcfa792bac08f420dbbb281
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142145"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358786"
 ---
 # <a name="scheduler_interface-structure"></a>Estrutura scheduler_interface
 
-Interface do Agendador
+Interface do agendador
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -27,21 +27,21 @@ struct __declspec(novtable) scheduler_interface;
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[scheduler_interface:: Schedule](#schedule)||
+|[scheduler_interface::programação](#schedule)||
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `scheduler_interface`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** pplinterface. h
+**Cabeçalho:** pplinterface.h
 
-**Namespace:** simultaneidade
+**Namespace:** concurrency
 
-## <a name="schedule"></a>Método scheduler_interface:: Schedule
+## <a name="scheduler_interfaceschedule-method"></a><a name="schedule"></a>scheduler_interface::método de agendamento
 
 ```cpp
 virtual void schedule(
@@ -49,6 +49,6 @@ virtual void schedule(
 void*) = 0;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Namespace de simultaneidade](concurrency-namespace.md)
+[namespace de concorrência](concurrency-namespace.md)

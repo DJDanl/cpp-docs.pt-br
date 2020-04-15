@@ -13,19 +13,19 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-ms.openlocfilehash: 56f6f1d06d834ccab68daf859fac065cf215582c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 8d67947c93d1387bfdc38c3bae5b3f978024a725
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748917"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349375"
 ---
 # <a name="_environ-_wenviron"></a>_environ, _wenviron
 
 A variável `_environ` é um ponteiro para uma matriz de ponteiros para as sequências de caracteres multibyte que constituem o ambiente do processo. Essa variável global foi preterida em favor das versões funcionais mais seguras [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) e [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md), que devem ser usadas no lugar da variável global. `_environ` é declarado em Stdlib.h.
 
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -56,7 +56,7 @@ De forma semelhante, em um programa que use `wmain`, `_environ` é inicialmente 
 Quando duas cópias do ambiente (MBCS e Unicode) existirem simultaneamente em um programa, o sistema de tempo de execução deverá manter as duas cópias, fazendo com que o tempo de execução fique mais lento. Por exemplo, sempre que você chama `_putenv`, uma chamada para `_wputenv` também é executada automaticamente para que as duas cadeias de caracteres de ambiente correspondam.
 
 > [!CAUTION]
->  Em casos raros, quando o sistema de tempo de execução mantém uma versão Unicode e uma versão multibyte do ambiente, as duas versões de ambiente podem não corresponder exatamente. Isso acontece porque, embora qualquer cadeia de caracteres multibyte exclusiva seja mapeada para uma cadeia de caracteres Unicode exclusiva, o mapeamento de uma cadeia de caracteres Unicode exclusiva para uma cadeia de caracteres multibyte não é necessariamente exclusivo. Portanto, duas cadeias de caracteres distintas do Unicode podem ser mapeadas para a mesma cadeia de caracteres multibyte.
+> Em casos raros, quando o sistema de tempo de execução mantém uma versão Unicode e uma versão multibyte do ambiente, as duas versões de ambiente podem não corresponder exatamente. Isso acontece porque, embora qualquer cadeia de caracteres multibyte exclusiva seja mapeada para uma cadeia de caracteres Unicode exclusiva, o mapeamento de uma cadeia de caracteres Unicode exclusiva para uma cadeia de caracteres multibyte não é necessariamente exclusivo. Portanto, duas cadeias de caracteres distintas do Unicode podem ser mapeadas para a mesma cadeia de caracteres multibyte.
 
 A sondagem `_environ` em um contexto de Unicode é insignificante quando uma ligação [/MD](../build/reference/md-mt-ld-use-run-time-library.md) ou `/MDd` é usada. Para a DLL do CRT, o tipo (multibyte ou largo) do programa é desconhecido. Somente o tipo multibyte é criado porque esse é o cenário mais provável.
 
@@ -74,7 +74,7 @@ Na notação usada para este exemplo, as cadeias de caracteres não são literai
 
 Assim, no ambiente de vários bytes, o valor de "`env_var_z`" após a primeira chamada implícita para `putenv` seria "`string1`", mas esse valor será substituído na segunda chamada implícita a `putenv`, quando o valor de "`env_var_z`" é definido como"`string2`". O ambiente de Unicode (em `_wenviron`) e o ambiente de vários bytes (em `_environ`) seria diferente, portanto, seguindo essa série de chamadas.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Variáveis globais](../c-runtime-library/global-variables.md)<br/>
 [getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)<br/>

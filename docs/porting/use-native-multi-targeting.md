@@ -5,26 +5,26 @@ helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: aff21121c181131b04ad22d75f03b7cbb222228a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 70acf3b5b78e0bc58555ef3f1f8e72e8aed74dd5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422090"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81353261"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Usar multiplataforma nativa no Visual Studio para compilar projetos antigos
 
-Normalmente, é recomendável atualizar seus projetos ao instalar a versão mais recente do Visual Studio. O custo de atualização de seus projetos e do seu código é geralmente mais do que o deslocamento pelos benefícios do novo IDE, compilador, bibliotecas e ferramentas. No entanto, sabemos que talvez não será possível atualizar alguns projetos. Talvez você tenha binários vinculados a bibliotecas ou plataformas mais antigas que, por razões de manutenção, não podem ser atualizadas. Seu código pode usar constructos de linguagem não padrão que poderiam ser interrompidos se você passasse para um compilador mais recente. Seu código pode depender de bibliotecas de terceiros compiladas para uma versão específica do Visual C++. Ou você pode produzir bibliotecas para outros que devem definir como destino uma versão mais antiga específica do Visual C++.
+Normalmente, é recomendável atualizar seus projetos ao instalar a versão mais recente do Visual Studio. O custo de atualização de seus projetos e do seu código é geralmente mais do que o deslocamento pelos benefícios do novo IDE, compilador, bibliotecas e ferramentas. No entanto, sabemos que talvez não será possível atualizar alguns projetos. Você pode ter binários que estão vinculados a bibliotecas ou plataformas mais antigas que, por razões de manutenção, você não pode atualizar. Seu código pode usar constructos de linguagem não padrão que poderiam ser interrompidos se você passasse para um compilador mais recente. Seu código pode depender de bibliotecas de terceiros compiladas para uma versão específica do Visual C++. Ou você pode produzir bibliotecas para outros que devem definir como destino uma versão mais antiga específica do Visual C++.
 
 Felizmente, é possível usar o Visual Studio 2017 e o Visual Studio 2015 para compilar projetos que definem como destino conjuntos de ferramentas e bibliotecas de compilador mais antigos. Não é necessário atualizar um projeto do Visual Studio 2010, do Visual Studio 2012, do Visual Studio 2013 ou do Visual Studio 2015 para aproveitar os novos recursos no IDE:
 
-  - Novos recursos experimentais do editor e de refatoração do C++
-  - Nova janela do depurador de ferramentas de diagnóstico e nova janela Lista de Erros
-  - Pontos de interrupção e janela de exceções renovados e novos PerfTips
-  - Novas ferramentas de pesquisa e de navegação de código
-  - Novas correções rápidas do C++ e extensões de Ferramentas Avançadas de Produtividade.
+- Novos recursos experimentais do editor e de refatoração do C++
+- Nova janela do depurador de ferramentas de diagnóstico e nova janela Lista de Erros
+- Pontos de interrupção e janela de exceções renovados e novos PerfTips
+- Novas ferramentas de pesquisa e de navegação de código
+- Novas correções rápidas do C++ e extensões de Ferramentas Avançadas de Produtividade.
 
-Também é possível definir como destino projetos do Visual Studio 2008, mas eles não podem ser usados sem ser alterados. Para obter detalhes, confira a seção **Instruções para o Visual Studio 2008**.
+Também é possível definir como destino projetos do Visual Studio 2008, mas eles não podem ser usados sem ser alterados. Para obter detalhes, consulte a seção **Instruções para Visual Studio 2008.**
 
 As versões mais recentes do Visual Studio dão suporte à multiplataforma nativa e ao ciclo completo de projetos. A multiplataforma nativa é a capacidade que o IDE mais recente tem de compilar usando conjuntos de ferramentas instalados por versões anteriores do Visual Studio. O ciclo completo é a capacidade que o IDE mais recente tem de carregar projetos criados por uma versão anterior do IDE sem fazer alterações no projeto. Se você instalar a versão mais recente do Visual Studio juntamente com sua versão existente, é possível usar a nova versão do IDE com o compilador e as ferramentas da versão existente para compilar seus projetos. Outros membros da sua equipe podem continuar usando os projetos na versão mais antiga do Visual Studio.
 
@@ -44,18 +44,18 @@ Se você optar por não atualizar, o Visual Studio não fará nenhuma alteraçã
 
 ## <a name="instructions-for-visual-studio-2008"></a>Instruções para o Visual Studio 2008
 
-O Visual Studio 2008 tinha seu próprio sistema de build dedicado para C++ chamado **VCBuild**. Do Visual Studio 2010 em diante, os projetos do Visual Studio C++ foram alterados para usar o **MSBuild**. Isso significa que se estiver atualizando permanentemente ou com vários destinos, você deve passar por uma etapa de atualização para criar seus projetos do Visual Studio 2008 na versão mais recente do Visual Studio. Seu projeto atualizado ainda gera binários totalmente compatíveis com os binários criados usando o Visual Studio 2008 IDE.
+O Visual Studio 2008 tinha seu próprio sistema de construção dedicado para C++ chamado **VCBuild**. Do Visual Studio 2010 em diante, os projetos do Visual Studio C++ foram alterados para usar o **MSBuild**. Isso significa que, se atualizar permanentemente ou várias segmentações, você deve passar por uma etapa de atualização para construir seus projetos do Visual Studio 2008 na versão mais recente do Visual Studio. Seu projeto atualizado ainda gera binários totalmente compatíveis com os binários criados usando o Visual Studio 2008 IDE.
 
-Primeiro, além da versão atual do Visual Studio, é necessário instalar o Visual Studio 2010 no mesmo computador que o Visual Studio 2008. Somente o Visual Studio 2010 instala os scripts do **MSBuild** que são necessários para projetos do Visual Studio 2008 de destino.
+Primeiro, além da versão atual do Visual Studio, é necessário instalar o Visual Studio 2010 no mesmo computador que o Visual Studio 2008. Apenas o Visual Studio 2010 instala os scripts **MSBuild** necessários para atingir projetos do Visual Studio 2008.
 
 Em seguida, é necessário atualizar seus projetos e sua solução do Visual Studio 2008 para a versão atual do Visual Studio. Recomendamos que você crie um backup de seus projetos e arquivos de solução antes da atualização. Para iniciar o processo de atualização, abra a solução na versão atual do Visual Studio. Quando você receber o prompt de atualização, examine as informações apresentadas e escolha **OK** para iniciar a atualização. Se você tiver mais de um projeto na solução, será necessário atualizar O assistente cria novos arquivos de projeto .vcxproj juntamente com os arquivos .vcproj existentes. Desde que você também tenha uma cópia do arquivo .sln original, a atualização não tem nenhum outro impacto sobre os projetos existentes do Visual Studio 2008.
 
 > [!NOTE]
-> As etapas a seguir se aplicam apenas a cenários multiplataforma. Se você pretende atualizar permanentemente o projeto para um conjunto de ferramentas posterior, a próxima etapa é salvar o projeto, abri-lo no Visual Studio 2019 e resolver os problemas de compilação que aparecem lá.
+> As etapas a seguir aplicam-se apenas a cenários de várias segmentação. Se você pretende atualizar permanentemente o projeto para um conjunto de ferramentas posterior, então seu próximo passo é salvar o projeto, abri-lo no Visual Studio 2019 e resolver os problemas de compilação que aparecem lá.
 
-Quando a atualização for concluída, se o relatório de log tiver erros ou avisos para qualquer um de seus projetos, examine-os cuidadosamente. A conversão do **VCBuild** para o **MSBuild** pode causar problemas. Certifique-se de entender e implementar quaisquer itens de ação listados no relatório. Para obter mais informações sobre o relatório de log de atualização e os problemas que podem ocorrer durante a conversão do **VCBuild** em **MSBuild**, confira esta postagem no blog [C++ Native Multi-Targeting](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) (Multiplataforma nativa do C++).
+Quando a atualização for concluída, se o relatório de log tiver erros ou avisos para qualquer um de seus projetos, examine-os cuidadosamente. A conversão de **VCBuild** para **MSBuild** pode causar problemas. Certifique-se de entender e implementar quaisquer itens de ação listados no relatório. Para obter mais informações sobre o relatório de log de upgrade e problemas que podem ocorrer ao converter **o VCBuild** para **o MSBuild,** consulte esta publicação do blog [C++ Native Multi-Targeting.](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/)
 
-Quando a atualização do projeto for concluída, e você tiver corrigido quaisquer problemas no arquivo de log, sua solução realmente define como destino o conjunto de ferramentas mais recente. Como etapa final, altere as propriedades para que cada projeto na solução use o conjunto de ferramentas do Visual Studio 2008. Com a solução carregada na versão atual do Visual Studio, para cada projeto na solução, abra o a caixa de diálogo do projeto **Páginas de Propriedades**: clique com o botão direito do mouse no projeto em **Gerenciador de Soluções** e, em seguida, selecione **Propriedades**. Na caixa de diálogo **Páginas de Propriedades**, altere o valor suspenso **Configuração** para **Todas as configurações**. Em **Propriedades de Configuração**, selecione **Geral** e, em seguida, altere o **Conjunto de Ferramentas da Plataforma** para **Visual Studio 2008 (v90)** .
+Quando a atualização do projeto for concluída, e você tiver corrigido quaisquer problemas no arquivo de log, sua solução realmente define como destino o conjunto de ferramentas mais recente. Como etapa final, altere as propriedades para que cada projeto na solução use o conjunto de ferramentas do Visual Studio 2008. Com a solução carregada na versão atual do Visual Studio, para cada projeto na solução, abra o a caixa de diálogo do projeto **Páginas de Propriedades**: clique com o botão direito do mouse no projeto em **Gerenciador de Soluções** e, em seguida, selecione **Propriedades**. Na caixa de diálogo **Páginas de Propriedades**, altere o valor suspenso **Configuração** para **Todas as configurações**. Em **Propriedades de Configuração**, selecione **Geral** e, em seguida, altere o **Conjunto de Ferramentas da Plataforma** para **Visual Studio 2008 (v90)**.
 
 Após essa alteração, o compilador e as bibliotecas do Visual Studio 2008 são usados para gerar binários de projeto quando você compila a solução na versão atual do Visual Studio.
 
@@ -69,5 +69,5 @@ Quando esses produtos são instalados, o menu suspenso de propriedades **Conjunt
 
 ## <a name="see-also"></a>Confira também
 
-[Atualizando projetos de versões anteriores do VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Atualizando projetos de versões anteriores do Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Aprimoramentos de conformidade do C++ no Visual Studio](../overview/cpp-conformance-improvements.md)

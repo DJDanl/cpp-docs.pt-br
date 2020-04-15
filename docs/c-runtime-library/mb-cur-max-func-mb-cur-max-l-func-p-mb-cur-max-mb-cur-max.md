@@ -1,11 +1,12 @@
 ---
 title: ___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - ___mb_cur_max_l_func
 - __p___mb_cur_max
 - ___mb_cur_max_func
 - __mb_cur_max
+- _o____mb_cur_max_func
 api_location:
 - msvcr110_clr0400.dll
 - msvcr110.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr90.dll
 - msvcr120.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - ___mb_cur_max_l_func
 - __p___mb_cur_max
 ms.assetid: 60d36108-1ca7-45a6-8ce7-68a91f13e3a1
-ms.openlocfilehash: a37ae2134d92310d6a530c759559b5e4b4af00f6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f9b9e2d903bb05f5b1b653b4fb51c57b354d4126
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944191"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351073"
 ---
 # <a name="___mb_cur_max_func-___mb_cur_max_l_func-__p___mb_cur_max-__mb_cur_max"></a>___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
 
@@ -54,7 +56,7 @@ int * __p___mb_cur_max(void);
 
 locale A estrutura da localidade da qual o resultado deve ser recuperado. Caso esse valor seja nulo, o código de idioma do thread atual será usado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Recupera o número máximo de bytes em um caractere multibyte para o código de idioma de thread atual ou especificado.
 
@@ -66,12 +68,14 @@ A macro `__mb_cur_max` é uma maneira conveniente de chamar a função `___mb_cu
 
 Funções CRT internas são específicas da implementação e estão sujeitas a alteração em cada versão. Não recomendamos usá-las no seu código.
 
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
 |`___mb_cur_max_func`, `___mb_cur_max_l_func`, `__p___mb_cur_max`|\<ctype.h>, \<stdlib.h>|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md)

@@ -5,14 +5,14 @@ f1_keywords:
 - mutex/std::lock_guard
 - mutex/std::lock_guard::lock_guard
 ms.assetid: 57121f0d-9c50-481c-b971-54e64df864e0
-ms.openlocfilehash: f59860c3aaa9ef7458fe5e30b85b119dede52c72
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 989c1e368e95fc0009f0c3f1c71af0bdba20609d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453850"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351712"
 ---
-# <a name="lockguard-class"></a>Classe lock_guard
+# <a name="lock_guard-class"></a>Classe lock_guard
 
 Representa um modelo que pode ser instanciado para criar um objeto cujo destruidor desbloqueia um `mutex`.
 
@@ -44,11 +44,11 @@ O argumento de modelo `Mutex` deve nomear um *tipo mutex*.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<> mutex
+**Cabeçalho:** \<mutex>
 
 **Namespace:** std
 
-## <a name="lock_guard"></a>  Construtor lock_guard::lock_guard
+## <a name="lock_guardlock_guard-constructor"></a><a name="lock_guard"></a>lock_guard:lock_guard Construtor
 
 Constrói um objeto `lock_guard`.
 
@@ -60,16 +60,16 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>Parâmetros
 
-*MTX*\
-Um objeto do *tipo mutex*.
+*Mtx*\
+Um objeto *tipo mutex.*
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor constrói um objeto do tipo `lock_guard` e bloqueia *MTX*. Se *MTX* não for um mutex recursivo, ele deverá ser desbloqueado quando esse construtor for chamado.
+O primeiro construtor constrói um `lock_guard` objeto de tipo e bloqueia *o Mtx*. Se *o Mtx* não for um mutex recursivo, ele deve ser desbloqueado quando este construtor é chamado.
 
-O segundo construtor não bloqueia *MTX*. *MTX* deve ser bloqueado quando este construtor é chamado. O construtor não lança exceções.
+A segunda construtora não bloqueia *a Mtx*. *Mtx* deve estar trancado quando este construtor é chamado. O construtor não lança exceções.
 
-## <a name="dtorlock_guard_destructor"></a>  Destruidor lock_guard::~lock_guard
+## <a name="lock_guardlock_guard-destructor"></a><a name="dtorlock_guard_destructor"></a>lock_guard::~lock_guard Destructor
 
 Desbloqueia o `mutex` que foi passado ao construtor.
 
@@ -81,7 +81,7 @@ Desbloqueia o `mutex` que foi passado ao construtor.
 
 Se o `mutex` não existir quando o destruidor for executado, o comportamento será indefinido.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
 [\<mutex>](../standard-library/mutex.md)

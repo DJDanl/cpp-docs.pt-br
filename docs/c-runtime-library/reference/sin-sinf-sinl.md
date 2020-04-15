@@ -1,10 +1,11 @@
 ---
 title: sin, sinf, sinl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - sinl
 - sinf
 - sin
+- _o_sin
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: e4ef8ac08ada6162932bbf9b872f30e6aa88b79b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d177eeca3d6b8248010ba1e65abf5154f27e19d7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948074"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355008"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -65,7 +67,7 @@ long double sin(long double x);  // C++ only
 
 ## <a name="return-value"></a>Valor retornado
 
-As funções **sin** retornam o seno de *x*. Se *x* for maior ou igual a 263, ou menor ou igual a-263, uma perda de significância no resultado ocorrerá.
+As funções **do pecado** retornam o seno de *x*. Se *x* for maior ou igual a 263, ou menor ou igual a -263, ocorre uma perda de significância no resultado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
@@ -76,15 +78,17 @@ Para obter mais informações sobre os códigos de retorno, consulte [errno, _do
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **sin** que levam e retornam valores **duplos** **float** ou **Long** . Em um programa C, **sin** sempre usa e retorna **Double**.
+Como c++ permite sobrecarga, você pode chamar sobrecargas de **pecado** que tomam e retornam **flutuam** **ou** **longos** valores duplos. Em um programa C, **o pecado** sempre pega e retorna **em dobro.**
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário (C)|Cabeçalho necessário (C++)|
 |-|-|-|
-|**sin**, **sinf**, **sinl**|\<math.h>|\<cmath> ou \<math.h>|
+|**pecado,** **sinf,** **sinl**|\<math.h>|\<cmath> ou \<math.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -114,7 +118,7 @@ sin( 1.570796 ) = 1.000000
 cos( 1.570796 ) = 0.000000
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

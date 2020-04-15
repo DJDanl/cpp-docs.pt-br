@@ -1,6 +1,6 @@
 ---
 title: _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wstat64
 - _stati64
@@ -14,6 +14,14 @@ api_name:
 - _stat64
 - _stat64i32
 - _wstat32i64
+- _o__stat32
+- _o__stat32i64
+- _o__stat64
+- _o__stat64i32
+- _o__wstat32
+- _o__wstat32i64
+- _o__wstat64
+- _o__wstat64i32
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,6 +34,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -109,12 +118,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: 5a6e78c0d98871e4becbb5e7411d9c819e9d0596
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 32a96a93eb8a18e366ac7a075b414dbca732fb61
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957942"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355411"
 ---
 # <a name="_stat-_stat32-_stat64-_stati64-_stat32i64-_stat64i32-_wstat-_wstat32-_wstat64-_wstati64-_wstat32i64-_wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -178,44 +187,46 @@ int _wstat64i32(
 *path*<br/>
 Ponteiro para uma cadeia de caracteres contendo o caminho do arquivo ou diretório existente.
 
-*buffer*<br/>
+*Buffer*<br/>
 Ponteiro para estrutura que armazena os resultados.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Cada uma dessas funções retornará 0 se as informações de status do arquivo forem obtidas. Um valor de retorno de-1 indica um erro. nesse caso, **errno** é definido como **ENOENT**, indicando que o nome do arquivo ou caminho não foi encontrado. Um valor de retorno de **EINVAL** indica um parâmetro inválido; **errno** também é definido como **EINVAL** nesse caso.
+Cada uma dessas funções retornará 0 se as informações de status do arquivo forem obtidas. Um valor de retorno de -1 indica um erro, nesse caso **errno** é definido **como ENOENT**, indicando que o nome de arquivo ou caminho não foi encontrado. Um valor de retorno do **EINVAL** indica um parâmetro inválido; **errno** também é definido como **EINVAL** neste caso.
 
-Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
+Veja [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre este, e outros códigos de devolução.
 
-O carimbo de data em um arquivo pode ser representado se for posterior à meia-noite, 1º de janeiro de 1970 e antes de 23:59:59, 31 de dezembro de 3000, UTC, a menos que você use **_stat32** ou **_wstat32**, ou tenha definido **_USE_32BIT_TIME_T**; nesse caso, a data pode ser representado somente até 23:59:59 de 18 de janeiro de 2038, UTC.
+O carimbo de data em um arquivo pode ser representado se for mais tarde do que meia-noite, 1 º de janeiro de 1970, e antes de 23:59:59, 31 de dezembro de 3000, UTC, a menos que você use **_stat32** ou **_wstat32**, ou tenha definido **_USE_32BIT_TIME_T**, nesse caso a data só pode ser representada até 23:59:59 janeiro 18, 2038, UTC.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_stat** Obtém informações sobre o arquivo ou diretório especificado pelo *caminho* e o armazena na estrutura apontada por *buffer*. o **_stat** manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento.
+A função **_stat** obtém informações sobre o arquivo ou diretório especificado pelo *caminho* e armazena-o na estrutura apontada pelo *buffer*. **_stat** lida automaticamente com argumentos de seqüência de caracteres de vários bytes conforme apropriado, reconhecendo seqüências de caracteres multibytes de acordo com a página de código multibyte atualmente em uso.
 
-**_wstat** é uma versão de caractere largo do **_stat**; o argumento *path* para **_wstat** é uma cadeia de caracteres largos. **_wstat** e **_stat** se comportam de forma idêntica, exceto pelo fato de que o **_wstat** não lida com cadeias de caracteres multibyte.
+**_wstat** é uma versão ampla de **_stat;** o argumento de *caminho* para **_wstat** é uma seqüência de caracteres amplo. **_wstat** e **_stat** se comportam de forma idêntica, exceto que **_wstat** não lida com cordas de caracteres multibytes.
 
-Variações dessas funções dão suporte a tipos de hora de 32 ou 64 bits e a tamanhos de arquivo de 32 ou 64 bits. O primeiro sufixo numérico (**32** ou **64**) indica o tamanho do tipo de tempo usado; o segundo sufixo é **i32** ou **i64**, indicando se o tamanho do arquivo é representado como um inteiro de 32 bits ou 64 bits.
+Variações dessas funções dão suporte a tipos de hora de 32 ou 64 bits e a tamanhos de arquivo de 32 ou 64 bits. O primeiro sufixo numérico **(32** ou **64**) indica o tamanho do tipo de tempo utilizado; o segundo sufixo é **i32** ou **i64,** indicando se o tamanho do arquivo é representado como um inteiro de 32 bits ou 64 bits.
 
-**_stat** é equivalente a **_stat64i32**e **struct** **_stat** contém um tempo de 64 bits. Isso é verdadeiro, a menos que **_USE_32BIT_TIME_T** seja definido; nesse caso, o comportamento antigo está em vigor; **_stat** usa uma hora de 32 bits e **struct** **_stat** contém um tempo de 32 bits. O mesmo é verdadeiro para **_stati64**.
+**_stat** equivale a **_stat64i32**e **a estrutura** **_stat** contém um tempo de 64 bits. Isso é verdade, a menos que **_USE_32BIT_TIME_T** seja definido, nesse caso o comportamento antigo está em vigor; **_stat** usa um tempo de 32 **bits,** e **a estruturação _stat** contém um tempo de 32 bits. O mesmo vale para **_stati64.**
 
 > [!NOTE]
-> **_wstat** não funciona com os links simbólicos do Windows Vista. Nesses casos, o **_wstat** sempre relatará um tamanho de arquivo 0. **_stat** funciona corretamente com links simbólicos.
+> **_wstat** não funciona com links simbólicos do Windows Vista. Nestes casos, **_wstat** sempre relatará um tamanho de arquivo de 0. **_stat** funciona corretamente com links simbólicos.
 
-Essa função valida seus parâmetros. Se o *caminho* ou o *buffer* for **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
+Essa função valida seus parâmetros. Se o *caminho* ou *o buffer forEM* **NULOS,** o manipulador de parâmetros inválidos é invocado, conforme descrito na [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md).
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ### <a name="time-type-and-file-length-type-variations-of-_stat"></a>Variações de tipo de hora e de tipo de tamanho de arquivo de _stat
 
 |Funções|_USE_32BIT_TIME_T definido?|Tipo de hora|Tipo de tamanho de arquivo|
 |---------------|------------------------------------|---------------|----------------------|
-|**_stat**, **_wstat**|Não definido|64 bits|32 bits|
-|**_stat**, **_wstat**|Definido|32 bits|32 bits|
-|**_stat32**, **_wstat32**|Não afetado pela definição de macro|32 bits|32 bits|
-|**_stat64**, **_wstat64**|Não afetado pela definição de macro|64 bits|64 bits|
-|**_stati64**, **_wstati64**|Não definido|64 bits|64 bits|
-|**_stati64**, **_wstati64**|Definido|32 bits|64 bits|
-|**_stat32i64**, **_wstat32i64**|Não afetado pela definição de macro|32 bits|64 bits|
-|**_stat64i32**, **_wstat64i32**|Não afetado pela definição de macro|64 bits|32 bits|
+|**_stat** **_wstat.**|Não definido|64 bits|32 bits|
+|**_stat** **_wstat.**|Definido|32 bits|32 bits|
+|**_stat32** **_wstat32**|Não afetado pela definição de macro|32 bits|32 bits|
+|**_stat64** **_wstat64**|Não afetado pela definição de macro|64 bits|64 bits|
+|**_stati64** **_wstati64**|Não definido|64 bits|64 bits|
+|**_stati64** **_wstati64**|Definido|32 bits|64 bits|
+|**_stat32i64** **_wstat32i64**|Não afetado pela definição de macro|32 bits|64 bits|
+|**_stat64i32,** **_wstat64i32**|Não afetado pela definição de macro|64 bits|32 bits|
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -227,32 +238,32 @@ Essa função valida seus parâmetros. Se o *caminho* ou o *buffer* for **nulo**
 |**_tstat32i64**|**_stat32i64**|**_stat32i64**|**_wstat32i64**|
 |**_tstat64i32**|**_stat64i32**|**_stat64i32**|**_wstat64i32**|
 
-A estrutura **_stat** , definida em SYS\Stat. H, inclui os campos a seguir.
+A estrutura **_stat,** definida em SYS\STAT. H, inclui os seguintes campos.
 
 |Campo||
 |-|-|
 | **st_gid** | Identificador numérico do grupo que possui o arquivo (específico do UNIX). Esse campo sempre será zero em sistemas Windows. Um arquivo redirecionado é classificado como um arquivo do Windows. |
 | **st_atime** | Hora do último acesso ao arquivo. Válido em unidades de disco formatadas como NTFS, mas não naquelas formatadas como FAT. |
 | **st_ctime** | Hora de criação do arquivo. Válido em unidades de disco formatadas como NTFS, mas não naquelas formatadas como FAT. |
-| **st_dev** | O número da unidade do disco que contém o arquivo (o mesmo que **st_rdev**). |
-| **st_ino** | Número do nó de informações (o **inode**) do arquivo (específico do UNIX). Em sistemas de arquivos UNIX, o **inode** descreve os carimbos de data e hora, as permissões e o conteúdo do arquivo. Quando os arquivos são vinculados uns aos outros, eles compartilham o mesmo **inode**. O **inode**e, portanto, **st_ino**, não tem significado nos sistemas de arquivos FAT, HPFS ou NTFS. |
-| **st_mode** | Máscara de bits para informações sobre o modo de arquivo. O bit **_S_IFDIR** será definido se *Path* especificar um diretório; o bit **_S_IFREG** é definido se *Path* especifica um arquivo comum ou um dispositivo. Bits de leitura/gravação do usuário são definidos de acordo com o modo de permissão do arquivo; bits de execução do usuário são definidos de acordo com a extensão de nome de arquivo. |
+| **st_dev** | Número de unidade do disco que contém o arquivo (mesmo **que st_rdev**). |
+| **st_ino** | Número do nó de informação (o **inode**) para o arquivo (específico unix). Nos sistemas de arquivos UNIX, o **inode** descreve os carimbos de data e hora do arquivo, permissões e conteúdo. Quando os arquivos são duramente ligados um ao outro, eles compartilham o mesmo **inode**. O **inode**, e portanto **st_ino**, não tem significado nos sistemas de arquivos FAT, HPFS ou NTFS. |
+| **st_mode** | Máscara de bits para informações sobre o modo de arquivo. O **_S_IFDIR** bit é definido se *o caminho* especificar um diretório; o **_S_IFREG** bit é definido se *o caminho* especificar um arquivo comum ou um dispositivo. Bits de leitura/gravação do usuário são definidos de acordo com o modo de permissão do arquivo; bits de execução do usuário são definidos de acordo com a extensão de nome de arquivo. |
 | **st_mtime** | Hora da última modificação do arquivo. |
 | **st_nlink** | Sempre 1 em sistemas de arquivos diferentes de NTFS. |
-| **st_rdev** | O número da unidade do disco que contém o arquivo (o mesmo que **st_dev**). |
-| **st_size** | Tamanho do arquivo em bytes; um inteiro de 64 bits para variações com o sufixo **i64** . |
+| **st_rdev** | Número de unidade do disco que contém o arquivo (mesmo **que st_dev**). |
+| **st_size** | Tamanho do arquivo em bytes; um inteiro de 64 bits para variações com o sufixo **i64.** |
 | **st_uid** | Identificador numérico do usuário que possui o arquivo (específico do UNIX). Esse campo sempre será zero em sistemas Windows. Um arquivo redirecionado é classificado como um arquivo do Windows. |
 
-Se o *caminho* se refere a um dispositivo, os campos **st_size**, vários campos de hora, **st_dev**e **st_rdev** na estrutura **_stat** não têm sentido. Já que STAT.H usa o tipo [_dev_t](../../c-runtime-library/standard-types.md), que é definido em TYPES.H, você deve incluir TYPES.H antes de STAT.H em seu código.
+Se *o caminho* se refere a um dispositivo, o **st_size**, vários campos de tempo, **st_dev**e **st_rdev** campos na estrutura **_stat** são insignificantes. Já que STAT.H usa o tipo [_dev_t](../../c-runtime-library/standard-types.md), que é definido em TYPES.H, você deve incluir TYPES.H antes de STAT.H em seu código.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|Cabeçalhos opcionais|
 |-------------|---------------------|----------------------|
-|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/types.h> seguido de \<sys/stat.h>|\<errno.h>|
-|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/types.h> seguido de \<sys/stat.h> ou \<wchar.h>|\<errno.h>|
+|**_stat**, **_stat32,** **_stat64** **_stati64,** **_stat32i64,** **_stat64i32**|\<sys/types.h> seguido de \<sys/stat.h>|\<errno.h>|
+|**_wstat** **_wstat32 _wstat64,**_wstati64 **_wstat64,** **_wstat32i64 _wstat64i32** **_wstati64** **_wstat64i32**|\<sys/types.h> seguido de \<sys/stat.h> ou \<wchar.h>|\<errno.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -317,7 +328,7 @@ Drive         : C:
 Time modified : Thu Feb 07 14:39:36 2002
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>

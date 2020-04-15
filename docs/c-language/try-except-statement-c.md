@@ -10,16 +10,16 @@ helpviewer_keywords:
 - __except keyword [C], in try-except
 - try-catch keyword [C], try-except keyword [C]
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
-ms.openlocfilehash: 9940fdf983f6141c0de207509bb800533b0f1eb8
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 2ca5299a5ab20b8985a520f25bb654ead0c25e2b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152320"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349739"
 ---
 # <a name="try-except-statement-c"></a>Instrução try-except (C)
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 A instrução **try-except** é uma extensão da Microsoft para a linguagem C que permite que os aplicativos assumam o controle de um programa quando ocorrerem eventos que normalmente interrompem a execução. Esses eventos são denominados exceções, e o mecanismo que lida com exceções é chamado de manipulação de exceção estruturada.
 
@@ -29,7 +29,7 @@ As exceções podem ser baseadas em hardware ou software. Mesmo quando os aplica
 
 *try-except-statement*: **__try**  *compound-statement*
 
-**__except (**  *expression*  **)**  *compound-statement*
+**declaração***composta* de __except *(expressão)***)**      
 
 A instrução composta após a cláusula `__try` é a seção protegida. A instrução composta após a cláusula `__except` é o manipulador de exceções. O manipulador especifica um conjunto de ações a ser executado se uma exceção for gerada durante a execução da seção protegida. A execução procede da seguinte maneira:
 
@@ -48,10 +48,10 @@ A instrução composta após a cláusula `__try` é a seção protegida. A instr
 Como a expressão `__except` é avaliada como uma expressão C, ela é limitada a um único valor, o operador de expressão condicional ou ao operador vírgula. Se um processamento mais extenso for necessário, a expressão poderá chamar uma rotina que retorne um dos três valores listados acima.
 
 > [!NOTE]
->  A manipulação de exceção estruturada funciona com arquivos de código-fonte em C e C++. No entanto, não é projetada especificamente para C++. Você pode garantir que o código seja mais portátil usando a manipulação de exceção de C++. Além disso, o mecanismo de tratamento de exceções de C++ é muito mais flexível, pois pode tratar exceções de qualquer tipo.
+> A manipulação de exceção estruturada funciona com arquivos de código-fonte em C e C++. No entanto, não é projetada especificamente para C++. Você pode garantir que o código seja mais portátil usando a manipulação de exceção de C++. Além disso, o mecanismo de tratamento de exceções de C++ é muito mais flexível, pois pode tratar exceções de qualquer tipo.
 
 > [!NOTE]
->  Para programas C++, o tratamento de exceção de C++ deve ser usado em vez de manipulação de exceção estruturada. Para obter mais informações, consulte [Tratamento de exceções](../cpp/exception-handling-in-visual-cpp.md) na *Referência da linguagem C++*.
+> Para programas C++, o tratamento de exceção de C++ deve ser usado em vez de manipulação de exceção estruturada. Para obter mais informações, consulte [Tratamento de exceções](../cpp/exception-handling-in-visual-cpp.md) na *Referência da linguagem C++*.
 
 Cada rotina em um aplicativo pode ter seu próprio manipulador de exceção. A expressão `__except` é executada no escopo do corpo de `__try`. Isso significa que ela tem acesso a todas as variáveis locais declarados lá.
 
@@ -94,8 +94,8 @@ in except           /* transfer control to selected handler */
 world               /* flow out of handler                  */
 ```
 
-**Fim da seção específica da Microsoft**
+**Fim específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Instrução try-except](../cpp/try-except-statement.md)

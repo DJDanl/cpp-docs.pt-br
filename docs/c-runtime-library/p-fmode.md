@@ -1,8 +1,9 @@
 ---
 title: __p__fmode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - __p__fmode
+- _o___p__fmode
 api_location:
 - msvcr80.dll
 - msvcr120.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr100.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -21,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - __p__fmode
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
-ms.openlocfilehash: 2364a22d52c5bc418e4499a4a639c8e06559063a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: aecba640099719f90db8bbd5dbe386ea99aae45d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171444"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349242"
 ---
 # <a name="__p__fmode"></a>__p__fmode
 
@@ -48,6 +50,8 @@ Ponteiro para a variável global `_fmode`.
 A função `__p__fmode` destina-se apenas ao uso interno e não deve ser chamada do código do usuário.
 
 O modo de translação de arquivo especifica uma translação `binary` ou `text` para operações E/S [_open](../c-runtime-library/reference/open-wopen.md) e [_pipe](../c-runtime-library/reference/pipe.md). Para obter mais informações, consulte [_fmode](../c-runtime-library/fmode.md).
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

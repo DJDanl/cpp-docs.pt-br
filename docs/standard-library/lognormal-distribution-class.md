@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: bcf587c5029fdf0b61da45dbd4ee9250f4c3a43b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ae13505da411b9a9cc445560907d053afa4bf81d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687795"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351700"
 ---
 # <a name="lognormal_distribution-class"></a>Classe lognormal_distribution
 
@@ -68,12 +68,12 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-@No__t_1 *RealType*
-O tipo de resultado de ponto flutuante, assume o padrão de **Double**. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType*\
+O tipo de resultado de ponto flutuante, padrão para **dobrar**. Para tipos possíveis, consulte [ \<>aleatórios ](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-O modelo de classe descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou tipo **Double** se nenhum for fornecido, distribuído de acordo com a distribuição normal de log. A tabela a seguir contém links para artigos sobre cada um dos membros.
+O modelo de classe descreve uma distribuição que produz valores de um tipo integral especificado pelo usuário ou tipo **duplo** se nenhum for fornecido, distribuído de acordo com a Distribuição Normal de Log. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -90,7 +90,7 @@ A função membro `reset()` descarta qualquer valor armazenado em cache, de form
 
 As funções membro `operator()` retornam o próximo valor gerado com base no mecanismo URNG, do pacote de parâmetros atual ou do pacote de parâmetros especificado.
 
-Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).
+Para obter mais informações sobre as aulas de distribuição e seus membros, consulte [ \<>aleatórios ](../standard-library/random.md).
 
 Para obter informações detalhadas sobre a distribuição LogNormal, consulte o artigo [Distribuição LogNormal](https://go.microsoft.com/fwlink/p/?linkid=400917), da Wolfram MathWorld.
 
@@ -184,7 +184,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="lognormal_distribution"></a>  lognormal_distribution::lognormal_distribution
+## <a name="lognormal_distributionlognormal_distribution"></a><a name="lognormal_distribution"></a>lognormal_distribution:lognormal_distribution
 
 Constrói a distribuição.
 
@@ -195,24 +195,24 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*m* \
+*M*\
 O parâmetro de distribuição `m`.
 
-\ *s*
+*s*\
 O parâmetro de distribuição `s`.
 
-\ de *parâmetros*
+*Parm*\
 A estrutura `param_type` usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
-**Pré-condição:** `0.0 < s`
+**Pré-condição:**`0.0 < s`
 
 O primeiro construtor constrói um objeto cujo valor `m` armazenado contém o valor *m* e cujo valor armazenado `s` contém o valor *s*.
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="param_type"></a>  lognormal_distribution::param_type
+## <a name="lognormal_distributionparam_type"></a><a name="param_type"></a>lognormal_distribution::param_type
 
 Armazena os parâmetros da distribuição.
 
@@ -230,21 +230,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*m* \
+*M*\
 O parâmetro de distribuição `m`.
 
-\ *s*
+*s*\
 O parâmetro de distribuição `s`.
 
-\ *à direita*
+*Certo*\
 A estrutura `param_type` usada para comparar.
 
 ### <a name="remarks"></a>Comentários
 
-**Pré-condição:** `0.0 < s`
+**Pré-condição:**`0.0 < s`
 
 Essa estrutura pode ser enviada ao construtor de classe de distribuição na instanciação, para a função de membro `param()` para definir os parâmetros armazenados de uma distribuição existente e para `operator()` a ser usado no lugar dos parâmetros armazenados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[\<random>](../standard-library/random.md)
+[\<>aleatório](../standard-library/random.md)

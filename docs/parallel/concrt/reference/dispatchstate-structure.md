@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
-ms.openlocfilehash: 69e00893373ccca6e2ed676fbb7f5a109c49efdf
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2c4103f89f7fc74c5368bafac3c82685ff9b6e03
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143053"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372691"
 ---
 # <a name="dispatchstate-structure"></a>Estrutura DispatchState
 
-A estrutura de `DispatchState` é usada para transferir o estado para o método `IExecutionContext::Dispatch`. Ele descreve as circunstâncias sob as quais o método `Dispatch` é invocado em uma interface `IExecutionContext`.
+A `DispatchState` estrutura é usada para `IExecutionContext::Dispatch` transferir o estado para o método. Descreve as circunstâncias em `Dispatch` que o método `IExecutionContext` é invocado em uma interface.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,29 +32,29 @@ struct DispatchState;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[Expatchstate::D ispatchstate](#ctor)|Constrói um novo objeto `DispatchState`.|
+|[DispatchState::DispatchState](#ctor)|Constrói um novo objeto `DispatchState`.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[Expatchstate:: m_dispatchStateSize](#m_dispatchstatesize)|Tamanho dessa estrutura, que é usado para controle de versão.|
-|[Expatchstate:: m_fIsPreviousContextAsynchronouslyBlocked](#m_fispreviouscontextasynchronouslyblocked)|Informa se este contexto inseriu o método `Dispatch` porque o contexto anterior foi bloqueado de forma assíncrona. Isso é usado somente no contexto de agendamento UMS e é definido como o valor `0` para todos os outros contextos de execução.|
-|[Expatchstate:: m_reserved](#m_reserved)|Bits reservados para futuras informações.|
+|[Estado de despacho::m_dispatchStateSize](#m_dispatchstatesize)|Tamanho desta estrutura, que é usada para a versão.|
+|[Estado de despacho::m_fIsPreviousContextAsynchronouslyBlocked](#m_fispreviouscontextasynchronouslyblocked)|Diz se esse contexto `Dispatch` entrou no método porque o contexto anterior foi bloqueado de forma assíncrona. Isso é usado apenas no contexto de agendamento da `0` UMS e é definido como valor para todos os outros contextos de execução.|
+|[Estado de despacho::m_reserved](#m_reserved)|Bits reservados para informações futuras.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
 `DispatchState`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** concrtrm. h
+**Cabeçalho:** concrtrm.h
 
-**Namespace:** simultaneidade
+**Namespace:** concurrency
 
-## <a name="ctor"></a>Expatchstate::D Construtor ispatchstate
+## <a name="dispatchstatedispatchstate-constructor"></a><a name="ctor"></a>DispatchState::DispatchState Constructor
 
 Constrói um novo objeto `DispatchState`.
 
@@ -62,30 +62,30 @@ Constrói um novo objeto `DispatchState`.
 DispatchState();
 ```
 
-## <a name="m_dispatchstatesize"></a>Membro de dados expatchstate:: m_dispatchStateSize
+## <a name="dispatchstatem_dispatchstatesize-data-member"></a><a name="m_dispatchstatesize"></a>DispatchState::m_dispatchStateSize Data Member
 
-Tamanho dessa estrutura, que é usado para controle de versão.
+Tamanho desta estrutura, que é usada para a versão.
 
 ```cpp
 unsigned long m_dispatchStateSize;
 ```
 
-## <a name="m_fispreviouscontextasynchronouslyblocked"></a>Membro de dados expatchstate:: m_fIsPreviousContextAsynchronouslyBlocked
+## <a name="dispatchstatem_fispreviouscontextasynchronouslyblocked-data-member"></a><a name="m_fispreviouscontextasynchronouslyblocked"></a>DispatchState::m_fIsPreviousContextAsynchronouslyBlocked Data Member
 
-Informa se este contexto inseriu o método `Dispatch` porque o contexto anterior foi bloqueado de forma assíncrona. Isso é usado somente no contexto de agendamento UMS e é definido como o valor `0` para todos os outros contextos de execução.
+Diz se esse contexto `Dispatch` entrou no método porque o contexto anterior foi bloqueado de forma assíncrona. Isso é usado apenas no contexto de agendamento da `0` UMS e é definido como valor para todos os outros contextos de execução.
 
 ```cpp
 unsigned int m_fIsPreviousContextAsynchronouslyBlocked : 1;
 ```
 
-## <a name="m_reserved"></a>Membro de dados expatchstate:: m_reserved
+## <a name="dispatchstatem_reserved-data-member"></a><a name="m_reserved"></a>DispatchState::m_reserved Membro de dados
 
-Bits reservados para futuras informações.
+Bits reservados para informações futuras.
 
 ```cpp
 unsigned int m_reserved : 31;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Namespace de simultaneidade](concurrency-namespace.md)
+[namespace de concorrência](concurrency-namespace.md)

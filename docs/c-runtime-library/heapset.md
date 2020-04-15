@@ -25,19 +25,19 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: c47ab59b1d8b9e73add640f7a7cf5fb146dc7c53
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 2a0aea37237f04939579eb059a42dd33771339ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300255"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351270"
 ---
 # <a name="_heapset"></a>_heapset
 
 Verifica heaps quanto à consistência mínima e configura as entradas livres com um valor especificado.
 
 > [!IMPORTANT]
->  Essa função é obsoleta. A partir do Visual Studio 2015, ela não está disponível no CRT.
+> Essa função está obsoleta. A partir do Visual Studio 2015, ela não está disponível no CRT.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -49,10 +49,10 @@ int _heapset(
 
 #### <a name="parameters"></a>Parâmetros
 
-*fill*<br/>
+*Preencher*<br/>
 Caractere de preenchimento.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 `_heapset` retorna uma das seguintes constantes de manifesto de inteiro definidas em Malloc.h.
 
@@ -71,7 +71,7 @@ A função `_heapset` mostra locais com memória livre ou nós que foram substit
 
 `_heapset` verifica a consistência mínima no heap e define cada byte das entradas livres do heap para o valor `fill`. Esse valor conhecido mostra quais locais de memória do heap contêm nós livres e quais contêm dados que foram gravados acidentalmente na memória liberada. Se o sistema operacional não der suporte a `_heapset` (por exemplo, Windows 98), a função retornará `_HEAPOK` e definirá `errno` como `ENOSYS`.
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|Cabeçalho opcional|
 |-------------|---------------------|---------------------|
@@ -121,9 +121,9 @@ int main( void )
 OK - heap is fine
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-[Alocação de Memória](../c-runtime-library/memory-allocation.md)<br/>
+[Alocação de memória](../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../c-runtime-library/heapadd.md)<br/>
 [_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
 [_heapmin](../c-runtime-library/reference/heapmin.md)<br/>

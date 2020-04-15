@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 180b84c6ac7bef94a93f73c0bdefc6a6f95164f0
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: fd1464c099d6f666b53387326c1dd863048defdc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689122"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372040"
 ---
 # <a name="poisson_distribution-class"></a>Classe poisson_distribution
 
@@ -67,8 +67,8 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-@No__t_1 *IntType*
-O tipo de resultado inteiro, o padrão é **int**. Para possíveis tipos, consulte [\<random >](../standard-library/random.md).
+*IntType*\
+O tipo de resultado inteiro, padrão para **int**. Para tipos possíveis, consulte [ \<>aleatórios ](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -89,7 +89,7 @@ A função membro `reset()` descarta qualquer valor armazenado em cache, de form
 
 As funções membro `operator()` retornam o próximo valor gerado com base no mecanismo URNG, do pacote de parâmetros atual ou do pacote de parâmetros especificado.
 
-Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).
+Para obter mais informações sobre as aulas de distribuição e seus membros, consulte [ \<>aleatórios ](../standard-library/random.md).
 
 Para obter informações detalhadas sobre a distribuição Poisson, consulte o artigo da Wolfram MathWorld [Poisson Distribution](https://go.microsoft.com/fwlink/p/?linkid=401112).
 
@@ -196,7 +196,7 @@ Distribution for 100 samples:
 
 **Namespace:** std
 
-## <a name="poisson_distribution"></a>  poisson_distribution::poisson_distribution
+## <a name="poisson_distributionpoisson_distribution"></a><a name="poisson_distribution"></a>poisson_distribution::poisson_distribuição
 
 Constrói a distribuição.
 
@@ -207,21 +207,21 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*média* \
+*significa*\
 O parâmetro de distribuição `mean`.
 
-\ de *parâmetros*
+*Parm*\
 A estrutura do parâmetro usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
-**Pré-condição:** `0.0 < mean`
+**Pré-condição:**`0.0 < mean`
 
 O primeiro construtor cria um objeto cujo valor `mean` armazenado contém o valor *mean*.
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="param_type"></a>  poisson_distribution::param_type
+## <a name="poisson_distributionparam_type"></a><a name="param_type"></a>poisson_distribution::param_type
 
 Armazena os parâmetros da distribuição.
 
@@ -242,10 +242,10 @@ Consulte os parâmetros do construtor para [poisson_distribution](#poisson_distr
 
 ### <a name="remarks"></a>Comentários
 
-**Pré-condição:** `0.0 < mean`
+**Pré-condição:**`0.0 < mean`
 
 Essa estrutura pode ser enviada ao construtor de classe de distribuição na instanciação, para a função de membro `param()` para definir os parâmetros armazenados de uma distribuição existente e para `operator()` a ser usado no lugar dos parâmetros armazenados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[\<random>](../standard-library/random.md)
+[\<>aleatório](../standard-library/random.md)

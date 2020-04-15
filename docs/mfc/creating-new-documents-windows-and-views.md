@@ -24,37 +24,37 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: 3d4ca55a9bff6ec42643db745896a2cea96dcefb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa1c58b02df92d79ca9915032b97fb5c0e2eaffc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242586"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371662"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Criando novos documentos, janelas e exibições
 
-As figuras a seguir oferecem uma visão geral do processo de criação de documentos, exibições e janelas de quadro. Outros artigos que se concentram nos objetos participantes fornecem mais detalhes.
+As figuras a seguir dão uma visão geral do processo de criação de documentos, visualizações e janelas de quadros. Outros artigos que se concentram nos objetos participantes fornecem mais detalhes.
 
-Após a conclusão desse processo, os objetos de cooperação existem e armazenam ponteiros uns aos outros. As figuras a seguir mostram a sequência na qual os objetos são criados. Você pode seguir a sequência de figura da figura.
+Após a conclusão deste processo, os objetos cooperativos existem e armazenam ponteiros uns para os outros. As figuras a seguir mostram a seqüência em que os objetos são criados. Você pode seguir a seqüência de figura em figura.
 
-![Sequência para a criação de um documento](../mfc/media/vc387l1.gif "sequência para a criação de um documento") <br/>
-A sequência na criação de um documento
+![Sequência para criar um documento](../mfc/media/vc387l1.gif "Sequência para criar um documento") <br/>
+Seqüência na criação de um documento
 
-![Sequência de criação da janela de quadro](../mfc/media/vc387l2.png "sequência de criação da janela de quadro") <br/>
-A sequência na criação de uma janela do quadro
+![Seqüência de criação de janelas de quadro](../mfc/media/vc387l2.png "Seqüência de criação de janelas de quadro") <br/>
+Seqüência em Criar uma Janela de Quadro
 
-![Sequência para a criação de um modo de exibição](../mfc/media/vc387l3.gif "sequência para criar uma exibição") <br/>
-A sequência na criação de um modo de exibição
+![Seqüência para criar uma visualização](../mfc/media/vc387l3.gif "Seqüência para criar uma visualização") <br/>
+Seqüência em Criar uma Exibição
 
-Para obter informações sobre como o framework inicializa o novo documento, exibição e objetos de janela com moldura, consulte classes [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), e [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) na referência da biblioteca MFC. Consulte também [22 de observação técnica](../mfc/tn022-standard-commands-implementation.md), que explica os processos de criação e a inicialização adicional em sua discussão de comandos de padrão da estrutura para o **New** e **abrir** itens sobre os **arquivo** menu.
+Para obter informações sobre como a estrutura inicializa os novos objetos de documento, visualização e janela de quadro, consulte as classes [CDocument,](../mfc/reference/cdocument-class.md) [CView,](../mfc/reference/cview-class.md) [CFrameWnd,](../mfc/reference/cframewnd-class.md) [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)e [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) no MFC Library Reference. Consulte também [a Nota Técnica 22](../mfc/tn022-standard-commands-implementation.md), que explica os processos de criação e inicialização ainda mais em sua discussão dos comandos padrão do quadro para os itens **Novo** e **Aberto** no menu **Arquivo.**
 
-##  <a name="_core_initializing_your_own_additions_to_these_classes"></a> Inicializando suas própria adições a essas Classes
+## <a name="initializing-your-own-additions-to-these-classes"></a><a name="_core_initializing_your_own_additions_to_these_classes"></a>Inicializando suas próprias adições a essas aulas
 
-As figuras anteriores também sugerem os pontos em que você pode substituir as funções de membro para inicializar objetos do seu aplicativo. Uma substituição do `OnInitialUpdate` na exibição de classe é o melhor lugar para inicializar a exibição. O `OnInitialUpdate` chamada ocorre imediatamente depois que a janela do quadro é criada e o modo de exibição dentro da janela de quadro é anexado ao seu documento. Por exemplo, se o modo de exibição é um modo de exibição de rolagem (derivado de `CScrollView` em vez de `CView`), você deve definir o tamanho de exibição com base no tamanho do documento no seu `OnInitialUpdate` substituir. (Esse processo é descrito na descrição da classe [CScrollView](../mfc/reference/cscrollview-class.md).) Você pode substituir a `CDocument` funções de membro `OnNewDocument` e `OnOpenDocument` para fornecer a inicialização de aplicativo específica do documento. Normalmente, você deve substituir ambos como um documento pode ser criado de duas maneiras.
+Os números anteriores também sugerem os pontos em que você pode substituir as funções do membro para inicializar os objetos do aplicativo. Uma substituição `OnInitialUpdate` de na sua classe de visão é o melhor lugar para inicializar a vista. A `OnInitialUpdate` chamada ocorre imediatamente após a criação da janela do quadro e a exibição dentro da janela do quadro é anexada ao documento. Por exemplo, se a sua exibição `CScrollView` for `CView`uma exibição de pergaminho (derivada de `OnInitialUpdate` vez em que), você deve definir o tamanho da exibição com base no tamanho do documento em sua substituição. (Este processo é descrito na descrição da classe [CScrollView](../mfc/reference/cscrollview-class.md).) Você pode substituir `CDocument` as `OnNewDocument` funções do membro e `OnOpenDocument` fornecer inicialização específica do documento. Normalmente, você deve substituir ambos, pois um documento pode ser criado de duas maneiras.
 
-Na maioria dos casos, sua substituição deve chamar a versão da classe base. Para obter mais informações, consulte as funções de membro nomeado das classes [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), e [CWinApp](../mfc/reference/cwinapp-class.md) no MFC Referência da biblioteca.
+Na maioria dos casos, sua substituição deve chamar a versão da classe base. Para obter mais informações, consulte as funções de membro nomeadas das classes [CDocument,](../mfc/reference/cdocument-class.md) [CView,](../mfc/reference/cview-class.md) [CFrameWnd](../mfc/reference/cframewnd-class.md)e [CWinApp](../mfc/reference/cwinapp-class.md) na Referência da Biblioteca MFC.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Modelos de documento e o processo de criação de documento/exibição](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
 [Criação do modelo de documento](../mfc/document-template-creation.md)<br/>

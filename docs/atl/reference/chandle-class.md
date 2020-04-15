@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-ms.openlocfilehash: 86d2cba6c3ee2e914d96ae2a09b642d556d46027
-ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
+ms.openlocfilehash: 7c72ded75298ed69efe73c1a81abf404545ea9b9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67693409"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326931"
 ---
 # <a name="chandle-class"></a>Classe CHandle
 
-Essa classe fornece métodos para criar e usar um objeto de identificador.
+Esta classe fornece métodos para criar e usar um objeto de alça.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,43 +36,43 @@ class CHandle
 |Nome|Descrição|
 |----------|-----------------|
 |[CHandle::CHandle](#chandle)|O construtor.|
-|[CHandle:: ~ CHandle](#dtor)|O destruidor.|
+|[CHandle::~CHandle](#dtor)|O destruidor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CHandle::Attach](#attach)|Chame este método para anexar o `CHandle` objeto para um identificador existente.|
-|[CHandle::Close](#close)|Chame esse método para fechar um `CHandle` objeto.|
-|[CHandle::Detach](#detach)|Chame esse método para desanexar um identificador de um `CHandle` objeto.|
+|[CHandle::attach](#attach)|Chame este método `CHandle` para anexar o objeto a uma alça existente.|
+|[CHandle::Fechar](#close)|Chame este método `CHandle` para fechar um objeto.|
+|[CHandle::Detach](#detach)|Chame este método para separar `CHandle` uma alça de um objeto.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CHandle::operator identificador](#operator_handle)|Retorna o valor do identificador armazenado.|
-|[CHandle::operator =](#operator_eq)|Operador de atribuição.|
+|[CHandle::manipulação do operador](#operator_handle)|Devolve o valor da pega armazenada.|
+|[CHandle::operador =](#operator_eq)|Operador de atribuição.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CHandle::m_h](#m_h)|A variável de membro que armazena o identificador.|
+|[CHandle::m_h](#m_h)|A variável membro que armazena a alça.|
 
 ## <a name="remarks"></a>Comentários
 
-Um `CHandle` objeto pode ser usado sempre que um identificador é necessário: a principal diferença é que o `CHandle` objeto será excluído automaticamente.
+Um `CHandle` objeto pode ser usado sempre que uma alça `CHandle` for necessária: a principal diferença é que o objeto será automaticamente excluído.
 
 > [!NOTE]
->  Algumas funções de API usará NULL como um identificador inválido ou vazio, enquanto outros usam INVALID_HANDLE_VALUE. `CHandle` usa apenas NULL e irá trata INVALID_HANDLE_VALUE como um identificador real. Se você chamar uma API que pode retornar INVALID_HANDLE_VALUE, você deve verificar esse valor antes de chamar [CHandle::Attach](#attach) ou passá-lo para o `CHandle` construtor e, em vez disso, transmita nulo.
+> Algumas funções de API usarão NULL como uma alça vazia ou inválida, enquanto outras usarão INVALID_HANDLE_VALUE. `CHandle`só usa NULL e tratará INVALID_HANDLE_VALUE como uma alça real. Se você ligar para uma API que pode retornar INVALID_HANDLE_VALUE, você deve verificar se `CHandle` há esse valor antes de ligar para [CHandle:::Anexar](#attach) ou passá-la para o construtor e, em vez disso, passar NULL.
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlbase. h
+**Cabeçalho:** atlbase.h
 
-##  <a name="attach"></a>  CHandle::Attach
+## <a name="chandleattach"></a><a name="attach"></a>CHandle::attach
 
-Chame este método para anexar o `CHandle` objeto para um identificador existente.
+Chame este método `CHandle` para anexar o objeto a uma alça existente.
 
 ```
 void Attach(HANDLE h) throw();
@@ -80,14 +80,14 @@ void Attach(HANDLE h) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*h*<br/>
-`CHandle` assumirá a propriedade do identificador *h*.
+*H*<br/>
+`CHandle`tomará posse da alça *h*.
 
 ### <a name="remarks"></a>Comentários
 
-Atribui a `CHandle` do objeto para o *h* identificador e, em seguida, chama **h.Detach()** . Em builds de depurações, será gerado um {1&gt;ATLASSERT&lt;1 se *h* é NULL. Nenhuma outra verificação em relação à validade do identificador é feita.
+Atribui o `CHandle` objeto à alça *h* e, em seguida, chama **h.Desapego()**. Em compilações de debugs, um ATLASSERT será levantado se *h* for NULL. Não é feita outra verificação quanto à validade da alça.
 
-##  <a name="chandle"></a>  CHandle::CHandle
+## <a name="chandlechandle"></a><a name="chandle"></a>CHandle::CHandle
 
 O construtor.
 
@@ -99,14 +99,14 @@ explicit CHandle(HANDLE h) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*h*<br/>
-Um identificador existente ou `CHandle`.
+*H*<br/>
+Uma alça existente `CHandle`ou .
 
 ### <a name="remarks"></a>Comentários
 
-Cria um novo `CHandle` do objeto, opcionalmente usando um identificador existente ou `CHandle` objeto.
+Cria um `CHandle` novo objeto, opcionalmente usando `CHandle` uma alça ou objeto existente.
 
-##  <a name="dtor"></a>  CHandle:: ~ CHandle
+## <a name="chandlechandle"></a><a name="dtor"></a>CHandle::~CHandle
 
 O destruidor.
 
@@ -116,11 +116,11 @@ O destruidor.
 
 ### <a name="remarks"></a>Comentários
 
-Libera os `CHandle` objeto chamando [CHandle::Close](#close).
+Libera o `CHandle` objeto chamando [CHandle::Close](#close).
 
-##  <a name="close"></a>  CHandle::Close
+## <a name="chandleclose"></a><a name="close"></a>CHandle::Fechar
 
-Chame esse método para fechar um `CHandle` objeto.
+Chame este método `CHandle` para fechar um objeto.
 
 ```
 void Close() throw();
@@ -128,33 +128,33 @@ void Close() throw();
 
 ### <a name="remarks"></a>Comentários
 
-Fecha um identificador de objeto aberta. Se o identificador for NULL, o que será o caso se `Close` já foi chamado, uma {1&gt;ATLASSERT&lt;1 será gerado em compilações de depuração.
+Fecha uma alça de objeto aberta. Se a alça for NULA, `Close` o que será o caso se já tiver sido chamado, um ATLASSERT será levantado em compilações de depuração.
 
-##  <a name="detach"></a>  CHandle::Detach
+## <a name="chandledetach"></a><a name="detach"></a>CHandle::Detach
 
-Chame esse método para desanexar um identificador de um `CHandle` objeto.
+Chame este método para separar `CHandle` uma alça de um objeto.
 
 ```
 HANDLE Detach() throw();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna o identificador que está sendo desanexado.
+Devolve a alça sendo desapegada.
 
 ### <a name="remarks"></a>Comentários
 
-Libera a propriedade do identificador.
+Libera a propriedade da alça.
 
-##  <a name="m_h"></a>  CHandle::m_h
+## <a name="chandlem_h"></a><a name="m_h"></a>CHandle::m_h
 
-A variável de membro que armazena o identificador.
+A variável membro que armazena a alça.
 
 ```
 HANDLE m_h;
 ```
 
-##  <a name="operator_eq"></a>  CHandle::operator =
+## <a name="chandleoperator-"></a><a name="operator_eq"></a>CHandle::operador =
 
 O operador de atribuição.
 
@@ -164,20 +164,20 @@ CHandle& operator=(CHandle& h) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*h*<br/>
-`CHandle` assumirá a propriedade do identificador *h*.
+*H*<br/>
+`CHandle`tomará posse da alça *h*.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna uma referência ao novo `CHandle` objeto.
+Retorna uma referência `CHandle` ao novo objeto.
 
 ### <a name="remarks"></a>Comentários
 
-Se o `CHandle` objeto contém um identificador no momento, ela será fechada. O `CHandle` do objeto que está sendo passado terá sua referência de identificador definida como NULL. Isso garante que duas `CHandle` objetos nunca conterá o mesmo identificador de Active Directory.
+Se `CHandle` o objeto contiver atualmente uma alça, ele será fechado. O `CHandle` objeto que está sendo passado terá sua referência de alça definida como NULL. Isso garante que `CHandle` dois objetos nunca contenham a mesma alça ativa.
 
-##  <a name="operator_handle"></a>  CHandle::operator identificador
+## <a name="chandleoperator-handle"></a><a name="operator_handle"></a>CHandle::manipulação do operador
 
-Retorna o valor do identificador armazenado.
+Devolve o valor da pega armazenada.
 
 ```
 operator HANDLE() const throw();
@@ -185,8 +185,8 @@ operator HANDLE() const throw();
 
 ### <a name="remarks"></a>Comentários
 
-Retorna o valor armazenado no [CHandle::m_h](#m_h).
+Retorna o valor armazenado em [CHandle::m_h](#m_h).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral da classe](../../atl/atl-class-overview.md)

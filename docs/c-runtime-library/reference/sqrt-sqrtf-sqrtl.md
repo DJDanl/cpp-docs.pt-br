@@ -1,10 +1,11 @@
 ---
 title: sqrt, sqrtf, sqrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - sqrtl
 - sqrtf
 - sqrt
+- _o_sqrt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 364db84bc20f9f6cfafbdc53e1f2df6da70592df
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958103"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355576"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -72,23 +74,25 @@ Um valor de ponto flutuante não negativo
 
 ## <a name="remarks"></a>Comentários
 
-Como C++ o permite sobrecarga, você pode chamar sobrecargas de **sqrt** que usam tipos **float** ou **Long** **Double** . Em um programa C, **sqrt** sempre leva e retorna **Double**.
+Como o C++ permite sobrecarga, você pode chamar sobrecargas de **sqrt** que tomam carros **alegóricos** ou tipos **duplos** **longos.** Em um programa C, **sqrt** sempre pega e retorna **em dobro**.
 
-## <a name="return-value"></a>Valor de retorno
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
-As funções **sqrt** retornam a raiz quadrada de *x*. Por padrão, se *x* for negativo, **sqrt** retornará um NaN indefinido.
+## <a name="return-value"></a>Valor retornado
 
-|Entrada|Exceção SEH|**_matherr** Exception|
+As funções **sqrt** retornam a raiz quadrada de *x*. Por padrão, se *x* for negativo, **sqrt** retorna uma NaN indefinida.
+
+|Entrada|Exceção SEH|**_matherr** Exceção|
 |-----------|-------------------|--------------------------|
-|± QNAN,IND|nenhum|_DOMAIN|
-|- ∞|nenhum|_DOMAIN|
-|x<0|nenhum|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
+|- ∞|none|_DOMAIN|
+|x<0|none|_DOMAIN|
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
-|**sqrt**, **sqrtf**, **sqrtl**|\<math.h>|\<cmath>|
+|**sqrt,** **sqrtf,** **sqrtl**|\<math.h>|\<cmath>|
 
 Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -117,7 +121,7 @@ int main( void )
 The square root of 45.35 is 6.73
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

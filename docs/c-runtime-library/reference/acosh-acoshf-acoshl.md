@@ -1,10 +1,13 @@
 ---
 title: acosh, acoshf, acoshl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - acoshf
 - acosh
 - acoshl
+- _o_acosh
+- _o_acoshf
+- _o_acoshl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: da1d6024cc9f00ebfc7696ddedf92ea9f25728a1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b719f67651643885351843fb8e995964e03de105
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170352"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350840"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -57,14 +61,14 @@ float acosh( float x );  // C++ only
 long double acosh( long double x );  // C++ only
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *x*<br/>
 Valor de ponto flutuante.
 
 ## <a name="return-value"></a>Valor retornado
 
-As funções **ACOSH** retornam o cosseno hyberbolic inverso (arco hiperbólico cosseno) de *x*. Essas funções são válidas no domínio *x* ≥ 1. Se *x* for menor que 1, `errno` será definido como `EDOM` e o resultado será um NaN silencioso. Se *x* for um erro Nan, indefinido ou infinito, o mesmo valor será retornado.
+As funções **acosh** retornam o cosseno hibólico inverso (cosseno hiperbólico do arco) de *x*. Estas funções são válidas sobre o domínio *x* ≥ 1. Se *x* é menor `errno` que `EDOM` 1, é definido para e o resultado é um NaN tranquilo. Se *x* é um NaN tranquilo, indefinido ou infinito, o mesmo valor é devolvido.
 
 |Entrada|Exceção SEH|Exceção `_matherr`|
 |-----------|-------------------|--------------------------|
@@ -73,15 +77,17 @@ As funções **ACOSH** retornam o cosseno hyberbolic inverso (arco hiperbólico 
 
 ## <a name="remarks"></a>Comentários
 
-C++Ao usar o, você pode chamar sobrecargas de **ACOSH** que levam e retornam valores **long** **duplos** **float** ou Long. Em um programa C, **ACOSH** sempre leva e retorna **Double**.
+Quando você usa C++, você pode chamar sobrecargas de **acosh** que pegam e retornam **flutuam** **ou** **longos** valores duplos. Em um programa C, **acosh** sempre pega e retorna **em dobro.**
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
-|**ACOSH**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
+|**acosh,** **acoshf,** **acoshl**|\<math.h>|\<cmath>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

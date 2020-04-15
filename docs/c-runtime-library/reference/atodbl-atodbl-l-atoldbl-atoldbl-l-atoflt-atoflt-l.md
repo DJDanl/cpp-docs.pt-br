@@ -1,6 +1,6 @@
 ---
 title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _atoldbl
 - _atoldbl_l
@@ -8,6 +8,12 @@ api_name:
 - _atoflt
 - _atoflt_l
 - _atodbl_l
+- _o__atodbl
+- _o__atodbl_l
+- _o__atoflt
+- _o__atoflt_l
+- _o__atoldbl
+- _o__atoldbl_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -52,16 +59,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: 3f3b164042006cab22d0dfd9a7968e2d2e494f5c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5f304fd163c2ba1c57a4daee8c2a3307d8ba870a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943618"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348958"
 ---
 # <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-Converte uma cadeia de caracteres em duplo ( **_atodbl**), longa dupla ( **_atoldbl**) ou float ( **_atoflt**).
+Converte uma corda em um duplo **(_atodbl),** duplo longo **(_atoldbl),** ou flutua **(_atoflt).**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -79,29 +86,31 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 *value*<br/>
 O valor de duplo, duplo longo ou float gerado ao converter a cadeia de caracteres em um valor de ponto flutuante. Esses valores são encapsulados em uma estrutura.
 
-*str*<br/>
+*Str*<br/>
 A cadeia de caracteres a ser analisada para converter em um valor de ponto flutuante.
 
-*locale*<br/>
+*Localidade*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-Retorna 0 se for bem-sucedido. Os códigos de erro possíveis são **_UNDERFLOW** ou **_OVERFLOW**, que são definidos no arquivo \<de cabeçalho Math. h >.
+Retorna 0 se for bem-sucedido. Os possíveis códigos de erro são **_UNDERFLOW** ou \< **_OVERFLOW,** que são definidos no> de arquivo de cabeçalho.h.
 
 ## <a name="remarks"></a>Comentários
 
 Essas funções convertem uma cadeia de caracteres em um valor de ponto flutuante. A diferença entre essas funções e a família de funções **atof** é que essas funções não geram código de ponto flutuante e não causam exceções de hardware. Em vez disso, condições de erro são relatadas como códigos de erro.
 
-Se uma cadeia de caracteres não tiver uma interpretação válida como um valor de ponto flutuante, o *valor* será definido como zero e o valor de retorno será zero.
+Se uma string não tiver uma interpretação válida como um valor de ponto flutuante, o *valor* será definido como zero e o valor de retorno será zero.
 
-As versões dessas funções que têm o sufixo **_L** são idênticas às versões que não têm o sufixo, exceto pelo fato de que usam o parâmetro *locale* que é passado em vez da localidade do thread atual.
+As versões dessas funções que têm o **sufixo _l** são idênticas às versões que não têm o sufixo, exceto que eles usam o parâmetro *local* que é passado em vez do local de thread atual.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotinas|Cabeçalho necessário|
 |--------------|---------------------|
-|**_atodbl**, **_atoldbl**, **_atoflt**<br /><br /> **_atodbl_l**, **_atoldbl_l**, **_atoflt_l**|\<stdlib.h>|
+|**_atodbl,** **_atoldbl** **_atoflt.**<br /><br /> **_atodbl_l** **_atoldbl_l** **_atoflt_l.**|\<stdlib.h>|
 
 ## <a name="example"></a>Exemplo
 
@@ -159,7 +168,7 @@ Float value: inf
 Return value: 3
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>

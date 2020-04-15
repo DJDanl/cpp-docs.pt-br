@@ -1,9 +1,11 @@
 ---
 title: _access_s, _waccess_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _access_s
 - _waccess_s
+- _o__access_s
+- _o__waccess_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: e7e61369635a1a59ef16aa6262650d9648277eb0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7f16951b99eb29bcb8c39499c29be1018cb86616
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171314"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349134"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s, _waccess_s
 
@@ -57,12 +60,12 @@ errno_t _waccess_s(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *path*<br/>
 Caminho do arquivo ou do diretório.
 
-*mode*<br/>
+*Modo*<br/>
 Configuração de permissão.
 
 ## <a name="return-value"></a>Valor retornado
@@ -79,7 +82,7 @@ Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_n
 
 ## <a name="remarks"></a>Comentários
 
-Quando usado com arquivos, a função **_access_s** determina se o arquivo especificado existe e pode ser acessado conforme especificado pelo valor de *Mode*. Quando usado com diretórios, **_access_s** determina apenas se o diretório especificado existe. No Windows 2000 e sistemas operacionais posteriores, todos os diretórios têm acesso de leitura e gravação.
+Quando usado com arquivos, a função **_access_s** determina se o arquivo especificado existe e pode ser acessado conforme especificado pelo valor do *modo*. Quando usado com diretórios, **_access_s** determina apenas se o diretório especificado existe. No Windows 2000 e posteriores sistemas operacionais, todos os diretórios têm acesso a leitura e gravação.
 
 |valor do modo|Verifica o arquivo quanto a|
 |----------------|---------------------|
@@ -88,11 +91,13 @@ Quando usado com arquivos, a função **_access_s** determina se o arquivo espec
 |04|Permissão de leitura.|
 |06|Permissão de leitura e gravação.|
 
-A permissão para ler ou gravar o arquivo não é suficiente para garantir a capacidade de abrir um arquivo. Por exemplo, se um arquivo estiver bloqueado por outro processo, ele poderá não estar acessível mesmo que **_access_s** retorna 0.
+A permissão para ler ou gravar o arquivo não é suficiente para garantir a capacidade de abrir um arquivo. Por exemplo, se um arquivo é bloqueado por outro processo, ele pode não estar acessível mesmo **que _access_s** retorna 0.
 
-**_waccess_s** é uma versão de caractere largo do **_access_s**, em que o argumento *Path* para **_waccess_s** é uma cadeia de caracteres largos. Caso contrário, **_waccess_s** e **_access_s** se comportam de forma idêntica.
+**_waccess_s** é uma versão de grande caráter de **_access_s**, onde o argumento de *caminho* para **_waccess_s** é uma seqüência de caracteres amplo. Caso contrário, **_waccess_s** e **_access_s** se comportem de forma idêntica.
 
-Essas funções validam seus parâmetros. Se o *caminho* for nulo ou o *modo* não especificar um modo válido, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão `errno` como `EINVAL` e retornarão `EINVAL`.
+Essas funções validam seus parâmetros. Se *o caminho* for NULO ou o *modo* não especificar um modo válido, o manipulador de parâmetros inválidos será invocado, conforme descrito na Validação [de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão `errno` como `EINVAL` e retornarão `EINVAL`.
+
+Por padrão, o estado global desta função é escopo para o aplicativo. Para mudar isso, consulte [Estado Global no CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -109,7 +114,7 @@ Essas funções validam seus parâmetros. Se o *caminho* for nulo ou o *modo* n�
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo usa **_access_s** para verificar o arquivo chamado crt_access_s. c para ver se ele existe e se a gravação é permitida.
+Este exemplo usa **_access_s** para verificar o arquivo chamado crt_access_s.c para ver se ele existe e se a escrita é permitida.
 
 ```C
 // crt_access_s.c

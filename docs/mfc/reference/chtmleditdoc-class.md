@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CHtmlEditDoc [MFC], IsModified
 - CHtmlEditDoc [MFC], OpenURL
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
-ms.openlocfilehash: c2a00b2501647f6101fed8ed1d4cd23dad7ab209
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 8b500f651da1a73040fdb0469f2f023babe25e85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346181"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352169"
 ---
 # <a name="chtmleditdoc-class"></a>Classe CHtmlEditDoc
 
-Com o [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), fornece a funcionalidade da plataforma de edição WebBrowser no contexto da arquitetura de exibição de documento do MFC.
+Com [CHtmlEditView,](../../mfc/reference/chtmleditview-class.md)fornece a funcionalidade da plataforma de edição do WebBrowser dentro do contexto da arquitetura de exibição de documentos Do MFC.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -44,16 +44,16 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 |Nome|Descrição|
 |----------|-----------------|
 |[CHtmlEditDoc::GetView](#getview)|Recupera o `CHtmlEditView` objeto anexado a este documento.|
-|[CHtmlEditDoc::IsModified](#ismodified)|Retorna se o controle WebBrowser de associados do modo de exibição contém um documento que foi modificado pelo usuário.|
+|[ChtmlEditDoc::IsModified](#ismodified)|Retorna se o controle webBrowser da exibição associada contém um documento que foi modificado pelo usuário.|
 |[CHtmlEditDoc::OpenURL](#openurl)|Abre uma URL.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CDocument](../../mfc/reference/cdocument-class.md)
+[Cdocument](../../mfc/reference/cdocument-class.md)
 
 `CHtmlEditDoc`
 
@@ -61,7 +61,7 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 
 **Cabeçalho:** afxhtml.h
 
-##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc
+## <a name="chtmleditdocchtmleditdoc"></a><a name="chtmleditdoc"></a>CHtmlEditDoc::CHtmlEditDoc
 
 Constrói um objeto `CHtmlEditDoc`.
 
@@ -69,27 +69,27 @@ Constrói um objeto `CHtmlEditDoc`.
 CHtmlEditDoc();
 ```
 
-##  <a name="getview"></a>  CHtmlEditDoc::GetView
+## <a name="chtmleditdocgetview"></a><a name="getview"></a>CHtmlEditDoc::GetView
 
-Recupera o [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) objeto anexado a este documento.
+Recupera o objeto [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) anexado a este documento.
 
 ```
 virtual CHtmlEditView* GetView() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna um ponteiro para o documento `CHtmlEditView` objeto.
+Retorna um ponteiro para `CHtmlEditView` o objeto do documento.
 
-##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified
+## <a name="chtmleditdocismodified"></a><a name="ismodified"></a>ChtmlEditDoc::IsModified
 
-Retorna se o controle WebBrowser de associados do modo de exibição contém um documento que foi modificado pelo usuário.
+Retorna se o controle webBrowser da exibição associada contém um documento que foi modificado pelo usuário.
 
 ```
 virtual BOOL IsModified();
 ```
 
-##  <a name="openurl"></a>  CHtmlEditDoc::OpenURL
+## <a name="chtmleditdocopenurl"></a><a name="openurl"></a>CHtmlEditDoc::OpenURL
 
 Abre uma URL.
 
@@ -99,14 +99,14 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszURL*<br/>
+*Lpszurl*<br/>
 A URL para abrir.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Retorna verdadeiro em caso de êxito, FALSE em caso de falha.
+Retorna TRUE no sucesso, FALSO no fracasso.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Exemplo de HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
+[Amostra de HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)

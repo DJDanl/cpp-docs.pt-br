@@ -1,5 +1,5 @@
 ---
-title: Interface ICommand
+title: Interface ICommandSource
 ms.date: 03/27/2019
 f1_keywords:
 - ICommandSource
@@ -17,20 +17,20 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: a57ca6f36546a17b9a35ebea875ff01b43de1332
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6a03c46c972f7746f39a3c5c65ca9b5509983d59
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445705"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81356985"
 ---
-# <a name="icommandsource-interface"></a>Interface ICommand
+# <a name="icommandsource-interface"></a>Interface ICommandSource
 
 Gerencia comandos enviados de um objeto de origem de comando para um controle de usuário.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 interface class ICommandSource
 ```
 
@@ -38,36 +38,36 @@ interface class ICommandSource
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
-|[ICommand:: AddCommandHandler](#addcommandhandler)|Adiciona um manipulador de comando a um objeto de origem de comando.|
-|[ICommand:: AddCommandRangeHandler](#addcommandrangehandler)|Adiciona um grupo de manipuladores de comando a um objeto de origem de comando.|
-|[ICommand:: AddCommandRangeUIHandler](#addcommandrangeuihandler)|Adiciona um grupo de manipuladores de mensagens de comando da interface do usuário a um objeto de origem de comando.|
-|[ICommand:: AddCommandUIHandler](#addcommandrangeuihandler)|Adiciona um manipulador de mensagens de comando da interface do usuário a um objeto de origem de comando.|
-|[ICommand::P ostCommand](#postcommand)|Posta uma mensagem sem esperar que ela seja processada.|
-|[ICommand:: RemoveCommandHandler](#removecommandhandler)|Remove um manipulador de comandos de um objeto de origem de comando.|
-|[ICommand:: RemoveCommandRangeHandler](#removecommandrangehandler)|Remove um grupo de manipuladores de comando de um objeto de origem de comando.|
-|[ICommand:: RemoveCommandRangeUIHandler](#removecommandrangeuihandler)|Remove um grupo de manipuladores de mensagens de comando da interface do usuário de um objeto de origem de comando.|
-|[ICommand:: RemoveCommandUIHandler](#removecommandrangeuihandler)|Remove um manipulador de mensagens de comando da interface do usuário de um objeto de origem de comando.|
-|[ICommand:: SendCommand](#sendcommand)|Envia uma mensagem e aguarda que ela seja processada antes de retornar.|
+|[iCommandSource::AddCommandHandler](#addcommandhandler)|Adiciona um manipulador de comando a um objeto de origem de comando.|
+|[iCommandSource::AddCommand'SHandler](#addcommandrangehandler)|Adiciona um grupo de manipuladores de comando a um objeto de origem de comando.|
+|[iCommandSource::AddCommandRangeUIHandler](#addcommandrangeuihandler)|Adiciona um grupo de manipuladores de mensagens de comando da interface do usuário a um objeto de origem de comando.|
+|[iCommandSource::AddCommandUIHandler](#addcommandrangeuihandler)|Adiciona um manipulador de mensagens de comando da interface do usuário a um objeto de origem de comando.|
+|[iCommandSource::PostCommand](#postcommand)|Posta uma mensagem sem esperar que ela seja processada.|
+|[ICommandSource::RemoveCommandHandler](#removecommandhandler)|Remove um manipulador de comando de um objeto de origem de comando.|
+|[iCommandSource::RemoveCommand'SHandler](#removecommandrangehandler)|Remove um grupo de manipuladores de comando de um objeto de origem de comando.|
+|[iCommandSource::RemoveCommandRangeUIHandler](#removecommandrangeuihandler)|Remove um grupo de manipuladores de mensagens de comando da interface do usuário de um objeto de origem de comando.|
+|[iCommandSource::RemoveCommandUIHandler](#removecommandrangeuihandler)|Remove um manipulador de mensagens de comando da interface do usuário de um objeto de origem de comando.|
+|[iCommandSource::SendCommand](#sendcommand)|Envia uma mensagem e espera que ela seja processada antes de retornar.|
 
 ### <a name="remarks"></a>Comentários
 
-Quando você hospeda um controle de usuário em uma exibição do MFC, a [classe CWinFormsView](../../mfc/reference/cwinformsview-class.md) roteia comandos e atualiza mensagens de interface do usuário de comando para o controle de usuários para permitir que ele manipule comandos do MFC (por exemplo, itens de menu de quadro e botões da barra de ferramentas). Ao implementar a [interface ICommandTarget](../../mfc/reference/icommandtarget-interface.md), você dá ao usuário controle uma referência ao objeto `ICommandSource`.
+Quando você hospeda um controle de usuário em uma exibição de MFC, [o CWinFormsView Class](../../mfc/reference/cwinformsview-class.md) roteia comandos e atualiza mensagens de ida de comando para o controle do usuário para permitir que ele manuseie comandos MFC (por exemplo, itens de menu de quadros e botões de barra de ferramentas). Ao implementar [o ICommandTarget Interface,](../../mfc/reference/icommandtarget-interface.md)você dá `ICommandSource` ao controle do usuário uma referência ao objeto.
 
-Consulte [como: Adicionar roteamento de comando ao controle de Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para obter um exemplo de como usar `ICommandTarget`.
+[Veja como: Adicionar roteamento de comando ao controle de formulários do Windows](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para um exemplo de como usar `ICommandTarget`.
 
-Para obter mais informações sobre como usar Windows Forms, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Para obter mais informações sobre o uso do Windows Forms, consulte [Usando um controle de usuário do formulário do Windows no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-### <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+### <a name="requirements"></a>Requisitos
 
-**Header:** afxwinforms. h (definido no assembly atlmfc\lib\mfcmifc80.dll)
+**Cabeçalho:** afxwinforms.h (definido em montagem atlmfc\lib\mfcmifc80.dll)
 
-## <a name="addcommandhandler"></a>ICommand:: AddCommandHandler
+## <a name="icommandsourceaddcommandhandler"></a><a name="addcommandhandler"></a>iCommandSource::AddCommandHandler
 
 Adiciona um manipulador de comando a um objeto de origem de comando.
 
-```
+```cpp
 void AddCommandHandler(
     unsigned int cmdID,
     CommandHandler^ cmdHandler);
@@ -75,21 +75,21 @@ void AddCommandHandler(
 
 ### <a name="parameters"></a>Parâmetros
 
-*cmdID*<br/>
-A ID do comando.
+*Cmdid*<br/>
+O id de comando.
 *cmdHandler*<br/>
-Um identificador para o método de manipulador de comando.
+Uma alça para o método do manipulador de comando.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método adiciona o manipulador de comandos cmdHandler ao objeto de origem de comando e mapeia o manipulador para cmdID.
-Consulte [como: Adicionar roteamento de comando ao controle de Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para obter um exemplo de como usar o AddCommandHandler.
+Este método adiciona o manipulador de comando cmdHandler ao objeto de origem de comando e mapeia o manipulador para cmdID.
+[Veja Como: Adicionar roteamento de comando ao Controle de Formulários do Windows](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para um exemplo de como usar o AddCommandHandler.
 
-## <a name="addcommandrangehandler"></a>ICommand:: AddCommandRangeHandler
+## <a name="icommandsourceaddcommandrangehandler"></a><a name="addcommandrangehandler"></a>iCommandSource::AddCommand'SHandler
 
 Adiciona um grupo de manipuladores de comando a um objeto de origem de comando.
 
-```
+```cpp
 void AddCommandRangeHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax,
@@ -99,20 +99,21 @@ void AddCommandRangeHandler(
 ### <a name="parameters"></a>Parâmetros
 
 *cmdIDMin*<br/>
-O índice inicial do intervalo de ID de comando.
-*cmdIDMax*<br/>
-O índice final do intervalo de ID de comando.
+O índice inicial do intervalo de id de comando.
+*Cmdidmax*<br/>
+O índice final do intervalo de id de comando.
 *cmdHandler*<br/>
-Um identificador para o método de manipulador de mensagens para o qual os comandos são mapeados.
+Uma alça para o método de manipulador de mensagens para o qual os comandos são mapeados.
+
 ### <a name="remarks"></a>Comentários
 
-Esse método mapeia um intervalo contíguo de IDs de comando para um único manipulador de mensagens e o adiciona ao objeto de origem de comando. Isso é usado para lidar com um grupo de botões relacionados com um método.
+Este método mapeia um intervalo contíguo de IDs de comando para um único manipulador de mensagens e adiciona-o ao objeto de origem de comando. Isto é usado para manusear um grupo de botões relacionados com um método.
 
-## <a name="addcommandrangeuihandler"></a>ICommand:: AddCommandRangeUIHandler
+## <a name="icommandsourceaddcommandrangeuihandler"></a><a name="addcommandrangeuihandler"></a>iCommandSource::AddCommandRangeUIHandler
 
 Adiciona um grupo de manipuladores de mensagens de comando da interface do usuário a um objeto de origem de comando.
 
-```
+```cpp
 void AddCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax,
@@ -122,21 +123,21 @@ void AddCommandRangeUIHandler(
 ### <a name="parameters"></a>Parâmetros
 
 *cmdIDMin*<br/>
-O índice inicial do intervalo de ID de comando.
-*cmdIDMax*<br/>
-O índice final do intervalo de ID de comando.
+O índice inicial do intervalo de id de comando.
+*Cmdidmax*<br/>
+O índice final do intervalo de id de comando.
 *cmdHandler*<br/>
-Um identificador para o método de manipulador de mensagens para o qual os comandos são mapeados.
+Uma alça para o método de manipulador de mensagens para o qual os comandos são mapeados.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método mapeia um intervalo contíguo de IDs de comando para um único manipulador de mensagens de comando de interface de usuário e a adiciona ao objeto de origem de comando. Isso é usado para lidar com um grupo de botões relacionados com um método.
+Este método mapeia uma gama contígua de IDs de comando para um único manipulador de mensagens de comando da interface do usuário e adiciona-o ao objeto de origem de comando. Isto é usado para manusear um grupo de botões relacionados com um método.
 
-## <a name="addcommanduihandler"></a>ICommand:: AddCommandUIHandler
+## <a name="icommandsourceaddcommanduihandler"></a><a name="addcommanduihandler"></a>iCommandSource::AddCommandUIHandler
 
 Adiciona um manipulador de mensagens de comando da interface do usuário a um objeto de origem de comando.
 
-```
+```cpp
 void AddCommandUIHandler(
     unsigned int cmdID,
     CommandUIHandler^ cmdUIHandler);
@@ -144,52 +145,54 @@ void AddCommandUIHandler(
 
 ### <a name="parameters"></a>Parâmetros
 
-*cmdID*<br/>
-A ID do comando.
+*Cmdid*<br/>
+O id de comando.
 *cmdUIHandler*<br/>
-Um identificador para o método do manipulador de mensagens de comando da interface do usuário.
+Uma alça para o método de manipulador de mensagens de comando da interface do usuário.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método adiciona o manipulador de mensagens de comando da interface do usuário cmdHandler ao objeto de origem de comando e mapeia o manipulador para cmdID.
+Este método adiciona o manipulador de mensagens de comando da interface do usuário cmdHandler ao objeto de origem de comando e mapeia o manipulador para cmdID.
 
-## <a name="postcommand"></a>ICommand::P ostCommand
+## <a name="icommandsourcepostcommand"></a><a name="postcommand"></a>iCommandSource::PostCommand
 
 Posta uma mensagem sem esperar que ela seja processada.
 
-```
+```cpp
 void PostCommand(unsigned int command);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*command*<br/>
-A ID de comando da mensagem a ser postada.
+*Comando*<br/>
+O id de comando da mensagem a ser postada.
+
 ### <a name="remarks"></a>Comentários
 
-Esse método posta de forma assíncrona a mensagem mapeada para a ID especificada pelo comando. Ele chama CWnd::P ostMessage para colocar a mensagem na fila de mensagens da janela e, em seguida, retorna sem esperar que a janela correspondente processe a mensagem.
+Este método posta assíncronamente a mensagem mapeada para o ID especificado pelo comando. Ele chama CWnd::PostMessage para colocar a mensagem na fila de mensagens da janela e, em seguida, retorna sem esperar que a janela correspondente processe a mensagem.
 
-## <a name="removecommandhandler"></a>ICommand:: RemoveCommandHandler
+## <a name="icommandsourceremovecommandhandler"></a><a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler
 
-Remove um manipulador de comandos de um objeto de origem de comando.
+Remove um manipulador de comando de um objeto de origem de comando.
 
-```
+```cpp
 void RemoveCommandHandler(unsigned int cmdID);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*cmdID*<br/>
-A ID do comando.
+*Cmdid*<br/>
+O id de comando.
+
 ### <a name="remarks"></a>Comentários
 
-Esse método remove o manipulador de comandos mapeado para cmdID do objeto de origem de comando.
+Este método remove o manipulador de comando mapeado para cmdID do objeto de origem de comando.
 
-## <a name="removecommandrangehandler"></a>ICommand:: RemoveCommandRangeHandler
+## <a name="icommandsourceremovecommandrangehandler"></a><a name="removecommandrangehandler"></a>iCommandSource::RemoveCommand'SHandler
 
 Remove um grupo de manipuladores de comando de um objeto de origem de comando.
 
-```
+```cpp
 void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
@@ -198,18 +201,19 @@ void RemoveCommandRangeUIHandler(
 ### <a name="parameters"></a>Parâmetros
 
 *cmdIDMin*<br/>
-O índice inicial do intervalo de ID de comando.
-*cmdIDMax*<br/>
-O índice final do intervalo de ID de comando.
+O índice inicial do intervalo de id de comando.
+*Cmdidmax*<br/>
+O índice final do intervalo de id de comando.
+
 ### <a name="remarks"></a>Comentários
 
-Esse método Remove um grupo de manipuladores de mensagens, mapeados para as IDs de comando especificadas por cmdIDMin e cmdIDMax, do objeto de origem de comando.
+Este método remove um grupo de manipuladores de mensagens, mapeados para os IDs de comando especificados por cmdIDMin e cmdIDMax, do objeto de origem de comando.
 
-## <a name="removecommandrangeuihandler"></a>ICommand:: RemoveCommandRangeUIHandler
+## <a name="icommandsourceremovecommandrangeuihandler"></a><a name="removecommandrangeuihandler"></a>iCommandSource::RemoveCommandRangeUIHandler
 
 Remove um grupo de manipuladores de mensagens de comando da interface do usuário de um objeto de origem de comando.
 
-```
+```cpp
 void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
@@ -218,45 +222,49 @@ void RemoveCommandRangeUIHandler(
 ### <a name="parameters"></a>Parâmetros
 
 *cmdIDMin*<br/>
-O índice inicial do intervalo de ID de comando.
-*cmdIDMax*<br/>
-O índice final do intervalo de ID de comando.
+O índice inicial do intervalo de id de comando.
+*Cmdidmax*<br/>
+O índice final do intervalo de id de comando.
+
 ### <a name="remarks"></a>Comentários
 
-Esse método Remove um grupo de manipuladores de mensagens de comando da interface do usuário, mapeados para as IDs de comando especificadas por cmdIDMin e cmdIDMax, do objeto de origem de comando.
+Este método remove um grupo de manipuladores de mensagens de comando da interface do usuário, mapeados para os IDs de comando especificados por cmdIDMin e cmdIDMax, do objeto de origem de comando.
 
-## <a name="removecommanduihandler"></a>ICommand:: RemoveCommandUIHandler
+## <a name="icommandsourceremovecommanduihandler"></a><a name="removecommanduihandler"></a>iCommandSource::RemoveCommandUIHandler
 
 Remove um manipulador de mensagens de comando da interface do usuário de um objeto de origem de comando.
 
-```
+```cpp
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*cmdID*<br/>
-A ID do comando.
+*Cmdid*<br/>
+O id de comando.
+
 ### <a name="remarks"></a>Comentários
 
-Esse método remove o manipulador de mensagens de comando da interface do usuário mapeado para cmdID do objeto de origem de comando.
+Este método remove o manipulador de mensagens de comando da interface do usuário mapeado para cmdID do objeto de origem de comando.
 
-## <a name="sendcommand"></a>ICommand:: SendCommand
+## <a name="icommandsourcesendcommand"></a><a name="sendcommand"></a>iCommandSource::SendCommand
 
-Envia uma mensagem e aguarda que ela seja processada antes de retornar.
+Envia uma mensagem e espera que ela seja processada antes de retornar.
 
-```
+```cpp
 void SendCommand(unsigned int command);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*command*<br/>
-A ID de comando da mensagem a ser enviada.
+*Comando*<br/>
+O id de comando da mensagem a ser enviada.
+
 ### <a name="remarks"></a>Comentários
 
-Esse método envia de forma síncrona a mensagem mapeada para a ID especificada pelo comando. Ele chama CWnd:: SendMessage para colocar a mensagem na fila de mensagens da janela e aguarda até que o procedimento da janela tenha processado a mensagem antes de retornar.
-## <a name="see-also"></a>Consulte também
+Este método envia sincronicamente a mensagem mapeada para o ID especificado pelo comando. Ele chama CWnd::SendMessage para colocar a mensagem na fila de mensagens da janela e espera até que o procedimento da janela tenha processado a mensagem antes de retornar.
+
+## <a name="see-also"></a>Confira também
 
 [Como adicionar roteamento de comando ao controle do Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
 [Interface ICommandTarget](../../mfc/reference/icommandtarget-interface.md)

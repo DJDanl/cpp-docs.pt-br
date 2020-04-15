@@ -1,18 +1,18 @@
 ---
-title: 'Como: Organizar arquivos de saída do projeto para builds'
+title: Como organizar arquivos de saída do projeto para compilações
 ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-ms.openlocfilehash: 202b2cbf135a5d8371354aac0fb8dd26367896c2
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 13aa3d1f8e2993ca34163ecbc0515948db56eb79
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220669"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328525"
 ---
-# <a name="how-to-organize-project-output-files-for-builds"></a>Como: Organizar arquivos de saída do projeto para builds
+# <a name="how-to-organize-project-output-files-for-builds"></a>Como organizar arquivos de saída do projeto para compilações
 
 Este tópico descreve as melhores práticas para organizar arquivos de saída do projeto. Erros de build podem ocorrer ao configurar arquivos de saída do projeto incorretamente. Este tópico também descreve as vantagens e as desvantagens de cada alternativa para organização dos arquivos de saída do projeto.
 
@@ -46,9 +46,9 @@ Este tópico descreve as melhores práticas para organizar arquivos de saída do
 
 1. Referencie o arquivo de cabeçalho apropriado no código usando a diretiva #include. O arquivo de cabeçalho precisa estar no caminho de inclusão ou fazer parte do projeto atual. Para obter mais informações, confira [Diretiva #include (C/C++)](../preprocessor/hash-include-directive-c-cpp.md).
 
-1. Defina também as dependências do projeto. A definição das dependências do projeto garante duas coisas. Primeiro, garante que os projetos sejam compilados na ordem correta, de modo que um projeto sempre possa encontrar os arquivos dependentes de que precisa. Em segundo lugar, adiciona implicitamente o diretório de saída do projeto dependente ao caminho, de modo que os arquivos possam ser encontrados com facilidade no momento do vínculo.
+1. Defina também as dependências do projeto. A definição das dependências do projeto garante duas coisas. Primeiro, garante que os projetos sejam compilados na ordem correta, de modo que um projeto sempre possa encontrar os arquivos dependentes de que precisa. Em segundo lugar, ele adiciona implicitamente o diretório de saída do projeto dependente ao caminho para que os arquivos possam ser encontrados facilmente no link-time.
 
-1. Para implantar o aplicativo, você precisará colocar a DLL em um local apropriado. Isso pode ser um dos seguintes:
+1. Para implantar o aplicativo, você precisará colocar a DLL em um local apropriado. Pode ser um dos seguintes:
 
    1. No mesmo caminho do executável.
 
@@ -62,12 +62,12 @@ Por padrão, os projetos são compilados de modo que todos os arquivos de saída
 
 Todos os arquivos de saída essenciais (como executáveis, arquivos de vinculador incremental e arquivos PDB) são copiados para um diretório de solução comum. Portanto, ao trabalhar com uma solução que contém diversos projetos do C++ com configurações equivalentes, todos os arquivos de saída são centralizados para vinculação e implantação simplificadas. Você pode ter certeza de que os aplicativos/bibliotecas funcionarão conforme esperado se eles manterem esses arquivos juntos (desde que seja garantido de que os arquivos estarão no caminho).
 
-O local dos arquivos de saída pode ser um grande problema durante a implantação em um ambiente de produção. Durante a execução de projetos no IDE, os caminhos para as bibliotecas incluídas não são necessariamente as mesmas do ambiente de produção. Por exemplo, se você tiver `#using "../../lib/debug/mylib.dll"` no código, mas, em seguida, implantar mylib.dll em uma posição relativa diferente, o aplicativo falhará em tempo de execução. Para evitar isso, você deve evitar o uso de caminhos relativos em instruções #include no código. É melhor garantir que os arquivos necessários estejam no caminho de build do projeto e, da mesma forma, garantir que os arquivos de produção correspondentes sejam colocados corretamente.
+O local dos arquivos de saída pode ser um grande problema durante a implantação em um ambiente de produção. Durante a execução de projetos no IDE, os caminhos para as bibliotecas incluídas não são necessariamente as mesmas do ambiente de produção. Por exemplo, se você tiver `#using "../../lib/debug/mylib.dll"` no código, mas, em seguida, implantar mylib.dll em uma posição relativa diferente, o aplicativo falhará em runtime. Para evitar isso, você deve evitar o uso de caminhos relativos em instruções #include no código. É melhor garantir que os arquivos necessários estejam no caminho de build do projeto e, da mesma forma, garantir que os arquivos de produção correspondentes sejam colocados corretamente.
 
 #### <a name="how-to-specify-where-output-files-go"></a>Como especificar o local dos arquivos de saída
 
 1. O local das configurações de saída do projeto pode ser encontrado nas **Páginas de Propriedades** do projeto. Expanda o nó ao lado de **Propriedades de Configuração** e selecione **Geral**. O local de saída é especificado ao lado de **Diretório de Saída**. Para obter mais informações, confira [Página de propriedades Geral (projeto)](reference/general-property-page-project.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[C++tipos de projeto no Visual Studio](reference/visual-cpp-project-types.md)
+[Tipos de projeto do C++ no Visual Studio](reference/visual-cpp-project-types.md)

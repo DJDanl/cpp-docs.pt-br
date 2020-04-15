@@ -56,12 +56,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: dab670c5baef1c51c39a4c936380fab92c5103cc
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 52c9727db544d8b124b37cc5beae369ae06abe10
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300294"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351658"
 ---
 # <a name="_exec-_wexec-functions"></a>Funções _exec, _wexec
 
@@ -105,10 +105,10 @@ O parâmetro `cmdname` especifica o arquivo a ser executado como novo processo. 
 Os parâmetros são passados para o novo processo atribuindo um ou mais ponteiros às cadeias de caracteres como parâmetros na chamada `_exec`. Essas cadeias de caracteres formam a lista de parâmetros do novo processo. O tamanho combinado das configurações de ambiente herdadas e as cadeias de caracteres que formam a lista de parâmetros do novo processo não devem exceder 32 quilobytes. O caractere nulo de terminação ('\0') para cada cadeia de caracteres não está incluído na contagem, mas os caracteres de espaço (inseridos automaticamente para separar os parâmetros) são contados.
 
 > [!NOTE]
->  Os espaços inseridos nas cadeias de caracteres podem causar um comportamento inesperado. Por exemplo, passando `_exec`, a cadeia de caracteres `"hi there"` resultará na obtenção de dois argumentos pelo processo, `"hi"` e `"there"`. Se a intenção for fazer o novo processo abrir um arquivo chamado "hi there", o processo falhará. É possível evitar isso colocando a cadeia de caracteres entre aspas: `"\"hi there\""`.
+> Os espaços inseridos nas cadeias de caracteres podem causar um comportamento inesperado. Por exemplo, passando `_exec`, a cadeia de caracteres `"hi there"` resultará na obtenção de dois argumentos pelo processo, `"hi"` e `"there"`. Se a intenção for fazer o novo processo abrir um arquivo chamado "hi there", o processo falhará. É possível evitar isso colocando a cadeia de caracteres entre aspas: `"\"hi there\""`.
 
 > [!IMPORTANT]
->  Não passe a entrada do usuário para `_exec` sem verificar explicitamente seu conteúdo. `_exec` resultará em uma chamada para [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), então tenha em mente que nomes de caminho desqualificados podem levar a possíveis vulnerabilidades de segurança.
+> Não passe a entrada do usuário para `_exec` sem verificar explicitamente seu conteúdo. `_exec` resultará em uma chamada para [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), então tenha em mente que nomes de caminho desqualificados podem levar a possíveis vulnerabilidades de segurança.
 
 As funções `_exec` validam seus parâmetros. Se os parâmetros esperados forem ponteiros nulos, cadeias de caracteres vazias ou omitidos, as funções `_exec` invocarão o manipulador de parâmetro inválido, como descrito em [Validação de parâmetro](../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão `errno` como `EINVAL` e retornarão -1. Nenhum processo novo é executado.
 
@@ -118,7 +118,7 @@ As chamadas `_execl`, `_execle`, `_execlp` e `_execlpe` costumam ser usadas quan
 
 As chamadas `_execv`, `_execve`, `_execvp` e `_execvpe` são úteis quando o número de parâmetros para o novo processo é variável. Os ponteiros para os parâmetros são passados como uma matriz, `argv`. O parâmetro `argv`[0] costuma ser um ponteiro para `cmdname`. Os parâmetros de `argv`[1] até `argv`[`n`] apontam para as cadeias de caracteres que formam a nova lista de parâmetros. O parâmetro `argv`[`n`+1] deve ser um ponteiro **NULL** para marcar o final da lista de parâmetros.
 
-Os arquivos abertos quando uma chamada `_exec` é feita continuam abertos no novo processo. Nas chamadas `_execl`, `_execlp`, `_execv` e `_execvp`, o novo processo herda o ambiente do processo de chamada. Chamadas `_execle`, `_execlpe`, `_execve` e `_execvpe` alteram o ambiente para o novo processo passando uma lista de configurações de ambiente por meio do parâmetro `envp`. `envp` é uma matriz de ponteiros de caractere e cada elemento (exceto o elemento final) aponta para uma cadeia de caracteres encerrada nula que define uma variável de ambiente. Normalmente, uma cadeia de caracteres assim tem a forma `NAME`=`value`, em que `NAME` é o nome de uma variável de ambiente e `value` é o valor da cadeia de caracteres cuja variável está definida. (Observe que `value` não está entre aspas duplas.) O elemento final da matriz de `envp` deve ser **nulo**. Quando o próprio `envp` é **NULL**, o novo processo herda as configurações de ambiente do processo de chamada.
+Os arquivos abertos quando uma chamada `_exec` é feita continuam abertos no novo processo. Nas chamadas `_execl`, `_execlp`, `_execv` e `_execvp`, o novo processo herda o ambiente do processo de chamada. Chamadas `_execle`, `_execlpe`, `_execve` e `_execvpe` alteram o ambiente para o novo processo passando uma lista de configurações de ambiente por meio do parâmetro `envp`. `envp` é uma matriz de ponteiros de caractere e cada elemento (exceto o elemento final) aponta para uma cadeia de caracteres encerrada nula que define uma variável de ambiente. Normalmente, uma cadeia de caracteres assim tem a forma `NAME`=`value`, em que `NAME` é o nome de uma variável de ambiente e `value` é o valor da cadeia de caracteres cuja variável está definida. (Observe `value` que não está incluído entre aspas duplas.) O elemento final `envp` da matriz deve ser **NULO**. Quando o próprio `envp` é **NULL**, o novo processo herda as configurações de ambiente do processo de chamada.
 
 Um programa executado com uma das funções `_exec` é sempre carregado na memória como se o campo de alocação máximo no cabeçalho do arquivo .exe do programa estivesse definido com o valor padrão de 0xFFFFH.
 
@@ -232,14 +232,14 @@ int main( int ac, char* av[] )
 }
 ```
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
 **Header:** process.h
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Controle de processo e de ambiente](../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](../c-runtime-library/reference/abort.md)<br/>
+[Abortar](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
 [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)<br/>

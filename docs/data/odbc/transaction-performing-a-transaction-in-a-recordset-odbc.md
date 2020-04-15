@@ -4,29 +4,29 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-ms.openlocfilehash: 94177a27a1f99a8c9c37b7fce3f697fd0088b7c6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 45ae414c318376b2c4d787498e9a288a0037af83
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212557"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358088"
 ---
 # <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transação: realizando uma transação em um conjunto de registros (ODBC)
 
-Este tópico explica como executar uma transação em um conjunto de registros.
+Este tópico explica como realizar uma transação em um conjunto de registros.
 
 > [!NOTE]
->  Há suporte para apenas um nível de transações; Não é possível aninhar transações.
+> Apenas um nível de transações é suportado; você não pode fazer transações.
 
-#### <a name="to-perform-a-transaction-in-a-recordset"></a>Para executar uma transação em um conjunto de registros
+#### <a name="to-perform-a-transaction-in-a-recordset"></a>Para realizar uma transação em um conjunto de registros
 
-1. Chame a função de membro `BeginTrans` do objeto de `CDatabase`.
+1. Ligue `CDatabase` para a `BeginTrans` função de membro do objeto.
 
-1. Se você não tiver implementado a busca de linha em massa, chame as funções de membro `AddNew/Update`, `Edit/Update`e `Delete` de um ou mais objetos Recordset do mesmo banco de dados quantas vezes forem necessárias. Para obter mais informações, consulte [conjunto de registros: adicionando, atualizando e excluindo registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Se você tiver implementado a busca de linha em massa, deverá escrever suas próprias funções para atualizar a fonte de dados.
+1. Se você não tiver implementado a `AddNew/Update`busca `Edit/Update`em `Delete` linha em massa, ligue para as funções de membro e de um ou mais objetos de conjunto de registros do mesmo banco de dados quantas vezes fornecessário. Para obter mais informações, consulte [Recordset: Adicionando, Atualizando e Excluindo Registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Se você implementou a busca em linha em massa, você deve escrever suas próprias funções para atualizar a fonte de dados.
 
-1. Por fim, chame a função de membro `CommitTrans` do objeto de `CDatabase`. Se ocorrer um erro em uma das atualizações ou se você decidir cancelar as alterações, chame sua função de membro `Rollback`.
+1. Por fim, `CDatabase` chame `CommitTrans` a função de membro do objeto. Se ocorrer um erro em uma das atualizações ou você `Rollback` decidir cancelar as alterações, ligue para sua função de membro.
 
-O exemplo a seguir usa dois conjuntos de registros para excluir o registro de um aluno de um banco de dados de registro da escola, removendo o aluno de todas as classes nas quais o aluno está registrado. Como as chamadas de `Delete` em ambos os conjuntos de registros devem ter sucesso, uma transação é necessária. O exemplo pressupõe a existência de `m_dbStudentReg`, uma variável de membro do tipo `CDatabase` já conectado à fonte de dados e as classes de conjunto de registros `CEnrollmentSet` e `CStudentSet`. A variável `strStudentID` contém um valor obtido do usuário.
+O exemplo a seguir usa dois conjuntos de registros para excluir a matrícula de um aluno de um banco de dados de matrícula escolar, removendo o aluno de todas as classes em que o aluno está matriculado. Como `Delete` as chamadas em ambos os conjuntos de registros devem ter sucesso, uma transação é necessária. O exemplo assume a `m_dbStudentReg`existência de , `CDatabase` uma variável membro do tipo já `CEnrollmentSet` `CStudentSet`conectado à fonte de dados, e as classes de conjunto de registros e . A `strStudentID` variável contém um valor obtido do usuário.
 
 ```
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
@@ -79,7 +79,7 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ```
 
 > [!NOTE]
->  Chamar `BeginTrans` novamente sem chamar `CommitTrans` ou `Rollback` é um erro.
+> Ligar `BeginTrans` novamente `CommitTrans` sem ligar ou `Rollback` é um erro.
 
 ## <a name="see-also"></a>Confira também
 
