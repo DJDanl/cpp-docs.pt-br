@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Mutex::Mutex, constructor
 - Microsoft::WRL::Wrappers::Mutex::operator= operator
 ms.assetid: 682a0963-721c-46a2-8871-000e9997505b
-ms.openlocfilehash: 93de43ac7e5314501d0391e2cde862ba32be0b4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36466bd00c5b100f20ee87173e68fdef4131ec23
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379136"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371232"
 ---
 # <a name="mutex-class"></a>Classe Mutex
 
@@ -36,25 +36,25 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>;
 
 Nome       | Descrição
 ---------- | ------------------------------------------------------
-`SyncLock` | Um sinônimo para uma classe que dá suporte a bloqueios síncronos.
+`SyncLock` | Um sinônimo para uma classe que suporta bloqueios síncronos.
 
-### <a name="public-constructor"></a>Construtor público
+### <a name="public-constructor"></a>Construtor Público
 
 Nome                   | Descrição
 ---------------------- | ------------------------------------------------
-[Mutex::Mutex](#mutex) | Inicializa uma nova instância da classe `Mutex`.
+[Mutex::Mutex](#mutex) | Inicia uma nova instância da classe `Mutex`.
 
 ### <a name="public-members"></a>Membros públicos
 
 Nome                 | Descrição
 -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Mutex::Lock](#lock) | Aguarda até que o objeto atual, ou o `Mutex` objeto associado ao identificador especificado, versões mutex ou o intervalo de tempo limite especificado tiver decorrido.
+[Mutex::Bloqueio](#lock) | Aguarde até que o `Mutex` objeto atual, ou o objeto associado à alça especificada, libere o mutex ou o intervalo de tempo de saída especificado tenha transcorrido.
 
-### <a name="public-operator"></a>Operador público
+### <a name="public-operator"></a>Operador Público
 
 Nome                                 | Descrição
 ------------------------------------ | ---------------------------------------------------------------------------
-[Mutex::operator=](#operator-assign) | Atribui (se move) especificado `Mutex` o objeto atual `Mutex` objeto.
+[Mutex::operador=](#operator-assign) | Atribui (move) o `Mutex` objeto especificado `Mutex` ao objeto atual.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -62,13 +62,13 @@ Nome                                 | Descrição
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** corewrappers. h
+**Cabeçalho:** corewrappers.h
 
-**Namespace:** Microsoft::WRL::Wrappers
+**Espaço de nome:** Microsoft::WRL::Wrappers
 
-## <a name="lock"></a>Mutex:: Lock
+## <a name="mutexlock"></a><a name="lock"></a>Mutex::Bloqueio
 
-Aguarda até que o objeto atual, ou o `Mutex` objeto associado ao identificador especificado, versões mutex ou o intervalo de tempo limite especificado tiver decorrido.
+Aguarde até que o `Mutex` objeto atual, ou o objeto associado à alça especificada, libere o mutex ou o intervalo de tempo de saída especificado tenha transcorrido.
 
 ```cpp
 SyncLock Lock(
@@ -83,17 +83,17 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*milissegundos*<br/>
-O intervalo de tempo limite em milissegundos. O valor padrão é infinito, o que espera indefinidamente.
+*milliseconds*<br/>
+O intervalo de tempo, em milissegundos. O valor padrão é INFINITE, que aguarda indefinidamente.
 
-*h*<br/>
-O identificador de um `Mutex` objeto.
+*H*<br/>
+A alça `Mutex` de um objeto.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-## <a name="mutex"></a>Mutex::Mutex
+## <a name="mutexmutex"></a><a name="mutex"></a>Mutex::Mutex
 
-Inicializa uma nova instância da classe `Mutex`.
+Inicia uma nova instância da classe `Mutex`.
 
 ```cpp
 explicit Mutex(
@@ -107,16 +107,16 @@ Mutex(
 
 ### <a name="parameters"></a>Parâmetros
 
-*h*<br/>
-Um identificador ou uma referência de rvalue a um identificador para um `Mutex` objeto.
+*H*<br/>
+Uma alça, ou uma referência de valor `Mutex` a uma alça, a um objeto.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor inicializa um `Mutex` objeto do identificador especificado. O segundo construtor inicializa um `Mutex` objeto do identificador especificado e, em seguida, move o propriedade do mutex atual `Mutex` objeto.
+O primeiro construtor inicializa `Mutex` um objeto a partir da alça especificada. O segundo construtor inicializa `Mutex` um objeto da alça especificada e, em seguida, move a propriedade do mutex para o objeto atual. `Mutex`
 
-## <a name="operator-assign"></a>Mutex::operator=
+## <a name="mutexoperator"></a><a name="operator-assign"></a>Mutex::operador=
 
-Atribui (se move) especificado `Mutex` o objeto atual `Mutex` objeto.
+Atribui (move) o `Mutex` objeto especificado `Mutex` ao objeto atual.
 
 ```cpp
 Mutex& operator=(
@@ -126,13 +126,13 @@ Mutex& operator=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*h*<br/>
-Uma referência rvalue para um `Mutex` objeto.
+*H*<br/>
+Uma referência de valor `Mutex` a um objeto.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Uma referência ao atual `Mutex` objeto.
+Uma referência ao `Mutex` objeto atual.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte o **mover semântica** seção [Declarador de referência Rvalue: & &](../../cpp/rvalue-reference-declarator-amp-amp.md).
+Para obter mais informações, consulte a seção **Mover Semantics** do Declarador de [Referência de Valor de Rvalue: &&](../../cpp/rvalue-reference-declarator-amp-amp.md).

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCBaseToolBar [MFC], GetMinSize
 - CMFCBaseToolBar [MFC], OnAfterChangeParent
 ms.assetid: 5d79206d-55e4-46f8-b1b8-042e34d7f9da
-ms.openlocfilehash: 7a6ccdaf3d78b9973505dd4e90ca76f671fce889
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 027fe8569ff133bb3f348c9d0607f19c6d778c4e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403861"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367838"
 ---
 # <a name="cmfcbasetoolbar-class"></a>Classe CMFCBaseToolBar
 
-Classe base para as barras de ferramentas.
+Classe base para barras de ferramentas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,22 +42,22 @@ class CMFCBaseToolBar : public CPane
 
 |Nome|Descrição|
 |----------|-----------------|
-|`CMFCBaseToolBar::CreateObject`|Usado pelo framework para criar uma instância dinâmica desse tipo de classe.|
-|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Retorna o modo de encaixe. (Substitui [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|
-|[CMFCBaseToolBar::GetMinSize](#getminsize)|Retorna o tamanho mínimo de uma barra de ferramentas. (Substitui [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|
-|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Chamado pelo framework após as alterações do pai do painel. (Substitui [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|
+|`CMFCBaseToolBar::CreateObject`|Usado pela estrutura para criar uma instância dinâmica desse tipo de classe.|
+|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Retorna o modo de acoplamento. (Substitui [cbasepane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|
+|[CMFCBaseToolBar::GetMinSize](#getminsize)|Retorna o tamanho mínimo de uma barra de ferramentas. (Substitui [cpane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|
+|[CMFCBaseToolbar::OnafterChangeParent](#onafterchangeparent)|Chamado pelo framework após as mudanças dos paido painel. (Substitui [cbasepane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CBasePane](../../mfc/reference/cbasepane-class.md)
+[Cbasepane](../../mfc/reference/cbasepane-class.md)
 
-[CPane](../../mfc/reference/cpane-class.md)
+[Cpane](../../mfc/reference/cpane-class.md)
 
 [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
 
@@ -65,19 +65,19 @@ class CMFCBaseToolBar : public CPane
 
 **Cabeçalho:** afxbasetoolbar.h
 
-##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode
+## <a name="cmfcbasetoolbargetdockingmode"></a><a name="getdockingmode"></a>CMFCBaseToolBar::GetDockingMode
 
-Retorna o modo de encaixe.
+Retorna o modo de acoplamento.
 
 ```
 virtual AFX_DOCK_TYPE GetDockingMode() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-O modo de encaixe.
+O modo de acoplamento.
 
-##  <a name="getminsize"></a>  CMFCBaseToolBar::GetMinSize
+## <a name="cmfcbasetoolbargetminsize"></a><a name="getminsize"></a>CMFCBaseToolBar::GetMinSize
 
 Retorna o tamanho mínimo de uma barra de ferramentas.
 
@@ -87,12 +87,12 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*size*<br/>
-[out] O tamanho mínimo de uma barra de ferramentas.
+*Tamanho*<br/>
+[fora] O tamanho mínimo de uma barra de ferramentas.
 
-##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent
+## <a name="cmfcbasetoolbaronafterchangeparent"></a><a name="onafterchangeparent"></a>CMFCBaseToolbar::OnafterChangeParent
 
-Chamado pelo framework após as alterações do pai do painel.
+Chamado pelo framework após as mudanças dos paido painel.
 
 ```
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
@@ -101,9 +101,9 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ### <a name="parameters"></a>Parâmetros
 
 *pWndOldParent*<br/>
-[in] Um ponteiro para a janela pai anterior.
+[em] Um ponteiro para a janela dos pais anteriores.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)

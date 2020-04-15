@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: c93cf4bf138fc6bc648d33c180edbed0dbe5014e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: d8d7abe0f5562250e51e011014a8f9587bc7636e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500632"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367941"
 ---
 # <a name="standard-types"></a>Tipos padrão
 
@@ -189,7 +189,7 @@ A biblioteca em tempo de execução da Microsoft define os seguintes tipos e def
 |int_fast64_t, uint_fast64_t|long long, unsigned long long|
 |intmax_t, uintmax_t|long long, unsigned long long|
 
-|Tipo|DESCRIÇÃO|Declarado em|
+|Type|Descrição|Declarado em|
 |----------|-----------------|-----------------|
 |`clock_t` (longo)|Armazena valores de tempo; usada por [clock](../c-runtime-library/reference/clock.md).|TIME.H|
 |Estrutura `_complex`|Armazena partes reais e imaginárias de números complexos; usada por [_cabs](../c-runtime-library/reference/cabs.md).|MATH.H|
@@ -198,7 +198,7 @@ A biblioteca em tempo de execução da Microsoft define os seguintes tipos e def
 |Estrutura `_CrtMemState`|Fornece informações sobre o estado atual do heap de depuração do CRT.|CRTDBG.H|
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|Uma definição de tipo para uma função call-back que é chamada em [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).<br /><br /> Os parâmetros para essa função são: tipo de relatório, mensagem de saída e o valor de retorno da função call-back.|CRTDBG.H|
 |`dev_t`, `_dev_t` curto ou inteiro sem sinal|Representa os identificadores do dispositivo.|SYS\TYPES.H|
-|Estrutura `_diskfree_t`|Contém informações sobre uma unidade de disco. Usada por [_getdiskfree](../c-runtime-library/reference/getdiskfree.md) **.**|DOS.H e DIRECT.H|
+|Estrutura `_diskfree_t`|Contém informações sobre uma unidade de disco. Usada por [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)**.**|DOS.H e DIRECT.H|
 |Estruturas `div_t`, `ldiv_t` e `lldiv_t`|Armazenam os valores retornados por [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) e [lldiv](../c-runtime-library/reference/ldiv-lldiv.md), respectivamente.|STDLIB.H|
 |Inteiro `errno_t`|Usado para um tipo de retorno de função ou parâmetro que trata os códigos de erro de `errno`.|STDDEF.H,<br /><br /> CRTDEFS.H|
 |Estrutura `_exception`|Armazena informações de erro para [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|
@@ -217,7 +217,7 @@ A biblioteca em tempo de execução da Microsoft define os seguintes tipos e def
 |Matriz `jmp_buf`|Usada por [setjmp](../c-runtime-library/reference/setjmp.md) e [longjmp](../c-runtime-library/reference/longjmp.md) para salvar e restaurar o ambiente do programa.|SETJMP.H|
 |Estrutura `lconv`|Contém regras de formatação para valores numéricos em países/regiões diferentes. Usada por [localeconv](../c-runtime-library/reference/localeconv.md).|LOCALE.H|
 |`_LDOUBLE`,<br /><br /> `_LONGDOUBLE`,<br /><br /> `_LDBL12` (double longo ou uma matriz unsigned char)|Use para representar um valor double longo.|STDLIB.H|
-|Estrutura `_locale_t`|Armazena valores da localidade atual; usada em todas as bibliotecas CRT específicas da localidade.|CRTDEF.H|
+|Estrutura `_locale_t`|Armazena valores da localidade atual; usada em todas as bibliotecas CRT específicas da localidade.|CRTDEFS.H|
 |`mbstate_t`|Controla o estado de uma conversão de caracteres de vários bytes.|WCHAR.H|
 |`off_t`, inteiro longo `_off_t`|Representa o valor de deslocamento do arquivo.|WCHAR.H, SYS\TYPES.H|
 |`_onexit_t`,<br /><br /> Ponteiro `_onexit_m_t`|Retornada por [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md).|STDLIB.H|
@@ -253,6 +253,6 @@ A biblioteca em tempo de execução da Microsoft define os seguintes tipos e def
 |Inteiro `wctype_t`|Pode representar todos os caracteres do conjunto de caracteres de qualquer idioma.|WCHAR.H,<br /><br /> CRTDEFS.H|
 |Inteiro `wint_t`|Tipo de objeto de dados que pode conter qualquer caractere largo ou valor de fim de arquivo largo.|WCHAR.H,<br /><br /> CRTDEFS.H|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência da biblioteca em tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)
+[Referência da biblioteca em tempo de execução do C](../c-runtime-library/c-run-time-library-reference.md)

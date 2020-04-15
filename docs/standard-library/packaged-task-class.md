@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::packaged_task [C++], reset
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
-ms.openlocfilehash: 5bb04b84b723f239c338c02befa8cd3468cec3f2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: eb171e09451e16e89716dfdc44ed6c611e2d2280
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450075"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372119"
 ---
-# <a name="packagedtask-class"></a>Classe packaged_task
+# <a name="packaged_task-class"></a>Classe packaged_task
 
 Descreve um *provedor assíncrono* que é um wrapper de chamada e cuja assinatura de chamada é `Ty(ArgTypes...)`. O *estado assíncrono associado* mantém uma cópia de seu objeto que pode ser chamado, bem como o possível resultado.
 
@@ -45,7 +45,7 @@ class packaged_task;
 |Nome|Descrição|
 |----------|-----------------|
 |[packaged_task](#packaged_task)|Constrói um objeto `packaged_task`.|
-|[Destruidor packaged_task::~packaged_task](#dtorpackaged_task_destructor)|Destrói um objeto `packaged_task`.|
+|[packaged_task::~packaged_task Destructor](#dtorpackaged_task_destructor)|Destrói um objeto `packaged_task`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -53,16 +53,16 @@ class packaged_task;
 |----------|-----------------|
 |[get_future](#get_future)|Retorna um objeto [future](../standard-library/future-class.md) que tem o mesmo estado assíncrono associado.|
 |[make_ready_at_thread_exit](#make_ready_at_thread_exit)|Chama o objeto callable que é armazenado no estado assíncrono associado e armazena atomicamente o valor retornado.|
-|[reset](#reset)|Substitui o estado assíncrono associado.|
-|[swap](#swap)|Troca o estado assíncrono associado por aquele de um objeto especificado.|
-|[valid](#valid)|Especifica se o objeto tem um estado assíncrono associado.|
+|[Redefinir](#reset)|Substitui o estado assíncrono associado.|
+|[Trocar](#swap)|Troca o estado assíncrono associado por aquele de um objeto especificado.|
+|[Válido](#valid)|Especifica se o objeto tem um estado assíncrono associado.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[packaged_task::operator=](#op_eq)|Transfere o estado assíncrono associado de um objeto especificado.|
-|[packaged_task::operator()](#op_call)|Chama o objeto callable que é armazenado no estado assíncrono associado, armazena atomicamente o valor retornado e define o estado como *ready*.|
+|[packaged_task::operador=](#op_eq)|Transfere o estado assíncrono associado de um objeto especificado.|
+|[packaged_task:operador()](#op_call)|Chama o objeto callable que é armazenado no estado assíncrono associado, armazena atomicamente o valor retornado e define o estado como *ready*.|
 |[packaged_task::operator bool](#op_bool)|Especifica se o objeto tem um estado assíncrono associado.|
 
 ## <a name="requirements"></a>Requisitos
@@ -71,7 +71,7 @@ class packaged_task;
 
 **Namespace:** std
 
-## <a name="get_future"></a>  packaged_task::get_future
+## <a name="packaged_taskget_future"></a><a name="get_future"></a>packaged_task:get_future
 
 Retorna um objeto do tipo `future<Ty>` que tem o mesmo *estado assíncrono associado*.
 
@@ -85,7 +85,7 @@ Se o objeto `packaged_task` não tiver nenhum estado assíncrono associado, esse
 
 Se esse método já foi chamado para um objeto `packaged_task` que tem o mesmo estado assíncrono associado, o método gerará um `future_error` com código de erro `future_already_retrieved`.
 
-## <a name="make_ready_at_thread_exit"></a>  packaged_task::make_ready_at_thread_exit
+## <a name="packaged_taskmake_ready_at_thread_exit"></a><a name="make_ready_at_thread_exit"></a>packaged_task:make_ready_at_thread_exit
 
 Chama o objeto callable que é armazenado no *estado assíncrono associado* e armazena atomicamente o valor retornado.
 
@@ -103,7 +103,7 @@ Caso contrário, este operador chama `INVOKE(fn, args..., Ty)`, em que *fn* é o
 
 Em contraste com [packaged_task::operator()](#op_call), o estado assíncrono associado não é definido como `ready` até todos os objetos thread-local no thread de chamada tenham sido destruídos. Normalmente, threads bloqueados no estado assíncrono associado não são desbloqueados até que o thread de chamada seja encerrado.
 
-## <a name="op_eq"></a>  packaged_task::operator=
+## <a name="packaged_taskoperator"></a><a name="op_eq"></a>packaged_task::operador=
 
 Transfere o *estado assíncrono associado* de um objeto especificado.
 
@@ -114,19 +114,19 @@ packaged_task& operator=(packaged_task&& Right);
 ### <a name="parameters"></a>Parâmetros
 
 *Certo*\
-Um objeto `packaged_task`.
+Um objeto `packaged_task` .
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 `*this`
 
 ### <a name="remarks"></a>Comentários
 
-Após a operação, o *direito* não terá mais um estado assíncrono associado.
+Após a operação, *right* não tem mais um estado assíncrono associado.
 
-## <a name="op_call"></a>  packaged_task::operator()
+## <a name="packaged_taskoperator"></a><a name="op_call"></a>packaged_task:operador()
 
-Chama o objeto callable que é armazenado no *estado assíncrono associado*, armazena atomicamente o valor retornado e define o estado como *ready*.
+Chama o objeto callable armazenado no *estado assíncrono associado,* armazena atomicamente o valor devolvido e define o estado *pronto*.
 
 ```cpp
 void operator()(ArgTypes... args);
@@ -140,7 +140,7 @@ Se este método ou [make_ready_at_thread_exit](#make_ready_at_thread_exit) já t
 
 Caso contrário, este operador chama `INVOKE(fn, args..., Ty)`, em que *fn* é o objeto callable que é armazenado no estado assíncrono associado. Qualquer valor retornado é armazenado atomicamente como o resultado retornado do estado assíncrono associado e o estado é definido como ready. Como resultado, os threads bloqueados no estado assíncrono associado são desbloqueados.
 
-## <a name="op_bool"></a>  packaged_task::operator bool
+## <a name="packaged_taskoperator-bool"></a><a name="op_bool"></a>packaged_task::bool operador
 
 Especifica se o objeto tem um `associated asynchronous state`.
 
@@ -148,11 +148,11 @@ Especifica se o objeto tem um `associated asynchronous state`.
 operator bool() const noexcept;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**true** se o objeto tiver um estado assíncrono associado; caso contrário, **false**.
+**verdade** se o objeto tem um estado assíncrono associado; caso contrário, **falso**.
 
-## <a name="packaged_task"></a>  Construtor packaged_task::packaged_task
+## <a name="packaged_taskpackaged_task-constructor"></a><a name="packaged_task"></a>packaged_task::packaged_task Construtor
 
 Constrói um objeto `packaged_task`.
 
@@ -170,25 +170,25 @@ template <class Fn, class Alloc>
 ### <a name="parameters"></a>Parâmetros
 
 *Certo*\
-Um objeto `packaged_task`.
+Um objeto `packaged_task` .
 
-*alocação*\
-Um alocador de memória. Para obter mais informações, consulte [\<allocators>](../standard-library/allocators-header.md).
+*Alloc*\
+Um alocador de memória. Para obter mais informações, consulte [ \<alocadores>](../standard-library/allocators-header.md).
 
-*FN*\
+*Fn*\
 Um objeto de função.
 
 ### <a name="remarks"></a>Comentários
 
-O primeiro construtor cria um objeto `packaged_task` que não tem nenhum *estado assíncrono associado*.
+O primeiro construtor constrói `packaged_task` um objeto que não tem *estado assíncrono associado.*
 
-O segundo construtor constrói um `packaged_task` objeto e transfere o estado assíncrono associado da *direita*. Após a operação, o *direito* não terá mais um estado assíncrono associado.
+O segundo construtor constrói `packaged_task` um objeto e transfere o estado assíncrono associado da *Direita*. Após a operação, *right* não tem mais um estado assíncrono associado.
 
-O terceiro construtor constrói um `packaged_task` objeto que tem uma cópia de *FN* armazenado em seu estado assíncrono associado.
+O terceiro construtor constrói `packaged_task` um objeto que tem uma cópia de *fn* armazenada em seu estado assíncrono associado.
 
-O quarto construtor constrói um `packaged_task` objeto que tem uma cópia de *FN* armazenado em seu estado assíncrono associado e usa `alloc` para alocação de memória.
+O quarto construtor constrói `packaged_task` um objeto que tem uma cópia de *fn* armazenada `alloc` em seu estado assíncrono associado, e usa para alocação de memória.
 
-## <a name="dtorpackaged_task_destructor"></a>  Destruidor packaged_task::~packaged_task
+## <a name="packaged_taskpackaged_task-destructor"></a><a name="dtorpackaged_task_destructor"></a>packaged_task::~packaged_task Destructor
 
 Destrói um objeto `packaged_task`.
 
@@ -200,7 +200,7 @@ Destrói um objeto `packaged_task`.
 
 Se o *estado assíncrono associado* não estiver *ready*, o destruidor armazena uma exceção [future_error](../standard-library/future-error-class.md) com um código de erro de `broken_promise` como resultado no estado assíncrono associado e os threads bloqueados no estado assíncrono associado são desbloqueados.
 
-## <a name="reset"></a>  packaged_task::reset
+## <a name="packaged_taskreset"></a><a name="reset"></a>packaged_task::reset
 
 Usa um novo *estado assíncrono associado* para substituir o estado assíncrono associado existente.
 
@@ -212,7 +212,7 @@ void reset();
 
 Na verdade, esse método executa `*this = packaged_task(move(fn))`, em que *fn* é o objeto de função que é armazenado no estado assíncrono associado a este objeto. Portanto, o estado do objeto é desmarcado e [get_future](#get_future), [operator()](#op_call) e [make_ready_at_thread_exit](#make_ready_at_thread_exit) podem ser chamados como se estivesse em um objeto recém-criado.
 
-## <a name="swap"></a>  packaged_task::swap
+## <a name="packaged_taskswap"></a><a name="swap"></a>packaged_task::swap
 
 Troca o estado assíncrono associado por aquele de um objeto especificado.
 
@@ -223,9 +223,9 @@ void swap(packaged_task& Right) noexcept;
 ### <a name="parameters"></a>Parâmetros
 
 *Certo*\
-Um objeto `packaged_task`.
+Um objeto `packaged_task` .
 
-## <a name="valid"></a>  packaged_task::valid
+## <a name="packaged_taskvalid"></a><a name="valid"></a>packaged_task:valid
 
 Especifica se o objeto tem um `associated asynchronous state`.
 
@@ -233,11 +233,11 @@ Especifica se o objeto tem um `associated asynchronous state`.
 bool valid() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-**true** se o objeto tiver um estado assíncrono associado; caso contrário, **false**.
+**verdade** se o objeto tem um estado assíncrono associado; caso contrário, **falso**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
-[\<future>](../standard-library/future.md)
+[Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)\
+[\<>futuros](../standard-library/future.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Portas e endereços de soquete'
+title: 'Windows Sockets: portas e endereços de soquete'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ports [MFC], definition
@@ -10,46 +10,46 @@ helpviewer_keywords:
 - sockets [MFC], addresses
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
-ms.openlocfilehash: c33ec1376c1898272cf80e8d77c5cc273e16f9de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 791bf07c927e80e65e0fda79fae8a50235bc2def
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389366"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371039"
 ---
-# <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets: Portas e endereços de soquete
+# <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets: portas e endereços de soquete
 
-Este artigo explica os termos "port" e "address" como usado com o Windows Sockets.
+Este artigo explica os termos "porta" e "endereço" usados com soquetes do Windows.
 
-##  <a name="_core_port"></a> Porta
+## <a name="port"></a><a name="_core_port"></a>Porta
 
-Uma porta identifica um processo exclusivo para o qual um serviço pode ser fornecido. No contexto presente, uma porta está associada um aplicativo que dá suporte ao Windows Sockets. A ideia é identificar cada aplicativo do Windows Sockets exclusivamente, portanto, você pode ter mais de um aplicativo do Windows Sockets em execução em um computador ao mesmo tempo.
+Uma porta identifica um processo único para o qual um serviço pode ser fornecido. No contexto atual, uma porta está associada a um aplicativo que suporta soquetes do Windows. A ideia é identificar cada aplicativo do Windows Sockets de forma única para que você possa ter mais de um aplicativo do Windows Sockets em execução em uma máquina ao mesmo tempo.
 
-Determinadas portas são reservadas para serviços comuns, como FTP. Você deve evitar o uso dessas portas, a menos que você está fornecendo esse tipo de serviço. A especificação de soquetes do Windows fornece detalhes sobre essas portas reservadas. O arquivo WINSOCK. H também listá-los.
+Certos portos são reservados para serviços comuns, como ftp. Você deve evitar usar essas portas a menos que você esteja fornecendo esse tipo de serviço. A especificação do Windows Sockets detalha essas portas reservadas. O arquivo WINSOCK. H também lista-los.
 
-Para permitir que o Windows Sockets. DLL seleciona uma porta utilizável para você, passe 0 como o valor da porta. MFC seleciona um valor de porta maior que 1.024 decimal. Você pode recuperar o valor de porta que MFC selecionado por meio da chamada a [CAsyncSocket::GetSockName](../mfc/reference/casyncsocket-class.md#getsockname) função de membro.
+Para permitir que o Windows Sockets DLL selecione uma porta utilizável para você, passe 0 como o valor da porta. O MFC seleciona um valor de porta superior a 1.024 decimais. Você pode recuperar o valor da porta que o MFC selecionou chamando a função de membro [CAsyncSocket::GetSockName.](../mfc/reference/casyncsocket-class.md#getsockname)
 
-##  <a name="_core_socket_address"></a> Endereço de soquete
+## <a name="socket-address"></a><a name="_core_socket_address"></a>Endereço do soquete
 
-Cada objeto de soquete está associado um endereço IP (Internet Protocol) na rede. Normalmente, o endereço é um nome de máquina, como "ftp.microsoft.com", ou um número pontilhado, como "128.56.22.8".
+Cada objeto de soquete está associado a um endereço IP (Internet Protocol) na rede. Normalmente, o endereço é um nome de máquina, como "ftp.microsoft.com", ou um número pontilhado, como "128.56.22.8".
 
-Quando você tentar criar um soquete, você normalmente não precisará especificar seu próprio endereço.
+Quando você procura criar um soquete, você normalmente não precisa especificar seu próprio endereço.
 
 > [!NOTE]
->  É possível que sua máquina possui várias placas de rede (ou seu aplicativo pode ser executado um dia em um computador desse tipo), cada um representando uma rede diferente. Nesse caso, você precisa fornecer um endereço para especificar qual placa de rede usará o soquete. Isso é determinado ser um uso avançado e um problema de portabilidade possíveis.
+> É possível que sua máquina tenha várias placas de rede (ou seu aplicativo pode um dia ser executado em tal máquina), cada uma representando uma rede diferente. Se assim for, você pode precisar dar um endereço para especificar qual cartão de rede o soquete usará. Este é certamente um uso avançado e um possível problema de portabilidade.
 
 Para obter mais informações, consulte:
 
-- [Windows Sockets: usar a classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: usando classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: usar soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: usando soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets: como soquetes com arquivos mortos funcionam](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets: como funcionam soquetes com arquivos mortos](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
 - [Windows Sockets: soquetes de fluxo](../mfc/windows-sockets-stream-sockets.md)
 
 - [Windows Sockets: soquetes de datagrama](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Windows Sockets em MFC](../mfc/windows-sockets-in-mfc.md)

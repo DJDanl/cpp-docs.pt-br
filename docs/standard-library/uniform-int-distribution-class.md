@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 7e24c320e909bb2d0471acdd275f89c43d3e44de
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 44121b6791d06768e51f425fc322ef78045fc0e7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684508"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367290"
 ---
 # <a name="uniform_int_distribution-class"></a>Classe uniform_int_distribution
 
@@ -71,12 +71,12 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-@No__t_1 *IntType*
-O tipo de resultado inteiro, o padrão é **int**. Para possíveis tipos, consulte [\<random >](../standard-library/random.md).
+*IntType*\
+O tipo de resultado inteiro, padrão para **int**. Para tipos possíveis, consulte [ \<>aleatórios ](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
-O modelo de classe descreve uma distribuição inclusiva, que produz valores de um tipo integral especificado pelo usuário com uma distribuição para que cada valor seja igualmente provável. A tabela a seguir contém links para artigos sobre cada um dos membros.
+O modelo de classe descreve uma distribuição inclusiva que produz valores de um tipo integral especificado pelo usuário com uma distribuição para que cada valor seja igualmente provável. A tabela a seguir contém links para artigos sobre cada um dos membros.
 
 ||||
 |-|-|-|
@@ -93,7 +93,7 @@ A função membro `reset()` descarta qualquer valor armazenado em cache, de form
 
 As funções membro `operator()` retornam o próximo valor gerado com base no mecanismo URNG, do pacote de parâmetros atual ou do pacote de parâmetros especificado.
 
-Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).
+Para obter mais informações sobre as aulas de distribuição e seus membros, consulte [ \<>aleatórios ](../standard-library/random.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -179,7 +179,7 @@ Distribution for 200 samples:
 
 **Namespace:** std
 
-## <a name="uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution
+## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a>uniform_int_distribution:uniform_int_distribution
 
 Constrói a distribuição.
 
@@ -191,24 +191,24 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*um* \
+*Um*\
 O limite inferior para valor aleatório (inclusivo).
 
-*b* \
+*B*\
 O limite superior para valor aleatório (inclusivo).
 
-\ de *parâmetros*
+*Parm*\
 A estrutura `param_type` usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
-**Pré-condição:** `a ≤ b`
+**Pré-condição:**`a ≤ b`
 
-O primeiro construtor *constrói um objeto cujo valor armazenado contém* o valor a e cujo valor *de* *b* armazenado contém o valor *b*.
+O primeiro construtor constrói um objeto cujo *valor* armazenado contém o valor *a* e cujo valor *b* armazenado contém o valor *b*.
 
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.
 
-## <a name="param_type"></a>  uniform_int_distribution::param_type
+## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a>uniform_int_distribution::param_type
 
 Armazena os parâmetros da distribuição.
 
@@ -227,21 +227,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*um* \
+*Um*\
 O limite inferior para valor aleatório (inclusivo).
 
-*b* \
+*B*\
 O limite superior para valor aleatório (inclusivo).
 
-\ *à direita*
+*Certo*\
 O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários
 
-**Pré-condição:** `a ≤ b`
+**Pré-condição:**`a ≤ b`
 
 Essa estrutura pode ser enviada ao construtor de classe de distribuição na instanciação, para a função de membro `param()` para definir os parâmetros armazenados de uma distribuição existente e para `operator()` a ser usado no lugar dos parâmetros armazenados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[\<random>](../standard-library/random.md)
+[\<>aleatório](../standard-library/random.md)

@@ -1,20 +1,20 @@
 ---
-title: classe default_searcher
+title: default_searcher turma
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::default_searcher
 helpviewer_keywords:
 - std::default_searcher [C++]
-ms.openlocfilehash: f2b1fe83b5223bbb60e9e32149c101e6379f93c3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2c8b93b83b271f787c993f789e1a68f84a60f016
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "68268818"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368919"
 ---
-# <a name="default_searcher-class"></a>Classe default_searcher
+# <a name="default_searcher-class"></a>classe default_searcher
 
-Um `default_searcher` é um tipo de objeto de função para operações que pesquisam uma sequência especificada no construtor do objeto. A pesquisa é feita dentro de outra sequência fornecida para o operador de chamada de função do objeto. O `default_searcher` invoca o [std:: Search](algorithm-functions.md#search) para executar a pesquisa.
+A `default_searcher` é um tipo de objeto de função para operações que buscam uma seqüência especificada no construtor do objeto. A pesquisa é feita dentro de outra seqüência fornecida ao operador de chamada de função do objeto. O `default_searcher` invokes [std::search](algorithm-functions.md#search) para realizar a pesquisa.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -41,11 +41,11 @@ class default_searcher
 | **Construtor** | |
 | [default_searcher](#default-searcher-constructor) | |
 | **Operadores** | |
-| [operator()](#operator-call) | |
+| [operador()](#operator-call) | |
 
-## <a name="default-searcher-constructor"></a>Construtor default_searcher
+## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a>construtor default_searcher
 
-Constrói um `default_searcher` objeto de função usando a sequência para pesquisar e um predicado de igualdade.
+Constrói um `default_searcher` objeto de função usando a seqüência para procurar e um predicado de igualdade.
 
 ```cpp
 default_searcher(                   // C++17
@@ -62,23 +62,23 @@ constexpr default_searcher(         // C++20
 ### <a name="parameters"></a>Parâmetros
 
 *pat_first*\
-O elemento inicial da sequência a ser pesquisada.
+O elemento inicial da seqüência para procurar.
 
 *pat_last*\
-O fim da sequência a ser pesquisada.
+O fim da sequência para procurar.
 
 *Pred*\
-O predicado de comparação de igualdade opcional para elementos de sequência. Se um tipo de comparação de igualdade não for especificado, `std::equal_to`o padrão será.
+O predicado opcional de comparação de igualdade para elementos de seqüência. Se um tipo de comparação de igualdade não `std::equal_to`for especificado, o padrão será .
 
 ### <a name="remarks"></a>Comentários
 
-Gera qualquer exceção gerada pelo construtor de cópia dos tipos *BinaryPredicate* ou *ForwardIterator* .
+Lança qualquer exceção lançada pelo construtor de cópias dos tipos *BinaryPredicate* ou *ForwardIterator.*
 
-Essa classe é nova no C++ 17. O c++ 20 fez o `constexpr`Construtor.
+Esta classe é nova em C++17. C++20 fez o `constexpr`construtor .
 
-## <a name="operator-call"></a>operador ()
+## <a name="operator"></a><a name="operator-call"></a>operador()
 
-O operador de chamada do operador de função. Pesquisa dentro da sequência `[first, last)` de argumento para a sequência especificada para o construtor.
+O operador de chamada do operador de função. Pesquisa dentro da `[first, last)` seqüência de argumentos para a seqüência especificada para o construtor.
 
 ```cpp
 template <class ForwardIterator2>   // C++17
@@ -94,26 +94,26 @@ constexpr pair<ForwardIterator2, ForwardIterator2> operator()(
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro*\
-O elemento inicial da sequência na qual Pesquisar.
+*Primeiro*\
+O elemento inicial da seqüência para procurar dentro.
 
-*última*\
-O fim da sequência na qual Pesquisar.
+*Última*\
+O fim da seqüência para procurar dentro.
 
 ### <a name="remarks"></a>Comentários
 
-Retorna um par de iteradores. O iterador inicial é o resultado efetivo de:
+Retorna um par de iteradores. O iterator inicial *i* é o resultado efetivo de:
 
 `std::search( first, last, pat_first, pat_last, pred )`.
 
-O segundo iterador do par será o *último* se *i** for o *último*. Caso contrário, é o resultado efetivo de:
+O segundo tempo do par é o *último* se *eu** for *o último*. Caso contrário, é o resultado efetivo de:
 
 `std::next( i, std::distance( pat_first, pat_last ))`.
 
-Essa classe é nova no C++ 17. O c++ 20 fez o operador `constexpr`Call.
+Esta classe é nova em C++17. C++20 fez o `constexpr`operador de chamada .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[\<functional>](functional.md)\
+[\<>funcionais](functional.md)\
 [funções de algoritmo](algorithm-functions.md)\
-[std:: Search](algorithm-functions.md#search)
+[dst::pesquisa](algorithm-functions.md#search)
