@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CDockablePaneAdapter [MFC], SaveState
 - CDockablePaneAdapter [MFC], SetWrappedWnd
 ms.assetid: 6ed6cf82-f39c-4d0c-bf7c-8641495cf8f3
-ms.openlocfilehash: 88c125c63f9dbfe272f5d543e996366575fc533b
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: 2fbaf99e4cc9bcbecf1a94012713b34e986f7ecb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866218"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375594"
 ---
 # <a name="cdockablepaneadapter-class"></a>Classe CDockablePaneAdapter
 
-Fornece suporte de encaixe para `CWnd`painéis derivados.
+Fornece suporte de `CWnd`acoplamento para painéis derivados.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,52 +33,52 @@ class CDockablePaneAdapter : public CDockablePane
 
 ## <a name="members"></a>Membros
 
-### <a name="public-methods"></a>Métodos Públicos
+### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Retorna a janela encapsulada.|
-|[CDockablePaneAdapter::LoadState](#loadstate)|(Substitui [CDockablePane:: LoadState](cdockablepane-class.md#loadstate).)|
-|[CDockablePaneAdapter::SaveState](#savestate)|(Substitui [CDockablePane:: SaveState](cdockablepane-class.md).)|
+|[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Devolve a janela embrulhada.|
+|[CDockablePaneAdapter::LoadState](#loadstate)|(Substitui [cdockablepane::LoadState](cdockablepane-class.md#loadstate).)|
+|[CDockablePaneAdapter::SaveState](#savestate)|(Substitui [cdockablepane::SaveState](cdockablepane-class.md).)|
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||
 
 ## <a name="remarks"></a>Comentários
 
-Normalmente, a estrutura instancia objetos dessa classe quando você usa os métodos [CMFCBaseTabCtrl:: AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) ou [CMFCBaseTabCtrl:: InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) .
+Normalmente, a estrutura instancia objetos dessa classe quando você usa o [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) ou [CMFCBaseTabCtCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) métodos.
 
-Se você quiser personalizar o `CDockablePaneAdapter` comportamento, basta derivar uma nova classe a partir dele e definir as informações da classe de tempo de execução para uma janela com guias usando [CMFCBaseTabCtrl:: SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).
+Se você quiser `CDockablePaneAdapter` personalizar o comportamento, basta obter uma nova classe a partir dele e definir as informações da classe de tempo de execução para uma janela com guias usando [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)\
-└&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CPane](../../mfc/reference/cpane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CDockablePane](../../mfc/reference/cdockablepane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)\
+-&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CPane](../../mfc/reference/cpane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CDockablePane](../../mfc/reference/cdockablepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(&nbsp;[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxDockablePaneAdapter. h
+**Cabeçalho:** afxDockablePaneAdapter.h
 
-##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd
+## <a name="cdockablepaneadaptergetwrappedwnd"></a><a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd
 
-Retorna a janela subjacente do adaptador do painel encaixáveis.
+Retorna a janela subjacente para o adaptador de painel dockable.
 
 ```
 virtual CWnd* GetWrappedWnd() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para a janela encapsulada.
+Um ponteiro para a janela embrulhada.
 
 ### <a name="remarks"></a>Comentários
 
-Use essa função para acessar a janela encapsulada.
+Use esta função para acessar a janela embrulhada.
 
-##  <a name="loadstate"></a>CDockablePaneAdapter:: LoadState
+## <a name="cdockablepaneadapterloadstate"></a><a name="loadstate"></a>CDockablePaneAdapter::LoadState
 
 Carrega o estado do painel do registro.
 
@@ -91,22 +91,22 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszProfileName*<br/>
-no O nome do perfil.
+*Lpszprofilename*<br/>
+[em] O nome do perfil.
 
 *nIndex*<br/>
-no O índice do perfil.
+[em] O índice de perfil.
 
-*uiID*<br/>
-no A ID do painel.
+*Uiid*<br/>
+[em] O painel de ida.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="savestate"></a>  CDockablePaneAdapter::SaveState
+## <a name="cdockablepaneadaptersavestate"></a><a name="savestate"></a>CDockablePaneAdapter::SaveState
 
-Salva o estado do painel no registro.
+Salva o estado do painel para o registro.
 
 ```
 virtual BOOL SaveState(
@@ -117,22 +117,22 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszProfileName*<br/>
-no O nome do perfil.
+*Lpszprofilename*<br/>
+[em] O nome do perfil.
 
 *nIndex*<br/>
-no O índice de perfil (o padrão é a ID de controle da janela).
+[em] O índice de perfil (padrão para o ID de controle da janela).
 
-*uiID*<br/>
-no A ID do painel.
+*Uiid*<br/>
+[em] O painel de ida.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd
+## <a name="cdockablepaneadaptersetwrappedwnd"></a><a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd
 
-Define a janela subjacente para o adaptador do painel encaixáveis.
+Define a janela subjacente para o adaptador de painel dockable.
 
 ```
 virtual BOOL SetWrappedWnd(CWnd* pWnd);
@@ -140,14 +140,14 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pWnd*<br/>
-no Um ponteiro para a janela do adaptador de painel a ser encapsulado.
+*Pwnd*<br/>
+[em] Um ponteiro para a janela para o adaptador do painel embrulhar.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

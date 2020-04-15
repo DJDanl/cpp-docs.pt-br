@@ -7,24 +7,24 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: 3e7c83b70b4204cfc8880c968bb353b47e5b79e1
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: ff07bf7a00be36f28620735c48128f973d9fe791
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075541"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375818"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Como converter entre diversos tipos de cadeia de caracteres
 
-Este tópico demonstra como converter vários tipos de C++ cadeia de caracteres do Visual em outras cadeias. Os tipos de cadeias de caracteres que são abordados incluem `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md)e <xref:System.String?displayProperty=fullName>. Em todos os casos, uma cópia da cadeia de caracteres é feita quando convertida para o novo tipo. As alterações feitas na nova cadeia de caracteres não afetarão a cadeia de caracteres original e vice-versa.
+Este tópico demonstra como converter vários tipos de strings Visual C++ em outras strings. Os tipos de cordas `char *`que `wchar_t*`são cobertos incluem , , [_bstr_t](../cpp/bstr-t-class.md) <xref:System.String?displayProperty=fullName>, [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md)e . Em todos os casos, uma cópia da seqüência é feita quando convertida para o novo tipo. Quaisquer alterações feitas na nova seqüência não afetarão a seqüência original, e vice-versa.
 
-## <a name="converting-from-char-"></a>Convertendo de \* Char
+## <a name="converting-from-char-"></a>Conversão de char\*
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
-Este exemplo demonstra como converter de um `char *` para os outros tipos de cadeia de caracteres listados acima. Uma cadeia de caracteres `char *` (também conhecida como uma cadeia de estilo C) usa um caractere nulo para indicar o final da cadeia de caracteres. Cadeias de caracteres de estilo C geralmente exigem um byte por caractere, mas também podem usar dois bytes. Nos exemplos abaixo, `char *` cadeias de caracteres são, às vezes, chamadas de cadeias de caractere multibyte, devido aos dados de cadeia de caracteres resultantes da conversão de cadeias Unicode. As funções de byte único e multibyte (`MBCS`) podem operar em `char *` cadeias de caracteres.
+Este exemplo demonstra como `char *` converter de a para os outros tipos de string listados acima. Uma `char *` string (também conhecida como string de estilo C) usa um caractere nulo para indicar o fim da seqüência. As seqüências de estilo C geralmente requerem um byte por caractere, mas também podem usar dois bytes. Nos exemplos abaixo, `char *` as strings são às vezes referidas como strings de caracteres multibytes por causa dos dados de seqüência que resultam da conversão de strings Unicode. Funções de caractere único`MBCS`e multibyte `char *` ( ) podem operar em strings.
 
 ### <a name="code"></a>Código
 
@@ -119,13 +119,13 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-wchar_t-"></a>Convertendo de wchar_t \*
+## <a name="converting-from-wchar_t-"></a>Conversão de wchar_t\*
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
-Este exemplo demonstra como converter de um `wchar_t *` para os outros tipos de cadeia de caracteres listados acima. Vários tipos de cadeia de caracteres, incluindo `wchar_t *`, implementam formatos de caracteres largos. Para converter uma cadeia de caracteres entre um formato de caractere multibyte e um grande, você pode usar uma única chamada de função como `mbstowcs_s` ou uma invocação de construtor para uma classe como `CStringA`.
+Este exemplo demonstra como `wchar_t *` converter de a para os outros tipos de string listados acima. Vários tipos de `wchar_t *`strings, incluindo, implementam formatos de caracteres amplos. Para converter uma seqüência entre um multibyte e um formato `mbstowcs_s` de caractere amplo, você `CStringA`pode usar uma única chamada de função como ou uma invocação de construtor para uma classe como .
 
 ### <a name="code"></a>Código
 
@@ -243,13 +243,13 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-_bstr_t"></a>Convertendo de _bstr_t
+## <a name="converting-from-_bstr_t"></a>Conversão de _bstr_t
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
-Este exemplo demonstra como converter de um `_bstr_t` para os outros tipos de cadeia de caracteres listados acima. O objeto `_bstr_t` é uma maneira de encapsular cadeias de caracteres `BSTR` largos. Uma cadeia de caracteres BSTR tem um valor de comprimento e não usa um caractere nulo para encerrar a cadeia de caracteres, mas o tipo de cadeia de caracteres que você converte em pode exigir um nulo de terminação.
+Este exemplo demonstra como `_bstr_t` converter de a para os outros tipos de string listados acima. O `_bstr_t` objeto é uma maneira `BSTR` de encapsular grandes cadeias de caracteres. Uma seqüência BSTR tem um valor de comprimento e não usa um caractere nulo para terminar a seqüência, mas o tipo de string que você converte pode exigir um nulo de terminação.
 
 ### <a name="code"></a>Código
 
@@ -343,13 +343,13 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-ccombstr"></a>Convertendo de CComBSTR
+## <a name="converting-from-ccombstr"></a>Conversão de CComBSTR
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
-Este exemplo demonstra como converter de um `CComBSTR` para os outros tipos de cadeia de caracteres listados acima. Assim como _bstr_t, um objeto `CComBSTR` é uma maneira de encapsular cadeias de caracteres BSTR largos. Uma cadeia de caracteres BSTR tem um valor de comprimento e não usa um caractere nulo para encerrar a cadeia de caracteres, mas o tipo de cadeia de caracteres que você converte em pode exigir um nulo de terminação.
+Este exemplo demonstra como `CComBSTR` converter de a para os outros tipos de string listados acima. Como _bstr_t, `CComBSTR` um objeto é uma maneira de encapsular strings BSTR de caráter largo. Uma seqüência BSTR tem um valor de comprimento e não usa um caractere nulo para terminar a seqüência, mas o tipo de string que você converte pode exigir um nulo de terminação.
 
 ### <a name="code"></a>Código
 
@@ -453,15 +453,15 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-cstring"></a>Convertendo de CString
+## <a name="converting-from-cstring"></a>Conversão de CString
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
-Este exemplo demonstra como converter de um `CString` para os outros tipos de cadeia de caracteres listados acima. o `CString` é baseado no tipo de dados TCHAR, que por sua vez depende se o símbolo `_UNICODE` está definido. Se `_UNICODE` não for definido, `TCHAR` será definido como char e `CString` conterá uma cadeia de caracteres multibyte; se `_UNICODE` for definido, `TCHAR` será definido como `wchar_t` e `CString` conterá uma cadeia de caracteres larga.
+Este exemplo demonstra como `CString` converter de a para os outros tipos de string listados acima. `CString`baseia-se no tipo de dados TCHAR, que `_UNICODE` por sua vez depende se o símbolo é definido. Se `_UNICODE` não for `TCHAR` definido, é `CString` definido como char e contém uma seqüência de caracteres multibytes; se `_UNICODE` for `TCHAR` definido, é `wchar_t` `CString` definido como ser e contém uma seqüência de caracteres ampla.
 
-`CStringA` é a versão de seqüência de caracteres de vários bytes sempre da `CString`, `CStringW` é a única versão da cadeia de caracteres. Nem `CStringA` nem `CStringW` usar `_UNICODE` para determinar como eles devem ser compilados. `CStringA` e `CStringW` são usados neste exemplo para esclarecer as pequenas diferenças na alocação de tamanho de buffer e no tratamento de saída.
+`CStringA`é a seqüência multibyte sempre versão de `CString`, `CStringW` é a versão somente de string de caractere largo. Nem `CStringA` `CStringW` usar `_UNICODE` para determinar como devem compilar. `CStringA`e `CStringW` são usados neste exemplo para esclarecer pequenas diferenças na alocação do tamanho do buffer e no manuseio da saída.
 
 ### <a name="code"></a>Código
 
@@ -597,13 +597,13 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-basic_string"></a>Convertendo de basic_string
+## <a name="converting-from-basic_string"></a>Conversão de basic_string
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
-Este exemplo demonstra como converter de um `basic_string` para os outros tipos de cadeia de caracteres listados acima.
+Este exemplo demonstra como `basic_string` converter de a para os outros tipos de string listados acima.
 
 ### <a name="code"></a>Código
 
@@ -693,13 +693,13 @@ Hello, World! (CStringW)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-systemstring"></a>Convertendo de System:: String
+## <a name="converting-from-systemstring"></a>Conversão de sistema::String
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
-Este exemplo demonstra como converter de um caractere largo (Unicode) [System:: String](assetId:///System::String?qualifyHint=True&autoUpgrade=True) para os outros tipos de cadeia de caracteres listados acima.
+Este exemplo demonstra como converter de um sistema de caracteres amplos (Unicode): [:String](/dotnet/api/system.string) para os outros tipos de string listados acima.
 
 ### <a name="code"></a>Código
 
@@ -802,11 +802,11 @@ Hello, World! (basic_string)
 
 ## <a name="see-also"></a>Confira também
 
-[Macros de conversão de cadeia de caracteres ATL e MFC](../atl/reference/string-conversion-macros.md)<br/>
-[Operações de CString relacionadas a cadeias de caracteres de estilo C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
+[Macros de conversão de strings ATL e MFC](../atl/reference/string-conversion-macros.md)<br/>
+[Operações CString relacionadas a cadeias de caracteres de estilo C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
 [Como converter uma cadeia de caracteres padrão em System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
-[Como converter System::String em uma cadeia de caracteres padrão](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
-[Como: converter System:: String em wchar_t * ou Char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
+[Como converter System::String na cadeia de caracteres padrão](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
+[Como: Converter sistema::String para wchar_t* ou char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
 [Programação com o CComBSTR](../atl/programming-with-ccombstr-atl.md)<br/>
 [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>
 [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)<br/>

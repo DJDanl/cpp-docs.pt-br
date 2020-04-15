@@ -7,12 +7,12 @@ helpviewer_keywords:
 - decrement operators [C++]
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
-ms.openlocfilehash: 8d64f0af994f88d0f4ecd3a5921de4a16b8bdaaa
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 40ae12130fdced9fd958c3b8316fa3b718ca9b5b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178272"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374126"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>Sobrecarga dos operadores de incremento e decremento (C++)
 
@@ -22,10 +22,10 @@ Os operadores de incremento e decremento formam uma categoria especial porque h�
 
 - Pré-decremento e pós-decremento
 
-Ao escrever funções de operador sobrecarregado, pode ser útil implementar versões separadas para as versões pré-fixada e pós-fixada desses operadores. Para distinguir entre os dois, a seguinte regra é observada: a forma de prefixo do operador é declarada exatamente da mesma forma que qualquer outro operador unário; o formulário sufixo aceita um argumento adicional do tipo **int**.
+Ao escrever funções de operador sobrecarregado, pode ser útil implementar versões separadas para as versões pré-fixada e pós-fixada desses operadores. Para distinguir entre os dois, observa-se a seguinte regra: A forma de prefixo do operador é declarada exatamente da mesma forma que qualquer outro operador não ário; o formulário postfix aceita um argumento adicional de **digitação int**.
 
 > [!NOTE]
->  Ao especificar um operador sobrecarregado para a forma de sufixo do operador de incremento ou decréscimo, o argumento adicional deve ser do tipo **int**; a especificação de qualquer outro tipo gera um erro.
+> Ao especificar um operador sobrecarregado para a forma de pós-fixação do operador de incremento ou decrésia, o argumento adicional deve ser de **digitação int;** especificar qualquer outro tipo gera um erro.
 
 O exemplo a seguir mostra como definir operadores de incremento e decremento pré-fixados e pós-fixados para a classe `Point`:
 
@@ -97,7 +97,7 @@ friend Point& operator--( Point& )      // Prefix decrement
 friend Point& operator--( Point&, int ) // Postfix decrement
 ```
 
-O argumento do tipo **int** que denota a forma de sufixo do operador de incremento ou decréscimo não é comumente usado para passar argumentos. Em geral, ele contém o valor 0. No entanto, pode ser usado como se segue:
+O argumento do tipo **int** que denota a forma postfix do operador de incremento ou decremento não é comumente usado para passar argumentos. Em geral, ele contém o valor 0. No entanto, pode ser usado como se segue:
 
 ```cpp
 // increment_and_decrement2.cpp
@@ -124,8 +124,8 @@ int main()
 }
 ```
 
-Não há nenhuma outra sintaxe para usar os operadores de incremento ou decremento para passar esses valores que não seja a invocação explícita, conforme mostrado no código acima. Uma maneira mais simples de implementar essa funcionalidade é sobrecarregar o operador de adição/atribuição ( **+=** ).
+Não há nenhuma outra sintaxe para usar os operadores de incremento ou decremento para passar esses valores que não seja a invocação explícita, conforme mostrado no código acima. Uma maneira mais simples de implementar essa funcionalidade é**+=** sobrecarregar o operador de adição/atribuição ( ).
 
 ## <a name="see-also"></a>Confira também
 
-[Sobrecarga de Operador](../cpp/operator-overloading.md)
+[Sobrecarga do operador](../cpp/operator-overloading.md)

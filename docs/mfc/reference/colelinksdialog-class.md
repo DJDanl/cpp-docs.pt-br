@@ -12,16 +12,16 @@ helpviewer_keywords:
 - COleLinksDialog [MFC], DoModal
 - COleLinksDialog [MFC], m_el
 ms.assetid: fb2eb638-2809-46db-ac74-392a732affc7
-ms.openlocfilehash: 911108f9a231b752790abfdf86d1b4042d30b149
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f120678c822749c8f27c3c56c95fcdd54647aca3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504116"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374926"
 ---
 # <a name="colelinksdialog-class"></a>Classe COleLinksDialog
 
-Usado para a caixa de diálogo links OLE Edit.
+Usado para a caixa de diálogo OLE Edit Links.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -35,74 +35,74 @@ class COleLinksDialog : public COleDialog
 
 |Nome|Descrição|
 |----------|-----------------|
-|[COleLinksDialog::COleLinksDialog](#colelinksdialog)|Constrói um objeto `COleLinksDialog`.|
+|[COleLinksDiálogo::COleLinksDiálogo](#colelinksdialog)|Constrói um objeto `COleLinksDialog`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[COleLinksDialog::DoModal](#domodal)|Exibe a caixa de diálogo OLE Edit links.|
+|[COleLinksDialog::DoModal](#domodal)|Exibe a caixa de diálogo OLE Edit Links.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[COleLinksDialog::m_el](#m_el)|Uma estrutura do tipo OLEUIEDITLINKS que controla o comportamento da caixa de diálogo.|
+|[COleLinksDiálogo::m_el](#m_el)|Uma estrutura do tipo OLEUIEDITLINKS que controla o comportamento da caixa de diálogo.|
 
 ## <a name="remarks"></a>Comentários
 
-Crie um objeto da classe `COleLinksDialog` quando desejar chamar essa caixa de diálogo. Depois que `COleLinksDialog` um objeto tiver sido construído, você poderá usar a estrutura [m_el](#m_el) para inicializar os valores ou os Estados dos controles na caixa de diálogo. A `m_el` estrutura é do tipo OLEUIEDITLINKS. Para obter mais informações sobre como usar essa classe de caixa de diálogo, consulte a função membro [DoModal](#domodal) .
+Crie um objeto `COleLinksDialog` de classe quando quiser chamar essa caixa de diálogo. Depois `COleLinksDialog` que um objeto for construído, você pode usar a estrutura [m_el](#m_el) para inicializar os valores ou estados de controles na caixa de diálogo. A `m_el` estrutura é do tipo OLEUIEDITLINKS. Para obter mais informações sobre como usar esta classe de diálogo, consulte a função [membro DoModal.](#domodal)
 
 > [!NOTE]
->  O assistente de aplicativo-código de contêiner gerado usa essa classe.
+> O código de contêiner gerado pelo Assistente do aplicativo usa essa classe.
 
 Para obter mais informações, consulte a estrutura [OLEUIEDITLINKS](/windows/win32/api/oledlg/ns-oledlg-oleuieditlinksw) no SDK do Windows.
 
-Para obter mais informações sobre caixas de diálogo específicas de OLE, consulte as caixas de diálogo do artigo [em OLE](../../mfc/dialog-boxes-in-ole.md).
+Para obter mais informações sobre caixas de diálogo específicas do OLE, consulte o artigo [Caixas de diálogo no OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
-[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
+[Ccommondialog](../../mfc/reference/ccommondialog-class.md)
 
-[COleDialog](../../mfc/reference/coledialog-class.md)
+[Coledialog](../../mfc/reference/coledialog-class.md)
 
 `COleLinksDialog`
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxodlgs. h
+**Cabeçalho:** afxodlgs.h
 
-##  <a name="domodal"></a>COleLinksDialog::D oModal
+## <a name="colelinksdialogdomodal"></a><a name="domodal"></a>COleLinksDialog::DoModal
 
-Exibe a caixa de diálogo OLE Edit links.
+Exibe a caixa de diálogo OLE Edit Links.
 
 ```
 virtual INT_PTR DoModal();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Status de conclusão da caixa de diálogo. Um dos seguintes valores:
 
-- IDOK se a caixa de diálogo foi exibida com êxito.
+- IDOK se a caixa de diálogo foi exibida com sucesso.
 
 - IDCANCEL se o usuário cancelou a caixa de diálogo.
 
-- IDABORT se ocorreu um erro. Se IDABORT for retornado, chame a `COleDialog::GetLastError` função de membro para obter mais informações sobre o tipo de erro ocorrido. Para obter uma lista de possíveis erros, consulte a função [OLEUIEDITLINKS](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw) no SDK do Windows.
+- IDABORT se ocorreu um erro. Se o IDABORT for `COleDialog::GetLastError` devolvido, ligue para a função do membro para obter mais informações sobre o tipo de erro que ocorreu. Para obter uma lista de possíveis erros, consulte a função [OleUIEditLinks](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw) no SDK do Windows.
 
 ### <a name="remarks"></a>Comentários
 
-Se você quiser inicializar os vários controles da caixa de diálogo definindo os membros da estrutura [m_el](#m_el) , deverá fazê-lo antes de `DoModal`chamar, mas depois que o objeto da caixa de diálogo for construído.
+Se você quiser inicializar os vários controles da caixa de diálogo definindo `DoModal`membros da estrutura [m_el,](#m_el) você deve fazê-lo antes de chamar, mas depois que o objeto de diálogo for construído.
 
-##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog
+## <a name="colelinksdialogcolelinksdialog"></a><a name="colelinksdialog"></a>COleLinksDiálogo::COleLinksDiálogo
 
 Constrói um objeto `COleLinksDialog`.
 
@@ -119,22 +119,22 @@ COleLinksDialog (
 *pDoc*<br/>
 Aponta para o documento OLE que contém os links a serem editados.
 
-*pView*<br/>
-Aponta para a exibição atual em *pDoc*.
+*pVer*<br/>
+Aponta para a visão atual no *pDoc*.
 
 *dwFlags*<br/>
-Sinalizador de criação, que contém 0 ou ELF_SHOWHELP para especificar se o botão ajuda será exibido quando a caixa de diálogo for exibida.
+Sinalizador de criação, que contém 0 ou ELF_SHOWHELP para especificar se o botão Ajuda será exibido quando a caixa de diálogo for exibida.
 
-*pParentWnd*<br/>
-Aponta para o objeto de janela pai ou proprietário (do `CWnd`tipo) ao qual o objeto de caixa de diálogo pertence. Se for NULL, a janela pai da caixa de diálogo será definida como a janela principal do aplicativo.
+*Pparentwnd*<br/>
+Aponta para o objeto da janela `CWnd`pai ou proprietário (de tipo) ao qual o objeto de diálogo pertence. Se for NULL, a janela pai da caixa de diálogo será definida na janela principal do aplicativo.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função constrói apenas um `COleLinksDialog` objeto. Para exibir a caixa de diálogo, chame a função [DoModal](#domodal) .
+Esta função constrói `COleLinksDialog` apenas um objeto. Para exibir a caixa de diálogo, ligue para a função [DoModal.](#domodal)
 
-##  <a name="m_el"></a>  COleLinksDialog::m_el
+## <a name="colelinksdialogm_el"></a><a name="m_el"></a>COleLinksDiálogo::m_el
 
-Estrutura do tipo OLEUIEDITLINKS usada para controlar o comportamento da caixa de diálogo Editar links.
+Estrutura do tipo OLEUIEDITLINKS usado para controlar o comportamento da caixa de diálogo Editar links.
 
 ```
 OLEUIEDITLINKS m_el;
@@ -142,11 +142,11 @@ OLEUIEDITLINKS m_el;
 
 ### <a name="remarks"></a>Comentários
 
-Os membros dessa estrutura podem ser modificados diretamente ou por meio de funções de membro.
+Os membros desta estrutura podem ser modificados diretamente ou através de funções de membros.
 
 Para obter mais informações, consulte a estrutura [OLEUIEDITLINKS](/windows/win32/api/oledlg/ns-oledlg-oleuieditlinksw) no SDK do Windows.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Classe COleDialog](../../mfc/reference/coledialog-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
